@@ -1,0 +1,1410 @@
+name: Menu
+SpectrumSiteSlug: https://spectrum.adobe.com/page/menu/
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/menu/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### T-shirt sizing
+      Menu now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Menu--size*` class.
+
+      ### Use small divider classes
+      When using a section divider, add `.spectrum-Divider` and `spectrum-Divider--sizeS` classes to `spectrum-Menu-divider`. The divider has also changed from medium to small.
+
+      ### Change workflow icon size to medium
+      Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
+      ### Menu item with switch mark up ###
+      In the case of a menu item that includes an icon and a switch, the label and icon should be seperate elements. As opposed to the icon SVG being with in the label. This matches the pattern of other variants with icons within the menu item.
+
+examples:
+  - id: sizing
+    name: Sizing
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small Menu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium Menu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large Menu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">XL Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">XL Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">XL Menu</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">XL Menu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: sizing-with-icons
+    name: Sizing with Icons
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: with-disabled-items
+    name: With disabled item(s)
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with icons</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Cut Icon">
+                  <use xlink:href="#spectrum-icon-18-Cut"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Cut</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Copy Icon">
+                  <use xlink:href="#spectrum-icon-18-Copy"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Copy</span>
+              </li>
+              <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Paste Icon">
+                  <use xlink:href="#spectrum-icon-18-Paste"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Paste</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with descriptions</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with icons & descriptions</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: text-overflow
+    name: Text overflow
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu without descriptions</h4>
+          <div class="spectrum-Examples-itemGroup" style="max-width: 150px;">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small (works best for mobile phones)</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium (all purpose)</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large (works best for printing)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Menu with descriptions</h4>
+          <div class="spectrum-Examples-itemGroup" style="max-width: 150px;">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Small (works best for mobile phones)</span>
+                <span class="spectrum-Menu-itemDescription">A lengthy description about small is here</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Medium (all purpose)</span>
+                <span class="spectrum-Menu-itemDescription">A lengthy description about medium is here</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Large (works best for printing)</span>
+                <span class="spectrum-Menu-itemDescription">A lengthy description about large is here</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: sizing-descriptions
+    name: Sizing with descriptions
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: sizing-descriptions-icons
+    name: Sizing with descriptions and icons
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Export Icon">
+                  <use xlink:href="#spectrum-icon-18-Export"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Quick export</span>
+                <span class="spectrum-Menu-itemDescription">Share a snapshot</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Folder Open Icon">
+                  <use xlink:href="#spectrum-icon-18-FolderOpen"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Open a copy</span>
+                <span class="spectrum-Menu-itemDescription">Illustrator for iPad</span>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-Share"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Share link</span>
+                <span class="spectrum-Menu-itemDescription">Enable comments and download</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: collapsible
+    name: Collapsible
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeS" role="menu">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon is-open" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron75" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Desktop & Mobile Icon">
+                  <use xlink:href="#spectrum-icon-18-DesktopAndMobile"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-1" aria-hidden="true">Web Design</span>
+                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeS is-open" aria-labelledby="ex1-menu-heading-2" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible is-open" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron75" />
+                </svg>
+
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-2" aria-hidden="true">Mobile</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS is-open" aria-labelledby="ex1-menu-heading-2" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron75" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Tablet Icon" style="transform: rotate(90deg);">
+                  <use xlink:href="#spectrum-icon-18-DeviceTablet"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-3" aria-hidden="true">Tablet</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS" aria-labelledby="ex1-menu-heading-3" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron75" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-ShareAndroid"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-4" aria-hidden="true">Social Media</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS" aria-labelledby="ex1-menu-heading-4" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-UIIcon-ChevronRight75 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron75" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Watch Icon">
+                  <use xlink:href="#spectrum-icon-18-Watch"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex1-menu-heading-5" aria-hidden="true">Watches</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeS" aria-labelledby="ex1-menu-heading-5" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon is-open" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Desktop & Mobile Icon">
+                  <use xlink:href="#spectrum-icon-18-DesktopAndMobile"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-1" aria-hidden="true">Web Design</span>
+                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu is-open" aria-labelledby="ex2-menu-heading-1" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible is-open" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
+                </svg>
+
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-2" aria-hidden="true">Mobile</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu is-open" aria-labelledby="ex2-menu-heading-2" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Tablet Icon" style="transform: rotate(90deg);">
+                  <use xlink:href="#spectrum-icon-18-DeviceTablet"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-3" aria-hidden="true">Tablet</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu" aria-labelledby="ex2-menu-heading-3" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-ShareAndroid"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-4" aria-hidden="true">Social Media</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu" aria-labelledby="ex2-menu-heading-4" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Watch Icon">
+                  <use xlink:href="#spectrum-icon-18-Watch"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex2-menu-heading-5" aria-hidden="true">Watches</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu" aria-labelledby="ex2-menu-heading-5" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeL" role="menu">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon is-open" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron200" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Desktop & Mobile Icon">
+                  <use xlink:href="#spectrum-icon-18-DesktopAndMobile"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-1" aria-hidden="true">Web Design</span>
+                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeL is-open" aria-labelledby="ex3-menu-heading-1" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible is-open" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron200" />
+                </svg>
+
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-2" aria-hidden="true">Mobile</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL is-open" aria-labelledby="ex3-menu-heading-2" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron200" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Tablet Icon" style="transform: rotate(90deg);">
+                  <use xlink:href="#spectrum-icon-18-DeviceTablet"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-3" aria-hidden="true">Tablet</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL" aria-labelledby="ex3-menu-heading-3" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron200" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-ShareAndroid"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-4" aria-hidden="true">Social Media</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL" aria-labelledby="ex3-menu-heading-4" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-UIIcon-ChevronRight200 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron200" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Watch Icon">
+                  <use xlink:href="#spectrum-icon-18-Watch"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex3-menu-heading-5" aria-hidden="true">Watches</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeL" aria-labelledby="ex3-menu-heading-5" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu spectrum-Menu--sizeXL" role="menu">
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon is-open" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron300" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Desktop & Mobile Icon">
+                  <use xlink:href="#spectrum-icon-18-DesktopAndMobile"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-1" aria-hidden="true">Web Design</span>
+                <ul id="spectrum-menu-item-0-submenu" class="spectrum-Menu spectrum-Menu--sizeXL is-open" aria-labelledby="ex4-menu-heading-1" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Web Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible is-open" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron300" />
+                </svg>
+
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-2" aria-hidden="true">Mobile</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL is-open" aria-labelledby="ex4-menu-heading-2" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Mobile Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron300" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Tablet Icon" style="transform: rotate(90deg);">
+                  <use xlink:href="#spectrum-icon-18-DeviceTablet"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-3" aria-hidden="true">Tablet</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL" aria-labelledby="ex4-menu-heading-3" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Tablet Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron300" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Share Icon">
+                  <use xlink:href="#spectrum-icon-18-ShareAndroid"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-4" aria-hidden="true">Social Media</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu spectrum-Menu--sizeXL" aria-labelledby="ex4-menu-heading-4" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Social Media Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="spectrum-Menu-item spectrum-Menu-item--collapsible spectrum-Menu-item--collapsible-withWorkflowIcon" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-UIIcon-Chevron300 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                  <use xlink:href="#spectrum-css-icon-Chevron300" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Watch Icon">
+                  <use xlink:href="#spectrum-icon-18-Watch"></use>
+                </svg>
+                <span class="spectrum-Menu-sectionHeading" id="ex4-menu-heading-5" aria-hidden="true">Watches</span>
+                <ul id="spectrum-menu-item-1-submenu" class="spectrum-Menu" aria-labelledby="ex4-menu-heading-5" role="menu">
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Large</span>
+                    <span class="spectrum-Menu-itemValue">1920 x 1080</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Medium</span>
+                    <span class="spectrum-Menu-itemValue">1366 x 768</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Watch Small</span>
+                    <span class="spectrum-Menu-itemValue">1280 x 800</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: standard-with-dividers
+    name: Standard with dividers
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <ul class="spectrum-Menu" role="menu">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Deselect</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Select Inverse</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Feather Effect</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Select and Mask</span>
+            </li>
+            <li class="spectrum-Divider spectrum-Divider--sizeS spectrum-Menu-divider" role="separator"></li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Save Selection</span>
+            </li>
+            <li class="spectrum-Menu-item is-disabled" role="menuitem" aria-disabled="true">
+              <span class="spectrum-Menu-itemLabel">Make Work Path</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+  - id: standard-with-section-headers-and-dividers
+    name: Standard with section headers and dividers
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <ul class="spectrum-Menu" role="menu">
+            <li role="presentation">
+              <span class="spectrum-Menu-sectionHeading" id="menu-sections-heading-1" aria-hidden="true">Tools</span>
+              <ul class="spectrum-Menu is-selectable" role="group" aria-labelledby="menu-sections-heading-1">
+                <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-Checkmark100 spectrum-Menu-itemIcon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
+                    <use xlink:href="#spectrum-icon-18-Selection"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Marquee</span>
+                </li>
+                <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
+                    <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Add</span>
+                </li>
+                <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
+                    <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Subtract</span>
+                </li>
+              </ul>
+            </li>
+            <li class="spectrum-Divider spectrum-Divider--sizeS spectrum-Menu-divider" role="separator"></li>
+            <li role="presentation">
+              <span class="spectrum-Menu-sectionHeading" id="menu-sections-heading-2"  aria-hidden="true">Actions</span>
+              <ul class="spectrum-Menu is-selectable" role="group" aria-labelledby="menu-sections-heading-2" aria-disabled="true">
+                <li class="spectrum-Menu-item spectrum-Menu-item--is-selectable is-disabled" role="menuitem" aria-disabled="true">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Deselect Icon">
+                    <use xlink:href="#spectrum-icon-18-Deselect"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Deselect</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+  - id: single-selection
+    name: Single Selection
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Without icons</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu is-selectable" role="menu">
+              <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-Checkmark100 spectrum-Menu-itemIcon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Marquee</span>
+              </li>
+              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Add</span>
+              </li>
+              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                <span class="spectrum-Menu-itemLabel">Subtract</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With icons</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu is-selectable" role="menu">
+              <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-Checkmark100 spectrum-Menu-itemIcon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
+                  <use xlink:href="#spectrum-icon-18-Selection"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Marquee</span>
+              </li>
+              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
+                  <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Add</span>
+              </li>
+              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
+                  <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
+                </svg>
+                <span class="spectrum-Menu-itemLabel">Subtract</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: multi-selection
+    name: Multi-Selection
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Without icons</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu is-selectableMultiple" role="menu">
+              <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" checked>
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Marquee</span>
+                </label>
+              </li>
+              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Add</span>
+                </label>
+              </li>
+              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Subtract</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With icons</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu is-selectableMultiple" role="menu">
+              <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" checked>
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
+                    <use xlink:href="#spectrum-icon-18-Selection"></use>
+                  </svg>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Marquee</span>
+                </label>
+              </li>
+              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
+                    <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
+                  </svg>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Add</span>
+                </label>
+              </li>
+              <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Menu-itemCheckbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
+                    <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
+                  </svg>
+                  <span class="spectrum-Checkbox-label spectrum-Menu-itemLabel">Subtract</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: with-switch
+    name: With Switch
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Without icons</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-0">Marquee</label>
+                <div class="spectrum-Menu-itemActions">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Switch--emphasized spectrum-Menu-itemSwitch">
+                    <input type="checkbox" class="spectrum-Switch-input" id="switch-onoff-0" checked>
+                    <span class="spectrum-Switch-switch"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-1">Add</label>
+                <div class="spectrum-Menu-itemActions">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Switch--emphasized spectrum-Menu-itemSwitch">
+                    <input type="checkbox" class="spectrum-Switch-input" id="switch-onoff-1">
+                    <span class="spectrum-Switch-switch"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-2">Subtract</label>
+                <div class="spectrum-Menu-itemActions">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Switch--emphasized spectrum-Menu-itemSwitch">
+                    <input type="checkbox" class="spectrum-Switch-input" id="switch-onoff-2">
+                    <span class="spectrum-Switch-switch"></span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With icons</h4>
+          <div class="spectrum-Examples-itemGroup">
+            <ul class="spectrum-Menu" role="menu">
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
+                    <use xlink:href="#spectrum-icon-18-Selection"></use>
+                  </svg>
+                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-3">
+                  Marquee
+                </label>
+                <div class="spectrum-Menu-itemActions">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Switch--emphasized spectrum-Menu-itemSwitch">
+                    <input type="checkbox" class="spectrum-Switch-input" aria-labelledby="label4" id="switch-onoff-3" checked>
+                    <span class="spectrum-Switch-switch"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
+                  <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
+                </svg>
+                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-4">
+                  Add
+                </label>
+                <div class="spectrum-Menu-itemActions">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Switch--emphasized spectrum-Menu-itemSwitch">
+                    <input type="checkbox" class="spectrum-Switch-input" aria-labelledby="label5" id="switch-onoff-4">
+                    <span class="spectrum-Switch-switch"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
+                  <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
+                </svg>
+                <label class="spectrum-Switch-label spectrum-Menu-itemLabel" for="switch-onoff-5">
+                  Subtract
+                </label>
+                <div class="spectrum-Menu-itemActions">
+                  <div class="spectrum-Switch spectrum-Switch--sizeM spectrum-Switch--emphasized spectrum-Menu-itemSwitch">
+                    <input type="checkbox" class="spectrum-Switch-input" aria-labelledby="label6" id="switch-onoff-5">
+                    <span class="spectrum-Switch-switch"></span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  - id: submenu-drillin
+    name: Drill-in for submenu
+    description: Use the class `spectrum-Menu-itemLabel--truncate` on the item label or section heading that should truncate within a menu. When text would typically overflow beyond the available horizontal space and wrap (default behavior), ellipsis will appear instead. This is demonstrated here by setting an `inline-size` on the menu.
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <ul class="spectrum-Menu" role="menu">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Deselect</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Select Inverse</span>
+            </li>
+            <li class="spectrum-Menu-item spectrum-Menu-item--drillIn is-open" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Feather really long item</span>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Select and Mask</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Save Selection</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+  - id: tray-submenus
+    name: Tray submenus
+    description: "When a menu is displayed within a tray, a submenu will replace the tray content when the parent menu item is selected. A submenu displays a back button (labeled by the title of the parent item) at the top of the tray to return the user to the previous level of the menu.
+      The back arrow size scale used with the various menu sizes are small: `200`, medium: `300`, large: `400`, and extra large: `500`."
+    markup: |
+      <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4);">
+        <div class="spectrum-Modal spectrum-Tray is-open">
+          <ul class="spectrum-Menu is-selectableMultiple" role="menu" style="--mod-menu-inline-size: 100%;">
+            <li role="presentation">
+              <div class="spectrum-Menu-back">
+                <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
+                  <svg
+                    class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ArrowLeft200 spectrum-Menu-backIcon"
+                    aria-hidden="true"
+                  ><use xlink:href="#spectrum-css-icon-Arrow200" /></svg>
+                </button>
+                <span class="spectrum-Menu-backHeading" id="back-menu-heading" aria-hidden="true">Snap to</span>
+              </div>
+              <ul class="spectrum-Menu is-selectable" role="group" aria-labelledby="back-menu-heading">
+                <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-Checkmark100 spectrum-Menu-itemIcon spectrum-Menu-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Selection Icon">
+                    <use xlink:href="#spectrum-icon-18-Selection"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Marquee</span>
+                </li>
+                <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Add Icon">
+                    <use xlink:href="#spectrum-icon-18-SelectAdd"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Add</span>
+                </li>
+                <li class="spectrum-Menu-item is-selectable" role="menuitem" tabindex="0">
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon spectrum-Menu-itemIcon--workflowIcon" focusable="false" aria-hidden="true" aria-label="Select Subtract Icon">
+                    <use xlink:href="#spectrum-icon-18-SelectSubtract"></use>
+                  </svg>
+                  <span class="spectrum-Menu-itemLabel">Subtract</span>
+                </li>
+              </ul>
+          </div>
+        </div>
+
+  - id: menu-truncate
+    name: Menu with truncating text
+    description: Use the class `spectrum-Menu-itemLabel--truncate` on the item label or section heading that should truncate with in a menu with a set `inline-size` or `max-inline-size`
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
+        <div class="spectrum-Examples-item">
+          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="menu" style="inline-size: 100px;">
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Deselect</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Select Inverse</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel spectrum-Menu-itemLabel--truncate">Truncate this menu item</span>
+            </li>
+            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+              <span class="spectrum-Menu-itemLabel">Save Selection</span>
+            </li>
+          </ul>
+        </div>
+      </div>

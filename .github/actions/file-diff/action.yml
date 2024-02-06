@@ -1,0 +1,35 @@
+name: "File comparisons"
+description: "Compares files between branches."
+author: "spectrum-tools"
+inputs:
+    head-path:
+        description: "Path to file or directory for file sizes analysis."
+        required: false
+        default: ${{ github.workspace }}
+    base-path:
+        description: "Optional path to another directory to perform file size diff against the provided path."
+        required: false
+    token:
+        description: "GITHUB_TOKEN for the repository."
+        required: false
+        default: ${{ github.token }}
+    file-glob-pattern:
+        description: "Glob pattern for filtering of the files."
+        required: false
+        default: "**/dist/**"
+    comment:
+        description: "Whether to comment on the PR."
+        required: false
+        default: "true"
+    comment-header:
+        description: "Comment header to be used in the PR comment."
+        required: false
+        default: "## File metrics"
+outputs:
+    has-changed:
+        description: "True if the overall file size has changed."
+    total-size:
+        description: "Total size of the files in bytes."
+runs:
+    using: "node20"
+    main: "index.js"

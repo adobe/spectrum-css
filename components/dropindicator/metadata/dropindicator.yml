@@ -1,0 +1,10 @@
+name: Drop indicator
+description: A Drop Indicator is used to show the insertion position into a list or table.
+examples:
+  - id: dropindicator
+    name: Standard
+    markup: |
+      <div style="display: flex; align-items: center">
+        <div class="spectrum-DropIndicator spectrum-DropIndicator--vertical" style="height: 300px; margin: 100px;"></div>
+        <div class="spectrum-DropIndicator spectrum-DropIndicator--horizontal" style="width: 300px;"></div>
+      </div>

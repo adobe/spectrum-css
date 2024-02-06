@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="utf-8"/>
+        <meta name="theme-color" content="#e1251b" />
+
+        <!-- Load all component stylesheets -->
+        {% for component in allComponents -%}
+            {% if component not in ["commons", "overlay"] %}
+                <link rel="stylesheet" type="text/css" href="{{ root }}components/{{ component }}/dist/index.css"/>
+            {% endif %}
+        {%- endfor -%}
+
+        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/@spectrum-css/vars/dist/spectrum-global.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/@spectrum-css/vars/dist/spectrum-light.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ root }}node_modules/@spectrum-css/vars/dist/spectrum-medium.css"/>
+
+        <link rel="stylesheet" type="text/css" href="{{ root }}tokens/dist/index.css"/>
+    </head>
+    <body class="spectrum spectrum--light spectrum--medium spectrum-Typography" style="height: 100vh; position: fixed;">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXL" style="--mod-heading-margin-end: 2em;">Compiled asset comparison</h1>
+        <div style="display: flex; flex-flow: row nowrap; gap: 1em; height: 100%; overflow-y: auto;">
+        {% if components.length > 5 %}
+            <aside style="position: sticky; top: 0;">
+                <h2 class="spectrum-Heading spectrum-Heading--sizeS" style="--mod-heading-margin-start: 0;">Quick links</h2>
+                <ul style="list-style-type: '#&nbsp;'; overflow-y: scroll; max-height: calc(100vh - 200px);">
+                    {% for component in components -%}
+                        <li><a href="#{{ component }}">{{ component }}</a></li>
+                    {%- endfor -%}
+                </ul>
+            </aside>
+        {% endif %}
+
+            <div style="display: flex; gap: 80px; align-items: flex-start; flex-wrap: wrap; flex-grow: 1;">
+                {% for component, details in data -%}
+                    <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet" id="{{ component }}">
+                        <thead class="spectrum-Table-head">
+                            <tr class="spectrum-Table-row">
+                                <th class="spectrum-Table-cell spectrum-Heading spectrum-Heading--sizeM" colspan="3">@spectrum-css/{{ component }}</th>
+                            </tr>
+                            <tr class="spectrum-Table-row">
+                                <th class="spectrum-Table-headCell">Filename</th>
+                                <th class="spectrum-Table-headCell" colspan="2">Size</th>
+                            </tr>
+                            <tr class="spectrum-Table-row">
+                                <th class="spectrum-Table-headCell"></th>
+                                <th class="spectrum-Table-headCell">{% if details.tag %}v{{ details.tag }}{% endif %}</th>
+                                <th class="spectrum-Table-headCell">Local</th>
+                            </tr>
+                        </thead>
+                        <tbody class="spectrum-Table-body">
+                        {% for file, fileData in details.files -%}
+                            <tr class="spectrum-Table-row">
+                                <td class="spectrum-Table-cell">{% if fileData.link %}<a href="{{ fileData.link }}">{% endif %}{{ file }}{% if fileData.link %}</a>{% endif %}</td>
+                                <td class="spectrum-Table-cell">{% if fileData and fileData.npm and fileData.npm.size %}{{ fileData.npm.size | bytesToSize }}{% else %}<span class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--notice"><span class="spectrum-Badge-label">new</span></span>{% endif %}</td>
+                                <td class="spectrum-Table-cell">{% if fileData and fileData.local and fileData.local.size %}{{ fileData.local.size | bytesToSize }}{% else %}<span class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--negative"><span class="spectrum-Badge-label">removed</span></span>{% endif %}</td>
+                            </tr>
+                        {%- endfor -%}
+                        </tbody>
+                    </table>
+                {%- endfor -%}
+            </div>
+        </div>
+    </body>
+</html>

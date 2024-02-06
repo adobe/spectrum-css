@@ -1,0 +1,18 @@
+name: Cycle button
+sections:
+  - name: Migration Guide
+    description: |
+      ### Change workflow icon size to medium
+      Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+examples:
+  - id: cyclebutton
+    name: Standard
+    markup: |
+      <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-CycleButton">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-CycleButton-item is-selected" focusable="false" aria-hidden="true" aria-label="Play">
+          <use xlink:href="#spectrum-icon-18-Play" />
+        </svg>
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon spectrum-CycleButton-item" focusable="false" aria-hidden="true" aria-label="Pause">
+          <use xlink:href="#spectrum-icon-18-Pause" />
+        </svg>
+      </button>

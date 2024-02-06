@@ -1,0 +1,161 @@
+doctype html
+html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
+  head
+    title Truncation - Spectrum CSS
+
+    -
+      var exampleDependencies = [
+        'actionbutton',
+        'button',
+        'quickaction',
+        'taggroup',
+        'tag',
+        'tabs',
+        'picker',
+        'pickerbutton',
+        'inputgroup',
+        'textfield'
+      ];
+
+      dependencyOrder = dependencyOrder.concat(exampleDependencies.filter(dep => dependencyOrder.indexOf(dep) === -1))
+
+    include includes/dependencies.pug
+
+  body
+
+    .spectrum-Site
+
+      include includes/header.pug
+
+      .spectrum-Site-content
+
+        include includes/sidebar.pug
+
+        .spectrum-Site-mainContent
+
+          .spectrum-Site-mainContainer
+            .spectrum-Site-page.spectrum-Typography
+
+              h1.spectrum-Heading.spectrum-Heading--sizeXL A study of truncation across a number of components
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Action Button (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <button class="spectrum-ActionButton spectrum-ActionButton--sizeM" style="width: 128px">
+                      <span class="spectrum-ActionButton-label">Präferenzen Verwalten</span>
+                    </button>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Action Button with Icon (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <button class="spectrum-ActionButton spectrum-ActionButton--sizeM" style="width: 128px">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Settings">
+                        <use xlink:href="#spectrum-icon-18-Settings" />
+                      </svg>
+                      <span class="spectrum-ActionButton-label">Präferenzen Verwalten</span>
+                    </button>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Action Button (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" style="width: 128px">
+                      <span class="spectrum-ActionButton-label">Präferenzen Verwalten</span>
+                    </button>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Action Button with Icon (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" style="width: 128px">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Settings">
+                        <use xlink:href="#spectrum-icon-18-Settings" />
+                      </svg>
+                      <span class="spectrum-ActionButton-label">Präferenzen Verwalten</span>
+                    </button>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Quick Actions (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-QuickActions-overlay" style="padding: 40px;">
+                      <div class="spectrum-QuickActions is-open" style="width: 150px;">
+                        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                          <span class="spectrum-ActionButton-label">Bearbeitenslkdasjhkdfadsfa</span>
+                        </button>
+                        <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                          <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="More">
+                            <use xlink:href="#spectrum-icon-18-More" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Tag (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-TagGroup" role="list" aria-label="list">
+                      <div class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item" role="listitem" tabindex="0" style="width: 168px;">
+                        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="GraphPie">
+                          <use xlink:href="#spectrum-icon-18-GraphPie"></use>
+                        </svg>
+                        <span class="spectrum-Tag-label">Apathorn Rungratsamentagfslkjd</span>
+                      </div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Tabs (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Tabs spectrum-Tabs--horizontal" style="width: 212px">
+                      <button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet" aria-haspopup="true">
+                        <span class="spectrum-Picker-label">A comparative study of artificial intelligence as applied to choosing outfits for small dogs</span>
+                        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+                          <use xlink:href="#spectrum-css-icon-Chevron100" />
+                        </svg>
+                      </button>
+                      <div class="spectrum-Tabs-selectionIndicator" style="left: 8px; right: 8px;"></div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Combobox (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-InputGroup">
+                      <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+                        <input type="text" placeholder="Type here" name="field" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit" class="spectrum-Textfield-input spectrum-InputGroup-input">
+                      </div>
+                      <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="listbox">
+                        <div class="spectrum-PickerButton-fill">
+                          <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                            <use xlink:href="#spectrum-css-icon-Chevron200" />
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Picker (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox">
+                      <span class="spectrum-Picker-label is-placeholder">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-Chevron100" />
+                      </svg>
+                    </button>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Textfield (truncated)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Textfield">
+                      <input type="text" placeholder="Enter your name" name="field" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit" class="spectrum-Textfield-input">
+                    </div>
+
+          include includes/footer.pug
+
+    include includes/pageBottom.pug

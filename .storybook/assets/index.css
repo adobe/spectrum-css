@@ -1,0 +1,63 @@
+body {
+	font-family: var(--spectrum-sans-font-family-stack);
+	background-color: var(
+		--spectrum-alias-background-color-default,
+		var(--spectrum-global-color-gray-100)
+	);
+	color: var(
+		--spectrum-alias-text-color-default,
+		var(--spectrum-global-color-gray-900)
+	);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.sidebar-header > div:has(img, a) {
+	margin-right: 8px;
+}
+
+.sidebar-header > div img {
+	height: auto;
+	width: 100%;
+}
+
+.docblock-argstable-body tr td {
+	letter-spacing: unset;
+	font-size: 11px;
+	color: rgb(34, 34, 34);
+	background-color: rgb(255, 255, 255);
+}
+
+.docblock-argstable-body td > span:has(select),
+.docblock-argstable-body td textarea {
+	max-width: var(
+		--spectrum-alias-single-line-width,
+		var(--spectrum-global-dimension-size-2400)
+	) !important;
+}
+
+#storybook-explorer-searchfield {
+	padding: 3px 12px 5px 35px !important;
+}
+
+button.sidebar-item {
+	font-weight: 700;
+}
+
+.sidebar-item {
+	/* height: 32px !important; */
+	padding-block: 4px;
+}
+
+input,
+textarea,
+select {
+	border-radius: 4px !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+#storybook-explorer-searchfield:focus {
+	border-color: rgb(2, 101, 220) !important;
+	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+}

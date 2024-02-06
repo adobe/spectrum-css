@@ -1,0 +1,187 @@
+name: Toast
+SpectrumSiteSlug: https://spectrum.adobe.com/page/toast/
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/toast/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### Clear button replaced by Close button
+      Replace `spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM` with `spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite` and remove the `<div class="spectrum-ClearButton-fill">` element.
+      ### Over background replaced by Static White with Outline
+      Replace all `.spectrum-Button--overBackground .spectrum-Button--quiet` with `.spectrum-Button--staticWhite .spectrum-Button--outline`.
+examples:
+  - id: toast
+    name: Default
+    status: Verified
+    markup: |
+      <div class="spectrum-Toast">
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">Button.xd has been archived</div>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
+            <span class="spectrum-Button-label">Undo</span>
+          </button>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+        </div>
+      </div>
+  - id: toast-info
+    name: Info
+    status: Verified
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Info_18_S.svg` icon in the Express workflow icon set.*
+    markup: |
+      <div class="spectrum-Toast spectrum-Toast--info">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        </svg>
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">The toast is done</div>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+        </div>
+      </div>
+  - id: toast-negative
+    name: Negative
+    status: Verified
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_Alert_18_S.svg` icon in the Express workflow icon set.*
+    markup: |
+      <div class="spectrum-Toast spectrum-Toast--negative">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Alert" />
+        </svg>
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">The toast is on fire</div>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
+            <span class="spectrum-Button-label">Eject</span>
+          </button>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+        </div>
+      </div>
+  - id: toast-positive
+    name: Positive
+    status: Verified
+    description: |
+      *Spectrum for Adobe Express uses a different icon. Use the `SX_CheckmarkCircle_18_S.svg` icon in the Express workflow icon set.*
+    markup: |
+      <div class="spectrum-Toast spectrum-Toast--positive">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
+        </svg>
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">The toast is golden brown</div>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
+            <span class="spectrum-Button-label">Eject</span>
+          </button>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+        </div>
+      </div>
+  - id: toast
+    name: Wrapping
+    status: Verified
+    markup: |
+
+      <div class="spectrum-Toast spectrum-Toast--info">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        </svg>
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">
+            A new version of Lightroom Classic is now available
+          </div>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
+            <span class="spectrum-Button-label">Update</span>
+          </button>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="spectrum-Toast spectrum-Toast--info">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        </svg>
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">
+            A new version of Lightroom Classic is now available. Use the Update button below to start using the new version.
+          </div>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
+            <span class="spectrum-Button-label">Update</span>
+          </button>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="spectrum-Toast spectrum-Toast--info">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        </svg>
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">
+            A new version of Lightroom Classic is now available
+          </div>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="spectrum-Toast spectrum-Toast--info">
+        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        </svg>
+        <div class="spectrum-Toast-body">
+          <div class="spectrum-Toast-content">An update is available</div>
+        </div>
+        <div class="spectrum-Toast-buttons">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+        </div>
+      </div>

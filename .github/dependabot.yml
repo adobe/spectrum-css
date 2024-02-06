@@ -1,0 +1,58 @@
+version: 2
+updates:
+    - package-ecosystem: "npm"
+      directory: "/"
+      schedule:
+          interval: "weekly"
+      labels:
+          - "dependencies"
+          - "skip_vrt"
+      assignees:
+          - "castastrophe"
+      reviewers:
+          - "castastrophe"
+      commit-message:
+          prefix: "chore"
+          include: "scope"
+      open-pull-requests-limit: 5
+      rebase-strategy: "auto"
+      versioning-strategy: "increase"
+      ignore:
+          # Ignore prettier 3.x until we resolve the lerna publishing error
+          - dependency-name: "prettier"
+            versions: ["3.x"]
+          # Ignore chalk >=5.x until this project uses TS or ESM
+          - dependency-name: "chalk"
+            versions: [">=5.x"]
+          # Lock storybook addon-actions to 7.5.x until console plugin resolves issue
+          # https://github.com/storybookjs/storybook-addon-console/issues/80#issuecomment-1876601028
+          - dependency-name: "@storybook/addon-actions"
+            versions: [">=7.6"]
+      groups:
+          # Specify a name for the group, which will be used in pull request titles
+          # and branch names
+          storybook-ecosystem:
+              # Define patterns to include dependencies in the group (based on
+              # dependency name)
+              patterns:
+                  - "storybook"
+                  - "@storybook/*"
+                  - "@types/storybook*"
+          commitlint-ecosystem:
+              patterns:
+                  - "@commitlint/*"
+                  - "commitlint"
+          nx-ecosystem:
+              patterns:
+                  - "@nx/*"
+                  - "nx"
+          eleventy-ecosystem:
+              patterns:
+                  - "@11ty/*"
+                  - "eleventy"
+                  - "eleventy-plugin-*"
+
+    - package-ecosystem: "github-actions"
+      directory: "/"
+      schedule:
+          interval: "monthly"

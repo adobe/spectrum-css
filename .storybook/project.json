@@ -1,0 +1,104 @@
+{
+	"name": "storybook",
+	"namedInputs": {
+		"tools": [
+			"{projectRoot}/assets",
+			"{projectRoot}/decorators",
+			"{projectRoot}/*.{js,html}"
+		]
+	},
+	"implicitDependencies": [
+		"@spectrum-css/*",
+		"!@spectrum-css/generator",
+		"!@spectrum-css/bundle-builder",
+		"!@spectrum-css/component-builder",
+		"!@spectrum-css/component-builder-simple"
+	],
+	"targets": {
+		"clean": {
+			"cache": true,
+			"inputs": [
+				"{projectRoot}/storybook-static",
+				{ "externalDependencies": ["rimraf"] }
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"rimraf {projectRoot}/storybook-static",
+					"test -d {projectRoot}/storybook-static && echo \"Error: storybook-static directory could not be removed\" && exit 1 || exit 0"
+				],
+				"parallel": false
+			}
+		},
+		"build": {
+			"cache": true,
+			"dependsOn": ["^build"],
+			"inputs": [
+				"{projectRoot}/assets",
+				"{projectRoot}/decorators",
+				"{projectRoot}/*.js",
+				"{projectRoot}/*.html",
+				"{workspaceRoot}/components/*/dist",
+				{ "externalDependencies": ["storybook"] }
+			],
+			"outputs": ["{projectRoot}/storybook-static"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": [
+					"storybook build --config-dir . --output-dir ./storybook-static"
+				]
+			},
+			"configurations": {
+				"ci": {
+					"cache": false,
+					"commands": ["storybook build --config-dir . --webpack-stats-json"]
+				}
+			}
+		},
+		"start": {
+			"cache": true,
+			"dependsOn": ["^build"],
+			"inputs": [
+				"{projectRoot}/assets",
+				"{projectRoot}/decorators",
+				"{projectRoot}/*.js",
+				"{projectRoot}/*.html",
+				"{workspaceRoot}/components/*/dist",
+				{ "externalDependencies": ["storybook"] },
+				{ "env": "WATCH_MODE" }
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": ["WATCH_MODE=true storybook dev --config-dir ."]
+			}
+		},
+		"test": {
+			"cache": true,
+			"inputs": [
+				"{projectRoot}/assets",
+				"{projectRoot}/decorators",
+				"{projectRoot}/*.js",
+				"{projectRoot}/*.html",
+				"{workspaceRoot}/components/*/dist",
+				{ "externalDependencies": ["chromatic", "storybook"] },
+				{ "env": "CHROMATIC_PROJECT_TOKEN" }
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": [
+					"chromatic --only-changed --build-script-name build --junit-report"
+				]
+			},
+			"configurations": {
+				"scope": {
+					"commands": [
+						"chromatic --build-script-name build --junit-report --only-story-names"
+					]
+				}
+			}
+		}
+	}
+}

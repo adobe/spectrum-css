@@ -1,0 +1,1264 @@
+name: Action button
+status: Verified
+SpectrumSiteSlug: https://spectrum.adobe.com/page/action-button/
+description: |
+  - For Action Buttons that only contain an icon with no label, do not include the element with the `.spectrum-ActionButton-label` class in the markup
+  - If an icon and a label are both used, ensure that the element with the `.spectrum-ActionButton-label` class comes after the `.spectrum-Icon` element.
+  - If the hold icon is used, ensure that the element with the `.spectrum-ActionButton-hold` class comes before the `.spectrum-Icon` element.
+  - When using `.spectrum-ActionButton--staticWhite` or `.spectrum-ActionButton--staticblack`, use the `--mod-actionbutton-content-color-default` custom property to set the text color when selected.
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/actionbutton/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### Action Button now requires a class on its icon
+      The `.spectrum-ActionButton-icon` class is now required on the icon.
+
+      ### T-shirt sizing
+      Action Button now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-ActionButton--size*` class.
+
+      ### Action Button is now a separate component
+      Action Button has been moved to the [Action Button](actionbutton.html) component.
+
+      ### Change workflow icon size
+
+      Previously, all Action Buttons used `.spectrum-Icon--sizeS`. This has changed:
+
+      | Action button classname          | Workflow icon classname           |
+      | -------------------------------- | --------------------------------- |
+      | `.spectrum-ActionButton--sizeXS`  | `.spectrum-Icon--sizeXS`           |
+      | `.spectrum-ActionButton--sizeS`  | `.spectrum-Icon--sizeS`           |
+      | `.spectrum-ActionButton--sizeM`  | `.spectrum-Icon--sizeM`           |
+      | `.spectrum-ActionButton--sizeL`  | `.spectrum-Icon--sizeL`           |
+      | `.spectrum-ActionButton--sizeXL` | `.spectrum-Icon--sizeXL`          |
+
+      ### Change hold icon classnames
+
+      Hold icon classnames must be set as follows:
+
+      | Action button classname          | Hold icon classname                  |
+      | -------------------------------- | ------------------------------------ |
+      | `.spectrum-ActionButton--sizeXS`  | `.spectrum-UIIcon-CornerTriangle50`  |
+      | `.spectrum-ActionButton--sizeS`  | `.spectrum-UIIcon-CornerTriangle75`  |
+      | `.spectrum-ActionButton--sizeM`  | `.spectrum-UIIcon-CornerTriangle100` |
+      | `.spectrum-ActionButton--sizeL`  | `.spectrum-UIIcon-CornerTriangle200` |
+      | `.spectrum-ActionButton--sizeXL` | `.spectrum-UIIcon-CornerTriangle300` |
+
+      ### Include markup for hold icon before workflow icon
+      Because of the way padding is calculated, the hold icon must be placed before the workflow icon.
+
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
+examples:
+  - id: actionbutton-sizing
+    name: Sizing
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XS</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS">
+              <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS">
+              <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXS">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle75 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle75" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeXS spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeS">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeS">
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeS">
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeS">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle75 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle75" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeL">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeL">
+              <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeL">
+              <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeL">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle200 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle200" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeL spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXL">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXL">
+              <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXL">
+              <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeXL">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle300 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle300" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeXL spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbutton-standard
+    name: Standard
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM" disabled>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM" disabled>
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected" disabled>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbutton-quiet
+    name: Quiet
+    description: The Quiet Action Button should be used where you previously used the [deprecated Tool component](tool.html).
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" disabled>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" disabled>
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected" disabled>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbutton-emphasized
+    name: Emphasized
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized" disabled>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized" disabled>
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected" disabled>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbutton-emphasized-quiet
+    name: Emphasized (quiet)
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected">
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet" disabled>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet" disabled>
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected" disabled>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--emphasized spectrum-ActionButton--quiet is-selected" disabled>
+              <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+              </svg>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbutton-staticwhite
+    name: Static White
+    markup: |
+      <div style="--spectrum-alias-background-color-default: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; background-color: var(--spectrum-alias-background-color-default); color: var(--spectrum-alias-heading-text-color); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
+        <div class="spectrum-Examples">
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite">
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite">
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-alias-background-color-default);">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite is-selected">
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite is-selected">
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite" disabled>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite" disabled>
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite is-selected" disabled>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbutton-staticblack
+    name: Static Black
+    markup: |
+      <div style="--spectrum-alias-background-color-default: rgb(181, 209, 211); background-color: var(--spectrum-alias-background-color-default); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
+        <div class="spectrum-Examples">
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack">
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack">
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-alias-background-color-default);">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack is-selected">
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack is-selected">
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack" disabled>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack" disabled>
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack is-selected" disabled>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbutton-staticwhite-quiet
+    name: Static White (quiet)
+    markup: |
+      <div style="--spectrum-alias-background-color-default: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; background-color: var(--spectrum-alias-background-color-default); color: var(--spectrum-alias-heading-text-color); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
+        <div class="spectrum-Examples">
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet">
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-alias-background-color-default)">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet is-selected">
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet is-selected">
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet" disabled>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet" disabled>
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet is-selected" disabled>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticWhite spectrum-ActionButton--quiet is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbutton-staticblack-quiet
+    name: Static Black (quiet)
+    markup: |
+      <div style="--spectrum-alias-background-color-default: rgb(181, 209, 211); background-color: var(--spectrum-alias-background-color-default); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
+        <div class="spectrum-Examples">
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet">
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-alias-background-color-default)">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet is-selected">
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet is-selected">
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet" disabled>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet" disabled>
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected + Disabled</h4>
+
+            <div class="spectrum-Examples-itemGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet is-selected" disabled>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+                <span class="spectrum-ActionButton-label">Edit</span>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--staticBlack spectrum-ActionButton--quiet is-selected" disabled>
+                <svg class="spectrum-Icon spectrum-UIIcon-CornerTriangle100 spectrum-ActionButton-hold" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-CornerTriangle100" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Edit">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>

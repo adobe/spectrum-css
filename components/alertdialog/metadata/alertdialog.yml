@@ -1,0 +1,204 @@
+name: Alert dialog
+SpectrumSiteSlug: https://spectrum.adobe.com/page/alertdialog/
+examples:
+  - id: alertdialog
+    name: Confirmation
+    description: This is the default variant for alert dialogs. Use a confirmation variant for asking a user to confirm a choice.
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal is-open" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--confirmation" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
+            <div class="spectrum-AlertDialog-grid">
+              <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Enable Smart Filters?</h1>
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
+              <section class="spectrum-AlertDialog-content">Smart filters are nondestructive and will preserve your original images.</section>
+              <div class="spectrum-ButtonGroup">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Cancel</span>
+                </button>
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Enable</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+  - id: alertdialog-information
+    name: Information
+    description: Information alert dialogs communicate important information that a user needs to acknowledge. Before using this kind of alert dialog, make sure it's the appropriate communication channel for the message instead of a toast or a more lightweight messaging option.
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
+
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal is-open" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--information" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
+            <div class="spectrum-AlertDialog-grid">
+              <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Connect to wifi</h1>
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
+              <section class="spectrum-AlertDialog-content">Please connect to wifi to sync your projects or go to Settings to change your prefernces.</section>
+              <div class="spectrum-ButtonGroup">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Cancel</span>
+                </button>
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Continue</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+  - id: alertdialog-warning
+    name: Warning
+    description: Warning alert dialogs communicate important information to users in relation to an issue that needs to be acknowledged, but does not block the user from moving forward.
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
+
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal is-open" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--warning" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
+            <div class="spectrum-AlertDialog-grid">
+            <div class="spectrum-AlertDialog-header">
+              <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Unverified format</h1>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Alert" />
+              </svg>
+            </div>
+
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
+              <section class="spectrum-AlertDialog-content">This format has not been verified and may not be viewable for some users. Do you want to continue publishing?</section>
+              <div class="spectrum-ButtonGroup">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Cancel</span>
+                </button>
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Continue</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+  - id: alertdialog-error
+    name: Error
+    description: Error alert dialogs communicate critical information about an issue that a user needs to acknowledge.
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
+
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal spectrum-AlertDialog-modal is-open" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--error"  role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
+            <div class="spectrum-AlertDialog-grid">
+              <div class="spectrum-AlertDialog-header">
+                <h1 class="spectrum-AlertDialog-heading">Unable to share</h1>
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-icon-18-Alert" />
+                  </svg>
+              </div>
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
+              <section class="spectrum-AlertDialog-content">An error occured while sharing your project. Please verify the email address and try again.</section>
+              <div class="spectrum-ButtonGroup">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Continue</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+  - id: alertdialog-destructive
+    name: Destructive
+    description: Destructive alert dialogs are for when a user needs to confirm an action that will impact their data or experience in a potentially negative way, such as deleting files or contacts.
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
+
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal is-open" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--destructive" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
+            <div class="spectrum-AlertDialog-grid">
+              <div class="spectrum-AlertDialog-header">
+                <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Delete 3 documents?</h1>
+              </div>
+
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
+              <section class="spectrum-AlertDialog-content">Are you sure you want to delete the 3 selected documents?</section>
+              <div class="spectrum-ButtonGroup">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Cancel</span>
+                </button>
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--negative spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Delete</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+  - id: alertdialog-secondary-button
+    name: Secondary Button
+    description: An alert dialog can have a total of 3 buttons if the secondary outline button label is defined.
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
+
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal is-open" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--information" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
+            <div class="spectrum-AlertDialog-grid">
+              <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Rate this app</h1>
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
+              <section class="spectrum-AlertDialog-content">If you enjoy our app, would you mind taking a moment to rate it?</section>
+              <div class="spectrum-ButtonGroup">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">No, thanks</span>
+                </button>
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Remind me later</span>
+                </button>
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Rate now</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+  - id: alertdialog-scroll
+    name: Scroll
+    demoClassName: spectrum-CSSExample-example--overlay
+    markup: |
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Alert Dialog</span></button>
+
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+        <div class="spectrum-Modal is-open" data-testid="modal">
+          <section class="spectrum-AlertDialog spectrum-AlertDialog--information" role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="dialog_label">
+            <div class="spectrum-AlertDialog-grid">
+              <h1 class="spectrum-AlertDialog-heading" id="dialog_label">Lorem Ipsum</h1>
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal"></div>
+              <section class="spectrum-AlertDialog-content" tabindex="0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices est eu lacus interdum, vitae volutpat tortor laoreet. Phasellus consectetur erat quis massa congue, vel placerat ipsum hendrerit. Aenean eleifend augue quam, quis blandit lacus pretium eget. Aliquam aliquam fermentum nunc, sed dictum metus varius in. Suspendisse in nisl libero. Nulla egestas massa eget lectus ullamcorper placerat. Vivamus cursus, nunc quis pharetra auctor, eros mi tempus elit, sit amet placerat ipsum velit ut dolor. Nam sit amet eleifend erat. Duis sollicitudin orci sit amet tellus tincidunt, vel lobortis risus pellentesque. Integer viverra urna elementum metus dignissim placerat. Nulla posuere eros ipsum. Pellentesque viverra urna justo, eu ultricies nisl fermentum et. Vivamus tristique porttitor dictum. Vestibulum faucibus hendrerit urna vitae eleifend.</p>
+                <p>Aliquam suscipit ipsum et nulla bibendum imperdiet. Sed euismod est id mauris pretium, ut fringilla est facilisis. Sed tempus dignissim dui non condimentum. Nam et felis mauris. Proin tempus imperdiet neque, ac sagittis urna posuere et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras pulvinar justo metus, sed porttitor tortor porta vel. Cras ultrices lectus non orci dictum auctor. Praesent quis augue vel tortor finibus ultricies at aliquet purus. Fusce eget convallis risus. Proin imperdiet urna ligula, at scelerisque eros vestibulum ut. Proin imperdiet ultricies turpis, eu vestibulum metus congue ut. Etiam commodo hendrerit diam, at luctus leo. Donec vitae erat id enim semper posuere. Nullam blandit condimentum lacus ac laoreet.
+                <p>Suspendisse aliquet erat id maximus porttitor. Quisque auctor dolor ac gravida tincidunt. Proin vitae dignissim elit. Ut a neque nisi. Nullam fermentum, neque ac pulvinar laoreet, augue nisi hendrerit ligula, a dapibus magna urna ac leo. Vivamus augue ex, aliquet sed sagittis vel, vulputate ac leo. Quisque ac euismod magna. Maecenas auctor nisl a sagittis dapibus. Donec semper lorem magna, ac commodo neque imperdiet id. Curabitur in luctus lorem, sed fringilla magna. Pellentesque ac urna eleifend, porttitor ex pharetra, congue purus. Vestibulum aliquam finibus urna sed egestas.</p>
+                <p>Curabitur justo enim, pretium ut nulla vitae, hendrerit vehicula orci. Duis vel odio sed nunc accumsan vestibulum in ac felis. Nam ultrices eleifend lorem at viverra. Fusce dictum ligula dui, at mattis augue elementum id. Pellentesque non risus augue. Nulla porta laoreet erat sed pulvinar. Proin rutrum facilisis interdum. Integer orci odio, tincidunt et egestas a, ullamcorper dapibus sapien.</p>
+              </section>
+              <div class="spectrum-ButtonGroup">
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Cancel</span>
+                </button>
+                <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                  <span class="spectrum-Button-label">Continue</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+

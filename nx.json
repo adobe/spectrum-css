@@ -1,0 +1,101 @@
+{
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"cli": {
+		"warnings": {
+			"versionMismatch": true
+		},
+		"packageManager": "yarn",
+		"analytics": false
+	},
+	"pluginsConfig": {
+		"@nx/js": {
+			"analyzeSourceFiles": false
+		}
+	},
+	"namedInputs": {
+		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
+		"scripts": ["{projectRoot}/stories/*.js"],
+		"tools": [
+			"{projectRoot}/*.json",
+			"{workspaceRoot}/postcss.config.js",
+			"{workspaceRoot}/plugins/postcss-*/index.js"
+		]
+	},
+	"targetDefaults": {
+		"clean": {
+			"cache": true,
+			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"rimraf {projectRoot}/dist",
+					"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+				],
+				"parallel": false
+			}
+		},
+		"build": {
+			"cache": true,
+			"dependsOn": [
+				"^build",
+				"clean",
+				{ "target": "build", "projects": "tokens" }
+			],
+			"inputs": [
+				"core",
+				"tools",
+				"!{projectRoot}/stories/*.js",
+				"{workspaceRoot}/tasks/mod-extractor.js",
+				{ "externalDependencies": ["gulp", "postcss"] },
+				{ "env": "NODE_ENV" }
+			],
+			"outputs": ["{projectRoot}/dist", "{projectRoot}/metadata/mods.md"],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"gulp --gulpfile {projectRoot}/gulpfile.js",
+					"node ./tasks/mod-extractor.js {projectRoot}"
+				],
+				"forwardAllArgs": true,
+				"parallel": false
+			}
+		},
+		"lint": {
+			"inputs": ["core", { "externalDependencies": ["stylelint"] }],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": ["stylelint {projectRoot}/*.css {projectRoot}/themes/*.css"]
+			}
+		},
+		"test": {
+			"cache": true,
+			"inputs": ["scripts", "tools", { "externalDependencies": ["chromatic"] }],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": ".storybook",
+				"commands": [
+					"chromatic --only-changed --build-script-name build --junit-report"
+				]
+			},
+			"configurations": {
+				"scope": {
+					"commands": [
+						"chromatic --build-script-name build --junit-report --only-story-names"
+					]
+				},
+				"plugins": {
+					"dependsOn": [],
+					"inputs": [
+						"{projectRoot}/index.js",
+						"{projectRoot}/test.js",
+						"{projectRoot}/expected/*.css",
+						"{projectRoot}/fixtures/*.css"
+					],
+					"cwd": "{projectRoot}",
+					"commands": ["ava test.js"]
+				}
+			}
+		}
+	}
+}

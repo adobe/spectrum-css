@@ -1,0 +1,24 @@
+{
+  "name": "@spectrum-css/thumbnail",
+  "version": "5.2.0",
+  "description": "The Spectrum CSS thumbnail component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/thumbnail",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/thumbnail"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/opacitycheckerboard": ">=1",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

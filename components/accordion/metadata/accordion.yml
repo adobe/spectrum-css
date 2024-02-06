@@ -1,0 +1,687 @@
+name: Accordion
+description: "While remaining backward compatible, the recommended markup has been updated to implement the [WAI-ARIA 1.1 Accordion design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) to better support accessibility for keyboard and screen reader users."
+
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/accordion/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### T-shirt sizing
+      Accordion now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Accordion--size*` class.
+
+      ### Density
+      Accordion now supports density and requires that you specify one of the density type `compact` `regular` `spacious`.
+
+examples:
+  - id: accordion
+    name: Compact - S
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--compact spectrum-Accordion--sizeS" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Compact - M
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--compact spectrum-Accordion--sizeM" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Compact - L
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--compact spectrum-Accordion--sizeL" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Compact - XL
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--compact spectrum-Accordion--sizeXL" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Regular - S
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--sizeS" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Regular - M
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--sizeM" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Regular - L
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--sizeL" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Regular - XL
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--sizeXL" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Spacious - S
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--spacious spectrum-Accordion--sizeS" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron75" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Spacious - M
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--spacious spectrum-Accordion--sizeM" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron100" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Spacious - L
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--spacious spectrum-Accordion--sizeL" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight200 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron200" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>
+
+  - id: accordion
+    name: Spacious - XL
+    markup: |
+      <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
+      <div class="spectrum-Accordion spectrum-Accordion--spacious spectrum-Accordion--sizeXL" role="region">
+        <div class="spectrum-Accordion-item is-open" role="presentation">
+
+          <!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
+          <h3 class="spectrum-Accordion-itemHeading">
+            <!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Recent</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+
+          <!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Item 1</div>
+        </div>
+        <div class="spectrum-Accordion-item is-disabled" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" disabled id="spectrum-accordion-item-1-header" aria-controls="spectrum-accordion-item-1-content" aria-expanded="false">Architecture</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-1-content" aria-labelledby="spectrum-accordion-item-1-header">Item 2</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-2-header" aria-controls="spectrum-accordion-item-2-content" aria-expanded="false">Nature</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-2-content" aria-labelledby="spectrum-accordion-item-2-header">Item 3</div>
+        </div>
+        <div class="spectrum-Accordion-item" role="presentation">
+          <h3 class="spectrum-Accordion-itemHeading">
+            <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-3-header" aria-controls="spectrum-accordion-item-3-content" aria-expanded="false">Really Long Accordion Item According to Our Predictions</button>
+            <span class="spectrum-Accordion-itemIconContainer">
+              <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight300 spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Chevron300" />
+              </svg>
+            </span>
+          </h3>
+          <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-3-content" aria-labelledby="spectrum-accordion-item-3-header">Item 4</div>
+        </div>
+      </div>

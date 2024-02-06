@@ -1,0 +1,81 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+
+/* fieldgroup/index.css
+ *
+ * fieldgroup contains four component dependences:
+ * radio, checkbox, helptext, fieldlabel
+ *
+ */
+
+/* custom properties */
+.spectrum-FieldGroup {
+  --spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
+  --spectrum-fieldgroup-readonly-delimiter: '\002c';
+}
+
+/* field group */
+.spectrum-FieldGroup {
+  display: flex;
+  flex-flow: column wrap;
+
+  /* field group label top aligned */
+  &--toplabel {
+    flex-direction: column;
+  }
+
+  /* field group label side aligned */
+  &--sidelabel {
+    flex-direction: row;
+  }
+}
+
+/* input fields layout */
+.spectrum-FieldGroupInputLayout {
+  display: flex;
+  flex-flow: column wrap;
+
+  /* input fields stacked vertically */
+  .spectrum-FieldGroup--vertical & {
+    flex-direction: column;
+  }
+
+   /* input fields aligned horizontally */
+  .spectrum-FieldGroup--horizontal & {
+    flex-direction: row;
+
+    /* space between horizontal fields */
+    .spectrum-FieldGroup-item:not(:last-child) {
+      margin-inline-end: var(--spectrum-fieldgroup-margin);
+    }
+
+    /* move help text down to new row */
+    .spectrum-HelpText {
+      flex-basis: 100%;
+    }
+  }
+}
+
+/* read-only checkbox group */
+.spectrum-FieldGroup {
+  .spectrum-Checkbox.is-readOnly {
+    .spectrum-Checkbox-box {
+      display: none;
+    }
+
+    /* read-only checkbox fields delimited by commas */
+    &:not(:last-child) .spectrum-Checkbox-label::after {
+      content: var(--spectrum-fieldgroup-readonly-delimiter);
+    }
+  }
+}

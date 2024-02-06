@@ -1,0 +1,16 @@
+.button {
+	border-width: 2px;
+}
+
+.button:hover {
+	color: black;
+}
+
+.card .button,
+.button--green {
+	color: green;
+}
+
+.card {
+	border-width: 1px;
+}

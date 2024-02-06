@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ component }} compared to v{{ tag }} | {{ file }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="utf-8"/>
+        <meta name="theme-color" content="#e1251b" />
+
+        <!-- Load all component stylesheets -->
+        {% for component in allComponents -%}
+            {% if component not in ["commons", "overlay"] %}
+                <link rel="stylesheet" type="text/css" href="../../../components/{{ component }}/dist/index.css"/>
+            {% endif %}
+        {%- endfor -%}
+
+        <link rel="stylesheet" type="text/css" href="../../../node_modules/@spectrum-css/vars/dist/spectrum-global.css"/>
+        <link rel="stylesheet" type="text/css" href="../../../node_modules/@spectrum-css/vars/dist/spectrum-light.css"/>
+        <link rel="stylesheet" type="text/css" href="../../../node_modules/@spectrum-css/vars/dist/spectrum-medium.css"/>
+
+        <link rel="stylesheet" type="text/css" href="../../../tokens/dist/index.css"/>
+
+        <!-- CSS to render the diff2html code -->
+        <link rel="stylesheet" type="text/css" href="../../../node_modules/diff2html/bundles/css/diff2html.min.css" />
+    </head>
+    <body class="spectrum spectrum--light spectrum--medium spectrum-Typography">
+        {{ html|safe }}
+        <!-- JS to render the diff2html code -->
+        <script type="text/javascript" src="../../../node_modules/diff2html/bundles/js/diff2html.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1347 @@
+name: Table
+description: The Table component is for displaying tabular info, with the option for sorting or row selection.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/table/
+sections:
+  - name: Custom properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/table/metadata/mods.md">here</a>.
+  - name: Migration guide
+    description: |
+      ### Sorted icon moved to left side of text
+      The sorted icon was previously on the right side of the text, but has been moved to the left in the markup. If used on the right side of the text, the spacing between icon and text will be incorrect.
+
+      ### Remove whitespace between column title text and sort icon(s)
+      In the column header, when the sort icon or header menu icon is displayed, remove any white space in the HTML markup between the icon and the column title. This ensures that no extra space is created. Also, the column title text is now wrapped in a `<span class="spectrum-Table-columnTitle">` element when the column is sortable.
+examples:
+  - id: table-medium
+    name: Default (medium)
+    description: "Tables come in four different sizes: small, medium, large, and extra-large. The medium size is the default and recommended option."
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-small
+    name: T-Shirt sizes
+    description: "Tables come in four different sizes: small, medium, large, and extra-large. The medium size is the default and recommended option."
+    markup: |
+      <div class="spectrum-Examples-item" style="margin-bottom: 2rem">
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Small</h4>
+
+        <table class="spectrum-Table spectrum-Table--sizeS spectrum-Table--emphasized">
+          <thead class="spectrum-Table-head">
+            <tr>
+              <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown75 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow75" />
+                </svg>
+                Column title
+              </th>
+              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown75 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow75" />
+                </svg>
+                Column title
+              </th>
+              <th class="spectrum-Table-headCell">Column title</th>
+            </tr>
+          </thead>
+          <tbody class="spectrum-Table-body">
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+            </tr>
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="spectrum-Examples-item" style="margin-bottom: 2rem">
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Medium</h4>
+
+        <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+          <thead class="spectrum-Table-head">
+            <tr>
+              <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg>
+                Column title
+              </th>
+              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg>
+                Column title
+              </th>
+              <th class="spectrum-Table-headCell">Column title</th>
+            </tr>
+          </thead>
+          <tbody class="spectrum-Table-body">
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+            </tr>
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="spectrum-Examples-item" style="margin-bottom: 2rem">
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Large</h4>
+
+        <table class="spectrum-Table spectrum-Table--sizeL spectrum-Table--emphasized">
+          <thead class="spectrum-Table-head">
+            <tr>
+              <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown200 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow200" />
+                </svg>
+                Column title
+              </th>
+              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown200 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow200" />
+                </svg>
+                Column title
+              </th>
+              <th class="spectrum-Table-headCell">Column title</th>
+            </tr>
+          </thead>
+          <tbody class="spectrum-Table-body">
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+            </tr>
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="spectrum-Examples-item" style="margin-bottom: 2rem">
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Extra Large</h4>
+
+        <table class="spectrum-Table spectrum-Table--sizeXL spectrum-Table--emphasized">
+          <thead class="spectrum-Table-head">
+            <tr>
+              <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown300 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow300" />
+                </svg>
+                Column title
+              </th>
+              <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown300 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow300" />
+                </svg>
+                Column title
+              </th>
+              <th class="spectrum-Table-headCell">Column title</th>
+            </tr>
+          </thead>
+          <tbody class="spectrum-Table-body">
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+            </tr>
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  - id: table-compact
+    name: Compact
+    description: The compact variant decreases the spacing used within the table.
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--compact spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-spacious
+    name: Spacious
+    description: The spacious variant increases the spacing used within the table.
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--spacious spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-multi-select
+    name: Multi-select
+    description: The standard multi-select table includes a column of checkboxes used for selecting rows.
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" role="grid" aria-multiselectable="true">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox is-indeterminate">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select All">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Dash100" />
+                  </svg>
+                </span>
+              </label>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Alpha
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Bravo
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Charlie
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Delta
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Echo
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-multi-select-non-emphasized
+    name: Non-emphasized multi-select
+    description: Excluding the `spectrum-Table--emphasized` class will change the style of selected rows.
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM" role="grid" aria-multiselectable="true">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox is-indeterminate">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select All">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Dash100" />
+                  </svg>
+                </span>
+              </label>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Alpha
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Bravo
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Charlie
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Delta
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Echo
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-quiet
+    name: Quiet
+    description: The quiet table has a transparent background and no borders on the left and right.
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-quiet-multi-select
+    name: Multi-select (quiet)
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet" role="grid" aria-multiselectable="true">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select All">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Alpha
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Bravo
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row is-selected" aria-selected="true">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" checked title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Charlie
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Delta
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized spectrum-Table-checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                </span>
+              </label>
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">
+              Row Item Echo
+            </td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
+            <td class="spectrum-Table-cell" role="gridcell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-column-dividers
+    name: Column dividers
+    description: The standard table can display column dividers by including the `spectrum-Table-cell--divider` class with `spectrum-Table-cell`. Use sparingly to group related content (see guidelines for more info).
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-asc" aria-sort="ascending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable"" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-summary-row
+    name: Summary row
+    description: "Tables can have a summary row to show totals, at either the top or the bottom of the table."
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">18</td>
+            <td class="spectrum-Table-cell">2875</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">23</td>
+            <td class="spectrum-Table-cell">3679</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">7</td>
+            <td class="spectrum-Table-cell">1308</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--summary">
+            <td class="spectrum-Table-cell">Summary</td>
+            <td class="spectrum-Table-cell">48</td>
+            <td class="spectrum-Table-cell">7862</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-section-header-row
+    name: Section header row
+    description: "Tables can style one or more rows as section headers."
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row spectrum-Table-row--sectionHeader">
+            <th class="spectrum-Table-cell" colspan="3" scope="col">Section header</th>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--sectionHeader">
+            <th class="spectrum-Table-cell" colspan="3" scope="col">Another section header for the table</th>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-section-header-row-quiet
+    name: Section header row (quiet)
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row spectrum-Table-row--sectionHeader">
+            <th class="spectrum-Table-cell" colspan="3" scope="col">Section header</th>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--sectionHeader">
+            <th class="spectrum-Table-cell" colspan="3" scope="col">Another section header for the table</th>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-scrollable
+    name: Scrollable with fixed column headers
+    description: |
+      A table can be wrapped in a fixed height div with the `spectrum-Table-scroller` class. This allows scrolling of the table body and makes the column headers sticky (i.e. fixed to the top on scroll).
+
+      When using the scrollable wrapper, the column headers must have a solid background color set. This can be customized to match the parent background with the custom property `--mod-table-header-background-color-scrollable`.
+
+      To make sure that reverse keyboard link navigation (shift-tab) keeps the whole cell in focus, `--mod-table-current-header-height` should be dynamically updated with JS to match the height of `.spectrum-Table-head`.
+    markup: |
+      <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--emphasized spectrum-Table--sizeM" style="height: 200px">
+        <table class="spectrum-Table-main">
+          <thead class="spectrum-Table-head">
+            <tr>
+              <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg><span class="spectrum-Table-columnTitle">Column title</span>
+              </th>
+              <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg><span class="spectrum-Table-columnTitle">Column title</span>
+              </th>
+              <th class="spectrum-Table-headCell">Column title</th>
+            </tr>
+          </thead>
+          <tbody class="spectrum-Table-body">
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+              <td class="spectrum-Table-cell">Row Item Alpha</td>
+            </tr>
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+              <td class="spectrum-Table-cell">Row Item Bravo</td>
+            </tr>
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Charlie</td>
+              <td class="spectrum-Table-cell">Row Item Charlie</td>
+              <td class="spectrum-Table-cell">Row Item Charlie</td>
+            </tr>
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Delta</td>
+              <td class="spectrum-Table-cell">Row Item Delta</td>
+              <td class="spectrum-Table-cell">Row Item Delta</td>
+            </tr>
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Echo</td>
+              <td class="spectrum-Table-cell">Row Item Echo</td>
+              <td class="spectrum-Table-cell">Row Item Echo</td>
+            </tr>
+            <tr class="spectrum-Table-row">
+              <td class="spectrum-Table-cell">Row Item Foxtrot</td>
+              <td class="spectrum-Table-cell">Row Item Foxtrot</td>
+              <td class="spectrum-Table-cell">Row Item Foxtrot</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  - id: table-divs
+    name: Divs
+    description: A table can alternatively be composed entirely of `<div>` tags, instead of a `<table>`. This example also uses the scrollable wrapper.
+    markup: |
+      <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" style="height: 200px">
+        <div class="spectrum-Table-main" role="table">
+          <div class="spectrum-Table-head" role="rowgroup">
+            <div role="row">
+              <div class="spectrum-Table-headCell is-sortable is-sorted-desc" role="columnheader" aria-sort="descending" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg><span class="spectrum-Table-columnTitle">Column title</span>
+              </div>
+              <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg><span class="spectrum-Table-columnTitle">Column title</span>
+              </div>
+              <div class="spectrum-Table-headCell" role="columnheader">Column title</div>
+            </div>
+          </div>
+          <div class="spectrum-Table-body" role="rowgroup">
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Alpha</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Alpha</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Alpha</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Bravo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Bravo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Bravo</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Charlie</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Charlie</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Charlie</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Delta</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Delta</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Delta</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Echo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Echo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Echo</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Foxtrot</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Foxtrot</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Foxtrot</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  - id: table-collapsible
+    name: Collapsible rows
+    description: "In a table with collapsible rows, all child items must have columns that match the parent items. See the Guidelines for more info on how and when to use collapsible rows."
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row spectrum-Table-row--collapsible" data-tier="0" id="table-cr-alpha">
+            <td class="spectrum-Table-cell spectrum-Table-cell--collapsible">
+              <div class="spectrum-Table-collapseInner">
+                <button 
+                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon" 
+                  aria-label="Collapse"
+                  aria-expanded="true"
+                  aria-controls="table-cr-bravo table-cr-delta"
+                >
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron100" />
+                  </svg>
+                </button>
+                <div class="spectrum-Table-collapseContent">Row Item Alpha</span>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--collapsible" data-tier="1" id="table-cr-bravo">
+            <td class="spectrum-Table-cell spectrum-Table-cell--collapsible">
+              <div class="spectrum-Table-collapseInner">
+                <button 
+                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon" 
+                  aria-label="Expand"
+                  aria-expanded="false"
+                  aria-controls="table-cr-charlie"
+                >
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron100" />
+                  </svg>
+                </button>
+                <div class="spectrum-Table-collapseContent">Row Item Bravo</span>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--collapsible" data-tier="2" id="table-cr-charlie" hidden>
+            <td class="spectrum-Table-cell">
+              <div class="spectrum-Table-collapseInner">
+                <div class="spectrum-Table-collapseContent">Row Item Charlie</span>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--collapsible" data-tier="1" id="table-cr-delta">
+            <td class="spectrum-Table-cell spectrum-Table-cell--collapsible">
+              <div class="spectrum-Table-collapseInner">
+                <button
+                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon"
+                  aria-label="Collapse"
+                  aria-controls="table-cr-echo table-cr-foxtrot"
+                  aria-expanded="true"
+                >
+                  <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron100" />
+                  </svg>
+                </button>
+                <div class="spectrum-Table-collapseContent">Row Item Delta</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--collapsible is-last-tier" aria-expanded="true" data-tier="2" id="table-cr-echo">
+            <td class="spectrum-Table-cell spectrum-Table-cell--collapsible">
+              <div class="spectrum-Table-collapseInner">
+                <div class="spectrum-Table-collapseContent">Row Item Echo</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--collapsible is-last-tier" aria-expanded="true" data-tier="2" id="table-cr-foxtrot">
+            <td class="spectrum-Table-cell spectrum-Table-cell--collapsible">
+              <div class="spectrum-Table-collapseInner">
+                <div class="spectrum-Table-collapseContent">Row Item Foxtrot</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">Row Item Foxtrot</td>
+            <td class="spectrum-Table-cell">Row Item Foxtrot</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-thumbnails
+    name: Thumbnails
+    description: "Thumbnails can be used in the table content, with some additional markup and classes for alignment. This variant can also be combined with collapsible rows."
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+              <span>Animals</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg>
+              <span>Number</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body">
+          <tr class="spectrum-Table-row spectrum-Table-row--thumbnail">
+            <td class="spectrum-Table-cell spectrum-Table-cell--thumbnail">
+              <div class="spectrum-Table-thumbnailInner">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300 spectrum-OpacityCheckerboard">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                  </div>
+                </div>
+                <div class="spectrum-Table-thumbnailContent">Birds</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">2</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--thumbnail">
+            <td class="spectrum-Table-cell spectrum-Table-cell--thumbnail">
+              <div class="spectrum-Table-thumbnailInner">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300 spectrum-OpacityCheckerboard">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                  </div>
+                </div>
+                <div class="spectrum-Table-thumbnailContent">Ducks</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">23</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--thumbnail">
+            <td class="spectrum-Table-cell spectrum-Table-cell--thumbnail">
+              <div class="spectrum-Table-thumbnailInner">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300 spectrum-OpacityCheckerboard">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                  </div>
+                </div>
+                <div class="spectrum-Table-thumbnailContent">Goats</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">7</td>
+          </tr>
+          <tr class="spectrum-Table-row spectrum-Table-row--thumbnail">
+            <td class="spectrum-Table-cell spectrum-Table-cell--thumbnail">
+              <div class="spectrum-Table-thumbnailInner">
+                <div class="spectrum-Thumbnail spectrum-Thumbnail--cover spectrum-Thumbnail--size300 spectrum-OpacityCheckerboard">
+                  <div class="spectrum-Thumbnail-image-wrapper">
+                    <img class="spectrum-Thumbnail-image" src="img/flowers.png" alt="Placeholder image">
+                  </div>
+                </div>
+                <div class="spectrum-Table-thumbnailContent">Rabbits</div>
+              </div>
+            </td>
+            <td class="spectrum-Table-cell">18</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-body-dropzone-table
+    name: Body dropzone
+    markup: |
+      <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+        <thead class="spectrum-Table-head">
+          <tr>
+            <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell is-sortable" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </th>
+            <th class="spectrum-Table-headCell">Column title</th>
+          </tr>
+        </thead>
+        <tbody class="spectrum-Table-body is-drop-target">
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+            <td class="spectrum-Table-cell">Row Item Alpha</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+            <td class="spectrum-Table-cell">Row Item Bravo</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+            <td class="spectrum-Table-cell">Row Item Charlie</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+            <td class="spectrum-Table-cell">Row Item Delta</td>
+          </tr>
+          <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+            <td class="spectrum-Table-cell">Row Item Echo</td>
+          </tr>
+        </tbody>
+      </table>
+  - id: table-row-dropzone
+    name: Row dropzone
+    description: Rows that accept dropped content.
+    markup: |
+      <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized" style="height: 200px">
+        <div class="spectrum-Table-main" role="table">
+          <div class="spectrum-Table-head" role="rowgroup">
+            <div role="row">
+              <div class="spectrum-Table-headCell is-sortable is-sorted-desc" role="columnheader" aria-sort="descending" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg><span class="spectrum-Table-columnTitle">Column title</span>
+              </div>
+              <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg><span class="spectrum-Table-columnTitle">Column title</span>
+              </div>
+              <div class="spectrum-Table-headCell" role="columnheader">Column title</div>
+            </div>
+          </div>
+          <div class="spectrum-Table-body" role="rowgroup">
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Alpha</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Alpha</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Alpha</div>
+            </div>
+            <div class="spectrum-Table-row is-drop-target" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Bravo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Bravo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Bravo</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Charlie</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Charlie</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Charlie</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Delta</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Delta</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Delta</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Echo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Echo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Echo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  - id: table-row-dropzone-quiet
+    name: Row dropzone (quiet)
+    markup: |
+      <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized spectrum-Table--quiet" style="height: 200px">
+        <div class="spectrum-Table-main" role="table">
+          <div class="spectrum-Table-head" role="rowgroup">
+            <div role="row">
+              <div class="spectrum-Table-headCell is-sortable is-sorted-desc" role="columnheader" aria-sort="descending" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg><span class="spectrum-Table-columnTitle">Column title</span>
+              </div>
+              <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
+                <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-Arrow100" />
+                </svg><span class="spectrum-Table-columnTitle">Column title</span>
+              </div>
+              <div class="spectrum-Table-headCell" role="columnheader">Column title</div>
+            </div>
+          </div>
+          <div class="spectrum-Table-body" role="rowgroup">
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Alpha</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Alpha</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Alpha</div>
+            </div>
+            <div class="spectrum-Table-row is-drop-target" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Bravo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Bravo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Bravo</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Charlie</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Charlie</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Charlie</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Delta</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Delta</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Delta</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell" role="cell">Row Item Echo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Echo</div>
+              <div class="spectrum-Table-cell" role="cell">Row Item Echo</div>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,413 @@
+doctype html
+html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
+  head
+    title Wrapping - Spectrum CSS
+
+    -
+      var exampleDependencies = [
+        'link',
+        'toast',
+        'tooltip',
+        'coachmark',
+        'dialog',
+        'divider',
+        'button',
+        'buttongroup',
+        'sidenav',
+        'menu',
+        'modal',
+        'progressbar',
+        'picker',
+        'pickerbutton',
+        'inputgroup',
+        'slider',
+        'checkbox',
+        'radio',
+        'switch'
+      ];
+
+      dependencyOrder = dependencyOrder.concat(exampleDependencies.filter(dep => dependencyOrder.indexOf(dep) === -1))
+
+    include includes/dependencies.pug
+
+  body
+
+    .spectrum-Site
+
+      include includes/header.pug
+
+      .spectrum-Site-content
+
+        include includes/sidebar.pug
+
+        .spectrum-Site-mainContent
+
+          .spectrum-Site-mainContainer
+            .spectrum-Site-page.spectrum-Typography
+
+              h1.spectrum-Heading.spectrum-Heading--sizeXL A study of wrapping across a number of components
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Link (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div style="width: 146px" class="spectrum-Body spectrum-Body--sizeS">See our <a href="#" class="spectrum-Link">Privacy Policy</a> for more details or <a href="#" class="spectrum-Link">opt-out at any time</a>.</div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Toast (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Toast" style="width: 280px;">
+                      <div class="spectrum-Toast-body">
+                        <div class="spectrum-Toast-content">All documents in this folder have been archived</div>
+                      </div>
+                      <div class="spectrum-Toast-buttons">
+                        <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+                          <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+                            <use xlink:href="#spectrum-css-icon-Cross100" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Toast with Icon and Button (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Toast spectrum-Toast--info" style="width: 318px;">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-Info" />
+                      </svg>
+                      <div class="spectrum-Toast-body">
+                        <div class="spectrum-Toast-content">A new version of Lightroom Classic is now available</div>
+                        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite">
+                          <span class="spectrum-Button-label">Update</span>
+                        </button>
+                      </div>
+                      <div class="spectrum-Toast-buttons">
+                        <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite">
+                          <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+                            <use xlink:href="#spectrum-css-icon-Cross100" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Tooltip (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
+                      <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                      <span class="spectrum-Tooltip-tip"></span>
+                    </span>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Tooltip with Icon (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
+                      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Tooltip-typeIcon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-icon-18-CheckmarkCircle" />
+                      </svg>
+                      <span class="spectrum-Tooltip-label">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                      <span class="spectrum-Tooltip-tip"></span>
+                    </span>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Coach Mark (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-CoachMarkPopover" style="width: 226px">
+                      <img src="img/example-ava.jpg" class="spectrum-CoachMarkPopover-image" />
+
+                      <div class="spectrum-CoachMarkPopover-header">
+                        <div class="spectrum-CoachMarkPopover-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="spectrum-CoachMarkPopover-step">3 of 100</div>
+                      </div>
+                      <div class="spectrum-CoachMarkPopover-content">
+                        Smart filters are nondestructive and will preserve your original images.
+                      </div>
+                      <div class="spectrum-CoachMarkPopover-footer">
+                        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--secondary">
+                          <span class="spectrum-Button-label">Skip Tour</span>
+                        </button>
+                        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--primary">
+                          <span class="spectrum-Button-label">Next</span>
+                        </button>
+                      </div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Dialog (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example.spectrum-CSSExample-example--overlay
+                    <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+
+                    <!-- spectrum-CSSExample-dialog class is included for demo purposes only -->
+                    <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
+                      <div class="spectrum-Modal is-open" data-testid="modal" style="width: 300px">
+                        <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--destructive" role="alertdialog" tabindex="-1" aria-modal="true">
+                          <div class="spectrum-Dialog-grid">
+                            <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                            <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
+                            <section class="spectrum-Dialog-content">Smart filters are nondestructive and will preserve your original images.</section>
+                            <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
+                              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--secondary spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                                <span class="spectrum-Button-label">Cancel</span>
+                              </button>
+                              <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-ButtonGroup-item" type="button" onclick="closeDialog(this.closest('.spectrum-Modal-wrapper'))">
+                                <span class="spectrum-Button-label">Enable</span>
+                              </button>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Button (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div style="max-width: 168px; margin: 0 0 10px 0">
+                      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent">
+                        <span class="spectrum-Button-label">Informationen über Creative Cloud</span>
+                      </button>
+                    </div>
+                    <div style="max-width: 168px; margin: 0 0 10px 0">
+                      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--primary">
+                        <span class="spectrum-Button-label">Informationen über Creative Cloud</span>
+                      </button>
+                    </div>
+                    <div style="max-width: 168px; margin: 0 0 10px 0">
+                      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--secondary">
+                        <span class="spectrum-Button-label">Informationen über Creative Cloud</span>
+                      </button>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Menu (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Popover is-open" style="position: relative; width: 176px">
+                      <ul class="spectrum-Menu" role="menu">
+                        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                          <span class="spectrum-Menu-itemLabel">Canada</span>
+                        </li>
+                        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                          <span class="spectrum-Menu-itemLabel">Congo, Democratic Republic of the</span>
+                        </li>
+                        <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                          <span class="spectrum-Menu-itemLabel">Mexico</span>
+                        </li>
+                        <li class="spectrum-Menu-item is-selected" role="menuitem" tabindex="0">
+                          <span class="spectrum-Menu-itemLabel">United States</span>
+                        </li>
+                      </ul>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Menu with Icons (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Popover is-open" style="position: relative; width: 176px">
+                      <ul class="spectrum-Menu" role="menu">
+                        <li role="presentation">
+                          <span class="spectrum-Menu-sectionHeading" id="menu-heading-category-2"  aria-hidden="true">Section Heading</span>
+                          <ul class="spectrum-Menu" role="group" aria-labelledby="menu-heading-category-1" aria-disabled="true">
+                            <li class="spectrum-Menu-item" role="menuitem" tabindex="0">
+                              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="SaveFloppy">
+                                <use xlink:href="#spectrum-icon-18-Save"></use>
+                              </svg>
+                              <span class="spectrum-Menu-itemLabel">Save to the magnetic disk of the past</span>
+                            </li>
+                            <li class="spectrum-Menu-item" role="menuitem">
+                              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="DataDownload">
+                                <use xlink:href="#spectrum-icon-18-Copy"></use>
+                              </svg>
+                              <span class="spectrum-Menu-itemLabel">Copy but with a long label for no specific reason</span>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Side Navigation (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <nav style="width: 170px;">
+                      <ul class="spectrum-SideNav">
+                        <li class="spectrum-SideNav-item">
+                          <a href="#" class="spectrum-SideNav-itemLink">Privatsphäre</a>
+                        </li>
+                        <li class="spectrum-SideNav-item is-selected">
+                          <a href="#" class="spectrum-SideNav-itemLink">Benutzerprofileinstellungen</a>
+                        </li>
+                        <li class="spectrum-SideNav-item">
+                          <a href="#" class="spectrum-SideNav-itemLink">Hilfe & Unterstützung</a>
+                        </li>
+                      </ul>
+                    </nav>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Checkbox (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <label class="spectrum-Checkbox spectrum-Checkbox--sizeM">
+                      <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+                      <span class="spectrum-Checkbox-box">
+                        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                          <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                        </svg>
+                        <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                          <use xlink:href="#spectrum-css-icon-Dash100" />
+                        </svg>
+                      </span>
+                      <span class="spectrum-Checkbox-label">Add Adobe Stock. Get one month free.*</span>
+                    </label>
+                    <br>
+                    <label class="spectrum-Checkbox spectrum-Checkbox--sizeM" style="width: 149px">
+                      <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+                      <span class="spectrum-Checkbox-box">
+                        <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                          <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                        </svg>
+                        <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                          <use xlink:href="#spectrum-css-icon-Dash100" />
+                        </svg>
+                      </span>
+                      <span class="spectrum-Checkbox-label">Add Adobe Stock. Get one month free.*</span>
+                    </label>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Radio (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Radio">
+                      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+                      <span class="spectrum-Radio-button"></span>
+                      <label class="spectrum-Radio-label" for="radio-0">Add Adobe Stock. Get one month free.*</label>
+                    </div>
+                    <br>
+                    <div class="spectrum-Radio" style="width: 149px">
+                      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" checked>
+                      <span class="spectrum-Radio-button"></span>
+                      <label class="spectrum-Radio-label" for="radio-0">Add Adobe Stock. Get one month free.*</label>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Switch (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Switch">
+                      <input type="checkbox" class="spectrum-Switch-input" id="switch-onoff-0">
+                      <span class="spectrum-Switch-switch"></span>
+                      <label class="spectrum-Switch-label" for="switch-onoff-0">Add Adobe Stock. Get one month free.*</label>
+                    </div>
+                    <br>
+                    <div class="spectrum-Switch" style="width: 170px">
+                      <input type="checkbox" class="spectrum-Switch-input" id="switch-onoff-0">
+                      <span class="spectrum-Switch-switch"></span>
+                      <label class="spectrum-Switch-label" for="switch-onoff-0">Add Adobe Stock. Get one month free.*</label>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Barloader (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div style="margin: 20px 0; width: 168px">
+                      <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
+                        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-label">Laden ihrer Creative Cloud dateien</div>
+                        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-percentage">26%</div>
+                        <div class="spectrum-ProgressBar-track">
+                          <div class="spectrum-ProgressBar-fill" style="width: 26%;"></div>
+                        </div>
+                      </div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Meter (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div style="margin: 20px 0;">
+                      <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM is-positive" value="26" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100">
+                        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-label">Creative Cloud datennutzung insgesamt</div>
+                        <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-percentage">26%</div>
+                        <div class="spectrum-ProgressBar-track">
+                          <div class="spectrum-ProgressBar-fill" style="width: 26%;"></div>
+                        </div>
+                      </div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Combobox (wrapping label)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div style="width: 160px">
+                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-combobox-instance">Vorhergesagtes jährliches wachstum</label>
+                      <div class="spectrum-InputGroup">
+                        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+                          <input type="text" placeholder="Type here" name="field" value="" id="spectrum-combobox-instance" class="spectrum-Textfield-input spectrum-InputGroup-input">
+                        </div>
+                        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--high spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="listbox">
+                          <div class="spectrum-PickerButton-fill">
+                            <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                              <use xlink:href="#spectrum-css-icon-Chevron200" />
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Picker (wrapping label)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div style="width: 160px">
+                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel">Vorhergesagtes jährliches wachstum</label>
+                      <button class="spectrum-Picker spectrum-Picker--sizeM" style="width: 195px;" aria-haspopup="true">
+                        <span class="spectrum-Picker-label is-placeholder">Select an option</span>
+                        <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+                          <use xlink:href="#spectrum-css-icon-Chevron100" />
+                        </svg>
+                      </button>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Textfield (wrapping label)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div style="width: 160px">
+                      <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel">Vorhergesagtes jährliches wachstum</label>
+                      <div class="spectrum-Textfield">
+                        <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield-input">
+                      </div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Slider (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-Slider spectrum-Slider--filled" style="width: 208px">
+                      <div class="spectrum-Slider-labelContainer">
+                        <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
+                      </div>
+                      <div class="spectrum-Slider-controls">
+                        <div class="spectrum-Slider-track"></div>
+                        <div class="spectrum-Slider-handle" style="left: 40%;">
+                          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-8">
+                        </div>
+                        <div class="spectrum-Slider-track"></div>
+                      </div>
+                    </div>
+
+              article.spectrum-CSSExample
+                h5.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS Status Light (wrapping)
+                section.spectrum-CSSExample-container
+                  .spectrum-CSSExample-example
+                    <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--positive">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--positive" style="width: 157px">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+
+          include includes/footer.pug
+
+    include includes/pageBottom.pug
