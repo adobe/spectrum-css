@@ -11,6 +11,7 @@
 	},
 	"targets": {
 		"build": {
+			"cache": false,
 			"dependsOn": ["clean", "style-dictionary"],
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"executor": "nx:run-commands",
@@ -31,7 +32,7 @@
 			]
 		},
 		"clean": {
-			"cache": true,
+			"cache": false,
 			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
 			"outputs": [],
 			"executor": "nx:run-commands",
