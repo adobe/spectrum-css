@@ -1,13 +1,13 @@
 {
-  "name": "@spectrum-css/bundle-builder",
-  "version": "7.0.2",
-  "description": "The Spectrum CSS top-level builder",
+  "name": "@spectrum-css/documentation",
+  "version": "1.0.0",
+  "description": "The Spectrum CSS documentation tooling",
   "license": "Apache-2.0",
   "author": "Adobe",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "tools/bundle-builder"
+    "directory": "site"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
@@ -15,20 +15,11 @@
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.5.4",
     "@spectrum-css/expressvars": "^3.0.9",
+    "@spectrum-css/site": "^4.2.1",
     "@spectrum-css/tokens": "^13.2.0",
     "@spectrum-css/ui-icons": "^1.1.2",
     "@spectrum-css/vars": "^9.0.8",
     "npm-registry-fetch": "^14.0.5"
-  },
-  "peerDependencies": {
-    "@spectrum-css/expressvars": ">=3",
-    "@spectrum-css/tokens": ">=13",
-    "@spectrum-css/vars": ">=9"
-  },
-  "peerDependenciesMeta": {
-    "@spectrum-css/expressvars": {
-      "optional": true
-    }
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
@@ -41,15 +32,15 @@
     "gulp-data": "^1.3.1",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
-    "gulplog": "^1.0.0",
-    "inquirer": "^9.2.10",
     "js-yaml": "^4.1.0",
     "loadicons": "^1.0.0",
+    "lunr": "^2.3.6",
+    "markdown-it": "^12.3.2",
+    "prismjs": "^1.23.0",
     "lunr": "^2.3.9",
     "postcss": "^8.4.33",
     "pug": "^3.0.2",
     "replace-ext": "^1.0.0",
-    "semver": "^7.5.1",
     "through2": "^3.0.1"
   }
 }

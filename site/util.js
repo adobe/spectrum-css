@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const logger = require("gulplog");
-
 const md = require("markdown-it")({
 	html: true,
 	linkify: false,
@@ -116,28 +114,17 @@ exports.getStatusLightVariant = function (status) {
 	return statusLightVariants[status] || "neutral";
 };
 
-exports.getDNAStatus = function (dnaComponentId, dnaStatus, cssStatus) {
+exports.getDNAStatus = function (_, dnaStatus, cssStatus) {
 	if (cssStatus === "Deprecated") {
 		dnaStatus = "Deprecated";
 	}
 
-	if (cssStatus === "Verified") {
-		if (dnaStatusTranslation[dnaStatus] !== "Canon") {
-			logger.debug(
-				`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`
-			);
-		}
-	}
-
-	if (!dnaStatus) {
-		logger.debug(`${dnaComponentId} has no DNA status`);
-		dnaStatus = "Contribution";
-	}
+	if (!dnaStatus) dnaStatus = "Contribution";
 
 	return dnaStatusTranslation[dnaStatus] || dnaStatus;
 };
 
-exports.getCSSStatus = function (dnaComponentId, cssStatus) {
+exports.getCSSStatus = function (_, cssStatus) {
 	if (!cssStatus) {
 		cssStatus = "Contribution";
 	}

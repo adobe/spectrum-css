@@ -12,10 +12,88 @@ governing permissions and limitations under the License.
 
 const gulp = require("gulp");
 const rename = require("gulp-rename");
-const css = require("./css");
+const postcss = require("gulp-postcss");
+const concat = require("gulp-concat");
 
-const build = gulp.series(css.buildCSS, function copyIndex() {
-	// Just copy index.vars as index.css to maintain backwards compat
+const processorsFunction = require("./processors").getProcessors;
+const processors = processorsFunction();
+
+function buildCSS() {
+	return gulp
+		.src([
+			"index.css",
+			"themes/spectrum.css", // spectrum comes first
+			"themes/*.css",
+		], {
+			allowEmpty: true,
+		})
+		.pipe(concat("index.css"))
+		.pipe(
+			postcss(processors, {
+				from: "./index.css", // gulp-concat sets the file.path wrong, so override here
+			})
+		)
+		.pipe(gulp.dest("dist/"));
+}
+
+function buildCSSWithoutThemes() {
+	return gulp
+		.src([
+			"index.css",
+			"themes/spectrum.css", // spectrum comes first
+			"themes/*.css",
+		], {
+			allowEmpty: true,
+		})
+		.pipe(concat("index-base.css"))
+		.pipe(
+			postcss(processorsFunction({ noFlatVariables: true }), {
+				from: "./index.css", // gulp-concat sets the file.path wrong, so override here
+			})
+		)
+		.pipe(gulp.dest("dist/"));
+}
+
+function buildCSSThemeIndex() {
+	return gulp
+		.src([
+			"themes/spectrum.css", // spectrum comes first
+			"themes/*.css",
+		], {
+			allowEmpty: true,
+		})
+		.pipe(concat("index-theme.css"))
+		.pipe(postcss(processorsFunction({ noSelectors: true })))
+		.pipe(gulp.dest("dist/"));
+}
+
+function buildCSSThemes() {
+	return gulp
+		.src([
+			"themes/*.css",
+			"!themes/express.css",
+		], {
+			allowEmpty: true,
+		})
+		.pipe(postcss(processorsFunction({ noSelectors: true, keepComments: true })))
+		.pipe(gulp.dest("dist/themes/"));
+}
+
+/**
+  Special case for express: it needs Spectrum base vars and needs to override them
+*/
+function buildExpressTheme() {
+	return gulp
+		.src(["dist/index-theme.css"], {
+			allowEmpty: true,
+		})
+		.pipe(concat("express.css"))
+		.pipe(postcss(processorsFunction().concat(require("postcss-combininator"))))
+		.pipe(gulp.dest("dist/themes/"));
+}
+
+/* Just copy index.vars as index.css to maintain backwards compat */
+function copyIndex() {
 	return gulp
 		.src("dist/index.css")
 		.pipe(
@@ -24,11 +102,13 @@ const build = gulp.series(css.buildCSS, function copyIndex() {
 			})
 		)
 		.pipe(gulp.dest("dist/"));
-});
+}
 
-exports.default = build;
-exports.build = build;
-exports.buildLite = build;
-exports.buildMedium = build;
-exports.buildHeavy = build;
-exports.buildCSS = build;
+exports.default =
+	exports.build =
+		exports.buildCSS =
+			gulp.parallel(
+				gulp.series(buildCSS, copyIndex),
+				buildCSSWithoutThemes,
+				gulp.series(buildCSSThemes, buildCSSThemeIndex, buildExpressTheme)
+			);

@@ -1,0 +1,54 @@
+{
+	"name": "docs",
+	"tags": ["tooling"],
+	"implicitDependencies": ["tag:component", "ui-icons"],
+	"namedInputs": {
+		"core": [
+			"{projectRoot}/*.pug",
+			"{projectRoot}/includes",
+			"{projectRoot}/resources",
+			"{projectRoot}/templates"
+		],
+		"scripts": ["{projectRoot}/tasks"],
+		"tools": ["{projectRoot}/gulpfile.js"]
+	},
+	"targets": {
+		"start": {
+			"depends": ["^build", "clean"],
+			"inputs": [
+				"core",
+				"scripts",
+				"tools",
+				{ "externalDependencies": ["gulp"] },
+				{ "env": "WATCH_MODE" }
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": ["gulp dev"]
+			}
+		},
+		"build": {
+			"dependsOn": ["^build"],
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": ["gulp build"]
+			}
+		},
+		"clean": {
+			"inputs": [
+				"{workspaceRoot}/dist",
+				{ "externalDependencies": ["rimraf"] }
+			],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"rimraf dist",
+					"test -d dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+				],
+				"parallel": false
+			}
+		}
+	}
+}

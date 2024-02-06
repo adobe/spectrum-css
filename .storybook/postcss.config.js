@@ -1,8 +1,8 @@
 const { basename } = require("path");
 const warnCleaner = require("postcss-warn-cleaner");
 
-const simpleBuilder = require("@spectrum-css/component-builder-simple/css/processors.js");
-const legacyBuilder = require("@spectrum-css/component-builder/css/processors.js");
+const simpleBuilder = require("@spectrum-css/component-builder-simple/processors.js");
+const legacyBuilder = require("@spectrum-css/component-builder/processors.js");
 
 /**
  * Determines the package name from a file path

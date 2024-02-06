@@ -10,9 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const path = require("path");
+const gulp = require("gulp");
 
-exports.topLevel = path.join(__dirname, "..", "..", "..");
-exports.isTopLevel = process.cwd() === exports.topLevel;
-exports.site = path.resolve(exports.topLevel, "site");
-exports.components = path.join(exports.topLevel, "components");
+const { build } = require("./builder");
+const { watch } = require("./server");
+
+exports.buildDocs = build;
+exports.dev = gulp.series(build, watch);

@@ -9,7 +9,9 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+
 const fs = require("fs");
+const fse = require('fs-extra');
 const path = require("path");
 
 const gulp = require("gulp");
@@ -24,12 +26,15 @@ const ext = require("replace-ext");
 const lunr = require("lunr");
 const npmFetch = require("npm-registry-fetch");
 
-const dirs = require("../lib/dirs");
-const depUtils = require("../lib/depUtils");
+const {
+	dirs,
+	getPackageDependencyOrder,
+	getFolderDependencyOrder
+} = require("./utilities");
 
 require("colors");
 
-let minimumDeps = [
+const minimumDeps = [
 	"icon",
 	"statuslight",
 	"link",
@@ -49,7 +54,6 @@ let minimumDeps = [
 	"popover",
 	"underlay",
 	"card",
-	"inlinealert",
 	"divider",
 	"illustratedmessage",
 	"accordion",
@@ -62,22 +66,12 @@ let templateData = {
 };
 
 async function buildDocs_forDep(dep) {
-	// We don't build documentation for deprecated tokens
-	if (["vars", "expressvars"].some((packageName => dep.endsWith(packageName)))) {
-		return;
-	}
-
 	const metadata = require("@spectrum-css/vars");
-	const pkgPath = require.resolve(`${dep}/package.json`);
-
-	if (!pkgPath) return;
-
-	let dirName = path.dirname(pkgPath);
-	let pkg = require(pkgPath);
+	const dirName = path.dirname(require.resolve(path.join(dep, "package.json")));
+	const dependencyOrder = await getPackageDependencyOrder(dirName) ?? [];
 
 	// Drop package org
-	dep = dep.split(path.sep).pop();
-	const dependencyOrder = await depUtils.getPackageDependencyOrder(dirName);
+	dep = dep.split("/").pop();
 
 	// If a dirName was not found, try the deprecated folder instead
 	if (!dirName || dirName.split(path.sep).includes("node_modules")) {
@@ -89,44 +83,41 @@ async function buildDocs_forDep(dep) {
 
 	return new Promise((resolve, reject) => {
 		gulp
-			.src([
-				`${dirName}/metadata/*.yml`,
-				`${dirName}/*.yml`,
-			], {
+			.src([`${dirName}/metadata/*.yml`], {
 				allowEmpty: true,
 			})
 			.pipe(
 				data(async function (file) {
-					const componentDeps = dependencyOrder.map((dep) =>
-						dep.split(path.sep).pop()
-					);
+					const componentDeps = dependencyOrder.map((dep) => dep.split("/").pop());
 					componentDeps.push(dep);
 
+					const pkg = require(path.join(dirs.components, dep, "package.json")) ?? {};
+
 					const docsDeps = [...new Set([
-						...minimumDeps,
-						...componentDeps
+						...minimumDeps ?? [],
+						...componentDeps ?? [],
 					])];
 
-					let date;
+					let releaseDate;
 					try {
 						const data = await npmFetch.json(pkg.name);
-						date = data.time[pkg.version];
-						date = new Date(date).toLocaleDateString("en-US", {
+						releaseDate = data.time[pkg.version];
+						releaseDate = new Date(releaseDate).toLocaleDateString("en-US", {
 							year: "numeric",
 							month: "long",
 							day: "numeric",
 						});
 					} catch (err) {
-						date = "Unreleased";
+						releaseDate = "Unreleased";
 					}
 
 					return {
 						util: require(`${dirs.site}/util`),
 						dnaVars: metadata,
-						...(templateData ?? {}),
+						...templateData,
 						pageURL: path.basename(file.basename, ".yml") + ".html",
 						dependencyOrder: docsDeps,
-						releaseDate: date,
+						releaseDate,
 						pkg,
 					};
 				})
@@ -134,15 +125,11 @@ async function buildDocs_forDep(dep) {
 			.pipe(
 				through.obj(function compilePug(file, _, cb) {
 					const component = yaml.load(String(file.contents));
-
-					if (!component.id) {
-						// Use the example file name
-						component.id = path.basename(file.basename, ".yml");
-					}
+					if (!component.id) component.id = path.basename(file.basename, ".yml");
 
 					const templateData = {
 						component,
-						...(file.data ?? {}),
+						...file.data ?? {},
 					};
 
 					file.path = ext(file.path, ".html");
@@ -157,42 +144,13 @@ async function buildDocs_forDep(dep) {
 					cb(null, file);
 				})
 			)
-			.pipe(gulp.dest("dist/"))
+			.pipe(gulp.dest(dirs.publish))
 			.on("end", resolve)
 			.on("error", reject);
 	});
 }
 
-function copyDocs_forDep(dep) {
-	// We don't copy assets for tokens here - it's done separately
-	if (["vars", "expressvars"].some((packageName => dep.endsWith(packageName)))) {
-		return;
-	}
-
-	const folder = dep.split(path.sep).pop();
-	const pkgPath = require.resolve(`${dep}/package.json`);
-
-	if (!pkgPath) return;
-
-	const files = fg.sync(["package.json", "dist/**"], {
-		cwd: path.dirname(pkgPath),
-	});
-
-	return Promise.all(
-		files.map((file) => {
-			const cleanFile = file.replace("dist/", "");
-			const from = path.join(path.dirname(pkgPath), file);
-			const dest = path.join(dirs.topLevel, "dist/components", folder, cleanFile);
-			if (!fs.existsSync(path.dirname(dest))) {
-				fs.mkdirSync(path.dirname(dest), { recursive: true });
-			}
-
-			return fs.copyFileSync(from, dest);
-		})
-	);
-}
-
-// Combined -- note: this does include deprecated packages that exist only in node_modules
+// Combined
 async function buildDocs_individualPackages() {
 	const dependencies = await depUtils.getFolderDependencyOrder(dirs.components);
 	const deprecatedDeps = fs.readdirSync(path.join(dirs.topLevel, ".storybook", "deprecated")).map((folder) => `@spectrum-css/${folder.split(path.sep).pop()}`);
@@ -214,14 +172,15 @@ function buildSite_generateIndex() {
 		])
 		.pipe(
 			(function () {
-				let docs = [];
-				let store = {};
+				const docs = [];
+				const store = {};
 				let latestFile = null;
+
 				function readYML(file, _, cb) {
 					const componentData = yaml.load(String(file.contents));
 					const componentName = file.dirname
 						.replace("/metadata", "")
-						.split(path.sep)
+						.split("/")
 						.pop();
 
 					const fileName = ext(file.basename, ".html");
@@ -245,10 +204,10 @@ function buildSite_generateIndex() {
 				}
 
 				function endStream(cb) {
-					let indexFile = latestFile.clone({ contents: false });
+					const indexFile = latestFile.clone({ contents: false });
 					indexFile.path = path.join(latestFile.base, "index.json");
 
-					let index = lunr(function () {
+					const index = lunr(function () {
 						this.ref("href");
 						this.field("name", { boost: 10 });
 						this.field("description");
@@ -263,7 +222,7 @@ function buildSite_generateIndex() {
 					indexFile.contents = Buffer.from(JSON.stringify(index));
 					this.push(indexFile);
 
-					let storeFile = latestFile.clone({ contents: false });
+					const storeFile = latestFile.clone({ contents: false });
 					storeFile.path = path.join(latestFile.base, "store.json");
 					storeFile.contents = Buffer.from(JSON.stringify(store));
 					this.push(storeFile);
@@ -274,7 +233,7 @@ function buildSite_generateIndex() {
 				return through.obj(readYML, endStream);
 			})()
 		)
-		.pipe(gulp.dest("dist/"));
+		.pipe(gulp.dest(dirs.publish));
 }
 
 function buildSite_getData() {
@@ -286,15 +245,14 @@ function buildSite_getData() {
 			`${storybookPath}/deprecated/*/*.yml`,
 		])
 		.pipe(
-			through.obj(function readYML(file, _, cb) {
+			through.obj(function readYML(file, enc, cb) {
 				const componentData = yaml.load(String(file.contents));
 				const componentName = file.dirname
 					.replace("/metadata", "")
-					.split(path.sep)
+					.split("/")
 					.pop();
 
 				const fileName = ext(file.basename, ".html");
-
 				nav.push({
 					name: componentData.name,
 					component: componentName,
@@ -313,12 +271,8 @@ function buildSite_getData() {
 		});
 }
 
-function buildSite_copyResources() {
-	return gulp.src(`${dirs.site}/dist/**`).pipe(gulp.dest("dist/"));
-}
-
-function buildSite_copyFreshResources() {
-	return gulp.src(`${dirs.site}/resources/**`).pipe(gulp.dest("dist/"));
+function copySite_resources() {
+	return gulp.src(`${dirs.site}/resources/**`).pipe(gulp.dest(dirs.publish));
 }
 
 function buildSite_html() {
@@ -338,10 +292,10 @@ function buildSite_html() {
 				locals: templateData,
 			})
 		)
-		.pipe(gulp.dest("dist/"));
+		.pipe(gulp.dest(dirs.publish));
 }
 
-function copySiteWorkflowIcons() {
+function copySite_workflowIcons() {
 	return gulp
 		.src(
 			path.join(
@@ -349,41 +303,134 @@ function copySiteWorkflowIcons() {
 				"spectrum-icons.svg"
 			),
 		)
-		.pipe(gulp.dest("dist/img/"));
+		.pipe(gulp.dest(`${dirs.publish}/img/`));
 }
 
-function copySiteUIIcons() {
+function copySite_uiIcons() {
 	return gulp
 		.src(require.resolve("@spectrum-css/ui-icons"))
-		.pipe(gulp.dest("dist/img/"));
+		.pipe(gulp.dest(`${dirs.publish}/img/`));
 }
 
-let buildSite_pages = gulp.series(buildSite_getData, buildSite_html);
+const varDir = path.dirname(require.resolve("@spectrum-css/vars/package.json", {
+	paths: [process.cwd(), path.join(process.cwd(), "../../")]
+}));
 
-exports.buildSite = gulp.parallel(buildSite_copyResources, buildSite_pages);
+function copySite_vars() {
+	return gulp
+		.src(path.join(varDir, "dist/spectrum-*.css"))
+		.pipe(gulp.dest(`${dirs.publish}/dependencies/@spectrum-css/vars/`));
+}
 
-let buildDocs = gulp.series(
-	buildSite_getData,
-	gulp.parallel(
-		buildSite_generateIndex,
-		buildDocs_individualPackages,
-		buildSite_copyResources,
-		copySiteWorkflowIcons,
-		copySiteUIIcons
-	)
-);
+const expressVarDir = path.dirname(require.resolve("@spectrum-css/expressvars/package.json", {
+	paths: [process.cwd(), path.join(process.cwd(), "../../")]
+}));
 
-let build = gulp.series(
-	buildSite_getData,
-	gulp.parallel(buildDocs, buildSite_html)
-);
+function copySite_expressVars() {
+	return gulp
+		.src(path.join(expressVarDir, "dist/spectrum-*.css"))
+		.pipe(gulp.dest(`${dirs.publish}/dependencies/@spectrum-css/expressvars/`));
+}
 
-exports.buildSite_getData = buildSite_getData;
-exports.buildSite_copyResources = buildSite_copyResources;
-exports.buildSite_copyFreshResources = buildSite_copyFreshResources;
-exports.buildSite_pages = buildSite_pages;
-exports.buildSite_html = buildSite_html;
+const coreTokensDir = path.dirname(require.resolve("@spectrum-css/tokens/package.json", {
+	paths: [process.cwd(), path.join(process.cwd(), "../../")]
+})) ?? path.dirname(dirs.components, "tokens");
+
+
+function copySite_coreTokens() {
+	return gulp
+		.src(path.join(coreTokensDir, "dist/**/*.css"))
+		.pipe(gulp.dest(`${dirs.publish}/tokens/`));
+}
+
+function copySite_resources() {
+	return gulp
+		.src(path.join(dirs.site, "resources/**"))
+		.pipe(gulp.dest(dirs.publish));
+}
+
+function copySite_loadicons() {
+	return gulp
+		.src(require.resolve("loadicons"))
+		.pipe(gulp.dest(path.join(dirs.publish, "js/loadicons/")));
+}
+
+function copySite_lunr() {
+	return gulp
+		.src(require.resolve("lunr"))
+		.pipe(gulp.dest(path.join(dirs.publish, "js/lunr/")));
+}
+
+function copySite_prism() {
+	return gulp
+		.src([
+			`${path.dirname(require.resolve("prismjs"))}/themes/prism.css`,
+			`${path.dirname(require.resolve("prismjs"))}/themes/prism-dark.css`,
+		])
+		.pipe(gulp.dest(path.join(dirs.publish, "css/prism/")));
+}
+
+function copySite_tokens() {
+	return gulp
+		.src([
+			require.resolve("@spectrum-css/tokens"),
+		])
+		.pipe(gulp.dest(path.join(dirs.publish, "components/tokens/")));
+}
+
+function copySite_styles() {
+	return gulp
+		.src([
+			`${require.resolve(path.join(dirs.components, "site"))}/dist/**`,
+		])
+		.pipe(gulp.dest(path.join(dirs.publish, "components/site/")));
+}
+
+async function copySite_packages() {
+	const files = await fg(["*/package.json", "*/dist/**"], {
+		cwd: dirs.components,
+	});
+
+	return Promise.all(files.map((file) => {
+		const destDir = path.join(dirs.publish, "components");
+		const dest = path.join(destDir, file.replace("/dist", ""));
+		// Ensure the destination directory exists
+		fse.ensureDirSync(path.dirname(dest), { recursive: true });
+		// Copy the file to the destination
+		fs.copyFileSync(path.join(dirs.components, file), dest);
+	}));
+}
+
+// Used in server.js
 exports.buildDocs_forDep = buildDocs_forDep;
-exports.buildDocs_individualPackages = buildDocs_individualPackages;
-exports.buildDocs = buildDocs;
-exports.build = build;
+exports.buildSite_getData = buildSite_getData;
+exports.buildSite_html = buildSite_html;
+exports.copySite_resources = copySite_resources;
+exports.buildSite_pages = gulp.series(
+	buildSite_getData,
+	buildSite_html
+);
+
+// Used in index.js
+exports.build = gulp.parallel(
+	gulp.series(
+		buildSite_getData,
+		gulp.parallel(
+			buildSite_generateIndex,
+			buildDocs_individualPackages,
+		),
+		buildSite_html
+	),
+	copySite_workflowIcons,
+	copySite_uiIcons,
+	copySite_vars,
+	copySite_expressVars,
+	copySite_coreTokens,
+	copySite_resources,
+	copySite_tokens,
+	copySite_styles,
+	copySite_loadicons,
+	copySite_lunr,
+	copySite_prism,
+	copySite_packages,
+);
