@@ -1,0 +1,117 @@
+.spectrum-ColorSlider {
+	/* Size and Spacing */
+	--spectrum-color-slider-handle-margin-block: var(--spectrum-component-top-to-text-75);
+
+	/* @todo Refactor with --spectrum-color-slider-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
+	--spectrum-color-slider-border-color-rgba: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-color-slider-border-opacity));
+
+	/* Checkerboard pattern */
+	--spectrum-color-slider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
+	--spectrum-color-slider-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+	--spectrum-color-slider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+
+	/* Settings for nested Color handle */
+	--mod-colorhandle-hitarea-border-radius: var(--mod-color-slider-handle-hitarea-border-radius, 0px);
+}
+
+@media (forced-colors: active) {
+	.spectrum-ColorSlider {
+		--highcontrast-color-slider-border-color: CanvasText;
+		--highcontrast-color-slider-border-color-disabled: GrayText;
+		--highcontrast-color-slider-background-color-disabled: Canvas;
+		forced-color-adjust: none;
+	}
+}
+
+.spectrum-ColorSlider {
+	position: relative;
+	display: block;
+
+	min-inline-size: var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length));
+	inline-size: var(--mod-color-slider-length, var(--spectrum-color-slider-length));
+	block-size: var(--mod-color-slider-control-track-width, var(--spectrum-color-control-track-width));
+
+	/* Otherwise we randomly drag a file icon */
+	user-select: none;
+
+	cursor: default;
+
+	&.is-focused {
+		z-index: 2;
+	}
+
+	&.is-disabled {
+		pointer-events: none;
+
+		.spectrum-ColorSlider-gradient {
+			display: none;
+		}
+	}
+}
+
+.spectrum-ColorSlider--vertical {
+	display: inline-block;
+
+	min-block-size: var(--mod-color-slider-vertical-minimum-height, var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length)));
+	block-size: var(--mod-color-slider-vertical-height, var(--mod-color-slider-length, var(--spectrum-color-slider-length)));
+	min-inline-size: 0;
+	inline-size: var(--mod-color-slider-vertical-control-track-width, var(--mod-color-slider-control-track-height, var(--spectrum-color-control-track-width)));
+
+	.spectrum-ColorSlider-handle {
+		inset-inline-start: 50%;
+		inset-block-start: 0;
+	}
+	.spectrum-ColorSlider-handle {
+		inset-inline-start: 50%;
+		inset-block-start: 0;
+	}
+}
+
+.spectrum-ColorSlider-handle {
+	inset-inline-start: 0;
+	inset-block-start: 50%;
+}
+
+.spectrum-ColorSlider-checkerboard {
+	--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-rgba)));
+
+	/* Inset border on top of background, created with box-shadow. */
+	&::before {
+		content: "";
+		z-index: 1;
+		position: absolute;
+		inset: 0;
+		box-shadow: inset 0 0 0 var(--mod-color-slider-border-width, var(--spectrum-color-slider-border-width)) var(--spectrum-color-slider-border-color-local);
+		border-radius: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
+	}
+
+	.spectrum-ColorSlider.is-disabled & {
+		--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-disabled-background-color)));
+		background: var(--highcontrast-color-slider-background-color-disabled, var(--mod-color-slider-background-color-disabled, var(--spectrum-disabled-background-color)));
+	}
+}
+
+.spectrum-ColorSlider-gradient,
+.spectrum-ColorSlider-checkerboard {
+	inline-size: 100%;
+	block-size: 100%;
+	border-radius: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
+}
+
+/* Reverse gradient horizontally when viewing RTL. */
+[dir="rtl"] .spectrum-ColorSlider-gradient {
+	transform: scaleX(-1);
+}
+
+/* Visually hidden "range" input field */
+.spectrum-ColorSlider-slider {
+	opacity: 0;
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	z-index: 0;
+	margin: 0;
+	pointer-events: none;
+}

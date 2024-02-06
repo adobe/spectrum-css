@@ -1,0 +1,75 @@
+{
+	"name": "tokens",
+	"tag": ["tokens"],
+	"namedInputs": {
+		"core": [
+			"{projectRoot}/custom-express/*.css",
+			"{projectRoot}/custom-spectrum/*.css"
+		],
+		"scripts": ["{projectRoot}/utilities/*.js"],
+		"tools": ["{projectRoot}/postcss.config.js"]
+	},
+	"targets": {
+		"build": {
+			"dependsOn": ["clean", "style-dictionary"],
+			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"postcss ./custom-express/*.css --dir ./dist/css/express/",
+					"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
+					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
+					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css",
+					"find dist -type f -empty -delete"
+				],
+				"cwd": "{projectRoot}",
+				"parallel": false
+			},
+			"outputs": [
+				"{projectRoot}/dist/css/express",
+				"{projectRoot}/dist/css/spectrum"
+			]
+		},
+		"clean": {
+			"cache": true,
+			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
+			"outputs": [],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"rimraf {projectRoot}/dist",
+					"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+				],
+				"parallel": false
+			}
+		},
+		"style-dictionary": {
+			"dependsOn": ["clean"],
+			"executor": "@nxkit/style-dictionary:build",
+			"inputs": [
+				"{projectRoot}/postcss.config.js",
+				"{projectRoot}/style-dictionary.config.js",
+				"{projectRoot}/utilities/style-dictionary.utils.js"
+			],
+			"options": {
+				"deleteOutputPath": false,
+				"outputPath": "./tokens",
+				"platform": "CSS",
+				"styleDictionaryConfig": "./tokens/style-dictionary.config.js",
+				"tsConfig": "./tsconfig.json"
+			},
+			"outputs": [
+				"{projectRoot}/dist/global-vars.css",
+				"{projectRoot}/dist/light-vars.css",
+				"{projectRoot}/dist/dark-vars.css",
+				"{projectRoot}/dist/darkest-vars.css",
+				"{projectRoot}/dist/medium-vars.css",
+				"{projectRoot}/dist/large-vars.css",
+				"{projectRoot}/dist/specrum/global-vars.css",
+				"{projectRoot}/dist/express/global-vars.css",
+				"{projectRoot}/dist/specrum/medium-vars.css",
+				"{projectRoot}/dist/specrum/large-vars.css"
+			]
+		}
+	}
+}

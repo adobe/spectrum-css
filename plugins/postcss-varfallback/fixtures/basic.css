@@ -1,0 +1,10 @@
+:root {
+	--component-background-color: blue;
+}
+
+.component {
+	background-color: var(
+		--mod-background-color,
+		var(--component-background-color)
+	);
+}

@@ -1,0 +1,20 @@
+| Modifiable custom properties                                      |
+| ----------------------------------------------------------------- |
+| `--mod-coach-animation-indicator-ring-center-delay-multiple`      |
+| `--mod-coach-animation-indicator-ring-duration`                   |
+| `--mod-coach-animation-indicator-ring-outer-delay-multiple`       |
+| `--mod-coach-indicator-animation-name`                            |
+| `--mod-coach-indicator-gap`                                       |
+| `--mod-coach-indicator-inner-animation-delay-multiple`            |
+| `--mod-coach-indicator-left`                                      |
+| `--mod-coach-indicator-min-block-size`                            |
+| `--mod-coach-indicator-min-inline-size`                           |
+| `--mod-coach-indicator-quiet-animation-ring-inner-delay-multiple` |
+| `--mod-coach-indicator-quiet-ring-diameter`                       |
+| `--mod-coach-indicator-ring-block-size`                           |
+| `--mod-coach-indicator-ring-border-size`                          |
+| `--mod-coach-indicator-ring-dark-color`                           |
+| `--mod-coach-indicator-ring-default-color`                        |
+| `--mod-coach-indicator-ring-inline-size`                          |
+| `--mod-coach-indicator-ring-light-color`                          |
+| `--mod-coach-indicator-top`                                       |

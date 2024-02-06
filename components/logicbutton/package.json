@@ -1,0 +1,23 @@
+{
+  "name": "@spectrum-css/logicbutton",
+  "version": "3.3.0",
+  "description": "The Spectrum CSS logicbutton component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/logicbutton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/logicbutton"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/tokens": ">=13"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

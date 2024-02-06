@@ -1,0 +1,20 @@
+| Modifiable custom properties                               |
+| ---------------------------------------------------------- |
+| `--mod-steplist-complete-label-text-color`                 |
+| `--mod-steplist-complete-marker-background-color`          |
+| `--mod-steplist-complete-segment-border-block-end-color`   |
+| `--mod-steplist-current-label-text-color`                  |
+| `--mod-steplist-current-marker-color`                      |
+| `--mod-steplist-current-marker-color-key-focus`            |
+| `--mod-steplist-incomplete-label-color`                    |
+| `--mod-steplist-incomplete-marker-border-color`            |
+| `--mod-steplist-incomplete-segment-border-block-end-color` |
+| `--mod-steplist-label-labelOffset`                         |
+| `--mod-steplist-label-text-size`                           |
+| `--mod-steplist-marker-diameter`                           |
+| `--mod-steplist-marker-hitArea`                            |
+| `--mod-steplist-segment-height`                            |
+| `--mod-steplist-sidePadding`                               |
+| `--mod-steplist-small-topPadding`                          |
+| `--mod-steplist-step-width`                                |
+| `--mod-steplist-topPadding`                                |

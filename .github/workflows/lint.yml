@@ -1,0 +1,97 @@
+name: Lint
+#
+# This workflow lints the UI library and reports back any suggested fixes
+#
+
+on:
+    workflow_dispatch:
+        inputs:
+            styles_added_files:
+                type: string
+                required: false
+            styles_modified_files:
+                type: string
+                required: false
+            # eslint_added_files:
+            #     type: string
+            #     required: false
+            # eslint_modified_files:
+            #     type: string
+            #     required: false
+    workflow_call:
+        inputs:
+            styles_added_files:
+                type: string
+                required: false
+            styles_modified_files:
+                type: string
+                required: false
+            # eslint_added_files:
+            #     type: string
+            #     required: false
+            # eslint_modified_files:
+            #     type: string
+            #     required: false
+
+permissions:
+    contents: read
+    pull-requests: write
+
+jobs:
+    # --- Lint pre-compiled assets for consistency --- #
+    lint:
+        name: Lint
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        steps:
+            # install but don't build - we're linting pre-compiled assets
+            - name: Check out code
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 18
+                  cache: yarn
+
+            ## --- YARN CACHE --- ##
+            - name: Check for cached dependencies
+              continue-on-error: true
+              id: cache-dependencies
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      .cache/yarn
+                      node_modules
+                  key: ubuntu-latest-node18-${{ hashFiles('yarn.lock') }}
+
+            ## --- INSTALL --- ##
+            # If statement isn't needed here b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --frozen-lockfile --cache-folder .cache/yarn
+
+            - name: Lint component styles
+              if: ${{ inputs.styles_added_files != '' || inputs.styles_modified_files != '' }}
+              uses: reviewdog/action-stylelint@v1.18.1
+              with:
+                  fail_on_error: true
+                  level: error
+                  reporter: github-pr-check
+                  filter_mode: file
+                #   stylelint_input: "components/*/index.css components/*/themes/*.css"
+                  stylelint_input: "${{ inputs.styles_added_files }} ${{ inputs.styles_modified_files }}"
+                  stylelint_config: stylelint.config.js
+
+            # - name: Run eslint on packages and stories
+            #   uses: reviewdog/action-eslint@v1.20.0
+            #   if: ${{ inputs.eslint_added_files != '' || inputs.eslint_modified_files != '' }}
+            #   with:
+            #       fail_on_error: true
+            #       level: error
+            #       reporter: github-pr-check
+            #       filter_mode: file
+            #     #   eslint_flags: "components/*/stories/*.js"
+            #       eslint_flags: "${{ inputs.eslint_added_files }} ${{ inputs.eslint_modified_files }}"

@@ -1,0 +1,15 @@
+{
+	"version": "independent",
+	"npmClient": "yarn",
+	"useWorkspaces": true,
+	"noPrivate": true,
+	"command": {
+		"publish": {
+			"conventionalCommits": true,
+			"changelogPreset": "spectrum"
+		},
+		"version": {
+			"message": "chore(release): release"
+		}
+	}
+}

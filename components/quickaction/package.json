@@ -1,0 +1,28 @@
+{
+  "name": "@spectrum-css/quickaction",
+  "version": "3.1.0",
+  "description": "The Spectrum CSS quickaction component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/quickaction",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/quickaction"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/actionbutton": ">=5",
+    "@spectrum-css/checkbox": ">=8",
+    "@spectrum-css/vars": ">=9"
+  },
+  "devDependencies": {
+    "@spectrum-css/commons": "^9.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

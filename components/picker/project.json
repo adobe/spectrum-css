@@ -1,0 +1,15 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "picker",
+	"tags": ["component"],
+	"targets": {
+		"build": {},
+		"clean": {},
+		"compare": {},
+		"lint": {},
+
+		"test": {
+			"defaultConfiguration": "scope"
+		}
+	}
+}

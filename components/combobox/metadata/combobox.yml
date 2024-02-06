@@ -1,0 +1,376 @@
+name: Combobox
+description: Combobox combines a text field with a picker menu.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/combo-box/
+sections:
+  - name: Migration Guide
+    description: |
+      ### Component separated from InputGroup
+      This component was previously a variant style for InputGroup. **InputGroup is now deprecated**.
+      The classes containing `InputGroup` have been renamed or removed. For details, see the "renamed" and "removed" sections below or the example markup.
+
+      ### New Picker markup
+      Instead of a `.spectrum-Picker`, Combobox now uses `.spectrum-PickerButton`. Refer to the example markup for usage details.
+
+      ### New Textfield markup
+      Combobox now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
+
+      ### Additional clases
+      The following classes must be added:
+
+      * `.spectrum-Combobox-textfield` is now required on the Textfield outer element (`.spectrum-Textfield`)
+      * `.spectrum-Combobox-input` is now required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
+      * `.spectrum-Combobox-button` is now required on the FieldButton (`.spectrum-ActionButton spectrum-ActionButton--sizeM`)
+
+      ### Indicating validity and focus
+      Validity and focus must be bubbled up to the parent so descendants siblings can be styled.
+
+      Thus, implementations should add the following classes to the `.spectrum-Combobox` parent class in the following situations:
+
+      * `.is-focused` - when the input or button is focused with the mouse
+      * `.is-keyboardFocused` - when the input or button is focused with the keyboard
+      * `.is-valid` - when the input has an explicit valid state
+      * `.is-invalid` - when the input has an explicit invalid state
+      * `.is-disabled` - when the control is disabled; should also add to the `.spectrum-Combobox-textfield` and include a `[disabled]` attribute to the `.spectrum-Combobox-button`
+      * `.is-loading` - when the progress circle is being shown
+
+      ### Renamed classes
+
+      * `.spectrum-InputGroup-textfield` -> `.spectrum-Combobox-textfield`
+      * `.spectrum-InputGroup-input` -> `.spectrum-Combobox-input`
+      * `.spectrum-InputGroup-button` -> `.spectrum-Combobox-button`
+
+      ### Removed classes
+
+      * `.InputGroup` (can be be removed from the parent element)
+
+examples:
+  - id: combobox
+    name: Standard
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Combobox">
+              <div class="spectrum-Textfield spectrum-Combobox-textfield">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right spectrum-Combobox-button" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With Field Label</h4>
+
+          <div class="spectrum-Examples-itemGroup" style="display:block;">
+            <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
+
+            <div class="spectrum-Combobox">
+              <div class="spectrum-Textfield spectrum-Combobox-textfield">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right spectrum-Combobox-button" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Combobox is-disabled">
+              <div class="spectrum-Textfield spectrum-Combobox-textfield is-disabled">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input" disabled>
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right spectrum-Combobox-button" disabled aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Open</h4>
+
+          <div class="spectrum-Examples-itemGroup" style="min-height: 240px;">
+            <div class="spectrum-Combobox is-open">
+              <div class="spectrum-Textfield spectrum-Combobox-textfield">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right spectrum-Combobox-button is-open" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+
+              <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="position: absolute; top: 100%; left: 0; width: 100%;">
+                <ul class="spectrum-Menu" role="listbox">
+                  <li class="spectrum-Menu-item is-selected" role="option" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Ballard</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="option" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Fremont</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="option" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Greenwood</span>
+                  </li>
+                  <li class="spectrum-Menu-divider" role="separator"></li>
+                  <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
+                    <span class="spectrum-Menu-itemLabel">United States of America</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  - id: combobox-quiet
+    name: Quiet
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Combobox spectrum-Combobox--quiet">
+              <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Combobox-textfield">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-Combobox-button" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With Field Label</h4>
+
+          <div class="spectrum-Examples-itemGroup" style="display:block;">
+            <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
+
+            <div class="spectrum-Combobox spectrum-Combobox--quiet">
+              <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Combobox-textfield">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-Combobox-button" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Combobox spectrum-Combobox--quiet is-disabled">
+              <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Combobox-textfield is-disabled">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input" disabled>
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-Combobox-button" disabled aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Open</h4>
+
+          <div class="spectrum-Examples-itemGroup" style="min-height: 240px;">
+            <div class="spectrum-Combobox spectrum-Combobox--quiet is-open">
+              <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Combobox-textfield">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-Combobox-button" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+
+              <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="position: absolute; top: 100%; width: 100%">
+                <ul class="spectrum-Menu" role="listbox">
+                  <li class="spectrum-Menu-item is-selected" role="option" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Ballard</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="option" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Fremont</span>
+                  </li>
+                  <li class="spectrum-Menu-item" role="option" tabindex="0">
+                    <span class="spectrum-Menu-itemLabel">Greenwood</span>
+                  </li>
+                  <li class="spectrum-Menu-divider" role="separator"></li>
+                  <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
+                    <span class="spectrum-Menu-itemLabel">United States of America</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  - id: combobox
+    name: Invalid
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: space-evenly;">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Standard</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Combobox is-invalid">
+              <div class="spectrum-Textfield spectrum-Combobox-textfield is-invalid">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-icon-18-Alert" />
+                </svg>
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right spectrum-Combobox-button is-invalid" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Quiet</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Combobox spectrum-Combobox--quiet is-invalid">
+              <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid spectrum-Combobox-textfield">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-icon-18-Alert" />
+                </svg>
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-Combobox-button is-invalid" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  - id: combobox
+    name: Loading
+    markup: |
+      <div class="spectrum-Examples" style="justify-content: space-evenly;">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Standard</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Combobox is-loading">
+              <div class="spectrum-Textfield spectrum-Combobox-textfield is-loading">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+
+                <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-Combobox-progress-circle">
+                  <div class="spectrum-ProgressCircle-track"></div>
+                  <div class="spectrum-ProgressCircle-fills">
+                    <div class="spectrum-ProgressCircle-fillMask1">
+                      <div class="spectrum-ProgressCircle-fillSubMask1">
+                        <div class="spectrum-ProgressCircle-fill"></div>
+                      </div>
+                    </div>
+                    <div class="spectrum-ProgressCircle-fillMask2">
+                      <div class="spectrum-ProgressCircle-fillSubMask2">
+                        <div class="spectrum-ProgressCircle-fill"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right spectrum-Combobox-button is-loading" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Quiet</h4>
+
+          <div class="spectrum-Examples-itemGroup">
+            <div class="spectrum-Combobox spectrum-Combobox--quiet is-loading">
+              <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Combobox-textfield is-loading">
+                <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
+
+                <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-Combobox-progress-circle">
+                  <div class="spectrum-ProgressCircle-track"></div>
+                  <div class="spectrum-ProgressCircle-fills">
+                    <div class="spectrum-ProgressCircle-fillMask1">
+                      <div class="spectrum-ProgressCircle-fillSubMask1">
+                        <div class="spectrum-ProgressCircle-fill"></div>
+                      </div>
+                    </div>
+                    <div class="spectrum-ProgressCircle-fillMask2">
+                      <div class="spectrum-ProgressCircle-fillSubMask2">
+                        <div class="spectrum-ProgressCircle-fill"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--quiet spectrum-PickerButton--right spectrum-Combobox-button is-loading" aria-haspopup="listbox">
+                <div class="spectrum-PickerButton-fill">
+                  <svg class="spectrum-PickerButton-icon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Chevron200" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>

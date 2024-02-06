@@ -1,0 +1,104 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@media (forced-colors: active) {
+  .spectrum-DropIndicator {
+      --highcontrast-dropindicator-color: Highlight;
+  }
+}
+
+.spectrum-DropIndicator {
+  --spectrum-dropindicator-border-color: var(--spectrum-dropindicator-color);
+  --spectrum-dropindicator-circle-color: var(--spectrum-dropindicator-color);
+  --spectrum-dropindicator-border-size: var(--spectrum-border-width-200);
+  --spectrum-dropindicator-circle-size: 12px;
+}
+
+.spectrum-DropIndicator {
+  position: relative;
+  background: var(
+    --highcontrast-dropindicator-color,
+    var(--mod-dropindicator-border-color, var(--spectrum-dropindicator-border-color))
+  );
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    inline-size: var(
+      --mod-dropindicator-circle-size,
+      var(--spectrum-dropindicator-circle-size)
+    );
+    block-size: var(
+      --mod-dropindicator-circle-size,
+      var(--spectrum-dropindicator-circle-size)
+    );
+    border-radius: 50%;
+    border: var(
+      --mod-dropindicator-border-size,
+      var(--spectrum-dropindicator-border-size)) solid;
+    box-sizing: border-box;
+    border-color: var(
+      --highcontrast-dropindicator-color,
+      var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-circle-color))
+    );
+  }
+}
+
+.spectrum-DropIndicator--horizontal {
+  block-size: var(
+    --mod-dropindicator-border-size,
+    var(--spectrum-dropindicator-border-size)
+  );
+  margin: 0 var(
+    --mod-dropindicator-circle-size,
+    var(--spectrum-dropindicator-circle-size)
+  );
+
+  &:before,
+  &:after {
+    inset-block-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
+  }
+
+  &:before {
+    inset-inline-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+  }
+
+  &:after {
+    inset-inline-end: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+  }
+}
+
+.spectrum-DropIndicator--vertical {
+  inline-size: var(
+    --mod-dropindicator-border-size,
+    var(--spectrum-dropindicator-border-size)
+  );
+  margin-block: var(
+    --mod-dropindicator-circle-size,
+    var(--spectrum-dropindicator-circle-size)
+  );
+  margin-inline: 0;
+
+  &:before,
+  &:after {
+    inset-inline-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
+  }
+
+  &:before {
+    inset-block-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+  }
+
+  &:after {
+    inset-block-end: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+  }
+}

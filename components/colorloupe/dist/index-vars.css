@@ -1,0 +1,82 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+.spectrum-ColorLoupe{
+  --spectrum-colorloupe-width:var(--spectrum-color-loupe-width);
+  --spectrum-colorloupe-height:var(--spectrum-color-loupe-height);
+
+  --spectrum-colorloupe-offset:var(--spectrum-color-loupe-bottom-to-color-handle);
+  --spectrum-colorloupe-animation-distance:8px;
+
+  --spectrum-colorloupe-drop-shadow-x:var(--spectrum-drop-shadow-x);
+  --spectrum-colorloupe-drop-shadow-y:var(--spectrum-color-loupe-drop-shadow-y);
+  --spectrum-colorloupe-drop-shadow-blur:var(--spectrum-color-loupe-drop-shadow-blur);
+  --spectrum-colorloupe-drop-shadow-color:var(--spectrum-color-loupe-drop-shadow-color);
+
+  --spectrum-colorloupe-outer-border-width:var(--spectrum-color-loupe-outer-border-width);
+  --spectrum-colorloupe-inner-border-width:var(--spectrum-color-loupe-inner-border-width);
+  --spectrum-colorloupe-outer-border-color:var(--spectrum-color-loupe-outer-border);
+  --spectrum-colorloupe-inner-border-color:var(--spectrum-color-loupe-inner-border);
+
+  --spectrum-colorloupe-checkerboard-dark-color:var(--spectrum-opacity-checkerboard-square-dark);
+  --spectrum-colorloupe-checkerboard-light-color:var(--spectrum-opacity-checkerboard-square-light);
+}
+.spectrum-ColorLoupe{
+  inline-size:var(--spectrum-colorloupe-width);
+  block-size:var(--spectrum-colorloupe-height);
+
+  position:absolute;
+  transform:translate(0, var(--mod-colorloupe-animation-distance, var(--spectrum-colorloupe-animation-distance)));
+  opacity:0;
+  transform-origin:bottom center;
+  inset-block-end:calc(var(--spectrum-color-handle-size) - var(--spectrum-color-handle-outer-border-width) + var(--mod-colorloupe-offset, var(--spectrum-colorloupe-offset)));
+  inset-inline-end:calc(50% - var(--spectrum-colorloupe-width)/2);
+
+  transition:transform 100ms ease-in-out, opacity 125ms ease-in-out;
+  pointer-events:none;
+
+  filter:drop-shadow(
+    var(--mod-colorloupe-drop-shadow-x, var(--spectrum-colorloupe-drop-shadow-x))
+    var(--mod-colorloupe-drop-shadow-y, var(--spectrum-colorloupe-drop-shadow-y))
+    var(--mod-colorloupe-drop-shadow-blur, var(--spectrum-colorloupe-drop-shadow-blur))
+    var(--mod-colorloupe-drop-shadow-color, var(--spectrum-colorloupe-drop-shadow-color))
+  );
+}
+[dir="rtl"] .spectrum-ColorLoupe{
+    inset-inline-end:calc(50% - var(--spectrum-colorloupe-width)/2 - 1px);;
+  }
+.spectrum-ColorLoupe.is-open{
+    transform:translate(0, 0);
+    opacity:1;
+  }
+.spectrum-ColorLoupe-inner-border{
+  fill:var(--spectrum-picked-color);
+  stroke:var(--mod-colorloupe-inner-border-color, var(--spectrum-colorloupe-inner-border-color));
+  stroke-width:var(--mod-colorloupe-inner-border-width, var(--spectrum-colorloupe-inner-border-width));
+}
+.spectrum-ColorLoupe-outer-border{
+  fill:none;
+  stroke:var(--highcontrast-colorloupe-outer-border-color, var(--mod-colorloupe-outer-border-color, var(--spectrum-colorloupe-outer-border-color)));
+  stroke-width:calc(var(--mod-colorloupe-outer-border-width, var(--spectrum-colorloupe-outer-border-width)) + 2px);
+}
+.spectrum-ColorLoupe-checkerboard-pattern{
+  fill:var(--spectrum-colorloupe-checkerboard-dark-color);
+}
+.spectrum-ColorLoupe-checkerboard-background{
+  fill:var(--spectrum-colorloupe-checkerboard-light-color);
+}
+.spectrum-ColorLoupe-checkerboard-fill{
+  fill:var(--spectrum-colorloupe-checkerboard-fill);
+}
+@media (forced-colors: active){
+  .spectrum-ColorLoupe{
+    --highcontrast-colorloupe-outer-border-color:CanvasText;
+  }
+}

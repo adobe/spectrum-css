@@ -1,0 +1,32 @@
+dist
+dist-site
+!tokens/dist
+
+# Recommended update re:https://docs.netlify.com/integrations/frameworks/eleventy/
+**/node_modules/**
+
+temp
+.npmrc*
+.nx
+.env
+.tmp
+npm-debug.log*
+.DS_Store
+.idea
+lerna-debug.log
+yarn-error.log
+package-lock.json
+.nx
+
+# Storybook build output
+.storybook/storybook-static
+build-storybook.log
+
+# Chromatic
+chromatic.log
+chromatic-build-*.xml
+chromatic-diagnostics*.json
+chromatic.config.json
+
+# Custom diff tool
+.diff-output

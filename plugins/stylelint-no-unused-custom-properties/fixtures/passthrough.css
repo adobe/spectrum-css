@@ -1,0 +1,29 @@
+:root {
+  --gray: gray;
+  --blue: blue;
+  --green: green;
+  --orange: orange;
+  --default: var(--gray);
+  --focus: var(--blue);
+  --active: var(--orange);
+}
+
+.component {
+  /* @passthrough */
+  --nested-component-property: var(--green);
+
+  background-color: var(--default);
+}
+
+.component:focus {
+  background-color: var(--focus);
+}
+
+.component:active {
+  /* @passthroughs start */
+  --nested-component-color: var(--active);
+  --nested-component-background-color: var(--orange);
+  /* @passthroughs end */
+
+  background-color: var(--orange);
+}

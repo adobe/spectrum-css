@@ -1,0 +1,176 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.spectrum-SplitButton{
+  --spectrum-splitbutton-trigger-border-left:0;
+  --spectrum-splitbutton-trigger-min-width:0;
+  --spectrum-spltibutton-margin-left:0;
+  --spectrum-splitbutton-icon-gap:var(--spectrum-global-dimension-size-150);
+
+  --spectrum-splitbutton-border-radius-edge:var(
+    --spectrum-alias-border-radius-small
+  );
+}
+
+[dir="rtl"] .spectrum-SplitButton,[dir="rtl"]  .spectrum-SplitButton{
+		--spectrum-logical-rotation:matrix(-1, 0, 0, 1, 0, 0);
+	}
+
+.spectrum-SplitButton .spectrum-SplitButton-trigger{
+    --spectrum-splitbutton-trigger-round-edge-padding:var(--spectrum-global-dimension-size-125);
+    --spectrum-splitbutton-trigger-flat-edge-padding:var(--spectrum-global-dimension-size-100);
+
+    --spectrum-splitbutton-cta-trigger-flat-edge-padding:calc(var(--spectrum-splitbutton-trigger-flat-edge-padding) - var(--spectrum-button-m-primary-outline-texticon-border-size, var(--spectrum-alias-border-size-thick)));
+  }
+
+.spectrum-SplitButton .spectrum-SplitButton-action{
+    --spectrum-splitbutton-flat-edge-padding:calc(var(--spectrum-button-m-primary-outline-texticon-padding-left) - var(--spectrum-button-m-primary-outline-texticon-border-size, var(--spectrum-alias-border-size-thick))*2);
+
+    --spectrum-splitbutton-round-edge-padding:var(--spectrum-button-m-primary-outline-texticon-padding-right, var(--spectrum-global-dimension-size-200));
+
+    --spectrum-splitbutton-cta-flat-edge-padding:calc(var(--spectrum-button-m-primary-outline-texticon-padding-left) - var(--spectrum-button-m-primary-outline-texticon-border-size, var(--spectrum-alias-border-size-thick))*3);
+  }
+
+.spectrum-SplitButton{
+  position:relative;
+  display:inline-flex;
+  flex-direction:row;
+  vertical-align:top;
+}
+
+.spectrum-SplitButton .spectrum-SplitButton-action{
+    margin-left:0;
+
+    border-top-left-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+
+    padding-right:var(--spectrum-splitbutton-flat-edge-padding);
+    padding-left:var(--spectrum-splitbutton-round-edge-padding);
+  }
+
+.spectrum-SplitButton .spectrum-SplitButton-action.spectrum-Button--accent{
+      padding-right:var(--spectrum-splitbutton-cta-flat-edge-padding);
+      margin-right:var(--spectrum-button-m-primary-outline-texticon-border-size, var(--spectrum-alias-border-size-thick));
+    }
+
+.spectrum-SplitButton .spectrum-SplitButton-action::after{
+      border-top-right-radius:var(--spectrum-splitbutton-border-radius-edge);
+      border-bottom-right-radius:var(--spectrum-splitbutton-border-radius-edge);
+    }
+
+.spectrum-SplitButton .spectrum-SplitButton-trigger{
+    margin-left:0;
+
+    border-top-left-radius:0;
+    border-top-right-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+    border-bottom-right-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+    border-bottom-left-radius:0;
+    border-left-width:var(--spectrum-splitbutton-trigger-border-left);
+
+    padding-left:var(--spectrum-splitbutton-trigger-flat-edge-padding);
+    padding-right:var(--spectrum-splitbutton-trigger-round-edge-padding);
+
+    min-width:var(--spectrum-splitbutton-trigger-min-width);
+  }
+
+.spectrum-SplitButton .spectrum-SplitButton-trigger.spectrum-Button--accent{
+      padding-left:var(--spectrum-splitbutton-cta-trigger-flat-edge-padding);
+      border-left-width:var(--spectrum-button-m-primary-outline-texticon-border-size, var(--spectrum-alias-border-size-thick));
+    }
+
+.spectrum-SplitButton .spectrum-SplitButton-trigger:focus-visible{
+      box-shadow:none;
+    }
+
+.spectrum-SplitButton .spectrum-SplitButton-trigger::after{
+      border-top-left-radius:var(--spectrum-splitbutton-border-radius-edge);
+      border-bottom-left-radius:var(--spectrum-splitbutton-border-radius-edge);
+    }
+
+.spectrum-SplitButton .spectrum-SplitButton-icon{
+    display:block;
+    margin-top:1px;
+  }
+
+.spectrum-SplitButton .spectrum-SplitButton-action, .spectrum-SplitButton .spectrum-SplitButton-trigger{
+    position:relative;
+  }
+
+.spectrum-SplitButton .spectrum-SplitButton-action:focus-visible, .spectrum-SplitButton .spectrum-SplitButton-trigger:focus-visible{
+      z-index:1;
+      outline:none;
+    }
+
+.spectrum-SplitButton .spectrum-SplitButton-action.spectrum-Pagination-prevButton .spectrum-Icon, .spectrum-SplitButton .spectrum-SplitButton-trigger.spectrum-Pagination-prevButton .spectrum-Icon{
+      transform:var(--spectrum-logical-rotation,) rotate(180deg);
+    }
+
+.spectrum-SplitButton .spectrum-SplitButton-action.spectrum-Pagination-nextButton .spectrum-Icon, .spectrum-SplitButton .spectrum-SplitButton-trigger.spectrum-Pagination-nextButton .spectrum-Icon{
+      transform:var(--spectrum-logical-rotation);
+    }
+
+.spectrum-SplitButton.spectrum-SplitButton--left .spectrum-SplitButton-action{
+      border-top-left-radius:0;
+      border-top-right-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+      border-bottom-right-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+      border-bottom-left-radius:0;
+      margin-right:0;
+      margin-left:var(--spectrum-spltibutton-margin-left);
+
+      padding-left:var(--spectrum-splitbutton-flat-edge-padding);
+      padding-right:var(--spectrum-splitbutton-round-edge-padding);
+    }
+
+.spectrum-SplitButton.spectrum-SplitButton--left .spectrum-SplitButton-action::after{
+        border-top-left-radius:var(--spectrum-splitbutton-border-radius-edge);
+        border-top-right-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+        border-bottom-right-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+        border-bottom-left-radius:var(--spectrum-splitbutton-border-radius-edge);
+      }
+
+.spectrum-SplitButton.spectrum-SplitButton--left .spectrum-SplitButton-action.spectrum-Button--accent{
+        padding-left:var(--spectrum-splitbutton-cta-flat-edge-padding);
+        margin-left:var(--spectrum-button-m-primary-outline-texticon-border-size, var(--spectrum-alias-border-size-thick));
+      }
+
+.spectrum-SplitButton.spectrum-SplitButton--left .spectrum-SplitButton-trigger{
+      margin-right:0;
+
+      border-top-left-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+      border-top-right-radius:0;
+      border-bottom-right-radius:0;
+      border-bottom-left-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+
+      border-left-width:var(--spectrum-button-m-primary-outline-texticon-border-size, var(--spectrum-alias-border-size-thick));
+      border-right-width:var(--spectrum-splitbutton-trigger-border-left);
+
+      padding-right:var(--spectrum-splitbutton-trigger-flat-edge-padding);
+      padding-left:var(--spectrum-splitbutton-trigger-round-edge-padding);
+    }
+
+.spectrum-SplitButton.spectrum-SplitButton--left .spectrum-SplitButton-trigger::after{
+        border-top-left-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+        border-top-right-radius:var(--spectrum-splitbutton-border-radius-edge);
+        border-bottom-right-radius:var(--spectrum-splitbutton-border-radius-edge);
+        border-bottom-left-radius:var(--spectrum-button-m-primary-outline-texticon-border-radius, var(--spectrum-global-dimension-size-200));
+      }
+
+.spectrum-SplitButton.spectrum-SplitButton--left .spectrum-SplitButton-trigger.spectrum-Button--accent{
+        padding-right:var(--spectrum-splitbutton-cta-trigger-flat-edge-padding);
+        border-right-width:var(--spectrum-button-m-primary-outline-texticon-border-size, var(--spectrum-alias-border-size-thick));
+      }
+
+.spectrum-SplitButton .spectrum-SplitButton-action .spectrum-Button-label + .spectrum-Icon{
+    margin-left:var(--spectrum-splitbutton-icon-gap);
+  }

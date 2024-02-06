@@ -1,0 +1,117 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+.spectrum-ColorWheel{
+  --spectrum-colorwheel-width:var(--spectrum-color-wheel-width);
+  --spectrum-colorwheel-min-width:var(--spectrum-color-wheel-minimum-width);
+  --spectrum-colorwheel-height:var(--spectrum-color-wheel-width);
+  --spectrum-colorwheel-border-color:var(--spectrum-transparent-black-200);
+  --spectrum-colorwheel-border-width:var(--spectrum-border-width-100);
+  --spectrum-colorwheel-fill-color-disabled:var(--spectrum-disabled-background-color);
+  --spectrum-colorwheel-track-width:var(--spectrum-color-control-track-width);
+  --spectrum-colorwheel-colorarea-margin:var(--spectrum-color-wheel-color-area-margin);
+  --spectrum-colorwheel-colorhandle-position:calc(var(--spectrum-colorwheel-width)/2 - var(--spectrum-colorwheel-track-width)/2);
+}
+@media (forced-colors: active){
+  .spectrum-ColorWheel{
+    --highcontrast-colorwheel-border-color-disabled:GrayText;
+    --highcontrast-colorwheel-fill-color-disabled:Canvas;
+  }
+  .spectrum-ColorWheel{
+    forced-color-adjust:none;
+  }
+}
+.spectrum-ColorWheel{
+  position:relative;
+  display:block;
+  min-inline-size:var(--mod-colorwheel-min-width, var(--spectrum-colorwheel-min-width));
+  inline-size:var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
+  block-size:var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
+  -webkit-user-select:none;
+          user-select:none;
+  cursor:default;
+}
+.spectrum-ColorWheel.is-focused{
+    z-index:2;
+  }
+.spectrum-ColorWheel{
+  --track-width:var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width));
+  --border-width:var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
+}
+.spectrum-ColorWheel.is-disabled{
+    pointer-events:none;
+  }
+.spectrum-ColorWheel.is-dragged{
+    z-index:2;
+  }
+.spectrum-ColorWheel-inner{
+  display:flex;
+  position:absolute;
+  inset-inline-start:0;
+  inset-inline-end:0;
+  inset-block-start:0;
+  inset-block-end:0;
+  inline-size:var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size));
+  block-size:var(--mod-colorwheel-colorarea-container-size, var(--spectrum-colorwheel-colorarea-container-size));
+  margin:auto;
+}
+.spectrum-ColorWheel-colorarea-container{
+  block-size:auto;
+  inline-size:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:var(--mod-colorwheel-colorarea-margin, var(--spectrum-colorwheel-colorarea-margin));
+}
+.spectrum-ColorWheel-slider{
+  opacity:0;
+  position:absolute;
+  inset-block-start:0;
+  inset-inline-start:0;
+  inline-size:100%;
+  block-size:100%;
+  z-index:0;
+  margin:0;
+  pointer-events:none;
+}
+.spectrum-ColorWheel-handle{
+  transform:translate(var(--spectrum-colorwheel-colorhandle-position), 0);
+  inset-block-start:50%;
+  inset-inline:50%
+}
+.spectrum-ColorWheel-ColorArea-handle{
+  inset-block-start:0;
+  inset-inline-end:0;
+}
+[dir="rtl"] .spectrum-ColorWheel-ColorArea-handle{
+    inset-inline-start:0;
+  }
+.spectrum-ColorWheel-border{
+  position:relative;
+  background-color:var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));
+  inline-size:var(--mod-colorwheel-width, var(--spectrum-colorwheel-width));
+  block-size:var(--mod-colorwheel-height, var(--spectrum-colorwheel-height));
+  clip-path:path(evenodd, var(--mod-colorwheel-path-borders, var(--spectrum-colorwheel-path-borders)));
+}
+.spectrum-ColorWheel-border.is-disabled{
+    background-color:var(--highcontrast-colorwheel-border-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
+  }
+.spectrum-ColorWheel-wheel{
+  position:absolute;
+  background:conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
+  inset-block:var(--spectrum-colorwheel-border-width);
+  inset-inline:var(--spectrum-colorwheel-border-width);
+  clip-path:path(evenodd, var(--mod-colorwheel-path, var(--spectrum-colorwheel-path)));
+}
+.spectrum-ColorWheel-wheel.is-disabled{
+    pointer-events:none;
+    background:var(--highcontrast-colorwheel-fill-color-disabled, var(--mod-colorwheel-fill-color-disabled, var(--spectrum-colorwheel-fill-color-disabled)));
+  }

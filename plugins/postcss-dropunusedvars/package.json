@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "postcss-dropunusedvars",
+  "version": "2.0.0",
+  "description": "Remove unused variable definitions",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "dependencies": {
+    "postcss-value-parser": "^4.2.0"
+  },
+  "peerDependencies": {
+    "postcss": ">=8"
+  },
+  "devDependencies": {
+    "ava": "^6.1.0",
+    "postcss": "^8.4.33"
+  }
+}

@@ -1,0 +1,16 @@
+.btn {
+	border-width: 2px;
+}
+
+.btn:hover {
+	color: black;
+}
+
+.crd .btn,
+.btn--green {
+	color: green;
+}
+
+.crd {
+	border-width: 1px;
+}

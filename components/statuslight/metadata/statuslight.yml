@@ -1,0 +1,93 @@
+name: Status light
+SpectrumSiteSlug: https://spectrum.adobe.com/page/status-light/
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/statuslight/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### T-shirt sizing
+      Status Light now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-StatusLight--size*` class.
+examples:
+  - id: statuslight-sizing
+    name: Sizing
+    status: Verified
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--info">Small</div>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--info">Medium</div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeL spectrum-StatusLight--info">Large</div>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+
+          <div class="spectrum-StatusLight spectrum-StatusLight--sizeXL spectrum-StatusLight--info">Extra Large</div>
+        </div>
+      </div>
+  - id: statuslight-wrapping
+    name: Wrapping
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--celery">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Sollicitudin nibh sit amet commodo nulla facilisi. Auctor urna nunc id cursus. Sem viverra aliquet eget sit amet tellus cras adipiscing.</div>
+
+  - id: statuslight-colors
+    name: Colors
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--gray">Gray Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--red">Red Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--orange">Orange Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--yellow">Yellow Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--chartreuse">Chartreuse Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--celery">Celery Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--green">Green Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--seafoam">Seafoam Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--cyan">Cyan Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--blue">Blue Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--indigo">Indigo Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--purple">Purple Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--fuchsia">Fuchsia Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--magenta">Magenta Status</div>
+  - id: statuslight-neutral
+    name: Neutral
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--neutral">Paused</div>
+  - id: statuslight-accent
+    name: Accent
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--info">Accent</div>
+  - id: statuslight-info
+    name: Info
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--info">Active</div>
+  - id: statuslight-positive
+    name: Positive
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--positive">Approved</div>
+  - id: statuslight-notice
+    name: Notice
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--notice">Needs Approval</div>
+  - id: statuslight-negative
+    name: Negative
+    status: Verified
+    markup: |
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--negative">Rejected</div>

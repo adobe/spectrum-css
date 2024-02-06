@@ -1,0 +1,21 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "commons",
+	"tags": ["utility"],
+	"targets": {
+		"build": {
+			"executor": "nx:noop"
+		},
+		"clean": {
+			"executor": "nx:noop"
+		},
+		"compare": {
+			"executor": "nx:noop"
+		},
+		"lint": {},
+
+		"test": {
+			"executor": "nx:noop"
+		}
+	}
+}

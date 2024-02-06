@@ -1,0 +1,33 @@
+{
+  "name": "@spectrum-css/combobox",
+  "version": "2.1.1",
+  "description": "The Spectrum CSS combobox component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/combobox"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/menu": ">=5",
+    "@spectrum-css/pickerbutton": ">=4",
+    "@spectrum-css/popover": ">=6",
+    "@spectrum-css/progresscircle": ">=2",
+    "@spectrum-css/textfield": ">=6",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/progresscircle": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

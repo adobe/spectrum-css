@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "postcss-transformselectors",
+  "version": "3.0.0",
+  "description": "Re-map and transform selectors",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "peerDependencies": {
+    "postcss": ">=8"
+  },
+  "devDependencies": {
+    "ava": "^6.1.0",
+    "postcss": "^8.4.33"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@spectrum-css/generator",
+  "version": "2.0.19",
+  "description": "A tool to quickly create standardized components",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "generator"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "type": "module",
+  "main": "plopfile.js",
+  "scripts": {
+    "new": "plop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^9.2.10",
+    "inquirer-autocomplete-prompt": "^3.0.0",
+    "js-yaml": "^4.1.0",
+    "plop": "^3.1.1"
+  }
+}

@@ -1,0 +1,110 @@
+name: Publish documentation
+#
+# This workflow publishes the documentation to Netlify
+#
+
+on:
+    workflow_dispatch:
+        inputs:
+            deploy-message:
+                required: false
+                type: string
+            alias:
+                required: false
+                type: string
+            storybook-url:
+                required: false
+                type: string
+    workflow_call:
+        inputs:
+            deploy-message:
+                required: false
+                type: string
+            alias:
+                required: false
+                type: string
+            storybook-url:
+                required: false
+                type: string
+
+permissions:
+    contents: read
+    pull-requests: write
+
+jobs:
+    # --- PUBLISH TO NETLIFY --- #
+    # Publish to netlify by leveraging the previous build and then building the site as well
+    # --- #
+    publish_site:
+        name: Publish
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+        steps:
+            ## --- SETUP --- ##
+            - name: Check out code
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 18
+                  cache: yarn
+
+            - name: Derive appropriate SHAs for base and head for `nx affected` commands
+              id: set-SHAs
+              uses: nrwl/nx-set-shas@v3
+
+            ## --- YARN CACHE --- ##
+            - name: Check for cached dependencies
+              continue-on-error: true
+              id: cache-dependencies
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      .cache/yarn
+                      node_modules
+                  key: ubuntu-latest-node18-${{ hashFiles('yarn.lock') }}
+
+            ## --- INSTALL --- ##
+            # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --frozen-lockfile --cache-folder .cache/yarn
+
+            - name: Reset nx cache to prevent cross-machine errors
+              shell: bash
+              run: yarn nx reset
+
+            ## --- BUILD --- ##
+            - name: Build docs site
+              shell: bash
+              run: yarn build:site
+              env:
+                  CHROMATIC_URL: ${{ inputs.storybook-url }}
+
+            - name: Build storybook site
+              if: ${{ inputs.storybook-url == '' }}
+              shell: bash
+              run: yarn ci:storybook --output-dir ../dist/preview
+
+            ## --- DEPLOY WEBSITE TO NETLIFY --- ##
+            - name: Deploy
+              uses: nwtgck/actions-netlify@v2
+              with:
+                #   publish-dir: site/dist
+                  publish-dir: dist
+                  production-branch: main
+                  production-deploy: false
+                  netlify-config-path: ./netlify.toml
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  deploy-message: ${{ inputs.deploy-message }}
+                  enable-pull-request-comment: true
+                  enable-commit-comment: false
+                  overwrites-pull-request-comment: true
+                  alias: ${{ inputs.alias }}
+              env:
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_GH_ACTIONS_DEPLOY }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+              timeout-minutes: 10

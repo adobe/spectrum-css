@@ -1,0 +1,26 @@
+{
+  "name": "@spectrum-css/miller",
+  "version": "5.1.0",
+  "description": "The Spectrum CSS miller component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/miller",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/miller"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/assetlist": ">=5",
+    "@spectrum-css/checkbox": ">=8",
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
