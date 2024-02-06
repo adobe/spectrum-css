@@ -33,7 +33,7 @@ export const AccordionItem = ({
 			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
 			@click=${(evt) => {
-				if (isDisabled || !evt || !evt.target) return;
+				if (disableAll || isDisabled || !evt || !evt.target) return;
 				const closest = evt.target.closest(`.${rootClass}`);
 				if (!closest) return;
 				closest.classList.toggle("is-open");
@@ -80,11 +80,11 @@ export const Template = ({
 	density = "regular",
 	items,
 	id,
+	disableAll,
 	customClasses = [],
 	...globals
 }) => {
 	if (!items || !items.size) return html``;
-
 	return html`
 		<div
 			class="${classMap({
@@ -107,6 +107,7 @@ export const Template = ({
 					iconSize: `${size}`,
 					...item,
 					...globals,
+					disableAll,
 				});
 			})}
 		</div>

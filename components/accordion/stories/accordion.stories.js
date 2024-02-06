@@ -21,7 +21,7 @@ export default {
 			control: "select",
 		},
 		disableAll: {
-			name: "Disabled",
+			name: "Disable all items",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -44,6 +44,7 @@ export default {
 		rootClass: "spectrum-Accordion",
 		size: "m",
 		density: "regular",
+		disableAll: false,
 	},
 	parameters: {
 		actions: {
@@ -64,6 +65,7 @@ const AccordianGroup = ({
 	return html`
 		<div style="display: flex; gap: 2rem;">
 			${Template({
+				...args,
 				items: new Map([
 				[
 					"Recent",
@@ -101,6 +103,7 @@ const AccordianGroup = ({
 			})}
 			${isChromatic() ?
 				Template({
+					...args,
 					customStyles: { "max-inline-size": "300px"},
 					items: new Map([
 					[
@@ -133,6 +136,42 @@ const AccordianGroup = ({
 							content: "Really long content that should wrap when component has a max or fixed width",
 							isOpen: true,
 							isDisabled: false,
+						},
+					],
+				]),
+				})
+				: null }
+			${isChromatic() ?
+				Template({
+					...args,
+					disableAll: true,
+					items: new Map([
+					[
+						"Recent",
+						{
+							content: "Item 1",
+							isOpen: true,
+						},
+					],
+					[
+						"Architecture",
+						{
+							content: "Item 2",
+							isOpen: false,
+						},
+					],
+					[
+						"Nature",
+						{
+							content: "Item 3",
+							isOpen: false,
+						},
+					],
+					[
+						"Really Long Accordion Item that should wrap",
+						{
+							content: "Really long content that should wrap when component has a max or fixed width",
+							isOpen: true,
 						},
 					],
 				]),
