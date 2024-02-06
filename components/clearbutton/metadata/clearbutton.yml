@@ -1,0 +1,106 @@
+name: Clear button
+description: Used in search and tags.
+sections:
+  - name: Migration Guide
+    description: |
+      ### New markup
+      In order to support Express, ClearButton has new markup that includes an inner `.spectrum-ClearButton-fill` element.
+
+      ### T-shirt sizing
+      ClearButton now supports t-shirt sizing and requires that you specify the size of the clear button by adding a `.spectrum-ClearButton--size*` class.
+
+      Also, use the correct icon size for cross icons:
+
+      | T-shirt Size                   | Icon Size                    |
+      |--------------------------------|------------------------------|
+      | `spectrum-ClearButton--sizeS`  | `spectrum-css-icon-Cross75`  |
+      | `spectrum-ClearButton--sizeM`  | `spectrum-css-icon-Cross100` |
+      | `spectrum-ClearButton--sizeL`  | `spectrum-css-icon-Cross200` |
+      | `spectrum-ClearButton--sizeXL` | `spectrum-css-icon-Cross300` |
+
+      ### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
+examples:
+  - id: clearbutton
+    name: Sizing
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+
+          <button class="spectrum-ClearButton spectrum-ClearButton--sizeS" aria-label="Clear textfield">
+            <div class="spectrum-ClearButton-fill">
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross75" />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+
+          <button class="spectrum-ClearButton spectrum-ClearButton--sizeM" aria-label="Clear textfield">
+            <div class="spectrum-ClearButton-fill">
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross100" />
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+
+          <button class="spectrum-ClearButton spectrum-ClearButton--sizeL" aria-label="Clear textfield">
+            <div class="spectrum-ClearButton-fill">
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross200" />
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+
+          <button class="spectrum-ClearButton spectrum-ClearButton--sizeXL" aria-label="Clear textfield">
+            <div class="spectrum-ClearButton-fill">
+              <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Cross300" />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+  - id: clearbutton-disabled
+    name: Disabled
+    markup: |
+      <button class="spectrum-ClearButton spectrum-ClearButton--sizeM" disabled>
+        <div class="spectrum-ClearButton-fill">
+          <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Cross100" />
+          </svg>
+        </div>
+      </button>
+  - id: clearbutton-quiet
+    name: Quiet
+    markup: |
+      <button class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-ClearButton--quiet" aria-label="Clear textfield">
+        <div class="spectrum-ClearButton-fill">
+          <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Cross100" />
+          </svg>
+        </div>
+      </button>
+  - id: clearbutton-overbackground
+    name: Overbackground
+    markup: |
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+        <button class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-ClearButton--overBackground" aria-label="Clear textfield">
+          <div class="spectrum-ClearButton-fill">
+            <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </div>
+        </button>
+      </div>

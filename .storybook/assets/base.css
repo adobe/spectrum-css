@@ -1,0 +1,204 @@
+body {
+	margin: 0;
+	font-size: 10px;
+}
+
+nav .spectrum-Site-logo {
+	margin-inline-end: var(--spectrum-global-dimension-size-200);
+	color: #fa0f00;
+	block-size: 32px;
+}
+
+.spectrum--large nav .spectrum-Site-logo {
+	block-size: 40px;
+}
+
+.docblock-argstable-head {
+	display: none;
+}
+
+/* .docblock-argstable-body {
+     display: grid;
+     grid-template-columns: minmax(25%, 200px) minmax(75%, 1fr);
+ } */
+
+.docblock-argstable-body tr td {
+	letter-spacing: unset;
+	font-size: 11px;
+	color: rgb(34, 34, 34);
+	background-color: rgb(255, 255, 255);
+}
+
+.docblock-argstable-body td > span:has(select),
+.docblock-argstable-body td textarea {
+	max-width: 280px !important;
+}
+
+#storybook-explorer-tree {
+	background-color: rgb(255, 255, 255) !important;
+}
+
+#storybook-explorer-tree > div {
+	margin-inline: 0;
+}
+
+button.sidebar-item {
+	font-weight: 700 !important;
+}
+
+.sidebar-item {
+	color: rgb(34, 34, 34) !important;
+	font-weight: 400 !important;
+	font-size: 14px !important;
+	line-height: 1.4em !important;
+	height: 32px !important;
+	border-radius: 4px !important;
+	padding-inline-start: 24px !important;
+	padding-inline-end: 12px !important;
+	padding-block: 4px !important;
+	margin-block: 4px !important;
+}
+
+input,
+textarea,
+select {
+	border-radius: 4px !important;
+}
+
+#storybook-explorer-searchfield {
+	padding: 3px 12px 5px 35px !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+#storybook-explorer-searchfield:focus {
+	border-color: rgb(2, 101, 220) !important;
+	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+}
+
+.sidebar-item svg {
+	display: none;
+	color: rgb(34, 34, 34) !important;
+}
+
+[role="main"]
+	> div
+	> div:first-child
+	.os-content
+	> div
+	> :is(div, div > div:has(a)) {
+	gap: 4px;
+}
+
+[role="main"] > div > div:first-child .os-content > div > div > div:has(a) {
+	display: flex;
+}
+
+/* [role="main"] > div > div:first-child .os-content > div > div > div:not(:has(a)) button */
+[role="main"]
+	> div
+	> div:first-child
+	.os-content
+	> div
+	> div
+	:is(button, a:not(:has(button))) {
+	min-inline-size: 32px;
+	border-radius: 4px;
+
+	padding-inline: 11px;
+	padding-block: 4px;
+	margin: 0;
+
+	/* background-color: transparent !important; */
+	border-color: transparent !important;
+	color: rgb(34, 34, 34) !important;
+	font-weight: 300;
+
+	transition: background 130ms ease-out, border-color 130ms ease-out,
+		color 130ms ease-out, box-shadow 130ms ease-out;
+
+	line-height: 1.3;
+}
+
+[role="main"] > div > div:first-child .os-content > div > div > * {
+	margin-top: 0 !important;
+}
+
+[role="main"] > div > div:first-child .os-content > div > div > div > a {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+/* .os-content > div > div > div > a > button {
+    height: 100%;
+} */
+
+/* Indicates a button with a dropdown menu */
+[role="main"]
+	> div
+	> div:first-child
+	.os-content
+	> div
+	> div
+	> div:not(:has(a))
+	button {
+	position: relative;
+	background-color: rgb(253, 253, 253) !important;
+	border: 1px solid rgb(144, 144, 144) !important;
+}
+
+/* Indicates a button with a dropdown menu */
+/* [role="main"] > div > div:first-child .os-content > div > div :is(button,a:not(:has(button)),span) */
+[role="main"]
+	> div
+	> div:first-child
+	.os-content
+	> div
+	> div
+	> div:not(:has(a))
+	button::after {
+	content: "◢";
+	position: absolute;
+	bottom: -3px;
+	right: -1px;
+	display: inline-block;
+	transform: scale(0.5);
+	color: rgb(177, 177, 177);
+}
+
+[role="main"]
+	> div
+	> div:first-child
+	.os-content
+	> div
+	> div
+	> div:not(:has(a))
+	button:hover {
+	background-color: rgb(242, 242, 242) !important;
+}
+
+[role="main"] > div > div:first-child .os-content > div > div > * {
+	margin-inline: 0 !important;
+}
+
+[role="main"]
+	> div
+	> div:first-child
+	.os-content
+	> div
+	> div
+	:is(button, a:not(:has(button)), span) {
+	height: 32px;
+}
+
+[role="main"]
+	> div
+	> div:first-child
+	.os-content
+	> div
+	> div
+	:is(button:hover, a:hover:not(:has(button))) {
+	background-color: rgb(230, 230, 230) !important;
+}

@@ -1,0 +1,74 @@
+name: Button group
+SpectrumSiteSlug: https://spectrum.adobe.com/page/button/
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/buttongroup/metadata/mods.md">here</a>.
+examples:
+  - id: buttongroup-horizontal
+    name: Horizontal
+    description: |
+      Default spacing for Medium, Large, and Extra Large t-shirt sizes.
+    markup: |
+      <div class="spectrum-ButtonGroup">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">No, thanks</span>
+        </button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">Remind me later</span>
+        </button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--primary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">Rate now</span>
+        </button>
+      </div>
+
+  - id: buttongroup-horizontal-small
+    name: Horizontal - Small
+    description: |
+      Spacing for the Small t-shirt size.
+    markup: |
+      <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS">
+        <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">No, thanks</span>
+        </button>
+        <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">Remind me later</span>
+        </button>
+        <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--fill spectrum-Button--primary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">Rate now</span>
+        </button>
+      </div>
+
+  - id: buttongroup-vertical
+    name: Vertical
+    description: |
+      Default spacing for Medium, Large, and Extra Large t-shirt sizes.
+    markup: |
+      <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">No, thanks</span>
+        </button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">Remind me later</span>
+        </button>
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--primary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">Rate now</span>
+        </button>
+      </div>
+
+  - id: buttongroup-vertical-small
+    name: Vertical - Small
+    description: |
+      Spacing for the Small t-shirt size.
+    markup: |
+      <div class="spectrum-ButtonGroup spectrum-ButtonGroup--sizeS spectrum-ButtonGroup--vertical">
+        <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">No, thanks</span>
+        </button>
+        <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--outline spectrum-Button--secondary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">Remind me later</span>
+        </button>
+        <button class="spectrum-Button spectrum-Button--sizeS spectrum-Button--fill spectrum-Button--primary spectrum-ButtonGroup-item">
+          <span class="spectrum-Button-label">Rate now</span>
+        </button>
+      </div>

@@ -1,0 +1,782 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* Typography - Default */
+.spectrum {
+  --spectrum-font-family-ar: myriad-arabic, adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+  --spectrum-font-family-he: myriad-hebrew, adobe-clean, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+
+  --spectrum-font-family: var(--spectrum-sans-font-family-stack);
+  --spectrum-font-style: var(--spectrum-default-font-style);
+  --spectrum-font-size: var(--spectrum-font-size-100);
+
+  font-family: var(--spectrum-font-family);
+  font-style: var(--spectrum-font-style);
+  font-size: var(--spectrum-font-size);
+
+  &:lang(ar) {
+    font-family: var(--spectrum-font-family-ar);
+  }
+
+  &:lang(he) {
+    font-family: var(--spectrum-font-family-he);
+  }
+}
+
+/* Typography - Heading */
+
+/* Heading tokens */
+.spectrum-Heading {
+  --spectrum-heading-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
+  --spectrum-heading-serif-font-family: var(--spectrum-serif-font-family-stack);
+  --spectrum-heading-cjk-font-family: var(--spectrum-cjk-font-family-stack);
+
+  --spectrum-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+  --spectrum-heading-font-color: var(--spectrum-heading-color);
+
+  --spectrum-heading-margin-start: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier));
+  --spectrum-heading-margin-end: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier));
+
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Heading {
+    --highcontrast-heading-font-color: Text;
+  }
+}
+
+/* Heading t-shirt sizes */
+.spectrum-Heading--sizeXXS {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xxs);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxs);
+}
+.spectrum-Heading--sizeXS {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xs);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xs);
+}
+.spectrum-Heading--sizeS {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-s);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-s);
+}
+.spectrum-Heading--sizeM {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-m);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-m);
+}
+.spectrum-Heading--sizeL {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-l);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-l);
+}
+.spectrum-Heading--sizeXL {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xl);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xl);
+}
+.spectrum-Heading--sizeXXL {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xxl);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxl);
+}
+.spectrum-Heading--sizeXXXL {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xxxl);
+  --spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxxl);
+}
+
+/* Heading styles */
+.spectrum-Heading {
+  font-family: var(--mod-heading-sans-serif-font-family, var(--spectrum-heading-sans-serif-font-family));
+  font-style: var(--mod-heading-sans-serif-font-style, var(--spectrum-heading-sans-serif-font-style));
+  font-weight: var(--mod-heading-sans-serif-font-weight, var(--spectrum-heading-sans-serif-font-weight));
+  font-size: var(--mod-heading-font-size, var(--spectrum-heading-font-size));
+  color: var(--highcontrast-heading-font-color, var(--mod-heading-font-color, var(--spectrum-heading-font-color)));
+  line-height: var(--mod-heading-line-height, var(--spectrum-heading-line-height));
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  strong,
+  .spectrum-Heading-strong {
+    font-style: var(--mod-heading-sans-serif-strong-font-style, var(--spectrum-heading-sans-serif-strong-font-style));
+    font-weight: var(--mod-heading-sans-serif-strong-font-weight, var(--spectrum-heading-sans-serif-strong-font-weight));
+  }
+
+  em,
+  .spectrum-Heading-emphasized {
+    font-style: var(--mod-heading-sans-serif-emphasized-font-style, var(--spectrum-heading-sans-serif-emphasized-font-style));
+    font-weight: var(--mod-heading-sans-serif-emphasized-font-weight, var(--spectrum-heading-sans-serif-emphasized-font-weight));
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized,
+  strong em,
+  em strong {
+    font-style: var(--mod-heading-sans-serif-strong-emphasized-font-style, var(--spectrum-heading-sans-serif-strong-emphasized-font-style));
+    font-weight: var(--mod-heading-sans-serif-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-strong-emphasized-font-weight));
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--mod-heading-cjk-font-family, var(--spectrum-heading-cjk-font-family));
+    font-style: var(--mod-heading-cjk-font-style, var(--spectrum-heading-cjk-font-style));
+    font-weight: var(--mod-heading-cjk-font-weight, var(--spectrum-heading-cjk-font-weight));
+    font-size: var(--mod-heading-cjk-font-size, var(--spectrum-heading-cjk-font-size));
+
+    line-height: var(--mod-heading-cjk-line-height, var(--spectrum-heading-cjk-line-height));
+    letter-spacing: var(--mod-heading-cjk-letter-spacing, var(--spectrum-heading-cjk-letter-spacing));
+
+    em,
+    .spectrum-Heading-emphasized {
+      font-style: var(--mod-heading-cjk-emphasized-font-style, var(--spectrum-heading-cjk-emphasized-font-style));
+      font-weight: var(--mod-heading-cjk-emphasized-font-weight, var(--spectrum-heading-cjk-emphasized-font-weight));
+    }
+
+    strong,
+    .spectrum-Heading-strong {
+      font-style: var(--mod-heading-cjk-strong-font-style, var(--spectrum-heading-cjk-strong-font-style));
+      font-weight: var(--mod-heading-cjk-strong-font-weight, var(--spectrum-heading-cjk-strong-font-weight));
+    }
+
+    .spectrum-Heading-strong.spectrum-Heading-emphasized,
+    strong em,
+    em strong {
+      font-style: var(--mod-heading-cjk-strong-emphasized-font-style, var(--spectrum-heading-cjk-strong-emphasized-font-style));
+      font-weight: var(--mod-heading-cjk-strong-emphasized-font-weight, var(--spectrum-heading-cjk-strong-emphasized-font-weight));
+    }
+  }
+}
+
+/* Heading - Heavy */
+.spectrum-Heading--heavy {
+  font-style: var(--mod-heading-sans-serif-heavy-font-style, var(--spectrum-heading-sans-serif-heavy-font-style));
+  font-weight: var(--mod-heading-sans-serif-heavy-font-weight, var(--spectrum-heading-sans-serif-heavy-font-weight));
+
+  strong,
+  .spectrum-Heading-strong {
+    font-style: var(--mod-heading-sans-serif-heavy-strong-font-style, var(--spectrum-heading-sans-serif-heavy-strong-font-style));
+    font-weight: var(--mod-heading-sans-serif-heavy-strong-font-weight, var(--spectrum-heading-sans-serif-heavy-strong-font-weight));
+  }
+
+  em,
+    .spectrum-Heading-emphasized {
+      font-style: var(--mod-heading-sans-serif-heavy-emphasized-font-style, var(--spectrum-heading-sans-serif-heavy-emphasized-font-style));
+      font-weight: var(--mod-heading-sans-serif-heavy-emphasized-font-weight, var(--spectrum-heading-sans-serif-heavy-emphasized-font-weight));
+    }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized,
+  strong em,
+  em strong {
+    font-style: var(--mod-heading-sans-serif-heavy-strong-emphasized-font-style, var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-style));
+    font-weight: var(--mod-heading-sans-serif-heavy-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-heavy-strong-emphasized-font-weight));
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-style: var(--mod-heading-cjk-heavy-font-style, var(--spectrum-heading-cjk-heavy-font-style));
+    font-weight: var(--mod-heading-cjk-heavy-font-weight, var(--spectrum-heading-cjk-heavy-font-weight));
+
+    em,
+    .spectrum-Heading-emphasized {
+      font-style: var(--mod-heading-cjk-heavy-emphasized-font-style, var(--spectrum-heading-cjk-heavy-emphasized-font-style));
+      font-weight: var(--mod-heading-cjk-heavy-emphasized-font-weight, var(--spectrum-heading-cjk-heavy-emphasized-font-weight));
+    }
+
+    strong,
+    .spectrum-Heading-strong {
+      font-style: var(--mod-heading-cjk-heavy-strong-font-style, var(--spectrum-heading-cjk-heavy-strong-font-style));
+      font-weight: var(--mod-heading-cjk-heavy-strong-font-weight, var(--spectrum-heading-cjk-heavy-strong-font-weight));
+    }
+
+    .spectrum-Heading-strong.spectrum-Heading-emphasized,
+    strong em,
+    em strong {
+      font-style: var(--mod-heading-cjk-heavy-strong-emphasized-font-style, var(--spectrum-heading-cjk-heavy-strong-emphasized-font-style));
+      font-weight: var(--mod-heading-cjk-heavy-strong-emphasized-font-weight, var(--spectrum-heading-cjk-heavy-strong-emphasized-font-weight));
+    }
+  }
+}
+
+/* Heading - Light */
+.spectrum-Heading--light {
+  font-style: var(--mod-heading-sans-serif-light-font-style, var(--spectrum-heading-sans-serif-light-font-style));
+  font-weight: var(--mod-heading-sans-serif-light-font-weight, var(--spectrum-heading-sans-serif-light-font-weight));
+
+  em,
+  .spectrum-Heading-emphasized {
+    font-style: var(--mod-heading-sans-serif-light-emphasized-font-style, var(--spectrum-heading-sans-serif-light-emphasized-font-style));
+    font-weight: var(--mod-heading-sans-serif-light-emphasized-font-weight, var(--spectrum-heading-sans-serif-light-emphasized-font-weight));
+  }
+
+  strong,
+  .spectrum-Heading-strong {
+    font-style: var(--mod-heading-sans-serif-light-strong-font-style, var(--spectrum-heading-sans-serif-light-strong-font-style));
+    font-weight: var(--mod-heading-sans-serif-light-strong-font-weight, var(--spectrum-heading-sans-serif-light-strong-font-weight));
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized,
+  strong em,
+  em strong {
+    font-style: var(--mod-heading-sans-serif-light-strong-emphasized-font-style, var(--spectrum-heading-sans-serif-light-strong-emphasized-font-style));
+    font-weight: var(--mod-heading-sans-serif-light-strong-emphasized-font-weight, var(--spectrum-heading-sans-serif-light-strong-emphasized-font-weight));
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-style: var(--mod-heading-cjk-light-font-style, var(--spectrum-heading-cjk-light-font-style));
+    font-weight: var(--mod-heading-cjk-light-font-weight, var(--spectrum-heading-cjk-light-font-weight));
+
+    strong,
+    .spectrum-Heading-strong {
+      font-style: var(--mod-heading-cjk-light-strong-font-style, var(--spectrum-heading-cjk-light-strong-font-style));
+      font-weight: var(--mod-heading-cjk-light-strong-font-weight, var(--spectrum-heading-cjk-light-strong-font-weight));
+    }
+
+    em,
+    .spectrum-Heading-emphasized {
+      font-style: var(--mod-heading-cjk-light-emphasized-font-style, var(--spectrum-heading-cjk-light-emphasized-font-style));
+      font-weight: var(--mod-heading-cjk-light-emphasized-font-weight, var(--spectrum-heading-cjk-light-emphasized-font-weight));
+    }
+
+    .spectrum-Heading-strong.spectrum-Heading-emphasized,
+    strong em,
+    em strong {
+      font-style: var(--mod-heading-cjk-light-strong-emphasized-font-style, var(--spectrum-heading-cjk-light-strong-emphasized-font-style));
+      font-weight: var(--mod-heading-cjk-light-strong-emphasized-font-weight, var(--spectrum-heading-cjk-light-strong-emphasized-font-weight));
+    }
+  }
+}
+
+/* Heading - Serif */
+.spectrum-Heading--serif {
+  font-family: var(--mod-heading-serif-font-family, var(--spectrum-heading-serif-font-family));
+  font-style: var(--mod-heading-serif-font-style, var(--spectrum-heading-serif-font-style));
+  font-weight: var(--mod-heading-serif-font-weight, var(--spectrum-heading-serif-font-weight));
+
+  em,
+  .spectrum-Heading-emphasized {
+    font-style: var(--mod-heading-serif-emphasized-font-style, var(--spectrum-heading-serif-emphasized-font-style));
+    font-weight: var(--mod-heading-serif-emphasized-font-weight, var(--spectrum-heading-serif-emphasized-font-weight));
+  }
+
+  strong,
+  .spectrum-Heading-strong {
+    font-style: var(--mod-heading-serif-strong-font-style, var(--spectrum-heading-serif-strong-font-style));
+    font-weight: var(--mod-heading-serif-strong-font-weight, var(--spectrum-heading-serif-strong-font-weight));
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized,
+  strong em,
+  em strong {
+    font-style: var(--mod-heading-serif-strong-emphasized-font-style, var(--spectrum-heading-serif-strong-emphasized-font-style));
+    font-weight: var(--mod-heading-serif-strong-emphasized-font-weight, var(--spectrum-heading-serif-strong-emphasized-font-weight));
+  }
+}
+
+/* Heading - Serif - Heavy */
+.spectrum-Heading--serif.spectrum-Heading--heavy {
+  font-style: var(--mod-heading-serif-heavy-font-style, var(--spectrum-heading-serif-heavy-font-style));
+  font-weight: var(--mod-heading-serif-heavy-font-weight, var(--spectrum-heading-serif-heavy-font-weight));
+
+  strong,
+  .spectrum-Heading-strong {
+    font-style: var(--mod-heading-serif-heavy-strong-font-style, var(--spectrum-heading-serif-heavy-strong-font-style));
+    font-weight: var(--mod-heading-serif-heavy-strong-font-weight, var(--spectrum-heading-serif-heavy-strong-font-weight));
+  }
+
+  em,
+  .spectrum-Heading-emphasized {
+    font-style: var(--mod-heading-serif-heavy-emphasized-font-style, var(--spectrum-heading-serif-heavy-emphasized-font-style));
+    font-weight: var(--mod-heading-serif-heavy-emphasized-font-weight, var(--spectrum-heading-serif-heavy-emphasized-font-weight));
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized,
+  strong em,
+  em strong {
+    font-style: var(--mod-heading-serif-heavy-strong-emphasized-font-style, var(--spectrum-heading-serif-heavy-strong-emphasized-font-style));
+    font-weight: var(--mod-heading-serif-heavy-strong-emphasized-font-weight, var(--spectrum-heading-serif-heavy-strong-emphasized-font-weight));
+  }
+}
+
+/* Heading - Serif - Light */
+.spectrum-Heading--serif.spectrum-Heading--light {
+  font-style: var(--mod-heading-serif-light-font-style, var(--spectrum-heading-serif-light-font-style));
+  font-weight: var(--mod-heading-serif-light-font-weight, var(--spectrum-heading-serif-light-font-weight));
+
+  em,
+  .spectrum-Heading-emphasized {
+    font-style: var(--mod-heading-serif-light-emphasized-font-style, var(--spectrum-heading-serif-light-emphasized-font-style));
+    font-weight: var(--mod-heading-serif-light-emphasized-font-weight, var(--spectrum-heading-serif-light-emphasized-font-weight));
+  }
+
+  strong,
+  .spectrum-Heading-strong {
+    font-style: var(--mod-heading-serif-light-strong-font-style, var(--spectrum-heading-serif-light-strong-font-style));
+    font-weight: var(--mod-heading-serif-light-strong-font-weight, var(--spectrum-heading-serif-light-strong-font-weight));
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized,
+  strong em,
+  em strong {
+    font-style: var(--mod-heading-serif-light-strong-emphasized-font-style, var(--spectrum-heading-serif-light-strong-emphasized-font-style));
+    font-weight: var(--mod-heading-serif-light-strong-emphasized-font-weight, var(--spectrum-heading-serif-light-strong-emphasized-font-weight));
+  }
+}
+
+/* Add margin when inside a Typography component */
+.spectrum-Typography .spectrum-Heading {
+  margin-block-start: var(--mod-heading-margin-start, var(--spectrum-heading-margin-start));
+  margin-block-end: var(--mod-heading-margin-end, var(--spectrum-heading-margin-end));
+}
+
+/* Body */
+
+/* Body tokens */
+.spectrum-Body {
+  --spectrum-body-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
+  --spectrum-body-serif-font-family: var(--spectrum-serif-font-family-stack);
+  --spectrum-body-cjk-font-family: var(--spectrum-cjk-font-family-stack);
+
+  --spectrum-body-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+  --spectrum-body-margin: calc(var(--mod-body-font-size, var(--spectrum-body-font-size)) * var(--spectrum-body-margin-multiplier));
+
+  --spectrum-body-font-color: var(--spectrum-body-color);
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Body {
+    --highcontrast-body-font-color: Text;
+  }
+}
+
+/* Body t-shirt sizes */
+.spectrum-Body--sizeXS {
+  --spectrum-body-font-size: var(--spectrum-body-size-xs);
+}
+.spectrum-Body--sizeS {
+  --spectrum-body-font-size: var(--spectrum-body-size-s);
+}
+.spectrum-Body--sizeM {
+  --spectrum-body-font-size: var(--spectrum-body-size-m);
+}
+.spectrum-Body--sizeL {
+  --spectrum-body-font-size: var(--spectrum-body-size-l);
+}
+.spectrum-Body--sizeXL {
+  --spectrum-body-font-size: var(--spectrum-body-size-xl);
+}
+.spectrum-Body--sizeXXL {
+  --spectrum-body-font-size: var(--spectrum-body-size-xxl);
+}
+.spectrum-Body--sizeXXXL {
+  --spectrum-body-font-size: var(--spectrum-body-size-xxxl);
+}
+
+/* Body styles */
+
+/* Body - Default */
+.spectrum-Body {
+  font-family: var(--mod-body-sans-serif-font-family, var(--spectrum-body-sans-serif-font-family));
+  font-style: var(--mod-body-sans-serif-font-style, var(--spectrum-body-sans-serif-font-style));
+  font-weight: var(--mod-body-sans-serif-font-weight, var(--spectrum-body-sans-serif-font-weight));
+  font-size: var(--mod-body-font-size, var(--spectrum-body-font-size));
+  color: var(--highcontrast-body-font-color, var(--mod-body-font-color, var(--spectrum-body-font-color)));
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  line-height: var(--mod-body-line-height, var(--spectrum-body-line-height));
+
+  strong,
+  .spectrum-Body-strong {
+    font-style: var(--mod-body-sans-serif-strong-font-style, var(--spectrum-body-sans-serif-strong-font-style));
+    font-weight: var(--mod-body-sans-serif-strong-font-weight, var(--spectrum-body-sans-serif-strong-font-weight));
+  }
+
+  em,
+  .spectrum-Body-emphasized {
+    font-style: var(--mod-body-sans-serif-emphasized-font-style, var(--spectrum-body-sans-serif-emphasized-font-style));
+    font-weight: var(--mod-body-sans-serif-emphasized-font-weight, var(--spectrum-body-sans-serif-emphasized-font-weight));
+  }
+
+  .spectrum-Body-strong.spectrum-Body-emphasized,
+  em strong,
+  strong em {
+    font-style: var(--mod-body-sans-serif-strong-emphasized-font-style, var(--spectrum-body-sans-serif-strong-emphasized-font-style));
+    font-weight: var(--mod-body-sans-serif-strong-emphasized-font-weight, var(--spectrum-body-sans-serif-strong-emphasized-font-weight));
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--mod-body-cjk-font-family, var(--spectrum-body-cjk-font-family));
+    font-style: var(--mod-body-cjk-font-style, var(--spectrum-body-cjk-font-style));
+    font-weight: var(--mod-body-cjk-font-weight, var(--spectrum-body-cjk-font-weight));
+
+    line-height: var(--mod-body-cjk-line-height, var(--spectrum-body-cjk-line-height));
+
+    letter-spacing: var(--mod-body-cjk-letter-spacing, var(--spectrum-body-cjk-letter-spacing));
+
+    strong,
+    .spectrum-Body-strong {
+      font-style: var(--mod-body-cjk-strong-font-style, var(--spectrum-body-cjk-strong-font-style));
+      font-weight: var(--mod-body-cjk-strong-font-weight, var(--spectrum-body-cjk-strong-font-weight));
+    }
+
+    em,
+    .spectrum-Body-emphasized {
+      font-style: var(--mod-body-cjk-emphasized-font-style, var(--spectrum-body-cjk-emphasized-font-style));
+      font-weight: var(--mod-body-cjk-emphasized-font-weight, var(--spectrum-body-cjk-emphasized-font-weight));
+    }
+
+    .spectrum-Body-strong.spectrum-Body-emphasized,
+    em strong,
+    strong em {
+      font-style: var(--mod-body-cjk-strong-emphasized-font-style, var(--spectrum-body-cjk-strong-emphasized-font-style));
+      font-weight: var(--mod-body-cjk-strong-emphasized-font-weight, var(--spectrum-body-cjk-strong-emphasized-font-weight));
+    }
+  }
+}
+
+.spectrum-Body--serif {
+  font-family: var(--mod-body-serif-font-family, var(--spectrum-body-serif-font-family));
+  font-weight: var(--mod-body-serif-font-weight, var(--spectrum-body-serif-font-weight));
+  font-style: var(--mod-body-serif-font-style, var(--spectrum-body-serif-font-style));
+
+  strong,
+  .spectrum-Body-strong {
+    font-style: var(--mod-body-serif-strong-font-style, var(--spectrum-body-serif-strong-font-style));
+    font-weight: var(--mod-body-serif-strong-font-weight, var(--spectrum-body-serif-strong-font-weight));
+  }
+
+  em,
+  .spectrum-Body-emphasized {
+    font-style: var(--mod-body-serif-emphasized-font-style, var(--spectrum-body-serif-emphasized-font-style));
+    font-weight: var(--mod-body-serif-emphasized-font-weight, var(--spectrum-body-serif-emphasized-font-weight));
+  }
+
+  .spectrum-Body-strong.spectrum-Body-emphasized,
+  em strong,
+  strong em {
+    font-style: var(--mod-body-serif-strong-emphasized-font-style, var(--spectrum-body-serif-strong-emphasized-font-style));
+    font-weight: var(--mod-body-serif-strong-emphasized-font-weight, var(--spectrum-body-serif-strong-emphasized-font-weight));
+  }
+}
+
+/* Add margin when inside a Typography component */
+.spectrum-Typography .spectrum-Body {
+  margin-block-end: var(--mod-body-margin, var(--spectrum-body-margin));
+}
+
+/* Detail */
+
+/* Detail tokens */
+.spectrum-Detail {
+  --spectrum-detail-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
+  --spectrum-detail-serif-font-family: var(--spectrum-serif-font-family-stack);
+  --spectrum-detail-cjk-font-family: var(--spectrum-cjk-font-family-stack);
+
+  --spectrum-detail-margin-start: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-top-multiplier));
+  --spectrum-detail-margin-end: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-bottom-multiplier));
+
+  --spectrum-detail-font-color: var(--spectrum-detail-color);
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Detail {
+    --highcontrast-detail-font-color: Text;
+  }
+}
+
+/* Detail t-shirt sizes */
+.spectrum-Detail--sizeS {
+  --spectrum-detail-font-size: var(--spectrum-detail-size-s);
+}
+.spectrum-Detail--sizeM {
+  --spectrum-detail-font-size: var(--spectrum-detail-size-m);
+}
+.spectrum-Detail--sizeL {
+  --spectrum-detail-font-size: var(--spectrum-detail-size-l);
+}
+.spectrum-Detail--sizeXL {
+  --spectrum-detail-font-size: var(--spectrum-detail-size-xl);
+}
+
+/* Detail styles */
+.spectrum-Detail {
+  font-family: var(--mod-detail-sans-serif-font-family, var(--spectrum-detail-sans-serif-font-family));
+  font-style: var(--mod-detail-sans-serif-font-style, var(--spectrum-detail-sans-serif-font-style));
+  font-weight: var(--mod-detail-sans-serif-font-weight, var(--spectrum-detail-sans-serif-font-weight));
+  font-size: var(--mod-detail-font-size, var(--spectrum-detail-font-size));
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  color: var(--highcontrast-detail-font-color, var(--mod-detail-font-color, var(--spectrum-detail-font-color)));
+
+  line-height: var(--mod-detail-line-height, var(--spectrum-detail-line-height));
+  letter-spacing: var(--mod-detail-letter-spacing, var(--spectrum-detail-letter-spacing));
+  text-transform: uppercase;
+
+  strong,
+  .spectrum-Detail-strong {
+    font-style: var(--mod-detail-sans-serif-strong-font-style, var(--spectrum-detail-sans-serif-strong-font-style));
+    font-weight: var(--mod-detail-sans-serif-strong-font-weight, var(--spectrum-detail-sans-serif-strong-font-weight));
+  }
+
+  em,
+  .spectrum-Detail-emphasized {
+    font-style: var(--mod-detail-sans-serif-emphasized-font-style, var(--spectrum-detail-sans-serif-emphasized-font-style));
+    font-weight: var(--mod-detail-sans-serif-emphasized-font-weight, var(--spectrum-detail-sans-serif-emphasized-font-weight));
+  }
+
+  .spectrum-Detail-strong.spectrum-Detail-emphasized,
+  em strong,
+  strong em {
+    font-style: var(--mod-detail-sans-serif-strong-emphasized-font-style, var(--spectrum-detail-sans-serif-strong-emphasized-font-style));
+    font-weight: var(--mod-detail-sans-serif-strong-emphasized-font-weight, var(--spectrum-detail-sans-serif-strong-emphasized-font-weight));
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--mod-detail-cjk-font-family, var(--spectrum-detail-cjk-font-family));
+    font-style: var(--mod-detail-cjk-font-style, var(--spectrum-detail-cjk-font-style));
+    font-weight: var(--mod-detail-cjk-font-weight, var(--spectrum-detail-cjk-font-weight));
+
+    line-height: var(--mod-detail-cjk-line-height, var(--spectrum-detail-cjk-line-height));
+
+    strong,
+    .spectrum-Detail-strong {
+      font-style: var(--mod-detail-cjk-strong-font-style, var(--spectrum-detail-cjk-strong-font-style));
+      font-weight: var(--mod-detail-cjk-strong-font-weight, var(--spectrum-detail-cjk-strong-font-weight));
+    }
+
+    em,
+    .spectrum-Detail-emphasized {
+      font-style: var(--mod-detail-cjk-emphasized-font-style, var(--spectrum-detail-cjk-emphasized-font-style));
+      font-weight: var(--mod-detail-cjk-emphasized-font-weight, var(--spectrum-detail-cjk-emphasized-font-weight));
+    }
+
+    .spectrum-Detail-strong.spectrum-Detail-emphasized,
+    em strong,
+    strong em {
+      font-style: var(--mod-detail-cjk-strong-emphasized-font-style, var(--spectrum-detail-cjk-strong-emphasized-font-style));
+      font-weight: var(--mod-detail-cjk-strong-emphasized-font-weight, var(--spectrum-detail-cjk-strong-emphasized-font-weight));
+    }
+  }
+}
+
+.spectrum-Detail--serif {
+  font-family: var(--mod-detail-serif-font-family, var(--spectrum-detail-serif-font-family));
+  font-style: var(--mod-detail-serif-font-style, var(--spectrum-detail-serif-font-style));
+  font-weight: var(--mod-detail-serif-font-weight, var(--spectrum-detail-serif-font-weight));
+
+  strong,
+  .spectrum-Detail-strong {
+    font-style: var(--mod-detail-serif-strong-font-style, var(--spectrum-detail-serif-strong-font-style));
+    font-weight: var(--mod-detail-serif-strong-font-weight, var(--spectrum-detail-serif-strong-font-weight));
+  }
+
+  em,
+  .spectrum-Detail-emphasized {
+    font-style: var(--mod-detail-serif-emphasized-font-style, var(--spectrum-detail-serif-emphasized-font-style));
+    font-weight: var(--mod-detail-serif-emphasized-font-weight, var(--spectrum-detail-serif-emphasized-font-weight));
+  }
+
+  .spectrum-Detail-strong.spectrum-Detail-emphasized,
+  em strong,
+  strong em {
+     font-style: var(--mod-detail-serif-strong-emphasized-font-style, var(--spectrum-detail-serif-strong-emphasized-font-style));
+     font-weight: var(--mod-detail-serif-strong-emphasized-font-weight, var(--spectrum-detail-serif-strong-emphasized-font-weight));
+   }
+}
+
+/* Detail - Light  */
+.spectrum-Detail--light {
+  font-style: var(--mod-detail-sans-serif-light-font-style, var(--spectrum-detail-sans-serif-light-font-style));
+  font-weight: var(--spectrum-detail-sans-serif-light-font-weight, var(--spectrum-detail-sans-serif-light-font-weight));
+
+  strong,
+  .spectrum-Detail-strong {
+    font-style: var(--mod-detail-sans-serif-light-strong-font-style, var(--spectrum-detail-sans-serif-light-strong-font-style));
+    font-weight: var(--mod-detail-sans-serif-light-strong-font-weight, var(--spectrum-detail-sans-serif-light-strong-font-weight));
+  }
+
+  em,
+  .spectrum-Detail-emphasized {
+    font-style: var(--mod-detail-sans-serif-light-emphasized-font-style, var(--spectrum-detail-sans-serif-light-emphasized-font-style));
+    font-weight: var(--mod-detail-sans-serif-light-emphasized-font-weight, var(--spectrum-detail-sans-serif-light-emphasized-font-weight));
+  }
+
+  .spectrum-Detail-strong.spectrum-Body-emphasized,
+  em strong,
+  strong em {
+    font-style: var(--mod-detail-sans-serif-light-strong-emphasized-font-style, var(--spectrum-detail-sans-serif-light-strong-emphasized-font-style));
+    font-weight: var(--mod-detail-sans-serif-light-strong-emphasized-font-weight, var(--spectrum-detail-sans-serif-light-strong-emphasized-font-weight));
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-style: var(--mod-detail-cjk-light-font-style, var(--spectrum-detail-cjk-light-font-style));
+    font-weight: var(--mod-detail-cjk-light-font-weight, var(--spectrum-detail-cjk-light-font-weight));
+
+    strong,
+    .spectrum-Detail-strong {
+      font-style: var(--mod-detail-cjk-light-strong-font-style, var(--spectrum-detail-cjk-light-strong-font-style));
+      font-weight: var(--mod-detail-cjk-light-strong-font-weight, var(--spectrum-detail-cjk-light-strong-font-weight));
+    }
+
+    em,
+    .spectrum-Detail-emphasized {
+      font-style: var(--mod-detail-cjk-light-emphasized-font-style, var(--spectrum-detail-cjk-light-emphasized-font-style));
+      font-weight: var(--mod-detail-cjk-light-emphasized-font-weight, var(--spectrum-detail-cjk-light-emphasized-font-weight));
+    }
+
+    .spectrum-Detail-strong.spectrum-Detail-emphasized {
+      font-style: var(--mod-detail-cjk-light-strong-emphasized-font-style, var(--spectrum-detail-cjk-light-strong-emphasized-font-style));
+      font-weight: var(--mod-detail-cjk-light-strong-emphasized-font-weight, var(--spectrum-detail-cjk-light-strong-emphasized-font-weight));
+    }
+  }
+}
+
+.spectrum-Detail--serif.spectrum-Detail--light {
+  font-style: var(--mod-detail-serif-light-font-style, var(--spectrum-detail-serif-light-font-style));
+  font-weight: var(--mod-detail-serif-light-font-weight, var(--spectrum-detail-serif-light-font-weight));
+
+  strong,
+  .spectrum-Detail-strong {
+    font-style: var(--mod-detail-serif-light-strong-font-style, var(--spectrum-detail-serif-light-strong-font-style));
+    font-weight: var(--mod-detail-serif-light-strong-font-weight, var(--spectrum-detail-serif-light-strong-font-weight));
+  }
+
+  em,
+  .spectrum-Detail-emphasized {
+    font-style: var(--mod-detail-serif-light-emphasized-font-style, var(--spectrum-detail-serif-light-emphasized-font-style));
+    font-weight: var(--mod-detail-serif-light-emphasized-font-weight, var(--spectrum-detail-serif-light-emphasized-font-weight));
+  }
+
+  .spectrum-Detail-strong.spectrum-Body-emphasized,
+  em strong,
+  strong em {
+    font-style: var(--mod-detail-serif-light-strong-emphasized-font-style, var(--spectrum-detail-serif-light-strong-emphasized-font-style));
+    font-weight: var(--mod-detail-serif-light-strong-emphasized-font-weight, var(--spectrum-detail-serif-light-strong-emphasized-font-weight));
+  }
+}
+
+/* Add margin when inside a Typography component */
+.spectrum-Typography .spectrum-Detail {
+  margin-block-start: var(--mod-detail-margin-start, var(--spectrum-detail-margin-start));
+  margin-block-end: var(--mod-detail-margin-end, var(--spectrum-detail-margin-end));
+}
+
+/* Code */
+
+/* Code tokens */
+.spectrum-Code {
+  --spectrum-code-font-family: var(--spectrum-code-font-family-stack);
+
+  --spectrum-code-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+  --spectrum-code-font-color: var(--spectrum-code-color);
+}
+
+/* Windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Code {
+    --highcontrast-code-font-color: Text;
+  }
+}
+
+/* Code t-shirt sizes */
+.spectrum-Code--sizeXS {
+  --spectrum-code-font-size: var(--spectrum-code-size-xs);
+}
+
+.spectrum-Code--sizeS {
+  --spectrum-code-font-size: var(--spectrum-code-size-s);
+}
+
+.spectrum-Code--sizeM {
+  --spectrum-code-font-size: var(--spectrum-code-size-m);
+}
+
+.spectrum-Code--sizeL {
+  --spectrum-code-font-size: var(--spectrum-code-size-l);
+}
+
+.spectrum-Code--sizeXL {
+  --spectrum-code-font-size: var(--spectrum-code-size-xl);
+}
+
+/* Code styles */
+.spectrum-Code {
+  font-family: var(--mod-code-font-family, var(--spectrum-code-font-family));
+  font-style: var(--mod-code-font-style, var(--spectrum-code-font-style));
+  font-weight: var(--mod-code-font-weight, var(--spectrum-code-font-weight));
+  font-size: var(--mod-code-font-size, var(--spectrum-code-font-size));
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  line-height: var(--mod-code-line-height, var(--spectrum-code-line-height));
+
+  color: var(--highcontrast-code-font-color, var(--mod-code-font-color, var(--spectrum-code-font-color)));
+
+  strong,
+  .spectrum-Code-strong {
+    font-style: var(--mod-code-strong-font-style, var(--spectrum-code-strong-font-style));
+    font-weight: var(--mod-code-strong-font-weight, var(--spectrum-code-strong-font-weight));
+  }
+
+  em,
+  .spectrum-Code-emphasized {
+    font-style: var(--mod-code-emphasized-font-style, var(--spectrum-code-emphasized-font-style));
+    font-weight: var(--mod-code-emphasized-font-weight, var(--spectrum-code-emphasized-font-weight));
+  }
+
+ .spectrum-Code-strong.spectrum-Code-emphasized,
+ em strong,
+ strong em {
+    font-style: var(--mod-code-strong-emphasized-font-style, var(--spectrum-code-strong-emphasized-font-style));
+    font-weight: var(--mod-code-strong-emphasized-font-weight, var(--spectrum-code-strong-emphasized-font-weight));
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--mod-code-cjk-font-family, var(--spectrum-code-cjk-font-family));
+    font-style: var(--mod-code-cjk-font-style, var(--spectrum-code-cjk-font-style));
+    font-weight: var(--mod-code-cjk-font-weight, var(--spectrum-code-cjk-font-weight));
+
+    line-height: var(--mod-code-cjk-line-height, var(--spectrum-code-cjk-line-height));
+    letter-spacing: var(--mod-code-cjk-letter-spacing, var(--spectrum-code-cjk-letter-spacing));
+
+    strong,
+    .spectrum-Code-strong {
+      font-style: var(--mod-code-cjk-strong-font-style, var(--spectrum-code-cjk-strong-font-style));
+      font-weight: var(--mod-code-cjk-strong-font-weight, var(--spectrum-code-cjk-strong-font-weight));
+    }
+
+    em,
+    .spectrum-Code-emphasized {
+      font-style: var(--mod-code-cjk-emphasized-font-style, var(--spectrum-code-cjk-emphasized-font-style));
+      font-weight: var(--mod-code-cjk-emphasized-font-weight, var(--spectrum-code-cjk-emphasized-font-weight));
+    }
+
+    .spectrum-Code-strong.spectrum-Code-emphasized,
+    em strong,
+    strong em {
+      font-style: var(--mod-code-cjk-strong-emphasized-font-style, var(--spectrum-code-cjk-strong-emphasized-font-style));
+      font-weight: var(--mod-code-cjk-strong-emphasized-font-weight, var(--spectrum-code-cjk-strong-emphasized-font-weight));
+    }
+  }
+}

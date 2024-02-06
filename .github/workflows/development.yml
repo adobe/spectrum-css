@@ -1,0 +1,161 @@
+name:
+    Verify
+    # -------------------------------------------------------------
+    # This workflow will build and verify pull requests. It will:
+    # - Build the base branch and the PR branch
+    # - Compare the compiled output of the two branches
+    # - Run visual regression tests on the PR branch
+    # - Publish the PR branch to Netlify for review
+    # -------------------------------------------------------------
+
+on:
+    pull_request:
+        branches:
+            - main
+            - spectrum-two
+            # Allow us to run tests for PRs updating github actions
+            - chore-*ci*
+            - chore-*github-actions*
+
+        # todo: we can get even more detailed with this later by evaluating what influences the built assets
+        paths-ignore:
+            - "LICENSE"
+            - "*.hbs"
+
+        types:
+            - opened
+            - synchronize
+            - reopened
+            - labeled
+            - unlabeled
+            - auto_merge_enabled
+
+permissions:
+    contents: read
+    pull-requests: write
+
+concurrency:
+    group: "${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+    cancel-in-progress: true
+
+defaults:
+    run:
+        shell: bash
+
+jobs:
+    # -------------------------------------------------------------
+    # Validate build for various environments
+    # -------------------------------------------------------------
+    build:
+        name: Build
+        # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
+        # if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
+        strategy:
+            fail-fast: false
+            matrix:
+                system:
+                    - macos-latest
+                    - ubuntu-latest
+                    # - windows-latest
+                node-version:
+                    - 18
+        uses: ./.github/workflows/build.yml
+        with:
+            system: ${{ matrix.system }}
+            node-version: ${{ matrix.node-version }}
+        secrets: inherit
+
+    # -------------------------------------------------------------
+    # Compare the compiled assets
+    # -------------------------------------------------------------
+    compare:
+        name: Compare
+        needs: [build]
+        # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
+        if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
+        uses: ./.github/workflows/compare-results.yml
+        with:
+            base-sha: ${{ needs.build.outputs.base-sha }}
+            head-sha: ${{ needs.build.outputs.head-sha }}
+        secrets: inherit
+
+    # -------------------------------------------------------------
+    # Returns all changed pull request files.
+    # --------------------------------------------------------------
+    changed_files:
+        runs-on: ubuntu-latest
+        name: Capture changed-files
+        outputs:
+            styles_added_files: ${{ steps.changed-files.outputs.styles_added_files }}
+            styles_modified_files: ${{ steps.changed-files.outputs.styles_modified_files }}
+            # eslint_added_files: ${{ steps.changed-files.outputs.eslint_added_files }}
+            # eslint_modified_files: ${{ steps.changed-files.outputs.eslint_modified_files }}
+        permissions:
+            pull-requests: read
+
+        steps:
+            - name: Get changed files
+              id: changed-files
+              uses: tj-actions/changed-files@v41
+              with:
+                  files_yaml: |
+                      styles:
+                        - components/*/index.css
+                        - components/*/themes/spectrum.css
+                        - components/*/themes/express.css
+                    #   eslint:
+                    #     - components/*/package.json
+                    #     - components/*/project.json
+                    #     - components/*/stories/*.js
+
+    # -------------------------------------------------------------
+    # Lint pre-compiled assets for consistency
+    # -------------------------------------------------------------
+    lint:
+        name: Lint
+        needs: [changed_files]
+        uses: ./.github/workflows/lint.yml
+        with:
+            styles_added_files: ${{ needs.changed_files.outputs.styles_added_files }}
+            styles_modified_files: ${{ needs.changed_files.outputs.styles_modified_files }}
+            # eslint_added_files: ${{ needs.changed_files.outputs.eslint_added_files }}
+            # eslint_modified_files: ${{ needs.changed_files.outputs.eslint_modified_files }}
+        secrets: inherit
+
+    # -------------------------------------------------------------
+    # RUN VISUAL REGRESSION TESTS --- #
+    # Run VRT on:
+    #   - ALL pull_request where:
+    #     - PR has label 'run_vrt'
+    #     - NOT in draft UNLESS labels includes 'run_ci'
+    #     - PR is mergeable
+    # Note: mergeable implies ONLY that no merge conflicts with the base
+    #   branch; nothing about other checks, like CI, passing.
+    # Note: 'skip_vrt' label is used to pass the tasks but not actually
+    #   publish to Chromatic
+    # -------------------------------------------------------------
+    vrt:
+        name: Testing
+        needs: [build]
+        if: ${{ contains(github.event.pull_request.labels.*.name, 'run_vrt') || ((github.event.pull_request.draft != true || contains(github.event.pull_request.labels.*.name, 'run_ci')) && github.event.pull_request.mergeable == true) }}
+        uses: ./.github/workflows/vrt.yml
+        with:
+            skip: ${{ contains(github.event.pull_request.labels.*.name, 'skip_vrt') }}
+        secrets: inherit
+
+    # -------------------------------------------------------------
+    # PUBLISH TO NETLIFY --- #
+    # Publish to netlify by leveraging the previous build and then building the site as well
+    # -------------------------------------------------------------
+    publish_site:
+        name: Publish
+        # The build step ensures we are leveraging the cache for the build
+        needs: [build, vrt]
+        # Note: the goal here is to allow vrt to be skipped but still require the build to succeed
+        if: ${{ always() && (needs.vrt.result == 'success' || needs.vrt.result == 'skipped') && needs.build.result == 'success' }}
+        uses: ./.github/workflows/publish-site.yml
+        with:
+            deploy-message: ${{ github.event.pull_request.title }}
+            alias: pr-${{ github.event.number }}
+            storybook-url: ${{ needs.vrt.outputs.storybook-url }}
+        secrets: inherit

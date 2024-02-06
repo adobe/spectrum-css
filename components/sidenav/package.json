@@ -1,0 +1,29 @@
+{
+  "name": "@spectrum-css/sidenav",
+  "version": "4.2.0",
+  "description": "The Spectrum CSS sidenav component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/sidenav",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/sidenav"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index-vars.css",
+  "peerDependencies": {
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/icon": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

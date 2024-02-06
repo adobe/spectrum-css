@@ -1,0 +1,194 @@
+# ---------- COMPARE PR & BASE ---------- #
+#
+# This workflow is triggered by the Validate successful build workflow
+# which, when successful, will run a compare of the compiled assets
+# between the PR branch and the base branch. If there are any changes
+# in the compiled assets, the workflow will fail and report back.
+#
+name: Compare
+
+on:
+    workflow_call:
+        inputs:
+            base-sha:
+                description: The branch or tag to compare against
+                required: false
+                type: string
+                default: main
+            head-sha:
+                description: The branch or tag to checkout
+                required: false
+                type: string
+                default: ${{ github.event.workflow_call.head.ref }}
+            artifact-id:
+                description: The artifact id to use for the build artifacts
+                required: false
+                type: string
+        outputs:
+            has-changed:
+                value: ${{ jobs.compare.outputs.has-changed }}
+            total-size:
+                value: ${{ jobs.compare.outputs.total-size }}
+
+permissions:
+    contents: read
+    pull-requests: write
+
+defaults:
+    run:
+        shell: bash
+
+jobs:
+    compare:
+        name: Compare compiled assets
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+        needs: [fetch-build-artifacts]
+        outputs:
+            has-changed: ${{ steps.compare.outputs.has-changed }}
+            total-size: ${{ steps.compare.outputs.total-size }}
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            ## --- SETUP --- ##
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 18
+                  cache: yarn
+                  cache-dependency-path: yarn.lock
+
+            ## --- YARN CACHE --- ##
+            - name: Check for cached dependencies
+              continue-on-error: true
+              id: cache-dependencies
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      .cache/yarn
+                      node_modules
+                  key: ubuntu-latest-node18-${{ hashFiles('yarn.lock') }}
+
+            ## --- INSTALL --- ##
+            # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --frozen-lockfile --cache-folder .cache/yarn
+
+            - name: Download build artifacts for head
+              uses: actions/download-artifact@v4
+              with:
+                  name: ubuntu-latest-node18-compiled-assets-${{ inputs.head-sha }}
+                  path: ${{ github.workspace }}/${{ inputs.head-sha }}
+
+            - name: Download build artifacts for base
+              uses: actions/download-artifact@v4
+              with:
+                  name: ubuntu-latest-node18-compiled-assets-${{ inputs.base-sha }}
+                  path: ${{ github.workspace }}/${{ inputs.base-sha }}
+
+            - name: Compare compiled output file size
+              id: compare
+              uses: ./.github/actions/file-diff
+              # uses: spectrum-tools/gh-action-file-diff@v1
+              with:
+                  head-path: ${{ github.workspace }}/${{ inputs.head-sha }}/
+                  base-path: ${{ github.workspace }}/${{ inputs.base-sha }}/
+                  file-glob-pattern: |
+                    components/*/dist/**
+                    tokens/dist/**
+                    ui-icons/dist/**
+                  token: ${{ secrets.GITHUB_TOKEN }}
+
+    fetch-build-artifacts:
+        name: Fetch & validate build artifacts
+        strategy:
+            matrix:
+                branch:
+                    - ${{ inputs.head-sha }}
+                    - ${{ inputs.base-sha }}
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+        steps:
+            - name: Set the cache key for builds
+              id: derive-key
+              shell: bash
+              run: |
+                  echo "key=ubuntu-latest-node18-compiled-assets-${{ matrix.branch }}" >> "$GITHUB_OUTPUT"
+
+            - name: Check if build artifacts already exist
+              uses: actions/download-artifact@v4
+              id: artifact-found
+              continue-on-error: true
+              with:
+                  name: ${{ steps.derive-key.outputs.key }}
+
+            - name: Exit if artifact already exists
+              if: ${{ success() }}
+              shell: bash
+              run: exit 0
+
+            ## --- FETCH PR SHAs --- ##
+            - name: Check out code
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+                  ref: ${{ matrix.branch }}
+
+            ## --- SETUP --- ##
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 18
+                  cache: yarn
+
+            ## --- YARN CACHE --- ##
+            - name: Check for cached dependencies
+              continue-on-error: true
+              id: cache-dependencies
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      .cache/yarn
+                      node_modules
+                  key: ubuntu-latest-node18-${{ hashFiles('yarn.lock') }}
+
+            ## --- INSTALL --- ##
+            # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --frozen-lockfile --cache-folder .cache/yarn
+
+            ## --- BUILD --- ##
+            - name: Check for built assets
+              continue-on-error: true
+              id: download
+              uses: actions/download-artifact@v4
+              with:
+                  path: |
+                    ${{ github.workspace }}/components/*/dist/**
+                    ${{ github.workspace }}/tokens/dist/**
+                    ${{ github.workspace }}/ui-icons/dist/**
+                  name: ${{ steps.derive-key.outputs.key }}
+
+            - name: Build
+              if: ${{ steps.download.outcome != 'success' }}
+              shell: bash
+              run: yarn build
+
+            - name: Upload compiled assets
+              if: ${{ steps.download.outcome != 'success' }}
+              id: upload
+              uses: actions/upload-artifact@v4
+              with:
+                  path: |
+                    ${{ github.workspace }}/components/*/dist/**
+                    ${{ github.workspace }}/tokens/dist/**
+                    ${{ github.workspace }}/ui-icons/dist/**
+                  name: ${{ steps.derive-key.outputs.key }}
+                  # this is important, it lets us catch if the build failed silently
+                  # by alterting us that no compiled assets were generated
+                  if-no-files-found: error
+                  retention-days: 5

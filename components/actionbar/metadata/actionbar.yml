@@ -1,0 +1,452 @@
+name: Action bar
+description: Floating action bar that appears in selection mode.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/action-bar/
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/actionbar/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### Change in Table example markup
+      In the Table example, the Action bar has been moved outside of the Table markup.
+
+      ### Popover Dependency
+      Action bar requires Popover, which is nested within Action bar. Action bar background, border, and corner radius are applied to the nested Popover component and can be overriden by Action bar.
+
+      ### Action bar close button
+      Checkbox has been replaced by Close button.
+
+      ### Item counter
+      Item counter has replaced the checkbox field label. Item counter is a Field Label component.
+
+      ### New Action button markup
+      Action button requires `.spectrum-ActionButton-icon` class on icons nested inside of Action button.
+
+      Emphasized Action bar requires `.spectrum-ActionButton-staticWhite` class on Action button.
+
+      ### New ActionGroup markup
+      Action bar now uses the new ActionGroup markup. Replace `.spectrum-ButtonGroup` with `.spectrum-ActionGroup` and apply `.spectrum-ActionGroup-item` to each action button. See the [Action Group](actiongroup.html) for more information.
+
+      ### Change workflow icon size to medium
+      If you use icon action button in your markup, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
+examples:
+  - id: actionbar
+    name: Standard
+    description: Standard Action Bars fill the width of their container.
+    markup: |
+      <div class="spectrum-ActionBar is-open">
+        <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
+
+          <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Copy</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Delete</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="spectrum-ActionBar is-open">
+        <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
+
+          <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit"></use>
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Copy"></use>
+              </svg>
+              <span class="spectrum-ActionButton-label">Copy</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Delete"></use>
+              </svg>
+              <span class="spectrum-ActionButton-label">Delete</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="spectrum-ActionBar is-open">
+        <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
+
+          <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit"></use>
+              </svg>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy">
+                <use xlink:href="#spectrum-icon-18-Copy"></use>
+              </svg>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete">
+                <use xlink:href="#spectrum-icon-18-Delete"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbar-emphasized
+    name: Emphasized
+    description: Emphasized action bar.
+    markup: |
+      <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
+        <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="Clear selection">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
+
+          <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Copy</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
+              <span class="spectrum-ActionButton-label">Delete</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
+        <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="Clear selection">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
+
+          <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit"></use>
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Copy"></use>
+              </svg>
+              <span class="spectrum-ActionButton-label">Copy</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Delete"></use>
+              </svg>
+              <span class="spectrum-ActionButton-label">Delete</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="spectrum-ActionBar spectrum-ActionBar--emphasized is-open">
+        <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="Clear selection">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
+
+          <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit"></use>
+              </svg>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy">
+                <use xlink:href="#spectrum-icon-18-Copy"></use>
+              </svg>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionButton--staticWhite spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete">
+                <use xlink:href="#spectrum-icon-18-Delete"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbar-flexible
+    name: Flexible
+    description: Flexible Action Bars fit the width of their content.
+    markup: |
+      <div class="spectrum-ActionBar spectrum-ActionBar--flexible is-open">
+        <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">2 Selected</label>
+
+          <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit">
+                <use xlink:href="#spectrum-icon-18-Edit"></use>
+              </svg>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="More">
+                <use xlink:href="#spectrum-icon-18-More"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+  - id: actionbar-table
+    name: Table with ActionBar
+    description: Example usage of sticky ActionBar within a table. 
+    markup: |
+      <div class="spectrum-Table-scroller spectrum-Table spectrum-Table--emphasized spectrum-Table--quiet" style="height: 200px; width: 100%;">
+        <div class="spectrum-Table-main" role="grid" style="width: 100%;">
+          <div class="spectrum-Table-head" role="row">
+            <div class="spectrum-Table-headCell spectrum-Table-checkboxCell" role="columnheader">
+              <label class="spectrum-Checkbox spectrum-Checkbox--sizeM is-indeterminate">
+                <input type="checkbox" class="spectrum-Checkbox-input">
+                <span class="spectrum-Checkbox-box">
+                  <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                  </svg>
+                  <svg class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-Dash100" />
+                  </svg>
+                </span>
+              </label>
+            </div>
+            <div class="spectrum-Table-headCell is-sortable is-sorted-desc" role="columnheader" aria-sort="descending" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </div>
+            <div class="spectrum-Table-headCell is-sortable" role="columnheader" aria-sort="none" tabindex="0">
+              <svg class="spectrum-Icon spectrum-UIIcon-ArrowDown100 spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Arrow100" />
+              </svg><span class="spectrum-Table-columnTitle">Column title</span>
+            </div>
+            <div class="spectrum-Table-headCell" role="columnheader">Column Title</div>
+          </div>
+          <div class="spectrum-Table-body" role="rowgroup">
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" title="Select" checked>
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Alpha</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" title="Select" checked>
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Bravo</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" title="Select" checked>
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Charlie</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Delta</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" title="Select" checked>
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Echo</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Frank</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Frank</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Frank</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item George</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item George</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item George</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Henry</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Henry</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Henry</div>
+            </div>
+            <div class="spectrum-Table-row" role="row">
+              <div class="spectrum-Table-cell spectrum-Table-checkboxCell" role="gridcell">
+                <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Table-checkbox">
+                  <input type="checkbox" class="spectrum-Checkbox-input" title="Select">
+                  <span class="spectrum-Checkbox-box">
+                    <svg class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-Checkmark100" />
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Jake</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Jake</div>
+              <div class="spectrum-Table-cell" role="gridcell">Row Item Jake</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spectrum-ActionBar spectrum-ActionBar--sticky is-open">
+        <div class="spectrum-Popover spectrum-ActionBar-popover is-open">
+          <button class="spectrum-CloseButton spectrum-CloseButton--sizeM" aria-label="Clear selection">
+            <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Cross100" />
+            </svg>
+          </button>
+
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">3 Selected</label>
+
+          <div class="spectrum-ActionGroup">
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Edit" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit"></use>
+              </svg>
+              <span class="spectrum-ActionButton-label">Edit</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Copy" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Copy"></use>
+              </svg>
+              <span class="spectrum-ActionButton-label">Copy</span>
+            </button>
+            <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet spectrum-ActionGroup-item">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-label="Delete" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Delete"></use>
+              </svg>
+              <span class="spectrum-ActionButton-label">Delete</span>
+            </button>
+          </div>
+        </div>
+      </div>

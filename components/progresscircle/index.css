@@ -1,0 +1,183 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "animation.css";
+
+.spectrum-ProgressCircle {
+  /* circle unfilled border color */
+  --spectrum-progress-circle-track-border-color: var(--spectrum-gray-300);
+
+  /* circle progress fill border color */
+  --spectrum-progress-circle-fill-border-color: var(--spectrum-accent-content-color-default);
+
+  /* over background unfilled border color */
+  --spectrum-progress-circle-track-border-color-over-background: var(--spectrum-transparent-white-300);
+
+  /* over background progress fill border color */
+  --spectrum-progress-circle-fill-border-color-over-background: var(--spectrum-transparent-white-900);
+
+  /* default size and thickness */
+  --spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
+  --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+
+  /* track border style */
+  --spectrum-progress-circle-track-border-style: solid;
+}
+
+.spectrum-ProgressCircle--small {
+  --spectrum-progress-circle-size: var(--spectrum-progress-circle-size-small);
+  --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-small);
+}
+
+.spectrum-ProgressCircle--medium {
+  --spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
+  --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+}
+
+.spectrum-ProgressCircle--large {
+  --spectrum-progress-circle-size: var(--spectrum-progress-circle-size-large);
+  --spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-large);
+}
+
+/* windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-ProgressCircle {
+    /* fill is bright color */
+    --highcontrast-progress-circle-fill-border-color: Highlight;
+
+    /* fill over background is bright color */
+    --highcontrast-progress-circle-fill-border-color-over-background: Highlight;
+  }
+
+  /* track double for visibility */
+  .spectrum-ProgressCircle-track {
+    --spectrum-progress-circle-track-border-style: double;
+  }
+}
+
+.spectrum-ProgressCircle {
+  display: inline-block;
+  inline-size: var(--mod-progress-circle-size,
+                  var(--spectrum-progress-circle-size));
+  block-size: var(--mod-progress-circle-size,
+                  var(--spectrum-progress-circle-size));
+  position: relative;
+  direction: ltr;
+
+  /* Fix for Safari rendering bug */
+  /* more info: https://github.com/adobe/spectrum-web-components/issues/1392 */
+  transform: translate3d(0, 0, 0);
+}
+
+.spectrum-ProgressCircle-track {
+  box-sizing: border-box;
+  inline-size: var(--mod-progress-circle-size,
+                    var(--spectrum-progress-circle-size));
+  block-size: var(--mod-progress-circle-size,
+                  var(--spectrum-progress-circle-size));
+
+  border-style: var(--highcontrast-progress-circle-track-border-style,
+                    var(--mod-progress-circle-track-border-style,
+                    var(--spectrum-progress-circle-track-border-style)));
+  border-width: var(--mod-progress-circle-thickness,
+                    var(--spectrum-progress-circle-thickness));
+  border-radius: var(--mod-progress-circle-size,
+                    var(--spectrum-progress-circle-size));
+  border-color: var(--mod-progress-circle-track-border-color,
+                        var(--spectrum-progress-circle-track-border-color));
+}
+
+/* circle progress fill parent container */
+.spectrum-ProgressCircle-fills {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+/* circle progress filled */
+.spectrum-ProgressCircle-fill {
+  box-sizing: border-box;
+  inline-size: var(--mod-progress-circle-size,
+                  var(--spectrum-progress-circle-size));
+  block-size: var(--mod-progress-circle-size,
+                  var(--spectrum-progress-circle-size));
+
+  border-style: solid;
+  border-width: var(--mod-progress-circle-thickness,
+                    var(--spectrum-progress-circle-thickness));
+  border-radius: var(--mod-progress-circle-size,
+                      var(--spectrum-progress-circle-size));
+  border-color:  var(--highcontrast-progress-circle-fill-border-color,
+                    var(--mod-progress-circle-fill-border-color,
+                        var(--spectrum-progress-circle-fill-border-color)));
+}
+
+/* circle colors over background */
+.spectrum-ProgressCircle.spectrum-ProgressCircle--staticWhite {
+  .spectrum-ProgressCircle-track {
+    border-color: var(--mod-progress-circle-track-border-color-over-background,
+                      var(--spectrum-progress-circle-track-border-color-over-background));
+  }
+  .spectrum-ProgressCircle-fill {
+    border-color: var(--highcontrast-progress-circle-fill-border-color-over-background,
+                      var(--mod-progress-circle-fill-border-color-over-background,
+                          var(--spectrum-progress-circle-fill-border-color-over-background)));
+  }
+}
+
+/* animation masks - circle fill progress */
+.spectrum-ProgressCircle-fillMask1,
+.spectrum-ProgressCircle-fillMask2 {
+  inline-size: 50%;
+  block-size: 100%;
+  transform-origin: 100% center;
+  transform: rotate(180deg);
+  overflow: hidden;
+  position: absolute;
+}
+
+.spectrum-ProgressCircle-fillSubMask1,
+.spectrum-ProgressCircle-fillSubMask2 {
+  inline-size: 100%;
+  block-size: 100%;
+  transform-origin: 100% center;
+  overflow: hidden;
+  transform: rotate(-180deg);
+}
+
+.spectrum-ProgressCircle-fillMask2 {
+  transform: rotate(0deg);
+}
+
+/* animation masks - circle indeterminate with continuous animation */
+.spectrum-ProgressCircle--indeterminate {
+  .spectrum-ProgressCircle-fills {
+    will-change: transform;
+    transform: translateZ(0);
+    animation: 1s infinite cubic-bezier(0.25, 0.78, 0.48, 0.89)
+      spectrum-fills-rotate;
+    transform-origin: center;
+  }
+  .spectrum-ProgressCircle-fillSubMask1 {
+    will-change: transform;
+    transform: translateZ(0);
+    animation: 1s infinite linear spectrum-fill-mask-1;
+  }
+
+  .spectrum-ProgressCircle-fillSubMask2 {
+    will-change: transform;
+    transform: translateZ(0);
+    animation: 1s infinite linear spectrum-fill-mask-2;
+  }
+}

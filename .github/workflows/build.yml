@@ -1,0 +1,142 @@
+name: Validate successful build
+#
+# This workflow validates that the commit in question can be built successfully
+# in several environments:
+#
+#   Systems:    Ubuntu, MacOS, // Windows
+#   Node:       18
+#
+# After the build is successful, the compiled assets are uploaded as an artifact
+# to the workflow run. This allows us to download the compiled assets and use
+# them in other workflows.
+#
+# Note: we need to skip the nx cache b/c it does not contain the compiled assets
+#
+
+on:
+    workflow_dispatch:
+        inputs:
+            system:
+                required: false
+                default: "macos-latest"
+            node-version:
+                required: false
+                default: "18"
+            ref:
+                description: "The branch or tag to checkout"
+                required: false
+    workflow_call:
+        inputs:
+            system:
+                required: false
+                type: string
+                default: "macos-latest"
+            node-version:
+                required: false
+                type: string
+                default: "18"
+            ref:
+                description: "The branch or tag to checkout"
+                required: false
+                type: string
+                default: ${{ github.head_ref }}
+        outputs:
+            artifact-id:
+                value: ${{ jobs.build.outputs.artifact-id }}
+            head-sha:
+                value: ${{ jobs.build.outputs.head-sha }}
+            base-sha:
+                value: ${{ jobs.build.outputs.base-sha }}
+
+permissions:
+    contents: read
+    pull-requests: write
+
+jobs:
+    # ---------- Validate build for various environments ---------- #
+    build:
+        strategy:
+            fail-fast: false
+            matrix:
+                system:
+                    - ${{ inputs.system }}
+                node-version:
+                    - ${{ inputs.node-version }}
+        runs-on: ${{ matrix.system }}
+        timeout-minutes: 10
+        outputs:
+            head-sha: ${{ steps.set-SHAs.outputs.head }}
+            base-sha: ${{ steps.set-SHAs.outputs.base }}
+            artifact-id: ${{ steps.upload.outputs.artifact-id }}
+        name: Build
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ inputs.ref || github.head_ref }}
+                  fetch-depth: 0
+
+            - name: Use Node LTS version
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: yarn
+
+            - name: Derive appropriate SHAs for base and head for `nx affected` commands
+              id: set-SHAs
+              uses: nrwl/nx-set-shas@v3
+
+            ## --- YARN CACHE --- ##
+            - name: Check for cached dependencies
+              continue-on-error: true
+              id: cache-dependencies
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      .cache/yarn
+                      node_modules
+                  key: ${{ matrix.system }}-node${{ matrix.node-version }}-${{ hashFiles('yarn.lock') }}
+
+            ## --- INSTALL --- ##
+            # If statement isn't needed here b/c yarn will leverage the cache if it exists
+            - name: Install dependencies
+              shell: bash
+              run: yarn install --frozen-lockfile --cache-folder .cache/yarn
+
+            - name: Reset nx cache to prevent cross-machine errors
+              shell: bash
+              run: yarn nx reset
+
+            ## --- BUILD --- ##
+            - name: Build components
+              shell: bash
+              run: yarn build
+
+            ## --- UPLOAD (only ubuntu-latest at the moment) --- ##
+            - name: Upload compiled assets & NX performance profile
+              id: upload
+              if: ${{ matrix.system == 'ubuntu-latest' }}
+              uses: actions/upload-artifact@v4
+              with:
+                  path: |
+                      ${{ github.workspace }}/components/*/dist/**
+                      ${{ github.workspace }}/tokens/dist/**
+                      ${{ github.workspace }}/ui-icons/dist/**
+                      ${{ github.workspace }}/profile.json
+                  name: ${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${{ steps.set-SHAs.outputs.head }}
+                  # this is important, it lets us catch if the build failed silently
+                  # by alterting us that no compiled assets were generated
+                  if-no-files-found: error
+
+            # This step will evaluate the repo status and report the change
+            - name: Check if there are changes
+              shell: bash
+              run: |
+                if [[ -z $(git status --porcelain) ]]; then
+                    echo "No changes detected"
+                    exit 0
+                else
+                    echo "Changes detected"
+                    git status
+                    exit 1
+                fi

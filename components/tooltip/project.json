@@ -1,0 +1,14 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "tooltip",
+	"tags": ["component"],
+	"targets": {
+		"build": {},
+		"clean": {},
+		"lint": {},
+
+		"test": {
+			"defaultConfiguration": "scope"
+		}
+	}
+}

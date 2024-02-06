@@ -1,0 +1,104 @@
+{
+	"js/ts.implicitProjectConfig.experimentalDecorators": true,
+	"[css]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
+	"[javascript]": {
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit"
+		},
+		"editor.colorDecorators": true,
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
+	"atlascode.bitbucket.enabled": false,
+	"atlascode.jira.enabled": true,
+	"atlascode.jira.jqlList": [
+		{
+			"enabled": true,
+			"id": "6ec799fe-ae6a-46cd-86d8-ec19839a70e3",
+			"monitor": true,
+			"name": "Current sprint",
+			"query": "\"Project\" = \"CSS\" AND sprint in openSprints ()",
+			"siteId": "jira.corp.adobe.com"
+		},
+		{
+			"enabled": true,
+			"id": "6916b063-1a7b-411a-87eb-2e58c5a82ffa",
+			"monitor": true,
+			"name": "Assigned to me",
+			"query": "assignee= currentUser() and status  != Closed and status != Done",
+			"siteId": "jira.corp.adobe.com"
+		},
+		{
+			"enabled": true,
+			"id": "fb78270c-9799-4b6a-aaa7-16badf452395",
+			"monitor": true,
+			"name": "Open CSS issues",
+			"query": "status  != Closed and status != Done AND \"Project\" = \"CSS\" ",
+			"siteId": "jira.corp.adobe.com"
+		}
+	],
+	"atlascode.jira.lastCreateSiteAndProject": {
+		"projectKey": "CSS",
+		"siteId": "jira.corp.adobe.com"
+	},
+	"atlascode.jira.workingSite": {
+		"baseUrlSuffix": "jira.corp.adobe.com"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"emmet.includeLanguages": {
+		"postcss": "css"
+	},
+	"emmet.syntaxProfiles": {
+		"postcss": "css"
+	},
+	"eslint.packageManager": "yarn",
+	"files.associations": {
+		"*.css": "postcss"
+	},
+	"githubIssues.issueBranchTitle": "${author}/${sanitizedIssueTitle}-gh-${issueNumber}",
+	"githubIssues.queries": [
+		{
+			"label": "My issues",
+			"query": "default"
+		},
+		{
+			"label": "Created issues",
+			"query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+		},
+		{
+			"label": "Recent issues",
+			"query": "state:open repo:${owner}/${repository} sort:updated-desc"
+		}
+	],
+	"githubPullRequests.queries": [
+		{
+			"label": "Waiting for my review",
+			"query": "is:open review-requested:${user}"
+		},
+		{
+			"label": "Assigned to me",
+			"query": "is:open assignee:${user}"
+		},
+		{
+			"label": "Created by me",
+			"query": "is:open author:${user}"
+		},
+		{
+			"label": "Mentioned me",
+			"query": "is:open mentions:${user}"
+		}
+	],
+	"prettier.configPath": ".prettierrc",
+	"prettier.ignorePath": ".prettierignore",
+	"prettier.prettierPath": "./node_modules/prettier",
+	"stylelint.packageManager": "yarn",
+	"stylelint.reportNeedlessDisables": true,
+	"stylelint.validate": ["css", "postcss"],
+	"yaml.schemas": {
+		"~/.vscode/extensions/atlassian.atlascode-3.0.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+	}
+}

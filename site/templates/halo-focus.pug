@@ -1,0 +1,62 @@
+button.spectrum-Button.spectrum-Button--outline.spectrum-Button--staticWhite
+  span.spectrum-Button-label Download
+
+button.spectrum-Button.spectrum-Button--fill.spectrum-Button--overBackground
+  span.spectrum-Button-label Download
+
+button.spectrum-Button.spectrum-Button--fill.spectrum-Button--primary
+  span.spectrum-Button-label Download
+
+button.spectrum-Button.spectrum-Button--fill.spectrum-Button--secondary
+  span.spectrum-Button-label Download
+
+button.spectrum-Button.spectrum-Button--fill.spectrum-Button--accent
+  span.spectrum-Button-label Download
+
+div(class="spectrum-Slider")
+  div(class="spectrum-Slider-controls")
+    div(class="spectrum-Slider-track")
+    div(class="spectrum-Slider-handle" style="left: 40%;")
+      input(type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20")
+    div(class="spectrum-Slider-track")
+
+label(class="spectrum-Checkbox spectrum-Checkbox--sizeM")
+  input(type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0")
+  span(class="spectrum-Checkbox-box")
+    svg(class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true")
+      use(xlink:href="#spectrum-css-icon-Checkmark100")
+    svg(class="spectrum-Icon spectrum-UIIcon-Dash100 spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true")
+      use(xlink:href="#spectrum-css-icon-Dash100")
+  span(class="spectrum-Checkbox-label") Checkbox
+
+div(class="spectrum-Radio")
+  input(type="radio" name="pets" class="spectrum-Radio-input" id="radio-0")
+  span(class="spectrum-Radio-button")
+  label(class="spectrum-Radio-label" for="radio-0") Kittens
+
+div(class=".spectrum-Switch")
+  input(type="checkbox" class=".spectrum-Switch-input" id="switch-onoff-0")
+  span(class=".spectrum-Switch-switch")
+  label(class=".spectrum-Switch-label" for="switch-onoff-0") Switch Off
+
+div(class= "spectrum-TagGroup" role="list" aria-label="list")
+  div(class="spectrum-Tag spectrum-Tag--sizeS spectrum-TagGroup-item" role="listitem" tabindex="0")
+    span(class="spectrum-Tag-label") Tag
+
+button.spectrum-LogicButton.spectrum-LogicButton--and
+  span.spectrum-LogicButton-label and
+
+button.spectrum-LogicButton.spectrum-LogicButton--or
+  span.spectrum-LogicButton-label or
+
+button.spectrum-ActionButton.spectrum-ActionButton--sizeM
+  span.spectrum-ActionButton-label Download
+
+button.spectrum-ActionButton.spectrum-ActionButton--sizeM.spectrum-ActionButton--quiet
+  span.spectrum-ActionButton-label Download
+
+div(class="spectrum-Picker")
+  button(class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-Picker-trigger" aria-haspopup="listbox")
+    span(class="spectrum-Picker-label is-placeholder") Select a Country
+    svg(class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-icon" focusable="false" aria-hidden="true")
+      use(xlink:href="#spectrum-css-icon-ChevronDown100")

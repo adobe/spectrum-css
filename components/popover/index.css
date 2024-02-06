@@ -1,0 +1,421 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "@spectrum-css/commons/overlay.css";
+
+.spectrum-Popover {
+  /* Used in positioning popover for storybook */
+  --flow-direction: 1;
+  [dir="rtl"] & {
+    --flow-direction: -1;
+  }
+
+  /* animation distance is equal to and responsible for popover offset */
+  --spectrum-popover-animation-distance: var(--spectrum-spacing-100);
+
+  --spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
+  --spectrum-popover-border-color: var(--spectrum-gray-400);
+
+  /* popover inner padding */
+  --spectrum-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
+
+  /* popover drop shadow */
+  --spectrum-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
+  --spectrum-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
+  --spectrum-popover-shadow-blur: var(--spectrum-drop-shadow-blur);
+  --spectrum-popover-shadow-color: var(--spectrum-drop-shadow-color);
+
+  /* popover corner radius */
+  --spectrum-popover-corner-radius: var(--spectrum-corner-radius-100);
+
+  /* pointer tip dimensions */
+  --spectrum-popover-pointer-width: var(--spectrum-popover-tip-width);
+  --spectrum-popover-pointer-height: var(--spectrum-popover-tip-height);
+
+  /* pointer tip - default spacing to edge - corner radius plus half of tip width to neutralize override */
+  --spectrum-popover-pointer-edge-offset: calc(var(--spectrum-corner-radius-100) + (var(--spectrum-popover-tip-width) / 2));
+
+  /* pointer tip - spacing to edge will center pointer to source - apply in markup by setting '--spectrum-popover-pointer-edge-offset' value == half of source */
+  --spectrum-popover-pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - (var(--spectrum-popover-tip-width) / 2));
+}
+
+/* windows high contrast mode */
+@media (forced-colors: active) {
+  .spectrum-Popover {
+    --highcontrast-popover-border-color: CanvasText;
+  }
+}
+
+.spectrum-Popover {
+  --spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
+  @extend %spectrum-overlay;
+
+  box-sizing: border-box;
+  position: absolute;
+
+  outline: none; /* Hide focus outline */
+
+  padding: var(--mod-popover-content-area-spacing-vertical, var(--spectrum-popover-content-area-spacing-vertical)) 0;
+
+  display: inline-flex;
+  flex-direction: column;
+
+  border-style: solid;
+  border-radius: var(--mod-popover-corner-radius, var(--spectrum-popover-corner-radius));
+  border-color: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color)));
+  border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
+
+  background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
+  filter: var(--mod-popover-filter, var(--spectrum-popover-filter));
+
+  /* has tip triangle */
+  &.spectrum-Popover--withTip {
+    .spectrum-Popover-tip {
+      /* triangle polygon */
+      .spectrum-Popover-tip-triangle {
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+        fill: var(--highcontrast-popover-background-color, var(--mod-popover-background-color, var(--spectrum-popover-background-color)));
+        stroke: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color)));
+        stroke-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
+      }
+    }
+  }
+}
+
+/* default opens and animates upward */
+.spectrum-Popover.is-open {
+  @extend %spectrum-overlay--open;
+}
+
+/* prevent nested popovers from affecting each others drop shadow filters */
+.spectrum-Popover * {
+  --mod-popover-filter: none;
+}
+
+/* position naming - first position term is popover position, second term is source position */
+/* example: --top-left = popover is to top and source is to left */
+
+/* popover position is at top of source - default placement */
+.spectrum-Popover--top,
+.spectrum-Popover--top-left,
+.spectrum-Popover--top-right,
+.spectrum-Popover--top-start,
+.spectrum-Popover--top-end {
+  /* spacing to include tip in calculation of offset from source */
+  &.spectrum-Popover--withTip {
+    /* tip size minus where it overlaps with popover border */
+    margin-bottom: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+  }
+
+  /* popover animates upward ⬆ */
+  &.is-open {
+    transform: translateY(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
+  }
+}
+
+/* popover position is at bottom of source */
+.spectrum-Popover--bottom,
+.spectrum-Popover--bottom-left,
+.spectrum-Popover--bottom-right,
+.spectrum-Popover--bottom-start,
+.spectrum-Popover--bottom-end {
+  /* spacing to include tip in calculation of offset from source */
+  &.spectrum-Popover--withTip {
+    /* tip size minus where it overlaps with popover border */
+    margin-top: calc(var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+  }
+
+  /* popover animates downward ⬇ */
+  &.is-open {
+    transform: translateY(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
+  }
+}
+
+/* popover position is right of source */
+.spectrum-Popover--right,
+.spectrum-Popover--right-bottom,
+.spectrum-Popover--right-top {
+  /* spacing to include tip in calculation of offset from source */
+  &.spectrum-Popover--withTip {
+    /* tip size minus where it overlaps with popover border */
+    margin-left: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+  }
+
+  /* popover animates towards right ⮕ */
+  &.is-open {
+    transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
+  }
+}
+
+/* popover position is left of source */
+.spectrum-Popover--left,
+.spectrum-Popover--left-bottom,
+.spectrum-Popover--left-top {
+  /* spacing to include tip in calculation of offset from source */
+  &.spectrum-Popover--withTip {
+    /* tip size minus where it overlaps with popover border */
+    margin-right: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+  }
+
+  /* popover animates towards left ⬅ */
+  &.is-open {
+    transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
+  }
+}
+
+/* logical property - popover is horizontally at start */
+.spectrum-Popover--start,
+.spectrum-Popover--start-top,
+.spectrum-Popover--start-bottom {
+  /* spacing to include tip in calculation of offset from source */
+  &.spectrum-Popover--withTip {
+    /* tip size minus where it overlaps with popover border */
+    margin-inline-end: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+  }
+
+  /* LTR read, popover animates towards left ⬅ */
+  &.is-open {
+    transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
+  }
+
+  /* RTL read, popover animates towards right ⮕ */
+  [dir="rtl"] & {
+    &.is-open {
+      transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
+    }
+  }
+}
+
+/* logical property - popover is horizontally at end */
+.spectrum-Popover--end,
+.spectrum-Popover--end-top,
+.spectrum-Popover--end-bottom {
+  /* spacing to include tip in calculation of offset from source */
+  &.spectrum-Popover--withTip {
+    /* tip size minus where it overlaps with popover border */
+    margin-inline-start: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+  }
+
+  /* LTR read, popover animates towards right ⮕ */
+  &.is-open {
+    transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
+  }
+
+  /* RTL read, popover animates towards left ⬅ */
+  [dir="rtl"] & {
+  &.is-open {
+      transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
+    }
+  }
+}
+
+/* HAS TIP - popover with triangle pointer */
+/* default, top, and bottom position tip - tip defaults to pointing down ▽ */
+.spectrum-Popover--withTip {
+  &.spectrum-Popover,
+  &.spectrum-Popover--top,
+  &.spectrum-Popover--top-left,
+  &.spectrum-Popover--top-right,
+  &.spectrum-Popover--top-start,
+  &.spectrum-Popover--top-end,
+  &.spectrum-Popover--bottom,
+  &.spectrum-Popover--bottom-left,
+  &.spectrum-Popover--bottom-right,
+  &.spectrum-Popover--bottom-start,
+  &.spectrum-Popover--bottom-end {
+    .spectrum-Popover-tip {
+      width: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
+      height: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      /* https://stackoverflow.com/questions/44170229/how-to-prevent-half-pixel-svg-shift-on-high-pixel-ratio-devices-retina */
+      transform: translate(0, 0);
+    }
+  }
+
+  /* popover is at top of source, tip left and pointing down ▽ */
+  &.spectrum-Popover--top-left {
+    .spectrum-Popover-tip {
+      left: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+      right: auto;
+    }
+  }
+
+ /* popover is at top of source, tip right and pointing down ▽ */
+  &.spectrum-Popover--top-right {
+    .spectrum-Popover-tip {
+      left: auto;
+      right: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+    }
+  }
+
+  /* logical property - popover is above, source and tip are at start, tip pointing down ▽ */
+  &.spectrum-Popover--top-start {
+    .spectrum-Popover-tip {
+      margin-inline-start: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+    }
+  }
+
+  /* logical property - popover is above, source and tip are at end, tip pointing down ▽ */
+  &.spectrum-Popover--top-end {
+    .spectrum-Popover-tip {
+      margin-inline-end: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+    }
+  }
+
+  /* popover position is bottom of source with tip pointing up △ */
+  &.spectrum-Popover--bottom,
+  &.spectrum-Popover--bottom-left,
+  &.spectrum-Popover--bottom-right,
+  &.spectrum-Popover--bottom-start,
+  &.spectrum-Popover--bottom-end {
+    .spectrum-Popover-tip {
+      top: auto;
+      bottom: 100%;
+      /* flip triangle to face up */
+      transform: scaleY(-1);
+    }
+  }
+
+  /* popover position is bottom, source is at left, tip pointing up △ */
+  &.spectrum-Popover--bottom-left {
+    .spectrum-Popover-tip {
+      left: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+      right: auto;
+    }
+  }
+
+  /* popover position is bottom, source is at right, tip pointing up △ */
+  &.spectrum-Popover--bottom-right {
+    .spectrum-Popover-tip {
+      left: auto;
+      right: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+    }
+  }
+
+  /* logical property - popover is below, source is at start, tip pointing up △ */
+  &.spectrum-Popover--bottom-start {
+    .spectrum-Popover-tip {
+      margin-inline-start: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+    }
+  }
+
+  /* logical property - popover is below, source is at end, tip pointing up △ */
+  &.spectrum-Popover--bottom-end {
+    .spectrum-Popover-tip {
+      margin-inline-end: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+    }
+  }
+
+  /* right, left, start, end popover position with tip default to pointing right ▷ */
+  &.spectrum-Popover--left,
+  &.spectrum-Popover--left-bottom,
+  &.spectrum-Popover--left-top,
+  &.spectrum-Popover--right,
+  &.spectrum-Popover--right-bottom,
+  &.spectrum-Popover--right-top,
+  &.spectrum-Popover--start,
+  &.spectrum-Popover--start-top,
+  &.spectrum-Popover--start-bottom,
+  &.spectrum-Popover--end,
+  &.spectrum-Popover--end-top,
+  &.spectrum-Popover--end-bottom {
+    .spectrum-Popover-tip {
+      /* swap height and width for vertical triangle */
+      width: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
+      height: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
+      top: 0;
+      bottom: 0;
+    }
+
+    /* left popover with tip pointing right ▷ */
+    &.spectrum-Popover--left,
+    &.spectrum-Popover--left-bottom,
+    &.spectrum-Popover--left-top {
+      .spectrum-Popover-tip {
+        left: 100%;
+        right: auto;
+      }
+    }
+
+    /* right popover with tip pointing left ◁ */
+    &.spectrum-Popover--right,
+    &.spectrum-Popover--right-bottom,
+    &.spectrum-Popover--right-top {
+      .spectrum-Popover-tip {
+        right: 100%;
+        left: auto;
+        /* flip tip to point left ◁ */
+        transform: scaleX(-1);
+      }
+    }
+
+
+    /* popover with tip at top */
+    &.spectrum-Popover--right-top,
+    &.spectrum-Popover--left-top,
+    &.spectrum-Popover--start-top,
+    &.spectrum-Popover--end-top {
+      .spectrum-Popover-tip {
+        top: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+        bottom: auto;
+      }
+    }
+
+    /* popover with tip at bottom */
+    &.spectrum-Popover--right-bottom,
+    &.spectrum-Popover--left-bottom,
+    &.spectrum-Popover--start-bottom,
+    &.spectrum-Popover--end-bottom {
+      .spectrum-Popover-tip {
+        top: auto;
+        bottom: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
+      }
+    }
+  }
+
+  /* logical property - start popover position with tip pointing toward end -  LTR default is ▷ */
+  &.spectrum-Popover--start,
+  &.spectrum-Popover--start-top,
+  &.spectrum-Popover--start-bottom {
+    .spectrum-Popover-tip {
+      margin-inline-start: 100%;
+
+      [dir="rtl"] & {
+        transform: none;
+        /* flip tip to point left ◁ */
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  /* logical property - end popover position with tip pointing toward start  -  LTR default is ◁ **/
+  &.spectrum-Popover--end,
+  &.spectrum-Popover--end-top,
+  &.spectrum-Popover--end-bottom {
+    /* tip triangle  */
+    .spectrum-Popover-tip {
+      margin-inline-end: 100%;
+      /* flip tip to point right ▷ */
+      transform: scaleX(-1);
+
+      [dir="rtl"] & {
+        /* flip tip to point left ◁ */
+        transform: scaleX(1);
+      }
+    }
+  }
+}

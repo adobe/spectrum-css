@@ -1,0 +1,15 @@
+name: Well
+examples:
+  - id: well
+    name: Standard
+    markup: |
+      <h3 class="spectrum-Heading spectrum-Heading--sizeXXS">Well Label (Optional)</h3>
+      <span class="spectrum-Well">
+       <p class="spectrum-Body">
+        <em>Well done is better than well said.</em>
+        <br>
+        <strong>Benjamin Franklin</strong>
+        <br><br>
+        Well said Ben!
+        </p>
+      </span>

@@ -1,0 +1,487 @@
+name: Slider
+SpectrumSiteSlug: https://spectrum.adobe.com/page/slider/
+sections:
+  - name: Migration Guide
+    description: |
+      ### Dial is now a separate component
+      Dial has been moved to the [Dial](dial.html) component.
+
+      ### Color slider is now a separate component
+      Color slider has been moved to the [Color Slider](colorslider.html) component.
+      Replace class names starting with `.spectrum-Slider` with `.spectrum-ColorSlider`.
+
+      ### Use class `is-dragged` instead of `u-isGrabbing`
+      On `spectrum-Slider-handle` when dragging, use `is-dragged` instead of `u-isGrabbing`.
+
+      ### Three Handles is included in the `range` variant
+      When using a slider with three handles, classify it as a `range` variant to apply correct styling
+
+      ### Indicating focus
+      Focus must be bubbled up to the parent so descendants siblings can be styled.
+
+      Thus, implementations should add the following class to the `.spectrum-Slider` parent class in the following situations:
+
+      * `.is-disabled` - when the slider is disabled
+
+      Implementations should also bubble the following class to the `.spectrum-Slider-controls` parent class in the following situations:
+
+      * `.is-focused` - when the handle input is focused with the mouse or keyboard
+examples:
+  - id: slider
+    name: Standard
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--sizeM">
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20">
+          </div>
+          <div class="spectrum-Slider-track"></div>
+        </div>
+      </div>
+      <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled">
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled>
+          </div>
+          <div class="spectrum-Slider-track"></div>
+        </div>
+      </div>
+  - id: slider-sizes
+    name: Sizes
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item" style="width: 200px">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+          <div class="spectrum-Slider spectrum-Slider--sizeS">
+            <div class="spectrum-Slider-labelContainer">
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-Slider-label" id="spectrum-Slider-label-1" for="spectrum-Slider-input-1">Slider Label</label>
+              <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-1">14</div>
+            </div>
+            <div class="spectrum-Slider-controls">
+              <div class="spectrum-Slider-track"></div>
+              <div class="spectrum-Slider-handle" style="left: 40%;">
+                <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-1">
+              </div>
+              <div class="spectrum-Slider-track"></div>
+            </div>
+          </div>
+          <div class="spectrum-Slider is-disabled spectrum-Slider--sizeS">
+            <div class="spectrum-Slider-controls">
+              <div class="spectrum-Slider-track"></div>
+              <div class="spectrum-Slider-handle" style="left: 40%;">
+                <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled>
+              </div>
+              <div class="spectrum-Slider-track"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spectrum-Examples-item" style="width: 200px">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+          <div class="spectrum-Slider spectrum-Slider--sizeM">
+            <div class="spectrum-Slider-labelContainer">
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-2" for="spectrum-Slider-input-2">Slider Label</label>
+              <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-2">14</div>
+            </div>
+            <div class="spectrum-Slider-controls">
+              <div class="spectrum-Slider-track"></div>
+              <div class="spectrum-Slider-handle" style="left: 40%;">
+                <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-2">
+              </div>
+              <div class="spectrum-Slider-track"></div>
+            </div>
+          </div>
+          <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled  spectrum-Slider--sizeM">
+            <div class="spectrum-Slider-controls">
+              <div class="spectrum-Slider-track"></div>
+              <div class="spectrum-Slider-handle" style="left: 40%;">
+                <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled>
+              </div>
+              <div class="spectrum-Slider-track"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spectrum-Examples-item" style="width: 200px">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="spectrum-Slider spectrum-Slider--sizeL">
+            <div class="spectrum-Slider-labelContainer">
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-Slider-label" id="spectrum-Slider-label-3" for="spectrum-Slider-input-3">Slider Label</label>
+              <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-3">14</div>
+            </div>
+            <div class="spectrum-Slider-controls">
+              <div class="spectrum-Slider-track"></div>
+              <div class="spectrum-Slider-handle" style="left: 40%;">
+                <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-3">
+              </div>
+              <div class="spectrum-Slider-track"></div>
+            </div>
+          </div>
+          <div class="spectrum-Slider is-disabled spectrum-Slider--sizeL">
+            <div class="spectrum-Slider-controls">
+              <div class="spectrum-Slider-track"></div>
+              <div class="spectrum-Slider-handle" style="left: 40%;">
+                <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled>
+              </div>
+              <div class="spectrum-Slider-track"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="spectrum-Examples-item" style="width: 200px">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="spectrum-Slider spectrum-Slider--sizeXL">
+            <div class="spectrum-Slider-labelContainer">
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeXL spectrum-Slider-label" id="spectrum-Slider-label-4" for="spectrum-Slider-input-4">Slider Label</label>
+              <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-4">14</div>
+            </div>
+            <div class="spectrum-Slider-controls">
+              <div class="spectrum-Slider-track"></div>
+              <div class="spectrum-Slider-handle" style="left: 40%;">
+                <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-4">
+              </div>
+              <div class="spectrum-Slider-track"></div>
+            </div>
+          </div>
+          <div class="spectrum-Slider is-disabled spectrum-Slider--sizeXL">
+            <div class="spectrum-Slider-controls">
+              <div class="spectrum-Slider-track"></div>
+              <div class="spectrum-Slider-handle" style="left: 40%;">
+                <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled>
+              </div>
+              <div class="spectrum-Slider-track"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  - id: slider-label
+    name: With Label
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--sizeM">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-5" for="spectrum-Slider-input-5">Slider Label</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-5">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-5">
+          </div>
+          <div class="spectrum-Slider-track"></div>
+        </div>
+      </div>
+      <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-6" for="spectrum-Slider-input-6">Slider Label - Disabled</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-6">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-6" disabled>
+          </div>
+          <div class="spectrum-Slider-track"></div>
+        </div>
+      </div>
+  - id: slider-side-label
+    name: With Side Label
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--sideLabel">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-FieldLabel--left spectrum-Slider-label" id="spectrum-Slider-label-6" for="spectrum-Slider-input-6">Label</label>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-5">
+          </div>
+          <div class="spectrum-Slider-track"></div>
+        </div>
+        <div class="spectrum-Slider-labelContainer">
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-6">14</div>
+        </div>
+      </div>
+
+  - id: slider-fill
+    name: Filled
+    description: With fill.
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--filled">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-7" for="spectrum-Slider-input-7">Slider Label</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-7">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-7">
+          </div>
+          <div class="spectrum-Slider-track"></div>
+        </div>
+      </div>
+      <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label - Disabled</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track"></div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-8" disabled>
+          </div>
+          <div class="spectrum-Slider-track"></div>
+        </div>
+      </div>
+  - id: slider-fill
+    name: Filled-Offset
+    description: With fill and offset.
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--sizeM">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-9" for="spectrum-Slider-input-9">Slider Label</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-9">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track" style="width: 25%;"></div>
+          <div class="spectrum-Slider-handle" style="left: 20%;">
+            <input type="range" class="spectrum-Slider-input" value="14" min="10" max="20" id="spectrum-Slider-input-9">
+          </div>
+          <div class="spectrum-Slider-track" style="width: 50%;"></div>
+          <div class="spectrum-Slider-fill" style="left: 20%; width: 30%"></div>
+        </div>
+      </div>
+      <div class="spectrum-Slider spectrum-Slider--sizeM">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-Slider-label" id="spectrum-Slider-label-10" for="spectrum-Slider-input-10">Slider Label</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-10">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track" style="width: 25%;"></div>
+          <div class="spectrum-Slider-handle" style="left: 70%;">
+            <input type="range" class="spectrum-Slider-input" value="14" min="10" max="20" id="spectrum-Slider-input-10">
+          </div>
+          <div class="spectrum-Slider-track" style="width: 50%;"></div>
+          <div class="spectrum-Slider-fill spectrum-Slider-fill--right" style="left: 50%; width: 20%"></div>
+        </div>
+      </div>
+      <div class="spectrum-Slider spectrum-Slider--sizeM is-disabled">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-11" for="spectrum-Slider-input-11">Slider Label</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-11">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-track" style="width: 25%;"></div>
+          <div class="spectrum-Slider-handle" style="left: 70%;">
+            <input type="range" class="spectrum-Slider-input" value="14" min="10" max="20" id="spectrum-Slider-input-11" disabled>
+          </div>
+          <div class="spectrum-Slider-track" style="width: 50%;"></div>
+          <div class="spectrum-Slider-fill spectrum-Slider-fill--right" style="left: 50%; width: 20%"></div>
+        </div>
+      </div>
+  - id: slider-range
+    name: Range
+    description: A range slider with two handles.
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--range" role="group" aria-labelledby="spectrum-Slider-label-12">
+        <div class="spectrum-Slider-labelContainer" role="presentation">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-12" for="spectrum-Slider-input-12-0">Slider Label</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-12">14 - 48</div>
+        </div>
+        <div class="spectrum-Slider-controls" role="presentation">
+          <div class="spectrum-Slider-track" style="width: 20%;"></div>
+          <div class="spectrum-Slider-handle" style="left: 20%;" role="presentation">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="min" id="spectrum-Slider-input-12-0" aria-labelledby="spectrum-Slider-label-4 spectrum-Slider-input-4-0">
+          </div>
+          <div class="spectrum-Slider-track" style="left: 20%; right: 40%;"></div>
+          <div class="spectrum-Slider-handle" style="left: 60%;" role="presentation">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="max" id="spectrum-Slider-input-12-1" aria-labelledby="spectrum-Slider-label-4 spectrum-Slider-input-4-1">
+          </div>
+          <div class="spectrum-Slider-track" style="width: 40%;"></div>
+        </div>
+      </div>
+
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--range is-disabled" role="group" aria-labelledby="spectrum-Slider-label-13">
+        <div class="spectrum-Slider-labelContainer" role="presentation">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-13" for="spectrum-Slider-input-13-0">Slider Label - Disabled</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-13">14 - 48</div>
+        </div>
+        <div class="spectrum-Slider-controls" role="presentation">
+          <div class="spectrum-Slider-track" style="width: 20%;"></div>
+          <div class="spectrum-Slider-handle" style="left: 20%;" role="presentation">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="min" disabled id="spectrum-Slider-input-13-0" aria-labelledby="spectrum-Slider-label-5 spectrum-Slider-input-5-0" disabled>
+          </div>
+          <div class="spectrum-Slider-track" style="left: 20%; right: 40%;"></div>
+          <div class="spectrum-Slider-handle" style="left: 60%;" role="presentation">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="max" disabled id="spectrum-Slider-input-13-1" aria-labelledby="spectrum-Slider-label-5 spectrum-Slider-input-5-1" disabled>
+          </div>
+          <div class="spectrum-Slider-track" style="width: 40%;"></div>
+        </div>
+      </div>
+  - id: slider-tick
+    name: Tick
+    description: Spectrum tick slider
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-14" for="spectrum-Slider-input-14">Slider Label</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-14">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-ticks">
+            <div class="spectrum-Slider-tick"></div>
+            <div class="spectrum-Slider-tick"></div>
+            <div class="spectrum-Slider-tick"></div>
+            <div class="spectrum-Slider-tick"></div>
+            <div class="spectrum-Slider-tick"></div>
+          </div>
+          <div class="spectrum-Slider-trackContainer">
+            <div class="spectrum-Slider-track"></div>
+            <div class="spectrum-Slider-track"></div>
+          </div>
+          <div class="spectrum-Slider-handleContainer">
+            <div class="spectrum-Slider-handle" style="left: 75%;">
+              <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-14">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick is-disabled">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-15" for="spectrum-Slider-input-15">Slider Label - Disabled</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-15">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-ticks">
+            <div class="spectrum-Slider-tick"></div>
+            <div class="spectrum-Slider-tick"></div>
+            <div class="spectrum-Slider-tick"></div>
+            <div class="spectrum-Slider-tick"></div>
+            <div class="spectrum-Slider-tick"></div>
+          </div>
+          <div class="spectrum-Slider-trackContainer">
+            <div class="spectrum-Slider-track"></div>
+            <div class="spectrum-Slider-track"></div>
+          </div>
+          <div class="spectrum-Slider-handleContainer">
+            <div class="spectrum-Slider-handle" style="left: 75%;">
+              <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-15" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+  - id: slider-tick
+    name: Tick with Labels
+    description: Spectrum tick slider with labels
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-16" for="spectrum-Slider-input-16">Slider Label</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-16">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-ticks">
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">0</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">20</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">40</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">60</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">80</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">100</div>
+            </div>
+          </div>
+          <div class="spectrum-Slider-trackContainer">
+            <div class="spectrum-Slider-track"></div>
+            <div class="spectrum-Slider-track"></div>
+          </div>
+          <div class="spectrum-Slider-handleContainer">
+            <div class="spectrum-Slider-handle" style="left: 40%;">
+              <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-16">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--tick is-disabled">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-17" for="spectrum-Slider-input-17">Slider Label - Disabled</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-17">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-ticks">
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">0</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">20</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">40</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">60</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">80</div>
+            </div>
+            <div class="spectrum-Slider-tick">
+              <div class="spectrum-Slider-tickLabel">100</div>
+            </div>
+          </div>
+          <div class="spectrum-Slider-trackContainer">
+            <div class="spectrum-Slider-track"></div>
+            <div class="spectrum-Slider-track"></div>
+          </div>
+          <div class="spectrum-Slider-handleContainer">
+            <div class="spectrum-Slider-handle" style="left: 40%;">
+              <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-17" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+  - id: slider-ramp
+    name: Ramp
+    markup: |
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--ramp">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-18" for="spectrum-Slider-input-18">Slider Label</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-18">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-ramp">
+            <svg viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
+            </svg>
+          </div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-18">
+          </div>
+        </div>
+      </div>
+      <div class="spectrum-Slider spectrum-Slider--sizeM spectrum-Slider--ramp is-disabled">
+        <div class="spectrum-Slider-labelContainer">
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Slider-label" id="spectrum-Slider-label-19" for="spectrum-Slider-input-19">Slider Label - Disabled</label>
+          <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-19">14</div>
+        </div>
+        <div class="spectrum-Slider-controls">
+          <div class="spectrum-Slider-ramp">
+            <svg viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
+            </svg>
+          </div>
+          <div class="spectrum-Slider-handle" style="left: 40%;">
+            <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-19" disabled>
+          </div>
+        </div>
+      </div>

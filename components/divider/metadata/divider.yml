@@ -1,0 +1,126 @@
+name: Divider
+status: Verified
+SpectrumSiteSlug: https://spectrum.adobe.com/page/divider/
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/divider/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### Change workflow icon size to medium
+      Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
+      ### T-shirt sizing
+      Divider supports t-shirt sizes of small, medium and large. Divider requires that you specify the size by adding a `.spectrum-Divider--size*` class. No specified size class results in a medium size divider.
+examples:
+  - id: divider-large
+    name: "Large"
+    markup: |
+      <h2 class="spectrum-Heading spectrum-Heading--sizeM">Large</h2>
+      <hr class="spectrum-Divider spectrum-Divider--sizeL">
+      <p class="spectrum-Body">Page or Section Titles.</p>
+
+  - id: divider-medium
+    name: "Medium"
+    markup: |
+      <h2 class="spectrum-Heading spectrum-Heading--sizeS">Medium</h2>
+      <hr class="spectrum-Divider spectrum-Divider--sizeM">
+      <p class="spectrum-Body">Divide subsections, or divide different groups of elements (between panels, rails, etc.)</p>
+
+  - id: divider-small
+    name: "Small"
+    markup: |
+      <h2 class="spectrum-Heading spectrum-Heading--sizeXS">Small</h2>
+      <hr class="spectrum-Divider spectrum-Divider--sizeS">
+      <p class="spectrum-Body">Divide like-elements (tables, tool groups, elements within a panel, etc.)</p>
+
+  - id: divider-vertical-small
+    name: "Vertical"
+    description: |
+      When a vertical Divider is used inside of a flex container, use `align-self: stretch; height: auto` on the Divider.
+    markup: |
+      <div class="spectrum-Examples">
+        <div class="spectrum-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 2rem">Small</h4>
+            <div class="spectrum-ActionGroup spectrum-ActionGroup--horizontal">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Properties">
+                  <use xlink:href="#spectrum-icon-18-Properties" />
+                </svg>
+              </button>
+              <div class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Select">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 2rem">Medium</h4>
+            <div class="spectrum-ActionGroup spectrum-ActionGroup--horizontal">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Properties">
+                  <use xlink:href="#spectrum-icon-18-Properties" />
+                </svg>
+              </button>
+              <div class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Select">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="spectrum-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 2rem">Large</h4>
+            <div class="spectrum-ActionGroup spectrum-ActionGroup--horizontal">
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Properties">
+                  <use xlink:href="#spectrum-icon-18-Properties" />
+                </svg>
+              </button>
+              <div class="spectrum-Divider spectrum-Divider--sizeL spectrum-Divider--vertical" style="height: auto; align-self: stretch;"></div>
+              <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Select">
+                  <use xlink:href="#spectrum-icon-18-Edit" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+  - id: divider-static-white
+    name: Static White
+    markup: |
+      <div class="spectrum-Examples">
+        <div style="background-color: rgb(0, 119, 114); color: rgb(255, 255, 255); padding: 15px 20px; width: 100%;">
+          <h2 class="spectrum-Heading spectrum-Heading--sizeS" style="color: rgb(255, 255, 255);">Small</h2>
+          <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--staticWhite">
+
+          <h2 class="spectrum-Heading spectrum-Heading--sizeS" style="color: rgb(255, 255, 255);">Medium</h2>
+          <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--staticWhite">
+
+          <h2 class="spectrum-Heading spectrum-Heading--sizeS" style="color: rgb(255, 255, 255);">Large</h2>
+          <hr class="spectrum-Divider spectrum-Divider--sizeL spectrum-Divider--staticWhite">
+        </div>
+      </div>
+
+  - id: divider-static-black
+    name: Static Black
+    markup: |
+      <div class="spectrum-Examples">
+        <div style="background-color: rgb(206, 247, 243); padding: 15px 20px; width: 100%;">
+          <h2 class="spectrum-Heading spectrum-Heading--sizeS">Small</h2>
+          <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--staticBlack">
+
+          <h2 class="spectrum-Heading spectrum-Heading--sizeS">Medium</h2>
+          <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--staticBlack">
+
+          <h2 class="spectrum-Heading spectrum-Heading--sizeS">Large</h2>
+          <hr class="spectrum-Divider spectrum-Divider--sizeL spectrum-Divider--staticBlack">
+        </div>
+      </div>

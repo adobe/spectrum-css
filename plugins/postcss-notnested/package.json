@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "postcss-notnested",
+  "version": "2.0.0",
+  "description": "",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "main": "index.js",
+  "peerDependencies": {
+    "postcss": ">=8"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.33"
+  }
+}

@@ -1,0 +1,14 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "quickaction",
+	"tags": ["component", "legacy"],
+	"targets": {
+		"build": {},
+		"clean": {},
+		"lint": {},
+
+		"test": {
+			"defaultConfiguration": "scope"
+		}
+	}
+}

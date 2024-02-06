@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "name": "conventional-changelog-spectrum",
+  "version": "1.0.2",
+  "description": "conventional-changelog spectrum preset",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://github.com/adobe/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "plugins/conventional-changelog-spectrum"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "index.js",
+  "files": [
+    "conventional-changelog.js",
+    "conventional-recommended-bump.js",
+    "parser-opts.js",
+    "templates",
+    "writer-opts.js"
+  ],
+  "scripts": {
+    "test-windows": "mocha --timeout 30000"
+  },
+  "dependencies": {
+    "compare-func": "^2.0.0",
+    "q": "^1.5.1"
+  },
+  "keywords": [
+    "conventional-changelog",
+    "preset",
+    "spectrum"
+  ]
+}
