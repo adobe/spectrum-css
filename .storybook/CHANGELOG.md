@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.4.2"></a>
+##7.4.2
+🗓
+2024-02-06
+
+**Note:** Version bump only for package @spectrum-css/preview
+
 <a name="7.4.1"></a>
 ##7.4.1
 🗓
