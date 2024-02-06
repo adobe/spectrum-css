@@ -131,6 +131,10 @@ governing permissions and limitations under the License.
     }
   }
 
+  & .spectrum-SplitButton-action .spectrum-Button-label + .spectrum-Icon {
+    margin-inline-start: var(--spectrum-splitbutton-icon-gap);
+  }
+
   &.spectrum-SplitButton--left {
     & .spectrum-SplitButton-action {
       border-start-start-radius: 0;
@@ -184,9 +188,5 @@ governing permissions and limitations under the License.
         border-inline-end-width: var(--spectrum-button-m-primary-outline-texticon-border-size);
       }
     }
-  }
-
-  & .spectrum-SplitButton-action .spectrum-Button-label + .spectrum-Icon {
-    margin-inline-start: var(--spectrum-splitbutton-icon-gap);
   }
 }
