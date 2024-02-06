@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.4.2-next.0"></a>
+##7.4.2-next.0
+🗓
+2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.4.1...@spectrum-css/preview@7.4.2-next.0)
+
+**Note:** Version bump only for package @spectrum-css/preview
+
 <a name="7.4.1"></a>
 ##7.4.1
 🗓
