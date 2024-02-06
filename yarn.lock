@@ -120,13 +120,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241021172855":
-  version: 0.0.0-s2-foundations-20241021172855
-  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241021172855"
-  checksum: 10c0/0604c571afa0416f7802e45d7cbb1d003f14bdf3f90771c274723fa504de6d96f8e16b82f7facbbdb5ee5e66f29c37bd7e3e63a42a05f983d65ede2668b9b0a4
-  languageName: node
-  linkType: hard
-
 "@adobe/spectrum-tokens@npm:13.0.0-beta.13":
   version: 13.0.0-beta.13
   resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.13"
@@ -4440,7 +4433,7 @@ __metadata:
   resolution: "@spectrum-css/preview@workspace:.storybook"
   dependencies:
     "@adobe/spectrum-css-workflow-icons": "npm:^1.5.4"
-    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241021172855"
+    "@adobe/spectrum-tokens": "npm:13.0.0-beta.13"
     "@babel/core": "npm:^7.26.0"
     "@chromatic-com/storybook": "npm:^3.2.3"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
@@ -4791,7 +4784,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^15.0.0, @spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^15.0.0":
+  version: 15.0.0
+  resolution: "@spectrum-css/tokens@npm:15.0.0"
+  checksum: 10c0/8bf9832e18cf7edcf89904e3d4aa67e060c88633dc7db1432a198bd4de3c7b68eaf99c2c213402bb70cbd6e82c51f958abb8d48f98eb807894c5ebc23f0bcfbb
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
