@@ -223,7 +223,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 4.1.10
 
-📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.9...@spectrum-css/actiongroup@4.1.10)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.9...@spectrum-css/actiongroup@4.1.10)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
@@ -423,7 +423,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 
 ## 3.0.56
 
-📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.55...@spectrum-css/actiongroup@3.0.56)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.55...@spectrum-css/actiongroup@3.0.56)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
@@ -492,6 +492,7 @@ Output for all component CSS files is now being run through a lightweight optimi
 ## 3.0.48
 
 🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.47...@spectrum-css/actiongroup@3.0.48)
+
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.47"></a>
