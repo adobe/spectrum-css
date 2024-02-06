@@ -1,5 +1,8 @@
 import { html } from "lit";
+import isChromatic from "chromatic/isChromatic";
+
 import { Template } from "./template";
+
 
 export default {
 	title: "components/Coach indicator",
@@ -18,7 +21,16 @@ export default {
 			},
 			control: "boolean",
 		},
-		variant: { table: { disable: true } },
+		variant: {
+			name: "Variant",
+			type: { name: 'string' },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["default", "dark", "light"],
+			control: "select"
+		 },
 	},
 	args: {
 		rootClass: "spectrum-CoachIndicator",
@@ -37,10 +49,9 @@ export default {
 	},
 };
 
-const CustomCoachIndicator = (args) => {
+const chromaticGroup = (args) => {
 	return html`
-	<div
-		style="display: flex;">
+		<div>
 			${Template({
 				...args,
 				variant: "default"
@@ -52,17 +63,28 @@ const CustomCoachIndicator = (args) => {
 			${Template({
 				...args,
 				variant: "light"
+				})}
+			${Template({
+				...args,
+				variant: "default",
+				isQuiet: true
 			})}
-		<div>
+			${Template({
+				...args,
+				variant: "dark",
+				isQuiet: true
+			})}
+			${Template({
+				...args,
+				variant: "light",
+				isQuiet: true
+				})}
+		</div>
 	`;
 };
 
 
-export const Default = CustomCoachIndicator.bind({});
-Default.args = {};
-
-export const Quiet = CustomCoachIndicator.bind({});
-Quiet.args = {
-	isQuiet: true
+export const Default = (args) => isChromatic() ? chromaticGroup(args) : Template(args);
+Default.args = {
+	variant: "default"
 };
-

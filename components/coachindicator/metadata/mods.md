@@ -4,7 +4,9 @@
 | `--mod-coach-animation-indicator-ring-duration`                   |
 | `--mod-coach-animation-indicator-ring-outer-delay-multiple`       |
 | `--mod-coach-indicator-animation-name`                            |
+| `--mod-coach-indicator-block-size`                                |
 | `--mod-coach-indicator-gap`                                       |
+| `--mod-coach-indicator-inline-size`                               |
 | `--mod-coach-indicator-inner-animation-delay-multiple`            |
 | `--mod-coach-indicator-left`                                      |
 | `--mod-coach-indicator-min-block-size`                            |
