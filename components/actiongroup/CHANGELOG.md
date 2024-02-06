@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0-next.0"></a>
+#5.0.0-next.0
+🗓
+2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.2.0...@spectrum-css/actiongroup@5.0.0-next.0)
+
+\*feat(actiongroup)!: migrate to S2 (#2453)([afb5788](https://github.com/adobe/spectrum-css/commit/afb5788)), closes[#2453](https://github.com/adobe/spectrum-css/issues/2453)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates `Action Group` to Spectrum 2, Removes some mod properties
+
 <a name="4.2.4"></a>
 ##4.2.4
 🗓

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.0.0-next.0"></a>
+#7.0.0-next.0
+🗓
+2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@6.2.0...@spectrum-css/buttongroup@7.0.0-next.0)
+
+\*feat(buttongroup)!: migrate to S2 (#2457)([66d2cee](https://github.com/adobe/spectrum-css/commit/66d2cee)), closes[#2457](https://github.com/adobe/spectrum-css/issues/2457)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates Button Group to Spectrum 2
+
+Also:
+
+- docs(buttongroup): expand chromatic coverage
+- refactor(buttongroup): remove extra css classes
+
 <a name="6.2.4"></a>
 ##6.2.4
 🗓

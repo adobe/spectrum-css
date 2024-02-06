@@ -45,6 +45,10 @@ This component has been deprecated. Use an action bar to allow users to perform 
 ##6.3.1
 🗓
 2024-02-06
+<a name="6.3.1-next.0"></a>
+##6.3.1-next.0
+🗓
+2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/bundle-builder@6.3.0...@spectrum-css/bundle-builder@6.3.1-next.0)
 
 **Note:** Version bump only for package @spectrum-css/bundle-builder
 
