@@ -132,13 +132,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241021172855":
-  version: 0.0.0-s2-foundations-20241021172855
-  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20241021172855"
-  checksum: 10c0/0604c571afa0416f7802e45d7cbb1d003f14bdf3f90771c274723fa504de6d96f8e16b82f7facbbdb5ee5e66f29c37bd7e3e63a42a05f983d65ede2668b9b0a4
-  languageName: node
-  linkType: hard
-
 "@adobe/spectrum-tokens@npm:13.0.0-beta.13":
   version: 13.0.0-beta.13
   resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.13"
@@ -3857,13 +3850,12 @@ __metadata:
   resolution: "@spectrum-css/preview@workspace:.storybook"
   dependencies:
     "@adobe/spectrum-css-workflow-icons": "npm:^1.5.4"
-    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20241021172855"
+    "@adobe/spectrum-tokens": "npm:13.0.0-beta.13"
     "@babel/core": "npm:^7.26.0"
     "@chromaui/addon-visual-tests": "npm:^1.0.0"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
     "@spectrum-css/table": "workspace:^"
     "@spectrum-css/tokens": "workspace:^"
-    "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^14.6.0"
     "@spectrum-css/typography": "workspace:^"
     "@spectrum-css/ui-icons": "workspace:^"
     "@storybook/addon-a11y": "npm:^8.4.7"
