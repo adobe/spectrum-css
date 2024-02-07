@@ -78,7 +78,6 @@ function getProcessors(
 		notNested
 			? require("postcss-notnested")({ replace: ".spectrum" })
 			: null,
-		require("postcss-svg"),
 		require("legacy-postcss-dropunusedvars"),
 		require("legacy-postcss-dropdupedvars"),
 		require("postcss-droproot"),
