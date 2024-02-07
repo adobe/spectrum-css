@@ -46,7 +46,7 @@ jobs:
             - name: Check for cached dependencies
               continue-on-error: true
               id: cache-dependencies
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: |
                       .cache/yarn
