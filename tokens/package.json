@@ -13,7 +13,9 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"type": "module",
 	"main": "dist/index.css",
+	"module": "style-dictionary.config.js",
 	"files": [
 		"dist",
 		"CHANGELOG.md",
@@ -22,7 +24,6 @@
 	],
 	"devDependencies": {
 		"@adobe/spectrum-tokens": "12.25.0",
-		"@nxkit/style-dictionary": "^6.0.0",
 		"cssnano": "^7.0.3",
 		"cssnano-preset-advanced": "^7.0.6",
 		"postcss": "^8.4.49",
@@ -32,7 +33,7 @@
 		"postcss-rgb-mapping": "workspace:^",
 		"postcss-sorting": "^9.1.0",
 		"prettier": "^3.2.5",
-		"style-dictionary": "^3.9.2",
+		"style-dictionary": "^4.2.0",
 		"style-dictionary-sets": "^2.3.0"
 	},
 	"keywords": [
