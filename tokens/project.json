@@ -17,7 +17,7 @@
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node \"./tasks/token-rollup.js\"",
+					"node --no-warnings ./tasks/token-rollup.js",
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
@@ -47,7 +47,11 @@
 		"style-dictionary": {
 			"dependsOn": ["clean"],
 			"executor": "nx:run-commands",
-			"inputs": ["scripts"],
+			"inputs": [
+				"{projectRoot}/postcss.config.js",
+				"{projectRoot}/style-dictionary.config.js",
+				"{projectRoot}/utilities/style-dictionary.utils.js"
+			],
 			"options": {
 				"commands": [
 					"style-dictionary build --config style-dictionary.config.js"

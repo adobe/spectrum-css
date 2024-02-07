@@ -12,17 +12,21 @@
  */
 
 import { createRequire } from "node:module";
-import { dirname, join } from "path";
+import { dirname, join, sep } from "node:path";
 
 import generateFileConfig from "./utilities/style-dictionary.utils.js";
 
-// import { registerFormat, registerTransform } from "style-dictionary";
-// // import { AttributeSetsTransform, CSSOpenTypeTransform, CSSSetsFormatter, NameKebabTransfom } from "style-dictionary-sets";
+import StyleDictionary from "style-dictionary";
 
-// // registerTransform(CSSOpenTypeTransform);
-// // registerTransform(NameKebabTransfom);
-// // registerTransform(AttributeSetsTransform);
-// // registerFormat(CSSSetsFormatter);
+import AttributeSetsTransform from "./utilities/attribute-sets-transform.js";
+import CSSOpenTypeTransform from "./utilities/css-font-open-type-transform.js";
+import CSSSetsFormatter from "./utilities/css-sets-formatter.js";
+import NameKebabTransfom from "./utilities/name-kebab-transform.js";
+
+StyleDictionary.registerTransform(CSSOpenTypeTransform);
+StyleDictionary.registerTransform(NameKebabTransfom);
+StyleDictionary.registerTransform(AttributeSetsTransform);
+StyleDictionary.registerFormat(CSSSetsFormatter);
 
 /**
  * @note This references the package.json because we want the root folder and
@@ -30,36 +34,33 @@ import generateFileConfig from "./utilities/style-dictionary.utils.js";
  * in the package.json is present.
  */
 const require = createRequire(import.meta.url);
-const tokensPath = require.resolve("@adobe/spectrum-tokens/package.json");
+const tokensPath = require.resolve(join("@adobe", "spectrum-tokens", "package.json"));
 const tokensDir = dirname(tokensPath);
 const setNames = ["desktop", "mobile", "light", "dark", "darkest"];
 
 export default {
-	source: [join(tokensDir, "src/*.json")],
+	source: [join(tokensDir, "src", "*.json")],
 	platforms: {
 		css: {
-			buildPath: "dist/css/",
-			// transforms: [
-			// 	AttributeSetsTransform.name,
-			// 	NameKebabTransfom.name,
-			// 	CSSOpenTypeTransform.name,
-			// ],
+			buildPath: join("dist", "css") + sep,
+			transforms: [
+				AttributeSetsTransform.name,
+				NameKebabTransfom.name,
+				CSSOpenTypeTransform.name,
+			],
 			prefix: "spectrum",
 			files: [
 				generateFileConfig(),
-				...["spectrum", "express"].map((subSystemName) => generateFileConfig({ subSystemName })
-				),
+				...["spectrum", "express"].map((subSystemName) => generateFileConfig({ subSystemName })),
 				...setNames.map((context) => generateFileConfig({ setName: context })),
 				...setNames.map((context) => generateFileConfig({
 					setName: context,
 					subSystemName: "spectrum",
-				})
-				),
+				})),
 				...setNames.map((context) => generateFileConfig({
 					setName: context,
 					subSystemName: "express",
-				})
-				),
+				})),
 			],
 		},
 	},
