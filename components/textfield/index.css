@@ -1265,7 +1265,8 @@ governing permissions and limitations under the License.
 .spectrum-Textfield--multiline {
   --spectrum-textfield-input-line-height: normal;
 
-  .spectrum-Textfield-input {
+	.spectrum-Textfield-input {
+		resize: both;
 		min-inline-size: var(
 			--mod-text-area-min-inline-size,
 			var(--spectrum-text-area-min-inline-size)
@@ -1274,11 +1275,6 @@ governing permissions and limitations under the License.
 			--mod-text-area-min-block-size,
 			var(--spectrum-text-area-min-block-size)
 		);
-		resize: inherit;
-	}
-
-	&.spectrum-Textfield--drag {
-		resize: both;
 	}
 
 	&.spectrum-Textfield--grows {
@@ -1287,13 +1283,13 @@ governing permissions and limitations under the License.
 		}
 
 		&.spectrum-Textfield--sideLabel .spectrum-Textfield-input {
-				grid-row: 1 / auto
+			resize: none;
+			grid-row: 1 / auto;
 		}
 	}
 
 	&.spectrum-Textfield--quiet {
 		.spectrum-Textfield-input {
-
 			min-block-size: var(
 				--mod-text-area-min-block-size-quiet,
 				var(--spectrum-text-area-min-block-size-quiet)

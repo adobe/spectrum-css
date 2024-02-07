@@ -59,22 +59,12 @@ examples:
 
   - id: textfield-grow
     name: Textfield with Grow Behavior
-    description: Add `spectrum-Textfield--grows` to the text-field with `spectrum-Textfield--multiline` along with appropriate JavaScript to enable a text area that grows with input.
+    description: By default the TextArea is draggable. Add `spectrum-Textfield--grows` to the text-field with `spectrum-Textfield--multiline` along with appropriate JavaScript to enable a text area that grows with input isntead of dragging.
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--grows">
         <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
         <textarea id="textfield-helptext" name="field" class="spectrum-Textfield-input">something related to the max size of the text area</textarea>
       </div>
-
-  - id: textfield-drag
-    name: Textfield with Drag Behavior
-    description: Add `spectrum-Textfield--drag` to the text-field with `spectrum-Textfield--multiline` to enable the resizable behavior.
-    markup: |
-      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--drag">
-        <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
-        <textarea id="textfield-helptext" name="field" class="spectrum-Textfield-input"></textarea>
-      </div>
-
 
   - id: textfield-character-count
     name: With Character Count
