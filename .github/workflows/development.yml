@@ -42,6 +42,7 @@ jobs:
     # -------------------------------------------------------------
     # Validate build for various environments
     # -------------------------------------------------------------
+    # todo: should we limit this to run before merging?
     verify_builds:
         name: Verify
         # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
