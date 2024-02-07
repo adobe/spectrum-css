@@ -149,7 +149,7 @@ const ChromaticPickerGroup = ({
 					labelPosition: "top",
 					...args,
 					isOpen: false,
-					placeholder: "Select Your State Or Province"
+					placeholder: "Select your country of origin"
 				})}
 			</div>
 			<div>
@@ -158,7 +158,7 @@ const ChromaticPickerGroup = ({
 					...args,
 					isOpen: false,
 					isQuiet: true,
-					placeholder: "Select Your State Or Province"
+					placeholder: "Select your country of origin"
 				})}
 			</div>
 			<div>
@@ -167,7 +167,7 @@ const ChromaticPickerGroup = ({
 					...args,
 					isOpen: false,
 					isLoading: true,
-					placeholder: "Select Your State Or Province"
+					placeholder: "Select your country of origin"
 				})}
 			</div>
 			<div>
@@ -176,7 +176,7 @@ const ChromaticPickerGroup = ({
 					...args,
 					isOpen: false,
 					isInvalid: true,
-					placeholder: "Select Your State Or Province"
+					placeholder: "Select your country of origin"
 				})}
 			</div>
 			<div>
@@ -186,7 +186,7 @@ const ChromaticPickerGroup = ({
 					isOpen: false,
 					isKeyboardFocused: true,
 					helpText: "Please select a country",
-					placeholder: "Select Your State Or Province"
+					placeholder: "Select your country of origin"
 				})}
 			</div>
 			<div>
@@ -195,7 +195,7 @@ const ChromaticPickerGroup = ({
 					...args,
 					isOpen: false,
 					withSwitch: true,
-					placeholder: "Select Your State Or Province"
+					placeholder: "Select your country of origin"
 				})}
 			</div>
 			<div>
@@ -206,7 +206,7 @@ const ChromaticPickerGroup = ({
 					withSwitch: true,
 					fieldLabelStyle: {'max-width': '90px'},
 					label: "Enter country, text should wrap",
-					placeholder: "Select Your State Or Province"
+					placeholder: "Select your country of origin"
 				})}
 			</div>
 			<div>
@@ -215,7 +215,7 @@ const ChromaticPickerGroup = ({
 						...args,
 						isOpen: false,
 						withSwitch: true,
-						placeholder: "Select Your State Or Province",
+						placeholder: "Select your contry of origin",
 						isQuiet: true,
 					})}
 			</div>
@@ -228,7 +228,7 @@ const ChromaticPickerGroup = ({
 					isQuiet: true,
 					fieldLabelStyle: {'max-width': '90px'},
 					label: "Enter country, text should wrap",
-					placeholder: "Select Your State Or Province"
+					placeholder: "Select your contry of origin"
 				})}
 			</div>
 		</div>
