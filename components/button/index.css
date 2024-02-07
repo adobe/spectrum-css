@@ -23,6 +23,7 @@ governing permissions and limitations under the License.
   --spectrum-button-focus-ring-border-radius: calc(var(--spectrum-button-border-radius) + var(--spectrum-button-focus-ring-gap));
   --spectrum-button-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
+  --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-50);
 }
 
 .spectrum-Button--sizeS {
@@ -40,6 +41,7 @@ governing permissions and limitations under the License.
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-small);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-small);
   --spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-75);
+  --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-75);
 }
 
 .spectrum-Button--sizeM {
@@ -57,6 +59,7 @@ governing permissions and limitations under the License.
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-medium);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
   --spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
+  --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-100);
 
   &[pending],
   &.is-pending {
@@ -79,6 +82,7 @@ governing permissions and limitations under the License.
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-large);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-large);
   --spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-200);
+  --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-200);
 
   &[pending],
   &.is-pending {
@@ -101,6 +105,7 @@ governing permissions and limitations under the License.
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-extra-large);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-extra-large);
   --spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-300);
+  --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-300);
 
   .spectrum--medium &[pending],
   .spectrum--medium &.is-pending {
@@ -143,10 +148,19 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Icon {
+    /* Any block-size difference between the intended workflow icon size and actual icon used.
+       Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
+    --_icon-size-difference: max(0px,
+      var(--spectrum-button-intended-icon-size) - 
+      var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size))
+    );
+
     margin-block-start: max(0px,
       var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) - 
-      var(--mod-button-border-width, var(--spectrum-button-border-width))
+      var(--mod-button-border-width, var(--spectrum-button-border-width)) +
+      (var(--_icon-size-difference, 0px) / 2)
     );
+
     margin-inline-start: calc(
       var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) -
       var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text))

@@ -1,11 +1,11 @@
 import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { Template } from "./template";
+import { when } from "lit/directives/when.js";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Button",
@@ -132,6 +132,18 @@ export default {
 };
 
 /**
+ * Optional wrapper for each button used within other templates, to assist with the "stacked"
+ * layout and the testing of wrapping text.
+ */
+const ButtonWrap = (layout, content) => {
+	const buttonWrapStyles = {
+		'margin-block': '15px',
+		'max-width': '480px',
+	};
+	return layout === "stacked" ? html`<div style=${styleMap(buttonWrapStyles)}>${content}</div>` : content;
+};
+
+/**
  * Multiple button variations displayed in one story template.
  * Used as the base template for the stories.
  */
@@ -143,15 +155,6 @@ const CustomButton = ({
 	customStyles = {},
 	...args
 }) => {
-	// Optional wrapper for each button, to assist with the testing of wrapping text.
-	const ButtonWrap = (content) => {
-		const buttonWrapStyles = {
-			'margin-block': '15px',
-			'max-width': '480px',
-		};
-		return layout === "stacked" ? html`<div style=${styleMap(buttonWrapStyles)}>${content}</div>` : content;
-	};
-
 	return html`
 		<div
 			style=${ifDefined(styleMap({
@@ -160,28 +163,30 @@ const CustomButton = ({
 				...customStyles
 			}))}
 		>
-			${ButtonWrap(Template({
+			${ButtonWrap(layout, Template({
 				...args,
 				staticColor,
 				iconName: undefined,
 			}))}
-			${ButtonWrap(Template({
+			${ButtonWrap(layout, Template({
 				...args,
 				staticColor,
 				iconName: undefined,
 				treatment: "outline",
 			}))}
-			${ButtonWrap(Template({
+			${ButtonWrap(layout, Template({
 				...args,
 				staticColor,
 				iconName: iconName ?? "Edit",
 			}))}
-			${showIconOnlyButton ? ButtonWrap(Template({
-				...args,
-				staticColor,
-				hideLabel: true,
-				iconName: iconName ?? "Edit",
-			})) : ''}
+			${when(showIconOnlyButton, () =>
+				ButtonWrap(layout, Template({
+					...args,
+					staticColor,
+					hideLabel: true,
+					iconName: iconName ?? "Edit",
+				}))
+			)}
 		</div>
 	`;
 };
@@ -255,6 +260,37 @@ const ButtonsWithForcedColors = ({
 	</div>
 `;
 
+/**
+ * Wrapping story template, displaying some additional variants for Chromatic.
+ */
+const WrappingTemplate = ({layout, ...args}) => {
+	if (window.isChromatic()) {
+		return html`
+			${CustomButton({layout, ...args})}
+			<div style=${ifDefined(styleMap({ padding: "1rem" }))}>
+				${ButtonWrap(layout, Template({
+					...args,
+					iconName: "Edit",
+					treatment: "outline",
+				}))}
+				${ButtonWrap(layout, Template({
+					...args,
+					// Uses a UI icon that is smaller than workflow sizing, to test alignment:
+					iconName: "Cross100",
+				}))}
+				${ButtonWrap(layout, Template({
+					...args,
+					// UI icon that is larger than workflow sizing:
+					iconName: "ArrowDown600",
+					treatment: "outline",
+				}))}
+			</div>
+		`;
+	}
+	// Otherwise use the default template.
+	return CustomButton({layout, ...args});
+};
+
 export const Accent = CustomButton.bind({});
 Accent.args = {
 	variant: "accent",
@@ -306,7 +342,8 @@ WithForcedColors.args = {
 	iconName: "Actions",
 };
 
-export const Wrapping = CustomButton.bind({});
+export const Wrapping = WrappingTemplate.bind({});
+Wrapping.storyName = "Wrapping";
 Wrapping.args = {
 	layout: "stacked",
 	showIconOnlyButton: false,
