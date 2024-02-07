@@ -24,7 +24,7 @@ on:
                 default: "20"
             experimental:
                 required: false
-                default: false
+                default: "false"
             ref:
                 description: "The branch or tag to checkout"
                 required: false
@@ -150,18 +150,11 @@ jobs:
                     echo "Changes detected"
                     git status
                     git add .
-                    git diff > changes.diff
+                    git diff --staged > changes.diff
                     exit 1
                 fi
 
-            # If there are changes, capture the changes and upload them as an artifact
-            - name: Capture changes
-              if: ${{ failure() }}
-              id: capture-changes
-              run: |
-                git diff
-                git diff > changes.diff
-
+            # If there are changes, capture and upload them as an artifact
             - name: Upload changes
               if: ${{ failure() }}
               uses: actions/upload-artifact@v4
