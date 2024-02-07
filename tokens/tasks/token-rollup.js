@@ -13,16 +13,16 @@
 
 /* eslint-disable no-console */
 
-const fs = require("fs");
+import fs, { existsSync, readdirSync } from "fs";
+import { basename, join } from "path";
 const fsp = fs.promises;
-const path = require("path");
 
-const fg = require("fast-glob");
+import fg from "fast-glob";
 
-const { processCSS } = require("../../tasks/component-builder.js");
-const { fetchContent } = require("../../tasks/utilities.js");
+import { processCSS } from "../../tasks/component-builder.js";
+import { copy, dirs, fetchContent, writeAndReport } from "../../tasks/utilities.js";
 
-require("colors");
+import "colors";
 
 /**
  * The builder for the main entry point
@@ -33,7 +33,7 @@ require("colors");
  */
 async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false } = {}) {
 	// Create an index.css asset for each component
-	if (clean && fs.existsSync(outputPath)) {
+	if (clean && existsSync(outputPath)) {
 		await fsp.unlink(outputPath);
 	}
 
@@ -97,7 +97,7 @@ async function main({
 	const key = `[build] ${"@spectrum-css/tokens".cyan} index`;
 	console.time(key);
 
-	const compiledOutputPath = path.join(cwd, "dist");
+	const compiledOutputPath = join(cwd, "dist");
 
 	// Wait for all the custom files to be processed
 	return appendCustomOverrides({ cwd }).then(async (r) =>
@@ -151,4 +151,4 @@ async function main({
 	);
 }
 
-exports.default = main;
+export { main as default };
