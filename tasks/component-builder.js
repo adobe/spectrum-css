@@ -223,8 +223,8 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 		const theme = path.basename(input, ".css");
 		return processCSS(
 			content,
-			path.join(cwd, input),
-			path.join(cwd, "dist", input),
+			input,
+			path.join(cwd, "dist", "themes", `${theme}.css`),
 			{
 				cwd,
 				clean,

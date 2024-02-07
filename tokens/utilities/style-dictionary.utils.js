@@ -13,8 +13,7 @@
 
 export default function ({ setName, subSystemName } = {}) {
 	const baseConfig = {
-		// format: "css/sets",
-		format: "css/variables",
+		format: "css/sets",
 		options: {
 			showFileHeader: false,
 			outputReferences: true,

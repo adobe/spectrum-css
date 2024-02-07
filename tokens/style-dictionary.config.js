@@ -16,13 +16,17 @@ import { dirname, join } from "path";
 
 import generateFileConfig from "./utilities/style-dictionary.utils.js";
 
-// import { registerFormat, registerTransform } from "style-dictionary";
-// // import { AttributeSetsTransform, CSSOpenTypeTransform, CSSSetsFormatter, NameKebabTransfom } from "style-dictionary-sets";
+import StyleDictionary from "style-dictionary";
 
-// // registerTransform(CSSOpenTypeTransform);
-// // registerTransform(NameKebabTransfom);
-// // registerTransform(AttributeSetsTransform);
-// // registerFormat(CSSSetsFormatter);
+import AttributeSetsTransform from "./utilities/attribute-sets-transform.js";
+import CSSOpenTypeTransform from "./utilities/css-font-open-type-transform.js";
+import CSSSetsFormatter from "./utilities/css-sets-formatter.js";
+import NameKebabTransfom from "./utilities/name-kebab-transform.js";
+
+StyleDictionary.registerTransform(CSSOpenTypeTransform);
+StyleDictionary.registerTransform(NameKebabTransfom);
+StyleDictionary.registerTransform(AttributeSetsTransform);
+StyleDictionary.registerFormat(CSSSetsFormatter);
 
 /**
  * @note This references the package.json because we want the root folder and
@@ -39,11 +43,11 @@ export default {
 	platforms: {
 		css: {
 			buildPath: "dist/css/",
-			// transforms: [
-			// 	AttributeSetsTransform.name,
-			// 	NameKebabTransfom.name,
-			// 	CSSOpenTypeTransform.name,
-			// ],
+			transforms: [
+				AttributeSetsTransform.name,
+				NameKebabTransfom.name,
+				CSSOpenTypeTransform.name,
+			],
 			prefix: "spectrum",
 			files: [
 				generateFileConfig(),
