@@ -13,7 +13,7 @@
 
 const path = require("path");
 
-const generateFileConfig = require("./utilities/style-dictionary.utils.js");
+const generateFileConfig = require(path.join(__dirname, "utilities/style-dictionary.utils.js"));
 
 const StyleDictionary = require("style-dictionary");
 const CSSSetsFormatter = require("style-dictionary-sets").CSSSetsFormatter;
@@ -38,10 +38,10 @@ const tokensDir = path.dirname(tokensPath);
 const setNames = ["desktop", "mobile", "light", "dark", "darkest"];
 
 module.exports = {
-	source: [`${tokensDir}/src/*.json`],
+	source: [path.join(tokensDir, "src/*.json")],
 	platforms: {
 		CSS: {
-			buildPath: "dist/css/",
+			buildPath: path.join(__dirname, "dist/css/"),
 			transforms: [
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
