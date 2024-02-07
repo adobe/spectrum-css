@@ -6,8 +6,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
 import "../index.css";
 
