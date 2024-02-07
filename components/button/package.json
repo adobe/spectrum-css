@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/button",
-	"version": "14.0.1",
+	"version": "14.1.0",
 	"description": "The Spectrum CSS button component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -25,9 +25,9 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/icon": ">=9",
-		"@spectrum-css/progresscircle": ">=5",
-		"@spectrum-css/tokens": ">=16"
+		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/progresscircle": ">=5.0.0 <6.0.0",
+		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/icon": {
@@ -42,8 +42,8 @@
 	},
 	"devDependencies": {
 		"@spectrum-css/commons": "11.0.0",
-		"@spectrum-css/icon": "9.0.1",
-		"@spectrum-css/progresscircle": "5.0.1",
+		"@spectrum-css/icon": "9.1.0",
+		"@spectrum-css/progresscircle": "5.1.0",
 		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [

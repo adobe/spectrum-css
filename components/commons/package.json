@@ -27,15 +27,10 @@
 		"package.json"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=16"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/tokens": {
-			"optional": true
-		}
+		"@spectrum-css/tokens": ">=16.0.1"
 	},
 	"devDependencies": {
-		"@spectrum-css/tokens": "16.0.0"
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"design-system",

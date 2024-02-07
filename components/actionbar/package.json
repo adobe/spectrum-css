@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/actionbar",
-	"version": "10.0.1",
+	"version": "10.1.0",
 	"description": "The Spectrum CSS actionbar component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -26,7 +26,7 @@
 	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/actiongroup": ">=6.0.0 <7.0.0",
-		"@spectrum-css/closebutton": ">=5.0.0 <6.0.0",
+		"@spectrum-css/closebutton": ">=6.0.0 <7.0.0",
 		"@spectrum-css/fieldlabel": ">=10.0.0 <11.0.0",
 		"@spectrum-css/popover": ">=8.0.0 <9.0.0",
 		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
@@ -49,10 +49,10 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/actiongroup": "6.0.1",
-		"@spectrum-css/closebutton": "5.0.0-next.1",
-		"@spectrum-css/fieldlabel": "10.0.1",
-		"@spectrum-css/popover": "8.0.1",
+		"@spectrum-css/actiongroup": "6.1.0",
+		"@spectrum-css/closebutton": "6.1.0",
+		"@spectrum-css/fieldlabel": "10.1.0",
+		"@spectrum-css/popover": "8.1.0",
 		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
