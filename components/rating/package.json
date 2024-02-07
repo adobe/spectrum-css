@@ -25,16 +25,8 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/icon": {
-			"optional": true
-		},
-		"@spectrum-css/tokens": {
-			"optional": true
-		}
+		"@spectrum-css/icon": ">=9",
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
 		"@spectrum-css/icon": "9.0.1",
@@ -57,5 +49,13 @@
 			"guidelines": "https://spectrum.adobe.com/page/rating",
 			"rootClass": "spectrum-Rating"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }

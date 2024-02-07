@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-import { dirname, join } from "path";
+import { dirname, join, sep } from "path";
 
 import StyleDictionary from "style-dictionary";
 import {
@@ -38,10 +38,10 @@ const tokensPath = import.meta.resolve("@adobe/spectrum-tokens/package.json")?.r
 const tokensDir = dirname(tokensPath);
 
 export default {
-	source: [join(tokensDir, "src/*.json")],
+	source: [join(tokensDir, "src", "*.json")],
 	platforms: {
 		css: {
-			buildPath: "dist/css/",
+			buildPath: join("dist", "css") + sep,
 			transforms: [
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,
@@ -132,7 +132,7 @@ export default {
 			],
 		},
 		JSON: {
-			buildPath: "dist/json/",
+			buildPath: join("dist", "json") + sep,
 			transforms: [
 				AttributeSetsTransform.name,
 				NameKebabTransfom.name,

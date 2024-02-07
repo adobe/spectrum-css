@@ -17,6 +17,9 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const { hideBin } = require("yargs/helpers");
+const yargs = require("yargs");
+
 const { deflate } = require("zlib");
 const { promisify } = require("util");
 
@@ -345,3 +348,9 @@ async function main({
 exports.processCSS = processCSS;
 exports.fetchContent = fetchContent;
 exports.default = main;
+
+let {
+	_: components,
+} = yargs(hideBin(process.argv)).argv;
+
+Promise.all(components.map((componentName) => main({ componentName })));

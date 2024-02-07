@@ -3681,13 +3681,13 @@ __metadata:
   resolution: "@spectrum-css/actionbar@workspace:components/actionbar"
   dependencies:
     "@spectrum-css/actiongroup": "npm:6.0.1"
-    "@spectrum-css/closebutton": "npm:6.0.1"
+    "@spectrum-css/closebutton": "npm:5.0.0-next.1"
     "@spectrum-css/fieldlabel": "npm:10.0.1"
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/actiongroup": ">=6.0.0 <7.0.0"
-    "@spectrum-css/closebutton": ">=6.0.0 <7.0.0"
+    "@spectrum-css/closebutton": ">=5.0.0 <6.0.0"
     "@spectrum-css/fieldlabel": ">=10.0.0 <11.0.0"
     "@spectrum-css/popover": ">=8.0.0 <9.0.0"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
@@ -3730,8 +3730,8 @@ __metadata:
     "@spectrum-css/actionbutton": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -3750,11 +3750,11 @@ __metadata:
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/menu": ">=9.0.0 <10.0.0"
-    "@spectrum-css/popover": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/menu": ">=9"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -3774,13 +3774,13 @@ __metadata:
   resolution: "@spectrum-css/alertbanner@workspace:components/alertbanner"
   dependencies:
     "@spectrum-css/button": "npm:14.0.1"
-    "@spectrum-css/closebutton": "npm:6.0.1"
+    "@spectrum-css/closebutton": "npm:5.0.0-next.1"
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/button": ">=14.0.0 <15.0.0"
-    "@spectrum-css/closebutton": ">=6.0.0 <7.0.0"
+    "@spectrum-css/closebutton": ">=5.0.0 <6.0.0"
     "@spectrum-css/divider": ">=5.0.0 <6.0.0"
     "@spectrum-css/icon": ">=9.0.0 <10.0.0"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
@@ -3809,12 +3809,12 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/underlay": "npm:6.0.1"
   peerDependencies:
-    "@spectrum-css/buttongroup": ">=9.0.0 <10.0.0"
-    "@spectrum-css/divider": ">=5.0.0 <6.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/modal": ">=7.0.0 <8.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
-    "@spectrum-css/underlay": ">=6.0.0 <7.0.0"
+    "@spectrum-css/buttongroup": ">=9"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/modal": ">=7"
+    "@spectrum-css/tokens": ">=16"
+    "@spectrum-css/underlay": ">=6"
   peerDependenciesMeta:
     "@spectrum-css/buttongroup":
       optional: true
@@ -3851,8 +3851,8 @@ __metadata:
     "@spectrum-css/checkbox": "npm:10.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=10.0.0 <11.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
@@ -3869,9 +3869,9 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=10.0.0 <11.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
@@ -3902,8 +3902,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -3920,9 +3920,9 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -4037,9 +4037,9 @@ __metadata:
     "@spectrum-css/progresscircle": "npm:5.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/progresscircle": ">=5.0.0 <6.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/progresscircle": ">=5"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -4057,8 +4057,8 @@ __metadata:
     "@spectrum-css/button": "npm:14.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0 <15.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/button":
       optional: true
@@ -4074,8 +4074,8 @@ __metadata:
     "@spectrum-css/actionbutton": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -4095,13 +4095,12 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/typography": "npm:8.0.1"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/asset": ">=7.0.0 <8.0.0"
-    "@spectrum-css/checkbox": ">=10.0.0 <11.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/quickaction": ">=3"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/asset": ">=7"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
-    "@spectrum-css/typography": ">=8.0.0 <9.0.0"
+    "@spectrum-css/typography": ">=8"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -4110,8 +4109,6 @@ __metadata:
     "@spectrum-css/checkbox":
       optional: true
     "@spectrum-css/icon":
-      optional: true
-    "@spectrum-css/quickaction":
       optional: true
     "@spectrum-css/tokens":
       optional: true
@@ -4127,8 +4124,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -4144,8 +4141,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -4154,7 +4151,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/closebutton@npm:6.0.1, @spectrum-css/closebutton@workspace:^, @spectrum-css/closebutton@workspace:components/closebutton":
+"@spectrum-css/closebutton@npm:5.0.0-next.1, @spectrum-css/closebutton@workspace:^, @spectrum-css/closebutton@workspace:components/closebutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/closebutton@workspace:components/closebutton"
   dependencies:
@@ -4162,7 +4159,7 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
   peerDependenciesMeta:
     "@spectrum-css/icon":
@@ -4178,7 +4175,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/tokens":
       optional: true
@@ -4197,13 +4194,13 @@ __metadata:
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
+    "@spectrum-css/actionbutton": ">=7"
     "@spectrum-css/actionmenu": ">=7.0.0 <8.0.0"
-    "@spectrum-css/button": ">=14.0.0 <15.0.0"
-    "@spectrum-css/buttongroup": ">=9.0.0 <10.0.0"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/buttongroup": ">=9"
     "@spectrum-css/menu": ">=9.0.0 <10.0.0"
-    "@spectrum-css/popover": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -4230,7 +4227,7 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/colorhandle": ">=10.0.0 <11.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/colorhandle":
       optional: true
@@ -4249,7 +4246,7 @@ __metadata:
   peerDependencies:
     "@spectrum-css/colorloupe": ">=7.0.0 <8.0.0"
     "@spectrum-css/opacitycheckerboard": ">=4.0.0 <5.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/colorloupe":
       optional: true
@@ -4283,7 +4280,7 @@ __metadata:
   peerDependencies:
     "@spectrum-css/colorhandle": ">=10.0.0 <11.0.0"
     "@spectrum-css/opacitycheckerboard": ">=4.0.0 <5.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/colorhandle":
       optional: true
@@ -4306,7 +4303,7 @@ __metadata:
     "@spectrum-css/colorarea": ">=7.0.0 <8.0.0"
     "@spectrum-css/colorhandle": ">=10.0.0 <11.0.0"
     "@spectrum-css/colorloupe": ">=7.0.0 <8.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/colorarea":
       optional: true
@@ -4332,10 +4329,10 @@ __metadata:
   peerDependencies:
     "@spectrum-css/menu": ">=9.0.0 <10.0.0"
     "@spectrum-css/pickerbutton": ">=6.0.0 <7.0.0"
-    "@spectrum-css/popover": ">=8.0.0 <9.0.0"
-    "@spectrum-css/progresscircle": ">=5.0.0 <6.0.0"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/progresscircle": ">=5"
     "@spectrum-css/textfield": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/menu":
       optional: true
@@ -4356,9 +4353,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/commons@workspace:components/commons"
   dependencies:
-    "@spectrum-css/tokens": "workspace:^"
+    "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=16"
+  peerDependenciesMeta:
+    "@spectrum-css/tokens":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -4371,9 +4371,9 @@ __metadata:
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/link": ">=7.0.0 <8.0.0"
-    "@spectrum-css/popover": ">=8.0.0 <9.0.0"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/link": ">=7"
+    "@spectrum-css/popover": ">=8"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
@@ -4399,9 +4399,9 @@ __metadata:
   peerDependencies:
     "@spectrum-css/calendar": ">=7.0.0 <8.0.0"
     "@spectrum-css/pickerbutton": ">=6.0.0 <7.0.0"
-    "@spectrum-css/popover": ">=8.0.0 <9.0.0"
+    "@spectrum-css/popover": ">=8"
     "@spectrum-css/textfield": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/calendar":
       optional: true
@@ -4433,20 +4433,24 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dialog@workspace:components/dialog"
   dependencies:
+    "@spectrum-css/button": "npm:14.0.1"
     "@spectrum-css/buttongroup": "npm:9.0.1"
-    "@spectrum-css/closebutton": "npm:6.0.1"
+    "@spectrum-css/closebutton": "npm:5.0.0-next.1"
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/modal": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/underlay": "npm:6.0.1"
   peerDependencies:
-    "@spectrum-css/closebutton": ">=6.0.0 <7.0.0"
-    "@spectrum-css/divider": ">=5.0.0 <6.0.0"
-    "@spectrum-css/modal": ">=7.0.0 <8.0.0"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/buttongroup": ">=9.0.0 <10.0.0"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/modal": ">=7"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
-    "@spectrum-css/underlay": ">=6.0.0 <7.0.0"
+    "@spectrum-css/underlay": ">=6"
   peerDependenciesMeta:
-    "@spectrum-css/closebutton":
+    "@spectrum-css/button":
+      optional: true
+    "@spectrum-css/buttongroup":
       optional: true
     "@spectrum-css/divider":
       optional: true
@@ -4479,8 +4483,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -4498,10 +4502,10 @@ __metadata:
     "@spectrum-css/link": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
+    "@spectrum-css/actionbutton": ">=7"
     "@spectrum-css/illustratedmessage": ">=9.0.0 <10.0.0"
     "@spectrum-css/link": ">=7.0.0 <8.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -4523,10 +4527,10 @@ __metadata:
     "@spectrum-css/radio": "npm:10.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=10.0.0 <11.0.0"
+    "@spectrum-css/checkbox": ">=10"
     "@spectrum-css/helptext": ">=7.0.0 <8.0.0"
     "@spectrum-css/radio": ">=10.0.0 <11.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
       optional: true
@@ -4546,8 +4550,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -4600,8 +4604,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -4630,8 +4634,8 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/typography": "npm:8.0.1"
   peerDependencies:
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
-    "@spectrum-css/typography": ">=8.0.0 <9.0.0"
+    "@spectrum-css/tokens": ">=16"
+    "@spectrum-css/typography": ">=8"
   peerDependenciesMeta:
     "@spectrum-css/tokens":
       optional: true
@@ -4647,8 +4651,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -4665,9 +4669,9 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0 <15.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/button":
       optional: true
@@ -4716,11 +4720,11 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
     "@spectrum-css/tray": "npm:5.0.1"
   peerDependencies:
-    "@spectrum-css/checkbox": ">=10.0.0 <11.0.0"
-    "@spectrum-css/divider": ">=5.0.0 <6.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/switch": ">=6.0.0 <7.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
     "@spectrum-css/tray": ">=5.0.0 <6.0.0"
   peerDependenciesMeta:
     "@spectrum-css/checkbox":
@@ -4765,9 +4769,9 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/assetlist": ">=8.0.0 <9.0.0"
-    "@spectrum-css/checkbox": ">=10.0.0 <11.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/assetlist":
       optional: true
@@ -4830,11 +4834,11 @@ __metadata:
     "@spectrum-css/textfield": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/button": ">=14.0.0 <15.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/textfield": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -4862,11 +4866,11 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/helptext": ">=7.0.0 <8.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/menu": ">=9.0.0 <10.0.0"
-    "@spectrum-css/popover": ">=8.0.0 <9.0.0"
-    "@spectrum-css/progresscircle": ">=5.0.0 <6.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/progresscircle": ">=5"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/helptext":
       optional: true
@@ -4892,10 +4896,10 @@ __metadata:
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/menu": ">=9.0.0 <10.0.0"
-    "@spectrum-css/popover": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/popover": ">=8"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -4921,9 +4925,9 @@ __metadata:
   peerDependencies:
     "@spectrum-css/alertdialog": ">=4.0.0 <5.0.0"
     "@spectrum-css/dialog": ">=12.0.0 <13.0.0"
-    "@spectrum-css/divider": ">=5.0.0 <6.0.0"
+    "@spectrum-css/divider": ">=5"
     "@spectrum-css/menu": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/alertdialog":
       optional: true
@@ -4989,8 +4993,8 @@ __metadata:
     "@spectrum-css/fieldlabel": "npm:10.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/fieldlabel": ">=10.0.0 <11.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/fieldlabel": ">=10"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/fieldlabel":
       optional: true
@@ -5019,8 +5023,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -5036,8 +5040,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -5056,9 +5060,9 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/clearbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/textfield": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/clearbutton":
       optional: true
@@ -5078,8 +5082,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -5096,7 +5100,7 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/stepper": ">=7.0.0 <8.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/stepper":
       optional: true
@@ -5162,11 +5166,11 @@ __metadata:
     "@spectrum-css/textfield": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/actionbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/actionbutton": ">=7"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/infieldbutton": ">=6.0.0 <7.0.0"
     "@spectrum-css/textfield": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
       optional: true
@@ -5188,7 +5192,7 @@ __metadata:
     "@spectrum-css/opacitycheckerboard": "npm:4.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/opacitycheckerboard": ">=4.0.0 <5.0.0"
+    "@spectrum-css/opacitycheckerboard": ">=4"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
   peerDependenciesMeta:
     "@spectrum-css/opacitycheckerboard":
@@ -5206,7 +5210,7 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/swatch": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/swatch":
       optional: true
@@ -5238,11 +5242,11 @@ __metadata:
     "@spectrum-css/thumbnail": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0 <15.0.0"
-    "@spectrum-css/checkbox": ">=10.0.0 <11.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/checkbox": ">=10"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/thumbnail": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/button":
       optional: true
@@ -5266,10 +5270,10 @@ __metadata:
     "@spectrum-css/picker": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/menu": ">=9.0.0 <10.0.0"
     "@spectrum-css/picker": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -5293,8 +5297,8 @@ __metadata:
   peerDependencies:
     "@spectrum-css/avatar": ">=9.0.0 <10.0.0"
     "@spectrum-css/clearbutton": ">=7.0.0 <8.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/avatar":
       optional: true
@@ -5315,7 +5319,7 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/tag": ">=10.0.0 <11.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/tag":
       optional: true
@@ -5332,7 +5336,7 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/helptext": ">=7.0.0 <8.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/helptext":
       optional: true
@@ -5349,7 +5353,7 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
     "@spectrum-css/opacitycheckerboard": ">=4.0.0 <5.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/opacitycheckerboard":
       optional: true
@@ -5363,18 +5367,15 @@ __metadata:
   resolution: "@spectrum-css/toast@workspace:components/toast"
   dependencies:
     "@spectrum-css/button": "npm:14.0.1"
-    "@spectrum-css/closebutton": "npm:6.0.1"
+    "@spectrum-css/closebutton": "npm:5.0.0-next.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0 <15.0.0"
-    "@spectrum-css/closebutton": ">=6.0.0 <7.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/button": ">=14"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/button":
-      optional: true
-    "@spectrum-css/closebutton":
       optional: true
     "@spectrum-css/icon":
       optional: true
@@ -5402,7 +5403,6 @@ __metadata:
     postcss: "npm:^8.5.2"
     postcss-sorting: "npm:^9.1.0"
     style-dictionary: "npm:^4.3.2"
-    stylelint: "npm:^16.14.1"
   languageName: unknown
   linkType: soft
 
@@ -5414,8 +5414,8 @@ __metadata:
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -5435,12 +5435,12 @@ __metadata:
     "@spectrum-css/modal": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/button": ">=14.0.0 <15.0.0"
+    "@spectrum-css/button": ">=14"
     "@spectrum-css/dialog": ">=12.0.0 <13.0.0"
-    "@spectrum-css/divider": ">=5.0.0 <6.0.0"
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
-    "@spectrum-css/modal": ">=7.0.0 <8.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/divider": ">=5"
+    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/modal": ">=7"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/button":
       optional: true
@@ -5465,9 +5465,9 @@ __metadata:
     "@spectrum-css/thumbnail": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
+    "@spectrum-css/icon": ">=9"
     "@spectrum-css/thumbnail": ">=8.0.0 <9.0.0"
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/icon":
       optional: true
@@ -5484,7 +5484,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "npm:16.0.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
+    "@spectrum-css/tokens": ">=16"
   peerDependenciesMeta:
     "@spectrum-css/tokens":
       optional: true
@@ -5549,7 +5549,7 @@ __metadata:
     ava: "npm:^6.2.0"
     c8: "npm:^10.1.3"
     postcss: "npm:^8.5.2"
-    postcss-selector-parser: "npm:^6.1.1"
+    postcss-selector-parser: "npm:^6.1.2"
     postcss-values-parser: "npm:^6.0.2"
   peerDependencies:
     postcss: ">=8"
@@ -9025,46 +9025,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano-preset-default@npm:^7.0.4":
-  version: 7.0.4
-  resolution: "cssnano-preset-default@npm:7.0.4"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    css-declaration-sorter: "npm:^7.2.0"
-    cssnano-utils: "npm:^5.0.0"
-    postcss-calc: "npm:^10.0.0"
-    postcss-colormin: "npm:^7.0.1"
-    postcss-convert-values: "npm:^7.0.2"
-    postcss-discard-comments: "npm:^7.0.1"
-    postcss-discard-duplicates: "npm:^7.0.0"
-    postcss-discard-empty: "npm:^7.0.0"
-    postcss-discard-overridden: "npm:^7.0.0"
-    postcss-merge-longhand: "npm:^7.0.2"
-    postcss-merge-rules: "npm:^7.0.2"
-    postcss-minify-font-values: "npm:^7.0.0"
-    postcss-minify-gradients: "npm:^7.0.0"
-    postcss-minify-params: "npm:^7.0.1"
-    postcss-minify-selectors: "npm:^7.0.2"
-    postcss-normalize-charset: "npm:^7.0.0"
-    postcss-normalize-display-values: "npm:^7.0.0"
-    postcss-normalize-positions: "npm:^7.0.0"
-    postcss-normalize-repeat-style: "npm:^7.0.0"
-    postcss-normalize-string: "npm:^7.0.0"
-    postcss-normalize-timing-functions: "npm:^7.0.0"
-    postcss-normalize-unicode: "npm:^7.0.1"
-    postcss-normalize-url: "npm:^7.0.0"
-    postcss-normalize-whitespace: "npm:^7.0.0"
-    postcss-ordered-values: "npm:^7.0.1"
-    postcss-reduce-initial: "npm:^7.0.1"
-    postcss-reduce-transforms: "npm:^7.0.0"
-    postcss-svgo: "npm:^7.0.1"
-    postcss-unique-selectors: "npm:^7.0.1"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/0083821e778bdf7b8aa9589408a01a717be730f73584e7b81756a6fcf87af05b8f17342025e666572a8d573cc30783f2d817b0f7ad63670398bc3135b017ccad
-  languageName: node
-  linkType: hard
-
 "cssnano-preset-default@npm:^7.0.6":
   version: 7.0.6
   resolution: "cssnano-preset-default@npm:7.0.6"
@@ -9114,15 +9074,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano@npm:^7.0.3":
-  version: 7.0.4
-  resolution: "cssnano@npm:7.0.4"
+"cssnano@npm:^7.0.6":
+  version: 7.0.6
+  resolution: "cssnano@npm:7.0.6"
   dependencies:
-    cssnano-preset-default: "npm:^7.0.4"
+    cssnano-preset-default: "npm:^7.0.6"
     lilconfig: "npm:^3.1.2"
   peerDependencies:
     postcss: ^8.4.31
-  checksum: 10c0/3939a0b37b11cb4bae92f7916517c7ba21257551f92517b49a640d5df32e855fb7e73321f4be44d2c2de578309c05d711cdcb1976e95607b1b7f92bd4cbd1350
+  checksum: 10c0/19ff09931a1531e7c0c0d8928da554d99213aa0bb1f3b93cc6b4987727d60a8cd5537b113a5cf4f95cc1db65bba3f2b35476bd63bb57e7469d4eab73e07d736d
   languageName: node
   linkType: hard
 
@@ -16448,18 +16408,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-calc@npm:^10.0.0":
-  version: 10.0.0
-  resolution: "postcss-calc@npm:10.0.0"
-  dependencies:
-    postcss-selector-parser: "npm:^6.0.16"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.38
-  checksum: 10c0/d4d529f2f71b49f17441eed74a7564ccd2779c72ed8648d4bb2530261a27c0ca01fe6a07260e7bf57e55f46dd68dea07e52fd1a6b538db7bc13015124be258a5
-  languageName: node
-  linkType: hard
-
 "postcss-calc@npm:^10.0.2":
   version: 10.0.2
   resolution: "postcss-calc@npm:10.0.2"
@@ -16522,20 +16470,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-colormin@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-colormin@npm:7.0.1"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    caniuse-api: "npm:^3.0.0"
-    colord: "npm:^2.9.3"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/e01e9e129ce39320cf10bb09ee2a3ab5b44b77805d3f7827eea07297644838b85c33b78996eeae0a1aba327ffd72a6ab1d24949ebc831523e310e916d5500371
-  languageName: node
-  linkType: hard
-
 "postcss-colormin@npm:^7.0.2":
   version: 7.0.2
   resolution: "postcss-colormin@npm:7.0.2"
@@ -16547,18 +16481,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/76d09fb7e0218698e622a7c2cfc9087985f48f3a7e44f2655d5eefac4ae9c04198ae9d408dc7ace15d3aa5bde80e7031e462b0cb9b5bd50cfa76bbb1503c755b
-  languageName: node
-  linkType: hard
-
-"postcss-convert-values@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "postcss-convert-values@npm:7.0.2"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/beb59faf6aae97e6d3c233c5e6ed06cc60d65c49eec576036e3d0da1a831a1e827e3d41f5e81d016440b4f0bdf1406268ae069c4d5b38a6667b310c3da079d22
   languageName: node
   linkType: hard
 
@@ -16628,17 +16550,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-discard-comments@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-discard-comments@npm:7.0.1"
-  dependencies:
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/64de3fced7e0e49dfea6aede8a5ca495b81dcd01c3c47734a5fbc86a3cb2b1ae39e1958e34e9bea64ecabd5fb4d8c287ec1d6189cf175c2434c6b6582da79948
-  languageName: node
-  linkType: hard
-
 "postcss-discard-comments@npm:^7.0.3":
   version: 7.0.3
   resolution: "postcss-discard-comments@npm:7.0.3"
@@ -16647,15 +16558,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/7700c8fb9a83c6ea5cc784267b9afd6e2968fda0358d583af5913baa28dfc91b0f2a4bd0b2bd62a86ebcb8dadb2547e287beae25b5a097e21c1f723367ccf112
-  languageName: node
-  linkType: hard
-
-"postcss-discard-duplicates@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "postcss-discard-duplicates@npm:7.0.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/37d568dc18d47b8b9f0fd6d5115b1faf96c2bf429fc4586508a773533479e18627d6260cad6a3ca7d3bfc2f220fd9448410aee40e07f2ec6c6f96bbe3595dbc8
   languageName: node
   linkType: hard
 
@@ -16863,18 +16765,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-merge-longhand@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "postcss-merge-longhand@npm:7.0.2"
-  dependencies:
-    postcss-value-parser: "npm:^4.2.0"
-    stylehacks: "npm:^7.0.2"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/71d22418e5850e134bfcf2038acb1c91eeb48d9b6f9e4c0252fee757e11dc4ae351097a855c327fbc38dc7658fa6edc7cc7f458c08bb4044b82c6005dc565fcb
-  languageName: node
-  linkType: hard
-
 "postcss-merge-longhand@npm:^7.0.4":
   version: 7.0.4
   resolution: "postcss-merge-longhand@npm:7.0.4"
@@ -16884,20 +16774,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/6f50f7775dd361f83daf1acb3e0001d700ed2b7b9bea02df172143adc7fa196ce9209c9e482010ce36fd704512433b62692c5ab2eef5226db71ea3e694654dc7
-  languageName: node
-  linkType: hard
-
-"postcss-merge-rules@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "postcss-merge-rules@npm:7.0.2"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    caniuse-api: "npm:^3.0.0"
-    cssnano-utils: "npm:^5.0.0"
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/fbad20382ca45f1b3b5ff704c075f899cc9ba8418ae6effbdeb9e7c1f9b5c24996d1941ad36cd0936d60cbf127a72f235b2cbb0c44d9239a8a61042406d95b4a
   languageName: node
   linkType: hard
 
@@ -16939,19 +16815,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-minify-params@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-minify-params@npm:7.0.1"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    cssnano-utils: "npm:^5.0.0"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/84e1c4de5af47178c1f48e10ce16341560f32bb2becf5ec9b014103f6c706174bc70885e2e13ced4de9b4f1959fb970193261cbd4751c8b87d5159e859e8c5ec
-  languageName: node
-  linkType: hard
-
 "postcss-minify-params@npm:^7.0.2":
   version: 7.0.2
   resolution: "postcss-minify-params@npm:7.0.2"
@@ -16962,18 +16825,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/0e041f70554bae9d4a66c8ab2f2f3ed8bf73862c9d5ff9972ac7f1a596badd1544f093fa2362dd33e96c038af9e10287cdbfec9f480c49bffdcbaca9fdcb1e4e
-  languageName: node
-  linkType: hard
-
-"postcss-minify-selectors@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "postcss-minify-selectors@npm:7.0.2"
-  dependencies:
-    cssesc: "npm:^3.0.0"
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/87e0c21a0135b6c61b58d62c4c1e0cbd3cfb516ff8105db714c6a33a5edc477846ae220399d368e4ef6518529c711aa2dee9ff49e9befd93e83d5c939f3084a1
   languageName: node
   linkType: hard
 
@@ -17128,18 +16979,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-normalize-unicode@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-normalize-unicode@npm:7.0.1"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/fcabac738765f608cb211ac01a19f9a7d784f99d223ef6f31352f37b9bcf008e0ca7849414c9e77116be8660d78b01dba6fc4a87cee7c9a977d3c2741d6a222d
-  languageName: node
-  linkType: hard
-
 "postcss-normalize-unicode@npm:^7.0.2":
   version: 7.0.2
   resolution: "postcss-normalize-unicode@npm:7.0.2"
@@ -17226,7 +17065,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:^9.5.13":
+"postcss-preset-env@npm:^9.6.0":
   version: 9.6.0
   resolution: "postcss-preset-env@npm:9.6.0"
   dependencies:
@@ -17328,18 +17167,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-reduce-initial@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-reduce-initial@npm:7.0.1"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    caniuse-api: "npm:^3.0.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/3e7c6c1d0cc4ace38f44971f02d0dd98131af678cf114aa05cfa0c066420019d5329c221ef8507644b8a79d0e76534303f747c97860ac777fe17f57110edefe1
-  languageName: node
-  linkType: hard
-
 "postcss-reduce-initial@npm:^7.0.2":
   version: 7.0.2
   resolution: "postcss-reduce-initial@npm:7.0.2"
@@ -17418,7 +17245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^6.0.13, postcss-selector-parser@npm:^6.0.16, postcss-selector-parser@npm:^6.0.4":
+"postcss-selector-parser@npm:^6.0.13, postcss-selector-parser@npm:^6.0.4":
   version: 6.1.1
   resolution: "postcss-selector-parser@npm:6.1.1"
   dependencies:
@@ -17438,7 +17265,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^6.1.1, postcss-selector-parser@npm:^6.1.2":
+"postcss-selector-parser@npm:^6.1.2":
   version: 6.1.2
   resolution: "postcss-selector-parser@npm:6.1.2"
   dependencies:
@@ -17494,17 +17321,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/7c7b177e6f4e2a3e9ada76d53afa02e08d900c8ac15600ba9daa80480269d538405e544bd8091bc5eb7529173a476896fad885a72a247258265424b29a9195ed
-  languageName: node
-  linkType: hard
-
-"postcss-unique-selectors@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "postcss-unique-selectors@npm:7.0.1"
-  dependencies:
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/6352d71ce2f65265f545831c2ce3686bd71961d08a2247c545d717d93d23b1eb08bb986efc11194d31970eea4cb42207b9aa9a3f4666d75492a6cbf1493cf466
   languageName: node
   linkType: hard
 
@@ -18822,10 +18638,10 @@ __metadata:
     "@spectrum-tools/postcss-rgb-mapping": "workspace:^"
     "@yarnpkg/types": "npm:^4.0.0"
     at-rule-packer: "npm:^0.4.2"
-    autoprefixer: "npm:^10.4.19"
+    autoprefixer: "npm:^10.4.20"
     colors: "npm:^1.4.0"
     cross-env: "npm:^7.0.3"
-    cssnano: "npm:^7.0.3"
+    cssnano: "npm:^7.0.6"
     cssnano-preset-advanced: "npm:^7.0.6"
     diff: "npm:^7.0.0"
     diff2html: "npm:^3.4.51"
@@ -18851,7 +18667,7 @@ __metadata:
     postcss-licensing: "npm:^2.0.0"
     postcss-load-config: "npm:^5.1.0"
     postcss-modules: "npm:^6.0.1"
-    postcss-preset-env: "npm:^9.5.13"
+    postcss-preset-env: "npm:^9.6.0"
     postcss-pseudo-classes: "npm:^0.4.0"
     postcss-reporter: "npm:^7.1.0"
     postcss-selector-replace: "npm:^1.0.2"
@@ -18862,7 +18678,7 @@ __metadata:
     semver: "npm:^7.7.1"
     stylelint: "npm:^16.14.1"
     stylelint-config-standard: "npm:^36.0.1"
-    stylelint-header: "npm:^2.0.1"
+    stylelint-header: "npm:^2.1.0"
     stylelint-high-performance-animation: "npm:^1.10.0"
     stylelint-order: "npm:^6.0.4"
     stylelint-selector-bem-pattern: "npm:^4.0.1"
@@ -19261,18 +19077,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylehacks@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "stylehacks@npm:7.0.2"
-  dependencies:
-    browserslist: "npm:^4.23.1"
-    postcss-selector-parser: "npm:^6.1.0"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/552299e869ac430e1076c025ace6c80bdfd5b672632435625eb1bd45ff5611aad7f3ee810e72edc04dc0fc3761e08dec40d27b72c50b95690eea2de43238b8d8
-  languageName: node
-  linkType: hard
-
 "stylehacks@npm:^7.0.4":
   version: 7.0.4
   resolution: "stylehacks@npm:7.0.4"
@@ -19305,14 +19109,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-header@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "stylelint-header@npm:2.0.1"
+"stylelint-header@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "stylelint-header@npm:2.1.0"
   dependencies:
+    lodash-es: "npm:^4.17.21"
     string-similarity: "npm:^4.0.4"
   peerDependencies:
     stylelint: ^15.0.0 || ^16.0.0
-  checksum: 10c0/ed06484ec0484ad02878c8e1512b34926e87532db7287c315c015532f7cfd3d202df5aa2603a06bb1569dc0ac93cefa94bd952b75d71dc8035608578a3fa64d4
+  checksum: 10c0/e2fb17dcc0142ac48b88d31d7f6ede23bb2d3df77cc18f69ae9638814de656680808f8edb8efd8f0e60a7c6dbec0399b85fdc644b8ebf6e1ebc3f2eb80496a80
   languageName: node
   linkType: hard
 

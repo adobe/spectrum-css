@@ -25,11 +25,11 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/checkbox": ">=10.0.0 <11.0.0",
-		"@spectrum-css/divider": ">=5.0.0 <6.0.0",
-		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
+		"@spectrum-css/checkbox": ">=10",
+		"@spectrum-css/divider": ">=5",
+		"@spectrum-css/icon": ">=9",
 		"@spectrum-css/switch": ">=6.0.0 <7.0.0",
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0",
+		"@spectrum-css/tokens": ">=16",
 		"@spectrum-css/tray": ">=5.0.0 <6.0.0"
 	},
 	"peerDependenciesMeta": {

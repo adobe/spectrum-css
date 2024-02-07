@@ -49,7 +49,7 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
 	const packageJson = await fsp.readFile(join(cwd, "package.json"), "utf-8").then(JSON.parse);
 
 	const inputs = await fg(inputGlob, { cwd });
-	const contents = inputs.map(input => `@import "${input}";`).join("\n");
+	const contents = inputs.map(input => `@import "@spectrum-css/tokens/${input}";`).join("\n");
 	if (!contents) return;
 
 	return processCSS(contents, undefined, outputPath, {
@@ -57,7 +57,6 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
 		clean,
 		configPath: cwd,
 		map: false,
-		resolveImports: true,
 		customTagline: generateTagline(packageJson),
 	});
 }
@@ -84,7 +83,7 @@ async function appendCustomOverrides({ cwd = process.cwd(), packageJson = {} } =
 			join("custom", file)
 		], { cwd, shouldCombine: true });
 
-		if (!combinedContent || !combinedContent[0].content) continue;
+		if (!combinedContent || !combinedContent?.[0]?.content) continue;
 
 		promises.push(
 			processCSS(combinedContent[0].content, join(cwd, "dist", "css", file), join(cwd, "dist", "css", file), {
@@ -162,5 +161,7 @@ async function main({
 		})
 	);
 }
+
+main();
 
 export { main as default };
