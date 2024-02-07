@@ -1,4 +1,3 @@
-import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
 import { Template } from "./template";
 
@@ -77,7 +76,7 @@ export const Default = ({
 			})}
 
 			${
-				isChromatic() ?
+				window.isChromatic() ?
 					Template({
 						...args,
 						headerText: 'in-line alert header announcing something very long and in-line',

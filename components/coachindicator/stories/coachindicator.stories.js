@@ -1,5 +1,4 @@
 import { html } from "lit";
-import isChromatic from "chromatic/isChromatic";
 
 import { Template } from "./template";
 
@@ -84,7 +83,7 @@ const chromaticGroup = (args) => {
 };
 
 
-export const Default = (args) => isChromatic() ? chromaticGroup(args) : Template(args);
+export const Default = (args) => html`${window.isChromatic() ? chromaticGroup(args) : Template(args)}`;
 Default.args = {
 	variant: "default"
 };

@@ -1,4 +1,3 @@
-import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
 
 // Import the component markup template
@@ -67,7 +66,7 @@ export const Default = ({
 				],
 				useAccentColor: false,
 			})}
-			${isChromatic() ?
+			${window.isChromatic() ?
 				Template({
 					...args,
 					heading: "Error 404: This is not the page you're looking for",

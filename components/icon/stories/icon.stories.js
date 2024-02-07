@@ -1,5 +1,4 @@
 // Import the component markup template
-import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
@@ -9,7 +8,7 @@ import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.j
 
 /**
  * Create a list of all UI Icons with their sizing numbers.
- * 
+ *
  * The list is a little long until Storybook adds a way to use conditional options
  * in controls, e.g. a "uiSize" control with options pulled from uiIconSizes:
  * @see https://github.com/storybookjs/storybook/discussions/24235
@@ -19,7 +18,7 @@ const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
 	// Icons like Gripper that don't have sizes yet, represented by any empty array.
 	if (uiIconSizes[baseIconName]?.length == 0){
 		return [baseIconName];
-	} 
+	}
 	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
 }).flat();
 
@@ -104,7 +103,7 @@ export default {
 };
 
 export const Default = (args) => {
-	if (isChromatic()){
+	if (window.isChromatic()){
 		return TestTemplate({ ...args });
 	} else {
 		return Template({
@@ -113,7 +112,7 @@ export const Default = (args) => {
 			setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
 		});
 	}
-} 
+}
 
 Default.args = {};
 

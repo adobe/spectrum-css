@@ -1,7 +1,7 @@
-// Import the component markup template
-import { Template } from "./template";
 import { html } from "lit";
-import isChromatic from "chromatic/isChromatic";
+import { when } from "lit/directives/when.js";
+
+import { Template } from "./template";
 
 export default {
 	title: "Components/Accordion",
@@ -58,7 +58,7 @@ export default {
 	},
 };
 
-const AccordianGroup = ({
+const AccordionGroup = ({
 	customStyles = {},
 	...args
 }) => {
@@ -101,7 +101,7 @@ const AccordianGroup = ({
 				],
 			]),
 			})}
-			${isChromatic() ?
+			${when(window.isChromatic(), () =>
 				Template({
 					...args,
 					customStyles: { "max-inline-size": "300px"},
@@ -140,8 +140,8 @@ const AccordianGroup = ({
 					],
 				]),
 				})
-				: null }
-			${isChromatic() ?
+			)}
+			${when(window.isChromatic(), () =>
 				Template({
 					...args,
 					disableAll: true,
@@ -176,10 +176,10 @@ const AccordianGroup = ({
 					],
 				]),
 				})
-				: null }
+			)}
 		</div>
 	`;
 };
 
-export const Default = AccordianGroup.bind({});
+export const Default = AccordionGroup.bind({});
 Default.args = {};

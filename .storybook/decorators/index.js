@@ -1,7 +1,8 @@
-import { useEffect, makeDecorator } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { html } from "lit";
 
 export { withContextWrapper } from "./contextsWrapper.js";
+export { withTestingPreviewWrapper } from "./withTestingPreviewWrapper.js";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>

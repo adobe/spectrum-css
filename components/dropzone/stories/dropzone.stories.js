@@ -1,5 +1,4 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
-import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
 import { Template } from "./template";
 
@@ -57,7 +56,7 @@ export const Default = ({
 				...args
 			})}
 
-			${isChromatic() ?
+			${window.isChromatic() ?
 				Template({
 					...args,
 					customHeading: 'Drag and drop your file to upload',

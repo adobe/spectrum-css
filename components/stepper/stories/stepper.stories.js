@@ -1,4 +1,3 @@
-import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
 import { Template } from "./template";
 
@@ -104,7 +103,7 @@ export const Default = ({
 				...args
 			})}
 
-			${isChromatic() ? chromaticKitchenSink(args) : null}
+			${window.isChromatic() ? chromaticKitchenSink(args) : null}
 		</div>
 	`;
 };

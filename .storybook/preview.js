@@ -6,6 +6,7 @@ import {
 	withContextWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
+	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 } from "./decorators/index.js";
 
@@ -74,6 +75,18 @@ export const globalTypes = {
 			dynamicTitle: true,
 		},
 	},
+	testingPreview: {
+		title: "Testing preview",
+		description: "See how the story will look to Chromatic",
+		defaultValue: false,
+		toolbar: {
+			icon: "beaker",
+			items: [
+				{ value: true, title: "Show testing preview" },
+				{ value: false, title: "Default mode" },
+			],
+		},
+	}
 };
 
 // Global properties added to each component;
@@ -243,8 +256,8 @@ export const decorators = [
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withContextWrapper,
+	withTestingPreviewWrapper,
 	withActions,
-	// ...[isChromatic() ? withSizingWrapper : false].filter(Boolean),
 ];
 
 export default {
