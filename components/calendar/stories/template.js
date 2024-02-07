@@ -6,7 +6,6 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import { action } from "@storybook/addon-actions";
 import { useArgs, useGlobals } from "@storybook/client-api";
-import isChromatic from "chromatic/isChromatic";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
@@ -32,13 +31,6 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
-	const [{ lang }] = useGlobals();
-
-	const displayedDate = new Date(`${month} 1, ${year}`);
-	const displayedMonth = displayedDate.getMonth();
-	const displayedYear = displayedDate.getFullYear();
-
 	const DOW = [
 		"Sunday",
 		"Monday",
@@ -62,6 +54,23 @@ export const Template = ({
 		return date.toLocaleString(lang, { month: format });
 	};
 
+	const [_, updateArgs] = useArgs();
+	const [{ lang, testingPreview }] = useGlobals();
+
+	if (testingPreview && window.isChromatic()) {
+		month = getMonthName(0);
+		year = 2021;
+	}
+
+	const displayedDate = new Date(`${month} 1, ${year}`);
+	const displayedMonth = displayedDate.getMonth();
+	const displayedYear = displayedDate.getFullYear();
+
+	let today = new Date();
+	if (testingPreview && window.isChromatic()) {
+		today = displayedDate;
+	}
+
 	/**
 	 * @typedef {{ date: Date, dateClassList: import('lit').ClassInfo, isSelected: boolean, isToday: boolean, isOutsideMonth: boolean }} DateMetadata
 	 **/
@@ -75,7 +84,6 @@ export const Template = ({
 	 */
 	const generateMonthArray = ({ selectedDate, lastSelectedDate }) => {
 		/* Fetch a clean (time-free) version of today's date */
-		const today = !isChromatic() ? new Date() : displayedDate;
 		today.setHours(0, 0, 0, 0);
 		const todayDatetime = today.getTime();
 

@@ -1,8 +1,6 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
-import isChromatic from "chromatic/isChromatic";
 
 const months = [...Array(12).keys()].map((key) =>
 	new Date(0, key).toLocaleString("en", { month: "long" })
@@ -125,8 +123,8 @@ RangeSelection.args = {
 
 export const TodayHighlighted = Template.bind({});
 TodayHighlighted.args = {
-	month: isChromatic() ? months[0] : months[new Date().getMonth()],
-	year: isChromatic() ? 2021 : new Date().getFullYear(),
+	month: months[new Date().getMonth()],
+	year: new Date().getFullYear(),
 };
 
 export const Disabled = Template.bind({});

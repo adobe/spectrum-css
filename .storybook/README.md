@@ -67,6 +67,8 @@ We are leveraging the following add-ons:
 - [@storybook/addon-a11y](https://github.com/storybookjs/storybook/tree/next/code/addons/a11y)
 - [@whitespace/storybook-addon-html](https://www.npmjs.com/package/@whitespace/storybook-addon-html)
 - [@etchteam/storybook-addon-status](https://storybook.js.org/addons/@etchteam/storybook-addon-status)
+- [@storybook/addon-interactions](https://github.com/storybookjs/storybook/tree/next/code/addons/interactions)
+- [@chromaui/addon-visual-tests](https://www.chromatic.com/docs/visual-testing-addon/)
 
 ## Writing stories
 
@@ -322,6 +324,37 @@ export const Template = ({
 ## Testing stories
 
 Now that your stories are written, we need to add them to our visual regression suite. We are using [chromatic](https://www.chromatic.com), a tool that is designed to work with Storybook.
+
+To optimize snapshot usage, we organize our stories into groups when rendered inside the Chromatic environment. This is done by adding an `window.isChromatic()` check and creating groups of stories (note: do not import the `isChromatic` function directly, there is added functionality we've included when sourcing it from`window`). See example below:
+
+```js
+
+const AccordionGroup = ({
+ customStyles = {},
+ ...args
+}) => {
+ return html`
+   ${Template(args)}
+   ${when(window.isChromatic(), () =>
+    Template({
+     ...args,
+     customStyles: { "max-inline-size": "300px"},
+    })
+   )}
+   ${when(window.isChromatic(), () =>
+    Template({
+     ...args,
+     disableAll: true,
+    })
+   )}
+ `;
+};
+
+export const Default = AccordionGroup.bind({});
+Default.args = {};
+```
+
+Ideally you should have a single story file for each component with multiple variations and states represented in the "Kitchen sink" grouping that only renders in Chromatic. To preview the groups locally, there is a global toolbar setting with a beaker icon called "Show testing preview" that will activate the Chromatic view.
 
 ### Getting started
 

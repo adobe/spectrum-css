@@ -1,4 +1,3 @@
-import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
 import { Template } from "./template";
 
@@ -86,7 +85,7 @@ export const Default = ({
 			})}
 
 			${
-				isChromatic() ?
+				window.isChromatic() ?
 				Template({
 					...args,
 					label: "Status light label that is long and wraps to the next line",
