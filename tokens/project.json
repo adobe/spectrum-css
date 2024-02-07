@@ -17,7 +17,7 @@
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss", "rimraf"] }],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node \"./tasks/token-rollup.js\"",
+					"node --no-warnings ./tasks/token-rollup.js",
 					"rm -f ./dist/css/express/custom-light*.css ./dist/css/express/custom-dark*.css ./dist/css/spectrum/custom-dark*.css ./dist/css/spectrum/custom-light*.css",
 					"cross-env NODE_OPTIONS=\"--no-warnings\" postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace"
 				],
@@ -50,7 +50,11 @@
 		"style-dictionary": {
 			"dependsOn": ["clean"],
 			"executor": "nx:run-commands",
-			"inputs": ["scripts"],
+			"inputs": [
+				"{projectRoot}/postcss.config.js",
+				"{projectRoot}/style-dictionary.config.js",
+				"{projectRoot}/utilities/style-dictionary.utils.js"
+			],
 			"options": {
 				"commands": [
 					"style-dictionary build --config style-dictionary.config.js"

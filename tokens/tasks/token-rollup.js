@@ -14,7 +14,7 @@
 /* eslint-disable no-console */
 
 import fs, { existsSync, readdirSync } from "fs";
-import { basename, join } from "path";
+import { basename, join, relative } from "path";
 const fsp = fs.promises;
 
 import fg from "fast-glob";
@@ -63,7 +63,7 @@ async function componentTheming() {
 		// Nothing to do if there's no content
 		if (!contentData || contentData.length === 0) continue;
 
-		const imports = contentData.map(({ input }) => `@import "${input}";`).join("\n");
+		const imports = contentData.map(({ input }) => `@import "./${relative(componentDir, input)}";`).join("\n");
 
 		const sharedPostCSSConfig = {
 			cwd: componentDir,
@@ -93,7 +93,7 @@ async function componentTheming() {
 				},
 			),
 			...contentData.map(async ({ content, input }) => {
-				return processCSS(content, join(componentDir, input), join(dirs.tokens, "dist", "css", "components", basename(input, ".css"), `${component}.css`), {
+				return processCSS(content, input, join(dirs.tokens, "dist", "css", "components", basename(input, ".css"), `${component}.css`), {
 					skipMapping: false,
 					// Only output the new selectors with the system mappings
 					stripLocalSelectors: true,
@@ -135,7 +135,7 @@ async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
 
 			promises.push(
 				copy(join(`custom-${theme}`, file), join("dist", "css", theme, file), { cwd }),
-				combinedContent[0].content ? writeAndReport(combinedContent[0].content, join(cwd, "dist", "css", theme, strippedFilename), { cwd }) : Promise.resolve()
+				combinedContent?.[0]?.content ? writeAndReport(combinedContent[0].content, join(cwd, "dist", "css", theme, strippedFilename), { cwd }) : Promise.resolve()
 			);
 		}
 	});
@@ -230,5 +230,7 @@ async function main({
 		process.exit(1);
 	});
 }
+
+main();
 
 export { main as default };
