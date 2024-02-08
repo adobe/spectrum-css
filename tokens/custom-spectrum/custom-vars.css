@@ -36,6 +36,9 @@ governing permissions and limitations under the License.
   --spectrum-animation-ease-out: cubic-bezier(0, 0, 0.40, 1);
   --spectrum-animation-ease-linear: cubic-bezier(0, 0, 1, 1);
 
+  /* TODO: refactor to use a translation layer that would adjust current `corner-radius-1000` to be 9999px instead of 0.5 */
+  /* should be used in place of `--spectrum-corner-radius-1000` and -`-spectrum-corner-radius-full`*/
+  --spectrum-corner-radius-1000-full: 9999px;
 
   --spectrum-sans-font-family-stack: adobe-clean, var(--spectrum-sans-serif-font-family), 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
   --spectrum-sans-serif-font: var(--spectrum-sans-font-family-stack);
