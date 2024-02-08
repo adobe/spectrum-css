@@ -11,6 +11,7 @@ module.exports = {
 	stories: [
 		"../components/*/stories/*.stories.js",
 		"./guides/*.mdx",
+		"./deprecated/*/*.stories.js",
 	],
 	rootDir: "../",
 	staticDirs: ["../assets"],

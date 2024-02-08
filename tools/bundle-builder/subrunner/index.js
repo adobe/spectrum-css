@@ -13,64 +13,41 @@ governing permissions and limitations under the License.
 const fs = require("fs");
 const path = require("path");
 
-const colors = require("colors");
+require("colors");
 const logger = require("gulplog");
 const dirs = require("../lib/dirs");
 const depUtils = require("../lib/depUtils");
-
-function chdir(dir) {
-	process.chdir(dir);
-	logger.debug(`Working directory changed to ${dir.magenta}`);
-}
 
 /*
   Run the specified gulp task for the given package
 */
 function runComponentTask(packageDir, task, callback) {
-	// Drop org
 	packageName = packageDir.split("/").pop();
 
-	var gulpfile = path.join(packageDir, "gulpfile.js");
+	const gulpfile = path.join(packageDir, "gulpfile.js");
 
 	if (!fs.existsSync(gulpfile)) {
-		logger.warn(`No gulpfile found for ${packageName.yellow}`);
-		callback();
-		return;
+		return callback();
 	}
 
-	let cwd = process.cwd();
+	const cwd = process.cwd();
 
-	chdir(packageDir);
+	process.chdir(packageDir);
 
-	var tasks = require(gulpfile);
+	const tasks = require(gulpfile);
 
 	if (tasks[task]) {
-		logger.warn(`Starting '${packageName.yellow}:${task.yellow}'...`);
-
 		tasks[task](function (err) {
-			chdir(cwd);
+			process.chdir(cwd);
 
-			if (err) {
-				logger.error(
-					`Error running '${packageName.yellow}:${task.yellow}': ${err}`
-				);
-
-				callback(err);
-			} else {
-				logger.warn(`Finished '${packageName.yellow}:${task.yellow}'`);
-
-				callback();
-			}
+			callback(err);
 		});
 	} else {
-		var err = new Error(
+		process.chdir(cwd);
+
+		callback(new Error(
 			`Task '${packageName.yellow}:${task.yellow}' not found!`
-		);
-		logger.error(err);
-
-		chdir(cwd);
-
-		callback(err);
+		));
 	}
 }
 
@@ -78,13 +55,12 @@ function runComponentTask(packageDir, task, callback) {
   Run a task on every component in dependency order
 */
 async function runTaskOnAllComponents(task) {
-	const components = await depUtils
-		.getFolderDependencyOrder(dirs.components)
-		.then((result) =>
-			// Turn the package names into a path to the component directory
-			result.map((component) => path.dirname(require.resolve(`${component}/package.json`)))
-		)
-		.catch(console.error);
+	const result = await depUtils.getFolderDependencyOrder(dirs.components);
+
+	// Turn the package names into a path to the component directory
+	const components = result.map((component) => {
+		return path.dirname(require.resolve(`${component}/package.json`));
+	});
 
 	return runTaskOnPackages(task, components);
 }
@@ -94,6 +70,10 @@ async function runTaskOnAllComponents(task) {
 */
 function runTaskOnPackages(task, packages) {
 	return new Promise(async (resolve, reject) => {
+		if (!packages || !packages.length) {
+			return reject(`No packages provided for task ${task}!`);
+		}
+
 		let packageCount = packages.length;
 
 		function getNextPackage() {

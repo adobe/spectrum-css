@@ -60,9 +60,9 @@ function buildDocs_html() {
 			return reject(err);
 		}
 
-		let packageName = package.name.split("/").pop();
+		const packageName = package.name.split("/").pop();
 
-		let dnaVars = readJSONFile(
+		const dnaVars = readJSONFile(
 			path.join(
 				path.dirname(require.resolve("@spectrum-css/vars")),
 				"..",
@@ -72,7 +72,7 @@ function buildDocs_html() {
 		);
 
 		gulp
-			.src(["metadata.yml", "metadata/*.yml"], { allowEmpty: true })
+			.src(["metadata/*.yml"], { allowEmpty: true })
 			.pipe(
 				rename((file) => {
 					file.basename = packageName;
@@ -83,16 +83,15 @@ function buildDocs_html() {
 					dependencies: dependencies,
 					dnaVars: dnaVars,
 					pkg: package,
-					util: util,
+					util,
 				}))
 			)
 			.pipe(
-				through.obj(function compilePug(file, enc, cb) {
-					let data = Object.assign(
-						{},
-						{ component: yaml.load(String(file.contents)) },
-						file.data || {}
-					);
+				through.obj(function compilePug(file, _, cb) {
+					const data = {
+						component: yaml.load(String(file.contents)),
+						...(file.data ?? {})
+					};
 
 					file.path = ext(file.path, ".html");
 

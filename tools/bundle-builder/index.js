@@ -171,7 +171,6 @@ function copyPackages() {
 		.src([
 			`${dirs.components}/*/package.json`,
 			`${dirs.components}/*/dist/**`,
-			`!${dirs.components}/*/dist/docs/**`,
 		])
 		.pipe(
 			rename(function (file) {

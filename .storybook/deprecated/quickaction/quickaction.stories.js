@@ -1,9 +1,7 @@
-// Import the component markup template
-import { Template } from "./template";
+import { Template } from "@spectrum-css/quickaction/stories/template.js";
 
 export default {
-	title: "Components/Quick actions",
-	description: "The Quick actions component is...",
+	title: "Deprecated/Quick actions",
 	component: "QuickAction",
 	argTypes: {
 		content: { table: { disable: true } },
@@ -40,45 +38,31 @@ export default {
 		rootClass: "spectrum-QuickActions",
 		isOpen: true,
 		textOnly: false,
+		content: [
+			{
+				iconName: "Edit",
+				label: "Edit",
+			},
+			{
+				iconName: "Copy",
+				label: "Copy",
+			},
+			{
+				iconName: "Delete",
+				label: "Delete",
+			},
+		],
 	},
 	parameters: {
 		actions: {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("quickaction")
-				? "migrated"
-				: undefined,
+			type: "deprecated"
 		},
+		chromatic: { disable: true },
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	content: [
-		{
-			iconName: "Edit",
-		},
-		{
-			iconName: "Copy",
-		},
-		{
-			iconName: "Delete",
-		},
-	],
-};
-
-export const TextOnly = Template.bind({});
-TextOnly.args = {
-	content: [
-		{
-			label: "Edit",
-		},
-		{
-			label: "Copy",
-		},
-		{
-			label: "Delete",
-		},
-	],
-};
+Default.args = {};
