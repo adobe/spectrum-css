@@ -1,7 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
 import { html } from "lit";
-import isChromatic from "chromatic/isChromatic";
 import { argTypes, overflowProps } from "./index.js";
 
 export default {
@@ -36,19 +35,19 @@ const TabsGroup = ({
 			${Template({
           ...args
 			})}
-			${isChromatic() ?
+			${window.isChromatic() ?
 				Template({
           ...args,
           labelWithIcons: true
 				})
       : null }
-      ${isChromatic() ?
+      ${window.isChromatic() ?
         Template({
           ...args,
           iconOnly: true
         })
       : null }
-      ${isChromatic() ?
+      ${window.isChromatic() ?
         Template({
           ...args,
           isEmphasized: true
