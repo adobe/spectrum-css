@@ -1,5 +1,3 @@
-import isChromatic from "chromatic/isChromatic";
-
 import { html } from "lit";
 
 import { Template } from "./template";
@@ -233,10 +231,10 @@ const chromaticKitchenSink = (args) => html`
 	</div>
 `;
 
-export const Default = (args) => isChromatic() ? chromaticKitchenSink(args) : Template(args);
+export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
 Default.args = {};
 
-export const Quiet = (args) => isChromatic()
+export const Quiet = (args) => window.isChromatic()
 	? chromaticKitchenSink(args)
 	: Template({
 		...args
