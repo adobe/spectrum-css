@@ -20,8 +20,7 @@ governing permissions and limitations under the License.
 @import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-CloseButton {
-  /* TO DO: replace with custom var during corner rounding work */
-  --spectrum-closebutton-border-radius: 9999px;
+  --spectrum-closebutton-border-radius: var(--spectrum-corner-radius-full);
 
   /* Cross icon */
   --spectrum-closebutton-icon-color-default: var(--spectrum-neutral-content-color-default);
