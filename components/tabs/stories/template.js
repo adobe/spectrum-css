@@ -28,8 +28,18 @@ export const Template = ({
 }) => {
 
 	let displayedItems = []
+	let verticalSelectorStyle = {}
+
+	if (orientation === "vertical" && !isCompact) {
+		verticalSelectorStyle = {"block-size": "46px"}
+	} else if (orientation === "vertical" && isCompact) {
+		verticalSelectorStyle = {"block-size": "32px"}
+	} else {
+		verticalSelectorStyle = false
+	}
 
 	if (labelWithIcons) {
+		selectorStyle = verticalSelectorStyle ? verticalSelectorStyle : {"inline-size": "60px"},
 		displayedItems = [
 			{
 				id: "tab-1",
@@ -49,6 +59,7 @@ export const Template = ({
 			}
 		]
 	} else if (iconOnly){
+		selectorStyle = verticalSelectorStyle ? verticalSelectorStyle : {"inline-size": "20px"},
 		displayedItems = [
 			{
 				id: "tab-1",
@@ -65,6 +76,7 @@ export const Template = ({
 			}
 		]
 	} else {
+		selectorStyle = verticalSelectorStyle ? verticalSelectorStyle : {"inline-size": "35px"},
 		displayedItems = [
 			{
 				id: "tab-1",
@@ -98,7 +110,7 @@ export const Template = ({
 		>
 		<div
 			class="${rootClass}-selectionIndicator"
-			style=${ifDefined(styleMap(selectorStyle))}
+			style="width: 46px"
 		></div>
 		${Picker({
 			isQuiet: true,

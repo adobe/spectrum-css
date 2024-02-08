@@ -65,8 +65,5 @@ export const argTypes = {
 };
 
 export const overflowProps = {
-  selectorStyle: {
-    "width": "50px",
-  },
   overflow: true,
 };

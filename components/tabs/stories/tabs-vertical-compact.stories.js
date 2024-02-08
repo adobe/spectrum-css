@@ -46,8 +46,6 @@ const TabsGroup = ({
         Template({
             ...args,
             isEmphasized: true
-
-
         })
       : null }
 		</div>
@@ -55,9 +53,4 @@ const TabsGroup = ({
 };
 
 export const Default = TabsGroup.bind({});
-Default.args = {
-  selectorStyle: {
-    "height": "32px",
-    "top": "0"
-  },
-};
+Default.args = {};

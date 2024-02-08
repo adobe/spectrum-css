@@ -34,33 +34,28 @@ const TabsGroup = ({
 	return html`
 		<div style="display: flex; flex-direction: column; gap: 2rem;">
 			${Template({
-          selectorStyle: {"width": "35px"},
-          ...args
+        ...args
 			})}
 			${isChromatic() ?
 				Template({
-          selectorStyle: {"width": "60px"},
           ...args,
           labelWithIcons: true
 				})
 			: null }
       ${isChromatic() ?
         Template({
-          selectorStyle: {"width": "20px"},
           ...args,
           iconOnly: true
         })
 				: null }
       ${isChromatic() ?
         Template({
-          selectorStyle: {"width": "35px"},
           ...args,
           isEmphasized: true
         })
       : null }
       ${isChromatic() ?
         Template({
-          selectorStyle: {"width": "60px"},
           ...args,
           isEmphasized: true,
           labelWithIcons: true
@@ -68,7 +63,6 @@ const TabsGroup = ({
       : null }
       ${isChromatic() ?
         Template({
-          selectorStyle: {"width": "20px"},
           ...args,
           isEmphasized: true,
           iconOnly: true

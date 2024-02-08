@@ -34,19 +34,16 @@ const TabsGroup = ({
 	return html`
 		<div style="display: flex; flex-direction: column; gap: 2rem;">
 			${Template({
-          selectorStyle: {"width": "35px"},
           ...args,
 			})}
 			${isChromatic() ?
 				Template({
-          selectorStyle: {"width": "60px"},
           ...args,
           labelWithIcons: true
 				})
 			: null }
       ${isChromatic() ?
 				Template({
-          selectorStyle: {"width": "20px"},
           ...args,
           iconOnly: true
 				})

@@ -41,8 +41,6 @@ const TabsGroup = ({
 				Template({
           ...args,
           labelWithIcons: true
-
-
 				})
       : null }
       ${isChromatic() ?
@@ -56,9 +54,4 @@ const TabsGroup = ({
 };
 
 export const Default = TabsGroup.bind({});
-Default.args = {
-  selectorStyle: {
-    "height": "46px",
-    "top": "0"
-  },
-};
+Default.args = {};
