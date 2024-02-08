@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        {% set titles %}{% if title %}{{ title }}{% if site.name %} | {% endif %}{% endif %}{% if site.name %}{{ site.name }}{% endif %}{% endset %}
+        <title>{{ titles }}</title>
+        {% include 'meta-info.njk' %}
+
+        <link rel="preconnect" href="https://use.typekit.net">
+        <link rel="dns-prefetch" href="https://use.typekit.net">
+
+        <!-- Load all token stylesheets -->
+        <link rel="stylesheet" type="text/css" href="{{ '/dependencies/@spectrum-css/vars/spectrum-global.css' | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/dependencies/@spectrum-css/vars/spectrum-light.css' | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/dependencies/@spectrum-css/vars/spectrum-dark.css' | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/dependencies/@spectrum-css/vars/spectrum-darkest.css' | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/dependencies/@spectrum-css/vars/spectrum-medium.css' | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/dependencies/@spectrum-css/vars/spectrum-large.css' | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/tokens/index.css' | url }}"/>
+
+        <!-- Load all component stylesheets -->
+        {% for package in collections.packages -%}
+            {%- if package.stylesheet -%}
+                <link rel="stylesheet" type="text/css" href="{{ package.stylesheet | url }}"/>
+            {%- endif -%}
+        {%- endfor -%}
+
+        <!-- Site styles should override all other provided styles -->
+        <link rel="stylesheet" type="text/css" href="{{ '/components/site/index-vars.css' | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/components/sidenav/index-vars.css' | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/components/typography/index-vars.css' | url }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ '/components/icon/index-vars.css' | url }}"/>
+
+        <link rel="stylesheet" type="text/css" href="{{ '/assets/styles/index.css' | url }}"/>
+
+        {% block head %}{% endblock %}
+    </head>
+    <body class="spectrum spectrum--light spectrum--medium">
+        {# <a class="spectrum-Button spectrum-Button--sizeXL spectrum-Button--accent spectrum-Button--fill" href="#main" id="skip-to-content">
+            <span class="spectrum-Button-label">Skip to content</span>
+        </a> #}
+        {% block content %}{{ content | safe }}{% endblock %}
+        {% block foot %}{% endblock %}
+
+        {% initClipboardJS %}
+
+        <script type="module" src="{{ '/assets/scripts/typekit.js' | url }}"></script>
+        <script type="module" src="{{ '/assets/scripts/loadicons/index.js' | url }}"></script>
+
+        <script type="module" src="{{ '/assets/scripts/SpectrumSwitcher.js' | url }}"></script>
+        <script type="module" src="{{ '/assets/scripts/Search.js' | url }}"></script>
+        <script type="module" src="{{ '/assets/scripts/enhancement.js' | url }}"></script>
+        <script type="module" src="{{ '/assets/scripts/index.js' | url }}"></script>
+
+        <script src="https://unpkg.com/css-prefers-color-scheme@9.0.0/dist/browser-global.js"></script>
+        <script src="https://unpkg.com/focus-within/browser"></script>
+        <script>
+            focusWithin(document);
+            prefersColorSchemeInit();
+            // apply "dark" queries (you can also apply "light")
+            // prefersColorScheme.scheme = 'dark';
+        </script>
+    </body>
+</html>

@@ -181,3 +181,5 @@ Object.defineProperty(SpectrumSwitcher.prototype, "direction", {
 		return this._direction;
 	},
 });
+
+export default SpectrumSwitcher;

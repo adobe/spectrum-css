@@ -1,0 +1,65 @@
+---
+layout: layouts/pages.njk
+permalink: index.html
+eleventyExcludeFromCollections: true
+---
+
+<div class="spectrum-Typography">
+    <div class="spectrum-Site-hero">
+        <div class="spectrum-Site-heroHeading">
+            <h1 class="spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif">Spectrum CSS</h1>
+        </div>
+        <p class="spectrum-Body spectrum-Body--sizeXXL">Spectrum CSS is an open-source implementation of <a href="https://spectrum.adobe.com/" class="spectrum-Link spectrum-Link--quiet">Spectrum</a>, Adobe's design system. It includes components and resources to make applications more cohesive.</p>
+            {# todo: should this be using asset? #}
+        <img alt="Spectrum CSS Hero image" src="/assets/images/spectrum-css_illustration_desktop@2x.png?w=976&amp;h=446" srcset="/assets/images/spectrum-css_illustration_desktop@2x.png 2x" class="spectrum-Site-heroImage"/>
+
+        {% set content %}
+            {# --- Start: card 1 #}
+            {%- set svgImg -%}{% include "svgs/illustration_documentation.svg" %}{%- endset -%}
+            {%- set cardContent = [{
+                size: 'm',
+                content: "Spectrum CSS is designed to be used in partnership with Spectrum's detailed usage guidelines."
+            }, {
+                size: 'm',
+                content: '<a href="https://spectrum.adobe.com/" class="spectrum-Link spectrum-Link--quiet">View Spectrum guidelines</a>'
+            }] -%}
+            {% set card = { title: 'Robust documentation', description: cardContent, svg: svgImg } %}
+            {% include 'home-card.njk' %}
+            {# --- End: card 1 #}
+
+            {# --- Start: card 2 #}
+            {%- set svgImg -%}{% include "svgs/illustration_flexible.svg" %}{%- endset -%}
+            {%- set cardContent = [{
+                size: 'm',
+                content: "Our CSS is customizable, powerful, and designed to work with any JavaScript framework."
+            }, {
+                size: 'm',
+                content: '<a href="/get-started.html" class="spectrum-Link spectrum-Link--quiet">Get started</a>'
+            }] -%}
+            {% set card = { title: 'Flexible', description: cardContent, svg: svgImg } %}
+            {% include 'home-card.njk' %}
+            {# --- End: card 2 #}
+
+            {# --- Start: card 3 #}
+            {%- set svgImg -%}{% include "svgs/illustration_tested.svg" %}{%- endset -%}
+            {%- set cardContent = [{
+                size: 'm',
+                content: "These individually-versioned components have been vetted to be accessible and inclusive of global audiences."
+            }] -%}
+            {% set card = { title: 'Rigorously tested', description: cardContent, svg: svgImg } %}
+            {% include 'home-card.njk' %}
+            {# --- End: card 3 #}
+
+            {# --- Start: card 4 #}
+            {%- set svgImg -%}{% include "svgs/illustration_responsive.svg" %}{%- endset -%}
+            {%- set cardContent = [{
+                size: 'm',
+                content: "We support evergreen browsers (minus one version) for scalability and flexibility."
+            }] -%}
+            {% set card = { title: 'Multi-platform support', description: cardContent, svg: svgImg } %}
+            {% include 'home-card.njk' %}
+            {# --- End: card 4 #}
+        {% endset %}
+        {% include 'grid.njk' %}
+    </div>
+</div>

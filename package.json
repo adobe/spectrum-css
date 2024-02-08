@@ -22,7 +22,7 @@
     "ci": "yarn build:all",
     "ci:storybook": "nx run storybook:build:ci",
     "clean": "yarn cleaner tag:component",
-    "clean:docs": "rimraf dist",
+    "clean:docs": "nx clean docs",
     "clean:preview": "nx clean storybook",
     "cleaner": "nx run-many --target clean --projects",
     "compare": "node ./tasks/compare-compiled-output.js",

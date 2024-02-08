@@ -93,7 +93,6 @@ jobs:
             - name: Deploy
               uses: nwtgck/actions-netlify@v2
               with:
-                #   publish-dir: site/dist
                   publish-dir: dist
                   production-branch: main
                   production-deploy: false

@@ -1,0 +1,67 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+body,
+html {
+	block-size: 100%;
+}
+
+body {
+	overflow: hidden;
+	margin: 0;
+}
+
+[hidden] {
+	display: none !important;
+}
+
+pre {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: none;
+}
+
+pre.html {
+	margin: 0;
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	font-size: inherit;
+	text-shadow: none;
+}
+
+.spectrum-BigSubtleLink {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+}
+
+.spectrum-BigSubtleLink.focus-ring,
+.spectrum-BigSubtleLink:hover {
+	text-decoration: underline;
+}
+
+/* For documentation beautification only - DO NOT COPY */
+.dummy-spacing {
+	block-size: var(--spectrum-global-dimension-size-2400);
+}
+
+/* Limit slider widths */
+.spectrum-Slider {
+	max-inline-size: var(--spectrum-global-dimension-size-3000);
+}

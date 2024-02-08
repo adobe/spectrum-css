@@ -1,0 +1,31 @@
+<table class="spectrum-Table spectrum-Table--sizeXS spectrum-Table--quiet">
+    <tbody>
+    {% if component.releaseDate -%}
+        <tr class="spectrum-Table-row">
+            <th class="spectrum-Table-headCell">Last released</th>
+            <td class="spectrum-Table-cell">{{ component.releaseDate }}</td>
+        </tr>
+    {%- endif %}
+    {% if component.package and component.package.name -%}
+        <tr class="spectrum-Table-row">
+            <th class="spectrum-Table-headCell">Current version</th>
+            <td class="spectrum-Table-cell"><bdo dir="ltr">{% if component.package.name %}{{ component.package.name }}@{% endif %}{% if component.package.version %}{{ component.package.version }}{% endif %}</bdo></td>
+        </tr>
+    {%- endif %}
+    {% if component.status -%}
+        <tr class="spectrum-Table-row">
+            <th class="spectrum-Table-headCell">Status</th>
+            <td class="spectrum-Table-cell">
+                <span class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--{{ component.status | getStatusLight }}">{{ component.status }}</span>
+            </td>
+        </tr>
+    {%- endif %}
+    </tbody>
+    <tfoot class="spectrum-Table-foot">
+        <tr class="spectrum-Table-row">
+            <td class="spectrum-Table-cell spectrum-Table-cell--alignCenter" colspan="2">
+                <span class="spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-StatusLight--{% if component.migrated %}positive{% else %}negative{% endif %}">{% if component.migrated %}Migrated{% else %}Not yet migrated{% endif %} to @adobe/spectrum-tokens</span>
+            </td>
+        </tr>
+    </tfoot>
+</table>

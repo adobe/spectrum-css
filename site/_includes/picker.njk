@@ -1,0 +1,22 @@
+{% set pickerId %}{% if picker.id %}{{ picker.id }}{% else %}picker-{{ random() }}{% endif %}{% endset -%}
+<button class="spectrum-Picker spectrum-Picker--sizeM spectrum-Picker--quiet" aria-haspopup="listbox" id="{{ pickerId }}" value="{{ picker.options[0] | slugify }}">
+    <span class="spectrum-Picker-label">{{ picker.options[0] }}</span>
+    <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-Picker-menuIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-Chevron100"></use>
+    </svg>
+</button>
+<div class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover" id="for-{{ pickerId }}">
+    <ul class="spectrum-Menu" role="listbox" aria-labelledby="{{ pickerId }}">
+        {% for option in picker.options -%}
+        <li class="spectrum-Menu-item{% if loop.first %} is-selected{% endif %}" role="option"{% if loop.first %} aria-selected="true"{% endif %} tabindex="0" value="{{ option | slugify }}">
+            <span class="spectrum-Menu-itemLabel">{{ option }}</span>
+            <svg
+                class="spectrum-Icon spectrum-UIIcon-Checkmark100 spectrum-Menu-checkmark spectrum-Menu-itemIcon"
+                focusable="false"
+                aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
+            </svg>
+        </li>
+        {%- endfor %}
+    </ul>
+</div>

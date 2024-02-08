@@ -1,0 +1,59 @@
+---
+layout: layouts/pages.njk
+---
+
+<article class="spectrum-CSSComponent" id="main">
+    <header id="{{ component.id | slugify }}" class="spectrum-CSSComponent-header">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXXL spectrum-Heading--serif">
+            <a href="#{{ component.id | slugify }}">{{ component.title | title }}</a>
+        </h1>
+    </header>
+
+    <section class="spectrum-CSSComponent-statusContainer">
+        {# wrapper div prevents status table from expanding #}
+        <div>{% include 'status-table.njk' %}</div>
+        {% include 'resources.njk' %}
+    </section>
+
+    {% if component.description -%}
+        {% set section = { title: 'Usage notes', id: 'usage', description: component.description, hasEmphasis: true } %}
+        {% include 'section.njk' %}
+    {%- endif %}
+
+    {% if component.sections and component.sections.length > 0 -%}
+        {% for section in component.sections %}
+            {% include 'section.njk' %}
+        {% endfor %}
+    {%- endif %}
+
+    {% if component.examples and component.examples.length > 0 -%}
+        {% if component.examples.length > 1 -%}
+            {% set section = { title: 'Examples', id: 'examples' } %}
+        {%- else -%}
+            {% set section = { title: 'Example', id: 'example' } %}
+        {%- endif %}
+        {% include 'section.njk' %}
+
+        {% for example in component.examples %}
+            {% include "example.njk" %}
+        {% endfor %}
+    {%- endif %}
+
+    {% if component.tokens %}
+        {% for key, data in component.tokens -%}
+            {# First item in the data array is the row key; second is an object #}
+            {% if key == 'mods' and data and data.length > 0 -%}
+                {% set section = { title: 'Modifiable properties', id: key } %}
+                {% include 'section.njk' %}
+
+                {% set header = { content: 'Property name', isSortable: false } %}
+                {% set rows = [] %}
+                {% for item in data -%}
+                    {% set rows = (rows.push([item]), rows) %}
+                {%- endfor %}
+                {% set table = { headings: [header], rows: rows } %}
+                {% include 'table.njk' %}
+            {%- endif %}
+        {%- endfor %}
+    {%- endif %}
+</article>

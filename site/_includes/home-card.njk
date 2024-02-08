@@ -1,0 +1,28 @@
+<div class="spectrum-HomeCard">
+    {% if card.svg %}
+        <div class="spectrum-HomeCard-image">{{ card.svg | safe }}</div>
+    {% endif %}
+
+    {% if card.title or card.subtitle or card.description %}
+        <div class="spectrum-HomeCard-content">
+            {% if card.title %}
+                <h4 class="spectrum-Heading spectrum-Heading--size{% if card.headingSize %}{{ card.headingSize | upper }}{% else %}XS{% endif %}">
+                    {{ card.title | safe }}
+                </h4>
+            {% endif %}
+            {% if card.description %}
+                {%- if card.description is string -%}
+                    <p class="spectrum-Body spectrum-Body--sizeM">
+                        {{ card.description | safe }}
+                    </p>
+                {%- else -%}
+                    {% for item in card.description -%}
+                        <p class="spectrum-Body spectrum-Body--sizeM">
+                            {{ item.content | safe }}
+                        </p>
+                    {%- endfor %}
+                {%- endif %}
+            {%- endif %}
+        </div>
+    {%- endif -%}
+</div>

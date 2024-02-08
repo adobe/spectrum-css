@@ -8,6 +8,7 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+/* global document, window, lunr, loadIcons */
 
 function Search(el) {
 	this.index = null;
@@ -332,7 +333,7 @@ Search.prototype.search = function (val) {
           <ul class="spectrum-Menu spectrum-Menu--sizeM" role="group">
             ${results[category]
 							.map(function (result, i) {
-								return `  
+								return `
                   <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
                     <span class="spectrum-Menu-itemLabel">${result.name}</span>
                   </a>

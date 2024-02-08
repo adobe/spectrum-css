@@ -1,0 +1,70 @@
+{% set classes%}spectrum-Card spectrum-Card--size{% if card.size %}{{ card.size | upper }}{% else %}M{% endif %}{% if card.isQuiet %} spectrum-Card--quiet{% endif %}{% if card.horizontal %} spectrum-Card--horizontal{% endif %}{% if card.className %} {{ card.className }}{% endif %}{% endset %}
+{% if card.url %}
+    <a href="{{ card.url | url }}" class="{{ classes }}"{% if card.svg or card.coverPhoto %} role="figure"{% endif %}>
+{% else %}
+    <div class="{{ classes }}"{% if card.showButtons or card.quickActions %} tabindex="0"{% endif %}{% if card.svg or card.coverPhoto %} role="figure"{% endif %}>
+{% endif %}
+
+{% if card.svg %}
+    <div class="spectrum-Card-preview"{% if card.type %} type="{{ card.type }}"{% endif %}>
+        <div class="spectrum-Asset{% if card.className %} {{ card.className }}-image{% endif %}">{{ card.svg | safe }}</div>
+    </div>
+{% endif %}
+
+{% if card.coverPhoto %}
+    <div class="spectrum-Card-coverPhoto" style="background-image: url({{ card.coverPhoto }})">
+    </div>
+{% endif %}
+
+{% if card.title or card.subtitle or card.description %}
+    <div class="spectrum-Card-body">
+        {% if card.title %}
+            <div class="spectrum-Card-header">
+                <h3 class="spectrum-Card-title spectrum-Heading spectrum-Heading--size{% if card.headingSize %}{{ card.headingSize | upper }}{% else %}XS{% endif %}">
+                    {% if card.headingLink %}<a href="{{ card.headingLink | url }}">{% endif %}
+                    {{ card.title | safe }}
+                    {% if card.headingLink %}</a>{% endif %}
+                </h3>
+                {% if card.showButtons %}
+                    <div class="spectrum-Card-actionButton">
+                        <button aria-haspopup="true" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
+                        <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true">
+                            <use xlink:href="#spectrum-icon-18-More" />
+                        </svg>
+                        </button>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+        {% if card.subtitle or card.description %}
+            <div class="spectrum-Card-content{% if card.className %} {{ card.className }}-content{% endif %}">
+                {% if card.subtitle -%}
+                    <p class="spectrum-Card-subtitle spectrum-Detail spectrum-Detail--size{% if card.bodySize %}{{ card.bodySize | upper }}{% else %}S{% endif %}">
+                        {{ card.subtitle }}
+                    </p>
+                {%- endif %}
+                {%- if card.description is string -%}
+                    <p class="spectrum-Card-description spectrum-Body spectrum-Body--size{% if card.bodySize %}{{ card.bodySize | upper }}{% else %}S{% endif %}">
+                        {{ card.description | safe }}
+                    </p>
+                {%- else -%}
+                    {% for item in card.description -%}
+                        <p class="spectrum-Card-description spectrum-Body spectrum-Body--size{% if item.size %}{{ item.size | upper }}{% else %}S{% endif %}">
+                            {{ item.content | safe }}
+                        </p>
+                    {%- endfor %}
+                {%- endif %}
+            </div>
+        {%- endif %}
+    </div>
+{%- endif -%}
+
+{% if card.footer %}
+    <div class="spectrum-Card-footer">{{ card.footer }}</div>
+{% endif %}
+
+{% if card.url %}
+    </a>
+{% else %}
+    </div>
+{% endif %}

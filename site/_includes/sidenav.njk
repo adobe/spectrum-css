@@ -1,0 +1,51 @@
+{% macro renderNavListItem(entry, idx) -%}
+  {% set isExternal = r/^https?/.test(entry.url) or entry.url == "/preview/index.html" -%}
+  {% set hasChildren = entry.children.length > 0 -%}
+  {% set hasOpenChild = entry.children | find("url", page.url) or entry.url == page.url %}
+  {% set parentTitle %}{% if hasChildren %}{{ entry.children[0].parent | title }}{% else %}{{ entry.title }}{% endif %}{% endset -%}
+  <li class="spectrum-SideNav-item{{ ' is-selected' if entry.url == page.url and not hasChildren }}{{ ' is-expandable' if hasChildren }}{{ ' is-open' if (hasChildren and idx < 1) or hasOpenChild }}{{ ' is-external' if isExternal }}">
+    <a href="{% if entry.url and not hasChildren %}{{ entry.url | url }}{% else %}#{% endif %}" class="spectrum-SideNav-itemLink">
+      <span class="spectrum-SideNav-link-text">
+        {% if hasChildren and idx > 0 -%}{{ parentTitle }}{% else %}{{ entry.title }}{%- endif %}
+        {% if hasChildren and idx >= 0 -%}
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRight75" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Chevron75" />
+        </svg>
+        {%- endif %}
+      </span>
+    </a>
+    {% if hasChildren -%}
+      <ul class="spectrum-SideNav">
+          {% if entry.url and entry.url !== "#" -%}
+            {{ renderNavListItem({ children: [], url: entry.url, title: entry.title }, idx + 1) }}
+          {%- endif %}
+          {% for child in entry.children -%}
+            {{ renderNavListItem(child, idx + 1) }}
+          {%- endfor %}
+      </ul>
+    {%- endif %}
+  </li>
+{%- endmacro %}
+
+<div class="spectrum-Site-nav is-scrollable">
+  <nav>
+    <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+      {% for entry in sidenav.list | eleventyNavigation -%}
+        {{ renderNavListItem(entry, 0) }}
+      {%- endfor %}
+    </ul>
+  </nav>
+  <nav class="spectrum-Site-bottomNav">
+    <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+      {{ renderNavListItem({
+        children: [],
+        url: "https://spectrum.adobe.com/",
+        title: "Spectrum design"
+      }, 0) }}
+      {{ renderNavListItem({
+        children: [],
+        url: "/preview/index.html",
+        title: "Preview"
+      }, 0) }}
+    </ul>
+</div>

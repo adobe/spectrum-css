@@ -1,0 +1,28 @@
+<section class="spectrum-CSSComponent-section spectrum-Typography" id="{{ section.id | slugify }}">
+  <header class="spectrum-CSSComponent-sectionHeading">
+    <h2 class="spectrum-Heading spectrum-Heading--sizeM">
+      <a href="#{{ section.id | slugify }}">
+        {% if section.title %}{{ section.title }}{% else %}{{ section.name }}{% endif %}
+      </a>
+    </h2>
+    <hr class="spectrum-Divider spectrum-Divider--large"/>
+
+  {% if section.description -%}
+    <div class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
+      {{ section.description | markdownify | safe }}
+    </div>
+  {%- endif %}
+
+  {% if section.details -%}
+    <div class="spectrum-CSSExample-description spectrum-Body spectrum-Body--sizeM">
+    {{ section.details | markdownify | safe }}
+    </div>
+  {%- endif %}
+
+  </header>
+
+  {% if section.markup -%}
+    {% set example = { markup: section.markup } %}
+    {% include "example.njk" %}
+  {% endif %}
+</section>
