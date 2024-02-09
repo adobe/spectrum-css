@@ -1267,6 +1267,7 @@ governing permissions and limitations under the License.
 
 	.spectrum-Textfield-input {
 		resize: both;
+		block-size: unset;
 		min-inline-size: var(
 			--mod-text-area-min-inline-size,
 			var(--spectrum-text-area-min-inline-size)
@@ -1277,6 +1278,7 @@ governing permissions and limitations under the License.
 		);
 	}
 
+	/* CSS to support text area grow behavior */
 	&.spectrum-Textfield--grows {
 		.spectrum-Textfield-input {
 			grid-row: 2 / auto;

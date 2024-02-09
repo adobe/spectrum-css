@@ -47,7 +47,7 @@ examples:
       </div>
 
   - id: textfield-helptext
-    name: Textfield with Help Text
+    name: With Help Text
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Tags</label>
@@ -55,15 +55,6 @@ examples:
         <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
           <div id="helptext-5" class="spectrum-HelpText-text">Tags must be comma separated.</div>
         </div>
-      </div>
-
-  - id: textfield-grow
-    name: Textfield with Grow Behavior
-    description: By default the TextArea is draggable. Use `spectrum-Textfield--grows` to disable the drag behavior along with appropriate JavaScript to enable a text area that grows with input.
-    markup: |
-      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--grows">
-        <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
-        <textarea id="textfield-helptext" name="field" class="spectrum-Textfield-input">something related to the max size of the text area</textarea>
       </div>
 
   - id: textfield-character-count
@@ -76,7 +67,7 @@ examples:
       </div>
 
   - id: textfield-sidelabel
-    name: Textfield with Side Label
+    name: With Side Label
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--sideLabel">
         <label for="textfield-m-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Comments</label>
@@ -183,8 +174,18 @@ examples:
         <textarea id="textarea-keyboard-focused-invalid" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required>Invalid input</textarea>
       </div>
 
+  - id: textfield-grow
+    name: TextArea with Grow Behavior
+    description: Use `spectrum-Textfield--grows` to disable the drag behavior along with appropriate JavaScript to enable a text area that grows with input.
+    markup: |
+      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--grows">
+        <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
+        <textarea id="textfield-helptext" name="field" class="spectrum-Textfield-input"></textarea>
+      </div>
+
   - id: textfield-quiet
     name: Quiet
+    description: Text areas should rarely be presented in the quiet style. The height of the field should use grow logic so the height will adjust with the height of the entered value.
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
         <label for="textarea-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Comments</label>
