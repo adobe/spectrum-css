@@ -1,6 +1,5 @@
 import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { html } from "lit";
-import isChromatic from "chromatic/isChromatic";
 import { Template } from "./template";
 
 export default {
@@ -235,7 +234,7 @@ const ChromaticPickerGroup = ({
 	`;
 };
 
-export const Default = (args) => isChromatic() ? ChromaticPickerGroup(args) : Template(args);
+export const Default = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
 Default.args = {
 	content: [
 		() => MenuStories(MenuStories.args)
@@ -250,14 +249,13 @@ Open.args = {
 	],
 };
 
-export const WithForcedColors = Template.bind({
-  parameters: {
+export const WithForcedColors = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
+WithForcedColors.parameters = {
     // Sets the forced-colors media feature for a specific story.
     chromatic: { forcedColors: 'active' },
-  },
-});
+}
 WithForcedColors.args = {
 	content: [
 		() => MenuStories(MenuStories.args)
-	],
+	]
 }
