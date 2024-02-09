@@ -1,7 +1,7 @@
 name: Text area
 status: Verified
 description: A multi-line text field using the `<textarea>` element.
-SpectrumSiteSlug: https://spectrum.adobe.com/page/text-field/
+SpectrumSiteSlug: https://spectrum.adobe.com/page/text-area/
 sections:
   - name: Migration Guide
     description: |
@@ -59,7 +59,7 @@ examples:
 
   - id: textfield-grow
     name: Textfield with Grow Behavior
-    description: By default the TextArea is draggable. Add `spectrum-Textfield--grows` to the text-field with `spectrum-Textfield--multiline` along with appropriate JavaScript to enable a text area that grows with input isntead of dragging.
+    description: By default the TextArea is draggable. Use `spectrum-Textfield--grows` to disable the drag behavior along with appropriate JavaScript to enable a text area that grows with input.
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--grows">
         <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
