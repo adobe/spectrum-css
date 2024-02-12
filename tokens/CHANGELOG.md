@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="13.1.2"></a>
+##13.1.2
+🗓
+2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.1.1...@spectrum-css/tokens@13.1.2)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
 <a name="13.1.1"></a>
 ##13.1.1
 🗓

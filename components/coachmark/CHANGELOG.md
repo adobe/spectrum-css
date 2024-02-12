@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.2"></a>
+##6.1.2
+🗓
+2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/coachmark@6.1.1...@spectrum-css/coachmark@6.1.2)
+
+### 🐛 Bug fixes
+
+- **coachmark:**update font family tokens ([#2478](https://github.com/adobe/spectrum-css/issues/2478))([0a3a946](https://github.com/adobe/spectrum-css/commit/0a3a946))
+
 <a name="6.1.1"></a>
 ##6.1.1
 🗓

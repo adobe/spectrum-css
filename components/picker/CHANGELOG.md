@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="7.2.3"></a>
+##7.2.3
+🗓
+2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.2...@spectrum-css/picker@7.2.3)
+
+### 🐛 Bug fixes
+
+- **picker:**quiet side label picker positioning ([#2465](https://github.com/adobe/spectrum-css/issues/2465))([537f0b8](https://github.com/adobe/spectrum-css/commit/537f0b8))
+
 <a name="7.2.2"></a>
 ##7.2.2
 🗓
