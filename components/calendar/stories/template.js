@@ -13,10 +13,10 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Calendar",
-	month = new Date().toLocaleString("default", { month: "long" }),
+	month,
 	selectedDay,
 	lastDay,
-	year = new Date().getFullYear(),
+	year,
 	padded,
 	isDisabled = false,
 	useDOWAbbrev = false,
@@ -31,6 +31,9 @@ export const Template = ({
 	id,
 	...globals
 }) => {
+	const [_, updateArgs] = useArgs();
+	const [{ lang }] = useGlobals();
+
 	const DOW = [
 		"Sunday",
 		"Monday",
@@ -48,28 +51,35 @@ export const Template = ({
 		year: "numeric",
 	};
 
-	const getMonthName = (num, format = "long") => {
-		const date = new Date();
-		date.setMonth(num - 1);
-		return date.toLocaleString(lang, { month: format });
+	const getMonthName = (dateOrIndex, format = "long") => {
+		let date;
+		if (typeof dateOrIndex === "number") {
+			date = new Date().setMonth(dateOrIndex - 1);
+		} else if (dateOrIndex instanceof Date) {
+			date = dateOrIndex;
+		} else {
+			console.warn(
+				"Calendar: getMonthName() requires a date object or a number."
+			);
+			return;
+		}
+
+		return date.toLocaleString(lang ?? "default", { month: format });
 	};
 
-	const [_, updateArgs] = useArgs();
-	const [{ lang, testingPreview }] = useGlobals();
+	let today = new Date();
+	if (window.isChromatic()) {
+		today = new Date(`${month ?? "January"} 1, ${year ?? "2021"}`);
+	}
 
-	if (testingPreview && window.isChromatic()) {
-		month = getMonthName(0);
-		year = 2021;
+	if (today) {
+		month = month ?? getMonthName(today);
+		year = year ?? today.getFullYear();
 	}
 
 	const displayedDate = new Date(`${month} 1, ${year}`);
 	const displayedMonth = displayedDate.getMonth();
 	const displayedYear = displayedDate.getFullYear();
-
-	let today = new Date();
-	if (testingPreview && window.isChromatic()) {
-		today = displayedDate;
-	}
 
 	/**
 	 * @typedef {{ date: Date, dateClassList: import('lit').ClassInfo, isSelected: boolean, isToday: boolean, isOutsideMonth: boolean }} DateMetadata
@@ -256,7 +266,7 @@ export const Template = ({
 					aria-live="assertive"
 					aria-atomic="true"
 				>
-					${displayedDate.toLocaleString(lang, {
+					${displayedDate.toLocaleString(lang ?? "default", {
 						month: "long",
 						year: "numeric",
 					})}

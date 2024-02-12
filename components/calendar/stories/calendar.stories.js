@@ -122,10 +122,7 @@ RangeSelection.args = {
 };
 
 export const TodayHighlighted = Template.bind({});
-TodayHighlighted.args = {
-	month: months[new Date().getMonth()],
-	year: new Date().getFullYear(),
-};
+TodayHighlighted.args = {};
 
 export const Disabled = Template.bind({});
 Disabled.args = {
