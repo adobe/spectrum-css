@@ -92,7 +92,7 @@ async function main(inputs) {
 
 		/* -- Markdown Output -- */
 		/* Output as a markdown table in the metadata folder for site rendering */
-		let destPath = `${dir}/metadata`;
+		let destPath = path.join(dir, "metadata");
 
 		// If the metadata folder doesn't exist, create it
 		if (!existsSync(destPath)) mkdirSync(destPath);
@@ -108,7 +108,7 @@ async function main(inputs) {
 
 		// Write the results to a markdown file in the metadata folder
 		promises.push(
-			writeFile(`${destPath}/mods.md`, finalResult, { encoding: "utf-8" }).then(() => {
+			writeFile(path.join(destPath, "mods.md"), finalResult, { encoding: "utf-8" }).then(() => {
 				console.log(`${`✓`.green} ${"metadata/mods.md".yellow} written`);
 			}).catch((err) => {
 				if (!err) return;
@@ -118,7 +118,7 @@ async function main(inputs) {
 		);
 
 		/* -- JSON Output -- */
-		destPath = `${dir}/dist`;
+		destPath = path.join(dir, "dist");
 		// If the dist folder doesn't exist yet, create it
 		if (!existsSync(destPath)) mkdirSync(destPath);
 
@@ -129,7 +129,7 @@ async function main(inputs) {
 
 		// Write the JSON output to the dist folder
 		promises.push(
-			writeFile(`${destPath}/mods.json`, finalResult, { encoding: "utf-8" }).then(() => {
+			writeFile(path.join(destPath, "mods.json"), finalResult, { encoding: "utf-8" }).then(() => {
 				console.log(`${`✓`.green} ${"dist/mods.json".yellow} written`);
 			}).catch((err) => {
 				if (!err) return;

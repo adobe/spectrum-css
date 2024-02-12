@@ -20,10 +20,6 @@ on:
                 required: false
                 type: string
                 default: ${{ github.event.workflow_call.head.ref }}
-            artifact-id:
-                description: The artifact id to use for the build artifacts
-                required: false
-                type: string
         outputs:
             has-changed:
                 value: ${{ jobs.compare.outputs.has-changed }}

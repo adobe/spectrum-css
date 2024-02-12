@@ -46,18 +46,16 @@
 		},
 		"style-dictionary": {
 			"dependsOn": ["clean"],
-			"executor": "@nxkit/style-dictionary:build",
+			"executor": "nx:run-commands",
 			"inputs": [
 				"{projectRoot}/postcss.config.js",
 				"{projectRoot}/style-dictionary.config.js",
 				"{projectRoot}/utilities/style-dictionary.utils.js"
 			],
 			"options": {
-				"deleteOutputPath": false,
-				"outputPath": "./tokens",
-				"platform": "CSS",
-				"styleDictionaryConfig": "./tokens/style-dictionary.config.js",
-				"tsConfig": "./tsconfig.json"
+				"commands": [
+					"style-dictionary build --config {projectRoot}/style-dictionary.config.js --platform CSS"
+				]
 			},
 			"outputs": [
 				"{projectRoot}/dist/global-vars.css",
