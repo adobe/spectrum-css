@@ -46,23 +46,29 @@ jobs:
     # -------------------------------------------------------------
     # Validate build for various environments
     # -------------------------------------------------------------
-    build:
-        name: Build
+    verify_builds:
+        name: Verify
         # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
-        # if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
+        if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
         strategy:
             fail-fast: false
             matrix:
                 system:
                     - macos-latest
                     - ubuntu-latest
-                    # - windows-latest
+                    # - windows-latest # todo: debug token style-dictionary failures on windows
                 node-version:
                     - 18
+                experimental:
+                    - false
+                include:
+                    - node-version: 20
+                      experimental: true
         uses: ./.github/workflows/build.yml
         with:
             system: ${{ matrix.system }}
             node-version: ${{ matrix.node-version }}
+            experimental: ${{ matrix.experimental }}
         secrets: inherit
 
     # -------------------------------------------------------------
@@ -70,13 +76,9 @@ jobs:
     # -------------------------------------------------------------
     compare:
         name: Compare
-        needs: [build]
         # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
         if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
         uses: ./.github/workflows/compare-results.yml
-        with:
-            base-sha: ${{ needs.build.outputs.base-sha }}
-            head-sha: ${{ needs.build.outputs.head-sha }}
         secrets: inherit
 
     # -------------------------------------------------------------
@@ -136,7 +138,6 @@ jobs:
     # -------------------------------------------------------------
     vrt:
         name: Testing
-        needs: [build]
         if: ${{ contains(github.event.pull_request.labels.*.name, 'run_vrt') || ((github.event.pull_request.draft != true || contains(github.event.pull_request.labels.*.name, 'run_ci')) && github.event.pull_request.mergeable == true) }}
         uses: ./.github/workflows/vrt.yml
         with:
@@ -150,9 +151,9 @@ jobs:
     publish_site:
         name: Publish
         # The build step ensures we are leveraging the cache for the build
-        needs: [build, vrt]
+        needs: [vrt]
         # Note: the goal here is to allow vrt to be skipped but still require the build to succeed
-        if: ${{ always() && (needs.vrt.result == 'success' || needs.vrt.result == 'skipped') && needs.build.result == 'success' }}
+        if: ${{ always() && (needs.vrt.result == 'success' || needs.vrt.result == 'skipped') }}
         uses: ./.github/workflows/publish-site.yml
         with:
             deploy-message: ${{ github.event.pull_request.title }}
