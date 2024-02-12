@@ -616,12 +616,6 @@ governing permissions and limitations under the License.
 		);
 		grid-row: 1;
 		grid-column: 1 / span 1;
-		padding-inline-start: calc(
-			var(
-					--mod-textfield-corner-radius,
-					var(--spectrum-textfield-corner-radius)
-				) / 2
-		);
 	}
 
 	.spectrum-Textfield--quiet & {
@@ -645,12 +639,6 @@ governing permissions and limitations under the License.
 		);
 		grid-row: 3;
 		grid-column: 1 / span 2;
-		padding-inline-start: calc(
-			var(
-					--mod-textfield-corner-radius,
-					var(--spectrum-textfield-corner-radius)
-				) / 2
-		);
 	}
 }
 
