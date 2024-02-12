@@ -1,5 +1,6 @@
 const { resolve } = require("path");
 const { readdirSync } = require("fs");
+
 const componentsPath = resolve(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
@@ -36,16 +37,20 @@ module.exports = {
 		"@storybook/addon-interactions",
 		// https://www.chromatic.com/docs/visual-testing-addon/
 		"@chromaui/addon-visual-tests",
+		// https://storybook.js.org/addons/@storybook/addon-designs/
+    	"@storybook/addon-designs",
 	],
 	core: {
 		disableTelemetry: true,
 	},
 	env: {
 		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
-			const pkg = require(resolve(componentsPath, dir, "package.json"));
+			const {
+				devDependencies = {},
+			} = require(resolve(componentsPath, dir, "package.json"));
 			if (
-				pkg.devDependencies &&
-				pkg.devDependencies["@spectrum-css/component-builder-simple"]
+				devDependencies &&
+				devDependencies["@spectrum-css/component-builder-simple"]
 			) {
 				return true;
 			}
@@ -56,7 +61,9 @@ module.exports = {
 		// Removing the global alias as it conflicts with the global npm pkg
 		const { global, ...alias } = config.resolve.alias;
 		config.resolve.alias = alias;
-		let storybookRules =
+
+		// Parse out any storybook rules for CSS so we can replace them with our own
+		const storybookRules =
 			config && config.module && config.module.rules
 				? config.module.rules.filter(
 						(rule) => !(rule.test && rule.test.toString().includes("css"))
