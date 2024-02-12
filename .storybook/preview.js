@@ -16,7 +16,7 @@ import { setConsoleOptions } from "@storybook/addon-console";
 
 const panelExclude = setConsoleOptions({}).panelExclude || [];
 setConsoleOptions({
-	panelExclude: [...panelExclude, /deprecated/, /TypeError/],
+	panelExclude: [...panelExclude, /deprecated/, /TypeError/, /postcss-dropunusedvars/],
 });
 
 import "@spectrum-css/vars/dist/spectrum-large.css";
