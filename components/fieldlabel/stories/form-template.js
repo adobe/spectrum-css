@@ -27,7 +27,7 @@ export const Template = ({
             ${FieldLabel({
                 label: 'Company Title',
                 forInput: 'form-example-company',
-                alignment: 'left',
+                alignment: labelsAbove ? undefined : 'left',
             })}
             <div class="spectrum-Form-itemField">
                 ${TextField({

@@ -3,12 +3,14 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from 'lit/directives/when.js';
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
+import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
 import "../index.css";
 
@@ -103,6 +105,9 @@ export const Template = ({
 	isLoading = false,
 	isDisabled = false,
 	isReadOnly = false,
+	withSwitch = false,
+	fieldLabelStyle = {},
+	fieldLabelText,
 	customClasses = [],
 	customStyles = {},
 	customPopoverStyles = {},
@@ -141,6 +146,7 @@ export const Template = ({
 					size,
 					label,
 					isDisabled,
+					style: fieldLabelStyle,
 					alignment: labelPosition,
 			  })
 			: ""}
@@ -205,5 +211,13 @@ export const Template = ({
 			customStyles: customPopoverStyles,
 			content,
 		})}
+		${when (withSwitch, () => Switch({
+				...globals,
+				size,
+				label: "Toggle switch",
+				customStyles: {
+					"padding-inline-start": "15px"
+				}
+			})) }
 	`;
 };

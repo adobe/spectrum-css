@@ -31,7 +31,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-100);
   --spectrum-picker-spacing-edge-to-text-quiet: var(--spectrum-field-edge-to-text-quiet);
-  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-field-label-top-margin-medium);
+  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-component-top-to-text-100);
   --spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
 
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
@@ -88,7 +88,7 @@ governing permissions and limitations under the License.
 .spectrum-Picker--sizeS {
   --spectrum-picker-font-size: var(--spectrum-font-size-75);
   --spectrum-picker-block-size: var(--spectrum-component-height-75);
-  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-field-label-top-margin-small);
+  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-component-top-to-text-75);
   --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
   --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-75);
@@ -109,7 +109,7 @@ governing permissions and limitations under the License.
 .spectrum-Picker--sizeL {
   --spectrum-picker-font-size: var(--spectrum-font-size-200);
   --spectrum-picker-block-size: var(--spectrum-component-height-200);
-  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-field-label-top-margin-large);
+  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-component-top-to-text-200);
   --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
   --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-200);
@@ -130,7 +130,7 @@ governing permissions and limitations under the License.
 .spectrum-Picker--sizeXL {
   --spectrum-picker-font-size: var(--spectrum-font-size-300);
   --spectrum-picker-block-size: var(--spectrum-component-height-300);
-  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-field-label-top-margin-extra-large);
+  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-component-top-to-text-300);
   --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
   --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-300);
@@ -449,7 +449,7 @@ governing permissions and limitations under the License.
   background-color: var(--highcontrast-picker-background-color, transparent);
 
   &.spectrum-Picker--sideLabel {
-    margin-block-start: calc(-1 * var(--spectrum-picker-spacing-top-to-text-side-label-quiet));
+    margin-block-start: 0;
   }
 
   .spectrum-Picker-menuIcon {
