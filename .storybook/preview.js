@@ -1,4 +1,3 @@
-import isChromatic from "chromatic/isChromatic";
 
 import { withActions } from "@storybook/addon-actions/decorator";
 import DocumentationTemplate from './DocumentationTemplate.mdx';
@@ -203,14 +202,14 @@ export const parameters = {
 	panelPosition: "bottom",
 	showToolbar: true,
 	isFullscreen: false,
-	//👇 Defines a list of viewport widths for a single story to be captured in Chromatic.
-	chromatic: isChromatic()
-		? {
-				// viewports: [320, 1200],
-				// forcedColors: 'active',
-				// prefersReducedMotion: 'reduce',
-		  }
-		: {},
+	options: {
+		storySort: {
+			method: "alphabetical",
+			order: ['Guides', ['Contributing', '*', 'Adobe Code of Conduct', 'Changelog'], 'Components', '*'],
+			includeNames: true,
+		},
+	},
+	// chromatic: { forcedColors: 'active' },
 	controls: {
 		expanded: true,
 		hideNoControlsWarning: true,
@@ -230,6 +229,7 @@ export const parameters = {
 		},
 	},
 	docs: {
+		autodocs: true,
     	page: DocumentationTemplate,
 		story: {
 			inline: true,
