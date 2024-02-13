@@ -93,7 +93,7 @@ export const Template = ({
 		>
 		${when(displayLabel, () => FieldLabel({
 						...globals,
-						size: "s",
+						size,
 						label: labelText,
 					})
 			)}
