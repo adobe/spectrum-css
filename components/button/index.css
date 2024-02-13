@@ -147,6 +147,11 @@ governing permissions and limitations under the License.
     box-shadow: none;
   }
 
+  &:active {
+    /* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties */
+    transform: perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down))) translateZ(var(--spectrum-component-size-difference-down));
+  }
+
   .spectrum-Icon {
     /* Any block-size difference between the intended workflow icon size and actual icon used.
        Helps support any existing use of smaller UI icons instead of intended Workflow icons. */

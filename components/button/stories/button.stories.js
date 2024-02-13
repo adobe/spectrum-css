@@ -100,7 +100,7 @@ export default {
 		    name: "Layout",
 		    description: "How the buttons align in the preview (Storybook only).",
 		    type: { name: "string" },
-			table: { 
+			table: {
 			    type: { summary: "string" },
 			    category: "Advanced"
 			},
@@ -350,3 +350,12 @@ Wrapping.args = {
 	variant: "accent",
 	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 };
+
+export const DownStateDocs = CustomButton.bind({});
+DownStateDocs.args = {
+	variant: "accent",
+	customStyles: {
+		"--spectrum-downstate-width": "72px",
+		"--spectrum-downstate-height": "32px"
+	}
+}

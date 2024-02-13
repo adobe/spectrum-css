@@ -137,6 +137,10 @@ governing permissions and limitations under the License.
   }
 
   &:active {
+    .spectrum-Checkbox-box {
+      transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
+    }
+
     .spectrum-Checkbox-box::before {
       border-color: var(--highcontrast-checkbox-highlight-color-down, var(--mod-checkbox-control-color-down, var(--spectrum-checkbox-control-color-down)));
     }
@@ -372,6 +376,7 @@ governing permissions and limitations under the License.
     }
   }
 }
+
 /* stylelint-enable max-nesting-depth */
 
 .spectrum-Checkbox-label {
@@ -571,7 +576,7 @@ governing permissions and limitations under the License.
       outline-style: auto;
       outline-offset: var(--highcontrast-checkbox-focus-indicator-gap, var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap)));
       /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
-      outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness)); 
+      outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 
       &::after {
         box-shadow:
