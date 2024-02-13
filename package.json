@@ -31,7 +31,7 @@
     "predev": "nx run-many --projects ui-icons,tokens --target build",
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp devHeavy",
     "preinstall": "command -v nvm >/dev/null 2>&1 && nvm use || exit 0",
-    "lint": "yarn linter tag:component --verbose",
+    "lint": "yarn linter tag:component",
     "linter": "nx run-many --target lint --verbose --projects",
     "new": "nx run @spectrum-css/generator:new",
     "precommit": "lint-staged",
@@ -47,7 +47,9 @@
     "start": "NODE_ENV=development nx start storybook",
     "test": "nx test storybook",
     "test:plugins": "nx run-many --target test --projects tag:stylelint",
-    "tester": "nx run storybook:test:scope"
+    "tester": "nx run storybook:test:scope",
+    "validate": "yarn validator tag:component",
+    "validator": "nx run-many --target validate --verbose --projects"
   },
   "workspaces": [
     "components/*",
@@ -86,6 +88,7 @@
     "npm-run-all": "^4.1.5",
     "nunjucks": "^3.2.4",
     "nx": "^18.0.4",
+    "pajv": "^1.2.0",
     "prettier": "^2.8.8",
     "prettier-package-json": "^2.8.0",
     "prismjs": "^1.23.0",
@@ -118,6 +121,9 @@
     ],
     "dist/*.css": [
       "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write"
+    ],
+    "components/*/metadata/*.{yml,yaml}": [
+      "pajv test --valid -s ./schemas/documentation.schema.json -d "
     ]
   }
 }

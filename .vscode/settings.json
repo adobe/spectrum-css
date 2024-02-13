@@ -99,6 +99,7 @@
 	"stylelint.reportNeedlessDisables": true,
 	"stylelint.validate": ["css", "postcss"],
 	"yaml.schemas": {
-		"~/.vscode/extensions/atlassian.atlascode-3.0.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+		"~/.vscode/extensions/atlassian.atlascode-3.0.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+		"./schemas/documentation.schema.json": ["/metadata/*.yml", "/metadata/*.yaml"]
 	}
 }

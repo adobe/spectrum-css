@@ -15,6 +15,7 @@
 	"namedInputs": {
 		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
 		"scripts": ["{projectRoot}/stories/*.js"],
+		"docs": ["{projectRoot}/metadata/*.yml"],
 		"tools": [
 			"{projectRoot}/*.json",
 			"{workspaceRoot}/postcss.config.js",
@@ -95,6 +96,19 @@
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": ["stylelint {projectRoot}/*.css {projectRoot}/themes/*.css"]
+			}
+		},
+		"validate": {
+			"inputs": [
+				"{workspaceRoot}/schemas/documentation.schema.json",
+				"docs",
+				{ "externalDependencies": ["pajv"] }
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/documentation.schema.json -d \"{projectRoot}/metadata/*.yml\" || exit 0"
+				]
 			}
 		},
 		"test": {
