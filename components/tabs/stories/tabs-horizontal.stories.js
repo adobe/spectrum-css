@@ -1,7 +1,7 @@
 // Import the component markup template
 import { Template } from "./template";
 import { html } from "lit";
-import { argTypes, overflowProps } from "./index.js";
+import { argTypes } from "./index.js";
 
 export default {
   title: "Components/Tabs/Horizontal",
@@ -28,34 +28,110 @@ export default {
   }
 };
 
-const TabsGroup = ({
+const chromaticKitchenSink = ({
 	...args
 }) => {
 	return html`
 		<div style="display: flex; flex-direction: column; gap: 2rem;">
+    <h2>Horizontal Default</h2>
 			${Template({
-            ...args
+        ...args
 			})}
-			${window.isChromatic() ?
-				Template({
-          ...args,
-          labelWithIcons: true
-       })
-      : null }
-      ${window.isChromatic() ?
-        Template({
-          ...args,
-          iconOnly: true
-        })
-      : null }
+			${Template({
+        ...args,
+        labelWithIcons: true
+       })}
+      ${Template({
+        ...args,
+        iconOnly: true
+        })}
+		</div>
+    <div style="display: flex; flex-direction: column; gap: 2rem;">
+    <h2>Horizontal Default Emphasized</h2>
+			${Template({
+        ...args,
+        isEmphasized: true
+			})}
+			${Template({
+        ...args,
+        labelWithIcons: true,
+        isEmphasized: true
+				})}
+      ${Template({
+        ...args,
+        iconOnly: true,
+        isEmphasized: true
+				})}
+		</div>
+    <h2>Horizontal Quiet</h2>
+    <div style="display: flex; flex-direction: column; gap: 2rem;">
+			${Template({
+        ...args,
+        isQuiet: true
+			})}
+			${Template({
+        ...args,
+        labelWithIcons: true,
+        isQuiet: true
+				})}
+      ${Template({
+        ...args,
+        iconOnly: true,
+        isQuiet: true
+        })}
+      ${Template({
+        ...args,
+        isEmphasized: true,
+        isQuiet: true
+        })}
+		</div>
+		<div style="display: flex; flex-direction: column; gap: 2rem;">
+    <h2>Horizontal Quiet Compact</h2>
+			${Template({
+        ...args,
+        isQuiet: true,
+        isCompact: true
+			})}
+			${Template({
+        ...args,
+        labelWithIcons: true,
+        isQuiet: true,
+        isCompact: true
+      })}
+      ${Template({
+        ...args,
+        iconOnly: true,
+        isQuiet: true,
+        isCompact: true
+        })}
+      ${Template({
+        ...args,
+        isEmphasized: true,
+        isQuiet: true,
+        isCompact: true
+        })}
+      ${Template({
+        ...args,
+        isEmphasized: true,
+        labelWithIcons: true,
+        isQuiet: true,
+        isCompact: true
+        })}
+      ${Template({
+        ...args,
+        isEmphasized: true,
+        iconOnly: true,
+        isQuiet: true,
+        isCompact: true
+        })}
 		</div>
 	`;
 };
 
-export const Default = TabsGroup.bind({});
+export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
 Default.args = {};
 
 export const Overflow = Template.bind({});
 Overflow.args = {
-  ...overflowProps
+  overflow: true
 };

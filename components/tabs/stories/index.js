@@ -63,7 +63,3 @@ export const argTypes = {
     if: { arg: 'overflow', truthy: false },
   }
 };
-
-export const overflowProps = {
-  overflow: true,
-};

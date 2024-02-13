@@ -28,29 +28,86 @@ export default {
   }
 };
 
-const TabsGroup = ({
+const chromaticKitchenSink = ({
 	...args
 }) => {
 	return html`
+    <h2> Vertical Default</h2>
 		<div style="display: flex; gap: 2rem;">
 			${Template({
           ...args
 			})}
-			${window.isChromatic() ?
-				Template({
+			${Template({
           ...args,
           labelWithIcons: true
-				})
-      : null }
-      ${window.isChromatic() ?
-				Template({
+      })}
+      ${Template({
           ...args,
           iconOnly: true
-				})
-      : null }
+      })}
+		</div>
+    <h2>Vertical Emphasized</h2>
+    <div style="display: flex; gap: 2rem;">
+			${Template({
+          ...args,
+          isEmphasized: true,
+			})}
+			${Template({
+        ...args,
+        labelWithIcons: true,
+        isEmphasized: true
+      })}
+      ${Template({
+        ...args,
+        iconOnly: true,
+        isEmphasized: true
+      })}
+		</div>
+    <h2>Vertical Quiet</h2>
+    <div style="display: flex; gap: 2rem;">
+			${Template({
+        ...args,
+        isQuiet: true
+			})}
+			${Template({
+        ...args,
+        labelWithIcons: true,
+        isQuiet: true
+      })}
+      ${Template({
+        ...args,
+        iconOnly: true,
+        isQuiet: true
+      })}
+		</div>
+    <h2> Vertical Quiet Compact</h2>
+    <div style="display: flex; gap: 2rem;">
+			${Template({
+        ...args,
+        isQuiet: true,
+        isCompact: true
+			})}
+			${Template({
+          ...args,
+          labelWithIcons: true,
+          isQuiet: true,
+          isCompact: true
+				})}
+      ${Template({
+        ...args,
+        iconOnly: true,
+        isQuiet: true,
+        isCompact: true
+      })}
+      ${Template({
+        ...args,
+        isEmphasized: true,
+        isQuiet: true,
+        isCompact: true
+      })}
 		</div>
 	`;
 };
 
-export const Default = TabsGroup.bind({});
+export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
 Default.args = {};
