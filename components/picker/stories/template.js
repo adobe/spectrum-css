@@ -202,15 +202,16 @@ export const Template = ({
 					hideIcon: true,
 			  })
 			: ""}
-		${Popover({
-			...globals,
-			isOpen: isOpen && !isDisabled,
-			withTip: false,
-			position: "bottom",
-			isQuiet,
-			customStyles: customPopoverStyles,
-			content,
-		})}
+	${when(content.length !== 0, () =>
+			Popover({
+				...globals,
+				isOpen: isOpen && !isDisabled,
+				withTip: false,
+				position: "bottom",
+				isQuiet,
+				customStyles: customPopoverStyles,
+				content,
+		}))}
 		${when (withSwitch, () => Switch({
 				...globals,
 				size,
@@ -218,6 +219,6 @@ export const Template = ({
 				customStyles: {
 					"padding-inline-start": "15px"
 				}
-			})) }
+		}))}
 	`;
 };
