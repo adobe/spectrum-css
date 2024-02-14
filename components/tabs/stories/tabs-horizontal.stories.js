@@ -61,10 +61,26 @@ const horiztonalTabsGroup = ({
     `
 };
 
+const overflowTabsGroup = ({
+  ...args
+}) => {
+  return html `
+  <div style="display: grid; gap: 1rem;">
+    ${Template({
+      ...args
+    })}
+    ${Template({
+      ...args,
+      isQuiet: true
+    })}
+    </div>
+  `
+}
+
 export const Horizontal = (args) => window.isChromatic() ? horiztonalTabsGroup(args) : Template(args);
 Horizontal.args = {};
 
-export const Overflow = Template.bind({});
+export const Overflow = (args) => window.isChromatic() ? overflowTabsGroup(args) : Template(args);
 Overflow.args = {
   overflow: true
 };
