@@ -1,7 +1,6 @@
 // Import the component markup template
 import { Template } from "./template";
 import { html } from "lit";
-import isChromatic from "chromatic/isChromatic";
 
 export default {
 	title: "Components/Text field",
@@ -206,20 +205,20 @@ const TextFieldGroup = ({
 			${Template({
 				...args
 			})}
-			${isChromatic() ?
+			${window.isChromatic() ?
 				Template({
 					displayLabel: true,
 					labelText: "Username",
 				})
 				: null }
-			${isChromatic() ?
+			${window.isChromatic() ?
 				Template({
 					displayLabel: true,
 					labelText: "Username that is really long and wraps onto a second line",
 					isInvalid: true,
 				})
 				: null }
-			${isChromatic() ?
+			${window.isChromatic() ?
 				Template({
 					displayLabel: true,
 					labelText: "Username",
@@ -242,7 +241,7 @@ const TextAreaGroup = ({
 				multiline: true,
 				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
 			})}
-			${isChromatic() ?
+			${window.isChromatic() ?
 				Template({
 					displayLabel: true,
 					labelText: "Username",
@@ -250,7 +249,7 @@ const TextAreaGroup = ({
 					value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
 				})
 				: null }
-			${isChromatic() ?
+			${window.isChromatic() ?
 				Template({
 					displayLabel: true,
 					labelText: "Username that is really long and wraps onto a second line",
@@ -259,7 +258,7 @@ const TextAreaGroup = ({
 					value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
 				})
 				: null }
-			${isChromatic() ?
+			${window.isChromatic() ?
 				Template({
 					displayLabel: true,
 					labelText: "Username",
