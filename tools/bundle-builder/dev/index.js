@@ -68,6 +68,10 @@ function watchWithinPackages(glob, task, files) {
 			let packageName = getPackageFromPath(changedFile);
 			let packageDir = path.dirname(require.resolve(`@spectrum-css/${packageName}/package.json`));
 
+			if (packageDir.split(path.sep).includes("node_modules")) {
+				return done();
+			}
+
 			if (typeof task === "function") {
 				task(changedFile, packageName, (err) => {
 					done(err);
@@ -179,21 +183,18 @@ function watch() {
 	watchWithinPackages(
 		[
 			`${dirs.components}/*/metadata/*.yml`,
+			`${dirs.root}/.storybook/deprecated/*/*.yml`,
 		],
-		(changedFile, package, done) => {
+		(_, package, done) => {
+			console.log({ package });
+			const packageDir = path.dirname(require.resolve(`@spectrum-css/${package}/package.json`));
+
 			// Do this as gulp tasks to avoid premature stream termination
 			try {
-				let result = gulp.series(
+				gulp.series(
 					// Get data first so nav builds
-					function buildSite_getData() {
-						logger.debug(`Building nav data for ${package}`);
-						return docs.buildSite_getData();
-					},
-					function buildDocs_forDep() {
-						logger.debug(`Building docs for ${package}`);
-						let packageDir = path.dirname(require.resolve(`@spectrum-css/${package}/package.json`));
-						return docs.buildDocs_forDep(packageDir);
-					}
+					docs.buildSite_getData,
+					buildDocs_forDep = () => docs.buildDocs_forDep(packageDir),
 				)();
 				// this catches yaml parsing errors
 				// should stop the series from running

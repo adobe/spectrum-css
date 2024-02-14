@@ -11,12 +11,10 @@ governing permissions and limitations under the License.
 */
 const gulp = require("gulp");
 const fs = require("fs");
-const fsp = fs.promises;
 const path = require("path");
 const pugCompiler = require("pug");
 const pug = require("gulp-pug");
 const data = require("gulp-data");
-const rename = require("gulp-rename");
 const yaml = require("js-yaml");
 const through = require("through2");
 const ext = require("replace-ext");
@@ -50,6 +48,7 @@ let minimumDeps = [
 	"popover",
 	"underlay",
 	"card",
+	"inlinealert",
 	"divider",
 	"illustratedmessage",
 	"accordion",
@@ -62,45 +61,49 @@ let templateData = {
 };
 
 async function buildDocs_forDep(dep) {
-	let metadata = JSON.parse(
-		await fsp.readFile(
-			require.resolve("@spectrum-css/vars")
-		)
-	);
+	// We don't build documentation for deprecated tokens
+	if (["vars", "expressvars"].some((packageName => dep.endsWith(packageName)))) {
+		return;
+	}
 
-	let dirName = path.dirname(require.resolve(path.join(dep, "package.json")));
-	let dependencyOrder = await depUtils.getPackageDependencyOrder(dirName);
+	const metadata = require("@spectrum-css/vars");
+	const pkgPath = require.resolve(`${dep}/package.json`);
 
-	logger.debug(`Will build docs for package in ${dirName}`);
+	if (!pkgPath) return;
+
+	let dirName = path.dirname(pkgPath);
+	let pkg = require(pkgPath);
 
 	// Drop package org
-	dep = dep.split("/").pop();
+	dep = dep.split(path.sep).pop();
+	const dependencyOrder = await depUtils.getPackageDependencyOrder(dirName);
+
+	// If a dirName was not found, try the deprecated folder instead
+	if (!dirName || dirName.split(path.sep).includes("node_modules")) {
+		dirName = path.join(dirs.topLevel, ".storybook/deprecated", dep);
+
+		if (!fs.existsSync(dirName)) return;
+	}
 
 	return new Promise((resolve, reject) => {
 		gulp
-			.src([`${dirName}/metadata/*.yml`], {
+			.src([
+				`${dirName}/metadata/*.yml`,
+				`${dirName}/*.yml`,
+			], {
 				allowEmpty: true,
 			})
 			.pipe(
-				rename(function (file) {
-					if (file.basename === "metadata") {
-						file.basename = dep;
-					}
-				})
-			)
-			.pipe(
 				data(async function (file) {
-					let componentDeps = dependencyOrder.map((dep) =>
-						dep.split("/").pop()
+					const componentDeps = dependencyOrder.map((dep) =>
+						dep.split(path.sep).pop()
 					);
 					componentDeps.push(dep);
 
-					let pkg = JSON.parse(
-						await fsp.readFile(path.join(dirs.components, dep, "package.json"))
-					);
-
-					let docsDeps = minimumDeps.concat(componentDeps);
-					docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
+					const docsDeps = [...new Set([
+						...minimumDeps,
+						...componentDeps
+					])];
 
 					let date;
 					try {
@@ -113,59 +116,32 @@ async function buildDocs_forDep(dep) {
 						});
 					} catch (err) {
 						date = "Unreleased";
-						logger.error(
-							`Could not determine date of release for ${pkg.name}@${pkg.version}`
-						);
 					}
 
-					return Object.assign(
-						{},
-						{
-							util: require(`${dirs.site}/util`),
-							dnaVars: metadata,
-						},
-						templateData,
-						{
-							pageURL: path.basename(file.basename, ".yml") + ".html",
-							dependencyOrder: docsDeps,
-							releaseDate: date,
-							pkg: pkg,
-						}
-					);
+					return {
+						util: require(`${dirs.site}/util`),
+						dnaVars: metadata,
+						...(templateData ?? {}),
+						pageURL: path.basename(file.basename, ".yml") + ".html",
+						dependencyOrder: docsDeps,
+						releaseDate: date,
+						pkg,
+					};
 				})
 			)
 			.pipe(
-				through.obj(function compilePug(file, enc, cb) {
-					let component;
-					var componentName = file.dirname
-						.replace("/metadata", "")
-						.split("/")
-						.pop();
-					try {
-						component = yaml.load(String(file.contents));
-					} catch (loadError) {
-						logger.error(
-							"Uh, oh... during buildDocs_forDep, yaml loading failed for"
-								.yellow,
-							componentName.red
-						);
-						throw loadError;
-					}
+				through.obj(function compilePug(file, _, cb) {
+					const component = yaml.load(String(file.contents));
 
 					if (!component.id) {
-						if (file.basename === "metadata.yml") {
-							// Use the component's name
-							component.id = dep;
-						} else {
-							// Use the example file name
-							component.id = path.basename(file.basename, ".yml");
-						}
+						// Use the example file name
+						component.id = path.basename(file.basename, ".yml");
 					}
-					let templateData = Object.assign(
-						{},
-						{ component: component },
-						file.data || {}
-					);
+
+					const templateData = {
+						component,
+						...(file.data ?? {}),
+					};
 
 					file.path = ext(file.path, ".html");
 
@@ -187,8 +163,7 @@ async function buildDocs_forDep(dep) {
 
 // Combined
 async function buildDocs_individualPackages() {
-	let dependencies = await depUtils.getFolderDependencyOrder(dirs.components);
-
+	const dependencies = await depUtils.getFolderDependencyOrder(dirs.components);
 	return Promise.all(dependencies.map(buildDocs_forDep));
 }
 
@@ -196,30 +171,21 @@ function buildSite_generateIndex() {
 	return gulp
 		.src([
 			`${dirs.components}/*/metadata/*.yml`,
+			`${dirs.topLevel}/.storybook/deprecated/*/*.yml`,
 		])
 		.pipe(
 			(function () {
 				let docs = [];
 				let store = {};
 				let latestFile = null;
-				function readYML(file, enc, cb) {
-					let componentData;
-					try {
-						componentData = yaml.load(String(file.contents));
-					} catch (err) {
-						return cb(err);
-					}
-
-					var componentName = file.dirname
+				function readYML(file, _, cb) {
+					const componentData = yaml.load(String(file.contents));
+					const componentName = file.dirname
 						.replace("/metadata", "")
-						.split("/")
+						.split(path.sep)
 						.pop();
 
-					if (path.basename(file.basename) === "metadata.yml") {
-						file.basename = componentName;
-					}
-
-					var fileName = ext(file.basename, ".html");
+					const fileName = ext(file.basename, ".html");
 
 					docs.push({
 						href: fileName,
@@ -277,35 +243,22 @@ function buildSite_getData() {
 	return gulp
 		.src([
 			`${dirs.components}/*/metadata/*.yml`,
+			`${dirs.topLevel}/.storybook/deprecated/*/*.yml`,
 		])
 		.pipe(
-			through.obj(function readYML(file, enc, cb) {
-				let componentData;
-				var componentName = file.dirname
+			through.obj(function readYML(file, _, cb) {
+				const componentData = yaml.load(String(file.contents));
+				const componentName = file.dirname
 					.replace("/metadata", "")
-					.split("/")
+					.split(path.sep)
 					.pop();
-				try {
-					componentData = yaml.load(String(file.contents));
-				} catch (loadError) {
-					logger.error(
-						"Uh, oh... during buildDocs_getData, yaml loading failed for"
-							.yellow,
-						componentName.red
-					);
-					throw loadError;
-				}
 
-				if (path.basename(file.basename) === "metadata.yml") {
-					file.basename = componentName;
-				}
+				const fileName = ext(file.basename, ".html");
 
-				var fileName = ext(file.basename, ".html");
 				nav.push({
 					name: componentData.name,
 					component: componentName,
 					hide: componentData.hide,
-					fastLoad: componentData.fastLoad,
 					href: fileName,
 					description: componentData.description,
 				});

@@ -34,10 +34,12 @@ async function getDependencies(package) {
 			...Object.keys(dependencies),
 			...Object.keys(devDependencies),
 		])].filter((dep) => (
-			dep.indexOf("@spectrum-css") === 0 &&
-			dep !== "@spectrum-css/bundle-builder" &&
-			dep !== "@spectrum-css/component-builder" &&
-			dep !== "@spectrum-css/component-builder-simple"
+			dep.startsWith("@spectrum-css") &&
+			![
+				"bundle-builder",
+				"component-builder",
+				"component-builder-simple"
+			].some((postfix) => dep.endsWith(postfix))
 		))
 	};
 }
@@ -73,39 +75,38 @@ async function solveDependencies(packages) {
 /**
  * Get the list of all packages in given directory
  * @param {string} packageDir - package directory
- * @return {Object} An array of package names in dependency order
+ * @return {string[]} An array of package names in dependency order
  */
 async function getPackageDependencyOrder(packageDir) {
 	const { dependencies } = await getDependencies(packageDir);
 	return solveDependencies(
-		dependencies.map((dep) =>
-			path.dirname(require.resolve(path.join(dep, "package.json")))
-		)
+		dependencies.map((dep) => {
+			const packagePath = path.join(dep, "package.json");
+			return path.dirname(
+				require.resolve(packagePath)
+			);
+		})
 	);
 }
 
 /**
  * Get the list of all packages in given directory
  * @param {string} packagesDir - directory of packages
- * @return {Object} An array of package names in dependency order
+ * @return {string[]} An array of package names in dependency order
  */
 async function getFolderDependencyOrder(packagesDir) {
 	// Get list of all packages
-	let packages = (await fsp.readdir(packagesDir, { withFileTypes: true }))
+	const packages = (await fsp.readdir(packagesDir, { withFileTypes: true }))
 		.filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
 		.map((dirent) => path.join(packagesDir, dirent.name));
 
-	let solution = await solveDependencies(packages);
+	const solution = await solveDependencies(packages) ?? [];
 
-	// Nobody relies on it, so it gets clipped, weird
-	solution.push("@spectrum-css/expressvars");
-
-	// Build tokens first
-	// This is because not every package relies on tokens, but the builder needs tokens to bake vars
-	solution = solution.filter((p) => p !== "@spectrum-css/tokens");
-	solution.unshift("@spectrum-css/tokens");
-
-	return solution;
+	return [...new Set([
+		"@spectrum-css/tokens",
+		...solution,
+		"@spectrum-css/expressvars"
+	])];
 }
 
 exports.getDependencies = getDependencies;
