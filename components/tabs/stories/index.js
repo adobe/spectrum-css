@@ -4,7 +4,7 @@ import { Template } from "./template";
 export const argTypes = {
   items: { table: { disable: true }},
   selectorStyle: { table: { disable: true }},
-  style: { table: { disable: true }},
+  customStyles: { table: { disable: true }},
   overflow: { table: { disable: true }},
   size: {
     name: "Size",

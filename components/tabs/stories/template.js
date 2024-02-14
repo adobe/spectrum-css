@@ -21,7 +21,7 @@ export const Template = ({
 	iconOnly,
 	isOpen = true,
   selectorStyle = {},
-  style = {},
+  customStyles = {},
 	overflow,
 	popoverOffset,
   ...globals
@@ -107,7 +107,7 @@ export const Template = ({
 						[`${rootClass}--compact`]: isCompact,
 						...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 					})}
-					style=${ifDefined(styleMap(style))}
+					style=${ifDefined(styleMap(customStyles))}
 				>
 				<div
 					class="${rootClass}-selectionIndicator"
@@ -136,7 +136,7 @@ export const Template = ({
 				[`${rootClass}--compact`]: isCompact,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(style))}
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			${repeat(
 				displayedItems,
