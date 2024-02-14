@@ -1,10 +1,12 @@
 // Import the component markup template
 import { Template } from "./template";
 import { html } from "lit";
-import { argTypes } from "./index.js";
+import { argTypes, TabsGroup } from "./index.js";
+
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 export default {
-  title: "Components/Tabs/Horizontal",
+  title: "Components/Tabs",
   description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
   argTypes: argTypes,
@@ -28,108 +30,39 @@ export default {
   }
 };
 
-const chromaticKitchenSink = ({
+const horiztonalTabsGroup = ({
 	...args
-}) => {
-	return html`
-		<div style="display: flex; flex-direction: column; gap: 2rem;">
-    <h2>Horizontal Default</h2>
-			${Template({
-        ...args
-			})}
-			${Template({
-        ...args,
-        labelWithIcons: true
-       })}
-      ${Template({
-        ...args,
-        iconOnly: true
-        })}
-		</div>
-    <div style="display: flex; flex-direction: column; gap: 2rem;">
-    <h2>Horizontal Default Emphasized</h2>
-			${Template({
-        ...args,
-        isEmphasized: true
-			})}
-			${Template({
-        ...args,
-        labelWithIcons: true,
-        isEmphasized: true
-				})}
-      ${Template({
-        ...args,
-        iconOnly: true,
-        isEmphasized: true
-				})}
-		</div>
-    <h2>Horizontal Quiet</h2>
-    <div style="display: flex; flex-direction: column; gap: 2rem;">
-			${Template({
-        ...args,
-        isQuiet: true
-			})}
-			${Template({
-        ...args,
-        labelWithIcons: true,
-        isQuiet: true
-				})}
-      ${Template({
-        ...args,
-        iconOnly: true,
-        isQuiet: true
-        })}
-      ${Template({
-        ...args,
-        isEmphasized: true,
-        isQuiet: true
-        })}
-		</div>
-		<div style="display: flex; flex-direction: column; gap: 2rem;">
-    <h2>Horizontal Quiet Compact</h2>
-			${Template({
-        ...args,
-        isQuiet: true,
-        isCompact: true
-			})}
-			${Template({
-        ...args,
-        labelWithIcons: true,
-        isQuiet: true,
-        isCompact: true
+  }) => {
+    return html `
+      ${Typography({
+        semantics: "heading",
+        size: "s",
+        content: ["Horizontal Default"],
       })}
-      ${Template({
-        ...args,
-        iconOnly: true,
-        isQuiet: true,
-        isCompact: true
-        })}
-      ${Template({
-        ...args,
-        isEmphasized: true,
-        isQuiet: true,
-        isCompact: true
-        })}
-      ${Template({
-        ...args,
-        isEmphasized: true,
-        labelWithIcons: true,
-        isQuiet: true,
-        isCompact: true
-        })}
-      ${Template({
-        ...args,
-        isEmphasized: true,
-        iconOnly: true,
-        isQuiet: true,
-        isCompact: true
-        })}
-		</div>
-	`;
+      ${TabsGroup({...args, })}
+      ${Typography({
+        semantics: "heading",
+        size: "s",
+        content: ["Horizontal Emphasized"],
+      })}
+      ${TabsGroup({...args, isEmphasized: true})}
+      ${Typography({
+        semantics: "heading",
+        size: "s",
+        content: ["Horizontal Quiet"],
+      })}
+      ${TabsGroup({...args, isQuiet: true})}
+      ${Typography({
+        semantics: "heading",
+        size: "s",
+        content: ["Horizontal Quiet Compact"],
+      })}
+      ${TabsGroup({...args, isQuiet: true, isCompact: true})}
+    `
 };
 
-export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
-Default.args = {};
+export const Horizontal = (args) => window.isChromatic() ? horiztonalTabsGroup(args) : Template(args);
+Horizontal.args = {};
 
 export const Overflow = Template.bind({});
 Overflow.args = {

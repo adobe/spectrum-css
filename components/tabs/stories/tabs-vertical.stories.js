@@ -1,10 +1,12 @@
 // Import the component markup template
 import { Template } from "./template";
 import { html } from "lit";
-import { argTypes } from "./index.js";
+import { argTypes, TabsGroup } from "./index.js";
+
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 export default {
-  title: "Components/Tabs/Vertical",
+  title: "Components/Tabs",
   description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
   component: "Tabs",
   argTypes: argTypes,
@@ -28,86 +30,37 @@ export default {
   }
 };
 
-const chromaticKitchenSink = ({
+const verticalTabsGroup = ({
 	...args
 }) => {
 	return html`
-    <h2> Vertical Default</h2>
-		<div style="display: flex; gap: 2rem;">
-			${Template({
-          ...args
-			})}
-			${Template({
-          ...args,
-          labelWithIcons: true
+      ${Typography({
+        semantics: "heading",
+        size: "s",
+        content: ["Vertical Default"],
       })}
-      ${Template({
-          ...args,
-          iconOnly: true
+      ${TabsGroup({...args,})}
+      ${Typography({
+        semantics: "heading",
+        size: "s",
+        content: ["Vertical Emphasized"],
       })}
-		</div>
-    <h2>Vertical Emphasized</h2>
-    <div style="display: flex; gap: 2rem;">
-			${Template({
-          ...args,
-          isEmphasized: true,
-			})}
-			${Template({
-        ...args,
-        labelWithIcons: true,
-        isEmphasized: true
+      ${TabsGroup({...args, isEmphasized: true})}
+      ${Typography({
+        semantics: "heading",
+        size: "s",
+        content: ["Vertical Quiet"],
       })}
-      ${Template({
-        ...args,
-        iconOnly: true,
-        isEmphasized: true
+      ${TabsGroup({...args, isQuiet: true})}
+      ${Typography({
+        semantics: "heading",
+        size: "s",
+        content: ["Vertical Quiet Compact"],
       })}
-		</div>
-    <h2>Vertical Quiet</h2>
-    <div style="display: flex; gap: 2rem;">
-			${Template({
-        ...args,
-        isQuiet: true
-			})}
-			${Template({
-        ...args,
-        labelWithIcons: true,
-        isQuiet: true
-      })}
-      ${Template({
-        ...args,
-        iconOnly: true,
-        isQuiet: true
-      })}
-		</div>
-    <h2> Vertical Quiet Compact</h2>
-    <div style="display: flex; gap: 2rem;">
-			${Template({
-        ...args,
-        isQuiet: true,
-        isCompact: true
-			})}
-			${Template({
-          ...args,
-          labelWithIcons: true,
-          isQuiet: true,
-          isCompact: true
-				})}
-      ${Template({
-        ...args,
-        iconOnly: true,
-        isQuiet: true,
-        isCompact: true
-      })}
-      ${Template({
-        ...args,
-        isEmphasized: true,
-        isQuiet: true,
-        isCompact: true
-      })}
-		</div>
+      ${TabsGroup({...args, isQuiet: true, isCompact: true})}
+
 	`;
 };
 
-export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
-Default.args = {};
+export const Vertical = (args) => window.isChromatic() ? verticalTabsGroup(args) : Template(args);
+Vertical.args = {};

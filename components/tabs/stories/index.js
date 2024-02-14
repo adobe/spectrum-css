@@ -1,3 +1,6 @@
+import { html } from "lit";
+import { Template } from "./template";
+
 export const argTypes = {
   items: { table: { disable: true }},
   selectorStyle: { table: { disable: true }},
@@ -63,3 +66,24 @@ export const argTypes = {
     if: { arg: 'overflow', truthy: false },
   }
 };
+
+export const TabsGroup = ({
+  ...args
+  }) => {
+
+    return html`
+        <div style="display: flex; flex-direction: ${args.orientation === "horizontal" ? "column" : "row"}; gap: 2rem;">
+          ${Template({
+            ...args
+          })}
+          ${Template({
+            ...args,
+            labelWithIcons: true
+          })}
+          ${Template({
+            ...args,
+            iconOnly: true
+            })}
+        </div>
+      `
+  };
