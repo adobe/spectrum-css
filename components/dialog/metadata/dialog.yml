@@ -143,8 +143,7 @@ examples:
       </div>
   - id: dialog-scrolling
     name: Dialog - Scrolling
-    dnaStatus: Contribution
-    status: Unverified
+    status: Contribution
     description: A dialog without `.spectrum-Dialog--alert` can expand to a larger size to house larger contents.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
@@ -201,7 +200,7 @@ examples:
       </div>
   - id: dialog-fullscreen
     name: Dialog - Fullscreen
-    status: Unverified
+    status: Contribution
     description: A fullscreen dialog will automatically fill almost all of the available screen space.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
@@ -258,7 +257,7 @@ examples:
       </div>
   - id: dialog-fullscreen
     name: Dialog - Fullscreen Takeover
-    status: Unverified
+    status: Contribution
     description: A fullscreen takeover dialog will fill all of the available screen space.
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
