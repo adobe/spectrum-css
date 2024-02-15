@@ -1,22 +1,7 @@
 name: Search within
+status: Deprecated
+deprecationNotice: Use a [search field](search.html) with a separate control to filter the search instead.
 description: Override the width of the component where necessary.
-sections:
-  - name: Migration Guide
-    description: |
-      ### Component renamed
-      Since Dropdown is now known as Picker, Replace all `.spectrum-Dropdown*` classnames with `.spectrum-Picker*` and replace all `.spectrum-SearchWithin-dropdown` with `.spectrum-SearchWithin-picker`.
-
-      ### New Picker markup
-      Combobox now uses `.spectrum-Picker`. See [Picker migration guide](picker.html#migrationguide) for details.
-
-      Since Picker's markup has changed, `.spectrum-SearchWithin-pickerTrigger` is no longer required.
-
-      ### New ClearButton classes
-      The `.spectrum-SearchWithin-clearButton` class is now required on the `.spectrum-ClearButton` element.
-
-      ### New ClearButton markup
-      See the [ClearButton migration guide](clearbutton.html#migrationguide) for more information.
-
 examples:
   - id: searchwithin
     name: Standard
