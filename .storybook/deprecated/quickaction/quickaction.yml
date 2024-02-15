@@ -1,7 +1,7 @@
 id: quickactions
 name: Quick actions
 status: Deprecated
-deprecationNotice: Use an <a href="actionbar.html">action bar</a> to allow users to perform actions on either a single or multiple items at the same time, instead.
+deprecationNotice: Use an <a class="spectrum-Link" href="actionbar.html">action bar</a> to allow users to perform actions on either a single or multiple items at the same time, instead.
 description: Note that the `.spectrum-QuickActions-overlay` class should be placed on the container where the Quick Actions are displayed, and the `.spectrum-QuickActions--textOnly` class should be applied when the buttons have text only.
 SpectrumSiteSlug: https://spectrum.adobe.com/page/quick-actions/
 examples:

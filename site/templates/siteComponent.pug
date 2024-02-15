@@ -149,9 +149,10 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                   h3.spectrum-InLineAlert-header Deprecated component
                     svg(class="spectrum-Icon spectrum-Icon--sizeM spectrum-InLineAlert-icon" focusable="false" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" height="36" viewBox="0 0 36 36" width="36")
                       path(d="M17.127 2.579.4 32.512A1 1 0 0 0 1.272 34h33.456a1 1 0 0 0 .872-1.488L18.873 2.579a1 1 0 0 0-1.746 0ZM20 29.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5Zm0-6a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-12a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5Z")
-                  p.spectrum-InLineAlert-content This component has been deprecated.
-                    if component.deprecationNotice
-                      span!= util.markdown.render(component.deprecationNotice)
+                  section.spectrum-InLineAlert-content
+                    p This component has been deprecated.
+                      if component.deprecationNotice
+                        span!= util.markdown.render(component.deprecationNotice)
 
               table.spectrum-CSSComponent-detailsTable
                 tr.spectrum-Body
