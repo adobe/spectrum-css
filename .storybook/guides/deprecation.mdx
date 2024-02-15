@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Guides/Deprecation workflow"/>
+
+# Deprecating a component
+
+When a component is deprecated, it is no longer recommended for use. Though the component will be removed from the codebase and will no longer receive feature updates, we will apply bug fixes to the package as necessary. We will also provide a migration path to a recommended alternative.
+
+## Deprecation process
+
+**Deprecation of a component is typically initiated and communicated by the design team.** They will indicate that a component is going to be deprecated and identify reccomended alternatives and proposed language around migrating away from that component's use.
+
+### Pre-deprecation communication
+
+- Before starting a deprecation, connect with the Spectrum Web Components team to align on the timing of the deprecation. Make sure downstream users are aware that the component is being deprecated and have a migration path to the recommended alternative. Give downstream consumers time to express any concerns or blockers.
+- Add a new [Announcement](https://github.com/adobe/spectrum-css/discussions/new?category=announcements) to the Spectrum CSS repository to notify the community of the deprecation. Include the deprecation notice and any additional migration details that would be important for consumers. See the template below for an example of what to include in the announcement. Title should follow this format: `Deprecation notice: <component name>`.
+    ```markdown
+    As of Feb 15, 2024, the @spectrum-css/quickactions has been deprecated.
+
+    Please use an Action bar to allow users to perform actions on either a single or multiple items at the same time, instead.
+
+    This component has been removed from the Spectrum CSS monorepo and will no longer receive new features. Bug fixes will be patched on a as-needed basis. If you find a critical bug, please open a bug report.
+
+    Bug fixes will not longer be supported after the project migrates fully to Spectrum 2 (date TBD).
+
+    If you have any questions or concerns about this deprecation, please feel free to contribute to the discussion here or reach out to us directly.
+    ```
+
+### Storybook
+
+- Create a new folder with the component name in `.storybook/deprecated`, i.e., `.storybook/deprecated/quickaction`.
+- Copy `*.stories.js` and `metadata/*.yml` into the new folder (directly, not nested inside subfolders).
+- Open up and edit the title of the `*.stories.js` default export to be prefixed with the `Deprecated` category, i.e., `title: "Deprecated/Quick actions"`.
+- Update any local references to point to the package name instead, i.e.,<br/>_Original_:<br/>`import { Template } from "./template";`<br/><br/>_Updated to_:<br/>`import { Template } from "@spectrum-css/quickaction/stories/template.js";`.
+- In the parameters section of the `*.stories.js`, there are 2 important updates to make:
+    - Add `chromatic: { disable: true },` to ensure it no longer runs regression tests.
+    - Update the `status` type to `deprecated`:
+        ```json
+        parameters: {
+            chromatic: { disable: true },
+            status: { type: "deprecated" }
+        },
+        ```
+
+### Documentation
+
+Update the status of the component to `Deprecated` in the `*.yml` file. Add any additional migration notes to the `deprecationNotice` keyword. i.e.,
+    ```yaml
+    name: Quick actions
+    status: Deprecated
+    deprecationNotice: Use an <a href="actionbar.html">action bar</a> to allow users to perform actions on either a single or multiple items at the same time, instead.
+    ```
+
+### Codebase
+
+- Delete the package from the components directory.
+- Add the deprecated component's package and last version to the root package.json. i.e., `"@spectrum-css/quickaction": "^3.1.1",`.
+- Reach out to one of the package maintainers to officially deprecate the package in the package registry with the provided deprecation notice from design. Do not try to run the deprecation command unless you know that you have publishing permissions on npm. i.e., `npm deprecate @spectrum-css/quickaction@3.1.1 "This package has been deprecated. Use an action bar to allow users to perform actions on either a single or multiple items at the same time, instead."`.
+
+### Post-deprecation communication
+
+- Update the `#spectrum-css` channel in Slack with the deprecation notice and any additional migration notes.
+- Reach out to the Spectrum Web Components team to confirm completion of the deprecation process.
