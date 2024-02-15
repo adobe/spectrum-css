@@ -32,6 +32,7 @@
 | `--mod-button-font-family`                 |
 | `--mod-button-font-size`                   |
 | `--mod-button-height`                      |
+| `--mod-button-icon-margin-block-start`     |
 | `--mod-button-line-height`                 |
 | `--mod-button-margin-block`                |
 | `--mod-button-margin-left`                 |
