@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 
 const gulp = require("gulp");
 const concat = require("gulp-concat");
-const rename = require("gulp-rename");
 
 const depUtils = require("./lib/depUtils");
 const dirs = require("./lib/dirs");
@@ -152,35 +151,21 @@ let buildStandalone = gulp.series(
 // run buildLite on a selected set of packages that depend on commons
 // yay: faster than 'rebuild everything' approach
 // boo: must add new packages here as commons grows
-function buildDepenenciesOfCommons() {
-	const dependentComponents = [
+function buildDependenciesOfCommons() {
+	return subrunner.runTaskOnPackages("buildLite", [
 		`${dirs.components}/actionbutton`,
 		`${dirs.components}/button`,
-		`${dirs.components}/clearbutton`,
 		`${dirs.components}/closebutton`,
-		`${dirs.components}/infieldbutton`,
 		`${dirs.components}/logicbutton`,
+		`${dirs.components}/modal`,
 		`${dirs.components}/picker`,
-		`${dirs.components}/pickerbutton`,
-	];
-	return subrunner.runTaskOnPackages("buildLite", dependentComponents);
+		`${dirs.components}/popover`,
+		`${dirs.components}/tooltip`,
+		`${dirs.components}/underlay`,
+	]);
 }
 
-function copyPackages() {
-	return gulp
-		.src([
-			`${dirs.components}/*/package.json`,
-			`${dirs.components}/*/dist/**`,
-		])
-		.pipe(
-			rename(function (file) {
-				file.dirname = file.dirname.replace("/dist", "");
-			})
-		)
-		.pipe(gulp.dest("dist/components/"));
-}
-
-const buildDocs = gulp.parallel(docs.build, vars.copyVars, copyPackages);
+const buildDocs = gulp.parallel(docs.build, vars.copyVars);
 
 function buildIfTopLevel() {
 	let builtTasks = gulp.parallel(buildCombined, buildStandalone, buildDocs);
@@ -196,15 +181,15 @@ function buildIfTopLevel() {
 
 let build = gulp.series(buildIfTopLevel(), vars.copyVars);
 
-let buildLite = gulp.series(function buildComponentsLite() {
+let buildLite = gulp.series(function buildComponents() {
 	return subrunner.runTaskOnAllComponents("buildLite");
 }, buildDocs);
 
-let buildMedium = gulp.series(function buildComponentsLite() {
+let buildMedium = gulp.series(function buildComponents() {
 	return subrunner.runTaskOnAllComponents("buildMedium");
 }, buildDocs);
 
-let buildHeavy = gulp.series(function buildComponentsLite() {
+let buildHeavy = gulp.series(function buildComponents() {
 	return subrunner.runTaskOnAllComponents("buildHeavy");
 }, buildDocs);
 
@@ -226,8 +211,7 @@ exports.buildCombined = buildCombined;
 exports.buildStandalone = buildStandalone;
 exports.buildLite = buildLite;
 exports.buildDocs = buildDocs;
-exports.buildDepenenciesOfCommons = buildDepenenciesOfCommons;
-exports.copyPackages = copyPackages;
+exports.buildDependenciesOfCommons = buildDependenciesOfCommons;
 exports.dev = devTask;
 exports.build = build;
 exports.watch = dev.watch;

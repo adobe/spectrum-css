@@ -9,22 +9,23 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const gulp = require("gulp");
 const fs = require("fs");
 const path = require("path");
-const pugCompiler = require("pug");
+
+const gulp = require("gulp");
 const pug = require("gulp-pug");
 const data = require("gulp-data");
-const yaml = require("js-yaml");
 const through = require("through2");
+
+const fg = require("fast-glob");
+const pugCompiler = require("pug");
+const yaml = require("js-yaml");
 const ext = require("replace-ext");
-const logger = require("gulplog");
 const lunr = require("lunr");
+const npmFetch = require("npm-registry-fetch");
 
 const dirs = require("../lib/dirs");
 const depUtils = require("../lib/depUtils");
-
-const npmFetch = require("npm-registry-fetch");
 
 require("colors");
 
@@ -161,10 +162,42 @@ async function buildDocs_forDep(dep) {
 	});
 }
 
-// Combined
+function copyDocs_forDep(dep) {
+	// We don't copy assets for tokens here - it's done separately
+	if (["vars", "expressvars"].some((packageName => dep.endsWith(packageName)))) {
+		return;
+	}
+
+	const folder = dep.split(path.sep).pop();
+	const pkgPath = require.resolve(`${dep}/package.json`);
+
+	if (!pkgPath) return;
+
+	const files = fg.sync(["package.json", "dist/**"], {
+		cwd: path.dirname(pkgPath),
+	});
+
+	return Promise.all(
+		files.map((file) => {
+			const cleanFile = file.replace("dist/", "");
+			const from = path.join(path.dirname(pkgPath), file);
+			const dest = path.join(dirs.topLevel, "dist/components", folder, cleanFile);
+			if (!fs.existsSync(path.dirname(dest))) {
+				fs.mkdirSync(path.dirname(dest), { recursive: true });
+			}
+
+			return fs.copyFileSync(from, dest);
+		})
+	);
+}
+
+// Combined -- note: this does include deprecated packages that exist only in node_modules
 async function buildDocs_individualPackages() {
 	const dependencies = await depUtils.getFolderDependencyOrder(dirs.components);
-	return Promise.all(dependencies.map(buildDocs_forDep));
+	return Promise.all(dependencies.map((d) => Promise.all([
+		buildDocs_forDep(d),
+		copyDocs_forDep(d),
+	])));
 }
 
 function buildSite_generateIndex() {
@@ -344,5 +377,6 @@ exports.buildSite_copyFreshResources = buildSite_copyFreshResources;
 exports.buildSite_pages = buildSite_pages;
 exports.buildSite_html = buildSite_html;
 exports.buildDocs_forDep = buildDocs_forDep;
+exports.buildDocs_individualPackages = buildDocs_individualPackages;
 exports.buildDocs = buildDocs;
 exports.build = build;

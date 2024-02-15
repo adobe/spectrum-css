@@ -157,8 +157,8 @@ function watchCommons() {
 	gulp.watch(
 		[`${dirs.components}/commons/*.css`],
 		gulp.series(
-			bundleBuilder.buildDepenenciesOfCommons,
-			bundleBuilder.copyPackages,
+			bundleBuilder.buildDependenciesOfCommons,
+			docs.buildDocs_individualPackages,
 			reload
 		)
 	);
