@@ -1,8 +1,7 @@
-// Import the component markup template
-import { Template } from "./template";
+import { Template } from "@spectrum-css/splitbutton/stories/template.js";
 
 export default {
-	title: "Components/Split button",
+	title: "Deprecated/Split button",
 	description:
 		"A split button surfaces an immediately invokable action via it's main button, as well as a list of alternative actions in its toggle-able menu overlay.",
 	component: "SplitButton",
@@ -52,10 +51,9 @@ export default {
 		actions: {
 			handles: [],
 		},
+		chromatic: { disable: true },
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("splitbutton")
-				? "migrated"
-				: undefined,
+			type: "deprecated"
 		},
 	},
 };
