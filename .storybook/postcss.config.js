@@ -1,5 +1,4 @@
-const { resolve, basename } = require("path");
-const { existsSync } = require("fs");
+const { basename } = require("path");
 const warnCleaner = require("postcss-warn-cleaner");
 
 const simpleBuilder = require("@spectrum-css/component-builder-simple/css/processors.js");
@@ -16,10 +15,11 @@ function getPackageFromPath(filePath) {
 
 module.exports = (ctx) => {
 	let plugins = [];
-	const componentPath = resolve(__dirname, "../components");
     /** @todo put together a more robust fallback determination */
 	const folderName = getPackageFromPath(ctx.file) ?? "tokens";
-	const pkgPath = resolve(componentPath, folderName, "package.json");
+	const pkgPath = require.resolve(`@spectrum-css/${folderName}/package.json`);
+
+	if (!pkgPath) return plugins;
 
 	/**
 	 * For our token libraries, include a little extra parsing to allow duplicate
@@ -56,7 +56,7 @@ module.exports = (ctx) => {
 				  ]
 				: []),
 		];
-	} else if (existsSync(pkgPath)) {
+	} else {
 		/**
 		 * If a path has a package.json, we can assume it's a component and
 		 * we want to leverage the correct plugins for it.

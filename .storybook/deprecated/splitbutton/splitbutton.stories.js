@@ -46,6 +46,9 @@ export default {
 		size: "m",
 		position: "right",
 		label: "Split Button",
+		variant: "accent",
+		treatment: "fill",
+		iconName: "ChevronDown100",
 	},
 	parameters: {
 		actions: {
@@ -58,44 +61,5 @@ export default {
 	},
 };
 
-export const CTA = Template.bind({});
-CTA.args = {
-	variant: "accent",
-	treatment: "fill",
-	iconName: "ChevronDown100",
-};
-
-export const CTAMoreIcon = Template.bind({});
-CTAMoreIcon.args = {
-	variant: "accent",
-	treatment: "fill",
-	iconName: "More",
-};
-
-export const Primary = Template.bind({});
-Primary.args = {
-	variant: "primary",
-	treatment: "outline",
-	iconName: "ChevronDown100",
-};
-
-export const PrimaryMoreIcon = Template.bind({});
-PrimaryMoreIcon.args = {
-	variant: "primary",
-	treatment: "outline",
-	iconName: "More",
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-	variant: "secondary",
-	treatment: "outline",
-	iconName: "ChevronDown100",
-};
-
-export const SecondaryMoreIcon = Template.bind({});
-SecondaryMoreIcon.args = {
-	variant: "secondary",
-	treatment: "outline",
-	iconName: "More",
-};
+export const Default = Template.bind({});
+Default.args = {};
