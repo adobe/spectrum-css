@@ -1,10 +1,6 @@
 name: Split button
-description: Instead of a single split button (now a deprecated component), use a button group to show any additional actions related to the most critical action. Reference [Spectrum documentation](https://spectrum.adobe.com/page/button-group/#Use-a-button-group-to-show-additional-actions) for more information.
-sections:
-  - name: Migration Guide
-    description: |
-      ### Remove focus-ring class
-      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
+status: Deprecated
+deprecationNotice: Use a <a href="buttongroup.html">button group</a> to show any additional actions related to the most critical action. Reference <a href="https://spectrum.corp.adobe.com/page/button-group/#Use-a-button-group-to-show-additional-actions">Spectrum documentation</a> for more information.
 examples:
   - id: splitbutton
     name: CTA
