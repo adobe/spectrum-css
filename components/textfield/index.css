@@ -1278,7 +1278,7 @@ governing permissions and limitations under the License.
 		);
 	}
 
-	/* CSS to support text area grow behavior */
+	/* CSS to support text area grow behavior, requires JavaScript to implement */
 	&.spectrum-Textfield--grows {
 		.spectrum-Textfield-input {
 			grid-row: 2 / auto;
