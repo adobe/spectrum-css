@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="8.0.0"></a>
+#8.0.0
+🗓
+2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.5.0...@spectrum-css/preview@8.0.0)
+
+### ♻️ Code refactoring
+
+- **quickaction:**deprecate component; support this in docs ([#2304](https://github.com/adobe/spectrum-css/issues/2304))([84e1ee9](https://github.com/adobe/spectrum-css/commit/84e1ee9))
+
+      ###
+      🛑 BREAKING CHANGES
+
+      	*
+      	**quickaction:** @spectrum-css/quickaction deprecated
+
+This component has been deprecated. Use an action bar to allow users to perform actions on either a single or multiple items at the same time, instead.
+
 <a name="7.5.0"></a>
 #7.5.0
 🗓

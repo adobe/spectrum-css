@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.0.3"></a>
+##6.0.3
+🗓
+2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/icon@6.0.2...@spectrum-css/icon@6.0.3)
+
+**Note:** Version bump only for package @spectrum-css/icon
+
 <a name="6.0.2"></a>
 ##6.0.2
 🗓
