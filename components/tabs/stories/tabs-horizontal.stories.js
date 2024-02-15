@@ -37,25 +37,25 @@ const horiztonalTabsGroup = ({
       ${Typography({
         semantics: "heading",
         size: "s",
-        content: ["Horizontal Default"],
+        content: ["Horizontal default"],
       })}
       ${TabsGroup({...args, })}
       ${Typography({
         semantics: "heading",
         size: "s",
-        content: ["Horizontal Emphasized"],
+        content: ["Horizontal emphasized"],
       })}
       ${TabsGroup({...args, isEmphasized: true})}
       ${Typography({
         semantics: "heading",
         size: "s",
-        content: ["Horizontal Quiet"],
+        content: ["Horizontal quiet"],
       })}
       ${TabsGroup({...args, isQuiet: true})}
       ${Typography({
         semantics: "heading",
         size: "s",
-        content: ["Horizontal Quiet Compact"],
+        content: ["Horizontal quiet compact"],
       })}
       ${TabsGroup({...args, isQuiet: true, isCompact: true})}
     `

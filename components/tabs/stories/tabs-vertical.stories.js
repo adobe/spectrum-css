@@ -37,25 +37,25 @@ const verticalTabsGroup = ({
       ${Typography({
         semantics: "heading",
         size: "s",
-        content: ["Vertical Default"],
+        content: ["Vertical default"],
       })}
       ${TabsGroup({...args,})}
       ${Typography({
         semantics: "heading",
         size: "s",
-        content: ["Vertical Emphasized"],
+        content: ["Vertical emphasized"],
       })}
       ${TabsGroup({...args, isEmphasized: true})}
       ${Typography({
         semantics: "heading",
         size: "s",
-        content: ["Vertical Quiet"],
+        content: ["Vertical quiet"],
       })}
       ${TabsGroup({...args, isQuiet: true})}
       ${Typography({
         semantics: "heading",
         size: "s",
-        content: ["Vertical Quiet Compact"],
+        content: ["Vertical quiet compact"],
       })}
       ${TabsGroup({...args, isQuiet: true, isCompact: true})}
 
