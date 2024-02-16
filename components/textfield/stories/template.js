@@ -33,6 +33,7 @@ export const Template = ({
 	labelPosition = "top",
 	labelText,
 	iconName,
+	iconSet,
 	pattern,
 	placeholder,
 	name,
@@ -54,8 +55,13 @@ export const Template = ({
 		console.warn(e);
 	}
 
-	if (isInvalid) iconName = "Alert";
-	else if (isValid) iconName = "Checkmark";
+	if (isInvalid) {
+		iconName = "Alert";
+		iconSet = "workflow";
+	} else if (isValid) {
+		iconName = "Checkmark";
+		iconSet = "ui";
+	}
 
 	return html`
 		<div
@@ -101,6 +107,7 @@ export const Template = ({
 				...globals,
 				size,
 				iconName,
+				setName: iconSet,
 				customClasses: [
 					!!(isInvalid || isValid)
 						? `${rootClass}-validationIcon`
