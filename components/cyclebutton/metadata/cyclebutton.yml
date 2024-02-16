@@ -1,9 +1,6 @@
 name: Cycle button
-sections:
-  - name: Migration Guide
-    description: |
-      ### Change workflow icon size to medium
-      Replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+status: Deprecated
+deprecationNotice: Use the [quiet variant of action button](actionbutton.html#quiet) with the appropriate icon(s) instead. Any icon swapping that happens on-click/on-key should be handled by the implementation.
 examples:
   - id: cyclebutton
     name: Standard
