@@ -6,7 +6,7 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/tree-view/
 sections:
   - name: Custom Properties API
     description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/treeview/metadata/mods.md">here</a>.
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/treeview/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
       ### T-shirt sizing
@@ -38,7 +38,7 @@ sections:
 
       ### Revised sections markup
       The markup for sections has changed so that the heading is now a child of an `li` instead of the `ul`, to ensure valid markup. An additional
-      class `spectrum-TreeView-section` has been added for the first level `li` elements that contain the section heading and its child Tree view. 
+      class `spectrum-TreeView-section` has been added for the first level `li` elements that contain the section heading and its child Tree view.
 
 examples:
   - id: treeview-standard

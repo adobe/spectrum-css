@@ -4,7 +4,7 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/table/
 sections:
   - name: Custom properties API
     description: |
-      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a href="https://github.com/adobe/spectrum-css/tree/main/components/table/metadata/mods.md">here</a>.
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/table/metadata/mods.md">here</a>.
   - name: Migration guide
     description: |
       ### Sorted icon moved to left side of text
@@ -1040,8 +1040,8 @@ examples:
           <tr class="spectrum-Table-row spectrum-Table-row--collapsible" data-tier="0" id="table-cr-alpha">
             <td class="spectrum-Table-cell spectrum-Table-cell--collapsible">
               <div class="spectrum-Table-collapseInner">
-                <button 
-                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon" 
+                <button
+                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon"
                   aria-label="Collapse"
                   aria-expanded="true"
                   aria-controls="table-cr-bravo table-cr-delta"
@@ -1059,8 +1059,8 @@ examples:
           <tr class="spectrum-Table-row spectrum-Table-row--collapsible" data-tier="1" id="table-cr-bravo">
             <td class="spectrum-Table-cell spectrum-Table-cell--collapsible">
               <div class="spectrum-Table-collapseInner">
-                <button 
-                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon" 
+                <button
+                  class="spectrum-Button spectrum-Button--sizeM spectrum-Button--iconOnly spectrum-Table-disclosureIcon"
                   aria-label="Expand"
                   aria-expanded="false"
                   aria-controls="table-cr-charlie"
