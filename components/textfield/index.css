@@ -435,6 +435,7 @@ governing permissions and limitations under the License.
 	/* Firefox and Safari - Remove the margin for input. */
 	margin: 0;
 
+	/* TODO: Determine if the vendor prefix toggling of appearance is still needed  */
 	/* Firefox -
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
     This has to come after -webkit-appearance or it gets overridden (#214)
@@ -443,6 +444,7 @@ governing permissions and limitations under the License.
     Sets the opacity to 1 as normalize.css sets an opacity to placeholders
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
+	/* stylelint-disable-next-line value-no-vendor-prefix */
 	-moz-appearance: textfield;
 
 	/* All browsers - Change the input font styles */
@@ -521,6 +523,11 @@ governing permissions and limitations under the License.
 		grid-column: 2;
 	}
 
+	.spectrum-Textfield.spectrum-Textfield--sideLabel & {
+		grid-row: 1 / span 1;
+		grid-column: 2 / span 1;
+	}
+
 	/****** Validation Icon - Valid ✅ ******/
 	.spectrum-Textfield.is-valid & {
 		inset-block-start: var(
@@ -530,10 +537,6 @@ governing permissions and limitations under the License.
 		inset-block-end: var(
 			--mod-textfield-icon-spacing-block-valid,
 			var(--spectrum-textfield-icon-spacing-block-valid)
-		);
-		inset-inline-start: var(
-			--mod-textfield-icon-spacing-inline-start-valid,
-			var(--spectrum-textfield-icon-spacing-inline-start-valid)
 		);
 		inset-inline-end: var(
 			--mod-textfield-icon-spacing-inline-end-valid,
@@ -565,10 +568,6 @@ governing permissions and limitations under the License.
 		inset-block-end: var(
 			--mod-textfield-icon-spacing-block-invalid,
 			var(--spectrum-textfield-icon-spacing-block-invalid)
-		);
-		inset-inline-start: var(
-			--mod-textfield-icon-spacing-inline-start-invalid,
-			var(--spectrum-textfield-icon-spacing-inline-start-invalid)
 		);
 		inset-inline-end: var(
 			--mod-textfield-icon-spacing-inline-end-invalid,
@@ -782,10 +781,10 @@ governing permissions and limitations under the License.
 
 	text-overflow: ellipsis;
 
-	/* Show the overflow for input in Edge. */
-	overflow: visible;
-
+	/* TODO: Determine if the vendor prefix toggling of appearance is still needed  */
+	/* stylelint-disable-next-line value-no-vendor-prefix */
 	-webkit-appearance: none;
+
 	/*
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
     This has to come after -webkit-appearance or it gets overridden (#214)
@@ -794,6 +793,7 @@ governing permissions and limitations under the License.
     Sets the opacity to 1 as normalize.css sets an opacity to placeholders
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
+	/* stylelint-disable-next-line value-no-vendor-prefix */
 	-moz-appearance: textfield;
 
 	/* place in same cell: input, focus indicator, and grows sizer */
@@ -811,6 +811,7 @@ governing permissions and limitations under the License.
 	/* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button {
+		/* stylelint-disable-next-line value-no-vendor-prefix */
 		-webkit-appearance: none;
 		margin: 0;
 	}
@@ -825,14 +826,14 @@ governing permissions and limitations under the License.
    */
 	/* stylelint-disable selector-no-vendor-prefix */
 	&::-ms-input-placeholder {
-		opacity: 1;
+		opacity: 100%;
 	}
 	/* stylelint-enable selector-no-vendor-prefix */
 
 
 	/*** Input Placeholder Text ***/
 	&::placeholder {
-		opacity: 1;
+		opacity: 100%;
 		font-size: var(
 			--mod-textfield-placeholder-font-size,
 			var(--spectrum-textfield-placeholder-font-size)
@@ -1127,7 +1128,7 @@ governing permissions and limitations under the License.
 		resize: none;
 
 		/* The opacity must be set to 1 */
-		opacity: 1;
+		opacity: 100%;
 
 		&::placeholder {
 			color: var(
@@ -1275,6 +1276,7 @@ governing permissions and limitations under the License.
 /*** Text Area ***/
 .spectrum-Textfield--multiline {
   --spectrum-textfield-input-line-height: normal;
+
   .spectrum-Textfield-input {
 		min-inline-size: var(
 			--mod-text-area-min-inline-size,
@@ -1289,7 +1291,11 @@ governing permissions and limitations under the License.
 
 	&.spectrum-Textfield--grows {
 		.spectrum-Textfield-input {
-			grid-row: 1 / auto;
+			grid-row: 2 / auto;
+		}
+
+		&.spectrum-Textfield--sideLabel .spectrum-Textfield-input {
+				grid-row: 1 / auto
 		}
 	}
 
@@ -1300,6 +1306,7 @@ governing permissions and limitations under the License.
 				--mod-text-area-min-block-size-quiet,
 				var(--spectrum-text-area-min-block-size-quiet)
 			);
+
 			/* Treat all quiet inputs and text areas the same */
 			resize: none;
 			overflow-y: hidden;
