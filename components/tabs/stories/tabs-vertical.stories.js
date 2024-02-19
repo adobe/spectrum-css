@@ -34,6 +34,7 @@ const verticalTabsGroup = ({
 	...args
 }) => {
 	return html`
+    <div style="display: grid; gap: 1rem;" >
       ${Typography({
         semantics: "heading",
         size: "s",
@@ -58,6 +59,7 @@ const verticalTabsGroup = ({
         content: ["Vertical quiet compact"],
       })}
       ${TabsGroup({...args, isQuiet: true, isCompact: true})}
+    </div>
 
 	`;
 };

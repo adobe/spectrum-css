@@ -34,30 +34,32 @@ const horiztonalTabsGroup = ({
 	...args
   }) => {
     return html `
-      ${Typography({
-        semantics: "heading",
-        size: "s",
-        content: ["Horizontal default"],
-      })}
-      ${TabsGroup({...args, })}
-      ${Typography({
-        semantics: "heading",
-        size: "s",
-        content: ["Horizontal emphasized"],
-      })}
-      ${TabsGroup({...args, isEmphasized: true})}
-      ${Typography({
-        semantics: "heading",
-        size: "s",
-        content: ["Horizontal quiet"],
-      })}
-      ${TabsGroup({...args, isQuiet: true})}
-      ${Typography({
-        semantics: "heading",
-        size: "s",
-        content: ["Horizontal quiet compact"],
-      })}
-      ${TabsGroup({...args, isQuiet: true, isCompact: true})}
+      <div style="display: grid; gap: 1rem;" >
+        ${Typography({
+          semantics: "heading",
+          size: "s",
+          content: ["Horizontal default"],
+        })}
+        ${TabsGroup({...args, })}
+        ${Typography({
+          semantics: "heading",
+          size: "s",
+          content: ["Horizontal emphasized"],
+        })}
+        ${TabsGroup({...args, isEmphasized: true})}
+        ${Typography({
+          semantics: "heading",
+          size: "s",
+          content: ["Horizontal quiet"],
+        })}
+        ${TabsGroup({...args, isQuiet: true})}
+        ${Typography({
+          semantics: "heading",
+          size: "s",
+          content: ["Horizontal quiet compact"],
+        })}
+        ${TabsGroup({...args, isQuiet: true, isCompact: true})}
+      </div>
     `
 };
 
@@ -65,14 +67,14 @@ const overflowTabsGroup = ({
   ...args
 }) => {
   return html `
-  <div style="display: grid; gap: 1rem;">
-    ${Template({
-      ...args
-    })}
-    ${Template({
-      ...args,
-      isQuiet: true
-    })}
+    <div style="display: grid; gap: 1rem;" >
+      ${Template({
+        ...args
+      })}
+      ${Template({
+        ...args,
+        isQuiet: true
+      })}
     </div>
   `
 }
