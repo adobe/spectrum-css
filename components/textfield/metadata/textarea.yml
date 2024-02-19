@@ -185,7 +185,7 @@ examples:
 
   - id: textfield-quiet
     name: Quiet
-    description: Text areas should rarely be presented in the quiet style. The height of the field should use grow logic so the height will adjust with the height of the entered value.
+    description: Text areas should rarely be presented in the quiet style. When used, quiet text areas should use Javascript to enable a text area that grows with input.
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
         <label for="textarea-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Comments</label>
