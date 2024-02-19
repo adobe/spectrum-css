@@ -25,6 +25,8 @@ test -d "components/expressvars" && rm -rf components/expressvars
 test -d "components/tokens" && rm -rf components/tokens
 test -d "components/quickaction" && rm -rf components/quickaction
 test -d "components/splitbutton" && rm -rf components/splitbutton
+test -d "components/cyclebutton" && rm -rf components/cyclebutton
+test -d "components/searchwithin" && rm -rf components/searchwithin
 
 # Remove deprecated files
 for folder in components/*; do
