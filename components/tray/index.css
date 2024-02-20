@@ -28,12 +28,6 @@ governing permissions and limitations under the License.
   --spectrum-tray-background-color: var(--spectrum-background-layer-2-color);
 }
 
-@media (forced-colors: active) {
-  .spectrum-Tray {
-    --highcontrast-tray-background-color: Background;
-  }
-}
-
 .spectrum-Tray-wrapper {
   inset-inline-start: 0;
   /* Positioned at the bottom of the window */
@@ -45,10 +39,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Tray {
-  /* Default to full width when the viewport is in portrait orientation
-   * (height is greater than width)
-   */
+  /* Default to full width when the viewport is in portrait orientation */
   inline-size: 100%;
+  --mod-modal-max-width: 100%;
+  max-inline-size: 100%;
+
   max-block-size: calc(100vh - var(--mod-tray-spacing-edge-to-tray-safe-zone, var(--spectrum-tray-spacing-edge-to-tray-safe-zone)));
   margin-block-start: var(--mod-tray-spacing-edge-to-tray-safe-zone, var(--spectrum-tray-spacing-edge-to-tray-safe-zone));
   padding-block-start: var(--mod-tray-top-to-content-area, var(--spectrum-tray-top-to-content-area));
@@ -56,9 +51,7 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   overflow: auto;
   outline: none;
-
-  /* Unset spectrum-Modal border-radius */
-  border-radius: unset;
+  border-radius: var(--mod-tray-corner-radius-portrait, 0) var(--mod-tray-corner-radius-portrait, 0) 0 0;
 
   /* Start offset by the animation distance */
   transform: translateY(100%);
@@ -91,14 +84,21 @@ governing permissions and limitations under the License.
   }
 }
 
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation
- * Limit Tray width to 375px and round corners when the viewport is in landscape orientation
- * (width is greater than height)
- */
 @media screen and (orientation: landscape) {
   .spectrum-Tray {
     border-start-start-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
     border-start-end-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
     max-inline-size: var(--mod-tray-max-inline-size, var(--spectrum-tray-max-inline-size));
+  }
+}
+
+@media (forced-colors: active) {
+  .spectrum-Tray {
+    --highcontrast-tray-background-color: Canvas;
+
+    border: solid;
+    & .spectrum-Dialog {
+      border: none;
+    }
   }
 }
