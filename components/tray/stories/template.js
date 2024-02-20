@@ -3,8 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-
+import "@spectrum-css/modal/index.css";
 import "../index.css";
 
 export const Template = ({

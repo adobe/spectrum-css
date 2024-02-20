@@ -29,6 +29,7 @@ export default {
 		rootClass: "spectrum-Tray",
 		customClasses: ["spectrum-Modal"],
 		isOpen: true,
+		heading: "New Messages",
 	},
 	parameters: {
 		actions: {
@@ -43,15 +44,16 @@ export default {
 };
 
 export const Default = ({
+	heading,
 	...args
 }) => {
 	return html`
 		<div>
 			${Template({
-				heading: "Tray Dialog",
+				...args,
 				content: [
 					() => Dialog({
-							heading: "New Messages",
+							heading,
 							content: ["You have 5 new messages!"],
 							isDismissable: false,
 						})
@@ -62,7 +64,6 @@ export const Default = ({
 				window.isChromatic() ?
 				Template({
 					...args,
-					heading: "Tray Dialog",
 					content: [
 						() => Dialog({
 								heading: "You have new messages waiting in your inbox",
@@ -79,4 +80,3 @@ export const Default = ({
 		</div>
 	`;
 };
-Default.args = {};
