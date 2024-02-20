@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.4"></a>
+##6.1.4
+🗓
+2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/textfield@6.1.3...@spectrum-css/textfield@6.1.4)
+
+### 🐛 Bug fixes
+
+- **textfield:**icon positioning with field label ([#2380](https://github.com/adobe/spectrum-css/issues/2380))([468b426](https://github.com/adobe/spectrum-css/commit/468b426))\*
+  **textfield:**remove extra padding on nested label and help ([#2519](https://github.com/adobe/spectrum-css/issues/2519))([0250d0e](https://github.com/adobe/spectrum-css/commit/0250d0e))
+
 <a name="6.1.3"></a>
 ##6.1.3
 🗓

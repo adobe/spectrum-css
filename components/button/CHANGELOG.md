@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="12.0.0"></a>
+#12.0.0
+🗓
+2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.3.1...@spectrum-css/button@12.0.0)
+
+### 🐛 Bug fixes
+
+- **button:**support for wrapping text ([#2248](https://github.com/adobe/spectrum-css/issues/2248))([3f14a86](https://github.com/adobe/spectrum-css/commit/3f14a86))
+
+      ###
+      🛑 BREAKING CHANGES
+
+      	*
+      	**button:** changes vertical flex alignment to start.
+
+Previously when the button had an icon and the text was wrapping, the
+icon was vertically aligned center and the text was aligned center.
+
+This fixes this to match with the design spec: for the version of the
+button that uses a workflow icon, the icon should stay aligned to the
+top, and the text should be aligned left (start). This uses the defined
+token for the space between the top of the component and the workflow
+icon (--spectrum-component-top-to-workflow-icon-\*).
+
+- docs(button): rename storybook control to layout
+
+Rename Storybook control for stacking buttons to "layout" with specified
+options, which is a more appropriate name. The control has also been
+made visible.
+
+- fix(button): support any existing use of ui icons
+
+Support any existing use of ui icons with the updated wrapping behavior.
+And add Chromatic only testing of them to the Wrapping story.
+
+Workflow icons are intended, with the use of the
+spectrum-component-top-to-workflow-icon tokens, but UI icons have not
+yet been specifically excluded in guidelines and are currently in use
+within SplitButton in this library. This keeps UI icons that are
+smaller than the intended workflow icon, better vertically centered
+with the text within the button.
+
+- feat(button): mod property for icon margin top
+
+Add a mod property to make it easy to modify the margin-block-start of
+the icon, in case of alignment issues with icons that are not the
+intended workflow sizes.
+
 <a name="11.3.1"></a>
 ##11.3.1
 🗓

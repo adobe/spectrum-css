@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.2.5"></a>
+##2.2.5
+🗓
+2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.2.4...@spectrum-css/tray@2.2.5)
+
+### 🐛 Bug fixes
+
+- **tray:**full width at portrait orientation ([#2547](https://github.com/adobe/spectrum-css/issues/2547))([c9a79f2](https://github.com/adobe/spectrum-css/commit/c9a79f2))
+
 <a name="2.2.4"></a>
 ##2.2.4
 🗓

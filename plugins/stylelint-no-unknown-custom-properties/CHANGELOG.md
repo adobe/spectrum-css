@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.3.2"></a>
+##1.3.2
+🗓
+2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-tools/stylelint-no-unknown-custom-properties@1.3.1...@spectrum-tools/stylelint-no-unknown-custom-properties@1.3.2)
+
+**Note:** Version bump only for package @spectrum-tools/stylelint-no-unknown-custom-properties
+
 <a name="1.3.1"></a>
 ##1.3.1
 🗓
