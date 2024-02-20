@@ -32,6 +32,7 @@
 | `--mod-button-font-family`                 |
 | `--mod-button-font-size`                   |
 | `--mod-button-height`                      |
+| `--mod-button-icon-margin-block-start`     |
 | `--mod-button-line-height`                 |
 | `--mod-button-margin-block`                |
 | `--mod-button-margin-left`                 |
@@ -39,6 +40,9 @@
 | `--mod-button-min-width`                   |
 | `--mod-button-padding-label-to-icon`       |
 | `--mod-button-static-content-color`        |
+| `--mod-button-text-align`                  |
+| `--mod-button-text-align-with-icon`        |
+| `--mod-button-top-to-icon`                 |
 | `--mod-button-top-to-text`                 |
 | `--mod-focus-indicator-gap`                |
 | `--mod-line-height-100`                    |

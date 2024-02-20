@@ -1,11 +1,11 @@
 import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { Template } from "./template";
+import { when } from "lit/directives/when.js";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Button",
@@ -82,6 +82,7 @@ export default {
 		},
 		staticColor: {
 			name: "Static color",
+			description: "Variants that can be used when a button needs to be placed on top of a colored background or a visual.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -89,7 +90,23 @@ export default {
 			},
 			options: ["white", "black"],
 			control: "select",
-		}
+		},
+		showIconOnlyButton: {
+			table: {
+				disable: true,
+			},
+		},
+		layout: {
+		    name: "Layout",
+		    description: "How the buttons align in the preview (Storybook only).",
+		    type: { name: "string" },
+			table: { 
+			    type: { summary: "string" },
+			    category: "Advanced"
+			},
+			options: ["stacked","inline"],
+			control: "radio"
+		},
 	},
 	args: {
 		rootClass: "spectrum-Button",
@@ -99,6 +116,8 @@ export default {
 		treatment: "fill",
 		isDisabled: false,
 		isPending: false,
+		showIconOnlyButton: true,
+		layout: "inline",
 	},
 	parameters: {
 		actions: {
@@ -112,43 +131,65 @@ export default {
 	},
 };
 
+/**
+ * Optional wrapper for each button used within other templates, to assist with the "stacked"
+ * layout and the testing of wrapping text.
+ */
+const ButtonWrap = (layout, content) => {
+	const buttonWrapStyles = {
+		'margin-block': '15px',
+		'max-width': '480px',
+	};
+	return layout === "stacked" ? html`<div style=${styleMap(buttonWrapStyles)}>${content}</div>` : content;
+};
+
+/**
+ * Multiple button variations displayed in one story template.
+ * Used as the base template for the stories.
+ */
 const CustomButton = ({
 	iconName,
 	staticColor,
+	layout,
+	showIconOnlyButton,
 	customStyles = {},
 	...args
-}) => html`
-	<div
-				style=${ifDefined(styleMap({
-			padding: "1rem",
-			backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
-			...customStyles
-		}))}
-	>
-		${Template({
-			...args,
-			staticColor,
-			iconName: undefined,
-		})}
-		${Template({
-			...args,
-			staticColor,
-			iconName: undefined,
-			treatment: "outline",
-		})}
-		${Template({
-			...args,
-			staticColor,
-			iconName: iconName ?? "Edit",
-		})}
-		${Template({
-			...args,
-			staticColor,
-			hideLabel: true,
-			iconName: iconName ?? "Edit",
-		})}
-	</div>
-`;
+}) => {
+	return html`
+		<div
+			style=${ifDefined(styleMap({
+				padding: "1rem",
+				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
+				...customStyles
+			}))}
+		>
+			${ButtonWrap(layout, Template({
+				...args,
+				staticColor,
+				iconName: undefined,
+			}))}
+			${ButtonWrap(layout, Template({
+				...args,
+				staticColor,
+				iconName: undefined,
+				treatment: "outline",
+			}))}
+			${ButtonWrap(layout, Template({
+				...args,
+				staticColor,
+				iconName: iconName ?? "Edit",
+			}))}
+			${when(showIconOnlyButton, () =>
+				ButtonWrap(layout, Template({
+					...args,
+					staticColor,
+					hideLabel: true,
+					iconName: iconName ?? "Edit",
+				}))
+			)}
+		</div>
+	`;
+};
 
 const PendingButton = ({
 	staticColor,
@@ -161,7 +202,7 @@ const PendingButton = ({
 		gap: ".3rem",
 	})}>
 		<div>
-		${Typography({
+			${Typography({
 				semantics: "heading",
 				size: "xxs",
 				content: ["Default"],
@@ -194,7 +235,7 @@ const ButtonsWithForcedColors = ({
 		gap: ".3rem",
 	})}>
 		<div>
-		${Typography({
+			${Typography({
 				semantics: "heading",
 				size: "xxs",
 				content: ["Default"],
@@ -218,6 +259,37 @@ const ButtonsWithForcedColors = ({
 		</div>
 	</div>
 `;
+
+/**
+ * Wrapping story template, displaying some additional variants for Chromatic.
+ */
+const WrappingTemplate = ({layout, ...args}) => {
+	if (window.isChromatic()) {
+		return html`
+			${CustomButton({layout, ...args})}
+			<div style=${ifDefined(styleMap({ padding: "1rem" }))}>
+				${ButtonWrap(layout, Template({
+					...args,
+					iconName: "Edit",
+					treatment: "outline",
+				}))}
+				${ButtonWrap(layout, Template({
+					...args,
+					// Uses a UI icon that is smaller than workflow sizing, to test alignment:
+					iconName: "Cross100",
+				}))}
+				${ButtonWrap(layout, Template({
+					...args,
+					// UI icon that is larger than workflow sizing:
+					iconName: "ArrowDown600",
+					treatment: "outline",
+				}))}
+			</div>
+		`;
+	}
+	// Otherwise use the default template.
+	return CustomButton({layout, ...args});
+};
 
 export const Accent = CustomButton.bind({});
 Accent.args = {
@@ -268,4 +340,13 @@ WithForcedColors.parameters = {
 };
 WithForcedColors.args = {
 	iconName: "Actions",
+};
+
+export const Wrapping = WrappingTemplate.bind({});
+Wrapping.storyName = "Wrapping";
+Wrapping.args = {
+	layout: "stacked",
+	showIconOnlyButton: false,
+	variant: "accent",
+	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 };
