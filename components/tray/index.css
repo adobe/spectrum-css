@@ -28,12 +28,6 @@ governing permissions and limitations under the License.
   --spectrum-tray-background-color: var(--spectrum-background-layer-2-color);
 }
 
-@media (forced-colors: active) {
-  .spectrum-Tray {
-    --highcontrast-tray-background-color: Canvas;
-  }
-}
-
 .spectrum-Tray-wrapper {
   inset-inline-start: 0;
   /* Positioned at the bottom of the window */
@@ -95,5 +89,16 @@ governing permissions and limitations under the License.
     border-start-start-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
     border-start-end-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
     max-inline-size: var(--mod-tray-max-inline-size, var(--spectrum-tray-max-inline-size));
+  }
+}
+
+@media (forced-colors: active) {
+  .spectrum-Tray {
+    --highcontrast-tray-background-color: Canvas;
+
+    border: solid;
+    & .spectrum-Dialog {
+      border: none;
+    }
   }
 }
