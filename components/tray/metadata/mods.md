@@ -3,6 +3,7 @@
 | `--mod-tray-background-color`               |
 | `--mod-tray-bottom-to-content-area`         |
 | `--mod-tray-corner-radius`                  |
+| `--mod-tray-corner-radius-portrait`         |
 | `--mod-tray-entry-animation-delay`          |
 | `--mod-tray-entry-animation-duration`       |
 | `--mod-tray-exit-animation-delay`           |
