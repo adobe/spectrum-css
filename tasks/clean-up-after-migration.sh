@@ -19,29 +19,32 @@
 test -d "tools/generator" && rm -rf tools/generator
 test -d "tools/preview" && rm -rf tools/preview
 
-# Legacy tokens packages
-test -d "components/vars" && rm -rf components/vars
-test -d "components/expressvars" && rm -rf components/expressvars
-test -d "components/tokens" && rm -rf components/tokens
-test -d "components/quickaction" && rm -rf components/quickaction
-test -d "components/splitbutton" && rm -rf components/splitbutton
-
 # Remove deprecated files
 for folder in components/*; do
-    test -d components/$folder/.npmignore && rm -rf components/$folder/.npmignore
+    # Only processing nested folders, not top-level files
+    if [[ ! -d "$folder" ]]; then continue; fi
+
+    # If the folder does not contain a package.json, remove it
+    if [[ ! -f "$folder/package.json" ]]; then
+        rm -rf $folder
+    else
+        test -f $folder/.npmignore && rm -rf $folder/.npmignore
+
+        # Migrated icons assets
+        if [[ $folder == "components/icon" ]]; then
+            test -d $folder/combined && rm -rf $folder/combined
+            test -d $folder/large && rm -rf $folder/large
+            test -d $folder/medium && rm -rf $folder/medium
+        fi
+    fi
 done
 
-# Migrated icons assets
-test -d "components/icon/combined" && rm -rf components/icon/combined
-test -d "components/icon/large" && rm -rf components/icon/large
-test -d "components/icon/medium" && rm -rf components/icon/medium
+for folder in plugins/*; do
+    # Only processing nested folders, not top-level files
+    if [[ ! -d "$folder" ]]; then continue; fi
 
-# test -d "plugins/legacy-postcss-dropdupedvars" && rm -rf plugins/legacy-postcss-dropdupedvars
-# test -d "plugins/legacy-postcss-dropunusedvars" && rm -rf plugins/legacy-postcss-dropunusedvars
-# test -d "plugins/postcss-combininator" && rm -rf plugins/postcss-combininator
-# test -d "plugins/postcss-dropdupedvars" && rm -rf plugins/postcss-dropdupedvars
-# test -d "plugins/postcss-droproot" && rm -rf plugins/postcss-droproot
-# test -d "plugins/postcss-dropunusedvars" && rm -rf plugins/postcss-dropunusedvars
-test -d "plugins/postcss-remapvars" && rm -rf plugins/postcss-remapvars
-# test -d "plugins/postcss-transformselectors" && rm -rf plugins/postcss-transformselectors
-# test -d "plugins/postcss-varfallback" && rm -rf plugins/postcss-varfallback
+    # If the folder does not contain a package.json, remove it
+    if [[ ! -f "$folder/package.json" ]]; then
+        rm -rf $folder
+    fi
+done
