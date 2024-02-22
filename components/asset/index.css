@@ -11,40 +11,41 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Asset {
-  inline-size: 100%;
-  block-size: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .spectrum-Asset-image {
   max-inline-size: 100%;
   max-block-size: 100%;
   object-fit: contain;
-  transition: opacity var(--spectrum-global-animation-duration-100);
+  transition: opacity 130ms;
 }
 
 .spectrum-Asset-folder,
 .spectrum-Asset-file {
   inline-size: 100%;
+  min-inline-size: 48px;
+  max-inline-size: 80px;
   block-size: 100%;
-  min-inline-size: var(--spectrum-asset-icon-min-width);
-  max-inline-size: var(--spectrum-asset-icon-max-width);
-  margin: var(--spectrum-asset-icon-margin);
+  margin: 20px;
 }
 
 .spectrum-Asset-folderBackground {
-  fill: var(--highcontrast-asset-folder-background-color, var(--spectrum-asset-folder-background-color));
+  fill: var(--highcontrast-asset-folder-background-color, var(--spectrum-asset-folder-background-color, var(--spectrum-gray-300)));
 }
 
 .spectrum-Asset-fileBackground {
-  fill: var(--highcontrast-asset-file-background-color, var(--spectrum-asset-file-background-color));
+  fill: var(--highcontrast-asset-file-background-color, var(--spectrum-asset-file-background-color, var(--spectrum-gray-50)));
 }
 
 .spectrum-Asset-folderOutline,
 .spectrum-Asset-fileOutline {
-  fill: var(--spectrum-asset-icon-outline-color);
+  fill: var(--spectrum-asset-icon-outline-color, var(--spectrum-gray-500));
 }
 
 @media (forced-colors: active) {
