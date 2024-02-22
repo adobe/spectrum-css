@@ -81,7 +81,7 @@ async function buildDocs_forDep(dep) {
 
 	// If a dirName was not found, try the deprecated folder instead
 	if (!dirName || dirName.split(path.sep).includes("node_modules")) {
-		dirName = path.join(dirs.topLevel, ".storybook/deprecated", dep);
+		dirName = path.join(dirs.topLevel, ".storybook", "deprecated", dep);
 
 		if (!fs.existsSync(dirName)) return;
 	}
@@ -194,7 +194,11 @@ function copyDocs_forDep(dep) {
 // Combined -- note: this does include deprecated packages that exist only in node_modules
 async function buildDocs_individualPackages() {
 	const dependencies = await depUtils.getFolderDependencyOrder(dirs.components);
-	return Promise.all(dependencies.map((d) => Promise.all([
+	const deprecatedDeps = fs.readdirSync(path.join(dirs.topLevel, ".storybook", "deprecated")).map((folder) => `@spectrum-css/${folder.split(path.sep).pop()}`);
+	return Promise.all([
+		...dependencies,
+		...deprecatedDeps,
+	].map((d) => Promise.all([
 		buildDocs_forDep(d),
 		copyDocs_forDep(d),
 	])));

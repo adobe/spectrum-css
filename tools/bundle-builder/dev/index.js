@@ -44,7 +44,12 @@ function serve() {
 }
 
 function getPackageFromPath(filePath) {
-	return filePath.match(`${dirs.components}\/(.*?)\/`)[1];
+	const componentMatch = filePath.match(`${dirs.components}\/(.*?)\/`);
+	if (componentMatch?.[1]) return componentMatch[1];
+
+	const deprecatedMatch = filePath.match(`.storybook\/deprecated\/(.*?)\/`);
+	if (deprecatedMatch?.[1]) return deprecatedMatch?.[1];
+	return;
 }
 
 /*
@@ -183,10 +188,9 @@ function watch() {
 	watchWithinPackages(
 		[
 			`${dirs.components}/*/metadata/*.yml`,
-			`${dirs.root}/.storybook/deprecated/*/*.yml`,
+			`${dirs.topLevel}/.storybook/deprecated/*/*.yml`,
 		],
 		(_, package, done) => {
-			console.log({ package });
 			const packageDir = path.dirname(require.resolve(`@spectrum-css/${package}/package.json`));
 
 			// Do this as gulp tasks to avoid premature stream termination

@@ -92,7 +92,7 @@ async function getPackageDependencyOrder(packageDir) {
 /**
  * Get the list of all packages in given directory
  * @param {string} packagesDir - directory of packages
- * @return {string[]} An array of package names in dependency order
+ * @return {Promise<string[]>} An array of package names in dependency order
  */
 async function getFolderDependencyOrder(packagesDir) {
 	// Get list of all packages
