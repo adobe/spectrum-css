@@ -3,8 +3,6 @@
   --spectrum-drop-shadow-color-rgb:0, 0, 0;
   --spectrum-drop-shadow-color-opacity:0.15;
   --spectrum-drop-shadow-color:rgba(var(--spectrum-drop-shadow-color-rgb), var(--spectrum-drop-shadow-color-opacity));
-  --spectrum-background-base-color:var(--spectrum-gray-25);
-  --spectrum-background-layer-1-color:var(--spectrum-gray-50);
   --spectrum-background-layer-2-color:var(--spectrum-gray-25);
   --spectrum-neutral-subdued-background-color-default:var(--spectrum-gray-700);
   --spectrum-neutral-subdued-background-color-hover:var(--spectrum-gray-800);
@@ -27,7 +25,6 @@
   --spectrum-positive-background-color-down:var(--spectrum-positive-color-1000);
   --spectrum-positive-background-color-key-focus:var(--spectrum-positive-color-1000);
   --spectrum-notice-background-color-default:var(--spectrum-notice-color-600);
-  --spectrum-gray-background-color-default:var(--spectrum-gray-700);
   --spectrum-red-background-color-default:var(--spectrum-red-900);
   --spectrum-orange-background-color-default:var(--spectrum-orange-600);
   --spectrum-yellow-background-color-default:var(--spectrum-yellow-400);
