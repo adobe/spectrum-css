@@ -30,3 +30,12 @@ chromatic.config.json
 
 # Custom diff tool
 .diff-output
+
+# yarn 3
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
