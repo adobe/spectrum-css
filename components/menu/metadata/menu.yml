@@ -6,17 +6,21 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/menu/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### T-shirt sizing
+      ### 8/04/2023 - Version 6.0.0
+
+      #### Core tokens migration ####
+      This component now uses Spectrum Tokens instead of DNA tokens. 
+
+      #### T-shirt sizing
       Menu now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Menu--size*` class.
 
-      ### Use small divider classes
-      When using a section divider, add `.spectrum-Divider` and `spectrum-Divider--sizeS` classes to `spectrum-Menu-divider`. The divider has also changed from medium to small.
+      #### Use small divider classes
+      When using a section divider, add `.spectrum-Divider` and `spectrum-Divider--sizeS` classes to `spectrum-Menu-divider`. The divider has changed from medium to small.
 
-      ### Change workflow icon size to medium
+      ### 9/22/2020 - Version 3.0.0
+
+      #### Change workflow icon size to medium
       Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
-
-      ### Menu item with switch mark up ###
-      In the case of a menu item that includes an icon and a switch, the label and icon should be seperate elements. As opposed to the icon SVG being with in the label. This matches the pattern of other variants with icons within the menu item.
 
 examples:
   - id: sizing
@@ -1228,6 +1232,7 @@ examples:
       </div>
   - id: with-switch
     name: With Switch
+    description: In the case of a menu item that includes an icon and a switch, the label and icon should be seperate elements. As opposed to the icon SVG being within the label. This matches the pattern of other variants that have icons within a menu item.
     markup: |
       <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
         <div class="spectrum-Examples-item">
@@ -1329,7 +1334,7 @@ examples:
             </li>
             <li class="spectrum-Menu-item spectrum-Menu-item--drillIn is-open" role="menuitem" tabindex="0">
               <span class="spectrum-Menu-itemLabel">Feather really long item</span>
-              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">
+              <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-UIIcon-ChevronRight100 spectrum-Menu-chevron spectrum-Menu-itemIcon" focusable="false" aria-hidden="true" aria-label="Next">  
                 <use xlink:href="#spectrum-css-icon-Chevron100" />
               </svg>
             </li>
@@ -1388,7 +1393,7 @@ examples:
 
   - id: menu-truncate
     name: Menu with truncating text
-    description: Use the class `spectrum-Menu-itemLabel--truncate` on the item label or section heading that should truncate with in a menu with a set `inline-size` or `max-inline-size`
+    description: Use the class `spectrum-Menu-itemLabel--truncate` on the item label or section heading that should truncate within a menu with a set `inline-size` or `max-inline-size`
     markup: |
       <div class="spectrum-Examples" style="justify-content: flex-start; gap: 25%;">
         <div class="spectrum-Examples-item">

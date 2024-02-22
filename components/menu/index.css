@@ -787,7 +787,8 @@ governing permissions and limitations under the License.
     color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-description-color-disabled, var(--spectrum-menu-item-description-color-disabled)));
   }
 
-  .spectrum-Menu-itemIcon {
+  .spectrum-Menu-itemIcon,
+  .spectrum-Menu-chevron {
     fill: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-label-icon-color-disabled, var(--spectrum-menu-item-label-icon-color-disabled)));
     color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-label-icon-color-disabled, var(--spectrum-menu-item-label-icon-color-disabled)));
   }
@@ -805,7 +806,8 @@ governing permissions and limitations under the License.
       color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-description-color-disabled, var(--spectrum-menu-item-description-color-disabled)));
     }
 
-    .spectrum-Menu-itemIcon {
+    .spectrum-Menu-itemIcon,
+    .spectrum-Menu-chevron {
       fill: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-label-icon-color-disabled, var(--spectrum-menu-item-label-icon-color-disabled)));
       color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-label-icon-color-disabled, var(--spectrum-menu-item-label-icon-color-disabled)));
     }

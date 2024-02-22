@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
