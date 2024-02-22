@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const path = require("path");
+
 const gulp = require("gulp");
 const concat = require("gulp-concat");
 
@@ -21,6 +23,8 @@ const dev = require("./dev");
 const subrunner = require("./subrunner");
 const vars = require("./vars");
 
+const components = path.join(__dirname, "..", "..", "components");
+
 var dependencyOrder = null;
 
 // Combined
@@ -30,15 +34,11 @@ function concatPackageFiles(taskName, input, output, directory) {
 		if (Array.isArray(input)) {
 			glob = [];
 
-			dependencyOrder.forEach(function (dep) {
-				input.forEach(function (file) {
-					glob.push(dirs.resolve(dep) + `/${file}`);
-				});
+			dependencyOrder.forEach((dep) => {
+				input.forEach((file) => glob.push(require.resolve(`${dep}/${file}`)));
 			});
 		} else {
-			glob = dependencyOrder.map(function (dep) {
-				return dirs.resolve(dep) + `/${input}`;
-			});
+			glob = dependencyOrder.map((dep) => require.resolve(`${dep}/${input}`));
 		}
 
 		return gulp
@@ -53,7 +53,7 @@ function concatPackageFiles(taskName, input, output, directory) {
 }
 
 async function getDependencyOrder(done) {
-	dependencyOrder = await depUtils.getFolderDependencyOrder(dirs.components);
+	dependencyOrder = await depUtils.getFolderDependencyOrder(components);
 	done();
 }
 
@@ -152,7 +152,7 @@ let buildStandalone = gulp.series(
 // yay: faster than 'rebuild everything' approach
 // boo: must add new packages here as commons grows
 function buildDependenciesOfCommons() {
-	return subrunner.runTaskOnPackages("buildLite", [
+	return subrunner.runTaskOnPackages("build", [
 		`${dirs.components}/actionbutton`,
 		`${dirs.components}/button`,
 		`${dirs.components}/closebutton`,
@@ -168,39 +168,25 @@ function buildDependenciesOfCommons() {
 const buildDocs = gulp.parallel(docs.build, vars.copyVars);
 
 function buildIfTopLevel() {
-	let builtTasks = gulp.parallel(buildCombined, buildStandalone, buildDocs);
+	const tasks = gulp.parallel(buildCombined, buildStandalone, buildDocs);
 
-	if (process.cwd() === dirs.topLevel) {
-		// Run a build for all packages first
-		return gulp.series(subrunner.buildComponents, builtTasks);
-	}
-
-	// They're already built, just include the output
-	return builtTasks;
+	// They're already built, just include the output or build for all packages
+	return !dirs.isTopLevel ? tasks : gulp.series(subrunner.buildComponents, tasks);
 }
 
-let build = gulp.series(buildIfTopLevel(), vars.copyVars);
+const build = gulp.series(buildIfTopLevel(), vars.copyVars);
 
-let buildLite = gulp.series(function buildComponents() {
+const buildLite = gulp.series(function buildComponents() {
 	return subrunner.runTaskOnAllComponents("buildLite");
 }, buildDocs);
 
-let buildMedium = gulp.series(function buildComponents() {
+const buildMedium = gulp.series(function buildComponents() {
 	return subrunner.runTaskOnAllComponents("buildMedium");
 }, buildDocs);
 
-let buildHeavy = gulp.series(function buildComponents() {
+const buildHeavy = gulp.series(function buildComponents() {
 	return subrunner.runTaskOnAllComponents("buildHeavy");
 }, buildDocs);
-
-let devTask;
-if (process.cwd() === dirs.topLevel) {
-	// Build all packages if at the top level
-	devTask = gulp.series(buildLite, dev.watch);
-} else {
-	// Otherwise, just start watching
-	devTask = gulp.series(buildDocs, dev.watch);
-}
 
 exports.devHeavy = gulp.series(buildHeavy, dev.watch);
 
@@ -212,7 +198,8 @@ exports.buildStandalone = buildStandalone;
 exports.buildLite = buildLite;
 exports.buildDocs = buildDocs;
 exports.buildDependenciesOfCommons = buildDependenciesOfCommons;
-exports.dev = devTask;
+// Build all packages if at the top level, otherwise just build the docs
+exports.dev = dirs.isTopLevel ? gulp.series(buildLite, dev.watch) : gulp.series(buildDocs, dev.watch);
 exports.build = build;
 exports.watch = dev.watch;
 exports.default = buildMedium;

@@ -7,6 +7,7 @@
   "author": "Adobe",
   "main": "index.js",
   "dependencies": {
+    "fast-glob": "^3.3.2",
     "postcss": "^8.4.35",
     "postcss-value-parser": "^4.2.0"
   },

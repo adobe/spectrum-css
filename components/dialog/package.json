@@ -22,15 +22,18 @@
     "@spectrum-css/underlay": ">=3"
   },
   "peerDependenciesMeta": {
-    "@spectrum-css/underlay": {
-      "optional": true
-    },
     "@spectrum-css/divider": {
       "optional": true
     },
     "@spectrum-css/modal": {
       "optional": true
+    },
+    "@spectrum-css/underlay": {
+      "optional": true
     }
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder-simple": "^5.0.3"
   },
   "publishConfig": {
     "access": "public"

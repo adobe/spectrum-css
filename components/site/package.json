@@ -17,6 +17,9 @@
   "peerDependencies": {
     "@spectrum-css/vars": ">=9"
   },
+  "devDependencies": {
+    "@spectrum-css/component-builder": "^7.0.0"
+  },
   "publishConfig": {
     "access": "public"
   }
