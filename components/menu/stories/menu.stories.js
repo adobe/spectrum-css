@@ -435,6 +435,7 @@ Collapsible.args = {
       label: "Social Media",
       iconName: "ShareAndroid",
       isCollapsible: true,
+      isDisabled: true,
       items: [
         { label: "Defaults to not visible within closed item" },
       ],
