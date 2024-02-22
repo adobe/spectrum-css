@@ -119,10 +119,7 @@ governing permissions and limitations under the License.
   grid-template-columns: var(--mod-form-grid-template-columns, auto auto);
   inline-size: var(--mod-form-inline-size, fit-content);
   justify-content: start;
-
-  /* @deprecation --mod-tableform-item-block-spacing has been renamed to
-     --mod-form-item-block-spacing. The fallback will be removed in a future version. */
-  row-gap: var(--mod-form-item-block-spacing, var(--mod-tableform-item-block-spacing, var(--spectrum-tableform-item-block-spacing)));
+  row-gap: var(--mod-form-item-block-spacing, var(--spectrum-tableform-item-block-spacing));
 }
 
 /* Row */
@@ -150,9 +147,7 @@ governing permissions and limitations under the License.
 
 /* Rows with stacked alignment */
 .spectrum-Form--labelsAbove {
-  /* @deprecation --mod-tableform-item-block-spacing-labels-above has been renamed to
-     --mod-form-item-block-spacing-labels-above. The fallback will be removed in a future version. */
-  --mod-form-item-block-spacing: var(--mod-form-item-block-spacing-labels-above, var(--mod-tableform-item-block-spacing-labels-above, var(--spectrum-spacing-200)));
+  --mod-form-item-block-spacing: var(--mod-form-item-block-spacing-labels-above, var(--spectrum-spacing-200));
   --mod-form-grid-template-columns: var(--mod-form-grid-template-columns-labels-above, auto);
 
   .spectrum-Form-item {
