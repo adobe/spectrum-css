@@ -20,15 +20,15 @@ loadIcons("img/spectrum-icons.svg");
 // Show and hide code samples
 function toggleMarkupVisibility(event) {
 	event.preventDefault();
-	var exampleMarkup = event.target.closest(".spectrum-CSSExample-markup");
-	var style = window.getComputedStyle(exampleMarkup);
-	var isOpen = exampleMarkup.classList.contains("is-open");
+
+	const exampleMarkup = event.target.closest(".spectrum-CSSExample-markup");
+	const isOpen = exampleMarkup.classList.contains("is-open");
+
 	event.target.innerHTML = isOpen ? "Show markup" : "Hide markup";
 	exampleMarkup.classList.toggle("is-open");
 }
 
-document.addEventListener("click", function (event) {
-	if (event.target.classList.contains("js-markup-toggle")) {
-		toggleMarkupVisibility(event);
-	}
+document.addEventListener("click", (event) => {
+	if (!event.target.classList.contains("js-markup-toggle")) return;
+	toggleMarkupVisibility(event);
 });

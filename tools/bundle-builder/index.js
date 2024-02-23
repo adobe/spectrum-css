@@ -10,196 +10,167 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const fs = require("fs");
+const fsp = fs.promises;
 const path = require("path");
 
 const gulp = require("gulp");
-const concat = require("gulp-concat");
-
-const depUtils = require("./lib/depUtils");
-const dirs = require("./lib/dirs");
+const depSolver = require("dependency-solver");
 
 const docs = require("./docs");
 const dev = require("./dev");
-const subrunner = require("./subrunner");
-const vars = require("./vars");
 
-const components = path.join(__dirname, "..", "..", "components");
+const coreTokensDir = path.dirname(require.resolve("@spectrum-css/tokens/package.json")) ?? path.join(__dirname, "..", "..", "..", "tokens");
 
-var dependencyOrder = null;
+function copyCoreTokens() {
+	return gulp
+		.src(path.join(coreTokensDir, "dist/**/*.css"))
+		.pipe(gulp.dest(path.join(__dirname, "..", "..", "..", "dist", "tokens")));
+}
 
-// Combined
-function concatPackageFiles(taskName, input, output, directory) {
-	let func = function () {
-		let glob;
-		if (Array.isArray(input)) {
-			glob = [];
+/**
+ * Given a package path, get its dependencies
+ * @param {string} packages - package directory
+ * @return {Object} An object mapping the package name to its dependencies, or null if no dependencies
+ */
+async function getDependencies(package) {
+	const {
+		name,
+		peerDependencies = {},
+		dependencies = {},
+		devDependencies = {}
+	} = await fsp.readFile(path.join(package, "package.json")).then(JSON.parse);
+	return {
+		name,
+		dependencies: [...new Set([
+			...Object.keys(peerDependencies),
+			...Object.keys(dependencies),
+			...Object.keys(devDependencies),
+		])].filter((dep) => (
+			dep.startsWith("@spectrum-css") &&
+			![
+				"bundle-builder",
+				"component-builder-simple"
+			].some((postfix) => dep.endsWith(postfix))
+		))
+	};
+}
 
-			dependencyOrder.forEach((dep) => {
-				input.forEach((file) => glob.push(require.resolve(`${dep}/${file}`)));
-			});
-		} else {
-			glob = dependencyOrder.map((dep) => require.resolve(`${dep}/${input}`));
+/**
+ * Given a list of package paths, solve the dependency order
+ * @param {string[]} packages - package directories
+ * @return {Promise<string[]>} The solved dependency order
+ */
+async function solveDependencies(packages) {
+	async function getDependenciesForSolver(package) {
+		let { name, dependencies } = await getDependencies(package);
+
+		if (dependencies.length === 0) {
+			return null;
 		}
 
-		return gulp
-			.src(glob, { allowEmpty: true })
-			.pipe(concat(output))
-			.pipe(gulp.dest(`dist/${directory || ""}`));
-	};
+		return { [name]: dependencies };
+	}
 
-	Object.defineProperty(func, "name", { value: taskName, writable: false });
+	let depArray = (
+		await Promise.all(packages.map(getDependenciesForSolver))
+	).filter(Boolean);
 
-	return func;
+	let dependencies = {};
+	depArray.forEach((dep) => {
+		Object.assign(dependencies, dep);
+	});
+
+	return depSolver.solve(dependencies);
 }
 
-async function getDependencyOrder(done) {
-	dependencyOrder = await depUtils.getFolderDependencyOrder(components);
-	done();
+/**
+ * Get the list of all packages in given directory
+ * @param {string} packagesDir - directory of packages
+ * @return {Promise<string[]>} An array of package names in dependency order
+ */
+async function getFolderDependencyOrder(packagesDir) {
+	// Get list of all packages
+	const packages = (await fsp.readdir(packagesDir, { withFileTypes: true }))
+		.filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
+		.map((dirent) => path.join(packagesDir, dirent.name));
+
+	const solution = await solveDependencies(packages) ?? [];
+
+	return [...new Set([
+		"@spectrum-css/tokens",
+		...solution,
+	])];
 }
 
-let buildCombined = gulp.series(
-	getDependencyOrder,
+/*
+  Run the specified gulp task for the given package
+*/
+function buildComponent(packageDir, callback) {
+	packageName = packageDir.split("/").pop();
+
+	const gulpfile = path.join(packageDir, "gulpfile.js");
+
+	if (!fs.existsSync(gulpfile)) {
+		return callback();
+	}
+
+	const cwd = process.cwd();
+	const { build } = require(gulpfile);
+
+	if (!build) {
+		return callback(new Error(
+			`Task '${packageName.yellow}:${task.yellow}' not found!`
+		));
+	}
+
+	process.chdir(packageDir);
+	return build((err) => {
+		process.chdir(cwd);
+		callback(err);
+	});
+}
+
+/*
+  Run a task on every component in dependency order
+*/
+async function buildAllComponents() {
+	const result = await getFolderDependencyOrder(path.join(__dirname, "../../components"));
+
+	// Turn the package names into a path to the component directory
+	const components = result.map((component) => {
+		return path.dirname(require.resolve(`${component}/package.json`));
+	});
+
+	if (!components || !components.length) {
+		return Promise.reject(`No packages provided for build`);
+	}
+
+	function processPackage() {
+		const packageDir = components.shift();
+
+		if (!packageDir) return Promise.resolve();
+
+		return buildComponent(packageDir, (err) => {
+			if (err && !process.env.FORCE) process.exit(1);
+			return processPackage();
+		});
+	}
+
+	// Kick off a gulp build for each package
+	return processPackage();
+}
+
+const build = gulp.series(
+	buildAllComponents,
 	gulp.parallel(
-		concatPackageFiles("buildCombined_core", "index.css", "spectrum-core.css"),
-		concatPackageFiles(
-			"buildCombined_large",
-			"index-lg.css",
-			"spectrum-core-lg.css"
-		),
-		concatPackageFiles(
-			"buildCombined_diff",
-			"index-diff.css",
-			"spectrum-core-diff.css"
-		),
-		concatPackageFiles(
-			"buildCombined_light",
-			"multiStops/light.css",
-			"spectrum-light.css"
-		),
-		concatPackageFiles(
-			"buildCombined_lightest",
-			"multiStops/lightest.css",
-			"spectrum-lightest.css"
-		),
-		concatPackageFiles(
-			"buildCombined_dark",
-			"multiStops/dark.css",
-			"spectrum-dark.css"
-		),
-		concatPackageFiles(
-			"buildCombined_darkest",
-			"multiStops/darkest.css",
-			"spectrum-darkest.css"
-		)
+		docs.build,
+		copyCoreTokens
 	)
 );
 
-let buildStandalone = gulp.series(
-	getDependencyOrder,
-	gulp.parallel(
-		concatPackageFiles(
-			"buildStandalone_light",
-			["index.css", "colorStops/light.css"],
-			"spectrum-light.css",
-			"standalone/"
-		),
-		concatPackageFiles(
-			"buildStandalone_lightest",
-			["index.css", "colorStops/lightest.css"],
-			"spectrum-lightest.css",
-			"standalone/"
-		),
-		concatPackageFiles(
-			"buildStandalone_dark",
-			["index.css", "colorStops/dark.css"],
-			"spectrum-dark.css",
-			"standalone/"
-		),
-		concatPackageFiles(
-			"buildStandalone_darkest",
-			["index.css", "colorStops/darkest.css"],
-			"spectrum-darkest.css",
-			"standalone/"
-		),
-		concatPackageFiles(
-			"buildStandalone_lightLarge",
-			["index-lg.css", "colorStops/light.css"],
-			"spectrum-light-lg.css",
-			"standalone/"
-		),
-		concatPackageFiles(
-			"buildStandalone_lightestLarge",
-			["index-lg.css", "colorStops/lightest.css"],
-			"spectrum-lightest-lg.css",
-			"standalone/"
-		),
-		concatPackageFiles(
-			"buildStandalone_darkLarge",
-			["index-lg.css", "colorStops/dark.css"],
-			"spectrum-dark-lg.css",
-			"standalone/"
-		),
-		concatPackageFiles(
-			"buildStandalone_darkestLarge",
-			["index-lg.css", "colorStops/darkest.css"],
-			"spectrum-darkest-lg.css",
-			"standalone/"
-		)
-	)
-);
-
-// run buildLite on a selected set of packages that depend on commons
-// yay: faster than 'rebuild everything' approach
-// boo: must add new packages here as commons grows
-function buildDependenciesOfCommons() {
-	return subrunner.runTaskOnPackages("build", [
-		`${dirs.components}/actionbutton`,
-		`${dirs.components}/button`,
-		`${dirs.components}/closebutton`,
-		`${dirs.components}/logicbutton`,
-		`${dirs.components}/modal`,
-		`${dirs.components}/picker`,
-		`${dirs.components}/popover`,
-		`${dirs.components}/tooltip`,
-		`${dirs.components}/underlay`,
-	]);
-}
-
-const buildDocs = gulp.parallel(docs.build, vars.copyVars);
-
-function buildIfTopLevel() {
-	const tasks = gulp.parallel(buildCombined, buildStandalone, buildDocs);
-
-	// They're already built, just include the output or build for all packages
-	return !dirs.isTopLevel ? tasks : gulp.series(subrunner.buildComponents, tasks);
-}
-
-const build = gulp.series(buildIfTopLevel(), vars.copyVars);
-
-const buildLite = gulp.series(function buildComponents() {
-	return subrunner.runTaskOnAllComponents("buildLite");
-}, buildDocs);
-
-const buildMedium = gulp.series(function buildComponents() {
-	return subrunner.runTaskOnAllComponents("buildMedium");
-}, buildDocs);
-
-const buildHeavy = gulp.series(function buildComponents() {
-	return subrunner.runTaskOnAllComponents("buildHeavy");
-}, buildDocs);
-
-exports.devHeavy = gulp.series(buildHeavy, dev.watch);
-
-exports.buildUniqueVars = vars.buildUnique;
-
-exports.buildComponents = subrunner.buildComponents;
-exports.buildCombined = buildCombined;
-exports.buildStandalone = buildStandalone;
-exports.buildLite = buildLite;
-exports.buildDocs = buildDocs;
-exports.buildDependenciesOfCommons = buildDependenciesOfCommons;
-// Build all packages if at the top level, otherwise just build the docs
-exports.dev = dirs.isTopLevel ? gulp.series(buildLite, dev.watch) : gulp.series(buildDocs, dev.watch);
-exports.build = build;
+exports.dev = gulp.series(build, dev.watch);
 exports.watch = dev.watch;
-exports.default = buildMedium;
+exports.default = exports.build = build;
+
+exports.buildDocs = gulp.parallel(docs.build, copyCoreTokens);

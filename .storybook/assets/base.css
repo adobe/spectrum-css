@@ -1,12 +1,25 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
 body {
 	margin: 0;
 	font-size: 10px;
 }
 
 nav .spectrum-Site-logo {
-	margin-inline-end: var(--spectrum-global-dimension-size-200);
-	color: #fa0f00;
 	block-size: 32px;
+	margin-inline-end: 16px;
+	color: #fa0f00;
 }
 
 .spectrum--large nav .spectrum-Site-logo {
@@ -17,21 +30,16 @@ nav .spectrum-Site-logo {
 	display: none;
 }
 
-/* .docblock-argstable-body {
-     display: grid;
-     grid-template-columns: minmax(25%, 200px) minmax(75%, 1fr);
- } */
-
 .docblock-argstable-body tr td {
-	letter-spacing: unset;
 	font-size: 11px;
 	color: rgb(34, 34, 34);
+	letter-spacing: unset;
 	background-color: rgb(255, 255, 255);
 }
 
 .docblock-argstable-body td > span:has(select),
 .docblock-argstable-body td textarea {
-	max-width: 280px !important;
+	max-inline-size: 280px !important;
 }
 
 #storybook-explorer-tree {
@@ -47,16 +55,18 @@ button.sidebar-item {
 }
 
 .sidebar-item {
-	color: rgb(34, 34, 34) !important;
-	font-weight: 400 !important;
-	font-size: 14px !important;
-	line-height: 1.4em !important;
-	height: 32px !important;
-	border-radius: 4px !important;
+	block-size: 32px !important;
+	margin-block: 4px !important;
+	padding-block: 4px !important;
 	padding-inline-start: 24px !important;
 	padding-inline-end: 12px !important;
-	padding-block: 4px !important;
-	margin-block: 4px !important;
+
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	line-height: 1.4em !important;
+	color: rgb(34, 34, 34) !important;
+
+	border-radius: 4px !important;
 }
 
 input,
@@ -95,7 +105,6 @@ select:focus,
 	display: flex;
 }
 
-/* [role="main"] > div > div:first-child .os-content > div > div > div:not(:has(a)) button */
 [role="main"]
 	> div
 	> div:first-child
@@ -104,25 +113,24 @@ select:focus,
 	> div
 	:is(button, a:not(:has(button))) {
 	min-inline-size: 32px;
-	border-radius: 4px;
-
-	padding-inline: 11px;
-	padding-block: 4px;
 	margin: 0;
+	padding-block: 4px;
+	padding-inline: 11px;
+
+	font-weight: 300;
+	line-height: 1.3;
+	color: rgb(34, 34, 34) !important;
 
 	/* background-color: transparent !important; */
 	border-color: transparent !important;
-	color: rgb(34, 34, 34) !important;
-	font-weight: 300;
+	border-radius: 4px;
 
 	transition: background 130ms ease-out, border-color 130ms ease-out,
 		color 130ms ease-out, box-shadow 130ms ease-out;
-
-	line-height: 1.3;
 }
 
 [role="main"] > div > div:first-child .os-content > div > div > * {
-	margin-top: 0 !important;
+	margin-block-start: 0 !important;
 }
 
 [role="main"] > div > div:first-child .os-content > div > div > div > a {
@@ -130,10 +138,6 @@ select:focus,
 	align-items: flex-end;
 	justify-content: flex-end;
 }
-
-/* .os-content > div > div > div > a > button {
-    height: 100%;
-} */
 
 /* Indicates a button with a dropdown menu */
 [role="main"]
@@ -150,7 +154,6 @@ select:focus,
 }
 
 /* Indicates a button with a dropdown menu */
-/* [role="main"] > div > div:first-child .os-content > div > div :is(button,a:not(:has(button)),span) */
 [role="main"]
 	> div
 	> div:first-child
@@ -160,11 +163,14 @@ select:focus,
 	> div:not(:has(a))
 	button::after {
 	content: "◢";
+
 	position: absolute;
-	bottom: -3px;
-	right: -1px;
-	display: inline-block;
+	inset-block-end: -3px;
+	inset-inline-end: -1px;
 	transform: scale(0.5);
+
+	display: inline-block;
+
 	color: rgb(177, 177, 177);
 }
 
@@ -190,7 +196,7 @@ select:focus,
 	> div
 	> div
 	:is(button, a:not(:has(button)), span) {
-	height: 32px;
+	block-size: 32px;
 }
 
 [role="main"]

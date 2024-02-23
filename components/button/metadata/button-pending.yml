@@ -327,7 +327,7 @@ examples:
     name: Static white
     description: Pending button state is only supported for static white, not for static black.
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -490,7 +490,7 @@ examples:
     name: Outline on Static White
     description: Pending button state is only supported for static white, not for static black.
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>

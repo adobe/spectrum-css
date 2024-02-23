@@ -136,7 +136,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			style=${styleMap({
-				maxWidth: `var(--spectrum-global-dimension-size-3000)`,
+				maxWidth: `240px`,
 				["--spectrum-slider-track-color"]: fillColor,
 				...style,
 			})}

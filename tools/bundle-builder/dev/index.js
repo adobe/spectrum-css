@@ -10,15 +10,99 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require("gulp");
-const logger = require("gulplog");
-const browserSync = require("browser-sync");
 const path = require("path");
-const dirs = require("../lib/dirs");
+
+const gulp = require("gulp");
+const browserSync = require("browser-sync");
 
 const docs = require("../docs");
-const subrunner = require("../subrunner");
-const bundleBuilder = require("../index.js");
+
+const dirs = {
+	components: path.join(__dirname, "../../../components"),
+	site: path.join(__dirname, "../../../site"),
+	root: path.join(__dirname, "../../.."),
+};
+
+/*
+  Run the specified gulp task for the given package
+*/
+function runComponentTask(packageDir, task, callback) {
+	packageName = packageDir.split("/").pop();
+
+	const gulpfile = path.join(packageDir, "gulpfile.js");
+
+	if (!fs.existsSync(gulpfile)) {
+		return callback();
+	}
+
+	const cwd = process.cwd();
+
+	process.chdir(packageDir);
+
+	const tasks = require(gulpfile);
+
+	if (tasks[task]) {
+		tasks[task](function (err) {
+			process.chdir(cwd);
+
+			callback(err);
+		});
+	} else {
+		process.chdir(cwd);
+
+		callback(new Error(
+			`Task '${packageName.yellow}:${task.yellow}' not found!`
+		));
+	}
+}
+
+/*
+  Run a task on every package
+*/
+function runTaskOnPackages(task, packages) {
+	return new Promise(async (resolve, reject) => {
+		if (!packages || !packages.length) {
+			return reject(`No packages provided for task ${task}!`);
+		}
+
+		function processPackage() {
+			var packageDir = packages.shift();
+
+			if (packageDir) {
+				runComponentTask(packageDir, task, function (err) {
+					if (err) {
+						if (!process.env.FORCE) {
+							process.exit(1);
+						}
+					}
+					processPackage();
+				});
+			} else {
+				resolve();
+			}
+		}
+
+		// Kick off a gulp build for each package
+		processPackage();
+	});
+}
+
+// run buildLite on a selected set of packages that depend on commons
+// yay: faster than 'rebuild everything' approach
+// boo: must add new packages here as commons grows
+function buildDependenciesOfCommons() {
+	return runTaskOnPackages("buildLite", [
+		`${dirs.components}/actionbutton`,
+		`${dirs.components}/button`,
+		`${dirs.components}/closebutton`,
+		`${dirs.components}/logicbutton`,
+		`${dirs.components}/modal`,
+		`${dirs.components}/picker`,
+		`${dirs.components}/popover`,
+		`${dirs.components}/tooltip`,
+		`${dirs.components}/underlay`,
+	]);
+}
 
 function serve() {
 	return browserSync({
@@ -43,9 +127,7 @@ function getPackageFromPath(filePath) {
   Watch for changes to globs matching files within packages, execute task for that package, and copy/inject specified files
 */
 function watchWithinPackages(glob, task, files) {
-	logger.debug(`Watching ${glob}, will run ${task} and stream ${files}`);
-
-	const watcher = gulp.watch(
+	let watcher = gulp.watch(
 		glob,
 		{
 			// Otherwise we get infinite loops because chokidar gets all crazy with symlinked deps
@@ -70,7 +152,7 @@ function watchWithinPackages(glob, task, files) {
 					changedFile = null;
 				});
 			} else {
-				subrunner.runComponentTask(packageDir, task, (err) => {
+				runComponentTask(packageDir, task, (err) => {
 					if (err) {
 						changedFile = null;
 						return done(err);
@@ -81,8 +163,6 @@ function watchWithinPackages(glob, task, files) {
 						.src(`${packageDir}/dist/${files}`)
 						.pipe(gulp.dest(`dist/components/${packageName}/`))
 						.on("end", () => {
-							logger.debug(`Injecting files from ${packageName}/:\n  ${files}`);
-
 							// Inject
 							gulp
 								.src(`dist/components/${packageName}/${files}`)
@@ -104,7 +184,9 @@ function watchWithinPackages(glob, task, files) {
 
 	let changedFile = null;
 	watcher.on("change", (filePath) => {
-		if (changedFile === null) changedFile = filePath;
+		if (changedFile === null) {
+			changedFile = filePath;
+		}
 	});
 }
 
@@ -143,7 +225,7 @@ function watchCommons() {
 	gulp.watch(
 		[`${dirs.components}/commons/*.css`],
 		gulp.series(
-			bundleBuilder.buildDependenciesOfCommons,
+			buildDependenciesOfCommons,
 			docs.buildDocs_individualPackages,
 			reload
 		)
@@ -169,7 +251,7 @@ function watch() {
 	watchWithinPackages(
 		[
 			`${dirs.components}/*/metadata/*.yml`,
-			`${dirs.topLevel}/.storybook/deprecated/*/*.yml`,
+			`${dirs.root}/.storybook/deprecated/*/*.yml`,
 		],
 		(_, package, done) => {
 			const packageDir = path.dirname(require.resolve(`@spectrum-css/${package}/package.json`));

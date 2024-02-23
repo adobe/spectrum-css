@@ -186,13 +186,12 @@ Search.prototype.showResults = function (event) {
 	var inputRect = this.input.getBoundingClientRect();
 	this.popover.style.top = `${inputRect.bottom + 10}px`;
 
-	var isRTL =
+	const isRTL =
 		window
 			.getComputedStyle(document.documentElement, null)
 			.getPropertyValue("direction") === "rtl";
 
 	if (isRTL) {
-		var width = window.innerWidth;
 		this.popover.style.right = `${window.innerWidth - inputRect.right}px`;
 		this.popover.style.left = "auto";
 	} else {
@@ -285,8 +284,6 @@ Search.prototype.doSearch = function () {
 Search.prototype.search = function (val) {
 	this.searchVal = val;
 
-	let components = [];
-
 	let r = [];
 	if (val.length > 1) {
 		let searchParam = val
@@ -332,7 +329,7 @@ Search.prototype.search = function (val) {
           <ul class="spectrum-Menu spectrum-Menu--sizeM" role="group">
             ${results[category]
 							.map(function (result, i) {
-								return `  
+								return `
                   <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
                     <span class="spectrum-Menu-itemLabel">${result.name}</span>
                   </a>

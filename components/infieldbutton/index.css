@@ -345,7 +345,7 @@ governing permissions and limitations under the License.
 		var(--spectrum-infield-button-fill-justify-content)
 	);
 
-  transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: border-color var(--spectrum-animation-duration-100) ease-in-out;
 }
 
 /* Stacked in-field buttons */

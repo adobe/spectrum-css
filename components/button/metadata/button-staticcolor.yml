@@ -41,7 +41,7 @@ examples:
   - id: button-staticcolor
     name: Static White
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -309,7 +309,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Outline
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>

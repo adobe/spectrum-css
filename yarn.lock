@@ -528,7 +528,7 @@
     chalk "^2.4.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.14.7", "@babel/parser@^7.20.7", "@babel/parser@^7.22.15", "@babel/parser@^7.23.3", "@babel/parser@^7.6.0", "@babel/parser@^7.9.6":
+"@babel/parser@^7.1.0", "@babel/parser@^7.14.7", "@babel/parser@^7.20.7", "@babel/parser@^7.22.15", "@babel/parser@^7.23.3":
   version "7.23.3"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.23.3.tgz#0ce0be31a4ca4f1884b5786057cadcb6c3be58f9"
   integrity sha512-uVsWNvlVsIninV2prNz/3lHCb+5CJ+e+IUBfbjToAHODtfGYLfCFuY4AU7TskI+dAKk+njsPiBjq1gKTvZOBaw==
@@ -537,6 +537,11 @@
   version "7.23.9"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.23.9.tgz#7b903b6149b0f8fa7ad564af646c4c38a77fc44b"
   integrity sha512-9tcKgqKbs3xGJ+NtKF2ndOBBLVwPjl1SHxPQkd36r3Dlirw3xWUeGaTbqr7uGZcTaxkVNwc+03SVP7aCdWrTlA==
+
+"@babel/parser@^7.6.0", "@babel/parser@^7.9.6":
+  version "7.24.0"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.24.0.tgz#26a3d1ff49031c53a97d03b604375f028746a9ac"
+  integrity sha512-QuP/FxEAzMSjXygs8v4N9dvdXzEHN4W1oF3PxuWAtPo08UdM17u89RDMgjLn/mlc56iM0HlLmVkO/wgR+rDgHg==
 
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.23.3":
   version "7.23.3"
@@ -1325,7 +1330,7 @@
     debug "^4.3.1"
     globals "^11.1.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.20.7", "@babel/types@^7.22.15", "@babel/types@^7.22.19", "@babel/types@^7.22.5", "@babel/types@^7.23.0", "@babel/types@^7.23.3", "@babel/types@^7.4.4", "@babel/types@^7.6.1", "@babel/types@^7.9.6":
+"@babel/types@^7.0.0", "@babel/types@^7.20.7", "@babel/types@^7.22.15", "@babel/types@^7.22.19", "@babel/types@^7.22.5", "@babel/types@^7.23.0", "@babel/types@^7.23.3", "@babel/types@^7.4.4":
   version "7.23.3"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.23.3.tgz#d5ea892c07f2ec371ac704420f4dcdb07b5f9598"
   integrity sha512-OZnvoH2l8PK5eUvEcUyCt/sXgr/h+UWpVuBbOljwcrAgUl6lpchoQ++PHGyQy1AtYnVA6CEq3y5xeEI10brpXw==
@@ -1338,6 +1343,15 @@
   version "7.23.9"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.23.9.tgz#1dd7b59a9a2b5c87f8b41e52770b5ecbf492e002"
   integrity sha512-dQjSq/7HaSjRM43FFGnv5keM2HsxpmyV1PfaSVm0nzzjwwTmjOe6J4bC8e3+pTEIgHaHj+1ZlLThRJ2auc/w1Q==
+  dependencies:
+    "@babel/helper-string-parser" "^7.23.4"
+    "@babel/helper-validator-identifier" "^7.22.20"
+    to-fast-properties "^2.0.0"
+
+"@babel/types@^7.6.1", "@babel/types@^7.9.6":
+  version "7.24.0"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.24.0.tgz#3b951f435a92e7333eba05b7566fd297960ea1bf"
+  integrity sha512-+j7a5c253RfKh8iABBhywc8NSfP5LURe7Uh4qpsh6jc+aLJguvmIUBdjSdEMQv2bENrCR5MfRdjGo7vzS/ob7w==
   dependencies:
     "@babel/helper-string-parser" "^7.23.4"
     "@babel/helper-validator-identifier" "^7.22.20"
@@ -3144,6 +3158,49 @@
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
+
+"@spectrum-css/component-builder@^7.0.2":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/component-builder/-/component-builder-7.0.2.tgz#f7667f58a8e9cc5605e40b61541bc760cc364434"
+  integrity sha512-jUPDHsqWQnXieaA6OwG2l3GGoAS8df7s6VUhjp19xxFAGicF096AqS1TtxsFUtTZ6r3bSqi2+paktmbGasN2SQ==
+  dependencies:
+    "@spectrum-css/tokens" "^13.2.0"
+    "@spectrum-css/vars" "^9.0.8"
+    at-rule-packer "^0.4.2"
+    autoprefixer "^10.4.17"
+    browser-sync "^2.26.14"
+    colors "^1.4.0"
+    gulp "^4.0.0"
+    gulp-concat "^2.6.1"
+    gulp-data "^1.3.1"
+    gulp-exec "^3.0.2"
+    gulp-insert "^0.5.0"
+    gulp-postcss "^9.1.0"
+    gulp-rename "^1.4.0"
+    gulp-replace "^1.0.0"
+    gulplog "^1.0.0"
+    js-yaml "^4.1.0"
+    legacy-postcss-dropdupedvars "^2.0.0"
+    legacy-postcss-dropunusedvars "^2.0.0"
+    merge-stream "^2.0.0"
+    postcss "^8.4.35"
+    postcss-calc "^9.0.1"
+    postcss-custom-properties-mapping "^2.0.0"
+    postcss-dir-pseudo-class "^8.0.1"
+    postcss-discard-comments "^6.0.1"
+    postcss-discard-empty "^6.0.1"
+    postcss-droproot "^2.0.0"
+    postcss-extend "^1.0.5"
+    postcss-hover-media-feature "1.0.2"
+    postcss-import "^16.0.0"
+    postcss-nested "^6.0.1"
+    postcss-notnested "^2.0.0"
+    postcss-selector-parser "^6.0.15"
+    postcss-values-parser "^6.0.2"
+    postcss-varsonly "^2.0.0"
+    pug "^3.0.1"
+    replace-ext "^1.0.0"
+    through2 "^3.0.1"
 
 "@spectrum-css/cyclebutton@^3.1.3":
   version "3.1.3"
@@ -10332,13 +10389,6 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
-glogg@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/glogg/-/glogg-2.0.0.tgz#5b69c867f8b02a503b0653ed80c37ceba0a69361"
-  integrity sha512-YDtL/QX54MN8+GorvS9tnKI5HtqWrFW9bv5yPRmFBeofi5neWzqQN8X/0HmM5zMkDbB8OYvC3/Pj8UEJUZFeqA==
-  dependencies:
-    sparkles "^2.0.0"
-
 gopd@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gopd/-/gopd-1.0.1.tgz#29ff76de69dac7489b7c0918a5788e56477c332c"
@@ -10487,13 +10537,6 @@ gulplog@^1.0.0:
   integrity sha512-hm6N8nrm3Y08jXie48jsC55eCZz9mnb4OirAStEk2deqeyhXU3C1otDVh+ccttMuc1sBi6RX6ZJ720hs9RCvgw==
   dependencies:
     glogg "^1.0.0"
-
-gulplog@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/gulplog/-/gulplog-2.0.1.tgz#414e116287087278e1e8e2ef9ff4a1e9063f8428"
-  integrity sha512-11IFA5ZwhFUjXPNYxrk9Z5FWGQIzJzxrBCE4qZC2elFkwt6oamM1ESwZVrhFMLl5IVlhnMwleFEWxiEyuMndIg==
-  dependencies:
-    glogg "^2.0.0"
 
 gunzip-maybe@^1.4.2:
   version "1.4.2"
@@ -17089,11 +17132,6 @@ sparkles@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sparkles/-/sparkles-1.0.1.tgz#008db65edce6c50eec0c5e228e1945061dd0437c"
   integrity sha512-dSO0DDYUahUt/0/pD/Is3VIm5TGJjludZ0HVymmhYF6eNA53PVLhnUk0znSYbH8IYBuJdCE+1luR22jNLMaQdw==
-
-sparkles@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/sparkles/-/sparkles-2.0.0.tgz#1fcfb7ad687710bbcdd5c655d6ae523952345346"
-  integrity sha512-rqUsosNTLY8KIT6qhuJlXzIUjYJNHTDoHmPnJwfnD7bEvSSvhUOMKuPMCsmLR3vDhyTGi0oAqAbLjgiIXnL2wQ==
 
 spdx-correct@^3.0.0:
   version "3.2.0"

@@ -437,429 +437,426 @@ governing permissions and limitations under the License.
 })();
 
 // Treeview
-function furthest(el, selector) {
-	var lastMatch = null;
-	while (el) {
-		if (el.matches && el.matches(selector)) {
-			lastMatch = el;
+(function () {
+	function furthest(el, selector) {
+		var lastMatch = null;
+		while (el) {
+			if (el.matches && el.matches(selector)) {
+				lastMatch = el;
+			}
+			el = el.parentNode;
 		}
-		el = el.parentNode;
-	}
-	return lastMatch;
-}
-
-window.addEventListener("click", function (event) {
-	var treeviewItem = event.target.closest(".spectrum-TreeView-item");
-	if (!treeviewItem) {
-		return;
+		return lastMatch;
 	}
 
-	var isDisabled = treeviewItem.classList.contains("is-disabled");
-	if (isDisabled) {
-		return;
-	}
+	window.addEventListener("click", function (event) {
+		var treeviewItem = event.target.closest(".spectrum-TreeView-item");
+		if (!treeviewItem) {
+			return;
+		}
 
-	var el;
+		var isDisabled = treeviewItem.classList.contains("is-disabled");
+		if (isDisabled) {
+			return;
+		}
 
-	if (
-		(el = event.target.closest(".spectrum-TreeView-itemIndicator")) !== null
-	) {
-		treeviewItem.classList.toggle("is-open");
-		event.preventDefault();
-	} else if (
-		(el = event.target.closest(".spectrum-TreeView-itemLink")) !== null
-	) {
-		if (!(event.shiftKey || event.metaKey)) {
-			// Remove other selected items
-			let outerTreeview = furthest(el, ".spectrum-TreeView");
-			if (outerTreeview) {
-				Array.prototype.forEach.call(
-					outerTreeview.querySelectorAll(".spectrum-TreeView-item.is-selected"),
-					function (item) {
-						if (item != treeviewItem) {
-							item.classList.remove("is-selected");
+		var el;
 
-							var thumbnail = item.querySelector(
-								".spectrum-TreeView-itemThumbnail"
-							);
-							if (thumbnail) {
-								thumbnail.classList.remove("is-selected");
+		if (
+			(el = event.target.closest(".spectrum-TreeView-itemIndicator")) !== null
+		) {
+			treeviewItem.classList.toggle("is-open");
+			event.preventDefault();
+		} else if (
+			(el = event.target.closest(".spectrum-TreeView-itemLink")) !== null
+		) {
+			if (!(event.shiftKey || event.metaKey)) {
+				// Remove other selected items
+				let outerTreeview = furthest(el, ".spectrum-TreeView");
+				if (outerTreeview) {
+					Array.prototype.forEach.call(
+						outerTreeview.querySelectorAll(".spectrum-TreeView-item.is-selected"),
+						function (item) {
+							if (item != treeviewItem) {
+								item.classList.remove("is-selected");
+
+								var thumbnail = item.querySelector(
+									".spectrum-TreeView-itemThumbnail"
+								);
+								if (thumbnail) {
+									thumbnail.classList.remove("is-selected");
+								}
 							}
 						}
-					}
-				);
+					);
+				}
 			}
-		}
-		let selected = treeviewItem.classList.toggle("is-selected");
+			let selected = treeviewItem.classList.toggle("is-selected");
 
-		var thumbnail = treeviewItem.querySelector(
-			".spectrum-TreeView-itemThumbnail"
-		);
-		if (thumbnail) {
-			thumbnail.classList[selected ? "add" : "remove"]("is-selected");
-		}
-		event.preventDefault();
-	}
-});
-
-// Accordion
-window.addEventListener("click", function (event) {
-	let heading = event.target.closest(".spectrum-Accordion-itemHeading");
-	if (heading) {
-		let item = event.target.closest(".spectrum-Accordion-item");
-		let isDisabled = item.classList.contains("is-disabled");
-		if (!isDisabled) {
-			item.classList.toggle("is-open");
+			var thumbnail = treeviewItem.querySelector(
+				".spectrum-TreeView-itemThumbnail"
+			);
+			if (thumbnail) {
+				thumbnail.classList[selected ? "add" : "remove"]("is-selected");
+			}
 			event.preventDefault();
 		}
-	}
-});
+	});
+})();
 
-// Cyclebutton
-window.addEventListener("click", function (event) {
-	var button = event.target.closest(".spectrum-CycleButton");
-	if (button) {
-		var icons = button.querySelectorAll(".spectrum-Icon");
-		var currentIcon = button.querySelector(".spectrum-Icon.is-selected");
-		var currentIconIndex = Array.prototype.slice
-			.call(icons)
-			.indexOf(currentIcon);
-		if (currentIcon) {
-			currentIcon.classList.remove("is-selected");
-
-			var newIndex =
-				currentIconIndex + 1 < icons.length ? currentIconIndex + 1 : 0;
-			icons[newIndex].classList.add("is-selected");
+// Accordion
+(function () {
+	window.addEventListener("click", function (event) {
+		let heading = event.target.closest(".spectrum-Accordion-itemHeading");
+		if (heading) {
+			let item = event.target.closest(".spectrum-Accordion-item");
+			let isDisabled = item.classList.contains("is-disabled");
+			if (!isDisabled) {
+				item.classList.toggle("is-open");
+				event.preventDefault();
+			}
 		}
-	}
-});
+	});
+})();
 
 // Display InputGroup focus style
-function toggleInputGroupFocus(event) {
-	var classList = event.target.classList;
-	var closestSelector;
-	// target within InputGroup
-	if (!classList) return;
-	if (
-		classList.contains("spectrum-InputGroup-input") ||
-		classList.contains("spectrum-ActionButton spectrum-ActionButton--sizeM")
-	) {
-		closestSelector = ".spectrum-InputGroup";
+(function () {
+	function toggleInputGroupFocus(event) {
+		var classList = event.target.classList;
+		var closestSelector;
+		// target within InputGroup
+		if (!classList) return;
+		if (
+			classList.contains("spectrum-InputGroup-input") ||
+			classList.contains("spectrum-ActionButton spectrum-ActionButton--sizeM")
+		) {
+			closestSelector = ".spectrum-InputGroup";
+		}
+		// target within a Slider
+		else if (classList.contains("spectrum-Slider-input")) {
+			closestSelector = ".spectrum-Slider-handle";
+		} else {
+			return;
+		}
+		var func = event.type === "focus" ? "add" : "remove";
+		var closestElement = event.target.closest(closestSelector);
+		if (closestElement) {
+			closestElement.classList[func]("is-focused");
+		}
 	}
-	// target within a Slider
-	else if (classList.contains("spectrum-Slider-input")) {
-		closestSelector = ".spectrum-Slider-handle";
-	} else {
-		return;
-	}
-	var func = event.type === "focus" ? "add" : "remove";
-	var closestElement = event.target.closest(closestSelector);
-	if (closestElement) {
-		closestElement.classList[func]("is-focused");
-	}
-}
 
-document.addEventListener("focus", toggleInputGroupFocus, true);
-document.addEventListener("blur", toggleInputGroupFocus, true);
-
-function isRTL() {
-	return document.documentElement.getAttribute("dir") === "rtl";
-}
-
-function toggleRTL(left, right) {
-	return isRTL() ? right : left;
-}
+	document.addEventListener("focus", toggleInputGroupFocus, true);
+	document.addEventListener("blur", toggleInputGroupFocus, true);
+})();
 
 // Sliders
-function makeDoubleSlider(slider) {
-	var tracks = slider.querySelectorAll(".spectrum-Slider-track");
-	var leftTrack = tracks[0];
-	var middleTrack = tracks[1];
-	var rightTrack = tracks[2];
-	var handles = slider.querySelectorAll(".spectrum-Slider-handle");
-	var leftHandle = handles[0];
-	var rightHandle = handles[1];
+(function () {
+	function isRTL() {
+		return document.documentElement.getAttribute("dir") === "rtl";
+	}
 
-	var handle = null;
-	function onMouseDown(e, sliderHandle) {
-		if (e.target.classList.contains("spectrum-Slider-handle")) {
-			handle = e.target;
+	function toggleRTL(left, right) {
+		return isRTL() ? right : left;
+	}
+
+	function makeDoubleSlider(slider) {
+		var tracks = slider.querySelectorAll(".spectrum-Slider-track");
+		var leftTrack = tracks[0];
+		var middleTrack = tracks[1];
+		var rightTrack = tracks[2];
+		var handles = slider.querySelectorAll(".spectrum-Slider-handle");
+		var leftHandle = handles[0];
+		var rightHandle = handles[1];
+
+		var handle = null;
+		function onMouseDown(e, sliderHandle) {
+			if (e.target.classList.contains("spectrum-Slider-handle")) {
+				handle = e.target;
+				window.addEventListener("mouseup", onMouseUp);
+				window.addEventListener("mousemove", onMouseMove);
+				document.body.classList.add("u-isGrabbing");
+			}
+		}
+		function onMouseUp(e, sliderHandle) {
+			window.removeEventListener("mouseup", onMouseUp);
+			window.removeEventListener("mousemove", onMouseMove);
+			document.body.classList.remove("u-isGrabbing");
+			handle = null;
+		}
+		function onMouseMove(e, sliderHandle) {
+			if (!handle) {
+				return;
+			}
+
+			var sliderOffsetWidth = slider.offsetWidth;
+			var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
+
+			var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
+			var percent = Math.round((x / sliderOffsetWidth) * 100);
+
+			if (isRTL()) {
+				percent = 100 - percent;
+			}
+
+			if (handle === leftHandle) {
+				if (percent < parseFloat(rightHandle.style[toggleRTL("left", "right")])) {
+					handle.style[toggleRTL("left", "right")] = percent + "%";
+					handle.style[toggleRTL("right", "left")] = "auto";
+					leftTrack.style.width = percent + "%";
+				}
+			} else {
+				if (percent > parseFloat(leftHandle.style[toggleRTL("left", "right")])) {
+					handle.style[toggleRTL("left", "right")] = percent + "%";
+					handle.style[toggleRTL("right", "left")] = "auto";
+					rightTrack.style.width = 100 - percent + "%";
+				}
+			}
+			middleTrack.style[toggleRTL("left", "right")] =
+				leftHandle.style[toggleRTL("left", "right")];
+			middleTrack.style[toggleRTL("right", "left")] =
+				100 - parseFloat(rightHandle.style[toggleRTL("left", "right")]) + "%";
+		}
+
+		function init() {
+			if (isRTL()) {
+				leftHandle.style.right = leftHandle.style.left;
+				leftHandle.style.left = leftHandle.style.right;
+				rightHandle.style.right = rightHandle.style.left;
+				rightHandle.style.left = rightHandle.style.right;
+			}
+
+			// Set initial track position
+			var startPercent = parseFloat(leftHandle.style[toggleRTL("left", "right")]);
+			var endPercent = parseFloat(rightHandle.style[toggleRTL("left", "right")]);
+			leftTrack.style.width = startPercent + "%";
+			middleTrack.style[toggleRTL("left", "right")] = startPercent + "%";
+			middleTrack.style[toggleRTL("right", "left")] = 100 - endPercent + "%";
+			rightTrack.style.width = 100 - endPercent + "%";
+
+			if (!slider.classList.contains("is-disabled")) {
+				slider.addEventListener("mousedown", onMouseDown);
+			}
+		}
+
+		var observer = new MutationObserver(function (mutations) {
+			mutations.forEach(function (mutation) {
+				if (mutation.type === "attributes" && mutation.attributeName === "dir") {
+					init();
+				}
+			});
+		});
+
+		observer.observe(document.documentElement, {
+			attributes: true, //configure it to listen to attribute changes
+		});
+
+		init();
+	}
+
+	function makeSlider(slider) {
+		var tracks = slider.querySelectorAll(".spectrum-Slider-track");
+		var leftTrack = tracks[0];
+		var rightTrack = tracks[1];
+		var handles = slider.querySelectorAll(".spectrum-Slider-handle");
+		var handle = handles[0];
+		var isColor = slider.classList.contains("spectrum-Slider--color");
+		var value = slider.querySelector(".spectrum-Slider-value");
+		var fill = slider.querySelector(".spectrum-Slider-fill");
+
+		if (handles.length > 1) {
+			makeDoubleSlider(slider);
+			return;
+		}
+
+		var buffers = slider.querySelectorAll(".spectrum-Slider-buffer");
+		if (buffers.length) {
+			var leftBuffer = buffers[0];
+			var rightBuffer = buffers[1];
+			var bufferedAmount =
+				parseInt(handle.style[toggleRTL("left", "right")], 10) +
+				parseInt(rightBuffer.style.width, 10);
+		}
+
+		function onMouseDown(e, sliderHandle) {
+			window.addEventListener("mouseup", onMouseUp);
+			window.addEventListener("mousemove", onMouseMove);
+			handle.classList.add("is-dragged");
+			// to move by merely clicking on the track
+			onMouseMove(e);
+		}
+		function onMouseUp(e, sliderHandle) {
+			window.removeEventListener("mouseup", onMouseUp);
+			window.removeEventListener("mousemove", onMouseMove);
+			handle.classList.remove("is-dragged");
+		}
+		function onMouseMove(e, sliderHandle) {
+			var sliderOffsetWidth = slider.offsetWidth;
+			var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
+
+			var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
+			var percent = Math.round((x / sliderOffsetWidth) * 100);
+
+			if (isRTL()) {
+				percent = 100 - percent;
+			}
+
+			if (value) {
+				value.innerText = percent;
+			}
+
+			if (leftTrack && rightTrack && !isColor) {
+				leftTrack.style.width = percent + "%";
+				rightTrack.style.width = 100 - percent + "%";
+			}
+
+			handle.style[toggleRTL("left", "right")] = percent + "%";
+			handle.style[toggleRTL("right", "left")] = "auto";
+
+			if (buffers.length) {
+				if (percent >= bufferedAmount) {
+					// Hide the right buffer
+					rightBuffer.style.width = 0;
+					rightBuffer.style.left = "auto";
+					rightBuffer.style.right = "auto";
+
+					// This disgusting calculation takes into account the pretty gap
+					var bufferStyle = window.getComputedStyle(leftBuffer);
+					var handleGap = parseInt(
+						bufferStyle[toggleRTL("paddingRight", "paddingLeft")],
+						10
+					);
+					var handlePosition =
+						toggleRTL(
+							handle.offsetLeft,
+							handle.parentElement.offsetWidth - handle.offsetLeft
+						) +
+						handle.offsetWidth / 2;
+					var bufferMaxWidth = handlePosition;
+
+					// The left buffer is offset by the gap and some margin, so we have to add that back to make it actually hit the desired value
+					var bufferOffset =
+						parseInt(bufferStyle[toggleRTL("marginLeft", "marginRight")], 10) *
+						-1;
+					var actualMiddle =
+						handle.parentElement.offsetWidth / 2 + bufferOffset + handleGap;
+
+					// Keep the left buffer to account for the nasty gaps
+					leftBuffer.style.width = Math.min(bufferMaxWidth, actualMiddle) + "px";
+				} else {
+					leftBuffer.style.width = percent + "%";
+					rightBuffer.style.width = "auto";
+					rightBuffer.style[toggleRTL("left", "right")] = percent + "%";
+					rightBuffer.style[toggleRTL("right", "left")] =
+						100 - bufferedAmount + "%";
+				}
+			}
+
+			if (fill) {
+				fill.style[toggleRTL("left", "right")] =
+					(percent < 50 ? percent : 50) + "%";
+				fill.style.width = (percent < 50 ? 50 - percent : percent - 50) + "%";
+				if (percent > 50) {
+					fill.classList.add("spectrum-Slider-fill--right");
+				} else {
+					fill.classList.remove("spectrum-Slider-fill--right");
+				}
+			}
+		}
+		function init() {
+			if (isRTL()) {
+				handle.style.right = handle.style.left;
+				handle.style.left = handle.style.right;
+				if (fill) {
+					fill.style.right = fill.style.left;
+					fill.style.left = fill.style.right;
+				}
+
+				if (buffers.length) {
+					var oldRightRight = rightBuffer.style.right;
+					rightBuffer.style.right = rightBuffer.style.left;
+					rightBuffer.style.left = oldRightRight;
+					var oldLeftRight = leftBuffer.style.right;
+					leftBuffer.style.right = leftBuffer.style.left;
+					leftBuffer.style.left = oldLeftRight;
+				}
+
+				if (tracks.length) {
+					// Flip colors
+					if (tracks[0].style.background) {
+						tracks[0].style.background = tracks[0].style.background.replace(
+							"right",
+							"left"
+						);
+					}
+				}
+			}
+
+			// Set initial track position
+			var percent = parseInt(handle.style[toggleRTL("left", "right")], 10);
+			if (leftTrack && rightTrack && !isColor) {
+				leftTrack.style.width = percent + "%";
+				rightTrack.style.width = 100 - percent + "%";
+			}
+
+			if (!slider.classList.contains("is-disabled")) {
+				slider.addEventListener("mousedown", onMouseDown);
+			}
+		}
+
+		var observer = new MutationObserver(function (mutations) {
+			mutations.forEach(function (mutation) {
+				if (mutation.type === "attributes" && mutation.attributeName === "dir") {
+					init();
+				}
+			});
+		});
+
+		observer.observe(document.documentElement, {
+			attributes: true, //configure it to listen to attribute changes
+		});
+
+		init();
+	}
+
+	function makeDial(dial) {
+		var dialOffsetWidth = dial.offsetWidth;
+		var dialOffsetLeft = dial.offsetLeft + dial.offsetParent.offsetLeft;
+		var input = dial.querySelector("input");
+		var handle = dial.querySelector(".spectrum-Dial-handle");
+		var min = -45;
+		var max = 225;
+		function onMouseDown(e, sliderHandle) {
 			window.addEventListener("mouseup", onMouseUp);
 			window.addEventListener("mousemove", onMouseMove);
 			document.body.classList.add("u-isGrabbing");
 		}
-	}
-	function onMouseUp(e, sliderHandle) {
-		window.removeEventListener("mouseup", onMouseUp);
-		window.removeEventListener("mousemove", onMouseMove);
-		document.body.classList.remove("u-isGrabbing");
-		handle = null;
-	}
-	function onMouseMove(e, sliderHandle) {
-		if (!handle) {
-			return;
+		function onMouseUp(e, sliderHandle) {
+			window.removeEventListener("mouseup", onMouseUp);
+			window.removeEventListener("mousemove", onMouseMove);
+			document.body.classList.remove("u-isGrabbing");
+		}
+		function onMouseMove(e, sliderHandle) {
+			var x = Math.max(Math.min(e.x - dialOffsetLeft, dialOffsetWidth), 0);
+			var percent = (x / dialOffsetWidth) * 100;
+
+			var deg = percent * 0.01 * (max - min) + min;
+			handle.style.transform = "rotate(" + deg + "deg" + ")";
 		}
 
-		var sliderOffsetWidth = slider.offsetWidth;
-		var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
-
-		var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
-		var percent = Math.round((x / sliderOffsetWidth) * 100);
-
-		if (isRTL()) {
-			percent = 100 - percent;
-		}
-
-		if (handle === leftHandle) {
-			if (percent < parseFloat(rightHandle.style[toggleRTL("left", "right")])) {
-				handle.style[toggleRTL("left", "right")] = percent + "%";
-				handle.style[toggleRTL("right", "left")] = "auto";
-				leftTrack.style.width = percent + "%";
-			}
-		} else {
-			if (percent > parseFloat(leftHandle.style[toggleRTL("left", "right")])) {
-				handle.style[toggleRTL("left", "right")] = percent + "%";
-				handle.style[toggleRTL("right", "left")] = "auto";
-				rightTrack.style.width = 100 - percent + "%";
-			}
-		}
-		middleTrack.style[toggleRTL("left", "right")] =
-			leftHandle.style[toggleRTL("left", "right")];
-		middleTrack.style[toggleRTL("right", "left")] =
-			100 - parseFloat(rightHandle.style[toggleRTL("left", "right")]) + "%";
-	}
-
-	function init() {
-		if (isRTL()) {
-			leftHandle.style.right = leftHandle.style.left;
-			leftHandle.style.left = leftHandle.style.right;
-			rightHandle.style.right = rightHandle.style.left;
-			rightHandle.style.left = rightHandle.style.right;
-		}
-
-		// Set initial track position
-		var startPercent = parseFloat(leftHandle.style[toggleRTL("left", "right")]);
-		var endPercent = parseFloat(rightHandle.style[toggleRTL("left", "right")]);
-		leftTrack.style.width = startPercent + "%";
-		middleTrack.style[toggleRTL("left", "right")] = startPercent + "%";
-		middleTrack.style[toggleRTL("right", "left")] = 100 - endPercent + "%";
-		rightTrack.style.width = 100 - endPercent + "%";
-
-		if (!slider.classList.contains("is-disabled")) {
-			slider.addEventListener("mousedown", onMouseDown);
+		if (!dial.classList.contains("is-disabled")) {
+			dial.addEventListener("mousedown", onMouseDown);
 		}
 	}
 
-	var observer = new MutationObserver(function (mutations) {
-		mutations.forEach(function (mutation) {
-			if (mutation.type === "attributes" && mutation.attributeName === "dir") {
-				init();
-			}
-		});
-	});
-
-	observer.observe(document.documentElement, {
-		attributes: true, //configure it to listen to attribute changes
-	});
-
-	init();
-}
-
-function makeSlider(slider) {
-	var tracks = slider.querySelectorAll(".spectrum-Slider-track");
-	var leftTrack = tracks[0];
-	var rightTrack = tracks[1];
-	var handles = slider.querySelectorAll(".spectrum-Slider-handle");
-	var handle = handles[0];
-	var isColor = slider.classList.contains("spectrum-Slider--color");
-	var value = slider.querySelector(".spectrum-Slider-value");
-	var fill = slider.querySelector(".spectrum-Slider-fill");
-
-	if (handles.length > 1) {
-		makeDoubleSlider(slider);
-		return;
+	function enhanceAll() {
+		[...document.querySelectorAll(".spectrum-Slider")].forEach(slider => makeSlider(slider));
+		[...document.querySelectorAll(".spectrum-Dial")].forEach(dial => makeDial(dial));
 	}
 
-	var buffers = slider.querySelectorAll(".spectrum-Slider-buffer");
-	if (buffers.length) {
-		var leftBuffer = buffers[0];
-		var rightBuffer = buffers[1];
-		var bufferedAmount =
-			parseInt(handle.style[toggleRTL("left", "right")], 10) +
-			parseInt(rightBuffer.style.width, 10);
-	}
+	window.addEventListener("DOMContentLoaded", enhanceAll);
+})();
 
-	function onMouseDown(e, sliderHandle) {
-		window.addEventListener("mouseup", onMouseUp);
-		window.addEventListener("mousemove", onMouseMove);
-		handle.classList.add("is-dragged");
-		// to move by merely clicking on the track
-		onMouseMove(e);
-	}
-	function onMouseUp(e, sliderHandle) {
-		window.removeEventListener("mouseup", onMouseUp);
-		window.removeEventListener("mousemove", onMouseMove);
-		handle.classList.remove("is-dragged");
-	}
-	function onMouseMove(e, sliderHandle) {
-		var sliderOffsetWidth = slider.offsetWidth;
-		var sliderOffsetLeft = slider.offsetLeft + slider.offsetParent.offsetLeft;
-
-		var x = Math.max(Math.min(e.x - sliderOffsetLeft, sliderOffsetWidth), 0);
-		var percent = Math.round((x / sliderOffsetWidth) * 100);
-
-		if (isRTL()) {
-			percent = 100 - percent;
-		}
-
-		if (value) {
-			value.innerText = percent;
-		}
-
-		if (leftTrack && rightTrack && !isColor) {
-			leftTrack.style.width = percent + "%";
-			rightTrack.style.width = 100 - percent + "%";
-		}
-
-		handle.style[toggleRTL("left", "right")] = percent + "%";
-		handle.style[toggleRTL("right", "left")] = "auto";
-
-		if (buffers.length) {
-			if (percent >= bufferedAmount) {
-				// Hide the right buffer
-				rightBuffer.style.width = 0;
-				rightBuffer.style.left = "auto";
-				rightBuffer.style.right = "auto";
-
-				// This disgusting calculation takes into account the pretty gap
-				var bufferStyle = window.getComputedStyle(leftBuffer);
-				var handleGap = parseInt(
-					bufferStyle[toggleRTL("paddingRight", "paddingLeft")],
-					10
-				);
-				var handlePosition =
-					toggleRTL(
-						handle.offsetLeft,
-						handle.parentElement.offsetWidth - handle.offsetLeft
-					) +
-					handle.offsetWidth / 2;
-				var bufferMaxWidth = handlePosition;
-
-				// The left buffer is offset by the gap and some margin, so we have to add that back to make it actually hit the desired value
-				var bufferOffset =
-					parseInt(bufferStyle[toggleRTL("marginLeft", "marginRight")], 10) *
-					-1;
-				var actualMiddle =
-					handle.parentElement.offsetWidth / 2 + bufferOffset + handleGap;
-
-				// Keep the left buffer to account for the nasty gaps
-				leftBuffer.style.width = Math.min(bufferMaxWidth, actualMiddle) + "px";
-			} else {
-				leftBuffer.style.width = percent + "%";
-				rightBuffer.style.width = "auto";
-				rightBuffer.style[toggleRTL("left", "right")] = percent + "%";
-				rightBuffer.style[toggleRTL("right", "left")] =
-					100 - bufferedAmount + "%";
-			}
-		}
-
-		if (fill) {
-			fill.style[toggleRTL("left", "right")] =
-				(percent < 50 ? percent : 50) + "%";
-			fill.style.width = (percent < 50 ? 50 - percent : percent - 50) + "%";
-			if (percent > 50) {
-				fill.classList.add("spectrum-Slider-fill--right");
-			} else {
-				fill.classList.remove("spectrum-Slider-fill--right");
-			}
-		}
-	}
-	function init() {
-		if (isRTL()) {
-			handle.style.right = handle.style.left;
-			handle.style.left = handle.style.right;
-			if (fill) {
-				fill.style.right = fill.style.left;
-				fill.style.left = fill.style.right;
-			}
-
-			if (buffers.length) {
-				var oldRightRight = rightBuffer.style.right;
-				rightBuffer.style.right = rightBuffer.style.left;
-				rightBuffer.style.left = oldRightRight;
-				var oldLeftRight = leftBuffer.style.right;
-				leftBuffer.style.right = leftBuffer.style.left;
-				leftBuffer.style.left = oldLeftRight;
-			}
-
-			if (tracks.length) {
-				// Flip colors
-				if (tracks[0].style.background) {
-					tracks[0].style.background = tracks[0].style.background.replace(
-						"right",
-						"left"
-					);
-				}
-			}
-		}
-
-		// Set initial track position
-		var percent = parseInt(handle.style[toggleRTL("left", "right")], 10);
-		if (leftTrack && rightTrack && !isColor) {
-			leftTrack.style.width = percent + "%";
-			rightTrack.style.width = 100 - percent + "%";
-		}
-
-		if (!slider.classList.contains("is-disabled")) {
-			slider.addEventListener("mousedown", onMouseDown);
-		}
-	}
-
-	var observer = new MutationObserver(function (mutations) {
-		mutations.forEach(function (mutation) {
-			if (mutation.type === "attributes" && mutation.attributeName === "dir") {
-				init();
-			}
-		});
-	});
-
-	observer.observe(document.documentElement, {
-		attributes: true, //configure it to listen to attribute changes
-	});
-
-	init();
-}
-
-function makeDial(dial) {
-	var dialOffsetWidth = dial.offsetWidth;
-	var dialOffsetLeft = dial.offsetLeft + dial.offsetParent.offsetLeft;
-	var input = dial.querySelector("input");
-	var handle = dial.querySelector(".spectrum-Dial-handle");
-	var min = -45;
-	var max = 225;
-	function onMouseDown(e, sliderHandle) {
-		window.addEventListener("mouseup", onMouseUp);
-		window.addEventListener("mousemove", onMouseMove);
-		document.body.classList.add("u-isGrabbing");
-	}
-	function onMouseUp(e, sliderHandle) {
-		window.removeEventListener("mouseup", onMouseUp);
-		window.removeEventListener("mousemove", onMouseMove);
-		document.body.classList.remove("u-isGrabbing");
-	}
-	function onMouseMove(e, sliderHandle) {
-		var x = Math.max(Math.min(e.x - dialOffsetLeft, dialOffsetWidth), 0);
-		var percent = (x / dialOffsetWidth) * 100;
-
-		var deg = percent * 0.01 * (max - min) + min;
-		handle.style.transform = "rotate(" + deg + "deg" + ")";
-	}
-
-	if (!dial.classList.contains("is-disabled")) {
-		dial.addEventListener("mousedown", onMouseDown);
-	}
-}
-
+// Dialog
 function openDialog(dialog, withOverlay) {
 	if (withOverlay !== false) {
 		document.getElementById("spectrum-underlay").classList.add("is-open");
@@ -890,114 +887,57 @@ function closeDialog(dialog) {
 	}, 130);
 }
 
+// Popover
 function toggleSpectrumPopover(popover) {
 	popover.classList.contains("is-open")
 		? popover.classList.remove("is-open")
 		: popover.classList.add("is-open");
 }
 
-function animateCircleLoaders() {
-	var value = 0;
-	setInterval(function () {
-		var loaders = document.querySelectorAll(
-			".spectrum-CircleLoader:not(spectrum-CircleLoader--indeterminate)"
-		);
-		if (loaders.length) {
-			changeLoaders(loaders, value++);
-			if (value >= 100) {
-				value = 0;
+// Progress circle
+(function () {
+	function animateCircleLoaders() {
+		var value = 0;
+		setInterval(function () {
+			var loaders = document.querySelectorAll(
+				".spectrum-CircleLoader:not(spectrum-CircleLoader--indeterminate)"
+			);
+			if (loaders.length) {
+				changeLoaders(loaders, value++);
+				if (value >= 100) {
+					value = 0;
+				}
 			}
-		}
-	}, 500);
-}
-
-function changeLoaders(nodeList, value) {
-	Array.prototype.slice.call(nodeList).forEach(function (loader) {
-		changeLoader(loader, value);
-	});
-}
-
-function changeLoader(loader, value, submask1, submask2) {
-	submask1 =
-		submask1 || loader.querySelector(".spectrum-CircleLoader-fillSubMask1");
-	submask2 =
-		submask2 || loader.querySelector(".spectrum-CircleLoader-fillSubMask2");
-	var angle;
-	if (value > 0 && value <= 50) {
-		angle = -180 + (value / 50) * 180;
-		submask1.style.transform = "rotate(" + angle + "deg)";
-		submask2.style.transform = "rotate(-180deg)";
-	} else if (value > 50) {
-		angle = -180 + ((value - 50) / 50) * 180;
-		submask1.style.transform = "rotate(0deg)";
-		submask2.style.transform = "rotate(" + angle + "deg)";
+		}, 500);
 	}
-}
 
-function enhanceAll() {
-	Array.prototype.forEach.call(
-		document.querySelectorAll(".spectrum-Slider"),
-		function (slider) {
-			makeSlider(slider);
+	function changeLoaders(nodeList, value) {
+		Array.prototype.slice.call(nodeList).forEach(function (loader) {
+			changeLoader(loader, value);
+		});
+	}
+
+	function changeLoader(loader, value, submask1, submask2) {
+		submask1 =
+			submask1 || loader.querySelector(".spectrum-CircleLoader-fillSubMask1");
+		submask2 =
+			submask2 || loader.querySelector(".spectrum-CircleLoader-fillSubMask2");
+		var angle;
+		if (value > 0 && value <= 50) {
+			angle = -180 + (value / 50) * 180;
+			submask1.style.transform = "rotate(" + angle + "deg)";
+			submask2.style.transform = "rotate(-180deg)";
+		} else if (value > 50) {
+			angle = -180 + ((value - 50) / 50) * 180;
+			submask1.style.transform = "rotate(0deg)";
+			submask2.style.transform = "rotate(" + angle + "deg)";
 		}
-	);
+	}
 
-	Array.prototype.forEach.call(
-		document.querySelectorAll(".spectrum-Dial"),
-		function (dial) {
-			makeDial(dial);
-		}
-	);
-}
+	animateCircleLoaders();
+})();
 
-// Focus Indicator Classes
-var NAVIGATION_KEYS = [
-	'Tab',
-	'ArrowUp',
-	'ArrowRight',
-	'ArrowDown',
-	'ArrowLeft',
-	'Home',
-	'End',
-	'PageUp',
-	'PageDown',
-	'Enter',
-	' ',
-	'Escape',
-
-	/* IE9 and Firefox < 37 */
-	'Up',
-	'Right',
-	'Down',
-	'Left',
-	'Esc'
-];
-
-var FOCUS_COMPONENTS = [
-	'assetlist',
-	'button',
-	'calendar',
-	'card',
-	'closebutton',
-	'colorarea',
-	'colorhandle',
-	'colorslider',
-	'colorwheel',
-	'combobox',
-	'menu',
-	'picker',
-	'pickerbutton',
-	'rating',
-	'sidenav',
-	'slider',
-	'steplist',
-	'stepper',
-	'table',
-	'tag',
-	'tooltip'
-];
-
-var KEYBOARD_FOCUS_COMPONENTS = [
+const KEYBOARD_FOCUS_COMPONENTS = [
 	'closebutton',
 	'combobox',
 	'datepicker',
@@ -1007,26 +947,29 @@ var KEYBOARD_FOCUS_COMPONENTS = [
 	'table',
 ];
 
-// If pathname matches a component in the focus or keyboard focus arrays,
-// we know that component should get/is setup to handle the focus class
-function getsFocusClasses(componentArray) {
-	return componentArray.some((componentPath) => {
-		const currentPath = window.location.pathname;
-		return currentPath.includes(componentPath);
-	});
-}
-
-var keyboardFocus = false;
-
+let keyboardFocus = false;
 function onKeydownHandler(event) {
-	if (event.ctrlKey || event.altKey || event.metaKey || NAVIGATION_KEYS.indexOf(event.key) === -1) {
-		return;
-	}
+	if (event.ctrlKey || event.altKey || event.metaKey || [
+		'Tab',
+		'ArrowUp',
+		'ArrowRight',
+		'ArrowDown',
+		'ArrowLeft',
+		'Home',
+		'End',
+		'PageUp',
+		'PageDown',
+		'Enter',
+		' ',
+		'Escape',
+	].indexOf(event.key) === -1) return;
 	keyboardFocus = true;
 
-	if (getsFocusClasses(KEYBOARD_FOCUS_COMPONENTS)
+	if (
+		KEYBOARD_FOCUS_COMPONENTS.some((componentPath) => window.location.pathname.includes(componentPath))
 		&& document.activeElement
-		&& document.activeElement !== document.body) {
+		&& document.activeElement !== document.body
+	) {
 			document.activeElement.classList.add('is-keyboardFocused');
 	}
 }
@@ -1034,17 +977,45 @@ function onKeydownHandler(event) {
 function onMousedownHandler() {
 	keyboardFocus = false;
 
-	if (getsFocusClasses(FOCUS_COMPONENTS)
-		&& document.activeElement
-		&& document.activeElement !== document.body) {
-			document.activeElement.classList.add('is-focused');
+	if (
+		[
+			'assetlist',
+			'button',
+			'calendar',
+			'card',
+			'closebutton',
+			'colorarea',
+			'colorhandle',
+			'colorslider',
+			'colorwheel',
+			'combobox',
+			'menu',
+			'picker',
+			'pickerbutton',
+			'rating',
+			'sidenav',
+			'slider',
+			'steplist',
+			'stepper',
+			'table',
+			'tag',
+			'tooltip'
+		].some((componentPath) => window.location.pathname.includes(componentPath))
+			&& document.activeElement
+			&& document.activeElement !== document.body
+	) {
+		document.activeElement.classList.add('is-focused');
 	}
 }
 
 function onFocusHandler(event) {
-	var classList = event.target.classList;
-	if (classList && keyboardFocus && getsFocusClasses(KEYBOARD_FOCUS_COMPONENTS)) {
-		classList.add('is-keyboardFocused');
+	if (!event || !event.target || !event.target.classList) return;
+
+	if (
+		keyboardFocus &&
+		KEYBOARD_FOCUS_COMPONENTS.some((componentPath) => window.location.pathname.includes(componentPath))
+	) {
+		event.target.classList.add('is-keyboardFocused');
 	}
 }
 
@@ -1061,7 +1032,3 @@ window.addEventListener('keydown', onKeydownHandler, true);
 window.addEventListener('focusin', onFocusHandler, true);
 window.addEventListener('focusout', onFocusOutHandler, true);
 window.addEventListener('mousedown', onMousedownHandler, true);
-
-animateCircleLoaders();
-window.addEventListener("PageFastLoaded", enhanceAll);
-window.addEventListener("DOMContentLoaded", enhanceAll);

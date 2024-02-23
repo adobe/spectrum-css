@@ -1,4 +1,3 @@
-<script>
 window.adobeGlobalnavConfig = {
   locale: 'en',
   footer: {
@@ -16,23 +15,23 @@ window.adobeGlobalnavConfig = {
 
       var styles = `
         #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme {
-          background-color: var(--spectrum-global-color-gray-50);
+          background-color: var(--spectrum-gray-50);
         }
 
         #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme .Footernav-disclaimer {
-          color: var(--spectrum-body-text-color, var(--spectrum-alias-text-color));
+          color: var(--spectrum-body-text-color, var(--spectrum-neutral-content-color-default));
         }
 
         #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme .Footernav-disclaimer-link:hover {
-          color: var(--spectrum-alias-text-color-hover);
+          color: var(--spectrum-neutral-content-color-hover);
         }
 
         #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme .Footernav-disclaimer.is-adChoices .Footernav-disclaimer-link {
-          fill: var(--spectrum-body-text-color, var(--spectrum-alias-text-color));
+          fill: var(--spectrum-body-text-color, var(--spectrum-neutral-content-color-default));
         }
 
         #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme .Footernav-disclaimer.is-adChoices .Footernav-disclaimer-link:hover {
-          fill: var(--spectrum-alias-text-color-hover);
+          fill: var(--spectrum-neutral-content-color-hover);
         }
       `;
 
@@ -45,4 +44,3 @@ window.adobeGlobalnavConfig = {
     }
   }
 }
-</script>

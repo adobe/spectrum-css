@@ -116,40 +116,7 @@ Object.defineProperty(SpectrumSwitcher.prototype, "theme", {
 
 Object.defineProperty(SpectrumSwitcher.prototype, "varsVersion", {
 	set: function (varsVersion) {
-		// default and express path names
-		const defaultName = "vars";
-		const expressName = "expressvars";
-
-		// if the selection is 'default', switch the path to be 'express', and vice-versa
-		const pathNameToUpdate =
-			varsVersion === "default" ? expressName : defaultName;
-
-		// get all relevant stylesheets that need to be switched
-		const styleSheets = document.querySelectorAll(
-			`link[href*="components/${pathNameToUpdate}/"]`
-		);
-
-		// update each relevant stylesheet with the selected path
-		[...styleSheets].map((sheet) => {
-			if (pathNameToUpdate === defaultName) {
-				sheet.setAttribute(
-					"href",
-					sheet.href.replaceAll(defaultName, expressName)
-				);
-			} else {
-				sheet.setAttribute(
-					"href",
-					sheet.href.replaceAll(expressName, defaultName)
-				);
-			}
-		});
-
-		if (varsVersion === "express") {
-			document.documentElement.classList.add("spectrum--express");
-		} else {
-			document.documentElement.classList.remove("spectrum--express");
-		}
-
+		document.documentElement.classList.toggle("spectrum--express", varsVersion === "express");
 		this._varsVersion = varsVersion;
 	},
 	get: function () {

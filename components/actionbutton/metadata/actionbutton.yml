@@ -738,7 +738,7 @@ examples:
   - id: actionbutton-staticwhite
     name: Static White
     markup: |
-      <div style="--spectrum-alias-background-color-default: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; background-color: var(--spectrum-alias-background-color-default); color: var(--spectrum-alias-heading-text-color); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
+      <div style="background-color: var(--spectrum-cssexample-background-color); color: var(--spectrum-cssexample-heading-text-color); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
@@ -771,7 +771,7 @@ examples:
               </button>
             </div>
           </div>
-          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-alias-background-color-default);">
+          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-cssexample-background-color);">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
 
             <div class="spectrum-Examples-itemGroup">
@@ -870,7 +870,7 @@ examples:
   - id: actionbutton-staticblack
     name: Static Black
     markup: |
-      <div style="--spectrum-alias-background-color-default: rgb(181, 209, 211); background-color: var(--spectrum-alias-background-color-default); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
+      <div style="--spectrum-cssexample-background-color: rgb(181, 209, 211); background-color: var(--spectrum-cssexample-background-color); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
@@ -903,7 +903,7 @@ examples:
               </button>
             </div>
           </div>
-          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-alias-background-color-default);">
+          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-cssexample-background-color);">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
 
             <div class="spectrum-Examples-itemGroup">
@@ -1002,7 +1002,7 @@ examples:
   - id: actionbutton-staticwhite-quiet
     name: Static White (quiet)
     markup: |
-      <div style="--spectrum-alias-background-color-default: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; background-color: var(--spectrum-alias-background-color-default); color: var(--spectrum-alias-heading-text-color); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
+      <div style="--spectrum-cssexample-background-color: rgb(15, 121, 125); background-color: var(--spectrum-cssexample-background-color); color: var(--spectrum-cssexample-heading-text-color); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
@@ -1035,7 +1035,7 @@ examples:
               </button>
             </div>
           </div>
-          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-alias-background-color-default)">
+          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-cssexample-background-color)">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
 
             <div class="spectrum-Examples-itemGroup">
@@ -1134,7 +1134,7 @@ examples:
   - id: actionbutton-staticblack-quiet
     name: Static Black (quiet)
     markup: |
-      <div style="--spectrum-alias-background-color-default: rgb(181, 209, 211); background-color: var(--spectrum-alias-background-color-default); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
+      <div style="--spectrum-cssexample-background-color: rgb(181, 209, 211); background-color: var(--spectrum-cssexample-background-color); padding: 15px 20px; border-radius: var(--spectrum-cssexample-border-radius);">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
@@ -1167,7 +1167,7 @@ examples:
               </button>
             </div>
           </div>
-          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-alias-background-color-default)">
+          <div class="spectrum-Examples-item" style="--mod-actionbutton-content-color-default: var(--spectrum-cssexample-background-color)">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Selected</h4>
 
             <div class="spectrum-Examples-itemGroup">

@@ -41,20 +41,13 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
     title #{component.name} - Spectrum CSS
     meta(name="viewport", content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0")
 
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-light.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-dark.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-darkest.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-medium.css')
-    link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/dist/spectrum-large.css')
-
     each dep in deps
       link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/' + dep + '/index-vars.css')
 
     // Include the actual component
     link(rel='stylesheet', type='text/css', href='../index-vars.css')
 
-    link(rel='stylesheet', type='text/css', href='css/site.css')
-    link(rel='stylesheet', type='text/css', href='css/docs.css')
+    link(rel='stylesheet', type='text/css', href='css/index.css')
 
     script(src='js/loadicons/index.js')
     script(src='js/typekit.js')

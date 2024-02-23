@@ -53,23 +53,17 @@ For example, `actionbar` gets its tokens from `vars`, and requires `button`, `ch
 
 ```json
 {
-	"name": "@spectrum-css/actionbar",
-	"peerDependencies": {
-		"@spectrum-css/button": "^2.0.0",
-		"@spectrum-css/checkbox": "^2.0.0",
-		"@spectrum-css/icon": "^2.0.0",
-		"@spectrum-css/popover": "^2.0.0",
-		"@spectrum-css/vars": "^3.0.0-beta.0"
-	},
-	"devDependencies": {
-		"@spectrum-css/button": "^2.0.0",
-		"@spectrum-css/checkbox": "^2.0.0",
-		"@spectrum-css/component-builder": "^1.0.0",
-		"@spectrum-css/icon": "^2.0.0",
-		"@spectrum-css/popover": "^2.0.0",
-		"@spectrum-css/table": "^2.0.0",
-		"@spectrum-css/vars": "^3.0.0-beta.0"
-	}
+  "name": "@spectrum-css/actionbar",
+  "peerDependencies": {
+    "@spectrum-css/button": ">=2",
+    "@spectrum-css/checkbox": ">=2",
+    "@spectrum-css/icon": ">=2",
+    "@spectrum-css/popover": ">=2",
+    "@spectrum-css/tokens": "^>=13"
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder-simple": "^5.0.0"
+  }
 }
 ```
 

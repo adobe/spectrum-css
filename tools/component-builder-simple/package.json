@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "tools/component-builder"
+    "directory": "tools/component-builder-simple"
   },
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
@@ -20,7 +20,6 @@
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^9.1.0",
     "gulp-rename": "^1.4.0",
-    "gulplog": "^2.0.1",
     "postcss": "^8.4.35",
     "postcss-calc": "^9.0.1",
     "postcss-combininator": "^2.0.0",
