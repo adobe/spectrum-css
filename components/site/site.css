@@ -11,24 +11,6 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Site {
-	/* .spectrum-Site */
-	--spectrum-site-header-height: var(--spectrum-component-height-300);
-	--spectrum-site-header-padding: var(--spectrum-component-to-menu-extra-large);
-
-	/* .spectrum-Site-overlay */
-	--spectrum-site-overlay-background-entry-animation-delay: 0ms;
-	--spectrum-site-overlay-background-exit-animation-delay: 0ms;
-	--spectrum-site-overlay-background-entry-animation-duration: var(
-		--spectrum-global-animation-duration-200
-	);
-	--spectrum-site-overlay-background-exit-animation-duration: var(
-		--spectrum-global-animation-duration-200
-	);
-	--spectrum-site-overlay-background-exit-animation-easing: ease-out;
-	--spectrum-site-overlay-background-entry-animation-easing: ease-in;
-}
-
-.spectrum-Site {
 	display: flex;
 	flex-direction: column;
 
@@ -36,22 +18,22 @@ governing permissions and limitations under the License.
 
 	color: var(--spectrum-body-color);
 
-	background-color: var(--spectrum-background-layer-2-color);
+	background-color: var(--spectrum-gray-50);
 }
 
 .spectrum-Site-content {
 	display: flex;
 	flex-direction: row;
-	block-size: 100%; /* 100vh instead? */
-	max-block-size: 100%; /* 100vh instead? */
+	inline-size: 100vw;
+	block-size: 100vh;
 }
 
 .spectrum-Site-header {
 	display: none;
 
 	box-sizing: border-box;
-	block-size: var(--spectrum-site-header-height);
-	padding: var(--spectrum-site-header-padding);
+	block-size: var(--spectrum-component-height-300);
+	padding: var(--spectrum-component-to-menu-extra-large);
 
 	border-block-end-color: var(--spectrum-gray-300);
 	border-block-end-style: solid;
@@ -63,28 +45,20 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-header,
-.spectrum-Site-sideBar {
+.spectrum-Site-sideBar,
+.spectrum-Site-mainContent {
 	color: var(--spectrum-body-color);
-	background-color: var(
-		--spectrum-background-layer-1-color
-	); /* var(--spectrum-gray-75); */
+	background-color: var(--spectrum-gray-75);
 }
 
 .spectrum-Site-sideBar {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 0;
-	flex-shrink: 0;
 
 	max-inline-size: 100%;
 
-	/* padding-block-start: var(--spectrum-spacing-300); */
-
 	transition: none;
-
-	&.is-open .spectrum-Site-sideBarHeader {
-		display: none;
-	}
 }
 
 .spectrum-Site-sideBarHeader {
@@ -94,24 +68,22 @@ governing permissions and limitations under the License.
 	flex-shrink: 0;
 	align-items: center;
 
-	padding: var(--spectrum-spacing-400); /* was: 28px */
-
-	/* alt?: padding: 0 var(--spectrum-spacing-300) var(--spectrum-spacing-300); */
+	padding: var(--spectrum-spacing-400);
 
 	text-decoration: none;
-}
 
-.spectrum-Site-sideBarHeader:focus {
-	outline: none;
+	&:focus {
+		outline: none;
 
-	& h2 {
-		text-decoration: underline;
+		& h2 {
+			text-decoration: underline;
+		}
 	}
 }
 
 .spectrum-Site-search {
-	padding: 0 var(--spectrum-spacing-300) var(--spectrum-spacing-300)
-		var(--spectrum-spacing-300);
+	padding: var(--spectrum-spacing-300);
+	padding-block-start: 0;
 }
 
 .spectrum-Site-searchResults {
@@ -126,84 +98,47 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-noSearchResults {
-	padding: var(--spectrum-spacing-400) var(--spectrum-spacing-400)
-		var(--spectrum-spacing-400);
+	padding: var(--spectrum-spacing-400);
 }
 
 .spectrum-Site-logo {
 	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
-	--spectrum-icon-size: 200px;
-
+	--spectrum-icon-size: 32px;
+	--mod-icon-color: #fa0f00;
 	margin-inline-end: var(--spectrum-spacing-200);
-	color: #fa0f00;
-	fill: currentColor;
-}
 
-.spectrum--medium {
-	.spectrum-Site-logo {
-		block-size: 32px;
-	}
-}
-
-.spectrum--large {
-	.spectrum-Site-logo {
-		block-size: 40px;
+	.spectrum--large & {
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
+		--spectrum-icon-size: 40px;
 	}
 }
 
 .spectrum-Site-nav {
 	flex-grow: 1;
-	padding: 0 var(--spectrum-global-dimension-static-size-300)
-		var(--spectrum-global-dimension-static-size-500);
+	padding: 0 var(--spectrum-spacing-400) var(--spectrum-spacing-600);
 }
 
 .spectrum-Site-bottomNav {
-	margin-block-start: var(--spectrum-global-dimension-static-size-1000);
+	margin-block-start: var(--spectrum-spacing-900);
 }
 
 .spectrum-Site-page {
 	box-sizing: border-box;
-	padding: 40px 52px 24px;
+	padding: var(--spectrum-spacing-600) 52px var(--spectrum-spacing-400);
 }
 
 .spectrum-Site-page,
-.spectrum-Site-mainContainer,
 .spectrum-Site-hero {
 	inline-size: min(1080px, 100%);
 	margin: auto;
 }
 
-.spectrum-Site-mainContainer {
-	padding-block-start: 200px;
-	background-color: var(--spectrum-background-layer-2-color);
-}
-
-.spectrum-Site-mainContainerContent {
-	inline-size: min(1080px, 100%);
-	margin-inline: auto;
-}
-
-.spectrum-Site-mainContainerAside {
-	--site-sticky-top: var(
-		--site-scroll-offset,
-		var(--spectrum-csscomponent-margin)
-	);
-
-	display: none;
-	inline-size: var(--site-sidenav-width);
-
-	& > div {
-		padding-inline-start: var(--spectrum-spacing-100);
-		border-inline-start: 1px solid var(--spectrum-gray-200);
-	}
-}
-
 .spectrum-Site-heroHeading {
-	margin-block-end: 16px;
-}
+	margin-block-end: var(--spectrum-spacing-300);
 
-.spectrum-Site-heroHeading .spectrum-Heading {
-	margin-block-start: 0 !important;
+	& .spectrum-Heading {
+		margin-block-start: 0 !important;
+	}
 }
 
 .spectrum-Site-heroImage {
@@ -215,20 +150,19 @@ governing permissions and limitations under the License.
 	margin-inline-start: auto;
 	margin-inline-end: auto;
 
-	border-radius: var(--spectrum-alias-border-radius-regular);
+	border-radius: 4px;
 }
 
 .spectrum-Site-mainContent {
-	overflow-y: auto;
-	flex-grow: 1;
-	border-block: none;
+  overflow-y: auto;
+  flex-grow: 1;
+  border-block: none;
 }
 
 .spectrum-Site-footerContainer {
-	/* grid-area: footer; */
-	max-inline-size: var(--spectrum-csscomponent-max-width);
-	margin: var(--spectrum-csscomponent-margin) auto;
-	padding: 0 var(--spectrum-csscomponent-padding);
+  inline-size: min(1080px, 100%);
+  margin: var(--spectrum-spacing-400) auto;
+  padding: 0 var(--spectrum-spacing-600);
 }
 
 /* Kill the overlay without animating when the page is resized */
@@ -248,87 +182,49 @@ governing permissions and limitations under the License.
 	display: none;
 
 	opacity: 0%;
-	background-color: rgba(0, 0, 0, 20%);
+	background-color: var(--spectrum-transparent-black-300);
 }
 
-.spectrum-Site-gallery {
+.spectrum-HomeCards {
 	display: grid;
 	grid-gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 	margin: var(--spectrum-spacing-700) 0;
-
-	/* Prevent the card from looking clickable */
-	/* @note this required specificity is why we can't override mods in a component's stylesheet */
-	.spectrum-Card.spectrum-Card--quiet {
-		--mod-card-background-color-hover: var(
-			--spectrum-card-background-color-quiet,
-			var(--spectrum-background-base-color)
-		);
-	}
-
-	&:last-child {
-		margin-block-end: 0;
-	}
-
-	.spectrum-Card-body {
-		flex-shrink: 1;
-	}
-
-	.spectrum-Card-content {
-		display: inline;
-	}
-
-	.spectrum-Icon {
-		--spectrum-icon-size-xxl: 100px;
-		color: #b3b3b3;
-	}
-}
-
-.spectrum-HomeCards {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  margin: var(--spectrum-spacing-700) 0;
 }
 
 .spectrum-HomeCard {
-  display: flex;
-  align-items: flex-start;
-  margin-block-end: var(--spectrum-spacing-300);
-  padding: 0 var(--spectrum-spacing-250);
+	display: flex;
+	align-items: flex-start;
+	margin-block-end: var(--spectrum-spacing-300);
+	padding: 0 var(--spectrum-spacing-200);
 }
 
 .spectrum-HomeCard-image {
-  flex: 0 0 auto;
-  inline-size: var(--spectrum-spacing-1250);
-  margin-inline-end: var(--spectrum-spacing-250);
+	flex: 0 0 auto;
+	inline-size: var(--spectrum-spacing-1000);
+	margin-inline-end: 20px;
 
-  & .spectrum-Icon {
-    /* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
-    --spectrum-icon-size: 200px;
-  }
+	& .spectrum-Icon {
+		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
+		--spectrum-icon-size: 200px;
+	}
 }
 
 .spectrum-HomeCard-content {
-  flex: 1 1 auto;
+	flex: 1 1 auto;
 }
 
 @media screen and (width <= 960px) {
-	.spectrum-Site {
-		--spectrum-csscomponent-margin: var(--spectrum-spacing-100);
-	}
-
 	.spectrum-Site-content {
 		/* fix: header scrolls off */
-		max-block-size: calc(100% - 48px);
+		max-block-size: calc(100% - var(--spectrum-spacing-700));
 	}
 
 	.spectrum-Site-overlay {
 		opacity: 0%;
 
 		/* Exit animations */
-		transition: opacity var(--spectrum-global-animation-duration-200) ease-out
-			0ms;
+		transition: opacity var(--spectrum-animation-duration-200) ease-out 0ms;
 
 		&.is-open {
 			pointer-events: auto;
@@ -336,8 +232,7 @@ governing permissions and limitations under the License.
 			opacity: 100%;
 
 			/* Entry animations */
-			transition: opacity var(--spectrum-global-animation-duration-200) ease-in
-				0ms;
+			transition: opacity var(--spectrum-animation-duration-200) ease-in 0ms;
 		}
 	}
 
@@ -349,6 +244,8 @@ governing permissions and limitations under the License.
 		inset-inline-end: 100%;
 		transform: translateX(0);
 
+		block-size: 100vh;
+
 		transition: transform var(--spectrum-animation-duration-200) ease-in-out;
 
 		&.is-open {
@@ -358,15 +255,6 @@ governing permissions and limitations under the License.
 
 	.spectrum-Site-header {
 		display: block;
-
-		/* position: sticky;
-		z-index: 99;
-		inset-block-start: 0;
-
-		display: flex;
-		flex-flow: row nowrap;
-		align-items: center;
-		justify-content: space-between; */
 	}
 
 	.spectrum-Site-page {

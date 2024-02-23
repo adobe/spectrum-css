@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 
 /* CSS Component */
 .spectrum-CSSComponent {
+    box-sizing: border-box;
     inline-size: min(1080px, 100%);
     margin: var(--spectrum-spacing-600) auto;
     padding: 0 56px;
@@ -42,14 +43,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSComponent-statusContainer {
-    /* align-self: center;
-  margin: 0 var(--spectrum-spacing-300);
-  vertical-align: bottom; */
-
     display: flex;
     flex-flow: row nowrap;
     flex-grow: 1;
     gap: 80px;
+    align-self: center;
 
     > * {
         flex-basis: min(370px, 50%);
@@ -64,7 +62,7 @@ governing permissions and limitations under the License.
     & th {
         block-size: var(--spectrum-spacing-300);
         padding-inline-end: var(--spectrum-spacing-400);
-        font-weight: var(--spectrum-global-font-weight-regular);
+        font-weight: var(--spectrum-regular-font-weight);
         text-align: start;
     }
 }
@@ -101,7 +99,7 @@ governing permissions and limitations under the License.
 /* cards */
 .spectrum-CSSComponent-resources {
     display: flex;
-    flex-direction: row; /* alt?: column */
+    flex-direction: row;
     flex-wrap: wrap;
     margin-block-end: var(--spectrum-spacing-500);
 
@@ -115,20 +113,14 @@ governing permissions and limitations under the License.
 .spectrum-CSSComponent-resources
 a[href*="spectrum.adobe.com"]
 .spectrum-Card-preview {
-    color: #fa0f00 !important;
-    background-color: var(--spectrum-global-color-gray-100) !important;
+    color: rgb(250, 15, 0);
+    background-color: var(--spectrum-gray-100);
 }
 
 .spectrum-CSSComponent-resource--github,
 .spectrum-CSSComponent-resources a[href*="github.com"] .spectrum-Card-preview {
-    color: black;
-    background-color: rgba(0, 0, 0, 10%);
-
-    .spectrum--dark &,
-    .spectrum--darkest & {
-        color: rgb(245, 245, 245);
-        background-color: rgba(245, 245, 245, 10%);
-    }
+    color: var(--spectrum-black);
+    background-color: var(--spectrum-transparent-black-200);
 }
 
 .spectrum-CSSComponent-resource--npm,
@@ -141,29 +133,15 @@ a[href*="spectrum.adobe.com"]
 }
 
 .spectrum-CSSComponent-switcher {
-    /* position: sticky;
-	z-index: 98;
-	inset-block-start: 0; */
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--spectrum-spacing-500);
     justify-content: flex-end;
-
-    /* box-sizing: border-box;
-	inline-size: min(1080px, 100%);
-	margin-block: var(--spectrum-spacing-600) 0;
-	margin-inline: auto;
-	padding: 0 56px;
-
-	color: var(--spectrum-body-color);
-
-	background-color: var(--spectrum-background-layer-2-color); */
 }
 
 .spectrum-CSS-switcherContainer {
-    /* margin-inline-start: var(--spectrum-spacing-400); */
+    margin-inline-start: var(--spectrum-spacing-300);
     white-space: nowrap;
 }
 
@@ -176,7 +154,7 @@ a[href*="spectrum.adobe.com"]
     position: relative;
     display: flex;
     flex-direction: column;
-    border-radius: var(--spectrum-cssexample-border-radius, 4px);
+    border-radius: var(--spectrum-corner-radius-100);
 }
 
 .spectrum-CSSExample-heading {
@@ -192,23 +170,16 @@ a[href*="spectrum.adobe.com"]
 }
 
 :root {
-    --spectrum-docs-static-white-background-color: rgb(15, 121, 125);
-    --spectrum-docs-static-black-background-color: rgb(206, 247, 243);
+    --spectrum-docs-static-white-background-color: var(--spectrum-seafoam-900);
+    --spectrum-docs-static-black-background-color: var(--spectrum-seafoam-100);
 }
 
 .spectrum-CSSExample-example {
     flex: 1 0 auto;
-
-    /* this breaks layout for some examples, we'll need to fix later
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  */
-
     min-block-size: 0;
     padding: var(--spectrum-spacing-500) var(--spectrum-spacing-600);
-    border-radius: var(--spectrum-cssexample-border-radius, 4px)
-        var(--spectrum-cssexample-border-radius, 4px) 0 0;
+    border-radius: var(--spectrum-corner-radius-100)
+        var(--spectrum-corner-radius-100) 0 0;
 
     &:has(> .spectrum-CSSExample-example-staticWhite) {
         background-color: var(--spectrum-docs-static-white-background-color);
@@ -230,8 +201,7 @@ a[href*="spectrum.adobe.com"]
     max-block-size: 192px;
     padding: 10px 18px;
 
-    border-radius: 0 0 var(--spectrum-cssexample-border-radius, 4px)
-        var(--spectrum-cssexample-border-radius, 4px);
+    border-radius: 0 0 var(--spectrum-corner-radius-100) var(--spectrum-corner-radius-100);
 
     &.is-open {
         max-block-size: 100%;
@@ -272,11 +242,12 @@ a[href*="spectrum.adobe.com"]
     transition: none;
 }
 
-.spectrum-Examples {
+.spectrum-Examples,
+.spectrum-Examples-itemGroup {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: var(--spectrum-spacing-100);
     justify-content: space-between;
 }
 
@@ -284,21 +255,8 @@ a[href*="spectrum.adobe.com"]
     flex-direction: column;
 }
 
-/* .spectrum-Examples-item {
-  margin-bottom: var(--spectrum-spacing-200);
-}
-*/
-
 .spectrum-Examples-item .spectrum-Examples-itemHeading {
     margin-block-end: var(--spectrum-spacing-100);
-}
-
-.spectrum-Examples-itemGroup {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 6px;
-    justify-content: space-between;
 }
 
 .spectrum-Button.spectrum-CSSExample-overlayShowButton {
@@ -320,45 +278,43 @@ a[href*="spectrum.adobe.com"]
     inset-inline-end: 0;
 
     box-sizing: border-box;
-    padding: var(--spectrum-spacing-400)
-        var(--spectrum-spacing-400);
+    padding: var(--spectrum-spacing-400);
 
-    font-size: var(--spectrum-global-dimension-font-size-150);
+    font-size: var(--spectrum-font-size-50);
     text-align: start;
 }
 
 .spectrum-CenteredImage {
     display: block;
-    inline-size: 100%;
-    max-inline-size: 720px;
+    inline-size: max(720px, 100%);
     margin: auto;
 }
 
 .spectrum-CodeBlock {
-    margin: var(--spectrum-spacing-250) 0;
-    padding: var(--spectrum-spacing-175) var(--spectrum-spacing-200);
+    margin: var(--spectrum-spacing-200) 0;
+    padding: var(--spectrum-spacing-100) var(--spectrum-spacing-200);
 
     border-style: solid;
-    border-width: var(--spectrum-alias-border-size-thin);
+    border-width: var(--spectrum-border-width-100);
     border-radius: var(--spectrum-spacing-50);
 }
 
 /* CSS Example */
 .spectrum-CSSExample-example {
     background-color: var(
-        --spectrum-alias-background-color-default,
-        var(--spectrum-global-color-gray-100)
+        --spectrum-background-base-color,
+        var(--spectrum-gray-50)
     );
 }
 
 .spectrum-CSSExample-markup {
-    background: var(--spectrum-gray-75);
+    background-color: var(--spectrum-gray-75);
     border-block-start: 1px solid var(--spectrum-gray-100);
 }
 
 .spectrum-CSSExample-markupToggle {
     z-index: 1;
-    background: var(--spectrum-gray-75);
+    background-color: var(--spectrum-gray-75);
 }
 
 .spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle {
@@ -366,17 +322,17 @@ a[href*="spectrum.adobe.com"]
 }
 
 .spectrum-CSSExample-example--overlay {
-    color: rgba(0, 0, 0, 40%);
-    background: rgba(0, 0, 0, 40%);
+    color: var(--spectrum-transparent-black-400);
+    background-color: var(--spectrum-transparent-black-400);
 }
 
 .spectrum-CSSExample-oldAPI {
-    color: var(--spectrum-semantic-negative-text-color-small);
+    color: var(--spectrum-negative-color-800);
 }
 
 .spectrum-CodeBlock {
-    background-color: var(--spectrum-global-color-gray-75);
-    border-color: var(--spectrum-global-color-gray-400);
+    background-color: var(--spectrum-gray-75);
+    border-color: var(--spectrum-gray-400);
 }
 
 @media screen and (width <= 960px) {
@@ -387,7 +343,7 @@ a[href*="spectrum.adobe.com"]
     }
 
     .spectrum-CSSComponent-description {
-        margin-block-end: var(--spectrum-spacing-150);
+        margin-block-end: var(--spectrum-spacing-200);
     }
 
     .spectrum-CSSExample {
@@ -395,11 +351,11 @@ a[href*="spectrum.adobe.com"]
     }
 
     .spectrum-CSSExample-example {
-        padding: var(--spectrum-spacing-200) var(--spectrum-spacing-200);
+        padding: var(--spectrum-spacing-200);
     }
 
     .spectrum-CSSComponent-header {
-        margin-block-end: var(--spectrum-spacing-150);
+        margin-block-end: var(--spectrum-spacing-200);
     }
 
     .spectrum-CSSComponent-statusContainer,
