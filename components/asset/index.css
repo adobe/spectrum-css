@@ -28,29 +28,46 @@ governing permissions and limitations under the License.
 
 .spectrum-Asset-folder,
 .spectrum-Asset-file {
-  inline-size: 100%;
-  min-inline-size: 48px;
-  max-inline-size: 80px;
+  inline-size: clamp(
+    var(--mod-asset-icon-min-width, 48px),
+    100%,
+    var(--mod-asset-icon-max-width, 80px)
+  );
   block-size: 100%;
-  margin: 20px;
+  margin: var(--mod-asset-icon-margin, 20px);
 }
 
 .spectrum-Asset-folderBackground {
-  fill: var(--highcontrast-asset-folder-background-color, var(--spectrum-asset-folder-background-color, var(--spectrum-gray-300)));
+  fill: var(
+    --highcontrast-asset-folder-background-color,
+    var(
+      --mod-asset-folder-background-color,
+      var(--spectrum-gray-300)
+    )
+  );
 }
 
 .spectrum-Asset-fileBackground {
-  fill: var(--highcontrast-asset-file-background-color, var(--spectrum-asset-file-background-color, var(--spectrum-gray-50)));
+  fill: var(
+    --highcontrast-asset-file-background-color,
+    var(
+      --mod-asset-file-background-color,
+      var(--spectrum-gray-50)
+    )
+  );
 }
 
 .spectrum-Asset-folderOutline,
 .spectrum-Asset-fileOutline {
-  fill: var(--spectrum-asset-icon-outline-color, var(--spectrum-gray-500));
+  fill: var(
+    --mod-asset-icon-outline-color,
+    var(--spectrum-gray-500)
+  );
 }
 
 @media (forced-colors: active) {
-	.spectrum-Asset {
+  .spectrum-Asset {
     --highcontrast-asset-folder-background-color: currentColor;
     --highcontrast-asset-file-background-color: currentColor;
-  	}
+  }
 }

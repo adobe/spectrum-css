@@ -1,13 +1,20 @@
-// Import the component markup template
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
+
 import { Template } from "./template";
 
+/**
+ * Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.
+*/
 export default {
 	title: "Components/Asset",
-	description:
-		"Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.",
 	component: "Asset",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },
+		scale: {
+			name: "Platform scale",
+			if: { arg: "preset", neq: "image" }
+		},
 		preset: {
 			name: "Preset asset types",
 			type: { name: "string" },
@@ -15,7 +22,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["folder", "file"],
+			options: ["folder", "file", "image"],
 			control: "select",
 		},
 		image: {
@@ -26,33 +33,41 @@ export default {
 				category: "Component",
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "preset", eq: "image" }
 		},
 	},
 	args: {
 		rootClass: "spectrum-Asset",
+		preset: "image",
+		image: "example-ava.png",
 	},
 	parameters: {
 		status: {
 			type: process.env.MIGRATED_PACKAGES.includes("asset")
 				? "migrated"
-				: undefined,
+				: "legacy",
 		},
 	},
 };
 
-export const SymbolicAsset = Template.bind({});
-SymbolicAsset.argTypes = {
-	image: { table: { disable: true } },
-};
-SymbolicAsset.args = {
-	preset: "folder",
-};
+const AssetGroup = (args) => html`
+	${window.isChromatic() ? html`
+		<div style=${styleMap({
+			display: "grid",
+			gridTemplateColumns: "repeat(3, 200px)",
+			gap: "8px"
+		})}>
+			${Template(args)}
+			${Template({
+				...args,
+				preset: "file",
+			})}
+			${Template({
+				...args,
+				preset: "folder",
+			})}
+		</div>
+	` : Template(args)}
+`;
 
-export const ImageAsset = Template.bind({});
-ImageAsset.argTypes = {
-	preset: { table: { disable: true } },
-	scale: { table: { disable: true } },
-};
-ImageAsset.args = {
-	image: "example-ava.png",
-};
+export const Default = AssetGroup.bind({});
