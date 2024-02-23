@@ -176,7 +176,7 @@ examples:
 
   - id: textfield-grow
     name: TextArea with Grow Behavior
-    description: Use `spectrum-Textfield--grows` to disable the drag behavior along with appropriate JavaScript to enable a text area that grows with input.
+    description: Use `spectrum-Textfield--grows` to disable the drag behavior along with appropriate JavaScript to enable the height of the text area to <a href="https://spectrum.adobe.com/page/text-area/#Height">grow with input</a>.
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--grows">
         <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
@@ -185,7 +185,7 @@ examples:
 
   - id: textfield-quiet
     name: Quiet
-    description: Text areas should rarely be presented in the quiet style. When used, quiet text areas should use Javascript to enable a text area that grows with input.
+    description: Text areas should rarely be presented in the quiet style. When used, quiet text areas should use JavaScript to enable the height of the text area to <a href="https://spectrum.adobe.com/page/text-area/#Quiet">grow with input</a>.
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
         <label for="textarea-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Comments</label>
