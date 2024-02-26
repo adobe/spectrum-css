@@ -21,25 +21,12 @@ const subrunner = require("../subrunner");
 const bundleBuilder = require("../index.js");
 
 function serve() {
-	let PORT = 3000;
-
-	if (process.env.BROWSERSYNC_PORT) {
-		PORT = process.env.BROWSERSYNC_PORT;
-		logger.info(
-			`Setting '${PORT} as port for browsersync, which hopefully is valid`
-		);
-	}
-
-	if (process.env.BROWSERSYNC_OPEN === "true") {
-		logger.info("New browser instance will open");
-	}
-
-	browserSync({
+	return browserSync({
 		startPath: "index.html",
 		server: `${process.cwd()}/dist/`,
 		notify: process.env.BROWSERSYNC_NOTIFY === "true" ? true : false,
 		open: process.env.BROWSERSYNC_OPEN === "true" ? true : false,
-		port: PORT,
+		port: process.env.BROWSERSYNC_PORT ?? 3000,
 	});
 }
 
@@ -58,7 +45,7 @@ function getPackageFromPath(filePath) {
 function watchWithinPackages(glob, task, files) {
 	logger.debug(`Watching ${glob}, will run ${task} and stream ${files}`);
 
-	let watcher = gulp.watch(
+	const watcher = gulp.watch(
 		glob,
 		{
 			// Otherwise we get infinite loops because chokidar gets all crazy with symlinked deps
@@ -117,19 +104,13 @@ function watchWithinPackages(glob, task, files) {
 
 	let changedFile = null;
 	watcher.on("change", (filePath) => {
-		logger.debug(`Got change for ${filePath}`);
-
-		if (changedFile === null) {
-			changedFile = filePath;
-		}
+		if (changedFile === null) changedFile = filePath;
 	});
 }
 
 function reload(cb) {
 	browserSync.reload();
-	if (cb) {
-		cb();
-	}
+	if (cb) cb();
 }
 
 function watchSite() {

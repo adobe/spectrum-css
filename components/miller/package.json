@@ -20,6 +20,9 @@
     "@spectrum-css/icon": ">=4",
     "@spectrum-css/tokens": ">=13"
   },
+  "devDependencies": {
+    "@spectrum-css/component-builder-simple": "^5.0.3"
+  },
   "publishConfig": {
     "access": "public"
   }

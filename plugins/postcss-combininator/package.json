@@ -12,6 +12,9 @@
   "dependencies": {
     "postcss": "^8.4.35"
   },
+  "devDependencies": {
+    "ava": "^6.1.0"
+  },
   "publishConfig": {
     "access": "public"
   }

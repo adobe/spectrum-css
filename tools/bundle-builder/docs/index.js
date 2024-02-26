@@ -81,7 +81,8 @@ async function buildDocs_forDep(dep) {
 
 	// If a dirName was not found, try the deprecated folder instead
 	if (!dirName || dirName.split(path.sep).includes("node_modules")) {
-		dirName = path.join(dirs.topLevel, ".storybook", "deprecated", dep);
+		const storybookPath = require.resolve("@spectrum-css/preview");
+		dirName = path.join(storybookPath, "deprecated", dep);
 
 		if (!fs.existsSync(dirName)) return;
 	}
@@ -205,10 +206,11 @@ async function buildDocs_individualPackages() {
 }
 
 function buildSite_generateIndex() {
+	const storybookPath = require.resolve("@spectrum-css/preview");
 	return gulp
 		.src([
 			`${dirs.components}/*/metadata/*.yml`,
-			`${dirs.topLevel}/.storybook/deprecated/*/*.yml`,
+			`${storybookPath}/deprecated/*/*.yml`,
 		])
 		.pipe(
 			(function () {
@@ -276,11 +278,12 @@ function buildSite_generateIndex() {
 }
 
 function buildSite_getData() {
+	const storybookPath = require.resolve("@spectrum-css/preview");
 	let nav = [];
 	return gulp
 		.src([
 			`${dirs.components}/*/metadata/*.yml`,
-			`${dirs.topLevel}/.storybook/deprecated/*/*.yml`,
+			`${storybookPath}/deprecated/*/*.yml`,
 		])
 		.pipe(
 			through.obj(function readYML(file, _, cb) {

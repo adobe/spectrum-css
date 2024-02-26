@@ -21,12 +21,15 @@
     "@spectrum-css/tokens": ">=13"
   },
   "peerDependenciesMeta": {
-    "@spectrum-css/colorloupe": {
-      "optional": true
-    },
     "@spectrum-css/colorarea": {
       "optional": true
+    },
+    "@spectrum-css/colorloupe": {
+      "optional": true
     }
+  },
+  "devDependencies": {
+    "@spectrum-css/component-builder-simple": "^5.0.3"
   },
   "publishConfig": {
     "access": "public"
