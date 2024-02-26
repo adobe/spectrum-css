@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.1.2...@spectrum-css/asset@4.0.0)
+
+\*refactor(asset)!: migrate to tokens package (#2553)([03f693b](https://github.com/adobe/spectrum-css/commit/03f693b)), closes[#2553](https://github.com/adobe/spectrum-css/issues/2553)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		migrates to use spectrum-tokens
+
+- refactor(asset): migrate to tokens package
+- chore: add mods values for customization
+
 <a name="3.1.2"></a>
 ##3.1.2
 🗓

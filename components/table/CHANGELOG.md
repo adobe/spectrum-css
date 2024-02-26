@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.2.4"></a>
+##5.2.4
+🗓
+2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@5.2.3...@spectrum-css/table@5.2.4)
+
+**Note:** Version bump only for package @spectrum-css/table
+
 <a name="5.2.3"></a>
 ##5.2.3
 🗓

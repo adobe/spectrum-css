@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.1.24"></a>
+##9.1.24
+🗓
+2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.23...@spectrum-css/toast@9.1.24)
+
+**Note:** Version bump only for package @spectrum-css/toast
+
 <a name="9.1.23"></a>
 ##9.1.23
 🗓

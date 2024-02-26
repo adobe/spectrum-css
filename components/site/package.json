@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/site",
-  "version": "4.2.2",
+  "version": "4.2.3",
   "description": "The Spectrum CSS Site component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,7 +18,7 @@
     "@spectrum-css/vars": ">=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^7.0.0"
+    "@spectrum-css/component-builder": "^7.0.2"
   },
   "publishConfig": {
     "access": "public"
