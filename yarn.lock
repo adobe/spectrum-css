@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@0no-co/graphql.web/-/graphql.web-1.0.4.tgz#9606eb651955499525d068ce0ad8bea596286ce2"
   integrity sha512-W3ezhHGfO0MS1PtGloaTpg0PbaT8aZSmmaerL7idtU5F7oCI+uu25k+MsMS31BVFlp4aMkHSrNRxiD72IlK8TA==
 
-"@actions/artifact@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@actions/artifact/-/artifact-2.1.1.tgz#b2bffae42744f0106eeb4a16264a6897abc1f1f4"
-  integrity sha512-xVVwWhrRb4YLiTeYkNxctv9IhwIKUsLwIhqD9CKknXtQaqIksq5HttFN8wXQvMrpjQO4zGJf5xLUs6mKyfN4yQ==
+"@actions/artifact@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@actions/artifact/-/artifact-2.1.3.tgz#d5d92ab94eef32e1e09b0ffe4407755c494acdbc"
+  integrity sha512-ovuxwbMn0aX8zeQ2ORiZZ0KQYhWwW4NuTCBie530rvxUqaq/83XpqWl1/tHONJuVkck46lfShxjfxhLywTKwyg==
   dependencies:
     "@actions/core" "^1.10.0"
     "@actions/github" "^5.1.1"
