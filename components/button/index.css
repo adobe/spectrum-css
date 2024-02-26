@@ -24,6 +24,8 @@ governing permissions and limitations under the License.
   --spectrum-button-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-50);
+
+  --mod-progress-circle-position: absolute;
 }
 
 .spectrum-Button--sizeS {
@@ -60,11 +62,6 @@ governing permissions and limitations under the License.
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
   --spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-100);
-
-  &[pending],
-  &.is-pending {
-    --mod-button-edge-to-visual-only: calc(1px + var(--spectrum-button-edge-to-visual-only));
-  }
 }
 
 .spectrum-Button--sizeL {
@@ -83,11 +80,6 @@ governing permissions and limitations under the License.
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-large);
   --spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-200);
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-200);
-
-  &[pending],
-  &.is-pending {
-    --mod-button-edge-to-visual-only: calc(2px + var(--spectrum-button-edge-to-visual-only));
-  }
 }
 
 .spectrum-Button--sizeXL {
@@ -106,16 +98,6 @@ governing permissions and limitations under the License.
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-extra-large);
   --spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-300);
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-300);
-
-  .spectrum--medium &[pending],
-  .spectrum--medium &.is-pending {
-    --mod-button-edge-to-visual-only: calc(3px + var(--spectrum-button-edge-to-visual-only));
-  }
-
-  .spectrum--large &[pending],
-  .spectrum--large &.is-pending {
-    --mod-button-edge-to-visual-only: calc(4px + var(--spectrum-button-edge-to-visual-only));
-  }
 }
 
 .spectrum-Button {
@@ -151,13 +133,13 @@ governing permissions and limitations under the License.
     /* Any block-size difference between the intended workflow icon size and actual icon used.
        Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
     --_icon-size-difference: max(0px,
-      var(--spectrum-button-intended-icon-size) - 
+      var(--spectrum-button-intended-icon-size) -
       var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size))
     );
 
     margin-block-start: var(--mod-button-icon-margin-block-start,
       max(0px,
-        var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) - 
+        var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) -
         var(--mod-button-border-width, var(--spectrum-button-border-width)) +
         (var(--_icon-size-difference, 0px) / 2)
       )
@@ -254,6 +236,9 @@ a.spectrum-Button {
   background-color: var(--highcontrast-button-background-color-default, var(--mod-button-background-color-default, var(--spectrum-button-background-color-default)));
   border-color: var(--highcontrast-button-border-color-default, var(--mod-button-border-color-default, var(--spectrum-button-border-color-default)));
   color: var(--highcontrast-button-content-color-default, var(--mod-button-content-color-default, var(--spectrum-button-content-color-default)));
+  transition: border var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
+              color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
+              background-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear;
 
   &:hover {
     background-color: var(--highcontrast-button-background-color-hover, var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover)));
@@ -282,13 +267,36 @@ a.spectrum-Button {
     color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
   }
 
+  .spectrum-Icon,
+  .spectrum-Button-label {
+    visibility: visible;
+    opacity: 100%;
+    transition: opacity var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) ease-in-out;
+  }
+
+  .spectrum-ProgressCircle {
+    visibility: hidden;
+    opacity: 0%;
+    transition: opacity var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) ease-in-out,
+                visibility 0ms linear var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms));
+  }
+
   &[pending],
   &.is-pending {
     cursor: default;
 
     .spectrum-Icon,
     .spectrum-Button-label {
-      display: none;
+      visibility: hidden;
+      opacity: 0%;
+      transition: opacity var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) ease-in-out,
+                  visibility 0ms linear var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms));
+    }
+
+    .spectrum-ProgressCircle {
+      visibility: visible;
+      opacity: 100%;
+      transition: opacity var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) ease-in-out;
     }
   }
 }

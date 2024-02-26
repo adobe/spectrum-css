@@ -74,11 +74,15 @@ export default {
 			name: "Pending",
 			type: { name: "boolean" },
 			table: {
-				type: { summary: "boolean" },
-				category: "State",
+				disable: true
 			},
-			control: "boolean",
-			if: { arg: "staticColor", neq: "black" }
+		},
+		isPendingStory: {
+			name: "Pending story",
+			type: { name: "boolean" },
+			table: {
+				disable: true,
+			},
 		},
 		staticColor: {
 			name: "Static color",
@@ -87,9 +91,11 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Advanced",
+
 			},
 			options: ["white", "black"],
 			control: "select",
+			if: { arg: "isPendingStory", truthy: false },
 		},
 		showIconOnlyButton: {
 			table: {
@@ -100,7 +106,7 @@ export default {
 		    name: "Layout",
 		    description: "How the buttons align in the preview (Storybook only).",
 		    type: { name: "string" },
-			table: { 
+			table: {
 			    type: { summary: "string" },
 			    category: "Advanced"
 			},
@@ -194,12 +200,21 @@ const CustomButton = ({
 const PendingButton = ({
 	staticColor,
 	customStyles = {},
+	layout,
 	...args
 }) => html`
+	${when(!window.isChromatic(), () =>
+		Typography({
+			semantics: "heading",
+			size: "xs",
+			content: ["Press any button to show the pending state on all buttons. Press again to remove the pending states."],
+		})
+	)}
 	<div style=${styleMap({
 		display: "flex",
 		flexDirection: "column",
 		gap: ".3rem",
+		marginTop: "1rem"
 	})}>
 		<div>
 			${Typography({
@@ -209,6 +224,25 @@ const PendingButton = ({
 			})}
 			${CustomButton({
 				...args,
+			})}
+			${ButtonWrap(layout = "stacked", Template({
+				...args,
+				staticColor,
+				label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+			}))}
+			${when(window.isChromatic(), () => {
+				return html`
+					${CustomButton({
+						...args,
+						isPending: true,
+					})}
+
+					${ButtonWrap(layout = "stacked", Template({
+						...args,
+						label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+						isPending: true,
+					}))}
+				`;
 			})}
 		</div>
 		<div>
@@ -220,6 +254,42 @@ const PendingButton = ({
 			${CustomButton({
 				...args,
 				staticColor: "white",
+			})}
+			<div
+				style=${ifDefined(styleMap({
+					padding: "1rem",
+					backgroundColor: "rgb(15, 121, 125)",
+					...customStyles
+				}))}
+			>
+				${ButtonWrap(layout = "stacked", Template({
+					...args,
+					staticColor: "white",
+					label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+				}))}
+			</div>
+			${when(window.isChromatic(), () => {
+				return html`
+					${CustomButton({
+						...args,
+						staticColor: "white",
+						isPending: true,
+					})}
+					<div
+						style=${ifDefined(styleMap({
+							padding: "1rem",
+							backgroundColor: "rgb(15, 121, 125)",
+							...customStyles
+						}))}
+					>
+						${ButtonWrap(layout = "stacked", Template({
+							...args,
+							staticColor: "white",
+							label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+							isPending: true,
+						}))}
+					</div>
+				`;
 			})}
 		</div>
 	</div>
@@ -330,8 +400,7 @@ Disabled.args = {
 
 export const Pending = PendingButton.bind({});
 Pending.args = {
-	isDisabled: true,
-	isPending: true,
+	isPendingStory: true,
 };
 
 export const WithForcedColors = ButtonsWithForcedColors.bind({});
