@@ -40,27 +40,25 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldLabel--sizeL {
-  --spectrum-fieldlabel-min-height: var(--spectrum-component-height-100);
-  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-100);
-  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-fieldlabel-min-height: var(--spectrum-component-height-200);
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
   --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-large);
 
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-200);
 
   --spectrum-fieldlabel-side-margin-block-start: var(--spectrum-field-label-top-margin-large);
-  --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
 }
 
 .spectrum-FieldLabel--sizeXL {
-  --spectrum-fieldlabel-min-height: var(--spectrum-component-height-200);
-  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-200);
-  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+  --spectrum-fieldlabel-min-height: var(--spectrum-component-height-300);
+  --spectrum-fieldlabel-top-to-text: var(--spectrum-component-top-to-text-300);
+  --spectrum-fieldlabel-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
   --spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-extra-large);
 
   --spectrum-fieldlabel-font-size: var(--spectrum-font-size-300);
 
   --spectrum-fieldlabel-side-margin-block-start: var(--spectrum-field-label-top-margin-extra-large);
-  --spectrum-fieldlabel-side-padding-right: var(--spectrum-spacing-200);
 }
 
 .spectrum-FieldLabel {
