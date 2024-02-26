@@ -9,6 +9,7 @@ sections:
       ### x/x/2024 - Version 8.0.0
       #### Spectrum 2 release
       Field label now uses Spectrum 2 tokens and specifications. The medium size styles are used by default, so the `spectrum-FieldLabel--sizeM` class is no longer necessary and has been removed.
+      The mod custom property `--mod-disabled-content-color` has been renamed to `--mod-field-label-disabled-content-color`.
 
       ### 11/13/2020 - Version 3.0.0
       #### T-shirt sizing

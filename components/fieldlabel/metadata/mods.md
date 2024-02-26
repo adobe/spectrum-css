@@ -1,8 +1,8 @@
 | Modifiable custom properties                    |
 | ----------------------------------------------- |
-| `--mod-disabled-content-color`                  |
 | `--mod-field-label-asterisk-vertical-align`     |
 | `--mod-field-label-bottom-to-text`              |
+| `--mod-field-label-disabled-content-color`      |
 | `--mod-field-label-text-to-asterisk`            |
 | `--mod-field-label-top-to-text`                 |
 | `--mod-fieldlabel-font-size`                    |
