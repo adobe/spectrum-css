@@ -63,21 +63,19 @@ governing permissions and limitations under the License.
 
 .spectrum-FieldLabel {
   display: block;
+
   box-sizing: border-box;
   min-block-size: var(--mod-fieldlabel-min-height, var(--spectrum-fieldlabel-min-height));
-
   padding-block: var(--mod-field-label-top-to-text, var(--spectrum-fieldlabel-top-to-text)) var(--mod-field-label-bottom-to-text, var(--spectrum-fieldlabel-bottom-to-text));
   padding-inline: 0;
 
   font-size: var(--mod-fieldlabel-font-size, var(--spectrum-fieldlabel-font-size));
   font-weight: var(--mod-fieldlabel-font-weight, var(--spectrum-fieldlabel-font-weight));
-
   line-height: var(--mod-fieldlabel-line-height, var(--spectrum-fieldlabel-line-height));
+  color: var(--spectrum-fieldlabel-color);
 
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
-
-  color: var(--spectrum-fieldlabel-color);
 
   /* CJK (Chinese, Japanese, and Korean) language support */
   &:lang(ja),
@@ -112,12 +110,13 @@ governing permissions and limitations under the License.
 .spectrum-Form {
   --spectrum-tableform-item-block-spacing: var(--spectrum-spacing-300);
 
-  margin: 0;
   display: grid;
   grid-template-columns: var(--mod-form-grid-template-columns, auto auto);
-  inline-size: var(--mod-form-inline-size, fit-content);
-  justify-content: start;
   row-gap: var(--mod-form-item-block-spacing, var(--spectrum-tableform-item-block-spacing));
+  justify-content: start;
+
+  inline-size: var(--mod-form-inline-size, fit-content);
+  margin: 0;
 }
 
 /* Row */
