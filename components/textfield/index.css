@@ -553,26 +553,15 @@ governing permissions and limitations under the License.
 
 	/****** Validation Icon - Invalid ⚠️ ******/
 	.spectrum-Textfield.is-invalid & {
+		justify-self: end;
+
 		block-size: var(
 			--mod-textfield-icon-size-invalid,
 			var(--spectrum-textfield-icon-size-invalid)
 		);
-		inline-size: var(
-			--mod-textfield-icon-size-invalid,
-			var(--spectrum-textfield-icon-size-invalid)
-		);
-		inset-block-start: var(
-			--mod-textfield-icon-spacing-block-invalid,
-			var(--spectrum-textfield-icon-spacing-block-invalid)
-		);
-		inset-block-end: var(
-			--mod-textfield-icon-spacing-block-invalid,
-			var(--spectrum-textfield-icon-spacing-block-invalid)
-		);
-		inset-inline-end: var(
-			--mod-textfield-icon-spacing-inline-end-invalid,
-			var(--spectrum-textfield-icon-spacing-inline-end-invalid)
-		);
+		padding-block-start: var(--spectrum-textfield-icon-spacing-block-invalid);
+		padding-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-invalid);
+
 		color: var(
 			--highcontrast-textfield-icon-color-invalid,
 			var(
@@ -1264,6 +1253,11 @@ governing permissions and limitations under the License.
 /*** Text Area ***/
 .spectrum-Textfield--multiline {
   --spectrum-textfield-input-line-height: normal;
+
+	&.spectrum-Textfield {
+		inline-size: unset;
+		min-inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
+	}
 
 	.spectrum-Textfield-input {
 		resize: both;
