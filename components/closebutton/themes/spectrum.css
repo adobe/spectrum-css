@@ -10,10 +10,4 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: spectrum) {
-  .spectrum-CloseButton {
-    --spectrum-closebutton-background-color-default: transparent;
-    --spectrum-closebutton-background-color-hover: var(--spectrum-gray-200);
-    --spectrum-closebutton-background-color-down: var(--spectrum-gray-300);
-    --spectrum-closebutton-background-color-focus: var(--spectrum-gray-200);
-  }
 }

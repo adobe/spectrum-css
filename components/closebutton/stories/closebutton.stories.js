@@ -1,4 +1,7 @@
-// Import the component markup template
+import { html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
+
 import { Template } from "./template";
 
 export default {
@@ -53,5 +56,21 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+const CloseButton = ({
+	staticColor,
+	...args
+}) => {
+	return html`
+		<div
+			style=${ifDefined(styleMap({
+				padding: "1rem",
+				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
+			}))}
+		>
+			${Template(args)}
+		</div>
+	`;
+}
+
+export const Default = CloseButton.bind({});
 Default.args = {};
