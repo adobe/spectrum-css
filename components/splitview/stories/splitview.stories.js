@@ -76,9 +76,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("splitview")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("splitview") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["splitview"],
 		},
 	},
 };

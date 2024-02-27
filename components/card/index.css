@@ -83,8 +83,8 @@ governing permissions and limitations under the License.
 	}
 
 	/* Quiet/Gallery */
-	&--quiet,
-	&--gallery {
+	&.spectrum-Card--quiet,
+	&.spectrum-Card--gallery {
 		--mod-card-content-margin-top: var(
 			--spectrum-card-content-margin-top-quiet,
 			var(--spectrum-spacing-100)
@@ -97,9 +97,9 @@ governing permissions and limitations under the License.
 		--spectrum-card-preview-border-width: var(--spectrum-border-width-100);
 	}
 
-	&--quiet,
-	&--gallery,
-	&--horizontal {
+	&.spectrum-Card--quiet,
+	&.spectrum-Card--gallery,
+	&.spectrum-Card--horizontal {
 		--mod-card-background-color: var(
 			--spectrum-card-background-color-quiet,
 			var(--spectrum-background-base-color)

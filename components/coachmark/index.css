@@ -68,7 +68,7 @@ governing permissions and limitations under the License.
 .spectrum-CoachMark-buttongroup {
 	display: var(--spectrum-coachmark-buttongroup-display);
 
-	&--mobile {
+	&.spectrum-CoachMark-buttongroup--mobile {
  		--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
 		display: var(--spectrum-coachmark-buttongroup-mobile-display);
 	}
@@ -77,7 +77,7 @@ governing permissions and limitations under the License.
 .spectrum-CoachMark-menu {
 	display: var(--spectrum-coachmark-menu-display);
 
-	&--mobile {
+	&.spectrum-CoachMark-menu--mobile {
 		display: var(--spectrum-coachmark-menu-mobile-display);
 	}
 }

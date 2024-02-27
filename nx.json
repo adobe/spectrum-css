@@ -24,7 +24,6 @@
 	},
 	"targetDefaults": {
 		"clean": {
-			"cache": true,
 			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
 			"outputs": [],
 			"executor": "nx:run-commands",
@@ -38,24 +37,23 @@
 		},
 		"build": {
 			"cache": true,
-			"dependsOn": [
-				"^build",
-				"clean",
-				{ "target": "build", "projects": "tokens" }
-			],
+			"dependsOn": ["^build", "clean"],
 			"inputs": [
 				"core",
 				"tools",
 				"!{projectRoot}/stories/*.js",
 				"{workspaceRoot}/tasks/mod-extractor.js",
-				{ "externalDependencies": ["gulp", "postcss"] },
-				{ "env": "NODE_ENV" }
+				"{workspaceRoot}/tasks/component-builder.js",
+				{ "externalDependencies": ["postcss"] },
+				{ "env": "NODE_ENV" },
+				{ "env": "VERBOSE" },
+				{ "env": "QUIET" }
 			],
 			"outputs": ["{projectRoot}/dist", "{projectRoot}/metadata/mods.md"],
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
-					"gulp --gulpfile {projectRoot}/gulpfile.js",
+					"node ./tasks/component-builder.js {projectRoot}",
 					"node ./tasks/mod-extractor.js {projectRoot}"
 				],
 				"forwardAllArgs": true,

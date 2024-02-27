@@ -52,9 +52,8 @@ export default {
 			],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("coachmark")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("coachmark") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["coachmark"],
 		},
 	},
 };

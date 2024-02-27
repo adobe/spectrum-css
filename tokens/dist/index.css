@@ -458,15 +458,11 @@
   --spectrum-icon-color-yellow-primary-default:var(--spectrum-yellow-1000);
   --spectrum-menu-item-background-color-default-rgb:255, 255, 255;
   --spectrum-menu-item-background-color-default-opacity:0;
-  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity)); /* --spectrum-gray-900 */
+  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity));
   --spectrum-menu-item-background-color-hover:var(--spectrum-transparent-white-200);
   --spectrum-menu-item-background-color-down:var(--spectrum-transparent-white-200);
   --spectrum-menu-item-background-color-key-focus:var(--spectrum-transparent-white-200);
-
-  /* Drop Zone background color rgb */
-  --spectrum-drop-zone-background-color-rgb:var( --spectrum-blue-900-rgb); /* var(--spectrum-accent-color-900);*/
-
-  /* Drop Indicator color rgb */
+  --spectrum-drop-zone-background-color-rgb:var( --spectrum-blue-900-rgb);
   --spectrum-dropindicator-color:var(--spectrum-blue-700);
 
   --spectrum-calendar-day-background-color-selected:rgba(var(--spectrum-blue-800-rgb), 0.15);
@@ -971,15 +967,11 @@
   --spectrum-icon-color-yellow-primary-default:var(--spectrum-yellow-1000);
   --spectrum-menu-item-background-color-default-rgb:255, 255, 255;
   --spectrum-menu-item-background-color-default-opacity:0;
-  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity)); /* --spectrum-gray-900 */
+  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity));
   --spectrum-menu-item-background-color-hover:var(--spectrum-transparent-white-200);
   --spectrum-menu-item-background-color-down:var(--spectrum-transparent-white-200);
   --spectrum-menu-item-background-color-key-focus:var(--spectrum-transparent-white-200);
-
-  /* Drop Zone background color rgb */
-  --spectrum-drop-zone-background-color-rgb:var( --spectrum-blue-900-rgb); /* var(--spectrum-accent-color-900);*/
-
-  /* Drop Indicator color rgb */
+  --spectrum-drop-zone-background-color-rgb:var( --spectrum-blue-900-rgb);
   --spectrum-dropindicator-color:var(--spectrum-blue-700);
 
   --spectrum-calendar-day-background-color-selected:rgba(var(--spectrum-blue-800-rgb), 0.2);
@@ -1628,8 +1620,6 @@
 
   --spectrum-cjk-font-family-stack:adobe-clean-han-japanese, var(--spectrum-cjk-font-family), sans-serif;
   --spectrum-cjk-font:var(--spectrum-code-font-family-stack);
-
-  /* static white / black background color for docs containers */
   --spectrum-docs-static-white-background-color-rgb:15, 121, 125;
   --spectrum-docs-static-white-background-color:rgba(var(--spectrum-docs-static-white-background-color-rgb));
   --spectrum-docs-static-black-background-color-rgb:206, 247, 243;
@@ -2163,7 +2153,6 @@
   --spectrum-font-size-1100:55px;
   --spectrum-font-size-1200:62px;
   --spectrum-font-size-1300:70px;
-  /* edge-to-visual-only is used for icon-only buttons */
   --spectrum-edge-to-visual-only-75:5px;
   --spectrum-edge-to-visual-only-100:9px;
   --spectrum-edge-to-visual-only-200:13px;
@@ -2227,7 +2216,6 @@
   --spectrum-well-border-radius:5px;
 
   --spectrum-icon-chevron-size-50:8px;
-  /* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
   --spectrum-workflow-icon-size-xxl:40px;
   --spectrum-workflow-icon-size-xxs:15px;
 
@@ -2785,15 +2773,11 @@
   --spectrum-icon-color-yellow-primary-default:var(--spectrum-yellow-400);
   --spectrum-menu-item-background-color-default-rgb:0, 0, 0;
   --spectrum-menu-item-background-color-default-opacity:0;
-  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity)); /* --spectrum-gray-900 */
+  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity));
   --spectrum-menu-item-background-color-hover:var(--spectrum-transparent-black-200);
   --spectrum-menu-item-background-color-down:var(--spectrum-transparent-black-200);
   --spectrum-menu-item-background-color-key-focus:var(--spectrum-transparent-black-200);
-
-  /* Drop Zone background color rgb */
-  --spectrum-drop-zone-background-color-rgb:var(--spectrum-blue-800-rgb); /* var(--spectrum-accent-color-800);*/
-
-  /* Drop Indicator color rgb */
+  --spectrum-drop-zone-background-color-rgb:var(--spectrum-blue-800-rgb);
   --spectrum-dropindicator-color:var(--spectrum-blue-800);
 
   --spectrum-calendar-day-background-color-selected:rgba(var(--spectrum-blue-900-rgb), 0.1);
@@ -3327,7 +3311,6 @@
   --spectrum-font-size-1100:45px;
   --spectrum-font-size-1200:50px;
   --spectrum-font-size-1300:60px;
-  /* edge-to-visual-only is used for icon-only buttons */
   --spectrum-edge-to-visual-only-75:4px;
   --spectrum-edge-to-visual-only-100:7px;
   --spectrum-edge-to-visual-only-200:10px;
@@ -3390,7 +3373,6 @@
   --spectrum-well-border-radius:var(--spectrum-spacing-75);
 
   --spectrum-icon-chevron-size-50:6px;
-  /* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
   --spectrum-workflow-icon-size-xxl:32px;
   --spectrum-workflow-icon-size-xxs:12px;
 
@@ -3489,8 +3471,7 @@
   --spectrum-drop-shadow-blur:4px;
 }
 .spectrum--express.spectrum--dark,.spectrum--express.spectrum--darkest{
-  /* Drop Zone background color rgb */
-  --spectrum-drop-zone-background-color-rgb:var(--spectrum-indigo-900-rgb); /* var(--spectrum-accent-color-900);*/
+  --spectrum-drop-zone-background-color-rgb:var(--spectrum-indigo-900-rgb);
   --spectrum-well-border-color:rgba(var(--spectrum-white-rgb), 0.05);
 
 
@@ -3559,10 +3540,8 @@
   --spectrum-drop-shadow-y:4px;
   --spectrum-drop-shadow-blur:16px;
 }
-.spectrum--express.spectrum--light,
-.spectrum--express.spectrum--lightest{
-  /* Drop Zone background color rgb */
-  --spectrum-drop-zone-background-color-rgb:var(--spectrum-indigo-800-rgb); /* var(--spectrum-accent-color-800);*/
+.spectrum--express.spectrum--light, .spectrum--express.spectrum--lightest{
+  --spectrum-drop-zone-background-color-rgb:var(--spectrum-indigo-800-rgb);
   --spectrum-well-border-color:rgba(var(--spectrum-black-rgb), 0.05);
 
 

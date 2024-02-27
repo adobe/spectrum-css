@@ -86,7 +86,7 @@ governing permissions and limitations under the License.
   background-color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
   color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
 
-  &--negative {
+  &.spectrum-Toast--negative {
     background-color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
     color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
 
@@ -95,7 +95,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &--info {
+  &.spectrum-Toast--info {
     background-color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
     color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
 
@@ -104,7 +104,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &--positive {
+  &.spectrum-Toast--positive {
     background-color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
     color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
 

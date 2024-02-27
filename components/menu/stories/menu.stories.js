@@ -60,9 +60,8 @@ export default {
       handles: ["click .spectrum-Menu-item"],
     },
     status: {
-      type: process.env.MIGRATED_PACKAGES.includes("menu")
-        ? "migrated"
-        : undefined,
+      type: process.env.MIGRATED_PACKAGES.includes("menu") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["menu"],
     },
   },
 };

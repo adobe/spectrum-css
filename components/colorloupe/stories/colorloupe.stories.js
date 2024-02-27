@@ -29,9 +29,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("colorloupe")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("colorloupe") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["colorloupe"],
 		},
 	},
 };

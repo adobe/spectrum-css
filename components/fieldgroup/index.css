@@ -30,12 +30,12 @@ governing permissions and limitations under the License.
   flex-flow: column wrap;
 
   /* field group label top aligned */
-  &--toplabel {
+  &.spectrum-FieldGroup--toplabel {
     flex-direction: column;
   }
 
   /* field group label side aligned */
-  &--sidelabel {
+  &.spectrum-FieldGroup--sidelabel {
     flex-direction: row;
   }
 }

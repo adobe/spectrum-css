@@ -1,4 +1,4 @@
-const { resolve } = require("path");
+const { join, dirname, resolve } = require("path");
 const { readdirSync } = require("fs");
 
 const componentsPath = resolve(__dirname, "../components");
@@ -7,6 +7,7 @@ const componentPkgs = readdirSync(componentsPath, {
 })
 	.filter((dirent) => dirent.isDirectory())
 	.map((dirent) => dirent.name);
+
 module.exports = {
 	stories: [
 		"../components/*/stories/*.stories.js",
@@ -48,15 +49,18 @@ module.exports = {
 	env: {
 		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
 			const {
-				devDependencies = {},
-			} = require(resolve(componentsPath, dir, "package.json"));
-			if (
-				devDependencies &&
-				devDependencies["@spectrum-css/component-builder-simple"]
-			) {
-				return true;
-			}
-			return false;
+				peerDependencies = {}
+			} = require(
+				`@spectrum-css/${dir}/package.json`
+			) ?? {};
+			return Boolean(peerDependencies["@spectrum-css/tokens"]);
+		}),
+		VERSIONS: componentPkgs.reduce((currObj, dir) => {
+			const { version } = require(
+				`@spectrum-css/${dir}/package.json`
+			) ?? {};
+			currObj[dir] = version;
+			return currObj;
 		}),
 	},
 	webpackFinal: function (config) {
@@ -66,50 +70,42 @@ module.exports = {
 
 		// Parse out any storybook rules for CSS so we can replace them with our own
 		const storybookRules =
-			config && config.module && config.module.rules
+			config?.module?.rules
 				? config.module.rules.filter(
 						(rule) => !(rule.test && rule.test.toString().includes("css"))
 				  )
 				: [];
+
 		return {
 			...config,
-			stats: {
-				/* Suppress autoprefixer warnings from storybook build */
-				warningsFilter: [/autoprefixer: /],
-			},
-			/* Add support for root node_modules imports */
+			ignoreWarnings: [
+				...config.ignoreWarnings ?? [],
+				/autoprefixer: /
+			],
 			resolve: {
-				...(config.resolve ? config.resolve : {}),
+				...(config.resolve ?? {}),
 				modules: [
-					...(config.resolve ? config.resolve.modules : []),
+					...(config.resolve?.modules ?? []),
+					/* Add support for root node_modules imports */
 					resolve(__dirname, "../node_modules"),
 				],
 				alias: {
-					...(config.resolve ? config.resolve.alias : {}),
+					...(config.resolve?.alias ?? {}),
 					...componentPkgs.reduce((pkgs, dir) => {
-						const pkg = require(resolve(componentsPath, dir, "package.json"));
-						pkgs[pkg.name] = resolve(componentsPath, dir);
+						const { name } = require(`@spectrum-css/${dir}/package.json`);
+						const pkgPath = resolve(require.resolve(`@spectrum-css/${dir}/package.json`));
+						pkgs[name] = dirname(pkgPath);
 						return pkgs;
 					}, {}),
-				},
+				}
 			},
 			module: {
-				...(config.module ?? []),
+				...(config.module ?? {}),
 				rules: [
 					...storybookRules,
 					{
-						test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
-						use: [
-							{
-								loader: "file-loader",
-								options: {
-									outputPath: (url) => `assets/images/${url.replace(/_\//g, "")}`,
-								},
-							},
-						],
-					},
-					{
 						test: /\.css$/i,
+						// exclude: [/node_modules/, /dist/],
 						sideEffects: true,
 						use: [
 							{
@@ -119,64 +115,50 @@ module.exports = {
 									attributes: {
 										"data-source": "processed",
 									},
-								},
+								}
 							},
 							{
-								loader: "file-loader",
+								loader: 'file-loader',
 								options: {
-									name: "[path][name].[ext][query]",
+									name: '[path][name].[ext][query]',
 									outputPath: (url) => {
-										const cleanURL = url.replace(/_\//g, "");
-										if (/node_modules\/@spectrum-css/.test(url)) {
-											return `assets/css/${cleanURL.replace(/node_modules\/@spectrum-css\//g, "")}`;
+										const cleanUrl = url.replace(/_\//g, '');
+										if (/node_modules\/@spectrum-css/.test(cleanUrl)) {
+											return `assets/css/${cleanUrl.replace(/node_modules\/@spectrum-css\//g, "")}`;
 										}
-
-										return `assets/css/${cleanURL}`;
+										return `assets/css/${cleanUrl}`;
 									},
 									esModule: false,
 								},
 							},
 							{
-								loader: "postcss-loader",
+								// Gets options from `postcss.config.js`
+								loader: 'postcss-loader',
 								options: {
-									implementation: require("postcss"),
+									implementation: require('postcss'),
 									postcssOptions: {
-										config: resolve(__dirname, "postcss.config.js"),
+										config: true,
 									},
-								},
-							},
+									sourceMap: true,
+								}
+							}
 						],
 					},
-					{
-						test: /\.js$/,
-						enforce: "pre",
-						use: ["source-map-loader"],
-					} /* Raw SVG loader */,
-					{
-						test: /\.svg$/i,
-						loader: "raw-loader",
-					},
-				],
-			},
+				]
+			}
 		};
 	},
 	framework: {
 		name: "@storybook/web-components-webpack5",
-		options: {},
 	},
 	features: {
 		/* Code splitting flag; load stories on-demand */
 		storyStoreV7: true,
 		/* Builds stories.json to help with on-demand loading */
 		buildStoriesJson: true,
+		lazyCompilation: true,
+		fsCache: true,
 	},
-	// refs: {
-	//   'swc': {
-	//     title: 'Spectrum Web Components',
-	//     url: 'https://opensource.adobe.com/spectrum-web-components/storybook/',
-	//     expanded: false,
-	//   },
-	// },
 	docs: {
 		autodocs: true, // see below for alternatives
 		defaultName: "Docs", // set to change the name of generated docs entries

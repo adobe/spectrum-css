@@ -111,6 +111,12 @@ governing permissions and limitations under the License.
   word-break: break-word;
   -webkit-font-smoothing: antialiased;
 
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   /* CJK language support */
   &:lang(ja),
   &:lang(zh),
@@ -118,28 +124,20 @@ governing permissions and limitations under the License.
     line-height: var(--mod-tooltip-cjk-line-height, var(--spectrum-tooltip-cjk-line-height));
   }
 
-  & {
-    cursor: default;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
   p {
     margin: 0;
   }
 
   /****** Variants ******/
-  &--info {
+  &.spectrum-Tooltip--info {
     background-color: var(--highcontrast-tooltip-background-color-informative, var(--mod-tooltip-background-color-informative, var(--spectrum-tooltip-background-color-informative)));
   }
 
-  &--positive {
+  &.spectrum-Tooltip--positive {
     background-color: var(--highcontrast-tooltip-background-color-positive, var(--mod-tooltip-background-color-positive, var(--spectrum-tooltip-background-color-positive)));
   }
 
-  &--negative {
+  &.spectrum-Tooltip--negative {
     background-color: var(--highcontrast-tooltip-background-color-negative, var(--mod-tooltip-background-color-negative, var(--spectrum-tooltip-background-color-negative)));
   }
 }

@@ -37,9 +37,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("colorwheel")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("colorwheel") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["colorwheel"],
 		},
 	},
 };

@@ -37,9 +37,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("breadcrumb")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("breadcrumb") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["breadcrumb"],
 		},
 	},
 };

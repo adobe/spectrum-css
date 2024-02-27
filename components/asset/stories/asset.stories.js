@@ -43,9 +43,8 @@ export default {
 	},
 	parameters: {
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("asset")
-				? "migrated"
-				: "legacy",
+			type: process.env.MIGRATED_PACKAGES.includes("asset") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["asset"],
 		},
 	},
 };

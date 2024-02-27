@@ -18,6 +18,10 @@ const valueParser = require("postcss-value-parser");
 
 /**
  * @typedef {Object} Options
+ * @property {string} tokenDir - path to the token directory
+ * @property {string[]} staticFiles - an array of paths pointing to static property files
+ * @property {string[]} extendedFiles - an array of paths pointing to extended files
+ * @property {import('webpack').LoaderContext<{}>} loaderContext - The webpack context
  */
 
 /** @type import('postcss').PluginCreator<Options> */
@@ -25,6 +29,7 @@ module.exports = ({
 	tokenDir,
 	staticFiles = [],
 	extendedFiles = [],
+	loaderContext,
 } = {}) => {
 	const fetchVariablesFromFiles = (files, { cwd }) => {
 		files = fg.sync(files, {
@@ -57,6 +62,13 @@ module.exports = ({
 			const extendedVars = fetchExtended ? fetchVariablesFromFiles(extendedFiles, { cwd: tokenDir }) : {};
 
 			return {
+				Once() {
+					if (loaderContext) {
+						loaderContext.addDependency(
+							path.resolve(__dirname),
+						);
+					}
+				},
 				Declaration(decl) {
 					// match custom property inclusions
 					if (!/(^|[^\w-])var\([\W\w]+\)/.test(decl.value)) return;

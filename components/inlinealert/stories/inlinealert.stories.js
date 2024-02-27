@@ -59,9 +59,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("inlinealert")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("inlinealert") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["inlinealert"],
 		},
 	},
 };

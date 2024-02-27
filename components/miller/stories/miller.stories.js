@@ -17,9 +17,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("miller")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("miller") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["miller"],
 		},
 	},
 };

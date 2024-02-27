@@ -40,9 +40,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("colorarea")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("colorarea") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["colorarea"],
 		},
 	},
 };

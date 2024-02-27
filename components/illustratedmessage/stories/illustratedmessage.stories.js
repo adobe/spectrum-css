@@ -44,9 +44,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("illustratedmessage")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("illustratedmessage") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["illustratedmessage"],
 		},
 	},
 };

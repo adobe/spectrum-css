@@ -14,7 +14,7 @@
 # This script aims to clean up those folders
 
 # Legacy tools folder (included storybook & generator)
-# test -d "tools" && rm -rf tools
+test -d "tools" && rm -rf tools || exit 0
 
 test -d "tools/generator" && rm -rf tools/generator
 test -d "tools/preview" && rm -rf tools/preview
@@ -29,6 +29,7 @@ for folder in components/*; do
         rm -rf $folder
     else
         test -f $folder/.npmignore && rm -rf $folder/.npmignore
+        test -f $folder/gulpfile.js && rm -rf $folder/gulpfile.js
 
         # Migrated icons assets
         if [[ $folder == "components/icon" ]]; then

@@ -15,6 +15,7 @@ governing permissions and limitations under the License.
 .spectrum-Popover {
   /* Used in positioning popover for storybook */
   --flow-direction: 1;
+
   [dir="rtl"] & {
     --flow-direction: -1;
   }
@@ -56,8 +57,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Popover {
-  --spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
   @extend %spectrum-overlay;
+
+  --spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
 
   box-sizing: border-box;
   position: absolute;

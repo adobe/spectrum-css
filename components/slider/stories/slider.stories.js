@@ -130,9 +130,8 @@ export default {
 			],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("slider")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("slider") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["slider"],
 		},
 	},
 };

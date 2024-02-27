@@ -68,9 +68,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("statuslight")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("statuslight") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["statuslight"],
 		},
 	},
 };

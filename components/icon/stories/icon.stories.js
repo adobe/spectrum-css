@@ -95,9 +95,8 @@ export default {
 	},
 	parameters: {
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("icon")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("icon") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["icon"],
 		},
 	},
 };

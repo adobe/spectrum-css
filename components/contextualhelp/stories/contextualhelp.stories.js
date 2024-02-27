@@ -86,9 +86,8 @@ export default {
 			handles: [...(ActionButtonStories?.parameters?.actions?.handles ?? [])],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("contextualhelp")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("contextualhelp") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["contextualhelp"],
 		},
 	},
 };

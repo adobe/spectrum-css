@@ -114,7 +114,6 @@ if (typeof window.CustomEvent !== "function") {
 	// Only run for browsers that don't support CSS custom properties
 	if (!window.CSS || !CSS.supports("color", "var(--primary)")) {
 		convertVarsToMultistops(document);
-		window.fastLoadDisabled = true;
 	}
 
 	// Expose for manual testing

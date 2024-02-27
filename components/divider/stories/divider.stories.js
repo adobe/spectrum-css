@@ -45,9 +45,8 @@ export default {
 	},
 	parameters: {
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("divider")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("divider") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["divider"],
 		},
 	},
 };

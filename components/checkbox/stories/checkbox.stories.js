@@ -98,9 +98,8 @@ export default {
 			handles: ['click input[type="checkbox"]'],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("checkbox")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("checkbox") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["checkbox"],
 		},
 	},
 };

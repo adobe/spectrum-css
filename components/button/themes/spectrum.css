@@ -308,10 +308,11 @@ governing permissions and limitations under the License.
                 --spectrum-button-background-color-down: var(--spectrum-transparent-white-900);
                 --spectrum-button-background-color-focus: var(--spectrum-transparent-white-900);
 
-                --spectrum-button-content-color-default: var(--mod-button-static-content-color, var(--spectrum-black));
-                --spectrum-button-content-color-hover: var(--mod-button-static-content-color, var(--spectrum-black));
-                --spectrum-button-content-color-down: var(--mod-button-static-content-color, var(--spectrum-black));
-                --spectrum-button-content-color-focus: var(--mod-button-static-content-color, var(--spectrum-black));
+                --spectrum-button-static-content-color: var(--spectrum-black);
+                --spectrum-button-content-color-default: var(--mod-button-static-content-color, var(--spectrum-button-static-content-color));
+                --spectrum-button-content-color-hover: var(--mod-button-static-content-color, var(--spectrum-button-static-content-color));
+                --spectrum-button-content-color-down: var(--mod-button-static-content-color, var(--spectrum-button-static-content-color));
+                --spectrum-button-content-color-focus: var(--mod-button-static-content-color, var(--spectrum-button-static-content-color));
 
                 --spectrum-button-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
                 --spectrum-button-border-color-disabled: transparent;

@@ -34,9 +34,8 @@ export default {
 			handles: [...ActionButton.parameters.actions.handles],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("pagination")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("pagination") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["pagination"],
 		},
 	},
 };

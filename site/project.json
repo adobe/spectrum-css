@@ -1,0 +1,46 @@
+{
+	"$schema": "../node_modules/nx/schemas/project-schema.json",
+	"name": "docs",
+	"tags": ["tooling"],
+	"namedInputs": {
+		"core": ["{projectRoot}/*.pug"],
+		"tools": [
+			"{projectRoot}/includes",
+			"{projectRoot}/resources",
+			"{projectRoot}/templates",
+			"{projectRoot}/index.js",
+			"{projectRoot}/util.js"
+		]
+	},
+	"targets": {
+		"clean": {},
+		"build": {
+			"cache": true,
+			"dependsOn": [
+				"^build",
+				"clean",
+				{ "target": "build", "projects": "tag:component" }
+			],
+			"outputs": ["{workspaceRoot}/dist"],
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": ["node ./tasks/cli.js"]
+			}
+		},
+		"start": {
+			"cache": true,
+			"dependsOn": [
+				"^build",
+				"clean",
+				{ "target": "build", "projects": "tag:component" }
+			],
+			"inputs": ["core", "tools"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": ["node ./tasks/cli.js --start"]
+			}
+		}
+	}
+}

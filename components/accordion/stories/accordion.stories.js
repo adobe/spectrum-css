@@ -51,9 +51,8 @@ export default {
 			handles: ["click .spectrum-Accordion-item"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("accordion")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("accordion") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["accordion"],
 		},
 	},
 };

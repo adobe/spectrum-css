@@ -5,11 +5,14 @@
 ## Installation
 
 ```sh
-npm install postcss-combininator
-postcss -u postcss-combininator -o dist/index.css src/index.css
+yarn install @spectrum-tools/postcss-combininator
 ```
 
 ## Usage
+
+```sh
+postcss -u @spectrum-tools/postcss-combininator -o dist/index.css src/index.css
+```
 
 This plugin turns this:
 

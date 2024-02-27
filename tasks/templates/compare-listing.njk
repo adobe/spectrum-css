@@ -53,7 +53,7 @@
                         <tbody class="spectrum-Table-body">
                         {% for file, fileData in details.files -%}
                             <tr class="spectrum-Table-row">
-                                <td class="spectrum-Table-cell">{% if fileData.link %}<a href="{{ fileData.link }}">{% endif %}{{ file }}{% if fileData.link %}</a>{% endif %}</td>
+                                <td class="spectrum-Table-cell">{% if fileData.hasChange and fileData.link %}<a href="{{ fileData.link }}">{% endif %}{{ file }}{% if fileData.link %}</a>{% endif %}</td>
                                 <td class="spectrum-Table-cell">{% if fileData and fileData.npm and fileData.npm.size %}{{ fileData.npm.size | bytesToSize }}{% else %}<span class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--notice"><span class="spectrum-Badge-label">new</span></span>{% endif %}</td>
                                 <td class="spectrum-Table-cell">{% if fileData and fileData.local and fileData.local.size %}{{ fileData.local.size | bytesToSize }}{% else %}<span class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--negative"><span class="spectrum-Badge-label">removed</span></span>{% endif %}</td>
                             </tr>

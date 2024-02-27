@@ -1,6 +1,6 @@
 // Import the component markup template
-import { Template } from "./template";
 import { html } from "lit";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Text field",
@@ -190,9 +190,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("textfield")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("textfield") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["textfield"],
 		},
 	},
 };

@@ -282,7 +282,7 @@ governing permissions and limitations under the License.
   }
 
   /* Emphasized */
-  &--emphasized {
+  &.spectrum-Checkbox--emphasized {
     /* Checked and Indeterminate Default States */
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
     &.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
@@ -571,7 +571,7 @@ governing permissions and limitations under the License.
       outline-style: auto;
       outline-offset: var(--highcontrast-checkbox-focus-indicator-gap, var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap)));
       /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
-      outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness)); 
+      outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 
       &::after {
         box-shadow:

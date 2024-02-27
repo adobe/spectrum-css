@@ -16,6 +16,7 @@ governing permissions and limitations under the License.
  * @property {boolean} [noSelectors=false]
  * @property {(identifierValue: string, identifierName: string) => string} [processIdentifier]
  * @property {(selector: string, prop: string) => string} [getName]
+ * @property {import('webpack').LoaderContext<{}>} loaderContext - The webpack context
 */
 
 /** @type import('postcss').PluginCreator<Options> */
@@ -46,9 +47,17 @@ module.exports = ({
 				.toLowerCase()
 		);
 	},
+	loaderContext,
 }) => {
 	return {
 		postcssPlugin: "postcss-splitinator",
+		Once() {
+			if (loaderContext) {
+				loaderContext.addDependency(
+					path.resolve(__dirname),
+				);
+			}
+		},
 		OnceExit(root, { Rule, Declaration }) {
 			const selectorMap = {};
 
@@ -85,27 +94,31 @@ module.exports = ({
 							rule.append(newDecl);
 						}
 
-						const selectorNode = (selectorMap[selector] =
-							selectorMap[selector] || {});
+						const selectorNode = selectorMap.has(selector) ? selectorMap.get(selector) : new Map();
 
-						// Check for fallbacks
-						// todo: use valueparser instead of a regex
-						const fallbackMatch = decl.value.match(
-							/var\(\s*(.*?)\s*,\s*var\(\s*(.*?)\s*\)\)/
-						);
-						if (fallbackMatch) {
-							const [, override, fallback] = fallbackMatch;
+						const parsed = valueParser(decl.value);
 
-							// The final declaration should have the override present
-							selectorNode[
-								decl.prop
-							] = `var(${override}, var(${variableName}))`;
+						parsed.walk((node) => {
+							if (node.type !== "function" || node.value !== "var") return;
 
-							// The system-level declaration should only have the fallback
-							newDecl.value = `var(${fallback})`;
-						} else {
-							selectorNode[decl.prop] = `var(${variableName})`;
-						}
+							const override = node.nodes?.[0]?.value;
+							if (!override) return;
+
+							let fallback = node.nodes?.[2];
+							if (fallback) {
+								if (fallback.nodes.length) {
+									fallback = valueParser.stringify(fallback.nodes);
+								}
+
+								// The final declaration should have the override present
+								selectorNode.set(decl.prop, `var(${override}, var(${variableName}))`);
+
+								// The system-level declaration should only have the fallback
+								newDecl.value = `var(${fallback})`;
+							} else selectorNode.set(decl.prop, `var(${variableName})`);
+
+							selectorMap.set(selector, selectorNode);
+						});
 					});
 				});
 

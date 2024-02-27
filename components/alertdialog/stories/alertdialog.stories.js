@@ -44,9 +44,8 @@ export default {
       handles: ["click .spectrum-AlertDialog button"],
     },
     status: {
-      type: process.env.MIGRATED_PACKAGES.includes("alertdialog")
-        ? "migrated"
-        : undefined,
+      type: process.env.MIGRATED_PACKAGES.includes("alertdialog") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["alertdialog"],
     },
   },
 };

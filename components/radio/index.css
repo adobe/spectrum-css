@@ -282,7 +282,7 @@ governing permissions and limitations under the License.
     }
   }
 
-  &--emphasized {
+  &.spectrum-Radio--emphasized {
     /* selection indicator emphasized */
     .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
       border-color: var(--highcontrast-radio-emphasized-accent-color,

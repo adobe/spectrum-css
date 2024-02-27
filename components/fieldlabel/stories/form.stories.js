@@ -24,9 +24,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("fieldlabel")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("fieldlabel") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["fieldlabel"],
 		},
 	},
 };

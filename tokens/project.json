@@ -7,13 +7,19 @@
 			"{projectRoot}/custom-spectrum/*.css"
 		],
 		"scripts": ["{projectRoot}/utilities/*.js"],
-		"tools": ["{projectRoot}/postcss.config.js"]
+		"tools": ["{workspaceRoot}/postcss.config.js"]
 	},
 	"targets": {
 		"build": {
 			"cache": false,
 			"dependsOn": ["clean", "style-dictionary"],
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
+			"outputs": [
+				"{projectRoot}/dist/index.css",
+				"{projectRoot}/dist/css/*.css",
+				"{projectRoot}/dist/css/express/*.css",
+				"{projectRoot}/dist/css/spectrum/*.css"
+			],
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
@@ -25,11 +31,7 @@
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
-			},
-			"outputs": [
-				"{projectRoot}/dist/css/express",
-				"{projectRoot}/dist/css/spectrum"
-			]
+			}
 		},
 		"clean": {
 			"cache": false,

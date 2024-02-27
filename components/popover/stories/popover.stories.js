@@ -73,9 +73,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("popover")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("popover") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["popover"],
 		},
 		chromatic: { delay: 2000 },
 	},
@@ -232,6 +231,8 @@ Nested.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerH
 
 Nested.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
-  await userEvent.click(canvas.getAllByRole('button')[0]);
-	await userEvent.click(canvas.getAllByRole('button')[1]);
+	const buttons = canvas.getAllByRole('button');
+	buttons.forEach(async (button) => {
+		await userEvent.click(button);
+	});
 };

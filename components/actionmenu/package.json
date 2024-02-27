@@ -13,16 +13,12 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
   "peerDependencies": {
     "@spectrum-css/actionbutton": ">=5",
     "@spectrum-css/icon": ">=4",
     "@spectrum-css/menu": ">=5",
     "@spectrum-css/popover": ">=6",
     "@spectrum-css/tokens": ">=13"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^5.0.4"
   },
   "publishConfig": {
     "access": "public"

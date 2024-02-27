@@ -160,9 +160,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("combobox")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("combobox") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["combobox"],
 		},
 	},
 };

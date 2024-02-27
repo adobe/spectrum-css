@@ -1,0 +1,36 @@
+{
+  "name": "@spectrum-tools/postcss-vars-only",
+  "version": "1.0.0",
+  "description": "A PostCSS plugin to strip everything except CSS variables",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "plugins/postcss-vars-only"
+  },
+  "main": "index.js",
+  "files": [
+    "CHANGELOG.md",
+    "index.js",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "dependencies": {
+    "postcss-selector-parser": "^6.0.15",
+    "postcss-value-parser": "^4.2.0"
+  },
+  "peerDependencies": {
+    "postcss": ">=8"
+  },
+  "devDependencies": {
+    "ava": "^6.1.1",
+    "postcss": "^8.4.35"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

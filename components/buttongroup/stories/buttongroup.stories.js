@@ -38,9 +38,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("buttongroup")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("buttongroup") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["buttongroup"],
 		},
 	},
 };

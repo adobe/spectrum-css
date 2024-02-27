@@ -100,9 +100,8 @@ export default {
 			handles: [...Checkbox.parameters.actions.handles],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("assetcard")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("assetcard") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["assetcard"],
 		},
 	},
 };

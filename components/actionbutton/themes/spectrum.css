@@ -86,18 +86,19 @@ governing permissions and limitations under the License.
       --spectrum-actionbutton-content-color-disabled: var(--spectrum-disabled-static-black-content-color);
 
       &.is-selected {
-        --mod-actionbutton-background-color-default: var(--spectrum-transparent-black-800);
-        --mod-actionbutton-background-color-hover: var(--spectrum-transparent-black-900);
-        --mod-actionbutton-background-color-down: var(--spectrum-transparent-black-900);
-        --mod-actionbutton-background-color-focus: var(--spectrum-transparent-black-900);
+        --spectrum-actionbutton-background-color-default: var(--spectrum-transparent-black-800);
+        --spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-black-900);
+        --spectrum-actionbutton-background-color-down: var(--spectrum-transparent-black-900);
+        --spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-black-900);
 
-        --mod-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
-        --mod-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
-        --mod-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
-        --mod-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
+        --spectrum-actionbutton-static-content-color: var(--spectrum-white);
+        --spectrum-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color, var(--spectrum-actionbutton-static-content-color));
+        --spectrum-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-actionbutton-static-content-color));
+        --spectrum-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-actionbutton-static-content-color));
+        --spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-actionbutton-static-content-color));
 
-        --mod-actionbutton-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
-        --mod-actionbutton-border-color-disabled: transparent;
+        --spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
+        --spectrum-actionbutton-border-color-disabled: transparent;
       }
     }
 
@@ -124,18 +125,18 @@ governing permissions and limitations under the License.
       --spectrum-actionbutton-content-color-disabled: var(--spectrum-disabled-static-white-content-color);
 
       &.is-selected {
-        --mod-actionbutton-background-color-default: var(--spectrum-transparent-white-800);
-        --mod-actionbutton-background-color-hover: var(--spectrum-transparent-white-900);
-        --mod-actionbutton-background-color-down: var(--spectrum-transparent-white-900);
-        --mod-actionbutton-background-color-focus: var(--spectrum-transparent-white-900);
+        --spectrum-actionbutton-background-color-default: var(--spectrum-transparent-white-800);
+        --spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-white-900);
+        --spectrum-actionbutton-background-color-down: var(--spectrum-transparent-white-900);
+        --spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-white-900);
 
-        --mod-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
-        --mod-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
-        --mod-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
-        --mod-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+        --spectrum-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+        --spectrum-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+        --spectrum-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+        --spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
 
-        --mod-actionbutton-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
-        --mod-actionbutton-border-color-disabled: transparent;
+        --spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
+        --spectrum-actionbutton-border-color-disabled: transparent;
       }
     }
   }

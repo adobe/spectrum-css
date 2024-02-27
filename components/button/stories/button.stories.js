@@ -100,7 +100,7 @@ export default {
 		    name: "Layout",
 		    description: "How the buttons align in the preview (Storybook only).",
 		    type: { name: "string" },
-			table: { 
+			table: {
 			    type: { summary: "string" },
 			    category: "Advanced"
 			},
@@ -124,9 +124,8 @@ export default {
 			handles: ["click .spectrum-Button"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("button")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("button") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["button"],
 		},
 	},
 };

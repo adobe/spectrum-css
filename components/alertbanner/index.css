@@ -59,11 +59,11 @@ governing permissions and limitations under the License.
     display: flex;
   }
 
-  &--info {
+  &.spectrum-AlertBanner--info {
     background-color: var(--mod-alert-banner-informative-background, var(--spectrum-alert-banner-informative-background));
   }
 
-  &--negative {
+  &.spectrum-AlertBanner--negative {
     background-color: var(--mod-alert-banner-negative-background, var(--spectrum-alert-banner-negative-background));
   }
 }

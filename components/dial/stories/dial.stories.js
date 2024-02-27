@@ -64,9 +64,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("dial")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("dial") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["dial"],
 		},
 	},
 };

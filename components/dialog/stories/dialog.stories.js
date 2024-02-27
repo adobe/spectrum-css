@@ -61,9 +61,8 @@ export default {
 			},
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("dialog")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("dialog") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["dialog"],
 		},
 	},
 };

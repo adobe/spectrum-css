@@ -112,13 +112,13 @@ governing permissions and limitations under the License.
       }
     }
 
-    &--staticBlack {
+    &.spectrum-CloseButton--staticBlack {
       --highcontrast-closebutton-static-background-color-default: ButtonFace;
       --highcontrast-closebutton-icon-color-default: Highlight;
       --highcontrast-closebutton-icon-color-disabled: GrayText;
     }
 
-    &--staticWhite {
+    &.spectrum-CloseButton--staticWhite {
       --highcontrast-closebutton-static-background-color-default: ButtonFace;
       --highcontrast-closebutton-icon-color-default: Highlight;
       --highcontrast-closebutton-icon-color-disabled: Highlight;

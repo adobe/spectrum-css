@@ -37,9 +37,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("colorhandle")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("colorhandle") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["colorhandle"],
 		},
 	},
 };

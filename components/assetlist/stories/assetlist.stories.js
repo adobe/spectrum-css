@@ -19,9 +19,8 @@ export default {
 			handles: [...Checkbox.parameters.actions.handles],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("assetlist")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("assetlist") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["assetlist"],
 		},
 	},
 };

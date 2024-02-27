@@ -87,9 +87,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("stepper")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("stepper") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["stepper"],
 		},
 	},
 };

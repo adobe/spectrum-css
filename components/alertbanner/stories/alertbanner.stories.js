@@ -58,9 +58,8 @@ export default {
 			handles: ["click .spectrum-AlertBanner button"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("alertbanner")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("alertbanner") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["alertbanner"],
 		},
 	},
 };

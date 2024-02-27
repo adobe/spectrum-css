@@ -60,12 +60,12 @@ governing permissions and limitations under the License.
     flex-shrink: 0;
   }
 
-  &--warning {
+  &.spectrum-AlertDialog--warning {
     /* @passthrough */
     --mod-icon-color: var(--mod-alert-dialog-warning-icon-color, var(--spectrum-alert-dialog-warning-icon-color));
   }
 
-  &--error {
+  &.spectrum-AlertDialog--error {
     /* @passthrough */
     --mod-icon-color: var(--mod-alert-dialog-error-icon-color, var(--spectrum-alert-dialog-error-icon-color));
   }

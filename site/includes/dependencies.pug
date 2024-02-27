@@ -3,7 +3,7 @@ meta(name='description', content='The CSS implementation of Adobe\'s Spectrum de
 meta(charset = 'utf-8')
 link(rel='icon', type='image/png', href='favicon.png')
 
-link(rel='stylesheet', type='text/css', href='css/prism/prism.css', data-prism)
+link(rel='stylesheet', type='text/css', href='css/prism/themes/prism.css', data-prism)
 
 link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-global.css')
 
@@ -14,10 +14,12 @@ link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/sp
 link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-medium.css')
 link(rel='stylesheet', type='text/css', href='dependencies/@spectrum-css/vars/spectrum-large.css')
 
-link(rel='stylesheet', type='text/css', href='components/tokens/index.css')
+link(rel='stylesheet', type='text/css', href='tokens/index.css')
 
-each dep in dependencyOrder.filter((dep) => dep != 'vars' )
-  link(rel='stylesheet', type='text/css', href='components/' + dep + '/index-vars.css', data-dependency=dep )
+if dependencyOrder
+  each dep in dependencyOrder.filter((dep) => dep != 'vars' )
+    link(rel='stylesheet', type='text/css', href='components/' + dep + '/index-vars.css', data-dependency=dep )
+
 
 link(rel='stylesheet', type='text/css', href='css/site.css')
 link(rel='stylesheet', type='text/css', href='css/docs.css')

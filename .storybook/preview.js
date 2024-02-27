@@ -15,7 +15,7 @@ import { setConsoleOptions } from "@storybook/addon-console";
 
 const panelExclude = setConsoleOptions({}).panelExclude || [];
 setConsoleOptions({
-	panelExclude: [...panelExclude, /deprecated/, /TypeError/, /postcss-dropunusedvars/],
+	panelExclude: [...panelExclude, /deprecated/, /TypeError/],
 });
 
 import "@spectrum-css/vars/dist/spectrum-large.css";
@@ -247,6 +247,18 @@ export const parameters = {
 				color: "#444",
 				description: "Migrated to the latest tokens.",
 			},
+			legacy: {
+				background: "#ffcdc3",
+				color: "#444",
+				description: "Leveraging legacy tokens.",
+			},
+			version: {
+				background: "#e6e6e6",
+				color: "#444",
+				description: "Current version of the component.",
+			},
+
+
 		},
 	},
 };

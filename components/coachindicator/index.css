@@ -33,7 +33,7 @@ governing permissions and limitations under the License.
   --spectrum-coach-indicator-animation-name: pulse;
   --spectrum-coach-indicator-inner-animation-delay-multiple: var(--spectrum-coach-animation-indicator-ring-inner-delay-multiple);
 
-  &--quiet {
+  &.spectrum-CoachIndicator--quiet {
     --mod-coach-indicator-min-inline-size: calc(var(--mod-coach-indicator-quiet-ring-diameter, var(--spectrum-coach-indicator-quiet-ring-diameter)) * 2.75);
     --mod-coach-indicator-min-block-size: calc(var(--mod-coach-indicator-quiet-ring-diameter, var(--spectrum-coach-indicator-quiet-ring-diameter)) * 2.75);
     --mod-coach-indicator-inline-size: calc(var(--mod-coach-indicator-quiet-ring-diameter, var(--spectrum-coach-indicator-quiet-ring-diameter)) * 2.75);

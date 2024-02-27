@@ -189,7 +189,7 @@ governing permissions and limitations under the License.
     background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
   }
 
-  &--indeterminate .spectrum-ProgressBar-fill {
+  &.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
     inline-size: var(--mod-progressbar-fill-size-indeterminate, var(--spectrum-progressbar-fill-size-indeterminate));
     position: relative;
     animation-timing-function: var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-progressbar-animation-ease-in-out-indeterminate));
@@ -198,7 +198,7 @@ governing permissions and limitations under the License.
 
   /* Variants  */
   /* Side Label */
-  &--sideLabel {
+  &.spectrum-ProgressBar--sideLabel {
     display: inline-flex;
     flex-flow: row;
     justify-content: space-between;
@@ -222,7 +222,7 @@ governing permissions and limitations under the License.
   }
 
   /* Static White */
-  &--staticWhite {
+  &.spectrum-ProgressBar--staticWhite {
     .spectrum-ProgressBar-fill {
       color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
       background-color: var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white));

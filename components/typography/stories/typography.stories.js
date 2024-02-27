@@ -64,9 +64,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("typography")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("typography") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["typography"],
 		},
 	},
 };

@@ -110,9 +110,8 @@ export default {
 			handles: [...(CalendarStories.parameters.actions.handles ?? [])],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("datepicker")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("datepicker") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["datepicker"],
 		},
 	},
 };

@@ -98,6 +98,15 @@ async function renderTemplate(
 	return writeFile(outputPath, html, { encoding: "utf-8" });
 }
 
+function hasFileChanged(localContent, remoteContent) {
+	// Remove all whitespace from the content so we can compare just the content
+	localContent = localContent.replace(/[\s|\n|\r]/g, "");
+	remoteContent = remoteContent.replace(/[\s|\n|\r]/g, "");
+
+	const diff = Diff.diffCss(remoteContent, localContent);
+	return diff.some((part) => part.added || part.removed);
+}
+
 async function generateDiff(
 	filepath,
 	outputPath,
@@ -129,14 +138,15 @@ async function processComponent(
 	component,
 	{
 		cwd,
-		output = pathing.output,
 		cacheLocation = pathing.cache,
 	}
 ) {
 	if (!component) return Promise.reject("No component specified.");
 
-	cleanAndMkdir(join(output, "diffs", component));
-	cleanAndMkdir(join(pathing.latest, component));
+	const unzippedFolder = join(pathing.latest, component);
+
+	cleanAndMkdir(join(pathing.diff, component));
+	cleanAndMkdir(unzippedFolder);
 
 	const pkgPath = require.resolve(`@spectrum-css/${component}/package.json`) ?? join(cwd, component, "package.json");
 	const pkg = pkgPath && existsSync(pkgPath)
@@ -213,7 +223,7 @@ async function processComponent(
 				await tar
 					.extract({
 						file: tarballPath,
-						cwd: join(pathing.latest, component),
+						cwd: unzippedFolder,
 						// Only unpack the dist folder
 						filter: (path) => path.startsWith("package/dist"),
 						strip: 2,
@@ -221,15 +231,11 @@ async function processComponent(
 					.catch((err) => warnings.push(err));
 			}
 
-			if (existsSync(join(pathing.latest, component))) {
-				const files =
-					(await fg("**/*.css", {
-						cwd: join(pathing.latest, component),
-					})) ?? [];
+			const files =
+				(await fg("**/*.css", { cwd: unzippedFolder })) ?? [];
 
-				if (files.length > 0) found++;
-				files.forEach((file) => filelist.add(file));
-			}
+			if (files.length > 0) found++;
+			files.forEach((file) => filelist.add(file));
 		}
 	}
 
@@ -248,11 +254,7 @@ async function processComponent(
 	// For all files found locally & on npm, report back on it's sizes
 	return Promise.all(
 		[...filelist].map(async (filename) =>
-			processFile(
-				filename,
-				join(cwd, component, "dist"),
-				join(pathing.latest, component)
-			)
+			processFile(filename, join(cwd, component, "dist"), unzippedFolder)
 		)
 	).then((results) => {
 		const fileMap = results.reduce((acc, { filename, ...data }) => {
@@ -299,8 +301,13 @@ async function processFile(filename, localPath, comparePath) {
 			size: stats.size,
 		};
 
-		if (stats.size > 0 && data.local && data.local.size > 0) {
-			data.link = `diffs/${componentName}/${basename(filename, ".css")}.html`;
+		if (data.local?.content && data.npm?.content) {
+			data.hasChange = hasFileChanged(data.local.content, data.npm.content);
+		}
+
+		if (stats.size > 0 && data.local && data.local.size > 0 && data.hasChange) {
+			const basePath = relative(pathing.output, pathing.diff);
+			data.link = `${basePath}/${componentName}/${basename(filename, ".css")}.html`;
 		}
 	}
 
@@ -320,8 +327,9 @@ async function main(
 	}
 
 	pathing.output = output;
-	pathing.cache = join(output, "packages");
-	pathing.latest = join(output, "latest");
+	pathing.cache = join(output, "cache");
+	pathing.latest = join(output, "base");
+	pathing.diff = join(output, "diff");
 
 	/** Setup the folder structure */
 	cleanAndMkdir(pathing.output);
@@ -331,6 +339,7 @@ async function main(
 	cleanAndMkdir(pathing.cache, skipCache);
 
 	cleanAndMkdir(pathing.latest);
+	cleanAndMkdir(pathing.diff);
 
 	/**
 	 * Each component will report on it's file structure locally when compared
@@ -340,7 +349,6 @@ async function main(
 	const results = await Promise.all(
 		components.map(async (component) => {
 			return processComponent(component, {
-				output: pathing.output,
 				cacheLocation: pathing.cache,
 			}).catch((err) =>
 				Promise.resolve({
@@ -380,7 +388,7 @@ async function main(
 		pkg = {},
 		fileMap = new Map(),
 	} of results) {
-		let hasComponentChange = false;
+		const hasComponentChange = [...fileMap.entries()].some(([, { hasChange }]) => hasChange);
 		const files = [...fileMap.keys()];
 
 		if (!files || files.length === 0) {
@@ -414,8 +422,7 @@ async function main(
 		log.writeTable(["Filename", "Size", "Size (release)"], { min: 15, max: maxColumnWidth + 5});
 
 		files.forEach(async (file) => {
-			let hasFileChange = false;
-			const { local, npm } = fileMap.get(file);
+			const { local, npm, hasChange, link } = fileMap.get(file);
 
 			log.writeTable([
 				`${file}`.green,
@@ -423,21 +430,17 @@ async function main(
 				npm?.size ? `${bytesToSize(npm.size)}`.gray : `** new **`.yellow,
 			], { min: 25, max: maxColumnWidth + 15});
 
-			if (local?.size && npm?.size && local.size !== npm.size) {
-				hasFileChange = true;
-				hasComponentChange = true;
-			}
-
-			if (local && local.content && npm && npm.content && hasFileChange) {
+			if (local && local.content && npm && npm.content && hasChange) {
 				promises.push(
 					generateDiff(
 						file,
-						join(output, "diffs", component),
+						join(pathing.diff, component),
 						local.content,
 						npm.content,
 						{
 							component,
 							tag,
+							link,
 						}
 					).then(() => hasComponentChange)
 				);

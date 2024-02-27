@@ -36,9 +36,8 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("tray")
-				? "migrated"
-				: undefined,
+			type: process.env.MIGRATED_PACKAGES.includes("tray") ? "migrated" : "legacy",
+			version: process.env.VERSIONS?.["tray"],
 		},
 	},
 };

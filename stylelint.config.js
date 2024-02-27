@@ -80,14 +80,7 @@ module.exports = {
       },
     ],
     "declaration-block-no-duplicate-custom-properties": true,
-    "declaration-property-value-no-unknown": [
-      true,
-      {
-        ignoreProperties: {
-          transform: ["/^logical/"],
-        },
-      },
-    ],
+    "declaration-property-value-no-unknown": true,
     "value-keyword-case": [
       "lower",
       {

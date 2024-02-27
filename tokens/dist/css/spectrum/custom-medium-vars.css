@@ -1,5 +1,4 @@
 .spectrum--medium{
-  /* edge-to-visual-only is used for icon-only buttons */
   --spectrum-edge-to-visual-only-75:4px;
   --spectrum-edge-to-visual-only-100:7px;
   --spectrum-edge-to-visual-only-200:10px;
@@ -62,7 +61,6 @@
   --spectrum-well-border-radius:var(--spectrum-spacing-75);
 
   --spectrum-icon-chevron-size-50:6px;
-  /* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
   --spectrum-workflow-icon-size-xxl:32px;
   --spectrum-workflow-icon-size-xxs:12px;
 
