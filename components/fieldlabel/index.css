@@ -106,6 +106,14 @@ governing permissions and limitations under the License.
   text-align: end;
 }
 
+.spectrum-FieldLabel--staticBlack {
+  color: var(--spectrum-black);
+}
+
+.spectrum-FieldLabel--staticWhite {
+  color: var(--spectrum-white);
+}
+
 /********* Form *********/
 .spectrum-Form {
   --spectrum-tableform-item-block-spacing: var(--spectrum-spacing-300);

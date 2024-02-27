@@ -8,8 +8,10 @@ sections:
     description: |
       ### x/x/2024 - Version 8.0.0
       #### Spectrum 2 release
-      Field label now uses Spectrum 2 tokens and specifications. The medium size styles are used by default, so the `spectrum-FieldLabel--sizeM` class is no longer necessary and has been removed.
-      The mod custom property `--mod-disabled-content-color` has been renamed to `--mod-field-label-disabled-content-color`.
+      Field label now uses Spectrum 2 tokens and specifications. A few notable changes and additions:
+      - The medium size styles are used by default, so the `spectrum-FieldLabel--sizeM` class is no longer necessary and has been removed.
+      - Two variant classes have been added for black and white static colors.
+      - The mod custom property `--mod-disabled-content-color` has been renamed to `--mod-field-label-disabled-content-color`.
 
       ### 11/13/2020 - Version 3.0.0
       #### T-shirt sizing
@@ -131,4 +133,30 @@ examples:
       </label>
       <div class="spectrum-Textfield is-disabled">
         <input id="lifestory8" name="field" value="" class="spectrum-Textfield-input" disabled>
+      </div>
+
+  - id: fieldlabel-static-colors
+    name: Static colors
+    markup: |
+      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+        <label for="lifestory6" class="spectrum-FieldLabel spectrum-FieldLabel--staticBlack">
+          Static black label with example background<svg
+            class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Asterisk100" />
+          </svg>
+        </label>
+        <div class="spectrum-Textfield">
+          <input id="lifestory6" name="field" value="" class="spectrum-Textfield-input">
+        </div>
+      </div>
+      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+        <label for="lifestory7" class="spectrum-FieldLabel spectrum-FieldLabel--staticWhite">
+          Static white label with example background<svg
+            class="spectrum-Icon spectrum-UIIcon-Asterisk100 spectrum-FieldLabel-requiredIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Asterisk100" />
+          </svg>
+        </label>
+        <div class="spectrum-Textfield">
+          <input id="lifestory7" name="field" value="" class="spectrum-Textfield-input">
+        </div>
       </div>
