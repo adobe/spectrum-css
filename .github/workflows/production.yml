@@ -64,6 +64,8 @@ jobs:
         name: Testing
         needs: [build]
         uses: ./.github/workflows/vrt.yml
+        with:
+            skip: ${{ github.base_ref != 'main' }}
         secrets: inherit
 
     # -------------------------------------------------------------
