@@ -320,6 +320,12 @@ governing permissions and limitations under the License.
     }
   }
 
+  &.is-loading, &.is-invalid {
+    .spectrum-Picker-label {
+      margin-inline-end: var(--mod-picker-spacing-text-to-alert-icon-inline-end, var(--spectrum-picker-spacing-text-to-alert-icon-inline-end));
+    }
+  }
+
   &:disabled,
   &.is-disabled {
     cursor: default;
@@ -380,7 +386,6 @@ governing permissions and limitations under the License.
 
   margin-block-start: var(--mod-picker-spacing-top-to-text, var(--spectrum-picker-spacing-top-to-text));
   margin-block-end: calc(var(--mod-picker-spacing-bottom-to-text, var(--spectrum-picker-spacing-bottom-to-text)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
-  margin-inline-end: var(--mod-picker-spacing-text-to-alert-icon-inline-end, var(--spectrum-picker-spacing-text-to-alert-icon-inline-end));
 
   &.is-placeholder {
     font-weight: var(--mod-picker-placeholder-font-weight, var(--spectrum-picker-font-weight));
