@@ -35,7 +35,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
 
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
-  --spectrum-picker-spacing-text-to-alert-icon-inline-end: var(--spectrum-field-text-to-alert-icon-medium);
+  --spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-medium);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
   --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-medium);
@@ -93,7 +93,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-75);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-75);
-  --spectrum-picker-spacing-text-to-alert-icon-inline-end: var(--spectrum-field-text-to-alert-icon-small);
+  --spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-small);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-small);
   --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-small);
@@ -114,7 +114,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-200);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-200);
-  --spectrum-picker-spacing-text-to-alert-icon-inline-end: var(--spectrum-field-text-to-alert-icon-large);
+  --spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-large);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-large);
   --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-large);
@@ -135,7 +135,7 @@ governing permissions and limitations under the License.
   --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
   --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-300);
   --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-300);
-  --spectrum-picker-spacing-text-to-alert-icon-inline-end: var(--spectrum-field-text-to-alert-icon-extra-large);
+  --spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-extra-large);
   --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
   --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
   --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-extra-large);
@@ -322,9 +322,9 @@ governing permissions and limitations under the License.
 
   &.is-loading, &.is-invalid {
     .spectrum-Picker-label {
-      /* @deprecation --mod-picker-spacing-text-to-alert-icon-inline-start has been renamed to --mod-picker-spacing-text-to-alert-icon-inline-end
+      /* @deprecation --mod-picker-spacing-text-to-alert-icon-inline-start has been renamed to --mod-picker-spacing-text-to-icon-inline-end
 	   and will be removed in a future version. */
-      margin-inline-end: var(--mod-picker-spacing-text-to-alert-icon-inline-end, var(--mod-picker-spacing-text-to-alert-icon-inline-start, var(--spectrum-picker-spacing-text-to-alert-icon-inline-end)));
+      margin-inline-end: var(--mod-picker-spacing-text-to-icon-inline-end, var(--mod-picker-spacing-text-to-alert-icon-inline-start, var(--spectrum-picker-spacing-text-to-icon-inline-end)));
     }
   }
 
