@@ -322,7 +322,9 @@ governing permissions and limitations under the License.
 
   &.is-loading, &.is-invalid {
     .spectrum-Picker-label {
-      margin-inline-end: var(--mod-picker-spacing-text-to-alert-icon-inline-end, var(--spectrum-picker-spacing-text-to-alert-icon-inline-end));
+      /* @deprecation --mod-picker-spacing-text-to-alert-icon-inline-start has been renamed to --mod-picker-spacing-text-to-alert-icon-inline-end
+	   and will be removed in a future version. */
+      margin-inline-end: var(--mod-picker-spacing-text-to-alert-icon-inline-end, var(--mod-picker-spacing-text-to-alert-icon-inline-start, var(--spectrum-picker-spacing-text-to-alert-icon-inline-end)));
     }
   }
 
