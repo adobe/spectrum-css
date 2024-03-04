@@ -24,5 +24,3 @@
 | `--mod-closebutton-margin-inline`             |
 | `--mod-closebutton-margin-top`                |
 | `--mod-closebutton-width`                     |
-| `--mod-line-height-100`                       |
-| `--mod-sans-font-family-stack`                |
