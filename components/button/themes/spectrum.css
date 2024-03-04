@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
     .spectrum-Button {
-        --spectrum-button-background-color-default: var(--spectrum-gray-75);
+        --spectrum-button-background-color-default: var(--spectrum-gray-50);
         --spectrum-button-background-color-hover: var(--spectrum-gray-200);
         --spectrum-button-background-color-down: var(--spectrum-gray-300);
         --spectrum-button-background-color-focus: var(--spectrum-gray-200);

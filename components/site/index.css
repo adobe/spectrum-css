@@ -650,7 +650,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Site {
   /* .spectrum-Site */
-  --spectrum-site-background-color: var(--spectrum-global-color-gray-75);
+  --spectrum-site-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-site-content-background-color: var(--spectrum-global-color-gray-25);
   --spectrum-site-header-border-color: var(--spectrum-global-color-gray-300);
   --spectrum-site-header-background-color: var(--spectrum-site-content-background-color);
@@ -662,7 +662,7 @@ governing permissions and limitations under the License.
   --spectrum-site-overlay-underlay-background-color: rgba(0, 0, 0, 0.2);
 
   /* .spectrum-CSSExample */
-  --spectrum-cssexample-markup-background-color: var(--spectrum-global-color-gray-75);
+  --spectrum-cssexample-markup-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-cssexample-border-color: var(--spectrum-global-color-gray-100);
 }
 
@@ -744,5 +744,5 @@ governing permissions and limitations under the License.
 
 .spectrum-CodeBlock {
   border-color: var(--spectrum-global-color-gray-400);
-  background-color: var(--spectrum-global-color-gray-75);
+  background-color: var(--spectrum-global-color-gray-50);
 }
