@@ -328,6 +328,10 @@ WithActions.args = {
     {
       label: "Subtract",
     },
+    {
+      label: "Example of a disabled menu item",
+      isDisabled: true,
+    },
   ],
 };
 
@@ -347,6 +351,11 @@ WithValueAndActions.args = {
     {
       label: "Subtract",
       value: "Value"
+    },
+    {
+      label: "Example of a disabled menu item",
+      value: "Value",
+      isDisabled: true,
     },
   ],
 };

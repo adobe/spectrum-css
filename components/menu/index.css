@@ -779,7 +779,8 @@ governing permissions and limitations under the License.
   background-color: transparent;
 
   .spectrum-Menu-itemLabel,
-  .spectrum-Menu-sectionHeading {
+  .spectrum-Menu-sectionHeading,
+  .spectrum-Menu-itemValue {
     color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-label-content-color-disabled, var(--spectrum-menu-item-label-content-color-disabled)));
   }
 
@@ -797,7 +798,8 @@ governing permissions and limitations under the License.
     background-color: transparent;
 
     .spectrum-Menu-itemLabel,
-    .spectrum-Menu-sectionHeading {
+    .spectrum-Menu-sectionHeading,
+    .spectrum-Menu-itemValue {
       color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-label-content-color-disabled, var(--spectrum-menu-item-label-content-color-disabled)));
     }
     
