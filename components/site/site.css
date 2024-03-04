@@ -1,0 +1,276 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.spectrum-Site {
+	display: flex;
+	flex-direction: column;
+
+	block-size: 100%;
+
+	color: var(--spectrum-body-color);
+
+	background-color: var(--spectrum-gray-50);
+}
+
+.spectrum-Site-content {
+	display: flex;
+	flex-direction: row;
+	inline-size: 100vw;
+	block-size: 100vh;
+}
+
+.spectrum-Site-header {
+	display: none;
+
+	box-sizing: border-box;
+	block-size: var(--spectrum-component-height-300);
+	padding: var(--spectrum-component-to-menu-extra-large);
+
+	border-block-end-color: var(--spectrum-gray-300);
+	border-block-end-style: solid;
+	border-block-end-width: var(--spectrum-divider-thickness-small);
+
+	& .spectrum-Site-sideBarHeader {
+		padding-block: 0;
+	}
+}
+
+.spectrum-Site-header,
+.spectrum-Site-sideBar,
+.spectrum-Site-mainContent {
+	color: var(--spectrum-body-color);
+	background-color: var(--spectrum-gray-75);
+}
+
+.spectrum-Site-sideBar {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+
+	max-inline-size: 100%;
+
+	transition: none;
+}
+
+.spectrum-Site-sideBarHeader {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 0;
+	flex-shrink: 0;
+	align-items: center;
+
+	padding: var(--spectrum-spacing-400);
+
+	text-decoration: none;
+
+	&:focus {
+		outline: none;
+
+		& h2 {
+			text-decoration: underline;
+		}
+	}
+}
+
+.spectrum-Site-search {
+	padding: var(--spectrum-spacing-300);
+	padding-block-start: 0;
+}
+
+.spectrum-Site-searchResults {
+	position: absolute;
+	z-index: 101;
+	inset-block-start: -100%;
+	inset-inline-start: -100%;
+
+	overflow-y: auto;
+
+	max-block-size: calc(90vh - 120px);
+}
+
+.spectrum-Site-noSearchResults {
+	padding: var(--spectrum-spacing-400);
+}
+
+.spectrum-Site-logo {
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
+	--spectrum-icon-size: 32px;
+	--mod-icon-color: #fa0f00;
+	margin-inline-end: var(--spectrum-spacing-200);
+
+	.spectrum--large & {
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
+		--spectrum-icon-size: 40px;
+	}
+}
+
+.spectrum-Site-nav {
+	flex-grow: 1;
+	padding: 0 var(--spectrum-spacing-400) var(--spectrum-spacing-600);
+}
+
+.spectrum-Site-bottomNav {
+	margin-block-start: var(--spectrum-spacing-900);
+}
+
+.spectrum-Site-page {
+	box-sizing: border-box;
+	padding: var(--spectrum-spacing-600) 52px var(--spectrum-spacing-400);
+}
+
+.spectrum-Site-page,
+.spectrum-Site-hero {
+	inline-size: min(1080px, 100%);
+	margin: auto;
+}
+
+.spectrum-Site-heroHeading {
+	margin-block-end: var(--spectrum-spacing-300);
+
+	& .spectrum-Heading {
+		margin-block-start: 0 !important;
+	}
+}
+
+.spectrum-Site-heroImage {
+	display: block;
+
+	max-inline-size: 100%;
+	margin-block-start: var(--spectrum-spacing-700);
+	margin-block-end: var(--spectrum-spacing-700);
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+
+	border-radius: 4px;
+}
+
+.spectrum-Site-mainContent {
+  overflow-y: auto;
+  flex-grow: 1;
+  border-block: none;
+}
+
+.spectrum-Site-footerContainer {
+  inline-size: min(1080px, 100%);
+  margin: var(--spectrum-spacing-400) auto;
+  padding: 0 var(--spectrum-spacing-600);
+}
+
+/* Kill the overlay without animating when the page is resized */
+.spectrum-Site-overlay {
+	pointer-events: none;
+
+	position: fixed;
+
+	/* Float above things by default */
+	z-index: 99;
+	inset-block-start: 0;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+
+	overflow: hidden;
+	display: none;
+
+	opacity: 0%;
+	background-color: var(--spectrum-transparent-black-300);
+}
+
+.spectrum-HomeCards {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+	margin: var(--spectrum-spacing-700) 0;
+}
+
+.spectrum-HomeCard {
+	display: flex;
+	align-items: flex-start;
+	margin-block-end: var(--spectrum-spacing-300);
+	padding: 0 var(--spectrum-spacing-200);
+}
+
+.spectrum-HomeCard-image {
+	flex: 0 0 auto;
+	inline-size: var(--spectrum-spacing-1000);
+	margin-inline-end: 20px;
+
+	& .spectrum-Icon {
+		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
+		--spectrum-icon-size: 200px;
+	}
+}
+
+.spectrum-HomeCard-content {
+	flex: 1 1 auto;
+}
+
+@media screen and (width <= 960px) {
+	.spectrum-Site-content {
+		/* fix: header scrolls off */
+		max-block-size: calc(100% - var(--spectrum-spacing-700));
+	}
+
+	.spectrum-Site-overlay {
+		opacity: 0%;
+
+		/* Exit animations */
+		transition: opacity var(--spectrum-animation-duration-200) ease-out 0ms;
+
+		&.is-open {
+			pointer-events: auto;
+			display: block;
+			opacity: 100%;
+
+			/* Entry animations */
+			transition: opacity var(--spectrum-animation-duration-200) ease-in 0ms;
+		}
+	}
+
+	.spectrum-Site-sideBar {
+		position: fixed;
+		z-index: 100;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		inset-inline-end: 100%;
+		transform: translateX(0);
+
+		block-size: 100vh;
+
+		transition: transform var(--spectrum-animation-duration-200) ease-in-out;
+
+		&.is-open {
+			transform: translateX(100%);
+		}
+	}
+
+	.spectrum-Site-header {
+		display: block;
+	}
+
+	.spectrum-Site-page {
+		padding-inline-start: var(--spectrum-spacing-300);
+		padding-inline-end: var(--spectrum-spacing-300);
+	}
+
+	.spectrum-Site-hero {
+		max-inline-size: 100%;
+	}
+
+	.spectrum-Site-heroHeading h1.spectrum-Heading1--display {
+		font-size: var(--spectrum-font-size-800);
+	}
+
+	.spectrum-Site-mainContainer {
+		padding-inline: var(--spectrum-spacing-400);
+	}
+}
