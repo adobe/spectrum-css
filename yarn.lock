@@ -1348,14 +1348,14 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@chromaui/addon-visual-tests@^0.0.124":
-  version "0.0.124"
-  resolved "https://registry.yarnpkg.com/@chromaui/addon-visual-tests/-/addon-visual-tests-0.0.124.tgz#140d0a22c4943a9213b4685837aa85720b111f1a"
-  integrity sha512-zPHwOGrX6xIFug2XlvzkQA/KAFrv2yVqh8jEM4pIdVOvcwIO4XK1jlikJqtdccdzDmnjtkuYc+nJA5SdNaJy+Q==
+"@chromaui/addon-visual-tests@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@chromaui/addon-visual-tests/-/addon-visual-tests-1.0.0.tgz#164e9a51a545ac8ba0a41de64f28a578636f26d5"
+  integrity sha512-bCvl5aGS9cEVpjPGx9rdzHpblOsYm8URxREy/S6dDIDWxo21/Ytc6ln1QYJYKxG/AgiisFcgpnWJvRH/xBLcAw==
   dependencies:
     "@storybook/design-system" "^7.15.15"
     "@urql/exchange-auth" "^2.1.6"
-    chromatic "^9.0.0"
+    chromatic "^10.6.0"
     date-fns "^2.30.0"
     filesize "^10.0.12"
     jsonfile "^6.1.0"
@@ -6892,15 +6892,15 @@ chownr@^2.0.0:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-2.0.0.tgz#15bfbe53d2eab4cf70f18a8cd68ebe5b3cb1dece"
   integrity sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==
 
-chromatic@^10.3.1:
-  version "10.8.0"
-  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-10.8.0.tgz#741b0af9ba0e9605408f8a452fca2066a4b28ad4"
-  integrity sha512-DdgUSJJ5u+Czf+KZI+1NRz4RP/PbpcytWSUtpgqEBolGDw65VYwjI489yis+jfwKMev1VWEhj1xMYGITbD6XIA==
+chromatic@^10.6.0:
+  version "10.9.6"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-10.9.6.tgz#0dd9c82fbbf1f5a7aa73b96b5b7e066fe5408be3"
+  integrity sha512-1MoT+/U+vQwEiq2GuehPyStbqhxqHmM1B9pdpVU1dKh26userQg1FyOFYifkTgy+9reo2w2p7sAbc0JRd2kzlA==
 
-chromatic@^9.0.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-9.1.0.tgz#dfc23ca3b602f7bba29defdf1aeddf8ae8516523"
-  integrity sha512-9ib8k4LIfg/88kKufxz1N8vgCB7nlLhJqmx+Vx55cM/6DCB/M6oqroirVRXfdeC7qaZuhyUemPF2QHxBh7GXtQ==
+chromatic@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-11.0.0.tgz#3fcd5129a01c9b6bbd5ed46a11795ad5ac0731d3"
+  integrity sha512-utzRVqdMrpzYwZNf7dHWU0z0/rx6SH/FUVNozQxYHDtQfYUdEj+Ro4OSch5+Wsk2FoUmznJyLkaC2J839z1N7A==
 
 chrome-trace-event@^1.0.2:
   version "1.0.3"
