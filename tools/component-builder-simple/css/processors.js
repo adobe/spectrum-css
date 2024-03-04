@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const path = require("path");
+
 function getProcessors({ noFlatVariables = false, noSelectors = false, keepComments = false } = {}) {
 	return [
 		require("postcss-import"),
@@ -27,12 +29,16 @@ function getProcessors({ noFlatVariables = false, noSelectors = false, keepComme
 		}),
 		require("postcss-hover-media-feature"),
 		require("postcss-calc"),
-		require("postcss-dropunusedvars")({ fix: false }),
-		require("postcss-dropdupedvars"),
 		require("postcss-discard-empty"),
 		require("at-rule-packer"),
 		!keepComments ? require("postcss-discard-comments")({ removeAllButFirst: true }) : null,
 		require("autoprefixer")({}),
+		require("stylelint")({
+			cache: true,
+			configFile: path.join(__dirname, "../../../stylelint.config.js"),
+			// @todo fix: true,
+		}),
+  		require("postcss-reporter")({ clearReportedMessages: true })
 	].filter(Boolean);
 }
 
