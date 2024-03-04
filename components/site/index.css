@@ -663,7 +663,7 @@ governing permissions and limitations under the License.
 
   /* .spectrum-CSSExample */
   --spectrum-cssexample-markup-background-color: var(--spectrum-global-color-gray-50);
-  --spectrum-cssexample-border-color: var(--spectrum-global-color-gray-100);
+  --spectrum-cssexample-border-color: var(--spectrum-global-color-gray-75);
 }
 
 /* Site */
@@ -695,7 +695,7 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSComponent-resource--adobe {
   color: #FA0F00 !important;
-  background-color: var(--spectrum-global-color-gray-100) !important;
+  background-color: var(--spectrum-global-color-gray-75) !important;
 }
 
 /* Scrollable */
@@ -714,7 +714,7 @@ governing permissions and limitations under the License.
 
 /* CSS Example */
 .spectrum-CSSExample-example {
-  background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-100));
+  background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-75));
 }
 
 .spectrum-CSSExample-markup {
