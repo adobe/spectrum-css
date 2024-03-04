@@ -1,9 +1,13 @@
 import { html } from "lit";
-import { when } from "lit/directives/when.js";
+import { styleMap } from "lit/directives/style-map.js";
 
-import { Template } from "./template";
+import { Template } from "@spectrum-css/accordion/stories/template.js";
+import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
-/** The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements. */
+/**
+ * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
+ */
 export default {
 	title: "Components/Accordion",
 	component: "Accordion",
@@ -132,11 +136,6 @@ export default {
 				},
 			]
 		]),
-		customStorybookStyles: {
-			display: "flex",
-			flexWrap: "wrap",
-			gap: "2rem",
-		},
 	},
 	parameters: {
 		actions: {
@@ -151,21 +150,25 @@ export default {
 };
 
 const AccordionGroup = (args) => html`
-	${Template(args)}
-	${when(window.isChromatic(), () =>
-		Template({
-			...args,
-			customStyles: {
-				maxInlineSize: "300px",
-			},
-		})
-	)}
-	${when(window.isChromatic(), () =>
-		Template({
-			...args,
-			disableAll: true,
-		})
-	)}
+	${window.isChromatic() ? html`
+		<div style=${styleMap({
+			display: "flex",
+			flexWrap: "wrap",
+			gap: "2em"
+		})}>
+			${Template(args)}
+			${Template({
+				...args,
+				customStyles: {
+					maxInlineSize: "300px",
+				},
+			})}
+			${Template({
+				...args,
+				disableAll: true,
+			})}
+		</div>
+	` : Template(args)}
 `;
 
 export const Default = AccordionGroup.bind({});
