@@ -9,6 +9,7 @@ name:
     # -------------------------------------------------------------
 
 on:
+    merge_group:
     pull_request:
         branches:
             - main
@@ -16,11 +17,6 @@ on:
             # Allow us to run tests for PRs updating github actions
             - chore-*ci*
             - chore-*github-actions*
-
-        # todo: we can get even more detailed with this later by evaluating what influences the built assets
-        paths-ignore:
-            - "LICENSE"
-            - "*.hbs"
 
         types:
             - opened
