@@ -26,15 +26,15 @@
     "postcss-combininator": "^2.0.0",
     "postcss-discard-comments": "^6.0.1",
     "postcss-discard-empty": "^6.0.1",
-    "postcss-dropdupedvars": "^2.0.0",
-    "postcss-dropunusedvars": "^2.0.0",
     "postcss-extend": "^1.0.5",
     "postcss-hover-media-feature": "1.0.2",
     "postcss-import": "^16.0.0",
     "postcss-nested": "^6.0.1",
+    "postcss-reporter": "^7.1.0",
     "postcss-selector-parser": "^6.0.15",
     "postcss-splitinator": "^2.0.0",
     "postcss-values-parser": "^6.0.2",
+    "stylelint": "^15.11.0",
     "through2": "^3.0.1"
   },
   "peerDependencies": {
