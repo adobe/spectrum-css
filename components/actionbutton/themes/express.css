@@ -13,9 +13,9 @@ governing permissions and limitations under the License.
 @container (--system: express) {
   .spectrum-ActionButton {
     --spectrum-actionbutton-background-color-default: var(--spectrum-gray-100);
-    --spectrum-actionbutton-background-color-hover: var(--spectrum-gray-300);
+    --spectrum-actionbutton-background-color-hover: var(--spectrum-gray-200);
     --spectrum-actionbutton-background-color-down: var(--spectrum-gray-400);
-    --spectrum-actionbutton-background-color-focus: var(--spectrum-gray-300);
+    --spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
 
     --spectrum-actionbutton-border-color-default: transparent;
     --spectrum-actionbutton-border-color-hover: transparent;
@@ -27,9 +27,9 @@ governing permissions and limitations under the License.
 
     &.spectrum-ActionButton--quiet {
       --spectrum-actionbutton-background-color-default: transparent;
-      --spectrum-actionbutton-background-color-hover: var(--spectrum-gray-300);
+      --spectrum-actionbutton-background-color-hover: var(--spectrum-gray-200);
       --spectrum-actionbutton-background-color-down: var(--spectrum-gray-400);
-      --spectrum-actionbutton-background-color-focus: var(--spectrum-gray-300);
+      --spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
     }
 
     &.spectrum-ActionButton--staticBlack,
