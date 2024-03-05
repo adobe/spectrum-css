@@ -68,7 +68,7 @@ const CloseButton = ({
 				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
 			}))}
 		>
-			${Template(args)}
+			${Template({...args, staticColor})}
 			${when(window.isChromatic(), () =>
 				html`
 					${Template({
