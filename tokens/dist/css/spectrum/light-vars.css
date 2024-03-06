@@ -1,0 +1,7 @@
+.spectrum, .spectrum.spectrum--light{
+  --spectrum-accent-background-color-default:var(--spectrum-accent-color-900);
+  --spectrum-accent-background-color-hover:var(--spectrum-accent-color-1000);
+  --spectrum-accent-background-color-down:var(--spectrum-accent-color-1100);
+  --spectrum-accent-background-color-key-focus:var(--spectrum-accent-color-1000);
+  --spectrum-accent-visual-color:var(--spectrum-accent-color-800);
+  --spectrum-drop-zone-background-color:var(--spectrum-accent-color-800);}

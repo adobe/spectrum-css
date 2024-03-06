@@ -1,4 +1,4 @@
-.spectrum--large{
+.spectrum.spectrum--large{
   --spectrum-checkbox-control-size-small:16px;
   --spectrum-checkbox-control-size-medium:18px;
   --spectrum-checkbox-control-size-large:20px;
@@ -46,5 +46,4 @@
   --spectrum-corner-radius-100:5px;
   --spectrum-corner-radius-200:10px;
   --spectrum-drop-shadow-y:2px;
-  --spectrum-drop-shadow-blur:6px;
-}
+  --spectrum-drop-shadow-blur:6px;}

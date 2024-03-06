@@ -1,4 +1,4 @@
-.spectrum--express.spectrum--medium{
+.spectrum, .spectrum.spectrum--medium.spectrum--express{
   --spectrum-checkbox-control-size-small:14px;
   --spectrum-checkbox-control-size-medium:16px;
   --spectrum-checkbox-control-size-large:18px;
@@ -35,10 +35,10 @@
   --spectrum-slider-handle-size-medium:20px;
   --spectrum-slider-handle-size-large:22px;
   --spectrum-slider-handle-size-extra-large:24px;
-  --spectrum-slider-handle-border-width-down-small:var(--spectrum-border-width-200);
-  --spectrum-slider-handle-border-width-down-medium:var(--spectrum-border-width-200);
-  --spectrum-slider-handle-border-width-down-large:var(--spectrum-border-width-200);
-  --spectrum-slider-handle-border-width-down-extra-large:var(--spectrum-border-width-200);
+  --spectrum-slider-handle-border-width-down-small:2px;
+  --spectrum-slider-handle-border-width-down-medium:2px;
+  --spectrum-slider-handle-border-width-down-large:2px;
+  --spectrum-slider-handle-border-width-down-extra-large:2px;
   --spectrum-slider-bottom-to-handle-small:3px;
   --spectrum-slider-bottom-to-handle-medium:6px;
   --spectrum-slider-bottom-to-handle-large:9px;
@@ -48,5 +48,4 @@
   --spectrum-corner-radius-200:12px;
   --spectrum-drop-shadow-x:0px;
   --spectrum-drop-shadow-y:4px;
-  --spectrum-drop-shadow-blur:16px;
-}
+  --spectrum-drop-shadow-blur:16px;}
