@@ -17,7 +17,7 @@ governing permissions and limitations under the License.
     --spectrum-stepper-buttons-border-style: solid;
     --spectrum-stepper-buttons-border-width: var(--spectrum-border-width-200);
     --spectrum-stepper-buttons-border-color: transparent;
-    --spectrum-stepper-buttons-background-color: var(--spectrum-gray-50);
+    --spectrum-stepper-buttons-background-color: var(--spectrum-gray-25);
     --spectrum-stepper-buttons-border-color-hover: transparent;
     --spectrum-stepper-buttons-border-color-focus: transparent;
     --spectrum-stepper-buttons-border-color-keyboard-focus: transparent;
@@ -37,7 +37,7 @@ governing permissions and limitations under the License.
     --spectrum-stepper-border-color-keyboard-focus-invalid: transparent;
 
     --spectrum-stepper-button-background-color-focus: var(--spectrum-gray-400);
-    --spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
+    --spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-200);
 
     &.is-disabled {
       --spectrum-stepper-buttons-background-color: var(--spectrum-disabled-background-color);
