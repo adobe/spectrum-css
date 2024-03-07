@@ -7,17 +7,24 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/picker/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### Component renamed
+      ### x/x/2024 - Version 8.0.0
+      #### Spectrum 2 release
+      Picker now uses Spectrum 2 tokens and specifications. A few notable changes:
+      - The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
+      - The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
+
+      ### Versions prior to 8.0
+      #### Component renamed
       Dropdown is now known as Picker. Replace all `.spectrum-Dropdown*` classnames with `.spectrum-Picker*`.
 
-      ### Markup change
+      #### Markup change
       The outer `<div>` is now gone and `.spectrum-FieldButton` is no longer used. Instead, the outer tag is now `<button>` with the `.spectrum-Picker` classname.
 
       Additionally, `.spectrum-Picker` should not contain the `.spectrum-Popover` that it opens.
 
       In order to use a side label with a Picker, add the `spectrum-Picker--sideLabel` class to the Picker.
 
-      ### Icon classname changes
+      #### Icon classname changes
 
       Each of the 3 possible icons now has its own specific classname:
 
@@ -27,13 +34,13 @@ sections:
       | `.spectrum-Icon` (workflow)       | `.spectrum-Picker-icon`           |
       | `.spectrum-Icon` (validation)     | `.spectrum-Picker-validationIcon` |
 
-      ### `.is-selected` is now `.is-open`
+      #### `.is-selected` is now `.is-open`
       In order to more accurately reflect what's going on, you should add `.is-open` to `.spectrum-Picker` when the menu is shown.
 
-      ### Change workflow icon size to medium
+      #### Change workflow icon size to medium
       If you use a `.spectrum-Picker-icon` in your markup, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 
-      ### T-shirt sizing
+      #### T-shirt sizing
       Picker now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Picker--size*` class.
       Using the classes `.spectrum-Picker .spectrum-Picker--sizeM` will get result in the previous default picker size.
 
@@ -46,7 +53,7 @@ sections:
       | `spectrum-Picker--sizeL`  | `spectrum-css-icon-Chevron200` |
       | `spectrum-Picker--sizeXL` | `spectrum-css-icon-Chevron300` |
 
-      ### Remove focus-ring class
+      #### Remove focus-ring class
       We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: picker-standard

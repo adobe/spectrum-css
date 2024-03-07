@@ -27,10 +27,12 @@ sections:
             | `--mod-closebutton-background-color-focus`   |
             | `--mod-closebutton-background-color-hover`   |
           
-        * Also removes --mod-closebutton-size since we'll be setting rounded border-radius with a single rounding token, to be formally implemented as part of [S2 Corner Rounding](https://github.com/adobe/spectrum-css/pull/2559/files#diff-d6e9caa794bd8e1c659425d223e23ab53a93a254f00fb11a626e1b7563bd0c61R39-R41).
-      
+        * Also removes `--mod-closebutton-size` since it was only used for a rounded border-radius, that is now set with a single rounding token.
+        * The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
+        * The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
 
-      ### Sizing
+      ### Versions prior to 5.0
+      #### Sizing
       Close button supports different sized icons. By default, you should use the following icons:
 
       | Close button classname          | UI icon classname           |
@@ -40,7 +42,7 @@ sections:
       | `.spectrum-CloseButton--sizeL`  | `.spectrum-UIIcon-Cross200` |
       | `.spectrum-CloseButton--sizeXL` | `.spectrum-UIIcon-Cross300` |
 
-      ### Remove focus-ring class
+      #### Remove focus-ring class
       We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: close
