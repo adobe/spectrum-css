@@ -11,9 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Steplist {
+	--spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-200);
+	--spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
+
 	/* The width of a step */
 	--spectrum-steplist-step-width: 80px;
 

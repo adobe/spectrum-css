@@ -7,7 +7,6 @@
     ".spectrum-ProgressBar--sideLabel .spectrum-ProgressBar-percentage",
     ".spectrum-ProgressBar--sideLabel .spectrum-ProgressBar-track",
     ".spectrum-ProgressBar--sizeL",
-    ".spectrum-ProgressBar--sizeM",
     ".spectrum-ProgressBar--sizeS",
     ".spectrum-ProgressBar--sizeXL",
     ".spectrum-ProgressBar-fill",
@@ -102,10 +101,7 @@
     "--spectrum-transparent-white-400",
     "--spectrum-white"
   ],
-  "system-theme": [
-    "--system-progress-bar-track-color",
-    "--system-progress-bar-track-color-white"
-  ],
+  "system-theme": [],
   "passthroughs": ["--mod-fieldlabel-font-size"],
   "high-contrast": [
     "--highcontrast-progressbar-fill-color",

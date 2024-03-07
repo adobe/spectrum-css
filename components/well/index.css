@@ -11,9 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Well {
+	--spectrum-well-border-color: rgba(var(--spectrum-gray-1000-rgb), 0.05);
+
 	--spectrum-well-border-width: var(--spectrum-border-width-100);
 	--spectrum-well-content-color: var(--spectrum-body-color);
 	--spectrum-well-background-color: rgba(var(--spectrum-gray-800-rgb), 0.02);

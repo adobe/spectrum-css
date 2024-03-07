@@ -162,16 +162,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 10.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.25...@spectrum-css/toast@10.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.25...@spectrum-css/toast@10.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -179,8 +176,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.25
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.24...@spectrum-css/toast@9.1.25)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.24...@spectrum-css/toast@9.1.25)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -188,8 +184,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.24
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.23...@spectrum-css/toast@9.1.24)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.23...@spectrum-css/toast@9.1.24)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -197,8 +192,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.23
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.22...@spectrum-css/toast@9.1.23)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.22...@spectrum-css/toast@9.1.23)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -206,8 +200,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.22
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.21...@spectrum-css/toast@9.1.22)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.21...@spectrum-css/toast@9.1.22)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -215,8 +208,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.21
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -224,8 +216,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.20
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.19...@spectrum-css/toast@9.1.20)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.19...@spectrum-css/toast@9.1.20)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -233,8 +224,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.19
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.18...@spectrum-css/toast@9.1.19)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.18...@spectrum-css/toast@9.1.19)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -242,8 +232,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.18
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.17...@spectrum-css/toast@9.1.18)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.17...@spectrum-css/toast@9.1.18)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -251,8 +240,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.17
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.15...@spectrum-css/toast@9.1.17)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.15...@spectrum-css/toast@9.1.17)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -260,8 +248,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.16
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.15...@spectrum-css/toast@9.1.16)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.15...@spectrum-css/toast@9.1.16)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -269,8 +256,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.15
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.14...@spectrum-css/toast@9.1.15)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.14...@spectrum-css/toast@9.1.15)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -278,8 +264,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.14
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.13...@spectrum-css/toast@9.1.14)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.13...@spectrum-css/toast@9.1.14)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -287,8 +272,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.13
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.12...@spectrum-css/toast@9.1.13)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.12...@spectrum-css/toast@9.1.13)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -296,8 +280,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.12
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.11...@spectrum-css/toast@9.1.12)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.11...@spectrum-css/toast@9.1.12)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -305,8 +288,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.11
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.10...@spectrum-css/toast@9.1.11)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.10...@spectrum-css/toast@9.1.11)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -314,8 +296,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.10
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.9...@spectrum-css/toast@9.1.10)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.9...@spectrum-css/toast@9.1.10)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -323,8 +304,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.9
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.8...@spectrum-css/toast@9.1.9)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.8...@spectrum-css/toast@9.1.9)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -332,8 +312,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.8
 
-🗓
-2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.7...@spectrum-css/toast@9.1.8)
+🗓 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.7...@spectrum-css/toast@9.1.8)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -341,8 +320,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.7
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.6...@spectrum-css/toast@9.1.7)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.6...@spectrum-css/toast@9.1.7)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -350,8 +328,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.6
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.5...@spectrum-css/toast@9.1.6)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.5...@spectrum-css/toast@9.1.6)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -359,8 +336,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.5
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.4...@spectrum-css/toast@9.1.5)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.4...@spectrum-css/toast@9.1.5)
 
 ### 🔙 Reverts
 
@@ -370,8 +346,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.4
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.3...@spectrum-css/toast@9.1.4)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.3...@spectrum-css/toast@9.1.4)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -379,8 +354,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.3
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.1...@spectrum-css/toast@9.1.3)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.1...@spectrum-css/toast@9.1.3)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -388,8 +362,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.2
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.1...@spectrum-css/toast@9.1.2)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.1...@spectrum-css/toast@9.1.2)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -397,8 +370,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.1
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.0...@spectrum-css/toast@9.1.1)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.1.0...@spectrum-css/toast@9.1.1)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -406,8 +378,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.1.0
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.45...@spectrum-css/toast@9.1.0)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.45...@spectrum-css/toast@9.1.0)
 
 ### ✨ Features
 
@@ -417,8 +388,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.45
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.44...@spectrum-css/toast@9.0.45)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.44...@spectrum-css/toast@9.0.45)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -426,8 +396,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.44
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.43...@spectrum-css/toast@9.0.44)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.43...@spectrum-css/toast@9.0.44)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -435,8 +404,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.43
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.42...@spectrum-css/toast@9.0.43)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.42...@spectrum-css/toast@9.0.43)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -444,8 +412,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.42
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.41...@spectrum-css/toast@9.0.42)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.41...@spectrum-css/toast@9.0.42)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -453,8 +420,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.41
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.40...@spectrum-css/toast@9.0.41)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.40...@spectrum-css/toast@9.0.41)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -462,8 +428,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.40
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.39...@spectrum-css/toast@9.0.40)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.39...@spectrum-css/toast@9.0.40)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -471,8 +436,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.39
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.38...@spectrum-css/toast@9.0.39)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.38...@spectrum-css/toast@9.0.39)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -480,8 +444,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.38
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.37...@spectrum-css/toast@9.0.38)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.37...@spectrum-css/toast@9.0.38)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -489,8 +452,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.37
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.36...@spectrum-css/toast@9.0.37)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.36...@spectrum-css/toast@9.0.37)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -498,8 +460,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.36
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.35...@spectrum-css/toast@9.0.36)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.35...@spectrum-css/toast@9.0.36)
 
 ### 🐛 Bug fixes
 
@@ -509,8 +470,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.35
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.34...@spectrum-css/toast@9.0.35)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.34...@spectrum-css/toast@9.0.35)
 
 **Note:** Version bump only for package @spectrum-css/toast
 
@@ -518,8 +478,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.34
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.33...@spectrum-css/toast@9.0.34)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toast@9.0.33...@spectrum-css/toast@9.0.34)
 
 **Note:** Version bump only for package @spectrum-css/toast
 

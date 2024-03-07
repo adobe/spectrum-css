@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
 	.spectrum-ColorWheel {
@@ -24,6 +22,8 @@
 }
 
 .spectrum-ColorWheel {
+	--spectrum-colorwheel-border-color: var(--spectrum-transparent-black-300);
+
 	--spectrum-colorwheel-width: var(--mod-colorwheel-width, var(--spectrum-color-wheel-width));
 	--spectrum-colorwheel-height: var(--mod-colorwheel-height, var(--spectrum-color-wheel-width));
 	--spectrum-colorwheel-fill-color-disabled: var(--mod-colorwheel-fill-color-disabled, var(--spectrum-disabled-background-color));

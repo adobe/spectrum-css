@@ -18,7 +18,6 @@
     ".spectrum-Combobox--quiet.spectrum-Combobox--sizeS",
     ".spectrum-Combobox--quiet.spectrum-Combobox--sizeXL",
     ".spectrum-Combobox--sizeL",
-    ".spectrum-Combobox--sizeM",
     ".spectrum-Combobox--sizeS",
     ".spectrum-Combobox--sizeXL",
     ".spectrum-Combobox-button",
@@ -249,14 +248,7 @@
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
   ],
-  "system-theme": [
-    "--system-combobox-background-color-disabled",
-    "--system-combobox-border-color-default",
-    "--system-combobox-border-color-focus",
-    "--system-combobox-border-color-focus-hover",
-    "--system-combobox-border-color-hover",
-    "--system-combobox-border-color-key-focus"
-  ],
+  "system-theme": [],
   "passthroughs": [
     "--mod-picker-button-background-color",
     "--mod-picker-button-background-color-disabled",

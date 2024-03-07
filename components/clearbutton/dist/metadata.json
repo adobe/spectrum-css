@@ -72,15 +72,7 @@
     "--spectrum-transparent-white-500",
     "--spectrum-white"
   ],
-  "system-theme": [
-    "--system-clear-button-background-color",
-    "--system-clear-button-background-color-down",
-    "--system-clear-button-background-color-hover",
-    "--system-clear-button-background-color-key-focus",
-    "--system-clear-button-static-white-background-color-down",
-    "--system-clear-button-static-white-background-color-hover",
-    "--system-clear-button-static-white-background-color-key-focus"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-clear-button-icon-color-hover"]
 }
