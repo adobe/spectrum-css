@@ -650,8 +650,8 @@ governing permissions and limitations under the License.
 
 .spectrum-Site {
   /* .spectrum-Site */
-  --spectrum-site-background-color: var(--spectrum-global-color-gray-75);
-  --spectrum-site-content-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-site-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-site-content-background-color: var(--spectrum-global-color-gray-25);
   --spectrum-site-header-border-color: var(--spectrum-global-color-gray-300);
   --spectrum-site-header-background-color: var(--spectrum-site-content-background-color);
   --spectrum-site-sidebar-background-color: var(--spectrum-site-background-color);
@@ -662,8 +662,8 @@ governing permissions and limitations under the License.
   --spectrum-site-overlay-underlay-background-color: rgba(0, 0, 0, 0.2);
 
   /* .spectrum-CSSExample */
-  --spectrum-cssexample-markup-background-color: var(--spectrum-global-color-gray-75);
-  --spectrum-cssexample-border-color: var(--spectrum-global-color-gray-100);
+  --spectrum-cssexample-markup-background-color: var(--spectrum-global-color-gray-50);
+  --spectrum-cssexample-border-color: var(--spectrum-global-color-gray-75);
 }
 
 /* Site */
@@ -695,7 +695,7 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSComponent-resource--adobe {
   color: #FA0F00 !important;
-  background-color: var(--spectrum-global-color-gray-100) !important;
+  background-color: var(--spectrum-global-color-gray-75) !important;
 }
 
 /* Scrollable */
@@ -714,7 +714,7 @@ governing permissions and limitations under the License.
 
 /* CSS Example */
 .spectrum-CSSExample-example {
-  background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-100));
+  background-color: var(--spectrum-alias-background-color-default, var(--spectrum-global-color-gray-75));
 }
 
 .spectrum-CSSExample-markup {
@@ -744,5 +744,5 @@ governing permissions and limitations under the License.
 
 .spectrum-CodeBlock {
   border-color: var(--spectrum-global-color-gray-400);
-  background-color: var(--spectrum-global-color-gray-75);
+  background-color: var(--spectrum-global-color-gray-50);
 }

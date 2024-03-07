@@ -12,10 +12,10 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
     .spectrum-Button {
-        --spectrum-button-background-color-default: var(--spectrum-gray-75);
-        --spectrum-button-background-color-hover: var(--spectrum-gray-200);
-        --spectrum-button-background-color-down: var(--spectrum-gray-300);
-        --spectrum-button-background-color-focus: var(--spectrum-gray-200);
+        --spectrum-button-background-color-default: var(--spectrum-gray-50);
+        --spectrum-button-background-color-hover: var(--spectrum-gray-100);
+        --spectrum-button-background-color-down: var(--spectrum-gray-200);
+        --spectrum-button-background-color-focus: var(--spectrum-gray-100);
 
         --spectrum-button-border-color-default: var(--spectrum-gray-400);
         --spectrum-button-border-color-hover: var(--spectrum-gray-500);
@@ -139,9 +139,9 @@ governing permissions and limitations under the License.
 
             &.spectrum-Button--outline {
                 --spectrum-button-background-color-default: transparent;
-                --spectrum-button-background-color-hover: var(--spectrum-gray-300);
+                --spectrum-button-background-color-hover: var(--spectrum-gray-200);
                 --spectrum-button-background-color-down: var(--spectrum-gray-400);
-                --spectrum-button-background-color-focus: var(--spectrum-gray-300);
+                --spectrum-button-background-color-focus: var(--spectrum-gray-200);
 
                 --spectrum-button-border-color-default: var(--spectrum-gray-800);
                 --spectrum-button-border-color-hover: var(--spectrum-gray-900);
@@ -160,10 +160,10 @@ governing permissions and limitations under the License.
         }
 
         &.spectrum-Button--secondary {
-            --spectrum-button-background-color-default: var(--spectrum-gray-200);
-            --spectrum-button-background-color-hover: var(--spectrum-gray-300);
+            --spectrum-button-background-color-default: var(--spectrum-gray-100);
+            --spectrum-button-background-color-hover: var(--spectrum-gray-200);
             --spectrum-button-background-color-down: var(--spectrum-gray-400);
-            --spectrum-button-background-color-focus: var(--spectrum-gray-300);
+            --spectrum-button-background-color-focus: var(--spectrum-gray-200);
 
             --spectrum-button-border-color-default: transparent;
             --spectrum-button-border-color-hover: transparent;
@@ -181,11 +181,11 @@ governing permissions and limitations under the License.
 
             &.spectrum-Button--outline {
                 --spectrum-button-background-color-default: transparent;
-                --spectrum-button-background-color-hover: var(--spectrum-gray-300);
+                --spectrum-button-background-color-hover: var(--spectrum-gray-200);
                 --spectrum-button-background-color-down: var(--spectrum-gray-400);
-                --spectrum-button-background-color-focus: var(--spectrum-gray-300);
+                --spectrum-button-background-color-focus: var(--spectrum-gray-200);
 
-                --spectrum-button-border-color-default: var(--spectrum-gray-300);
+                --spectrum-button-border-color-default: var(--spectrum-gray-200);
                 --spectrum-button-border-color-hover: var(--spectrum-gray-400);
                 --spectrum-button-border-color-down: var(--spectrum-gray-500);
                 --spectrum-button-border-color-focus: var(--spectrum-gray-400);
@@ -203,9 +203,9 @@ governing permissions and limitations under the License.
 
         &.spectrum-Button--quiet {
             --spectrum-button-background-color-default: transparent;
-            --spectrum-button-background-color-hover: var(--spectrum-gray-200);
-            --spectrum-button-background-color-down: var(--spectrum-gray-300);
-            --spectrum-button-background-color-focus: var(--spectrum-gray-200);
+            --spectrum-button-background-color-hover: var(--spectrum-gray-100);
+            --spectrum-button-background-color-down: var(--spectrum-gray-200);
+            --spectrum-button-background-color-focus: var(--spectrum-gray-100);
 
             --spectrum-button-border-color-default: transparent;
             --spectrum-button-border-color-hover: transparent;
