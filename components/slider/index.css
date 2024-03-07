@@ -88,7 +88,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-track-fill-thickness: var(--spectrum-slider-track-thickness);
   --spectrum-slider-tick-mark-width: var(--spectrum-border-width-200);
   --spectrum-slider-tick-mark-border-radius: 2px;
-  --spectrum-slider-tick-handle-background-color: var(--spectrum-gray-100);
+  --spectrum-slider-tick-handle-background-color: var(--spectrum-gray-75);
 
   /* colors */
   --spectrum-slider-track-color-disabled: var(--spectrum-disabled-background-color);
@@ -97,7 +97,7 @@ governing permissions and limitations under the License.
   --spectrum-slider-label-text-color: var(--spectrum-neutral-content-color-default);
   --spectrum-slider-label-text-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-slider-tick-mark-color-disabled: var(--spectrum-disabled-background-color);
-  --spectrum-slider-ramp-handle-border-color-active: var(--spectrum-gray-100);
+  --spectrum-slider-ramp-handle-border-color-active: var(--spectrum-gray-75);
 
   /* values */
   --spectrum-slider-input-left: calc(var(--spectrum-slider-handle-margin-left) / 4);
