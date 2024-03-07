@@ -48,7 +48,6 @@
     ".spectrum-Textfield--sideLabel .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield--sideLabel:after",
     ".spectrum-Textfield--sizeL",
-    ".spectrum-Textfield--sizeM",
     ".spectrum-Textfield--sizeS",
     ".spectrum-Textfield--sizeXL",
     ".spectrum-Textfield-characterCount",
@@ -324,7 +323,7 @@
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
   ],
-  "system-theme": ["--system-textfield-background-color"],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-textfield-border-color",

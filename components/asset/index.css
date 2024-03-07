@@ -11,14 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Asset {
-	--spectrum-asset-folder-background: var(--highcontrast-asset-icon-background-color, var(--mod-asset-folder-background-color, var(--spectrum-asset-folder-background-color)));
-	--spectrum-asset-file-background: var(--highcontrast-asset-icon-background-color, var(--mod-asset-file-background-color, var(--spectrum-asset-file-background-color)));
-	--spectrum-asset-folder-outline: var(--mod-asset-icon-outline-color, var(--spectrum-asset-icon-outline-color));
-	--spectrum-asset-file-outline: var(--mod-asset-icon-outline-color, var(--spectrum-asset-icon-outline-color));
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -42,19 +35,19 @@
 }
 
 .spectrum-Asset-folderBackground {
-	fill: var(--spectrum-asset-folder-background);
+  fill: var(--highcontrast-asset-icon-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-200)));
 }
 
 .spectrum-Asset-fileBackground {
-	fill: var(--spectrum-asset-file-background);
+  fill: var(--highcontrast-asset-icon-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-25)));
 }
 
 .spectrum-Asset-folderOutline {
-	fill: var(--spectrum-asset-folder-outline);
+	fill: var(--mod-asset-icon-outline-color, var(--spectrum-gray-500));
 }
 
 .spectrum-Asset-fileOutline {
-	fill: var(--spectrum-asset-file-outline);
+	fill: var(--mod-asset-icon-outline-color, var(--spectrum-gray-500));
 }
 
 @media (forced-colors: active) {

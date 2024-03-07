@@ -11,12 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Textfield {
-	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
-	/* disallow mod for max compatibility */
-	--spectrum-textfield-input-line-height: var(--spectrum-textfield-height);
+	--spectrum-textfield-height: var(--spectrum-component-height-100);
+
 	--spectrum-texfield-animation-duration: var(--spectrum-animation-duration-100);
 
 	--spectrum-textfield-width: 240px; /* override per api */
@@ -55,6 +52,9 @@
 	--spectrum-textfield-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
 	--spectrum-textfield-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
+	/*** Colors ***/
+	--spectrum-textfield-background-color: var(--spectrum-gray-25);
+
 	/* Text Colors */
 	--spectrum-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-textfield-text-color-hover: var(--spectrum-neutral-content-color-hover);
@@ -90,11 +90,7 @@
 	/* Text Area / Multiline */
 	--spectrum-text-area-min-inline-size: var(--spectrum-text-area-minimum-width);
 	--spectrum-text-area-min-block-size: var(--spectrum-text-area-minimum-height);
-}
 
-.spectrum-Textfield,
-.spectrum-Textfield--sizeM {
-	--spectrum-textfield-height: var(--spectrum-component-height-100);
 	--spectrum-textfield-label-spacing-block-quiet: var(--spectrum-field-label-to-component-quiet-medium);
 	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);
 	--spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-100);
@@ -343,6 +339,10 @@
 
 /********* Child Element - Input *********/
 .spectrum-Textfield-input {
+	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
+	/* disallow mod for max compatibility */
+	--spectrum-textfield-input-line-height: var(--mod-textfield-height, var(--spectrum-textfield-height));
+
 	/* no mod defined to allow for maximum compatibility */
 	line-height: var(--spectrum-textfield-input-line-height);
 	box-sizing: border-box;

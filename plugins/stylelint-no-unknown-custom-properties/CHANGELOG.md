@@ -25,8 +25,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.3.2
 
-🗓
-2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-tools/stylelint-no-unknown-custom-properties@1.3.1...@spectrum-tools/stylelint-no-unknown-custom-properties@1.3.2)
+🗓 2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-tools/stylelint-no-unknown-custom-properties@1.3.1...@spectrum-tools/stylelint-no-unknown-custom-properties@1.3.2)
 
 **Note:** Version bump only for package @spectrum-tools/stylelint-no-unknown-custom-properties
 
@@ -34,8 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.3.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-tools/stylelint-no-unknown-custom-properties
 
@@ -43,8 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.3.0
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-tools/stylelint-no-unknown-custom-properties@1.2.2...@spectrum-tools/stylelint-no-unknown-custom-properties@1.3.0)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-tools/stylelint-no-unknown-custom-properties@1.2.2...@spectrum-tools/stylelint-no-unknown-custom-properties@1.3.0)
 
 ### ✨ Features
 
@@ -54,8 +51,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.2.2
 
-🗓
-2024-01-16
+🗓 2024-01-16
 
 **Note:** Version bump only for package @spectrum-tools/stylelint-no-unknown-custom-properties
 
