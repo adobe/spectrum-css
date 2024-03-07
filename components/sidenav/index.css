@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
- @import "./themes/spectrum-two.css";
-
  @media (forced-colors: active) {
 	/* forced-color-adjust: preserve-parent-color addresses svg bug on icon hover */
 	.spectrum-SideNav {

@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Dialog {
 	--spectrum-dialog-confirm-divider-block-spacing-start: var(--spectrum-spacing-300);
 	--spectrum-dialog-confirm-divider-block-spacing-end: var(--spectrum-spacing-200);

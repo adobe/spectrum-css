@@ -103,8 +103,7 @@
 	"cssVariables.lookupFiles": [
 		"${workspaceFolder}/tokens/dist/index.css",
 		"${workspaceFolder}/tokens/**/*.css",
-		"${workspaceFolder}/components/*/index.css",
-		"${workspaceFolder}/components/*/themes/*.css"
+		"${workspaceFolder}/components/*/index.css"
 	],
 	"docthis.includeDescriptionTag": true,
 	"docthis.inferTypesFromNames": true,

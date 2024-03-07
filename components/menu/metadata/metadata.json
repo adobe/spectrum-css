@@ -132,7 +132,6 @@
     ".spectrum-Menu.is-selectable .spectrum-Menu-item.is-selected",
     ".spectrum-Menu.js-focus-within .spectrum-Menu-item--collapsible.is-open[focus-within]",
     ".spectrum-Menu.spectrum-Menu--sizeL",
-    ".spectrum-Menu.spectrum-Menu--sizeM",
     ".spectrum-Menu.spectrum-Menu--sizeS",
     ".spectrum-Menu.spectrum-Menu--sizeXL",
     ".spectrum-Menu:lang(ja)",
@@ -342,7 +341,6 @@
     "--spectrum-font-size-300",
     "--spectrum-font-size-50",
     "--spectrum-font-size-75",
-    "--spectrum-gray-1000-rgb",
     "--spectrum-gray-900",
     "--spectrum-line-height-100",
     "--spectrum-navigational-indicator-top-to-back-icon-extra-large",
@@ -367,17 +365,12 @@
     "--spectrum-text-to-visual-200",
     "--spectrum-text-to-visual-300",
     "--spectrum-text-to-visual-75",
-    "--spectrum-transparent-black-200-opacity",
     "--spectrum-workflow-icon-size-100",
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
   ],
-  "system-theme": [
-    "--system-menu-item-background-color-down",
-    "--system-menu-item-background-color-hover",
-    "--system-menu-item-background-color-key-focus"
-  ],
+  "system-theme": [],
   "passthroughs": [
     "--mod-checkbox-text-to-control",
     "--mod-checkbox-top-to-text",

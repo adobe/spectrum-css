@@ -47,10 +47,9 @@
   "global": [
     "--spectrum-border-width-100",
     "--spectrum-color-control-track-width",
-    "--spectrum-disabled-background-color",
-    "--spectrum-transparent-black-300"
+    "--spectrum-disabled-background-color"
   ],
-  "system-theme": ["--system-color-wheel-border-color"],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-colorwheel-border-color-disabled",

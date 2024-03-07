@@ -9,9 +9,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/spectrum.css";
-/* Must be imported last */
-import "../themes/express.css";
 
 export const TreeViewItem = ({
 	rootClass = "spectrum-TreeView",
@@ -106,7 +103,7 @@ export const TreeViewItem = ({
 							: size == "l"  ? "400"
 							: size == "xl" ? "600"
 							: "300",
-						
+
 						isLayer: true,
 						isSelected,
 						isDisabled,

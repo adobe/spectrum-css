@@ -345,8 +345,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 9.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.5...@spectrum-css/tag@9.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.5...@spectrum-css/tag@9.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
@@ -362,8 +361,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.1.5
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.4...@spectrum-css/tag@8.1.5)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.4...@spectrum-css/tag@8.1.5)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -371,8 +369,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.1.4
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.3...@spectrum-css/tag@8.1.4)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.3...@spectrum-css/tag@8.1.4)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -380,8 +377,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.1.3
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.2...@spectrum-css/tag@8.1.3)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.2...@spectrum-css/tag@8.1.3)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -389,8 +385,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.1...@spectrum-css/tag@8.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.1...@spectrum-css/tag@8.1.2)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -398,8 +393,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -407,8 +401,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.1.0
 
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.17...@spectrum-css/tag@8.1.0)
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.17...@spectrum-css/tag@8.1.0)
 
 ### 🐛 Bug fixes
 
@@ -418,8 +411,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.17
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.16...@spectrum-css/tag@8.0.17)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.16...@spectrum-css/tag@8.0.17)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -427,8 +419,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.16
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.15...@spectrum-css/tag@8.0.16)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.15...@spectrum-css/tag@8.0.16)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -436,8 +427,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.15
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.14...@spectrum-css/tag@8.0.15)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.14...@spectrum-css/tag@8.0.15)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -445,8 +435,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.14
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.12...@spectrum-css/tag@8.0.14)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.12...@spectrum-css/tag@8.0.14)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -454,8 +443,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.13
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.12...@spectrum-css/tag@8.0.13)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.12...@spectrum-css/tag@8.0.13)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -463,8 +451,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.12
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.11...@spectrum-css/tag@8.0.12)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.11...@spectrum-css/tag@8.0.12)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -472,8 +459,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.11
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.10...@spectrum-css/tag@8.0.11)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.10...@spectrum-css/tag@8.0.11)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -481,8 +467,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.10
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.9...@spectrum-css/tag@8.0.10)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.9...@spectrum-css/tag@8.0.10)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -490,8 +475,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.9
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.8...@spectrum-css/tag@8.0.9)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.8...@spectrum-css/tag@8.0.9)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -499,8 +483,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.8
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.7...@spectrum-css/tag@8.0.8)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.7...@spectrum-css/tag@8.0.8)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -508,8 +491,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.7
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.6...@spectrum-css/tag@8.0.7)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.6...@spectrum-css/tag@8.0.7)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -517,8 +499,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.6
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.5...@spectrum-css/tag@8.0.6)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.5...@spectrum-css/tag@8.0.6)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -526,8 +507,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.5
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.4...@spectrum-css/tag@8.0.5)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.4...@spectrum-css/tag@8.0.5)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -535,8 +515,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.4
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.3...@spectrum-css/tag@8.0.4)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.3...@spectrum-css/tag@8.0.4)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -544,8 +523,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.3
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.2...@spectrum-css/tag@8.0.3)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.2...@spectrum-css/tag@8.0.3)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -553,8 +531,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.2
 
-🗓
-2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.1...@spectrum-css/tag@8.0.2)
+🗓 2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.1...@spectrum-css/tag@8.0.2)
 
 ### 🔙 Reverts
 
@@ -564,8 +541,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.1
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.0...@spectrum-css/tag@8.0.1)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.0...@spectrum-css/tag@8.0.1)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -573,8 +549,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.0
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@8.0.0)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@8.0.0)
 
 \*refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
 
@@ -595,8 +570,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.0
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@7.0.0)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@7.0.0)
 
 \*refactor(clearbutton)!: migrate tokens (#1943)([495198a](https://github.com/adobe/spectrum-css/commit/495198a)), closes[#1943](https://github.com/adobe/spectrum-css/issues/1943)
 
@@ -617,8 +591,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.1
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.0...@spectrum-css/tag@6.0.1)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.0...@spectrum-css/tag@6.0.1)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -626,8 +599,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.0
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.46...@spectrum-css/tag@6.0.0)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.46...@spectrum-css/tag@6.0.0)
 
 \*fix(tag)!: update color tokens, rename classes to be singular (#2039)([bb60ff4](https://github.com/adobe/spectrum-css/commit/bb60ff4)), closes[#2039](https://github.com/adobe/spectrum-css/issues/2039)
 
@@ -647,8 +619,7 @@ Additionally:
 
 ## 5.0.46
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.45...@spectrum-css/tag@5.0.46)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.45...@spectrum-css/tag@5.0.46)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -656,8 +627,7 @@ Additionally:
 
 ## 5.0.45
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.44...@spectrum-css/tag@5.0.45)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.44...@spectrum-css/tag@5.0.45)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -665,8 +635,7 @@ Additionally:
 
 ## 5.0.44
 
-🗓
-2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.43...@spectrum-css/tag@5.0.44)
+🗓 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.43...@spectrum-css/tag@5.0.44)
 
 ### 🐛 Bug fixes
 
@@ -676,8 +645,7 @@ Additionally:
 
 ## 5.0.43
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.42...@spectrum-css/tag@5.0.43)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.42...@spectrum-css/tag@5.0.43)
 
 ### 🐛 Bug fixes
 
@@ -687,8 +655,7 @@ Additionally:
 
 ## 5.0.42
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.41...@spectrum-css/tag@5.0.42)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.41...@spectrum-css/tag@5.0.42)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -696,8 +663,7 @@ Additionally:
 
 ## 5.0.41
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.40...@spectrum-css/tag@5.0.41)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.40...@spectrum-css/tag@5.0.41)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -705,8 +671,7 @@ Additionally:
 
 ## 5.0.40
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.39...@spectrum-css/tag@5.0.40)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.39...@spectrum-css/tag@5.0.40)
 
 ### 🐛 Bug fixes
 
@@ -716,8 +681,7 @@ Additionally:
 
 ## 5.0.39
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.38...@spectrum-css/tag@5.0.39)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.38...@spectrum-css/tag@5.0.39)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -725,8 +689,7 @@ Additionally:
 
 ## 5.0.38
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.37...@spectrum-css/tag@5.0.38)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.37...@spectrum-css/tag@5.0.38)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -734,8 +697,7 @@ Additionally:
 
 ## 5.0.37
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.36...@spectrum-css/tag@5.0.37)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.36...@spectrum-css/tag@5.0.37)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -743,8 +705,7 @@ Additionally:
 
 ## 5.0.36
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.35...@spectrum-css/tag@5.0.36)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.35...@spectrum-css/tag@5.0.36)
 
 ### 🐛 Bug fixes
 
@@ -754,8 +715,7 @@ Additionally:
 
 ## 5.0.35
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.34...@spectrum-css/tag@5.0.35)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.34...@spectrum-css/tag@5.0.35)
 
 **Note:** Version bump only for package @spectrum-css/tag
 
@@ -763,8 +723,7 @@ Additionally:
 
 ## 5.0.34
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.33...@spectrum-css/tag@5.0.34)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.33...@spectrum-css/tag@5.0.34)
 
 **Note:** Version bump only for package @spectrum-css/tag
 

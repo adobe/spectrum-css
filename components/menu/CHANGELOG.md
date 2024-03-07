@@ -436,16 +436,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.5...@spectrum-css/menu@7.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.5...@spectrum-css/menu@7.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -453,8 +450,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.5
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.4...@spectrum-css/menu@6.1.5)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.4...@spectrum-css/menu@6.1.5)
 
 ### 🐛 Bug fixes
 
@@ -464,8 +460,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.4
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.3...@spectrum-css/menu@6.1.4)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.3...@spectrum-css/menu@6.1.4)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -473,8 +468,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.3
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.2...@spectrum-css/menu@6.1.3)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.2...@spectrum-css/menu@6.1.3)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -482,8 +476,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.2
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.1...@spectrum-css/menu@6.1.2)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.1...@spectrum-css/menu@6.1.2)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -491,8 +484,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.1
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -500,8 +492,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.1.0
 
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.0.0...@spectrum-css/menu@6.1.0)
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.0.0...@spectrum-css/menu@6.1.0)
 
 ### 🐛 Bug fixes
 
@@ -511,8 +502,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 6.0.0
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.2.1...@spectrum-css/menu@6.0.0)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.2.1...@spectrum-css/menu@6.0.0)
 
 ### ✨ Features
 
@@ -520,8 +510,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 \*fix(menu)!: reimplement text truncating (#2299)([9752d02](https://github.com/adobe/spectrum-css/commit/9752d02)), closes[#2299](https://github.com/adobe/spectrum-css/issues/2299)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		removes flex-based display, renames classes, reintroduces truncation
@@ -547,8 +536,7 @@ Additionally:
 
 ## 5.2.1
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.2.0...@spectrum-css/menu@5.2.1)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.2.0...@spectrum-css/menu@5.2.1)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -556,8 +544,7 @@ Additionally:
 
 ## 5.2.0
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.5...@spectrum-css/menu@5.2.0)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.5...@spectrum-css/menu@5.2.0)
 
 ### ✨ Features
 
@@ -571,8 +558,7 @@ Additionally:
 
 ## 5.1.5
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.3...@spectrum-css/menu@5.1.5)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.3...@spectrum-css/menu@5.1.5)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -580,8 +566,7 @@ Additionally:
 
 ## 5.1.4
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.3...@spectrum-css/menu@5.1.4)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.3...@spectrum-css/menu@5.1.4)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -589,8 +574,7 @@ Additionally:
 
 ## 5.1.3
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.2...@spectrum-css/menu@5.1.3)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.2...@spectrum-css/menu@5.1.3)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -598,8 +582,7 @@ Additionally:
 
 ## 5.1.2
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.1...@spectrum-css/menu@5.1.2)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.1...@spectrum-css/menu@5.1.2)
 
 ### 🐛 Bug fixes
 
@@ -609,8 +592,7 @@ Additionally:
 
 ## 5.1.1
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.0...@spectrum-css/menu@5.1.1)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.0...@spectrum-css/menu@5.1.1)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -618,8 +600,7 @@ Additionally:
 
 ## 5.1.0
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.12...@spectrum-css/menu@5.1.0)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.12...@spectrum-css/menu@5.1.0)
 
 ### ✨ Features
 
@@ -629,8 +610,7 @@ Additionally:
 
 ## 5.0.12
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.11...@spectrum-css/menu@5.0.12)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.11...@spectrum-css/menu@5.0.12)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -638,8 +618,7 @@ Additionally:
 
 ## 5.0.11
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.10...@spectrum-css/menu@5.0.11)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.10...@spectrum-css/menu@5.0.11)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -647,8 +626,7 @@ Additionally:
 
 ## 5.0.10
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.9...@spectrum-css/menu@5.0.10)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.9...@spectrum-css/menu@5.0.10)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -656,8 +634,7 @@ Additionally:
 
 ## 5.0.9
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.8...@spectrum-css/menu@5.0.9)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.8...@spectrum-css/menu@5.0.9)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -665,8 +642,7 @@ Additionally:
 
 ## 5.0.8
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.7...@spectrum-css/menu@5.0.8)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.7...@spectrum-css/menu@5.0.8)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -674,8 +650,7 @@ Additionally:
 
 ## 5.0.7
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.6...@spectrum-css/menu@5.0.7)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.6...@spectrum-css/menu@5.0.7)
 
 ### 🔙 Reverts
 
@@ -685,8 +660,7 @@ Additionally:
 
 ## 5.0.6
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.5...@spectrum-css/menu@5.0.6)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.5...@spectrum-css/menu@5.0.6)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -694,8 +668,7 @@ Additionally:
 
 ## 5.0.5
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.3...@spectrum-css/menu@5.0.5)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.3...@spectrum-css/menu@5.0.5)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -703,8 +676,7 @@ Additionally:
 
 ## 5.0.4
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.3...@spectrum-css/menu@5.0.4)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.3...@spectrum-css/menu@5.0.4)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -712,8 +684,7 @@ Additionally:
 
 ## 5.0.3
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.2...@spectrum-css/menu@5.0.3)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.2...@spectrum-css/menu@5.0.3)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -721,8 +692,7 @@ Additionally:
 
 ## 5.0.2
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.1...@spectrum-css/menu@5.0.2)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.1...@spectrum-css/menu@5.0.2)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -730,8 +700,7 @@ Additionally:
 
 ## 5.0.1
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.0...@spectrum-css/menu@5.0.1)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.0...@spectrum-css/menu@5.0.1)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -739,8 +708,7 @@ Additionally:
 
 ## 5.0.0
 
-🗓
-2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.50...@spectrum-css/menu@5.0.0)
+🗓 2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.50...@spectrum-css/menu@5.0.0)
 
 ### ✨ Features
 
@@ -940,8 +908,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.50
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.49...@spectrum-css/menu@4.0.50)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.49...@spectrum-css/menu@4.0.50)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -949,8 +916,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.49
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.48...@spectrum-css/menu@4.0.49)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.48...@spectrum-css/menu@4.0.49)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -958,8 +924,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.48
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.47...@spectrum-css/menu@4.0.48)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.47...@spectrum-css/menu@4.0.48)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -967,8 +932,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.47
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.46...@spectrum-css/menu@4.0.47)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.46...@spectrum-css/menu@4.0.47)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -976,8 +940,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.46
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.45...@spectrum-css/menu@4.0.46)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.45...@spectrum-css/menu@4.0.46)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -985,8 +948,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.45
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.44...@spectrum-css/menu@4.0.45)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.44...@spectrum-css/menu@4.0.45)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -994,8 +956,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.44
 
-🗓
-2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.43...@spectrum-css/menu@4.0.44)
+🗓 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.43...@spectrum-css/menu@4.0.44)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -1003,8 +964,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.43
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.42...@spectrum-css/menu@4.0.43)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.42...@spectrum-css/menu@4.0.43)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -1012,8 +972,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.42
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.41...@spectrum-css/menu@4.0.42)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.41...@spectrum-css/menu@4.0.42)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -1021,8 +980,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.41
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.40...@spectrum-css/menu@4.0.41)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.40...@spectrum-css/menu@4.0.41)
 
 ### 🐛 Bug fixes
 
@@ -1032,8 +990,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.40
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.39...@spectrum-css/menu@4.0.40)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.39...@spectrum-css/menu@4.0.40)
 
 **Note:** Version bump only for package @spectrum-css/menu
 
@@ -1041,8 +998,7 @@ Adds new standard section about -mod custom properties.
 
 ## 4.0.39
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.38...@spectrum-css/menu@4.0.39)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.38...@spectrum-css/menu@4.0.39)
 
 **Note:** Version bump only for package @spectrum-css/menu
 

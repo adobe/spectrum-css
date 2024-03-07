@@ -7,7 +7,6 @@
 | `--mod-modal-confirm-entry-animation-duration` |
 | `--mod-modal-confirm-exit-animation-delay`     |
 | `--mod-modal-confirm-exit-animation-duration`  |
-| `--mod-modal-fullscreen-margin`                |
 | `--mod-modal-max-height`                       |
 | `--mod-modal-max-width`                        |
 | `--mod-modal-transition-animation-duration`    |

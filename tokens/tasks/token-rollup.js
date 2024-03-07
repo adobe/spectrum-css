@@ -20,7 +20,7 @@ const path = require("path");
 const fg = require("fast-glob");
 
 const { processCSS } = require("../../tasks/component-builder.js");
-const { copy, writeAndReport, dirs, fetchContent } = require("../../tasks/utilities.js");
+const { copy, writeAndReport, fetchContent } = require("../../tasks/utilities.js");
 
 require("colors");
 
@@ -41,71 +41,6 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
 	const contents = inputs.map(input => `@import "${input}";`).join("\n");
 	if (!contents) return;
 	return processCSS(contents, undefined, outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true });
-}
-
-/**
- * Compile the theming assets for each component
- * @param {Object} config
- * @param {string} [config.cwd=process.cwd()] - Current working directory for the component
- * @returns
- */
-async function componentTheming() {
-	const components = fs.readdirSync(dirs.components).filter((file) => fs.existsSync(path.join(dirs.components, file, "package.json")));
-
-	const promises = [];
-	for (const component of components) {
-		const componentDir = path.join(dirs.components, component);
-		if (!fs.existsSync(path.join(componentDir, "themes"))) continue;
-
-		// This fetches the content of the files and returns an array of objects with the content and input paths
-		const contentData = await fetchContent(["themes/*.css"], { cwd: componentDir });
-
-		// Nothing to do if there's no content
-		if (!contentData || contentData.length === 0) continue;
-
-		const imports = contentData.map(({ input }) => `@import "${input}";`).join("\n");
-
-		const sharedPostCSSConfig = {
-			cwd: componentDir,
-			configPath: componentDir,
-			map: false,
-			env: "production",
-		};
-
-		promises.push(
-			// Create a bridge asset for each component
-			processCSS(
-				imports,
-				path.join(componentDir, "index.css"),
-				path.join(
-					dirs.tokens,
-					"dist",
-					"css",
-					"components",
-					"bridge",
-					`${component}.css`,
-				),
-				{
-					skipMapping: false,
-					stripLocalSelectors: false,
-					referencesOnly: true,
-					...sharedPostCSSConfig,
-				},
-			),
-			...contentData.map(async ({ content, input }) => {
-				return processCSS(content, path.join(componentDir, input), path.join(dirs.tokens, "dist", "css", "components", path.basename(input, ".css"), `${component}.css`), {
-					skipMapping: false,
-					// Only output the new selectors with the system mappings
-					stripLocalSelectors: true,
-					referencesOnly: false,
-					preserveVariables: true,
-					...sharedPostCSSConfig,
-				});
-			}),
-		);
-	}
-
-	return Promise.all(promises);
 }
 
 /**
@@ -156,7 +91,6 @@ async function main({
 	const compiledOutputPath = path.join(cwd, "dist");
 
 	return Promise.all([
-		componentTheming(),
 		// Wait for all the custom files to be processed
 		appendCustomOverrides({ cwd }),
 	]).then(async (r) => {

@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-ColorLoupe {
 	inline-size: var(--spectrum-color-loupe-width);
 	block-size: var(--spectrum-color-loupe-height);

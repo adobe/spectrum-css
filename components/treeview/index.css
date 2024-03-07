@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 @media (forced-colors: active) {
 	.spectrum-TreeView {
 		--highcontrast-treeview-item-background-color-selected: Highlight;
@@ -54,8 +52,37 @@
 	}
 }
 
-.spectrum-TreeView,
-.spectrum-TreeView--sizeM {
+.spectrum-TreeView {
+	--spectrum-treeview-item-indentation: var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-sized-indentation));
+	--spectrum-treeview-section-spacing: var(--mod-treeview-section-spacing, var(--spectrum-treeview-item-indentation));
+	--spectrum-treeview-heading-color: var(--highcontrast-treeview-heading-color, var(--mod-treeview-heading-color, var(--spectrum-heading-color)));
+
+	--spectrum-treeview-item-border-size: var(--mod-treeview-item-border-size, var(--spectrum-border-width-200));
+	--spectrum-treeview-item-border-size-selected: var(--mod-treeview-item-border-size-selected, 1px);
+	--spectrum-treeview-item-border-radius: var(--mod-treeview-item-border-radius, 0px);
+
+	--spectrum-treeview-item-border-color-selected: var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected, var(--spectrum-blue-800)));
+	--spectrum-treeview-item-border-color-focus: var(--highcontrast-treeview-item-border-color-focus, var(--mod-treeview-item-border-color-focus, var(--spectrum-blue-700)));
+
+	--spectrum-treeview-item-border-color-quiet-selected: var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected-quiet, transparent));
+
+	--spectrum-treeview-item-icon-gap: var(--mod-treeview-item-icon-gap, var(--spectrum-text-to-visual-75));
+	--spectrum-treeview-item-icon-color: var(--highcontrast-treeview-item-icon-color, var(--mod-treeview-item-icon-color, var(--spectrum-gray-700)));
+	--spectrum-treeview-item-icon-color-hover: var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-icon-color-hover, var(--spectrum-gray-900)));
+	--spectrum-treeview-item-icon-color-focus: var(--highcontrast-treeview-item-icon-color-focus, var(--mod-treeview-item-icon-color-focus, var(--spectrum-gray-900)));
+	--spectrum-treeview-item-icon-color-selected: var(--highcontrast-treeview-item-icon-color-selected, var(--mod-treeview-item-icon-color-selected, var(--spectrum-gray-900)));
+	--spectrum-treeview-item-icon-color-disabled: var(--highcontrast-treeview-item-icon-color-disabled, var(--mod-treeview-item-icon-color-disabled, var(--spectrum-disabled-content-color)));
+
+	--spectrum-treeview-item-text-color: var(--highcontrast-treeview-item-text-color, var(--mod-treeview-item-text-color, var(--spectrum-neutral-content-color-default)));
+	--spectrum-treeview-item-text-color-selected: var(--highcontrast-treeview-item-text-color-selected, var(--mod-treeview-item-text-color-selected, var(--spectrum-gray-900)));
+	--spectrum-treeview-item-text-color-disabled: var(--highcontrast-treeview-item-text-color-disabled, var(--mod-treeview-item-text-color-disabled, var(--spectrum-gray-500)));
+	--spectrum-treeview-item-text-color-focus: var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-text-color-focus, var(--spectrum-gray-900)));
+	--spectrum-treeview-item-text-color-hover: var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-text-color-hover, var(--spectrum-gray-900)));
+
+	--spectrum-treeview-indicator-animation-duration: var(--mod-treeview-indicator-animation-duration, var(--spectrum-animation-duration-100));
+
+	--spectrum-treeview-item-min-block-size: var(--mod-treeview-item-min-block-size, var(--spectrum-treeview-item-sized-min-block-size));
+
 	--spectrum-treeview-font-size: var(--mod-treeview-font-size, var(--spectrum-font-size-100));
 
 	--spectrum-treeview-item-sized-min-block-size: var(--mod-treeview-item-min-block-size, var(--spectrum-component-height-100));
@@ -68,6 +95,19 @@
 	--spectrum-treeview-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-medium);
 
 	--spectrum-treeview-item-min-block-size-thumbnail-offset: var(--spectrum-treeview-item-min-block-size-thumbnail-offset-medium, 0);
+
+	&.spectrum-TreeView--quiet {
+		--mod-treeview-item-background-color-selected: var(--highcontrast-treeview-item-background-color-selected, var(--mod-treeview-item-background-color-quiet-selected, var(--spectrum-treeview-item-background-color-quiet-selected)));
+		--mod-treeview-item-border-color-selected: var(--spectrum-treeview-item-border-color-quiet-selected);
+	}
+
+	&.spectrum-TreeView--thumbnail {
+		--spectrum-treeview-item-min-block-size: var(--mod-treeview-item-min-block-size-thumbnail, calc(var(--spectrum-treeview-item-sized-min-block-size) + var(--spectrum-treeview-item-min-block-size-thumbnail-offset)));
+	}
+
+	&.spectrum-TreeView--detached {
+		--mod-treeview-item-border-radius: var(--mod-treeview-item-border-radius-detached, var(--spectrum-corner-radius-100));
+	}
 }
 
 .spectrum-TreeView--sizeS {
@@ -116,49 +156,6 @@
 }
 
 .spectrum-TreeView {
-	--spectrum-treeview-item-indentation: var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-sized-indentation));
-	--spectrum-treeview-section-spacing: var(--mod-treeview-section-spacing, var(--spectrum-treeview-item-indentation));
-	--spectrum-treeview-heading-color: var(--highcontrast-treeview-heading-color, var(--mod-treeview-heading-color, var(--spectrum-heading-color)));
-
-	--spectrum-treeview-item-border-size: var(--mod-treeview-item-border-size, var(--spectrum-border-width-200));
-	--spectrum-treeview-item-border-size-selected: var(--mod-treeview-item-border-size-selected, 1px);
-	--spectrum-treeview-item-border-radius: var(--mod-treeview-item-border-radius, 0px);
-
-	--spectrum-treeview-item-border-color-selected: var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected, var(--spectrum-blue-800)));
-	--spectrum-treeview-item-border-color-focus: var(--highcontrast-treeview-item-border-color-focus, var(--mod-treeview-item-border-color-focus, var(--spectrum-blue-700)));
-
-	--spectrum-treeview-item-border-color-quiet-selected: var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected-quiet, transparent));
-
-	--spectrum-treeview-item-icon-gap: var(--mod-treeview-item-icon-gap, var(--spectrum-text-to-visual-75));
-	--spectrum-treeview-item-icon-color: var(--highcontrast-treeview-item-icon-color, var(--mod-treeview-item-icon-color, var(--spectrum-gray-700)));
-	--spectrum-treeview-item-icon-color-hover: var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-icon-color-hover, var(--spectrum-gray-900)));
-	--spectrum-treeview-item-icon-color-focus: var(--highcontrast-treeview-item-icon-color-focus, var(--mod-treeview-item-icon-color-focus, var(--spectrum-gray-900)));
-	--spectrum-treeview-item-icon-color-selected: var(--highcontrast-treeview-item-icon-color-selected, var(--mod-treeview-item-icon-color-selected, var(--spectrum-gray-900)));
-	--spectrum-treeview-item-icon-color-disabled: var(--highcontrast-treeview-item-icon-color-disabled, var(--mod-treeview-item-icon-color-disabled, var(--spectrum-disabled-content-color)));
-
-	--spectrum-treeview-item-text-color: var(--highcontrast-treeview-item-text-color, var(--mod-treeview-item-text-color, var(--spectrum-neutral-content-color-default)));
-	--spectrum-treeview-item-text-color-selected: var(--highcontrast-treeview-item-text-color-selected, var(--mod-treeview-item-text-color-selected, var(--spectrum-gray-900)));
-	--spectrum-treeview-item-text-color-disabled: var(--highcontrast-treeview-item-text-color-disabled, var(--mod-treeview-item-text-color-disabled, var(--spectrum-gray-500)));
-	--spectrum-treeview-item-text-color-focus: var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-text-color-focus, var(--spectrum-gray-900)));
-	--spectrum-treeview-item-text-color-hover: var(--highcontrast-treeview-item-text-color-focus, var(--mod-treeview-item-text-color-hover, var(--spectrum-gray-900)));
-
-	--spectrum-treeview-indicator-animation-duration: var(--mod-treeview-indicator-animation-duration, var(--spectrum-animation-duration-100));
-
-	--spectrum-treeview-item-min-block-size: var(--mod-treeview-item-min-block-size, var(--spectrum-treeview-item-sized-min-block-size));
-
-	&.spectrum-TreeView--quiet {
-		--mod-treeview-item-background-color-selected: var(--highcontrast-treeview-item-background-color-selected, var(--mod-treeview-item-background-color-quiet-selected, var(--spectrum-treeview-item-background-color-quiet-selected)));
-		--mod-treeview-item-border-color-selected: var(--spectrum-treeview-item-border-color-quiet-selected);
-	}
-
-	&.spectrum-TreeView--thumbnail {
-		--spectrum-treeview-item-min-block-size: var(--mod-treeview-item-min-block-size-thumbnail, calc(var(--spectrum-treeview-item-sized-min-block-size) + var(--spectrum-treeview-item-min-block-size-thumbnail-offset)));
-	}
-
-	&.spectrum-TreeView--detached {
-		--mod-treeview-item-border-radius: var(--mod-treeview-item-border-radius-detached, var(--spectrum-corner-radius-100));
-	}
-
 	display: block;
 	position: relative;
 	padding: 0;
