@@ -19,6 +19,20 @@ export const Template = ({
 	onclick,
 	...globals
 }) => {
+	let iconName = "Cross300";
+	switch (size) {
+		case "s":
+			iconName = "Cross200";
+			break;
+		case "l":
+			iconName = "Cross400";
+			break;
+		case "xl":
+			iconName = "Cross500";
+			break;
+		default:
+			iconName = "Cross300";
+	}
 
 	return html`
 		<button
@@ -38,7 +52,7 @@ export const Template = ({
 			${Icon({
 				...globals,
 				size,
-				iconName: "Cross",
+				iconName,
 				customClasses: [`${rootClass}-UIIcon`],
 			})}
 		</button>
