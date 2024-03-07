@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 /* Windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-Swatch {
@@ -34,8 +32,11 @@
 	}
 }
 
-.spectrum-Swatch,
-.spectrum-Swatch--sizeS {
+.spectrum-Swatch {
+	--spectrum-swatch-border-color: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-swatch-border-color-opacity));
+	--spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-25);
+	--spectrum-swatch-disabled-icon-color: var(--spectrum-gray-25);
+
 	--spectrum-swatch-size: var(--spectrum-swatch-size-small);
 	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);

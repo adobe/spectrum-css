@@ -152,6 +152,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Removes component-builder & component-builder-simple for script leveraging postcss
 - Imports added to index.css and themes/express.css
 
+  * Removes component-builder & component-builder-simple for script leveraging postcss
+
+* Imports added to index.css and themes/express.css
+
 <a name="6.2.5"></a>
 
 ## 6.2.5

@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 @media (forced-colors: active) {
 	.spectrum-TreeView {
 		--highcontrast-treeview-item-background-color-selected: Highlight;
@@ -54,8 +52,10 @@
 	}
 }
 
-.spectrum-TreeView,
-.spectrum-TreeView--sizeM {
+.spectrum-TreeView {
+	--spectrum-treeview-item-background-color-hover: var(--spectrum-gray-100);
+	--spectrum-treeview-item-background-color-focus: var(--spectrum-gray-100);
+
 	--spectrum-treeview-font-size: var(--mod-treeview-font-size, var(--spectrum-font-size-100));
 
 	--spectrum-treeview-item-sized-min-block-size: var(--mod-treeview-item-min-block-size, var(--spectrum-component-height-100));

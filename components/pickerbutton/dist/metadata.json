@@ -112,7 +112,6 @@
     "--spectrum-component-height-300",
     "--spectrum-component-height-75",
     "--spectrum-corner-radius-200",
-    "--spectrum-corner-radius-75",
     "--spectrum-default-font-style",
     "--spectrum-disabled-background-color",
     "--spectrum-disabled-content-color",
@@ -124,9 +123,6 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-100",
-    "--spectrum-gray-200",
-    "--spectrum-gray-50",
     "--spectrum-neutral-content-color-default",
     "--spectrum-neutral-content-color-down",
     "--spectrum-neutral-content-color-hover",
@@ -137,18 +133,7 @@
     "--spectrum-text-to-visual-300",
     "--spectrum-text-to-visual-50"
   ],
-  "system-theme": [
-    "--system-picker-button-background-color",
-    "--system-picker-button-background-color-down",
-    "--system-picker-button-background-color-hover",
-    "--system-picker-button-background-color-key-focus",
-    "--system-picker-button-border-color",
-    "--system-picker-button-border-radius",
-    "--system-picker-button-border-radius-rounded-sided",
-    "--system-picker-button-border-radius-sided",
-    "--system-picker-button-border-width",
-    "--system-picker-button-padding"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": []
 }

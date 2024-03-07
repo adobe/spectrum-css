@@ -213,21 +213,6 @@ module.exports = {
 			}
 		},
 		{
-			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/*.css", "!components/*/themes/spectrum.css"],
-			rules: {
-				"spectrum-tools/no-unused-custom-properties": null,
-				"selector-class-pattern": [
-					"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
-						resolveNestedSelectors: true
-					}
-				],
-				"spectrum-tools/theme-alignment": [true, {
-					baseFilename: "spectrum-two",
-				}],
-			},
-		},
-		{
 			/* Allow "tree shaking" of unused custom properties in the bundle */
 			files: ["tools/bundle/**/*.css"],
 			rules: {

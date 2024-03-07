@@ -27,8 +27,15 @@
   ],
   "component": [
     "--spectrum-divider-background-color",
-    "--spectrum-divider-background-color-static-black",
-    "--spectrum-divider-background-color-static-white",
+    "--spectrum-divider-background-color-large",
+    "--spectrum-divider-background-color-large-static-black",
+    "--spectrum-divider-background-color-large-static-white",
+    "--spectrum-divider-background-color-medium",
+    "--spectrum-divider-background-color-medium-static-black",
+    "--spectrum-divider-background-color-medium-static-white",
+    "--spectrum-divider-background-color-small",
+    "--spectrum-divider-background-color-small-static-black",
+    "--spectrum-divider-background-color-small-static-white",
     "--spectrum-divider-thickness",
     "--spectrum-divider-thickness-large",
     "--spectrum-divider-thickness-medium",
@@ -37,16 +44,12 @@
   "global": [
     "--spectrum-gray-200",
     "--spectrum-gray-800",
-    "--spectrum-transparent-black-200",
+    "--spectrum-transparent-black-300",
     "--spectrum-transparent-black-800",
-    "--spectrum-transparent-white-200",
+    "--spectrum-transparent-white-300",
     "--spectrum-transparent-white-800"
   ],
-  "system-theme": [
-    "--system-divider-background-color",
-    "--system-divider-background-color-static-black",
-    "--system-divider-background-color-static-white"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-divider-background-color"]
 }

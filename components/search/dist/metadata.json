@@ -26,7 +26,6 @@
     ".spectrum-Search-textfield:hover .spectrum-Search-icon",
     ".spectrum-Search.is-disabled .spectrum-Search-clearButton",
     ".spectrum-Search.spectrum-Search--sizeL",
-    ".spectrum-Search.spectrum-Search--sizeM",
     ".spectrum-Search.spectrum-Search--sizeS",
     ".spectrum-Search.spectrum-Search--sizeXL",
     ".spectrum-Search:not(.spectrum-Search--quiet) .spectrum-Search-icon",
@@ -149,24 +148,7 @@
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
   ],
-  "system-theme": [
-    "--system-search-background-color",
-    "--system-search-border-color-default",
-    "--system-search-border-color-focus",
-    "--system-search-border-color-focus-hover",
-    "--system-search-border-color-hover",
-    "--system-search-border-color-key-focus",
-    "--system-search-border-radius",
-    "--system-search-edge-to-visual",
-    "--system-search-size-l-border-radius",
-    "--system-search-size-l-edge-to-visual",
-    "--system-search-size-m-border-radius",
-    "--system-search-size-m-edge-to-visual",
-    "--system-search-size-s-border-radius",
-    "--system-search-size-s-edge-to-visual",
-    "--system-search-size-xl-border-radius",
-    "--system-search-size-xl-edge-to-visual"
-  ],
+  "system-theme": [],
   "passthroughs": [
     "--mod-textfield-background-color",
     "--mod-textfield-background-color-disabled",

@@ -12,7 +12,6 @@
     ".spectrum-Radio--emphasized:focus .spectrum-Radio-input:checked + .spectrum-Radio-button:before",
     ".spectrum-Radio--emphasized:hover .spectrum-Radio-input:checked + .spectrum-Radio-button:before",
     ".spectrum-Radio--sizeL",
-    ".spectrum-Radio--sizeM",
     ".spectrum-Radio--sizeS",
     ".spectrum-Radio--sizeXL",
     ".spectrum-Radio-button",
@@ -150,9 +149,6 @@
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
     "--spectrum-gray-50",
-    "--spectrum-gray-600",
-    "--spectrum-gray-700",
-    "--spectrum-gray-800",
     "--spectrum-line-height-100",
     "--spectrum-neutral-background-color-selected-default",
     "--spectrum-neutral-background-color-selected-down",
@@ -167,13 +163,7 @@
     "--spectrum-text-to-control-300",
     "--spectrum-text-to-control-75"
   ],
-  "system-theme": [
-    "--system-radio-button-background-color",
-    "--system-radio-button-border-color-default",
-    "--system-radio-button-border-color-down",
-    "--system-radio-button-border-color-focus",
-    "--system-radio-button-border-color-hover"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-radio-button-background-color",

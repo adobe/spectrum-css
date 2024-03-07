@@ -11,10 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
+.spectrum-ProgressBar {
+	--spectrum-progressbar-track-color: var(--spectrum-gray-200);
+	--spectrum-progressbar-track-color-white: var(--spectrum-transparent-white-400);
 
-.spectrum-ProgressBar,
-.spectrum-ProgressBar--sizeM {
 	--spectrum-progressbar-sized-size-default: var(--spectrum-progressbar-size-2400);
 	--spectrum-progressbar-sized-font-size: var(--spectrum-font-size-75);
 	/* @todo should this be --spectrum-progress-bar-thickness-medium? */

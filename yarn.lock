@@ -3662,7 +3662,7 @@ __metadata:
   resolution: "@spectrum-css/actionbar@workspace:components/actionbar"
   dependencies:
     "@spectrum-css/actiongroup": "npm:6.0.1"
-    "@spectrum-css/closebutton": "npm:6.0.1"
+    "@spectrum-css/closebutton": "npm:5.0.0-next.2"
     "@spectrum-css/fieldlabel": "npm:10.0.1"
     "@spectrum-css/popover": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
@@ -3745,7 +3745,7 @@ __metadata:
   resolution: "@spectrum-css/alertbanner@workspace:components/alertbanner"
   dependencies:
     "@spectrum-css/button": "npm:14.0.1"
-    "@spectrum-css/closebutton": "npm:6.0.1"
+    "@spectrum-css/closebutton": "npm:5.0.0-next.2"
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
@@ -4124,20 +4124,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/closebutton@npm:6.0.1, @spectrum-css/closebutton@workspace:^, @spectrum-css/closebutton@workspace:components/closebutton":
+"@spectrum-css/closebutton@npm:5.0.0-next.2, @spectrum-css/closebutton@workspace:^, @spectrum-css/closebutton@workspace:components/closebutton":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/closebutton@workspace:components/closebutton"
   dependencies:
     "@spectrum-css/commons": "workspace:^"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
-    eslint: "npm:^8.57.0"
-    npm-run-all2: "npm:^7.0.2"
-    prettier: "npm:^3.4.2"
-    stylelint: "npm:^16.9.0"
   peerDependencies:
     "@spectrum-css/icon": ">=7"
-    "@spectrum-css/tokens": ">=14 || >=15"
+    "@spectrum-css/tokens": ">=14.0.0-next.3"
   languageName: unknown
   linkType: soft
 
@@ -4379,7 +4375,7 @@ __metadata:
   resolution: "@spectrum-css/dialog@workspace:components/dialog"
   dependencies:
     "@spectrum-css/buttongroup": "workspace:^"
-    "@spectrum-css/closebutton": "npm:6.0.1"
+    "@spectrum-css/closebutton": "npm:5.0.0-next.2"
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/modal": "npm:7.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
@@ -5281,7 +5277,7 @@ __metadata:
   resolution: "@spectrum-css/toast@workspace:components/toast"
   dependencies:
     "@spectrum-css/button": "npm:14.0.1"
-    "@spectrum-css/closebutton": "npm:6.0.1"
+    "@spectrum-css/closebutton": "npm:5.0.0-next.2"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:16.0.0"
     eslint: "npm:^8.57.0"

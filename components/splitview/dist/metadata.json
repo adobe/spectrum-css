@@ -75,17 +75,14 @@
     "--spectrum-body-color",
     "--spectrum-border-width-200",
     "--spectrum-border-width-400",
+    "--spectrum-corner-radius-100",
     "--spectrum-focus-indicator-color",
     "--spectrum-gray-200",
     "--spectrum-gray-400",
     "--spectrum-gray-75",
     "--spectrum-gray-800"
   ],
-  "system-theme": [
-    "--system-split-view-background-color",
-    "--system-split-view-gripper-border-radius",
-    "--system-split-view-handle-background-color"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-splitview-handle-background-color",

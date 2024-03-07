@@ -8,7 +8,7 @@
 		}
 	},
 	"namedInputs": {
-		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
+		"core": ["{projectRoot}/*.css"],
 		"eslint": ["{workspaceRoot}/.eslintrc"],
 		"metadata": ["{projectRoot}/metadata/*.json"],
 		"prettier": ["{workspaceRoot}/.prettierrc"],
@@ -54,9 +54,7 @@
 			},
 			"outputs": [
 				"{projectRoot}/dist/*.{css,json}",
-				"{projectRoot}/dist/themes/*.css",
-				"{projectRoot}/dist/*.map",
-				"{projectRoot}/dist/themes/*.css.map"
+				"{projectRoot}/dist/*.map"
 			]
 		},
 		"clean": {

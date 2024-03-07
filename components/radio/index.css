@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 /*
  * Radio:
  *  ::before is to style the input circle (selection indicator)
@@ -20,6 +18,14 @@
  */
 
 .spectrum-Radio {
+	/* selection indicator */
+	--spectrum-radio-button-border-color-default: var(--spectrum-gray-600);
+	--spectrum-radio-button-border-color-hover: var(--spectrum-gray-700);
+	--spectrum-radio-button-border-color-down: var(--spectrum-gray-800);
+	--spectrum-radio-button-border-color-focus: var(--spectrum-gray-700);
+
+	--spectrum-radio-button-background-color: var(--spectrum-gray-50);
+
 	/* state colors for all themes */
 	--spectrum-radio-neutral-content-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-radio-neutral-content-color-hover: var(--spectrum-neutral-content-color-hover);
