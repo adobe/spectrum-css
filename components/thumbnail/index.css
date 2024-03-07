@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Thumbnail,
 .spectrum-Thumbnail--size500 {
 	--spectrum-thumbnail-sized-size: var(--spectrum-thumbnail-size-500);

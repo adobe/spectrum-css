@@ -12,22 +12,18 @@
  */
 
 .spectrum-ActionGroup {
-  --spectrum-actiongroup-border-radius-reset: 0;
-  --spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
-  --spectrum-actiongroup-gap-size-compact: var(--spectrum-spacing-50);
+	--spectrum-actiongroup-border-radius-reset: 0;
+	--spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-actiongroup-gap-size-compact: var(--spectrum-spacing-50);
+
+	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
 }
 
 .spectrum-ActionGroup--sizeXS,
 .spectrum-ActionGroup--sizeS {
 	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
 	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
-}
-
-.spectrum-ActionGroup--sizeM,
-.spectrum-ActionGroup--sizeL,
-.spectrum-ActionGroup--sizeXL {
-	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
 }
 
 .spectrum-ActionGroup {
@@ -73,17 +69,17 @@
 			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 
-      border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-    }
+			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+		}
 
-    &:last-child {
-      /* Action button passthrough styling */
-      --mod-actionbutton-focus-indicator-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
+		&:last-child {
+			/* Action button passthrough styling */
+			--mod-actionbutton-focus-indicator-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
 
-      border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-    }
+			border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+		}
 
 		&.is-selected {
 			z-index: 1;
@@ -114,18 +110,18 @@
 			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px;
 
-      border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-    }
+			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+		}
 
-    &:last-child {
-      /* Action button passthrough styling */
-      --mod-actionbutton-focus-indicator-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+		&:last-child {
+			/* Action button passthrough styling */
+			--mod-actionbutton-focus-indicator-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 
-      border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-    }
-  }
+			border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+		}
+	}
 }
 
 .spectrum-ActionGroup--justified .spectrum-ActionGroup-item {

@@ -122,7 +122,6 @@
     "--spectrum-animation-duration-100",
     "--spectrum-border-width-100",
     "--spectrum-component-edge-to-text-100",
-    "--spectrum-component-height-100",
     "--spectrum-corner-radius-100",
     "--spectrum-disabled-border-color",
     "--spectrum-disabled-content-color",
@@ -139,7 +138,7 @@
     "--spectrum-text-to-visual-100",
     "--spectrum-workflow-icon-size-100"
   ],
-  "system-theme": ["--system-date-picker-initial-height"],
+  "system-theme": [],
   "passthroughs": [
     "--mod-picker-button-background-color",
     "--mod-picker-button-background-color-hover-disabled",

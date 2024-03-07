@@ -151,7 +151,6 @@
     "--spectrum-neutral-subdued-content-color-down",
     "--spectrum-neutral-subdued-content-color-hover",
     "--spectrum-neutral-subdued-content-color-key-focus",
-    "--spectrum-regular-font-weight",
     "--spectrum-sans-font-family-stack",
     "--spectrum-tab-item-bottom-to-text-extra-large",
     "--spectrum-tab-item-bottom-to-text-large",
@@ -206,10 +205,7 @@
     "--spectrum-workflow-icon-size-50",
     "--spectrum-workflow-icon-size-75"
   ],
-  "system-theme": [
-    "--system-tabs-divider-background-color",
-    "--system-tabs-font-weight"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-tabs-color",

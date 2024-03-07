@@ -107,17 +107,10 @@
   "global": [
     "--spectrum-accent-content-color-default",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
-    "--spectrum-transparent-white-1000",
     "--spectrum-transparent-white-300",
-    "--spectrum-transparent-white-400",
     "--spectrum-transparent-white-900"
   ],
-  "system-theme": [
-    "--system-progress-circle-fill-border-color-over-background",
-    "--system-progress-circle-track-border-color",
-    "--system-progress-circle-track-border-color-over-background"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-progress-circle-fill-border-color",
