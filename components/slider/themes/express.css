@@ -13,19 +13,19 @@ governing permissions and limitations under the License.
 
 @container (--system: express) {
     .spectrum-Slider {
-        --spectrum-slider-track-color: var(--spectrum-gray-200);
+        --spectrum-slider-track-color: var(--spectrum-gray-100);
         --spectrum-slider-track-fill-color: var(--spectrum-gray-600);
-        --spectrum-slider-ramp-track-color: var(--spectrum-gray-300);
-        --spectrum-slider-ramp-track-color-disabled:  var(--spectrum-gray-200);
+        --spectrum-slider-ramp-track-color: var(--spectrum-gray-200);
+        --spectrum-slider-ramp-track-color-disabled:  var(--spectrum-gray-100);
 
-        --spectrum-slider-handle-background-color: var(--spectrum-gray-50);
-        --spectrum-slider-handle-background-color-disabled: var(--spectrum-gray-50);
-        --spectrum-slider-ramp-handle-background-color: var(--spectrum-gray-50);
-        --spectrum-slider-ticks-handle-background-color: var(--spectrum-gray-50);
+        --spectrum-slider-handle-background-color: var(--spectrum-gray-25);
+        --spectrum-slider-handle-background-color-disabled: var(--spectrum-gray-25);
+        --spectrum-slider-ramp-handle-background-color: var(--spectrum-gray-25);
+        --spectrum-slider-ticks-handle-background-color: var(--spectrum-gray-25);
         --spectrum-slider-handle-border-color: var(--spectrum-gray-800);
-        --spectrum-slider-handle-disabled-background-color: var(--spectrum-gray-50);
+        --spectrum-slider-handle-disabled-background-color: var(--spectrum-gray-25);
 
-        --spectrum-slider-tick-mark-color: var(--spectrum-gray-200);
+        --spectrum-slider-tick-mark-color: var(--spectrum-gray-100);
 
         --spectrum-slider-handle-border-color-hover: var(--spectrum-gray-900);
         --spectrum-slider-handle-border-color-down: var(--spectrum-gray-900);
