@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="6.1.5"></a>
+##6.1.5
+🗓
+2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.4...@spectrum-css/menu@6.1.5)
+
+### 🐛 Bug fixes
+
+- **menu:**disabled color for value text and add disabled stories ([#2579](https://github.com/adobe/spectrum-css/issues/2579))([f0fae60](https://github.com/adobe/spectrum-css/commit/f0fae60))
+
 <a name="6.1.4"></a>
 ##6.1.4
 🗓

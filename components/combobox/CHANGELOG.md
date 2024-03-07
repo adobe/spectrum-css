@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.6"></a>
+##2.1.6
+🗓
+2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/combobox@2.1.5...@spectrum-css/combobox@2.1.6)
+
+**Note:** Version bump only for package @spectrum-css/combobox
+
 <a name="2.1.5"></a>
 ##2.1.5
 🗓
