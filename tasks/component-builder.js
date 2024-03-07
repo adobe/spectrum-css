@@ -174,80 +174,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 }
 
 /**
- * The builder for the individual themes assets
- * @param {object} config
- * @param {string} config.cwd - Current working directory for the component being built
- * @param {boolean} config.clean - Should the built assets be cleaned before running the build
- * @returns Promise<void>
- */
-async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
-	// This fetches the content of the files and returns an array of objects with the content and input paths
-	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
-
-	// Nothing to do if there's no content
-	if (!contentData || contentData.length === 0) return;
-
-	const imports = contentData.map(({ input }) => input);
-	const importMap = imports.map((i) => `@import "${i}";`).join("\n");
-
-	const promises = contentData.map(async ({ content, input }) =>
-		processCSS(
-			content,
-			path.join(cwd, input),
-			path.join(cwd, "dist", input),
-			{
-				cwd,
-				clean,
-				lint: false,
-				skipMapping: false,
-				referencesOnly: false,
-				preserveVariables: true,
-				// Only output the new selectors with the system mappings
-				stripLocalSelectors: true,
-				shouldCombine: true,
-				theme: path.basename(input, ".css"),
-				map: false,
-				env: "production",
-			},
-		),
-	);
-
-	promises.push(
-		processCSS(
-			undefined,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-base.css"),
-			{
-				cwd,
-				clean,
-				skipMapping: false,
-				referencesOnly: true,
-				preserveVariables: true,
-				stripLocalSelectors: true,
-			},
-		),
-		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
-		processCSS(
-			importMap,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-theme.css"),
-			{
-				cwd,
-				clean,
-				resolveImports: true,
-				skipMapping: false,
-				stripLocalSelectors: false,
-				referencesOnly: true,
-				shouldCombine: false,
-				map: false,
-			},
-		),
-	);
-
-	return Promise.all(promises);
-}
-
-/**
  * The main entry point for this tool; this builds a CSS component
  * @param {object} config
  * @param {string} [config.componentName=process.env.NX_TASK_TARGET_PROJECT] - Current working directory for the component being built
@@ -284,7 +210,6 @@ async function main({
 
 	return Promise.all([
 		build({ cwd, clean }),
-		buildThemes({ cwd, clean }),
 	])
 		.then((report) => {
 			const logs = report.flat(Infinity).filter(Boolean);

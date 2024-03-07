@@ -435,18 +435,7 @@
     "--spectrum-transparent-white-100",
     "--spectrum-transparent-white-25"
   ],
-  "system-theme": [
-    "--system-table-border-color",
-    "--system-table-divider-color",
-    "--system-table-header-background-color",
-    "--system-table-icon-color-focus",
-    "--system-table-icon-color-focus-hover",
-    "--system-table-quiet-header-background-color",
-    "--system-table-quiet-row-background-color",
-    "--system-table-row-background-color",
-    "--system-table-section-header-background-color",
-    "--system-table-summary-row-background-color"
-  ],
+  "system-theme": [],
   "passthroughs": ["--mod-checkbox-spacing", "--mod-thumbnail-size"],
   "high-contrast": [
     "--highcontrast-table-border-color",

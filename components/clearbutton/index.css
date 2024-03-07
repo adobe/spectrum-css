@@ -11,9 +11,12 @@
 * governing permissions and limitations under the License.
 */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-ClearButton {
+	--spectrum-clear-button-background-color: transparent;
+	--spectrum-clear-button-background-color-hover: transparent;
+	--spectrum-clear-button-background-color-down: transparent;
+	--spectrum-clear-button-background-color-key-focus: transparent;
+
 	--spectrum-clear-button-height: var(--spectrum-component-height-100);
 	--spectrum-clear-button-width: var(--spectrum-component-height-100);
 	--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);
@@ -57,6 +60,10 @@
 	}
 
 	&.spectrum-ClearButton--staticWhite {
+		--spectrum-clear-button-background-color-hover: var(--spectrum-transparent-white-400);
+		--spectrum-clear-button-background-color-down: var(--spectrum-transparent-white-500);
+		--spectrum-clear-button-background-color-key-focus: var(--spectrum-transparent-white-400);
+
 		--mod-clear-button-icon-color: var(--spectrum-white);
 		--mod-clear-button-icon-color-hover: var(--spectrum-white);
 		--mod-clear-button-icon-color-down: var(--spectrum-white);

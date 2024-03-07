@@ -1,10 +1,10 @@
 {
 	"name": "@spectrum-css/closebutton",
-	"version": "6.0.1",
+	"version": "5.0.0-next.2",
 	"description": "The Spectrum CSS close button component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/?path=/docs/components-close-button--docs",
+	"homepage": "https://opensource.adobe.com/spectrum-css/closebutton",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/adobe/spectrum-css.git",
@@ -17,34 +17,33 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
-		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
 		"./stories/*": "./stories/*"
 	},
 	"main": "dist/index.css",
+	"files": [
+		"dist/*",
+		"*.md",
+		"package.json",
+		"stories/*",
+		"metadata/*"
+	],
 	"peerDependencies": {
 		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/tokens": ">=14 || >=15"
+		"@spectrum-css/tokens": ">=14.0.0-next.3"
 	},
 	"devDependencies": {
 		"@spectrum-css/commons": "workspace:^",
-		"@spectrum-css/icon": "9.0.1",
-		"@spectrum-css/tokens": "16.0.0",
-		"eslint": "^8.57.0",
-		"npm-run-all2": "^7.0.2",
-		"prettier": "^3.4.2",
-		"stylelint": "^16.9.0"
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
-		"design-system",
 		"spectrum",
-		"spectrum-css",
-		"adobe",
-		"adobe-spectrum",
-		"component",
-		"css"
+		"css",
+		"design system",
+		"adobe"
 	],
 	"publishConfig": {
 		"access": "public"
