@@ -11,15 +11,14 @@ sections:
       ### x/x/2024 - Version 5.0.0
       #### Spectrum 2 release
       Close button now uses Spectrum 2 tokens and specifications. A few notable changes and additions:
-        * Removes all static-specific `--mod` custom properties since they are no longer needed:
+        * Removes all static-specific `--mod` custom properties since they are no longer needed. The existing background-color mods can be used instead:
             | Removed |
             |-----------------------------------------------------|
             | `--mod-closebutton-static-background-color-default` |
             | `--mod-closebutton-static-background-color-down`    |
             | `--mod-closebutton-static-background-color-focus`   |
             | `--mod-closebutton-static-background-color-hover`   |
-          
-          Consumers can use these existing background-color mods instead:
+
             | Use these existing mods instead              |
             |----------------------------------------------|
             | `--mod-closebutton-background-color-default` |
@@ -27,13 +26,18 @@ sections:
             | `--mod-closebutton-background-color-focus`   |
             | `--mod-closebutton-background-color-hover`   |
           
-        * Also removes `--mod-closebutton-size` since it was only used for a rounded border-radius, that is now set with a single rounding token.
+        * The mod custom property `--mod-closebutton-size` has been removed. It was only used for rounded corners, that are now set with a single rounding token.
         * The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
         * The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
+        * Separate regular and large "Icon size" variants have been removed.
 
-      ### Versions prior to 5.0
-      #### Sizing
-      Close button supports different sized icons. By default, you should use the following icons:
+      ### 8/16/2023 - Version 4.0.0
+      #### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
+
+      ### 8/3/2022 - Version 2.0.0
+      #### Sizing and Spectrum tokens migration
+      Close button was migrated to use Spectrum tokens. Close button now supports different sizes. By default, the following icons should be used for each size:
 
       | Close button classname          | UI icon classname           |
       | ------------------------------- | --------------------------- |
@@ -41,72 +45,18 @@ sections:
       | `.spectrum-CloseButton--sizeM`  | `.spectrum-UIIcon-Cross100` |
       | `.spectrum-CloseButton--sizeL`  | `.spectrum-UIIcon-Cross200` |
       | `.spectrum-CloseButton--sizeXL` | `.spectrum-UIIcon-Cross300` |
-
-      #### Remove focus-ring class
-      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
-  - id: close
-    name: Icon Size - Regular
-    markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
-
-          <div class="spectrum-Examples-itemGroup">
-            <button class="spectrum-CloseButton spectrum-CloseButton--sizeS">
-              <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross75" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross75" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
-
-          <div class="spectrum-Examples-itemGroup">
-            <button class="spectrum-CloseButton spectrum-CloseButton--sizeM">
-              <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross100" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
-
-          <div class="spectrum-Examples-itemGroup">
-            <button class="spectrum-CloseButton spectrum-CloseButton--sizeL">
-              <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross200" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
-
-          <div class="spectrum-Examples-itemGroup">
-            <button class="spectrum-CloseButton spectrum-CloseButton--sizeXL">
-              <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross300" focusable="false" aria-hidden="true">
-                <use xlink:href="#spectrum-css-icon-Cross300" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-  - id: closebutton-largeicon
-    name: Icon Size - Large
+  - id: closebutton
+    name: Sizing
     description: |
-      Close button supports different sized icons. For cases where you need large icons, you should use the following icons:
+      At each size, Close button uses a specific UI icon size:
 
-      | Close button classname          | UI icon classname           |
-      | ------------------------------- | --------------------------- |
-      | `.spectrum-CloseButton--sizeS`  | `.spectrum-UIIcon-Cross200` |
-      | `.spectrum-CloseButton--sizeM`  | `.spectrum-UIIcon-Cross300` |
-      | `.spectrum-CloseButton--sizeL`  | `.spectrum-UIIcon-Cross400` |
-      | `.spectrum-CloseButton--sizeXL` | `.spectrum-UIIcon-Cross500` |
+      | Close button size  | UI icon    |
+      | ------------------ | ---------- |
+      | Small              | `Cross200` |
+      | Medium             | `Cross300` |
+      | Large              | `Cross400` |
+      | Extra large        | `Cross500` |
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
