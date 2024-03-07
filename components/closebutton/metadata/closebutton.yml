@@ -8,6 +8,28 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/closebutton/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
+      ### x/x/2024 - Version 5.0.0
+      #### Spectrum 2 release
+      Close button now uses Spectrum 2 tokens and specifications. A few notable changes and additions:
+        * Removes all static-specific `--mod` custom properties since they are no longer needed:
+            | Removed |
+            |-----------------------------------------------------|
+            | `--mod-closebutton-static-background-color-default` |
+            | `--mod-closebutton-static-background-color-down`    |
+            | `--mod-closebutton-static-background-color-focus`   |
+            | `--mod-closebutton-static-background-color-hover`   |
+          
+          Consumers can use these existing background-color mods instead:
+            | Use these existing mods instead              |
+            |----------------------------------------------|
+            | `--mod-closebutton-background-color-default` |
+            | `--mod-closebutton-background-color-down`    |
+            | `--mod-closebutton-background-color-focus`   |
+            | `--mod-closebutton-background-color-hover`   |
+          
+        * Also removes --mod-closebutton-size since we'll be setting rounded border-radius with a single rounding token, to be formally implemented as part of [S2 Corner Rounding](https://github.com/adobe/spectrum-css/pull/2559/files#diff-d6e9caa794bd8e1c659425d223e23ab53a93a254f00fb11a626e1b7563bd0c61R39-R41).
+      
+
       ### Sizing
       Close button supports different sized icons. By default, you should use the following icons:
 
