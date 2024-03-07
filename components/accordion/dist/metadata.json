@@ -159,7 +159,6 @@
     "--spectrum-background-opacity-down",
     "--spectrum-background-opacity-hover",
     "--spectrum-background-opacity-key-focus",
-    "--spectrum-body-color",
     "--spectrum-body-sans-serif-font-style",
     "--spectrum-body-sans-serif-font-weight",
     "--spectrum-body-size-l",
@@ -198,11 +197,7 @@
     "--spectrum-neutral-content-color-key-focus",
     "--spectrum-sans-font-family-stack"
   ],
-  "system-theme": [
-    "--system-accordion-divider-color",
-    "--system-accordion-item-content-color",
-    "--system-accordion-item-content-disabled-color"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": []
 }

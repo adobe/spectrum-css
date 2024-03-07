@@ -157,11 +157,10 @@
     "--spectrum-default-font-style",
     "--spectrum-focus-indicator-thickness",
     "--spectrum-font-size-400",
+    "--spectrum-gray-100",
     "--spectrum-gray-500",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
-    "--spectrum-gray-75",
-    "--spectrum-gray-75-rgb",
     "--spectrum-gray-900",
     "--spectrum-heading-cjk-font-style",
     "--spectrum-heading-cjk-font-weight",
@@ -173,15 +172,9 @@
     "--spectrum-sans-font-family-stack",
     "--spectrum-spacing-300",
     "--spectrum-spacing-75",
-    "--spectrum-transparent-black-300",
     "--spectrum-white"
   ],
-  "system-theme": [
-    "--system-asset-card-background-color",
-    "--system-asset-card-overlay-background-color",
-    "--system-asset-card-selectionindicator-background-color-default",
-    "--system-asset-card-selectionindicator-box-shadow-color"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-assectcard-border-color-selected-down",

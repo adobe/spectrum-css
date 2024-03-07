@@ -32,7 +32,19 @@
 		--spectrum-coach-indicator-ring-diameter-size: var(--mod-coach-indicator-quiet-ring-diameter, var(--spectrum-coach-indicator-quiet-ring-diameter));
 		--spectrum-coach-indicator-animation-ring-inner-delay-multiple: var(--mod-coach-indicator-quiet-animation-ring-inner-delay-multiple, -0.33);
 	}
-    
+
+	/* @deprecated .spectrum-CoachIndicator--light */
+	&.spectrum-CoachIndicator--light {
+		/* @deprecated --mod-coach-indicator-ring-light-color, use --mod-coach-indicator-ring-default-color instead */
+		--spectrum-coach-indicator-ring-default-color: var(--mod-coach-indicator-ring-light-color, var(--spectrum-white));
+	}
+
+	/* @deprecated .spectrum-CoachIndicator--dark */
+	&.spectrum-CoachIndicator--dark {
+		/* @deprecated --mod-coach-indicator-ring-dark-color, use --mod-coach-indicator-ring-default-color instead */
+		--spectrum-coach-indicator-ring-default-color: var(--mod-coach-indicator-ring-dark-color, var(--spectrum-black));
+	}
+
 	&.spectrum-CoachIndicator--staticWhite {
 		--spectrum-coach-indicator-ring-default-color: var(--spectrum-white);
 	}

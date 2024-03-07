@@ -12,9 +12,15 @@
  */
 
 .spectrum-ActionGroup {
-  --spectrum-actiongroup-border-radius-reset: 0;
-  --spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
-  --spectrum-actiongroup-gap-size-compact: var(--spectrum-spacing-50);
+	--spectrum-actiongroup-gap-size-compact: 0;
+
+	/* account for button border */
+	--spectrum-actiongroup-horizontal-spacing-compact: -1px;
+	--spectrum-actiongroup-vertical-spacing-compact: -1px;
+
+	--spectrum-actiongroup-button-spacing-reset: 0;
+	--spectrum-actiongroup-border-radius-reset: 0;
+	--spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
 }
 
 .spectrum-ActionGroup--sizeXS,
@@ -73,17 +79,28 @@
 			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 
-      border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-    }
+			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+		}
 
-    &:last-child {
-      /* Action button passthrough styling */
-      --mod-actionbutton-focus-indicator-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
+		& + .spectrum-ActionGroup-item {
+			/* @passthrough -- Action button styling */
+			--mod-actionbutton-focus-indicator-border-radius: 0px;
 
-      border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-    }
+			margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
+			margin-inline-end: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
+		}
+
+		&:last-child {
+			/* @passthrough -- Action button styling */
+			--mod-actionbutton-focus-indicator-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
+
+			border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
+			margin-inline-end: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
+		}
 
 		&.is-selected {
 			z-index: 1;
@@ -114,18 +131,30 @@
 			/* @passthrough -- Action button styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px;
 
-      border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-    }
+			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+			margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+			margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+		}
 
-    &:last-child {
-      /* Action button passthrough styling */
-      --mod-actionbutton-focus-indicator-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+		& + .spectrum-ActionGroup-item {
+			margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+			margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+			margin-block-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+			margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+		}
 
-      border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-      border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-    }
-  }
+		&:last-child {
+			/* @passthrough -- Action button styling */
+			--mod-actionbutton-focus-indicator-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+
+			border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+			margin-block-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+		}
+	}
 }
 
 .spectrum-ActionGroup--justified .spectrum-ActionGroup-item {

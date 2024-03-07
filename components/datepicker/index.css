@@ -11,9 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-DatePicker {
+	--spectrum-datepicker-initial-height: var(--spectrum-component-height-100);
+
 	--spectrum-datepicker-border-radius: var(--mod-datepicker-border-radius, var(--spectrum-corner-radius-100));
 	--spectrum-datepicker-border-radius-quiet: var(--mod-datepicker-border-radius-quiet, 0);
 	--spectrum-datepicker-border-width: var(--spectrum-border-width-100);

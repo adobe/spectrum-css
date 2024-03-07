@@ -20,12 +20,9 @@
   ],
   "component": [
     "--spectrum-asset-file-background",
-    "--spectrum-asset-file-background-color",
     "--spectrum-asset-file-outline",
     "--spectrum-asset-folder-background",
-    "--spectrum-asset-folder-background-color",
-    "--spectrum-asset-folder-outline",
-    "--spectrum-asset-icon-outline-color"
+    "--spectrum-asset-folder-outline"
   ],
   "global": [
     "--spectrum-animation-duration-100",
@@ -33,11 +30,7 @@
     "--spectrum-gray-25",
     "--spectrum-gray-500"
   ],
-  "system-theme": [
-    "--system-asset-file-background-color",
-    "--system-asset-folder-background-color",
-    "--system-asset-icon-outline-color"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-asset-icon-background-color"]
 }
