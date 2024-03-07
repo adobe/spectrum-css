@@ -49,7 +49,6 @@
 | `--mod-actionbutton-min-width`                                    |
 | `--mod-actionbutton-static-content-color`                         |
 | `--mod-actionbutton-text-to-visual`                               |
-| `--mod-animation-duration-100`                                    |
 | `--mod-button-animation-duration`                                 |
 | `--mod-button-font-family`                                        |
 | `--mod-button-line-height`                                        |

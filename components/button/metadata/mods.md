@@ -1,6 +1,5 @@
 | Modifiable custom properties               |
 | ------------------------------------------ |
-| `--mod-animation-duration-100`             |
 | `--mod-bold-font-weight`                   |
 | `--mod-button-animation-duration`          |
 | `--mod-button-background-color-default`    |

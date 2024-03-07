@@ -45,10 +45,10 @@ governing permissions and limitations under the License.
   -webkit-appearance: button;
   border-style: solid;
 
-  transition: background var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
-    border-color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
-    color var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out,
-    box-shadow var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out;
+  transition: background var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+    border-color var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+    color var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out,
+    box-shadow var(--mod-button-animation-duration, var(--spectrum-animation-duration-100)) ease-out;
 
   -webkit-font-smoothing: antialiased;
 

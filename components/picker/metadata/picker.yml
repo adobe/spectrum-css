@@ -12,6 +12,7 @@ sections:
       Picker now uses Spectrum 2 tokens and specifications. A few notable changes:
       - The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
       - The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
+      - The mod custom property `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`.
 
       ### Versions prior to 8.0
       #### Component renamed

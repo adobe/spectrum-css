@@ -1,6 +1,5 @@
 | Modifiable custom properties                             |
 | -------------------------------------------------------- |
-| `--mod-animation-duration-100`                           |
 | `--mod-button-animation-duration`                        |
 | `--mod-button-focus-indicator-gap`                       |
 | `--mod-button-font-family`                               |
