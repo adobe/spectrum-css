@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 /*
  * .spectrum-Checkbox-box::before is the Checkbox "box"
  * .spectrum-Checkbox-box::after is the focus indicator
@@ -29,6 +27,7 @@
 
 	--spectrum-checkbox-content-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-checkbox-control-color-disabled: var(--spectrum-disabled-content-color);
+	--spectrum-checkbox-checkmark-color: var(--spectrum-gray-50);
 
 	--spectrum-checkbox-invalid-color-default: var(--spectrum-negative-color-900);
 	--spectrum-checkbox-invalid-color-hover: var(--spectrum-negative-color-1000);
@@ -56,10 +55,7 @@
 	--spectrum-checkbox-selected-border-width: calc(var(--spectrum-checkbox-control-size) / 2);
 
 	--spectrum-checkbox-animation-duration: var(--spectrum-animation-duration-100);
-}
 
-.spectrum-Checkbox,
-.spectrum-Checkbox--sizeM {
 	--spectrum-checkbox-font-size: var(--spectrum-font-size-100);
 
 	--spectrum-checkbox-height: var(--spectrum-component-height-100);

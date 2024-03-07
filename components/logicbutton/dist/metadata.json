@@ -51,25 +51,24 @@
   ],
   "component": [
     "--spectrum-logic-button-and-background-color",
-    "--spectrum-logic-button-and-background-color-disabled",
     "--spectrum-logic-button-and-background-color-hover",
-    "--spectrum-logic-button-and-background-color-hover-disabled",
     "--spectrum-logic-button-and-border-color",
-    "--spectrum-logic-button-and-border-color-disabled",
     "--spectrum-logic-button-and-border-color-hover",
-    "--spectrum-logic-button-and-border-color-hover-disabled",
     "--spectrum-logic-button-and-text-color",
     "--spectrum-logic-button-border-radius",
+    "--spectrum-logic-button-border-width",
+    "--spectrum-logic-button-focus-indicator-color",
+    "--spectrum-logic-button-focus-indicator-gap",
+    "--spectrum-logic-button-focus-indicator-width",
+    "--spectrum-logic-button-font-size",
+    "--spectrum-logic-button-font-weight",
+    "--spectrum-logic-button-height",
     "--spectrum-logic-button-or-background-color",
-    "--spectrum-logic-button-or-background-color-disabled",
     "--spectrum-logic-button-or-background-color-hover",
-    "--spectrum-logic-button-or-background-color-hover-disabled",
     "--spectrum-logic-button-or-border-color",
-    "--spectrum-logic-button-or-border-color-disabled",
     "--spectrum-logic-button-or-border-color-hover",
-    "--spectrum-logic-button-or-border-color-hover-disabled",
     "--spectrum-logic-button-or-text-color",
-    "--spectrum-logic-button-text-color-disabled"
+    "--spectrum-logic-button-padding"
   ],
   "global": [
     "--spectrum-animation-duration-100",
@@ -88,16 +87,7 @@
     "--spectrum-sans-font-family-stack",
     "--spectrum-white"
   ],
-  "system-theme": [
-    "--system-logic-button-and-background-color-disabled",
-    "--system-logic-button-and-background-color-hover-disabled",
-    "--system-logic-button-and-border-color-disabled",
-    "--system-logic-button-and-border-color-hover-disabled",
-    "--system-logic-button-or-background-color-disabled",
-    "--system-logic-button-or-background-color-hover-disabled",
-    "--system-logic-button-or-border-color-disabled",
-    "--system-logic-button-or-border-color-hover-disabled"
-  ],
+  "system-theme": [],
   "passthroughs": [
     "--mod-button-animation-duration",
     "--mod-button-focus-indicator-gap",

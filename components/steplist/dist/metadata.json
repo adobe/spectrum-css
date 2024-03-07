@@ -72,7 +72,7 @@
     "--spectrum-steplist-current-label-text-color",
     "--spectrum-steplist-current-marker-color",
     "--spectrum-steplist-current-marker-color-key-focus",
-    "--spectrum-steplist-incomplete-label-color",
+    "--spectrum-steplist-incomplete-label-text-color",
     "--spectrum-steplist-incomplete-marker-border-color",
     "--spectrum-steplist-incomplete-segment-border-block-end-color",
     "--spectrum-steplist-label-labelOffset",
@@ -91,10 +91,7 @@
     "--spectrum-gray-700",
     "--spectrum-gray-800"
   ],
-  "system-theme": [
-    "--system-steplist-incomplete-marker-border-color",
-    "--system-steplist-incomplete-segment-border-block-end-color"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-steplist-complete-marker-background-color",

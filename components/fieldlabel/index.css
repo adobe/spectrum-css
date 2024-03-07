@@ -13,8 +13,7 @@
 
 /* @todo align modifiers to use field-label or fieldlabel but not both */
 
-.spectrum-FieldLabel,
-.spectrum-FieldLabel--sizeM {
+.spectrum-FieldLabel {
 	--spectrum-field-label-min-height: var(--spectrum-component-height-75);
 	--spectrum-field-label-top-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-field-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);

@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-PickerButton {
 	--spectrum-picker-button-height: var(--spectrum-component-height-100);
 	--spectrum-picker-button-width: var(--spectrum-component-height-100);

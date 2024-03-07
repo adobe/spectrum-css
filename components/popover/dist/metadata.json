@@ -139,7 +139,6 @@
     "--spectrum-animation-duration-0",
     "--spectrum-animation-duration-100",
     "--spectrum-background-layer-2-color",
-    "--spectrum-border-width-100",
     "--spectrum-corner-radius-100",
     "--spectrum-drop-shadow-blur",
     "--spectrum-drop-shadow-color",
@@ -148,7 +147,7 @@
     "--spectrum-gray-400",
     "--spectrum-spacing-100"
   ],
-  "system-theme": ["--system-popover-border-width"],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-popover-border-color"]
 }

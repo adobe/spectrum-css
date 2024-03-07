@@ -210,15 +210,6 @@ module.exports = {
 			}
 		},
 		{
-			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "!components/*/themes/spectrum-two.css"],
-			rules: {
-				"spectrum-tools/theme-alignment": [true, {
-					baseFilename: "spectrum-two",
-				}],
-			},
-		},
-		{
 			/* Allow "tree shaking" of unused custom properties in the bundle */
 			files: ["tools/bundle/**/*.css"],
 			rules: {

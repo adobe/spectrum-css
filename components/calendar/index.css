@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-Calendar {
 	--spectrum-calendar-day-width: var(--mod-calendar-day-width, var(--spectrum-component-height-100));
 	--spectrum-calendar-day-height: var(--mod-calendar-day-height, var(--spectrum-component-height-100));

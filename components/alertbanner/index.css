@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-AlertBanner {
 	--spectrum-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
 	--spectrum-alert-banner-max-inline-size: var(--spectrum-alert-banner-width);

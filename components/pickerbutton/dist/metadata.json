@@ -107,12 +107,10 @@
   "global": [
     "--spectrum-animation-duration-100",
     "--spectrum-body-sans-serif-font-weight",
-    "--spectrum-border-width-100",
     "--spectrum-component-height-100",
     "--spectrum-component-height-200",
     "--spectrum-component-height-300",
     "--spectrum-component-height-75",
-    "--spectrum-corner-radius-100",
     "--spectrum-corner-radius-200",
     "--spectrum-default-font-style",
     "--spectrum-disabled-background-color",
@@ -125,9 +123,6 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-100",
-    "--spectrum-gray-200",
-    "--spectrum-gray-50",
     "--spectrum-in-field-button-edge-to-fill",
     "--spectrum-neutral-content-color-default",
     "--spectrum-neutral-content-color-down",
@@ -139,17 +134,7 @@
     "--spectrum-text-to-visual-300",
     "--spectrum-text-to-visual-50"
   ],
-  "system-theme": [
-    "--system-picker-button-background-color",
-    "--system-picker-button-background-color-down",
-    "--system-picker-button-background-color-hover",
-    "--system-picker-button-background-color-key-focus",
-    "--system-picker-button-border-color",
-    "--system-picker-button-border-radius",
-    "--system-picker-button-border-radius-rounded-sided",
-    "--system-picker-button-border-radius-sided",
-    "--system-picker-button-border-width"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": []
 }

@@ -166,7 +166,6 @@
     "--spectrum-font-size-100",
     "--spectrum-font-size-300",
     "--spectrum-font-size-50",
-    "--spectrum-gray-100-rgb",
     "--spectrum-gray-800",
     "--spectrum-logical-rotation",
     "--spectrum-neutral-content-color-default",
@@ -176,7 +175,7 @@
     "--spectrum-neutral-subdued-content-color-default",
     "--spectrum-regular-font-weight"
   ],
-  "system-theme": ["--system-calendar-day-background-color-selected-disabled"],
+  "system-theme": [],
   "passthroughs": [
     "--mod-actionbutton-content-color-default",
     "--mod-actionbutton-edge-to-text",
