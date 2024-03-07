@@ -164,54 +164,54 @@ a.spectrum-CloseButton {
 		}
 	}
 
-/* COLORS */
-  &:not(:disabled) {
-    background-color: var(--highcontrast-closebutton-background-color-default, var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default)));
+	/* COLORS */
+	&:not(:disabled) {
+		background-color: var(--highcontrast-closebutton-background-color-default, var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default)));
 
-    &:hover {
-      background-color: var(--mod-closebutton-background-color-hover, var(--spectrum-closebutton-background-color-hover));
+		&:hover {
+			background-color: var(--mod-closebutton-background-color-hover, var(--spectrum-closebutton-background-color-hover));
 
-      .spectrum-CloseButton-UIIcon {
-        color: var(--highcontrast-closebutton-icon-color-hover, var(--mod-closebutton-icon-color-hover, var(--spectrum-closebutton-icon-color-hover)));
-      }
-    }
+			.spectrum-CloseButton-UIIcon {
+				color: var(--highcontrast-closebutton-icon-color-hover, var(--mod-closebutton-icon-color-hover, var(--spectrum-closebutton-icon-color-hover)));
+			}
+		}
 
-    &:active {
-      background-color: var(--mod-closebutton-background-color-down, var(--spectrum-closebutton-background-color-down));
+		&:active {
+			background-color: var(--mod-closebutton-background-color-down, var(--spectrum-closebutton-background-color-down));
 
-      .spectrum-CloseButton-UIIcon {
-        color: var(--highcontrast-closebutton-icon-color-down, var(--mod-closebutton-icon-color-down, var(--spectrum-closebutton-icon-color-down)));
-      }
-    }
+			.spectrum-CloseButton-UIIcon {
+				color: var(--highcontrast-closebutton-icon-color-down, var(--mod-closebutton-icon-color-down, var(--spectrum-closebutton-icon-color-down)));
+			}
+		}
 
-    &:focus-visible,
-    &.is-keyboardFocused {
-      background-color: var(--mod-closebutton-background-color-focus, var(--spectrum-closebutton-background-color-focus));
+		&:focus-visible,
+		&.is-keyboardFocused {
+			background-color: var(--mod-closebutton-background-color-focus, var(--spectrum-closebutton-background-color-focus));
 
-      .spectrum-CloseButton-UIIcon {
-        color: var(--highcontrast-closebutton-icon-color-focus, var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus)));
-      }
-    }
+			.spectrum-CloseButton-UIIcon {
+				color: var(--highcontrast-closebutton-icon-color-focus, var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus)));
+			}
+		}
 
-    .spectrum-CloseButton-UIIcon {
-      color: var(--mod-closebutton-icon-color-default, var(--spectrum-closebutton-icon-color-default));
-    }
+		.spectrum-CloseButton-UIIcon {
+			color: var(--mod-closebutton-icon-color-default, var(--spectrum-closebutton-icon-color-default));
+		}
 
-    &:focus,
-    &.is-focused {
-      .spectrum-CloseButton-UIIcon {
-        color: var(--highcontrast-closebutton-icon-color-focus, var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus)));
-      }
-    }
-  }
+		&:focus,
+		&.is-focused {
+			.spectrum-CloseButton-UIIcon {
+				color: var(--highcontrast-closebutton-icon-color-focus, var(--mod-closebutton-icon-color-focus, var(--spectrum-closebutton-icon-color-focus)));
+			}
+		}
+	}
 
-  &:disabled {
-    background-color: var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default));
+	&:disabled {
+		background-color: var(--mod-closebutton-background-color-default, var(--spectrum-closebutton-background-color-default));
 
-    .spectrum-CloseButton-UIIcon {
-      color: var(--highcontrast-closebutton-icon-color-disabled, var(--mod-closebutton-icon-color-disabled, var(--spectrum-closebutton-icon-color-disabled)));
-    }
-  }
+		.spectrum-CloseButton-UIIcon {
+			color: var(--highcontrast-closebutton-icon-color-disabled, var(--mod-closebutton-icon-color-disabled, var(--spectrum-closebutton-icon-color-disabled)));
+		}
+	}
 }
 
 .spectrum-CloseButton-UIIcon {

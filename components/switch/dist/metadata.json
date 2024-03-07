@@ -22,7 +22,6 @@
     ".spectrum-Switch .spectrum-Switch-switch:before",
     ".spectrum-Switch--disabled",
     ".spectrum-Switch--sizeL",
-    ".spectrum-Switch--sizeM",
     ".spectrum-Switch--sizeS",
     ".spectrum-Switch--sizeXL",
     ".spectrum-Switch-input",
@@ -202,19 +201,7 @@
     "--spectrum-text-to-control-300",
     "--spectrum-text-to-control-75"
   ],
-  "system-theme": [
-    "--system-switch-background-color",
-    "--system-switch-background-color-disabled",
-    "--system-switch-handle-background-color",
-    "--system-switch-handle-border-color-default",
-    "--system-switch-handle-border-color-down",
-    "--system-switch-handle-border-color-focus",
-    "--system-switch-handle-border-color-hover",
-    "--system-switch-handle-border-color-selected-default",
-    "--system-switch-handle-border-color-selected-down",
-    "--system-switch-handle-border-color-selected-focus",
-    "--system-switch-handle-border-color-selected-hover"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-switch-background-color",

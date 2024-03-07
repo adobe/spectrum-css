@@ -31,16 +31,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.1.0...@spectrum-css/generator@3.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.1.0...@spectrum-css/generator@3.0.0)
 
 \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+- Removes component-builder & component-builder-simple for script leveraging postcss
 
 - Imports added to index.css and themes/express.css
 
@@ -48,8 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.1.0
 
-🗓
-2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.20...@spectrum-css/generator@2.1.0)
+🗓 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.20...@spectrum-css/generator@2.1.0)
 
 ### ✨ Features
 
@@ -59,8 +55,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.20
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/generator
 
@@ -68,8 +63,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.19
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.18...@spectrum-css/generator@2.0.19)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.18...@spectrum-css/generator@2.0.19)
 
 **Note:** Version bump only for package @spectrum-css/generator
 
@@ -77,8 +71,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.18
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.14...@spectrum-css/generator@2.0.18)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.14...@spectrum-css/generator@2.0.18)
 
 **Note:** Version bump only for package @spectrum-css/generator
 
@@ -86,8 +79,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.17
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.14...@spectrum-css/generator@2.0.17)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.14...@spectrum-css/generator@2.0.17)
 
 **Note:** Version bump only for package @spectrum-css/generator
 
@@ -95,8 +87,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.14
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.13...@spectrum-css/generator@2.0.14)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.13...@spectrum-css/generator@2.0.14)
 
 **Note:** Version bump only for package @spectrum-css/generator
 
@@ -104,8 +95,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.13
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.12...@spectrum-css/generator@2.0.13)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.12...@spectrum-css/generator@2.0.13)
 
 **Note:** Version bump only for package @spectrum-css/generator
 
@@ -113,8 +103,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.12
 
-🗓
-2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.11...@spectrum-css/generator@2.0.12)
+🗓 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.11...@spectrum-css/generator@2.0.12)
 
 **Note:** Version bump only for package @spectrum-css/generator
 
@@ -122,8 +111,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.11
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.10...@spectrum-css/generator@2.0.11)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.10...@spectrum-css/generator@2.0.11)
 
 **Note:** Version bump only for package @spectrum-css/generator
 
@@ -131,8 +119,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.10
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.9...@spectrum-css/generator@2.0.10)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.9...@spectrum-css/generator@2.0.10)
 
 **Note:** Version bump only for package @spectrum-css/generator
 
@@ -140,8 +127,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.9
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.8...@spectrum-css/generator@2.0.9)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.8...@spectrum-css/generator@2.0.9)
 
 ### 🐛 Bug fixes
 
@@ -151,8 +137,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.8
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.7...@spectrum-css/generator@2.0.8)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.7...@spectrum-css/generator@2.0.8)
 
 **Note:** Version bump only for package @spectrum-css/generator
 

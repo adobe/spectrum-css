@@ -11,10 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
 @import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Tooltip {
+	--spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-subdued-background-color-default);
+
 	--spectrum-tooltip-animation-duration: var(--spectrum-animation-duration-100);
 
 	/* override if additional spacing to source is required */

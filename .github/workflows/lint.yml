@@ -90,7 +90,7 @@ jobs:
                   filter_mode: diff_context
                   level: error
                   reporter: github-pr-review
-                #   stylelint_input: "components/*/index.css components/*/themes/*.css"
+                #   stylelint_input: "components/*/index.css
                   stylelint_input: "${{ inputs.styles_added_files }} ${{ inputs.styles_modified_files }}"
                   stylelint_config: "${{ github.workspace }}/stylelint.config.js"
                   packages: 'stylelint-header stylelint-config-standard stylelint-selector-bem-pattern stylelint-order stylelint-use-logical'

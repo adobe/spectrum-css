@@ -229,8 +229,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 8.0.0
 
-🗓
-2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.7...@spectrum-css/picker@8.0.0)
+🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.7...@spectrum-css/picker@8.0.0)
 
 ### ✨ Features
 
@@ -255,8 +254,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.7
 
-🗓
-2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.6...@spectrum-css/picker@7.2.7)
+🗓 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.6...@spectrum-css/picker@7.2.7)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -264,8 +262,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.6
 
-🗓
-2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.5...@spectrum-css/picker@7.2.6)
+🗓 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.5...@spectrum-css/picker@7.2.6)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -273,8 +270,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.5
 
-🗓
-2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.4...@spectrum-css/picker@7.2.5)
+🗓 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.4...@spectrum-css/picker@7.2.5)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -282,8 +278,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.4
 
-🗓
-2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.3...@spectrum-css/picker@7.2.4)
+🗓 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.3...@spectrum-css/picker@7.2.4)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -291,8 +286,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.3
 
-🗓
-2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.2...@spectrum-css/picker@7.2.3)
+🗓 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.2...@spectrum-css/picker@7.2.3)
 
 ### 🐛 Bug fixes
 
@@ -302,8 +296,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.2
 
-🗓
-2024-02-06
+🗓 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -311,8 +304,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.1
 
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.0...@spectrum-css/picker@7.2.1)
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.0...@spectrum-css/picker@7.2.1)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -320,8 +312,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.2.0
 
-🗓
-2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.1.0...@spectrum-css/picker@7.2.0)
+🗓 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.1.0...@spectrum-css/picker@7.2.0)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -329,8 +320,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.1.0
 
-🗓
-2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.19...@spectrum-css/picker@7.1.0)
+🗓 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.19...@spectrum-css/picker@7.1.0)
 
 ### ✨ Features
 
@@ -345,8 +335,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.19
 
-🗓
-2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.18...@spectrum-css/picker@7.0.19)
+🗓 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.18...@spectrum-css/picker@7.0.19)
 
 ### 🐛 Bug fixes
 
@@ -357,8 +346,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.18
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.17...@spectrum-css/picker@7.0.18)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.17...@spectrum-css/picker@7.0.18)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -366,8 +354,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.17
 
-🗓
-2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.16...@spectrum-css/picker@7.0.17)
+🗓 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.16...@spectrum-css/picker@7.0.17)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -375,8 +362,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.16
 
-🗓
-2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.14...@spectrum-css/picker@7.0.16)
+🗓 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.14...@spectrum-css/picker@7.0.16)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -384,8 +370,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.15
 
-🗓
-2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.14...@spectrum-css/picker@7.0.15)
+🗓 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.14...@spectrum-css/picker@7.0.15)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -393,8 +378,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.14
 
-🗓
-2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.13...@spectrum-css/picker@7.0.14)
+🗓 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.13...@spectrum-css/picker@7.0.14)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -402,8 +386,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.13
 
-🗓
-2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.12...@spectrum-css/picker@7.0.13)
+🗓 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.12...@spectrum-css/picker@7.0.13)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -411,8 +394,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.12
 
-🗓
-2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.11...@spectrum-css/picker@7.0.12)
+🗓 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.11...@spectrum-css/picker@7.0.12)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -420,8 +402,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.11
 
-🗓
-2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.10...@spectrum-css/picker@7.0.11)
+🗓 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.10...@spectrum-css/picker@7.0.11)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -429,8 +410,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.10
 
-🗓
-2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.9...@spectrum-css/picker@7.0.10)
+🗓 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.9...@spectrum-css/picker@7.0.10)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -438,8 +418,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.9
 
-🗓
-2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.8...@spectrum-css/picker@7.0.9)
+🗓 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.8...@spectrum-css/picker@7.0.9)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -447,8 +426,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.8
 
-🗓
-2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.7...@spectrum-css/picker@7.0.8)
+🗓 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.7...@spectrum-css/picker@7.0.8)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -456,8 +434,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.7
 
-🗓
-2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.6...@spectrum-css/picker@7.0.7)
+🗓 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.6...@spectrum-css/picker@7.0.7)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -465,8 +442,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.6
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.5...@spectrum-css/picker@7.0.6)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.5...@spectrum-css/picker@7.0.6)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -474,8 +450,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.5
 
-🗓
-2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.4...@spectrum-css/picker@7.0.5)
+🗓 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.4...@spectrum-css/picker@7.0.5)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -483,8 +458,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.4
 
-🗓
-2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.3...@spectrum-css/picker@7.0.4)
+🗓 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.3...@spectrum-css/picker@7.0.4)
 
 ### 🔙 Reverts
 
@@ -494,8 +468,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.3
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.2...@spectrum-css/picker@7.0.3)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.2...@spectrum-css/picker@7.0.3)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -503,8 +476,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.2
 
-🗓
-2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.0...@spectrum-css/picker@7.0.2)
+🗓 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.0...@spectrum-css/picker@7.0.2)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -512,8 +484,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.1
 
-🗓
-2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.0...@spectrum-css/picker@7.0.1)
+🗓 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.0...@spectrum-css/picker@7.0.1)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -521,8 +492,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 7.0.0
 
-🗓
-2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.2...@spectrum-css/picker@7.0.0)
+🗓 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.2...@spectrum-css/picker@7.0.0)
 
 \*refactor(picker)!: remove focus-ring([e37b430](https://github.com/adobe/spectrum-css/commit/e37b430))
 
@@ -536,8 +506,7 @@ We've migrated away from the `focus-ring` class in favor of the native `:focus-v
 
 ## 6.0.2
 
-🗓
-2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.1...@spectrum-css/picker@6.0.2)
+🗓 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.1...@spectrum-css/picker@6.0.2)
 
 ### 🐛 Bug fixes
 
@@ -547,8 +516,7 @@ We've migrated away from the `focus-ring` class in favor of the native `:focus-v
 
 ## 6.0.1
 
-🗓
-2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.0...@spectrum-css/picker@6.0.1)
+🗓 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.0...@spectrum-css/picker@6.0.1)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -556,8 +524,7 @@ We've migrated away from the `focus-ring` class in favor of the native `:focus-v
 
 ## 6.0.0
 
-🗓
-2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@5.0.1...@spectrum-css/picker@6.0.0)
+🗓 2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@5.0.1...@spectrum-css/picker@6.0.0)
 
 ### 🐛 Bug fixes
 
@@ -586,8 +553,7 @@ Additionally:
 
 ## 5.0.1
 
-🗓
-2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@5.0.0...@spectrum-css/picker@5.0.1)
+🗓 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@5.0.0...@spectrum-css/picker@5.0.1)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -595,13 +561,11 @@ Additionally:
 
 ## 5.0.0
 
-🗓
-2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.22...@spectrum-css/picker@5.0.0)
+🗓 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.22...@spectrum-css/picker@5.0.0)
 
 \*feat(pickerbutton)!: migrate to use spectrum tokens (#1940)([ad6051d](https://github.com/adobe/spectrum-css/commit/ad6051d)), closes[#1940](https://github.com/adobe/spectrum-css/issues/1940)
 
-    	###
-    	🛑 BREAKING CHANGES
+### 🛑 BREAKING CHANGES
 
     		*
     		migrates the Picker Button component to use `@adobe/spectrum-tokens`
@@ -669,8 +633,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.22
 
-🗓
-2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.21...@spectrum-css/picker@4.0.22)
+🗓 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.21...@spectrum-css/picker@4.0.22)
 
 ### 🐛 Bug fixes
 
@@ -680,8 +643,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.21
 
-🗓
-2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.20...@spectrum-css/picker@4.0.21)
+🗓 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.20...@spectrum-css/picker@4.0.21)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -689,8 +651,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.20
 
-🗓
-2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.19...@spectrum-css/picker@4.0.20)
+🗓 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.19...@spectrum-css/picker@4.0.20)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -698,8 +659,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.19
 
-🗓
-2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.18...@spectrum-css/picker@4.0.19)
+🗓 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.18...@spectrum-css/picker@4.0.19)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -707,8 +667,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.18
 
-🗓
-2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.17...@spectrum-css/picker@4.0.18)
+🗓 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.17...@spectrum-css/picker@4.0.18)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -716,8 +675,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.17
 
-🗓
-2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.16...@spectrum-css/picker@4.0.17)
+🗓 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.16...@spectrum-css/picker@4.0.17)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -725,8 +683,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.16
 
-🗓
-2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.15...@spectrum-css/picker@4.0.16)
+🗓 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.15...@spectrum-css/picker@4.0.16)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -734,8 +691,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.15
 
-🗓
-2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.14...@spectrum-css/picker@4.0.15)
+🗓 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.14...@spectrum-css/picker@4.0.15)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -743,8 +699,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.14
 
-🗓
-2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.13...@spectrum-css/picker@4.0.14)
+🗓 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.13...@spectrum-css/picker@4.0.14)
 
 ### 🐛 Bug fixes
 
@@ -754,8 +709,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.13
 
-🗓
-2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.12...@spectrum-css/picker@4.0.13)
+🗓 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.12...@spectrum-css/picker@4.0.13)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
@@ -763,8 +717,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 ## 4.0.12
 
-🗓
-2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.11...@spectrum-css/picker@4.0.12)
+🗓 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.11...@spectrum-css/picker@4.0.12)
 
 **Note:** Version bump only for package @spectrum-css/picker
 

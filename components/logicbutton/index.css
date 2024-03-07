@@ -12,9 +12,18 @@
  */
 
 @import "@spectrum-css/commons/basebutton.css";
-@import "./themes/spectrum-two.css";
 
 .spectrum-LogicButton {
+	--spectrum-logic-button-and-background-color-disabled: var(--spectrum-gray-100);
+	--spectrum-logic-button-and-border-color-disabled: var(--spectrum-gray-100);
+	--spectrum-logic-button-and-background-color-hover-disabled: var(--spectrum-gray-100);
+	--spectrum-logic-button-and-border-color-hover-disabled: var(--spectrum-gray-100);
+
+	--spectrum-logic-button-or-background-color-disabled: var(--spectrum-gray-100);
+	--spectrum-logic-button-or-border-color-disabled: var(--spectrum-gray-100);
+	--spectrum-logic-button-or-background-color-hover-disabled: var(--spectrum-gray-100);
+	--spectrum-logic-button-or-border-color-hover-disabled: var(--spectrum-gray-100);
+
 	--spectrum-logic-button-border-radius: var(--spectrum-corner-radius-100);
 
 	--spectrum-logic-button-and-text-color: var(--spectrum-white);
