@@ -4651,10 +4651,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/closebutton@workspace:components/closebutton"
   dependencies:
-    "@spectrum-css/commons": "npm:^10.0.0"
+    "@spectrum-css/commons": "npm:^9.1.3"
   peerDependencies:
     "@spectrum-css/icon": ">=4"
-    "@spectrum-css/tokens": ">=13"
+    "@spectrum-css/tokens": ^14.0.0-next.0
   languageName: unknown
   linkType: soft
 
@@ -4762,6 +4762,15 @@ __metadata:
     "@spectrum-css/tokens": ">=13"
   languageName: unknown
   linkType: soft
+
+"@spectrum-css/commons@npm:^9.1.3":
+  version: 9.1.3
+  resolution: "@spectrum-css/commons@npm:9.1.3"
+  peerDependencies:
+    "@spectrum-css/tokens": ">=13"
+  checksum: 10c0/2549e79c7bf7fc416acb2d1cfeb20c107073d1cf54a890a09790544e706ba19369888a31426c514d830854bda71bcb91b65d1a22109f01177268c43a8245754e
+  languageName: node
+  linkType: hard
 
 "@spectrum-css/contextualhelp@workspace:components/contextualhelp":
   version: 0.0.0-use.local
