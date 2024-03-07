@@ -11,12 +11,12 @@ governing permissions and limitations under the License.
 
 @container (--system: spectrum) {
   .spectrum-Picker {
-    --spectrum-picker-background-color-default: var(--spectrum-gray-75);
-    --spectrum-picker-background-color-default-open: var(--spectrum-gray-200);
-    --spectrum-picker-background-color-active: var(--spectrum-gray-300);
-    --spectrum-picker-background-color-hover: var(--spectrum-gray-200);
-    --spectrum-picker-background-color-hover-open: var(--spectrum-gray-200);
-    --spectrum-picker-background-color-key-focus: var(--spectrum-gray-200);
+    --spectrum-picker-background-color-default: var(--spectrum-gray-50);
+    --spectrum-picker-background-color-default-open: var(--spectrum-gray-100);
+    --spectrum-picker-background-color-active: var(--spectrum-gray-200);
+    --spectrum-picker-background-color-hover: var(--spectrum-gray-100);
+    --spectrum-picker-background-color-hover-open: var(--spectrum-gray-100);
+    --spectrum-picker-background-color-key-focus: var(--spectrum-gray-100);
 
     --spectrum-picker-border-color-default: var(--spectrum-gray-500);
     --spectrum-picker-border-color-default-open: var(--spectrum-gray-500);
