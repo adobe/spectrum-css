@@ -41,13 +41,13 @@ governing permissions and limitations under the License.
   --spectrum-table-row-line-height: var(--spectrum-line-height-100);
 
   /* General Colors */
-  --spectrum-table-border-color: var(--spectrum-gray-300);
-  --spectrum-table-divider-color: var(--spectrum-gray-300);
+  --spectrum-table-border-color: var(--spectrum-gray-200);
+  --spectrum-table-divider-color: var(--spectrum-gray-200);
 
   --spectrum-table-header-background-color: var(--spectrum-transparent-white-100);
   --spectrum-table-header-text-color: var(--spectrum-body-color);
 
-  --spectrum-table-row-background-color: var(--spectrum-gray-50);
+  --spectrum-table-row-background-color: var(--spectrum-gray-25);
   --spectrum-table-row-text-color: var(--spectrum-neutral-content-color-default);
 
   /* ----- *
@@ -82,14 +82,14 @@ governing permissions and limitations under the License.
 
   /* Summary Row and Section Header Row */
   --spectrum-table-summary-row-font-weight: var(--spectrum-bold-font-weight);
-  --spectrum-table-summary-row-background-color: var(--spectrum-gray-200);
+  --spectrum-table-summary-row-background-color: var(--spectrum-gray-100);
 
   --spectrum-table-section-header-min-height: var(--spectrum-table-section-header-row-height-medium);
   --spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-100);
   --spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-100);
 
   --spectrum-table-section-header-font-weight: var(--spectrum-bold-font-weight);
-  --spectrum-table-section-header-background-color: var(--spectrum-gray-200);
+  --spectrum-table-section-header-background-color: var(--spectrum-gray-100);
 
   /* Collapsible and Thumbnails */
   --spectrum-table-collapsible-tier-indent: var(--spectrum-spacing-300);
@@ -807,7 +807,7 @@ governing permissions and limitations under the License.
 /********* SCROLLABLE *********/
 /* Wrapper that allows a scrollable body and sticky column header. */
 .spectrum-Table-scroller {
-  --spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-100)));
+  --spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-75)));
 
   box-sizing: border-box;
   display: inline-block;
@@ -823,7 +823,7 @@ governing permissions and limitations under the License.
     var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
 
   &.spectrum-Table--quiet {
-    --mod-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-100)));
+    --mod-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-75)));
     border-block-start: none;
   }
 
