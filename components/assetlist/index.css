@@ -11,9 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/spectrum-two.css";
-
 .spectrum-AssetList {
+	--spectrum-assetlist-item-background-color-down: var(--spectrum-gray-200);
+	--spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-100);
+
 	--spectrum-assetlist-width: 272px;
 	--spectrum-assetlist-child-indicator-animation: var(--spectrum-animation-duration-100);
 

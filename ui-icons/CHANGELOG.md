@@ -23,8 +23,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.1.0
 
-🗓
-2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/ui-icons@0.1.0...@spectrum-css/ui-icons@1.1.0)
+🗓 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/ui-icons@0.1.0...@spectrum-css/ui-icons@1.1.0)
 
 ### ✨ Features
 
