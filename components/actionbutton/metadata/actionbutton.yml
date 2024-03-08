@@ -12,16 +12,24 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/actionbutton/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### Action Button now requires a class on its icon
+      ### x/x/2024 - Version 6.0.0
+      #### Spectrum 2 release
+      Action button now uses Spectrum 2 tokens and specifications. A few notable changes:
+      - The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
+      - The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
+      - The mod custom property `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`.
+
+      ### Versions prior to 6.0.0
+      #### Action Button now requires a class on its icon
       The `.spectrum-ActionButton-icon` class is now required on the icon.
 
-      ### T-shirt sizing
+      #### T-shirt sizing
       Action Button now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-ActionButton--size*` class.
 
-      ### Action Button is now a separate component
+      #### Action Button is now a separate component
       Action Button has been moved to the [Action Button](actionbutton.html) component.
 
-      ### Change workflow icon size
+      #### Change workflow icon size
 
       Previously, all Action Buttons used `.spectrum-Icon--sizeS`. This has changed:
 
@@ -33,7 +41,7 @@ sections:
       | `.spectrum-ActionButton--sizeL`  | `.spectrum-Icon--sizeL`           |
       | `.spectrum-ActionButton--sizeXL` | `.spectrum-Icon--sizeXL`          |
 
-      ### Change hold icon classnames
+      #### Change hold icon classnames
 
       Hold icon classnames must be set as follows:
 
@@ -45,10 +53,10 @@ sections:
       | `.spectrum-ActionButton--sizeL`  | `.spectrum-UIIcon-CornerTriangle200` |
       | `.spectrum-ActionButton--sizeXL` | `.spectrum-UIIcon-CornerTriangle300` |
 
-      ### Include markup for hold icon before workflow icon
+      #### Include markup for hold icon before workflow icon
       Because of the way padding is calculated, the hold icon must be placed before the workflow icon.
 
-      ### Remove focus-ring class
+      #### Remove focus-ring class
       We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: actionbutton-sizing
