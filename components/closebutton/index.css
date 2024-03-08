@@ -14,7 +14,7 @@ governing permissions and limitations under the License.
 
 /* closebutton/index.css
  *
- * .spectrum-Closebutton::after is the Focus ring
+ * .spectrum-CloseButton::after is the Focus ring
  */
 
 @import "@spectrum-css/commons/basebutton.css";
@@ -48,17 +48,17 @@ governing permissions and limitations under the License.
   --spectrum-closebutton-background-color-focus: var(--spectrum-gray-100);
 }
 
-.spectrum-Closebutton--sizeS {
+.spectrum-CloseButton--sizeS {
   --spectrum-closebutton-height: var(--spectrum-component-height-75);
   --spectrum-closebutton-width: var(--spectrum-closebutton-height);
 }
 
-.spectrum-Closebutton--sizeL {
+.spectrum-CloseButton--sizeL {
   --spectrum-closebutton-height: var(--spectrum-component-height-200);
   --spectrum-closebutton-width: var(--spectrum-closebutton-height);
 }
 
-.spectrum-Closebutton--sizeXL {
+.spectrum-CloseButton--sizeXL {
   --spectrum-closebutton-height: var(--spectrum-component-height-300);
   --spectrum-closebutton-width: var(--spectrum-closebutton-height);
 }
