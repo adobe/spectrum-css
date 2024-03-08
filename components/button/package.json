@@ -27,7 +27,7 @@
 	"peerDependencies": {
 		"@spectrum-css/icon": ">=7",
 		"@spectrum-css/progresscircle": ">=3",
-		"@spectrum-css/tokens": ">=14 || >=15"
+		"@spectrum-css/tokens": ">=16"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/icon": {
@@ -38,7 +38,7 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "workspace:^",
+		"@spectrum-css/commons": "^11.0.0",
 		"@spectrum-css/icon": "9.0.1",
 		"@spectrum-css/progresscircle": "5.0.1",
 		"@spectrum-css/tokens": "16.0.0",

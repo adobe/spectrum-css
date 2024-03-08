@@ -237,10 +237,11 @@
 
 	/* clear button */
 	.spectrum-Tag-clearButton {
-		/* width of fill neutralized to ensure correct inline spacing within tag */
+		/* @passthrough start -- width of fill neutralized to ensure correct inline spacing within tag */
 		--mod-clear-button-width: fit-content;
 		--spectrum-clearbutton-fill-size: fit-content;
 		--spectrum-clearbutton-fill-background-color: transparent;
+		/* @passthrough end */
 
 		box-sizing: border-box;
 

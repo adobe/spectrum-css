@@ -30,7 +30,7 @@
 		"@spectrum-css/menu": ">=7",
 		"@spectrum-css/popover": ">=7",
 		"@spectrum-css/progresscircle": ">=3",
-		"@spectrum-css/tokens": ">=14 || >=15"
+		"@spectrum-css/tokens": ">=16"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/helptext": {
@@ -41,7 +41,7 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "workspace:^",
+		"@spectrum-css/commons": "^11.0.0",
 		"@spectrum-css/helptext": "7.0.1",
 		"@spectrum-css/icon": "9.0.1",
 		"@spectrum-css/menu": "9.0.1",

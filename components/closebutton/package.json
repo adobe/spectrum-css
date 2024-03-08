@@ -17,6 +17,7 @@
 		".": "./dist/index.css",
 		"./*.md": "./*.md",
 		"./dist/*": "./dist/*",
+		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./dist/metadata.json",
 		"./package.json": "./package.json",
@@ -35,15 +36,18 @@
 		"@spectrum-css/tokens": ">=14.0.0-next.3"
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "workspace:^",
-		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^"
+		"@spectrum-css/commons": "^11.0.0",
+		"@spectrum-css/icon": "9.0.1",
+		"@spectrum-css/tokens": "16.0.0"
 	},
 	"keywords": [
+		"design-system",
 		"spectrum",
-		"css",
-		"design system",
-		"adobe"
+		"spectrum-css",
+		"adobe",
+		"adobe-spectrum",
+		"component",
+		"css"
 	],
 	"publishConfig": {
 		"access": "public"
