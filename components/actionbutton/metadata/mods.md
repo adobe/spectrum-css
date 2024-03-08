@@ -48,6 +48,3 @@
 | `--mod-actionbutton-label-color`                                  |
 | `--mod-actionbutton-min-width`                                    |
 | `--mod-actionbutton-text-to-visual`                               |
-| `--mod-animation-duration-100`                                    |
-| `--mod-line-height-100`                                           |
-| `--mod-sans-font-family-stack`                                    |
