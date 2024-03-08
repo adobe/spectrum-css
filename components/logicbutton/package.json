@@ -25,12 +25,7 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/tokens": {
-			"optional": true
-		}
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
 		"@spectrum-css/commons": "11.0.0",
@@ -53,5 +48,10 @@
 			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/logic-button-beta",
 			"rootClass": "spectrum-LogicButton"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }

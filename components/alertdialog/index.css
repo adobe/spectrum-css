@@ -40,7 +40,7 @@
 	--spectrum-alert-dialog-divider-to-description: var(--spectrum-spacing-300);
 	--spectrum-alert-dialog-title-to-icon: var(--spectrum-spacing-300);
 
-	/* mods for nested component */
+	/* @passthrough -- mods for nested component */
 	--mod-buttongroup-justify-content: flex-end;
 }
 
