@@ -77,8 +77,6 @@
     ".spectrum-Picker:hover .spectrum-Picker-menuIcon"
   ],
   "modifiers": [
-    "--mod-animation-duration-100",
-    "--mod-line-height-100",
     "--mod-picker-animation-duration",
     "--mod-picker-background-color-active",
     "--mod-picker-background-color-default",
@@ -141,8 +139,7 @@
     "--mod-picker-spacing-top-to-alert-icon",
     "--mod-picker-spacing-top-to-disclosure-icon",
     "--mod-picker-spacing-top-to-progress-circle",
-    "--mod-picker-spacing-top-to-text",
-    "--mod-sans-font-family-stack"
+    "--mod-picker-spacing-top-to-text"
   ],
   "component": [
     "--spectrum-picker-animation-duration",
@@ -216,6 +213,7 @@
   ],
   "global": [
     "--spectrum-animation-duration-100",
+    "--spectrum-border-width-100",
     "--spectrum-component-bottom-to-text-100",
     "--spectrum-component-bottom-to-text-200",
     "--spectrum-component-bottom-to-text-300",
@@ -274,6 +272,14 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
+    "--spectrum-gray-100",
+    "--spectrum-gray-200",
+    "--spectrum-gray-300",
+    "--spectrum-gray-500",
+    "--spectrum-gray-600",
+    "--spectrum-gray-700",
+    "--spectrum-gray-800",
+    "--spectrum-gray-900",
     "--spectrum-line-height-100",
     "--spectrum-negative-border-color-default",
     "--spectrum-negative-border-color-down",

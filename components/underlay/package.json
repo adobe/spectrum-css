@@ -25,10 +25,10 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14 || >=15"
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "workspace:^",
+		"@spectrum-css/commons": "^11.0.0",
 		"@spectrum-css/tokens": "16.0.0",
 		"eslint": "^8.57.0",
 		"npm-run-all2": "^7.0.2",

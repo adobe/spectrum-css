@@ -170,8 +170,7 @@
 
 .spectrum-Calendar-prevMonth,
 .spectrum-Calendar-nextMonth {
-	/* @passthrough start */
-	/* Mimic the placement and sizing of the dates in the grid below */
+	/* @passthrough start -- mimic the placement and sizing of the dates in the grid below */
 	--mod-actionbutton-edge-to-text: var(--spectrum-calendar-day-padding);
 	--mod-actionbutton-min-width: var(--spectrum-calendar-day-width);
 	--mod-actionbutton-content-color-default: var(--spectrum-calendar-button-icon-color);
