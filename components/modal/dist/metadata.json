@@ -19,6 +19,7 @@
     "--mod-modal-confirm-entry-animation-duration",
     "--mod-modal-confirm-exit-animation-delay",
     "--mod-modal-confirm-exit-animation-duration",
+    "--mod-modal-fullscreen-margin",
     "--mod-modal-max-height",
     "--mod-modal-max-width",
     "--mod-modal-transition-animation-duration",
@@ -27,13 +28,11 @@
   ],
   "component": [
     "--spectrum-modal-background-color",
-    "--spectrum-modal-confirm-border-radius",
     "--spectrum-modal-confirm-entry-animation-delay",
     "--spectrum-modal-confirm-entry-animation-duration",
     "--spectrum-modal-confirm-exit-animation-delay",
     "--spectrum-modal-confirm-exit-animation-duration",
-    "--spectrum-modal-fullscreen-margin",
-    "--spectrum-modal-transition-animation-duration"
+    "--spectrum-modal-fullscreen-margin"
   ],
   "global": [
     "--spectrum-animation-duration-0",
@@ -43,9 +42,9 @@
     "--spectrum-animation-ease-in",
     "--spectrum-animation-ease-out",
     "--spectrum-animation-linear",
+    "--spectrum-background-layer-2-color",
     "--spectrum-corner-radius-100",
-    "--spectrum-dialog-confirm-entry-animation-distance",
-    "--spectrum-gray-75"
+    "--spectrum-dialog-confirm-entry-animation-distance"
   ],
   "system-theme": [],
   "passthroughs": [],

@@ -85,8 +85,10 @@
 	}
 
 	&.is-invalid {
+		/* @passthrough start */
 		--mod-textfield-icon-spacing-inline-end-invalid: calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-datepicker-invalid-icon-to-button));
 		--mod-textfield-icon-spacing-inline-end-quiet-invalid: calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-invalid-icon-to-button-quiet));
+		/* @passthrough end */
 	}
 
 	&:not(.spectrum-DatePicker--quiet, .is-disabled) {
