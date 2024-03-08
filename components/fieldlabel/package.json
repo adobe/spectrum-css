@@ -25,16 +25,8 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/icon": ">=9.0.0 <10.0.0",
-		"@spectrum-css/tokens": ">=16.0.0 <17.0.0"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/icon": {
-			"optional": true
-		},
-		"@spectrum-css/tokens": {
-			"optional": true
-		}
+		"@spectrum-css/icon": ">=9",
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
 		"@spectrum-css/icon": "9.1.0",
@@ -58,5 +50,13 @@
 			"rootClass": "spectrum-FieldLabel",
 			"swc": "https://opensource.adobe.com/spectrum-web-components/components/field-label/"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }

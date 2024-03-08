@@ -25,12 +25,7 @@
 	},
 	"main": "dist/index.css",
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=16.0.1"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/tokens": {
-			"optional": true
-		}
+		"@spectrum-css/tokens": ">=16"
 	},
 	"devDependencies": {
 		"@spectrum-css/commons": "11.0.0",
@@ -52,5 +47,10 @@
 		{
 			"rootClass": "spectrum-Modal"
 		}
-	]
+	],
+	"peerDependenciesMeta": {
+		"@spectrum-css/tokens": {
+			"optional": true
+		}
+	}
 }

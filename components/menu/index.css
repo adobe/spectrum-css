@@ -421,8 +421,10 @@
 	grid-template-rows: 1fr auto;
 
 	.spectrum-Menu-itemCheckbox {
+		/* @passthrough start */
 		--mod-checkbox-top-to-text: 0;
 		--mod-checkbox-text-to-control: 0;
+		/* @passthrough end */
 
 		min-block-size: 0;
 
