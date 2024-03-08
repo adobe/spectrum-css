@@ -31,7 +31,6 @@
     "a.spectrum-CloseButton"
   ],
   "modifiers": [
-    "--mod-animation-duration-100",
     "--mod-closebutton-align-self",
     "--mod-closebutton-animation-duraction",
     "--mod-closebutton-animation-duration",
@@ -50,9 +49,7 @@
     "--mod-closebutton-icon-color-hover",
     "--mod-closebutton-margin-inline",
     "--mod-closebutton-margin-top",
-    "--mod-closebutton-size",
-    "--mod-line-height-100",
-    "--mod-sans-font-family-stack"
+    "--mod-closebutton-size"
   ],
   "component": [
     "--spectrum-closebutton-animation-duration",
