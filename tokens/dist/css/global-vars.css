@@ -32,7 +32,6 @@
 	--spectrum-disabled-background-color: var(--spectrum-gray-100);
 	--spectrum-disabled-static-white-background-color: var(--spectrum-transparent-white-100);
 	--spectrum-disabled-static-black-background-color: var(--spectrum-transparent-black-100);
-	--spectrum-gray-background-color-default: var(--spectrum-gray-700);
 	--spectrum-background-opacity-default: 0;
 	--spectrum-background-opacity-hover: 0.1;
 	--spectrum-background-opacity-down: 0.1;
@@ -76,9 +75,9 @@
 	--spectrum-thumbnail-opacity-disabled: var(--spectrum-opacity-disabled);
 	--spectrum-opacity-checkerboard-square-light: var(--spectrum-white);
 	--spectrum-avatar-opacity-disabled: var(--spectrum-opacity-disabled);
-	--spectrum-color-area-border-color: var(--spectrum-gray-900);
+	--spectrum-color-area-border-color: var(--spectrum-gray-1000);
 	--spectrum-color-area-border-opacity: 0.1;
-	--spectrum-color-slider-border-color: var(--spectrum-gray-900);
+	--spectrum-color-slider-border-color: var(--spectrum-gray-1000);
 	--spectrum-color-slider-border-opacity: 0.1;
 	--spectrum-color-loupe-drop-shadow-color: var(--spectrum-transparent-black-300);
 	--spectrum-color-loupe-drop-shadow-y: 2px;
@@ -241,14 +240,14 @@
 	--spectrum-alert-banner-to-top-text: var(--spectrum-alert-banner-top-to-text);
 	--spectrum-alert-banner-to-bottom-text: var(--spectrum-alert-banner-bottom-to-text);
 	--spectrum-color-area-border-width: var(--spectrum-border-width-100);
-	--spectrum-color-area-border-rounding: var(--spectrum-corner-radius-100);
+	--spectrum-color-area-border-rounding: var(--spectrum-corner-radius-medium-size-small);
 	--spectrum-color-wheel-color-area-margin: 12px;
 	--spectrum-color-slider-border-width: 1px;
-	--spectrum-color-slider-border-rounding: 4px;
+	--spectrum-color-slider-border-rounding: var(--spectrum-corner-radius-medium-size-small);
 	--spectrum-floating-action-button-drop-shadow-blur: 12px;
 	--spectrum-floating-action-button-drop-shadow-y: 4px;
 	--spectrum-illustrated-message-maximum-width: 380px;
-	--spectrum-search-field-minimum-width-multiplier: 3;
+	--spectrum-search-field-minimum-width-multiplier: 4;
 	--spectrum-color-loupe-height: 64px;
 	--spectrum-color-loupe-width: 48px;
 	--spectrum-color-loupe-bottom-to-color-handle: 12px;
@@ -359,6 +358,10 @@
 	--spectrum-field-edge-to-border-quiet: 0px;
 	--spectrum-field-edge-to-alert-icon-quiet: 0px;
 	--spectrum-field-edge-to-validation-icon-quiet: 0px;
+	--spectrum-side-label-character-count-top-margin-small: 0px;
+	--spectrum-side-label-character-count-top-margin-medium: 0px;
+	--spectrum-side-label-character-count-top-margin-large: 0px;
+	--spectrum-side-label-character-count-top-margin-extra-large: 0px;
 	--spectrum-text-underline-thickness: 1px;
 	--spectrum-text-underline-gap: 1px;
 	--spectrum-component-size-width-ratio-down: 0.3333;
