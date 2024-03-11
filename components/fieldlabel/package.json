@@ -1,24 +1,24 @@
 {
-	"name": "@spectrum-css/fieldlabel",
-	"version": "8.0.0",
-	"description": "The Spectrum CSS fieldlabel component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/fieldlabel",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/fieldlabel"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"peerDependencies": {
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/tokens": ">=13"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/fieldlabel",
+  "version": "7.3.6",
+  "description": "The Spectrum CSS fieldlabel component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/fieldlabel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/fieldlabel"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "peerDependencies": {
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/tokens": "^14.0.0-next.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
