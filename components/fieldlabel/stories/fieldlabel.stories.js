@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isRequired, size } from "@spectrum-css/preview/types";
+import { isDisabled, isRequired, size, staticColor } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { FieldLabelGroup } from "./fieldlabel.test.js";
@@ -35,6 +35,7 @@ export default {
 		},
 		isDisabled,
 		isRequired,
+		staticColor,
 	},
 	args: {
 		rootClass: "spectrum-FieldLabel",
@@ -133,6 +134,32 @@ Disabled.args = {
 };
 Disabled.tags = ["!dev"];
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Use static white on dark color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
+ */
+export const StaticWhite = Default.bind({});
+StaticWhite.storyName = "Static white";
+StaticWhite.args = {
+	staticColor: "white",
+};
+StaticWhite.tags = ["!dev"];
+StaticWhite.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Use static black on light color or image backgrounds, regardless of color theme. Make sure that the background and the link color meet the minimum color contrast ratio.
+ */
+export const StaticBlack = Default.bind({});
+StaticBlack.storyName = "Static black";
+StaticBlack.args = {
+	staticColor: "black",
+};
+StaticBlack.tags = ["!dev"];
+StaticBlack.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
