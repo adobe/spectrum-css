@@ -29,7 +29,7 @@
 		"@spectrum-css/divider": ">=3",
 		"@spectrum-css/icon": ">=7",
 		"@spectrum-css/modal": ">=5",
-		"@spectrum-css/tokens": ">=16",
+		"@spectrum-css/tokens": ">=14.0.0-next.0",
 		"@spectrum-css/underlay": ">=4"
 	},
 	"peerDependenciesMeta": {
@@ -45,12 +45,8 @@
 		"@spectrum-css/divider": "5.0.1",
 		"@spectrum-css/icon": "9.0.1",
 		"@spectrum-css/modal": "7.0.1",
-		"@spectrum-css/tokens": "16.0.0",
-		"@spectrum-css/underlay": "6.0.1",
-		"eslint": "^8.57.0",
-		"npm-run-all2": "^7.0.2",
-		"prettier": "^3.4.2",
-		"stylelint": "^16.9.0"
+		"@spectrum-css/tokens": "14.0.0-next.0",
+		"@spectrum-css/underlay": "6.0.1"
 	},
 	"keywords": [
 		"design-system",
