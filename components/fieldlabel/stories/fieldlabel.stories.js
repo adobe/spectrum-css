@@ -1,4 +1,4 @@
-// Import the component markup template
+import { html } from "lit";
 import { Template } from "./template";
 
 export default {
@@ -54,6 +54,17 @@ export default {
 			},
 			control: "boolean",
 		},
+		staticColor: {
+			name: "Static color",
+			description: "Variants that can be used when a Field label needs to be placed on top of a colored background or a visual.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["black", "white"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-FieldLabel",
@@ -100,4 +111,22 @@ WrappingAndRequired.args = {
 	alignment: "left",
 	isRequired: true,
 	style: { width: "200px" },
+};
+
+export const StaticColors = (args) => html`
+	${Template({
+		...args,
+		label: "The black static color class used on a label marked as required",
+		staticColor: "black",
+	})}
+	${Template({
+		...args,
+		label: "The white static color class used on a label marked as required",
+		staticColor: "white",
+	})}
+`;
+StaticColors.storyName = "Static colors";
+StaticColors.args = {
+	alignment: "left",
+	isRequired: true,
 };
