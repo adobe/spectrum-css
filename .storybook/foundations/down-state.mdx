@@ -6,19 +6,32 @@ import * as CheckboxStories from '../../components/checkbox/stories/checkbox.sto
 
 <h1>Down state</h1>
 
-Down state is a Spectrum 2 (S2) feature that creates the illusion of components being pressed-in when active. This functionality is already included in S2 components that require down state in this project. It is implemented with a CSS transform. The implementation depends on the size of the interactable element:
+Down state is a Spectrum 2 feature that creates the illusion of components being pressed-in when active. This functionality is already included in Spectrum 2 components that require down state in this project. It is implemented with a CSS transform. The implementation depends on the size of the interactable element, as shown in the examples below.
 
-  - If the interactable element has a width of 24px or less, we use the minimum perspective token:
-    ```
-    transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
-    ```
-  - If the interactable element has a width that is greater than 24px, we use the max formula:
-    ```
-    transform:
-      perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down)))
-      translateZ(var(--spectrum-component-size-difference-down));
-    ```
-    - Note that in this case, users are required to develop an implementation to determine the width and height of the component. Assign these values to the `--spectrum-downstate-width` and `--spectrum-downstate-height` custom properties in a `style` attribute on the HTML element to expose them for use in the CSS.
+Note that in this case, users are required to develop an implementation to determine the width and height of the component. Assign these values to the `--spectrum-downstate-width` and `--spectrum-downstate-height` custom properties in a `style` attribute on the HTML element to expose them for use in the CSS.
+
+<h2>Examples</h2>
+
+<h3>Minimum perspective</h3>
+The checkbox component is an example of an element that has a width of 24px or less.
 
 <Story of={CheckboxStories.Default} />
+
+In this case, we use the minimum perspective token:
+```
+transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
+```
+
+<h3>Calculated perspective</h3>
+The button component is an example of an element that usually has a width greater than 24px.
+
 <Story of={ButtonStories.DownStateDocs} />
+
+In this case, we use a max formula to calculate the perspective based on component width and height (this helps us account for components that may be very wide):
+```
+transform:
+  perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down)))
+  translateZ(var(--spectrum-component-size-difference-down));
+```
+
+*Note that this case requires the consumer to define an implementation to dynamically set the values of the `--spectrum-downstate-width` and `--spectrum-downstate-height` tokens based on the component's width and height.*
