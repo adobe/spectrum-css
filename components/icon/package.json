@@ -1,23 +1,23 @@
 {
-	"name": "@spectrum-css/icon",
-	"version": "7.0.0",
-	"description": "The Spectrum CSS icon component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/icon"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"peerDependencies": {
-		"@spectrum-css/tokens": ">=13.1"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/icon",
+  "version": "6.0.6-next.0",
+  "description": "The Spectrum CSS icon component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/icon"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "peerDependencies": {
+    "@spectrum-css/tokens": ">=13.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

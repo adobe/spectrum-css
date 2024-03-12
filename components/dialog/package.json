@@ -1,38 +1,38 @@
 {
-	"name": "@spectrum-css/dialog",
-	"version": "10.0.0",
-	"description": "The Spectrum CSS dialog component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/dialog",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/dialog"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"peerDependencies": {
-		"@spectrum-css/closebutton": ">=4",
-		"@spectrum-css/divider": ">=2",
-		"@spectrum-css/modal": ">=4",
-		"@spectrum-css/tokens": ">=13",
-		"@spectrum-css/underlay": ">=3"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/divider": {
-			"optional": true
-		},
-		"@spectrum-css/modal": {
-			"optional": true
-		},
-		"@spectrum-css/underlay": {
-			"optional": true
-		}
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/dialog",
+  "version": "9.2.5-next.0",
+  "description": "The Spectrum CSS dialog component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/dialog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/dialog"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "peerDependencies": {
+    "@spectrum-css/closebutton": ">=4",
+    "@spectrum-css/divider": ">=2",
+    "@spectrum-css/modal": ">=4",
+    "@spectrum-css/tokens": ">=13",
+    "@spectrum-css/underlay": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/divider": {
+      "optional": true
+    },
+    "@spectrum-css/modal": {
+      "optional": true
+    },
+    "@spectrum-css/underlay": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

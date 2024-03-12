@@ -1,24 +1,24 @@
 {
-	"name": "@spectrum-css/floatingactionbutton",
-	"version": "2.0.0",
-	"description": "The Spectrum CSS floatingactionbutton component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"contributors": [],
-	"homepage": "https://opensource.adobe.com/spectrum-css/",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/floatingactionbutton"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"peerDependencies": {
-		"@spectrum-css/tokens": ">=13"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/floatingactionbutton",
+  "version": "1.2.6-next.0",
+  "description": "The Spectrum CSS floatingactionbutton component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "contributors": [],
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/floatingactionbutton"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "peerDependencies": {
+    "@spectrum-css/tokens": ">=13"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

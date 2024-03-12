@@ -1,29 +1,29 @@
 {
-	"name": "@spectrum-css/assetcard",
-	"version": "4.0.0",
-	"description": "The Spectrum CSS asset card component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/assetcard",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/assetcard"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"peerDependencies": {
-		"@spectrum-css/checkbox": ">=7",
-		"@spectrum-css/tokens": ">=13"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/checkbox": {
-			"optional": true
-		}
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/assetcard",
+  "version": "3.1.5-next.0",
+  "description": "The Spectrum CSS asset card component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/assetcard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/assetcard"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "peerDependencies": {
+    "@spectrum-css/checkbox": ">=7",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/checkbox": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
