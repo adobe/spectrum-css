@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 
 @import "@spectrum-css/commons/basebutton.css";
 
-/* default for all buttons */
 .spectrum-Button {
   --spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
   --spectrum-button-border-radius: var(--spectrum-corner-radius-100);
@@ -159,11 +158,30 @@ governing permissions and limitations under the License.
     align-self: flex-start;
   }
 
-  /* correct focus indicator radius for t-shirt sizing */
+  /* Focus indicator */
   &::after {
-    border-radius: calc(var(--mod-button-border-radius, var(--spectrum-button-border-radius)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
+    position: absolute;
+    inset: 0;
+    margin: calc((var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) + var(--mod-button-border-width, var(--spectrum-button-border-width))) * -1);
+    border-radius: var(--mod-button-focus-ring-border-radius, var(--spectrum-button-focus-ring-border-radius));
+    transition: box-shadow var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
+    pointer-events: none;
+    content: '';
   }
 
+  &:focus-visible,
+  &.is-focused {
+    box-shadow: none;
+    outline: none;
+
+    &::after {
+      box-shadow: 0 0 0
+        var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness))
+        var(--highcontrast-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color)));
+    }
+  }
+
+  /* States and interaction */
   &:hover,
   &:active {
     box-shadow: none;
@@ -229,22 +247,6 @@ governing permissions and limitations under the License.
       transition: opacity var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) ease-in-out;
     }
   }
-
-  &.spectrum-Button--iconOnly {
-    min-inline-size: unset;
-    padding: calc(var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
-    border-radius: 50%;
-
-    .spectrum-Icon {
-      align-self: center;
-      margin-inline-start: 0;
-      margin-block-start: 0;
-    }
-
-    &::after {
-      border-radius: 50%;
-    }
-  }
 }
 
 a.spectrum-Button {
@@ -264,38 +266,20 @@ a.spectrum-Button {
   text-align: var(--mod-button-text-align-with-icon, start);
 }
 
-.spectrum-Button {
-  &:focus-visible,
-  &.is-focused {
-    &::after {
-      box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color));
-    }
-  }
-}
+/* Icon only variant */
+.spectrum-Button.spectrum-Button--iconOnly {
+  min-inline-size: unset;
+  padding: calc(var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  border-radius: 50%;
 
-/* Special cases for focus indicator */
-.spectrum-Button {
-  transition: border-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
+  .spectrum-Icon {
+    align-self: center;
+    margin-inline-start: 0;
+    margin-block-start: 0;
+  }
 
   &::after {
-    position: absolute;
-    inset: 0;
-    margin: calc((var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) + var(--mod-button-border-width, var(--spectrum-button-border-width))) * -1);
-    border-radius: var(--mod-button-focus-ring-border-radius, var(--spectrum-button-focus-ring-border-radius));
-    transition: box-shadow var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
-    pointer-events: none;
-    content: '';
-  }
-
-  &:focus-visible {
-    /* Remove the default focus outline */
-    box-shadow: none;
-    outline: none;
-
-    &::after {
-      box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--highcontrast-button-focus-ring-color, var(--mod-button-focus-ring-color,
-            var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color))));
-    }
+    border-radius: 50%;
   }
 }
 
@@ -308,7 +292,7 @@ a.spectrum-Button {
   --spectrum-button-focus-indicator-color: var(--mod-static-black-focus-indicator-color, var(--spectrum-static-black-focus-indicator-color));
 }
 
-/* Windows High Contrast Mode */
+/* Forced colors / high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Button {
     --highcontrast-button-content-color-disabled: GrayText;
@@ -317,10 +301,12 @@ a.spectrum-Button {
     --mod-progress-circle-track-border-color-over-background: ButtonText;
     --mod-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
 
+    /* Focus indicator */
+    --highcontrast-button-focus-ring-color: ButtonText;
     &:focus-visible {
       &::after {
+        /* Make sure the box-shadow used for the focus indicator is displayed. */
         forced-color-adjust: none;
-        box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) ButtonText;
       }
     }
 
