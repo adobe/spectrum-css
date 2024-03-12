@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/rating",
-  "version": "4.2.4",
+  "version": "4.2.5-next.0",
   "description": "The Spectrum CSS rating component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -19,7 +19,7 @@
     "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^5.0.5"
+    "@spectrum-css/component-builder-simple": "^5.0.6-next.0"
   },
   "publishConfig": {
     "access": "public"
