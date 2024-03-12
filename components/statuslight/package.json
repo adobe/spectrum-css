@@ -1,23 +1,23 @@
 {
-	"name": "@spectrum-css/statuslight",
-	"version": "7.0.0",
-	"description": "The Spectrum CSS statuslight component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/statuslight",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/statuslight"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"peerDependencies": {
-		"@spectrum-css/tokens": ">=13"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/statuslight",
+  "version": "6.1.7-next.0",
+  "description": "The Spectrum CSS statuslight component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/statuslight",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/statuslight"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "peerDependencies": {
+    "@spectrum-css/tokens": ">=13"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

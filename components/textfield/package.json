@@ -1,29 +1,29 @@
 {
-	"name": "@spectrum-css/textfield",
-	"version": "7.0.0",
-	"description": "The Spectrum CSS textfield component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/textfield",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/textfield"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"peerDependencies": {
-		"@spectrum-css/helptext": ">=4",
-		"@spectrum-css/tokens": ">=13"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/helptext": {
-			"optional": true
-		}
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/textfield",
+  "version": "6.1.7-next.0",
+  "description": "The Spectrum CSS textfield component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/textfield",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/textfield"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "peerDependencies": {
+    "@spectrum-css/helptext": ">=4",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/helptext": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

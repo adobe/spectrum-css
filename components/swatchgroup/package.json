@@ -1,24 +1,24 @@
 {
-	"name": "@spectrum-css/swatchgroup",
-	"version": "3.0.0",
-	"description": "The Spectrum CSS Color swatch group component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/swatchgroup",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/swatchgroup"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"peerDependencies": {
-		"@spectrum-css/swatch": ">=5",
-		"@spectrum-css/tokens": ">=13"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/swatchgroup",
+  "version": "2.1.6-next.0",
+  "description": "The Spectrum CSS Color swatch group component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/swatchgroup",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/swatchgroup"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "peerDependencies": {
+    "@spectrum-css/swatch": ">=5",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

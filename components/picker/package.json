@@ -1,39 +1,39 @@
 {
-	"name": "@spectrum-css/picker",
-	"version": "8.0.0",
-	"description": "The Spectrum CSS picker component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/picker",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/picker"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"peerDependencies": {
-		"@spectrum-css/helptext": ">=4",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/menu": ">=5",
-		"@spectrum-css/popover": ">=6",
-		"@spectrum-css/progresscircle": ">=2",
-		"@spectrum-css/tokens": ">=13"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/helptext": {
-			"optional": true
-		},
-		"@spectrum-css/progresscircle": {
-			"optional": true
-		}
-	},
-	"devDependencies": {
-		"@spectrum-css/commons": "^10.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/picker",
+  "version": "7.2.8-next.0",
+  "description": "The Spectrum CSS picker component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/picker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/picker"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "peerDependencies": {
+    "@spectrum-css/helptext": ">=4",
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/menu": ">=5",
+    "@spectrum-css/popover": ">=6",
+    "@spectrum-css/progresscircle": ">=2",
+    "@spectrum-css/tokens": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/helptext": {
+      "optional": true
+    },
+    "@spectrum-css/progresscircle": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@spectrum-css/commons": "^9.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
