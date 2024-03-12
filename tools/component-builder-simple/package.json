@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/component-builder-simple",
-  "version": "5.0.5",
+  "version": "5.0.6-next.0",
   "description": "The Spectrum CSS simple component builder",
   "license": "Apache-2.0",
   "repository": {
@@ -12,7 +12,7 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "dependencies": {
-    "@spectrum-css/tokens": "^14.0.0-next.0",
+    "@spectrum-css/tokens": "^14.0.0-next.2",
     "at-rule-packer": "^0.4.2",
     "autoprefixer": "^10.4.17",
     "colors": "^1.4.0",

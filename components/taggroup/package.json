@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/taggroup",
-  "version": "4.1.5",
+  "version": "4.1.6-next.0",
   "description": "The Spectrum CSS tag group component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -19,7 +19,7 @@
     "@spectrum-css/tokens": ">=13"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^5.0.5"
+    "@spectrum-css/component-builder-simple": "^5.0.6-next.0"
   },
   "publishConfig": {
     "access": "public"
