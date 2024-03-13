@@ -8,30 +8,32 @@ import * as Button from './button-down-state.stories.js';
 
 Down state is a Spectrum 2 feature that creates the illusion of components being pressed-in when active. This functionality is already included in Spectrum 2 components that require down state in this project. It is implemented with a CSS transform. The implementation depends on the size of the interactable element, as shown in the examples below.
 
-Note that in this case, users are required to develop an implementation to determine the width and height of the component. Assign these values to the `--spectrum-downstate-width` and `--spectrum-downstate-height` custom properties in a `style` attribute on the HTML element to expose them for use in the CSS.
-
 <h2>Examples</h2>
 
 <h3>Minimum perspective</h3>
-The checkbox component is an example of an element that has a width of 24px or less.
+
+The checkbox component is an example of an element that has a width of 24px or less by default.
 
 <Story of={Checkbox.CheckboxDownState} />
 
 In this case, we use the minimum perspective token:
+
 ```
 transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
 ```
 
 <h3>Calculated perspective</h3>
-The button component is an example of an element that usually has a width greater than 24px.
+
+The button component is an example of an element that usually has a width greater than 24px by default.
 
 <Story of={Button.ButtonDownState} />
 
 In this case, we use a max formula to calculate the perspective based on component width and height (this helps us account for components that may be very wide):
+
 ```
 transform:
   perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down)))
   translateZ(var(--spectrum-component-size-difference-down));
 ```
 
-*Note that this case requires the consumer to define an implementation to dynamically set the values of the `--spectrum-downstate-width` and `--spectrum-downstate-height` tokens based on the component's width and height.*
+*Note that in this case, users are required to develop an implementation to determine the width and height of the component. Assign these values to the `--spectrum-downstate-width` and `--spectrum-downstate-height` custom properties in a `style` attribute on the HTML element to expose them for use in the CSS.*
