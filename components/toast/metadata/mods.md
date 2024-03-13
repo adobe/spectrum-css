@@ -4,7 +4,6 @@
 | `--mod-toast-block-size`                                |
 | `--mod-toast-border-width`                              |
 | `--mod-toast-corner-radius`                             |
-| `--mod-toast-divider-color`                             |
 | `--mod-toast-font-size`                                 |
 | `--mod-toast-font-weight`                               |
 | `--mod-toast-informative-background-color-default`      |
@@ -22,6 +21,7 @@
 | `--mod-toast-spacing-start-edge-to-text-and-icon`       |
 | `--mod-toast-spacing-text-and-action-button-to-divider` |
 | `--mod-toast-spacing-text-to-action-button-horizontal`  |
+| `--mod-toast-spacing-text-to-close-button`              |
 | `--mod-toast-spacing-top-edge-to-divider`               |
 | `--mod-toast-spacing-top-edge-to-icon`                  |
 | `--mod-toast-spacing-top-edge-to-text`                  |
