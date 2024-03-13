@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/blocks';
-import * as ButtonStories from '../../components/button/stories/button.stories.js';
-import * as CheckboxStories from '../../components/checkbox/stories/checkbox.stories.js';
+import * as Checkbox from './checkbox-down-state.stories.js';
+import * as Button from './button-down-state.stories.js';
 
 <Meta title="Foundations/Down state" />
 
@@ -15,7 +15,7 @@ Note that in this case, users are required to develop an implementation to deter
 <h3>Minimum perspective</h3>
 The checkbox component is an example of an element that has a width of 24px or less.
 
-<Story of={CheckboxStories.Default} />
+<Story of={Checkbox.CheckboxDownState} />
 
 In this case, we use the minimum perspective token:
 ```
@@ -25,7 +25,7 @@ transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) 
 <h3>Calculated perspective</h3>
 The button component is an example of an element that usually has a width greater than 24px.
 
-<Story of={ButtonStories.DownStateDocs} />
+<Story of={Button.ButtonDownState} />
 
 In this case, we use a max formula to calculate the perspective based on component width and height (this helps us account for components that may be very wide):
 ```
