@@ -24,6 +24,9 @@ governing permissions and limitations under the License.
   --spectrum-button-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-50);
+
+  /* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties */
+  --spectrum-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
 }
 
 .spectrum-Button--sizeS {
@@ -42,6 +45,10 @@ governing permissions and limitations under the License.
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-small);
   --spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-75);
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-75);
+
+  &.spectrum-Button--iconOnly {
+    --spectrum-downstate-perspective: var(--spectrum-component-size-minimum-perspective-down);
+  }
 }
 
 .spectrum-Button--sizeM {
@@ -148,21 +155,20 @@ governing permissions and limitations under the License.
   }
 
   &:active {
-    /* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties */
-    transform: perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down))) translateZ(var(--spectrum-component-size-difference-down));
+    transform: perspective(var(--spectrum-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
   }
 
   .spectrum-Icon {
     /* Any block-size difference between the intended workflow icon size and actual icon used.
        Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
     --_icon-size-difference: max(0px,
-      var(--spectrum-button-intended-icon-size) - 
+      var(--spectrum-button-intended-icon-size) -
       var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size))
     );
 
     margin-block-start: var(--mod-button-icon-margin-block-start,
       max(0px,
-        var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) - 
+        var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) -
         var(--mod-button-border-width, var(--spectrum-button-border-width)) +
         (var(--_icon-size-difference, 0px) / 2)
       )
