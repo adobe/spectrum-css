@@ -2,6 +2,7 @@ import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { html } from "lit";
 
 export { withContextWrapper } from "./contextsWrapper.js";
+export { withDownStateDimensionCapture } from "./withDownStateDimensionCapture.js";
 export { withTestingPreviewWrapper } from "./withTestingPreviewWrapper.js";
 
 /**
