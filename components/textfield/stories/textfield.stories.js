@@ -1,6 +1,6 @@
 // Import the component markup template
-import { Template } from "./template";
 import { html } from "lit";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Text field",
@@ -201,7 +201,7 @@ const TextFieldGroup = ({
 	...args
 }) => {
 	return html`
-		<div style="display: flex; flex-direction: column; gap: 2rem;">
+		<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 2rem;">
 			${Template({
 				...args
 			})}
@@ -235,7 +235,7 @@ const TextAreaGroup = ({
 	...args
 }) => {
 	return html`
-		<div style="display: flex; flex-direction: column; gap: 2rem;">
+		<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 2rem;">
 			${Template({
 				...args,
 				multiline: true,

@@ -553,14 +553,26 @@ governing permissions and limitations under the License.
 
 	/****** Validation Icon - Invalid ⚠️ ******/
 	.spectrum-Textfield.is-invalid & {
-		justify-self: end;
-
 		block-size: var(
 			--mod-textfield-icon-size-invalid,
 			var(--spectrum-textfield-icon-size-invalid)
 		);
-		padding-block-start: var(--spectrum-textfield-icon-spacing-block-invalid);
-		padding-inline-end: var(--spectrum-textfield-icon-spacing-inline-end-invalid);
+		inline-size: var(
+			--mod-textfield-icon-size-invalid,
+			var(--spectrum-textfield-icon-size-invalid)
+		);
+		inset-block-start: var(
+			--mod-textfield-icon-spacing-block-invalid,
+			var(--spectrum-textfield-icon-spacing-block-invalid)
+		);
+		inset-block-end: var(
+			--mod-textfield-icon-spacing-block-invalid,
+			var(--spectrum-textfield-icon-spacing-block-invalid)
+		);
+		inset-inline-end: var(
+			--mod-textfield-icon-spacing-inline-end-invalid,
+			var(--spectrum-textfield-icon-spacing-inline-end-invalid)
+		);
 
 		color: var(
 			--highcontrast-textfield-icon-color-invalid,
@@ -1271,9 +1283,8 @@ governing permissions and limitations under the License.
 		);
 	}
 
-	/* CSS to support text area grow behavior, requires JavaScript to implement */
+	/* CSS to support text area grow behavior. This requires JavaScript to implement. */
 	&.spectrum-Textfield--grows {
-
 		.spectrum-Textfield-validationIcon {
 			grid-row: auto;
 			grid-column: auto;
