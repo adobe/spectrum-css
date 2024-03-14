@@ -1268,14 +1268,17 @@ governing permissions and limitations under the License.
 
 	&.spectrum-Textfield {
 		inline-size: unset;
-		min-inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
+		min-inline-size: max(
+			var(--mod-textfield-width, var(--spectrum-textfield-width)),
+			var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size))
+		);
 	}
 
 	.spectrum-Textfield-input {
-		resize: both;
-		min-inline-size: var(
-			--mod-text-area-min-inline-size,
-			var(--spectrum-text-area-min-inline-size)
+		resize: var(--mod-text-area-resize, both);
+		min-inline-size: max(
+			var(--mod-textfield-width, var(--spectrum-textfield-width)),
+			var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size))
 		);
 		min-block-size: var(
 			--mod-text-area-min-block-size,
