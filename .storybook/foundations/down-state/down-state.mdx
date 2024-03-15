@@ -4,27 +4,29 @@ import * as Button from './button-down-state.stories.js';
 
 <Meta title="Foundations/Down state" />
 
-<h1>Down state</h1>
+# Down state
 
 Down state is a Spectrum 2 feature that creates the illusion of components being pressed-in when active. This functionality is already included in Spectrum 2 components that require down state in this project. It is implemented with a CSS transform. The implementation depends on the size of the interactable element, as shown in the examples below.
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Minimum perspective</h3>
+### Minimum perspective
 
-The checkbox component is an example of an element that has a width of 24px or less by default.
+For elements that have a width of 24px or less, the minimum perspective token is used to apply the down state. One example of a component that uses this token is the checkbox:
 
 <Story of={Checkbox.CheckboxDownState} />
 
 In this case, we use the minimum perspective token:
 
 ```
-transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
+transform:
+  perspective(var(--spectrum-component-size-minimum-perspective-down))
+  translateZ(var(--spectrum-component-size-difference-down));
 ```
 
-<h3>Calculated perspective</h3>
+### Calculated perspective
 
-The button component is an example of an element that usually has a width greater than 24px by default.
+For elements that have a width of greater than 24px, we need to use the component's width and height to apply the down state. One example of a component that uses this logic is the button:
 
 <Story of={Button.ButtonDownState} />
 
@@ -32,7 +34,10 @@ In this case, we use a max formula to calculate the perspective based on compone
 
 ```
 transform:
-  perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down)))
+  perspective(max(
+    var(--spectrum-downstate-height),
+    var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down)
+  ))
   translateZ(var(--spectrum-component-size-difference-down));
 ```
 
