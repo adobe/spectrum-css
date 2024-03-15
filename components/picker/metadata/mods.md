@@ -63,6 +63,7 @@
 | `--mod-picker-spacing-picker-to-popover`               |
 | `--mod-picker-spacing-text-to-alert-icon-inline-start` |
 | `--mod-picker-spacing-text-to-icon`                    |
+| `--mod-picker-spacing-text-to-icon-inline-end`         |
 | `--mod-picker-spacing-top-to-alert-icon`               |
 | `--mod-picker-spacing-top-to-disclosure-icon`          |
 | `--mod-picker-spacing-top-to-progress-circle`          |
