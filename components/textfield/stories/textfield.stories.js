@@ -1,5 +1,6 @@
 // Import the component markup template
 import { html } from "lit";
+import { when } from "lit/directives/when.js";
 import { Template } from "./template";
 
 export default {
@@ -205,28 +206,24 @@ const TextFieldGroup = ({
 			${Template({
 				...args
 			})}
-			${window.isChromatic() ?
-				Template({
+			${when(window.isChromatic(), () => html`
+				${Template({
 					displayLabel: true,
 					labelText: "Username",
-				})
-				: null }
-			${window.isChromatic() ?
-				Template({
+				})}
+				${Template({
 					displayLabel: true,
 					labelText: "Username that is really long and wraps onto a second line",
 					isInvalid: true,
-				})
-				: null }
-			${window.isChromatic() ?
-				Template({
+				})}
+				${Template({
 					displayLabel: true,
 					labelText: "Username",
 					labelPosition: 'side',
 					isValid: true,
 					value: "username@reallylongemail.com"
-				})
-				: null }
+				})}
+			`)}
 		</div>
 	`;
 };
@@ -241,33 +238,52 @@ const TextAreaGroup = ({
 				multiline: true,
 				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
 			})}
-			${window.isChromatic() ?
-				Template({
+			${when(window.isChromatic(), () => html`
+				${Template({
 					displayLabel: true,
 					labelText: "Username",
 					multiline: true,
 					value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-				})
-				: null }
-			${window.isChromatic() ?
-				Template({
+				})}
+				${Template({
 					displayLabel: true,
-					labelText: "Username that is really long and wraps onto a second line",
+					labelText: "Username",
+					multiline: true,
+					grows: true,
+					value: "Grows, with no resize. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+				})}
+				${Template({
+					displayLabel: true,
+					labelText: "Username",
+					multiline: true,
+					value: "Example of behavior where Text area gets stretched by default within a flex container with flex-direction: column. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia volupta.",
+					customStyles: {
+						'align-self': 'stretch'
+					}
+				})}
+				${Template({
+					displayLabel: true,
+					labelText: "Username",
 					isInvalid: true,
 					multiline: true,
 					value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-				})
-				: null }
-			${window.isChromatic() ?
-				Template({
+				})}
+				${Template({
+					displayLabel: true,
+					labelText: "Username that has a really long label and wraps onto a second line. Lorem ipsum dolor sit amet.",
+					isInvalid: true,
+					multiline: true,
+					value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+				})}
+				${Template({
 					displayLabel: true,
 					labelText: "Username",
 					labelPosition: 'side',
 					isValid: true,
 					multiline: true,
 					value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-				})
-				: null }
+				})}
+			`)}
 		</div>
 	`;
 };

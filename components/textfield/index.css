@@ -452,7 +452,7 @@ governing permissions and limitations under the License.
 
 	/* Grid layout for child components */
 	display: inline-grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: minmax(0, auto) minmax(0, auto);
 	grid-template-rows: auto auto auto;
 }
 
@@ -1264,22 +1264,28 @@ governing permissions and limitations under the License.
 
 /*** Text Area ***/
 .spectrum-Textfield--multiline {
-  --spectrum-textfield-input-line-height: normal;
+	--spectrum-textfield-input-line-height: normal;
 
 	&.spectrum-Textfield {
+		/* Remove fixed inline-size to allow resize behavior. */
 		inline-size: unset;
-		min-inline-size: max(
-			var(--mod-textfield-width, var(--spectrum-textfield-width)),
-			var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size))
+		min-inline-size: var(
+			--mod-text-area-min-inline-size, 
+			var(--spectrum-text-area-min-inline-size)
 		);
 	}
 
 	.spectrum-Textfield-input {
 		resize: var(--mod-text-area-resize, both);
-		min-inline-size: max(
+		inline-size: max(
 			var(--mod-textfield-width, var(--spectrum-textfield-width)),
 			var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size))
 		);
+		min-inline-size: var(
+			--mod-text-area-min-inline-size, 
+			var(--spectrum-text-area-min-inline-size)
+		);
+		max-inline-size: var(--mod-text-area-max-inline-size, 100%);
 		min-block-size: var(
 			--mod-text-area-min-block-size,
 			var(--spectrum-text-area-min-block-size)
