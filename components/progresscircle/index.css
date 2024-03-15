@@ -70,7 +70,7 @@ governing permissions and limitations under the License.
                   var(--spectrum-progress-circle-size));
   block-size: var(--mod-progress-circle-size,
                   var(--spectrum-progress-circle-size));
-  position: relative;
+  position: var(--mod-progress-circle-position, relative);
   direction: ltr;
 
   /* Fix for Safari rendering bug */

@@ -1,3 +1,4 @@
+import { useArgs } from "@storybook/client-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -27,6 +28,7 @@ export const Template = ({
   onclick,
   isDisabled = false,
   isPending = false,
+  isPendingStory = false,
   ariaExpanded,
   ariaControls,
   ...globals
@@ -38,6 +40,8 @@ export const Template = ({
 	} catch (e) {
 		console.warn(e);
 	}
+
+  const [, updateArgs] = useArgs();
 
   return html`
     <button
@@ -54,7 +58,11 @@ export const Template = ({
       id=${ifDefined(id)}
       style=${ifDefined(styleMap(customStyles))}
       ?disabled=${isDisabled}
-      @click=${onclick}
+      @click=${!isPendingStory ? onclick : () => {
+        isPending
+          ? updateArgs({ isPending: false })
+          : updateArgs({ isPending: true });
+      }}
       aria-label=${ifDefined(hideLabel ? iconName : undefined)}
       aria-expanded=${ifDefined(ariaExpanded?.toString())}
       aria-controls=${ifDefined(ariaControls)}
@@ -64,11 +72,16 @@ export const Template = ({
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
-      ${when(isPending, () => {
-          const isOverBackground = staticColor === 'white';
-          return ProgressCircle({ ...globals, size: 's', overBackground: isOverBackground, isIndeterminate: true, addStaticBackground: false })
-        }
-      )}
+      ${when(isPendingStory, () => {
+        const isOverBackground = staticColor === 'white';
+        return ProgressCircle({
+          ...globals,
+          size: 's',
+          overBackground: isOverBackground,
+          isIndeterminate: true,
+          addStaticBackground: false
+        })
+      })}
     </button>
   `;
 };

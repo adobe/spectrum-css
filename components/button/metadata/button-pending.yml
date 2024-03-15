@@ -10,6 +10,29 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeS is-pending" disabled>
+            <span class="spectrum-Button-label">Edit</span>
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
+              <div class="spectrum-ProgressCircle-track"></div>
+              <div class="spectrum-ProgressCircle-fills">
+                <div class="spectrum-ProgressCircle-fillMask1">
+                  <div class="spectrum-ProgressCircle-fillSubMask1">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+                <div class="spectrum-ProgressCircle-fillMask2">
+                  <div class="spectrum-ProgressCircle-fillSubMask2">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeS is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
+            <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -28,6 +51,9 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--iconOnly spectrum-Button--sizeS is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -49,6 +75,29 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--sizeM is-pending" disabled>
+            <span class="spectrum-Button-label">Edit</span>
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
+              <div class="spectrum-ProgressCircle-track"></div>
+              <div class="spectrum-ProgressCircle-fills">
+                <div class="spectrum-ProgressCircle-fillMask1">
+                  <div class="spectrum-ProgressCircle-fillSubMask1">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+                <div class="spectrum-ProgressCircle-fillMask2">
+                  <div class="spectrum-ProgressCircle-fillSubMask2">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--sizeM is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
+            <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -67,6 +116,9 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--iconOnly spectrum-Button--sizeM is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -88,6 +140,29 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--primary spectrum-Button--sizeL is-pending" disabled>
+            <span class="spectrum-Button-label">Edit</span>
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
+              <div class="spectrum-ProgressCircle-track"></div>
+              <div class="spectrum-ProgressCircle-fills">
+                <div class="spectrum-ProgressCircle-fillMask1">
+                  <div class="spectrum-ProgressCircle-fillSubMask1">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+                <div class="spectrum-ProgressCircle-fillMask2">
+                  <div class="spectrum-ProgressCircle-fillSubMask2">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--primary spectrum-Button--sizeL is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
+            <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -106,6 +181,9 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--primary spectrum-Button--iconOnly spectrum-Button--sizeL is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -127,6 +205,29 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--secondary spectrum-Button--sizeXL is-pending" disabled>
+            <span class="spectrum-Button-label">Edit</span>
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
+              <div class="spectrum-ProgressCircle-track"></div>
+              <div class="spectrum-ProgressCircle-fills">
+                <div class="spectrum-ProgressCircle-fillMask1">
+                  <div class="spectrum-ProgressCircle-fillSubMask1">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+                <div class="spectrum-ProgressCircle-fillMask2">
+                  <div class="spectrum-ProgressCircle-fillSubMask2">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--secondary spectrum-Button--sizeXL is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
+            <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -145,6 +246,9 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--fill spectrum-Button--secondary spectrum-Button--iconOnly spectrum-Button--sizeXL is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -170,6 +274,29 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
           <button class="spectrum-Button spectrum-Button--accent spectrum-Button--outline spectrum-Button--sizeS is-pending" disabled>
+            <span class="spectrum-Button-label">Edit</span>
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
+              <div class="spectrum-ProgressCircle-track"></div>
+              <div class="spectrum-ProgressCircle-fills">
+                <div class="spectrum-ProgressCircle-fillMask1">
+                  <div class="spectrum-ProgressCircle-fillSubMask1">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+                <div class="spectrum-ProgressCircle-fillMask2">
+                  <div class="spectrum-ProgressCircle-fillSubMask2">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--outline spectrum-Button--sizeS is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
+            <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -188,6 +315,9 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--accent spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeS is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -209,6 +339,29 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
           <button class="spectrum-Button spectrum-Button--negative spectrum-Button--outline spectrum-Button--sizeM is-pending" disabled>
+            <span class="spectrum-Button-label">Edit</span>
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
+              <div class="spectrum-ProgressCircle-track"></div>
+              <div class="spectrum-ProgressCircle-fills">
+                <div class="spectrum-ProgressCircle-fillMask1">
+                  <div class="spectrum-ProgressCircle-fillSubMask1">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+                <div class="spectrum-ProgressCircle-fillMask2">
+                  <div class="spectrum-ProgressCircle-fillSubMask2">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button class="spectrum-Button spectrum-Button--negative spectrum-Button--outline spectrum-Button--sizeM is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
+            <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -227,6 +380,9 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--negative spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeM is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -248,6 +404,29 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
           <button class="spectrum-Button spectrum-Button--primary spectrum-Button--outline spectrum-Button--sizeL is-pending" disabled>
+            <span class="spectrum-Button-label">Edit</span>
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
+              <div class="spectrum-ProgressCircle-track"></div>
+              <div class="spectrum-ProgressCircle-fills">
+                <div class="spectrum-ProgressCircle-fillMask1">
+                  <div class="spectrum-ProgressCircle-fillSubMask1">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+                <div class="spectrum-ProgressCircle-fillMask2">
+                  <div class="spectrum-ProgressCircle-fillSubMask2">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button class="spectrum-Button spectrum-Button--primary spectrum-Button--outline spectrum-Button--sizeL is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
+            <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -266,6 +445,9 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--primary spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeL is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -287,6 +469,29 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
           <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--outline spectrum-Button--sizeXL is-pending" disabled>
+            <span class="spectrum-Button-label">Edit</span>
+            <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
+              <div class="spectrum-ProgressCircle-track"></div>
+              <div class="spectrum-ProgressCircle-fills">
+                <div class="spectrum-ProgressCircle-fillMask1">
+                  <div class="spectrum-ProgressCircle-fillSubMask1">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+                <div class="spectrum-ProgressCircle-fillMask2">
+                  <div class="spectrum-ProgressCircle-fillSubMask2">
+                    <div class="spectrum-ProgressCircle-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+
+          <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--outline spectrum-Button--sizeXL is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
+            <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -305,6 +510,9 @@ examples:
           </button>
 
           <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeXL is-pending" disabled>
+            <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-icon-18-Edit" />
+            </svg>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
               <div class="spectrum-ProgressCircle-fills">
@@ -332,6 +540,29 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeS is-pending" disabled>
+              <span class="spectrum-Button-label">Edit</span>
+              <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
+                <div class="spectrum-ProgressCircle-track"></div>
+                <div class="spectrum-ProgressCircle-fills">
+                  <div class="spectrum-ProgressCircle-fillMask1">
+                    <div class="spectrum-ProgressCircle-fillSubMask1">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                  <div class="spectrum-ProgressCircle-fillMask2">
+                    <div class="spectrum-ProgressCircle-fillSubMask2">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeS is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -350,6 +581,9 @@ examples:
             </button>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--iconOnly spectrum-Button--sizeS is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -371,6 +605,29 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeM is-pending" disabled>
+              <span class="spectrum-Button-label">Edit</span>
+              <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
+                <div class="spectrum-ProgressCircle-track"></div>
+                <div class="spectrum-ProgressCircle-fills">
+                  <div class="spectrum-ProgressCircle-fillMask1">
+                    <div class="spectrum-ProgressCircle-fillSubMask1">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                  <div class="spectrum-ProgressCircle-fillMask2">
+                    <div class="spectrum-ProgressCircle-fillSubMask2">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeM is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -389,6 +646,9 @@ examples:
             </button>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--iconOnly spectrum-Button--sizeM is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -410,6 +670,29 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeL is-pending" disabled>
+              <span class="spectrum-Button-label">Edit</span>
+              <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
+                <div class="spectrum-ProgressCircle-track"></div>
+                <div class="spectrum-ProgressCircle-fills">
+                  <div class="spectrum-ProgressCircle-fillMask1">
+                    <div class="spectrum-ProgressCircle-fillSubMask1">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                  <div class="spectrum-ProgressCircle-fillMask2">
+                    <div class="spectrum-ProgressCircle-fillSubMask2">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeL is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -428,6 +711,9 @@ examples:
             </button>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--iconOnly spectrum-Button--sizeL is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -449,6 +735,29 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeXL is-pending" disabled>
+              <span class="spectrum-Button-label">Edit</span>
+              <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
+                <div class="spectrum-ProgressCircle-track"></div>
+                <div class="spectrum-ProgressCircle-fills">
+                  <div class="spectrum-ProgressCircle-fillMask1">
+                    <div class="spectrum-ProgressCircle-fillSubMask1">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                  <div class="spectrum-ProgressCircle-fillMask2">
+                    <div class="spectrum-ProgressCircle-fillSubMask2">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeXL is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -467,6 +776,9 @@ examples:
             </button>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--iconOnly spectrum-Button--sizeXL is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -495,6 +807,29 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
             <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeS is-pending" disabled>
+              <span class="spectrum-Button-label">Edit</span>
+              <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
+                <div class="spectrum-ProgressCircle-track"></div>
+                <div class="spectrum-ProgressCircle-fills">
+                  <div class="spectrum-ProgressCircle-fillMask1">
+                    <div class="spectrum-ProgressCircle-fillSubMask1">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                  <div class="spectrum-ProgressCircle-fillMask2">
+                    <div class="spectrum-ProgressCircle-fillSubMask2">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeS is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -513,6 +848,9 @@ examples:
             </button>
 
             <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeS is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -534,6 +872,29 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
             <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeM is-pending" disabled>
+              <span class="spectrum-Button-label">Edit</span>
+              <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
+                <div class="spectrum-ProgressCircle-track"></div>
+                <div class="spectrum-ProgressCircle-fills">
+                  <div class="spectrum-ProgressCircle-fillMask1">
+                    <div class="spectrum-ProgressCircle-fillSubMask1">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                  <div class="spectrum-ProgressCircle-fillMask2">
+                    <div class="spectrum-ProgressCircle-fillSubMask2">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeM is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -552,6 +913,9 @@ examples:
             </button>
 
             <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeM is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -573,6 +937,29 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
             <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeL is-pending" disabled>
+              <span class="spectrum-Button-label">Edit</span>
+              <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
+                <div class="spectrum-ProgressCircle-track"></div>
+                <div class="spectrum-ProgressCircle-fills">
+                  <div class="spectrum-ProgressCircle-fillMask1">
+                    <div class="spectrum-ProgressCircle-fillSubMask1">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                  <div class="spectrum-ProgressCircle-fillMask2">
+                    <div class="spectrum-ProgressCircle-fillSubMask2">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeL is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -591,6 +978,9 @@ examples:
             </button>
 
             <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeL is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -612,6 +1002,29 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
             <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeXL is-pending" disabled>
+              <span class="spectrum-Button-label">Edit</span>
+              <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
+                <div class="spectrum-ProgressCircle-track"></div>
+                <div class="spectrum-ProgressCircle-fills">
+                  <div class="spectrum-ProgressCircle-fillMask1">
+                    <div class="spectrum-ProgressCircle-fillSubMask1">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                  <div class="spectrum-ProgressCircle-fillMask2">
+                    <div class="spectrum-ProgressCircle-fillSubMask2">
+                      <div class="spectrum-ProgressCircle-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeXL is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
+              <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
@@ -630,6 +1043,9 @@ examples:
             </button>
 
             <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeXL is-pending" disabled>
+              <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-icon-18-Edit" />
+              </svg>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
                 <div class="spectrum-ProgressCircle-fills">
