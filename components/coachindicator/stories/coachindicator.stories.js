@@ -41,9 +41,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("coachindicator")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

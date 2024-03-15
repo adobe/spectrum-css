@@ -63,9 +63,7 @@ export default {
 			],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("swatchgroup")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

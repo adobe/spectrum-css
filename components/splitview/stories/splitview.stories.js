@@ -76,9 +76,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("splitview")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

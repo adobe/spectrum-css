@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 @import "@spectrum-css/commons/basebutton.css";
+@import "./themes/express.css";
 
 .spectrum-ActionButton {
   --spectrum-actionbutton-animation-duration: var(--spectrum-animation-duration-100);

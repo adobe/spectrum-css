@@ -77,10 +77,10 @@ export const Template = ({
 
 	/**
 	 * Fallback UI Icon sizing number.
-	 * 
+	 *
 	 * If the icon name includes its scale, we want to leave that scale. This is preferred,
 	 * as UI icons do not use workflow icon sizing.
-	 * 
+	 *
 	 * If the UI icon name does not include scale, reformat it to match the provided sizing.
 	 * E.g. with a size of "s", the icon name "ChevronRight" would become "ChevronRight75".
 	 */
@@ -170,10 +170,10 @@ export const Template = ({
 
 	try {
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg`
+			/* webpackPrefetch: true */ `@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw`
 		);
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/ui-icons/dist/spectrum-css-icons.svg`
+			/* webpackPrefetch: true */ `@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw`
 		);
 	} catch (e) {
 		console.warn(e);

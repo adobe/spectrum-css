@@ -48,8 +48,8 @@ export const uiIconsWithDirections = [
 /**
  * Retrieve SVG markup from contents of loaded SVG file, pulling from
  * either the set of Workflow icons or UI icons.
- * 
- * @param {object} 
+ *
+ * @param {object}
  * @returns {string} SVG HTML markup
  */
 export const fetchIconSVG = ({
@@ -65,18 +65,18 @@ export const fetchIconSVG = ({
 	// Check "Workflow icons" first.
 	if (setName === "workflow") {
 		try {
-			icon = require(`!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/${
+			icon = require(`@adobe/spectrum-css-workflow-icons/dist/${
 				scale !== "medium" ? `24` : `18`
-			}/${iconName}.svg`);
+			}/${iconName}.svg?raw`);
 			if (icon) return (icon.default ?? icon).trim();
 		} catch (e) {}
 	}
 
 	// Check "UI icons" for icon set if not yet found.
 	try {
-		icon = require(`!!raw-loader!@spectrum-css/ui-icons/dist/${
+		icon = require(`@spectrum-css/ui-icons/dist/${
 			scale ? scale : "medium"
-		}/${iconName}.svg`);
+		}/${iconName}.svg?raw`);
 		if (icon) return (icon.default ?? icon).trim();
 	} catch (e) {}
 

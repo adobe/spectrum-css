@@ -10,8 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const logger = require("gulplog");
-
+/** @type import('markdown-it') */
 const md = require("markdown-it")({
 	html: true,
 	linkify: false,
@@ -37,7 +36,7 @@ let ruleClassnames = {
 
 for (let [rule, className] of Object.entries(ruleClassnames)) {
 	md.renderer.rules[rule] = (function (className) {
-		const oldRule = md.renderer.rules[rule] || defaultRenderer;
+		const oldRule = md.renderer.rules[rule] ?? defaultRenderer;
 		return function (tokens, idx, options, env, self) {
 			tokens[idx].attrPush(["class", className]);
 			return oldRule(tokens, idx, options, env, self);
@@ -45,7 +44,7 @@ for (let [rule, className] of Object.entries(ruleClassnames)) {
 	})(className);
 }
 
-const code_inline = md.renderer.rules.code_inline || defaultRenderer;
+const code_inline = md.renderer.rules.code_inline ?? defaultRenderer;
 md.renderer.rules.code_inline = function (tokens, idx, options, env, self) {
 	const token = tokens[idx];
 	// ~ indicates markup that should be red
@@ -84,128 +83,83 @@ md.renderer.rules.heading_open = function (tokens, idx, options, env, self) {
 	return defaultRenderer(tokens, idx, options, env, self);
 };
 
+/* --------- EXPORTS --------- */
+
+/** @type import('markdown-it') */
 exports.markdown = md;
 
+/** @type import('prismjs').Prism */
 exports.Prism = require("prismjs");
 
-const statusLightVariants = {
+exports.prettyPrintJSON = (json) => JSON.stringify(json, null, 2);
+
+/** @type (status: string) => "negative"|"notice"|"positive"|"neutral" */
+exports.getStatusLightVariant = (status) => ({
 	Deprecated: "negative",
-
 	"Beta Contribution": "notice",
-
 	Contribution: "notice",
 	Unverified: "notice",
-
 	Canon: "positive",
 	Verified: "positive",
-};
+}[status] ?? "neutral");
 
-const dnaStatusTranslation = {
-	Released: "Canon",
-	Beta: "Contribution",
-	Precursor: "Contribution",
-};
-
-const cssStatusTranslation = {
-	Contribution: "Unverified",
-	Unverified: "Unverified",
-	Verified: "Verified",
-};
-
-exports.getStatusLightVariant = function (status) {
-	return statusLightVariants[status] || "neutral";
-};
-
-exports.getDNAStatus = function (dnaComponentId, dnaStatus, cssStatus) {
-	if (cssStatus === "Deprecated") {
-		dnaStatus = "Deprecated";
-	}
-
-	if (cssStatus === "Verified") {
-		if (dnaStatusTranslation[dnaStatus] !== "Canon") {
-			logger.debug(
-				`${dnaComponentId} is ${cssStatus} in CSS, but ${dnaStatus} in DNA`
-			);
-		}
-	}
-
-	if (!dnaStatus) {
-		logger.debug(`${dnaComponentId} has no DNA status`);
-		dnaStatus = "Contribution";
-	}
-
-	return dnaStatusTranslation[dnaStatus] || dnaStatus;
-};
-
-exports.getCSSStatus = function (dnaComponentId, cssStatus) {
-	if (!cssStatus) {
-		cssStatus = "Contribution";
-	}
-	return cssStatusTranslation[cssStatus] || cssStatus;
-};
-
-exports.getSlug = function (name, subName) {
-	if (subName) {
-		name += `-${subName}`;
-	}
+exports.getSlug = function (name, subName = undefined) {
+	if (!name) return;
+	if (subName) name += `-${subName}`;
 	return name.toLowerCase().replace(/[^a-z\-]/g, "");
 };
 
 exports.populateDNAInfo = function (component, dnaVars) {
-	// Get DNA information
-	var dnaComponentId = component.id || component.name.toLowerCase();
+	const getDNAStatus = function (dnaStatus) {
+		if (!dnaStatus) dnaStatus = "Contribution";
 
-	// Get info based on component variation first, then component name second
-	var dnaComponentTitle = dnaVars["spectrum-" + dnaComponentId + "-name"];
+		return {
+			Released: "Canon",
+			Beta: "Contribution",
+			Precursor: "Contribution",
+		}[dnaStatus] ?? dnaStatus;
+	};
 
-	var dnaDescription = dnaVars["spectrum-" + dnaComponentId + "-description"];
+	if (!component.id) component.id = component.name?.toLowerCase();
+	if (!component.name) component.name = dnaVars[`spectrum-${component.id}-name`];
+	if (!component.status) component.status = "Contribution";
+	if (!component.slug) component.slug = this.getSlug(component.name);
 
-	var cssStatus = this.getCSSStatus(dnaComponentId, component.status);
-	var dnaStatus = this.getDNAStatus(
-		dnaComponentId,
-		dnaVars["spectrum-" + dnaComponentId + "-status"] || component.dnaStatus,
-		cssStatus
-	);
+	component.cssStatus = {
+		Contribution: "Unverified",
+		Unverified: "Unverified",
+		Verified: "Verified",
+		Deprecated: "Deprecated",
+	}[component.status];
 
-	// Store the info
-	component.name = component.name || dnaComponentTitle;
-	component.cssStatus = cssStatus;
-	component.dnaStatus = dnaStatus;
+	const dnaComponentStatus = component.dnaStatus ?? dnaVars[`spectrum-${component.id}-status`];
+	component.dnaStatus = component.cssStatus === "Deprecated" ? "Deprecated" : getDNAStatus(dnaComponentStatus);
 
-	// Add other data
-	component.id = dnaComponentId;
-	try {
-		component.slug = this.getSlug(component.name);
-	} catch (err) {
-		console.error("Could not get slug for:");
-		console.log(component);
-	}
+	if (!component?.examples) return;
 
-	if (component.examples) {
-		for (id in component.examples) {
-			let example = component.examples[id];
+	return Promise.all(
+		component.examples.map(example => {
+			const pageData = {};
 			if (typeof example === "string") {
-				// Handle markup only examples
-				example = {
-					id: id,
-					markup: example,
-				};
-				component.examples[id] = example;
+				pageData.id = component.name;
+				pageData.markup = example;
 			} else {
-				example.id = example.id || id;
+				pageData.id = example.id ?? component.name;
 			}
 
 			// All examples are verified if the outer component is verified
 			if (component.status === "Verified") {
-				example.status = "Verified";
+				pageData.status = "Verified";
 			}
 
 			// The example is canon if the component is Canon and Verified
 			if (component.dnaStatus === "Canon" && component.status === "Verified") {
-				example.dnaStatus = "Canon";
+				pageData.dnaStatus = "Canon";
 			}
 
-			this.populateDNAInfo(example, dnaVars);
-		}
-	}
+			component.examples[pageData.id] = pageData;
+
+			this.populateDNAInfo(pageData, dnaVars);
+		})
+	);
 };

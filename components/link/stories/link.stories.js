@@ -66,9 +66,7 @@ export default {
 			handles: ["click .spectrum-Link"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("link")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

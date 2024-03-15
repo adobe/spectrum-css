@@ -51,9 +51,7 @@ export default {
 			handles: ["click .spectrum-TreeView-itemLink"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("treeview")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

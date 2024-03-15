@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "./themes/express.css";
+
 .spectrum-Combobox {
   --spectrum-combobox-inline-size: var(--spectrum-field-width);
   --spectrum-combobox-block-size: var(--spectrum-component-height-100);
@@ -329,7 +331,7 @@ governing permissions and limitations under the License.
     (var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)) * 2)
   );
   backface-visibility: hidden;
-  line-height: var(--mod-combobox-line-height, var(--spectrum-combobox-line-height));  
+  line-height: var(--mod-combobox-line-height, var(--spectrum-combobox-line-height));
   font-size: var(--mod-combobox-font-size, var(--spectrum-combobox-font-size));
   font-style: var(--mod-combobox-font-style, var(--spectrum-combobox-font-style));
 

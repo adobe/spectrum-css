@@ -73,9 +73,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("popover")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 		chromatic: { delay: 2000 },
 	},

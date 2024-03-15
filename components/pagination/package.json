@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/actionbutton": ">=5",
     "@spectrum-css/button": ">=11",
@@ -21,9 +21,6 @@
     "@spectrum-css/splitbutton": ">=7",
     "@spectrum-css/textfield": ">=6",
     "@spectrum-css/tokens": ">=13"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^5.0.5"
   },
   "publishConfig": {
     "access": "public"

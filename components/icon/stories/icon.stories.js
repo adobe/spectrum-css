@@ -95,9 +95,7 @@ export default {
 	},
 	parameters: {
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("icon")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

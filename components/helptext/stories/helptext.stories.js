@@ -82,9 +82,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("helptext")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

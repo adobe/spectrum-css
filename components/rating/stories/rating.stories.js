@@ -75,9 +75,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("rating")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

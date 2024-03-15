@@ -56,9 +56,7 @@ export default {
 			handles: [...(TagStories.parameters.actions.handles ?? [])],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("taggroup")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "./themes/express.css";
+
 .spectrum-Rating {
   /* Icon */
   --spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
@@ -142,7 +144,7 @@ governing permissions and limitations under the License.
     content: '';
     block-size: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
     inline-size: var(--spectrum-rating-indicator-width);
-    
+
     /* position the indicator relative to the element's total bottom size (including bottom padding) */
     inset-block-end: calc((var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) * 2) - 1px);
     position: absolute;
@@ -188,7 +190,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Rating-icon {
     color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-    
+
     &.is-selected {
       color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
     }

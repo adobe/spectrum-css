@@ -67,9 +67,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("switch")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

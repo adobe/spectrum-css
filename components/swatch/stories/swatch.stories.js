@@ -67,9 +67,7 @@ export default {
       handles: [],
     },
     status: {
-      type: process.env.MIGRATED_PACKAGES.includes("swatch")
-        ? "migrated"
-        : "legacy",
+      type: "migrated",
     },
   },
 };

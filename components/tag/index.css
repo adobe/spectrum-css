@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "./themes/express.css";
+
 .spectrum-Tag {
   /* TODO - replace placeholder disabled avatar opacity with correct token once avatar is migrated */
   --spectrum-avatar-opacity-disabled: 0.3;

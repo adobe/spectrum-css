@@ -86,8 +86,8 @@ jobs:
         outputs:
             styles_added_files: ${{ steps.changed-files.outputs.styles_added_files }}
             styles_modified_files: ${{ steps.changed-files.outputs.styles_modified_files }}
-            # eslint_added_files: ${{ steps.changed-files.outputs.eslint_added_files }}
-            # eslint_modified_files: ${{ steps.changed-files.outputs.eslint_modified_files }}
+            eslint_added_files: ${{ steps.changed-files.outputs.eslint_added_files }}
+            eslint_modified_files: ${{ steps.changed-files.outputs.eslint_modified_files }}
         permissions:
             pull-requests: read
 
@@ -101,23 +101,24 @@ jobs:
                         - components/*/index.css
                         - components/*/themes/spectrum.css
                         - components/*/themes/express.css
-                    #   eslint:
-                    #     - components/*/package.json
-                    #     - components/*/project.json
-                    #     - components/*/stories/*.js
+                      eslint:
+                        - components/*/package.json
+                        - components/*/project.json
+                        - components/*/stories/*.js
 
     # -------------------------------------------------------------
     # Lint pre-compiled assets for consistency
     # -------------------------------------------------------------
     lint:
         name: Lint
+        if: contains(github.event.pull_request.labels.*.name, 'skip_lint')
         needs: [changed_files]
         uses: ./.github/workflows/lint.yml
         with:
             styles_added_files: ${{ needs.changed_files.outputs.styles_added_files }}
             styles_modified_files: ${{ needs.changed_files.outputs.styles_modified_files }}
-            # eslint_added_files: ${{ needs.changed_files.outputs.eslint_added_files }}
-            # eslint_modified_files: ${{ needs.changed_files.outputs.eslint_modified_files }}
+            eslint_added_files: ${{ needs.changed_files.outputs.eslint_added_files }}
+            eslint_modified_files: ${{ needs.changed_files.outputs.eslint_modified_files }}
         secrets: inherit
 
     # -------------------------------------------------------------

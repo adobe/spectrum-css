@@ -48,11 +48,11 @@ module.exports = {
 	env: {
 		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
 			const {
-				devDependencies = {},
+				peerDependencies = {},
 			} = require(resolve(componentsPath, dir, "package.json"));
 			if (
-				devDependencies &&
-				devDependencies["@spectrum-css/component-builder-simple"]
+				peerDependencies &&
+				peerDependencies["@spectrum-css/tokens"]
 			) {
 				return true;
 			}
@@ -75,7 +75,7 @@ module.exports = {
 			...config,
 			stats: {
 				/* Suppress autoprefixer warnings from storybook build */
-				warningsFilter: [/autoprefixer: /],
+				warningsFilter: [/autoprefixer: /, /postcss-*/, /stylelint/],
 			},
 			/* Add support for root node_modules imports */
 			resolve: {
@@ -141,7 +141,7 @@ module.exports = {
 								options: {
 									implementation: require("postcss"),
 									postcssOptions: {
-										config: resolve(__dirname, "postcss.config.js"),
+										config: resolve(__dirname, "../postcss.config.js"),
 									},
 								},
 							},
@@ -151,10 +151,10 @@ module.exports = {
 						test: /\.js$/,
 						enforce: "pre",
 						use: ["source-map-loader"],
-					} /* Raw SVG loader */,
+					} /* Raw loader */,
 					{
-						test: /\.svg$/i,
-						loader: "raw-loader",
+						resourceQuery: /raw/,
+						type: 'asset/source',
 					},
 				],
 			},

@@ -1,13 +1,13 @@
-import { within, userEvent } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library';
 import { html } from "lit";
 
 // Import the component markup template
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 export default {
 	title: "Components/Action menu",
@@ -50,9 +50,7 @@ export default {
 			],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("actionmenu")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 		chromatic: { delay: 2000 },
 	},

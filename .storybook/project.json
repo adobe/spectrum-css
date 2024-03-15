@@ -7,16 +7,8 @@
 			"{projectRoot}/*.{js,html}"
 		]
 	},
-	"implicitDependencies": [
-		"@spectrum-css/*",
-		"!@spectrum-css/generator",
-		"!@spectrum-css/bundle-builder",
-		"!@spectrum-css/component-builder",
-		"!@spectrum-css/component-builder-simple"
-	],
 	"targets": {
 		"clean": {
-			"cache": true,
 			"inputs": [
 				"{projectRoot}/storybook-static",
 				{ "externalDependencies": ["rimraf"] }
@@ -31,8 +23,13 @@
 			}
 		},
 		"build": {
-			"cache": true,
-			"dependsOn": ["^build"],
+			"dependsOn": [
+				"^build",
+				{
+					"target": "build",
+					"projects": "ui-icons"
+				}
+			],
 			"inputs": [
 				"{projectRoot}/assets",
 				"{projectRoot}/decorators",
@@ -58,7 +55,13 @@
 		},
 		"start": {
 			"cache": true,
-			"dependsOn": ["^build"],
+			"dependsOn": [
+				"^build",
+				{
+					"target": "build",
+					"projects": "ui-icons"
+				}
+			],
 			"inputs": [
 				"{projectRoot}/assets",
 				"{projectRoot}/decorators",

@@ -130,9 +130,7 @@ export default {
 			handles: ["click .spectrum-Button"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("button")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

@@ -101,7 +101,7 @@ if (typeof window.CustomEvent !== "function") {
 	}
 
 	function convertVarsToMultistops(root) {
-		// Read in each link tag with index-vars.css
+		// Read in each link tag with index.css
 		let links = root.querySelectorAll("[data-dependency]");
 
 		// Replace with index.css + index-diff.css + multiStops/*.css

@@ -118,9 +118,9 @@ jobs:
               run: yarn nx reset
 
             ## --- BUILD --- ##
-            - name: Build components
+            - name: Build components & ui-icons
               shell: bash
-              run: yarn build
+              run: yarn builder tag:component,ui-icons
 
             ## --- UPLOAD (only ubuntu-latest at the moment) --- ##
             - name: Upload compiled assets & NX performance profile
