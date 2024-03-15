@@ -1,12 +1,13 @@
-const { resolve } = require("path");
-const { readdirSync } = require("fs");
+const { resolve, join } = require("path");
+const { readdirSync, existsSync } = require("fs");
 
 const componentsPath = resolve(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
-	.filter((dirent) => dirent.isDirectory())
+	.filter((dirent) => dirent.isDirectory() && existsSync(join(dirent.path, dirent.name, "package.json")))
 	.map((dirent) => dirent.name);
+
 module.exports = {
 	stories: [
 		"../components/*/stories/*.stories.js",

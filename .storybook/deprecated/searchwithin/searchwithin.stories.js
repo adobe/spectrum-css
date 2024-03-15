@@ -10,8 +10,6 @@ import { Template as Textfield } from "@spectrum-css/textfield/stories/template.
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
-import "@spectrum-css/textfield/dist/index.css";
-
 import "@spectrum-css/searchwithin/dist/index-vars.css";
 import "@spectrum-css/searchwithin/dist/vars.css";
 
