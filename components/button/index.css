@@ -116,13 +116,11 @@ governing permissions and limitations under the License.
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-300);
 }
 
+/* Variant colors */
 .spectrum-Button {
-  &.spectrum-Button--accent {
-    --spectrum-button-background-color-default: var(--spectrum-accent-background-color-default);
-    --spectrum-button-background-color-hover: var(--spectrum-accent-background-color-hover);
-    --spectrum-button-background-color-down: var(--spectrum-accent-background-color-down);
-    --spectrum-button-background-color-focus: var(--spectrum-accent-background-color-key-focus);
-
+  &.spectrum-Button--accent,
+  &.spectrum-Button--negative,
+  &.spectrum-Button--primary {
     --spectrum-button-border-color-default: transparent;
     --spectrum-button-border-color-hover: transparent;
     --spectrum-button-border-color-down: transparent;
@@ -132,6 +130,13 @@ governing permissions and limitations under the License.
     --spectrum-button-content-color-hover: var(--spectrum-white);
     --spectrum-button-content-color-down: var(--spectrum-white);
     --spectrum-button-content-color-focus: var(--spectrum-white);
+  }
+
+  &.spectrum-Button--accent {
+    --spectrum-button-background-color-default: var(--spectrum-accent-background-color-default);
+    --spectrum-button-background-color-hover: var(--spectrum-accent-background-color-hover);
+    --spectrum-button-background-color-down: var(--spectrum-accent-background-color-down);
+    --spectrum-button-background-color-focus: var(--spectrum-accent-background-color-key-focus);
 
     &.spectrum-Button--outline {
       --spectrum-button-background-color-default: transparent;
@@ -157,16 +162,6 @@ governing permissions and limitations under the License.
     --spectrum-button-background-color-down: var(--spectrum-negative-background-color-down);
     --spectrum-button-background-color-focus: var(--spectrum-negative-background-color-key-focus);
 
-    --spectrum-button-border-color-default: transparent;
-    --spectrum-button-border-color-hover: transparent;
-    --spectrum-button-border-color-down: transparent;
-    --spectrum-button-border-color-focus: transparent;
-
-    --spectrum-button-content-color-default: var(--spectrum-white);
-    --spectrum-button-content-color-hover: var(--spectrum-white);
-    --spectrum-button-content-color-down: var(--spectrum-white);
-    --spectrum-button-content-color-focus: var(--spectrum-white);
-
     &.spectrum-Button--outline {
       --spectrum-button-background-color-default: transparent;
       --spectrum-button-background-color-hover: var(--spectrum-negative-color-200);
@@ -190,16 +185,6 @@ governing permissions and limitations under the License.
     --spectrum-button-background-color-hover: var(--spectrum-neutral-background-color-hover);
     --spectrum-button-background-color-down: var(--spectrum-neutral-background-color-down);
     --spectrum-button-background-color-focus: var(--spectrum-neutral-background-color-key-focus);
-
-    --spectrum-button-border-color-default: transparent;
-    --spectrum-button-border-color-hover: transparent;
-    --spectrum-button-border-color-down: transparent;
-    --spectrum-button-border-color-focus: transparent;
-
-    --spectrum-button-content-color-default: var(--spectrum-white);
-    --spectrum-button-content-color-hover: var(--spectrum-white);
-    --spectrum-button-content-color-down: var(--spectrum-white);
-    --spectrum-button-content-color-focus: var(--spectrum-white);
 
     &.spectrum-Button--outline {
       --spectrum-button-background-color-default: transparent;
