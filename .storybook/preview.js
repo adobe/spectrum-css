@@ -32,6 +32,8 @@ export const parameters = {
 			order: [
 				"Guides",
 				["Contributing", "*", "Adobe Code of Conduct", "Changelog"],
+				"Foundations",
+				["*"],
 				"Components",
 				["*", ["Docs", "Default", "*"]],
 				"Deprecated",
