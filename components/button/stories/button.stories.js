@@ -1,5 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isPending, size, staticColor } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
@@ -92,6 +92,9 @@ export default {
 		packageJson,
 		metadata,
 	},
+	decorators: [
+		withDownStateDimensionCapture('.spectrum-Button:not(:disabled)')
+	],
 	tags: ["!autodocs"],
 };
 
