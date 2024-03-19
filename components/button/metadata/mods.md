@@ -43,5 +43,4 @@
 | `--mod-button-text-align-with-icon`        |
 | `--mod-button-top-to-icon`                 |
 | `--mod-button-top-to-text`                 |
-| `--mod-focus-indicator-gap`                |
 | `--mod-static-black-focus-indicator-color` |

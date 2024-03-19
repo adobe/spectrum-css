@@ -14,11 +14,12 @@ governing permissions and limitations under the License.
 
 .spectrum-Button {
   --spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
-  --spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-100);
+  /* @todo once corner rounding value override is in a tokens release: */
+  /* --spectrum-button-border-radius: var(--spectrum-corner-radius-full); */
+  --spectrum-button-border-radius: 9999px;
   --spectrum-button-border-width: var(--spectrum-border-width-200);
   
   --spectrum-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
-  --spectrum-button-focus-ring-border-radius: calc(var(--spectrum-button-border-radius) + var(--spectrum-button-focus-ring-gap));
   --spectrum-button-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
@@ -64,7 +65,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Button--sizeS {
   --spectrum-button-min-width: calc(var(--spectrum-component-height-75) * var(--spectrum-button-minimum-width-multiplier));
-  --spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-75);
   --spectrum-button-height: var(--spectrum-component-height-75);
 
   --spectrum-button-font-size: var(--spectrum-font-size-75);
@@ -85,7 +85,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Button--sizeL {
   --spectrum-button-min-width: calc(var(--spectrum-component-height-200) * var(--spectrum-button-minimum-width-multiplier));
-  --spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-200);
   --spectrum-button-height: var(--spectrum-component-height-200);
 
   --spectrum-button-font-size: var(--spectrum-font-size-200);
@@ -102,7 +101,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Button--sizeXL {
   --spectrum-button-min-width: calc(var(--spectrum-component-height-300) * var(--spectrum-button-minimum-width-multiplier));
-  --spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-300);
   --spectrum-button-height: var(--spectrum-component-height-300);
 
   --spectrum-button-font-size: var(--spectrum-font-size-300);
@@ -594,8 +592,12 @@ governing permissions and limitations under the License.
   &::after {
     position: absolute;
     inset: 0;
-    margin: calc((var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) + var(--mod-button-border-width, var(--spectrum-button-border-width))) * -1);
-    border-radius: var(--mod-button-focus-ring-border-radius, var(--spectrum-button-focus-ring-border-radius));
+    margin: calc((
+        var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) +
+        var(--mod-button-border-width, var(--spectrum-button-border-width))
+      ) * -1
+    );
+    border-radius: var(--mod-button-focus-ring-border-radius, var(--mod-button-border-radius, var(--spectrum-button-border-radius)));
     transition: box-shadow var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
     pointer-events: none;
     content: '';
@@ -701,17 +703,15 @@ a.spectrum-Button {
 /* Icon only variant */
 .spectrum-Button.spectrum-Button--iconOnly {
   min-inline-size: unset;
-  padding: calc(var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
-  border-radius: 50%;
+  padding: calc(
+    var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) - 
+    var(--mod-button-border-width, var(--spectrum-button-border-width))
+  );
 
   .spectrum-Icon {
     align-self: center;
     margin-inline-start: 0;
     margin-block-start: 0;
-  }
-
-  &::after {
-    border-radius: 50%;
   }
 }
 
