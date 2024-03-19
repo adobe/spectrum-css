@@ -1045,6 +1045,51 @@
   --spectrum-tooltip-tip-corner-radius:1px;
   --spectrum-tag-minimum-width-multiplier:1;
   --spectrum-tag-maximum-width-multiplier:7;
+  --spectrum-title-cjk-emphasized-font-style:var(--spectrum-default-font-style);
+  --spectrum-title-cjk-emphasized-font-weight:var(--spectrum-extra-bold-font-weight);
+  --spectrum-title-cjk-font-family:var(--spectrum-cjk-font-family);
+  --spectrum-title-cjk-font-style:var(--spectrum-default-font-style);
+  --spectrum-title-cjk-font-weight:var(--spectrum-bold-font-weight);
+  --spectrum-title-cjk-line-height:var(--spectrum-cjk-line-height-100);
+  --spectrum-title-cjk-size-l:var(--spectrum-font-size-200);
+  --spectrum-title-cjk-size-m:var(--spectrum-font-size-100);
+  --spectrum-title-cjk-size-s:var(--spectrum-font-size-75);
+  --spectrum-title-cjk-size-xl:var(--spectrum-font-size-300);
+  --spectrum-title-cjk-size-xs:var(--spectrum-font-size-50);
+  --spectrum-title-cjk-size-xxl:var(--spectrum-font-size-400);
+  --spectrum-title-cjk-size-xxxl:var(--spectrum-font-size-500);
+  --spectrum-title-cjk-strong-emphasized-font-style:var(--spectrum-default-font-style);
+  --spectrum-title-cjk-strong-emphasized-font-weight:var(--spectrum-extra-bold-font-weight);
+  --spectrum-title-cjk-strong-font-style:var(--spectrum-default-font-style);
+  --spectrum-title-cjk-strong-font-weight:var(--spectrum-extra-bold-font-weight);
+  --spectrum-title-line-height:var(--spectrum-line-height-100);
+  --spectrum-title-margin-bottom-multiplier:0.25;
+  --spectrum-title-margin-top-multiplier:0.88888889;
+  --spectrum-title-sans-serif-emphasized-font-style:var(--spectrum-italic-font-style);
+  --spectrum-title-sans-serif-emphasized-font-weight:var(--spectrum-bold-font-weight);
+  --spectrum-title-sans-serif-font-family:var(--spectrum-sans-serif-font-family);
+  --spectrum-title-sans-serif-font-style:var(--spectrum-default-font-style);
+  --spectrum-title-sans-serif-font-weight:var(--spectrum-bold-font-weight);
+  --spectrum-title-sans-serif-strong-emphasized-font-style:var(--spectrum-italic-font-style);
+  --spectrum-title-sans-serif-strong-emphasized-font-weight:var(--spectrum-extra-bold-font-weight);
+  --spectrum-title-sans-serif-strong-font-style:var(--spectrum-default-font-style);
+  --spectrum-title-sans-serif-strong-font-weight:var(--spectrum-extra-bold-font-weight);
+  --spectrum-title-serif-emphasized-font-style:var(--spectrum-italic-font-style);
+  --spectrum-title-serif-emphasized-font-weight:var(--spectrum-bold-font-weight);
+  --spectrum-title-serif-font-family:var(--spectrum-serif-font-family);
+  --spectrum-title-serif-font-style:var(--spectrum-default-font-style);
+  --spectrum-title-serif-font-weight:var(--spectrum-bold-font-weight);
+  --spectrum-title-serif-strong-emphasized-font-style:var(--spectrum-italic-font-style);
+  --spectrum-title-serif-strong-emphasized-font-weight:var(--spectrum-black-font-weight);
+  --spectrum-title-serif-strong-font-style:var(--spectrum-default-font-style);
+  --spectrum-title-serif-strong-font-weight:var(--spectrum-black-font-weight);
+  --spectrum-title-size-l:var(--spectrum-font-size-300);
+  --spectrum-title-size-m:var(--spectrum-font-size-200);
+  --spectrum-title-size-s:var(--spectrum-font-size-100);
+  --spectrum-title-size-xl:var(--spectrum-font-size-400);
+  --spectrum-title-size-xs:var(--spectrum-font-size-75);
+  --spectrum-title-size-xxl:var(--spectrum-font-size-500);
+  --spectrum-title-size-xxxl:var(--spectrum-font-size-600);
   --spectrum-corner-radius-0:0px;
   --spectrum-corner-radius-75:3px;
   --spectrum-corner-radius-100:4px;
@@ -1466,6 +1511,9 @@
   --spectrum-docs-static-white-background-color:rgba(var(--spectrum-docs-static-white-background-color-rgb));
   --spectrum-docs-static-black-background-color-rgb:206, 247, 243;
   --spectrum-docs-static-black-background-color:rgba(var(--spectrum-docs-static-black-background-color-rgb));
+
+  /* override for Spectrum Tokens value until a Style Dictionary transform gets written for our usage */
+  --spectrum-corner-radius-1000:9999px;
 }
 .spectrum--large{
   --spectrum-checkbox-control-size-small:16px;
@@ -1612,7 +1660,8 @@
   --spectrum-thumbnail-size-1000:70px;
   --spectrum-alert-dialog-title-size:var(--spectrum-heading-size-xs);
   --spectrum-alert-dialog-description-size:var(--spectrum-body-size-xs);
-  --spectrum-opacity-checkerboard-square-size:10px;
+  --spectrum-opacity-checkerboard-square-size:var(--spectrum-opacity-checkerboard-square-size-medium);
+  --spectrum-opacity-checkerboard-square-size-medium:10px;
   --spectrum-contextual-help-title-size:var(--spectrum-heading-size-xxs);
   --spectrum-contextual-help-body-size:var(--spectrum-body-size-xs);
   --spectrum-breadcrumbs-height-multiline:84px;
@@ -1866,6 +1915,7 @@
   --spectrum-tag-edge-to-clear-icon-small:10px;
   --spectrum-tag-edge-to-clear-icon-medium:15px;
   --spectrum-tag-edge-to-clear-icon-large:19px;
+  --spectrum-opacity-checkerboard-square-size-small:5px;
   --spectrum-drop-shadow-y:2px;
   --spectrum-drop-shadow-blur:6px;
   --spectrum-workflow-icon-size-50:16px;
@@ -3007,7 +3057,8 @@
   --spectrum-thumbnail-size-1000:56px;
   --spectrum-alert-dialog-title-size:var(--spectrum-heading-size-s);
   --spectrum-alert-dialog-description-size:var(--spectrum-body-size-s);
-  --spectrum-opacity-checkerboard-square-size:8px;
+  --spectrum-opacity-checkerboard-square-size:var(--spectrum-opacity-checkerboard-square-size-medium);
+  --spectrum-opacity-checkerboard-square-size-medium:8px;
   --spectrum-contextual-help-title-size:var(--spectrum-heading-size-xs);
   --spectrum-contextual-help-body-size:var(--spectrum-body-size-s);
   --spectrum-breadcrumbs-height-multiline:72px;
@@ -3261,6 +3312,7 @@
   --spectrum-tag-edge-to-clear-icon-small:8px;
   --spectrum-tag-edge-to-clear-icon-medium:12px;
   --spectrum-tag-edge-to-clear-icon-large:15px;
+  --spectrum-opacity-checkerboard-square-size-small:4px;
   --spectrum-drop-shadow-y:1px;
   --spectrum-drop-shadow-blur:4px;
   --spectrum-workflow-icon-size-50:14px;
