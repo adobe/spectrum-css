@@ -51,4 +51,7 @@ governing permissions and limitations under the License.
   /* static white / black background color for docs containers */
   --spectrum-docs-static-white-background-color: rgb(15, 121, 125);
   --spectrum-docs-static-black-background-color: rgb(206, 247, 243);
+
+  /* override for Spectrum Tokens value until a Style Dictionary transform gets written for our usage */
+  --spectrum-corner-radius-1000: 9999px;
 }
