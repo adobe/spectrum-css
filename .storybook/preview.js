@@ -3,11 +3,11 @@ import DocumentationTemplate from './DocumentationTemplate.mdx';
 
 import { withActions } from "@storybook/addon-actions/decorator";
 import {
-	withContextWrapper,
-	withLanguageWrapper,
-	withReducedMotionWrapper,
-	withTestingPreviewWrapper,
-	withTextDirectionWrapper,
+  withContextWrapper,
+  withLanguageWrapper,
+  withReducedMotionWrapper,
+  withTestingPreviewWrapper,
+  withTextDirectionWrapper,
 } from "./decorators/index.js";
 
 // https://github.com/storybookjs/storybook-addon-console
@@ -191,7 +191,7 @@ export const parameters = {
 	options: {
 		storySort: {
 			method: "alphabetical",
-			order: ['Guides', ['Contributing', '*', 'Adobe Code of Conduct', 'Changelog'], 'Components', ['Docs', 'Default', '*'], '*'],
+			order: ['Guides', ['Contributing', '*', 'Adobe Code of Conduct', 'Changelog'], 'Foundations', 'Components', ['Docs', 'Default', '*'], '*'],
 			includeNames: true,
 		},
 	},
