@@ -31,6 +31,11 @@
 	--spectrum-checkbox-content-color-down: var(--spectrum-neutral-content-color-down);
 	--spectrum-checkbox-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
 
+	--spectrum-checkbox-control-color-default: var(--spectrum-gray-600);
+	--spectrum-checkbox-control-color-hover: var(--spectrum-gray-700);
+	--spectrum-checkbox-control-color-down: var(--spectrum-gray-800);
+	--spectrum-checkbox-control-color-focus: var(--spectrum-gray-700);
+
 	--spectrum-checkbox-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
 	--spectrum-checkbox-content-color-disabled: var(--spectrum-disabled-content-color);
@@ -144,6 +149,12 @@
 
 		.spectrum-Checkbox-label {
 			color: var(--highcontrast-checkbox-content-color-down, var(--mod-checkbox-content-color-down, var(--spectrum-checkbox-content-color-down)));
+		}
+	}
+
+	&:not(.is-readOnly):active {
+		.spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box {
+			transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
 		}
 	}
 
