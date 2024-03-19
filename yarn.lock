@@ -120,10 +120,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:13.0.0-beta.19":
-  version: 13.0.0-beta.19
-  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.19"
-  checksum: 10c0/5c5a7fe4b5f0a53c326b31f3a53e3ade69e4b0b8f9b620fe5ab40d7279fff318f3f9af467a8794b05fb023770675c91b461dd87e29be2266181784c6ffc1f222
+"@adobe/spectrum-tokens@npm:13.0.0-beta.21":
+  version: 13.0.0-beta.21
+  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.21"
+  checksum: 10c0/3e85338ca9dba7453518a37287dff51862118cbbfa1f5c2f23dc78db03350bc1a2d7cadb183a21ce63e6241cdc1565213644cb1d184599cb24ff77f7ef188740
   languageName: node
   linkType: hard
 
@@ -3724,7 +3724,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/alertbanner@workspace:components/alertbanner"
   dependencies:
-    "@spectrum-css/button": "npm:14.0.1"
+    "@spectrum-css/button": "npm:14.0.0-next.2"
     "@spectrum-css/closebutton": "npm:5.0.0-next.0"
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
@@ -3949,23 +3949,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/button@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@spectrum-css/button@npm:14.0.1"
-  peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/progresscircle": ">=3"
-    "@spectrum-css/tokens": ">=14 || >=15"
-  peerDependenciesMeta:
-    "@spectrum-css/icon":
-      optional: true
-    "@spectrum-css/progresscircle":
-      optional: true
-  checksum: 10c0/48ab8d6cdbe52038b0bc4bb3222d8e2139e7d43319edab5918e7debb1583e13c3f682a852ba1404e6059404dfa59ceb8937c2992f897fdf60cbaa209b9af96ba
-  languageName: node
-  linkType: hard
-
-"@spectrum-css/button@workspace:^, @spectrum-css/button@workspace:components/button":
+"@spectrum-css/button@npm:14.0.0-next.2, @spectrum-css/button@workspace:^, @spectrum-css/button@workspace:components/button":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/button@workspace:components/button"
   dependencies:
@@ -3989,7 +3973,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/buttongroup@workspace:components/buttongroup"
   dependencies:
-    "@spectrum-css/button": "npm:14.0.1"
+    "@spectrum-css/button": "npm:14.0.0-next.2"
     "@spectrum-css/tokens": "npm:14.0.0-next.2"
   peerDependencies:
     "@spectrum-css/button": ">=13"
@@ -4103,7 +4087,7 @@ __metadata:
   dependencies:
     "@spectrum-css/actionbutton": "npm:7.0.1"
     "@spectrum-css/actionmenu": "npm:7.0.0"
-    "@spectrum-css/button": "npm:14.0.1"
+    "@spectrum-css/button": "npm:14.0.0-next.2"
     "@spectrum-css/buttongroup": "npm:7.0.0-next.1"
     "@spectrum-css/menu": "npm:9.0.1"
     "@spectrum-css/popover": "npm:8.0.1"
@@ -4468,7 +4452,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/inlinealert@workspace:components/inlinealert"
   dependencies:
-    "@spectrum-css/button": "npm:14.0.1"
+    "@spectrum-css/button": "npm:14.0.0-next.2"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:14.0.0-next.2"
   peerDependencies:
@@ -4599,7 +4583,7 @@ __metadata:
   resolution: "@spectrum-css/pagination@workspace:components/pagination"
   dependencies:
     "@spectrum-css/actionbutton": "npm:7.0.1"
-    "@spectrum-css/button": "npm:14.0.1"
+    "@spectrum-css/button": "npm:14.0.0-next.2"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/textfield": "npm:8.0.1"
     "@spectrum-css/tokens": "npm:14.0.0-next.2"
@@ -4910,7 +4894,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/table@workspace:components/table"
   dependencies:
-    "@spectrum-css/button": "npm:14.0.1"
+    "@spectrum-css/button": "npm:14.0.0-next.2"
     "@spectrum-css/checkbox": "npm:10.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/thumbnail": "npm:8.0.1"
@@ -5014,7 +4998,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/toast@workspace:components/toast"
   dependencies:
-    "@spectrum-css/button": "npm:14.0.1"
+    "@spectrum-css/button": "npm:14.0.0-next.2"
     "@spectrum-css/closebutton": "npm:5.0.0-next.0"
     "@spectrum-css/icon": "npm:9.0.1"
     "@spectrum-css/tokens": "npm:14.0.0-next.2"
@@ -5037,7 +5021,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:13.0.0-beta.19"
+    "@adobe/spectrum-tokens": "npm:13.0.0-beta.21"
     "@adobe/token-diff-generator": "npm:^1.3.0"
     "@nxkit/style-dictionary": "npm:^6.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:^1.0.0"
@@ -5075,7 +5059,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tray@workspace:components/tray"
   dependencies:
-    "@spectrum-css/button": "npm:14.0.1"
+    "@spectrum-css/button": "npm:14.0.0-next.2"
     "@spectrum-css/dialog": "npm:12.0.1"
     "@spectrum-css/divider": "npm:5.0.1"
     "@spectrum-css/icon": "npm:9.0.1"
