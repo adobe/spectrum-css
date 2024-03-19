@@ -1,6 +1,5 @@
 | Modifiable custom properties               |
 | ------------------------------------------ |
-| `--mod-bold-font-weight`                   |
 | `--mod-button-animation-duration`          |
 | `--mod-button-background-color-default`    |
 | `--mod-button-background-color-disabled`   |
@@ -30,6 +29,7 @@
 | `--mod-button-focus-ring-thickness`        |
 | `--mod-button-font-family`                 |
 | `--mod-button-font-size`                   |
+| `--mod-button-font-weight`                 |
 | `--mod-button-height`                      |
 | `--mod-button-icon-margin-block-start`     |
 | `--mod-button-line-height`                 |

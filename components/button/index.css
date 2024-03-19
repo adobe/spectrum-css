@@ -28,6 +28,7 @@ governing permissions and limitations under the License.
 
   /* @todo set line-height value per size, using font size specific line-height tokens when they are finalized. */
   --spectrum-button-line-height: 1.2;
+  --spectrum-button-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-button-font-size: var(--spectrum-font-size-100);
 
   --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-100) - var(--spectrum-button-border-width));
@@ -543,7 +544,7 @@ governing permissions and limitations under the License.
   border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
   border-style: solid;
   font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
-  font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
+  font-weight: var(--mod-button-font-weight, var(--spectrum-button-font-weight));
   gap: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
   min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
   min-block-size: var(--mod-button-height, var(--spectrum-button-height));
