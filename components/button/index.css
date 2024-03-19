@@ -675,15 +675,6 @@ a.spectrum-Button {
   }
 }
 
-/* Static color variants */
-.spectrum-Button--staticWhite {
-  --spectrum-button-focus-indicator-color: var(--mod-static-black-focus-indicator-color, var(--spectrum-static-black-focus-indicator-color));
-}
-
-.spectrum-Button--staticBlack {
-  --spectrum-button-focus-indicator-color: var(--mod-static-black-focus-indicator-color, var(--spectrum-static-black-focus-indicator-color));
-}
-
 /* Forced colors / high contrast mode */
 @media (forced-colors: active) {
   .spectrum-Button {
