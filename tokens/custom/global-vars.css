@@ -62,4 +62,7 @@
 	--spectrum-docs-static-black-background-color: rgb(181 209 211);
 
 	--spectrum-coach-indicator-ring-static-white-color: var(--spectrum-white);
+
+	/* override for Spectrum Tokens value until a Style Dictionary transform gets written for our usage */
+	--spectrum-corner-radius-1000: 9999px;
 }
