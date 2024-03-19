@@ -13,6 +13,8 @@ module.exports = {
 		"../components/*/stories/*.stories.js",
 		"../components/*/stories/*.mdx",
 		"./guides/*.mdx",
+		"./foundations/*/*.mdx",
+		"./foundations/*/*.stories.js",
 		"./deprecated/*/*.stories.js",
 		"./deprecated/*/*.mdx",
 	],

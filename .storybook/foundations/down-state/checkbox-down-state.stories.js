@@ -1,0 +1,27 @@
+import { Template } from "../../../components/checkbox/stories/template";
+
+export default {
+	title: "Foundations/Down state",
+	description:
+		"Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.",
+	component: "Checkbox",
+	args: {
+		rootClass: "spectrum-Checkbox",
+	},
+	parameters: {
+		actions: {
+			handles: ['click input[type="checkbox"]'],
+		},
+		status: {
+			type: process.env.MIGRATED_PACKAGES.includes("checkbox")
+				? "migrated"
+				: undefined,
+		},
+	},
+	tags: ['foundation'],
+};
+
+export const CheckboxDownState = Template.bind({});
+CheckboxDownState.args = {
+	label: "Checkbox",
+};
