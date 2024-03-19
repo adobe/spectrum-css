@@ -1,7 +1,7 @@
 name: Text area
 status: Verified
 description: A multi-line text field using the `<textarea>` element.
-SpectrumSiteSlug: https://spectrum.adobe.com/page/text-field/
+SpectrumSiteSlug: https://spectrum.adobe.com/page/text-area/
 sections:
   - name: Migration Guide
     description: |
@@ -47,7 +47,7 @@ examples:
       </div>
 
   - id: textfield-helptext
-    name: Textfield with Help Text
+    name: With Help Text
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline">
         <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Tags</label>
@@ -67,7 +67,7 @@ examples:
       </div>
 
   - id: textfield-sidelabel
-    name: Textfield with Side Label
+    name: With Side Label
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--sideLabel">
         <label for="textfield-m-sidelabel" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Comments</label>
@@ -174,8 +174,18 @@ examples:
         <textarea id="textarea-keyboard-focused-invalid" name="field"  class="spectrum-Textfield-input" pattern="[\w\s]+" required>Invalid input</textarea>
       </div>
 
+  - id: textfield-grow
+    name: TextArea with Grow Behavior
+    description: Use `spectrum-Textfield--grows` to disable the drag behavior along with appropriate JavaScript to enable the height of the text area to <a href="https://spectrum.adobe.com/page/text-area/#Height">grow with input</a>.
+    markup: |
+      <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--grows">
+        <label for="textfield-helptext" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Password</label>
+        <textarea id="textfield-helptext" name="field" class="spectrum-Textfield-input"></textarea>
+      </div>
+
   - id: textfield-quiet
     name: Quiet
+    description: Text areas should rarely be presented in the quiet style. When used, quiet text areas should use JavaScript to enable the height of the text area to <a href="https://spectrum.adobe.com/page/text-area/#Quiet">grow with input</a>.
     markup: |
       <div class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
         <label for="textarea-quiet" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Comments</label>

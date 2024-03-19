@@ -452,7 +452,7 @@ governing permissions and limitations under the License.
 
 	/* Grid layout for child components */
 	display: inline-grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: minmax(0, auto) minmax(0, auto);
 	grid-template-rows: auto auto auto;
 }
 
@@ -573,6 +573,7 @@ governing permissions and limitations under the License.
 			--mod-textfield-icon-spacing-inline-end-invalid,
 			var(--spectrum-textfield-icon-spacing-inline-end-invalid)
 		);
+
 		color: var(
 			--highcontrast-textfield-icon-color-invalid,
 			var(
@@ -1263,33 +1264,53 @@ governing permissions and limitations under the License.
 
 /*** Text Area ***/
 .spectrum-Textfield--multiline {
-  --spectrum-textfield-input-line-height: normal;
+	--spectrum-textfield-input-line-height: normal;
 
-  .spectrum-Textfield-input {
+	&.spectrum-Textfield {
+		/* Remove fixed inline-size to allow resize behavior. */
+		inline-size: unset;
 		min-inline-size: var(
-			--mod-text-area-min-inline-size,
+			--mod-text-area-min-inline-size, 
 			var(--spectrum-text-area-min-inline-size)
 		);
+	}
+
+	.spectrum-Textfield-input {
+		resize: var(--mod-text-area-resize, both);
+		inline-size: max(
+			var(--mod-textfield-width, var(--spectrum-textfield-width)),
+			var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size))
+		);
+		min-inline-size: var(
+			--mod-text-area-min-inline-size, 
+			var(--spectrum-text-area-min-inline-size)
+		);
+		max-inline-size: var(--mod-text-area-max-inline-size, 100%);
 		min-block-size: var(
 			--mod-text-area-min-block-size,
 			var(--spectrum-text-area-min-block-size)
 		);
-		resize: inherit;
 	}
 
+	/* CSS to support text area grow behavior. This requires JavaScript to implement. */
 	&.spectrum-Textfield--grows {
+		.spectrum-Textfield-validationIcon {
+			grid-row: auto;
+			grid-column: auto;
+		}
+
 		.spectrum-Textfield-input {
 			grid-row: 2 / auto;
 		}
 
 		&.spectrum-Textfield--sideLabel .spectrum-Textfield-input {
-				grid-row: 1 / auto
+			resize: none;
+			grid-row: 1 / auto;
 		}
 	}
 
 	&.spectrum-Textfield--quiet {
 		.spectrum-Textfield-input {
-
 			min-block-size: var(
 				--mod-text-area-min-block-size-quiet,
 				var(--spectrum-text-area-min-block-size-quiet)
