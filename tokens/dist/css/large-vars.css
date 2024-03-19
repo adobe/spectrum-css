@@ -156,7 +156,8 @@
 	--spectrum-thumbnail-size-1000: 70px;
 	--spectrum-alert-dialog-title-size: var(--spectrum-heading-size-xs);
 	--spectrum-alert-dialog-description-size: var(--spectrum-body-size-xs);
-	--spectrum-opacity-checkerboard-square-size: 10px;
+	--spectrum-opacity-checkerboard-square-size: var(--spectrum-opacity-checkerboard-square-size-medium);
+	--spectrum-opacity-checkerboard-square-size-medium: 10px;
 	--spectrum-contextual-help-title-size: var(--spectrum-heading-size-xxs);
 	--spectrum-contextual-help-body-size: var(--spectrum-body-size-xs);
 	--spectrum-breadcrumbs-height-multiline: 84px;
@@ -410,6 +411,7 @@
 	--spectrum-tag-edge-to-clear-icon-small: 10px;
 	--spectrum-tag-edge-to-clear-icon-medium: 15px;
 	--spectrum-tag-edge-to-clear-icon-large: 19px;
+	--spectrum-opacity-checkerboard-square-size-small: 5px;
 	--spectrum-drop-shadow-y: 2px;
 	--spectrum-drop-shadow-blur: 6px;
 	--spectrum-workflow-icon-size-50: 16px;
