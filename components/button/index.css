@@ -56,6 +56,12 @@
 	--spectrum-button-content-color-focus: var(--highcontrast-button-content-color-focus, var(--mod-button-content-color-focus, var(--spectrum-neutral-content-color-key-focus)));
 	--spectrum-button-content-color-disabled: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-disabled-content-color)));
 
+	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties */
+	--spectrum-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
+
+	&.spectrum-Button--iconOnly {
+		--spectrum-downstate-perspective: var(--spectrum-component-size-minimum-perspective-down);
+	}
 }
 
 .spectrum-Button--sizeS {
@@ -436,6 +442,8 @@
 		border-color: var(--highcontrast-button-border-color-down, var(--mod-button-border-color-down, var(--spectrum-button-border-color-down)));
 		color: var(--spectrum-button-content-color-down);
 		box-shadow: none;
+
+		transform: perspective(var(--spectrum-downstate-perspective)) translateZ(var(--spectrum-component-size-difference-down));
 	}
 
 	&:disabled,
