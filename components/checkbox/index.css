@@ -152,6 +152,12 @@ governing permissions and limitations under the License.
     }
   }
 
+  &:not(.is-readOnly):active {
+    .spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box {
+      transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
+    }
+  }
+
   /* Selected Invalid */
   &.is-invalid {
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
@@ -374,6 +380,7 @@ governing permissions and limitations under the License.
     }
   }
 }
+
 /* stylelint-enable max-nesting-depth */
 
 .spectrum-Checkbox-label {
