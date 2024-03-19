@@ -1,5 +1,7 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
+import { withDownStateDimensionCapture } from "../../../.storybook/decorators";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -12,6 +14,7 @@ import { Template } from "./template";
 export default {
 	title: "Components/Button",
 	component: "Button",
+	decorators: [withDownStateDimensionCapture('.spectrum-Button:not(:disabled)')],
 	argTypes: {
 		size: {
 			name: "Size",
