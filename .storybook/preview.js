@@ -1,4 +1,3 @@
-import { setConsoleOptions } from "@storybook/addon-console";
 import {
 	withActions,
 	withArgEvents,
@@ -7,33 +6,16 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
-	withTextDirectionWrapper
+	withTextDirectionWrapper,
 } from "./decorators";
-import {
-	FontLoader,
-	IconLoader,
-} from "./loaders";
+import { FontLoader, IconLoader } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
-import {
-	argTypes,
-	globalTypes
-} from "./types";
+import { argTypes, globalTypes } from "./types";
 
 import "./assets/base.css";
 
 window.global = window;
-
-const panelExclude = setConsoleOptions({}).panelExclude || [];
-setConsoleOptions({
-	panelExclude: [
-		...panelExclude,
-		/deprecated/,
-		/TypeError/,
-		/postcss/,
-		/stylelint/,
-	],
-});
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 export const parameters = {
@@ -51,6 +33,8 @@ export const parameters = {
 			order: [
 				"Guides",
 				["Contributing", "*", "Adobe Code of Conduct", "Changelog"],
+				"Foundations",
+				["*"],
 				"Components",
 				["*", ["Docs", "Default", "*"]],
 				"Deprecated",
@@ -133,9 +117,6 @@ export default {
 		withActions,
 		withIconSpriteSheet,
 	],
-	loaders: [
-		FontLoader,
-		IconLoader,
-	],
+	loaders: [FontLoader, IconLoader],
 	tags: ["autodocs", "dev"],
 };

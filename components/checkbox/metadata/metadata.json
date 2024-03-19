@@ -76,7 +76,8 @@
     ".spectrum-Checkbox:active .spectrum-Checkbox-label",
     ".spectrum-Checkbox:hover .spectrum-Checkbox-box:before",
     ".spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box:before",
-    ".spectrum-Checkbox:hover .spectrum-Checkbox-label"
+    ".spectrum-Checkbox:hover .spectrum-Checkbox-label",
+    ".spectrum-Checkbox:not(.is-readOnly):active .spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box"
   ],
   "modifiers": [
     "--mod-checkbox-animation-duration",
@@ -174,6 +175,8 @@
     "--spectrum-component-height-200",
     "--spectrum-component-height-300",
     "--spectrum-component-height-75",
+    "--spectrum-component-size-difference-down",
+    "--spectrum-component-size-minimum-perspective-down",
     "--spectrum-component-top-to-text-100",
     "--spectrum-component-top-to-text-200",
     "--spectrum-component-top-to-text-300",
@@ -187,6 +190,9 @@
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
     "--spectrum-gray-50",
+    "--spectrum-gray-600",
+    "--spectrum-gray-700",
+    "--spectrum-gray-800",
     "--spectrum-line-height-100",
     "--spectrum-negative-color-1000",
     "--spectrum-negative-color-1100",
