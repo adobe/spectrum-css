@@ -26,12 +26,9 @@ governing permissions and limitations under the License.
   --spectrum-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-50);
 
-<<<<<<< HEAD
   --mod-progress-circle-position: absolute;
-=======
   /* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties */
   --spectrum-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
->>>>>>> 5a532e656 (feat(downstate): docs + implementation for example components (#2520))
 }
 
 .spectrum-Button--sizeS {
