@@ -11,6 +11,8 @@ module.exports = {
 	stories: [
 		"../components/*/stories/*.stories.js",
 		"./guides/*.mdx",
+		"./foundations/*/*.mdx",
+		"./foundations/*/*.stories.js",
 		"./deprecated/*/*.stories.js",
 	],
 	rootDir: "../",

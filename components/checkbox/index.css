@@ -150,6 +150,12 @@ governing permissions and limitations under the License.
     }
   }
 
+  &:not(.is-readOnly):active {
+    .spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box {
+      transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
+    }
+  }
+
   /* Selected Invalid */
   &.is-invalid {
     .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
@@ -372,6 +378,7 @@ governing permissions and limitations under the License.
     }
   }
 }
+
 /* stylelint-enable max-nesting-depth */
 
 .spectrum-Checkbox-label {
@@ -571,7 +578,7 @@ governing permissions and limitations under the License.
       outline-style: auto;
       outline-offset: var(--highcontrast-checkbox-focus-indicator-gap, var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap)));
       /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
-      outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness)); 
+      outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 
       &::after {
         box-shadow:
