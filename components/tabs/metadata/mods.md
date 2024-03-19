@@ -20,6 +20,7 @@
 | `--mod-tabs-focus-indicator-gap`                      |
 | `--mod-tabs-focus-indicator-width`                    |
 | `--mod-tabs-font-family`                              |
+| `--mod-tabs-font-size`                                |
 | `--mod-tabs-font-style`                               |
 | `--mod-tabs-font-weight`                              |
 | `--mod-tabs-icon-size`                                |
