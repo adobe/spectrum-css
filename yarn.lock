@@ -3949,7 +3949,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/button@npm:14.0.1, @spectrum-css/button@workspace:^, @spectrum-css/button@workspace:components/button":
+"@spectrum-css/button@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@spectrum-css/button@npm:14.0.1"
+  peerDependencies:
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/progresscircle": ">=3"
+    "@spectrum-css/tokens": ">=14 || >=15"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/progresscircle":
+      optional: true
+  checksum: 10c0/48ab8d6cdbe52038b0bc4bb3222d8e2139e7d43319edab5918e7debb1583e13c3f682a852ba1404e6059404dfa59ceb8937c2992f897fdf60cbaa209b9af96ba
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/button@workspace:^, @spectrum-css/button@workspace:components/button":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/button@workspace:components/button"
   dependencies:
