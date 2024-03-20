@@ -45,7 +45,7 @@ export const Template = ({
         [rootClass]: true,
         [`${rootClass}--${treatment}`]: typeof treatment !== "undefined" && treatment !== "fill",
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
-        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
         [`${rootClass}--iconOnly`]: hideLabel,
         ["is-pending"]: isPending,

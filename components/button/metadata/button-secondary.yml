@@ -8,35 +8,28 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/button/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### x/x/2024 - Version 13.0.0
+      ### Version 13.0.0
       #### Spectrum 2 release
-      Button now uses Spectrum 2 tokens and specifications. A few notable changes:
+      Button now uses Spectrum 2 tokens and specifications, which includes many color changes to all variants. A few other notable changes:
       - Medium size is now the default. The class `.spectrum-Button--sizeM` is now unnecessary for this size, and has been removed.
       - The `.spectrum-Button--fill` class is no longer needed and has been removed.
-      - The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
-      - The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
-      - The mod custom property `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`.
-      - The mod custom property `--mod-bold-font-weight` has been renamed to `--mod-button-font-weight`.
 
-      ### Versions prior to 13.0.0
-      #### Fill or Outline class required
-      All buttons now require either the `.spectrum-Button--fill` or `.spectrum-Button--outline` class.
+      The following `--mod` custom properties have been renamed:
+      - `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
+      - `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
+      - `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`.
+      - `--mod-bold-font-weight` has been renamed to `--mod-button-font-weight`.
 
-      #### Secondary replaced by Secondary with Outline
-      Replace all `.spectrum-Button--secondary` with `.spectrum-Button--secondary .spectrum-Button--outline`.
+      ### Version 11.0.0
+      #### Remove focus-ring class
+      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 
-      #### Secondary Quiet replaced by Secondary with Outline
-      Replace all `.spectrum-Button--secondary .spectrum-Button--quiet` with `.spectrum-Button--secondary .spectrum-Button--outline`.
-
+      ### Version 10.0.0
       #### Icon Only
       Add the `.spectrum-Button--iconOnly` class to apply the correct styling when an icon is used without a label.
       Provide an `aria-label` on the button itself when using this variant for accessibility.
 
-      #### T-shirt sizing
-      Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
-
       #### Change workflow icon size
-
       Previously, all Buttons used `.spectrum-Icon--sizeS`. This has changed:
 
       | Button classname           | Workflow icon classname           |
@@ -46,8 +39,17 @@ sections:
       | `.spectrum-Button--sizeL`  | `.spectrum-Icon--sizeL`           |
       | `.spectrum-Button--sizeXL` | `.spectrum-Icon--sizeXL`          |
 
-      #### Remove focus-ring class
-      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
+      ### Version 6.0.0
+      #### Fill or Outline class required
+      All buttons now require either the `.spectrum-Button--fill` or `.spectrum-Button--outline` class.
+
+      #### CTA replaced by Accent with Fill
+      Replace all `.spectrum-Button--cta` with `.spectrum-Button--accent .spectrum-Button--fill`.
+
+      ### Version 3.0.0
+      #### T-shirt sizing
+      Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
+
 examples:
   - id: button-secondary
     name: Sizing
@@ -76,18 +78,18 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-          <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--secondary">
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--secondary">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
+          <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -140,18 +142,18 @@ examples:
   - id: button-secondary
     name: Disabled
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary" disabled>
+      <button class="spectrum-Button spectrum-Button--secondary" disabled>
         <span class="spectrum-Button-label">Edit</span>
       </button>
 
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary" disabled>
+      <button class="spectrum-Button spectrum-Button--secondary" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
         <span class="spectrum-Button-label">Edit</span>
       </button>
 
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit" disabled>
+      <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
@@ -184,18 +186,18 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary">
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
+          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -248,18 +250,18 @@ examples:
   - id: button-secondary-outline-disabled
     name: Outline - Disabled
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary" disabled>
+      <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary" disabled>
         <span class="spectrum-Button-label">Edit</span>
       </button>
 
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary" disabled>
+      <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
         <span class="spectrum-Button-label">Edit</span>
       </button>
 
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit" disabled>
+      <button class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>

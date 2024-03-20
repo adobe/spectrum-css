@@ -310,6 +310,7 @@ const Treatment = (args) =>
 <div
 	style=${styleMap({
 		display: "flex",
+		alignItems: "flex-start",
 		gap: "10px",
 	})}
 	id="render-root"
@@ -458,6 +459,7 @@ const Variants = (args) =>
 	style=${styleMap({
 		display: "flex",
 		gap: "10px",
+		alignItems: "flex-start",
 	})}
 	id="render-root"
 >${CustomButton(args)}</div>`}`;
