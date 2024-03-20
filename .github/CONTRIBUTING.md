@@ -47,6 +47,14 @@ git push -u origin feat-my-awesome-new-feature
 git remote add upstream git@github.com:adobe/spectrum-css.git
 ```
 
+To ensure your Node environment is always aligned with the project, we strongly recommend using [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating). Once you have nvm installed, you can run:
+
+```shell
+nvm use
+```
+
+This will ensure the correct version of node is installed and used for the project. You always want to run nvm use when you first clone the project and whenever you switch branches.
+
 Install [yarn](https://yarnpkg.com/en/docs/install):
 
 ```shell
@@ -58,6 +66,8 @@ Install dependencies:
 ```shell
 yarn install
 ```
+
+**Important:** Requires >= Node 18.8.1 and Yarn 1.22.0.
 
 To generate a new component, run the generator:
 
@@ -71,13 +81,9 @@ To kick-off the project's storybook locally, run:
 yarn start
 ```
 
-This is our development environment, where you can see all the components in action, and develop new components. All components must have a storybook entry.
+This is our development environment, where you can see all the components in action, and develop new components. All components must have a storybook entry. Edits to any of the `*.css`, `*.stories.js`, or `template.js` files in `components/*` will live reload in your browser. For more details about how to work within our Storybook setup, take a look at our [getting started Storybook guide](https://opensource.adobe.com/spectrum-css/preview/?path=/docs/guides-contributing--docs).
 
-Working on the documentation site? Run:
-
-```shell
-yarn dev
-```
+This project is leveraging caching from [Nx](https://nx.dev/) to speed up the build process. If you are seeing unexpected results, you can clear the cache by running `yarn nx reset`.
 
 Commit all changes with a [conventional commit message](https://www.conventionalcommits.org), making sure to correctly use `feat:`, `fix:`, and `BREAKING CHANGE` accordingly, and referencing the relevant issue number (if any):
 
@@ -110,7 +116,7 @@ At this point you're waiting on us. We do our best to keep on top of all the pul
 
 Some things that will increase the chance that your pull request is accepted:
 
--   Write a thorough pull request description, include screenshots, and test your changes across all evergreen browsers.
+-   Write a thorough pull request description, include screenshots, and test your changes across all [evergreen browsers](https://github.com/adobe/spectrum-css?tab=readme-ov-file#browser-support).
 -   Write out your test cases for any new features or bug fixes in as much detail as possible and include them in the pull request description.
 -   Make sure the PR merges cleanly with the latest main.
 -   Describe your feature/bugfix and why it's needed/important in the pull request description.
