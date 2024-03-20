@@ -12,6 +12,7 @@ sections:
       #### Spectrum 2 release
       Button now uses Spectrum 2 tokens and specifications. A few notable changes:
       - Medium size is now the default. The class `.spectrum-Button--sizeM` is now unnecessary for this size, and has been removed.
+      - The `.spectrum-Button--fill` class is no longer needed and has been removed.
       - The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
       - The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
       - The mod custom property `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`.
@@ -52,18 +53,18 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeS">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeS">
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeS">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeS">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeS spectrum-Button--iconOnly" aria-label="Edit">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeS spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -72,18 +73,18 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeM">
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeM">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -93,18 +94,18 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeL">
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeL">
             <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL spectrum-Button--iconOnly" aria-label="Edit">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeL spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeL" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -114,18 +115,18 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeXL">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeXL">
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeXL">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeXL">
             <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeXL spectrum-Button--iconOnly" aria-label="Edit">
+          <button class="spectrum-Button spectrum-Button--accent spectrum-Button--sizeXL spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeXL" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -138,18 +139,18 @@ examples:
     markup: |
       <div class="spectrum-Examples">
         <div class="spectrum-Examples-item">
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent" disabled>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--accent" disabled>
             <span class="spectrum-Button-label">Button</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent" disabled>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--accent" disabled>
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-Button--iconOnly" aria-label="Edit" disabled>
+          <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--accent spectrum-Button--iconOnly" aria-label="Edit" disabled>
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>

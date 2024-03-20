@@ -557,7 +557,7 @@ a.spectrum-Button {
       }
     }
 
-    &.spectrum-Button--accent.spectrum-Button--fill {
+    &.spectrum-Button--accent:not(.spectrum-Button--outline) {
       --highcontrast-button-background-color-default: ButtonText;
       --highcontrast-button-content-color-default: ButtonFace;
       --highcontrast-button-background-color-disabled: ButtonFace;
