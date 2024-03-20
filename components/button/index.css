@@ -562,6 +562,7 @@ a.spectrum-Button {
   .spectrum-Button {
     --highcontrast-button-content-color-disabled: GrayText;
     --highcontrast-button-border-color-disabled: GrayText;
+    --highcontrast-button-background-color-disabled: ButtonFace;
 
     --mod-progress-circle-track-border-color: ButtonText;
     --mod-progress-circle-track-border-color-over-background: ButtonText;
@@ -577,16 +578,18 @@ a.spectrum-Button {
     }
 
     &.spectrum-Button--accent:not(.spectrum-Button--outline) {
+      /* The accent fill variant looks different than the other buttons.
+         It inverts the background and content colors. */
       --highcontrast-button-background-color-default: ButtonText;
       --highcontrast-button-content-color-default: ButtonFace;
-      --highcontrast-button-background-color-disabled: ButtonFace;
 
       --highcontrast-button-background-color-hover: Highlight;
       --highcontrast-button-background-color-down: Highlight;
       --highcontrast-button-background-color-focus: Highlight;
-      --highcontrast-button-content-color-hover: ButtonFace;
-      --highcontrast-button-content-color-down: ButtonFace;
-      --highcontrast-button-content-color-focus: ButtonFace;
+
+      --highcontrast-button-content-color-hover: HighlightText;
+      --highcontrast-button-content-color-down: HighlightText;
+      --highcontrast-button-content-color-focus: HighlightText;
 
       .spectrum-Button-label {
         forced-color-adjust: none;
