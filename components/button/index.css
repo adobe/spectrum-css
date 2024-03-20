@@ -233,30 +233,6 @@ governing permissions and limitations under the License.
       --spectrum-button-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
     }
   }
-  
-  &.spectrum-Button--quiet {
-    --spectrum-button-background-color-default: transparent;
-    --spectrum-button-background-color-hover: var(--spectrum-gray-100);
-    --spectrum-button-background-color-down: var(--spectrum-gray-200);
-    --spectrum-button-background-color-focus: var(--spectrum-gray-100);
-
-    --spectrum-button-border-color-default: transparent;
-    --spectrum-button-border-color-hover: transparent;
-    --spectrum-button-border-color-down: transparent;
-    --spectrum-button-border-color-focus: transparent;
-
-    --spectrum-button-background-color-disabled: transparent;
-    --spectrum-button-border-color-disabled: transparent;
-
-    &.spectrum-Button--staticBlack,
-    &.spectrum-Button--staticWhite {
-      --spectrum-button-border-color-default: transparent;
-      --spectrum-button-border-color-hover: transparent;
-      --spectrum-button-border-color-down: transparent;
-      --spectrum-button-border-color-focus: transparent;
-      --spectrum-button-border-color-disabled: transparent;
-    }
-  }
 
   /* ---- Static White ---- */
   &.spectrum-Button--staticWhite {
