@@ -14,9 +14,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Button {
   --spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
-  /* @todo once corner rounding value override is in a tokens release: */
-  /* --spectrum-button-border-radius: var(--spectrum-corner-radius-full); */
-  --spectrum-button-border-radius: 9999px;
+  --spectrum-button-border-radius: var(--spectrum-corner-radius-full);
   --spectrum-button-border-width: var(--spectrum-border-width-200);
   
   --spectrum-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
