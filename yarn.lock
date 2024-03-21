@@ -4886,7 +4886,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/commons@npm:^10.0.0, @spectrum-css/commons@workspace:components/commons":
+"@spectrum-css/commons@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "@spectrum-css/commons@npm:10.0.0"
+  peerDependencies:
+    "@spectrum-css/tokens": ">=13"
+  checksum: 10c0/d97d22b6c68a93ef393b58adb4abd47c62e483d64d523505871600527f24df9fd8995c6930438ab21d682a6e7230cd30c97fb3fb9f10168d24ec2de521875538
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/commons@workspace:components/commons":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/commons@workspace:components/commons"
   peerDependencies:
