@@ -78,18 +78,18 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-          <button class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--primary">
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--primary">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
+          <button class="spectrum-Button spectrum-Button--primary spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -142,18 +142,18 @@ examples:
   - id: button-primary-disabled
     name: Disabled
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary" disabled>
+      <button class="spectrum-Button spectrum-Button--primary" disabled>
         <span class="spectrum-Button-label">Edit</span>
       </button>
 
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary" disabled>
+      <button class="spectrum-Button spectrum-Button--primary" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
         <span class="spectrum-Button-label">Edit</span>
       </button>
 
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary spectrum-Button--iconOnly" aria-label="Edit" disabled>
+      <button class="spectrum-Button spectrum-Button--primary spectrum-Button--iconOnly" aria-label="Edit" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
@@ -186,18 +186,18 @@ examples:
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary">
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
             <span class="spectrum-Button-label">Edit</span>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
+          <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--iconOnly" aria-label="Edit">
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -250,18 +250,18 @@ examples:
   - id: button-primary-outline-disabled
     name: Outline - Disabled
     markup: |
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary" disabled>
+      <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary" disabled>
         <span class="spectrum-Button-label">Edit</span>
       </button>
 
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary" disabled>
+      <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>
         <span class="spectrum-Button-label">Edit</span>
       </button>
 
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-Button--iconOnly" aria-label="Edit" disabled>
+      <button class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--iconOnly" aria-label="Edit" disabled>
         <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-icon-18-Edit" />
         </svg>

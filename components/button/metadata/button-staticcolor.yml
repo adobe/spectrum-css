@@ -79,18 +79,18 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--sizeM">
+            <button class="spectrum-Button spectrum-Button--staticWhite">
               <span class="spectrum-Button-label">Edit</span>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--sizeM">
+            <button class="spectrum-Button spectrum-Button--staticWhite">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
               <span class="spectrum-Button-label">Edit</span>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
+            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--iconOnly" aria-label="Edit">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
@@ -145,18 +145,18 @@ examples:
     name: Static White - Disabled
     markup: |
       <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticWhite" disabled>
+        <button class="spectrum-Button spectrum-Button--staticWhite" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticWhite" disabled>
+        <button class="spectrum-Button spectrum-Button--staticWhite" disabled>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticWhite spectrum-Button--iconOnly" aria-label="Edit" disabled>
+        <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--iconOnly" aria-label="Edit" disabled>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
@@ -167,18 +167,18 @@ examples:
     name: Static White - Secondary
     markup: |
       <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticWhite spectrum-Button--secondary">
+        <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticWhite spectrum-Button--secondary">
+        <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--secondary">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticWhite spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
+        <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
@@ -213,18 +213,18 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-            <button class="spectrum-Button spectrum-Button--staticBlack spectrum-Button--sizeM">
+            <button class="spectrum-Button spectrum-Button--staticBlack">
               <span class="spectrum-Button-label">Edit</span>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--staticBlack spectrum-Button--sizeM">
+            <button class="spectrum-Button spectrum-Button--staticBlack">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
               <span class="spectrum-Button-label">Edit</span>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--staticBlack spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
+            <button class="spectrum-Button spectrum-Button--staticBlack spectrum-Button--iconOnly" aria-label="Edit">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
@@ -279,18 +279,18 @@ examples:
     name: Static Black - Disabled
     markup: |
       <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticBlack" disabled>
+        <button class="spectrum-Button spectrum-Button--staticBlack" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticBlack" disabled>
+        <button class="spectrum-Button spectrum-Button--staticBlack" disabled>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticBlack spectrum-Button--iconOnly" aria-label="Edit" disabled>
+        <button class="spectrum-Button spectrum-Button--staticBlack spectrum-Button--iconOnly" aria-label="Edit" disabled>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
@@ -301,18 +301,18 @@ examples:
     name: Static Black - Secondary
     markup: |
       <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticBlack spectrum-Button--secondary">
+        <button class="spectrum-Button spectrum-Button--staticBlack spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticBlack spectrum-Button--secondary">
+        <button class="spectrum-Button spectrum-Button--staticBlack spectrum-Button--secondary">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--staticBlack spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
+        <button class="spectrum-Button spectrum-Button--staticBlack spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
@@ -347,18 +347,18 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite">
               <span class="spectrum-Button-label">Edit</span>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
               <span class="spectrum-Button-label">Edit</span>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--iconOnly" aria-label="Edit">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
@@ -413,18 +413,18 @@ examples:
     name: Static White - Outline, Disabled
     markup: |
       <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite" disabled>
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite" disabled>
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite" disabled>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--iconOnly" aria-label="Edit" disabled>
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--iconOnly" aria-label="Edit" disabled>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
@@ -435,18 +435,18 @@ examples:
     name: Static White - Outline, Secondary
     markup: |
       <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
@@ -481,18 +481,18 @@ examples:
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
 
-            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--sizeM">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack">
               <span class="spectrum-Button-label">Edit</span>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--sizeM">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
               <span class="spectrum-Button-label">Edit</span>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--sizeM spectrum-Button--iconOnly" aria-label="Edit">
+            <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--iconOnly" aria-label="Edit">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
@@ -547,18 +547,18 @@ examples:
     name: Static Black - Outline, Disabled
     markup: |
       <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticBlack" disabled>
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticBlack" disabled>
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack" disabled>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--iconOnly" aria-label="Edit" disabled>
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--iconOnly" aria-label="Edit" disabled>
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
@@ -569,18 +569,18 @@ examples:
     name: Static Black - Outline, Secondary
     markup: |
       <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--secondary">
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--secondary">
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--secondary">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
           <span class="spectrum-Button-label">Edit</span>
         </button>
 
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
+        <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--secondary spectrum-Button--iconOnly" aria-label="Edit">
           <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-icon-18-Edit" />
           </svg>
