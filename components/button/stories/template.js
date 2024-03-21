@@ -72,7 +72,7 @@ export const Template = ({
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
-      ${when(isPendingStory, () => {
+      ${when(isPendingStory || isPending, () => {
         const isOverBackground = staticColor === 'white';
         return ProgressCircle({
           ...globals,
