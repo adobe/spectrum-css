@@ -387,7 +387,7 @@ governing permissions and limitations under the License.
   .spectrum-Icon {
     /* Any block-size difference between the intended workflow icon size and actual icon used.
        Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
-    --_icon-size-difference: max(0px,
+    --spectrum-button-icon-size-difference: max(0px,
       var(--spectrum-button-intended-icon-size) -
       var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size))
     );
@@ -396,7 +396,7 @@ governing permissions and limitations under the License.
       max(0px,
         var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) -
         var(--mod-button-border-width, var(--spectrum-button-border-width)) +
-        (var(--_icon-size-difference, 0px) / 2)
+        (var(--spectrum-button-icon-size-difference, 0px) / 2)
       )
     );
 
@@ -547,8 +547,8 @@ a.spectrum-Button {
     --mod-progress-circle-track-border-color-over-background: ButtonText;
     --mod-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
 
-    /* Focus indicator */
     --highcontrast-button-focus-ring-color: ButtonText;
+
     &:focus-visible {
       &::after {
         /* Make sure the box-shadow used for the focus indicator is displayed. */
