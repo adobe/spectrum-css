@@ -54,7 +54,7 @@ examples:
   - id: button-staticcolor
     name: Static White
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
+      <div style="background-color: rgb(5, 108, 92); --mod-heading-font-color: white; padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -144,7 +144,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Disabled
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+      <div style="background-color: rgb(5, 108, 92); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--staticWhite" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -166,7 +166,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Secondary
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+      <div style="background-color: rgb(5, 108, 92); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -188,7 +188,7 @@ examples:
   - id: button-staticcolor
     name: Static Black
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(211, 246, 234); --mod-heading-font-color: black; padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -278,7 +278,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Disabled
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(211, 246, 234); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--staticBlack" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -300,7 +300,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Secondary
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(211, 246, 234); color: rgb(181, 209, 211); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--staticBlack spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -322,7 +322,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Outline
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
+      <div style="background-color: rgb(5, 108, 92); --mod-heading-font-color: white; padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -412,7 +412,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Outline, Disabled
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+      <div style="background-color: rgb(5, 108, 92); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -434,7 +434,7 @@ examples:
   - id: button-staticcolor
     name: Static White - Outline, Secondary
     markup: |
-      <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); padding: 15px 20px;">
+      <div style="background-color: rgb(5, 108, 92); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -456,7 +456,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Outline
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(211, 246, 234); --mod-heading-font-color: black; padding: 15px 20px;">
         <div class="spectrum-Examples">
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
@@ -546,7 +546,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Outline, Disabled
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(211, 246, 234); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack" disabled>
           <span class="spectrum-Button-label">Edit</span>
         </button>
@@ -568,7 +568,7 @@ examples:
   - id: button-staticcolor
     name: Static Black - Outline, Secondary
     markup: |
-      <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
+      <div style="background-color: rgb(211, 246, 234); padding: 15px 20px;">
         <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--secondary">
           <span class="spectrum-Button-label">Edit</span>
         </button>
