@@ -12,7 +12,7 @@
  */
 
 const { existsSync } = require("fs");
-const { join, sep } = require("path");
+const { join, sep, dirname } = require("path");
 
 const core = require("@actions/core");
 
@@ -210,7 +210,7 @@ async function run() {
 		markdown.push(
 			"",
 			"<small>",
-			"* <em>Size determined by adding together the size of the main file for all packages in the library.</em><br/>",
+			"* <em>Size is the sum of all main files for packages in the library.</em><br/>",
 			"* <em>An ASCII character in UTF-8 is 8 bits or 1 byte.</em>",
 			"</small>"
 		);
@@ -276,7 +276,7 @@ const isNew = (v1, v0) => (v1 && v1 > 0) && (!v0 || v0 === 0);
  * @param {number} difference
  * @returns {string}
  */
-const printChange = function (v1, v0) {
+const printChange = function (v0, v1) {
 	/** Calculate the change in size: v1 - v0 = change */
 	const d = difference(v1, v0);
 	return d === 0
@@ -312,10 +312,18 @@ const makeTable = function (PACKAGES, filePath, path) {
 		// Read in the main asset file from the package.json
 		const packagePath = join(path, filePath, packageName, "package.json");
 
-		let mainFile = "index.css";
+		let mainFile = "index.min.css";
 		if (existsSync(packagePath)) {
 			const { main } = require(packagePath) ?? {};
-			if (main) mainFile = main.replace(/^.*\/dist\//, "");
+			if (main) {
+				mainFile = main.replace(/^.*\/dist\//, "");
+
+				// Check if a minified output of this file exists
+				if (existsSync(join(dirname(packagePath), main.replace(/\.css$/, ".min.css")))) {
+					mainFile = mainFile.replace(/\.css$/, ".min.css");
+				} else {
+
+				}
 		}
 
 		const mainFileOnly = [...fileMap.keys()].filter((file) => file.endsWith(mainFile));
