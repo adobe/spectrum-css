@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "./themes/express.css";
+
 .spectrum-ClearButton {
   --spectrum-clear-button-height: var(--spectrum-component-height-100);
   --spectrum-clear-button-width: var(--spectrum-component-height-100);
@@ -51,10 +53,10 @@ governing permissions and limitations under the License.
     --mod-clear-button-background-color: var(--spectrum-clear-button-background-color-over-background, transparent);
     --mod-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
     --mod-clear-button-background-color-down: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-400));
-    --mod-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));  
+    --mod-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
   }
 
-  &:disabled, 
+  &:disabled,
   &.is-disabled {
     --mod-clear-button-icon-color: var(--mod-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color));
     --mod-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
@@ -109,7 +111,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ClearButton-fill {
-  background-color: var(--mod-clear-button-background-color, var(--spectrum-clear-button-background-color)); 
+  background-color: var(--mod-clear-button-background-color, var(--spectrum-clear-button-background-color));
 
   inline-size: 100%;
   block-size: 100%;

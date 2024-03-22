@@ -48,9 +48,7 @@ export default {
 			handles: [...Radio.parameters.actions.handles],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("fieldgroup")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

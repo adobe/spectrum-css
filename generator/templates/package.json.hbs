@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/{{ folderName }}",
-  "version": "1.0.0-alpha.0",
+  "version": "0.0.0",
   "description": "The Spectrum CSS {{ folderName }} component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -13,21 +13,20 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
-  "scripts": {
-    "build": "gulp",
-    "clean": "rimraf dist"
-  },
+  "main": "dist/index.css",
   "peerDependencies": {
     "{{ tokens.name }}": ">={{ parse tokens.version '.' 0 1 }}"
   },
   "devDependencies": {
-    "{{ builder.name }}": "^{{ builder.version }}",
-    "{{ tokens.name }}": "^{{ tokens.version }}",
-    "nx": "{{ pkg.devDependencies.nx }}",
-    "rimraf": "{{ pkg.devDependencies.rimraf }}",
-    "gulp": "{{ pkg.devDependencies.gulp }}"
+    "{{ tokens.name }}": "^{{ tokens.version }}"
   },
+  "files": [
+    "dist",
+    "metadata",
+    "stories"
+    "*.md",
+    "package.json"
+  ],
   "publishConfig": {
     "access": "public"
   }

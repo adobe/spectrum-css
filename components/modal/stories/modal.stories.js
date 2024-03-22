@@ -17,7 +17,7 @@ export default {
 		},
 		variant: {
 			description:
-				'Controls how the modal fills the available space. <ul><li>"responsive" will fill the screen on small viewports.</li><li>"fullscreen" will fill almost all of the available screen space.</li><li>"fullscreenTakeover" will fill all of the available screen space.</li></ul>',
+				"Controls how the modal fills the available space. <ul><li>\"responsive\" will fill the screen on small viewports.</li><li>\"fullscreen\" will fill almost all of the available screen space.</li><li>\"fullscreenTakeover\" will fill all of the available screen space.</li></ul>",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
@@ -40,9 +40,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("modal")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

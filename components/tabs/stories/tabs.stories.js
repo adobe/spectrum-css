@@ -5,105 +5,105 @@ import { Template } from "./template";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 export default {
-  title: "Components/Tabs",
-  description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
-  component: "Tabs",
-  argTypes: {
+	title: "Components/Tabs",
+	description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
+	component: "Tabs",
+	argTypes: {
 		content: { table: { disable: true } },
-    size: {
-      name: "Size",
-      type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-      },
-      options: ["s", "m", "l", "xl"],
-      control: "select"
-    },
-    orientation: {
-      name: "Orientation",
-      type: { name: "string", required: true },
-      table: {
-        type: { summary: "string" },
-        category: "Component",
-        default: "horizontal",
-      },
-      options: ["horizontal", "vertical", "overflow"],
-      control: "select",
-      default: "horizontal"
-    },
-    isQuiet: {
-      name: "Quiet",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
-    isEmphasized: {
-      name: "Emphasized",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-    },
-    isCompact: {
-      name: "Compact",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean",
-      if: { arg: 'isQuiet', truthy: true },
-    },
-    iconOnly: {
-      name: "Icon only",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "Component",
-      },
-      control: "boolean",
-    }
-  },
-  args: {
-    rootClass: "spectrum-Tabs",
-    isQuiet: false,
-    isEmphasized: false,
-    isCompact: false,
-    iconOnly: false,
-    content: [
-      {
-        id: "tab-1",
-        label: "Tab 1",
-        icon: "Folder",
-        isSelected: true,
-      },
-      {
-        id: "tab-2",
-        label: "Tab 2",
-        icon: "Image",
-      },
-      {
-        id: "tab-3",
-        label: "Tab 3",
-        icon: "Document",
-        isDisabled: true,
-      }
-    ],
-  },
-  parameters: {
-    actions: {
-      handles: ['.spectrum-Tabs-item'],
-    },
-    status: {
-      type: process.env.MIGRATED_PACKAGES.includes('tabs') ? 'migrated' : 'legacy'
-    }
-  }
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select"
+		},
+		orientation: {
+			name: "Orientation",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+				default: "horizontal",
+			},
+			options: ["horizontal", "vertical", "overflow"],
+			control: "select",
+			default: "horizontal"
+		},
+		isQuiet: {
+			name: "Quiet",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isEmphasized: {
+			name: "Emphasized",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isCompact: {
+			name: "Compact",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+			if: { arg: "isQuiet", truthy: true },
+		},
+		iconOnly: {
+			name: "Icon only",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		}
+	},
+	args: {
+		rootClass: "spectrum-Tabs",
+		isQuiet: false,
+		isEmphasized: false,
+		isCompact: false,
+		iconOnly: false,
+		content: [
+			{
+				id: "tab-1",
+				label: "Tab 1",
+				icon: "Folder",
+				isSelected: true,
+			},
+			{
+				id: "tab-2",
+				label: "Tab 2",
+				icon: "Image",
+			},
+			{
+				id: "tab-3",
+				label: "Tab 3",
+				icon: "Document",
+				isDisabled: true,
+			}
+		],
+	},
+	parameters: {
+		actions: {
+			handles: [".spectrum-Tabs-item"],
+		},
+		status: {
+			type: "migrated",
+		}
+	}
 };
 
 const TabsGroup = (args) => html`
@@ -157,10 +157,10 @@ Default.args = {};
 
 export const Vertical = Variants.bind({});
 Vertical.args = {
-  orientation: "vertical"
+	orientation: "vertical"
 };
 
 export const Overflow = Variants.bind({});
 Overflow.args = {
-  orientation: "overflow",
+	orientation: "overflow",
 };

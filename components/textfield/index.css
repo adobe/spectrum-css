@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "./themes/express.css";
+
 .spectrum-Textfield {
   /* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
   /* disallow mod for max compatibility */

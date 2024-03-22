@@ -13,8 +13,6 @@ Each component has the following files:
 - `themes/*.css` - The theme-specific styles for the component.
 - `stories/*.stories.js` and `stories/template.js` - The storybook assets for rendering components in the Storybook tool and eventually to be used for visual regression testing.
 
-See [documentation generation](/tools/bundle-builder/docs/README.md) documentation for more information on the properties available within the `.yml` files.
-
 ## Editing an existing component
 
 1. Run `gulp dev` in the root of the project to begin developing.

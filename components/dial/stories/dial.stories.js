@@ -64,9 +64,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("dial")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -76,20 +74,20 @@ Default.args = {};
 
 export const DefaultExpress = Template.bind();
 DefaultExpress.args = {
-  express: true,
+	express: true,
 };
 
 export const Small = Template.bind();
 Small.args = {
-  size: "s",
-}
+	size: "s",
+};
 
 export const WithLabel = Template.bind();
 WithLabel.args = {
-  label: "Volume",
+	label: "Volume",
 };
 
 export const Disabled = Template.bind();
 Disabled.args = {
-  isDisabled: true,
-}
+	isDisabled: true,
+};

@@ -3,7 +3,7 @@ import { Template } from "./template.js";
 export default {
 	title: "Components/Search",
 	description:
-		'This component contains a single input field with both a magnifying glass icon and a "reset" button displayed within it.',
+		"This component contains a single input field with both a magnifying glass icon and a \"reset\" button displayed within it.",
 	component: "Search",
 	argTypes: {
 		size: {
@@ -49,9 +49,7 @@ export default {
 			],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("search")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

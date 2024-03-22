@@ -49,7 +49,7 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
-			if: { arg: 'isDisabled', truthy: false }
+			if: { arg: "isDisabled", truthy: false }
 		},
 		isRounded: {
 			name: "Rounded",
@@ -86,7 +86,7 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
-			if: { arg: 'isDisabled', truthy: false }
+			if: { arg: "isDisabled", truthy: false }
 		},
 		position: {
 			name: "Position",
@@ -118,9 +118,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("pickerbutton")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

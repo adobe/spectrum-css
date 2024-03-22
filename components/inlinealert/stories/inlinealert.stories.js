@@ -59,9 +59,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("inlinealert")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -79,17 +77,17 @@ export const Default = ({
 				window.isChromatic() ?
 					Template({
 						...args,
-						headerText: 'in-line alert header announcing something very long and in-line',
-						text: 'this is a very urgent alert with a lot of context, so the text has to wrap',
+						headerText: "in-line alert header announcing something very long and in-line",
+						text: "this is a very urgent alert with a lot of context, so the text has to wrap",
 						customStyles: {"max-width": "400px"}
 					})
 					&&
 					Template({
 						...args,
-						headerText: 'in-line alert header announcing something very long and in-line',
-						text: 'this is a very urgent alert with a lot of context, so the text has to wrap',
+						headerText: "in-line alert header announcing something very long and in-line",
+						text: "this is a very urgent alert with a lot of context, so the text has to wrap",
 						customStyles: {"max-width": "400px"},
-						variant: 'notice',
+						variant: "notice",
 						isClosable: true,
 					})
 				: null

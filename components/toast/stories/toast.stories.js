@@ -43,9 +43,7 @@ export default {
 			handles: ["click .spectrum-Toast button"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("toast")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

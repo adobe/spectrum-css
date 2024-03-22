@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "./themes/express.css";
+
 .spectrum-Stepper {
   /* Set defaults to medium size */
   --spectrum-stepper-height: var(--spectrum-component-height-100);

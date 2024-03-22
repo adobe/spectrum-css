@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/checkbox": ">=8",
     "@spectrum-css/icon": ">=4",
@@ -26,9 +26,6 @@
     "@spectrum-css/icon": {
       "optional": true
     }
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^5.0.5"
   },
   "publishConfig": {
     "access": "public"

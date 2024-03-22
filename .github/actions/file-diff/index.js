@@ -52,7 +52,7 @@ async function run() {
 		 * and not just reporting on the overall size of the compiled assets
 		 * @type boolean
 		 */
-		const hasDiff = baseOutput.size > 0;
+		const hasBase = baseOutput.size > 0;
 		// --------------- End evaluation  ---------------
 
 		/** Split the data by component package */
@@ -66,7 +66,7 @@ async function run() {
 		);
 
 		/** Calculate the overall size of the base branch's assets */
-		const overallBaseSize = hasDiff
+		const overallBaseSize = hasBase
 			? [...baseOutput.values()].reduce((acc, size) => acc + size, 0)
 			: undefined;
 
@@ -95,21 +95,27 @@ async function run() {
 			 * PR - base / base = change
 			 */
 			let changeSummary = "";
-			if (baseOutput.size > 0 && hasDiff && hasChange) {
+			if (baseOutput.size > 0 && hasBase && hasChange) {
 				changeSummary = `**Total change (Δ)**: ${printChange(overallHeadSize, overallBaseSize)} (${printPercentChange(overallHeadSize, overallBaseSize)})`;
-			} else if (baseOutput.size > 0 && hasDiff && !hasChange) {
+			} else if (baseOutput.size > 0 && hasBase && !hasChange) {
 				changeSummary = `No change in file sizes`;
 			}
 
 			if (changeSummary !== "") {
-				summary.push(...[
+				summary.push(
 					changeSummary,
-					"<small><em>Table reports on changes to a package's main file. Other changes can be found in the collapsed \"Details\" below.</em></small>",
+					"",
+					"<small><em>Table reports on changes to a package's main file. Other changes can be found in the collapsed <a href=\"#details\">Details</a> section below.</em></small>",
 					""
-				]);
+				);
 			}
 
-			markdown.push(`<details>`, `<summary><b>Details</b></summary>`, "");
+			markdown.push(
+				"<a name=\"details\"></a>",
+				`<details>`,
+				`<summary><b>Details</b></summary>`,
+				""
+			);
 
 			sections.map(({ name, filePath, headMainSize, baseMainSize, hasChange, mainFile, fileMap }) => {
 				if (!hasChange) return;
@@ -117,7 +123,7 @@ async function run() {
 				const data = [];
 
 				/** We only evaluate changes if there is a diff branch being used and this is the main file for the package */
-				if (hasDiff) {
+				if (hasBase) {
 					/**
 					 * If: the component folder exists in the original branch but not the PR
 					 * Or: the pull request file size is 0 or empty but the original branch has a size
@@ -155,8 +161,8 @@ async function run() {
 				const md = ["", `#### ${name}`, ""];
 				md.push(
 					...[
-						["File", "Head", ...(hasDiff ? ["Base", "Δ"] : [])],
-						[" - ", " - ", ...(hasDiff ? [" - ", " - "] : [])],
+						["File", "Head", ...(hasBase ? ["Base", "Δ"] : [])],
+						[" - ", " - ", ...(hasBase ? [" - ", " - "] : [])],
 					].map((row) => `| ${row.join(" | ")} |`),
 					...[...fileMap.entries()]
 						.reduce(
@@ -170,10 +176,11 @@ async function run() {
 									...table,
 									[
 										readableFilename === mainFile ? `**${readableFilename}**` : readableFilename,
-										isRemoved(headByteSize, baseByteSize) ? "**removed**" : isNew(headByteSize, baseByteSize) ? "**new**" : bytesToSize(headByteSize),
-										...(hasDiff ? [
+										// If the file was removed, note it's absense with a dash; otherwise, note it's size
+										isRemoved(headByteSize, baseByteSize) ? " - " : bytesToSize(headByteSize),
+										...(hasBase ? [
 											bytesToSize(baseByteSize),
-											`${printChange(headByteSize, baseByteSize)}${difference(headByteSize, baseByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`,
+											isRemoved(headByteSize, baseByteSize) ? "🚨 deleted, moved, or renamed" : isNew(headByteSize, baseByteSize) ? "🎉 **new**" : `${printChange(headByteSize, baseByteSize)}${difference(headByteSize, baseByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`,
 										] : []),
 									]
 								];
@@ -192,8 +199,8 @@ async function run() {
 		if (summaryTable.length > 0) {
 			// Add the headings to the summary table if it contains data
 			summaryTable = [
-				["Package", "Size", ...(hasDiff ? ["Δ"] : [])],
-				["-", "-", ...(hasDiff ? ["-"] : [])],
+				["Package", "Size", ...(hasBase ? ["Δ"] : [])],
+				["-", "-", ...(hasBase ? ["-"] : [])],
 				...summaryTable,
 			];
 
@@ -237,7 +244,7 @@ async function run() {
 			);
 			core.setOutput("total-size", headMainSize);
 
-			if (hasDiff) {
+			if (hasBase) {
 				const baseMainSize = [...baseOutput.entries()].reduce(
 					(acc, [_, size]) => acc + size,
 					0
@@ -245,7 +252,7 @@ async function run() {
 
 				core.setOutput(
 					"has-changed",
-					hasDiff && headMainSize !== baseMainSize ? "true" : "false"
+					hasBase && headMainSize !== baseMainSize ? "true" : "false"
 				);
 			}
 		} else {
@@ -379,11 +386,37 @@ const splitDataByPackage = function (dataMap, path, baseMap = new Map()) {
 
 		if (!fileMap.has(readableFilename)) {
 			fileMap.set(readableFilename, {
-				headByteSize: headByteSize,
+				headByteSize,
 				baseByteSize: baseMap.get(file),
 			});
-		} else {
-			throw new Error(`The file ${file} was found twice in the dataset`);
+		}
+
+		/** Update the component's table data */
+		PACKAGES.set(packageName, fileMap);
+	});
+
+	// Look for any base files not present in the head
+	[...baseMap.entries()].forEach(([file, baseByteSize]) => {
+		// Determine the name of the component
+		const parts = file.split(sep);
+		const componentIdx = parts.findIndex((part) => part === "dist") - 1;
+		const packageName = parts[componentIdx];
+
+		if (!filePath) {
+			filePath = `${file.replace(path, "")}/${parts.slice(componentIdx + 1, -1).join(sep)}`;
+		}
+
+		const readableFilename = file.replace(/^.*\/dist\//, "");
+
+		const fileMap = PACKAGES.has(packageName)
+			? PACKAGES.get(packageName)
+			: new Map();
+
+		if (!fileMap.has(readableFilename)) {
+			fileMap.set(readableFilename, {
+				headByteSize: dataMap.get(file),
+				baseByteSize,
+			});
 		}
 
 		/** Update the component's table data */

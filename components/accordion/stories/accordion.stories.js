@@ -1,9 +1,9 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { Template } from "@spectrum-css/accordion/stories/template.js";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Template } from "./template.js";
 
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
@@ -142,9 +142,7 @@ export default {
 			handles: ["click .spectrum-Accordion-item"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("accordion")
-				? "migrated"
-				: "legacy",
+			type: "migrated",
 		},
 	},
 };

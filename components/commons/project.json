@@ -13,10 +13,9 @@
 			"executor": "nx:noop"
 		},
 		"lint": {},
-		"validate": {},
-
 		"test": {
 			"executor": "nx:noop"
-		}
+		},
+		"validate": {}
 	}
 }

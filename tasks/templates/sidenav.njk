@@ -1,0 +1,69 @@
+<style>
+    .spectrum-SideNav {
+        --mod-sidenav-icon-size: .8rem;
+    }
+    .spectrum-Container-aside {
+        box-sizing: border-box;
+        overflow: hidden;
+
+        margin-block-start: 1vh;
+        padding: 1rem;
+
+        max-block-size: 98%;
+        min-inline-size: max-content;
+        max-inline-size: 200px;
+    }
+    .spectrum-Container-aside > div {
+        margin-block-start: 1rem;
+    }
+    .spectrum-Container-aside > div > .spectrum-SideNav {
+        overflow-y: auto;
+        padding: 1rem;
+        max-height: 85vh;
+
+        background-color: var(--spectrum-background-layer-2-color);
+        color: var(--spectrum-neutral-content-color-default);
+        border-radius: 4px;
+    }
+</style>
+
+{% set isListing = false %}
+{% if not component %}{% set isListing = true %}{% endif %}
+
+<nav class="spectrum-Typography spectrum-Container-aside">
+    <ul class="spectrum-SideNav">
+        <li class="spectrum-SideNav-item{% if isListing %} is-selected{% endif %}" class="spectrum-SideNav-itemLink">
+            <a class="spectrum-SideNav-itemLink" href="{% if isListing %}#{% else %}{{ "../../index.html" | safe }}{% endif %}"{% if isListing %} aria-current="page"{% endif %}>
+                <svg
+                    class="spectrum-Icon spectrum-Icon--sizeM"
+                    focusable="false"
+                    aria-hidden="true"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 36 36"
+                >
+                    <path
+                        d="M35.332 20.25 18.75 3.668a1.063 1.063 0 0 0-1.5 0L.668 20.25a1.061 1.061 0 0 0 0 1.5l1.958 1.957a1 1 0 0 0 .707.293H4v9a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V23a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-9h.667a1 1 0 0 0 .707-.293l1.958-1.957a1.061 1.061 0 0 0 0-1.5Z"
+                        fill-rule="evenodd"
+                    ></path>
+                </svg>
+                <span class="spectrum-SideNav-link-text">Listing</span>
+            </a>
+            <br/>
+        </li>
+    </ul>
+    <div>
+        <h2 class="spectrum-Detail spectrum-Detail--sizeL">Quick links</h2>
+        <ul class="spectrum-SideNav">
+            {% for c, d in data -%}
+                {%- if d.files | hasChange %}
+                <li class="spectrum-SideNav-item" class="spectrum-SideNav-itemLink">
+                    <a class="spectrum-SideNav-itemLink{% if component === c %} is-selected{% endif %}" href="{% if isListing %}{{ "diffs/" | safe }}{% else %}{{ "../" | safe }}{% endif %}{{ c }}/index.html"{% if component === c %} aria-current="page"{% endif %}>
+                        <span class="spectrum-SideNav-link-text">{{ c }}</span>
+                    </a>
+                </li>
+                {%- endif %}
+            {%- endfor -%}
+        </ul>
+    </div>
+</nav>

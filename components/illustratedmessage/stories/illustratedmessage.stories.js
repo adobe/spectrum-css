@@ -44,16 +44,14 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("illustratedmessage")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
 
 export const Default = ({
-	heading,
-	description,
+	// heading,
+	// description,
 	...args
 }) => {
 	return html`
@@ -90,7 +88,7 @@ AccentColor.args = {
 	description: [
 		() => {
 			return html`${Link({ url: "#", text: "Select a file" })} from your
-		computer.`
+		computer.`;
 		},
 	],
 	useAccentColor: true,

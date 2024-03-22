@@ -50,10 +50,11 @@ export const Template = ({
 
 	// If icon set was not provided, try determine which icon set contains this icon.
 	// Note: icon sets can contain the same icon name, with different icons.
-	if (!['workflow','ui'].includes(setName)){
+	if (!["workflow","ui"].includes(setName)) {
 		if (workflowIcons.includes(idKey)) {
 			setName = "workflow";
-		} else if (uiIcons.includes(idKey.replace(/\d{2,3}$/, "").replace(/(Right|Left|Down|Up)$/, ""))) {
+		}
+		else if (uiIcons.includes(idKey.replace(/\d{2,3}$/, "").replace(/(Right|Left|Down|Up)$/, ""))) {
 			setName = "ui";
 		}
 	}
@@ -77,10 +78,10 @@ export const Template = ({
 
 	/**
 	 * Fallback UI Icon sizing number.
-	 * 
+	 *
 	 * If the icon name includes its scale, we want to leave that scale. This is preferred,
 	 * as UI icons do not use workflow icon sizing.
-	 * 
+	 *
 	 * If the UI icon name does not include scale, reformat it to match the provided sizing.
 	 * E.g. with a size of "s", the icon name "ChevronRight" would become "ChevronRight75".
 	 */
@@ -95,20 +96,20 @@ export const Template = ({
 	) {
 		let sizeVal;
 		switch (size) {
-			case "xs":
-			case "s":
-				sizeVal = "75";
-				break;
-			case "l":
-				sizeVal = "200";
-				break;
-			case "xl":
-			case "xxl":
-				sizeVal = "300";
-				break;
-			default:
-				sizeVal = "100";
-				break;
+		case "xs":
+		case "s":
+			sizeVal = "75";
+			break;
+		case "l":
+			sizeVal = "200";
+			break;
+		case "xl":
+		case "xxl":
+			sizeVal = "300";
+			break;
+		default:
+			sizeVal = "100";
+			break;
 		}
 
 		idKey += sizeVal;
@@ -166,16 +167,17 @@ export const Template = ({
 	const iconID =
 		setName !== "workflow"
 			? `spectrum-css-icon-${idKey}`
-			: `spectrum-icon-${scale !== "medium" ? `24` : `18`}-${idKey}`;
+			: `spectrum-icon-${scale !== "medium" ? "24" : "18"}-${idKey}`;
 
 	try {
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg`
+			/* webpackPrefetch: true */ "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw"
 		);
 		import(
-			/* webpackPrefetch: true */ `!!raw-loader!@spectrum-css/ui-icons/dist/spectrum-css-icons.svg`
+			/* webpackPrefetch: true */ "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw"
 		);
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 

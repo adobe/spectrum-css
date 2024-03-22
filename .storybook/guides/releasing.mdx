@@ -54,7 +54,7 @@ To manually version and publish a package:
 3. Save and commit your changes with an appropriate conventional commit message. For example, `chore(release): manually version @spectrum-css/<package> for beta release`.
 4. Once your changes are committed, you **must** build the affected package(s) locally **before** publishing them to npm. To manually build only a specific package, run the following command:
   ```shell
-  yarn builder <package> --skip-nx-cache --verbose
+  cross-env NODE_ENV=production yarn builder <package> --skip-nx-cache --verbose
   ```
 5. Once the affected package(s) are built, confirm the results in the `dist` directory of the affected package(s). If everything looks good, you can publish the affected package(s) to npm.
 6. To manually publish a package, run the following command:

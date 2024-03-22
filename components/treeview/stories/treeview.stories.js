@@ -35,7 +35,7 @@ export default {
 				type: { summary: "object" },
 				category: "Advanced",
 			},
-			if: { arg: 'customStyles' }
+			if: { arg: "customStyles" }
 		}
 	},
 	args: {
@@ -43,7 +43,7 @@ export default {
 		size: "m",
 		isQuiet: false,
 		customStyles: {
-			'max-inline-size': '600px',
+			"max-inline-size": "600px",
 		},
 	},
 	parameters: {
@@ -51,9 +51,7 @@ export default {
 			handles: ["click .spectrum-TreeView-itemLink"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("treeview")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -284,7 +282,7 @@ WithDropTarget.args = {
 };
 
 export const Flat = Template.bind({});
-Flat.storyName = 'Flat Markup';
+Flat.storyName = "Flat Markup";
 Flat.args = {
 	items: [
 		{
@@ -305,13 +303,13 @@ Flat.args = {
 			label: "Label 2",
 			link: "#",
 			isDisabled: true,
-			customClasses: ['spectrum-TreeView-item--indent1'],
+			customClasses: ["spectrum-TreeView-item--indent1"],
 		},
 		{
 			id: "label3",
 			label: "Label 3",
 			link: "#",
-			customClasses: ['spectrum-TreeView-item--indent1'],
+			customClasses: ["spectrum-TreeView-item--indent1"],
 		},
 		{
 			id: "label4",
@@ -329,7 +327,7 @@ Flat.args = {
 			id: "label5",
 			label: "Label 5",
 			link: "#",
-			customClasses: ['spectrum-TreeView-item--indent1'],
+			customClasses: ["spectrum-TreeView-item--indent1"],
 		},
 		{
 			id: "group3",
@@ -337,13 +335,13 @@ Flat.args = {
 			link: "#",
 			isOpen: true,
 			items: [],
-			customClasses: ['spectrum-TreeView-item--indent1'],
+			customClasses: ["spectrum-TreeView-item--indent1"],
 		},
 		{
 			id: "label6",
 			label: "Label 6",
 			link: "#",
-			customClasses: ['spectrum-TreeView-item--indent2'],
+			customClasses: ["spectrum-TreeView-item--indent2"],
 		},
 	],
 };

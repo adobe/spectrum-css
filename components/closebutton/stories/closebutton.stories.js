@@ -46,9 +46,7 @@ export default {
 			handles: ["click .spectrum-CloseButton"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("closebutton")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

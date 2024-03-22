@@ -32,7 +32,7 @@ export default {
 		withTooltip: {
 			name: "With Tooltip",
 			description:
-				'Use a Tooltip component for each steplist item, instead of label text. Tooltips do not display when "Small" is true.',
+				"Use a Tooltip component for each steplist item, instead of label text. Tooltips do not display when \"Small\" is true.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -55,9 +55,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("steplist")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

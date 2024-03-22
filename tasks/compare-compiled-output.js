@@ -1,6 +1,6 @@
 const { existsSync, statSync, readdirSync, mkdirSync } = require("fs");
 const { readFile, writeFile } = require("fs").promises;
-const { join, relative, dirname, basename } = require("path");
+const { join, relative, dirname } = require("path");
 
 const fg = require("fast-glob");
 const tar = require("tar");
@@ -17,6 +17,8 @@ const yargs = require("yargs");
 
 const Diff = require("diff");
 const Diff2Html = require("diff2html");
+
+const { default: builder } = require("./component-builder.js");
 
 require("colors");
 
@@ -37,6 +39,13 @@ const bytesToSize = function (bytes) {
 
 env.addFilter("bytesToSize", bytesToSize);
 env.addFilter("print", (data) => JSON.stringify(data, null, 2));
+env.addFilter("hasChange", (data) => {
+	return [...data.entries()].reduce((hasChange, [, fileData]) => {
+		if (!fileData) return hasChange;
+		if (fileData.hasDiff) return true;
+		return hasChange;
+	}, false);
+});
 
 const log = {
 	error: (err) => process.stderr.write(`${err}\n\n`),
@@ -85,11 +94,15 @@ async function renderTemplate(
 		return;
 	}
 
-	const content = await readFile(templateFile, { encoding: "utf-8" });
+	const template = await readFile(templateFile, { encoding: "utf-8" });
+
+	const navTemplate = await readFile(join(__dirname, "templates", "sidenav.njk"), { encoding: "utf-8" });
+	const nav = env.renderString(navTemplate, templateVariables);
 
 	// Generate an HTML summary of the component's compiled assets with links to the HTML diffs of each file
-	const html = env.renderString(content, {
+	const html = env.renderString(template, {
 		allComponents,
+		nav,
 		...templateVariables,
 	});
 
@@ -98,30 +111,46 @@ async function renderTemplate(
 	return writeFile(outputPath, html, { encoding: "utf-8" });
 }
 
-async function generateDiff(
-	filepath,
+async function generateDiff({
+	filepaths,
 	outputPath,
-	localContent,
-	remoteContent,
-	renderData
-) {
-	// @todo, this data seems more useful than the html output but we can't render it visually 🤔
-	// const diff = Diff.diffCss(localContent, remoteContent);
-	const patch = Diff.createPatch(filepath, localContent, remoteContent);
-	const html = Diff2Html.html(Diff2Html.parse(patch), {
+	fileMap,
+	...renderData
+}) {
+	const patches = [];
+	filepaths.forEach(file => {
+		const data = fileMap.get(file);
+		const { local, npm } = data;
+		if (!npm?.content || !local?.content) return;
+
+		const patch = Diff.createPatch(file, npm.content, local.content);
+		const css = Diff.diffCss(npm.content, local.content);
+		data.hasDiff = css.length > 1;
+
+		// Reflect if the component has a diff to the data
+		fileMap.set(file, data);
+
+		if (!patch) return;
+
+		patches.push(patch);
+	});
+
+	if (patches.length === 0) return Promise.resolve();
+
+	const html = Diff2Html.html(patches.map(patch => Diff2Html.parse(patch)).flat(), {
 		drawFileList: true,
 		matching: "lines",
 		outputFormat: "side-by-side",
+		renderNothingWhenEmpty: true,
 	});
 
 	return renderTemplate(
 		"diff-preview",
 		{
 			...renderData,
-			file: filepath,
 			html,
 		},
-		join(outputPath, `${basename(filepath, ".css")}.html`)
+		join(outputPath, `index.html`)
 	);
 }
 
@@ -134,6 +163,12 @@ async function processComponent(
 	}
 ) {
 	if (!component) return Promise.reject("No component specified.");
+
+	// Build the component fresh
+	await builder({
+		componentName: component,
+		clean: true,
+	});
 
 	cleanAndMkdir(join(output, "diffs", component));
 	cleanAndMkdir(join(pathing.latest, component));
@@ -165,13 +200,13 @@ async function processComponent(
 	} else {
 		warnings.push(
 			`${
-				`${relative(pathing.root, join(cwd, component))}`.brightYellow
+				`${relative(pathing.root, join(cwd, component))}`.yellow
 			} not found locally.\n`
 		);
 	}
 
 	if (pkg && pkg.name) {
-		const printPkgName = pkg.name.brightYellow;
+		const printPkgName = pkg.name.yellow;
 
 		// Check if the component exists on npm; do not fail if it isn't found -
 		//   report it and output only the sizes of the local compiled assets
@@ -300,7 +335,7 @@ async function processFile(filename, localPath, comparePath) {
 		};
 
 		if (stats.size > 0 && data.local && data.local.size > 0) {
-			data.link = `diffs/${componentName}/${basename(filename, ".css")}.html`;
+			data.hasDiff = true;
 		}
 	}
 
@@ -318,6 +353,10 @@ async function main(
 	if (!components || components.length === 0) {
 		components = allComponents;
 	}
+
+
+	// Strip out utilities
+	components = components.filter(c => !["actionmenu", "commons"].includes(c));
 
 	pathing.output = output;
 	pathing.cache = join(output, "packages");
@@ -371,8 +410,8 @@ async function main(
 	}
 
 	const componentData = new Map();
-	const promises = [];
 
+	let hasAnyChange = false;
 	for (const {
 		component,
 		warnings = [],
@@ -386,7 +425,7 @@ async function main(
 		if (!files || files.length === 0) {
 			log.error(
 				`No compiled assets found associated with ${
-					`@spectrum-css/${component}`.brightYellow
+					`@spectrum-css/${component}`.yellow
 				}.`
 			);
 			continue;
@@ -411,50 +450,53 @@ async function main(
 		}, 30);
 
 		// Write a table of the file sizes to the console for easy comparison
-		log.writeTable(["Filename", "Size", "Size (release)"], { min: 15, max: maxColumnWidth + 5});
+		log.writeTable(["Filename", "Local", `Tag v${tag}`], { min: 15, max: maxColumnWidth + 5});
 
 		files.forEach(async (file) => {
-			let hasFileChange = false;
 			const { local, npm } = fileMap.get(file);
+
+			const indicatorColor = (localSize, tagSize = 0) => {
+				if (localSize < tagSize) return 'green';
+				if (localSize > tagSize) return 'red';
+				else return 'gray';
+			};
+
+			const localSize = local?.size && `${bytesToSize(local.size)}`[indicatorColor(local.size, npm?.size)];
+			const tagSize = npm?.size && `${bytesToSize(npm.size)}`.gray;
 
 			log.writeTable([
 				`${file}`.green,
-				local?.size ? `${bytesToSize(local.size)}`.gray : `** removed **`.red,
-				npm?.size ? `${bytesToSize(npm.size)}`.gray : `** new **`.yellow,
-			], { min: 25, max: maxColumnWidth + 15});
+				localSize ?? `** removed **`.red,
+				tagSize ?? `** new **`.yellow,
+			], { min: 25, max: maxColumnWidth + 15 });
 
 			if (local?.size && npm?.size && local.size !== npm.size) {
-				hasFileChange = true;
 				hasComponentChange = true;
 			}
-
-			if (local && local.content && npm && npm.content && hasFileChange) {
-				promises.push(
-					generateDiff(
-						file,
-						join(output, "diffs", component),
-						local.content,
-						npm.content,
-						{
-							component,
-							tag,
-						}
-					).then(() => hasComponentChange)
-				);
-			}
 		});
+
+		if (hasComponentChange) hasAnyChange = true;
 	}
-
-	const hasAnyChange = await Promise.all(promises)
-		.then((hasChange) => hasChange.some((change) => change))
-		.catch((err) => {
-			log.error(err);
-		});
 
 	if (!hasAnyChange) {
 		log.write(`\n${"✓".green}  No changes detected.\n`);
 		return Promise.resolve();
 	}
+
+	await Promise.all(
+		[...componentData.entries()]
+			.map(async ([component, { tag, files, }], _, data) => {
+				return generateDiff({
+					filepaths: [...files.keys()],
+					outputPath: join(pathing.output, "diffs", component),
+					fileMap: files,
+					data,
+					component,
+					tag
+				})
+					.then(() => true);
+			})
+	);
 
 	// This is writing a summary of all the components that were compared
 	// to make reviewing the diffs easier to navigate
@@ -462,9 +504,7 @@ async function main(
 		"compare-listing",
 		{
 			title: "Compiled asset comparison",
-			components: [...componentData.keys()],
-			data: componentData.entries(),
-			root: pathing.root,
+			data: [...componentData.entries()],
 		},
 		join(output, "index.html")
 	)
@@ -480,6 +520,7 @@ let {
 	_: components,
 	output = join(pathing.root, ".diff-output"),
 	cache = true,
+	// @todo allow to run against local main or published versions
 } = yargs(hideBin(process.argv)).argv;
 
 main(components, output, { skipCache: !cache }).then((code) => {

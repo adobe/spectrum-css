@@ -9,7 +9,6 @@ import { Template as Textfield } from "@spectrum-css/textfield/stories/template.
 
 import "../index.css";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-Pagination",
 	size = "m",
@@ -49,7 +48,8 @@ export const Template = ({
 				})}
 			</nav>
 		`;
-	} else if (variant == "button") {
+	}
+	else if (variant == "button") {
 		return SplitButton({
 			position: "left",
 			variant: "accent",
@@ -87,7 +87,8 @@ export const Template = ({
 							size,
 							isQuiet: true,
 						});
-					} else return item;
+					}
+ else return item;
 				}
 			)}
 			${Button({

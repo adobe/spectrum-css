@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+const path = require("path");
+
 module.exports = (ctx) => {
 	const {
 		combineSelectors = true,
@@ -44,7 +46,7 @@ module.exports = (ctx) => {
 			require("postcss-discard-empty")(),
 			/* Ensure the license is at the top of the file */
 			require("postcss-licensing")({
-				filename: "../../COPYRIGHT",
+				filename: path.dirname(__dirname, "../COPYRIGHT"),
 				skipIfEmpty: true,
 			}),
 		],

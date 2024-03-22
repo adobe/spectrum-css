@@ -1,4 +1,4 @@
-import { userEvent, within } from '@storybook/testing-library';
+import { userEvent, within } from "@storybook/testing-library";
 import { html } from "lit";
 
 // Import the component markup template
@@ -34,7 +34,7 @@ export default {
 				category: "Component",
 			},
 			control: { type: "boolean" },
-			if: { arg: 'nested', truthy: false },
+			if: { arg: "nested", truthy: false },
 		},
 		position: {
 			name: "Positioning",
@@ -58,7 +58,7 @@ export default {
 				"right-top",
 				"right-bottom",
 			],
-			if: { arg: 'nested', truthy: false },
+			if: { arg: "nested", truthy: false },
 		},
 	},
 	args: {
@@ -68,14 +68,12 @@ export default {
 		position: "top",
 	},
 	parameters: {
-		layout: 'centered',
+		layout: "centered",
 		actions: {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("popover")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 		chromatic: { delay: 2000 },
 	},
@@ -86,15 +84,15 @@ export const Default = Template.bind({});
 Default.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
 Default.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
-  await userEvent.click(canvas.getByRole('button'));
+	await userEvent.click(canvas.getByRole("button"));
 };
 Default.args = {
-	testId: 'popover-1',
-	id: 'popover-1',
-	triggerId: 'trigger',
+	testId: "popover-1",
+	id: "popover-1",
+	triggerId: "trigger",
 	trigger: (passthroughs) => ActionButton({
 		label: "Hop on pop(over)",
-		id: 'trigger',
+		id: "trigger",
 		...passthroughs,
 	}),
 	content: [
@@ -124,12 +122,12 @@ Default.args = {
 export const WithTip = Template.bind({});
 WithTip.args = {
 	withTip: true,
-	id: 'popover-1',
-	triggerId: 'trigger',
-	testId: 'popover-1',
+	id: "popover-1",
+	triggerId: "trigger",
+	testId: "popover-1",
 	trigger: (passthroughs) => ActionButton({
 		label: "Hop on pop(over)",
-		id: 'trigger',
+		id: "trigger",
 		...passthroughs,
 	}),
 	content: [
@@ -160,22 +158,22 @@ WithTip.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outer
 
 WithTip.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
-  await userEvent.click(canvas.getByRole('button'));
+	await userEvent.click(canvas.getByRole("button"));
 };
 
 export const Nested = Template.bind({});
 Nested.args = {
 	nested: true,
-	testId: 'popover-nested',
-	id: 'popover-nested',
-	triggerId: 'trigger-nested',
+	testId: "popover-nested",
+	id: "popover-nested",
+	triggerId: "trigger-nested",
 	isOpen: true,
 	customStyles: {
 		"margin-inline-start": "8px",
 	},
 	trigger: (passthroughs) => ActionButton({
 		label: "Hop on pop(over)",
-		id: 'trigger-nested',
+		id: "trigger-nested",
 		...passthroughs,
 	}),
 	content: [
@@ -189,8 +187,8 @@ Nested.args = {
 		}),
 		() => Nested({
 			position: "right",
-			testId: 'popover-nested-2',
-			id: 'popover-nested-2',
+			testId: "popover-nested-2",
+			id: "popover-nested-2",
 			triggerId: "trigger-nested-2",
 			isOpen: true,
 			customStyles: {
@@ -232,6 +230,6 @@ Nested.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerH
 
 Nested.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
-  await userEvent.click(canvas.getAllByRole('button')[0]);
-	await userEvent.click(canvas.getAllByRole('button')[1]);
+	await userEvent.click(canvas.getAllByRole("button")[0]);
+	await userEvent.click(canvas.getAllByRole("button")[1]);
 };

@@ -103,12 +103,12 @@ export default {
 			},
 		},
 		layout: {
-		    name: "Layout",
-		    description: "How the buttons align in the preview (Storybook only).",
-		    type: { name: "string" },
+			name: "Layout",
+			description: "How the buttons align in the preview (Storybook only).",
+			type: { name: "string" },
 			table: {
-			    type: { summary: "string" },
-			    category: "Advanced"
+				type: { summary: "string" },
+				category: "Advanced"
 			},
 			options: ["stacked","inline"],
 			control: "radio"
@@ -130,9 +130,7 @@ export default {
 			handles: ["click .spectrum-Button"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("button")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -143,8 +141,8 @@ export default {
  */
 const ButtonWrap = (layout, content) => {
 	const buttonWrapStyles = {
-		'margin-block': '15px',
-		'max-width': '480px',
+		"margin-block": "15px",
+		"max-width": "480px",
 	};
 	return layout === "stacked" ? html`<div style=${styleMap(buttonWrapStyles)}>${content}</div>` : content;
 };
@@ -200,7 +198,7 @@ const CustomButton = ({
 const PendingButton = ({
 	staticColor,
 	customStyles = {},
-	layout,
+	// layout,
 	...args
 }) => html`
 	${when(!window.isChromatic(), () =>
@@ -225,7 +223,7 @@ const PendingButton = ({
 			${CustomButton({
 				...args,
 			})}
-			${ButtonWrap(layout = "stacked", Template({
+			${ButtonWrap("stacked", Template({
 				...args,
 				staticColor,
 				label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
@@ -237,7 +235,7 @@ const PendingButton = ({
 						isPending: true,
 					})}
 
-					${ButtonWrap(layout = "stacked", Template({
+					${ButtonWrap("stacked", Template({
 						...args,
 						label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 						isPending: true,
@@ -262,7 +260,7 @@ const PendingButton = ({
 					...customStyles
 				}))}
 			>
-				${ButtonWrap(layout = "stacked", Template({
+				${ButtonWrap("stacked", Template({
 					...args,
 					staticColor: "white",
 					label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
@@ -282,7 +280,7 @@ const PendingButton = ({
 							...customStyles
 						}))}
 					>
-						${ButtonWrap(layout = "stacked", Template({
+						${ButtonWrap("stacked", Template({
 							...args,
 							staticColor: "white",
 							label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
@@ -296,7 +294,7 @@ const PendingButton = ({
 `;
 
 const ButtonsWithForcedColors = ({
-	customStyles = {},
+	// customStyles = {},
 	...args
 }) => html`
 	<div style=${styleMap({
@@ -405,7 +403,7 @@ Pending.args = {
 
 export const WithForcedColors = ButtonsWithForcedColors.bind({});
 WithForcedColors.parameters = {
-  chromatic: { forcedColors: "active" },
+	chromatic: { forcedColors: "active" },
 };
 WithForcedColors.args = {
 	iconName: "Actions",

@@ -53,25 +53,23 @@ export default {
 			},
 			control: "boolean",
 		},
-  },
-  args: {
-    rootClass: "spectrum-Swatch",
-    size: "m",
-    isSelected: false,
-    isDisabled: false,
-    rounding: "regular",
-    swatchColor: "rgb(174, 216, 230)"
-  },
-  parameters: {
-    actions: {
-      handles: [],
-    },
-    status: {
-      type: process.env.MIGRATED_PACKAGES.includes("swatch")
-        ? "migrated"
-        : "legacy",
-    },
-  },
+	},
+	args: {
+		rootClass: "spectrum-Swatch",
+		size: "m",
+		isSelected: false,
+		isDisabled: false,
+		rounding: "regular",
+		swatchColor: "rgb(174, 216, 230)"
+	},
+	parameters: {
+		actions: {
+			handles: [],
+		},
+		status: {
+			type: "migrated",
+		},
+	},
 };
 
 export const Default = Template.bind({});

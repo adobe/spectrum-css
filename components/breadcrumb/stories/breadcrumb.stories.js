@@ -18,15 +18,15 @@ export default {
 			options: ["compact", "multiline"],
 			control: "inline-radio",
 		},
-    isDragged: {
-      name: "Dragged",
-      type: { name: "boolean" },
-      table: {
-        type: { summary: "boolean" },
-        category: "State",
-      },
-      control: "boolean"
-    },
+		isDragged: {
+			name: "Dragged",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean"
+		},
 	},
 	args: {
 		rootClass: "spectrum-Breadcrumbs",
@@ -37,9 +37,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("breadcrumb")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

@@ -65,9 +65,7 @@ export default {
 	},
 	parameters: {
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("avatar")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

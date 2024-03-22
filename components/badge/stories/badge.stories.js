@@ -73,15 +73,13 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("badge")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
 
 const BadgeGroup = ({
-	customStyles = {},
+	// customStyles = {},
 	...args
 }) => {
 	return html`

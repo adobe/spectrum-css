@@ -98,6 +98,31 @@ jobs:
                     ui-icons/dist/**
                   token: ${{ secrets.GITHUB_TOKEN }}
 
+            - name: Generate rich diff if changes detected
+              id: rich-diff
+              if: ${{ steps.compare.outputs.has-changed }}
+              shell: bash
+              run: yarn compare
+
+            - name: Upload changes
+              if: ${{ steps.compare.outputs.has-changed }}
+              uses: actions/upload-artifact@v4
+              with:
+                name: rich-diff
+                path: |
+                  .diff-output/index.html
+                  .diff-output/diffs/*/*.html
+                  components/typography/dist/index.css
+                  components/table/dist/index.css
+                  components/badge/dist/index.css
+                  components/button/dist/index.css
+                  components/card/dist/index.css
+                  components/icon/dist/index.css
+                  components/sidenav/dist/index.css
+                  tokens/dist/index.css
+                  node_modules/diff2html/bundles/css/diff2html.min.css
+                  node_modules/diff2html/bundles/js/diff2html.min.js
+
     fetch-build-artifacts:
         name: Fetch & validate build artifacts
         strategy:
@@ -172,7 +197,7 @@ jobs:
             - name: Build
               if: ${{ steps.download.outcome != 'success' }}
               shell: bash
-              run: yarn build
+              run: yarn ci
 
             - name: Upload compiled assets
               if: ${{ steps.download.outcome != 'success' }}
