@@ -192,9 +192,25 @@ A very special thank you to all of our [contributors](<https://github.com/adobe/
 
 Want to join the team? Check out the [contributing guidelines](.github/CONTRIBUTING.md) for quick start information.
 
+### Requirements
+
+This project uses **Node** and modern **yarn**. You must enable [corepack](https://yarnpkg.com/corepack) to use modern yarn. This only needs to be done once; to check if you've already enabled corepack:
+
+```sh
+yarn exec env
+```
+
+if you get a path as output, Corepack is properly installed. Otherwise, try:
+
+```shell
+corepack enable
+```
+
+Read more about [installing yarn](https://yarnpkg.com/getting-started/install);
+
 ### Getting started
 
-To get started with Spectrum CSS, you'll start by cloning the repository:
+To get started with Spectrum CSS, clone the repository:
 
 ```shell
 git clone https://github.com/adobe/spectrum-css.git

@@ -92,6 +92,9 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: yarn
 
+            - name: Enable Corepack
+              run: corepack enable
+
             - name: Derive appropriate SHAs for base and head for `nx affected` commands
               id: set-SHAs
               uses: nrwl/nx-set-shas@v3
@@ -111,7 +114,7 @@ jobs:
             # If statement isn't needed here b/c yarn will leverage the cache if it exists
             - name: Install dependencies
               shell: bash
-              run: yarn install --frozen-lockfile --cache-folder .cache/yarn
+              run: yarn install --immutable
 
             - name: Reset nx cache to prevent cross-machine errors
               shell: bash

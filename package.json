@@ -133,5 +133,6 @@
     "components/*/metadata/*.{yml,yaml}": [
       "pajv test --valid -s ./schemas/documentation.schema.json -d "
     ]
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }

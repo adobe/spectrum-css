@@ -56,6 +56,9 @@ jobs:
                   node-version: 18
                   cache: yarn
 
+            - name: Enable Corepack
+              run: corepack enable
+
             ## --- YARN CACHE --- ##
             - name: Check for cached dependencies
               continue-on-error: true
@@ -71,7 +74,7 @@ jobs:
             # If statement isn't needed here b/c yarn will leverage the cache if it exists
             - name: Install dependencies
               shell: bash
-              run: yarn install --frozen-lockfile --cache-folder .cache/yarn
+              run: yarn install --immutable
 
             - name: Lint component styles
               if: ${{ inputs.styles_added_files != '' || inputs.styles_modified_files != '' }}
