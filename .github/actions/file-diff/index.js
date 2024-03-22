@@ -211,7 +211,6 @@ async function run() {
 			"",
 			"<small>",
 			"* <em>Size determined by adding together the size of the main file for all packages in the library.</em><br/>",
-			"* <em>Results are not gzipped or minified.</em><br/>",
 			"* <em>An ASCII character in UTF-8 is 8 bits or 1 byte.</em>",
 			"</small>"
 		);

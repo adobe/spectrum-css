@@ -443,7 +443,7 @@ async function build_forPackage(dirName, globalData = {}) {
 
 	return Promise.all([
 		buildPages_forPackage(dirName, globalData),
-		copy_Assets(["*.css", "themes/*.css", "*.gz", "*.json"], {
+		copy_Assets(["*.css", "themes/*.css", "*.json"], {
 			cwd: path.join(dirName, "dist"),
 			outputDir: path.join("components", componentName),
 			allowEmpty: true,
