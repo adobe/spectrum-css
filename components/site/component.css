@@ -301,10 +301,7 @@ a[href*="spectrum.adobe.com"]
 
 /* CSS Example */
 .spectrum-CSSExample-example {
-    background-color: var(
-        --spectrum-background-base-color,
-        var(--spectrum-gray-50)
-    );
+    background-color: var(--spectrum-background-base-color, var(--spectrum-gray-50));
 }
 
 .spectrum-CSSExample-markup {

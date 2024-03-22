@@ -28,12 +28,8 @@ governing permissions and limitations under the License.
   --spectrum-colorhandle-border-width: var(--spectrum-color-handle-border-width);
   --spectrum-colorhandle-border-color: var(--spectrum-white);
 
-	--spectrum-colorhandle-border-color-disabled: var(
-		--spectrum-disabled-content-color
-	);
-	--spectrum-colorhandle-fill-color-disabled: var(
-		--spectrum-disabled-background-color
-	);
+	--spectrum-colorhandle-border-color-disabled: var(--spectrum-disabled-content-color);
+	--spectrum-colorhandle-fill-color-disabled: var(--spectrum-disabled-background-color);
 	--mod-opacity-checkerboard-position: 50%;
 }
 

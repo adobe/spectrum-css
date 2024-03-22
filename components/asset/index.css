@@ -40,29 +40,20 @@ governing permissions and limitations under the License.
 .spectrum-Asset-folderBackground {
   fill: var(
     --highcontrast-asset-folder-background-color,
-    var(
-      --mod-asset-folder-background-color,
-      var(--spectrum-gray-300)
-    )
+    var(--mod-asset-folder-background-color, var(--spectrum-gray-300))
   );
 }
 
 .spectrum-Asset-fileBackground {
   fill: var(
     --highcontrast-asset-file-background-color,
-    var(
-      --mod-asset-file-background-color,
-      var(--spectrum-gray-50)
-    )
+    var(--mod-asset-file-background-color, var(--spectrum-gray-50))
   );
 }
 
 .spectrum-Asset-folderOutline,
 .spectrum-Asset-fileOutline {
-  fill: var(
-    --mod-asset-icon-outline-color,
-    var(--spectrum-gray-500)
-  );
+  fill: var(--mod-asset-icon-outline-color, var(--spectrum-gray-500));
 }
 
 @media (forced-colors: active) {

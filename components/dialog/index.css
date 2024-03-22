@@ -82,9 +82,7 @@ governing permissions and limitations under the License.
   grid-template-columns:
     var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto 1fr auto minmax(0,  auto)
     var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
-  grid-template-rows: auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto 1fr auto var(
-      --mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)
-    );
+  grid-template-rows: auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto 1fr auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
   grid-template-areas:
     "hero hero    hero    hero        hero        hero"
     ".    .       .       .           .           ."
@@ -211,9 +209,7 @@ governing permissions and limitations under the License.
   grid-template-columns:
     var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto 1fr auto minmax(0,  auto)
     minmax(0,  var(--mod-dialog-confirm-close-button-size, var(--spectrum-dialog-confirm-close-button-size))) var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
-  grid-template-rows: auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto 1fr auto var(
-      --mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)
-    );
+  grid-template-rows: auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto 1fr auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
   grid-template-areas:
     "hero hero    hero    hero        hero        hero        hero"
     ".    .       .       .           .           closeButton closeButton"
@@ -260,12 +256,8 @@ governing permissions and limitations under the License.
 
   &.spectrum-Dialog .spectrum-Dialog-grid {
     display: grid;
-    grid-template-columns: var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) 1fr auto auto var(
-        --mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)
-      );
-    grid-template-rows: var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto 1fr var(
-        --mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)
-      );
+    grid-template-columns: var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) 1fr auto auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
+    grid-template-rows: var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto 1fr var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
     grid-template-areas:
       ".    .       .       .            ."
       ".    heading header  buttonGroup  ."
@@ -304,9 +296,7 @@ governing permissions and limitations under the License.
     grid-template-columns:
       var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto 1fr auto minmax(0,  auto)
       var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
-    grid-template-rows: auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto auto 1fr auto var(
-        --mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)
-      );
+    grid-template-rows: auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto auto 1fr auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
     grid-template-areas:
       "hero hero    hero    hero        hero        hero"
       ".    .       .       .           .           ."
@@ -322,9 +312,7 @@ governing permissions and limitations under the License.
     grid-template-columns:
       var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto 1fr auto minmax(0,  auto)
       minmax(0,  var(--mod-dialog-confirm-close-button-size, var(--spectrum-dialog-confirm-close-button-size))) var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
-    grid-template-rows: auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto auto 1fr auto var(
-        --mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)
-      );
+    grid-template-rows: auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto auto 1fr auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
     grid-template-areas:
       "hero hero    hero    hero        hero        hero        hero"
       ".    .       .       .           .           closeButton closeButton"
@@ -344,12 +332,8 @@ governing permissions and limitations under the License.
   .spectrum-Dialog--fullscreenTakeover {
     &.spectrum-Dialog .spectrum-Dialog-grid {
       display: grid;
-      grid-template-columns: var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) 1fr var(
-          --mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)
-        );
-      grid-template-rows: var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto auto 1fr auto var(
-          --mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)
-        );
+      grid-template-columns: var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) 1fr var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
+      grid-template-rows: var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid)) auto auto auto 1fr auto var(--mod-dialog-confirm-padding-grid, var(--spectrum-dialog-confirm-padding-grid));
       grid-template-areas:
         ".    .            ."
         ".    heading      ."
@@ -361,9 +345,7 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Dialog-buttonGroup {
-      padding-block-start: var(
-        --mod-dialog-confirm-buttongroup-padding-top, var(--spectrum-dialog-confirm-buttongroup-padding-top)
-      );
+      padding-block-start: var(--mod-dialog-confirm-buttongroup-padding-top, var(--spectrum-dialog-confirm-buttongroup-padding-top));
     }
 
     .spectrum-Dialog-heading {

@@ -111,22 +111,13 @@ governing permissions and limitations under the License.
   user-select: none;
 
 	.spectrum-Swatch-disabledIcon {
-		inline-size: var(
-			--mod-swatch-disabled-icon-size,
-			var(--spectrum-swatch-disabled-icon-size)
-		);
-		block-size: var(
-			--mod-swatch-disabled-icon-size,
-			var(--spectrum-swatch-disabled-icon-size)
-		);
+		inline-size: var(--mod-swatch-disabled-icon-size, var(--spectrum-swatch-disabled-icon-size));
+		block-size: var(--mod-swatch-disabled-icon-size, var(--spectrum-swatch-disabled-icon-size));
 	}
 
 	&,
 	&::before {
-		border-radius: var(
-			--mod-swatch-border-radius,
-			var(--spectrum-swatch-border-radius)
-		);
+		border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
 	}
 
   &.is-selected {
@@ -185,20 +176,14 @@ governing permissions and limitations under the License.
       background-image: none;
 
 			&::after {
-				inline-size: var(
-					--mod-swatch-slash-thickness,
-					var(--spectrum-swatch-slash-thickness)
-				);
+				inline-size: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness));
 				content: "";
 				position: absolute;
 				transform: rotate(-45deg);
 				block-size: 200%; /* just needs to be bigger than a swatch */
 				background: var(
 					--highcontrast-swatch-fill-foreground-color,
-					var(
-						--mod-swatch-slash-icon-color,
-						var(--spectrum-swatch-slash-icon-color)
-					)
+					var(--mod-swatch-slash-icon-color, var(--spectrum-swatch-slash-icon-color))
 				);
 			}
 		}

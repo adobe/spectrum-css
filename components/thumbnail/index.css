@@ -20,13 +20,9 @@ governing permissions and limitations under the License.
 		var(--spectrum-gray-800-rgb),
 		var(--spectrum-thumbnail-border-color-opacity)
 	);
-	--spectrum-thumbnail-layer-border-width-inner: var(
-		--spectrum-border-width-400
-	);
+	--spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
 	--spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
-	--spectrum-thumbnail-layer-border-width-outer: var(
-		--spectrum-border-width-100
-	);
+	--spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
 	--spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
 
   --spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
@@ -36,9 +32,7 @@ governing permissions and limitations under the License.
   --spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-	--spectrum-thumbnail-color-opacity-disabled: var(
-		--spectrum-thumbnail-opacity-disabled
-	);
+	--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
 }
 
 .spectrum-Thumbnail--size50 {
@@ -98,10 +92,7 @@ governing permissions and limitations under the License.
   inline-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
   block-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
 
-	border-radius: var(
-		--mod-thumbnail-border-radius,
-		var(--spectrum-thumbnail-border-radius)
-	);
+	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 
   &::before {
     content: '';
@@ -114,10 +105,7 @@ governing permissions and limitations under the License.
   }
 
 	&.is-disabled {
-		opacity: var(
-			--mod-thumbnail-color-opacity-disabled,
-			var(--spectrum-thumbnail-color-opacity-disabled)
-		);
+		opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
 	}
 	/* stylelint-disable selector-pseudo-class-no-unknown */
 	&.is-focused {
@@ -125,77 +113,41 @@ governing permissions and limitations under the License.
 		&::after {
 			content: "";
 			border-style: solid;
-			border-width: var(
-				--mod-thumbnail-focus-indicator-thickness,
-				var(--spectrum-thumbnail-focus-indicator-thickness)
-			);
+			border-width: var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness));
 			border-color: var(
 				--highcontrast-thumbnail-focus-indicator-color,
-				var(
-					--mod-thumbnail-focus-indicator-color,
-					var(--spectrum-thumbnail-focus-indicator-color)
-				)
+				var(--mod-thumbnail-focus-indicator-color, var(--spectrum-thumbnail-focus-indicator-color))
 			);
-			border-radius: var(
-				--mod-thumbnail-border-radius,
-				var(--spectrum-thumbnail-border-radius)
-			);
+			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 			position: absolute;
 			inset-inline-start: calc(
 				(
-						var(
-								--mod-thumbnail-focus-indicator-gap,
-								var(--spectrum-thumbnail-focus-indicator-gap)
-							) +
-							var(
-								--mod-thumbnail-focus-indicator-thickness,
-								var(--spectrum-thumbnail-focus-indicator-thickness)
-							)
+						var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) +
+							var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))
 					) * -1
 			);
 			inset-inline-end: calc(
 				(
-						var(
-								--mod-thumbnail-focus-indicator-gap,
-								var(--spectrum-thumbnail-focus-indicator-gap)
-							) +
-							var(
-								--mod-thumbnail-focus-indicator-thickness,
-								var(--spectrum-thumbnail-focus-indicator-thickness)
-							)
+						var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) +
+							var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))
 					) * -1
 			);
 			inset-block-end: calc(
 				(
-						var(
-								--mod-thumbnail-focus-indicator-gap,
-								var(--spectrum-thumbnail-focus-indicator-gap)
-							) +
-							var(
-								--mod-thumbnail-focus-indicator-thickness,
-								var(--spectrum-thumbnail-focus-indicator-thickness)
-							)
+						var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) +
+							var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))
 					) * -1
 			);
 			inset-block-start: calc(
 				(
-						var(
-								--mod-thumbnail-focus-indicator-gap,
-								var(--spectrum-thumbnail-focus-indicator-gap)
-							) +
-							var(
-								--mod-thumbnail-focus-indicator-thickness,
-								var(--spectrum-thumbnail-focus-indicator-thickness)
-							)
+						var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) +
+							var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))
 					) * -1
 			);
 		}
 		.spectrum-Thumbnail-image-wrapper {
 			overflow: hidden;
-			border-radius: var(
-				--mod-thumbnail-border-radius,
-				var(--spectrum-thumbnail-border-radius)
-			);
+			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 		}
 	}
 	/* stylelint-enable selector-pseudo-class-no-unknown */
@@ -208,16 +160,10 @@ governing permissions and limitations under the License.
 
 .spectrum-Thumbnail-layer {
 	border-style: solid;
-	border-width: var(
-		--mod-thumbnail-layer-border-width-outer,
-		var(--spectrum-thumbnail-layer-border-width-outer)
-	);
+	border-width: var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer));
 	border-color: var(
 		--highcontrast-thumbnail-layer-border-color-outer,
-		var(
-			--mod-thumbnail-layer-border-color-outer,
-			var(--spectrum-thumbnail-layer-border-color-outer)
-		)
+		var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-thumbnail-layer-border-color-outer))
 	);
   box-sizing: border-box;
 
@@ -234,24 +180,12 @@ governing permissions and limitations under the License.
 		outline-style: solid;
 		outline-color: var(
 			--highcontrast-thumbnail-border-color-selected,
-			var(
-				--mod-thumbnail-border-color-selected,
-				var(--spectrum-thumbnail-border-color-selected)
-			)
+			var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected))
 		);
-		outline-width: var(
-			--mod-thumbnail-border-width-selected,
-			var(--spectrum-thumbnail-border-width-selected)
-		);
+		outline-width: var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected));
 		outline-offset: calc(
-			var(
-					--mod-thumbnail-border-width-selected,
-					var(--spectrum-thumbnail-border-width-selected)
-				) -
-				var(
-					--mod-thumbnail-layer-border-width-inner,
-					var(--spectrum-thumbnail-layer-border-width-inner)
-				)
+			var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected)) -
+				var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner))
 		);
 	}
 }
@@ -265,10 +199,7 @@ governing permissions and limitations under the License.
 		var(--spectrum-thumbnail-size) -
 			(
 				(
-					var(
-						--mod-thumbnail-layer-border-width-inner,
-						var(--spectrum-thumbnail-layer-border-width-inner)
-					)
+					var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner))
 				)
 			) * 2
 	);
@@ -276,30 +207,18 @@ governing permissions and limitations under the License.
 		var(--spectrum-thumbnail-size) -
 			(
 				(
-					var(
-						--mod-thumbnail-layer-border-width-inner,
-						var(--spectrum-thumbnail-layer-border-width-inner)
-					)
+					var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner))
 				)
 			) * 2
 	);
 	outline-style: solid;
 	outline-color: var(
 		--highcontrast-thumbnail-layer-border-color-inner,
-		var(
-			--mod-thumbnail-layer-border-color-inner,
-			var(--spectrum-thumbnail-layer-border-color-inner)
-		)
+		var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner))
 	);
 	outline-width: calc(
-		var(
-				--mod-thumbnail-layer-border-width-inner,
-				var(--spectrum-thumbnail-layer-border-width-inner)
-			) -
-			var(
-				--mod-thumbnail-layer-border-width-outer,
-				var(--spectrum-thumbnail-layer-border-width-outer)
-			)
+		var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) -
+			var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer))
 	);
 }
 /* stylelint-enable declaration-block-no-redundant-longhand-properties */
