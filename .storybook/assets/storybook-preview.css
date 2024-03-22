@@ -1,0 +1,124 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* Hide the SVG elements that only include references */
+svg:has(symbol):not(:has(use)) {
+	display: none;
+}
+
+:root,
+.spectrum {
+	font-family: var(
+		--spectrum-sans-font-family-stack,
+		adobe-clean,
+		"Adobe Clean",
+		"Source Sans Pro",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Ubuntu,
+		"Trebuchet MS",
+		"Lucida Grande",
+		sans-serif
+	);
+	font-size: var(--spectrum-font-size-100, 16px);
+	font-weight: var(--spectrum-regular-font-weight, normal);
+	font-style: var(--spectrum-default-font-style, normal);
+	line-height: var(--spectrum-line-height-100, 1.3);
+	color: var(--spectrum-alias-text-color-default, var(--spectrum-gray-900));
+
+	background-color: var(
+		--spectrum-alias-background-color-default,
+		var(--spectrum-gray-100)
+	);
+
+	-webkit-tap-highlight-color: rgba(0 0 0 / 0%);
+}
+
+/* Show/hide button */
+.docblock-code-toggle {
+	margin-block-end: -1px;
+	margin-inline-end: -1px;
+
+	&.docblock-code-toggle--expanded {
+		border-block-end: 1px solid hsla(203deg, 50%, 30%, 15%);
+	}
+}
+
+/* Contains the rendered code example */
+.docs-story {
+	position: initial;
+	overflow: auto;
+
+	& > div:first-child {
+		margin: 0;
+	}
+}
+
+.sbdocs.sbdocs-preview {
+	&,
+	& > div:last-child {
+		box-shadow: none !important;
+	}
+
+	/* Code snippet */
+	& > div:last-child:not(.docs-story) {
+		background-color: rgba(255, 255, 255);
+		border-block-start: 1px solid hsla(203deg, 50%, 30%, 15%);
+
+		& > div:last-child {
+			background: transparent !important;
+
+			& button {
+				align-items: center;
+				color: #2e3438;
+				background: #fff;
+				border: 1px solid hsla(203deg, 50%, 30%, 15%);
+			}
+		}
+	}
+
+	& pre.prismjs {
+		padding: 10px;
+	}
+}
+
+.prismjs > * {
+	font-family: var(
+		--spectrum-code-font-family-stack,
+		"Source Code Pro",
+		"SF Mono",
+		"Menlo",
+		"Consolas",
+		"Courier New",
+		monospace
+	) !important;
+	font-size: var(--spectrum-code-size-s, 14px);
+	line-height: var(--spectrum-code-line-height, 1.5);
+	color: var(--spectrum-code-color, #000);
+
+	& .token.tag {
+		color: var(--spectrum-green-900) !important;
+	}
+
+	& .token.attr-name {
+		color: var(--spectrum-blue-900) !important;
+	}
+
+	& .token.attr-value {
+		color: var(--spectrum-purple-900) !important;
+	}
+
+	& .token.punctuation {
+		color: inherit !important;
+	}
+}
