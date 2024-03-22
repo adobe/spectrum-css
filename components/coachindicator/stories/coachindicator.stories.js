@@ -3,7 +3,7 @@ import { html } from "lit";
 import { Template } from "./template";
 
 export default {
-	title: "components/Coach indicator",
+	title: "Components/Coach indicator",
 	description:
 		"The coach indicator component can be used to bring added attention to specific parts of a page.",
 	component: "CoachIndicator",

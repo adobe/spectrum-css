@@ -8,49 +8,57 @@ export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { args, argTypes, viewMode } = context;
+		const { parameters, globals, globalTypes, viewMode } = context;
 
 		const getDefaultValue = (type) => {
-			if (!type) return null;
+			if (!type) return;
 			if (type.defaultValue) return type.defaultValue;
-			return type.options ? type.options[0] : null;
+			if (type.toolbar?.items?.length > 0 && type.toolbar.items[0]?.value) {
+				return type.toolbar.items[0]?.value;
+			}
+			return;
 		};
 
 		// This property informs which context stylesheets to source
 		//    but does not source a stylesheet for itself
 		/** @type boolean */
-		const isExpress = args.express
-			? args.express
-			: getDefaultValue(argTypes.express);
+		const isExpress = parameters.express ?? globals.express ?? getDefaultValue(globalTypes.express);
 		/** @type string */
-		const color = args.color ? args.color : getDefaultValue(argTypes.color) ?? "light";
+		const color = parameters.color ?? globals.color ?? getDefaultValue(globalTypes.color) ?? "light";
 		/** @type string */
-		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
-
-		const colors = ["light", "dark", "darkest"];
-		const scales = ["medium", "large"];
+		const scale = parameters.scale ?? globals.scale ?? getDefaultValue(globalTypes.scale) ?? "medium";
 
 		useEffect(() => {
-			const container = viewMode === "docs" && !window.isChromatic() ? document.querySelector('#root-inner') ?? document.body : document.body;
-			container.classList.toggle("spectrum", true);
+			const isDocs = viewMode === "docs";
 
-			container.classList.toggle("spectrum--express", isExpress);
-
-			for (const c of colors) {
-				container.classList.toggle(`spectrum--${c}`, c === color);
+			let containers = [document.body];
+			if (isDocs && !window.isChromatic()) {
+				containers = [...document.querySelectorAll(".docs-story")] ?? containers;
 			}
 
-			for (const s of scales) {
-				container.classList.toggle(`spectrum--${s}`, s === scale);
-			}
+			if (!containers) return;
 
-			if (args.staticColor === "black") {
-				container.style.backgroundColor = "rgb(181, 209, 211)";
-			} else if (args.staticColor === "white") {
-				 container.style.backgroundColor = "rgb(15, 121, 125)";
-			} else {
-				container.style.removeProperty("background-color");
-			}
+			containers.forEach(container => {
+				container.classList.toggle("spectrum", true);
+
+				container.classList.toggle("spectrum--express", isExpress);
+
+				for (const c of ["light", "dark", "darkest"]) {
+					container.classList.toggle(`spectrum--${c}`, c === color);
+				}
+
+				for (const s of ["medium", "large"]) {
+					container.classList.toggle(`spectrum--${s}`, s === scale);
+				}
+
+				if (args.staticColor === "black") {
+					container.style.backgroundColor = "rgb(181, 209, 211)";
+				} else if (args.staticColor === "white") {
+					container.style.backgroundColor = "rgb(15, 121, 125)";
+				} else {
+					container.style.removeProperty("background-color");
+				}
+			});
 		}, [color, scale, isExpress, args.staticColor]);
 
 		return StoryFn(context);

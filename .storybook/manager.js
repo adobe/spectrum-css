@@ -5,8 +5,8 @@ import logo from "./assets/logo.svg";
 import pkg from "./package.json";
 
 import "@spectrum-css/tokens";
-import "./assets/index.css";
 
+import "./assets/storybook-wrapper.css";
 import "./assets/typekit.js";
 
 document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
@@ -38,7 +38,7 @@ addons.setConfig({
 		// Toolbar default and active colors
 		barTextColor:
 			"rgb(34, 34, 34)" /* --spectrum-neutral-content-color-default */,
-		barSelectedColor: "rgb(2, 101, 220)" /* --spectrum-global-color-blue-900 */,
+		barSelectedColor: "rgb(2, 101, 220)" /* --spectrum-blue-900 */,
 		// barBg: 'rgb(248, 248, 248)', /* --spectrum-alias-background-color-default */
 
 		// Form colors
@@ -51,6 +51,7 @@ addons.setConfig({
 		showRoots: false,
 		filters: {
 			patterns: (item) => !item.id.includes('forced-colors'),
-		}
+		},
+		collapsedRoots: ["Deprecated"],
 	},
 });

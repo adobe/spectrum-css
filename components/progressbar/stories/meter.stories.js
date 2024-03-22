@@ -1,5 +1,5 @@
 // Import the component markup template
-import { Template } from "./metertemplate";
+import { Template } from "./meter.template.js";
 
 export default {
 	title: "Components/Meter",

@@ -1,0 +1,677 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* Hide the SVG elements that only include references */
+svg:has(symbol):not(:has(use)) {
+	display: none;
+}
+
+body {
+	margin: 0;
+
+	font-family: var(--spectrum-sans-font-family-stack);
+	font-size: var(--spectrum-font-size-100, 16px);
+	font-weight: var(--spectrum-regular-font-weight);
+	font-style: var(--spectrum-default-font-style);
+	line-height: var(--spectrum-line-height-100);
+	color: var(--spectrum-gray-900);
+
+	background-color: var(--spectrum-background-layer-1-color);
+
+	-webkit-tap-highlight-color: rgba(0 0 0 / 0%);
+}
+
+#root {
+	& > div:first-child {
+		color: var(--spectrum-gray-100);
+		background: linear-gradient(63deg, #6338EE 9.74%, #F34BE7 58.43%) !important;
+
+		& button svg {
+			fill: currentColor;
+		}
+	}
+}
+
+/* TODO */
+#storybook-docs {
+	color: var(--spectrum-gray-900, #000);
+	background-color: var(--spectrum-background-layer-1-color);
+	border-radius: 4px;
+}
+
+#storybook-preview-wrapper {
+	&,
+	& iframe {
+		background-color: unset;
+	}
+}
+
+nav .spectrum-Site-logo {
+	block-size: var(--spectrum-component-height-100, 32px);
+	margin-inline-end: var(--spectrum-global-dimension-size-200);
+	color: #fa0f00;
+
+	.spectrum--large & {
+		block-size: 40px;
+	}
+}
+
+div.search-field {
+	inline-size: 100%;
+	block-size: var(--spectrum-component-height-100, 32px);
+
+	& input#storybook-explorer-searchfield {
+		padding: 3px 12px 5px 35px !important;
+
+		font-family: var(
+			--spectrum-sans-font-family-stack,
+			adobe-clean,
+			"Adobe Clean",
+			"Source Sans Pro",
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			Roboto,
+			Ubuntu,
+			"Trebuchet MS",
+			"Lucida Grande",
+			sans-serif
+		);
+		font-size: var(--spectrum-font-size-100, 14px);
+		font-weight: var(--spectrum-regular-font-weight, normal);
+		font-style: var(--spectrum-default-font-style, normal);
+		line-height: 1;
+		color: var(
+			--spectrum-neutral-content-color-default,
+			var(--spectrum-gray-800, rgba(34, 34, 34))
+		);
+
+		background-color: var(--spectrum-gray-50, #fff);
+
+		&:focus {
+			border-color: rgb(2, 101, 220) !important;
+			box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+		}
+	}
+}
+
+[data-radix-scroll-area-viewport] {
+	overflow: hidden !important;
+
+	& > div {
+		/* Using display: table which leads to a lot of content overlow issues */
+		display: block !important;
+	}
+
+	& > div > div {
+		padding: var(--spectrum-spacing-100);
+	}
+}
+
+.sidebar-container > div {
+	--scrollbar-size: 0;
+}
+
+.sidebar-header button,
+button[data-action="expand-all"] {
+	/* TODO: @extend .spectrum-ActionButton; */
+
+	--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-200);
+	--spectrum-actionbutton-background-color-down: var(--spectrum-gray-300);
+	--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);
+
+	--spectrum-actionbutton-border-color-hover: transparent;
+	--spectrum-actionbutton-border-color-down: transparent;
+	--spectrum-actionbutton-border-color-focus: transparent;
+
+	cursor: pointer;
+	user-select: none;
+
+	position: relative;
+
+	/* Something in the UI was blocking interaction */
+	z-index: 10;
+
+	overflow: visible;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	box-sizing: border-box;
+
+	/* XS Action button sizing */
+	min-inline-size: calc((var(--spectrum-component-edge-to-visual-only-75) * 2) + var(--spectrum-workflow-icon-size-75));
+	block-size: var(--spectrum-component-height-75);
+	margin: 0;
+	padding-inline: calc(var(--spectrum-component-edge-to-text-75) - var(--spectrum-border-width-100));
+
+	font-family: var(--spectrum-sans-font-family-stack);
+	line-height: var(--spectrum-line-height-100);
+	color: var(--spectrum-neutral-content-color-default);
+	text-decoration: none;
+	text-transform: none;
+	vertical-align: top;
+
+	appearance: button;
+	background-color: var(--spectrum-actionbutton-background-color-default, transparent);
+	border: var(--spectrum-border-width-100) solid var(--spectrum-actionbutton-border-color-default, transparent);
+	border-style: solid;
+	border-radius: 4px;
+	border-radius: var(--spectrum-actionbutton-border-radius, var(--spectrum-corner-radius-100));
+
+	transition: background var(--spectrum-animation-duration-100) ease-out,
+		border-color var(--spectrum-animation-duration-100) ease-out,
+		color var(--spectrum-animation-duration-100) ease-out,
+		box-shadow var(--spectrum-animation-duration-100) ease-out;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&:hover {
+		--spectrum-actionbutton-background-color-default: var(--spectrum-actionbutton-background-color-hover);
+		--spectrum-actionbutton-border-color-default: var(--spectrum-actionbutton-border-color-hover);
+		--spectrum-neutral-content-color-default: var(--spectrum-neutral-content-color-hover);
+	}
+
+	&:focus-visible {
+		--spectrum-actionbutton-background-color-default: var(--spectrum-actionbutton-background-color-focus);
+		--spectrum-actionbutton-border-color-default: var(--spectrum-actionbutton-border-color-focus);
+		--spectrum-neutral-content-color-default: var(--spectrum-neutral-content-color-key-focus);
+	}
+
+	&:active {
+		--spectrum-actionbutton-background-color-default: var(--spectrum-actionbutton-background-color-down);
+		--spectrum-actionbutton-border-color-default: var(--spectrum-actionbutton-border-color-down);
+		--spectrum-neutral-content-color-default: var(--spectrum-neutral-content-color-down);
+	}
+
+	& svg {
+		flex-shrink: 0;
+
+		inline-size: var(--spectrum-workflow-icon-size-50);
+		block-size: var(--spectrum-workflow-icon-size-50);
+		max-block-size: 100%;
+
+		/* adjust icon positioning to match UI kit */
+		/* Augment the margin correction for the icon only scenario */
+		margin-inline: calc(
+			var(--spectrum-component-edge-to-visual-only-50) -
+			var(--spectrum-border-width-100) -
+			var(--spectrum-component-edge-to-text-50) -
+			var(--spectrum-border-width-100)
+		);
+
+		color: inherit;
+	}
+}
+
+/* Contains logo and settings menu */
+.sidebar-header {
+	justify-content: flex-start;
+
+	&:first-child {
+		margin-block-start: 0;
+	}
+
+	& a:has(img) {
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+	}
+
+	& > div img {
+		inline-size: 100%;
+		block-size: auto;
+	}
+
+	& button {
+		color: var(--spectrum-gray-100) !important;
+
+		/* State indicator circle */
+		&::before,
+		&::after {
+			inset-block-start: 2px;
+			inset-inline-end: 2px;
+			inline-size: 4px;
+			block-size: 4px;
+		}
+
+		& svg {
+			max-block-size: unset;
+		}
+	}
+}
+
+#storybook-explorer-menu {
+	overflow: hidden scroll;
+
+	max-block-size: calc(100vh - 106px);
+	padding-block: var(--spectrum-spacing-200);
+	padding-inline: var(--spectrum-spacing-100);
+
+	color: var(--spectrum-gray-900);
+
+	background-color: var(--spectrum-background-layer-1-color);
+	border-radius: 4px;
+
+	& > div > ol {
+		overflow: hidden scroll;
+
+		max-inline-size: 100%;
+		block-size: 100%;
+		margin-inline: 0;
+		padding-block-start: var(--spectrum-spacing-200);
+		padding-inline: var(--spectrum-spacing-100);
+
+		color: var(--spectrum-gray-900);
+
+		background-color: var(--spectrum-background-layer-1-color);
+		border-radius: 4px;
+
+		& > div {
+			margin-block-end: 0;
+		}
+
+		& > li {
+			min-block-size: var(--spectrum-component-height-100, 32px);
+			padding: 0;
+
+			&:not(:last-child) {
+				padding-block-end: var(--spectrum-component-edge-to-text-50, 8px);
+			}
+
+			& a,
+			& button {
+				padding: 0 !important;
+			}
+		}
+	}
+
+	/* Typography */
+	& .search-result-recentlyOpened {
+		font-family: var(
+			--spectrum-sans-font-family-stack,
+			adobe-clean,
+			"Adobe Clean",
+			"Source Sans Pro",
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			Roboto,
+			Ubuntu,
+			"Trebuchet MS",
+			"Lucida Grande",
+			sans-serif
+		);
+		font-size: var(--spectrum-heading-size-s, 18px) !important;
+		font-weight: var(--spectrum-bold-font-weight, 700);
+		font-style: var(--spectrum-default-font-style, normal);
+		line-height: var(--spectrum-heading-line-height, 1.2);
+		color: var(--spectrum-heading-color);
+		text-transform: unset;
+		letter-spacing: unset;
+
+		& > a {
+			font-size: 1em;
+		}
+
+		&:first-child {
+			margin-block-start: 0;
+			padding-block-start: 0;
+			padding-inline: 0 !important;
+		}
+	}
+}
+
+/* Sidebar with logo, search, and navigation */
+#storybook-explorer-tree {
+	& > div {
+		margin-inline: 0;
+	}
+
+	& > div > div > div {
+		margin-block-end: 0;
+	}
+
+	/* Typography */
+	& div.sidebar-subheading,
+	& .sidebar-item:not([data-parent-id]) {
+		font-family: var(
+			--spectrum-sans-font-family-stack,
+			adobe-clean,
+			"Adobe Clean",
+			"Source Sans Pro",
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			Roboto,
+			Ubuntu,
+			"Trebuchet MS",
+			"Lucida Grande",
+			sans-serif
+		);
+		font-size: var(--spectrum-heading-size-s, 18px) !important;
+		font-weight: var(--spectrum-bold-font-weight, 700);
+		font-style: var(--spectrum-default-font-style, normal);
+		line-height: var(--spectrum-heading-line-height, 1.2);
+		color: var(--spectrum-heading-color);
+		text-transform: unset;
+		letter-spacing: unset;
+
+		& > a {
+			font-size: 1em;
+		}
+
+		&:first-child {
+			margin-block-start: 0;
+			padding-block-start: var(--spectrum-spacing-100);
+		}
+	}
+
+	& div[data-nodetype="root"] {
+		flex-direction: row-reverse;
+		gap: var(--spectrum-spacing-100);
+		justify-content: flex-start;
+		padding-inline: 0;
+	}
+
+	& button[data-action="collapse-root"],
+	& button[data-action="expand-all"] {
+		margin-inline-start: 0;
+	}
+
+	/* hide the Guides expand-all */
+	& .sidebar-subheading {
+		&#guides {
+			& button[data-action="expand-all"] {
+				display: none;
+			}
+		}
+
+		& > button:not(.sidebar-subheading-action) {
+			flex-direction: row-reverse;
+			flex-grow: 1;
+			justify-content: space-between;
+		}
+
+		& > button:not(.sidebar-subheading-action) > span:first-of-type {
+			margin-inline: 0 0.2em !important;
+		}
+
+		&:not(:has([data-action="collapse-root"])) {
+			margin-inline-end: 30px;
+		}
+
+		/* Triangle icon */
+		& > button > span:first-child {
+			transform: rotate(0deg);
+
+			overflow: hidden;
+
+			inline-size: 0.6em;
+			block-size: 0.6em;
+			margin-inline-start: -0.6em;
+			margin-inline-end: 0.6em;
+
+			color: inherit;
+
+			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M3 9.95a.875.875 0 01-.615-1.498L5.88 5 2.385 1.547A.875.875 0 013.615.302L7.74 4.377a.876.876 0 010 1.246L3.615 9.698A.872.872 0 013 9.95z'></path></svg>");
+			border: none;
+		}
+
+		& > button[aria-expanded="true"] > span:first-child {
+			transform: rotate(90deg);
+		}
+	}
+
+	& > div > div > .sidebar-item {
+		padding-inline-start: calc(2 * var(--spectrum-component-edge-to-text-50, 8px));
+
+		&:not([data-parent-id="components"]) {
+			padding-inline-start: calc(
+				3 * var(--spectrum-component-edge-to-text-50, 8px)
+			);
+		}
+	}
+
+	& button.sidebar-item {
+		display: flex;
+		align-items: center;
+
+		box-sizing: border-box;
+		min-block-size: var(--spectrum-component-height-100, 32px);
+		padding-block: var(--spectrum-component-edge-to-text-50, 8px);
+		padding-inline: var(--spectrum-treeview-item-indentation-medium, 24px)
+			var(--spectrum-component-height-100, 24px);
+
+		font-weight: var(--spectrum-bold-font-weight, 700);
+		color: var(--spectrum-gray-900, #000);
+		white-space: nowrap;
+
+		/* Triangle icon */
+		& > div > span {
+			transform: rotate(0deg);
+
+			overflow: hidden;
+
+			inline-size: 0.6em;
+			block-size: 0.6em;
+			margin-inline-start: -0.6em;
+			margin-inline-end: 0.6em;
+
+			color: inherit;
+
+			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><path d='M3 9.95a.875.875 0 01-.615-1.498L5.88 5 2.385 1.547A.875.875 0 013.615.302L7.74 4.377a.876.876 0 010 1.246L3.615 9.698A.872.872 0 013 9.95z'></path></svg>");
+			border: none;
+		}
+
+		/* nested item */
+		& > div > a {
+			align-items: center;
+			padding: 0;
+		}
+
+		&[aria-expanded="true"] {
+			& > div > span {
+				transform: rotate(90deg);
+			}
+
+			&:not([data-parent-id="components"]) ~ div.sidebar-item {
+				padding-inline-start: calc(
+					5 * var(--spectrum-component-edge-to-text-50, 8px)
+				);
+			}
+		}
+	}
+
+	& div.sidebar-item {
+		display: flex;
+		align-items: center;
+
+		box-sizing: border-box;
+		min-block-size: var(--spectrum-component-height-100, 32px);
+		padding-block: var(--spectrum-component-edge-to-text-50, 8px);
+		padding-inline: calc(4 * var(--spectrum-component-edge-to-text-50, 8px)) var(--spectrum-component-height-100, 24px);
+
+		color: var(--spectrum-gray-900, #000);
+		white-space: nowrap;
+
+		& > a:first-child {
+			padding-inline-start: 0;
+		}
+
+		&:hover,
+		&:focus,
+		&[data-selected="true"] {
+			color: var(--spectrum-gray-900, #000);
+			background-color: rgba(
+				var(--spectrum-blue-900-rgb, 2, 101, 220),
+				0.1
+			) !important;
+		}
+
+		&[data-nodetype="story"][data-selected="true"] svg {
+			color: #37d5d3 !important;
+		}
+
+		&[data-nodetype="document"][data-selected="true"] svg {
+			color: #ff8300 !important;
+		}
+	}
+}
+
+input,
+textarea,
+select {
+	border-radius: 4px !important;
+
+	&:focus {
+		border-color: rgb(2, 101, 220) !important;
+		box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+	}
+}
+
+.react-draggable {
+	margin-block-start: var(--spectrum-spacing-100) !important;
+}
+
+[role="main"] {
+	position: relative !important;
+    inset-inline: 0 !important;
+    margin-inline-start: auto;
+
+	& > div {
+		position: relative;
+
+		display: flex;
+
+		inline-size: auto !important;
+		max-inline-size: calc(100% - var(--spectrum-spacing-200));
+		max-block-size: calc(100% - var(--spectrum-spacing-200));
+		margin: var(--spectrum-spacing-100);
+
+		border-radius: 0 !important;
+		box-shadow: none !important;
+	}
+
+	& > div > div {
+		display: flex;
+    	flex-flow: column nowrap;
+		flex-grow: 1;
+		gap: var(--spectrum-spacing-100);
+	}
+
+	& > div > div > div {
+		/* Container around the toolbar and code preview */
+		&:first-child {
+			position: relative;
+			inset-block-start: unset;
+
+			display: flex;
+			flex-flow: column nowrap;
+			gap: var(--spectrum-spacing-100);
+			inline-size: auto !important;
+		}
+
+		/* Container around the panels */
+		&:last-child:not([hidden]) {
+			display: flex;
+    		flex-grow: 1;
+		}
+	}
+
+	/* Container around the toolbar and code preview */
+	& > div > div > div > div {
+		position: relative;
+
+		color: var(--spectrum-gray-900);
+
+		background-color: var(--spectrum-background-layer-1-color);
+		border-color: transparent !important;
+		border-radius: 4px;
+		box-shadow: none;
+
+		&:first-child {
+			position: relative;
+
+			display: flex;
+			flex-flow: column nowrap;
+			flex-grow: 0;
+			gap: var(--spectrum-spacing-100);
+
+			block-size: auto !important;
+			inline-size: auto !important;
+		}
+
+		&:last-child {
+			position: relative;
+			inset-block-start: unset !important;
+
+    		overflow: hidden;
+			flex-grow: 1;
+
+			border-radius: 4px;
+		}
+	}
+
+	/* This is the controls panel; the element with hardcoded height & width */
+	& > div > div > div:last-child:has(#storybook-panel-root) > div {}
+
+	/* Represents the top toolbar */
+	& > div > div > div > div > div > div {
+		margin-block: 0;
+		margin-inline: 0;
+
+		/* Represents the divider at the start of the toolbar */
+		& > span {
+			display: none;
+		}
+	}
+
+	#panel-tab-content {
+		position: relative;
+		inset-block-start: 0;
+	}
+}
+
+
+/* #storybook-panel-root {
+	overflow: hidden;
+	border-radius: 4px;
+	max-block-size: calc(100% - var(--spectrum-spacing-200));
+} */
+
+.docblock-argstable-body {
+	& td {
+		vertical-align: middle;
+	}
+
+	& tr td {
+		font-size: 11px;
+		color: var(--spectrum-gray-900, #000);
+		letter-spacing: unset;
+		background-color: var(--spectrum-gray-50, #fff);
+	}
+
+	& td > span:has(select),
+	& td textarea {
+		max-inline-size: var(
+			--spectrum-alias-single-line-width,
+			var(--spectrum-global-dimension-size-2400)
+		) !important;
+	}
+
+	& td > span:has(select),
+	& td textarea {
+		max-inline-size: 280px !important;
+	}
+}

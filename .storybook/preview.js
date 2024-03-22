@@ -1,14 +1,15 @@
-
 import DocumentationTemplate from './DocumentationTemplate.mdx';
 
-import { withActions } from "@storybook/addon-actions/decorator";
 import {
+	withActions,
 	withContextWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
-} from "./decorators/index.js";
+} from "./decorators";
+
+import { argTypes, globalTypes } from "./types";
 
 // https://github.com/storybookjs/storybook-addon-console
 import "@storybook/addon-console";
@@ -17,11 +18,15 @@ import { setConsoleOptions } from "@storybook/addon-console";
 const panelExclude = setConsoleOptions({}).panelExclude || [];
 setConsoleOptions({
 	panelExclude: [...panelExclude, /deprecated/, /TypeError/, /postcss/, /stylelint/],
+	log: "🔵 [log]",
+    warn: "🟡 [warn]",
+    error: "🔴 [error]",
 });
 
 import "@spectrum-css/tokens";
 import "./assets/base.css";
 
+import "./assets/storybook-preview.css";
 import "./assets/typekit.js";
 
 
@@ -195,7 +200,10 @@ export const parameters = {
 			includeNames: true,
 		},
 	},
-	// chromatic: { forcedColors: 'active' },
+	chromatic: {
+		/** @note not activating testing modes until component snapshots are reduced */
+		// modes: allModes,
+	},
 	controls: {
 		expanded: true,
 		hideNoControlsWarning: true,
@@ -203,11 +211,11 @@ export const parameters = {
 	},
 	html: {
 		root: "#root-inner",
-		removeComments: true,
+		removeComments: /^.*lit.*$/,
 		prettier: {
 			tabWidth: 4,
 			useTabs: false,
-			htmlWhitespaceSensitivity: "ignore",
+			htmlWhitespaceSensitivity: "strict",
 		},
 		highlighter: {
 			showLineNumbers: true,
@@ -253,7 +261,9 @@ export const loaders = document.fonts ? [async () => ({ fonts: await document.fo
 export default {
 	globalTypes,
 	argTypes,
-	args,
+	args: {
+		customClasses: [],
+	},
 	parameters,
 	decorators,
 	loaders,
