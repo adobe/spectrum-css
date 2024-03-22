@@ -181,10 +181,7 @@ governing permissions and limitations under the License.
 				position: absolute;
 				transform: rotate(-45deg);
 				block-size: 200%; /* just needs to be bigger than a swatch */
-				background: var(
-					--highcontrast-swatch-fill-foreground-color,
-					var(--mod-swatch-slash-icon-color, var(--spectrum-swatch-slash-icon-color))
-				);
+				background: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-swatch-slash-icon-color)));
 			}
 		}
 

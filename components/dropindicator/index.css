@@ -25,10 +25,7 @@ governing permissions and limitations under the License.
 
 .spectrum-DropIndicator {
   position: relative;
-  background: var(
-    --highcontrast-dropindicator-color,
-    var(--mod-dropindicator-border-color, var(--spectrum-dropindicator-border-color))
-  );
+  background: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-border-color, var(--spectrum-dropindicator-border-color)));
 
   &:before,
   &:after {
@@ -37,14 +34,9 @@ governing permissions and limitations under the License.
     inline-size: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
     block-size: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
     border-radius: 50%;
-    border: var(
-      --mod-dropindicator-border-size,
-      var(--spectrum-dropindicator-border-size)) solid;
+    border: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) solid;
     box-sizing: border-box;
-    border-color: var(
-      --highcontrast-dropindicator-color,
-      var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-circle-color))
-    );
+    border-color: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-circle-color)));
   }
 }
 

@@ -16,7 +16,7 @@
     "build": "yarn builder tag:component",
     "build:all": "run-s build:preview build:site migrate:preview",
     "build:preview": "nx build storybook",
-    "build:site": "nx build docs",
+    "build:site": "cross-env NODE_ENV=production nx build docs",
     "builder": "nx run-many --target build --projects",
     "cache:clean": "nx reset",
     "ci": "cross-env NODE_ENV=production yarn builder tag:component,ui-icons",
