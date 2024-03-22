@@ -238,20 +238,16 @@ This project is leveraging caching from [Nx](https://nx.dev/) to speed up the bu
 
 The following tasks are available:
 
-* `yarn clean` - Cleans all output files for the project and all components
-* `yarn build` - Performs a build of all components
-* `yarn build:all` - Performs a build of all components, documentation site, and storybook
-* `yarn dev` - Performs a component build, runs storybook, and serves the documentation on the default port (3000), then starts watching components and website files
-* `yarn compare`: This compares the current version of components with the previous versions published to NPM and output a list of all the changes that have been made. This is useful for reviewing changes before a release. The information is provided in the command-line output as well as in a simple web page that is opened in your default browser upon completion. The web page includes links to the visual diffs for each component when the file sizes have changed.
-  * Components with no changes are not included in the output.
-  * To run comparisons on one or multiple components, `yarn compare` accepts a list of components as arguments. For example, `yarn compare button` will compare the current version of the button component with the previous version published to NPM. `yarn compare button checkbox` will compare the current version of the button and checkbox components with the previous versions published to NPM.
-  * Named components should be space-separated.
-  * Running `yarn compare` with no inputs will automatically run against all packages.
-  * **Note** that you must run `yarn build` before running `yarn compare` to ensure that the latest build is being compared.
-* `yarn lint`: Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment.
-  * Use `yarn lint --fix` to automatically fix any issues that are found.
-  * To run on a single component, use `yarn linter accordion` (where `accordion` is the name of the component or components you want to lint).
-* `yarn refresh:env`: This copies values for the project's `.env` file (an asset never committed to the repo as it contains login secrets) by using the `.env.example` file as a template. This script is useful when you need to update the `.env` file with new values from the `.env.example` file or when you checkout or clean the repo and need to restore the `.env` file.
+| Command | Description | Examples |
+| --- | --- | --- |
+| `clean` | Cleans all output files for the project and all components | `yarn clean` |
+| `build` | Performs a build of all components | `yarn build` |
+| `build:all` | Performs a build of all components, documentation site, and storybook | `yarn build:all` |
+| `dev` | Performs a component build and serves the documentation on the default port (3000) | `yarn dev` |
+| `compare` | This compares the current version of components with the previous versions published to NPM and output a list of all the changes that have been made. This is useful for reviewing changes before a release. The information is provided in the command-line output as well as in a simple web page that is opened in your default browser upon completion. The web page includes links to the visual diffs for each component when the file sizes have changed. <ul><li>Components with no changes are not included in the output.</li><li>To run comparisons on one or multiple components, `compare` accepts a list of components as arguments. For example, `yarn compare button` will compare the current version of the button component with the previous version published to NPM. `yarn compare button checkbox` will compare the current version of the button and checkbox components with the previous versions published to NPM.</li><li>Named components should be space-separated.</li><li>Running `compare` with no inputs will automatically run against all packages.</li></ul> | `yarn compare`<br/>`yarn compare accordion`<br/>`yarn compare accordion actionbutton` |
+| `lint` | Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment. Use `format` to automatically fix any issues that are found. To run on a single component, use `yarn linter accordion` (where `accordion` is the name of the component or components you want to lint). | `yarn lint`<br/>`yarn linter accordion`<br/>`yarn linter accordion actionbutton` |
+| `format` | Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment. To run on a single component, use `yarn formatter accordion` (where `accordion` is the name of the component or components you want to lint). | `yarn format`<br/>`yarn formatter accordion`<br/>`yarn formatter accordion actionbutton` |
+| `refresh:env` | This copies values for the project's `.env` file (an asset never committed to the repo as it contains login secrets) by using the `.env.example` file as a template. This script is useful when you need to update the `.env` file with new values from the `.env.example` file or when you checkout or clean the repo and need to restore the `.env` file. | `yarn refresh:env` |
 
 ### Documentation
 
