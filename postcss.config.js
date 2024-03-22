@@ -11,11 +11,12 @@ governing permissions and limitations under the License.
 */
 
 const { join, sep, basename } = require("path");
+const presetAdvanced = require("cssnano-preset-advanced");
 
 module.exports = ({
 	file,
 	to,
-	cwd = process.cwd(),
+	// cwd = process.cwd(),
 	splitinatorOptions = {
 		noSelectors: false,
 		noFlatVariables: false,
@@ -24,11 +25,14 @@ module.exports = ({
 	keepComments = false,
 	lint = true,
 	verbose = true,
+	shouldMinify = false,
 	additionalPlugins = {},
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
-	if (env === "development" && !options.map) {
+	const isProduction = env.toLowerCase() === "production";
+
+	if (!isProduction && !options.map) {
 		options.map = { inline: false };
 	} else options.map = false;
 
@@ -43,7 +47,7 @@ module.exports = ({
 		if (
 			(to && basename(to, ".css") === "express") ||
 			(file && basename(file, ".css") === "express")
-		 ) {
+		) {
 			combine = true;
 		}
 	}
@@ -86,6 +90,9 @@ module.exports = ({
 				cache: true,
 				configFile: join(__dirname, "stylelint.config.js"),
 				quiet: !verbose,
+			} : false,
+			"cssnano" : isProduction && shouldMinify ? {
+				preset: presetAdvanced({}),
 			} : false,
 			"postcss-reporter": verbose ? {} : false,
 		},

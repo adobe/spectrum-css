@@ -1,5 +1,4 @@
 const { join } = require("path");
-const { propertiesOrder } = require('stylelint-config-clean-order')
 
 module.exports = {
 	allowEmptyInput: true,
