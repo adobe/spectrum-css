@@ -1,12 +1,13 @@
-const { resolve } = require("path");
-const { readdirSync } = require("fs");
+const { resolve, join } = require("path");
+const { readdirSync, existsSync } = require("fs");
 
 const componentsPath = resolve(__dirname, "../components");
 const componentPkgs = readdirSync(componentsPath, {
 	withFileTypes: true,
 })
-	.filter((dirent) => dirent.isDirectory())
+	.filter((dirent) => dirent.isDirectory() && existsSync(join(dirent.path, dirent.name, "package.json")))
 	.map((dirent) => dirent.name);
+
 module.exports = {
 	stories: [
 		"../components/*/stories/*.stories.js",
@@ -45,20 +46,6 @@ module.exports = {
 	core: {
 		disableTelemetry: true,
 	},
-	env: {
-		MIGRATED_PACKAGES: componentPkgs.filter((dir) => {
-			const {
-				devDependencies = {},
-			} = require(resolve(componentsPath, dir, "package.json"));
-			if (
-				devDependencies &&
-				devDependencies["@spectrum-css/component-builder-simple"]
-			) {
-				return true;
-			}
-			return false;
-		}),
-	},
 	webpackFinal: function (config) {
 		// Removing the global alias as it conflicts with the global npm pkg
 		const { global, ...alias } = config.resolve.alias;
@@ -73,10 +60,13 @@ module.exports = {
 				: [];
 		return {
 			...config,
-			stats: {
-				/* Suppress autoprefixer warnings from storybook build */
-				warningsFilter: [/autoprefixer: /],
-			},
+			/* Suppress autoprefixer warnings from storybook build */
+			ignoreWarnings: [
+				...(config.ignoreWarnings ?? []),
+				/autoprefixer/,
+				/postcss/,
+				/.*stylelint.*/,
+			],
 			/* Add support for root node_modules imports */
 			resolve: {
 				...(config.resolve ? config.resolve : {}),
@@ -141,7 +131,7 @@ module.exports = {
 								options: {
 									implementation: require("postcss"),
 									postcssOptions: {
-										config: resolve(__dirname, "postcss.config.js"),
+										config: resolve(__dirname, "../postcss.config.js"),
 									},
 								},
 							},
@@ -151,10 +141,10 @@ module.exports = {
 						test: /\.js$/,
 						enforce: "pre",
 						use: ["source-map-loader"],
-					} /* Raw SVG loader */,
+					} /* Raw loader */,
 					{
-						test: /\.svg$/i,
-						loader: "raw-loader",
+						resourceQuery: /raw/,
+						type: 'asset/source',
 					},
 				],
 			},
@@ -162,7 +152,6 @@ module.exports = {
 	},
 	framework: {
 		name: "@storybook/web-components-webpack5",
-		options: {},
 	},
 	features: {
 		/* Code splitting flag; load stories on-demand */
@@ -170,13 +159,6 @@ module.exports = {
 		/* Builds stories.json to help with on-demand loading */
 		buildStoriesJson: true,
 	},
-	// refs: {
-	//   'swc': {
-	//     title: 'Spectrum Web Components',
-	//     url: 'https://opensource.adobe.com/spectrum-web-components/storybook/',
-	//     expanded: false,
-	//   },
-	// },
 	docs: {
 		autodocs: true, // see below for alternatives
 		defaultName: "Docs", // set to change the name of generated docs entries

@@ -65,9 +65,7 @@ export default {
 			handles: [...ActionButton.parameters.actions.handles],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("actiongroup")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

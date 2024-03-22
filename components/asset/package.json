@@ -13,12 +13,9 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/tokens": ">=13"
-  },
-  "devDependencies": {
-    "@spectrum-css/component-builder": "^7.0.2"
   },
   "publishConfig": {
     "access": "public"

@@ -14,9 +14,9 @@ import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.j
  * @see https://github.com/storybookjs/storybook/discussions/24235
  */
 const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
-	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, '');
+	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, "");
 	// Icons like Gripper that don't have sizes yet, represented by any empty array.
-	if (uiIconSizes[baseIconName]?.length == 0){
+	if (uiIconSizes[baseIconName]?.length == 0) {
 		return [baseIconName];
 	}
 	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
@@ -95,24 +95,23 @@ export default {
 	},
 	parameters: {
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("icon")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
 
 export const Default = (args) => {
-	if (window.isChromatic()){
+	if (window.isChromatic()) {
 		return TestTemplate({ ...args });
-	} else {
+	}
+	else {
 		return Template({
 			...args,
 			iconName: args.iconName ?? args.uiIconName,
 			setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
 		});
 	}
-}
+};
 
 Default.args = {};
 
@@ -120,8 +119,8 @@ Default.args = {};
  * Chromatic VRT template that displays multiple icons to cover various options.
  */
 const TestTemplate = ({
-	staticColor,
-	customStyles = {},
+	// staticColor,
+	// customStyles = {},
 	...args
 }) => {
 	const workflow_row_args = [
@@ -161,7 +160,7 @@ const TestTemplate = ({
 					marginBottom: "16px",
 				})}
 			>
-				${['xs','s','m','l','xl','xxl'].map(
+				${["xs","s","m","l","xl","xxl"].map(
 					(size) => Template({ ...args, ...row_args, size })
 				)}
 			</div>`
@@ -174,7 +173,7 @@ const TestTemplate = ({
 						gap: "16px",
 					})}
 				>
-					${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, '')]?.map((iconSize) =>
+					${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
 						Template({ ...args, setName: "ui", iconName: iconName + iconSize })
 					)}
 					${when(uiIconSizes[iconName]?.length == 0, () =>

@@ -21,7 +21,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-ColorLoupe",
-    isOpen: true,
+		isOpen: true,
 	},
 	parameters: {
 		chromatic: { diffThreshold: 0.2 },
@@ -29,9 +29,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("colorloupe")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

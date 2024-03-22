@@ -105,9 +105,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("table")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

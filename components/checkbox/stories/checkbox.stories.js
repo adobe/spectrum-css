@@ -1,5 +1,5 @@
-// Import the component markup template
 import { html } from "lit";
+
 import { Template } from "./template";
 
 export default {
@@ -67,8 +67,8 @@ export default {
 			name: "Checkbox indeterminate",
 			type: { name: "boolean" },
 			table: {
-			type: { summary: "boolean" },
-			category: "State",
+				type: { summary: "boolean" },
+				category: "State",
 			},
 			control: "boolean",
 		},
@@ -76,8 +76,8 @@ export default {
 			name: "Read only",
 			type: { name: "boolean" },
 			table: {
-			type: { summary: "boolean" },
-			category: "State",
+				type: { summary: "boolean" },
+				category: "State",
 			},
 			control: "boolean",
 		},
@@ -95,19 +95,17 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: ['click input[type="checkbox"]'],
+			handles: ["click input[type=\"checkbox\"]"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("checkbox")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
 
 const CheckboxGroup = ({
-	customStyles = {},
-	isChecked = false,
+	// customStyles = {},
+	// isChecked = false,
 	...args
 }) => {
 	return html`

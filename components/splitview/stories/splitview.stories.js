@@ -1,4 +1,4 @@
-import { within } from '@storybook/testing-library';
+import { within } from "@storybook/testing-library";
 
 // Import the component markup template
 import { Template } from "./template";
@@ -76,9 +76,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("splitview")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -105,7 +103,7 @@ export const HorizontallyFocused = Template.bind({});
 HorizontallyFocused.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
 
-	await canvas.getByTestId('splitter').focus();
+	await canvas.getByTestId("splitter").focus();
 
 };
 HorizontallyFocused.args = {

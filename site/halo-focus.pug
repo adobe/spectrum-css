@@ -27,7 +27,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--medium
       ];
 
     each dep in exampleDependencies.filter(dep => dependencyOrder.indexOf(dep) === -1)
-      link(rel='stylesheet', type='text/css', href='components/' + dep + '/index-vars.css', data-dependency=dep)
+      link(rel='stylesheet', type='text/css', href='components/' + dep + '/index.css', data-dependency=dep)
 
     style(type="text/css").
       .a-container {

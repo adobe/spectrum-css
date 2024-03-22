@@ -47,16 +47,14 @@
 				"core",
 				"tools",
 				"!{projectRoot}/stories/*.js",
-				"{workspaceRoot}/tasks/mod-extractor.js",
-				{ "externalDependencies": ["gulp", "postcss"] },
+				{ "externalDependencies": ["postcss"] },
 				{ "env": "NODE_ENV" }
 			],
 			"outputs": ["{projectRoot}/dist", "{projectRoot}/metadata/mods.md"],
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
-					"gulp --gulpfile {projectRoot}/gulpfile.js",
-					"node ./tasks/mod-extractor.js {projectRoot}"
+					"node -e 'require(\"./tasks/component-builder.js\").default()'"
 				],
 				"forwardAllArgs": true,
 				"parallel": false
@@ -81,7 +79,8 @@
 						"diff2html",
 						"colors"
 					]
-				}
+				},
+				{ "env": "NODE_ENV" }
 			],
 			"outputs": ["{workspaceRoot}/.diff-output"],
 			"executor": "nx:run-commands",
@@ -92,10 +91,13 @@
 			}
 		},
 		"lint": {
-			"inputs": ["core", { "externalDependencies": ["stylelint"] }],
+			"inputs": ["core", { "externalDependencies": ["stylelint", "eslint"] }],
 			"executor": "nx:run-commands",
 			"options": {
-				"commands": ["stylelint {projectRoot}/*.css {projectRoot}/themes/*.css"]
+				"commands": [
+					"stylelint {projectRoot}/*.css {projectRoot}/themes/*.css",
+					"eslint {projectRoot}/package.json {projectRoot}/project.json {projectRoot}/stories/*.js"
+				]
 			}
 		},
 		"validate": {

@@ -58,16 +58,14 @@ export default {
 			handles: ["click .spectrum-AlertBanner button"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("alertbanner")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
 
 const AlertBannerGroup = ({
 	...args
-	}) => {
+}) => {
 	return html`
 		<div style="display: flex; flex-direction: column; gap: 1rem">
 			${Template({

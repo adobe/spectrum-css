@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/alertdialog": ">=1",
     "@spectrum-css/dialog": ">=9",
@@ -30,8 +30,7 @@
     }
   },
   "devDependencies": {
-    "@spectrum-css/commons": "^9.1.2",
-    "@spectrum-css/component-builder-simple": "^5.0.5"
+    "@spectrum-css/commons": "^9.1.2"
   },
   "publishConfig": {
     "access": "public"

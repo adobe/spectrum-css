@@ -38,8 +38,8 @@ export default {
 		gradientType: {
 			name: "Gradient type",
 			description: "The gradient can be defined in the markup using CSS or with an image.",
-			options: ['gradient', 'image'],
-			control: { type: 'select' },
+			options: ["gradient", "image"],
+			control: { type: "select" },
 			table: { disable: true },
 		},
 	},
@@ -57,9 +57,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("colorslider")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

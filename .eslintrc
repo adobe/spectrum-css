@@ -1,5 +1,6 @@
 {
 	"env": {
+		"browser": true,
 		"node": true,
 		"es2020": true
 	},
@@ -10,10 +11,10 @@
 	"rules": {
 		"brace-style": ["warn", "stroustrup", { "allowSingleLine": true }],
 		"func-call-spacing": ["warn", "never"],
-		"indent": ["warn", 2],
+		"indent": ["warn", "tab", { "ignoredNodes": ["TemplateLiteral *"] }],
 		"linebreak-style": ["warn", "unix"],
 		"no-console": 0,
-		"quotes": ["warn", "single"],
+		"quotes": ["warn", "double"],
 		"semi": ["warn", "always"],
 		"space-before-blocks": ["warn", "always"]
 	},

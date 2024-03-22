@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "./spectrum.css";
+
 @container (--system: express) {
   .spectrum-Checkbox {
     --spectrum-checkbox-control-color-default: var(--spectrum-gray-800);

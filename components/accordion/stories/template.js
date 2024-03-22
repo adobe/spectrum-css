@@ -8,7 +8,7 @@ import { useArgs } from "@storybook/client-api";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
-import "@spectrum-css/accordion/index.css";
+import "../index.css";
 
 export const AccordionItem = ({
 	heading,
@@ -27,11 +27,11 @@ export const AccordionItem = ({
 	return html`
 		<div
 			class=${classMap({
-		[rootClass]: true,
-		"is-open": isOpen && !isDisabled,
-		"is-disabled": isDisabled,
-		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-	})}
+				[rootClass]: true,
+				"is-open": isOpen && !isDisabled,
+				"is-disabled": isDisabled,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
@@ -84,7 +84,7 @@ export const Template = ({
 	customStyles = {},
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 
 	if (!items || !items.size) return html``;
 

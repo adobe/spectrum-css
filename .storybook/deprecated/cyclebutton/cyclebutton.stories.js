@@ -1,8 +1,11 @@
-// Import the component markup template
-import { Template } from "@spectrum-css/cyclebutton/stories/template";
-
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { useArgs } from "@storybook/client-api";
+import { html } from "lit";
+
+import "@spectrum-css/cyclebutton/dist/index-vars.css";
+import "@spectrum-css/cyclebutton/dist/vars.css";
 
 export default {
 	title: "Deprecated/Cycle button",
@@ -42,5 +45,40 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = (({
+	rootClass = "spectrum-CycleButton",
+	customClasses = [],
+	size = "m",
+	initialIcon = "Play",
+	selectedIcon = "Pause",
+	isDisabled = false,
+	onclick,
+	...globals
+}) => {
+	const [{ selectedIcon: icon }, updateArgs] = useArgs();
+
+	return html`
+		<!-- Note: These dimensions don't change in express theme -->
+		<style>
+			:root, .spectrum--medium { --spectrum-global-dimension-size-85: 7px; }
+			.spectrum--large { --spectrum-global-dimension-size-85: 9px; }
+		</style>
+		${ActionButton({
+			...globals,
+			customClasses: [rootClass],
+			isQuiet: true,
+			isDisabled,
+			size,
+			iconName: initialIcon,
+			onclick:
+				onclick ??
+				function () {
+					if (isDisabled) return;
+
+					updateArgs({ initialIcon: selectedIcon });
+					updateArgs({ selectedIcon: icon });
+				},
+		})}
+	`;
+}).bind({});
 Default.args = {};

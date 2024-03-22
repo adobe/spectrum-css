@@ -1,0 +1,61 @@
+{
+	"$schema": "../node_modules/nx/schemas/project-schema.json",
+	"name": "docs",
+	"tags": ["tooling"],
+	"namedInputs": {
+		"core": ["{projectRoot}/*.pug"],
+		"tools": [
+			"{projectRoot}/includes",
+			"{projectRoot}/resources",
+			"{projectRoot}/tasks",
+			"{projectRoot}/templates",
+			"{projectRoot}/util.js"
+		]
+	},
+	"targets": {
+		"clean": {
+			"inputs": [
+				"{workspaceRoot}/dist",
+				{ "externalDependencies": ["rimraf"] }
+			],
+			"options": {
+				"commands": [
+					"rimraf ./dist",
+					"test -d ./dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
+				]
+			}
+		},
+		"build": {
+			"cache": false,
+			"dependsOn": [
+				"^build",
+				{
+					"target": "build",
+					"projects": "tag:component"
+				},
+				{
+					"target": "build",
+					"projects": "ui-icons"
+				},
+				"clean"
+			],
+			"inputs": ["core", "tools"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": ["node -e \"require('./tasks').builder()\""]
+			}
+		},
+		"start": {
+			"cache": false,
+			"dependsOn": ["build"],
+			"inputs": ["core", "tools"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": ["node -e \"require('./tasks').server()\""]
+			}
+		}
+	}
+}

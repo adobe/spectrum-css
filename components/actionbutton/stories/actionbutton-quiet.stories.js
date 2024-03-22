@@ -1,4 +1,4 @@
-import { argTypes, ActionButtons } from "./index";
+import { ActionButtons, argTypes } from "./index";
 
 export default {
 	title: "Components/Action button/Quiet",
@@ -19,9 +19,7 @@ export default {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("actionbutton")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -53,5 +51,5 @@ Emphasized.args = {
 export const SelectedEmphasized = ActionButtons.bind({});
 SelectedEmphasized.args = {
 	isEmphasized: true,
-  isSelected: true
+	isSelected: true
 };

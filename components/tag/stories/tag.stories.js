@@ -1,4 +1,3 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -30,7 +29,6 @@ export default {
 		},
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
-			if: false,
 			if: { arg: "hasIcon", truthy: true },
 		},
 		hasAvatar: {
@@ -115,7 +113,7 @@ export default {
 		size: "m",
 		label: "Tag label",
 		hasIcon: false,
-		iconName: 'Info',
+		iconName: "Info",
 		avatarUrl: "example-ava.png",
 		hasAvatar: false,
 		isSelected: false,
@@ -129,9 +127,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("tag")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -142,8 +138,8 @@ Default.args = {};
 export const Icon = Template.bind({});
 Icon.args = {
 	hasIcon: true,
-	iconName: 'Info',
-	label: 'Tag label that truncates when it gets too long',
+	iconName: "Info",
+	label: "Tag label that truncates when it gets too long",
 	customStyles: {"max-inline-size": "200px"}
 };
 

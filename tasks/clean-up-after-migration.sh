@@ -16,8 +16,7 @@
 # Legacy tools folder (included storybook & generator)
 # test -d "tools" && rm -rf tools
 
-test -d "tools/generator" && rm -rf tools/generator
-test -d "tools/preview" && rm -rf tools/preview
+test -d "tools" && rm -rf tools
 
 # Remove deprecated files
 for folder in components/*; do

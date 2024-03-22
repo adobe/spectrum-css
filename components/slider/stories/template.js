@@ -33,11 +33,12 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ textDirection }] = useGlobals();
 
 	const rtl = !!(textDirection === "rtl");
@@ -136,7 +137,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			style=${styleMap({
-				maxWidth: `var(--spectrum-global-dimension-size-3000)`,
+				maxWidth: "240px",
 				["--spectrum-slider-track-color"]: fillColor,
 				...style,
 			})}
@@ -156,7 +157,7 @@ export const Template = ({
 				? html`<div
 						class="${rootClass}-labelContainer"
 						role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
-				  >
+				>
 						${FieldLabel({
 							...globals,
 							size,
@@ -199,7 +200,7 @@ export const Template = ({
 							? renderTrack({
 									position: getPosition(prevPoint),
 									width: getWidth(prevPoint, value),
-							  })
+							})
 							: "",
 						isFirst && isRamp
 							? html`<div class="${rootClass}-ramp">${rampSVG}</div>`

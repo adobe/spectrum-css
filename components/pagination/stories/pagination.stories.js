@@ -6,7 +6,7 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 export default {
 	title: "Components/Pagination",
 	description:
-		"The Pagination component displays numbered buttons or an input field to allow for navigation",
+		"The pagination component displays numbered buttons or an input field to allow for navigation",
 	component: "Pagination",
 	argTypes: {
 		size: {
@@ -34,9 +34,7 @@ export default {
 			handles: [...ActionButton.parameters.actions.handles],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("pagination")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -67,10 +65,4 @@ Default.args = {
 export const Explicit = Template.bind({});
 Explicit.args = {
 	variant: "explicit",
-};
-
-export const Button = Template.bind({});
-Button.storyName = "Button style";
-Button.args = {
-	variant: "button",
 };

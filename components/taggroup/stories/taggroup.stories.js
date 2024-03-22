@@ -43,7 +43,7 @@ export default {
 				type: { summary: "object" },
 				category: "Storybook Only",
 			},
-			if: { arg: 'customStyles' }
+			if: { arg: "customStyles" }
 		}
 	},
 	args: {
@@ -56,9 +56,7 @@ export default {
 			handles: [...(TagStories.parameters.actions.handles ?? [])],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("taggroup")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -110,7 +108,7 @@ OverflowItems.args = {
 	size: "m",
 	isRemovable: true,
 	isEmphasized: false,
-	customStyles: {'max-width': '300px'},
+	customStyles: {"max-width": "300px"},
 	items: [
 		{
 			label: "Tag 1 Example",

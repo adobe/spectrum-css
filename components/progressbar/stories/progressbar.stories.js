@@ -62,9 +62,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("progressbar")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

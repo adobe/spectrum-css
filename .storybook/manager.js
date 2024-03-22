@@ -1,19 +1,15 @@
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
 
-import "./assets/index.css";
-
 import logo from "./assets/logo.svg";
 import pkg from "./package.json";
 
-// Load global styles
-import "@spectrum-css/vars/css/globals/index.css";
-import "@spectrum-css/vars/css/components/index.css";
+import "@spectrum-css/tokens";
+import "./assets/index.css";
 
-import "@spectrum-css/vars/css/scales/spectrum-medium.css";
-import "@spectrum-css/vars/css/themes/spectrum-light.css";
+import "./assets/typekit.js";
 
-import "./global.js";
+document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 
 addons.setConfig({
 	theme: create({

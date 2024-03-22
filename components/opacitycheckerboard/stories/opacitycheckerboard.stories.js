@@ -29,9 +29,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("opacitycheckerboard")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 	decorators: [
@@ -48,7 +46,7 @@ Default.args = {
 
 export const CheckerboardPosition = Template.bind({});
 CheckerboardPosition.args = {
-	backgroundPosition: 'center center',
+	backgroundPosition: "center center",
 	customStyles: {
 		"inline-size": "100%",
 		"block-size": "100%"

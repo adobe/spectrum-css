@@ -66,7 +66,7 @@ cp getting-started.pug new-page.pug
 
 ```pug
     include includes/dependencies.pug
-    link(rel='stylesheet', type='text/css', href='../components/table/index-vars.css')
+    link(rel='stylesheet', type='text/css', href='../components/table/index.css')
 ```
 
 ## Adding a one-off example page

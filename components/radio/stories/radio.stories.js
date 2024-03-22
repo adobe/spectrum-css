@@ -83,22 +83,18 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: ['click input[type="radio"]'],
+			handles: ["click input[type=\"radio\"]"],
 
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("radio")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
 
-// export const Default = Template.bind({});
-// Default.args = {};
 export const Default = ({
-	customHeading,
-	customDescription,
+	// customHeading,
+	// customDescription,
 	...args
 }) => {
 	return html`

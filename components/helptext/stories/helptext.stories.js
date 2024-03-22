@@ -66,7 +66,7 @@ export default {
 				type: { summary: "object" },
 				category: "Advanced",
 			},
-			if: { arg: 'customStyles' }
+			if: { arg: "customStyles" }
 		}
 	},
 	args: {
@@ -82,9 +82,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("helptext")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
@@ -98,5 +96,5 @@ Negative.storyName = "Negative";
 Negative.args = {
 	variant: "negative",
 	text: "This is an example with wrapping text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-	customStyles: {'max-width': '350px'},
+	customStyles: {"max-width": "350px"},
 };

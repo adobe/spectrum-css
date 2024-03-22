@@ -129,16 +129,14 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("picker")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
 
 
 const ChromaticPickerGroup = ({
-	customStyles = {},
+	// customStyles = {},
 	...args
 }) => {
 	return html`
@@ -203,7 +201,7 @@ const ChromaticPickerGroup = ({
 					...args,
 					isOpen: false,
 					withSwitch: true,
-					fieldLabelStyle: {'max-width': '90px'},
+					fieldLabelStyle: {"max-width": "90px"},
 					label: "Enter country, text should wrap",
 					placeholder: "Select your country of origin"
 				})}
@@ -225,7 +223,7 @@ const ChromaticPickerGroup = ({
 					isOpen: false,
 					withSwitch: true,
 					isQuiet: true,
-					fieldLabelStyle: {'max-width': '90px'},
+					fieldLabelStyle: {"max-width": "90px"},
 					label: "Enter country, text should wrap",
 					placeholder: "Select your contry of origin"
 				})}
@@ -251,11 +249,11 @@ Open.args = {
 
 export const WithForcedColors = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
 WithForcedColors.parameters = {
-    // Sets the forced-colors media feature for a specific story.
-    chromatic: { forcedColors: 'active' },
-}
+	// Sets the forced-colors media feature for a specific story.
+	chromatic: { forcedColors: "active" },
+};
 WithForcedColors.args = {
 	content: [
 		() => MenuStories(MenuStories.args)
 	]
-}
+};

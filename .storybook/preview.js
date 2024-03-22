@@ -1,6 +1,7 @@
 
-import { withActions } from "@storybook/addon-actions/decorator";
 import DocumentationTemplate from './DocumentationTemplate.mdx';
+
+import { withActions } from "@storybook/addon-actions/decorator";
 import {
 	withContextWrapper,
 	withLanguageWrapper,
@@ -15,30 +16,14 @@ import { setConsoleOptions } from "@storybook/addon-console";
 
 const panelExclude = setConsoleOptions({}).panelExclude || [];
 setConsoleOptions({
-	panelExclude: [...panelExclude, /deprecated/, /TypeError/, /postcss-dropunusedvars/],
+	panelExclude: [...panelExclude, /deprecated/, /TypeError/, /postcss/, /stylelint/],
 });
 
-import "@spectrum-css/vars/dist/spectrum-large.css";
-import "@spectrum-css/vars/dist/spectrum-medium.css";
-
-import "@spectrum-css/vars/dist/spectrum-dark.css";
-import "@spectrum-css/vars/dist/spectrum-darkest.css";
-import "@spectrum-css/vars/dist/spectrum-light.css";
-
-import "@spectrum-css/vars/dist/spectrum-global.css";
-
-import "@spectrum-css/expressvars/dist/spectrum-large.css";
-import "@spectrum-css/expressvars/dist/spectrum-medium.css";
-
-import "@spectrum-css/expressvars/dist/spectrum-dark.css";
-import "@spectrum-css/expressvars/dist/spectrum-darkest.css";
-import "@spectrum-css/expressvars/dist/spectrum-light.css";
-
-import "@spectrum-css/expressvars/dist/spectrum-global.css";
-
 import "@spectrum-css/tokens";
+import "./assets/base.css";
 
-import "./global.js";
+import "./assets/typekit.js";
+
 
 // Rendered as controls; these properties are assigned
 //      to the document root element
@@ -205,7 +190,7 @@ export const parameters = {
 	options: {
 		storySort: {
 			method: "alphabetical",
-			order: ['Guides', ['Contributing', '*', 'Adobe Code of Conduct', 'Changelog'], 'Components', '*'],
+			order: ['Guides', ['Contributing', '*', 'Adobe Code of Conduct', 'Changelog'], 'Components', ['Docs', 'Default', '*'], '*'],
 			includeNames: true,
 		},
 	},
@@ -260,10 +245,15 @@ export const decorators = [
 	withActions,
 ];
 
+// Use the document.fonts API to check if fonts have loaded
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/fonts API to
+export const loaders = document.fonts ? [async () => ({ fonts: await document.fonts.ready })] : [];
+
 export default {
 	globalTypes,
 	argTypes,
 	args,
 	parameters,
 	decorators,
+	loaders,
 };

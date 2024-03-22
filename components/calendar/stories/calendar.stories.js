@@ -97,9 +97,7 @@ export default {
 			handles: [...(ActionButtonStories.parameters.actions.handles ?? [])],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("calendar")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };

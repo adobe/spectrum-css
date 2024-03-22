@@ -2,7 +2,6 @@ import { html } from "lit";
 
 import { Template } from "./template";
 
-
 export default {
 	title: "components/Coach indicator",
 	description:
@@ -22,14 +21,14 @@ export default {
 		},
 		variant: {
 			name: "Variant",
-			type: { name: 'string' },
+			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 			},
 			options: ["default", "dark", "light"],
 			control: "select"
-		 },
+		},
 	},
 	args: {
 		rootClass: "spectrum-CoachIndicator",
@@ -41,9 +40,7 @@ export default {
 			handles: [],
 		},
 		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("coachindicator")
-				? "migrated"
-				: undefined,
+			type: "migrated",
 		},
 	},
 };
