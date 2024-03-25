@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ component }} compared to v{{ tag }} | {{ component }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="utf-8"/>
+        <meta name="theme-color" content="#e1251b" />
+
+        <!-- Load component stylesheets -->
+        <link rel="stylesheet" type="text/css" href="{{ "../../../components/typography/dist/index.css" | safe }}"/>
+
+        <link rel="stylesheet" type="text/css" href="{{ "../../../components/icon/dist/index.css" | safe }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "../../../components/sidenav/dist/index.css" | safe }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "../../../components/divider/dist/index.css" | safe }}"/>
+
+        <link rel="stylesheet" type="text/css" href="{{ "../../../tokens/dist/index.css" | safe }}"/>
+
+        <!-- CSS to render the diff2html code -->
+        <link rel="stylesheet" type="text/css" href="{{ "../../../node_modules/diff2html/bundles/css/diff2html.min.css" | safe }}" />
+
+        <style>
+            body {
+                --mod-detail-margin-start: 0;
+
+                font-family: var(--spectrum-default-font-family);
+                background-color: var(--spectrum-background-layer-1-color);
+                color: var(--spectrum-neutral-content-color-default);
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+                margin: 0;
+
+                scroll-behavior: smooth;
+                scroll-margin-block-start: 2em;
+            }
+            .spectrum-Container {
+                display: flex;
+                flex-flow: row-reverse nowrap;
+                gap: .5em;
+
+                block-size: 100vh;
+                inline-size: min(1480px, 98vw);
+                margin-inline: auto;
+
+                overflow: hidden;
+            }
+            .spectrum-Container-main {
+                flex-grow: 1;
+                max-height: 100vh;
+                overflow-y: auto;
+            }
+            .spectrum-Container-main header {
+                margin-block-start: 50px;
+                margin-block-end: 2em;
+            }
+            .spectrum-Container-main section {
+                background-color: var(--spectrum-background-layer-2-color);
+                color: var(--spectrum-neutral-content-color-default);
+                border-radius: 4px;
+                padding: 1rem;
+            }
+            .d2h-code-side-linenumber { position: relative !important; }
+        </style>
+    </head>
+    <body class="spectrum spectrum--light spectrum--medium">
+        <a name="#top"></a>
+        <div class="spectrum-Container">
+            {{ nav | safe }}
+
+            <main class="spectrum-Container-main">
+                <header class="spectrum-Typography">
+                    <h1 class="spectrum-Heading spectrum-Heading--sizeXL">Changes to {{ component }}</h1>
+                    <p class="spectrum-Body spectrum-Body--sizeM">Local content is rendered in the panel on the right and compared against changes in tag v{{ tag }} (rendered in the panel on the left).</p>
+                </header>
+
+                <section>
+                    {{ html | safe }}
+                </section>
+            </main>
+        </div>
+
+        <!-- JS to render the diff2html code -->
+        <script type="text/javascript" src="{{ "../../../node_modules/diff2html/bundles/js/diff2html.min.js" | safe }}"></script>
+
+        <!-- For Adobe Clean font support -->
+        <script src="https://use.typekit.net/bbk5msc.js"></script>
+
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                // This wrapper prevents loading the font more than once
+                if (!window.Typekit) {
+                    const kitId =
+                        document.querySelector('[lang]:not([lang="en-US"])') === null
+                            ? "mge7bvf"
+                            : "rok6rmo";
+
+                    const html = document.documentElement;
+                    html.classList.add("wf-loading");
+
+                    const t = setTimeout(function () {
+                        html.classList.remove("wf-loading");
+                        html.classList.add("wf-inactive");
+                    }, 3000);
+
+                    const tk = document.createElement("script");
+                    let d = false;
+
+                    // Always load over https
+                    tk.src = "https://use.typekit.net/" + kitId + ".js";
+                    tk.type = "text/javascript";
+                    tk.async = "true";
+                    tk.onload = tk.onreadystatechange = () => {
+                        const a = this.readyState;
+                        if (d || (a && a !== "complete" && a !== "loaded")) return;
+
+                        d = true;
+                        clearTimeout(t);
+
+                        try {
+                            window.Typekit = Typekit.load({
+                                kitId,
+                                scriptTimeout: 3000,
+                                active: function () {
+                                    var loader = document.getElementById("loader");
+                                    if (loader) {
+                                        setTimeout(function () {
+                                            // Hide the loader
+                                            loader.style.display = "none";
+                                        }, 125);
+                                    }
+                                },
+                            });
+                        } catch (b) {}
+                    };
+
+                    const script = document.getElementsByTagName("script")[0];
+                    script.parentNode.insertBefore(tk, script);
+                }
+            });
+
+            try {
+                Typekit.load();
+            } catch (e) {}
+        </script>
+    </body>
+</html>
