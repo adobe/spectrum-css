@@ -167,7 +167,7 @@ const CustomButton = ({
 		<div
 			style=${ifDefined(styleMap({
 				padding: "1rem",
-				backgroundColor: staticColor === "white" ? "rgb(5, 108, 92)" : staticColor === "black" ? "rgb(211, 246, 234)" : undefined,
+				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
 				...customStyles
 			}))}
 		>
@@ -260,7 +260,7 @@ const PendingButton = ({
 			<div
 				style=${ifDefined(styleMap({
 					padding: "1rem",
-					backgroundColor: "rgb(5, 108, 92)",
+					backgroundColor: "rgb(15, 121, 125)",
 					...customStyles
 				}))}
 			>
@@ -280,7 +280,7 @@ const PendingButton = ({
 					<div
 						style=${ifDefined(styleMap({
 							padding: "1rem",
-							backgroundColor: "rgb(5, 108, 92)",
+							backgroundColor: "rgb(15, 121, 125)",
 							...customStyles
 						}))}
 					>
