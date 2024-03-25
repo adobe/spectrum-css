@@ -1,0 +1,51 @@
+name: Releases
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
+
+    steps:
+        - name: Check out code
+          uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+            persist-credentials: false
+
+        - name: Configure CI Git User
+          run: |
+            git config user.name adobe-bot
+            git config user.email grp-opensourceoffice@adobe.com
+
+        - name: Use Node LTS version
+          uses: actions/setup-node@v4
+          with:
+            node-version: 18
+            registry-url: https://registry.npmjs.org
+
+        ## --- INSTALL --- ##
+        # If statement isn't needed here b/c yarn will leverage the cache if it exists
+        - name: Install dependencies
+          shell: bash
+          run: yarn install --frozen-lockfile
+
+        - name: Publish
+          shell: bash
+          run: yarn release --yes --summary-file
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
+
+        - name: Upload lerna report
+          uses: actions/upload-artifact@v2
+          with:
+            name: lerna-report
+            path: |
+              lerna-publish-summary.json
