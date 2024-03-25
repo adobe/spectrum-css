@@ -15,9 +15,6 @@ governing permissions and limitations under the License.
 /* default for all buttons */
 .spectrum-Button {
   --spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
-  --spectrum-button-border-radius: var(--spectrum-corner-radius-full);
-  --spectrum-button-border-width: var(--spectrum-border-width-200);
-  --spectrum-button-line-height: 1.2; /* Hack to keep buttons at 32px */
 
   --spectrum-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-button-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
@@ -25,6 +22,9 @@ governing permissions and limitations under the License.
 
   --spectrum-button-min-width: calc(var(--spectrum-component-height-100) * var(--spectrum-button-minimum-width-multiplier));
   --spectrum-button-height: var(--spectrum-component-height-100);
+
+  --spectrum-button-border-radius: calc(var(--spectrum-button-height) / 2);
+  --spectrum-button-border-width: var(--spectrum-border-width-200);
 
   /* @todo set line-height value per size, using font size specific line-height tokens when they are finalized. */
   --spectrum-button-line-height: 1.2;
