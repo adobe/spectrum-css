@@ -1,23 +1,23 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { capitalize } from "lodash-es";
 
-import "../index.css";
+import "@spectrum-css/typography/index.css";
 
-// More on component templates: https://storybook.js.org/docs/web-components/writing-stories/introduction#using-args
 export const Template = ({
 	rootClass = "spectrum-Typography",
 	semantics,
-	size,
+	size = "m",
 	variant,
 	weight,
 	glyph = "sans-serif",
 	id,
 	content = [],
 	customClasses = [],
-	// ...globals
+	customStyles = {},
 }) => {
 	if (Array.isArray(content)) {
 		content = content.map((c) => {
@@ -33,6 +33,7 @@ export const Template = ({
 				glyph,
 				id,
 				customClasses,
+				customStyles,
 				...c,
 			});
 		});
@@ -74,12 +75,14 @@ export const Template = ({
 				})}
 				>${content}</span
 			>`;
-		} else if (variant.includes("strong")) {
+		}
+		else if (variant.includes("strong")) {
 			content = html`<strong
 				class=${classMap({ [`${rootClass}-strong`]: true })}
 				>${content}</strong
 			>`;
-		} else if (variant.includes("emphasized")) {
+		}
+		else if (variant.includes("emphasized")) {
 			content = html`<em
 				class=${classMap({ [`${rootClass}-emphasized`]: true })}
 				>${content}</em
@@ -89,20 +92,20 @@ export const Template = ({
 
 	if (semantics === "heading")
 		return html`
-			<h2 class=${classMap(classes)} id=${ifDefined(id)}>${content}</h2>
+			<h2 class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${content}</h2>
 		`;
 
 	if (semantics === "body")
 		return html`
-			<p class=${classMap(classes)} id=${ifDefined(id)}>${content}</p>
+			<p class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${content}</p>
 		`;
 
 	if (semantics === "code")
 		return html`
-			<code class=${classMap(classes)} id=${ifDefined(id)}>${content}</code>
+			<code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${content}</code>
 		`;
 
 	return html`
-		<span class=${classMap(classes)} id=${ifDefined(id)}>${content}</span>
+		<span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${content}</span>
 	`;
 };

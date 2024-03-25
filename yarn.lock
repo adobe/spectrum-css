@@ -13597,6 +13597,11 @@ postcss-nested@^6.0.1:
   dependencies:
     postcss-selector-parser "^6.0.11"
 
+postcss-pseudo-classes@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/postcss-pseudo-classes/-/postcss-pseudo-classes-0.4.0.tgz#e3ecfff1c30db7ecda9dd063bc80499b305393f5"
+  integrity sha512-k1MTMzMdBg3eW05QV/W3rZyuzOFJ3HU3AMbMamillv5G/5NuepHdMl6jO+6GHnjxH12/sNmBqdOI+zYIP86kZg==
+
 postcss-reporter@^7.0.0:
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/postcss-reporter/-/postcss-reporter-7.0.5.tgz#e55bd0fdf8d17e4f25fb55e9143fcd79349a2ceb"

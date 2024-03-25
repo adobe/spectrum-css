@@ -6,7 +6,7 @@ import { when } from "lit/directives/when.js";
 
 import { capitalize, lowerCase } from "lodash-es";
 
-import "../index.css";
+import "@spectrum-css/actionbutton/index.css";
 
 /**
  * @todo load order should not influence the icon size but it is; fix this
@@ -22,6 +22,9 @@ export const Template = ({
 	isQuiet = false,
 	isSelected = false,
 	isEmphasized = false,
+	isHovered = false,
+	isFocused = false,
+	isActive = false,
 	isDisabled = false,
 	hasPopup = false,
 	hideLabel = false,
@@ -31,6 +34,7 @@ export const Template = ({
 	customIconClasses = [],
 	onclick,
 	id,
+	testId,
 	role,
 	...globals
 }) => {
@@ -59,9 +63,13 @@ export const Template = ({
 					typeof staticColor !== "undefined",
 				["is-disabled"]: isDisabled,
 				["is-selected"]: isSelected,
+				["is-hover"]: isHovered,
+				["is-focus-visible"]: isFocused,
+				["is-active"]: isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
 			role=${ifDefined(role)}
 			style=${ifDefined(styleMap(customStyles))}
 			?disabled=${isDisabled}
@@ -71,7 +79,8 @@ export const Template = ({
 				Icon({
 					...globals,
 					size,
-					iconName: "CornerTriangle100",
+					iconName: "CornerTriangle",
+					setName: "ui",
 					customClasses: [`${rootClass}-hold`],
 				})
 			)}
