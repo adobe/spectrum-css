@@ -12,12 +12,14 @@ export const Template = ({
 	customStyles = {},
 	id,
 	content = [],
+	size,
 	role,
 }) => {
 	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${ifDefined(styleMap({
