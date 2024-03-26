@@ -74,12 +74,14 @@ export const Template = ({
 				})}
 				>${content}</span
 			>`;
-		} else if (variant.includes("strong")) {
+		}
+		else if (variant.includes("strong")) {
 			content = html`<strong
 				class=${classMap({ [`${rootClass}-strong`]: true })}
 				>${content}</strong
 			>`;
-		} else if (variant.includes("emphasized")) {
+		}
+		else if (variant.includes("emphasized")) {
 			content = html`<em
 				class=${classMap({ [`${rootClass}-emphasized`]: true })}
 				>${content}</em

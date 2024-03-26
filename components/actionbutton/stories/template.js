@@ -39,7 +39,8 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
@@ -56,8 +57,8 @@ export const Template = ({
 				[`${rootClass}--emphasized`]: isEmphasized,
 				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
 					typeof staticColor !== "undefined",
-				[`is-disabled`]: isDisabled,
-				[`is-selected`]: isSelected,
+				["is-disabled"]: isDisabled,
+				["is-selected"]: isSelected,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
