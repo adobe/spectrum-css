@@ -127,23 +127,6 @@ governing permissions and limitations under the License.
     --spectrum-button-background-color-hover: var(--spectrum-accent-background-color-hover);
     --spectrum-button-background-color-down: var(--spectrum-accent-background-color-down);
     --spectrum-button-background-color-focus: var(--spectrum-accent-background-color-key-focus);
-
-    &.spectrum-Button--outline {
-      --spectrum-button-background-color-default: transparent;
-      --spectrum-button-background-color-hover: var(--spectrum-accent-color-200);
-      --spectrum-button-background-color-down: var(--spectrum-accent-color-300);
-      --spectrum-button-background-color-focus: var(--spectrum-accent-color-200);
-
-      --spectrum-button-border-color-default: var(--spectrum-accent-color-900);
-      --spectrum-button-border-color-hover: var(--spectrum-accent-color-1000);
-      --spectrum-button-border-color-down: var(--spectrum-accent-color-1100);
-      --spectrum-button-border-color-focus: var(--spectrum-accent-color-1000);
-
-      --spectrum-button-content-color-default: var(--spectrum-accent-content-color-default);
-      --spectrum-button-content-color-hover: var(--spectrum-accent-content-color-hover);
-      --spectrum-button-content-color-down: var(--spectrum-accent-content-color-down);
-      --spectrum-button-content-color-focus: var(--spectrum-accent-content-color-key-focus);
-    }
   }
 
   /* ---- Negative ---- */
@@ -152,23 +135,6 @@ governing permissions and limitations under the License.
     --spectrum-button-background-color-hover: var(--spectrum-negative-background-color-hover);
     --spectrum-button-background-color-down: var(--spectrum-negative-background-color-down);
     --spectrum-button-background-color-focus: var(--spectrum-negative-background-color-key-focus);
-
-    &.spectrum-Button--outline {
-      --spectrum-button-background-color-default: transparent;
-      --spectrum-button-background-color-hover: var(--spectrum-negative-color-200);
-      --spectrum-button-background-color-down: var(--spectrum-negative-color-300);
-      --spectrum-button-background-color-focus: var(--spectrum-negative-color-200);
-
-      --spectrum-button-border-color-default: var(--spectrum-negative-color-900);
-      --spectrum-button-border-color-hover: var(--spectrum-negative-color-1000);
-      --spectrum-button-border-color-down: var(--spectrum-negative-color-1100);
-      --spectrum-button-border-color-focus: var(--spectrum-negative-color-1000);
-
-      --spectrum-button-content-color-default: var(--spectrum-negative-content-color-default);
-      --spectrum-button-content-color-hover: var(--spectrum-negative-content-color-hover);
-      --spectrum-button-content-color-down: var(--spectrum-negative-content-color-down);
-      --spectrum-button-content-color-focus: var(--spectrum-negative-content-color-key-focus);
-    }
   }
 
   /* ---- Primary ---- */
@@ -557,7 +523,7 @@ a.spectrum-Button {
       }
     }
 
-    &.spectrum-Button--accent:not(.spectrum-Button--outline) {
+    &.spectrum-Button--accent {
       /* The accent fill variant looks different than the other buttons.
          It inverts the background and content colors. */
       --highcontrast-button-background-color-default: ButtonText;
