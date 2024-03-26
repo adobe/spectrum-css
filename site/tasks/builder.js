@@ -11,11 +11,11 @@ governing permissions and limitations under the License.
 */
 
 const {
-    dirs,
-    printHeader,
-    printFooter,
-    relativePrint,
-    getFolderDependencyOrder,
+	dirs,
+	printHeader,
+	printFooter,
+	relativePrint,
+	getFolderDependencyOrder,
 	getPackageFromPath,
 } = require("./utilities");
 
@@ -85,12 +85,12 @@ const uiIcons = require.resolve("@spectrum-css/ui-icons");
 async function copy_Assets(globs = [], {
 	cwd,
 	outputDir,
-    ...fastGlobOptions
+	...fastGlobOptions
 } = {}) {
 	const files = await fg(globs, {
 		onlyFiles: true,
 		allowEmpty: true,
-    	...fastGlobOptions,
+		...fastGlobOptions,
 		cwd,
 	});
 
@@ -268,8 +268,8 @@ async function fetchData_forPackage(file, data = {}) {
 
 	// Drop package org
 	const componentName = getPackageFromPath(file);
-    if (!componentName) {
-        return Promise.reject(new Error(`${"✗".red}  No package found for ${file}`));
+	if (!componentName) {
+		return Promise.reject(new Error(`${"✗".red}  No package found for ${file}`));
 	}
 
 	const pkgPath = path.join(dirs.components, componentName, "package.json");
@@ -289,7 +289,8 @@ async function fetchData_forPackage(file, data = {}) {
 	if (!component.name) {
 		if (data.dnaVars?.[`spectrum-${component.id}-name`]) {
 			component.name = data.dnaVars[`spectrum-${component.id}-name`];
-		} else {
+		}
+		else {
 			component.name = componentName ?? component.id;
 		}
 	}
@@ -359,8 +360,8 @@ async function buildPages_forPackage(dep, globalData = {}) {
 	const pkgPath = require.resolve(path.join(dep, "package.json"));
 	const dirName = path.dirname(pkgPath);
 	const componentName = getPackageFromPath(dirName);
-    if (!componentName) {
-        return Promise.reject(new Error(`${"✗".red}  No package found for ${dirName}`));
+	if (!componentName) {
+		return Promise.reject(new Error(`${"✗".red}  No package found for ${dirName}`));
 	}
 
 	const files = await fg("metadata/*.yml", {
@@ -377,7 +378,7 @@ async function buildPages_forPackage(dep, globalData = {}) {
 
 		// Without a URL, there's nowhere to write this file
 		if (!data.pageURL) {
-			return Promise.reject(`${"✗".red}  Could not determine a page url for ${relativePrint(file).yellow}.`)
+			return Promise.reject(`${"✗".red}  Could not determine a page url for ${relativePrint(file).yellow}.`);
 		}
 
 		const outputPath = path.join(dirs.publish, data.pageURL);
@@ -399,7 +400,7 @@ async function buildPages_forPackage(dep, globalData = {}) {
 		if (!fs.existsSync(path.dirname(outputPath))) {
 			await fsp.mkdir(path.dirname(outputPath), { recursive: true }).catch((err) => {
 				if (!err) return;
-				console.log(`${"✗".red}  problem making ${relativePrint(path.dirname(output)).yellow}`);
+				console.log(`${"✗".red}  problem making ${relativePrint(path.dirname(outputPath)).yellow}`);
 				return Promise.reject(err);
 			});
 		}
@@ -440,6 +441,7 @@ async function build_forPackage(dirName, globalData = {}) {
 		return Promise.reject(new Error(`${"✗".red}  No package found for ${dirName}`));
 	}
 
+	/** @todo how do we load dependencies not hosted in the repo? */
 	return Promise.all([
 		buildPages_forPackage(dirName, globalData),
 		copy_Assets(["*.css", "themes/*.css", "*.json"], {
@@ -476,7 +478,7 @@ async function build_forPackages(globalData = {}) {
 
 	const key = printHeader("", { timerKey: "[build] 📦  Components" });
 	// Build pages for all provided dependencies
-	return Promise.all(packages.map(package => build_forPackage(package, globalData))).then(() => {
+	return Promise.all(packages.map(pkg => build_forPackage(pkg, globalData))).then(() => {
 		printFooter(key);
 	}).catch((err) => {
 		printFooter(key);
@@ -534,7 +536,7 @@ async function buildPage_forSite(file, globalData = {}) {
 	if (!fs.existsSync(path.dirname(outputPath))) {
 		await fsp.mkdir(path.dirname(outputPath), { recursive: true }).catch((err) => {
 			if (!err) return;
-			console.log(`${"✗".red}  problem making ${relativePrint(path.dirname(output)).yellow}`);
+			console.log(`${"✗".red}  problem making ${relativePrint(path.dirname(outputPath)).yellow}`);
 			return Promise.reject(err);
 		});
 	}
@@ -660,29 +662,29 @@ async function build_forStore(store) {
  */
 async function watch_Styles(file) {
 	const componentName = getPackageFromPath(file);
-    if (!componentName) {
-        return Promise.reject(new Error(`${"✗".red}  No package found for ${file}`));
-    }
+	if (!componentName) {
+		return Promise.reject(new Error(`${"✗".red}  No package found for ${file}`));
+	}
 
-    const dirName = path.join(dirs.components, componentName);
-    if (!fs.existsSync(dirName)) {
-        return Promise.reject(new Error(`${"✗".red}  No local package found for ${componentName}`));
+	const dirName = path.join(dirs.components, componentName);
+	if (!fs.existsSync(dirName)) {
+		return Promise.reject(new Error(`${"✗".red}  No local package found for ${componentName}`));
 	}
 
 	const outputDir = path.join("components", componentName);
 
-    const copyTask = () => copy_Assets(["**"], {
-        cwd: path.join(dirName, "dist"),
-        outputDir,
-        allowEmpty: true,
-        absolute: false,
-    })
-        .then(() => fg.sync(`${dirName}/dist/*.css`));
+	const copyTask = () => copy_Assets(["**"], {
+		cwd: path.join(dirName, "dist"),
+		outputDir,
+		allowEmpty: true,
+		absolute: false,
+	})
+		.then(() => fg.sync(`${dirName}/dist/*.css`));
 
-	const processorPath = path.join(dirs.root, `tasks/component-builder.js`);
+	const processorPath = path.join(dirs.root, "tasks/component-builder.js");
 	if (!fs.existsSync(processorPath)) {
 		console.log(`${"✗".red}  No processing function found for ${relativePrint(processorPath)}`);
-        return copyTask();
+		return copyTask();
 	}
 
 	if (fs.existsSync(outputDir)) await rimraf(outputDir);
