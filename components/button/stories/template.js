@@ -13,37 +13,38 @@ import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories
 import "../index.css";
 
 export const Template = ({
-  rootClass = "spectrum-Button",
-  id,
-  customClasses = [],
-  customStyles = {},
-  size = "m",
-  label,
-  hideLabel = false,
-  iconName,
-  iconAfterLabel = false,
-  variant,
-  staticColor,
-  treatment,
-  onclick,
-  isDisabled = false,
-  isPending = false,
-  isPendingStory = false,
-  ariaExpanded,
-  ariaControls,
-  ...globals
+	rootClass = "spectrum-Button",
+	id,
+	customClasses = [],
+	customStyles = {},
+	size = "m",
+	label,
+	hideLabel = false,
+	iconName,
+	iconAfterLabel = false,
+	variant,
+	staticColor,
+	treatment,
+	onclick,
+	isDisabled = false,
+	isPending = false,
+	isPendingStory = false,
+	ariaExpanded,
+	ariaControls,
+	...globals
 }) => {
 	const { express } = globals;
 	try {
 		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
 		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
-  const [, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 
-  return html`
+	return html`
     <button
       class=${classMap({
         [rootClass]: true,
@@ -73,14 +74,14 @@ export const Template = ({
       )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
       ${when(isPendingStory || isPending, () => {
-        const isOverBackground = staticColor === 'white';
+        const isOverBackground = staticColor === "white";
         return ProgressCircle({
           ...globals,
-          size: 's',
+          size: "s",
           overBackground: isOverBackground,
           isIndeterminate: true,
           addStaticBackground: false
-        })
+        });
       })}
     </button>
   `;
