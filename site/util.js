@@ -109,7 +109,7 @@ exports.getSlug = function (name, subName = undefined) {
 	return name.toLowerCase().replace(/[^a-z\-]/g, "");
 };
 
-exports.populateDNAInfo = function (component, dnaVars) {
+exports.populateDNAInfo = function (component) {
 	const getDNAStatus = function (dnaStatus) {
 		if (!dnaStatus) dnaStatus = "Contribution";
 
@@ -121,7 +121,6 @@ exports.populateDNAInfo = function (component, dnaVars) {
 	};
 
 	if (!component.id) component.id = component.name?.toLowerCase();
-	if (!component.name) component.name = dnaVars[`spectrum-${component.id}-name`];
 	if (!component.status) component.status = "Contribution";
 	if (!component.slug) component.slug = this.getSlug(component.name);
 
@@ -132,7 +131,7 @@ exports.populateDNAInfo = function (component, dnaVars) {
 		Deprecated: "Deprecated",
 	}[component.status];
 
-	const dnaComponentStatus = component.dnaStatus ?? dnaVars[`spectrum-${component.id}-status`];
+	const dnaComponentStatus = component.dnaStatus;
 	component.dnaStatus = component.cssStatus === "Deprecated" ? "Deprecated" : getDNAStatus(dnaComponentStatus);
 
 	if (!component?.examples) return;
@@ -159,7 +158,7 @@ exports.populateDNAInfo = function (component, dnaVars) {
 
 			component.examples[pageData.id] = pageData;
 
-			this.populateDNAInfo(pageData, dnaVars);
+			this.populateDNAInfo(pageData);
 		})
 	);
 };

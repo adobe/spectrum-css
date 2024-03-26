@@ -10,174 +10,215 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-function SpectrumSwitcher(options) {
-	options = options || {};
+// eslint-disable-next-line no-unused-vars
+class SpectrumSwitcher {
+	constructor({ varsVersion, theme, scale, direction, callback }) {
+		this._callback = callback.bind(this);
 
-	this._theme = options.theme || "light";
-	this._scale = options.scale || "medium";
-	this._direction = options.direction || "ltr";
-	this._varsVersion = options.varsVersion || "default";
-	this._callback = options.callback || null;
+		this._theme;
+		this._scale;
+		this._direction;
+		this._varsVersion;
 
-	document.addEventListener(
-		"keydown",
-		function (event) {
-			if (event.ctrlKey) {
-				let property;
-				let value;
-				if ((value = SpectrumSwitcher.ThemeKeys[event.key])) {
-					property = "theme";
-				} else if ((value = SpectrumSwitcher.ScaleKeys[event.key])) {
-					property = "scale";
-				} else if ((value = SpectrumSwitcher.DirectionKeys[event.key])) {
-					property = "direction";
-				} else if ((value = SpectrumSwitcher.VarsVersionKeys[event.key])) {
-					property = "varsVersion";
-				}
-
-				this[property] = value;
-
-				if (this._callback) {
-					this._callback({
-						property: property,
-						value: value,
-					});
-				}
+		window.addEventListener("keydown", this.keyDownHandler);
+		window.addEventListener("resize", () => {
+			if (window.matchMedia("(max-width: 768px)").matches) {
+				this.scaleMQLHandler();
 			}
-		}.bind(this)
-	);
-}
-
-SpectrumSwitcher.Scales = ["medium", "large"];
-
-SpectrumSwitcher.ColorStops = ["light", "dark", "darkest"];
-
-SpectrumSwitcher.Direction = ["ltr", "rtl"];
-
-SpectrumSwitcher.VarsVersion = ["default", "express"];
-
-SpectrumSwitcher.VarsVersionKeys = {
-	d: "default",
-	e: "express",
-};
-
-SpectrumSwitcher.ThemeKeys = {
-	1: "light",
-	2: "dark",
-	3: "darkest",
-};
-
-SpectrumSwitcher.ScaleKeys = {
-	m: "medium",
-	l: "large",
-};
-
-SpectrumSwitcher.DirectionKeys = {
-	r: "rtl",
-	n: "ltr",
-};
-
-Object.defineProperty(SpectrumSwitcher.prototype, "theme", {
-	set: function (theme) {
-		SpectrumSwitcher.ColorStops.forEach(function (otherTheme) {
-			document.documentElement.classList.remove("spectrum--" + otherTheme);
 		});
-		document.documentElement.classList.add("spectrum--" + theme);
 
-		let prismLink = document.querySelector("[data-prism]");
+		window.addEventListener("DOMContentLoaded", () => {
+			this.theme = theme;
+			this.scale = scale;
+			this.direction = direction;
+			this.varsVersion = varsVersion;
+		});
+
+		// Watch the picker event for changes and reflect in the class object
+		window.addEventListener("picker:change", (event) => {
+			const value = event.detail.value;
+			if (event.target.id === "switcher-scale") {
+				this.scale = value;
+			}
+			else if (event.target.id === "switcher-theme") {
+				this.theme = value;
+			}
+			else if (event.target.id === "switcher-direction") {
+				this.direction = value;
+			}
+			else if (event.target.id === "switcher-vars-version") {
+				this.varsVersion = value;
+			}
+		});
+	}
+
+	get rootElements() {
+		return [...document.querySelectorAll(".spectrum")];
+	}
+
+	keyDownHandler (event) {
+		if (!event.ctrlKey) return;
+
+		let property;
+		let value;
+		if ((value = {
+			1: "light",
+			2: "dark",
+			3: "darkest",
+		}[event.key])) {
+			property = "theme";
+		}
+		else if ((value = {
+			m: "medium",
+			l: "large",
+		}[event.key])) {
+			property = "scale";
+		}
+		else if ((value = {
+			r: "rtl",
+			n: "ltr",
+		}[event.key])) {
+			property = "direction";
+		}
+		else if ((value = {
+			d: "default",
+			e: "express",
+		}[event.key])) {
+			property = "varsVersion";
+		}
+
+		this[property] = value;
+
+		if (this._callback) this._callback({ property, value });
+	}
+
+	scaleMQLHandler() {
+		this.scale = window.matchMedia("(max-width: 768px)").matches ? "large" : "medium";
+	}
+
+	set theme(input) {
+		if (this._theme === input) return;
+
+		["light", "dark", "darkest"].forEach((otherTheme) => {
+			this.rootElements.forEach(el => el.classList.remove(`spectrum--${otherTheme}`));
+		});
+
+		this.rootElements.forEach(el => el.classList.add(`spectrum--${input}`));
+
+		if (window.localStorage) {
+			localStorage.setItem("swc-docs:theme:color", input);
+		}
+
+		const prismLink = document.querySelector("[data-prism]");
 		let prismDarkLink = document.querySelector("[data-prism-dark]");
-		if (theme === "dark" || theme === "darkest") {
-			if (prismLink) {
-				if (!prismDarkLink) {
-					prismDarkLink = document.createElement("link");
-					prismDarkLink.setAttribute("rel", "stylesheet");
-					prismDarkLink.setAttribute("data-prism-dark", "");
-					prismDarkLink.setAttribute("type", "text/css");
-					prismDarkLink.setAttribute("href", "css/prism/prism-dark.css");
-				}
 
-				prismLink.parentElement.insertBefore(
-					prismDarkLink,
-					prismLink.nextElementSibling
-				);
+		if (input.startsWith("dark") && prismLink) {
+			if (!prismDarkLink) {
+				prismDarkLink = document.createElement("link");
+				prismDarkLink.setAttribute("rel", "stylesheet");
+				prismDarkLink.setAttribute("data-prism-dark", "");
+				prismDarkLink.setAttribute("type", "text/css");
+				prismDarkLink.setAttribute("href", "css/prism/prism-dark.css");
 			}
-		} else {
-			if (prismDarkLink) {
-				prismDarkLink.parentElement.removeChild(prismDarkLink);
-			}
+
+			prismLink.parentElement.insertBefore(
+				prismDarkLink,
+				prismLink.nextElementSibling
+			);
+		}
+		else if (prismDarkLink) {
+			prismDarkLink.parentElement.removeChild(prismDarkLink);
 		}
 
-		this._theme = theme;
-	},
-	get: function () {
+		if (this._callback) {
+			this._callback({
+				property: "theme",
+				value: input,
+			});
+		}
+
+		this._theme = input;
+	}
+
+	get theme () {
 		return this._theme;
-	},
-});
+	}
 
-Object.defineProperty(SpectrumSwitcher.prototype, "varsVersion", {
-	set: function (varsVersion) {
-		// default and express path names
-		const defaultName = "vars";
-		const expressName = "expressvars";
+	set varsVersion(input) {
+		if (this._varsVersion === input) return;
 
-		// if the selection is 'default', switch the path to be 'express', and vice-versa
-		const pathNameToUpdate =
-			varsVersion === "default" ? expressName : defaultName;
-
-		// get all relevant stylesheets that need to be switched
-		const styleSheets = document.querySelectorAll(
-			`link[href*="components/${pathNameToUpdate}/"]`
-		);
-
-		// update each relevant stylesheet with the selected path
-		[...styleSheets].map((sheet) => {
-			if (pathNameToUpdate === defaultName) {
-				sheet.setAttribute(
-					"href",
-					sheet.href.replaceAll(defaultName, expressName)
-				);
-			} else {
-				sheet.setAttribute(
-					"href",
-					sheet.href.replaceAll(expressName, defaultName)
-				);
-			}
-		});
-
-		if (varsVersion === "express") {
-			document.documentElement.classList.add("spectrum--express");
-		} else {
-			document.documentElement.classList.remove("spectrum--express");
+		if (input === "express") {
+			this.rootElements.forEach(el => el.classList.add("spectrum--express"));
+		}
+		else {
+			this.rootElements.forEach(el => el.classList.remove("spectrum--express"));
 		}
 
-		this._varsVersion = varsVersion;
-	},
-	get: function () {
+		if (window.localStorage) {
+			localStorage.setItem("swc-docs:theme:theme", input);
+		}
+
+		if (this._callback) {
+			this._callback({
+				property: "vars",
+				value: input,
+			});
+		}
+
+		this._varsVersion = input;
+	}
+
+	get varsVersion() {
 		return this._varsVersion;
-	},
-});
+	}
 
-Object.defineProperty(SpectrumSwitcher.prototype, "scale", {
-	set: function (scale) {
-		SpectrumSwitcher.Scales.forEach(function (otherScale) {
-			document.documentElement.classList.remove("spectrum--" + otherScale);
+	set scale (input) {
+		if (this._scale === input) return;
+
+		["medium", "large"].forEach((otherScale) => {
+			this.rootElements.forEach(el => el.classList.remove(`spectrum--${otherScale}`));
 		});
-		document.documentElement.classList.add("spectrum--" + scale);
 
-		this._scale = scale;
-	},
-	get: function () {
+		this.rootElements.forEach(el => el.classList.add(`spectrum--${input}`));
+
+		if (window.localStorage) {
+			localStorage.setItem("swc-docs:theme:scale", input);
+		}
+
+		if (this._callback) {
+			this._callback({
+				property: "scale",
+				value: input,
+			});
+		}
+
+		this._scale = input;
+	}
+
+	get scale() {
 		return this._scale;
-	},
-});
+	}
 
-Object.defineProperty(SpectrumSwitcher.prototype, "direction", {
-	set: function (direction) {
-		document.documentElement.setAttribute("dir", direction);
+	set direction(input) {
+		if (this._direction === input) return;
 
-		this._direction = direction;
-	},
-	get: function () {
+		document.documentElement.setAttribute("dir", input);
+
+		if (window.localStorage) {
+			localStorage.setItem("swc-docs:theme:dir", input);
+		}
+
+		if (this._callback) {
+			this._callback({
+				property: "direction",
+				value: input,
+			});
+		}
+
+		this._direction = input;
+	}
+
+	get direction() {
 		return this._direction;
-	},
-});
+	}
+}

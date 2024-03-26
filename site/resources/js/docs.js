@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 /* eslint-disable no-unused-vars */
-/* global document, window, loadIcons */
+/* global loadIcons */
 
 "use strict";
 
@@ -18,17 +18,14 @@ loadIcons("img/spectrum-css-icons.svg");
 loadIcons("img/spectrum-icons.svg");
 
 // Show and hide code samples
-function toggleMarkupVisibility(event) {
+document.addEventListener("click", (event) => {
+	if (!event.target.classList.contains("js-markup-toggle")) return;
+
 	event.preventDefault();
-	var exampleMarkup = event.target.closest(".spectrum-CSSExample-markup");
-	var style = window.getComputedStyle(exampleMarkup);
-	var isOpen = exampleMarkup.classList.contains("is-open");
+
+	const exampleMarkup = event.target.closest(".spectrum-CSSExample-markup");
+	const isOpen = exampleMarkup.classList.contains("is-open");
+
 	event.target.innerHTML = isOpen ? "Show markup" : "Hide markup";
 	exampleMarkup.classList.toggle("is-open");
-}
-
-document.addEventListener("click", function (event) {
-	if (event.target.classList.contains("js-markup-toggle")) {
-		toggleMarkupVisibility(event);
-	}
 });

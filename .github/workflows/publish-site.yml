@@ -87,7 +87,7 @@ jobs:
             - name: Build storybook site
               if: ${{ inputs.storybook-url == '' }}
               shell: bash
-              run: yarn ci:storybook --output-dir ../dist/preview
+              run: yarn nx run storybook:build:docs
 
             ## --- DEPLOY WEBSITE TO NETLIFY --- ##
             - name: Deploy

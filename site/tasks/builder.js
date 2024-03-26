@@ -12,8 +12,6 @@ governing permissions and limitations under the License.
 
 const {
 	dirs,
-	printHeader,
-	printFooter,
 	relativePrint,
 	getFolderDependencyOrder,
 	getPackageFromPath,
@@ -23,12 +21,12 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const _ = require("lodash");
 const fg = require("fast-glob");
 const pug = require("pug");
 const yaml = require("js-yaml");
 const lunr = require("lunr");
 const npmFetch = require("npm-registry-fetch");
-const rimraf = require("rimraf");
 
 // Import the component-builder-simple to process the site styles
 const { processCSS } = require("../../tasks/component-builder.js");
@@ -39,10 +37,12 @@ const loadicons = require.resolve("loadicons");
 const lunrPath = require.resolve("lunr");
 const prism = require.resolve("prismjs");
 const tokens = require.resolve("@spectrum-css/tokens");
-const vars = require.resolve("@spectrum-css/vars");
-const expressvars = require.resolve("@spectrum-css/expressvars");
 const workflowIcons = require.resolve("@adobe/spectrum-css-workflow-icons");
 const uiIcons = require.resolve("@spectrum-css/ui-icons");
+
+const deprecatedComponents = ["quickaction", "cyclebutton", "searchwithin", "splitbutton"];
+
+const timeInMs = (seconds, nanoseconds) => (seconds * 1000000000 + nanoseconds) / 1000000;
 
 /**
  * @typedef {Object} SiteUtilities
@@ -50,7 +50,7 @@ const uiIcons = require.resolve("@spectrum-css/ui-icons");
  * @property {import('prismjs').Prism} Prism
  * @property {(status: string) => "negative"|"notice"|"positive"|"neutral"} getStatusLightVariant
  * @property {(name: string, subName?: string) => string} getSlug
- * @property {(component: object, dnaVars: object) => void} populateDNAInfo
+ * @property {(component: object) => void} populateDNAInfo
  */
 
 /**
@@ -65,7 +65,6 @@ const uiIcons = require.resolve("@spectrum-css/ui-icons");
 /**
  * @typedef {Object} TemplateData
  * @property {SiteUtilities} util
- * @property {Object} dnaVars
  * @property {Navigation[]} nav
  * @property {Object} component
  * @property {string} pageURL
@@ -102,8 +101,7 @@ async function copy_Assets(globs = [], {
 
 			if (!fs.existsSync(path.dirname(output))) {
 				await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
-					if (!err) return;
-					console.log(`${"✗".red}  problem making ${relativePrint(path.dirname(output)).yellow}`);
+					if (!err) return Promise.reject(new Error(`${"✗".red}  problem making ${relativePrint(path.dirname(output)).yellow}`));
 					return Promise.reject(err);
 				});
 			}
@@ -111,11 +109,9 @@ async function copy_Assets(globs = [], {
 			const input = path.join(cwd, file);
 
 			return fsp.copyFile(input, output).then(() => {
-				console.log(`${"✓".green}  ${relativePrint(input).gray} -> ${relativePrint(output).yellow}`);
-				return output;
+				return `${"✓".green}  ${relativePrint(input).gray} -> ${relativePrint(output).yellow}`;
 			}).catch((err) => {
-				if (!err) return;
-				console.log(`${"✗".red}  ${relativePrint(input).gray} -> ${relativePrint(output).yellow}`);
+				if (!err) return Promise.reject(new Error(`${"✗".red}  ${relativePrint(input).gray} -> ${relativePrint(output).yellow}`));
 				return Promise.reject(err);
 			});
 		})
@@ -127,8 +123,7 @@ async function copy_Assets(globs = [], {
  * @returns {Promise<string[]>}
  */
 async function copy_Resources() {
-	const key = printHeader("", { timerKey: "[copy] 📷  Site resources" });
-
+	const start = process.hrtime();
 	return Promise.all([
 		copy_Assets(["**"], { cwd: path.join(dirs.site, "resources") }),
 		copy_Assets(["index.css"], {
@@ -159,27 +154,20 @@ async function copy_Resources() {
 			cwd: path.dirname(uiIcons),
 			outputDir: "img",
 		}),
-		copy_Assets(["spectrum-*.css"], {
-			cwd: path.dirname(vars),
-			outputDir: "dependencies/@spectrum-css/vars",
-		}),
-		copy_Assets(["spectrum-*.css"], {
-			cwd: path.dirname(expressvars),
-			outputDir: "dependencies/@spectrum-css/expressvars",
-		}),
 		copy_Assets(["*.{png,jpg,jpeg,svg,ico}"], {
 			cwd: path.join(dirs.root, "assets"),
 			outputDir: "img"
 		}),
-	]).then((result) => {
-
-		printFooter(key);
-		return result.flat();
-	}).catch((err) => {
-
-		printFooter(key);
-		return Promise.reject(err);
-	});
+	]).then((results = []) => {
+		const end = process.hrtime(start);
+		return [
+			"\n\n[copy] 📷  Site resources",
+			...results.flat(),
+			"---------------------",
+			`processing took ${timeInMs(...end)}ms`,
+			"",
+		];
+	}).catch((err) => Promise.reject(err));
 }
 
 /**
@@ -187,19 +175,11 @@ async function copy_Resources() {
  * @returns {Promise<TemplateData>}
  */
 async function fetchData_forGlobal({
-	dnaVars = {},
 	nav =[],
 	docs =[],
 	store = {},
 	...otherData
 } = {}) {
-	/* Only fetch the metadata if we don't already have it */
-	if (Object.keys(dnaVars).length > 0) {
-		dnaVars = vars ? await fsp.readFile(vars)
-			.then(JSON.parse)
-			.catch(err => Promise.reject(err)) : {};
-	}
-
 	/* We're only going to process this data if we haven't already fetched it */
 	const hasNav = nav.length > 0;
 	const hasDocs = docs.length > 0;
@@ -212,7 +192,13 @@ async function fetchData_forGlobal({
 			absolute: true,
 		});
 
-		await Promise.all(files.map(async (file) => {
+		const deprecatedFiles = await fg("deprecated/*/*.yml", {
+			cwd: dirs.storybook,
+			allowEmpty: true,
+			absolute: true
+		});
+
+		await Promise.all([...files, ...deprecatedFiles].map(async (file) => {
 			const { component, pageURL } = await fetchData_forPackage(file);
 
 			if (Object.keys(component).length <= 0) {
@@ -224,6 +210,7 @@ async function fetchData_forGlobal({
 					name: component.name,
 					component: component.id,
 					hide: component.hide ?? false,
+					status: component.status,
 					href: pageURL,
 					description: component.description,
 				});
@@ -250,7 +237,6 @@ async function fetchData_forGlobal({
 
 	return {
 		util: require("../util"),
-		dnaVars,
 		nav: nav.sort((a, b) => a.name <= b.name ? -1 : 1),
 		docs,
 		store,
@@ -272,9 +258,12 @@ async function fetchData_forPackage(file, data = {}) {
 		return Promise.reject(new Error(`${"✗".red}  No package found for ${file}`));
 	}
 
-	const pkgPath = path.join(dirs.components, componentName, "package.json");
-
+	const pkgPath = require.resolve(`@spectrum-css/${componentName}/package.json`);
 	const dirName = path.dirname(pkgPath);
+	if (!dirName) {
+		return Promise.reject(new Error(`${"✗".red}  No package found for ${dirName}`));
+	}
+
 	const basename = path.basename(file, ".yml");
 
 	const component = await fsp.readFile(file, "utf-8")
@@ -287,30 +276,58 @@ async function fetchData_forPackage(file, data = {}) {
 	}
 
 	if (!component.name) {
-		if (data.dnaVars?.[`spectrum-${component.id}-name`]) {
-			component.name = data.dnaVars[`spectrum-${component.id}-name`];
-		}
-		else {
-			component.name = componentName ?? component.id;
-		}
+		component.name = componentName ?? component.id;
 	}
 
 	const pkg = await fsp.readFile(pkgPath)
 		.then(JSON.parse)
 		.catch(err => Promise.reject(err));
 
-	const releaseDate = await npmFetch.json(pkg.name).then(npmData => {
-		if (!npmData || !npmData.time || !npmData.time[pkg.version]) return;
-		return new Date(npmData.time[pkg.version])
+	let npmData;
+	try {
+		npmData = await npmFetch.json(pkg.name);
+	}
+	catch (err) {
+		console.log(err);
+	}
+
+	let releaseDate = "Unreleased";
+	if (npmData?.time?.[pkg.version]) {
+		releaseDate = new Date(npmData.time[pkg.version])
 			.toLocaleDateString("en-US", {
 				year: "numeric",
 				month: "long",
 				day: "numeric",
 			});
-	}).catch(() => {
+	}
+	else {
 		console.log(`${"✗".red}  Could not determine date of release for ${pkg.name.cyan}@${pkg.version}`);
-		return "Unreleased";
-	});
+	}
+
+	const releases = [
+		{ label: "Current version", version: pkg.version, date: releaseDate }
+	];
+
+	if (npmData?.["dist-tags"]) {
+		for (const [tag, version] of Object.entries(npmData["dist-tags"])) {
+			if (tag === "beta") continue;
+			// Spectrum 2 TBD
+			if (tag === "next") continue;
+			// Skip adding it to the table if it's the same version as current
+			if (tag === "latest" && version === pkg.version) continue;
+
+			let label = _.capitalize(tag);
+
+			const date = new Date(npmData.time[version])
+				.toLocaleDateString("en-US", {
+					year: "numeric",
+					month: "long",
+					day: "numeric",
+				});
+
+			releases.push({ tag, label, version, date });
+		}
+	}
 
 	const dependencyOrder = await getFolderDependencyOrder(dirName);
 
@@ -344,10 +361,59 @@ async function fetchData_forPackage(file, data = {}) {
 			"illustratedmessage",
 			"accordion",
 			"table",
+			"inlinealert",
 		])],
+		releases,
 		releaseDate,
 		pkg,
 	};
+}
+
+/**
+ * Pass yml data through template to output html
+ * @param {string} componentName
+ * @param {string} dirName
+ * @param {string} file
+ * @param {TemplateData} [globalData={}]
+ * @returns {Promise<string>}
+ */
+async function buildPages_compileTemplate(componentName, dirName, file, globalData) {
+	const data = await fetchData_forPackage(file, globalData);
+
+	// Without a URL, there's nowhere to write this file
+	if (!data.pageURL) {
+		return Promise.reject(`${"✗".red}  Could not determine a page url for ${relativePrint(file).yellow}.`);
+	}
+
+	const outputPath = path.join(dirs.publish, data.pageURL);
+
+	const template = path.join(dirs.site, "includes/siteComponent.pug");
+	if (!fs.existsSync(template)) {
+		return Promise.reject(new Error(`${"✗".red}  could not find ${relativePrint(template).yellow}`));
+	}
+
+	const compiled = pug.renderFile(
+		path.join(dirs.site, "includes/siteComponent.pug"),
+		data,
+	);
+
+	if (!compiled) {
+		return Promise.reject(new Error(`${"✗".red}  There was a problem compiling the template for ${relativePrint(outputPath).yellow}`));
+	}
+
+	if (!fs.existsSync(path.dirname(outputPath))) {
+		await fsp.mkdir(path.dirname(outputPath), { recursive: true }).catch((err) => {
+			if (!err) return Promise.reject(new Error(`${"✗".red}  problem making ${relativePrint(path.dirname(outputPath)).yellow}`));
+			return Promise.reject(err);
+		});
+	}
+
+	return fsp.writeFile(outputPath, compiled).then(() => {
+		return `${"✓".green}  ${relativePrint(file, { cwd: dirName }).gray} -> ${relativePrint(outputPath).yellow}`;
+	}).catch((err) => {
+		if (!err) return Promise.reject(new Error(`${"✗".red}  ${relativePrint(outputPath).gray}`));
+		return Promise.reject(err);
+	});
 }
 
 /**
@@ -356,109 +422,83 @@ async function fetchData_forPackage(file, data = {}) {
  * @param {TemplateData} [globalData={}]
  * @returns {Promise<string[]>}
  */
-async function buildPages_forPackage(dep, globalData = {}) {
-	const pkgPath = require.resolve(path.join(dep, "package.json"));
-	const dirName = path.dirname(pkgPath);
-	const componentName = getPackageFromPath(dirName);
+async function buildPages_forPackage(componentName, globalData = {}) {
 	if (!componentName) {
 		return Promise.reject(new Error(`${"✗".red}  No package found for ${dirName}`));
 	}
 
-	const files = await fg("metadata/*.yml", {
-		cwd: dirName,
+	const pkgPath = require.resolve(`@spectrum-css/${componentName}/package.json`);
+	const dirName = path.dirname(pkgPath);
+	if (!dirName) {
+		return Promise.reject(new Error(`${"✗".red}  No package found for ${dirName}`));
+	}
+
+	let dataDir = path.join(dirName, "metadata");
+	if (deprecatedComponents.includes(componentName)) {
+		dataDir = path.join(dirs.storybook, "deprecated", componentName);
+	}
+
+	const files = await fg("*.yml", {
+		cwd: dataDir,
 		allowEmpty: true,
 		absolute: true,
 	});
 
-	const key = `[${`@spectrum-css/${componentName}`.cyan}] assets copied`;
-	console.time(key);
-
-	const outputFiles = await Promise.all(files.map(async (file) => {
-		const data = await fetchData_forPackage(file, globalData);
-
-		// Without a URL, there's nowhere to write this file
-		if (!data.pageURL) {
-			return Promise.reject(`${"✗".red}  Could not determine a page url for ${relativePrint(file).yellow}.`);
-		}
-
-		const outputPath = path.join(dirs.publish, data.pageURL);
-
-		const template = path.join(dirs.site, "templates/siteComponent.pug");
-		if (!fs.existsSync(template)) {
-			return Promise.reject(new Error(`${"✗".red}  could not find ${relativePrint(template).yellow}`));
-		}
-
-		const compiled = pug.renderFile(
-			path.join(dirs.site, "templates/siteComponent.pug"),
-			data,
-		);
-
-		if (!compiled) {
-			return Promise.reject(new Error(`${"✗".red}  There was a problem compiling the template for ${relativePrint(outputPath).yellow}`));
-		}
-
-		if (!fs.existsSync(path.dirname(outputPath))) {
-			await fsp.mkdir(path.dirname(outputPath), { recursive: true }).catch((err) => {
-				if (!err) return;
-				console.log(`${"✗".red}  problem making ${relativePrint(path.dirname(outputPath)).yellow}`);
-				return Promise.reject(err);
-			});
-		}
-
-		return fsp.writeFile(outputPath, compiled).then(() => {
-			console.log(`[${`@spectrum-css/${componentName}`.cyan}] ${"✓".green}  ${relativePrint(file, { cwd: dirName }).gray} -> ${relativePrint(outputPath).yellow}`);
-			return outputPath;
-		}).catch((err) => {
-			if (!err) return;
-			console.log(`${"✗".red}  ${relativePrint(outputPath).gray}`);
-			return Promise.reject(err);
-		});
-	})).catch(err => {
-		if (!err) return;
-
-		if (Array.isArray(err)) err.forEach(e => {
-			console.trace(e);
-		});
-		else console.trace(err);
-
-		console.timeEnd(key);
-		return;
-	});
-
-	console.timeEnd(key);
-	return outputFiles ?? [];
+	return Promise.all(files.map(async (file) => {
+		return buildPages_compileTemplate(componentName, dirName, file, globalData);
+	})).then((results = []) => results.flat());
 }
 
 /**
  * Build assets for a single component
- * @param {string} dirName
+ * @param {string} componentName
  * @param {TemplateData} [globalData={}]
- * @returns {Promise<void>}
+ * @returns {Promise<string[]|Error[]>}
  */
-async function build_forPackage(dirName, globalData = {}) {
-	const componentName = getPackageFromPath(dirName);
-	if (!componentName) {
+async function build_forPackage(componentName, globalData = {}) {
+	const start = process.hrtime();
+
+	const pkgPath = require.resolve(`@spectrum-css/${componentName}/package.json`);
+	const dirName = path.dirname(pkgPath);
+	if (!dirName) {
 		return Promise.reject(new Error(`${"✗".red}  No package found for ${dirName}`));
+	}
+
+	let storiesDir = path.join(dirName, "stories");
+	let outputDir = path.join("components", componentName);
+	if (deprecatedComponents.includes(componentName)) {
+		outputDir = path.join("dependencies/@spectrum-css", componentName);
+		storiesDir = path.join(dirs.storybook, "deprecated", componentName);
 	}
 
 	/** @todo how do we load dependencies not hosted in the repo? */
 	return Promise.all([
-		buildPages_forPackage(dirName, globalData),
+		buildPages_forPackage(componentName, globalData),
 		copy_Assets(["*.css", "themes/*.css", "*.json"], {
 			cwd: path.join(dirName, "dist"),
-			outputDir: path.join("components", componentName),
+			outputDir,
 			allowEmpty: true,
 		}),
 		copy_Assets(["*.js"], {
-			cwd: path.join(dirName, "stories"),
+			cwd: storiesDir,
 			ignore: ["*.stories.js"],
-			outputDir: path.join("components", componentName),
+			outputDir,
 		}),
 		copy_Assets(["package.json"], {
 			cwd: dirName,
-			outputDir: path.join("components", componentName),
+			outputDir,
 		})
-	]);
+	]).then((results = []) => {
+		const end = process.hrtime(start);
+		return [
+			`[${`@spectrum-css/${componentName}`.cyan}]`,
+			"---------------------",
+			...results.flat(),
+			"---------------------",
+			`processing took ${timeInMs(...end)}ms`,
+			"",
+		];
+	});
 }
 
 /**
@@ -467,6 +507,7 @@ async function build_forPackage(dirName, globalData = {}) {
  * @returns {Promise<void>}
  */
 async function build_forPackages(globalData = {}) {
+	const start = process.hrtime();
 	const packages = (await fsp.readdir(dirs.components, { withFileTypes: true }))
 		.filter((dirent) => {
 			/* looking for directories that have a package.json */
@@ -474,16 +515,43 @@ async function build_forPackages(globalData = {}) {
 			if (!fs.existsSync(path.join(dirent.path, dirent.name, "package.json"))) return false;
 			return true;
 		})
-		.map((dirent) => path.join(dirent.path, dirent.name));
+		.map((dirent) => dirent.name);
 
-	const key = printHeader("", { timerKey: "[build] 📦  Components" });
 	// Build pages for all provided dependencies
-	return Promise.all(packages.map(pkg => build_forPackage(pkg, globalData))).then(() => {
-		printFooter(key);
-	}).catch((err) => {
-		printFooter(key);
-		return Promise.reject(err);
-	});
+	return Promise.all(packages.map(pkg => build_forPackage(pkg, globalData)))
+		.then((results = []) => {
+			const end = process.hrtime(start);
+			return [
+				"[build] 📦  Components",
+				...results.flat(),
+				`total processing took ${timeInMs(...end)}ms`,
+				"---------------------",
+				"",
+			];
+		})
+		.catch((err) => Promise.reject(err));
+}
+
+/**
+ * Build deprecated component pages
+ * @param {TemplateData} [globalData={}]
+ * @returns {Promise<void>}
+ */
+async function build_forDeprecatedPackages(globalData = {}) {
+	const start = process.hrtime();
+	// Build pages for all provided dependencies
+	return Promise.all(deprecatedComponents.map(pkg => build_forPackage(pkg, globalData)))
+		.then((results = []) => {
+			const end = process.hrtime(start);
+			return [
+				"[build] 📦  Deprecated components",
+				...results.flat(),
+				`total processing took ${timeInMs(...end)}ms`,
+				"---------------------",
+				"",
+			];
+		})
+		.catch((err) => Promise.reject(err));
 }
 
 /**
@@ -535,17 +603,15 @@ async function buildPage_forSite(file, globalData = {}) {
 
 	if (!fs.existsSync(path.dirname(outputPath))) {
 		await fsp.mkdir(path.dirname(outputPath), { recursive: true }).catch((err) => {
-			if (!err) return;
-			console.log(`${"✗".red}  problem making ${relativePrint(path.dirname(outputPath)).yellow}`);
+			if (!err) return Promise.reject(new Error(`${"✗".red}  problem making ${relativePrint(path.dirname(outputPath)).yellow}`));
 			return Promise.reject(err);
 		});
 	}
 
 	return fsp.writeFile(outputPath, compiled).then(() => {
-		console.log(`${"✓".green}  ${relativePrint(file).gray} -> ${relativePrint(outputPath).yellow}`);
+		return `${"✓".green}  ${relativePrint(file).gray} -> ${relativePrint(outputPath).yellow}`;
 	}).catch((err) => {
-		if (!err) return;
-		console.log(`${"✗".red}  ${relativePrint(outputPath).gray}`);
+		if (!err) return Promise.reject(new Error(`${"✗".red}  ${relativePrint(outputPath).gray}`));
 		return Promise.reject(err);
 	});
 }
@@ -556,20 +622,22 @@ async function buildPage_forSite(file, globalData = {}) {
  * @returns {Promise<void>}
  */
 async function build_forSite(globalData = {}) {
-	const key = printHeader("", { timerKey: "[build] ✍️  Pages" });
+	const start = process.hrtime();
 
 	const files = await fg(["*.pug"], { cwd: dirs.site });
 
 	return Promise.all(files.map(async (file) =>
 		buildPage_forSite(file, globalData)
-	)).then(() => {
-
-		printFooter(key);
-	}).catch((err) => {
-
-		printFooter(key);
-		return Promise.reject(err);
-	});
+	)).then((results = []) => {
+		const end = process.hrtime(start);
+		return [
+			"[build] ✍️  Pages",
+			...results.flat(),
+			"---------------------",
+			`processing took ${timeInMs(...end)}ms`,
+			"",
+		];
+	}).catch((err) => Promise.reject(err));
 }
 
 /**
@@ -577,7 +645,7 @@ async function build_forSite(globalData = {}) {
  * @returns {Promise<void>}
  */
 async function build_forSiteStyles() {
-	const key = printHeader("", { timerKey: "[build] 🎨  Styles" });
+	const start = process.hrtime();
 
 	const cwd = path.join(dirs.site, "resources/css");
 	const files = await fg("*.css", {
@@ -589,14 +657,16 @@ async function build_forSiteStyles() {
 		const outputPath = path.join(dirs.publish, "css", file);
 		const content = await fsp.readFile(path.join(cwd, file));
 		return processCSS(content, path.join(cwd, file), outputPath, { cwd: dirs.root });
-	})).then(() => {
-
-		printFooter(key);
-	}).catch((err) => {
-
-		printFooter(key);
-		return Promise.reject(err);
-	});
+	})).then((results = []) => {
+		const end = process.hrtime(start);
+		return [
+			"[build] 🎨  Styles",
+			...results.flat(),
+			"---------------------",
+			`processing took ${timeInMs(...end)}ms`,
+			"",
+		];
+	}).catch((err) => Promise.reject(err));
 }
 
 /**
@@ -619,16 +689,16 @@ async function build_forIndex(docs) {
 
 	if (!fs.existsSync(dirs.publish)) {
 		await fsp.mkdir(dirs.publish, { recursive: true }).catch((err) => {
-			if (!err) return;
-			console.log(`${"✗".red}  problem making ${relativePrint(path.dirname(dirs.publish)).yellow}`);
+			if (!err) return Promise.reject(new Error(`${"✗".red}  problem making ${relativePrint(path.dirname(dirs.publish)).yellow}`));
 			return Promise.reject(err);
 		});
 	}
 
 	return fsp.writeFile(indexPath, JSON.stringify(index, null, 2)).then(() => {
-		console.log(`${"✓".green}  ${relativePrint(indexPath).yellow} written`);
-	}).catch(() => {
-		console.log(`${"✗".red}  ${relativePrint(indexPath).gray}`);
+		return `${"✓".green}  ${relativePrint(indexPath).yellow} written`;
+	}).catch((err) => {
+		if (!err) return Promise.reject(new Error(`${"✗".red}  ${relativePrint(indexPath).gray}`));
+		return Promise.reject(err);
 	});
 }
 
@@ -642,16 +712,16 @@ async function build_forStore(store) {
 
 	if (!fs.existsSync(dirs.publish)) {
 		await fsp.mkdir(dirs.publish, { recursive: true }).catch((err) => {
-			if (!err) return;
-			console.log(`${"✗".red}  problem making ${relativePrint(path.dirname(dirs.publish)).yellow}`);
+			if (!err) return Promise.reject(new Error(`${"✗".red}  problem making ${relativePrint(path.dirname(dirs.publish)).yellow}`));
 			return Promise.reject(err);
 		});
 	}
 
 	return fsp.writeFile(storePath, JSON.stringify(store, null, 2)).then(() => {
-		console.log(`${"✓".green}  ${relativePrint(storePath).yellow} written`);
-	}).catch(() => {
-		console.log(`${"✗".red}  ${relativePrint(storePath).gray}`);
+		return `${"✓".green}  ${relativePrint(storePath).yellow} written`;
+	}).catch((err) => {
+		if (!err) return Promise.reject(new Error(`${"✗".red}  ${relativePrint(storePath).gray}`));
+		return Promise.reject(err);
 	});
 }
 
@@ -666,31 +736,17 @@ async function watch_Styles(file) {
 		return Promise.reject(new Error(`${"✗".red}  No package found for ${file}`));
 	}
 
-	const dirName = path.join(dirs.components, componentName);
-	if (!fs.existsSync(dirName)) {
-		return Promise.reject(new Error(`${"✗".red}  No local package found for ${componentName}`));
-	}
-
-	const outputDir = path.join("components", componentName);
-
-	const copyTask = () => copy_Assets(["**"], {
-		cwd: path.join(dirName, "dist"),
-		outputDir,
-		allowEmpty: true,
-		absolute: false,
-	})
-		.then(() => fg.sync(`${dirName}/dist/*.css`));
-
 	const processorPath = path.join(dirs.root, "tasks/component-builder.js");
+
 	if (!fs.existsSync(processorPath)) {
-		console.log(`${"✗".red}  No processing function found for ${relativePrint(processorPath)}`);
-		return copyTask();
+		return Promise.reject(new Error(`${"✗".red}  No processing function found for ${relativePrint(processorPath)}`));
 	}
 
-	if (fs.existsSync(outputDir)) await rimraf(outputDir);
 	await require(processorPath);
 
-	if (fs.existsSync(outputDir)) return copyTask();
+	const globalData = await fetchData_forGlobal();
+
+	return build_forPackage(componentName, globalData);
 }
 
 async function main() {
@@ -698,11 +754,17 @@ async function main() {
 	return Promise.all([
 		build_forSite(globalData),
 		build_forPackages(globalData),
+		build_forDeprecatedPackages(globalData),
 		build_forSiteStyles(),
 		copy_Resources(),
 		build_forStore(globalData.store),
 		build_forIndex(globalData.docs),
-	]).catch((err) => Promise.reject(err));
+	]).then((results = []) => {
+		results.flat().forEach(r => console.log(r));
+	}).catch((err) => {
+		if (err) console.log(err.message ?? err);
+		return Promise.reject(err);
+	});
 }
 
 module.exports = {

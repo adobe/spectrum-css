@@ -1,5 +1,5 @@
 doctype html
-html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
+html(lang='en-US' dir="ltr").spectrum
   head
     title Getting started - Spectrum CSS
 
@@ -29,7 +29,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 hr.spectrum-Divider.spectrum-Divider--large
 
               section
-                p.spectrum-Body.spectrum-Body--sizeL If you’re ready to jump in, here’s how to set up Spectrum CSS on our GitHub:
+                p.spectrum-Body.spectrum-Body--sizeL If you're ready to jump in, here's how to set up Spectrum CSS on our GitHub:
 
                 ul.spectrum-Body.spectrum-Body--sizeL
                   li
@@ -53,26 +53,24 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 p.spectrum-Body.spectrum-Body--sizeL First, install the required button dependencies by running:
 
                 pre.spectrum-CodeBlock
-                  code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('$ npm install @spectrum-css/vars @spectrum-css/button @spectrum-css/page', util.Prism.languages.markup, 'markup')
+                  code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('$ npm install @spectrum-css/tokens @spectrum-css/button @spectrum-css/page', util.Prism.languages.markup, 'markup')
 
                 p.spectrum-Body.spectrum-Body--sizeL Installed components will be available in the node_modules/@spectrum-css/ folder or on the Spectrum CSS NPM page.
 
                 h3.spectrum-Heading.spectrum-Heading--sizeS Setting up global variables
-                p.spectrum-Body.spectrum-Body--sizeL Create a new HTML file (e.g., #[code.spectrum-Code.spectrum-Code--sizeS button.html]) in your project’s root folder.
+                p.spectrum-Body.spectrum-Body--sizeL Create a new HTML file (e.g., #[code.spectrum-Code.spectrum-Code--sizeS button.html]) in your project's root folder.
 
-                p.spectrum-Body.spectrum-Body--sizeL or displaying a button in Spectrum’s light color theme and medium scale, a couple of classes need to be added to the document’s #[code.spectrum-Code.spectrum-Code--sizeS &lt;html&gt;] tag:
+                p.spectrum-Body.spectrum-Body--sizeL or displaying a button in Spectrum's light color theme and medium scale, a couple of classes need to be added to the document's #[code.spectrum-Code.spectrum-Code--sizeS &lt;html&gt;] tag:
 
                 pre.spectrum-CodeBlock
-                  code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('<html class="spectrum spectrum--medium spectrum--light">', util.Prism.languages.markup, 'markup')
+                  code.spectrum-Code.spectrum-Code--sizeS.language-markup!=util.Prism.highlight('<body class="spectrum spectrum--medium spectrum--light">', util.Prism.languages.markup, 'markup')
 
                 h3.spectrum-Heading.spectrum-Heading--sizeS Adding Spectrum CSS
                 p.spectrum-Body.spectrum-Body--sizeL Inside the #[code.spectrum-Code.spectrum-Code--sizeS &lt;head&gt;] tag, include the stylesheets that contain the design system tokens for global variables, scales, and color themes, as well as the stylesheets for the components themselves:
 
                 -
                   htmlMarkup = util.Prism.highlight(`<head>
-                    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
-                    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
-                    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+                    <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
                     <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index.css">
                     <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index.css">
                   </head>`, util.Prism.languages.markup, 'markup');
@@ -88,18 +86,16 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                 pre.spectrum-CodeBlock
                   code.spectrum-Code.spectrum-Code--sizeS.language-markup!=htmlMarkup
 
-                p.spectrum-Body.spectrum-Body--sizeL Here’s what your final button.html file should look like:
+                p.spectrum-Body.spectrum-Body--sizeL Here's what your final button.html file should look like:
 
                 -
-                  htmlMarkup = util.Prism.highlight(`<html class="spectrum spectrum--light spectrum--medium">
+                  htmlMarkup = util.Prism.highlight(`<html>
                     <head>
-                      <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
-                      <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
-                      <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+                      <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
                       <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index.css">
                       <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index.css">
                     </head>
-                    <body>
+                    <body class="spectrum spectrum--light spectrum--medium">
                       <button class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM">
                         <span class="spectrum-Button-label">Button</span>
                       </button>
@@ -115,7 +111,7 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                     a(href="#contribute").spectrum-BigSubtleLink Contribute to Spectrum CSS
                   hr.spectrum-Divider.spectrum-Divider--large
 
-                p.spectrum-Body.spectrum-Body--sizeL We’d love for you to contribute to the Spectrum CSS project. Review the <a href="https://github.com/adobe/spectrum-css/blob/main/.github/CONTRIBUTING.md" class="spectrum-Link spectrum-Link--quiet" target="_blank">contribution guidelines on our GitHub</a> to get started.
+                p.spectrum-Body.spectrum-Body--sizeL We'd love for you to contribute to the Spectrum CSS project. Review the <a href="https://github.com/adobe/spectrum-css/blob/main/.github/CONTRIBUTING.md" class="spectrum-Link spectrum-Link--quiet" target="_blank">contribution guidelines on our GitHub</a> to get started.
 
           include includes/footer.pug
 
