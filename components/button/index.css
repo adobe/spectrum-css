@@ -12,7 +12,6 @@ governing permissions and limitations under the License.
 
 @import "@spectrum-css/commons/basebutton.css";
 
-/* default for all buttons */
 .spectrum-Button {
   --spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
 
@@ -26,7 +25,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-radius: calc(var(--spectrum-button-height) / 2);
   --spectrum-button-border-width: var(--spectrum-border-width-200);
 
-  /* @todo set line-height value per size, using font size specific line-height tokens when they are finalized. */
+  /* @todo set line-height using font size specific line-height tokens when they are finalized along with the new variable font. */
   --spectrum-button-line-height: 1.2;
   --spectrum-button-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-button-font-size: var(--spectrum-font-size-100);
@@ -39,34 +38,6 @@ governing permissions and limitations under the License.
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
   --spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-100);
-
-  --spectrum-button-border-color-default: transparent;
-  --spectrum-button-border-color-hover: transparent;
-  --spectrum-button-border-color-down: transparent;
-  --spectrum-button-border-color-focus: transparent;
-
-  --spectrum-button-background-color-disabled: var(--spectrum-disabled-background-color);
-  --spectrum-button-border-color-disabled: transparent;
-  --spectrum-button-content-color-disabled: var(--spectrum-disabled-content-color);
-
-  --spectrum-button-background-color-default: var(--spectrum-gray-100);
-  --spectrum-button-background-color-hover: var(--spectrum-gray-200);
-  --spectrum-button-background-color-down: var(--spectrum-gray-200);
-  --spectrum-button-background-color-focus: var(--spectrum-gray-200);
-
-  --spectrum-button-border-color-default: transparent;
-  --spectrum-button-border-color-hover: transparent;
-  --spectrum-button-border-color-down: transparent;
-  --spectrum-button-border-color-focus: transparent;
-
-  --spectrum-button-content-color-default: var(--spectrum-neutral-content-color-default);
-  --spectrum-button-content-color-hover: var(--spectrum-neutral-content-color-hover);
-  --spectrum-button-content-color-down: var(--spectrum-neutral-content-color-down);
-  --spectrum-button-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
-
-  --spectrum-button-background-color-disabled: var(--spectrum-disabled-background-color);
-  --spectrum-button-border-color-disabled: transparent;
-  --spectrum-button-content-color-disabled: var(--spectrum-disabled-content-color);
 
   --mod-progress-circle-position: absolute;
   /* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties */
@@ -125,15 +96,21 @@ governing permissions and limitations under the License.
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-300);
 }
 
-/* Variant colors */
+/* Variants and colors */
 .spectrum-Button {
-  &.spectrum-Button--accent,
-  &.spectrum-Button--negative {
-    --spectrum-button-content-color-default: var(--spectrum-white);
-    --spectrum-button-content-color-hover: var(--spectrum-white);
-    --spectrum-button-content-color-down: var(--spectrum-white);
-    --spectrum-button-content-color-focus: var(--spectrum-white);
-  }
+  --spectrum-button-content-color-default: var(--spectrum-white);
+  --spectrum-button-content-color-hover: var(--spectrum-white);
+  --spectrum-button-content-color-down: var(--spectrum-white);
+  --spectrum-button-content-color-focus: var(--spectrum-white);
+
+  --spectrum-button-border-color-default: transparent;
+  --spectrum-button-border-color-hover: transparent;
+  --spectrum-button-border-color-down: transparent;
+  --spectrum-button-border-color-focus: transparent;
+
+  --spectrum-button-background-color-disabled: var(--spectrum-disabled-background-color);
+  --spectrum-button-border-color-disabled: transparent;
+  --spectrum-button-content-color-disabled: var(--spectrum-disabled-content-color);
 
   &.spectrum-Button--outline {
     --spectrum-button-background-color-disabled: transparent;
@@ -142,28 +119,13 @@ governing permissions and limitations under the License.
   }
 
   /* ---- Accent ---- */
-  &.spectrum-Button--accent {
+  /* Also shows as the default when a variant class is not used. */
+  &.spectrum-Button--accent,
+  & {
     --spectrum-button-background-color-default: var(--spectrum-accent-background-color-default);
     --spectrum-button-background-color-hover: var(--spectrum-accent-background-color-hover);
     --spectrum-button-background-color-down: var(--spectrum-accent-background-color-down);
     --spectrum-button-background-color-focus: var(--spectrum-accent-background-color-key-focus);
-
-    &.spectrum-Button--outline {
-      --spectrum-button-background-color-default: transparent;
-      --spectrum-button-background-color-hover: var(--spectrum-accent-color-200);
-      --spectrum-button-background-color-down: var(--spectrum-accent-color-300);
-      --spectrum-button-background-color-focus: var(--spectrum-accent-color-200);
-
-      --spectrum-button-border-color-default: var(--spectrum-accent-color-900);
-      --spectrum-button-border-color-hover: var(--spectrum-accent-color-1000);
-      --spectrum-button-border-color-down: var(--spectrum-accent-color-1100);
-      --spectrum-button-border-color-focus: var(--spectrum-accent-color-1000);
-
-      --spectrum-button-content-color-default: var(--spectrum-accent-content-color-default);
-      --spectrum-button-content-color-hover: var(--spectrum-accent-content-color-hover);
-      --spectrum-button-content-color-down: var(--spectrum-accent-content-color-down);
-      --spectrum-button-content-color-focus: var(--spectrum-accent-content-color-key-focus);
-    }
   }
 
   /* ---- Negative ---- */
@@ -172,29 +134,10 @@ governing permissions and limitations under the License.
     --spectrum-button-background-color-hover: var(--spectrum-negative-background-color-hover);
     --spectrum-button-background-color-down: var(--spectrum-negative-background-color-down);
     --spectrum-button-background-color-focus: var(--spectrum-negative-background-color-key-focus);
-
-    &.spectrum-Button--outline {
-      --spectrum-button-background-color-default: transparent;
-      --spectrum-button-background-color-hover: var(--spectrum-negative-color-200);
-      --spectrum-button-background-color-down: var(--spectrum-negative-color-300);
-      --spectrum-button-background-color-focus: var(--spectrum-negative-color-200);
-
-      --spectrum-button-border-color-default: var(--spectrum-negative-color-900);
-      --spectrum-button-border-color-hover: var(--spectrum-negative-color-1000);
-      --spectrum-button-border-color-down: var(--spectrum-negative-color-1100);
-      --spectrum-button-border-color-focus: var(--spectrum-negative-color-1000);
-
-      --spectrum-button-content-color-default: var(--spectrum-negative-content-color-default);
-      --spectrum-button-content-color-hover: var(--spectrum-negative-content-color-hover);
-      --spectrum-button-content-color-down: var(--spectrum-negative-content-color-down);
-      --spectrum-button-content-color-focus: var(--spectrum-negative-content-color-key-focus);
-    }
   }
 
   /* ---- Primary ---- */
-  /* Also shows as the default when a variant is not set. */
-  &.spectrum-Button--primary,
-  & {
+  &.spectrum-Button--primary {
     --spectrum-button-background-color-default: var(--spectrum-neutral-background-color-default);
     --spectrum-button-background-color-hover: var(--spectrum-neutral-background-color-hover);
     --spectrum-button-background-color-down: var(--spectrum-neutral-background-color-down);
@@ -577,7 +520,14 @@ a.spectrum-Button {
       }
     }
 
-    &.spectrum-Button--accent:not(.spectrum-Button--outline) {
+    &.spectrum-Button--accent,
+    &:not(
+      .spectrum-Button--primary,
+      .spectrum-Button--negative,
+      .spectrum-Button--secondary,
+      .spectrum-Button--staticBlack,
+      .spectrum-Button--staticWhite
+    ){
       /* The accent fill variant looks different than the other buttons.
          It inverts the background and content colors. */
       --highcontrast-button-background-color-default: ButtonText;
