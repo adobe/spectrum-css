@@ -106,7 +106,7 @@
 			"options": {
 				"commands": [
 					"stylelint --fix {projectRoot}/*.css {projectRoot}/themes/*.css",
-					"eslint --fix {projectRoot}/stories/*.js"
+					"eslint --fix --no-error-on-unmatched-pattern {projectRoot}/stories/*.js"
 				]
 			}
 		},
