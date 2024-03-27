@@ -96,7 +96,17 @@
 			"options": {
 				"commands": [
 					"stylelint {projectRoot}/*.css {projectRoot}/themes/*.css",
-					"eslint {projectRoot}/package.json {projectRoot}/project.json {projectRoot}/stories/*.js"
+					"eslint {projectRoot}/stories/*.js"
+				]
+			}
+		},
+		"format": {
+			"inputs": ["core", { "externalDependencies": ["stylelint", "eslint"] }],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"stylelint --fix {projectRoot}/*.css {projectRoot}/themes/*.css",
+					"eslint --fix --no-error-on-unmatched-pattern {projectRoot}/stories/*.js"
 				]
 			}
 		},

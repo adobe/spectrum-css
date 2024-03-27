@@ -27,6 +27,8 @@
     "cleaner": "nx run-many --target clean --projects",
     "compare": "cross-env NODE_ENV=production node ./tasks/compare-compiled-output.js",
     "dev": "cross-env NODE_ENV=production nx start docs",
+    "format": "yarn formatter tag:component",
+    "formatter": "nx run-many --target format --verbose --projects",
     "preinstall": "command -v nvm >/dev/null 2>&1 && nvm use || exit 0",
     "lint": "yarn linter tag:component",
     "linter": "nx run-many --target lint --verbose --projects",
