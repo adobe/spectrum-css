@@ -21,7 +21,6 @@ export const AccordionItem = ({
 	iconSize = "m",
 	customStyles = {},
 	customClasses = [],
-	onclick,
 	...globals
 }) => {
 	return html`
@@ -35,7 +34,12 @@ export const AccordionItem = ({
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
-			@click=${onclick}
+			@click=${(evt) => {
+				if (isDisabled || !evt || !evt.target) return;
+				const closest = evt.target.closest(`.${rootClass}`);
+				if (!closest) return;
+				closest.classList.toggle("is-open");
+			}}
 		>
 			<!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
 			<h3 class="${rootClass}Heading">
@@ -98,6 +102,7 @@ export const Template = ({
 					typeof density !== "undefined" && density !== "regular",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}"
+			style="${styleMap(customStyles)}"
 			id=${ifDefined(id)}
 			role="region"
 			style=${ifDefined(styleMap(customStyles))}
@@ -112,17 +117,8 @@ export const Template = ({
 					iconSize: `${size}`,
 					isDisabled: item.isDisabled || disableAll,
 					...item,
-					onclick: () => {
-						if (item.isDisabled) return;
-
-						// Update the args
-						const newItems = new Map(items);
-						newItems.set(heading, {
-							...item,
-							isOpen: !item.isOpen,
-						});
-						updateArgs({ items: newItems });
-					},
+					...globals,
+					isDisabled: item.isDisabled || disableAll,
 				});
 			})}
 		</div>

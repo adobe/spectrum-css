@@ -123,6 +123,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-SearchWithin",
+		legacyTokens: true,
 		isOpen: false,
 		isQuiet: false,
 		isDisabled: false,

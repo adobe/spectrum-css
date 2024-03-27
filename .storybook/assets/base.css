@@ -12,6 +12,10 @@
  */
 
 body {
+	min-block-size: 100%;
+}
+
+body {
 	margin: 0;
 	background-color: var(--spectrum-background-layer-2-color);
 	color: var(--spectrum-neutral-content-color-default);

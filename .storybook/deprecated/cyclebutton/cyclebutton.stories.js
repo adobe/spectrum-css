@@ -30,6 +30,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-CycleButton",
+		legacyTokens: true,
 		size: "m",
 		initialIcon: "Play",
 		selectedIcon: "Pause",

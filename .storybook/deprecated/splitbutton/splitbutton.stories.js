@@ -49,6 +49,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-SplitButton",
+		legacyTokens: true,
 		size: "m",
 		position: "right",
 		label: "Split Button",
