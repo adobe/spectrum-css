@@ -1,10 +1,16 @@
 {
-	"$schema": "../../node_modules/nx/schemas/project-schema.json",
-	"tags": ["tooling", "stylelint"],
-	"name": "stylelint-no-unused-custom-properties",
-	"targets": {
-		"test": {
-			"defaultConfiguration": "plugins"
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "tags": ["tooling", "stylelint"],
+    "name": "stylelint-no-unused-custom-properties",
+    "targets": {
+			"lint": {
+				"defaultConfiguration": "plugins"
+			},
+			"format": {
+				"defaultConfiguration": "plugins"
+			},
+			"test": {
+				"defaultConfiguration": "plugins"
+			}
 		}
-	}
 }
