@@ -2,9 +2,9 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
+import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
@@ -23,7 +23,8 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 	const iconName =
@@ -45,7 +46,7 @@ export const Template = ({
 								...globals,
 								iconName,
 								customClasses: [`${rootClass}-icon`],
-						  })
+						})
 						: ""}
 					<p class="${rootClass}-text">${text}</p>
 				</div>

@@ -64,6 +64,7 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-content-letter-spacing: 0;
 
   --spectrum-assetcard-content-margin-block-start: var(--spectrum-spacing-75);
+
   &:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
@@ -122,7 +123,7 @@ governing permissions and limitations under the License.
 
   &:focus-visible {
     .spectrum-AssetCard-assetContainer::before {
-      opacity: 1;
+      opacity: 100%;
     }
   }
 }
@@ -159,7 +160,7 @@ governing permissions and limitations under the License.
 
     border-radius: var(--mod-assetcard-focus-ring-border-radius, var(--spectrum-assetcard-focus-ring-border-radius));
 
-    opacity: 0;
+    opacity: 0%;
     pointer-events: none;
     transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
   }
@@ -278,7 +279,7 @@ governing permissions and limitations under the License.
 
   border-radius: var(--mod-assetcard-selectionindicator-border-radius, var(--spectrum-assetcard-selectionindicator-border-radius));
 
-  box-shadow: 0 var(--spectrum-assetcard-selectionindicator-offset-y) var(--spectrum-assetcard-selectionindicator-blur) rgb(0, 0, 0, 0.15);
+  box-shadow: 0 var(--spectrum-assetcard-selectionindicator-offset-y) var(--spectrum-assetcard-selectionindicator-blur) rgb(0, 0, 0, 15%);
 
   color: var(--highcontrast-assetcard-selectionindicator-color, var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color)));
   font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
@@ -376,6 +377,7 @@ governing permissions and limitations under the License.
     --highcontrast-assectcard-border-color-selected-down: Highlight;
     --highcontrast-assetcard-selectionindicator-background-color-ordered: Highlight;
     --highcontrast-assetcard-selectionindicator-color: SelectedItemText;
+
     .spectrum-AssetCard-selectionOrder {
       /* prevents text backplate on displayed order number */
       forced-color-adjust: none;
