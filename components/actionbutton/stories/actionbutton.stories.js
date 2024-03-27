@@ -137,7 +137,11 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: false,
-		staticColor: undefined,
+		isActive: false,
+		isFocused: false,
+		isHovered: false,
+		isSelected: false,
+		isDisabled: false,
 	},
 	parameters: {
 		actions: {
@@ -405,4 +409,9 @@ StaticWhite.args = {
 	/* Force dark mode to make typography readable */
 	color: "dark",
 	staticColor: "white",
+};
+
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.parameters = {
+	chromatic: { forcedColors: "active" },
 };
