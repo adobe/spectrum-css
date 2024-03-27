@@ -25,44 +25,24 @@ governing permissions and limitations under the License.
 
 .spectrum-DropIndicator {
   position: relative;
-  background: var(
-    --highcontrast-dropindicator-color,
-    var(--mod-dropindicator-border-color, var(--spectrum-dropindicator-border-color))
-  );
+  background: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-border-color, var(--spectrum-dropindicator-border-color)));
 
   &:before,
   &:after {
     content: '';
     position: absolute;
-    inline-size: var(
-      --mod-dropindicator-circle-size,
-      var(--spectrum-dropindicator-circle-size)
-    );
-    block-size: var(
-      --mod-dropindicator-circle-size,
-      var(--spectrum-dropindicator-circle-size)
-    );
+    inline-size: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
+    block-size: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
     border-radius: 50%;
-    border: var(
-      --mod-dropindicator-border-size,
-      var(--spectrum-dropindicator-border-size)) solid;
+    border: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) solid;
     box-sizing: border-box;
-    border-color: var(
-      --highcontrast-dropindicator-color,
-      var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-circle-color))
-    );
+    border-color: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-circle-color)));
   }
 }
 
 .spectrum-DropIndicator--horizontal {
-  block-size: var(
-    --mod-dropindicator-border-size,
-    var(--spectrum-dropindicator-border-size)
-  );
-  margin: 0 var(
-    --mod-dropindicator-circle-size,
-    var(--spectrum-dropindicator-circle-size)
-  );
+  block-size: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size));
+  margin: 0 var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
 
   &:before,
   &:after {
@@ -79,14 +59,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-DropIndicator--vertical {
-  inline-size: var(
-    --mod-dropindicator-border-size,
-    var(--spectrum-dropindicator-border-size)
-  );
-  margin-block: var(
-    --mod-dropindicator-circle-size,
-    var(--spectrum-dropindicator-circle-size)
-  );
+  inline-size: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size));
+  margin-block: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
   margin-inline: 0;
 
   &:before,

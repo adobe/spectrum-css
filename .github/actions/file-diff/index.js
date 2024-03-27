@@ -12,7 +12,7 @@
  */
 
 const { existsSync } = require("fs");
-const { join, sep } = require("path");
+const { join, sep, dirname } = require("path");
 
 const core = require("@actions/core");
 
@@ -85,8 +85,6 @@ async function run() {
 			`**Total size**: ${bytesToSize(overallHeadSize)}<sup>*</sup>`,
 		];
 
-		let summaryTable = [];
-
 		if (sections.length === 0) {
 			summary.push(...["", " 🎉 No changes detected in any packages"]);
 		} else {
@@ -96,7 +94,7 @@ async function run() {
 			 */
 			let changeSummary = "";
 			if (baseOutput.size > 0 && hasBase && hasChange) {
-				changeSummary = `**Total change (Δ)**: ${printChange(overallHeadSize, overallBaseSize)} (${printPercentChange(overallHeadSize, overallBaseSize)})`;
+				changeSummary = `**Total change (Δ)**: ${printChange(overallBaseSize, overallHeadSize)} (${printPercentChange(overallHeadSize, overallBaseSize)})`;
 			} else if (baseOutput.size > 0 && hasBase && !hasChange) {
 				changeSummary = `No change in file sizes`;
 			}
@@ -105,15 +103,11 @@ async function run() {
 				summary.push(
 					changeSummary,
 					"",
-					"<small><em>Table reports on changes to a package's main file. Other changes can be found in the collapsed <a href=\"#details\">Details</a> section below.</em></small>",
-					""
 				);
 			}
 
 			markdown.push(
 				"<a name=\"details\"></a>",
-				`<details>`,
-				`<summary><b>Details</b></summary>`,
 				""
 			);
 
@@ -151,10 +145,6 @@ async function run() {
 					) {
 						data.push(printChange(headMainSize, baseMainSize));
 					}
-
-					if (data.length > 0) {
-						summaryTable.push([name, bytesToSize(headMainSize), data]);
-					}
 				}
 
 
@@ -180,7 +170,7 @@ async function run() {
 										isRemoved(headByteSize, baseByteSize) ? " - " : bytesToSize(headByteSize),
 										...(hasBase ? [
 											bytesToSize(baseByteSize),
-											isRemoved(headByteSize, baseByteSize) ? "🚨 deleted, moved, or renamed" : isNew(headByteSize, baseByteSize) ? "🎉 **new**" : `${printChange(headByteSize, baseByteSize)}${difference(headByteSize, baseByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`,
+											isRemoved(headByteSize, baseByteSize) ? "🚨 deleted, moved, or renamed" : isNew(headByteSize, baseByteSize) ? "🎉 **new**" : `${printChange(headByteSize, baseByteSize)}${difference(baseByteSize, headByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`,
 										] : []),
 									]
 								];
@@ -193,25 +183,13 @@ async function run() {
 				markdown.push(...md);
 			});
 
-			markdown.push("", `</details>`);
-		}
-
-		if (summaryTable.length > 0) {
-			// Add the headings to the summary table if it contains data
-			summaryTable = [
-				["Package", "Size", ...(hasBase ? ["Δ"] : [])],
-				["-", "-", ...(hasBase ? ["-"] : [])],
-				...summaryTable,
-			];
-
-			summary.push(...summaryTable.map((row) => `| ${row.join(" | ")} |`));
+			markdown.push("");
 		}
 
 		markdown.push(
 			"",
 			"<small>",
-			"* <em>Size determined by adding together the size of the main file for all packages in the library.</em><br/>",
-			"* <em>Results are not gzipped or minified.</em><br/>",
+			"* <em>Size is the sum of all main files for packages in the library.</em><br/>",
 			"* <em>An ASCII character in UTF-8 is 8 bits or 1 byte.</em>",
 			"</small>"
 		);
@@ -313,10 +291,17 @@ const makeTable = function (PACKAGES, filePath, path) {
 		// Read in the main asset file from the package.json
 		const packagePath = join(path, filePath, packageName, "package.json");
 
-		let mainFile = "index.css";
+		let mainFile = "index.min.css";
 		if (existsSync(packagePath)) {
 			const { main } = require(packagePath) ?? {};
-			if (main) mainFile = main.replace(/^.*\/dist\//, "");
+			if (main) {
+				mainFile = main.replace(/^.*\/dist\//, "");
+
+				// Check if a minified output of this file exists
+				if (existsSync(join(dirname(packagePath), main.replace(/\.css$/, ".min.css")))) {
+					mainFile = mainFile.replace(/\.css$/, ".min.css");
+				}
+			}
 		}
 
 		const mainFileOnly = [...fileMap.keys()].filter((file) => file.endsWith(mainFile));

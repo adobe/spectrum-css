@@ -1,4 +1,10 @@
 {
 	"tabWidth": 2,
-	"useTabs": true
+	"useTabs": true,
+	"overrides": [{
+		"files": ["*.css"],
+		"options": {
+			"printWidth": 500
+		}
+	}]
 }

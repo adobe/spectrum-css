@@ -280,16 +280,14 @@ governing permissions and limitations under the License.
 
   .spectrum-Menu-divider {
     --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-medium);
+
     &.spectrum-Divider--sizeS {
       --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-small);
     }
 
     overflow: visible;
     inline-size: auto;
-    margin-block: var(
-      --mod-menu-section-divider-margin-block,
-      max(0px, (var(--spectrum-menu-item-section-divider-height) - var(--spectrum-menu-divider-thickness)) / 2)
-    );
+    margin-block: var(--mod-menu-section-divider-margin-block, max(0px, (var(--spectrum-menu-item-section-divider-height) - var(--spectrum-menu-divider-thickness)) / 2));
     margin-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
   }
 }
@@ -802,7 +800,7 @@ governing permissions and limitations under the License.
     .spectrum-Menu-itemValue {
       color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-label-content-color-disabled, var(--spectrum-menu-item-label-content-color-disabled)));
     }
-    
+
     .spectrum-Menu-itemDescription {
       color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-description-color-disabled, var(--spectrum-menu-item-description-color-disabled)));
     }
