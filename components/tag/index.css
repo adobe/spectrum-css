@@ -99,6 +99,8 @@ governing permissions and limitations under the License.
 
   /* tag defaults if no t-shirt size */
   --spectrum-tag-height: var(--spectrum-component-height-100);
+  /* assuming medium default, remove this comment after refactor */
+  --spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
 
   /* text defaults if no t-shirt size */
   --spectrum-tag-font-size: var(--spectrum-font-size-100);
@@ -131,7 +133,7 @@ governing permissions and limitations under the License.
   --spectrum-tag-edge-to-clear-icon: var(--spectrum-tag-edge-to-clear-icon-small);
 
   /* tokens based on theme and t-shirt size */
-  --spectrum-tag-corner-radius: var(--spectrum-tag-size-small-corner-radius);
+  --spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-small);
   --spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-small-spacing-inline-start);
   --spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-small-label-spacing-inline-end);
   --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-small-clear-button-spacing-inline-end);
@@ -156,7 +158,6 @@ governing permissions and limitations under the License.
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
 
     /* tokens based on theme and t-shirt size */
-  --spectrum-tag-corner-radius: var(--spectrum-tag-size-medium-corner-radius);
   --spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-medium-spacing-inline-start);
   --spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-medium-label-spacing-inline-end);
   --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-medium-clear-button-spacing-inline-end);
@@ -184,7 +185,7 @@ governing permissions and limitations under the License.
   --spectrum-tag-edge-to-clear-icon: var(--spectrum-tag-edge-to-clear-icon-large);
 
     /* tokens based on theme and t-shirt size */
-  --spectrum-tag-corner-radius: var(--spectrum-tag-size-large-corner-radius);
+  --spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-large);
   --spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-large-spacing-inline-start);
   --spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-large-label-spacing-inline-end);
   --spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-large-clear-button-spacing-inline-end);
