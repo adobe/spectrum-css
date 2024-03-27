@@ -210,6 +210,7 @@ governing permissions and limitations under the License.
 	--spectrum-accordion-item-header-bottom-to-text-space: var(
 		--spectrum-accordion-bottom-to-text-spacious-medium
 	);
+
 	&.spectrum-Accordion--sizeS {
 		--spectrum-accordion-item-header-line-height: 1.25;
 		--spectrum-accordion-item-header-top-to-text-space: var(
@@ -382,6 +383,7 @@ governing permissions and limitations under the License.
 				) / 2
 		)
 	);
+
 	[dir="rtl"] & {
 		transform: scaleX(-1);
 	}
@@ -491,7 +493,9 @@ governing permissions and limitations under the License.
 	);
 
 	/* reset styling if button element is used */
+	/* stylelint-disable-next-line property-no-vendor-prefix -- todo may no longer be needed */
 	-webkit-appearance: none;
+	/* stylelint-disable-next-line property-no-vendor-prefix -- todo may no longer be needed */
 	-moz-appearance: none;
 	appearance: none;
 	border: 0;
