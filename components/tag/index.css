@@ -95,6 +95,7 @@ governing permissions and limitations under the License.
   /* TODO: refactor to remove M tshirt size since that is default */
   --spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
   --spectrum-tag-label-to-clear-icon: var(--spectrum-tag-label-to-clear-icon-medium);
+  --spectrum-tag-edge-to-clear-icon: var(--spectrum-tag-edge-to-clear-icon-medium);
 
   /* tag defaults if no t-shirt size */
   --spectrum-tag-height: var(--spectrum-component-height-100);
@@ -127,6 +128,7 @@ governing permissions and limitations under the License.
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
 
   --spectrum-tag-label-to-clear-icon: var(--spectrum-tag-label-to-clear-icon-small);
+  --spectrum-tag-edge-to-clear-icon: var(--spectrum-tag-edge-to-clear-icon-small);
 
   /* tokens based on theme and t-shirt size */
   --spectrum-tag-corner-radius: var(--spectrum-tag-size-small-corner-radius);
@@ -179,6 +181,7 @@ governing permissions and limitations under the License.
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
 
   --spectrum-tag-label-to-clear-icon: var(--spectrum-tag-label-to-clear-icon-large);
+  --spectrum-tag-edge-to-clear-icon: var(--spectrum-tag-edge-to-clear-icon-large);
 
     /* tokens based on theme and t-shirt size */
   --spectrum-tag-corner-radius: var(--spectrum-tag-size-large-corner-radius);
@@ -249,8 +252,10 @@ governing permissions and limitations under the License.
                               + (var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) * -1));
 
     /* end spacing is theme-specific */
-    margin-inline-end: calc(var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-clear-button-spacing-inline-end))
-                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+    /* TODO: I feel like we don't need this and I can remove it but am unsure */
+    /* margin-inline-end: calc(var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-clear-button-spacing-inline-end))
+                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width))); */
+    margin-inline-end: var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-edge-to-clear-icon));
 
     /* ensure clear button is correct color */
     color: currentcolor;
@@ -287,7 +292,7 @@ governing permissions and limitations under the License.
     /* space from label text to end edge */
     /* margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end))
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width))); */
-    margin-inline-end: var(--spectrum-tag-label-to-clear-icon);
+    margin-inline-end: var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-to-clear-icon));
   }
 
   &:hover {
