@@ -406,3 +406,8 @@ StaticWhite.args = {
 	color: "dark",
 	staticColor: "white",
 };
+
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.parameters = {
+	chromatic: { forcedColors: "active" },
+};
