@@ -92,7 +92,9 @@ governing permissions and limitations under the License.
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
 
   /* clear button inline spacing fallback if no t-shirt size */
+  /* TODO: refactor to remove M tshirt size since that is default */
   --spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
+  --spectrum-tag-label-to-clear-icon: var(--spectrum-tag-label-to-clear-icon-medium);
 
   /* tag defaults if no t-shirt size */
   --spectrum-tag-height: var(--spectrum-component-height-100);
@@ -123,6 +125,8 @@ governing permissions and limitations under the License.
   --spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
+
+  --spectrum-tag-label-to-clear-icon: var(--spectrum-tag-label-to-clear-icon-small);
 
   /* tokens based on theme and t-shirt size */
   --spectrum-tag-corner-radius: var(--spectrum-tag-size-small-corner-radius);
@@ -173,6 +177,8 @@ governing permissions and limitations under the License.
   --spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
   --spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
+
+  --spectrum-tag-label-to-clear-icon: var(--spectrum-tag-label-to-clear-icon-large);
 
     /* tokens based on theme and t-shirt size */
   --spectrum-tag-corner-radius: var(--spectrum-tag-size-large-corner-radius);
@@ -279,8 +285,9 @@ governing permissions and limitations under the License.
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
     /* space from label text to end edge */
-    margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end))
-                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+    /* margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end))
+                            - var(--mod-tag-border-width, var(--spectrum-tag-border-width))); */
+    margin-inline-end: var(--spectrum-tag-label-to-clear-icon);
   }
 
   &:hover {
