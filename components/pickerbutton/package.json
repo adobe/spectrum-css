@@ -1,39 +1,37 @@
 {
-	"name": "@spectrum-css/pickerbutton",
-	"version": "5.0.0",
-	"description": "The Spectrum CSS picker button component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/pickerbutton",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/pickerbutton"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"CHANGELOG.md",
-		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
-	],
-	"peerDependencies": {
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/menu": ">=5",
-		"@spectrum-css/popover": ">=5 <=6",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
-	},
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/pickerbutton",
+  "version": "5.0.0",
+  "description": "The Spectrum CSS picker button component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/pickerbutton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/pickerbutton"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "files": [
+    "dist/*",
+    "metadata/mods.md",
+    "stories/template.js"
+  ],
+  "peerDependencies": {
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/menu": ">=5",
+    "@spectrum-css/popover": ">=5 <=6",
+    "@spectrum-css/tokens": ">=14.0.0-next.3"
+  },
+  "keywords": [
+    "adobe",
+    "css",
+    "design system",
+    "spectrum"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
