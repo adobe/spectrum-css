@@ -12,6 +12,7 @@ site/
 │   ├── dependencies.pug - dependencies common to all pages
 │   ├── nav.pug - the navigation (within the sidebar)
 │   └── sidebar.pug - the left sidebar
+|   └── siteComponent.pug - template to build docs for components
 ├── resources
 │   ├── css
 │   │   ├── docs.css - CSS related specifically to markup examples and component documentation
@@ -20,12 +21,8 @@ site/
 │   └── js
 │       ├── SpectrumSwitcher.js - A class that supports switching colorstops
 │       ├── enhancement.js - Enhancements that make examples interactive
-│       ├── polyfills.js - Polyfills for old browsers
 │       ├── site.js - The actual site navigation code
 │       └── typekit.js - Typekit that knows how to choose large/small kits based on the language attribute
-└── templates
-    ├── individualComponent.pug - template to build individual component packages
-    └── siteComponent.pug - template to build docs for components
 ```
 
 ## Architecture
@@ -38,27 +35,27 @@ Because the dependencies included in the component example pages are sorted in t
 
 ## Viewing the site
 
-1. Run `gulp dev` at the top level of the project and the site will build and open up in your browser.
+1. Run `yarn dev` at the top level of the project and the site will build and open up in your browser.
 
 ## Editing content
 
-1. Run `gulp dev` at the top level of the project.
+1. Run `yarn dev` at the top level of the project.
 2. Edit the `*.pug` files in this folder as well as `includes/*.pug` and the site will live reload with your changes.
 
 ## Adding a new page
 
-1. Run `gulp dev` at the top level of the project.
+1. Run `yarn dev` at the top level of the project.
 2. Create the Pug template file for the page in this folder by copying an existing page:
 
 ```shell
 cp getting-started.pug new-page.pug
 ```
 
-3. Manually add the new page to the navigation in `includes/nav.pug`, including the `.js-fastLoad` class on the link and the `is-selected` switch on the list item:
+3. Manually add the new page to the navigation in `includes/nav.pug`, including the `is-selected` switch on the list item:
 
 ```pug
       li.spectrum-SideNav-item(class=pageURL === 'new-page.html' ? 'is-selected' : '')
-        a.spectrum-SideNav-itemLink.js-fastLoad(href='new-page.html') New Page
+        a.spectrum-SideNav-itemLink(href='new-page.html') New Page
 ```
 
 4. Your new page will appear in the navigation. You can continue to edit it and it will live reload.
@@ -79,4 +76,4 @@ See the [internationalized typography example page](typography-i18n.html) for Ja
 
 ## Adding and editing resources
 
-You can add and edit site resources to the `resources/` folder. These are copied directly into the root of the site and can be included as necessary. Editing existing resources while `gulp dev` is running will inject the new resources.
+You can add and edit site resources to the `resources/` folder. These are copied directly into the root of the site and can be included as necessary. Editing existing resources while `yarn dev` is running will inject the new resources.

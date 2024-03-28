@@ -31,20 +31,11 @@ const dirs = {
 	components: path.join(__dirname, "../../components"),
 	site: path.join(__dirname, "../../site"),
 	publish: path.join(__dirname, "../../dist"),
+	storybook: path.join(__dirname, "../../.storybook"),
 };
 
 /** @type {(string) => string} */
 const relativePrint = (filename, { cwd = dirs.root } = {}) => path.relative(cwd, filename);
-
-const printHeader = (content, { timerKey, icon } = {}) => {
-	if (timerKey) console.time(timerKey);
-	console.log(`\n\n${timerKey ? `${timerKey} ` : ""}${icon ? `${icon} ` : ""} ${content}`);
-	return timerKey;
-};
-
-const printFooter = (timerKey) => {
-	if (timerKey) console.timeEnd(timerKey);
-};
 
 /**
  * Given a list of package paths, solve the dependency order
@@ -55,13 +46,13 @@ async function solveDependencies(packages = []) {
 	const packageDependencies = {};
 
 	await Promise.all(
-		packages.map(async (package) => {
+		packages.map(async (pkg) => {
 			const {
 				name,
 				peerDependencies = {},
 				dependencies = {},
 				devDependencies = {},
-			} = await fsp.readFile(path.join(package, "package.json")).then(JSON.parse);
+			} = await fsp.readFile(path.join(pkg, "package.json")).then(JSON.parse);
 
 			packageDependencies[name] = [...new Set([
 				...Object.keys(peerDependencies),
@@ -115,6 +106,12 @@ function getPackageFromPath(filePath = process.cwd()) {
 		return parts[index + 1];
 	}
 
+	// Capture component name from a local or node_modules syntax
+	if (parts.includes(".storybook")) {
+		const index = parts.indexOf(".storybook");
+		return parts[index + 2];
+	}
+
 	// Check local root-level packages such as ui-icons & tokens
 	if (parts.includes("ui-icons")) return "ui-icons";
 	if (parts.includes("tokens")) return "tokens";
@@ -127,8 +124,6 @@ function getPackageFromPath(filePath = process.cwd()) {
 
 module.exports = {
     dirs,
-    printHeader,
-    printFooter,
     relativePrint,
     solveDependencies,
     getFolderDependencyOrder,

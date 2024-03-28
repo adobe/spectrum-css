@@ -8,23 +8,19 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-/* global Typekit, document */
+/* global Typekit */
 /* jshint -W033,-W116 */
 window.addEventListener("DOMContentLoaded", function () {
 	"use strict";
 
 	var config = {
-		/* REPEAT AFTER ME:
-     I WILL NOT REUSE THE ADOBE FONTS ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT / PRODUCTION
-     I WILL NOT REUSE THE ADOBE FONTS ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT / PRODUCTION
-     I WILL NOT REUSE THE ADOBE FONTS ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT / PRODUCTION
-     See https://wiki.corp.adobe.com/display/devrel/Using+Typekit+at+Adobe to get set up right. */
+		/* Do not use this in production; see https://wiki.corp.adobe.com/display/devrel/Using+Typekit+at+Adobe to get set up. */
+
 		// On pageload, determine to current pages language setting.
 		// If it is US-language or unset use the 1st Adobe font web project id (smaller size),
 		// otherwise use the 2nd kit with all the language settings (larger size)
-		// kitId: document.querySelector('[lang]:not([lang="en-US"])') !== null ? 'pbi5ojv' : 'ruf7eed',
 		kitId:
-			document.querySelector('[lang]:not([lang="en-US"])') === null
+			document.querySelector("[lang]:not([lang=\"en-US\"])") === null
 				? "mge7bvf"
 				: "rok6rmo",
 		scriptTimeout: 3000,
@@ -63,7 +59,8 @@ window.addEventListener("DOMContentLoaded", function () {
 			clearTimeout(t);
 			try {
 				Typekit.load(config);
-			} catch (b) {}
+			}
+			catch (b) { /* empty */ }
 		};
 		var s = document.getElementsByTagName("script")[0];
 		s.parentNode.insertBefore(tk, s);

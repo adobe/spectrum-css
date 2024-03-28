@@ -8,7 +8,7 @@ examples:
     markup: |
       <div class="spectrum-SplitButton">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-SplitButton-action"><span class="spectrum-Button-label">Split Button</span></button>
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-SplitButton-trigger">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-Button--iconOnly spectrum-SplitButton-trigger">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -19,7 +19,7 @@ examples:
       <br>
 
       <div class="spectrum-SplitButton spectrum-SplitButton--left">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--accent spectrum-SplitButton-trigger">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--fill spectrum-Button--iconOnly spectrum-Button--accent spectrum-SplitButton-trigger">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -32,7 +32,7 @@ examples:
     markup: |
       <div class="spectrum-SplitButton">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-SplitButton-action"><span class="spectrum-Button-label">Split Button</span></button>
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-SplitButton-trigger">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-Button--iconOnly spectrum-SplitButton-trigger">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -43,7 +43,7 @@ examples:
       <br>
 
       <div class="spectrum-SplitButton spectrum-SplitButton--left">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-SplitButton-trigger">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--primary spectrum-Button--iconOnly spectrum-SplitButton-trigger">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -56,7 +56,7 @@ examples:
     markup: |
       <div class="spectrum-SplitButton">
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-SplitButton-action"><span class="spectrum-Button-label">Split Button</span></button>
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-SplitButton-trigger">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-Button--iconOnly spectrum-SplitButton-trigger">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>
@@ -67,7 +67,7 @@ examples:
       <br>
 
       <div class="spectrum-SplitButton spectrum-SplitButton--left">
-        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-SplitButton-trigger">
+        <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--secondary spectrum-Button--iconOnly spectrum-SplitButton-trigger">
           <svg class="spectrum-Icon spectrum-UIIcon-ChevronDown100 spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-Chevron100" />
           </svg>

@@ -9,6 +9,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/* global lunr */
+
 function Search(el) {
 	this.index = null;
 	this.hasResults = false;
@@ -93,11 +95,7 @@ function Search(el) {
 	this.input.addEventListener(
 		"focus",
 		function () {
-			// if (this.input.value.length) {
-			//   this.doSearch();
-			// }
-
-			var event = new Event("SearchFocused");
+			const event = new Event("SearchFocused");
 			window.dispatchEvent(event);
 		}.bind(this)
 	);
@@ -129,7 +127,8 @@ function loadJSON(url, callback) {
 		var object = null;
 		try {
 			object = JSON.parse(req.responseText);
-		} catch (err) {
+		}
+		catch (err) {
 			console.error(`Failed to load JSON from ${url}: ${err}`);
 			callback(err);
 		}
@@ -165,23 +164,23 @@ Search.prototype.handleSubmit = function (event) {
 	event.preventDefault();
 };
 
-Search.prototype.handleReset = function (event) {
+Search.prototype.handleReset = function () {
 	this.hasResults = false;
 	this.hideResults();
 	this.input.value = "";
 	this.showHideClear();
 };
 
-Search.prototype.showHideClear = function (event) {
+Search.prototype.showHideClear = function () {
 	this.clearButton.hidden = this.input.value.length === 0;
 };
 
-Search.prototype.hideResults = function (event) {
+Search.prototype.hideResults = function () {
 	this.form.setAttribute("aria-expanded", "false");
 	this.popover.classList.remove("is-open");
 };
 
-Search.prototype.showResults = function (event) {
+Search.prototype.showResults = function () {
 	this.form.setAttribute("aria-expanded", "true");
 	var inputRect = this.input.getBoundingClientRect();
 	this.popover.style.top = `${inputRect.bottom + 10}px`;
@@ -192,10 +191,10 @@ Search.prototype.showResults = function (event) {
 			.getPropertyValue("direction") === "rtl";
 
 	if (isRTL) {
-		var width = window.innerWidth;
 		this.popover.style.right = `${window.innerWidth - inputRect.right}px`;
 		this.popover.style.left = "auto";
-	} else {
+	}
+	else {
 		this.popover.style.right = "auto";
 		this.popover.style.left = `${inputRect.left}px`;
 	}
@@ -227,16 +226,21 @@ Search.prototype.handlePopoverNavigation = function (e) {
 		if (e.key === "ArrowDown") {
 			newItemIndex =
 				currentItemIndex + 1 < items.length ? currentItemIndex + 1 : 0;
-		} else if (e.key === "ArrowUp") {
+		}
+		else if (e.key === "ArrowUp") {
 			newItemIndex =
 				currentItemIndex - 1 >= 0 ? currentItemIndex - 1 : items.length - 1;
-		} else if (e.key === "Home") {
+		}
+		else if (e.key === "Home") {
 			newItemIndex = 0;
-		} else if (e.key === "End") {
+		}
+		else if (e.key === "End") {
 			newItemIndex = items.length - 1;
-		} else if (e.key === "Escape") {
+		}
+		else if (e.key === "Escape") {
 			this.input.focus();
-		} else if (e.key === "Enter") {
+		}
+		else if (e.key === "Enter") {
 			currentItem.click();
 		}
 		if (newItemIndex !== -1) {
@@ -255,7 +259,8 @@ Search.prototype.handleKeyDown = function (e) {
 			this.showResults();
 			firstItem.focus();
 		}
-	} else if (e.key === "Escape") {
+	}
+	else if (e.key === "Escape") {
 		this.handleReset();
 	}
 };
@@ -268,11 +273,13 @@ Search.prototype.handleKeyPress = function (e) {
 			this.input.blur();
 			this.hideResults();
 		}
-	} else if (e.key !== "Escape") {
+	}
+	else if (e.key !== "Escape") {
 		this.showHideClear();
 		if (this.input.value.length === 0) {
 			this.handleReset();
-		} else {
+		}
+		else {
 			this.doSearch();
 		}
 	}
@@ -285,8 +292,6 @@ Search.prototype.doSearch = function () {
 Search.prototype.search = function (val) {
 	this.searchVal = val;
 
-	let components = [];
-
 	let r = [];
 	if (val.length > 1) {
 		let searchParam = val
@@ -296,7 +301,8 @@ Search.prototype.search = function (val) {
 			.join(" ");
 		try {
 			r = this.index.search(searchParam);
-		} catch (err) {
+		}
+		catch (err) {
 			this.popover.innerHTML = `
 <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
   <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">Search error</h2>
@@ -321,32 +327,18 @@ Search.prototype.search = function (val) {
 		this.searchError.hidden = true;
 		this.searchResults.hidden = false;
 
-		let markup = `
-  ${Search.Categories.map(function (category) {
-		return results[category].length
-			? `
-        <li role="presentation" aria-labelledby="searchResults-${category}">
-          <span class="spectrum-Menu-sectionHeading" id="searchResults-${category}" aria-hidden="true">${
-					Search.CategoryNames[category]
-			  }</span>
-          <ul class="spectrum-Menu spectrum-Menu--sizeM" role="group">
-            ${results[category]
-							.map(function (result, i) {
-								return `  
-                  <a class="spectrum-Menu-item js-fastLoad" href="${result.href}" role="option">
-                    <span class="spectrum-Menu-itemLabel">${result.name}</span>
-                  </a>
-                `;
-							})
-							.join("\n")}
-          </ul>
-        </li>
-        `
-			: "";
-	}).join("\n")}
-`;
+		let markup = Search.Categories.map((category) => results[category].length ? `
+<li role="presentation" aria-labelledby="searchResults-${category}">
+	<span class="spectrum-Menu-sectionHeading" id="searchResults-${category}" aria-hidden="true">${Search.CategoryNames[category]}</span>
+	<ul class="spectrum-Menu spectrum-Menu--sizeM" role="group">${results[category].map((result) => `
+		<a class="spectrum-Menu-item" href="${result.href}" role="option">
+		<span class="spectrum-Menu-itemLabel">${result.name}</span>
+		</a>`).join("\n")}
+	</ul>
+</li>` : "").join("\n");
 		this.searchResults.innerHTML = markup;
-	} else {
+	}
+	else {
 		this.searchError.hidden = false;
 		this.searchResults.hidden = true;
 	}

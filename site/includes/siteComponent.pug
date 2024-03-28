@@ -1,7 +1,7 @@
 -
 
   // Get DNA data
-  util.populateDNAInfo(component, dnaVars);
+  util.populateDNAInfo(component);
 
   // Arrange examples for processing
   var examples;
@@ -44,21 +44,21 @@
   let status = dnaStatusTranslation[component.dnaStatus] || component.dnaStatus;
 
 doctype html
-html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
+html(lang='en-US' dir="ltr")
   head
     title #{component.name} - Spectrum CSS
 
-    include ../includes/dependencies.pug
+    include dependencies.pug
 
-  body
+  body.spectrum
 
     .spectrum-Site
 
-      include ../includes/header.pug
+      include header.pug
 
       .spectrum-Site-content
 
-        include ../includes/sidebar.pug
+        include sidebar.pug
 
         .spectrum-Site-mainContent
 
@@ -154,25 +154,41 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                       if component.deprecationNotice
                         span!= util.markdown.render(component.deprecationNotice)
 
-              table.spectrum-CSSComponent-detailsTable
-                tr.spectrum-Body
-                  th.spectrum-Body--secondary Component status
-                  td
-                    div(class=`spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSComponent-status spectrum-StatusLight--${util.getStatusLightVariant(component.dnaStatus)}`)= status
-                tr.spectrum-Body
-                  th.spectrum-Body--secondary Last released
-                  td= releaseDate
-                tr.spectrum-Body
+              table.spectrum-CSSComponent-detailsTable.spectrum-Table.spectrum-Table--sizeM.spectrum-Table--quiet.spectrum-Table--compact
+                tbody.spectrum-Table-body.spectrum-Body
+                  tr.spectrum-Table-row
+                    th.spectrum-Table-cell.spectrum-Body-strong Component status
+                    td.spectrum-Table-cell
+                      div(class=`spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSComponent-status spectrum-StatusLight--${util.getStatusLightVariant(component.dnaStatus)}`)= status
                   if component.status == "Deprecated"
-                    th.spectrum-Body--secondary Last published version
+                    tr.spectrum-Table-row
+                      th.spectrum-Table-cell.spectrum-Body-strong Last published
+                      td.spectrum-Table-cell
+                        bdo(dir="ltr") #{pkg.name}@#{pkg.version}
+                      tr.spectrum-Table-row
+                        th.spectrum-Table-cell.spectrum-Body-strong Released
+                        td.spectrum-Table-cell #{releaseDate}
+                  else if releases
+                    each tag in releases
+                      tr.spectrum-Table-row
+                        th.spectrum-Table-cell.spectrum-Body-strong #{tag.label}
+                        td.spectrum-Table-cell
+                          bdo(dir="ltr") #{pkg.name}@#{tag.version}
+                      tr.spectrum-Table-row
+                        th.spectrum-Table-cell.spectrum-Body-strong Released
+                        td.spectrum-Table-cell #{tag.date}
                   else
-                    th.spectrum-Body--secondary Current version
-                  td
-                    bdo(dir="ltr") #{pkg.name}@#{pkg.version}
-              if component.details
-                tr
-                  th Details
-                  tr!= util.markdown.render(component.details)
+                    tr.spectrum-Table-row
+                      th.spectrum-Table-cell.spectrum-Body-strong Current version
+                      td.spectrum-Table-cell
+                        bdo(dir="ltr") #{pkg.name}@#{pkg.version}
+                    tr.spectrum-Table-row
+                      th.spectrum-Table-cell.spectrum-Body-strong Released
+                      td.spectrum-Table-cell Unpublished
+                if component.details
+                  tr.spectrum-Table-row
+                    th.spectrum-Table-cell.spectrum-Body-strong Details
+                    tr.spectrum-Table-cell!= util.markdown.render(component.details)
 
               div.spectrum-CSSComponent-resources
                 if component.SpectrumSiteSlug
@@ -227,12 +243,12 @@ html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
                     a(href="#variants").spectrum-BigSubtleLink=`${component.examplesHeading ? component.examplesHeading : 'Variants'}`
                   hr.spectrum-Divider.spectrum-Divider--large
                 each example in examples
-                  include ../includes/example.pug
+                  include example.pug
 
               if component.sections
                 each section in component.sections
-                  include ../includes/section.pug
+                  include section.pug
 
-          include ../includes/footer.pug
+          include footer.pug
 
-    include ../includes/pageBottom.pug
+    include pageBottom.pug

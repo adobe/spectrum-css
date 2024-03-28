@@ -12,7 +12,19 @@
           span.spectrum-SideNav-link-text Components
         ul.spectrum-SideNav.spectrum-SideNav--multiLevel
           each item in nav
-            unless item.hide
+            unless item.status == "Deprecated"
+              li.spectrum-SideNav-item(class=pageURL === item.href ? 'is-selected' : '')
+                a(class={
+                  'spectrum-SideNav-itemLink': true,
+                }, href=item.href)
+                  span.spectrum-SideNav-link-text
+                    =item.name
+      li.spectrum-SideNav-item
+        a.spectrum-SideNav-itemLink(href='#')
+          span.spectrum-SideNav-link-text Deprecated
+        ul.spectrum-SideNav.spectrum-SideNav--multiLevel
+          each item in nav
+            if item.status == "Deprecated"
               li.spectrum-SideNav-item(class=pageURL === item.href ? 'is-selected' : '')
                 a(class={
                   'spectrum-SideNav-itemLink': true,
@@ -24,7 +36,6 @@
       li.spectrum-SideNav-item
         a.spectrum-SideNav-itemLink(href='https://spectrum.adobe.com', target='_blank', rel='noopener')
           span.spectrum-SideNav-link-text Spectrum
-      unless process.env.NODE_ENV === 'development'
-        li.spectrum-SideNav-item
-          a.spectrum-SideNav-itemLink(href=process.env.CHROMATIC_URL ? process.env.CHROMATIC_URL : 'preview/', rel='noopener')
-            span.spectrum-SideNav-link-text Component preview
+      li.spectrum-SideNav-item
+        a.spectrum-SideNav-itemLink(href=process.env.CHROMATIC_URL ? process.env.CHROMATIC_URL : 'preview/', rel='noopener')
+          span.spectrum-SideNav-link-text Component preview

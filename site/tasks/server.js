@@ -12,6 +12,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const path = require("path");
+
 const browserSync = require("browser-sync");
 
 require("colors");
@@ -40,6 +42,9 @@ async function main() {
 		notify: true,
 		open: true,
 		port: process.env.PORT ?? 3000,
+		watchOptions: {
+			ignoreInitial: true,
+		},
 		files: [
 			{
 				match: ["*/stories/*.js", "*/package.json"],
@@ -61,6 +66,11 @@ async function main() {
 						cwd: path.join(packagePath, "stories"),
 						ignore: ["*.stories.js"],
 						outputDir: path.join("components", componentName),
+					}).then((results = []) => {
+						results.flat().forEach(r => console.log(r));
+					}).catch((err) => {
+						if (err) console.log(err.message ?? err);
+						return Promise.reject(err);
 					});
 				},
 			},
@@ -72,7 +82,12 @@ async function main() {
 				},
 				fn: async (event, file) => {
 					if (!["add", "change"].includes(event)) return;
-					return watch_Styles(path.join(dirs.components, file));
+					return watch_Styles(path.join(dirs.components, file)).then((results = []) => {
+						results.flat().forEach(r => console.log(r));
+					}).catch((err) => {
+						if (err) console.log(err.message ?? err);
+						return Promise.reject(err);
+					});
 				},
 			},
 			{
@@ -87,7 +102,32 @@ async function main() {
 					if (!componentName) return;
 
 					const globalData = await fetchData_forGlobal();
-					return build_forPackage(path.join(dirs.components, componentName), globalData);
+					return build_forPackage(componentName, globalData).then((results = []) => {
+						results.flat().forEach(r => console.log(r));
+					}).catch((err) => {
+						if (err) console.log(err.message ?? err);
+						return Promise.reject(err);
+					});
+				},
+			},
+			{
+				match: ["deprecated/*/*.yml"],
+				options: {
+					cwd: dirs.storybook,
+				},
+				fn: async (event, file) => {
+					if (!["add", "change"].includes(event)) return;
+
+					const componentName = getPackageFromPath(path.join(dirs.storybook, file));
+					if (!componentName) return;
+
+					const globalData = await fetchData_forGlobal();
+					return build_forPackage(componentName, globalData).then((results = []) => {
+						results.flat().forEach(r => console.log(r));
+					}).catch((err) => {
+						if (err) console.log(err.message ?? err);
+						return Promise.reject(err);
+					});
 				},
 			},
 			{
@@ -110,7 +150,12 @@ async function main() {
 				fn: async (event) => {
 					if (!["add", "change"].includes(event)) return;
 
-					return copy_Resources();
+					return copy_Resources().then((results = []) => {
+						results.flat().forEach(r => console.log(r));
+					}).catch((err) => {
+						if (err) console.log(err.message ?? err);
+						return Promise.reject(err);
+					});
 				},
 			},
 			{
@@ -124,6 +169,11 @@ async function main() {
 					return copy_Assets([file], {
 						cwd: path.dirname(uiIcons),
 						outputDir: "img",
+					}).then((results = []) => {
+						results.flat().forEach(r => console.log(r));
+					}).catch((err) => {
+						if (err) console.log(err.message ?? err);
+						return Promise.reject(err);
 					});
 				},
 			},
@@ -133,7 +183,7 @@ async function main() {
 			console.error(err.message ?? err);
 			bs.exit();
 		}
-	})
-};
+	});
+}
 
 module.exports = main;

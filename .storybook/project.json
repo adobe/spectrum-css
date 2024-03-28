@@ -50,6 +50,12 @@
 				"ci": {
 					"cache": false,
 					"commands": ["storybook build --config-dir . --webpack-stats-json"]
+				},
+				"docs": {
+					"outputs": ["{workspaceRoot}/dist/preview"],
+					"commands": [
+						"storybook build --config-dir . --output-dir ../dist/preview"
+					]
 				}
 			}
 		},
