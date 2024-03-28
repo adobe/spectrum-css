@@ -61,7 +61,12 @@ This component has been deprecated. Use an action bar to allow users to perform 
 ##7.4.2
 🗓
 2024-02-06
+<a name="7.4.2-next.0"></a>
+##7.4.2-next.0
+🗓
+2024-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.4.1...@spectrum-css/preview@7.4.2-next.0)
 
+**Note:** Spectrum 2 next version
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="7.4.1"></a>

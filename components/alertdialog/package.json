@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/alertdialog",
-  "version": "1.2.4",
+  "version": "1.2.5-next.1",
   "description": "The Spectrum CSS alertdialog component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -19,7 +19,7 @@
     "@spectrum-css/divider": ">=2",
     "@spectrum-css/icon": ">=4",
     "@spectrum-css/modal": ">=4",
-    "@spectrum-css/tokens": ">=13",
+    "@spectrum-css/tokens": "^14.0.0-next.3",
     "@spectrum-css/underlay": ">=3"
   },
   "peerDependenciesMeta": {

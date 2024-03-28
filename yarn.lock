@@ -91,10 +91,10 @@
   resolved "https://registry.yarnpkg.com/@adobe/spectrum-css-workflow-icons/-/spectrum-css-workflow-icons-1.5.4.tgz#0e09ff519c36139176c3ba3ce617a995c9032f67"
   integrity sha512-sZ19YOLGw5xTZzCEkVXPjf53lXVzo063KmDTJjpSjy/XLVsF+RaX0b436SfSM4hsIUZ7n27+UsbOvzFaFjcYXw==
 
-"@adobe/spectrum-tokens@12.24.0":
-  version "12.24.0"
-  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-12.24.0.tgz#0056d4fc8aaae3871177a2d3d02900bee6c43d70"
-  integrity sha512-I4M5RAOaeetAFd4W7JFc607bBItndKNqBVXMj55t5T/qRhsOg/j/b5gd2sVsEH2pFrexgBfPxLBLUP9EKFgm8A==
+"@adobe/spectrum-tokens@13.0.0-beta.21":
+  version "13.0.0-beta.21"
+  resolved "https://registry.yarnpkg.com/@adobe/spectrum-tokens/-/spectrum-tokens-13.0.0-beta.21.tgz#e006e302daaada5fcfb6f3a428e31f754a51ec78"
+  integrity sha512-QY5AYLdpbrpdx50uZWFxFIpTgHUgMUbWDaDvXZRRoyFqRTjPhVbLoY/IU7eUymv+RouZLwOXnvqkoT7c70K2kA==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"
@@ -3245,6 +3245,11 @@
   version "8.1.2"
   resolved "https://registry.yarnpkg.com/@spectrum-css/splitbutton/-/splitbutton-8.1.2.tgz#149d9e98094cd035f6f348f8cf50d72ce8f17f19"
   integrity sha512-hUsqhEhgm8PfKvwKPSACPU+Jqt0NaovD53gOp9QRa4jU9G3q8RpE5uJbs+pGZ9vyI6ocsm5lbs0zYtA082axzQ==
+
+"@spectrum-css/tokens@^13.0.8":
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-13.2.0.tgz#db41a16ae5554b9cdef591aba0df6ad7f75e74da"
+  integrity sha512-w1JJbbYkIeQjvsogOO1rdePuikmLaOs69+bBBL80Nb3deZUssrZE9cWOrLTv1iNzditKtn4pgrtdVXv3+Wp6SA==
 
 "@storybook/addon-a11y@^7.6.17":
   version "7.6.17"

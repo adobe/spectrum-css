@@ -8,23 +8,31 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/button/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### Fill or Outline class required
+      ### x/x/2024 - Version 13.0.0
+      #### Spectrum 2 release
+      Button now uses Spectrum 2 tokens and specifications. A few notable changes:
+      - The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
+      - The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
+      - The mod custom property `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`.
+
+      ### Versions prior to 13.0.0
+      #### Fill or Outline class required
       All buttons now require either the `.spectrum-Button--fill` or `.spectrum-Button--outline` class.
 
-      ### Negative replaced by Negative with Outline
+      #### Negative replaced by Negative with Outline
       Replace all `.spectrum-Button--negative` with `.spectrum-Button--negative .spectrum-Button--outline`.
 
-      ### Negative Quiet replaced by Negative with Outline
+      #### Negative Quiet replaced by Negative with Outline
       Replace all `.spectrum-Button--negative .spectrum-Button--quiet` with `.spectrum-Button--negative .spectrum-Button--outline`.
 
-      ### Icon Only
+      #### Icon Only
       Add the `.spectrum-Button--iconOnly` class to apply the correct styling when an icon is used without a label.
       Provide an `aria-label` on the button itself when using this variant for accessibility.
 
-      ### T-shirt sizing
+      #### T-shirt sizing
       Button now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-Button--size*` class.
 
-      ### Change workflow icon size
+      #### Change workflow icon size
 
       Previously, all Buttons used `.spectrum-Icon--sizeS`. This has changed:
 
@@ -35,7 +43,7 @@ sections:
       | `.spectrum-Button--sizeL`  | `.spectrum-Icon--sizeL`           |
       | `.spectrum-Button--sizeXL` | `.spectrum-Icon--sizeXL`          |
 
-      ### Remove focus-ring class
+      #### Remove focus-ring class
       We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: button-negative

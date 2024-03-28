@@ -49,5 +49,10 @@ addons.setConfig({
 	}),
 	sidebar: {
 		showRoots: false,
+		filters: {
+			patterns: (item) => {
+				return !item.tags.includes('foundation');
+			}
+		}
 	},
 });

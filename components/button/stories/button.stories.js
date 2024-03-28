@@ -2,6 +2,7 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { withDownStateDimensionCapture } from "../../../.storybook/decorators";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -12,6 +13,7 @@ export default {
 	description:
 		"Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.",
 	component: "Button",
+	decorators: [withDownStateDimensionCapture('.spectrum-Button:not(:disabled)')],
 	argTypes: {
 		size: {
 			name: "Size",

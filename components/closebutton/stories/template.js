@@ -2,7 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { upperCase, lowerCase, capitalize } from "lodash-es";
+import { capitalize, lowerCase, upperCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -19,13 +19,19 @@ export const Template = ({
 	onclick,
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
+	let iconName = "Cross300";
+	switch (size) {
+		case "s":
+			iconName = "Cross200";
+			break;
+		case "l":
+			iconName = "Cross400";
+			break;
+		case "xl":
+			iconName = "Cross500";
+			break;
+		default:
+			iconName = "Cross300";
 	}
 
 	return html`
@@ -46,7 +52,7 @@ export const Template = ({
 			${Icon({
 				...globals,
 				size,
-				iconName: "Cross",
+				iconName,
 				customClasses: [`${rootClass}-UIIcon`],
 			})}
 		</button>

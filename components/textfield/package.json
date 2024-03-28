@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/textfield",
-  "version": "6.1.6",
+  "version": "6.1.7-next.1",
   "description": "The Spectrum CSS textfield component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -16,7 +16,7 @@
   "main": "dist/index.css",
   "peerDependencies": {
     "@spectrum-css/helptext": ">=4",
-    "@spectrum-css/tokens": ">=13"
+    "@spectrum-css/tokens": "^14.0.0-next.3"
   },
   "peerDependenciesMeta": {
     "@spectrum-css/helptext": {

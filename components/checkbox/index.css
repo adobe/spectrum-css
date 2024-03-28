@@ -30,7 +30,7 @@ governing permissions and limitations under the License.
 
   --spectrum-checkbox-content-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-checkbox-control-color-disabled: var(--spectrum-disabled-content-color);
-  --spectrum-checkbox-checkmark-color: var(--spectrum-gray-75);
+  --spectrum-checkbox-checkmark-color: var(--spectrum-gray-50);
 
   --spectrum-checkbox-invalid-color-default: var(--spectrum-negative-color-900);
   --spectrum-checkbox-invalid-color-hover: var(--spectrum-negative-color-1000);
@@ -149,6 +149,12 @@ governing permissions and limitations under the License.
 
     .spectrum-Checkbox-label {
       color: var(--highcontrast-checkbox-content-color-down, var(--mod-checkbox-content-color-down, var(--spectrum-checkbox-content-color-down)));
+    }
+  }
+
+  &:not(.is-readOnly):active {
+    .spectrum-Checkbox-input:not(:disabled) + .spectrum-Checkbox-box {
+      transform: perspective(var(--spectrum-component-size-minimum-perspective-down)) translateZ(var(--spectrum-component-size-difference-down));
     }
   }
 
@@ -374,6 +380,7 @@ governing permissions and limitations under the License.
     }
   }
 }
+
 /* stylelint-enable max-nesting-depth */
 
 .spectrum-Checkbox-label {

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/table",
-  "version": "5.2.5",
+  "version": "5.2.6-next.1",
   "description": "The Spectrum CSS table component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -19,7 +19,7 @@
     "@spectrum-css/checkbox": ">=8",
     "@spectrum-css/icon": ">=4",
     "@spectrum-css/thumbnail": ">=5",
-    "@spectrum-css/tokens": ">=13"
+    "@spectrum-css/tokens": "^14.0.0-next.3"
   },
   "peerDependenciesMeta": {
     "@spectrum-css/button": {

@@ -1,12 +1,9 @@
 | Modifiable custom properties                             |
 | -------------------------------------------------------- |
-| `--mod-animation-duration-100`                           |
 | `--mod-button-animation-duration`                        |
 | `--mod-button-focus-indicator-gap`                       |
 | `--mod-button-font-family`                               |
 | `--mod-button-line-height`                               |
-| `--mod-focus-indicator-gap`                              |
-| `--mod-line-height-100`                                  |
 | `--mod-logic-button-and-background-color`                |
 | `--mod-logic-button-and-background-color-disabled`       |
 | `--mod-logic-button-and-background-color-hover`          |
@@ -36,4 +33,3 @@
 | `--mod-logic-button-or-text-color`                       |
 | `--mod-logic-button-or-text-color-disabled`              |
 | `--mod-logic-button-padding`                             |
-| `--mod-sans-font-family-stack`                           |

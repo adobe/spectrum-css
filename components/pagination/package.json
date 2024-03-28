@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/pagination",
-  "version": "7.1.6",
+  "version": "7.1.7-next.1",
   "description": "The Spectrum CSS Pagination component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -20,7 +20,7 @@
     "@spectrum-css/icon": ">=4",
     "@spectrum-css/splitbutton": ">=7",
     "@spectrum-css/textfield": ">=6",
-    "@spectrum-css/tokens": ">=13"
+    "@spectrum-css/tokens": "^14.0.0-next.3"
   },
   "publishConfig": {
     "access": "public"
