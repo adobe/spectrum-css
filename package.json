@@ -70,6 +70,9 @@
     "colors": "^1.4.0",
     "conventional-changelog-spectrum": "^1.0.2",
     "cross-env": "^7.0.3",
+    "css-declaration-sorter": "^7.2.0",
+    "cssnano": "^6.1.2",
+    "cssnano-preset-advanced": "^6.1.2",
     "diff": "^5.1.0",
     "diff2html": "^3.4.45",
     "eslint": "^8.57.0",
@@ -88,8 +91,6 @@
     "postcss": "^8.4.35",
     "postcss-calc": "^9.0.1",
     "postcss-combininator": "^2.0.0",
-    "postcss-discard-comments": "^6.0.2",
-    "postcss-discard-empty": "^6.0.3",
     "postcss-extend": "^1.0.5",
     "postcss-hover-media-feature": "1.0.2",
     "postcss-import": "^16.0.1",
@@ -124,7 +125,7 @@
     "package.json": [
       "prettier-package-json --write"
     ],
-    "dist/*.css": [
+    "*.css": [
       "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write"
     ],
     "components/*/metadata/*.{yml,yaml}": [

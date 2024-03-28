@@ -15,7 +15,6 @@ const { join, sep, basename } = require("path");
 module.exports = ({
 	file,
 	to,
-	cwd = process.cwd(),
 	splitinatorOptions = {
 		noSelectors: false,
 		noFlatVariables: false,
@@ -30,7 +29,8 @@ module.exports = ({
 } = {}) => {
 	if (env === "development" && !options.map) {
 		options.map = { inline: false };
-	} else options.map = false;
+	}
+	else options.map = false;
 
 	/* themes/*.css */
 	if (
@@ -43,7 +43,7 @@ module.exports = ({
 		if (
 			(to && basename(to, ".css") === "express") ||
 			(file && basename(file, ".css") === "express")
-		 ) {
+		) {
 			combine = true;
 		}
 	}
@@ -67,21 +67,36 @@ module.exports = ({
 	return {
 		...options,
 		plugins: {
+			/* --------------------------------------------------- */
+			/* ------------------- IMPORTS ----------------------- */
 			"postcss-import": {},
+			/* --------------------------------------------------- */
+			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
 			"postcss-nested": {},
+			"postcss-hover-media-feature": {},
+			/* --------------------------------------------------- */
+			/* ------------------- VARIABLE PARSING -------------- */
 			"postcss-splitinator": {
 				processIdentifier: (identifier) => identifier === "express" ? "spectrum--express" : identifier,
 				...splitinatorOptions,
 			},
-			"postcss-hover-media-feature": {},
-			"postcss-calc": {},
 			"postcss-combininator": combine ? {} : false,
 			...additionalPlugins,
-			"postcss-discard-empty": {},
+			/* --------------------------------------------------- */
+			/* ------------------- ORGANIZE/DEDUPE --------------- */
 			"at-rule-packer": {},
-			"postcss-discard-comments": !keepComments ? { removeAllButFirst: true } : false,
-			"autoprefixer": {},
+			cssnano: {
+				preset: [
+					"cssnano-preset-advanced",
+					{
+						colormin: false,
+						cssDeclarationSorter: false, // @todo { order: "smacss" }
+					},
+				],
+			},
+			/* --------------------------------------------------- */
+			/* ------------------- REPORTING --------------------- */
 			"stylelint": lint ? {
 				cache: true,
 				configFile: join(__dirname, "stylelint.config.js"),
@@ -90,4 +105,4 @@ module.exports = ({
 			"postcss-reporter": verbose ? {} : false,
 		},
 	};
-}
+};

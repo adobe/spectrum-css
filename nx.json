@@ -104,6 +104,7 @@
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
+					"prettier --write --no-error-on-unmatched-pattern {projectRoot}/*.css {projectRoot}/themes/*.css",
 					"stylelint --fix {projectRoot}/*.css {projectRoot}/themes/*.css",
 					"eslint --fix --no-error-on-unmatched-pattern {projectRoot}/stories/*.js"
 				]
