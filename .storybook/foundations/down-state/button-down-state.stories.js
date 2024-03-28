@@ -10,15 +10,10 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: ['click .spectrum-Button'],
-		},
-		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("button")
-				? "migrated"
-				: undefined,
+			handles: ["click .spectrum-Button"],
 		},
 	},
-	tags: ['foundation'],
+	tags: ["foundation"],
 };
 
 export const ButtonDownState = Template.bind({});
