@@ -15,7 +15,6 @@ const { join, sep, basename } = require("path");
 module.exports = ({
 	file,
 	to,
-	// cwd = process.cwd(),
 	splitinatorOptions = {
 		noSelectors: false,
 		noFlatVariables: false,
@@ -59,8 +58,8 @@ module.exports = ({
 
 	/* index-base.css */
 	if (
-		to && basename(to, ".css") === "index-base" ||
-		file && basename(file, ".css") === "index-base"
+		(to && basename(to, ".css") === "index-base") ||
+		(file && basename(file, ".css") === "index-base")
 	) {
 		splitinatorOptions.noFlatVariables = true;
 	}
@@ -79,27 +78,83 @@ module.exports = ({
 	return {
 		...options,
 		plugins: {
+			/* --------------------------------------------------- */
+			/* ------------------- IMPORTS ---------------- */
+			/** @link https://github.com/postcss/postcss-import#postcss-import */
 			"postcss-import": {},
+			/* --------------------------------------------------- */
+			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
 			"postcss-nested": {},
 			"postcss-splitinator": {
-				processIdentifier: (identifier) => identifier === "express" ? "spectrum--express" : identifier,
+				processIdentifier: (identifier) =>
+					identifier === "express" ? "spectrum--express" : identifier,
 				...splitinatorOptions,
 			},
 			"postcss-hover-media-feature": {},
 			"postcss-calc": {},
 			"postcss-combininator": combine ? {} : false,
 			...additionalPlugins,
+			/* --------------------------------------------------- */
+			/* ------------------- POLYFILLS --------------------- */
+			/** @note [CSS-289] Coordinating with SWC */
+			// "postcss-hover-media-feature": {},
+
+			/**
+			 * @todo should we be documenting this for downstream users rather
+			 * than polyfilling the features ourselves? what if they want to
+			 * use a different support matrix?
+			 *
+			 * @note stage 2 (default); stage 4 === stable
+			 * @link https://github.com/csstools/postcss-plugins
+			 * @link https://preset-env.cssdb.org/features/#stage-2
+			 */
+			"postcss-preset-env": {
+				stage: 3,
+				env,
+				features: {
+					"logical-properties-and-values": false,
+					clamp: true,
+					"color-functional-notation": true,
+					"dir-pseudo-class": { preserve: true },
+					"nesting-rules": { noIsPseudoSelector: true },
+					// "focus-visible-pseudo-class": true,
+					// https://github.com/jsxtools/focus-within
+					"focus-within-pseudo-class": true,
+					"font-format-keywords": true,
+					"not-pseudo-class": true,
+					"opacity-percentage": true,
+					// https://github.com/csstools/postcss-plugins/tree/main/plugins/css-prefers-color-scheme
+					"prefers-color-scheme-query": true,
+				},
+			},
+			/* --------------------------------------------------- */
+			/* ------------------- CLEAN-UP TASKS ---------------- */
 			"postcss-discard-empty": {},
 			"at-rule-packer": {},
-			"postcss-discard-comments": !keepComments ? { removeAllButFirst: true } : false,
-			"autoprefixer": {},
-			"stylelint": lint ? {
-				cache: true,
-				configFile: join(__dirname, "stylelint.config.js"),
-				quiet: !verbose,
-			} : false,
-			"postcss-reporter": verbose ? {} : false,
+			"postcss-discard-comments": !keepComments
+				? { removeAllButFirst: true }
+				: false,
+			/* --------------------------------------------------- */
+			/* ------------------- REPORTING --------------------- */
+			stylelint: lint
+				? {
+					cache: true,
+					// Passing the config path saves a little time b/c it doesn't have to find it
+					configFile: join(__dirname, "stylelint.config.js"),
+					quiet: !verbose,
+					allowEmptyInput: true,
+					ignorePath: join(__dirname, ".stylelintignore"),
+					reportNeedlessDisables: true,
+					reportInvalidScopeDisables: true,
+				}
+				: false,
+			"postcss-reporter": verbose
+				? {
+					clearAllMessages: true,
+					noIcon: true,
+				}
+				: false,
 		},
 	};
-}
+};
