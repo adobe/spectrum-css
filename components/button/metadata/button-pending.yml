@@ -74,7 +74,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--sizeM is-pending" disabled>
+          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative is-pending" disabled>
             <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
@@ -93,7 +93,7 @@ examples:
             </div>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--sizeM is-pending" disabled>
+          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative is-pending" disabled>
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -115,7 +115,7 @@ examples:
             </div>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--iconOnly spectrum-Button--sizeM is-pending" disabled>
+          <button class="spectrum-Button spectrum-Button--fill spectrum-Button--negative spectrum-Button--iconOnly is-pending" disabled>
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -338,7 +338,7 @@ examples:
 
         <div class="spectrum-Examples-item">
           <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
-          <button class="spectrum-Button spectrum-Button--negative spectrum-Button--outline spectrum-Button--sizeM is-pending" disabled>
+          <button class="spectrum-Button spectrum-Button--negative spectrum-Button--outline is-pending" disabled>
             <span class="spectrum-Button-label">Edit</span>
             <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small">
               <div class="spectrum-ProgressCircle-track"></div>
@@ -357,7 +357,7 @@ examples:
             </div>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--negative spectrum-Button--outline spectrum-Button--sizeM is-pending" disabled>
+          <button class="spectrum-Button spectrum-Button--negative spectrum-Button--outline is-pending" disabled>
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -379,7 +379,7 @@ examples:
             </div>
           </button>
 
-          <button class="spectrum-Button spectrum-Button--negative spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeM is-pending" disabled>
+          <button class="spectrum-Button spectrum-Button--negative spectrum-Button--outline spectrum-Button--iconOnly is-pending" disabled>
             <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Edit" />
             </svg>
@@ -604,7 +604,7 @@ examples:
 
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
-            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeM is-pending" disabled>
+            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite is-pending" disabled>
               <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
@@ -623,7 +623,7 @@ examples:
               </div>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeM is-pending" disabled>
+            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite is-pending" disabled>
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
@@ -645,7 +645,7 @@ examples:
               </div>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--iconOnly spectrum-Button--sizeM is-pending" disabled>
+            <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--iconOnly is-pending" disabled>
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
@@ -871,7 +871,7 @@ examples:
 
           <div class="spectrum-Examples-item">
             <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
-            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeM is-pending" disabled>
+            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline is-pending" disabled>
               <span class="spectrum-Button-label">Edit</span>
               <div class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-ProgressCircle--staticWhite">
                 <div class="spectrum-ProgressCircle-track"></div>
@@ -890,7 +890,7 @@ examples:
               </div>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--sizeM is-pending" disabled>
+            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline is-pending" disabled>
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>
@@ -912,7 +912,7 @@ examples:
               </div>
             </button>
 
-            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--iconOnly spectrum-Button--sizeM is-pending" disabled>
+            <button class="spectrum-Button spectrum-Button--staticWhite spectrum-Button--outline spectrum-Button--iconOnly is-pending" disabled>
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true">
                 <use xlink:href="#spectrum-icon-18-Edit" />
               </svg>

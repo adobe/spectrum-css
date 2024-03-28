@@ -33,23 +33,15 @@ export const Template = ({
   ariaControls,
   ...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
-		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
   const [, updateArgs] = useArgs();
 
   return html`
     <button
       class=${classMap({
         [rootClass]: true,
-        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
+        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined" && treatment !== "fill",
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
-        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
         [`${rootClass}--iconOnly`]: hideLabel,
         "is-pending": isPending,
@@ -72,7 +64,7 @@ export const Template = ({
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
-      ${when(isPendingStory, () => {
+      ${when(isPendingStory || isPending, () => {
         const isOverBackground = staticColor === 'white';
         return ProgressCircle({
           ...globals,
