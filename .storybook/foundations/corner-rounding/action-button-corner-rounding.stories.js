@@ -13,11 +13,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
 		},
-		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("actionbutton")
-				? "migrated"
-				: undefined,
-		},
 	},
 	tags: ['foundation'],
 };
