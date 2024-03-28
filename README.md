@@ -14,7 +14,7 @@
 * 📖 **Robust documentation**: Spectrum CSS is designed to be used in partnership with [Spectrum's detailed usage guidelines](https://spectrum.adobe.com/).
 * 🎨 **Flexible**: Our CSS is customizable, powerful, and designed to work with any JavaScript framework.
 * 🧪 **Rigorously tested**: These individually-versioned components have been vetted to be accessible and inclusive of global audiences.
-* 📱 **Multi-platform support**: We support evergreen browsers (minus one version) for scalability and flexibility.
+* 📱 **Multi-platform support**: We support [evergreen browsers](https://github.com/adobe/spectrum-css?tab=readme-ov-file#browser-support) for scalability and flexibility.
 
 &nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://img.shields.io/badge/Get%20started-F0F0F0?style=for-the-badge&logo=adobe&logoColor=%23FF0000"/>](https://opensource.adobe.com/spectrum-css/get-started.html) &nbsp; [<img src="https://img.shields.io/badge/Storybook-F0F0F0?style=for-the-badge&logo=storybook&logoColor=%23FF4785"/>](https://opensource.adobe.com/spectrum-css/preview/)
 
@@ -22,9 +22,11 @@
 
 The preferred method of using Spectrum CSS relies on custom properties to swap out variables for different themes and contexts. This results in the lowest bundle sizes and is one of the simpler approaches.
 
+Want to get a component up and running as soon as possible? Check out the [quick start guide](https://github.com/adobe/spectrum-css/blob/main/.github/QUICK-START.md).
+
 ### Functionality
 
-Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. We do include some lightweight JS-based interaction for demonstration purposes only in our Storybook and documentation. Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, text fields, etc.
+Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. We do include some lightweight JS-based interaction for demonstration purposes only in our [Storybook](https://opensource.adobe.com/spectrum-css/preview/). Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, text fields, etc.
 
 Adobe maintains separate libraries written with [web components](https://opensource.adobe.com/spectrum-web-components/) and [React](https://react-spectrum.adobe.com/react-spectrum/index.html) that work in partnership with Spectrum CSS to create fully interactive Spectrum components.
 
@@ -34,7 +36,7 @@ The [Spectrum Web Components](<https://opensource.adobe.com/spectrum-web-compone
 
 Each component is released on npm as a separate, individually versioned package inside of the [@spectrum-css](https://www.npmjs.com/org/spectrum-css) org.
 
-To incorporate Spectrum CSS into your project, you install only the components you need:
+To incorporate Spectrum CSS into your project, you install the components you need along with any peer dependencies you need for your implementation. Most peer dependencies are optional and can bring additional features when installed along with a component. For example a button can be rendered with or without an icon; so if your use-case leverages an icon with your button, you'll want to install icon as a peer dependency.
 
 ```shell
 yarn add -DW @spectrum-css/tokens @spectrum-css/typography @spectrum-css/page @spectrum-css/icon @spectrum-css/button
@@ -42,24 +44,25 @@ yarn add -DW @spectrum-css/tokens @spectrum-css/typography @spectrum-css/page @s
 
 Installed components will be available in the `node_modules/@spectrum-css/` folder of your project.
 
-All components in this library have a peer dependency on [`@spectrum-css/tokens`](tokens), which is a local package that serves up the [Spectrum design tokens](https://github.com/adobe/spectrum-tokens) as CSS custom properties (via [Style dictionary](https://amzn.github.io/style-dictionary/#/)). These custom properties are leveraged in all components to create a cohesive visual language and to allow for easy theming. If you choose not to use the provided `@spectrum-css/tokens` package, you must define your own custom properties or your components will not render correctly. Overriding the tokens is not recommended, however, modifying styles is supported through the use of component-specific `--mod` prefixed properties. More on this below.
+All components in this library have a peer dependency on [`@spectrum-css/tokens`](tokens), which is a local package that serves up the [Spectrum design tokens](https://github.com/adobe/spectrum-tokens) as CSS custom properties (via [Style dictionary](https://amzn.github.io/style-dictionary/#/)). These custom properties are leveraged in all components to create a cohesive visual language and to allow for easy theming. If you choose not to use the provided `@spectrum-css/tokens` package, you must define your own custom properties or your components will render with a significant number of missing styles. When overriding certain styles is necessary, modifying styles is supported through the use of component-specific `--mod` prefixed properties. [More on this below](https://github.com/adobe/spectrum-css?tab=readme-ov-file#modifying-components).
 
 ### Using components in your project
 
-Spectrum CSS components have build output that is designed to be used in a variety of ways. The most common way to use Spectrum CSS is to include the `dist/index.css` file for each component you need in your project.
+Spectrum CSS components have build output that is designed to be used in a variety of ways:
 
-* `index.css` - This file includes the component's styles and variable definitions. In this version, token-driven CSS properties<sup>[1](#token-footnote)</sup> are mapped to empty `--mod` prefixed variables (for customization) with a fallback to variables prefixed with `--system` (used in adjusting results accordion to context or theme) or `--spectrum` (sourced from the design tokens). This is the file most commonly used to incorporate Spectrum CSS into a project.
-  * This file loads both the `.spectrum` and `.spectrum--express` contexts which are used to toggle components between two different visual styles. The `.spectrum` context is the default.
+* `index.css` - _Preferred and most commonly used to incorporate Spectrum CSS into a project_. This file includes the component's styles and variable definitions. In this version, token-driven CSS properties<sup>[1](#token-footnote)</sup> are mapped to empty `--mod` prefixed variables (for customization) with a fallback to variables prefixed with `--spectrum` (sourced from the design tokens).
+  * This file loads both the `.spectrum` and `.spectrum--express` contexts which are used to toggle components between two different [visual styles](https://github.com/adobe/spectrum-css?tab=readme-ov-file#visual-language). The `.spectrum` context is the default.
 
 * `index-vars.css` - _Deprecated_. This file is identical to `index.css`. It is provided as a fallback for older implementations that may have been using it and will be removed. It is recommended to use `index.css` instead.
 
 * `index-base.css`: This file mimics the `index.css` output, but does not include the `.spectrum` or `.spectrum--express` contexts.
-  * When using Spectrum CSS in a product that is rendering only one visual language (i.e. only loading the `.spectrum` context), you can use `index-base.css` plus the preferred context from the `themes` directory. i.e., loading `index-base.css` and `themes/spectrum.css` to render the default Spectrum visual language.
-  * This approach can also be used when you have defined and written your own visual language and only need the base styles from Spectrum CSS. To wire up your own visual language, you would need to define your own custom properties that match those defined in the `themes/*.css` assets.
+  * If your product only requires the `.spectrum` context, you can use `index-base.css` plus `themes/spectrum.css` from the `themes` directory to render the default Spectrum visual language.
+    * The `.spectrum--express` context, on the other hand, is dependent on/expands on the default `.spectrum` context. This means if you only want to use the Express context, you still need to include `themes/spectrum.css`. In this case, we recommend using `index.css` instead since it includes both contexts by default.
+  * This approach can also be used when you have defined and written your own visual language and only need the base component styles from Spectrum CSS. To wire up your own visual language, you would need to define your own custom properties that match those defined in the `themes/*.css` assets.
 
-* `index-theme.css`: This file provides only the visual language for a component. It is used in conjunction with `index-base.css` and when loaded together, results in a similar result to `index.css`.
+* `index-theme.css`: This file provides only the visual language for a component. It is used in conjunction with `index-base.css` and when loaded together, provides the same result as using `index.css` by itself.
 
-<sup><a name="token-footnote">1</a></sup>: Token-driven CSS properties are properties whose values are mapped to a value in the `@spectrum-css/tokens` package. These values represent design-language and are meant to be used across platforms. Properties specific to web-based implementations will not have a token value assigned and thus not all CSS properties will use custom properties.
+<sup><a name="token-footnote">1</a></sup>: Token-driven CSS properties are properties whose values are mapped to a value in the `@spectrum-css/tokens` package. These values represent design-language and are meant to be used across platforms. In contrast, properties specific to web-based implementations will not have a token value assigned, so not all CSS properties will use custom properties.
 
 #### Including assets
 
@@ -79,38 +82,48 @@ Start by including the base set of variables:
 @import "node_modules/@spectrum-css/icon/dist/index.css";
 
 /*
-  For components with multiple contexts available, load only the context you need (spectrum or express) by sourcing index-base.css and the theme you need from the themes directory.
+  Recommended: For components with multiple contexts available, if you
+  want access to all contexts, load the index.css file, which includes
+  all contexts and component variables.
+*/
+@import "node_modules/@spectrum-css/button/dist/index.css";
+
+/*
+  If you only need the spectrum visual context: For components with
+  multiple contexts available, load only the spectrum context by sourcing
+  index-base.css and the spectrum theme from the themes directory.
 */
 @import "node_modules/@spectrum-css/button/dist/index-base.css";
 @import "node_modules/@spectrum-css/button/dist/themes/spectrum.css";
 ```
 
-Tokens values are mapped to context-specific classes which can be applied to the `<html>` element or at any place in your DOM where you wish to encapsulate or alter the visual language of your Spectrum components.
+Tokens values are mapped to context-specific classes which can be applied to the `<html>` element or any place in your DOM where you wish to encapsulate or alter the visual language of your Spectrum components.
 
-All available contexts should be defined in order to load all the appropriate custom properties for the components you are using.
+All contexts you want to use must be defined in order to load all the appropriate custom properties for the components you are using.
 
-#### Visual language
+#### Global variables
+##### Visual language
 
 * `.spectrum` - The default visual language for Spectrum CSS
-* `.spectrum--express` - A variant of the standard visual language
+* `.spectrum--express` - A variant of the standard visual language. _This visual language will be deprecated in Spectrum 2_.
 
-#### Scales
+##### Scales
 
 Scales represent the browsing context of the user. They are used to adjust the size of components to improve readability and usability on different devices.
 
 * `.spectrum--medium` - The default scale for Spectrum CSS, used for desktop and tablet devices
 * `.spectrum--large` - A larger scale for Spectrum CSS, used for mobile devices and other small screens to create a more touch-friendly experience
 
-#### Themes (colorstops)
+##### Themes (colorstops)
 
 Themes represent the color scheme of the user's browsing context. They are used to adjust the color of components to improve readability and usability in different environments.
 
 * `.spectrum--light` - The default theme for Spectrum CSS, used for light mode
 * `.spectrum--dark` - A darker theme for Spectrum CSS, used for dark mode
 
-Other modes are available but are in the process of being deprecated and should not be used in new projects.
+Other themes are available but are in the process of being deprecated and should not be used in new projects.
 
-#### Example
+#### Context example
 
 Put together, we would define the context for our application in the following way:
 
@@ -126,8 +139,6 @@ To switch to Express, **add** the `.spectrum--express` class to the `<html>` ele
 
 Note the `spectrum--express` class is added to the existing classes; `spectrum` should always be present to ensure the correct visual language is loaded.
 
-Components can then be added by following the semantic guidance found in the [Spectrum CSS documentation](http://opensource.adobe.com/spectrum-css/).
-
 Because CSS custom properties honor the cascading nature of CSS, you can infinitely nest different contexts. For example, you could have a `.spectrum--dark` context inside of a `.spectrum--light` context, and components will honor the innermost context.
 
 ### Modifying components
@@ -138,7 +149,7 @@ You can override variables and modify Spectrum CSS' look and feel by re-defining
 
 Some components require certain "UI icons" to render. These icons are released within the [`@spectrum-css/ui-icons`](https://www.npmjs.com/package/@spectrum-css/ui-icons) package and are used by components like `@spectrum-css/icon` and `@spectrum-css/actionbutton`.
 
-Based on which scales you'll be using, you can choose to load different files:
+Based on [which scales](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales) you'll be using, you can choose to load different files:
 
 * `spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
 
@@ -174,7 +185,7 @@ For Arabic, a right-to-left language:
 
 ### Browser support
 
-We maintain a relatively modern codebase that supports the latest two versions of evergreen web browsers. The current list of browsers officially supported by Spectrum CSS can be found in the browserslist section of the project's package.json file. This setting is used by the build tools when the source files are built. If you require additional browser support for your project, the CSS can processed further with your chosen tools.
+We maintain a modern codebase that supports the latest two versions of evergreen web browsers. The current list of browsers officially supported by Spectrum CSS can be found in the browserslist section of the project's [package.json file](https://github.com/adobe/spectrum-css/blob/main/package.json). This setting is used by the build tools when the source files are built. If you require additional browser support for your project, the CSS can be processed further with your chosen tools.
 
 * latest 2 Edge versions
 * latest 2 Chrome versions
@@ -190,51 +201,9 @@ Spectrum CSS is designed to be as modern and flexible as possible, and as such, 
 
 A very special thank you to all of our [contributors](<https://github.com/adobe/spectrum-css/graphs/contributors>) without whom this project would not be possible.
 
-Want to join the team? Check out the [contributing guidelines](.github/CONTRIBUTING.md) for quick start information.
+Want to join the team? Check out the [contributing guidelines](.github/CONTRIBUTING.md) to get started.
 
-### Getting started
-
-To get started with Spectrum CSS, you'll start by cloning the repository:
-
-```shell
-git clone https://github.com/adobe/spectrum-css.git
-```
-
-or if you're using the GitHub CLI:
-
-```shell
-gh repo clone adobe/spectrum-css
-```
-
-To ensure your Node environment is always aligned with the project, we strongly recommend using [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating). Once you have nvm installed, you can run:
-
-```shell
-nvm use
-```
-
-This will ensure the correct version of node is installed and used for the project. You always want to run nvm use when you first clone the project and whenever you switch branches.
-
-<!-- TODO: link to a script for the command line to automatically run nvm -->
-
-Then, install the dependencies:
-
-```shell
-yarn install
-```
-
-**Important:** Requires >= Node 18.8.1 and Yarn 1.22.0.
-
-To spin up the local development environment, run:
-
-```shell
-yarn start
-```
-
-This will spin up the project's [Storybook](https://storybook.js.org/docs/web-components/get-started/introduction). Editing any of the `*.css` or the `*.stories.js` files in `components/*` will live reload in your browser.
-
-This project is leveraging caching from [Nx](https://nx.dev/) to speed up the build process. If you are seeing unexpected results, you can clear the cache by running `yarn nx reset`.
-
-### Tasks
+## Tasks
 
 The following tasks are available:
 
@@ -249,10 +218,6 @@ The following tasks are available:
 | `format` | Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment. To run on a single component, use `yarn formatter accordion` (where `accordion` is the name of the component or components you want to lint). | `yarn format`<br/>`yarn formatter accordion`<br/>`yarn formatter accordion actionbutton` |
 | `refresh:env` | This copies values for the project's `.env` file (an asset never committed to the repo as it contains login secrets) by using the `.env.example` file as a template. This script is useful when you need to update the `.env` file with new values from the `.env.example` file or when you checkout or clean the repo and need to restore the `.env` file. | `yarn refresh:env` |
 
-### Documentation
+## Troubleshooting
 
-To spin up the [documentation site](http://opensource.adobe.com/spectrum-css/) locally:
-
-```sh
-yarn dev
-```
+As of February of 2024, the Spectrum CSS project has moved to a new tokens system (@spectrum-css/tokens instead of @spectrum-css/vars). If you are using Spectrum CSS and see that your styles are off, or not applying at all, ensure that you are using the correct tokens package for the component.
