@@ -1,0 +1,69 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+
+.spectrum-FieldGroup{
+  --spectrum-fieldgroup-margin:var(--spectrum-spacing-300);
+  --spectrum-fieldgroup-readonly-delimiter:'\002c';
+}
+
+
+.spectrum-FieldGroup{
+  display:flex;
+  flex-flow:column wrap;
+}
+
+
+.spectrum-FieldGroup--toplabel{
+    flex-direction:column;
+  }
+
+
+.spectrum-FieldGroup--sidelabel{
+    flex-direction:row;
+  }
+
+
+.spectrum-FieldGroupInputLayout{
+  display:flex;
+  flex-flow:column wrap;
+}
+
+
+.spectrum-FieldGroup--vertical .spectrum-FieldGroupInputLayout{
+    flex-direction:column;
+  }
+
+
+.spectrum-FieldGroup--horizontal .spectrum-FieldGroupInputLayout{
+    flex-direction:row;
+  }
+
+
+.spectrum-FieldGroup--horizontal .spectrum-FieldGroupInputLayout .spectrum-FieldGroup-item:not(:last-child){
+      margin-inline-end:var(--spectrum-fieldgroup-margin);
+    }
+
+
+.spectrum-FieldGroup--horizontal .spectrum-FieldGroupInputLayout .spectrum-HelpText{
+      flex-basis:100%;
+    }
+
+
+.spectrum-FieldGroup .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-box{
+      display:none;
+    }
+
+
+.spectrum-FieldGroup .spectrum-Checkbox.is-readOnly:not(:last-child) .spectrum-Checkbox-label::after{
+      content:var(--spectrum-fieldgroup-readonly-delimiter);
+    }

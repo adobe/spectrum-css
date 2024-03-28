@@ -1,0 +1,22 @@
+{
+  "selectors": [
+    ".spectrum-MillerColumns",
+    ".spectrum-MillerColumns-item",
+    ".spectrum-MillerColumns-item:first-child"
+  ],
+  "mods": [
+    "--mod-millercolumns-inline-size",
+    "--mod-millercolumns-margin-inline-end",
+    "--mod-millercolumns-margin-inline-start",
+    "--mod-millercolumns-padding"
+  ],
+  "spectrum": [
+    "--spectrum-millercolumns-inline-size",
+    "--spectrum-millercolumns-margin-inline-end",
+    "--spectrum-millercolumns-margin-inline-start",
+    "--spectrum-millercolumns-padding",
+    "--spectrum-spacing-100"
+  ],
+  "system": [],
+  "a11y": []
+}
