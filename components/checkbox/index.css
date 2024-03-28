@@ -60,6 +60,11 @@
 	--spectrum-checkbox-line-height: var(--spectrum-line-height-100);
 	--spectrum-checkbox-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
+	/* Size */
+	--spectrum-checkbox-height: var(--spectrum-component-height-100);
+	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
+	--spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-small-size-medium);
+
 	--spectrum-checkbox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--spectrum-checkbox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 
@@ -73,14 +78,13 @@
 .spectrum-Checkbox--sizeM {
 	--spectrum-checkbox-font-size: var(--spectrum-font-size-100);
 
-	--spectrum-checkbox-height: var(--spectrum-component-height-100);
-	--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
-
 	--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
 }
 
 .spectrum-Checkbox--sizeS {
+	--spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-small-size-small);
+
 	--spectrum-checkbox-font-size: var(--spectrum-font-size-75);
 
 	--spectrum-checkbox-height: var(--spectrum-component-height-75);
@@ -91,6 +95,8 @@
 }
 
 .spectrum-Checkbox--sizeL {
+	--spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-small-size-large);
+
 	--spectrum-checkbox-font-size: var(--spectrum-font-size-200);
 
 	--spectrum-checkbox-height: var(--spectrum-component-height-200);
@@ -101,6 +107,8 @@
 }
 
 .spectrum-Checkbox--sizeXL {
+	--spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-small-size-extra-large);
+
 	--spectrum-checkbox-font-size: var(--spectrum-font-size-300);
 
 	--spectrum-checkbox-height: var(--spectrum-component-height-300);

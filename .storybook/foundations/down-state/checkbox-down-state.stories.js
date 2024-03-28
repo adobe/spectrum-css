@@ -1,7 +1,7 @@
 import { Template } from "../../../components/checkbox/stories/template";
 
 export default {
-	title: "Foundations/Down state",
+	title: "Down state",
 	description:
 		"Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.",
 	component: "Checkbox",
