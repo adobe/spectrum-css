@@ -5,6 +5,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+
 import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
@@ -15,6 +16,7 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Button",
 	id,
+	testId,
 	customClasses = [],
 	customStyles = {},
 	size = "m",
@@ -27,8 +29,10 @@ export const Template = ({
 	treatment,
 	onclick,
 	isDisabled = false,
+	isHovered = false,
+	isFocused = false,
+	isActive = false,
 	isPending = false,
-	isPendingStory = false,
 	ariaExpanded,
 	ariaControls,
 	...globals
@@ -53,31 +57,39 @@ export const Template = ({
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
         [`${rootClass}--iconOnly`]: hideLabel,
-        "is-pending": isPending,
+        ["is-pending"]: isPending,
+        ["is-disabled"]: isDisabled,
+				["is-hover"]: isHovered,
+				["is-focus-visible"]: isFocused,
+				["is-active"]: isActive,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
       style=${ifDefined(styleMap(customStyles))}
       ?disabled=${isDisabled}
-      @click=${!isPendingStory ? onclick : () => {
-        isPending
-          ? updateArgs({ isPending: false })
-          : updateArgs({ isPending: true });
+      @click=${onclick ?? function() {
+        // Toggle the is-pending state on-click
+        updateArgs({ isPending: true });
+        setTimeout(() => {
+          updateArgs({ isPending: false });
+        }, 3000);
       }}
       aria-label=${ifDefined(hideLabel ? iconName : undefined)}
       aria-expanded=${ifDefined(ariaExpanded?.toString())}
       aria-controls=${ifDefined(ariaControls)}
+      data-testid=${ifDefined(testId)}
     >
       ${when(iconName && !iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
       ${when(label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
-      ${when(isPendingStory || isPending, () => {
+      ${when(isPending, () => {
         const isOverBackground = staticColor === "white";
         return ProgressCircle({
           ...globals,
           size: "s",
+          testId: "progress-circle",
           overBackground: isOverBackground,
           isIndeterminate: true,
           addStaticBackground: false

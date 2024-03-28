@@ -1,16 +1,16 @@
 import { html } from "lit";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+
 import { Template } from "./template";
 
+/**
+ * Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
+ */
 export default {
 	title: "Components/Button",
-	description:
-		"Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.",
 	component: "Button",
 	argTypes: {
 		size: {
@@ -70,19 +70,41 @@ export default {
 			},
 			control: "boolean",
 		},
+		isHovered: {
+			name: "Hovered",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isFocused: {
+			name: "Focused",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isActive: {
+			name: "Active",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 		isPending: {
 			name: "Pending",
 			type: { name: "boolean" },
 			table: {
-				disable: true
+				type: { summary: "boolean" },
+				category: "State",
 			},
-		},
-		isPendingStory: {
-			name: "Pending story",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-			},
+			control: "boolean",
 		},
 		staticColor: {
 			name: "Static color",
@@ -95,35 +117,19 @@ export default {
 			},
 			options: ["white", "black"],
 			control: "select",
-			if: { arg: "isPendingStory", truthy: false },
-		},
-		showIconOnlyButton: {
-			table: {
-				disable: true,
-			},
-		},
-		layout: {
-			name: "Layout",
-			description: "How the buttons align in the preview (Storybook only).",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Advanced"
-			},
-			options: ["stacked","inline"],
-			control: "radio"
 		},
 	},
 	args: {
 		rootClass: "spectrum-Button",
 		size: "m",
 		label: "Edit",
-		variant: "accent",
 		treatment: "fill",
+		variant: "accent",
 		isDisabled: false,
 		isPending: false,
-		showIconOnlyButton: true,
-		layout: "inline",
+		isActive: false,
+		isFocused: false,
+		isHovered: false,
 	},
 	parameters: {
 		actions: {
@@ -132,19 +138,35 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		html: {
+			root: "#render-root"
+		}
 	},
-};
-
-/**
- * Optional wrapper for each button used within other templates, to assist with the "stacked"
- * layout and the testing of wrapping text.
- */
-const ButtonWrap = (layout, content) => {
-	const buttonWrapStyles = {
-		"margin-block": "15px",
-		"max-width": "480px",
-	};
-	return layout === "stacked" ? html`<div style=${styleMap(buttonWrapStyles)}>${content}</div>` : content;
+	decorators: [
+		(Story, context) => html`
+			<style>
+				.spectrum-Detail { display: inline-block; }
+				.spectrum-Typography > div {
+					border: 1px solid var(--spectrum-gray-200);
+					border-radius: 4px;
+					padding: 0 10px 10px;
+					/* Why seafoam? Because it separates it from the component styles. */
+					--mod-detail-font-color: var(--spectrum-seafoam-900);
+				}
+			</style>
+			<div
+				style=${styleMap({
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "flex-start",
+					gap: "10px",
+					"--mod-detail-margin-end": "6px",
+				})}
+			>
+				${Story(context)}
+			</div>
+		`,
+	],
 };
 
 /**
@@ -153,267 +175,307 @@ const ButtonWrap = (layout, content) => {
  */
 const CustomButton = ({
 	iconName,
-	staticColor,
-	layout,
-	showIconOnlyButton,
-	customStyles = {},
-	...args
-}) => {
-	return html`
-		<div
-			style=${ifDefined(styleMap({
-				padding: "1rem",
-				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
-				...customStyles
-			}))}
-		>
-			${ButtonWrap(layout, Template({
-				...args,
-				staticColor,
-				iconName: undefined,
-			}))}
-			${ButtonWrap(layout, Template({
-				...args,
-				staticColor,
-				iconName: undefined,
-				treatment: "outline",
-			}))}
-			${ButtonWrap(layout, Template({
-				...args,
-				staticColor,
-				iconName: iconName ?? "Edit",
-			}))}
-			${when(showIconOnlyButton, () =>
-				ButtonWrap(layout, Template({
-					...args,
-					staticColor,
-					hideLabel: true,
-					iconName: iconName ?? "Edit",
-				}))
-			)}
-		</div>
-	`;
-};
-
-const PendingButton = ({
-	staticColor,
-	customStyles = {},
-	// layout,
 	...args
 }) => html`
-	${when(!window.isChromatic(), () =>
-		Typography({
-			semantics: "heading",
-			size: "xs",
-			content: ["Press any button to show the pending state on all buttons. Press again to remove the pending states."],
-		})
-	)}
-	<div style=${styleMap({
-		display: "flex",
-		flexDirection: "column",
-		gap: ".3rem",
-		marginTop: "1rem"
-	})}>
-		<div>
-			${Typography({
-				semantics: "heading",
-				size: "xxs",
-				content: ["Default"],
-			})}
-			${CustomButton({
-				...args,
-			})}
-			${ButtonWrap("stacked", Template({
-				...args,
-				staticColor,
-				label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
-			}))}
-			${when(window.isChromatic(), () => {
-				return html`
-					${CustomButton({
-						...args,
-						isPending: true,
-					})}
-
-					${ButtonWrap("stacked", Template({
-						...args,
-						label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
-						isPending: true,
-					}))}
-				`;
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "heading",
-				size: "xxs",
-				content: ["Static White"],
-			})}
-			${CustomButton({
-				...args,
-				staticColor: "white",
-			})}
-			<div
-				style=${ifDefined(styleMap({
-					padding: "1rem",
-					backgroundColor: "rgb(15, 121, 125)",
-					...customStyles
-				}))}
-			>
-				${ButtonWrap("stacked", Template({
-					...args,
-					staticColor: "white",
-					label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
-				}))}
-			</div>
-			${when(window.isChromatic(), () => {
-				return html`
-					${CustomButton({
-						...args,
-						staticColor: "white",
-						isPending: true,
-					})}
-					<div
-						style=${ifDefined(styleMap({
-							padding: "1rem",
-							backgroundColor: "rgb(15, 121, 125)",
-							...customStyles
-						}))}
-					>
-						${ButtonWrap("stacked", Template({
-							...args,
-							staticColor: "white",
-							label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
-							isPending: true,
-						}))}
-					</div>
-				`;
-			})}
-		</div>
-	</div>
+	${Template({
+		...args,
+		iconName: undefined,
+	})}
+	${Template({
+		...args,
+		iconName: iconName ?? "Edit",
+	})}
+	${Template({
+		...args,
+		hideLabel: true,
+		iconName: iconName ?? "Edit",
+	})}
 `;
 
-const ButtonsWithForcedColors = ({
-	// customStyles = {},
-	...args
-}) => html`
-	<div style=${styleMap({
-		display: "flex",
-		flexDirection: "column",
-		gap: ".3rem",
-	})}>
-		<div>
+const States = (args) =>
+	html` <div>
 			${Typography({
-				semantics: "heading",
-				size: "xxs",
+				semantics: "detail",
+				size: "s",
 				content: ["Default"],
 			})}
-			${CustomButton({
+			${Treatment(args)}
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Selected"],
+			})}
+			${Treatment({
 				...args,
-				variant: "accent"
+				isSelected: true,
 			})}
 		</div>
 		<div>
 			${Typography({
-				semantics: "heading",
-				size: "xxs",
-				content: ["Pending State"],
+				semantics: "detail",
+				size: "s",
+				content: ["Focused"],
 			})}
-			${CustomButton({
+			${Treatment({
+				...args,
+				isFocused: true,
+			})}
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Hovered"],
+			})}
+			${Treatment({
+				...args,
+				isHovered: true,
+			})}
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Active"],
+			})}
+			${Treatment({
+				...args,
+				isActive: true,
+			})}
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Disabled"],
+			})}
+			${Treatment({
 				...args,
 				isDisabled: true,
-				isPending: true,
 			})}
 		</div>
-	</div>
-`;
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Disabled + selected"],
+			})}
+			${Treatment({
+				...args,
+				isSelected: true,
+				isDisabled: true,
+			})}
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Pending"],
+			})}
+			${Treatment({
+				...args,
+				isPending: true,
+			})}
+		</div>`;
 
-/**
- * Wrapping story template, displaying some additional variants for Chromatic.
- */
-const WrappingTemplate = ({layout, ...args}) => {
-	if (window.isChromatic()) {
-		return html`
-			${CustomButton({layout, ...args})}
-			<div style=${ifDefined(styleMap({ padding: "1rem" }))}>
-				${ButtonWrap(layout, Template({
-					...args,
-					iconName: "Edit",
-					treatment: "outline",
-				}))}
-				${ButtonWrap(layout, Template({
-					...args,
-					// Uses a UI icon that is smaller than workflow sizing, to test alignment:
-					iconName: "Cross100",
-				}))}
-				${ButtonWrap(layout, Template({
-					...args,
-					// UI icon that is larger than workflow sizing:
-					iconName: "ArrowDown600",
-					treatment: "outline",
-				}))}
-			</div>
-		`;
-	}
-	// Otherwise use the default template.
-	return CustomButton({layout, ...args});
-};
+const Sizes = (args) =>
+	html` ${["s", "m", "l", "xl"].map((size) => {
+		return html` <div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: [
+					{
+						xxs: "Extra-extra-small",
+						xs: "Extra-small",
+						s: "Small",
+						m: "Medium",
+						l: "Large",
+						xl: "Extra-large",
+						xxl: "Extra-extra-large",
+					}[size],
+				],
+			})}
+			${Treatment({ ...args, size })}
+		</div>`;
+	})}`;
 
-export const Accent = CustomButton.bind({});
-Accent.args = {
-	variant: "accent",
-};
+const Treatment = (args) =>
+	html`
+<div
+	style=${styleMap({
+		display: "flex",
+		gap: "10px",
+	})}
+	id="render-root"
+>
+	${["fill", "outline"].map((treatment) => CustomButton({ ...args, treatment }))}
+</div>`;
 
-export const Negative = CustomButton.bind({});
-Negative.args = {
-	variant: "negative",
-	iconName: "Delete",
-};
+const Wrapping = (args) => html`
+	${Template({
+	...args,
+	customStyles: {
+		"max-inline-size": "480px",
+	},
+	iconName: "Edit",
+	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+})}
+	${Template({
+	...args,
+	customStyles: {
+		"max-inline-size": "480px",
+	},
+	// Uses a UI icon that is smaller than workflow sizing, to test alignment:
+	iconName: "Cross100",
+	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+})}
+	${Template({
+	...args,
+	customStyles: {
+		"max-inline-size": "480px",
+	},
+	// UI icon that is larger than workflow sizing:
+	iconName: "ArrowDown600",
+	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+})}`;
 
-export const Primary = CustomButton.bind({});
-Primary.args = {
-	variant: "primary",
-};
+const Variants = (args) =>
+	html` ${window.isChromatic()
+		? html` <div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Accent"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: "10px",
+						})}
+					>
+						${States(args)}
+					</div>
+				</div>
+				<div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Negative"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: "10px",
+						})}
+					>
+						${States({
+							...args,
+							variant: "negative"
+						})}
+					</div>
+				</div>
+				<div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Primary"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: "10px",
+						})}
+					>
+						${States({
+							...args,
+							variant: "primary"
+						})}
+					</div>
+				</div>
+				<div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Secondary"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: "10px",
+						})}
+					>
+						${States({
+							...args,
+							variant: "secondary"
+						})}
+					</div>
+				</div>
+				<div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Sizing"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: "10px",
+						})}
+					>
+						${Sizes(args)}
+					</div>
+				</div>
+				<div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Wrapping"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: "10px",
+							padding: "6px"
+						})}
+					>
+						${Wrapping(args)}
+					</div>
+				</div>
+		` : html`
+<div
+	style=${styleMap({
+		display: "flex",
+		gap: "10px",
+	})}
+	id="render-root"
+>${CustomButton(args)}</div>`}`;
 
-export const Secondary = CustomButton.bind({});
-Secondary.args = {
-	variant: "secondary",
-};
+export const Default = Variants.bind({});
+Default.args = {};
 
-export const StaticColorWhite = CustomButton.bind({});
+export const StaticColorWhite = Variants.bind({});
 StaticColorWhite.args = {
 	staticColor: "white",
 };
 
-export const StaticColorBlack = CustomButton.bind({});
+export const StaticColorBlack = Variants.bind({});
 StaticColorBlack.args = {
 	staticColor: "black",
 };
 
-export const Disabled = CustomButton.bind({});
-Disabled.args = {
-	isDisabled: true,
-	iconName: "Actions",
-};
-
-export const Pending = PendingButton.bind({});
-Pending.args = {
-	isPendingStory: true,
-};
-
-export const WithForcedColors = ButtonsWithForcedColors.bind({});
+export const WithForcedColors = Variants.bind({});
 WithForcedColors.parameters = {
 	chromatic: { forcedColors: "active" },
 };
 WithForcedColors.args = {
 	iconName: "Actions",
-};
-
-export const Wrapping = WrappingTemplate.bind({});
-Wrapping.storyName = "Wrapping";
-Wrapping.args = {
-	layout: "stacked",
-	showIconOnlyButton: false,
-	variant: "accent",
-	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 };

@@ -15,7 +15,7 @@ const { join, sep, basename } = require("path");
 module.exports = ({
 	file,
 	to,
-	cwd = process.cwd(),
+	// cwd = process.cwd(),
 	splitinatorOptions = {
 		noSelectors: false,
 		noFlatVariables: false,
@@ -30,7 +30,8 @@ module.exports = ({
 } = {}) => {
 	if (env === "development" && !options.map) {
 		options.map = { inline: false };
-	} else options.map = false;
+	}
+	else options.map = false;
 
 	/* themes/*.css */
 	if (
@@ -43,7 +44,7 @@ module.exports = ({
 		if (
 			(to && basename(to, ".css") === "express") ||
 			(file && basename(file, ".css") === "express")
-		 ) {
+		) {
 			combine = true;
 		}
 	}
@@ -62,6 +63,17 @@ module.exports = ({
 		file && basename(file, ".css") === "index-base"
 	) {
 		splitinatorOptions.noFlatVariables = true;
+	}
+
+	/*
+		This deconstruction has to do with how options are passed
+		to the postcss config via webpack's postcss-loader
+	*/
+	if (options?.options?.additionalPlugins) {
+		additionalPlugins = {
+			...additionalPlugins,
+			...options.options.additionalPlugins,
+		};
 	}
 
 	return {

@@ -132,6 +132,14 @@ module.exports = {
 									implementation: require("postcss"),
 									postcssOptions: {
 										config: resolve(__dirname, "../postcss.config.js"),
+										additionalPlugins: {
+											"postcss-pseudo-classes": {
+												restrictTo: ['focus-visible', 'focus-within', 'hover', 'active', 'disabled'],
+												allCombinations: true,
+												preserveBeforeAfter: false,
+												prefix: 'is-'
+											},
+										}
 									},
 								},
 							},
