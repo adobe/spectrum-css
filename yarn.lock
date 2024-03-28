@@ -4075,6 +4075,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/button@npm:14.0.0-next.3":
+  version: 14.0.0-next.3
+  resolution: "@spectrum-css/button@npm:14.0.0-next.3"
+  peerDependencies:
+    "@spectrum-css/icon": ">=6"
+    "@spectrum-css/progresscircle": ">=2"
+    "@spectrum-css/tokens": ">=13"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/progresscircle":
+      optional: true
+  checksum: 10c0/b8fd5fea3e92f2612f73c8a675fa3a55b897680e57770b4f496c889210d2a386ac3110854be4fe19bc0168c48dd0bc635e9a1241b42d4b33e4c3ee7d8fb3f95e
+  languageName: node
+  linkType: hard
+
 "@spectrum-css/button@npm:14.1.1, @spectrum-css/button@workspace:^, @spectrum-css/button@workspace:components/button":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/button@workspace:components/button"
@@ -4096,6 +4112,16 @@ __metadata:
       optional: true
   languageName: unknown
   linkType: soft
+
+"@spectrum-css/buttongroup@npm:7.0.0-next.2":
+  version: 7.0.0-next.2
+  resolution: "@spectrum-css/buttongroup@npm:7.0.0-next.2"
+  peerDependencies:
+    "@spectrum-css/button": ">=11"
+    "@spectrum-css/tokens": 14.0.0-next.0
+  checksum: 10c0/08971a7e495e9112f61247604617c43552e44315c240919c9a87f300970fc0c6946219911c5d883a6559ca79ac7fe52ffe2e2ea74e66571d6b88ff0c52be9372
+  languageName: node
+  linkType: hard
 
 "@spectrum-css/buttongroup@npm:9.1.0, @spectrum-css/buttongroup@workspace:^, @spectrum-css/buttongroup@workspace:components/buttongroup":
   version: 0.0.0-use.local
@@ -4200,6 +4226,16 @@ __metadata:
       optional: true
   languageName: unknown
   linkType: soft
+
+"@spectrum-css/closebutton@npm:5.0.0-next.1":
+  version: 5.0.0-next.1
+  resolution: "@spectrum-css/closebutton@npm:5.0.0-next.1"
+  peerDependencies:
+    "@spectrum-css/icon": ">=4"
+    "@spectrum-css/tokens": ^14.0.0-next.0
+  checksum: 10c0/e408178fd722ec2f049e51d8e206aa627d7511a7ff47900557c629c8322d76c4d97fa92729192441ff416e35588322e693702d673856e04e6d3e596438def869
+  languageName: node
+  linkType: hard
 
 "@spectrum-css/closebutton@npm:5.0.0-next.2, @spectrum-css/closebutton@workspace:^, @spectrum-css/closebutton@workspace:components/closebutton":
   version: 0.0.0-use.local
@@ -4480,8 +4516,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dialog@workspace:components/dialog"
   dependencies:
-    "@spectrum-css/buttongroup": "npm:9.1.0"
-    "@spectrum-css/closebutton": "npm:5.0.0-next.2"
+    "@spectrum-css/button": "npm:14.0.0-next.3"
+    "@spectrum-css/buttongroup": "npm:7.0.0-next.2"
+    "@spectrum-css/closebutton": "npm:5.0.0-next.1"
     "@spectrum-css/divider": "npm:5.1.0"
     "@spectrum-css/modal": "npm:7.1.0"
     "@spectrum-css/tokens": "npm:14.0.0-next.3"
