@@ -10,15 +10,10 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: ['click input[type="checkbox"]'],
-		},
-		status: {
-			type: process.env.MIGRATED_PACKAGES.includes("checkbox")
-				? "migrated"
-				: undefined,
+			handles: ["click input[type=\"checkbox\"]"],
 		},
 	},
-	tags: ['foundation'],
+	tags: ["foundation"],
 };
 
 export const CheckboxDownState = Template.bind({});
