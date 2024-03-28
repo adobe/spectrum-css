@@ -8,7 +8,7 @@ export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { args, argTypes, viewMode } = context;
+		const { args, argTypes, id, viewMode } = context;
 
 		const getDefaultValue = (type) => {
 			if (!type) return null;
@@ -31,7 +31,13 @@ export const withContextWrapper = makeDecorator({
 		const scales = ["medium", "large"];
 
 		useEffect(() => {
-			const container = viewMode === "docs" && !window.isChromatic() ? document.querySelector('#root-inner') ?? document.body : document.body;
+			const container =
+				viewMode === "docs" &&
+				!window.isChromatic() &&
+				!id.includes('foundation')
+					? document.querySelector('#root-inner') ?? document.body
+					: document.body;
+
 			container.classList.toggle("spectrum", true);
 
 			container.classList.toggle("spectrum--express", isExpress);
