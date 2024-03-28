@@ -179,13 +179,10 @@ governing permissions and limitations under the License.
   padding-block-end: var(--mod-toast-spacing-block-end, var(--spectrum-toast-spacing-block-end));
 
   .spectrum-Button {
+    margin-inline-start: auto;
     margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
 
-    [dir="ltr"] & {
-      margin-inline-start: auto;
-    }
-
-    [dir="rtl"] & {
+    &:dir(rtl) {
       margin-inline-end: auto;
       margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
     }

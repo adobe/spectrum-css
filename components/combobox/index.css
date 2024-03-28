@@ -224,7 +224,7 @@ governing permissions and limitations under the License.
   inset-block-start: var(--mod-combobox-block-spacing-edge-to-progress-circle, var(--spectrum-combobox-block-spacing-edge-to-progress-circle));
   inset-block-end: var(--mod-combobox-block-spacing-edge-to-alert, var(--spectrum-combobox-block-spacing-edge-to-alert));
 
-  [dir="rtl"] & {
+  &:dir(rtl) {
     inset-inline-end: inherit;
     inset-inline-start: calc(
       var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button)) +

@@ -131,11 +131,11 @@ governing permissions and limitations under the License.
   cursor: pointer;
 
   &:checked+.spectrum-Switch-switch {
-    [dir="ltr"] &::before {
+    &::before {
       transform: translateX(calc(var(--mod-switch-control-width, var(--spectrum-switch-control-width)) - 100%));
     }
 
-    [dir="rtl"] &::before {
+    &:dir(rtl)::before {
       transform: translateX(calc(-1 * (var(--mod-switch-control-width, var(--spectrum-switch-control-width)) - 100%)));
     }
   }

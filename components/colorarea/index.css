@@ -69,7 +69,7 @@ governing permissions and limitations under the License.
   transform: translate(calc(var(--mod-colorarea-width, var(--spectrum-colorarea-width)) - var(--spectrum-colorarea-border-width)), 0);
   inset-block-start: 0;
 
-  [dir="rtl"] & {
+  &:dir(rtl) {
     inset-inline-end: 0;
   }
 }

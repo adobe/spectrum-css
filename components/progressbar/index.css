@@ -240,12 +240,11 @@ governing permissions and limitations under the License.
 }
 
 /* Animations  */
-
-[dir="ltr"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
+.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
   animation: indeterminate-loop-ltr
              var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
 }
-[dir="rtl"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
+.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill:dir(rtl) {
   animation: indeterminate-loop-rtl
              var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
 }

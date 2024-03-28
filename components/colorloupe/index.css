@@ -50,7 +50,7 @@ governing permissions and limitations under the License.
     var(--mod-colorloupe-drop-shadow-color, var(--spectrum-colorloupe-drop-shadow-color))
   );
 
-  [dir="rtl"] & {
+  &:dir(rtl) {
     inset-inline-end: calc(50% - (var(--spectrum-colorloupe-width) / 2) - 1px);;
   }
 

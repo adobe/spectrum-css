@@ -57,7 +57,7 @@ governing permissions and limitations under the License.
 
   --spectrum-treeview-indicator-animation-duration: var(--spectrum-animation-duration-100);
 
-	[dir="rtl"] &,
+	&:dir(rtl),
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}

@@ -91,15 +91,12 @@ module.exports = ({
 					identifier === "express" ? "spectrum--express" : identifier,
 				...splitinatorOptions,
 			},
-			"postcss-hover-media-feature": {},
 			"postcss-calc": {},
 			"postcss-combininator": combine ? {} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
-			/** @note [CSS-289] Coordinating with SWC */
-			// "postcss-hover-media-feature": {},
-
+			"postcss-hover-media-feature": {},
 			/**
 			 * @todo should we be documenting this for downstream users rather
 			 * than polyfilling the features ourselves? what if they want to

@@ -447,7 +447,7 @@ governing permissions and limitations under the License.
     var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
 }
 
-[dir="rtl"] .spectrum-Menu-item {
+.spectrum-Menu-item:dir(rtl) {
   --spectrum-menu-item-focus-indicator-direction-scalar: -1;
 }
 
@@ -702,7 +702,7 @@ governing permissions and limitations under the License.
   }
 }
 
-[dir="rtl"] .spectrum-Menu-chevron {
+.spectrum-Menu-chevron:dir(rtl) {
   transform: rotate(-180deg);
 }
 
@@ -802,7 +802,7 @@ governing permissions and limitations under the License.
     .spectrum-Menu-itemValue {
       color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-label-content-color-disabled, var(--spectrum-menu-item-label-content-color-disabled)));
     }
-    
+
     .spectrum-Menu-itemDescription {
       color: var(--highcontrast-menu-item-color-disabled, var(--mod-menu-item-description-color-disabled, var(--spectrum-menu-item-description-color-disabled)));
     }

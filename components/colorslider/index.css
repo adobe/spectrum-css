@@ -99,7 +99,7 @@
 }
 
 /* Reverse gradient horizontally when viewing RTL. */
-[dir="rtl"] .spectrum-ColorSlider-gradient {
+.spectrum-ColorSlider-gradient:dir(rtl) {
 	transform: scaleX(-1);
 }
 

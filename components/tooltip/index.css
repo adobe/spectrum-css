@@ -237,7 +237,7 @@ governing permissions and limitations under the License.
     left: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
     right: auto;
 
-    [dir="rtl"] & {
+    &:dir(rtl) {
       right: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
       left: auto;
     }
@@ -249,7 +249,7 @@ governing permissions and limitations under the License.
     left: auto;
     right: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
 
-    [dir="rtl"] & {
+    &:dir(rtl) {
       left: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
       right: auto;
     }
@@ -336,7 +336,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--end &,
   .spectrum-Tooltip--end-top &,
   .spectrum-Tooltip--end-bottom & {
-    [dir="rtl"] & {
+    &:dir(rtl) {
       clip-path: polygon(
         calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0,
         calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%,
@@ -351,7 +351,7 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip--start &,
   .spectrum-Tooltip--start-top &,
   .spectrum-Tooltip--start-bottom & {
-    [dir="rtl"] & {
+    &:dir(rtl) {
       clip-path: polygon(
         var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)) 50%,
         calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%,
@@ -455,7 +455,7 @@ governing permissions and limitations under the License.
   }
 
   /* RTL read, tooltip animates towards right ⮕ */
-  [dir="rtl"] & {
+  &:dir(rtl) {
     &.is-open {
       transform: translateX(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)));
     }
@@ -475,7 +475,7 @@ governing permissions and limitations under the License.
   }
 
   /* RTL read, tooltip animates towards left ⬅ */
-  [dir="rtl"] & {
+  &:dir(rtl) {
     &.is-open {
       transform: translateX(calc(-1 * var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))));
     }
@@ -563,7 +563,7 @@ governing permissions and limitations under the License.
   }
 
    /* RTL */
-  [dir="rtl"] & {
+  &:dir(rtl) {
     .spectrum-Tooltip--start,
     .spectrum-Tooltip--start-top,
     .spectrum-Tooltip--start-bottom {
@@ -583,7 +583,7 @@ governing permissions and limitations under the License.
   }
 
    /* RTL */
-  [dir="rtl"] & {
+  &:dir(rtl) {
     .spectrum-Tooltip--end,
     .spectrum-Tooltip--end-top,
     .spectrum-Tooltip--end-bottom {
@@ -635,7 +635,7 @@ governing permissions and limitations under the License.
 
   /* stylelint-disable max-nesting-depth */
   /* RTL */
-  [dir="rtl"] & {
+  &:dir(rtl) {
     &:hover,
     &:focus,
     &.is-focused,
@@ -663,7 +663,7 @@ governing permissions and limitations under the License.
   }
 
   /* RTL */
-  [dir="rtl"] & {
+  &:dir(rtl) {
     &:hover,
     &:focus,
     &.is-focused,

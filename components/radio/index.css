@@ -482,7 +482,7 @@ governing permissions and limitations under the License.
                 margin var(--mod-radio-animation-duration,
                           var(--spectrum-radio-animation-duration)) ease-out;
 
-    [dir="rtl"] & {
+    &:dir(rtl) {
       transform: translateX(50%) translateY(-50%);
     }
   }

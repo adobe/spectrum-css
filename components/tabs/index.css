@@ -182,14 +182,14 @@ governing permissions and limitations under the License.
 	);
 }
 
-[dir="rtl"] .spectrum-Tabs--vertical {
+.spectrum-Tabs--vertical:dir(rtl) {
 	--mod-tabs-list-background-direction: var(
 			--mod-tabs-list-background-direction-vertical,
 			left
 		);
 }
 
-[dir="rtl"] .spectrum-Tabs--vertical-right {
+.spectrum-Tabs--vertical-right:dir(rtl) {
 	--mod-tabs-list-background-direction: var(
 			--mod-tabs-list-background-direction-vertical,
 			right

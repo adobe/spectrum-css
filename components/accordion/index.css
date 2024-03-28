@@ -145,7 +145,6 @@ governing permissions and limitations under the License.
 		)
 	);
 
-	[dir="rtl"] &,
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
@@ -384,7 +383,7 @@ governing permissions and limitations under the License.
 		)
 	);
 
-	[dir="rtl"] & {
+	&:dir(rtl) {
 		transform: scaleX(-1);
 	}
 }
