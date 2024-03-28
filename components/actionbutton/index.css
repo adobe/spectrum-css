@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
 
 .spectrum-ActionButton {
   --spectrum-actionbutton-animation-duration: var(--spectrum-animation-duration-100);
-  --spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-medium);
   --spectrum-actionbutton-border-width: var(--spectrum-border-width-100);
 
   --spectrum-actionbutton-content-color-default: var(--spectrum-neutral-content-color-default);
@@ -59,6 +59,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeXS {
+  --spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-extra-small);
+
   --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-50) * 2) + var(--spectrum-workflow-icon-size-50));
   --spectrum-actionbutton-height: var(--spectrum-component-height-50);
 
@@ -72,6 +74,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeS {
+  --spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-small);
+
   --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-75) * 2) + var(--spectrum-workflow-icon-size-75));
   --spectrum-actionbutton-height: var(--spectrum-component-height-75);
 
@@ -85,6 +89,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeM {
+  --spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-medium);
+
   --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-100) * 2) + var(--spectrum-workflow-icon-size-100));
   --spectrum-actionbutton-height: var(--spectrum-component-height-100);
 
@@ -98,6 +104,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeL {
+  --spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-large);
+
   --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-200) * 2) + var(--spectrum-workflow-icon-size-200));
   --spectrum-actionbutton-height: var(--spectrum-component-height-200);
 
@@ -111,6 +119,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionButton--sizeXL {
+  --spectrum-actionbutton-border-radius: var(--spectrum-corner-radius-medium-size-extra-large);
+
   --spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-300) * 2) + var(--spectrum-workflow-icon-size-300));
   --spectrum-actionbutton-height: var(--spectrum-component-height-300);
 
