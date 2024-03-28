@@ -57,7 +57,7 @@ For example, `actionbar` gets its tokens from `vars`, and requires `button`, `ch
     "@spectrum-css/checkbox": ">=8",
     "@spectrum-css/icon": ">=6",
     "@spectrum-css/popover": ">=6",
-    "@spectrum-css/tokens": ">=13"
+    "@spectrum-css/tokens": ">=14.0.0-next.3"
   }
 }
 ```
