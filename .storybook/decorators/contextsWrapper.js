@@ -43,7 +43,15 @@ export const withContextWrapper = makeDecorator({
 			for (const s of scales) {
 				container.classList.toggle(`spectrum--${s}`, s === scale);
 			}
-		}, [color, scale, isExpress]);
+
+			if (args.staticColor === "black") {
+				container.style.backgroundColor = "rgb(181, 209, 211)";
+			} else if (args.staticColor === "white") {
+				 container.style.backgroundColor = "rgb(15, 121, 125)";
+			} else {
+				container.style.removeProperty("background-color");
+			}
+		}, [color, scale, isExpress, args.staticColor]);
 
 		return StoryFn(context);
 	},
