@@ -56,7 +56,6 @@
 				"commands": [
 					"node -e 'require(\"./tasks/component-builder.js\").default()'"
 				],
-				"forwardAllArgs": true,
 				"parallel": false
 			}
 		},
