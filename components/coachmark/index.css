@@ -67,19 +67,19 @@ governing permissions and limitations under the License.
 
 .spectrum-CoachMark-buttongroup {
 	display: var(--spectrum-coachmark-buttongroup-display);
+}
 
-	&--mobile {
- 		--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
-		display: var(--spectrum-coachmark-buttongroup-mobile-display);
-	}
+.spectrum-CoachMark-buttongroup--mobile {
+	--mod-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
+	display: var(--spectrum-coachmark-buttongroup-mobile-display);
 }
 
 .spectrum-CoachMark-menu {
 	display: var(--spectrum-coachmark-menu-display);
+}
 
-	&--mobile {
-		display: var(--spectrum-coachmark-menu-mobile-display);
-	}
+.spectrum-CoachMark-menu--mobile {
+	display: var(--spectrum-coachmark-menu-mobile-display);
 }
 
 .spectrum-CoachMark-image-wrapper {

@@ -134,17 +134,17 @@ governing permissions and limitations under the License.
   flex: 1 0 0%;
 
   block-size: var(--mod-breadcrumbs-block-size, var(--spectrum-breadcrumbs-block-size));
+}
 
-  &--compact {
-    block-size: var(--mod-breadcrumbs-block-size-compact, var(--spectrum-breadcrumbs-block-size-compact));
-  }
+.spectrum-Breadcrumbs--compact {
+  block-size: var(--mod-breadcrumbs-block-size-compact, var(--spectrum-breadcrumbs-block-size-compact));
+}
 
-  &--multiline {
-    block-size: var(--mod-breadcrumbs-block-size-multiline, var(--spectrum-breadcrumbs-block-size-multiline));
+.spectrum-Breadcrumbs--multiline {
+  block-size: var(--mod-breadcrumbs-block-size-multiline, var(--spectrum-breadcrumbs-block-size-multiline));
 
-    flex-wrap: wrap;
-    align-content: center;
-  }
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .spectrum-Breadcrumbs-itemSeparator {

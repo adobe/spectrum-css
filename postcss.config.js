@@ -85,18 +85,16 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
-			"postcss-nested": {},
 			"postcss-splitinator": {
 				processIdentifier: (identifier) =>
 					identifier === "express" ? "spectrum--express" : identifier,
 				...splitinatorOptions,
 			},
-			"postcss-calc": {},
 			"postcss-combininator": combine ? {} : false,
+			"postcss-hover-media-feature": {},
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
-			"postcss-hover-media-feature": {},
 			/**
 			 * @todo should we be documenting this for downstream users rather
 			 * than polyfilling the features ourselves? what if they want to
@@ -107,7 +105,7 @@ module.exports = ({
 			 * @link https://preset-env.cssdb.org/features/#stage-2
 			 */
 			"postcss-preset-env": {
-				stage: 3,
+				stage: 2,
 				env,
 				features: {
 					"logical-properties-and-values": false,

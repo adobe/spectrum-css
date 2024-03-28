@@ -110,7 +110,6 @@ governing permissions and limitations under the License.
   /* Passthrough for nested component(s) */
   --mod-thumbnail-size: var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size));
 
-	&:dir(rtl),
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}

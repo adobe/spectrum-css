@@ -28,16 +28,16 @@ governing permissions and limitations under the License.
 .spectrum-FieldGroup {
   display: flex;
   flex-flow: column wrap;
+}
 
-  /* field group label top aligned */
-  &--toplabel {
-    flex-direction: column;
-  }
+/* field group label top aligned */
+.spectrum-FieldGroup--toplabel {
+  flex-direction: column;
+}
 
-  /* field group label side aligned */
-  &--sidelabel {
-    flex-direction: row;
-  }
+/* field group label side aligned */
+.spectrum-FieldGroup--sidelabel {
+  flex-direction: row;
 }
 
 /* input fields layout */

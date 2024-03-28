@@ -17,12 +17,12 @@ governing permissions and limitations under the License.
     --spectrum-radio-button-border-color-hover: var(--spectrum-gray-700);
     --spectrum-radio-button-border-color-down: var(--spectrum-gray-800);
     --spectrum-radio-button-border-color-focus: var(--spectrum-gray-700);
+  }
 
-    &--emphasized {
-      --spectrum-radio-button-checked-border-color-default: var(--spectrum-accent-color-900);
-      --spectrum-radio-button-checked-border-color-hover: var(--spectrum-accent-color-1000);
-      --spectrum-radio-button-checked-border-color-down: var(--spectrum-accent-color-1100);
-      --spectrum-radio-button-checked-border-color-focus: var(--spectrum-accent-color-1000);
-    }
+  .spectrum-Radio--emphasized {
+    --spectrum-radio-button-checked-border-color-default: var(--spectrum-accent-color-900);
+    --spectrum-radio-button-checked-border-color-hover: var(--spectrum-accent-color-1000);
+    --spectrum-radio-button-checked-border-color-down: var(--spectrum-accent-color-1100);
+    --spectrum-radio-button-checked-border-color-focus: var(--spectrum-accent-color-1000);
   }
 }

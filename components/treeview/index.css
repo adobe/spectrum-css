@@ -57,7 +57,6 @@ governing permissions and limitations under the License.
 
   --spectrum-treeview-indicator-animation-duration: var(--spectrum-animation-duration-100);
 
-	&:dir(rtl),
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
@@ -365,46 +364,44 @@ governing permissions and limitations under the License.
 }
 
 /* Indentation levels used with Flat structure variant. */
-.spectrum-TreeView-item {
-  &--indent1 {
-    padding-inline-start: var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation));
-  }
+.spectrum-TreeView-item--indent1 {
+  padding-inline-start: var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation));
+}
 
-  &--indent2 {
-    padding-inline-start: calc(2 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
-  }
+.spectrum-TreeView-item--indent2 {
+  padding-inline-start: calc(2 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+}
 
-  &--indent3 {
-    padding-inline-start: calc(3 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
-  }
+.spectrum-TreeView-item--indent3 {
+  padding-inline-start: calc(3 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+}
 
-  &--indent4 {
-    padding-inline-start: calc(4 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
-  }
+.spectrum-TreeView-item--indent4 {
+  padding-inline-start: calc(4 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+}
 
-  &--indent5 {
-    padding-inline-start: calc(5 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
-  }
+.spectrum-TreeView-item--indent5 {
+  padding-inline-start: calc(5 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+}
 
-  &--indent6 {
-    padding-inline-start: calc(6 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
-  }
+.spectrum-TreeView-item--indent6 {
+  padding-inline-start: calc(6 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+}
 
-  &--indent7 {
-    padding-inline-start: calc(7 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
-  }
+.spectrum-TreeView-item--indent7 {
+  padding-inline-start: calc(7 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+}
 
-  &-indent8 {
-    padding-inline-start: calc(8 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
-  }
+.spectrum-TreeView-item--indent8 {
+  padding-inline-start: calc(8 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+}
 
-  &--indent9 {
-    padding-inline-start: calc(9 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
-  }
+.spectrum-TreeView-item--indent9 {
+  padding-inline-start: calc(9 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
+}
 
-  &--indent10 {
-    padding-inline-start: calc(10 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
-  }
+.spectrum-TreeView-item--indent10 {
+  padding-inline-start: calc(10 * var(--mod-treeview-item-indentation, var(--spectrum-treeview-item-indentation)));
 }
 
 /* ***** VARIANTS ***** */

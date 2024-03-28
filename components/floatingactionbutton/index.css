@@ -29,18 +29,17 @@ governing permissions and limitations under the License.
   --spectrum-floating-action-button-icon-color-hover: var(--spectrum-white);
   --spectrum-floating-action-button-icon-color-down: var(--spectrum-white);
   --spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-white);
+}
 
-  &--secondary {
-    --spectrum-floating-action-button-background-color: var(--spectrum-background-layer-2-color);
-    --spectrum-floating-action-button-background-color-hover: var(--spectrum-background-layer-2-color);
-    --spectrum-floating-action-button-background-color-down: var(--spectrum-background-layer-2-color);
-    --spectrum-floating-action-button-background-color-key-focus: var(--spectrum-background-layer-2-color);
-    --spectrum-floating-action-button-icon-color: var(--spectrum-neutral-subdued-content-color-default);
-    --spectrum-floating-action-button-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-    --spectrum-floating-action-button-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-    --spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-  }
-
+.spectrum-FloatingActionButton--secondary {
+  --spectrum-floating-action-button-background-color: var(--spectrum-background-layer-2-color);
+  --spectrum-floating-action-button-background-color-hover: var(--spectrum-background-layer-2-color);
+  --spectrum-floating-action-button-background-color-down: var(--spectrum-background-layer-2-color);
+  --spectrum-floating-action-button-background-color-key-focus: var(--spectrum-background-layer-2-color);
+  --spectrum-floating-action-button-icon-color: var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-floating-action-button-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+  --spectrum-floating-action-button-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
+  --spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 }
 
 @media (forced-colors: active) {
