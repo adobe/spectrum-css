@@ -30,9 +30,9 @@ governing permissions and limitations under the License.
   --spectrum-button-font-weight: var(--spectrum-bold-font-weight);
   --spectrum-button-font-size: var(--spectrum-font-size-100);
 
-  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-100) - var(--spectrum-button-border-width));
-  --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-100);
-  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-100) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-100) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  --spectrum-button-edge-to-visual-only: calc(var(--spectrum-component-pill-edge-to-visual-only-100) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-100) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-100);
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-medium);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
@@ -42,6 +42,10 @@ governing permissions and limitations under the License.
   --mod-progress-circle-position: absolute;
   /* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties */
   --spectrum-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
+
+  &.spectrum-Button--iconOnly {
+    --spectrum-button-border-radius: var(--spectrum-corner-radius-full);
+  }
 }
 
 .spectrum-Button--sizeS {
@@ -50,9 +54,9 @@ governing permissions and limitations under the License.
 
   --spectrum-button-font-size: var(--spectrum-font-size-75);
 
-  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-75) - var(--spectrum-button-border-width));
-  --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-75);
-  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-75) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-75) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  --spectrum-button-edge-to-visual-only: calc(var(--spectrum-component-pill-edge-to-visual-only-75) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-75) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-75);
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-small);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-small);
@@ -70,9 +74,9 @@ governing permissions and limitations under the License.
 
   --spectrum-button-font-size: var(--spectrum-font-size-200);
 
-  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-200) - var(--spectrum-button-border-width));
-  --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-200);
-  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-200) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-200) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  --spectrum-button-edge-to-visual-only: calc(var(--spectrum-component-pill-edge-to-visual-only-200) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-200) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-200);
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-large);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-large);
@@ -86,9 +90,9 @@ governing permissions and limitations under the License.
 
   --spectrum-button-font-size: var(--spectrum-font-size-300);
 
-  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-300) - var(--spectrum-button-border-width));
-  --spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-300);
-  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-300) - var(--spectrum-button-border-width));
+  --spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-300) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  --spectrum-button-edge-to-visual-only: calc(var(--spectrum-component-pill-edge-to-visual-only-300) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+  --spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-300) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
   --spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-300);
   --spectrum-button-top-to-text: var(--spectrum-button-top-to-text-extra-large);
   --spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-extra-large);
@@ -247,6 +251,11 @@ governing permissions and limitations under the License.
       --spectrum-button-content-color-focus: var(--spectrum-transparent-white-900);
   
       &.spectrum-Button--outline {
+        --spectrum-button-background-color-default: var(--spectrum-transparent-white-25);
+        --spectrum-button-background-color-hover: var(--spectrum-transparent-white-100);
+        --spectrum-button-background-color-down: var(--spectrum-transparent-white-100);
+        --spectrum-button-background-color-focus: var(--spectrum-transparent-white-100);
+
         --spectrum-button-border-color-default: var(--spectrum-transparent-white-300);
         --spectrum-button-border-color-hover: var(--spectrum-transparent-white-400);
         --spectrum-button-border-color-down: var(--spectrum-transparent-white-400);
@@ -488,10 +497,7 @@ a.spectrum-Button {
 /* Icon only variant */
 .spectrum-Button.spectrum-Button--iconOnly {
   min-inline-size: unset;
-  padding: calc(
-    var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) -
-    var(--mod-button-border-width, var(--spectrum-button-border-width))
-  );
+  padding: var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only));
 
   .spectrum-Icon {
     align-self: center;

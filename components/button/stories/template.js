@@ -37,7 +37,7 @@ export const Template = ({
 	ariaControls,
 	...globals
 }) => {
-  const [, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 
 	return html`
     <button
