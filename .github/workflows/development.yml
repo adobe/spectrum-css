@@ -68,44 +68,16 @@ jobs:
         secrets: inherit
 
     # -------------------------------------------------------------
-    # Get the NX-blessed base and head shas.
-    # --------------------------------------------------------------
-    get-shas:
-        runs-on: ubuntu-latest
-        name: Get SHA values
-        outputs:
-            base-sha: ${{ steps.set-SHAs.outputs.base }}
-            head-sha: ${{ steps.set-SHAs.outputs.head }}
-        permissions:
-            pull-requests: read
-        steps:
-            - name: Check out code
-              uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
-
-            - name: Use Node LTS version
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 18
-                  cache: yarn
-
-            - name: Derive appropriate SHAs for base and head for `nx affected` commands
-              id: set-SHAs
-              uses: nrwl/nx-set-shas@v3
-
-    # -------------------------------------------------------------
     # Compare the compiled assets
     # -------------------------------------------------------------
     compare:
         name: Compare
-        needs: [get-shas]
         # Check that the PR is not in draft mode (or if it is, that it has the run_ci label to force a build)
         if: ${{ github.event.pull_request.draft != 'true' || contains(github.event.pull_request.labels.*.name, 'run_ci') }}
         uses: ./.github/workflows/compare-results.yml
         with:
-            base-sha: ${{ needs.get-shas.outputs.base-sha }}
-            head-sha: ${{ needs.get-shas.outputs.head-sha }}
+            base-sha: ${{ github.event.pull_request.base.ref }}
+            head-sha: ${{ github.event.pull_request.head.ref }}
         secrets: inherit
 
     # -------------------------------------------------------------
@@ -185,5 +157,5 @@ jobs:
             deploy-message: ${{ github.event.pull_request.title }}
             alias: pr-${{ github.event.number }}
             # Only pass the storybook url if the vrt was successful
-            storybook-url: ${{ needs.vrt.result == 'success' && needs.vrt.outputs.storybook-url || '' }}
+            storybook-url: ${{ needs.vrt.outputs.storybook-url || '' }}
         secrets: inherit

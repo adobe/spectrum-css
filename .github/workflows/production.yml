@@ -62,7 +62,6 @@ jobs:
 
     vrt:
         name: Testing
-        needs: [build]
         uses: ./.github/workflows/vrt.yml
         with:
             skip: ${{ github.base_ref != 'main' }}
@@ -75,10 +74,10 @@ jobs:
     publish_site:
         name: Publish
         # The build step ensures we are leveraging the cache for the build
-        needs: [build, vrt]
+        needs: [vrt]
         uses: ./.github/workflows/publish-site.yml
         with:
-            storybook-url: ${{ needs.vrt.outputs.storybook-url }}
+            storybook-url: ${{ needs.vrt.outputs.storybook-url || '' }}
         secrets: inherit
 
     todo_to_issue:
