@@ -47,8 +47,7 @@ export const Swatch = styled.div`
 		${props => props.background && `background: ${props.background};`}
 	}
 
-	.spectrum--dark &::before,
-	.spectrum--darkest &::before {
+	.spectrum--dark &::before {
 		border-color: rgba(255, 255, 255, 51%);
 	}
 `;

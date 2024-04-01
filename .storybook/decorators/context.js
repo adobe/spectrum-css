@@ -91,13 +91,6 @@ export const withContextWrapper = makeDecorator({
 				// Express only gets the express class
 				container.classList.toggle("spectrum--express", isExpress && !isRaw);
 
-				// Darkest is deprecated in Spectrum 2
-				if (isModern && color === "darkest") {
-					/* eslint-disable no-console -- notify that darkest was deprecated in S2 */
-					console.warn("The 'darkest' color is deprecated in Spectrum 2. Please use 'dark' instead.");
-					color = "dark";
-				}
-
 				// Let the static color override the color if it's set
 				if (hasStaticElement && staticColorSettings[staticKey]?.color) {
 					color = staticColorSettings[staticKey].color;
@@ -109,7 +102,7 @@ export const withContextWrapper = makeDecorator({
 					color = "light";
 				}
 
-				for (let c of ["light", "dark", "darkest"]) {
+				for (let c of ["light", "dark"]) {
 					container.classList.toggle(`spectrum--${c}`, c === color && !isRaw);
 				}
 
