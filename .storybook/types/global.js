@@ -30,7 +30,6 @@ export default {
 			items: [
 				{ value: "light", title: "Light", right: "default" },
 				{ value: "dark", title: "Dark" },
-				{ value: "darkest", title: "Darkest", right: "deprecated" },
 			],
 			dynamicTitle: true,
 		},
