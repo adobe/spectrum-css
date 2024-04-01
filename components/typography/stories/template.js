@@ -9,7 +9,7 @@ import "@spectrum-css/typography/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Typography",
-	semantics,
+	semantics = "body",
 	size = "m",
 	variant,
 	weight,
@@ -19,93 +19,101 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 }) => {
-	if (Array.isArray(content)) {
-		content = content.map((c) => {
-			if (typeof c === "string") return c;
-			if (typeof c === "object" && c._$litType$) return c;
-
-			return Template({
-				rootClass,
-				semantics,
-				size,
-				variant,
-				weight,
-				glyph,
-				id,
-				customClasses,
-				customStyles,
-				...c,
-			});
-		});
+	if (!Array.isArray(content)) {
+		content = [content];
 	}
 
-	if (typeof semantics === "undefined") {
-		return html`<div
-			class=${classMap({
-				"spectrum-Typography": true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-		>
-			${content}
-		</div>`;
-	}
+	const contentLength = content.length;
+	const processedContent = html`
+		${content.map((c) => {
+			/* If the content is an object (but not a lit object), we need to merge the object with the template */
+			if (typeof c !== "string" && (typeof c === "object" && !c._$litType$)) {
+				return Template({
+					rootClass,
+					semantics,
+					size,
+					variant,
+					weight,
+					glyph,
+					id,
+					customClasses,
+					...c,
+				});
+			}
 
-	rootClass = `spectrum-${capitalize(semantics)}`;
-
-	const classes = {
-		[rootClass]: true,
-		[`${rootClass}--${glyph}`]:
-			typeof semantics !== "undefined" &&
-			typeof glyph !== "undefined" &&
-			glyph !== "sans-serif",
-		[`${rootClass}--size${size?.toUpperCase()}`]:
-			typeof semantics !== "undefined" && typeof size !== "undefined",
-		[`${rootClass}--${weight}`]:
-			typeof semantics !== "undefined" && typeof weight !== "undefined",
-		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-	};
-
-	if (variant && Array.isArray(variant)) {
-		if (["strong", "emphasized"].every((i) => variant.includes(i))) {
-			content = html`<span
-				class=${classMap({
-					[`${rootClass}-strong`]: true,
-					[`${rootClass}-emphasized`]: true,
+			if (typeof semantics === "undefined") {
+				return html`<div
+					class=${classMap({
+					"spectrum-Typography": true,
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
-				>${content}</span
-			>`;
-		}
-		else if (variant.includes("strong")) {
-			content = html`<strong
-				class=${classMap({ [`${rootClass}-strong`]: true })}
-				>${content}</strong
-			>`;
-		}
-		else if (variant.includes("emphasized")) {
-			content = html`<em
-				class=${classMap({ [`${rootClass}-emphasized`]: true })}
-				>${content}</em
-			>`;
-		}
-	}
+					id=${ifDefined(id)}
+				>
+					${c}
+				</div>`;
+			}
 
-	if (semantics === "heading")
-		return html`
-			<h2 class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${content}</h2>
-		`;
+			rootClass = `spectrum-${capitalize(semantics)}`;
 
-	if (semantics === "body")
-		return html`
-			<p class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${content}</p>
-		`;
+			const classes = {
+				[rootClass]: true,
+				[`${rootClass}--${glyph}`]:
+					typeof semantics !== "undefined" &&
+					typeof glyph !== "undefined" &&
+					glyph !== "sans-serif",
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof semantics !== "undefined" && typeof size !== "undefined",
+				[`${rootClass}--${weight}`]:
+					typeof semantics !== "undefined" && typeof weight !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			};
 
-	if (semantics === "code")
-		return html`
-			<code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${content}</code>
-		`;
+			/* Variants are additive and exist within the wrapper tags */
+			if (variant && Array.isArray(variant)) {
+				if (["strong", "emphasized"].every((i) => variant.includes(i))) {
+					c = html`<span
+						class=${classMap({
+						[`${rootClass}-strong`]: true,
+						[`${rootClass}-emphasized`]: true,
+					})}
+						>${c}</span
+					>`;
+				}
+ else if (variant.includes("strong")) {
+					c = html`<strong
+						class=${classMap({ [`${rootClass}-strong`]: true })}
+						>${c}</strong
+					>`;
+				}
+ else if (variant.includes("emphasized")) {
+					c = html`<em
+						class=${classMap({ [`${rootClass}-emphasized`]: true })}
+						>${c}</em
+					>`;
+				}
+			}
 
-	return html`
-		<span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${content}</span>
+			if (semantics === "heading")
+				return html`
+					<h2 class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</h2>
+				`;
+
+			if (semantics === "body")
+				return html`
+					<p class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</p>
+				`;
+
+			if (semantics === "code")
+				return html`
+					<code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</code>
+				`;
+
+			return html`
+				<span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</span>
+			`;
+		})}
 	`;
+
+	/** Wrap items with the spectrum-Typography wrapper if there are more than 1 items (this ensures correct margins) */
+	return html`${contentLength > 1 ? html`<div class="spectrum-Typography" id=${ifDefined(id)}>${processedContent}</div>` : processedContent}`;
 };
