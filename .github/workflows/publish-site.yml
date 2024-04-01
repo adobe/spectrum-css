@@ -15,6 +15,7 @@ on:
             storybook-url:
                 required: false
                 type: string
+                default: ''
     workflow_call:
         inputs:
             deploy-message:
@@ -26,6 +27,7 @@ on:
             storybook-url:
                 required: false
                 type: string
+                default: ''
 
 permissions:
     contents: read
@@ -82,10 +84,10 @@ jobs:
               shell: bash
               run: yarn build:site
               env:
-                  CHROMATIC_URL: ${{ inputs.storybook-url }}
+                CHROMATIC_URL: ${{ inputs.storybook-url }}
 
             - name: Build storybook site
-              if: ${{ inputs.storybook-url == '' }}
+              if: ${{ ! inputs.storybook-url }}
               shell: bash
               run: yarn nx run storybook:build:docs
 
