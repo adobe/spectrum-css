@@ -50,10 +50,6 @@ on:
         outputs:
             artifact-id:
                 value: ${{ jobs.build.outputs.artifact-id }}
-            head-sha:
-                value: ${{ jobs.build.outputs.head-sha }}
-            base-sha:
-                value: ${{ jobs.build.outputs.base-sha }}
 
 permissions:
     contents: read
@@ -75,11 +71,17 @@ jobs:
         continue-on-error: ${{ matrix.experimental }}
         timeout-minutes: 10
         outputs:
-            head-sha: ${{ steps.set-SHAs.outputs.head }}
-            base-sha: ${{ steps.set-SHAs.outputs.base }}
             artifact-id: ${{ steps.upload.outputs.artifact-id }}
         name: Build
         steps:
+            - name: Set the cache key for builds
+              id: derive-key
+              shell: bash
+              run: |
+                  BRANCH=${{ inputs.ref || github.head_ref }}
+                  BRANCH=${BRANCH//\//_}
+                  echo "key=${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
+
             - name: Check out code
               uses: actions/checkout@v4
               with:
@@ -91,10 +93,6 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: yarn
-
-            - name: Derive appropriate SHAs for base and head for `nx affected` commands
-              id: set-SHAs
-              uses: nrwl/nx-set-shas@v3
 
             ## --- YARN CACHE --- ##
             - name: Check for cached dependencies
@@ -124,6 +122,7 @@ jobs:
 
             ## --- UPLOAD (only ubuntu-latest at the moment) --- ##
             - name: Upload compiled assets & NX performance profile
+              continue-on-error: true
               id: upload
               if: ${{ matrix.system == 'ubuntu-latest' }}
               uses: actions/upload-artifact@v4
@@ -133,10 +132,12 @@ jobs:
                       ${{ github.workspace }}/tokens/dist/**
                       ${{ github.workspace }}/ui-icons/dist/**
                       ${{ github.workspace }}/profile.json
-                  name: ${{ matrix.system }}-node${{ matrix.node-version }}-compiled-assets-${{ steps.set-SHAs.outputs.head }}
+                  name: ${{ steps.derive-key.outputs.key }}
                   # this is important, it lets us catch if the build failed silently
                   # by alterting us that no compiled assets were generated
                   if-no-files-found: error
+                  retention-days: 5
+                  overwrite: true
 
             # This step will evaluate the repo status and report the change
             # If there are changes, capture the changes and upload them as an artifact

@@ -45,17 +45,6 @@ jobs:
         secrets: inherit
 
     # -------------------------------------------------------------
-    # Report on the compiled assets
-    # -------------------------------------------------------------
-    # report:
-    #     name: Report
-    #     needs: [build]
-    #     uses: ./.github/workflows/compare-results.yml
-    #     with:
-    #         head-sha: ${{ needs.build.outputs.head-sha }}
-    #     secrets: inherit
-
-    # -------------------------------------------------------------
     # RUN VISUAL REGRESSION TESTS --- #
     # Run VRT on all pushes to main
     # -------------------------------------------------------------
