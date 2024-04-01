@@ -52,6 +52,7 @@ governing permissions and limitations under the License.
 	--spectrum-card-actions-spacing: var(--spectrum-spacing-300);
 	--spectrum-card-actions-size: var(--spectrum-card-selection-background-size);
 	--spectrum-card-actions-border-radius: var(--spectrum-corner-radius-100);
+
 	/* TODO update to --spectrum-card-selection-background-color token once an RGB stripped value is available */
 	--spectrum-card-actions-background-color-rgb: var(--spectrum-gray-100-rgb);
 	--spectrum-card-actions-background-color-opacity: var(
@@ -70,14 +71,17 @@ governing permissions and limitations under the License.
 
 	/* Selected */
 	--spectrum-card-selected-background-opacity: 0.1; /* table-selected-row-background-opacity does not exist in tokens yet */
+
 	/* TODO: These are placeholder until recursive RGB is available */
 	.spectrum--light &,
 	.spectrum--lightest & {
 		--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
 	}
+
 	.spectrum--dark & {
 		--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
 	}
+
 	.spectrum--darkest & {
 		--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-600-rgb);
 	}
@@ -86,29 +90,18 @@ governing permissions and limitations under the License.
 	&--quiet,
 	&--gallery {
 		--mod-card-content-margin-top: var(
-			--spectrum-card-content-margin-top-quiet,
+			--mod-card-content-margin-top-quiet,
 			var(--spectrum-spacing-100)
 		);
 		--mod-card-minimum-width: var(
-			--spectrum-card-minimum-width-quiet,
+			--mod-card-minimum-width-quiet,
 			var(--spectrum-card-minimum-width)
 		);
-
-		--spectrum-card-preview-border-width: var(--spectrum-border-width-100);
 	}
 
-	&--quiet,
-	&--gallery,
-	&--horizontal {
-		--mod-card-background-color: var(
-			--spectrum-card-background-color-quiet,
-			var(--spectrum-background-base-color)
-		);
-		--spectrum-card-background-color-hover: var(
-			--spectrum-card-background-color-hover-quiet,
-			var(--spectrum-gray-300)
-		);
-	}
+	--spectrum-card-preview-border-width-selected: var(--spectrum-border-width-100);
+	--spectrum-card-preview-background-color: var(--spectrum-background-base-color);
+	--spectrum-card-preview-background-color-hover: var(--spectrum-gray-300);
 
 	/* Horizontal */
 	--spectrum-card-horizontal-body-padding: var(--spectrum-spacing-300);
@@ -137,11 +130,17 @@ governing permissions and limitations under the License.
 		--highcontrast-card-border-color,
 		var(--mod-card-border-color, var(--spectrum-card-border-color))
 	);
+
+	/* @deprecation --mod-spectrum-card-background-color has been renamed to
+		--mod-card-background-color. The fallback will be removed in a future version. */
 	background-color: var(
 		--highcontrast-card-background-color,
 		var(
-			--mod-spectrum-card-background-color,
-			var(--spectrum-card-background-color)
+			--mod-card-background-color,
+			var(
+				--mod-spectrum-card-background-color,
+				var(--spectrum-card-background-color)
+			)
 		)
 	);
 
@@ -245,6 +244,7 @@ governing permissions and limitations under the License.
 				var(--spectrum-card-border-color-selected)
 			)
 		);
+
 		&::before {
 			background-color: rgba(
 				var(
@@ -294,7 +294,7 @@ governing permissions and limitations under the License.
     .spectrum-Card-actions {
       /* Ideally, this would simply apply is-open to the QuickActions component */
       visibility: visible;
-      opacity: 1;
+      opacity: 100%;
       pointer-events: all;
     }
   }
@@ -570,6 +570,7 @@ governing permissions and limitations under the License.
 			var(--mod-card-border-width, var(--spectrum-card-border-width))
 		)
 	);
+
 	/* @deprecation --mod-card-footer-margin-top has been renamed to --mod-card-footer-padding-block-start
 	   and will be removed in a future version. */
 	padding-block-start: var(
@@ -623,6 +624,7 @@ governing permissions and limitations under the License.
 		&::after {
 			border-width: 0;
 		}
+
 		.spectrum-Card-preview::after {
 			border-color: var(
 				--mod-card-focus-indicator-color,
@@ -633,9 +635,14 @@ governing permissions and limitations under the License.
 
 	&.is-selected {
 		.spectrum-Card-preview {
+			/* @deprecation --mod-card-preview-border-width has been renamed to --mod-card-preview-border-width-selected
+				and the fallback will be removed in a future version. */
 			border: var(
-					--mod-card-preview-border-width,
-					var(--spectrum-card-preview-border-width)
+					--mod-card-preview-border-width-selected,
+					var(
+						--mod-card-preview-border-width,
+						var(--spectrum-card-preview-border-width-selected)
+					)
 				)
 				solid;
 			border-color: var(
@@ -672,8 +679,11 @@ governing permissions and limitations under the License.
 			var(--spectrum-card-corner-radius)
 		);
 		background-color: var(
-			--mod-card-background-color,
-			var(--spectrum-card-background-color)
+			--mod-card-preview-background-color, 
+			var(
+				--mod-card-background-color, 
+				var(--spectrum-card-preview-background-color)
+			)
 		);
 		min-block-size: var(
 			--mod-card-preview-minimum-height,
@@ -684,8 +694,9 @@ governing permissions and limitations under the License.
 		margin: 0 auto;
 		box-sizing: border-box;
 		position: relative;
+		/* @deprecation --mod-animation-duration-100 has been renamed and will be removed in a future version. */
 		transition: background-color
-			var(--mod-animation-duration-100, var(--spectrum-animation-duration-100));
+			var(--mod-card-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)));
 		overflow: visible;
 
 		/* Use ::before to show the selected overlay */
@@ -729,10 +740,14 @@ governing permissions and limitations under the License.
 
 	&:hover {
 		border-color: transparent;
+
 		.spectrum-Card-preview {
 			background-color: var(
-				--mod-card-background-color-hover,
-				var(--spectrum-card-background-color-hover)
+				--mod-card-preview-background-color-hover,
+				var(
+					--mod-card-background-color-hover,
+					var(--spectrum-card-preview-background-color-hover)
+				)
 			);
 		}
 	}
@@ -745,8 +760,11 @@ governing permissions and limitations under the License.
 		.spectrum-Card-preview {
 			transition: none;
 			background-color: var(
-				--mod-card-background-color,
-				var(--spectrum-card-background-color)
+				--mod-card-preview-background-color, 
+				var(
+					--mod-card-background-color, 
+					var(--spectrum-card-preview-background-color)
+				)
 			);
 		}
 
@@ -796,7 +814,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card--horizontal {
-  flex-direction: row;
+	flex-direction: row;
 
 	&:hover {
 		.spectrum-Card-preview {
@@ -824,21 +842,20 @@ governing permissions and limitations under the License.
 			var(--spectrum-card-horizontal-preview-padding)
 		);
 		background-color: var(
-			--mod-card-background-color,
-			var(--spectrum-card-background-color)
+			--mod-card-preview-background-color,
+			var(--spectrum-card-preview-background-color)
 		);
-
 		border-color: var(
 			--mod-card-border-color,
 			var(--spectrum-card-border-color)
 		);
 	}
 
-  .spectrum-Card-header,
-  .spectrum-Card-content {
-    margin-block-start: 0;
-    block-size: auto;
-  }
+	.spectrum-Card-header,
+	.spectrum-Card-content {
+		margin-block-start: 0;
+		block-size: auto;
+	}
 
 	.spectrum-Card-content {
 		margin-block-end: 0;
@@ -848,12 +865,11 @@ governing permissions and limitations under the License.
 		padding-inline-end: 0;
 	}
 
-  .spectrum-Card-body {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
+	.spectrum-Card-body {
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 		padding-block: 0;
 		padding-inline: var(
 			--mod-card-horizontal-body-padding,
