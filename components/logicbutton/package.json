@@ -17,6 +17,9 @@
   "peerDependencies": {
     "@spectrum-css/tokens": ">=13"
   },
+  "devDependencies": {
+    "@spectrum-css/commons": "^9.1.3"
+  },
   "publishConfig": {
     "access": "public"
   }
