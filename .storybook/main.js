@@ -45,6 +45,7 @@ module.exports = {
 	],
 	core: {
 		disableTelemetry: true,
+		disableWhatsNewNotifications: true,
 	},
 	webpackFinal: function (config) {
 		// Removing the global alias as it conflicts with the global npm pkg
