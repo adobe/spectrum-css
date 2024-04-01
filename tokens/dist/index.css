@@ -2163,12 +2163,6 @@
   --spectrum-font-size-1100:55px;
   --spectrum-font-size-1200:62px;
   --spectrum-font-size-1300:70px;
-  /* edge-to-visual-only is used for icon-only buttons */
-  --spectrum-edge-to-visual-only-75:5px;
-  --spectrum-edge-to-visual-only-100:9px;
-  --spectrum-edge-to-visual-only-200:13px;
-  --spectrum-edge-to-visual-only-300:16px;
-
   --spectrum-slider-tick-mark-height:13px;
   --spectrum-slider-ramp-track-height:20px;
 
@@ -2226,7 +2220,6 @@
   --spectrum-well-min-width:300px;
   --spectrum-well-border-radius:5px;
 
-  --spectrum-icon-chevron-size-50:8px;
   /* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
   --spectrum-workflow-icon-size-xxl:40px;
   --spectrum-workflow-icon-size-xxs:15px;
@@ -3327,12 +3320,6 @@
   --spectrum-font-size-1100:45px;
   --spectrum-font-size-1200:50px;
   --spectrum-font-size-1300:60px;
-  /* edge-to-visual-only is used for icon-only buttons */
-  --spectrum-edge-to-visual-only-75:4px;
-  --spectrum-edge-to-visual-only-100:7px;
-  --spectrum-edge-to-visual-only-200:10px;
-  --spectrum-edge-to-visual-only-300:13px;
-
   --spectrum-slider-tick-mark-height:10px;
   --spectrum-slider-ramp-track-height:16px;
 
@@ -3389,7 +3376,6 @@
   --spectrum-well-min-width:240px;
   --spectrum-well-border-radius:var(--spectrum-spacing-75);
 
-  --spectrum-icon-chevron-size-50:6px;
   /* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
   --spectrum-workflow-icon-size-xxl:32px;
   --spectrum-workflow-icon-size-xxs:12px;
