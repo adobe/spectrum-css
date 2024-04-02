@@ -89,7 +89,7 @@ jobs:
 
             ## --- DEPLOY WEBSITE TO NETLIFY --- ##
             - name: Deploy
-              uses: nwtgck/actions-netlify@v2
+              uses: nwtgck/actions-netlify@v3
               with:
                 #   publish-dir: site/dist
                   publish-dir: dist
