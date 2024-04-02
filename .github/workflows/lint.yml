@@ -86,7 +86,7 @@ jobs:
                   stylelint_config: stylelint.config.js
 
             - name: Run eslint on packages and stories
-              uses: reviewdog/action-eslint@v1.20.0
+              uses: reviewdog/action-eslint@v1.23.0
               if: ${{ inputs.eslint_added_files != '' || inputs.eslint_modified_files != '' }}
               with:
                   fail_on_error: true
