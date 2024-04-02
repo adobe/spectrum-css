@@ -6,10 +6,18 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/toast/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### Clear button replaced by Close button
-      Replace `spectrum-ClearButton spectrum-ClearButton--overBackground spectrum-ClearButton--sizeM` with `spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite` and remove the `<div class="spectrum-ClearButton-fill">` element.
-      ### Over background replaced by Static White with Outline
-      Replace all `.spectrum-Button--overBackground .spectrum-Button--quiet` with `.spectrum-Button--staticWhite .spectrum-Button--outline`.
+      ### Version 10.0.0
+      #### Spectrum 2 Release
+      Toast now uses Spectrum 2 tokens and specifications. This includes spacing, color, and icon changes. The following properties have been adjusted:
+
+      - `.spectrum-Toast-closeButton` class has been removed. Use Close Button `--mod` custom properties instead.
+      - `--mod-toast-divider-color` has been removed. There is no divider included in this version of Toast
+      - `--mod-toast-spacing-text-and-action-button-to-divider` has been renamed to `--spectrum-toast-spacing-action-button-to-close-button`
+      - `--mod-toast-spacing-top-edge-to-divider` has been renamed to `--mod-toast-spacing-top-edge-to-close-button`
+      - `--mod-toast-spacing-bottom-edge-to-divider` has been renamed to `--mod-toast-spacing-bottom-edge-to-close-button`
+      - `--mod-toast-spacing-close-button` has been renamed to `--mod-toast-spacing-close-button-to-edge`
+
+      Also note that Spectrum 2 design specifications require spacing of `spacing-300` around the Toast component. This is not included in the Spectrum CSS component and should instead be included in implementation.
 examples:
   - id: toast
     name: Default

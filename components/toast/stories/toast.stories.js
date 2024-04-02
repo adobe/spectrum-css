@@ -13,7 +13,14 @@ export default {
 	component: "Toast",
 	argTypes: {
 		variant: {
-			table: { disable: true },
+			name: "Variant",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["default", "info", "positive", "negative"],
+			control: "select",
 		},
 		message: {
 			name: "Message",
