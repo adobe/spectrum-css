@@ -19,12 +19,20 @@ export const Template = ({
 	...globals
 }) => {
 
-	const iconName =
-		variant === "negative"
-			? "Alert"
-			: variant === "positive"
-				? "CheckmarkCircle"
-				: "Info";
+	let iconName = "";
+	switch (variant) {
+	case "info":
+		iconName = "Info";
+		break;
+	case "positive":
+		iconName = "CheckmarkCircle";
+		break;
+	case "negative":
+		iconName = "Alert";
+		break;
+	default:
+		iconName = "";
+	}
 
 	return html`
 		<div
