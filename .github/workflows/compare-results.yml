@@ -73,25 +73,34 @@ jobs:
               shell: bash
               run: yarn install --frozen-lockfile --cache-folder .cache/yarn
 
+            - name: Set the cache key for builds
+              id: derive-key
+              shell: bash
+              run: |
+                  BRANCH=${{ inputs.head-sha }}
+                  echo "head-path=${BRANCH//\//_}" >> "$GITHUB_OUTPUT"
+                  BRANCH=${{ inputs.base-sha }}
+                  echo "base-path=${BRANCH//\//_}" >> "$GITHUB_OUTPUT"
+
             - name: Download build artifacts for head
               uses: actions/download-artifact@v4
               with:
-                  name: ubuntu-latest-node18-compiled-assets-${{ inputs.head-sha }}
-                  path: ${{ github.workspace }}/${{ inputs.head-sha }}
+                  name: ubuntu-latest-node18-compiled-assets-${{ steps.derive-key.outputs.head-path }}
+                  path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}
 
             - name: Download build artifacts for base
               uses: actions/download-artifact@v4
               with:
-                  name: ubuntu-latest-node18-compiled-assets-${{ inputs.base-sha }}
-                  path: ${{ github.workspace }}/${{ inputs.base-sha }}
+                  name: ubuntu-latest-node18-compiled-assets-${{ steps.derive-key.outputs.base-path }}
+                  path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}
 
             - name: Compare compiled output file size
               id: compare
               uses: ./.github/actions/file-diff
               # uses: spectrum-tools/gh-action-file-diff@v1
               with:
-                  head-path: ${{ github.workspace }}/${{ inputs.head-sha }}/
-                  base-path: ${{ github.workspace }}/${{ inputs.base-sha }}/
+                  head-path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}/
+                  base-path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}/
                   file-glob-pattern: |
                     components/*/dist/**
                     tokens/dist/**
@@ -132,12 +141,16 @@ jobs:
                     - ${{ inputs.base-sha }}
         runs-on: ubuntu-latest
         timeout-minutes: 10
+        outputs:
+            artifact-id: ${{ steps.upload.outputs.artifact-id }}
         steps:
             - name: Set the cache key for builds
               id: derive-key
               shell: bash
               run: |
-                  echo "key=ubuntu-latest-node18-compiled-assets-${{ matrix.branch }}" >> "$GITHUB_OUTPUT"
+                  BRANCH=${{ matrix.branch }}
+                  BRANCH=${BRANCH//\//_}
+                  echo "key=ubuntu-latest-node18-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
 
             - name: Check if build artifacts already exist
               uses: actions/download-artifact@v4
@@ -151,7 +164,6 @@ jobs:
               shell: bash
               run: exit 0
 
-            ## --- FETCH PR SHAs --- ##
             - name: Check out code
               uses: actions/checkout@v4
               with:
@@ -182,6 +194,10 @@ jobs:
               shell: bash
               run: yarn install --frozen-lockfile --cache-folder .cache/yarn
 
+            - name: Reset nx cache to prevent cross-machine errors
+              shell: bash
+              run: yarn nx reset
+
             ## --- BUILD --- ##
             - name: Check for built assets
               continue-on-error: true
@@ -201,6 +217,7 @@ jobs:
 
             - name: Upload compiled assets
               if: ${{ steps.download.outcome != 'success' }}
+              continue-on-error: true
               id: upload
               uses: actions/upload-artifact@v4
               with:

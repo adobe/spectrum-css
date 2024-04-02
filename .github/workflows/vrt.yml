@@ -38,10 +38,6 @@ jobs:
                   node-version: 18
                   cache: yarn
 
-            - name: Derive appropriate SHAs for base and head for `nx affected` commands
-              id: set-SHAs
-              uses: nrwl/nx-set-shas@v3
-
             ## --- YARN CACHE --- ##
             - name: Check for cached dependencies
               continue-on-error: true
