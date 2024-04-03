@@ -1,5 +1,17 @@
 name: Alert banner
 description: Alert banners show pressing and high-signal messages, such as system alerts. They're meant to be noticed and prompt users to take action.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/alert-banner/
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/alertbanner/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### Version 2.0.0
+      #### Spectrum 2 release
+      Alert banner now uses Spectrum 2 tokens and specifications. In this new design, the divider has been removed. A few other notable changes and additions:
+        - The mod custom property `--mod-alert-banner-netural-background` was misspelled and has been renamed to `--mod-alert-banner-neutral-background`. The
+          mod `--mod-alert-banner-background` was also added, which will take precendence over the variant background mods.
 examples:
   - id: alertbanner
     name: Neutral
@@ -12,7 +24,6 @@ examples:
           </div>
         </div>
         <div class="spectrum-AlertBanner-end">
-          <div class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--vertical spectrum-Divider--staticWhite"></div>
           <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="close">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross200" />
@@ -32,7 +43,6 @@ examples:
           </button>
         </div>
         <div class="spectrum-AlertBanner-end">
-          <div class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--vertical spectrum-Divider--staticWhite"></div>
           <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="close">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross200" />
@@ -52,7 +62,6 @@ examples:
           </button>
         </div>
         <div class="spectrum-AlertBanner-end">
-          <div class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--vertical spectrum-Divider--staticWhite"></div>
           <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="close">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross200" />
@@ -77,7 +86,6 @@ examples:
           </button>
         </div>
         <div class="spectrum-AlertBanner-end">
-          <div class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--vertical spectrum-Divider--staticWhite"></div>
           <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="close" >
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross200" />
@@ -102,7 +110,6 @@ examples:
           </button>
         </div>
         <div class="spectrum-AlertBanner-end">
-          <div class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--vertical spectrum-Divider--staticWhite"></div>
           <button class="spectrum-CloseButton spectrum-CloseButton--sizeM spectrum-CloseButton--staticWhite" aria-label="close">
             <svg class="spectrum-CloseButton-UIIcon spectrum-Icon spectrum-UIIcon-Cross200" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-Cross200" />

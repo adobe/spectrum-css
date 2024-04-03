@@ -1,5 +1,6 @@
 | Modifiable custom properties                   |
 | ---------------------------------------------- |
+| `--mod-alert-banner-background`                |
 | `--mod-alert-banner-bottom-text`               |
 | `--mod-alert-banner-close-button-spacing`      |
 | `--mod-alert-banner-edge-to-button`            |
@@ -11,7 +12,7 @@
 | `--mod-alert-banner-informative-background`    |
 | `--mod-alert-banner-min-height`                |
 | `--mod-alert-banner-negative-background`       |
-| `--mod-alert-banner-netural-background`        |
+| `--mod-alert-banner-neutral-background`        |
 | `--mod-alert-banner-size`                      |
 | `--mod-alert-banner-start-edge`                |
 | `--mod-alert-banner-text-to-button-horizontal` |
