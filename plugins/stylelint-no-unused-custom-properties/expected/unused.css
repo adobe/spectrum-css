@@ -1,0 +1,13 @@
+:root {
+  --prefix-component-background-color: blue;
+  --prefix-component-border-color: blue;
+  --prefix-component-width: 10px;
+  --prefix-component-height: 10px;
+}
+
+.component {
+  inline-size: var(--prefix-component-width);
+  block-size: var(--prefix-component-height);
+  background-color: var(--prefix-component-background-color);
+  border-color: var(--other-color, var(--prefix-component-border-color));
+}

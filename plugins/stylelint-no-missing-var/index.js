@@ -11,53 +11,53 @@
  */
 
 const {
-  createPlugin,
-  utils: { report, ruleMessages, validateOptions }
+	createPlugin,
+	utils: { report, ruleMessages, validateOptions }
 } = require("stylelint");
 
 require("colors");
 
 const ruleName = "spectrum-tools/no-missing-var";
 const messages = ruleMessages(ruleName, {
-    expected: (property) => `Missing ${'var'.yellow} function around custom property ${property.magenta}`,
+	expected: (property) => `Missing ${"var".yellow} function around custom property ${property.magenta}`,
 });
 
 /** @type {import('stylelint').Plugin} */
 const ruleFunction = (enabled, _options, context) => {
-    return (root, result) => {
-        const validOptions = validateOptions(
-            result,
-            ruleName,
-            {
-                actual: enabled,
-                possible: [true],
-            },
-        );
+	return (root, result) => {
+		const validOptions = validateOptions(
+			result,
+			ruleName,
+			{
+				actual: enabled,
+				possible: [true],
+			},
+		);
 
-        if (!validOptions) return;
+		if (!validOptions) return;
 
-        root.walkDecls((decl) => {
-            const value = decl.value.replace(/\s/g, ""); // Remove whitespace
-            if (!value) return;
+		root.walkDecls((decl) => {
+			const value = decl.value.replace(/\s/g, ""); // Remove whitespace
+			if (!value) return;
 
-            const regex = /(?<!var\(\S*)--\S+\b/;
-            if (regex.test(value)) {
-                if (context.fix) {
-                    decl.value = value.replace(regex, `var(${value.match(regex)[0]})`);
-                } else {
-                    const prop = value.match(regex)?.[0];
-                    if (!prop) return;
+			const regex = /(?<!var\(\S*)--\S+\b/;
+			if (regex.test(value)) {
+				if (context.fix) {
+					decl.value = value.replace(regex, `var(${value.match(regex)[0]})`);
+				} else {
+					const prop = value.match(regex)?.[0];
+					if (!prop) return;
 
-                    report({
-                        message: messages.expected(prop),
-                        node: decl,
-                        result,
-                        ruleName,
-                    });
-                }
-            }
-        });
-    };
+					report({
+						message: messages.expected(prop),
+						node: decl,
+						result,
+						ruleName,
+					});
+				}
+			}
+		});
+	};
 };
 
 module.exports.ruleName = ruleName;
