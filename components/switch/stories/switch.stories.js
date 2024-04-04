@@ -1,4 +1,5 @@
-// Import the component markup template
+import { html } from "lit";
+import { when } from "lit/directives/when.js";
 import { Template } from "./template";
 
 export default {
@@ -72,22 +73,39 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+const SwitchStateStack = (args) => {
+	return html`
+		${Template({
+			...args,
+		})}
+		${when(window.isChromatic(), () =>
+			html`
+				${Template({
+					...args,
+					label: "Switch checked",
+					isChecked: true,
+				})}
+				${Template({
+					...args,
+					label: "Switch unchecked and disabled and so long it wraps to the next line",
+					isDisabled: true,
+					customStyles: {"max-width": "250px"}
+				})}
+				${Template({
+					...args,
+					label: "Switch checked and disabled",
+					isDisabled: true,
+					isChecked: true,
+				})}
+			`
+		)}
+	`;
+};
+
+export const Default = SwitchStateStack.bind({});
 Default.args = {};
 
-export const Emphasized = Template.bind({});
+export const Emphasized = SwitchStateStack.bind({});
 Emphasized.args = {
-	isEmphasized: true,
-	label: "Switch label that is so long it wraps to the next line",
-	customStyles: {"max-width": "250px"}
-};
-
-export const Checked = Template.bind({});
-Checked.args = {
-	isChecked: true
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-	isDisabled: true
+	isEmphasized: true
 };

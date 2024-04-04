@@ -6,20 +6,43 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/switch/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### Component renamed
-      Toggle is now known as Switch. Replace all `.spectrum-ToggleSwitch*` classnames with `.spectrum-Switch*`.
-      ### T-shirt sizing
-      Switch now supports t-shirt sizing and requires that you specify the size by adding a .spectrum-Switch--size* class. The default size is "medium".
-      ### Quiet and emphasized
-      Spectrum has chosen the variant previously known as `quiet` to be the default and has added an `emphasized` variant with the same styles as the previous default.
-      If you were using the `quiet` variant, the `.spectrum-Switch--quiet` class is no longer required and can be removed.
-      If you need a switch to look like it did before this change, add `.spectrum-Switch--emphasized`.
+      ### Version 5.0.0
+      #### S2 Migration
+      Switch now uses Spectrum 2 tokens and specifications. The following properties have been adjusted:
 
-      ### A/B toggle variant removed
-      It's been deprecated and removed. A similar use case could be served by using Radio buttons.
+      - Medium is now the default size and `.spectrum-Switch--sizeM` has been removed
+      - Switch includes the Spectrum 2 down state transform
+      - Due to design changes (addition of a track border, handle color change, removal of border on handle, etc.), many mods required updates:
+        - New mods:
+          - `--mod-cjk-line-height-100`
+          - `--mod-switch-border-color-default`
+          - `--mod-switch-border-color-disabled`
+          - `--mod-switch-border-color-down`
+          - `--mod-switch-border-color-focus`
+          - `--mod-switch-border-color-hover`
+          - `--mod-switch-border-color-selected-default`
+          - `--mod-switch-border-color-selected-down`
+          - `--mod-switch-border-color-selected-focus`
+          - `--mod-switch-border-color-selected-hover`
+          - `--mod-switch-border-radius`
+          - `--mod-switch-handle-background-color-disabled`
+          - `--mod-switch-handle-background-color-selected-disabled`
+          - `--mod-switch-handle-selected-background-color`
+          - `--mod-switch-handle-selected-size`
+          - `--mod-switch-handle-size`
+          - `--mod-switch-spacing-bottom-to-label`
+        - Removed mods:
+          - `--mod-switch-handle-border-color-default`
+          - `--mod-switch-handle-border-color-disabled`
+          - `--mod-switch-handle-border-color-down`
+          - `--mod-switch-handle-border-color-focus`
+          - `--mod-switch-handle-border-color-hover`
+          - `--mod-switch-handle-border-color-selected-default`
+          - `--mod-switch-handle-border-color-selected-down`
+          - `--mod-switch-handle-border-color-selected-focus`
+          - `--mod-switch-handle-border-color-selected-hover`
+      - Rework of forced-colors to only need custom prop reassignment to work (no more custom CSS for Windows High Contrast Mode)
 
-      ### Remove focus-ring class
-      We've migrated away from the focus-ring class in favor of the native `:focus-visible` pseudo-class due to changes in browser support.
 examples:
   - id: switch
     name: Standard
