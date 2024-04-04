@@ -283,35 +283,35 @@ governing permissions and limitations under the License.
       color: inherit;
     }
   }
+}
 
-  &--emphasized {
-    /* selection indicator emphasized */
-    .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-      border-color: var(--highcontrast-radio-emphasized-accent-color,
-                        var(--mod-radio-emphasized-accent-color,
-                            var(--spectrum-radio-emphasized-accent-color)));
-    }
+.spectrum-Radio--emphasized {
+  /* selection indicator emphasized */
+  .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
+    border-color: var(--highcontrast-radio-emphasized-accent-color,
+                      var(--mod-radio-emphasized-accent-color,
+                          var(--spectrum-radio-emphasized-accent-color)));
+  }
 
-    /* selection indicator emphasized hover */
-    &:hover .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-      border-color: var(--highcontrast-radio-emphasized-accent-color-hover,
-                        var(--mod-radio-emphasized-accent-color-hover,
-                            var(--spectrum-radio-emphasized-accent-color-hover)));
-    }
+  /* selection indicator emphasized hover */
+  &:hover .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
+    border-color: var(--highcontrast-radio-emphasized-accent-color-hover,
+                      var(--mod-radio-emphasized-accent-color-hover,
+                          var(--spectrum-radio-emphasized-accent-color-hover)));
+  }
 
-    /* selection indicator emphasized active */
-    &:active .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-      border-color: var(--highcontrast-radio-emphasized-accent-color-down,
-                        var(--mod-radio-emphasized-accent-color-down,
-                            var(--spectrum-radio-emphasized-accent-color-down)));
-    }
+  /* selection indicator emphasized active */
+  &:active .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
+    border-color: var(--highcontrast-radio-emphasized-accent-color-down,
+                      var(--mod-radio-emphasized-accent-color-down,
+                          var(--spectrum-radio-emphasized-accent-color-down)));
+  }
 
-    /* selection indicator emphasized focus */
-    &:focus .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
-      border-color: var(--highcontrast-radio-emphasized-accent-color-focus,
-                        var(--mod-radio-emphasized-accent-color-focus,
-                            var(--spectrum-radio-emphasized-accent-color-focus)));
-    }
+  /* selection indicator emphasized focus */
+  &:focus .spectrum-Radio-input:checked + .spectrum-Radio-button::before {
+    border-color: var(--highcontrast-radio-emphasized-accent-color-focus,
+                      var(--mod-radio-emphasized-accent-color-focus,
+                          var(--spectrum-radio-emphasized-accent-color-focus)));
   }
 }
 
@@ -482,7 +482,7 @@ governing permissions and limitations under the License.
                 margin var(--mod-radio-animation-duration,
                           var(--spectrum-radio-animation-duration)) ease-out;
 
-    [dir="rtl"] & {
+    &:dir(rtl) {
       transform: translateX(50%) translateY(-50%);
     }
   }

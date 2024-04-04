@@ -113,18 +113,18 @@ governing permissions and limitations under the License.
         opacity var(--mod-closebutton-animation-duration, var(--spectrum-closebutton-animation-duration)) ease-out,margin var(--mod-closebutton-animation-duraction, var(--spectrum-closebutton-animation-duration)) ease-out;
       }
     }
+  }
 
-    &--staticBlack {
-      --highcontrast-closebutton-static-background-color-default: ButtonFace;
-      --highcontrast-closebutton-icon-color-default: Highlight;
-      --highcontrast-closebutton-icon-color-disabled: GrayText;
-    }
+  .spectrum-CloseButton--staticBlack {
+    --highcontrast-closebutton-static-background-color-default: ButtonFace;
+    --highcontrast-closebutton-icon-color-default: Highlight;
+    --highcontrast-closebutton-icon-color-disabled: GrayText;
+  }
 
-    &--staticWhite {
-      --highcontrast-closebutton-static-background-color-default: ButtonFace;
-      --highcontrast-closebutton-icon-color-default: Highlight;
-      --highcontrast-closebutton-icon-color-disabled: Highlight;
-    }
+  .spectrum-CloseButton--staticWhite {
+    --highcontrast-closebutton-static-background-color-default: ButtonFace;
+    --highcontrast-closebutton-icon-color-default: Highlight;
+    --highcontrast-closebutton-icon-color-disabled: Highlight;
   }
 }
 

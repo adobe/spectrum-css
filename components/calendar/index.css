@@ -50,7 +50,6 @@ governing permissions and limitations under the License.
 
   --spectrum-calendar-button-icon-color: var(--spectrum-gray-700);
 
-	[dir="rtl"] &,
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}

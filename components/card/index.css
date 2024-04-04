@@ -72,6 +72,14 @@ governing permissions and limitations under the License.
 	/* Selected */
 	--spectrum-card-selected-background-opacity: 0.1; /* table-selected-row-background-opacity does not exist in tokens yet */
 
+	--spectrum-card-preview-border-width-selected: var(--spectrum-border-width-100);
+	--spectrum-card-preview-background-color: var(--spectrum-background-base-color);
+	--spectrum-card-preview-background-color-hover: var(--spectrum-gray-300);
+
+	/* Horizontal */
+	--spectrum-card-horizontal-body-padding: var(--spectrum-spacing-300);
+	--spectrum-card-horizontal-preview-padding: var(--spectrum-spacing-200);
+
 	/* TODO: These are placeholder until recursive RGB is available */
 	.spectrum--light &,
 	.spectrum--lightest & {
@@ -85,27 +93,19 @@ governing permissions and limitations under the License.
 	.spectrum--darkest & {
 		--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-600-rgb);
 	}
+}
 
-	/* Quiet/Gallery */
-	&--quiet,
-	&--gallery {
-		--mod-card-content-margin-top: var(
-			--mod-card-content-margin-top-quiet,
-			var(--spectrum-spacing-100)
-		);
-		--mod-card-minimum-width: var(
-			--mod-card-minimum-width-quiet,
-			var(--spectrum-card-minimum-width)
-		);
-	}
-
-	--spectrum-card-preview-border-width-selected: var(--spectrum-border-width-100);
-	--spectrum-card-preview-background-color: var(--spectrum-background-base-color);
-	--spectrum-card-preview-background-color-hover: var(--spectrum-gray-300);
-
-	/* Horizontal */
-	--spectrum-card-horizontal-body-padding: var(--spectrum-spacing-300);
-	--spectrum-card-horizontal-preview-padding: var(--spectrum-spacing-200);
+/* Quiet/Gallery */
+.spectrum-Card--quiet,
+.spectrum-Card--gallery {
+	--mod-card-content-margin-top: var(
+		--mod-card-content-margin-top-quiet,
+		var(--spectrum-spacing-100)
+	);
+	--mod-card-minimum-width: var(
+		--mod-card-minimum-width-quiet,
+		var(--spectrum-card-minimum-width)
+	);
 }
 
 .spectrum-Card {
@@ -679,9 +679,9 @@ governing permissions and limitations under the License.
 			var(--spectrum-card-corner-radius)
 		);
 		background-color: var(
-			--mod-card-preview-background-color, 
+			--mod-card-preview-background-color,
 			var(
-				--mod-card-background-color, 
+				--mod-card-background-color,
 				var(--spectrum-card-preview-background-color)
 			)
 		);
@@ -760,9 +760,9 @@ governing permissions and limitations under the License.
 		.spectrum-Card-preview {
 			transition: none;
 			background-color: var(
-				--mod-card-preview-background-color, 
+				--mod-card-preview-background-color,
 				var(
-					--mod-card-background-color, 
+					--mod-card-background-color,
 					var(--spectrum-card-preview-background-color)
 				)
 			);

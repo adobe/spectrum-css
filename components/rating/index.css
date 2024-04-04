@@ -246,9 +246,9 @@ governing permissions and limitations under the License.
     &:hover .spectrum-Rating-icon.is-currentValue::after {
       background-color: var(--highcontrast-rating-icon-color-key-focus);
     }
+  }
 
-    &--emphasized:hover .spectrum-Rating-icon.is-currentValue::after {
-      background-color: var(--highcontrast-rating-emphasized-icon-color-default);
-    }
+  .spectrum-Rating--emphasized:hover .spectrum-Rating-icon.is-currentValue::after {
+    background-color: var(--highcontrast-rating-emphasized-icon-color-default);
   }
 }

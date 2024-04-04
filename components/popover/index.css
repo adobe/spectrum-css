@@ -16,7 +16,8 @@ governing permissions and limitations under the License.
 .spectrum-Popover {
   /* Used in positioning popover for storybook */
   --flow-direction: 1;
-  [dir="rtl"] & {
+
+  &:dir(rtl) {
     --flow-direction: -1;
   }
 
@@ -190,10 +191,8 @@ governing permissions and limitations under the License.
   }
 
   /* RTL read, popover animates towards right ⮕ */
-  [dir="rtl"] & {
-    &.is-open {
-      transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
-    }
+  &.is-open:dir(rtl) {
+    transform: translateX(var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance)));
   }
 }
 
@@ -213,7 +212,7 @@ governing permissions and limitations under the License.
   }
 
   /* RTL read, popover animates towards left ⬅ */
-  [dir="rtl"] & {
+  &:dir(rtl) {
   &.is-open {
       transform: translateX(calc(-1 * var(--mod-popover-animation-distance, var(--spectrum-popover-animation-distance))));
     }
@@ -395,7 +394,7 @@ governing permissions and limitations under the License.
     .spectrum-Popover-tip {
       margin-inline-start: 100%;
 
-      [dir="rtl"] & {
+      &:dir(rtl) {
         transform: none;
         /* flip tip to point left ◁ */
         transform: scaleX(-1);
@@ -413,7 +412,7 @@ governing permissions and limitations under the License.
       /* flip tip to point right ▷ */
       transform: scaleX(-1);
 
-      [dir="rtl"] & {
+      &:dir(rtl) {
         /* flip tip to point left ◁ */
         transform: scaleX(1);
       }

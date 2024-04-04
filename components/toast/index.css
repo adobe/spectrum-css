@@ -87,32 +87,32 @@ governing permissions and limitations under the License.
 
   background-color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
   color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
+}
 
-  &--negative {
-    background-color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
+.spectrum-Toast--negative {
+  background-color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
+  color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
+
+  .spectrum-Toast-closeButton:focus-visible:not(:active) {
     color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
-
-    .spectrum-Toast-closeButton:focus-visible:not(:active) {
-      color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
-    }
   }
+}
 
-  &--info {
-    background-color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
+.spectrum-Toast--info {
+  background-color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
+  color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
+
+  .spectrum-Toast-closeButton:focus-visible:not(:active) {
     color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
-
-    .spectrum-Toast-closeButton:focus-visible:not(:active) {
-      color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
-    }
   }
+}
 
-  &--positive {
-    background-color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
+.spectrum-Toast--positive {
+  background-color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
+  color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
+
+  .spectrum-Toast-closeButton:focus-visible:not(:active) {
     color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
-
-    .spectrum-Toast-closeButton:focus-visible:not(:active) {
-      color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
-    }
   }
 }
 
@@ -179,13 +179,10 @@ governing permissions and limitations under the License.
   padding-block-end: var(--mod-toast-spacing-block-end, var(--spectrum-toast-spacing-block-end));
 
   .spectrum-Button {
+    margin-inline-start: auto;
     margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
 
-    [dir="ltr"] & {
-      margin-inline-start: auto;
-    }
-
-    [dir="rtl"] & {
+    &:dir(rtl) {
       margin-inline-end: auto;
       margin-inline-end: var(--mod-toast-spacing-text-and-action-button-to-divider, var(--spectrum-toast-spacing-text-and-action-button-to-divider));
     }

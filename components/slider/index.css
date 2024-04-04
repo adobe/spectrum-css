@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
   /* TODO: placeholder value for sideLabel variant value width */
   --spectrum-slider-value-inline-size: 18px;
 
-	[dir="rtl"] &,
+	&:dir(rtl),
 	&:dir(rtl) {
 		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
@@ -350,7 +350,7 @@ governing permissions and limitations under the License.
 
     transform: translate(-50%, -50%);
 
-    [dir="rtl"] & {
+    &:dir(rtl) {
       transform: translate(50%, -50%);
     }
   }
