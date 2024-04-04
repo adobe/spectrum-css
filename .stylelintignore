@@ -1,11 +1,12 @@
+# Static utility assets
+tokens/custom-*/*.css
+generator
+
+# Compiled and generated files
+dist
+.storybook/storybook-static
 *-generated.css
 
-tokens/**/*.css
 node_modules/**/*.css
-
 plugins/*/expected/*
 plugins/*/fixtures/*
-dist/*
-
-components/*/dist/*
-components/*/node_modules/*

@@ -16,6 +16,13 @@
 		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
 		"scripts": ["{projectRoot}/stories/*.js"],
 		"docs": ["{projectRoot}/metadata/*.yml"],
+		"stylelint": [
+			"{workspaceRoot}/.stylelintignore",
+			"{workspaceRoot}/stylelint.config.js",
+			"{workspaceRoot}/plugins/stylelint-*/index.js"
+		],
+		"eslint": ["{workspaceRoot}/.eslintrc.js"],
+		"prettier": ["{workspaceRoot}/.prettierrc"],
 		"tools": [
 			"{projectRoot}/*.json",
 			"{workspaceRoot}/postcss.config.js",
@@ -25,7 +32,13 @@
 	"targetDefaults": {
 		"clean": {
 			"cache": true,
-			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
+			"inputs": [
+				"{projectRoot}/dist/*.{css,json}",
+				"{projectRoot}/dist/**/*.{css,json}",
+				"{projectRoot}/dist/*.map",
+				"{projectRoot}/dist/**/*.map",
+				{ "externalDependencies": ["rimraf"] }
+			],
 			"outputs": [],
 			"executor": "nx:run-commands",
 			"options": {
@@ -50,13 +63,18 @@
 				{ "externalDependencies": ["postcss"] },
 				{ "env": "NODE_ENV" }
 			],
-			"outputs": ["{projectRoot}/dist", "{projectRoot}/metadata/mods.md"],
+			"outputs": [
+				"{projectRoot}/dist/*.{css,json}",
+				"{projectRoot}/dist/themes/*.css",
+				"{projectRoot}/dist/*.map",
+				"{projectRoot}/dist/themes/*.css.map",
+				"{projectRoot}/metadata/mods.md"
+			],
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
 					"node -e 'require(\"./tasks/component-builder.js\").default()'"
-				],
-				"parallel": false
+				]
 			}
 		},
 		"compare": {
@@ -90,35 +108,39 @@
 			}
 		},
 		"lint": {
-			"inputs": ["core", { "externalDependencies": ["stylelint", "eslint"] }],
-			"executor": "nx:run-commands",
-			"options": {
-				"commands": [
-					"stylelint {projectRoot}/*.css {projectRoot}/themes/*.css",
-					"eslint {projectRoot}/stories/*.js"
-				]
-			}
-		},
-		"format": {
-			"inputs": ["core", { "externalDependencies": ["stylelint", "eslint"] }],
-			"executor": "nx:run-commands",
-			"options": {
-				"commands": [
-					"stylelint --fix {projectRoot}/*.css {projectRoot}/themes/*.css",
-					"eslint --fix --no-error-on-unmatched-pattern {projectRoot}/stories/*.js"
-				]
-			}
-		},
-		"validate": {
+			"cache": true,
 			"inputs": [
-				"{workspaceRoot}/schemas/documentation.schema.json",
-				"docs",
-				{ "externalDependencies": ["pajv"] }
+				"core",
+				"scripts",
+				"stylelint",
+				"eslint",
+				"prettier",
+				{ "externalDependencies": ["stylelint", "eslint", "prettier"] }
 			],
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
-					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/documentation.schema.json -d \"{projectRoot}/metadata/*.yml\" || exit 0"
+					"stylelint --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables {projectRoot}/*.css {projectRoot}/**/*.css --ignore-pattern {projectRoot}/dist",
+					"eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives {projectRoot}/*.{js,json} {projectRoot}/**/*.{js,json} --ignore-pattern {projectRoot}/dist || exit 0"
+				]
+			}
+		},
+		"format": {
+			"cache": true,
+			"inputs": [
+				"core",
+				"scripts",
+				"stylelint",
+				"eslint",
+				"prettier",
+				{ "externalDependencies": ["stylelint", "eslint", "prettier"] }
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"stylelint --fix --cache --allow-empty-input --quiet {projectRoot}/*.css {projectRoot}/**/*.css",
+					"eslint --fix --cache --no-error-on-unmatched-pattern --quiet {projectRoot}/*.json {projectRoot}/stories/*.js || exit 0",
+					"prettier --write --cache --loglevel error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{yml,md} {projectRoot}/**/*.{yml,md}"
 				]
 			}
 		},
@@ -139,7 +161,6 @@
 					]
 				},
 				"plugins": {
-					"dependsOn": [],
 					"inputs": [
 						"{projectRoot}/index.js",
 						"{projectRoot}/test.js",
@@ -149,6 +170,19 @@
 					"cwd": "{projectRoot}",
 					"commands": ["ava test.js"]
 				}
+			}
+		},
+		"validate": {
+			"inputs": [
+				"{workspaceRoot}/schemas/documentation.schema.json",
+				"docs",
+				{ "externalDependencies": ["pajv"] }
+			],
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/documentation.schema.json -d \"{projectRoot}/metadata/*.yml\" || exit 0"
+				]
 			}
 		}
 	}

@@ -8,34 +8,34 @@ const plugin = require("./index");
 const { ruleName } = require("./index");
 
 async function compare(t, fixtureFilePath, options = {}) {
-    const code = readFile(`./fixtures/${fixtureFilePath}`);
-    return stylelint.lint({
-        code,
-        config: {
-            plugins: [plugin],
-            rules: {
-                [ruleName]: [true, options],
-            },
-        },
-    });
+	const code = readFile(`./fixtures/${fixtureFilePath}`);
+	return stylelint.lint({
+		code,
+		config: {
+			plugins: [plugin],
+			rules: {
+				[ruleName]: [true, options],
+			},
+		},
+	});
 }
 
 function readFile(filename) {
-    return fs.readFileSync(join(__dirname, filename), "utf8");
+	return fs.readFileSync(join(__dirname, filename), "utf8");
 }
 
 test("should throw an error for unknown custom properties", async (t) => {
-    const { results } = await compare(t, "unknown-prop.css");
+	const { results } = await compare(t, "unknown-prop.css");
 
-    const warnings = results[0].warnings;
+	const warnings = results[0].warnings;
 
-    t.is(warnings.length, 2);
-    t.is(warnings[0].rule, ruleName);
+	t.is(warnings.length, 2);
+	t.is(warnings[0].rule, ruleName);
 });
 
-test(`should not throw an error for unknown custom properties`, async (t) => {
-    const { results } = await compare(t, "passing.css");
+test("should not throw an error for unknown custom properties", async (t) => {
+	const { results } = await compare(t, "passing.css");
 
-    const warnings = results[0].warnings;
-    t.is(warnings.length, 0);
+	const warnings = results[0].warnings;
+	t.is(warnings.length, 0);
 });

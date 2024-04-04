@@ -1,17 +1,22 @@
+# Tooling config files
 **/.git
 **/.svn
 **/.hg
 **/node_modules
 
-components/*/dist
+# Static utility assets
 tokens/custom-*/*.css
-.storybook/storybook-static/**
-generator
-dist
-*.hbs
-
 site/includes/*.js
 
+# Compiled and generated files
+dist
+.storybook/storybook-static
+*-generated.css
+
+# Template files
+*.hbs
+
+# OS generated files
 .DS_Store*
 ehthumbs.db
 Icon?
