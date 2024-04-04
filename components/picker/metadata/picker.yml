@@ -7,7 +7,7 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/picker/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### x/x/2024 - Version 8.0.0
+      ### Version 8.0.0
       #### Spectrum 2 release
       Picker now uses Spectrum 2 tokens and specifications. A few notable changes:
       - The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.

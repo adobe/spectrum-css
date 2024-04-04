@@ -3,7 +3,7 @@ SpectrumSiteSlug: https://spectrum.adobe.com/page/button/
 sections:
   - name: Migration Guide
     description: |
-      ### 1/24/2024 - Version 7.0.0
+      ### Version 7.0.0
       #### Spectrum 2 migration also removed `.spectrum-ButtonGroup--sizeM`, `.spectrum-ButtonGroup--sizeL`, and `.spectrum-ButtonGroup--sizeXL`
         Since each of these classes were using the same tokens for spacing, these classes were removed.
   - name: Custom Properties API
