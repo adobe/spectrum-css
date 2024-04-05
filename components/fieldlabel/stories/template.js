@@ -29,20 +29,20 @@ export const Template = ({
 
 	let iconName = "Asterisk100";
 	switch (size) {
-	case "s":
-		iconName = "Asterisk100";
-		break;
-	case "l":
-		iconName = "Asterisk200";
-		break;
-	case "xl":
-		iconName = "Asterisk300";
-		break;
-	default:
-		iconName = "Asterisk100";
+		case "s":
+			iconName = "Asterisk100";
+			break;
+		case "l":
+			iconName = "Asterisk200";
+			break;
+		case "xl":
+			iconName = "Asterisk300";
+			break;
+		default:
+			iconName = "Asterisk100";
 	}
 
-	return html`
+	const labelMarkup = html`
 		<label
 			class=${classMap({
 				[rootClass]: true,
@@ -67,4 +67,18 @@ export const Template = ({
 				: ""}
 		</label>
 	`;
+
+	// When using the static color variants, wrap the label in an example element with a background color.
+	return !staticColor
+		? labelMarkup
+		: html`
+			<div
+				style=${styleMap({
+					padding: "1rem",
+					backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
+				})}
+			</div>
+				${labelMarkup}
+			</div>
+		`;
 };

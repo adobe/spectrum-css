@@ -34,7 +34,8 @@
 		"linter": "nx run-many --target lint --verbose --projects",
 		"new": "nx run @spectrum-css/generator:new",
 		"precommit": "lint-staged --allow-empty --config lint-staged.config.js",
-		"prepare": "husky install && run-p refresh:directory refresh:env && yarn refresh:config",
+		"prepare": "husky install && run-p refresh:directory refresh:env && run-p refresh:config refresh:auth",
+		"refresh:auth": "bash ./tasks/auth.sh || exit 0",
 		"refresh:config": "bash ./tasks/chromatic-config-creation.sh || exit 0",
 		"refresh:directory": "bash ./tasks/clean-up-after-migration.sh || exit 0",
 		"refresh:env": "bash ./tasks/copy-env-from-root.sh || exit 0",
@@ -112,6 +113,9 @@
 		"stylelint-use-logical": "^2.1.2",
 		"tar": "^7.0.1",
 		"yargs": "^17.7.2"
+	},
+	"optionalDependencies": {
+		"@a4u/s2-icon-global-set-open-source-processed": "latest"
 	},
 	"engines": {
 		"node": ">=20"

@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/ui-icons",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "The Spectrum CSS UI icons",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -15,15 +15,11 @@
   },
   "main": "dist/spectrum-css-icons.svg",
   "files": [
-    "dist/combined",
-    "dist/large",
-    "dist/medium",
-    "dist/spectrum-css-icons-large.svg",
-    "dist/spectrum-css-icons-medium.svg"
+    "dist/icons.json",
+    "dist/svgs"
   ],
   "devDependencies": {
-    "fast-glob": "^3.3.1",
-    "svgcombiner": "^1.0.1",
+    "fast-glob": "^3.3.2",
     "svgo": "^3.2.0",
     "svgstore": "^3.0.1"
   },
