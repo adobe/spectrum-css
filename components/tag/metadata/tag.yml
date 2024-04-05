@@ -8,21 +8,62 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/tag/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### Pluralized classes changed to singular
+      ### Version 9.0.0
+      #### Spectrum 2 release
+      Tag now uses Spectrum 2 tokens and specifications. Notable changes include:
+      - Small background and content color changes to match design spec.
+      - Use of medium font weight.
+      - Thumbnails can now be used in tags.
+      - New corner rounding, min/max width, and spacing tokens are used.
+      - Medium size is now the default, and the class `.spectrum-Tag--sizeM` has been removed.
+      - Borders have been made transparent for almost all variants, and therefore many mod custom properties related to borders have been removed.
+      - New and removed mods include:
+        - New mods:
+          - `--mod-tag-avatar-size`
+          - `--mod-tag-background-color-invalid`
+          - `--mod-tag-edge-to-clear-icon`
+          - `--mod-tag-label-line-height-cjk`
+          - `--mod-tag-label-to-clear-icon`
+          - `--mod-tag-maximum-width`
+          - `--mod-tag-minimum-width`
+          - `--mod-thumbnail-opacity-disabled`
+          - `--mod-tag-thumbnail-size`
+          - `--mod-tag-thumbnail-spacing-inline-end`
+        - Removed mods:
+          - `--mod-tag-border-color-active`
+          - `--mod-tag-border-color-emphasized-active`
+          - `--mod-tag-border-color-emphasized-focus`
+          - `--mod-tag-border-color-emphasized-hover`
+          - `--mod-tag-border-color-hover`
+          - `--mod-tag-border-color-invalid-active`
+          - `--mod-tag-border-color-invalid-focus`
+          - `--mod-tag-border-color-invalid-hover`
+          - `--mod-tag-border-color-invalid-selected`
+          - `--mod-tag-border-color-invalid-selected-active`
+          - `--mod-tag-border-color-invalid-selected-focus`
+          - `--mod-tag-border-color-invalid-selected-hover`
+          - `--mod-tag-border-color-selected-active`
+          - `--mod-tag-border-color-selected-focus`
+          - `--mod-tag-border-color-selected-hover`
+          - `--mod-tag-clear-button-spacing-inline-end`
+          - `--mod-tag-clear-button-spacing-inline-start`
+
+      ### Versions prior to 9.0.0
+      #### Pluralized classes changed to singular
       - `spectrum-Tags-itemLabel` is now `spectrum-Tag-itemLabel`
       - `spectrum-Tags-itemIcon` is now `spectrum-Tag-itemIcon`
 
       ### New emphasized variant has been added
-      ### A div wrapper is required for avatar
+      #### A div wrapper is required for avatar
       ```
       <div class="spectrum-Avatar spectrum-Avatar--size50">
         <img class="spectrum-Avatar-image" src="img/example-ava.jpg" alt="Avatar">
       </div>
       ```
-      ### Icon size changed to small
+      #### Icon size changed to small
       If you use an icon (`spectrum-Tag-itemIcon`) along with a tag, please replace `.spectrum-Icon--sizeXS` with `.spectrum-Icon--sizeS`.
 
-      ### Invalid
+      #### Invalid
       Docs updated to show invalid tags always including the alert icon. Invalid tags should have an icon to idenfity itself as invalid and not rely soley on the red background and border color.
 
 examples:
