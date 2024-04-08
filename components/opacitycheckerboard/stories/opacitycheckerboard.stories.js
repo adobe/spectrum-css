@@ -19,6 +19,16 @@ export default {
 			control: "text",
 			description: "Value for <code>--mod-opacity-checkerboard-position</code>. Accepts any valid CSS background-position property value.",
 		},
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-OpacityCheckerboard",
@@ -36,21 +46,41 @@ export default {
 		(Story, context) => html`<div style=${styleMap({ inlineSize: "100px", blockSize: "100px" })}>${Story(context)}</div>`
 	],
 };
-export const Default = Template.bind({});
-Default.args = {
-	customStyles: {
-		"inline-size": "100%",
-		"block-size": "100%"
-	}
-};
 
-export const CheckerboardPosition = Template.bind({});
+const CheckerboardDefault = (args) => html`
+	${window.isChromatic() ? html`
+			${Template({
+				...args,
+				customStyles: {
+					"inline-size": "100%",
+					"block-size": "100%"
+				}
+			})}
+			<br>
+			${Template({
+				...args,
+				customStyles: {
+					"inline-size": "100%",
+					"block-size": "100%"
+				},
+				size: "s",
+			})}
+	` : Template({
+			...args,
+			customStyles: {
+				"inline-size": "100%",
+				"block-size": "100%"
+			}
+		})}
+`;
+
+
+export const Default = CheckerboardDefault.bind({});
+Default.args = {};
+
+export const CheckerboardPosition = CheckerboardDefault.bind({});
 CheckerboardPosition.args = {
 	backgroundPosition: "center center",
-	customStyles: {
-		"inline-size": "100%",
-		"block-size": "100%"
-	}
 };
 CheckerboardPosition.parameters = {
 	docs: {
