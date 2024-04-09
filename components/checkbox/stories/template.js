@@ -1,10 +1,10 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import { useArgs } from "@storybook/client-api";
+import { useArgs } from "@storybook/preview-api";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -35,23 +35,24 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
 	let iconSize = "75";
 	switch (size) {
-		case "s":
-			iconSize = "50";
-			break;
-		case "l":
-			iconSize = "100";
-			break;
-		case "xl":
-			iconSize = "200";
-			break;
-		default:
-			iconSize = "75";
+	case "s":
+		iconSize = "50";
+		break;
+	case "l":
+		iconSize = "100";
+		break;
+	case "xl":
+		iconSize = "200";
+		break;
+	default:
+		iconSize = "75";
 	}
 
 	return html`
@@ -61,10 +62,10 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--emphasized`]: isEmphasized,
-				[`is-indeterminate`]: isIndeterminate,
-				[`is-disabled`]: isDisabled|| isReadOnly,
-				[`is-invalid`]: isInvalid,
-				[`is-readOnly`]: isReadOnly,
+				["is-indeterminate"]: isIndeterminate,
+				["is-disabled"]: isDisabled|| isReadOnly,
+				["is-invalid"]: isInvalid,
+				["is-readOnly"]: isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
