@@ -1,8 +1,5 @@
 .spectrum--light, .spectrum--lightest{
   --spectrum-overlay-opacity:0.4;
-  --spectrum-drop-shadow-color-rgb:0, 0, 0;
-  --spectrum-drop-shadow-color-opacity:0.15;
-  --spectrum-drop-shadow-color:rgba(var(--spectrum-drop-shadow-color-rgb), var(--spectrum-drop-shadow-color-opacity));
   --spectrum-background-layer-2-color:var(--spectrum-gray-25);
   --spectrum-neutral-subdued-background-color-default:var(--spectrum-gray-700);
   --spectrum-neutral-subdued-background-color-hover:var(--spectrum-gray-800);
@@ -71,6 +68,12 @@
   --spectrum-pink-background-color-default:var(--spectrum-pink-900);
   --spectrum-silver-background-color-default:var(--spectrum-silver-900);
   --spectrum-turquoise-background-color-default:var(--spectrum-turquoise-900);
+  --spectrum-drop-shadow-color-100-rgb:0, 0, 0;
+  --spectrum-drop-shadow-color-100-opacity:0.12;
+  --spectrum-drop-shadow-color-100:rgba(var(--spectrum-drop-shadow-color-100-rgb), var(--spectrum-drop-shadow-color-100-opacity));
+  --spectrum-drop-shadow-color-200-rgb:0, 0, 0;
+  --spectrum-drop-shadow-color-200-opacity:0.16;
+  --spectrum-drop-shadow-color-200:rgba(var(--spectrum-drop-shadow-color-200-rgb), var(--spectrum-drop-shadow-color-200-opacity));
   --spectrum-opacity-checkerboard-square-dark:var(--spectrum-gray-200);
   --spectrum-gray-25-rgb:255, 255, 255;
   --spectrum-gray-25:rgba(var(--spectrum-gray-25-rgb));
