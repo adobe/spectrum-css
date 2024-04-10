@@ -271,6 +271,22 @@ governing permissions and limitations under the License.
             perspective(var(--spectrum-component-size-minimum-perspective-down))
             translateZ(var(--spectrum-component-size-difference-down));
     }
+
+    .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + & {
+      /* Add down state without overriding translateX */
+      transform:
+        translateX(calc(100% + (var(--mod-border-width-200, var(--spectrum-border-width-200)) * 0.25)))
+        perspective(var(--spectrum-component-size-minimum-perspective-down))
+        translateZ(var(--spectrum-component-size-difference-down));
+
+      &:dir(rtl) {
+        /* Add down state without overriding translateX */
+        transform:
+          translateX(calc(-1 * (100% + (var(--mod-border-width-200, var(--spectrum-border-width-200)) * 0.25))))
+          perspective(var(--spectrum-component-size-minimum-perspective-down))
+          translateZ(var(--spectrum-component-size-difference-down));
+      }
+    }
   }
 
   /* :after is used for the track of the switch and the focus */
