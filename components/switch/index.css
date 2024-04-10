@@ -387,6 +387,8 @@ governing permissions and limitations under the License.
     --highcontrast-switch-label-color-focus: ButtonText;
     --highcontrast-switch-label-color-disabled: GrayText;
 
+    --highcontrast-switch-background-color: transparent;
+
     --highcontrast-switch-border-color-default: ButtonText;
     --highcontrast-switch-border-color-hover: Highlight;
     --highcontrast-switch-border-color-down: ButtonText;
@@ -398,7 +400,7 @@ governing permissions and limitations under the License.
     --highcontrast-switch-border-color-selected-down: Highlight;
     --highcontrast-switch-border-color-selected-focus: Highlight;
 
-    --highcontrast-switch-handle-background-color: ButtonFace;
+    --highcontrast-switch-handle-background-color: ButtonText;
     --highcontrast-switch-handle-background-color-disabled: GrayText;
     --highcontrast-switch-handle-background-color-selected-disabled: ButtonFace;
 
