@@ -42,7 +42,7 @@ export const Template = ({
 			iconName = "Asterisk100";
 	}
 
-	const labelMarkup = html`
+	return html`
 		<label
 			class=${classMap({
 				[rootClass]: true,
@@ -67,18 +67,4 @@ export const Template = ({
 				: ""}
 		</label>
 	`;
-
-	// When using the static color variants, wrap the label in an example element with a background color.
-	return !staticColor
-		? labelMarkup
-		: html`
-			<div
-				style=${styleMap({
-					padding: "1rem",
-					backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
-				})}
-			</div>
-				${labelMarkup}
-			</div>
-		`;
 };
