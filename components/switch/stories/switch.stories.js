@@ -1,5 +1,6 @@
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
-import { when } from "lit/directives/when.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template";
 
 export default {
@@ -71,41 +72,147 @@ export default {
 			type: "migrated",
 		},
 	},
+	decorators: [
+		(Story, context) => html`
+			<style>
+				.spectrum-Detail { display: inline-block; }
+				.spectrum-Typography > div {
+					border: 1px solid var(--spectrum-gray-200);
+					border-radius: 4px;
+					padding: 0 1em 1em;
+					/* Why seafoam? Because it separates it from the component styles. */
+					--mod-detail-font-color: var(--spectrum-seafoam-900);
+				}
+			</style>
+			<div
+				style=${styleMap({
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "flex-start",
+					gap: "1rem",
+					"--mod-detail-margin-end": ".3rem",
+				})}
+			>
+				${Story(context)}
+			</div>
+		`,
+	],
 };
 
-const SwitchStateStack = (args) => {
-	return html`
-		${Template({
-			...args,
-		})}
-		${when(window.isChromatic(), () =>
-			html`
-				${Template({
-					...args,
-					label: "Switch checked",
-					isChecked: true,
-				})}
-				${Template({
-					...args,
-					label: "Switch unchecked and disabled and so long it wraps to the next line",
-					isDisabled: true,
-					customStyles: {"max-width": "250px"}
-				})}
-				${Template({
-					...args,
-					label: "Switch checked and disabled",
-					isDisabled: true,
-					isChecked: true,
-				})}
-			`
-		)}
-	`;
-};
+const States = (args) => html`
+	${Typography({
+		semantics: "detail",
+		size: "s",
+		content: ["Default"],
+	})}
+	${Template(args)}
+	${Typography({
+		semantics: "detail",
+		size: "s",
+		content: ["Checked"],
+	})}
+	${Template({
+		...args,
+		isChecked: true,
+	})}
+	${Typography({
+		semantics: "detail",
+		size: "s",
+		content: ["Disabled"],
+	})}
+	${Template({
+		...args,
+		customStyles: {"max-width": "250px"},
+		isDisabled: true,
+		label: "Switch unchecked and disabled and so long it wraps to the next line",
+	})}
+	${Typography({
+		semantics: "detail",
+		size: "s",
+		content: ["Disabled + checked"],
+	})}
+	${Template({
+		...args,
+		isChecked: true,
+		isDisabled: true,
+	})}`;
 
-export const Default = SwitchStateStack.bind({});
+const Sizes = (args) =>
+	html` ${["s", "m", "l", "xl"].map((size) => {
+		return html`
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: [
+					{
+						s: "Small",
+						m: "Medium",
+						l: "Large",
+						xl: "Extra-large",
+					}[size],
+				],
+			})}
+			${Template({
+				...args,
+				size,
+			})}
+		`;
+	})}`;
+
+const Variants = (args) =>
+	html` ${window.isChromatic()
+		? html` <div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Default"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: ".3rem",
+						})}
+					>
+						${States(args)}
+					</div>
+				</div>
+				<div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Emphasized"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: ".3rem",
+						})}
+					>
+						${States({
+							...args,
+							isEmphasized: true,
+						})}
+					</div>
+				</div>
+				<div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Sizing"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: ".3rem",
+						})}
+					>
+						${Sizes(args)}
+					</div>
+				</div>`
+		: Template(args)}`;
+
+export const Default = Variants.bind({});
 Default.args = {};
-
-export const Emphasized = SwitchStateStack.bind({});
-Emphasized.args = {
-	isEmphasized: true
-};
