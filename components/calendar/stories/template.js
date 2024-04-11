@@ -5,7 +5,7 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import { action } from "@storybook/addon-actions";
-import { useArgs, useGlobals } from "@storybook/client-api";
+import { useArgs, useGlobals } from "@storybook/preview-api";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 

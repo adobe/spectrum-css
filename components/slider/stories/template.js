@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { useArgs, useGlobals } from "@storybook/client-api";
+import { useArgs, useGlobals } from "@storybook/preview-api";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 

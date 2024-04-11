@@ -1,9 +1,9 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { when } from "lit/directives/when.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
 
-import { useArgs } from "@storybook/client-api";
+import { useArgs } from "@storybook/preview-api";
 
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
