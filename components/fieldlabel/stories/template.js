@@ -29,17 +29,17 @@ export const Template = ({
 
 	let iconName = "Asterisk100";
 	switch (size) {
-		case "s":
-			iconName = "Asterisk100";
-			break;
-		case "l":
-			iconName = "Asterisk200";
-			break;
-		case "xl":
-			iconName = "Asterisk300";
-			break;
-		default:
-			iconName = "Asterisk100";
+	case "s":
+		iconName = "Asterisk100";
+		break;
+	case "l":
+		iconName = "Asterisk200";
+		break;
+	case "xl":
+		iconName = "Asterisk300";
+		break;
+	default:
+		iconName = "Asterisk100";
 	}
 
 	return html`
@@ -63,7 +63,7 @@ export const Template = ({
 						size,
 						iconName,
 						customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`],
-				  })
+					})
 				: ""}
 		</label>
 	`;
