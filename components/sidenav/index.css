@@ -72,6 +72,7 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-text-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-text-font-size: var(--spectrum-font-size-100);
   --spectrum-sidenav-text-line-height: var(--spectrum-line-height-100);
+
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
@@ -83,6 +84,7 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-top-level-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-top-level-font-size: var(--spectrum-font-size-100);
   --spectrum-sidenav-top-level-line-height: var(--spectrum-line-height-100);
+
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
@@ -94,6 +96,7 @@ governing permissions and limitations under the License.
   --spectrum-sidenav-header-font-style: var(--spectrum-default-font-style);
   --spectrum-sidenav-header-font-size: var(--spectrum-font-size-75);
   --spectrum-sidenav-header-line-height: var(--spectrum-line-height-100);
+
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
@@ -239,6 +242,7 @@ governing permissions and limitations under the License.
       font-weight: var(--mod-sidenav-text-font-weight, var(--spectrum-sidenav-text-font-weight));
       padding-inline-start: var(--mod-sidenav-start-to-content-second-level, var(--spectrum-sidenav-start-to-content-second-level));
     }
+
     .spectrum-SideNav .spectrum-SideNav-itemLink {
       padding-inline-start: var(--mod-sidenav-start-to-content-third-level, var(--spectrum-sidenav-start-to-content-third-level));
     }
@@ -250,6 +254,7 @@ governing permissions and limitations under the License.
     .spectrum-SideNav-itemLink {
       padding-inline-start: var(--mod-sidenav-start-to-content-with-icon-second-level, var(--spectrum-sidenav-start-to-content-with-icon-second-level));
     }
+
     .spectrum-SideNav .spectrum-SideNav-itemLink {
       padding-inline-start: var(--mod-sidenav-start-to-content-with-icon-third-level, var(--spectrum-sidenav-start-to-content-with-icon-third-level));
     }
@@ -263,6 +268,7 @@ governing permissions and limitations under the License.
       forced-color-adjust: preserve-parent-color; /* stylelint-disable-line declaration-property-value-no-unknown */
     }
   }
+
   .spectrum-SideNav-item {
     forced-color-adjust: none;
     --highcontrast-sidenav-content-disabled-color: GrayText;

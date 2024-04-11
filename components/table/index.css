@@ -59,6 +59,7 @@ governing permissions and limitations under the License.
   --spectrum-table-row-active-color: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-down-opacity));
   --spectrum-table-selected-row-background-color-focus: rgba(var(--spectrum-blue-900-rgb), var(--spectrum-table-selected-row-background-opacity-hover));
   --spectrum-table-selected-row-background-color-non-emphasized-focus: rgba(var(--spectrum-gray-700-rgb), var(--spectrum-table-selected-row-background-opacity-non-emphasized-hover));
+
   /* ----- */
 
   --spectrum-table-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
@@ -690,7 +691,7 @@ governing permissions and limitations under the License.
     --mod-table-border-color: var(--highcontrast-table-focus-indicator-color, transparent);
 
     .spectrum-Table-cell {
-      border-top-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
+      border-block-start-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
     }
   }
 }
@@ -747,12 +748,14 @@ governing permissions and limitations under the License.
 .spectrum-Table-checkboxCell {
   /* Prevent width expansion with 100% width table. */
   inline-size: var(--spectrum-checkbox-control-size-small);
+
   /* The calc subtraction is because the --spectrum-table-checkbox-to-text spacing value
      includes the inline start padding in the adjacent cell. */
   padding-inline-end: calc(
     var(--mod-table-checkbox-to-text, var(--spectrum-table-checkbox-to-text)) -
     var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content))
   );
+
   /* Block spacing must be moved to calculated margin on the checkbox element. */
   padding-block: 0;
 
@@ -837,7 +840,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Table-head {
     position: sticky;
-    top: 0;
+    inset-block-start: 0;
     z-index: 2;
   }
 
@@ -872,15 +875,21 @@ governing permissions and limitations under the License.
 /********* COLLAPSIBLE *********/
 .spectrum-Table-row--collapsible {
   --spectrum-table-row-tier: 0;
+
   &[data-tier="1"] { --spectrum-table-row-tier: 1; }
+
   &[data-tier="2"] { --spectrum-table-row-tier: 2; }
+
   &[data-tier="3"] { --spectrum-table-row-tier: 3; }
+
   &[data-tier="4"] { --spectrum-table-row-tier: 4; }
+
   &[data-tier="5"] { --spectrum-table-row-tier: 5; }
+
   &[data-tier="6"] { --spectrum-table-row-tier: 6; }
 
   .spectrum-Table-checkboxCell {
-    padding-inline-end: 0px;
+    padding-inline-end: 0;
   }
 
   &.is-last-tier {
@@ -892,6 +901,7 @@ governing permissions and limitations under the License.
         (var(--mod-table-collapsible-disclosure-inline-spacing, var(--spectrum-table-collapsible-disclosure-inline-spacing)) * 2)
       );
     }
+
     .spectrum-Table-disclosureIcon {
       display: none;
     }
@@ -936,7 +946,7 @@ governing permissions and limitations under the License.
 .spectrum-Table-disclosureIcon.spectrum-Table-disclosureIcon {
   --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-default, var(--spectrum-table-icon-color-default)));
 
-  height: var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size));
+  block-size: var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size));
   flex-basis: var(--mod-table-disclosure-icon-size, var(--spectrum-table-disclosure-icon-size));
   flex-grow: 0;
   flex-shrink: 0;
@@ -967,6 +977,7 @@ governing permissions and limitations under the License.
 
   &:focus {
     --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-focus, var(--spectrum-table-icon-color-focus)));
+
     &:hover {
       --spectrum-table-icon-color: var(--highcontrast-table-icon-color, var(--mod-table-icon-color-focus-hover, var(--spectrum-table-icon-color-focus-hover)));
     }
@@ -1001,7 +1012,7 @@ governing permissions and limitations under the License.
 
   /* Cell that does have a thumbnail has its padding moved within the "Inner" and "Content" alignment wrappers. */
   .spectrum-Table-cell--thumbnail {
-    padding-block: 0px;
+    padding-block: 0;
   }
 
   /* Sometimes the padding must be larger to match any extra space created by the disclosure icon (e.g. compact + large ). */

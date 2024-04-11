@@ -29,7 +29,6 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	size = "m",
-	id,
 }) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
 
@@ -54,7 +53,8 @@ export const TableRowItem = ({
 					<div class="spectrum-Table-thumbnailContent">${content}</div>
 				</div>
 			`;
-		} else {
+		}
+		else {
 			return content;
 		}
 	};
@@ -115,15 +115,7 @@ export const TableRowItem = ({
 									ariaControls,
 								})
 							)}
-							${
-								useThumbnail
-									? getCellContent(0)
-									: // prettier-ignore
-									  html`
-									  	<div
-											class="${rootClass}-collapseContent"
-										>${getCellContent(0)}</div>`
-							}
+							${useThumbnail ? getCellContent(0) : html`<div class="${rootClass}-collapseContent">${getCellContent(0)}</div>`}
 						</div>
 					</${cellTag}>`
 				: html`
@@ -170,7 +162,6 @@ export const Template = ({
 	rowItems = [],
 	customClasses = [],
 	id,
-	...globals
 }) => {
 	if (!rowItems || !rowItems.length) return html``;
 
@@ -295,7 +286,8 @@ export const Template = ({
 				${tableHtml}
 			</div>
 		`;
-	} else {
+	}
+	else {
 		return tableHtml;
 	}
 };

@@ -74,6 +74,7 @@ governing permissions and limitations under the License.
 
 .spectrum-IllustratedMessage-accent {
   color: var(--highcontrast-illustrated-message-illustration-accent-color, var(--mod-illustrated-message-illustration-accent-color, var(--spectrum-illustrated-message-illustration-accent-color)));
+
   /* Safari 16.3 🐛🛠️: Repeated stroke/fill properties is a workaround for a currentcolor bug that was fixed in 16.4. */
   fill: currentColor;
   stroke: currentColor;

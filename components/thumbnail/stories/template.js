@@ -27,7 +27,7 @@ export const Template = ({
 
 	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)}/>` : svg ? html`${svg}` : "";
 
-  const checkerboardContent = html`
+	const checkerboardContent = html`
 			<div class="${rootClass}-image-wrapper">
 			${imageURL
 				? html`<img
@@ -40,16 +40,16 @@ export const Template = ({
 		</div>
 	`;
 	
-  if (isLayer)
+	if (isLayer)
 		return html`
 			<div
 				class=${classMap({
 					[rootClass]: true,
 					[`${rootClass}--cover`]: isCover,
 					[`${rootClass}-layer`]: isLayer,
-					[`is-selected`]: isSelected,
-					[`is-disabled`]: isDisabled,
-					[`is-focused`]: isFocused,
+					["is-selected"]: isSelected,
+					["is-disabled"]: isDisabled,
+					["is-focused"]: isFocused,
 					[`${rootClass}--size${size}`]: typeof size !== "undefined",
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
@@ -71,9 +71,9 @@ export const Template = ({
 					[rootClass]: true,
 					[`${rootClass}--cover`]: isCover,
 					[`${rootClass}-layer`]: isLayer,
-					[`is-selected`]: isSelected,
-					[`is-disabled`]: isDisabled,
-					[`is-focused`]: isFocused,
+					["is-selected"]: isSelected,
+					["is-disabled"]: isDisabled,
+					["is-focused"]: isFocused,
 					[`${rootClass}--size${size}`]: typeof size !== "undefined",
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
@@ -99,9 +99,9 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--cover`]: isCover,
 				[`${rootClass}-layer`]: isLayer,
-				[`is-selected`]: isSelected,
-				[`is-disabled`]: isDisabled,
-				[`is-focused`]: isFocused,
+				["is-selected"]: isSelected,
+				["is-disabled"]: isDisabled,
+				["is-focused"]: isFocused,
 				[`${rootClass}--size${size}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -118,5 +118,5 @@ export const Template = ({
 				content: image ? [image] : [],
 			})}
 		</div>
-	`
+	`;
 };

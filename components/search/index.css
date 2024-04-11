@@ -322,14 +322,14 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Search-input {
-	/* Correct the odd appearance of input[type="search"] in Chrome and Safari.*/
+	/* Correct the odd appearance of input[type="search"] in Chrome and Safari. */
 	/* Without this, it gets overridden by .spectrum-Textfield */
-	-webkit-appearance: none;
+	appearance: none;
 
 	/* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
 	&::-webkit-search-cancel-button,
 	&::-webkit-search-decoration {
-		-webkit-appearance: none;
+		appearance: none;
 	}
 
 	block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));

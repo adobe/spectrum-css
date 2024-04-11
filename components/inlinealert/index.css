@@ -24,14 +24,14 @@ governing permissions and limitations under the License.
   --spectrum-inlinealert-content-font-size: var(--spectrum-body-size-s);
   --spectrum-inlinealert-content-line-height: var(--spectrum-body-line-height);
 
-  /* Size*/
+  /* Size */
   --spectrum-inlinealert-border-width: var(--spectrum-border-width-200);
   --spectrum-inlinealert-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-inlinealert-icon-size: var(--spectrum-workflow-icon-size-100);
   --spectrum-inlinealert-min-inline-size: var(--spectrum-in-line-alert-minimum-width);
   --spectrum-inlinealert-header-min-block-size: var(--spectrum-component-height-50);
 
-  /* Spacing*/
+  /* Spacing */
   --spectrum-inlinealert-spacing-edge-to-text: var(--spectrum-spacing-400);
   --spectrum-inlinealert-spacing-header-to-icon: var(--spectrum-spacing-400);
   --spectrum-inlinealert-spacing-header-content-button: var(--spectrum-spacing-300);
@@ -84,6 +84,7 @@ governing permissions and limitations under the License.
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   /* Minimum space between header and icon */
   gap: var(--mod-inlinealert-spacing-header-to-icon, var(--spectrum-inlinealert-spacing-header-to-icon));
 

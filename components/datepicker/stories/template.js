@@ -1,5 +1,5 @@
 import { html } from "lit";
-import { when } from 'lit-html/directives/when.js';
+import { when } from "lit-html/directives/when.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
@@ -15,7 +15,6 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-DatePicker",
 	id,
-	content,
 	customClasses = [],
 	isOpen = true,
 	isInvalid = false,
@@ -28,7 +27,7 @@ export const Template = ({
 	readOnly = false,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
 	const { express } = globals;
@@ -36,7 +35,8 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
@@ -102,7 +102,7 @@ export const Template = ({
 					iconType: "workflow",
 					iconName: "Calendar",
 					isQuiet,
-					customStyles:  readOnly ? {'display': 'none'} : "",
+					customStyles:  readOnly ? {"display": "none"} : "",
 					// @todo this is not added to the button on the website; need to make sure it's not a bug
 					// isOpen,
 					isInvalid,
@@ -125,7 +125,7 @@ export const Template = ({
 								top: "100%",
 								left: "0",
 								width: undefined,
-						  }
+						}
 						: {},
 					content: [Calendar(globals)],
 					// @todo this implementation of calendar does not currently display range selections or selected date on first load

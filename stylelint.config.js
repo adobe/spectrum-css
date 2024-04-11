@@ -1,5 +1,4 @@
 const { join } = require("path");
-const { propertiesOrder } = require('stylelint-config-clean-order')
 
 module.exports = {
 	allowEmptyInput: true,
@@ -64,14 +63,15 @@ module.exports = {
 		],
 		"max-nesting-depth": [3, { severity: "warning" }],
 		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system)/, {}],
-		"alpha-value-notation": "percentage",
+		/** @note use floats for opacity because it minifies better than percent */
+		"alpha-value-notation": ["percentage", { exceptProperties: ["opacity"] }],
 		"function-no-unknown": [
 			true,
 			{
 				severity: "warning",
 			},
 		],
-		/* @todo: would like to use "modern" eventually */
+		/** @todo: would like to use "modern" eventually */
 		"color-function-notation": null,
 		"import-notation": null,
 		"property-no-unknown": [
@@ -81,11 +81,16 @@ module.exports = {
 			},
 		],
 		"declaration-block-no-duplicate-custom-properties": true,
-		"declaration-property-value-no-unknown": true,
+		"declaration-property-value-no-unknown": [true, {
+			ignoreProperties: {
+				"color": ["CanvasText"]
+			},
+		}],
 		"value-keyword-case": [
 			"lower",
 			{
 				camelCaseSvgKeywords: true,
+				ignoreKeywords: ["Transparent", "Text"]
 			},
 		],
 		"selector-not-notation": "complex",

@@ -17,10 +17,13 @@ governing permissions and limitations under the License.
   --spectrum-progressbar-corner-radius: var(--spectrum-corner-radius-100);
 
   --spectrum-progressbar-fill-size-indeterminate: 70%;
+
   /* --spectrum-global-dimension-static-size-2400 */
   --spectrum-progressbar-size-2400: 192px;
+
   /* --spectrum-global-dimension-static-size-2500 */
   --spectrum-progressbar-size-2500: 200px;
+
   /* --spectrum-global-dimension-static-size-2800 */
   --spectrum-progressbar-size-2800: 224px;
 
@@ -239,6 +242,7 @@ governing permissions and limitations under the License.
   animation: indeterminate-loop-ltr
              var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
 }
+
 .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill:dir(rtl) {
   animation: indeterminate-loop-rtl
              var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
@@ -250,6 +254,7 @@ governing permissions and limitations under the License.
       calc(-1 * var(--mod-progressbar-fill-size-indeterminate, var(--spectrum-progressbar-fill-size-indeterminate)))
     );
   }
+
   to {
     transform: translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default)));
   }
@@ -259,6 +264,7 @@ governing permissions and limitations under the License.
   from {
     transform: translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-fill-size-indeterminate)));
   }
+
   to {
     transform: translate(calc(-1 * var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default))));
   }

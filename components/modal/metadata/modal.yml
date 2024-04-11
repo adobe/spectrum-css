@@ -8,7 +8,8 @@ examples:
   - id: modal
     name: Modal
     demoClassName: spectrum-CSSExample-example--overlay
-    description: This is a base component used by other components, and should not be used on its own like the following example. If you need a full-featured modal for
+    description:
+      This is a base component used by other components, and should not be used on its own like the following example. If you need a full-featured modal for
       displaying content, take a look at the <a href="https://opensource.adobe.com/spectrum-css/dialog.html">Dialog</a> component instead.
     markup: |
       <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">

@@ -422,7 +422,7 @@ governing permissions and limitations under the License.
   inline-size: 100%;
   block-size: 100%;
 
-  opacity: .0001;
+  opacity: 0.0001;
   z-index: 1;
 
   cursor: pointer;
@@ -532,7 +532,6 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Checkbox {
-
   .spectrum-Checkbox-checkmark,
   .spectrum-Checkbox-partialCheckmark {
     color: var(--highcontrast-checkbox-background-color-default, var(--mod-checkbox-checkmark-color, var(--spectrum-checkbox-checkmark-color)));
@@ -581,6 +580,7 @@ governing permissions and limitations under the License.
       }
     }
   }
+
   .spectrum-Checkbox {
     /* Label Text */
     --highcontrast-checkbox-content-color-default: CanvasText;

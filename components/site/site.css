@@ -181,7 +181,7 @@ governing permissions and limitations under the License.
 	overflow: hidden;
 	display: none;
 
-	opacity: 0%;
+	opacity: 0;
 	background-color: var(--spectrum-transparent-black-300);
 }
 
@@ -221,7 +221,7 @@ governing permissions and limitations under the License.
 	}
 
 	.spectrum-Site-overlay {
-		opacity: 0%;
+		opacity: 0;
 
 		/* Exit animations */
 		transition: opacity var(--spectrum-animation-duration-200) ease-out 0ms;
@@ -229,7 +229,7 @@ governing permissions and limitations under the License.
 		&.is-open {
 			pointer-events: auto;
 			display: block;
-			opacity: 100%;
+			opacity: 1;
 
 			/* Entry animations */
 			transition: opacity var(--spectrum-animation-duration-200) ease-in 0ms;

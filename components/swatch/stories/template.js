@@ -4,6 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase } from "lodash-es";
 
+import { useArgs } from "@storybook/client-api";
 
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
@@ -20,6 +21,8 @@ export const Template = ({
 	customStyles = {},
 	id,
 }) => {
+	const [, updateArgs] = useArgs();
+
 	return html`
 		<div
 			class=${classMap({
@@ -29,8 +32,8 @@ export const Template = ({
 				[`${rootClass}--rounding${capitalize(
 							lowerCase(rounding)
 						)}`]: typeof rounding !== "undefined" && rounding !== "regular",
-				'is-selected': !isDisabled && isSelected,
-				'is-disabled': isDisabled,
+				"is-selected": !isDisabled && isSelected,
+				"is-disabled": isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			?disabled=${isDisabled}
@@ -45,7 +48,7 @@ export const Template = ({
 			}}
 			@focusout=${() => updateArgs({ isSelected: false })}
 			@keypress=${(e) => {
-				if (e.key !== 'Enter' && e.key !== ' ') return;
+				if (e.key !== "Enter" && e.key !== " ") return;
 				updateArgs({ isSelected: !isSelected });
 			}}
 		>

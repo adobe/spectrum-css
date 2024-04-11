@@ -247,7 +247,7 @@ governing permissions and limitations under the License.
                             - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
     /* ensure clear button is correct color */
-    color: currentcolor;
+    color: currentColor;
 
     /* width of fill neutralized to ensure correct inline spacing within tag */
     --mod-clear-button-width: fit-content;

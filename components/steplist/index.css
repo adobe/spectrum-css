@@ -77,6 +77,7 @@ governing permissions and limitations under the License.
     /* Show cursor on hit zone when clickable */
     cursor: pointer;
   }
+
   .spectrum-Steplist-item {
     /* Step Focused */
     &:focus,
@@ -143,6 +144,7 @@ governing permissions and limitations under the License.
     .spectrum-Steplist-label {
       color: var(--mod-steplist-complete-label-text-color, var(--spectrum-steplist-complete-label-text-color));
     }
+
     .spectrum-Steplist-marker {
       background-color: var(--highcontrast-steplist-complete-marker-background-color, var(--mod-steplist-complete-marker-background-color, var(--spectrum-steplist-complete-marker-background-color)));
       border: none;
@@ -162,9 +164,11 @@ governing permissions and limitations under the License.
     *:focus {
       outline: none;
     }
+
     .spectrum-Steplist-label {
       color: var(--mod-steplist-current-label-text-color, var(--spectrum-steplist-current-label-text-color));
     }
+
     .spectrum-Steplist-marker {
       border: none;
       background-color: var(--highcontrast-steplist-current-marker-color, var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color)));
@@ -174,7 +178,7 @@ governing permissions and limitations under the License.
   &.is-complete,
   &.is-selected {
     .spectrum-Steplist-segment {
-      border-bottom-color: var(--mod-steplist-complete-segment-border-block-end-color, var(--spectrum-steplist-complete-segment-border-block-end-color));
+      border-block-end-color: var(--mod-steplist-complete-segment-border-block-end-color, var(--spectrum-steplist-complete-segment-border-block-end-color));
     }
   }
 }
@@ -249,7 +253,7 @@ governing permissions and limitations under the License.
   border-block-end-width: var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height));
   border-block-end-style: dashed;
 
-  border-bottom-color: var(--mod-steplist-incomplete-segment-border-block-end-color, var(--spectrum-steplist-incomplete-segment-border-block-end-color));
+  border-block-end-color: var(--mod-steplist-incomplete-segment-border-block-end-color, var(--spectrum-steplist-incomplete-segment-border-block-end-color));
 }
 
 /* First step overrides */
@@ -330,6 +334,7 @@ governing permissions and limitations under the License.
     --highcontrast-steplist-current-marker-color: Highlight;
     --highcontrast-steplist-current-marker-color-key-focus: Highlight;
   }
+
   @supports (color: SelectedItem) {
     .spectrum-Steplist {
       --highcontrast-steplist-current-marker-color: SelectedItem;

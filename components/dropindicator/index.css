@@ -30,8 +30,8 @@ governing permissions and limitations under the License.
     var(--mod-dropindicator-border-color, var(--spectrum-dropindicator-border-color))
   );
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     inline-size: var(
@@ -64,16 +64,16 @@ governing permissions and limitations under the License.
     var(--spectrum-dropindicator-circle-size)
   );
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     inset-block-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
   }
 
-  &:before {
+  &::before {
     inset-inline-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
   }
 
-  &:after {
+  &::after {
     inset-inline-end: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
   }
 }
@@ -89,16 +89,16 @@ governing permissions and limitations under the License.
   );
   margin-inline: 0;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     inset-inline-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
   }
 
-  &:before {
+  &::before {
     inset-block-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
   }
 
-  &:after {
+  &::after {
     inset-block-end: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
   }
 }

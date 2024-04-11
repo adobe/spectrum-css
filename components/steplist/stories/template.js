@@ -1,7 +1,7 @@
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { repeat } from "lit/directives/repeat.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { repeat } from "lit/directives/repeat.js";
 
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 
@@ -18,7 +18,6 @@ export const SteplistItem = ({
 	isComplete = false,
 	isSelected = false,
 	id,
-	...globals
 }) => {
 	const labelMarkup =
 		!isSmall && !withTooltip && typeof label !== "undefined"
@@ -33,7 +32,7 @@ export const SteplistItem = ({
 						isOpen: false,
 						placement: "top",
 						showOnHover: true,
-				  })
+				})
 				: nothing}
 			<span class="${rootClass}-marker"></span>
 		</span>
@@ -64,7 +63,7 @@ export const SteplistItem = ({
 						role="link"
 						aria-label=${isSmall ? ifDefined(label) : nothing}
 						tabindex=${isSelected ? "1" : "-1"}
-				  >
+				>
 						${labelMarkup} ${markerContainer}
 				  </a>`
 				: html` ${labelMarkup} ${markerContainer}`}
@@ -81,7 +80,6 @@ export const Template = ({
 	withTooltip = false,
 	id,
 	customClasses = [],
-	...globals
 }) => {
 	if (!items || !items.length) return html``;
 

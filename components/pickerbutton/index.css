@@ -229,12 +229,14 @@ governing permissions and limitations under the License.
 				var(--spectrum-picker-button-background-color-key-focus)
 			);
 		}
+
 		.spectrum-PickerButton-label {
 			color: var(
 				--mod-picker-button-font-color-key-focus,
 				var(--spectrum-picker-button-font-color-key-focus)
 			);
 		}
+
 		.spectrum-PickerButton-icon {
 			color: var(
 				--mod-picker-button-icon-color-key-focus,
@@ -417,9 +419,11 @@ governing permissions and limitations under the License.
 		--mod-picker-button-height,
 		var(--spectrum-picker-button-height)
 	);
+
 	.spectrum-PickerButton-label {
 		display: none;
 	}
+
 	.spectrum-PickerButton-fill {
 		padding: 0;
 	}

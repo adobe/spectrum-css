@@ -129,6 +129,7 @@ governing permissions and limitations under the License.
     border-color: var(--mod-progress-circle-track-border-color-over-background,
                       var(--spectrum-progress-circle-track-border-color-over-background));
   }
+
   .spectrum-ProgressCircle-fill {
     border-color: var(--highcontrast-progress-circle-fill-border-color-over-background,
                       var(--mod-progress-circle-fill-border-color-over-background,
@@ -169,6 +170,7 @@ governing permissions and limitations under the License.
       spectrum-fills-rotate;
     transform-origin: center;
   }
+
   .spectrum-ProgressCircle-fillSubMask1 {
     will-change: transform;
     transform: translateZ(0);

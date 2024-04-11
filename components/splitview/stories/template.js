@@ -27,8 +27,8 @@ export const Template = ({
 		collapsible && collapsibleStart
 			? "start"
 			: collapsible && collapsibleEnd
-			? "end"
-			: "";
+				? "end"
+				: "";
 
 	return html`
 		<div

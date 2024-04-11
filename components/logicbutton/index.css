@@ -73,7 +73,8 @@ governing permissions and limitations under the License.
 .spectrum-LogicButton {
   &:focus-visible {
     outline: none;
-    &:after {
+
+    &::after {
       box-shadow: 0 0 0 var(--mod-logic-button-focus-indicator-width, var(--spectrum-logic-button-focus-indicator-width))
       var(--highcontrast-logic-button-focus-indicator-color, var(--mod-logic-button-focus-indicator-color, var(--spectrum-logic-button-focus-indicator-color)));
     }
@@ -111,6 +112,7 @@ governing permissions and limitations under the License.
 
   .spectrum-LogicButton {
     forced-color-adjust: none;
+
     &:disabled,
     &.is-disabled {
       --highcontrast-logic-button-and-background-color: ButtonFace;

@@ -378,7 +378,7 @@ governing permissions and limitations under the License.
   overflow: hidden;
   opacity: 0.000001; /* stylelint-disable-line number-max-precision */
   cursor: default;
-  -webkit-appearance: none;
+  appearance: none;
   border: 0;
   pointer-events: none;
 

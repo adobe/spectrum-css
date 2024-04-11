@@ -36,7 +36,7 @@ export const Template = ({
 					iconName: "Alert",
 					size,
 					customClasses: [`${rootClass}-validationIcon`],
-				  })
+				})
 				: ""}
 			<div class=${`${rootClass}-text`}>${text}</div>
 		</div>

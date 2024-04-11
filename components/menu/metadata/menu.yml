@@ -1344,7 +1344,8 @@ examples:
       </div>
   - id: tray-submenus
     name: Tray submenus
-    description: "When a menu is displayed within a tray, a submenu will replace the tray content when the parent menu item is selected. A submenu displays a back button (labeled by the title of the parent item) at the top of the tray to return the user to the previous level of the menu.
+    description:
+      "When a menu is displayed within a tray, a submenu will replace the tray content when the parent menu item is selected. A submenu displays a back button (labeled by the title of the parent item) at the top of the tray to return the user to the previous level of the menu.
       The back arrow size scale used with the various menu sizes are small: `200`, medium: `300`, large: `400`, and extra large: `500`."
     markup: |
       <div class="spectrum-Tray-wrapper spectrum-CSSExample-dialog" style="background: rgba(0,0,0,0.4);">

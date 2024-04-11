@@ -51,12 +51,12 @@ export const Template = ({
 						class="${rootClass}-gradient"
 						role="presentation"
 						style=${when(gradientStops && gradientStops.length, () => styleMap({
-							background: `linear-gradient(to ${vertical ? "bottom" : "right"}, ${gradientStops.join(', ')})`,
+							background: `linear-gradient(to ${vertical ? "bottom" : "right"}, ${gradientStops.join(", ")})`,
 						}))}
 					></div>`
 				)
 			],
-			role: 'presentation',
+			role: "presentation",
 		})}
 		${ColorHandle({
 			...globals,

@@ -9,15 +9,15 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import "../index.css";
 
 export const Template = ({
-  rootClass = "spectrum-SideNav",
-  customClasses = [],
-  variant,
-  hasIcon,
-  iconName,
-  items = [],
-  ...globals
+	rootClass = "spectrum-SideNav",
+	customClasses = [],
+	variant,
+	hasIcon,
+	iconName,
+	items = [],
+	...globals
 }) => {
-  return html`
+	return html`
     <nav>
       <ul class=${classMap({
         [rootClass]: true,
@@ -61,41 +61,42 @@ export const Template = ({
                       iconName,
                       ...globals,
                       ...item
-                    })
+                    });
                   })}
                 </ul>
               </li>
-            `
-          } else {
+            `;
+          }
+ else {
             return SideNavItem({
               hasIcon,
               iconName,
               ...globals,
               ...item
-            })
+            });
           }
         })}
       </ul>
   </nav>
   `;
-}
+};
 
 export const SideNavItem = ({
-  rootClass = "spectrum-SideNav",
-  variant,
-  levelThreeItems,
-  link,
-  title,
-  isSelected,
-  isDisabled,
-  id,
-  hasIcon,
-  iconName,
-  customClasses = [],
-  ...globals
+	rootClass = "spectrum-SideNav",
+	variant,
+	levelThreeItems,
+	link,
+	title,
+	isSelected,
+	isDisabled,
+	id,
+	hasIcon,
+	iconName,
+	customClasses = [],
+	...globals
 }) => {
-  const displayIcon = hasIcon & variant === "multiLevel" ? false : true
-  return html`
+	const displayIcon = hasIcon & variant === "multiLevel" ? false : true;
+	return html`
     <li id=${id} class=${classMap({
       [`${rootClass}-item`]: true,
       "is-selected": isSelected,
@@ -117,10 +118,10 @@ export const SideNavItem = ({
             return SideNavItem({
               ...globals,
               ...item
-            })
+            });
           })}
         </ul>`
       )}
     </li>
-  `
-}
+  `;
+};

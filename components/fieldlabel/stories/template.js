@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -27,17 +27,17 @@ export const Template = ({
 
 	let iconName = "Asterisk100";
 	switch (size) {
-		case "s":
-			iconName = "Asterisk100";
-			break;
-		case "l":
-			iconName = "Asterisk200";
-			break;
-		case "xl":
-			iconName = "Asterisk300";
-			break;
-		default:
-			iconName = "Asterisk100";
+	case "s":
+		iconName = "Asterisk100";
+		break;
+	case "l":
+		iconName = "Asterisk200";
+		break;
+	case "xl":
+		iconName = "Asterisk300";
+		break;
+	default:
+		iconName = "Asterisk100";
 	}
 
 	return html`
@@ -56,11 +56,11 @@ export const Template = ({
 		>
 			${label}${isRequired
 				? Icon({
-						...globals,
-						size,
-						iconName,
-						customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`],
-				  })
+					...globals,
+					size,
+					iconName,
+					customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`],
+				})
 				: ""}
 		</label>
 	`;

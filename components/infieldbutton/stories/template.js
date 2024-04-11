@@ -7,27 +7,28 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import "../index.css";
 
 export const Template = ({
-  rootClass = "spectrum-InfieldButton",
-  customClasses = [],
-  size = "m",
-  position,
-  isQuiet,
-  iconName = "Add",
-  isDisabled,
-  isInvalid,
-  tabIndex = 0,
-  ...globals
+	rootClass = "spectrum-InfieldButton",
+	customClasses = [],
+	size = "m",
+	position,
+	isQuiet,
+	iconName = "Add",
+	isDisabled,
+	isInvalid,
+	tabIndex = 0,
+	...globals
 }) => {
-  const { express } = globals;
+	const { express } = globals;
 
-  try {
-    if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-    else import(/* webpackPrefetch: true */ "../themes/express.css");
-  } catch (e) {
-    console.warn(e);
-  }
+	try {
+		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
+		else import(/* webpackPrefetch: true */ "../themes/express.css");
+	}
+	catch (e) {
+		console.warn(e);
+	}
 
-  return html`
+	return html`
     <button
       class=${classMap({
         [rootClass]: true,
@@ -52,4 +53,4 @@ export const Template = ({
     </div>
   </button>
   `;
-}
+};

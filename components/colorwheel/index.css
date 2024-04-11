@@ -27,6 +27,7 @@ governing permissions and limitations under the License.
     --highcontrast-colorwheel-border-color-disabled: GrayText;
     --highcontrast-colorwheel-fill-color-disabled: Canvas;
   }
+
   .spectrum-ColorWheel {
     forced-color-adjust: none;
   }
@@ -107,7 +108,7 @@ governing permissions and limitations under the License.
   }
 }
 
-/* a clip-path set border-width wider than than spectrum-colorwheel-wheel to create the appreance of a border*/
+/* a clip-path set border-width wider than than spectrum-colorwheel-wheel to create the appreance of a border */
 .spectrum-ColorWheel-border {
   position: relative;
   background-color: var(--mod-colorwheel-border-color, var(--spectrum-colorwheel-border-color));

@@ -243,7 +243,8 @@ examples:
 
   - id: actionbar-sticky
     name: Sticky
-    description: This example shows how the sticky Action bar looks within a scrollable element. Please see <a href="https://spectrum.adobe.com/page/action-bar/#Usage-guidelines">usage section of the guidelines</a>
+    description:
+      This example shows how the sticky Action bar looks within a scrollable element. Please see <a href="https://spectrum.adobe.com/page/action-bar/#Usage-guidelines">usage section of the guidelines</a>
       for more information about using Action bar with underlying content.
     markup: |
       <section style="position: relative; max-height: 8em; overflow: auto;">

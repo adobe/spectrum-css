@@ -28,7 +28,7 @@ governing permissions and limitations under the License.
   gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing-regular));
 }
 
-/* Compact*/
+/* Compact */
 .spectrum-SwatchGroup--compact {
   gap: var(--mod-swatchgroup-spacing-compact, var(--spectrum-swatchgroup-spacing-compact));
 }

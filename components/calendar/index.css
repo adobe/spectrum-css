@@ -13,7 +13,6 @@ governing permissions and limitations under the License.
 .spectrum-Calendar {
   --spectrum-calendar-day-width: var(--spectrum-component-height-100);
   --spectrum-calendar-day-height: var(--spectrum-component-height-100);
-  --spectrum-calendar-button-gap: var(--spectrum-component-edge-to-visual-only-50);
   --spectrum-calendar-border-radius-reset: 0;
   --spectrum-calendar-border-width-reset: 0;
   --spectrum-calendar-day-border-size: var(--spectrum-border-width-200);
@@ -141,14 +140,12 @@ governing permissions and limitations under the License.
 
 .spectrum-Calendar-table {
   table-layout: fixed;
-  /*width: 100%;*/
+
+  /* width: 100%; */
 
   border-collapse: collapse;
   border-spacing: 0;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -159,12 +156,12 @@ governing permissions and limitations under the License.
   block-size: var(--mod-calendar-day-height, var(--spectrum-calendar-day-height));
   inline-size: var(--mod-calendar-day-width, var(--spectrum-calendar-day-width));
   padding: var(--mod-calendar-day-padding, var(--spectrum-calendar-day-padding));
+
   &:focus {
     outline: 0;
   }
 }
 
-/* stylelint-disable max-nesting-depth */
 .spectrum-Calendar-date {
   /* This is fun, but we need to trick the table so it doesn't size itself in a weird way */
   position: absolute;
@@ -312,21 +309,18 @@ governing permissions and limitations under the License.
 
 .spectrum-Calendar-date {
   color: var(--highcontrast-calendar-day-title-text-color, var(--mod-calendar-day-title-text-color, var(--spectrum-calendar-day-title-text-color)));
+
   &:hover {
     color: var(--highcontrast-calendar-day-text-color-hover, var(--mod-calendar-day-text-color-hover, var(--spectrum-calendar-day-text-color-hover)));
 
-    &:not(.is-selection-end):not(.is-selection-start) {
+    &:not(.is-selection-end, .is-selection-start) {
       &::before {
         background: var(--highcontrast-calendar-day-background-color-hover, var(--mod-calendar-day-background-color-hover, var(--spectrum-calendar-day-background-color-hover)));
       }
     }
 
-    &.is-selected {
-      &:not(.is-selection-end):not(.is-selection-start) {
-        &::before {
-          background: var(--highcontrast-calendar-day-background-color-selected-hover, var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover)));
-        }
-      }
+    &.is-selected:not(.is-selection-end, .is-selection-start)::before {
+      background: var(--highcontrast-calendar-day-background-color-selected-hover, var(--mod-calendar-day-background-color-selected-hover, var(--spectrum-calendar-day-background-color-selected-hover)));
     }
 
     &.is-range-selection {
@@ -357,12 +351,8 @@ governing permissions and limitations under the License.
       border-color: var(--highcontrast-calendar-day-today-border-color, var(--mod-calendar-day-today-border-color, var(--spectrum-calendar-day-today-border-color)));
     }
 
-    &:hover {
-      &.is-selected:not(.is-range-selection) {
-        &::before {
-          background: var(--highcontrast-calendar-day-today-background-color-selected-hover, var(--mod-calendar-day-today-background-color-selected-hover, var(--spectrum-calendar-day-today-background-color-selected-hover)));
-        }
-      }
+    &.is-selected:not(.is-range-selection):hover::before {
+      background: var(--highcontrast-calendar-day-today-background-color-selected-hover, var(--mod-calendar-day-today-background-color-selected-hover, var(--spectrum-calendar-day-today-background-color-selected-hover)));
     }
 
     &.is-disabled {
@@ -427,7 +417,6 @@ governing permissions and limitations under the License.
     }
   }
 }
-/* stylelint-enable max-nesting-depth */
 
 @media (forced-colors: active) {
   .spectrum-Calendar-prevMonth,
@@ -435,9 +424,11 @@ governing permissions and limitations under the License.
     --highcontrast-calendar-button-icon-color-disabled: GrayText;
     --highcontrast-calendar-button-icon-color: ButtonText;
   }
+
   .spectrum-Calendar-date {
-    color: CanvasText; /* stylelint-disable-line declaration-property-value-no-unknown */
+    color: CanvasText;
     forced-color-adjust: none;
+
     --highcontrast-calendar-day-background-color-cap-selected: Highlight;
     --highcontrast-calendar-day-background-color-down: ButtonFace;
     --highcontrast-calendar-day-background-color-hover: Transparent;
@@ -457,15 +448,18 @@ governing permissions and limitations under the License.
     --highcontrast-calendar-day-today-border-color: ButtonText;
     --highcontrast-calendar-day-today-text-color-disabled: GrayText;
     --highcontrast-calendar-day-today-text-color: ButtonText;
+
     &.is-range-selection {
       &.is-today {
         color: HighlightText;
       }
+
       &.is-selection-start::after,
       &.is-selection-end::after {
         content: none;
       }
     }
+
     &.is-disabled {
       &.is-range-selection {
         background: Highlight;
