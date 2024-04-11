@@ -57,29 +57,25 @@ export default {
 	},
 };
 
-const CloseButton = ({
-	staticColor,
-	...args
-}) => {
+const CloseButton = (args) => {
 	return html`
 		<div
 			style=${ifDefined(styleMap({
 				padding: "1rem",
-				backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
 			}))}
 		>
-			${Template({...args, staticColor})}
+			${Template(args)}
 			${when(window.isChromatic(), () =>
 				html`
 					${Template({
-							...args,
-							isDisabled: true,
-						})}
+						...args,
+						isDisabled: true,
+					})}
 					${html`
 						<div
 							style=${ifDefined(styleMap({
 								padding: "1rem",
-								backgroundColor: "rgb(15, 121, 125)"
+								background: "var(--spectrum-examples-gradient-static-white)"
 							}))}
 						>
 							${Template({
@@ -97,7 +93,7 @@ const CloseButton = ({
 						<div
 							style=${ifDefined(styleMap({
 								padding: "1rem",
-								backgroundColor: "rgb(181, 209, 211)"
+								background: "var(--spectrum-examples-gradient-static-black)"
 							}))}
 						>
 							${Template({
