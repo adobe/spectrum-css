@@ -1,4 +1,3 @@
-import { html } from "lit";
 import { Template } from "./template";
 
 export default {
@@ -111,21 +110,14 @@ WrappingAndRequired.args = {
 	style: { width: "200px" },
 };
 
-export const StaticColors = (args) => html`
-	${Template({
-		...args,
-		label: "The black static color class used on a label marked as required",
-		staticColor: "black",
-	})}
-	${Template({
-		...args,
-		label: "The white static color class used on a label marked as required",
-		staticColor: "white",
-	})}
-`;
+export const StaticWhite = Template.bind({});
+StaticWhite.args = {
+	label: "The static white class used on a label marked as required",
+	staticColor: "white",
+};
 
-StaticColors.storyName = "Static colors";
-StaticColors.args = {
-	alignment: "left",
-	isRequired: true,
+export const StaticBlack = Template.bind({});
+StaticBlack.args = {
+	label: "The static black class used on a label marked as required",
+	staticColor: "black",
 };

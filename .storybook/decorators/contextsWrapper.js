@@ -50,12 +50,13 @@ export const withContextWrapper = makeDecorator({
 				container.classList.toggle(`spectrum--${s}`, s === scale);
 			}
 
+			// Change background color when demonstrating static color options.
 			if (args.staticColor === "black") {
-				container.style.backgroundColor = "rgb(181, 209, 211)";
+				container.style.background = "var(--spectrum-examples-gradient-static-black)";
 			} else if (args.staticColor === "white") {
-				 container.style.backgroundColor = "rgb(15, 121, 125)";
+				 container.style.background = "var(--spectrum-examples-gradient-static-white)";
 			} else {
-				container.style.removeProperty("background-color");
+				container.style.removeProperty("background");
 			}
 		}, [color, scale, isExpress, args.staticColor]);
 
