@@ -1535,10 +1535,9 @@
 	--spectrum-font-size: var(--spectrum-font-size-100);
 	--spectrum-cjk-font-family-stack: adobe-clean-han-japanese, var(--spectrum-cjk-font-family), sans-serif;
 	--spectrum-cjk-font: var(--spectrum-code-font-family-stack);
-	--spectrum-docs-static-white-background-color-rgb: 15, 121, 125;
-	--spectrum-docs-static-white-background-color: rgba(var(--spectrum-docs-static-white-background-color-rgb));
-	--spectrum-docs-static-black-background-color-rgb: 181, 209, 211;
-	--spectrum-docs-static-black-background-color: rgba(var(--spectrum-docs-static-black-background-color-rgb));
+	--spectrum-examples-gradient: linear-gradient(45deg, var(--spectrum-magenta-1500), var(--spectrum-blue-1500));
+	--spectrum-examples-gradient-static-black: linear-gradient(45deg, rgb(255, 241, 246), rgb(238, 245, 255));
+	--spectrum-examples-gradient-static-white: linear-gradient(45deg, rgb(64, 0, 22), rgb(14, 24, 67));
 	--spectrum-coach-indicator-ring-static-white-color: var(--spectrum-white);
 	--spectrum-corner-radius-1000: 9999px;
 }
