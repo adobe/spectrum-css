@@ -1,6 +1,7 @@
 import { Template } from "./template";
 
 import { html } from "lit";
+import { when } from "lit/directives/when.js";
 
 export default {
 	title: "Components/Typography",
@@ -30,6 +31,17 @@ export default {
 			options: ["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"],
 			control: "select",
 		},
+		weight: {
+			name: "Weight",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["heavy", "light"],
+			control: "inline-radio",
+			if: { arg: "semantics", eq: "heading"}
+		},
 		variant: {
 			name: "Variant",
 			type: { name: "string" },
@@ -53,11 +65,11 @@ export default {
 		},
 		content: { table: { disable: true } },
 	},
-	// More on args: https://storybook.js.org/docs/web-components/writing-stories/args
 	args: {
 		rootClass: "spectrum-Typography",
 		size: "m",
 		glyph: "sans-serif",
+		semantics: "body",
 	},
 	parameters: {
 		actions: {
@@ -69,24 +81,37 @@ export default {
 	},
 };
 
+const Sizes = (args) => {
+	let supportedSizes = ["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"];
+	if (args.semantics === "body") supportedSizes = ["xs", "s", "m", "l", "xl", "xxl", "xxxl"];
+	else if (args.semantics === "detail") supportedSizes = ["s", "m", "l", "xl"];
+	else if (args.semantics === "code") supportedSizes = ["xs", "s", "m", "l", "xl"];
+
+	return html`${window.isChromatic() ? html`
+		<div class="spectrum-Typography">
+			${supportedSizes.reverse().map((size) => {
+			return html`${Template({
+				...args,
+				content: [`${size} - ${args.content.join("")}`],
+				size,
+			})}${when(["detail", "code"].includes(args.semantics), () => html`<br/>`)}`;
+			})}
+		</div>` : Template(args)}`;
+};
+
 export const Default = Template.bind({});
 Default.args = {
 	content: [
 		{
 			semantics: "heading",
-			rootClass: "spectrum-Heading",
 			content: ["Aliquet Mauris Eu"],
 		},
 		{
-			semantics: "body",
-			rootClass: "spectrum-Body",
 			content: [
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 			],
 		},
 		{
-			semantics: "body",
-			rootClass: "spectrum-Body",
 			content: [
 				"Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 			],
@@ -94,47 +119,13 @@ Default.args = {
 	],
 };
 
-export const Heading = (args) => {
-	return html`${["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"]
-		.reverse()
-		.map((size) => {
-			return Template({
-				...args,
-				content: [size, " - ", ...args.content, html`<br />`],
-				size,
-			});
-		})}`;
-};
-
-Heading.argTypes = {
-	weight: {
-		name: "Weight",
-		type: { name: "string" },
-		table: {
-			type: { summary: "string" },
-			category: "Component",
-		},
-		options: ["heavy", "light"],
-		control: "inline-radio",
-	},
-	size: { table: { disable: true } },
-};
+export const Heading = Sizes.bind({});
 Heading.args = {
 	semantics: "heading",
 	content: ["Aliquet Mauris Eu"],
 };
 
-export const Body = (args) => {
-	return html`${["xs", "s", "m", "l", "xl", "xxl", "xxxl"]
-		.reverse()
-		.map((size) => {
-			return Template({
-				...args,
-				content: [size, " - ", ...args.content, html`<br />`],
-				size,
-			});
-		})}`;
-};
+export const Body = Sizes.bind({});
 Body.argTypes = {
 	size: {
 		name: "Size",
@@ -149,15 +140,7 @@ Body.args = {
 	],
 };
 
-export const Detail = (args) => {
-	return html`${["s", "m", "l", "xl"].reverse().map((size) => {
-		return Template({
-			...args,
-			content: [size, " - ", ...args.content, html`<br />`],
-			size,
-		});
-	})}`;
-};
+export const Detail = Sizes.bind({});
 Detail.argTypes = {
 	size: {
 		name: "Size",
@@ -165,14 +148,8 @@ Detail.argTypes = {
 		table: { disable: true },
 	},
 	weight: {
-		name: "Weight",
-		type: { name: "string" },
-		table: {
-			type: { summary: "string" },
-			category: "Component",
-		},
 		options: ["light"],
-		control: "radio",
+		if: { arg: "semantics", eq: "detail"},
 	},
 };
 Detail.args = {
@@ -180,15 +157,7 @@ Detail.args = {
 	content: ["Aliquet Mauris Eu"],
 };
 
-export const Code = (args) => {
-	return html`${["xs", "s", "m", "l", "xl"].reverse().map((size) => {
-		return Template({
-			...args,
-			content: [size, " - ", ...args.content, html`<br />`],
-			size,
-		});
-	})}`;
-};
+export const Code = Sizes.bind({});
 Code.argTypes = {
 	size: {
 		name: "Size",
