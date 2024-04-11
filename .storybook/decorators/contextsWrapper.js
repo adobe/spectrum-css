@@ -8,7 +8,7 @@ export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { args, argTypes, id, viewMode } = context;
+		const { args, argTypes, viewMode, id } = context;
 
 		const getDefaultValue = (type) => {
 			if (!type) return null;
@@ -32,14 +32,6 @@ export const withContextWrapper = makeDecorator({
 
 		useEffect(() => {
 			let containers = [document.body];
-			const container =
-				viewMode === "docs" &&
-				!window.isChromatic() &&
-				!id.includes("foundation")
-					? document.querySelector("#root-inner") ?? document.body
-					: document.body;
-
-			container.classList.toggle("spectrum", true);
 
 			const roots = [
 				...document.querySelectorAll(`#story--${id}`),
@@ -62,16 +54,15 @@ export const withContextWrapper = makeDecorator({
 					container.classList.toggle(`spectrum--${s}`, s === scale);
 				}
 
-
-				container.style.removeProperty("background");
-				const hasStaticElement = container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--staticBlack, .${args.rootClass}--overBackground`);
-				if (hasStaticElement) {
-					if (container.querySelector(`.${args.rootClass}--staticBlack`)) {
-						container.style.background = "rgb(181, 209, 211)";
-					}
-					else if (container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--overBackground`)) {
-						container.style.background = "rgb(15, 121, 125)";
-					}
+				// Change background color when demonstrating static color options.
+				if (args.staticColor === "black") {
+					container.style.background = "var(--spectrum-examples-gradient-static-black)";
+				}
+				else if (args.staticColor === "white") {
+					container.style.background = "var(--spectrum-examples-gradient-static-white)";
+				}
+				else {
+					container.style.removeProperty("background");
 				}
 			}
 		}, [color, scale, isExpress, args.staticColor]);
