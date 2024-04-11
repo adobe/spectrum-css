@@ -31,11 +31,11 @@ export const withContextWrapper = makeDecorator({
 
 		const staticColorSettings = {
 			"black": {
-				background: "var(--spectrum-docs-static-black-background-color)",
+				background: "var(--spectrum-examples-gradient-static-black)",
 				color: "light"
 			},
 			"white": {
-				background: "var(--spectrum-docs-static-white-background-color)",
+				background: "var(--spectrum-examples-gradient-static-white)",
 				color: "dark"
 			},
 		};
