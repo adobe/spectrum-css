@@ -3,7 +3,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { when } from 'lit/directives/when.js';
+import { when } from "lit/directives/when.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
@@ -25,23 +25,11 @@ export const Picker = ({
 	isInvalid = false,
 	isLoading = false,
 	isDisabled = false,
-	isReadOnly = false,
 	customClasses = [],
 	customStyles = {},
-	content = [],
-	iconName,
-	id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
+	const [, updateArgs] = useArgs();
 
 	return html`
 	<button
@@ -51,10 +39,10 @@ export const Picker = ({
 					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--sideLabel`]: labelPosition != "top",
-				[`is-invalid`]: isInvalid,
-				[`is-open`]: isOpen,
-				[`is-loading`]: isLoading,
-				[`is-keyboardFocused`]: isKeyboardFocused,
+				["is-invalid"]: isInvalid,
+				["is-open"]: isOpen,
+				["is-loading"]: isLoading,
+				["is-keyboardFocused"]: isKeyboardFocused,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			?disabled=${isDisabled}
@@ -70,7 +58,7 @@ export const Picker = ({
 				? ProgressCircle({
 						size: "s",
 						isIndeterminate: true,
-				  })
+				})
 				: ""}
 			${isInvalid && !isLoading
 				? Icon({
@@ -78,7 +66,7 @@ export const Picker = ({
 						size,
 						iconName: "Alert",
 						customClasses: [`${rootClass}-validationIcon`],
-				  })
+				})
 				: ""}
 			${Icon({
 				...globals,
@@ -89,7 +77,7 @@ export const Picker = ({
 			})}
 		</button>
 	`;
-}
+};
 
 export const Template = ({
 	rootClass = "spectrum-Picker",
@@ -107,7 +95,6 @@ export const Template = ({
 	isReadOnly = false,
 	withSwitch = false,
 	fieldLabelStyle = {},
-	fieldLabelText,
 	customClasses = [],
 	customStyles = {},
 	customPopoverStyles = {},
@@ -115,28 +102,19 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	let iconName = "ChevronDown200";
 	switch (size) {
-		case "s":
-			iconName = "ChevronDown75";
-			break;
-		case "m":
-			iconName = "ChevronDown100";
-			break;
-		case "xl":
-			iconName = "ChevronDown300";
-			break;
-		default:
-			iconName = "ChevronDown200";
+	case "s":
+		iconName = "ChevronDown75";
+		break;
+	case "m":
+		iconName = "ChevronDown100";
+		break;
+	case "xl":
+		iconName = "ChevronDown300";
+		break;
+	default:
+		iconName = "ChevronDown200";
 	}
 
 	return html`
@@ -212,7 +190,7 @@ export const Template = ({
 				customStyles: customPopoverStyles,
 				content,
 		}))}
-		${when (withSwitch, () => Switch({
+		${when(withSwitch, () => Switch({
 				...globals,
 				size,
 				label: "Toggle switch",

@@ -118,3 +118,8 @@ select:focus,
 	border-color: rgb(2, 101, 220) !important;
 	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
 }
+
+/* Hides the empty divider bar at the start of the top navigation */
+div[role="main"] span:first-child:empty {
+	display: none;
+}

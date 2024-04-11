@@ -28,17 +28,7 @@ export const Template = ({
 	customClasses = [],
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
-
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
+	const [, updateArgs] = useArgs();
 
 	let iconSize = "75";
 	switch (size) {

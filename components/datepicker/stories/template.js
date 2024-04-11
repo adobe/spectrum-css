@@ -15,7 +15,6 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-DatePicker",
 	id,
-	content,
 	customClasses = [],
 	isOpen = true,
 	isInvalid = false,
@@ -28,18 +27,8 @@ export const Template = ({
 	readOnly = false,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
-
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 
 	return html`
 		<div

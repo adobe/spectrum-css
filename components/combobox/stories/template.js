@@ -15,7 +15,6 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Combobox",
 	id,
-	content,
 	customClasses = [],
 	size = "m",
 	isOpen = true,
@@ -28,21 +27,10 @@ export const Template = ({
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
-	isRequired = false,
-	readOnly = false,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
-
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
 
 	return html`
 		${showFieldLabel ?
@@ -99,7 +87,7 @@ export const Template = ({
 					...globals,
 					customClasses: [
 						`${rootClass}-button`,
-						... isInvalid ? ['is-invalid'] : [],
+						... isInvalid ? ["is-invalid"] : [],
 					],
 					size,
 					iconType: "ui",
@@ -126,7 +114,7 @@ export const Template = ({
 								top: "100%",
 								left: "0",
 								width: "100%",
-						  }
+						}
 						: {},
 					content: [
 						Menu({

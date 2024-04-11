@@ -15,21 +15,12 @@ export const Template = ({
 	max = 5,
 	value = 0,
 	isReadOnly = false,
-	isFocused = false,
 	isDisabled = true,
 	isEmphasized = false,
 	customClasses = [],
 	id,
 	...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
-		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	const [, updateArgs] = useArgs();
 
 	return html`

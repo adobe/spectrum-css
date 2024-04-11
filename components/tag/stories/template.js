@@ -27,15 +27,6 @@ export const Template = ({
 	customStyles = {},
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	if(isInvalid) {
 		iconName = 'Alert'
 	}

@@ -26,15 +26,6 @@ export const Template = ({
 	popoverOffset,
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
-		console.warn(e);
-	}
-
 	if (!content || !content.length) {
 		console.warn("Tabs: content required");
 		return html``;

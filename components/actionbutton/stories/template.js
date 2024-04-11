@@ -36,18 +36,7 @@ export const Template = ({
 	id,
 	testId,
 	role,
-	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 		<button
 			aria-label=${ifDefined(label)}
@@ -77,7 +66,6 @@ export const Template = ({
 		>
 			${when(hasPopup, () =>
 				Icon({
-					...globals,
 					size,
 					iconName: "CornerTriangle",
 					setName: "ui",
@@ -86,7 +74,6 @@ export const Template = ({
 			)}
 			${when(iconName, () =>
 				Icon({
-					...globals,
 					size,
 					iconName,
 					setName: iconSet,
