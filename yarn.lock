@@ -4430,7 +4430,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actionbutton@workspace:components/actionbutton"
   dependencies:
-    "@spectrum-css/commons": "npm:^9.1.4-next.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/icon": ">=4"
     "@spectrum-css/tokens": ^14.0.0-next.3
@@ -4571,7 +4571,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/button@workspace:components/button"
   dependencies:
-    "@spectrum-css/commons": "npm:^9.1.4-next.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/icon": ">=6"
     "@spectrum-css/progresscircle": ">=2"
@@ -4651,7 +4651,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/closebutton@workspace:components/closebutton"
   dependencies:
-    "@spectrum-css/commons": "npm:^9.1.4-next.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/icon": ">=4"
     "@spectrum-css/tokens": ^14.0.0-next.3
@@ -4755,7 +4755,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/commons@npm:^9.1.4-next.0, @spectrum-css/commons@workspace:components/commons":
+"@spectrum-css/commons@npm:^9.1.4-next.1, @spectrum-css/commons@workspace:components/commons":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/commons@workspace:components/commons"
   peerDependencies:
@@ -4968,7 +4968,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/logicbutton@workspace:components/logicbutton"
   dependencies:
-    "@spectrum-css/commons": "npm:^9.1.4-next.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/tokens": ^14.0.0-next.3
   languageName: unknown
@@ -5011,7 +5011,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/modal@workspace:components/modal"
   dependencies:
-    "@spectrum-css/commons": "npm:^9.1.4-next.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/tokens": ^14.0.0-next.3
   languageName: unknown
@@ -5050,7 +5050,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/picker@workspace:components/picker"
   dependencies:
-    "@spectrum-css/commons": "npm:^9.1.4-next.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/helptext": ">=4"
     "@spectrum-css/icon": ">=4"
@@ -5081,7 +5081,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/popover@workspace:components/popover"
   dependencies:
-    "@spectrum-css/commons": "npm:^9.1.4-next.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/alertdialog": ">=1"
     "@spectrum-css/dialog": ">=9"
@@ -5104,7 +5104,7 @@ __metadata:
     "@babel/core": "npm:^7.24.4"
     "@chromaui/addon-visual-tests": "npm:^1.0.0"
     "@etchteam/storybook-addon-status": "npm:^4.2.4"
-    "@spectrum-css/tokens": "npm:^14.0.0-next.3"
+    "@spectrum-css/tokens": "npm:^14.0.0-next.6"
     "@spectrum-css/ui-icons": "npm:^1.1.2"
     "@storybook/addon-a11y": "npm:^8.0.6"
     "@storybook/addon-actions": "npm:^8.0.6"
@@ -5424,14 +5424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/tokens@npm:^14.0.0-next.3":
-  version: 14.0.0
-  resolution: "@spectrum-css/tokens@npm:14.0.0"
-  checksum: 10c0/59b9a49c01b939035af8e73fec914f18cbd18eae17815fb8ce93a0c2e3b1217d21a20f8b697a6ac7b4d135d5dca52f985d6556e5f9c2a9f52698ce0c5dd401b1
-  languageName: node
-  linkType: hard
-
-"@spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens@npm:^14.0.0-next.6, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
@@ -5456,7 +5449,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tooltip@workspace:components/tooltip"
   dependencies:
-    "@spectrum-css/commons": "npm:^9.1.4-next.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/icon": ">=4"
     "@spectrum-css/tokens": ^14.0.0-next.3
@@ -5517,7 +5510,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/underlay@workspace:components/underlay"
   dependencies:
-    "@spectrum-css/commons": "npm:^9.1.4-next.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/tokens": ^14.0.0-next.3
   languageName: unknown
