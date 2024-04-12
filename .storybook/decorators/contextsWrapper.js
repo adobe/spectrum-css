@@ -58,14 +58,14 @@ export const withContextWrapper = makeDecorator({
 				if (args.staticColor === "black") {
 					container.style.background = "var(--spectrum-examples-gradient-static-black)";
 				}
-				else if (args.staticColor === "white") {
+				else if (args.staticColor === "white" || args.isStaticWhite === true) {
 					container.style.background = "var(--spectrum-examples-gradient-static-white)";
 				}
 				else {
 					container.style.removeProperty("background");
 				}
 			}
-		}, [color, scale, isExpress, args.staticColor]);
+		}, [color, scale, isExpress, args.staticColor, args.isStaticWhite]);
 
 		return StoryFn(context);
 	},
