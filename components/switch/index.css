@@ -207,21 +207,40 @@ governing permissions and limitations under the License.
 
   background-color: var(--highcontrast-switch-background-color, var(--mod-switch-background-color, var(--spectrum-switch-background-color)));
   border-radius: var(--mod-switch-border-radius, var(--spectrum-switch-border-radius));
+  border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
+  border-color: var(--highcontrast-switch-border-color-default, var(--mod-switch-border-color-default, var(--spectrum-switch-border-color-default)));
+  border-style: solid;
+
+  .spectrum-Switch:hover & {
+    border-color: var(--highcontrast-switch-border-color-hover, var(--mod-switch-border-color-hover, var(--spectrum-switch-border-color-hover)));
+  }
+
+  .spectrum-Switch:active & {
+    border-color: var(--highcontrast-switch-border-color-down, var(--mod-switch-border-color-down, var(--spectrum-switch-border-color-down)));
+  }
+
+  .spectrum-Switch-input:focus-visible + & {
+    border-color: var(--highcontrast-switch-border-color-focus, var(--mod-switch-border-color-focus, var(--spectrum-switch-border-color-focus)));
+  }
 
   .spectrum-Switch-input:checked + & {
     background-color: var(--highcontrast-switch-background-color-selected-default, var(--mod-switch-background-color-selected-default, var(--spectrum-switch-background-color-selected-default)));
+    border-color: var(--highcontrast-switch-border-color-selected-default, var(--mod-switch-border-color-selected-default, var(--spectrum-switch-border-color-selected-default)));
 
     .spectrum-Switch:hover & {
       background-color: var(--highcontrast-switch-background-color-selected-hover, var(--mod-switch-background-color-selected-hover, var(--spectrum-switch-background-color-selected-hover)));
+      border-color: var(--highcontrast-switch-border-color-selected-hover, var(--mod-switch-border-color-selected-hover, var(--spectrum-switch-border-color-selected-hover)));
     }
 
     .spectrum-Switch:active & {
       background-color: var(--highcontrast-switch-background-color-selected-down, var(--mod-switch-background-color-selected-down, var(--spectrum-switch-background-color-selected-down)));
+      border-color: var(--highcontrast-switch-border-color-selected-down, var(--mod-switch-border-color-selected-down, var(--spectrum-switch-border-color-selected-down)));
     }
   }
 
   .spectrum-Switch-input:checked:focus-visible + & {
     background-color: var(--highcontrast-switch-background-color-selected-focus, var(--mod-switch-background-color-selected-focus, var(--spectrum-switch-background-color-selected-focus)));
+    border-color: var(--highcontrast-switch-border-color-selected-focus, var(--mod-switch-border-color-selected-focus, var(--spectrum-switch-border-color-selected-focus)));
   }
 
   /* :before is used for the handle of the switch */
@@ -239,8 +258,8 @@ governing permissions and limitations under the License.
     inline-size: var(--mod-switch-handle-size, var(--spectrum-switch-handle-size));
     block-size: var(--mod-switch-handle-size, var(--spectrum-switch-handle-size));
 
-    inset-block-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-handle-size, var(--spectrum-switch-handle-size))) * 0.5);
-    inset-inline-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-handle-size, var(--spectrum-switch-handle-size))) * 0.5);
+    inset-block-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-handle-size, var(--spectrum-switch-handle-size))) * 0.25);
+    inset-inline-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-handle-size, var(--spectrum-switch-handle-size))) * 0.25);
 
     background-color: var(--highcontrast-switch-handle-background-color, var(--mod-switch-handle-background-color, var(--spectrum-switch-handle-background-color)));
     border-radius: var(--mod-switch-border-radius, var(--spectrum-switch-border-radius));
@@ -252,8 +271,16 @@ governing permissions and limitations under the License.
       inline-size: var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size));
       block-size: var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size));
 
-      inset-block-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size))) * 0.5);
-      inset-inline-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size))) * 0.5);
+      inset-block-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height))
+        - var(--mod-border-width-200, var(--spectrum-border-width-200))
+        - var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size)))
+        * 0.25
+      );
+      inset-inline-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height))
+        - var(--mod-border-width-200, var(--spectrum-border-width-200))
+        - var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size)))
+        * 0.25
+      );
 
       transform: translateX(calc(100% + (var(--mod-border-width-200, var(--spectrum-border-width-200)) * 0.25)));
 
@@ -292,9 +319,6 @@ governing permissions and limitations under the License.
   /* :after is used for the track of the switch and the focus */
   &::after {
     border-radius: var(--mod-switch-border-radius, var(--spectrum-switch-border-radius));
-    border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
-    border-color: var(--highcontrast-switch-border-color-default, var(--mod-switch-border-color-default, var(--spectrum-switch-border-color-default)));
-    border-style: solid;
     content: "";
     display: block;
     position: absolute;
@@ -308,36 +332,10 @@ governing permissions and limitations under the License.
       outline-offset var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
       border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
 
-    .spectrum-Switch:hover & {
-      border-color: var(--highcontrast-switch-border-color-hover, var(--mod-switch-border-color-hover, var(--spectrum-switch-border-color-hover)));
-    }
-
-    .spectrum-Switch:active & {
-      border-color: var(--highcontrast-switch-border-color-down, var(--mod-switch-border-color-down, var(--spectrum-switch-border-color-down)));
-    }
-
     .spectrum-Switch-input:focus-visible + & {
-      border-color: var(--highcontrast-switch-border-color-focus, var(--mod-switch-border-color-focus, var(--spectrum-switch-border-color-focus)));
-
       outline: var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness)) solid
                var(--highcontrast-switch-focus-indicator-color, var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color)));
-      outline-offset: var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
-    }
-
-    .spectrum-Switch-input:checked + & {
-      border-color: var(--highcontrast-switch-border-color-selected-default, var(--mod-switch-border-color-selected-default, var(--spectrum-switch-border-color-selected-default)));
-
-      .spectrum-Switch:hover & {
-        border-color: var(--highcontrast-switch-border-color-selected-hover, var(--mod-switch-border-color-selected-hover, var(--spectrum-switch-border-color-selected-hover)));
-      }
-
-      .spectrum-Switch:active & {
-        border-color: var(--highcontrast-switch-border-color-selected-down, var(--mod-switch-border-color-selected-down, var(--spectrum-switch-border-color-selected-down)));
-      }
-    }
-
-    .spectrum-Switch-input:checked:focus-visible + & {
-      border-color: var(--highcontrast-switch-border-color-selected-focus, var(--mod-switch-border-color-selected-focus, var(--spectrum-switch-border-color-selected-focus)));
+      outline-offset: calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) + var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness)));
     }
   }
 }
@@ -349,13 +347,10 @@ governing permissions and limitations under the License.
 .spectrum-Switch:hover .spectrum-Switch-input[disabled] {
   & + .spectrum-Switch-switch {
     background-color: var(--highcontrast-switch-background-color-disabled, var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled)));
+    border-color: var(--highcontrast-switch-border-color-disabled, var(--mod-switch-border-color-disabled, var(--spectrum-switch-border-color-disabled)));
 
     &::before {
       background-color: var(--highcontrast-switch-handle-background-color-disabled, var(--mod-switch-handle-background-color-disabled, var(--spectrum-switch-handle-background-color-disabled)));
-    }
-
-    &::after {
-      border-color: var(--highcontrast-switch-border-color-disabled, var(--mod-switch-border-color-disabled, var(--spectrum-switch-border-color-disabled)));
     }
   }
 

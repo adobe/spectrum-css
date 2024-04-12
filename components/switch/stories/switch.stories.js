@@ -200,7 +200,7 @@ const Variants = (args) =>
 					${Typography({
 						semantics: "detail",
 						size: "l",
-						content: ["Sizing"],
+						content: ["Sizing - Unchecked"],
 					})}
 					<div
 						style=${styleMap({
@@ -210,6 +210,25 @@ const Variants = (args) =>
 						})}
 					>
 						${Sizes(args)}
+					</div>
+				</div>
+				<div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Sizing - Checked"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: ".3rem",
+						})}
+					>
+						${Sizes({
+							...args,
+							isChecked: true,
+						})}
 					</div>
 				</div>`
 		: Template(args)}`;
