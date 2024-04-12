@@ -18,6 +18,7 @@
     "build:site": "nx build docs",
     "builder": "nx run-many --target build --projects",
     "cache:clean": "nx reset",
+    "changeset": "changeset",
     "ci": "cross-env NODE_ENV=production yarn builder tag:component,ui-icons",
     "ci:storybook": "cross-env NODE_ENV=production nx run storybook:build:ci",
     "clean": "yarn cleaner tag:component",
@@ -37,15 +38,15 @@
     "refresh:config": "test -n $BASH_VERSION && bash ./tasks/chromatic-config-creation.sh || exit 0",
     "refresh:directory": "test -n $BASH_VERSION && bash ./tasks/clean-up-after-migration.sh || exit 0",
     "refresh:env": "test -n $BASH_VERSION && bash ./tasks/copy-env-from-root.sh || exit 0",
-    "release": "cross-env NODE_ENV=production nx reset && yarn builder tag:component,ui-icons && lerna publish --no-private",
-    "release:beta-from-package": "yarn release from-package --conventional-prerelease --preid beta --pre-dist-tag beta",
+    "release": "cross-env NODE_ENV=production nx reset && yarn builder tag:component,ui-icons && changeset publish",
     "release:site": "cross-env NODE_ENV=production yarn build:site && gh-pages -d dist/ -f -e .",
     "start": "cross-env NODE_ENV=development nx start storybook",
     "test": "cross-env NODE_ENV=production nx test storybook",
     "test:plugins": "cross-env NODE_ENV=production nx run-many --target test --projects tag:stylelint",
     "tester": "cross-env NODE_ENV=production nx run storybook:test:scope",
     "validate": "yarn validator tag:component",
-    "validator": "nx run-many --target validate --verbose --projects"
+    "validator": "nx run-many --target validate --verbose --projects",
+    "version:packages": "changeset version && yarn --mode=\"update-lockfile\""
   },
   "workspaces": [
     "components/*",
