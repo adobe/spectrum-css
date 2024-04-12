@@ -17,6 +17,8 @@ governing permissions and limitations under the License.
   --spectrum-switch-label-color-focus: var(--spectrum-neutral-content-color-key-focus);
   --spectrum-switch-label-color-disabled: var(--spectrum-disabled-content-color);
 
+  --spectrum-switch-border-width: var(--spectrum-border-width-200);
+
   --spectrum-switch-border-color-default: var(--spectrum-neutral-content-color-default);
   --spectrum-switch-border-color-hover: var(--spectrum-neutral-content-color-hover);
   --spectrum-switch-border-color-down: var(--spectrum-neutral-content-color-down);
@@ -37,8 +39,9 @@ governing permissions and limitations under the License.
   --spectrum-switch-background-color-selected-focus: var(--spectrum-neutral-background-color-key-focus);
   --spectrum-switch-background-color-selected-disabled: var(--spectrum-disabled-content-color);
 
-  --spectrum-switch-focus-indicator-thickness: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
+  --spectrum-switch-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-switch-focus-indicator-color: var(--spectrum-focus-indicator-color);
+  --spectrum-switch-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
   --spectrum-switch-handle-background-color: var(--spectrum-neutral-content-color-default);
   --spectrum-switch-handle-background-color-disabled: var(--spectrum-disabled-content-color);
@@ -47,6 +50,9 @@ governing permissions and limitations under the License.
 
   --spectrum-switch-handle-size: var(--spectrum-switch-handle-size-medium);
   --spectrum-switch-handle-selected-size: var(--spectrum-switch-handle-selected-size-medium);
+
+  --spectrum-switch-animation-duration-100: var(--spectrum-animation-duration-100);
+  --spectrum-switch-animation-duration-200: var(--spectrum-animation-duration-200);
 
   /* Default size - medium */
   --spectrum-switch-min-height: var(--spectrum-component-height-100);
@@ -58,6 +64,8 @@ governing permissions and limitations under the License.
   --spectrum-switch-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100);
 
   --spectrum-switch-font-size: var(--spectrum-font-size-100);
+  --spectrum-switch-line-height: var(--spectrum-line-height-100);
+  --spectrum-switch-cjk-line-height: var(--spectrum-cjk-line-height-100);
 
   --spectrum-switch-border-radius: var(--spectrum-corner-radius-full);
 }
@@ -159,13 +167,13 @@ governing permissions and limitations under the License.
   margin-block-start: var(--mod-switch-spacing-top-to-label, var(--spectrum-switch-spacing-top-to-label));
   margin-block-end: var(--mod-switch-spacing-bottom-to-label, var(--spectrum-switch-spacing-bottom-to-label));;
   font-size: var(--mod-switch-font-size, var(--spectrum-switch-font-size));
-  line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
-  transition: color var(--mod-animation-duration-200, var(--spectrum-animation-duration-200)) ease-in-out;
+  line-height: var(--mod-switch-line-height, var(--spectrum-switch-line-height));
+  transition: color var(--mod-switch-animation-duration-200, var(--spectrum-switch-animation-duration-200)) ease-in-out;
 
   &:lang(ja),
   &:lang(zh),
   &:lang(ko) {
-    line-height: var(--mod-cjk-line-height-100, var(--spectrum-cjk-line-height-100));
+    line-height: var(--mod-switch-cjk-line-height, var(--spectrum-switch-cjk-line-height));
   }
 
   .spectrum-Switch:hover ~ & {
@@ -197,8 +205,8 @@ governing permissions and limitations under the License.
 
   vertical-align: middle;
 
-  transition: background var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
-    border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+  transition: background var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-in-out,
+    border var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-in-out;
 
   block-size: var(--mod-switch-control-height, var(--spectrum-switch-control-height));
 
@@ -207,7 +215,7 @@ governing permissions and limitations under the License.
 
   background-color: var(--highcontrast-switch-background-color, var(--mod-switch-background-color, var(--spectrum-switch-background-color)));
   border-radius: var(--mod-switch-border-radius, var(--spectrum-switch-border-radius));
-  border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
+  border-width: var(--mod-switch-border-width, var(--spectrum-switch-border-width));
   border-color: var(--highcontrast-switch-border-color-default, var(--mod-switch-border-color-default, var(--spectrum-switch-border-color-default)));
   border-style: solid;
 
@@ -250,10 +258,10 @@ governing permissions and limitations under the License.
     content: "";
     box-sizing: border-box;
 
-    transition: background var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
-      border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
-      transform var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
-      box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+    transition: background var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-in-out,
+      border var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-in-out,
+      transform var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-in-out,
+      box-shadow var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-in-out;
 
     inline-size: var(--mod-switch-handle-size, var(--spectrum-switch-handle-size));
     block-size: var(--mod-switch-handle-size, var(--spectrum-switch-handle-size));
@@ -272,20 +280,20 @@ governing permissions and limitations under the License.
       block-size: var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size));
 
       inset-block-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height))
-        - var(--mod-border-width-200, var(--spectrum-border-width-200))
+        - var(--mod-switch-border-width, var(--spectrum-switch-border-width))
         - var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size)))
         * 0.25
       );
       inset-inline-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height))
-        - var(--mod-border-width-200, var(--spectrum-border-width-200))
+        - var(--mod-switch-border-width, var(--spectrum-switch-border-width))
         - var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size)))
         * 0.25
       );
 
-      transform: translateX(calc(100% + (var(--mod-border-width-200, var(--spectrum-border-width-200)) * 0.25)));
+      transform: translateX(calc(100% + (var(--mod-switch-border-width, var(--spectrum-switch-border-width)) * 0.25)));
 
       &:dir(rtl) {
-        transform: translateX(calc(-1 * (100% + (var(--mod-border-width-200, var(--spectrum-border-width-200)) * 0.25))));
+        transform: translateX(calc(-1 * (100% + (var(--mod-switch-border-width, var(--spectrum-switch-border-width)) * 0.25))));
       }
 
       .spectrum-Switch:hover & {
@@ -302,14 +310,14 @@ governing permissions and limitations under the License.
     .spectrum-Switch:active .spectrum-Switch-input:not(:disabled):checked + & {
       /* Add down state without overriding translateX */
       transform:
-        translateX(calc(100% + (var(--mod-border-width-200, var(--spectrum-border-width-200)) * 0.25)))
+        translateX(calc(100% + (var(--mod-switch-border-width, var(--spectrum-switch-border-width)) * 0.25)))
         perspective(var(--spectrum-component-size-minimum-perspective-down))
         translateZ(var(--spectrum-component-size-difference-down));
 
       &:dir(rtl) {
         /* Add down state without overriding translateX */
         transform:
-          translateX(calc(-1 * (100% + (var(--mod-border-width-200, var(--spectrum-border-width-200)) * 0.25))))
+          translateX(calc(-1 * (100% + (var(--mod-switch-border-width, var(--spectrum-switch-border-width)) * 0.25))))
           perspective(var(--spectrum-component-size-minimum-perspective-down))
           translateZ(var(--spectrum-component-size-difference-down));
       }
@@ -328,14 +336,14 @@ governing permissions and limitations under the License.
     inset-block-start: 0;
     margin: 0;
 
-    transition: opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
-      outline-offset var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
-      border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+    transition: opacity var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-out,
+      outline-offset var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-out,
+      border var(--mod-switch-animation-duration-100, var(--spectrum-switch-animation-duration-100)) ease-in-out;
 
     .spectrum-Switch-input:focus-visible + & {
       outline: var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness)) solid
                var(--highcontrast-switch-focus-indicator-color, var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color)));
-      outline-offset: calc(var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) + var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness)));
+      outline-offset: calc(var(--mod-switch-focus-indicator-gap, var(--spectrum-switch-focus-indicator-gap)) + var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness)));
     }
   }
 }

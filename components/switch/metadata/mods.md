@@ -1,12 +1,7 @@
 | Modifiable custom properties                             |
 | -------------------------------------------------------- |
-| `--mod-animation-duration-100`                           |
-| `--mod-animation-duration-200`                           |
-| `--mod-border-width-200`                                 |
-| `--mod-cjk-line-height-100`                              |
-| `--mod-focus-indicator-gap`                              |
-| `--mod-focus-indicator-thickness`                        |
-| `--mod-line-height-100`                                  |
+| `--mod-switch-animation-duration-100`                    |
+| `--mod-switch-animation-duration-200`                    |
 | `--mod-switch-background-color`                          |
 | `--mod-switch-background-color-disabled`                 |
 | `--mod-switch-background-color-selected-default`         |
@@ -24,16 +19,19 @@
 | `--mod-switch-border-color-selected-focus`               |
 | `--mod-switch-border-color-selected-hover`               |
 | `--mod-switch-border-radius`                             |
+| `--mod-switch-border-width`                              |
+| `--mod-switch-cjk-line-height`                           |
 | `--mod-switch-control-height`                            |
 | `--mod-switch-control-label-spacing`                     |
 | `--mod-switch-control-width`                             |
 | `--mod-switch-focus-indicator-color`                     |
+| `--mod-switch-focus-indicator-gap`                       |
 | `--mod-switch-focus-indicator-thickness`                 |
 | `--mod-switch-font-size`                                 |
 | `--mod-switch-handle-background-color`                   |
 | `--mod-switch-handle-background-color-disabled`          |
+| `--mod-switch-handle-background-color-selected`          |
 | `--mod-switch-handle-background-color-selected-disabled` |
-| `--mod-switch-handle-selected-background-color`          |
 | `--mod-switch-handle-selected-size`                      |
 | `--mod-switch-handle-size`                               |
 | `--mod-switch-height`                                    |
@@ -42,6 +40,7 @@
 | `--mod-switch-label-color-down`                          |
 | `--mod-switch-label-color-focus`                         |
 | `--mod-switch-label-color-hover`                         |
+| `--mod-switch-line-height`                               |
 | `--mod-switch-spacing-bottom-to-label`                   |
 | `--mod-switch-spacing-top-to-control`                    |
 | `--mod-switch-spacing-top-to-label`                      |
