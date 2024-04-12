@@ -72,8 +72,8 @@
   --spectrum-color-slider-border-color:var(--spectrum-gray-1000);
   --spectrum-color-slider-border-opacity:0.1;
   --spectrum-color-loupe-drop-shadow-color:var(--spectrum-transparent-black-300);
-  --spectrum-color-loupe-drop-shadow-y:2px;
-  --spectrum-color-loupe-drop-shadow-blur:8px;
+  --spectrum-color-loupe-drop-shadow-y:var(--spectrum-drop-shadow-elevated-y);
+  --spectrum-color-loupe-drop-shadow-blur:var(--spectrum-drop-shadow-elevated-blur);
   --spectrum-color-loupe-inner-border:var(--spectrum-transparent-black-200);
   --spectrum-color-loupe-outer-border:var(--spectrum-white);
   --spectrum-card-selection-background-color:var(--spectrum-gray-100);
@@ -218,9 +218,15 @@
   --spectrum-text-field-minimum-width-multiplier:1.5;
   --spectrum-combo-box-minimum-width-multiplier:2.5;
   --spectrum-combo-box-quiet-minimum-width-multiplier:2;
-  --spectrum-combo-box-visual-to-field-button-quiet:0px;
+  --spectrum-combo-box-visual-to-field-button-small:var(--spectrum-combo-box-visual-to-field-button);
+  --spectrum-combo-box-visual-to-field-button-medium:var(--spectrum-combo-box-visual-to-field-button);
+  --spectrum-combo-box-visual-to-field-button-large:var(--spectrum-combo-box-visual-to-field-button);
+  --spectrum-combo-box-visual-to-field-button-extra-large:var(--spectrum-combo-box-visual-to-field-button);
+  --spectrum-combo-box-visual-to-field-button-quiet:var(--spectrum-combo-box-visual-to-field-button);
   --spectrum-alert-dialog-minimum-width:288px;
   --spectrum-alert-dialog-maximum-width:480px;
+  --spectrum-alert-dialog-title-size:var(--spectrum-alert-dialog-title-font-size);
+  --spectrum-alert-dialog-description-size:var(--spectrum-alert-dialog-description-font-size);
   --spectrum-contextual-help-minimum-width:268px;
   --spectrum-breadcrumbs-height:var(--spectrum-component-height-300);
   --spectrum-breadcrumbs-height-compact:var(--spectrum-component-height-200);
@@ -255,6 +261,9 @@
   --spectrum-drop-zone-title-size:var(--spectrum-illustrated-message-title-size);
   --spectrum-drop-zone-cjk-title-size:var(--spectrum-illustrated-message-cjk-title-size);
   --spectrum-drop-zone-body-size:var(--spectrum-illustrated-message-body-size);
+  --spectrum-coach-mark-title-size:var(--spectrum-coach-mark-title-font-size);
+  --spectrum-coach-mark-body-size:var(--spectrum-coach-mark-body-font-size);
+  --spectrum-coach-mark-pagination-body-size:var(--spectrum-coach-mark-pagination-body-font-size);
   --spectrum-accordion-top-to-text-compact-small:2px;
   --spectrum-accordion-top-to-text-compact-medium:4px;
   --spectrum-accordion-disclosure-indicator-to-text:0px;
@@ -360,6 +369,9 @@
   --spectrum-title-size-xs:var(--spectrum-font-size-75);
   --spectrum-title-size-xxl:var(--spectrum-font-size-500);
   --spectrum-title-size-xxxl:var(--spectrum-font-size-600);
+  --spectrum-combo-box-visual-to-field-button:0px;
+  --spectrum-in-field-button-edge-to-fill-medium:6px;
+  --spectrum-in-field-button-edge-to-fill-large:8px;
   --spectrum-corner-radius-0:0px;
   --spectrum-corner-radius-75:3px;
   --spectrum-corner-radius-100:4px;
