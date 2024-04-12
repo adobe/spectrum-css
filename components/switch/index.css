@@ -42,7 +42,7 @@ governing permissions and limitations under the License.
 
   --spectrum-switch-handle-background-color: var(--spectrum-neutral-content-color-default);
   --spectrum-switch-handle-background-color-disabled: var(--spectrum-disabled-content-color);
-  --spectrum-switch-handle-selected-background-color: var(--spectrum-gray-25);
+  --spectrum-switch-handle-background-color-selected: var(--spectrum-gray-25);
   --spectrum-switch-handle-background-color-selected-disabled: var(--spectrum-gray-25);
 
   --spectrum-switch-handle-size: var(--spectrum-switch-handle-size-medium);
@@ -266,7 +266,7 @@ governing permissions and limitations under the License.
 
     /* Handle size changes when selected/checked */
     .spectrum-Switch-input:checked + & {
-      background-color: var(--mod-switch-handle-selected-background-color, var(--spectrum-switch-handle-selected-background-color));
+      background-color: var(--highcontrast-switch-handle-background-color-selected, var(--mod-switch-handle-background-color-selected, var(--spectrum-switch-handle-background-color-selected)));
 
       inline-size: var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size));
       block-size: var(--mod-switch-handle-selected-size, var(--spectrum-switch-handle-selected-size));
@@ -289,7 +289,7 @@ governing permissions and limitations under the License.
       }
 
       .spectrum-Switch:hover & {
-        background-color: var(--mod-switch-handle-selected-background-color, var(--spectrum-switch-handle-selected-background-color));
+        background-color: var(--highcontrast-switch-handle-background-color-selected, var(--mod-switch-handle-background-color-selected, var(--spectrum-switch-handle-background-color-selected)));
       }
     }
 
@@ -396,8 +396,10 @@ governing permissions and limitations under the License.
     --highcontrast-switch-border-color-selected-focus: Highlight;
 
     --highcontrast-switch-handle-background-color: ButtonText;
+    --highcontrast-switch-handle-background-color-selected: HighlightText;
     --highcontrast-switch-handle-background-color-disabled: GrayText;
     --highcontrast-switch-handle-background-color-selected-disabled: ButtonFace;
+
 
     --highcontrast-switch-background-color-disabled: ButtonFace;
 
