@@ -365,6 +365,7 @@ governing permissions and limitations under the License.
 		var(--spectrum-card-preview-minimum-height)
 	);
 	box-sizing: border-box;
+	overflow: hidden;
 
 	display: flex;
 	align-items: center;
