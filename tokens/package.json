@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tokens",
-	"version": "14.0.0-next.4",
+	"version": "14.0.0-next.5",
 	"description": "The Spectrum CSS tokens package",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -27,7 +27,7 @@
 		"package.json"
 	],
 	"devDependencies": {
-		"@adobe/spectrum-tokens": "13.0.0-beta.24",
+		"@adobe/spectrum-tokens": "13.0.0-beta.27",
 		"@adobe/token-diff-generator": "^1.3.0",
 		"@nxkit/style-dictionary": "^6.0.0",
 		"@spectrum-tools/postcss-rgb-mapping": "^1.0.0",
