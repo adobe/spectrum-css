@@ -57,6 +57,9 @@
     ".storybook",
     ".github/actions/*"
   ],
+  "dependencies": {
+    "@changesets/cli": "^2.27.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
@@ -79,7 +82,6 @@
     "gh-pages": "^6.1.1",
     "husky": "^9.0.11",
     "jsonc-eslint-parser": "^2.4.0",
-    "lerna": "^6.6.2",
     "lint-staged": "^15.2.2",
     "lodash": "^4.17.21",
     "node-gyp": "^10.1.0",
