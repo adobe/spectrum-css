@@ -138,10 +138,6 @@
 	--spectrum-picker-visual-to-disclosure-icon-extra-large: 10px;
 	--spectrum-text-area-minimum-width: 112px;
 	--spectrum-text-area-minimum-height: 56px;
-	--spectrum-combo-box-visual-to-field-button-small: 7px;
-	--spectrum-combo-box-visual-to-field-button-medium: 8px;
-	--spectrum-combo-box-visual-to-field-button-large: 9px;
-	--spectrum-combo-box-visual-to-field-button-extra-large: 10px;
 	--spectrum-thumbnail-size-50: 16px;
 	--spectrum-thumbnail-size-75: 18px;
 	--spectrum-thumbnail-size-100: 20px;
@@ -154,8 +150,6 @@
 	--spectrum-thumbnail-size-800: 44px;
 	--spectrum-thumbnail-size-900: 50px;
 	--spectrum-thumbnail-size-1000: 56px;
-	--spectrum-alert-dialog-title-size: var(--spectrum-title-size-xxl);
-	--spectrum-alert-dialog-description-size: var(--spectrum-body-size-m);
 	--spectrum-opacity-checkerboard-square-size: var(--spectrum-opacity-checkerboard-square-size-medium);
 	--spectrum-opacity-checkerboard-square-size-medium: 8px;
 	--spectrum-contextual-help-title-size: var(--spectrum-heading-size-xs);
@@ -209,9 +203,6 @@
 	--spectrum-coach-mark-pagination-text-to-bottom-edge: 33px;
 	--spectrum-coach-mark-media-height: 222px;
 	--spectrum-coach-mark-media-minimum-height: 166px;
-	--spectrum-coach-mark-title-size: var(--spectrum-heading-size-xs);
-	--spectrum-coach-mark-body-size: var(--spectrum-body-size-s);
-	--spectrum-coach-mark-pagination-body-size: var(--spectrum-body-size-s);
 	--spectrum-accordion-top-to-text-regular-small: 5px;
 	--spectrum-accordion-small-top-to-text-spacious: 9px;
 	--spectrum-accordion-top-to-text-regular-medium: 8px;
@@ -421,6 +412,18 @@
 	--spectrum-tag-minimum-width-small: 21px;
 	--spectrum-tag-minimum-width-medium: 27px;
 	--spectrum-tag-minimum-width-large: 33px;
+	--spectrum-in-field-button-edge-to-fill-small: 4px;
+	--spectrum-in-field-button-edge-to-fill-extra-large: 8px;
+	--spectrum-in-field-progress-circle-edge-to-fill: 1px;
+	--spectrum-in-field-progress-circle-size-75: 16px;
+	--spectrum-in-field-progress-circle-size-100: 20px;
+	--spectrum-in-field-progress-circle-size-200: 22px;
+	--spectrum-in-field-progress-circle-size-300: 26px;
+	--spectrum-alert-dialog-description-font-size: var(--spectrum-body-size-m);
+	--spectrum-alert-dialog-title-font-size: var(--spectrum-title-size-xxl);
+	--spectrum-coach-mark-body-font-size: var(--spectrum-body-size-m);
+	--spectrum-coach-mark-pagination-body-font-size: var(--spectrum-body-size-s);
+	--spectrum-coach-mark-title-font-size: var(--spectrum-title-size-m);
 	--spectrum-workflow-icon-size-50: 14px;
 	--spectrum-workflow-icon-size-75: 16px;
 	--spectrum-workflow-icon-size-100: 20px;
