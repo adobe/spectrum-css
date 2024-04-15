@@ -95,15 +95,15 @@ export const Template = ({
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
 			@click=${onclick ?? function() {
-				updateArgs({
+				updateArgs?.({
 					isSelected: !isSelected
 				});
 			}}
 			@focusin=${function() {
-				updateArgs({ isFocused: true });
+				updateArgs?.({ isFocused: true });
 			}}
 			@focusout=${function() {
-				updateArgs({ isFocused: false });
+				updateArgs?.({ isFocused: false });
 			}}
 		>
 			${when(hasPopup && hasPopup !== "false", () =>
@@ -137,6 +137,10 @@ export const Template = ({
 	`;
 };
 
+/**
+ * Displays multiple action buttons in a row, with different combinations of
+ * label, icon, and hold button (has popup).
+ */
 export const ActionButtonsWithIconOptions = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
@@ -168,6 +172,11 @@ export const ActionButtonsWithIconOptions = (args, context) => Container({
 	`
 }, context);
 
+/**
+ * Displays two action buttons in a row:
+ * - icon only action button
+ * - icon only action button with hold button (has popup)
+ */
 export const IconOnlyOption = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
@@ -189,12 +198,13 @@ export const IconOnlyOption = (args, context) => Container({
 	`
 }, context);
 
+/**
+ * Displays multiple groups of action buttons for:
+ * default, selected, disabled, and selected + disabled
+ */
 export const TreatmentTemplate = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
-	wrapperStyles: {
-		rowGap: "12px",
-	},
 	content: html`${[
 		{ isSelected: false, isDisabled: false, heading: "Default" },
 		{ isSelected: true, isDisabled: false, heading: "Selected" },
@@ -203,6 +213,9 @@ export const TreatmentTemplate = (args, context) => Container({
 	].map(({ isSelected, isDisabled, heading }) => Container({
 		withBorder: false,
 		heading: heading,
+		containerStyles: {
+			rowGap: "8px",
+		},
 		content: ActionButtonsWithIconOptions({
 			...args,
 			isSelected,
