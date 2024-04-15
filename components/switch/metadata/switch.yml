@@ -21,6 +21,7 @@ sections:
           - `--mod-focus-indicator-gap` renamed to `--mod-switch-focus-indicator-gap`
           - `--mod-focus-indicator-thickness` renamed to `--mod-switch-focus-indicator-thickness`
           - `--mod-line-height-100` renamed to `--mod-switch-line-height`
+          - `--mod-switch-handle-background-color` renamed to `--mod-switch-handle-background-color-default`
         - New mods:
           - `--mod-cjk-line-height-100`
           - `--mod-switch-border-color-default`
@@ -33,6 +34,9 @@ sections:
           - `--mod-switch-border-color-selected-focus`
           - `--mod-switch-border-color-selected-hover`
           - `--mod-switch-border-radius`
+          - `--mod-switch-handle-background-color-down`
+          - `--mod-switch-handle-background-color-focus`
+          - `--mod-switch-handle-background-color-hover`
           - `--mod-switch-handle-background-color-disabled`
           - `--mod-switch-handle-background-color-selected-disabled`
           - `--mod-switch-handle-selected-background-color`

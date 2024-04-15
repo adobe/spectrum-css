@@ -43,8 +43,12 @@ governing permissions and limitations under the License.
   --spectrum-switch-focus-indicator-color: var(--spectrum-focus-indicator-color);
   --spectrum-switch-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
-  --spectrum-switch-handle-background-color: var(--spectrum-neutral-content-color-default);
+  --spectrum-switch-handle-background-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-switch-handle-background-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-switch-handle-background-color-down: var(--spectrum-neutral-content-color-down);
+  --spectrum-switch-handle-background-color-focus: var(--spectrum-neutral-content-color-key-focus);
   --spectrum-switch-handle-background-color-disabled: var(--spectrum-disabled-content-color);
+
   --spectrum-switch-handle-background-color-selected: var(--spectrum-gray-25);
   --spectrum-switch-handle-background-color-selected-disabled: var(--spectrum-gray-25);
 
@@ -269,8 +273,20 @@ governing permissions and limitations under the License.
     inset-block-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-handle-size, var(--spectrum-switch-handle-size))) * 0.25);
     inset-inline-start: calc((var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-handle-size, var(--spectrum-switch-handle-size))) * 0.25);
 
-    background-color: var(--highcontrast-switch-handle-background-color, var(--mod-switch-handle-background-color, var(--spectrum-switch-handle-background-color)));
+    background-color: var(--highcontrast-switch-handle-background-color-default, var(--mod-switch-handle-background-color-default, var(--spectrum-switch-handle-background-color-default)));
     border-radius: var(--mod-switch-border-radius, var(--spectrum-switch-border-radius));
+
+    .spectrum-Switch:hover & {
+      background-color: var(--highcontrast-switch-handle-background-color-hover, var(--mod-switch-handle-background-color-hover, var(--spectrum-switch-handle-background-color-hover)));
+    }
+
+    .spectrum-Switch:active & {
+      background-color: var(--highcontrast-switch-handle-background-color-down, var(--mod-switch-handle-background-color-down, var(--spectrum-switch-handle-background-color-down)));
+    }
+
+    .spectrum-Switch-input:focus-visible + & {
+      background-color: var(--highcontrast-switch-handle-background-color-focus, var(--mod-switch-handle-background-color-focus, var(--spectrum-switch-handle-background-color-focus)));
+    }
 
     /* Handle size changes when selected/checked */
     .spectrum-Switch-input:checked + & {
@@ -403,11 +419,14 @@ governing permissions and limitations under the License.
     --highcontrast-switch-border-color-selected-down: Highlight;
     --highcontrast-switch-border-color-selected-focus: Highlight;
 
-    --highcontrast-switch-handle-background-color: ButtonText;
-    --highcontrast-switch-handle-background-color-selected: HighlightText;
+    --highcontrast-switch-handle-background-color-default: ButtonText;
+    --highcontrast-switch-handle-background-color-hover: Highlight;
+    --highcontrast-switch-handle-background-color-down: ButtonText;
+    --highcontrast-switch-handle-background-color-focus: ButtonText;
     --highcontrast-switch-handle-background-color-disabled: GrayText;
-    --highcontrast-switch-handle-background-color-selected-disabled: ButtonFace;
 
+    --highcontrast-switch-handle-background-color-selected: HighlightText;
+    --highcontrast-switch-handle-background-color-selected-disabled: ButtonFace;
 
     --highcontrast-switch-background-color-disabled: ButtonFace;
 

@@ -28,8 +28,11 @@
 | `--mod-switch-focus-indicator-gap`                       |
 | `--mod-switch-focus-indicator-thickness`                 |
 | `--mod-switch-font-size`                                 |
-| `--mod-switch-handle-background-color`                   |
+| `--mod-switch-handle-background-color-default`           |
 | `--mod-switch-handle-background-color-disabled`          |
+| `--mod-switch-handle-background-color-down`              |
+| `--mod-switch-handle-background-color-focus`             |
+| `--mod-switch-handle-background-color-hover`             |
 | `--mod-switch-handle-background-color-selected`          |
 | `--mod-switch-handle-background-color-selected-disabled` |
 | `--mod-switch-handle-selected-size`                      |
