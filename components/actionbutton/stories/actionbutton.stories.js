@@ -1,5 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import { Sizes, withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
@@ -37,7 +37,10 @@ export default {
 			control: { type: "text" },
 		},
 		isQuiet,
-		isEmphasized,
+		isEmphasized: {
+			...isEmphasized,
+			if: { arg: "staticColor", truthy: false},
+		},
 		isDisabled,
 		isSelected,
 		isHovered,
@@ -88,6 +91,9 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=702-2877",
 		},
+		downState: {
+			selectors: [".spectrum-ActionButton:not(:disabled)"],
+		},
 		packageJson,
 		metadata,
 		docs: {
@@ -96,6 +102,9 @@ export default {
 			},
 		}
 	},
+	decorators: [
+		withDownStateDimensionCapture,
+	],
 };
 
 export const Default = ActionButtonGroup.bind({});
