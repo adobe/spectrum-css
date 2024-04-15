@@ -32,7 +32,7 @@
     "lint": "yarn linter tag:component",
     "linter": "nx run-many --target lint --verbose --projects",
     "new": "nx run @spectrum-css/generator:new",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged --allow-empty --config lint-staged.config.js",
     "prepare": "husky install && run-p refresh:directory refresh:env && yarn refresh:config",
     "refresh:config": "test -n $BASH_VERSION && bash ./tasks/chromatic-config-creation.sh || exit 0",
     "refresh:directory": "test -n $BASH_VERSION && bash ./tasks/clean-up-after-migration.sh || exit 0",
@@ -121,32 +121,5 @@
     "last 2 Firefox versions",
     "last 2 Safari versions",
     "last 2 iOS versions"
-  ],
-  "lint-staged": {
-    "package.json": [
-      "prettier-package-json --write"
-    ],
-    "components/*/*.css": [
-      "stylelint --fix --cache --allow-empty-input --quiet"
-    ],
-    "*.json": [
-      "eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
-    ],
-    "components/*/stories/*.js": [
-      "eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
-    ],
-    "plugins/*/*.js": [
-      "eslint --fix --cache --no-error-on-unmatched-pattern --quiet"
-    ],
-    "dist/*.css": [
-      "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write"
-    ],
-    "components/*/metadata/*.{yml,yaml}": [
-      "pajv test --valid -s ./schemas/documentation.schema.json -d ",
-      "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write"
-    ],
-    "*.md": [
-      "prettier --no-config --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write"
-    ]
-  }
+  ]
 }

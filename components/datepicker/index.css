@@ -81,15 +81,17 @@ governing permissions and limitations under the License.
       color: var(--highcontrast-datepicker-dash-color-disabled, var(--mod-datepicker-dash-color-disabled, var(--spectrum-datepicker-dash-color-disabled)))
     }
   }
+
   &.is-invalid {
     --mod-textfield-icon-spacing-inline-end-invalid: calc(var(--spectrum-datepicker-pickerbutton-width) + var(--spectrum-datepicker-invalid-icon-to-button));
     --mod-textfield-icon-spacing-inline-end-quiet-invalid: calc(var(--spectrum-datepicker-pickerbutton-width-quiet) + var(--spectrum-datepicker-invalid-icon-to-button-quiet));
   }
 }
 
-.spectrum-DatePicker:not(.spectrum-DatePicker--quiet):not(.is-disabled) {
+.spectrum-DatePicker:not(.spectrum-DatePicker--quiet, .is-disabled) {
   /* ensures picker button border color matches the textfield border color */
   --mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color, var(--spectrum-datepicker-pickerbutton-border-color)));
+
   &.is-invalid {
     --mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-datepicker-pickerbutton-border-color-invalid)));
   }
@@ -99,6 +101,7 @@ governing permissions and limitations under the License.
 /* standard and range  */
 .spectrum-DatePicker-input {
   padding-inline-end: var(--mod-datepicker-padding-inline, var(--spectrum-datepicker-padding-inline-end));
+
   &.spectrum-DatePicker-endField {
     padding-inline-end: var(--mod-datepicker-padding-inline, var(--spectrum-datepicker-padding-inline-end));
   }
@@ -114,11 +117,13 @@ governing permissions and limitations under the License.
   .spectrum-DatePicker-input {
     padding-inline-end: var(--mod-datepicker-padding-inline-end-quiet, var(--spectrum-datepicker-padding-inline-end-quiet));
   }
+
   /* quiet invalid and quiet range invalid */
   .is-invalid .spectrum-DatePicker-input:not(.spectrum-DatePicker-startField) {
     padding-inline-end: var(--mod-datepicker-padding-inline-end-invalid-quiet, var(--spectrum-datepicker-padding-inline-end-invalid-quiet));
   }
 }
+
 /* quiet range */
 .spectrum-DatePicker--quiet .spectrum-DatePicker-input {
   &.spectrum-DatePicker-endField {
@@ -150,14 +155,14 @@ governing permissions and limitations under the License.
       }
     }
 
-    &:not(:disabled):not(.is-open) {
+    &:not(:disabled, .is-open) {
       .spectrum-PickerButton-fill {
         background-color: transparent;
       }
     }
   }
 
-  &:hover:not(.is-focused):not(.is-keyboardFocused):not(.is-disabled):not(.is-invalid) {
+  &:hover:not(.is-focused, .is-keyboardFocused, .is-disabled, .is-invalid) {
     .spectrum-DatePicker-input,
     .spectrum-DatePicker-button {
       border-color: var(--mod-datepicker-quiet-border-color-hover, var(--spectrum-datepicker-quiet-border-color-hover));
@@ -175,8 +180,9 @@ governing permissions and limitations under the License.
 
 .spectrum-DatePicker--range {
   border-radius: var(--mod-datepicker-border-radius, var(--spectrum-datepicker-border-radius));
+
   /* focus-ring */
-  &:after {
+  &::after {
     pointer-events: none;
     content: '';
     position: absolute;
@@ -188,18 +194,18 @@ governing permissions and limitations under the License.
   }
 
   &.is-keyboardFocused:not(.spectrum-DatePicker--quiet) {
-    &:after {
+    &::after {
       box-shadow: 0 0 0 var(--mod-datepicker-focus-ring-width, var(--spectrum-datepicker-focus-ring-width)) var(--highcontrast-datepicker-focus-ring-color, var(--mod-datepicker-focus-ring-color, var(--spectrum-datepicker-focus-ring-color)));
     }
 
-    .spectrum-DatePicker-textfield:after {
+    .spectrum-DatePicker-textfield::after {
       display: none;
     }
   }
 
   &.is-keyboardFocused.spectrum-DatePicker--quiet {
     /* quiet variant bottom border focus indicator */
-    &:after {
+    &::after {
       margin: 0;
       box-shadow: none;
       border-radius: 0;
@@ -268,6 +274,7 @@ governing permissions and limitations under the License.
       border-end-end-radius: 0;
       padding-inline-end: var(--mod-datepicker-generic-padding, var(--spectrum-datepicker-generic-padding));
     }
+
     &.spectrum-DatePicker-endField {
       border-inline-start: 0;
       border-start-start-radius: 0;
@@ -284,7 +291,7 @@ governing permissions and limitations under the License.
     inline-size: 0;
     z-index: 1;
 
-    &:before {
+    &::before {
       content: "–";
       display: inline-block;
       margin-block: 0;

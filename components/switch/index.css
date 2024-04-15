@@ -165,6 +165,7 @@ governing permissions and limitations under the License.
 .spectrum-Switch-switch {
   display: inline-block;
   box-sizing: border-box;
+
   /* positions the pseudo elements relative to this one */
   position: relative;
 
@@ -312,6 +313,7 @@ governing permissions and limitations under the License.
     /* selected, not emphasized */
     &:checked:enabled + .spectrum-Switch-switch {
       background-color: var(--highcontrast-switch-background-color-selected-down, var(--mod-switch-background-color-selected-down, var(--spectrum-switch-background-color-selected-down)));
+
       &::before {
         border-color: var(--highcontrast-switch-handle-border-color-selected-down, var(--mod-switch-handle-border-color-selected-down, var(--spectrum-switch-handle-border-color-selected-down)));
       }

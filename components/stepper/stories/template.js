@@ -29,23 +29,24 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
 	let iconSize = "75";
 	switch (size) {
-		case "s":
-			iconSize = "50";
-			break;
-		case "l":
-			iconSize = "100";
-			break;
-		case "xl":
-			iconSize = "200";
-			break;
-		default:
-			iconSize = "75";
+	case "s":
+		iconSize = "50";
+		break;
+	case "l":
+		iconSize = "100";
+		break;
+	case "xl":
+		iconSize = "200";
+		break;
+	default:
+		iconSize = "75";
 	}
 
 	return html`

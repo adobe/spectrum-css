@@ -159,6 +159,7 @@ governing permissions and limitations under the License.
       border-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
       box-shadow: 0 0 0 1px var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
     }
+
     .spectrum-SplitView-gripper::before {
       background-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
     }

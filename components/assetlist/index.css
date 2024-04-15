@@ -124,6 +124,7 @@ governing permissions and limitations under the License.
     &:focus-visible,
     &.is-focused {
       background-color: var(--highcontrast-assetlist-item-background-color-hover, var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover)));
+
       &::before {
         /* we cannot achieve rounded corners with outline so we use box-shadow instead */
         box-shadow: 0 0 0 2px var(--highcontrast-assetlist-border-color-key-focus, var(--mod-assetlist-border-color-key-focus, var(--spectrum-assetlist-border-color-key-focus))) inset;
@@ -134,6 +135,7 @@ governing permissions and limitations under the License.
   &.is-navigated {
     /* gray background */
     background-color: var(--mod-assetlist-item-background-color-down, var(--spectrum-assetlist-item-background-color-down));
+
     &:hover,
     &:focus {
       background-color: var(--mod-assetlist-item-background-color-down, var(--spectrum-assetlist-item-background-color-down))
@@ -142,6 +144,7 @@ governing permissions and limitations under the License.
 
   &.is-selected {
     background-color: var(--highcontrast-assetlist-item-background-color-selected, var(--mod-assetlist-item-background-color-selected, var(--spectrum-assetlist-item-background-color-selected)));
+
     &:hover,
     &:focus {
       background-color: var(--highcontrast-assetlist-item-background-color-selected-hover, var(--mod-assetlist-item-background-color-selected-hover, var(--spectrum-assetlist-item-background-color-selected-hover)));

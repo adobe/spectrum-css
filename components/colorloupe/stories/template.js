@@ -13,7 +13,7 @@ export const Template = ({
 		"inset-block-start": "5px",
 		"inset-inline-start": "5px",
 	},
-	customClasses = [],s
+	customClasses = [],
 }) => svg`
     <svg
       class=${classMap({

@@ -27,13 +27,14 @@ export const Template = ({
 	onclick,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const { express } = globals;
 
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 

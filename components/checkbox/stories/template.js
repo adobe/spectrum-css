@@ -28,7 +28,7 @@ export const Template = ({
 	customClasses = [],
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 
 	const { express } = globals;
 

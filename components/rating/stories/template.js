@@ -5,7 +5,6 @@ import { repeat } from "lit/directives/repeat.js";
 
 import { useArgs } from "@storybook/preview-api";
 
-// Uncomment if you plan to include an icon
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
@@ -26,7 +25,8 @@ export const Template = ({
 	try {
 		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
 		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
@@ -50,7 +50,10 @@ export const Template = ({
 			}}
 		>
 			<input
-				class="${rootClass}-input"
+				class=${classMap({
+					[`${rootClass}-input`]: true,
+					["is-Focus"]: isFocused,
+				})}
 				type="range"
 				min="0"
 				max=${max}
@@ -79,7 +82,7 @@ export const Template = ({
 							"is-currentValue":
 								!isDisabled && !isReadOnly && idx === value - 1,
 						})}
-						@click=${(e) => {
+						@click=${() => {
 							updateArgs({ value: idx + 1, isFocused: true });
 						}}
 					>

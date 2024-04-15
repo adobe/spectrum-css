@@ -13,7 +13,6 @@ export const Template = ({
 	placement,
 	isOpen = true,
 	isFocused = false,
-	showOnHover = false,
 	...globals
 }) => {
 	const { express } = globals;
@@ -21,16 +20,19 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
 	let variantIcon;
 	if (variant === "info") {
 		variantIcon = "Info";
-	} else if (variant === "positive") {
+	}
+	else if (variant === "positive") {
 		variantIcon = "CheckmarkCircle";
-	} else if (variant === "negative") {
+	}
+	else if (variant === "negative") {
 		variantIcon = "Alert";
 	}
 

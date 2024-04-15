@@ -24,7 +24,8 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
@@ -46,7 +47,7 @@ export const Template = ({
 				name=${name}
 				class="${rootClass}-input"
 				id="radio-0"
-				readOnly=${isReadOnly ? 'readonly' : ""}
+				readOnly=${isReadOnly ? "readonly" : ""}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
 			/>

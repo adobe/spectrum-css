@@ -402,6 +402,7 @@ governing permissions and limitations under the License.
 
   font-size: var(--mod-radio-font-size,
                 var(--spectrum-radio-font-size));
+
   /* TODO: font weight and style tokens */
   /* font-weight: var(--spectrum-radio-text-font-weight); **** missing token resolves to 400 ****/
   /* font-style: var(--spectrum-radio-text-font-style); **** missing token resolves to normal ****/

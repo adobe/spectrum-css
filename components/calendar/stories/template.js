@@ -31,7 +31,7 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
 	const DOW = [
@@ -55,9 +55,11 @@ export const Template = ({
 		let date;
 		if (typeof dateOrIndex === "number") {
 			date = new Date().setMonth(dateOrIndex - 1);
-		} else if (dateOrIndex instanceof Date) {
+		}
+		else if (dateOrIndex instanceof Date) {
 			date = dateOrIndex;
-		} else {
+		}
+		else {
 			console.warn(
 				"Calendar: getMonthName() requires a date object or a number."
 			);
@@ -161,7 +163,8 @@ export const Template = ({
 						if (thisMonth < 0) {
 							thisMonth = 11;
 							thisYear -= 1;
-						} else if (thisMonth > 11) {
+						}
+						else if (thisMonth > 11) {
 							thisMonth = 0;
 							thisYear += 1;
 						}
@@ -223,7 +226,7 @@ export const Template = ({
 				typeof displayedMonth === "undefined" ||
 				typeof displayedYear === "undefined"
 			) {
-				console.warn(`Calendar: No month or year could be determined.`);
+				console.warn("Calendar: No month or year could be determined.");
 				return;
 			}
 			return updateArgs({
@@ -239,7 +242,7 @@ export const Template = ({
 				typeof displayedMonth === "undefined" ||
 				typeof displayedYear === "undefined"
 			) {
-				console.warn(`Calendar: No month or year could be determined.`);
+				console.warn("Calendar: No month or year could be determined.");
 				return;
 			}
 			return updateArgs({

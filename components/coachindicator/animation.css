@@ -22,30 +22,34 @@ governing permissions and limitations under the License.
 
 @keyframes pulse {
   0% {
-    -webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-0-scale));
+    transform: scale(var(--spectrum-coach-indicator-animation-keyframe-0-scale));
     opacity: var(--spectrum-coach-indicator-animation-keyframe-0-opacity);
   }
+
   50% {
-    -webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-50-scale));
+    transform: scale(var(--spectrum-coach-indicator-animation-keyframe-50-scale));
     opacity: var(--spectrum-coach-indicator-animation-keyframe-50-opacity);
   }
+
   100% {
-    -webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-100-scale));
+    transform: scale(var(--spectrum-coach-indicator-animation-keyframe-100-scale));
     opacity: var(--spectrum-coach-indicator-animation-keyframe-100-opacity);
   }
 }
 
-@keyframes pulse--quiet {
+@keyframes pulse-quiet {
 	0% {
-		-webkit-transform: scale(var(--spectrum-coach-indicator-quiet-animation-keyframe-0-scale));
+		transform: scale(var(--spectrum-coach-indicator-quiet-animation-keyframe-0-scale));
 		opacity: var(--spectrum-coach-indicator-animation-keyframe-0-opacity);
 	}
+
 	50% {
-		-webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-50-scale));
+		transform: scale(var(--spectrum-coach-indicator-animation-keyframe-50-scale));
 		opacity: var(--spectrum-coach-indicator-animation-keyframe-50-opacity);
 	}
+
 	100% {
-		-webkit-transform: scale(var(--spectrum-coach-indicator-animation-keyframe-100-scale));
+		transform: scale(var(--spectrum-coach-indicator-animation-keyframe-100-scale));
 		opacity: var(--spectrum-coach-indicator-animation-keyframe-100-opacity);
 	}
 }

@@ -12,40 +12,38 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
 
-import '../index.css';
+import "../index.css";
 
 export const Template = ({
-  rootClass = "spectrum-Card",
-  image,
-  title,
-  subtitle,
-  description,
-  footer,
-  isFocused = false,
-  isSelected = false,
-  isHorizontal = false,
-  isQuiet = false,
-  isGallery = false,
-  isGrid = false,
-  isDropTarget = false,
-  hasQuickAction = false,
-  hasActions = false,
-  showAsset,
-  customStyles = {},
-  customClasses = [],
-  onclick,
-  id,
-  role,
-  ...globals
+	rootClass = "spectrum-Card",
+	image,
+	title,
+	subtitle,
+	description,
+	footer,
+	isFocused = false,
+	isSelected = false,
+	isHorizontal = false,
+	isQuiet = false,
+	isGallery = false,
+	isGrid = false,
+	hasQuickAction = false,
+	hasActions = false,
+	showAsset,
+	customStyles = {},
+	customClasses = [],
+	id,
+	role,
+	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 
-  return html`
+	return html`
     <div
       class=${classMap({
         [rootClass]: true,
-        'is-selected': isSelected,
-        'is-focused': isFocused,
+        "is-selected": isSelected,
+        "is-focused": isFocused,
         [`${rootClass}--quiet`]: isQuiet,
         [`${rootClass}--gallery`]: isGallery,
         [`${rootClass}--horizontal`]: isHorizontal,

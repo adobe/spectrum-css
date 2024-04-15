@@ -113,6 +113,7 @@ governing permissions and limitations under the License.
   gap: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
   min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
   min-block-size: var(--mod-button-height, var(--spectrum-button-height));
+
   /* Start with text-only padding */
   padding-block: 0;
   padding-inline: var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text));
@@ -271,13 +272,13 @@ a.spectrum-Button {
   .spectrum-Icon,
   .spectrum-Button-label {
     visibility: visible;
-    opacity: 100%;
+    opacity: 1;
     transition: opacity var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) ease-in-out;
   }
 
   .spectrum-ProgressCircle {
     visibility: hidden;
-    opacity: 0%;
+    opacity: 0;
     transition: opacity var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) ease-in-out,
                 visibility 0ms linear var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms));
   }
@@ -289,14 +290,14 @@ a.spectrum-Button {
     .spectrum-Icon,
     .spectrum-Button-label {
       visibility: hidden;
-      opacity: 0%;
+      opacity: 0;
       transition: opacity var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) ease-in-out,
                   visibility 0ms linear var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms));
     }
 
     .spectrum-ProgressCircle {
       visibility: visible;
-      opacity: 100%;
+      opacity: 1;
       transition: opacity var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) ease-in-out;
     }
   }

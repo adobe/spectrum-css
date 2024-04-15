@@ -9,7 +9,6 @@ export const Template = ({
 	isOpen = true,
 	variant,
 	content = [],
-	...globals
 }) => {
 	return html`
 		<div class="${rootClass}-wrapper">

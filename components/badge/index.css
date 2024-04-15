@@ -330,6 +330,7 @@ governing permissions and limitations under the License.
 
   padding-inline-start: var(--mod-badge-icon-spacing-horizontal,
                       var(--spectrum-badge-icon-spacing-horizontal));
+
   /* icon with label has reduced padding between icon and text */
   padding-inline-end: var(--mod-badge-icon-text-spacing,
                       var(--spectrum-badge-icon-text-spacing));

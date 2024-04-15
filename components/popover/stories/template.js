@@ -38,11 +38,12 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
-	const nestedPopover = id === 'popover-nested' || id === 'popover-nested-2';
+	const nestedPopover = id === "popover-nested" || id === "popover-nested-2";
 
 	return html`
 		${when(typeof trigger === "function", () => trigger({
@@ -70,7 +71,7 @@ export const Template = ({
 					const triggerYCenter = (rect.top + rect.bottom) / 2;
 					const popWidth = popover.offsetWidth ?? 0;
 					const popHeight = popover.offsetHeight ?? 0;
-					const textDir = getComputedStyle(document.querySelector('html')).direction;
+					const textDir = getComputedStyle(document.querySelector("html")).direction;
 					let x, y;
 					let xOffset = "+ 0px";
 					let yOffset = "+ 0px";
@@ -85,26 +86,31 @@ export const Template = ({
 						yOffset = withTip
 							? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
 							: "- var(--spectrum-popover-animation-distance)";
-					} else if (position.includes("bottom") && !position.includes("-bottom")) {
+					}
+ else if (position.includes("bottom") && !position.includes("-bottom")) {
 						y = rect.bottom;
 						yOffset = "+ (var(--spectrum-popover-animation-distance))";
-					} else if (position.includes("left")) {
-						if (textDir == 'rtl') {
+					}
+ else if (position.includes("left")) {
+						if (textDir == "rtl") {
 							x = rect.right;
 							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
-						} else {
+						}
+ else {
 							x = rect.left - popWidth;
 							xOffset = withTip
 								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
 								: "- var(--spectrum-popover-animation-distance)";
 						}
-					} else if (position.includes("right")) {
-						if (textDir == 'rtl') {
+					}
+ else if (position.includes("right")) {
+						if (textDir == "rtl") {
 							x = rect.left - popWidth;
 							xOffset = withTip
 								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
 								: "- var(--spectrum-popover-animation-distance)";
-						} else {
+						}
+ else {
 							x = rect.right;
 							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
 						}
@@ -116,11 +122,14 @@ export const Template = ({
 					// Add start and end styles
 					if (position === "top-start" || position === "bottom-start") {
 						additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-					} else if (position === "top-end" || position === "bottom-end") {
+					}
+ else if (position === "top-end" || position === "bottom-end") {
 						additionalStyles["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
-					} else if (position === "left-top" || position === "right-top") {
+					}
+ else if (position === "left-top" || position === "right-top") {
 						additionalStyles["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-					} else if (position === "left-bottom" || position === "right-bottom") {
+					}
+ else if (position === "left-bottom" || position === "right-bottom") {
 						additionalStyles["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
 					}
 
@@ -132,7 +141,7 @@ export const Template = ({
 							...additionalStyles,
 						}
 					});
-				}, 100)
+				}, 100);
 				}
 		}))}
 

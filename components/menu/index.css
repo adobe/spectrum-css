@@ -222,7 +222,6 @@ governing permissions and limitations under the License.
     }
 
     .spectrum-Menu-item:hover, .spectrum-Menu-item:focus {
-
       .spectrum-Menu-itemCheckbox {
         --highcontrast-checkbox-highlight-color-hover: ButtonText;
         --highcontrast-checkbox-highlight-color-default: ButtonText;
@@ -280,6 +279,7 @@ governing permissions and limitations under the License.
 
   .spectrum-Menu-divider {
     --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-medium);
+
     &.spectrum-Divider--sizeS {
       --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-small);
     }
@@ -533,6 +533,7 @@ governing permissions and limitations under the License.
 .is-selectableMultiple .spectrum-Menu-item {
   align-items: start;
 }
+
 .is-selectableMultiple .spectrum-Menu-itemCheckbox {
   grid-area: iconArea;
 }
@@ -613,6 +614,7 @@ governing permissions and limitations under the License.
     var(--mod-menu-item-top-to-checkmark, var(--spectrum-menu-item-top-to-checkmark)) -
     var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text))
   );
+
   /* Checkmarks have text or an icon directly next to them. */
   margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }

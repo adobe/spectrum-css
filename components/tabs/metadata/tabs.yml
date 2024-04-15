@@ -267,7 +267,7 @@ examples:
       </div>
   - id: tabs-compact
     name: Compact (quiet)
-    description: 'Compact tabs should never be used without the quiet variation.'
+    description: "Compact tabs should never be used without the quiet variation."
     markup: |
       <div class="spectrum-Tabs spectrum-Tabs--sizeM spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
         <div class="spectrum-Tabs-item is-selected" tabindex="0">

@@ -447,7 +447,7 @@ governing permissions and limitations under the License.
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
 	/* stylelint-disable-next-line value-no-vendor-prefix */
-	-moz-appearance: textfield;
+	appearance: textfield;
 
 	/* All browsers - Change the input font styles */
 	text-overflow: ellipsis;
@@ -773,7 +773,7 @@ governing permissions and limitations under the License.
 
 	/* TODO: Determine if the vendor prefix toggling of appearance is still needed  */
 	/* stylelint-disable-next-line value-no-vendor-prefix */
-	-webkit-appearance: none;
+	appearance: none;
 
 	/*
     Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
@@ -784,7 +784,7 @@ governing permissions and limitations under the License.
     Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
   */
 	/* stylelint-disable-next-line value-no-vendor-prefix */
-	-moz-appearance: textfield;
+	appearance: textfield;
 
 	/* place in same cell: input, focus indicator, and grows sizer */
 	grid-row: 2;
@@ -802,7 +802,7 @@ governing permissions and limitations under the License.
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button {
 		/* stylelint-disable-next-line value-no-vendor-prefix */
-		-webkit-appearance: none;
+		appearance: none;
 		margin: 0;
 	}
 
@@ -816,14 +816,14 @@ governing permissions and limitations under the License.
    */
 	/* stylelint-disable selector-no-vendor-prefix */
 	&::-ms-input-placeholder {
-		opacity: 100%;
+		opacity: 1;
 	}
 	/* stylelint-enable selector-no-vendor-prefix */
 
 
 	/*** Input Placeholder Text ***/
 	&::placeholder {
-		opacity: 100%;
+		opacity: 1;
 		font-size: var(
 			--mod-textfield-placeholder-font-size,
 			var(--spectrum-textfield-placeholder-font-size)
@@ -1118,7 +1118,7 @@ governing permissions and limitations under the License.
 		resize: none;
 
 		/* The opacity must be set to 1 */
-		opacity: 100%;
+		opacity: 1;
 
 		&::placeholder {
 			color: var(

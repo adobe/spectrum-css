@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 .spectrum-ProgressCircle--indeterminate-fill-submask-2 {
   animation: 1s infinite linear spectrum-fill-mask-2;
 }
+
 @keyframes spectrum-fill-mask-1 {
   0% {
     transform: rotate(90deg);
@@ -254,6 +255,7 @@ governing permissions and limitations under the License.
     transform: rotate(90deg);
   }
 }
+
 @keyframes spectrum-fill-mask-2 {
   0% {
     transform: rotate(180deg);
@@ -495,10 +497,12 @@ governing permissions and limitations under the License.
     transform: rotate(180deg);
   }
 }
+
 @keyframes spectrum-fills-rotate {
   0% {
     transform: rotate(-90deg);
   }
+
   100% {
     transform: rotate(270deg);
   }

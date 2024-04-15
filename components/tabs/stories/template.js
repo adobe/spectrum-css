@@ -23,7 +23,6 @@ export const Template = ({
 	iconOnly = false,
 	customStyles = {},
 	content = [],
-	popoverOffset,
 	...globals
 }) => {
 	const { express } = globals;
@@ -31,7 +30,8 @@ export const Template = ({
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
@@ -83,26 +83,29 @@ export const Template = ({
 						return html`
 							<div
 								class=${classMap({
-									[`${rootClass}-item`]: true,
-									"is-selected": item?.isSelected ?? false,
-									"is-disabled": item?.isDisabled ?? false,
-								})}
+							[`${rootClass}-item`]: true,
+							"is-selected": item?.isSelected ?? false,
+							"is-disabled": item?.isDisabled ?? false,
+						})}
 								tabindex="0"
 							>
 								${when(item.icon, () =>
-									Icon({ ...globals, iconName: item.icon, size })
-								)}
+							Icon({ ...globals, iconName: item.icon, size })
+						)}
 								${when(
-									item.label && !iconOnly,
-									() =>
-										html`<span class="${rootClass}-itemLabel"
+							item.label && !iconOnly,
+							() =>
+								html`<span class="${rootClass}-itemLabel"
 											>${item.label}</span
 										>`
-								)}
+						)}
 								${selectionIndicator(item.isSelected)}
 							</div>
 						`;
-					} else return item;
+					}
+					else {
+						return item;
+					}
 				}
 			), () => html`
 				${Picker({
@@ -121,7 +124,7 @@ export const Template = ({
 							size,
 							role: "listbox",
 							subrole: "option",
-							customStyles: { minWidth: 'max-content' },
+							customStyles: { minWidth: "max-content" },
 							items: content.filter((_, idx) => idx !== 0).map(item => {
 								return {
 									...item,

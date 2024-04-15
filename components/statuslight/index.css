@@ -108,6 +108,7 @@ governing permissions and limitations under the License.
     forced-color-adjust: none;
     --highcontrast-statuslight-content-color-default: CanvasText;
     --highcontrast-statuslight-subdued-content-color-default: CanvasText;
+
     &::before {
       border: var(--mod-statuslight-border-width, var(--spectrum-statuslight-border-width)) solid ButtonText;
     }

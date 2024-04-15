@@ -13,32 +13,31 @@ import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
 import "../index.css";
 
 export const MenuItem = ({
-  rootClass,
-  label,
-  description,
-  iconName,
-  isHighlighted = false,
-  isActive = false,
-  isSelected = false,
-  isDisabled = false,
-  isChecked = false,
-  isFocused = false,
-  isDrillIn = false,
-  isCollapsible = false,
-  isOpen = false,
-  shouldTruncate,
-  maxInlineSize,
-  role = "menuitem",
-  items = [],
-  size,
-  id,
-  idx = 0,
-  hasActions,
-  selectionMode,
-  value,
-  ...globals
+	rootClass,
+	label,
+	description,
+	iconName,
+	isHighlighted = false,
+	isActive = false,
+	isSelected = false,
+	isDisabled = false,
+	isChecked = false,
+	isFocused = false,
+	isDrillIn = false,
+	isCollapsible = false,
+	isOpen = false,
+	shouldTruncate,
+	role = "menuitem",
+	items = [],
+	size,
+	id,
+	idx = 0,
+	hasActions,
+	selectionMode,
+	value,
+	...globals
 }) => {
-  return html`
+	return html`
     <li
       class=${classMap({
         [`${rootClass}`]: true,
@@ -65,7 +64,7 @@ export const MenuItem = ({
               `${rootClass}Icon`,
               "spectrum-Menu-chevron",
             ],
-          }) : ''}
+          }) : ""}
       ${iconName
         ? Icon({
             ...globals,
@@ -75,23 +74,23 @@ export const MenuItem = ({
               `${rootClass}Icon`,
               `${rootClass}Icon--workflowIcon`
             ]
-          }) : ''}
+          }) : ""}
       ${isCollapsible
         ? html`<span class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>`
-        : ''
+        : ""
       }
       ${selectionMode != "multiple" && !isCollapsible
         ? html`<span class=${classMap({
           [`${rootClass}Label`]: true,
-          ['spectrum-Switch-label']: hasActions,
-          [`spectrum-Menu-itemLabel--truncate`]: shouldTruncate,
+          ["spectrum-Switch-label"]: hasActions,
+          ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
           })}>
           ${label}
         </span>`
-        : ''}
+        : ""}
       ${typeof description != "undefined"
         ? html`<span class="${rootClass}Description">${description}</span>`
-        : ''}
+        : ""}
       ${isDrillIn
         ? Icon({
             ...globals,
@@ -102,7 +101,7 @@ export const MenuItem = ({
               "spectrum-Menu-chevron",
             ],
           })
-        : ''}
+        : ""}
       ${when(selectionMode == "multiple", () =>  html`
         ${Checkbox({
           ...globals,
@@ -127,10 +126,10 @@ export const MenuItem = ({
               "spectrum-Menu-checkmark",
             ],
           })
-        : ''}
+        : ""}
         ${value
           ? html`<span class="${rootClass}Value">${value}</span>`
-          : ''}
+          : ""}
         ${hasActions
           ? html`<div class="${rootClass}Actions">
           ${Switch({
@@ -145,41 +144,41 @@ export const MenuItem = ({
               ],
             })}
             </div>`
-          : ''}
-      ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size, shouldTruncate }) : ''}
+          : ""}
+      ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size, shouldTruncate }) : ""}
     </li>
-  `
+  `;
 };
 
 /**
  * Get the tray submenu back arrow name with scale number (defined in design spec).
  */
 const backArrowWithScale = (size = "m", iconName = "ArrowLeft") => {
-  switch (size) {
-    case "s":
-      return `${iconName}200`;
-    case "l":
-      return `${iconName}400`;
-    case "xl":
-      return `${iconName}500`;
-    default:
-      return `${iconName}300`;
-  }
-}
+	switch (size) {
+	case "s":
+		return `${iconName}200`;
+	case "l":
+		return `${iconName}400`;
+	case "xl":
+		return `${iconName}500`;
+	default:
+		return `${iconName}300`;
+	}
+};
 
 export const MenuGroup = ({
-  heading,
-  id,
-  idx = 0,
-  items = [],
-  isDisabled = false,
-  isSelectable = false,
-  isTraySubmenu = false,
-  shouldTruncate,
-  maxInlineSize,
-  subrole,
-  size,
-  ...globals
+	heading,
+	id,
+	idx = 0,
+	items = [],
+	isDisabled = false,
+	isSelectable = false,
+	isTraySubmenu = false,
+	shouldTruncate,
+	maxInlineSize,
+	subrole,
+	size,
+	...globals
 }) => html`
   <li
     id=${ifDefined(id)}
@@ -197,7 +196,7 @@ export const MenuGroup = ({
               ...globals,
               iconName: backArrowWithScale(size),
               size,
-              customClasses: [`spectrum-Menu-backIcon`]
+              customClasses: ["spectrum-Menu-backIcon"]
             })}
           </button>
           ${heading
@@ -228,25 +227,25 @@ export const MenuGroup = ({
 
 
 export const Template = ({
-  rootClass = "spectrum-Menu",
-  labelledby,
-  customClasses = [],
-  customStyles = {},
-  size,
-  isDisabled = false,
-  maxInlineSize,
-  shouldTruncate,
-  selectionMode = "none",
-  isOpen = false,
-  hasActions = false,
-  isTraySubmenu = false,
-  items = [],
-  role = "menu",
-  subrole = "menuitem",
-  id,
-  ...globals
+	rootClass = "spectrum-Menu",
+	labelledby,
+	customClasses = [],
+	customStyles = {},
+	size,
+	isDisabled = false,
+	maxInlineSize,
+	shouldTruncate,
+	selectionMode = "none",
+	isOpen = false,
+	hasActions = false,
+	isTraySubmenu = false,
+	items = [],
+	role = "menu",
+	subrole = "menuitem",
+	id,
+	...globals
 }) => {
-  const menuMarkup = html`
+	const menuMarkup = html`
     <ul
       class=${classMap({
         [rootClass]: true,
@@ -296,8 +295,8 @@ export const Template = ({
     </ul>
   `;
 
-  if (isTraySubmenu){
-    return Tray({ content: [menuMarkup] });
-  }
-  return menuMarkup;
+	if (isTraySubmenu) {
+		return Tray({ content: [menuMarkup] });
+	}
+	return menuMarkup;
 };

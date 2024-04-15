@@ -297,6 +297,7 @@ governing permissions and limitations under the License.
 				var(--spectrum-infield-button-background-color-hover)
 			);
 		}
+
 		.spectrum-InfieldButton-icon {
 			color: var(
 				--mod-infield-button-icon-color-hover,
@@ -312,6 +313,7 @@ governing permissions and limitations under the License.
 				var(--spectrum-infield-button-background-color-down)
 			);
 		}
+
 		.spectrum-InfieldButton-icon {
 			color: var(
 				--mod-infield-button-icon-color-down,
@@ -329,6 +331,7 @@ governing permissions and limitations under the License.
 				var(--spectrum-infield-button-background-color-key-focus)
 			);
 		}
+
 		.spectrum-InfieldButton-icon {
 			color: var(
 				--mod-infield-button-icon-color-key-focus,
@@ -370,6 +373,7 @@ governing permissions and limitations under the License.
 		--mod-infield-button-inner-edge-to-fill,
 		var(--spectrum-infield-button-inner-edge-to-fill)
 	);
+
 	.spectrum-InfieldButton-fill {
 		padding-block-start: calc(var(--mod-infield-button-stacked-fill-padding-outer, var(--spectrum-infield-button-stacked-fill-padding-outer)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 		padding-block-end: calc(var(--mod-infield-button-stacked-fill-padding-inner, var(--spectrum-infield-button-stacked-fill-padding-inner)) - var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill)));
@@ -388,11 +392,13 @@ governing permissions and limitations under the License.
 		);
 	}
 }
+
 .spectrum-InfieldButton--bottom {
 	padding-block-start: var(
 		--mod-infield-button-inner-edge-to-fill,
 		var(--spectrum-infield-button-inner-edge-to-fill)
 	);
+
 	.spectrum-InfieldButton-fill {
 		padding-block-start: calc(var(--mod-infield-button-stacked-fill-padding-inner, var(--spectrum-infield-button-stacked-fill-padding-inner)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 		padding-block-end: calc(var(--mod-infield-button-stacked-fill-padding-outer, var(--spectrum-infield-button-stacked-fill-padding-outer)) - var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));

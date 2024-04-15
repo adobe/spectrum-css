@@ -10,8 +10,6 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-CoachMark",
-	variant,
-	isCoachMarkOpen,
 	customClasses,
 	hasActionMenu = false,
 	hasPagination,
@@ -26,9 +24,9 @@ export const Template = ({
 		${Popover({
 			...globals,
 			nested: true,
-			testId: 'popover-nested',
-			id: 'popover-nested',
-			triggerId: 'trigger-nested',
+			testId: "popover-nested",
+			id: "popover-nested",
+			triggerId: "trigger-nested",
 			customStyles: {
 				"margin-inline-start": "0px",
 			},
@@ -36,22 +34,21 @@ export const Template = ({
 			isOpen: true,
 			content: [
 				html`
-				${hasImage ? html
-					`<div class="${rootClass}-image-wrapper">
-					<img class="${rootClass}-image" src="example-card-landscape.png" />
-				</div>`
-					: ''}
+				${hasImage ? html`
+					<div class="${rootClass}-image-wrapper">
+						<img class="${rootClass}-image" src="example-card-landscape.png" />
+					</div>` : ""}
 				<div class="spectrum-CoachMark-header">
 					<div class="spectrum-CoachMark-title">Try playing with a pixel brush</div>
 					<div class="spectrum-CoachMark-action-menu">
 					${hasActionMenu ? ActionMenu({
 						isOpen,
 						popoverPosition: "right",
-						popoverTestId: 'popover-nested-2',
-						popoverId: 'popover-nested-2',
+						popoverTestId: "popover-nested-2",
+						popoverId: "popover-nested-2",
 						popoverTriggerId: "trigger-nested-2",
 						customStyles: { "margin-block-start": "30px", "margin-inline-start": "-32px" },
-						iconName: 'More',
+						iconName: "More",
 						size: globals.scale === "large" ? "s" : "m",
 						items: [
 							{
@@ -68,7 +65,7 @@ export const Template = ({
 					Pixel brushes use pixels to create brush strokes, just like in other design and drawing tools. Start drawing, and zoom in to see the pixels in each stroke.
 				</div>
 				<div class="${rootClass}-footer">
-				${hasPagination ? html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>` : ''}
+				${hasPagination ? html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>` : ""}
 				${ButtonGroup({
 					customClasses: globals.scale === "large" ? [`${rootClass}-buttongroup--mobile`] : [`${rootClass}-buttongroup`],
 					size: globals.scale === "large" ? "s" : "m",

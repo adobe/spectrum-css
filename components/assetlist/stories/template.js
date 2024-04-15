@@ -48,7 +48,7 @@ export const AssetListItem = ({
 		${when(
 			image,
 			() =>
-				html`<img src=${image ?? exampleImage} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
+				html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
 		)}
 		${when(iconName, () =>
 			Icon({
@@ -96,7 +96,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 		>
-			${items.map((item, idx) => {
+			${items.map((item) => {
 				return AssetListItem({
 					rootClass: `${rootClass}-item`,
 					onclick: () => {

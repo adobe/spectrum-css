@@ -3,7 +3,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { when } from 'lit/directives/when.js';
+import { when } from "lit/directives/when.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
@@ -25,21 +25,18 @@ export const Picker = ({
 	isInvalid = false,
 	isLoading = false,
 	isDisabled = false,
-	isReadOnly = false,
 	customClasses = [],
 	customStyles = {},
-	content = [],
-	iconName,
-	id,
 	...globals
 }) => {
-	const [_, updateArgs] = useArgs();
+	const [, updateArgs] = useArgs();
 
 	const { express } = globals;
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
@@ -51,34 +48,34 @@ export const Picker = ({
 					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--sideLabel`]: labelPosition != "top",
-				[`is-invalid`]: isInvalid,
-				[`is-open`]: isOpen,
-				[`is-loading`]: isLoading,
-				[`is-keyboardFocused`]: isKeyboardFocused,
+				["is-invalid"]: isInvalid,
+				["is-open"]: isOpen,
+				["is-loading"]: isLoading,
+				["is-keyboardFocused"]: isKeyboardFocused,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			?disabled=${isDisabled}
 			aria-haspopup="listbox"
 			style=${ifDefined(styleMap(customStyles))}
 			type="button"
-			@click=${(e) => {
+			@click=${() => {
 				updateArgs({ isOpen: !isOpen });
 			}}
 		>
 			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
 			${isLoading
 				? ProgressCircle({
-						size: "s",
-						isIndeterminate: true,
-				  })
+					size: "s",
+					isIndeterminate: true,
+				})
 				: ""}
 			${isInvalid && !isLoading
 				? Icon({
-						...globals,
-						size,
-						iconName: "Alert",
-						customClasses: [`${rootClass}-validationIcon`],
-				  })
+					...globals,
+					size,
+					iconName: "Alert",
+					customClasses: [`${rootClass}-validationIcon`],
+				})
 				: ""}
 			${Icon({
 				...globals,
@@ -89,7 +86,7 @@ export const Picker = ({
 			})}
 		</button>
 	`;
-}
+};
 
 export const Template = ({
 	rootClass = "spectrum-Picker",
@@ -107,7 +104,6 @@ export const Template = ({
 	isReadOnly = false,
 	withSwitch = false,
 	fieldLabelStyle = {},
-	fieldLabelText,
 	customClasses = [],
 	customStyles = {},
 	customPopoverStyles = {},
@@ -115,40 +111,40 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-
 	const { express } = globals;
 	try {
 		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
 		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	} catch (e) {
+	}
+	catch (e) {
 		console.warn(e);
 	}
 
 	let iconName = "ChevronDown200";
 	switch (size) {
-		case "s":
-			iconName = "ChevronDown75";
-			break;
-		case "m":
-			iconName = "ChevronDown100";
-			break;
-		case "xl":
-			iconName = "ChevronDown300";
-			break;
-		default:
-			iconName = "ChevronDown200";
+	case "s":
+		iconName = "ChevronDown75";
+		break;
+	case "m":
+		iconName = "ChevronDown100";
+		break;
+	case "xl":
+		iconName = "ChevronDown300";
+		break;
+	default:
+		iconName = "ChevronDown200";
 	}
 
 	return html`
 		${label
 			? FieldLabel({
-					...globals,
-					size,
-					label,
-					isDisabled,
-					style: fieldLabelStyle,
-					alignment: labelPosition,
-			  })
+				...globals,
+				size,
+				label,
+				isDisabled,
+				style: fieldLabelStyle,
+				alignment: labelPosition,
+			})
 			: ""}
 		${labelPosition == "left" ?
 			html`<div style="display: inline-block">
@@ -197,28 +193,29 @@ export const Template = ({
 
 		${helpText
 			? HelpText({
-					text: helpText,
-					variant: isInvalid ? "negative" : "neutral",
-					hideIcon: true,
-			  })
+				text: helpText,
+				variant: isInvalid ? "negative" : "neutral",
+				hideIcon: true,
+			})
 			: ""}
-	${when(content.length !== 0, () =>
-			Popover({
-				...globals,
-				isOpen: isOpen && !isDisabled,
-				withTip: false,
-				position: "bottom",
-				isQuiet,
-				customStyles: customPopoverStyles,
-				content,
-		}))}
-		${when (withSwitch, () => Switch({
-				...globals,
-				size,
-				label: "Toggle switch",
-				customStyles: {
-					"padding-inline-start": "15px"
-				}
+		${when(content.length !== 0, () =>
+				Popover({
+					...globals,
+					isOpen: isOpen && !isDisabled,
+					withTip: false,
+					position: "bottom",
+					isQuiet,
+					customStyles: customPopoverStyles,
+					content,
+				})
+		)}
+		${when(withSwitch, () => Switch({
+			...globals,
+			size,
+			label: "Toggle switch",
+			customStyles: {
+				"padding-inline-start": "15px"
+			}
 		}))}
 	`;
 };

@@ -123,7 +123,7 @@ governing permissions and limitations under the License.
 
   &:focus-visible {
     .spectrum-AssetCard-assetContainer::before {
-      opacity: 100%;
+      opacity: 1;
     }
   }
 }
@@ -160,7 +160,7 @@ governing permissions and limitations under the License.
 
     border-radius: var(--mod-assetcard-focus-ring-border-radius, var(--spectrum-assetcard-focus-ring-border-radius));
 
-    opacity: 0%;
+    opacity: 0;
     pointer-events: none;
     transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
   }

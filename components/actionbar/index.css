@@ -84,12 +84,12 @@ governing permissions and limitations under the License.
 
   /* Take up no space and be invisible when not open */
   block-size: 0;
-  opacity: 0%;
+  opacity: 0;
 
   &.is-open {
     /* add ActionBar bottom margin to height for correct spacing even when sticky */
     block-size: calc(var(--mod-actionbar-spacing-outer-edge, var(--spectrum-actionbar-spacing-outer-edge)) + var(--mod-actionbar-height, var(--spectrum-actionbar-height)));
-    opacity: 100%;
+    opacity: 1;
   }
 
   .spectrum-ActionBar-popover {

@@ -84,7 +84,7 @@ export const TreeViewItem = ({
 							setName: "ui",
 							iconName: "ChevronRight",
 							customClasses: [`${rootClass}-itemIndicator`],
-					  })
+					})
 					: ""}
 				${icon
 					? Icon({
@@ -93,7 +93,7 @@ export const TreeViewItem = ({
 							iconName: icon,
 							setName: iconSet,
 							customClasses: [`${rootClass}-itemIcon`],
-					  })
+					})
 					: ""}
 				${thumbnail
 					? Thumbnail({
@@ -107,7 +107,7 @@ export const TreeViewItem = ({
 							isLayer: true,
 							isSelected,
 							customClasses: [`${rootClass}-itemThumbnail`],
-					  })
+					})
 					: ""}
 				<span class="${rootClass}-itemLabel">${label}</span>
 			</a>
@@ -118,7 +118,7 @@ export const TreeViewItem = ({
 						size,
 						rootClass: "spectrum-TreeView",
 						customClasses: ["is-opened"],
-				  })
+				})
 				: ""}
 		</li>
 	`;
