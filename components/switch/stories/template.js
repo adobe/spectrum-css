@@ -14,19 +14,8 @@ export const Template = ({
 	isEmphasized,
 	customClasses = [],
 	customStyles = {},
-	id,
-	...globals
+	id
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
 	// ID attribute value for the input element.
 	const inputId = id ? `${id}-input` : "switch-onoff-0";
 
