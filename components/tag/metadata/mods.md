@@ -8,6 +8,7 @@
 | `--mod-tag-avatar-spacing-block-end`                 |
 | `--mod-tag-avatar-spacing-block-start`               |
 | `--mod-tag-avatar-spacing-inline-end`                |
+| `--mod-tag-avatar-spacing-inline-start`              |
 | `--mod-tag-background-color`                         |
 | `--mod-tag-background-color-active`                  |
 | `--mod-tag-background-color-disabled`                |
@@ -57,6 +58,7 @@
 | `--mod-tag-icon-spacing-block-end`                   |
 | `--mod-tag-icon-spacing-block-start`                 |
 | `--mod-tag-icon-spacing-inline-end`                  |
+| `--mod-tag-icon-spacing-inline-start`                |
 | `--mod-tag-label-font-weight`                        |
 | `--mod-tag-label-line-height`                        |
 | `--mod-tag-label-line-height-cjk`                    |
@@ -68,4 +70,5 @@
 | `--mod-tag-spacing-inline-start`                     |
 | `--mod-tag-thumbnail-size`                           |
 | `--mod-tag-thumbnail-spacing-inline-end`             |
+| `--mod-tag-thumbnail-spacing-inline-start`           |
 | `--mod-thumbnail-opacity-disabled`                   |

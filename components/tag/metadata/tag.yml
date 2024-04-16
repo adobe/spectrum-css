@@ -16,18 +16,22 @@ sections:
       - Thumbnails can now be used in tags.
       - New corner rounding, min/max width, and spacing tokens are used.
       - Medium size is now the default, and the class `.spectrum-Tag--sizeM` has been removed.
+      - Spacing has been adjusted to match design spec.
       - Borders have been made transparent for almost all variants, and therefore many mod custom properties related to borders have been removed.
       - New and removed mods include:
         - New mods:
+          - `--mod-tag-avatar-spacing-inline-start`
           - `--mod-tag-avatar-size`
           - `--mod-tag-background-color-invalid`
           - `--mod-tag-edge-to-clear-icon`
+          - `--mod-tag-icon-spacing-inline-start`
           - `--mod-tag-label-line-height-cjk`
           - `--mod-tag-label-to-clear-icon`
           - `--mod-tag-maximum-width`
           - `--mod-tag-minimum-width`
           - `--mod-thumbnail-opacity-disabled`
           - `--mod-tag-thumbnail-size`
+          - `--mod-tag-thumbnail-spacing-inline-start`
           - `--mod-tag-thumbnail-spacing-inline-end`
         - Removed mods:
           - `--mod-tag-border-color-active`

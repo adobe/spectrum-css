@@ -87,21 +87,24 @@ governing permissions and limitations under the License.
 	--spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
 
 	/* spacing */
-	--spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
+	--spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-text-100);
 
 	/* icon spacing */
-	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
 	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
 	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
+	--spectrum-tag-icon-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
+	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
 	/* avatar */
 	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-100);
 	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
 	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
+	--spectrum-tag-avatar-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
 	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
 	/* thumbnail */
 	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-100);
+	--spectrum-tag-thumbnail-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
 	--spectrum-tag-thumbnail-spacing-inline-end: var(--spectrum-text-to-visual-100);
 
 	/* label spacing */
@@ -127,19 +130,22 @@ governing permissions and limitations under the License.
 	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-small);
 
-	--spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-75);
+	--spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-text-75);
 
 	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-75);
 	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-75);
+	--spectrum-tag-icon-spacing-inline-start: var(--spectrum-component-edge-to-visual-75);
 	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
 	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-50);
 	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-small);
 	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-small);
+	--spectrum-tag-avatar-spacing-inline-start: var(--spectrum-component-edge-to-visual-75);
 	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
 	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-50);
-	--spectrum-tag-thumbnail-spacing-inline-end: var(--spectrum-text-to-visual-50);
+	--spectrum-tag-thumbnail-spacing-inline-start: var(--spectrum-component-edge-to-visual-75);
+	--spectrum-tag-thumbnail-spacing-inline-end: var(--spectrum-text-to-visual-75);
 
 	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
 	--spectrum-tag-label-spacing-inline-end: var(--spectrum-component-edge-to-text-75);
@@ -156,18 +162,21 @@ governing permissions and limitations under the License.
 	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-200);
 	--spectrum-tag-corner-radius: var(--spectrum-corner-radius-medium-size-large);
 
-	--spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-visual-200);
+	--spectrum-tag-spacing-inline-start: var(--spectrum-component-edge-to-text-200);
 
 	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-200);
 	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-200);
+	--spectrum-tag-icon-spacing-inline-start: var(--spectrum-component-edge-to-visual-200);
 	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
 	--spectrum-tag-avatar-size: var(--spectrum-avatar-size-200);
 	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-large);
 	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-large);
+	--spectrum-tag-avatar-spacing-inline-start: var(--spectrum-component-edge-to-visual-200);
 	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
 	--spectrum-tag-thumbnail-size: var(--spectrum-thumbnail-size-200);
+	--spectrum-tag-thumbnail-spacing-inline-start: var(--spectrum-component-edge-to-visual-200);
 	--spectrum-tag-thumbnail-spacing-inline-end: var(--spectrum-text-to-visual-200);
 
 	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
@@ -213,16 +222,24 @@ governing permissions and limitations under the License.
 
 		margin-block-start: calc(var(--mod-tag-icon-spacing-block-start, var(--spectrum-tag-icon-spacing-block-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		margin-block-end: calc(var(--mod-tag-icon-spacing-block-end, var(--spectrum-tag-icon-spacing-block-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+
+		/* offset to the difference between icon spacing and tag spacing */
+		margin-inline-start: calc(var(--mod-tag-icon-spacing-inline-start, var(--spectrum-tag-icon-spacing-inline-start)) - var(--mod-tag-spacing-inline-start, var(--spectrum-tag-spacing-inline-start)));
 		margin-inline-end: var(--mod-tag-icon-spacing-inline-end, var(--spectrum-tag-icon-spacing-inline-end));
 	}
 
 	.spectrum-Avatar {
 		margin-block-start: calc(var(--mod-tag-avatar-spacing-block-start, var(--spectrum-tag-avatar-spacing-block-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		margin-block-end: calc(var(--mod-tag-avatar-spacing-block-end, var(--spectrum-tag-avatar-spacing-block-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+
+		/* offset to the difference between avatar spacing and tag spacing */
+		margin-inline-start: calc(var(--mod-tag-avatar-spacing-inline-start, var(--spectrum-tag-avatar-spacing-inline-start)) - var(--mod-tag-spacing-inline-start, var(--spectrum-tag-spacing-inline-start)));
 		margin-inline-end: var(--mod-tag-avatar-spacing-inline-end, var(--spectrum-tag-avatar-spacing-inline-end));
 	}
 
 	.spectrum-Thumbnail {
+		/* offset to the difference between thumbnail spacing and tag spacing */
+		margin-inline-start: calc(var(--mod-tag-thumbnail-spacing-inline-start, var(--spectrum-tag-thumbnail-spacing-inline-start)) - var(--mod-tag-spacing-inline-start, var(--spectrum-tag-spacing-inline-start)));
 		margin-inline-end: var(--mod-tag-thumbnail-spacing-inline-end, var(--spectrum-tag-thumbnail-spacing-inline-end));
 	}
 
@@ -234,7 +251,7 @@ governing permissions and limitations under the License.
 		padding-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
 		/* use negative margin to cancel label to edge margin, then add clear button start margin */
-		margin-inline-start: calc(var(--mod-tag-label-to-clear-icon, var(--spectrum-tag-label-to-clear-icon)) - (var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end))));
+		margin-inline-start: calc(var(--mod-tag-label-to-clear-icon, var(--spectrum-tag-label-to-clear-icon)) - calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))));
 		margin-inline-end: calc(var(--mod-tag-edge-to-clear-icon, var(--spectrum-tag-edge-to-clear-icon)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
 		/* ensure clear button is correct color */
