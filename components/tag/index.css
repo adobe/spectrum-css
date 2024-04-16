@@ -250,8 +250,7 @@ governing permissions and limitations under the License.
 		padding-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		padding-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
-		/* use negative margin to cancel label to edge margin, then add clear button start margin */
-		margin-inline-start: calc(var(--mod-tag-label-to-clear-icon, var(--spectrum-tag-label-to-clear-icon)) - calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))));
+		margin-inline-start: var(--mod-tag-label-to-clear-icon, var(--spectrum-tag-label-to-clear-icon));
 		margin-inline-end: calc(var(--mod-tag-edge-to-clear-icon, var(--spectrum-tag-edge-to-clear-icon)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
 		/* ensure clear button is correct color */
@@ -285,8 +284,10 @@ governing permissions and limitations under the License.
 
 		padding-block-start: calc(var(--mod-tag-label-spacing-block, var(--spectrum-tag-label-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
-		/* space from label text to end edge */
-		margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+		/* space from label text to end edge, only apply if label is last child before edge */
+		&:last-child {
+			margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+		}
 
 		&:lang(ja),
 		&:lang(zh),
