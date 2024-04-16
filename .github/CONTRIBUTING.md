@@ -91,6 +91,8 @@ Commit all changes with a [conventional commit message](https://www.conventional
 git commit -m "fix(calendar): rendering issue in Safari, fixes #252"
 ```
 
+To ensure that we release your changes properly, [add a changeset](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md) to your branch, [following the steps outlined in the "multi-package repository" section of the Changesets docs](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md#i-am-in-a-multi-package-repository-a-mono-repo) via the `yarn changeset` command. Once complete, stage the change and commit it to your branch.
+
 Make sure your branch is up to date with the original repo:
 
 ```shell
@@ -116,7 +118,7 @@ At this point you're waiting on us. We do our best to keep on top of all the pul
 
 Some things that will increase the chance that your pull request is accepted:
 
--   Write a thorough pull request description, include screenshots, and test your changes across all [evergreen browsers](https://github.com/adobe/spectrum-css?tab=readme-ov-file#browser-support).
--   Write out your test cases for any new features or bug fixes in as much detail as possible and include them in the pull request description.
--   Make sure the PR merges cleanly with the latest main.
--   Describe your feature/bugfix and why it's needed/important in the pull request description.
+- Write a thorough pull request description, include screenshots, and test your changes across all [evergreen browsers](https://github.com/adobe/spectrum-css?tab=readme-ov-file#browser-support).
+- Write out your test cases for any new features or bug fixes in as much detail as possible and include them in the pull request description.
+- Make sure the PR merges cleanly with the latest main.
+- Describe your feature/bugfix and why it's needed/important in the pull request description.
