@@ -51,23 +51,23 @@ For example, `actionbar` gets its tokens from `vars`, and requires `button`, `ch
 
 ```json
 {
-	"name": "@spectrum-css/actionbar",
-	"peerDependencies": {
-		"@spectrum-css/button": "^2.0.0",
-		"@spectrum-css/checkbox": "^2.0.0",
-		"@spectrum-css/icon": "^2.0.0",
-		"@spectrum-css/popover": "^2.0.0",
-		"@spectrum-css/vars": "^3.0.0-beta.0"
-	},
-	"devDependencies": {
-		"@spectrum-css/button": "^2.0.0",
-		"@spectrum-css/checkbox": "^2.0.0",
-		"@spectrum-css/component-builder": "^1.0.0",
-		"@spectrum-css/icon": "^2.0.0",
-		"@spectrum-css/popover": "^2.0.0",
-		"@spectrum-css/table": "^2.0.0",
-		"@spectrum-css/vars": "^3.0.0-beta.0"
-	}
+  "name": "@spectrum-css/actionbar",
+  "peerDependencies": {
+    "@spectrum-css/button": "^2.0.0",
+    "@spectrum-css/checkbox": "^2.0.0",
+    "@spectrum-css/icon": "^2.0.0",
+    "@spectrum-css/popover": "^2.0.0",
+    "@spectrum-css/vars": "^3.0.0-beta.0"
+  },
+  "devDependencies": {
+    "@spectrum-css/button": "^2.0.0",
+    "@spectrum-css/checkbox": "^2.0.0",
+    "@spectrum-css/component-builder": "^1.0.0",
+    "@spectrum-css/icon": "^2.0.0",
+    "@spectrum-css/popover": "^2.0.0",
+    "@spectrum-css/table": "^2.0.0",
+    "@spectrum-css/vars": "^3.0.0-beta.0"
+  }
 }
 ```
 
@@ -78,6 +78,6 @@ The release will error out if:
 
 ## Releasing components
 
-Any change to a component or a component's dependencies results in a release of that component and all components dependent on that asset. Component releases cannot be done ala carte and must be done from the top-level, managed by lerna.
+Any change to a component or a component's dependencies will require a release of that component and all components that depend upon it. Component releases cannot be done ala carte and must be done from the top-level.
 
 See [Releasing](/README.md#Releasing) for more information.
