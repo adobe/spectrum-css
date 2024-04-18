@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isKeyboardFocused, isQuiet, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isKeyboardFocused, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SearchGroup } from "./search.test.js";
