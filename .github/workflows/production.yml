@@ -37,7 +37,7 @@ jobs:
                     - macos-latest
                     - ubuntu-latest
                 node-version:
-                    - 18
+                    - 20
         uses: ./.github/workflows/build.yml
         with:
             system: ${{ matrix.system }}
