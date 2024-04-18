@@ -6,60 +6,35 @@ import { Meta, Title } from '@storybook/blocks';
 
 ## Versioning
 
-This project versions components independently, meaining each component has its own version number, updated independently of other components. We follow [semantic versioning](https://semver.org/) and as such, each release is versioned according to the following rules:
+This project versions components independently, meaning each component has its own version number, updated independently of other components. We follow [semantic versioning](https://semver.org/) and as such, each release is versioned according to the following rules:
 
-- **Major**: Breaking changes such as API changes or removal of features
+- **Major**: Breaking changes such as API changes, the removal of features, or changes to `--mod` custom properties
 - **Minor**: New features or enhancements
 - **Patch**: Bug fixes or minor improvements
 
-Versioning is handled by a combination of [conventional commits]() and [Lerna](), which together, automatically update the version number of a component when it is released. This is done by analyzing the commit history and determining the type of changes that have been made. For example, if a commit message contains the word `fix`, Lerna will automatically bump the patch version of the component. If the commit message contains the word `feat`, Lerna will bump the minor version. If the commit message contains the word `BREAKING CHANGE`, Lerna will bump the major version.
+Versioning (and package publishing) is handled by [Changesets](https://github.com/changesets/changesets), which lets contributors declare how their changes should be released.
 
-## Tooling
+Additionally, we use the [Conventional Commits](https://www.conventionalcommits.org/) specification for writing our commit messages to help communicate the types of changes we're making to the codebase.
 
-Releasing individual components is handled by Lerna. When any component or its dependencies change, Lerna will queue that component (and all of its dependents) up for a release.
+### Changesets usage
 
-To release everything that has changed, run:
+A changeset is a piece of information about changes made in a branch or a commit. It holds three bits of information:
+* What we need to release
+* What the next version we want to release is (using a [semver bump type](https://semver.org/))
+* A changelog entry for the released packages
 
-```shell
-yarn release
-```
+Not every change to the codebase will require a release, but any changes to files within the `/components` directory **will** require a release. Generally, when thinking about versioning and releases, it's a good idea to consider the question: "does this change need to be consumed by someone or something outside of Spectrum CSS?" If the answer to that question is "yes", then the changes will likely require a changeset.
 
-This command runs a cache clear and full build of all components and the ui-icons package before kicking off `lerna publish --no-private` under the hood. Lerna publish evaluates all changed components and prompts to the command line for approval before publishing to NPM. Version numbers are automatically determined, changelogs generated, and then packages are published. Lerna is configured in the `lerna.json` file found in the root of the monorepo.
+A changeset can be [added locally by the author](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md#i-am-in-a-multi-package-repository-a-mono-repo) by invoking the command line script, or it can be added during the Pull Request process by a project maintainer via the [Changesets GitHub bot](https://github.com/changesets/bot). The result of either method will be a single commit that adds a markdown file with YAML frontmatter describing the changes.
+
+Additionally, [multiple changesets](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md#tips-on-adding-changesets) can be added to a Pull Request.
+
+## Releasing
+
+Releases are handled via Changesets. Specifically, via the [Changesets GitHub action](https://github.com/changesets/action). When there are new changesets on the [configured baseBranch](https://github.com/changesets/changesets/blob/main/docs/config-file-options.md#basebranch-git-branch-name) (usually `main` in our repo), the action will create a new Pull Request with all of the package versions updated and changelogs updated. The Pull Request can then be merged back into `main` and the updated packages can be published manually or automatically via the action.
+
+This allows for maintainers and contributors to review the proposed version and changelog updates and make changes as necessary before the publish step.
 
 ## Prereleases
 
-Occasionally, it can be helpful for downstream consumers to test changes before they're ready for a stable release. To facilitate this, we can publish prerelease versions. Prereleases are published to the `beta` dist-tag on NPM, and can be installed by consumers using the `@beta` tag. To publish a prerelease:
-
-1. Ensure you're working on a branch other than `main`.
-2. Once your change(s) are ready to be committed, be aware of the severity of the change(s) and be sure to author your commit message so that Lerna understands how to increase the version number(s) of the affected components.
-3. Once your changes are committed, you **must** build the affected package(s) locally **before** publishing them to npm. An npm task for cleaning, building, and beta publishing is available. This command will perform a full clean of the affected directories, a full build of the compiled assets, and will attempt to bump the version numbers in the affected package(s) (via `lerna publish --conventional-prerelease --preid beta --pre-dist-tag beta --no-private`). Run the following command to publish a beta release:
-  ```shell
-  yarn release:beta-from-package
-  ```
-4. Before publishing to npm, Lerna will show a preview of the affected package version numbers that look something like: `@spectrum-css/tag: 3.3.8 => 3.3.9-beta.0`. You will be asked to confirm and continue with publishing the changes or cancel.
-5. At this time, open the `dist` directory of the affected package(s) and ensure that the contents are as expected. If everything looks good, select `y` to publish the affected package(s) to npm. If the `dist` directory is not as expected or assets appear to be missing, select `n` to cancel the release and address the issue(s) before trying again.
-6. Selecting `y` to publish will publish the affected package(s) to npm with the `beta` dist-tag. You should see a summary of the published assets from Lerna and a message confirming successful publication.
-7. Be sure to communicate the availability of the beta release to any consumers who may be interested in testing the changes. Consumers can install the beta release by running `npm install @spectrum-css/<package>@beta` or `yarn add @spectrum-css/<package>@beta`.
-
-## Manual versioning and publishing
-
-In some cases, you may need to manually version and publish a package. This is typically only necessary when a package has been updated in a way that Lerna does not understand, such as when a package has been updated in a way that does not trigger a version bump or when you want to prevent consuming packages from receiving version bumps as well.
-
-This workflow is not recommended for general use, as it can lead to confusion and inconsistency in versioning. It should only be used when absolutely necessary and with caution. It's also a helpful approach to use when resolving a previously failed Lerna command as often Lerna leaves a subset of packages in a half-published state when it runs into errors.
-
-To manually version and publish a package:
-
-1. Ensure you're working on a branch other than `main`.
-2. Manually update the version number in the `package.json` file of the affected package(s). Be sure to follow [semantic versioning](https://semver.org/) when updating the version number. For example, to release a manual beta version, you might update the version number from `3.3.8` to `3.3.9-beta.0`.
-3. Save and commit your changes with an appropriate conventional commit message. For example, `chore(release): manually version @spectrum-css/<package> for beta release`.
-4. Once your changes are committed, you **must** build the affected package(s) locally **before** publishing them to npm. To manually build only a specific package, run the following command:
-  ```shell
-  cross-env NODE_ENV=production yarn builder <package> --skip-nx-cache --verbose
-  ```
-5. Once the affected package(s) are built, confirm the results in the `dist` directory of the affected package(s). If everything looks good, you can publish the affected package(s) to npm.
-6. To manually publish a package, run the following command:
-  ```shell
-  yarn lerna publish from-package
-  ```
-7. Follow the prompts to confirm and continue with publishing the changes or cancel. If you choose to continue, expect the affected package(s) to be published to npm with the version number(s) you manually set in the `package.json` file.
-8. Communicate the availability of the new release to any consumers who may be interested in testing the changes. Consumers can install the manual release by running `npm install @spectrum-css/<package>@<version>` or `yarn add @spectrum-css/<package>@<version>`.
+Information about Changesets and prereleases can be found [here](https://github.com/changesets/changesets/blob/main/docs/prereleases.md).
