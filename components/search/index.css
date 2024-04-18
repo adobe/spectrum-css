@@ -117,21 +117,24 @@
 	--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
 }
 
-@media (forced-colors: active) {
-	.spectrum-Search .spectrum-Search-textfield,
-	.spectrum-Search .spectrum-Search-textfield .spectrum-Search-input {
-		--highcontrast-search-color-default: CanvasText;
-		--highcontrast-search-color-hover: CanvasText;
-		--highcontrast-search-color-focus: CanvasText;
-		--highcontrast-search-color-disabled: GrayText;
-	}
+/* Standard / Default */
+.spectrum-Search {
+	display: inline-block;
+	position: relative;
+	inline-size: var(
+		--mod-search-inline-size,
+		var(--spectrum-search-inline-size)
+	);
+	min-inline-size: var(
+		--mod-search-min-inline-size,
+		var(--spectrum-search-min-inline-size)
+	);
 
-	.spectrum-Search .spectrum-Search-clearButton {
-		.spectrum-ClearButton-fill {
-			/* Avoid button background color overlapping on border. */
-			forced-color-adjust: none;
-			background-color: transparent;
-		}
+	.spectrum-HelpText {
+		margin-block-start: var(
+			--mod-search-to-help-text,
+			var(--spectrum-search-to-help-text)
+		);
 	}
 }
 
@@ -213,5 +216,23 @@
 	.spectrum-Search-input {
 		padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) - var(--mod-search-border-width, var(--spectrum-search-border-width)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
 		padding-inline-end: var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size));
+	}
+}
+
+@media (forced-colors: active) {
+	.spectrum-Search .spectrum-Search-textfield,
+	.spectrum-Search .spectrum-Search-textfield .spectrum-Search-input {
+		--highcontrast-search-color-default: CanvasText;
+		--highcontrast-search-color-hover: CanvasText;
+		--highcontrast-search-color-focus: CanvasText;
+		--highcontrast-search-color-disabled: GrayText;
+	}
+
+	.spectrum-Search .spectrum-Search-clearButton {
+		.spectrum-ClearButton-fill {
+			/* Avoid button background color overlapping on border. */
+			forced-color-adjust: none;
+			background-color: transparent;
+		}
 	}
 }
