@@ -13,12 +13,12 @@
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
 	"scripts": {
-		"build": "yarn builder tag:component",
+		"build": "yarn builder tag:component,ui-icons",
 		"build:preview": "nx build storybook",
 		"build:site": "nx clean docs && nx build docs && nx run storybook:build:docs",
 		"builder": "nx run-many --target build --projects",
 		"changeset": "changeset",
-		"ci": "cross-env NODE_ENV=production yarn builder tag:component,ui-icons --skip-nx-cache",
+		"ci": "cross-env NODE_ENV=production yarn build --skip-nx-cache",
 		"ci:storybook": "cross-env NODE_ENV=production nx run storybook:build:ci --skip-nx-cache",
 		"clean": "yarn cleaner tag:component",
 		"clean:docs": "rimraf dist",
