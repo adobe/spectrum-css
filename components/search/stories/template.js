@@ -12,42 +12,45 @@ export const Template = ({
 	rootClass = "spectrum-Search",
 	customClasses = [],
 	isDisabled = false,
-	isQuiet = false,
+	isFocused = false,
+	isKeyboardFocused = false,
+	inputValue = "",
 	size,
 	hasDescription = false,
 	description,
+	...globals
 } = {}, context = {}) => {
 	return html`
-		<form
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				"is-disabled": isDisabled,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-		>
-			${TextField({
-				isDisabled,
-				isQuiet,
-				size,
-				customClasses: [`${rootClass}-textfield`],
-				iconName: "Magnify",
-				setName: "workflow",
-				type: "search",
-				placeholder: "Search",
-				name: "search",
-				customInputClasses: [`${rootClass}-input`],
-				customIconClasses: [`${rootClass}-icon`],
-				autocomplete: false,
-			}, context)}
-			${ClearButton({
-					isDisabled,
-					size,
-					customClasses: [`${rootClass}-clearButton`],
-				}, context)}
-			${when(hasDescription, () =>
+	<form
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			"is-disabled": isDisabled,
+			"is-keyboardFocused": isKeyboardFocused,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+	>
+		${TextField({
+			isDisabled,
+			size,
+			customClasses: [`${rootClass}-textfield`, isFocused && "is-focused"],
+			iconName: "Magnify",
+			setName: "workflow",
+			type: "search",
+			placeholder: "Search",
+			name: "search",
+			customInputClasses: [`${rootClass}-input`, isKeyboardFocused && "is-keyboardFocused"],
+			customIconClasses: [`${rootClass}-icon`],
+			autocomplete: false,
+			value: inputValue,
+		}, context)}
+		${ClearButton({
+			isDisabled,
+			size,
+			customClasses: [`${rootClass}-clearButton`],
+		}, context)}
+		${when(hasDescription, () =>
 				HelpText({
 					text: description,
 					size,
