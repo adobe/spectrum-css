@@ -1,34 +1,34 @@
 {
-  "name": "@spectrum-css/tag",
-  "version": "8.1.5",
-  "description": "The Spectrum CSS tags component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/tag",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/tag"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index.css",
-  "peerDependencies": {
-    "@spectrum-css/avatar": ">=6",
-    "@spectrum-css/clearbutton": ">=5",
-    "@spectrum-css/icon": ">=4",
-    "@spectrum-css/tokens": ">=13"
-  },
-  "peerDependenciesMeta": {
-    "@spectrum-css/avatar": {
-      "optional": true
-    },
-    "@spectrum-css/icon": {
-      "optional": true
-    }
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@spectrum-css/tag",
+	"version": "9.0.0",
+	"description": "The Spectrum CSS tags component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/tag",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/tag"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"peerDependencies": {
+		"@spectrum-css/avatar": ">=6",
+		"@spectrum-css/clearbutton": ">=5",
+		"@spectrum-css/icon": ">=4",
+		"@spectrum-css/tokens": ">=13"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/avatar": {
+			"optional": true
+		},
+		"@spectrum-css/icon": {
+			"optional": true
+		}
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

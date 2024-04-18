@@ -1,27 +1,27 @@
 {
-  "name": "@spectrum-css/datepicker",
-  "version": "2.1.4",
-  "description": "The Spectrum CSS datepicker component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/datepicker"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index.css",
-  "peerDependencies": {
-    "@spectrum-css/calendar": ">=4",
-    "@spectrum-css/pickerbutton": ">=4",
-    "@spectrum-css/popover": ">=6",
-    "@spectrum-css/textfield": ">=6",
-    "@spectrum-css/tokens": ">=13"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@spectrum-css/datepicker",
+	"version": "3.0.0",
+	"description": "The Spectrum CSS datepicker component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/datepicker"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"peerDependencies": {
+		"@spectrum-css/calendar": ">=4",
+		"@spectrum-css/pickerbutton": ">=4",
+		"@spectrum-css/popover": ">=6",
+		"@spectrum-css/textfield": ">=6",
+		"@spectrum-css/tokens": ">=13"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

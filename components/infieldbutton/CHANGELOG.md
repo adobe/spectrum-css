@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="5.0.0"></a>
+#5.0.0
+🗓
+2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.2.4...@spectrum-css/infieldbutton@5.0.0)
+
+\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		- Removes component-builder & component-builder-simple for script leveraging postcss
+
+- Imports added to index.css and themes/express.css
+
 <a name="4.2.4"></a>
 ##4.2.4
 🗓

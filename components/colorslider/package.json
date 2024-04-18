@@ -1,25 +1,25 @@
 {
-  "name": "@spectrum-css/colorslider",
-  "version": "5.1.5",
-  "description": "The Spectrum CSS Color slider component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/colorslider",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/colorslider"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index.css",
-  "peerDependencies": {
-    "@spectrum-css/colorhandle": ">=7",
-    "@spectrum-css/opacitycheckerboard": ">=1",
-    "@spectrum-css/tokens": ">=13"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@spectrum-css/colorslider",
+	"version": "6.0.0",
+	"description": "The Spectrum CSS Color slider component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/colorslider",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/colorslider"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"peerDependencies": {
+		"@spectrum-css/colorhandle": ">=7",
+		"@spectrum-css/opacitycheckerboard": ">=1",
+		"@spectrum-css/tokens": ">=13"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

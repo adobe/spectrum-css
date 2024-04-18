@@ -1,49 +1,49 @@
 {
-  "name": "@spectrum-css/card",
-  "version": "7.0.2",
-  "description": "The Spectrum CSS card component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/card",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/card"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index.css",
-  "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=5",
-    "@spectrum-css/asset": ">=3",
-    "@spectrum-css/checkbox": ">=8",
-    "@spectrum-css/icon": ">=4",
-    "@spectrum-css/quickaction": ">=3",
-    "@spectrum-css/tokens": ">=13",
-    "@spectrum-css/typography": ">=4 <=5"
-  },
-  "peerDependenciesMeta": {
-    "@spectrum-css/actionbutton": {
-      "optional": true
-    },
-    "@spectrum-css/asset": {
-      "optional": true
-    },
-    "@spectrum-css/checkbox": {
-      "optional": true
-    },
-    "@spectrum-css/icon": {
-      "optional": true
-    },
-    "@spectrum-css/quickaction": {
-      "optional": true
-    },
-    "@spectrum-css/typography": {
-      "optional": true
-    }
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@spectrum-css/card",
+	"version": "8.0.0",
+	"description": "The Spectrum CSS card component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/card",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/card"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"peerDependencies": {
+		"@spectrum-css/actionbutton": ">=5",
+		"@spectrum-css/asset": ">=3",
+		"@spectrum-css/checkbox": ">=8",
+		"@spectrum-css/icon": ">=4",
+		"@spectrum-css/quickaction": ">=3",
+		"@spectrum-css/tokens": ">=13",
+		"@spectrum-css/typography": ">=4 <=5"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/actionbutton": {
+			"optional": true
+		},
+		"@spectrum-css/asset": {
+			"optional": true
+		},
+		"@spectrum-css/checkbox": {
+			"optional": true
+		},
+		"@spectrum-css/icon": {
+			"optional": true
+		},
+		"@spectrum-css/quickaction": {
+			"optional": true
+		},
+		"@spectrum-css/typography": {
+			"optional": true
+		}
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

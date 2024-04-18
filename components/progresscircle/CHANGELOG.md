@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+#3.0.0
+🗓
+2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progresscircle@2.2.3...@spectrum-css/progresscircle@3.0.0)
+
+### 🐛 Bug fixes
+
+-     **button:**pending state width, transition ([#2570](https://github.com/adobe/spectrum-css/issues/2570))([7b67bff](https://github.com/adobe/spectrum-css/commit/7b67bff))
+
+  \*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+
+      	###
+      	🛑 BREAKING CHANGES
+
+      		*
+      		- Removes component-builder & component-builder-simple for script leveraging postcss
+
+* Imports added to index.css and themes/express.css
+
 <a name="2.2.3"></a>
 ##2.2.3
 🗓

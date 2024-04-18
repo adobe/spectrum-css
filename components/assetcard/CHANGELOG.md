@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.0"></a>
+#4.0.0
+🗓
+2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/assetcard@3.1.4...@spectrum-css/assetcard@4.0.0)
+
+### ✨ Features
+
+\*use storybook v8 ([#2604](https://github.com/adobe/spectrum-css/issues/2604))([166ab23](https://github.com/adobe/spectrum-css/commit/166ab23))
+
+\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+
+    	###
+    	🛑 BREAKING CHANGES
+
+    		*
+    		- Removes component-builder & component-builder-simple for script leveraging postcss
+
+- Imports added to index.css and themes/express.css
+
 <a name="3.1.4"></a>
 ##3.1.4
 🗓

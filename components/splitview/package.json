@@ -1,23 +1,23 @@
 {
-  "name": "@spectrum-css/splitview",
-  "version": "4.2.4",
-  "description": "The Spectrum CSS splitview component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/splitview",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/splitview"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index.css",
-  "peerDependencies": {
-    "@spectrum-css/tokens": ">=13"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@spectrum-css/splitview",
+	"version": "5.0.0",
+	"description": "The Spectrum CSS splitview component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/splitview",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/splitview"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"peerDependencies": {
+		"@spectrum-css/tokens": ">=13"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

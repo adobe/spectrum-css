@@ -1,27 +1,27 @@
 {
-  "name": "@spectrum-css/actionbar",
-  "version": "7.2.4",
-  "description": "The Spectrum CSS actionbar component",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/actionbar",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "components/actionbar"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "dist/index.css",
-  "peerDependencies": {
-    "@spectrum-css/actiongroup": ">=4",
-    "@spectrum-css/closebutton": ">=4",
-    "@spectrum-css/fieldlabel": ">=7",
-    "@spectrum-css/popover": ">=6",
-    "@spectrum-css/tokens": ">=13"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@spectrum-css/actionbar",
+	"version": "8.0.0",
+	"description": "The Spectrum CSS actionbar component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/actionbar",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/actionbar"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"peerDependencies": {
+		"@spectrum-css/actiongroup": ">=4",
+		"@spectrum-css/closebutton": ">=4",
+		"@spectrum-css/fieldlabel": ">=7",
+		"@spectrum-css/popover": ">=6",
+		"@spectrum-css/tokens": ">=13"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
