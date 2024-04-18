@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isQuiet, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isKeyboardFocused, isQuiet, size } from "@spectrum-css/preview/types";
 import metadata from "../dist/metadata.json";
 import packageJson from "../package.json";
 import { SearchGroup } from "./search.test.js";
@@ -17,7 +17,6 @@ export default {
 	component: "Search",
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
-		isQuiet,
 		isDisabled,
 		hasDescription: {
 			name: "Help Text",
@@ -33,18 +32,23 @@ export default {
 			name: "Help text (description)",
 			type: { name: "string" },
 			control: { type: "text" },
-			table: {
-				type: { summary: "string" },
-				category: "Advanced",
-			},
 			if: { arg: "hasDescription", eq: true },
+		},
+		isFocused: {
+			...isFocused,
+			table: { disable: true },
+		},
+		isKeyboardFocused,
+		inputValue: {
+			table: { disable: true },
+			type: { name: "string" },
 		},
 	},
 	args: {
 		rootClass: "spectrum-Search",
 		size: "m",
-		isQuiet: false,
 		isDisabled: false,
+		isKeyboardFocused: false,
 		hasDescription: false,
 		description: "Example help text. Lorem ipsum dolor sit amet.",
 	},
@@ -92,19 +96,6 @@ HelpText.tags = ["!dev"];
 HelpText.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
-/**
- * A quiet search field can be used when searching isn’t a high priority action on the page. These search fields have no visible background, and this style works best when a clear layout makes the field easy to recognize. Too many quiet components in a small space can be hard to read.
-*/
-export const Quiet = SearchGroup.bind({});
-Quiet.args = {
-	isQuiet: true,
-};
-Quiet.tags = ["!dev"];
-Quiet.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
 
 /**
  * The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
