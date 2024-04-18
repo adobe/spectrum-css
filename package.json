@@ -82,6 +82,7 @@
     "lerna": "^6.6.2",
     "lint-staged": "^15.2.2",
     "lodash": "^4.17.21",
+    "node-gyp": "^10.1.0",
     "npm-registry-fetch": "^16.1.0",
     "npm-run-all": "^4.1.5",
     "nunjucks": "^3.2.4",
@@ -121,5 +122,6 @@
     "last 2 Firefox versions",
     "last 2 Safari versions",
     "last 2 iOS versions"
-  ]
+  ],
+  "packageManager": "yarn@4.1.1"
 }

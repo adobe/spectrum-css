@@ -56,6 +56,9 @@ jobs:
                   cache: yarn
                   cache-dependency-path: yarn.lock
 
+            - name: Enable Corepack
+              run: corepack enable
+
             ## --- YARN CACHE --- ##
             - name: Check for cached dependencies
               continue-on-error: true
@@ -71,7 +74,7 @@ jobs:
             # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
             - name: Install dependencies
               shell: bash
-              run: yarn install --frozen-lockfile --cache-folder .cache/yarn
+              run: yarn install --immutable
 
             - name: Set the cache key for builds
               id: derive-key
@@ -177,6 +180,9 @@ jobs:
                   node-version: 18
                   cache: yarn
 
+            - name: Enable Corepack
+              run: corepack enable
+
             ## --- YARN CACHE --- ##
             - name: Check for cached dependencies
               continue-on-error: true
@@ -192,11 +198,7 @@ jobs:
             # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
             - name: Install dependencies
               shell: bash
-              run: yarn install --frozen-lockfile --cache-folder .cache/yarn
-
-            - name: Reset nx cache to prevent cross-machine errors
-              shell: bash
-              run: yarn nx reset
+              run: yarn install --immutable
 
             ## --- BUILD --- ##
             - name: Check for built assets
