@@ -27,15 +27,15 @@ export const withContextWrapper = makeDecorator({
 		/** @type string */
 		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
 
-		const colors = ["light", "dark", "darkest"];
+		const colors = ["light", "dark"];
 		const scales = ["medium", "large"];
 
 		useEffect(() => {
 			const container =
 				viewMode === "docs" &&
 				!window.isChromatic() &&
-				!id.includes('foundation')
-					? document.querySelector('#root-inner') ?? document.body
+				!id.includes("foundation")
+					? document.querySelector("#root-inner") ?? document.body
 					: document.body;
 
 			container.classList.toggle("spectrum", true);
@@ -53,9 +53,11 @@ export const withContextWrapper = makeDecorator({
 			// Change background color when demonstrating static color options.
 			if (args.staticColor === "black") {
 				container.style.background = "var(--spectrum-examples-gradient-static-black)";
-			} else if (args.staticColor === "white") {
+			}
+			else if (args.staticColor === "white") {
 				 container.style.background = "var(--spectrum-examples-gradient-static-white)";
-			} else {
+			}
+			else {
 				container.style.removeProperty("background");
 			}
 		}, [color, scale, isExpress, args.staticColor]);
