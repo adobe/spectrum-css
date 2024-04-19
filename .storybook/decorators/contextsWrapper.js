@@ -27,7 +27,7 @@ export const withContextWrapper = makeDecorator({
 		/** @type string */
 		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
 
-		const colors = ["light", "dark", "darkest"];
+		const colors = ["light", "dark"];
 		const scales = ["medium", "large"];
 
 		useEffect(() => {
