@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.0.0-next.7
+
+### Patch Changes
+
+- [#2352](https://github.com/adobe/spectrum-css/pull/2352) [`3c0628b`](https://github.com/adobe/spectrum-css/commit/3c0628b73a9eced609026dc6f0bfc2ba6cb94c15) Thanks [@pfulton](https://github.com/pfulton)! - use spectrum-tokens@13.0.0-beta.30
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
@@ -8,15 +14,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.2.0...@spectrum-css/tokens@14.0.0)
 
-* feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
-    	###
-    	🛑 BREAKING CHANGES
+  ###
 
-    		*
-    		- Removes component-builder & component-builder-simple for script leveraging postcss
+  🛑 BREAKING CHANGES
 
-- Imports added to index.css and themes/express.css
+  -
+
+  * Removes component-builder & component-builder-simple for script leveraging postcss
+
+* Imports added to index.css and themes/express.css
 
 <a name="13.2.0"></a>
 #13.2.0
