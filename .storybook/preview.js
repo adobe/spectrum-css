@@ -81,17 +81,16 @@ export const argTypes = {
 		description: "Controls the color context of the component.",
 		type: { required: true },
 		table: {
-			type: { summary: "light | dark | darkest" },
+			type: { summary: "light | dark" },
 			defaultValue: { summary: "light" },
 			category: "Global",
 		},
-		options: ["light", "dark", "darkest"],
+		options: ["light", "dark"],
 		control: {
 			type: "select",
 			labels: {
 				light: "Light (default)",
 				dark: "Dark",
-				darkest: "Darkest",
 			},
 		},
 	},
