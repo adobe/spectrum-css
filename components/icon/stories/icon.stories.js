@@ -1,8 +1,8 @@
-// Import the component markup template
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
@@ -97,6 +97,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

@@ -2,6 +2,7 @@ import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -150,9 +151,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
-		html: {
-			root: "#render-root"
-		}
+		cssprops: metadata.mods,
 	},
 	decorators: [
 		(Story, context) => html`

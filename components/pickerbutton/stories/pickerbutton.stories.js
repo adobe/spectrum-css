@@ -1,4 +1,4 @@
-// Import the component markup template
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -120,6 +120,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

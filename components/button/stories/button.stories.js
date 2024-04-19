@@ -4,6 +4,7 @@ import { styleMap } from "lit/directives/style-map.js";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 /**
@@ -138,9 +139,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
-		html: {
-			root: "#render-root"
-		}
+		cssprops: metadata.mods,
 	},
 	decorators: [
 		(Story, context) => html`

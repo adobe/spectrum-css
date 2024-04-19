@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 /**
@@ -45,6 +46,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

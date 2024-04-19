@@ -1,8 +1,9 @@
 import { html } from "lit";
 
-// Import the component markup template
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
+
+import { Template as Link } from "@spectrum-css/link/stories/template.js";
 
 export default {
 	title: "Components/Illustrated message",
@@ -46,6 +47,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

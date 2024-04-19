@@ -1,7 +1,8 @@
-import { Template } from "./template";
-
 import { html } from "lit";
 import { when } from "lit/directives/when.js";
+
+import metadata from "../dist/metadata.json";
+import { Template } from "./template";
 
 export default {
 	title: "Components/Typography",
@@ -78,6 +79,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

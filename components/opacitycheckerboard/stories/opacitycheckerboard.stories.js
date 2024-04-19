@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 
-
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 export default {
@@ -31,6 +31,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 	decorators: [
 		(Story, context) => html`<div style=${styleMap({ inlineSize: "100px", blockSize: "100px" })}>${Story(context)}</div>`

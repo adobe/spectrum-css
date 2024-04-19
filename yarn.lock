@@ -3206,6 +3206,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ljcl/storybook-addon-cssprops@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@ljcl/storybook-addon-cssprops@npm:4.0.0"
+  checksum: 10c0/8b04b83da0d0ac955c66184c1f5a91eaff54cf21cf190537fd21f8402575ae87e68f6ff0928a8e34777ef9fd023c27fd7582af0ecd3e8717512a58650c51be29
+  languageName: node
+  linkType: hard
+
 "@ljharb/through@npm:^2.3.13":
   version: 2.3.13
   resolution: "@ljharb/through@npm:2.3.13"
@@ -5104,6 +5111,7 @@ __metadata:
     "@babel/core": "npm:^7.24.4"
     "@chromaui/addon-visual-tests": "npm:^1.0.0"
     "@etchteam/storybook-addon-status": "npm:^4.2.4"
+    "@ljcl/storybook-addon-cssprops": "npm:^4.0.0"
     "@spectrum-css/tokens": "npm:^14.0.0"
     "@spectrum-css/ui-icons": "npm:^1.1.2"
     "@storybook/addon-a11y": "npm:^8.0.6"
@@ -19907,6 +19915,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "spectrum-css-monorepo@workspace:."
   dependencies:
+    "@adobe/spectrum-tokens": "npm:12.24.0"
     "@changesets/changelog-github": "npm:^0.5.0"
     "@changesets/cli": "npm:^2.27.1"
     "@commitlint/cli": "npm:^19.2.2"

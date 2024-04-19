@@ -1,4 +1,6 @@
 import { html } from "lit";
+
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
@@ -38,6 +40,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

@@ -1,9 +1,8 @@
-// Import the component markup template
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
-// More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
 	title: "Components/Contextual help",
 	description:
@@ -88,6 +87,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

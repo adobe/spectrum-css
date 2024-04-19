@@ -1,9 +1,8 @@
-// Import the component markup template
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
-// More on default export: https://storybook.js.org/docs/web-components/writing-stories/introduction#default-export
 export default {
 	title: "Components/Floating action button",
 	description:
@@ -40,6 +39,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

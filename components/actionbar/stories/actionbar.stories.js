@@ -1,4 +1,4 @@
-// Import the component markup template
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
@@ -80,6 +80,7 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/file/MPtRIVRzPp2VHiEplwXL2X/S-%2F-Manual?node-id=465%3A3127&t=xbooxCWItOFgG2xM-1",
 		},
+		cssprops: metadata.mods,
 	}
 };
 

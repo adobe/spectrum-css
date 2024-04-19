@@ -1,4 +1,4 @@
-// Import the component markup template
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
@@ -54,6 +54,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

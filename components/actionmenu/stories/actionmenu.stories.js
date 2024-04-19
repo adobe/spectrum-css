@@ -1,7 +1,10 @@
 import { userEvent, within } from "@storybook/testing-library";
 import { html } from "lit";
 
-// Import the component markup template
+import ActionButtonMetadata from "@spectrum-css/actionbutton/dist/metadata.json";
+import MenuMetadata from "@spectrum-css/menu/dist/metadata.json";
+import PopoverMetadata from "@spectrum-css/popover/dist/metadata.json";
+
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
@@ -53,6 +56,18 @@ export default {
 			type: "migrated",
 		},
 		chromatic: { delay: 2000 },
+		cssprops: {
+			...[
+				...PopoverMetadata.mods,
+				...ActionButtonMetadata.mods,
+				...MenuMetadata.mods,
+			].reduce((mods, varName) => {
+				mods[varName.replace("--", "")] = {
+					control: varName.includes("color") ? "color" : "text",
+				};
+				return mods;
+			}, {}),
+		},
 	},
 };
 

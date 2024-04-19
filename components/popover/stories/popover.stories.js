@@ -1,7 +1,7 @@
 import { userEvent, within } from "@storybook/testing-library";
 import { html } from "lit";
 
-// Import the component markup template
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
@@ -76,6 +76,7 @@ export default {
 			type: "migrated",
 		},
 		chromatic: { delay: 2000 },
+		cssprops: metadata.mods,
 	},
 };
 

@@ -1,10 +1,3 @@
-| Modifiable custom properties                   |
-| ---------------------------------------------- |
-| `--mod-actiongroup-border-radius`              |
-| `--mod-actiongroup-border-radius-reset`        |
-| `--mod-actiongroup-button-spacing-reset`       |
-| `--mod-actiongroup-gap-size-compact`           |
-| `--mod-actiongroup-horizontal-spacing-compact` |
-| `--mod-actiongroup-horizontal-spacing-regular` |
-| `--mod-actiongroup-vertical-spacing-compact`   |
-| `--mod-actiongroup-vertical-spacing-regular`   |
+| Modifiable custom properties                       |
+| -------------------------------------------------- |
+| `--mod-actionbutton-focus-indicator-border-radius` |

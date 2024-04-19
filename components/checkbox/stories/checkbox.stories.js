@@ -1,5 +1,6 @@
 import { html } from "lit";
 
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 export default {
@@ -100,14 +101,11 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 
-const CheckboxGroup = ({
-	// customStyles = {},
-	// isChecked = false,
-	...args
-}) => {
+const CheckboxGroup = (args) => {
 	return html`
 		<div style="display: flex; flex-direction: column; padding: 1rem">
 			${Template({

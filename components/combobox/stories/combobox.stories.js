@@ -1,5 +1,6 @@
 import { html } from "lit";
 
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
@@ -162,6 +163,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

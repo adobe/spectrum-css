@@ -13,7 +13,6 @@ export const Template = ({
 	size = "m",
 	...globals
 }) => {
-
 	if (!items.length) {
 		console.warn("ActionMenu: requires items be passed in to render.");
 		return html``;
@@ -25,23 +24,21 @@ export const Template = ({
 		isOpen,
 		id: "popover-1",
 		testId: "popover-1",
-		triggerId: 'trigger',
+		triggerId: "trigger",
 		content: [
 			Menu({ items })
 		],
 		trigger: (passthroughs) => ActionButton({
 			size,
 			label,
-			iconName,
 			isQuiet: false,
 			isEmphasized: false,
 			hasPopup: false,
 			isSelected: isOpen,
-			label,
-			iconName: "More",
+			iconName: iconName ?? "More",
 			id: "trigger",
 			customClasses,
 			...passthroughs,
 		})
-	})
-}
+	});
+};

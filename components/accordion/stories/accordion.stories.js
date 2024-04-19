@@ -3,6 +3,8 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+
+import metadata from "../dist/metadata.json";
 import { Template } from "./template.js";
 
 /**
@@ -144,6 +146,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

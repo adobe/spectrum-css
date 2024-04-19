@@ -1,6 +1,9 @@
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { html } from "lit";
+
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
+
+import { Template as Link } from "@spectrum-css/link/stories/template.js";
 
 export default {
 	title: "Components/Drop zone",
@@ -40,6 +43,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

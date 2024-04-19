@@ -1,9 +1,4 @@
-// More on args: https://storybook.js.org/docs/web-components/writing-stories/args
-
-// Uncomment if you plan to include an icon
-// import { default as IconStories } from '@spectrum-css/icon/stories/icon.stories.js';
-
-// Import the component markup template
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 export default {
@@ -45,6 +40,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

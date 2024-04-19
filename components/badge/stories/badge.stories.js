@@ -1,5 +1,6 @@
-// Import the component markup template
 import { html } from "lit";
+
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -75,13 +76,11 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 
-const BadgeGroup = ({
-	// customStyles = {},
-	...args
-}) => {
+const BadgeGroup = (args) => {
 	return html`
 		<div style="padding: 1rem">
 			${Template({

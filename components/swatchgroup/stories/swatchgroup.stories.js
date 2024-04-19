@@ -1,4 +1,4 @@
-// Import the component markup template
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
 
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
@@ -65,6 +65,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

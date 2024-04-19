@@ -1,6 +1,7 @@
-// Import the component markup template
-import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
+
+import Radio from "@spectrum-css/radio/stories/radio.stories.js";
 
 export default {
 	title: "Components/Field group",
@@ -50,6 +51,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 

@@ -1,6 +1,9 @@
-import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { html } from "lit";
+
+import metadata from "../dist/metadata.json";
 import { Template } from "./template";
+
+import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 
 export default {
 	title: "Components/Picker",
@@ -131,6 +134,7 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		cssprops: metadata.mods,
 	},
 };
 
