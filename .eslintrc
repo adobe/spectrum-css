@@ -12,7 +12,7 @@
 	"rules": {
 		"brace-style": ["warn", "stroustrup", { "allowSingleLine": true }],
 		"func-call-spacing": ["warn", "never"],
-		"indent": ["warn", "tab", { "ignoredNodes": ["TemplateLiteral *"] }],
+		"indent": ["warn", "tab", { "ignoredNodes": ["TemplateLiteral *"], "SwitchCase": 1 }],
 		"linebreak-style": ["warn", "unix"],
 		"no-console": ["warn", { "allow": ["warn", "error"] }],
 		"quotes": ["warn", "double"],
