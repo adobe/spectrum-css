@@ -89,6 +89,7 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
+			if: { arg: "isInvalid", truthy: false },
 		},
 		isSelected: {
 			name: "Selected",
@@ -171,19 +172,19 @@ const Tags = (args) => html` <div
 			label: "Tag with longer content that truncates",
 		})
 	)}
-	${when(window.isChromatic(), () =>
+	${when(window.isChromatic() && !args.isInvalid, () =>
 		Template({
 			...args,
 			visual: "Icon",
 		})
 	)}
-	${when(window.isChromatic(), () =>
+	${when(window.isChromatic() && !args.isInvalid, () =>
 		Template({
 			...args,
 			visual: "Avatar",
 		})
 	)}
-	${when(window.isChromatic(), () =>
+	${when(window.isChromatic() && !args.isInvalid, () =>
 		Template({
 			...args,
 			visual: "Thumbnail",
@@ -211,29 +212,20 @@ const States = (args) =>
 				isSelected: true,
 			})}
 		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "m",
-				content: ["Disabled"],
-			})}
-			${Tags({
-				...args,
-				isDisabled: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "m",
-				content: ["Disabled & Selected"],
-			})}
-			${Tags({
-				...args,
-				isDisabled: true,
-				isSelected: true,
-			})}
-		</div>`;
+		${args.isInvalid ? "" : html`
+			<div>
+				${Typography({
+					semantics: "detail",
+					size: "m",
+					content: ["Disabled"],
+				})}
+				${Tags({
+					...args,
+					isDisabled: true,
+				})}
+			</div>
+		`}
+	`;
 
 const Sizes = (args) =>
 	html` ${["s", "m", "l"].map((size) => {
