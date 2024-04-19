@@ -138,8 +138,8 @@
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
-					"stylelint --fix --cache --allow-empty-input --quiet {projectRoot}/*.css {projectRoot}/**/*.css",
-					"eslint --fix --cache --no-error-on-unmatched-pattern --quiet {projectRoot}/*.json {projectRoot}/stories/*.js || exit 0",
+					"stylelint --fix --cache --allow-empty-input {projectRoot}/*.css {projectRoot}/**/*.css",
+					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js",
 					"prettier --write --cache --loglevel error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{yml,md} {projectRoot}/**/*.{yml,md}"
 				]
 			}

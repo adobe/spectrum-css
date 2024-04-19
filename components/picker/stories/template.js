@@ -122,17 +122,17 @@ export const Template = ({
 
 	let iconName = "ChevronDown200";
 	switch (size) {
-	case "s":
-		iconName = "ChevronDown75";
-		break;
-	case "m":
-		iconName = "ChevronDown100";
-		break;
-	case "xl":
-		iconName = "ChevronDown300";
-		break;
-	default:
-		iconName = "ChevronDown200";
+		case "s":
+			iconName = "ChevronDown75";
+			break;
+		case "m":
+			iconName = "ChevronDown100";
+			break;
+		case "xl":
+			iconName = "ChevronDown300";
+			break;
+		default:
+			iconName = "ChevronDown200";
 	}
 
 	return html`

@@ -20,19 +20,19 @@ export const Template = ({
 }) => {
 	let iconName;
 	switch (variant) {
-	case "info":
-		iconName = "Info";
-		break;
-	case "positive":
-		iconName = "CheckmarkCircle";
-		break;
-	case "notice":
-	case "negative":
-	case "closable":
-		iconName = "Alert";
-		break;
-	default:
-		iconName = undefined;
+		case "info":
+			iconName = "Info";
+			break;
+		case "positive":
+			iconName = "CheckmarkCircle";
+			break;
+		case "notice":
+		case "negative":
+		case "closable":
+			iconName = "Alert";
+			break;
+		default:
+			iconName = undefined;
 	}
 
 	const iconMarkup =
