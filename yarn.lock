@@ -120,10 +120,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:13.0.0-beta.27":
-  version: 13.0.0-beta.27
-  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.27"
-  checksum: 10c0/4fda766707895bc0f4d92d393341735b0f8b3dabcbafcb93af930b2bbbba3a13631b663c17c1b8e9b34bc333257473ba57543d9716ebfa61316980aed4ac09fa
+"@adobe/spectrum-tokens@npm:13.0.0-beta.30":
+  version: 13.0.0-beta.30
+  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.30"
+  checksum: 10c0/78c0627a4f1ba4adff1adab5c3be4bf5a98a8f6ac0dd5e7806a3db12d3f67f2e3afa85828c7e34f843e29ad91c0d2bd009bfbc9fecec81ab7e4b05c1dd81bab8
   languageName: node
   linkType: hard
 
@@ -4232,7 +4232,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/commons@workspace:components/commons"
   dependencies:
-    "@spectrum-css/tokens": "npm:^16.0.0"
+    "@spectrum-css/tokens": "npm:^14.0.0-next.4"
   peerDependencies:
     "@spectrum-css/tokens": ">=14.0.0-next.0"
   languageName: unknown
@@ -4410,7 +4410,7 @@ __metadata:
     prettier: "npm:^3.4.2"
     stylelint: "npm:^16.9.0"
   peerDependencies:
-    "@spectrum-css/tokens": ">=15"
+    "@spectrum-css/tokens": ">=14.0.0-next.0"
   languageName: unknown
   linkType: soft
 
@@ -4553,7 +4553,7 @@ __metadata:
     stylelint: "npm:^16.9.0"
   peerDependencies:
     "@spectrum-css/progressbar": ">=4"
-    "@spectrum-css/tokens": ">=15"
+    "@spectrum-css/tokens": ">=14.0.0-next.0"
   languageName: unknown
   linkType: soft
 
@@ -5043,11 +5043,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/tokens@npm:14.0.0-next.6, @spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens@npm:14.0.0-next.6, @spectrum-css/tokens@npm:^14.0.0-next.4, @spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:13.0.0-beta.27"
+    "@adobe/spectrum-tokens": "npm:13.0.0-beta.30"
     "@adobe/token-diff-generator": "npm:^1.3.0"
     "@nxkit/style-dictionary": "npm:^6.0.0"
     "@spectrum-tools/postcss-rgb-mapping": "npm:^1.0.0"
