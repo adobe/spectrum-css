@@ -1,5 +1,5 @@
 
-import DocumentationTemplate from './DocumentationTemplate.mdx';
+import DocumentationTemplate from "./DocumentationTemplate.mdx";
 
 import { withActions } from "@storybook/addon-actions/decorator";
 import {
@@ -81,17 +81,16 @@ export const argTypes = {
 		description: "Controls the color context of the component.",
 		type: { required: true },
 		table: {
-			type: { summary: "light | dark | darkest" },
+			type: { summary: "light | dark" },
 			defaultValue: { summary: "light" },
 			category: "Global",
 		},
-		options: ["light", "dark", "darkest"],
+		options: ["light", "dark"],
 		control: {
 			type: "select",
 			labels: {
 				light: "Light (default)",
 				dark: "Dark",
-				darkest: "Darkest",
 			},
 		},
 	},
@@ -187,11 +186,11 @@ export const parameters = {
 	panelPosition: "bottom",
 	showToolbar: true,
 	isFullscreen: false,
-	actions: { argTypesRegex: '^on.*' },
+	actions: { argTypesRegex: "^on.*" },
 	options: {
 		storySort: {
 			method: "alphabetical",
-			order: ['Guides', ['Contributing', '*', 'Adobe Code of Conduct', 'Changelog'], 'Foundations', 'Components', ['Docs', 'Default', '*'], '*'],
+			order: ["Guides", ["Contributing", "*", "Adobe Code of Conduct", "Changelog"], "Foundations", "Components", ["Docs", "Default", "*"], "*"],
 			includeNames: true,
 		},
 	},
