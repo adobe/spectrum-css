@@ -84,7 +84,7 @@
 	--spectrum-color-area-border-opacity: 0.1;
 	--spectrum-color-slider-border-color: var(--spectrum-gray-1000);
 	--spectrum-color-slider-border-opacity: 0.1;
-	--spectrum-color-loupe-drop-shadow-color: var(--spectrum-transparent-black-300);
+	--spectrum-color-loupe-drop-shadow-color: var(--spectrum-drop-shadow-elevated-color);
 	--spectrum-color-loupe-drop-shadow-y: var(--spectrum-drop-shadow-elevated-y);
 	--spectrum-color-loupe-drop-shadow-blur: var(--spectrum-drop-shadow-elevated-blur);
 	--spectrum-color-loupe-inner-border: var(--spectrum-transparent-black-200);
@@ -200,7 +200,6 @@
 	--spectrum-field-label-top-margin-extra-large: 0px;
 	--spectrum-field-label-to-component: 0px;
 	--spectrum-help-text-to-component: 0px;
-	--spectrum-status-light-dot-size-small: 8px;
 	--spectrum-action-button-edge-to-hold-icon-extra-small: 3px;
 	--spectrum-action-button-edge-to-hold-icon-small: 3px;
 	--spectrum-button-minimum-width-multiplier: 2.25;
@@ -385,6 +384,14 @@
 	--spectrum-combo-box-visual-to-field-button: 0px;
 	--spectrum-in-field-button-edge-to-fill-medium: 6px;
 	--spectrum-in-field-button-edge-to-fill-large: 8px;
+	--spectrum-standard-dialog-maximum-width-small: 400px;
+	--spectrum-standard-dialog-minimum-width: 288px;
+	--spectrum-standard-dialog-maximum-width-medium: 480px;
+	--spectrum-standard-dialog-maximum-width-large: 640px;
+	--spectrum-status-light-text-to-visual-75: var(--spectrum-text-to-visual-75);
+	--spectrum-status-light-text-to-visual-100: var(--spectrum-text-to-visual-100);
+	--spectrum-status-light-text-to-visual-200: var(--spectrum-text-to-visual-200);
+	--spectrum-status-light-text-to-visual-300: var(--spectrum-text-to-visual-300);
 	--spectrum-corner-radius-0: 0px;
 	--spectrum-corner-radius-75: 3px;
 	--spectrum-corner-radius-100: 4px;
