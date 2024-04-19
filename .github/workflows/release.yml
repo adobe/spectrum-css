@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-
+      
+      - name: Install Dependencies
         run: yarn install --frozen-lockfile
-        run: yarn install
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
