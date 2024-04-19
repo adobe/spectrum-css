@@ -155,14 +155,14 @@ export const MenuItem = ({
  */
 const backArrowWithScale = (size = "m", iconName = "ArrowLeft") => {
 	switch (size) {
-	case "s":
-		return `${iconName}200`;
-	case "l":
-		return `${iconName}400`;
-	case "xl":
-		return `${iconName}500`;
-	default:
-		return `${iconName}300`;
+		case "s":
+			return `${iconName}200`;
+		case "l":
+			return `${iconName}400`;
+		case "xl":
+			return `${iconName}500`;
+		default:
+			return `${iconName}300`;
 	}
 };
 

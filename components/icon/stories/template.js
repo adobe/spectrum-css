@@ -96,20 +96,20 @@ export const Template = ({
 	) {
 		let sizeVal;
 		switch (size) {
-		case "xs":
-		case "s":
-			sizeVal = "75";
-			break;
-		case "l":
-			sizeVal = "200";
-			break;
-		case "xl":
-		case "xxl":
-			sizeVal = "300";
-			break;
-		default:
-			sizeVal = "100";
-			break;
+			case "xs":
+			case "s":
+				sizeVal = "75";
+				break;
+			case "l":
+				sizeVal = "200";
+				break;
+			case "xl":
+			case "xxl":
+				sizeVal = "300";
+				break;
+			default:
+				sizeVal = "100";
+				break;
 		}
 
 		idKey += sizeVal;

@@ -18,14 +18,14 @@ export const Template = ({
 }) => {
 	let sizeClassName = "medium";
 	switch (size) {
-	case "s":
-		sizeClassName = "small";
-		break;
-	case "l":
-		sizeClassName = "large";
-		break;
-	default:
-		sizeClassName = "medium";
+		case "s":
+			sizeClassName = "small";
+			break;
+		case "l":
+			sizeClassName = "large";
+			break;
+		default:
+			sizeClassName = "medium";
 	}
 
 	const componentMarkup = html`

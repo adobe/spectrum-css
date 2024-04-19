@@ -36,17 +36,17 @@ export const Template = ({
 
 	let iconSize = "75";
 	switch (size) {
-	case "s":
-		iconSize = "50";
-		break;
-	case "l":
-		iconSize = "100";
-		break;
-	case "xl":
-		iconSize = "200";
-		break;
-	default:
-		iconSize = "75";
+		case "s":
+			iconSize = "50";
+			break;
+		case "l":
+			iconSize = "100";
+			break;
+		case "xl":
+			iconSize = "200";
+			break;
+		default:
+			iconSize = "75";
 	}
 
 	return html`
