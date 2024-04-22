@@ -158,6 +158,10 @@ async function copy_Resources() {
 			cwd: path.join(dirs.root, "assets"),
 			outputDir: "img"
 		}),
+		copy_Assets(["**"], {
+			cwd: path.join(dirs.root, "components"),
+			outputDir: "components"
+		}),
 	]).then((results = []) => {
 		const end = process.hrtime(start);
 		return [
