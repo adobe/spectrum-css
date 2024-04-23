@@ -37,22 +37,13 @@ export const Template = ({
 	ariaControls,
 	...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
-		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
-	const [, updateArgs] = useArgs();
+  const [, updateArgs] = useArgs();
 
 	return html`
     <button
       class=${classMap({
         [rootClass]: true,
-        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
+        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined" && treatment !== "fill",
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
