@@ -5561,7 +5561,7 @@ __metadata:
     "@actions/github": "npm:^6.0.0"
     "@actions/glob": "npm:^0.4.0"
     diff: "npm:^5.1.0"
-    diff2html: "npm:^3.4.45"
+    diff2html: "npm:^3.4.48"
   languageName: unknown
   linkType: soft
 
@@ -10823,9 +10823,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff2html@npm:^3.4.45":
-  version: 3.4.47
-  resolution: "diff2html@npm:3.4.47"
+"diff2html@npm:^3.4.48":
+  version: 3.4.48
+  resolution: "diff2html@npm:3.4.48"
   dependencies:
     diff: "npm:5.1.0"
     highlight.js: "npm:11.9.0"
@@ -10833,7 +10833,7 @@ __metadata:
   dependenciesMeta:
     highlight.js:
       optional: true
-  checksum: 10c0/462a5784cf4d8bf5ed60042d67f0169063763b88ce2dcdf23322d15253e0c2f1e6e1ed38b9399d1b2d057cd49a965242cbd15d6fd5ed312db1c951df7884b013
+  checksum: 10c0/38d941cc7a116c003105b66758097ea6ff1b0e73bba12809284fcb2bd916fa16403ee950f13b0f0e065182677085cd5d68e3c98bd6008a8098732f710624b825
   languageName: node
   linkType: hard
 
@@ -19921,7 +19921,7 @@ __metadata:
     colors: "npm:^1.4.0"
     cross-env: "npm:^7.0.3"
     diff: "npm:^5.1.0"
-    diff2html: "npm:^3.4.45"
+    diff2html: "npm:^3.4.48"
     eslint: "npm:^8.57.0"
     eslint-plugin-jsonc: "npm:^2.15.1"
     eslint-plugin-prettier: "npm:^5.1.3"
