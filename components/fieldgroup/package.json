@@ -27,6 +27,12 @@
 		"@spectrum-css/radio": ">=9",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/checkbox": "workspace:^",
+		"@spectrum-css/helptext": "workspace:^",
+		"@spectrum-css/radio": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/checkbox": {
 			"optional": true

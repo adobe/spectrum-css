@@ -35,7 +35,10 @@
 		}
 	},
 	"devDependencies": {
-		"@spectrum-css/commons": "^10.0.0"
+		"@spectrum-css/commons": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/progresscircle": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",

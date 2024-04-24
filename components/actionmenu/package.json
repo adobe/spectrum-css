@@ -34,6 +34,13 @@
 		"@spectrum-css/popover": ">=7",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/actionbutton": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/popover": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"publishConfig": {
 		"access": "public"
 	}

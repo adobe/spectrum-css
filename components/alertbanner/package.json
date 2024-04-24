@@ -28,6 +28,13 @@
 		"@spectrum-css/icon": ">=7",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/button": "workspace:^",
+		"@spectrum-css/closebutton": "workspace:^",
+		"@spectrum-css/divider": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/icon": {
 			"optional": true

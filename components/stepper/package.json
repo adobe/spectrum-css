@@ -28,6 +28,13 @@
 		"@spectrum-css/textfield": ">=7",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/actionbutton": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/infieldbutton": "workspace:^",
+		"@spectrum-css/textfield": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/infieldbutton": {
 			"optional": true

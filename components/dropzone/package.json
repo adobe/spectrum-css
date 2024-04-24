@@ -27,6 +27,12 @@
 		"@spectrum-css/link": ">=5",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/actionbutton": "workspace:^",
+		"@spectrum-css/illustratedmessage": "workspace:^",
+		"@spectrum-css/link": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/actionbutton": {
 			"optional": true

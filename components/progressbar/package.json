@@ -25,6 +25,10 @@
 		"@spectrum-css/fieldlabel": ">=8",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/fieldlabel": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/fieldlabel": {
 			"optional": true
