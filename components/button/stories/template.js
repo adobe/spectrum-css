@@ -85,14 +85,12 @@ export const Template = ({
       )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
       ${when(isPending, () => {
-        const isOverBackground = staticColor === "white";
         return ProgressCircle({
           ...globals,
           size: "s",
           testId: "progress-circle",
-          overBackground: isOverBackground,
+          staticColor,
           isIndeterminate: true,
-          addStaticBackground: false
         });
       })}
     </button>
