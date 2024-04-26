@@ -142,20 +142,12 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Icon {
-    /* Any block-size difference between the intended workflow icon size and actual icon used.
+    /* stylelint-disable-next-line custom-property-pattern -- Any block-size difference between the intended workflow icon size and actual icon used.
        Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
-    --_icon-size-difference: max(0px,
-      var(--spectrum-button-intended-icon-size) -
-      var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size))
-    );
+    --_icon-size-difference: max(0px, var(--spectrum-button-intended-icon-size) - var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size)));
 
-    margin-block-start: var(--mod-button-icon-margin-block-start,
-      max(0px,
-        var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) -
-        var(--mod-button-border-width, var(--spectrum-button-border-width)) +
-        (var(--_icon-size-difference, 0px) / 2)
-      )
-    );
+    /* stylelint-disable-next-line custom-property-pattern -- see note above */
+    margin-block-start: var(--mod-button-icon-margin-block-start, max(0px, var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) - var(--mod-button-border-width, var(--spectrum-button-border-width)) + (var(--_icon-size-difference, 0px) / 2)));
 
     margin-inline-start: calc(
       var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) -
