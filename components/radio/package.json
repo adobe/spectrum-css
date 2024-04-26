@@ -21,16 +21,16 @@
 		"stories/template.js",
 		"metadata/mods.md"
 	],
+	"peerDependencies": {
+		"@spectrum-css/icon": ">=4",
+		"@spectrum-css/tokens": ">=13"
+	},
 	"keywords": [
 		"spectrum",
 		"css",
 		"design system",
 		"adobe"
 	],
-	"peerDependencies": {
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/tokens": ">=13"
-	},
 	"publishConfig": {
 		"access": "public"
 	}

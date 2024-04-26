@@ -21,15 +21,15 @@
 		"stories/template.js",
 		"metadata/mods.md"
 	],
+	"peerDependencies": {
+		"@spectrum-css/tokens": ">=13.1"
+	},
 	"keywords": [
 		"spectrum",
 		"css",
 		"design system",
 		"adobe"
 	],
-	"peerDependencies": {
-		"@spectrum-css/tokens": ">=13.1"
-	},
 	"publishConfig": {
 		"access": "public"
 	}

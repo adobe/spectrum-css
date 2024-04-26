@@ -21,12 +21,6 @@
 		"stories/template.js",
 		"metadata/mods.md"
 	],
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
 	"peerDependencies": {
 		"@spectrum-css/actiongroup": ">=4",
 		"@spectrum-css/closebutton": ">=4",
@@ -34,6 +28,12 @@
 		"@spectrum-css/popover": ">=6",
 		"@spectrum-css/tokens": ">=13"
 	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
 	"publishConfig": {
 		"access": "public"
 	}
