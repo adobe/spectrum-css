@@ -21,12 +21,6 @@
 		"stories/template.js",
 		"metadata/mods.md"
 	],
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
 	"peerDependencies": {
 		"@spectrum-css/fieldlabel": ">=7",
 		"@spectrum-css/tokens": ">=13"
@@ -36,6 +30,12 @@
 			"optional": true
 		}
 	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
 	"publishConfig": {
 		"access": "public"
 	}

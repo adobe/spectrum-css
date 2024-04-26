@@ -21,12 +21,6 @@
 		"stories/template.js",
 		"metadata/mods.md"
 	],
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
 	"peerDependencies": {
 		"@spectrum-css/icon": ">=6",
 		"@spectrum-css/progresscircle": ">=2",
@@ -43,6 +37,12 @@
 	"devDependencies": {
 		"@spectrum-css/commons": "^10.0.0"
 	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
 	"publishConfig": {
 		"access": "public"
 	}

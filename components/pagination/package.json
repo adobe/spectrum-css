@@ -21,12 +21,6 @@
 		"stories/template.js",
 		"metadata/mods.md"
 	],
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
 	"peerDependencies": {
 		"@spectrum-css/actionbutton": ">=5",
 		"@spectrum-css/button": ">=11",
@@ -35,6 +29,12 @@
 		"@spectrum-css/textfield": ">=6",
 		"@spectrum-css/tokens": ">=13"
 	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
 	"publishConfig": {
 		"access": "public"
 	}

@@ -21,17 +21,17 @@
 		"stories/template.js",
 		"metadata/mods.md"
 	],
+	"peerDependencies": {
+		"@spectrum-css/colorhandle": ">=7",
+		"@spectrum-css/opacitycheckerboard": ">=1",
+		"@spectrum-css/tokens": ">=13"
+	},
 	"keywords": [
 		"spectrum",
 		"css",
 		"design system",
 		"adobe"
 	],
-	"peerDependencies": {
-		"@spectrum-css/colorhandle": ">=7",
-		"@spectrum-css/opacitycheckerboard": ">=1",
-		"@spectrum-css/tokens": ">=13"
-	},
 	"publishConfig": {
 		"access": "public"
 	}
