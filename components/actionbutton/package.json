@@ -20,8 +20,8 @@
     "stories/template.js"
   ],
   "peerDependencies": {
-    "@spectrum-css/icon": ">=4",
-    "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/icon": ">=7",
+    "@spectrum-css/tokens": ">=14"
   },
   "peerDependenciesMeta": {
     "@spectrum-css/icon": {
@@ -29,7 +29,9 @@
     }
   },
   "devDependencies": {
-    "@spectrum-css/commons": "^10.0.0"
+    "@spectrum-css/commons": "workspace:^",
+    "@spectrum-css/icon": "workspace:^",
+    "@spectrum-css/tokens": "workspace:^"
   },
   "keywords": [
     "adobe",

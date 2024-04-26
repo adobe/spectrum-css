@@ -20,12 +20,12 @@
     "stories/template.js"
   ],
   "peerDependencies": {
-    "@spectrum-css/helptext": ">=4",
-    "@spectrum-css/icon": ">=4",
-    "@spectrum-css/menu": ">=5",
-    "@spectrum-css/popover": ">=6",
-    "@spectrum-css/progresscircle": ">=2",
-    "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/helptext": ">=5",
+    "@spectrum-css/icon": ">=7",
+    "@spectrum-css/menu": ">=7",
+    "@spectrum-css/popover": ">=7",
+    "@spectrum-css/progresscircle": ">=3",
+    "@spectrum-css/tokens": ">=14"
   },
   "peerDependenciesMeta": {
     "@spectrum-css/helptext": {
@@ -36,7 +36,13 @@
     }
   },
   "devDependencies": {
-    "@spectrum-css/commons": "^10.0.0"
+    "@spectrum-css/commons": "workspace:^",
+    "@spectrum-css/helptext": "workspace:^",
+    "@spectrum-css/icon": "workspace:^",
+    "@spectrum-css/menu": "workspace:^",
+    "@spectrum-css/popover": "workspace:^",
+    "@spectrum-css/progresscircle": "workspace:^",
+    "@spectrum-css/tokens": "workspace:^"
   },
   "keywords": [
     "adobe",

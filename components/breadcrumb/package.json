@@ -20,9 +20,9 @@
     "stories/template.js"
   ],
   "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=5",
-    "@spectrum-css/icon": ">=4",
-    "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/actionbutton": ">=6",
+    "@spectrum-css/icon": ">=7",
+    "@spectrum-css/tokens": ">=14"
   },
   "peerDependenciesMeta": {
     "@spectrum-css/actionbutton": {
@@ -31,6 +31,11 @@
     "@spectrum-css/icon": {
       "optional": true
     }
+  },
+  "devDependencies": {
+    "@spectrum-css/actionbutton": "workspace:^",
+    "@spectrum-css/icon": "workspace:^",
+    "@spectrum-css/tokens": "workspace:^"
   },
   "keywords": [
     "adobe",

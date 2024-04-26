@@ -20,12 +20,21 @@
     "stories/template.js"
   ],
   "peerDependencies": {
-    "@spectrum-css/actionbutton": ">=5",
-    "@spectrum-css/button": ">=11",
-    "@spectrum-css/icon": ">=4",
-    "@spectrum-css/splitbutton": ">=7",
-    "@spectrum-css/textfield": ">=6",
-    "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/actionbutton": ">=6",
+    "@spectrum-css/button": ">=13",
+    "@spectrum-css/icon": ">=7",
+    "@spectrum-css/splitbutton": ">=8",
+    "@spectrum-css/textfield": ">=7",
+    "@spectrum-css/tokens": ">=14"
+  },
+  "devDependencies": {
+    "@spectrum-css/actionbutton": "workspace:^",
+    "@spectrum-css/button": "workspace:^",
+    "@spectrum-css/icon": "workspace:^",
+    "@spectrum-css/splitbutton": "^8.1.2",
+    "@spectrum-css/textfield": "workspace:^",
+    "@spectrum-css/tokens": "workspace:^",
+    "@spectrum-css/vars": "^9.0.8"
   },
   "keywords": [
     "adobe",
