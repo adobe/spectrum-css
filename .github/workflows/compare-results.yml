@@ -52,7 +52,7 @@ jobs:
             - name: Use Node LTS version
               uses: actions/setup-node@v4
               with:
-                  node-version: 18
+                  node-version: 20
                   cache: yarn
                   cache-dependency-path: yarn.lock
 
@@ -68,7 +68,7 @@ jobs:
                   path: |
                       .cache/yarn
                       node_modules
-                  key: ubuntu-latest-node18-${{ hashFiles('yarn.lock') }}
+                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
 
             ## --- INSTALL --- ##
             # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists
@@ -88,13 +88,13 @@ jobs:
             - name: Download build artifacts for head
               uses: actions/download-artifact@v4
               with:
-                  name: ubuntu-latest-node18-compiled-assets-${{ steps.derive-key.outputs.head-path }}
+                  name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.head-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.head-path }}
 
             - name: Download build artifacts for base
               uses: actions/download-artifact@v4
               with:
-                  name: ubuntu-latest-node18-compiled-assets-${{ steps.derive-key.outputs.base-path }}
+                  name: ubuntu-latest-node20-compiled-assets-${{ steps.derive-key.outputs.base-path }}
                   path: ${{ github.workspace }}/${{ steps.derive-key.outputs.base-path }}
 
             - name: Compare compiled output file size
@@ -153,7 +153,7 @@ jobs:
               run: |
                   BRANCH=${{ matrix.branch }}
                   BRANCH=${BRANCH//\//_}
-                  echo "key=ubuntu-latest-node18-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
+                  echo "key=ubuntu-latest-node20-compiled-assets-${BRANCH}" >> "$GITHUB_OUTPUT"
 
             - name: Check if build artifacts already exist
               uses: actions/download-artifact@v4
@@ -177,7 +177,7 @@ jobs:
             - name: Use Node LTS version
               uses: actions/setup-node@v4
               with:
-                  node-version: 18
+                  node-version: 20
                   cache: yarn
 
             - name: Enable Corepack
@@ -192,7 +192,7 @@ jobs:
                   path: |
                       .cache/yarn
                       node_modules
-                  key: ubuntu-latest-node18-${{ hashFiles('yarn.lock') }}
+                  key: ubuntu-latest-node20-${{ hashFiles('yarn.lock') }}
 
             ## --- INSTALL --- ##
             # note: if cache-hit isn't needed b/c yarn will leverage the cache if it exists

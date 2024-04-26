@@ -54,17 +54,11 @@ jobs:
                     - ubuntu-latest
                     # - windows-latest # todo: debug token style-dictionary failures on windows
                 node-version:
-                    - 18
-                experimental:
-                    - false
-                include:
-                    - node-version: 20
-                      experimental: true
+                    - 20
         uses: ./.github/workflows/build.yml
         with:
             system: ${{ matrix.system }}
             node-version: ${{ matrix.node-version }}
-            experimental: ${{ matrix.experimental }}
         secrets: inherit
 
     # -------------------------------------------------------------

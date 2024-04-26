@@ -4,7 +4,7 @@ name: Validate successful build
 # in several environments:
 #
 #   Systems:    Ubuntu, MacOS, // Windows
-#   Node:       18
+#   Node:       20
 #
 # After the build is successful, the compiled assets are uploaded as an artifact
 # to the workflow run. This allows us to download the compiled assets and use
@@ -21,7 +21,7 @@ on:
                 default: "macos-latest"
             node-version:
                 required: false
-                default: "18"
+                default: "20"
             experimental:
                 required: false
                 default: "false"
@@ -37,7 +37,7 @@ on:
             node-version:
                 required: false
                 type: string
-                default: "18"
+                default: "20"
             experimental:
                 required: false
                 type: boolean
