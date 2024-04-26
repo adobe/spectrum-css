@@ -1,5 +1,6 @@
+import { Template } from "@spectrum-css/actionbutton/stories/template";
+
 import { html } from "lit";
-import { Template } from "../../../components/actionbutton/stories/template";
 
 export default {
 	title: "Foundations/Corner rounding",

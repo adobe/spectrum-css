@@ -197,91 +197,91 @@ const CustomButton = ({
 
 const States = (args) =>
 	html` <div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Default"],
-			})}
-			${Treatment(args)}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Selected"],
-			})}
-			${Treatment({
-				...args,
-				isSelected: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Focused"],
-			})}
-			${Treatment({
-				...args,
-				isFocused: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Hovered"],
-			})}
-			${Treatment({
-				...args,
-				isHovered: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Active"],
-			})}
-			${Treatment({
-				...args,
-				isActive: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Disabled"],
-			})}
-			${Treatment({
-				...args,
-				isDisabled: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Disabled + selected"],
-			})}
-			${Treatment({
-				...args,
-				isSelected: true,
-				isDisabled: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Pending"],
-			})}
-			${Treatment({
-				...args,
-				isPending: true,
-			})}
-		</div>`;
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Default"],
+		})}
+		${Treatment(args)}
+	</div>
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Selected"],
+		})}
+		${Treatment({
+			...args,
+			isSelected: true,
+		})}
+	</div>
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Focused"],
+		})}
+		${Treatment({
+			...args,
+			isFocused: true,
+		})}
+	</div>
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Hovered"],
+		})}
+		${Treatment({
+			...args,
+			isHovered: true,
+		})}
+	</div>
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Active"],
+		})}
+		${Treatment({
+			...args,
+			isActive: true,
+		})}
+	</div>
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Disabled"],
+		})}
+		${Treatment({
+			...args,
+			isDisabled: true,
+		})}
+	</div>
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Disabled + selected"],
+		})}
+		${Treatment({
+			...args,
+			isSelected: true,
+			isDisabled: true,
+		})}
+	</div>
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Pending"],
+		})}
+		${Treatment({
+			...args,
+			isPending: true,
+		})}
+	</div>`;
 
 const Sizes = (args) =>
 	html` ${["s", "m", "l", "xl"].map((size) => {

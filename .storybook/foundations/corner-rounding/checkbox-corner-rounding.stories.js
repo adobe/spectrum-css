@@ -1,6 +1,6 @@
-// Import the component markup template
+import { Template } from "@spectrum-css/checkbox/stories/template";
+
 import { html } from "lit";
-import { Template } from "../../../components/checkbox/stories/template";
 
 export default {
 	title: "Foundations/Corner rounding",

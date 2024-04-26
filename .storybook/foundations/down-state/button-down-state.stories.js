@@ -1,4 +1,4 @@
-import { Template } from "../../../components/button/stories/template";
+import { Template } from "@spectrum-css/button/stories/template";
 
 export default {
 	title: "Foundations/Down state",
