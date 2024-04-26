@@ -1,12 +1,12 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 
+/**
+ * A selectable list of assets, often used inside of miller columns.
+ */
 export default {
 	title: "Components/Asset list",
-	description:
-		"A selectable list of Assets, often used inside of Miller Columns.",
 	component: "AssetList",
 	argTypes: {
 		items: { table: { disable: true } },
@@ -36,14 +36,14 @@ Default.args = {
 		},
 		{
 			iconName: "Document",
-			label: "Resource Allocation Documentation should truncate",
+			label: "Resource allocation documentation should truncate",
 			isSelectable: true,
 			ariaLabelledby: "assetitemlabel-2",
 			checkboxId: "checkbox-2",
 		},
 		{
 			iconName: "Folder",
-			label: "Frontend Projects",
+			label: "Front-end Projects",
 			isSelectable: true,
 			isBranch: true,
 			isSelected: true,

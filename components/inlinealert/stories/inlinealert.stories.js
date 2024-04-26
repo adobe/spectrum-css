@@ -1,10 +1,12 @@
 import { html } from "lit";
+
 import { Template } from "./template";
 
+/**
+ * In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.
+ */
 export default {
 	title: "Components/In-line alert",
-	description:
-		"In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.",
 	component: "InLineAlert",
 	argTypes: {
 		headerText: {
@@ -64,34 +66,30 @@ export default {
 	},
 };
 
-export const Default = ({
-	...args
-}) => {
-	return html`
-		<div>
-			${Template({
-				...args
-			})}
+export const Default = (args) => html`
+	<div>
+		${Template({
+			...args
+		})}
 
-			${
-				window.isChromatic() ?
-					Template({
-						...args,
-						headerText: "in-line alert header announcing something very long and in-line",
-						text: "this is a very urgent alert with a lot of context, so the text has to wrap",
-						customStyles: {"max-width": "400px"}
-					})
-					&&
-					Template({
-						...args,
-						headerText: "in-line alert header announcing something very long and in-line",
-						text: "this is a very urgent alert with a lot of context, so the text has to wrap",
-						customStyles: {"max-width": "400px"},
-						variant: "notice",
-						isClosable: true,
-					})
-				: null
-			}
-		</div>
-	`;
-};
+		${
+			window.isChromatic() ?
+				Template({
+					...args,
+					headerText: "in-line alert header announcing something very long and in-line",
+					text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+					customStyles: {"max-width": "400px"}
+				})
+				&&
+				Template({
+					...args,
+					headerText: "in-line alert header announcing something very long and in-line",
+					text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+					customStyles: {"max-width": "400px"},
+					variant: "notice",
+					isClosable: true,
+				})
+			: null
+		}
+	</div>
+`;

@@ -18,32 +18,30 @@ export const Template = ({
 	customLabel,
 	id,
 	...globals
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				"is-dragged": isDragged,
-				"is-filled": isFilled,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-			role="region"
-			tabindex="0"
-			style="width: 300px;"
-		>
-			${IllustratedMessage({
-				...globals,
-				heading: customHeading ?? IllustratedMessageStory.args.heading,
-				description: customDescription ?? IllustratedMessageStory.args.description,
-			})}
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			"is-dragged": isDragged,
+			"is-filled": isFilled,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		id=${ifDefined(id)}
+		role="region"
+		tabindex="0"
+		style="width: 300px;"
+	>
+		${IllustratedMessage({
+			...globals,
+			heading: customHeading ?? IllustratedMessageStory.args.heading,
+			description: customDescription ?? IllustratedMessageStory.args.description,
+		})}
 
-			<div class="${rootClass}-content">
-				${ActionButton({
-					label: customLabel ?? "Drop file to replace",
-					customClasses: [`${rootClass}-button`],
-				})}
-			</div>
+		<div class="${rootClass}-content">
+			${ActionButton({
+				label: customLabel ?? "Drop file to replace",
+				customClasses: [`${rootClass}-button`],
+			})}
 		</div>
-	`;
-};
+	</div>
+`;

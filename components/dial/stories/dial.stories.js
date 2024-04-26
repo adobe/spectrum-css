@@ -1,9 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A dial is an input control used for selecting a value within a range, similar to a slider. It's often used in audio and video mixing and editing applications, where horizontal space is limited.
+ */
 export default {
 	title: "Components/Dial",
-	description: "A dial is an input control used for selecting a value within a range, similar to a slider. It's often used in audio and video mixing and editing applications, where horizontal space is limited.",
 	component: "Dial",
 	argTypes: {
 		size: {

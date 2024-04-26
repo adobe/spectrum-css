@@ -1,12 +1,13 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
+/**
+ * The in-field button component is a button used inside a text field.
+ */
 export default {
 	title: "Components/In-field button",
-	description: "The In-field button component is a button used inside a textfield",
-	component: "Infieldbutton",
+	component: "InFieldButton",
 	argTypes: {
 		size: {
 			name: "Size",

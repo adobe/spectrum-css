@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * Dividers bring clarity to a layout by grouping and dividing content that exists in close proximity. It can also be used to establish rhythm and hierarchy.
+ */
 export default {
 	title: "Components/Divider",
-	description:
-		"Dividers bring clarity to a layout by grouping and dividing content that exists in close proximity. It can also be used to establish rhythm and hierarchy.",
 	component: "Divider",
 	argTypes: {
 		size: {
@@ -18,7 +18,7 @@ export default {
 			control: "select",
 		},
 		staticColor: {
-			name: "StaticColor",
+			name: "Static color",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },

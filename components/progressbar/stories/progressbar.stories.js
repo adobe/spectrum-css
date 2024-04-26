@@ -1,14 +1,13 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.
+ */
 export default {
 	title: "Components/Progress bar",
-	description:
-		"The Progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.",
 	component: "ProgressBar",
 	argTypes: {
 		customWidth: { table: { disable: true } },
-		staticWhite: { table: { disable: true } },
 		indeterminate: { table: { disable: true } },
 		size: {
 			name: "Size",
@@ -21,7 +20,7 @@ export default {
 			control: "select",
 		},
 		labelPosition: {
-			name: "Label Position",
+			name: "Label position",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -40,7 +39,7 @@ export default {
 			control: "text",
 		},
 		value: {
-			name: "Percent value for fill",
+			name: "Percent filled",
 			type: { name: "number" },
 			table: {
 				type: { summary: "number" },
@@ -48,6 +47,16 @@ export default {
 			},
 			control: { type: "range", min: 0, max: 100,},
 			if: { arg: "indeterminate", truthy: false },
+		},
+		staticColor: {
+			name: "Static color",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Advanced",
+			},
+			options: ["white"],
+			control: "select",
 		},
 	},
 	args: {
@@ -82,7 +91,8 @@ Indeterminate.args = {
 
 export const StaticWhite = Template.bind({});
 StaticWhite.args = {
-	backgroundColor: "rgb(15, 121, 125)",
-	staticWhite: "staticWhite",
+	/* Force dark mode to make typography readable */
+	color: "dark",
+	staticColor: "white",
 	label: "Loading your fonts, images, and icons"
 };

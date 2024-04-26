@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
@@ -11,8 +12,9 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Form",
-	labelsAbove,
+	labelsAbove = false,
 	customClasses = [],
+	customStyles = {},
 	id,
 }) => html`
     <form
@@ -22,10 +24,11 @@ export const Template = ({
             ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
         })}
         id=${ifDefined(id)}
+        style=${ifDefined(styleMap(customStyles))}
     >
         <div class="spectrum-Form-item">
             ${FieldLabel({
-                label: "Company Title",
+                label: "Company title",
                 forInput: "form-example-company",
                 alignment: labelsAbove ? undefined : "left",
             })}
@@ -39,7 +42,7 @@ export const Template = ({
         </div>
         <div class="spectrum-Form-item">
             ${FieldLabel({
-                label: "Email Address",
+                label: "Email address",
                 forInput: "form-example-email",
                 alignment: labelsAbove ? undefined : "left",
             })}
@@ -59,7 +62,7 @@ export const Template = ({
             })}
             <div class="spectrum-Form-itemField">
                 ${Picker({
-                    placeholder: "Select a Country",
+                    placeholder: "Select a country",
                     name: "country",
                     id: "form-example-country",
                 })}

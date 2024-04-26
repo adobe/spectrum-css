@@ -441,10 +441,10 @@ const Variants = (args) =>
 					})}
 					<div
 						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-							padding: "6px"
+							"display": "flex",
+							"flex-direction": "column",
+							"gap": "10px",
+							"padding": "6px"
 						})}
 					>
 						${Wrapping(args)}
@@ -462,13 +462,17 @@ const Variants = (args) =>
 export const Default = Variants.bind({});
 Default.args = {};
 
-export const StaticColorWhite = Variants.bind({});
-StaticColorWhite.args = {
+export const StaticWhite = Variants.bind({});
+StaticWhite.args = {
+	/* Force dark mode to make typography readable */
+	color: "dark",
 	staticColor: "white",
 };
 
-export const StaticColorBlack = Variants.bind({});
-StaticColorBlack.args = {
+export const StaticBlack = Variants.bind({});
+StaticBlack.args = {
+	/* Force light mode to make typography readable */
+	color: "light",
 	staticColor: "black",
 };
 

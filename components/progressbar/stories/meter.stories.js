@@ -1,12 +1,13 @@
-// Import the component markup template
-import { Template } from "./metertemplate";
+import { Template } from "./meter.template";
 
+/**
+ * The meter component is a visual representations of a quantity or an achievement. Their progress is determined by user actions, rather than system actions.
+ */
 export default {
 	title: "Components/Meter",
-	description:
-		"The meter component is a visual representations of a quantity or an achievement. Their progress is determined by user actions, rather than system actions.",
 	component: "ProgressBar",
 	argTypes: {
+		items: { table: { disable: true } },
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -49,6 +50,7 @@ export default {
 	args: {
 		rootClass: "spectrum-ProgressBar",
 		label: "Storage Space",
+		meterFill: "default",
 		size: "s",
 		value: 50,
 	},
@@ -67,11 +69,9 @@ Default.args = {
 	items: [
 		{
 			heading: "Default",
-			meterFill: "default",
 		},
 		{
 			heading: "Large",
-			meterFill: "default",
 			size: "l",
 		},
 		{

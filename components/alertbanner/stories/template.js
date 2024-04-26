@@ -18,15 +18,6 @@ export const Template = ({
 	customClasses = [],
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
 	const iconName =
 		variant === "negative" ? "Alert" : variant === "info" ? "Info" : "";
 
@@ -53,7 +44,7 @@ export const Template = ({
 				${when(hasActionButton, () =>
 				Button({
 					size: "m",
-					variant: "staticWhite",
+					staticColor: "white",
 					treatment: "outline",
 					label: "Action",
 				}))}

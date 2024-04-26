@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A thumbnail is used to display a preview of an image, layer, or effect.
+ */
 export default {
 	title: "Components/Thumbnail",
-	description:
-		"A thumbnail is used to display a preview of an image, layer, or effect.",
 	component: "Thumbnail",
 	argTypes: {
 		reduceMotion: { table: { disable: true } },

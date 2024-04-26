@@ -4,9 +4,11 @@ import { Template } from "./template";
 
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
+/**
+ * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.
+ */
 export default {
 	title: "Components/Tabs",
-	description: "Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.",
 	component: "Tabs",
 	argTypes: {
 		content: { table: { disable: true } },
@@ -107,7 +109,7 @@ export default {
 };
 
 const TabsGroup = (args) => html`
-  <div style="display: flex; flex-direction: ${args.orientation === "horizontal" ? "column" : "row"}; gap: 2rem;">
+  <div style="display: flex; flex-direction: ${args.orientation === "horizontal" ? "column" : "row"}; gap: 32px;">
     ${Template({ ...args, content: [
       {
         id: "tab-1",
@@ -131,20 +133,20 @@ const TabsGroup = (args) => html`
 
 const Variants = (args) => html`
   ${window.isChromatic() ? html`
-  <div style="display: grid; gap: 2rem;${args.orientation === "overflow" ? " max-inline-size: 100px" : ""}">
-    <div style="display: flex; flex-flow: column nowrap; gap: .5rem;">
+  <div style="display: grid; gap: 32px;${args.orientation === "overflow" ? " max-inline-size: 100px" : ""}">
+    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
       ${Typography({ semantics: "heading", size: "s", content: ["Default"] })}
       ${TabsGroup(args)}
     </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: .5rem;">
+    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
       ${Typography({ semantics: "heading", size: "s", content: ["Emphasized"] })}
       ${TabsGroup({ ...args, isEmphasized: true })}
     </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: .5rem;">
+    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
       ${Typography({ semantics: "heading", size: "s", content: ["Quiet"] })}
       ${TabsGroup({ ...args, isQuiet: true })}
     </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: .5rem;">
+    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
       ${Typography({ semantics: "heading", size: "s", content: ["Quiet + compact"] })}
       ${TabsGroup({ ...args, isQuiet: true, isCompact: true })}
     </div>

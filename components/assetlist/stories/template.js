@@ -23,9 +23,8 @@ export const AssetListItem = ({
 	isBranch = false,
 	onclick = () => {},
 	...globals
-}) => {
-
-	return html` <li
+}) => html`
+	<li
 		class=${classMap({
 			[rootClass]: true,
 			"is-selectable": isSelectable,
@@ -74,8 +73,8 @@ export const AssetListItem = ({
 				...globals,
 			})
 		)}
-	</li>`;
-};
+	</li>
+`;
 
 export const Template = ({
 	rootClass = "spectrum-AssetList",

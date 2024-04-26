@@ -1,5 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
@@ -10,17 +12,21 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-CoachMark",
-	customClasses,
+	customClasses = [],
+	customStyles = {},
 	hasActionMenu = false,
 	hasPagination,
 	hasImage,
 	isOpen = true,
 	...globals
 }) => html`
-	<div class=${classMap({
-		[rootClass]: true,
-		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-	})}>
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		style=${ifDefined(styleMap(customStyles))}
+	>
 		${Popover({
 			...globals,
 			nested: true,
@@ -47,7 +53,10 @@ export const Template = ({
 						popoverTestId: "popover-nested-2",
 						popoverId: "popover-nested-2",
 						popoverTriggerId: "trigger-nested-2",
-						customStyles: { "margin-block-start": "30px", "margin-inline-start": "-32px" },
+						customStyles: {
+							"margin-block-start": "30px",
+							"margin-inline-start": "-32px"
+						},
 						iconName: "More",
 						size: globals.scale === "large" ? "s" : "m",
 						items: [

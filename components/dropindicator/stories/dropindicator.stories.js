@@ -1,11 +1,11 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The drop indicator component is used to show the insertion position into a list or table.
+ */
 export default {
 	title: "Components/Drop indicator",
-	description:
-		"The Drop indicator component is used to show the insertion position into a list or table.",
-	component: "Dropindicator",
+	component: "DropIndicator",
 	argTypes: {
 		direction: {
 			name: "Direction",

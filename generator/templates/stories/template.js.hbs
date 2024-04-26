@@ -11,18 +11,16 @@ export const Template = ({
   customClasses = [],
   customStyles = {},
   ...globals
-}) => {
-  return html`
-    <div
-      class=${classMap({
-        [rootClass]: true,
-        [`${rootClass}--size${size.toUpperCase()}`]: true,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
-      id=${ifDefined(id)}
-			style=${ifDefined(styleMap(customStyles))}
-    >
-      <!-- Component mark-up goes here -->
-    </div>
-  `;
-}
+}) => html`
+  <div
+    class=${classMap({
+      [rootClass]: true,
+      [`${rootClass}--size${size.toUpperCase()}`]: true,
+      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+    })}
+    id=${ifDefined(id)}
+    style=${ifDefined(styleMap(customStyles))}
+  >
+    <!-- Component mark-up goes here -->
+  </div>
+`;

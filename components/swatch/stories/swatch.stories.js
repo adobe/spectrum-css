@@ -1,9 +1,10 @@
 import { Template } from "./template";
 
+/**
+ * A swatch shows a small sample of a fill&emdash;such as a color, gradient, texture, or material&emdash;that is intended to be applied to an object.
+ */
 export default {
 	title: "Components/Swatch",
-	description:
-		"A swatch shows a small sample of a fill&emdash;such as a color, gradient, texture, or material&emdash;that is intended to be applied to an object.",
 	component: "Swatch",
 	argTypes: {
 		size: {

@@ -1,10 +1,11 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * Side nav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.
+ */
 export default {
 	title: "Components/Side nav",
-	description: "SideNav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.",
-	component: "Sidenav",
+	component: "SideNav",
 	argTypes: {
 		hasIcon: {
 			name: "Has Icon",
@@ -48,20 +49,20 @@ export const Default = Template.bind({});
 Default.args = {
 	items: [
 		{
-			id: "1",
-			title: "Section Title 1",
+			id: "section1",
+			title: "Section title 1",
 			link: "#",
 			isSelected: true,
 		},
 		{
-			id: "2",
-			title: "Section Title 2",
+			id: "section2",
+			title: "Section title 2",
 			link: "#",
 			isDisabled: true,
 		},
 		{
-			id: "3",
-			title: "Section Title 3",
+			id: "section3",
+			title: "Section title 3",
 			link: "#",
 		},
 	],
@@ -72,39 +73,39 @@ Multilevel.args = {
 	variant: "multiLevel",
 	items: [
 		{
-			id: "1",
-			title: "Section Title 1",
+			id: "section1",
+			title: "Section title 1",
 			link: "#",
 		},
 		{
-			id: "2",
-			title: "Section Title 2",
+			id: "section2",
+			title: "Section title 2",
 			link: "#",
 			levelTwoItems: [
 				{
-					id: "2.1",
-					title: "Section Title 1",
+					id: "section2.1",
+					title: "Section title 1",
 					link: "#",
 				},
 				{
-					id: "2.2",
-					title: "Section Title 2: The Long Title That Wraps to The Next Line",
+					id: "section2.2",
+					title: "Section title 2: The long title that wraps to the next line",
 					link: "#",
 					levelThreeItems: [
 						{
-							id: "3.1",
-							title: "Section Title 1",
+							id: "section3.1",
+							title: "Section title 1",
 							link: "#",
 						},
 						{
-							id: "3.2",
-							title: "Section Title 2: Another Long Title That Wraps to The Next Line",
+							id: "section3.2",
+							title: "Section title 2: Another long title that wraps to the next line",
 							link: "#",
 							isSelected: true,
 						},
 						{
-							id: "3.3",
-							title: "Section Title 3",
+							id: "section3.3",
+							title: "Section title 3",
 							link: "#",
 						},
 					]
@@ -112,8 +113,8 @@ Multilevel.args = {
 			]
 		},
 		{
-			id: "3",
-			title: "Section Title 3",
+			id: "section3",
+			title: "Section title 3",
 			link: "#",
 		},
 	]
@@ -123,22 +124,22 @@ export const WithHeading = Template.bind({});
 WithHeading.args = {
 	items: [
 		{
-			id: "1",
+			id: "section1",
 			title: "Section 1",
 			link: "#",
 		},
 		{
-			id: "2",
+			id: "section2",
 			heading: "Heading 1",
 			link: "#",
 			levelTwoItems: [
 				{
-					id: "2.1",
+					id: "section2.1",
 					title: "Section 1",
 					link: "#",
 				},
 				{
-					id: "2.2",
+					id: "section2.2",
 					title: "Section 2",
 					link: "#",
 				},
@@ -153,27 +154,27 @@ WithIcons .args = {
 	hasIcon: true,
 	items: [
 		{
-			id: "1",
+			id: "section1",
 			title: "Section 1",
 			link: "#",
 		},
 		{
-			id: "2",
+			id: "section2",
 			title: "Section 2",
 			link: "#",
 			levelTwoItems: [
 				{
-					id: "2.1",
+					id: "section2.1",
 					title: "Section 1",
 					link: "#",
 				},
 				{
-					id: "2.2",
+					id: "section2.2",
 					title: "Section 2",
 					link: "#",
 					levelThreeItems: [
 						{
-							id: "3.1",
+							id: "section3.1",
 							title: "Section 1",
 							link: "#",
 						},
@@ -182,7 +183,7 @@ WithIcons .args = {
 			]
 		},
 		{
-			id: "3",
+			id: "section3",
 			title: "Section 3",
 			link: "#",
 		},

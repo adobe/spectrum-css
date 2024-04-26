@@ -17,44 +17,42 @@ export const Template = ({
 	isInvalid,
 	items,
 	...globals
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--${labelPosition}label`]:
-					typeof labelPosition !== "undefined",
-				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
-		>
-			${FieldLabel({
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--${labelPosition}label`]:
+				typeof labelPosition !== "undefined",
+			[`${rootClass}--${layout}`]: typeof layout !== "undefined",
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
+	>
+		${FieldLabel({
+			...globals,
+			size: "m",
+			label: "Field Group Label",
+			alignment: labelPosition === "side" ? "right" : "top",
+		})}
+
+		<div class="${rootClass}InputLayout">
+			${repeat(
+				items,
+				(item) => item.id,
+				(item) => {
+					return Radio({
+						...globals,
+						...item,
+						customClasses: [`${rootClass}-item`],
+					});
+				}
+			)}
+			${HelpText({
 				...globals,
 				size: "m",
-				label: "Field Group Label",
-				alignment: labelPosition === "side" ? "right" : "top",
+				text: "Select an option",
+				variant: isInvalid ? "negative" : "neutral",
 			})}
-
-			<div class="${rootClass}InputLayout">
-				${repeat(
-					items,
-					(item) => item.id,
-					(item) => {
-						return Radio({
-							...globals,
-							...item,
-							customClasses: [`${rootClass}-item`],
-						});
-					}
-				)}
-				${HelpText({
-					...globals,
-					size: "m",
-					text: "Select an option",
-					variant: isInvalid ? "negative" : "neutral",
-				})}
-			</div>
 		</div>
-	`;
-};
+	</div>
+`;

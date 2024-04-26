@@ -133,30 +133,28 @@ export const Template = ({
 	isQuiet,
 	items,
 	...globals
-}) => {
-	return html`
-		<ul
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${styleMap(customStyles)}
-		>
-			${repeat(
-				items,
-				(item) => item.id,
-				(item) => {
-					return TreeViewItem({
-						...globals,
-						...item,
-						size,
-					});
-				}
-			)}
-		</ul>
-	`;
-};
+}) => html`
+	<ul
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+			[`${rootClass}--quiet`]: isQuiet,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		style=${styleMap(customStyles)}
+	>
+		${repeat(
+			items,
+			(item) => item.id,
+			(item) => {
+				return TreeViewItem({
+					...globals,
+					...item,
+					size,
+				});
+			}
+		)}
+	</ul>
+`;

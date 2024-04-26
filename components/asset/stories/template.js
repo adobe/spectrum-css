@@ -1,6 +1,7 @@
 import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 
@@ -10,7 +11,7 @@ export const Template = ({
 	preset,
 	id,
 	customClasses = [],
-	// ...globals
+	customStyles = {},
 }) => {
 	let visual;
 	if (preset === "file") {
@@ -31,7 +32,11 @@ export const Template = ({
 		visual = html`<img
 			class="${rootClass}-image"
 			src=${ifDefined(image)}
-			style="max-width: 75%; max-height: 75%; object-fit: contain;"
+			style=${styleMap({
+				"max-width": "75%",
+				"max-height": "75%",
+				"object-fit": "contain",
+			})}
 		/>`;
 	}
 
@@ -41,6 +46,7 @@ export const Template = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
+		style=${styleMap(customStyles)}
 	>
 		${visual}
 	</div>`;

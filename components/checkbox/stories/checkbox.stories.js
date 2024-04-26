@@ -2,10 +2,11 @@ import { html } from "lit";
 
 import { Template } from "./template";
 
+/**
+ * Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.
+ */
 export default {
 	title: "Components/Checkbox",
-	description:
-		"Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.",
 	component: "Checkbox",
 	argTypes: {
 		size: {
@@ -103,37 +104,31 @@ export default {
 	},
 };
 
-const CheckboxGroup = ({
-	// customStyles = {},
-	// isChecked = false,
-	...args
-}) => {
-	return html`
-		<div style="display: flex; flex-direction: column; padding: 1rem">
+const CheckboxGroup = (args) => html`
+	<div style="display: flex; flex-direction: column; padding: 16px">
+		${Template({
+			...args,
+			iconName: undefined,
+		})}
+		${Template({
+			...args,
+			isChecked: true,
+		})}
+		${Template({
+			...args,
+			isIndeterminate: true,
+		})}
 			${Template({
-				...args,
-				iconName: undefined,
-			})}
-			${Template({
-				...args,
-				isChecked: true,
-			})}
-			${Template({
-				...args,
-				isIndeterminate: true,
-			})}
-				${Template({
-				...args,
-				isDisabled: true,
-			})}
-			${Template({
-				...args,
-				label: "Checkbox with wrapping label text",
-				customStyles: { "max-inline-size": "100px" },
-			})}
-		</div>
-	`;
-};
+			...args,
+			isDisabled: true,
+		})}
+		${Template({
+			...args,
+			label: "Checkbox with wrapping label text",
+			customStyles: { "max-inline-size": "100px" },
+		})}
+	</div>
+`;
 
 export const Default = CheckboxGroup.bind({});
 Default.args = {

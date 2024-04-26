@@ -1,13 +1,13 @@
-// Import the component markup template
 import { html } from "lit";
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
+/**
+ * A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention.
+ */
 export default {
 	title: "Components/Badge",
-	description:
-		"A badge element displays a small amount of color-categorized metadata; ideal for getting a user's attention.",
 	component: "Badge",
 	argTypes: {
 		size: {
@@ -76,34 +76,27 @@ export default {
 			type: "migrated",
 		},
 	},
+	decorators: [
+		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
+	],
 };
 
-const BadgeGroup = ({
-	// customStyles = {},
-	...args
-}) => {
-	return html`
-		<div style="padding: 1rem">
-			${Template({
-				...args,
-				iconName: undefined,
-			})}
-			${Template({
-				...args,
-			})}
-			${Template({
-				...args,
-				label: undefined,
-			})}
-			${Template({
-				...args,
-				label: "24 days left in trial",
-				customStyles: { "max-inline-size": "100px" },
-			})}
-		</div>
-	`;
-};
+const BadgeGroup = (args) => html`
+	${Template({
+		...args,
+		iconName: undefined,
+	})}
+	${Template(args)}
+	${Template({
+		...args,
+		label: undefined,
+	})}
+	${Template({
+		...args,
+		label: "24 days left in trial",
+		customStyles: { "max-inline-size": "100px" },
+	})}
+`;
 
 export const Default = BadgeGroup.bind({});
-Default.args = {
-};
+Default.args = {};

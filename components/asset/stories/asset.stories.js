@@ -51,9 +51,9 @@ export default {
 const AssetGroup = (args) => html`
 	${window.isChromatic() ? html`
 		<div style=${styleMap({
-			display: "grid",
-			gridTemplateColumns: "repeat(3, 200px)",
-			gap: "8px"
+			"display": "grid",
+			"grid-template-columns": "repeat(3, 200px)",
+			"gap": "8px"
 		})}>
 			${Template(args)}
 			${Template({

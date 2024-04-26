@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.
+ */
 export default {
 	title: "Components/Slider",
-	description:
-		"A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.",
 	component: "Slider",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },
@@ -194,7 +194,7 @@ WithFocus.args = {
 export const Gradient = Template.bind({});
 Gradient.args = {
 	...Default.args,
-	style: {
+	customStyles: {
 		"--spectrum-slider-track-color":
 			"linear-gradient(to right, red, green 100%)",
 		"--spectrum-slider-track-color-rtl":

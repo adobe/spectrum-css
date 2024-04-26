@@ -1,16 +1,17 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 
+/**
+ * The action group component is a collection of action buttons.
+ */
 export default {
 	title: "Components/Action group",
-	description: "The Action group component is a collection of action buttons.",
 	component: "ActionGroup",
 	argTypes: {
 		areQuiet: ActionButton.argTypes.isQuiet,
 		areEmphasized: ActionButton.argTypes.isEmphasized,
-		staticColors: ActionButton.argTypes.staticColor,
+		staticColor: ActionButton.argTypes.staticColor,
 		content: { table: { disable: true } },
 		size: {
 			name: "Size",
@@ -55,7 +56,7 @@ export default {
 		size: "m",
 		areQuiet: ActionButton.args.isQuiet,
 		areEmphasized: ActionButton.args.isEmphasized,
-		staticColors: ActionButton.args.staticColor,
+		staticColor: ActionButton.args.staticColor,
 		vertical: false,
 		compact: false,
 		justified: false,

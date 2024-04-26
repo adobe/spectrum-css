@@ -1,10 +1,12 @@
 import { html } from "lit";
+
 import { Template } from "./template";
 
+/**
+ * A radio selector allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
+ */
 export default {
 	title: "Components/Radio",
-	description:
-		"A radio selector allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.",
 	component: "Radio",
 	argTypes: {
 		size: {
@@ -92,37 +94,31 @@ export default {
 	},
 };
 
-export const Default = ({
-	// customHeading,
-	// customDescription,
-	...args
-}) => {
-	return html`
-		<div style="display: flex; flex-direction: column; align-items: flex-start;">
-			${Template({
-				...args,
-				label: "Default"
-			})}
-			${Template({
-				...args,
-				isEmphasized: true,
-				isChecked: true,
-				label: "Emphasized radio button label that is so long it has to wrap",
-				customStyles: {
-					"max-width": "220px",
-				}
-			})}
-			${Template({
-				...args,
-				isDisabled: true,
-				label: "Disabled"
-			})}
-			${Template({
-				...args,
-				isDisabled: true,
-				isReadOnly: true,
-				label: "Read only"
-			})}
-		</div>
-	`;
-};
+export const Default = (args) => html`
+	<div style="display: flex; flex-direction: column; align-items: flex-start;">
+		${Template({
+			...args,
+			label: "Default"
+		})}
+		${Template({
+			...args,
+			isEmphasized: true,
+			isChecked: true,
+			label: "Emphasized radio button label that is so long it has to wrap",
+			customStyles: {
+				"max-width": "220px",
+			}
+		})}
+		${Template({
+			...args,
+			isDisabled: true,
+			label: "Disabled"
+		})}
+		${Template({
+			...args,
+			isDisabled: true,
+			isReadOnly: true,
+			label: "Read only"
+		})}
+	</div>
+`;

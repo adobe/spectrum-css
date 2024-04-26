@@ -11,18 +11,16 @@ export const Template = ({
 	variant = "info",
 	label,
 	customStyles = {},
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-			})}
-			style=${ifDefined(styleMap(customStyles))}
-		>
-			${label}
-		</div>
-	`;
-};
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+		})}
+		style=${ifDefined(styleMap(customStyles))}
+	>
+		${label}
+	</div>
+`;

@@ -2,6 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -17,7 +18,7 @@ export const Template = ({
 	alignment,
 	isDisabled,
 	isRequired,
-	style = {},
+	customStyles = {},
 	...globals
 }) => {
 	if (!label) {
@@ -50,18 +51,16 @@ export const Template = ({
 				"is-disabled": isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(style))}
+			style=${styleMap(customStyles)}
 			id=${ifDefined(id)}
 			for=${ifDefined(forInput)}
 		>
-			${label}${isRequired
-				? Icon({
-					...globals,
-					size,
-					iconName,
-					customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`],
-				})
-				: ""}
+			${label}${when(isRequired, () => Icon({
+				...globals,
+				size,
+				iconName,
+				customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`],
+			}))}
 		</label>
 	`;
 };

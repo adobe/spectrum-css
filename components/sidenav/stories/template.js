@@ -16,70 +16,68 @@ export const Template = ({
 	iconName,
 	items = [],
 	...globals
-}) => {
-	return html`
-    <nav>
-      <ul class=${classMap({
-        [rootClass]: true,
-        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
-        [`${rootClass}--hasIcon`]: hasIcon,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}>
-        ${repeat(items, (item) => item.id, (item) => {
-          if (typeof item.levelTwoItems !== "undefined") {
-            return html`
-              <li class=${classMap({
-                [`${rootClass}-item`]: true,
-                "is-selected": item.isSelected,
-                "is-disabled": item.isDisabled,
-              })}>
-              ${item.heading ?
-                html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.heading}</h2>`
-                :
-                html`
-                <a class="${rootClass}-itemLink">
-                ${when(hasIcon, () =>
-                  Icon({
-                      ...globals,
-                      iconName,
-                    })
-                  )}
-                  <span class="${rootClass}-link-text">${item.title}</span>
-                </a>
-                `
-              }
-              <ul class=${classMap({
-                [rootClass]: true,
-                [`${rootClass}--hasIcon`]: hasIcon,
-                ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-              })}
-              aria-labelledby=${ifDefined(item.heading) ? `${item.id}-heading` : ""}>
-                  ${repeat(item.levelTwoItems, (item) => item.id, (item) => {
-                    return SideNavItem({
-                      variant,
-                      hasIcon,
-                      iconName,
-                      ...globals,
-                      ...item
-                    });
-                  })}
-                </ul>
-              </li>
-            `;
-          }
- else {
-            return SideNavItem({
-              hasIcon,
-              iconName,
-              ...globals,
-              ...item
-            });
-          }
-        })}
-      </ul>
+}) => html`
+  <nav>
+    <ul class=${classMap({
+      [rootClass]: true,
+      [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+      [`${rootClass}--hasIcon`]: hasIcon,
+      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+    })}>
+      ${repeat(items, (item) => item.id, (item) => {
+        if (typeof item.levelTwoItems !== "undefined") {
+          return html`
+            <li class=${classMap({
+              [`${rootClass}-item`]: true,
+              "is-selected": item.isSelected,
+              "is-disabled": item.isDisabled,
+            })}>
+            ${item.heading ?
+              html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.heading}</h2>`
+              :
+              html`
+              <a class="${rootClass}-itemLink">
+              ${when(hasIcon, () =>
+                Icon({
+                    ...globals,
+                    iconName,
+                  })
+                )}
+                <span class="${rootClass}-link-text">${item.title}</span>
+              </a>
+              `
+            }
+            <ul class=${classMap({
+              [rootClass]: true,
+              [`${rootClass}--hasIcon`]: hasIcon,
+              ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+            })}
+            aria-labelledby=${ifDefined(item.heading) ? `${item.id}-heading` : ""}>
+                ${repeat(item.levelTwoItems, (item) => item.id, (item) => {
+                  return SideNavItem({
+                    variant,
+                    hasIcon,
+                    iconName,
+                    ...globals,
+                    ...item
+                  });
+                })}
+              </ul>
+            </li>
+          `;
+        }
+else {
+          return SideNavItem({
+            hasIcon,
+            iconName,
+            ...globals,
+            ...item
+          });
+        }
+      })}
+    </ul>
   </nav>
-  `;
-};
+`;
 
 export const SideNavItem = ({
 	rootClass = "spectrum-SideNav",

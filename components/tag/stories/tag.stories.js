@@ -2,10 +2,11 @@ import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
+/**
+ * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.
+ */
 export default {
 	title: "Components/Tag",
-	description:
-		"A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.",
 	component: "Tag",
 	argTypes: {
 		size: {

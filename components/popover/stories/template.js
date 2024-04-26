@@ -18,10 +18,7 @@ export const Template = ({
 	id = "popover-1",
 	testId,
 	triggerId = "trigger",
-	customStyles = {
-		"inset-inline-start": "0px",
-		"inset-block-start": "0px",
-	},
+	customStyles = {},
 	trigger,
 	content = [],
 	...globals
@@ -33,15 +30,6 @@ export const Template = ({
 		return html``;
 	}
 
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
 
 	const nestedPopover = id === "popover-nested" || id === "popover-nested-2";
 
@@ -136,6 +124,8 @@ export const Template = ({
 					updateArgs({
 						isOpen: !isOpen,
 						customStyles: {
+							"inset-inline-start": "0px",
+							"inset-block-start": "0px",
 							...customStyles,
 							transform: transforms.join(" "),
 							...additionalStyles,

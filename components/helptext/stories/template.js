@@ -17,28 +17,26 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				"is-disabled": isDisabled,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${styleMap(customStyles)}
-			id=${ifDefined(id)}
-		>
-			${!hideIcon && variant == "negative"
-				? Icon({
-					iconName: "Alert",
-					size,
-					customClasses: [`${rootClass}-validationIcon`],
-				})
-				: ""}
-			<div class=${`${rootClass}-text`}>${text}</div>
-		</div>
-	`;
-};
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			"is-disabled": isDisabled,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		style=${styleMap(customStyles)}
+		id=${ifDefined(id)}
+	>
+		${!hideIcon && variant == "negative"
+			? Icon({
+				iconName: "Alert",
+				size,
+				customClasses: [`${rootClass}-validationIcon`],
+			})
+			: ""}
+		<div class=${`${rootClass}-text`}>${text}</div>
+	</div>
+`;

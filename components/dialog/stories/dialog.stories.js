@@ -1,10 +1,12 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
 
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+
+/**
+ * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.
+ */
 export default {
 	title: "Components/Dialog",
-	description:
-		"A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.",
 	component: "Dialog",
 	argTypes: {
 		heading: {
@@ -57,7 +59,7 @@ export default {
 		},
 		docs: {
 			story: {
-				height: "700px",
+				height: "500px",
 			},
 		},
 		status: {

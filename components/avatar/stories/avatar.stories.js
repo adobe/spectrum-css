@@ -1,9 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * An image representing a user.
+ */
 export default {
 	title: "Components/Avatar",
-	description: "An image representing a user.",
 	component: "Avatar",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },

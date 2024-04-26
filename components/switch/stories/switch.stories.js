@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A switch is used to turn an option on or off. Switches allow users to select the state of a single option at a time.
+ */
 export default {
 	title: "Components/Switch",
-	description:
-		"A switch is used to turn an option on or off. Switches allow users to select the state of a single option at a time.",
 	component: "Switch",
 	argTypes: {
 		size: {

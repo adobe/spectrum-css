@@ -19,34 +19,32 @@ export const Template = ({
 	customClasses = [],
 	id,
 	...globals
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(customStyles))}
-		>
-			${when(iconName, () =>
-				Icon({
-					...globals,
-					iconName,
-					customClasses: [
-						...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),
-						`${rootClass}-icon`,
-					],
-				})
-			)}
-			${when(
-				label,
-				() => html`<div class="${rootClass}-label">${label}</div>`
-			)}
-		</div>
-	`;
-};
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+			[`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		id=${ifDefined(id)}
+		style=${ifDefined(styleMap(customStyles))}
+	>
+		${when(iconName, () =>
+			Icon({
+				...globals,
+				iconName,
+				customClasses: [
+					...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),
+					`${rootClass}-icon`,
+				],
+			})
+		)}
+		${when(
+			label,
+			() => html`<div class="${rootClass}-label">${label}</div>`
+		)}
+	</div>
+`;

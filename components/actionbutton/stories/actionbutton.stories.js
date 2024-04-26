@@ -120,7 +120,7 @@ export default {
 			control: "boolean",
 		},
 		staticColor: {
-			name: "StaticColor",
+			name: "Static color",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -161,18 +161,18 @@ export default {
 				.spectrum-Typography > div {
 					border: 1px solid var(--spectrum-gray-200);
 					border-radius: 4px;
-					padding: 0 1em 1em;
+					padding: 0 14px 14px;
 					/* Why seafoam? Because it separates it from the component styles. */
 					--mod-detail-font-color: var(--spectrum-seafoam-900);
 				}
 			</style>
 			<div
 				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "flex-start",
-					gap: "1rem",
-					"--mod-detail-margin-end": ".3rem",
+					"display": "flex",
+					"flex-direction": "column",
+					"align-items": "flex-start",
+					"gap": "16px",
+					"--mod-detail-margin-end": "4.8px",
 				})}
 			>
 				${Story(context)}
@@ -183,8 +183,8 @@ export default {
 
 const ActionButtons = (args) => html` <div
 	style=${styleMap({
-		display: "flex",
-		gap: "1rem",
+		"display": "flex",
+		"gap": "16px",
 	})}
 	id="render-root"
 >
@@ -332,9 +332,9 @@ const Variants = (args) =>
 					})}
 					<div
 						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: ".3rem",
+							"display": "flex",
+							"flex-direction": "column",
+							"gap": "4.8px",
 						})}
 					>
 						${States(args)}
@@ -348,9 +348,9 @@ const Variants = (args) =>
 					})}
 					<div
 						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: ".3rem",
+							"display": "flex",
+							"flex-direction": "column",
+							"gap": "4.8px",
 						})}
 					>
 						${States({
@@ -367,9 +367,9 @@ const Variants = (args) =>
 					})}
 					<div
 						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: ".3rem",
+							"display": "flex",
+							"flex-direction": "column",
+							"gap": "4.8px",
 						})}
 					>
 						${States({
@@ -386,9 +386,9 @@ const Variants = (args) =>
 					})}
 					<div
 						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: ".3rem",
+							"display": "flex",
+							"flex-direction": "column",
+							"gap": "4.8px",
 						})}
 					>
 						${Sizes(args)}

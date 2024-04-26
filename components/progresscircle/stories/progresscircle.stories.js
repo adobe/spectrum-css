@@ -1,12 +1,13 @@
-import isChromatic from "chromatic/isChromatic";
 import { html } from "lit";
+
 import { Template } from "./template";
 
+/**
+ * Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.
+ */
 export default {
 	title: "Components/Progress circle",
-	description:
-		"Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.",
-	component: "Progresscircle",
+	component: "ProgressCircle",
 	argTypes: {
 		size: {
 			name: "Size",
@@ -27,21 +28,23 @@ export default {
 			},
 			control: "boolean",
 		},
-		overBackground: {
-			name: "Over Background",
-			type: { name: "boolean" },
+		staticColor: {
+			name: "Static color",
+			type: { name: "string" },
 			table: {
-				type: { summary: "boolean" },
+				disable: true,
+				type: { summary: "string" },
 				category: "Advanced",
 			},
-			control: "boolean",
+			options: ["white"],
+			control: "select",
 		},
 	},
 	args: {
 		rootClass: "spectrum-ProgressCircle",
 		size: "m",
 		isIndeterminate: false,
-		overBackground: false,
+		staticColor: undefined,
 	},
 	parameters: {
 		actions: {
@@ -53,22 +56,20 @@ export default {
 	},
 };
 
-const chromaticKitchenSink = (args) => html`
-	${Template(args)}
-	${Template({
-		...args,
-		isIndeterminate: true,
-	})}
-	${Template({
-		...args,
-		overBackground: true,
-	})}
-	${Template({
-		...args,
-		isIndeterminate: true,
-		overBackground: true,
-	})}
+const ProgressCircleGroup = (args) => html`
+	${window.isChromatic() ? html`
+		${Template(args)}
+		${Template({
+			...args,
+			isIndeterminate: true,
+		})}
+	` : Template(args)}
 `;
 
-export const Default = (args) => isChromatic() ? chromaticKitchenSink(args) : Template(args);
+export const Default = (args) => ProgressCircleGroup(args);
 Default.args = {};
+
+export const StaticWhite = (args) => ProgressCircleGroup(args);
+StaticWhite.args = {
+	staticColor: "white",
+};

@@ -4,10 +4,11 @@ import { Template } from "./template";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
+/**
+ * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
+ */
 export default {
 	title: "Components/Combobox",
-	description:
-		"Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.",
 	component: "Combobox",
 	argTypes: {
 		size: {
@@ -162,53 +163,58 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		docs: {
+			story: {
+				height: "200px"
+			}
+		},
 	},
 };
 
 const defaultVariants = (args) => html`
-	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
 		${Template({
 			...args,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
 		${Template({
 			...args,
 			isFocused: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
 		${Template({
 			...args,
 			isKeyboardFocused: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
 		${Template({
 			...args,
 			isDisabled: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
 		${Template({
 			...args,
 			isLoading: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
 		${Template({
 			...args,
 			isInvalid: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
 		${Template({
 			...args,
 			showFieldLabel: true,
 			fieldLabelText: "Select location, this label should wrap",
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 10rem;"}>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
 		${Template({
 			...args,
 			showFieldLabel: true,
@@ -221,10 +227,10 @@ const defaultVariants = (args) => html`
 const closedVariants = (args) => defaultVariants({...args, isOpen: false});
 
 const chromaticKitchenSink = (args) => html`
-	<div style="display: flex; gap: 1rem; flex-direction: column;">
+	<div style="display: flex; gap: 16px; flex-direction: column;">
 		${closedVariants(args)}
 	</div>
-	<div style="display: flex; gap: 1rem; flex-direction: column; margin-top: 2rem;">
+	<div style="display: flex; gap: 16px; flex-direction: column; margin-top: 32px;">
 		${defaultVariants(args)}
 	</div>
 `;

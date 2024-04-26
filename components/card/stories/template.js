@@ -92,7 +92,6 @@ export const Template = ({
                       ${ActionButton({
                         ...globals,
                         iconName: "More",
-                        variant: "overBackground",
                         size: "m",
                         isQuiet: true
                       })}
