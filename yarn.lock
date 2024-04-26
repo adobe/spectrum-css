@@ -7043,13 +7043,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/parse-author@npm:^2.0.0":
-  version: 2.0.3
-  resolution: "@types/parse-author@npm:2.0.3"
-  checksum: 10c0/a572efe529d410c0550bbf62c3060c06d441edcebf80a50f20d3cd7107bd6ae71bcd7bebb43993e9b1394afab253eedc2f2ae70fbfd8c96df444235513b7ba42
-  languageName: node
-  linkType: hard
-
 "@types/parse-json@npm:^4.0.0":
   version: 4.0.2
   resolution: "@types/parse-json@npm:4.0.2"
@@ -8342,13 +8335,6 @@ __metadata:
   peerDependencies:
     postcss: 8.x
   checksum: 10c0/4c2d929054f1d1a49b753c05a3f5f3d79dfbf912459d57a139d63b62d4b79079d03644b08b2d21d3db88ce5a52801a523a3878dca25522bf7ad796b0957c9bd1
-  languageName: node
-  linkType: hard
-
-"author-regex@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "author-regex@npm:1.0.0"
-  checksum: 10c0/3f3a5ad6660be010bd5b979fac180f435bd9615e81db2b1cdac081eb3f639461f6c3927ced956e377a5c91cc789e3de3a3e900e296c1423971043c8fd8be0b73
   languageName: node
   linkType: hard
 
@@ -9676,7 +9662,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^4.0.0, commander@npm:^4.0.1":
+"commander@npm:^4.0.0":
   version: 4.1.1
   resolution: "commander@npm:4.1.1"
   checksum: 10c0/84a76c08fe6cc08c9c93f62ac573d2907d8e79138999312c92d4155bc2325d487d64d13f669b2000c9f8caf70493c1be2dac74fec3c51d5a04f8bc3ae1830bab
@@ -10000,7 +9986,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig@npm:^7.0.0, cosmiconfig@npm:^7.0.1":
+"cosmiconfig@npm:^7.0.1":
   version: 7.1.0
   resolution: "cosmiconfig@npm:7.1.0"
   dependencies:
@@ -12897,7 +12883,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.3, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.5, glob@npm:^7.1.6, glob@npm:^7.2.3":
+"glob@npm:^7.0.3, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.5, glob@npm:^7.2.3":
   version: 7.2.3
   resolution: "glob@npm:7.2.3"
   dependencies:
@@ -16898,15 +16884,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"parse-author@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "parse-author@npm:2.0.0"
-  dependencies:
-    author-regex: "npm:^1.0.0"
-  checksum: 10c0/8b4c19523588a4271c89f64e8167be7c80b4765059c865d38a996c37d080c7e5123e3e2d07d47290891628ad27f4dfb692e3b61156c52fcc0af6cdce3ed57afd
-  languageName: node
-  linkType: hard
-
 "parse-entities@npm:^2.0.0":
   version: 2.0.0
   resolution: "parse-entities@npm:2.0.0"
@@ -18090,25 +18067,6 @@ __metadata:
   dependencies:
     fast-diff: "npm:^1.1.2"
   checksum: 10c0/81e0027d731b7b3697ccd2129470ed9913ecb111e4ec175a12f0fcfab0096516373bf0af2fef132af50cafb0a905b74ff57996d615f59512bb9ac7378fcc64ab
-  languageName: node
-  linkType: hard
-
-"prettier-package-json@npm:^2.8.0":
-  version: 2.8.0
-  resolution: "prettier-package-json@npm:2.8.0"
-  dependencies:
-    "@types/parse-author": "npm:^2.0.0"
-    commander: "npm:^4.0.1"
-    cosmiconfig: "npm:^7.0.0"
-    fs-extra: "npm:^10.0.0"
-    glob: "npm:^7.1.6"
-    minimatch: "npm:^3.0.4"
-    parse-author: "npm:^2.0.0"
-    sort-object-keys: "npm:^1.1.3"
-    sort-order: "npm:^1.0.1"
-  bin:
-    prettier-package-json: bin/prettier-package-json
-  checksum: 10c0/b02f96249ae110ef032afbf34ed9a3ae270fd589191854af0891e5d49bb7701ed5677aad5a8a568b3e2fd01a169ee0df842f5ef17ae1105fe16e6b3863cdf9c5
   languageName: node
   linkType: hard
 
@@ -19788,20 +19746,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sort-object-keys@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "sort-object-keys@npm:1.1.3"
-  checksum: 10c0/3bf62398658d3ff4bbca0db4ed8f42f98abc41433859f63d02fb0ab953fbe5526be240ec7e5d85aa50fcab6c937f3fa7015abf1ecdeb3045a2281c53953886bf
-  languageName: node
-  linkType: hard
-
-"sort-order@npm:^1.0.1":
-  version: 1.1.2
-  resolution: "sort-order@npm:1.1.2"
-  checksum: 10c0/f60ab1edb253ca879a136b89860082e446c9eeefe5c42964bdcd6b4be8639d86a8d058e0b4afbd710c05d757caf117e14975fb9962d2aba8c90df572e9039c68
-  languageName: node
-  linkType: hard
-
 "source-map-js@npm:^1.0.1, source-map-js@npm:^1.0.2, source-map-js@npm:^1.2.0":
   version: 1.2.0
   resolution: "source-map-js@npm:1.2.0"
@@ -19950,7 +19894,6 @@ __metadata:
     postcss-reporter: "npm:^7.1.0"
     postcss-splitinator: "npm:^2.0.0"
     prettier: "npm:^2.8.8"
-    prettier-package-json: "npm:^2.8.0"
     rimraf: "npm:^5.0.5"
     stylelint: "npm:^15.11.0"
     stylelint-config-clean-order: "npm:^5.4.1"

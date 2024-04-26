@@ -1,7 +1,4 @@
 module.exports = {
-	"package.json": [
-		"prettier-package-json --write"
-	],
 	"components/*/*.css": [
 		"stylelint --fix --cache --allow-empty-input --quiet"
 	],
