@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
-		"@spectrum-css/tokens": "^14.0.0-next.6",
+		"@spectrum-css/tokens": "^14.0.0-next.7",
 		"@spectrum-css/ui-icons": "^1.1.2"
 	},
 	"devDependencies": {
@@ -50,5 +50,12 @@
 		"storybook": "^8.0.9",
 		"style-loader": "4.0.0",
 		"webpack": "^5.91.0"
-	}
+	},
+	"keywords": [
+		"adobe",
+		"css",
+		"design system",
+		"spectrum",
+		"storybook"
+	]
 }
