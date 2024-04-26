@@ -1,5 +1,6 @@
 | Modifiable custom properties               |
 | ------------------------------------------ |
+| `--mod-animation-duration-100`             |
 | `--mod-bold-font-weight`                   |
 | `--mod-button-animation-duration`          |
 | `--mod-button-background-color-default`    |
@@ -44,4 +45,6 @@
 | `--mod-button-top-to-icon`                 |
 | `--mod-button-top-to-text`                 |
 | `--mod-focus-indicator-gap`                |
+| `--mod-line-height-100`                    |
+| `--mod-sans-font-family-stack`             |
 | `--mod-static-black-focus-indicator-color` |
