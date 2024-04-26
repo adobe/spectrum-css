@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.0.0-next.5
+
+### Patch Changes
+
+- [#2700](https://github.com/adobe/spectrum-css/pull/2700) [`fd0fbc2`](https://github.com/adobe/spectrum-css/commit/fd0fbc28ab944afdbfdc615e1108bc941beb93d5) Thanks [@castastrophe](https://github.com/castastrophe)! - chore: run branch through formatter
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
