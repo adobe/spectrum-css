@@ -1,55 +1,53 @@
 {
-	"name": "@spectrum-css/menu",
-	"version": "7.0.0",
-	"description": "The Spectrum CSS menu component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/menu",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/menu"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"CHANGELOG.md",
-		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
-	],
-	"peerDependencies": {
-		"@spectrum-css/checkbox": ">=8",
-		"@spectrum-css/divider": ">=2",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/switch": ">=4",
-		"@spectrum-css/tokens": ">=14.0.0-next.3",
-		"@spectrum-css/tray": ">=2.1"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/checkbox": {
-			"optional": true
-		},
-		"@spectrum-css/divider": {
-			"optional": true
-		},
-		"@spectrum-css/switch": {
-			"optional": true
-		},
-		"@spectrum-css/tray": {
-			"optional": true
-		}
-	},
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/menu",
+  "version": "7.0.0",
+  "description": "The Spectrum CSS menu component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/menu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/menu"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "files": [
+    "dist/*",
+    "metadata/mods.md",
+    "stories/template.js"
+  ],
+  "peerDependencies": {
+    "@spectrum-css/checkbox": ">=8",
+    "@spectrum-css/divider": ">=2",
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/switch": ">=4",
+    "@spectrum-css/tokens": ">=14.0.0-next.3",
+    "@spectrum-css/tray": ">=2.1"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/checkbox": {
+      "optional": true
+    },
+    "@spectrum-css/divider": {
+      "optional": true
+    },
+    "@spectrum-css/switch": {
+      "optional": true
+    },
+    "@spectrum-css/tray": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "adobe",
+    "css",
+    "design system",
+    "spectrum"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -1,44 +1,42 @@
 {
-	"name": "@spectrum-css/contextualhelp",
-	"version": "3.0.0",
-	"description": "The Spectrum CSS contextualhelp component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/contextualhelp"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"CHANGELOG.md",
-		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
-	],
-	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=5",
-		"@spectrum-css/link": ">=4",
-		"@spectrum-css/popover": ">=6",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/link": {
-			"optional": true
-		}
-	},
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/contextualhelp",
+  "version": "3.0.0",
+  "description": "The Spectrum CSS contextualhelp component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/contextualhelp"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "files": [
+    "dist/*",
+    "metadata/mods.md",
+    "stories/template.js"
+  ],
+  "peerDependencies": {
+    "@spectrum-css/actionbutton": ">=5",
+    "@spectrum-css/link": ">=4",
+    "@spectrum-css/popover": ">=6",
+    "@spectrum-css/tokens": ">=14.0.0-next.3"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/link": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "adobe",
+    "css",
+    "design system",
+    "spectrum"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

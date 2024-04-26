@@ -1,49 +1,47 @@
 {
-	"name": "@spectrum-css/tray",
-	"version": "3.0.0",
-	"description": "The Spectrum CSS tray component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/tray",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/tray"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"CHANGELOG.md",
-		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
-	],
-	"peerDependencies": {
-		"@spectrum-css/button": ">=11",
-		"@spectrum-css/dialog": ">=9",
-		"@spectrum-css/divider": ">=2",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/modal": ">=4",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/dialog": {
-			"optional": true
-		},
-		"@spectrum-css/divider": {
-			"optional": true
-		}
-	},
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/tray",
+  "version": "3.0.0",
+  "description": "The Spectrum CSS tray component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/tray",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/tray"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "files": [
+    "dist/*",
+    "metadata/mods.md",
+    "stories/template.js"
+  ],
+  "peerDependencies": {
+    "@spectrum-css/button": ">=11",
+    "@spectrum-css/dialog": ">=9",
+    "@spectrum-css/divider": ">=2",
+    "@spectrum-css/icon": ">=4",
+    "@spectrum-css/modal": ">=4",
+    "@spectrum-css/tokens": ">=14.0.0-next.3"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/dialog": {
+      "optional": true
+    },
+    "@spectrum-css/divider": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "adobe",
+    "css",
+    "design system",
+    "spectrum"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
