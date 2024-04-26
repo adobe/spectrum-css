@@ -4,7 +4,7 @@
   "description": "The Spectrum CSS {{ folderName }} component",
   "license": "Apache-2.0",
   "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/",
+  "homepage": "https://opensource.adobe.com/spectrum-css/{{ folderName }}",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -14,19 +14,22 @@
     "url": "https://github.com/adobe/spectrum-css/issues"
   },
   "main": "dist/index.css",
+	"files": [
+		"dist/*",
+		"CHANGELOG.md",
+		"package.json",
+		"stories/template.js",
+		"metadata/mods.md"
+	],
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
   "peerDependencies": {
     "{{ tokens.name }}": ">={{ parse tokens.version '.' 0 1 }}"
   },
-  "devDependencies": {
-    "{{ tokens.name }}": "^{{ tokens.version }}"
-  },
-  "files": [
-    "dist",
-    "metadata",
-    "stories"
-    "*.md",
-    "package.json"
-  ],
   "publishConfig": {
     "access": "public"
   }
