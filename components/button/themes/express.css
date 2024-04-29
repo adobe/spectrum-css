@@ -15,9 +15,9 @@ governing permissions and limitations under the License.
 @container (--system: express) {
     .spectrum-Button {
       --spectrum-button-background-color-default: var(--spectrum-gray-100);
-      --spectrum-button-background-color-hover: var(--spectrum-gray-300);
+      --spectrum-button-background-color-hover: var(--spectrum-gray-200);
       --spectrum-button-background-color-down: var(--spectrum-gray-400);
-      --spectrum-button-background-color-focus: var(--spectrum-gray-300);
+      --spectrum-button-background-color-focus: var(--spectrum-gray-200);
 
       --spectrum-button-border-color-default: transparent;
       --spectrum-button-border-color-hover: transparent;
