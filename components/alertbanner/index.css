@@ -9,8 +9,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-AlertBanner {
   --spectrum-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
   --spectrum-alert-banner-size: var(--spectrum-alert-banner-width);
@@ -28,6 +26,7 @@ governing permissions and limitations under the License.
   --spectrum-alert-banner-bottom-text: var(--spectrum-alert-banner-bottom-to-text);
 
   /* colors */
+  --spectrum-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default);
   --spectrum-alert-banner-informative-background: var(--spectrum-informative-background-color-default);
   --spectrum-alert-banner-negative-background: var(--spectrum-negative-background-color-default);
   --spectrum-alert-banner-font-color: var(--spectrum-white);
