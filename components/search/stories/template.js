@@ -1,3 +1,4 @@
+
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Container } from "@spectrum-css/preview/decorators";
@@ -16,9 +17,8 @@ export const Template = ({
 	isKeyboardFocused = false,
 	inputValue = "",
 	size,
-	hasDescription = false,
-	description,
-	...globals
+	showHelpText = false,
+	helpTextLabel = "",
 } = {}, context = {}) => {
 	return html`
 	<form
@@ -34,13 +34,13 @@ export const Template = ({
 		${TextField({
 			isDisabled,
 			size,
-			customClasses: [`${rootClass}-textfield`, isFocused && "is-focused"],
+			customClasses: [`${rootClass}-textfield`, isFocused && "is-focused", isKeyboardFocused && "is-keyboardFocused"],
 			iconName: "Magnify",
 			setName: "workflow",
 			type: "search",
 			placeholder: "Search",
 			name: "search",
-			customInputClasses: [`${rootClass}-input`, isKeyboardFocused && "is-keyboardFocused"],
+			customInputClasses: [`${rootClass}-input`],
 			customIconClasses: [`${rootClass}-icon`],
 			autocomplete: false,
 			value: inputValue,
@@ -50,14 +50,14 @@ export const Template = ({
 			size,
 			customClasses: [`${rootClass}-clearButton`],
 		}, context)}
-		${when(hasDescription, () =>
-				HelpText({
-					text: description,
-					size,
-					isDisabled
-				}, context ))}
-		</form>
-	`;
+		${when(showHelpText, () =>
+			HelpText({
+				text: helpTextLabel,
+				size,
+				isDisabled,
+			}, context))}
+	</form>
+`;
 };
 
 export const SearchOptions = ({
