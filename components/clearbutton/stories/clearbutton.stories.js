@@ -51,6 +51,11 @@ export default {
 			...staticColor,
 			options: ["white"],
 		},
+		variant: { table: { disable: true }},
+		isFocusable: {
+			table: { disable: true },
+			type: { name: "boolean" },
+		},
 	},
 	args: {
 		rootClass: "spectrum-ClearButton",

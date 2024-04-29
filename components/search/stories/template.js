@@ -49,6 +49,7 @@ export const Template = ({
 			isDisabled,
 			size,
 			customClasses: [`${rootClass}-clearButton`],
+			isFocusable: false,
 		}, context)}
 		${when(showHelpText, () =>
 			HelpText({
