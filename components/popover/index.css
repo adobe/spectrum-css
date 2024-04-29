@@ -9,8 +9,6 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-
-@import "./themes/express.css";
 @import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Popover {
@@ -20,6 +18,8 @@ governing permissions and limitations under the License.
   &:dir(rtl) {
     --flow-direction: -1;
   }
+
+  --spectrum-popover-border-width: var(--spectrum-border-width-100);
 
   /* animation distance is equal to and responsible for popover offset */
   --spectrum-popover-animation-distance: var(--spectrum-spacing-100);
