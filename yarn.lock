@@ -121,10 +121,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:12.24.0":
-  version: 12.24.0
-  resolution: "@adobe/spectrum-tokens@npm:12.24.0"
-  checksum: 10c0/73dfcccf07d1051826f0f77bba53966ac931120819798f1e2e8201493e1f2df62b8b00eefb9754868ed5d77e44d231a09f2fc41f6d10fd419e81fc6823efb364
+"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20240422210545":
+  version: 0.0.0-s2-foundations-20240422210545
+  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20240422210545"
+  checksum: 10c0/c1647b8151bbaf47433c187f06ce66bfbf5a7f1bb38216db58b828bc3c236be5111bc5239c03599ffcadd526d50b16b37daec2d2611e51bc87f403af9e04b2af
   languageName: node
   linkType: hard
 
@@ -5552,7 +5552,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:12.24.0"
+    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20240422210545"
     "@nxkit/style-dictionary": "npm:^5.0.0"
     postcss: "npm:^8.4.38"
     postcss-cli: "npm:^11.0.0"
