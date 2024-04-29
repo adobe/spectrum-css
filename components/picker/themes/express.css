@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 
 @container (--system: express) {
   .spectrum-Picker {
-    --spectrum-picker-background-color-default: var(--spectrum-gray-200);
+    --spectrum-picker-background-color-default: var(--spectrum-gray-100);
     --spectrum-picker-background-color-default-open: var(--spectrum-gray-300);
     --spectrum-picker-background-color-hover: var(--spectrum-gray-300);
     --spectrum-picker-background-color-hover-open: var(--spectrum-gray-300);

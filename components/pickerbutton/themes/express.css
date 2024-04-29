@@ -14,7 +14,7 @@ governing permissions and limitations under the License.
 
 @container (--system: express) {
   .spectrum-PickerButton {
-    --spectrum-picker-button-background-color: var(--spectrum-gray-200);
+    --spectrum-picker-button-background-color: var(--spectrum-gray-100);
     --spectrum-picker-button-background-color-hover: var(--spectrum-gray-300);
     --spectrum-picker-button-background-color-down: var(--spectrum-gray-400);
     --spectrum-picker-button-background-color-key-focus: var(--spectrum-gray-300);
