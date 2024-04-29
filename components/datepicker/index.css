@@ -10,14 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-DatePicker {
   --spectrum-datepicker-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-datepicker-border-radius-quiet: 0;
   --spectrum-datepicker-border-width: var(--spectrum-border-width-100);
   --spectrum-datepicker-min-width: var(--spectrum-field-width);
   --spectrum-datepicker-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-datepicker-initial-height: var(--spectrum-component-height-100);
 
   /* button */
   --spectrum-datepicker-pickerbutton-border-color: var(--spectrum-gray-250);
