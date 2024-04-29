@@ -18,10 +18,6 @@ export const withContextWrapper = makeDecorator({
 
 		// This property informs which context stylesheets to source
 		//    but does not source a stylesheet for itself
-		/** @type boolean */
-		const isExpress = args.express
-			? args.express
-			: getDefaultValue(argTypes.express);
 		/** @type string */
 		const color = args.color ? args.color : getDefaultValue(argTypes.color) ?? "light";
 		/** @type string */
@@ -44,8 +40,6 @@ export const withContextWrapper = makeDecorator({
 			for (const container of containers) {
 				container.classList.toggle("spectrum", true);
 
-				container.classList.toggle("spectrum--express", isExpress);
-
 				for (const c of colors) {
 					container.classList.toggle(`spectrum--${c}`, c === color);
 				}
@@ -66,7 +60,7 @@ export const withContextWrapper = makeDecorator({
 					}
 				}
 			}
-		}, [color, scale, isExpress, args.staticColor]);
+		}, [color, scale, args.staticColor]);
 
 		return StoryFn(context);
 	},
