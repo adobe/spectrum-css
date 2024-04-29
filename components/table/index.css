@@ -809,7 +809,7 @@ governing permissions and limitations under the License.
 /********* SCROLLABLE *********/
 /* Wrapper that allows a scrollable body and sticky column header. */
 .spectrum-Table-scroller {
-  --spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-100)));
+  --spectrum-table-header-background-color: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-75)));
 
   box-sizing: border-box;
   display: inline-block;
@@ -825,7 +825,7 @@ governing permissions and limitations under the License.
     var(--highcontrast-table-border-color, var(--mod-table-border-color, var(--spectrum-table-border-color)));
 
   &.spectrum-Table--quiet {
-    --mod-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-100)));
+    --mod-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-75)));
     border-block-start: none;
   }
 

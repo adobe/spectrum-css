@@ -30,7 +30,7 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 
   /* selection indicator - checkbox or number */
-  --spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-100-rgb), 0.9);
+  --spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-75-rgb), 0.9);
   --spectrum-assetcard-selectionindicator-size: var(--spectrum-card-selection-background-size);
   --spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-assetcard-selectionindicator-offset-y: 4px;
