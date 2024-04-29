@@ -41,7 +41,7 @@ governing permissions and limitations under the License.
 	--spectrum-tabs-color-key-focus: var(
 		--spectrum-neutral-subdued-content-color-key-focus
 	);
-	--spectrum-tabs-color-disabled: var(--spectrum-gray-500);
+	--spectrum-tabs-color-disabled: var(--spectrum-gray-250);
 
 	--spectrum-tabs-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-tabs-font-style: var(--spectrum-default-font-style);
@@ -581,7 +581,7 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
 	.spectrum-Tabs {
-		--highcontrast-tabs-divider-background-color: var(--spectrum-gray-500);
+		--highcontrast-tabs-divider-background-color: var(--spectrum-gray-250);
 		--highcontrast-tabs-selection-indicator-color: Highlight;
 		--highcontrast-tabs-focus-indicator-color: CanvasText;
 		--highcontrast-tabs-focus-indicator-background-color: Highlight;

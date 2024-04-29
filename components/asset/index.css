@@ -52,7 +52,7 @@ governing permissions and limitations under the License.
     --highcontrast-asset-file-background-color,
     var(
       --mod-asset-file-background-color,
-      var(--spectrum-gray-50)
+      var(--spectrum-gray-25)
     )
   );
 }
@@ -61,7 +61,7 @@ governing permissions and limitations under the License.
 .spectrum-Asset-fileOutline {
   fill: var(
     --mod-asset-icon-outline-color,
-    var(--spectrum-gray-500)
+    var(--spectrum-gray-250)
   );
 }
 

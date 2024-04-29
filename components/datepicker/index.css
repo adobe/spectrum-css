@@ -20,7 +20,7 @@ governing permissions and limitations under the License.
   --spectrum-datepicker-icon-size: var(--spectrum-workflow-icon-size-100);
 
   /* button */
-  --spectrum-datepicker-pickerbutton-border-color: var(--spectrum-gray-500);
+  --spectrum-datepicker-pickerbutton-border-color: var(--spectrum-gray-250);
   --spectrum-datepicker-pickerbutton-border-color-invalid: var(--spectrum-negative-border-color-default);
   --spectrum-datepicker-pickerbutton-width: calc((var(--spectrum-field-edge-to-disclosure-icon-100) * 2) + var(--spectrum-workflow-icon-size-100));
   --spectrum-datepicker-pickerbutton-width-quiet: calc(var(--spectrum-datepicker-pickerbutton-width) - var(--spectrum-datepicker-quiet-button-offset));
@@ -38,7 +38,7 @@ governing permissions and limitations under the License.
 
   /* color */
   --spectrum-datepicker-invalid-quiet-color: var(--spectrum-negative-border-color-default);
-  --spectrum-datepicker-quiet-border-color-hover: var(--spectrum-gray-500);
+  --spectrum-datepicker-quiet-border-color-hover: var(--spectrum-gray-250);
   --spectrum-datepicker-border-color-disabled: var(--spectrum-disabled-border-color);
 
   /* dash */
