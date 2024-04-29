@@ -13,6 +13,7 @@ sections:
       - The mod custom property `--mod-line-height-100` has been renamed to `--mod-button-line-height`.
       - The mod custom property `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`.
       - The mod custom property `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`.
+      - The deprecated mod custom property `--mod-picker-spacing-text-to-alert-icon-inline-start` was removed. This was replaced with `--mod-picker-spacing-text-to-alert-icon-inline-start`.
 
       ### Versions prior to 8.0
       #### Component renamed

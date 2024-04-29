@@ -31,14 +31,11 @@ export const Picker = ({
 }) => {
 	const [, updateArgs] = useArgs();
 
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
+	// Use the chevron from the UI icon set for each size, as defined in the design spec.
+	let disclosureIconName = "ChevronDown100";
+	if (size == "s") { disclosureIconName = "ChevronDown75"; } 
+	else if (size == "l") { disclosureIconName = "ChevronDown200"; }
+	else if (size == "xl") { disclosureIconName = "ChevronDown300"; }
 
 	return html`
 	<button
@@ -81,13 +78,16 @@ export const Picker = ({
 				...globals,
 				size,
 				setName: "ui",
-				iconName: "ChevronDown",
+				iconName: disclosureIconName,
 				customClasses: [`${rootClass}-menuIcon`],
 			})}
 		</button>
 	`;
 };
 
+/**
+ * Picker template used along with other adjacent components, such as Field label and Help text.
+ */
 export const Template = ({
 	rootClass = "spectrum-Picker",
 	size = "m",
@@ -111,30 +111,6 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
-	let iconName = "ChevronDown200";
-	switch (size) {
-		case "s":
-			iconName = "ChevronDown75";
-			break;
-		case "m":
-			iconName = "ChevronDown100";
-			break;
-		case "xl":
-			iconName = "ChevronDown300";
-			break;
-		default:
-			iconName = "ChevronDown200";
-	}
-
 	return html`
 		${label
 			? FieldLabel({
@@ -163,7 +139,6 @@ export const Template = ({
 					customClasses,
 					customStyles,
 					content,
-					iconName,
 					labelPosition,
 					id,
 				})}
@@ -185,7 +160,6 @@ export const Template = ({
 				customClasses,
 				customStyles,
 				content,
-				iconName,
 				labelPosition,
 				id,
 			})

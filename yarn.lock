@@ -5190,7 +5190,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/picker@workspace:components/picker"
   dependencies:
-    "@spectrum-css/commons": "npm:^10.0.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/helptext": ">=5"
     "@spectrum-css/icon": ">=7"
