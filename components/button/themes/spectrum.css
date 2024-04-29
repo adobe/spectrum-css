@@ -18,9 +18,9 @@ governing permissions and limitations under the License.
         --spectrum-button-background-color-focus: var(--spectrum-gray-200);
 
         --spectrum-button-border-color-default: var(--spectrum-gray-400);
-        --spectrum-button-border-color-hover: var(--spectrum-gray-500);
+        --spectrum-button-border-color-hover: var(--spectrum-gray-250);
         --spectrum-button-border-color-down: var(--spectrum-gray-600);
-        --spectrum-button-border-color-focus: var(--spectrum-gray-500);
+        --spectrum-button-border-color-focus: var(--spectrum-gray-250);
 
         --spectrum-button-content-color-default: var(--spectrum-neutral-content-color-default);
         --spectrum-button-content-color-hover: var(--spectrum-neutral-content-color-hover);
@@ -187,7 +187,7 @@ governing permissions and limitations under the License.
 
                 --spectrum-button-border-color-default: var(--spectrum-gray-300);
                 --spectrum-button-border-color-hover: var(--spectrum-gray-400);
-                --spectrum-button-border-color-down: var(--spectrum-gray-500);
+                --spectrum-button-border-color-down: var(--spectrum-gray-250);
                 --spectrum-button-border-color-focus: var(--spectrum-gray-400);
 
                 --spectrum-button-content-color-default: var(--spectrum-neutral-content-color-default);

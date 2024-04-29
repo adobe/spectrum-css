@@ -35,13 +35,13 @@ governing permissions and limitations under the License.
   &.is-disabled {
     --mod-logic-button-and-background-color: var(--mod-logic-button-and-background-color-disabled, var(--spectrum-gray-200));
     --mod-logic-button-and-border-color: var(--mod-logic-button-and-border-color-disabled, var(--spectrum-gray-200));
-    --mod-logic-button-and-text-color: var(--mod-logic-button-and-text-color-disabled, var(--spectrum-gray-500));
+    --mod-logic-button-and-text-color: var(--mod-logic-button-and-text-color-disabled, var(--spectrum-gray-250));
     --mod-logic-button-and-background-color-hover: var(--mod-logic-button-and-background-color-hover-disabled, var(--spectrum-gray-200));
     --mod-logic-button-and-border-color-hover: var(--mod-logic-button-and-border-color-hover-disabled, var(--spectrum-gray-200));
 
     --mod-logic-button-or-background-color: var(--mod-logic-button-or-background-color-disabled, var(--spectrum-gray-200));
     --mod-logic-button-or-border-color: var(--mod-logic-button-or-border-color-disabled, var(--spectrum-gray-200));
-    --mod-logic-button-or-text-color: var(--mod-logic-button-or-text-color-disabled, var(--spectrum-gray-500));
+    --mod-logic-button-or-text-color: var(--mod-logic-button-or-text-color-disabled, var(--spectrum-gray-250));
     --mod-logic-button-or-background-color-hover: var(--mod-logic-button-or-background-color-hover-disabled, var(--spectrum-gray-200));
     --mod-logic-button-or-border-color-hover: var(--mod-logic-button-or-border-color-hover-disabled, var(--spectrum-gray-200));
   }
