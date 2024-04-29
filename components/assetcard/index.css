@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 /* outer container, unstyled */
 .spectrum-AssetCard {
   /* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
@@ -25,6 +23,7 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-border-color: transparent;
   --spectrum-assetcard-border-color-hover: var(--spectrum-gray-250);
   --spectrum-assetcard-border-color-down: var(--spectrum-gray-600);
+  --spectrum-assetcard-overlay-background-color: rgba(27, 127, 245, 10%);
 
   --spectrum-assetcard-focus-ring-gap: 5px;
   --spectrum-assetcard-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
