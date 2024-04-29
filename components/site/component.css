@@ -120,7 +120,7 @@ governing permissions and limitations under the License.
 a[href*="spectrum.adobe.com"]
 .spectrum-Card-preview {
     color: rgb(250, 15, 0);
-    background-color: var(--spectrum-gray-100);
+    background-color: var(--spectrum-gray-75);
 }
 
 .spectrum-CSSComponent-resource--github,
@@ -309,13 +309,13 @@ a[href*="spectrum.adobe.com"]
 .spectrum-CSSExample-example {
     background-color: var(
         --spectrum-background-layer-1-color,
-        var(--spectrum-gray-100)
+        var(--spectrum-gray-75)
     );
 }
 
 .spectrum-CSSExample-markup {
     background-color: var(--spectrum-gray-50);
-    border-block-start: 1px solid var(--spectrum-gray-100);
+    border-block-start: 1px solid var(--spectrum-gray-75);
 }
 
 .spectrum-CSSExample-markupToggle {
