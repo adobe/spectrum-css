@@ -10,12 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-ActionGroup {
   --spectrum-actiongroup-button-spacing-reset: 0;
   --spectrum-actiongroup-border-radius-reset: 0;
   --spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-actiongroup-gap-size-compact: 0;
+  
+  /* account for button border */
+  --spectrum-actiongroup-horizontal-spacing-compact: -1px;
+  --spectrum-actiongroup-vertical-spacing-compact: -1px;
 }
 
 .spectrum-ActionGroup--sizeXS,
