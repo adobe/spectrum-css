@@ -314,13 +314,13 @@ a[href*="spectrum.adobe.com"]
 }
 
 .spectrum-CSSExample-markup {
-    background-color: var(--spectrum-gray-75);
+    background-color: var(--spectrum-gray-50);
     border-block-start: 1px solid var(--spectrum-gray-100);
 }
 
 .spectrum-CSSExample-markupToggle {
     z-index: 1;
-    background-color: var(--spectrum-gray-75);
+    background-color: var(--spectrum-gray-50);
 }
 
 .spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle {
@@ -337,7 +337,7 @@ a[href*="spectrum.adobe.com"]
 }
 
 .spectrum-CodeBlock {
-    background-color: var(--spectrum-gray-75);
+    background-color: var(--spectrum-gray-50);
     border-color: var(--spectrum-gray-400);
 }
 
