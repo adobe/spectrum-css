@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { withDownStateDimensionCapture } from "../../../.storybook/decorators";
 
 import { Template } from "./template";
 
@@ -54,6 +55,7 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "staticColor", truthy: false},
 		},
 		isDisabled: {
 			name: "Disabled",
@@ -73,33 +75,9 @@ export default {
 			},
 			control: "boolean",
 		},
-		isHovered: {
-			name: "Hovered",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isActive: {
-			name: "Active",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isHovered: { table: { disable: true } },
+		isFocused: { table: { disable: true } },
+		isActive: { table: { disable: true } },
 		hideLabel: {
 			name: "Hide label",
 			type: { name: "boolean" },
@@ -137,6 +115,8 @@ export default {
 		isQuiet: false,
 		isEmphasized: false,
 		hasPopup: false,
+		hideLabel: false,
+		label: "",
 		isActive: false,
 		isFocused: false,
 		isHovered: false,
@@ -178,6 +158,7 @@ export default {
 				${Story(context)}
 			</div>
 		`,
+		withDownStateDimensionCapture(".spectrum-ActionButton:not(:disabled)")
 	],
 };
 
@@ -233,17 +214,6 @@ const States = (args) =>
 			${Typography({
 				semantics: "detail",
 				size: "s",
-				content: ["Selected"],
-			})}
-			${ActionButtons({
-				...args,
-				isSelected: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
 				content: ["Focused"],
 			})}
 			${ActionButtons({
@@ -283,35 +253,21 @@ const States = (args) =>
 				...args,
 				isDisabled: true,
 			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Disabled + selected"],
-			})}
-			${ActionButtons({
-				...args,
-				isSelected: true,
-				isDisabled: true,
-			})}
 		</div>`;
 
 const Sizes = (args) =>
-	html` ${["s", "m", "l", "xl"].map((size) => {
+	html` ${["xs", "s", "m", "l", "xl"].map((size) => {
 		return html` <div>
 			${Typography({
 				semantics: "detail",
 				size: "s",
 				content: [
 					{
-						xxs: "Extra-extra-small",
 						xs: "Extra-small",
 						s: "Small",
 						m: "Medium",
 						l: "Large",
 						xl: "Extra-large",
-						xxl: "Extra-extra-large",
 					}[size],
 				],
 			})}
@@ -328,7 +284,7 @@ const Variants = (args) =>
 					${Typography({
 						semantics: "detail",
 						size: "l",
-						content: ["Standard"],
+						content: ["Standard - not selected"],
 					})}
 					<div
 						style=${styleMap({
@@ -344,26 +300,7 @@ const Variants = (args) =>
 					${Typography({
 						semantics: "detail",
 						size: "l",
-						content: ["Emphasized"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: ".3rem",
-						})}
-					>
-						${States({
-							...args,
-							isEmphasized: true,
-						})}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Quiet"],
+						content: ["Quiet - not selected"],
 					})}
 					<div
 						style=${styleMap({
@@ -378,6 +315,48 @@ const Variants = (args) =>
 						})}
 					</div>
 				</div>
+				<div class="spectrum-Typography">
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: ["Standard and Quiet - Selected"],
+					})}
+					<div
+						style=${styleMap({
+							display: "flex",
+							flexDirection: "column",
+							gap: ".3rem",
+						})}
+					>
+						${States({
+							...args,
+							isSelected: true
+						})}
+					</div>
+				</div>
+				<!-- Static color variants don't have emphasized option -->
+				${when(!args.staticColor, () => html`
+					<div class="spectrum-Typography">
+						${Typography({
+							semantics: "detail",
+							size: "l",
+							content: ["Standard and Quiet - Emphasized Selected"],
+						})}
+						<div
+							style=${styleMap({
+								display: "flex",
+								flexDirection: "column",
+								gap: ".3rem",
+							})}
+						>
+							${States({
+								...args,
+								isSelected: true,
+								isEmphasized: true,
+							})}
+						</div>
+					</div>
+				`)}
 				<div class="spectrum-Typography">
 					${Typography({
 						semantics: "detail",

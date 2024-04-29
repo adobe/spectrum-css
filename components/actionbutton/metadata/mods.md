@@ -14,13 +14,7 @@
 | `--mod-actionbutton-background-color-hover`                       |
 | `--mod-actionbutton-background-color-hover-selected`              |
 | `--mod-actionbutton-background-color-hover-selected-emphasized`   |
-| `--mod-actionbutton-border-color-default`                         |
-| `--mod-actionbutton-border-color-disabled`                        |
-| `--mod-actionbutton-border-color-down`                            |
-| `--mod-actionbutton-border-color-focus`                           |
-| `--mod-actionbutton-border-color-hover`                           |
 | `--mod-actionbutton-border-radius`                                |
-| `--mod-actionbutton-border-width`                                 |
 | `--mod-actionbutton-content-color-default`                        |
 | `--mod-actionbutton-content-color-default-selected`               |
 | `--mod-actionbutton-content-color-default-selected-emphasized`    |
@@ -43,11 +37,11 @@
 | `--mod-actionbutton-focus-indicator-gap`                          |
 | `--mod-actionbutton-focus-indicator-thickness`                    |
 | `--mod-actionbutton-font-size`                                    |
+| `--mod-actionbutton-font-weight`                                  |
 | `--mod-actionbutton-height`                                       |
 | `--mod-actionbutton-icon-size`                                    |
 | `--mod-actionbutton-label-color`                                  |
 | `--mod-actionbutton-min-width`                                    |
-| `--mod-actionbutton-static-content-color`                         |
 | `--mod-actionbutton-text-to-visual`                               |
 | `--mod-animation-duration-100`                                    |
 | `--mod-button-animation-duration`                                 |
