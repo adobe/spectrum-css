@@ -30,7 +30,7 @@ governing permissions and limitations under the License.
 		inline-size: 8px;
 		block-size: 8px;
 
-		background-color: var(--spectrum-gray-75);
+		background-color: var(--spectrum-gray-50);
 		background-clip: padding-box;
 		border-block: 2px solid rgba(0, 0, 0, 0%);
 		border-radius: 8px;
@@ -38,7 +38,7 @@ governing permissions and limitations under the License.
 
 	&::-webkit-scrollbar-track,
 	&::-webkit-scrollbar-track-piece {
-		background-color: var(--spectrum-gray-75);
+		background-color: var(--spectrum-gray-50);
 	}
 
 	&:hover::-webkit-scrollbar-thumb {
