@@ -10,10 +10,25 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
 @import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-Picker {
+  --spectrum-picker-background-color-default: var(--spectrum-gray-50);
+  --spectrum-picker-background-color-default-open: var(--spectrum-gray-100);
+  --spectrum-picker-background-color-active: var(--spectrum-gray-200);
+  --spectrum-picker-background-color-hover: var(--spectrum-gray-100);
+  --spectrum-picker-background-color-hover-open: var(--spectrum-gray-100);
+  --spectrum-picker-background-color-key-focus: var(--spectrum-gray-100);
+
+  --spectrum-picker-border-color-default: var(--spectrum-gray-250);
+  --spectrum-picker-border-color-default-open: var(--spectrum-gray-250);
+  --spectrum-picker-border-color-hover: var(--spectrum-gray-600);
+  --spectrum-picker-border-color-hover-open: var(--spectrum-gray-600);
+  --spectrum-picker-border-color-active: var(--spectrum-gray-700);
+  --spectrum-picker-border-color-key-focus: var(--spectrum-gray-600);
+
+  --spectrum-picker-border-width: var(--spectrum-border-width-100);
+  
   /* font */
   --spectrum-picker-font-size: var(--spectrum-font-size-100);
   --spectrum-picker-font-weight: var(--spectrum-regular-font-weight);
