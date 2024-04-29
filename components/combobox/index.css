@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-Combobox {
   --spectrum-combobox-inline-size: var(--spectrum-field-width);
   --spectrum-combobox-block-size: var(--spectrum-component-height-100);
@@ -29,18 +27,25 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-100);
   --spectrum-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-100);
 
+  
   --spectrum-combobox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
   --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
   --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color);
-
+  
   --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-combobox-border-width: var(--spectrum-border-width-100);
-
+  
   --spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component);
-
+  
   --spectrum-combobox-font-style: var(--spectrum-default-font-style);
   --spectrum-combobox-line-height: var(--spectrum-line-height-100);
-
+  
+  --spectrum-combobox-border-color-default: var(--spectrum-gray-250);
+  --spectrum-combobox-border-color-hover: var(--spectrum-gray-600);
+  --spectrum-combobox-border-color-focus: var(--spectrum-gray-250);
+  --spectrum-combobox-border-color-focus-hover: var(--spectrum-gray-600);
+  --spectrum-combobox-border-color-key-focus: var(--spectrum-gray-600);
+  
   --spectrum-combobox-border-color-invalid-default: var(--spectrum-negative-border-color-default);
   --spectrum-combobox-border-color-invalid-hover: var(--spectrum-negative-border-color-hover);
   --spectrum-combobox-border-color-invalid-focus: var(--spectrum-negative-border-color-focus);
