@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 /* checkbox/index.css
  *
  * .spectrum-Checkbox-box::before is the Checkbox "box"
@@ -25,22 +23,27 @@ governing permissions and limitations under the License.
   --spectrum-checkbox-content-color-hover: var(--spectrum-neutral-content-color-hover);
   --spectrum-checkbox-content-color-down: var(--spectrum-neutral-content-color-down);
   --spectrum-checkbox-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
-
+  
   --spectrum-checkbox-focus-indicator-color: var(--spectrum-focus-indicator-color);
-
+  
   --spectrum-checkbox-content-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-checkbox-control-color-disabled: var(--spectrum-disabled-content-color);
   --spectrum-checkbox-checkmark-color: var(--spectrum-gray-50);
-
+  
   --spectrum-checkbox-invalid-color-default: var(--spectrum-negative-color-900);
   --spectrum-checkbox-invalid-color-hover: var(--spectrum-negative-color-1000);
   --spectrum-checkbox-invalid-color-down: var(--spectrum-negative-color-1100);
   --spectrum-checkbox-invalid-color-focus: var(--spectrum-negative-color-1000);
-
+  
   --spectrum-checkbox-emphasized-color-default: var(--spectrum-accent-color-900);
   --spectrum-checkbox-emphasized-color-hover: var(--spectrum-accent-color-1000);
   --spectrum-checkbox-emphasized-color-down: var(--spectrum-accent-color-1100);
   --spectrum-checkbox-emphasized-color-focus: var(--spectrum-accent-color-1000);
+  
+  --spectrum-checkbox-control-color-default: var(--spectrum-gray-600);
+  --spectrum-checkbox-control-color-hover: var(--spectrum-gray-700);
+  --spectrum-checkbox-control-color-down: var(--spectrum-gray-800);
+  --spectrum-checkbox-control-color-focus: var(--spectrum-gray-700);
 
   --spectrum-checkbox-control-selected-color-default: var(--spectrum-neutral-background-color-selected-default);
   --spectrum-checkbox-control-selected-color-hover: var(--spectrum-neutral-background-color-selected-hover);
