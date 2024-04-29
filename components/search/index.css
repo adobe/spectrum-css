@@ -25,7 +25,6 @@
 	--spectrum-search-to-help-text: var(--spectrum-help-text-to-component);
 	--spectrum-search-top-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-search-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
-	--spectrum-search-edge-to-text: var(--spectrum-component-pill-edge-to-text-100);
 	--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
 	--spectrum-search-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
 
@@ -131,7 +130,6 @@
 	--spectrum-search-block-size: var(--spectrum-component-height-75);
 	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-75);
-	--spectrum-search-edge-to-text: var(--spectrum-component-pill-edge-to-text-75);
 	--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-75);
 	--spectrum-search-top-to-icon: var(--spectrum-component-top-to-workflow-icon-75);
 	--mod-textfield-placeholder-font-size: var(--spectrum-font-size-75);
@@ -141,7 +139,6 @@
 	--spectrum-search-block-size: var(--spectrum-component-height-200);
 	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-200);
-	--spectrum-search-edge-to-text: var(--spectrum-component-pill-edge-to-text-200);
 	--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-200);
 	--spectrum-search-top-to-icon: var(--spectrum-component-top-to-workflow-icon-200);
 	--mod-textfield-placeholder-font-size: var(--spectrum-font-size-200);
@@ -151,7 +148,6 @@
 	--spectrum-search-block-size: var(--spectrum-component-height-300);
 	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
-	--spectrum-search-edge-to-text: var(--spectrum-component-pill-edge-to-text-300);
 	--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-300);
 	--spectrum-search-top-to-icon: var(--spectrum-component-top-to-workflow-icon-300);
 	--mod-textfield-placeholder-font-size: var(--spectrum-font-size-300);
@@ -265,7 +261,7 @@
 			var(--mod-search-border-width, var(--spectrum-search-border-width))
 	);
 	padding-inline-start: calc(
-		var(--mod-search-edge-to-text, var(--spectrum-search-edge-to-text)) -
+		var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) -
 			var(--mod-search-border-width, var(--spectrum-search-border-width)) +
 			var(--mod-search-icon-size, var(--spectrum-search-icon-size)) +
 			var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon))
@@ -282,6 +278,13 @@
 		--mod-search-line-height,
 		var(--spectrum-search-line-height)
 	);
+
+	.spectrum-Search-textfield.is-keyboardFocused &:hover {
+		--mod-textfield-border-color-hover: var(
+			--mod-search-border-color-key-focus,
+			var(--spectrum-search-border-color-key-focus)
+		);
+	}
 }
 
 @media (forced-colors: active) {
