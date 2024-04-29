@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 /* closebutton/index.css
  *
  * .spectrum-Closebutton::after is the Focus ring
@@ -25,6 +23,11 @@ governing permissions and limitations under the License.
   --spectrum-closebutton-size-400: 32px;
   --spectrum-closebutton-size-500: 40px;
   --spectrum-closebutton-size-600: 48px;
+
+  --spectrum-closebutton-background-color-default: transparent;
+  --spectrum-closebutton-background-color-hover: var(--spectrum-gray-100);
+  --spectrum-closebutton-background-color-down: var(--spectrum-gray-200);
+  --spectrum-closebutton-background-color-focus: var(--spectrum-gray-100);
 
   /* Cross icon */
   --spectrum-closebutton-icon-color-default: var(--spectrum-neutral-content-color-default);
