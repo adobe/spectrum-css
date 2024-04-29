@@ -39,7 +39,7 @@ governing permissions and limitations under the License.
     --spectrum-stepper-border-color-keyboard-focus-invalid: transparent;
 
     --spectrum-stepper-button-background-color-focus: var(--spectrum-gray-400);
-    --spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
+    --spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-200);
 
     &.is-disabled {
       --spectrum-stepper-buttons-background-color: var(--spectrum-disabled-background-color);
