@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-Search {
 	/* Size / Spacing */
 	--spectrum-search-inline-size: var(--spectrum-field-width);
@@ -29,6 +27,8 @@ governing permissions and limitations under the License.
 	--spectrum-search-bottom-to-text: var(
 		--spectrum-component-bottom-to-text-100
 	);
+  --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 
 	/* Focus Indicator */
 	--spectrum-search-focus-indicator-thickness: var(
@@ -60,6 +60,11 @@ governing permissions and limitations under the License.
 	/* Background and Border */
 	--spectrum-search-border-width: var(--spectrum-border-width-100);
 	--spectrum-search-background-color: var(--spectrum-gray-25);
+  --spectrum-search-border-color-default: var(--spectrum-gray-250);
+  --spectrum-search-border-color-hover: var(--spectrum-gray-600);
+  --spectrum-search-border-color-focus: var(--spectrum-gray-800);
+  --spectrum-search-border-color-focus-hover: var(--spectrum-gray-900);
+  --spectrum-search-border-color-key-focus: var(--spectrum-gray-900);
 
 	/* Disabled */
 	--spectrum-search-color-disabled: var(--spectrum-disabled-content-color);
@@ -166,18 +171,24 @@ governing permissions and limitations under the License.
 	--spectrum-search-block-size: var(--spectrum-component-height-75);
 	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-75);
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-75);
+  --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
 }
 
 .spectrum-Search--sizeL {
 	--spectrum-search-block-size: var(--spectrum-component-height-200);
 	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-200);
+  --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
 }
 
 .spectrum-Search--sizeXL {
 	--spectrum-search-block-size: var(--spectrum-component-height-300);
 	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
 	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
+  --spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
 }
 
 .spectrum-Search--quiet {
