@@ -1,13 +1,13 @@
 
-import DocumentationTemplate from './DocumentationTemplate.mdx';
+import DocumentationTemplate from "./DocumentationTemplate.mdx";
 
 import { withActions } from "@storybook/addon-actions/decorator";
 import {
-	withContextWrapper,
-	withLanguageWrapper,
-	withReducedMotionWrapper,
-	withTestingPreviewWrapper,
-	withTextDirectionWrapper,
+  withContextWrapper,
+  withLanguageWrapper,
+  withReducedMotionWrapper,
+  withTestingPreviewWrapper,
+  withTextDirectionWrapper,
 } from "./decorators/index.js";
 
 // https://github.com/storybookjs/storybook-addon-console
@@ -81,17 +81,16 @@ export const argTypes = {
 		description: "Controls the color context of the component.",
 		type: { required: true },
 		table: {
-			type: { summary: "light | dark | darkest" },
+			type: { summary: "light | dark" },
 			defaultValue: { summary: "light" },
 			category: "Global",
 		},
-		options: ["light", "dark", "darkest"],
+		options: ["light", "dark"],
 		control: {
 			type: "select",
 			labels: {
 				light: "Light (default)",
 				dark: "Dark",
-				darkest: "Darkest",
 			},
 		},
 	},
@@ -187,7 +186,7 @@ export const parameters = {
 	panelPosition: "bottom",
 	showToolbar: true,
 	isFullscreen: false,
-	actions: { argTypesRegex: '^on.*' },
+	actions: { argTypesRegex: "^on.*" },
 	options: {
 		storySort: {
 			method: "alphabetical",

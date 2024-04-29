@@ -106,9 +106,6 @@ const Template = ({
 			.spectrum--dark {
 				--spectrum-alias-background-color-quickactions: rgba(50,50,50,0.9);
 			}
-			.spectrum--darkest {
-				--spectrum-alias-background-color-quickactions: rgba(29,29,29,0.9);
-			}
 			:root, .spectrum--medium {
 				--spectrum-global-dimension-size-50: 4px;
 				--spectrum-global-dimension-size-100: 8px;
@@ -138,7 +135,8 @@ const Template = ({
 			${content.map((c) => {
 				if ((typeof c === "object" && c.iconName) || c.label) {
 					return ActionButton({ ...globals, ...c, isQuiet: true });
-				} else return c;
+				}
+ else return c;
 			})}
 		</div>
 	`;
