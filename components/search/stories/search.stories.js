@@ -13,8 +13,8 @@ import { SearchOptions, Template } from "./template.js";
  * This component contains a single input field with both a magnifying glass icon and a clear (“reset”) button displayed within it. When making use of this component, the clear button should only be displayed when the input has a value.
  */
 export default {
-	title: "Search",
-	component: "Search",
+	title: "Search field",
+	component: "SearchField",
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
 		isDisabled,
