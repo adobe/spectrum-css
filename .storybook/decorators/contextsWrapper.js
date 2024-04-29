@@ -18,10 +18,6 @@ export const withContextWrapper = makeDecorator({
 
 		// This property informs which context stylesheets to source
 		//    but does not source a stylesheet for itself
-		/** @type boolean */
-		const isExpress = args.express
-			? args.express
-			: getDefaultValue(argTypes.express);
 		/** @type string */
 		const color = args.color ? args.color : getDefaultValue(argTypes.color) ?? "light";
 		/** @type string */
