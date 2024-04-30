@@ -19,6 +19,7 @@
 | `--mod-search-color-focus-hover`         |
 | `--mod-search-color-hover`               |
 | `--mod-search-color-key-focus`           |
+| `--mod-search-edge-to-text`              |
 | `--mod-search-edge-to-visual`            |
 | `--mod-search-focus-indicator-color`     |
 | `--mod-search-focus-indicator-gap`       |
@@ -30,8 +31,7 @@
 | `--mod-search-inline-size`               |
 | `--mod-search-line-height`               |
 | `--mod-search-min-inline-size`           |
-| `--mod-search-quiet-button-offset`       |
 | `--mod-search-text-to-icon`              |
 | `--mod-search-to-help-text`              |
+| `--mod-search-top-to-icon`               |
 | `--mod-search-top-to-text`               |
-| `--mod-workflow-icon-size-100`           |

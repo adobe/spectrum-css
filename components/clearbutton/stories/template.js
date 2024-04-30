@@ -15,6 +15,7 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
+	isFocusable = true,
 	...globals
 }) => {
 	const { express } = globals;
@@ -41,6 +42,8 @@ export const Template = ({
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap(customStyles))}
 			?disabled=${isDisabled}
+			tabindex=${isFocusable ? 0 : -1}
+			aria-hidden=${isFocusable}
 		>
 			<div class="${rootClass}-fill">
 				${Icon({

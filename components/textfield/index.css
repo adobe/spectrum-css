@@ -1096,7 +1096,7 @@ governing permissions and limitations under the License.
 			--mod-textfield-background-color-disabled,
 			var(--spectrum-textfield-background-color-disabled)
 		);
-		border-color: transparent;
+		border-color: var(--mod-textfield-border-color-disabled, transparent);
 		color: var(
 			--highcontrast-textfield-text-color-disabled,
 			var(

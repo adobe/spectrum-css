@@ -4,22 +4,34 @@ description: 'This component contains a single input field with both a magnifyin
 sections:
   - name: Migration Guide
     description: |
-      ### New Textfield markup
+      ### Version 7.0.0
+      #### Spectrum 2 migration
+      Search now uses Spectrum 2 tokens and specifications. The following items have been adjusted:
+
+      - Quiet variant has been deprecated and code removed (including removal of the custom property `--mod-search-quiet-button-offset`).
+      - Updates to colors, corner rounding, and spacing.
+      - Custom property mod adjustments:
+        - Added `--mod-search-edge-to-text`.
+        - Added `--mod-search-top-to-icon`.
+        - Removed `--mod-workflow-icon-size-100`.
+
+      ### Previous versions
+      #### New Textfield markup
       Search now uses the new Textfield markup. See the [Textfield migration guide](textfield.html#migrationguide) for more information.
 
-      ### Quiet Search requires `.spectrum-Search--quiet`
+      #### Quiet Search requires `.spectrum-Search--quiet`
       You now must add `.spectrum-Search--quiet` for Quiet Search.
 
-      ### `.spectrum-Search-icon` is required again
+      #### `.spectrum-Search-icon` is required again
       You need to add the `.spectrum-Search-icon` class for Express support. This was previously not required, but has been added back to support the Express design.
 
-      ### New ClearButton markup
+      #### New ClearButton markup
       See the [ClearButton migration guide](clearbutton.html#migrationguide) for more information.
 
-      ### `.spectrum-Search-clearButton` must be added to `.spectrum-ClearButton`
+      #### `.spectrum-Search-clearButton` must be added to `.spectrum-ClearButton`
       The `.spectrum-Search-clearButton` class is now required on the `.spectrum-ClearButton`.
 
-      ### `.spectrum-Search-textfield` must be added to `.spectrum-Textfield`
+      #### `.spectrum-Search-textfield` must be added to `.spectrum-Textfield`
       The `.spectrum-Search-textfield` class is now required on the `.spectrum-Textfield`.
 
 examples:

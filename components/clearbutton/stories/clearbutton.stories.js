@@ -27,6 +27,10 @@ export default {
 			control: "boolean",
 		},
 		variant: { table: { disable: true }},
+		isFocusable: {
+			table: { disable: true },
+			type: { name: "string" },
+		},
 	},
 	args: {
 		rootClass: "spectrum-ClearButton",
