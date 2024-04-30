@@ -75,10 +75,9 @@
 	/* Disabled */
 	--spectrum-search-color-disabled: var(--spectrum-disabled-content-color);
 
-	/* Used to reassign to Textfield mods */
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties */
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- reassign to Textfield mods */
 	--spectrum-search-background-color-disabled: var(--spectrum-gray-25);
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties */
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- reassign to Textfield mods */
 	--spectrum-search-border-color-disabled: var(--spectrum-disabled-border-color);
 
 	/* Settings for nested Textfield component. */
