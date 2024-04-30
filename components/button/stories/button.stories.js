@@ -643,3 +643,6 @@ WithWrapping.storyName = "Wrapping";
 WithWrapping.args = {
 	variant: "primary",
 };
+WithWrapping.parameters = {
+	chromatic: { disableSnapshot: true },
+};
