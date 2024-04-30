@@ -2,23 +2,19 @@
 	"name": "ui-icons",
 	"tag": ["icons"],
 	"namedInputs": {
-		"core": ["{projectRoot}/large/*.svg", "{projectRoot}/medium/*.svg"],
+		"core": ["{projectRoot}/svgs/*.svg"],
 		"scripts": ["{projectRoot}/index.js"],
 		"tools": ["{projectRoot}/svgo.config.js"]
 	},
 	"targets": {
 		"build": {
+			"dependsOn": ["^build"],
 			"inputs": [
 				"core",
 				"scripts",
 				"tools",
 				{
-					"externalDependencies": [
-						"fast-glob",
-						"svgcombiner",
-						"svgo",
-						"svgstore"
-					]
+					"externalDependencies": ["fast-glob", "svgo", "svgstore"]
 				}
 			],
 			"options": {
@@ -26,12 +22,8 @@
 				"commands": ["node ./index.js"]
 			},
 			"outputs": [
-				"{projectRoot}/dist/combined",
-				"{projectRoot}/dist/large",
-				"{projectRoot}/dist/medium",
-				"{projectRoot}/dist/spectrum-css-icons.svg",
-				"{projectRoot}/dist/spectrum-css-icons-large.svg",
-				"{projectRoot}/dist/spectrum-css-icons-medium.svg"
+				"{projectRoot}/dist/svgs",
+				"{projectRoot}/dist/spectrum-css-icons.svg"
 			]
 		},
 		"clean": {}

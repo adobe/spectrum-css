@@ -3,7 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
-import { fetchIconSVG, uiIcons, uiIconSizes, workflowIcons } from "./utilities.js";
+import { fetchIconSVG, uiIcons, workflowIcons } from "./utilities.js";
 
 import "../index.css";
 
@@ -48,30 +48,11 @@ export const Template = ({
 
 	let idKey = iconName;
 
-	// If icon set was not provided, try determine which icon set contains this icon.
-	// Note: icon sets can contain the same icon name, with different icons.
-	if (!["workflow","ui"].includes(setName)) {
-		if (workflowIcons.includes(idKey)) {
-			setName = "workflow";
-		}
-		else if (uiIcons.includes(idKey.replace(/\d{2,3}$/, "").replace(/(Right|Left|Down|Up)$/, ""))) {
-			setName = "ui";
-		}
-	}
-
-	if (!setName) {
-		console.warn(
-			`Icon: Could not determine the icon set for the provided icon name: ${idKey}.`
-		);
-		return html``;
-	}
-
 	// If a descriptor like Right, Left, Down, or Up is present for the UI icons Chevron or
 	// Arrow, use that only for the class and not the icon fetch.
 	if (
-		setName == "ui" &&
-		uiIcons.some((c) => idKey.startsWith(c)) &&
-		["Right", "Left", "Down", "Up"].some((c) => idKey.includes(c))
+		["Right", "Left", "Down", "Up"].some((c) => idKey.includes(c)) &&
+		setName === "ui"
 	) {
 		idKey = idKey.replace(/(Right|Left|Down|Up)/, "");
 	}
@@ -86,19 +67,38 @@ export const Template = ({
 	 * E.g. with a size of "s", the icon name "ChevronRight" would become "ChevronRight75".
 	 */
 	if (
-		setName == "ui" &&
-		// Exists in the list of available UI icons.
-		uiIcons.includes(idKey.replace(/\d{2,3}$/, "")) &&
-		// Does not already have size number at the end.
-		!idKey.match(/^(?!\d).*\d{2,3}$/) &&
-		// Exclude some UI icons that do not (yet) have size numbers.
-		uiIconSizes[idKey]?.length != 0
+		setName === "ui" &&
+		(
+			// Does not already have size number at the end.
+			!idKey.match(/\d{2,3}$/) ||
+			// If the provided icon name includes the weight, make sure it's a supported weight;
+			// if not, strip it from the key
+			(
+				idKey.match(/\d{2,3}$/) &&
+				!uiIcons.includes(idKey)
+			)
+		)
 	) {
 		let sizeVal;
 		switch (size) {
 			case "xs":
+				if (["CornerTriangle", "Cross"].some(c => idKey.startsWith(c))) {
+					sizeVal = "75";
+				}
+				else if (["Arrow", "Asterisk", "LinkOut"].some(c => idKey.startsWith(c))) {
+					sizeVal = "100";
+				}
+				else {
+					sizeVal = "50";
+				}
+				break;
 			case "s":
-				sizeVal = "75";
+				if (["Arrow", "Asterisk", "LinkOut"].some(c => idKey.startsWith(c))) {
+					sizeVal = "100";
+				}
+				else {
+					sizeVal = "75";
+				}
 				break;
 			case "l":
 				sizeVal = "200";
@@ -112,8 +112,27 @@ export const Template = ({
 				break;
 		}
 
+		idKey = idKey.replace(/\d{2,3}$/, "");
 		idKey += sizeVal;
-		iconName += sizeVal;
+		if (!iconName.match(/\d{2,3}$/)) iconName += sizeVal;
+	}
+
+	// If icon set was not provided, try determine which icon set contains this icon.
+	// Note: icon sets can contain the same icon name, with different icons.
+	if (!["workflow","ui"].includes(setName)) {
+		if (workflowIcons.includes(idKey)) {
+			setName = "workflow";
+		}
+		else if (uiIcons.some(ui => ui.includes(idKey))) {
+			setName = "ui";
+		}
+	}
+
+	if (!setName) {
+		console.warn(
+			`Icon: Could not determine the icon set for the provided icon name: ${idKey}.`
+		);
+		return html``;
 	}
 
 	// Fetch SVG file markup, and set optional fill color.

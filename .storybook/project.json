@@ -23,13 +23,7 @@
 			}
 		},
 		"build": {
-			"dependsOn": [
-				"^build",
-				{
-					"target": "build",
-					"projects": "ui-icons"
-				}
-			],
+			"dependsOn": ["^build"],
 			"inputs": [
 				"{projectRoot}/assets",
 				"{projectRoot}/decorators",
@@ -60,13 +54,7 @@
 		},
 		"start": {
 			"cache": true,
-			"dependsOn": [
-				"^build",
-				{
-					"target": "build",
-					"projects": "ui-icons"
-				}
-			],
+			"dependsOn": ["^build"],
 			"inputs": [
 				"{projectRoot}/assets",
 				"{projectRoot}/decorators",

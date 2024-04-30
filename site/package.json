@@ -1,41 +1,41 @@
 {
-  "private": true,
-  "name": "@spectrum-tools/documentation",
-  "version": "2.0.0",
-  "description": "A Spectrum-focused utility for building the documentation site.",
-  "license": "Apache-2.0",
-  "author": "Adobe",
-  "homepage": "https://opensource.adobe.com/spectrum-css/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adobe/spectrum-css.git",
-    "directory": "site"
-  },
-  "bugs": {
-    "url": "https://github.com/adobe/spectrum-css/issues"
-  },
-  "main": "./tasks/index.js",
-  "devDependencies": {
-    "@adobe/focus-ring-polyfill": "^0.1.5",
-    "@adobe/spectrum-css-workflow-icons": "^1.5.4",
-    "@spectrum-css/tokens": "^13.0.8",
-    "@spectrum-css/ui-icons": "^1.1.1",
-    "browser-sync": "^3.0.2",
-    "colors": "^1.4.0",
-    "dependency-solver": "^1.0.6",
-    "fast-glob": "^3.3.2",
-    "js-yaml": "^4.1.0",
-    "loadicons": "^1.0.0",
-    "lodash": "^4.17.21",
-    "lunr": "^2.3.9",
-    "markdown-it": "^13.0.2",
-    "markdown-it-anchor": "^8.6.7",
-    "markdown-it-attrs": "^4.1.6",
-    "markdown-it-prism": "^2.3.0",
-    "npm-registry-fetch": "^16.1.0",
-    "prismjs": "^1.29.0",
-    "pug": "^3.0.2",
-    "rimraf": "^5.0.5",
-    "yargs": "^17.7.2"
-  }
+	"private": true,
+	"name": "@spectrum-tools/documentation",
+	"version": "2.0.0",
+	"description": "A Spectrum-focused utility for building the documentation site.",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "site"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "./tasks/index.js",
+	"devDependencies": {
+		"@adobe/focus-ring-polyfill": "^0.1.5",
+		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
+		"@spectrum-css/tokens": "^13.0.8",
+		"@spectrum-css/ui-icons": "^1.1.2",
+		"browser-sync": "^3.0.2",
+		"colors": "^1.4.0",
+		"dependency-solver": "^1.0.6",
+		"fast-glob": "^3.3.2",
+		"js-yaml": "^4.1.0",
+		"loadicons": "^1.0.0",
+		"lodash": "^4.17.21",
+		"lunr": "^2.3.9",
+		"markdown-it": "^13.0.2",
+		"markdown-it-anchor": "^8.6.7",
+		"markdown-it-attrs": "^4.1.6",
+		"markdown-it-prism": "^2.3.0",
+		"npm-registry-fetch": "^16.1.0",
+		"prismjs": "^1.29.0",
+		"pug": "^3.0.2",
+		"rimraf": "^5.0.5",
+		"yargs": "^17.7.2"
+	}
 }

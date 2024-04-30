@@ -1,26 +1,13 @@
 // Import the component markup template
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
 
 import { Template } from "./template";
-import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
+import { uiIconsWithDirections, uniqueUiIcons, workflowIcons } from "./utilities.js";
 
-/**
- * Create a list of all UI Icons with their sizing numbers.
- *
- * The list is a little long until Storybook adds a way to use conditional options
- * in controls, e.g. a "uiSize" control with options pulled from uiIconSizes:
- * @see https://github.com/storybookjs/storybook/discussions/24235
- */
-const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
-	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, "");
-	// Icons like Gripper that don't have sizes yet, represented by any empty array.
-	if (uiIconSizes[baseIconName]?.length == 0) {
-		return [baseIconName];
-	}
-	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
-}).flat();
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+
+const sizes = ["xs", "s", "m", "l", "xl", "xxl"];
 
 export default {
 	title: "Components/Icon",
@@ -38,7 +25,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["xs", "s", "m", "l", "xl", "xxl"],
+			options: sizes,
 			control: "select",
 			if: { arg: "setName", eq: "workflow" },
 		},
@@ -70,9 +57,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: [
-				...uiIconNameOptions,
-			],
+			options: uiIconsWithDirections,
 			control: "select",
 			if: { arg: "setName", eq: "ui" },
 		},
@@ -118,69 +103,91 @@ Default.args = {};
 /**
  * Chromatic VRT template that displays multiple icons to cover various options.
  */
-const TestTemplate = ({
-	// staticColor,
-	// customStyles = {},
-	...args
-}) => {
-	const workflow_row_args = [
-		{
-			setName: "workflow",
-			iconName: "Alert",
-			fill: "var(--spectrum-negative-content-color-default)",
-		},
-		{
-			setName: "workflow",
-			iconName: "Hand",
-		},
-		{
-			setName: "workflow",
-			iconName: "Help",
-		},
-		{
-			setName: "workflow",
-			iconName: "ArrowLeft",
-		},
-		{
-			setName: "workflow",
-			iconName: "ArrowRight",
-		},
-		{
-			setName: "workflow",
-			iconName: "ChevronDown",
-		}
-	];
+const TestTemplate = (args) => {
+	const scales = ["50", "75", "100", "200", "300", "400", "500", "600"];
+	let print = [];
+	uniqueUiIcons.sort().forEach(iconName => {
+		let output = Array(8).fill(html`<span></span>`);
+		scales.forEach((scale, idx) => {
+			if (uiIconsWithDirections.includes(`${iconName}${scale}`)) {
+				output[idx] = Template({
+					...args,
+					setName: "ui",
+					useRef: false,
+					iconName: `${iconName}${scale}`,
+				});
+			}
+		});
+		print.push(...output);
+	});
 
 	return html`
-		${workflow_row_args.map((row_args) => html`
-			<div
-				style=${styleMap({
-					display: "flex",
-					gap: "16px",
-					marginBottom: "16px",
-				})}
-			>
-				${["xs","s","m","l","xl","xxl"].map(
-					(size) => Template({ ...args, ...row_args, size })
-				)}
-			</div>`
-		)}
-		<div style="margin-top:32px;">
-			${uiIconsWithDirections.map(iconName => html`
-				<div
-					style=${styleMap({
-						display: "flex",
-						gap: "16px",
-					})}
-				>
-					${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
-						Template({ ...args, setName: "ui", iconName: iconName + iconSize })
-					)}
-					${when(uiIconSizes[iconName]?.length == 0, () =>
-						Template({ ...args, setName: "ui", iconName })
-					)}
-				</div>`
-			)}
-		</div>
+	${Typography({
+		semantics: "detail",
+		size: "l",
+		content: ["Workflow icons"],
+		customStyles: {
+			"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+		}
+	})}
+	<div
+		style=${styleMap({
+		"display": "grid",
+		"grid-template-columns": `repeat(${sizes.length}, 50px)`,
+		"gap": "16px",
+		"border": "1px solid var(--spectrum-gray-200)",
+		"border-radius": "4px",
+		"padding": "16px",
+		"margin-block-end": "32px",
+	})}
+	>
+		${sizes.map(scale => {
+			return Typography({
+				semantics: "detail",
+				size: "s",
+				content: [scale],
+				customStyles: {
+					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+				}
+			});
+		})}
+		${workflowIcons.slice(0, 20).map((iconName, idx) => html`
+			${sizes.map((size) => Template({
+				...args,
+				setName: "workflow",
+				useRef: false,
+				iconName, size,
+				fill: idx % 5 === 0 ? "var(--spectrum-negative-content-color-default)" : undefined
+			}))}
+		`)}
+	</div>
+	${Typography({
+		semantics: "detail",
+		size: "l",
+		content: ["UI icons"],
+		customStyles: {
+			"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+		}
+	})}
+	<div
+		style=${styleMap({
+		"display": "grid",
+		"grid-template-columns": `repeat(${scales.length}, 50px)`,
+		"gap": "16px",
+		"border": "1px solid var(--spectrum-gray-200)",
+		"border-radius": "4px",
+		"padding": "16px",
+	})}
+	>
+		${scales.map(scale => Typography({
+			semantics: "detail",
+			size: "s",
+			content: [scale],
+			customStyles: {
+				"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+			}
+		}))}
+		${print}
+	</div>
 	`;
 };

@@ -33,19 +33,15 @@ you are good to go!
 All submissions should come in the form of pull requests and need to be reviewed
 by project committers.
 
+**Important:** This project uses node >= 20 and yarn 4.1.1.
+
 Start by [forking](https://help.github.com/articles/fork-a-repo/) the repo, then [clone](https://help.github.com/articles/cloning-a-repository/) your fork:
 
 ```shell
 git clone git@github.com:yourusername/spectrum-css.git
 ```
 
-Set up a branch for your feature or bug fix, push it to your fork, and set up a remote for the upstream repo:
-
-```shell
-git checkout -b feat-my-awesome-new-feature
-git push -u origin feat-my-awesome-new-feature
-git remote add upstream git@github.com:adobe/spectrum-css.git
-```
+### Setup
 
 To ensure your Node environment is always aligned with the project, we strongly recommend using [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating). Once you have nvm installed, you can run:
 
@@ -55,10 +51,16 @@ nvm use
 
 This will ensure the correct version of node is installed and used for the project. You always want to run nvm use when you first clone the project and whenever you switch branches.
 
-Install [yarn](https://yarnpkg.com/en/docs/install):
+If you have not already done so, enable [corepack](https://yarnpkg.com/getting-started/install). Corepack is the tool that manages the package version for yarn.
 
 ```shell
-brew install yarn || curl -o- -L https://yarnpkg.com/install.sh | bash
+corepack enable
+```
+
+Before running an install, run the setup script; this script runs `nvm use` and exports any available authorization tokens.
+
+```shell
+bash ./tasks/setup.sh
 ```
 
 Install dependencies:
@@ -67,7 +69,13 @@ Install dependencies:
 yarn install
 ```
 
-**Important:** Requires >= Node 18.8.1 and Yarn 1.22.0.
+Set up a branch for your feature or bug fix, push it to your fork, and set up a remote for the upstream repo:
+
+```shell
+git checkout -b feat-my-awesome-new-feature
+git push -u origin feat-my-awesome-new-feature
+git remote add upstream git@github.com:adobe/spectrum-css.git
+```
 
 To generate a new component, run the generator:
 
@@ -103,7 +111,7 @@ git merge upstream/main
 Run your updates through the formatter which will automatically fix any linting issues. Note that this is also handled on commit via lint-staged so running this manually is only necessary if you used a `--no-verify` flag on any of your commits.
 
 ```shell
-nx affected --target format
+yarn nx affected --target format
 ```
 
 Review your changes and any possible conflicts and push to your fork:
