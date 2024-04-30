@@ -40,7 +40,7 @@ governing permissions and limitations under the License.
   --spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-100);
 
   --mod-progress-circle-position: absolute;
-  /* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties */
+  /* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- height and width are set by implementations */
   --spectrum-downstate-perspective: max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down));
 
   &.spectrum-Button--iconOnly {
@@ -358,7 +358,7 @@ governing permissions and limitations under the License.
   margin-inline-start: var(--mod-button-margin-left);
 
   .spectrum-Icon {
-    /* stylelint-disable-next-line custom-property-pattern -- Any block-size difference between the intended workflow icon size and actual icon used.
+    /* Any block-size difference between the intended workflow icon size and actual icon used.
        Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
     --spectrum-button-icon-size-difference: max(0px,
       var(--spectrum-button-intended-icon-size) -
