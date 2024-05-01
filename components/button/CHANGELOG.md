@@ -4,7 +4,9 @@
 
 ### Major Changes
 
-- [#2600](https://github.com/adobe/spectrum-css/pull/2600) [`3559678`](https://github.com/adobe/spectrum-css/commit/35596780a1309dd145fa565461d330ddfaf50e68) Thanks [@jawinn](https://github.com/jawinn)! - #### Spectrum 2 migration
+- [#2600](https://github.com/adobe/spectrum-css/pull/2600) [`3559678`](https://github.com/adobe/spectrum-css/commit/35596780a1309dd145fa565461d330ddfaf50e68) Thanks [@jawinn](https://github.com/jawinn)! 
+
+#### Spectrum 2 migration
   Button now uses Spectrum 2 tokens and specifications, which includes many color changes to all variants. A few other notable changes:
 
   - Outline buttons are no longer available in accent and negative options — use the filled variant instead.
