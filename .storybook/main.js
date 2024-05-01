@@ -12,7 +12,6 @@ module.exports = {
 	stories: [
 		"../components/*/stories/*.stories.js",
 		"./guides/*.mdx",
-		"./deprecated/*/*.stories.js",
 	],
 	rootDir: "../",
 	staticDirs: ["../assets"],
@@ -101,6 +100,7 @@ module.exports = {
 					},
 					{
 						test: /\.css$/i,
+						resourceQuery: { not: [/raw/] },
 						sideEffects: true,
 						use: [
 							{
@@ -150,7 +150,7 @@ module.exports = {
 						test: /\.js$/,
 						enforce: "pre",
 						use: ["source-map-loader"],
-					} /* Raw loader */,
+					},
 					{
 						resourceQuery: /raw/,
 						type: 'asset/source',

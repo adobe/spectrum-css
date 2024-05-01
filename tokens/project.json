@@ -19,8 +19,9 @@
 				"commands": [
 					"postcss ./custom-express/*.css --dir ./dist/css/express/",
 					"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
-					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
-					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css",
+					"postcss ./custom-legacy/*.css --dir ./dist/css/legacy/",
+					"postcss ./dist/css/*.css --replace",
+					"node -e 'require(\"./tasks/combine-contexts.js\").default()'",
 					"find dist -type f -empty -delete"
 				],
 				"cwd": "{projectRoot}",
@@ -28,7 +29,11 @@
 			},
 			"outputs": [
 				"{projectRoot}/dist/css/express",
-				"{projectRoot}/dist/css/spectrum"
+				"{projectRoot}/dist/css/spectrum",
+				"{projectRoot}/dist/css/legacy",
+				"{projectRoot}/dist/css/index.css",
+				"{projectRoot}/dist/css/index-express.css",
+				"{projectRoot}/dist/css/index-legacy.css"
 			]
 		},
 		"clean": {
@@ -63,13 +68,13 @@
 				"{projectRoot}/dist/global-vars.css",
 				"{projectRoot}/dist/light-vars.css",
 				"{projectRoot}/dist/dark-vars.css",
-				"{projectRoot}/dist/darkest-vars.css",
 				"{projectRoot}/dist/medium-vars.css",
 				"{projectRoot}/dist/large-vars.css",
-				"{projectRoot}/dist/specrum/global-vars.css",
+				"{projectRoot}/dist/spectrum/global-vars.css",
+				"{projectRoot}/dist/spectrum/medium-vars.css",
+				"{projectRoot}/dist/spectrum/large-vars.css",
 				"{projectRoot}/dist/express/global-vars.css",
-				"{projectRoot}/dist/specrum/medium-vars.css",
-				"{projectRoot}/dist/specrum/large-vars.css"
+				"{projectRoot}/dist/legacy/global-vars.css"
 			]
 		}
 	}

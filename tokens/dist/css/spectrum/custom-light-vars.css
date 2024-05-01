@@ -1,5 +1,4 @@
-.spectrum--light,
-.spectrum--lightest{
+:root{
   --spectrum-menu-item-background-color-default-rgb:0, 0, 0;
   --spectrum-menu-item-background-color-default-opacity:0;
   --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity)); /* --spectrum-gray-900 */
@@ -55,3 +54,5 @@
   --spectrum-assetlist-item-background-color-selected:rgba(var(--spectrum-blue-900-rgb),0.1);
   --spectrum-assetlist-border-color-key-focus:var(--spectrum-blue-800);
 }
+
+/*# sourceMappingURL=custom-light-vars.css.map */

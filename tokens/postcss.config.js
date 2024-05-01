@@ -13,42 +13,66 @@
 
 const path = require("path");
 
-module.exports = (ctx) => {
-	const {
-		combineSelectors = true,
-		/* This removes all copyright comments so we can add a single one at the top of the file */
-		commentsDenylist = ["Copyright", "This file contains"],
-	} = ctx.options;
+module.exports = ({
+	// cwd,
+	// from,
+	// to,
+	// verbose,
+	env = process.env.NODE_ENV ?? "development",
+	options = {},
+}) => {
+	if (env === "development" && !options.map) {
+		options.map = { inline: false };
+	}
+	else options.map = false;
+
 	return {
-		plugins: [
-			require("postcss-rgb-mapping")(),
-			require("postcss-sorting")({
+		...options,
+		plugins: {
+			/* ------------------- IMPORTS ---------------- */
+			/** @link https://github.com/postcss/postcss-import#postcss-import */
+			"postcss-import": {},
+			"postcss-rgb-mapping": {},
+			"postcss-sorting": {
 				order: ["custom-properties", "declarations", "at-rules", "rules"],
 				"properties-order": "alphabetical",
-			}),
+			},
 			/* Merges _adjacent_ rules only */
-			require("postcss-merge-rules"),
+			"postcss-merge-rules": {},
 			/* Combines all duplicated selectors */
-			combineSelectors
-				? require("postcss-combine-duplicated-selectors")({})
-				: null,
+			"postcss-combine-duplicated-selectors": {},
 			/* Remove all duplicate copyrights and add a single one at the top */
-			require("postcss-discard-comments")({
-				removeAllButFirst: true,
+			"postcss-discard-comments": {
 				remove: (comment) => {
 					return (
-						commentsDenylist.some((str) => comment.includes(str)) ||
+						["Copyright", "This file contains"].some((str) => comment.includes(str)) ||
 						comment.trim() === ""
 					);
 				},
-			}),
+			},
 			/* After cleaning up comments, remove all empty rules */
-			require("postcss-discard-empty")(),
+			"postcss-discard-empty": {},
 			/* Ensure the license is at the top of the file */
-			require("postcss-licensing")({
+			"postcss-licensing": {
 				filename: path.dirname(__dirname, "../COPYRIGHT"),
 				skipIfEmpty: true,
-			}),
-		],
+			},
+			/* --------------------------------------------------- */
+			/* ------------------- REPORTING --------------------- */
+			stylelint: {
+				cache: true,
+				// Passing the config path saves a little time b/c it doesn't have to find it
+				configFile: path.join(__dirname, "../stylelint.config.js"),
+				quiet: true,
+				allowEmptyInput: true,
+				ignorePath: path.join(__dirname, "../.stylelintignore"),
+				reportNeedlessDisables: true,
+				reportInvalidScopeDisables: true,
+			},
+			"postcss-reporter": {
+				clearAllMessages: true,
+				noIcon: true,
+			},
+		},
 	};
 };

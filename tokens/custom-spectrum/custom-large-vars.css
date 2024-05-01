@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 /* This file contains overrides and additions to core tokens */
 
-.spectrum--large {
+:root {
   --spectrum-slider-tick-mark-height: 13px;
   --spectrum-slider-ramp-track-height: 20px;
 

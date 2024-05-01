@@ -4,9 +4,11 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+import { useGlobals } from "@storybook/preview-api";
+
 import { capitalize, lowerCase } from "lodash-es";
 
-import "@spectrum-css/actionbutton/index.css";
+import "../index.css";
 
 /**
  * @todo load order should not influence the icon size but it is; fix this
@@ -38,6 +40,15 @@ export const Template = ({
 	role,
 	...globals
 }) => {
+	const [{ theme }] = useGlobals();
+
+	try {
+		if (theme === "express") import(/* webpackPrefetch: true */ "../themes/express.css");
+		else if (theme === "legacy") import(/* webpackPrefetch: true */ "../themes/legacy.css");
+	}
+	catch (e) {
+		console.warn(e);
+	}
 
 	return html`
 		<button

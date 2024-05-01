@@ -3,11 +3,11 @@ import DocumentationTemplate from "./DocumentationTemplate.mdx";
 
 import { withActions } from "@storybook/addon-actions/decorator";
 import {
-  withContextWrapper,
-  withLanguageWrapper,
-  withReducedMotionWrapper,
-  withTestingPreviewWrapper,
-  withTextDirectionWrapper,
+	withContextWrapper,
+	withLanguageWrapper,
+	withReducedMotionWrapper,
+	withTestingPreviewWrapper,
+	withTextDirectionWrapper,
 } from "./decorators/index.js";
 
 // https://github.com/storybookjs/storybook-addon-console
@@ -19,7 +19,6 @@ setConsoleOptions({
 	panelExclude: [...panelExclude, /deprecated/, /TypeError/, /postcss/, /stylelint/],
 });
 
-import "@spectrum-css/tokens";
 import "./assets/base.css";
 
 import "./assets/typekit.js";
@@ -33,7 +32,6 @@ export const globalTypes = {
 	textDirection: {
 		title: "Text Direction",
 		description: "Direction of the content flow",
-		showName: true,
 		defaultValue: "ltr",
 		toolbar: {
 			items: [
@@ -45,7 +43,6 @@ export const globalTypes = {
 	},
 	lang: {
 		title: "Language",
-		showName: true,
 		icon: "globe",
 		description: "Language of the content",
 		defaultValue: "en-US",
@@ -55,6 +52,43 @@ export const globalTypes = {
 				{ value: "ja", title: "🇯🇵", right: "Japanese" },
 				{ value: "ko", title: "🇰🇷", right: "한국어" },
 				{ value: "zh", title: "🇨🇳", right: "中文" },
+			],
+			dynamicTitle: true,
+		},
+	},
+	color: {
+		title: "Color",
+		description: "Controls the color context of the component.",
+		defaultValue: "light",
+		toolbar: {
+			items: [
+				{ value: "light", title: "Light", right: "(default)" },
+				{ value: "dark", title: "Dark", right: "" },
+			],
+			dynamicTitle: true,
+		},
+	},
+	scale: {
+		title: "Platform scale",
+		description: "Controls the platform scale of the component.",
+		defaultValue: "medium",
+		toolbar: {
+			items: [
+				{ value: "medium", title: "Medium", right: "(desktop)" },
+				{ value: "large", title: "Large", right: "(mobile)" },
+			],
+			dynamicTitle: true,
+		},
+	},
+	theme: {
+		title: "Render context",
+		description: "Describes the context of the component.",
+		defaultValue: "spectrum",
+		toolbar: {
+			items: [
+				{ value: "spectrum", title: "Spectrum 2", right: "(default)" },
+				{ value: "legacy", title: "Spectrum 1", right: "" },
+				{ value: "express", title: "Express", right: "" },
 			],
 			dynamicTitle: true,
 		},
@@ -76,42 +110,6 @@ export const globalTypes = {
 // Global properties added to each component;
 //      determines what stylesheets are loaded
 export const argTypes = {
-	color: {
-		name: "Color",
-		description: "Controls the color context of the component.",
-		type: { required: true },
-		table: {
-			type: { summary: "light | dark" },
-			defaultValue: { summary: "light" },
-			category: "Global",
-		},
-		options: ["light", "dark"],
-		control: {
-			type: "select",
-			labels: {
-				light: "Light (default)",
-				dark: "Dark",
-			},
-		},
-	},
-	scale: {
-		name: "Platform scale",
-		description: "Controls the platform scale of the component.",
-		table: {
-			type: { summary: "medium | large" },
-			defaultValue: { summary: "medium" },
-			category: "Global",
-		},
-		type: { required: true },
-		options: ["medium", "large"],
-		control: {
-			type: "radio",
-			labels: {
-				medium: "Medium (default)",
-				large: "Large",
-			},
-		},
-	},
 	// @todo https://jira.corp.adobe.com/browse/CSS-314
 	reducedMotion: {
 		name: "Reduce motion",
@@ -159,8 +157,6 @@ export const argTypes = {
 };
 
 export const args = {
-	color: "light",
-	scale: "medium",
 	reducedMotion: false,
 	customClasses: [],
 };
@@ -178,7 +174,7 @@ export const parameters = {
 	options: {
 		storySort: {
 			method: "alphabetical",
-			order: ["Guides", ["Contributing", "*", "Adobe Code of Conduct", "Changelog"], "Components", ["Docs", "Default", "*"], "*"],
+			order: ["Guides", ["Contributing", "*", "Adobe Code of Conduct"], "Components", ["*", ["Docs", "Default", "*"]], "*"],
 			includeNames: true,
 		},
 	},

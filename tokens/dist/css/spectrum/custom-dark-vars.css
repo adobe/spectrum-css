@@ -1,4 +1,4 @@
-.spectrum--dark{
+:root{
   --spectrum-menu-item-background-color-default-rgb:255, 255, 255;
   --spectrum-menu-item-background-color-default-opacity:0;
   --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity)); /* --spectrum-gray-900 */

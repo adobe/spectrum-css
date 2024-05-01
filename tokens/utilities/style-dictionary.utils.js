@@ -28,7 +28,7 @@ module.exports = function ({ setName, subSystemName } = {}) {
 			filter: (token) => !token.path.includes("sets"),
 			options: {
 				...baseConfig.options,
-				selector: ".spectrum",
+				selector: ":root",
 			},
 		};
 	}
@@ -39,7 +39,7 @@ module.exports = function ({ setName, subSystemName } = {}) {
 	let selector = "";
 	if (isGlobal || (subSystemName && !isSpectrum)) {
 		// postfix the selector with the subsystem name
-		selector = `.spectrum${
+		selector = `${
 			subSystemName && !isSpectrum ? `--${subSystemName}` : ""
 		}`;
 	}
@@ -54,13 +54,6 @@ module.exports = function ({ setName, subSystemName } = {}) {
 	else if (setName && scope) {
 		selector += `.spectrum--${scope}`;
 	}
-
-	const selectors = [
-		selector ?? null,
-		// Apply all light colors as lightest for backwards compat
-		// @todo does this need a deprecation notice?
-		setName === "light" ? selector.replace("light", "lightest") : null,
-	].filter(Boolean);
 
 	const getSets = (token) =>
 		token.path.filter((_, idx, array) => array[idx - 1] == "sets");
@@ -108,7 +101,7 @@ module.exports = function ({ setName, subSystemName } = {}) {
 		filter,
 		options: {
 			...baseConfig.options,
-			selector: selectors.join(", "),
+			selector: ":root",
 			sets,
 		},
 	};

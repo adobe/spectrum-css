@@ -23,6 +23,8 @@ package-lock.json
 storybook-static
 build-storybook.log
 
+*.map
+
 # Chromatic
 chromatic.log
 chromatic-build-*.xml

@@ -1,4 +1,4 @@
-.spectrum{
+:root{
   --spectrum-focus-indicator-color:var(--spectrum-blue-800);
   --spectrum-static-white-focus-indicator-color:var(--spectrum-white);
   --spectrum-static-black-focus-indicator-color:var(--spectrum-black);
@@ -637,3 +637,5 @@
   --spectrum-code-cjk-line-height:var(--spectrum-cjk-line-height-200);
   --spectrum-code-color:var(--spectrum-gray-800);
 }
+
+/*# sourceMappingURL=global-vars.css.map */
