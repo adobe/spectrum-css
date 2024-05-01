@@ -38,6 +38,14 @@ body {
 	background-color: var(--spectrum-background-layer-1-color);
 }
 
+.spectrum .spectrum-examples-static-black {
+	background: var(--spectrum-examples-gradient-static-black);
+}
+
+.spectrum .spectrum-examples-static-white {
+	background: var(--spectrum-examples-gradient-static-white)
+}
+
 /* Hide the SVG elements that only include references */
 svg:has(symbol):not(:has(use)) {
 	display: none;
