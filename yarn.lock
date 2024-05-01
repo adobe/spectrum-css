@@ -4702,7 +4702,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/button@workspace:components/button"
   dependencies:
-    "@spectrum-css/commons": "npm:^10.0.0"
+    "@spectrum-css/commons": "npm:^9.1.4-next.1"
   peerDependencies:
     "@spectrum-css/icon": ">=6"
     "@spectrum-css/progresscircle": ">=2"
@@ -4895,7 +4895,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/commons@workspace:components/commons":
+"@spectrum-css/commons@npm:^9.1.4-next.1, @spectrum-css/commons@workspace:components/commons":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/commons@workspace:components/commons"
   peerDependencies:
