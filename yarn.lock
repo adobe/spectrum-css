@@ -3949,7 +3949,39 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/button@npm:14.0.0-next.4, @spectrum-css/button@workspace:^, @spectrum-css/button@workspace:components/button":
+"@spectrum-css/button@npm:14.0.0-next.4":
+  version: 14.0.0-next.4
+  resolution: "@spectrum-css/button@npm:14.0.0-next.4"
+  peerDependencies:
+    "@spectrum-css/icon": ">=6"
+    "@spectrum-css/progresscircle": ">=2"
+    "@spectrum-css/tokens": ^14.0.0-next.3
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/progresscircle":
+      optional: true
+  checksum: 10c0/c07c70f42bd848c07949ae229aa82d9e074e0c7f7f86c936c8b41adc9987f2eb1317a0c59737c5f6c5c2cb368f7f6e77835565172f6994d717ca1230dcb259fd
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/button@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@spectrum-css/button@npm:14.0.1"
+  peerDependencies:
+    "@spectrum-css/icon": ">=7"
+    "@spectrum-css/progresscircle": ">=3"
+    "@spectrum-css/tokens": ">=14 || >=15"
+  peerDependenciesMeta:
+    "@spectrum-css/icon":
+      optional: true
+    "@spectrum-css/progresscircle":
+      optional: true
+  checksum: 10c0/48ab8d6cdbe52038b0bc4bb3222d8e2139e7d43319edab5918e7debb1583e13c3f682a852ba1404e6059404dfa59ceb8937c2992f897fdf60cbaa209b9af96ba
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/button@workspace:^, @spectrum-css/button@workspace:components/button":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/button@workspace:components/button"
   dependencies:
@@ -3968,22 +4000,6 @@ __metadata:
       optional: true
   languageName: unknown
   linkType: soft
-
-"@spectrum-css/button@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@spectrum-css/button@npm:14.0.1"
-  peerDependencies:
-    "@spectrum-css/icon": ">=7"
-    "@spectrum-css/progresscircle": ">=3"
-    "@spectrum-css/tokens": ">=14 || >=15"
-  peerDependenciesMeta:
-    "@spectrum-css/icon":
-      optional: true
-    "@spectrum-css/progresscircle":
-      optional: true
-  checksum: 10c0/48ab8d6cdbe52038b0bc4bb3222d8e2139e7d43319edab5918e7debb1583e13c3f682a852ba1404e6059404dfa59ceb8937c2992f897fdf60cbaa209b9af96ba
-  languageName: node
-  linkType: hard
 
 "@spectrum-css/buttongroup@npm:7.0.0-next.3, @spectrum-css/buttongroup@workspace:^, @spectrum-css/buttongroup@workspace:components/buttongroup":
   version: 0.0.0-use.local
@@ -5044,7 +5060,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/tokens@npm:14.0.0-next.6, @spectrum-css/tokens@npm:^14.0.0-next.4, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens@npm:14.0.0-next.6":
+  version: 14.0.0-next.6
+  resolution: "@spectrum-css/tokens@npm:14.0.0-next.6"
+  checksum: 10c0/74c1245415954a268030fe7ccdecb0dc6a0bb985ae44389ab3a58740e3d44a19ad92df24233dc6cf7c04b44160d2b57b7afea5d1ccade40b701ce3d6775285d8
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/tokens@npm:^14.0.0-next.4, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
