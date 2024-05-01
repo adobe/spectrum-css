@@ -1,49 +1,47 @@
 {
-	"name": "@spectrum-css/button",
-	"version": "14.0.0-next.5",
-	"description": "The Spectrum CSS button component",
-	"license": "Apache-2.0",
-	"author": "Adobe",
-	"homepage": "https://opensource.adobe.com/spectrum-css/button-accent",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/adobe/spectrum-css.git",
-		"directory": "components/button"
-	},
-	"bugs": {
-		"url": "https://github.com/adobe/spectrum-css/issues"
-	},
-	"main": "dist/index.css",
-	"files": [
-		"dist/*",
-		"CHANGELOG.md",
-		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
-	],
-	"peerDependencies": {
-		"@spectrum-css/icon": ">=7",
-		"@spectrum-css/progresscircle": ">=3",
-		"@spectrum-css/tokens": ">=14.0.0-next.3"
-	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/icon": {
-			"optional": true
-		},
-		"@spectrum-css/progresscircle": {
-			"optional": true
-		}
-	},
-	"devDependencies": {
-		"@spectrum-css/commons": "^10.0.0"
-	},
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
-	"publishConfig": {
-		"access": "public"
-	}
+  "name": "@spectrum-css/button",
+  "version": "14.0.0-next.5",
+  "description": "The Spectrum CSS button component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/button-accent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/button"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "files": [
+    "dist/*",
+    "metadata/mods.md",
+    "stories/template.js"
+  ],
+  "peerDependencies": {
+    "@spectrum-css/icon": ">=7",
+    "@spectrum-css/progresscircle": ">=3",
+    "@spectrum-css/tokens": ">=14.0.0-next.3"
+  },
+  "peerDependenciesMeta": {
+    "@spectrum-css/icon": {
+      "optional": true
+    },
+    "@spectrum-css/progresscircle": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@spectrum-css/commons": "^9.1.4-next.1"
+  },
+  "keywords": [
+    "adobe",
+    "css",
+    "design system",
+    "spectrum"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
