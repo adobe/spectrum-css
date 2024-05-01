@@ -5,6 +5,11 @@ sections:
   - name: Custom Properties API
     description: |
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/helptext/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### Version 6.0.0
+      #### Spectrum 2 release
+      Help text now uses Spectrum 2 tokens and specifications. This includes updates to heights and spacing, icons and icon sizes, colors, and fonts.
 examples:
   - id: helptext-sizing
     name: Sizing
