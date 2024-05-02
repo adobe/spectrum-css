@@ -37,7 +37,6 @@ export const withContextWrapper = makeDecorator({
 				...document.querySelectorAll(`#story--${id}`),
 				...document.querySelectorAll(`#story--${id}--primary`)
 			];
-			console.log({id, roots});
 			if (viewMode === "docs" && roots.length > 0) {
 				containers = roots.map(root => root.closest(".docs-story") ?? root);
 			}
