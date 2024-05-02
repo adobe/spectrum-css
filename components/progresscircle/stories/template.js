@@ -12,9 +12,8 @@ export const Template = ({
 	rootClass = "spectrum-ProgressCircle",
 	customClasses = [],
 	size = "m",
-	overBackground = false,
+	staticColor,
 	isIndeterminate = false,
-	addStaticBackground = overBackground,
 }) => {
 	let sizeClassName = "medium";
 	switch (size) {
@@ -28,13 +27,13 @@ export const Template = ({
 			sizeClassName = "medium";
 	}
 
-	const componentMarkup = html`
+	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--${sizeClassName}`]: typeof size !== "undefined",
 				[`${rootClass}--indeterminate`]: isIndeterminate,
-				[`${rootClass}--staticWhite`]: overBackground,
+				[`${rootClass}--staticWhite`]: staticColor === "white",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -56,10 +55,4 @@ export const Template = ({
 			</div>
 		</div>
 	`;
-
-	const decoratedMarkup = html`
-		<div style="background-color: #0F797D;">${componentMarkup}</div>
-	`;
-
-	return overBackground && addStaticBackground ? decoratedMarkup : componentMarkup;
 };

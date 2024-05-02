@@ -8,7 +8,7 @@ export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { args, argTypes, viewMode } = context;
+		const { args, argTypes, viewMode, id } = context;
 
 		const getDefaultValue = (type) => {
 			if (!type) return null;
@@ -31,25 +31,39 @@ export const withContextWrapper = makeDecorator({
 		const scales = ["medium", "large"];
 
 		useEffect(() => {
-			const container = viewMode === "docs" && !window.isChromatic() ? document.querySelector('#root-inner') ?? document.body : document.body;
-			container.classList.toggle("spectrum", true);
+			let containers = [document.body];
 
-			container.classList.toggle("spectrum--express", isExpress);
-
-			for (const c of colors) {
-				container.classList.toggle(`spectrum--${c}`, c === color);
+			const roots = [
+				...document.querySelectorAll(`#story--${id}`),
+				...document.querySelectorAll(`#story--${id}--primary`)
+			];
+			if (viewMode === "docs" && roots.length > 0) {
+				containers = roots.map(root => root.closest(".docs-story") ?? root);
 			}
 
-			for (const s of scales) {
-				container.classList.toggle(`spectrum--${s}`, s === scale);
-			}
+			for (const container of containers) {
+				container.classList.toggle("spectrum", true);
 
-			if (args.staticColor === "black") {
-				container.style.backgroundColor = "rgb(181, 209, 211)";
-			} else if (args.staticColor === "white") {
-				 container.style.backgroundColor = "rgb(15, 121, 125)";
-			} else {
-				container.style.removeProperty("background-color");
+				container.classList.toggle("spectrum--express", isExpress);
+
+				for (const c of colors) {
+					container.classList.toggle(`spectrum--${c}`, c === color);
+				}
+
+				for (const s of scales) {
+					container.classList.toggle(`spectrum--${s}`, s === scale);
+				}
+
+
+				container.style.removeProperty("background");
+				const hasStaticElement = container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--staticBlack, .${args.rootClass}--overBackground`);
+				if (hasStaticElement) {
+					if (container.querySelector(`.${args.rootClass}--staticBlack`)) {
+						container.style.background = "rgb(181, 209, 211)";
+					} else if (container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--overBackground`)) {
+						container.style.background = "rgb(15, 121, 125)";
+					}
+				}
 			}
 		}, [color, scale, isExpress, args.staticColor]);
 
