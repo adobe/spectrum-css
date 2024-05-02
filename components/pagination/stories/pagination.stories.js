@@ -1,12 +1,12 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories";
 
+/**
+ * The pagination component displays numbered buttons or an input field to allow for navigation.
+ */
 export default {
 	title: "Components/Pagination",
-	description:
-		"The pagination component displays numbered buttons or an input field to allow for navigation",
 	component: "Pagination",
 	argTypes: {
 		size: {
@@ -31,7 +31,9 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [...ActionButton.parameters.actions.handles],
+			handles: [
+				...ActionButton.parameters.actions.handles
+			],
 		},
 		status: {
 			type: "migrated",

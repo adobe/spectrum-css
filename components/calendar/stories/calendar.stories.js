@@ -6,10 +6,11 @@ const months = [...Array(12).keys()].map((key) =>
 	new Date(0, key).toLocaleString("en", { month: "long" })
 );
 
+/**
+ * Calendars display a grid of days in one or more months and allow users to select a single date.
+ */
 export default {
 	title: "Components/Calendar",
-	description:
-		"Calendars display a grid of days in one or more months and allow users to select a single date.",
 	component: "Calendar",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },
@@ -94,7 +95,9 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [...(ActionButtonStories.parameters.actions.handles ?? [])],
+			handles: [
+				...(ActionButtonStories.parameters.actions.handles ?? [])
+			],
 		},
 		status: {
 			type: "migrated",

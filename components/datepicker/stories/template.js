@@ -25,20 +25,13 @@ export const Template = ({
 	isDisabled = false,
 	isRequired = false,
 	readOnly = false,
+	selectedDay,
+	lastDay,
 	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
 
 
 	return html`
@@ -72,64 +65,61 @@ export const Template = ({
 				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
 				placeholder: "Choose a date",
 				name: "field",
-				value: globals.selectedDay
-					? new Date(globals.selectedDay).toLocaleDateString(lang)
-					: undefined,
+				value: selectedDay ? new Date(selectedDay).toLocaleDateString(lang) : undefined,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
-				})}
-				${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
-				${when(isRange, () => TextField({
-					...globals,
-					size: "m",
-					isQuiet,
-					isDisabled,
-					isInvalid,
-					isReadOnly: readOnly,
-					customClasses: [`${rootClass}-textfield`],
-					customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
-					placeholder: "Choose a date",
-					name: "field",
-					value: globals.lastDay
-						? new Date(globals.lastDay).toLocaleDateString(lang)
-						: undefined,
-				}))}
-				${PickerButton({
-					...globals,
-					customClasses: [`${rootClass}-button`],
-					size: "m",
-					iconType: "workflow",
-					iconName: "Calendar",
-					isQuiet,
-					customStyles:  readOnly ? {"display": "none"} : "",
-					// @todo this is not added to the button on the website; need to make sure it's not a bug
-					// isOpen,
-					isInvalid,
-					isDisabled,
-
-					position: "right",
-					onclick: function () {
-						updateArgs({ isOpen: !isOpen });
-					},
-				})}
-				${Popover({
-					...globals,
-					isOpen: isOpen && !isDisabled && !readOnly,
-					withTip: false,
-					position: "bottom",
-					isQuiet,
-					customStyles: isOpen
-						? {
-								position: "absolute",
-								top: "100%",
-								left: "0",
-								width: undefined,
-						}
-						: {},
-					content: [Calendar(globals)],
-					// @todo this implementation of calendar does not currently display range selections or selected date on first load
-				})}
+			})}
+			${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
+			${when(isRange, () => TextField({
+				...globals,
+				size: "m",
+				isQuiet,
+				isDisabled,
+				isInvalid,
+				isReadOnly: readOnly,
+				customClasses: [`${rootClass}-textfield`],
+				customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
+				placeholder: "Choose a date",
+				name: "field",
+				value: lastDay
+					? new Date(lastDay).toLocaleDateString(lang)
+					: undefined,
+			}))}
+			${PickerButton({
+				...globals,
+				customClasses: [`${rootClass}-button`],
+				size: "m",
+				iconType: "workflow",
+				iconName: "Calendar",
+				isQuiet,
+				customStyles: readOnly ? { "display": "none" } : undefined,
+				// @todo this is not added to the button on the website; need to make sure it's not a bug
+				// isOpen,
+				isInvalid,
+				isDisabled,
+				position: "right",
+				onclick: function () {
+					updateArgs({ isOpen: !isOpen });
+				},
+			})}
+			${Popover({
+				...globals,
+				isOpen: isOpen && !isDisabled && !readOnly,
+				withTip: false,
+				position: "bottom",
+				isQuiet,
+				customStyles: isOpen
+					? {
+							position: "absolute",
+							top: "100%",
+							left: "0",
+							width: undefined,
+					}
+					: {},
+				content: [Calendar(globals)],
+				// @todo this implementation of calendar does not currently display range selections or selected date on first load
+			})}
 		</div>
 	`;
 };

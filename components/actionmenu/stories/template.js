@@ -5,6 +5,10 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 
 export const Template = ({
+	popoverId = "popover-1",
+	popoverTestId = "popover-1",
+	popoverTriggerId = "trigger",
+	customStyles = {},
 	customClasses = [],
 	items = [],
 	isOpen = false,
@@ -13,7 +17,6 @@ export const Template = ({
 	size = "m",
 	...globals
 }) => {
-
 	if (!items.length) {
 		console.warn("ActionMenu: requires items be passed in to render.");
 		return html``;
@@ -23,25 +26,24 @@ export const Template = ({
 		...globals,
 		position: "bottom",
 		isOpen,
-		id: "popover-1",
-		testId: "popover-1",
-		triggerId: 'trigger',
+		id: popoverId,
+		testId: popoverTestId,
+		triggerId: popoverTriggerId,
+		customStyles,
 		content: [
 			Menu({ items })
 		],
 		trigger: (passthroughs) => ActionButton({
 			size,
 			label,
-			iconName,
 			isQuiet: false,
 			isEmphasized: false,
 			hasPopup: false,
 			isSelected: isOpen,
-			label,
-			iconName: "More",
-			id: "trigger",
+			iconName: iconName ?? "More",
+			id: popoverTriggerId,
 			customClasses,
 			...passthroughs,
 		})
-	})
-}
+	});
+};

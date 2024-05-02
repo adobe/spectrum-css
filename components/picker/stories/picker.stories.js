@@ -1,10 +1,14 @@
-import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { html } from "lit";
+
+import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
+
 import { Template } from "./template";
 
+/**
+ * A picker outlines a set of options for a user.
+ */
 export default {
 	title: "Components/Picker",
-	description: "A picker outlines a set of options for a user.",
 	component: "Picker",
 	argTypes: {
 		size: {
@@ -131,106 +135,106 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		docs: {
+			story: {
+				height: "300px"
+			}
+		},
 	},
 };
 
 
-const ChromaticPickerGroup = ({
-	// customStyles = {},
-	...args
-}) => {
-	return html`
-		<div style="display: grid; gap: 20px;">
-			<div>
-				${Template({
-					labelPosition: "top",
-					...args,
-					isOpen: false,
-					placeholder: "Select your country of origin"
-				})}
-			</div>
-			<div>
-				${Template({
-					labelPosition: "top",
-					...args,
-					isOpen: false,
-					isQuiet: true,
-					placeholder: "Select your country of origin"
-				})}
-			</div>
-			<div>
-				${Template({
-					labelPosition: "top",
-					...args,
-					isOpen: false,
-					isLoading: true,
-					placeholder: "Select your country of origin"
-				})}
-			</div>
-			<div>
-				${Template({
-					labelPosition: "top",
-					...args,
-					isOpen: false,
-					isInvalid: true,
-					placeholder: "Select your country of origin"
-				})}
-			</div>
-			<div>
-				${Template({
-					labelPosition: "top",
-					...args,
-					isOpen: false,
-					isKeyboardFocused: true,
-					helpText: "Please select a country",
-					placeholder: "Select your country of origin"
-				})}
-			</div>
-			<div>
-				${Template({
-					labelPosition: "left",
-					...args,
-					isOpen: false,
-					withSwitch: true,
-					placeholder: "Select your country of origin"
-				})}
-			</div>
-			<div>
-				${Template({
-					labelPosition: "left",
-					...args,
-					isOpen: false,
-					withSwitch: true,
-					fieldLabelStyle: {"max-width": "90px"},
-					label: "Enter country, text should wrap",
-					placeholder: "Select your country of origin"
-				})}
-			</div>
-			<div>
-				${Template({
-						labelPosition: "left",
-						...args,
-						isOpen: false,
-						withSwitch: true,
-						placeholder: "Select your contry of origin",
-						isQuiet: true,
-					})}
-			</div>
-			<div>
-				${Template({
-					labelPosition: "left",
-					...args,
-					isOpen: false,
-					withSwitch: true,
-					isQuiet: true,
-					fieldLabelStyle: {"max-width": "90px"},
-					label: "Enter country, text should wrap",
-					placeholder: "Select your contry of origin"
-				})}
-			</div>
+const ChromaticPickerGroup = (args) => html`
+	<div style="display: grid; gap: 20px;">
+		<div>
+			${Template({
+				labelPosition: "top",
+				...args,
+				isOpen: false,
+				placeholder: "Select your country of origin"
+			})}
 		</div>
-	`;
-};
+		<div>
+			${Template({
+				labelPosition: "top",
+				...args,
+				isOpen: false,
+				isQuiet: true,
+				placeholder: "Select your country of origin"
+			})}
+		</div>
+		<div>
+			${Template({
+				labelPosition: "top",
+				...args,
+				isOpen: false,
+				isLoading: true,
+				placeholder: "Select your country of origin"
+			})}
+		</div>
+		<div>
+			${Template({
+				labelPosition: "top",
+				...args,
+				isOpen: false,
+				isInvalid: true,
+				placeholder: "Select your country of origin"
+			})}
+		</div>
+		<div>
+			${Template({
+				labelPosition: "top",
+				...args,
+				isOpen: false,
+				isKeyboardFocused: true,
+				helpText: "Please select a country",
+				placeholder: "Select your country of origin"
+			})}
+		</div>
+		<div>
+			${Template({
+				labelPosition: "left",
+				...args,
+				isOpen: false,
+				withSwitch: true,
+				placeholder: "Select your country of origin"
+			})}
+		</div>
+		<div>
+			${Template({
+				labelPosition: "left",
+				...args,
+				isOpen: false,
+				withSwitch: true,
+				fieldLabelStyle: {"max-width": "90px"},
+				label: "Enter country, text should wrap",
+				placeholder: "Select your country of origin"
+			})}
+		</div>
+		<div>
+			${Template({
+					labelPosition: "left",
+					...args,
+					isOpen: false,
+					withSwitch: true,
+					placeholder: "Select your contry of origin",
+					isQuiet: true,
+				})}
+		</div>
+		<div>
+			${Template({
+				labelPosition: "left",
+				...args,
+				isOpen: false,
+				withSwitch: true,
+				isQuiet: true,
+				fieldLabelStyle: {"max-width": "90px"},
+				label: "Enter country, text should wrap",
+				placeholder: "Select your contry of origin"
+			})}
+		</div>
+	</div>
+`;
 
 export const Default = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
 Default.args = {

@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
@@ -7,7 +8,7 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Underlay",
 	customClasses = [],
-	style = [],
+	customStyles = {},
 	content,
 	isOpen = true,
 }) => html`
@@ -18,7 +19,7 @@ export const Template = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
     id="spectrum-underlay"
-    style=${styleMap(style)}
+    style=${ifDefined(styleMap(customStyles))}
   >
     ${content}
   </div>

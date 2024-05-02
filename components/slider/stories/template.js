@@ -2,6 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import { useArgs, useGlobals } from "@storybook/preview-api";
 
@@ -24,19 +25,10 @@ export const Template = ({
 	isDisabled = false,
 	isFocused = false,
 	customClasses = [],
-	style = {},
+	customStyles = {},
 	id,
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
 
 	const [, updateArgs] = useArgs();
 	const [{ textDirection }] = useGlobals();
@@ -45,36 +37,35 @@ export const Template = ({
 	const rangeLength = max - min;
 	const centerPoint = rangeLength / 2 + min;
 	const isRamp = variant === "ramp";
-	const rampSVG = html` <svg
-		viewBox="0 0 240 16"
-		preserveAspectRatio="none"
-		aria-hidden="true"
-		focusable="false"
-	>
-		<path
-			d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"
-		></path>
-	</svg>`;
+	const rampSVG = html`
+		<svg
+			viewBox="0 0 240 16"
+			preserveAspectRatio="none"
+			aria-hidden="true"
+			focusable="false"
+		>
+			<path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
+		</svg>`;
 
-	const getPosition = (v) => {
-		const val = ((v - min) / rangeLength) * 100;
-		return val;
-	};
+	const getPosition = (v) => ((v - min) / rangeLength) * 100;
+
 	const getWidth = (start, end) => {
 		const distance = end > start ? end - start : start - end;
 		return (distance / rangeLength) * 100;
 	};
 
 	function renderTrack({ position, width }) {
-		return html` <div
-			class="${rootClass}-track"
-			style=${ifDefined(
-				styleMap({
-					[rtl ? "right" : "left"]: position ? `${position}%` : undefined,
-					width: width ? `${width}%` : undefined,
-				})
-			)}
-		></div>`;
+		const direction = rtl ? "right" : "left";
+		return html`
+			<div
+				class="${rootClass}-track"
+				style=${ifDefined(
+					styleMap({
+						[direction]: position ? `${position}%` : undefined,
+						width: width ? `${width}%` : undefined,
+					})
+				)}
+			></div>`;
 	}
 
 	function renderTick({ from, to }) {
@@ -90,6 +81,7 @@ export const Template = ({
 	}
 
 	function renderHandle({ position, value, idx = 0 }) {
+		const direction = rtl ? "right" : "left";
 		return html`
 			<div
 				class=${classMap({
@@ -100,7 +92,7 @@ export const Template = ({
 				})}
 				style=${ifDefined(
 					styleMap({
-						[rtl ? "right" : "left"]: position ? `${position}%` : undefined,
+						[direction]: position ? `${position}%` : undefined,
 					})
 				)}
 			>
@@ -117,8 +109,7 @@ export const Template = ({
 						updateArgs({ value: event.target.value });
 					}}
 				/>
-			</div>
-		`;
+			</div>`;
 	}
 
 	return html`
@@ -137,9 +128,9 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			style=${styleMap({
-				maxWidth: "240px",
+				"max-width": "240px",
 				["--spectrum-slider-track-color"]: fillColor,
-				...style,
+				...customStyles,
 			})}
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}
 			aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}
@@ -153,34 +144,32 @@ export const Template = ({
 			}}
 		>
 			<!-- Label region -->
-			${label
-				? html`<div
-						class="${rootClass}-labelContainer"
-						role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
+			${when(label, () => html`
+			<div
+				class="${rootClass}-labelContainer"
+				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
+			>
+				${FieldLabel({
+					...globals,
+					size,
+					label,
+					isDisabled,
+					id: id ? `${id}-label` : undefined,
+					forInput: id ? `${id}-1` : undefined,
+					customClasses: [`${rootClass}-label`],
+				})}
+				${when(values.length && labelPosition != "side", () => html`
+				<div
+					class="${rootClass}-value"
+					role="textbox"
+					aria-readonly="true"
+					aria-labelledby=${ifDefined(
+						id && label ? `${id}-label` : undefined
+					)}
 				>
-						${FieldLabel({
-							...globals,
-							size,
-							label,
-							isDisabled,
-							id: id ? `${id}-label` : undefined,
-							forInput: id ? `${id}-1` : undefined,
-							customClasses: [`${rootClass}-label`],
-						})}
-						${values.length && labelPosition != "side"
-							? html`<div
-									class="${rootClass}-value"
-									role="textbox"
-									aria-readonly="true"
-									aria-labelledby=${ifDefined(
-										id && label ? `${id}-label` : undefined
-									)}
-							  >
-									${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
-							  </div>`
-							: ""}
-				  </div>`
-				: ""}
+					${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+				</div>`)}
+			</div>`)}
 
 			<!-- Slider controls -->
 			<div
@@ -237,23 +226,21 @@ export const Template = ({
 					];
 				})}
 			</div>
-			${values.length && labelPosition === "side"
-				? html`<div
-						class="${rootClass}-labelContainer"
-						role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
-					>
-						<div
-							class="${rootClass}-value"
-							role="textbox"
-							aria-readonly="true"
-							aria-labelledby=${ifDefined(
-								id && label ? `${id}-label` : undefined
-							)}
-						>
-							${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
-						</div>
-					</div>`
-				: ""}
-		</div>
-	`;
+			${when(values.length && labelPosition === "side", () => html`
+			<div
+				class="${rootClass}-labelContainer"
+				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
+			>
+				<div
+					class="${rootClass}-value"
+					role="textbox"
+					aria-readonly="true"
+					aria-labelledby=${ifDefined(
+						id && label ? `${id}-label` : undefined
+					)}
+				>
+					${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+				</div>
+			</div>`)}
+		</div>`;
 };

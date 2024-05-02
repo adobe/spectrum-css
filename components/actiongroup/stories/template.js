@@ -13,20 +13,11 @@ export const Template = ({
 	vertical = false,
 	compact = false,
 	justified = false,
-	staticColors,
+	staticColor,
 	content = [],
 	customClasses = [],
 	...globals
 }) => {
-	const { express } = globals;
-
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
 
 	return html`
 		<div
@@ -50,7 +41,7 @@ export const Template = ({
 							iconName: item.iconName,
 							isQuiet: areQuiet || item.isQuiet,
 							isEmphasized: areEmphasized || item.isEmphasized,
-							staticColor: staticColors ?? item.staticColor,
+							staticColor: staticColor ?? item.staticColor,
 							customClasses: [`${rootClass}-item`],
 						});
 					case "function":

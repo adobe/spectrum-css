@@ -9,19 +9,17 @@ export const Template = ({
 	isOpen = true,
 	variant,
 	content = [],
-}) => {
-	return html`
-		<div class="${rootClass}-wrapper">
-			<div
-				class=${classMap({
-					[rootClass]: true,
-					[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-					"is-open": isOpen,
-					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-			>
-				${content}
-			</div>
+}) => html`
+	<div class="${rootClass}-wrapper">
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+				"is-open": isOpen,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+		>
+			${content}
 		</div>
-	`;
-};
+	</div>
+`;

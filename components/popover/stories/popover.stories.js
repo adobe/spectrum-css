@@ -1,16 +1,16 @@
 import { userEvent, within } from "@storybook/testing-library";
 import { html } from "lit";
 
-// Import the component markup template
 import { Template } from "./template";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
+/**
+ * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
+ */
 export default {
 	title: "Components/Popover",
-	description:
-		"A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.",
 	component: "Popover",
 	argTypes: {
 		trigger: { table: { disable: true } },
@@ -66,6 +66,36 @@ export default {
 		isOpen: false,
 		withTip: false,
 		position: "top",
+		testId: "popover-1",
+		id: "popover-1",
+		triggerId: "trigger",
+		trigger: (passthroughs) => ActionButton({
+			label: "Hop on pop(over)",
+			id: "trigger",
+			...passthroughs,
+		}),
+		content: [
+			() => Menu({
+				items: [
+					{
+						iconName: "Edit",
+						label: "Edit",
+					},
+					{
+						iconName: "Copy",
+						label: "Copy",
+					},
+					{
+						iconName: "Move",
+						label: "Move",
+					},
+					{
+						iconName: "Delete",
+						label: "Delete",
+					},
+				],
+			}),
+		],
 	},
 	parameters: {
 		layout: "centered",
@@ -76,92 +106,39 @@ export default {
 			type: "migrated",
 		},
 		chromatic: { delay: 2000 },
+		docs: {
+			story: {
+				height: "300px"
+			}
+		},
 	},
+	decorators: [
+		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
+	],
 };
 
 export const Default = Template.bind({});
-// provide padding so that Chromatic can capture the full focus indicator
-Default.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
 Default.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
 	await userEvent.click(canvas.getByRole("button"));
 };
-Default.args = {
-	testId: "popover-1",
-	id: "popover-1",
-	triggerId: "trigger",
-	trigger: (passthroughs) => ActionButton({
-		label: "Hop on pop(over)",
-		id: "trigger",
-		...passthroughs,
-	}),
-	content: [
-		() => Menu({
-			items: [
-				{
-					iconName: "Edit",
-					label: "Edit",
-				},
-				{
-					iconName: "Copy",
-					label: "Copy",
-				},
-				{
-					iconName: "Move",
-					label: "Move",
-				},
-				{
-					iconName: "Delete",
-					label: "Delete",
-				},
-			],
-		}),
-	],
-};
+Default.args = {};
 
 export const WithTip = Template.bind({});
-WithTip.args = {
-	withTip: true,
-	id: "popover-1",
-	triggerId: "trigger",
-	testId: "popover-1",
-	trigger: (passthroughs) => ActionButton({
-		label: "Hop on pop(over)",
-		id: "trigger",
-		...passthroughs,
-	}),
-	content: [
-		() => Menu({
-			items: [
-				{
-					iconName: "Edit",
-					label: "Edit",
-				},
-				{
-					iconName: "Copy",
-					label: "Copy",
-				},
-				{
-					iconName: "Move",
-					label: "Move",
-				},
-				{
-					iconName: "Delete",
-					label: "Delete",
-				},
-			],
-		}),
-	],
-};
-
-WithTip.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
-
 WithTip.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
 	await userEvent.click(canvas.getByRole("button"));
 };
+WithTip.args = {
+	withTip: true,
+};
 
 export const Nested = Template.bind({});
+Nested.play = async ({ canvasElement }) => {
+	const canvas = within(canvasElement);
+	await userEvent.click(canvas.getAllByRole("button")[0]);
+	await userEvent.click(canvas.getAllByRole("button")[1]);
+};
 Nested.args = {
 	nested: true,
 	testId: "popover-nested",
@@ -224,12 +201,4 @@ Nested.args = {
 			],
 		}),
 	],
-};
-
-Nested.decorators = [(Story) => html`<div style="padding: 1em;">${Story().outerHTML || Story()}</div>`];
-
-Nested.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-	await userEvent.click(canvas.getAllByRole("button")[0]);
-	await userEvent.click(canvas.getAllByRole("button")[1]);
 };

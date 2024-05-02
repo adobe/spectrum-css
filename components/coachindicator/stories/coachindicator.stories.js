@@ -2,14 +2,13 @@ import { html } from "lit";
 
 import { Template } from "./template";
 
+/**
+ * The coach indicator component can be used to bring added attention to specific parts of a page.
+ */
 export default {
 	title: "components/Coach indicator",
-	description:
-		"The coach indicator component can be used to bring added attention to specific parts of a page.",
 	component: "CoachIndicator",
 	argTypes: {
-		// @todo: remove the disabling of reducedMotion once this global control is enabled, coach indicator does have reduced motion styling.
-		reducedMotion: { table: { disable: true } },
 		isQuiet: {
 			name: "Quiet styling",
 			type: { name: "boolean" },
@@ -45,42 +44,41 @@ export default {
 	},
 };
 
-const chromaticGroup = (args) => {
-	return html`
-		<div>
-			${Template({
-				...args,
-				variant: "default"
+const chromaticGroup = (args) => html`
+	<div>
+		${Template({
+			...args,
+			variant: "default"
+		})}
+		${Template({
+			...args,
+			variant: "dark"
+		})}
+		${Template({
+			...args,
+			variant: "light"
 			})}
-			${Template({
-				...args,
-				variant: "dark"
+		${Template({
+			...args,
+			variant: "default",
+			isQuiet: true
+		})}
+		${Template({
+			...args,
+			variant: "dark",
+			isQuiet: true
+		})}
+		${Template({
+			...args,
+			variant: "light",
+			isQuiet: true
 			})}
-			${Template({
-				...args,
-				variant: "light"
-				})}
-			${Template({
-				...args,
-				variant: "default",
-				isQuiet: true
-			})}
-			${Template({
-				...args,
-				variant: "dark",
-				isQuiet: true
-			})}
-			${Template({
-				...args,
-				variant: "light",
-				isQuiet: true
-				})}
-		</div>
-	`;
-};
+	</div>
+`;
 
-
-export const Default = (args) => html`${window.isChromatic() ? chromaticGroup(args) : Template(args)}`;
+export const Default = (args) => html`
+	${window.isChromatic() ? chromaticGroup(args) : Template(args)}
+`;
 Default.args = {
 	variant: "default"
 };

@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * The color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.
+ */
 export default {
 	title: "Components/Color area",
-	description:
-		"The Color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.",
 	component: "ColorArea",
 	argTypes: {
 		customWidth: { table: { disable: true } },

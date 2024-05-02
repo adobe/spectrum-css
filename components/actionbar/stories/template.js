@@ -51,7 +51,7 @@ export const Template = ({
 					...globals,
 					size: "m",
 					areQuiet: true,
-					staticColors: isEmphasized ? "white" : undefined,
+					staticColor: isEmphasized ? "white" : undefined,
 					content: [
 						{
 							iconName: "Edit",

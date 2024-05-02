@@ -20,45 +20,43 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	...globals
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(customStyles))}
-		>
-			${popoverPlacement.includes("top")
-				? html`<div
-						class="dummy-spacing"
-						style="position: relative; height: 200px;"
-				  ></div> `
-				: ""}
-			${ActionButton({
-				...globals,
-				size: "xs",
-				iconName,
-				customClasses: [`${rootClass}-button`],
-			})}
-			${Popover({
-				isOpen: true,
-				content: [
-					title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : "",
-					body ? html`<p class="${rootClass}-body">${body}</p>` : "",
-					link
-						? Link({
-								text: link.text,
-								url: link.url,
-								customClasses: [`${rootClass}-link`],
-						})
-						: "",
-				],
-				position: popoverPlacement,
-				customClasses: [`${rootClass}-popover`],
-				customStyles: { top: "25px" },
-			})}
-		</div>
-	`;
-};
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		id=${ifDefined(id)}
+		style=${ifDefined(styleMap(customStyles))}
+	>
+		${popoverPlacement.includes("top")
+			? html`<div
+					class="dummy-spacing"
+					style="position: relative; height: 200px;"
+				></div> `
+			: ""}
+		${ActionButton({
+			...globals,
+			size: "xs",
+			iconName,
+			customClasses: [`${rootClass}-button`],
+		})}
+		${Popover({
+			isOpen: true,
+			content: [
+				title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : "",
+				body ? html`<p class="${rootClass}-body">${body}</p>` : "",
+				link
+					? Link({
+							text: link.text,
+							url: link.url,
+							customClasses: [`${rootClass}-link`],
+					})
+					: "",
+			],
+			position: popoverPlacement,
+			customClasses: [`${rootClass}-popover`],
+			customStyles: { top: "25px" },
+		})}
+	</div>
+`;

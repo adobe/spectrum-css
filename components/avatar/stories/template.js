@@ -14,30 +14,27 @@ export const Template = ({
 	hasLink,
 	id,
 	customClasses = [],
-	// ...globals
-}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size}`]: true,
-				"is-disabled": isDisabled,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-		>
-			${when(hasLink, () =>
-				html`
-					<a class="spectrum-Avatar-link" href="#">
-						<img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
-					</a>
-					`
-			)}
-			${when(!hasLink, () =>
-				html`
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size}`]: true,
+			"is-disabled": isDisabled,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		id=${ifDefined(id)}
+	>
+		${when(hasLink, () =>
+			html`
+				<a class="spectrum-Avatar-link" href="#">
 					<img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
+				</a>
 				`
-			)}
-		</div>
-	`;
-};
+		)}
+		${when(!hasLink, () =>
+			html`
+				<img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
+			`
+		)}
+	</div>
+`;

@@ -2,6 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import { capitalize } from "lodash-es";
 
@@ -24,6 +25,10 @@ export const Template = ({
 	}
 
 	const contentLength = content.length;
+
+	// If there is no content, return an empty string, no need for additional processing
+	if (contentLength === 0) return html``;
+
 	const processedContent = html`
 		${content.map((c) => {
 			/* If the content is an object (but not a lit object), we need to merge the object with the template */
@@ -42,15 +47,14 @@ export const Template = ({
 			}
 
 			if (typeof semantics === "undefined") {
-				return html`<div
-					class=${classMap({
-					"spectrum-Typography": true,
-					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-					id=${ifDefined(id)}
-				>
-					${c}
-				</div>`;
+				return html`
+					<div
+						class=${classMap({
+							"spectrum-Typography": true,
+							...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+						})}
+						id=${ifDefined(id)}
+					>${c}</div>`;
 			}
 
 			rootClass = `spectrum-${capitalize(semantics)}`;
@@ -79,13 +83,13 @@ export const Template = ({
 						>${c}</span
 					>`;
 				}
- else if (variant.includes("strong")) {
+				else if (variant.includes("strong")) {
 					c = html`<strong
 						class=${classMap({ [`${rootClass}-strong`]: true })}
 						>${c}</strong
 					>`;
 				}
- else if (variant.includes("emphasized")) {
+				else if (variant.includes("emphasized")) {
 					c = html`<em
 						class=${classMap({ [`${rootClass}-emphasized`]: true })}
 						>${c}</em
@@ -95,25 +99,29 @@ export const Template = ({
 
 			if (semantics === "heading")
 				return html`
-					<h2 class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</h2>
+					<h2 class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</h2>
 				`;
 
 			if (semantics === "body")
 				return html`
-					<p class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</p>
+					<p class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</p>
 				`;
 
 			if (semantics === "code")
 				return html`
-					<code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</code>
+					<code class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</code>
 				`;
 
 			return html`
-				<span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</span>
+				<span class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</span>
 			`;
 		})}
 	`;
 
 	/** Wrap items with the spectrum-Typography wrapper if there are more than 1 items (this ensures correct margins) */
-	return html`${contentLength > 1 ? html`<div class="spectrum-Typography" id=${ifDefined(id)}>${processedContent}</div>` : processedContent}`;
+	return html`${when(
+		contentLength > 1,
+		() => html`<div class="spectrum-Typography" id=${ifDefined(id)}>${processedContent}</div>`,
+		() => processedContent
+	)}`;
 };

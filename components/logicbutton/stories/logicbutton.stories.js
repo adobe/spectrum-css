@@ -1,11 +1,11 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A logic button displays an operator within a boolean logic sequence.
+ */
 export default {
 	title: "Components/Logic button",
-	description:
-		"A Logic Button displays an operator within a boolean logic sequence.",
-	component: "Logicbutton",
+	component: "LogicButton",
 	argTypes: {
 		variant: {
 			name: "Variant",

@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * A table is used to create a container for displaying information. It allows users to sort, compare, and take action on large amounts of data.
+ */
 export default {
 	title: "Components/Table",
-	description:
-		"A table is used to create a container for displaying information. It allows users to sort, compare, and take action on large amounts of data.",
 	component: "Table",
 	argTypes: {
 		size: {
@@ -131,15 +131,10 @@ Default.args = {
 	],
 };
 
+/**
+ * An example showing both the optional summary row, and a row marked as selected.
+ */
 export const SummaryAndSelected = Template.bind({});
-SummaryAndSelected.parameters = {
-	docs: {
-		description: {
-			story:
-				"An example showing both the optional summary row, and a row marked as selected.",
-		},
-	},
-};
 SummaryAndSelected.args = {
 	rowItems: [
 		{
@@ -199,15 +194,10 @@ MultiSelect.args = {
 	],
 };
 
+/**
+ * An example showing the use of the scrollable wrapper element with table markup. This allows a fixed height and scrolling, along with column headers that are fixed to the top on scroll.
+ */
 export const Scrollable = Template.bind({});
-Scrollable.parameters = {
-	docs: {
-		description: {
-			story:
-				"An example showing the use of the scrollable wrapper element with table markup. This allows a fixed height and scrolling, along with column headers that are fixed to the top on scroll.",
-		},
-	},
-};
 Scrollable.args = {
 	useScroller: true,
 	rowItems: [
@@ -237,16 +227,11 @@ Scrollable.args = {
 	],
 };
 
+/**
+ * A table can also be made up of divs if needed. This uses both the div markup, and the scrollable wrapper.
+ */
 export const DivsScrollable = Template.bind({});
-DivsScrollable.parameters = {
-	docs: {
-		description: {
-			story:
-				"A table can also be made up of divs if needed. This uses both the div markup, and the scrollable wrapper.",
-		},
-	},
-};
-DivsScrollable.storyName = "Divs and Scrollable";
+DivsScrollable.storyName = "Divs and scrollable";
 DivsScrollable.args = {
 	useDivs: true,
 	useScroller: true,
@@ -505,15 +490,10 @@ ThumbnailsCollapsible.args = {
 	],
 };
 
+/**
+ * In addition to the overall table, individual rows can be designated as a drop target. Only one dropzone row should show at a time, but this example sets multiple at different parts of the table to test that they all display the same.
+ */
 export const RowDropzone = Template.bind({});
-RowDropzone.parameters = {
-	docs: {
-		description: {
-			story:
-				"In addition to the overall table, individual rows can be designated as a drop target. Only one dropzone row should show at a time, but this example sets multiple at different parts of the table to test that they all display the same.",
-		},
-	},
-};
 RowDropzone.args = {
 	rowItems: [
 		{

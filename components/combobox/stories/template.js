@@ -27,19 +27,16 @@ export const Template = ({
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
+	selectedDay,
 	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
-	const { express } = globals;
 
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
+	// If selectedDay is a string, convert it to a Date object
+	if (typeof selectedDay === "string" && selectedDay.length > 0) {
+		selectedDay = new Date(selectedDay).toLocaleDateString({ language: lang });
 	}
 
 	return html`
@@ -48,7 +45,7 @@ export const Template = ({
 				...globals,
 				size,
 				label: fieldLabelText,
-				style: { "max-inline-size": "100px"},
+				customStyles: { "max-inline-size": "100px"},
 				alignment: fieldLabelPosition === "left" && "left",
 			}) : null
 		}

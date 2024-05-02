@@ -1,10 +1,11 @@
-import { html } from "lit";
 
 import { Template } from "./template";
 
+/**
+ * The clear button component is an in-field button used in search and tag.
+ */
 export default {
 	title: "Components/Clear button",
-	description: "The clear button component is and in-field button used in Search and Tag",
 	component: "ClearButton",
 	argTypes: {
 		size: {
@@ -26,7 +27,17 @@ export default {
 			},
 			control: "boolean",
 		},
-		variant: { table: { disable: true }},
+		staticColor: {
+			name: "Static color",
+			type: { name: "string" },
+			table: {
+				disable: true,
+				type: { summary: "string" },
+				category: "Advanced",
+			},
+			options: ["white"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-ClearButton",
@@ -48,12 +59,5 @@ Default.args = {};
 
 export const OverBackground = Template.bind({});
 OverBackground.args = {
-	variant: "overBackground",
+	staticColor: "white",
 };
-OverBackground.decorators = [
-	Story => html`
-		<div style="background-color: rgb(15, 121, 125); padding: 15px 20px;">
-			${Story()}
-		</div>
-	`
-];

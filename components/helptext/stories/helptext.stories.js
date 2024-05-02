@@ -1,10 +1,10 @@
-// Import the component markup template
 import { Template } from "./template";
 
+/**
+ * Help text provides either an informative description or an error message that gives more context about what a user needs to input. It's commonly used in forms.
+ */
 export default {
 	title: "Components/Help text",
-	description:
-		"Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms.",
 	component: "HelpText",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },

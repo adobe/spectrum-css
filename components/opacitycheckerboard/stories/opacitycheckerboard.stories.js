@@ -1,13 +1,13 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 
-
 import { Template } from "./template";
 
+/**
+ * Opacity checkerboard is used with other components to highlight opacity.
+ */
 export default {
 	title: "Components/Opacity checkerboard",
-	description:
-		"Opacity checkerboard is used with other components to highlight opacity.",
 	component: "OpacityCheckerboard",
 	argTypes: {
 		backgroundPosition: {
@@ -36,6 +36,7 @@ export default {
 		(Story, context) => html`<div style=${styleMap({ inlineSize: "100px", blockSize: "100px" })}>${Story(context)}</div>`
 	],
 };
+
 export const Default = Template.bind({});
 Default.args = {
 	customStyles: {

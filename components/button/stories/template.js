@@ -84,15 +84,13 @@ export const Template = ({
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
       ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
-      ${when(isPending, () => {
-        return ProgressCircle({
-          ...globals,
-          size: "s",
-          testId: "progress-circle",
-          staticColor,
-          isIndeterminate: true,
-        });
-      })}
+      ${when(isPending, () => ProgressCircle({
+        ...globals,
+        size: "s",
+        testId: "progress-circle",
+        staticColor,
+        isIndeterminate: true,
+      }))}
     </button>
   `;
 };

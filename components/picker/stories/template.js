@@ -142,7 +142,7 @@ export const Template = ({
 				size,
 				label,
 				isDisabled,
-				style: fieldLabelStyle,
+				customStyles: fieldLabelStyle,
 				alignment: labelPosition,
 			})
 			: ""}

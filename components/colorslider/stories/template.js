@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
@@ -11,6 +12,7 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-ColorSlider",
 	customClasses = [],
+	customStyles = {},
 	isDisabled = false,
 	isFocused = false,
 	vertical = false,
@@ -36,6 +38,7 @@ export const Template = ({
 			"is-focused": isFocused,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
+		style=${ifDefined(styleMap(customStyles))}
 	>
 		${OpacityCheckerboard({
 			...globals,
@@ -51,7 +54,7 @@ export const Template = ({
 						class="${rootClass}-gradient"
 						role="presentation"
 						style=${when(gradientStops && gradientStops.length, () => styleMap({
-							background: `linear-gradient(to ${vertical ? "bottom" : "right"}, ${gradientStops.join(", ")})`,
+							"background": `linear-gradient(to ${vertical ? "bottom" : "right"}, ${gradientStops.join(", ")})`,
 						}))}
 					></div>`
 				)

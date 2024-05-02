@@ -1,4 +1,3 @@
-// Import the component markup template
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
@@ -22,10 +21,11 @@ const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
 	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
 }).flat();
 
+/**
+ * The icons component contains all UI icons used for components as well as the CSS for UI and workflow icons.
+ */
 export default {
 	title: "Components/Icon",
-	description:
-		"The icons component contains all UI icons used for components as well as the CSS for UI and workflow icons.",
 	component: "Icon",
 	argTypes: {
 		/* Turn off express theme for icon preview b/c they use a separate icon set */
@@ -100,87 +100,72 @@ export default {
 	},
 };
 
-export const Default = (args) => {
-	if (window.isChromatic()) {
-		return TestTemplate({ ...args });
-	}
-	else {
-		return Template({
-			...args,
-			iconName: args.iconName ?? args.uiIconName,
-			setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
-		});
-	}
-};
+export const Default = (args) => window.isChromatic() ? TestTemplate(args) : Template({
+	...args,
+	iconName: args.iconName ?? args.uiIconName,
+	setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+});
 
 Default.args = {};
 
 /**
  * Chromatic VRT template that displays multiple icons to cover various options.
  */
-const TestTemplate = ({
-	// staticColor,
-	// customStyles = {},
-	...args
-}) => {
-	const workflow_row_args = [
-		{
-			setName: "workflow",
-			iconName: "Alert",
-			fill: "var(--spectrum-negative-content-color-default)",
-		},
-		{
-			setName: "workflow",
-			iconName: "Hand",
-		},
-		{
-			setName: "workflow",
-			iconName: "Help",
-		},
-		{
-			setName: "workflow",
-			iconName: "ArrowLeft",
-		},
-		{
-			setName: "workflow",
-			iconName: "ArrowRight",
-		},
-		{
-			setName: "workflow",
-			iconName: "ChevronDown",
-		}
-	];
-
-	return html`
-		${workflow_row_args.map((row_args) => html`
+const TestTemplate = (args) => html`
+	${[
+	{
+		setName: "workflow",
+		iconName: "Alert",
+		fill: "var(--spectrum-negative-content-color-default)",
+	},
+	{
+		setName: "workflow",
+		iconName: "Hand",
+	},
+	{
+		setName: "workflow",
+		iconName: "Help",
+	},
+	{
+		setName: "workflow",
+		iconName: "ArrowLeft",
+	},
+	{
+		setName: "workflow",
+		iconName: "ArrowRight",
+	},
+	{
+		setName: "workflow",
+		iconName: "ChevronDown",
+	}
+].map((row_args) => html`
+		<div
+			style=${styleMap({
+				"display": "flex",
+				"gap": "16px",
+				"margin-bottom": "16px",
+			})}
+		>
+			${["xs","s","m","l","xl","xxl"].map(
+				(size) => Template({ ...args, ...row_args, size })
+			)}
+		</div>`
+	)}
+	<div style="margin-top:32px;">
+		${uiIconsWithDirections.map(iconName => html`
 			<div
 				style=${styleMap({
-					display: "flex",
-					gap: "16px",
-					marginBottom: "16px",
+					"display": "flex",
+					"gap": "16px",
 				})}
 			>
-				${["xs","s","m","l","xl","xxl"].map(
-					(size) => Template({ ...args, ...row_args, size })
+				${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
+					Template({ ...args, setName: "ui", iconName: iconName + iconSize })
+				)}
+				${when(uiIconSizes[iconName]?.length == 0, () =>
+					Template({ ...args, setName: "ui", iconName })
 				)}
 			</div>`
 		)}
-		<div style="margin-top:32px;">
-			${uiIconsWithDirections.map(iconName => html`
-				<div
-					style=${styleMap({
-						display: "flex",
-						gap: "16px",
-					})}
-				>
-					${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
-						Template({ ...args, setName: "ui", iconName: iconName + iconSize })
-					)}
-					${when(uiIconSizes[iconName]?.length == 0, () =>
-						Template({ ...args, setName: "ui", iconName })
-					)}
-				</div>`
-			)}
-		</div>
-	`;
-};
+	</div>
+`;

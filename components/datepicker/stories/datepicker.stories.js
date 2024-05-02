@@ -1,14 +1,14 @@
-// Import the component markup template
 import { Template } from "./template";
 
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
 
 const ignoreProps = ["rootClass", "isDisabled"];
 
+/**
+ * A date picker displays a text field input with a button next to it, and can display two Text Fields next to each other for choosing a date range.
+ */
 export default {
 	title: "Components/Date picker",
-	description:
-		"A date picker displays a Text Field input with a button next to it, and can display two Text Fields next to each other for choosing a date range.",
 	component: "DatePicker",
 	argTypes: {
 		...Object.entries(CalendarStories.argTypes).reduce((acc, [key]) => {
@@ -107,10 +107,17 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [...(CalendarStories.parameters.actions.handles ?? [])],
+			handles: [
+				...(CalendarStories.parameters.actions.handles ?? [])
+			],
 		},
 		status: {
 			type: "migrated",
+		},
+		docs: {
+			story: {
+				height: "350px"
+			}
 		},
 	},
 };

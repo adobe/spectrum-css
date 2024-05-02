@@ -36,119 +36,117 @@ export const MenuItem = ({
 	selectionMode,
 	value,
 	...globals
-}) => {
-	return html`
-    <li
-      class=${classMap({
-        [`${rootClass}`]: true,
-        "is-highlighted": isHighlighted,
-        "is-active": isActive,
-        "is-focused": isFocused,
-        "is-selected": isSelected,
-        "is-disabled": isDisabled,
-        [`${rootClass}--drillIn`]: isDrillIn,
-        [`${rootClass}--collapsible`]: isCollapsible,
-        "is-open": isOpen,
-      })}
-      id=${ifDefined(id)}
-      role=${ifDefined(role)}
-      aria-selected=${isSelected ? "true" : "false"}
-      aria-disabled=${isDisabled ? "true" : "false"}
-      tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
-      ${isCollapsible
-        ? Icon({
-            ...globals,
-            iconName: "ChevronRight100",
-            size,
-            customClasses: [
-              `${rootClass}Icon`,
-              "spectrum-Menu-chevron",
-            ],
-          }) : ""}
-      ${iconName
-        ? Icon({
-            ...globals,
-            iconName,
-            size,
-            customClasses: [
-              `${rootClass}Icon`,
-              `${rootClass}Icon--workflowIcon`
-            ]
-          }) : ""}
-      ${isCollapsible
-        ? html`<span class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>`
-        : ""
-      }
-      ${selectionMode != "multiple" && !isCollapsible
-        ? html`<span class=${classMap({
-          [`${rootClass}Label`]: true,
-          ["spectrum-Switch-label"]: hasActions,
-          ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
-          })}>
-          ${label}
-        </span>`
-        : ""}
-      ${typeof description != "undefined"
-        ? html`<span class="${rootClass}Description">${description}</span>`
-        : ""}
-      ${isDrillIn
-        ? Icon({
-            ...globals,
-            iconName: "ChevronRight100",
-            size,
-            customClasses: [
-              `${rootClass}Icon`,
-              "spectrum-Menu-chevron",
-            ],
-          })
-        : ""}
-      ${when(selectionMode == "multiple", () =>  html`
-        ${Checkbox({
+}) => html`
+  <li
+    class=${classMap({
+      [`${rootClass}`]: true,
+      "is-highlighted": isHighlighted,
+      "is-active": isActive,
+      "is-focused": isFocused,
+      "is-selected": isSelected,
+      "is-disabled": isDisabled,
+      [`${rootClass}--drillIn`]: isDrillIn,
+      [`${rootClass}--collapsible`]: isCollapsible,
+      "is-open": isOpen,
+    })}
+    id=${ifDefined(id)}
+    role=${ifDefined(role)}
+    aria-selected=${isSelected ? "true" : "false"}
+    aria-disabled=${isDisabled ? "true" : "false"}
+    tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
+    ${isCollapsible
+      ? Icon({
           ...globals,
+          iconName: "ChevronRight100",
           size,
-          isEmphasized: true,
-          isChecked: isSelected,
-          isDisabled,
-          id: `menu-checkbox-${idx}`,
           customClasses: [
-            `${rootClass}Checkbox`,
+            `${rootClass}Icon`,
+            "spectrum-Menu-chevron",
           ],
-        })}
-         <span  class="spectrum-Menu-itemLabel ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>
-         `)}
-        ${isChecked && selectionMode == "single"
-        ? Icon({
-            ...globals,
-            iconName: "Checkmark100",
-            size,
-            customClasses: [
-              `${rootClass}Icon`,
-              "spectrum-Menu-checkmark",
-            ],
-          })
+        }) : ""}
+    ${iconName
+      ? Icon({
+          ...globals,
+          iconName,
+          size,
+          customClasses: [
+            `${rootClass}Icon`,
+            `${rootClass}Icon--workflowIcon`
+          ]
+        }) : ""}
+    ${isCollapsible
+      ? html`<span class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>`
+      : ""
+    }
+    ${selectionMode != "multiple" && !isCollapsible
+      ? html`<span class=${classMap({
+        [`${rootClass}Label`]: true,
+        ["spectrum-Switch-label"]: hasActions,
+        ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+        })}>
+        ${label}
+      </span>`
+      : ""}
+    ${typeof description != "undefined"
+      ? html`<span class="${rootClass}Description">${description}</span>`
+      : ""}
+    ${isDrillIn
+      ? Icon({
+          ...globals,
+          iconName: "ChevronRight100",
+          size,
+          customClasses: [
+            `${rootClass}Icon`,
+            "spectrum-Menu-chevron",
+          ],
+        })
+      : ""}
+    ${when(selectionMode == "multiple", () =>  html`
+      ${Checkbox({
+        ...globals,
+        size,
+        isEmphasized: true,
+        isChecked: isSelected,
+        isDisabled,
+        id: `menu-checkbox-${idx}`,
+        customClasses: [
+          `${rootClass}Checkbox`,
+        ],
+      })}
+        <span  class="spectrum-Menu-itemLabel ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>
+        `)}
+      ${isChecked && selectionMode == "single"
+      ? Icon({
+          ...globals,
+          iconName: "Checkmark100",
+          size,
+          customClasses: [
+            `${rootClass}Icon`,
+            "spectrum-Menu-checkmark",
+          ],
+        })
+      : ""}
+      ${value
+        ? html`<span class="${rootClass}Value">${value}</span>`
         : ""}
-        ${value
-          ? html`<span class="${rootClass}Value">${value}</span>`
-          : ""}
-        ${hasActions
-          ? html`<div class="${rootClass}Actions">
-          ${Switch({
-              ...globals,
-              size,
-              isChecked: isSelected,
-              isDisabled,
-              label: null,
-              id: `menu-switch-${idx}`,
-              customClasses: [
-                `${rootClass}Switch`,
-              ],
-            })}
-            </div>`
-          : ""}
-      ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size, shouldTruncate }) : ""}
-    </li>
-  `;
-};
+      ${hasActions
+        ? html`<div class="${rootClass}Actions">
+        ${Switch({
+            ...globals,
+            size,
+            isChecked: isSelected,
+            isDisabled,
+            label: null,
+            id: `menu-switch-${idx}`,
+            customClasses: [
+              `${rootClass}Switch`,
+            ],
+          })}
+          </div>`
+        : ""}
+    ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size, shouldTruncate }) : ""}
+  </li>
+`;
 
 /**
  * Get the tray submenu back arrow name with scale number (defined in design spec).

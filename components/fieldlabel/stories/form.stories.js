@@ -1,12 +1,16 @@
-import { Template } from "./form-template";
+import { html } from "lit";
 
+import { Template } from "./form.template.js";
+
+/**
+ * The form component is used for aligning multiple inputs and field groups within a form.
+ */
 export default {
 	title: "Components/Form",
-	description: "The Form component is used for aligning multiple inputs and field groups within a form.",
 	component: "Form",
 	argTypes: {
 		labelsAbove: {
-			name: "Labels Above",
+			name: "Labels above",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -27,6 +31,9 @@ export default {
 			type: "migrated",
 		},
 	},
+	decorators: [
+		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
+	],
 };
 
 export const Standard = Template.bind({});

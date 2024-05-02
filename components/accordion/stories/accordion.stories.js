@@ -150,9 +150,9 @@ export default {
 const AccordionGroup = (args) => html`
 	${window.isChromatic() ? html`
 		<div style=${styleMap({
-			display: "flex",
-			flexWrap: "wrap",
-			gap: "2em"
+			"display": "flex",
+			"flex-wrap": "wrap",
+			"gap": "28px"
 		})}>
 			${Template(args)}
 			${Template({

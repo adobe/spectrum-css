@@ -14,63 +14,61 @@ export const Template = ({
 	variant,
 	isDragged = false,
 	...globals
-}) => {
-	return html`
-		<nav>
-			<ul
-				class=${classMap({
-					[rootClass]: true,
-					[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-			>
-				${items.map((item, idx, arr) => {
-					const { label, isDisabled, iconName } = item;
-					return html` <li
-						class=${classMap({
-							[`${rootClass}-item`]: true,
-							"is-disabled": isDisabled,
-							"is-dragged": isDragged && item.isDragged,
-						})}
-					>
-						${when(
-							iconName,
-							() =>
-								ActionButton({
-									...globals,
-									iconName,
-									isDisabled,
-									isQuiet: true,
-									customIconClasses: [`${rootClass}-folder`],
-									size: "m",
-								}),
-							() =>
-								when(
-									idx !== arr.length - 1,
-									() =>
-										html`<div
-											class="${rootClass}-itemLink"
-											role="link"
-											tabindex="0"
-										>
-											${label}
-										</div>`,
-									() =>
-										html`<a class="${rootClass}-itemLink" aria-current="page"
-											>${label}</a
-										>`
-								)
-						)}
-						${when(idx !== arr.length - 1, () =>
-							Icon({
+}) => html`
+	<nav>
+		<ul
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+		>
+			${items.map((item, idx, arr) => {
+				const { label, isDisabled, iconName } = item;
+				return html` <li
+					class=${classMap({
+						[`${rootClass}-item`]: true,
+						"is-disabled": isDisabled,
+						"is-dragged": isDragged && item.isDragged,
+					})}
+				>
+					${when(
+						iconName,
+						() =>
+							ActionButton({
 								...globals,
-								iconName: "ChevronRight100",
-								customClasses: [`${rootClass}-itemSeparator`],
-							})
-						)}
-					</li>`;
-				})}
-			</ul>
-		</nav>
-	`;
-};
+								iconName,
+								isDisabled,
+								isQuiet: true,
+								customIconClasses: [`${rootClass}-folder`],
+								size: "m",
+							}),
+						() =>
+							when(
+								idx !== arr.length - 1,
+								() =>
+									html`<div
+										class="${rootClass}-itemLink"
+										role="link"
+										tabindex="0"
+									>
+										${label}
+									</div>`,
+								() =>
+									html`<a class="${rootClass}-itemLink" aria-current="page"
+										>${label}</a
+									>`
+							)
+					)}
+					${when(idx !== arr.length - 1, () =>
+						Icon({
+							...globals,
+							iconName: "ChevronRight100",
+							customClasses: [`${rootClass}-itemSeparator`],
+						})
+					)}
+				</li>`;
+			})}
+		</ul>
+	</nav>
+`;

@@ -1,12 +1,10 @@
 import { within } from "@storybook/testing-library";
 
-// Import the component markup template
 import { Template } from "./template";
 
 export default {
 	title: "Components/Split view",
-	description: "The Splitview component is...",
-	component: "Splitview",
+	component: "SplitView",
 	argTypes: {
 		orientation: {
 			name: "Orientation",

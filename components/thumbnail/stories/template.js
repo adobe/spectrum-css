@@ -39,7 +39,7 @@ export const Template = ({
 			${svg ? html`${svg}` : ""}
 		</div>
 	`;
-	
+
 	if (isLayer)
 		return html`
 			<div
@@ -105,9 +105,7 @@ export const Template = ({
 				[`${rootClass}--size${size}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-		style=${ifDefined(styleMap({
-			...customStyles,
-		}))}
+		style=${ifDefined(styleMap(customStyles))}
 		id=${ifDefined(id)}
 		@click=${onclick}
 	>
