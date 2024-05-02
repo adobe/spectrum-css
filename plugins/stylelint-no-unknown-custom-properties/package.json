@@ -9,14 +9,14 @@
   "dependencies": {
     "colors": "^1.4.0",
     "fast-glob": "^3.3.2",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.38",
     "postcss-value-parser": "^4.2.0"
   },
   "peerDependencies": {
     "stylelint": "^14.0.0 || ^15.0.0"
   },
   "devDependencies": {
-    "ava": "^6.1.0",
+    "ava": "^6.1.2",
     "c8": "^9.1.0",
     "stylelint": "^15.11.0"
   },
