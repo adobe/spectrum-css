@@ -66,10 +66,10 @@ const ProgressCircleGroup = (args) => html`
 	` : Template(args)}
 `;
 
-export const Default = (args) => ProgressCircleGroup(args);
+export const Default = ProgressCircleGroup.bind({});
 Default.args = {};
 
-export const StaticWhite = (args) => ProgressCircleGroup(args);
+export const StaticWhite = ProgressCircleGroup.bind({});
 StaticWhite.args = {
 	staticColor: "white",
 };
