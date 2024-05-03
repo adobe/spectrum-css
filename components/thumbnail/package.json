@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/thumbnail",
-	"version": "6.0.0",
+	"version": "6.1.0",
 	"description": "The Spectrum CSS thumbnail component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,8 +22,8 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/opacitycheckerboard": ">=1",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/opacitycheckerboard": ">=2",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"keywords": [
 		"spectrum",

@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/alertdialog",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "The Spectrum CSS alertdialog component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,12 +22,12 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/buttongroup": ">=6",
-		"@spectrum-css/divider": ">=2",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/modal": ">=4",
-		"@spectrum-css/tokens": ">=13",
-		"@spectrum-css/underlay": ">=3"
+		"@spectrum-css/buttongroup": ">=7",
+		"@spectrum-css/divider": ">=3",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/modal": ">=5",
+		"@spectrum-css/tokens": ">=14",
+		"@spectrum-css/underlay": ">=4"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/buttongroup": {

@@ -1,5 +1,25 @@
 # Change Log
 
+## 7.1.0
+
+### Minor Changes
+
+- [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+#### Build optmizations to support minification
+
+Output for all component CSS files is now being run through a lightweight optimizer (cssnano) which significantly reduces unnecessary whitespace. These changes reduce file size but should not have any impact on the rendering of the component. By removing unnecessary whitespace from var functions, we are making it easier to effectively minify our provided CSS assets.
+
+### Patch Changes
+
+- Updated peerDependencies [[`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d)]:
+  - @spectrum-css/checkbox@>=9
+  - @spectrum-css/divider@>=3
+  - @spectrum-css/icon@>=7
+  - @spectrum-css/switch@>=5
+  - @spectrum-css/tray@>=3
+  - @spectrum-css/tokens@>=14
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 

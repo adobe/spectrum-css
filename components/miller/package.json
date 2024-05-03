@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/miller",
-	"version": "6.0.0",
+	"version": "6.1.0",
 	"description": "The Spectrum CSS miller component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,10 +22,10 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/assetlist": ">=5",
-		"@spectrum-css/checkbox": ">=8",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/assetlist": ">=6",
+		"@spectrum-css/checkbox": ">=9",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"keywords": [
 		"spectrum",

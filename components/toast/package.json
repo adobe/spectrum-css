@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/toast",
-	"version": "10.0.0",
+	"version": "10.1.0",
 	"description": "The Spectrum CSS toast component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,10 +22,10 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/button": ">=11",
-		"@spectrum-css/closebutton": ">=4",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/button": ">=13",
+		"@spectrum-css/closebutton": ">=5",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"keywords": [
 		"spectrum",

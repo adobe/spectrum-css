@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/stepper",
-	"version": "6.0.0",
+	"version": "6.1.0",
 	"description": "The Spectrum CSS stepper component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,11 +22,11 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=5",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/infieldbutton": ">=4",
-		"@spectrum-css/textfield": ">=6",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/actionbutton": ">=6",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/infieldbutton": ">=5",
+		"@spectrum-css/textfield": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/infieldbutton": {

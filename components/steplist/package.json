@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/steplist",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"description": "The Spectrum CSS steplist component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,9 +22,9 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/tokens": ">=13",
-		"@spectrum-css/tooltip": ">=5"
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/tokens": ">=14",
+		"@spectrum-css/tooltip": ">=6"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/tooltip": {

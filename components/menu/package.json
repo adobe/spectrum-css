@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/menu",
-	"version": "7.0.0",
+	"version": "7.1.0",
 	"description": "The Spectrum CSS menu component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,12 +22,12 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/checkbox": ">=8",
-		"@spectrum-css/divider": ">=2",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/switch": ">=4",
-		"@spectrum-css/tokens": ">=13",
-		"@spectrum-css/tray": ">=2.1"
+		"@spectrum-css/checkbox": ">=9",
+		"@spectrum-css/divider": ">=3",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/switch": ">=5",
+		"@spectrum-css/tokens": ">=14",
+		"@spectrum-css/tray": ">=3"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/checkbox": {
