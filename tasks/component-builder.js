@@ -129,13 +129,13 @@ async function extractModifiers(filepath, { cwd } = {}) {
         promises.push(
             fsp.writeFile(
                 path.join(cwd, `metadata/mods.md`),
-                prettier.format(
+                (await prettier.format(
                     [
                         "| Modifiable custom properties |\n| --- |",
                         ...[...found].sort().map((result) => `| \`${result}\` |`),
                     ].join("\n"),
                     { parser: "markdown" }
-                ),
+                )),
                 { encoding: "utf-8" }
             )
             .then(() => `${"✓".green}  ${"metadata/mods.md".padEnd(20, " ").yellow}  ${'-- deprecated --'.gray}`)
@@ -150,7 +150,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
     promises.push(
         fsp.writeFile(
             path.join(cwd, `dist/metadata.json`),
-            prettier.format(
+            (await prettier.format(
                 JSON.stringify({
                     selectors: [...selectors].sort(),
                     mods: [...found].sort(),
@@ -159,7 +159,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
                     a11y: [...highContrast].sort(),
                 }, null, 2),
                 { parser: "json" }
-            ),
+            )),
             { encoding: "utf-8" }
         ).then(() => {
             const stats = fs.statSync(path.join(cwd, `dist/metadata.json`));
@@ -226,9 +226,7 @@ async function processCSS(content, input, output, {
     const promises = [];
 
     if (result.css) {
-        // @todo update build to use prettier formatted results
-        // const formatted = prettier.format(result.css.trimStart(), { parser: "css", printWidth: 180 });
-        const formatted = result.css.trimStart();
+        const formatted = await prettier.format(result.css.trimStart(), { parser: "css", printWidth: 500 });
         promises.push(
             fsp.writeFile(output, formatted).then(() => {
                 const stats = fs.statSync(output);

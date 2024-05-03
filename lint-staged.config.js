@@ -1,5 +1,6 @@
 module.exports = {
 	"components/*/*.css": [
+		"prettier --no-error-on-unmatched-pattern --ignore-unknown --loglevel silent --write",
 		"stylelint --fix --cache --allow-empty-input --quiet"
 	],
 	"*.json": [
