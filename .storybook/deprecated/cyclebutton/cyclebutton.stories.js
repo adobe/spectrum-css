@@ -7,10 +7,13 @@ import { html } from "lit";
 import "@spectrum-css/cyclebutton/dist/index-vars.css";
 import "@spectrum-css/cyclebutton/dist/vars.css";
 
+/**
+ * **This component is deprecated.** Please use the quiet variant of action button with the appropriate icon(s) instead. Any icon swapping that happens on-click/on-key should be handled by the implementation.
+ *
+ * The cycle button component is an action button that cycles through two different icons, a play that then changes to a pause, for example.
+ */
 export default {
 	title: "Deprecated/Cycle button",
-	description:
-		"The Cycle button component is an action button that cycles through two different icons, a play that then changes to a pause, for example.",
 	component: "CycleButton",
 	argTypes: {
 		size: ActionButtonStories?.argTypes?.size ?? {},
@@ -49,13 +52,14 @@ export const Default = (({
 	rootClass = "spectrum-CycleButton",
 	customClasses = [],
 	size = "m",
-	initialIcon = "Play",
-	selectedIcon = "Pause",
 	isDisabled = false,
 	onclick,
 	...globals
 }) => {
-	const [{ selectedIcon: icon }, updateArgs] = useArgs();
+	const [{
+		selectedIcon = "Pause",
+		initialIcon = "Play"
+	}, updateArgs] = useArgs();
 
 	return html`
 		<!-- Note: These dimensions don't change in express theme -->
@@ -65,18 +69,21 @@ export const Default = (({
 		</style>
 		${ActionButton({
 			...globals,
-			customClasses: [rootClass],
+			customClasses: [rootClass, ...customClasses],
 			isQuiet: true,
 			isDisabled,
 			size,
 			iconName: initialIcon,
+			iconSet: "workflow",
 			onclick:
 				onclick ??
 				function () {
 					if (isDisabled) return;
 
-					updateArgs({ initialIcon: selectedIcon });
-					updateArgs({ selectedIcon: icon });
+					updateArgs({
+						initialIcon: selectedIcon,
+						selectedIcon: initialIcon
+					});
 				},
 		})}
 	`;

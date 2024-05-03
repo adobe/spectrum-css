@@ -6,10 +6,13 @@ import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import "@spectrum-css/splitbutton/dist/index-vars.css";
 import "@spectrum-css/splitbutton/dist/vars.css";
 
+/**
+ * **This component is deprecated.** Please use a button group to show any additional actions related to the most critical action. Reference [Spectrum documentation](https://spectrum.corp.adobe.com/page/button-group/#Use-a-button-group-to-show-additional-actions) for more information.
+ *
+ * A split button surfaces an immediately invokable action via it's main button, as well as a list of alternative actions in its toggle-able menu overlay.
+ */
 export default {
 	title: "Deprecated/Split button",
-	description:
-		"A split button surfaces an immediately invokable action via it's main button, as well as a list of alternative actions in its toggle-able menu overlay.",
 	component: "SplitButton",
 	argTypes: {
 		size: {
