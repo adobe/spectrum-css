@@ -20,7 +20,6 @@ module.exports = ({
 		noFlatVariables: false,
 	},
 	combine = false,
-	keepComments = false,
 	lint = true,
 	verbose = true,
 	additionalPlugins = {},
@@ -85,13 +84,15 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
+			"postcss-hover-media-feature": {},
+			/* --------------------------------------------------- */
+			/* ------------------- VARIABLE PARSING -------------- */
 			"postcss-splitinator": {
 				processIdentifier: (identifier) =>
 					identifier === "express" ? "spectrum--express" : identifier,
 				...splitinatorOptions,
 			},
 			"postcss-combininator": combine ? {} : false,
-			"postcss-hover-media-feature": {},
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
@@ -124,12 +125,21 @@ module.exports = ({
 				},
 			},
 			/* --------------------------------------------------- */
-			/* ------------------- CLEAN-UP TASKS ---------------- */
-			"postcss-discard-empty": {},
+			/* ------------------- ORGANIZE/DEDUPE --------------- */
 			"at-rule-packer": {},
-			"postcss-discard-comments": !keepComments
-				? { removeAllButFirst: true }
-				: false,
+			cssnano: {
+				preset: [
+					"cssnano-preset-advanced",
+					{
+						colormin: false,
+						discardComments: {
+							removeAllButFirst: true,
+						},
+						// @todo yarn add -DW css-declaration-sorter
+						cssDeclarationSorter: false, // @todo { order: "smacss" }
+					},
+				],
+			},
 			/* --------------------------------------------------- */
 			/* ------------------- REPORTING --------------------- */
 			stylelint: lint
