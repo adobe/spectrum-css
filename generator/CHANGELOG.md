@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.1
+
+### Patch Changes
+
+- [#2726](https://github.com/adobe/spectrum-css/pull/2726) [`add5ac2`](https://github.com/adobe/spectrum-css/commit/add5ac24d0cfea2baba4a2ceab8e71f07473797e) Thanks [@castastrophe](https://github.com/castastrophe)! - The plopfile entry point leveraged a require.resolve in an ES module format without setting up the require functionality first
+
 ## 4.0.0
 
 ### Major Changes
