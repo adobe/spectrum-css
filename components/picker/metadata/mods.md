@@ -47,7 +47,11 @@
 | `--mod-picker-icon-color-hover-open`                 |
 | `--mod-picker-icon-color-key-focus`                  |
 | `--mod-picker-inline-size`                           |
+| `--mod-picker-inline-size-quiet`                     |
 | `--mod-picker-line-height`                           |
+| `--mod-picker-line-height-cjk`                       |
+| `--mod-picker-min-inline-size`                       |
+| `--mod-picker-min-inline-size-quiet`                 |
 | `--mod-picker-placeholder-font-style`                |
 | `--mod-picker-placeholder-font-weight`               |
 | `--mod-picker-spacing-bottom-to-text`                |
@@ -59,7 +63,7 @@
 | `--mod-picker-spacing-label-to-picker`               |
 | `--mod-picker-spacing-label-to-picker-quiet`         |
 | `--mod-picker-spacing-picker-to-popover`             |
-| `--mod-picker-spacing-text-to-icon`                  |
+| `--mod-picker-spacing-starting-icon-to-text`         |
 | `--mod-picker-spacing-text-to-icon-inline-end`       |
 | `--mod-picker-spacing-top-to-alert-icon`             |
 | `--mod-picker-spacing-top-to-disclosure-icon`        |
