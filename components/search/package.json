@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/search",
-	"version": "7.0.0",
+	"version": "7.1.0",
 	"description": "The Spectrum CSS search component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,10 +22,10 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/clearbutton": ">=5",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/textfield": ">=6",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/clearbutton": ">=6",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/textfield": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"keywords": [
 		"spectrum",

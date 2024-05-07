@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/datepicker",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "The Spectrum CSS datepicker component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,11 +22,11 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/calendar": ">=4",
-		"@spectrum-css/pickerbutton": ">=4",
-		"@spectrum-css/popover": ">=6",
-		"@spectrum-css/textfield": ">=6",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/calendar": ">=5",
+		"@spectrum-css/pickerbutton": ">=5",
+		"@spectrum-css/popover": ">=7",
+		"@spectrum-css/textfield": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"keywords": [
 		"spectrum",

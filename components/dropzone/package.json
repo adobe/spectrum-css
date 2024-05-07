@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/dropzone",
-	"version": "6.0.0",
+	"version": "6.1.0",
 	"description": "The Spectrum CSS dropzone component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,10 +22,10 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/actionbutton": ">=5",
-		"@spectrum-css/illustratedmessage": ">=6",
-		"@spectrum-css/link": ">=4",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/actionbutton": ">=6",
+		"@spectrum-css/illustratedmessage": ">=7",
+		"@spectrum-css/link": ">=5",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/actionbutton": {

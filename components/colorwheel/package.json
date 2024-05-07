@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/colorwheel",
-	"version": "4.0.0",
+	"version": "4.1.0",
 	"description": "The Spectrum CSS Color Area component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,10 +22,10 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/colorarea": ">=4",
-		"@spectrum-css/colorhandle": ">=7",
-		"@spectrum-css/colorloupe": ">=4",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/colorarea": ">=5",
+		"@spectrum-css/colorhandle": ">=8",
+		"@spectrum-css/colorloupe": ">=5",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/colorarea": {

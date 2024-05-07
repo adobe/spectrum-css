@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/assetlist",
-	"version": "6.0.0",
+	"version": "6.1.0",
 	"description": "The Spectrum CSS assetlist component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,9 +22,9 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/checkbox": ">=8",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/checkbox": ">=9",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/checkbox": {

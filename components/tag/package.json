@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tag",
-	"version": "9.0.0",
+	"version": "9.1.0",
 	"description": "The Spectrum CSS tags component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,10 +22,10 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/avatar": ">=6",
-		"@spectrum-css/clearbutton": ">=5",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/avatar": ">=7",
+		"@spectrum-css/clearbutton": ">=6",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/avatar": {

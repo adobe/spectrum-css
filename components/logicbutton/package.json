@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/logicbutton",
-	"version": "4.0.0",
+	"version": "4.1.0",
 	"description": "The Spectrum CSS logicbutton component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,7 +22,7 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/tokens": ">=14"
 	},
 	"devDependencies": {
 		"@spectrum-css/commons": "^10.0.0"

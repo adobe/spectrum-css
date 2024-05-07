@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/inlinealert",
-	"version": "8.0.0",
+	"version": "8.1.0",
 	"description": "The Spectrum CSS in-line alert component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,9 +22,9 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/button": ">=11",
-		"@spectrum-css/icon": ">=4",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/button": ">=13",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/button": {

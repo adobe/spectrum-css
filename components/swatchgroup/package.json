@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/swatchgroup",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "The Spectrum CSS Color swatch group component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,8 +22,8 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/swatch": ">=5",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/swatch": ">=6",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"keywords": [
 		"spectrum",

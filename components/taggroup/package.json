@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/taggroup",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"description": "The Spectrum CSS tag group component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -22,8 +22,8 @@
 		"metadata/mods.md"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tag": ">=8",
-		"@spectrum-css/tokens": ">=13"
+		"@spectrum-css/tag": ">=9",
+		"@spectrum-css/tokens": ">=14"
 	},
 	"keywords": [
 		"spectrum",
