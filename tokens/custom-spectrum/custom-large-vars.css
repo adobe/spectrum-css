@@ -115,7 +115,8 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-header-content-font-size: var(--spectrum-heading-size-xxs);
   --spectrum-assetcard-content-font-size: var(--spectrum-body-size-xs);
 
-  --spectrum-tooltip-animation-distance: 5px;
+  /* To get a square that measures 12px on the diagonal, the sides have to be 10px */
+	--spectrum-tooltip-tip-square-size: 10px;
 
   --spectrum-ui-icon-medium-display: none;
   --spectrum-ui-icon-large-display: block;
