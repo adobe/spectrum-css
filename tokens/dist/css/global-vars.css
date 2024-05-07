@@ -3,7 +3,10 @@
   --spectrum-static-white-focus-indicator-color:var(--spectrum-white);
   --spectrum-static-black-focus-indicator-color:var(--spectrum-black);
   --spectrum-overlay-color:var(--spectrum-black);
+  --spectrum-drop-shadow-color:var(--spectrum-drop-shadow-color-100);
   --spectrum-opacity-disabled:0.3;
+  --spectrum-background-base-color:var(--spectrum-gray-25);
+  --spectrum-background-layer-1-color:var(--spectrum-gray-50);
   --spectrum-neutral-background-color-default:var(--spectrum-gray-800);
   --spectrum-neutral-background-color-hover:var(--spectrum-gray-900);
   --spectrum-neutral-background-color-down:var(--spectrum-gray-900);
@@ -51,6 +54,10 @@
   --spectrum-negative-border-color-focus-hover:var(--spectrum-negative-border-color-down);
   --spectrum-negative-border-color-focus:var(--spectrum-negative-color-1000);
   --spectrum-negative-border-color-key-focus:var(--spectrum-negative-color-1000);
+  --spectrum-title-color:var(--spectrum-gray-900);
+  --spectrum-drop-shadow-emphasized-default-color:var(--spectrum-drop-shadow-color-100);
+  --spectrum-drop-shadow-emphasized-hover-color:var(--spectrum-drop-shadow-color-200);
+  --spectrum-drop-shadow-elevated-color:var(--spectrum-drop-shadow-color-200);
   --spectrum-swatch-border-color:var(--spectrum-gray-900);
   --spectrum-swatch-border-opacity:0.51;
   --spectrum-swatch-disabled-icon-border-color:var(--spectrum-black);
@@ -65,8 +72,6 @@
   --spectrum-color-slider-border-color:var(--spectrum-gray-900);
   --spectrum-color-slider-border-opacity:0.1;
   --spectrum-color-loupe-drop-shadow-color:var(--spectrum-transparent-black-300);
-  --spectrum-color-loupe-drop-shadow-y:2px;
-  --spectrum-color-loupe-drop-shadow-blur:8px;
   --spectrum-color-loupe-inner-border:var(--spectrum-transparent-black-200);
   --spectrum-color-loupe-outer-border:var(--spectrum-white);
   --spectrum-card-selection-background-color:var(--spectrum-gray-100);
@@ -173,9 +178,14 @@
   --spectrum-transparent-black-1000:rgba(var(--spectrum-transparent-black-1000-rgb));
   --spectrum-icon-color-inverse:var(--spectrum-gray-50);
   --spectrum-icon-color-primary-default:var(--spectrum-neutral-content-color-default);
+  --spectrum-asterisk-icon-size-75:8px;
   --spectrum-radio-button-selection-indicator:4px;
+  --spectrum-field-label-top-margin-small:0px;
   --spectrum-field-label-to-component:0px;
   --spectrum-help-text-to-component:0px;
+  --spectrum-status-light-dot-size-small:8px;
+  --spectrum-action-button-edge-to-hold-icon-extra-small:3px;
+  --spectrum-action-button-edge-to-hold-icon-small:3px;
   --spectrum-button-minimum-width-multiplier:2.25;
   --spectrum-divider-thickness-small:1px;
   --spectrum-divider-thickness-medium:2px;
@@ -231,6 +241,8 @@
   --spectrum-color-loupe-bottom-to-color-handle:12px;
   --spectrum-color-loupe-outer-border-width:var(--spectrum-border-width-200);
   --spectrum-color-loupe-inner-border-width:1px;
+  --spectrum-color-loupe-drop-shadow-y:2px;
+  --spectrum-color-loupe-drop-shadow-blur:8px;
   --spectrum-card-minimum-width:100px;
   --spectrum-card-preview-minimum-height:130px;
   --spectrum-card-selection-background-size:40px;
@@ -241,6 +253,12 @@
   --spectrum-drop-zone-title-size:var(--spectrum-illustrated-message-title-size);
   --spectrum-drop-zone-cjk-title-size:var(--spectrum-illustrated-message-cjk-title-size);
   --spectrum-drop-zone-body-size:var(--spectrum-illustrated-message-body-size);
+  --spectrum-accordion-top-to-text-compact-small:2px;
+  --spectrum-accordion-top-to-text-compact-medium:4px;
+  --spectrum-accordion-disclosure-indicator-to-text:0px;
+  --spectrum-accordion-edge-to-disclosure-indicator:0px;
+  --spectrum-accordion-edge-to-text:0px;
+  --spectrum-accordion-focus-indicator-gap:0px;
   --spectrum-color-handle-border-width:var(--spectrum-border-width-200);
   --spectrum-color-handle-inner-border-width:1px;
   --spectrum-color-handle-outer-border-width:1px;
@@ -259,6 +277,7 @@
   --spectrum-table-row-bottom-to-text-medium-compact:var(--spectrum-component-bottom-to-text-100);
   --spectrum-table-row-bottom-to-text-large-compact:var(--spectrum-component-bottom-to-text-200);
   --spectrum-table-row-bottom-to-text-extra-large-compact:var(--spectrum-component-bottom-to-text-300);
+  --spectrum-table-edge-to-content:16px;
   --spectrum-table-border-divider-width:1px;
   --spectrum-tab-item-height-small:var(--spectrum-component-height-200);
   --spectrum-tab-item-height-medium:var(--spectrum-component-height-300);
@@ -288,6 +307,8 @@
   --spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-medium:var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-medium);
   --spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-large:var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-large);
   --spectrum-in-field-button-inner-edge-to-disclosure-icon-stacked-extra-large:var(--spectrum-in-field-button-outer-edge-to-disclosure-icon-stacked-extra-large);
+  --spectrum-corner-radius-75:2px;
+  --spectrum-drop-shadow-x:0px;
   --spectrum-android-elevation:2dp;
   --spectrum-spacing-50:2px;
   --spectrum-spacing-75:4px;
@@ -313,9 +334,6 @@
   --spectrum-field-edge-to-validation-icon-quiet:0px;
   --spectrum-text-underline-thickness:1px;
   --spectrum-text-underline-gap:1px;
-  --spectrum-component-size-width-ratio-down:0.3333;
-  --spectrum-component-size-minimum-perspective-down:24px;
-  --spectrum-component-size-difference-down:-2px;
   --spectrum-accent-color-100:var(--spectrum-blue-100);
   --spectrum-accent-color-200:var(--spectrum-blue-200);
   --spectrum-accent-color-300:var(--spectrum-blue-300);
@@ -396,6 +414,10 @@
   --spectrum-positive-color-1400:var(--spectrum-green-1400);
   --spectrum-positive-color-1500:var(--spectrum-green-1500);
   --spectrum-positive-color-1600:var(--spectrum-green-1600);
+  --spectrum-negative-subdued-background-color-default:var(--spectrum-negative-color-200);
+  --spectrum-negative-subdued-background-color-hover:var(--spectrum-negative-color-300);
+  --spectrum-negative-subdued-background-color-down:var(--spectrum-negative-color-300);
+  --spectrum-negative-subdued-background-color-key-focus:var(--spectrum-negative-color-300);
   --spectrum-default-font-family:var(--spectrum-sans-serif-font-family);
   --spectrum-sans-serif-font-family:Adobe Clean;
   --spectrum-serif-font-family:Adobe Clean Serif;
