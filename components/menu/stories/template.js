@@ -12,60 +12,36 @@ import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
 
 import "../index.css";
 
-export const MenuItem = ({
-	rootClass,
-	label,
-	description,
-	iconName,
-	isHighlighted = false,
-	isActive = false,
-	isSelected = false,
-	isDisabled = false,
-	isChecked = false,
-	isFocused = false,
-	isDrillIn = false,
-	isCollapsible = false,
-	isOpen = false,
-	shouldTruncate,
-	role = "menuitem",
-	items = [],
-	size,
-	id,
-	idx = 0,
+const Label = ({
 	hasActions,
-	selectionMode,
-	value,
+	isCollapsible,
+	label,
+	rootClass,
+	shouldTruncate,
+}) => {
+	if (isCollapsible) {
+		return html`<span class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>`;
+	}
+	else {
+		return html`<span class=${classMap({
+      [`${rootClass}Label`]: true,
+      ["spectrum-Switch-label"]: hasActions,
+      ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+      })}>
+      ${label}
+    </span>`;
+	}
+};
+
+const Visual = ({
+	iconName,
+	rootClass,
+	size,
 	...globals
-}) => html`
-  <li
-    class=${classMap({
-      [`${rootClass}`]: true,
-      "is-highlighted": isHighlighted,
-      "is-active": isActive,
-      "is-focused": isFocused,
-      "is-selected": isSelected,
-      "is-disabled": isDisabled,
-      [`${rootClass}--drillIn`]: isDrillIn,
-      [`${rootClass}--collapsible`]: isCollapsible,
-      "is-open": isOpen,
-    })}
-    id=${ifDefined(id)}
-    role=${ifDefined(role)}
-    aria-selected=${isSelected ? "true" : "false"}
-    aria-disabled=${isDisabled ? "true" : "false"}
-    tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
-    ${isCollapsible
-      ? Icon({
-          ...globals,
-          iconName: "ChevronRight100",
-          size,
-          customClasses: [
-            `${rootClass}Icon`,
-            "spectrum-Menu-chevron",
-          ],
-        }) : ""}
-    ${iconName
-      ? Icon({
+}) => {
+	if (iconName) {
+		return html`
+    ${Icon({
           ...globals,
           iconName,
           size,
@@ -73,35 +49,50 @@ export const MenuItem = ({
             `${rootClass}Icon`,
             `${rootClass}Icon--workflowIcon`
           ]
-        }) : ""}
-    ${isCollapsible
-      ? html`<span class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>`
-      : ""
-    }
-    ${selectionMode != "multiple" && !isCollapsible
-      ? html`<span class=${classMap({
-        [`${rootClass}Label`]: true,
-        ["spectrum-Switch-label"]: hasActions,
-        ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
-        })}>
-        ${label}
-      </span>`
-      : ""}
-    ${typeof description != "undefined"
-      ? html`<span class="${rootClass}Description">${description}</span>`
-      : ""}
-    ${isDrillIn
-      ? Icon({
-          ...globals,
-          iconName: "ChevronRight100",
-          size,
-          customClasses: [
-            `${rootClass}Icon`,
-            "spectrum-Menu-chevron",
-          ],
-        })
-      : ""}
-    ${when(selectionMode == "multiple", () =>  html`
+        })}
+    `;
+	}
+	return;
+};
+
+const StartAction = ({
+	hasActions,
+	idx,
+	isCollapsible,
+	isDisabled,
+	isSelected,
+	rootClass,
+	selectionMode,
+	size,
+	...globals
+}) => {
+	if (isCollapsible) {
+		return html`
+      ${Icon({
+        ...globals,
+        iconName: "ChevronRight100",
+        size,
+        customClasses: [
+          `${rootClass}Icon`,
+          "spectrum-Menu-chevron",
+        ],
+      })}
+    `;
+	}
+	else if (selectionMode == "single" && isSelected) {
+		return html`
+    ${Icon({
+      ...globals,
+      iconName: "Checkmark100",
+      size,
+      customClasses: [
+        `${rootClass}Icon`,
+        "spectrum-Menu-checkmark",
+      ],
+    })}`;
+	}
+	else if (selectionMode == "multiple" && !hasActions) {
+		return html`
       ${Checkbox({
         ...globals,
         size,
@@ -112,39 +103,106 @@ export const MenuItem = ({
         customClasses: [
           `${rootClass}Checkbox`,
         ],
-      })}
-        <span  class="spectrum-Menu-itemLabel ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>
-        `)}
-      ${isChecked && selectionMode == "single"
-      ? Icon({
-          ...globals,
-          iconName: "Checkmark100",
-          size,
-          customClasses: [
-            `${rootClass}Icon`,
-            "spectrum-Menu-checkmark",
-          ],
-        })
-      : ""}
-      ${value
-        ? html`<span class="${rootClass}Value">${value}</span>`
-        : ""}
-      ${hasActions
-        ? html`<div class="${rootClass}Actions">
-        ${Switch({
-            ...globals,
-            size,
-            isChecked: isSelected,
-            isDisabled,
-            label: null,
-            id: `menu-switch-${idx}`,
-            customClasses: [
-              `${rootClass}Switch`,
-            ],
-          })}
-          </div>`
-        : ""}
-    ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size, shouldTruncate }) : ""}
+      })}`;
+	}
+	return null;
+};
+
+const EndAction = ({
+	hasActions,
+	idx,
+	isDisabled,
+	isDrillIn,
+	isSelected,
+	rootClass,
+	selectionMode,
+	size,
+	value,
+	...globals
+}) => html`
+${value ? html`<span class="${rootClass}Value">${value}</span>` : ""}
+${hasActions && selectionMode == "multiple"
+  ? html`<div class="${rootClass}Actions">
+  ${Switch({
+      ...globals,
+      size,
+      isChecked: isSelected,
+      isDisabled,
+      label: null,
+      id: `menu-switch-${idx}`,
+      customClasses: [
+        `${rootClass}Switch`,
+      ],
+    })}
+    </div>`
+  : ""}
+  ${
+    isDrillIn ? html`${Icon({
+      ...globals,
+      iconName: "ChevronRight100",
+      size,
+      customClasses: [
+        `${rootClass}Icon`,
+        "spectrum-Menu-chevron",
+      ],
+    })}` : ""
+  }
+`;
+
+const Description = ({
+	description,
+	rootClass
+}) => html`<span class="${rootClass}Description">${description}</span>`;
+
+export const MenuItem = ({
+	description,
+	iconName,
+	hasActions,
+	id,
+	idx = 0,
+	isActive = false,
+	isCollapsible = false,
+	isDisabled = false,
+	isDrillIn = false,
+	isFocused = false,
+	isHighlighted = false,
+	isHovered = false,
+	isOpen = false,
+	isSelected = false,
+	items = [],
+	label,
+	role = "menuitem",
+	rootClass,
+	shouldTruncate,
+	size,
+	selectionMode,
+	value,
+	...globals
+}) => html`
+  <li
+    class=${classMap({
+      [`${rootClass}`]: true,
+      "is-highlighted": isHighlighted,
+      "is-active": isActive,
+      "is-focus-visible": isFocused,
+      "is-selected": isSelected,
+      "is-disabled": isDisabled,
+      "is-hover": isHovered,
+      [`${rootClass}--drillIn`]: isDrillIn,
+      [`${rootClass}--collapsible`]: isCollapsible,
+      "is-open": isOpen,
+    })}
+    id=${ifDefined(id)}
+    role=${ifDefined(role)}
+    aria-selected=${isSelected ? "true" : "false"}
+    aria-disabled=${isDisabled ? "true" : "false"}
+    tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
+      ${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, rootClass, selectionMode, size, ...globals })}
+      ${Visual({ iconName, rootClass, size, ...globals })}
+      ${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
+      ${when(description, () => Description({ description, rootClass }))}
+      ${EndAction({ hasActions, idx, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, ...globals })}
+      ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size, shouldTruncate }) : ""}
   </li>
 `;
 
@@ -225,22 +283,30 @@ export const MenuGroup = ({
 
 
 export const Template = ({
-	rootClass = "spectrum-Menu",
-	labelledby,
 	customClasses = [],
 	customStyles = {},
-	size,
-	isDisabled = false,
-	maxInlineSize,
-	shouldTruncate,
-	selectionMode = "none",
-	isOpen = false,
-	hasActions = false,
-	isTraySubmenu = false,
-	items = [],
-	role = "menu",
-	subrole = "menuitem",
+	hasActions,
+	hasDividers = false,
 	id,
+	isDisabled = false,
+	isItemActive = false,
+	isItemFocused = false,
+	isItemHovered = false,
+	isItemSelected = false,
+	isOpen = false,
+	isTraySubmenu = false,
+	itemIcon,
+	items = [],
+	labelledby,
+	maxInlineSize,
+	role = "menu",
+	rootClass = "spectrum-Menu",
+	selectionMode = "none",
+	singleItemDescription,
+	singleItemValue,
+	shouldTruncate,
+	size,
+	subrole = "menuitem",
 	...globals
 }) => {
 	const menuMarkup = html`
@@ -261,12 +327,12 @@ export const Template = ({
     >
       ${items.map((i, idx) => {
         if (i.type === "divider")
-          return Divider({
+          return html`${hasDividers ? Divider({
             ...globals,
             tag: "li",
             size: "s",
             customClasses: [`${rootClass}-divider`],
-          });
+          }) : ""}`;
         else if (i.heading || i.isTraySubmenu)
           return MenuGroup({
             ...i,
@@ -281,13 +347,21 @@ export const Template = ({
           return MenuItem({
             ...globals,
             ...i,
+            description: singleItemDescription || i.description,
+            hasActions,
+            iconName: itemIcon || i.iconName,
             idx,
-            rootClass: `${rootClass}-item`,
+            isActive: isItemActive,
+            isDisabled: isDisabled || i.isDisabled,
+            isFocused: isItemFocused || i.isFocused,
+            isHovered: isItemHovered,
+            isSelected: isItemSelected || i.isSelected,
             role: subrole,
-            size,
+            rootClass: `${rootClass}-item`,
             selectionMode,
             shouldTruncate,
-            hasActions,
+            size,
+            value: singleItemValue || i.value,
           });
       })}
     </ul>
