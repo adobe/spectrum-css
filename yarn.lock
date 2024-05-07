@@ -5557,7 +5557,7 @@ __metadata:
     postcss: "npm:^8.4.38"
     postcss-cli: "npm:^11.0.0"
     postcss-combine-duplicated-selectors: "npm:^10.0.3"
-    postcss-discard-comments: "npm:^6.0.2"
+    postcss-discard-comments: "npm:^7.0.0"
     postcss-discard-empty: "npm:^6.0.3"
     postcss-licensing: "npm:^1.0.1"
     postcss-merge-rules: "npm:^6.1.1"
@@ -17783,15 +17783,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4
   checksum: 10c0/8c096e096b09e4041818bd2edf5581b5172375621f5eeca013633166ea100ab98e71bf60fccd92fa20cfa7b55c57598605a1655c6bcbe54a80728a7d4e36859e
-  languageName: node
-  linkType: hard
-
-"postcss-discard-comments@npm:^6.0.2":
-  version: 6.0.2
-  resolution: "postcss-discard-comments@npm:6.0.2"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/338a1fcba7e2314d956e5e5b9bd1e12e6541991bf85ac72aed6e229a029bf60edb31f11576b677623576169aa7d9c75e1be259ac7b50d0b735b841b5518f9da9
   languageName: node
   linkType: hard
 
