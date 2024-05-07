@@ -70,20 +70,6 @@ governing permissions and limitations under the License.
 	--spectrum-tooltip-background-color-default: var(--spectrum-tooltip-backgound-color-default-neutral);
 }
 
-@media (forced-colors: active) {
-	.spectrum-Tooltip {
-		border: 1px solid transparent;
-	}
-
-	.spectrum-Tooltip-tip {
-		forced-color-adjust: none;
-		--highcontrast-tooltip-background-color-default: CanvasText;
-		--highcontrast-tooltip-background-color-informative: CanvasText;
-		--highcontrast-tooltip-background-color-positive: CanvasText;
-		--highcontrast-tooltip-background-color-negative: CanvasText;
-	}
-}
-
 .spectrum-Tooltip {
 	@extend %spectrum-overlay;
 
@@ -645,5 +631,19 @@ governing permissions and limitations under the License.
 				transform: translate(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1), -50%);
 			}
 		}
+	}
+}
+
+@media (forced-colors: active) {
+	.spectrum-Tooltip {
+		border: 1px solid transparent;
+	}
+
+	.spectrum-Tooltip-tip {
+		forced-color-adjust: none;
+		--highcontrast-tooltip-background-color-default: CanvasText;
+		--highcontrast-tooltip-background-color-informative: CanvasText;
+		--highcontrast-tooltip-background-color-positive: CanvasText;
+		--highcontrast-tooltip-background-color-negative: CanvasText;
 	}
 }
