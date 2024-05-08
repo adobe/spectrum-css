@@ -118,7 +118,6 @@ module.exports = ({
 					// https://github.com/jsxtools/focus-within
 					"focus-within-pseudo-class": true,
 					"font-format-keywords": true,
-					"not-pseudo-class": true,
 					"opacity-percentage": true,
 					// https://github.com/csstools/postcss-plugins/tree/main/plugins/css-prefers-color-scheme
 					"prefers-color-scheme-query": true,
