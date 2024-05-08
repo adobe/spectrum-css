@@ -6,6 +6,14 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/tooltip/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
+      ### Version 6.1.1
+      This patch includes tooltip placement adjustments for RTL bugs and increased coverage with Chromatic VRTs. Some clarification on placements:
+
+      - If you use a Start or End placement, the tooltip *will* change to the other side of the source when the text direction (LTR/RTL) is changed
+      - If you use a Left or Right placement, the tooltip *will not* change sides when text direction is changed
+
+      As a result of the placement specifications, some placements intentionally use non-logical properties in the CSS (particularly for tooltips that show on hover).
+
       ### Tooltip now has 22 directions
       - 10 of the new directions are logical and should be tested both left-to-right and right-to-left
 examples:

@@ -154,7 +154,7 @@ governing permissions and limitations under the License.
 	inline-size: var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size));
 
 	inset-block-start: 100%;
-	/* stylelint-disable-next-line csstools/use-logical */
+	/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 	left: 50%;
 	transform: translateX(-50%);
 
@@ -392,7 +392,8 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--right,
 .spectrum-Tooltip--right-bottom,
 .spectrum-Tooltip--right-top {
-	margin-inline-start: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
+	/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
+	margin-left: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
 	/* Tooltip animates to right ⮕ */
 	&.is-open {
@@ -404,7 +405,8 @@ governing permissions and limitations under the License.
 .spectrum-Tooltip--left,
 .spectrum-Tooltip--left-bottom,
 .spectrum-Tooltip--left-top {
-	margin-inline-end: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
+	/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
+	margin-right: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
 	/* Tooltip animates to left ⬅ */
 	&.is-open {
@@ -486,7 +488,8 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--bottom-right,
 	.spectrum-Tooltip--bottom-start,
 	.spectrum-Tooltip--bottom-end {
-		inset-inline-start: 50%;
+		/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
+		left: 50%;
 		transform: translate(-50%, 0);
 	}
 
@@ -528,7 +531,8 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--start,
 	.spectrum-Tooltip--start-top,
 	.spectrum-Tooltip--start-bottom {
-		inset-inline-end: 100%;
+		/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
+		right: 100%;
 	}
 
 	/* RTL */
@@ -547,7 +551,8 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--end,
 	.spectrum-Tooltip--end-top,
 	.spectrum-Tooltip--end-bottom {
-		inset-inline: 100% auto;
+		/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
+		left: 100%;
 	}
 
 	/* RTL */
@@ -600,7 +605,6 @@ governing permissions and limitations under the License.
 		}
 	}
 
-	/* stylelint-disable max-nesting-depth */
 	/* RTL */
 	&:dir(rtl) {
 		&:hover,
