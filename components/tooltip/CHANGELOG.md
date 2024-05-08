@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.1
+
+### Patch Changes
+
+- [#2736](https://github.com/adobe/spectrum-css/pull/2736) [`68117da`](https://github.com/adobe/spectrum-css/commit/68117da0fc1fabaf1576a082741efe0be9449f61) Thanks [@mdt2](https://github.com/mdt2)! - fix(tooltip): Left and right placements look correct for RTL
+
 ## 6.1.0
 
 ### Minor Changes
