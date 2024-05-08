@@ -19,12 +19,14 @@
 
 	&,
 	&.spectrum-Meter--sizeS {
+		--mod-progressbar-size-default: var(--spectrum-progressbar-size-2400);
 		--mod-progressbar-thickness: var(--spectrum-meter-thickness-small);
 		--mod-progressbar-font-size: var(--spectrum-font-size-75);
 		--mod-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 	}
 
 	&.spectrum-Meter--sizeL {
+		--mod-progressbar-size-default: var(--spectrum-progressbar-size-2500);
 		--mod-progressbar-thickness: var(--spectrum-meter-thickness-large);
 		--mod-progressbar-font-size: var(--spectrum-font-size-100);
 		--mod-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
