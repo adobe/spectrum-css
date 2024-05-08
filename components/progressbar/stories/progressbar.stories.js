@@ -21,12 +21,12 @@ export default {
 		customWidth: {
 			name: "Custom width",
 			defaultValue: 192,
-			description: "Adjust the width of the component between 48px and 768px. 192px is the default width on desktop, while 240px is the default on mobile.",
+			description: "A number to adjust the width of the component. Spectrum 2 specifications limit the component width to be between 48px and 768px.",
 			type: { name: "number" },
 			table: {
 				type: { summary: "number" },
 				category: "Component",
-				defaultValue: { summary: 192 },
+				defaultValue: { summary: 200 },
 			},
 			control: { type: "range", min: 48, max: 768,},
 		},
@@ -87,7 +87,7 @@ export default {
 		label: "Loading",
 		labelPosition: "top",
 		value: 0,
-		customWidth: 192,
+		customWidth: 200,
 		isIndeterminate: false,
 		showValueLabel: true,
 	},
