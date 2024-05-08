@@ -1,5 +1,13 @@
 # Change Log
 
+## 5.0.0-next.0
+
+### Major Changes
+
+- [#2659](https://github.com/adobe/spectrum-css/pull/2659) [`bd38eaa`](https://github.com/adobe/spectrum-css/commit/bd38eaa8c8597c066f1fe61d70130a7f310bcca4) Thanks [@mdt2](https://github.com/mdt2)! - feat(progressbar): S2 migration
+
+  Progress bar now uses Spectrum 2 tokens and specifications. This migration includes updated colors, font sizes, and spacing. No mods were harmed in the migration of this component (all `--mod` properties remain the same).
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
