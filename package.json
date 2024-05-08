@@ -15,7 +15,7 @@
 	"scripts": {
 		"build": "yarn builder tag:component",
 		"build:preview": "nx build storybook",
-		"build:site": "nx build docs",
+		"build:site": "nx clean docs && nx build docs && nx run storybook:build:docs",
 		"builder": "nx run-many --target build --projects",
 		"changeset": "changeset",
 		"ci": "cross-env NODE_ENV=production yarn builder tag:component,ui-icons --skip-nx-cache",
