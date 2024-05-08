@@ -154,7 +154,8 @@ governing permissions and limitations under the License.
 	inline-size: var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size));
 
 	inset-block-start: 100%;
-	inset-inline-start: 50%;
+	/* stylelint-disable-next-line csstools/use-logical */
+	left: 50%;
 	transform: translateX(-50%);
 
 	background-color: var(--highcontrast-tooltip-background-color-default, var(--mod-tooltip-background-color-default, var(--spectrum-tooltip-background-color-default)));
