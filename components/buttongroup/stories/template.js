@@ -11,7 +11,7 @@ export const Template = ({
 	size = "m",
 	items = [],
 	vertical = false,
-	...globals
+	onclick,
 }) => html`
 	<div
 		class=${classMap({
@@ -24,10 +24,10 @@ export const Template = ({
 	>
 		${items.map((item) =>
 			Button({
-				...globals,
 				...item,
 				size,
 				customClasses: [`${rootClass}-item`],
+				onclick: onclick ?? item.onclick,
 			})
 		)}
 	</div>

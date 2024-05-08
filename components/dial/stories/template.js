@@ -10,6 +10,7 @@ export const Template = ({
 	size = "m",
 	label,
 	isFocused = false,
+	isKeyboardFocused = false,
 	isDragged = false,
 	isDisabled = false,
 	min = 0,
@@ -17,24 +18,26 @@ export const Template = ({
 	customClasses = [],
 	id,
 }) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--small`]: size === "s",
-			"is-disabled": isDisabled,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-		@mousedown=${() => {
-			if (isDisabled) return;
-			document.body.classList.add("u-isGrabbing");
-		}}
-		@mouseup=${() => {
-			document.body.classList.remove("u-isGrabbing");
-		}}
-		@mousemove=${(e) => {
-			if (isDisabled) return;
-			if (!document.body.classList.contains("u-isGrabbing")) return;
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--small`]: size === "s",
+				["is-disabled"]: isDisabled,
+				["is-keyboardFocused"]: isKeyboardFocused,
+				["u-isGrabbing"]: !isDisabled && isDragged,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			@mousedown=${() => {
+				if (isDisabled) return;
+				document.body.classList.add("u-isGrabbing");
+			}}
+			@mouseup=${() => {
+				document.body.classList.remove("u-isGrabbing");
+			}}
+			@mousemove=${(e) => {
+				if (isDisabled) return;
+				if (!document.body.classList.contains("u-isGrabbing")) return;
 
 			const dial = e.target.closest(".spectrum-Dial");
 			const handle = dial.querySelector(".spectrum-Dial-handle");

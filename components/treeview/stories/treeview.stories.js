@@ -24,26 +24,74 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
-		},
-		customStyles: {
-			name: "Custom styles",
-			description: "Storybook only styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Advanced",
-			},
-			if: { arg: "customStyles" }
 		}
 	},
 	args: {
 		rootClass: "spectrum-TreeView",
 		size: "m",
 		isQuiet: false,
+		items: [
+			{
+				id: "label1",
+				label: "Label 1",
+				link: "#",
+				isSelected: true,
+			},
+			{
+				id: "group1",
+				label: "Group 1",
+				link: "#",
+				isOpen: true,
+				items: [
+					{
+						id: "label2",
+						label: "Label 2",
+						link: "#",
+						isDisabled: true,
+					},
+					{
+						id: "label3",
+						label: "Label 3",
+						link: "#",
+					},
+				],
+			},
+			{
+				id: "group2",
+				label: "Group 2",
+				link: "#",
+				items: [
+					{
+						id: "label3",
+						label: "Label 3",
+						link: "#",
+					},
+					{
+						id: "group3",
+						label: "Group 3",
+						link: "#",
+						items: [
+							{
+								id: "label4",
+								label: "Label 4",
+								link: "#",
+							},
+							{
+								id: "group4",
+								label: "Group 4 (Empty)",
+								link: "#",
+								items: [],
+							},
+						],
+					},
+				],
+			},
+		],
 		customStyles: {
-			maxInlineSize: "600px",
+			"max-inline-size": "600px",
 		},
 	},
 	parameters: {
@@ -53,68 +101,20 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		variants: {
+			isQuiet: false,
+		},
+		sizing: false,
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	items: [
-		{
-			id: "label1",
-			label: "Label 1",
-			link: "#",
-			isSelected: true,
-		},
-		{
-			id: "group1",
-			label: "Group 1",
-			link: "#",
-			isOpen: true,
-			items: [
-				{
-					id: "label2",
-					label: "Label 2",
-					link: "#",
-					isDisabled: true,
-				},
-				{
-					id: "label3",
-					label: "Label 3",
-					link: "#",
-				},
-			],
-		},
-		{
-			id: "group2",
-			label: "Group 2",
-			link: "#",
-			items: [
-				{
-					id: "label3",
-					label: "Label 3",
-					link: "#",
-				},
-				{
-					id: "group3",
-					label: "Group 3",
-					link: "#",
-					items: [
-						{
-							id: "label4",
-							label: "Label 4",
-							link: "#",
-						},
-						{
-							id: "group4",
-							label: "Group 4 (Empty)",
-							link: "#",
-							items: [],
-						},
-					],
-				},
-			],
-		},
-	],
+Default.args = {};
+Default.parameters = {
+	variants: {
+		isQuiet: true,
+	},
+	sizing: true,
 };
 
 export const FoldersAndFiles = Template.bind({});
@@ -184,6 +184,9 @@ FoldersAndFiles.args = {
 		},
 	],
 };
+FoldersAndFiles.parameters = {
+	sizing: true,
+};
 
 export const Thumbnails = Template.bind({});
 Thumbnails.args = {
@@ -221,6 +224,9 @@ Thumbnails.args = {
 			],
 		},
 	],
+};
+Thumbnails.parameters = {
+	sizing: true,
 };
 
 export const WithSections = Template.bind({});
@@ -262,6 +268,9 @@ WithSections.args = {
 			]
 		},
 	],
+};
+WithSections.parameters = {
+	sizing: true,
 };
 
 export const WithDropTarget = Template.bind({});

@@ -22,7 +22,6 @@ export const AssetListItem = ({
 	isSelected = false,
 	isBranch = false,
 	onclick = () => {},
-	...globals
 }) => html`
 	<li
 		class=${classMap({
@@ -37,7 +36,6 @@ export const AssetListItem = ({
 	>
 		${when(isSelectable, () =>
 		Checkbox({
-			...globals,
 			size: "m",
 			isChecked: isSelected,
 			ariaLabelledby,
@@ -53,13 +51,11 @@ export const AssetListItem = ({
 			Icon({
 				iconName,
 				customClasses: [`${rootClass}Thumbnail`],
-				...globals,
 			})
 		)}
 		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
 		${when(!isSelectable && !isBranch, () =>
 			Checkbox({
-				...globals,
 				size: "m",
 				isChecked: isSelected,
 				ariaLabelledby,
@@ -70,7 +66,6 @@ export const AssetListItem = ({
 			Icon({
 				iconName: "ChevronRight100",
 				customClasses: [`${rootClass}ChildIndicator`],
-				...globals,
 			})
 		)}
 	</li>
@@ -81,7 +76,6 @@ export const Template = ({
 	items = [],
 	customClasses = [],
 	id,
-	...globals
 }) => {
 	if (!items) return html``;
 
@@ -104,7 +98,6 @@ export const Template = ({
 						updateArgs({ items });
 					},
 					...item,
-					...globals,
 				});
 			})}
 		</ul>

@@ -17,7 +17,6 @@ export const Template = ({
 	isFixed = false,
 	isFlexible = false,
 	customClasses = [],
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -33,22 +32,18 @@ export const Template = ({
 		})}
 	>
 		${Popover({
-			...globals,
 			customClasses: [`${rootClass}-popover`],
 			isOpen,
 			content: [
 				CloseButton({
-					...globals,
 					label: "Clear selection",
 					staticColor: isEmphasized ? "white" : undefined,
 				}),
 				FieldLabel({
-					...globals,
 					size: "s",
 					label: "2 Selected",
 				}),
 				ActionGroup({
-					...globals,
 					size: "m",
 					areQuiet: true,
 					staticColor: isEmphasized ? "white" : undefined,

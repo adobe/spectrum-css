@@ -28,7 +28,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
@@ -37,7 +37,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
@@ -46,7 +46,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Advanced",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
@@ -60,6 +60,21 @@ export default {
 		vertical: false,
 		compact: false,
 		justified: false,
+		content: [
+			{
+				iconName: "Edit",
+				label: "Edit",
+			},
+			{
+				iconName: "Copy",
+				label: "Copy",
+			},
+			{
+				iconName: "Delete",
+				label: "Delete",
+				isSelected: true,
+			},
+		],
 	},
 	parameters: {
 		actions: {
@@ -71,55 +86,5 @@ export default {
 	},
 };
 
-const items = [
-	{
-		iconName: "Edit",
-		label: "Edit",
-	},
-	{
-		iconName: "Copy",
-		label: "Copy",
-	},
-	{
-		iconName: "Delete",
-		label: "Delete",
-		isSelected: true,
-	},
-];
-
 export const Default = Template.bind({});
-Default.args = {
-	content: items
-};
-
-
-export const Compact = Template.bind({});
-Compact.args = {
-	compact: true,
-	content: items
-};
-
-export const Vertical = Template.bind({});
-Vertical.args = {
-	vertical: true,
-	content: items
-};
-
-export const VerticalCompact = Template.bind({});
-VerticalCompact.args = {
-	vertical: true,
-	compact: true,
-	content: items
-};
-
-export const Justified = Template.bind({});
-Justified.args = {
-	justified: true,
-	content: items
-};
-
-export const Quiet = Template.bind({});
-Quiet.args = {
-	areQuiet: true,
-	content: items
-};
+Default.args = {};

@@ -1,4 +1,3 @@
-import { html } from "lit";
 
 import { Template } from "./form.template.js";
 
@@ -31,9 +30,6 @@ export default {
 			type: "migrated",
 		},
 	},
-	decorators: [
-		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
-	],
 };
 
 export const Standard = Template.bind({});

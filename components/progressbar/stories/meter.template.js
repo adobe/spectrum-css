@@ -1,6 +1,5 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -12,13 +11,11 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	items = [],
-	label = "Storage space",
+	label = "Storage Space",
 	value,
-	meterFill,
+	meterFill = "default",
 	size = "s",
-	...globals
 }) => html`${items.map((meter) => {
-	const { heading } = meter;
 	const meterSize = meter.size ?? size;
 	const meterLabel = meter.label ?? label;
 	const fill = meter.meterFill ?? meterFill;
@@ -27,7 +24,7 @@ export const Template = ({
 	${Typography({
 		semantics: "heading",
 		size: "xs",
-		content: [heading],
+		content: [meter.heading],
 	})}
 	<div
 		class=${classMap({
@@ -37,10 +34,7 @@ export const Template = ({
 			[`is-${fill}`]: fill !== "default",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
-		style=${styleMap({
-			"margin-block-end": "32px",
-			...customStyles,
-		})}
+		style="margin-block-end: 2rem;"
 		value="${value}%"
 		role="progressbar"
 		aria-valuenow="${value}%"
@@ -48,14 +42,12 @@ export const Template = ({
 		aria-valuemax="100"
 	>
 		${FieldLabel({
-			...globals,
 			size: meterSize,
 			label: meterLabel,
 			alignment: "",
 			customClasses: [`${rootClass}-label`],
 		})}
 		${FieldLabel({
-			...globals,
 			size: meterSize,
 			label: `${value}%`,
 			alignment: "",
@@ -64,5 +56,6 @@ export const Template = ({
 		<div class="${rootClass}-track">
 			<div class="${rootClass}-fill" style="width: ${value}%;"></div>
 		</div>
-	</div>`;
+	</div>
+	`;
 })}`;

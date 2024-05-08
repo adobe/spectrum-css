@@ -4,6 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
@@ -11,6 +12,7 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-FieldLabel",
 	customClasses = [],
+	customStyles = {},
 	size = "m",
 	label,
 	id,
@@ -18,11 +20,9 @@ export const Template = ({
 	alignment,
 	isDisabled,
 	isRequired,
-	customStyles = {},
-	...globals
 }) => {
 	if (!label) {
-		console.warn("FieldLabel: please provide a label for the field label.");
+		console.warn("FieldLabel: a label value is required.");
 		return html``;
 	}
 
@@ -55,8 +55,8 @@ export const Template = ({
 			id=${ifDefined(id)}
 			for=${ifDefined(forInput)}
 		>
-			${label}${when(isRequired, () => Icon({
-				...globals,
+			${label}
+			${when(isRequired, () => Icon({
 				size,
 				iconName,
 				customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`],

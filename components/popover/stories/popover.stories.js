@@ -1,5 +1,4 @@
 import { userEvent, within } from "@storybook/testing-library";
-import { html } from "lit";
 
 import { Template } from "./template";
 
@@ -112,9 +111,6 @@ export default {
 			}
 		},
 	},
-	decorators: [
-		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
-	],
 };
 
 export const Default = Template.bind({});

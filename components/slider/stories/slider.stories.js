@@ -7,7 +7,6 @@ export default {
 	title: "Components/Slider",
 	component: "Slider",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },

@@ -18,11 +18,13 @@ export const AccordionItem = ({
 	idx = 0,
 	isDisabled = false,
 	isOpen = false,
+	isFocused = false,
+	isHovered = false,
+	isActive = false,
 	iconSize = "m",
 	customStyles = {},
 	customClasses = [],
 	onclick,
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -40,7 +42,12 @@ export const AccordionItem = ({
 		<h3 class="${rootClass}Heading">
 			<!-- WAI-ARIA 1.1: Item header <button> uses aria-expanded attribute to indicate expanded state. -->
 			<button
-				class="${rootClass}Header"
+				class=${classMap({
+					[`${rootClass}Header`]: true,
+					"is-hover": isHovered,
+					"is-focus-visible": isFocused,
+					"is-active": isActive,
+				})}
 				type="button"
 				?disabled=${isDisabled}
 				id="spectrum-accordion-item-${idx}-header"
@@ -51,11 +58,10 @@ export const AccordionItem = ({
 			</button>
 			<span class="${rootClass}IconContainer">
 				${Icon({
-					iconName: !isOpen ? "ChevronRight" : "ChevronDown",
+					iconName: !isOpen || isDisabled ? "ChevronRight" : "ChevronDown",
 					setName: "ui",
 					size: iconSize,
 					customClasses: [`${rootClass}Indicator`],
-					...globals,
 				})}
 			</span>
 		</h3>
@@ -78,9 +84,11 @@ export const Template = ({
 	items,
 	id,
 	disableAll = false,
+	isFocused = false,
+	isHovered = false,
+	isActive = false,
 	customClasses = [],
 	customStyles = {},
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
@@ -96,23 +104,19 @@ export const Template = ({
 					typeof density !== "undefined" && density !== "regular",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}"
+			style="${styleMap(customStyles)}"
 			id=${ifDefined(id)}
 			role="region"
-			style=${ifDefined(styleMap(customStyles))}
 		>
 			${repeat(Array.from(items.keys()), (heading, idx) => {
 				const item = items.get(heading);
 				return AccordionItem({
-					...globals,
 					rootClass: `${rootClass}-item`,
 					heading,
 					idx,
-					iconSize: `${size}`,
-					isDisabled: item.isDisabled || disableAll,
-					...item,
+					iconSize: size,
 					onclick: () => {
-						if (item.isDisabled) return;
-
+						if (item.isDisabled || disableAll) return;
 						// Update the args
 						const newItems = new Map(items);
 						newItems.set(heading, {
@@ -121,6 +125,11 @@ export const Template = ({
 						});
 						updateArgs({ items: newItems });
 					},
+					...item,
+					isDisabled: item.isDisabled || disableAll,
+					isFocused: item.isFocused || isFocused,
+					isHovered: item.isHovered || isHovered,
+					isActive: item.isActive || isActive,
 				});
 			})}
 		</div>

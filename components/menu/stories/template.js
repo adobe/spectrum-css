@@ -35,7 +35,6 @@ export const MenuItem = ({
 	hasActions,
 	selectionMode,
 	value,
-	...globals
 }) => html`
   <li
     class=${classMap({
@@ -54,56 +53,52 @@ export const MenuItem = ({
     aria-selected=${isSelected ? "true" : "false"}
     aria-disabled=${isDisabled ? "true" : "false"}
     tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
-    ${isCollapsible
-      ? Icon({
-          ...globals,
-          iconName: "ChevronRight100",
-          size,
-          customClasses: [
-            `${rootClass}Icon`,
-            "spectrum-Menu-chevron",
-          ],
-        }) : ""}
-    ${iconName
-      ? Icon({
-          ...globals,
-          iconName,
-          size,
-          customClasses: [
-            `${rootClass}Icon`,
-            `${rootClass}Icon--workflowIcon`
-          ]
-        }) : ""}
-    ${isCollapsible
-      ? html`<span class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>`
-      : ""
-    }
-    ${selectionMode != "multiple" && !isCollapsible
-      ? html`<span class=${classMap({
+    ${when(isCollapsible, () => Icon({
+      iconName: "ChevronRight100",
+      size,
+      customClasses: [
+        `${rootClass}Icon`,
+        "spectrum-Menu-chevron",
+      ],
+    }))}
+    ${when(iconName, () => Icon({
+      iconName,
+      size,
+      customClasses: [
+        `${rootClass}Icon`,
+        `${rootClass}Icon--workflowIcon`
+      ]
+    }))}
+    ${when(isCollapsible, () => html`
+      <span class=${classMap({
+      [`${rootClass}-sectionHeading`]: true,
+      [`${rootClass}-itemLabel--truncate`]: shouldTruncate,
+      })}>${label}</span>
+    `)}
+    ${when(selectionMode != "multiple" && !isCollapsible, () => html`
+      <span class=${classMap({
         [`${rootClass}Label`]: true,
         ["spectrum-Switch-label"]: hasActions,
         ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
         })}>
         ${label}
-      </span>`
-      : ""}
-    ${typeof description != "undefined"
-      ? html`<span class="${rootClass}Description">${description}</span>`
-      : ""}
-    ${isDrillIn
-      ? Icon({
-          ...globals,
-          iconName: "ChevronRight100",
-          size,
-          customClasses: [
-            `${rootClass}Icon`,
-            "spectrum-Menu-chevron",
-          ],
-        })
-      : ""}
+      </span>
+    `)}
+    ${when(typeof description != "undefined", () => html`
+      <span class=${classMap({
+        [`${rootClass}Description`]: true,
+      })}>${description}</span>
+    `)}
+    ${when(isDrillIn, () => Icon({
+      iconName: "ChevronRight100",
+      size,
+      customClasses: [
+        `${rootClass}Icon`,
+        "spectrum-Menu-chevron",
+      ],
+    }))}
     ${when(selectionMode == "multiple", () =>  html`
       ${Checkbox({
-        ...globals,
         size,
         isEmphasized: true,
         isChecked: isSelected,
@@ -113,26 +108,29 @@ export const MenuItem = ({
           `${rootClass}Checkbox`,
         ],
       })}
-        <span  class="spectrum-Menu-itemLabel ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>
+        <span class=${classMap({
+          [`${rootClass}-itemLabel`]: true,
+          [`${rootClass}-itemLabel--truncate`]: shouldTruncate,
+        })}>${label}</span>
         `)}
-      ${isChecked && selectionMode == "single"
-      ? Icon({
-          ...globals,
-          iconName: "Checkmark100",
-          size,
-          customClasses: [
-            `${rootClass}Icon`,
-            "spectrum-Menu-checkmark",
-          ],
-        })
-      : ""}
-      ${value
-        ? html`<span class="${rootClass}Value">${value}</span>`
-        : ""}
-      ${hasActions
-        ? html`<div class="${rootClass}Actions">
-        ${Switch({
-            ...globals,
+      ${when(isChecked && selectionMode == "single", () => Icon({
+        iconName: "Checkmark100",
+        size,
+        customClasses: [
+          `${rootClass}Icon`,
+          "spectrum-Menu-checkmark",
+        ],
+      }))}
+      ${when(value, () => html`
+        <span class=${classMap({
+          [`${rootClass}Value`]: true,
+        })}>${value}</span>
+      `)}
+      ${when(hasActions, () => html`
+        <div class=${classMap({
+          [`${rootClass}Actions`]: true,
+        })}>
+          ${Switch({
             size,
             isChecked: isSelected,
             isDisabled,
@@ -142,9 +140,9 @@ export const MenuItem = ({
               `${rootClass}Switch`,
             ],
           })}
-          </div>`
-        : ""}
-    ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size, shouldTruncate }) : ""}
+        </div>
+      `)}
+    ${when(isCollapsible && items.length > 0, () => Template({ items, isOpen, size, shouldTruncate }))}
   </li>
 `;
 
@@ -165,6 +163,7 @@ const backArrowWithScale = (size = "m", iconName = "ArrowLeft") => {
 };
 
 export const MenuGroup = ({
+	rootClass,
 	heading,
 	id,
 	idx = 0,
@@ -176,40 +175,45 @@ export const MenuGroup = ({
 	maxInlineSize,
 	subrole,
 	size,
-	...globals
 }) => html`
   <li
     id=${ifDefined(id)}
     role="presentation"
   >
-    ${!isTraySubmenu
-      ? html`<span
-          class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }"
+    ${when(!isTraySubmenu,
+      () => html`
+        <span
+          class=${classMap({
+            [`${rootClass}-itemLabel`]: true,
+            [`${rootClass}-itemLabel--truncate`]: shouldTruncate,
+          })}
           id=${id ?? `menu-heading-category-${idx}`}
           aria-hidden="true"
-        >${heading}</span>`
-      : html`<div class="spectrum-Menu-back">
-          <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
+        >${heading}</span>`,
+      () => html`
+        <div class=${classMap({ [`${rootClass}-back`]: true })}>
+          <button aria-label="Back to previous menu" class=${classMap({ [`${rootClass}-backButton`]: true })} type="button" role="menuitem">
             ${Icon({
-              ...globals,
               iconName: backArrowWithScale(size),
               size,
-              customClasses: ["spectrum-Menu-backIcon"]
+              customClasses: [`${rootClass}-backIcon`]
             })}
           </button>
-          ${heading
-          ? html`<span
-              class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }"
+          ${when(heading, () => html`
+            <span
+              class=${classMap({
+                [`${rootClass}-sectionHeading`]: true,
+                [`${rootClass}-itemLabel--truncate`]: true,
+              })}"spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }"
               style=${maxInlineSize ? `max-inline-size: ${maxInlineSize}px;` : ""}
               id=${id ?? `menu-heading-category-${idx}`}
               aria-hidden="true"
-              >${heading}</span
-            >`
-          : ""}
-        </div>`
-    }
+              >${heading}</span>
+          `)}
+        </div>
+      `
+    )}
     ${Template({
-      ...globals,
       role: "group",
       subrole,
       labelledby: id ?? `menu-heading-category-${idx}`,
@@ -241,7 +245,6 @@ export const Template = ({
 	role = "menu",
 	subrole = "menuitem",
 	id,
-	...globals
 }) => {
 	const menuMarkup = html`
     <ul
@@ -262,7 +265,6 @@ export const Template = ({
       ${items.map((i, idx) => {
         if (i.type === "divider")
           return Divider({
-            ...globals,
             tag: "li",
             size: "s",
             customClasses: [`${rootClass}-divider`],
@@ -270,16 +272,15 @@ export const Template = ({
         else if (i.heading || i.isTraySubmenu)
           return MenuGroup({
             ...i,
-            ...globals,
             subrole,
             size,
+            rootClass,
             selectionMode,
             isTraySubmenu,
             shouldTruncate
           });
         else
           return MenuItem({
-            ...globals,
             ...i,
             idx,
             rootClass: `${rootClass}-item`,

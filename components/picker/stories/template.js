@@ -1,9 +1,10 @@
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+
+import { useArgs } from "@storybook/preview-api";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
@@ -13,80 +14,6 @@ import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
 import "../index.css";
-
-export const Picker = ({
-	rootClass = "spectrum-Picker",
-	size = "m",
-	labelPosition,
-	placeholder,
-	isQuiet = false,
-	isKeyboardFocused = false,
-	isOpen = false,
-	isInvalid = false,
-	isLoading = false,
-	isDisabled = false,
-	customClasses = [],
-	customStyles = {},
-	...globals
-}) => {
-	const [, updateArgs] = useArgs();
-
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
-	return html`
-	<button
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--sideLabel`]: labelPosition != "top",
-				["is-invalid"]: isInvalid,
-				["is-open"]: isOpen,
-				["is-loading"]: isLoading,
-				["is-keyboardFocused"]: isKeyboardFocused,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			?disabled=${isDisabled}
-			aria-haspopup="listbox"
-			style=${ifDefined(styleMap(customStyles))}
-			type="button"
-			@click=${() => {
-				updateArgs({ isOpen: !isOpen });
-			}}
-		>
-			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
-			${isLoading
-				? ProgressCircle({
-					size: "s",
-					isIndeterminate: true,
-				})
-				: ""}
-			${isInvalid && !isLoading
-				? Icon({
-					...globals,
-					size,
-					iconName: "Alert",
-					customClasses: [`${rootClass}-validationIcon`],
-				})
-				: ""}
-			${Icon({
-				...globals,
-				size,
-				setName: "ui",
-				iconName: "ChevronDown",
-				customClasses: [`${rootClass}-menuIcon`],
-			})}
-		</button>
-	`;
-};
 
 export const Template = ({
 	rootClass = "spectrum-Picker",
@@ -101,24 +28,14 @@ export const Template = ({
 	isInvalid = false,
 	isLoading = false,
 	isDisabled = false,
-	isReadOnly = false,
 	withSwitch = false,
 	fieldLabelStyle = {},
 	customClasses = [],
 	customStyles = {},
 	customPopoverStyles = {},
 	content = [],
-	id,
-	...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
+	const [, updateArgs] = useArgs();
 
 	let iconName = "ChevronDown200";
 	switch (size) {
@@ -135,82 +52,71 @@ export const Template = ({
 			iconName = "ChevronDown200";
 	}
 
-	return html`
-		${label
-			? FieldLabel({
-				...globals,
+	const picker = html`
+		<button
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--sideLabel`]: labelPosition != "top",
+				["is-invalid"]: isInvalid,
+				["is-open"]: isOpen,
+				["is-loading"]: isLoading,
+				["is-keyboardFocused"]: isKeyboardFocused,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			?disabled=${isDisabled}
+			aria-haspopup="listbox"
+			style=${ifDefined(styleMap(customStyles))}
+			type="button"
+			@click=${function () {
+				if (isDisabled) return;
+				updateArgs({ isOpen: !isOpen });
+			}}
+		>
+			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
+			${when(isLoading, () => ProgressCircle({
+				size: "s",
+				isIndeterminate: true,
+			}))}
+			${when(isInvalid && !isLoading, () => Icon({
 				size,
-				label,
-				isDisabled,
-				customStyles: fieldLabelStyle,
-				alignment: labelPosition,
-			})
-			: ""}
-		${labelPosition == "left" ?
-			html`<div style="display: inline-block">
-				${Picker({
-					...globals,
-					rootClass,
-					size,
-					placeholder,
-					isQuiet,
-					isKeyboardFocused,
-					isOpen,
-					isInvalid,
-					isLoading,
-					isDisabled,
-					isReadOnly,
-					customClasses,
-					customStyles,
-					content,
-					iconName,
-					labelPosition,
-					id,
-				})}
-			</div>
-			`
-		:
-			Picker({
-				...globals,
-				rootClass,
+				iconName: "Alert",
+				customClasses: [`${rootClass}-validationIcon`],
+			}))}
+			${Icon({
 				size,
-				placeholder,
-				isQuiet,
-				isKeyboardFocused,
-				isOpen,
-				isInvalid,
-				isLoading,
-				isDisabled,
-				isReadOnly,
-				customClasses,
-				customStyles,
-				content,
+				setName: "ui",
 				iconName,
-				labelPosition,
-				id,
-			})
-		}
+				customClasses: [`${rootClass}-menuIcon`],
+			})}
+		</button>
+	`;
 
-		${helpText
-			? HelpText({
-				text: helpText,
-				variant: isInvalid ? "negative" : "neutral",
-				hideIcon: true,
-			})
-			: ""}
-		${when(content.length !== 0, () =>
-				Popover({
-					...globals,
-					isOpen: isOpen && !isDisabled,
-					withTip: false,
-					position: "bottom",
-					isQuiet,
-					customStyles: customPopoverStyles,
-					content,
-				})
-		)}
+	return html`
+		${when(label, () => FieldLabel({
+			size,
+			label,
+			isDisabled,
+			style: fieldLabelStyle,
+			alignment: labelPosition,
+		}))}
+		${labelPosition == "left" ? html`<div style="display: inline-block">${picker}</div>` : picker}
+		${when(helpText, () => HelpText({
+			text: helpText,
+			variant: isInvalid ? "negative" : "neutral",
+			hideIcon: true,
+		}))}
+		${when(content.length !== 0, () => Popover({
+			isOpen: isOpen && !isDisabled,
+			withTip: false,
+			position: "bottom",
+			isQuiet,
+			customStyles: customPopoverStyles,
+			content,
+		}))}
 		${when(withSwitch, () => Switch({
-			...globals,
 			size,
 			label: "Toggle switch",
 			customStyles: {

@@ -1,5 +1,6 @@
 import { userEvent, within } from "@storybook/testing-library";
-import { html } from "lit";
+
+import { isOpen } from "@spectrum-css/preview/types";
 
 import { Template } from "./template";
 
@@ -19,15 +20,7 @@ export default {
 		popoverId: { table: { disable: true } },
 		popoverTestId: { table: { disable: true } },
 		popoverTriggerId: { table: { disable: true } },
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
@@ -47,7 +40,7 @@ export default {
 		popoverTestId: "popover-1",
 		popoverTriggerId: "trigger",
 		isOpen: false,
-		label: "More Actions",
+		label: "More actions",
 		iconName: "More",
 		items: [
 			{
@@ -77,9 +70,6 @@ export default {
 		},
 		chromatic: { delay: 2000 },
 	},
-	decorators: [
-		(Story, context) => html`<div style="padding: 14px">${Story(context)}</div>`
-	],
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 		await new Promise((resolve) => setTimeout(resolve, 100));

@@ -11,7 +11,7 @@ export default {
 	component: "CoachMark",
 	argTypes: {
 		hasActionMenu: {
-			name: "ActionMenu",
+			name: "With action menu",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -20,7 +20,7 @@ export default {
 			control: "boolean",
 		},
 		hasPagination: {
-			name: "Pagination",
+			name: "With pagination",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -29,7 +29,7 @@ export default {
 			control: "boolean",
 		},
 		hasImage: {
-			name: "Image",
+			name: "With image",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },

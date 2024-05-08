@@ -37,6 +37,7 @@ governing permissions and limitations under the License.
 /* field group label side aligned */
 .spectrum-FieldGroup--sidelabel {
 	flex-direction: row;
+	gap: var(--spectrum-fieldgroup-margin);
 }
 
 /* input fields layout */

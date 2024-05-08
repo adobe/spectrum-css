@@ -21,7 +21,6 @@ export const Template = ({
 	customStyles = {},
 	trigger,
 	content = [],
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
@@ -29,13 +28,10 @@ export const Template = ({
 		console.warn("Popover: No content provided.");
 		return html``;
 	}
-
-
 	const nestedPopover = id === "popover-nested" || id === "popover-nested-2";
 
 	return html`
 		${when(typeof trigger === "function", () => trigger({
-			...globals,
 			isSelected: isOpen,
 			isOpen: nestedPopover ?? true,
 			onclick: () => {
@@ -75,30 +71,30 @@ export const Template = ({
 							? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
 							: "- var(--spectrum-popover-animation-distance)";
 					}
- else if (position.includes("bottom") && !position.includes("-bottom")) {
+					else if (position.includes("bottom") && !position.includes("-bottom")) {
 						y = rect.bottom;
 						yOffset = "+ (var(--spectrum-popover-animation-distance))";
 					}
- else if (position.includes("left")) {
+					else if (position.includes("left")) {
 						if (textDir == "rtl") {
 							x = rect.right;
 							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
 						}
- else {
+						else {
 							x = rect.left - popWidth;
 							xOffset = withTip
 								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
 								: "- var(--spectrum-popover-animation-distance)";
 						}
 					}
- else if (position.includes("right")) {
+					else if (position.includes("right")) {
 						if (textDir == "rtl") {
 							x = rect.left - popWidth;
 							xOffset = withTip
 								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
 								: "- var(--spectrum-popover-animation-distance)";
 						}
- else {
+						else {
 							x = rect.right;
 							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
 						}
@@ -111,13 +107,13 @@ export const Template = ({
 					if (position === "top-start" || position === "bottom-start") {
 						additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
 					}
- else if (position === "top-end" || position === "bottom-end") {
+					else if (position === "top-end" || position === "bottom-end") {
 						additionalStyles["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
 					}
- else if (position === "left-top" || position === "right-top") {
+					else if (position === "left-top" || position === "right-top") {
 						additionalStyles["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
 					}
- else if (position === "left-bottom" || position === "right-bottom") {
+					else if (position === "left-bottom" || position === "right-bottom") {
 						additionalStyles["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
 					}
 

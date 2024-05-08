@@ -54,7 +54,6 @@ export const Default = (({
 	size = "m",
 	isDisabled = false,
 	onclick,
-	...globals
 }) => {
 	const [{
 		selectedIcon = "Pause",
@@ -68,7 +67,6 @@ export const Default = (({
 			.spectrum--large { --spectrum-global-dimension-size-85: 9px; }
 		</style>
 		${ActionButton({
-			...globals,
 			customClasses: [rootClass, ...customClasses],
 			isQuiet: true,
 			isDisabled,

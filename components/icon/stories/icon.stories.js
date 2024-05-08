@@ -28,9 +28,6 @@ export default {
 	title: "Components/Icon",
 	component: "Icon",
 	argTypes: {
-		/* Turn off express theme for icon preview b/c they use a separate icon set */
-		express: { table: { disable: true } },
-		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Workflow Icon Size",
 			type: { name: "string", required: true },

@@ -5,7 +5,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-
 import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
@@ -35,17 +34,7 @@ export const Template = ({
 	isPending = false,
 	ariaExpanded,
 	ariaControls,
-	...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
-		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -79,18 +68,20 @@ export const Template = ({
       aria-controls=${ifDefined(ariaControls)}
       data-testid=${ifDefined(testId)}
     >
-      ${when(iconName && !iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
+      ${when(iconName && !iconAfterLabel, () => Icon({ iconName, size }))}
       ${when(label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
-      ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
-      ${when(isPending, () => ProgressCircle({
-        ...globals,
-        size: "s",
-        testId: "progress-circle",
-        staticColor,
-        isIndeterminate: true,
-      }))}
+      ${when(iconName && iconAfterLabel, () => Icon({ iconName, size }))}
+      ${when(isPending, () => {
+        return ProgressCircle({
+          size: "s",
+          testId: "progress-circle",
+          staticColor,
+          isIndeterminate: true,
+          addStaticBackground: false
+        });
+      })}
     </button>
   `;
 };

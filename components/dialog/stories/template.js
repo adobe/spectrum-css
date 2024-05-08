@@ -4,6 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
+
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
@@ -21,9 +22,8 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	id,
-	...globals
 }) => {
-	const { scale } = globals;
+	const scale = window.scale ?? "medium";
 	const [, updateArgs] = useArgs();
 
 	const Dialog = html`
@@ -45,14 +45,12 @@ export const Template = ({
 					Divider({
 						horizontal: true,
 						customClasses: [`${rootClass}-divider`],
-						...globals,
 					}),
 				])}
 				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
 				${when(isDismissable, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
-						...globals,
 						onclick: () => {
 							updateArgs({ isOpen: !isOpen });
 						},
@@ -64,32 +62,27 @@ export const Template = ({
 
 	if (showModal) {
 		return html`
-			${Underlay({
-				...globals,
-				isOpen,
-			})}
+			${Underlay({ isOpen })}
 			${Button({
-				...globals,
-				size: "m",
-				variant: "secondary",
-				label: "Click to open dialog",
-				treatment: "outline",
-				customClasses: [],
-				customStyles: {
-					position: "absolute",
-					insetInlineStart: "50%",
-					insetBlockStart: "50%",
-					transform: "translate(-50%, -50%)",
-				},
-				onclick: () => {
-					updateArgs({ isOpen: !isOpen });
-				},
-			})}
+			size: "m",
+			variant: "secondary",
+			label: "Click to open dialog",
+			treatment: "outline",
+			customClasses: [],
+			customStyles: {
+				position: "absolute",
+				insetInlineStart: "50%",
+				insetBlockStart: "50%",
+				transform: "translate(-50%, -50%)",
+			},
+			onclick: () => {
+				updateArgs({ isOpen: !isOpen });
+			},
+		})}
 			${Modal({
-				...globals,
-				isOpen,
-				content: Dialog,
-			})}
+			isOpen,
+			content: Dialog,
+		})}
 		`;
 	}
 	else {

@@ -1,4 +1,8 @@
 import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
+import { isOpen } from "@spectrum-css/preview/types";
+
 import { Template } from "./template";
 
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
@@ -11,11 +15,7 @@ export default {
 	component: "Tray",
 	argTypes: {
 		content: { table: { disable: true } },
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: { disable: true },
-		},
+		isOpen,
 		heading: {
 			name: "Heading",
 			type: { name: "string" },
@@ -44,6 +44,9 @@ export default {
 				height: "200px"
 			}
 		},
+		states: {
+			isOpen: false,
+		}
 	},
 };
 
@@ -51,34 +54,28 @@ export const Default = ({
 	heading,
 	...args
 }) => html`
-	<div>
-		${Template({
-			...args,
-			content: [
-				() => Dialog({
-						heading,
-						content: ["You have 5 new messages!"],
-						isDismissable: false,
-					})
-			],
-		})}
+	${Template({
+		...args,
+		content: [
+			() => Dialog({
+					heading,
+					content: ["You have 5 new messages!"],
+					isDismissable: false,
+				})
+		],
+	})}
 
-		${
-			window.isChromatic() ?
-			Template({
-				...args,
-				content: [
-					() => Dialog({
-							heading: "You have new messages waiting in your inbox",
-							content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
-							isDismissable: false,
-						})
-				],
-				customStyles: {
-					"justify-content": "flex-end"
-				},
-			})
-		: null
-	}
-	</div>
+	${when(window.isChromatic(), () => Template({
+		...args,
+		content: [
+			() => Dialog({
+					heading: "You have new messages waiting in your inbox",
+					content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
+					isDismissable: false,
+				})
+		],
+		customStyles: {
+			"justify-content": "flex-end"
+		},
+	}))}
 `;

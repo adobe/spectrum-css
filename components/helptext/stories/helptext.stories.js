@@ -14,7 +14,7 @@ export default {
 			table: {
 				type: { summary: "string" },
 				disable: false,
-				category: "Component",
+				category: "Content",
 			},
 			control: { type: "text" },
 		},

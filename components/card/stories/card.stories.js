@@ -78,6 +78,15 @@ export default {
 			},
 			control: { type: "text" },
 		},
+		subtitle: {
+			name: "Subtitle",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
 		description: {
 			name: "Description",
 			type: { name: "string" },

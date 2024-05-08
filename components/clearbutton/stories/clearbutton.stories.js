@@ -57,7 +57,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-export const OverBackground = Template.bind({});
-OverBackground.args = {
+export const StaticWhite = Template.bind({});
+StaticWhite.args = {
 	staticColor: "white",
 };

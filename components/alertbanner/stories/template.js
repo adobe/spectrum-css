@@ -2,6 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
+
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
@@ -16,7 +17,6 @@ export const Template = ({
 	variant,
 	hasActionButton,
 	customClasses = [],
-	...globals
 }) => {
 	const iconName =
 		variant === "negative" ? "Alert" : variant === "info" ? "Info" : "";
@@ -32,13 +32,10 @@ export const Template = ({
 		>
 			<div class="${rootClass}-body">
 				<div class="${rootClass}-content">
-					${iconName
-						? Icon({
-								...globals,
-								iconName,
-								customClasses: [`${rootClass}-icon`],
-						})
-						: ""}
+					${when(iconName, () => Icon({
+						iconName,
+						customClasses: [`${rootClass}-icon`],
+					}))}
 					<p class="${rootClass}-text">${text}</p>
 				</div>
 				${when(hasActionButton, () =>
@@ -54,10 +51,8 @@ export const Template = ({
 					vertical: true,
 					size: "s",
 					tag: "div",
-					...globals,
 				})}
 				${CloseButton({
-					...globals,
 					size: "m",
 					staticColor: "white",
 					onclick,

@@ -1,5 +1,11 @@
 import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isReadOnly, isRequired, isValid } from "@spectrum-css/preview/types";
+
 import { Template } from "./template";
+
+import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
@@ -8,30 +14,22 @@ export default {
 	title: "Components/Text field",
 	component: "TextField",
 	argTypes: {
-		isValid: {
-			name: "Valid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isValid,
 		displayLabel: {
-			name: "Display field label",
+			name: "Show field label",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
 		labelPosition: {
 			name: "Label position",
-			type: { name: "boolean" },
+			type: { name: "string" },
 			table: {
-				type: { summary: "boolean" },
-				category: "Component",
+				type: { summary: "string" },
+				category: "Variant",
 			},
 			options: ["top", "side"],
 			control: "select",
@@ -42,38 +40,14 @@ export default {
 			type: { name: "text" },
 			table: {
 				type: { summary: "text" },
-				category: "Component",
+				category: "Content",
 			},
 			control: "text",
 			if: { arg: "displayLabel", truthy: true },
 		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isKeyboardFocused: {
-			name: "Keyboard focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
+		isFocused,
+		isKeyboardFocused,
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -89,7 +63,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
@@ -98,7 +72,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
@@ -107,53 +81,21 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 			if: { arg: "multiline", truthy: true },
 		},
 		iconName: {
+			...(Icon?.argTypes?.iconName ?? {}),
 			table: { disable: true },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isRequired: {
-			name: "Required",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isReadOnly: {
-			name: "Read only",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isLoading: {
-			name: "Loading",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isRequired,
+		isReadOnly,
+		isLoading,
 		pattern: {
-			name: "Pattern",
+			name: "Validation pattern",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -162,7 +104,10 @@ export default {
 			control: "text",
 		},
 		value: {
+			type: { name: "string" },
 			table: {
+				type: { summary: "string" },
+				category: "Internal",
 				disable: true,
 			},
 		},
@@ -184,6 +129,12 @@ export default {
 		multiline: false,
 		grows: false,
 		isQuiet: false,
+		customStorybookStyles: {
+			"display": "flex",
+			"align-items": "flex-end",
+			"gap": "20px",
+			"flex-wrap": "wrap",
+		},
 	},
 	parameters: {
 		actions: {
@@ -196,82 +147,31 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		variants: {
+			grows: false,
+		},
 	},
 };
 
 const TextFieldGroup = (args) => html`
-	<div style="display: flex; flex-direction: column; gap: 32px;">
-		${Template({
-			...args
-		})}
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-			})
-			: html`` }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username that is really long and wraps onto a second line",
-				isInvalid: true,
-			})
-			: html`` }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				labelPosition: "side",
-				isValid: true,
-				value: "username@reallylongemail.com"
-			})
-			: html`` }
-	</div>
-`;
-
-const TextAreaGroup = (args) => html`
-	<div style="display: flex; flex-direction: column; gap: 32px;">
+	${Template(args)}
+	${when(window.isChromatic(), () => html`
 		${Template({
 			...args,
-			multiline: true,
-			value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+			labelText: "Username that is really long and wraps onto a second line",
+			customStyles: { maxInlineSize: "200px" },
 		})}
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username that is really long and wraps onto a second line",
-				isInvalid: true,
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				labelPosition: "side",
-				isValid: true,
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-	</div>
+		${Template({
+			...args,
+			value: "username@reallylongemail.com",
+			customStyles: { maxInlineSize: "200px" },
+		})}
+		${Template({
+			...args,
+			value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+		})}
+	`)}
 `;
 
 export const Default = TextFieldGroup.bind({});
 Default.args = {};
-
-export const TextArea = TextAreaGroup.bind({});
-TextArea.args = {
-	multiline: true,
-	grows: true,
-	value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-};

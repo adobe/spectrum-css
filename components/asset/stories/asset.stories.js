@@ -10,11 +10,6 @@ export default {
 	title: "Components/Asset",
 	component: "Asset",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
-		scale: {
-			name: "Platform scale",
-			if: { arg: "preset", neq: "image" }
-		},
 		preset: {
 			name: "Preset asset types",
 			type: { name: "string" },

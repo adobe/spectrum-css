@@ -1,4 +1,9 @@
+import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
 import { Template } from "./template";
+
+import { isDisabled, isFocused, isOpen } from "@spectrum-css/preview/types";
 
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 
@@ -42,22 +47,13 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-			if: { arg: "isDisabled", truthy: false }
-		},
+		isOpen,
 		isRounded: {
 			name: "Rounded",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
@@ -66,27 +62,13 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "isDisabled", truthy: false }
 		},
 		position: {
@@ -94,7 +76,8 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Variant",
+				defaultValue: { summary: "right" },
 			},
 			options: ["right", "left"],
 			control: "inline-radio",
@@ -112,7 +95,13 @@ export default {
 		isKeyboardFocused: false,
 		iconType: "ui",
 		iconName: "ChevronDown",
-		position: "right"
+		position: "right",
+		customStorybookStyles: {
+			"display": "flex",
+			"align-items": "flex-start",
+			"gap": "12px",
+			"flex-wrap": "wrap",
+		},
 	},
 	parameters: {
 		actions: {
@@ -124,25 +113,24 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+const PickerButtons = (args) => html`
+	${Template(args)}
+	${when(window.isChromatic(), () => html`
+		${Template({
+			...args,
+			label: "Select",
+		})}
+		${Template({
+			...args,
+			position: "left",
+			label: "Select",
+		})}
+		${Template({
+			...args,
+			label: "Select",
+		})}`
+	)}
+`;
+
+export const Default = PickerButtons.bind({});
 Default.args = {};
-
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-	label: "Select",
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-	isDisabled: true
-};
-
-export const Quiet = Template.bind({});
-Quiet.args = {
-	isQuiet: true
-};
-
-export const Express = Template.bind({});
-Express.args = {
-	express: true
-};

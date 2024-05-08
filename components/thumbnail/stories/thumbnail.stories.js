@@ -1,3 +1,8 @@
+import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
+import { isDisabled, isFocused, isSelected } from "@spectrum-css/preview/types";
+
 import { Template } from "./template";
 
 /**
@@ -7,7 +12,6 @@ export default {
 	title: "Components/Thumbnail",
 	component: "Thumbnail",
 	argTypes: {
-		reduceMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -67,7 +71,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
@@ -78,38 +82,16 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isSelected,
 			if: { arg: "isLayer" },
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
 	},
 	args: {
 		rootClass: "spectrum-Thumbnail",
@@ -121,6 +103,12 @@ export default {
 		isFocused: false,
 		imageURL: "example-card-landscape.png",
 		altText: "Landscape with mountains and lake",
+		customStorybookStyles: {
+			"display": "flex",
+			"align-items": "flex-start",
+			"gap": "20px",
+			"flex-wrap": "wrap",
+		},
 	},
 	parameters: {
 		actions: {
@@ -132,16 +120,13 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+const Thumbnails = (args) => html`
+	${Template(args)}
+	${when(window.isChromatic(), () => Template({
+		...args,
+		backgroundColor: "orange",
+	}))}
+`;
+
+export const Default = Thumbnails.bind({});
 Default.args = {};
-
-export const Layer = Template.bind({});
-Layer.args = {
-	isLayer: true,
-	isSelected: false,
-};
-
-export const WithBackground = Template.bind({});
-WithBackground.args = {
-	backgroundColor: "orange",
-};

@@ -1,4 +1,5 @@
-import { html } from "lit";
+
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen } from "@spectrum-css/preview/types";
 
 import { Template } from "./template";
 
@@ -21,75 +22,27 @@ export default {
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isQuiet: {
 			name: "Quiet styling",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isKeyboardFocused: {
-			name: "Keyboard Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isLoading: {
-			name: "Loading",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
+		isFocused,
+		isKeyboardFocused,
+		isLoading,
+		isDisabled,
 		showFieldLabel: {
 			name: "Show field label",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
@@ -115,6 +68,16 @@ export default {
 			if: { arg: "showFieldLabel", truthy: true },
 		},
 		content: { table: { disable: true } },
+		labelLeft: {
+			name: "Field label beside",
+			type: { name: "boolean" },
+			table: {
+				disable: true,
+				type: { summary: "boolean" },
+				category: "Variant",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Combobox",
@@ -128,6 +91,8 @@ export default {
 		isDisabled: false,
 		showFieldLabel: false,
 		fieldLabelText: "Select location",
+		fieldLabelPosition: "top",
+		labelLeft: false,
 		content: [
 			Menu({
 				role: "listbox",
@@ -155,6 +120,12 @@ export default {
 				],
 			}),
 		],
+		customStorybookStyles: {
+			"display": "flex",
+			"align-items": "flex-start",
+			"gap": "8px",
+			"flex-wrap": "wrap",
+		}
 	},
 	parameters: {
 		actions: {
@@ -171,78 +142,28 @@ export default {
 	},
 };
 
-const defaultVariants = (args) => html`
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isFocused: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isKeyboardFocused: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isDisabled: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isLoading: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			isInvalid: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			showFieldLabel: true,
-			fieldLabelText: "Select location, this label should wrap",
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
-		${Template({
-			...args,
-			showFieldLabel: true,
-			fieldLabelText: "Select location, this label should wrap",
-			fieldLabelPosition: "left",
-		})}
-	</div>
-`;
-
-const closedVariants = (args) => defaultVariants({...args, isOpen: false});
-
-const chromaticKitchenSink = (args) => html`
-	<div style="display: flex; gap: 16px; flex-direction: column;">
-		${closedVariants(args)}
-	</div>
-	<div style="display: flex; gap: 16px; flex-direction: column; margin-top: 32px;">
-		${defaultVariants(args)}
-	</div>
-`;
-
-export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
-Default.args = {};
-
-export const Quiet = (args) => window.isChromatic()
-	? chromaticKitchenSink(args)
-	: Template({
-		...args
-	});
-Quiet.args = {
-	isQuiet: true,
+const getOverflowHeight = (size) => {
+	switch (size) {
+		case "s":
+			return "120px";
+		case "l":
+			return "180px";
+		case "xl":
+			return "240px";
+		default:
+			return "150px";
+	}
 };
+
+const Comboboxes = (args) => {
+	if (window.isChromatic()) args.fieldLabelText = "Select location, this label should wrap";
+	return Template({
+		...args,
+		customStyles: {
+			"margin-block-end": args.isOpen ? getOverflowHeight(args.size) : undefined,
+		},
+	});
+};
+
+export const Default = Comboboxes.bind({});
+Default.args = {};

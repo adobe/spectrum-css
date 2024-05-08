@@ -1,3 +1,6 @@
+import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
 import { Template } from "./template";
 
 /**
@@ -8,14 +11,20 @@ export default {
 	component: "Toast",
 	argTypes: {
 		variant: {
-			table: { disable: true },
+			name: "Style",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Variant",
+			},
+			options: ["info", "negative", "positive"],
 		},
 		message: {
 			name: "Message",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Content",
 			},
 			control: "text",
 		},
@@ -24,14 +33,22 @@ export default {
 			description: "Label for the inline button; if blank, no button is shown",
 			type: { name: "string" },
 			table: {
-				category: "Advanced",
+				category: "Content",
 				type: { summary: "string" },
 			},
 			control: "text",
 		},
 	},
 	args: {
-		rootClass: "spectrum-Toast"
+		rootClass: "spectrum-Toast",
+		message: "File has been archived",
+		inlineButtonLabel: "Undo",
+		customStorybookStyles: {
+			"display": "flex",
+			"align-items": "flex-start",
+			"gap": "20px",
+			"flex-wrap": "wrap",
+		}
 	},
 	parameters: {
 		actions: {
@@ -43,29 +60,13 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {
-	message: "File has been archived",
-	inlineButtonLabel: "Undo",
-};
+const Toasts = (args) => html`
+	${Template(args)}
+	${when(window.isChromatic(), () => Template({
+		...args,
+		inlineButtonLabel: undefined
+	}))}
+`;
 
-export const Info = Template.bind({});
-Info.args = {
-	variant: "info",
-	message: "A new version of Lightroom Classic is now available",
-	inlineButtonLabel: "Update",
-};
-
-export const Negative = Template.bind({});
-Negative.args = {
-	variant: "negative",
-	message: "Unable to delete file",
-	inlineButtonLabel: "Eject",
-};
-
-export const Positive = Template.bind({});
-Positive.args = {
-	variant: "positive",
-	message: "Copied to clipboard",
-	inlineButtonLabel: "Eject",
-};
+export const Default = Toasts.bind({});
+Default.args = {};

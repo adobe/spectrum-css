@@ -3,15 +3,14 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import "../index.css";
 
+import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-FloatingActionButton",
 	variant,
 	id,
 	iconName,
 	customClasses = [],
-	...globals
 }) => html`
 	<button
 		class=${classMap({
@@ -21,10 +20,6 @@ export const Template = ({
 		})}
 		id=${ifDefined(id)}
 	>
-		${Icon({
-			...globals,
-			iconName,
-			customClasses: [`${rootClass}-icon`],
-		})}
+		${Icon({ iconName, customClasses: [`${rootClass}-icon`] })}
 	</button>
 `;

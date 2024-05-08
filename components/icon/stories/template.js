@@ -1,7 +1,8 @@
-import { html, svg } from "lit";
+import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
+
 
 import { fetchIconSVG, uiIcons, uiIconSizes, workflowIcons } from "./utilities.js";
 
@@ -35,10 +36,7 @@ export const Template = ({
 	id,
 	customClasses = [],
 	useRef = false,
-	...globals
 }) => {
-	const { scale } = globals;
-
 	if (!iconName) {
 		console.warn(
 			"Icon: Could not render a result because no icon name was provided to the icon template."
@@ -121,8 +119,10 @@ export const Template = ({
 	if (fill) inlineStyle = `color: ${fill}`;
 	let icon;
 
+	const scale = window.scale ?? "medium";
+
 	if (!useRef) {
-		icon = fetchIconSVG({ iconName: idKey, setName, ...globals });
+		icon = fetchIconSVG({ iconName: idKey, setName, scale });
 
 		if (!icon) {
 			console.warn(`Icon: "${idKey}" was not found in the "${setName}" icon set.`);
@@ -147,7 +147,7 @@ export const Template = ({
 
 	// If we found an icon above, return that value with the appended class list
 	if (icon) {
-		return svg`${unsafeSVG(
+		return html`${unsafeSVG(
 			icon.replace(
 				/^<svg(.*)>/,
 				`<svg class="${Object.entries(classList)
@@ -181,7 +181,7 @@ export const Template = ({
 		console.warn(e);
 	}
 
-	return svg`<svg
+	return html`<svg
 		class=${classMap(classList)}
 		id=${ifDefined(id)}
 		style=${ifDefined(inlineStyle)}

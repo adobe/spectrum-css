@@ -24,17 +24,15 @@ export const Template = ({
 		})}
 		id=${ifDefined(id)}
 	>
-		${when(hasLink, () =>
-			html`
-				<a class="spectrum-Avatar-link" href="#">
-					<img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
-				</a>
-				`
-		)}
-		${when(!hasLink, () =>
-			html`
-				<img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
-			`
+		${when(
+            hasLink,
+            () => html`
+                <a class="spectrum-Avatar-link" href="#">
+                    <img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
+                </a>`,
+            () => html`
+                <img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
+            `
 		)}
 	</div>
 `;

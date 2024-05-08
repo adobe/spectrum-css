@@ -16,9 +16,7 @@ export const Template = ({
 	staticColor,
 	content = [],
 	customClasses = [],
-	...globals
 }) => {
-
 	return html`
 		<div
 			class=${classMap({
@@ -36,7 +34,6 @@ export const Template = ({
 				switch (typeof item) {
 					case "object":
 						return ActionButton({
-							...globals,
 							size,
 							iconName: item.iconName,
 							isQuiet: areQuiet || item.isQuiet,
@@ -45,7 +42,7 @@ export const Template = ({
 							customClasses: [`${rootClass}-item`],
 						});
 					case "function":
-						return item({ ...globals, size });
+						return item({ size });
 					default:
 						return item;
 				}

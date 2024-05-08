@@ -104,6 +104,9 @@ export default {
 		isDisabled: false,
 		isRequired: false,
 		readOnly: false,
+		month: "March",
+		selectedDay: 1,
+		year: 2023,
 	},
 	parameters: {
 		actions: {
@@ -123,29 +126,16 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	month: "March",
-	selectedDay: 1,
-	year: 2023,
-	content: [{}],
-};
+Default.args = {};
 
 export const Quiet = Template.bind({});
 Quiet.args = {
-	month: "March",
-	selectedDay: 1,
-	year: 2023,
-	content: [{}],
 	isQuiet: true,
 };
 
 export const Range = Template.bind({});
 Range.args = {
-	month: "March",
-	selectedDay: 1,
-	year: 2023,
-	lastDay: 3,
-	content: [{}],
 	isRange: true,
 	isOpen: false,
+	lastDay: 15,
 };

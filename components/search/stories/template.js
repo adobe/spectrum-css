@@ -12,9 +12,7 @@ export const Template = ({
 	isDisabled = false,
 	isQuiet = false,
 	size,
-	...globals
 }) => {
-
 	return html`
 		<form
 			class=${classMap({
@@ -27,7 +25,6 @@ export const Template = ({
 			})}
 		>
 			${TextField({
-				...globals,
 				isDisabled,
 				isQuiet,
 				size,
@@ -41,7 +38,6 @@ export const Template = ({
 				autocomplete: false,
 			})}
 			${ClearButton({
-				...globals,
 				isDisabled,
 				size,
 				customClasses: [`${rootClass}-clearButton`],

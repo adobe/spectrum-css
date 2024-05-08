@@ -1,5 +1,7 @@
 import { Template } from "./template";
 
+import { isOpen } from "@spectrum-css/preview/types";
+
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
@@ -11,21 +13,13 @@ export default {
 	title: "Components/Action bar",
 	component: "ActionBar",
 	argTypes: {
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isEmphasized: {
 			name: "Emphasized styling",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "Variant",
 			},
 			control: "boolean",
 		},
@@ -64,6 +58,15 @@ export default {
 		isSticky: false,
 		isFixed: false,
 		isFlexible: false,
+		customStorybookStyles: {
+			"position": "relative",
+			"display": "flex",
+			"align-items": "flex-start",
+			"gap": "20px",
+			"margin": "12px",
+			"flex-wrap": "wrap",
+			"min-inline-size": "500px",
+		},
 	},
 	parameters: {
 		actions: {
@@ -81,7 +84,7 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/file/MPtRIVRzPp2VHiEplwXL2X/S-%2F-Manual?node-id=465%3A3127&t=xbooxCWItOFgG2xM-1",
 		},
-	}
+	},
 };
 
 export const Default = Template.bind({});

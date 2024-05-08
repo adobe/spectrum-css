@@ -16,7 +16,6 @@ export const Template = ({
 	customStyles = {},
 	id,
 }) => {
-
 	// ID attribute value for the input element.
 	const inputId = id ? `${id}-input` : "switch-onoff-0";
 
@@ -42,9 +41,7 @@ export const Template = ({
 			/>
 			<span class="${rootClass}-switch"></span>
 			${label
-				? html`<label class="${rootClass}-label" for=${inputId}
-						>${label}</label
-				  >`
+				? html`<label class="${rootClass}-label" for=${inputId}>${label}</label>`
 				: ""}
 		</div>
 	`;

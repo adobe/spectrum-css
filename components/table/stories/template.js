@@ -3,6 +3,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 import { html, literal } from "lit/static-html.js";
 
+
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
@@ -225,8 +226,9 @@ export const Template = ({
 						iconName: "ArrowDown100",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
-					})}<span class="${rootClass}-columnTitle">Column title</span>${
-					Icon({
+					})}
+					<span class="${rootClass}-columnTitle">Column title</span>
+					${Icon({
 						iconName: "ChevronDown100",
 						size,
 						customClasses: [`${rootClass}-menuIcon`],

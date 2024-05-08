@@ -19,17 +19,7 @@ export const Template = ({
 	isEmphasized = false,
 	customClasses = [],
 	id,
-	...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (express) import(/* webpackPrefetch: true */ "../themes/express.css");
-		else import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -37,6 +27,7 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				"is-disabled": isDisabled,
+				"is-focus": isFocused,
 				"is-readOnly": isReadOnly,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -87,12 +78,10 @@ export const Template = ({
 						}}
 					>
 						${Icon({
-							...globals,
 							iconName: "Star",
 							customClasses: [`${rootClass}-starActive`],
 						})}
 						${Icon({
-							...globals,
 							iconName: "StarOutline",
 							customClasses: [`${rootClass}-starInactive`],
 						})}

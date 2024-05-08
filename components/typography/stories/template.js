@@ -61,19 +61,16 @@ export const Template = ({
 
 			const classes = {
 				[rootClass]: true,
-				[`${rootClass}--${glyph}`]:
-					typeof semantics !== "undefined" &&
-					typeof glyph !== "undefined" &&
-					glyph !== "sans-serif",
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof semantics !== "undefined" && typeof size !== "undefined",
-				[`${rootClass}--${weight}`]:
-					typeof semantics !== "undefined" && typeof weight !== "undefined",
+				[`${rootClass}--${glyph}`]: semantics !== "code" && typeof glyph !== "undefined" && glyph !== "sans-serif",
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof semantics !== "undefined" && typeof size !== "undefined",
+				[`${rootClass}--${weight}`]: semantics === "heading" && typeof weight !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			};
 
 			/* Variants are additive and exist within the wrapper tags */
-			if (variant && Array.isArray(variant)) {
+			if (variant) {
+				if (!Array.isArray(variant)) variant = [variant];
+
 				if (["strong", "emphasized"].every((i) => variant.includes(i))) {
 					c = html`<span
 						class=${classMap({

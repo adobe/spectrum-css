@@ -4,6 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
@@ -18,7 +19,6 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	id,
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -34,7 +34,6 @@ export const Template = ({
 	>
 		${when(iconName, () =>
 			Icon({
-				...globals,
 				iconName,
 				customClasses: [
 					...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),

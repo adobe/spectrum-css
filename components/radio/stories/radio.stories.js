@@ -1,4 +1,7 @@
 import { html } from "lit";
+import { when } from "lit/directives/when.js";
+
+import { isChecked, isDisabled, isReadOnly } from "@spectrum-css/preview/types";
 
 import { Template } from "./template";
 
@@ -33,7 +36,7 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Content",
 			},
 			control: { type: "text" },
 		},
@@ -42,46 +45,28 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "State",
+				category: "Variant",
 			},
 			control: { type: "boolean" },
 		},
-		isChecked: {
-			name: "Radio selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: { type: "boolean" },
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isReadOnly: {
-			name: "Read Only",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isChecked,
+		isDisabled,
+		isReadOnly,
 	},
 	args: {
 		rootClass: "spectrum-Radio",
 		size: "m",
-		label: "Label",
+		label: "Radio label",
 		isEmphasized: false,
 		isChecked: false,
 		isDisabled: false,
 		isReadOnly: false,
+		customStorybookStyles: {
+			"display": "flex",
+			"align-items": "flex-start",
+			"gap": "16px",
+			"flex-wrap": "wrap",
+		}
 	},
 	parameters: {
 		actions: {
@@ -94,31 +79,21 @@ export default {
 	},
 };
 
-export const Default = (args) => html`
-	<div style="display: flex; flex-direction: column; align-items: flex-start;">
-		${Template({
-			...args,
-			label: "Default"
-		})}
-		${Template({
-			...args,
-			isEmphasized: true,
-			isChecked: true,
-			label: "Emphasized radio button label that is so long it has to wrap",
-			customStyles: {
-				"max-width": "220px",
-			}
-		})}
-		${Template({
-			...args,
-			isDisabled: true,
-			label: "Disabled"
-		})}
-		${Template({
-			...args,
-			isDisabled: true,
-			isReadOnly: true,
-			label: "Read only"
-		})}
-	</div>
+const Radios = (args) => html`
+	${Template(args)}
+	${when(window.isChromatic(), () => Template({
+		...args,
+		label: "Radio label that is so long it has to wrap",
+		customStyles: {
+			"max-inline-size": "220px",
+		}
+	}))}
 `;
+
+export const Default = Radios.bind({});
+Default.args = {};
+
+export const WithForcedColors = Radios.bind({});
+WithForcedColors.parameters = {
+	chromatic: { forcedColors: "active" },
+};

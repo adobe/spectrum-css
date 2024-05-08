@@ -1,5 +1,7 @@
 import { Template } from "./template";
 
+import { isDisabled, isDragged, isFocused, isKeyboardFocused } from "@spectrum-css/preview/types";
+
 /**
  * A dial is an input control used for selecting a value within a range, similar to a slider. It's often used in audio and video mixing and editing applications, where horizontal space is limited.
  */
@@ -25,33 +27,10 @@ export default {
 			},
 			control: "text",
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDragged: {
-			name: "Dragged",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
+		isKeyboardFocused,
+		isDragged,
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-Dial",
@@ -59,6 +38,12 @@ export default {
 		isFocused: false,
 		isDragged: false,
 		isDisabled: false,
+		customStorybookStyles: {
+			"display": "flex",
+			"align-items": "flex-start",
+			"gap": "12px",
+			"flex-wrap": "wrap",
+		},
 	},
 	parameters: {
 		actions: {
@@ -73,22 +58,7 @@ export default {
 export const Default = Template.bind();
 Default.args = {};
 
-export const DefaultExpress = Template.bind();
-DefaultExpress.args = {
-	express: true,
-};
-
-export const Small = Template.bind();
-Small.args = {
-	size: "s",
-};
-
 export const WithLabel = Template.bind();
 WithLabel.args = {
 	label: "Volume",
-};
-
-export const Disabled = Template.bind();
-Disabled.args = {
-	isDisabled: true,
 };

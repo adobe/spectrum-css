@@ -24,9 +24,7 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-	...globals
 }) => {
-
 	if(isInvalid) {
 		iconName = "Alert";
 	}
@@ -49,14 +47,12 @@ export const Template = ({
 		>
 			${avatarUrl && !isInvalid
 				? Avatar({
-					...globals,
 					image: avatarUrl,
 					size: "50",
 				})
 				: ""}
 			${iconName || isInvalid
 				? Icon({
-					...globals,
 					size,
 					iconName,
 					customClasses: [`${rootClass}-itemIcon`],
@@ -65,7 +61,6 @@ export const Template = ({
 			<span class="${rootClass}-itemLabel">${label}</span>
 			${hasClearButton
 				? ClearButton({
-					...globals,
 					size,
 					customClasses: [`${rootClass}-clearButton`],
 					onclick: (evt) => {

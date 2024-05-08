@@ -5,6 +5,7 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
@@ -23,9 +24,7 @@ export const Template = ({
 	iconOnly = false,
 	customStyles = {},
 	content = [],
-	...globals
 }) => {
-
 	if (!content || !content.length) {
 		console.warn("Tabs: content required");
 		return html``;
@@ -81,8 +80,8 @@ export const Template = ({
 								tabindex="0"
 							>
 								${when(item.icon, () =>
-							Icon({ ...globals, iconName: item.icon, size })
-						)}
+									Icon({ iconName: item.icon, size })
+								)}
 								${when(
 							item.label && !iconOnly,
 							() =>
@@ -94,23 +93,21 @@ export const Template = ({
 							</div>
 						`;
 					}
-					else {
-						return item;
-					}
+					else return item;
 				}
 			), () => html`
 				${Picker({
 					isQuiet: true,
 					size,
 					isOpen,
-					placeholder: !iconOnly ? content?.[0].label : Icon({ ...globals, iconName: content?.[0].icon, size }),
+					placeholder: !iconOnly ? content?.[0].label : Icon({ iconName: content?.[0].icon, size }),
 					name: content?.[0].label,
 					id: "tab-selector",
 					customPopoverStyles: {
 						insetBlockStart: "24px",
 					},
 					content: [
-						() => Menu({
+						Menu({
 							selectionMode: "none",
 							size,
 							role: "listbox",

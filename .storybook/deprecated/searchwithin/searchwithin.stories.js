@@ -163,7 +163,6 @@ const Template = ({
 	size = "m",
 	label,
 	placeholder,
-	...globals
 }) => html`
 		<!-- Note: Only values that differ in express theme are included -->
 	<style>
@@ -182,7 +181,6 @@ const Template = ({
 		style=${ifDefined(styleMap(customStyles))}
 	>
 		${Picker({
-			...globals,
 			size,
 			placeholder: label,
 			label: undefined,
@@ -196,7 +194,6 @@ const Template = ({
 			customClasses: [`${rootClass}-picker`],
 		})}
 		${Textfield({
-			...globals,
 			size,
 			autocomplete: false,
 			name: "search",
@@ -210,12 +207,10 @@ const Template = ({
 			isKeyboardFocused,
 		})}
 		${ClearButton({
-			...globals,
 			size,
 			customClasses: [`${rootClass}-clearButton`],
 		})}
 		${Popover({
-			...globals,
 			isOpen: isOpen,
 			withTip: false,
 			position: "bottom",
@@ -226,7 +221,6 @@ const Template = ({
 			},
 			content: [
 				Menu({
-					...globals,
 					items: [
 						{ label: "Deselect" },
 						{ label: "Select Inverse" },

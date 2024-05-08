@@ -1,8 +1,8 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
+
+import { isFocused, isOpen } from "@spectrum-css/preview/types";
+
 import { Template } from "./template";
+
 
 /**
  * Tooltips show contextual help or information about specific components when a user hovers or focuses on them.
@@ -46,11 +46,11 @@ export default {
 			control: "text",
 		},
 		variant: {
-			name: "Variant",
+			name: "Style",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Variant",
 			},
 			options: ["neutral", "info", "positive", "negative"],
 			control: "inline-radio",
@@ -61,29 +61,14 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Variant",
 			},
 			options: placementOptions,
 			control: "select",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-				disable: true,
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "showOnHover", truthy: true },
 		},
 		showOnHover: {
@@ -91,8 +76,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
-				disable: true,
+				category: "State",
 			},
 			control: "boolean",
 		},
@@ -101,7 +85,7 @@ export default {
 		rootClass: "spectrum-Tooltip",
 		isOpen: true,
 		isFocused: false,
-		showOnHover: false,
+		showOnHover: true,
 		variant: "neutral",
 		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	},
@@ -112,78 +96,12 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		states: {
+			isOpen: false,
+			showOnHover: false,
+		}
 	},
-	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 14px 14px;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div
-				style=${styleMap({
-					"display": "flex",
-					"flex-direction": "column",
-					"align-items": "flex-start",
-					"gap": "16px",
-					"--mod-detail-margin-end": "4.8px",
-				})}
-			>
-				${Story(context)}
-			</div>
-		`,
-	],
 };
 
-const PlacementVariants = (args) => html`
-	${window.isChromatic()
-		? html`
-			${placementOptions.map(option => {
-				const optionDescription = () => {
-					if (option.startsWith("start") || option.startsWith("end"))
-						return "Changes side with text direction (like a logical property)";
-					if (option.startsWith("left") || option.startsWith("right"))
-						return "Text direction does not effect the position";
-					return null;
-				};
-
-				return html`
-					<div class="spectrum-Typography">
-						${Typography({
-							semantics: "detail",
-							size: "l",
-							content: [`${option}`],
-						})}
-						<div
-							style=${styleMap({
-									"display": "flex",
-									"flex-direction": "column",
-									"gap": "4.8px",
-								})}
-							>
-							${when(optionDescription() !== null, () => html`
-								${Typography({
-									semantics: "detail",
-									size: "s",
-									content: [`${optionDescription()}`],
-								})}
-							`)}
-							${Template({
-								...args,
-								placement: option,
-							})}
-						</div>
-					</div>
-				`;
-			})}`
-		: Template(args)
-	}
-`;
-
-export const Default = PlacementVariants.bind({});
+export const Default = Template.bind({});
 Default.args = {};

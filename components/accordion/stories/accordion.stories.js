@@ -1,9 +1,12 @@
 import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { Template } from "./template.js";
+import { isActive, isDisabled, isFocused, isHovered } from "@spectrum-css/preview/types";
+
+import { Template } from "./template";
+
+import { Template as Link } from "@spectrum-css/link/stories/template";
+import { Template as Typography } from "@spectrum-css/typography/stories/template";
 
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
@@ -24,30 +27,30 @@ export default {
 			control: "select",
 		},
 		disableAll: {
+			...isDisabled,
 			name: "Disable all items",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
 		},
+		isHovered,
+		isFocused,
+		isActive,
 		density: {
 			name: "Density",
-			type: { name: "string", required: true },
+			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Variant",
 			},
-			options: ["compact", "regular", "spacious"],
-			control: "select",
+			options: ["compact", "spacious"],
+			control: "inline-radio",
 		},
 	},
 	args: {
 		rootClass: "spectrum-Accordion",
 		size: "m",
-		density: "regular",
 		disableAll: false,
+		isHovered: false,
+		isFocused: false,
+		isActive: false,
 		/* Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions. */
 		items: new Map([
 			[
@@ -136,6 +139,12 @@ export default {
 				},
 			]
 		]),
+		customStorybookStyles: {
+			"display": "flex",
+			"flex-direction": "column",
+			"align-items": "flex-start",
+			"gap": "20px",
+		},
 	},
 	parameters: {
 		actions: {
@@ -148,25 +157,18 @@ export default {
 };
 
 const AccordionGroup = (args) => html`
-	${window.isChromatic() ? html`
-		<div style=${styleMap({
-			"display": "flex",
-			"flex-wrap": "wrap",
-			"gap": "28px"
-		})}>
-			${Template(args)}
-			${Template({
-				...args,
-				customStyles: {
-					maxInlineSize: "300px",
-				},
-			})}
-			${Template({
-				...args,
-				disableAll: true,
-			})}
-		</div>
-	` : Template(args)}
+	${Template(args)}
+	${when(window.isChromatic(), () => Template({
+		...args,
+		customStyles: {
+			...(args.customStyles ?? {}),
+			maxInlineSize: "300px",
+		},
+	}))}
+	${when(window.isChromatic(), () => Template({
+		...args,
+		disableAll: true,
+	}))}
 `;
 
 export const Default = AccordionGroup.bind({});

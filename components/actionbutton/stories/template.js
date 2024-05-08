@@ -36,58 +36,52 @@ export const Template = ({
 	id,
 	testId,
 	role,
-	...globals
-}) => {
-
-	return html`
-		<button
-			aria-label=${ifDefined(label)}
-			aria-haspopup=${hasPopup ? "true" : "false"}
-			aria-pressed=${isSelected ? "true" : "false"}
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--emphasized`]: isEmphasized,
-				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
-					typeof staticColor !== "undefined",
-				["is-disabled"]: isDisabled,
-				["is-selected"]: isSelected,
-				["is-hover"]: isHovered,
-				["is-focus-visible"]: isFocused,
-				["is-active"]: isActive,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-			data-testid=${ifDefined(testId)}
-			role=${ifDefined(role)}
-			style=${ifDefined(styleMap(customStyles))}
-			?disabled=${isDisabled}
-			@click=${onclick}
-		>
-			${when(hasPopup, () =>
-				Icon({
-					...globals,
-					size,
-					iconName: "CornerTriangle",
-					setName: "ui",
-					customClasses: [`${rootClass}-hold`],
-				})
-			)}
-			${when(iconName, () =>
-				Icon({
-					...globals,
-					size,
-					iconName,
-					setName: iconSet,
-					customClasses: [`${rootClass}-icon`, ...customIconClasses],
-				})
-			)}
-			${when(
-				label && !hideLabel,
-				() => html`<span class="${rootClass}-label">${label}</span>`
-			)}
-		</button>
-	`;
-};
+}) => html`
+	<button
+		aria-label=${ifDefined(label)}
+		aria-haspopup=${hasPopup ? "true" : "false"}
+		aria-pressed=${isSelected ? "true" : "false"}
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			[`${rootClass}--quiet`]: isQuiet,
+			[`${rootClass}--emphasized`]: isEmphasized,
+			[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+				typeof staticColor !== "undefined",
+			["is-disabled"]: isDisabled,
+			["is-selected"]: isSelected,
+			["is-hover"]: isHovered,
+			["is-focus-visible"]: isFocused,
+			["is-active"]: isActive,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		id=${ifDefined(id)}
+		data-testid=${ifDefined(testId)}
+		role=${ifDefined(role)}
+		style=${ifDefined(styleMap(customStyles))}
+		?disabled=${isDisabled}
+		@click=${onclick}
+	>
+		${when(hasPopup, () =>
+			Icon({
+				size,
+				iconName: "CornerTriangle",
+				setName: "ui",
+				customClasses: [`${rootClass}-hold`],
+			})
+		)}
+		${when(iconName, () =>
+			Icon({
+				size,
+				iconName,
+				setName: iconSet,
+				customClasses: [`${rootClass}-icon`, ...customIconClasses],
+			})
+		)}
+		${when(
+			label && !hideLabel,
+			() => html`<span class="${rootClass}-label">${label}</span>`
+		)}
+	</button>
+`;

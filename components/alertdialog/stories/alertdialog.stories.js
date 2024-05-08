@@ -35,6 +35,7 @@ export default {
 			control: "boolean",
 		},
 		variant: { table: { disable: true } },
+		buttons: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-AlertDialog",

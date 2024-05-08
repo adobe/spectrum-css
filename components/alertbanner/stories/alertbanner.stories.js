@@ -74,9 +74,7 @@ const AlertBannerGroup = (args) => html`
 			"gap": "16px",
 		})}
 	>
-		${Template({
-			...args,
-		})}
+		${Template(args)}
 		${window.isChromatic() ?
 		Template({
 			...args,

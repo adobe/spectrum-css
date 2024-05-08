@@ -12,6 +12,14 @@
  */
 
 body {
+	--spectrum-font-family-ar: myriad-arabic, adobe-clean, 'Source Sans Pro', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+	--spectrum-font-family-he: myriad-hebrew, adobe-clean, 'Source Sans Pro', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, ubuntu, 'Trebuchet MS', 'Lucida Grande', sans-serif;
+
+	--spectrum-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-font-style: var(--spectrum-default-font-style);
+
+	min-block-size: 100%;
+
 	margin: 0;
 	background-color: var(--spectrum-background-layer-2-color);
 	color: var(--spectrum-neutral-content-color-default);
@@ -19,6 +27,14 @@ body {
 	font-family: var(--spectrum-sans-font-family-stack);
 	font-style: var(--spectrum-default-font-style);
 	font-size: 16px;
+
+	&:lang(ar) {
+	  font-family: var(--spectrum-font-family-ar);
+	}
+
+	&:lang(he) {
+	  font-family: var(--spectrum-font-family-he);
+	}
 }
 
 .spectrum {
@@ -26,10 +42,17 @@ body {
 
 	/* @todo: add back the text color and update VRTs */
 	/* color: var(--spectrum-neutral-content-color-default); */
+
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0%);
+
+	font-size: var(--spectrum-font-size, var(--spectrum-font-size-100, 16px));
 }
 
 /* Hide the SVG elements that only include references */
 svg:has(symbol):not(:has(use)) {
 	display: none;
+}
+
+.docs-story > div:first-child {
+	padding: 0;
 }

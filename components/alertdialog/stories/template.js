@@ -1,8 +1,9 @@
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
+
+import { useArgs } from "@storybook/preview-api";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
@@ -23,7 +24,6 @@ export const Template = ({
 	variant,
 	icon = false,
 	id,
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
@@ -41,56 +41,48 @@ export const Template = ({
       aria-labelledby="dialog_label"
     >
       <div class="${rootClass}-grid">
-      <div class="spectrum-AlertDialog-header">
+      <div class="${rootClass}-header">
         <h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
         ${when(icon, () => Icon({
           size: "m",
           iconName: "Alert",
           customClasses: [`${rootClass}-icon`],
-          ...globals,
         })) }
       </div>
       ${Divider({
-            horizontal: true,
-            customClasses: [`${rootClass}-divider`],
-            ...globals,
-          })}
+        horizontal: true,
+        customClasses: [`${rootClass}-divider`],
+      })}
       <section class="${rootClass}-content">${content}</section>
       ${ButtonGroup({
-          items: buttons,
-          onclick: () => {
-            updateArgs({ isOpen: !isOpen });
-          },
-        })
-      }
+        items: buttons,
+        onclick: () => {
+          updateArgs({ isOpen: !isOpen });
+        },
+      })}
       </div>
     </div>
   `;
 
 	return  html`
-    ${Underlay({
-      ...globals,
-      isOpen,
-    })}
+    ${Underlay({ isOpen })}
     ${Button({
-      ...globals,
       size: "m",
       variant: "secondary",
       label: "Click to open Alert Dialog",
       treatment: "outline",
       customClasses: [],
       customStyles: {
-        position: "absolute",
-        insetInlineStart: "50%",
-        insetBlockStart: "50%",
-        transform: "translate(-50%, -50%)",
+        "position": "absolute",
+        "inset-inline-start": "50%",
+        "inset-block-start": "50%",
+        "transform": "translate(-50%, -50%)",
       },
       onclick: () => {
         updateArgs({ isOpen: !isOpen });
       },
     })}
     ${Modal({
-      ...globals,
       isOpen,
       content: Dialog,
     })}

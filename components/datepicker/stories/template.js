@@ -25,14 +25,16 @@ export const Template = ({
 	isDisabled = false,
 	isRequired = false,
 	readOnly = false,
+	month,
 	selectedDay,
 	lastDay,
-	...globals
+	year,
 }) => {
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
-
+	const selectedDate = month && selectedDay && year ? new Date(`${month} ${selectedDay}, ${year}`).toLocaleDateString(lang) : undefined;
+	const lastDateRange = month && lastDay && year ? new Date(`${month} ${lastDay}, ${year}`).toLocaleDateString(lang) : undefined;
 
 	return html`
 		<div
@@ -55,39 +57,41 @@ export const Template = ({
 			aria-haspopup="dialog"
 		>
 			${TextField({
-				...globals,
 				size: "m",
 				isQuiet,
 				isDisabled,
 				isReadOnly: readOnly,
 				isInvalid: !isRange ? isInvalid : undefined,
 				customClasses: [`${rootClass}-textfield`],
-				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
+				customInputClasses: isRange
+					? [`${rootClass}-input`, `${rootClass}-startField`]
+					: [`${rootClass}-input`],
 				placeholder: "Choose a date",
 				name: "field",
-				value: selectedDay ? new Date(selectedDay).toLocaleDateString(lang) : undefined,
+				value: selectedDate,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
 			})}
-			${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
-			${when(isRange, () => TextField({
-				...globals,
-				size: "m",
-				isQuiet,
-				isDisabled,
-				isInvalid,
-				isReadOnly: readOnly,
-				customClasses: [`${rootClass}-textfield`],
-				customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
-				placeholder: "Choose a date",
-				name: "field",
-				value: lastDay
-					? new Date(lastDay).toLocaleDateString(lang)
-					: undefined,
-			}))}
+			${when(
+				isRange,
+				() => html`
+					<div class="${rootClass}-rangeDash"></div>
+					${TextField({
+						size: "m",
+						isQuiet,
+						isDisabled,
+						isInvalid,
+						isReadOnly: readOnly,
+						customClasses: [`${rootClass}-textfield`],
+						customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
+						placeholder: "Choose a date",
+						name: "field",
+						value: lastDateRange,
+					})}
+				`
+			)}
 			${PickerButton({
-				...globals,
 				customClasses: [`${rootClass}-button`],
 				size: "m",
 				iconType: "workflow",
@@ -104,7 +108,6 @@ export const Template = ({
 				},
 			})}
 			${Popover({
-				...globals,
 				isOpen: isOpen && !isDisabled && !readOnly,
 				withTip: false,
 				position: "bottom",
@@ -117,7 +120,15 @@ export const Template = ({
 							width: undefined,
 					}
 					: {},
-				content: [Calendar(globals)],
+				content: [
+					Calendar({
+						month,
+						selectedDay,
+						lastDay,
+						year,
+						isDisabled,
+					})
+				],
 				// @todo this implementation of calendar does not currently display range selections or selected date on first load
 			})}
 		</div>
