@@ -1,8 +1,37 @@
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 import { Template } from "./template";
 
 /**
  * Tooltips show contextual help or information about specific components when a user hovers or focuses on them.
  */
+const placementOptions = [
+	"top",
+	"top-left",
+	"top-right",
+	"top-start",
+	"top-end",
+	"bottom",
+	"bottom-left",
+	"bottom-right",
+	"bottom-start",
+	"bottom-end",
+	"right",
+	"right-bottom",
+	"right-top",
+	"left",
+	"left-bottom",
+	"left-top",
+	"start",
+	"start-top",
+	"start-bottom",
+	"end",
+	"end-top",
+	"end-bottom",
+];
+
 export default {
 	title: "Components/Tooltip",
 	component: "Tooltip",
@@ -28,35 +57,13 @@ export default {
 		},
 		placement: {
 			name: "Placement",
+			description: "The placement of the tooltip relative to the source. Note that placements that start with Left/Right do not change with text direction, but Start/End placements do.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: [
-				"top",
-				"top-left",
-				"top-right",
-				"top-start",
-				"top-end",
-				"bottom",
-				"bottom-left",
-				"bottom-right",
-				"bottom-start",
-				"bottom-end",
-				"right",
-				"right-bottom",
-				"right-top",
-				"left",
-				"left-bottom",
-				"left-top",
-				"start",
-				"start-top",
-				"start-bottom",
-				"end",
-				"end-top",
-				"end-bottom",
-			],
+			options: placementOptions,
 			control: "select",
 		},
 		isOpen: {
@@ -106,7 +113,77 @@ export default {
 			type: "migrated",
 		},
 	},
+	decorators: [
+		(Story, context) => html`
+			<style>
+				.spectrum-Detail { display: inline-block; }
+				.spectrum-Typography > div {
+					border: 1px solid var(--spectrum-gray-200);
+					border-radius: 4px;
+					padding: 0 14px 14px;
+					/* Why seafoam? Because it separates it from the component styles. */
+					--mod-detail-font-color: var(--spectrum-seafoam-900);
+				}
+			</style>
+			<div
+				style=${styleMap({
+					"display": "flex",
+					"flex-direction": "column",
+					"align-items": "flex-start",
+					"gap": "16px",
+					"--mod-detail-margin-end": "4.8px",
+				})}
+			>
+				${Story(context)}
+			</div>
+		`,
+	],
 };
 
-export const Default = Template.bind({});
+const PlacementVariants = (args) => html`
+	${window.isChromatic()
+		? html`
+			${placementOptions.map(option => {
+				const optionDescription = () => {
+					if (option.startsWith("start") || option.startsWith("end"))
+						return "Changes side with text direction (like a logical property)";
+					if (option.startsWith("left") || option.startsWith("right"))
+						return "Text direction does not effect the position";
+					return null;
+				};
+
+				return html`
+					<div class="spectrum-Typography">
+						${Typography({
+							semantics: "detail",
+							size: "l",
+							content: [`${option}`],
+						})}
+						<div
+							style=${styleMap({
+									"display": "flex",
+									"flex-direction": "column",
+									"gap": "4.8px",
+								})}
+							>
+							${when(optionDescription() !== null, () => html`
+								${Typography({
+									semantics: "detail",
+									size: "s",
+									content: [`${optionDescription()}`],
+								})}
+							`)}
+							${Template({
+								...args,
+								placement: option,
+							})}
+						</div>
+					</div>
+				`;
+			})}`
+		: Template(args)
+	}
+`;
+
+export const Default = PlacementVariants.bind({});
 Default.args = {};
