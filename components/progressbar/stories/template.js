@@ -1,8 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
@@ -12,28 +11,28 @@ export const Template = ({
 	rootClass = "spectrum-ProgressBar",
 	customClasses = [],
 	labelPosition,
-	staticColor,
+	isStaticWhite,
 	customWidth,
-	indeterminate,
+	isIndeterminate = false,
 	label,
 	value,
-	customStyles = {},
+	customStyles = {
+		width: customWidth ? `${customWidth}px` : "",
+	},
 	size = "m",
 	...globals
 }) => html`
+	<div>
 		<div
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--${labelPosition}Label`]: typeof labelPosition !== "undefined",
-				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
-				[`${rootClass}--${indeterminate}`]: typeof indeterminate !== "undefined",
+				[`${rootClass}--staticWhite`]: isStaticWhite,
+				[`${rootClass}--indeterminate`]: isIndeterminate,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap({
-				"width": customWidth,
-				...customStyles,
-			})}
+			style=${ifDefined(styleMap(customStyles))}
 			value="${value}%"
 			role="progressbar"
 			aria-valuenow="${value}%"
@@ -50,7 +49,7 @@ export const Template = ({
 			${FieldLabel({
 				...globals,
 				size,
-				label: indeterminate ? "" : `${value}%`,
+				label: isIndeterminate ? "" : `${value}%`,
 				alignment: "",
 				customClasses: [`${rootClass}-percentage`],
 			})}
@@ -58,4 +57,5 @@ export const Template = ({
 				<div class="${rootClass}-fill" style="width: ${value}%;"></div>
 			</div>
 		</div>
-	`;
+	</div>
+`;
