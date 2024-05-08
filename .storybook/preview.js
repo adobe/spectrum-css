@@ -191,7 +191,7 @@ export const parameters = {
 	options: {
 		storySort: {
 			method: "alphabetical",
-			order: ['Guides', ['Contributing', '*', 'Adobe Code of Conduct', 'Changelog'], 'Components', ['Docs', 'Default', '*'], '*'],
+			order: ["Guides", ["Contributing", "*", "Adobe Code of Conduct", "Changelog"], "Components", ["*", ["Docs", "Default", "*"]], "*"],
 			includeNames: true,
 		},
 	},

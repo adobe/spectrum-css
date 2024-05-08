@@ -7,6 +7,9 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import "@spectrum-css/quickaction/dist/index-vars.css";
 import "@spectrum-css/quickaction/dist/vars.css";
 
+/**
+ * **This component is deprecated.** Please use an action bar to allow users to perform actions on either a single or multiple items at the same time, instead.
+ */
 export default {
 	title: "Deprecated/Quick actions",
 	component: "QuickAction",

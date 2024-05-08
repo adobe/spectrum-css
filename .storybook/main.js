@@ -11,8 +11,10 @@ const componentPkgs = readdirSync(componentsPath, {
 module.exports = {
 	stories: [
 		"../components/*/stories/*.stories.js",
+		"../components/*/stories/*.mdx",
 		"./guides/*.mdx",
 		"./deprecated/*/*.stories.js",
+		"./deprecated/*/*.mdx",
 	],
 	rootDir: "../",
 	staticDirs: ["../assets"],
@@ -21,13 +23,14 @@ module.exports = {
 			name: "@storybook/addon-essentials",
 			// Supported booleans: actions, controls, docs, toolbars, measure, outline.
 			options: {
-				viewport: false,
 				// Don't need viewports b/c the medium/large contexts are used to support scaling.
-				backgrounds: false,
+				viewport: false,
 				// Don't need backgrounds b/c this is handled by the color contexts.
-				configureJSX: true,
+				backgrounds: false,
 				// Enables JSX support in MDX for projects that aren't configured to handle the format.
-				transcludeMarkdown: true, // Support markdown in MDX files.
+				configureJSX: true,
+				// Support markdown in MDX files.
+				transcludeMarkdown: true,
 			},
 		},
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y

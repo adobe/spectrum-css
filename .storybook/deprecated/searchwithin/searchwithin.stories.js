@@ -13,6 +13,9 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import "@spectrum-css/searchwithin/dist/index-vars.css";
 import "@spectrum-css/searchwithin/dist/vars.css";
 
+/**
+ * **This component is deprecated.** Please use a search field with a separate control to filter the search instead.
+ */
 export default {
 	title: "Deprecated/Search within",
 	component: "SearchWithin",
