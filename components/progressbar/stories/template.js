@@ -12,7 +12,7 @@ export const Template = ({
 	rootClass = "spectrum-ProgressBar",
 	customClasses = [],
 	labelPosition,
-	staticColor,
+	isStaticWhite,
 	customWidth,
 	isIndeterminate = false,
 	label,

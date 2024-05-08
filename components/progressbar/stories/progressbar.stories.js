@@ -21,12 +21,12 @@ export default {
 		customWidth: {
 			name: "Custom width",
 			defaultValue: 192,
-			description: "Adjust the width of the component between 48px and 768px. 192px is the default width on desktop, while 240px is the default on mobile.",
+			description: "A number to adjust the width of the component. Spectrum 2 specifications limit the component width to be between 48px and 768px.",
 			type: { name: "number" },
 			table: {
 				type: { summary: "number" },
 				category: "Component",
-				defaultValue: { summary: 192 },
+				defaultValue: { summary: 200 },
 			},
 			control: { type: "range", min: 48, max: 768,},
 		},
@@ -87,7 +87,7 @@ export default {
 		label: "Loading",
 		labelPosition: "top",
 		value: 0,
-		customWidth: 192,
+		customWidth: 200,
 		isIndeterminate: false,
 		showValueLabel: true,
 	},
@@ -99,6 +99,31 @@ export default {
 		packageJson,
 		metadata,
 	},
+	decorators: [
+		(Story, context) => html`
+			<style>
+				.spectrum-Detail { display: inline-block; }
+				.spectrum-Typography > div {
+					border: 1px solid var(--spectrum-gray-200);
+					border-radius: 4px;
+					padding: 0 1em 1em;
+					/* Why seafoam? Because it separates it from the component styles. */
+					--mod-detail-font-color: var(--spectrum-seafoam-900);
+				}
+			</style>
+			<div
+				style=${styleMap({
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "flex-start",
+					gap: "1rem",
+					"--mod-detail-margin-end": ".3rem",
+				})}
+			>
+				${Story(context)}
+			</div>
+		`,
+	],
 };
 
 /**
