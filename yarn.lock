@@ -5703,7 +5703,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tokens@npm:^14.0.0, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "@spectrum-css/tokens@npm:14.0.0"
+  checksum: 10c0/59b9a49c01b939035af8e73fec914f18cbd18eae17815fb8ce93a0c2e3b1217d21a20f8b697a6ac7b4d135d5dca52f985d6556e5f9c2a9f52698ce0c5dd401b1
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
