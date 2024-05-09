@@ -316,14 +316,22 @@ async function fetchContent(globs = [], {
  * @param {string} [config.cwd=] - Current working directory for the component being built
  * @returns Promise<string|void>
  */
-async function copy(from, to, { cwd } = {}) {
+async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 	if (!fs.existsSync(from)) return;
+
+	if (!fs.existsSync(path.dirname(to))) {
+		await fsp.mkdir(path.dirname(to), { recursive: true }).catch((err) => {
+			if (!err) return;
+			console.log(`${"✗".red}  problem making the ${relativePrint(path.dirname(to), { cwd }).yellow} directory`);
+			return Promise.reject(err);
+		});
+	}
 
 	const content = await fsp.readFile(from, { encoding: "utf-8" });
 	if (!content) return;
 	/** @todo add support for injecting a deprecation notice as a comment after the copyright */
 	return fsp.writeFile(to, content, { encoding: "utf-8" })
-		.then(() => `${"✓".green}  ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${"-- deprecated --".gray}`)
+		.then(() => `${"✓".green}  ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${isDeprecated ? "-- deprecated --".gray : ""}`)
 		.catch((err) => {
 			if (!err) return;
 			console.log(`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
@@ -355,7 +363,9 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 	// Nothing to do if there's no input file
 	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
+	const componentName = cwd?.split(path.sep)?.pop();
 	const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
+	const hasThemes = fs.existsSync(path.join(cwd, "themes"));
 
 	return Promise.all([
 		// This was buildCSS
@@ -376,6 +386,19 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 			clean,
 			lint: false,
 		}),
+		// This was buildCSSWithoutThemes
+		hasThemes ? processCSS(content, path.join(cwd, "index.css"), path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), {
+			cwd,
+			clean,
+			lint: false,
+			map: false,
+			env: "production",
+			splitinatorOptions: {
+				referencesOnly: true,
+			},
+		}).then(async (reports) => {
+			return copy(path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), path.join(dirs.root, "tokens", "dist/css/components/bridge", `${componentName}.css`), { cwd, isDeprecated: false }).then(r => [...reports, r]);
+		}) : Promise.resolve(),
 	]);
 }
 
@@ -397,13 +420,15 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	return Promise.all(
 		contentData.map(async ({ content, input }) => {
 			const promises = [
-				processCSS(content, path.join(cwd, input), path.join(cwd, "dist", input), { cwd, clean, lint: false }).then(async (reports) => {
+				processCSS(content, path.join(cwd, input), path.join(cwd, "dist", input), { cwd, clean, lint: false }),
+				processCSS(content, path.join(cwd, input), path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`), { cwd, clean, lint: false, env: "production", map: false }).then(async (reports) => {
 					// Copy the build express & spectrum component tokens to the tokens package folder in src and dist output
 					// (dist included b/c tokens are typically built before components in the build order)
-					return Promise.all([
-						copy(path.join(cwd, "dist", input), path.join(dirs.root, "tokens", `custom-${path.basename(input, ".css")}`, "components", `${componentName}.css`), { cwd }),
-						copy(path.join(cwd, "dist", input), path.join(dirs.root, "tokens", "dist/css", path.basename(input, ".css"), "components", `${componentName}.css`), { cwd }),
-					]).then(r => [...reports, r.flat(Infinity)]);
+					return copy(
+						path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`),
+						path.join(dirs.root, "tokens", "dist/css", "components", path.basename(input, ".css"), `${componentName}.css`),
+						{ cwd, isDeprecated: false }
+					).then(r => [...reports, r]);
 				}),
 			];
 

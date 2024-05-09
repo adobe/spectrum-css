@@ -4,8 +4,33 @@
 
 ## Installation
 
+Add the dependency to your project:
+
 ```sh
 npm install postcss-splitinator
+```
+
+or
+
+```sh
+yarn add -DW postcss-splitinator
+```
+
+Use the plugin in your PostCSS configuration:
+
+```js
+module.exports = {
+  plugins: [
+    require("postcss-splitinator")({
+      // options
+    }),
+  ],
+};
+```
+
+or as part of your CLI command:
+
+```sh
 postcss -u postcss-splitinator -o dist/index.css src/index.css
 ```
 
@@ -27,33 +52,37 @@ Whether to avoid including flat variables in the output.
 
 Whether to avoid including selectors that use the flat variables in the output.
 
+### `options.referencesOnly = false`
+
+This option will only output those variables that are referencing the newly created system variabes and not the system variables themselves. This can be used as a bridge between an old and new implementation for the component.
+
 ## Usage
 
 This plugin turns this:
 
 ```css
 @container (--system: spectrum) {
-	.component {
-		--background-color: blue;
-	}
-	.component.is-selected {
-		--background-color: darkblue;
-	}
-	.component .icon {
-		--color: gray;
-	}
+  .component {
+    --background-color: blue;
+  }
+  .component.is-selected {
+    --background-color: darkblue;
+  }
+  .component .icon {
+    --color: gray;
+  }
 }
 
 @container (--system: express) {
-	.component {
-		--background-color: purple;
-	}
-	.component.is-selected {
-		--background-color: darkpurple;
-	}
-	.component .icon {
-		--color: white;
-	}
+  .component {
+    --background-color: purple;
+  }
+  .component.is-selected {
+    --background-color: darkpurple;
+  }
+  .component .icon {
+    --color: white;
+  }
 }
 ```
 
@@ -61,20 +90,20 @@ Into this:
 
 ```css
 .spectrum {
-	--system-component-background-color: blue;
-	--system-component-selected-background-color: darkblue;
+  --system-component-background-color: blue;
+  --system-component-selected-background-color: darkblue;
 }
 
 .spectrum--express {
-	--system-component-background-color: purple;
-	--system-component-selected-background-color: darkpurple;
+  --system-component-background-color: purple;
+  --system-component-selected-background-color: darkpurple;
 }
 
 .component {
-	--background-color: var(--system-component-background-color);
+  --background-color: var(--system-component-background-color);
 }
 
 .component.is-selected {
-	--background-color: var(--system-component-selected-background-color);
+  --background-color: var(--system-component-selected-background-color);
 }
 ```
