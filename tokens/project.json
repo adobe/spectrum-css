@@ -19,8 +19,7 @@
 				"commands": [
 					"postcss ./custom-express/*.css --dir ./dist/css/express/",
 					"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
-					"postcss ./custom-express/components/*.css --dir ./dist/css/express/components/",
-					"postcss ./custom-spectrum/components/*.css --dir ./dist/css/spectrum/components/",
+					"cp -r ./components ./dist/css/components",
 					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
 					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css",
 					"find dist -type f -empty -delete"
