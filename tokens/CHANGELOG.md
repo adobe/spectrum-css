@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.1.0-alpha.0
+
+### Minor Changes
+
+- feat: adding component-specific theme mappings and new bridge files to support S1 and S2 in tandem
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
