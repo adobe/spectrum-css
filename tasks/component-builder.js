@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/* eslint-disable no-console */
+
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
@@ -86,7 +88,7 @@ async function extractProperties(
 	content,
 	regex = /(--mod-(?:\w|-)+)(?!:|\w|-)/g
 ) {
-    if (!content) return new Set();
+	if (!content) return new Set();
 
 	// assign the matches to an array through the spread operator and map the results to the first capture group
 	return new Set([...content.matchAll(regex)].map((match) => match[1]) ?? []);
@@ -99,83 +101,83 @@ async function extractProperties(
  * @returns Promise<string|string[]|void>
  */
 async function extractModifiers(filepath, { cwd } = {}) {
-    if (!fs.existsSync(filepath)) return Promise.resolve();
+	if (!fs.existsSync(filepath)) return Promise.resolve();
 
-    const content = await fsp.readFile(filepath, { encoding: "utf-8" });
+	const content = await fsp.readFile(filepath, { encoding: "utf-8" });
 
-    /* Remove duplicates using a Set and sort the results (default is alphabetical) */
-    const found = await extractProperties(content);
-    const spectrum = await extractProperties(content, /(--spectrum-(?:\w|-)+)(?!:|\w|-)/g);
-    const system = await extractProperties(content, /(--system-(?:\w|-)+)(?!:|\w|-)/g);
-    const highContrast = await extractProperties(content, /(--highcontrast-(?:\w|-)+)(?!:|\w|-)/g);
+	/* Remove duplicates using a Set and sort the results (default is alphabetical) */
+	const found = await extractProperties(content);
+	const spectrum = await extractProperties(content, /(--spectrum-(?:\w|-)+)(?!:|\w|-)/g);
+	const system = await extractProperties(content, /(--system-(?:\w|-)+)(?!:|\w|-)/g);
+	const highContrast = await extractProperties(content, /(--highcontrast-(?:\w|-)+)(?!:|\w|-)/g);
 
-    const selectors = new Set();
-    const root = postcss.parse(content);
-    root.walkRules(rule => {
-        if (rule.selector) selectors.add(rule.selector);
-    });
+	const selectors = new Set();
+	const root = postcss.parse(content);
+	root.walkRules(rule => {
+		if (rule.selector) selectors.add(rule.selector);
+	});
 
-    if (!fs.existsSync(path.join(cwd, "dist"))) {
-        fs.mkdirSync(path.join(cwd, "dist"));
-    }
+	if (!fs.existsSync(path.join(cwd, "dist"))) {
+		fs.mkdirSync(path.join(cwd, "dist"));
+	}
 
-    const promises = [];
-    if (found.size > 0) {
-        // If the metadata folder doesn't exist, create it
-        if (!fs.existsSync(path.join(cwd, "metadata"))) {
-            fs.mkdirSync(path.join(cwd, "metadata"));
-        }
+	const promises = [];
+	if (found.size > 0) {
+		// If the metadata folder doesn't exist, create it
+		if (!fs.existsSync(path.join(cwd, "metadata"))) {
+			fs.mkdirSync(path.join(cwd, "metadata"));
+		}
 
-        promises.push(
-            fsp.writeFile(
-                path.join(cwd, `metadata/mods.md`),
-                (await prettier.format(
-                    [
-                        "| Modifiable custom properties |\n| --- |",
-                        ...[...found].sort().map((result) => `| \`${result}\` |`),
-                    ].join("\n"),
-                    { parser: "markdown" }
-                )),
-                { encoding: "utf-8" }
-            )
-            .then(() => `${"✓".green}  ${"metadata/mods.md".padEnd(20, " ").yellow}  ${'-- deprecated --'.gray}`)
-            .catch((err) => {
-                if (!err) return;
-                console.log(`${"✗".red}  ${"metadata/mods.md".yellow} not written`);
-                return Promise.reject(err);
-            })
-        );
-    }
+		promises.push(
+			fsp.writeFile(
+				path.join(cwd, "metadata/mods.md"),
+				(await prettier.format(
+					[
+						"| Modifiable custom properties |\n| --- |",
+						...[...found].sort().map((result) => `| \`${result}\` |`),
+					].join("\n"),
+					{ parser: "markdown" }
+				)),
+				{ encoding: "utf-8" }
+			)
+				.then(() => `${"✓".green}  ${"metadata/mods.md".padEnd(20, " ").yellow}  ${"-- deprecated --".gray}`)
+				.catch((err) => {
+					if (!err) return;
+					console.log(`${"✗".red}  ${"metadata/mods.md".yellow} not written`);
+					return Promise.reject(err);
+				})
+		);
+	}
 
-    promises.push(
-        fsp.writeFile(
-            path.join(cwd, `dist/metadata.json`),
-            (await prettier.format(
-                JSON.stringify({
-                    selectors: [...selectors].sort(),
-                    mods: [...found].sort(),
-                    spectrum: [...spectrum].sort(),
-                    system: [...system].sort(),
-                    a11y: [...highContrast].sort(),
-                }, null, 2),
-                { parser: "json" }
-            )),
-            { encoding: "utf-8" }
-        ).then(() => {
-            const stats = fs.statSync(path.join(cwd, `dist/metadata.json`));
-            return [
+	promises.push(
+		fsp.writeFile(
+			path.join(cwd, "dist/metadata.json"),
+			(await prettier.format(
+				JSON.stringify({
+					selectors: [...selectors].sort(),
+					mods: [...found].sort(),
+					spectrum: [...spectrum].sort(),
+					system: [...system].sort(),
+					a11y: [...highContrast].sort(),
+				}, null, 2),
+				{ parser: "json" }
+			)),
+			{ encoding: "utf-8" }
+		).then(() => {
+			const stats = fs.statSync(path.join(cwd, "dist/metadata.json"));
+			return [
                 `${"✓".green}  ${"dist/metadata.json".padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
                 `🔍  ${`${found.size}`.underline} modifiable custom propert${found.size === 1 ? "y" : "ies"}`,
                 `🔍  ${`${selectors.size}`.underline} selector${found.size === 1 ? "" : "s"}`,
-            ];
-        }).catch((err) => {
-            if (!err) return;
-            console.log(`${"✗".red}  ${"dist/metadata.json".yellow} not written`);
-            return Promise.reject(err);
-        })
-    );
+			];
+		}).catch((err) => {
+			if (!err) return;
+			console.log(`${"✗".red}  ${"dist/metadata.json".yellow} not written`);
+			return Promise.reject(err);
+		})
+	);
 
-    return Promise.all(promises);
+	return Promise.all(promises);
 }
 
 /**
@@ -190,69 +192,70 @@ async function extractModifiers(filepath, { cwd } = {}) {
  * @returns {Promise<(string|void)[]>} Returns either the CSS content or void
  */
 async function processCSS(content, input, output, {
-    cwd,
-    clean = false,
-    ...postCSSOptions
+	cwd,
+	/* eslint-disable-next-line no-unused-vars */
+	clean = false,
+	...postCSSOptions
 } = {}) {
-    if (!content) return Promise.reject(new Error(`This function requires content be provided`));
+	if (!content) return Promise.reject(new Error("This function requires content be provided"));
 
-    const { plugins, options } = await postcssrc(
-        {
-            cwd,
-            env: process.env.NODE_ENV ?? "development",
-            from: input,
-            to: output,
-            verbose: false,
-            ...postCSSOptions,
-        },
-        __dirname // This is the path to the directory where the postcss.config.js lives
-    );
+	const { plugins, options } = await postcssrc(
+		{
+			cwd,
+			env: process.env.NODE_ENV ?? "development",
+			from: input,
+			to: output,
+			verbose: false,
+			...postCSSOptions,
+		},
+		__dirname // This is the path to the directory where the postcss.config.js lives
+	);
 
-    const result = await postcss(plugins).process(content, options);
+	const result = await postcss(plugins).process(content, options);
 
-    if (result.error) return Promise.reject(result.error);
+	if (result.error) return Promise.reject(result.error);
 
-    if (!result.css) return Promise.reject(new Error(`No CSS was generated from the provided content for ${relativePrint(input, { cwd })}`));
+	if (!result.css) return Promise.reject(new Error(`No CSS was generated from the provided content for ${relativePrint(input, { cwd })}`));
 
-    if (!fs.existsSync(path.dirname(output))) {
-        await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
-            if (!err) return;
-            // @todo pretty print these are relative paths
-            console.log(`${"✗".red}  problem making the ${relativePrint(path.dirname(output), { cwd }).yellow} directory`);
-            return Promise.reject(err);
-        });
-    }
+	if (!fs.existsSync(path.dirname(output))) {
+		await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
+			if (!err) return;
+			// @todo pretty print these are relative paths
+			console.log(`${"✗".red}  problem making the ${relativePrint(path.dirname(output), { cwd }).yellow} directory`);
+			return Promise.reject(err);
+		});
+	}
 
-    const promises = [];
+	const promises = [];
 
-    if (result.css) {
-        const formatted = await prettier.format(result.css.trimStart(), { parser: "css", printWidth: 500 });
-        promises.push(
-            fsp.writeFile(output, formatted).then(() => {
-                const stats = fs.statSync(output);
-                return `${"✓".green}  ${relativePrint(output, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-            }).catch((err) => {
-                if (!err) return;
-                console.log(`${"✗".red}  ${relativePrint(output, { cwd }).yellow} not written`);
-                return Promise.reject(err);
-            })
-        );
-    }
+	if (result.css) {
+		const formatted = await prettier.format(result.css.trimStart(), { parser: "css", printWidth: 500 });
+		promises.push(
+			fsp.writeFile(output, formatted).then(() => {
+				const stats = fs.statSync(output);
+				return `${"✓".green}  ${relativePrint(output, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
+			}).catch((err) => {
+				if (!err) return;
+				console.log(`${"✗".red}  ${relativePrint(output, { cwd }).yellow} not written`);
+				return Promise.reject(err);
+			})
+		);
+	}
 
-    if (result.map) {
-        promises.push(
-            fsp.writeFile(`${output}.map`, result.map.toString().trimStart()).then(() => {
-                const stats = fs.statSync(output);
-                return `${"✓".green}  ${relativePrint(`${output}.map`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-            }).catch((err) => {
-                if (!err) return;
-                console.log(`${"✗".red}  ${relativePrint(`${output}.map`, { cwd }).yellow} not written`);
-                return Promise.reject(err);
-            })
-        );
-    }
+	if (result.map) {
+		promises.push(
+			fsp.writeFile(`${output}.map`, result.map.toString().trimStart()).then(() => {
+				const stats = fs.statSync(output);
+				return `${"✓".green}  ${relativePrint(`${output}.map`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
+			}).catch((err) => {
+				if (!err) return;
+				console.log(`${"✗".red}  ${relativePrint(`${output}.map`, { cwd }).yellow} not written`);
+				return Promise.reject(err);
+			})
+		);
+	}
 
-    return Promise.all(promises);
+	return Promise.all(promises);
 }
 
 /**
@@ -265,44 +268,44 @@ async function processCSS(content, input, output, {
  * @returns {Promise<{ content: string, input: string }[]>}
  */
 async function fetchContent(globs = [], {
-    cwd,
-    shouldCombine = false,
-    ...fastGlobOptions
+	cwd,
+	shouldCombine = false,
+	...fastGlobOptions
 } = {}) {
-    const files = await fg(globs, {
-        onlyFiles: true,
-        ...fastGlobOptions,
-        cwd,
-    });
+	const files = await fg(globs, {
+		onlyFiles: true,
+		...fastGlobOptions,
+		cwd,
+	});
 
-    if (!files.length) return Promise.resolve([]);
+	if (!files.length) return Promise.resolve([]);
 
-    const fileData = await Promise.all(
-        files.map(async (file) => ({
-            input: path.join(cwd, file),
-            content: await fsp.readFile(path.join(cwd, file), "utf8")
-        }))
-    );
+	const fileData = await Promise.all(
+		files.map(async (file) => ({
+			input: path.join(cwd, file),
+			content: await fsp.readFile(path.join(cwd, file), "utf8")
+		}))
+	);
 
-    // Combine the content into 1 file; @todo do this in future using CSS imports
-    if (shouldCombine) {
-        let content = "";
-        fileData.forEach(dataset => {
-            if (dataset.content) content += '\n\n' + dataset.content;
-        });
+	// Combine the content into 1 file; @todo do this in future using CSS imports
+	if (shouldCombine) {
+		let content = "";
+		fileData.forEach(dataset => {
+			if (dataset.content) content += "\n\n" + dataset.content;
+		});
 
-        return Promise.resolve([{
-            content,
-            input: fileData[0].input
-        }]);
-    }
+		return Promise.resolve([{
+			content,
+			input: fileData[0].input
+		}]);
+	}
 
-    return Promise.all(
-        files.map(async (file) => ({
-            content: await fsp.readFile(path.join(cwd, file), "utf8"),
-            input: file,
-        }))
-    );
+	return Promise.all(
+		files.map(async (file) => ({
+			content: await fsp.readFile(path.join(cwd, file), "utf8"),
+			input: file,
+		}))
+	);
 }
 
 /**
@@ -314,18 +317,18 @@ async function fetchContent(globs = [], {
  * @returns Promise<string|void>
  */
 async function copy(from, to, { cwd } = {}) {
-    if (!fs.existsSync(from)) return;
+	if (!fs.existsSync(from)) return;
 
-    const content = await fsp.readFile(from, { encoding: "utf-8" });
-    if (!content) return;
-    /** @todo add support for injecting a deprecation notice as a comment after the copyright */
-    return fsp.writeFile(to, content, { encoding: "utf-8" })
-        .then(() => `${"✓".green}  ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${"-- deprecated --".gray}`)
-        .catch((err) => {
-            if (!err) return;
-            console.log(`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
-            return Promise.reject(err);
-        });
+	const content = await fsp.readFile(from, { encoding: "utf-8" });
+	if (!content) return;
+	/** @todo add support for injecting a deprecation notice as a comment after the copyright */
+	return fsp.writeFile(to, content, { encoding: "utf-8" })
+		.then(() => `${"✓".green}  ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${"-- deprecated --".gray}`)
+		.catch((err) => {
+			if (!err) return;
+			console.log(`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
+			return Promise.reject(err);
+		});
 }
 
 /**
@@ -335,10 +338,10 @@ async function copy(from, to, { cwd } = {}) {
  * @returns Promise<void>
  */
 async function cleanFolder({ cwd = process.cwd() } = {}) {
-    // Nothing to do if there's no input file
-    if (!fs.existsSync(path.join(cwd, "dist"))) return Promise.resolve();
+	// Nothing to do if there's no input file
+	if (!fs.existsSync(path.join(cwd, "dist"))) return Promise.resolve();
 
-    return fsp.rm(path.join(cwd, "dist"), { recursive: true, force: true }).then(() => fsp.mkdir(path.join(cwd, "dist")));
+	return fsp.rm(path.join(cwd, "dist"), { recursive: true, force: true }).then(() => fsp.mkdir(path.join(cwd, "dist")));
 }
 
 /**
@@ -349,31 +352,31 @@ async function cleanFolder({ cwd = process.cwd() } = {}) {
  * @returns Promise<void>
  */
 async function build({ cwd = process.cwd(), clean = false } = {}) {
-    // Nothing to do if there's no input file
-    if (!fs.existsSync(path.join(cwd, "index.css"))) return;
+	// Nothing to do if there's no input file
+	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
-    const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
+	const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
 
-    return Promise.all([
-        // This was buildCSS
-        processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), { cwd, clean })
-            .then(async (reports) =>
-                Promise.all([
-                    // After building, extract the available modifiers
-                    extractModifiers(path.join(cwd, "dist/index.css"), { cwd }),
-                    // Copy index.css to index-vars.css for backwards compat, log as deprecated
-                    copy(path.join(cwd, "dist/index.css"), path.join(cwd, "dist/index-vars.css"), { cwd }),
-                ])
-                    // Return the console output to be logged
-                    .then(r => [r, ...reports])
-            ),
-        // This was buildCSSWithoutThemes
-        processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist/index-base.css"), {
-            cwd,
-            clean,
-            lint: false,
-        }),
-    ]);
+	return Promise.all([
+		// This was buildCSS
+		processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), { cwd, clean })
+			.then(async (reports) =>
+				Promise.all([
+					// After building, extract the available modifiers
+					extractModifiers(path.join(cwd, "dist/index.css"), { cwd }),
+					// Copy index.css to index-vars.css for backwards compat, log as deprecated
+					copy(path.join(cwd, "dist/index.css"), path.join(cwd, "dist/index-vars.css"), { cwd }),
+				])
+				// Return the console output to be logged
+					.then(r => [r, ...reports])
+			),
+		// This was buildCSSWithoutThemes
+		processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist/index-base.css"), {
+			cwd,
+			clean,
+			lint: false,
+		}),
+	]);
 }
 
 /**
@@ -384,28 +387,36 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
  * @returns Promise<void>
  */
 async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
-    // This fetches the content of the files and returns an array of objects with the content and input paths
-    const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
+	// This fetches the content of the files and returns an array of objects with the content and input paths
+	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
+	const componentName = cwd?.split(path.sep)?.pop();
 
-    // Nothing to do if there's no content
-    if (!contentData || contentData.length === 0) return;
+	// Nothing to do if there's no content
+	if (!contentData || contentData.length === 0) return;
 
-    return Promise.all(
-        contentData.map(async ({ content, input }) => {
-            const promises = [
-                processCSS(content, path.join(cwd, input), path.join(cwd, "dist", input), { cwd, clean, lint: false })
-            ];
+	return Promise.all(
+		contentData.map(async ({ content, input }) => {
+			const promises = [
+				processCSS(content, path.join(cwd, input), path.join(cwd, "dist", input), { cwd, clean, lint: false }).then(async (reports) => {
+					// Copy the build express & spectrum component tokens to the tokens package folder in src and dist output
+					// (dist included b/c tokens are typically built before components in the build order)
+					return Promise.all([
+						copy(path.join(cwd, "dist", input), path.join(dirs.root, "tokens", `custom-${path.basename(input, ".css")}`, "components", `${componentName}.css`), { cwd }),
+						copy(path.join(cwd, "dist", input), path.join(dirs.root, "tokens", "dist/css", path.basename(input, ".css"), "components", `${componentName}.css`), { cwd }),
+					]).then(r => [...reports, r.flat(Infinity)]);
+				}),
+			];
 
-            // Additional processing for the express output because it includes both it and spectrum's content
-            if (path.basename(input, ".css") === "express") {
-                promises.push(
-                    processCSS(content, path.join(cwd, input), path.join(cwd, "dist/index-theme.css"), { cwd, clean, lint: false })
-                );
-            }
+			// Additional processing for the express output because it includes both it and spectrum's content
+			if (path.basename(input, ".css") === "express") {
+				promises.push(
+					processCSS(content, path.join(cwd, input), path.join(cwd, "dist/index-theme.css"), { cwd, clean, lint: false }),
+				);
+			}
 
-            return Promise.all(promises);
-        })
-    );
+			return Promise.all(promises);
+		})
+	);
 }
 
 /**
@@ -417,61 +428,62 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
  * @returns Promise<void>
  */
 async function main({
-    componentName = process.env.NX_TASK_TARGET_PROJECT,
-    cwd,
-    clean,
+	componentName = process.env.NX_TASK_TARGET_PROJECT,
+	cwd,
+	clean,
 } = {}) {
-    if (!cwd && (componentName)) {
-        cwd = path.join(dirs.components, componentName);
-    }
+	if (!cwd && (componentName)) {
+		cwd = path.join(dirs.components, componentName);
+	}
 
-    if (!componentName) {
-        componentName = cwd ? getPackageFromPath(cwd) : process.env.NX_TASK_TARGET_PROJECT;
-    }
+	if (!componentName) {
+		componentName = cwd ? getPackageFromPath(cwd) : process.env.NX_TASK_TARGET_PROJECT;
+	}
 
-    if (typeof clean === "undefined") {
-        clean = process.env.NODE_ENV === "production";
-    }
+	if (typeof clean === "undefined") {
+		clean = process.env.NODE_ENV === "production";
+	}
 
-    const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
-    console.time(key);
+	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
+	console.time(key);
 
-    return Promise.all([
-        ...(clean ? [cleanFolder({ cwd })] : []),
-        build({ cwd, clean }),
-        buildThemes({ cwd, clean }),
-    ]).then((report) => {
-        const logs = report.flat(Infinity).filter(Boolean);
+	return Promise.all([
+		...(clean ? [cleanFolder({ cwd })] : []),
+		build({ cwd, clean }),
+		buildThemes({ cwd, clean }),
+	]).then((report) => {
+		const logs = report.flat(Infinity).filter(Boolean);
 
-        console.log(`\n\n${key} 🔨`);
-        console.log(`${"".padStart(30, "-")}`);
+		console.log(`\n\n${key} 🔨`);
+		console.log(`${"".padStart(30, "-")}`);
 
-        if (logs && logs.length > 0) {
-            logs.sort((a,) => {
-                if (a.includes('✓')) return -1;
-                if (a.includes('🔍')) return 0;
-                return 1;
-            }).forEach(log => console.log(log));
-        } else console.log(`No assets created.`.gray)
+		if (logs && logs.length > 0) {
+			logs.sort((a,) => {
+				if (a.includes("✓")) return -1;
+				if (a.includes("🔍")) return 0;
+				return 1;
+			}).forEach(log => console.log(log));
+		}
+		else console.log("No assets created.".gray);
 
-        console.log(`${"".padStart(30, "-")}`);
-        console.timeEnd(key);
-        console.log("");
+		console.log(`${"".padStart(30, "-")}`);
+		console.timeEnd(key);
+		console.log("");
 
-    }).catch((err) => {
+	}).catch((err) => {
 
-        console.log(`\n\n${key} 🔨`);
-        console.log(`${"".padStart(30, "-")}`);
+		console.log(`\n\n${key} 🔨`);
+		console.log(`${"".padStart(30, "-")}`);
 
-        console.trace(err);
+		console.trace(err);
 
-        console.log(`${"".padStart(30, "-")}`);
-        console.timeEnd(key);
-        console.log("");
+		console.log(`${"".padStart(30, "-")}`);
+		console.timeEnd(key);
+		console.log("");
 
-        process.exit(1);
-    });
-};
+		process.exit(1);
+	});
+}
 
 exports.processCSS = processCSS;
 exports.fetchContent = fetchContent;
