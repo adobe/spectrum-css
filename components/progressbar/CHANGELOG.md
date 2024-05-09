@@ -1,5 +1,16 @@
 # Change Log
 
+## 5.0.0-next.0
+
+### Major Changes
+
+- [#2659](https://github.com/adobe/spectrum-css/pull/2659) [`bd38eaa`](https://github.com/adobe/spectrum-css/commit/bd38eaa8c8597c066f1fe61d70130a7f310bcca4) Thanks [@mdt2](https://github.com/mdt2)! - feat(progressbar): S2 migration
+
+  Progress bar now uses Spectrum 2 tokens and specifications. This migration includes updated colors, font sizes, and spacing. No mods were harmed in the migration of this component (all `--mod` properties remain the same).
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## 4.2.0
 
 ### Minor Changes
@@ -87,22 +98,19 @@ Output for all component CSS files is now being run through a lightweight optimi
   - @spectrum-css/fieldlabel@>=8
   - @spectrum-css/tokens@>=14
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
 <a name="4.0.0"></a>
 
 ## 4.0.0
 
 🗓 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/progressbar@3.1.5...@spectrum-css/progressbar@4.0.0)
 
-\*feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
+- feat!: postcss config build and script; remove gulp (#2466)([b0f337b](https://github.com/adobe/spectrum-css/commit/b0f337b)), closes[#2466](https://github.com/adobe/spectrum-css/issues/2466)
 
 ### 🛑 BREAKING CHANGES
 
-- Removes component-builder & component-builder-simple for script leveraging postcss
+  - Removes component-builder & component-builder-simple for script leveraging postcss
 
-- Imports added to index.css and themes/express.css
+- Imports added to `index.css` and `themes/express.css`
 
 <a name="3.1.5"></a>
 
