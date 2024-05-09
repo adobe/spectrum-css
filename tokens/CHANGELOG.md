@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.1.0-alpha.1
+
+### Patch Changes
+
+- fix: support full dist output in release
+
 ## 14.1.0-alpha.0
 
 ### Minor Changes
