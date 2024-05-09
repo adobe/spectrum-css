@@ -122,7 +122,7 @@ governing permissions and limitations under the License.
 	inset-block-start: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - 0.5px);
 	/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 	left: calc(50% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))));
-	transform: translateX(-50%) rotate(-45deg);
+	transform: rotate(-45deg);
 
 	background-color: var(--highcontrast-tooltip-background-color-default, var(--mod-tooltip-background-color-default, var(--spectrum-tooltip-background-color-default)));
 
@@ -148,21 +148,9 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--bottom-right &,
 	.spectrum-Tooltip--bottom-start &,
 	.spectrum-Tooltip--bottom-end & {
-		clip-path: polygon(50% calc(100% - var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage))), 0 calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))), 100% calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))));
-		inset-block: auto 100%;
+		inset-block: auto calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - 0.5px);
+		transform: rotate(135deg);
 	}
-
-	/* tip is horizontal and at the edge */
-	/* .spectrum-Tooltip--top-left &,
-	.spectrum-Tooltip--bottom-left &,
-	.spectrum-Tooltip--top-right &,
-	.spectrum-Tooltip--bottom-right &,
-	.spectrum-Tooltip--top-start &,
-	.spectrum-Tooltip--bottom-start &,
-	.spectrum-Tooltip--top-end &,
-	.spectrum-Tooltip--bottom-end & {
-		transform: none;
-	} */
 
 	/* tip is horizontal at left △ ▽ */
 	.spectrum-Tooltip--top-left &,
@@ -211,8 +199,7 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--end &,
 	.spectrum-Tooltip--end-top &,
 	.spectrum-Tooltip--end-bottom & {
-		inset-block-start: 50%;
-		transform: translateY(-50%);
+		inset-block-start: calc(50% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))));
 	}
 
 	/* tip is vertical and at edge */
@@ -224,7 +211,6 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--start-bottom &,
 	.spectrum-Tooltip--end-top &,
 	.spectrum-Tooltip--end-bottom & {
-		transform: none;
 		inset-block-start: auto;
 	}
 
@@ -235,8 +221,8 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--end &,
 	.spectrum-Tooltip--end-top &,
 	.spectrum-Tooltip--end-bottom & {
-		clip-path: polygon(calc(100% - var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage))) 50%, calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%, calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0);
-		inset-inline: auto 100%;
+		inset-inline: auto calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - 0.5px);
+		transform: rotate(45deg);
 	}
 
 	/* tip is vertical pointing ▷ right or end, for LTR. */
@@ -246,8 +232,8 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--start &,
 	.spectrum-Tooltip--start-top &,
 	.spectrum-Tooltip--start-bottom & {
-		clip-path: polygon(calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0, calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%, var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)) 50%);
-		inset-inline-start: 100%;
+		inset-inline-start: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - 0.5px);
+		transform: rotate(-135deg);
 	}
 
 	/* tip is vertical at top ◁ ▷ */
@@ -274,9 +260,9 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--end-top &,
 	.spectrum-Tooltip--end-bottom & {
 		&:dir(rtl) {
-			clip-path: polygon(calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0, calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%, var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)) 50%);
+			transform: rotate(-135deg);
 			right: auto;
-			left: 100%;
+			left: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - 0.5px);
 		}
 	}
 
@@ -288,9 +274,9 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--start-top &,
 	.spectrum-Tooltip--start-bottom & {
 		&:dir(rtl) {
-			clip-path: polygon(var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)) 50%, calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%, calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0);
+			transform: rotate(45deg);
 			left: auto;
-			right: 100%;
+			right: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - 0.5px);
 		}
 	}
 }
