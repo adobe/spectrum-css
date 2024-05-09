@@ -1,6 +1,7 @@
 | Modifiable custom properties                      |
 | ------------------------------------------------- |
 | `--mod-splitview-background-color`                |
+| `--mod-splitview-content-color`                   |
 | `--mod-splitview-gripper-border-radius`           |
 | `--mod-splitview-gripper-border-width-horizontal` |
 | `--mod-splitview-gripper-border-width-vertical`   |

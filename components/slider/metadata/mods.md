@@ -37,6 +37,7 @@
 | `--mod-slider-ramp-track-height`                       |
 | `--mod-slider-range-track-reset`                       |
 | `--mod-slider-tick-handle-background-color`            |
+| `--mod-slider-tick-label-color`                        |
 | `--mod-slider-tick-mark-border-radius`                 |
 | `--mod-slider-tick-mark-color`                         |
 | `--mod-slider-tick-mark-color-disabled`                |
