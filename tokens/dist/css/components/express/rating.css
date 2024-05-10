@@ -8,21 +8,9 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-.spectrum {
-  --system-spectrum-rating-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
-  --system-spectrum-rating-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-  --system-spectrum-rating-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-  --system-spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-}
 .spectrum--express {
   --system-spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
   --system-spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
   --system-spectrum-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
   --system-spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
-}
-.spectrum-Rating {
-  --spectrum-rating-icon-color-default: var(--system-spectrum-rating-icon-color-default);
-  --spectrum-rating-icon-color-hover: var(--system-spectrum-rating-icon-color-hover);
-  --spectrum-rating-icon-color-down: var(--system-spectrum-rating-icon-color-down);
-  --spectrum-rating-icon-color-key-focus: var(--system-spectrum-rating-icon-color-key-focus);
 }

@@ -9,12 +9,6 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-.spectrum {
-  --system-spectrum-assetcard-overlay-background-color: rgba(27, 127, 245, 0.1);
-}
 .spectrum--express {
   --system-spectrum-assetcard-overlay-background-color: rgba(109, 115, 246, 0.2);
-}
-.spectrum-AssetCard {
-  --spectrum-assetcard-overlay-background-color: var(--system-spectrum-assetcard-overlay-background-color);
 }

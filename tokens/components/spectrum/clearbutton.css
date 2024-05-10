@@ -14,9 +14,3 @@ governing permissions and limitations under the License.
   --system-spectrum-clearbutton-spectrum-clear-button-background-color-down: transparent;
   --system-spectrum-clearbutton-spectrum-clear-button-background-color-key-focus: transparent;
 }
-.spectrum-ClearButton {
-  --spectrum-clear-button-background-color: var(--system-spectrum-clearbutton-spectrum-clear-button-background-color);
-  --spectrum-clear-button-background-color-hover: var(--system-spectrum-clearbutton-spectrum-clear-button-background-color-hover);
-  --spectrum-clear-button-background-color-down: var(--system-spectrum-clearbutton-spectrum-clear-button-background-color-down);
-  --spectrum-clear-button-background-color-key-focus: var(--system-spectrum-clearbutton-spectrum-clear-button-background-color-key-focus);
-}

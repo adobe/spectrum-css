@@ -393,9 +393,6 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 			lint: false,
 			map: false,
 			env: "production",
-			splitinatorOptions: {
-				referencesOnly: true,
-			},
 		}).then(async (reports) => {
 			return copy(path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), path.join(dirs.root, "tokens", "dist/css/components/bridge", `${componentName}.css`), { cwd, isDeprecated: false }).then(r => [...reports, r]);
 		}) : Promise.resolve(),

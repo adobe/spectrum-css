@@ -29,36 +29,35 @@ module.exports = ({
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
-	const isTheme = Boolean((to && ["themes", "custom-spectrum", "custom-express"].some(foldername => to.split(sep)?.includes(foldername))) || (file && ["themes", "custom-spectrum", "custom-express"].some(foldername => file.split(sep)?.includes(foldername))));
-	const isExpress = Boolean((to && (basename(to, ".css") === "express" || to.split(sep)?.includes("express"))) || (file && (basename(file, ".css") === "express" || file.split(sep)?.includes("express"))));
+	const rootPath = __dirname;
+	const outputFilepath = to ?? file;
+	const relativePath = outputFilepath?.replace(rootPath, "");
+	const outputFilename = basename(outputFilepath, ".css");
+	const pathParts = relativePath?.split(sep) ?? [];
+
+	const isBridge = pathParts.includes("bridge");
+	const isTheme = ["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename === "index-theme";
+	const isExpress = outputFilename === "express" || pathParts.includes("express");
 
 	if (env === "development" && !options.map) {
 		options.map = { inline: false };
 	}
 	else options.map = false;
 
-	/* themes/*.css */
 	if (isTheme) {
 		splitinatorOptions.noSelectors = true;
-
-		/* themes/express.css */
-		if (isExpress) combine = true;
 	}
 
-	/* index-theme.css */
-	if (
-		(to && basename(to, ".css") === "index-theme") ||
-		(file && basename(file, ".css") === "index-theme")
-	) {
-		splitinatorOptions.noSelectors = true;
+	if (isExpress) {
+		combine = true;
 	}
 
-	/* index-base.css */
-	if (
-		(to && basename(to, ".css") === "index-base") ||
-		(file && basename(file, ".css") === "index-base")
-	) {
+	if (outputFilename === "index-base") {
 		splitinatorOptions.noFlatVariables = true;
+	}
+
+	if (isBridge) {
+		splitinatorOptions.referencesOnly = true;
 	}
 
 	/*

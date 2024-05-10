@@ -23,18 +23,3 @@ governing permissions and limitations under the License.
   --system-spectrum-picker-border-color-key-focus: var(--spectrum-gray-600);
   --system-spectrum-picker-border-width: var(--spectrum-border-width-100);
 }
-.spectrum-Picker {
-  --spectrum-picker-background-color-default: var(--system-spectrum-picker-background-color-default);
-  --spectrum-picker-background-color-default-open: var(--system-spectrum-picker-background-color-default-open);
-  --spectrum-picker-background-color-active: var(--system-spectrum-picker-background-color-active);
-  --spectrum-picker-background-color-hover: var(--system-spectrum-picker-background-color-hover);
-  --spectrum-picker-background-color-hover-open: var(--system-spectrum-picker-background-color-hover-open);
-  --spectrum-picker-background-color-key-focus: var(--system-spectrum-picker-background-color-key-focus);
-  --spectrum-picker-border-color-default: var(--system-spectrum-picker-border-color-default);
-  --spectrum-picker-border-color-default-open: var(--system-spectrum-picker-border-color-default-open);
-  --spectrum-picker-border-color-hover: var(--system-spectrum-picker-border-color-hover);
-  --spectrum-picker-border-color-hover-open: var(--system-spectrum-picker-border-color-hover-open);
-  --spectrum-picker-border-color-active: var(--system-spectrum-picker-border-color-active);
-  --spectrum-picker-border-color-key-focus: var(--system-spectrum-picker-border-color-key-focus);
-  --spectrum-picker-border-width: var(--system-spectrum-picker-border-width);
-}
