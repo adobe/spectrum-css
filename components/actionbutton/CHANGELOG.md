@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-alpha.1
+
+### Patch Changes
+
+- fix: build discrepency that published old assets to previous tag
+
 ## 7.0.0-alpha.0
 
 ### Major Changes

@@ -10,15 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { join, sep, basename } = require("path");
+const { join } = require("path");
 
 module.exports = ({
-	file,
-	to,
-	splitinatorOptions = {
-		noSelectors: false,
-		noFlatVariables: false,
-	},
 	combine = false,
 	lint = true,
 	verbose = true,
@@ -30,38 +24,6 @@ module.exports = ({
 		options.map = { inline: false };
 	}
 	else options.map = false;
-
-	/* themes/*.css */
-	if (
-		(to && to.split(sep)?.includes("themes")) ||
-		(file && file.split(sep)?.includes("themes"))
-	) {
-		splitinatorOptions.noSelectors = true;
-
-		/* themes/express.css */
-		if (
-			(to && basename(to, ".css") === "express") ||
-			(file && basename(file, ".css") === "express")
-		) {
-			combine = true;
-		}
-	}
-
-	/* index-theme.css */
-	if (
-		(to && basename(to, ".css") === "index-theme") ||
-		(file && basename(file, ".css") === "index-theme")
-	) {
-		splitinatorOptions.noSelectors = true;
-	}
-
-	/* index-base.css */
-	if (
-		(to && basename(to, ".css") === "index-base") ||
-		(file && basename(file, ".css") === "index-base")
-	) {
-		splitinatorOptions.noFlatVariables = true;
-	}
 
 	/*
 		This deconstruction has to do with how options are passed
@@ -87,11 +49,6 @@ module.exports = ({
 			"postcss-hover-media-feature": {},
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
-			"postcss-splitinator": {
-				processIdentifier: (identifier) =>
-					identifier === "express" ? "spectrum--express" : identifier,
-				...splitinatorOptions,
-			},
 			"postcss-combininator": combine ? {} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
