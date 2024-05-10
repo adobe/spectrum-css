@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.1.0-alpha.2
+
+### Patch Changes
+
+- [#2742](https://github.com/adobe/spectrum-css/pull/2742) [`336a558`](https://github.com/adobe/spectrum-css/commit/336a558d23b0aa66b5a15e85881b12a261a69bf0) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixed a bug where the bridge tokens were being injected into the express and spectrum component-specific files
+
 ## 14.1.0-alpha.1
 
 ### Patch Changes

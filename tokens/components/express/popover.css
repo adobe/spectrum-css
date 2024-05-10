@@ -9,12 +9,6 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-.spectrum {
-  --system-spectrum-popover-border-width: var(--spectrum-border-width-100);
-}
 .spectrum--express {
   --system-spectrum-popover-border-width: 0;
-}
-.spectrum-Popover {
-  --spectrum-popover-border-width: var(--system-spectrum-popover-border-width);
 }
