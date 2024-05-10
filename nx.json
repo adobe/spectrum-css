@@ -13,7 +13,7 @@
 		}
 	},
 	"namedInputs": {
-		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
+		"core": ["{projectRoot}/*.css"],
 		"scripts": ["{projectRoot}/stories/*.js"],
 		"docs": ["{projectRoot}/metadata/*.yml"],
 		"stylelint": [
@@ -65,10 +65,7 @@
 			],
 			"outputs": [
 				"{projectRoot}/dist/*.{css,json}",
-				"{projectRoot}/dist/themes/*.css",
-				"{projectRoot}/dist/*.map",
-				"{projectRoot}/dist/themes/*.css.map",
-				"{projectRoot}/metadata/mods.md"
+				"{projectRoot}/dist/*.map"
 			],
 			"executor": "nx:run-commands",
 			"options": {

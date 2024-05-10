@@ -9,13 +9,11 @@ Components are released on npm as `@spectrum-css/$COMPONENT`, where `$COMPONENT`
 Each component has the following files:
 
 - `index.css` - The scale-specific styles for the component: dimensions, layout, etc (these change between scales)
-- `metadata/*.yml` - The markup examples and documentation for the component; also makes additional examples possible that appear separately in the site navigation.
-- `themes/*.css` - The theme-specific styles for the component.
 - `stories/*.stories.js` and `stories/template.js` - The storybook assets for rendering components in the Storybook tool and eventually to be used for visual regression testing.
 
 ## Editing an existing component
 
-1. Run `gulp dev` in the root of the project to begin developing.
+1. Run `yarn start` in the root of the project to begin developing.
 2. Edit `components/$COMPONENT/index.css` with dimensions and color properties. The documentation will live reload with your changes.
 3. Edit the markup examples within `components/$COMPONENT/metadata/*.yml`. The documentation will live reload with your changes.
 

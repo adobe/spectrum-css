@@ -76,17 +76,6 @@ CSS assets will be run through their respective postcss configurations. This mea
   import "../index.css";
   ```
 
-If you need to load an asset in your template based on storybook configurations, you can do so using dynamic imports and a webpackPrefetch flag (to prevent FOUC). These will follow the same compilation rules as noted above. i.e.,
-
-  ```js
-  try {
-   if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-   else import(/* webpackPrefetch: true */ "../themes/express.css");
-  } catch (e) {
-   console.warn(e);
-  }
-  ```
-
 We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit for dynamic attribute assignment.
 
 ### Add-ons
@@ -293,17 +282,7 @@ export const Template = ({
  id,
  customClasses = [],
  ...globals
-}) => {
- const { express } = globals;
-
- try {
-  if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-  else import(/* webpackPrefetch: true */ "../themes/express.css");
- } catch (e) {
-  console.warn(e);
- }
-
- return html`
+}) => html`
   <div
    class=${classMap({
     [rootClass]: true,
@@ -347,7 +326,6 @@ export const Template = ({
     : ""}
   </div>
  `;
-};
 ```
 
 ## Testing stories

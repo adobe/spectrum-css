@@ -149,7 +149,7 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: ["components/*/themes/*.css", "tokens/**/*.css"],
+			files: ["tokens/**/*.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
