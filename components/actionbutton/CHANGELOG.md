@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-alpha.0
+
+### Major Changes
+
+- [#2717](https://github.com/adobe/spectrum-css/pull/2717) [`e824f8f`](https://github.com/adobe/spectrum-css/commit/e824f8f43b68118ddd9a029722566a9b17e9af0f) Thanks [@pfulton](https://github.com/pfulton)! - Remove S1 theme assets
+
 ## 6.1.0
 
 ### Minor Changes
