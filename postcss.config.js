@@ -13,7 +13,6 @@ governing permissions and limitations under the License.
 const { join } = require("path");
 
 module.exports = ({
-	combine = false,
 	lint = true,
 	verbose = true,
 	additionalPlugins = {},

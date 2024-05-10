@@ -121,6 +121,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@adobe/spectrum-css-workflow-icons@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@adobe/spectrum-css-workflow-icons@npm:2.0.0"
+  checksum: 10c0/f7bc17c5f32865748eda4d2de47c92570cb9fa2301a3966ba085affb538b6f974b29027b0f8474d56425277ec1ce14753243a30d960d5ba5ea21e9b9803f7343
+  languageName: node
+  linkType: hard
+
 "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-colors-20240503210338":
   version: 0.0.0-s2-foundations-colors-20240503210338
   resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-colors-20240503210338"
@@ -5222,12 +5229,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/preview@workspace:.storybook"
   dependencies:
-    "@adobe/spectrum-css-workflow-icons": "npm:^1.5.4"
+    "@adobe/spectrum-css-workflow-icons": "npm:^2.0.0"
     "@babel/core": "npm:^7.24.5"
     "@chromaui/addon-visual-tests": "npm:^1.0.0"
     "@etchteam/storybook-addon-status": "npm:^4.2.4"
-    "@spectrum-css/tokens": "npm:^14.0.0"
-    "@spectrum-css/ui-icons": "npm:^1.1.2"
+    "@spectrum-css/tokens": "workspace:^"
+    "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^14.1.0-alpha.2"
+    "@spectrum-css/ui-icons": "workspace:^"
     "@storybook/addon-a11y": "npm:^8.0.10"
     "@storybook/addon-actions": "npm:^8.0.10"
     "@storybook/addon-console": "npm:^3.0.0"
@@ -5501,7 +5509,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tokens@npm:^14.0.0, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^14.1.0-alpha.2":
+  version: 14.1.0-alpha.2
+  resolution: "@spectrum-css/tokens@npm:14.1.0-alpha.2"
+  checksum: 10c0/43ec5b76fe92c2d15f97176baa7a3b406991c008ab627083f2783a968bebbfd728e7ece89f6a2ca36df62f15266ed9145d9823685070f794724575aeae4009e4
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/tokens@npm:^14.0.0, @spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
@@ -5509,14 +5524,10 @@ __metadata:
     "@nxkit/style-dictionary": "npm:^5.0.0"
     postcss: "npm:^8.4.38"
     postcss-cli: "npm:^11.0.0"
-    postcss-combine-duplicated-selectors: "npm:^10.0.3"
-    postcss-discard-comments: "npm:^7.0.0"
-    postcss-discard-empty: "npm:^6.0.3"
-    postcss-licensing: "npm:^1.0.1"
-    postcss-merge-rules: "npm:^7.0.0"
-    postcss-rgb-mapping: "npm:^1.1.0"
+    postcss-licensing: "npm:^2.0.0"
+    postcss-rgb-mapping: "workspace:^"
     postcss-sorting: "npm:^8.0.2"
-    prettier: "npm:^2.8.8"
+    prettier: "npm:^3.2.5"
     style-dictionary: "npm:^3.9.2"
     style-dictionary-sets: "npm:^2.3.0"
   languageName: unknown
@@ -5572,7 +5583,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/ui-icons@npm:^1.1.1, @spectrum-css/ui-icons@npm:^1.1.2, @spectrum-css/ui-icons@workspace:ui-icons":
+"@spectrum-css/ui-icons@npm:^1.1.1, @spectrum-css/ui-icons@workspace:^, @spectrum-css/ui-icons@workspace:ui-icons":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/ui-icons@workspace:ui-icons"
   dependencies:
@@ -8503,6 +8514,61 @@ __metadata:
   bin:
     ava: entrypoints/cli.mjs
   checksum: 10c0/f35cb1f9bc716714e7c78a601985745774096e4ecd34f9310b858d5779307afa2245ad24274e2d55dd1022c226f4fbdb41947476300977f0b653be0e627adaa4
+  languageName: node
+  linkType: hard
+
+"ava@npm:^6.1.3":
+  version: 6.1.3
+  resolution: "ava@npm:6.1.3"
+  dependencies:
+    "@vercel/nft": "npm:^0.26.2"
+    acorn: "npm:^8.11.3"
+    acorn-walk: "npm:^8.3.2"
+    ansi-styles: "npm:^6.2.1"
+    arrgv: "npm:^1.0.2"
+    arrify: "npm:^3.0.0"
+    callsites: "npm:^4.1.0"
+    cbor: "npm:^9.0.1"
+    chalk: "npm:^5.3.0"
+    chunkd: "npm:^2.0.1"
+    ci-info: "npm:^4.0.0"
+    ci-parallel-vars: "npm:^1.0.1"
+    cli-truncate: "npm:^4.0.0"
+    code-excerpt: "npm:^4.0.0"
+    common-path-prefix: "npm:^3.0.0"
+    concordance: "npm:^5.0.4"
+    currently-unhandled: "npm:^0.4.1"
+    debug: "npm:^4.3.4"
+    emittery: "npm:^1.0.1"
+    figures: "npm:^6.0.1"
+    globby: "npm:^14.0.0"
+    ignore-by-default: "npm:^2.1.0"
+    indent-string: "npm:^5.0.0"
+    is-plain-object: "npm:^5.0.0"
+    is-promise: "npm:^4.0.0"
+    matcher: "npm:^5.0.0"
+    memoize: "npm:^10.0.0"
+    ms: "npm:^2.1.3"
+    p-map: "npm:^7.0.1"
+    package-config: "npm:^5.0.0"
+    picomatch: "npm:^3.0.1"
+    plur: "npm:^5.1.0"
+    pretty-ms: "npm:^9.0.0"
+    resolve-cwd: "npm:^3.0.0"
+    stack-utils: "npm:^2.0.6"
+    strip-ansi: "npm:^7.1.0"
+    supertap: "npm:^3.0.1"
+    temp-dir: "npm:^3.0.0"
+    write-file-atomic: "npm:^5.0.1"
+    yargs: "npm:^17.7.2"
+  peerDependencies:
+    "@ava/typescript": "*"
+  peerDependenciesMeta:
+    "@ava/typescript":
+      optional: true
+  bin:
+    ava: entrypoints/cli.mjs
+  checksum: 10c0/108b28aceb0dfdb077bcf4c96109d736667999c2ce9f564489c4747482ea0e0c455d4d96fdfaad610b1125b74129b7b1d2ce570ec4903e767f6950d7f722f2cd
   languageName: node
   linkType: hard
 
@@ -17632,17 +17698,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-combine-duplicated-selectors@npm:^10.0.3":
-  version: 10.0.3
-  resolution: "postcss-combine-duplicated-selectors@npm:10.0.3"
-  dependencies:
-    postcss-selector-parser: "npm:^6.0.4"
-  peerDependencies:
-    postcss: ^8.1.0
-  checksum: 10c0/5dba611597653e0ef3fbeb0988e90bc897c53aa1f918c733e57404d572f4557a45c1de3a346c3296537f2603f6e24ed380fcb708a37f36dc1461a52a9bd9e403
-  languageName: node
-  linkType: hard
-
 "postcss-convert-values@npm:^7.0.0":
   version: 7.0.0
   resolution: "postcss-convert-values@npm:7.0.0"
@@ -17724,15 +17779,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/37d568dc18d47b8b9f0fd6d5115b1faf96c2bf429fc4586508a773533479e18627d6260cad6a3ca7d3bfc2f220fd9448410aee40e07f2ec6c6f96bbe3595dbc8
-  languageName: node
-  linkType: hard
-
-"postcss-discard-empty@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "postcss-discard-empty@npm:6.0.3"
-  peerDependencies:
-    postcss: ^8.4.31
-  checksum: 10c0/1af08bb29f18eda41edf3602b257d89a4cf0a16f79fc773cfebd4a37251f8dbd9b77ac18efe55d0677d000b43a8adf2ef9328d31961c810e9433a38494a1fa65
   languageName: node
   linkType: hard
 
@@ -17878,12 +17924,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-licensing@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "postcss-licensing@npm:1.0.1"
+"postcss-licensing@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "postcss-licensing@npm:2.0.0"
   peerDependencies:
     postcss: ^7.0.0 || ^8.0.0
-  checksum: 10c0/f7d5629ce37703c04fb990233bdaeb77b0860bfce726ad48878d4d0290d1db62366729191b0df233e976cee686655b60f4b682eebbdfa057ddcddda0c0885a5f
+  checksum: 10c0/c7c4fb1185cf9e613df608868b3f86b67b0ca2b6be3757d40eec84f0edb99babad64df6c1167074f6c192fcc9e019c870600d6a061dfd202fde0cd3d74d3f1e9
   languageName: node
   linkType: hard
 
@@ -18413,6 +18459,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-rgb-mapping@workspace:^, postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping":
+  version: 0.0.0-use.local
+  resolution: "postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping"
+  dependencies:
+    ava: "npm:^6.1.3"
+    c8: "npm:^9.1.0"
+    postcss: "npm:^8.4.38"
+    postcss-value-parser: "npm:^4.2.0"
+  peerDependencies:
+    postcss: ">=8.0.0"
+  languageName: unknown
+  linkType: soft
+
 "postcss-safe-parser@npm:^6.0.0":
   version: 6.0.0
   resolution: "postcss-safe-parser@npm:6.0.0"
@@ -18551,7 +18610,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.1, prettier@npm:^2.7.1, prettier@npm:^2.8.0, prettier@npm:^2.8.8":
+"prettier@npm:^2.5.1, prettier@npm:^2.7.1, prettier@npm:^2.8.0":
   version: 2.8.8
   resolution: "prettier@npm:2.8.8"
   bin:
@@ -20423,6 +20482,7 @@ __metadata:
     postcss-load-config: "npm:^5.1.0"
     postcss-preset-env: "npm:^9.5.9"
     postcss-reporter: "npm:^7.1.0"
+    postcss-rgb-mapping: "npm:^1.1.0"
     prettier: "npm:^3.2.5"
     rimraf: "npm:^5.0.7"
     stylelint: "npm:^15.11.0"

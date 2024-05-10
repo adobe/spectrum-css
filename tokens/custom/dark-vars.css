@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 
 /* This file contains overrides and additions to core tokens */
 
-.spectrum--darkest {
+:root {
   --spectrum-menu-item-background-color-default: rgba(255, 255, 255, 0); /* --spectrum-gray-900 */
   --spectrum-menu-item-background-color-hover: var(--spectrum-transparent-white-200);
   --spectrum-menu-item-background-color-down: var(--spectrum-transparent-white-200);
@@ -23,13 +23,13 @@ governing permissions and limitations under the License.
   /* Drop Indicator color rgb */
   --spectrum-dropindicator-color: var(--spectrum-blue-700);
 
-  --spectrum-calendar-day-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.2);
-  --spectrum-calendar-day-background-color-hover: rgba(var(--spectrum-white-rgb), 0.08);
-  --spectrum-calendar-day-today-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.3);
-  --spectrum-calendar-day-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.3);
-  --spectrum-calendar-day-background-color-down: rgba(var(--spectrum-white-rgb), 0.15);
-  --spectrum-calendar-day-background-color-cap-selected: rgba(var(--spectrum-blue-800-rgb), 0.3);
-  --spectrum-calendar-day-background-color-key-focus: rgba(var(--spectrum-white-rgb), 0.08);
+  --spectrum-calendar-day-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
+  --spectrum-calendar-day-background-color-hover: rgba(var(--spectrum-white-rgb), 0.07);
+  --spectrum-calendar-day-today-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.25);
+  --spectrum-calendar-day-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.25);
+  --spectrum-calendar-day-background-color-down: var(--spectrum-transparent-white-200);
+  --spectrum-calendar-day-background-color-cap-selected: rgba(var(--spectrum-blue-800-rgb), 0.25);
+  --spectrum-calendar-day-background-color-key-focus: rgba(var(--spectrum-white-rgb), 0.07);
   --spectrum-calendar-day-border-color-key-focus: var(--spectrum-blue-700);
 
   --spectrum-badge-label-icon-color-primary: var(--spectrum-black);
@@ -42,8 +42,8 @@ governing permissions and limitations under the License.
 
   --spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-700);
 
-  --spectrum-treeview-item-background-color-quiet-selected: rgba(var(--spectrum-gray-900-rgb), 0.08);
-  --spectrum-treeview-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.2);
+  --spectrum-treeview-item-background-color-quiet-selected: rgba(var(--spectrum-gray-900-rgb), 0.07);
+  --spectrum-treeview-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
 
   --spectrum-logic-button-and-background-color: var(--spectrum-blue-800);
   --spectrum-logic-button-and-border-color: var(--spectrum-blue-800);
@@ -61,7 +61,7 @@ governing permissions and limitations under the License.
   --spectrum-assetcard-selectionindicator-background-color-ordered: var(--spectrum-blue-800);
   --spectrum-assestcard-focus-indicator-color: var(--spectrum-blue-700);
 
-  --spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.3);
-  --spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.2);
+  --spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.25);
+  --spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
   --spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
 }
