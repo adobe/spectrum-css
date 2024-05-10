@@ -22,7 +22,6 @@ export const Template = ({
 	style = {
 		"--mod-actionbutton-icon-size": "10px",
 	},
-	...globals
 }) => {
 
 	let iconSize = "75";
@@ -57,7 +56,6 @@ export const Template = ({
 			style=${ifDefined(styleMap(style))}
 		>
 			${Textfield({
-				...globals,
 				size,
 				type: "number",
 				min: "-2",
@@ -74,7 +72,6 @@ export const Template = ({
 				? ""
 				: html`<span class="${rootClass}-buttons">
 						${InfieldButton({
-							...globals,
 							size,
 							customClasses: [`${rootClass}-button`],
 							iconName: `ChevronUp${iconSize}`,
@@ -84,7 +81,6 @@ export const Template = ({
 							tabIndex: "-1"
 						})}
 						${InfieldButton({
-							...globals,
 							size,
 							customClasses: [`${rootClass}-button`],
 							iconName: `ChevronDown${iconSize}`,

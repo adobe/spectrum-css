@@ -16,7 +16,6 @@ export const Template = ({
 	variant,
 	hasActionButton,
 	customClasses = [],
-	...globals
 }) => {
 	const iconName =
 		variant === "negative" ? "Alert" : variant === "info" ? "Info" : "";
@@ -34,7 +33,6 @@ export const Template = ({
 				<div class="${rootClass}-content">
 					${iconName
 						? Icon({
-								...globals,
 								iconName,
 								customClasses: [`${rootClass}-icon`],
 						})
@@ -54,10 +52,8 @@ export const Template = ({
 					vertical: true,
 					size: "s",
 					tag: "div",
-					...globals,
 				})}
 				${CloseButton({
-					...globals,
 					size: "m",
 					staticColor: "white",
 					onclick,

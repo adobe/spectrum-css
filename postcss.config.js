@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 const { join } = require("path");
 
 module.exports = ({
+	file,
 	lint = true,
 	verbose = true,
 	additionalPlugins = {},
@@ -23,6 +24,14 @@ module.exports = ({
 		options.map = { inline: false };
 	}
 	else options.map = false;
+
+	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
+	if (file && file.includes("@spectrum-css/tokens-legacy")) {
+		additionalPlugins["postcss-selector-replace"] = {
+			before: [".spectrum"],
+			after: [".spectrum--legacy.spectrum"],
+		};
+	}
 
 	/*
 		This deconstruction has to do with how options are passed

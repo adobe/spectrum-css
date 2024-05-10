@@ -17,7 +17,6 @@ export const Template = ({
 	customClasses = [],
 	id,
 	onclick,
-	...globals
 }) => {
 
 	return html`
@@ -36,7 +35,6 @@ export const Template = ({
 			@click=${onclick}
 		>
 			${Icon({
-				...globals,
 				size,
 				iconName: "Cross",
 				customClasses: [`${rootClass}-UIIcon`],

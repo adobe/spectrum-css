@@ -15,7 +15,6 @@ export const Template = ({
 	variant,
 	customClasses = [],
 	id,
-	...globals
 }) => {
 
 	const iconName =
@@ -36,7 +35,6 @@ export const Template = ({
 		>
 			${variant
 				? Icon({
-						...globals,
 						iconName: ifDefined(iconName),
 						size: "m",
 						customClasses: [`${rootClass}-typeIcon`],
@@ -46,7 +44,6 @@ export const Template = ({
 				<div class="${rootClass}-content">${message}</div>
 				${inlineButtonLabel
 					? Button({
-							...globals,
 							variant: "secondary",
 							size: "m",
 							staticColor: "white",
@@ -57,7 +54,6 @@ export const Template = ({
 			</div>
 			<div class="${rootClass}-buttons">
 				${CloseButton({
-					...globals,
 					size: "m",
 					staticColor: "white",
 					onclick,

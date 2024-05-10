@@ -16,7 +16,6 @@ export const Template = ({
 	isDisabled,
 	isInvalid,
 	tabIndex = 0,
-	...globals
 }) => {
 
 	return html`
@@ -36,7 +35,6 @@ export const Template = ({
     >
     <div class="${rootClass}-fill">
       ${when(iconName, () => Icon({
-        ...globals,
         size,
         iconName,
         customClasses: [`${rootClass}-icon`],

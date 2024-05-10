@@ -16,7 +16,6 @@ export const Template = ({
 	labelPosition,
 	isInvalid,
 	items,
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -29,7 +28,6 @@ export const Template = ({
 		aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
 	>
 		${FieldLabel({
-			...globals,
 			size: "m",
 			label: "Field Group Label",
 			alignment: labelPosition === "side" ? "right" : "top",
@@ -41,14 +39,12 @@ export const Template = ({
 				(item) => item.id,
 				(item) => {
 					return Radio({
-						...globals,
 						...item,
 						customClasses: [`${rootClass}-item`],
 					});
 				}
 			)}
 			${HelpText({
-				...globals,
 				size: "m",
 				text: "Select an option",
 				variant: isInvalid ? "negative" : "neutral",

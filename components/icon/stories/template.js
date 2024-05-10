@@ -3,6 +3,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
+import { useGlobals } from "@storybook/preview-api";
+
 import { fetchIconSVG, uiIcons, uiIconSizes, workflowIcons } from "./utilities.js";
 
 import "../index.css";
@@ -35,9 +37,8 @@ export const Template = ({
 	id,
 	customClasses = [],
 	useRef = false,
-	...globals
 }) => {
-	const { scale } = globals;
+	const [{ scale }] = useGlobals();
 
 	if (!iconName) {
 		console.warn(
@@ -122,7 +123,7 @@ export const Template = ({
 	let icon;
 
 	if (!useRef) {
-		icon = fetchIconSVG({ iconName: idKey, setName, ...globals });
+		icon = fetchIconSVG({ iconName: idKey, setName, scale });
 
 		if (!icon) {
 			console.warn(`Icon: "${idKey}" was not found in the "${setName}" icon set.`);

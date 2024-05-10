@@ -23,7 +23,6 @@ export const Template = ({
 	isDropTarget = false,
 	customClasses = [],
 	id,
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
@@ -81,7 +80,6 @@ export const Template = ({
 					selection === "checkbox",
 					() =>
 						Checkbox({
-							...globals,
 							size: "m",
 							isEmphasized: true,
 							isChecked: isSelected,

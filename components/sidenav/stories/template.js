@@ -15,7 +15,6 @@ export const Template = ({
 	hasIcon,
 	iconName,
 	items = [],
-	...globals
 }) => html`
   <nav>
     <ul class=${classMap({
@@ -39,7 +38,6 @@ export const Template = ({
               <a class="${rootClass}-itemLink">
               ${when(hasIcon, () =>
                 Icon({
-                    ...globals,
                     iconName,
                   })
                 )}
@@ -58,7 +56,6 @@ export const Template = ({
                     variant,
                     hasIcon,
                     iconName,
-                    ...globals,
                     ...item
                   });
                 })}
@@ -70,7 +67,6 @@ else {
           return SideNavItem({
             hasIcon,
             iconName,
-            ...globals,
             ...item
           });
         }
@@ -91,7 +87,6 @@ export const SideNavItem = ({
 	hasIcon,
 	iconName,
 	customClasses = [],
-	...globals
 }) => {
 	const displayIcon = hasIcon & variant === "multiLevel" ? false : true;
 	return html`
@@ -104,7 +99,6 @@ export const SideNavItem = ({
       <a href=${link} class="${rootClass}-itemLink">
         ${displayIcon ?
           Icon({
-            ...globals,
             iconName,
           })
         : ""}
@@ -114,7 +108,6 @@ export const SideNavItem = ({
         <ul class=${rootClass}>
           ${repeat(levelThreeItems, (item) => item.id, (item) => {
             return SideNavItem({
-              ...globals,
               ...item
             });
           })}

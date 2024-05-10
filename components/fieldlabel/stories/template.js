@@ -19,7 +19,6 @@ export const Template = ({
 	isDisabled,
 	isRequired,
 	customStyles = {},
-	...globals
 }) => {
 	if (!label) {
 		console.warn("FieldLabel: please provide a label for the field label.");
@@ -56,7 +55,6 @@ export const Template = ({
 			for=${ifDefined(forInput)}
 		>
 			${label}${when(isRequired, () => Icon({
-				...globals,
 				size,
 				iconName,
 				customClasses: [`${rootClass}-UIIcon`, `${rootClass}-requiredIcon`],

@@ -24,7 +24,6 @@ export const TreeViewItem = ({
 	thumbnail,
 	items,
 	customClasses = [],
-	...globals
 }) => {
 	if (type === "heading") {
 		return html`
@@ -40,7 +39,6 @@ export const TreeViewItem = ({
 				</div>
 				${typeof items !== "undefined" && items.length > 0
 					? Template({
-							...globals,
 							items: items,
 							size,
 							rootClass: "spectrum-TreeView",
@@ -79,7 +77,6 @@ export const TreeViewItem = ({
 			>
 				${typeof items !== "undefined"
 					? Icon({
-							...globals,
 							size,
 							setName: "ui",
 							iconName: "ChevronRight",
@@ -88,7 +85,6 @@ export const TreeViewItem = ({
 					: ""}
 				${icon
 					? Icon({
-							...globals,
 							size,
 							iconName: icon,
 							setName: iconSet,
@@ -97,7 +93,6 @@ export const TreeViewItem = ({
 					: ""}
 				${thumbnail
 					? Thumbnail({
-							...globals,
 							...thumbnail,
 							size: size == "s"  ? "200"
 								: size == "m"  ? "200"
@@ -113,7 +108,6 @@ export const TreeViewItem = ({
 			</a>
 			${typeof items !== "undefined" && items.length > 0
 				? Template({
-						...globals,
 						items: items,
 						size,
 						rootClass: "spectrum-TreeView",
@@ -132,7 +126,6 @@ export const Template = ({
 	variant,
 	isQuiet,
 	items,
-	...globals
 }) => html`
 	<ul
 		class=${classMap({
@@ -150,7 +143,6 @@ export const Template = ({
 			(item) => item.id,
 			(item) => {
 				return TreeViewItem({
-					...globals,
 					...item,
 					size,
 				});

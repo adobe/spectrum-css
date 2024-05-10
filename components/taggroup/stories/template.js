@@ -14,7 +14,7 @@ export const Template = ({
 	isRemovable = false,
 	customClasses = [],
 	customStyles = {},
-	...globals
+	size = "m",
 }) => html`
 	<div
 		class=${classMap({
@@ -27,9 +27,8 @@ export const Template = ({
 	>
 		${items.map((i) => {
 			return Tag({
-				...globals,
 				...i,
-				size: globals.size,
+				size,
 				hasClearButton: isRemovable,
 				customClasses: [`${rootClass}-item`],
 			});

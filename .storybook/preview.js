@@ -3,11 +3,11 @@ import DocumentationTemplate from "./DocumentationTemplate.mdx";
 
 import { withActions } from "@storybook/addon-actions/decorator";
 import {
-  withContextWrapper,
-  withLanguageWrapper,
-  withReducedMotionWrapper,
-  withTestingPreviewWrapper,
-  withTextDirectionWrapper,
+	withContextWrapper,
+	withLanguageWrapper,
+	withReducedMotionWrapper,
+	withTestingPreviewWrapper,
+	withTextDirectionWrapper,
 } from "./decorators/index.js";
 
 // https://github.com/storybookjs/storybook-addon-console
@@ -70,32 +70,35 @@ export const globalTypes = {
 				{ value: false, title: "Default mode" },
 			],
 		},
-	}
-};
-
-// Global properties added to each component;
-//      determines what stylesheets are loaded
-export const argTypes = {
-	color: {
-		name: "Color",
-		description: "Controls the color context of the component.",
-		type: { required: true },
-		table: {
-			type: { summary: "light | dark" },
-			defaultValue: { summary: "light" },
-			category: "Global",
+	},
+	context: {
+		title: "Context",
+		description: "Indicates which tokens to use for styling the component.",
+		defaultValue: "spectrum",
+		toolbar: {
+			items: [
+				{ value: "spectrum", title: "Spectrum 2", right: "(default)", default: true },
+				{ value: "legacy", title: "Spectrum 1", right: "(legacy)" },
+				{ value: "express", title: "Express", right: "(legacy)" },
+			],
+			dynamicTitle: true,
 		},
-		options: ["light", "dark"],
-		control: {
-			type: "select",
-			labels: {
-				light: "Light (default)",
-				dark: "Dark",
-			},
+	},
+	color: {
+		title: "Color",
+		description: "Controls the color context of the component.",
+		defaultValue: "light",
+		toolbar: {
+			icon: "color",
+			items: [
+				{ value: "light", title: "Light", right: "(default)" },
+				{ value: "dark", title: "Dark" },
+			],
+			dynamicTitle: true,
 		},
 	},
 	scale: {
-		name: "Platform scale",
+		title: "Platform scale",
 		description: "Controls the platform scale of the component.",
 		table: {
 			type: { summary: "medium | large" },
@@ -114,7 +117,7 @@ export const argTypes = {
 	},
 	// @todo https://jira.corp.adobe.com/browse/CSS-314
 	reducedMotion: {
-		name: "Reduce motion",
+		title: "Reduce motion",
 		title: "Reduce motion",
 		description: "Reduce animation and transitions",
 		table: {
@@ -125,6 +128,11 @@ export const argTypes = {
 		type: { required: true },
 		control: "boolean",
 	},
+};
+
+// Global properties added to each component;
+//      determines what stylesheets are loaded
+export const argTypes = {
 	/* None of these should show up in the args table but are necessary for rendering the templates */
 	rootClass: {
 		name: "Class name",

@@ -17,7 +17,6 @@ export const Template = ({
 	customDescription,
 	customLabel,
 	id,
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -32,7 +31,6 @@ export const Template = ({
 		style="width: 300px;"
 	>
 		${IllustratedMessage({
-			...globals,
 			heading: customHeading ?? IllustratedMessageStory.args.heading,
 			description: customDescription ?? IllustratedMessageStory.args.description,
 		})}

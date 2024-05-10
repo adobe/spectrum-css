@@ -29,7 +29,6 @@ export const Template = ({
 	previousHandler,
 	nextHandler,
 	id,
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
@@ -275,7 +274,6 @@ export const Template = ({
 					})}
 				</div>
 				${ActionButton({
-					...globals,
 					label: "Previous",
 					hideLabel: true,
 					isQuiet: true,
@@ -289,7 +287,6 @@ export const Template = ({
 					}),
 				})}
 				${ActionButton({
-					...globals,
 					label: "Next",
 					hideLabel: true,
 					isQuiet: true,

@@ -4,13 +4,10 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import { useArgs } from "@storybook/preview-api";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
 
 import "../index.css";
 
@@ -27,17 +24,13 @@ export const Template = ({
 	isQuiet = false,
 	isGallery = false,
 	isGrid = false,
-	hasQuickAction = false,
 	hasActions = false,
 	showAsset,
 	customStyles = {},
 	customClasses = [],
 	id,
 	role,
-	...globals
 }) => {
-	const [, updateArgs] = useArgs();
-
 	return html`
     <div
       class=${classMap({
@@ -63,12 +56,10 @@ export const Template = ({
               ${when(
                 !isHorizontal,
                 () => Asset({
-                  ...globals,
                   image,
                   preset: !image ? showAsset : undefined,
                 }),
                 () => Icon({
-                  ...globals,
                   size: "xxl",
                   iconName: showAsset === "folder" ? "File" : "Document",
                 })
@@ -90,7 +81,6 @@ export const Template = ({
                   () => html`
                     <div class="${rootClass}-actionButton">
                       ${ActionButton({
-                        ...globals,
                         iconName: "More",
                         size: "m",
                         isQuiet: true
@@ -113,23 +103,5 @@ export const Template = ({
         <div class="${rootClass}-footer">
           ${footer}
         </div>`)}
-      ${when(
-        hasQuickAction && !isHorizontal,
-        () => QuickAction({
-          ...globals,
-          noOverlay: true,
-          content: [
-            Checkbox({
-              ...globals,
-              isChecked: isSelected,
-              title: "Select",
-            }),
-          ],
-          onclick: () => {
-            updateArgs({ isSelected: !isSelected });
-          },
-          customClasses: [`${rootClass}-quickActions`],
-        })
-      )}
     </div>`;
 };

@@ -22,7 +22,6 @@ export const AccordionItem = ({
 	customStyles = {},
 	customClasses = [],
 	onclick,
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -55,7 +54,6 @@ export const AccordionItem = ({
 					setName: "ui",
 					size: iconSize,
 					customClasses: [`${rootClass}Indicator`],
-					...globals,
 				})}
 			</span>
 		</h3>
@@ -80,7 +78,6 @@ export const Template = ({
 	disableAll = false,
 	customClasses = [],
 	customStyles = {},
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
@@ -103,7 +100,6 @@ export const Template = ({
 			${repeat(Array.from(items.keys()), (heading, idx) => {
 				const item = items.get(heading);
 				return AccordionItem({
-					...globals,
 					rootClass: `${rootClass}-item`,
 					heading,
 					idx,

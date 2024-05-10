@@ -281,7 +281,6 @@ export const Template = ({
  hasClearButton = false,
  id,
  customClasses = [],
- ...globals
 }) => html`
   <div
    class=${classMap({
@@ -299,13 +298,11 @@ export const Template = ({
   >
    ${avatarUrl && !iconName
     ? Avatar({
-      ...globals,
       image: avatarUrl,
       size: "50",
       })
     : ""} ${iconName
     ? Icon({
-      ...globals,
       iconName,
       customClasses: [`${rootClass}s-itemIcon`],
       })
@@ -313,7 +310,6 @@ export const Template = ({
    <span class="${rootClass}s-itemLabel">${label}</span>
    ${hasClearButton
     ? ClearButton({
-      ...globals,
       customClasses: [`${rootClass}-clearButton`],
       onclick: (evt) => {
        const el = evt.target;

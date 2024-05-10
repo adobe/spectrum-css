@@ -35,7 +35,6 @@ export const Template = ({
 	isPending = false,
 	ariaExpanded,
 	ariaControls,
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
@@ -70,13 +69,12 @@ export const Template = ({
       aria-controls=${ifDefined(ariaControls)}
       data-testid=${ifDefined(testId)}
     >
-      ${when(iconName && !iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
+      ${when(iconName && !iconAfterLabel, () => Icon({ iconName, size }))}
       ${when(label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
-      ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
+      ${when(iconName && iconAfterLabel, () => Icon({ iconName, size }))}
       ${when(isPending, () => ProgressCircle({
-        ...globals,
         size: "s",
         testId: "progress-circle",
         staticColor,

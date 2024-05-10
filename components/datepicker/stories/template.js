@@ -27,7 +27,6 @@ export const Template = ({
 	readOnly = false,
 	selectedDay,
 	lastDay,
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
@@ -55,7 +54,6 @@ export const Template = ({
 			aria-haspopup="dialog"
 		>
 			${TextField({
-				...globals,
 				size: "m",
 				isQuiet,
 				isDisabled,
@@ -72,7 +70,6 @@ export const Template = ({
 			})}
 			${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
 			${when(isRange, () => TextField({
-				...globals,
 				size: "m",
 				isQuiet,
 				isDisabled,
@@ -87,7 +84,6 @@ export const Template = ({
 					: undefined,
 			}))}
 			${PickerButton({
-				...globals,
 				customClasses: [`${rootClass}-button`],
 				size: "m",
 				iconType: "workflow",
@@ -104,7 +100,6 @@ export const Template = ({
 				},
 			})}
 			${Popover({
-				...globals,
 				isOpen: isOpen && !isDisabled && !readOnly,
 				withTip: false,
 				position: "bottom",
@@ -117,7 +112,7 @@ export const Template = ({
 							width: undefined,
 					}
 					: {},
-				content: [Calendar(globals)],
+				content: [Calendar({})],
 				// @todo this implementation of calendar does not currently display range selections or selected date on first load
 			})}
 		</div>

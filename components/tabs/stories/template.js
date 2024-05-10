@@ -23,7 +23,6 @@ export const Template = ({
 	iconOnly = false,
 	customStyles = {},
 	content = [],
-	...globals
 }) => {
 
 	if (!content || !content.length) {
@@ -81,7 +80,7 @@ export const Template = ({
 								tabindex="0"
 							>
 								${when(item.icon, () =>
-							Icon({ ...globals, iconName: item.icon, size })
+							Icon({ iconName: item.icon, size })
 						)}
 								${when(
 							item.label && !iconOnly,
@@ -103,7 +102,7 @@ export const Template = ({
 					isQuiet: true,
 					size,
 					isOpen,
-					placeholder: !iconOnly ? content?.[0].label : Icon({ ...globals, iconName: content?.[0].icon, size }),
+					placeholder: !iconOnly ? content?.[0].label : Icon({ iconName: content?.[0].icon, size }),
 					name: content?.[0].label,
 					id: "tab-selector",
 					customPopoverStyles: {

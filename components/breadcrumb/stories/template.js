@@ -13,7 +13,6 @@ export const Template = ({
 	items = [],
 	variant,
 	isDragged = false,
-	...globals
 }) => html`
 	<nav>
 		<ul
@@ -36,7 +35,6 @@ export const Template = ({
 						iconName,
 						() =>
 							ActionButton({
-								...globals,
 								iconName,
 								isDisabled,
 								isQuiet: true,
@@ -62,7 +60,6 @@ export const Template = ({
 					)}
 					${when(idx !== arr.length - 1, () =>
 						Icon({
-							...globals,
 							iconName: "ChevronRight100",
 							customClasses: [`${rootClass}-itemSeparator`],
 						})

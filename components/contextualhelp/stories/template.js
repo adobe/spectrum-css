@@ -19,7 +19,6 @@ export const Template = ({
 	popoverPlacement,
 	customStyles = {},
 	customClasses = [],
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -36,7 +35,6 @@ export const Template = ({
 				></div> `
 			: ""}
 		${ActionButton({
-			...globals,
 			size: "xs",
 			iconName,
 			customClasses: [`${rootClass}-button`],

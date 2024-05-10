@@ -27,7 +27,6 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-	...globals
 }) => {
 
 	const [, updateArgs] = useArgs();
@@ -150,7 +149,6 @@ export const Template = ({
 				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
 			>
 				${FieldLabel({
-					...globals,
 					size,
 					label,
 					isDisabled,
