@@ -335,46 +335,46 @@ governing permissions and limitations under the License.
 			block-size: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
 			inset-block: 0;
 		}
+	}
 
-		/* left popover with tip pointing right ▷ */
-		&.spectrum-Popover--left,
-		&.spectrum-Popover--left-bottom,
-		&.spectrum-Popover--left-top {
-			.spectrum-Popover-tip {
-				inset-inline: 100% auto;
-			}
+	/* left popover with tip pointing right ▷ */
+	&.spectrum-Popover--left,
+	&.spectrum-Popover--left-bottom,
+	&.spectrum-Popover--left-top {
+		.spectrum-Popover-tip {
+			inset-inline: 100% auto;
 		}
+	}
 
-		/* right popover with tip pointing left ◁ */
-		&.spectrum-Popover--right,
-		&.spectrum-Popover--right-bottom,
-		&.spectrum-Popover--right-top {
-			.spectrum-Popover-tip {
-				inset-inline: auto 100%;
+	/* right popover with tip pointing left ◁ */
+	&.spectrum-Popover--right,
+	&.spectrum-Popover--right-bottom,
+	&.spectrum-Popover--right-top {
+		.spectrum-Popover-tip {
+			inset-inline: auto 100%;
 
-				/* flip tip to point left ◁ */
-				transform: scaleX(-1);
-			}
+			/* flip tip to point left ◁ */
+			transform: scaleX(-1);
 		}
+	}
 
-		/* popover with tip at top */
-		&.spectrum-Popover--right-top,
-		&.spectrum-Popover--left-top,
-		&.spectrum-Popover--start-top,
-		&.spectrum-Popover--end-top {
-			.spectrum-Popover-tip {
-				inset-block: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
-			}
+	/* popover with tip at top */
+	&.spectrum-Popover--right-top,
+	&.spectrum-Popover--left-top,
+	&.spectrum-Popover--start-top,
+	&.spectrum-Popover--end-top {
+		.spectrum-Popover-tip {
+			inset-block: var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing)) auto;
 		}
+	}
 
-		/* popover with tip at bottom */
-		&.spectrum-Popover--right-bottom,
-		&.spectrum-Popover--left-bottom,
-		&.spectrum-Popover--start-bottom,
-		&.spectrum-Popover--end-bottom {
-			.spectrum-Popover-tip {
-				inset-block: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
-			}
+	/* popover with tip at bottom */
+	&.spectrum-Popover--right-bottom,
+	&.spectrum-Popover--left-bottom,
+	&.spectrum-Popover--start-bottom,
+	&.spectrum-Popover--end-bottom {
+		.spectrum-Popover-tip {
+			inset-block: auto var(--mod-popover-pointer-edge-spacing, var(--spectrum-popover-pointer-edge-spacing));
 		}
 	}
 
