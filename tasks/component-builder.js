@@ -195,6 +195,7 @@ async function processCSS(content, input, output, {
 	cwd,
 	/* eslint-disable-next-line no-unused-vars */
 	clean = false,
+	configPath = __dirname,
 	...postCSSOptions
 } = {}) {
 	if (!content) return Promise.reject(new Error("This function requires content be provided"));
@@ -208,7 +209,7 @@ async function processCSS(content, input, output, {
 			verbose: false,
 			...postCSSOptions,
 		},
-		__dirname // This is the path to the directory where the postcss.config.js lives
+		configPath // This is the path to the directory where the postcss.config.js lives
 	);
 
 	const result = await postcss(plugins).process(content, options);

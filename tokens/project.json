@@ -22,7 +22,9 @@
 					"cp -r ./components ./dist/css/components",
 					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
 					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css",
-					"find dist -type f -empty -delete"
+					"node -e \"require('./tasks/token-rollup.js').default()\"",
+					"find dist -type f -empty -delete",
+					"prettier --write dist/**/*.css"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
