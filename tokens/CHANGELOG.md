@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.1.0-alpha.3
+
+### Minor Changes
+
+- Adding an index file for all new component assets listed in the token package output.
+
 ## 14.1.0-alpha.2
 
 ### Patch Changes

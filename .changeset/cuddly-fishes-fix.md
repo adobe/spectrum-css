@@ -2,4 +2,7 @@
 "@spectrum-css/tokens": minor
 ---
 
-feat: adding component-specific theme mappings and new bridge files to support S1 and S2 in tandem
+### New token output files
+
+- Adds component-specific theme mappings to the tokens package; this supports SWC offering S1 and S2 in tandem
+- Adds an index file to list all available component-specific files

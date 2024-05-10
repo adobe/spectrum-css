@@ -25,7 +25,8 @@ module.exports = () => ({
 					colormin: false,
 					discardComments: { removeAll: true },
 					// @todo yarn add -DW css-declaration-sorter
-					cssDeclarationSorter: false, // @todo { order: "smacss" }
+					cssDeclarationSorter: false, // @todo { order: "smacss" },
+					normalizeWhitespace: false,
 				},
 			],
 		},
