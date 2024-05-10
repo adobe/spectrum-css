@@ -4909,16 +4909,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/cyclebutton@npm:^3.1.3":
-  version: 3.1.3
-  resolution: "@spectrum-css/cyclebutton@npm:3.1.3"
-  peerDependencies:
-    "@spectrum-css/actionbutton": ">=5"
-    "@spectrum-css/vars": ">=9"
-  checksum: 10c0/92eacba8788911201a46a418354e6281037b97e6913bd056c62328848f53c745a3f1c722b7be1cf8900ba86bf6996149d2653d998b2ccf2fee5f955c89a24c00
-  languageName: node
-  linkType: hard
-
 "@spectrum-css/datepicker@workspace:components/datepicker":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/datepicker@workspace:components/datepicker"
@@ -5293,17 +5283,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/quickaction@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "@spectrum-css/quickaction@npm:3.1.1"
-  peerDependencies:
-    "@spectrum-css/actionbutton": ">=5"
-    "@spectrum-css/checkbox": ">=8"
-    "@spectrum-css/vars": ">=9"
-  checksum: 10c0/5c57f78b2715d5b143e2abfeb07129511b5fd242be9a109b0b62db7708923f9aa2f4c709b1e4fd26d1b17436a18f4dec8d6923fd16799d9bdbed3a1348a41e0a
-  languageName: node
-  linkType: hard
-
 "@spectrum-css/radio@workspace:components/radio":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/radio@workspace:components/radio"
@@ -5333,19 +5312,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/searchwithin@npm:^5.1.3":
-  version: 5.1.3
-  resolution: "@spectrum-css/searchwithin@npm:5.1.3"
-  peerDependencies:
-    "@spectrum-css/clearbutton": ">=5"
-    "@spectrum-css/icon": ">=4"
-    "@spectrum-css/picker": ">=3"
-    "@spectrum-css/textfield": ">=5"
-    "@spectrum-css/vars": ">=9"
-  checksum: 10c0/5b5aba2d300e41d37895c071f6ed9f771cc1650ff3643ac53721052cd413fcc8cafa47761e5c9f12d22ec3cbf7ea9990c895b0747ce2bd2a1f8adfa722609726
-  languageName: node
-  linkType: hard
-
 "@spectrum-css/sidenav@workspace:components/sidenav":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/sidenav@workspace:components/sidenav"
@@ -5374,20 +5340,6 @@ __metadata:
     "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
-
-"@spectrum-css/splitbutton@npm:^8.1.2":
-  version: 8.1.2
-  resolution: "@spectrum-css/splitbutton@npm:8.1.2"
-  peerDependencies:
-    "@spectrum-css/button": ">=11"
-    "@spectrum-css/icon": ">=4"
-    "@spectrum-css/vars": ">=9"
-  peerDependenciesMeta:
-    "@spectrum-css/icon":
-      optional: true
-  checksum: 10c0/4ca2ec3541b6d5a5224d1a92ecb9156519b12731bbae13261a31827e638c1266141f66b8f615f92bafada3729b7893c0839db6dc0d6e0d698603e782925e7335
-  languageName: node
-  linkType: hard
 
 "@spectrum-css/splitview@workspace:components/splitview":
   version: 0.0.0-use.local
@@ -5710,7 +5662,6 @@ __metadata:
     ava: "npm:^6.1.2"
     c8: "npm:^9.1.0"
     colors: "npm:^1.4.0"
-    fast-glob: "npm:^3.3.2"
     postcss: "npm:^8.4.38"
     postcss-value-parser: "npm:^4.2.0"
     stylelint: "npm:^15.11.0"
@@ -17692,15 +17643,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-combininator@npm:^2.0.0, postcss-combininator@workspace:plugins/postcss-combininator":
-  version: 0.0.0-use.local
-  resolution: "postcss-combininator@workspace:plugins/postcss-combininator"
-  dependencies:
-    ava: "npm:^6.1.2"
-    postcss: "npm:^8.4.38"
-  languageName: unknown
-  linkType: soft
-
 "postcss-convert-values@npm:^7.0.0":
   version: 7.0.0
   resolution: "postcss-convert-values@npm:7.0.0"
@@ -17726,18 +17668,6 @@ __metadata:
   checksum: 10c0/2384a40f0e38abe92fbfc707000b264e4bdfe65bd0086ab18c6aab71049198f9dd1431bc4f9bbf68f7cca86b4ff0da352bac4a6ecd04e3671b7ddf6ed6ec3d04
   languageName: node
   linkType: hard
-
-"postcss-custom-properties-mapping@workspace:plugins/postcss-custom-properties-mapping":
-  version: 0.0.0-use.local
-  resolution: "postcss-custom-properties-mapping@workspace:plugins/postcss-custom-properties-mapping"
-  dependencies:
-    fast-glob: "npm:^3.3.2"
-    postcss: "npm:^8.4.38"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ">=8"
-  languageName: unknown
-  linkType: soft
 
 "postcss-custom-properties@npm:^13.3.8":
   version: 13.3.8
@@ -18530,14 +18460,6 @@ __metadata:
   checksum: 10c0/955c72d8d71b6b54dcdcbcef765a593803512d215cef12a49b71d1abf8ab8d2dacb5645dbb5a0a6535609aab6bffb834599d6073f28fe61e589a4437af85e243
   languageName: node
   linkType: hard
-
-"postcss-splitinator@npm:^2.0.0, postcss-splitinator@workspace:plugins/postcss-splitinator":
-  version: 0.0.0-use.local
-  resolution: "postcss-splitinator@workspace:plugins/postcss-splitinator"
-  dependencies:
-    postcss: "npm:^8.4.38"
-  languageName: unknown
-  linkType: soft
 
 "postcss-svgo@npm:^7.0.0":
   version: 7.0.0
@@ -20470,10 +20392,6 @@ __metadata:
     "@commitlint/cli": "npm:^19.3.0"
     "@commitlint/config-conventional": "npm:^19.2.2"
     "@nx/devkit": "npm:^19.0.3"
-    "@spectrum-css/cyclebutton": "npm:^3.1.3"
-    "@spectrum-css/quickaction": "npm:^3.1.1"
-    "@spectrum-css/searchwithin": "npm:^5.1.3"
-    "@spectrum-css/splitbutton": "npm:^8.1.2"
     at-rule-packer: "npm:^0.4.2"
     autoprefixer: "npm:^10.4.19"
     colors: "npm:^1.4.0"
@@ -20499,14 +20417,12 @@ __metadata:
     open: "npm:^10.1.0"
     pajv: "npm:^1.2.0"
     postcss: "npm:^8.4.38"
-    postcss-combininator: "npm:^2.0.0"
     postcss-extend: "npm:^1.0.5"
     postcss-hover-media-feature: "npm:^1.0.2"
     postcss-import: "npm:^16.1.0"
     postcss-load-config: "npm:^5.1.0"
     postcss-preset-env: "npm:^9.5.9"
     postcss-reporter: "npm:^7.1.0"
-    postcss-splitinator: "npm:^2.0.0"
     prettier: "npm:^3.2.5"
     rimraf: "npm:^5.0.7"
     stylelint: "npm:^15.11.0"

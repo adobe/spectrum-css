@@ -112,7 +112,11 @@ async function extractModifiers(filepath, { cwd } = {}) {
 	const selectors = new Set();
 	const root = postcss.parse(content);
 	root.walkRules(rule => {
-		if (rule.selector) selectors.add(rule.selector);
+		if (rule.selectors) {
+			rule.selectors.forEach((selector) => {
+				selectors.add(selector);
+			});
+		}
 	});
 
 	if (!fs.existsSync(path.join(cwd, "dist"))) {
