@@ -6,6 +6,31 @@ import { Template } from "./template";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 
+const placementOptions = [
+	"top",
+	"top-left",
+	"top-right",
+	"top-start",
+	"top-end",
+	"bottom",
+	"bottom-left",
+	"bottom-right",
+	"bottom-start",
+	"bottom-end",
+	"right",
+	"right-bottom",
+	"right-top",
+	"left",
+	"left-bottom",
+	"left-top",
+	"start",
+	"start-top",
+	"start-bottom",
+	"end",
+	"end-top",
+	"end-bottom",
+];
+
 /**
  * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
  */
@@ -44,20 +69,7 @@ export default {
 				category: "Component",
 			},
 			control: "select",
-			options: [
-				"top",
-				"top-start",
-				"top-end",
-				"bottom",
-				"bottom-start",
-				"bottom-end",
-				"left",
-				"left-top",
-				"left-bottom",
-				"right",
-				"right-top",
-				"right-bottom",
-			],
+			options: placementOptions,
 			if: { arg: "nested", truthy: false },
 		},
 	},

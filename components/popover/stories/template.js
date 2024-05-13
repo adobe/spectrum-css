@@ -60,48 +60,60 @@ export const Template = ({
 					const popWidth = popover.offsetWidth ?? 0;
 					const popHeight = popover.offsetHeight ?? 0;
 					const textDir = getComputedStyle(document.querySelector("html")).direction;
+
 					let x, y;
 					let xOffset = "+ 0px";
 					let yOffset = "+ 0px";
-					if (position.includes("top") || position.includes("bottom") && !(position.includes("-top") || position.includes("-bottom"))) {
+
+					if (position.startsWith("top") || position.startsWith("bottom")) {
 						x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
 					}
-					if (position.includes("left") || position.includes("right")) {
+					if (position.includes("left") || position.includes("right") || position.startsWith("start") || position.startsWith("end")) {
 						y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
 					}
-					if (position.includes("top") && !position.includes("-top")) {
+					if (position.startsWith("top")) {
 						y = rect.top - popHeight;
 						yOffset = withTip
 							? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
 							: "- var(--spectrum-popover-animation-distance)";
 					}
- else if (position.includes("bottom") && !position.includes("-bottom")) {
+					else if (position.startsWith("bottom")) {
 						y = rect.bottom;
 						yOffset = "+ (var(--spectrum-popover-animation-distance))";
 					}
- else if (position.includes("left")) {
+					else if (position.includes("left")) {
 						if (textDir == "rtl") {
 							x = rect.right;
 							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
 						}
- else {
+						else {
 							x = rect.left - popWidth;
 							xOffset = withTip
 								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
 								: "- var(--spectrum-popover-animation-distance)";
 						}
 					}
- else if (position.includes("right")) {
+					else if (position.includes("right")) {
 						if (textDir == "rtl") {
 							x = rect.left - popWidth;
 							xOffset = withTip
 								? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
 								: "- var(--spectrum-popover-animation-distance)";
 						}
- else {
+						else {
 							x = rect.right;
 							xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
 						}
+					}
+					else if (position.includes("start")) {
+						x = rect.left - popWidth;
+						xOffset = withTip
+							? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
+							: "- var(--spectrum-popover-animation-distance)";
+					}
+					else if (position.includes("end")) {
+						x = rect.right;
+						xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
 					}
 
 					if (x) transforms.push(`translateX(calc(var(--flow-direction) * calc(${parseInt(x, 10)}px ${xOffset})))`);
@@ -111,13 +123,13 @@ export const Template = ({
 					if (position === "top-start" || position === "bottom-start") {
 						additionalStyles["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
 					}
- else if (position === "top-end" || position === "bottom-end") {
+					else if (position === "top-end" || position === "bottom-end") {
 						additionalStyles["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
 					}
- else if (position === "left-top" || position === "right-top") {
+					else if (position === "left-top" || position === "right-top" || position === "start-top" || position === "end-top") {
 						additionalStyles["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
 					}
- else if (position === "left-bottom" || position === "right-bottom") {
+					else if (position === "left-bottom" || position === "right-bottom" || position === "start-bottom" || position === "end-bottom") {
 						additionalStyles["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
 					}
 
