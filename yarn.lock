@@ -3456,10 +3456,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@npmcli/redact@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@npmcli/redact@npm:1.1.0"
-  checksum: 10c0/886995220e60ca00405c93c5588aff524d1dbfee0ca8688b9607fefcda42aa464d4a3f7c75fc03a16a582befe4b6c3ac4493d67c4eb07da2fe0794fbe0dfc89b
+"@npmcli/redact@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@npmcli/redact@npm:2.0.0"
+  checksum: 10c0/8a09619ff542412e32b795ff2e88668fcb4d5c6fe2eb329a034f988f59a97553b6664ad270398b0f131184db9f21ca5aa2786a718af5da244addda2f736cda0d
   languageName: node
   linkType: hard
 
@@ -5668,7 +5668,7 @@ __metadata:
     markdown-it-anchor: "npm:^8.6.7"
     markdown-it-attrs: "npm:^4.1.6"
     markdown-it-prism: "npm:^2.3.0"
-    npm-registry-fetch: "npm:^16.2.1"
+    npm-registry-fetch: "npm:^17.0.1"
     prismjs: "npm:^1.29.0"
     pug: "npm:^3.0.2"
     rimraf: "npm:^5.0.7"
@@ -16463,11 +16463,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-registry-fetch@npm:^16.2.1":
-  version: 16.2.1
-  resolution: "npm-registry-fetch@npm:16.2.1"
+"npm-registry-fetch@npm:^17.0.1":
+  version: 17.0.1
+  resolution: "npm-registry-fetch@npm:17.0.1"
   dependencies:
-    "@npmcli/redact": "npm:^1.1.0"
+    "@npmcli/redact": "npm:^2.0.0"
     make-fetch-happen: "npm:^13.0.0"
     minipass: "npm:^7.0.2"
     minipass-fetch: "npm:^3.0.0"
@@ -16475,7 +16475,7 @@ __metadata:
     minizlib: "npm:^2.1.2"
     npm-package-arg: "npm:^11.0.0"
     proc-log: "npm:^4.0.0"
-  checksum: 10c0/bccffc291771d55056a6ebedb7aaf431cecc663286e060dc2936e8e0deee454a4a71654f772afcaa44f0d74a2c02403d8b45486a0aa2dd6d2bd8c09c9134eeb9
+  checksum: 10c0/c5235928fe31fdb8dc28982f8b20109c5f630adaaf21f69bfece609d3851d670d31e1ea2b70d38c2e573fb88145c6ba270c1c9efc0893860ae89d9e6789ab0fb
   languageName: node
   linkType: hard
 
@@ -20484,7 +20484,7 @@ __metadata:
     lint-staged: "npm:^15.2.2"
     lodash: "npm:^4.17.21"
     node-gyp: "npm:^10.1.0"
-    npm-registry-fetch: "npm:^16.2.1"
+    npm-registry-fetch: "npm:^17.0.1"
     npm-run-all: "npm:^4.1.5"
     nunjucks: "npm:^3.2.4"
     nx: "npm:^18.3.4"
