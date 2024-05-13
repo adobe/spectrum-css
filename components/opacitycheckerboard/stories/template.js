@@ -12,19 +12,23 @@ export const Template = ({
 	customStyles = {},
 	id,
 	content = [],
+	size,
 	role,
-}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${ifDefined(styleMap({
-			"--mod-opacity-checkerboard-position": backgroundPosition,
-			...customStyles,
-		}))}
-		role=${ifDefined(role)}
-		id=${ifDefined(id)}
-	>
-		${content}
-	</div>`;
+}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${ifDefined(styleMap({
+				"--mod-opacity-checkerboard-position": backgroundPosition,
+				...customStyles,
+			}))}
+			role=${ifDefined(role)}
+			id=${ifDefined(id)}
+		>
+			${content}
+		</div>`;
+};

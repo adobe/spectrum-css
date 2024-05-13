@@ -10,9 +10,12 @@ const componentPkgs = readdirSync(componentsPath, {
 
 module.exports = {
 	stories: [
+		"../components/*/stories/*.mdx",
 		"../components/*/stories/*.stories.js",
 		"../components/*/stories/*.mdx",
 		"./guides/*.mdx",
+		"./foundations/*/*.mdx",
+		"./foundations/*/*.stories.js",
 		"./deprecated/*/*.stories.js",
 		"./deprecated/*/*.mdx",
 	],

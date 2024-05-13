@@ -5,13 +5,19 @@ id: progressbar-m
 sections:
   - name: Migration Guide
     description: |
-      ### Component renamed
+      ### Version 4.0.0
+      #### Spectrum 2 release
+      Progress bar now uses Spectrum 2 tokens and specifications. This migration includes updated colors, font sizes, and spacing. No mods were harmed in the migration of this component (all `--mod` properties remain the same).
+
+      ### Version 1.0.0-beta.3
+      #### Component renamed
       Bar loader is now known as Progress bar. Replace all `.spectrum-BarLoader*` classnames with `.spectrum-ProgressBar*`.
 
-      ### T-shirt sizing
+      #### T-shirt sizing
       Progress bar now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-ProgressBar--size*` class.
 
-      ### Size classnames changed
+
+      #### Size classnames changed
       Previous size classnames map as follows:
 
       | Previous size classname         | New size classname                |
@@ -19,7 +25,7 @@ sections:
       | `.spectrum-ProgressBar--small`  | `.spectrum-ProgressBar--sizeS`    |
       | `.spectrum-ProgressBar--large`  | `.spectrum-ProgressBar--sizeM`    |
 
-      ### Label and percentage now use Field Label
+      #### Label and percentage now use Field Label
       Progress bar now uses [Field label](fieldlabel.html) for its label and percentage. Add the appropriately sized Field label to match the t-shirt size of the Progress bar.
 examples:
   - id: progressbar-m

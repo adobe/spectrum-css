@@ -120,7 +120,7 @@ governing permissions and limitations under the License.
 	);
 
 	/* Divider */
-	--spectrum-accordion-divider-color: var(--spectrum-gray-300);
+	--spectrum-accordion-divider-color: var(--spectrum-gray-200);
 	--spectrum-accordion-min-block-size: max(
 		var(--mod-accordion-item-height, var(--spectrum-accordion-item-height)),
 		calc(

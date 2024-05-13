@@ -27,7 +27,7 @@ export const withContextWrapper = makeDecorator({
 		/** @type string */
 		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
 
-		const colors = ["light", "dark", "darkest"];
+		const colors = ["light", "dark"];
 		const scales = ["medium", "large"];
 
 		useEffect(() => {
@@ -54,18 +54,18 @@ export const withContextWrapper = makeDecorator({
 					container.classList.toggle(`spectrum--${s}`, s === scale);
 				}
 
-
-				container.style.removeProperty("background");
-				const hasStaticElement = container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--staticBlack, .${args.rootClass}--overBackground`);
-				if (hasStaticElement) {
-					if (container.querySelector(`.${args.rootClass}--staticBlack`)) {
-						container.style.background = "rgb(181, 209, 211)";
-					} else if (container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--overBackground`)) {
-						container.style.background = "rgb(15, 121, 125)";
-					}
+				// Change background color when demonstrating static color options.
+				if (args.staticColor === "black") {
+					container.style.background = "var(--spectrum-examples-gradient-static-black)";
+				}
+				else if (args.staticColor === "white" || args.isStaticWhite === true) {
+					container.style.background = "var(--spectrum-examples-gradient-static-white)";
+				}
+				else {
+					container.style.removeProperty("background");
 				}
 			}
-		}, [color, scale, isExpress, args.staticColor]);
+		}, [color, scale, isExpress, args.staticColor, args.isStaticWhite]);
 
 		return StoryFn(context);
 	},

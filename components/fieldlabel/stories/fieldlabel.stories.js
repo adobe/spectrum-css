@@ -54,6 +54,17 @@ export default {
 			},
 			control: "boolean",
 		},
+		staticColor: {
+			name: "Static color",
+			description: "Variants that can be used when a Field label needs to be placed on top of a colored background or a visual.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["black", "white"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-FieldLabel",
@@ -98,4 +109,16 @@ WrappingAndRequired.args = {
 	alignment: "left",
 	isRequired: true,
 	customStyles: { width: "200px" },
+};
+
+export const StaticWhite = Template.bind({});
+StaticWhite.args = {
+	label: "The static white class used on a label marked as required",
+	staticColor: "white",
+};
+
+export const StaticBlack = Template.bind({});
+StaticBlack.args = {
+	label: "The static black class used on a label marked as required",
+	staticColor: "black",
 };

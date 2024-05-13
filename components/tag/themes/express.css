@@ -16,9 +16,9 @@ governing permissions and limitations under the License.
   .spectrum-Tag {
     /* border */
     --spectrum-tag-background-color: transparent;
-    --spectrum-tag-background-color-hover: var(--spectrum-gray-300);
+    --spectrum-tag-background-color-hover: var(--spectrum-gray-200);
     --spectrum-tag-background-color-active: var(--spectrum-gray-400);
-    --spectrum-tag-background-color-focus: var(--spectrum-gray-300);
+    --spectrum-tag-background-color-focus: var(--spectrum-gray-200);
 
     /* express has pill style full corner radius */
     --spectrum-tag-size-small-corner-radius: var(--spectrum-component-height-75);
@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
     --spectrum-tag-size-large-corner-radius: var(--spectrum-component-height-200);
 
     /* background */
-    --spectrum-tag-border-color: var(--spectrum-gray-300);
+    --spectrum-tag-border-color: var(--spectrum-gray-200);
     --spectrum-tag-border-color-hover: var(--spectrum-gray-400);
     --spectrum-tag-border-color-active: var(--spectrum-gray-500);
     --spectrum-tag-border-color-focus: var(--spectrum-gray-400);

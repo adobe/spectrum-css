@@ -1,14 +1,26 @@
 # Change Log
 
-## 13.1.0
+## 14.0.0-next.6
 
-### Minor Changes
+### Major Changes
 
-- [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
+- [#2600](https://github.com/adobe/spectrum-css/pull/2600) [`3559678`](https://github.com/adobe/spectrum-css/commit/35596780a1309dd145fa565461d330ddfaf50e68) Thanks [@jawinn](https://github.com/jawinn)! 
 
-#### Build optmizations to support minification
+#### Spectrum 2 migration
+  Button now uses Spectrum 2 tokens and specifications, which includes many color changes to all variants. A few other notable changes:
 
-Output for all component CSS files is now being run through a lightweight optimizer (cssnano) which significantly reduces unnecessary whitespace. These changes reduce file size but should not have any impact on the rendering of the component. By removing unnecessary whitespace from var functions, we are making it easier to effectively minify our provided CSS assets.
+  - Outline buttons are no longer available in accent and negative options — use the filled variant instead.
+  - Medium size is now the default. The class `.spectrum-Button--sizeM` is now unnecessary for this size, and has been removed.
+  - The `.spectrum-Button--fill` class is no longer needed and has been removed.
+
+  The following `--mod` custom properties have been renamed:
+
+  - `--mod-line-height-100` has been renamed to `--mod-button-line-height`
+  - `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`
+  - `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`
+  - `--mod-bold-font-weight` has been renamed to `--mod-button-font-weight`
+
+## 14.0.0-next.5
 
 ### Patch Changes
 
@@ -20,8 +32,18 @@ Output for all component CSS files is now being run through a lightweight optimi
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 13.1.0
+
+### Minor Changes
+
+- [#2616](https://github.com/adobe/spectrum-css/pull/2616) [`7f45ea9`](https://github.com/adobe/spectrum-css/commit/7f45ea95d3d31addf29b0720de8623b0f3f0431d) Thanks [@castastrophe](https://github.com/castastrophe)!
+
+#### Build optmizations to support minification
+
+Output for all component CSS files is now being run through a lightweight optimizer (cssnano) which significantly reduces unnecessary whitespace. These changes reduce file size but should not have any impact on the rendering of the component. By removing unnecessary whitespace from var functions, we are making it easier to effectively minify our provided CSS assets.
+
 <a name="13.0.0"></a>
-#13.0.0
+# 13.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@12.0.2...@spectrum-css/button@13.0.0)
 

@@ -3,6 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { capitalize, lowerCase } from "lodash-es";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -19,6 +20,8 @@ export const Template = ({
 	isDisabled,
 	isRequired,
 	customStyles = {},
+	staticColor,
+	style = {},
 	...globals
 }) => {
 	if (!label) {
@@ -41,13 +44,14 @@ export const Template = ({
 			iconName = "Asterisk100";
 	}
 
-	return html`
+	const labelMarkup = html`
 		<label
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--${alignment}`]: typeof alignment !== "undefined",
+				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
 				"is-disabled": isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -63,4 +67,18 @@ export const Template = ({
 			}))}
 		</label>
 	`;
+
+	// When using the static color variants, wrap the label in an example element with a background color.
+	return !staticColor
+		? labelMarkup
+		: html`
+			<div
+				style=${styleMap({
+					padding: "1rem",
+					backgroundColor: staticColor === "white" ? "rgb(15, 121, 125)" : staticColor === "black" ? "rgb(181, 209, 211)" : undefined,
+				})}
+			</div>
+				${labelMarkup}
+			</div>
+		`;
 };

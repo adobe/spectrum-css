@@ -15,9 +15,15 @@ permissions and limitations under the License. */
 		--spectrum-opacity-checkerboard-square-light
 	);
 	--spectrum-opacity-checkerboard-size: var(
-		--spectrum-opacity-checkerboard-square-size
+		--spectrum-opacity-checkerboard-square-size-medium
 	);
 	--spectrum-opacity-checkerboard-position: left top;
+}
+
+.spectrum-OpacityCheckerboard--sizeS {
+	--spectrum-opacity-checkerboard-size: var(
+		--spectrum-opacity-checkerboard-square-size-small
+	);
 }
 
 .spectrum-OpacityCheckerboard {
