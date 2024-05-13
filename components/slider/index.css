@@ -683,57 +683,40 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
 	.spectrum-Slider {
-		/*  over-writes */
 		--highcontrast-slider-track-color: ButtonText;
+		--highcontrast-slider-track-color-disabled: GrayText;
 		--highcontrast-slider-track-color-static: ButtonText;
 		--highcontrast-slider-track-fill-color: ButtonText;
+		--highcontrast-slider-track-fill-color-disabled: GrayText;
 		--highcontrast-slider-filled-track-fill-color: Highlight;
+
 		--highcontrast-slider-ramp-track-color: ButtonText;
 		--highcontrast-slider-ramp-track-color-disabled: GrayText;
 		--highcontrast-slider-tick-mark-color: ButtonText;
+		--highcontrast-slider-tick-mark-color-disabled: GrayText;
+
 		--highcontrast-slider-handle-border-color: ButtonText;
 		--highcontrast-slider-handle-border-color-hover: Highlight;
 		--highcontrast-slider-handle-border-color-down: Highlight;
 		--highcontrast-slider-handle-border-color-key-focus: Highlight;
+		--highcontrast-slider-handle-border-color-disabled: GrayText;
 		--highcontrast-slider-handle-focus-ring-color-key-focus: CanvasText;
 		--highcontrast-slider-handle-background-color: ButtonFace;
+		--highcontrast-slider-handle-background-color-disabled: GrayText;
+		--highcontrast-slider-handle-disabled-background-color: GrayText;
+
 		--highcontrast-slider-ramp-handle-border-color-active: ButtonFace;
 		--highcontrast-slider-ramp-handle-background-color: ButtonFace;
 
-		--spectrum-slider-track-color: ButtonText;
-		--spectrum-slider-track-fill-color: ButtonText;
-		--spectrum-slider-ramp-track-color: ButtonText;
-		--spectrum-slider-ramp-track-color-disabled: GrayText;
-
-		--spectrum-slider-handle-background-color: ButtonFace;
-		--spectrum-slider-handle-background-color-disabled: GrayText;
-		--spectrum-slider-handle-border-color: ButtonText;
-		--spectrum-slider-handle-disabled-background-color: GrayText;
-
-		--spectrum-slider-tick-mark-color: ButtonText;
-		--spectrum-slider-tick-mark-color-disabled: GrayText;
-
-		--spectrum-slider-handle-border-color-hover: Highlight;
-		--spectrum-slider-handle-border-color-down: Highlight;
-		--spectrum-slider-handle-border-color-key-focus: Highlight;
-		--spectrum-slider-handle-focus-ring-color-key-focus: Highlight;
-
-		--spectrum-slider-track-color-disabled: GrayText;
-		--spectrum-slider-track-fill-color-disabled: GrayText;
-
-		--spectrum-slider-handle-border-color-disabled: GrayText;
-
-		--spectrum-slider-label-text-color: CanvasText;
-		--spectrum-slider-label-text-color-disabled: GrayText;
-
-		--spectrum-slider-ramp-handle-border-color-active: ButtonText;
+		--highcontrast-slider-label-text-color: CanvasText;
+		--highcontrast-slider-label-text-color-disabled: GrayText;
 
 		.spectrum-Slider-handle.is-focused::before {
 			forced-color-adjust: none;
 		}
 
-		.spectrum-Slider--ramp .spectrum-Slider-handle {
-			/* forced-color-adjust required to ensure the "circle" around the handle is transparent */
+		&.spectrum-Slider--ramp .spectrum-Slider-handle {
+			/* forced-color-adjust is required to ensure the contrasting "circle" around the ramp handle (created by box-shadow) is visible. */
 			forced-color-adjust: none;
 		}
 
