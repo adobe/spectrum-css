@@ -147,7 +147,7 @@ const ChromaticTipPlacementVariants = (args) => html`
 			if (option.startsWith("start") || option.startsWith("end"))
 				return "Changes side with text direction (like a logical property)";
 			if (option.startsWith("left") || option.startsWith("right"))
-				return "Text direction does not effect the position";
+				return "Text direction does not affect the position";
 			return null;
 		};
 
@@ -166,11 +166,12 @@ const ChromaticTipPlacementVariants = (args) => html`
 							content: [`${optionDescription()}`],
 						})}
 					`)}
-					</div>
+				</div>
 				<div style="padding-top: 2rem">
 					${SourcelessTemplate({
 						...args,
 						position: option,
+						isOpen: true,
 					})}
 				</div>
 			</div>
@@ -190,7 +191,7 @@ export const WithTip = (args) => html`
 `;
 WithTip.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
-	await userEvent.click(canvas.getByRole("button"));
+	window.isChromatic() ? null : await userEvent.click(canvas.getByRole("button"));
 };
 WithTip.args = {
 	withTip: true,
