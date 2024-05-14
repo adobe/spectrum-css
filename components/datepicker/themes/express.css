@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-  .spectrum-DatePicker {
-    --spectrum-datepicker-initial-height: var(--spectrum-component-height-75);
-  }
+	.spectrum-DatePicker {
+		--spectrum-datepicker-initial-height: var(--spectrum-component-height-75);
+	}
 }

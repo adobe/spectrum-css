@@ -13,25 +13,25 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-    .spectrum-Button {
-      --spectrum-button-background-color-default: var(--spectrum-gray-200);
-      --spectrum-button-background-color-hover: var(--spectrum-gray-300);
-      --spectrum-button-background-color-down: var(--spectrum-gray-400);
-      --spectrum-button-background-color-focus: var(--spectrum-gray-300);
+	.spectrum-Button {
+		--spectrum-button-background-color-default: var(--spectrum-gray-200);
+		--spectrum-button-background-color-hover: var(--spectrum-gray-300);
+		--spectrum-button-background-color-down: var(--spectrum-gray-400);
+		--spectrum-button-background-color-focus: var(--spectrum-gray-300);
 
-      --spectrum-button-border-color-default: transparent;
-      --spectrum-button-border-color-hover: transparent;
-      --spectrum-button-border-color-down: transparent;
-      --spectrum-button-border-color-focus: transparent;
+		--spectrum-button-border-color-default: transparent;
+		--spectrum-button-border-color-hover: transparent;
+		--spectrum-button-border-color-down: transparent;
+		--spectrum-button-border-color-focus: transparent;
 
-      --spectrum-button-background-color-disabled: var(--spectrum-disabled-background-color);
-      --spectrum-button-border-color-disabled: transparent;
+		--spectrum-button-background-color-disabled: var(--spectrum-disabled-background-color);
+		--spectrum-button-border-color-disabled: transparent;
 
-      &.is-selected {
-        --spectrum-button-background-color-default: var(--spectrum-neutral-background-color-default);
-        --spectrum-button-background-color-hover: var(--spectrum-neutral-background-color-hover);
-        --spectrum-button-background-color-down: var(--spectrum-neutral-background-color-down);
-        --spectrum-button-background-color-focus: var(--spectrum-neutral-background-color-key-focus);
-      }
-    }
-  }
+		&.is-selected {
+			--spectrum-button-background-color-default: var(--spectrum-neutral-background-color-default);
+			--spectrum-button-background-color-hover: var(--spectrum-neutral-background-color-hover);
+			--spectrum-button-background-color-down: var(--spectrum-neutral-background-color-down);
+			--spectrum-button-background-color-focus: var(--spectrum-neutral-background-color-key-focus);
+		}
+	}
+}

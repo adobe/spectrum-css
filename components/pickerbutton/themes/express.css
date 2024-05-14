@@ -13,16 +13,16 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-  .spectrum-PickerButton {
-    --spectrum-picker-button-background-color: var(--spectrum-gray-200);
-    --spectrum-picker-button-background-color-hover: var(--spectrum-gray-300);
-    --spectrum-picker-button-background-color-down: var(--spectrum-gray-400);
-    --spectrum-picker-button-background-color-key-focus: var(--spectrum-gray-300);
+	.spectrum-PickerButton {
+		--spectrum-picker-button-background-color: var(--spectrum-gray-200);
+		--spectrum-picker-button-background-color-hover: var(--spectrum-gray-300);
+		--spectrum-picker-button-background-color-down: var(--spectrum-gray-400);
+		--spectrum-picker-button-background-color-key-focus: var(--spectrum-gray-300);
 
-    --spectrum-picker-button-border-color: none;
-    --spectrum-picker-button-border-radius: var(--spectrum-corner-radius-75);
-    --spectrum-picker-button-border-radius-rounded-sided: var(--spectrum-corner-radius-200);
-    --spectrum-picker-button-border-radius-sided: var(--spectrum-corner-radius-75);
-    --spectrum-picker-button-border-width: 0px;
-  }
+		--spectrum-picker-button-border-color: none;
+		--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-75);
+		--spectrum-picker-button-border-radius-rounded-sided: var(--spectrum-corner-radius-200);
+		--spectrum-picker-button-border-radius-sided: var(--spectrum-corner-radius-75);
+		--spectrum-picker-button-border-width: 0px;
+	}
 }

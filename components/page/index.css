@@ -11,8 +11,8 @@ governing permissions and limitations under the License.
 */
 
 :root {
-  background-color: var(--spectrum-gray-100);
+	background-color: var(--spectrum-gray-100);
 
-  /* Prevent tap highlights */
-  -webkit-tap-highlight-color: var(--spectrum-transparent-black-100);
+	/* Prevent tap highlights */
+	-webkit-tap-highlight-color: var(--spectrum-transparent-black-100);
 }

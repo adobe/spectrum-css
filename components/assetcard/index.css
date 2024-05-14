@@ -14,65 +14,65 @@ governing permissions and limitations under the License.
 
 /* outer container, unstyled */
 .spectrum-AssetCard {
-  /* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
-  --spectrum-assetcard-asset-size: 224px;
-  --spectrum-assetcard-background-color: var(--spectrum-gray-200);
-  --spectrum-assetcard-asset-animation-duration: var(--spectrum-animation-duration-100);
-  --spectrum-assetcard-asset-container-border-size: 1px;
-  --spectrum-assetcard-header-margin-block-start: var(--spectrum-spacing-300);
+	/* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
+	--spectrum-assetcard-asset-size: 224px;
+	--spectrum-assetcard-background-color: var(--spectrum-gray-200);
+	--spectrum-assetcard-asset-animation-duration: var(--spectrum-animation-duration-100);
+	--spectrum-assetcard-asset-container-border-size: 1px;
+	--spectrum-assetcard-header-margin-block-start: var(--spectrum-spacing-300);
 
-  --spectrum-assetcard-border-radius: var(--spectrum-corner-radius-100);
-  --spectrum-assetcard-border-color: transparent;
-  --spectrum-assetcard-border-color-hover: var(--spectrum-gray-500);
-  --spectrum-assetcard-border-color-down: var(--spectrum-gray-600);
+	--spectrum-assetcard-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-assetcard-border-color: transparent;
+	--spectrum-assetcard-border-color-hover: var(--spectrum-gray-500);
+	--spectrum-assetcard-border-color-down: var(--spectrum-gray-600);
 
-  --spectrum-assetcard-focus-ring-gap: 5px;
-  --spectrum-assetcard-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-assetcard-focus-ring-gap: 5px;
+	--spectrum-assetcard-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 
-  /* selection indicator - checkbox or number */
-  --spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-100-rgb), 0.9);
-  --spectrum-assetcard-selectionindicator-size: var(--spectrum-card-selection-background-size);
-  --spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-corner-radius-100);
-  --spectrum-assetcard-selectionindicator-offset-y: 4px;
-  --spectrum-assetcard-selectionindicator-blur: 6px;
-  --spectrum-assetcard-selectionindicator-color: var(--spectrum-white);
-  --spectrum-assetcard-selectionindicator-font-weight: var(--spectrum-bold-font-weight);
-  --spectrum-assetcard-selectionindicator-font-size: var(--spectrum-font-size-400);
+	/* selection indicator - checkbox or number */
+	--spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-100-rgb), 0.9);
+	--spectrum-assetcard-selectionindicator-size: var(--spectrum-card-selection-background-size);
+	--spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-assetcard-selectionindicator-offset-y: 4px;
+	--spectrum-assetcard-selectionindicator-blur: 6px;
+	--spectrum-assetcard-selectionindicator-color: var(--spectrum-white);
+	--spectrum-assetcard-selectionindicator-font-weight: var(--spectrum-bold-font-weight);
+	--spectrum-assetcard-selectionindicator-font-size: var(--spectrum-font-size-400);
 
-  /* title */
-  --spectrum-assetcard-title-text-color: var(--spectrum-gray-900);
-  --spectrum-assetcard-title-font-family: var(--spectrum-sans-font-family-stack);
-  --spectrum-assetcard-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
-  --spectrum-assetcard-title-font-style: var(--spectrum-default-font-style);
-  --spectrum-assetcard-title-line-height: var(--spectrum-line-height-100);
-  --spectrum-assetcard-title-letter-spacing: 0;
+	/* title */
+	--spectrum-assetcard-title-text-color: var(--spectrum-gray-900);
+	--spectrum-assetcard-title-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-assetcard-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	--spectrum-assetcard-title-font-style: var(--spectrum-default-font-style);
+	--spectrum-assetcard-title-line-height: var(--spectrum-line-height-100);
+	--spectrum-assetcard-title-letter-spacing: 0;
 
-  /* header content */
-  --spectrum-assetcard-header-content-text-color: var(--spectrum-gray-900);
-  --spectrum-assetcard-header-content-font-family: var(--spectrum-sans-font-family-stack);
-  --spectrum-assetcard-header-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
-  --spectrum-assetcard-header-content-font-style: var(--spectrum-default-font-style);
-  --spectrum-assetcard-header-content-line-height: var(--spectrum-line-height-200);
-  --spectrum-assetcard-header-content-letter-spacing: 0;
+	/* header content */
+	--spectrum-assetcard-header-content-text-color: var(--spectrum-gray-900);
+	--spectrum-assetcard-header-content-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-assetcard-header-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--spectrum-assetcard-header-content-font-style: var(--spectrum-default-font-style);
+	--spectrum-assetcard-header-content-line-height: var(--spectrum-line-height-200);
+	--spectrum-assetcard-header-content-letter-spacing: 0;
 
-  /* content */
-  --spectrum-assetcard-content-text-color: var(--spectrum-gray-700);
-  --spectrum-assetcard-content-font-family: var(--spectrum-sans-font-family-stack);
-  --spectrum-assetcard-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
-  --spectrum-assetcard-content-font-style: var(--spectrum-default-font-style);
-  --spectrum-assetcard-content-line-height: var(--spectrum-line-height-200);
-  --spectrum-assetcard-content-letter-spacing: 0;
+	/* content */
+	--spectrum-assetcard-content-text-color: var(--spectrum-gray-700);
+	--spectrum-assetcard-content-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-assetcard-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--spectrum-assetcard-content-font-style: var(--spectrum-default-font-style);
+	--spectrum-assetcard-content-line-height: var(--spectrum-line-height-200);
+	--spectrum-assetcard-content-letter-spacing: 0;
 
-  --spectrum-assetcard-content-margin-block-start: var(--spectrum-spacing-75);
+	--spectrum-assetcard-content-margin-block-start: var(--spectrum-spacing-75);
 
-  &:lang(zh),
+	&:lang(zh),
 	&:lang(ja),
 	&:lang(ko) {
 		--spectrum-assetcard-title-font-family: var(--spectrum-cjk-font-family-stack);
 		--spectrum-assetcard-title-font-style: var(--spectrum-heading-cjk-font-style);
 		--spectrum-assetcard-title-font-weight: var(--spectrum-heading-cjk-font-weight);
 		--spectrum-assetcard-title-font-size: var(--spectrum-heading-cjk-size-xs);
-    --spectrum-assetcard-title-line-height: var(--spectrum-heading-cjk-line-height);
+		--spectrum-assetcard-title-line-height: var(--spectrum-heading-cjk-line-height);
 		--spectrum-assetcard-title-letter-spacing: var(--spectrum-cjk-letter-spacing);
 
 		--spectrum-assetcard-header-content-font-family: var(--spectrum-cjk-font-family-stack);
@@ -90,297 +90,289 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-AssetCard {
-  /* contain selection indicator */
-  position: relative;
+	/* contain selection indicator */
+	position: relative;
 
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
+	inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
 
-  cursor: pointer;
+	cursor: pointer;
 
-  &.is-selected,
-  &:hover,
-  &:focus-visible {
-    .spectrum-AssetCard-assetContainer::after {
-      border-color: var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
-    }
+	&.is-selected,
+	&:hover,
+	&:focus-visible {
+		.spectrum-AssetCard-assetContainer::after {
+			border-color: var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
+		}
 
-    /* adds hover to checkbox when spectrum-AssetCard card receives hover */
-    .spectrum-Checkbox-box::before{
-      border-color: var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
-    }
-  }
+		/* adds hover to checkbox when spectrum-AssetCard card receives hover */
+		.spectrum-Checkbox-box::before {
+			border-color: var(--highcontrast-assetcard-border-color-hover, var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover)));
+		}
+	}
 
-  &:active {
-    .spectrum-AssetCard-assetContainer::after {
-      border-color: var(--mod-assetcard-border-color-down, var(--spectrum-assetcard-border-color-down));
-    }
-  }
+	&:active {
+		.spectrum-AssetCard-assetContainer::after {
+			border-color: var(--mod-assetcard-border-color-down, var(--spectrum-assetcard-border-color-down));
+		}
+	}
 
-  outline: none;
+	outline: none;
 
-  &:focus-visible {
-    .spectrum-AssetCard-assetContainer::before {
-      opacity: 1;
-    }
-  }
+	&:focus-visible {
+		.spectrum-AssetCard-assetContainer::before {
+			opacity: 1;
+		}
+	}
 }
 
 /* the container for the asset (background, border, etc) */
 .spectrum-AssetCard-assetContainer {
-  /* contain overlay */
-  position: relative;
+	/* contain overlay */
+	position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
-  block-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
+	inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
+	block-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
 
-  border-radius: var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius));
+	border-radius: var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius));
 
-  background-color: var(--mod-assetcard-background-color, var(--spectrum-assetcard-background-color));
+	background-color: var(--mod-assetcard-background-color, var(--spectrum-assetcard-background-color));
 
-  transition: border var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
+	transition: border var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 
-  /* focus indicator */
-  &::before {
-    content: '';
+	/* focus indicator */
+	&::before {
+		content: "";
 
-    position: absolute;
-    inset: calc(-1 * var(--mod-assetcard-focus-ring-gap, var(--spectrum-assetcard-focus-ring-gap)));
+		position: absolute;
+		inset: calc(-1 * var(--mod-assetcard-focus-ring-gap, var(--spectrum-assetcard-focus-ring-gap)));
 
-    border:
-      var(--mod-assetcard-focus-indicator-thickness, var(--spectrum-assetcard-focus-indicator-thickness))
-      solid
-      var(--mod-assectcard-focus-indicator-color, var(--spectrum-assestcard-focus-indicator-color));
+		border: var(--mod-assetcard-focus-indicator-thickness, var(--spectrum-assetcard-focus-indicator-thickness)) solid var(--mod-assectcard-focus-indicator-color, var(--spectrum-assestcard-focus-indicator-color));
 
-    border-radius: var(--mod-assetcard-focus-ring-border-radius, var(--spectrum-assetcard-focus-ring-border-radius));
+		border-radius: var(--mod-assetcard-focus-ring-border-radius, var(--spectrum-assetcard-focus-ring-border-radius));
 
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
-  }
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
+	}
 
-  /* border */
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 3;
+	/* border */
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: 3;
 
-    border:
-      var(--mod-assetcard-asset-container-border-size, var(--spectrum-assetcard-asset-container-border-size))
-      solid
-      var(--mod-assetcard-border-color, var(--spectrum-assetcard-border-color));
-    border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
-  }
+		border: var(--mod-assetcard-asset-container-border-size, var(--spectrum-assetcard-asset-container-border-size)) solid var(--mod-assetcard-border-color, var(--spectrum-assetcard-border-color));
+		border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
+	}
 }
 
 /* the actual asset */
 .spectrum-AssetCard-asset {
-  object-fit: contain;
+	object-fit: contain;
 
-  inline-size: 100%;
-  block-size: 100%;
+	inline-size: 100%;
+	block-size: 100%;
 
-  transition: inline-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out,
-              block-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
+	transition:
+		inline-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out,
+		block-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 
-  border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
+	border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
 }
 
 /* header area, contains the header and optional content */
 .spectrum-AssetCard-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 
-  /* space between the asset and the header, place it on the header so header can be optional */
-  margin-block-start: var(--mod-assetcard-header-margin-block-start, var(--spectrum-assetcard-header-margin-block-start));
+	/* space between the asset and the header, place it on the header so header can be optional */
+	margin-block-start: var(--mod-assetcard-header-margin-block-start, var(--spectrum-assetcard-header-margin-block-start));
 }
 
 /* bold title */
 .spectrum-AssetCard-title {
-  flex-grow: 1;
+	flex-grow: 1;
 
-  color: var(--mod-assetcard-title-text-color, var(--spectrum-assetcard-title-text-color));
+	color: var(--mod-assetcard-title-text-color, var(--spectrum-assetcard-title-text-color));
 
-  font-family: var(--mod-assetcard-title-font-family, var(--spectrum-assetcard-title-font-family));
-  font-weight: var(--mod-assetcard-title-font-weight, var(--spectrum-assetcard-title-font-weight));
-  font-size: var(--mod-assetcard-title-font-size, var(--spectrum-assetcard-title-font-size));
-  line-height: var(--mod-assetcard-title-line-height, var(--spectrum-assetcard-title-line-height));
-  font-style: var(--mod-assetcard-title-font-style, var(--spectrum-assetcard-title-font-style));
-  letter-spacing: var(--mod-assetcard-title-letter-spacing, var(--spectrum-assetcard-title-letter-spacing));
+	font-family: var(--mod-assetcard-title-font-family, var(--spectrum-assetcard-title-font-family));
+	font-weight: var(--mod-assetcard-title-font-weight, var(--spectrum-assetcard-title-font-weight));
+	font-size: var(--mod-assetcard-title-font-size, var(--spectrum-assetcard-title-font-size));
+	line-height: var(--mod-assetcard-title-line-height, var(--spectrum-assetcard-title-line-height));
+	font-style: var(--mod-assetcard-title-font-style, var(--spectrum-assetcard-title-font-style));
+	letter-spacing: var(--mod-assetcard-title-letter-spacing, var(--spectrum-assetcard-title-letter-spacing));
 }
-
 
 /* optional content placed to the right of the title */
 .spectrum-AssetCard-headerContent {
-  color: var(--mod-assetcard-header-content-text-color, var(--spectrum-assetcard-header-content-text-color));
+	color: var(--mod-assetcard-header-content-text-color, var(--spectrum-assetcard-header-content-text-color));
 
-  font-family: var(--mod-assetcard-header-content-font-family, var(--spectrum-assetcard-header-content-font-family));
-  font-size: var(--mod-assetcard-header-content-font-size, var(--spectrum-assetcard-header-content-font-size));
-  font-weight: var(--mod-assetcard-header-content-font-weight, var(--spectrum-assetcard-header-content-font-weight));
-  line-height: var(--mod-assetcard-header-content-line-height, var(--spectrum-assetcard-header-content-line-height));
-  font-style: var(--mod-assetcard-header-content-font-stlye, var(--spectrum-assetcard-header-content-font-style));
-  letter-spacing: var(--mod-assetcard-header-content-letter-spacing, var(--spectrum-assetcard-header-content-letter-spacing));
+	font-family: var(--mod-assetcard-header-content-font-family, var(--spectrum-assetcard-header-content-font-family));
+	font-size: var(--mod-assetcard-header-content-font-size, var(--spectrum-assetcard-header-content-font-size));
+	font-weight: var(--mod-assetcard-header-content-font-weight, var(--spectrum-assetcard-header-content-font-weight));
+	line-height: var(--mod-assetcard-header-content-line-height, var(--spectrum-assetcard-header-content-line-height));
+	font-style: var(--mod-assetcard-header-content-font-stlye, var(--spectrum-assetcard-header-content-font-style));
+	letter-spacing: var(--mod-assetcard-header-content-letter-spacing, var(--spectrum-assetcard-header-content-letter-spacing));
 }
-
-
 
 /* content area, the last thing in the card */
 .spectrum-AssetCard-content {
-  flex-grow: 1;
+	flex-grow: 1;
 
-  /* space between the content and the header, place it on the content so content can be optional */
-  margin-block-start: var(--mod-assetcard-content-margin-block-start, var(--spectrum-assetcard-content-margin-block-start));
+	/* space between the content and the header, place it on the content so content can be optional */
+	margin-block-start: var(--mod-assetcard-content-margin-block-start, var(--spectrum-assetcard-content-margin-block-start));
 
-  color: var(--mod-assetcard-content-text-color, var(--spectrum-assetcard-content-text-color));
+	color: var(--mod-assetcard-content-text-color, var(--spectrum-assetcard-content-text-color));
 
-  font-family: var(--mod-assetcard-content-font-family, var(--spectrum-assetcard-content-font-family));
-  font-size: var(--mod-assetcard-content-font-size, var(--spectrum-assetcard-content-font-size));
-  font-weight: var(--mod-assetcard-content-font-weight, var(--spectrum-assetcard-content-font-weight));
-  line-height: var(--mod-assetcard-content-line-height, var(--spectrum-assetcard-content-line-height));
-  font-style: var(--mod-assetcard-content-font-style, var(--spectrum-assetcard-content-font-style));
-  letter-spacing: var(--mod-assetcard-content-letter-spacing, var(--spectrum-assetcard-content-letter-spacing));
+	font-family: var(--mod-assetcard-content-font-family, var(--spectrum-assetcard-content-font-family));
+	font-size: var(--mod-assetcard-content-font-size, var(--spectrum-assetcard-content-font-size));
+	font-weight: var(--mod-assetcard-content-font-weight, var(--spectrum-assetcard-content-font-weight));
+	line-height: var(--mod-assetcard-content-line-height, var(--spectrum-assetcard-content-line-height));
+	font-style: var(--mod-assetcard-content-font-style, var(--spectrum-assetcard-content-font-style));
+	letter-spacing: var(--mod-assetcard-content-letter-spacing, var(--spectrum-assetcard-content-letter-spacing));
 }
 
 /* Selection styles */
 .spectrum-AssetCard-selectionOverlay {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
+	position: absolute;
+	z-index: 1;
+	inset: 0;
 
-  background-color: transparent;
+	background-color: transparent;
 
-  pointer-events: none;
-  transition: background-color var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
+	pointer-events: none;
+	transition: background-color var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 
-  border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
+	border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
 }
 
 /* the checkbox or selection order indicator */
 .spectrum-AssetCard-selectionIndicator {
-  position: absolute;
-  z-index: 2;
-  inset-inline-start: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
-  inset-block-start: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
+	position: absolute;
+	z-index: 2;
+	inset-inline-start: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
+	inset-block-start: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
 
-  display: none;
-  align-items: center;
-  justify-content: center;
+	display: none;
+	align-items: center;
+	justify-content: center;
 
-  inline-size: var(--mod-assetcard-selectionindicator-size, var(--spectrum-assetcard-selectionindicator-size));
-  block-size: var(--mod-assetcard-selectionindicator-size, var(--spectrum-assetcard-selectionindicator-size));
+	inline-size: var(--mod-assetcard-selectionindicator-size, var(--spectrum-assetcard-selectionindicator-size));
+	block-size: var(--mod-assetcard-selectionindicator-size, var(--spectrum-assetcard-selectionindicator-size));
 
-  border-radius: var(--mod-assetcard-selectionindicator-border-radius, var(--spectrum-assetcard-selectionindicator-border-radius));
+	border-radius: var(--mod-assetcard-selectionindicator-border-radius, var(--spectrum-assetcard-selectionindicator-border-radius));
 
-  box-shadow: 0 var(--spectrum-assetcard-selectionindicator-offset-y) var(--spectrum-assetcard-selectionindicator-blur) rgb(0, 0, 0, 15%);
+	box-shadow: 0 var(--spectrum-assetcard-selectionindicator-offset-y) var(--spectrum-assetcard-selectionindicator-blur) rgb(0, 0, 0, 15%);
 
-  color: var(--highcontrast-assetcard-selectionindicator-color, var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color)));
-  font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
-  font-size: var(--mod-assetcard-selectionindicator-font-size, var(--spectrum-assetcard-selectionindicator-font-size));
+	color: var(--highcontrast-assetcard-selectionindicator-color, var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color)));
+	font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
+	font-size: var(--mod-assetcard-selectionindicator-font-size, var(--spectrum-assetcard-selectionindicator-font-size));
 
-  transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
-  background-color: transparent;
+	transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
+	background-color: transparent;
 }
 
 .spectrum-AssetCard-selectionOrder {
-  line-height: 0;
+	line-height: 0;
 }
 
 /* base selection styles shared by every selection mode */
-  /* drop target looks identical to selected */
+/* drop target looks identical to selected */
 .spectrum-AssetCard.is-drop-target,
 .spectrum-AssetCard.is-selected {
-  .spectrum-AssetCard-assetContainer::after {
-    border-color: var(--highcontrast-assetcard-border-color-selected, var(--mod-assetcard-border-color-selected, var(--spectrum-assetcard-border-color-selected)));
-  }
+	.spectrum-AssetCard-assetContainer::after {
+		border-color: var(--highcontrast-assetcard-border-color-selected, var(--mod-assetcard-border-color-selected, var(--spectrum-assetcard-border-color-selected)));
+	}
 
-  .spectrum-AssetCard-selectionOverlay {
-    background-color: var(--mod-assetcard-overlay-background-color, var(--spectrum-assetcard-overlay-background-color));
-  }
+	.spectrum-AssetCard-selectionOverlay {
+		background-color: var(--mod-assetcard-overlay-background-color, var(--spectrum-assetcard-overlay-background-color));
+	}
 
-  &:hover {
-    .spectrum-AssetCard-assetContainer::after {
-      border-color: var(--highcontrast-assetcard-border-color-selected-hover, var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover)));
-    }
-  }
+	&:hover {
+		.spectrum-AssetCard-assetContainer::after {
+			border-color: var(--highcontrast-assetcard-border-color-selected-hover, var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover)));
+		}
+	}
 
-  &:active {
-    .spectrum-AssetCard-assetContainer::after {
-      border-color: var(--highcontrast-assectcard-border-color-selected-down, var(--mod-assectcard-border-color-selected-down, var(--spectrum-assetcard-border-color-selected-down)));
-    }
-  }
+	&:active {
+		.spectrum-AssetCard-assetContainer::after {
+			border-color: var(--highcontrast-assectcard-border-color-selected-down, var(--mod-assectcard-border-color-selected-down, var(--spectrum-assetcard-border-color-selected-down)));
+		}
+	}
 }
 
 /* highlight */
 .spectrum-AssetCard--highlightSelection {
-  &.is-selected {
-    .spectrum-AssetCard-asset {
-      inline-size: 90%;
-      block-size: 90%;
+	&.is-selected {
+		.spectrum-AssetCard-asset {
+			inline-size: 90%;
+			block-size: 90%;
 
-      /* no radius, otherwise square assets get rounded */
-      border-radius: 0;
-    }
-  }
+			/* no radius, otherwise square assets get rounded */
+			border-radius: 0;
+		}
+	}
 }
 
 /* with a checkbox */
 .spectrum-AssetCard--checkboxSelection {
-  .spectrum-AssetCard-selectionIndicator {
-    background-color: var(--mod-assetcard-selectionindicator-background-color-default, var(--spectrum-assetcard-selectionindicator-background-color-default));
+	.spectrum-AssetCard-selectionIndicator {
+		background-color: var(--mod-assetcard-selectionindicator-background-color-default, var(--spectrum-assetcard-selectionindicator-background-color-default));
 
-    .spectrum-AssetCard-selectionOrder {
-      display: none;
-    }
-  }
+		.spectrum-AssetCard-selectionOrder {
+			display: none;
+		}
+	}
 
-  &.is-selected,
-  &:focus-visible,
-  &:hover {
-    .spectrum-AssetCard-selectionIndicator {
-      display: flex;
-      pointer-events: all;
-    }
-  }
+	&.is-selected,
+	&:focus-visible,
+	&:hover {
+		.spectrum-AssetCard-selectionIndicator {
+			display: flex;
+			pointer-events: all;
+		}
+	}
 }
 
 /* with the little order flag that shows the selection order */
 .spectrum-AssetCard--orderedSelection {
-  .spectrum-AssetCard-selectionIndicator {
-    background-color: var(--highcontrast-assetcard-selectionindicator-background-color-ordered, var(--mod-assetcard-selectionindicator-background-color-ordered, var(--spectrum-assetcard-selectionindicator-background-color-ordered)));
+	.spectrum-AssetCard-selectionIndicator {
+		background-color: var(--highcontrast-assetcard-selectionindicator-background-color-ordered, var(--mod-assetcard-selectionindicator-background-color-ordered, var(--spectrum-assetcard-selectionindicator-background-color-ordered)));
 
-    .spectrum-AssetCard-checkbox {
-      display: none;
-    }
-  }
+		.spectrum-AssetCard-checkbox {
+			display: none;
+		}
+	}
 
-  &.is-selected {
-    .spectrum-AssetCard-selectionIndicator {
-      display: flex;
-      pointer-events: all;
-    }
-  }
+	&.is-selected {
+		.spectrum-AssetCard-selectionIndicator {
+			display: flex;
+			pointer-events: all;
+		}
+	}
 }
 
 @media (forced-colors: active) {
-  .spectrum-AssetCard {
-    --highcontrast-assetcard-border-color-hover: Highlight;
-    --highcontrast-assetcard-border-color-selected: Highlight;
-    --highcontrast-assetcard-border-color-selected-hover: Highlight;
-    --highcontrast-assectcard-border-color-selected-down: Highlight;
-    --highcontrast-assetcard-selectionindicator-background-color-ordered: Highlight;
-    --highcontrast-assetcard-selectionindicator-color: SelectedItemText;
+	.spectrum-AssetCard {
+		--highcontrast-assetcard-border-color-hover: Highlight;
+		--highcontrast-assetcard-border-color-selected: Highlight;
+		--highcontrast-assetcard-border-color-selected-hover: Highlight;
+		--highcontrast-assectcard-border-color-selected-down: Highlight;
+		--highcontrast-assetcard-selectionindicator-background-color-ordered: Highlight;
+		--highcontrast-assetcard-selectionindicator-color: SelectedItemText;
 
-    .spectrum-AssetCard-selectionOrder {
-      /* prevents text backplate on displayed order number */
-      forced-color-adjust: none;
-    }
-  }
+		.spectrum-AssetCard-selectionOrder {
+			/* prevents text backplate on displayed order number */
+			forced-color-adjust: none;
+		}
+	}
 }

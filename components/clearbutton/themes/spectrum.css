@@ -10,11 +10,10 @@ governing permissions and limitations under the License.
 */
 
 @container (--system: spectrum) {
-  .spectrum-ClearButton {
-    --spectrum-clear-button-background-color: transparent;
-    --spectrum-clear-button-background-color-hover: transparent;
-    --spectrum-clear-button-background-color-down: transparent;
-    --spectrum-clear-button-background-color-key-focus: transparent;
-
-  }
+	.spectrum-ClearButton {
+		--spectrum-clear-button-background-color: transparent;
+		--spectrum-clear-button-background-color-hover: transparent;
+		--spectrum-clear-button-background-color-down: transparent;
+		--spectrum-clear-button-background-color-key-focus: transparent;
+	}
 }

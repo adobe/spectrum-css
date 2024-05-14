@@ -12,10 +12,10 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-  .spectrum-Rating {
-    --spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
-    --spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
-    --spectrum-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
-    --spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
-  }
+	.spectrum-Rating {
+		--spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
+		--spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+		--spectrum-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
+		--spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	}
 }

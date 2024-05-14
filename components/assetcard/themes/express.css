@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-  .spectrum-AssetCard {
-    --spectrum-assetcard-overlay-background-color: rgba(109, 115, 246, 20%)
-  }
+	.spectrum-AssetCard {
+		--spectrum-assetcard-overlay-background-color: rgba(109, 115, 246, 20%);
+	}
 }

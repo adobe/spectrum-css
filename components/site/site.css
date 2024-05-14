@@ -108,7 +108,7 @@ governing permissions and limitations under the License.
 	margin-inline-end: var(--spectrum-spacing-200);
 
 	.spectrum--large & {
-	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
+		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- passthrough icon sizing */
 		--spectrum-icon-size: 40px;
 	}
 }
@@ -154,15 +154,15 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-mainContent {
-  overflow-y: auto;
-  flex-grow: 1;
-  border-block: none;
+	overflow-y: auto;
+	flex-grow: 1;
+	border-block: none;
 }
 
 .spectrum-Site-footerContainer {
-  inline-size: min(1080px, 100%);
-  margin: var(--spectrum-spacing-400) auto;
-  padding: 0 var(--spectrum-spacing-600);
+	inline-size: min(1080px, 100%);
+	margin: var(--spectrum-spacing-400) auto;
+	padding: 0 var(--spectrum-spacing-600);
 }
 
 /* Kill the overlay without animating when the page is resized */

@@ -13,250 +13,250 @@ governing permissions and limitations under the License.
 @import "./themes/express.css";
 
 .spectrum-Rating {
-  /* Icon */
-  --spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
-  --spectrum-rating-icon-width: var(--spectrum-workflow-icon-size-100);
+	/* Icon */
+	--spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
+	--spectrum-rating-icon-width: var(--spectrum-workflow-icon-size-100);
 
-  /* Focus ring */
-  --spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
-  --spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-  --spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
-  --spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	/* Focus ring */
+	--spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
-  /* Spacing (top/bottom edge to icon) */
-  --spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-  --spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
+	/* Spacing (top/bottom edge to icon) */
+	--spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
+	--spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
 
-  /* Indicator height */
-  --spectrum-rating-indicator-height: var(--spectrum-border-width-200);
+	/* Indicator height */
+	--spectrum-rating-indicator-height: var(--spectrum-border-width-200);
 
-  /* Colors */
-  /* selected + emphasized */
-  --spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
-  --spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
-  --spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
-  --spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
+	/* Colors */
+	/* selected + emphasized */
+	--spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
+	--spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
+	--spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
+	--spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
 
-  /* Disabled */
-  --spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
-  --spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
+	/* Disabled */
+	--spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
+	--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
 }
 
 .spectrum-Rating {
-  &.is-focused {
-    box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
+	&.is-focused {
+		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
 
-    .spectrum-Rating-icon {
-      color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
-    }
+		.spectrum-Rating-icon {
+			color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+		}
 
-    .spectrum-Rating-icon.is-selected {
-      color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
-    }
-  }
+		.spectrum-Rating-icon.is-selected {
+			color: var(--highcontrast-rating-icon-color-key-focus, var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus)));
+		}
+	}
 
-  &:hover {
-    .spectrum-Rating-icon {
-      /* Make all stars colored when the component is hovered */
-      color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-    }
+	&:hover {
+		.spectrum-Rating-icon {
+			/* Make all stars colored when the component is hovered */
+			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+		}
 
-    /* The icon that's actually hovered is darker */
-    .spectrum-Rating-icon:hover {
-      color: var(--highcontrast-rating-icon-color-hover, var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover)));
-    }
+		/* The icon that's actually hovered is darker */
+		.spectrum-Rating-icon:hover {
+			color: var(--highcontrast-rating-icon-color-hover, var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover)));
+		}
 
-    .spectrum-Rating-icon:active {
-      color: var(--highcontrast-rating-icon-color-down, var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down)));
-    }
+		.spectrum-Rating-icon:active {
+			color: var(--highcontrast-rating-icon-color-down, var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down)));
+		}
 
-    /* Show which star is currently selected */
-    .spectrum-Rating-icon.is-currentValue::after {
-      /* Match the color of the star */
-      background: currentColor;
-    }
-  }
+		/* Show which star is currently selected */
+		.spectrum-Rating-icon.is-currentValue::after {
+			/* Match the color of the star */
+			background: currentColor;
+		}
+	}
 }
 
 .spectrum-Rating {
-  position: relative;
-  display: inline-flex;
-  flex: 0 0 auto;
+	position: relative;
+	display: inline-flex;
+	flex: 0 0 auto;
 
-  gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
+	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
 
-  inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
-  border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+	inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
+	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
-  padding-inline: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) - 1.5px);
+	padding-inline: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) - 1.5px);
 
-  cursor: pointer;
+	cursor: pointer;
 
-  &.is-disabled,
-  &.is-readOnly {
-    cursor: default;
-    pointer-events: none;
-  }
+	&.is-disabled,
+	&.is-readOnly {
+		cursor: default;
+		pointer-events: none;
+	}
 
-  /* When the entire component is hovered, show all solid icons */
-  &:hover {
-    .spectrum-Rating-starActive {
-      display: block;
-    }
+	/* When the entire component is hovered, show all solid icons */
+	&:hover {
+		.spectrum-Rating-starActive {
+			display: block;
+		}
 
-    .spectrum-Rating-starInactive {
-      display: none;
-    }
-  }
+		.spectrum-Rating-starInactive {
+			display: none;
+		}
+	}
 }
 
 .spectrum-Rating-input {
-  position: absolute;
-  z-index: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  margin: 0;
-  opacity: 0;
-  pointer-events: none;
+	position: absolute;
+	z-index: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	margin: 0;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .spectrum-Rating-icon {
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
-  block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
-  padding-block: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
+	position: relative;
+	background-size: contain;
+	background-repeat: no-repeat;
+	inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
+	block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
+	padding-block: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
 
-  .spectrum-Rating-starActive {
-    display: none;
-  }
+	.spectrum-Rating-starActive {
+		display: none;
+	}
 
-  .spectrum-Rating-starInactive {
-    display: block;
-  }
+	.spectrum-Rating-starInactive {
+		display: block;
+	}
 
-  &.is-selected {
-    .spectrum-Rating-starActive {
-      display: block;
-    }
+	&.is-selected {
+		.spectrum-Rating-starActive {
+			display: block;
+		}
 
-    .spectrum-Rating-starInactive {
-      display: none;
-    }
-  }
+		.spectrum-Rating-starInactive {
+			display: none;
+		}
+	}
 
-  &.is-currentValue::after {
-    border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
-    content: '';
-    block-size: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
-    inline-size: var(--spectrum-rating-indicator-width);
+	&.is-currentValue::after {
+		border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
+		content: "";
+		block-size: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
+		inline-size: var(--spectrum-rating-indicator-width);
 
-    /* position the indicator relative to the element's total bottom size (including bottom padding) */
-    inset-block-end: calc((var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) * 2) - 1px);
-    position: absolute;
-  }
+		/* position the indicator relative to the element's total bottom size (including bottom padding) */
+		inset-block-end: calc((var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) * 2) - 1px);
+		position: absolute;
+	}
 
-  /* All stars following the hovered star */
-  &:hover ~ .spectrum-Rating-icon {
-    .spectrum-Rating-starActive {
-      display: none;
-    }
+	/* All stars following the hovered star */
+	&:hover ~ .spectrum-Rating-icon {
+		.spectrum-Rating-starActive {
+			display: none;
+		}
 
-    .spectrum-Rating-starInactive {
-      display: block;
-    }
-  }
+		.spectrum-Rating-starInactive {
+			display: block;
+		}
+	}
 }
 
 .spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 .spectrum-Rating-icon {
-  color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+	color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
 
-  &.is-selected {
-    color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-  }
+	&.is-selected {
+		color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+	}
 
-  &:hover {
-    /* All stars following the hovered star */
-    & ~ .spectrum-Rating-icon {
-      color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-    }
-  }
+	&:hover {
+		/* All stars following the hovered star */
+		& ~ .spectrum-Rating-icon {
+			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+		}
+	}
 }
 
 .spectrum-Rating--emphasized {
-  &.is-focused {
-    .spectrum-Rating-icon.is-selected {
-      color: var(--highcontrast-rating-emphasized-icon-color-key-focus, var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus)));
-    }
-  }
+	&.is-focused {
+		.spectrum-Rating-icon.is-selected {
+			color: var(--highcontrast-rating-emphasized-icon-color-key-focus, var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus)));
+		}
+	}
 
-  .spectrum-Rating-icon {
-    color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+	.spectrum-Rating-icon {
+		color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
 
-    &.is-selected {
-      color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
-    }
+		&.is-selected {
+			color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
+		}
 
-    /* All stars following the hovered star */
-    &:hover ~ .spectrum-Rating-icon {
-       color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-    }
-  }
+		/* All stars following the hovered star */
+		&:hover ~ .spectrum-Rating-icon {
+			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+		}
+	}
 
-  &:hover .spectrum-Rating-icon {
-    /* Make all stars selected when the component is hovered */
-    color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
+	&:hover .spectrum-Rating-icon {
+		/* Make all stars selected when the component is hovered */
+		color: var(--highcontrast-rating-emphasized-icon-color-default, var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default)));
 
-    &:hover {
-      /* The icon that's actually hovered is darker */
-      color: var(--highcontrast-rating-emphasized-icon-color-hover, var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover)));
-    }
+		&:hover {
+			/* The icon that's actually hovered is darker */
+			color: var(--highcontrast-rating-emphasized-icon-color-hover, var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover)));
+		}
 
-    &:hover ~ .spectrum-Rating-icon {
-      color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-    }
+		&:hover ~ .spectrum-Rating-icon {
+			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+		}
 
-    &:active {
-      color: var(--highcontrast-rating-emphasized-icon-color-down, var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down)));
-    }
-  }
+		&:active {
+			color: var(--highcontrast-rating-emphasized-icon-color-down, var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down)));
+		}
+	}
 }
 
 /* Disabled */
 .spectrum-Rating.is-disabled {
-  .spectrum-Rating-icon {
-    color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
+	.spectrum-Rating-icon {
+		color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
 
-    &.is-selected {
-      color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
-    }
-  }
+		&.is-selected {
+			color: var(--highcontrast-rating-icon-color-disabled, var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled)));
+		}
+	}
 }
 
 @media (forced-colors: active) {
-  .spectrum-Rating {
-    --highcontrast-rating-icon-color-key-focus: CanvasText;
-    --highcontrast-rating-icon-color-disabled: GrayText;
-    --highcontrast-rating-emphasized-icon-color-default: Highlight;
-    --highcontrast-rating-emphasized-icon-color-hover: Highlight;
-    --highcontrast-rating-emphasized-icon-color-down: Highlight;
+	.spectrum-Rating {
+		--highcontrast-rating-icon-color-key-focus: CanvasText;
+		--highcontrast-rating-icon-color-disabled: GrayText;
+		--highcontrast-rating-emphasized-icon-color-default: Highlight;
+		--highcontrast-rating-emphasized-icon-color-hover: Highlight;
+		--highcontrast-rating-emphasized-icon-color-down: Highlight;
 
-    &.is-focused {
-      outline: 1px solid CanvasText; /* stylelint-disable-line declaration-property-value-no-unknown */
-    }
+		&.is-focused {
+			outline: 1px solid CanvasText; /* stylelint-disable-line declaration-property-value-no-unknown */
+		}
 
-    &:hover .spectrum-Rating-icon.is-currentValue::after {
-      background-color: var(--highcontrast-rating-icon-color-key-focus);
-    }
-  }
+		&:hover .spectrum-Rating-icon.is-currentValue::after {
+			background-color: var(--highcontrast-rating-icon-color-key-focus);
+		}
+	}
 
-  .spectrum-Rating--emphasized:hover .spectrum-Rating-icon.is-currentValue::after {
-    background-color: var(--highcontrast-rating-emphasized-icon-color-default);
-  }
+	.spectrum-Rating--emphasized:hover .spectrum-Rating-icon.is-currentValue::after {
+		background-color: var(--highcontrast-rating-emphasized-icon-color-default);
+	}
 }

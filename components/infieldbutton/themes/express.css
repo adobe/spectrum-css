@@ -13,19 +13,19 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-  .spectrum-InfieldButton {
-    --spectrum-infield-button-border-width: 0;
-    --spectrum-infield-button-border-color: transparent;
+	.spectrum-InfieldButton {
+		--spectrum-infield-button-border-width: 0;
+		--spectrum-infield-button-border-color: transparent;
 
-    --spectrum-infield-button-border-radius: var(--spectrum-corner-radius-75);
-    --spectrum-infield-button-border-radius-reset: var(--spectrum-corner-radius-75);
+		--spectrum-infield-button-border-radius: var(--spectrum-corner-radius-75);
+		--spectrum-infield-button-border-radius-reset: var(--spectrum-corner-radius-75);
 
-    --spectrum-infield-button-stacked-top-border-radius-start-start: var(--spectrum-corner-radius-75);
-    --spectrum-infield-button-stacked-bottom-border-radius-end-start: var(--spectrum-corner-radius-75);
+		--spectrum-infield-button-stacked-top-border-radius-start-start: var(--spectrum-corner-radius-75);
+		--spectrum-infield-button-stacked-bottom-border-radius-end-start: var(--spectrum-corner-radius-75);
 
-    --spectrum-infield-button-background-color: var(--spectrum-gray-200);
-    --spectrum-infield-button-background-color-hover: var(--spectrum-gray-300);
-    --spectrum-infield-button-background-color-down: var(--spectrum-gray-400);
-    --spectrum-infield-button-background-color-key-focus: var(--spectrum-gray-300);
-  }
+		--spectrum-infield-button-background-color: var(--spectrum-gray-200);
+		--spectrum-infield-button-background-color-hover: var(--spectrum-gray-300);
+		--spectrum-infield-button-background-color-down: var(--spectrum-gray-400);
+		--spectrum-infield-button-background-color-key-focus: var(--spectrum-gray-300);
+	}
 }

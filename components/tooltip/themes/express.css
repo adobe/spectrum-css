@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-  .spectrum-Tooltip {
-    --spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-background-color-default);
-  }
+	.spectrum-Tooltip {
+		--spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-background-color-default);
+	}
 }
