@@ -53,8 +53,7 @@
 			"cache": true,
 			"dependsOn": [
 				"^build",
-				"clean",
-				{ "target": "build", "projects": "tokens" }
+				"clean"
 			],
 			"inputs": [
 				"core",

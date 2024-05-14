@@ -33,10 +33,6 @@
 					"target": "build",
 					"projects": "tag:component"
 				},
-				{
-					"target": "build",
-					"projects": "ui-icons"
-				},
 				"clean"
 			],
 			"inputs": ["core", "tools"],
