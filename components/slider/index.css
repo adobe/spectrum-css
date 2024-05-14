@@ -348,7 +348,7 @@ governing permissions and limitations under the License.
 
 		transform: translate(-50%, -50%);
 
-		&:dir(rtl) {
+		.spectrum-Slider:dir(rtl) & {
 			transform: translate(50%, -50%);
 		}
 	}
