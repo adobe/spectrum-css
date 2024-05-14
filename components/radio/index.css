@@ -421,7 +421,7 @@ governing permissions and limitations under the License.
 			opacity var(--mod-radio-animation-duration, var(--spectrum-radio-animation-duration)) ease-out,
 			margin var(--mod-radio-animation-duration, var(--spectrum-radio-animation-duration)) ease-out;
 
-		&:dir(rtl) {
+		.spectrum-Radio:dir(rtl) & {
 			transform: translateX(50%) translateY(-50%);
 		}
 	}
