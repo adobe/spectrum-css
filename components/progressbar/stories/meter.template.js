@@ -3,6 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 import "../index.css";
 
@@ -10,9 +11,6 @@ export const Template = ({
 	rootClass = "spectrum-ProgressBar",
 	customClasses = [],
 	customStyles = {},
-	headingStyles = {
-		"text-decoration": "underline",
-	},
 	items = [],
 	label = "Storage space",
 	value,
@@ -25,9 +23,12 @@ export const Template = ({
 	const meterLabel = meter.label ?? label;
 	const fill = meter.meterFill ?? meterFill;
 
-	// @todo: Should the heading content render through typography?
 	return html`
-	<p style=${styleMap(headingStyles)}>${heading}</p>
+	${Typography({
+		semantics: "heading",
+		size: "xs",
+		content: [heading],
+	})}
 	<div
 		class=${classMap({
 			[rootClass]: true,

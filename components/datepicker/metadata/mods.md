@@ -3,6 +3,7 @@
 | `--mod-datepicker-border-color-disabled`             |
 | `--mod-datepicker-border-radius`                     |
 | `--mod-datepicker-border-radius-quiet`               |
+| `--mod-datepicker-dash-color`                        |
 | `--mod-datepicker-dash-color-disabled`               |
 | `--mod-datepicker-dash-font-size`                    |
 | `--mod-datepicker-dash-line-height`                  |
