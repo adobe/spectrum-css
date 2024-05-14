@@ -140,7 +140,7 @@
 				"commands": [
 					"stylelint --fix --cache --allow-empty-input {projectRoot}/*.css {projectRoot}/**/*.css",
 					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js",
-					"prettier --write --cache --loglevel error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{yml,md} {projectRoot}/**/*.{yml,md}"
+					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{yml,md} {projectRoot}/**/*.{yml,md}"
 				]
 			}
 		},
