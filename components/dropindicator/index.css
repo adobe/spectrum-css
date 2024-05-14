@@ -11,94 +11,68 @@ governing permissions and limitations under the License.
 */
 
 @media (forced-colors: active) {
-  .spectrum-DropIndicator {
-      --highcontrast-dropindicator-color: Highlight;
-  }
+	.spectrum-DropIndicator {
+		--highcontrast-dropindicator-color: Highlight;
+	}
 }
 
 .spectrum-DropIndicator {
-  --spectrum-dropindicator-border-color: var(--spectrum-dropindicator-color);
-  --spectrum-dropindicator-circle-color: var(--spectrum-dropindicator-color);
-  --spectrum-dropindicator-border-size: var(--spectrum-border-width-200);
-  --spectrum-dropindicator-circle-size: 12px;
+	--spectrum-dropindicator-border-color: var(--spectrum-dropindicator-color);
+	--spectrum-dropindicator-circle-color: var(--spectrum-dropindicator-color);
+	--spectrum-dropindicator-border-size: var(--spectrum-border-width-200);
+	--spectrum-dropindicator-circle-size: 12px;
 }
 
 .spectrum-DropIndicator {
-  position: relative;
-  background: var(
-    --highcontrast-dropindicator-color,
-    var(--mod-dropindicator-border-color, var(--spectrum-dropindicator-border-color))
-  );
+	position: relative;
+	background: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-border-color, var(--spectrum-dropindicator-border-color)));
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    inline-size: var(
-      --mod-dropindicator-circle-size,
-      var(--spectrum-dropindicator-circle-size)
-    );
-    block-size: var(
-      --mod-dropindicator-circle-size,
-      var(--spectrum-dropindicator-circle-size)
-    );
-    border-radius: 50%;
-    border: var(
-      --mod-dropindicator-border-size,
-      var(--spectrum-dropindicator-border-size)) solid;
-    box-sizing: border-box;
-    border-color: var(
-      --highcontrast-dropindicator-color,
-      var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-circle-color))
-    );
-  }
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		inline-size: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
+		block-size: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
+		border-radius: 50%;
+		border: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) solid;
+		box-sizing: border-box;
+		border-color: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-circle-color)));
+	}
 }
 
 .spectrum-DropIndicator--horizontal {
-  block-size: var(
-    --mod-dropindicator-border-size,
-    var(--spectrum-dropindicator-border-size)
-  );
-  margin: 0 var(
-    --mod-dropindicator-circle-size,
-    var(--spectrum-dropindicator-circle-size)
-  );
+	block-size: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size));
+	margin: 0 var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
 
-  &::before,
-  &::after {
-    inset-block-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
-  }
+	&::before,
+	&::after {
+		inset-block-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
+	}
 
-  &::before {
-    inset-inline-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
-  }
+	&::before {
+		inset-inline-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+	}
 
-  &::after {
-    inset-inline-end: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
-  }
+	&::after {
+		inset-inline-end: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+	}
 }
 
 .spectrum-DropIndicator--vertical {
-  inline-size: var(
-    --mod-dropindicator-border-size,
-    var(--spectrum-dropindicator-border-size)
-  );
-  margin-block: var(
-    --mod-dropindicator-circle-size,
-    var(--spectrum-dropindicator-circle-size)
-  );
-  margin-inline: 0;
+	inline-size: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size));
+	margin-block: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
+	margin-inline: 0;
 
-  &::before,
-  &::after {
-    inset-inline-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
-  }
+	&::before,
+	&::after {
+		inset-inline-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)) / 2 + var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) / 2);
+	}
 
-  &::before {
-    inset-block-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
-  }
+	&::before {
+		inset-block-start: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+	}
 
-  &::after {
-    inset-block-end: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
-  }
+	&::after {
+		inset-block-end: calc(-1 * var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size)));
+	}
 }

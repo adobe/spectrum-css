@@ -13,37 +13,37 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-  .spectrum-Stepper {
-    --spectrum-stepper-border-width: var(--spectrum-border-width-200);
+	.spectrum-Stepper {
+		--spectrum-stepper-border-width: var(--spectrum-border-width-200);
 
-    --spectrum-stepper-buttons-border-style: solid;
-    --spectrum-stepper-buttons-border-width: var(--spectrum-border-width-200);
-    --spectrum-stepper-buttons-border-color: transparent;
-    --spectrum-stepper-buttons-background-color: var(--spectrum-gray-50);
-    --spectrum-stepper-buttons-border-color-hover: transparent;
-    --spectrum-stepper-buttons-border-color-focus: transparent;
-    --spectrum-stepper-buttons-border-color-keyboard-focus: transparent;
+		--spectrum-stepper-buttons-border-style: solid;
+		--spectrum-stepper-buttons-border-width: var(--spectrum-border-width-200);
+		--spectrum-stepper-buttons-border-color: transparent;
+		--spectrum-stepper-buttons-background-color: var(--spectrum-gray-50);
+		--spectrum-stepper-buttons-border-color-hover: transparent;
+		--spectrum-stepper-buttons-border-color-focus: transparent;
+		--spectrum-stepper-buttons-border-color-keyboard-focus: transparent;
 
-    --spectrum-stepper-button-border-radius-reset: var(--spectrum-in-field-button-fill-stacked-inner-border-rounding);
-    --spectrum-stepper-button-border-width: 0;
+		--spectrum-stepper-button-border-radius-reset: var(--spectrum-in-field-button-fill-stacked-inner-border-rounding);
+		--spectrum-stepper-button-border-width: 0;
 
-    --spectrum-stepper-border-color: var(--spectrum-gray-400);
-    --spectrum-stepper-border-color-hover: var(--spectrum-gray-500);
-    --spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
-    --spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-900);
-    --spectrum-stepper-border-color-keyboard-focus: var(--spectrum-gray-900);
+		--spectrum-stepper-border-color: var(--spectrum-gray-400);
+		--spectrum-stepper-border-color-hover: var(--spectrum-gray-500);
+		--spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
+		--spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-900);
+		--spectrum-stepper-border-color-keyboard-focus: var(--spectrum-gray-900);
 
-    --spectrum-stepper-border-color-invalid: transparent;
-    --spectrum-stepper-border-color-focus-invalid: transparent;
-    --spectrum-stepper-border-color-focus-hover-invalid: transparent;
-    --spectrum-stepper-border-color-keyboard-focus-invalid: transparent;
+		--spectrum-stepper-border-color-invalid: transparent;
+		--spectrum-stepper-border-color-focus-invalid: transparent;
+		--spectrum-stepper-border-color-focus-hover-invalid: transparent;
+		--spectrum-stepper-border-color-keyboard-focus-invalid: transparent;
 
-    --spectrum-stepper-button-background-color-focus: var(--spectrum-gray-400);
-    --spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
+		--spectrum-stepper-button-background-color-focus: var(--spectrum-gray-400);
+		--spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
 
-    &.is-disabled {
-      --spectrum-stepper-buttons-background-color: var(--spectrum-disabled-background-color);
-      --spectrum-stepper-buttons-border-width: 0;
-    }
-  }
+		&.is-disabled {
+			--spectrum-stepper-buttons-background-color: var(--spectrum-disabled-background-color);
+			--spectrum-stepper-buttons-border-width: 0;
+		}
+	}
 }

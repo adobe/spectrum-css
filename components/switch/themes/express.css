@@ -13,15 +13,15 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-  .spectrum-Switch {
-    --spectrum-switch-handle-border-color-default: var(--spectrum-gray-800);
-    --spectrum-switch-handle-border-color-hover: var(--spectrum-gray-900);
-    --spectrum-switch-handle-border-color-down: var(--spectrum-gray-900);
-    --spectrum-switch-handle-border-color-focus: var(--spectrum-gray-900);
+	.spectrum-Switch {
+		--spectrum-switch-handle-border-color-default: var(--spectrum-gray-800);
+		--spectrum-switch-handle-border-color-hover: var(--spectrum-gray-900);
+		--spectrum-switch-handle-border-color-down: var(--spectrum-gray-900);
+		--spectrum-switch-handle-border-color-focus: var(--spectrum-gray-900);
 
-    --spectrum-switch-handle-border-color-selected-default: var(--spectrum-gray-800);
-    --spectrum-switch-handle-border-color-selected-hover: var(--spectrum-gray-900);
-    --spectrum-switch-handle-border-color-selected-down: var(--spectrum-gray-900);
-    --spectrum-switch-handle-border-color-selected-focus: var(--spectrum-gray-900);
-  }
+		--spectrum-switch-handle-border-color-selected-default: var(--spectrum-gray-800);
+		--spectrum-switch-handle-border-color-selected-hover: var(--spectrum-gray-900);
+		--spectrum-switch-handle-border-color-selected-down: var(--spectrum-gray-900);
+		--spectrum-switch-handle-border-color-selected-focus: var(--spectrum-gray-900);
+	}
 }

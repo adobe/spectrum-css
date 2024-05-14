@@ -13,13 +13,13 @@ governing permissions and limitations under the License.
 @import "./spectrum.css";
 
 @container (--system: express) {
-  .spectrum-Textfield {
-    --spectrum-textfield-border-color: var(--spectrum-gray-400);
-    --spectrum-textfield-border-color-hover: var(--spectrum-gray-500);
-    --spectrum-textfield-border-color-focus: var(--spectrum-gray-800);
-    --spectrum-textfield-border-color-focus-hover: var(--spectrum-gray-900);
-    --spectrum-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
+	.spectrum-Textfield {
+		--spectrum-textfield-border-color: var(--spectrum-gray-400);
+		--spectrum-textfield-border-color-hover: var(--spectrum-gray-500);
+		--spectrum-textfield-border-color-focus: var(--spectrum-gray-800);
+		--spectrum-textfield-border-color-focus-hover: var(--spectrum-gray-900);
+		--spectrum-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
 
-    --spectrum-textfield-border-width: var(--spectrum-border-width-200);
-  }
+		--spectrum-textfield-border-width: var(--spectrum-border-width-200);
+	}
 }

@@ -11,31 +11,31 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-MillerColumns {
-  --spectrum-millercolumns-inline-size: 272px;
-  --spectrum-millercolumns-padding: var(--spectrum-spacing-100);
-  --spectrum-millercolumns-margin-inline-start: var(--spectrum-spacing-100);
-  --spectrum-millercolumns-margin-inline-end: var(--spectrum-spacing-100);
+	--spectrum-millercolumns-inline-size: 272px;
+	--spectrum-millercolumns-padding: var(--spectrum-spacing-100);
+	--spectrum-millercolumns-margin-inline-start: var(--spectrum-spacing-100);
+	--spectrum-millercolumns-margin-inline-end: var(--spectrum-spacing-100);
 }
 
 .spectrum-MillerColumns {
-  overflow-x: auto;
-  white-space: nowrap;
-  user-select: none;
-  padding: var(--mod-millercolumns-padding, var(--spectrum-millercolumns-padding)) 0;
+	overflow-x: auto;
+	white-space: nowrap;
+	user-select: none;
+	padding: var(--mod-millercolumns-padding, var(--spectrum-millercolumns-padding)) 0;
 }
 
 .spectrum-MillerColumns-item {
-  display: inline-block;
-  inline-size: var(--mod-millercolumns-inline-size, var(--spectrum-millercolumns-inline-size));
-  vertical-align: top;
-  outline: none;
-  margin: 0;
-  padding: 0;
-  margin-inline-end: var(--mod-millercolumns-margin-inline-end, var(--spectrum-millercolumns-margin-inline-end));
-  overflow: auto;
-  block-size: 100%;
+	display: inline-block;
+	inline-size: var(--mod-millercolumns-inline-size, var(--spectrum-millercolumns-inline-size));
+	vertical-align: top;
+	outline: none;
+	margin: 0;
+	padding: 0;
+	margin-inline-end: var(--mod-millercolumns-margin-inline-end, var(--spectrum-millercolumns-margin-inline-end));
+	overflow: auto;
+	block-size: 100%;
 
-  &:first-child {
-    margin-inline-start: var(--mod-millercolumns-margin-inline-start, var(--spectrum-millercolumns-margin-inline-start));
-  }
+	&:first-child {
+		margin-inline-start: var(--mod-millercolumns-margin-inline-start, var(--spectrum-millercolumns-margin-inline-start));
+	}
 }

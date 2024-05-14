@@ -10,324 +10,317 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-
 .spectrum-Breadcrumbs {
-  /* block size */
-  --spectrum-breadcrumbs-block-size: var(--spectrum-breadcrumbs-height);
-  --spectrum-breadcrumbs-block-size-compact: var(--spectrum-breadcrumbs-height-compact);
-  --spectrum-breadcrumbs-block-size-multiline: var(--spectrum-breadcrumbs-height-multiline);
+	/* block size */
+	--spectrum-breadcrumbs-block-size: var(--spectrum-breadcrumbs-height);
+	--spectrum-breadcrumbs-block-size-compact: var(--spectrum-breadcrumbs-height-compact);
+	--spectrum-breadcrumbs-block-size-multiline: var(--spectrum-breadcrumbs-height-multiline);
 
-  /* text regular */
-  --spectrum-breadcrumbs-line-height: var(--spectrum-line-height-100);
-  --spectrum-breadcrumbs-font-size: var(--spectrum-font-size-200);
-  --spectrum-breadcrumbs-font-family: var(--spectrum-sans-font-family-stack);
-  --spectrum-breadcrumbs-font-weight: var(--spectrum-regular-font-weight);
+	/* text regular */
+	--spectrum-breadcrumbs-line-height: var(--spectrum-line-height-100);
+	--spectrum-breadcrumbs-font-size: var(--spectrum-font-size-200);
+	--spectrum-breadcrumbs-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-breadcrumbs-font-weight: var(--spectrum-regular-font-weight);
 
-  /* text regular active item */
-  --spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-200);
-  --spectrum-breadcrumbs-font-family-current: var(--spectrum-sans-font-family-stack);
-  --spectrum-breadcrumbs-font-weight-current: var(--spectrum-bold-font-weight);
+	/* text regular active item */
+	--spectrum-breadcrumbs-font-size-current: var(--spectrum-font-size-200);
+	--spectrum-breadcrumbs-font-family-current: var(--spectrum-sans-font-family-stack);
+	--spectrum-breadcrumbs-font-weight-current: var(--spectrum-bold-font-weight);
 
-  /* text compact */
-  --spectrum-breadcrumbs-font-size-compact: var(--spectrum-font-size-100);
-  --spectrum-breadcrumbs-font-family-compact: var(--spectrum-sans-font-family-stack);
-  --spectrum-breadcrumbs-font-weight-compact: var(--spectrum-regular-font-weight);
+	/* text compact */
+	--spectrum-breadcrumbs-font-size-compact: var(--spectrum-font-size-100);
+	--spectrum-breadcrumbs-font-family-compact: var(--spectrum-sans-font-family-stack);
+	--spectrum-breadcrumbs-font-weight-compact: var(--spectrum-regular-font-weight);
 
-  /* text compact active item */
-  --spectrum-breadcrumbs-font-size-compact-current: var(--spectrum-font-size-100);
-  --spectrum-breadcrumbs-font-family-compact-current: var(--spectrum-sans-font-family-stack);
-  --spectrum-breadcrumbs-font-weight-compact-current: var(--spectrum-bold-font-weight);
+	/* text compact active item */
+	--spectrum-breadcrumbs-font-size-compact-current: var(--spectrum-font-size-100);
+	--spectrum-breadcrumbs-font-family-compact-current: var(--spectrum-sans-font-family-stack);
+	--spectrum-breadcrumbs-font-weight-compact-current: var(--spectrum-bold-font-weight);
 
-  /* text multiline */
-  --spectrum-breadcrumbs-font-size-multiline: var(--spectrum-font-size-75);
-  --spectrum-breadcrumbs-font-family-multiline: var(--spectrum-sans-font-family-stack);
-  --spectrum-breadcrumbs-font-weight-multiline: var(--spectrum-regular-font-weight);
+	/* text multiline */
+	--spectrum-breadcrumbs-font-size-multiline: var(--spectrum-font-size-75);
+	--spectrum-breadcrumbs-font-family-multiline: var(--spectrum-sans-font-family-stack);
+	--spectrum-breadcrumbs-font-weight-multiline: var(--spectrum-regular-font-weight);
 
-  /* text multiline active item */
-  --spectrum-breadcrumbs-font-size-multiline-current: var(--spectrum-font-size-300);
-  --spectrum-breadcrumbs-font-family-multiline-current: var(--spectrum-sans-font-family-stack);
-  --spectrum-breadcrumbs-font-weight-multiline-current: var(--spectrum-bold-font-weight);
+	/* text multiline active item */
+	--spectrum-breadcrumbs-font-size-multiline-current: var(--spectrum-font-size-300);
+	--spectrum-breadcrumbs-font-family-multiline-current: var(--spectrum-sans-font-family-stack);
+	--spectrum-breadcrumbs-font-weight-multiline-current: var(--spectrum-bold-font-weight);
 
-  /* hover, active, focus underline */
-  --spectrum-breadcrumbs-text-decoration-thickness: var(--spectrum-text-underline-thickness);
-  --spectrum-breadcrumbs-text-decoration-gap: var(--spectrum-text-underline-gap);
+	/* hover, active, focus underline */
+	--spectrum-breadcrumbs-text-decoration-thickness: var(--spectrum-text-underline-thickness);
+	--spectrum-breadcrumbs-text-decoration-gap: var(--spectrum-text-underline-gap);
 
-  /* space between items */
-  --spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-text-to-visual-100);
+	/* space between items */
+	--spectrum-breadcrumbs-separator-spacing-inline: var(--spectrum-text-to-visual-100);
 
-  /* vertical spacing */
-  --spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-breadcrumbs-top-to-text);
-  --spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-breadcrumbs-bottom-to-text);
-  --spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-icon);
+	/* vertical spacing */
+	--spectrum-breadcrumbs-text-spacing-block-start: var(--spectrum-breadcrumbs-top-to-text);
+	--spectrum-breadcrumbs-text-spacing-block-end: var(--spectrum-breadcrumbs-bottom-to-text);
+	--spectrum-breadcrumbs-icon-spacing-block: var(--spectrum-breadcrumbs-top-to-separator-icon);
 
-  /* compact vertical spacing */
-  --spectrum-breadcrumbs-text-spacing-block-start-compact: var(--spectrum-breadcrumbs-top-to-text-compact);
-  --spectrum-breadcrumbs-text-spacing-block-end-compact: var(--spectrum-breadcrumbs-bottom-to-text-compact);
-  --spectrum-breadcrumbs-icon-spacing-block-compact: var(--spectrum-breadcrumbs-top-to-separator-icon-compact);
+	/* compact vertical spacing */
+	--spectrum-breadcrumbs-text-spacing-block-start-compact: var(--spectrum-breadcrumbs-top-to-text-compact);
+	--spectrum-breadcrumbs-text-spacing-block-end-compact: var(--spectrum-breadcrumbs-bottom-to-text-compact);
+	--spectrum-breadcrumbs-icon-spacing-block-compact: var(--spectrum-breadcrumbs-top-to-separator-icon-compact);
 
-  /* multiline vertical spacing */
-  --spectrum-breadcrumbs-text-spacing-block-start-multiline: var(--spectrum-breadcrumbs-top-to-text-multiline);
-  --spectrum-breadcrumbs-text-spacing-block-end-multiline: var(--spectrum-breadcrumbs-bottom-to-text-multiline);
-  --spectrum-breadcrumbs-text-spacing-block-between-multiline: var(--spectrum-breadcrumbs-top-text-to-bottom-text); /* vertical between lines */
-  --spectrum-breadcrumbs-icon-spacing-block-start-multiline: var(--spectrum-breadcrumbs-top-to-separator-icon-multiline);
-  --spectrum-breadcrumbs-icon-spacing-block-between-multiline: var(--spectrum-breadcrumbs-separator-icon-to-bottom-text-multiline); /* vertical between lines */
+	/* multiline vertical spacing */
+	--spectrum-breadcrumbs-text-spacing-block-start-multiline: var(--spectrum-breadcrumbs-top-to-text-multiline);
+	--spectrum-breadcrumbs-text-spacing-block-end-multiline: var(--spectrum-breadcrumbs-bottom-to-text-multiline);
+	--spectrum-breadcrumbs-text-spacing-block-between-multiline: var(--spectrum-breadcrumbs-top-text-to-bottom-text); /* vertical between lines */
+	--spectrum-breadcrumbs-icon-spacing-block-start-multiline: var(--spectrum-breadcrumbs-top-to-separator-icon-multiline);
+	--spectrum-breadcrumbs-icon-spacing-block-between-multiline: var(--spectrum-breadcrumbs-separator-icon-to-bottom-text-multiline); /* vertical between lines */
 
-  /* horizontal outer spacing of list */
-  --spectrum-breadcrumbs-inline-start: var(--spectrum-breadcrumbs-start-edge-to-text);
-  --spectrum-breadcrumbs-inline-end: var(--spectrum-breadcrumbs-end-edge-to-text);
+	/* horizontal outer spacing of list */
+	--spectrum-breadcrumbs-inline-start: var(--spectrum-breadcrumbs-start-edge-to-text);
+	--spectrum-breadcrumbs-inline-end: var(--spectrum-breadcrumbs-end-edge-to-text);
 
-  /* menu action button icon spacing */
-  --spectrum-breadcrumbs-action-button-spacing-inline: var(--spectrum-breadcrumbs-truncated-menu-to-separator-icon);
+	/* menu action button icon spacing */
+	--spectrum-breadcrumbs-action-button-spacing-inline: var(--spectrum-breadcrumbs-truncated-menu-to-separator-icon);
 
-  /* action button spacing */
-  --spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu);
-  --spectrum-breadcrumbs-action-button-spacing-block-compact: var(--spectrum-breadcrumbs-top-to-truncated-menu-compact); /* compact */
+	/* action button spacing */
+	--spectrum-breadcrumbs-action-button-spacing-block: var(--spectrum-breadcrumbs-top-to-truncated-menu);
+	--spectrum-breadcrumbs-action-button-spacing-block-compact: var(--spectrum-breadcrumbs-top-to-truncated-menu-compact); /* compact */
 
-  --spectrum-breadcrumbs-action-button-spacing-inline-start: var(--spectrum-breadcrumbs-start-edge-to-truncated-menu); /* if icon is first item */
+	--spectrum-breadcrumbs-action-button-spacing-inline-start: var(--spectrum-breadcrumbs-start-edge-to-truncated-menu); /* if icon is first item */
 
-  --spectrum-breadcrumbs-action-button-spacing-block-multiline: var(--spectrum-breadcrumbs-top-to-truncated-menu-compact); /* multiline */
-  --spectrum-breadcrumbs-action-button-spacing-block-between-multiline: var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text); /* multiline */
+	--spectrum-breadcrumbs-action-button-spacing-block-multiline: var(--spectrum-breadcrumbs-top-to-truncated-menu-compact); /* multiline */
+	--spectrum-breadcrumbs-action-button-spacing-block-between-multiline: var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text); /* multiline */
 
-  /* Focus Indicator */
-  --spectrum-breadcrumbs-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-  --spectrum-breadcrumbs-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	/* Focus Indicator */
+	--spectrum-breadcrumbs-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-breadcrumbs-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
-  /* placeholder for border radius for focus indicator */
-  --spectrum-breadcrumbs-item-link-border-radius: var(--spectrum-corner-radius-100);
+	/* placeholder for border radius for focus indicator */
+	--spectrum-breadcrumbs-item-link-border-radius: var(--spectrum-corner-radius-100);
 
-  /* Colors */
-  --spectrum-breadcrumbs-text-color: var(--spectrum-neutral-subdued-content-color-default);
-  --spectrum-breadcrumbs-text-color-current: var(--spectrum-neutral-content-color-default);
-  --spectrum-breadcrumbs-text-color-disabled: var(--spectrum-disabled-content-color);
-  --spectrum-breadcrumbs-separator-color: var(--spectrum-neutral-content-color-default);
-  --spectrum-breadcrumbs-action-button-color: var(--spectrum-neutral-subdued-content-color-default);
-  --spectrum-breadcrumbs-action-button-color-disabled: var(--spectrum-disabled-content-color);
+	/* Colors */
+	--spectrum-breadcrumbs-text-color: var(--spectrum-neutral-subdued-content-color-default);
+	--spectrum-breadcrumbs-text-color-current: var(--spectrum-neutral-content-color-default);
+	--spectrum-breadcrumbs-text-color-disabled: var(--spectrum-disabled-content-color);
+	--spectrum-breadcrumbs-separator-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-breadcrumbs-action-button-color: var(--spectrum-neutral-subdued-content-color-default);
+	--spectrum-breadcrumbs-action-button-color-disabled: var(--spectrum-disabled-content-color);
 
-  --spectrum-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
 
 /* windows high contrast mode */
 @media (forced-colors: active) {
-  .spectrum-Breadcrumbs {
-    --highcontrast-breadcrumbs-text-color: LinkText;
-    --highcontrast-breadcrumbs-text-color-current: CanvasText;
-    --highcontrast-breadcrumbs-text-color-disabled: GrayText;
-    --highcontrast-breadcrumbs-separator-color: CanvasText;
-    --highcontrast-breadcrumbs-action-button-color: LinkText;
-    --highcontrast-breadcrumbs-action-button-color-disabled: GrayText;
+	.spectrum-Breadcrumbs {
+		--highcontrast-breadcrumbs-text-color: LinkText;
+		--highcontrast-breadcrumbs-text-color-current: CanvasText;
+		--highcontrast-breadcrumbs-text-color-disabled: GrayText;
+		--highcontrast-breadcrumbs-separator-color: CanvasText;
+		--highcontrast-breadcrumbs-action-button-color: LinkText;
+		--highcontrast-breadcrumbs-action-button-color-disabled: GrayText;
 
-    --highcontrast-breadcrumbs-focus-indicator-color: CanvasText;
-  }
+		--highcontrast-breadcrumbs-focus-indicator-color: CanvasText;
+	}
 }
 
 .spectrum-Breadcrumbs {
-  list-style-type: none;
+	list-style-type: none;
 
-  margin: 0;
-  padding-inline-start: var(--mod-breadcrumbs-inline-start, var(--spectrum-breadcrumbs-inline-start));
-  padding-inline-end: var(--mod-breadcrumbs-inline-end, var(--spectrum-breadcrumbs-inline-end));
+	margin: 0;
+	padding-inline-start: var(--mod-breadcrumbs-inline-start, var(--spectrum-breadcrumbs-inline-start));
+	padding-inline-end: var(--mod-breadcrumbs-inline-end, var(--spectrum-breadcrumbs-inline-end));
 
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: flex-start;
-  flex: 1 0 0%;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	flex: 1 0 0%;
 
-  block-size: var(--mod-breadcrumbs-block-size, var(--spectrum-breadcrumbs-block-size));
+	block-size: var(--mod-breadcrumbs-block-size, var(--spectrum-breadcrumbs-block-size));
 }
 
 .spectrum-Breadcrumbs--compact {
-  block-size: var(--mod-breadcrumbs-block-size-compact, var(--spectrum-breadcrumbs-block-size-compact));
+	block-size: var(--mod-breadcrumbs-block-size-compact, var(--spectrum-breadcrumbs-block-size-compact));
 }
 
 .spectrum-Breadcrumbs--multiline {
-  block-size: var(--mod-breadcrumbs-block-size-multiline, var(--spectrum-breadcrumbs-block-size-multiline));
+	block-size: var(--mod-breadcrumbs-block-size-multiline, var(--spectrum-breadcrumbs-block-size-multiline));
 
-  flex-wrap: wrap;
-  align-content: center;
+	flex-wrap: wrap;
+	align-content: center;
 }
 
 .spectrum-Breadcrumbs-itemSeparator {
-  position: relative;
+	position: relative;
 
-  margin-block: var(--mod-breadcrumbs-icon-spacing-block, var(--spectrum-breadcrumbs-icon-spacing-block));
-  margin-inline: var(--mod-breadcrumbs-separator-spacing-inline, var(--spectrum-breadcrumbs-separator-spacing-inline));
+	margin-block: var(--mod-breadcrumbs-icon-spacing-block, var(--spectrum-breadcrumbs-icon-spacing-block));
+	margin-inline: var(--mod-breadcrumbs-separator-spacing-inline, var(--spectrum-breadcrumbs-separator-spacing-inline));
 
-  opacity: 1;
-  color: var(--highcontrast-breadcrumbs-separator-color, var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color)));
+	opacity: 1;
+	color: var(--highcontrast-breadcrumbs-separator-color, var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color)));
 
-  &:dir(rtl) {
-    transform: scaleX(-1);
-  }
+	&:dir(rtl) {
+		transform: scaleX(-1);
+	}
 
-  .spectrum-Breadcrumbs--compact & {
-    margin-block: var(--mod-breadcrumbs-icon-spacing-block-compact, var(--spectrum-breadcrumbs-icon-spacing-block-compact));
-  }
+	.spectrum-Breadcrumbs--compact & {
+		margin-block: var(--mod-breadcrumbs-icon-spacing-block-compact, var(--spectrum-breadcrumbs-icon-spacing-block-compact));
+	}
 
-  .spectrum-Breadcrumbs--multiline & {
-    margin-block-start: var(--mod-breadcrumbs-icon-spacing-block-start-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-start-multiline));
-    margin-block-end: var(--mod-breadcrumbs-icon-spacing-block-between-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-between-multiline));
-  }
+	.spectrum-Breadcrumbs--multiline & {
+		margin-block-start: var(--mod-breadcrumbs-icon-spacing-block-start-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-start-multiline));
+		margin-block-end: var(--mod-breadcrumbs-icon-spacing-block-between-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-between-multiline));
+	}
 }
 
 .spectrum-Breadcrumbs-item {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-flex;
-  white-space: nowrap;
+	box-sizing: border-box;
+	position: relative;
+	display: inline-flex;
+	white-space: nowrap;
 
-  font-family: var(--mod-breadcrumbs-font-family, var(--spectrum-breadcrumbs-font-family));
-  font-size: var(--mod-breadcrumbs-font-size, var(--spectrum-breadcrumbs-font-size));
-  font-weight: var(--mod-breadcrumbs-font-weight, var(--spectrum-breadcrumbs-font-weight));
-  line-height: var(--mod-breadcrumbs-line-height, var(--spectrum-breadcrumbs-line-height));
+	font-family: var(--mod-breadcrumbs-font-family, var(--spectrum-breadcrumbs-font-family));
+	font-size: var(--mod-breadcrumbs-font-size, var(--spectrum-breadcrumbs-font-size));
+	font-weight: var(--mod-breadcrumbs-font-weight, var(--spectrum-breadcrumbs-font-weight));
+	line-height: var(--mod-breadcrumbs-line-height, var(--spectrum-breadcrumbs-line-height));
 
-  .spectrum-Breadcrumbs--compact & {
-    font-family: var(--mod-breadcrumbs-font-family-compact, var(--spectrum-breadcrumbs-font-family-compact));
-    font-size: var(--mod-breadcrumbs-font-size-compact, var(--spectrum-breadcrumbs-font-size-compact));
-    font-weight: var(--mod-breadcrumbs-font-weight-compact, var(--spectrum-breadcrumbs-font-weight-compact));
+	.spectrum-Breadcrumbs--compact & {
+		font-family: var(--mod-breadcrumbs-font-family-compact, var(--spectrum-breadcrumbs-font-family-compact));
+		font-size: var(--mod-breadcrumbs-font-size-compact, var(--spectrum-breadcrumbs-font-size-compact));
+		font-weight: var(--mod-breadcrumbs-font-weight-compact, var(--spectrum-breadcrumbs-font-weight-compact));
 
-    > .spectrum-ActionButton {
-      margin-block: var(--mod-breadcrumbs-action-button-spacing-block-compact, var(--spectrum-breadcrumbs-action-button-spacing-block-compact));
-    }
-  }
+		> .spectrum-ActionButton {
+			margin-block: var(--mod-breadcrumbs-action-button-spacing-block-compact, var(--spectrum-breadcrumbs-action-button-spacing-block-compact));
+		}
+	}
 
-  .spectrum-Breadcrumbs--multiline & {
-    font-family: var(--mod-breadcrumbs-font-family-multiline, var(--spectrum-breadcrumbs-font-family-multiline));
-    font-size: var(--mod-breadcrumbs-font-size-multiline, var(--spectrum-breadcrumbs-font-size-multiline));
-    font-weight: var(--mod-breadcrumbs-font-weight-multiline, var(--spectrum-breadcrumbs-font-weight-multiline));
+	.spectrum-Breadcrumbs--multiline & {
+		font-family: var(--mod-breadcrumbs-font-family-multiline, var(--spectrum-breadcrumbs-font-family-multiline));
+		font-size: var(--mod-breadcrumbs-font-size-multiline, var(--spectrum-breadcrumbs-font-size-multiline));
+		font-weight: var(--mod-breadcrumbs-font-weight-multiline, var(--spectrum-breadcrumbs-font-weight-multiline));
 
-    &:last-of-type {
-      block-size: auto;
-      inline-size: 100%;
-    }
+		&:last-of-type {
+			block-size: auto;
+			inline-size: 100%;
+		}
 
-    > .spectrum-ActionButton {
-      margin-block-start: var(--mod-breadcrumbs-action-button-spacing-block-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-multiline));
-      margin-block-end: var(--mod-breadcrumbs-action-button-spacing-block-between-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline));
-    }
-  }
+		> .spectrum-ActionButton {
+			margin-block-start: var(--mod-breadcrumbs-action-button-spacing-block-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-multiline));
+			margin-block-end: var(--mod-breadcrumbs-action-button-spacing-block-between-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline));
+		}
+	}
 
-  &:last-of-type {
-    font-family: var(--mod-breadcrumbs-font-family-current, var(--spectrum-breadcrumbs-font-family-current));
-    font-size: var(--mod-breadcrumbs-font-size-current, var(--spectrum-breadcrumbs-font-size-current));
-    font-weight: var(--mod-breadcrumbs-font-weight-current, var(--spectrum-breadcrumbs-font-weight-current));
+	&:last-of-type {
+		font-family: var(--mod-breadcrumbs-font-family-current, var(--spectrum-breadcrumbs-font-family-current));
+		font-size: var(--mod-breadcrumbs-font-size-current, var(--spectrum-breadcrumbs-font-size-current));
+		font-weight: var(--mod-breadcrumbs-font-weight-current, var(--spectrum-breadcrumbs-font-weight-current));
 
-    .spectrum-Breadcrumbs-itemSeparator {
-      display: none;
-    }
-  }
+		.spectrum-Breadcrumbs-itemSeparator {
+			display: none;
+		}
+	}
 
-  .spectrum-Breadcrumbs--compact &:last-of-type {
-    font-family: var(--mod-breadcrumbs-font-family-compact-current, var(--spectrum-breadcrumbs-font-family-compact-current));
-    font-size: var(--mod-breadcrumbs-font-size-compact-current, var(--spectrum-breadcrumbs-font-size-compact-current));
-    font-weight: var(--mod-breadcrumbs-font-weight-compact-current, var(--spectrum-breadcrumbs-font-weight-compact-current));
-  }
+	.spectrum-Breadcrumbs--compact &:last-of-type {
+		font-family: var(--mod-breadcrumbs-font-family-compact-current, var(--spectrum-breadcrumbs-font-family-compact-current));
+		font-size: var(--mod-breadcrumbs-font-size-compact-current, var(--spectrum-breadcrumbs-font-size-compact-current));
+		font-weight: var(--mod-breadcrumbs-font-weight-compact-current, var(--spectrum-breadcrumbs-font-weight-compact-current));
+	}
 
-  .spectrum-Breadcrumbs--multiline &:last-of-type {
-    font-family: var(--mod-breadcrumbs-font-family-multiline-current, var(--spectrum-breadcrumbs-font-family-multiline-current));
-    font-size: var(--mod-breadcrumbs-font-size-multiline-current, var(--spectrum-breadcrumbs-font-size-multiline-current));
-    font-weight: var(--mod-breadcrumbs-font-weight-multiline-current, var(--spectrum-breadcrumbs-font-weight-multiline-current));
+	.spectrum-Breadcrumbs--multiline &:last-of-type {
+		font-family: var(--mod-breadcrumbs-font-family-multiline-current, var(--spectrum-breadcrumbs-font-family-multiline-current));
+		font-size: var(--mod-breadcrumbs-font-size-multiline-current, var(--spectrum-breadcrumbs-font-size-multiline-current));
+		font-weight: var(--mod-breadcrumbs-font-weight-multiline-current, var(--spectrum-breadcrumbs-font-weight-multiline-current));
 
-    .spectrum-Breadcrumbs-itemLink {
-      margin-block-start: 0;
-      margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-multiline, var(--spectrum-breadcrumbs-text-spacing-block-end-multiline));
-    }
-  }
+		.spectrum-Breadcrumbs-itemLink {
+			margin-block-start: 0;
+			margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-multiline, var(--spectrum-breadcrumbs-text-spacing-block-end-multiline));
+		}
+	}
 
-  > .spectrum-ActionButton {
-    margin-inline: var(--mod-breadcrumbs-action-button-spacing-inline, var(--spectrum-breadcrumbs-action-button-spacing-inline));
-    margin-block: var(--mod-breadcrumbs-action-button-spacing-block, var(--spectrum-breadcrumbs-action-button-spacing-block));
+	> .spectrum-ActionButton {
+		margin-inline: var(--mod-breadcrumbs-action-button-spacing-inline, var(--spectrum-breadcrumbs-action-button-spacing-inline));
+		margin-block: var(--mod-breadcrumbs-action-button-spacing-block, var(--spectrum-breadcrumbs-action-button-spacing-block));
 
-    color: var(--highcontrast-breadcrumbs-action-button-color, var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color)));
+		color: var(--highcontrast-breadcrumbs-action-button-color, var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color)));
 
-    &:disabled {
-      color: var(--highcontrast-breadcrumbs-action-button-color-disabled, var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled)));
-    }
-  }
+		&:disabled {
+			color: var(--highcontrast-breadcrumbs-action-button-color-disabled, var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled)));
+		}
+	}
 
-  &:first-of-type {
-    /* if folder icon is first item */
-    > .spectrum-ActionButton {
-      margin-inline-start: var(--mod-breadcrumbs-action-button-spacing-inline-start, var(--spectrum-breadcrumbs-action-button-spacing-inline-start));
-    }
-  }
+	&:first-of-type {
+		/* if folder icon is first item */
+		> .spectrum-ActionButton {
+			margin-inline-start: var(--mod-breadcrumbs-action-button-spacing-inline-start, var(--spectrum-breadcrumbs-action-button-spacing-inline-start));
+		}
+	}
 }
 
 .spectrum-Breadcrumbs-itemLink {
-  cursor: default;
-  position: relative;
+	cursor: default;
+	position: relative;
 
-  box-sizing: border-box;
+	box-sizing: border-box;
 
-  display: block;
+	display: block;
 
-  border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius)); /* placeholder for token */
-  outline: none;
+	border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius)); /* placeholder for token */
+	outline: none;
 
-  text-decoration: none;
-  color: var(--highcontrast-breadcrumbs-text-color, var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color)));
+	text-decoration: none;
+	color: var(--highcontrast-breadcrumbs-text-color, var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color)));
 
-  margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start, var(--spectrum-breadcrumbs-text-spacing-block-start));
-  margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end, var(--spectrum-breadcrumbs-text-spacing-block-end));
+	margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start, var(--spectrum-breadcrumbs-text-spacing-block-start));
+	margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end, var(--spectrum-breadcrumbs-text-spacing-block-end));
 
-  &.is-disabled {
-    color: var(--highcontrast-breadcrumbs-text-color-disabled, var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled)));
-  }
+	&.is-disabled {
+		color: var(--highcontrast-breadcrumbs-text-color-disabled, var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled)));
+	}
 
-  .spectrum-Breadcrumbs-item:last-of-type & {
-    color: var(--highcontrast-breadcrumbs-text-color-current, var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current)));
-  }
+	.spectrum-Breadcrumbs-item:last-of-type & {
+		color: var(--highcontrast-breadcrumbs-text-color-current, var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current)));
+	}
 
-  .spectrum-Breadcrumbs--compact & {
-    /* compact vertical spacing */
-    margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start-compact, var(--spectrum-breadcrumbs-text-spacing-block-start-compact));
-    margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-compact, var(--spectrum-breadcrumbs-text-spacing-block-end-compact));
-  }
+	.spectrum-Breadcrumbs--compact & {
+		/* compact vertical spacing */
+		margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start-compact, var(--spectrum-breadcrumbs-text-spacing-block-start-compact));
+		margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-compact, var(--spectrum-breadcrumbs-text-spacing-block-end-compact));
+	}
 
-  .spectrum-Breadcrumbs--multiline & {
-    /* multiline vertical spacing */
-    margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start-multiline, var(--spectrum-breadcrumbs-text-spacing-block-start-multiline));
-    margin-block-end: var(--mod-breadcrumbs-text-spacing-block-between-multiline, var(--spectrum-breadcrumbs-text-spacing-block-between-multiline)); /* vertical between lines */
-  }
+	.spectrum-Breadcrumbs--multiline & {
+		/* multiline vertical spacing */
+		margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start-multiline, var(--spectrum-breadcrumbs-text-spacing-block-start-multiline));
+		margin-block-end: var(--mod-breadcrumbs-text-spacing-block-between-multiline, var(--spectrum-breadcrumbs-text-spacing-block-between-multiline)); /* vertical between lines */
+	}
 
-  &[href],
-  &[tabindex="0"] {
-    cursor: pointer;
+	&[href],
+	&[tabindex="0"] {
+		cursor: pointer;
 
-    &:hover,
-    &:focus-visible {
-      text-decoration: underline;
-      text-decoration-thickness: var(--mod-breadcrumbs-text-decoration-thickness, var(--spectrum-breadcrumbs-text-decoration-thickness));
-      text-underline-offset: var(--mod-breadcrumbs-text-decoration-gap, var(--spectrum-breadcrumbs-text-decoration-gap));
-    }
-  }
+		&:hover,
+		&:focus-visible {
+			text-decoration: underline;
+			text-decoration-thickness: var(--mod-breadcrumbs-text-decoration-thickness, var(--spectrum-breadcrumbs-text-decoration-thickness));
+			text-underline-offset: var(--mod-breadcrumbs-text-decoration-gap, var(--spectrum-breadcrumbs-text-decoration-gap));
+		}
+	}
 }
 
 /* focus indicator */
 .spectrum-Breadcrumbs-item.is-dragged .spectrum-Breadcrumbs-itemLink::before,
 .spectrum-Breadcrumbs-itemLink:focus-visible::before {
-  position: absolute;
+	position: absolute;
 
-  margin-inline-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))
-                                + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)))
-                                * -1);
-  margin-block-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap))
-                                + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)))
-                                * -1);
+	margin-inline-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap)) + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness))) * -1);
+	margin-block-start: calc((var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap)) + var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness))) * -1);
 
-  box-sizing: border-box;
-  display: block;
-  inline-size: calc(100% + (var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap)) * 2)
-                    + (var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)) * 2));
-  block-size: calc(100% + (var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap)) * 2)
-                    + (var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)) * 2));
+	box-sizing: border-box;
+	display: block;
+	inline-size: calc(100% + (var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap)) * 2) + (var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)) * 2));
+	block-size: calc(100% + (var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap)) * 2) + (var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness)) * 2));
 
-  border-width: var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness));
-  border-style: solid;
-  border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius));
+	border-width: var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness));
+	border-style: solid;
+	border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius));
 
-  content: "";
-  pointer-events: none;
+	content: "";
+	pointer-events: none;
 
-  border-color: var(--highcontrast-breadcrumbs-focus-indicator-color, var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color)));
+	border-color: var(--highcontrast-breadcrumbs-focus-indicator-color, var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color)));
 }

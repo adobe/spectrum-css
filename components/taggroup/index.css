@@ -11,19 +11,19 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-TagGroup {
-  --spectrum-tag-group-item-margin-block: var(--spectrum-spacing-75);
-  --spectrum-tag-group-item-margin-inline: var(--spectrum-spacing-75);
+	--spectrum-tag-group-item-margin-block: var(--spectrum-spacing-75);
+	--spectrum-tag-group-item-margin-inline: var(--spectrum-spacing-75);
 }
 
 .spectrum-TagGroup {
-  display: inline-flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+	display: inline-flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .spectrum-TagGroup-item {
-  margin-block: var(--mod-tag-group-item-margin-block, var(--spectrum-tag-group-item-margin-block));
-  margin-inline: var(--mod-tag-group-item-margin-inline, var(--spectrum-tag-group-item-margin-inline));
+	margin-block: var(--mod-tag-group-item-margin-block, var(--spectrum-tag-group-item-margin-block));
+	margin-inline: var(--mod-tag-group-item-margin-inline, var(--spectrum-tag-group-item-margin-inline));
 }

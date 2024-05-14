@@ -10,7 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-
 /* fieldgroup/index.css
  *
  * fieldgroup contains four component dependences:
@@ -20,62 +19,62 @@ governing permissions and limitations under the License.
 
 /* custom properties */
 .spectrum-FieldGroup {
-  --spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
-  --spectrum-fieldgroup-readonly-delimiter: '\002c';
+	--spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
+	--spectrum-fieldgroup-readonly-delimiter: "\002c";
 }
 
 /* field group */
 .spectrum-FieldGroup {
-  display: flex;
-  flex-flow: column wrap;
+	display: flex;
+	flex-flow: column wrap;
 }
 
 /* field group label top aligned */
 .spectrum-FieldGroup--toplabel {
-  flex-direction: column;
+	flex-direction: column;
 }
 
 /* field group label side aligned */
 .spectrum-FieldGroup--sidelabel {
-  flex-direction: row;
+	flex-direction: row;
 }
 
 /* input fields layout */
 .spectrum-FieldGroupInputLayout {
-  display: flex;
-  flex-flow: column wrap;
+	display: flex;
+	flex-flow: column wrap;
 
-  /* input fields stacked vertically */
-  .spectrum-FieldGroup--vertical & {
-    flex-direction: column;
-  }
+	/* input fields stacked vertically */
+	.spectrum-FieldGroup--vertical & {
+		flex-direction: column;
+	}
 
-   /* input fields aligned horizontally */
-  .spectrum-FieldGroup--horizontal & {
-    flex-direction: row;
+	/* input fields aligned horizontally */
+	.spectrum-FieldGroup--horizontal & {
+		flex-direction: row;
 
-    /* space between horizontal fields */
-    .spectrum-FieldGroup-item:not(:last-child) {
-      margin-inline-end: var(--spectrum-fieldgroup-margin);
-    }
+		/* space between horizontal fields */
+		.spectrum-FieldGroup-item:not(:last-child) {
+			margin-inline-end: var(--spectrum-fieldgroup-margin);
+		}
 
-    /* move help text down to new row */
-    .spectrum-HelpText {
-      flex-basis: 100%;
-    }
-  }
+		/* move help text down to new row */
+		.spectrum-HelpText {
+			flex-basis: 100%;
+		}
+	}
 }
 
 /* read-only checkbox group */
 .spectrum-FieldGroup {
-  .spectrum-Checkbox.is-readOnly {
-    .spectrum-Checkbox-box {
-      display: none;
-    }
+	.spectrum-Checkbox.is-readOnly {
+		.spectrum-Checkbox-box {
+			display: none;
+		}
 
-    /* read-only checkbox fields delimited by commas */
-    &:not(:last-child) .spectrum-Checkbox-label::after {
-      content: var(--spectrum-fieldgroup-readonly-delimiter);
-    }
-  }
+		/* read-only checkbox fields delimited by commas */
+		&:not(:last-child) .spectrum-Checkbox-label::after {
+			content: var(--spectrum-fieldgroup-readonly-delimiter);
+		}
+	}
 }
