@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.1.1
+
+### Patch Changes
+
+- [#2745](https://github.com/adobe/spectrum-css/pull/2745) [`2c13cdc`](https://github.com/adobe/spectrum-css/commit/2c13cdc5acdf58fa9622c37cc380abedd596af0f) Thanks [@mdt2](https://github.com/mdt2)! - fix(popover): Adjust selectors to remove duplicate class selectors in the dist output
+
 ## 7.1.0
 
 ### Minor Changes

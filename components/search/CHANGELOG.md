@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.1.1
+
+### Patch Changes
+
+- [#2759](https://github.com/adobe/spectrum-css/pull/2759) [`9652981`](https://github.com/adobe/spectrum-css/commit/965298128a39ec40543f659480559053b33394e2) Thanks [@castastrophe](https://github.com/castastrophe)! - fix: when whitespace normalization is done before stylelint fixes, a few selector optimizations were uncovered.
+
 ## 7.1.0
 
 ### Minor Changes
