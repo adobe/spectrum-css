@@ -33,6 +33,7 @@
 | `--mod-menu-item-description-color-focus`                          |
 | `--mod-menu-item-description-color-hover`                          |
 | `--mod-menu-item-description-font-size`                            |
+| `--mod-menu-item-description-font-weight`                          |
 | `--mod-menu-item-description-line-height`                          |
 | `--mod-menu-item-description-line-height-cjk`                      |
 | `--mod-menu-item-focus-indicator-color`                            |
@@ -45,6 +46,7 @@
 | `--mod-menu-item-label-content-color-focus`                        |
 | `--mod-menu-item-label-content-color-hover`                        |
 | `--mod-menu-item-label-font-size`                                  |
+| `--mod-menu-item-label-font-weight`                                |
 | `--mod-menu-item-label-icon-color-default`                         |
 | `--mod-menu-item-label-icon-color-disabled`                        |
 | `--mod-menu-item-label-icon-color-down`                            |
@@ -63,6 +65,8 @@
 | `--mod-menu-item-top-to-action`                                    |
 | `--mod-menu-item-top-to-checkbox`                                  |
 | `--mod-menu-item-top-to-checkmark`                                 |
+| `--mod-menu-item-top-to-drillin`                                   |
+| `--mod-menu-item-top-to-icon`                                      |
 | `--mod-menu-item-value-color-default`                              |
 | `--mod-menu-item-value-color-down`                                 |
 | `--mod-menu-item-value-color-focus`                                |

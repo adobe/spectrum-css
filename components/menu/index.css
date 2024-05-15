@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Menu {
+	--spectrum-menu-item-background-color-default-rgba: rgba(var(--spectrum-menu-item-background-color-default), var(--spectrum-menu-item-background-opacity));
 	--spectrum-menu-item-min-height: var(--spectrum-component-height-100);
 	--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
 	--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-100);
@@ -20,6 +21,8 @@ governing permissions and limitations under the License.
 	--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-100);
 	--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-100);
 	--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-100);
+	--spectrum-menu-item-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
+	--spectrum-menu-item-top-to-drillin: var(--spectrum-menu-item-top-to-disclosure-icon-medium);
 
 	--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-100);
 
@@ -30,8 +33,8 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-medium);
 
-	--spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-medium);
-	--spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-medium);
+	--spectrum-menu-item-checkmark-height: var(--spectrum-checkmark-icon-size-100);
+	--spectrum-menu-item-checkmark-width: var(--spectrum-checkmark-icon-size-100);
 	--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-medium);
 
 	--spectrum-menu-item-top-to-action: var(--spectrum-spacing-50);
@@ -57,6 +60,9 @@ governing permissions and limitations under the License.
 	--spectrum-menu-item-label-content-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-menu-item-label-icon-color-disabled: var(--spectrum-disabled-content-color);
 
+	--spectrum-menu-item-label-font-weight: var(--spectrum-medium-font-weight);
+	--spectrum-menu-item-description-font-weight: var(--spectrum-regular-font-weight);
+
 	--spectrum-menu-item-description-line-height: var(--spectrum-line-height-100);
 	--spectrum-menu-item-description-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
@@ -69,14 +75,16 @@ governing permissions and limitations under the License.
 	--spectrum-menu-section-header-line-height: var(--spectrum-line-height-100);
 	--spectrum-menu-section-header-line-height-cjk: var(--spectrum-cjk-line-height-100);
 	--spectrum-menu-section-header-font-weight: var(--spectrum-bold-font-weight);
-	--spectrum-menu-section-header-color: var(--spectrum-gray-900);
+	--spectrum-menu-section-header-color: var(--spectrum-neutral-content-color-default);
 	--spectrum-menu-collapsible-icon-color: var(--spectrum-gray-900);
 
-	--spectrum-menu-checkmark-icon-color-default: var(--spectrum-accent-color-900);
-	--spectrum-menu-checkmark-icon-color-hover: var(--spectrum-accent-color-1000);
-	--spectrum-menu-checkmark-icon-color-down: var(--spectrum-accent-color-1100);
-	--spectrum-menu-checkmark-icon-color-focus: var(--spectrum-accent-color-1000);
+	--spectrum-menu-checkmark-icon-color-default: var(--spectrum-accent-content-color-default);
+	--spectrum-menu-checkmark-icon-color-hover: var(--spectrum-accent-content-color-hover);
+	--spectrum-menu-checkmark-icon-color-down: var(--spectrum-accent-content-color-down);
+	--spectrum-menu-checkmark-icon-color-focus: var(--spectrum-accent-content-color-key-focus);
 
+	--spectrum-menu-drillin-icon-height: var(--spectrum-chevron-icon-size-100);
+	--spectrum-menu-drillin-icon-width: var(--spectrum-chevron-icon-size-100);
 	--spectrum-menu-drillin-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-menu-drillin-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
 	--spectrum-menu-drillin-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
@@ -110,6 +118,8 @@ governing permissions and limitations under the License.
 	--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-75);
 	--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-75);
 	--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-75);
+	--spectrum-menu-item-top-to-icon: var(--spectrum-component-top-to-workflow-icon-75);
+	--spectrum-menu-item-top-to-drillin: var(--spectrum-menu-item-top-to-disclosure-icon-small);
 
 	--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-75);
 
@@ -120,9 +130,12 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-small);
 
-	--spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-small);
-	--spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-small);
+	--spectrum-menu-item-checkmark-height: var(--spectrum-checkmark-icon-size-75);
+	--spectrum-menu-item-checkmark-width: var(--spectrum-checkmark-icon-size-75);
 	--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-small);
+
+	--spectrum-menu-drillin-icon-height: var(--spectrum-chevron-icon-size-75);
+	--spectrum-menu-drillin-icon-width: var(--spectrum-chevron-icon-size-75);
 
 	--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-small);
 }
@@ -137,6 +150,8 @@ governing permissions and limitations under the License.
 	--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-200);
 	--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-200);
 	--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-200);
+	--spectrum-menu-item-top-to-icon: var(--spectrum-component-top-to-workflow-icon-200);
+	--spectrum-menu-item-top-to-drillin: var(--spectrum-menu-item-top-to-disclosure-icon-large);
 
 	--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-200);
 
@@ -147,9 +162,12 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-large);
 
-	--spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-large);
-	--spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-large);
+	--spectrum-menu-item-checkmark-height: var(--spectrum-checkmark-icon-size-200);
+	--spectrum-menu-item-checkmark-width: var(--spectrum-checkmark-icon-size-200);
 	--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-large);
+
+	--spectrum-menu-drillin-icon-height: var(--spectrum-chevron-icon-size-200);
+	--spectrum-menu-drillin-icon-width: var(--spectrum-chevron-icon-size-200);
 
 	--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-large);
 }
@@ -164,6 +182,8 @@ governing permissions and limitations under the License.
 	--spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-300);
 	--spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-300);
 	--spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-300);
+	--spectrum-menu-item-top-to-icon: var(--spectrum-component-top-to-workflow-icon-300);
+	--spectrum-menu-item-top-to-drillin: var(--spectrum-menu-item-top-to-disclosure-icon-extra-large);
 
 	--spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-300);
 
@@ -174,11 +194,14 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-extra-large);
 
-	--spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-extra-large);
-	--spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-extra-large);
+	--spectrum-menu-item-checkmark-height: var(--spectrum-checkmark-icon-size-300);
+	--spectrum-menu-item-checkmark-width: var(--spectrum-checkmark-icon-size-300);
 	--spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-extra-large);
 
 	--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-extra-large);
+
+	--spectrum-menu-drillin-icon-height: var(--spectrum-chevron-icon-size-300);
+	--spectrum-menu-drillin-icon-width: var(--spectrum-chevron-icon-size-300);
 }
 
 @media (forced-colors: active) {
@@ -293,6 +316,11 @@ governing permissions and limitations under the License.
 .spectrum-Menu-itemIcon {
 	fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
 	color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
+
+	&:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+		/* matches top to icon to design spec in case it is not the same as top to text */
+		margin-block-start: calc(var(--mod-menu-item-top-to-icon, var(--spectrum-menu-item-top-to-icon)) - var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
+	}
 }
 
 .spectrum-Menu-checkmark {
@@ -319,8 +347,9 @@ governing permissions and limitations under the License.
 
 	box-sizing: border-box;
 
-	background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default)));
+	background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default-rgba)));
 
+	font-weight: var(--mod-menu-item-label-font-weight, var(--spectrum-menu-item-label-font-weight));
 	line-height: var(--mod-menu-item-label-line-height, var(--spectrum-menu-item-label-line-height));
 
 	min-block-size: var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height));
@@ -544,8 +573,9 @@ governing permissions and limitations under the License.
 .spectrum-Menu-chevron {
 	grid-area: chevronArea;
 	align-self: center;
-	block-size: var(--spectrum-menu-item-checkmark-height);
-	inline-size: var(--spectrum-menu-item-checkmark-width);
+	block-size: var(--spectrum-menu-drillin-icon-height);
+	inline-size: var(--spectrum-menu-drillin-icon-width);
+	margin-block-start: calc(var(--mod-menu-item-top-to-drillin, var(--spectrum-menu-item-top-to-drillin)) - calc(var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text))));
 }
 
 .spectrum-Menu-item--collapsible .spectrum-Menu-chevron {
@@ -610,6 +640,7 @@ governing permissions and limitations under the License.
 	hyphens: auto;
 	overflow-wrap: break-word;
 	margin-block-start: var(--mod-menu-item-label-to-description-spacing, var(--spectrum-menu-item-label-to-description-spacing));
+	font-weight: var(--mod-menu-item-description-font-weight, var(--spectrum-menu-item-description-font-weight));
 	line-height: var(--mod-menu-item-description-line-height, var(--spectrum-menu-item-description-line-height));
 }
 
@@ -658,7 +689,7 @@ governing permissions and limitations under the License.
 	&.is-open:active,
 	&.is-open:focus,
 	&.is-open.is-focused {
-		background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default)));
+		background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default-rgba)));
 	}
 
 	.spectrum-Menu {
@@ -709,7 +740,7 @@ governing permissions and limitations under the License.
 	}
 
 	&.is-open {
-		--spectrum-menu-item-background-color-default: var(--highcontrast-menu-item-selected-background-color, var(--mod-menu-item-background-color-hover, var(--spectrum-menu-item-background-color-hover)));
+		--spectrum-menu-item-background-color-default-rgba: var(--highcontrast-menu-item-selected-background-color, var(--mod-menu-item-background-color-hover, var(--spectrum-menu-item-background-color-hover)));
 
 		.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
 			fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-icon-color-hover, var(--spectrum-menu-item-label-icon-color-hover)));
