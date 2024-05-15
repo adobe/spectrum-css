@@ -109,7 +109,7 @@ governing permissions and limitations under the License.
 	block-size: var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size));
 	inline-size: var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size));
 
-	inset-block-start: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--spectrum-tooltip-tip-antialiasing-inset) + var(--highcontrast-tooltip-border-width));
+	inset-block-start: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset)) + var(--highcontrast-tooltip-border-width));
 	/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 	left: calc(50% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))));
 	transform: rotate(-45deg);
@@ -128,7 +128,7 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--top-right &,
 	.spectrum-Tooltip--top-start &,
 	.spectrum-Tooltip--top-end & {
-		inset-block-start: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--spectrum-tooltip-tip-antialiasing-inset) + var(--highcontrast-tooltip-border-width));
+		inset-block-start: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset)) + var(--highcontrast-tooltip-border-width));
 		transform: rotate(-45deg);
 	}
 
@@ -138,7 +138,7 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--bottom-right &,
 	.spectrum-Tooltip--bottom-start &,
 	.spectrum-Tooltip--bottom-end & {
-		inset-block: auto calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--spectrum-tooltip-tip-antialiasing-inset) + var(--highcontrast-tooltip-border-width));
+		inset-block: auto calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset)) + var(--highcontrast-tooltip-border-width));
 		transform: rotate(135deg);
 	}
 
@@ -211,7 +211,7 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--end &,
 	.spectrum-Tooltip--end-top &,
 	.spectrum-Tooltip--end-bottom & {
-		inset-inline: auto calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--spectrum-tooltip-tip-antialiasing-inset) + var(--highcontrast-tooltip-border-width));
+		inset-inline: auto calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset)) + var(--highcontrast-tooltip-border-width));
 		transform: rotate(45deg);
 	}
 
@@ -222,7 +222,7 @@ governing permissions and limitations under the License.
 	.spectrum-Tooltip--start &,
 	.spectrum-Tooltip--start-top &,
 	.spectrum-Tooltip--start-bottom & {
-		inset-inline-start: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--spectrum-tooltip-tip-antialiasing-inset) + var(--highcontrast-tooltip-border-width));
+		inset-inline-start: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset)) + var(--highcontrast-tooltip-border-width));
 		transform: rotate(-135deg);
 	}
 
@@ -252,7 +252,7 @@ governing permissions and limitations under the License.
 		&:dir(rtl) {
 			transform: rotate(-135deg);
 			right: auto;
-			left: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--spectrum-tooltip-tip-antialiasing-inset) + var(--highcontrast-tooltip-border-width));
+			left: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset)) + var(--highcontrast-tooltip-border-width));
 		}
 	}
 
@@ -266,7 +266,7 @@ governing permissions and limitations under the License.
 		&:dir(rtl) {
 			transform: rotate(45deg);
 			left: auto;
-			right: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--spectrum-tooltip-tip-antialiasing-inset) + var(--highcontrast-tooltip-border-width));
+			right: calc(100% - (0.5 * var(--mod-tooltip-tip-square-size, var(--spectrum-tooltip-tip-square-size))) - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset)) + var(--highcontrast-tooltip-border-width));
 		}
 	}
 }
