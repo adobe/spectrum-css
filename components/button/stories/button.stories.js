@@ -463,20 +463,19 @@ export const Default = Variants.bind({});
 Default.args = {};
 
 export const StaticWhite = Variants.bind({});
+StaticWhite.tags = ["vrt-only"];
 StaticWhite.args = {
-	/* Force dark mode to make typography readable */
-	color: "dark",
 	staticColor: "white",
 };
 
 export const StaticBlack = Variants.bind({});
+StaticBlack.tags = ["vrt-only"];
 StaticBlack.args = {
-	/* Force light mode to make typography readable */
-	color: "light",
 	staticColor: "black",
 };
 
 export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["vrt-only"];
 WithForcedColors.parameters = {
 	chromatic: { forcedColors: "active" },
 };

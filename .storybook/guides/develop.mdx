@@ -14,11 +14,11 @@ Welcome to the development and exploration environment for Spectrum CSS, driven 
 
 This guide is intended to get you up to speed on how we work within Storybook in the Spectrum CSS project. It will cover the following topics:
 
-    - [Architecture](#architecture)
-    - [Writing stories](#writing-stories)
-    - [Templates](#templates)
-    - [Testing stories](#testing-stories)
-    - [Changelog](#changelog)
+  - [Architecture](#architecture)
+  - [Writing stories](#writing-stories)
+  - [Templates](#templates)
+  - [Testing stories](#testing-stories)
+  - [Changelog](#changelog)
 
 For more general information about how to contribute to the Spectrum CSS project, take a look at our [contribution guidelines on GitHub](https://github.com/adobe/spectrum-css/blob/main/.github/CONTRIBUTING.md).
 
@@ -33,6 +33,8 @@ For more general information about how to contribute to the Spectrum CSS project
 - `decorators`: These assets interpret the arguments provided and apply the necessary stylesheet or markup changes to reflect the desired update.
 - `deprecated`: One folder for each deprecated component we are still including in our documentation but that does not live in the repository any longer.
 - `guides`: Manually written documentation for the project.
+- `modes`: Currently unused; these are the modes for Chromatic to use in rendering every story across our various supported contexts.
+- `types`: There are 3 primary assets stored in this folder: shared global properties (such as rootClass, customStyles, id, etc.), global controls (contexts available in the top toolbar), and states (optional shared properties to be imported into a story for consistency). Each file is surfaced to the `types/index.js` file for ease of importing.
 
 **Storybook files:**
 
@@ -76,17 +78,6 @@ CSS assets will be run through their respective postcss configurations. This mea
   import "../index.css";
   ```
 
-If you need to load an asset in your template based on storybook configurations, you can do so using dynamic imports and a webpackPrefetch flag (to prevent FOUC). These will follow the same compilation rules as noted above. i.e.,
-
-  ```js
-  try {
-   if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-   else import(/* webpackPrefetch: true */ "../themes/express.css");
-  } catch (e) {
-   console.warn(e);
-  }
-  ```
-
 We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit for dynamic attribute assignment.
 
 ### Add-ons
@@ -99,10 +90,11 @@ We rely on the following add-ons to power our implementation:
 - [@etchteam/storybook-addon-status](https://storybook.js.org/addons/@etchteam/storybook-addon-status)
 - [@storybook/addon-interactions](https://github.com/storybookjs/storybook/tree/next/code/addons/interactions)
 - [@chromaui/addon-visual-tests](https://www.chromatic.com/docs/visual-testing-addon/)
+- [@storybook/addon-designs](https://storybook.js.org/addons/@storybook/addon-designs/)
 
 ## Writing stories
 
-The easiest way to begin writing stories for a new component is to run `yarn new story` or `yarn workspace @spectrum-css/generator new story`. This generator will prompt you to select your component folder name from a pre-populated list. You can search the list by starting to type. Press enter to select. This is not necessary if you used the `yarn new component` command to generate your package in the first place as it will have populated the templates for you at that time.
+The easiest way to begin writing stories for a new component is to run `yarn new story`. This generator will prompt you to select your component folder name from a pre-populated list. You can search the list by starting to type. Press enter to select. This is not necessary if you used the `yarn new component` command to generate your package as it will have populated the templates for you already.
 
 Inside the component's package folder, you should now see a stories folder containing 2 assets:
 
@@ -125,13 +117,53 @@ Notes on a few commonly used argTypes:
 
 - If your component does not include any animation, please hide the reducedMotion control to avoid confusion: `reducedMotion: { table: { disable: true } }`
 
+You can import state-based argTypes that are commonly used from the `types/states.js`. States available in this file include (but are not limited to):
+- `isOpen`
+- `isSelected`
+- `isValid`
+- `isInvalid`
+- `isFocused`
+- `isKeyboardFocused`
+- `isHovered`
+- `isActive`
+- `isLoading`
+- `isDisabled`
+- `isDragged`
+- `isRequired`
+- `isReadOnly`
+- `isChecked`
+
+To import shared types into your story, use the following syntax:
+
+```js
+import { isActive, isDisabled, isFocused, isHovered, isSelected } from "@spectrum-css/preview/types";
+
+export default {
+  argTypes: {
+    isDisabled,
+    isSelected,
+    isHovered,
+    isFocused,
+    isActive,
+  },
+  args: {
+    isDisabled: false,
+    isSelected: false,
+    isHovered: false,
+    isFocused: false,
+    isActive: false,
+  }
+};
+```
+
+Be sure to define a default value for these argTypes in your args section.
+
 #### Categories
 
-- `Global`: sourced automatically from preview.js. You can turn these off but we do not recommend adding any new controls here that are story-specific.
-- `Component`: controls that relate to the styling of the component; often these will be denoted by classes that include a `--` separator. i.e., `--quiet` or `--multiline`. These can be boolean, select dropdowns, radio buttons, etc. depending on the design rules for their application.
-- `Advanced`: these are controls that match the requirements of a component category but are not recommended to be used; styles designed for specific edge-cases or inoptimal use. i.e., `staticWhite`.
-- `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM.
+- `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM.  This category can be used to automatically populate visual regression tests when used with the `withStatesWrapper` decorator.
+- `Variant`: these controls represent design variants available for a component; often these will be denoted by classes that include a `--` separator. i.e., `--quiet` or `--multiline`. These can be boolean, select dropdowns, radio buttons, etc. depending on the design rules for their application. This category can be used to automatically populate visual regression tests when used with the `withVariantsWrapper` decorator.
 - `Content`: not specific to the rendering of this component. Text or subcomponents to be rendered inside that region but that is not opinionated. Often this would be represented by a slot in a web component. i.e., labels, content to render inside a dialog or modal.
+- `Advanced`: these are controls that match the requirements of a component category but are not recommended to be used; styles designed for specific edge-cases or inoptimal use. i.e., `staticWhite`.
 
 #### Icon dropdowns
 
@@ -174,18 +206,6 @@ image: {
     category: "Component",
   },
   control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
-},
-```
-
-```js
-isOpen: {
-  name: "Open",
-  type: { name: "boolean" },
-  table: {
-    type: { summary: "boolean" },
-    category: "State",
-  },
-  control: "boolean",
 },
 ```
 
@@ -251,12 +271,14 @@ import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/templ
 
 Be sure to rename the import to something other than Template as the main export in your template.js file will have the same name.
 
-Every component will have access to a few empty, global inputs to provide consistency in naming for common requirements.
+Every component will have access to a few empty, global inputs to provide consistency in naming for common requirements. You can find the full list in `.storybook/types/args.js`.
 
 - `rootClass`: this holds the top-level className of the component and should match the value set in the `args` of the stories.js file.
 - `id`: allows users to pass in a custom ID value and should be added to the top-level wrapper of the component.
 - `customClasses` (array): allows passing in additional classes to be applied to the top-level component. This is necessary for nesting templates inside others while allowing the parent to assign context to the child.
-- `...globals`: this spread variable should not be decomposed on import. Instead, add a desctructuring right after instantiation, i.e., `const { express } = globals`. These values map to the globally provided settings and allow you to make rendering choices based on these values.
+- `customStyles` (object): allows passing in a style map object to provide custom inline CSS at the top-level of a component.
+- `testId`: used to render a `data-test-id` value to be used by a testing suite to target specific elements.
+- `wrapperStyles` (object): used to pass custom inline CSS to be assigned to the root container of the story.
 
 The rest of the variables provided in the Template function's input object will map to the argTypes you defined in your stories.js file.
 
@@ -272,6 +294,9 @@ All return values for Template functions should be outputting TemplateResults. S
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
+
+import { useGlobals } from "@storybook/preview-api";
 
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
@@ -291,50 +316,30 @@ export const Template = ({
  isInvalid = false,
  hasClearButton = false,
  id,
+ testId,
  customClasses = [],
- ...globals
-}) => {
- const { express } = globals;
-
- try {
-  if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-  else import(/* webpackPrefetch: true */ "../themes/express.css");
- } catch (e) {
-  console.warn(e);
- }
-
- return html`
+ customStyles = {},
+}) => html`
   <div
-   class=${classMap({
-    [rootClass]: true,
-    [`${rootClass}--size${size?.toUpperCase()}`]:
-     typeof size !== "undefined",
-    "is-emphasized": isEmphasized,
-    "is-disabled": isDisabled,
-    "is-invalid": isInvalid,
-    "is-selected": isSelected,
-    ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-   })}
-   id=${ifDefined(id)}
-   tabindex="0"
+    class=${classMap({
+      [rootClass]: true,
+      [`${rootClass}--size${size?.toUpperCase()}`]:
+      typeof size !== "undefined",
+      "is-emphasized": isEmphasized,
+      "is-disabled": isDisabled,
+      "is-invalid": isInvalid,
+      "is-selected": isSelected,
+      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+    })}
+    id=${ifDefined(id)}
+    data-test-id=${ifDefined(testId)}
+    style=${styleMap(customStyles)}
+    tabindex="0"
   >
-   ${avatarUrl && !iconName
-    ? Avatar({
-      ...globals,
-      image: avatarUrl,
-      size: "50",
-      })
-    : ""} ${iconName
-    ? Icon({
-      ...globals,
-      iconName,
-      customClasses: [`${rootClass}s-itemIcon`],
-      })
-    : ""}
+   ${when(avatarUrl && !iconName, () => Avatar({ image: avatarUrl, size: "50" }))}
+   ${when(iconName, () => Icon({ iconName, scale, customClasses: [`${rootClass}s-itemIcon`] }))}
    <span class="${rootClass}s-itemLabel">${label}</span>
-   ${hasClearButton
-    ? ClearButton({
-      ...globals,
+   ${when(hasClearButton, () => ClearButton({
       customClasses: [`${rootClass}-clearButton`],
       onclick: (evt) => {
        const el = evt.target;
@@ -343,11 +348,9 @@ export const Template = ({
        const wrapper = el.closest(rootClass);
        wrapper.parentNode.removeChild(wrapper);
       },
-      })
-    : ""}
+    }))}
   </div>
- `;
-};
+`;
 ```
 
 ## Testing stories

@@ -252,8 +252,8 @@ Open.args = {
 };
 
 export const WithForcedColors = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
+WithForcedColors.tags = ["vrt-only"];
 WithForcedColors.parameters = {
-	// Sets the forced-colors media feature for a specific story.
 	chromatic: { forcedColors: "active" },
 };
 WithForcedColors.args = {
