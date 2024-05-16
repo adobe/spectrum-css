@@ -1,5 +1,6 @@
 import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
 import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
+import "@spectrum-css/tokens/dist/index.css";
 import { setConsoleOptions } from "@storybook/addon-console";
 import "./assets/base.css";
 import "./assets/typekit.js";
@@ -10,6 +11,7 @@ import {
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
+    withWrapperStyles
 } from "./decorators/index.js";
 import DocumentationTemplate from "./DocumentationTemplate.mdx";
 import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
@@ -41,11 +43,8 @@ else {
 }
 
 export const args = {
-	color: "light",
-	scale: "medium",
-	reducedMotion: false,
-	express: false,
 	customClasses: [],
+	wrapperStyles: {},
 };
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
@@ -133,12 +132,13 @@ export const loaders = [
 ];
 
 export const decorators = [
+	withActions,
+	withWrapperStyles,
+	withContextWrapper,
+	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
-	withContextWrapper,
-	withTestingPreviewWrapper,
-	withActions,
 	// Attach the icons to the window object for use in the stories
 	(StoryFn, context) => {
 		if (context?.loaded?.icons) window.icons = context.loaded.icons;

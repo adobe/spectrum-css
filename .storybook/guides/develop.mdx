@@ -33,6 +33,7 @@ For more general information about how to contribute to the Spectrum CSS project
 - `decorators`: These assets interpret the arguments provided and apply the necessary stylesheet or markup changes to reflect the desired update.
 - `deprecated`: One folder for each deprecated component we are still including in our documentation but that does not live in the repository any longer.
 - `guides`: Manually written documentation for the project.
+- `modes`: Currently unused; these are the modes for Chromatic to use in rendering every story across our various supported contexts.
 - `types`: There are 3 primary assets stored in this folder: shared global properties (such as rootClass, customStyles, id, etc.), global controls (contexts available in the top toolbar), and states (optional shared properties to be imported into a story for consistency). Each file is surfaced to the `types/index.js` file for ease of importing.
 
 **Storybook files:**
@@ -117,7 +118,6 @@ Notes on a few commonly used argTypes:
 - If your component does not include any animation, please hide the reducedMotion control to avoid confusion: `reducedMotion: { table: { disable: true } }`
 
 You can import state-based argTypes that are commonly used from the `types/states.js`. States available in this file include (but are not limited to):
-
 - `isOpen`
 - `isSelected`
 - `isValid`
@@ -166,11 +166,10 @@ Be sure to define a default value for these argTypes in your args section.
 
 #### Categories
 
-- `Global`: sourced automatically from preview.js. You can turn these off but we do not recommend adding any new controls here that are story-specific.
-- `Component`: controls that relate to the styling of the component; often these will be denoted by classes that include a `--` separator. i.e., `--quiet` or `--multiline`. These can be boolean, select dropdowns, radio buttons, etc. depending on the design rules for their application.
-- `Advanced`: these are controls that match the requirements of a component category but are not recommended to be used; styles designed for specific edge-cases or inoptimal use. i.e., `staticWhite`.
-- `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM.
+- `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM.  This category can be used to automatically populate visual regression tests when used with the `withStatesWrapper` decorator.
+- `Variant`: these controls represent design variants available for a component; often these will be denoted by classes that include a `--` separator. i.e., `--quiet` or `--multiline`. These can be boolean, select dropdowns, radio buttons, etc. depending on the design rules for their application. This category can be used to automatically populate visual regression tests when used with the `withVariantsWrapper` decorator.
 - `Content`: not specific to the rendering of this component. Text or subcomponents to be rendered inside that region but that is not opinionated. Often this would be represented by a slot in a web component. i.e., labels, content to render inside a dialog or modal.
+- `Advanced`: these are controls that match the requirements of a component category but are not recommended to be used; styles designed for specific edge-cases or inoptimal use. i.e., `staticWhite`.
 
 #### Icon dropdowns
 
@@ -285,7 +284,8 @@ Every component will have access to a few empty, global inputs to provide consis
 - `testId`: used to render a `data-test-id` value to be used by a testing suite to target specific elements.
 - `customClasses` (array): allows passing in additional classes to be applied to the top-level component. This is necessary for nesting templates inside others while allowing the parent to assign context to the child.
 - `customStyles` (object): allows passing in a style map object to provide custom inline CSS at the top-level of a component.
-- `...globals`: this spread variable should not be decomposed on import. Instead, add a desctructuring right after instantiation, i.e., `const { express } = globals`. These values map to the globally provided settings and allow you to make rendering choices based on these values.
+- `testId`: used to render a `data-test-id` value to be used by a testing suite to target specific elements.
+- `wrapperStyles` (object): used to pass custom inline CSS to be assigned to the root container of the story.
 
 The rest of the variables provided in the Template function's input object will map to the argTypes you defined in your stories.js file.
 
@@ -298,6 +298,10 @@ All return values for Template functions should be outputting TemplateResults. S
 ### Full example
 
 ```js
+import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
+import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { useGlobals } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -323,7 +327,7 @@ export const Template = ({
   id,
   customClasses = [],
   customStyles = {},
-}) => {
+}, context) => {
   return html`
     <div
       class=${classMap({
@@ -344,12 +348,13 @@ export const Template = ({
         Avatar({
           image: avatarUrl,
           size: "50",
-        }),
-      )} ${when(iconName, () =>
+        }, context),
+      )}
+      ${when(iconName, () =>
         Icon({
           iconName,
           customClasses: [`${rootClass}s-itemIcon`],
-        }),
+        }, context),
       )}
       <span
         class=${classMap({
@@ -367,7 +372,7 @@ export const Template = ({
             const wrapper = el.closest(rootClass);
             wrapper.parentNode.removeChild(wrapper);
           },
-        }),
+        }, context),
       )}
     </div>
   `;
@@ -385,27 +390,23 @@ In the `template.js` file:
 ```js
 export const AccordionGroup = ({ customStyles = {}, ...args }, context) => {
   return html`
-    ${Template(args, context)} ${Template(
-      {
+    ${Template(args, context)}
+    ${Template({
         ...args,
         customStyles: {
           ...customStyles,
           "max-inline-size": "300px",
           display: window.isChromatic() ? undefined : "none",
         },
-      },
-      context,
-    )} ${Template(
-      {
+    }, context)}
+    ${Template({
         ...args,
         disableAll: true,
         customStyles: {
           ...customStyles,
           display: window.isChromatic() ? undefined : "none",
         },
-      },
-      context,
-    )}
+    }, context)}
   `;
 };
 ```

@@ -257,7 +257,6 @@ Express.args = {
 export const WithForcedColors = ChromaticPickerGroup.bind({});
 WithForcedColors.tags = ["vrt-only"];
 WithForcedColors.parameters = {
-	// Sets the forced-colors media feature for a specific story.
 	chromatic: { forcedColors: "active" },
 };
 WithForcedColors.args = {};

@@ -1,3 +1,5 @@
+import { html } from "lit";
+
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 
 /**
@@ -5,15 +7,15 @@ import { makeDecorator, useEffect } from "@storybook/preview-api";
  **/
 export const withLanguageWrapper = makeDecorator({
 	name: "withLanguageWrapper",
-	parameterName: "context",
+	parameterName: "lang",
 	wrapper: (StoryFn, context) => {
-		const { globals } = context;
-		const lang = globals.lang;
+		const { parameters, globals } = context;
+		const lang = globals.lang ?? parameters.lang;
 
 		useEffect(() => {
-			if (lang) document.documentElement.lang = lang;
+			document.documentElement.lang = lang;
 		}, [lang]);
 
-		return StoryFn(context);
+		return html`${StoryFn(context)}`;
 	},
 });
