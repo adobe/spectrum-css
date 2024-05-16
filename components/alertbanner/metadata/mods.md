@@ -9,6 +9,7 @@
 | `--mod-alert-banner-icon-size`                 |
 | `--mod-alert-banner-icon-to-text`              |
 | `--mod-alert-banner-informative-background`    |
+| `--mod-alert-banner-max-inline-size`           |
 | `--mod-alert-banner-min-height`                |
 | `--mod-alert-banner-negative-background`       |
 | `--mod-alert-banner-netural-background`        |
