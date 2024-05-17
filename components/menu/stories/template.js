@@ -8,6 +8,7 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
 
 import "../index.css";
@@ -57,9 +58,21 @@ const Visual = ({
 	iconName,
 	rootClass,
 	size,
+	thumbnailUrl,
 	...globals
 }) => {
-	if (iconName) {
+	if (thumbnailUrl) {
+		return html`
+      ${Thumbnail({
+        ...globals,
+        imageURL: thumbnailUrl,
+        altText: "Thumbnail alt text",
+        size,
+        customClasses: [`${rootClass}Thumbnail`],
+      })}
+    `;
+	}
+	else if (iconName) {
 		return html`
     ${Icon({
           ...globals,
@@ -196,6 +209,7 @@ export const MenuItem = ({
 	shouldTruncate,
 	size,
 	selectionMode,
+	thumbnailUrl = "",
 	value,
 	...globals
 }) => html`
@@ -218,7 +232,7 @@ export const MenuItem = ({
     aria-disabled=${isDisabled ? "true" : "false"}
     tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
       ${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, rootClass, selectionMode, size, ...globals })}
-      ${Visual({ iconName, rootClass, size, ...globals })}
+      ${Visual({ iconName, rootClass, size, thumbnailUrl, ...globals })}
       ${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
       ${when(description, () => Description({ description, rootClass }))}
       ${EndAction({ hasActions, idx, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, ...globals })}
@@ -291,6 +305,7 @@ export const Template = ({
 	customStyles = {},
 	hasActions,
 	hasDividers = false,
+	hasThumbnail = false,
 	id,
 	isDisabled = false,
 	isItemActive = false,
@@ -365,6 +380,7 @@ export const Template = ({
             selectionMode,
             shouldTruncate,
             size,
+            thumbnailUrl: i.thumbnailUrl || (hasThumbnail && "thumbnail.png"),
             value: singleItemValue || i.value,
           });
       })}

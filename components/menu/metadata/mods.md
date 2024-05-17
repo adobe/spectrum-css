@@ -61,12 +61,17 @@
 | `--mod-menu-item-min-height`                                       |
 | `--mod-menu-item-selectable-edge-to-text-not-selected`             |
 | `--mod-menu-item-text-to-control`                                  |
+| `--mod-menu-item-thumbnail-height`                                 |
+| `--mod-menu-item-thumbnail-opacity-disabled`                       |
+| `--mod-menu-item-thumbnail-to-label`                               |
+| `--mod-menu-item-thumbnail-width`                                  |
 | `--mod-menu-item-top-edge-to-text`                                 |
 | `--mod-menu-item-top-to-action`                                    |
 | `--mod-menu-item-top-to-checkbox`                                  |
 | `--mod-menu-item-top-to-checkmark`                                 |
 | `--mod-menu-item-top-to-drillin`                                   |
 | `--mod-menu-item-top-to-icon`                                      |
+| `--mod-menu-item-top-to-thumbnail`                                 |
 | `--mod-menu-item-value-color-default`                              |
 | `--mod-menu-item-value-color-down`                                 |
 | `--mod-menu-item-value-color-focus`                                |

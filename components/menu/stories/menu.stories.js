@@ -166,7 +166,7 @@ MenuWithVariants.args = {
 	items: [
 		{
 			idx: 1,
-			heading: "Menu header - Menu with icons",
+			heading: "Menu header - Menu",
 			id: "menu-heading-with-icons",
 			items: [
 				{
@@ -180,7 +180,7 @@ MenuWithVariants.args = {
 				},
 				{
 					label: "A menu item with a longer label that causes the text to wrap to the next line",
-					iconName: "Send",
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Menu item with no icon",
@@ -195,7 +195,7 @@ MenuWithVariants.args = {
 		{ type: "divider" },
 		{
 			idx: 2,
-			heading: "Menu header - With descriptions and icons",
+			heading: "Menu header - With descriptions",
 			id: "menu-heading-short-desc",
 			items: [
 				{
@@ -206,6 +206,7 @@ MenuWithVariants.args = {
 					label: "Selected item",
 					description: "This item is checked if single-select or multi-select mode is turned on",
 					isSelected: true,
+					thumbnailUrl: "thumbnail.png",
 				},
 				{
 					label: "Selected item with icon",
@@ -218,7 +219,7 @@ MenuWithVariants.args = {
 		{ type: "divider" },
 		{
 			idx: 3,
-			heading: "Menu header - With actions, icons, short descriptions, and values and longer header text that wraps",
+			heading: "Menu header - With actions, icons, thumbnails, short descriptions, and values and longer header text that wraps",
 			id: "menu-heading-desc-icon-value",
 			hasActions: true,
 			items: [
@@ -241,9 +242,9 @@ MenuWithVariants.args = {
 				},
 				{
 					label: "Disabled menu item with action",
-					iconName: "Archive",
 					description: "Disabled menu item with description and icon",
 					isDisabled: true,
+					thumbnailUrl: "thumbnail.png",
 				},
 			],
 		},
@@ -594,6 +595,8 @@ MenuItemOnly.args = {
 	hasActions: false,
 	hasValue: false,
 	hasItemDescription: false,
+	hasIcon: false,
+	hasThumbnail: false,
 	isDisabled: false,
 	isItemActive: false,
 	isItemFocused: false,
@@ -617,7 +620,7 @@ MenuItemOnly.argTypes = {
 	},
 	itemIcon: {
 		...(IconStories?.argTypes?.iconName ?? {}),
-		if: false,
+		if: { arg: "hasIcon", truthy: true },
 	},
 	isItemSelected: {
 		name: "Menu item is selected",
@@ -649,6 +652,28 @@ MenuItemOnly.argTypes = {
 		},
 		control: "boolean",
 		if: { arg: "selectionMode", eq: "multiple" },
+	},
+	hasIcon: {
+		name: "Has icon",
+		description: "Displays an icon in the label",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean",
+		if: { arg: "hasThumbnail", truthy: false },
+	},
+	hasThumbnail: {
+		name: "Has thumbnail",
+		description: "Displays a thumbnail in the label",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean",
+		if: { arg: "hasIcon", truthy: false },
 	},
 	singleItemDescription: {
 		name: "Menu item description for single menu item",
