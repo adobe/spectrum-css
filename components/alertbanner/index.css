@@ -17,16 +17,16 @@ governing permissions and limitations under the License.
 
 	/* @todo replace with font-size specific line-height token when one is available.
      Results in a line-height of 18px with font-size-100. */
-	--spectrum-alert-banner-line-height: 1.28571428; /* stylelint-disable number-max-precision */
-	--spectrum-alert-banner-icon-size: var(--spectrum-workflow-icon-size-100);
+	--spectrum-alert-banner-line-height: 1.28571428; /* stylelint-disable-line number-max-precision -- increased precision gives more accurate computed line-height */
+	--spectrum-alert-banner-icon-size: var(--spectrum-workflow-icon-size-100); /* stylelint-disable-line spectrum-tools/no-unused-custom-properties -- used in passthrough */
 
 	/* spacing */
 	--spectrum-alert-banner-icon-to-text: var(--spectrum-text-to-visual-300);
 	--spectrum-alert-banner-inline-start-to-content: var(--spectrum-spacing-300);
 	--spectrum-alert-banner-text-to-button-horizontal: var(--spectrum-spacing-300);
 	--spectrum-alert-banner-block-edge-to-button: var(--spectrum-spacing-200);
-	--spectrum-alert-banner-close-button-to-content: var(--spectrum-spacing-300);
-	--spectrum-alert-banner-close-button-to-inline-end: var(--spectrum-alert-banner-close-button-spacing);
+	--spectrum-alert-banner-close-button-to-content: var(--spectrum-spacing-300); /* stylelint-disable-line spectrum-tools/no-unused-custom-properties -- used in passthrough */
+	--spectrum-alert-banner-close-button-to-inline-end: var(--spectrum-alert-banner-close-button-spacing); /* stylelint-disable-line spectrum-tools/no-unused-custom-properties -- used in passthrough */
 
 	/* Top and bottom margins for AlertBanner-text. Subtracts the vertical spacing that is already included in the
      padding-block of its parent AlertBanner-body element. */
