@@ -13,6 +13,7 @@
 | `--mod-alert-banner-inline-size`                |
 | `--mod-alert-banner-inline-start-to-content`    |
 | `--mod-alert-banner-line-height`                |
+| `--mod-alert-banner-max-inline-size`            |
 | `--mod-alert-banner-min-height`                 |
 | `--mod-alert-banner-negative-background`        |
 | `--mod-alert-banner-neutral-background`         |
