@@ -1,0 +1,43 @@
+import { Canvas, Controls, Meta, Description, Title } from '@storybook/blocks';
+
+import * as AlertDialogStories from './alertdialog.stories';
+
+<Meta of={AlertDialogStories} title="Docs" />
+
+<Title of={AlertDialogStories} />
+<Description of={AlertDialogStories} />
+
+## Confirmation
+This is the default variant for alert dialogs. Use a confirmation variant for asking a user to confirm a choice.
+
+<Canvas of={AlertDialogStories.Default} />
+
+## Information
+Information alert dialogs communicate important information that a user needs to acknowledge. Before using this kind of alert dialog, make sure it’s the appropriate communication channel for the message instead of a toast or a more lightweight messaging option.
+
+Note that an alert dialog can have a total of 3 buttons if the secondary outline button label is defined.
+
+<Canvas of={AlertDialogStories.Information} />
+
+## Warning
+Warning alert dialogs communicate important information to users in relation to an issue that needs to be acknowledged, but does not block the user from moving forward.
+
+<Canvas of={AlertDialogStories.Warning} />
+
+## Error
+Error alert dialogs communicate critical information about an issue that a user needs to acknowledge.
+
+<Canvas of={AlertDialogStories.Error} />
+
+## Destructive
+Destructive alert dialogs are for when a user needs to confirm an action that will impact their data or experience in a potentially negative way, such as deleting files or contacts.
+
+<Canvas of={AlertDialogStories.Destructive} />
+
+## Scroll
+
+<Canvas of={AlertDialogStories.Scroll} />
+
+## Controls
+
+<Controls />

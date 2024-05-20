@@ -2,6 +2,7 @@ import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
@@ -23,6 +24,7 @@ export const Template = ({
 	variant,
 	icon = false,
 	id,
+	customStyles = {},
 	...globals
 }) => {
 	const [, updateArgs] = useArgs();
@@ -39,6 +41,7 @@ export const Template = ({
       tabindex="-1"
       aria-modal="true"
       aria-labelledby="dialog_label"
+      style=${ifDefined(styleMap(customStyles))}
     >
       <div class="${rootClass}-grid">
       <div class="spectrum-AlertDialog-header">
