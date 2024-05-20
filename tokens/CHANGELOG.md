@@ -1,5 +1,14 @@
 # Change Log
 
+## 14.1.0
+
+### Minor Changes
+
+- [#2742](https://github.com/adobe/spectrum-css/pull/2742) [`1e74ab7`](https://github.com/adobe/spectrum-css/commit/1e74ab7511257efa80f02da7a3115d302093ac6f) Thanks [@castastrophe](https://github.com/castastrophe)! - ### New token output files
+
+  - Adds component-specific theme mappings to the tokens package; this supports SWC offering S1 and S2 in tandem
+  - Adds an index file to list all available component-specific files
+
 ## 14.1.0-alpha.3
 
 ### Minor Changes
