@@ -171,3 +171,34 @@ const AccordionGroup = (args) => html`
 
 export const Default = AccordionGroup.bind({});
 Default.args = {};
+
+/**
+ * Stories for the MDX "Docs" only.
+ * Based off of the base `Template` which does not have conditional Chromatic-only markup.
+ */
+export const Regular = Template.bind({});
+Regular.tags = ["is-hidden-story"];
+Regular.args = {
+	density: "regular",
+};
+Regular.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Compact = Template.bind({});
+Compact.tags = ["is-hidden-story"];
+Compact.args = {
+	density: "compact",
+};
+Compact.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Spacious = Template.bind({});
+Spacious.tags = ["is-hidden-story"];
+Spacious.args = {
+	density: "spacious",
+};
+Spacious.parameters = {
+	chromatic: { disableSnapshot: true },
+};
