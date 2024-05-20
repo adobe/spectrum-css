@@ -20693,7 +20693,7 @@ __metadata:
     stylelint: "npm:^15.11.0"
     stylelint-config-clean-order: "npm:^5.4.2"
     stylelint-config-standard: "npm:^34.0.0"
-    stylelint-header: "npm:^1.0.0"
+    stylelint-header: "npm:^2.0.0"
     stylelint-high-performance-animation: "npm:^1.10.0"
     stylelint-selector-bem-pattern: "npm:^3.0.1"
     stylelint-use-logical: "npm:^2.1.2"
@@ -21177,14 +21177,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-header@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "stylelint-header@npm:1.0.0"
+"stylelint-header@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "stylelint-header@npm:2.0.0"
   dependencies:
     string-similarity: "npm:^4.0.4"
   peerDependencies:
-    stylelint: ^13.0.0 || ^14.0.0 || ^15.0.0
-  checksum: 10c0/b4eaf5e409e4342ebb3adc63f60bddd783ef865b79f501a75960febcce566e617cfd118cf3937c635d1cf4e309e1c85b46b8bafcf3bad753d5e9080166dfe6a2
+    stylelint: ^15.0.0 || ^16.0.0
+  checksum: 10c0/a6205ee3e57d3f5e438c9187de79faf8a887ac441f2a133307210bb1f4586d704813ecd189e367a360af8f40858f04ef00b7f5bcfaed73bd5d2e67d48ea7ad21
   languageName: node
   linkType: hard
 
