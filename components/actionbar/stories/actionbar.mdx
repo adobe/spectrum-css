@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta, Description, Title } from '@storybook/blocks';
+
+import * as ActionBarStories from './actionbar.stories';
+
+<Meta of={ActionBarStories} title="Docs" />
+
+<Title of={ActionBarStories} />
+<Description of={ActionBarStories} />
+
+## Standard
+
+<Canvas of={ActionBarStories.Default} />
+
+## Emphasized
+
+<Canvas of={ActionBarStories.Emphasized} />
+
+## Behavioral variants
+
+- Standard - Action bars fill the width of their container.
+- Flexible - Action bars fit the width of their content.
+- Sticky - Action bars will sit on top of content until dismissed.
+
+## Popover Dependency
+Action bar requires Popover, which is nested within Action bar. Action bar background, border, and corner radius are applied to the nested Popover component and can be overriden by Action bar using `--mod-*` prefixed custom properties. A [list of the properties](https://github.com/adobe/spectrum-css/blob/main/components/actionbar/metadata/mods.md) can be found in the repo.
+
+## Controls
+
+<Controls />
