@@ -9,7 +9,7 @@ import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 
 /**
- * The action menu component is an action button with a popover.
+ * The action menu component is an action button with a popover. The `is-selected` class should be applied to the button when the menu is open. Note that the accessibility roles are different for an action menu compared to a normal menu.
  */
 export default {
 	title: "Components/Action menu",
