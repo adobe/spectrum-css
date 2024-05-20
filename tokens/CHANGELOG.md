@@ -1,5 +1,29 @@
 # Change Log
 
+## 14.1.0-alpha.3
+
+### Minor Changes
+
+- Adding an index file for all new component assets listed in the token package output.
+
+## 14.1.0-alpha.2
+
+### Patch Changes
+
+- [#2742](https://github.com/adobe/spectrum-css/pull/2742) [`336a558`](https://github.com/adobe/spectrum-css/commit/336a558d23b0aa66b5a15e85881b12a261a69bf0) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixed a bug where the bridge tokens were being injected into the express and spectrum component-specific files
+
+## 14.1.0-alpha.1
+
+### Patch Changes
+
+- fix: support full dist output in release
+
+## 14.1.0-alpha.0
+
+### Minor Changes
+
+- feat: adding component-specific theme mappings and new bridge files to support S1 and S2 in tandem
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 

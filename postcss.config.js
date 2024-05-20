@@ -18,6 +18,9 @@ module.exports = ({
 	splitinatorOptions = {
 		noSelectors: false,
 		noFlatVariables: false,
+		// @todo strip out all but the references to --system- variables
+		// NOT --system- definitions, only references
+		referencesOnly: false,
 	},
 	combine = false,
 	lint = true,
@@ -26,41 +29,35 @@ module.exports = ({
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
+	const rootPath = __dirname;
+	const outputFilepath = to ?? file;
+	const relativePath = outputFilepath?.replace(rootPath, "");
+	const outputFilename = basename(outputFilepath, ".css");
+	const pathParts = relativePath?.split(sep) ?? [];
+
+	const isBridge = pathParts.includes("bridge");
+	const isTheme = ["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename === "index-theme";
+	const isExpress = outputFilename === "express" || pathParts.includes("express");
+
 	if (env === "development" && !options.map) {
 		options.map = { inline: false };
 	}
 	else options.map = false;
 
-	/* themes/*.css */
-	if (
-		(to && to.split(sep)?.includes("themes")) ||
-		(file && file.split(sep)?.includes("themes"))
-	) {
-		splitinatorOptions.noSelectors = true;
-
-		/* themes/express.css */
-		if (
-			(to && basename(to, ".css") === "express") ||
-			(file && basename(file, ".css") === "express")
-		) {
-			combine = true;
-		}
-	}
-
-	/* index-theme.css */
-	if (
-		(to && basename(to, ".css") === "index-theme") ||
-		(file && basename(file, ".css") === "index-theme")
-	) {
+	if (isTheme) {
 		splitinatorOptions.noSelectors = true;
 	}
 
-	/* index-base.css */
-	if (
-		(to && basename(to, ".css") === "index-base") ||
-		(file && basename(file, ".css") === "index-base")
-	) {
+	if (isExpress) {
+		combine = true;
+	}
+
+	if (outputFilename === "index-base") {
 		splitinatorOptions.noFlatVariables = true;
+	}
+
+	if (isBridge) {
+		splitinatorOptions.referencesOnly = true;
 	}
 
 	/*

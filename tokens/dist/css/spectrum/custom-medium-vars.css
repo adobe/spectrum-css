@@ -1,3 +1,16 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
 .spectrum--medium{
   --spectrum-slider-tick-mark-height:10px;
   --spectrum-slider-ramp-track-height:16px;
@@ -54,8 +67,6 @@
   --spectrum-well-margin-top:var(--spectrum-spacing-75);
   --spectrum-well-min-width:240px;
   --spectrum-well-border-radius:var(--spectrum-spacing-75);
-
-  /* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
   --spectrum-workflow-icon-size-xxl:32px;
   --spectrum-workflow-icon-size-xxs:12px;
 
