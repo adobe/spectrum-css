@@ -242,10 +242,6 @@ governing permissions and limitations under the License.
 	font-family: var(--mod-accordion-item-header-font, var(--spectrum-accordion-item-header-font));
 
 	/* reset styling if button element is used */
-	/* stylelint-disable-next-line property-no-vendor-prefix -- todo may no longer be needed */
-	-webkit-appearance: none;
-	/* stylelint-disable-next-line property-no-vendor-prefix -- todo may no longer be needed */
-	-moz-appearance: none;
 	appearance: none;
 	border: 0;
 	text-align: start;
