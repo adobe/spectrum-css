@@ -103,18 +103,6 @@ governing permissions and limitations under the License.
 	--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-300);
 }
 
-@media (forced-colors: active) {
-	.spectrum-StatusLight {
-		forced-color-adjust: none;
-		--highcontrast-statuslight-content-color-default: CanvasText;
-		--highcontrast-statuslight-subdued-content-color-default: CanvasText;
-
-		&::before {
-			border: var(--mod-statuslight-border-width, var(--spectrum-statuslight-border-width)) solid ButtonText;
-		}
-	}
-}
-
 .spectrum-StatusLight {
 	display: flex;
 	flex-direction: row;
@@ -153,10 +141,6 @@ governing permissions and limitations under the License.
 		--spectrum-statuslight-spacing-computed-top-to-dot: calc(var(--mod-statuslight-spacing-top-to-dot, var(--spectrum-statuslight-spacing-top-to-dot)) - var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label)));
 		margin-block-start: var(--spectrum-statuslight-spacing-computed-top-to-dot);
 		margin-inline-end: var(--mod-statuslight-spacing-dot-to-label, var(--spectrum-statuslight-spacing-dot-to-label));
-
-		/* support high contrast/forced-color-adjust mode for dot */
-		-ms-high-contrast-adjust: none;
-		forced-color-adjust: none;
 	}
 }
 
@@ -250,4 +234,18 @@ governing permissions and limitations under the License.
 
 .spectrum-StatusLight--magenta::before {
 	background-color: var(--mod-statuslight-nonsemantic-magenta-color, var(--spectrum-statuslight-nonsemantic-magenta-color));
+}
+
+@media (forced-colors: active) {
+	.spectrum-StatusLight {
+		forced-color-adjust: none;
+		--highcontrast-statuslight-content-color-default: CanvasText;
+		--highcontrast-statuslight-subdued-content-color-default: CanvasText;
+
+		/* Dot */
+		&::before {
+			forced-color-adjust: none;
+			border: var(--mod-statuslight-border-width, var(--spectrum-statuslight-border-width)) solid ButtonText;
+		}
+	}
 }
