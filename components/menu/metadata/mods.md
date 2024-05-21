@@ -76,6 +76,11 @@
 | `--mod-menu-item-value-color-down`                                 |
 | `--mod-menu-item-value-color-focus`                                |
 | `--mod-menu-item-value-color-hover`                                |
+| `--mod-menu-section-description-color`                             |
+| `--mod-menu-section-description-font-size`                         |
+| `--mod-menu-section-description-font-weight`                       |
+| `--mod-menu-section-description-line-height`                       |
+| `--mod-menu-section-description-line-height-cjk`                   |
 | `--mod-menu-section-divider-margin-block`                          |
 | `--mod-menu-section-header-bottom-edge-to-text`                    |
 | `--mod-menu-section-header-color`                                  |
@@ -84,4 +89,5 @@
 | `--mod-menu-section-header-line-height`                            |
 | `--mod-menu-section-header-line-height-cjk`                        |
 | `--mod-menu-section-header-min-width`                              |
+| `--mod-menu-section-header-to-description`                         |
 | `--mod-menu-section-header-top-edge-to-text`                       |

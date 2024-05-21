@@ -34,6 +34,8 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-section-header-font-size: var(--spectrum-font-size-100);
 	--spectrum-menu-section-header-min-width: var(--spectrum-component-height-100);
+	--spectrum-menu-section-description-font-size: var(--spectrum-font-size-75);
+	--spectrum-menu-section-header-to-description: var(--spectrum-menu-section-header-to-description-medium);
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-medium);
 
@@ -46,7 +48,7 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
 	--spectrum-menu-item-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	--spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description);
+	--spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description-medium);
 	--spectrum-menu-item-focus-indicator-width: var(--spectrum-border-width-200);
 	--spectrum-menu-item-focus-indicator-color: var(--spectrum-blue-800);
 	--spectrum-menu-item-label-to-value-area-min-spacing: var(--spectrum-spacing-100);
@@ -81,6 +83,10 @@ governing permissions and limitations under the License.
 	--spectrum-menu-section-header-line-height-cjk: var(--spectrum-cjk-line-height-100);
 	--spectrum-menu-section-header-font-weight: var(--spectrum-bold-font-weight);
 	--spectrum-menu-section-header-color: var(--spectrum-neutral-content-color-default);
+	--spectrum-menu-section-description-line-height: var(--spectrum-line-height-100);
+	--spectrum-menu-section-description-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--spectrum-menu-section-description-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-menu-section-description-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-menu-collapsible-icon-color: var(--spectrum-gray-900);
 
 	--spectrum-menu-checkmark-icon-color-default: var(--spectrum-accent-content-color-default);
@@ -136,6 +142,9 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-section-header-font-size: var(--spectrum-font-size-75);
 	--spectrum-menu-section-header-min-width: var(--spectrum-component-height-75);
+	--spectrum-menu-section-description-font-size: var(--spectrum-font-size-50);
+	--spectrum-menu-section-header-to-description: var(--spectrum-menu-section-header-to-description-small);
+	--spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description-small);
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-small);
 
@@ -172,6 +181,9 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-section-header-font-size: var(--spectrum-font-size-200);
 	--spectrum-menu-section-header-min-width: var(--spectrum-component-height-200);
+	--spectrum-menu-section-description-font-size: var(--spectrum-font-size-100);
+	--spectrum-menu-section-header-to-description: var(--spectrum-menu-section-header-to-description-large);
+	--spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description-large);
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-large);
 
@@ -208,6 +220,9 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-section-header-font-size: var(--spectrum-font-size-300);
 	--spectrum-menu-section-header-min-width: var(--spectrum-component-height-300);
+	--spectrum-menu-section-description-font-size: var(--spectrum-font-size-200);
+	--spectrum-menu-section-header-to-description: var(--spectrum-menu-section-header-to-description-extra-large);
+	--spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description-extra-large);
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-extra-large);
 
@@ -299,6 +314,7 @@ governing permissions and limitations under the License.
 		--spectrum-menu-item-label-line-height: var(--mod-menu-item-label-line-height-cjk, var(--spectrum-menu-item-label-line-height-cjk));
 		--spectrum-menu-item-description-line-height: var(--mod-menu-item-description-line-height-cjk, var(--spectrum-menu-item-description-line-height-cjk));
 		--spectrum-menu-section-header-line-height: var(--mod-menu-section-header-line-height-cjk, var(--spectrum-menu-section-header-line-height-cjk));
+		--spectrum-menu-section-description-line-height: var(--mod-menu-section-description-line-height-cjk, var(--spectrum-menu-section-description-line-height-cjk));
 	}
 
 	.spectrum-Menu-divider {
@@ -710,6 +726,15 @@ governing permissions and limitations under the License.
 	padding-block-start: var(--mod-menu-section-header-top-edge-to-text, var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
 	padding-block-end: var(--mod-menu-section-header-bottom-edge-to-text, var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text)));
 	padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
+}
+
+.spectrum-Menu-sectionDescription {
+	margin-block-start: var(--mod-menu-section-header-to-description, var(--spectrum-menu-section-header-to-description));
+	display: block;
+	color: var(--mod-menu-section-description-color, var(--spectrum-menu-section-description-color));
+	font-weight: var(--mod-menu-section-description-font-weight, var(--spectrum-menu-section-description-font-weight));
+	line-height: var(--mod-menu-section-description-line-height, var(--spectrum-menu-section-description-line-height));
+	font-size: var(--mod-menu-section-description-font-size, var(--spectrum-menu-section-description-font-size));
 }
 
 /* collapsible sub-menus */

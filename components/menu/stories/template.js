@@ -248,6 +248,7 @@ export const MenuGroup = ({
 	isDisabled = false,
 	isSelectable = false,
 	isTraySubmenu = false,
+	sectionDescription,
 	shouldTruncate,
 	maxInlineSize,
 	subrole,
@@ -263,7 +264,10 @@ export const MenuGroup = ({
           class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }"
           id=${id ?? `menu-heading-category-${idx}`}
           aria-hidden="true"
-        >${heading}</span>`
+        >
+          ${heading}
+          <span class="spectrum-Menu-sectionDescription" aria-hidden="true">${sectionDescription}</span>
+        </span>`
       : html`<div class="spectrum-Menu-back">
           <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
             ${Icon({
@@ -279,8 +283,10 @@ export const MenuGroup = ({
               style=${maxInlineSize ? `max-inline-size: ${maxInlineSize}px;` : ""}
               id=${id ?? `menu-heading-category-${idx}`}
               aria-hidden="true"
-              >${heading}</span
-            >`
+            >
+              ${heading}
+              <span class="spectrum-Menu-sectionDescription" aria-hidden="true">${sectionDescription}</span>
+            </span>`
           : ""}
         </div>`
     }

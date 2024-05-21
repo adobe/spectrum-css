@@ -196,6 +196,7 @@ MenuWithVariants.args = {
 		{
 			idx: 2,
 			heading: "Menu header - With descriptions",
+			sectionDescription: "This menu header also has a description",
 			id: "menu-heading-short-desc",
 			items: [
 				{
@@ -220,6 +221,7 @@ MenuWithVariants.args = {
 		{
 			idx: 3,
 			heading: "Menu header - With actions, icons, thumbnails, short descriptions, and values and longer header text that wraps",
+			sectionDescription: "This menu header also has a description that is long enough to hopefully just maybe wrap if it's long enough",
 			id: "menu-heading-desc-icon-value",
 			hasActions: true,
 			items: [
