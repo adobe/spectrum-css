@@ -89,3 +89,11 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+Default.parameters = {
+	docs: {
+		story: {
+			inline: false,
+			iframeHeight: 250,
+		},
+	},
+};
