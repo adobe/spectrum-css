@@ -12,9 +12,6 @@ governing permissions and limitations under the License.
 
 %spectrum-BaseButton {
 	cursor: pointer;
-
-	/* stylelint-disable-next-line property-no-vendor-prefix -- need to validate if this can be removed */
-	-webkit-user-select: none;
 	user-select: none;
 
 	/* Contain halo */
@@ -44,8 +41,9 @@ governing permissions and limitations under the License.
 	/* Adjacent buttons should be aligned correctly */
 	vertical-align: top;
 
-	/* stylelint-disable-next-line property-no-vendor-prefix -- Correct the inability to style clickable types in iOS and Safari. */
+	/* stylelint-disable-next-line property-no-vendor-prefix -- Correct the inability to style clickable types in iOS and Safari (normalize). */
 	-webkit-appearance: button;
+
 	border-style: solid;
 
 	transition:
@@ -55,21 +53,12 @@ governing permissions and limitations under the License.
 		box-shadow var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100))) ease-out;
 
 	-webkit-font-smoothing: antialiased;
-
-	/* Font smoothing for Firefox */
 	-moz-osx-font-smoothing: grayscale;
 
-	/* Fix Firefox */
+	/* Remove the inner border and padding in Firefox (normalize). */
 	&::-moz-focus-inner {
-		/* Use uppercase PX so values don't get converted to rem */
-		margin-block-start: -2px;
-		margin-block-end: -2px;
-		padding: 0;
-
-		border: 0;
-
-		/* Remove the inner border and padding for button in Firefox. */
 		border-style: none;
+		padding: 0;
 	}
 
 	&:focus {
