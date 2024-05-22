@@ -1,0 +1,28 @@
+import { Canvas, ArgTypes, Meta, Description, Title } from '@storybook/blocks';
+
+import * as AccordionStories from './accordion.stories';
+
+<Meta of={AccordionStories} title="Docs" />
+
+<Title of={AccordionStories} />
+<Description of={AccordionStories} />
+
+## Density options
+
+Accordion has three density options and requires that you specify one of the density types: compact, regular, or spacious.
+
+### Regular
+
+<Canvas of={AccordionStories.Regular} />
+
+### Compact
+
+<Canvas of={AccordionStories.Compact} />
+
+### Spacious
+
+<Canvas of={AccordionStories.Spacious} />
+
+## Properties
+
+<ArgTypes />

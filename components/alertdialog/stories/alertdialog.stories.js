@@ -141,3 +141,30 @@ Destructive.args = {
 	}],
 	content: "Are you sure you want to delete the 3 selected documents?",
 };
+
+
+/**
+ * Stories for the MDX "Docs" only.
+ */
+export const Scroll = Template.bind({});
+Scroll.tags = ["docs-only"];
+Scroll.args = {
+	variant: "confirmation",
+	heading: "Enable Smart Filters?",
+	buttons: [{
+		variant: "secondary",
+		treatment: "outline",
+		label: "Remind me later"
+	}, {
+		treatment: "fill",
+		label: "Enable",
+		variant: "accent"
+	}],
+	content: "Smart filters are nondestructive and will preserve your original images. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices est eu lacus interdum, vitae volutpat tortor laoreet. Phasellus consectetur erat quis massa congue, vel placerat ipsum hendrerit. Aenean eleifend augue quam, quis blandit lacus pretium eget. Aliquam aliquam fermentum nunc, sed dictum metus varius in. Suspendisse in nisl libero. Nulla egestas massa eget lectus ullamcorper placerat. Vivamus cursus, nunc quis pharetra auctor, eros mi tempus elit, sit amet placerat ipsum velit ut dolor. Nam sit amet eleifend erat. Duis sollicitudin orci sit amet tellus tincidunt, vel lobortis risus pellentesque. Integer viverra urna elementum metus dignissim placerat. Nulla posuere eros ipsum. Pellentesque viverra urna justo, eu ultricies nisl fermentum et. Vivamus tristique porttitor dictum.",
+	customStyles: {
+		"max-block-size": "275px",
+	}
+};
+Scroll.parameters = {
+	chromatic: { disableSnapshot: true },
+};

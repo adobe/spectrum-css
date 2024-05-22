@@ -86,3 +86,15 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+/**
+ * Stories for the MDX "Docs" only.
+ */
+export const Emphasized = Template.bind({});
+Emphasized.tags = ["docs-only"];
+Emphasized.args = {
+	isEmphasized: true,
+};
+Emphasized.parameters = {
+	chromatic: { disableSnapshot: true },
+};
