@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.1.2
+
+### Patch Changes
+
+- [#2761](https://github.com/adobe/spectrum-css/pull/2761) [`d945c05`](https://github.com/adobe/spectrum-css/commit/d945c05bc42d7c9d46c80d0857181479d73cf4fa) Thanks [@mdt2](https://github.com/mdt2)! - Fixes an issue in the Quiet variant where hovering over the focus pseudo element was firing pointer events that weren't meant to be seen unless the user hovered over the input element itself.
+
 ## 7.1.1
 
 ### Patch Changes
