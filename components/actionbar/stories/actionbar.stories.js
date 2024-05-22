@@ -91,7 +91,7 @@ Default.args = {};
  * Stories for the MDX "Docs" only.
  */
 export const Emphasized = Template.bind({});
-Emphasized.tags = ["is-hidden-story"];
+Emphasized.tags = ["docs-only"];
 Emphasized.args = {
 	isEmphasized: true,
 };

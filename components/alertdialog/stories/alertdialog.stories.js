@@ -147,7 +147,7 @@ Destructive.args = {
  * Stories for the MDX "Docs" only.
  */
 export const Scroll = Template.bind({});
-Scroll.tags = ["is-hidden-story"];
+Scroll.tags = ["docs-only"];
 Scroll.args = {
 	variant: "confirmation",
 	heading: "Enable Smart Filters?",

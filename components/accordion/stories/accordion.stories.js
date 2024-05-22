@@ -177,7 +177,7 @@ Default.args = {};
  * Based off of the base `Template` which does not have conditional Chromatic-only markup.
  */
 export const Regular = Template.bind({});
-Regular.tags = ["is-hidden-story"];
+Regular.tags = ["docs-only"];
 Regular.args = {
 	density: "regular",
 };
@@ -186,7 +186,7 @@ Regular.parameters = {
 };
 
 export const Compact = Template.bind({});
-Compact.tags = ["is-hidden-story"];
+Compact.tags = ["docs-only"];
 Compact.args = {
 	density: "compact",
 };
@@ -195,7 +195,7 @@ Compact.parameters = {
 };
 
 export const Spacious = Template.bind({});
-Spacious.tags = ["is-hidden-story"];
+Spacious.tags = ["docs-only"];
 Spacious.args = {
 	density: "spacious",
 };
