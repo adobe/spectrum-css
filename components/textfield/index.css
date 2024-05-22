@@ -249,6 +249,7 @@ governing permissions and limitations under the License.
 .spectrum-Textfield.spectrum-Textfield--quiet {
 	&::after {
 		content: "";
+		pointer-events: none;
 		position: absolute;
 		inset-block-end: calc(-1 * (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width))));
 		inset-inline-start: 0;
