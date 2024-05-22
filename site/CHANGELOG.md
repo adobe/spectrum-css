@@ -1,5 +1,11 @@
 # @spectrum-tools/documentation
 
+## 2.0.2
+
+### Patch Changes
+
+- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)! - Leveral local workspace versioning to prevent misalignment
+
 ## 2.0.1
 
 ### Patch Changes

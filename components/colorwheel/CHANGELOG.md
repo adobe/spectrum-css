@@ -1,5 +1,16 @@
 # Change Log
 
+## 4.1.1
+
+### Patch Changes
+
+- [#2677](https://github.com/adobe/spectrum-css/pull/2677) [`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855) Thanks [@castastrophe](https://github.com/castastrophe)! - Leveral local workspace versioning to prevent misalignment
+
+- Updated dependencies [[`d83200c`](https://github.com/adobe/spectrum-css/commit/d83200ca70a959aa70329e71de0c4383de157855)]:
+  - @spectrum-css/colorhandle@8.1.1
+  - @spectrum-css/colorloupe@5.1.1
+  - @spectrum-css/colorarea@5.1.1
+
 ## 4.1.0
 
 ### Minor Changes
