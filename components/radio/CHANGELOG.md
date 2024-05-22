@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.2.2
+
+### Patch Changes
+
+- [#2744](https://github.com/adobe/spectrum-css/pull/2744) [`e1ef34f`](https://github.com/adobe/spectrum-css/commit/e1ef34f698a99ddf273c512b23eb8615ddfe780b) Thanks [@mdt2](https://github.com/mdt2)! - Includes similar fixes for both Slider and Radio. Some parsers see `:pseudo:dir` as invalid, so we've changed it so that the pseudo element comes last `:dir :pseudo`.
+
 ## 9.2.1
 
 ### Patch Changes
