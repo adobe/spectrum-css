@@ -10,14 +10,17 @@
  * governing permissions and limitations under the License.
  */
 
+import { sep } from "node:path";
+
+import stylelint from "stylelint";
+import { isRegExp, isString } from "stylelint/lib/utils/validateTypes.mjs";
+
 const {
 	createPlugin,
 	utils: { report, ruleMessages, validateOptions }
-} = require("stylelint");
+} = stylelint;
 
-const { isString, isRegExp } = require("stylelint/lib/utils/validateTypes");
-
-require("colors");
+import "colors";
 
 const ruleName = "spectrum-tools/no-unused-custom-properties";
 const messages = ruleMessages(ruleName, {
@@ -25,7 +28,7 @@ const messages = ruleMessages(ruleName, {
 	referenced: (prop) => `Custom property ${prop.magenta}'s references have been removed`,
 });
 
-const valueParser = require("postcss-value-parser");
+import valueParser from "postcss-value-parser";
 
 /** @type {import('stylelint').Plugin} */
 const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
@@ -50,6 +53,16 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 		if (ignoreList.length) {
 			ignoreList = ignoreList.map((regex) => regex instanceof RegExp ? regex : new RegExp(regex));
 		}
+
+		const sourceFile = root.source.input.file;
+		const parts = sourceFile ? sourceFile.split(sep) : [];
+
+		// @todo this is a hard-coded assumption that the components directory is the root before the component name
+		const rootIdx = parts.indexOf("components");
+
+		// We should only be checking entry-points, i.e. index.css files
+		// because others are likely to be partials or imported into main
+		if (rootIdx && typeof sourceFile !== "undefined" && !sourceFile.endsWith("index.css")) return;
 
 		/* A list of all custom properties used anywhere in the file */
 		const usedAnywhere = new Set();
@@ -91,7 +104,8 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 		function cleanOrReport(decl, message = messages.expected) {
 			if (context.fix) {
 				decl.remove();
-			} else {
+			}
+			else {
 				report({
 					message,
 					messageArgs: [decl.prop],
@@ -127,7 +141,8 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 			while (nextLine) {
 				if (nextLine.type === "decl" && nextLine.prop.startsWith("--")) {
 					allowedPassthroughs.add(nextLine.prop);
-				} else if (nextLine.type === "comment" && /^\s*@passthroughs?\s*(\s+end)?$/.test(nextLine.text)) {
+				}
+				else if (nextLine.type === "comment" && /^\s*@passthroughs?\s*(\s+end)?$/.test(nextLine.text)) {
 					break;
 				}
 
@@ -174,7 +189,8 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 	};
 };
 
-module.exports.ruleName = ruleName;
-module.exports.messages = messages;
 
-module.exports = createPlugin(ruleName, ruleFunction);
+ruleFunction.ruleName = ruleName;
+ruleFunction.messages = messages;
+
+export default createPlugin(ruleName, ruleFunction);

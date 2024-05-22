@@ -48,7 +48,7 @@
 	--spectrum-combobox-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-focus-hover);
 	--spectrum-combobox-border-color-invalid-key-focus: var(--spectrum-negative-border-color-key-focus);
 
-	/* Settings for nested Textfield component. */
+	/* @passthroughs start -- settings for nested Textfield component */
 	--mod-textfield-focus-indicator-gap: var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap));
 	--mod-textfield-focus-indicator-width: var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness));
 	--mod-textfield-focus-indicator-color: var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color));
@@ -81,13 +81,15 @@
 	--mod-textfield-border-color-invalid-keyboard-focus: var(--mod-combobox-border-color-invalid-key-focus, var(--spectrum-combobox-border-color-invalid-key-focus));
 
 	--mod-textfield-icon-color-invalid: var(--mod-combobox-alert-icon-color);
+	/* @passthroughs end -- settings for nested Textfield component */
 
-	/* Settings for nested Picker Button component. */
+	/* @passthroughs start -- settings for nested Picker Button component */
 	--mod-picker-button-border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
 	--mod-picker-button-border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
 	--mod-picker-button-background-color: var(--mod-combobox-background-color-default);
 	--mod-picker-button-background-color-disabled: var(--mod-combobox-background-color-disabled);
 	--mod-picker-button-font-color-disabled: var(--mod-combobox-font-color-disabled);
+	/* @passthroughs end -- settings for nested Picker Button component */
 }
 
 .spectrum-Combobox--sizeS {
@@ -227,7 +229,6 @@
 }
 
 /* PICKER BUTTON */
-/* stylelint-disable max-nesting-depth */
 .spectrum-Combobox-button {
 	position: absolute;
 	inset-inline-end: calc(-1 * var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset, 0px)));
@@ -296,7 +297,6 @@
 		}
 	}
 }
-/* stylelint-enable max-nesting-depth */
 
 /* TEXTFIELD (wrapper) */
 .spectrum-Combobox-textfield {

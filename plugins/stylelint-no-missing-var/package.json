@@ -1,21 +1,24 @@
 {
-  "private": true,
   "name": "@spectrum-tools/stylelint-no-missing-var",
   "version": "1.3.2",
   "description": "Check for custom properties without a var function around them",
   "license": "Apache-2.0",
   "author": "Adobe",
+  "type": "module",
   "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
   "dependencies": {
     "colors": "^1.4.0"
   },
   "peerDependencies": {
-    "stylelint": "^14.0.0 || ^15.0.0"
+    "stylelint": ">=16.0.0"
   },
   "devDependencies": {
     "ava": "^6.1.3",
     "c8": "^9.1.0",
-    "stylelint": "^15.11.0"
+    "stylelint": "^16.5.0"
   },
   "keywords": [
     "css",
