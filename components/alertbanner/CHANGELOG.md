@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.2.0
+
+### Minor Changes
+
+- [#2762](https://github.com/adobe/spectrum-css/pull/2762) [`07eb44e`](https://github.com/adobe/spectrum-css/commit/07eb44ed6d7c067e55106be7f8c4fe917b2a63eb) Thanks [@jawinn](https://github.com/jawinn)! - The alert banner component now occupies all available space until it reaches the maximum allowed width.
+  The token previously used for the fixed width, `--spectrum-alert-banner-width`, is now used for the maximum width.
+  This includes the additional of a new mod custom property: `--mod-alert-banner-max-inline-size`
+
 ## 2.1.1
 
 ### Patch Changes
