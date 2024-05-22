@@ -25,6 +25,10 @@
 		"@spectrum-css/opacitycheckerboard": ">=2",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/opacitycheckerboard": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"keywords": [
 		"spectrum",
 		"css",

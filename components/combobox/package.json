@@ -29,6 +29,14 @@
 		"@spectrum-css/textfield": ">=7",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/pickerbutton": "workspace:^",
+		"@spectrum-css/popover": "workspace:^",
+		"@spectrum-css/progresscircle": "workspace:^",
+		"@spectrum-css/textfield": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/progresscircle": {
 			"optional": true

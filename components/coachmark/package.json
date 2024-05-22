@@ -30,6 +30,15 @@
 		"@spectrum-css/popover": ">=7",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/actionbutton": "workspace:^",
+		"@spectrum-css/actionmenu": "workspace:^",
+		"@spectrum-css/button": "workspace:^",
+		"@spectrum-css/buttongroup": "workspace:^",
+		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/popover": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/button": {
 			"optional": true

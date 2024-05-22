@@ -29,6 +29,14 @@
 		"@spectrum-css/tokens": ">=14",
 		"@spectrum-css/underlay": ">=4"
 	},
+	"devDependencies": {
+		"@spectrum-css/buttongroup": "workspace:^",
+		"@spectrum-css/divider": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/modal": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-css/underlay": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/buttongroup": {
 			"optional": true

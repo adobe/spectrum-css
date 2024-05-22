@@ -27,6 +27,12 @@
 		"@spectrum-css/picker": ">=8",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/picker": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/icon": {
 			"optional": true

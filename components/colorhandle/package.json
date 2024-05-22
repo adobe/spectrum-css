@@ -26,6 +26,11 @@
 		"@spectrum-css/opacitycheckerboard": ">=2",
 		"@spectrum-css/tokens": ">=14"
 	},
+	"devDependencies": {
+		"@spectrum-css/colorloupe": "workspace:^",
+		"@spectrum-css/opacitycheckerboard": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/colorloupe": {
 			"optional": true
