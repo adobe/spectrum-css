@@ -3,7 +3,7 @@ import { userEvent, within } from "@storybook/testing-library";
 import { html } from "lit";
 import { when } from "lit/directives/when.js";
 
-import { SourcelessTemplate, Template } from "./template";
+import { Template } from "./template";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
@@ -168,10 +168,11 @@ const ChromaticTipPlacementVariants = (args) => html`
 					`)}
 				</div>
 				<div style="padding-top: 2rem">
-					${SourcelessTemplate({
+					${Template({
 						...args,
 						position: option,
 						isOpen: true,
+						trigger: () => null,
 					})}
 				</div>
 			</div>
