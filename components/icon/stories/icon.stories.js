@@ -95,11 +95,24 @@ export default {
 	},
 };
 
-export const Default = (args) => window.isChromatic() ? TestTemplate(args) : Template({
-	...args,
-	iconName: args.iconName ?? args.uiIconName,
-	setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
-});
+export const Default = (args) => html`
+	${TestTemplate({
+		...args,
+		customStyles: {
+			...(args.customStyles ?? {}),
+			"display": !window.isTestEnv() ? "none" : args?.customStyles?.display,
+		},
+	})}
+	${Template({
+		...args,
+		iconName: args.iconName ?? args.uiIconName,
+		setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+		customStyles: {
+			...(args.customStyles ?? {}),
+			"display": window.isTestEnv() ? "none" : args?.customStyles?.display,
+		},
+	})}
+`;
 
 Default.args = {};
 

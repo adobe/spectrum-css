@@ -85,7 +85,7 @@ const Sizes = (args) => {
 	else if (args.semantics === "detail") supportedSizes = ["s", "m", "l", "xl"];
 	else if (args.semantics === "code") supportedSizes = ["xs", "s", "m", "l", "xl"];
 
-	return html`${window.isChromatic() ? html`
+	return html`${window.isTestEnv() ? html`
 		<div class="spectrum-Typography">
 			${supportedSizes.reverse().map((size) => {
 			return html`${Template({

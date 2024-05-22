@@ -347,130 +347,123 @@ const Wrapping = (args) =>
 			"An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 	})}`;
 
-const Variants = (args) =>
-	html` ${window.isChromatic()
-		? html`
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Accent"],
-						customClasses: ["chromatic-ignore"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${States(args)}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Negative"],
-						customClasses: ["chromatic-ignore"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${States({
-							...args,
-							variant: "negative",
-						})}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Primary"],
-						customClasses: ["chromatic-ignore"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${States({
-							...args,
-							variant: "primary",
-						})}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Secondary"],
-						customClasses: ["chromatic-ignore"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${States({
-							...args,
-							variant: "secondary",
-						})}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Sizing"],
-						customClasses: ["chromatic-ignore"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${Sizes(args)}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Wrapping"],
-						customClasses: ["chromatic-ignore"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							"flex-direction": "column",
-							gap: "10px",
-							padding: "6px",
-						})}
-					>
-						${Wrapping(args)}
-					</div>
-				</div>
-			`
-		: html` <div
+const Variants = (args) => html`
+	<div style=${styleMap({ "display": !window.isTestEnv() ? "none" : undefined })} class="spectrum-Typography">
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Accent"],
+			})}
+			<div
 				style=${styleMap({
 					display: "flex",
+					flexDirection: "column",
 					gap: "10px",
 				})}
 			>
-				${CustomButton(args)}
-			</div>`}`;
+				${States(args)}
+			</div>
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Negative"],
+			})}
+			<div
+				style=${styleMap({
+					display: "flex",
+					flexDirection: "column",
+					gap: "10px",
+				})}
+			>
+				${States({
+					...args,
+					variant: "negative"
+				})}
+			</div>
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Primary"],
+			})}
+			<div
+				style=${styleMap({
+					display: "flex",
+					flexDirection: "column",
+					gap: "10px",
+				})}
+			>
+				${States({
+					...args,
+					variant: "primary"
+				})}
+			</div>
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Secondary"],
+			})}
+			<div
+				style=${styleMap({
+					display: "flex",
+					flexDirection: "column",
+					gap: "10px",
+				})}
+			>
+				${States({
+					...args,
+					variant: "secondary"
+				})}
+			</div>
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Sizing"],
+			})}
+			<div
+				style=${styleMap({
+					display: "flex",
+					flexDirection: "column",
+					gap: "10px",
+				})}
+			>
+				${Sizes(args)}
+			</div>
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Wrapping"],
+			})}
+			<div
+				style=${styleMap({
+					"display": "flex",
+					"flex-direction": "column",
+					"gap": "10px",
+					"padding": "6px"
+				})}
+			>
+				${Wrapping(args)}
+			</div>
+		</div>
+	</div>
+	<div
+		style=${styleMap({
+			"display": !window.isTestEnv() ? "flex" : "none",
+			"gap": "10px",
+		})}
+		id="render-root"
+	>${CustomButton(args)}</div>
+`;
 
 export const Default = Variants.bind({});
 Default.args = {};

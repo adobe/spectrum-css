@@ -26,7 +26,6 @@ export const Template = ({
 	isKeyboardFocused = false,
 	isLoading = false,
 	selectedDay,
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
@@ -39,7 +38,6 @@ export const Template = ({
 	return html`
 		${showFieldLabel ?
 			FieldLabel({
-				...globals,
 				size,
 				label: fieldLabelText,
 				customStyles: { "max-inline-size": "100px"},
@@ -64,7 +62,6 @@ export const Template = ({
 		>
 			${[
 				TextField({
-					...globals,
 					size,
 					isQuiet,
 					isDisabled,
@@ -80,15 +77,14 @@ export const Template = ({
 					customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 					placeholder: "Type here this text should truncate",
 					name: "field",
-					value: globals.selectedDay
-						? new Date(globals.selectedDay).toLocaleDateString(lang)
+					value: selectedDay
+						? new Date(selectedDay).toLocaleDateString(lang)
 						: undefined,
 					onclick: function () {
 						if (!isOpen) updateArgs({ isOpen: true });
 					},
 				}, context),
 				PickerButton({
-					...globals,
 					customClasses: [
 						`${rootClass}-button`,
 						... isInvalid ? ["is-invalid"] : [],
@@ -107,7 +103,6 @@ export const Template = ({
 					},
 				}, context),
 				Popover({
-					...globals,
 					isOpen: isOpen && !isDisabled,
 					withTip: false,
 					position: "bottom",
@@ -122,7 +117,6 @@ export const Template = ({
 						: {},
 					content: [
 						Menu({
-							...globals,
 							size,
 							items: [
 								{

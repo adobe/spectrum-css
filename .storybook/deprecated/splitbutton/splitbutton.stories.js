@@ -77,7 +77,6 @@ const Template = ({
 	labelIconName = undefined,
 	position = "right",
 	label = "Split Button",
-	...globals
 }) => {
 	return html`
 		<!-- Note: Only values that differ in express theme are included -->
@@ -118,7 +117,6 @@ const Template = ({
 			})}
 		>
 			${Button({
-				...globals,
 				variant,
 				size,
 				iconName: position === "right"
@@ -134,7 +132,6 @@ const Template = ({
 				]
 			})}
 			${Button({
-				...globals,
 				variant,
 				size,
 				iconName: position === "right"

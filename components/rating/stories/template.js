@@ -17,9 +17,18 @@ export const Template = ({
 	isEmphasized = false,
 	customClasses = [],
 	id,
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
+
+	const star = Icon({
+		iconName: "Star",
+		customClasses: [`${rootClass}-starActive`],
+	}, context);
+
+	const starOutline = Icon({
+		iconName: "StarOutline",
+		customClasses: [`${rootClass}-starInactive`],
+	}, context);
 
 	return html`
 		<div
@@ -75,16 +84,8 @@ export const Template = ({
 							updateArgs({ value: idx + 1, isFocused: true });
 						}}
 					>
-						${Icon({
-							...globals,
-							iconName: "Star",
-							customClasses: [`${rootClass}-starActive`],
-						}, context)}
-						${Icon({
-							...globals,
-							iconName: "StarOutline",
-							customClasses: [`${rootClass}-starInactive`],
-						}, context)}
+						${star}
+						${starOutline}
 					</span>
 				`
 			)}

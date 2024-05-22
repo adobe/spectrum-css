@@ -35,7 +35,6 @@ export const Template = ({
 	id,
 	testId,
 	role,
-	...globals
 }) => {
 	return html`
 		<button
@@ -66,7 +65,6 @@ export const Template = ({
 		>
 			${when(hasPopup, () =>
 				Icon({
-					...globals,
 					size,
 					iconName: "CornerTriangle",
 					setName: "ui",
@@ -75,7 +73,6 @@ export const Template = ({
 			)}
 			${when(iconName, () =>
 				Icon({
-					...globals,
 					size,
 					iconName,
 					setName: iconSet,

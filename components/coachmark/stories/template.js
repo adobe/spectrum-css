@@ -1,3 +1,4 @@
+import { useGlobals } from "@storybook/preview-api";
 import { Template as ActionMenu } from "@spectrum-css/actionmenu/stories/template.js";
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
@@ -17,9 +18,9 @@ export const Template = ({
 	hasPagination,
 	hasImage,
 	isOpen = true,
-	...globals
-}, context) => html`
-	<div style=${styleMap({"margin-top": "8px"})}>
+}, context) => {
+	const [{ scale }] = useGlobals();
+	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
@@ -28,7 +29,6 @@ export const Template = ({
 			style=${ifDefined(styleMap(customStyles))}
 		>
 			${Popover({
-				...globals,
 				nested: true,
 				testId: "popover-nested",
 				id: "popover-nested",
@@ -59,7 +59,7 @@ export const Template = ({
 									"margin-inline-start": "-32px"
 								},
 								iconName: "More",
-								size: globals.scale === "large" ? "s" : "m",
+								size: scale === "large" ? "s" : "m",
 								items: [
 									{
 										label: "Skip tour",
@@ -78,9 +78,9 @@ export const Template = ({
 					<div class="${rootClass}-footer">
 					${hasPagination ? html`<div class="spectrum-CoachMark-step"><bdo dir="ltr">2 of 8</bdo></div>` : ""}
 					${ButtonGroup({
-						customClasses: globals.scale === "large" ? [`${rootClass}-buttongroup--mobile`] : [`${rootClass}-buttongroup`],
-						size: globals.scale === "large" ? "s" : "m",
-						items: globals.scale === "large" ?
+						customClasses: scale === "large" ? [`${rootClass}-buttongroup--mobile`] : [`${rootClass}-buttongroup`],
+						size: scale === "large" ? "s" : "m",
+						items: scale === "large" ?
 						[
 							{
 								variant: "secondary",
@@ -113,5 +113,5 @@ export const Template = ({
 				],
 			}, context)}
 		</div>
-	</div>
-`;
+	`;
+};

@@ -20,7 +20,6 @@ export const Template = ({
 	customStyles = {},
 	trigger,
 	content = [],
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
 
@@ -33,7 +32,6 @@ export const Template = ({
 
 	return html`
 		${when(typeof trigger === "function", () => trigger({
-			...globals,
 			isSelected: isOpen,
 			isOpen: nestedPopover ?? true,
 			onclick: () => {

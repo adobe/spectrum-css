@@ -118,6 +118,7 @@ Notes on a few commonly used argTypes:
 - If your component does not include any animation, please hide the reducedMotion control to avoid confusion: `reducedMotion: { table: { disable: true } }`
 
 You can import state-based argTypes that are commonly used from the `types/states.js`. States available in this file include (but are not limited to):
+
 - `isOpen`
 - `isSelected`
 - `isValid`
@@ -166,7 +167,7 @@ Be sure to define a default value for these argTypes in your args section.
 
 #### Categories
 
-- `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM.  This category can be used to automatically populate visual regression tests when used with the `withStatesWrapper` decorator.
+- `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM. This category can be used to automatically populate visual regression tests when used with the `withStatesWrapper` decorator.
 - `Variant`: these controls represent design variants available for a component; often these will be denoted by classes that include a `--` separator. i.e., `--quiet` or `--multiline`. These can be boolean, select dropdowns, radio buttons, etc. depending on the design rules for their application. This category can be used to automatically populate visual regression tests when used with the `withVariantsWrapper` decorator.
 - `Content`: not specific to the rendering of this component. Text or subcomponents to be rendered inside that region but that is not opinionated. Often this would be represented by a slot in a web component. i.e., labels, content to render inside a dialog or modal.
 - `Advanced`: these are controls that match the requirements of a component category but are not recommended to be used; styles designed for specific edge-cases or inoptimal use. i.e., `staticWhite`.
@@ -307,27 +308,26 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
-import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
-
 import "../index.css";
 
-export const Template = ({
-  rootClass = "spectrum-Tag",
-  size = "m",
-  iconName,
-  avatarUrl,
-  label,
-  isSelected = false,
-  isEmphasized = false,
-  isDisabled = false,
-  isInvalid = false,
-  hasClearButton = false,
-  id,
-  customClasses = [],
-  customStyles = {},
-}, context) => {
+export const Template = (
+  {
+    rootClass = "spectrum-Tag",
+    size = "m",
+    iconName,
+    avatarUrl,
+    label,
+    isSelected = false,
+    isEmphasized = false,
+    isDisabled = false,
+    isInvalid = false,
+    hasClearButton = false,
+    id,
+    customClasses = [],
+    customStyles = {},
+  },
+  context,
+) => {
   return html`
     <div
       class=${classMap({
@@ -345,16 +345,21 @@ export const Template = ({
       tabindex="0"
     >
       ${when(avatarUrl && !iconName, () =>
-        Avatar({
-          image: avatarUrl,
-          size: "50",
-        }, context),
-      )}
-      ${when(iconName, () =>
-        Icon({
-          iconName,
-          customClasses: [`${rootClass}s-itemIcon`],
-        }, context),
+        Avatar(
+          {
+            image: avatarUrl,
+            size: "50",
+          },
+          context,
+        ),
+      )} ${when(iconName, () =>
+        Icon(
+          {
+            iconName,
+            customClasses: [`${rootClass}s-itemIcon`],
+          },
+          context,
+        ),
       )}
       <span
         class=${classMap({
@@ -363,16 +368,19 @@ export const Template = ({
         >${label}</span
       >
       ${when(hasClearButton, () =>
-        ClearButton({
-          customClasses: [`${rootClass}-clearButton`],
-          onclick: (evt) => {
-            const el = evt.target;
-            if (!el) return;
+        ClearButton(
+          {
+            customClasses: [`${rootClass}-clearButton`],
+            onclick: (evt) => {
+              const el = evt.target;
+              if (!el) return;
 
-            const wrapper = el.closest(rootClass);
-            wrapper.parentNode.removeChild(wrapper);
+              const wrapper = el.closest(rootClass);
+              wrapper.parentNode.removeChild(wrapper);
+            },
           },
-        }, context),
+          context,
+        ),
       )}
     </div>
   `;
@@ -383,30 +391,34 @@ export const Template = ({
 
 Now that your stories are written, we need to add them to our visual regression suite. We are using [chromatic](https://www.chromatic.com), a tool that is designed to work with Storybook.
 
-To optimize snapshot usage, we organize our stories into groups when rendered inside the Chromatic environment. This is done by adding an `window.isChromatic()` check and creating groups of stories (note: do not import the `isChromatic` function directly, there is added functionality we've included when sourcing it from`window`). See example below:
+To optimize snapshot usage, we organize our stories into groups when rendered inside the Chromatic environment. This is done by adding an `window.isTestEnv()` check and creating groups of stories (note: do not import the `isChromatic` function directly, there is added functionality we've included when sourcing it from`window`). See example below:
 
 In the `template.js` file:
 
 ```js
 export const AccordionGroup = ({ customStyles = {}, ...args }, context) => {
   return html`
-    ${Template(args, context)}
-    ${Template({
+    ${Template(args, context)} ${Template(
+      {
         ...args,
         customStyles: {
           ...customStyles,
           "max-inline-size": "300px",
-          display: window.isChromatic() ? undefined : "none",
+          display: !window.isTestEnv() ? "none" : customStyles.display,
         },
-    }, context)}
-    ${Template({
+      },
+      context,
+    )} ${Template(
+      {
         ...args,
         disableAll: true,
         customStyles: {
           ...customStyles,
-          display: window.isChromatic() ? undefined : "none",
+          display: !window.isTestEnv() ? "none" : customStyles.display,
         },
-    }, context)}
+      },
+      context,
+    )}
   `;
 };
 ```

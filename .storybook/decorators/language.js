@@ -1,6 +1,5 @@
-import { html } from "lit";
-
 import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { html } from "lit";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>

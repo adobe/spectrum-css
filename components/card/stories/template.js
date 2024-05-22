@@ -32,7 +32,6 @@ export const Template = ({
 	customClasses = [],
 	id,
 	role,
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
 
@@ -59,13 +58,11 @@ export const Template = ({
           ${when(
             !isHorizontal,
             () => Asset({
-              ...globals,
               image,
               preset: !image ? showAsset : undefined,
               isCardAssetOverride,
             }, context),
             () => Icon({
-              ...globals,
               size: "xxl",
               iconName: showAsset === "folder" ? "File" : "Document",
             }, context)
@@ -94,7 +91,6 @@ export const Template = ({
               `)}
               ${when(hasActions && !isHorizontal,
                 () => ActionButton({
-                  ...globals,
                   iconName: "More",
                   size: "m",
                   isQuiet: true,
@@ -134,11 +130,9 @@ export const Template = ({
       `)}
       ${when(hasQuickAction && !isHorizontal,
         () => QuickAction({
-          ...globals,
           noOverlay: true,
           content: [
             Checkbox({
-              ...globals,
               isChecked: isSelected,
               title: "Select",
             }, context),

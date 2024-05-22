@@ -1,9 +1,9 @@
+import { useArgs, useGlobals } from "@storybook/preview-api";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -20,9 +20,8 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	id,
-	...globals
 }, context) => {
-	const { scale } = globals;
+	const [{ scale }] = useGlobals();
 	const [, updateArgs] = useArgs();
 
 	const Dialog = html`
@@ -44,14 +43,12 @@ export const Template = ({
 					Divider({
 						horizontal: true,
 						customClasses: [`${rootClass}-divider`],
-						...globals,
 					}, context),
 				])}
 				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}, context) : c))}</section>
 				${when(isDismissable, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
-						...globals,
 						onclick: () => {
 							updateArgs({ isOpen: !isOpen });
 						},
@@ -63,12 +60,8 @@ export const Template = ({
 
 	if (showModal) {
 		return html`
-			${Underlay({
-				...globals,
-				isOpen,
-			}, context)}
+			${Underlay({ isOpen }, context)}
 			${Button({
-				...globals,
 				size: "m",
 				variant: "secondary",
 				label: "Click to open dialog",
@@ -85,7 +78,6 @@ export const Template = ({
 				},
 			}, context)}
 			${Modal({
-				...globals,
 				isOpen,
 				content: Dialog,
 			}, context)}

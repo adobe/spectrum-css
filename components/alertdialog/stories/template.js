@@ -24,7 +24,6 @@ export const Template = ({
 	icon = false,
 	id,
 	customStyles = {},
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
@@ -49,13 +48,11 @@ export const Template = ({
           size: "m",
           iconName: "Alert",
           customClasses: [`${rootClass}-icon`],
-          ...globals,
         })) }
       </div>
       ${Divider({
             horizontal: true,
             customClasses: [`${rootClass}-divider`],
-            ...globals,
           })}
       <section class="${rootClass}-content">${content}</section>
       ${ButtonGroup({
@@ -69,13 +66,9 @@ export const Template = ({
     </div>
   `;
 
-	return  html`
-    ${Underlay({
-      ...globals,
-      isOpen,
-    })}
+	return html`
+    ${Underlay({ isOpen })}
     ${Button({
-      ...globals,
       size: "m",
       variant: "secondary",
       label: "Click to open Alert Dialog",
@@ -92,7 +85,6 @@ export const Template = ({
       },
     })}
     ${Modal({
-      ...globals,
       isOpen,
       content: Dialog,
     })}

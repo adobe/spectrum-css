@@ -58,30 +58,30 @@ export default {
 	},
 };
 
-export const Default = (args) => html`
+export const Default = ({ customStyles = {}, ...args}) => html`
 	<div>
+		${Template({ customStyles, ...args})}
 		${Template({
-			...args
+			...args,
+			headerText: "in-line alert header announcing something very long and in-line",
+			text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+			customStyles: {
+				...customStyles,
+				"max-width": "400px",
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			}
 		})}
-
-		${
-			window.isChromatic() ?
-				Template({
-					...args,
-					headerText: "in-line alert header announcing something very long and in-line",
-					text: "this is a very urgent alert with a lot of context, so the text has to wrap",
-					customStyles: {"max-width": "400px"}
-				})
-				&&
-				Template({
-					...args,
-					headerText: "in-line alert header announcing something very long and in-line",
-					text: "this is a very urgent alert with a lot of context, so the text has to wrap",
-					customStyles: {"max-width": "400px"},
-					variant: "notice",
-					isClosable: true,
-				})
-			: null
-		}
+		${Template({
+			...args,
+			headerText: "in-line alert header announcing something very long and in-line",
+			text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+			customStyles: {
+				...customStyles,
+				"max-width": "400px",
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			},
+			variant: "notice",
+			isClosable: true,
+		})}
 	</div>
 `;

@@ -1,5 +1,4 @@
 import { html } from "lit";
-
 import { Template } from "./template";
 
 /**
@@ -88,11 +87,14 @@ export default {
 
 export const Default = (args) => html`
 	<div>
-		${Template({
+		${Template(args)}
+		${chromaticKitchenSink({
+			customStyles: {
+				...(args.customStyles ?? {}),
+				"display": window.isTestEnv() ? "none" : args?.customStyles?.display,
+			},
 			...args
 		})}
-
-		${window.isChromatic() ? chromaticKitchenSink(args) : null}
 	</div>
 `;
 Default.args = {};

@@ -1,19 +1,16 @@
-import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
-import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
-import "@spectrum-css/tokens/dist/index.css";
+// import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
+// import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
 import { setConsoleOptions } from "@storybook/addon-console";
-import "./assets/base.css";
-import "./assets/typekit.js";
+import isChromatic from "chromatic/isChromatic";
 import {
 	withActions,
 	withContextWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
-	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
-    withWrapperStyles
-} from "./decorators/index.js";
-import DocumentationTemplate from "./DocumentationTemplate.mdx";
+	withWrapperStyles
+} from "./decorators";
+import DocumentationTemplate from './DocumentationTemplate.mdx';
 import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
 import { argTypes, globalTypes } from "./types";
 
@@ -30,17 +27,9 @@ setConsoleOptions({
 	],
 });
 
-// Inject the sprite sheets into the document
-let sprite = document.getElementById("spritesheets");
-if (!sprite) {
-	sprite = document.createElement("div");
-	sprite.id = "spritesheets";
-	sprite.innerHTML = workflowSprite + uiSprite;
-	document.body.appendChild(sprite);
-}
-else {
-	sprite.innerHTML = workflowSprite + uiSprite;
-}
+import "@spectrum-css/tokens";
+import "./assets/base.css";
+import "./assets/typekit.js";
 
 export const args = {
 	customClasses: [],
@@ -97,6 +86,9 @@ export const parameters = {
 			wrapLines: true,
 		},
 	},
+	testingPreview: {
+		isTestEnv: isChromatic,
+	},
 	docs: {
 		autodocs: true,
 		page: DocumentationTemplate,
@@ -135,7 +127,6 @@ export const decorators = [
 	withActions,
 	withWrapperStyles,
 	withContextWrapper,
-	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,

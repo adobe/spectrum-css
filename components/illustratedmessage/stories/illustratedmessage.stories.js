@@ -52,17 +52,18 @@ export const Default = (args) => html`
 			],
 			useAccentColor: false,
 		})}
-		${window.isChromatic() ?
-			Template({
-				...args,
-				heading: "Error 404: This is not the page you're looking for",
-				description: [
-					"This page isn't available.",
-				],
-				useAccentColor: false,
-			})
-			: null
-		}
+		${Template({
+			...args,
+			heading: "Error 404: This is not the page you're looking for",
+			description: [
+				"This page isn't available.",
+			],
+			useAccentColor: false,
+			customStyles: {
+				...(args.customStyles ?? {}),
+				"display": !window.isTestEnv() ? "none" : args?.customStyles?.display,
+			},
+		})}
 	</div>
 `;
 
