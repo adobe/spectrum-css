@@ -1,5 +1,13 @@
 # Change Log
 
+## 7.1.3
+
+### Patch Changes
+
+- [#2753](https://github.com/adobe/spectrum-css/pull/2753) [`54faea2`](https://github.com/adobe/spectrum-css/commit/54faea263520857397784d02708ba3b2ff2f9a50) Thanks [@mdt2](https://github.com/mdt2)! - fix(popover): correct left/right tips for RTL
+
+  Includes exposing Start and End tip placement variants in Storybook, and increased VRT coverage for Chromatic.
+
 ## 7.1.2
 
 ### Patch Changes
