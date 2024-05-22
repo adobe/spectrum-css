@@ -1,8 +1,7 @@
+import { makeDecorator } from "@storybook/preview-api";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { makeDecorator } from "@storybook/preview-api";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -12,8 +11,6 @@ export const withVariantsWrapper = makeDecorator({
 	parameterName: "variants",
 	wrapper: (StoryFn, context) => {
 		const { argTypes = {} } = context;
-
-		if (!window.isChromatic()) return StoryFn(context);
 
 		const variants = [];
 
@@ -56,42 +53,46 @@ export const withVariantsWrapper = makeDecorator({
 		});
 
 		// If there are no size options, return the story
-		if (!variants.length) return StoryFn(context);
+		if (!variants.length) return html`${StoryFn(context)}`;
 
 		const Typography = import("@spectrum-css/typography/stories/template")?.Template ?? null;
 
 		return html`
-		<div
-			data-variant-container
-			style=${styleMap({
-				"display": "flex",
-				"flex-direction": "row",
-				"flex-wrap": "wrap",
-				"gap": "24px",
-			})}
-		>
-			${variants.map((details) => {
-				return html`
-				<div>
-					${when(details.name, () => Typography({
-						semantics: "heading",
-						size: "s",
-						content: [details.name],
-					}))}
-					<div
-						style=${styleMap({
-							"border": "1px solid var(--spectrum-gray-800)",
-							"border-radius": "4px",
-							"overflow": "auto",
-						})}
-					>
-						${StoryFn({ ...context, args: {
-							...context.args,
-							...details.args,
-						}})}
-					</div>
-				</div>`;
-			})}
-		</div>`;
+			<div style=${styleMap({ "display": window.isTestEnv() ? "none" : undefined })}>
+				${StoryFn(context)}
+			</div>
+			<div
+				data-variant-container
+				style=${styleMap({
+					"display": !window.isTestEnv() ? "none" : "flex",
+					"flex-direction": "row",
+					"flex-wrap": "wrap",
+					"gap": "24px",
+				})}
+			>
+				${variants.map((details) => {
+					return html`
+					<div>
+						${when(details.name, () => Typography({
+							semantics: "heading",
+							size: "s",
+							content: [details.name],
+						}))}
+						<div
+							style=${styleMap({
+								"border": "1px solid var(--spectrum-gray-800)",
+								"border-radius": "4px",
+								"overflow": "auto",
+							})}
+						>
+							${StoryFn({ ...context, args: {
+								...context.args,
+								...details.args,
+							}})}
+						</div>
+					</div>`;
+				})}
+			</div>
+		`;
 	},
 });

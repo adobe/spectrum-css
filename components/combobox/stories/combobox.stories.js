@@ -1,14 +1,13 @@
-import { html } from "lit";
-
-import { Template } from "./template";
-
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
+import { Template } from "./template";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
  */
 export default {
-	title: "Components/Combobox",
+	title: "Combobox",
 	component: "Combobox",
 	argTypes: {
 		size: {
@@ -224,25 +223,38 @@ const defaultVariants = (args) => html`
 	</div>
 `;
 
-const closedVariants = (args) => defaultVariants({...args, isOpen: false});
-
-const chromaticKitchenSink = (args) => html`
-	<div style="display: flex; gap: 16px; flex-direction: column;">
-		${closedVariants(args)}
+const ComboboxGroup = (args) => html`
+	<div style=${styleMap({
+		"display": !window.isTestEnv() ? "none" : "flex",
+		"gap": "16px",
+		"flex-direction": "column",
+	})}>
+		${defaultVariants({
+			...args,
+			isOpen: false
+		})}
 	</div>
-	<div style="display: flex; gap: 16px; flex-direction: column; margin-top: 32px;">
+	<div style=${styleMap({
+		"display": !window.isTestEnv() ? "none" : "flex",
+		"gap": "16px",
+		"margin-top": "32px",
+		"flex-direction": "column",
+	})}>
 		${defaultVariants(args)}
 	</div>
+	${Template({
+		...args,
+		customStyles: {
+			...(args.customStyles ?? {}),
+			"display": window.isTestEnv() ? "none" : args?.customStyles?.display,
+		},
+	})}
 `;
 
-export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
+export const Default = ComboboxGroup.bind({});
 Default.args = {};
 
-export const Quiet = (args) => window.isChromatic()
-	? chromaticKitchenSink(args)
-	: Template({
-		...args
-	});
+export const Quiet = ComboboxGroup.bind({});
 Quiet.args = {
 	isQuiet: true,
 };

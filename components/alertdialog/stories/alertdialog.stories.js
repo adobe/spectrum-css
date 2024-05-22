@@ -4,7 +4,7 @@ import { Template } from "./template";
  * Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.
  */
 export default {
-	title: "Components/Alert dialog",
+	title: "Alert dialog",
 	component: "AlertDialog",
 	argTypes: {
 		heading: {
@@ -35,6 +35,7 @@ export default {
 			control: "boolean",
 		},
 		variant: { table: { disable: true } },
+		buttons: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-AlertDialog",

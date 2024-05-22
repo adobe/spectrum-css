@@ -9,13 +9,19 @@ const componentPkgs = readdirSync(componentsPath, {
 	.map((dirent) => dirent.name);
 
 module.exports = {
-	stories: [
-		"../components/*/stories/*.stories.js",
-		"../components/*/stories/*.mdx",
-		"./guides/*.mdx",
-		"./deprecated/*/*.stories.js",
-		"./deprecated/*/*.mdx",
-	],
+	stories: [{
+		directory: '../components',
+		files: '*/stories/*.@(stories.js|mdx)',
+		titlePrefix: 'Components',
+	}, {
+		directory: './guides',
+		files: '*.mdx',
+		titlePrefix: 'Guides',
+	}, {
+		directory: './deprecated',
+		files: '**/*.@(stories.js|mdx)',
+		titlePrefix: 'Deprecated',
+	}],
 	rootDir: "../",
 	staticDirs: ["../assets"],
 	addons: [
@@ -37,6 +43,7 @@ module.exports = {
 		"@storybook/addon-a11y",
 		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
 		"@whitespace/storybook-addon-html",
+		"@spectrum-tools/addon-testing-preview",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
@@ -49,6 +56,8 @@ module.exports = {
 	core: {
 		disableTelemetry: true,
 		disableWhatsNewNotifications: true,
+		crossOriginIsolated: true,
+		enableCrashReports: false,
 	},
 	webpackFinal: function (config) {
 		// Removing the global alias as it conflicts with the global npm pkg
@@ -164,12 +173,6 @@ module.exports = {
 	},
 	framework: {
 		name: "@storybook/web-components-webpack5",
-	},
-	features: {
-		/* Code splitting flag; load stories on-demand */
-		storyStoreV7: true,
-		/* Builds stories.json to help with on-demand loading */
-		buildStoriesJson: true,
 	},
 	docs: {
 		autodocs: true, // see below for alternatives

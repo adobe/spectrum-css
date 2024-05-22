@@ -1,8 +1,7 @@
+import { makeDecorator } from "@storybook/preview-api";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { makeDecorator } from "@storybook/preview-api";
 
 /**
  * @todo: Need a way to validate combinations of states
@@ -36,54 +35,54 @@ export const withStatesWrapper = makeDecorator({
 	});
     });
 
-    // If there are no size options, return the story
-    if (!states.size) return StoryFn(context);
-
-    if (!window.isChromatic()) return StoryFn(context);
-
 		const Typography = import("@spectrum-css/typography/stories/template")?.Template ?? null;
 
-    return html` <div
-      data-state-container
-      style=${styleMap({
-        "display": "flex",
-        "flex-direction": "column",
-        "gap": "12px",
-		"margin": "12px",
-      })}
-    >
-      ${[...states.entries()].map(([key, details]) => {
-        context.args[key] = true;
+    return html`
+      <div style=${styleMap({ "display": !states.size || !window.isTestEnv() ? undefined : "none" })}>
+        ${StoryFn(context)}
+      </div>
+      <div
+        data-state-container
+        style=${styleMap({
+          "display": !states.size || !window.isTestEnv() ? "none" : "flex",
+          "flex-direction": "column",
+          "gap": "12px",
+          "margin": "12px",
+        })}
+      >
+        ${[...states.entries()].map(([key, details]) => {
+          context.args[key] = true;
 
-        // Set all other states to false
-        [...states.keys()]
-          .filter((v) => v !== key)
-          .forEach((k) => (context.args[k] = false));
+          // Set all other states to false
+          [...states.keys()]
+            .filter((v) => v !== key)
+            .forEach((k) => (context.args[k] = false));
 
-        return html`
-          <div data-value=${key}>
-            ${when(details.name, () =>
-              Typography({
-                semantics: "heading",
-                size: "xxs",
-                content: [details.name],
-                customStyles: {
-                  "margin-block": "4px 2px",
-                },
-              })
-            )}
-            <div
-              style=${styleMap({
-                border: "1px solid var(--spectrum-gray-400)",
-                "border-radius": "4px",
-				"overflow": "auto",
-              })}
-            >
-              ${StoryFn(context)}
+          return html`
+            <div data-value=${key}>
+              ${when(details.name, () =>
+                Typography({
+                  semantics: "heading",
+                  size: "xxs",
+                  content: [details.name],
+                  customStyles: {
+                    "margin-block": "4px 2px",
+                  },
+                })
+              )}
+              <div
+                style=${styleMap({
+                  border: "1px solid var(--spectrum-gray-400)",
+                  "border-radius": "4px",
+          "overflow": "auto",
+                })}
+              >
+                ${html`${StoryFn(context)}`}
+              </div>
             </div>
-          </div>
-        `;
-      })}
-    </div>`;
+          `;
+        })}
+      </div>
+    `;
   },
 });

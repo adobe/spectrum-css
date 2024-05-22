@@ -1,0 +1,51 @@
+{
+    "name": "@spectrum-tools/addon-testing-preview",
+    "version": "1.0.0",
+    "description": "A Storybook addon for previewing what the test tool will snapshot",
+    "license": "Apache-2.0",
+    "author": "Adobe",
+    "exports": {
+        ".": {
+            "node": "./index.js",
+            "require": "./index.js"
+        },
+        "./manager": "./manager.js",
+        "./preview": "./preview.js",
+        "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "files": [
+        "README.md",
+        "*.js"
+    ],
+    "devDependencies": {
+        "@storybook/blocks": "^8.1.4",
+        "@storybook/components": "^8.1.4",
+        "@storybook/core-events": "^8.1.4",
+        "@storybook/icons": "^1.2.9",
+        "@storybook/manager-api": "^8.1.4",
+        "@storybook/preview-api": "^8.1.4",
+        "@storybook/theming": "^8.1.4",
+        "@storybook/types": "^8.1.4"
+    },
+    "peerDependencies": {
+        "chromatic": ">=11"
+    },
+    "peerDependenciesMeta": {
+        "chromatic": {
+            "optional": true
+        }
+    },
+    "storybook": {
+        "displayName": "Testing preview addon"
+    },
+    "keywords": [
+        "storybook-addons",
+        "testing",
+        "preview",
+        "snapshot"
+    ],
+    "publishConfig": {
+        "access": "public"
+    }
+}

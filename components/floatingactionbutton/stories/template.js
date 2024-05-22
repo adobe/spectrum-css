@@ -11,7 +11,6 @@ export const Template = ({
 	id,
 	iconName,
 	customClasses = [],
-	...globals
 }) => html`
 	<button
 		class=${classMap({
@@ -22,7 +21,6 @@ export const Template = ({
 		id=${ifDefined(id)}
 	>
 		${Icon({
-			...globals,
 			iconName,
 			customClasses: [`${rootClass}-icon`],
 		})}

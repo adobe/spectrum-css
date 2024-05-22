@@ -1,5 +1,7 @@
 import path from "path";
 
+import { useGlobals } from "@storybook/preview-api";
+
 // Imports an array of all icon names in the workflow set
 import iconOpts from "@adobe/spectrum-css-workflow-icons";
 
@@ -54,12 +56,12 @@ export const uiIconsWithDirections = [
  */
 export const fetchIconSVG = ({
 	iconName,
-	setName = "workflow",
-	...globals
+	setName = "workflow"
 }) => {
 	if (!iconName) return;
 
-	const { scale } = globals;
+	const [{ scale }] = useGlobals();
+
 	let icon;
 
 	// Check "Workflow icons" first.

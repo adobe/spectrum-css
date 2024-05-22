@@ -1,4 +1,5 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { html } from "lit";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -11,9 +12,15 @@ export const withContextWrapper = makeDecorator({
 		const { args = {}, globals = {}, viewMode, id } = data;
 		let { rootClass, staticColor } = args;
 
-		const backgrounds = {
-			"black": "var(--spectrum-docs-static-black-background-color)",
-			"white": "var(--spectrum-docs-static-white-background-color)",
+		const staticColorSettings = {
+			"black": {
+				background: "var(--spectrum-docs-static-black-background-color)",
+				color: "light"
+			},
+			"white": {
+				background: "var(--spectrum-docs-static-white-background-color)",
+				color: "dark"
+			},
 		};
 
 		let {
@@ -39,19 +46,6 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			for (const container of containers) {
-				container.classList.toggle("spectrum", true);
-
-				container.classList.toggle("spectrum--express", Boolean(context === "express"));
-
-				for (const c of ["light", "dark", "darkest"]) {
-					container.classList.toggle(`spectrum--${c}`, c === color);
-				}
-
-				for (const s of ["medium", "large"]) {
-					container.classList.toggle(`spectrum--${s}`, s === scale);
-				}
-
-				container.style.removeProperty("background");
 				const hasStaticElement = container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack, .${rootClass}--overBackground)`);
 				if (!staticColor && hasStaticElement) {
 					staticColor = (
@@ -60,12 +54,27 @@ export const withContextWrapper = makeDecorator({
 					);
 				}
 
-				if (hasStaticElement && staticColor) {
-					container.style.background = backgrounds[staticColor];
+				container.classList.toggle("spectrum", true);
+
+				container.classList.toggle("spectrum--express", Boolean(context === "express"));
+
+				for (const c of ["light", "dark", "darkest"]) {
+					// Force light or dark mode if the static color is set
+					container.classList.toggle(`spectrum--${c}`, c === staticColorSettings[staticColor]?.color || !staticColor && c === color);
+				}
+
+				for (const s of ["medium", "large"]) {
+					container.classList.toggle(`spectrum--${s}`, s === scale);
+				}
+
+				container.style.removeProperty("background");
+
+				if (hasStaticElement && staticColor && staticColorSettings[staticColor]) {
+					container.style.background = staticColorSettings[staticColor].background;
 				}
 			}
 		}, [color, context, staticColor, scale, viewMode, rootClass]);
 
-		return StoryFn(data);
+		return html`${StoryFn(data)}`;
 	},
 });

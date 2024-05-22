@@ -3,7 +3,7 @@ import { html } from "lit";
 import { Template } from "./template";
 
 export default {
-	title: "Components/Status light",
+	title: "Status light",
 	component: "Statuslight",
 	argTypes: {
 		size: {
@@ -75,18 +75,15 @@ export default {
 
 export const Default = (args) => html`
 	<div>
+		${Template(args)}
 		${Template({
-			...args
+			...args,
+			label: "Status light label that is long and wraps to the next line",
+			customStyles: {
+				...(args.customStyles ?? {}),
+				"max-width": "150px",
+				"display": window.isTestEnv() ? "none" : args?.customStyles?.display,
+			},
 		})}
-
-		${
-			window.isChromatic() ?
-			Template({
-				...args,
-				label: "Status light label that is long and wraps to the next line",
-				customStyles: {"max-width": "150px"}
-			})
-		: null
-	}
 	</div>
 `;

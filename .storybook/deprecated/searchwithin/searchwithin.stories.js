@@ -17,7 +17,7 @@ import "@spectrum-css/searchwithin/dist/vars.css";
  * **This component is deprecated.** Please use a search field with a separate control to filter the search instead.
  */
 export default {
-	title: "Deprecated/Search within",
+	title: "Search within",
 	component: "SearchWithin",
 	argTypes: {
 		size: {
@@ -182,7 +182,6 @@ const Template = ({
 		style=${ifDefined(styleMap(customStyles))}
 	>
 		${Picker({
-			...globals,
 			size,
 			placeholder: label,
 			label: undefined,
@@ -196,7 +195,6 @@ const Template = ({
 			customClasses: [`${rootClass}-picker`],
 		})}
 		${Textfield({
-			...globals,
 			size,
 			autocomplete: false,
 			name: "search",
@@ -210,12 +208,10 @@ const Template = ({
 			isKeyboardFocused,
 		})}
 		${ClearButton({
-			...globals,
 			size,
 			customClasses: [`${rootClass}-clearButton`],
 		})}
 		${Popover({
-			...globals,
 			isOpen: isOpen,
 			withTip: false,
 			position: "bottom",
@@ -226,7 +222,6 @@ const Template = ({
 			},
 			content: [
 				Menu({
-					...globals,
 					items: [
 						{ label: "Deselect" },
 						{ label: "Select Inverse" },

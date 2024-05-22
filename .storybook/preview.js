@@ -1,20 +1,15 @@
-import DocumentationTemplate from './DocumentationTemplate.mdx';
-
+import { setConsoleOptions } from "@storybook/addon-console";
+import isChromatic from "chromatic/isChromatic";
 import {
 	withActions,
 	withContextWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
-	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 	withWrapperStyles
 } from "./decorators";
-
+import DocumentationTemplate from './DocumentationTemplate.mdx';
 import { argTypes, globalTypes } from "./types";
-
-import "@storybook/addon-console";
-// https://github.com/storybookjs/storybook-addon-console
-import { setConsoleOptions } from "@storybook/addon-console";
 
 const panelExclude = setConsoleOptions({}).panelExclude || [];
 setConsoleOptions({
@@ -23,7 +18,6 @@ setConsoleOptions({
 
 import "@spectrum-css/tokens";
 import "./assets/base.css";
-
 import "./assets/typekit.js";
 
 export const args = {
@@ -71,6 +65,9 @@ export const parameters = {
 			wrapLines: true,
 		},
 	},
+	testingPreview: {
+		isTestEnv: isChromatic,
+	},
 	docs: {
 		autodocs: true,
     	page: DocumentationTemplate,
@@ -104,7 +101,6 @@ export const decorators = [
 	withActions,
 	withWrapperStyles,
 	withContextWrapper,
-	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,

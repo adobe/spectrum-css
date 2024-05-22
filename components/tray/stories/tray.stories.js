@@ -7,7 +7,7 @@ import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
  * Tray dialogs are typically used to portray information on mobile device or smaller screens.
  */
 export default {
-	title: "Components/Tray",
+	title: "Tray",
 	component: "Tray",
 	argTypes: {
 		content: { table: { disable: true } },
@@ -49,6 +49,7 @@ export default {
 
 export const Default = ({
 	heading,
+	customStyles = {},
 	...args
 }) => html`
 	<div>
@@ -62,23 +63,20 @@ export const Default = ({
 					})
 			],
 		})}
-
-		${
-			window.isChromatic() ?
-			Template({
-				...args,
-				content: [
-					() => Dialog({
-							heading: "You have new messages waiting in your inbox",
-							content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
-							isDismissable: false,
-						})
-				],
-				customStyles: {
-					"justify-content": "flex-end"
-				},
-			})
-		: null
-	}
+		${Template({
+			...args,
+			content: [
+				() => Dialog({
+						heading: "You have new messages waiting in your inbox",
+						content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
+						isDismissable: false,
+					})
+			],
+			customStyles: {
+				...customStyles,
+				"justify-content": "flex-end",
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			},
+		})}
 	</div>
 `;

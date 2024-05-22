@@ -37,7 +37,7 @@ const placementOptions = [
  * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
  */
 export default {
-	title: "Components/Popover",
+	title: "Popover",
 	component: "Popover",
 	argTypes: {
 		trigger: { table: { disable: true } },
@@ -188,11 +188,24 @@ Default.play = async ({ canvasElement }) => {
 Default.args = {};
 
 export const WithTip = (args) => html`
-	${window.isChromatic() ? ChromaticTipPlacementVariants(args) : Template(args)}
+	${ChromaticTipPlacementVariants({
+		...args,
+		customStyles: {
+			...(args.customStyles ?? {}),
+			"display": window.isTestEnv() ? "none" : args?.customStyles?.display,
+		},
+	})}
+	${Template({
+		...args,
+		customStyles: {
+			...(args.customStyles ?? {}),
+			"display": !window.isTestEnv() ? "none" : args?.customStyles?.display,
+		},
+	})}
 `;
 WithTip.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
-	window.isChromatic() ? null : await userEvent.click(canvas.getByRole("button"));
+	window.isTestEnv() ? null : await userEvent.click(canvas.getByRole("button"));
 };
 WithTip.args = {
 	withTip: true,

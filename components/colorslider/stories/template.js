@@ -28,7 +28,6 @@ export const Template = ({
 	colorHandleStyle = {
 		"--spectrum-picked-color": "rgba(255, 0, 0)",
 	},
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -41,7 +40,6 @@ export const Template = ({
 		style=${ifDefined(styleMap(customStyles))}
 	>
 		${OpacityCheckerboard({
-			...globals,
 			customClasses: [`${rootClass}-checkerboard`],
 			content: [
 				when(gradientType === "image",
@@ -62,7 +60,6 @@ export const Template = ({
 			role: "presentation",
 		})}
 		${ColorHandle({
-			...globals,
 			isDisabled,
 			isFocused,
 			customClasses: [`${rootClass}-handle`],

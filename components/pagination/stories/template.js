@@ -15,7 +15,6 @@ export const Template = ({
 	customClasses = [],
 	variant,
 	items,
-	...globals
 }) => {
 	if (variant === "explicit") {
 		return html`
@@ -69,7 +68,6 @@ export const Template = ({
 			})}
 		>
 			${Button({
-				...globals,
 				size,
 				variant: "primary",
 				treatment: "outline",
@@ -82,7 +80,6 @@ export const Template = ({
 				(item) => {
 					if (typeof item === "object") {
 						return ActionButton({
-							...globals,
 							...item,
 							size,
 							isQuiet: true,
@@ -92,7 +89,6 @@ export const Template = ({
 				}
 			)}
 			${Button({
-				...globals,
 				size,
 				variant: "primary",
 				treatment: "outline",

@@ -8,7 +8,7 @@ import { Template } from "./template";
  * A picker outlines a set of options for a user.
  */
 export default {
-	title: "Components/Picker",
+	title: "Picker",
 	component: "Picker",
 	argTypes: {
 		size: {
@@ -236,7 +236,7 @@ const ChromaticPickerGroup = (args) => html`
 	</div>
 `;
 
-export const Default = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
+export const Default = (args) => window.isTestEnv() ? ChromaticPickerGroup(args) : Template(args);
 Default.args = {
 	content: [
 		() => MenuStories(MenuStories.args)
@@ -251,7 +251,7 @@ Open.args = {
 	],
 };
 
-export const WithForcedColors = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
+export const WithForcedColors = (args) => window.isTestEnv() ? ChromaticPickerGroup(args) : Template(args);
 WithForcedColors.tags = ["vrt-only"];
 WithForcedColors.parameters = {
 	chromatic: { forcedColors: "active" },

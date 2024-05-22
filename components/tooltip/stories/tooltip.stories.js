@@ -33,7 +33,7 @@ const placementOptions = [
 ];
 
 export default {
-	title: "Components/Tooltip",
+	title: "Tooltip",
 	component: "Tooltip",
 	argTypes: {
 		label: {
@@ -141,48 +141,53 @@ export default {
 };
 
 const PlacementVariants = (args) => html`
-	${window.isChromatic()
-		? html`
-			${placementOptions.map(option => {
-				const optionDescription = () => {
-					if (option.startsWith("start") || option.startsWith("end"))
-						return "Changes side with text direction (like a logical property)";
-					if (option.startsWith("left") || option.startsWith("right"))
-						return "Text direction does not effect the position";
-					return null;
-				};
+<div style=${styleMap({
+	"display": !window.isTestEnv() ? "none" : undefined,
+})}>
+	${placementOptions.map(option => {
+		const optionDescription = () => {
+			if (option.startsWith("start") || option.startsWith("end"))
+				return "Changes side with text direction (like a logical property)";
+			if (option.startsWith("left") || option.startsWith("right"))
+				return "Text direction does not effect the position";
+			return null;
+		};
 
-				return html`
-					<div class="spectrum-Typography">
+		return html`
+			<div class="spectrum-Typography">
+				${Typography({
+					semantics: "detail",
+					size: "l",
+					content: [option],
+				})}
+				<div
+					style=${styleMap({
+						"display": "flex",
+						"flex-direction": "column",
+						"gap": "4.8px",
+					})}
+				>
+					${when(optionDescription() !== null, () => html`
 						${Typography({
 							semantics: "detail",
-							size: "l",
-							content: [`${option}`],
+							size: "s",
+							content: [`${optionDescription()}`],
 						})}
-						<div
-							style=${styleMap({
-									"display": "flex",
-									"flex-direction": "column",
-									"gap": "4.8px",
-								})}
-							>
-							${when(optionDescription() !== null, () => html`
-								${Typography({
-									semantics: "detail",
-									size: "s",
-									content: [`${optionDescription()}`],
-								})}
-							`)}
-							${Template({
-								...args,
-								placement: option,
-							})}
-						</div>
-					</div>
-				`;
-			})}`
-		: Template(args)
-	}
+					`)}
+					${Template({
+						...args,
+						placement: option,
+					})}
+				</div>
+			</div>
+		`;
+	})}
+</div>
+<div style=${styleMap({
+	"display": window.isTestEnv() ? "none" : undefined,
+})}>
+	${Template(args)}
+</div>
 `;
 
 export const Default = PlacementVariants.bind({});

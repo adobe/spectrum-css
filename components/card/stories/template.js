@@ -34,7 +34,6 @@ export const Template = ({
 	customClasses = [],
 	id,
 	role,
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
@@ -62,16 +61,8 @@ export const Template = ({
             <div class="spectrum-Card-preview">
               ${when(
                 !isHorizontal,
-                () => Asset({
-                  ...globals,
-                  image,
-                  preset: !image ? showAsset : undefined,
-                }),
-                () => Icon({
-                  ...globals,
-                  size: "xxl",
-                  iconName: showAsset === "folder" ? "File" : "Document",
-                })
+                () => Asset({ image, preset: !image ? showAsset : undefined }),
+                () => Icon({ size: "xxl", iconName: showAsset === "folder" ? "File" : "Document" })
               )}
             </div>`,
           () => html`<div class="${rootClass}-coverPhoto" style="background-image: url(${image})"></div>`
@@ -90,7 +81,6 @@ export const Template = ({
                   () => html`
                     <div class="${rootClass}-actionButton">
                       ${ActionButton({
-                        ...globals,
                         iconName: "More",
                         size: "m",
                         isQuiet: true
@@ -116,11 +106,9 @@ export const Template = ({
       ${when(
         hasQuickAction && !isHorizontal,
         () => QuickAction({
-          ...globals,
           noOverlay: true,
           content: [
             Checkbox({
-              ...globals,
               isChecked: isSelected,
               title: "Select",
             }),

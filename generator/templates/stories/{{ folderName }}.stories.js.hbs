@@ -43,24 +43,21 @@ export default {
   }
 };
 
-const {{ pascalCase name }}Group = (args) => html`
-	${window.isChromatic() ? html`
-		<div style=${styleMap({
-			"display": "flex",
-			"flex-wrap": "wrap",
-			"gap": "16px"
-		})}>
-			${Template(args)}
-			${Template({
-				...args,
-                // variant1
-			})}
-			${Template({
-				...args,
-                // variant2
-			})}
-		</div>
-	` : Template(args)}
+const {{ pascalCase name }}Group = ({ customStyles = {}, ...args }) => html`
+  <div style=${styleMap({
+    "display": "flex",
+    "flex-wrap": "wrap",
+    "gap": "16px"
+  })}>
+    ${Template({ customStyles, ...args })}
+    ${Template({
+      ...args,
+			customStyles: {
+				...customStyles,
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			}
+    })}
+  </div>
 `;
 
 export const Default = {{ pascalCase name }}Group.bind({});

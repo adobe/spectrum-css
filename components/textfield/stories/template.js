@@ -43,7 +43,6 @@ export const Template = ({
 	autocomplete = true,
 	onclick,
 	customStyles = {},
-	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
@@ -91,12 +90,10 @@ export const Template = ({
 			id=${ifDefined(id)}
 		>
 		${when(displayLabel, () => FieldLabel({
-			...globals,
 			size,
 			label: labelText,
 		}))}
 		${when(iconName, () => Icon({
-			...globals,
 			size,
 			iconName,
 			setName: iconSet,

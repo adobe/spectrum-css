@@ -6,7 +6,7 @@ import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
  * The picker button component is used as a dropdown trigger. See Combobox.
  */
 export default {
-	title: "Components/Picker button",
+	title: "Picker button",
 	component: "PickerButton",
 	argTypes: {
 		size: {

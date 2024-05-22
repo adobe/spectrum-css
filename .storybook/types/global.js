@@ -87,16 +87,16 @@ export default {
 			dynamicTitle: true,
 		},
 	},
-	testingPreview: {
-		title: "Testing preview",
-		description: "See how the story will look to Chromatic",
-		defaultValue: false,
-		toolbar: {
-			icon: "beaker",
-			items: [
-				{ value: true, title: "Show testing preview" },
-				{ value: false, title: "Default mode" },
-			],
-		},
-	}
+	// testingPreview: {
+	// 	title: "Testing preview",
+	// 	description: "See how the story will look to Chromatic",
+	// 	defaultValue: false,
+	// 	toolbar: {
+	// 		icon: "beaker",
+	// 		items: [
+	// 			{ value: true, title: "Show testing preview" },
+	// 			{ value: false, title: "Default mode" },
+	// 		],
+	// 	},
+	// }
 };

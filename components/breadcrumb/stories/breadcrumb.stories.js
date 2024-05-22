@@ -4,7 +4,7 @@ import { Template } from "./template";
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
  */
 export default {
-	title: "Components/Breadcrumbs",
+	title: "Breadcrumbs",
 	component: "Breadcrumbs",
 	argTypes: {
 		items: { table: { disable: true } },

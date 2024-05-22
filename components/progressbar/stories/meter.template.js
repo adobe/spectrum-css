@@ -16,7 +16,6 @@ export const Template = ({
 	value,
 	meterFill,
 	size = "s",
-	...globals
 }) => html`${items.map((meter) => {
 	const { heading } = meter;
 	const meterSize = meter.size ?? size;
@@ -48,14 +47,12 @@ export const Template = ({
 		aria-valuemax="100"
 	>
 		${FieldLabel({
-			...globals,
 			size: meterSize,
 			label: meterLabel,
 			alignment: "",
 			customClasses: [`${rootClass}-label`],
 		})}
 		${FieldLabel({
-			...globals,
 			size: meterSize,
 			label: `${value}%`,
 			alignment: "",

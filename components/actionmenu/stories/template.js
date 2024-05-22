@@ -15,7 +15,6 @@ export const Template = ({
 	label,
 	iconName,
 	size = "m",
-	...globals
 }) => {
 	if (!items.length) {
 		console.warn("ActionMenu: requires items be passed in to render.");
@@ -23,7 +22,6 @@ export const Template = ({
 	}
 
 	return Popover({
-		...globals,
 		position: "bottom",
 		isOpen,
 		id: popoverId,

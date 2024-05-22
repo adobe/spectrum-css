@@ -16,7 +16,6 @@ export const Template = ({
 	text,
 	variant = "neutral",
 	isClosable = false,
-	...globals
 }) => {
 	let iconName;
 	switch (variant) {
@@ -39,7 +38,6 @@ export const Template = ({
 		typeof iconName !== "undefined"
 			? html`
 					${Icon({
-						...globals,
 						iconName,
 						customClasses: [`${rootClass}-icon`],
 					})}
@@ -50,7 +48,6 @@ export const Template = ({
 		? html`
 				<div class="spectrum-InLineAlert-footer">
 					${Button({
-						...globals,
 						treatment: "outline",
 						variant: "primary",
 						iconName: false,

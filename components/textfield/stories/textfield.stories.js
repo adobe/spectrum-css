@@ -5,7 +5,7 @@ import { Template } from "./template";
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
  */
 export default {
-	title: "Components/Text field",
+	title: "Text field",
 	component: "TextField",
 	argTypes: {
 		isValid: {
@@ -199,70 +199,84 @@ export default {
 	},
 };
 
-const TextFieldGroup = (args) => html`
+const TextFieldGroup = ({ customStyles, ...args }) => html`
 	<div style="display: flex; flex-direction: column; gap: 32px;">
+		${Template({ customStyles, ...args })}
 		${Template({
-			...args
+			displayLabel: true,
+			labelText: "Username",
+			customStyles: {
+				...customStyles,
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			}
 		})}
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-			})
-			: html`` }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username that is really long and wraps onto a second line",
-				isInvalid: true,
-			})
-			: html`` }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				labelPosition: "side",
-				isValid: true,
-				value: "username@reallylongemail.com"
-			})
-			: html`` }
+		${Template({
+			displayLabel: true,
+			labelText: "Username that is really long and wraps onto a second line",
+			isInvalid: true,
+			customStyles: {
+				...customStyles,
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			}
+		})}
+		${Template({
+			displayLabel: true,
+			labelText: "Username",
+			labelPosition: "side",
+			isValid: true,
+			value: "username@reallylongemail.com",
+			customStyles: {
+				...customStyles,
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			}
+		})}
 	</div>
 `;
 
-const TextAreaGroup = (args) => html`
+const TextAreaGroup = ({ customStyles, ...args}) => html`
 	<div style="display: flex; flex-direction: column; gap: 32px;">
 		${Template({
+			customStyles,
 			...args,
 			multiline: true,
 			value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
 		})}
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username that is really long and wraps onto a second line",
-				isInvalid: true,
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				labelPosition: "side",
-				isValid: true,
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
+		${Template({
+			...args,
+			displayLabel: true,
+			labelText: "Username",
+			multiline: true,
+			value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+			customStyles: {
+				...customStyles,
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			}
+		})}
+		${Template({
+			...args,
+			displayLabel: true,
+			labelText: "Username that is really long and wraps onto a second line",
+			isInvalid: true,
+			multiline: true,
+			value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+			customStyles: {
+				...customStyles,
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			}
+		})}
+		${Template({
+			...args,
+			displayLabel: true,
+			labelText: "Username",
+			labelPosition: "side",
+			isValid: true,
+			multiline: true,
+			value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+			customStyles: {
+				...customStyles,
+				"display": !window.isTestEnv() ? "none" : customStyles.display,
+			}
+		})}
 	</div>
 `;
 

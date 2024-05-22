@@ -11,7 +11,6 @@ export const Template = ({
 	size = "m",
 	items = [],
 	vertical = false,
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -24,7 +23,6 @@ export const Template = ({
 	>
 		${items.map((item) =>
 			Button({
-				...globals,
 				...item,
 				size,
 				customClasses: [`${rootClass}-item`],

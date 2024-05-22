@@ -1,4 +1,4 @@
-import { useArgs } from "@storybook/preview-api";
+import { useArgs, useGlobals } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -21,9 +21,8 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	id,
-	...globals
 }) => {
-	const { scale } = globals;
+	const [{ scale }] = useGlobals();
 	const [, updateArgs] = useArgs();
 
 	const Dialog = html`
@@ -45,14 +44,12 @@ export const Template = ({
 					Divider({
 						horizontal: true,
 						customClasses: [`${rootClass}-divider`],
-						...globals,
 					}),
 				])}
 				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
 				${when(isDismissable, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
-						...globals,
 						onclick: () => {
 							updateArgs({ isOpen: !isOpen });
 						},
@@ -64,12 +61,8 @@ export const Template = ({
 
 	if (showModal) {
 		return html`
-			${Underlay({
-				...globals,
-				isOpen,
-			})}
+			${Underlay({ isOpen })}
 			${Button({
-				...globals,
 				size: "m",
 				variant: "secondary",
 				label: "Click to open dialog",
@@ -86,7 +79,6 @@ export const Template = ({
 				},
 			})}
 			${Modal({
-				...globals,
 				isOpen,
 				content: Dialog,
 			})}

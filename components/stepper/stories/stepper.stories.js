@@ -1,12 +1,11 @@
 import { html } from "lit";
-
 import { Template } from "./template";
 
 /**
  * A stepper can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value.
  */
 export default {
-	title: "Components/Stepper",
+	title: "Stepper",
 	component: "Stepper",
 	argTypes: {
 		size: {
@@ -96,11 +95,14 @@ export default {
 
 export const Default = (args) => html`
 	<div>
-		${Template({
+		${Template(args)}
+		${chromaticKitchenSink({
+			customStyles: {
+				...(args.customStyles ?? {}),
+				"display": window.isTestEnv() ? "none" : args?.customStyles?.display,
+			},
 			...args
 		})}
-
-		${window.isChromatic() ? chromaticKitchenSink(args) : null}
 	</div>
 `;
 Default.args = {};

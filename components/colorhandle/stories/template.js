@@ -11,9 +11,7 @@ export const Template = ({
 	customStyles = {
 		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
 	},
-	...globals
 }) => OpacityCheckerboard({
-	...globals,
 	customClasses: [
 		`${rootClass}`,
 		...!isDisabled && isFocused ? ["is-focused"] : [],

@@ -7,7 +7,7 @@ import { Template } from "./template";
  * Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.
 */
 export default {
-	title: "Components/Asset",
+	title: "Asset",
 	component: "Asset",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },
@@ -49,23 +49,26 @@ export default {
 };
 
 const AssetGroup = (args) => html`
-	${window.isChromatic() ? html`
-		<div style=${styleMap({
-			"display": "grid",
-			"grid-template-columns": "repeat(3, 200px)",
-			"gap": "8px"
-		})}>
-			${Template(args)}
-			${Template({
-				...args,
-				preset: "file",
-			})}
-			${Template({
-				...args,
-				preset: "folder",
-			})}
-		</div>
-	` : Template(args)}
+	<div style=${styleMap({
+		"display": !window.isTestEnv() ? "none" : "grid",
+		"grid-template-columns": "repeat(3, 200px)",
+		"gap": "8px"
+	})}>
+		${Template(args)}
+		${Template({
+			...args,
+			preset: "file",
+		})}
+		${Template({
+			...args,
+			preset: "folder",
+		})}
+	</div>
+	<div style=${styleMap({
+		"display": !window.isTestEnv() ? undefined : "none"
+	})}>
+		${Template(args)}
+	</div>
 `;
 
 export const Default = AssetGroup.bind({});

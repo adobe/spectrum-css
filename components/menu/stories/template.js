@@ -177,7 +177,6 @@ export const MenuItem = ({
 	size,
 	selectionMode,
 	value,
-	...globals
 }) => html`
   <li
     class=${classMap({
@@ -222,7 +221,7 @@ const backArrowWithScale = (size = "m", iconName = "ArrowLeft") => {
 	}
 };
 
-export const MenuGroup = ({
+const MenuGroup = ({
 	heading,
 	id,
 	idx = 0,
@@ -234,7 +233,6 @@ export const MenuGroup = ({
 	maxInlineSize,
 	subrole,
 	size,
-	...globals
 }) => html`
   <li
     id=${ifDefined(id)}
@@ -249,7 +247,6 @@ export const MenuGroup = ({
       : html`<div class="spectrum-Menu-back">
           <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
             ${Icon({
-              ...globals,
               iconName: backArrowWithScale(size),
               size,
               customClasses: ["spectrum-Menu-backIcon"]
@@ -267,7 +264,6 @@ export const MenuGroup = ({
         </div>`
     }
     ${Template({
-      ...globals,
       role: "group",
       subrole,
       labelledby: id ?? `menu-heading-category-${idx}`,
@@ -307,8 +303,26 @@ export const Template = ({
 	shouldTruncate,
 	size,
 	subrole = "menuitem",
-	...globals
+	id,
 }) => {
+	const collapsedIcon = Icon({
+		iconName: "ChevronRight100",
+		size,
+		customClasses: [
+			"spectrum-Menu-itemIcon",
+			"spectrum-Menu-chevron",
+		],
+	});
+
+	const checkedIcon = Icon({
+		iconName: "Checkmark100",
+		size,
+		customClasses: [
+      `${rootClass}Icon`,
+      "spectrum-Menu-checkmark",
+		],
+	});
+
 	const menuMarkup = html`
     <ul
       class=${classMap({
@@ -328,7 +342,6 @@ export const Template = ({
       ${items.map((i, idx) => {
         if (i.type === "divider")
           return html`${hasDividers ? Divider({
-            ...globals,
             tag: "li",
             size: "s",
             customClasses: [`${rootClass}-divider`],
@@ -336,7 +349,6 @@ export const Template = ({
         else if (i.heading || i.isTraySubmenu)
           return MenuGroup({
             ...i,
-            ...globals,
             subrole,
             size,
             selectionMode,
@@ -345,7 +357,6 @@ export const Template = ({
           });
         else
           return MenuItem({
-            ...globals,
             ...i,
             description: singleItemDescription || i.description,
             hasActions,

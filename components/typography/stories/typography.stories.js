@@ -7,7 +7,7 @@ import { when } from "lit/directives/when.js";
  * Spectrum typography is broken out into several separate components.
  */
 export default {
-	title: "Components/Typography",
+	title: "Typography",
 	component: "Typography",
 	argTypes: {
 		reduceMotion: { table: { disable: true } },
@@ -88,7 +88,7 @@ const Sizes = (args) => {
 	else if (args.semantics === "detail") supportedSizes = ["s", "m", "l", "xl"];
 	else if (args.semantics === "code") supportedSizes = ["xs", "s", "m", "l", "xl"];
 
-	return html`${window.isChromatic() ? html`
+	return html`${window.isTestEnv() ? html`
 		<div class="spectrum-Typography">
 			${supportedSizes.reverse().map((size) => {
 			return html`${Template({

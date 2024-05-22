@@ -16,9 +16,7 @@ export const Template = ({
 	isDisabled,
 	isInvalid,
 	tabIndex = 0,
-	...globals
 }) => {
-
 	return html`
     <button
       class=${classMap({
@@ -36,7 +34,6 @@ export const Template = ({
     >
     <div class="${rootClass}-fill">
       ${when(iconName, () => Icon({
-        ...globals,
         size,
         iconName,
         customClasses: [`${rootClass}-icon`],

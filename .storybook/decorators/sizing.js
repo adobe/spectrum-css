@@ -1,7 +1,6 @@
+import { makeDecorator } from "@storybook/preview-api";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { makeDecorator } from "@storybook/preview-api";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -11,14 +10,7 @@ export const withSizingWrapper = makeDecorator({
 	parameterName: "sizing",
 	wrapper: (StoryFn, context) => {
 		const { argTypes = {} } = context;
-
-		// If there are no size options, return the story
-		if (!argTypes.size) return StoryFn(context);
-
-		const sizes = argTypes.size.options ?? [];
-
-		if (sizes.length === 0 || !window.isChromatic()) return StoryFn(context);
-
+		const sizes = argTypes.size?.options ?? [];
 		const sizeMap = {
 			xxs: "Extra-extra-small",
 			xs: "Extra-small",
@@ -32,8 +24,11 @@ export const withSizingWrapper = makeDecorator({
 		const Typography = import("@spectrum-css/typography/stories/template")?.Template ?? null;
 
 		return html`
+		<div style=${styleMap({ "display": sizes.length === 0 || !window.isTestEnv() ? undefined : "none" })}>
+			${StoryFn(context)}
+		</div>
 		<div data-size-container style=${styleMap({
-			"display": "flex",
+			"display": sizes.length === 0 || !window.isTestEnv() ? "none" : "flex",
 			"flex-direction": "column",
 			"gap": "24px",
 			"margin": "12px",

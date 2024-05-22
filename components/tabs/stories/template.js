@@ -23,9 +23,7 @@ export const Template = ({
 	iconOnly = false,
 	customStyles = {},
 	content = [],
-	...globals
 }) => {
-
 	if (!content || !content.length) {
 		console.warn("Tabs: content required");
 		return html``;
@@ -35,21 +33,8 @@ export const Template = ({
 	const isHorizontal = orientation === "horizontal";
 	const isOverflow = orientation === "overflow";
 
-	const selectionIndicator = (isSelected) => when(
-		isSelected,
-		() => html`
-			<div
-				class="${rootClass}-selectionIndicator"
-				style=${ifDefined(
-					styleMap({
-						blockSize: isVertical ? "100%" : undefined,
-						inlineSize: !isVertical ? "100%" : undefined,
-						maxInlineSize: isOverflow ? "50px" : undefined,
-						marginInlineStart: isVertical ? "calc(-1 * var(--spectrum-tabs-start-to-edge))" : undefined,
-					})
-				)}
-			></div>`
-	);
+	// Must resolve icon templates before kicking off the render below
+	const icons = content.map((item) => Icon({ size, iconName: item.iconName }));
 
 	return html`
 		<div
@@ -66,68 +51,79 @@ export const Template = ({
 			})}
 			style=${ifDefined(styleMap(customStyles))}
 		>
-			${when(!isOverflow, () => repeat(
-				content,
-				(item) => item.id,
-				(item) => {
-					if (typeof item === "object") {
+			${when(!isOverflow,
+				() => html`
+					${repeat(content, (item) => item.id, (item, idx) => {
+						if (typeof item !== "object") return item;
+
+						const icon = icons[idx];
+
 						return html`
 							<div
 								class=${classMap({
-							[`${rootClass}-item`]: true,
-							"is-selected": item?.isSelected ?? false,
-							"is-disabled": item?.isDisabled ?? false,
-						})}
+									[`${rootClass}-item`]: true,
+									"is-selected": item?.isSelected ?? false,
+									"is-disabled": item?.isDisabled ?? false,
+								})}
 								tabindex="0"
 							>
-								${when(item.icon, () =>
-							Icon({ ...globals, iconName: item.icon, size })
-						)}
-								${when(
-							item.label && !iconOnly,
-							() =>
-								html`<span class="${rootClass}-itemLabel"
-											>${item.label}</span
-										>`
-						)}
-								${selectionIndicator(item.isSelected)}
+								${when(item.iconName, () => icon)}
+								${when(item.label && !iconOnly, () => html`<span class="${rootClass}-itemLabel">${item.label}</span>`)}
+								${when(item.isSelected, () => html`
+									<div
+										class="${rootClass}-selectionIndicator"
+										style=${ifDefined(
+											styleMap({
+												blockSize: isVertical ? "100%" : undefined,
+												inlineSize: !isVertical ? "100%" : undefined,
+												maxInlineSize: isOverflow ? "50px" : undefined,
+												marginInlineStart: isVertical ? "calc(-1 * var(--spectrum-tabs-start-to-edge))" : undefined,
+											})
+										)}
+									></div>`
+								)}
 							</div>
 						`;
-					}
-					else {
-						return item;
-					}
-				}
-			), () => html`
-				${Picker({
-					isQuiet: true,
-					size,
-					isOpen,
-					placeholder: !iconOnly ? content?.[0].label : Icon({ ...globals, iconName: content?.[0].icon, size }),
-					name: content?.[0].label,
-					id: "tab-selector",
-					customPopoverStyles: {
-						insetBlockStart: "24px",
-					},
-					content: [
-						() => Menu({
-							selectionMode: "none",
-							size,
-							role: "listbox",
-							subrole: "option",
-							customStyles: { minWidth: "max-content" },
-							items: content.filter((_, idx) => idx !== 0).map(item => {
-								return {
+					})}
+				`,
+				() => html`
+					${Picker({
+						isQuiet: true,
+						size,
+						isOpen,
+						placeholder: !iconOnly ? content?.[0].label : content?.[0].icon,
+						name: content?.[0].label,
+						id: "tab-selector",
+						customPopoverStyles: {
+							insetBlockStart: "24px",
+						},
+						content: [
+							() => Menu({
+								selectionMode: "none",
+								size,
+								role: "listbox",
+								subrole: "option",
+								customStyles: { minWidth: "max-content" },
+								items: content.filter((_, idx) => idx !== 0).map(item => ({
 									...item,
-									iconName: item.icon,
 									label: !iconOnly ? item.label : undefined,
-								};
+								})),
 							}),
-						}),
-					]
-				})}
-				${selectionIndicator(true)}
-			`)}
+						]
+					})}
+					<div
+						class="${rootClass}-selectionIndicator"
+						style=${ifDefined(
+							styleMap({
+								blockSize: isVertical ? "100%" : undefined,
+								inlineSize: !isVertical ? "100%" : undefined,
+								maxInlineSize: isOverflow ? "50px" : undefined,
+								marginInlineStart: isVertical ? "calc(-1 * var(--spectrum-tabs-start-to-edge))" : undefined,
+							})
+						)}
+					></div>
+				`
+			)}
 		</div>
 	`;
 };

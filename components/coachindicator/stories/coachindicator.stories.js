@@ -6,7 +6,7 @@ import { Template } from "./template";
  * The coach indicator component can be used to bring added attention to specific parts of a page.
  */
 export default {
-	title: "components/Coach indicator",
+	title: "Coach indicator",
 	component: "CoachIndicator",
 	argTypes: {
 		isQuiet: {
@@ -77,7 +77,20 @@ const chromaticGroup = (args) => html`
 `;
 
 export const Default = (args) => html`
-	${window.isChromatic() ? chromaticGroup(args) : Template(args)}
+	${chromaticGroup({
+		...args,
+		customStyles: {
+			...(args.customStyles ?? {}),
+			"display": !window.isTestEnv() ? "none" : args?.customStyles?.display,
+		},
+	})}
+	${Template({
+		...args,
+		customStyles: {
+			...(args.customStyles ?? {}),
+			"display": window.isTestEnv() ? "none" : args?.customStyles?.display,
+		},
+	})}
 `;
 Default.args = {
 	variant: "default"

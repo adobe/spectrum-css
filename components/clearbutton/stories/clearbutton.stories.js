@@ -5,7 +5,7 @@ import { Template } from "./template";
  * The clear button component is an in-field button used in search and tag.
  */
 export default {
-	title: "Components/Clear button",
+	title: "Clear button",
 	component: "ClearButton",
 	argTypes: {
 		size: {

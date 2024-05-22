@@ -16,7 +16,7 @@ const fixedOptions = ["none", "fixed-inline-start", "fixed-inline-end", "fixed-b
  * - Fixed positioning impacts the border radius of the badge component
  */
 export default {
-	title: "Components/Badge",
+	title: "Badge",
 	component: "Badge",
 	argTypes: {
 		size: {

@@ -1,6 +1,5 @@
-import { html } from "lit";
-
 import { makeDecorator } from "@storybook/preview-api";
+import { html } from "lit";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -33,7 +32,7 @@ export const withReducedMotionWrapper = makeDecorator({
 					--spectrum-coachmark-animation-indicator-ring-duration: 0ms;
 				}
 			</style>
-			${StoryFn(context)}
+			${html`${StoryFn(context)}`}
 		`;
 	},
 });

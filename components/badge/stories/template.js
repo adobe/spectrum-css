@@ -18,7 +18,6 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	id,
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -34,7 +33,6 @@ export const Template = ({
 	>
 		${when(iconName, () =>
 			Icon({
-				...globals,
 				iconName,
 				customClasses: [
 					...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),

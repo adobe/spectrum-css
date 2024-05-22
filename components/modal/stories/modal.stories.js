@@ -4,7 +4,7 @@ import { Template } from "./template";
  * A modal component is a dialog box/popup window that is displayed on top of the current page.
  */
 export default {
-	title: "Components/Modal",
+	title: "Modal",
 	component: "Modal",
 	argTypes: {
 		isOpen: {
