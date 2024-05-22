@@ -13,7 +13,8 @@ governing permissions and limitations under the License.
 
 .spectrum-AlertBanner {
 	--spectrum-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
-	--spectrum-alert-banner-size: var(--spectrum-alert-banner-width);
+	--spectrum-alert-banner-max-inline-size: var(--spectrum-alert-banner-width);
+	--spectrum-alert-banner-size: auto;
 	--spectrum-alert-banner-font-size: var(--spectrum-font-size-100);
 	--spectrum-alert-banner-icon-size: var(--spectrum-workflow-icon-size-100);
 
@@ -52,6 +53,7 @@ governing permissions and limitations under the License.
 	display: none;
 	justify-content: space-between;
 	inline-size: var(--mod-alert-banner-size, var(--spectrum-alert-banner-size));
+	max-inline-size: var(--mod-alert-banner-max-inline-size, var(--spectrum-alert-banner-max-inline-size));
 	min-block-size: var(--mod-alert-banner-min-height, var(--spectrum-alert-banner-min-height));
 	font-size: var(--mod-alert-banner-font-size, var(--spectrum-alert-banner-font-size));
 	color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
