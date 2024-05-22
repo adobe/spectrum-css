@@ -1,0 +1,42 @@
+import { Canvas, Controls, Meta, Description, Title } from '@storybook/blocks';
+
+import * as AvatarStories from './avatar.stories';
+
+<Meta of={AvatarStories} title="Docs" />
+
+<Title of={AvatarStories} />
+<Description of={AvatarStories} />
+
+<Canvas of={AvatarStories.Default} />
+
+## Sizes
+
+Avatar is available in many sizes using the required `.spectrum-Avatar--size<number>` class. The available size classes are:
+
+- `spectrum-Avatar--size50`
+- `spectrum-Avatar--size75`
+- `spectrum-Avatar--size100`
+- `spectrum-Avatar--size200`
+- `spectrum-Avatar--size300`
+- `spectrum-Avatar--size400`
+- `spectrum-Avatar--size500`
+- `spectrum-Avatar--size600`
+- `spectrum-Avatar--size700`
+
+<Canvas of={AvatarStories.SizeOptions} />
+
+## No Link
+
+An avatar image is wrapped in a link that uses the `.spectrum-Avatar-link` class by default, however, an avatar may also be used without a link.
+
+<Canvas of={AvatarStories.NoLink} />
+
+## Disabled
+
+When disabled, the avatar should only be used without a link.
+
+<Canvas of={AvatarStories.Disabled} />
+
+## Controls
+
+<Controls />
