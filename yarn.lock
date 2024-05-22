@@ -5390,8 +5390,8 @@ __metadata:
     "@babel/core": "npm:^7.24.5"
     "@chromaui/addon-visual-tests": "npm:^1.0.0"
     "@etchteam/storybook-addon-status": "npm:^4.2.4"
-    "@spectrum-css/tokens": "npm:^14.0.0"
-    "@spectrum-css/ui-icons": "npm:^1.1.2"
+    "@spectrum-css/tokens": "workspace:^"
+    "@spectrum-css/ui-icons": "workspace:^"
     "@storybook/addon-a11y": "npm:^8.1.1"
     "@storybook/addon-actions": "npm:^8.1.1"
     "@storybook/addon-console": "npm:^3.0.0"
@@ -5703,14 +5703,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tokens@npm:^14.0.0":
-  version: 14.0.0
-  resolution: "@spectrum-css/tokens@npm:14.0.0"
-  checksum: 10c0/59b9a49c01b939035af8e73fec914f18cbd18eae17815fb8ce93a0c2e3b1217d21a20f8b697a6ac7b4d135d5dca52f985d6556e5f9c2a9f52698ce0c5dd401b1
-  languageName: node
-  linkType: hard
-
-"@spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
@@ -5779,7 +5772,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/ui-icons@npm:^1.1.2, @spectrum-css/ui-icons@workspace:ui-icons":
+"@spectrum-css/ui-icons@workspace:^, @spectrum-css/ui-icons@workspace:ui-icons":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/ui-icons@workspace:ui-icons"
   dependencies:
@@ -5814,8 +5807,8 @@ __metadata:
   dependencies:
     "@adobe/focus-ring-polyfill": "npm:^0.1.5"
     "@adobe/spectrum-css-workflow-icons": "npm:^1.5.4"
-    "@spectrum-css/tokens": "npm:^14.0.0"
-    "@spectrum-css/ui-icons": "npm:^1.1.2"
+    "@spectrum-css/tokens": "workspace:^"
+    "@spectrum-css/ui-icons": "workspace:^"
     browser-sync: "npm:^3.0.2"
     colors: "npm:^1.4.0"
     dependency-solver: "npm:^1.0.6"
