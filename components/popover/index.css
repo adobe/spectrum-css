@@ -150,7 +150,8 @@ governing permissions and limitations under the License.
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-start: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		/* stylelint-disable-next-line csstools/use-logical -- intentional, right stays on the same side even for RTL */
+		margin-left: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
 	}
 
 	/* popover animates towards right ⮕ */
@@ -166,7 +167,8 @@ governing permissions and limitations under the License.
 	/* spacing to include tip in calculation of offset from source */
 	&.spectrum-Popover--withTip {
 		/* tip size minus where it overlaps with popover border */
-		margin-inline-end: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
+		/* stylelint-disable-next-line csstools/use-logical -- intentional, left stays on the same side even for RTL */
+		margin-right: calc(var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width)) - var(--mod-popover-border-width, var(--spectrum-popover-border-width)));
 	}
 
 	/* popover animates towards left ⬅ */
@@ -342,7 +344,9 @@ governing permissions and limitations under the License.
 	&.spectrum-Popover--left-bottom,
 	&.spectrum-Popover--left-top {
 		.spectrum-Popover-tip {
-			inset-inline: 100% auto;
+			/* stylelint-disable-next-line csstools/use-logical -- intentional, left stays on the same side even for RTL */
+			left: 100%;
+			right: auto;
 		}
 	}
 
@@ -351,7 +355,9 @@ governing permissions and limitations under the License.
 	&.spectrum-Popover--right-bottom,
 	&.spectrum-Popover--right-top {
 		.spectrum-Popover-tip {
-			inset-inline: auto 100%;
+			/* stylelint-disable-next-line csstools/use-logical -- intentional, right stays on the same side even for RTL */
+			right: 100%;
+			left: auto;
 
 			/* flip tip to point left ◁ */
 			transform: scaleX(-1);

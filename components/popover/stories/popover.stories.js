@@ -1,10 +1,37 @@
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { userEvent, within } from "@storybook/testing-library";
 import { html } from "lit";
+import { when } from "lit/directives/when.js";
 
 import { Template } from "./template";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+
+const placementOptions = [
+	"top",
+	"top-left",
+	"top-right",
+	"top-start",
+	"top-end",
+	"bottom",
+	"bottom-left",
+	"bottom-right",
+	"bottom-start",
+	"bottom-end",
+	"right",
+	"right-bottom",
+	"right-top",
+	"left",
+	"left-bottom",
+	"left-top",
+	"start",
+	"start-top",
+	"start-bottom",
+	"end",
+	"end-top",
+	"end-bottom",
+];
 
 /**
  * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
@@ -44,20 +71,7 @@ export default {
 				category: "Component",
 			},
 			control: "select",
-			options: [
-				"top",
-				"top-start",
-				"top-end",
-				"bottom",
-				"bottom-start",
-				"bottom-end",
-				"left",
-				"left-top",
-				"left-bottom",
-				"right",
-				"right-top",
-				"right-bottom",
-			],
+			options: placementOptions,
 			if: { arg: "nested", truthy: false },
 		},
 	},
@@ -113,9 +127,58 @@ export default {
 		},
 	},
 	decorators: [
-		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
+		(Story, context) => html`
+			<style>
+				.spectrum-Detail { display: inline-block; }
+				.spectrum-Typography > div {
+					/* Why seafoam? Because it separates it from the component styles. */
+					--mod-detail-font-color: var(--spectrum-seafoam-900);
+				}
+			</style>
+			<div style="padding: 16px">${Story(context)}</div>
+		`,
 	],
 };
+
+
+const ChromaticTipPlacementVariants = (args) => html`
+	${placementOptions.map(option => {
+		const optionDescription = () => {
+			if (option.startsWith("start") || option.startsWith("end"))
+				return "Changes side with text direction (like a logical property)";
+			if (option.startsWith("left") || option.startsWith("right"))
+				return "Text direction does not affect the position";
+			return null;
+		};
+
+		return html`
+			<div class="spectrum-Typography" style="padding-bottom: 12rem;">
+				${Typography({
+					semantics: "detail",
+					size: "l",
+					content: [`${option}`],
+				})}
+				<div>
+					${when(optionDescription() !== null, () => html`
+						${Typography({
+							semantics: "detail",
+							size: "s",
+							content: [`${optionDescription()}`],
+						})}
+					`)}
+				</div>
+				<div style="padding-top: 2rem">
+					${Template({
+						...args,
+						position: option,
+						isOpen: true,
+						trigger: () => null,
+					})}
+				</div>
+			</div>
+		`;
+	})}
+`;
 
 export const Default = Template.bind({});
 Default.play = async ({ canvasElement }) => {
@@ -124,10 +187,12 @@ Default.play = async ({ canvasElement }) => {
 };
 Default.args = {};
 
-export const WithTip = Template.bind({});
+export const WithTip = (args) => html`
+	${window.isChromatic() ? ChromaticTipPlacementVariants(args) : Template(args)}
+`;
 WithTip.play = async ({ canvasElement }) => {
 	const canvas = within(canvasElement);
-	await userEvent.click(canvas.getByRole("button"));
+	window.isChromatic() ? null : await userEvent.click(canvas.getByRole("button"));
 };
 WithTip.args = {
 	withTip: true,
