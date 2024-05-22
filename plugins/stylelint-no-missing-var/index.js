@@ -10,12 +10,14 @@
  * governing permissions and limitations under the License.
  */
 
+import stylelint from "stylelint";
+
 const {
 	createPlugin,
 	utils: { report, ruleMessages, validateOptions }
-} = require("stylelint");
+} = stylelint;
 
-require("colors");
+import "colors";
 
 const ruleName = "spectrum-tools/no-missing-var";
 const messages = ruleMessages(ruleName, {
@@ -60,7 +62,8 @@ const ruleFunction = (enabled, _options, context) => {
 	};
 };
 
-module.exports.ruleName = ruleName;
-module.exports.messages = messages;
 
-module.exports = createPlugin(ruleName, ruleFunction);
+ruleFunction.ruleName = ruleName;
+ruleFunction.messages = messages;
+
+export default createPlugin(ruleName, ruleFunction);

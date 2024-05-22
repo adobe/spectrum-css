@@ -10,26 +10,29 @@
  * governing permissions and limitations under the License.
  */
 
-const path = require("path");
-const fs = require("fs");
+import { existsSync, readFileSync } from "fs";
+import { createRequire } from "module";
+import { join, sep } from "path";
+const require = createRequire(import.meta.url);
+
+import stylelint from "stylelint";
+import { isBoolean, isRegExp, isString } from "stylelint/lib/utils/validateTypes.mjs";
 
 const {
 	createPlugin,
 	utils: { report, ruleMessages, validateOptions }
-} = require("stylelint");
+} = stylelint;
 
-const { isString, isRegExp, isBoolean } = require("stylelint/lib/utils/validateTypes");
-
-require("colors");
+import "colors";
 
 const ruleName = "spectrum-tools/no-unknown-custom-properties";
 const messages = ruleMessages(ruleName, {
 	expected: (prop) => `Custom property ${prop.magenta} not defined`,
 });
 
-const fg = require("fast-glob");
-const postcss = require("postcss");
-const valueParser = require("postcss-value-parser");
+import fg from "fast-glob";
+import { parse } from "postcss";
+import valueParser from "postcss-value-parser";
 
 /** @type {import('stylelint').Plugin} */
 const ruleFunction = (enabled, options = {}) => {
@@ -62,18 +65,18 @@ const ruleFunction = (enabled, options = {}) => {
 		});
 
 		const sourceFile = root.source.input.file;
-		const parts = sourceFile ? sourceFile.split(path.sep) : [];
+		const parts = sourceFile ? sourceFile.split(sep) : [];
 
 		// @todo this is a hard-coded assumption that the components directory is the root before the component name
 		const rootIdx = parts.indexOf("components");
-		const componentRoot = parts.slice(0, rootIdx + 2).join(path.sep);
+		const componentRoot = parts.slice(0, rootIdx + 2).join(sep);
 
 		const sharedDefinitions = new Set();
 
 		for (const themePath of fg.sync(["themes/*.css"], { cwd: componentRoot, absolute: true })) {
-			const content = fs.readFileSync(themePath, "utf8");
+			const content = readFileSync(themePath, "utf8");
 			if (!content) continue;
-			postcss.parse(content).walkDecls(/^--/, ({ prop }) => {
+			parse(content).walkDecls(/^--/, ({ prop }) => {
 				sharedDefinitions.add(prop);
 			});
 		}
@@ -83,21 +86,22 @@ const ruleFunction = (enabled, options = {}) => {
 			try {
 				req = require.resolve(depName, {
 					paths: [
-						path.join(componentRoot, "node_modules"), path.join(__dirname, "../../node_modules")
+						join(componentRoot, "node_modules"), join(__dirname, "../../node_modules")
 					]
 				});
-			} catch (e) {
+			}
+			catch (e) {
 				/* allow quiet failure for peer dependencies */
 			}
 
 			// @note: if this is failing, it's likely b/c the dependency isn't built locally
-			if (!fs.existsSync(req)) return;
+			if (!existsSync(req)) return;
 
-			const content = fs.readFileSync(req, "utf8");
+			const content = readFileSync(req, "utf8");
 			if (!content) return;
 
 			// Fetch all defined custom properties
-			postcss.parse(content).walkDecls(/^--/, ({ prop }) => {
+			parse(content).walkDecls(/^--/, ({ prop }) => {
 				sharedDefinitions.add(prop);
 			});
 		}
@@ -105,7 +109,7 @@ const ruleFunction = (enabled, options = {}) => {
 		// Check dependencies for custom properties
 		if (!skipDependencies && rootIdx > -1) {
 			// @todo this is a hard-coded assumption
-			const pkg = require(path.join(componentRoot, "package.json"));
+			const pkg = require(join(componentRoot, "package.json"));
 
 			if (!pkg) return;
 
@@ -125,7 +129,8 @@ const ruleFunction = (enabled, options = {}) => {
 							fetchResolutions(`${dep}/dist/${d}`);
 						}
 					}
-				} catch (e) {
+				}
+				catch (e) {
 					/* allow quiet failure for peer dependencies */
 				}
 			}
@@ -165,7 +170,7 @@ const ruleFunction = (enabled, options = {}) => {
 	};
 };
 
-module.exports.ruleName = ruleName;
-module.exports.messages = messages;
+ruleFunction.ruleName = ruleName;
+ruleFunction.messages = messages;
 
-module.exports = createPlugin(ruleName, ruleFunction);
+export default createPlugin(ruleName, ruleFunction);
