@@ -1,7 +1,13 @@
 import { Template } from "./template";
 
 /**
- * The color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel.
+ * The color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel. Some usage notes:
+ * - The `.spectrum-ColorHandle` should be moved with the `transform: translate(x, y)` style property as the sliders are dragged
+ * - Set the background style property of `.spectrum-ColorArea-gradient` to the gradient of the colors to be selected
+ * - Set the value attribute of `.spectrum-ColorArea-slider[name=x]` to the currently selected x value (i.e. saturation)
+ * - Set the value attribute of `.spectrum-ColorArea-slider[name=y]` to the currently selected y value (i.e. value)
+ * - Set the value of the ColorHandle component to the selected color
+ * - Marshall focus between the saturation and value sliders according to which keys are pressed (up/down for value, left/right for saturation)
  */
 export default {
 	title: "Components/Color area",
@@ -52,4 +58,17 @@ export const CustomSize = Template.bind({});
 CustomSize.args = {
 	customWidth: "80px",
 	customHeight: "80px",
+};
+
+
+/**
+ * Stories for the MDX "Docs" only.
+ */
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true,
+};
+Disabled.tags = ["docs-only"];
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
 };

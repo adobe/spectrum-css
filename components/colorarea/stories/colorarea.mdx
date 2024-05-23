@@ -1,0 +1,24 @@
+import { ArgTypes, Canvas, Meta, Description, Title } from '@storybook/blocks';
+
+import * as ColorAreaStories from './colorarea.stories';
+
+<Meta of={ColorAreaStories} title="Docs" />
+
+<Title of={ColorAreaStories} />
+<Description of={ColorAreaStories} />
+
+## Standard
+
+<Canvas of={ColorAreaStories.Default} />
+
+## Custom size
+
+<Canvas of={ColorAreaStories.CustomSize} />
+
+## Disabled
+
+<Canvas of={ColorAreaStories.Disabled} />
+
+## Properties
+
+<ArgTypes />
