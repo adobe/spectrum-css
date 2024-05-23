@@ -1,5 +1,13 @@
 # Change Log
 
+## 7.1.3
+
+### Patch Changes
+
+- [#2757](https://github.com/adobe/spectrum-css/pull/2757) [`e945e26`](https://github.com/adobe/spectrum-css/commit/e945e261171c56a1e598f13915df6b3e71a4a423) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Prevents overlap of checkbox and icon if both are used in a menu item.
+
+  Also reduces a significant number of variants by consolidating menus, includes a refactor to enhance menu item understanding, and expands Chromatic testing coverage.
+
 ## 7.1.2
 
 ### Patch Changes
