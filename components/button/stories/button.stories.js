@@ -121,6 +121,11 @@ export default {
 			options: ["white", "black"],
 			control: "select",
 		},
+		customStyles: {
+			name: "Custom styles",
+			control: "object",
+			table: { disable: false },
+		},
 	},
 	args: {
 		rootClass: "spectrum-Button",
@@ -505,6 +510,72 @@ const CustomButtonWrap = (args) =>
 /* Stories */
 export const Default = Variants.bind({});
 Default.args = {};
+
+export const GradientTest = Variants.bind({});
+GradientTest.args = {
+	label: "Premium",
+	iconName: "Star",
+	customStyles: {
+		"--mod-button-background-color-default": "linear-gradient(135deg, #D92361, #7155FA 75%, #3B63FB)",
+		"--mod-button-background-color-focus": "linear-gradient(135deg, #BA1650, #6338EE 75%, #274DEA)",
+		"--mod-button-background-color-hover": "linear-gradient(135deg, #BA1650, #6338EE 75%, #274DEA)",
+		"--mod-button-background-color-active": "linear-gradient(135deg, #BA1650, #6338EE 75%, #274DEA)",
+		"background-origin": "border-box",
+	}
+};
+
+export const GradientTest2 = Variants.bind({});
+GradientTest2.args = {
+	label: "Generate",
+	iconName: "Asset",
+	customStyles: {
+		"--mod-button-background-color-default": "linear-gradient(135deg, #D45B00, #D92361 33%, #7155FA)",
+		"--mod-button-background-color-focus": "linear-gradient(135deg, #C24E00, #BA1650 33%, #6338EE)",
+		"--mod-button-background-color-hover": "linear-gradient(135deg, #C24E00, #BA1650 33%, #6338EE)",
+		"--mod-button-background-color-active": "linear-gradient(135deg, #C24E00, #BA1650 33%, #6338EE)",
+		"background-origin": "border-box",
+	}
+};
+
+export const GradientTest3 = Variants.bind({});
+GradientTest3.args = {
+	label: "Generate",
+	iconName: "Asset",
+	customStyles: {
+		"--mod-button-background-color-default": "linear-gradient(135deg, #D45B00 -50%, #D92361 33%, #7155FA 150%)",
+		"--mod-button-background-color-focus": "linear-gradient(135deg, #C24E00 -50%, #BA1650 33%, #6338EE 150%)",
+		"--mod-button-background-color-hover": "linear-gradient(135deg, #C24E00 -50%, #BA1650 33%, #6338EE 150%)",
+		"--mod-button-background-color-active": "linear-gradient(135deg, #C24E00 -50%, #BA1650 33%, #6338EE 150%)",
+		"background-origin": "border-box",
+	}
+};
+
+export const GradientTest4 = Variants.bind({});
+GradientTest4.args = {
+	label: "Generate",
+	iconName: "Asset",
+	customStyles: {
+		"--mod-button-background-color-default": "linear-gradient(135deg, #D45B00 -50%, #D92361 33%, #7155FA calc(100% + 40px))",
+		"--mod-button-background-color-focus": "linear-gradient(135deg, #C24E00 -50%, #BA1650 33%, #6338EE calc(100% + 40px))",
+		"--mod-button-background-color-hover": "linear-gradient(135deg, #C24E00 -50%, #BA1650 33%, #6338EE calc(100% + 40px))",
+		"--mod-button-background-color-active": "linear-gradient(135deg, #C24E00 -50%, #BA1650 33%, #6338EE calc(100% + 40px))",
+		"background-origin": "border-box",
+	}
+};
+
+export const GradientTestTransition = Variants.bind({});
+GradientTestTransition.args = {
+	label: "Premium",
+	iconName: "Star",
+	customStyles: {
+		"--mod-button-background-color-default": "linear-gradient(135deg, var(--spectrumColorStop1), var(--spectrumColorStop2) 75%, var(--spectrumColorStop3))",
+		"--mod-button-background-color-focus": "linear-gradient(135deg, var(--spectrumColorStop1), var(--spectrumColorStop2) 75%, var(--spectrumColorStop3))",
+		"--mod-button-background-color-hover": "linear-gradient(135deg, var(--spectrumColorStop1), var(--spectrumColorStop2) 75%, var(--spectrumColorStop3))",
+		"--mod-button-background-color-active": "linear-gradient(135deg, var(--spectrumColorStop1), var(--spectrumColorStop2) 75%, var(--spectrumColorStop3))",
+		"background-origin": "border-box",
+	}
+};
+
 
 export const StaticColorWhite = Variants.bind({});
 StaticColorWhite.args = {
