@@ -223,7 +223,7 @@ MenuWithVariants.args = {
 			heading: "Menu header - With actions, icons, thumbnails, short descriptions, and values and longer header text that wraps",
 			sectionDescription: "This menu header also has a description that is long enough to hopefully just maybe wrap if it's long enough",
 			id: "menu-heading-desc-icon-value",
-			hasActions: true,
+			hasSwitches: true,
 			items: [
 				{
 					label: "Menu item with action and a longer label that truncates if it is long enough to truncate",
@@ -247,6 +247,17 @@ MenuWithVariants.args = {
 					description: "Disabled menu item with description and icon",
 					isDisabled: true,
 					thumbnailUrl: "thumbnail.png",
+				},
+				{
+					label: "Menu item with external link action",
+					description: "Menu item with external link action (does not work in multi-select mode)",
+					hasExternalLink: true,
+				},
+				{
+					label: "Disabled menu item with external link action",
+					description: "Menu item with external link action (does not work in multi-select mode)",
+					hasExternalLink: true,
+					isDisabled: true,
 				},
 			],
 		},
@@ -501,7 +512,7 @@ const WithValueStates = (args) => {
 		},
 		{
 			stateTitle: "With value and switch",
-			args: { ...baseValueArgs, hasActions: true },
+			args: { ...baseValueArgs, hasSwitches: true },
 		},
 		{
 			stateTitle: "With value, truncated label",
@@ -551,11 +562,11 @@ const ChromaticMenuItem = (args) => {
 		},
 		{
 			sectionTitle: "Multi-selection with switches",
-			sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", hasActions: true}),
+			sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", hasSwitches: true}),
 		},
 		{
 			sectionTitle: "Multi-selection with switches and switch label",
-			sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", hasActions: true, items: [{ label: "Menu item", value: "switch label"}]}),
+			sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", hasSwitches: true, items: [{ label: "Menu item", value: "switch label"}]}),
 		},
 		{
 			sectionTitle: "With values",
@@ -594,7 +605,8 @@ MenuItemOnly.args = {
 			label: "Hello menu item",
 		},
 	],
-	hasActions: false,
+	hasExternalLink: false,
+	hasSwitches: false,
 	hasValue: false,
 	hasItemDescription: false,
 	hasIcon: false,
@@ -644,7 +656,17 @@ MenuItemOnly.argTypes = {
 			control: "boolean",
 		},
 	},
-	hasActions: {
+	hasExternalLink: {
+		name: "Has external link",
+		description: "Has external link action",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean",
+	},
+	hasSwitches: {
 		name: "Has switches",
 		description: "If multiple selection is enabled, show switches instead of checkboxes to show which items have been selected",
 		type: { name: "boolean" },

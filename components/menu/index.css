@@ -101,6 +101,9 @@ governing permissions and limitations under the License.
 	--spectrum-menu-drillin-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
 	--spectrum-menu-drillin-icon-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 
+	--spectrum-menu-linkout-icon-height: var(--spectrum-link-out-icon-size-100);
+	--spectrum-menu-linkout-icon-width: var(--spectrum-link-out-icon-size-100);
+
 	--spectrum-menu-item-value-color-default: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-menu-item-value-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
 	--spectrum-menu-item-value-color-down: var(--spectrum-neutral-subdued-content-color-down);
@@ -155,6 +158,9 @@ governing permissions and limitations under the License.
 	--spectrum-menu-drillin-icon-height: var(--spectrum-chevron-icon-size-75);
 	--spectrum-menu-drillin-icon-width: var(--spectrum-chevron-icon-size-75);
 
+	--spectrum-menu-linkout-icon-height: var(--spectrum-link-out-icon-size-75);
+	--spectrum-menu-linkout-icon-width: var(--spectrum-link-out-icon-size-75);
+
 	--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-small);
 }
 
@@ -193,6 +199,9 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-drillin-icon-height: var(--spectrum-chevron-icon-size-200);
 	--spectrum-menu-drillin-icon-width: var(--spectrum-chevron-icon-size-200);
+
+	--spectrum-menu-linkout-icon-height: var(--spectrum-link-out-icon-size-200);
+	--spectrum-menu-linkout-icon-width: var(--spectrum-link-out-icon-size-200);
 
 	--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-large);
 }
@@ -234,6 +243,9 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-drillin-icon-height: var(--spectrum-chevron-icon-size-300);
 	--spectrum-menu-drillin-icon-width: var(--spectrum-chevron-icon-size-300);
+
+	--spectrum-menu-linkout-icon-height: var(--spectrum-link-out-icon-size-200);
+	--spectrum-menu-linkout-icon-width: var(--spectrum-link-out-icon-size-200);
 }
 
 @media (forced-colors: active) {
@@ -614,6 +626,11 @@ governing permissions and limitations under the License.
 	margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
 }
 
+.spectrum-Menu-linkout {
+	block-size: var(--mod-menu-linkout-icon-height, var(--spectrum-menu-linkout-icon-height));
+	inline-size: var(--mod-menu-linkout-icon-width, var(--spectrum-menu-linkout-icon-width));
+}
+
 .spectrum-Menu-chevron {
 	grid-area: chevronArea;
 	align-self: center;
@@ -654,7 +671,7 @@ governing permissions and limitations under the License.
 	grid-area: chevronAreaDrillIn;
 }
 
-.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark, .spectrum-Menu-linkout) {
 	block-size: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
 	inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
 }

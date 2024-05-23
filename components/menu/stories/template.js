@@ -34,7 +34,7 @@ const getUIIconWithScale = (size = "m", iconName = "ArrowLeft") => {
 };
 
 const Label = ({
-	hasActions,
+	hasSwitches,
 	isCollapsible,
 	label,
 	rootClass,
@@ -46,7 +46,7 @@ const Label = ({
 	else {
 		return html`<span class=${classMap({
       [`${rootClass}Label`]: true,
-      ["spectrum-Switch-label"]: hasActions,
+      ["spectrum-Switch-label"]: hasSwitches,
       ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
       })}>
       ${label}
@@ -89,7 +89,7 @@ const Visual = ({
 };
 
 const StartAction = ({
-	hasActions,
+	hasSwitches,
 	idx,
 	isCollapsible,
 	isDisabled,
@@ -124,7 +124,7 @@ const StartAction = ({
       ],
     })}`;
 	}
-	else if (selectionMode == "multiple" && !hasActions) {
+	else if (selectionMode == "multiple" && !hasSwitches) {
 		return html`
       ${Checkbox({
         ...globals,
@@ -142,7 +142,8 @@ const StartAction = ({
 };
 
 const EndAction = ({
-	hasActions,
+	hasExternalLink,
+	hasSwitches,
 	idx,
 	isDisabled,
 	isDrillIn,
@@ -153,33 +154,46 @@ const EndAction = ({
 	value,
 	...globals
 }) => html`
-${value ? html`<span class="${rootClass}Value">${value}</span>` : ""}
-${hasActions && selectionMode == "multiple"
-  ? html`<div class="${rootClass}Actions">
-  ${Switch({
-      ...globals,
-      size,
-      isChecked: isSelected,
-      isDisabled,
-      label: null,
-      id: `menu-switch-${idx}`,
-      customClasses: [
-        `${rootClass}Switch`,
-      ],
-    })}
+  ${when(value, () => html`<span class="${rootClass}Value">${value}</span>`)}
+  ${when(
+    hasSwitches && selectionMode == "multiple",
+    () => html`<div class="${rootClass}Actions">
+      ${Switch({
+        ...globals,
+        size,
+        isChecked: isSelected,
+        isDisabled,
+        label: null,
+        id: `menu-switch-${idx}`,
+        customClasses: [
+          `${rootClass}Switch`,
+        ],
+      })}
     </div>`
-  : ""}
-  ${
-    isDrillIn ? html`${Icon({
-      ...globals,
-      iconName: "ChevronRight100",
-      size,
-      customClasses: [
-        `${rootClass}Icon`,
-        "spectrum-Menu-chevron",
-      ],
-    })}` : ""
-  }
+  )}
+  ${when(
+    hasExternalLink && !(hasSwitches && selectionMode === "multiple"),
+    () => html`<div class="${rootClass}Actions">
+        ${Icon({
+          ...globals,
+          iconName: "LinkOut",
+          size,
+          customClasses: [
+            `${rootClass}Icon`,
+            "spectrum-Menu-linkout",
+          ],
+        })}
+      </div>`
+  )}
+  ${when(isDrillIn, () => html`${Icon({
+    ...globals,
+    iconName: "ChevronRight100",
+    size,
+    customClasses: [
+      `${rootClass}Icon`,
+      "spectrum-Menu-chevron",
+    ],
+  })}`)}
 `;
 
 const Description = ({
@@ -190,7 +204,8 @@ const Description = ({
 export const MenuItem = ({
 	description,
 	iconName,
-	hasActions,
+	hasExternalLink,
+	hasSwitches,
 	id,
 	idx = 0,
 	isActive = false,
@@ -231,11 +246,11 @@ export const MenuItem = ({
     aria-selected=${isSelected ? "true" : "false"}
     aria-disabled=${isDisabled ? "true" : "false"}
     tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
-      ${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, rootClass, selectionMode, size, ...globals })}
+      ${StartAction({ hasSwitches, idx, isCollapsible, isDisabled, isSelected, rootClass, selectionMode, size, ...globals })}
       ${Visual({ iconName, rootClass, size, thumbnailUrl, ...globals })}
-      ${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
+      ${Label({ hasSwitches, isCollapsible, label, rootClass, shouldTruncate })}
       ${when(description, () => Description({ description, rootClass }))}
-      ${EndAction({ hasActions, idx, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, ...globals })}
+      ${EndAction({ hasExternalLink, hasSwitches, idx, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, ...globals })}
       ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size, shouldTruncate }) : ""}
   </li>
 `;
@@ -309,7 +324,8 @@ export const MenuGroup = ({
 export const Template = ({
 	customClasses = [],
 	customStyles = {},
-	hasActions,
+	hasExternalLink,
+	hasSwitches,
 	hasDividers = false,
 	hasThumbnail = false,
 	id,
@@ -373,7 +389,8 @@ export const Template = ({
             ...globals,
             ...i,
             description: singleItemDescription || i.description,
-            hasActions,
+            hasExternalLink: hasExternalLink || i.hasExternalLink,
+            hasSwitches,
             iconName: itemIcon || i.iconName,
             idx,
             isActive: isItemActive,

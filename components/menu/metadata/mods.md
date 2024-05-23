@@ -76,6 +76,8 @@
 | `--mod-menu-item-value-color-down`                                 |
 | `--mod-menu-item-value-color-focus`                                |
 | `--mod-menu-item-value-color-hover`                                |
+| `--mod-menu-linkout-icon-height`                                   |
+| `--mod-menu-linkout-icon-width`                                    |
 | `--mod-menu-section-description-color`                             |
 | `--mod-menu-section-description-font-size`                         |
 | `--mod-menu-section-description-font-weight`                       |
