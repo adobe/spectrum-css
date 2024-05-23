@@ -1,0 +1,20 @@
+import { ArgTypes, Canvas, Meta, Description, Title } from '@storybook/blocks';
+
+import * as CoachmarkStories from './coachmark.stories';
+
+<Meta of={CoachmarkStories} title="Docs" />
+
+<Title of={CoachmarkStories} />
+<Description of={CoachmarkStories} />
+
+## Standard
+
+<Canvas of={CoachmarkStories.Default} />
+
+## With media
+
+<Canvas of={CoachmarkStories.WithMedia} />
+
+## Properties
+
+<ArgTypes />

@@ -4,7 +4,7 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 
 /**
- * The coach mark component can be used to bring added attention to specific parts of a page.
+ * The coach mark component can be used to bring added attention to specific parts of a page. It is a separate component from the coach indicator.
  */
 export default {
 	title: "Components/Coach mark",
@@ -68,4 +68,12 @@ Default.args = {};
 export const WithMedia = Template.bind({});
 WithMedia.args = {
 	hasImage: true,
+};
+WithMedia.parameters = {
+	docs: {
+		story: {
+			inline: false,
+			height: 475,
+		},
+	},
 };
