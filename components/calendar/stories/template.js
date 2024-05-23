@@ -19,6 +19,7 @@ export const Template = ({
 	year,
 	padded,
 	isDisabled = false,
+	isFocused = false,
 	useDOWAbbrev = false,
 	buttonSize = "s",
 	customClasses = [],
@@ -193,6 +194,9 @@ export const Template = ({
 						(selectedDate && selectedDatetime === thisDatetime) ||
 						isInRange
 					);
+					const isFocused = thisDay === 5;
+
+					console.log(thisDay, isFocused);
 
 					return {
 						date: thisDate,
@@ -202,6 +206,7 @@ export const Template = ({
 						isInRange,
 						isRangeStart: !!(isInRange && thisDatetime === selectedDatetime),
 						isRangeEnd: !!(isInRange && thisDatetime === lastSelectedDatetime),
+						isFocused,
 					};
 				})
 			);
@@ -366,6 +371,7 @@ export const Template = ({
 												"is-selection-start": thisDay.isRangeStart,
 												"is-selection-end": thisDay.isRangeEnd,
 												"is-disabled": isDisabled,
+												"is-focused": isFocused && thisDay.isFocused,
 											})}
 											@click=${onDateClick.bind(null, thisDay)}
 											>${thisDay.date.getDate()}</span

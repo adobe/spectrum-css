@@ -85,11 +85,13 @@ export default {
 		buttonSize: {
 			table: { disable: true },
 		},
+		isFocused: { table: { disable: true }, },
 	},
 	args: {
 		rootClass: "spectrum-Calendar",
 		padded: false,
 		isDisabled: false,
+		isFocused: false,
 		useDOWAbbrev: false,
 		buttonSize: ActionButtonStories.args.size,
 	},
@@ -131,4 +133,25 @@ Disabled.args = {
 	selectedDay: new Date(2023, 6, 3),
 	year: 2023,
 	isDisabled: true
+};
+
+/**
+ * Stories for the MDX "Docs" only.
+ */
+export const AbbreviatedWeekdays = Template.bind({});
+AbbreviatedWeekdays.args = {
+	useDOWAbbrev: true,
+};
+AbbreviatedWeekdays.tags = ["docs-only"];
+AbbreviatedWeekdays.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Focused = Template.bind({});
+Focused.args = {
+	isFocused: true,
+};
+Focused.tags = ["docs-only"];
+Focused.parameters = {
+	chromatic: { disableSnapshot: true },
 };
