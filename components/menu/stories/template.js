@@ -12,6 +12,26 @@ import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
 
 import "../index.css";
 
+const getUIIconWithScale = (size = "m", iconName = "ArrowLeft") => {
+	const scales = {
+		ArrowLeft: { s: 200, l: 400, xl: 500, default: 300 },
+		Checkmark: { s: 75, l: 200, xl: 300, default: 100 },
+	};
+
+	const selectedScale = scales[iconName];
+
+	switch (size) {
+		case "s":
+			return `${iconName}${selectedScale.s}`;
+		case "l":
+			return `${iconName}${selectedScale.l}`;
+		case "xl":
+			return `${iconName}${selectedScale.xl}`;
+		default:
+			return `${iconName}${selectedScale.default}`;
+	}
+};
+
 const Label = ({
 	hasActions,
 	isCollapsible,
@@ -83,7 +103,7 @@ const StartAction = ({
 		return html`
     ${Icon({
       ...globals,
-      iconName: "Checkmark100",
+      iconName: getUIIconWithScale(size, "Checkmark"),
       size,
       customClasses: [
         `${rootClass}Icon`,
@@ -206,22 +226,6 @@ export const MenuItem = ({
   </li>
 `;
 
-/**
- * Get the tray submenu back arrow name with scale number (defined in design spec).
- */
-const backArrowWithScale = (size = "m", iconName = "ArrowLeft") => {
-	switch (size) {
-		case "s":
-			return `${iconName}200`;
-		case "l":
-			return `${iconName}400`;
-		case "xl":
-			return `${iconName}500`;
-		default:
-			return `${iconName}300`;
-	}
-};
-
 export const MenuGroup = ({
 	heading,
 	id,
@@ -250,7 +254,7 @@ export const MenuGroup = ({
           <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
             ${Icon({
               ...globals,
-              iconName: backArrowWithScale(size),
+              iconName: getUIIconWithScale(size, "ArrowLeft"),
               size,
               customClasses: ["spectrum-Menu-backIcon"]
             })}
