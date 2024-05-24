@@ -93,7 +93,7 @@ function setPickerValue(picker, value, label = undefined) {
 
 	if (menuItem) {
 		const selectedMenuItem = menu.querySelector(
-			".spectrum-Menu-item.is-selected"
+			".spectrum-Menu-item[selected]"
 		);
 
 		if (selectedMenuItem) {
@@ -270,7 +270,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	[...document.querySelectorAll(".spectrum-CycleButton")].forEach((cycleButton) => {
 		cycleButton.addEventListener("click", () => {
 			const icons = [...cycleButton.querySelectorAll(".spectrum-Icon")];
-			const currentIcon = cycleButton.querySelector(".spectrum-Icon.is-selected");
+			const currentIcon = cycleButton.querySelector(".spectrum-Icon[selected]");
 			const currentIconIndex = icons.indexOf(currentIcon);
 
 			if (!currentIcon) return;
@@ -302,7 +302,7 @@ window.addEventListener("DOMContentLoaded", () => {
 						// Remove other selected items
 						const outerTreeview = furthest(el, ".spectrum-TreeView");
 						if (outerTreeview) {
-							[...outerTreeview.querySelectorAll(".spectrum-TreeView-item.is-selected")].forEach(item => {
+							[...outerTreeview.querySelectorAll(".spectrum-TreeView-item[selected]")].forEach(item => {
 								if (item != treeviewItem) {
 									item.classList.remove("is-selected");
 
@@ -738,7 +738,7 @@ document.addEventListener("keypress", (event) => {
 	if (menuItem) {
 		const menu = menuItem.closest(".spectrum-Menu");
 		if (menuItem.classList.contains("spectrum-Menu-item")) {
-			const items = [...menu.querySelectorAll(".spectrum-Menu-item:not(.is-disabled)")];
+			const items = [...menu.querySelectorAll(".spectrum-Menu-item:not([disabled])")];
 			const menuItemIndex = items.indexOf(menuItem);
 			let newItemIndex = -1;
 			if (event.key === "ArrowDown") {

@@ -1,0 +1,29 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-colorhandle-size: var(--mod-colorhandle-size, var(--spectrum-colorhandle-size));
+  --spectrum-colorhandle-border-width: var(--mod-colorhandle-border-width, var(--spectrum-colorhandle-border-width));
+  --spectrum-colorhandle-border-color: var(--mod-colorhandle-border-color, var(--spectrum-colorhandle-border-color));
+  --spectrum-colorhandle-outer-border-width: var(--mod-colorhandle-outer-border-width, var(--spectrum-colorhandle-outer-border-width));
+  --spectrum-colorhandle-outer-border-color: var(--mod-colorhandle-outer-border-color, var(--spectrum-colorhandle-outer-border-color));
+  --spectrum-colorhandle-animation-duration: var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration));
+  --spectrum-colorhandle-animation-easing: var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing));
+  --spectrum-colorhandle-hitarea-size: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
+  --spectrum-colorhandle-hitarea-border-radius: var(--mod-colorhandle-hitarea-border-radius, var(--spectrum-colorhandle-hitarea-border-radius));
+  --spectrum-colorhandle-focused-size: var(--mod-colorhandle-focused-size, var(--spectrum-colorhandle-focused-size));
+  --spectrum-colorhandle-border-color-disabled: var(--mod-colorhandle-border-color-disabled, var(--spectrum-colorhandle-border-color-disabled));
+  --spectrum-colorhandle-fill-color-disabled: var(--mod-colorhandle-fill-color-disabled, var(--spectrum-colorhandle-fill-color-disabled));
+  --spectrum-colorhandle-inner-border-width: var(--mod-colorhandle-inner-border-width, var(--spectrum-colorhandle-inner-border-width));
+  --spectrum-colorhandle-inner-border-color: var(--mod-colorhandle-inner-border-color, var(--spectrum-colorhandle-inner-border-color));
+}

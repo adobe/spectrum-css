@@ -10,9 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
+:root {
+	--spectrum-clear-button-background-color: transparent;
+	--spectrum-clear-button-background-color-hover: transparent;
+	--spectrum-clear-button-background-color-down: transparent;
+	--spectrum-clear-button-background-color-key-focus: transparent;
 
-.spectrum-ClearButton {
 	--spectrum-clear-button-height: var(--spectrum-component-height-100);
 	--spectrum-clear-button-width: var(--spectrum-component-height-100);
 	--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);
@@ -22,46 +25,27 @@ governing permissions and limitations under the License.
 	--spectrum-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
 	--spectrum-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 
-	&.spectrum-ClearButton--sizeS {
-		--spectrum-clear-button-height: var(--spectrum-component-height-75);
-		--spectrum-clear-button-width: var(--spectrum-component-height-75);
+	.spectrum-ClearButton {
+		&[size="S"] {
+			--spectrum-clear-button-height: var(--spectrum-component-height-75);
+			--spectrum-clear-button-width: var(--spectrum-component-height-75);
+		}
+
+		&[size="L"] {
+			--spectrum-clear-button-height: var(--spectrum-component-height-200);
+			--spectrum-clear-button-width: var(--spectrum-component-height-200);
+		}
+
+		&[size="XL"] {
+			--spectrum-clear-button-height: var(--spectrum-component-height-300);
+			--spectrum-clear-button-width: var(--spectrum-component-height-300);
+		}
 	}
+}
 
-	&.spectrum-ClearButton--sizeL {
-		--spectrum-clear-button-height: var(--spectrum-component-height-200);
-		--spectrum-clear-button-width: var(--spectrum-component-height-200);
-	}
-
-	&.spectrum-ClearButton--sizeXL {
-		--spectrum-clear-button-height: var(--spectrum-component-height-300);
-		--spectrum-clear-button-width: var(--spectrum-component-height-300);
-	}
-
-	&.spectrum-ClearButton--quiet {
-		--mod-clear-button-background-color: var(--spectrum-clear-button-background-color-quiet, transparent);
-		--mod-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-quiet, transparent);
-		--mod-clear-button-background-color-down: var(--spectrum-clear-button-background-color-down-quiet, transparent);
-		--mod-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-key-focus-quiet, transparent);
-	}
-
-	&.spectrum-ClearButton--overBackground {
-		--mod-clear-button-icon-color: var(--spectrum-clear-button-icon-color-over-background, var(--spectrum-white));
-		--mod-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-over-background, var(--spectrum-white));
-		--mod-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-over-background, var(--spectrum-white));
-		--mod-clear-button-icon-color-key-focus: var(--spectrum-clear-button-icon-color-key-focus-over-background, var(--spectrum-white));
-
-		--mod-clear-button-background-color: var(--spectrum-clear-button-background-color-over-background, transparent);
-		--mod-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
-		--mod-clear-button-background-color-down: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-400));
-		--mod-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
-	}
-
-	&:disabled,
-	&.is-disabled {
-		--mod-clear-button-icon-color: var(--mod-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color));
-		--mod-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
-		--mod-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-disabled, var(--spectrum-disabled-content-color));
-		--mod-clear-button-background-color: var(--mod-clear-button-background-color-disabled, transparent);
+@media (forced-colors: active) {
+	.spectrum-ClearButton:not(:disabled) {
+		--highcontrast-clear-button-icon-color-hover: Highlight;
 	}
 }
 
@@ -78,7 +62,7 @@ governing permissions and limitations under the License.
 	border: none;
 	color: var(--mod-clear-button-icon-color, var(--spectrum-clear-button-icon-color));
 
-	> .spectrum-Icon {
+	& > .spectrum-Icon {
 		/* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
 		margin-block: 0;
 		margin-inline: auto;
@@ -108,30 +92,49 @@ governing permissions and limitations under the License.
 			background-color: var(--mod-clear-button-background-color-key-focus, var(--spectrum-clear-button-background-color-key-focus));
 		}
 	}
-}
 
-.spectrum-ClearButton-fill {
-	background-color: var(--mod-clear-button-background-color, var(--spectrum-clear-button-background-color));
-
-	inline-size: 100%;
-	block-size: 100%;
-	border-radius: 100%;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.spectrum-ClearButton--overBackground {
-	&:focus-visible {
-		outline: none;
+	&[quiet] {
+		--spectrum-clear-button-background-color: var(--spectrum-clear-button-background-color-quiet, transparent);
+		--spectrum-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-quiet, transparent);
+		--spectrum-clear-button-background-color-down: var(--spectrum-clear-button-background-color-down-quiet, transparent);
+		--spectrum-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-key-focus-quiet, transparent);
 	}
-}
 
-@media (forced-colors: active) {
-	.spectrum-ClearButton {
-		&:not(:disabled) {
-			--highcontrast-clear-button-icon-color-hover: Highlight;
+	&[overBackground] {
+		--spectrum-clear-button-icon-color: var(--spectrum-clear-button-icon-color-over-background, var(--spectrum-white));
+		--spectrum-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-over-background, var(--spectrum-white));
+		--spectrum-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-over-background, var(--spectrum-white));
+		--spectrum-clear-button-icon-color-key-focus: var(--spectrum-clear-button-icon-color-key-focus-over-background, var(--spectrum-white));
+
+		--spectrum-clear-button-background-color: var(--spectrum-clear-button-background-color-over-background, transparent);
+		--spectrum-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
+		--spectrum-clear-button-background-color-down: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-400));
+		--spectrum-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
+	}
+
+	&:disabled,
+	&[disabled] {
+		--spectrum-clear-button-icon-color: var(--mod-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color));
+		--spectrum-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
+		--spectrum-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-disabled, var(--spectrum-disabled-content-color));
+		--spectrum-clear-button-background-color: var(--mod-clear-button-background-color-disabled, transparent);
+	}
+
+	.spectrum-ClearButton-fill {
+		background-color: var(--mod-clear-button-background-color, var(--spectrum-clear-button-background-color));
+
+		inline-size: 100%;
+		block-size: 100%;
+		border-radius: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&[overBackground] {
+		&:focus-visible {
+			outline: none;
 		}
 	}
 }

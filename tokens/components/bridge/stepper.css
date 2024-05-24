@@ -32,7 +32,7 @@ governing permissions and limitations under the License.
   --spectrum-stepper-button-background-color-focus: var(--system-spectrum-stepper-button-background-color-focus);
   --spectrum-stepper-button-background-color-keyboard-focus: var(--system-spectrum-stepper-button-background-color-keyboard-focus);
 }
-.spectrum-Stepper.is-disabled {
+.spectrum-Stepper[disabled] {
   --spectrum-stepper-buttons-background-color: var(--system-spectrum-stepper-disabled-buttons-background-color);
   --spectrum-stepper-buttons-border-width: var(--system-spectrum-stepper-disabled-buttons-border-width);
 }

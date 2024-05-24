@@ -10,11 +10,21 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+:root {
+	--spectrum-icon-inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size,)));
+	--spectrum-icon-block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size,)));
+}
+
+@media (forced-colors: active) {
+	.spectrum-Icon,
+	.spectrum-UIIcon {
+		/* Automatically adjust the SVG to pick up the text color for High Contrast mode */
+		forced-color-adjust: auto;
+	}
+}
+
 .spectrum-Icon,
 .spectrum-UIIcon {
-	--spectrum-icon-inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size)));
-	--spectrum-icon-block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size)));
-
 	display: inline-block;
 	inline-size: var(--spectrum-icon-inline-size);
 	block-size: var(--spectrum-icon-block-size);
@@ -32,12 +42,4 @@ governing permissions and limitations under the License.
 
 	/* Don't catch clicks or hover, otherwise they may not escape the SVG. */
 	pointer-events: none;
-}
-
-@media (forced-colors: active) {
-	.spectrum-Icon,
-	.spectrum-UIIcon {
-		/* Automatically adjust the SVG to pick up the text color for High Contrast mode */
-		forced-color-adjust: auto;
-	}
 }

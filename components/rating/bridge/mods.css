@@ -1,0 +1,35 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-rating-icon-spacing: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
+  --spectrum-rating-icon-width: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
+  --spectrum-rating-icon-count: var(--mod-rating-icon-count, var(--spectrum-rating-icon-count));
+  --spectrum-rating-border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+  --spectrum-rating-focus-indicator-gap: var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap));
+  --spectrum-rating-focus-indicator-thickness: var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness));
+  --spectrum-rating-focus-indicator-color: var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color));
+  --spectrum-rating-icon-color-key-focus: var(--mod-rating-icon-color-key-focus, var(--spectrum-rating-icon-color-key-focus));
+  --spectrum-rating-icon-height: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
+  --spectrum-rating-icon-spacing-vertical-top: var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top));
+  --spectrum-rating-indicator-border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
+  --spectrum-rating-indicator-height: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
+  --spectrum-rating-icon-color-default: var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default));
+  --spectrum-rating-emphasized-icon-color-key-focus: var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus));
+  --spectrum-rating-emphasized-icon-color-default: var(--mod-rating-emphasized-icon-color-default, var(--spectrum-rating-emphasized-icon-color-default));
+  --spectrum-rating-icon-color-hover: var(--mod-rating-icon-color-hover, var(--spectrum-rating-icon-color-hover));
+  --spectrum-rating-icon-color-down: var(--mod-rating-icon-color-down, var(--spectrum-rating-icon-color-down));
+  --spectrum-rating-emphasized-icon-color-hover: var(--mod-rating-emphasized-icon-color-hover, var(--spectrum-rating-emphasized-icon-color-hover));
+  --spectrum-rating-emphasized-icon-color-down: var(--mod-rating-emphasized-icon-color-down, var(--spectrum-rating-emphasized-icon-color-down));
+  --spectrum-rating-icon-color-disabled: var(--mod-rating-icon-color-disabled, var(--spectrum-rating-icon-color-disabled));
+}

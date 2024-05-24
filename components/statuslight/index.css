@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-StatusLight {
+:root {
 	/* Static tokens */
 	--spectrum-statuslight-corner-radius: 50%;
 	--spectrum-statuslight-font-weight: 400;
@@ -53,21 +53,7 @@ governing permissions and limitations under the License.
 	--spectrum-statuslight-nonsemantic-purple-color: var(--spectrum-purple-visual-color);
 	--spectrum-statuslight-nonsemantic-fuchsia-color: var(--spectrum-fuchsia-visual-color);
 	--spectrum-statuslight-nonsemantic-magenta-color: var(--spectrum-magenta-visual-color);
-}
 
-.spectrum-StatusLight--sizeS {
-	--spectrum-statuslight-height: var(--spectrum-component-height-75);
-	--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-small);
-
-	--spectrum-statuslight-font-size: var(--spectrum-font-size-75);
-
-	--spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-75);
-	--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-small);
-	--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
-	--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-75);
-}
-
-.spectrum-StatusLight--sizeM {
 	--spectrum-statuslight-height: var(--spectrum-component-height-100);
 	--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-medium);
 
@@ -77,37 +63,54 @@ governing permissions and limitations under the License.
 	--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-medium);
 	--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
 	--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100);
-}
 
-.spectrum-StatusLight--sizeL {
-	--spectrum-statuslight-height: var(--spectrum-component-height-200);
-	--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-large);
+	.spectrum-StatusLight {
+		&[size="S"] {
+			--spectrum-statuslight-height: var(--spectrum-component-height-75);
+			--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-small);
 
-	--spectrum-statuslight-font-size: var(--spectrum-font-size-200);
+			--spectrum-statuslight-font-size: var(--spectrum-font-size-75);
 
-	--spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-200);
-	--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-large);
-	--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-200);
-	--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-200);
-}
+			--spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-75);
+			--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-small);
+			--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
+			--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-75);
+		}
 
-.spectrum-StatusLight--sizeXL {
-	--spectrum-statuslight-height: var(--spectrum-component-height-300);
-	--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-extra-large);
+		&[size="L"] {
+			--spectrum-statuslight-height: var(--spectrum-component-height-200);
+			--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-large);
 
-	--spectrum-statuslight-font-size: var(--spectrum-font-size-300);
+			--spectrum-statuslight-font-size: var(--spectrum-font-size-200);
 
-	--spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-300);
-	--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-extra-large);
-	--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-300);
-	--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-300);
+			--spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-200);
+			--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-large);
+			--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-200);
+			--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-200);
+		}
+
+		&[size="XL"] {
+			--spectrum-statuslight-height: var(--spectrum-component-height-300);
+			--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-extra-large);
+
+			--spectrum-statuslight-font-size: var(--spectrum-font-size-300);
+
+			--spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-300);
+			--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-extra-large);
+			--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-300);
+			--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-300);
+		}
+	}
 }
 
 @media (forced-colors: active) {
-	.spectrum-StatusLight {
-		forced-color-adjust: none;
+	:root {
 		--highcontrast-statuslight-content-color-default: CanvasText;
 		--highcontrast-statuslight-subdued-content-color-default: CanvasText;
+	}
+
+	.spectrum-StatusLight {
+		forced-color-adjust: none;
 
 		&::before {
 			border: var(--mod-statuslight-border-width, var(--spectrum-statuslight-border-width)) solid ButtonText;
@@ -128,6 +131,7 @@ governing permissions and limitations under the License.
 	box-sizing: border-box;
 
 	font-size: var(--mod-statuslight-font-size, var(--spectrum-statuslight-font-size));
+	font-style: var(--spectrum-statuslight-font-style, normal);
 	font-weight: var(--mod-statuslight-font-weight, var(--spectrum-statuslight-font-weight));
 
 	line-height: var(--mod-statuslight-line-height, var(--spectrum-statuslight-line-height));
@@ -142,6 +146,8 @@ governing permissions and limitations under the License.
 
 	/* Dot */
 	&::before {
+		--spectrum-statuslight-spacing-computed-top-to-dot: calc(var(--mod-statuslight-spacing-top-to-dot, var(--spectrum-statuslight-spacing-top-to-dot)) - var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label)));
+
 		content: "";
 		flex-grow: 0;
 		flex-shrink: 0;
@@ -149,8 +155,8 @@ governing permissions and limitations under the License.
 		inline-size: var(--mod-statuslight-dot-size, var(--spectrum-statuslight-dot-size));
 		block-size: var(--mod-statuslight-dot-size, var(--spectrum-statuslight-dot-size));
 		border-radius: var(--mod-statuslight-corner-radius, var(--spectrum-statuslight-corner-radius));
+		background-color: var(--spectrum-statuslight-color,);
 
-		--spectrum-statuslight-spacing-computed-top-to-dot: calc(var(--mod-statuslight-spacing-top-to-dot, var(--spectrum-statuslight-spacing-top-to-dot)) - var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label)));
 		margin-block-start: var(--spectrum-statuslight-spacing-computed-top-to-dot);
 		margin-inline-end: var(--mod-statuslight-spacing-dot-to-label, var(--spectrum-statuslight-spacing-dot-to-label));
 
@@ -158,96 +164,87 @@ governing permissions and limitations under the License.
 		-ms-high-contrast-adjust: none;
 		forced-color-adjust: none;
 	}
-}
 
-.spectrum-StatusLight--neutral {
-	font-style: italic;
-}
-
-/* Semantic Colors */
-
-.spectrum-StatusLight--neutral {
-	color: var(--highcontrast-statuslight-subdued-content-color-default, var(--mod-statuslight-subdued-content-color-default, var(--spectrum-statuslight-subdued-content-color-default)));
-
-	&::before {
-		background-color: var(--mod-statuslight-semantic-neutral-color, var(--spectrum-statuslight-semantic-neutral-color));
+	&[neutral] {
+		--spectrum-statuslight-font-style: italic;
+		--spectrum-statuslight-content-color-default: var(--highcontrast-statuslight-subdued-content-color-default, var(--mod-statuslight-subdued-content-color-default, var(--spectrum-statuslight-subdued-content-color-default)));
+		--spectrum-statuslight-color: var(--mod-statuslight-semantic-neutral-color, var(--spectrum-statuslight-semantic-neutral-color));
 	}
-}
 
-.spectrum-StatusLight--accent::before {
-	background-color: var(--mod-statuslight-semantic-accent-color, var(--spectrum-statuslight-semantic-accent-color));
-}
+	&[accent] {
+		--spectrum-statuslight-color: var(--mod-statuslight-semantic-accent-color, var(--spectrum-statuslight-semantic-accent-color));
+	}
 
-.spectrum-StatusLight--info::before {
-	background-color: var(--mod-statuslight-semantic-info-color, var(--spectrum-statuslight-semantic-info-color));
-}
+	&[info] {
+		--spectrum-statuslight-color: var(--mod-statuslight-semantic-info-color, var(--spectrum-statuslight-semantic-info-color));
+	}
 
-.spectrum-StatusLight--negative::before {
-	background-color: var(--mod-statuslight-semantic-negative-color, var(--spectrum-statuslight-semantic-negative-color));
-}
+	&[negative] {
+		--spectrum-statuslight-color: var(--mod-statuslight-semantic-negative-color, var(--spectrum-statuslight-semantic-negative-color));
+	}
 
-.spectrum-StatusLight--notice::before {
-	background-color: var(--mod-statuslight-semantic-notice-color, var(--spectrum-statuslight-semantic-notice-color));
-}
+	&[notice] {
+		--spectrum-statuslight-color: var(--mod-statuslight-semantic-notice-color, var(--spectrum-statuslight-semantic-notice-color));
+	}
 
-.spectrum-StatusLight--positive::before {
-	background-color: var(--mod-statuslight-semantic-positive-color, var(--spectrum-statuslight-semantic-positive-color));
-}
+	&[positive] {
+		--spectrum-statuslight-color: var(--mod-statuslight-semantic-positive-color, var(--spectrum-statuslight-semantic-positive-color));
+	}
 
-/* Non-Semantic Colors */
+	/* Non-Semantic Colors */
+	&[gray] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-gray-color, var(--spectrum-statuslight-nonsemantic-gray-color));
+	}
 
-.spectrum-StatusLight--gray::before {
-	background-color: var(--mod-statuslight-nonsemantic-gray-color, var(--spectrum-statuslight-nonsemantic-gray-color));
-}
+	&[red] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-red-color, var(--spectrum-statuslight-nonsemantic-red-color));
+	}
 
-.spectrum-StatusLight--red::before {
-	background-color: var(--mod-statuslight-nonsemantic-red-color, var(--spectrum-statuslight-nonsemantic-red-color));
-}
+	&[orange] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-orange-color, var(--spectrum-statuslight-nonsemantic-orange-color));
+	}
 
-.spectrum-StatusLight--orange::before {
-	background-color: var(--mod-statuslight-nonsemantic-orange-color, var(--spectrum-statuslight-nonsemantic-orange-color));
-}
+	&[yellow] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-yellow-color, var(--spectrum-statuslight-nonsemantic-yellow-color));
+	}
 
-.spectrum-StatusLight--yellow::before {
-	background-color: var(--mod-statuslight-nonsemantic-yellow-color, var(--spectrum-statuslight-nonsemantic-yellow-color));
-}
+	&[chartreuse] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-chartreuse-color, var(--spectrum-statuslight-nonsemantic-chartreuse-color));
+	}
 
-.spectrum-StatusLight--chartreuse::before {
-	background-color: var(--mod-statuslight-nonsemantic-chartreuse-color, var(--spectrum-statuslight-nonsemantic-chartreuse-color));
-}
+	&[celery] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-celery-color, var(--spectrum-statuslight-nonsemantic-celery-color));
+	}
 
-.spectrum-StatusLight--celery::before {
-	background-color: var(--mod-statuslight-nonsemantic-celery-color, var(--spectrum-statuslight-nonsemantic-celery-color));
-}
+	&[green] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-green-color, var(--spectrum-statuslight-nonsemantic-green-color));
+	}
 
-.spectrum-StatusLight--green::before {
-	background-color: var(--mod-statuslight-nonsemantic-green-color, var(--spectrum-statuslight-nonsemantic-green-color));
-}
+	&[seafoam] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-seafoam-color, var(--spectrum-statuslight-nonsemantic-seafoam-color));
+	}
 
-.spectrum-StatusLight--seafoam::before {
-	background-color: var(--mod-statuslight-nonsemantic-seafoam-color, var(--spectrum-statuslight-nonsemantic-seafoam-color));
-}
+	&[cyan] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-cyan-color, var(--spectrum-statuslight-nonsemantic-cyan-color));
+	}
 
-.spectrum-StatusLight--cyan::before {
-	background-color: var(--mod-statuslight-nonsemantic-cyan-color, var(--spectrum-statuslight-nonsemantic-cyan-color));
-}
+	&[blue] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-blue-color, var(--spectrum-statuslight-nonsemantic-blue-color));
+	}
 
-.spectrum-StatusLight--blue::before {
-	background-color: var(--mod-statuslight-nonsemantic-blue-color, var(--spectrum-statuslight-nonsemantic-blue-color));
-}
+	&[indigo] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-indigo-color, var(--spectrum-statuslight-nonsemantic-indigo-color));
+	}
 
-.spectrum-StatusLight--indigo::before {
-	background-color: var(--mod-statuslight-nonsemantic-indigo-color, var(--spectrum-statuslight-nonsemantic-indigo-color));
-}
+	&[purple] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-purple-color, var(--spectrum-statuslight-nonsemantic-purple-color));
+	}
 
-.spectrum-StatusLight--purple::before {
-	background-color: var(--mod-statuslight-nonsemantic-purple-color, var(--spectrum-statuslight-nonsemantic-purple-color));
-}
+	&[fuchsia] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-fuchsia-color, var(--spectrum-statuslight-nonsemantic-fuchsia-color));
+	}
 
-.spectrum-StatusLight--fuchsia::before {
-	background-color: var(--mod-statuslight-nonsemantic-fuchsia-color, var(--spectrum-statuslight-nonsemantic-fuchsia-color));
-}
-
-.spectrum-StatusLight--magenta::before {
-	background-color: var(--mod-statuslight-nonsemantic-magenta-color, var(--spectrum-statuslight-nonsemantic-magenta-color));
+	&[magenta] {
+		--spectrum-statuslight-color: var(--mod-statuslight-nonsemantic-magenta-color, var(--spectrum-statuslight-nonsemantic-magenta-color));
+	}
 }

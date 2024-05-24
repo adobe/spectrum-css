@@ -14,6 +14,8 @@ const { join } = require("path");
 
 module.exports = ({
 	file,
+	noFlatVariables = false,
+	referencesOnly = false,
 	lint = true,
 	verbose = true,
 	additionalPlugins = {},
@@ -55,6 +57,9 @@ module.exports = ({
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
 			"postcss-hover-media-feature": {},
+			/* --------------------------------------------------- */
+			/* ------------------- VARIABLE PARSING -------------- */
+			"postcss-splitinator": { noFlatVariables, referencesOnly },
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */

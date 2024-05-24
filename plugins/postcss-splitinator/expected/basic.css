@@ -14,7 +14,7 @@
 	--background-color: var(--system-component-background-color);
 }
 
-.component.is-selected {
+.component[selected] {
 	--background-color: var(--system-component-selected-background-color);
 }
 

@@ -1,0 +1,63 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-button-font-family: var(--mod-button-font-family, var(--spectrum-button-font-family));
+  --spectrum-sans-font-family-stack: var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack));
+  --spectrum-button-line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
+  --spectrum-line-height-100: var(--mod-line-height-100, var(--spectrum-line-height-100));
+  --spectrum-button-animation-duration: var(--mod-button-animation-duration, var(--spectrum-button-animation-duration));
+  --spectrum-animation-duration-100: var(--mod-animation-duration-100, var(--spectrum-animation-duration-100));
+  --spectrum-button-focus-indicator-gap: var(--mod-button-focus-indicator-gap, var(--spectrum-button-focus-indicator-gap));
+  --spectrum-focus-indicator-gap: var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
+  --spectrum-button-static-content-color: var(--mod-button-static-content-color, var(--spectrum-button-static-content-color));
+  --spectrum-button-focus-ring-thickness: var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness));
+  --spectrum-button-border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
+  --spectrum-button-border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
+  --spectrum-button-font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
+  --spectrum-bold-font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
+  --spectrum-button-padding-label-to-icon: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
+  --spectrum-button-min-width: var(--mod-button-min-width, var(--spectrum-button-min-width));
+  --spectrum-button-height: var(--mod-button-height, var(--spectrum-button-height));
+  --spectrum-button-edge-to-text: var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text));
+  --spectrum-button-margin-block: var(--mod-button-margin-block, var(--spectrum-button-margin-block));
+  --spectrum-button-margin-right: var(--mod-button-margin-right, var(--spectrum-button-margin-right));
+  --spectrum-button-margin-left: var(--mod-button-margin-left, var(--spectrum-button-margin-left));
+  --spectrum-button-background-color-default: var(--mod-button-background-color-default, var(--spectrum-button-background-color-default));
+  --spectrum-button-border-color-default: var(--mod-button-border-color-default, var(--spectrum-button-border-color-default));
+  --spectrum-button-content-color-default: var(--mod-button-content-color-default, var(--spectrum-button-content-color-default));
+  --spectrum-button-icon-margin-block-start: var(--mod-button-icon-margin-block-start, var(--spectrum-button-icon-margin-block-start));
+  --spectrum-button-top-to-icon: var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon));
+  --spectrum-button-edge-to-visual: var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual));
+  --spectrum-button-edge-to-visual-only: var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only));
+  --spectrum-button-top-to-text: var(--mod-button-top-to-text, var(--spectrum-button-top-to-text));
+  --spectrum-button-bottom-to-text: var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text));
+  --spectrum-button-text-align: var(--mod-button-text-align, var(--spectrum-button-text-align));
+  --spectrum-button-text-align-with-icon: var(--mod-button-text-align-with-icon, var(--spectrum-button-text-align-with-icon));
+  --spectrum-button-focus-ring-color: var(--mod-button-focus-ring-color, var(--spectrum-button-focus-ring-color));
+  --spectrum-button-focus-ring-gap: var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap));
+  --spectrum-button-focus-ring-border-radius: var(--mod-button-focus-ring-border-radius, var(--spectrum-button-focus-ring-border-radius));
+  --spectrum-button-background-color-focus: var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus));
+  --spectrum-button-border-color-focus: var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus));
+  --spectrum-button-content-color-focus: var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus));
+  --spectrum-button-background-color-hover: var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover));
+  --spectrum-button-border-color-hover: var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover));
+  --spectrum-button-content-color-hover: var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover));
+  --spectrum-button-background-color-down: var(--mod-button-background-color-down, var(--spectrum-button-background-color-down));
+  --spectrum-button-border-color-down: var(--mod-button-border-color-down, var(--spectrum-button-border-color-down));
+  --spectrum-button-content-color-down: var(--mod-button-content-color-down, var(--spectrum-button-content-color-down));
+  --spectrum-button-background-color-disabled: var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled));
+  --spectrum-button-border-color-disabled: var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled));
+  --spectrum-button-content-color-disabled: var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled));
+  --spectrum-static-black-focus-indicator-color: var(--mod-static-black-focus-indicator-color, var(--spectrum-static-black-focus-indicator-color));
+}

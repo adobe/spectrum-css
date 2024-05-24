@@ -1,0 +1,62 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-assetcard-asset-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
+  --spectrum-assetcard-border-color-hover: var(--mod-assetcard-border-color-hover, var(--spectrum-assetcard-border-color-hover));
+  --spectrum-assetcard-border-color-down: var(--mod-assetcard-border-color-down, var(--spectrum-assetcard-border-color-down));
+  --spectrum-assetcard-border-radius: var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius));
+  --spectrum-assetcard-background-color: var(--mod-assetcard-background-color, var(--spectrum-assetcard-background-color));
+  --spectrum-assetcard-asset-animation-duration: var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration));
+  --spectrum-assetcard-focus-ring-gap: var(--mod-assetcard-focus-ring-gap, var(--spectrum-assetcard-focus-ring-gap));
+  --spectrum-assetcard-focus-indicator-thickness: var(--mod-assetcard-focus-indicator-thickness, var(--spectrum-assetcard-focus-indicator-thickness));
+  --spectrum-assectcard-focus-indicator-color: var(--mod-assectcard-focus-indicator-color, var(--spectrum-assectcard-focus-indicator-color));
+  --spectrum-assetcard-focus-ring-border-radius: var(--mod-assetcard-focus-ring-border-radius, var(--spectrum-assetcard-focus-ring-border-radius));
+  --spectrum-assetcard-asset-container-border-size: var(--mod-assetcard-asset-container-border-size, var(--spectrum-assetcard-asset-container-border-size));
+  --spectrum-assetcard-border-color: var(--mod-assetcard-border-color, var(--spectrum-assetcard-border-color));
+  --spectrum-assetcard-header-margin-block-start: var(--mod-assetcard-header-margin-block-start, var(--spectrum-assetcard-header-margin-block-start));
+  --spectrum-assetcard-title-text-color: var(--mod-assetcard-title-text-color, var(--spectrum-assetcard-title-text-color));
+  --spectrum-assetcard-title-font-family: var(--mod-assetcard-title-font-family, var(--spectrum-assetcard-title-font-family));
+  --spectrum-assetcard-title-font-weight: var(--mod-assetcard-title-font-weight, var(--spectrum-assetcard-title-font-weight));
+  --spectrum-assetcard-title-font-size: var(--mod-assetcard-title-font-size, var(--spectrum-assetcard-title-font-size));
+  --spectrum-assetcard-title-line-height: var(--mod-assetcard-title-line-height, var(--spectrum-assetcard-title-line-height));
+  --spectrum-assetcard-title-font-style: var(--mod-assetcard-title-font-style, var(--spectrum-assetcard-title-font-style));
+  --spectrum-assetcard-title-letter-spacing: var(--mod-assetcard-title-letter-spacing, var(--spectrum-assetcard-title-letter-spacing));
+  --spectrum-assetcard-header-content-text-color: var(--mod-assetcard-header-content-text-color, var(--spectrum-assetcard-header-content-text-color));
+  --spectrum-assetcard-header-content-font-family: var(--mod-assetcard-header-content-font-family, var(--spectrum-assetcard-header-content-font-family));
+  --spectrum-assetcard-header-content-font-size: var(--mod-assetcard-header-content-font-size, var(--spectrum-assetcard-header-content-font-size));
+  --spectrum-assetcard-header-content-font-weight: var(--mod-assetcard-header-content-font-weight, var(--spectrum-assetcard-header-content-font-weight));
+  --spectrum-assetcard-header-content-line-height: var(--mod-assetcard-header-content-line-height, var(--spectrum-assetcard-header-content-line-height));
+  --spectrum-assetcard-header-content-font-stlye: var(--mod-assetcard-header-content-font-stlye, var(--spectrum-assetcard-header-content-font-stlye));
+  --spectrum-assetcard-header-content-letter-spacing: var(--mod-assetcard-header-content-letter-spacing, var(--spectrum-assetcard-header-content-letter-spacing));
+  --spectrum-assetcard-content-margin-block-start: var(--mod-assetcard-content-margin-block-start, var(--spectrum-assetcard-content-margin-block-start));
+  --spectrum-assetcard-content-text-color: var(--mod-assetcard-content-text-color, var(--spectrum-assetcard-content-text-color));
+  --spectrum-assetcard-content-font-family: var(--mod-assetcard-content-font-family, var(--spectrum-assetcard-content-font-family));
+  --spectrum-assetcard-content-font-size: var(--mod-assetcard-content-font-size, var(--spectrum-assetcard-content-font-size));
+  --spectrum-assetcard-content-font-weight: var(--mod-assetcard-content-font-weight, var(--spectrum-assetcard-content-font-weight));
+  --spectrum-assetcard-content-line-height: var(--mod-assetcard-content-line-height, var(--spectrum-assetcard-content-line-height));
+  --spectrum-assetcard-content-font-style: var(--mod-assetcard-content-font-style, var(--spectrum-assetcard-content-font-style));
+  --spectrum-assetcard-content-letter-spacing: var(--mod-assetcard-content-letter-spacing, var(--spectrum-assetcard-content-letter-spacing));
+  --spectrum-assetcard-selectionindicator-margin: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
+  --spectrum-assetcard-selectionindicator-size: var(--mod-assetcard-selectionindicator-size, var(--spectrum-assetcard-selectionindicator-size));
+  --spectrum-assetcard-selectionindicator-border-radius: var(--mod-assetcard-selectionindicator-border-radius, var(--spectrum-assetcard-selectionindicator-border-radius));
+  --spectrum-assetcard-selectionindicator-color: var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color));
+  --spectrum-assetcard-selectionindicator-font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
+  --spectrum-assetcard-selectionindicator-font-size: var(--mod-assetcard-selectionindicator-font-size, var(--spectrum-assetcard-selectionindicator-font-size));
+  --spectrum-assetcard-border-color-selected: var(--mod-assetcard-border-color-selected, var(--spectrum-assetcard-border-color-selected));
+  --spectrum-assetcard-overlay-background-color: var(--mod-assetcard-overlay-background-color, var(--spectrum-assetcard-overlay-background-color));
+  --spectrum-assectcard-border-color-selected-down: var(--mod-assectcard-border-color-selected-down, var(--spectrum-assectcard-border-color-selected-down));
+  --spectrum-assetcard-selectionindicator-background-color-default: var(--mod-assetcard-selectionindicator-background-color-default, var(--spectrum-assetcard-selectionindicator-background-color-default));
+  --spectrum-assetcard-border-color-selected-hover: var(--mod-assetcard-border-color-selected-hover, var(--spectrum-assetcard-border-color-selected-hover));
+  --spectrum-assetcard-selectionindicator-background-color-ordered: var(--mod-assetcard-selectionindicator-background-color-ordered, var(--spectrum-assetcard-selectionindicator-background-color-ordered));
+}

@@ -26,7 +26,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--accent {
+.spectrum-Button&[accent] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-accent-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-accent-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-accent-background-color-down);
@@ -43,7 +43,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-accent-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-accent-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--accent.spectrum-Button--outline {
+.spectrum-Button&[accent][outline] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-accent-outline-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-accent-outline-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-accent-outline-background-color-down);
@@ -60,7 +60,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-accent-outline-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-accent-outline-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--negative {
+.spectrum-Button&[negative] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-negative-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-negative-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-negative-background-color-down);
@@ -77,7 +77,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-negative-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-negative-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--negative.spectrum-Button--outline {
+.spectrum-Button&[negative][outline] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-negative-outline-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-negative-outline-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-negative-outline-background-color-down);
@@ -94,7 +94,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-negative-outline-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-negative-outline-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--primary {
+.spectrum-Button&[primary] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-primary-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-primary-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-primary-background-color-down);
@@ -111,7 +111,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-primary-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-primary-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--primary.spectrum-Button--outline {
+.spectrum-Button&[primary][outline] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-primary-outline-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-primary-outline-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-primary-outline-background-color-down);
@@ -128,7 +128,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-primary-outline-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-primary-outline-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--secondary {
+.spectrum-Button&[secondary] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-secondary-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-secondary-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-secondary-background-color-down);
@@ -145,7 +145,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-secondary-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-secondary-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--secondary.spectrum-Button--outline {
+.spectrum-Button&[secondary][outline] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-secondary-outline-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-secondary-outline-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-secondary-outline-background-color-down);
@@ -162,7 +162,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-secondary-outline-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-secondary-outline-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--quiet {
+.spectrum-Button&[quiet] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-quiet-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-quiet-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-quiet-background-color-down);
@@ -174,7 +174,7 @@ governing permissions and limitations under the License.
   --spectrum-button-background-color-disabled: var(--system-spectrum-button-quiet-background-color-disabled);
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-quiet-border-color-disabled);
 }
-.spectrum-Button.is-selected {
+.spectrum-Button[selected] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-selected-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-selected-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-selected-background-color-down);
@@ -190,27 +190,27 @@ governing permissions and limitations under the License.
   --spectrum-button-background-color-disabled: var(--system-spectrum-button-selected-background-color-disabled);
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-selected-border-color-disabled);
 }
-.spectrum-Button.is-selected.spectrum-Button--emphasized {
+.spectrum-Button[selected][emphasized] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-selected-emphasized-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-selected-emphasized-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-selected-emphasized-background-color-down);
   --spectrum-button-background-color-focus: var(--system-spectrum-button-selected-emphasized-background-color-focus);
 }
-.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--quiet {
+.spectrum-Button&[static="black"][quiet] {
   --spectrum-button-border-color-default: var(--system-spectrum-button-staticblack-quiet-border-color-default);
   --spectrum-button-border-color-hover: var(--system-spectrum-button-staticblack-quiet-border-color-hover);
   --spectrum-button-border-color-down: var(--system-spectrum-button-staticblack-quiet-border-color-down);
   --spectrum-button-border-color-focus: var(--system-spectrum-button-staticblack-quiet-border-color-focus);
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticblack-quiet-border-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--quiet {
+.spectrum-Button&[static="white"][quiet] {
   --spectrum-button-border-color-default: var(--system-spectrum-button-staticwhite-quiet-border-color-default);
   --spectrum-button-border-color-hover: var(--system-spectrum-button-staticwhite-quiet-border-color-hover);
   --spectrum-button-border-color-down: var(--system-spectrum-button-staticwhite-quiet-border-color-down);
   --spectrum-button-border-color-focus: var(--system-spectrum-button-staticwhite-quiet-border-color-focus);
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticwhite-quiet-border-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticWhite {
+.spectrum-Button&[static="white"] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-staticwhite-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-staticwhite-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-staticwhite-background-color-down);
@@ -228,7 +228,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticwhite-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-staticwhite-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--outline {
+.spectrum-Button&[static="white"][outline] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-staticwhite-outline-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-staticwhite-outline-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-staticwhite-outline-background-color-down);
@@ -246,7 +246,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticwhite-outline-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-staticwhite-outline-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticWhite.is-selected {
+.spectrum-Button&[static="white"][selected] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-staticwhite-selected-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-staticwhite-selected-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-staticwhite-selected-background-color-down);
@@ -258,7 +258,7 @@ governing permissions and limitations under the License.
   --spectrum-button-background-color-disabled: var(--system-spectrum-button-staticwhite-selected-background-color-disabled);
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticwhite-selected-border-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary {
+.spectrum-Button&[static="white"][secondary] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-staticwhite-secondary-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-staticwhite-secondary-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-staticwhite-secondary-background-color-down);
@@ -276,7 +276,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticwhite-secondary-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-staticwhite-secondary-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticWhite.spectrum-Button--secondary.spectrum-Button--outline {
+.spectrum-Button&[static="white"][secondary][outline] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-staticwhite-secondary-outline-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-staticwhite-secondary-outline-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-staticwhite-secondary-outline-background-color-down);
@@ -294,7 +294,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticwhite-secondary-outline-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-staticwhite-secondary-outline-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticBlack {
+.spectrum-Button&[static="black"] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-staticblack-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-staticblack-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-staticblack-background-color-down);
@@ -312,7 +312,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticblack-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-staticblack-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--outline {
+.spectrum-Button&[static="black"][outline] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-staticblack-outline-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-staticblack-outline-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-staticblack-outline-background-color-down);
@@ -330,7 +330,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticblack-outline-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-staticblack-outline-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary {
+.spectrum-Button&[static="black"][secondary] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-staticblack-secondary-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-staticblack-secondary-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-staticblack-secondary-background-color-down);
@@ -348,7 +348,7 @@ governing permissions and limitations under the License.
   --spectrum-button-border-color-disabled: var(--system-spectrum-button-staticblack-secondary-border-color-disabled);
   --spectrum-button-content-color-disabled: var(--system-spectrum-button-staticblack-secondary-content-color-disabled);
 }
-.spectrum-Button.spectrum-Button--staticBlack.spectrum-Button--secondary.spectrum-Button--outline {
+.spectrum-Button&[static="black"][secondary][outline] {
   --spectrum-button-background-color-default: var(--system-spectrum-button-staticblack-secondary-outline-background-color-default);
   --spectrum-button-background-color-hover: var(--system-spectrum-button-staticblack-secondary-outline-background-color-hover);
   --spectrum-button-background-color-down: var(--system-spectrum-button-staticblack-secondary-outline-background-color-down);

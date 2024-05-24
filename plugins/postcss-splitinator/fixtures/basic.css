@@ -2,7 +2,7 @@
 	.component {
 		--background-color: blue;
 	}
-	.component.is-selected {
+	.component[selected] {
 		--background-color: darkblue;
 	}
 	.component .icon {
@@ -14,7 +14,7 @@
 	.component {
 		--background-color: purple;
 	}
-	.component.is-selected {
+	.component[selected] {
 		--background-color: darkpurple;
 	}
 	.component .icon {

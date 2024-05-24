@@ -1,5 +1,5 @@
 article.spectrum-CSSExample
-  h3.spectrum-CSSExample-heading.spectrum-Heading.spectrum-Heading--sizeS(id=example.slug)
+  h3.spectrum-CSSExample-heading.spectrum-Heading&[sizeS](id=example.slug)
     a(href=`#${example.slug}`).spectrum-CSSComponent-link
       =example.name
     div(class=`spectrum-StatusLight spectrum-StatusLight--sizeM spectrum-CSSExample-status spectrum-StatusLight--${util.getStatusLightVariant(example.status)}`)= example.status

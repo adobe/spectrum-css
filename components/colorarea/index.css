@@ -8,7 +8,8 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-.spectrum-ColorArea {
+
+:root {
 	--spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
 	--spectrum-colorarea-border-color: rgba(0, 0, 0, 10%); /* TODO replace with token --spectrum-color-area-border-color and --spectrum-color-area-border-opacity using RGBA function */
 	--spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
@@ -21,16 +22,14 @@ governing permissions and limitations under the License.
 
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
-	.spectrum-ColorArea {
+	:root {
 		--highcontrast-colorarea-border-color-disabled: GrayText;
 		--highcontrast-colorarea-border-color: Canvas;
 		--highcontrast-colorarea-fill-color-disabled: Canvas;
 	}
 
-	.spectrum-ColorArea {
-		&.is-disabled {
-			forced-color-adjust: none;
-		}
+	.spectrum-ColorArea[disabled] {
+		forced-color-adjust: none;
 	}
 
 	.spectrum-ColorArea-gradient,
@@ -52,11 +51,11 @@ governing permissions and limitations under the License.
 	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
 	border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
 
-	&.is-focused {
+	&[focused] {
 		z-index: 2;
 	}
 
-	&.is-disabled {
+	&[disabled] {
 		pointer-events: none;
 		background: var(--highcontrast-colorarea-fill-color-disabled, var(--mod-colorarea-disabled-background-color, var(--spectrum-colorarea-disabled-background-color)));
 		border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color-disabled);
@@ -65,31 +64,31 @@ governing permissions and limitations under the License.
 			display: none;
 		}
 	}
-}
 
-.spectrum-ColorArea-handle {
-	transform: translate(calc(var(--mod-colorarea-width, var(--spectrum-colorarea-width)) - var(--spectrum-colorarea-border-width)), 0);
-	inset-block-start: 0;
+	.spectrum-ColorArea-handle {
+		transform: translate(calc(var(--mod-colorarea-width, var(--spectrum-colorarea-width)) - var(--spectrum-colorarea-border-width)), 0);
+		inset-block-start: 0;
 
-	&:dir(rtl) {
-		inset-inline-end: 0;
+		&:dir(rtl) {
+			inset-inline-end: 0;
+		}
 	}
-}
 
-.spectrum-ColorArea-gradient {
-	inline-size: 100%;
-	block-size: 100%;
-	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
-}
+	.spectrum-ColorArea-gradient {
+		inline-size: 100%;
+		block-size: 100%;
+		border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
+	}
 
-.spectrum-ColorArea-slider {
-	opacity: 0;
-	position: absolute;
-	inset-block-start: 0;
-	inset-inline-start: 0;
-	inline-size: 100%;
-	block-size: 100%;
-	z-index: 0;
-	margin: 0;
-	pointer-events: none;
+	.spectrum-ColorArea-slider {
+		opacity: 0;
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		inline-size: 100%;
+		block-size: 100%;
+		z-index: 0;
+		margin: 0;
+		pointer-events: none;
+	}
 }

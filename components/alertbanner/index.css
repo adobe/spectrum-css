@@ -9,9 +9,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
+:root {
+	--spectrum-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default);
 
-.spectrum-AlertBanner {
 	--spectrum-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
 	--spectrum-alert-banner-max-inline-size: var(--spectrum-alert-banner-width);
 	--spectrum-alert-banner-size: auto;
@@ -49,6 +49,13 @@ governing permissions and limitations under the License.
 	--mod-closebutton-align-self: flex-start;
 }
 
+@media (forced-colors: active) {
+	.spectrum-AlertBanner {
+		--highcontrast-alert-banner-border-color: CanvasText;
+		--highcontrast-alert-banner-border-width: var(--spectrum-border-width-100);
+	}
+}
+
 .spectrum-AlertBanner {
 	display: none;
 	justify-content: space-between;
@@ -60,56 +67,49 @@ governing permissions and limitations under the License.
 	background-color: var(--mod-alert-banner-netural-background, var(--spectrum-alert-banner-netural-background));
 	border: var(--highcontrast-alert-banner-border-width, 0) solid var(--highcontrast-alert-banner-border-color, transparent);
 
-	&.is-open {
+	&[open] {
 		display: flex;
 	}
-}
 
-.spectrum-AlertBanner--info {
-	background-color: var(--mod-alert-banner-informative-background, var(--spectrum-alert-banner-informative-background));
-}
+	&[info] {
+		background-color: var(--mod-alert-banner-informative-background, var(--spectrum-alert-banner-informative-background));
+	}
 
-.spectrum-AlertBanner--negative {
-	background-color: var(--mod-alert-banner-negative-background, var(--spectrum-alert-banner-negative-background));
-}
+	&[negative] {
+		background-color: var(--mod-alert-banner-negative-background, var(--spectrum-alert-banner-negative-background));
+	}
 
-.spectrum-AlertBanner-body {
-	inline-size: 100%;
-	display: flex;
+	.spectrum-AlertBanner-body {
+		inline-size: 100%;
+		display: flex;
 
-	/* --mod-* for alert-banner-text-to-button-vertical will only accept values larger than alert-banner-edge-to-bottom, as gap only recognizes positive values */
-	gap: max(calc(var(--mod-alert-banner-text-to-button-vertical, var(--spectrum-alert-banner-text-to-button-vertical)) - var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button))), 0px);
-	flex-wrap: wrap;
-	align-items: center;
-	margin-inline-start: var(--mod-alert-banner-start-edge, var(--spectrum-alert-banner-start-edge));
-}
+		/* --mod-* for alert-banner-text-to-button-vertical will only accept values larger than alert-banner-edge-to-bottom, as gap only recognizes positive values */
+		gap: max(calc(var(--mod-alert-banner-text-to-button-vertical, var(--spectrum-alert-banner-text-to-button-vertical)) - var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button))), 0px);
+		flex-wrap: wrap;
+		align-items: center;
+		margin-inline-start: var(--mod-alert-banner-start-edge, var(--spectrum-alert-banner-start-edge));
+	}
 
-.spectrum-AlertBanner-content {
-	display: flex;
-}
+	.spectrum-AlertBanner-content {
+		display: flex;
+	}
 
-.spectrum-AlertBanner-end {
-	display: flex;
-	align-items: center;
-}
+	.spectrum-AlertBanner-end {
+		display: flex;
+		align-items: center;
+	}
 
-.spectrum-AlertBanner-icon {
-	inline-size: var(--mod-alert-banner-icon-size, var(--spectrum-alert-banner-icon-size));
-	block-size: var(--mod-alert-banner-icon-size, var(--spectrum-alert-banner-icon-size));
-	margin-block-start: var(--mod-alert-banner-top-icon, var(--spectrum-alert-banner-top-icon));
-	margin-inline-end: var(--mod-alert-banner-icon-to-text, var(--spectrum-alert-banner-icon-to-text));
-	flex-shrink: 0;
-}
+	.spectrum-AlertBanner-icon {
+		inline-size: var(--mod-alert-banner-icon-size, var(--spectrum-alert-banner-icon-size));
+		block-size: var(--mod-alert-banner-icon-size, var(--spectrum-alert-banner-icon-size));
+		margin-block-start: var(--mod-alert-banner-top-icon, var(--spectrum-alert-banner-top-icon));
+		margin-inline-end: var(--mod-alert-banner-icon-to-text, var(--spectrum-alert-banner-icon-to-text));
+		flex-shrink: 0;
+	}
 
-.spectrum-AlertBanner-text {
-	margin-block-start: var(--mod-alert-banner-top-text, var(--spectrum-alert-banner-top-text));
-	margin-block-end: var(--mod-alert-banner-bottom-text, var(--spectrum-alert-banner-bottom-text));
-	margin-inline-end: var(--mod-alert-banner-text-to-button-horizontal, var(--spectrum-alert-banner-text-to-button-horizontal));
-}
-
-@media (forced-colors: active) {
-	.spectrum-AlertBanner {
-		--highcontrast-alert-banner-border-color: CanvasText;
-		--highcontrast-alert-banner-border-width: var(--spectrum-border-width-100);
+	.spectrum-AlertBanner-text {
+		margin-block-start: var(--mod-alert-banner-top-text, var(--spectrum-alert-banner-top-text));
+		margin-block-end: var(--mod-alert-banner-bottom-text, var(--spectrum-alert-banner-bottom-text));
+		margin-inline-end: var(--mod-alert-banner-text-to-button-horizontal, var(--spectrum-alert-banner-text-to-button-horizontal));
 	}
 }

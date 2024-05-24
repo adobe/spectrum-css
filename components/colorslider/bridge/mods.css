@@ -1,0 +1,28 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-color-slider-handle-hitarea-border-radius: var(--mod-color-slider-handle-hitarea-border-radius, var(--spectrum-color-slider-handle-hitarea-border-radius));
+  --spectrum-color-slider-minimum-length: var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length));
+  --spectrum-color-slider-length: var(--mod-color-slider-length, var(--spectrum-color-slider-length));
+  --spectrum-color-slider-control-track-width: var(--mod-color-slider-control-track-width, var(--spectrum-color-slider-control-track-width));
+  --spectrum-color-slider-vertical-minimum-height: var(--mod-color-slider-vertical-minimum-height, var(--spectrum-color-slider-vertical-minimum-height));
+  --spectrum-color-slider-vertical-height: var(--mod-color-slider-vertical-height, var(--spectrum-color-slider-vertical-height));
+  --spectrum-color-slider-vertical-control-track-width: var(--mod-color-slider-vertical-control-track-width, var(--spectrum-color-slider-vertical-control-track-width));
+  --spectrum-color-slider-control-track-height: var(--mod-color-slider-control-track-height, var(--spectrum-color-slider-control-track-height));
+  --spectrum-color-slider-border-color: var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color));
+  --spectrum-color-slider-border-width: var(--mod-color-slider-border-width, var(--spectrum-color-slider-border-width));
+  --spectrum-color-slider-border-rounding: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
+  --spectrum-color-slider-border-color-disabled: var(--mod-color-slider-border-color-disabled, var(--spectrum-color-slider-border-color-disabled));
+  --spectrum-color-slider-background-color-disabled: var(--mod-color-slider-background-color-disabled, var(--spectrum-color-slider-background-color-disabled));
+}

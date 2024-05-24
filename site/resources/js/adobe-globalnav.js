@@ -26,11 +26,11 @@ window.adobeGlobalnavConfig = {
           color: var(--spectrum-neutral-content-color-hover);
         }
 
-        #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme .Footernav-disclaimer.is-adChoices .Footernav-disclaimer-link {
+        #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme .Footernav-disclaimer[adChoices] .Footernav-disclaimer-link {
           fill: var(--spectrum-neutral-content-color-default);
         }
 
-        #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme .Footernav-disclaimer.is-adChoices .Footernav-disclaimer-link:hover {
+        #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme .Footernav-disclaimer[adChoices] .Footernav-disclaimer-link:hover {
           fill: var(--spectrum-neutral-content-color-hover);
         }
       `;

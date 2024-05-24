@@ -1,0 +1,65 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-combobox-focus-indicator-gap: var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap));
+  --spectrum-combobox-focus-indicator-thickness: var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness));
+  --spectrum-combobox-focus-indicator-color: var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color));
+  --spectrum-combobox-background-color-default: var(--mod-combobox-background-color-default, var(--spectrum-combobox-background-color-default));
+  --spectrum-combobox-background-color-disabled: var(--mod-combobox-background-color-disabled, var(--spectrum-combobox-background-color-disabled));
+  --spectrum-combobox-font-family: var(--mod-combobox-font-family, var(--spectrum-combobox-font-family));
+  --spectrum-combobox-font-weight: var(--mod-combobox-font-weight, var(--spectrum-combobox-font-weight));
+  --spectrum-combobox-font-color-default: var(--mod-combobox-font-color-default, var(--spectrum-combobox-font-color-default));
+  --spectrum-combobox-font-color-hover: var(--mod-combobox-font-color-hover, var(--spectrum-combobox-font-color-hover));
+  --spectrum-combobox-font-color-focus: var(--mod-combobox-font-color-focus, var(--spectrum-combobox-font-color-focus));
+  --spectrum-combobox-font-color-focus-hover: var(--mod-combobox-font-color-focus-hover, var(--spectrum-combobox-font-color-focus-hover));
+  --spectrum-combobox-font-color-key-focus: var(--mod-combobox-font-color-key-focus, var(--spectrum-combobox-font-color-key-focus));
+  --spectrum-combobox-font-color-disabled: var(--mod-combobox-font-color-disabled, var(--spectrum-combobox-font-color-disabled));
+  --spectrum-combobox-border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
+  --spectrum-combobox-border-color-default: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
+  --spectrum-combobox-border-color-disabled: var(--mod-combobox-border-color-disabled, var(--spectrum-combobox-border-color-disabled));
+  --spectrum-combobox-border-color-focus: var(--mod-combobox-border-color-focus, var(--spectrum-combobox-border-color-focus));
+  --spectrum-combobox-border-color-focus-hover: var(--mod-combobox-border-color-focus-hover, var(--spectrum-combobox-border-color-focus-hover));
+  --spectrum-combobox-border-color-hover: var(--mod-combobox-border-color-hover, var(--spectrum-combobox-border-color-hover));
+  --spectrum-combobox-border-color-key-focus: var(--mod-combobox-border-color-key-focus, var(--spectrum-combobox-border-color-key-focus));
+  --spectrum-combobox-border-color-invalid-default: var(--mod-combobox-border-color-invalid-default, var(--spectrum-combobox-border-color-invalid-default));
+  --spectrum-combobox-border-color-invalid-hover: var(--mod-combobox-border-color-invalid-hover, var(--spectrum-combobox-border-color-invalid-hover));
+  --spectrum-combobox-border-color-invalid-focus: var(--mod-combobox-border-color-invalid-focus, var(--spectrum-combobox-border-color-invalid-focus));
+  --spectrum-combobox-border-color-invalid-focus-hover: var(--mod-combobox-border-color-invalid-focus-hover, var(--spectrum-combobox-border-color-invalid-focus-hover));
+  --spectrum-combobox-border-color-invalid-key-focus: var(--mod-combobox-border-color-invalid-key-focus, var(--spectrum-combobox-border-color-invalid-key-focus));
+  --spectrum-combobox-alert-icon-color: var(--mod-combobox-alert-icon-color, var(--spectrum-combobox-alert-icon-color));
+  --spectrum-combobox-block-size: var(--mod-combobox-block-size, var(--spectrum-combobox-block-size));
+  --spectrum-combobox-icon-size: var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size));
+  --spectrum-combobox-inline-size: var(--mod-combobox-inline-size, var(--spectrum-combobox-inline-size));
+  --spectrum-combobox-min-inline-size: var(--mod-combobox-min-inline-size, var(--spectrum-combobox-min-inline-size));
+  --spectrum-combobox-spacing-label-to-combobox: var(--mod-combobox-spacing-label-to-combobox, var(--spectrum-combobox-spacing-label-to-combobox));
+  --spectrum-combobox-border-radius: var(--mod-combobox-border-radius, var(--spectrum-combobox-border-radius));
+  --spectrum-combobox-spacing-edge-to-menu: var(--mod-combobox-spacing-edge-to-menu, var(--spectrum-combobox-spacing-edge-to-menu));
+  --spectrum-combobox-spacing-inline-icon-to-button: var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button));
+  --spectrum-combobox-button-width: var(--mod-combobox-button-width, var(--spectrum-combobox-button-width));
+  --spectrum-combobox-block-spacing-edge-to-progress-circle: var(--mod-combobox-block-spacing-edge-to-progress-circle, var(--spectrum-combobox-block-spacing-edge-to-progress-circle));
+  --spectrum-combobox-block-spacing-edge-to-alert: var(--mod-combobox-block-spacing-edge-to-alert, var(--spectrum-combobox-block-spacing-edge-to-alert));
+  --spectrum-combobox-button-inline-offset: var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset));
+  --spectrum-combobox-spacing-block-start-edge-to-text: var(--mod-combobox-spacing-block-start-edge-to-text, var(--spectrum-combobox-spacing-block-start-edge-to-text));
+  --spectrum-combobox-spacing-block-end-edge-to-text: var(--mod-combobox-spacing-block-end-edge-to-text, var(--spectrum-combobox-spacing-block-end-edge-to-text));
+  --spectrum-combobox-spacing-inline-start-edge-to-text: var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text));
+  --spectrum-combobox-spacing-inline-end-edge-to-text: var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text));
+  --spectrum-combobox-line-height: var(--mod-combobox-line-height, var(--spectrum-combobox-line-height));
+  --spectrum-combobox-font-size: var(--mod-combobox-font-size, var(--spectrum-combobox-font-size));
+  --spectrum-combobox-font-style: var(--mod-combobox-font-style, var(--spectrum-combobox-font-style));
+  --spectrum-combobox-font-color-placeholder: var(--mod-combobox-font-color-placeholder, var(--spectrum-combobox-font-color-placeholder));
+  --spectrum-combobox-background-color-hover: var(--mod-combobox-background-color-hover, var(--spectrum-combobox-background-color-hover));
+  --spectrum-combobox-background-color-focus: var(--mod-combobox-background-color-focus, var(--spectrum-combobox-background-color-focus));
+  --spectrum-combobox-background-color-focus-hover: var(--mod-combobox-background-color-focus-hover, var(--spectrum-combobox-background-color-focus-hover));
+  --spectrum-combobox-background-color-key-focus: var(--mod-combobox-background-color-key-focus, var(--spectrum-combobox-background-color-key-focus));
+}

@@ -1,0 +1,52 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-button-font-family: var(--mod-button-font-family, var(--spectrum-button-font-family));
+  --spectrum-sans-font-family-stack: var(--mod-sans-font-family-stack, var(--spectrum-sans-font-family-stack));
+  --spectrum-button-line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
+  --spectrum-line-height-100: var(--mod-line-height-100, var(--spectrum-line-height-100));
+  --spectrum-button-animation-duration: var(--mod-button-animation-duration, var(--spectrum-button-animation-duration));
+  --spectrum-animation-duration-100: var(--mod-animation-duration-100, var(--spectrum-animation-duration-100));
+  --spectrum-button-focus-indicator-gap: var(--mod-button-focus-indicator-gap, var(--spectrum-button-focus-indicator-gap));
+  --spectrum-focus-indicator-gap: var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
+  --spectrum-logic-button-and-background-color-disabled: var(--mod-logic-button-and-background-color-disabled, var(--spectrum-logic-button-and-background-color-disabled));
+  --spectrum-logic-button-and-border-color-disabled: var(--mod-logic-button-and-border-color-disabled, var(--spectrum-logic-button-and-border-color-disabled));
+  --spectrum-logic-button-and-text-color-disabled: var(--mod-logic-button-and-text-color-disabled, var(--spectrum-logic-button-and-text-color-disabled));
+  --spectrum-logic-button-and-background-color-hover-disabled: var(--mod-logic-button-and-background-color-hover-disabled, var(--spectrum-logic-button-and-background-color-hover-disabled));
+  --spectrum-logic-button-and-border-color-hover-disabled: var(--mod-logic-button-and-border-color-hover-disabled, var(--spectrum-logic-button-and-border-color-hover-disabled));
+  --spectrum-logic-button-or-background-color-disabled: var(--mod-logic-button-or-background-color-disabled, var(--spectrum-logic-button-or-background-color-disabled));
+  --spectrum-logic-button-or-border-color-disabled: var(--mod-logic-button-or-border-color-disabled, var(--spectrum-logic-button-or-border-color-disabled));
+  --spectrum-logic-button-or-text-color-disabled: var(--mod-logic-button-or-text-color-disabled, var(--spectrum-logic-button-or-text-color-disabled));
+  --spectrum-logic-button-or-background-color-hover-disabled: var(--mod-logic-button-or-background-color-hover-disabled, var(--spectrum-logic-button-or-background-color-hover-disabled));
+  --spectrum-logic-button-or-border-color-hover-disabled: var(--mod-logic-button-or-border-color-hover-disabled, var(--spectrum-logic-button-or-border-color-hover-disabled));
+  --spectrum-logic-button-height: var(--mod-logic-button-height, var(--spectrum-logic-button-height));
+  --spectrum-logic-button-padding: var(--mod-logic-button-padding, var(--spectrum-logic-button-padding));
+  --spectrum-logic-button-border-width: var(--mod-logic-button-border-width, var(--spectrum-logic-button-border-width));
+  --spectrum-logic-button-border-radius: var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius));
+  --spectrum-logic-button-font-size: var(--mod-logic-button-font-size, var(--spectrum-logic-button-font-size));
+  --spectrum-logic-button-font-weight: var(--mod-logic-button-font-weight, var(--spectrum-logic-button-font-weight));
+  --spectrum-logic-button-focus-indicator-gap: var(--mod-logic-button-focus-indicator-gap, var(--spectrum-logic-button-focus-indicator-gap));
+  --spectrum-logic-button-focus-indicator-width: var(--mod-logic-button-focus-indicator-width, var(--spectrum-logic-button-focus-indicator-width));
+  --spectrum-logic-button-focus-indicator-color: var(--mod-logic-button-focus-indicator-color, var(--spectrum-logic-button-focus-indicator-color));
+  --spectrum-logic-button-and-background-color: var(--mod-logic-button-and-background-color, var(--spectrum-logic-button-and-background-color));
+  --spectrum-logic-button-and-border-color: var(--mod-logic-button-and-border-color, var(--spectrum-logic-button-and-border-color));
+  --spectrum-logic-button-and-text-color: var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color));
+  --spectrum-logic-button-or-background-color: var(--mod-logic-button-or-background-color, var(--spectrum-logic-button-or-background-color));
+  --spectrum-logic-button-or-border-color: var(--mod-logic-button-or-border-color, var(--spectrum-logic-button-or-border-color));
+  --spectrum-logic-button-or-text-color: var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color));
+  --spectrum-logic-button-and-background-color-hover: var(--mod-logic-button-and-background-color-hover, var(--spectrum-logic-button-and-background-color-hover));
+  --spectrum-logic-button-and-border-color-hover: var(--mod-logic-button-and-border-color-hover, var(--spectrum-logic-button-and-border-color-hover));
+  --spectrum-logic-button-or-background-color-hover: var(--mod-logic-button-or-background-color-hover, var(--spectrum-logic-button-or-background-color-hover));
+  --spectrum-logic-button-or-border-color-hover: var(--mod-logic-button-or-border-color-hover, var(--spectrum-logic-button-or-border-color-hover));
+}

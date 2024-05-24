@@ -1,0 +1,46 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-popover-border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
+  --spectrum-popover-corner-radius: var(--mod-popover-corner-radius, var(--spectrum-popover-corner-radius));
+  --spectrum-coachmark-min-width: var(--mod-coachmark-min-width, var(--spectrum-coachmark-min-width));
+  --spectrum-coachmark-max-width: var(--mod-coachmark-max-width, var(--spectrum-coachmark-max-width));
+  --spectrum-coachmark-width: var(--mod-coachmark-width, var(--spectrum-coachmark-width));
+  --spectrum-coachmark-media-height: var(--mod-coachmark-media-height, var(--spectrum-coachmark-media-height));
+  --spectrum-coachmark-media-min-height: var(--mod-coachmark-media-min-height, var(--spectrum-coachmark-media-min-height));
+  --spectrum-coachmark-border-size: var(--mod-coachmark-border-size, var(--spectrum-coachmark-border-size));
+  --spectrum-coachmark-border-radius: var(--mod-coachmark-border-radius, var(--spectrum-coachmark-border-radius));
+  --spectrum-coachmark-padding: var(--mod-coachmark-padding, var(--spectrum-coachmark-padding));
+  --spectrum-coachmark-header-to-body: var(--mod-coachmark-header-to-body, var(--spectrum-coachmark-header-to-body));
+  --spectrum-coachmark-heading-to-action-button: var(--mod-coachmark-heading-to-action-button, var(--spectrum-coachmark-heading-to-action-button));
+  --spectrum-coachmark-body-to-footer: var(--mod-coachmark-body-to-footer, var(--spectrum-coachmark-body-to-footer));
+  --spectrum-coachmark-content-font-color: var(--mod-coachmark-content-font-color, var(--spectrum-coachmark-content-font-color));
+  --spectrum-coachmark-content-font-size: var(--mod-coachmark-content-font-size, var(--spectrum-coachmark-content-font-size));
+  --spectrum-coachmark-content-font-weight: var(--mod-coachmark-content-font-weight, var(--spectrum-coachmark-content-font-weight));
+  --spectrum-coachmark-content-font-family: var(--mod-coachmark-content-font-family, var(--spectrum-coachmark-content-font-family));
+  --spectrum-coachmark-content-font-style: var(--mod-coachmark-content-font-style, var(--spectrum-coachmark-content-font-style));
+  --spectrum-coachmark-content-line-height: var(--mod-coachmark-content-line-height, var(--spectrum-coachmark-content-line-height));
+  --spectrum-coachmark-title-color: var(--mod-coachmark-title-color, var(--spectrum-coachmark-title-color));
+  --spectrum-coachmark-title-font-size: var(--mod-coachmark-title-font-size, var(--spectrum-coachmark-title-font-size));
+  --spectrum-coachmark-title-text-font-weight: var(--mod-coachmark-title-text-font-weight, var(--spectrum-coachmark-title-text-font-weight));
+  --spectrum-coachmark-title-font-family: var(--mod-coachmark-title-font-family, var(--spectrum-coachmark-title-font-family));
+  --spectrum-coachmark-title-font-style: var(--mod-coachmark-title-font-style, var(--spectrum-coachmark-title-font-style));
+  --spectrum-coachmark-title-text-line-height: var(--mod-coachmark-title-text-line-height, var(--spectrum-coachmark-title-text-line-height));
+  --spectrum-coachmark-step-color: var(--mod-coachmark-step-color, var(--spectrum-coachmark-step-color));
+  --spectrum-coachmark-step-font-size: var(--mod-coachmark-step-font-size, var(--spectrum-coachmark-step-font-size));
+  --spectrum-coachmark-step-text-font-weight: var(--mod-coachmark-step-text-font-weight, var(--spectrum-coachmark-step-text-font-weight));
+  --spectrum-coachmark-step-font-style: var(--mod-coachmark-step-font-style, var(--spectrum-coachmark-step-font-style));
+  --spectrum-coachmark-step-text-line-height: var(--mod-coachmark-step-text-line-height, var(--spectrum-coachmark-step-text-line-height));
+  --spectrum-coachmark-step-to-bottom: var(--mod-coachmark-step-to-bottom, var(--spectrum-coachmark-step-to-bottom));
+}

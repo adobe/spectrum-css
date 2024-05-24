@@ -1,0 +1,69 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-sidenav-background-disabled: var(--mod-sidenav-background-disabled, var(--spectrum-sidenav-background-disabled));
+  --spectrum-sidenav-content-disabled-color: var(--mod-sidenav-content-disabled-color, var(--spectrum-sidenav-content-disabled-color));
+  --spectrum-sidenav-item-background-default-selected: var(--mod-sidenav-item-background-default-selected, var(--spectrum-sidenav-item-background-default-selected));
+  --spectrum-sidenav-content-color-default-selected: var(--mod-sidenav-content-color-default-selected, var(--spectrum-sidenav-content-color-default-selected));
+  --spectrum-sidenav-item-background-down-selected: var(--mod-sidenav-item-background-down-selected, var(--spectrum-sidenav-item-background-down-selected));
+  --spectrum-sidenav-content-color-down-selected: var(--mod-sidenav-content-color-down-selected, var(--spectrum-sidenav-content-color-down-selected));
+  --spectrum-sidenav-background-key-focus-selected: var(--mod-sidenav-background-key-focus-selected, var(--spectrum-sidenav-background-key-focus-selected));
+  --spectrum-sidenav-content-color-key-focus-selected: var(--mod-sidenav-content-color-key-focus-selected, var(--spectrum-sidenav-content-color-key-focus-selected));
+  --spectrum-sidenav-inline-padding: var(--mod-sidenav-inline-padding, var(--spectrum-sidenav-inline-padding));
+  --spectrum-sidenav-gap: var(--mod-sidenav-gap, var(--spectrum-sidenav-gap));
+  --spectrum-sidenav-border-radius: var(--mod-sidenav-border-radius, var(--spectrum-sidenav-border-radius));
+  --spectrum-sidenav-background-default: var(--mod-sidenav-background-default, var(--spectrum-sidenav-background-default));
+  --spectrum-sidenav-content-color-default: var(--mod-sidenav-content-color-default, var(--spectrum-sidenav-content-color-default));
+  --spectrum-sidenav-width: var(--mod-sidenav-width, var(--spectrum-sidenav-width));
+  --spectrum-sidenav-min-width: var(--mod-sidenav-min-width, var(--spectrum-sidenav-min-width));
+  --spectrum-sidenav-max-width: var(--mod-sidenav-max-width, var(--spectrum-sidenav-max-width));
+  --spectrum-sidenav-min-height: var(--mod-sidenav-min-height, var(--spectrum-sidenav-min-height));
+  --spectrum-sidenav-text-font-family: var(--mod-sidenav-text-font-family, var(--spectrum-sidenav-text-font-family));
+  --spectrum-sidenav-text-font-size: var(--mod-sidenav-text-font-size, var(--spectrum-sidenav-text-font-size));
+  --spectrum-sidenav-text-font-weight: var(--mod-sidenav-text-font-weight, var(--spectrum-sidenav-text-font-weight));
+  --spectrum-sidenav-text-font-style: var(--mod-sidenav-text-font-style, var(--spectrum-sidenav-text-font-style));
+  --spectrum-sidenav-text-line-height: var(--mod-sidenav-text-line-height, var(--spectrum-sidenav-text-line-height));
+  --spectrum-sidenav-top-to-label: var(--mod-sidenav-top-to-label, var(--spectrum-sidenav-top-to-label));
+  --spectrum-sidenav-bottom-to-label: var(--mod-sidenav-bottom-to-label, var(--spectrum-sidenav-bottom-to-label));
+  --spectrum-sidenav-icon-size: var(--mod-sidenav-icon-size, var(--spectrum-sidenav-icon-size));
+  --spectrum-sidenav-icon-spacing: var(--mod-sidenav-icon-spacing, var(--spectrum-sidenav-icon-spacing));
+  --spectrum-sidenav-top-to-icon: var(--mod-sidenav-top-to-icon, var(--spectrum-sidenav-top-to-icon));
+  --spectrum-sidenav-background-hover-selected: var(--mod-sidenav-background-hover-selected, var(--spectrum-sidenav-background-hover-selected));
+  --spectrum-sidenav-content-color-hover-selected: var(--mod-sidenav-content-color-hover-selected, var(--spectrum-sidenav-content-color-hover-selected));
+  --spectrum-sidenav-background-hover: var(--mod-sidenav-background-hover, var(--spectrum-sidenav-background-hover));
+  --spectrum-sidenav-content-color-hover: var(--mod-sidenav-content-color-hover, var(--spectrum-sidenav-content-color-hover));
+  --spectrum-sidenav-item-background-down: var(--mod-sidenav-item-background-down, var(--spectrum-sidenav-item-background-down));
+  --spectrum-sidenav-content-color-down: var(--mod-sidenav-content-color-down, var(--spectrum-sidenav-content-color-down));
+  --spectrum-sidenav-focus-ring-color: var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color));
+  --spectrum-sidenav-focus-ring-size: var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
+  --spectrum-sidenav-focus-ring-gap: var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
+  --spectrum-sidenav-background-key-focus: var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus));
+  --spectrum-sidenav-content-color-key-focus: var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus));
+  --spectrum-sidenav-heading-top-margin: var(--mod-sidenav-heading-top-margin, var(--spectrum-sidenav-heading-top-margin));
+  --spectrum-sidenav-heading-bottom-margin: var(--mod-sidenav-heading-bottom-margin, var(--spectrum-sidenav-heading-bottom-margin));
+  --spectrum-sidenav-header-color: var(--mod-sidenav-header-color, var(--spectrum-sidenav-header-color));
+  --spectrum-sidenav-header-font-size: var(--mod-sidenav-header-font-size, var(--spectrum-sidenav-header-font-size));
+  --spectrum-sidenav-header-font-weight: var(--mod-sidenav-header-font-weight, var(--spectrum-sidenav-header-font-weight));
+  --spectrum-sidenav-header-font-style: var(--mod-sidenav-header-font-style, var(--spectrum-sidenav-header-font-style));
+  --spectrum-sidenav-header-line-height: var(--mod-sidenav-header-line-height, var(--spectrum-sidenav-header-line-height));
+  --spectrum-sidenav-top-level-font-family: var(--mod-sidenav-top-level-font-family, var(--spectrum-sidenav-top-level-font-family));
+  --spectrum-sidenav-top-level-font-weight: var(--mod-sidenav-top-level-font-weight, var(--spectrum-sidenav-top-level-font-weight));
+  --spectrum-sidenav-top-level-font-style: var(--mod-sidenav-top-level-font-style, var(--spectrum-sidenav-top-level-font-style));
+  --spectrum-sidenav-top-level-font-size: var(--mod-sidenav-top-level-font-size, var(--spectrum-sidenav-top-level-font-size));
+  --spectrum-sidenav-top-level-line-height: var(--mod-sidenav-top-level-line-height, var(--spectrum-sidenav-top-level-line-height));
+  --spectrum-sidenav-start-to-content-second-level: var(--mod-sidenav-start-to-content-second-level, var(--spectrum-sidenav-start-to-content-second-level));
+  --spectrum-sidenav-start-to-content-third-level: var(--mod-sidenav-start-to-content-third-level, var(--spectrum-sidenav-start-to-content-third-level));
+  --spectrum-sidenav-start-to-content-with-icon-second-level: var(--mod-sidenav-start-to-content-with-icon-second-level, var(--spectrum-sidenav-start-to-content-with-icon-second-level));
+  --spectrum-sidenav-start-to-content-with-icon-third-level: var(--mod-sidenav-start-to-content-with-icon-third-level, var(--spectrum-sidenav-start-to-content-with-icon-third-level));
+}

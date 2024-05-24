@@ -1,0 +1,56 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-tabs-color-selected-emphasized: var(--mod-tabs-color-selected-emphasized, var(--spectrum-tabs-color-selected-emphasized));
+  --spectrum-tabs-color-hover-emphasized: var(--mod-tabs-color-hover-emphasized, var(--spectrum-tabs-color-hover-emphasized));
+  --spectrum-tabs-color-key-focus-emphasized: var(--mod-tabs-color-key-focus-emphasized, var(--spectrum-tabs-color-key-focus-emphasized));
+  --spectrum-tabs-selection-indicator-color-emphasized: var(--mod-tabs-selection-indicator-color-emphasized, var(--spectrum-tabs-selection-indicator-color-emphasized));
+  --spectrum-tabs-list-background-direction-vertical: var(--mod-tabs-list-background-direction-vertical, var(--spectrum-tabs-list-background-direction-vertical));
+  --spectrum-tabs-list-background-direction-vertical-right: var(--mod-tabs-list-background-direction-vertical-right, var(--spectrum-tabs-list-background-direction-vertical-right));
+  --spectrum-tabs-item-height-compact: var(--mod-tabs-item-height-compact, var(--spectrum-tabs-item-height-compact));
+  --spectrum-tabs-top-to-text-compact: var(--mod-tabs-top-to-text-compact, var(--spectrum-tabs-top-to-text-compact));
+  --spectrum-tabs-bottom-to-text-compact: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tabs-bottom-to-text-compact));
+  --spectrum-tabs-top-to-icon-compact: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tabs-top-to-icon-compact));
+  --spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction, var(--spectrum-tabs-list-background-direction));
+  --spectrum-tabs-divider-background-color: var(--mod-tabs-divider-background-color, var(--spectrum-tabs-divider-background-color));
+  --spectrum-tabs-divider-size: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size));
+  --spectrum-tabs-item-height: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
+  --spectrum-tabs-color: var(--mod-tabs-color, var(--spectrum-tabs-color));
+  --spectrum-tabs-animation-duration: var(--mod-tabs-animation-duration, var(--spectrum-tabs-animation-duration));
+  --spectrum-tabs-icon-size: var(--mod-tabs-icon-size, var(--spectrum-tabs-icon-size));
+  --spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon, var(--spectrum-tabs-top-to-icon));
+  --spectrum-tabs-icon-to-text: var(--mod-tabs-icon-to-text, var(--spectrum-tabs-icon-to-text));
+  --spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text));
+  --spectrum-tabs-focus-indicator-gap: var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap));
+  --spectrum-tabs-focus-indicator-width: var(--mod-tabs-focus-indicator-width, var(--spectrum-tabs-focus-indicator-width));
+  --spectrum-tabs-focus-indicator-border-radius: var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-tabs-focus-indicator-border-radius));
+  --spectrum-tabs-color-hover: var(--mod-tabs-color-hover, var(--spectrum-tabs-color-hover));
+  --spectrum-tabs-color-selected: var(--mod-tabs-color-selected, var(--spectrum-tabs-color-selected));
+  --spectrum-tabs-color-disabled: var(--mod-tabs-color-disabled, var(--spectrum-tabs-color-disabled));
+  --spectrum-tabs-color-key-focus: var(--mod-tabs-color-key-focus, var(--spectrum-tabs-color-key-focus));
+  --spectrum-tabs-focus-indicator-color: var(--mod-tabs-focus-indicator-color, var(--spectrum-tabs-focus-indicator-color));
+  --spectrum-tabs-font-family: var(--mod-tabs-font-family, var(--spectrum-tabs-font-family));
+  --spectrum-tabs-font-style: var(--mod-tabs-font-style, var(--spectrum-tabs-font-style));
+  --spectrum-tabs-font-size: var(--mod-tabs-font-size, var(--spectrum-tabs-font-size));
+  --spectrum-tabs-font-weight: var(--mod-tabs-font-weight, var(--spectrum-tabs-font-weight));
+  --spectrum-tabs-line-height: var(--mod-tabs-line-height, var(--spectrum-tabs-line-height));
+  --spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text, var(--spectrum-tabs-bottom-to-text));
+  --spectrum-tabs-selection-indicator-color: var(--mod-tabs-selection-indicator-color, var(--spectrum-tabs-selection-indicator-color));
+  --spectrum-tabs-animation-ease: var(--mod-tabs-animation-ease, var(--spectrum-tabs-animation-ease));
+  --spectrum-tabs-divider-border-radius: var(--mod-tabs-divider-border-radius, var(--spectrum-tabs-divider-border-radius));
+  --spectrum-tabs-item-horizontal-spacing: var(--mod-tabs-item-horizontal-spacing, var(--spectrum-tabs-item-horizontal-spacing));
+  --spectrum-tabs-start-to-item-quiet: var(--mod-tabs-start-to-item-quiet, var(--spectrum-tabs-start-to-item-quiet));
+  --spectrum-tabs-item-vertical-spacing: var(--mod-tabs-item-vertical-spacing, var(--spectrum-tabs-item-vertical-spacing));
+  --spectrum-tabs-start-to-edge: var(--mod-tabs-start-to-edge, var(--spectrum-tabs-start-to-edge));
+}

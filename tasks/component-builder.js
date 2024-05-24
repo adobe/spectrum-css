@@ -123,15 +123,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
 		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
-	const promises = [];
-	if (found.size > 0) {
-		// If the metadata folder doesn't exist, create it
-		if (!fs.existsSync(path.join(cwd, "metadata"))) {
-			fs.mkdirSync(path.join(cwd, "metadata"));
-		}
-	}
-
-	promises.push(
+	return Promise.all([
 		fsp.writeFile(
 			path.join(cwd, "dist/metadata.json"),
 			(await prettier.format(
@@ -157,9 +149,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
 			console.log(`${"✗".red}  ${"dist/metadata.json".yellow} not written`);
 			return Promise.reject(err);
 		})
-	);
-
-	return Promise.all(promises);
+	]);
 }
 
 /**
@@ -311,18 +301,47 @@ async function cleanFolder({ cwd = process.cwd() } = {}) {
  * @returns Promise<void>
  */
 async function build({ cwd = process.cwd(), clean = false } = {}) {
+	const rootCSS = path.join(cwd, "index.css");
 	// Nothing to do if there's no input file
-	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
+	if (!fs.existsSync(rootCSS)) return;
 
-	const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
+	const content = await fsp.readFile(rootCSS, "utf8");
 
-	return processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), { cwd, clean })
-		.then(async (reports) =>
-		// After building, extract the available modifiers
-			extractModifiers(path.join(cwd, "dist/index.css"), { cwd })
-			// Return the console output to be logged
-				.then(r => [r, ...reports])
+	if (!fs.existsSync(path.join(cwd, "dist"))) {
+		fs.mkdirSync(path.join(cwd, "dist"));
+	}
+
+	const promises = [];
+	promises.push(
+		processCSS(content, rootCSS, path.join(cwd, "dist", "index.css"), {
+			cwd,
+			clean
+		})
+			.then(async (reports) =>
+			// After building, extract the available modifiers
+				extractModifiers(path.join(cwd, "dist/index.css"), { cwd })
+				// Return the console output to be logged
+					.then(r => [r, ...reports])
+			),
+		processCSS(content, rootCSS, path.join(cwd, "dist", "index-base.css"), {
+			cwd,
+			clean,
+			noFlatVariables: true,
+		}),
+		processCSS(content, rootCSS, path.join(cwd, "dist", "vars.css"), {
+			cwd,
+			clean,
+			referencesOnly: true,
+		}),
+	);
+
+	if (fs.existsSync(path.join(cwd, "bridge", "mods.css"))) {
+		promises.push(
+			fsp.copyFile(path.join(cwd, "bridge", "mods.css"), path.join(cwd, "dist", "mods-bridge.css")).then(() => `${"✓".green}  ${"dist/mods-bridge.css".yellow}`)
 		);
+	}
+
+	return Promise.all(promises);
 }
 
 /**

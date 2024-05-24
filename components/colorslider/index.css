@@ -1,17 +1,17 @@
 /*!
  * Copyright 2023 Adobe. All rights reserved.
- * 
+ *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
  * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software distributed under
  * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
 
-.spectrum-ColorSlider {
+:root {
 	/* Size and Spacing */
 	--spectrum-color-slider-handle-margin-block: var(--spectrum-component-top-to-text-75);
 
@@ -28,10 +28,13 @@
 }
 
 @media (forced-colors: active) {
-	.spectrum-ColorSlider {
+	:root {
 		--highcontrast-color-slider-border-color: CanvasText;
 		--highcontrast-color-slider-border-color-disabled: GrayText;
 		--highcontrast-color-slider-background-color-disabled: Canvas;
+	}
+
+	.spectrum-ColorSlider {
 		forced-color-adjust: none;
 	}
 }
@@ -49,83 +52,83 @@
 
 	cursor: default;
 
-	&.is-focused {
+	&[focused] {
 		z-index: 2;
 	}
 
-	&.is-disabled {
+	&[disabled] {
 		pointer-events: none;
 
 		.spectrum-ColorSlider-gradient {
 			display: none;
 		}
 	}
-}
 
-.spectrum-ColorSlider--vertical {
-	display: inline-block;
+	&[vertical] {
+		display: inline-block;
 
-	min-block-size: var(--mod-color-slider-vertical-minimum-height, var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length)));
-	block-size: var(--mod-color-slider-vertical-height, var(--mod-color-slider-length, var(--spectrum-color-slider-length)));
-	min-inline-size: 0;
-	inline-size: var(--mod-color-slider-vertical-control-track-width, var(--mod-color-slider-control-track-height, var(--spectrum-color-control-track-width)));
+		min-block-size: var(--mod-color-slider-vertical-minimum-height, var(--mod-color-slider-minimum-length, var(--spectrum-color-slider-minimum-length)));
+		block-size: var(--mod-color-slider-vertical-height, var(--mod-color-slider-length, var(--spectrum-color-slider-length)));
+		min-inline-size: 0;
+		inline-size: var(--mod-color-slider-vertical-control-track-width, var(--mod-color-slider-control-track-height, var(--spectrum-color-control-track-width)));
 
-	.spectrum-ColorSlider-handle {
-		inset-inline-start: 50%;
-		inset-block-start: 0;
+		.spectrum-ColorSlider-handle {
+			inset-inline-start: 50%;
+			inset-block-start: 0;
+		}
+
+		.spectrum-ColorSlider-handle {
+			inset-inline-start: 50%;
+			inset-block-start: 0;
+		}
 	}
 
 	.spectrum-ColorSlider-handle {
-		inset-inline-start: 50%;
-		inset-block-start: 0;
+		inset-inline-start: 0;
+		inset-block-start: 50%;
 	}
-}
 
-.spectrum-ColorSlider-handle {
-	inset-inline-start: 0;
-	inset-block-start: 50%;
-}
+	.spectrum-ColorSlider-checkerboard {
+		--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-rgba)));
 
-.spectrum-ColorSlider-checkerboard {
-	--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color, var(--mod-color-slider-border-color, var(--spectrum-color-slider-border-color-rgba)));
+		/* Inset border on top of background, created with box-shadow. */
+		&::before {
+			content: "";
+			z-index: 1;
+			position: absolute;
+			inset: 0;
+			box-shadow: inset 0 0 0 var(--mod-color-slider-border-width, var(--spectrum-color-slider-border-width)) var(--spectrum-color-slider-border-color-local);
+			border-radius: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
+		}
 
-	/* Inset border on top of background, created with box-shadow. */
-	&::before {
-		content: "";
-		z-index: 1;
-		position: absolute;
-		inset: 0;
-		box-shadow: inset 0 0 0 var(--mod-color-slider-border-width, var(--spectrum-color-slider-border-width)) var(--spectrum-color-slider-border-color-local);
+		.spectrum-ColorSlider[disabled] & {
+			--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-disabled-background-color)));
+			background: var(--highcontrast-color-slider-background-color-disabled, var(--mod-color-slider-background-color-disabled, var(--spectrum-disabled-background-color)));
+		}
+	}
+
+	.spectrum-ColorSlider-gradient,
+	.spectrum-ColorSlider-checkerboard {
+		inline-size: 100%;
+		block-size: 100%;
 		border-radius: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
 	}
 
-	.spectrum-ColorSlider.is-disabled & {
-		--spectrum-color-slider-border-color-local: var(--highcontrast-color-slider-border-color-disabled, var(--mod-color-slider-border-color-disabled, var(--spectrum-disabled-background-color)));
-		background: var(--highcontrast-color-slider-background-color-disabled, var(--mod-color-slider-background-color-disabled, var(--spectrum-disabled-background-color)));
+	/* Reverse gradient horizontally when viewing RTL. */
+	.spectrum-ColorSlider-gradient:dir(rtl) {
+		transform: scaleX(-1);
 	}
-}
 
-.spectrum-ColorSlider-gradient,
-.spectrum-ColorSlider-checkerboard {
-	inline-size: 100%;
-	block-size: 100%;
-	border-radius: var(--mod-color-slider-border-rounding, var(--spectrum-color-slider-border-rounding));
-}
-
-/* Reverse gradient horizontally when viewing RTL. */
-.spectrum-ColorSlider-gradient:dir(rtl) {
-	transform: scaleX(-1);
-}
-
-/* Visually hidden "range" input field */
-.spectrum-ColorSlider-slider {
-	opacity: 0;
-	position: absolute;
-	inset-block-start: 0;
-	inset-inline-start: 0;
-	inline-size: 100%;
-	block-size: 100%;
-	z-index: 0;
-	margin: 0;
-	pointer-events: none;
+	/* Visually hidden "range" input field */
+	.spectrum-ColorSlider-slider {
+		opacity: 0;
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		inline-size: 100%;
+		block-size: 100%;
+		z-index: 0;
+		margin: 0;
+		pointer-events: none;
+	}
 }

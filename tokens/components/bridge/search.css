@@ -18,19 +18,19 @@ governing permissions and limitations under the License.
   --spectrum-search-border-color-focus-hover: var(--system-spectrum-search-border-color-focus-hover);
   --spectrum-search-border-color-key-focus: var(--system-spectrum-search-border-color-key-focus);
 }
-.spectrum-Search--sizeS {
+&[size="S"] {
   --spectrum-search-border-radius: var(--system-spectrum-search-sizes-border-radius);
   --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizes-edge-to-visual);
 }
-.spectrum-Search--sizeM {
+&[size="M"] {
   --spectrum-search-border-radius: var(--system-spectrum-search-sizem-border-radius);
   --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizem-edge-to-visual);
 }
-.spectrum-Search--sizeL {
+&[size="L"] {
   --spectrum-search-border-radius: var(--system-spectrum-search-sizel-border-radius);
   --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizel-edge-to-visual);
 }
-.spectrum-Search--sizeXL {
+&[size="XL"] {
   --spectrum-search-border-radius: var(--system-spectrum-search-sizexl-border-radius);
   --spectrum-search-edge-to-visual: var(--system-spectrum-search-sizexl-edge-to-visual);
 }

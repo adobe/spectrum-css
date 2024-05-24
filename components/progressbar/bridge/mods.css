@@ -1,0 +1,40 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-progressbar-fill-size-indeterminate: var(--mod-progressbar-fill-size-indeterminate, var(--spectrum-progressbar-fill-size-indeterminate));
+  --spectrum-progressbar-size-default: var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default));
+  --spectrum-meter-inline-size: var(--mod-meter-inline-size, var(--spectrum-meter-inline-size));
+  --spectrum-meter-max-width: var(--mod-meter-max-width, var(--spectrum-meter-max-width));
+  --spectrum-meter-min-width: var(--mod-meter-min-width, var(--spectrum-meter-min-width));
+  --spectrum-progressbar-fill-color-positive: var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive));
+  --spectrum-progressbar-fill-color-notice: var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice));
+  --spectrum-progressbar-fill-color-negative: var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative));
+  --spectrum-progressbar-font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
+  --spectrum-progressbar-max-size: var(--mod-progressbar-max-size, var(--spectrum-progressbar-max-size));
+  --spectrum-progressbar-min-size: var(--mod-progressbar-min-size, var(--spectrum-progressbar-min-size));
+  --spectrum-progressbar-spacing-top-to-text: var(--mod-progressbar-spacing-top-to-text, var(--spectrum-progressbar-spacing-top-to-text));
+  --spectrum-progressbar-spacing-label-to-progressbar: var(--mod-progressbar-spacing-label-to-progressbar, var(--spectrum-progressbar-spacing-label-to-progressbar));
+  --spectrum-progressbar-line-height: var(--mod-progressbar-line-height, var(--spectrum-progressbar-line-height));
+  --spectrum-progressbar-text-color: var(--mod-progressbar-text-color, var(--spectrum-progressbar-text-color));
+  --spectrum-progressbar-line-height-cjk: var(--mod-progressbar-line-height-cjk, var(--spectrum-progressbar-line-height-cjk));
+  --spectrum-progressbar-spacing-label-to-text: var(--mod-progressbar-spacing-label-to-text, var(--spectrum-progressbar-spacing-label-to-text));
+  --spectrum-progressbar-thickness: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
+  --spectrum-progressbar-track-color: var(--mod-progressbar-track-color, var(--spectrum-progressbar-track-color));
+  --spectrum-progressbar-fill-color: var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color));
+  --spectrum-progressbar-animation-ease-in-out-indeterminate: var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-progressbar-animation-ease-in-out-indeterminate));
+  --spectrum-spacing-progressbar-label-to-text: var(--mod-spacing-progressbar-label-to-text, var(--spectrum-spacing-progressbar-label-to-text));
+  --spectrum-progressbar-fill-color-white: var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white));
+  --spectrum-progressbar-label-and-value-white: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
+  --spectrum-progressbar-animation-duration-indeterminate: var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate));
+}

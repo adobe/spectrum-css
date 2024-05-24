@@ -49,7 +49,7 @@ module.exports = {
 			prefix: "spectrum",
 			files: [
 				generateFileConfig(),
-				...["desktop", "mobile", "light", "dark", "darkest"].map((context) =>
+				...["desktop", "mobile", "light", "dark"].map((context) =>
 					generateFileConfig({ setName: context }),
 				),
 			],

@@ -1,0 +1,35 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-assetlist-label-color: var(--mod-assetlist-label-color, var(--spectrum-assetlist-label-color));
+  --spectrum-assetlist-width: var(--mod-assetlist-width, var(--spectrum-assetlist-width));
+  --spectrum-assetlist-item-padding-inline-start: var(--mod-assetlist-item-padding-inline-start, var(--spectrum-assetlist-item-padding-inline-start));
+  --spectrum-assetlist-item-padding-inline-end: var(--mod-assetlist-item-padding-inline-end, var(--spectrum-assetlist-item-padding-inline-end));
+  --spectrum-assetlist-item-margin-bottom: var(--mod-assetlist-item-margin-bottom, var(--spectrum-assetlist-item-margin-bottom));
+  --spectrum-assetlist-item-animation: var(--mod-assetlist-item-animation, var(--spectrum-assetlist-item-animation));
+  --spectrum-assetlist-item-font-size: var(--mod-assetlist-item-font-size, var(--spectrum-assetlist-item-font-size));
+  --spectrum-assetlist-item-font-weight: var(--mod-assetlist-item-font-weight, var(--spectrum-assetlist-item-font-weight));
+  --spectrum-assetlist-item-height: var(--mod-assetlist-item-height, var(--spectrum-assetlist-item-height));
+  --spectrum-assetlist-item-border-radius: var(--mod-assetlist-item-border-radius, var(--spectrum-assetlist-item-border-radius));
+  --spectrum-assetlist-thumbnail-width: var(--mod-assetlist-thumbnail-width, var(--spectrum-assetlist-thumbnail-width));
+  --spectrum-assetlist-thumnail-height: var(--mod-assetlist-thumnail-height, var(--spectrum-assetlist-thumnail-height));
+  --spectrum-assetlist-thumbnail-margin-left: var(--mod-assetlist-thumbnail-margin-left, var(--spectrum-assetlist-thumbnail-margin-left));
+  --spectrum-assetlist-item-background-color-hover: var(--mod-assetlist-item-background-color-hover, var(--spectrum-assetlist-item-background-color-hover));
+  --spectrum-assetlist-border-color-key-focus: var(--mod-assetlist-border-color-key-focus, var(--spectrum-assetlist-border-color-key-focus));
+  --spectrum-assetlist-item-background-color-down: var(--mod-assetlist-item-background-color-down, var(--spectrum-assetlist-item-background-color-down));
+  --spectrum-assetlist-item-background-color-selected: var(--mod-assetlist-item-background-color-selected, var(--spectrum-assetlist-item-background-color-selected));
+  --spectrum-assetlist-item-background-color-selected-hover: var(--mod-assetlist-item-background-color-selected-hover, var(--spectrum-assetlist-item-background-color-selected-hover));
+  --spectrum-assetlist-child-indicator-animation: var(--mod-assetlist-child-indicator-animation, var(--spectrum-assetlist-child-indicator-animation));
+  --spectrum-assetlist-item-label-padding-inline-start: var(--mod-assetlist-item-label-padding-inline-start, var(--spectrum-assetlist-item-label-padding-inline-start));
+}
