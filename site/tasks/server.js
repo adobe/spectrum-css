@@ -75,7 +75,7 @@ async function main() {
 				},
 			},
 			{
-				match: ["*/index.css", "*/themes/*.css"],
+				match: ["*/index.css", "*/**/*.css"],
 				options: {
 					cwd: dirs.components,
 					ignore: ["*/dist/*"],

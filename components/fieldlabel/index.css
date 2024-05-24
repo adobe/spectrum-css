@@ -76,6 +76,8 @@ governing permissions and limitations under the License.
 
 	padding-block: var(--mod-field-label-top-to-text, var(--spectrum-fieldlabel-top-to-text)) var(--mod-field-label-bottom-to-text, var(--spectrum-fieldlabel-bottom-to-text));
 	padding-inline: 0;
+	margin-inline: var(--spectrum-fieldlabel-spacing-inline-to-container,);
+	margin-block: var(--spectrum-fieldlabel-spacing-block-to-container,);
 
 	font-size: var(--mod-fieldlabel-font-size, var(--spectrum-fieldlabel-font-size));
 	font-weight: var(--mod-fieldlabel-font-weight, var(--spectrum-fieldlabel-font-weight));

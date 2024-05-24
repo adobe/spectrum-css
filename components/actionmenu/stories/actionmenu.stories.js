@@ -72,6 +72,7 @@ export default {
 				...(Menu.parameters?.actions?.handles ?? []),
 			],
 		},
+		chromatic: { delay: 2000 },
 	},
 	decorators: [
 		(Story, context) => html`<div style="padding: 14px">${Story(context)}</div>`

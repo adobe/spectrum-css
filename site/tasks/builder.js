@@ -40,7 +40,7 @@ const tokens = require.resolve("@spectrum-css/tokens");
 const workflowIcons = require.resolve("@adobe/spectrum-css-workflow-icons");
 const uiIcons = require.resolve("@spectrum-css/ui-icons");
 
-const deprecatedComponents = ["quickaction", "cyclebutton", "searchwithin", "splitbutton"];
+const deprecatedComponents = [];
 
 const timeInMs = (seconds, nanoseconds) => (seconds * 1000000000 + nanoseconds) / 1000000;
 
@@ -474,7 +474,7 @@ async function build_forPackage(componentName, globalData = {}) {
 	/** @todo how do we load dependencies not hosted in the repo? */
 	return Promise.all([
 		buildPages_forPackage(componentName, globalData),
-		copy_Assets(["*.css", "themes/*.css", "*.json"], {
+		copy_Assets(["*.css", "**/*.css", "*.json"], {
 			cwd: path.join(dirName, "dist"),
 			outputDir,
 			allowEmpty: true,

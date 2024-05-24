@@ -13,7 +13,6 @@ export default {
 			name: "Size",
 			type: { name: "string", required: true },
 			table: {
-				disable: true,
 				type: { summary: "string" },
 				category: "Component",
 			},
@@ -21,7 +20,15 @@ export default {
 			control: "select",
 		},
 		variant: {
-			table: { disable: true },
+			name: "Style variant",
+			type: { name: "string" },
+			table: {
+				disable: true,
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["explicit"],
+			control: "select",
 		},
 	},
 	args: {

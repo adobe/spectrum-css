@@ -44,9 +44,9 @@ Total size of all files for this branch in bytes.
 name: Compare compiled output file size
 uses: "spectrum-tools/gh-action-file-diff"
 with:
-    head-path: ${{ github.workspace }}/pull-request
-    base-path: ${{ github.workspace }}/base-branch
-    file-glob-pattern: |
-        components/*/dist/*.{css,json}
-        components/*/dist/themes/*.css
+  head-path: ${{ github.workspace }}/pull-request
+  base-path: ${{ github.workspace }}/base-branch
+  file-glob-pattern: |
+    components/*/dist/*
+    components/*/dist/**/*
 ```

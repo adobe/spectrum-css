@@ -1,5 +1,7 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 
+import "@spectrum-css/tokens-legacy";
+
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  * @description Global properties added to each component; determines what stylesheets are loaded
@@ -8,27 +10,16 @@ export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { args, argTypes, viewMode, id } = context;
-
-		const getDefaultValue = (type) => {
-			if (!type) return null;
-			if (type.defaultValue) return type.defaultValue;
-			return type.options ? type.options[0] : null;
-		};
+		const { globals, args, viewMode, id } = context;
 
 		// This property informs which context stylesheets to source
 		//    but does not source a stylesheet for itself
-		/** @type boolean */
-		const isExpress = args.express
-			? args.express
-			: getDefaultValue(argTypes.express);
 		/** @type string */
-		const color = args.color ? args.color : getDefaultValue(argTypes.color) ?? "light";
+		const color = globals.color ?? "light";
 		/** @type string */
-		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
-
-		const colors = ["light", "dark", "darkest"];
-		const scales = ["medium", "large"];
+		const scale = globals.scale ?? "medium";
+		/** @type string */
+		const ctx = globals.context ?? "spectrum";
 
 		useEffect(() => {
 			let containers = [document.body];
@@ -42,14 +33,16 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			for (const container of containers) {
-				container.classList.toggle("spectrum", true);
-				container.classList.toggle("spectrum--express", isExpress);
 
-				for (const c of colors) {
+				container.classList.toggle("spectrum", true);
+				container.classList.toggle("spectrum--legacy", ["legacy", "express"].includes(ctx));
+				container.classList.toggle(`spectrum--express`, ctx === "express");
+
+				for (const c of ["light", "dark"]) {
 					container.classList.toggle(`spectrum--${c}`, c === color);
 				}
 
-				for (const s of scales) {
+				for (const s of ["medium", "large"]) {
 					container.classList.toggle(`spectrum--${s}`, s === scale);
 				}
 
@@ -65,7 +58,7 @@ export const withContextWrapper = makeDecorator({
 					}
 				}
 			}
-		}, [color, scale, isExpress, args.staticColor]);
+		}, [color, ctx, scale, args.staticColor]);
 
 		return StoryFn(context);
 	},

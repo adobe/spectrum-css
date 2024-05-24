@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* eslint-disable no-console */
-
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
@@ -114,7 +112,11 @@ async function extractModifiers(filepath, { cwd } = {}) {
 	const selectors = new Set();
 	const root = postcss.parse(content);
 	root.walkRules(rule => {
-		if (rule.selector) selectors.add(rule.selector);
+		if (rule.selectors) {
+			rule.selectors.forEach((selector) => {
+				selectors.add(selector);
+			});
+		}
 	});
 
 	if (!fs.existsSync(path.join(cwd, "dist"))) {
@@ -127,26 +129,6 @@ async function extractModifiers(filepath, { cwd } = {}) {
 		if (!fs.existsSync(path.join(cwd, "metadata"))) {
 			fs.mkdirSync(path.join(cwd, "metadata"));
 		}
-
-		promises.push(
-			fsp.writeFile(
-				path.join(cwd, "metadata/mods.md"),
-				(await prettier.format(
-					[
-						"| Modifiable custom properties |\n| --- |",
-						...[...found].sort().map((result) => `| \`${result}\` |`),
-					].join("\n"),
-					{ parser: "markdown" }
-				)),
-				{ encoding: "utf-8" }
-			)
-				.then(() => `${"✓".green}  ${"metadata/mods.md".padEnd(20, " ").yellow}  ${"-- deprecated --".gray}`)
-				.catch((err) => {
-					if (!err) return;
-					console.log(`${"✗".red}  ${"metadata/mods.md".yellow} not written`);
-					return Promise.reject(err);
-				})
-		);
 	}
 
 	promises.push(
@@ -193,8 +175,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
  */
 async function processCSS(content, input, output, {
 	cwd,
-	/* eslint-disable-next-line no-unused-vars */
-	clean = false,
+	// clean = false,
 	configPath = __dirname,
 	...postCSSOptions
 } = {}) {
@@ -310,37 +291,6 @@ async function fetchContent(globs = [], {
 }
 
 /**
- * A utility to copy a file from one local to another
- * @param {string} from
- * @param {string} to
- * @param {object} [config={}]
- * @param {string} [config.cwd=] - Current working directory for the component being built
- * @returns Promise<string|void>
- */
-async function copy(from, to, { cwd, isDeprecated = true } = {}) {
-	if (!fs.existsSync(from)) return;
-
-	if (!fs.existsSync(path.dirname(to))) {
-		await fsp.mkdir(path.dirname(to), { recursive: true }).catch((err) => {
-			if (!err) return;
-			console.log(`${"✗".red}  problem making the ${relativePrint(path.dirname(to), { cwd }).yellow} directory`);
-			return Promise.reject(err);
-		});
-	}
-
-	const content = await fsp.readFile(from, { encoding: "utf-8" });
-	if (!content) return;
-	/** @todo add support for injecting a deprecation notice as a comment after the copyright */
-	return fsp.writeFile(to, content, { encoding: "utf-8" })
-		.then(() => `${"✓".green}  ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${isDeprecated ? "-- deprecated --".gray : ""}`)
-		.catch((err) => {
-			if (!err) return;
-			console.log(`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`);
-			return Promise.reject(err);
-		});
-}
-
-/**
  * The builder for the main entry point
  * @param {object} config
  * @param {string} config.cwd - Current working directory for the component being built
@@ -364,82 +314,15 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 	// Nothing to do if there's no input file
 	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
-	const componentName = cwd?.split(path.sep)?.pop();
 	const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
-	const hasThemes = fs.existsSync(path.join(cwd, "themes"));
 
-	return Promise.all([
-		// This was buildCSS
-		processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), { cwd, clean })
-			.then(async (reports) =>
-				Promise.all([
-					// After building, extract the available modifiers
-					extractModifiers(path.join(cwd, "dist/index.css"), { cwd }),
-					// Copy index.css to index-vars.css for backwards compat, log as deprecated
-					copy(path.join(cwd, "dist/index.css"), path.join(cwd, "dist/index-vars.css"), { cwd }),
-				])
-				// Return the console output to be logged
-					.then(r => [r, ...reports])
-			),
-		// This was buildCSSWithoutThemes
-		processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist/index-base.css"), {
-			cwd,
-			clean,
-			lint: false,
-		}),
-		// This was buildCSSWithoutThemes
-		hasThemes ? processCSS(content, path.join(cwd, "index.css"), path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), {
-			cwd,
-			clean,
-			lint: false,
-			map: false,
-			env: "production",
-		}).then(async (reports) => {
-			return copy(path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), path.join(dirs.root, "tokens", "dist/css/components/bridge", `${componentName}.css`), { cwd, isDeprecated: false }).then(r => [...reports, r]);
-		}) : Promise.resolve(),
-	]);
-}
-
-/**
- * The builder for the individual themes assets
- * @param {object} config
- * @param {string} config.cwd - Current working directory for the component being built
- * @param {boolean} config.clean - Should the built assets be cleaned before running the build
- * @returns Promise<void>
- */
-async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
-	// This fetches the content of the files and returns an array of objects with the content and input paths
-	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
-	const componentName = cwd?.split(path.sep)?.pop();
-
-	// Nothing to do if there's no content
-	if (!contentData || contentData.length === 0) return;
-
-	return Promise.all(
-		contentData.map(async ({ content, input }) => {
-			const promises = [
-				processCSS(content, path.join(cwd, input), path.join(cwd, "dist", input), { cwd, clean, lint: false }),
-				processCSS(content, path.join(cwd, input), path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`), { cwd, clean, lint: false, env: "production", map: false }).then(async (reports) => {
-					// Copy the build express & spectrum component tokens to the tokens package folder in src and dist output
-					// (dist included b/c tokens are typically built before components in the build order)
-					return copy(
-						path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`),
-						path.join(dirs.root, "tokens", "dist/css", "components", path.basename(input, ".css"), `${componentName}.css`),
-						{ cwd, isDeprecated: false }
-					).then(r => [...reports, r]);
-				}),
-			];
-
-			// Additional processing for the express output because it includes both it and spectrum's content
-			if (path.basename(input, ".css") === "express") {
-				promises.push(
-					processCSS(content, path.join(cwd, input), path.join(cwd, "dist/index-theme.css"), { cwd, clean, lint: false }),
-				);
-			}
-
-			return Promise.all(promises);
-		})
-	);
+	return processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), { cwd, clean })
+		.then(async (reports) =>
+		// After building, extract the available modifiers
+			extractModifiers(path.join(cwd, "dist/index.css"), { cwd })
+			// Return the console output to be logged
+				.then(r => [r, ...reports])
+		);
 }
 
 /**
@@ -473,7 +356,6 @@ async function main({
 	return Promise.all([
 		...(clean ? [cleanFolder({ cwd })] : []),
 		build({ cwd, clean }),
-		buildThemes({ cwd, clean }),
 	]).then((report) => {
 		const logs = report.flat(Infinity).filter(Boolean);
 

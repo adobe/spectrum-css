@@ -10,54 +10,27 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { join, sep, basename } = require("path");
+const { join } = require("path");
 
 module.exports = ({
 	file,
-	to,
-	splitinatorOptions = {
-		noSelectors: false,
-		noFlatVariables: false,
-		// @todo strip out all but the references to --system- variables
-		// NOT --system- definitions, only references
-		referencesOnly: false,
-	},
-	combine = false,
 	lint = true,
 	verbose = true,
 	additionalPlugins = {},
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
-	const rootPath = __dirname;
-	const outputFilepath = to ?? file;
-	const relativePath = outputFilepath?.replace(rootPath, "");
-	const outputFilename = basename(outputFilepath, ".css");
-	const pathParts = relativePath?.split(sep) ?? [];
-
-	const isBridge = pathParts.includes("bridge");
-	const isTheme = ["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename === "index-theme";
-	const isExpress = outputFilename === "express" || pathParts.includes("express");
-
 	if (env === "development" && !options.map) {
 		options.map = { inline: false };
 	}
 	else options.map = false;
 
-	if (isTheme) {
-		splitinatorOptions.noSelectors = true;
-	}
-
-	if (isExpress) {
-		combine = true;
-	}
-
-	if (outputFilename === "index-base") {
-		splitinatorOptions.noFlatVariables = true;
-	}
-
-	if (isBridge) {
-		splitinatorOptions.referencesOnly = true;
+	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
+	if (file && file.includes("@spectrum-css/tokens-legacy")) {
+		additionalPlugins["postcss-selector-replace"] = {
+			before: [".spectrum"],
+			after: [".spectrum--legacy.spectrum"],
+		};
 	}
 
 	/*
@@ -82,14 +55,6 @@ module.exports = ({
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
 			"postcss-hover-media-feature": {},
-			/* --------------------------------------------------- */
-			/* ------------------- VARIABLE PARSING -------------- */
-			"postcss-splitinator": {
-				processIdentifier: (identifier) =>
-					identifier === "express" ? "spectrum--express" : identifier,
-				...splitinatorOptions,
-			},
-			"postcss-combininator": combine ? {} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
@@ -109,9 +74,7 @@ module.exports = ({
 					"logical-properties-and-values": false,
 					clamp: true,
 					"color-functional-notation": true,
-					"dir-pseudo-class": { preserve: true },
 					"nesting-rules": { noIsPseudoSelector: true },
-					// "focus-visible-pseudo-class": true,
 					// https://github.com/jsxtools/focus-within
 					"focus-within-pseudo-class": true,
 					"font-format-keywords": true,
