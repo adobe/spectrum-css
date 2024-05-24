@@ -1,6 +1,9 @@
-import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { when } from "lit/directives/when.js";
+
+import { Template as ColorArea } from "@spectrum-css/colorarea/stories/template.js";
+import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
 import "../index.css";
 
@@ -9,6 +12,7 @@ export const Template = ({
 	customClasses = [],
 	isDisabled = false,
 	isFocused = false,
+	isWithColorArea = false,
 	colorHandleStyle = {
 		"--spectrum-picked-color": "rgb(255, 0, 0)",
 	},
@@ -21,7 +25,18 @@ export const Template = ({
 		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 	})}>
 		<div class="${rootClass}-inner">
-			<div class="${rootClass}-colorarea-container"></div>
+			<div class="${rootClass}-colorarea-container">
+			${when(isWithColorArea, () => html`
+				${ColorArea({
+					...globals,
+					isDisabled,
+					customStyles: {
+						"--mod-colorarea-width": "80px",
+						"--mod-colorarea-height": "80px",
+					},
+				})}
+			`)}
+			</div>
 		</div>
 		<div class=${classMap({
 			[`${rootClass}-border`]: true,
