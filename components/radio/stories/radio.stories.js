@@ -88,9 +88,6 @@ export default {
 			handles: ["click input[type=\"radio\"]"],
 
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

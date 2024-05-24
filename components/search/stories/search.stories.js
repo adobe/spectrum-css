@@ -49,9 +49,6 @@ export default {
 				"click .spectrum-Search-icon",
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

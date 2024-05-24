@@ -94,9 +94,6 @@ export default {
 		size: "xl",
 	},
 	parameters: {
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

@@ -31,8 +31,8 @@ export const withReducedMotionWrapper = makeDecorator({
 	name: "withReducedMotionWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { args } = context;
-		const reducedMotion = args.reducedMotion;
+		const { globals } = context;
+		const reducedMotion = globals.reducedMotion;
 
 		return html`
 			${reducedMotion

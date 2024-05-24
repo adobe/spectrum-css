@@ -28,9 +28,6 @@ export default {
 		actions: {
 			handles: [],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 	decorators: [
 		(Story, context) => html`<div style=${styleMap({ inlineSize: "100px", blockSize: "100px" })}>${Story(context)}</div>`

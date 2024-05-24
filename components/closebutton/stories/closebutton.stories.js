@@ -46,9 +46,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-CloseButton"],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

@@ -76,17 +76,6 @@ CSS assets will be run through their respective postcss configurations. This mea
   import "../index.css";
   ```
 
-If you need to load an asset in your template based on storybook configurations, you can do so using dynamic imports and a webpackPrefetch flag (to prevent FOUC). These will follow the same compilation rules as noted above. i.e.,
-
-  ```js
-  try {
-   if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-   else import(/* webpackPrefetch: true */ "../themes/express.css");
-  } catch (e) {
-   console.warn(e);
-  }
-  ```
-
 We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit for dynamic attribute assignment.
 
 ### Add-ons
@@ -292,18 +281,7 @@ export const Template = ({
  hasClearButton = false,
  id,
  customClasses = [],
- ...globals
-}) => {
- const { express } = globals;
-
- try {
-  if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-  else import(/* webpackPrefetch: true */ "../themes/express.css");
- } catch (e) {
-  console.warn(e);
- }
-
- return html`
+}) => html`
   <div
    class=${classMap({
     [rootClass]: true,
@@ -320,13 +298,11 @@ export const Template = ({
   >
    ${avatarUrl && !iconName
     ? Avatar({
-      ...globals,
       image: avatarUrl,
       size: "50",
       })
     : ""} ${iconName
     ? Icon({
-      ...globals,
       iconName,
       customClasses: [`${rootClass}s-itemIcon`],
       })
@@ -334,7 +310,6 @@ export const Template = ({
    <span class="${rootClass}s-itemLabel">${label}</span>
    ${hasClearButton
     ? ClearButton({
-      ...globals,
       customClasses: [`${rootClass}-clearButton`],
       onclick: (evt) => {
        const el = evt.target;
@@ -347,7 +322,6 @@ export const Template = ({
     : ""}
   </div>
  `;
-};
 ```
 
 ## Testing stories
@@ -383,20 +357,6 @@ Default.args = {};
 ```
 
 Ideally you should have a single story file for each component with multiple variations and states represented in the "Kitchen sink" grouping that only renders in Chromatic. To preview the groups locally, there is a global toolbar setting with a beaker icon called "Show testing preview" that will activate the Chromatic view.
-
-In the event that you don't want a story to be tested in Chromatic, you can use the `disabledSnapshot` paramter:
-
-```
-Default.parameters = {
-	chromatic: { disableSnapshot: true },
-}
-```
-
-Similarly, if a story is only for documentation purposes and shouldn't be shown in the sidebar, you can use the custom `docs-only` tag:
-
-```
-Default.tags = ["docs-only"];
-```
 
 ### Getting started
 

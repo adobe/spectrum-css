@@ -58,9 +58,6 @@ export default {
 				...(TagStories.parameters.actions.handles ?? [])
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

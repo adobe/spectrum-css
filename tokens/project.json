@@ -17,14 +17,7 @@
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
-					"postcss ./custom-express/*.css --dir ./dist/css/express/",
-					"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
-					"cp -r ./components ./dist/css/components",
-					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
-					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css",
-					"node -e \"require('./tasks/token-rollup.js').default()\"",
-					"find dist -type f -empty -delete",
-					"prettier --write dist/**/*.css"
+					"node -e \"require('./tasks/token-rollup.js').default()\""
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false

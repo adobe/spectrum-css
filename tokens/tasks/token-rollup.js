@@ -16,9 +16,27 @@ const path = require("path");
 
 const fg = require("fast-glob");
 
-const { processCSS } = require("../../tasks/component-builder");
+const { processCSS, fetchContent } = require("../../tasks/component-builder");
 
 require("colors");
+
+/**
+ * A source of truth for commonly used directories
+ * @type {object} dirs
+ * @property {string} dirs.root
+ * @property {string} dirs.components
+ * @property {string} dirs.site
+ * @property {string} dirs.publish
+ */
+// const dirs = {
+// 	root: path.join(__dirname, ".."),
+// 	components: path.join(__dirname, "../components"),
+// 	site: path.join(__dirname, "../site"),
+// 	publish: path.join(__dirname, "../dist"),
+// };
+
+/** @type {(string) => string} */
+// const relativePrint = (filename, { cwd = dirs.root }) => path.relative(cwd, filename);
 
 /**
  * The builder for the main entry point
@@ -27,18 +45,63 @@ require("colors");
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function index({ cwd = process.cwd(), clean = false } = {}) {
-	// Create an index.css asset for each component
-	return Promise.all(["bridge", "express", "spectrum"].map(async (dir) => {
-		const outputPath = path.join(cwd, "dist", "css", "components", dir, "index.css");
-		if (clean && fs.existsSync(outputPath)) {
-			await fsp.unlink(outputPath);
+async function build({ cwd = process.cwd(), clean = false } = {}) {
+	// Nothing to do if there's no input file
+	if (clean && fs.existsSync(path.join(cwd, "dist", "index.css"))) {
+		await fsp.unlink(path.join(cwd, "dist", "index.css"));
+	}
+
+	let contents = await fetchContent(["dist/css/*-vars.css", "custom/*-vars.css"], { cwd });
+	// Sort the contents by filename and then by foldername (ensure custom tokens are last)
+	contents = contents.sort((a, b) => {
+		const aFilename = path.basename(a.input);
+		const bFilename = path.basename(b.input);
+		if (aFilename !== bFilename) return aFilename.localeCompare(bFilename);
+
+		const aFoldername = path.dirname(a.input);
+		const bFoldername = path.dirname(b.input);
+		return aFoldername.localeCompare(bFoldername) * -1;
+	});
+
+	// Next we combine like-named files into one file
+	const combined = [];
+	let current = contents[0];
+	current.content = `/*# source: ${current.input} */\n${current.content}`;
+	for (let i = 1; i < contents.length; i++) {
+		if (path.basename(contents[i].input) === path.basename(current.input)) {
+			current.content += `\n\n/*# source: ${contents[i].input} */\n${contents[i].content}`;
+			continue;
 		}
 
-		const inputs = await fg(["dist/css/components/" + dir + "/*.css"], { cwd });
-		const contents = inputs.map(input => `@import "./${path.basename(input)}";`).join("\n");
-		return processCSS(contents, inputs[0], outputPath, { cwd, clean, configPath: cwd, map: false });
-	}));
+		combined.push(current);
+		current = contents[i];
+	}
+
+	// Push the last entry into the combined array
+	combined.push(current);
+
+	// Write the combined files to the dist folder
+	const promises = [
+		Promise.all(combined.map(async ({ content, input }) => {
+			const output = path.join(cwd, "dist", "css", path.basename(input));
+			return processCSS(content, input, output, { cwd, clean, configPath: cwd });
+		}))
+	];
+
+	// Next we combine all the new files into 1 index file, changing the :root selectors to the name of the file
+	const collection = combined.map(({ input, content }) => {
+		const filename = path.basename(input, ".css");
+		const scope = filename.replace("-vars", "");
+		let selector = ".spectrum";
+		if (scope !== "global") selector += `--${scope}`;
+		return content.replaceAll(/:root/g, selector);
+	}).join("\n\n");
+
+	promises.push(
+		processCSS(collection, path.join(cwd, combined?.[0].input), path.join(cwd, "dist", "index.css"), { cwd, clean, configPath: cwd })
+	);
+
+	return Promise.all(promises);
 }
 
 /**
@@ -61,7 +124,7 @@ async function main({
 	console.time(key);
 
 	return Promise.all([
-		index({ cwd, clean }),
+		build({ cwd, clean }),
 	]).then((report) => {
 		const logs = report.flat(Infinity).filter(Boolean);
 

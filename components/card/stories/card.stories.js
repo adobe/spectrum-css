@@ -112,9 +112,6 @@ export default {
 				...Checkbox.parameters.actions.handles,
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

@@ -75,9 +75,6 @@ export default {
 		actions: {
 			handles: [],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 	decorators: [
 		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`

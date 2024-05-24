@@ -42,9 +42,6 @@ export default {
 		image: "example-ava.png",
 	},
 	parameters: {
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

@@ -141,9 +141,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Accordion-item"],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

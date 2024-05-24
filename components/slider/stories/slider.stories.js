@@ -129,9 +129,6 @@ export default {
 				"change .spectrum-Slider-input",
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

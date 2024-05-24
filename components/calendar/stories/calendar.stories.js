@@ -101,9 +101,6 @@ export default {
 				...(ActionButtonStories.parameters.actions.handles ?? [])
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

@@ -50,9 +50,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-TreeView-itemLink"],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

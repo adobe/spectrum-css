@@ -67,9 +67,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Menu-item"],
 		},
-		status: {
-			type: "migrated",
-		},
 		docs: {
 			story: {
 				height: "300px"

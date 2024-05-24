@@ -65,9 +65,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Link"],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

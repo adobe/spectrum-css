@@ -99,9 +99,6 @@ export default {
 		actions: {
 			handles: [...Checkbox.parameters.actions.handles],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

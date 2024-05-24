@@ -4,8 +4,7 @@
 		"tools": [
 			"{projectRoot}/assets",
 			"{projectRoot}/decorators",
-			"{projectRoot}/guides",
-			"{projectRoot}/*.{js,html,mdx}"
+			"{projectRoot}/*.{js,html}"
 		]
 	},
 	"targets": {
@@ -16,30 +15,29 @@
 			],
 			"executor": "nx:run-commands",
 			"options": {
-				"cwd": "{projectRoot}",
 				"commands": [
-					"rimraf storybook-static",
-					"test -d storybook-static && echo \"Error: storybook-static directory could not be removed\" && exit 1 || exit 0"
+					"rimraf {projectRoot}/storybook-static",
+					"test -d {projectRoot}/storybook-static && echo \"Error: storybook-static directory could not be removed\" && exit 1 || exit 0"
 				],
 				"parallel": false
-			},
-			"configurations": {
-				"docs": {
-					"inputs": [
-						"{workspaceRoot}/dist/preview",
-						{ "externalDependencies": ["rimraf"] }
-					],
-					"cwd": "{workspaceRoot}",
-					"commands": [
-						"rimraf dist/preview",
-						"test -d dist/preview && echo \"Error: dist/preview directory could not be removed\" && exit 1 || exit 0"
-					]
-				}
 			}
 		},
 		"build": {
-			"dependsOn": ["clean", "^build"],
-			"inputs": ["tools", { "externalDependencies": ["storybook"] }],
+			"dependsOn": [
+				"^build",
+				{
+					"target": "build",
+					"projects": "ui-icons"
+				}
+			],
+			"inputs": [
+				"{projectRoot}/assets",
+				"{projectRoot}/decorators",
+				"{projectRoot}/*.js",
+				"{projectRoot}/*.html",
+				"{workspaceRoot}/components/*/dist",
+				{ "externalDependencies": ["storybook"] }
+			],
 			"outputs": ["{projectRoot}/storybook-static"],
 			"executor": "nx:run-commands",
 			"options": {
@@ -62,9 +60,19 @@
 		},
 		"start": {
 			"cache": true,
-			"dependsOn": ["^build"],
+			"dependsOn": [
+				"^build",
+				{
+					"target": "build",
+					"projects": "ui-icons"
+				}
+			],
 			"inputs": [
-				"tools",
+				"{projectRoot}/assets",
+				"{projectRoot}/decorators",
+				"{projectRoot}/*.js",
+				"{projectRoot}/*.html",
+				"{workspaceRoot}/components/*/dist",
 				{ "externalDependencies": ["storybook"] },
 				{ "env": "WATCH_MODE" }
 			],
@@ -77,7 +85,11 @@
 		"test": {
 			"cache": true,
 			"inputs": [
-				"tools",
+				"{projectRoot}/assets",
+				"{projectRoot}/decorators",
+				"{projectRoot}/*.js",
+				"{projectRoot}/*.html",
+				"{workspaceRoot}/components/*/dist",
 				{ "externalDependencies": ["chromatic", "storybook"] },
 				{ "env": "CHROMATIC_PROJECT_TOKEN" }
 			],

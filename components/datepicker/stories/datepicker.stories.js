@@ -111,9 +111,6 @@ export default {
 				...(CalendarStories.parameters.actions.handles ?? [])
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 		docs: {
 			story: {
 				height: "350px"

@@ -135,9 +135,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Button"],
 		},
-		status: {
-			type: "migrated",
-		},
 		html: {
 			root: "#render-root"
 		}

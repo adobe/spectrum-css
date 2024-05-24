@@ -44,9 +44,6 @@ export default {
 		vertical: false,
 	},
 	parameters: {
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

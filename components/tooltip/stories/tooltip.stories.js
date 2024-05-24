@@ -109,9 +109,6 @@ export default {
 		actions: {
 			handles: [],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 	decorators: [
 		(Story, context) => html`

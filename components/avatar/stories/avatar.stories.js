@@ -76,9 +76,6 @@ export default {
 		hasLink: true,
 	},
 	parameters: {
-		status: {
-			type: "migrated",
-		},
 	},
 };
 
