@@ -196,7 +196,6 @@ export const Template = ({
 					);
 					const isFocused = thisDay === 5;
 
-					console.log(thisDay, isFocused);
 
 					return {
 						date: thisDate,
