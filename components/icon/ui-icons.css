@@ -18,11 +18,11 @@ governing permissions and limitations under the License.
  * on the current platform scale.
  */
 
-.spectrum-UIIcon--medium {
+.spectrum--medium {
 	display: var(--mod-ui-icon-medium-display, var(--spectrum-ui-icon-medium-display, block));
 }
 
-.spectrum-UIIcon--large {
+.spectrum--large {
 	display: var(--mod-ui-icon-large-display, var(--spectrum-ui-icon-large-display, none));
 }
 

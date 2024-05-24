@@ -31,15 +31,6 @@ export const Picker = ({
 }) => {
 	const [, updateArgs] = useArgs();
 
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
 	return html`
 	<button
 			class=${classMap({
@@ -111,15 +102,6 @@ export const Template = ({
 	id,
 	...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
-
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":

@@ -1,0 +1,46 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-dial-min-height: var(--mod-dial-min-height, var(--spectrum-dial-min-height));
+  --spectrum-dial-container-width: var(--mod-dial-container-width, var(--spectrum-dial-container-width));
+  --spectrum-dial-label-text-color: var(--mod-dial-label-text-color, var(--spectrum-dial-label-text-color));
+  --spectrum-dial-label-container-top-to-text: var(--mod-dial-label-container-top-to-text, var(--spectrum-dial-label-container-top-to-text));
+  --spectrum-dial-label-text-size: var(--mod-dial-label-text-size, var(--spectrum-dial-label-text-size));
+  --spectrum-dial-label-line-height: var(--mod-dial-label-line-height, var(--spectrum-dial-label-line-height));
+  --spectrum-dial-label-gap-y: var(--mod-dial-label-gap-y, var(--spectrum-dial-label-gap-y));
+  --spectrum-dial-width: var(--mod-dial-width, var(--spectrum-dial-width));
+  --spectrum-dial-height: var(--mod-dial-height, var(--spectrum-dial-height));
+  --spectrum-dial-controls-min-height: var(--mod-dial-controls-min-height, var(--spectrum-dial-controls-min-height));
+  --spectrum-dial-controls-margin: var(--mod-dial-controls-margin, var(--spectrum-dial-controls-margin));
+  --spectrum-dial-border-radius: var(--mod-dial-border-radius, var(--spectrum-dial-border-radius));
+  --spectrum-dial-min-max-tick-color: var(--mod-dial-min-max-tick-color, var(--spectrum-dial-min-max-tick-color));
+  --spectrum-dial-handle-marker-height: var(--mod-dial-handle-marker-height, var(--spectrum-dial-handle-marker-height));
+  --spectrum-dial-handle-marker-border-radius: var(--mod-dial-handle-marker-border-radius, var(--spectrum-dial-handle-marker-border-radius));
+  --spectrum-dial-min-max-tick-angles: var(--mod-dial-min-max-tick-angles, var(--spectrum-dial-min-max-tick-angles));
+  --spectrum-dial-border-color: var(--mod-dial-border-color, var(--spectrum-dial-border-color));
+  --spectrum-dial-handle-block-margin: var(--mod-dial-handle-block-margin, var(--spectrum-dial-handle-block-margin));
+  --spectrum-dial-handle-inline-margin: var(--mod-dial-handle-inline-margin, var(--spectrum-dial-handle-inline-margin));
+  --spectrum-dial-handle-size: var(--mod-dial-handle-size, var(--spectrum-dial-handle-size));
+  --spectrum-dial-handle-border-size: var(--mod-dial-handle-border-size, var(--spectrum-dial-handle-border-size));
+  --spectrum-dial-handle-position: var(--mod-dial-handle-position, var(--spectrum-dial-handle-position));
+  --spectrum-dial-handle-marker-width: var(--mod-dial-handle-marker-width, var(--spectrum-dial-handle-marker-width));
+  --spectrum-dial-handle-marker-color: var(--mod-dial-handle-marker-color, var(--spectrum-dial-handle-marker-color));
+  --spectrum-dial-border-color-hover: var(--mod-dial-border-color-hover, var(--spectrum-dial-border-color-hover));
+  --spectrum-dial-handle-marker-color-hover: var(--mod-dial-handle-marker-color-hover, var(--spectrum-dial-handle-marker-color-hover));
+  --spectrum-dial-handle-marker-color-mouse-focus: var(--mod-dial-handle-marker-color-mouse-focus, var(--spectrum-dial-handle-marker-color-mouse-focus));
+  --spectrum-dial-handle-marker-color-key-focus: var(--mod-dial-handle-marker-color-key-focus, var(--spectrum-dial-handle-marker-color-key-focus));
+  --spectrum-dial-label-text-color-disabled: var(--mod-dial-label-text-color-disabled, var(--spectrum-dial-label-text-color-disabled));
+  --spectrum-dial-handle-border-color-disabled: var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled));
+  --spectrum-dial-background-color-default: var(--mod-dial-background-color-default, var(--spectrum-dial-background-color-default));
+}

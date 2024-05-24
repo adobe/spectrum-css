@@ -1,0 +1,82 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-textfield-label-spacing-block: var(--mod-textfield-label-spacing-block, var(--spectrum-textfield-label-spacing-block));
+  --spectrum-textfield-helptext-spacing-block: var(--mod-textfield-helptext-spacing-block, var(--spectrum-textfield-helptext-spacing-block));
+  --spectrum-textfield-width: var(--mod-textfield-width, var(--spectrum-textfield-width));
+  --spectrum-textfield-character-count-spacing-block: var(--mod-textfield-character-count-spacing-block, var(--spectrum-textfield-character-count-spacing-block));
+  --spectrum-textfield-character-count-spacing-inline: var(--mod-textfield-character-count-spacing-inline, var(--spectrum-textfield-character-count-spacing-inline));
+  --spectrum-textfield-character-count-font-size: var(--mod-textfield-character-count-font-size, var(--spectrum-textfield-character-count-font-size));
+  --spectrum-textfield-character-count-font-family: var(--mod-textfield-character-count-font-family, var(--spectrum-textfield-character-count-font-family));
+  --spectrum-textfield-character-count-font-weight: var(--mod-textfield-character-count-font-weight, var(--spectrum-textfield-character-count-font-weight));
+  --spectrum-textfield-corner-radius: var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius));
+  --spectrum-textfield-min-width: var(--mod-textfield-min-width, var(--spectrum-textfield-min-width));
+  --spectrum-textfield-min-height: var(--mod-textfield-min-height, var(--spectrum-textfield-min-height));
+  --spectrum-textfield-height: var(--mod-textfield-height, var(--spectrum-textfield-height));
+  --spectrum-textfield-spacing-block-start: var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start));
+  --spectrum-textfield-border-width: var(--mod-textfield-border-width, var(--spectrum-textfield-border-width));
+  --spectrum-textfield-spacing-block-end: var(--mod-textfield-spacing-block-end, var(--spectrum-textfield-spacing-block-end));
+  --spectrum-textfield-spacing-inline: var(--mod-textfield-spacing-inline, var(--spectrum-textfield-spacing-inline));
+  --spectrum-textfield-background-color: var(--mod-textfield-background-color, var(--spectrum-textfield-background-color));
+  --spectrum-textfield-border-color: var(--mod-textfield-border-color, var(--spectrum-textfield-border-color));
+  --spectrum-texfield-animation-duration: var(--mod-texfield-animation-duration, var(--spectrum-texfield-animation-duration));
+  --spectrum-textfield-placeholder-font-size: var(--mod-textfield-placeholder-font-size, var(--spectrum-textfield-placeholder-font-size));
+  --spectrum-textfield-font-family: var(--mod-textfield-font-family, var(--spectrum-textfield-font-family));
+  --spectrum-textfield-font-weight: var(--mod-textfield-font-weight, var(--spectrum-textfield-font-weight));
+  --spectrum-textfield-text-color-default: var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default));
+  --spectrum-textfield-border-color-focus: var(--mod-textfield-border-color-focus, var(--spectrum-textfield-border-color-focus));
+  --spectrum-textfield-text-color-focus: var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus));
+  --spectrum-textfield-border-color-disabled: var(--mod-textfield-border-color-disabled, var(--spectrum-textfield-border-color-disabled));
+  --spectrum-textfield-text-color-disabled: var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled));
+  --spectrum-textfield-text-color-readonly: var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly));
+  --spectrum-textfield-border-color-focus-hover: var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover));
+  --spectrum-textfield-text-color-focus-hover: var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover));
+  --spectrum-textfield-border-color-keyboard-focus: var(--mod-textfield-border-color-keyboard-focus, var(--spectrum-textfield-border-color-keyboard-focus));
+  --spectrum-textfield-text-color-keyboard-focus: var(--mod-textfield-text-color-keyboard-focus, var(--spectrum-textfield-text-color-keyboard-focus));
+  --spectrum-textfield-focus-indicator-width: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
+  --spectrum-textfield-focus-indicator-color: var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color));
+  --spectrum-textfield-focus-indicator-gap: var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap));
+  --spectrum-textfield-text-color-valid: var(--mod-textfield-text-color-valid, var(--spectrum-textfield-text-color-valid));
+  --spectrum-textfield-icon-spacing-block-valid: var(--mod-textfield-icon-spacing-block-valid, var(--spectrum-textfield-icon-spacing-block-valid));
+  --spectrum-textfield-icon-spacing-inline-end-valid: var(--mod-textfield-icon-spacing-inline-end-valid, var(--spectrum-textfield-icon-spacing-inline-end-valid));
+  --spectrum-textfield-icon-color-valid: var(--mod-textfield-icon-color-valid, var(--spectrum-textfield-icon-color-valid));
+  --spectrum-textfield-icon-spacing-inline-start-valid: var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid));
+  --spectrum-textfield-icon-size-valid: var(--mod-textfield-icon-size-valid, var(--spectrum-textfield-icon-size-valid));
+  --spectrum-textfield-text-color-invalid: var(--mod-textfield-text-color-invalid, var(--spectrum-textfield-text-color-invalid));
+  --spectrum-textfield-border-color-invalid-default: var(--mod-textfield-border-color-invalid-default, var(--spectrum-textfield-border-color-invalid-default));
+  --spectrum-textfield-border-color-invalid-hover: var(--mod-textfield-border-color-invalid-hover, var(--spectrum-textfield-border-color-invalid-hover));
+  --spectrum-textfield-border-color-invalid-focus: var(--mod-textfield-border-color-invalid-focus, var(--spectrum-textfield-border-color-invalid-focus));
+  --spectrum-textfield-border-color-invalid-focus-hover: var(--mod-textfield-border-color-invalid-focus-hover, var(--spectrum-textfield-border-color-invalid-focus-hover));
+  --spectrum-textfield-border-color-invalid-keyboard-focus: var(--mod-textfield-border-color-invalid-keyboard-focus, var(--spectrum-textfield-border-color-invalid-keyboard-focus));
+  --spectrum-textfield-icon-spacing-block-invalid: var(--mod-textfield-icon-spacing-block-invalid, var(--spectrum-textfield-icon-spacing-block-invalid));
+  --spectrum-textfield-icon-spacing-inline-end-invalid: var(--mod-textfield-icon-spacing-inline-end-invalid, var(--spectrum-textfield-icon-spacing-inline-end-invalid));
+  --spectrum-textfield-icon-color-invalid: var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid));
+  --spectrum-textfield-icon-spacing-inline-start-invalid: var(--mod-textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid));
+  --spectrum-textfield-icon-size-invalid: var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid));
+  --spectrum-textfield-label-spacing-block-quiet: var(--mod-textfield-label-spacing-block-quiet, var(--spectrum-textfield-label-spacing-block-quiet));
+  --spectrum-textfield-character-count-spacing-block-quiet: var(--mod-textfield-character-count-spacing-block-quiet, var(--spectrum-textfield-character-count-spacing-block-quiet));
+  --spectrum-textfield-spacing-block-quiet: var(--mod-textfield-spacing-block-quiet, var(--spectrum-textfield-spacing-block-quiet));
+  --spectrum-textfield-spacing-inline-quiet: var(--mod-textfield-spacing-inline-quiet, var(--spectrum-textfield-spacing-inline-quiet));
+  --spectrum-textfield-icon-spacing-inline-end-quiet-invalid: var(--mod-textfield-icon-spacing-inline-end-quiet-invalid, var(--spectrum-textfield-icon-spacing-inline-end-quiet-invalid));
+  --spectrum-textfield-icon-spacing-inline-end-quiet-valid: var(--mod-textfield-icon-spacing-inline-end-quiet-valid, var(--spectrum-textfield-icon-spacing-inline-end-quiet-valid));
+  --spectrum-textfield-background-color-disabled: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
+  --spectrum-textfield-border-color-hover: var(--mod-textfield-border-color-hover, var(--spectrum-textfield-border-color-hover));
+  --spectrum-textfield-text-color-hover: var(--mod-textfield-text-color-hover, var(--spectrum-textfield-text-color-hover));
+  --spectrum-textfield-label-spacing-inline-side-label: var(--mod-textfield-label-spacing-inline-side-label, var(--spectrum-textfield-label-spacing-inline-side-label));
+  --spectrum-textfield-character-count-spacing-inline-side: var(--mod-textfield-character-count-spacing-inline-side, var(--spectrum-textfield-character-count-spacing-inline-side));
+  --spectrum-textfield-character-count-spacing-block-side: var(--mod-textfield-character-count-spacing-block-side, var(--spectrum-textfield-character-count-spacing-block-side));
+  --spectrum-text-area-min-inline-size: var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size));
+  --spectrum-text-area-min-block-size: var(--mod-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
+  --spectrum-text-area-min-block-size-quiet: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
+}

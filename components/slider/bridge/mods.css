@@ -1,0 +1,71 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-slider-min-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
+  --spectrum-slider-controls-margin: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
+  --spectrum-slider-control-height: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
+  --spectrum-slider-font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
+  --spectrum-slider-track-fill-thickness: var(--mod-slider-track-fill-thickness, var(--spectrum-slider-track-fill-thickness));
+  --spectrum-slider-handle-gap: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
+  --spectrum-slider-track-margin-offset: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+  --spectrum-slider-track-fill-color: var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color));
+  --spectrum-slider-ramp-track-height: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
+  --spectrum-slider-ramp-track-color: var(--mod-slider-ramp-track-color, var(--spectrum-slider-ramp-track-color));
+  --spectrum-slider-handle-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+  --spectrum-slider-handle-border-width: var(--mod-slider-handle-border-width, var(--spectrum-slider-handle-border-width));
+  --spectrum-slider-handle-border-radius: var(--mod-slider-handle-border-radius, var(--spectrum-slider-handle-border-radius));
+  --spectrum-animation-duration-100: var(--mod-animation-duration-100, var(--spectrum-animation-duration-100));
+  --spectrum-slider-handle-border-color: var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color));
+  --spectrum-slider-handle-background-color: var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color));
+  --spectrum-slider-handle-border-color-key-focus: var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus));
+  --spectrum-slider-handle-border-color-down: var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down));
+  --spectrum-slider-handle-border-width-down: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
+  --spectrum-slider-handle-focus-ring-color-key-focus: var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus));
+  --spectrum-focus-indicator-gap: var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap));
+  --spectrum-slider-input-top-size: var(--mod-slider-input-top-size, var(--spectrum-slider-input-top-size));
+  --spectrum-slider-input-left: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
+  --spectrum-line-height-100: var(--mod-line-height-100, var(--spectrum-line-height-100));
+  --spectrum-slider-label-text-color: var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color));
+  --spectrum-slider-label-top-to-text: var(--mod-slider-label-top-to-text, var(--spectrum-slider-label-top-to-text));
+  --spectrum-slider-cjk-line-height: var(--mod-slider-cjk-line-height, var(--spectrum-slider-cjk-line-height));
+  --spectrum-slider-label-margin-start: var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start));
+  --spectrum-slider-tick-mark-width: var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width));
+  --spectrum-slider-track-thickness: var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness));
+  --spectrum-slider-tick-mark-height: var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height));
+  --spectrum-slider-ticks-handle-background-color: var(--mod-slider-ticks-handle-background-color, var(--spectrum-slider-ticks-handle-background-color));
+  --spectrum-slider-tick-mark-border-radius: var(--mod-slider-tick-mark-border-radius, var(--spectrum-slider-tick-mark-border-radius));
+  --spectrum-font-size-75: var(--mod-font-size-75, var(--spectrum-font-size-75));
+  --spectrum-slider-tick-label-color: var(--mod-slider-tick-label-color, var(--spectrum-slider-tick-label-color));
+  --spectrum-slider-tick-mark-color: var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color));
+  --spectrum-slider-track-corner-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+  --spectrum-slider-track-color: var(--mod-slider-track-color, var(--spectrum-slider-track-color));
+  --spectrum-slider-range-track-reset: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
+  --spectrum-slider-track-handleoffset: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
+  --spectrum-slider-value-side-padding-inline: var(--mod-slider-value-side-padding-inline, var(--spectrum-slider-value-side-padding-inline));
+  --spectrum-slider-value-inline-size: var(--mod-slider-value-inline-size, var(--spectrum-slider-value-inline-size));
+  --spectrum-slider-track-middle-handleoffset: var(--mod-slider-track-middle-handleoffset, var(--spectrum-slider-track-middle-handleoffset));
+  --spectrum-slider-tick-handle-background-color: var(--mod-slider-tick-handle-background-color, var(--spectrum-slider-tick-handle-background-color));
+  --spectrum-sectrum-slider-ramp-handle-border-color-active: var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-sectrum-slider-ramp-handle-border-color-active));
+  --spectrum-slider-ramp-handle-background-color: var(--mod-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color));
+  --spectrum-slider-label-text-color-disabled: var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled));
+  --spectrum-slider-handle-border-color-disabled: var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled));
+  --spectrum-slider-handle-disabled-background-color: var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color));
+  --spectrum-disabled-border-color: var(--mod-disabled-border-color, var(--spectrum-disabled-border-color));
+  --spectrum-slider-handle-background-color-disabled: var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled));
+  --spectrum-slider-handle-border-color-hover: var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover));
+  --spectrum-slider-track-color-disabled: var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled));
+  --spectrum-slider-track-fill-color-disabled: var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled));
+  --spectrum-slider-ramp-track-color-disabled: var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled));
+  --spectrum-slider-tick-mark-color-disabled: var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled));
+}

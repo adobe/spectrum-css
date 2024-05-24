@@ -10,6 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@media (forced-colors: active) {
+	.spectrum-Asset {
+		--highcontrast-asset-folder-background-color: currentColor;
+		--highcontrast-asset-file-background-color: currentColor;
+	}
+}
+
 .spectrum-Asset {
 	display: flex;
 	align-items: center;
@@ -17,38 +24,31 @@ governing permissions and limitations under the License.
 
 	inline-size: 100%;
 	block-size: 100%;
-}
 
-.spectrum-Asset-image {
-	max-inline-size: 100%;
-	max-block-size: 100%;
-	object-fit: contain;
-	transition: opacity var(--spectrum-animation-duration-100);
-}
+	.spectrum-Asset-image {
+		max-inline-size: 100%;
+		max-block-size: 100%;
+		object-fit: contain;
+		transition: opacity var(--spectrum-animation-duration-100);
+	}
 
-.spectrum-Asset-folder,
-.spectrum-Asset-file {
-	inline-size: clamp(var(--mod-asset-icon-min-width, 48px), 100%, var(--mod-asset-icon-max-width, 80px));
-	block-size: 100%;
-	margin: var(--mod-asset-icon-margin, 20px);
-}
+	.spectrum-Asset-folder,
+	.spectrum-Asset-file {
+		inline-size: clamp(var(--mod-asset-icon-min-width, 48px), 100%, var(--mod-asset-icon-max-width, 80px));
+		block-size: 100%;
+		margin: var(--mod-asset-icon-margin, 20px);
+	}
 
-.spectrum-Asset-folderBackground {
-	fill: var(--highcontrast-asset-folder-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-300)));
-}
+	.spectrum-Asset-folderBackground {
+		fill: var(--highcontrast-asset-folder-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-300)));
+	}
 
-.spectrum-Asset-fileBackground {
-	fill: var(--highcontrast-asset-file-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-50)));
-}
+	.spectrum-Asset-fileBackground {
+		fill: var(--highcontrast-asset-file-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-50)));
+	}
 
-.spectrum-Asset-folderOutline,
-.spectrum-Asset-fileOutline {
-	fill: var(--mod-asset-icon-outline-color, var(--spectrum-gray-500));
-}
-
-@media (forced-colors: active) {
-	.spectrum-Asset {
-		--highcontrast-asset-folder-background-color: currentColor;
-		--highcontrast-asset-file-background-color: currentColor;
+	.spectrum-Asset-folderOutline,
+	.spectrum-Asset-fileOutline {
+		fill: var(--mod-asset-icon-outline-color, var(--spectrum-gray-500));
 	}
 }

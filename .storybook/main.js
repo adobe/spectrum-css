@@ -102,8 +102,29 @@ module.exports = {
 						],
 					},
 					{
+						resourceQuery: /raw/,
+						test: { not: /\.css$/i },
+						type: 'asset/source',
+					},
+					{
+						test: /\.css$/,
+						resourceQuery: /raw/,
+						use: [
+							{
+								loader: "style-loader",
+								options: {
+									injectType: "lazySingletonStyleTag",
+								},
+							},
+							{
+								loader: "css-loader",
+								options: { modules: true }
+							},
+						],
+					},
+					{
 						test: /\.css$/i,
-						sideEffects: true,
+						resourceQuery: { not: [/raw/] },
 						use: [
 							{
 								loader: "style-loader",
@@ -147,15 +168,6 @@ module.exports = {
 								},
 							},
 						],
-					},
-					{
-						test: /\.js$/,
-						enforce: "pre",
-						use: ["source-map-loader"],
-					} /* Raw loader */,
-					{
-						resourceQuery: /raw/,
-						type: 'asset/source',
 					},
 				],
 			},

@@ -1,0 +1,91 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-menu-item-focus-indicator-width: var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width));
+  --spectrum-menu-item-focus-indicator-color: var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color));
+  --spectrum-menu-inline-size: var(--mod-menu-inline-size, var(--spectrum-menu-inline-size));
+  --spectrum-menu-item-label-line-height-cjk: var(--mod-menu-item-label-line-height-cjk, var(--spectrum-menu-item-label-line-height-cjk));
+  --spectrum-menu-item-description-line-height-cjk: var(--mod-menu-item-description-line-height-cjk, var(--spectrum-menu-item-description-line-height-cjk));
+  --spectrum-menu-section-header-line-height-cjk: var(--mod-menu-section-header-line-height-cjk, var(--spectrum-menu-section-header-line-height-cjk));
+  --spectrum-menu-section-divider-margin-block: var(--mod-menu-section-divider-margin-block, var(--spectrum-menu-section-divider-margin-block));
+  --spectrum-menu-item-label-inline-edge-to-content: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
+  --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--mod-menu-item-selectable-edge-to-text-not-selected, var(--spectrum-menu-item-selectable-edge-to-text-not-selected));
+  --spectrum-menu-item-label-icon-color-default: var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default));
+  --spectrum-menu-checkmark-display: var(--mod-menu-checkmark-display, var(--spectrum-menu-checkmark-display));
+  --spectrum-menu-checkmark-icon-color-default: var(--mod-menu-checkmark-icon-color-default, var(--spectrum-menu-checkmark-icon-color-default));
+  --spectrum-menu-item-background-color-default: var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default));
+  --spectrum-menu-item-label-line-height: var(--mod-menu-item-label-line-height, var(--spectrum-menu-item-label-line-height));
+  --spectrum-menu-item-min-height: var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height));
+  --spectrum-menu-item-top-edge-to-text: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text));
+  --spectrum-menu-item-bottom-edge-to-text: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
+  --spectrum-menu-item-text-to-control: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+  --spectrum-menu-item-top-to-checkbox: var(--mod-menu-item-top-to-checkbox, var(--spectrum-menu-item-top-to-checkbox));
+  --spectrum-menu-item-top-to-action: var(--mod-menu-item-top-to-action, var(--spectrum-menu-item-top-to-action));
+  --spectrum-menu-item-background-color-key-focus: var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-key-focus));
+  --spectrum-menu-item-label-content-color-focus: var(--mod-menu-item-label-content-color-focus, var(--spectrum-menu-item-label-content-color-focus));
+  --spectrum-menu-section-header-color: var(--mod-menu-section-header-color, var(--spectrum-menu-section-header-color));
+  --spectrum-menu-item-description-color-focus: var(--mod-menu-item-description-color-focus, var(--spectrum-menu-item-description-color-focus));
+  --spectrum-menu-item-value-color-focus: var(--mod-menu-item-value-color-focus, var(--spectrum-menu-item-value-color-focus));
+  --spectrum-menu-item-label-icon-color-focus: var(--mod-menu-item-label-icon-color-focus, var(--spectrum-menu-item-label-icon-color-focus));
+  --spectrum-menu-collapsible-icon-color: var(--mod-menu-collapsible-icon-color, var(--spectrum-menu-collapsible-icon-color));
+  --spectrum-menu-checkmark-icon-color-focus: var(--mod-menu-checkmark-icon-color-focus, var(--spectrum-menu-checkmark-icon-color-focus));
+  --spectrum-menu-item-background-color-down: var(--mod-menu-item-background-color-down, var(--spectrum-menu-item-background-color-down));
+  --spectrum-menu-item-label-content-color-down: var(--mod-menu-item-label-content-color-down, var(--spectrum-menu-item-label-content-color-down));
+  --spectrum-menu-item-description-color-down: var(--mod-menu-item-description-color-down, var(--spectrum-menu-item-description-color-down));
+  --spectrum-menu-item-value-color-down: var(--mod-menu-item-value-color-down, var(--spectrum-menu-item-value-color-down));
+  --spectrum-menu-item-label-icon-color-down: var(--mod-menu-item-label-icon-color-down, var(--spectrum-menu-item-label-icon-color-down));
+  --spectrum-menu-checkmark-icon-color-down: var(--mod-menu-checkmark-icon-color-down, var(--spectrum-menu-checkmark-icon-color-down));
+  --spectrum-menu-item-label-font-size: var(--mod-menu-item-label-font-size, var(--spectrum-menu-item-label-font-size));
+  --spectrum-menu-item-label-content-color-default: var(--mod-menu-item-label-content-color-default, var(--spectrum-menu-item-label-content-color-default));
+  --spectrum-menu-item-label-to-value-area-min-spacing: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
+  --spectrum-menu-item-icon-height: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
+  --spectrum-menu-item-icon-width: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
+  --spectrum-menu-item-checkmark-height: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
+  --spectrum-menu-item-checkmark-width: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
+  --spectrum-menu-item-top-to-checkmark: var(--mod-menu-item-top-to-checkmark, var(--spectrum-menu-item-top-to-checkmark));
+  --spectrum-menu-item-label-text-to-visual: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+  --spectrum-menu-item-description-color-default: var(--mod-menu-item-description-color-default, var(--spectrum-menu-item-description-color-default));
+  --spectrum-menu-item-description-font-size: var(--mod-menu-item-description-font-size, var(--spectrum-menu-item-description-font-size));
+  --spectrum-menu-item-label-to-description-spacing: var(--mod-menu-item-label-to-description-spacing, var(--spectrum-menu-item-label-to-description-spacing));
+  --spectrum-menu-item-description-line-height: var(--mod-menu-item-description-line-height, var(--spectrum-menu-item-description-line-height));
+  --spectrum-menu-item-value-color-default: var(--mod-menu-item-value-color-default, var(--spectrum-menu-item-value-color-default));
+  --spectrum-menu-section-header-font-size: var(--mod-menu-section-header-font-size, var(--spectrum-menu-section-header-font-size));
+  --spectrum-menu-section-header-font-weight: var(--mod-menu-section-header-font-weight, var(--spectrum-menu-section-header-font-weight));
+  --spectrum-menu-section-header-line-height: var(--mod-menu-section-header-line-height, var(--spectrum-menu-section-header-line-height));
+  --spectrum-menu-section-header-min-width: var(--mod-menu-section-header-min-width, var(--spectrum-menu-section-header-min-width));
+  --spectrum-menu-section-header-top-edge-to-text: var(--mod-menu-section-header-top-edge-to-text, var(--spectrum-menu-section-header-top-edge-to-text));
+  --spectrum-menu-section-header-bottom-edge-to-text: var(--mod-menu-section-header-bottom-edge-to-text, var(--spectrum-menu-section-header-bottom-edge-to-text));
+  --spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start: var(--mod-menu-item-collapsible-no-icon-submenu-item-padding-x-start, var(--spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start));
+  --spectrum-menu-drillin-icon-color-default: var(--mod-menu-drillin-icon-color-default, var(--spectrum-menu-drillin-icon-color-default));
+  --spectrum-menu-item-background-color-hover: var(--mod-menu-item-background-color-hover, var(--spectrum-menu-item-background-color-hover));
+  --spectrum-menu-item-label-icon-color-hover: var(--mod-menu-item-label-icon-color-hover, var(--spectrum-menu-item-label-icon-color-hover));
+  --spectrum-menu-drillin-icon-color-hover: var(--mod-menu-drillin-icon-color-hover, var(--spectrum-menu-drillin-icon-color-hover));
+  --spectrum-menu-checkmark-icon-color-hover: var(--mod-menu-checkmark-icon-color-hover, var(--spectrum-menu-checkmark-icon-color-hover));
+  --spectrum-menu-drillin-icon-color-focus: var(--mod-menu-drillin-icon-color-focus, var(--spectrum-menu-drillin-icon-color-focus));
+  --spectrum-menu-drillin-icon-color-down: var(--mod-menu-drillin-icon-color-down, var(--spectrum-menu-drillin-icon-color-down));
+  --spectrum-menu-item-label-content-color-disabled: var(--mod-menu-item-label-content-color-disabled, var(--spectrum-menu-item-label-content-color-disabled));
+  --spectrum-menu-item-description-color-disabled: var(--mod-menu-item-description-color-disabled, var(--spectrum-menu-item-description-color-disabled));
+  --spectrum-menu-item-label-icon-color-disabled: var(--mod-menu-item-label-icon-color-disabled, var(--spectrum-menu-item-label-icon-color-disabled));
+  --spectrum-menu-item-label-content-color-hover: var(--mod-menu-item-label-content-color-hover, var(--spectrum-menu-item-label-content-color-hover));
+  --spectrum-menu-item-description-color-hover: var(--mod-menu-item-description-color-hover, var(--spectrum-menu-item-description-color-hover));
+  --spectrum-menu-item-value-color-hover: var(--mod-menu-item-value-color-hover, var(--spectrum-menu-item-value-color-hover));
+  --spectrum-menu-back-padding-inline-start: var(--mod-menu-back-padding-inline-start, var(--spectrum-menu-back-padding-inline-start));
+  --spectrum-menu-back-padding-inline-end: var(--mod-menu-back-padding-inline-end, var(--spectrum-menu-back-padding-inline-end));
+  --spectrum-menu-back-padding-block-start: var(--mod-menu-back-padding-block-start, var(--spectrum-menu-back-padding-block-start));
+  --spectrum-menu-back-padding-block-end: var(--mod-menu-back-padding-block-end, var(--spectrum-menu-back-padding-block-end));
+  --spectrum-menu-back-heading-color: var(--mod-menu-back-heading-color, var(--spectrum-menu-back-heading-color));
+  --spectrum-menu-back-icon-margin-block: var(--mod-menu-back-icon-margin-block, var(--spectrum-menu-back-icon-margin-block));
+  --spectrum-menu-back-icon-margin-inline: var(--mod-menu-back-icon-margin-inline, var(--spectrum-menu-back-icon-margin-inline));
+  --spectrum-menu-back-icon-color-default: var(--mod-menu-back-icon-color-default, var(--spectrum-menu-back-icon-color-default));
+}

@@ -38,7 +38,7 @@ if (typeof SpectrumSwitcher !== "undefined" && !window.switcher) {
 			let label;
 			if (menuItem) {
 				const selectedMenuItem = menu.querySelector(
-					".spectrum-Menu-item.is-selected"
+					".spectrum-Menu-item[selected]"
 				);
 
 				if (selectedMenuItem) {

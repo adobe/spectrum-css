@@ -10,34 +10,36 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Icon {
+:root {
 	--spectrum-icon-size: var(--spectrum-workflow-icon-size-100);
-}
 
-/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
-.spectrum-Icon--sizeXXS {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxs);
-}
+	.spectrum-Icon {
+		/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
+		&[size="XXS"] {
+			--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxs);
+		}
 
-.spectrum-Icon--sizeXS {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-50);
-}
+		&[size="XS"] {
+			--spectrum-icon-size: var(--spectrum-workflow-icon-size-50);
+		}
 
-.spectrum-Icon--sizeS {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-75);
-}
+		&[size="S"] {
+			--spectrum-icon-size: var(--spectrum-workflow-icon-size-75);
+		}
 
-.spectrum-Icon--sizeL {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-200);
-}
+		&[size="L"] {
+			--spectrum-icon-size: var(--spectrum-workflow-icon-size-200);
+		}
 
-.spectrum-Icon--sizeXL {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
-}
+		&[size="XL"] {
+			--spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
+		}
 
-/* XXL icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
-.spectrum-Icon--sizeXXL {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxl);
+		/* XXL icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
+		&[size="XXL"] {
+			--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxl);
+		}
+	}
 }
 
 .spectrum-Icon {

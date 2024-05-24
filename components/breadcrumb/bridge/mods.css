@@ -1,0 +1,69 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-breadcrumbs-inline-start: var(--mod-breadcrumbs-inline-start, var(--spectrum-breadcrumbs-inline-start));
+  --spectrum-breadcrumbs-inline-end: var(--mod-breadcrumbs-inline-end, var(--spectrum-breadcrumbs-inline-end));
+  --spectrum-breadcrumbs-block-size: var(--mod-breadcrumbs-block-size, var(--spectrum-breadcrumbs-block-size));
+  --spectrum-breadcrumbs-block-size-compact: var(--mod-breadcrumbs-block-size-compact, var(--spectrum-breadcrumbs-block-size-compact));
+  --spectrum-breadcrumbs-block-size-multiline: var(--mod-breadcrumbs-block-size-multiline, var(--spectrum-breadcrumbs-block-size-multiline));
+  --spectrum-breadcrumbs-icon-spacing-block: var(--mod-breadcrumbs-icon-spacing-block, var(--spectrum-breadcrumbs-icon-spacing-block));
+  --spectrum-breadcrumbs-separator-spacing-inline: var(--mod-breadcrumbs-separator-spacing-inline, var(--spectrum-breadcrumbs-separator-spacing-inline));
+  --spectrum-breadcrumbs-separator-color: var(--mod-breadcrumbs-separator-color, var(--spectrum-breadcrumbs-separator-color));
+  --spectrum-breadcrumbs-icon-spacing-block-compact: var(--mod-breadcrumbs-icon-spacing-block-compact, var(--spectrum-breadcrumbs-icon-spacing-block-compact));
+  --spectrum-breadcrumbs-icon-spacing-block-start-multiline: var(--mod-breadcrumbs-icon-spacing-block-start-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-start-multiline));
+  --spectrum-breadcrumbs-icon-spacing-block-between-multiline: var(--mod-breadcrumbs-icon-spacing-block-between-multiline, var(--spectrum-breadcrumbs-icon-spacing-block-between-multiline));
+  --spectrum-breadcrumbs-font-family: var(--mod-breadcrumbs-font-family, var(--spectrum-breadcrumbs-font-family));
+  --spectrum-breadcrumbs-font-size: var(--mod-breadcrumbs-font-size, var(--spectrum-breadcrumbs-font-size));
+  --spectrum-breadcrumbs-font-weight: var(--mod-breadcrumbs-font-weight, var(--spectrum-breadcrumbs-font-weight));
+  --spectrum-breadcrumbs-line-height: var(--mod-breadcrumbs-line-height, var(--spectrum-breadcrumbs-line-height));
+  --spectrum-breadcrumbs-font-family-compact: var(--mod-breadcrumbs-font-family-compact, var(--spectrum-breadcrumbs-font-family-compact));
+  --spectrum-breadcrumbs-font-size-compact: var(--mod-breadcrumbs-font-size-compact, var(--spectrum-breadcrumbs-font-size-compact));
+  --spectrum-breadcrumbs-font-weight-compact: var(--mod-breadcrumbs-font-weight-compact, var(--spectrum-breadcrumbs-font-weight-compact));
+  --spectrum-breadcrumbs-action-button-spacing-block-compact: var(--mod-breadcrumbs-action-button-spacing-block-compact, var(--spectrum-breadcrumbs-action-button-spacing-block-compact));
+  --spectrum-breadcrumbs-font-family-multiline: var(--mod-breadcrumbs-font-family-multiline, var(--spectrum-breadcrumbs-font-family-multiline));
+  --spectrum-breadcrumbs-font-size-multiline: var(--mod-breadcrumbs-font-size-multiline, var(--spectrum-breadcrumbs-font-size-multiline));
+  --spectrum-breadcrumbs-font-weight-multiline: var(--mod-breadcrumbs-font-weight-multiline, var(--spectrum-breadcrumbs-font-weight-multiline));
+  --spectrum-breadcrumbs-action-button-spacing-block-multiline: var(--mod-breadcrumbs-action-button-spacing-block-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-multiline));
+  --spectrum-breadcrumbs-action-button-spacing-block-between-multiline: var(--mod-breadcrumbs-action-button-spacing-block-between-multiline, var(--spectrum-breadcrumbs-action-button-spacing-block-between-multiline));
+  --spectrum-breadcrumbs-font-family-current: var(--mod-breadcrumbs-font-family-current, var(--spectrum-breadcrumbs-font-family-current));
+  --spectrum-breadcrumbs-font-size-current: var(--mod-breadcrumbs-font-size-current, var(--spectrum-breadcrumbs-font-size-current));
+  --spectrum-breadcrumbs-font-weight-current: var(--mod-breadcrumbs-font-weight-current, var(--spectrum-breadcrumbs-font-weight-current));
+  --spectrum-breadcrumbs-font-family-compact-current: var(--mod-breadcrumbs-font-family-compact-current, var(--spectrum-breadcrumbs-font-family-compact-current));
+  --spectrum-breadcrumbs-font-size-compact-current: var(--mod-breadcrumbs-font-size-compact-current, var(--spectrum-breadcrumbs-font-size-compact-current));
+  --spectrum-breadcrumbs-font-weight-compact-current: var(--mod-breadcrumbs-font-weight-compact-current, var(--spectrum-breadcrumbs-font-weight-compact-current));
+  --spectrum-breadcrumbs-font-family-multiline-current: var(--mod-breadcrumbs-font-family-multiline-current, var(--spectrum-breadcrumbs-font-family-multiline-current));
+  --spectrum-breadcrumbs-font-size-multiline-current: var(--mod-breadcrumbs-font-size-multiline-current, var(--spectrum-breadcrumbs-font-size-multiline-current));
+  --spectrum-breadcrumbs-font-weight-multiline-current: var(--mod-breadcrumbs-font-weight-multiline-current, var(--spectrum-breadcrumbs-font-weight-multiline-current));
+  --spectrum-breadcrumbs-text-spacing-block-end-multiline: var(--mod-breadcrumbs-text-spacing-block-end-multiline, var(--spectrum-breadcrumbs-text-spacing-block-end-multiline));
+  --spectrum-breadcrumbs-action-button-spacing-inline: var(--mod-breadcrumbs-action-button-spacing-inline, var(--spectrum-breadcrumbs-action-button-spacing-inline));
+  --spectrum-breadcrumbs-action-button-spacing-block: var(--mod-breadcrumbs-action-button-spacing-block, var(--spectrum-breadcrumbs-action-button-spacing-block));
+  --spectrum-breadcrumbs-action-button-color: var(--mod-breadcrumbs-action-button-color, var(--spectrum-breadcrumbs-action-button-color));
+  --spectrum-breadcrumbs-action-button-color-disabled: var(--mod-breadcrumbs-action-button-color-disabled, var(--spectrum-breadcrumbs-action-button-color-disabled));
+  --spectrum-breadcrumbs-action-button-spacing-inline-start: var(--mod-breadcrumbs-action-button-spacing-inline-start, var(--spectrum-breadcrumbs-action-button-spacing-inline-start));
+  --spectrum-breadcrumbs-item-link-border-radius: var(--mod-breadcrumbs-item-link-border-radius, var(--spectrum-breadcrumbs-item-link-border-radius));
+  --spectrum-breadcrumbs-text-color: var(--mod-breadcrumbs-text-color, var(--spectrum-breadcrumbs-text-color));
+  --spectrum-breadcrumbs-text-spacing-block-start: var(--mod-breadcrumbs-text-spacing-block-start, var(--spectrum-breadcrumbs-text-spacing-block-start));
+  --spectrum-breadcrumbs-text-spacing-block-end: var(--mod-breadcrumbs-text-spacing-block-end, var(--spectrum-breadcrumbs-text-spacing-block-end));
+  --spectrum-breadcrumbs-text-color-disabled: var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled));
+  --spectrum-breadcrumbs-text-color-current: var(--mod-breadcrumbs-text-color-current, var(--spectrum-breadcrumbs-text-color-current));
+  --spectrum-breadcrumbs-text-spacing-block-start-compact: var(--mod-breadcrumbs-text-spacing-block-start-compact, var(--spectrum-breadcrumbs-text-spacing-block-start-compact));
+  --spectrum-breadcrumbs-text-spacing-block-end-compact: var(--mod-breadcrumbs-text-spacing-block-end-compact, var(--spectrum-breadcrumbs-text-spacing-block-end-compact));
+  --spectrum-breadcrumbs-text-spacing-block-start-multiline: var(--mod-breadcrumbs-text-spacing-block-start-multiline, var(--spectrum-breadcrumbs-text-spacing-block-start-multiline));
+  --spectrum-breadcrumbs-text-spacing-block-between-multiline: var(--mod-breadcrumbs-text-spacing-block-between-multiline, var(--spectrum-breadcrumbs-text-spacing-block-between-multiline));
+  --spectrum-breadcrumbs-text-decoration-thickness: var(--mod-breadcrumbs-text-decoration-thickness, var(--spectrum-breadcrumbs-text-decoration-thickness));
+  --spectrum-breadcrumbs-text-decoration-gap: var(--mod-breadcrumbs-text-decoration-gap, var(--spectrum-breadcrumbs-text-decoration-gap));
+  --spectrum-breadcrumbs-focus-indicator-gap: var(--mod-breadcrumbs-focus-indicator-gap, var(--spectrum-breadcrumbs-focus-indicator-gap));
+  --spectrum-breadcrumbs-focus-indicator-thickness: var(--mod-breadcrumbs-focus-indicator-thickness, var(--spectrum-breadcrumbs-focus-indicator-thickness));
+  --spectrum-breadcrumbs-focus-indicator-color: var(--mod-breadcrumbs-focus-indicator-color, var(--spectrum-breadcrumbs-focus-indicator-color));
+}

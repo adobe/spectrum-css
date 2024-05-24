@@ -10,29 +10,26 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ButtonGroup {
+:root {
 	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
 	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
 
-.spectrum-ButtonGroup--sizeS {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
-}
+	.spectrum-ButtonGroup {
+		&[size="S"] {
+			--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
+			--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
+		}
 
-.spectrum-ButtonGroup--sizeM {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
+		&[size="L"] {
+			--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
+			--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+		}
 
-.spectrum-ButtonGroup--sizeL {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
-
-.spectrum-ButtonGroup--sizeXL {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+		&[size="XL"] {
+			--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
+			--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+		}
+	}
 }
 
 .spectrum-ButtonGroup {
@@ -44,10 +41,10 @@ governing permissions and limitations under the License.
 	.spectrum-ButtonGroup-item {
 		flex-shrink: 0;
 	}
-}
 
-.spectrum-ButtonGroup--vertical {
-	display: inline-flex;
-	flex-direction: column;
-	gap: var(--mod-buttongroup-spacing-vertical, var(--spectrum-buttongroup-spacing-vertical));
+	&[vertical] {
+		display: inline-flex;
+		flex-direction: column;
+		gap: var(--mod-buttongroup-spacing-vertical, var(--spectrum-buttongroup-spacing-vertical));
+	}
 }

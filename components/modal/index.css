@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 @import "@spectrum-css/commons/overlay.css";
 
-.spectrum-Modal {
+:root {
 	/* Bug: this must be 0ms, not 0 */
 	--spectrum-modal-confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
 
@@ -65,7 +65,7 @@ governing permissions and limitations under the License.
 	/* Be invisible by default */
 	transition: visibility 0ms linear var(--mod-modal-transition-animation-duration, var(--spectrum-modal-transition-animation-duration));
 
-	&.is-open {
+	&[open] {
 		visibility: visible;
 	}
 }
@@ -96,22 +96,51 @@ governing permissions and limitations under the License.
 		opacity var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration)) var(--spectrum-animation-ease-in) var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)),
 		visibility 0ms linear calc(var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)) + var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration))),
 		transform 0ms linear calc(var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)) + var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration)));
-}
 
-.spectrum-Modal.is-open {
-	@extend %spectrum-overlay--open;
+	&[open] {
+		@extend %spectrum-overlay--open;
 
-	/* Entry animations */
-	transition:
-		transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay)),
-		opacity var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay));
+		/* Entry animations */
+		transition:
+			transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay)),
+			opacity var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay));
 
-	transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	/** @unofficial */
+	&[fullscreen] {
+		position: fixed;
+		inset-inline-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+		inset-block-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+		inset-inline-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+		inset-block-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+		max-inline-size: none;
+		max-block-size: none;
+	}
+
+	&[fullscreenTakeover] {
+		position: fixed;
+		inset: 0;
+		max-inline-size: none;
+		max-block-size: none;
+
+		box-sizing: border-box;
+
+		/* Remove the border since we've taken over */
+		border: none;
+		border-radius: 0;
+
+		&,
+		&[open] {
+			transform: none;
+		}
+	}
 }
 
 /* Responsive modals will fill the screen on small viewports */
 @media only screen and (device-width <= 400px), only screen and (device-height <= 350px) {
-	.spectrum-Modal--responsive {
+	.spectrum-Modal[responsive] {
 		inline-size: 100%;
 		block-size: 100%;
 		max-inline-size: 100%;
@@ -119,38 +148,7 @@ governing permissions and limitations under the License.
 		border-radius: 0;
 	}
 
-	.spectrum-Modal-wrapper {
-		.spectrum-Modal--responsive {
-			margin-block-start: 0; /* Prevent the vertical offset bit */
-		}
-	}
-}
-
-/** @unofficial */
-.spectrum-Modal--fullscreen {
-	position: fixed;
-	inset-inline-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-block-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-inline-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-block-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	max-inline-size: none;
-	max-block-size: none;
-}
-
-.spectrum-Modal--fullscreenTakeover {
-	position: fixed;
-	inset: 0;
-	max-inline-size: none;
-	max-block-size: none;
-
-	box-sizing: border-box;
-
-	/* Remove the border since we've taken over */
-	border: none;
-	border-radius: 0;
-
-	&,
-	&.is-open {
-		transform: none;
+	.spectrum-Modal-wrapper .spectrum-Modal[responsive] {
+		margin-block-start: 0; /* Prevent the vertical offset bit */
 	}
 }

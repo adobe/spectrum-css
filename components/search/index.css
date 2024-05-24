@@ -10,9 +10,22 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
+:root {
+	--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 
-.spectrum-Search {
+	--spectrum-search-border-color-default: var(--spectrum-gray-500);
+	--spectrum-search-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-search-border-color-focus: var(--spectrum-gray-800);
+	--spectrum-search-border-color-focus-hover: var(--spectrum-gray-900);
+	--spectrum-search-border-color-key-focus: var(--spectrum-gray-900);
+
+	/* start medium */
+	--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
+
+	/* end medium */
+
 	/* Size / Spacing */
 	--spectrum-search-inline-size: var(--spectrum-field-width);
 	--spectrum-search-block-size: var(--spectrum-component-height-100);
@@ -51,6 +64,47 @@ governing permissions and limitations under the License.
 	--spectrum-search-background-color-disabled: var(--spectrum-disabled-background-color);
 	--spectrum-search-border-color-disabled: var(--spectrum-disabled-background-color);
 
+	.spectrum-Search {
+		&[size="S"] {
+			--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+			--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
+			--spectrum-search-block-size: var(--spectrum-component-height-75);
+			--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-75);
+			--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-75);
+		}
+
+		&[size="L"] {
+			--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+			--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
+			--spectrum-search-block-size: var(--spectrum-component-height-200);
+			--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
+			--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-200);
+		}
+
+		&[size="XL"] {
+			--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
+			--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
+			--spectrum-search-block-size: var(--spectrum-component-height-300);
+			--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
+			--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
+		}
+
+		&[quiet] {
+			--spectrum-search-quiet-button-offset: calc((var(--mod-search-block-size, var(--spectrum-search-block-size)) / 2) - (var(--mod-workflow-icon-size-100, var(--spectrum-workflow-icon-size-100)) / 2));
+			--spectrum-search-background-color: transparent;
+			--spectrum-search-background-color-disabled: transparent;
+			--spectrum-search-border-color-disabled: var(--spectrum-disabled-border-color);
+
+			/* Added specificity, otherwise they are overridden by system specific themes. */
+			&.spectrum-Search {
+				--spectrum-search-border-radius: 0;
+				--spectrum-search-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
+			}
+		}
+	}
+}
+
+.spectrum-Search {
 	/* Settings for nested Textfield component. */
 	--mod-textfield-font-family: var(--mod-search-font-family, var(--spectrum-search-font-family));
 	--mod-textfield-font-weight: var(--mod-search-font-weight, var(--spectrum-search-font-weight));
@@ -78,37 +132,6 @@ governing permissions and limitations under the License.
 
 	--mod-textfield-background-color: var(--mod-search-background-color, var(--spectrum-search-background-color));
 	--mod-textfield-background-color-disabled: var(--mod-search-background-color-disabled, var(--spectrum-search-background-color-disabled));
-}
-
-.spectrum-Search--sizeS {
-	--spectrum-search-block-size: var(--spectrum-component-height-75);
-	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-75);
-	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-75);
-}
-
-.spectrum-Search--sizeL {
-	--spectrum-search-block-size: var(--spectrum-component-height-200);
-	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-200);
-	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-200);
-}
-
-.spectrum-Search--sizeXL {
-	--spectrum-search-block-size: var(--spectrum-component-height-300);
-	--spectrum-search-icon-size: var(--spectrum-workflow-icon-size-300);
-	--spectrum-search-text-to-icon: var(--spectrum-text-to-visual-300);
-}
-
-.spectrum-Search--quiet {
-	--spectrum-search-quiet-button-offset: calc((var(--mod-search-block-size, var(--spectrum-search-block-size)) / 2) - (var(--mod-workflow-icon-size-100, var(--spectrum-workflow-icon-size-100)) / 2));
-	--spectrum-search-background-color: transparent;
-	--spectrum-search-background-color-disabled: transparent;
-	--spectrum-search-border-color-disabled: var(--spectrum-disabled-border-color);
-
-	/* Added specificity, otherwise they are overridden by system specific themes. */
-	&.spectrum-Search {
-		--spectrum-search-border-radius: 0;
-		--spectrum-search-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
-	}
 }
 
 @media (forced-colors: active) {
@@ -139,99 +162,99 @@ governing permissions and limitations under the License.
 	.spectrum-HelpText {
 		margin-block-start: var(--mod-search-to-help-text, var(--spectrum-search-to-help-text));
 	}
-}
 
-.spectrum-Search-clearButton {
-	position: absolute;
-	inset-inline-end: 0;
-	inset-block-start: 0;
-	border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
+	/* Quiet Variant */
+	&[quiet] {
+		.spectrum-Search-clearButton {
+			transform: translateX(var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
+		}
 
-	.spectrum-ClearButton-fill {
+		&.spectrum-Search .spectrum-Search-input {
+			border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
+			padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
+			padding-inline-end: calc(var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
+			padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
+		}
+	}
+
+	.spectrum-Search-clearButton {
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 0;
 		border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
+
+		.spectrum-ClearButton-fill {
+			border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
+		}
+
+		.spectrum-Search[disabled] & {
+			display: none;
+		}
 	}
 
-	.spectrum-Search.is-disabled & {
-		display: none;
-	}
-}
-
-.spectrum-Search-textfield {
-	inline-size: 100%;
-}
-
-.spectrum-Search-icon {
-	display: block;
-	position: absolute;
-	inset-block: 0;
-	margin-block: auto;
-
-	--spectrum-search-color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
-	color: var(--spectrum-search-color);
-
-	.spectrum-Search-textfield:hover & {
-		--spectrum-search-color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
+	.spectrum-Search-textfield {
+		inline-size: 100%;
 	}
 
-	.spectrum-Search-textfield.is-focused & {
-		--spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
-	}
-
-	.spectrum-Search-textfield.is-focused:hover & {
-		--spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
-	}
-
-	.spectrum-Search-textfield.is-keyboardFocused & {
-		--spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
-	}
-
-	.spectrum-Search-textfield.is-disabled &,
-	.spectrum-Search-textfield.is-disabled:hover & {
-		--spectrum-search-color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
-	}
-}
-
-.spectrum-Search-input {
-	/* Correct the odd appearance of input[type="search"] in Chrome and Safari. */
-	/* Without this, it gets overridden by .spectrum-Textfield */
-	appearance: none;
-
-	/* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
-	&::-webkit-search-cancel-button,
-	&::-webkit-search-decoration {
-		appearance: none;
-	}
-
-	block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
-	padding-block-start: calc(var(--mod-search-top-to-text, var(--spectrum-search-top-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
-	padding-block-end: calc(var(--mod-search-bottom-to-text, var(--spectrum-search-bottom-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
-
-	font-style: var(--mod-search-font-style, var(--spectrum-search-font-style));
-	line-height: var(--mod-search-line-height, var(--spectrum-search-line-height));
-}
-
-/* Standard / Default Only */
-.spectrum-Search:not(.spectrum-Search--quiet) {
 	.spectrum-Search-icon {
-		inset-inline-start: var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual));
+		display: block;
+		position: absolute;
+		inset-block: 0;
+		margin-block: auto;
+
+		--spectrum-search-color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
+		color: var(--spectrum-search-color);
+
+		.spectrum-Search-textfield:hover & {
+			--spectrum-search-color: var(--highcontrast-search-color-hover, var(--mod-search-color-hover, var(--spectrum-search-color-hover)));
+		}
+
+		.spectrum-Search-textfield[focused] & {
+			--spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus, var(--spectrum-search-color-focus)));
+		}
+
+		.spectrum-Search-textfield[focused]:hover & {
+			--spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-focus-hover, var(--spectrum-search-color-focus-hover)));
+		}
+
+		.spectrum-Search-textfield[keyboardFocused] & {
+			--spectrum-search-color: var(--highcontrast-search-color-focus, var(--mod-search-color-key-focus, var(--spectrum-search-color-key-focus)));
+		}
+
+		.spectrum-Search-textfield[disabled] &,
+		.spectrum-Search-textfield[disabled]:hover & {
+			--spectrum-search-color: var(--highcontrast-search-color-disabled, var(--mod-search-color-disabled, var(--spectrum-search-color-disabled)));
+		}
 	}
 
 	.spectrum-Search-input {
-		padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) - var(--mod-search-border-width, var(--spectrum-search-border-width)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
-		padding-inline-end: calc(var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
-	}
-}
+		/* Correct the odd appearance of input[type="search"] in Chrome and Safari. */
+		/* Without this, it gets overridden by .spectrum-Textfield */
+		appearance: none;
 
-/* Quiet Variant */
-.spectrum-Search--quiet {
-	.spectrum-Search-clearButton {
-		transform: translateX(var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
+		/* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-decoration {
+			appearance: none;
+		}
+
+		block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
+		padding-block-start: calc(var(--mod-search-top-to-text, var(--spectrum-search-top-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
+		padding-block-end: calc(var(--mod-search-bottom-to-text, var(--spectrum-search-bottom-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
+
+		font-style: var(--mod-search-font-style, var(--spectrum-search-font-style));
+		line-height: var(--mod-search-line-height, var(--spectrum-search-line-height));
 	}
 
-	&.spectrum-Search .spectrum-Search-input {
-		border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
-		padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
-		padding-inline-end: calc(var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
-		padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
+	/* Standard / Default Only */
+	.spectrum-Search:not(&[quiet]) {
+		.spectrum-Search-icon {
+			inset-inline-start: var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual));
+		}
+
+		.spectrum-Search-input {
+			padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) - var(--mod-search-border-width, var(--spectrum-search-border-width)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
+			padding-inline-end: calc(var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
+		}
 	}
 }

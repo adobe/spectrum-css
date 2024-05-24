@@ -5740,16 +5740,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/site@workspace:components/site":
-  version: 0.0.0-use.local
-  resolution: "@spectrum-css/site@workspace:components/site"
-  dependencies:
-    "@spectrum-css/tokens": "workspace:^"
-  peerDependencies:
-    "@spectrum-css/tokens": ">=14"
-  languageName: unknown
-  linkType: soft
-
 "@spectrum-css/slider@workspace:components/slider":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/slider@workspace:components/slider"
@@ -19047,7 +19037,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-splitinator@workspace:plugins/postcss-splitinator":
+"postcss-splitinator@workspace:^, postcss-splitinator@workspace:plugins/postcss-splitinator":
   version: 0.0.0-use.local
   resolution: "postcss-splitinator@workspace:plugins/postcss-splitinator"
   dependencies:
@@ -21050,6 +21040,7 @@ __metadata:
     postcss-reporter: "npm:^7.1.0"
     postcss-rgb-mapping: "npm:^1.1.0"
     postcss-selector-replace: "npm:^1.0.2"
+    postcss-splitinator: "workspace:^"
     prettier: "npm:^3.2.5"
     rimraf: "npm:^5.0.7"
     stylelint: "npm:^15.11.0"

@@ -1,6 +1,7 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 
-import "@spectrum-css/tokens-legacy";
+import tokens from "@spectrum-css/tokens?raw";
+import legacy from "@spectrum-css/tokens-legacy?raw";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -11,6 +12,8 @@ export const withContextWrapper = makeDecorator({
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
 		const { globals, args, viewMode, id } = context;
+
+		console.log({ tokens, legacy });
 
 		// This property informs which context stylesheets to source
 		//    but does not source a stylesheet for itself
@@ -33,9 +36,18 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			for (const container of containers) {
+				const isLegacy = ["legacy", "express"].includes(ctx);
+
+				if (isLegacy) {
+					legacy.use();
+					tokens.unuse();
+				} else {
+					tokens.use();
+					legacy.unuse();
+				}
 
 				container.classList.toggle("spectrum", true);
-				container.classList.toggle("spectrum--legacy", ["legacy", "express"].includes(ctx));
+				container.classList.toggle("spectrum--legacy", isLegacy);
 				container.classList.toggle(`spectrum--express`, ctx === "express");
 
 				for (const c of ["light", "dark"]) {
@@ -45,7 +57,6 @@ export const withContextWrapper = makeDecorator({
 				for (const s of ["medium", "large"]) {
 					container.classList.toggle(`spectrum--${s}`, s === scale);
 				}
-
 
 				container.style.removeProperty("background");
 				const hasStaticElement = container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--staticBlack, .${args.rootClass}--overBackground`);

@@ -1,7 +1,7 @@
 header.spectrum-CSSComponent-sectionHeading(id=`${util.getSlug(section.name)}`)
-  h2.spectrum-Heading.spectrum-Heading--sizeM
+  h2.spectrum-Heading&[sizeM]
     a(href=`#${util.getSlug(section.name)}`).spectrum-BigSubtleLink=`${section.name}`
-  hr.spectrum-Divider.spectrum-Divider--large
+  hr.spectrum-Divider&[large]
 
   -
     let example = section;

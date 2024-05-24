@@ -10,10 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
 @import "@spectrum-css/commons/overlay.css";
 
-.spectrum-Tooltip {
+:root {
+	--spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-subdued-background-color-default);
+
 	--spectrum-tooltip-animation-duration: var(--spectrum-animation-duration-100);
 
 	/* override if additional spacing to source is required */
@@ -127,23 +128,23 @@ governing permissions and limitations under the License.
 	p {
 		margin: 0;
 	}
-}
 
-/****** Variants ******/
-.spectrum-Tooltip--info {
-	background-color: var(--highcontrast-tooltip-background-color-informative, var(--mod-tooltip-background-color-informative, var(--spectrum-tooltip-background-color-informative)));
-}
+	/****** Variants ******/
+	&[info] {
+		background-color: var(--highcontrast-tooltip-background-color-informative, var(--mod-tooltip-background-color-informative, var(--spectrum-tooltip-background-color-informative)));
+	}
 
-.spectrum-Tooltip--positive {
-	background-color: var(--highcontrast-tooltip-background-color-positive, var(--mod-tooltip-background-color-positive, var(--spectrum-tooltip-background-color-positive)));
-}
+	&[positive] {
+		background-color: var(--highcontrast-tooltip-background-color-positive, var(--mod-tooltip-background-color-positive, var(--spectrum-tooltip-background-color-positive)));
+	}
 
-.spectrum-Tooltip--negative {
-	background-color: var(--highcontrast-tooltip-background-color-negative, var(--mod-tooltip-background-color-negative, var(--spectrum-tooltip-background-color-negative)));
-}
+	&[negative] {
+		background-color: var(--highcontrast-tooltip-background-color-negative, var(--mod-tooltip-background-color-negative, var(--spectrum-tooltip-background-color-negative)));
+	}
 
-.spectrum-Tooltip.is-open {
-	@extend %spectrum-overlay--open;
+	&[open] {
+		@extend %spectrum-overlay--open;
+	}
 }
 
 /****** Tip Base Styles ******/
@@ -163,65 +164,65 @@ governing permissions and limitations under the License.
 	/* Default: Pointing down ▽ */
 	clip-path: polygon(0 calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))), 50% var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)), 100% calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))));
 
-	.spectrum-Tooltip--info & {
+	&[info] & {
 		background-color: var(--highcontrast-tooltip-background-color-informative, var(--mod-tooltip-background-color-informative, var(--spectrum-tooltip-background-color-informative)));
 	}
 
-	.spectrum-Tooltip--positive & {
+	&[positive] & {
 		background-color: var(--highcontrast-tooltip-background-color-positive, var(--mod-tooltip-background-color-positive, var(--spectrum-tooltip-background-color-positive)));
 	}
 
-	.spectrum-Tooltip--negative & {
+	&[negative] & {
 		background-color: var(--highcontrast-tooltip-background-color-negative, var(--mod-tooltip-background-color-negative, var(--spectrum-tooltip-background-color-negative)));
 	}
 
 	/*** Tip Placement ***/
 	/* tip is horizontal at bottom pointing down ▽ */
-	.spectrum-Tooltip--top &,
-	.spectrum-Tooltip--top-left &,
-	.spectrum-Tooltip--top-right &,
-	.spectrum-Tooltip--top-start &,
-	.spectrum-Tooltip--top-end & {
+	&[top] &,
+	&[top-left] &,
+	&[top-right] &,
+	&[top-start] &,
+	&[top-end] & {
 		inset-block-start: 100%;
 	}
 
 	/* tip is horizontal at top pointing up △ */
-	.spectrum-Tooltip--bottom &,
-	.spectrum-Tooltip--bottom-left &,
-	.spectrum-Tooltip--bottom-right &,
-	.spectrum-Tooltip--bottom-start &,
-	.spectrum-Tooltip--bottom-end & {
+	&[bottom] &,
+	&[bottom-left] &,
+	&[bottom-right] &,
+	&[bottom-start] &,
+	&[bottom-end] & {
 		clip-path: polygon(50% calc(100% - var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage))), 0 calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))), 100% calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))));
 		inset-block: auto 100%;
 	}
 
 	/* tip is horizontal and at the edge */
-	.spectrum-Tooltip--top-left &,
-	.spectrum-Tooltip--bottom-left &,
-	.spectrum-Tooltip--top-right &,
-	.spectrum-Tooltip--bottom-right &,
-	.spectrum-Tooltip--top-start &,
-	.spectrum-Tooltip--bottom-start &,
-	.spectrum-Tooltip--top-end &,
-	.spectrum-Tooltip--bottom-end & {
+	&[top-left] &,
+	&[bottom-left] &,
+	&[top-right] &,
+	&[bottom-right] &,
+	&[top-start] &,
+	&[bottom-start] &,
+	&[top-end] &,
+	&[bottom-end] & {
 		transform: none;
 	}
 
 	/* tip is horizontal at left △ ▽ */
-	.spectrum-Tooltip--top-left &,
-	.spectrum-Tooltip--bottom-left & {
+	&[top-left] &,
+	&[bottom-left] & {
 		inset-inline-start: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
 	}
 
 	/* tip is horizontal at right △ ▽ */
-	.spectrum-Tooltip--top-right &,
-	.spectrum-Tooltip--bottom-right & {
+	&[top-right] &,
+	&[bottom-right] & {
 		inset-inline: auto var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
 	}
 
 	/* logical property - tip is horizontal at start △ ▽ */
-	.spectrum-Tooltip--top-start &,
-	.spectrum-Tooltip--bottom-start & {
+	&[top-start] &,
+	&[bottom-start] & {
 		inset-inline: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing)) auto;
 
 		&:dir(rtl) {
@@ -231,8 +232,8 @@ governing permissions and limitations under the License.
 	}
 
 	/* logical property - tip is horizontal at end △ ▽ */
-	.spectrum-Tooltip--top-end &,
-	.spectrum-Tooltip--bottom-end & {
+	&[top-end] &,
+	&[bottom-end] & {
 		inset-inline: auto var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
 
 		&:dir(rtl) {
@@ -242,80 +243,80 @@ governing permissions and limitations under the License.
 	}
 
 	/* tip right left start end resets ◁ ▷ */
-	.spectrum-Tooltip--right &,
-	.spectrum-Tooltip--right-bottom &,
-	.spectrum-Tooltip--right-top &,
-	.spectrum-Tooltip--left &,
-	.spectrum-Tooltip--left-bottom &,
-	.spectrum-Tooltip--left-top &,
-	.spectrum-Tooltip--start &,
-	.spectrum-Tooltip--start-top &,
-	.spectrum-Tooltip--start-bottom &,
-	.spectrum-Tooltip--end &,
-	.spectrum-Tooltip--end-top &,
-	.spectrum-Tooltip--end-bottom & {
+	&[right] &,
+	&[right-bottom] &,
+	&[right-top] &,
+	&[left] &,
+	&[left-bottom] &,
+	&[left-top] &,
+	&[start] &,
+	&[start-top] &,
+	&[start-bottom] &,
+	&[end] &,
+	&[end-top] &,
+	&[end-bottom] & {
 		inset-block-start: 50%;
 		transform: translateY(-50%);
 	}
 
 	/* tip is vertical and at edge */
-	.spectrum-Tooltip--right-bottom &,
-	.spectrum-Tooltip--right-top &,
-	.spectrum-Tooltip--left-bottom &,
-	.spectrum-Tooltip--left-top &,
-	.spectrum-Tooltip--start-top &,
-	.spectrum-Tooltip--start-bottom &,
-	.spectrum-Tooltip--end-top &,
-	.spectrum-Tooltip--end-bottom & {
+	&[right-bottom] &,
+	&[right-top] &,
+	&[left-bottom] &,
+	&[left-top] &,
+	&[start-top] &,
+	&[start-bottom] &,
+	&[end-top] &,
+	&[end-bottom] & {
 		transform: none;
 		inset-block-start: auto;
 	}
 
 	/* tip is vertical pointing ◁ left or start, for LTR. */
-	.spectrum-Tooltip--right &,
-	.spectrum-Tooltip--right-bottom &,
-	.spectrum-Tooltip--right-top &,
-	.spectrum-Tooltip--end &,
-	.spectrum-Tooltip--end-top &,
-	.spectrum-Tooltip--end-bottom & {
+	&[right] &,
+	&[right-bottom] &,
+	&[right-top] &,
+	&[end] &,
+	&[end-top] &,
+	&[end-bottom] & {
 		clip-path: polygon(calc(100% - var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage))) 50%, calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%, calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0);
 		inset-inline: auto 100%;
 	}
 
 	/* tip is vertical pointing ▷ right or end, for LTR. */
-	.spectrum-Tooltip--left &,
-	.spectrum-Tooltip--left-bottom &,
-	.spectrum-Tooltip--left-top &,
-	.spectrum-Tooltip--start &,
-	.spectrum-Tooltip--start-top &,
-	.spectrum-Tooltip--start-bottom & {
+	&[left] &,
+	&[left-bottom] &,
+	&[left-top] &,
+	&[start] &,
+	&[start-top] &,
+	&[start-bottom] & {
 		clip-path: polygon(calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0, calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%, var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)) 50%);
 		inset-inline-start: 100%;
 	}
 
 	/* tip is vertical at top ◁ ▷ */
-	.spectrum-Tooltip--right-top &,
-	.spectrum-Tooltip--left-top &,
-	.spectrum-Tooltip--start-top &,
-	.spectrum-Tooltip--end-top & {
+	&[right-top] &,
+	&[left-top] &,
+	&[start-top] &,
+	&[end-top] & {
 		inset-block-start: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
 	}
 
 	/* tip is vertical at bottom ◁ ▷ */
-	.spectrum-Tooltip--right-bottom &,
-	.spectrum-Tooltip--left-bottom &,
-	.spectrum-Tooltip--start-bottom &,
-	.spectrum-Tooltip--end-bottom & {
+	&[right-bottom] &,
+	&[left-bottom] &,
+	&[start-bottom] &,
+	&[end-bottom] & {
 		inset-block-end: var(--mod-tooltip-pointer-corner-spacing, var(--spectrum-tooltip-pointer-corner-spacing));
 	}
 
 	/* tip logical property - Start pointing tip reversed to point toward end ▷ for RTL. */
-	.spectrum-Tooltip--left &,
-	.spectrum-Tooltip--left-bottom &,
-	.spectrum-Tooltip--left-top &,
-	.spectrum-Tooltip--end &,
-	.spectrum-Tooltip--end-top &,
-	.spectrum-Tooltip--end-bottom & {
+	&[left] &,
+	&[left-bottom] &,
+	&[left-top] &,
+	&[end] &,
+	&[end-top] &,
+	&[end-bottom] & {
 		&:dir(rtl) {
 			clip-path: polygon(calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0, calc(0% - var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%, var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)) 50%);
 			right: auto;
@@ -324,12 +325,12 @@ governing permissions and limitations under the License.
 	}
 
 	/* tip logical property - End pointing tip reversed to point toward start ◁ for RTL. */
-	.spectrum-Tooltip--right &,
-	.spectrum-Tooltip--right-bottom &,
-	.spectrum-Tooltip--right-top &,
-	.spectrum-Tooltip--start &,
-	.spectrum-Tooltip--start-top &,
-	.spectrum-Tooltip--start-bottom & {
+	&[right] &,
+	&[right-bottom] &,
+	&[right-top] &,
+	&[start] &,
+	&[start-top] &,
+	&[start-bottom] & {
 		&:dir(rtl) {
 			clip-path: polygon(var(--mod-tooltip-tip-height-percentage, var(--spectrum-tooltip-tip-height-percentage)) 50%, calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 100%, calc(100% + var(--mod-tooltip-tip-antialiasing-inset, var(--spectrum-tooltip-tip-antialiasing-inset))) 0);
 			left: auto;
@@ -361,92 +362,92 @@ governing permissions and limitations under the License.
 /****** Tooltip Placement and Animation Direction ******/
 /* position is top of source - default */
 .spectrum-Tooltip,
-.spectrum-Tooltip--top,
-.spectrum-Tooltip--top-left,
-.spectrum-Tooltip--top-right,
-.spectrum-Tooltip--top-start,
-.spectrum-Tooltip--top-end {
+.spectrum-Tooltip[top],
+.spectrum-Tooltip[top-left],
+.spectrum-Tooltip[top-right],
+.spectrum-Tooltip[top-start],
+.spectrum-Tooltip[top-end] {
 	margin-block-end: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
 	/* tooltip animates upward ⬆ */
-	&.is-open {
+	&[open] {
 		transform: translateY(calc(-1 * var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))));
 	}
 }
 
 /* tooltip position is at bottom of source */
-.spectrum-Tooltip--bottom,
-.spectrum-Tooltip--bottom-left,
-.spectrum-Tooltip--bottom-right,
-.spectrum-Tooltip--bottom-start,
-.spectrum-Tooltip--bottom-end {
+.spectrum-Tooltip[bottom],
+.spectrum-Tooltip[bottom-left],
+.spectrum-Tooltip[bottom-right],
+.spectrum-Tooltip[bottom-end],
+.spectrum-Tooltip[bottom-start] {
 	margin-block-start: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
 	/* Tooltip animates downward ⬇ */
-	&.is-open {
+	&[open] {
 		transform: translateY(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)));
 	}
 }
 
 /* tooltip position is right of source */
-.spectrum-Tooltip--right,
-.spectrum-Tooltip--right-bottom,
-.spectrum-Tooltip--right-top {
+.spectrum-Tooltip[right],
+.spectrum-Tooltip[right-bottom],
+.spectrum-Tooltip[right-top] {
 	/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 	margin-left: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
 	/* Tooltip animates to right ⮕ */
-	&.is-open {
+	&[open] {
 		transform: translateX(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)));
 	}
 }
 
 /* tooltip position is left of source */
-.spectrum-Tooltip--left,
-.spectrum-Tooltip--left-bottom,
-.spectrum-Tooltip--left-top {
+.spectrum-Tooltip[left],
+.spectrum-Tooltip[left-bottom],
+.spectrum-Tooltip[left-top] {
 	/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 	margin-right: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
 	/* Tooltip animates to left ⬅ */
-	&.is-open {
+	&[open] {
 		transform: translateX(calc(-1 * var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))));
 	}
 }
 
 /* logical property - tooltip is horizontally at start */
-.spectrum-Tooltip--start,
-.spectrum-Tooltip--start-top,
-.spectrum-Tooltip--start-bottom {
+.spectrum-Tooltip[start],
+.spectrum-Tooltip[start-top],
+.spectrum-Tooltip[start-bottom] {
 	margin-inline-end: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
 	/* LTR read, tooltip animates towards left ⬅ */
-	&.is-open {
+	&[open] {
 		transform: translateX(calc(-1 * var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))));
 	}
 
 	/* RTL read, tooltip animates towards right ⮕ */
 	&:dir(rtl) {
-		&.is-open {
+		&[open] {
 			transform: translateX(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)));
 		}
 	}
 }
 
 /* logical property - tooltip is horizontally at end */
-.spectrum-Tooltip--end,
-.spectrum-Tooltip--end-top,
-.spectrum-Tooltip--end-bottom {
+.spectrum-Tooltip[end],
+.spectrum-Tooltip[end-top],
+.spectrum-Tooltip[end-bottom] {
 	margin-inline-start: calc(var(--mod-tooltip-tip-block-size, var(--spectrum-tooltip-tip-block-size)) + var(--mod-tooltip-margin, var(--spectrum-tooltip-margin)));
 
 	/* LTR read, tooltip animates towards right ⮕ */
-	&.is-open {
+	&[open] {
 		transform: translateX(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)));
 	}
 
 	/* RTL read, tooltip animates towards left ⬅ */
 	&:dir(rtl) {
-		&.is-open {
+		&[open] {
 			transform: translateX(calc(-1 * var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance))));
 		}
 	}
@@ -473,93 +474,93 @@ governing permissions and limitations under the License.
 
 	&:hover .spectrum-Tooltip,
 	&:focus .spectrum-Tooltip,
-	&.is-focused .spectrum-Tooltip,
+	&[focused] .spectrum-Tooltip,
 	*:focus .spectrum-Tooltip {
 		opacity: 1;
 	}
 
-	.spectrum-Tooltip--top,
-	.spectrum-Tooltip--top-left,
-	.spectrum-Tooltip--top-right,
-	.spectrum-Tooltip--top-start,
-	.spectrum-Tooltip--top-end,
-	.spectrum-Tooltip--bottom,
-	.spectrum-Tooltip--bottom-left,
-	.spectrum-Tooltip--bottom-right,
-	.spectrum-Tooltip--bottom-start,
-	.spectrum-Tooltip--bottom-end {
+	&[top],
+	&[top-left],
+	&[top-right],
+	&[top-start],
+	&[top-end],
+	&[bottom],
+	&[bottom-left],
+	&[bottom-right],
+	&[bottom-start],
+	&[bottom-end] {
 		/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 		left: 50%;
 		transform: translate(-50%, 0);
 	}
 
-	.spectrum-Tooltip--top,
-	.spectrum-Tooltip--top-left,
-	.spectrum-Tooltip--top-right,
-	.spectrum-Tooltip--top-start,
-	.spectrum-Tooltip--top-end {
+	&[top],
+	&[top-left],
+	&[top-right],
+	&[top-start],
+	&[top-end] {
 		inset-block-end: 100%;
 	}
 
-	.spectrum-Tooltip--bottom,
-	.spectrum-Tooltip--bottom-left,
-	.spectrum-Tooltip--bottom-right,
-	.spectrum-Tooltip--bottom-start,
-	.spectrum-Tooltip--bottom-end {
+	&[bottom],
+	&[bottom-left],
+	&[bottom-right],
+	&[bottom-start],
+	&[bottom-end] {
 		inset-block-start: 100%;
 	}
 
-	.spectrum-Tooltip--left,
-	.spectrum-Tooltip--left-bottom,
-	.spectrum-Tooltip--left-top,
-	.spectrum-Tooltip--right,
-	.spectrum-Tooltip--right-bottom,
-	.spectrum-Tooltip--right-top,
-	.spectrum-Tooltip--start,
-	.spectrum-Tooltip--start-top,
-	.spectrum-Tooltip--start-bottom,
-	.spectrum-Tooltip--end,
-	.spectrum-Tooltip--end-top,
-	.spectrum-Tooltip--end-bottom {
+	&[left],
+	&[left-bottom],
+	&[left-top],
+	&[right],
+	&[right-bottom],
+	&[right-top],
+	&[start],
+	&[start-top],
+	&[start-bottom],
+	&[end],
+	&[end-top],
+	&[end-bottom] {
 		inset-block-start: 50%;
 		transform: translate(0, -50%);
 	}
 
-	.spectrum-Tooltip--left,
-	.spectrum-Tooltip--left-bottom,
-	.spectrum-Tooltip--left-top,
-	.spectrum-Tooltip--start,
-	.spectrum-Tooltip--start-top,
-	.spectrum-Tooltip--start-bottom {
+	&[left],
+	&[left-bottom],
+	&[left-top],
+	&[start],
+	&[start-top],
+	&[start-bottom] {
 		/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 		right: 100%;
 	}
 
 	/* RTL */
 	&:dir(rtl) {
-		.spectrum-Tooltip--start,
-		.spectrum-Tooltip--start-top,
-		.spectrum-Tooltip--start-bottom {
+		&[start],
+		&[start-top],
+		&[start-bottom] {
 			left: 100%;
 			right: auto;
 		}
 	}
 
-	.spectrum-Tooltip--right,
-	.spectrum-Tooltip--right-top,
-	.spectrum-Tooltip--right-bottom,
-	.spectrum-Tooltip--end,
-	.spectrum-Tooltip--end-top,
-	.spectrum-Tooltip--end-bottom {
+	&[right],
+	&[right-top],
+	&[right-bottom],
+	&[end],
+	&[end-top],
+	&[end-bottom] {
 		/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 		left: 100%;
 	}
 
 	/* RTL */
 	&:dir(rtl) {
-		.spectrum-Tooltip--end,
-		.spectrum-Tooltip--end-top,
-		.spectrum-Tooltip--end-bottom {
+		&[end],
+		&[end-top],
+		&[end-bottom] {
 			left: auto;
 			right: 100%;
 		}
@@ -567,40 +568,40 @@ governing permissions and limitations under the License.
 
 	&:hover,
 	&:focus,
-	&.is-focused,
+	&[focused],
 	*:focus {
-		.spectrum-Tooltip--top,
-		.spectrum-Tooltip--top-left,
-		.spectrum-Tooltip--top-right,
-		.spectrum-Tooltip--top-start,
-		.spectrum-Tooltip--top-end {
+		&[top],
+		&[top-left],
+		&[top-right],
+		&[top-start],
+		&[top-end] {
 			transform: translate(-50%, calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1));
 		}
 	}
 
 	&:hover,
 	&:focus,
-	&.is-focused,
+	&[focused],
 	*:focus {
-		.spectrum-Tooltip--bottom,
-		.spectrum-Tooltip--bottom-left,
-		.spectrum-Tooltip--bottom-right,
-		.spectrum-Tooltip--bottom-start,
-		.spectrum-Tooltip--bottom-end {
+		&[bottom],
+		&[bottom-left],
+		&[bottom-right],
+		&[bottom-start],
+		&[bottom-end] {
 			transform: translate(-50%, var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)));
 		}
 	}
 
 	&:hover,
 	&:focus,
-	&.is-focused,
+	&[focused],
 	*:focus {
-		.spectrum-Tooltip--left,
-		.spectrum-Tooltip--left-bottom,
-		.spectrum-Tooltip--left-top,
-		.spectrum-Tooltip--start,
-		.spectrum-Tooltip--start-top,
-		.spectrum-Tooltip--start-bottom {
+		&[left],
+		&[left-bottom],
+		&[left-top],
+		&[start],
+		&[start-top],
+		&[start-bottom] {
 			transform: translate(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1), -50%);
 		}
 	}
@@ -609,11 +610,11 @@ governing permissions and limitations under the License.
 	&:dir(rtl) {
 		&:hover,
 		&:focus,
-		&.is-focused,
+		&[focused],
 		*:focus {
-			.spectrum-Tooltip--start,
-			.spectrum-Tooltip--start-top,
-			.spectrum-Tooltip--start-bottom {
+			&[start],
+			&[start-top],
+			&[start-bottom] {
 				transform: translate(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)), -50%);
 			}
 		}
@@ -621,14 +622,14 @@ governing permissions and limitations under the License.
 
 	&:hover,
 	&:focus,
-	&.is-focused,
+	&[focused],
 	*:focus {
-		.spectrum-Tooltip--right,
-		.spectrum-Tooltip--right-top,
-		.spectrum-Tooltip--right-bottom,
-		.spectrum-Tooltip--end,
-		.spectrum-Tooltip--end-top,
-		.spectrum-Tooltip--end-bottom {
+		&[right],
+		&[right-top],
+		&[right-bottom],
+		&[end],
+		&[end-top],
+		&[end-bottom] {
 			transform: translate(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)), -50%);
 		}
 	}
@@ -637,11 +638,11 @@ governing permissions and limitations under the License.
 	&:dir(rtl) {
 		&:hover,
 		&:focus,
-		&.is-focused,
+		&[focused],
 		*:focus {
-			.spectrum-Tooltip--end,
-			.spectrum-Tooltip--end-top,
-			.spectrum-Tooltip--end-bottom {
+			&[end],
+			&[end-top],
+			&[end-bottom] {
 				transform: translate(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1), -50%);
 			}
 		}

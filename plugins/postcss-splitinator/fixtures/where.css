@@ -2,7 +2,7 @@
 	:where(.component) {
 		--background-color: blue;
 	}
-	:where(.component.is-selected) {
+	:where(.component[selected]) {
 		--background-color: darkblue;
 	}
 	:where(.component .icon) {
@@ -14,7 +14,7 @@
 	:where(.component) {
 		--background-color: purple;
 	}
-	:where(.component.is-selected) {
+	:where(.component[selected]) {
 		--background-color: darkpurple;
 	}
 	:where(.component .icon) {

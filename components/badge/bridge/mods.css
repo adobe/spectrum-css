@@ -1,0 +1,49 @@
+/*!
+ * Copyright 2023 Adobe. All rights reserved.
+ * 
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ * 
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+:root {
+  --spectrum-badge-height: var(--mod-badge-height, var(--spectrum-badge-height));
+  --spectrum-badge-corner-radius: var(--mod-badge-corner-radius, var(--spectrum-badge-corner-radius));
+  --spectrum-badge-background-color-default: var(--mod-badge-background-color-default, var(--spectrum-badge-background-color-default));
+  --spectrum-badge-label-icon-color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
+  --spectrum-badge-font-size: var(--mod-badge-font-size, var(--spectrum-badge-font-size));
+  --spectrum-badge-line-height: var(--mod-badge-line-height, var(--spectrum-badge-line-height));
+  --spectrum-badge-label-spacing-horizontal: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
+  --spectrum-badge-label-spacing-vertical-top: var(--mod-badge-label-spacing-vertical-top, var(--spectrum-badge-label-spacing-vertical-top));
+  --spectrum-badge-label-spacing-vertical-bottom: var(--mod-badge-label-spacing-vertical-bottom, var(--spectrum-badge-label-spacing-vertical-bottom));
+  --spectrum-badge-line-height-cjk: var(--mod-badge-line-height-cjk, var(--spectrum-badge-line-height-cjk));
+  --spectrum-badge-workflow-icon-size: var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
+  --spectrum-badge-icon-spacing-horizontal: var(--mod-badge-icon-spacing-horizontal, var(--spectrum-badge-icon-spacing-horizontal));
+  --spectrum-badge-icon-text-spacing: var(--mod-badge-icon-text-spacing, var(--spectrum-badge-icon-text-spacing));
+  --spectrum-badge-icon-spacing-vertical-top: var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top));
+  --spectrum-badge-icon-only-spacing-horizontal: var(--mod-badge-icon-only-spacing-horizontal, var(--spectrum-badge-icon-only-spacing-horizontal));
+  --spectrum-badge-background-color-accent: var(--mod-badge-background-color-accent, var(--spectrum-badge-background-color-accent));
+  --spectrum-badge-background-color-informative: var(--mod-badge-background-color-informative, var(--spectrum-badge-background-color-informative));
+  --spectrum-badge-background-color-negative: var(--mod-badge-background-color-negative, var(--spectrum-badge-background-color-negative));
+  --spectrum-badge-background-color-positive: var(--mod-badge-background-color-positive, var(--spectrum-badge-background-color-positive));
+  --spectrum-badge-background-color-notice: var(--mod-badge-background-color-notice, var(--spectrum-badge-background-color-notice));
+  --spectrum-badge-background-color-gray: var(--mod-badge-background-color-gray, var(--spectrum-badge-background-color-gray));
+  --spectrum-badge-background-color-red: var(--mod-badge-background-color-red, var(--spectrum-badge-background-color-red));
+  --spectrum-badge-background-color-orange: var(--mod-badge-background-color-orange, var(--spectrum-badge-background-color-orange));
+  --spectrum-badge-background-color-yellow: var(--mod-badge-background-color-yellow, var(--spectrum-badge-background-color-yellow));
+  --spectrum-badge-background-color-chartreuse: var(--mod-badge-background-color-chartreuse, var(--spectrum-badge-background-color-chartreuse));
+  --spectrum-badge-background-color-celery: var(--mod-badge-background-color-celery, var(--spectrum-badge-background-color-celery));
+  --spectrum-badge-background-color-green: var(--mod-badge-background-color-green, var(--spectrum-badge-background-color-green));
+  --spectrum-badge-background-color-seafoam: var(--mod-badge-background-color-seafoam, var(--spectrum-badge-background-color-seafoam));
+  --spectrum-badge-background-color-cyan: var(--mod-badge-background-color-cyan, var(--spectrum-badge-background-color-cyan));
+  --spectrum-badge-background-color-blue: var(--mod-badge-background-color-blue, var(--spectrum-badge-background-color-blue));
+  --spectrum-badge-background-color-indigo: var(--mod-badge-background-color-indigo, var(--spectrum-badge-background-color-indigo));
+  --spectrum-badge-background-color-purple: var(--mod-badge-background-color-purple, var(--spectrum-badge-background-color-purple));
+  --spectrum-badge-background-color-fuchsia: var(--mod-badge-background-color-fuchsia, var(--spectrum-badge-background-color-fuchsia));
+  --spectrum-badge-background-color-magenta: var(--mod-badge-background-color-magenta, var(--spectrum-badge-background-color-magenta));
+}

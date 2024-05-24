@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
   --spectrum-radio-button-border-color-down: var(--system-spectrum-radio-button-border-color-down);
   --spectrum-radio-button-border-color-focus: var(--system-spectrum-radio-button-border-color-focus);
 }
-.spectrum-Radio--emphasized {
+&[emphasized] {
   --spectrum-radio-button-checked-border-color-default: var(--system-spectrum-radio-emphasized-button-checked-border-color-default);
   --spectrum-radio-button-checked-border-color-hover: var(--system-spectrum-radio-emphasized-button-checked-border-color-hover);
   --spectrum-radio-button-checked-border-color-down: var(--system-spectrum-radio-emphasized-button-checked-border-color-down);
