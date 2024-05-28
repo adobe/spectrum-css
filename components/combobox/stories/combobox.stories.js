@@ -165,7 +165,7 @@ export default {
 		},
 		docs: {
 			story: {
-				height: "200px"
+				height: "220px"
 			}
 		},
 	},
@@ -245,4 +245,108 @@ export const Quiet = (args) => window.isChromatic()
 	});
 Quiet.args = {
 	isQuiet: true,
+};
+
+/**
+ * Stories for the MDX "Docs" only.
+ */
+
+// Standard
+export const WithLabel = Template.bind({});
+WithLabel.tags = ["docs-only"];
+WithLabel.args = {
+	showFieldLabel: true,
+	fieldLabelText: "Country",
+	isOpen: true,
+};
+WithLabel.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Closed = Template.bind({});
+Closed.tags = ["docs-only"];
+Closed.args = {
+	isOpen: false,
+};
+Closed.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Invalid = Template.bind({});
+Invalid.tags = ["docs-only"];
+Invalid.args = {
+	isInvalid: true,
+};
+Invalid.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Loading = Template.bind({});
+Loading.tags = ["docs-only"];
+Loading.args = {
+	isLoading: true,
+};
+Loading.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Disabled = Template.bind({});
+Disabled.tags = ["docs-only"];
+Disabled.args = {
+	isDisabled: true,
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// Quiet
+export const QuietWithLabel = Template.bind({});
+QuietWithLabel.tags = ["docs-only"];
+QuietWithLabel.args = {
+	showFieldLabel: true,
+	fieldLabelText: "Country",
+	isQuiet: true,
+};
+QuietWithLabel.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const QuietClosed = Template.bind({});
+QuietClosed.tags = ["docs-only"];
+QuietClosed.args = {
+	isQuiet: true,
+	isOpen: false,
+};
+QuietClosed.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const QuietInvalid = Template.bind({});
+QuietInvalid.tags = ["docs-only"];
+QuietInvalid.args = {
+	isQuiet: true,
+	isInvalid: true,
+};
+QuietInvalid.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const QuietLoading = Template.bind({});
+QuietLoading.tags = ["docs-only"];
+QuietLoading.args = {
+	isQuiet: true,
+	isLoading: true,
+};
+QuietLoading.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const QuietDisabled = Template.bind({});
+QuietDisabled.tags = ["docs-only"];
+QuietDisabled.args = {
+	isQuiet: true,
+	isDisabled: true,
+};
+QuietDisabled.parameters = {
+	chromatic: { disableSnapshot: true },
 };
