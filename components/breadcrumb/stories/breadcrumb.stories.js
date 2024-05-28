@@ -2,6 +2,7 @@ import { Template } from "./template";
 
 /**
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
+ * 
  */
 export default {
 	title: "Breadcrumbs",
@@ -43,7 +44,6 @@ Default.args = {
 		},
 		{
 			label: "Trend",
-			isDisabled: true,
 		},
 		{
 			label: "January 2019 Assets",
@@ -55,11 +55,10 @@ export const NestedMultiline = Template.bind({});
 NestedMultiline.args = {
 	items: [
 		{
-			label: "Nav root",
+			iconName: "FolderOpen",
 		},
 		{
-			iconName: "FolderOpen",
-			isDisabled: true,
+			label: "Sub Item",
 		},
 		{
 			label: "Trend",
@@ -70,4 +69,236 @@ NestedMultiline.args = {
 		},
 	],
 	variant: "multiline",
+};
+
+/*
+ * Stories for the MDX "Docs" only.
+ * Based off of the base `Template` which does not have conditional Chromatic-only markup.
+ */
+export const Dragged = Template.bind({});
+Dragged.args = {
+	items: [
+		{
+			label: "Nav root",
+		},
+		{
+			label: "Trend",
+			isDragged: true,
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+	isDragged: true,
+};
+Dragged.tags = ["docs-only"];
+Dragged.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Nested = Template.bind({});
+Nested.args = {
+	items: [
+		{
+			iconName: "FolderOpen",
+		},
+		{
+			label: "Sub Item",
+		},
+		{
+			label: "Trend",
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+};
+Nested.tags = ["docs-only"];
+Nested.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const NestedRootVisible = Template.bind({});
+NestedRootVisible.args = {
+	items: [
+		{
+			label: "Nav root",
+		},
+		{
+			iconName: "FolderOpen",
+		},
+		{
+			label: "Trend",
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+};
+NestedRootVisible.tags = ["docs-only"];
+NestedRootVisible.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+NestedRootVisible.storyName = "Nested (root visible)";
+
+export const Multiline = Template.bind({});
+Multiline.args = {
+	items: [
+		{
+			label: "Nav root",
+		},
+		{
+			label: "Trend",
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+	variant: "multiline",
+};
+Multiline.tags = ["docs-only"];
+Multiline.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const MultilineDragged = Template.bind({});
+MultilineDragged.args = {
+	items: [
+		{
+			label: "Nav root",
+		},
+		{
+			label: "Trendy",
+			isDragged: true,
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+	variant: "multiline",
+	isDragged: true,
+};
+MultilineDragged.tags = ["docs-only"];
+MultilineDragged.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+MultilineDragged.storyName = "Multiline dragged";
+
+export const MultilineNestedRootVisible = Template.bind({});
+MultilineNestedRootVisible.args = {
+	items: [
+		{
+			label: "Nav root",
+		},
+		{
+			iconName: "FolderOpen",
+		},
+		{
+			label: "Trendy",
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+	variant: "multiline",
+};
+MultilineNestedRootVisible.tags = ["docs-only"];
+MultilineNestedRootVisible.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+MultilineNestedRootVisible.storyName = "Multiline nested (root visible)";
+
+export const Compact = Template.bind({});
+Compact.args = {
+	items: [
+		{
+			label: "Nav root",
+		},
+		{
+			label: "Trendy",
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+	variant: "compact",
+};
+Compact.tags = ["docs-only"];
+Compact.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const CompactNested = Template.bind({});
+CompactNested.args = {
+	items: [
+		{
+			iconName: "FolderOpen",
+		},
+		{
+			label: "Sub Item",
+		},
+		{
+			label: "Trendy",
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+	variant: "compact",
+};
+CompactNested.tags = ["docs-only"];
+CompactNested.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+CompactNested.storyName = "Compact nested";
+
+export const CompactNestedRootVisible = Template.bind({});
+CompactNestedRootVisible.args = {
+	items: [
+		{
+			label: "Nav root",
+		},
+		{
+			iconName: "FolderOpen",
+		},
+		{
+			label: "Trendy",
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+	variant: "compact",
+};
+CompactNestedRootVisible.tags = ["docs-only"];
+CompactNestedRootVisible.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+CompactNestedRootVisible.storyName = "Compact nested (root visible)";
+
+/**
+ * The example below has two disabled breadcrumb items. When disabling the text link, the `is-disabled` class gets added to `.spectrum-Breadcrumbs-itemLink`. When disabling the Action button, the `[disabled]` attribute is applied.
+ */
+export const Disabled = Template.bind({});
+Disabled.args = {
+	items: [
+		{
+			label: "Nav root",
+		},
+		{
+			iconName: "FolderOpen",
+			isDisabled: true,
+		},
+		{
+			label: "Trendy",
+			isDisabled: true,
+		},
+		{
+			label: "January 2019 Assets",
+		},
+	],
+};
+Disabled.tags = ["docs-only"];
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
 };
