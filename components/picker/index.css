@@ -343,25 +343,6 @@ governing permissions and limitations under the License.
 	}
 }
 
-/* Disabled state. */
-.spectrum-Picker.spectrum-Picker:disabled,
-.spectrum-Picker.spectrum-Picker.is-disabled {
-	cursor: default;
-	background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
-	border-color: var(--highcontrast-picker-border-color-disabled, transparent);
-	color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
-
-	.spectrum-Picker-icon,
-	.spectrum-Picker-menuIcon,
-	.spectrum-Picker-validationIcon {
-		color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
-	}
-
-	.spectrum-Picker-label.is-placeholder {
-		color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
-	}
-}
-
 .spectrum-Picker-label {
 	/* Be the biggest, but also shrink! */
 	flex: 1 1 auto;
@@ -487,4 +468,25 @@ governing permissions and limitations under the License.
 .spectrum-Picker--sideLabel {
 	display: inline-flex;
 	vertical-align: top;
+}
+
+/* Disabled state:
+   Make sure this appears after any use of :hover while postcss-hover-media-feature is being used. The plugin moves
+   all hover styles within a media query that changes the order of the CSS, affecting styles with the same specificity. */
+.spectrum-Picker:disabled,
+.spectrum-Picker.is-disabled {
+	cursor: default;
+	background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
+	border-color: var(--highcontrast-picker-border-color-disabled, transparent);
+	color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
+
+	.spectrum-Picker-icon,
+	.spectrum-Picker-menuIcon,
+	.spectrum-Picker-validationIcon {
+		color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
+	}
+
+	.spectrum-Picker-label.is-placeholder {
+		color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
+	}
 }
