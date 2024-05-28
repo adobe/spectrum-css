@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.2.0
+
+### Minor Changes
+
+- [#2766](https://github.com/adobe/spectrum-css/pull/2766) [`8a123ae`](https://github.com/adobe/spectrum-css/commit/8a123ae6dbc75bcab3dfd43d856de408e7eaab1b) Thanks [@dependabot](https://github.com/apps/dependabot)! - New token `--spectrum-accordion-top-to-text-spacious-small` available to be used.
+
 ## 14.1.0
 
 ### Minor Changes
