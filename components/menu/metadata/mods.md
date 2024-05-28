@@ -27,6 +27,7 @@
 | `--mod-menu-item-checkmark-height`                                 |
 | `--mod-menu-item-checkmark-width`                                  |
 | `--mod-menu-item-collapsible-no-icon-submenu-item-padding-x-start` |
+| `--mod-menu-item-corner-rounding`                                  |
 | `--mod-menu-item-description-color-default`                        |
 | `--mod-menu-item-description-color-disabled`                       |
 | `--mod-menu-item-description-color-down`                           |

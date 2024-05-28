@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 .spectrum-Menu {
 	--spectrum-menu-item-background-color-default-rgba: rgba(var(--spectrum-menu-item-background-color-default), var(--spectrum-menu-item-background-opacity));
 	--spectrum-menu-item-min-height: var(--spectrum-component-height-100);
+	--spectrum-menu-item-corner-rounding: var(--spectrum-corner-radius-500);
 	--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
 	--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-100);
 	--spectrum-menu-item-thumbnail-height: var(--spectrum-thumbnail-size-700);
@@ -124,6 +125,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu--sizeS {
 	--spectrum-menu-item-min-height: var(--spectrum-component-height-75);
+	--spectrum-menu-item-corner-rounding: var(--spectrum-corner-radius-400);
 	--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-75);
 	--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-75);
 	--spectrum-menu-item-thumbnail-height: var(--spectrum-thumbnail-size-500);
@@ -166,6 +168,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu--sizeL {
 	--spectrum-menu-item-min-height: var(--spectrum-component-height-200);
+	--spectrum-menu-item-corner-rounding: var(--spectrum-corner-radius-600);
 	--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-200);
 	--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-200);
 	--spectrum-menu-item-thumbnail-height: var(--spectrum-thumbnail-size-800);
@@ -208,6 +211,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu--sizeXL {
 	--spectrum-menu-item-min-height: var(--spectrum-component-height-300);
+	--spectrum-menu-item-corner-rounding: var(--spectrum-corner-radius-700);
 	--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-300);
 	--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-300);
 	--spectrum-menu-item-thumbnail-height: var(--spectrum-thumbnail-size-900);
@@ -391,6 +395,8 @@ governing permissions and limitations under the License.
 	align-items: center;
 
 	box-sizing: border-box;
+
+	border-radius: var(--mod-menu-item-corner-rounding, var(--spectrum-menu-item-corner-rounding));
 
 	background-color: var(--highcontrast-menu-item-background-color-default, var(--mod-menu-item-background-color-default, var(--spectrum-menu-item-background-color-default-rgba)));
 
