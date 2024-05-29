@@ -9,11 +9,13 @@
             "node": "./index.js",
             "require": "./index.js"
         },
+        "./decorator": "./decorators/index.js",
         "./manager": "./manager.js",
         "./preview": "./preview.js",
         "./package.json": "./package.json"
     },
     "main": "index.js",
+    "module": "index.js",
     "files": [
         "README.md",
         "*.js"
@@ -26,15 +28,9 @@
         "@storybook/manager-api": "^8.1.4",
         "@storybook/preview-api": "^8.1.4",
         "@storybook/theming": "^8.1.4",
-        "@storybook/types": "^8.1.4"
-    },
-    "peerDependencies": {
-        "chromatic": ">=11"
-    },
-    "peerDependenciesMeta": {
-        "chromatic": {
-            "optional": true
-        }
+        "@storybook/types": "^8.1.4",
+        "lit": "^3.1.4",
+        "lodash-es": "^4.17.21"
     },
     "storybook": {
         "displayName": "Testing preview addon"
@@ -46,6 +42,6 @@
         "snapshot"
     ],
     "publishConfig": {
-        "access": "public"
+        "access": "restricted"
     }
 }

@@ -18,7 +18,6 @@ export default {
 	title: "Avatar",
 	component: "Avatar",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },

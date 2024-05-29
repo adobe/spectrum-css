@@ -30,6 +30,7 @@ export const withSizingWrapper = makeDecorator({
 		<div data-size-container style=${styleMap({
 			"display": sizes.length === 0 || !window.isTestEnv() ? "none" : "flex",
 			"flex-direction": "column",
+			"align-items": "flex-start",
 			"gap": "24px",
 			"margin": "12px",
 		})}>

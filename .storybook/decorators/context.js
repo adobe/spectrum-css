@@ -127,7 +127,7 @@ export const withContextWrapper = makeDecorator({
 				<div id="scale"></div>
 				<div id="context"></div>
 			</div>
-			${StoryFn(context)}
+			${StoryFn(data)}
 		`;
 	},
 });

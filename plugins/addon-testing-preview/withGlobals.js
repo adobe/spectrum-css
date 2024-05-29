@@ -10,27 +10,29 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { useEffect, useGlobals } from "@storybook/preview-api";
-import { PARAM_KEY } from "./constants";
+import { global } from '@storybook/global';
+import { useEffect } from "@storybook/preview-api";
+import { DEFAULT_PARAMETERS, PARAM_KEY } from "./constants";
+
+const { window } = global;
 
 export const withGlobals = (StoryFn, context) => {
-	const [globals] = useGlobals();
+	const { globals = {}, parameters = {} } = context;
+
+	// Connects to Storybook's API and retrieves the value of the custom parameter for the current story
+	const config = parameters[PARAM_KEY] ?? DEFAULT_PARAMETERS;
 
 	// Is the addon being used in the docs panel
 	const isInDocs = context.viewMode === "docs";
 	const isActive = ![false, "false"].includes(globals[PARAM_KEY]);
-	// Connects to Storybook's API and retrieves the value of the custom parameter for the current story
-	const config = context.parameters[PARAM_KEY] || {};
 
 	const frameworkCheck = typeof config.isTestEnv === "function" && config.isTestEnv() ? config.isTestEnv : typeof config.isTestEnv === "boolean" && config.isTestEnv ? () => config.isTestEnv : undefined;
-	const isTestEnv = typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && !isInDocs;
+	window.isTestEnv = typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && !isInDocs;
 
-	// Initialize
-	window.isTestEnv = isTestEnv;
+	// Updates the global variable with the value of the custom parameter
 	useEffect(() => {
-		const isTestEnv = typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && !isInDocs;
 		return () => {
-			window.isTestEnv = isTestEnv;
+			window.isTestEnv = typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && !isInDocs;
 		};
 	}, [isActive, frameworkCheck, isInDocs]);
 

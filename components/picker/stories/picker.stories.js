@@ -142,7 +142,7 @@ export default {
 
 const ChromaticPickerGroup = (args) => html`
 	<div style=${styleMap({
-		"display": window.isChromatic() ? "grid" : "none",
+		"display": window.isTestEnv() ? "grid" : "none",
 		"gap": "20px",
 	})}>
 		<div>
@@ -234,7 +234,7 @@ const ChromaticPickerGroup = (args) => html`
 		</div>
 	</div>
 	<div style=${styleMap({
-		"display": window.isChromatic() ? "none" : undefined,
+		"display": window.isTestEnv() ? "none" : undefined,
 	})}>
 		${Template(args)}
 	</div>

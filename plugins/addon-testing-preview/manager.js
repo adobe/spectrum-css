@@ -11,14 +11,15 @@ governing permissions and limitations under the License.
 */
 
 import { addons, types } from "@storybook/manager-api";
-import { ADDON_ID, TOOL_ID } from "./constants";
-import { Tool } from "./Tool";
+import { ADDON_ID, PARAM_KEY, PARAM_TITLE, TOOL_ID } from "./constants";
+import { TestingMode } from "./Tool";
 
 addons.register(ADDON_ID, () => {
 	addons.add(TOOL_ID, {
 		type: types.TOOL,
-		title: "Testing preview",
+		title: PARAM_TITLE,
 		match: ({ tabId, viewMode }) => !tabId && viewMode === "story",
-		render: Tool,
+		render: TestingMode,
+		paramKey: PARAM_KEY,
 	});
 });

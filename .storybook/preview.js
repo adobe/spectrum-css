@@ -8,7 +8,7 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTextDirectionWrapper,
-	withWrapperStyles
+	withWrapperStyles,
 } from "./decorators";
 import DocumentationTemplate from './DocumentationTemplate.mdx';
 import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
@@ -88,6 +88,30 @@ export const parameters = {
 	},
 	testingPreview: {
 		isTestEnv: isChromatic,
+		// Whether or not to show the text label next to the icon in the toolbar
+		showLabel: false,
+		// Whther or not to prefix groups with the name of the variant
+		withHeadings: true,
+		withBorder: "full",
+		options: {
+			// The name used to toggle this option in the testing grid
+			sizing: {
+				// The key of the option used by args or globals object
+				key: "size",
+				// Must be one of "args" or "globals"; defaults to "args"
+				scope: "args",
+				// How to label the value of the option in the testing grid
+				mapping: {
+					xxs: "Extra-extra-small",
+					xs: "Extra-small",
+					s: "Small",
+					m: "Medium",
+					l: "Large",
+					xl: "Extra-large",
+					xxl: "Extra-extra-large",
+				}
+			},
+		},
 	},
 	docs: {
 		autodocs: true,
@@ -124,12 +148,12 @@ export const loaders = [
 ];
 
 export const decorators = [
-	withActions,
-	withWrapperStyles,
-	withContextWrapper,
 	withTextDirectionWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
+	withContextWrapper,
+	withActions,
+	withWrapperStyles,
 	// Attach the icons to the window object for use in the stories
 	(StoryFn, context) => {
 		if (context?.loaded?.icons) window.icons = context.loaded.icons;

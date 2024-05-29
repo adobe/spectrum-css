@@ -12,13 +12,15 @@ export const withWrapperStyles = makeDecorator({
 		const { args = {}, parameters = {} } = context;
 		const wrapperStyles = parameters.wrapperStyles ?? args.wrapperStyles;
 
-		if (typeof wrapperStyles === "undefined") return html`${StoryFn(context)}`;
-
-		parameters.html.root = ".custom-story-wrapper";
-
+		// Force surrounding padding when in VRT mode
+		// @todo source this from settings
+		const isTestingPreview = window?.isTestEnv && window?.isTestEnv();
 		return html`
-			<section class="custom-story-wrapper" style=${styleMap(wrapperStyles)}>
-				${html`${StoryFn(context)}`}
+			<section class="spectrum-story-container" style=${styleMap({
+				"padding": isTestingPreview ? "12px" : undefined,
+				...wrapperStyles
+			})}>
+				${StoryFn(context)}
 			</section>
 		`;
 	}
