@@ -1,5 +1,5 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
+Copyright 2024 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -252,69 +252,6 @@ governing permissions and limitations under the License.
 
 	--spectrum-menu-linkout-icon-height: var(--spectrum-link-out-icon-size-200);
 	--spectrum-menu-linkout-icon-width: var(--spectrum-link-out-icon-size-200);
-}
-
-@media (forced-colors: active) {
-	.spectrum-Menu {
-		--highcontrast-menu-item-background-color-default: ButtonFace;
-		--highcontrast-menu-item-color-default: ButtonText;
-
-		--highcontrast-menu-item-background-color-focus: Highlight;
-		--highcontrast-menu-item-color-focus: HighlightText;
-
-		--highcontrast-menu-checkmark-icon-color-default: Highlight;
-
-		--highcontrast-menu-item-color-disabled: GrayText;
-		--highcontrast-menu-item-focus-indicator-color: Highlight;
-
-		--highcontrast-menu-item-selected-background-color: Highlight;
-		--highcontrast-menu-item-selected-color: HighlightText;
-
-		@supports (color: SelectedItem) {
-			--highcontrast-menu-item-selected-background-color: SelectedItem;
-			--highcontrast-menu-item-selected-color: SelectedItemText;
-		}
-
-		.spectrum-Menu-item {
-			/* Hide unstylable readability backplates. */
-			forced-color-adjust: none;
-		}
-
-		.spectrum-Menu-item:hover,
-		.spectrum-Menu-item:focus {
-			.spectrum-Menu-itemCheckbox {
-				--highcontrast-checkbox-highlight-color-hover: ButtonText;
-				--highcontrast-checkbox-highlight-color-default: ButtonText;
-			}
-
-			.spectrum-Menu-itemSwitch {
-				--highcontrast-switch-handle-border-color-hover: ButtonText;
-				--highcontrast-switch-handle-border-color-selected-default: ButtonText;
-				--highcontrast-switch-handle-border-color-selected-hover: ButtonText;
-				--highcontrast-switch-background-color-selected-default: ButtonText;
-				--highcontrast-switch-background-color-selected-hover: ButtonText;
-			}
-		}
-
-		.spectrum-Menu-item--drillIn.is-open {
-			--highcontrast-menu-item-background-color-default: var(--highcontrast-menu-item-selected-background-color);
-			--highcontrast-menu-item-color-default: var(--highcontrast-menu-item-selected-color);
-		}
-
-		.spectrum-Menu-item--collapsible.is-open {
-			&:hover,
-			&:focus-within {
-				box-shadow: inset calc(var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) * var(--spectrum-menu-item-focus-indicator-direction-scalar, 1)) 0 0 0 var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
-			}
-
-			&:hover,
-			&:active,
-			&:focus,
-			&.is-focused {
-				--highcontrast-menu-item-color-focus: var(--highcontrast-menu-item-color-default);
-			}
-		}
-	}
 }
 
 .spectrum-Menu {
@@ -959,4 +896,62 @@ governing permissions and limitations under the License.
 	margin-inline: var(--mod-menu-back-icon-margin-inline, var(--spectrum-menu-back-icon-margin));
 	fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-back-icon-color-default));
 	color: var(--highcontrast-menu-item-color-default, var(--mod-menu-back-icon-color-default));
+}
+
+@media (forced-colors: active) {
+	.spectrum-Menu {
+		--highcontrast-menu-item-background-color-default: ButtonFace;
+		--highcontrast-menu-item-color-default: ButtonText;
+
+		--highcontrast-menu-item-background-color-focus: Highlight;
+		--highcontrast-menu-item-color-focus: HighlightText;
+
+		--highcontrast-menu-checkmark-icon-color-default: Highlight;
+
+		--highcontrast-menu-item-color-disabled: GrayText;
+		--highcontrast-menu-item-focus-indicator-color: Highlight;
+
+		--highcontrast-menu-item-selected-background-color: Highlight;
+		--highcontrast-menu-item-selected-color: HighlightText;
+
+		@supports (color: SelectedItem) {
+			--highcontrast-menu-item-selected-background-color: SelectedItem;
+			--highcontrast-menu-item-selected-color: SelectedItemText;
+		}
+
+		.spectrum-Menu-item {
+			/* Hide unstylable readability backplates. */
+			forced-color-adjust: none;
+		}
+
+		.spectrum-Menu-item:hover,
+		.spectrum-Menu-item:focus {
+			.spectrum-Menu-itemCheckbox {
+				--highcontrast-checkbox-highlight-color-hover: ButtonText;
+				--highcontrast-checkbox-highlight-color-default: ButtonText;
+			}
+
+			.spectrum-Menu-itemSwitch {
+				--highcontrast-switch-handle-border-color-hover: ButtonText;
+				--highcontrast-switch-handle-border-color-selected-default: ButtonText;
+				--highcontrast-switch-handle-border-color-selected-hover: ButtonText;
+				--highcontrast-switch-background-color-selected-default: ButtonText;
+				--highcontrast-switch-background-color-selected-hover: ButtonText;
+			}
+		}
+
+		.spectrum-Menu-item--drillIn.is-open {
+			--highcontrast-menu-item-background-color-default: var(--highcontrast-menu-item-selected-background-color);
+			--highcontrast-menu-item-color-default: var(--highcontrast-menu-item-selected-color);
+		}
+
+		.spectrum-Menu-item--collapsible.is-open {
+			&:hover,
+			&:active,
+			&:focus,
+			&.is-focused {
+				--highcontrast-menu-item-color-focus: var(--highcontrast-menu-item-color-default);
+			}
+		}
+	}
 }
