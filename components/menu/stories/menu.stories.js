@@ -1,3 +1,5 @@
+import { withDownStateDimensionCapture } from "@spectrum-css/preview/decorators";
+
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
@@ -77,6 +79,7 @@ export default {
 		},
 	},
 	decorators: [
+		withDownStateDimensionCapture(".spectrum-Menu-item:not(:disabled)"),
 		(Story, context) => {
 			if (!window.isChromatic()) return Story(context);
 			return html`
