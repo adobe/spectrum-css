@@ -75,6 +75,12 @@
   --spectrum-drop-shadow-color-200-opacity:0.48;
   --spectrum-drop-shadow-color-200:rgba(var(--spectrum-drop-shadow-color-200-rgb), var(--spectrum-drop-shadow-color-200-opacity));
   --spectrum-opacity-checkerboard-square-dark:var(--spectrum-gray-800);
+  --spectrum-menu-item-background-color-default:var(--spectrum-gray-200);
+  --spectrum-menu-item-background-color-hover:var(--spectrum-gray-200);
+  --spectrum-menu-item-background-color-down:var(--spectrum-gray-200);
+  --spectrum-menu-item-background-color-keyboard-focus:var(--spectrum-gray-200);
+  --spectrum-menu-item-background-color-disabled:var(--spectrum-gray-200);
+  --spectrum-popover-border-opacity:1.0;
   --spectrum-gray-25-rgb:17, 17, 17;
   --spectrum-gray-25:rgba(var(--spectrum-gray-25-rgb));
   --spectrum-gray-50-rgb:27, 27, 27;
