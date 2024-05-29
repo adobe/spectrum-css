@@ -6,8 +6,19 @@
 	"author": "Adobe",
 	"homepage": "https://opensource.adobe.com/spectrum-css/preview",
 	"main": "main.js",
+	"type": "module",
 	"scripts": {
 		"build": "storybook build --config-dir . --output-dir ./storybook-static"
+	},
+	"exports": {
+		".": "./preview.js",
+		"./decorators": "./decorators/index.js",
+		"./modes": "./modes/index.js",
+		"./types": "./types/index.js",
+		"./main": "./main.js",
+		"./manager": "./manager.js",
+		"./preview": "./preview.js",
+		"./package.json": "./package.json"
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",

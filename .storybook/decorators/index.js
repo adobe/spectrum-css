@@ -9,4 +9,5 @@ export { withSizingWrapper } from "./sizing.js";
 export { withStatesWrapper } from "./states.js";
 export { withVariantsWrapper } from "./variants.js";
 
+export { withTestingGrid } from "@spectrum-tools/addon-testing-preview/decorator";
 export { withActions } from "@storybook/addon-actions/decorator";

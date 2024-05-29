@@ -9,11 +9,13 @@
             "node": "./index.js",
             "require": "./index.js"
         },
+        "./decorator": "./decorators/index.js",
         "./manager": "./manager.js",
         "./preview": "./preview.js",
         "./package.json": "./package.json"
     },
     "main": "index.js",
+    "module": "index.js",
     "files": [
         "README.md",
         "*.js"

@@ -10,29 +10,36 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { useEffect, useGlobals } from "@storybook/preview-api";
-import { PARAM_KEY } from "./constants";
+import { global } from '@storybook/global';
+import { useGlobals } from "@storybook/preview-api";
+import { DEFAULT_PARAMETERS, PARAM_KEY } from "./constants";
+
+const { window } = global;
 
 export const withGlobals = (StoryFn, context) => {
-	const [globals] = useGlobals();
+	const { globals = {}, parameters = {}, viewMode } = context;
 
-	// Is the addon being used in the docs panel
-	const isInDocs = context.viewMode === "docs";
-	const isActive = ![false, "false"].includes(globals[PARAM_KEY]);
 	// Connects to Storybook's API and retrieves the value of the custom parameter for the current story
-	const config = context.parameters[PARAM_KEY] || {};
+	const { isTestEnv } = parameters[PARAM_KEY] ?? DEFAULT_PARAMETERS;
 
-	const frameworkCheck = typeof config.isTestEnv === "function" && config.isTestEnv() ? config.isTestEnv : typeof config.isTestEnv === "boolean" && config.isTestEnv ? () => config.isTestEnv : undefined;
-	const isTestEnv = typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && !isInDocs;
+	const isActive = ![false, "false"].includes(globals[PARAM_KEY]);
+	const [, updateGlobals] = useGlobals();
 
-	// Initialize
-	window.isTestEnv = isTestEnv;
-	useEffect(() => {
-		const isTestEnv = typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && !isInDocs;
-		return () => {
-			window.isTestEnv = isTestEnv;
-		};
-	}, [isActive, frameworkCheck, isInDocs]);
+	updateGlobals({
+		showTestingPreview: typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && viewMode !== "docs",
+	});
+
+	window.isTestEnv = typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && viewMode !== "docs";
+
+	// Updates the global variable with the value of the custom parameter
+	// useEffect(() => {
+	// 	const frameworkCheck = typeof isTestEnv === "function" && isTestEnv(window) ? isTestEnv : typeof isTestEnv === "boolean" && isTestEnv ? () => isTestEnv : undefined;
+	// 	// @todo remove this
+	// 	window.isTestEnv = typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && viewMode !== "docs";
+	// 	updateGlobals({
+	// 		showTestingPreview: typeof frameworkCheck !== "undefined" && frameworkCheck() ? frameworkCheck : () => isActive && viewMode !== "docs",
+	// 	});
+	// }, [isActive, isTestEnv, viewMode]);
 
 	return StoryFn(context);
 };

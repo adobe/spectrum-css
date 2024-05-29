@@ -236,7 +236,7 @@ const ChromaticPickerGroup = (args) => html`
 	</div>
 `;
 
-export const Default = (args) => window.isTestEnv() ? ChromaticPickerGroup(args) : Template(args);
+export const Default = ChromaticPickerGroup.bind({});
 Default.args = {
 	content: [
 		() => MenuStories(MenuStories.args)
@@ -251,7 +251,7 @@ Open.args = {
 	],
 };
 
-export const WithForcedColors = (args) => window.isTestEnv() ? ChromaticPickerGroup(args) : Template(args);
+export const WithForcedColors = ChromaticPickerGroup.bind({});
 WithForcedColors.tags = ["vrt-only"];
 WithForcedColors.parameters = {
 	chromatic: { forcedColors: "active" },

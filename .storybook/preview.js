@@ -6,7 +6,8 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTextDirectionWrapper,
-	withWrapperStyles
+	withVariantsWrapper,
+	withWrapperStyles,
 } from "./decorators";
 import DocumentationTemplate from './DocumentationTemplate.mdx';
 import { argTypes, globalTypes } from "./types";
@@ -67,6 +68,30 @@ export const parameters = {
 	},
 	testingPreview: {
 		isTestEnv: isChromatic,
+		// Whether or not to show the text label next to the icon in the toolbar
+		showLabel: false,
+		// Whther or not to prefix groups with the name of the variant
+		withHeadings: true,
+		withBorder: "full",
+		options: {
+			// The name used to toggle this option in the testing grid
+			sizing: {
+				// The key of the option used by args or globals object
+				key: "size",
+				// Must be one of "args" or "globals"; defaults to "args"
+				scope: "args",
+				// How to label the value of the option in the testing grid
+				mapping: {
+					xxs: "Extra-extra-small",
+					xs: "Extra-small",
+					s: "Small",
+					m: "Medium",
+					l: "Large",
+					xl: "Extra-large",
+					xxl: "Extra-extra-large",
+				}
+			},
+		},
 	},
 	docs: {
 		autodocs: true,
@@ -98,12 +123,12 @@ export const parameters = {
 };
 
 export const decorators = [
-	withActions,
-	withWrapperStyles,
-	withContextWrapper,
 	withTextDirectionWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
+	withContextWrapper,
+	withActions,
+	withWrapperStyles,
 ];
 
 // Use the document.fonts API to check if fonts have loaded

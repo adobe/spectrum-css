@@ -78,7 +78,6 @@ export default {
 	},
 	decorators: [
 		(Story, context) => {
-			if (!window.isChromatic()) return Story(context);
 			return html`
 				<style>
 					.spectrum-Detail { display: inline-block; }
@@ -90,6 +89,13 @@ export default {
 						--mod-detail-font-color: var(--spectrum-seafoam-900);
 					}
 				</style>
+				<div
+					style=${styleMap({
+						display: "none"
+					})}
+				>
+					${Story(context)}
+				</div>
 				<div
 					style=${styleMap({
 						display: "flex",
@@ -144,8 +150,7 @@ const ChromaticMenuWithVariants = (args) => {
 `);
 };
 
-export const MenuWithVariants = (args) => window.isChromatic() ?
-	ChromaticMenuWithVariants(args) : Template(args);
+export const MenuWithVariants = ChromaticMenuWithVariants.bind({});
 MenuWithVariants.argTypes = {
 	hasDividers: {
 		name: "Has dividers",
@@ -583,8 +588,7 @@ const ChromaticMenuItem = (args) => {
 	`);
 };
 
-export const MenuItemOnly = (args) => window.isChromatic() ?
-	ChromaticMenuItem(args) : Template(args);
+export const MenuItemOnly = ChromaticMenuItem.bind({});
 MenuItemOnly.args = {
 	items: [
 		{

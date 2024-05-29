@@ -15,13 +15,22 @@ import React, { memo, useCallback, useEffect } from 'react';
 import { IconButton } from '@storybook/components';
 import { BeakerIcon } from '@storybook/icons';
 import { useGlobals, useStorybookApi } from '@storybook/manager-api';
+import { styled } from '@storybook/theming';
 
-import { ADDON_ID, PARAM_KEY, TOOL_ID } from './constants';
+import { ADDON_ID, PARAM_KEY, PARAM_TITLE, TOOL_ID } from './constants';
+import { useParameters } from './decorators/helpers';
 
-export const Tool = memo(function MyAddonSelector() {
+const IconButtonLabel = styled.div(({ theme }) => ({
+  fontSize: theme.typography.size.s2 - 1,
+  // marginLeft: 10,
+}));
+
+export const TestingMode = memo(function TestingPreview() {
+  const { showLabel } = useParameters();
   const [globals, updateGlobals] = useGlobals();
   const api = useStorybookApi();
 
+  // This global parameter is used to toggle the preview mode at the story level
   const isActive = ![false, 'false'].includes(globals[PARAM_KEY]);
 
   const togglePreview = useCallback(() => {
@@ -32,15 +41,21 @@ export const Tool = memo(function MyAddonSelector() {
 
   useEffect(() => {
     api.setAddonShortcut(ADDON_ID, {
-      label: 'Testing preview',
+      label: PARAM_TITLE,
       showInMenu: false,
       action: togglePreview,
     });
   }, [togglePreview, api]);
 
   return (
-    <IconButton key={TOOL_ID} active={isActive} title="Toggle testing preview" onClick={togglePreview}>
+    <IconButton
+      key={TOOL_ID}
+      active={isActive}
+      title={isActive ? "Turn off testing preview" : "Preview the story in testing mode"}
+      onClick={togglePreview}
+    >
       <BeakerIcon />
+      {showLabel && <IconButtonLabel>{PARAM_TITLE}</IconButtonLabel>}
     </IconButton>
   );
 });

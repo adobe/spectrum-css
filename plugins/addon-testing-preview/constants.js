@@ -10,8 +10,22 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const ADDON_ID = "addon/testing-preview";
-const TOOL_ID = `${ADDON_ID}/tool`;
-const PARAM_KEY = "testingPreview";
+export const ADDON_ID = "addon/testing-preview";
+export const TOOL_ID = `${ADDON_ID}/tool`;
 
-export { ADDON_ID, PARAM_KEY, TOOL_ID };
+export const PARAM_KEY = "testingPreview";
+export const GLOBAL_KEY = "testingPreview";
+export const PARAM_TITLE = "Testing preview";
+
+export const DEFAULT_PARAMETERS = {
+  isTestEnv: () => false,
+  showLabel: true,
+  withHeadings: true,
+  withBorder: "full",
+  options: {},
+};
+
+export const EVENTS = {
+  REGISTER: `${ADDON_ID}/REGISTER`,
+  UPDATE: `${ADDON_ID}/UPDATE`,
+};

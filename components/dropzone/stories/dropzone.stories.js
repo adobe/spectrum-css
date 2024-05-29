@@ -36,14 +36,6 @@ export default {
 		isDragged: false,
 		isFilled: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-		status: {
-			type: "migrated",
-		},
-	},
 };
 
 export const Default = (args) => html`

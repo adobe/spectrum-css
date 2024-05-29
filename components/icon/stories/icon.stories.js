@@ -28,7 +28,6 @@ export default {
 	title: "Icon",
 	component: "Icon",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Workflow Icon Size",
 			type: { name: "string", required: true },

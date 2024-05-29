@@ -9,16 +9,15 @@ export const withWrapperStyles = makeDecorator({
 	name: "withWrapperStyles",
 	parameterName: "wrapperStyles",
 	wrapper: (StoryFn, context) => {
-		const { args = {}, parameters = {} } = context;
+		const { args = {}, parameters = {}, viewMode } = context;
 		const wrapperStyles = parameters.wrapperStyles ?? args.wrapperStyles;
 
-		if (typeof wrapperStyles === "undefined") return html`${StoryFn(context)}`;
-
-		parameters.html.root = ".custom-story-wrapper";
-
 		return html`
-			<section class="custom-story-wrapper" style=${styleMap(wrapperStyles)}>
-				${html`${StoryFn(context)}`}
+			<section class="spectrum-story-container" style=${styleMap({
+				"padding": viewMode !== "docs" ? "12px" : undefined,
+				...wrapperStyles
+			})}>
+				${StoryFn(context)}
 			</section>
 		`;
 	}

@@ -1,9 +1,8 @@
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { withTestingGrid } from "@spectrum-css/preview/decorators";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-
 import { Template } from "./template";
 
 /**
@@ -138,34 +137,17 @@ export default {
 		status: {
 			type: "migrated",
 		},
-		html: {
-			root: "#render-root"
-		}
+		wrapperStyles: {
+			"display": "flex",
+			"flex-direction": "row",
+			"gap": "10px",
+		},
+		// testingPreview: {
+		// 	sizing: false,
+		// },
 	},
 	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 10px 10px;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "flex-start",
-					gap: "10px",
-					"--mod-detail-margin-end": "6px",
-				})}
-			>
-				${Story(context)}
-			</div>
-		`,
+		withTestingGrid,
 	],
 };
 
@@ -279,28 +261,6 @@ const States = (args) =>
 				isPending: true,
 			})}
 		</div>`;
-
-const Sizes = (args) =>
-	html` ${["s", "m", "l", "xl"].map((size) => {
-		return html` <div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: [
-					{
-						xxs: "Extra-extra-small",
-						xs: "Extra-small",
-						s: "Small",
-						m: "Medium",
-						l: "Large",
-						xl: "Extra-large",
-						xxl: "Extra-extra-large",
-					}[size],
-				],
-			})}
-			${Treatment({ ...args, size })}
-		</div>`;
-	})}`;
 
 const Treatment = (args) =>
 	html`
@@ -421,22 +381,6 @@ const Variants = (args) => html`
 			${Typography({
 				semantics: "detail",
 				size: "l",
-				content: ["Sizing"],
-			})}
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					gap: "10px",
-				})}
-			>
-				${Sizes(args)}
-			</div>
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "l",
 				content: ["Wrapping"],
 			})}
 			<div
@@ -460,16 +404,16 @@ const Variants = (args) => html`
 	>${CustomButton(args)}</div>
 `;
 
-export const Default = Variants.bind({});
+export const Default = CustomButton.bind({});
 Default.args = {};
 
-export const StaticWhite = Variants.bind({});
+export const StaticWhite = CustomButton.bind({});
 StaticWhite.tags = ["vrt-only"];
 StaticWhite.args = {
 	staticColor: "white",
 };
 
-export const StaticBlack = Variants.bind({});
+export const StaticBlack = CustomButton.bind({});
 StaticBlack.tags = ["vrt-only"];
 StaticBlack.args = {
 	staticColor: "black",

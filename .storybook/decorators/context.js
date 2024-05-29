@@ -75,6 +75,6 @@ export const withContextWrapper = makeDecorator({
 			}
 		}, [color, context, staticColor, scale, viewMode, rootClass]);
 
-		return html`${StoryFn(data)}`;
+		return StoryFn(data);
 	},
 });
