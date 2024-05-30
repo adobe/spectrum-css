@@ -25,11 +25,13 @@ export default {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
 		},
+		iconSet: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-FloatingActionButton",
 		variant: "primary",
 		iconName: "AddCircle",
+		iconSet: "workflow",
 	},
 };
 

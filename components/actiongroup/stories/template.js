@@ -1,7 +1,6 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
 import "../index.css";
 
@@ -18,7 +17,6 @@ export const Template = ({
 	customClasses = [],
 	...globals
 }) => {
-
 	return html`
 		<div
 			class=${classMap({
@@ -39,6 +37,7 @@ export const Template = ({
 							...globals,
 							size,
 							iconName: item.iconName,
+							iconSet: item.iconSet ?? "ui",
 							isQuiet: areQuiet || item.isQuiet,
 							isEmphasized: areEmphasized || item.isEmphasized,
 							staticColor: staticColor ?? item.staticColor,

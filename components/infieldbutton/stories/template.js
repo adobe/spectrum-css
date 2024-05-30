@@ -13,6 +13,7 @@ export const Template = ({
 	position,
 	isQuiet,
 	iconName = "Add",
+	iconSet = "workflow",
 	isDisabled,
 	isInvalid,
 	tabIndex = 0,
@@ -39,6 +40,7 @@ export const Template = ({
         ...globals,
         size,
         iconName,
+        setName: iconSet,
         customClasses: [`${rootClass}-icon`],
       }))}
     </div>

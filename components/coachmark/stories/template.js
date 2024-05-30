@@ -86,6 +86,7 @@ export const Template = ({
 								treatment: "outline",
 								hideLabel: true,
 								iconName: "ChevronLeft75",
+								iconSet: "ui",
 							},
 							{
 								variant: "primary",

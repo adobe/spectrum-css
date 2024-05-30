@@ -11,22 +11,6 @@ governing permissions and limitations under the License.
 */
 
 /*
- * Medium/large scale
- * ------------------
- * In the "combined" versiom of the UI Icon SVGs, the medium and the large icons are
- * contained within the same SVG. The two separate elements are shown or hidden based
- * on the current platform scale.
- */
-
-.spectrum-UIIcon--medium {
-	display: var(--mod-ui-icon-medium-display, var(--spectrum-ui-icon-medium-display, block));
-}
-
-.spectrum-UIIcon--large {
-	display: var(--mod-ui-icon-large-display, var(--spectrum-ui-icon-large-display, none));
-}
-
-/*
  * UI icons list
  * -------------
  * - Unlike workflow icons, UI icons come in various sizes, defined by their own tokens.

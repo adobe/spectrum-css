@@ -19,6 +19,17 @@ setConsoleOptions({
 	panelExclude: [...panelExclude, /deprecated/, /TypeError/, /postcss/, /stylelint/],
 });
 
+import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/assets/svg-spriteSheet/icons.svg?raw";
+import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
+
+let spriteContainer = document.querySelector("#icon-sprite-container");
+if (!spriteContainer) {
+	spriteContainer = document.createElement("div");
+	spriteContainer.id = "icon-sprite-container";
+	spriteContainer.innerHTML = workflowSprite + uiSprite;
+	document.body.appendChild(spriteContainer);
+}
+
 export const args = {
 	color: "light",
 	scale: "medium",

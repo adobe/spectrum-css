@@ -33,7 +33,6 @@ export const Template = ({
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
-
 	// If selectedDay is a string, convert it to a Date object
 	if (typeof selectedDay === "string" && selectedDay.length > 0) {
 		selectedDay = new Date(selectedDay).toLocaleDateString({ language: lang });
@@ -97,8 +96,8 @@ export const Template = ({
 						... isInvalid ? ["is-invalid"] : [],
 					],
 					size,
-					iconType: "ui",
 					iconName: "ChevronDown",
+					iconSet: "ui",
 					isQuiet,
 					isOpen,
 					isFocused,

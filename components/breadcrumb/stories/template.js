@@ -38,6 +38,7 @@ export const Template = ({
 							ActionButton({
 								...globals,
 								iconName,
+								iconSet: item.iconSet,
 								isDisabled,
 								isQuiet: true,
 								customIconClasses: [`${rootClass}-folder`],
@@ -64,6 +65,7 @@ export const Template = ({
 						Icon({
 							...globals,
 							iconName: "ChevronRight100",
+							setName: "ui",
 							customClasses: [`${rootClass}-itemSeparator`],
 						})
 					)}

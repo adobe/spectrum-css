@@ -13,7 +13,8 @@ export const Template = ({
 	items = [],
 	isOpen = false,
 	label,
-	iconName,
+	iconName = "More",
+	iconSet = "workflow",
 	size = "m",
 	...globals
 }) => {
@@ -40,7 +41,8 @@ export const Template = ({
 			isEmphasized: false,
 			hasPopup: false,
 			isSelected: isOpen,
-			iconName: iconName ?? "More",
+			iconName,
+			iconSet,
 			id: popoverTriggerId,
 			customClasses,
 			...passthroughs,

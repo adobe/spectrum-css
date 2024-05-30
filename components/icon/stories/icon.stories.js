@@ -1,26 +1,11 @@
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
-import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
+import { cleanWorkflowIcon, uiIconsWithDirections, uniqueUiIcons, workflowIcons } from "./utilities.js";
 
-/**
- * Create a list of all UI Icons with their sizing numbers.
- *
- * The list is a little long until Storybook adds a way to use conditional options
- * in controls, e.g. a "uiSize" control with options pulled from uiIconSizes:
- * @see https://github.com/storybookjs/storybook/discussions/24235
- */
-const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
-	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, "");
-	// Icons like Gripper that don't have sizes yet, represented by any empty array.
-	if (uiIconSizes[baseIconName]?.length == 0) {
-		return [baseIconName];
-	}
-	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
-}).flat();
+const sizes = ["xs", "s", "m", "l", "xl", "xxl"];
 
 /**
  * The Icon component contains all of the CSS used for displaying both workflow and UI icons.
@@ -31,15 +16,23 @@ export default {
 	argTypes: {
 		reducedMotion: { table: { disable: true } },
 		size: {
-			name: "Workflow Icon Size",
+			name: "Size",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["xs", "s", "m", "l", "xl", "xxl"],
+			options: sizes,
 			control: "select",
 			if: { arg: "setName", eq: "workflow" },
+		},
+		showLabel: {
+			name: "Show icon name",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
 		},
 		setName: {
 			name: "Icon set",
@@ -58,7 +51,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: workflowIcons,
+			options: workflowIcons.map((iconName) => cleanWorkflowIcon(iconName)),
 			control: "select",
 			if: { arg: "setName", eq: "workflow" },
 		},
@@ -69,9 +62,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: [
-				...uiIconNameOptions,
-			],
+			options: uiIconsWithDirections,
 			control: "select",
 			if: { arg: "setName", eq: "ui" },
 		},
@@ -90,79 +81,171 @@ export default {
 		rootClass: "spectrum-Icon",
 		setName: "workflow",
 		iconName: "ABC",
-		size: "xl",
+		size: "xxl",
+		showLabel: false,
 	},
 };
 
-export const Default = (args) => window.isChromatic() ? TestTemplate(args) : Template({
-	...args,
-	iconName: args.iconName ?? args.uiIconName,
-	setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
-});
+const printFullSet = (args) => html`
+	${when(args.setName === "workflow", () => {
+		return workflowIcons.sort().map((iconName) => printIconSet({ ...args, iconName }));
+	}, () => {
+		return uiIconsWithDirections.sort().map((iconName) => printIconSet({ ...args, iconName }));
+	})}
+`;
 
-Default.args = {};
-
-/**
- * Chromatic VRT template that displays multiple icons to cover various options.
- */
-const TestTemplate = (args) => html`
-	${[
-	{
-		setName: "workflow",
-		iconName: "Alert",
-		fill: "var(--spectrum-negative-content-color-default)",
-	},
-	{
-		setName: "workflow",
-		iconName: "Hand",
-	},
-	{
-		setName: "workflow",
-		iconName: "Help",
-	},
-	{
-		setName: "workflow",
-		iconName: "ArrowLeft",
-	},
-	{
-		setName: "workflow",
-		iconName: "ArrowRight",
-	},
-	{
-		setName: "workflow",
-		iconName: "ChevronDown",
+const printIconSet = (args) => {
+	if (!args.showLabel && !window.isChromatic()) {
+		return Template({
+			iconName: args.iconName ?? args.uiIconName,
+			setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+			size: "xxl",
+			useRef: true,
+			...args,
+		});
 	}
-].map((row_args) => html`
+
+	return html`
 		<div
 			style=${styleMap({
 				"display": "flex",
-				"gap": "16px",
-				"margin-bottom": "16px",
+				"align-items": "center",
+				"justify-content": "space-between",
+				"gap": "12px",
+				"flex-flow": "column nowrap",
 			})}
 		>
-			${["xs","s","m","l","xl","xxl"].map(
-				(size) => Template({ ...args, ...row_args, size })
-			)}
-		</div>`
-	)}
-	<div style="margin-top:32px;">
-		${uiIconsWithDirections.map(iconName => html`
+			${Template({
+				iconName: args.iconName ?? args.uiIconName,
+				setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+				size: "xxl",
+				useRef: true,
+				...args,
+			})}
+			${Typography({
+				semantics: "body",
+				size: "xxs",
+				content: [
+					args.iconName ? cleanWorkflowIcon(args.iconName) : args.uiIconName
+				],
+			})}
+		</div>
+	`;
+};
+
+export const Default = (args) => {
+	if (!window.isChromatic()) return printIconSet(args);
+	return html`
+	<div style=${styleMap({
+		"display": "flex",
+		"gap": "12px",
+	})}>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Workflow icons"],
+				customStyles: {
+					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+				}
+			})}
 			<div
 				style=${styleMap({
-					"display": "flex",
-					"gap": "16px",
-				})}
+				"display": "grid",
+				"grid-template-columns": `repeat(${sizes.length}, 50px)`,
+				"gap": "16px",
+				"border": "1px solid var(--spectrum-gray-200)",
+				"border-radius": "4px",
+				"padding": "16px",
+				"margin-block-end": "32px",
+			})}
 			>
-				${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
-					Template({ ...args, setName: "ui", iconName: iconName + iconSize })
-				)}
-				${when(uiIconSizes[iconName]?.length == 0, () =>
-					Template({ ...args, setName: "ui", iconName })
-				)}
-			</div>`
-		)}
-	</div>
-`;
+				${sizes.map(scale => {
+					return Typography({
+						semantics: "detail",
+						size: "s",
+						content: [scale],
+						customStyles: {
+							"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+						}
+					});
+				})}
+				${[
+					"Add",
+					"ArrowDown",
+					"ArrowLeft",
+					"ArrowRight",
+					"ArrowUp",
+					"Asterisk",
+					"Checkmark",
+					"ChevronDown",
+					"ChevronLeft",
+					"ChevronRight",
+					"ChevronUp",
+					"DragHandle",
+					"LinkOut",
+				].map((iconName, idx) => html`
+					${sizes.map((size) => Template({
+						...args,
+						useRef: true,
+						iconName,
+						setName: "workflow",
+						size,
+						fill: idx % 5 === 0 ? "var(--spectrum-negative-content-color-default)" : undefined
+					}))}
+				`)}
+			</div>
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["UI icons"],
+				customStyles: {
+					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+				}
+			})}
+			<div
+				style=${styleMap({
+				"display": "grid",
+				"grid-template-columns": "repeat(8, 50px)",
+				"gap": "16px",
+				"border": "1px solid var(--spectrum-gray-200)",
+				"border-radius": "4px",
+				"padding": "16px",
+			})}
+			>
+				${["50", "75", "100", "200", "300", "400", "500", "600"].map(scale => Typography({
+					semantics: "detail",
+					size: "s",
+					content: [scale],
+					customStyles: {
+						"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+					}
+				}))}
+				${uniqueUiIcons.sort().reduce((print, iconName) => {
+				let output = Array(8).fill(html`<span></span>`);
+				["50", "75", "100", "200", "300", "400", "500", "600"].forEach((scale, idx) => {
+					if (uiIconsWithDirections.includes(`${iconName}${scale}`)) {
+						output[idx] = Template({
+							...args,
+							setName: "ui",
+							useRef: false,
+							iconName: `${iconName}${scale}`,
+						});
+					}
+				});
+				print.push(...output);
+				return print;
+			}, [])}
+			</div>
+		</div>
+</div>
+	`;
+};
+Default.args = {
+	showLabel: false,
+};
 
 /**
  * Display all icon sizes for the Docs page.
@@ -240,7 +323,7 @@ const WorkflowDefaultTemplate = (args) => html`
 			...args,
 			setName: "workflow",
 			size: "xl",
-		}, 
+		},
 		[
 			"Alert",
 			"Asset",
@@ -285,7 +368,7 @@ const UIDefaultTemplate = (args) => html`
 			{
 				...args,
 				setName: "ui",
-			},  
+			},
 			[
 				"Asterisk100",
 				"Asterisk200",
@@ -298,7 +381,7 @@ const UIDefaultTemplate = (args) => html`
 			{
 				...args,
 				setName: "ui",
-			}, 
+			},
 			[
 				"ChevronDown50",
 				"ChevronDown75",
@@ -317,6 +400,7 @@ const UIDefaultTemplate = (args) => html`
  * A sampling of multiple Workflow icons.
  */
 export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
+WorkflowDefault.storyName = "Workflow icons";
 WorkflowDefault.tags = ["docs-only"];
 WorkflowDefault.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -339,7 +423,7 @@ WorkflowSizing.parameters = {
  * A sampling of a few UI icons.
  */
 export const UIDefault = UIDefaultTemplate.bind({});
-UIDefault.storyName = "UI Default";
+UIDefault.storyName = "UI icons";
 UIDefault.tags = ["docs-only"];
 UIDefault.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -354,3 +438,53 @@ UIArrows.tags = ["docs-only"];
 UIArrows.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+
+export const Workflow = printFullSet.bind({});
+Workflow.args = {
+	setName: "workflow",
+	useRef: true,
+	showLabel: true,
+};
+Workflow.argTypes = {
+	setName: { table: { disable: true } },
+	iconName: { table: { disable: true } },
+};
+Workflow.decorators = [
+	(StoryFn, context) => html`
+		<div
+			style=${styleMap({
+				"display": "grid",
+				"grid-template-columns": "repeat(auto-fill, minmax(140px, 1fr))",
+				"gap": "16px",
+				"padding": "32px",
+			})}
+		>
+			${StoryFn(context)}
+		</div>
+	`,
+];
+
+export const UI =  printFullSet.bind({});
+UI.args = {
+	setName: "ui",
+	useRef: true,
+	showLabel: true,
+};
+UI.argTypes = {
+	setName: { table: { disable: true } },
+	uiIconName: { table: { disable: true } },
+};
+UI.decorators = [
+	(StoryFn, context) => html`
+		<div
+			style=${styleMap({
+				"display": "grid",
+				"grid-template-columns": "repeat(auto-fill, minmax(140px, 1fr))",
+				"gap": "16px",
+				"padding": "32px",
+			})}
+		>
+			${StoryFn(context)}
+		</div>
+	`,
+];

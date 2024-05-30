@@ -32,8 +32,6 @@ export const Template = ({
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
-
-
 	return html`
 		<div
 			class=${classMap({
@@ -90,8 +88,8 @@ export const Template = ({
 				...globals,
 				customClasses: [`${rootClass}-button`],
 				size: "m",
-				iconType: "workflow",
 				iconName: "Calendar",
+				iconSet: "workflow",
 				isQuiet,
 				customStyles: readOnly ? { "display": "none" } : undefined,
 				// @todo this is not added to the button on the website; need to make sure it's not a bug

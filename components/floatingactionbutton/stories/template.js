@@ -10,6 +10,7 @@ export const Template = ({
 	variant,
 	id,
 	iconName,
+	iconSet = "workflow",
 	customClasses = [],
 	...globals
 }) => html`
@@ -24,6 +25,7 @@ export const Template = ({
 		${Icon({
 			...globals,
 			iconName,
+			setName: iconSet,
 			customClasses: [`${rootClass}-icon`],
 		})}
 	</button>

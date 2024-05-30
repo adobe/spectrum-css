@@ -23,6 +23,7 @@ export const Template = ({
 	label,
 	hideLabel = false,
 	iconName,
+	iconSet = "workflow",
 	iconAfterLabel = false,
 	variant,
 	staticColor,
@@ -70,11 +71,11 @@ export const Template = ({
       aria-controls=${ifDefined(ariaControls)}
       data-testid=${ifDefined(testId)}
     >
-      ${when(iconName && !iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
+      ${when(iconName && !iconAfterLabel, () => Icon({ ...globals, iconName, setName: iconSet, size }))}
       ${when(label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
-      ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
+      ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, setName: iconSet, size }))}
       ${when(isPending, () => ProgressCircle({
         ...globals,
         size: "s",
