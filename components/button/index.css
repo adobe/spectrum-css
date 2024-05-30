@@ -331,7 +331,6 @@ governing permissions and limitations under the License.
 
 .spectrum-Button {
   @extend %spectrum-BaseButton;
-  @extend %spectrum-ButtonWithFocusRing;
 
   border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
   border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
@@ -384,6 +383,8 @@ governing permissions and limitations under the License.
 
   /* Focus indicator */
   &::after {
+    content: "";
+    display: block;
     position: absolute;
     inset: 0;
     margin: calc((
@@ -397,7 +398,6 @@ governing permissions and limitations under the License.
     ));
     transition: box-shadow var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
     pointer-events: none;
-    content: '';
   }
 
   &:focus-visible,
@@ -409,13 +409,6 @@ governing permissions and limitations under the License.
       box-shadow: 0 0 0
         var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness))
         var(--highcontrast-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color)));
-
-      /* Margin is repeated to override declaration coming from the imported BaseButton. */
-      margin: calc((
-          var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) +
-          var(--mod-button-border-width, var(--spectrum-button-border-width))
-        ) * -1
-      );
     }
   }
 
