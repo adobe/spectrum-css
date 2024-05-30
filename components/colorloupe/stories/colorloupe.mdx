@@ -1,0 +1,20 @@
+import { ArgTypes, Canvas, Meta, Description, Title } from '@storybook/blocks';
+
+import * as ColorLoupeStories from './colorloupe.stories';
+
+<Meta of={ColorLoupeStories} title="Docs" />
+
+<Title of={ColorLoupeStories} />
+<Description of={ColorLoupeStories} />
+
+## Usage notes
+- Set the `--spectrum-picked-color` custom property to the CSS color value you want to show
+- You must apply `.is-open` to display the loupe
+- Color Loupe does not have a disabled style; do not show it when the handle it's attached to is disabled.
+
+## Standard
+<Canvas of={ColorLoupeStories.Default} />
+
+## Properties
+
+<ArgTypes />

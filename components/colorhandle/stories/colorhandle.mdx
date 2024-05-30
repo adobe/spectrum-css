@@ -1,0 +1,28 @@
+import { ArgTypes, Canvas, Meta, Description, Title } from '@storybook/blocks';
+
+import * as ColorHandleStories from './colorhandle.stories';
+
+<Meta of={ColorHandleStories} title="Docs" />
+
+<Title of={ColorHandleStories} />
+<Description of={ColorHandleStories} />
+
+## Standard
+
+Set the `--spectrum-picked-color` custom property to the color value you want to show.
+
+<Canvas of={ColorHandleStories.Default} />
+
+## Disabled
+
+<Canvas of={ColorHandleStories.Disabled} />
+
+## With color loupe
+
+Nest the color loupe component within the color handle markup and apply `.is-open` to the `.spectrum-ColorLoupe` to display the loupe.
+
+<Canvas of={ColorHandleStories.WithColorLoupe} />
+
+## Properties
+
+<ArgTypes />

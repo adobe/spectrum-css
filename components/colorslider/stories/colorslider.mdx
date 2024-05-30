@@ -1,0 +1,40 @@
+import { ArgTypes, Canvas, Meta, Description, Title } from '@storybook/blocks';
+
+import * as ColorSliderStories from './colorslider.stories';
+
+<Meta of={ColorSliderStories} title="Docs" />
+
+<Title of={ColorSliderStories} />
+<Description of={ColorSliderStories} />
+
+## Usage notes
+- Set the color of the nested Color handle component to match Color slider’s currently selected color using its custom property: `--spectrum-picked-color`
+- The `.spectrum-ColorHandle` should be moved with `inset-inline-*` (horizontal) or `inset-block-*` (vertical) style properties as the slider is dragged
+- Ensure that you set the min and max attributes of the `.spectrum-ColorSlider-slider` input to the corresponding scale (i.e. 0 to 1 for a, 0 to 255 for r, etc)
+- Ensure that you set the step attribute of the `.spectrum-ColorSlider-slider` input appropriately (i.e. 0.1 for a, s, v or 1 and h, r, etc)
+- Set the background style property of `.spectrum-ColorSlider-gradient` to the gradient of the colors to be selected. The CSS will automatically reverse the gradient element horizontally when using a RTL (right-to-left) base direction
+  - Alternatively, provide an `<img>` element with the gradient you want to use and apply the `.spectrum-ColorSlider-gradient` class
+
+## Standard
+
+<Canvas of={ColorSliderStories.Default} />
+
+## Alpha
+
+<Canvas of={ColorSliderStories.Alpha} />
+
+## Disabled
+
+<Canvas of={ColorSliderStories.Disabled} />
+
+## Vertical
+
+<Canvas of={ColorSliderStories.Vertical} />
+
+## With image
+
+<Canvas of={ColorSliderStories.WithImage} />
+
+## Properties
+
+<ArgTypes />

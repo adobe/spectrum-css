@@ -1,0 +1,35 @@
+import { ArgTypes, Canvas, Meta, Description, Title } from '@storybook/blocks';
+
+import * as ColorWheelStories from './colorwheel.stories';
+
+<Meta of={ColorWheelStories} title="Docs" />
+
+<Title of={ColorWheelStories} />
+<Description of={ColorWheelStories} />
+
+## Usage notes:
+- For a given rotation on the wheel, X, the `.spectrum-ColorHandle` should be moved by applying the style property `transform: translate(${Y * Math.cos(X)}px, ${Y * Math.sin(X)}px)`, where Y is `((radius - .spectrum-colorwheel-track-width) / 2))`
+- Set the value attribute of `.spectrum-ColorWheel-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)
+- Add `.is-dragged` when the handle is being dragged
+
+## Standard
+
+<Canvas of={ColorWheelStories.Default} />
+
+## Disabled
+
+<Canvas of={ColorWheelStories.Disabled} />
+
+## With color area
+
+Usage notes:
+
+- To display with ColorArea inside of ColorWheel, add ColorArea to `.spectrum-ColorWheel-colorarea-container` with `style="--mod-colorarea-width: 70.1%; --mod-colorarea-height: 70.1%"`
+- `.spectrum-colorwheel-colorarea-container-size` is hard coded to position the ColorArea within the ColorWheel using `.spectrum-color-wheel-color-area-margin`. Using JS container size can be calcaulted with `Math.sqrt(2 * R * R)`, where R is the `innerRadius` as calcaulted for the clip paths
+- `.spectrum-colorwheel-path`, `.spectrum-colorwheel-path-borders`, and `.spectrum-colorwheel-colorarea-container` are hard coded in CSS and include token values in custom CSS variables so they can be accessed with JS to and used to calculate these values, `const wheel = document.querySelector(".spectrum-ColorWheel-wheel") getComputedStyle(wheel).getPropertyValue('--track-width'))`
+
+<Canvas of={ColorWheelStories.WithColorArea} />
+
+## Properties
+
+<ArgTypes />
