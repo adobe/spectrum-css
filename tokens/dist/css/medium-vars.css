@@ -100,7 +100,6 @@
   --spectrum-tag-top-to-cross-icon-small:8px;
   --spectrum-tag-top-to-cross-icon-medium:12px;
   --spectrum-tag-top-to-cross-icon-large:15px;
-  --spectrum-popover-top-to-content-area:4px;
   --spectrum-menu-item-edge-to-content-not-selected-small:28px;
   --spectrum-menu-item-edge-to-content-not-selected-medium:32px;
   --spectrum-menu-item-edge-to-content-not-selected-large:38px;
@@ -194,9 +193,6 @@
   --spectrum-color-wheel-minimum-width:175px;
   --spectrum-color-slider-length:192px;
   --spectrum-color-slider-minimum-length:80px;
-  --spectrum-illustrated-message-title-size:var(--spectrum-heading-size-m);
-  --spectrum-illustrated-message-cjk-title-size:var(--spectrum-heading-cjk-size-m);
-  --spectrum-illustrated-message-body-size:var(--spectrum-body-size-s);
   --spectrum-coach-mark-width:296px;
   --spectrum-coach-mark-minimum-width:296px;
   --spectrum-coach-mark-maximum-width:380px;
@@ -427,6 +423,21 @@
   --spectrum-coach-mark-title-font-size:var(--spectrum-title-size-m);
   --spectrum-standard-dialog-title-font-size:var(--spectrum-title-size-xxl);
   --spectrum-standard-dialog-body-font-size:var(--spectrum-body-size-m);
+  --spectrum-link-out-icon-size-75:10px;
+  --spectrum-link-out-icon-size-100:12px;
+  --spectrum-link-out-icon-size-200:14px;
+  --spectrum-menu-item-top-to-thumbnail-small:8px;
+  --spectrum-menu-item-top-to-thumbnail-medium:9px;
+  --spectrum-menu-item-top-to-thumbnail-large:10px;
+  --spectrum-menu-item-top-to-thumbnail-extra-large:11px;
+  --spectrum-illustrated-message-small-title-font-size:var(--spectrum-title-size-m);
+  --spectrum-illustrated-message-small-cjk-title-font-size:var(--spectrum-title-cjk-size-m);
+  --spectrum-illustrated-message-medium-title-font-size:var(--spectrum-title-size-xl);
+  --spectrum-illustrated-message-medium-cjk-title-font-size:var(--spectrum-title-cjk-size-xl);
+  --spectrum-illustrated-message-large-title-font-size:var(--spectrum-title-size-xxl);
+  --spectrum-illustrated-message-large-cjk-title-font-size:var(--spectrum-title-cjk-size-xxl);
+  --spectrum-illustrated-message-medium-body-font-size:var(--spectrum-body-size-s);
+  --spectrum-illustrated-message-large-body-font-size:var(--spectrum-body-size-s);
   --spectrum-workflow-icon-size-50:14px;
   --spectrum-workflow-icon-size-75:16px;
   --spectrum-workflow-icon-size-100:20px;
@@ -437,6 +448,7 @@
   --spectrum-text-to-visual-100:6px;
   --spectrum-text-to-visual-200:7px;
   --spectrum-text-to-visual-300:8px;
+  --spectrum-text-to-visual-400:9px;
   --spectrum-text-to-control-75:9px;
   --spectrum-text-to-control-100:10px;
   --spectrum-text-to-control-200:11px;
