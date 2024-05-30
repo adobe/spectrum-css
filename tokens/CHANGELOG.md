@@ -1,5 +1,14 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 14.0.0-next.8
+
+### Patch Changes
+
+- [#2797](https://github.com/adobe/spectrum-css/pull/2797) [`e62d1ca`](https://github.com/adobe/spectrum-css/commit/e62d1ca8cad8a2cdd9c8748335d0371e0aaca60a) Thanks [@pfulton](https://github.com/pfulton)! - Uses the latest release from Spectrum Tokens (13.0.0-beta.35)
+
 ## 15.0.0-s2-foundations.31
 
 ### Patch Changes
@@ -330,8 +339,6 @@
 
 - feat: adding component-specific theme mappings and new bridge files to support S1 and S2 in tandem
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="14.0.0"></a>
 
@@ -344,7 +351,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### 🛑 BREAKING CHANGES
 
 - Removes component-builder & component-builder-simple for script leveraging postcss
-
 - Imports added to index.css and themes/express.css
 
 <a name="13.2.0"></a>
