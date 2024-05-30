@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.2.3
+
+### Patch Changes
+
+- [#2752](https://github.com/adobe/spectrum-css/pull/2752) [`4465b9a`](https://github.com/adobe/spectrum-css/commit/4465b9a647b1714c70bb4052f4e2440fe055cc08) Thanks [@jawinn](https://github.com/jawinn)! - Fixes the visibility of the handle's outer circle on the ramp variant for high contrast mode. And refactors which custom properties are set in the forced-colors media query.
+
 ## 5.2.2
 
 ### Patch Changes
