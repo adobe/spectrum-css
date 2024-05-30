@@ -12,6 +12,7 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
+	isCardAssetOverride = false,
 }) => {
 	let visual;
 	if (preset === "file") {
@@ -32,7 +33,7 @@ export const Template = ({
 		visual = html`<img
 			class="${rootClass}-image"
 			src=${ifDefined(image)}
-			style=${styleMap({
+			style=${isCardAssetOverride ? null : styleMap({
 				"max-width": "75%",
 				"max-height": "75%",
 				"object-fit": "contain",

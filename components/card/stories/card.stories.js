@@ -89,6 +89,7 @@ export default {
 		},
 		footer: { table: { disable: true } },
 		isGallery: { table: { disable: true } },
+		isCardAssetOverride: { table: { disable: true } },
 		isGrid: { table: { disable: true } },
 		isHorizontal: { table: { disable: true } },
 		isDropTarget: { table: { disable: true } },
@@ -170,4 +171,91 @@ Horizontal.args = {
 	isHorizontal: true,
 	hasActions: false,
 	hasQuickAction: false,
+};
+
+/**
+ * Stories for the MDX "Docs" only.
+ */
+export const NoImage = Template.bind({});
+NoImage.args = {
+	title: "Card title",
+	description: "Optional description that should be one or two lines",
+};
+NoImage.tags = ["docs-only"];
+NoImage.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const QuietFolder = Quiet.bind({});
+QuietFolder.args = {
+	title: "Name",
+	showAsset: "folder",
+	description: "10/15/18",
+	isQuiet: true,
+};
+QuietFolder.tags = ["docs-only"];
+QuietFolder.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const QuietFocused = Quiet.bind({});
+QuietFocused.args = {
+	title: "Name",
+	showAsset: "image",
+	image: "example-ava@2x.png",
+	description: "10/15/18",
+	isQuiet: true,
+	isFocused: true,
+};
+QuietFocused.tags = ["docs-only"];
+QuietFocused.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const QuietSelected = Quiet.bind({});
+QuietSelected.args = {
+	title: "Name",
+	showAsset: "image",
+	image: "example-ava@2x.png",
+	description: "10/15/18",
+	isQuiet: true,
+	isSelected: true,
+};
+QuietSelected.tags = ["docs-only"];
+QuietSelected.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const AssetPreview = Template.bind({});
+AssetPreview.args = {
+	title: "Card title",
+	showAsset: "image",
+	image: "example-card-portrait.png",
+	description: "jpg",
+	hasActions: false,
+	isCardAssetOverride: true,
+	customStyles: {
+		"width": "200px",
+	}
+};
+AssetPreview.tags = ["docs-only"];
+AssetPreview.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Gallery = Template.bind({});
+Gallery.args = {
+	title: "Card title",
+	showAsset: "image",
+	image: "example-card-landscape.png",
+	description: "jpg",
+	isGallery: true,
+	isCardAssetOverride: true,
+	customStyles: {
+		"width": "700px",
+	}
+};
+Gallery.tags = ["docs-only"];
+Gallery.parameters = {
+	chromatic: { disableSnapshot: true },
 };

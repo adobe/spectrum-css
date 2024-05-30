@@ -26,6 +26,7 @@ export const Template = ({
 	isHorizontal = false,
 	isQuiet = false,
 	isGallery = false,
+	isCardAssetOverride = false,
 	isGrid = false,
 	hasQuickAction = false,
 	hasActions = false,
@@ -66,6 +67,7 @@ export const Template = ({
                   ...globals,
                   image,
                   preset: !image ? showAsset : undefined,
+                  isCardAssetOverride,
                 }),
                 () => Icon({
                   ...globals,
