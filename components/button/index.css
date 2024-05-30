@@ -125,7 +125,7 @@
 
 	/* ---- Accent ---- */
 	/* Also shows as the default when a variant class is not used. */
-  &,
+	&,
 	&.spectrum-Button--accent {
 		--spectrum-button-background-color-default: var(--spectrum-accent-background-color-default);
 		--spectrum-button-background-color-hover: var(--spectrum-accent-background-color-hover);
