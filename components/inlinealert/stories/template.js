@@ -36,6 +36,7 @@ export const Template = ({
 		typeof iconName !== "undefined"
 			? Icon({
 				iconName,
+				setName: "workflow",
 				customClasses: [`${rootClass}-icon`],
 			}, context) : nothing;
 

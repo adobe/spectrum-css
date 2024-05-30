@@ -35,6 +35,7 @@ export const Template = ({
 			${Icon({
 				size,
 				iconName: "Cross",
+				setName: "ui",
 				customClasses: [`${rootClass}-UIIcon`],
 			}, context)}
 		</button>

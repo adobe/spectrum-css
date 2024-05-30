@@ -85,8 +85,8 @@ export const DatePicker = ({
 			${PickerButton({
 				customClasses: [`${rootClass}-button`],
 				size: "m",
-				iconType: "workflow",
 				iconName: "Calendar",
+				iconSet: "workflow",
 				isQuiet,
 				customStyles: readOnly ? { "display": "none" } : undefined,
 				// @todo this is not added to the button on the website; need to make sure it's not a bug

@@ -109,6 +109,7 @@ export const TableRowItem = ({
 								Button({
 									size,
 									iconName: "ChevronRight100",
+									iconSet: "ui",
 									hideLabel: true,
 									customClasses: [`${rootClass}-disclosureIcon`],
 									ariaExpanded: isExpanded,
@@ -223,11 +224,13 @@ export const Template = ({
 				>
 					${Icon({
 						iconName: "ArrowDown100",
+						setName: "ui",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
 					}, context)}<span class="${rootClass}-columnTitle">Column title</span>${
 					Icon({
 						iconName: "ChevronDown100",
+						setName: "ui",
 						size,
 						customClasses: [`${rootClass}-menuIcon`],
 					}, context)}
@@ -240,6 +243,7 @@ export const Template = ({
 				>
 					${Icon({
 						iconName: "ArrowDown100",
+						setName: "ui",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
 					}, context)}<span class="${rootClass}-columnTitle">Column title</span>

@@ -58,13 +58,14 @@ export const Picker = ({
 				Icon({
 					size,
 					iconName: "Alert",
+					setName: "workflow",
 					customClasses: [`${rootClass}-validationIcon`],
 				}, context)
 			)}
 			${Icon({
 				size,
-				setName: "ui",
 				iconName: "ChevronDown",
+				setName: "ui",
 				customClasses: [`${rootClass}-menuIcon`],
 			}, context)}
 		</button>

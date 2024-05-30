@@ -12,6 +12,7 @@ export const Template = ({
 	variant,
 	id = getRandomId("floating"),
 	iconName,
+	iconSet = "workflow",
 	isHovered = false,
 	isFocused = false,
 	isActive = false,
@@ -33,6 +34,7 @@ export const Template = ({
 		>
 			${Icon({
 				iconName,
+				setName: iconSet,
 				customClasses: [`${rootClass}-icon`],
 			}, context)}
 		</button>

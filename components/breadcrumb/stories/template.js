@@ -26,7 +26,7 @@ export const Template = (
 			})}
 		>
 			${items.map((item, idx, arr) => {
-				const { label, isDisabled, iconName } = item;
+				const { label, isDisabled, iconName, iconSet } = item;
 				return html` <li
 					class=${classMap({
 						[`${rootClass}-item`]: true,
@@ -39,6 +39,7 @@ export const Template = (
 							ActionButton(
 								{
 									iconName,
+									iconSet,
 									isDisabled,
 									isQuiet: true,
 									customIconClasses: [`${rootClass}-folder`],

@@ -14,7 +14,7 @@ export const Template = ({
 	size = "m",
 	label,
 	position,
-	iconType = "ui",
+	iconSet = "ui",
 	iconName = "ChevronDown",
 	isDisabled = false,
 	isFocused = false,
@@ -31,9 +31,9 @@ export const Template = ({
 		<button
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--textuiicon`]: label && iconType === "ui",
-				[`${rootClass}--uiicononly`]: !label && iconType === "ui",
-				[`${rootClass}--icononly`]: !label && iconType !== "ui",
+				[`${rootClass}--textuiicon`]: label && iconSet === "ui",
+				[`${rootClass}--uiicononly`]: !label && iconSet === "ui",
+				[`${rootClass}--icononly`]: !label && iconSet !== "ui",
 				[`${rootClass}--${position}`]: typeof position !== "undefined",
 				[`${rootClass}--rounded`]: isRounded,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
@@ -63,6 +63,7 @@ export const Template = ({
 				${Icon({
 					setName: iconType,
 					iconName: iconName ?? "ChevronDown",
+					setName: iconSet,
 					size,
 					customClasses: [`${rootClass}-icon`],
 				}, context)}

@@ -76,14 +76,17 @@ Default.args = {
 	content: [
 		{
 			iconName: "Edit",
+			iconSet: "workflow",
 			label: "Edit",
 		},
 		{
 			iconName: "Copy",
+			iconSet: "workflow",
 			label: "Copy",
 		},
 		{
 			iconName: "Delete",
+			iconSet: "workflow",
 			label: "Delete",
 			isSelected: true,
 		},

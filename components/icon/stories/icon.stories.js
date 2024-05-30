@@ -3,25 +3,10 @@ import { Template as Typography } from "@spectrum-css/typography/stories/templat
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-import { IconGroup } from "./icon.test.js";
-import { Template } from "./template.js";
-import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
+import { Template } from "./template";
+import { cleanWorkflowIcon, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
-/**
- * Create a list of all UI Icons with their sizing numbers.
- *
- * The list is a little long until Storybook adds a way to use conditional options
- * in controls, e.g. a "uiSize" control with options pulled from uiIconSizes:
- * @see https://github.com/storybookjs/storybook/discussions/24235
- */
-const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
-	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, "");
-	// Icons like Gripper that don't have sizes yet, represented by any empty array.
-	if (uiIconSizes[baseIconName]?.length == 0) {
-		return [baseIconName];
-	}
-	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
-}).flat();
+const sizes = ["xs", "s", "m", "l", "xl", "xxl"];
 
 /**
  * The Icon component contains all of the CSS used for displaying both workflow and UI icons.
@@ -31,15 +16,23 @@ export default {
 	component: "Icon",
 	argTypes: {
 		size: {
-			name: "Workflow Icon Size",
+			name: "Size",
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["xs", "s", "m", "l", "xl", "xxl"],
+			options: sizes,
 			control: "select",
 			if: { arg: "setName", eq: "workflow" },
+		},
+		showLabel: {
+			name: "Show icon name",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
 		},
 		setName: {
 			name: "Icon set",
@@ -58,7 +51,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: workflowIcons,
+			options: workflowIcons.map((iconName) => cleanWorkflowIcon(iconName)),
 			control: "select",
 			if: { arg: "setName", eq: "workflow" },
 		},
@@ -69,9 +62,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: [
-				...uiIconNameOptions,
-			],
+			options: uiIconsWithDirections,
 			control: "select",
 			if: { arg: "setName", eq: "ui" },
 		},
@@ -254,7 +245,37 @@ export const UIDefault = (args, context) => html`
 		)}
 	</div>
 `;
-UIDefault.storyName = "UI Default";
+
+/* Stories for the MDX "Docs" only. */
+
+/**
+ * A sampling of multiple Workflow icons.
+ */
+export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
+WorkflowDefault.storyName = "Workflow icons";
+WorkflowDefault.tags = ["!dev"];
+WorkflowDefault.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * An example of a Workflow icon displayed at all sizes, from small to extra-large.
+ */
+export const WorkflowSizing = WorkflowSizingTemplate.bind({});
+WorkflowSizing.tags = ["!dev"];
+WorkflowSizing.args = {
+	setName: "workflow",
+	iconName: "Asset",
+};
+WorkflowSizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A sampling of a few UI icons.
+ */
+export const UIDefault = UIDefaultTemplate.bind({});
+UIDefault.storyName = "UI icons";
 UIDefault.tags = ["!dev"];
 UIDefault.parameters = {
 	chromatic: { disableSnapshot: true },
