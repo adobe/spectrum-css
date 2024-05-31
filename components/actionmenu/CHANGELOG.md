@@ -35,7 +35,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="6.0.0"></a>
-#6.0.0
+# 6.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.1.3...@spectrum-css/actionmenu@6.0.0)
 
@@ -50,28 +50,28 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="5.1.3"></a>
-##5.1.3
+## 5.1.3
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.1.2...@spectrum-css/actionmenu@5.1.3)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.1.2"></a>
-##5.1.2
+## 5.1.2
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.1.1...@spectrum-css/actionmenu@5.1.2)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.1.1"></a>
-##5.1.1
+## 5.1.1
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.1.0"></a>
-#5.1.0
+# 5.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.10...@spectrum-css/actionmenu@5.1.0)
 
@@ -80,77 +80,77 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="5.0.10"></a>
-##5.0.10
+## 5.0.10
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.9...@spectrum-css/actionmenu@5.0.10)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.9"></a>
-##5.0.9
+## 5.0.9
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.8...@spectrum-css/actionmenu@5.0.9)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.8"></a>
-##5.0.8
+## 5.0.8
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.6...@spectrum-css/actionmenu@5.0.8)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.7"></a>
-##5.0.7
+## 5.0.7
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.6...@spectrum-css/actionmenu@5.0.7)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.6"></a>
-##5.0.6
+## 5.0.6
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.5...@spectrum-css/actionmenu@5.0.6)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.5"></a>
-##5.0.5
+## 5.0.5
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.4...@spectrum-css/actionmenu@5.0.5)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.4"></a>
-##5.0.4
+## 5.0.4
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.3...@spectrum-css/actionmenu@5.0.4)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.3"></a>
-##5.0.3
+## 5.0.3
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.2...@spectrum-css/actionmenu@5.0.3)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.2"></a>
-##5.0.2
+## 5.0.2
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.1...@spectrum-css/actionmenu@5.0.2)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.1"></a>
-##5.0.1
+## 5.0.1
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@5.0.0...@spectrum-css/actionmenu@5.0.1)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="5.0.0"></a>
-#5.0.0
+# 5.0.0
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.58...@spectrum-css/actionmenu@5.0.0)
 
@@ -167,161 +167,161 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - chore(actionmenu): update dependencies
 
 <a name="4.0.58"></a>
-##4.0.58
+## 4.0.58
 🗓
 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.57...@spectrum-css/actionmenu@4.0.58)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.57"></a>
-##4.0.57
+## 4.0.57
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.56...@spectrum-css/actionmenu@4.0.57)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.56"></a>
-##4.0.56
+## 4.0.56
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.55...@spectrum-css/actionmenu@4.0.56)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.55"></a>
-##4.0.55
+## 4.0.55
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.54...@spectrum-css/actionmenu@4.0.55)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.54"></a>
-##4.0.54
+## 4.0.54
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.53...@spectrum-css/actionmenu@4.0.54)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.53"></a>
-##4.0.53
+## 4.0.53
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.51...@spectrum-css/actionmenu@4.0.53)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.52"></a>
-##4.0.52
+## 4.0.52
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.51...@spectrum-css/actionmenu@4.0.52)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.51"></a>
-##4.0.51
+## 4.0.51
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.50...@spectrum-css/actionmenu@4.0.51)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.50"></a>
-##4.0.50
+## 4.0.50
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.49...@spectrum-css/actionmenu@4.0.50)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.49"></a>
-##4.0.49
+## 4.0.49
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.48...@spectrum-css/actionmenu@4.0.49)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.48"></a>
-##4.0.48
+## 4.0.48
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.47...@spectrum-css/actionmenu@4.0.48)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.47"></a>
-##4.0.47
+## 4.0.47
 🗓
 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.46...@spectrum-css/actionmenu@4.0.47)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.46"></a>
-##4.0.46
+## 4.0.46
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.45...@spectrum-css/actionmenu@4.0.46)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.45"></a>
-##4.0.45
+## 4.0.45
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.44...@spectrum-css/actionmenu@4.0.45)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.44"></a>
-##4.0.44
+## 4.0.44
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.43...@spectrum-css/actionmenu@4.0.44)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.43"></a>
-##4.0.43
+## 4.0.43
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.42...@spectrum-css/actionmenu@4.0.43)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.42"></a>
-##4.0.42
+## 4.0.42
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.41...@spectrum-css/actionmenu@4.0.42)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.41"></a>
-##4.0.41
+## 4.0.41
 🗓
 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.40...@spectrum-css/actionmenu@4.0.41)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.40"></a>
-##4.0.40
+## 4.0.40
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.39...@spectrum-css/actionmenu@4.0.40)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.39"></a>
-##4.0.39
+## 4.0.39
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.38...@spectrum-css/actionmenu@4.0.39)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.38"></a>
-##4.0.38
+## 4.0.38
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.37...@spectrum-css/actionmenu@4.0.38)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.37"></a>
-##4.0.37
+## 4.0.37
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.36...@spectrum-css/actionmenu@4.0.37)
 
 **Note:** Version bump only for package @spectrum-css/actionmenu
 
 <a name="4.0.36"></a>
-##4.0.36
+## 4.0.36
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionmenu@4.0.35...@spectrum-css/actionmenu@4.0.36)
 

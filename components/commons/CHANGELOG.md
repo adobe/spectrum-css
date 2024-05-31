@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="10.0.0"></a>
-#10.0.0
+# 10.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.1.2...@spectrum-css/commons@10.0.0)
 
@@ -25,21 +25,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="9.1.2"></a>
-##9.1.2
+## 9.1.2
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.1.1...@spectrum-css/commons@9.1.2)
 
 **Note:** Version bump only for package @spectrum-css/commons
 
 <a name="9.1.1"></a>
-##9.1.1
+## 9.1.1
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/commons
 
 <a name="9.1.0"></a>
-#9.1.0
+# 9.1.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.2...@spectrum-css/commons@9.1.0)
 
@@ -52,21 +52,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **commons:**rename and deprecate mods referencing global tokens ([#2423](https://github.com/adobe/spectrum-css/issues/2423))([3a49432](https://github.com/adobe/spectrum-css/commit/3a49432))
 
 <a name="9.0.2"></a>
-##9.0.2
+## 9.0.2
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.1...@spectrum-css/commons@9.0.2)
 
 **Note:** Version bump only for package @spectrum-css/commons
 
 <a name="9.0.1"></a>
-##9.0.1
+## 9.0.1
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.0...@spectrum-css/commons@9.0.1)
 
 **Note:** Version bump only for package @spectrum-css/commons
 
 <a name="9.0.0"></a>
-#9.0.0
+# 9.0.0
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@8.0.1...@spectrum-css/commons@9.0.0)
 
@@ -83,14 +83,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - docs: regenerate mods
 
 <a name="8.0.1"></a>
-##8.0.1
+## 8.0.1
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@8.0.0...@spectrum-css/commons@8.0.1)
 
 **Note:** Version bump only for package @spectrum-css/commons
 
 <a name="8.0.0"></a>
-#8.0.0
+# 8.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.8...@spectrum-css/commons@8.0.0)
 
@@ -103,7 +103,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
     		use native focus-visible pseudo class for focus styling on button and basebutton
 
 <a name="7.0.8"></a>
-##7.0.8
+## 7.0.8
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.7...@spectrum-css/commons@7.0.8)
 
@@ -112,7 +112,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="7.0.7"></a>
-##7.0.7
+## 7.0.7
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.6...@spectrum-css/commons@7.0.7)
 

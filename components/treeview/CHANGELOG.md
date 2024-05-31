@@ -37,7 +37,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="10.0.0"></a>
-#10.0.0
+# 10.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.2.6...@spectrum-css/treeview@10.0.0)
 
@@ -52,56 +52,56 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="9.2.6"></a>
-##9.2.6
+## 9.2.6
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.2.5...@spectrum-css/treeview@9.2.6)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.2.5"></a>
-##9.2.5
+## 9.2.5
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.2.4...@spectrum-css/treeview@9.2.5)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.2.4"></a>
-##9.2.4
+## 9.2.4
 🗓
 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.2.3...@spectrum-css/treeview@9.2.4)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.2.3"></a>
-##9.2.3
+## 9.2.3
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.2.2...@spectrum-css/treeview@9.2.3)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.2.2"></a>
-##9.2.2
+## 9.2.2
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.2.1"></a>
-##9.2.1
+## 9.2.1
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.2.0...@spectrum-css/treeview@9.2.1)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.2.0"></a>
-#9.2.0
+# 9.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.1.1...@spectrum-css/treeview@9.2.0)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.1.1"></a>
-##9.1.1
+## 9.1.1
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.1.0...@spectrum-css/treeview@9.1.1)
 
@@ -110,7 +110,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*deprecate logical transform plugin ([#2437](https://github.com/adobe/spectrum-css/issues/2437))([ff5dda6](https://github.com/adobe/spectrum-css/commit/ff5dda6))
 
 <a name="9.1.0"></a>
-#9.1.0
+# 9.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.0.8...@spectrum-css/treeview@9.1.0)
 
@@ -119,63 +119,63 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="9.0.8"></a>
-##9.0.8
+## 9.0.8
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.0.7...@spectrum-css/treeview@9.0.8)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.0.7"></a>
-##9.0.7
+## 9.0.7
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.0.6...@spectrum-css/treeview@9.0.7)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.0.6"></a>
-##9.0.6
+## 9.0.6
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.0.4...@spectrum-css/treeview@9.0.6)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.0.5"></a>
-##9.0.5
+## 9.0.5
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.0.4...@spectrum-css/treeview@9.0.5)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.0.4"></a>
-##9.0.4
+## 9.0.4
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.0.3...@spectrum-css/treeview@9.0.4)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.0.3"></a>
-##9.0.3
+## 9.0.3
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.0.2...@spectrum-css/treeview@9.0.3)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.0.2"></a>
-##9.0.2
+## 9.0.2
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.0.1...@spectrum-css/treeview@9.0.2)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.0.1"></a>
-##9.0.1
+## 9.0.1
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@9.0.0...@spectrum-css/treeview@9.0.1)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="9.0.0"></a>
-#9.0.0
+# 9.0.0
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@8.0.1...@spectrum-css/treeview@9.0.0)
 
@@ -214,7 +214,7 @@ Icon was appearing behind the ::before pseudo that is currently used
 for the hover background color.
 
 <a name="8.0.1"></a>
-##8.0.1
+## 8.0.1
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@8.0.0...@spectrum-css/treeview@8.0.1)
 
@@ -223,7 +223,7 @@ for the hover background color.
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="8.0.0"></a>
-#8.0.0
+# 8.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.9...@spectrum-css/treeview@8.0.0)
 
@@ -236,14 +236,14 @@ for the hover background color.
     		use focus-visible pseudo class in place of focus-ring
 
 <a name="7.0.9"></a>
-##7.0.9
+## 7.0.9
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.8...@spectrum-css/treeview@7.0.9)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="7.0.8"></a>
-##7.0.8
+## 7.0.8
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.7...@spectrum-css/treeview@7.0.8)
 
@@ -252,21 +252,21 @@ for the hover background color.
 \*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 <a name="7.0.7"></a>
-##7.0.7
+## 7.0.7
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.6...@spectrum-css/treeview@7.0.7)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="7.0.6"></a>
-##7.0.6
+## 7.0.6
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.5...@spectrum-css/treeview@7.0.6)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="7.0.5"></a>
-##7.0.5
+## 7.0.5
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.4...@spectrum-css/treeview@7.0.5)
 
@@ -275,14 +275,14 @@ for the hover background color.
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="7.0.4"></a>
-##7.0.4
+## 7.0.4
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.3...@spectrum-css/treeview@7.0.4)
 
 **Note:** Version bump only for package @spectrum-css/treeview
 
 <a name="7.0.3"></a>
-##7.0.3
+## 7.0.3
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/treeview@7.0.2...@spectrum-css/treeview@7.0.3)
 
