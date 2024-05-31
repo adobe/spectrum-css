@@ -6,6 +6,34 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/menu/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
+      ### Version 8.0.0
+      #### Spectrum 2 migration
+      This migration uses new and updated Spectrum 2 tokens, and also includes several new features such as:
+        - Thumbnail within menu item label
+        - Section description below menu section heading
+        - External link out action
+        - S2 corner rounding and down state
+        - New outline focus state
+
+      The following mods have been added:
+        - `--mod-menu-item-corner-rounding`
+        - `--mod-menu-item-description-font-weight`
+        - `--mod-menu-item-label-font-weight`
+        - `--mod-menu-item-thumbnail-height`
+        - `--mod-menu-item-thumbnail-opacity-disabled`
+        - `--mod-menu-item-thumbnail-to-label`
+        - `--mod-menu-item-thumbnail-width`
+        - `--mod-menu-item-top-to-drillin`
+        - `--mod-menu-item-top-to-icon`
+        - `--mod-menu-item-top-to-thumbnail`
+        - `--mod-menu-linkout-icon-height`
+        - `--mod-menu-linkout-icon-width`
+        - `--mod-menu-section-description-color`
+        - `--mod-menu-section-description-font-size`
+        - `--mod-menu-section-description-font-weight`
+        - `--mod-menu-section-description-line-height`
+        - `--mod-menu-section-description-line-height-cjk`
+        - `--mod-menu-section-header-to-description`
       ### T-shirt sizing
       Menu now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-Menu--size*` class.
 
