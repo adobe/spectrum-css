@@ -413,10 +413,14 @@ governing permissions and limitations under the License.
 	grid-area: submenuItemValueArea;
 }
 
+.spectrum-Menu-item:focus-visible,
+.spectrum-Menu-back:focus-visible,
 .spectrum-Menu-item:focus,
 .spectrum-Menu-item.is-focused {
 	background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-key-focus)));
-	outline: none;
+
+	outline: var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) solid var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
+	outline-offset: var(--spectrum-focus-indicator-gap);
 
 	> .spectrum-Menu-itemLabel {
 		color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-content-color-focus, var(--spectrum-menu-item-label-content-color-focus)));
@@ -448,14 +452,6 @@ governing permissions and limitations under the License.
 		fill: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-focus, var(--spectrum-menu-checkmark-icon-color-focus)));
 		color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-checkmark-icon-color-focus, var(--spectrum-menu-checkmark-icon-color-focus)));
 	}
-}
-
-.spectrum-Menu-item:focus-visible,
-.spectrum-Menu-back:focus-visible {
-	background-color: var(--highcontrast-menu-item-background-color-focus, var(--mod-menu-item-background-color-key-focus, var(--spectrum-menu-item-background-color-key-focus)));
-
-	outline: var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) solid var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
-	outline-offset: var(--spectrum-focus-indicator-gap);
 }
 
 .spectrum-Menu-item:hover {
