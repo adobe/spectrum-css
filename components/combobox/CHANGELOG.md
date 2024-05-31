@@ -643,3 +643,12 @@ there, but it was missing a control for testing.
 🗓 2023-03-28
 
 **Note:** Version bump only for package @spectrum-css/combobox
+
+### Component separated from InputGroup
+
+Combobox was previously a variant style for InputGroup. **InputGroup is deprecated**. The classes listed below containing `InputGroup` have been renamed or removed:
+
+- `.spectrum-InputGroup-textfield` -> `.spectrum-Combobox-textfield`
+- `.spectrum-InputGroup-input` -> `.spectrum-Combobox-input`
+- `.spectrum-InputGroup-button` -> `.spectrum-Combobox-button`
+- `.InputGroup` -> removed

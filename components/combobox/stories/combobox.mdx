@@ -15,13 +15,6 @@ import * as ComboboxStories from './combobox.stories';
   - `.spectrum-Combobox-input` is required on the `<input>` element inside of Textfields (`.spectrum-Textfield-input`)
   - `.spectrum-Combobox-button` is required on the FieldButton (`.spectrum-ActionButton spectrum-ActionButton--sizeM`)
 
-### Component separated from InputGroup
-This component was previously a variant style for InputGroup. **InputGroup is deprecated**. The classes listed below containing `InputGroup` have been renamed or removed:
-- `.spectrum-InputGroup-textfield` -> `.spectrum-Combobox-textfield`
-- `.spectrum-InputGroup-input` -> `.spectrum-Combobox-input`
-- `.spectrum-InputGroup-button` -> `.spectrum-Combobox-button`
-- `.InputGroup` -> removed
-
 ### Indicating validity and focus
 Validity and focus must be bubbled up to the parent so descendants siblings can be styled. Implementations should add the following classes to the `.spectrum-Combobox` parent class in the following situations:
 
