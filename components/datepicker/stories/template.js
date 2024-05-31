@@ -103,23 +103,25 @@ export const Template = ({
 					updateArgs({ isOpen: !isOpen });
 				},
 			})}
-			${Popover({
-				...globals,
-				isOpen: isOpen && !isDisabled && !readOnly,
-				withTip: false,
-				position: "bottom",
-				isQuiet,
-				customStyles: isOpen
-					? {
-							position: "absolute",
-							top: "100%",
-							left: "0",
-							width: undefined,
-					}
-					: {},
-				content: [Calendar(globals)],
-				// @todo this implementation of calendar does not currently display range selections or selected date on first load
-			})}
+			${when(!readOnly && !isDisabled, () => html`
+				${Popover({
+					...globals,
+					isOpen: isOpen && !isDisabled && !readOnly,
+					withTip: false,
+					position: "bottom",
+					isQuiet,
+					customStyles: isOpen
+						? {
+								position: "absolute",
+								top: "100%",
+								left: "0",
+								width: undefined,
+						}
+						: {},
+					content: [Calendar(globals)],
+					// @todo this implementation of calendar does not currently display range selections or selected date on first load
+				})}`
+			)}
 		</div>
 	`;
 };

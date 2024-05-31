@@ -1,0 +1,61 @@
+import { Canvas, ArgTypes, Meta, Description, Title } from '@storybook/blocks';
+
+import * as DatePickerStories from './datepicker.stories';
+
+<Meta of={DatePickerStories} title="Docs" />
+
+<Title of={DatePickerStories} />
+<Description of={DatePickerStories} />
+
+## Usage notes
+### General notes
+- Date picker uses `.spectrum-PickerButton` instead of a `.spectrum-Picker`.
+- Workflow icon size is medium. If your markup is still using the small icon, replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
+## Standard
+
+<Canvas of={DatePickerStories.Default} />
+
+## Quiet
+
+<Canvas of={DatePickerStories.Quiet} />
+
+## Range
+
+### Standard
+
+<Canvas of={DatePickerStories.Range} />
+
+### Quiet
+
+<Canvas of={DatePickerStories.QuietRange} />
+
+## Invalid
+
+### Standard
+
+<Canvas of={DatePickerStories.Invalid} />
+
+### Quiet
+
+<Canvas of={DatePickerStories.QuietInvalid} />
+
+## Read-only
+
+Read-only displays the same for standard and quiet variants.
+
+<Canvas of={DatePickerStories.ReadOnly} />
+
+## Disabled
+
+### Standard
+
+<Canvas of={DatePickerStories.Disabled} />
+
+### Quiet
+
+<Canvas of={DatePickerStories.QuietDisabled} />
+
+## Properties
+
+<ArgTypes />

@@ -88,6 +88,11 @@ export default {
 		status: {
 			type: "migrated",
 		},
+		docs: {
+			story: {
+				height: "200px",
+			},
+		},
 	},
 };
 
@@ -113,4 +118,46 @@ TopPopover.args = {
 	customStyles: { "max-inline-size": "275px" },
 	title: "Top popover example of text wrapping in the title",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+};
+
+/**
+ * Stories for the MDX "Docs" only.
+ */
+export const HelpDefault = Template.bind({});
+HelpDefault.args = {
+	title: "Permission required",
+	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	iconName: "Help",
+};
+HelpDefault.tags = ["docs-only"];
+HelpDefault.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const HelpWithLink = Template.bind({});
+HelpWithLink.args = {
+	title: "Permission required",
+	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	link: {
+		text: "Learn about permissions",
+		url: "#",
+	},
+	iconName: "Help",
+};
+HelpWithLink.tags = ["docs-only"];
+HelpWithLink.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const HelpTopPopover = Template.bind({});
+HelpTopPopover.args = {
+	popoverPlacement: "top",
+	customStyles: { "max-inline-size": "275px" },
+	title: "Top popover example of text wrapping in the title",
+	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+	iconName: "Help",
+};
+HelpTopPopover.tags = ["docs-only"];
+HelpTopPopover.parameters = {
+	chromatic: { disableSnapshot: true },
 };

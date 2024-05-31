@@ -627,3 +627,20 @@ Additionally:
 🗓 2023-03-28
 
 **Note:** Version bump only for package @spectrum-css/datepicker
+
+### Component separated from InputGroup
+
+Date picker was previously a variant within InputGroup. **InputGroup is deprecated**.
+
+These classes containing `InputGroup` have been renamed:
+
+- `.spectrum-Datepicker` -> `.spectrum-DatePicker`
+- `.spectrum-InputGroup-textfield` -> `.spectrum-DatePicker-textfield`
+- `.spectrum-InputGroup-input` -> `.spectrum-DatePicker-input`
+- `.spectrum-InputGroup-button` -> `.spectrum-DatePicker-button`
+- `.spectrum-Datepicker--rangeDash` -> `.spectrum-DatePicker-rangeDash`
+
+And these have been removed:
+
+- `.InputGroup` should be removed from the parent element
+- `.spectrum-Datepicker-focusRing` should be removed
