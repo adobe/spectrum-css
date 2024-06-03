@@ -1,6 +1,7 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { html } from "lit";
 
+export { withActions } from "@storybook/addon-actions/decorator";
 export { withContextWrapper } from "./contextsWrapper.js";
 export { withTestingPreviewWrapper } from "./withTestingPreviewWrapper.js";
 
