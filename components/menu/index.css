@@ -15,7 +15,6 @@ governing permissions and limitations under the License.
 	--spectrum-menu-item-background-color-key-focus: var(--spectrum-menu-item-background-color-keyboard-focus);
 	--spectrum-menu-item-min-height: var(--spectrum-component-height-100);
 	--spectrum-menu-item-corner-rounding: var(--spectrum-corner-radius-500);
-	--spectrum-menu-item-margin: 10px;
 	--spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
 	--spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-100);
 	--spectrum-menu-item-thumbnail-height: var(--spectrum-thumbnail-size-700);
@@ -261,7 +260,9 @@ governing permissions and limitations under the License.
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	overflow: auto;
+
+	/* needed for focus ring to be visible in popover/tray */
+	overflow: visible;
 
 	&:lang(ja),
 	&:lang(zh),
@@ -347,7 +348,7 @@ governing permissions and limitations under the License.
 	padding-block-end: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text));
 	padding-inline: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content));
 
-	margin: var(--spectrum-menu-item-margin);
+	margin: 0;
 	text-decoration: none;
 
 	/* vertically center menu items if there's a thumbnail */
@@ -421,6 +422,7 @@ governing permissions and limitations under the License.
 
 	outline: var(--mod-menu-item-focus-indicator-width, var(--spectrum-menu-item-focus-indicator-width)) solid var(--highcontrast-menu-item-focus-indicator-color, var(--mod-menu-item-focus-indicator-color, var(--spectrum-menu-item-focus-indicator-color)));
 	outline-offset: var(--spectrum-focus-indicator-gap);
+	z-index: 1;
 
 	> .spectrum-Menu-itemLabel {
 		color: var(--highcontrast-menu-item-color-focus, var(--mod-menu-item-label-content-color-focus, var(--spectrum-menu-item-label-content-color-focus)));
