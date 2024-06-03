@@ -76,17 +76,6 @@ CSS assets will be run through their respective postcss configurations. This mea
   import "../index.css";
   ```
 
-If you need to load an asset in your template based on storybook configurations, you can do so using dynamic imports and a webpackPrefetch flag (to prevent FOUC). These will follow the same compilation rules as noted above. i.e.,
-
-  ```js
-  try {
-   if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-   else import(/* webpackPrefetch: true */ "../themes/express.css");
-  } catch (e) {
-   console.warn(e);
-  }
-  ```
-
 We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit for dynamic attribute assignment.
 
 ### Add-ons
@@ -272,7 +261,6 @@ All return values for Template functions should be outputting TemplateResults. S
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
@@ -294,29 +282,21 @@ export const Template = ({
  customClasses = [],
  ...globals
 }) => {
- const { express } = globals;
-
- try {
-  if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-  else import(/* webpackPrefetch: true */ "../themes/express.css");
- } catch (e) {
-  console.warn(e);
- }
-
  return html`
   <div
-   class=${classMap({
-    [rootClass]: true,
-    [`${rootClass}--size${size?.toUpperCase()}`]:
-     typeof size !== "undefined",
-    "is-emphasized": isEmphasized,
-    "is-disabled": isDisabled,
-    "is-invalid": isInvalid,
-    "is-selected": isSelected,
-    ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-   })}
-   id=${ifDefined(id)}
-   tabindex="0"
+    class=${classMap({
+      [rootClass]: true,
+      [`${rootClass}--size${size?.toUpperCase()}`]:
+      typeof size !== "undefined",
+      "is-emphasized": isEmphasized,
+      "is-disabled": isDisabled,
+      "is-invalid": isInvalid,
+      "is-selected": isSelected,
+      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+    })}
+    id=${ifDefined(id)}
+    tabindex=${isDisabled ? "-1" : "0"}
+    style=${ifDefined(styleMap(customStyles))}
   >
    ${avatarUrl && !iconName
     ? Avatar({
