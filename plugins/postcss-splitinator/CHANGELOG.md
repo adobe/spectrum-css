@@ -37,7 +37,7 @@ Upgrade to PostCSS v8 [bd6c40e](https://github.com/adobe/spectrum-css/commit/bd6
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2023-03-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-splitinator@1.0.0-beta.1...postcss-splitinator@1.0.0)
 
@@ -45,7 +45,7 @@ Upgrade to PostCSS v8 [bd6c40e](https://github.com/adobe/spectrum-css/commit/bd6
 
 <a name="1.0.0-beta.2"></a>
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 🗓 2023-03-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-splitinator@1.0.0-beta.1...postcss-splitinator@1.0.0-beta.2)
 
@@ -53,7 +53,7 @@ Upgrade to PostCSS v8 [bd6c40e](https://github.com/adobe/spectrum-css/commit/bd6
 
 <a name="1.0.0-beta.1"></a>
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 🗓 2022-06-16
 

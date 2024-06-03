@@ -31,7 +31,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="8.0.0"></a>
-#8.0.0
+## 8.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.1.4...@spectrum-css/colorhandle@8.0.0)
 
@@ -46,35 +46,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="7.1.4"></a>
-##7.1.4
+## 7.1.4
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.1.3...@spectrum-css/colorhandle@7.1.4)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.1.3"></a>
-##7.1.3
+## 7.1.3
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.1.2...@spectrum-css/colorhandle@7.1.3)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.1.2"></a>
-##7.1.2
+## 7.1.2
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.1.1...@spectrum-css/colorhandle@7.1.2)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.1.1"></a>
-##7.1.1
+## 7.1.1
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.1.0"></a>
-#7.1.0
+## 7.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.17...@spectrum-css/colorhandle@7.1.0)
 
@@ -83,98 +83,98 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="7.0.17"></a>
-##7.0.17
+## 7.0.17
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.16...@spectrum-css/colorhandle@7.0.17)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.16"></a>
-##7.0.16
+## 7.0.16
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.15...@spectrum-css/colorhandle@7.0.16)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.15"></a>
-##7.0.15
+## 7.0.15
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.13...@spectrum-css/colorhandle@7.0.15)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.14"></a>
-##7.0.14
+## 7.0.14
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.13...@spectrum-css/colorhandle@7.0.14)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.13"></a>
-##7.0.13
+## 7.0.13
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.12...@spectrum-css/colorhandle@7.0.13)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.12"></a>
-##7.0.12
+## 7.0.12
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.11...@spectrum-css/colorhandle@7.0.12)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.11"></a>
-##7.0.11
+## 7.0.11
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.10...@spectrum-css/colorhandle@7.0.11)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.10"></a>
-##7.0.10
+## 7.0.10
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.9...@spectrum-css/colorhandle@7.0.10)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.9"></a>
-##7.0.9
+## 7.0.9
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.8...@spectrum-css/colorhandle@7.0.9)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.8"></a>
-##7.0.8
+## 7.0.8
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.7...@spectrum-css/colorhandle@7.0.8)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.7"></a>
-##7.0.7
+## 7.0.7
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.6...@spectrum-css/colorhandle@7.0.7)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.6"></a>
-##7.0.6
+## 7.0.6
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.5...@spectrum-css/colorhandle@7.0.6)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.5"></a>
-##7.0.5
+## 7.0.5
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.4...@spectrum-css/colorhandle@7.0.5)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.4"></a>
-##7.0.4
+## 7.0.4
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.3...@spectrum-css/colorhandle@7.0.4)
 
@@ -183,28 +183,28 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="7.0.3"></a>
-##7.0.3
+## 7.0.3
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.2...@spectrum-css/colorhandle@7.0.3)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.2"></a>
-##7.0.2
+## 7.0.2
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.0...@spectrum-css/colorhandle@7.0.2)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.1"></a>
-##7.0.1
+## 7.0.1
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@7.0.0...@spectrum-css/colorhandle@7.0.1)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="7.0.0"></a>
-#7.0.0
+## 7.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@6.1.2...@spectrum-css/colorhandle@7.0.0)
 
@@ -217,7 +217,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
     		use focus-visible pseudo class for focus styling
 
 <a name="6.1.2"></a>
-##6.1.2
+## 6.1.2
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@6.1.1...@spectrum-css/colorhandle@6.1.2)
 
@@ -226,14 +226,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **colorhandle:**updates animation([0dd3b76](https://github.com/adobe/spectrum-css/commit/0dd3b76))
 
 <a name="6.1.1"></a>
-##6.1.1
+## 6.1.1
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@6.1.0...@spectrum-css/colorhandle@6.1.1)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="6.1.0"></a>
-#6.1.0
+## 6.1.0
 🗓
 2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@6.0.2...@spectrum-css/colorhandle@6.1.0)
 
@@ -242,7 +242,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **colorhandle:**add --mod-colorhandle-hitarea-border-radius([6752132](https://github.com/adobe/spectrum-css/commit/6752132))
 
 <a name="6.0.2"></a>
-##6.0.2
+## 6.0.2
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@6.0.1...@spectrum-css/colorhandle@6.0.2)
 
@@ -251,14 +251,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **opacitycheckboard:**add to component stories ([#2056](https://github.com/adobe/spectrum-css/issues/2056))([a1411f6](https://github.com/adobe/spectrum-css/commit/a1411f6))
 
 <a name="6.0.1"></a>
-##6.0.1
+## 6.0.1
 🗓
 2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@6.0.0...@spectrum-css/colorhandle@6.0.1)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="6.0.0"></a>
-#6.0.0
+## 6.0.0
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.15...@spectrum-css/colorhandle@6.0.0)
 
@@ -307,35 +307,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - chore: update yarn.lock file after rebase
 
 <a name="5.0.15"></a>
-##5.0.15
+## 5.0.15
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.14...@spectrum-css/colorhandle@5.0.15)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="5.0.14"></a>
-##5.0.14
+## 5.0.14
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.13...@spectrum-css/colorhandle@5.0.14)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="5.0.13"></a>
-##5.0.13
+## 5.0.13
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.12...@spectrum-css/colorhandle@5.0.13)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="5.0.12"></a>
-##5.0.12
+## 5.0.12
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.11...@spectrum-css/colorhandle@5.0.12)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="5.0.11"></a>
-##5.0.11
+## 5.0.11
 🗓
 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.10...@spectrum-css/colorhandle@5.0.11)
 
@@ -344,21 +344,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **colorloupe:**border bug ([#1958](https://github.com/adobe/spectrum-css/issues/1958))([559696f](https://github.com/adobe/spectrum-css/commit/559696f))
 
 <a name="5.0.10"></a>
-##5.0.10
+## 5.0.10
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.9...@spectrum-css/colorhandle@5.0.10)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="5.0.9"></a>
-##5.0.9
+## 5.0.9
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.8...@spectrum-css/colorhandle@5.0.9)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="5.0.8"></a>
-##5.0.8
+## 5.0.8
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.7...@spectrum-css/colorhandle@5.0.8)
 
@@ -367,14 +367,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="5.0.7"></a>
-##5.0.7
+## 5.0.7
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.6...@spectrum-css/colorhandle@5.0.7)
 
 **Note:** Version bump only for package @spectrum-css/colorhandle
 
 <a name="5.0.6"></a>
-##5.0.6
+## 5.0.6
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@5.0.5...@spectrum-css/colorhandle@5.0.6)
 
@@ -422,7 +422,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@4.0.11...@spectrum-css/colorhandle@5.0.0)
 
@@ -527,7 +527,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@4.0.0-beta.2...@spectrum-css/colorhandle@4.0.0)
 
@@ -535,7 +535,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0-beta.2"></a>
 
-# 4.0.0-beta.2
+## 4.0.0-beta.2
 
 🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@3.0.6...@spectrum-css/colorhandle@4.0.0-beta.2)
 
@@ -595,7 +595,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@2.0.16...@spectrum-css/colorhandle@3.0.0)
 
@@ -735,7 +735,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@1.0.13...@spectrum-css/colorhandle@2.0.0)
 
@@ -910,7 +910,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@1.0.0-beta.4...@spectrum-css/colorhandle@1.0.0)
 
@@ -918,7 +918,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.4"></a>
 
-# 1.0.0-beta.4
+## 1.0.0-beta.4
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@1.0.0-beta.3...@spectrum-css/colorhandle@1.0.0-beta.4)
 
@@ -928,7 +928,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.3"></a>
 
-# 1.0.0-beta.3
+## 1.0.0-beta.3
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@1.0.0-beta.2...@spectrum-css/colorhandle@1.0.0-beta.3)
 
@@ -936,7 +936,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.2"></a>
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorhandle@1.0.0-beta.1...@spectrum-css/colorhandle@1.0.0-beta.2)
 
@@ -944,7 +944,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.1"></a>
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 🗓 2020-05-14
 

@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-#5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.2.4...@spectrum-css/infieldbutton@5.0.0)
 
@@ -44,42 +44,42 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="4.2.4"></a>
-##4.2.4
+## 4.2.4
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.2.3...@spectrum-css/infieldbutton@4.2.4)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.2.3"></a>
-##4.2.3
+## 4.2.3
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.2.2...@spectrum-css/infieldbutton@4.2.3)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.2.2"></a>
-##4.2.2
+## 4.2.2
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.2.1...@spectrum-css/infieldbutton@4.2.2)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.2.1"></a>
-##4.2.1
+## 4.2.1
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.2.0"></a>
-#4.2.0
+## 4.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.1.0...@spectrum-css/infieldbutton@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.1.0"></a>
-#4.1.0
+## 4.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.6...@spectrum-css/infieldbutton@4.1.0)
 
@@ -94,7 +94,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
   **stepper:**infieldbutton isnt focusable in stepper([4529874](https://github.com/adobe/spectrum-css/commit/4529874))
 
 <a name="4.0.6"></a>
-##4.0.6
+## 4.0.6
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.5...@spectrum-css/infieldbutton@4.0.6)
 
@@ -104,42 +104,42 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
   **stepper:**no longer touches InfieldButton classes ([#2300](https://github.com/adobe/spectrum-css/issues/2300))([a82b8ad](https://github.com/adobe/spectrum-css/commit/a82b8ad))
 
 <a name="4.0.5"></a>
-##4.0.5
+## 4.0.5
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.4...@spectrum-css/infieldbutton@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.0.4"></a>
-##4.0.4
+## 4.0.4
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.2...@spectrum-css/infieldbutton@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.0.3"></a>
-##4.0.3
+## 4.0.3
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.2...@spectrum-css/infieldbutton@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.0.2"></a>
-##4.0.2
+## 4.0.2
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.1...@spectrum-css/infieldbutton@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.0.1"></a>
-##4.0.1
+## 4.0.1
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.0...@spectrum-css/infieldbutton@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.0.0"></a>
-#4.0.0
+## 4.0.0
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.14...@spectrum-css/infieldbutton@4.0.0)
 
@@ -262,49 +262,49 @@ Also needed to add border width to calc, so that 4 chars appear before
 ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.14"></a>
-##3.0.14
+## 3.0.14
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.13...@spectrum-css/infieldbutton@3.0.14)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.13"></a>
-##3.0.13
+## 3.0.13
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.12...@spectrum-css/infieldbutton@3.0.13)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.12"></a>
-##3.0.12
+## 3.0.12
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.11...@spectrum-css/infieldbutton@3.0.12)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.11"></a>
-##3.0.11
+## 3.0.11
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.10...@spectrum-css/infieldbutton@3.0.11)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.10"></a>
-##3.0.10
+## 3.0.10
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.9...@spectrum-css/infieldbutton@3.0.10)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.9"></a>
-##3.0.9
+## 3.0.9
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.8...@spectrum-css/infieldbutton@3.0.9)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.8"></a>
-##3.0.8
+## 3.0.8
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.7...@spectrum-css/infieldbutton@3.0.8)
 
@@ -313,56 +313,56 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="3.0.7"></a>
-##3.0.7
+## 3.0.7
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.6...@spectrum-css/infieldbutton@3.0.7)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.6"></a>
-##3.0.6
+## 3.0.6
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.4...@spectrum-css/infieldbutton@3.0.6)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.5"></a>
-##3.0.5
+## 3.0.5
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.4...@spectrum-css/infieldbutton@3.0.5)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.4"></a>
-##3.0.4
+## 3.0.4
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.3...@spectrum-css/infieldbutton@3.0.4)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.3"></a>
-##3.0.3
+## 3.0.3
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.2...@spectrum-css/infieldbutton@3.0.3)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.2"></a>
-##3.0.2
+## 3.0.2
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.1...@spectrum-css/infieldbutton@3.0.2)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.1"></a>
-##3.0.1
+## 3.0.1
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.0...@spectrum-css/infieldbutton@3.0.1)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.0"></a>
-#3.0.0
+## 3.0.0
 🗓
 2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.27...@spectrum-css/infieldbutton@3.0.0)
 
@@ -377,7 +377,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 docs(infieldbutton): remove small stacked variant from docs
 
 <a name="2.0.27"></a>
-##2.0.27
+## 2.0.27
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.26...@spectrum-css/infieldbutton@2.0.27)
 
@@ -386,21 +386,21 @@ docs(infieldbutton): remove small stacked variant from docs
 \*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 <a name="2.0.26"></a>
-##2.0.26
+## 2.0.26
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.25...@spectrum-css/infieldbutton@2.0.26)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="2.0.25"></a>
-##2.0.25
+## 2.0.25
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.24...@spectrum-css/infieldbutton@2.0.25)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="2.0.24"></a>
-##2.0.24
+## 2.0.24
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.23...@spectrum-css/infieldbutton@2.0.24)
 
@@ -409,14 +409,14 @@ docs(infieldbutton): remove small stacked variant from docs
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="2.0.23"></a>
-##2.0.23
+## 2.0.23
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.22...@spectrum-css/infieldbutton@2.0.23)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="2.0.22"></a>
-##2.0.22
+## 2.0.22
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.21...@spectrum-css/infieldbutton@2.0.22)
 
@@ -592,7 +592,7 @@ docs(infieldbutton): remove small stacked variant from docs
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@1.1.9...@spectrum-css/infieldbutton@2.0.0)
 
@@ -676,7 +676,7 @@ docs(infieldbutton): remove small stacked variant from docs
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2022-02-16
 

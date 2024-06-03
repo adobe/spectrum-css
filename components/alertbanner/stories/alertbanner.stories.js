@@ -7,7 +7,7 @@ import { Template } from "./template";
  * The alert banner show pressing and high-signal messages, such as system alerts. They're meant to be noticed and prompt users to take action.
  */
 export default {
-	title: "r",
+	title: "Alert banner",
 	component: "AlertBanner",
 	argTypes: {
 		isOpen: {

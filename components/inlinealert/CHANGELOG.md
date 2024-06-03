@@ -31,7 +31,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="8.0.0"></a>
-#8.0.0
+## 8.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.1.6...@spectrum-css/inlinealert@8.0.0)
 
@@ -46,49 +46,49 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="7.1.6"></a>
-##7.1.6
+## 7.1.6
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.1.5...@spectrum-css/inlinealert@7.1.6)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.1.5"></a>
-##7.1.5
+## 7.1.5
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.1.4...@spectrum-css/inlinealert@7.1.5)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.1.4"></a>
-##7.1.4
+## 7.1.4
 🗓
 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.1.3...@spectrum-css/inlinealert@7.1.4)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.1.3"></a>
-##7.1.3
+## 7.1.3
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.1.2...@spectrum-css/inlinealert@7.1.3)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.1.2"></a>
-##7.1.2
+## 7.1.2
 🗓
 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.1.1...@spectrum-css/inlinealert@7.1.2)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.1.1"></a>
-##7.1.1
+## 7.1.1
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.1.0"></a>
-#7.1.0
+## 7.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.56...@spectrum-css/inlinealert@7.1.0)
 
@@ -97,105 +97,105 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="7.0.56"></a>
-##7.0.56
+## 7.0.56
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.55...@spectrum-css/inlinealert@7.0.56)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.55"></a>
-##7.0.55
+## 7.0.55
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.54...@spectrum-css/inlinealert@7.0.55)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.54"></a>
-##7.0.54
+## 7.0.54
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.52...@spectrum-css/inlinealert@7.0.54)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.53"></a>
-##7.0.53
+## 7.0.53
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.52...@spectrum-css/inlinealert@7.0.53)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.52"></a>
-##7.0.52
+## 7.0.52
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.51...@spectrum-css/inlinealert@7.0.52)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.51"></a>
-##7.0.51
+## 7.0.51
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.50...@spectrum-css/inlinealert@7.0.51)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.50"></a>
-##7.0.50
+## 7.0.50
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.49...@spectrum-css/inlinealert@7.0.50)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.49"></a>
-##7.0.49
+## 7.0.49
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.48...@spectrum-css/inlinealert@7.0.49)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.48"></a>
-##7.0.48
+## 7.0.48
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.47...@spectrum-css/inlinealert@7.0.48)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.47"></a>
-##7.0.47
+## 7.0.47
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.46...@spectrum-css/inlinealert@7.0.47)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.46"></a>
-##7.0.46
+## 7.0.46
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.45...@spectrum-css/inlinealert@7.0.46)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.45"></a>
-##7.0.45
+## 7.0.45
 🗓
 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.44...@spectrum-css/inlinealert@7.0.45)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.44"></a>
-##7.0.44
+## 7.0.44
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.43...@spectrum-css/inlinealert@7.0.44)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.43"></a>
-##7.0.43
+## 7.0.43
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.42...@spectrum-css/inlinealert@7.0.43)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.42"></a>
-##7.0.42
+## 7.0.42
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.41...@spectrum-css/inlinealert@7.0.42)
 
@@ -204,105 +204,105 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="7.0.41"></a>
-##7.0.41
+## 7.0.41
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.40...@spectrum-css/inlinealert@7.0.41)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.40"></a>
-##7.0.40
+## 7.0.40
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.38...@spectrum-css/inlinealert@7.0.40)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.39"></a>
-##7.0.39
+## 7.0.39
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.38...@spectrum-css/inlinealert@7.0.39)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.38"></a>
-##7.0.38
+## 7.0.38
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.37...@spectrum-css/inlinealert@7.0.38)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.37"></a>
-##7.0.37
+## 7.0.37
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.36...@spectrum-css/inlinealert@7.0.37)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.36"></a>
-##7.0.36
+## 7.0.36
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.35...@spectrum-css/inlinealert@7.0.36)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.35"></a>
-##7.0.35
+## 7.0.35
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.34...@spectrum-css/inlinealert@7.0.35)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.34"></a>
-##7.0.34
+## 7.0.34
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.33...@spectrum-css/inlinealert@7.0.34)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.33"></a>
-##7.0.33
+## 7.0.33
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.32...@spectrum-css/inlinealert@7.0.33)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.32"></a>
-##7.0.32
+## 7.0.32
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.31...@spectrum-css/inlinealert@7.0.32)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.31"></a>
-##7.0.31
+## 7.0.31
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.30...@spectrum-css/inlinealert@7.0.31)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.30"></a>
-##7.0.30
+## 7.0.30
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.29...@spectrum-css/inlinealert@7.0.30)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.29"></a>
-##7.0.29
+## 7.0.29
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.28...@spectrum-css/inlinealert@7.0.29)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.28"></a>
-##7.0.28
+## 7.0.28
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.27...@spectrum-css/inlinealert@7.0.28)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.27"></a>
-##7.0.27
+## 7.0.27
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.26...@spectrum-css/inlinealert@7.0.27)
 
@@ -311,14 +311,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="7.0.26"></a>
-##7.0.26
+## 7.0.26
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.25...@spectrum-css/inlinealert@7.0.26)
 
 **Note:** Version bump only for package @spectrum-css/inlinealert
 
 <a name="7.0.25"></a>
-##7.0.25
+## 7.0.25
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@7.0.24...@spectrum-css/inlinealert@7.0.25)
 
@@ -518,7 +518,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="7.0.0"></a>
 
-# 7.0.0
+## 7.0.0
 
 🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@6.0.11...@spectrum-css/inlinealert@7.0.0)
 
@@ -620,7 +620,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="6.0.0"></a>
 
-# 6.0.0
+## 6.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@5.0.16...@spectrum-css/inlinealert@6.0.0)
 
@@ -762,7 +762,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2022-10-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@4.0.13...@spectrum-css/inlinealert@5.0.0)
 
@@ -880,7 +880,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.6...@spectrum-css/inlinealert@4.0.0)
 
@@ -898,7 +898,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@3.0.0-beta.0...@spectrum-css/inlinealert@3.0.0)
 
@@ -906,7 +906,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.6...@spectrum-css/inlinealert@3.0.0-beta.0)
 
@@ -972,7 +972,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.0-alpha.2...@spectrum-css/inlinealert@2.0.0)
 
@@ -982,7 +982,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0-alpha.2"></a>
 
-# 2.0.0-alpha.2
+## 2.0.0-alpha.2
 
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.0-alpha.1...@spectrum-css/inlinealert@2.0.0-alpha.2)
 
@@ -990,7 +990,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0-alpha.1"></a>
 
-# 2.0.0-alpha.1
+## 2.0.0-alpha.1
 
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@2.0.0-alpha.0...@spectrum-css/inlinealert@2.0.0-alpha.1)
 
@@ -998,7 +998,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0-alpha.0"></a>
 
-# 2.0.0-alpha.0
+## 2.0.0-alpha.0
 
 🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/inlinealert@1.1.1-alpha.0...@spectrum-css/inlinealert@2.0.0-alpha.0)
 
@@ -1023,7 +1023,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2021-04-15
 
@@ -1033,7 +1033,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/alert@3.0.0-beta.2...@spectrum-css/alert@3.0.0-beta.3)
 
@@ -1041,7 +1041,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/alert@3.0.0-beta.1...@spectrum-css/alert@3.0.0-beta.2)
 
@@ -1049,7 +1049,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/alert@3.0.0-beta.0...@spectrum-css/alert@3.0.0-beta.1)
 
@@ -1057,7 +1057,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/alert@2.0.5...@spectrum-css/alert@3.0.0-beta.0)
 
@@ -1108,7 +1108,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 
