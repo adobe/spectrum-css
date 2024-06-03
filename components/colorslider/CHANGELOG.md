@@ -31,7 +31,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.1.5...@spectrum-css/colorslider@6.0.0)
 
@@ -81,7 +81,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/colorslider
 
 <a name="5.1.0"></a>
-# 5.1.0
+## 5.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@5.0.14...@spectrum-css/colorslider@5.1.0)
 
@@ -188,7 +188,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/colorslider
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@4.0.9...@spectrum-css/colorslider@5.0.0)
 
@@ -434,7 +434,7 @@ Update devDependencies to use latest version of tokens package.
 **Note:** Version bump only for package @spectrum-css/colorslider
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@3.0.23...@spectrum-css/colorslider@4.0.0)
 
@@ -662,7 +662,7 @@ Update devDependencies to use latest version of tokens package.
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@2.0.24...@spectrum-css/colorslider@3.0.0)
 
@@ -866,7 +866,7 @@ Update devDependencies to use latest version of tokens package.
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-02-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@1.0.13...@spectrum-css/colorslider@2.0.0)
 
@@ -1041,7 +1041,7 @@ Update devDependencies to use latest version of tokens package.
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@1.0.0-beta.5...@spectrum-css/colorslider@1.0.0)
 
@@ -1049,7 +1049,7 @@ Update devDependencies to use latest version of tokens package.
 
 <a name="1.0.0-beta.5"></a>
 
-# 1.0.0-beta.5
+## 1.0.0-beta.5
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@1.0.0-beta.4...@spectrum-css/colorslider@1.0.0-beta.5)
 
@@ -1059,7 +1059,7 @@ Update devDependencies to use latest version of tokens package.
 
 <a name="1.0.0-beta.4"></a>
 
-# 1.0.0-beta.4
+## 1.0.0-beta.4
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@1.0.0-beta.3...@spectrum-css/colorslider@1.0.0-beta.4)
 
@@ -1067,7 +1067,7 @@ Update devDependencies to use latest version of tokens package.
 
 <a name="1.0.0-beta.3"></a>
 
-# 1.0.0-beta.3
+## 1.0.0-beta.3
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@1.0.0-beta.2...@spectrum-css/colorslider@1.0.0-beta.3)
 
@@ -1077,7 +1077,7 @@ Update devDependencies to use latest version of tokens package.
 
 <a name="1.0.0-beta.2"></a>
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorslider@1.0.0-beta.1...@spectrum-css/colorslider@1.0.0-beta.2)
 
@@ -1085,7 +1085,7 @@ Update devDependencies to use latest version of tokens package.
 
 <a name="1.0.0-beta.1"></a>
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 🗓 2020-05-14
 

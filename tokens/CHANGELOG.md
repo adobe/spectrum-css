@@ -43,7 +43,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="14.0.0"></a>
-# 14.0.0
+## 14.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.2.0...@spectrum-css/tokens@14.0.0)
 
@@ -58,7 +58,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="13.2.0"></a>
-# 13.2.0
+## 13.2.0
 🗓
 2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.1.2...@spectrum-css/tokens@13.2.0)
 
@@ -81,7 +81,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.1.0"></a>
-# 13.1.0
+## 13.1.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@13.0.9...@spectrum-css/tokens@13.1.0)
 
@@ -144,7 +144,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="13.0.0"></a>
-# 13.0.0
+## 13.0.0
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@12.0.0...@spectrum-css/tokens@13.0.0)
 
@@ -164,7 +164,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
       		migrate asset card to updated token system
 
 <a name="12.0.0"></a>
-# 12.0.0
+## 12.0.0
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.4.0...@spectrum-css/tokens@12.0.0)
 
@@ -195,7 +195,7 @@ chore: updated css properties
 - docs(modal): regenerate mods
 
 <a name="11.4.0"></a>
-# 11.4.0
+## 11.4.0
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.3.7...@spectrum-css/tokens@11.4.0)
 
@@ -255,7 +255,7 @@ chore: updated css properties
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.3.0"></a>
-# 11.3.0
+## 11.3.0
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.2.2...@spectrum-css/tokens@11.3.0)
 
@@ -278,7 +278,7 @@ chore: updated css properties
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.2.0"></a>
-# 11.2.0
+## 11.2.0
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.1.0...@spectrum-css/tokens@11.2.0)
 
@@ -291,7 +291,7 @@ chore: updated css properties
 \*revert prettier ([#2074](https://github.com/adobe/spectrum-css/issues/2074))([ebb98df](https://github.com/adobe/spectrum-css/commit/ebb98df))
 
 <a name="11.1.0"></a>
-# 11.1.0
+## 11.1.0
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@11.0.2...@spectrum-css/tokens@11.1.0)
 
@@ -314,7 +314,7 @@ chore: updated css properties
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="11.0.0"></a>
-# 11.0.0
+## 11.0.0
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.2.2...@spectrum-css/tokens@11.0.0)
 
@@ -350,7 +350,7 @@ chore: updated css properties
 **Note:** Version bump only for package @spectrum-css/tokens
 
 <a name="10.2.0"></a>
-# 10.2.0
+## 10.2.0
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.1.2...@spectrum-css/tokens@10.2.0)
 
@@ -375,7 +375,7 @@ chore: updated css properties
 
 <a name="10.1.0"></a>
 
-# 10.1.0
+## 10.1.0
 
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@10.0.0...@spectrum-css/tokens@10.1.0)
 
@@ -385,7 +385,7 @@ chore: updated css properties
 
 <a name="10.0.0"></a>
 
-# 10.0.0
+## 10.0.0
 
 🗓 2023-05-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.3.0...@spectrum-css/tokens@10.0.0)
 
@@ -402,7 +402,7 @@ chore: updated css properties
 
 <a name="9.3.0"></a>
 
-# 9.3.0
+## 9.3.0
 
 🗓 2023-05-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.2.0...@spectrum-css/tokens@9.3.0)
 
@@ -412,7 +412,7 @@ chore: updated css properties
 
 <a name="9.2.0"></a>
 
-# 9.2.0
+## 9.2.0
 
 🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.1.0...@spectrum-css/tokens@9.2.0)
 
@@ -422,7 +422,7 @@ chore: updated css properties
 
 <a name="9.1.0"></a>
 
-# 9.1.0
+## 9.1.0
 
 🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.4...@spectrum-css/tokens@9.1.0)
 
@@ -464,7 +464,7 @@ chore: updated css properties
 
 <a name="9.0.0"></a>
 
-# 9.0.0
+## 9.0.0
 
 🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.1.1...@spectrum-css/tokens@9.0.0)
 
@@ -489,7 +489,7 @@ chore: updated css properties
 
 <a name="8.1.0"></a>
 
-# 8.1.0
+## 8.1.0
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.0.4...@spectrum-css/tokens@8.1.0)
 
@@ -531,7 +531,7 @@ chore: updated css properties
 
 <a name="8.0.0"></a>
 
-# 8.0.0
+## 8.0.0
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.7.0...@spectrum-css/tokens@8.0.0)
 
@@ -545,7 +545,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.7.0"></a>
 
-# 7.7.0
+## 7.7.0
 
 🗓 2023-03-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.6.1...@spectrum-css/tokens@7.7.0)
 
@@ -565,7 +565,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.6.0"></a>
 
-# 7.6.0
+## 7.6.0
 
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.5.1...@spectrum-css/tokens@7.6.0)
 
@@ -583,7 +583,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.5.0"></a>
 
-# 7.5.0
+## 7.5.0
 
 🗓 2023-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.4.0...@spectrum-css/tokens@7.5.0)
 
@@ -593,7 +593,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.4.0"></a>
 
-# 7.4.0
+## 7.4.0
 
 🗓 2023-03-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.3.0...@spectrum-css/tokens@7.4.0)
 
@@ -603,7 +603,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.3.0"></a>
 
-# 7.3.0
+## 7.3.0
 
 🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.2.0...@spectrum-css/tokens@7.3.0)
 
@@ -613,7 +613,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.2.0"></a>
 
-# 7.2.0
+## 7.2.0
 
 🗓 2023-02-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.1.0...@spectrum-css/tokens@7.2.0)
 
@@ -623,7 +623,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.1.0"></a>
 
-# 7.1.0
+## 7.1.0
 
 🗓 2023-02-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@7.0.0...@spectrum-css/tokens@7.1.0)
 
@@ -633,7 +633,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="7.0.0"></a>
 
-# 7.0.0
+## 7.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.3.0...@spectrum-css/tokens@7.0.0)
 
@@ -645,7 +645,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="6.3.0"></a>
 
-# 6.3.0
+## 6.3.0
 
 🗓 2023-01-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.2.2...@spectrum-css/tokens@6.3.0)
 
@@ -671,7 +671,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="6.2.0"></a>
 
-# 6.2.0
+## 6.2.0
 
 🗓 2023-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.1.0...@spectrum-css/tokens@6.2.0)
 
@@ -681,7 +681,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="6.1.0"></a>
 
-# 6.1.0
+## 6.1.0
 
 🗓 2022-12-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@6.0.0...@spectrum-css/tokens@6.1.0)
 
@@ -691,7 +691,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="6.0.0"></a>
 
-# 6.0.0
+## 6.0.0
 
 🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@5.0.0...@spectrum-css/tokens@6.0.0)
 
@@ -707,7 +707,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2022-11-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@4.0.0...@spectrum-css/tokens@5.0.0)
 
@@ -719,7 +719,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@3.0.0...@spectrum-css/tokens@4.0.0)
 
@@ -738,7 +738,7 @@ Full release notes can be found here: https://github.com/adobe/spectrum-tokens/r
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@2.0.0...@spectrum-css/tokens@3.0.0)
 
@@ -752,7 +752,7 @@ Also, adds t-shirt sizes
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@1.0.8...@spectrum-css/tokens@2.0.0)
 
@@ -830,7 +830,7 @@ Also, adds t-shirt sizes
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2022-06-16
 

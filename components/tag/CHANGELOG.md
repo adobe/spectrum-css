@@ -33,7 +33,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="9.0.0"></a>
-# 9.0.0
+## 9.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.1.5...@spectrum-css/tag@9.0.0)
 
@@ -83,7 +83,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/tag
 
 <a name="8.1.0"></a>
-# 8.1.0
+## 8.1.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@8.0.17...@spectrum-css/tag@8.1.0)
 
@@ -213,7 +213,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/tag
 
 <a name="8.0.0"></a>
-# 8.0.0
+## 8.0.0
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@8.0.0)
 
@@ -233,7 +233,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - add aria-labels
 
 <a name="7.0.0"></a>
-# 7.0.0
+## 7.0.0
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@6.0.1...@spectrum-css/tag@7.0.0)
 
@@ -260,7 +260,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/tag
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@5.0.46...@spectrum-css/tag@6.0.0)
 
@@ -643,7 +643,7 @@ Additionally:
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@4.0.9...@spectrum-css/tag@5.0.0)
 
@@ -727,7 +727,7 @@ Additionally:
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-12-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.3.15...@spectrum-css/tag@4.0.0)
 
@@ -868,7 +868,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.3.0"></a>
 
-# 3.3.0
+## 3.3.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.1.4...@spectrum-css/tag@3.3.0)
 
@@ -882,7 +882,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.2.0"></a>
 
-# 3.2.0
+## 3.2.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.2.0-beta.0...@spectrum-css/tag@3.2.0)
 
@@ -890,7 +890,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.2.0-beta.0"></a>
 
-# 3.2.0-beta.0
+## 3.2.0-beta.0
 
 🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.1.4...@spectrum-css/tag@3.2.0-beta.0)
 
@@ -932,7 +932,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.1.0"></a>
 
-# 3.1.0
+## 3.1.0
 
 🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@3.0.0...@spectrum-css/tag@3.1.0)
 
@@ -942,7 +942,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.3...@spectrum-css/tag@3.0.0)
 
@@ -960,7 +960,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.3...@spectrum-css/tag@2.0.0)
 
@@ -970,7 +970,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0-alpha.3"></a>
 
-# 2.0.0-alpha.3
+## 2.0.0-alpha.3
 
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.2...@spectrum-css/tag@2.0.0-alpha.3)
 
@@ -978,7 +978,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0-alpha.2"></a>
 
-# 2.0.0-alpha.2
+## 2.0.0-alpha.2
 
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.1...@spectrum-css/tag@2.0.0-alpha.2)
 
@@ -986,7 +986,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0-alpha.1"></a>
 
-# 2.0.0-alpha.1
+## 2.0.0-alpha.1
 
 🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tag@2.0.0-alpha.0...@spectrum-css/tag@2.0.0-alpha.1)
 
@@ -994,7 +994,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0-alpha.0"></a>
 
-# 2.0.0-alpha.0
+## 2.0.0-alpha.0
 
 🗓 2021-04-27
 

@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.2.4...@spectrum-css/underlay@4.0.0)
 
@@ -68,7 +68,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/underlay
 
 <a name="3.2.0"></a>
-# 3.2.0
+## 3.2.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.1.0...@spectrum-css/underlay@3.2.0)
 
@@ -77,7 +77,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **overlay,commons:**deprecate overlay; migrate references to commons ([#2429](https://github.com/adobe/spectrum-css/issues/2429))([7eecd96](https://github.com/adobe/spectrum-css/commit/7eecd96))
 
 <a name="3.1.0"></a>
-# 3.1.0
+## 3.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@3.0.13...@spectrum-css/underlay@3.1.0)
 
@@ -177,7 +177,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/underlay
 
 <a name="3.0.0"></a>
-# 3.0.0
+## 3.0.0
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.1.0...@spectrum-css/underlay@3.0.0)
 
@@ -222,7 +222,7 @@ Additionally:
 - chore(underlay): remove skin import
 
 <a name="2.1.0"></a>
-# 2.1.0
+## 2.1.0
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/underlay@2.0.54...@spectrum-css/underlay@2.1.0)
 
@@ -723,7 +723,7 @@ Additionally:
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="3.0.0"></a>
-# 3.0.0
+## 3.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@2.2.4...@spectrum-css/dial@3.0.0)
 
@@ -68,14 +68,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/dial
 
 <a name="2.2.0"></a>
-# 2.2.0
+## 2.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@2.1.0...@spectrum-css/dial@2.2.0)
 
 **Note:** Version bump only for package @spectrum-css/dial
 
 <a name="2.1.0"></a>
-# 2.1.0
+## 2.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@2.0.5...@spectrum-css/dial@2.1.0)
 
@@ -119,7 +119,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/dial
 
 <a name="2.0.0"></a>
-# 2.0.0
+## 2.0.0
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@1.0.55...@spectrum-css/dial@2.0.0)
 
@@ -636,7 +636,7 @@ Uses correct colors & removes duplicate properties
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@1.0.0-beta.4...@spectrum-css/dial@1.0.0)
 
@@ -644,7 +644,7 @@ Uses correct colors & removes duplicate properties
 
 <a name="1.0.0-beta.4"></a>
 
-# 1.0.0-beta.4
+## 1.0.0-beta.4
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@1.0.0-beta.3...@spectrum-css/dial@1.0.0-beta.4)
 
@@ -654,7 +654,7 @@ Uses correct colors & removes duplicate properties
 
 <a name="1.0.0-beta.3"></a>
 
-# 1.0.0-beta.3
+## 1.0.0-beta.3
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dial@1.0.0-beta.2...@spectrum-css/dial@1.0.0-beta.3)
 
@@ -662,7 +662,7 @@ Uses correct colors & removes duplicate properties
 
 <a name="1.0.0-beta.2"></a>
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 🗓 2020-09-23
 

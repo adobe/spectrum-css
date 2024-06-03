@@ -41,7 +41,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.1.5...@spectrum-css/stepper@6.0.0)
 
@@ -91,7 +91,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="5.1.0"></a>
-# 5.1.0
+## 5.1.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@5.0.7...@spectrum-css/stepper@5.1.0)
 
@@ -158,7 +158,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/stepper
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@4.0.59...@spectrum-css/stepper@5.0.0)
 
@@ -741,7 +741,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.39...@spectrum-css/stepper@4.0.0)
 
@@ -764,7 +764,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="4.0.0-beta.4"></a>
 
-# 4.0.0-beta.4
+## 4.0.0-beta.4
 
 🗓 2023-03-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.39...@spectrum-css/stepper@4.0.0-beta.4)
 
@@ -1154,7 +1154,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.0-beta.7...@spectrum-css/stepper@3.0.0)
 
@@ -1162,7 +1162,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.0-beta.7"></a>
 
-# 3.0.0-beta.7
+## 3.0.0-beta.7
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.0-beta.6...@spectrum-css/stepper@3.0.0-beta.7)
 
@@ -1182,7 +1182,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.0-beta.6"></a>
 
-# 3.0.0-beta.6
+## 3.0.0-beta.6
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.0-beta.5...@spectrum-css/stepper@3.0.0-beta.6)
 
@@ -1190,7 +1190,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.0-beta.5"></a>
 
-# 3.0.0-beta.5
+## 3.0.0-beta.5
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.0-beta.4...@spectrum-css/stepper@3.0.0-beta.5)
 
@@ -1198,7 +1198,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.0-beta.4"></a>
 
-# 3.0.0-beta.4
+## 3.0.0-beta.4
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.0-beta.3...@spectrum-css/stepper@3.0.0-beta.4)
 
@@ -1206,7 +1206,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.0-beta.2...@spectrum-css/stepper@3.0.0-beta.3)
 
@@ -1214,7 +1214,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.0-beta.1...@spectrum-css/stepper@3.0.0-beta.2)
 
@@ -1222,7 +1222,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@3.0.0-beta.0...@spectrum-css/stepper@3.0.0-beta.1)
 
@@ -1242,7 +1242,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/stepper@2.0.6...@spectrum-css/stepper@3.0.0-beta.0)
 
@@ -1300,7 +1300,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

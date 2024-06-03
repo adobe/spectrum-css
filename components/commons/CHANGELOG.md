@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="10.0.0"></a>
-# 10.0.0
+## 10.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.1.2...@spectrum-css/commons@10.0.0)
 
@@ -39,7 +39,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/commons
 
 <a name="9.1.0"></a>
-# 9.1.0
+## 9.1.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@9.0.2...@spectrum-css/commons@9.1.0)
 
@@ -66,7 +66,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/commons
 
 <a name="9.0.0"></a>
-# 9.0.0
+## 9.0.0
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@8.0.1...@spectrum-css/commons@9.0.0)
 
@@ -90,7 +90,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/commons
 
 <a name="8.0.0"></a>
-# 8.0.0
+## 8.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@7.0.8...@spectrum-css/commons@8.0.0)
 
@@ -168,7 +168,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="7.0.0"></a>
 
-# 7.0.0
+## 7.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@6.0.0...@spectrum-css/commons@7.0.0)
 
@@ -180,7 +180,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="6.0.0"></a>
 
-# 6.0.0
+## 6.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@4.0.2...@spectrum-css/commons@6.0.0)
 
@@ -192,7 +192,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2023-01-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@5.0.0-beta.0...@spectrum-css/commons@5.0.0)
 
@@ -204,7 +204,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.1.0-beta.0"></a>
 
-# 4.1.0-beta.0
+## 4.1.0-beta.0
 
 🗓 2023-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@4.0.2...@spectrum-css/commons@4.1.0-beta.0)
 
@@ -230,7 +230,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@3.0.6...@spectrum-css/commons@4.0.0)
 
@@ -315,7 +315,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@2.1.0...@spectrum-css/commons@3.0.0)
 
@@ -330,7 +330,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.1.0"></a>
 
-# 2.1.0
+## 2.1.0
 
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/commons@2.0.0...@spectrum-css/commons@2.1.0)
 
@@ -340,7 +340,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

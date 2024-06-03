@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.2.4...@spectrum-css/infieldbutton@5.0.0)
 
@@ -72,14 +72,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.2.0"></a>
-# 4.2.0
+## 4.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.1.0...@spectrum-css/infieldbutton@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.1.0"></a>
-# 4.1.0
+## 4.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@4.0.6...@spectrum-css/infieldbutton@4.1.0)
 
@@ -139,7 +139,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@3.0.14...@spectrum-css/infieldbutton@4.0.0)
 
@@ -362,7 +362,7 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 **Note:** Version bump only for package @spectrum-css/infieldbutton
 
 <a name="3.0.0"></a>
-# 3.0.0
+## 3.0.0
 🗓
 2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@2.0.27...@spectrum-css/infieldbutton@3.0.0)
 
@@ -592,7 +592,7 @@ docs(infieldbutton): remove small stacked variant from docs
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/infieldbutton@1.1.9...@spectrum-css/infieldbutton@2.0.0)
 
@@ -676,7 +676,7 @@ docs(infieldbutton): remove small stacked variant from docs
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2022-02-16
 

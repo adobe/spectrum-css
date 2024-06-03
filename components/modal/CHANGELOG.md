@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.2.6...@spectrum-css/modal@5.0.0)
 
@@ -82,7 +82,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/modal
 
 <a name="4.2.0"></a>
-# 4.2.0
+## 4.2.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.1.0...@spectrum-css/modal@4.2.0)
 
@@ -92,7 +92,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 **overlay,commons:**deprecate overlay; migrate references to commons ([#2429](https://github.com/adobe/spectrum-css/issues/2429))([7eecd96](https://github.com/adobe/spectrum-css/commit/7eecd96))
 
 <a name="4.1.0"></a>
-# 4.1.0
+## 4.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@4.0.5...@spectrum-css/modal@4.1.0)
 
@@ -136,7 +136,7 @@ _migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum
 **Note:** Version bump only for package @spectrum-css/modal
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.1.0...@spectrum-css/modal@4.0.0)
 
@@ -171,7 +171,7 @@ chore: updated css properties
 - docs(modal): regenerate mods
 
 <a name="3.1.0"></a>
-# 3.1.0
+## 3.1.0
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.49...@spectrum-css/modal@3.1.0)
 
@@ -620,7 +620,7 @@ chore: updated css properties
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.0-beta.3...@spectrum-css/modal@3.0.0)
 
@@ -628,7 +628,7 @@ chore: updated css properties
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.0-beta.2...@spectrum-css/modal@3.0.0-beta.3)
 
@@ -636,7 +636,7 @@ chore: updated css properties
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/modal@3.0.0-beta.1...@spectrum-css/modal@3.0.0-beta.2)
 
@@ -644,7 +644,7 @@ chore: updated css properties
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-09-23
 

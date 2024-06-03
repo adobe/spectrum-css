@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@4.1.4...@spectrum-css/dropindicator@5.0.0)
 
@@ -72,7 +72,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/dropindicator
 
 <a name="4.1.0"></a>
-# 4.1.0
+## 4.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@4.0.4...@spectrum-css/dropindicator@4.1.0)
 
@@ -109,7 +109,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/dropindicator
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@3.0.54...@spectrum-css/dropindicator@4.0.0)
 
@@ -585,7 +585,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@3.0.0-beta.5...@spectrum-css/dropindicator@3.0.0)
 
@@ -593,7 +593,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.5"></a>
 
-# 3.0.0-beta.5
+## 3.0.0-beta.5
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@3.0.0-beta.4...@spectrum-css/dropindicator@3.0.0-beta.5)
 
@@ -601,7 +601,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.4"></a>
 
-# 3.0.0-beta.4
+## 3.0.0-beta.4
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@3.0.0-beta.3...@spectrum-css/dropindicator@3.0.0-beta.4)
 
@@ -609,7 +609,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@3.0.0-beta.2...@spectrum-css/dropindicator@3.0.0-beta.3)
 
@@ -617,7 +617,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@3.0.0-beta.1...@spectrum-css/dropindicator@3.0.0-beta.2)
 
@@ -625,7 +625,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@3.0.0-beta.0...@spectrum-css/dropindicator@3.0.0-beta.1)
 
@@ -633,7 +633,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropindicator@2.0.5...@spectrum-css/dropindicator@3.0.0-beta.0)
 
@@ -683,7 +683,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

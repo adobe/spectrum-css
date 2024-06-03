@@ -24,7 +24,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-tools/stylelint-no-unknown-custom-properties
 
 <a name="1.3.0"></a>
-# 1.3.0
+## 1.3.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-tools/stylelint-no-unknown-custom-properties@1.2.2...@spectrum-tools/stylelint-no-unknown-custom-properties@1.3.0)
 
@@ -57,7 +57,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.2.0"></a>
 
-# 1.2.0
+## 1.2.0
 
 🗓 2021-03-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/postcss-dropunusedvars@1.1.0...postcss-dropunusedvars@1.2.0)
 
@@ -73,7 +73,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2020-12-04
 

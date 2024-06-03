@@ -31,7 +31,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="13.0.0"></a>
-# 13.0.0
+## 13.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@12.0.2...@spectrum-css/button@13.0.0)
 
@@ -68,7 +68,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/button
 
 <a name="12.0.0"></a>
-# 12.0.0
+## 12.0.0
 🗓
 2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.3.1...@spectrum-css/button@12.0.0)
 
@@ -123,7 +123,7 @@ intended workflow sizes.
 **Note:** Version bump only for package @spectrum-css/button
 
 <a name="11.3.0"></a>
-# 11.3.0
+## 11.3.0
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.2.1...@spectrum-css/button@11.3.0)
 
@@ -139,14 +139,14 @@ intended workflow sizes.
 **Note:** Version bump only for package @spectrum-css/button
 
 <a name="11.2.0"></a>
-# 11.2.0
+## 11.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.1.0...@spectrum-css/button@11.2.0)
 
 **Note:** Version bump only for package @spectrum-css/button
 
 <a name="11.1.0"></a>
-# 11.1.0
+## 11.1.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@11.0.19...@spectrum-css/button@11.1.0)
 
@@ -294,7 +294,7 @@ intended workflow sizes.
 **Note:** Version bump only for package @spectrum-css/button
 
 <a name="11.0.0"></a>
-# 11.0.0
+## 11.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.1.14...@spectrum-css/button@11.0.0)
 
@@ -411,7 +411,7 @@ intended workflow sizes.
 
 <a name="10.1.0"></a>
 
-# 10.1.0
+## 10.1.0
 
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@10.0.11...@spectrum-css/button@10.1.0)
 
@@ -509,7 +509,7 @@ intended workflow sizes.
 
 <a name="10.0.0"></a>
 
-# 10.0.0
+## 10.0.0
 
 🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.1.6...@spectrum-css/button@10.0.0)
 
@@ -580,7 +580,7 @@ Additional changes:
 
 <a name="9.1.0"></a>
 
-# 9.1.0
+## 9.1.0
 
 🗓 2023-04-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@9.0.14...@spectrum-css/button@9.1.0)
 
@@ -702,7 +702,7 @@ Additional changes:
 
 <a name="9.0.0"></a>
 
-# 9.0.0
+## 9.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@8.0.0...@spectrum-css/button@9.0.0)
 
@@ -714,7 +714,7 @@ Additional changes:
 
 <a name="8.0.0"></a>
 
-# 8.0.0
+## 8.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.21...@spectrum-css/button@8.0.0)
 
@@ -726,7 +726,7 @@ Additional changes:
 
 <a name="7.0.0"></a>
 
-# 7.0.0
+## 7.0.0
 
 🗓 2023-01-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@7.0.0-beta.6...@spectrum-css/button@7.0.0)
 
@@ -738,7 +738,7 @@ Additional changes:
 
 <a name="7.0.0-beta.5"></a>
 
-# 7.0.0-beta.5
+## 7.0.0-beta.5
 
 🗓 2023-01-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@6.0.20...@spectrum-css/button@7.0.0-beta.5)
 
@@ -925,7 +925,7 @@ Additional changes:
 
 <a name="6.0.0"></a>
 
-# 6.0.0
+## 6.0.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.1.4...@spectrum-css/button@6.0.0)
 
@@ -948,7 +948,7 @@ Additional changes:
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@5.0.0-beta.0...@spectrum-css/button@5.0.0)
 
@@ -958,7 +958,7 @@ Additional changes:
 
 <a name="5.0.0-beta.0"></a>
 
-# 5.0.0-beta.0
+## 5.0.0-beta.0
 
 🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.1.4...@spectrum-css/button@5.0.0-beta.0)
 
@@ -1011,7 +1011,7 @@ Additional changes:
 
 <a name="4.1.0"></a>
 
-# 4.1.0
+## 4.1.0
 
 🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.2...@spectrum-css/button@4.1.0)
 
@@ -1038,7 +1038,7 @@ Additional changes:
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.2...@spectrum-css/button@4.0.0)
 
@@ -1049,7 +1049,7 @@ Additional changes:
 
 <a name="4.0.0-alpha.2"></a>
 
-# 4.0.0-alpha.2
+## 4.0.0-alpha.2
 
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.1...@spectrum-css/button@4.0.0-alpha.2)
 
@@ -1057,7 +1057,7 @@ Additional changes:
 
 <a name="4.0.0-alpha.1"></a>
 
-# 4.0.0-alpha.1
+## 4.0.0-alpha.1
 
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@4.0.0-alpha.0...@spectrum-css/button@4.0.0-alpha.1)
 
@@ -1068,7 +1068,7 @@ Additional changes:
 
 <a name="4.0.0-alpha.0"></a>
 
-# 4.0.0-alpha.0
+## 4.0.0-alpha.0
 
 🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.3-alpha.0...@spectrum-css/button@4.0.0-alpha.0)
 
@@ -1110,7 +1110,7 @@ Additional changes:
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.6...@spectrum-css/button@3.0.0)
 
@@ -1118,7 +1118,7 @@ Additional changes:
 
 <a name="3.0.0-beta.6"></a>
 
-# 3.0.0-beta.6
+## 3.0.0-beta.6
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.5...@spectrum-css/button@3.0.0-beta.6)
 
@@ -1148,7 +1148,7 @@ Additional changes:
 
 <a name="3.0.0-beta.5"></a>
 
-# 3.0.0-beta.5
+## 3.0.0-beta.5
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.4...@spectrum-css/button@3.0.0-beta.5)
 
@@ -1156,7 +1156,7 @@ Additional changes:
 
 <a name="3.0.0-beta.4"></a>
 
-# 3.0.0-beta.4
+## 3.0.0-beta.4
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.3...@spectrum-css/button@3.0.0-beta.4)
 
@@ -1171,7 +1171,7 @@ Additional changes:
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.2...@spectrum-css/button@3.0.0-beta.3)
 
@@ -1181,7 +1181,7 @@ Additional changes:
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.1...@spectrum-css/button@3.0.0-beta.2)
 
@@ -1205,7 +1205,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@3.0.0-beta.0...@spectrum-css/button@3.0.0-beta.1)
 
@@ -1213,7 +1213,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@2.2.0...@spectrum-css/button@3.0.0-beta.0)
 
@@ -1223,7 +1223,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="2.2.0"></a>
 
-# 2.2.0
+## 2.2.0
 
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@2.1.0...@spectrum-css/button@2.2.0)
 
@@ -1233,7 +1233,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="2.1.0"></a>
 
-# 2.1.0
+## 2.1.0
 
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/button@2.0.3...@spectrum-css/button@2.1.0)
 
@@ -1271,7 +1271,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

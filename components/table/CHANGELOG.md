@@ -35,7 +35,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@5.2.5...@spectrum-css/table@6.0.0)
 
@@ -85,7 +85,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/table
 
 <a name="5.2.0"></a>
-# 5.2.0
+## 5.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@5.1.1...@spectrum-css/table@5.2.0)
 
@@ -102,7 +102,7 @@ _deprecate logical transform plugin ([#2437](https://github.com/adobe/spectrum-c
 **table:**replace leftover global color token ([#2415](https://github.com/adobe/spectrum-css/issues/2415))([35ccf25](https://github.com/adobe/spectrum-css/commit/35ccf25))
 
 <a name="5.1.0"></a>
-# 5.1.0
+## 5.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@5.0.11...@spectrum-css/table@5.1.0)
 
@@ -188,7 +188,7 @@ _deprecate logical transform plugin ([#2437](https://github.com/adobe/spectrum-c
 **Note:** Version bump only for package @spectrum-css/table
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@4.0.73...@spectrum-css/table@5.0.0)
 
@@ -1259,7 +1259,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="3.1.0"></a>
 
-# 3.1.0
+## 3.1.0
 
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.3-alpha.3...@spectrum-css/table@3.1.0)
 
@@ -1326,7 +1326,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.0-beta.6...@spectrum-css/table@3.0.0)
 
@@ -1340,7 +1340,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="3.0.0-beta.6"></a>
 
-# 3.0.0-beta.6
+## 3.0.0-beta.6
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.0-beta.5...@spectrum-css/table@3.0.0-beta.6)
 
@@ -1350,7 +1350,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="3.0.0-beta.5"></a>
 
-# 3.0.0-beta.5
+## 3.0.0-beta.5
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.0-beta.4...@spectrum-css/table@3.0.0-beta.5)
 
@@ -1358,7 +1358,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="3.0.0-beta.4"></a>
 
-# 3.0.0-beta.4
+## 3.0.0-beta.4
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.0-beta.3...@spectrum-css/table@3.0.0-beta.4)
 
@@ -1368,7 +1368,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.0-beta.2...@spectrum-css/table@3.0.0-beta.3)
 
@@ -1376,7 +1376,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.0-beta.1...@spectrum-css/table@3.0.0-beta.2)
 
@@ -1384,7 +1384,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@3.0.0-beta.0...@spectrum-css/table@3.0.0-beta.1)
 
@@ -1392,7 +1392,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/table@2.0.6...@spectrum-css/table@3.0.0-beta.0)
 
@@ -1450,7 +1450,7 @@ set on the cell instead of the row (previous fix for Firefix bug).
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

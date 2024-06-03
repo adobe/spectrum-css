@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@5.1.5...@spectrum-css/swatch@6.0.0)
 
@@ -79,7 +79,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/swatch
 
 <a name="5.1.0"></a>
-# 5.1.0
+## 5.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@5.0.22...@spectrum-css/swatch@5.1.0)
 
@@ -251,7 +251,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/swatch
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.31...@spectrum-css/swatch@5.0.0)
 
@@ -545,7 +545,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@3.0.21...@spectrum-css/swatch@4.0.0)
 
@@ -727,7 +727,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@2.0.0...@spectrum-css/swatch@3.0.0)
 
@@ -743,7 +743,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-10-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@1.1.4...@spectrum-css/swatch@2.0.0)
 
@@ -791,7 +791,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2022-04-08
 

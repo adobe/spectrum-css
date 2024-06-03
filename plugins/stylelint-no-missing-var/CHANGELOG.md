@@ -17,7 +17,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-tools/stylelint-no-missing-var
 
 <a name="1.3.0"></a>
-# 1.3.0
+## 1.3.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-tools/stylelint-no-missing-var@1.2.0...@spectrum-tools/stylelint-no-missing-var@1.3.0)
 
@@ -26,7 +26,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum-css/issues/2460))([bd6c40e](https://github.com/adobe/spectrum-css/commit/bd6c40e))
 
 <a name="1.2.0"></a>
-# 1.2.0
+## 1.2.0
 🗓
 2024-01-16
 
@@ -35,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*add stylelint ([#1787](https://github.com/adobe/spectrum-css/issues/1787))([a450904](https://github.com/adobe/spectrum-css/commit/a450904))
 
 <a name="1.1.0"></a>
-# 1.1.0
+## 1.1.0
 🗓
 2023-06-01
 

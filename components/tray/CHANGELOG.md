@@ -37,7 +37,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="3.0.0"></a>
-# 3.0.0
+## 3.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.2.7...@spectrum-css/tray@3.0.0)
 
@@ -103,7 +103,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.2.0"></a>
-# 2.2.0
+## 2.2.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.22...@spectrum-css/tray@2.2.0)
 
@@ -268,7 +268,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.0"></a>
-# 2.1.0
+## 2.1.0
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.57...@spectrum-css/tray@2.1.0)
 
@@ -726,7 +726,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-12-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@1.0.31...@spectrum-css/tray@2.0.0)
 
@@ -1030,7 +1030,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@1.0.0-beta.3...@spectrum-css/tray@1.0.0)
 
@@ -1038,7 +1038,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="1.0.0-beta.3"></a>
 
-# 1.0.0-beta.3
+## 1.0.0-beta.3
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@1.0.0-beta.2...@spectrum-css/tray@1.0.0-beta.3)
 
@@ -1053,7 +1053,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="1.0.0-beta.2"></a>
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@1.0.0-beta.1...@spectrum-css/tray@1.0.0-beta.2)
 
@@ -1061,7 +1061,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="1.0.0-beta.1"></a>
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 🗓 2020-09-23
 

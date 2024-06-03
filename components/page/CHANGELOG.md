@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="8.0.0"></a>
-# 8.0.0
+## 8.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@7.1.4...@spectrum-css/page@8.0.0)
 
@@ -68,7 +68,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/page
 
 <a name="7.1.0"></a>
-# 7.1.0
+## 7.1.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@6.1.0...@spectrum-css/page@7.1.0)
 
@@ -78,7 +78,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="7.0.0"></a>
 
-# 7.0.0
+## 7.0.0
 
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@6.1.0...@spectrum-css/page@7.0.0)
@@ -88,7 +88,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 replace & with :root ([1eadd4f](https://github.com/adobe/spectrum-css/commit/bd6c40eb5a4b43df94dff1f325502e5cd08b7f5f))
 
 <a name="6.1.0"></a>
-# 6.1.0
+## 6.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@6.0.10...@spectrum-css/page@6.1.0)
 
@@ -167,7 +167,7 @@ replace & with :root ([1eadd4f](https://github.com/adobe/spectrum-css/commit/bd6
 **Note:** Version bump only for package @spectrum-css/page
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@5.0.33...@spectrum-css/page@6.0.0)
 
@@ -442,7 +442,7 @@ replace & with :root ([1eadd4f](https://github.com/adobe/spectrum-css/commit/bd6
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@3.0.9...@spectrum-css/page@5.0.0)
 
@@ -456,7 +456,7 @@ replace & with :root ([1eadd4f](https://github.com/adobe/spectrum-css/commit/bd6
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@4.0.0-beta.0...@spectrum-css/page@4.0.0)
 
@@ -464,7 +464,7 @@ replace & with :root ([1eadd4f](https://github.com/adobe/spectrum-css/commit/bd6
 
 <a name="4.0.0-beta.0"></a>
 
-# 4.0.0-beta.0
+## 4.0.0-beta.0
 
 🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@3.0.9...@spectrum-css/page@4.0.0-beta.0)
 
@@ -582,7 +582,7 @@ replace & with :root ([1eadd4f](https://github.com/adobe/spectrum-css/commit/bd6
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@3.0.0-beta.0...@spectrum-css/page@3.0.0)
 
@@ -590,7 +590,7 @@ replace & with :root ([1eadd4f](https://github.com/adobe/spectrum-css/commit/bd6
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/page@2.0.8-beta.1...@spectrum-css/page@3.0.0-beta.0)
 
@@ -677,7 +677,7 @@ replace & with :root ([1eadd4f](https://github.com/adobe/spectrum-css/commit/bd6
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

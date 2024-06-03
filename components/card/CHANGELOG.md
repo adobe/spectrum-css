@@ -37,7 +37,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="8.0.0"></a>
-# 8.0.0
+## 8.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@7.0.2...@spectrum-css/card@8.0.0)
 
@@ -70,7 +70,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="7.0.0"></a>
-# 7.0.0
+## 7.0.0
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.4.1...@spectrum-css/card@7.0.0)
 
@@ -94,7 +94,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.4.0"></a>
-# 6.4.0
+## 6.4.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.3.1...@spectrum-css/card@6.4.0)
 
@@ -112,7 +112,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
   **card:**revert misnamed instance of background color mod([80b3b78](https://github.com/adobe/spectrum-css/commit/80b3b78))
 
 <a name="6.3.0"></a>
-# 6.3.0
+## 6.3.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.2.2...@spectrum-css/card@6.3.0)
 
@@ -137,7 +137,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 - **card:**focus outline only on keyboard focus([268e3cc](https://github.com/adobe/spectrum-css/commit/268e3cc))
 
 <a name="6.2.0"></a>
-# 6.2.0
+## 6.2.0
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.24...@spectrum-css/card@6.2.0)
 
@@ -146,7 +146,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 - **card:**add additional mod properties ([#2279](https://github.com/adobe/spectrum-css/issues/2279))([a290816](https://github.com/adobe/spectrum-css/commit/a290816))
 
 <a name="6.1.0"></a>
-# 6.1.0
+## 6.1.0
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.24...@spectrum-css/card@6.1.0)
 
@@ -323,7 +323,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.41...@spectrum-css/card@6.0.0)
 
@@ -664,7 +664,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.22...@spectrum-css/card@5.0.0)
 
@@ -868,7 +868,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.0-alpha.4...@spectrum-css/card@4.0.0)
 
@@ -879,7 +879,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="4.0.0-alpha.4"></a>
 
-# 4.0.0-alpha.4
+## 4.0.0-alpha.4
 
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.0-alpha.3...@spectrum-css/card@4.0.0-alpha.4)
 
@@ -887,7 +887,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="4.0.0-alpha.3"></a>
 
-# 4.0.0-alpha.3
+## 4.0.0-alpha.3
 
 🗓 2021-07-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.0-alpha.2...@spectrum-css/card@4.0.0-alpha.3)
 
@@ -902,7 +902,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="4.0.0-alpha.2"></a>
 
-# 4.0.0-alpha.2
+## 4.0.0-alpha.2
 
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.0-alpha.1...@spectrum-css/card@4.0.0-alpha.2)
 
@@ -910,7 +910,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="4.0.0-alpha.1"></a>
 
-# 4.0.0-alpha.1
+## 4.0.0-alpha.1
 
 🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@4.0.0-alpha.0...@spectrum-css/card@4.0.0-alpha.1)
 
@@ -918,7 +918,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="4.0.0-alpha.0"></a>
 
-# 4.0.0-alpha.0
+## 4.0.0-alpha.0
 
 🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.2...@spectrum-css/card@4.0.0-alpha.0)
 
@@ -953,7 +953,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.0-beta.6...@spectrum-css/card@3.0.0)
 
@@ -967,7 +967,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="3.0.0-beta.6"></a>
 
-# 3.0.0-beta.6
+## 3.0.0-beta.6
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.0-beta.5...@spectrum-css/card@3.0.0-beta.6)
 
@@ -988,7 +988,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="3.0.0-beta.5"></a>
 
-# 3.0.0-beta.5
+## 3.0.0-beta.5
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.0-beta.4...@spectrum-css/card@3.0.0-beta.5)
 
@@ -1000,7 +1000,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="3.0.0-beta.4"></a>
 
-# 3.0.0-beta.4
+## 3.0.0-beta.4
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.0-beta.3...@spectrum-css/card@3.0.0-beta.4)
 
@@ -1008,7 +1008,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.0-beta.2...@spectrum-css/card@3.0.0-beta.3)
 
@@ -1016,7 +1016,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.0-beta.1...@spectrum-css/card@3.0.0-beta.2)
 
@@ -1024,7 +1024,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@3.0.0-beta.0...@spectrum-css/card@3.0.0-beta.1)
 
@@ -1032,7 +1032,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@2.0.6...@spectrum-css/card@3.0.0-beta.0)
 
@@ -1094,7 +1094,7 @@ This component has been deprecated. Use an action bar to allow users to perform 
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

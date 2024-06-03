@@ -31,7 +31,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="9.0.0"></a>
-# 9.0.0
+## 9.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@8.2.5...@spectrum-css/breadcrumb@9.0.0)
 
@@ -81,7 +81,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/breadcrumb
 
 <a name="8.2.0"></a>
-# 8.2.0
+## 8.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@8.1.1...@spectrum-css/breadcrumb@8.2.0)
 
@@ -97,7 +97,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*deprecate logical transform plugin ([#2437](https://github.com/adobe/spectrum-css/issues/2437))([ff5dda6](https://github.com/adobe/spectrum-css/commit/ff5dda6))
 
 <a name="8.1.0"></a>
-# 8.1.0
+## 8.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@8.0.17...@spectrum-css/breadcrumb@8.1.0)
 
@@ -229,7 +229,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/breadcrumb
 
 <a name="8.0.0"></a>
-# 8.0.0
+## 8.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@7.0.47...@spectrum-css/breadcrumb@8.0.0)
 
@@ -608,7 +608,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="7.0.0"></a>
 
-# 7.0.0
+## 7.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@6.0.2...@spectrum-css/breadcrumb@7.0.0)
 
@@ -636,7 +636,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="6.0.0"></a>
 
-# 6.0.0
+## 6.0.0
 
 🗓 2023-01-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@5.0.5...@spectrum-css/breadcrumb@6.0.0)
 
@@ -688,7 +688,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.21...@spectrum-css/breadcrumb@5.0.0)
 
@@ -886,7 +886,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.0-alpha.3...@spectrum-css/breadcrumb@4.0.0)
 
@@ -896,7 +896,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0-alpha.3"></a>
 
-# 4.0.0-alpha.3
+## 4.0.0-alpha.3
 
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.0-alpha.2...@spectrum-css/breadcrumb@4.0.0-alpha.3)
 
@@ -904,7 +904,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0-alpha.2"></a>
 
-# 4.0.0-alpha.2
+## 4.0.0-alpha.2
 
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.0-alpha.1...@spectrum-css/breadcrumb@4.0.0-alpha.2)
 
@@ -912,7 +912,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0-alpha.1"></a>
 
-# 4.0.0-alpha.1
+## 4.0.0-alpha.1
 
 🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@4.0.0-alpha.0...@spectrum-css/breadcrumb@4.0.0-alpha.1)
 
@@ -920,7 +920,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0-alpha.0"></a>
 
-# 4.0.0-alpha.0
+## 4.0.0-alpha.0
 
 🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.2...@spectrum-css/breadcrumb@4.0.0-alpha.0)
 
@@ -954,7 +954,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.0-beta.6...@spectrum-css/breadcrumb@3.0.0)
 
@@ -962,7 +962,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.6"></a>
 
-# 3.0.0-beta.6
+## 3.0.0-beta.6
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.0-beta.5...@spectrum-css/breadcrumb@3.0.0-beta.6)
 
@@ -980,7 +980,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.5"></a>
 
-# 3.0.0-beta.5
+## 3.0.0-beta.5
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.0-beta.4...@spectrum-css/breadcrumb@3.0.0-beta.5)
 
@@ -988,7 +988,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.4"></a>
 
-# 3.0.0-beta.4
+## 3.0.0-beta.4
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.0-beta.3...@spectrum-css/breadcrumb@3.0.0-beta.4)
 
@@ -998,7 +998,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.0-beta.2...@spectrum-css/breadcrumb@3.0.0-beta.3)
 
@@ -1006,7 +1006,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.0-beta.1...@spectrum-css/breadcrumb@3.0.0-beta.2)
 
@@ -1021,7 +1021,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@3.0.0-beta.0...@spectrum-css/breadcrumb@3.0.0-beta.1)
 
@@ -1029,7 +1029,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/breadcrumb@2.0.5...@spectrum-css/breadcrumb@3.0.0-beta.0)
 
@@ -1079,7 +1079,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

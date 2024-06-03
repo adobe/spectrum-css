@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.2.5...@spectrum-css/link@5.0.0)
 
@@ -75,14 +75,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/link
 
 <a name="4.2.0"></a>
-# 4.2.0
+## 4.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.1.0...@spectrum-css/link@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/link
 
 <a name="4.1.0"></a>
-# 4.1.0
+## 4.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@4.0.75...@spectrum-css/link@4.1.0)
 
@@ -669,7 +669,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-11-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.23...@spectrum-css/link@4.0.0)
 
@@ -906,7 +906,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.1.0"></a>
 
-# 3.1.0
+## 3.1.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.1.0-beta.0...@spectrum-css/link@3.1.0)
 
@@ -916,7 +916,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.1.0-beta.0"></a>
 
-# 3.1.0-beta.0
+## 3.1.0-beta.0
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@3.0.1-beta.1...@spectrum-css/link@3.1.0-beta.0)
 
@@ -948,7 +948,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/link@2.0.6...@spectrum-css/link@3.0.0)
 
@@ -1014,7 +1014,7 @@ Co-authored-by: Larry Davis <lawdavis@adobe.com>
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

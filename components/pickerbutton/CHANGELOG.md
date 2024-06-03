@@ -33,7 +33,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@4.1.5...@spectrum-css/pickerbutton@5.0.0)
 
@@ -87,7 +87,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/pickerbutton
 
 <a name="4.1.0"></a>
-# 4.1.0
+## 4.1.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@4.0.23...@spectrum-css/pickerbutton@4.1.0)
 
@@ -257,7 +257,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/pickerbutton
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@3.0.34...@spectrum-css/pickerbutton@4.0.0)
 
@@ -595,7 +595,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2023-03-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@2.0.12...@spectrum-css/pickerbutton@3.0.0)
 
@@ -724,7 +724,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-10-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pickerbutton@1.1.22...@spectrum-css/pickerbutton@2.0.0)
 
@@ -928,7 +928,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2021-11-16
 

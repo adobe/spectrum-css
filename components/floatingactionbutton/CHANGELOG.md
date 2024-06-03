@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="2.0.0"></a>
-# 2.0.0
+## 2.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.2.5...@spectrum-css/floatingactionbutton@2.0.0)
 
@@ -75,14 +75,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/floatingactionbutton
 
 <a name="1.2.0"></a>
-# 1.2.0
+## 1.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.1.0...@spectrum-css/floatingactionbutton@1.2.0)
 
 **Note:** Version bump only for package @spectrum-css/floatingactionbutton
 
 <a name="1.1.0"></a>
-# 1.1.0
+## 1.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.37...@spectrum-css/floatingactionbutton@1.1.0)
 
@@ -365,7 +365,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/floatingactionbutton@1.0.0-alpha.1...@spectrum-css/floatingactionbutton@1.0.0)
 
@@ -373,7 +373,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-alpha.1"></a>
 
-# 1.0.0-alpha.1
+## 1.0.0-alpha.1
 
 🗓 2023-05-04
 

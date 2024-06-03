@@ -18,7 +18,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/ui-icons
 
 <a name="1.1.0"></a>
-# 1.1.0
+## 1.1.0
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/ui-icons@0.1.0...@spectrum-css/ui-icons@1.1.0)
 
@@ -27,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **ui-icons:**graduate to 1.0 release ([#2366](https://github.com/adobe/spectrum-css/issues/2366))([afd369a](https://github.com/adobe/spectrum-css/commit/afd369a))
 
 <a name="0.1.0"></a>
-# 0.1.0
+## 0.1.0
 🗓
 2023-12-12
 

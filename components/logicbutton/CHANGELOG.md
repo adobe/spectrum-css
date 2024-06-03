@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@3.3.4...@spectrum-css/logicbutton@4.0.0)
 
@@ -72,14 +72,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/logicbutton
 
 <a name="3.3.0"></a>
-# 3.3.0
+## 3.3.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@3.2.0...@spectrum-css/logicbutton@3.3.0)
 
 **Note:** Version bump only for package @spectrum-css/logicbutton
 
 <a name="3.2.0"></a>
-# 3.2.0
+## 3.2.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@3.1.0...@spectrum-css/logicbutton@3.2.0)
 
@@ -92,7 +92,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **commons:**rename and deprecate mods referencing global tokens ([#2423](https://github.com/adobe/spectrum-css/issues/2423))([3a49432](https://github.com/adobe/spectrum-css/commit/3a49432))
 
 <a name="3.1.0"></a>
-# 3.1.0
+## 3.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@3.0.5...@spectrum-css/logicbutton@3.1.0)
 
@@ -136,7 +136,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/logicbutton
 
 <a name="3.0.0"></a>
-# 3.0.0
+## 3.0.0
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@2.0.2...@spectrum-css/logicbutton@3.0.0)
 
@@ -185,7 +185,7 @@ Adds some extra room between the example buttons in the docs site.
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="2.0.0"></a>
-# 2.0.0
+## 2.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.2.36...@spectrum-css/logicbutton@2.0.0)
 
@@ -483,7 +483,7 @@ Adds some extra room between the example buttons in the docs site.
 
 <a name="1.2.0"></a>
 
-# 1.2.0
+## 1.2.0
 
 🗓 2022-01-05
 
@@ -499,7 +499,7 @@ Adds some extra room between the example buttons in the docs site.
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/logicbutton@1.1.0-beta.0...@spectrum-css/logicbutton@1.1.0)
 
@@ -507,7 +507,7 @@ Adds some extra room between the example buttons in the docs site.
 
 <a name="1.1.0-beta.0"></a>
 
-# 1.1.0-beta.0
+## 1.1.0-beta.0
 
 🗓 2021-12-14
 

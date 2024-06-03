@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="3.0.0"></a>
-# 3.0.0
+## 3.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatchgroup@2.1.5...@spectrum-css/swatchgroup@3.0.0)
 
@@ -79,7 +79,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/swatchgroup
 
 <a name="2.1.0"></a>
-# 2.1.0
+## 2.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatchgroup@2.0.78...@spectrum-css/swatchgroup@2.1.0)
 
@@ -684,7 +684,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-10-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatchgroup@1.1.4...@spectrum-css/swatchgroup@2.0.0)
 
@@ -730,7 +730,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2022-04-08
 

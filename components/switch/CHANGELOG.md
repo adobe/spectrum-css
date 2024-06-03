@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@4.2.5...@spectrum-css/switch@5.0.0)
 
@@ -75,14 +75,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/switch
 
 <a name="4.2.0"></a>
-# 4.2.0
+## 4.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@4.1.0...@spectrum-css/switch@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/switch
 
 <a name="4.1.0"></a>
-# 4.1.0
+## 4.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@4.0.17...@spectrum-css/switch@4.1.0)
 
@@ -212,7 +212,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/switch
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.1.13...@spectrum-css/switch@4.0.0)
 
@@ -320,7 +320,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/switch
 
 <a name="3.1.0"></a>
-# 3.1.0
+## 3.1.0
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@3.0.38...@spectrum-css/switch@3.1.0)
 
@@ -634,7 +634,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@2.0.0...@spectrum-css/switch@3.0.0)
 
@@ -650,7 +650,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.23...@spectrum-css/switch@2.0.0)
 
@@ -902,7 +902,7 @@ Also, adds t-shirt sizes
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.0-beta.3...@spectrum-css/switch@1.0.0)
 
@@ -910,7 +910,7 @@ Also, adds t-shirt sizes
 
 <a name="1.0.0-beta.3"></a>
 
-# 1.0.0-beta.3
+## 1.0.0-beta.3
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.0-beta.2...@spectrum-css/switch@1.0.0-beta.3)
 
@@ -920,7 +920,7 @@ Also, adds t-shirt sizes
 
 <a name="1.0.0-beta.2"></a>
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/switch@1.0.0-beta.1...@spectrum-css/switch@1.0.0-beta.2)
 
@@ -928,7 +928,7 @@ Also, adds t-shirt sizes
 
 <a name="1.0.0-beta.1"></a>
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 🗓 2020-09-23
 
@@ -938,7 +938,7 @@ Also, adds t-shirt sizes
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toggle@3.0.0-beta.1...@spectrum-css/toggle@3.0.0-beta.2)
 
@@ -946,7 +946,7 @@ Also, adds t-shirt sizes
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toggle@3.0.0-beta.0...@spectrum-css/toggle@3.0.0-beta.1)
 
@@ -954,7 +954,7 @@ Also, adds t-shirt sizes
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toggle@2.1.0...@spectrum-css/toggle@3.0.0-beta.0)
 
@@ -969,7 +969,7 @@ Also, adds t-shirt sizes
 
 <a name="2.1.0"></a>
 
-# 2.1.0
+## 2.1.0
 
 🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/toggle@2.0.5...@spectrum-css/toggle@2.1.0)
 
@@ -1025,7 +1025,7 @@ Also, adds t-shirt sizes
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

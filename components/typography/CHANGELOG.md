@@ -25,7 +25,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@5.1.5...@spectrum-css/typography@6.0.0)
 
@@ -75,7 +75,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/typography
 
 <a name="5.1.0"></a>
-# 5.1.0
+## 5.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@5.0.50...@spectrum-css/typography@5.1.0)
 
@@ -460,7 +460,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.30...@spectrum-css/typography@5.0.0)
 
@@ -751,7 +751,7 @@ Additionally:
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2021-09-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.0-alpha.3...@spectrum-css/typography@4.0.0)
 
@@ -761,7 +761,7 @@ Additionally:
 
 <a name="4.0.0-alpha.3"></a>
 
-# 4.0.0-alpha.3
+## 4.0.0-alpha.3
 
 🗓 2021-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.0-alpha.2...@spectrum-css/typography@4.0.0-alpha.3)
 
@@ -769,7 +769,7 @@ Additionally:
 
 <a name="4.0.0-alpha.2"></a>
 
-# 4.0.0-alpha.2
+## 4.0.0-alpha.2
 
 🗓 2021-06-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.0-alpha.1...@spectrum-css/typography@4.0.0-alpha.2)
 
@@ -777,7 +777,7 @@ Additionally:
 
 <a name="4.0.0-alpha.1"></a>
 
-# 4.0.0-alpha.1
+## 4.0.0-alpha.1
 
 🗓 2021-05-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@4.0.0-alpha.0...@spectrum-css/typography@4.0.0-alpha.1)
 
@@ -785,7 +785,7 @@ Additionally:
 
 <a name="4.0.0-alpha.0"></a>
 
-# 4.0.0-alpha.0
+## 4.0.0-alpha.0
 
 🗓 2021-04-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@3.0.2...@spectrum-css/typography@4.0.0-alpha.0)
 
@@ -815,7 +815,7 @@ Additionally:
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@3.0.0-beta.1...@spectrum-css/typography@3.0.0)
 
@@ -823,7 +823,7 @@ Additionally:
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@3.0.0-beta.0...@spectrum-css/typography@3.0.0-beta.1)
 
@@ -831,7 +831,7 @@ Additionally:
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@2.1.4-beta.0...@spectrum-css/typography@3.0.0-beta.0)
 
@@ -878,7 +878,7 @@ Additionally:
 
 <a name="2.1.0"></a>
 
-# 2.1.0
+## 2.1.0
 
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/typography@2.0.3...@spectrum-css/typography@2.1.0)
 
@@ -912,7 +912,7 @@ Additionally:
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

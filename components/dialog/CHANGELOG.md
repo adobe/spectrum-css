@@ -35,7 +35,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="10.0.0"></a>
-# 10.0.0
+## 10.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.2.4...@spectrum-css/dialog@10.0.0)
 
@@ -82,7 +82,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/dialog
 
 <a name="9.2.0"></a>
-# 9.2.0
+## 9.2.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.1.0...@spectrum-css/dialog@9.2.0)
 
@@ -91,7 +91,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **overlay,commons:**deprecate overlay; migrate references to commons ([#2429](https://github.com/adobe/spectrum-css/issues/2429))([7eecd96](https://github.com/adobe/spectrum-css/commit/7eecd96))
 
 <a name="9.1.0"></a>
-# 9.1.0
+## 9.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@9.0.5...@spectrum-css/dialog@9.1.0)
 
@@ -135,7 +135,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/dialog
 
 <a name="9.0.0"></a>
-# 9.0.0
+## 9.0.0
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@8.0.8...@spectrum-css/dialog@9.0.0)
 
@@ -209,7 +209,7 @@ Additionally:
 **Note:** Version bump only for package @spectrum-css/dialog
 
 <a name="8.0.0"></a>
-# 8.0.0
+## 8.0.0
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@7.0.1...@spectrum-css/dialog@8.0.0)
 
@@ -261,7 +261,7 @@ Additionally:
 **Note:** Version bump only for package @spectrum-css/dialog
 
 <a name="7.0.0"></a>
-# 7.0.0
+## 7.0.0
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@6.0.67...@spectrum-css/dialog@7.0.0)
 
@@ -807,7 +807,7 @@ Additionally:
 
 <a name="6.0.0"></a>
 
-# 6.0.0
+## 6.0.0
 
 🗓 2022-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@5.0.1...@spectrum-css/dialog@6.0.0)
 
@@ -829,7 +829,7 @@ Additionally:
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.12...@spectrum-css/dialog@5.0.0)
 
@@ -847,7 +847,7 @@ Additionally:
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-01-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@4.0.0-beta.0...@spectrum-css/dialog@4.0.0)
 
@@ -855,7 +855,7 @@ Additionally:
 
 <a name="4.0.0-beta.0"></a>
 
-# 4.0.0-beta.0
+## 4.0.0-beta.0
 
 🗓 2021-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.12...@spectrum-css/dialog@4.0.0-beta.0)
 
@@ -992,7 +992,7 @@ Additionally:
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.0-beta.6...@spectrum-css/dialog@3.0.0)
 
@@ -1000,7 +1000,7 @@ Additionally:
 
 <a name="3.0.0-beta.6"></a>
 
-# 3.0.0-beta.6
+## 3.0.0-beta.6
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.0-beta.5...@spectrum-css/dialog@3.0.0-beta.6)
 
@@ -1025,7 +1025,7 @@ Additionally:
 
 <a name="3.0.0-beta.5"></a>
 
-# 3.0.0-beta.5
+## 3.0.0-beta.5
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.0-beta.4...@spectrum-css/dialog@3.0.0-beta.5)
 
@@ -1033,7 +1033,7 @@ Additionally:
 
 <a name="3.0.0-beta.4"></a>
 
-# 3.0.0-beta.4
+## 3.0.0-beta.4
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.0-beta.3...@spectrum-css/dialog@3.0.0-beta.4)
 
@@ -1051,7 +1051,7 @@ Additionally:
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.0-beta.2...@spectrum-css/dialog@3.0.0-beta.3)
 
@@ -1059,7 +1059,7 @@ Additionally:
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.0-beta.1...@spectrum-css/dialog@3.0.0-beta.2)
 
@@ -1067,7 +1067,7 @@ Additionally:
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@3.0.0-beta.0...@spectrum-css/dialog@3.0.0-beta.1)
 
@@ -1075,7 +1075,7 @@ Additionally:
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@2.0.5...@spectrum-css/dialog@3.0.0-beta.0)
 
@@ -1129,7 +1129,7 @@ Additionally:
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

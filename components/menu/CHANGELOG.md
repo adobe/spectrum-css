@@ -51,7 +51,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="7.0.0"></a>
-# 7.0.0
+## 7.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.1.5...@spectrum-css/menu@7.0.0)
 
@@ -103,7 +103,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/menu
 
 <a name="6.1.0"></a>
-# 6.1.0
+## 6.1.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@6.0.0...@spectrum-css/menu@6.1.0)
 
@@ -112,7 +112,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **menu:**use higher specificity to provide correct styling for disabled states([36e0183](https://github.com/adobe/spectrum-css/commit/36e0183))
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.2.1...@spectrum-css/menu@6.0.0)
 
@@ -153,7 +153,7 @@ Additionally:
 **Note:** Version bump only for package @spectrum-css/menu
 
 <a name="5.2.0"></a>
-# 5.2.0
+## 5.2.0
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.1.5...@spectrum-css/menu@5.2.0)
 
@@ -203,7 +203,7 @@ Additionally:
 **Note:** Version bump only for package @spectrum-css/menu
 
 <a name="5.1.0"></a>
-# 5.1.0
+## 5.1.0
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@5.0.12...@spectrum-css/menu@5.1.0)
 
@@ -298,7 +298,7 @@ Additionally:
 **Note:** Version bump only for package @spectrum-css/menu
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@4.0.50...@spectrum-css/menu@5.0.0)
 
@@ -890,7 +890,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-04-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.21...@spectrum-css/menu@4.0.0)
 
@@ -1136,7 +1136,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.0-beta.5...@spectrum-css/menu@3.0.0)
 
@@ -1144,7 +1144,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="3.0.0-beta.5"></a>
 
-# 3.0.0-beta.5
+## 3.0.0-beta.5
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.0-beta.4...@spectrum-css/menu@3.0.0-beta.5)
 
@@ -1157,7 +1157,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="3.0.0-beta.4"></a>
 
-# 3.0.0-beta.4
+## 3.0.0-beta.4
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.0-beta.3...@spectrum-css/menu@3.0.0-beta.4)
 
@@ -1165,7 +1165,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.0-beta.2...@spectrum-css/menu@3.0.0-beta.3)
 
@@ -1177,7 +1177,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.0-beta.1...@spectrum-css/menu@3.0.0-beta.2)
 
@@ -1185,7 +1185,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@3.0.0-beta.0...@spectrum-css/menu@3.0.0-beta.1)
 
@@ -1193,7 +1193,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@2.1.5...@spectrum-css/menu@3.0.0-beta.0)
 
@@ -1247,7 +1247,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="2.1.0"></a>
 
-# 2.1.0
+## 2.1.0
 
 🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/menu@2.0.0...@spectrum-css/menu@2.1.0)
 
@@ -1257,7 +1257,7 @@ Adds new standard section about -mod custom properties.
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

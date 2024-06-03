@@ -22,7 +22,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="3.0.0"></a>
-# 3.0.0
+## 3.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.1.0...@spectrum-css/generator@3.0.0)
 
@@ -37,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="2.1.0"></a>
-# 2.1.0
+## 2.1.0
 🗓
 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@2.0.20...@spectrum-css/generator@2.1.0)
 
@@ -182,7 +182,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2023-02-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/generator@1.0.5...@spectrum-css/generator@2.0.0)
 

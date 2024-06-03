@@ -43,7 +43,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="8.0.0"></a>
-# 8.0.0
+## 8.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.2.7...@spectrum-css/picker@8.0.0)
 
@@ -118,14 +118,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/picker
 
 <a name="7.2.0"></a>
-# 7.2.0
+## 7.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.1.0...@spectrum-css/picker@7.2.0)
 
 **Note:** Version bump only for package @spectrum-css/picker
 
 <a name="7.1.0"></a>
-# 7.1.0
+## 7.1.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@7.0.19...@spectrum-css/picker@7.1.0)
 
@@ -277,7 +277,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/picker
 
 <a name="7.0.0"></a>
-# 7.0.0
+## 7.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@6.0.2...@spectrum-css/picker@7.0.0)
 
@@ -306,7 +306,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/picker
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@5.0.1...@spectrum-css/picker@6.0.0)
 
@@ -341,7 +341,7 @@ Additionally:
 **Note:** Version bump only for package @spectrum-css/picker
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@4.0.22...@spectrum-css/picker@5.0.0)
 
@@ -585,7 +585,7 @@ removes padding from uiicononly class to allow for larger icons in slots
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2023-05-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@3.0.12...@spectrum-css/picker@4.0.0)
 
@@ -713,7 +713,7 @@ Additionally:
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2023-04-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@2.0.11...@spectrum-css/picker@3.0.0)
 
@@ -817,7 +817,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2023-02-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.2.21...@spectrum-css/picker@2.0.0)
 
@@ -1006,7 +1006,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="1.2.0"></a>
 
-# 1.2.0
+## 1.2.0
 
 🗓 2022-03-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.1.14...@spectrum-css/picker@1.2.0)
 
@@ -1142,7 +1142,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2021-11-08 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.4...@spectrum-css/picker@1.1.0)
 
@@ -1234,7 +1234,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.0-beta.3...@spectrum-css/picker@1.0.0)
 
@@ -1249,7 +1249,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="1.0.0-beta.3"></a>
 
-# 1.0.0-beta.3
+## 1.0.0-beta.3
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.0-beta.2...@spectrum-css/picker@1.0.0-beta.3)
 
@@ -1279,7 +1279,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="1.0.0-beta.2"></a>
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/picker@1.0.0-beta.1...@spectrum-css/picker@1.0.0-beta.2)
 
@@ -1287,7 +1287,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="1.0.0-beta.1"></a>
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 🗓 2020-09-23
 
@@ -1302,7 +1302,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@3.0.0-beta.2...@spectrum-css/dropdown@3.0.0-beta.3)
 
@@ -1310,7 +1310,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@3.0.0-beta.1...@spectrum-css/dropdown@3.0.0-beta.2)
 
@@ -1318,7 +1318,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@3.0.0-beta.0...@spectrum-css/dropdown@3.0.0-beta.1)
 
@@ -1326,7 +1326,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@2.1.5...@spectrum-css/dropdown@3.0.0-beta.0)
 
@@ -1379,7 +1379,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="2.1.0"></a>
 
-# 2.1.0
+## 2.1.0
 
 🗓 2019-11-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dropdown@2.0.0...@spectrum-css/dropdown@2.1.0)
 
@@ -1389,7 +1389,7 @@ Co-authored-by: castastrophe <castastrophe@users.noreply.github.com>
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

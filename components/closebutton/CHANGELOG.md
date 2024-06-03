@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.2.5...@spectrum-css/closebutton@5.0.0)
 
@@ -79,14 +79,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/closebutton
 
 <a name="4.2.0"></a>
-# 4.2.0
+## 4.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.1.0...@spectrum-css/closebutton@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/closebutton
 
 <a name="4.1.0"></a>
-# 4.1.0
+## 4.1.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@4.0.18...@spectrum-css/closebutton@4.1.0)
 
@@ -227,7 +227,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/closebutton
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.1.14...@spectrum-css/closebutton@4.0.0)
 
@@ -346,7 +346,7 @@ remove duplicate focus indicator styling
 
 <a name="3.1.0"></a>
 
-# 3.1.0
+## 3.1.0
 
 🗓 2023-05-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@3.0.43...@spectrum-css/closebutton@3.1.0)
 
@@ -700,7 +700,7 @@ remove duplicate focus indicator styling
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.7...@spectrum-css/closebutton@3.0.0)
 
@@ -774,7 +774,7 @@ remove duplicate focus indicator styling
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.13...@spectrum-css/closebutton@2.0.0)
 
@@ -898,7 +898,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="1.2.0"></a>
 
-# 1.2.0
+## 1.2.0
 
 🗓 2022-01-05
 
@@ -915,7 +915,7 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2022-01-05
 

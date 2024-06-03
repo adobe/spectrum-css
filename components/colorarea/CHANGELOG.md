@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.1.5...@spectrum-css/colorarea@5.0.0)
 
@@ -79,7 +79,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/colorarea
 
 <a name="4.1.0"></a>
-# 4.1.0
+## 4.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@4.0.51...@spectrum-css/colorarea@4.1.0)
 
@@ -469,7 +469,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2023-04-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@3.0.10...@spectrum-css/colorarea@4.0.0)
 
@@ -561,7 +561,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2023-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@2.0.2...@spectrum-css/colorarea@3.0.0)
 
@@ -589,7 +589,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2023-02-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.30...@spectrum-css/colorarea@2.0.0)
 
@@ -891,7 +891,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.0-beta.4...@spectrum-css/colorarea@1.0.0)
 
@@ -899,7 +899,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.4"></a>
 
-# 1.0.0-beta.4
+## 1.0.0-beta.4
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.0-beta.3...@spectrum-css/colorarea@1.0.0-beta.4)
 
@@ -909,7 +909,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.3"></a>
 
-# 1.0.0-beta.3
+## 1.0.0-beta.3
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.0-beta.2...@spectrum-css/colorarea@1.0.0-beta.3)
 
@@ -917,7 +917,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.2"></a>
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/colorarea@1.0.0-beta.1...@spectrum-css/colorarea@1.0.0-beta.2)
 
@@ -925,7 +925,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.1"></a>
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 🗓 2020-05-14
 

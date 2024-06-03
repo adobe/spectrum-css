@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="6.0.0"></a>
-# 6.0.0
+## 6.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@5.2.6...@spectrum-css/actionbutton@6.0.0)
 
@@ -86,14 +86,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/actionbutton
 
 <a name="5.2.0"></a>
-# 5.2.0
+## 5.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@5.1.0...@spectrum-css/actionbutton@5.2.0)
 
 **Note:** Version bump only for package @spectrum-css/actionbutton
 
 <a name="5.1.0"></a>
-# 5.1.0
+## 5.1.0
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@5.0.18...@spectrum-css/actionbutton@5.1.0)
 
@@ -236,7 +236,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/actionbutton
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@4.0.13...@spectrum-css/actionbutton@5.0.0)
 
@@ -347,7 +347,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@3.0.45...@spectrum-css/actionbutton@4.0.0)
 
@@ -723,7 +723,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2022-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.1.8...@spectrum-css/actionbutton@3.0.0)
 
@@ -805,7 +805,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="2.1.0"></a>
 
-# 2.1.0
+## 2.1.0
 
 🗓 2022-07-27 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@2.0.5...@spectrum-css/actionbutton@2.1.0)
 
@@ -863,7 +863,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.1.14...@spectrum-css/actionbutton@2.0.0)
 
@@ -1014,7 +1014,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="1.1.0"></a>
 
-# 1.1.0
+## 1.1.0
 
 🗓 2021-12-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.0.10...@spectrum-css/actionbutton@1.1.0)
 
@@ -1138,7 +1138,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@1.0.0-beta.1...@spectrum-css/actionbutton@1.0.0)
 
@@ -1146,7 +1146,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="1.0.0-beta.1"></a>
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 🗓 2020-12-04
 

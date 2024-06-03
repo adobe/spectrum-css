@@ -20,7 +20,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
-# 5.0.0
+## 5.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.2.5...@spectrum-css/actiongroup@5.0.0)
 
@@ -70,7 +70,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.2.0"></a>
-# 4.2.0
+## 4.2.0
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.10...@spectrum-css/actiongroup@4.2.0)
 
@@ -147,7 +147,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.0"></a>
-# 4.1.0
+## 4.1.0
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.0.7...@spectrum-css/actiongroup@4.1.0)
 
@@ -207,7 +207,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.0.0"></a>
-# 4.0.0
+## 4.0.0
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.61...@spectrum-css/actiongroup@4.0.0)
 
@@ -699,7 +699,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2022-09-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@2.0.0...@spectrum-css/actiongroup@3.0.0)
 
@@ -714,7 +714,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2022-06-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.26...@spectrum-css/actiongroup@2.0.0)
 
@@ -975,7 +975,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0"></a>
 
-# 1.0.0
+## 1.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.0-beta.5...@spectrum-css/actiongroup@1.0.0)
 
@@ -983,7 +983,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.5"></a>
 
-# 1.0.0-beta.5
+## 1.0.0-beta.5
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.0-beta.4...@spectrum-css/actiongroup@1.0.0-beta.5)
 
@@ -1002,7 +1002,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.4"></a>
 
-# 1.0.0-beta.4
+## 1.0.0-beta.4
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.0-beta.3...@spectrum-css/actiongroup@1.0.0-beta.4)
 
@@ -1010,7 +1010,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.3"></a>
 
-# 1.0.0-beta.3
+## 1.0.0-beta.3
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.0-beta.2...@spectrum-css/actiongroup@1.0.0-beta.3)
 
@@ -1022,7 +1022,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.2"></a>
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@1.0.0-beta.1...@spectrum-css/actiongroup@1.0.0-beta.2)
 
@@ -1030,7 +1030,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="1.0.0-beta.1"></a>
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 🗓 2020-05-14
 
@@ -1058,7 +1058,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@3.0.0-beta.0...@spectrum-css/buttongroup@3.0.0-beta.1)
 
@@ -1066,7 +1066,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@2.2.1...@spectrum-css/buttongroup@3.0.0-beta.0)
 
@@ -1084,7 +1084,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="2.2.0"></a>
 
-# 2.2.0
+## 2.2.0
 
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@2.1.0...@spectrum-css/buttongroup@2.2.0)
 
@@ -1094,7 +1094,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="2.1.0"></a>
 
-# 2.1.0
+## 2.1.0
 
 🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/buttongroup@2.0.3...@spectrum-css/buttongroup@2.1.0)
 
@@ -1128,7 +1128,7 @@ fix: correct Quiet Emphasized Action Button
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 

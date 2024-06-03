@@ -29,7 +29,7 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="7.0.0"></a>
-# 7.0.0
+## 7.0.0
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.1.5...@spectrum-css/illustratedmessage@7.0.0)
 
@@ -79,7 +79,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package @spectrum-css/illustratedmessage
 
 <a name="6.1.0"></a>
-# 6.1.0
+## 6.1.0
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@6.0.31...@spectrum-css/illustratedmessage@6.1.0)
 
@@ -310,7 +310,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 <a name="6.0.0"></a>
 
-# 6.0.0
+## 6.0.0
 
 🗓 2023-05-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@5.0.18...@spectrum-css/illustratedmessage@6.0.0)
 
@@ -468,7 +468,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="5.0.0"></a>
 
-# 5.0.0
+## 5.0.0
 
 🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@4.0.19...@spectrum-css/illustratedmessage@5.0.0)
 
@@ -637,7 +637,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="4.0.0"></a>
 
-# 4.0.0
+## 4.0.0
 
 🗓 2022-03-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.17...@spectrum-css/illustratedmessage@4.0.0)
 
@@ -833,7 +833,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="3.0.0"></a>
 
-# 3.0.0
+## 3.0.0
 
 🗓 2021-02-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.0-beta.5...@spectrum-css/illustratedmessage@3.0.0)
 
@@ -841,7 +841,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="3.0.0-beta.5"></a>
 
-# 3.0.0-beta.5
+## 3.0.0-beta.5
 
 🗓 2020-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.0-beta.4...@spectrum-css/illustratedmessage@3.0.0-beta.5)
 
@@ -849,7 +849,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="3.0.0-beta.4"></a>
 
-# 3.0.0-beta.4
+## 3.0.0-beta.4
 
 🗓 2020-10-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.0-beta.3...@spectrum-css/illustratedmessage@3.0.0-beta.4)
 
@@ -861,7 +861,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="3.0.0-beta.3"></a>
 
-# 3.0.0-beta.3
+## 3.0.0-beta.3
 
 🗓 2020-09-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.0-beta.2...@spectrum-css/illustratedmessage@3.0.0-beta.3)
 
@@ -869,7 +869,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="3.0.0-beta.2"></a>
 
-# 3.0.0-beta.2
+## 3.0.0-beta.2
 
 🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.0-beta.1...@spectrum-css/illustratedmessage@3.0.0-beta.2)
 
@@ -877,7 +877,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="3.0.0-beta.1"></a>
 
-# 3.0.0-beta.1
+## 3.0.0-beta.1
 
 🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@3.0.0-beta.0...@spectrum-css/illustratedmessage@3.0.0-beta.1)
 
@@ -885,7 +885,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="3.0.0-beta.0"></a>
 
-# 3.0.0-beta.0
+## 3.0.0-beta.0
 
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@2.1.1...@spectrum-css/illustratedmessage@3.0.0-beta.0)
 
@@ -903,7 +903,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="2.1.0"></a>
 
-# 2.1.0
+## 2.1.0
 
 🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/illustratedmessage@2.0.3...@spectrum-css/illustratedmessage@2.1.0)
 
@@ -937,7 +937,7 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 <a name="2.0.0"></a>
 
-# 2.0.0
+## 2.0.0
 
 🗓 2019-10-08
 
