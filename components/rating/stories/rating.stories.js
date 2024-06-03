@@ -103,3 +103,9 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
 };
+
+export const Express = Template.bind({});
+Express.tags = ["vrt-only"];
+Express.args = {
+	express: true,
+};

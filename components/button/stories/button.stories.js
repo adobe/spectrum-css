@@ -476,7 +476,14 @@ StaticBlack.args = {
 	staticColor: "black",
 };
 
+export const Express = Variants.bind();
+Express.tags = ["vrt-only"];
+Express.args = {
+	express: true,
+};
+
 export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["vrt-only"];
 WithForcedColors.parameters = {
 	chromatic: { forcedColors: "active" },
 };

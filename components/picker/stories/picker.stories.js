@@ -1,7 +1,6 @@
-import { html } from "lit";
-
 import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
-
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template";
 
 /**
@@ -127,6 +126,9 @@ export default {
 		isInvalid: false,
 		isOpen: false,
 		withSwitch: false,
+		content: [
+			() => MenuStories(MenuStories.args)
+		],
 	},
 	parameters: {
 		actions: {
@@ -145,7 +147,10 @@ export default {
 
 
 const ChromaticPickerGroup = (args) => html`
-	<div style="display: grid; gap: 20px;">
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "grid" : "none",
+		"gap": "20px",
+	})}>
 		<div>
 			${Template({
 				labelPosition: "top",
@@ -234,30 +239,31 @@ const ChromaticPickerGroup = (args) => html`
 			})}
 		</div>
 	</div>
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : undefined,
+	})}>
+		${Template(args)}
+	</div>
 `;
 
-export const Default = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
-Default.args = {
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
-};
+export const Default = ChromaticPickerGroup.bind({});
+Default.args = {};
 
 export const Open = Template.bind({});
 Open.args = {
 	isOpen: true,
-	content: [
-		() => MenuStories(MenuStories.args)
-	],
 };
 
-export const WithForcedColors = (args) => window.isChromatic() ? ChromaticPickerGroup(args) : Template(args);
+export const Express = ChromaticPickerGroup.bind({});
+Express.tags = ["vrt-only"];
+Express.args = {
+	express: true,
+};
+
+export const WithForcedColors = ChromaticPickerGroup.bind({});
+WithForcedColors.tags = ["vrt-only"];
 WithForcedColors.parameters = {
 	// Sets the forced-colors media feature for a specific story.
 	chromatic: { forcedColors: "active" },
 };
-WithForcedColors.args = {
-	content: [
-		() => MenuStories(MenuStories.args)
-	]
-};
+WithForcedColors.args = {};
