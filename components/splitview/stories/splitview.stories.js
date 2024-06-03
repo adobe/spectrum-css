@@ -3,7 +3,7 @@ import { within } from "@storybook/testing-library";
 import { Template } from "./template";
 
 export default {
-	title: "Components/Split view",
+	title: "Split view",
 	component: "SplitView",
 	argTypes: {
 		orientation: {

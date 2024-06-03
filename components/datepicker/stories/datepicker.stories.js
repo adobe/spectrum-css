@@ -8,7 +8,7 @@ const ignoreProps = ["rootClass", "isDisabled"];
  * A date picker displays a text field input with a button next to it, and can display two text fields next to each other for choosing a date range.
  */
 export default {
-	title: "Components/Date picker",
+	title: "Date picker",
 	component: "DatePicker",
 	argTypes: {
 		...Object.entries(CalendarStories.argTypes).reduce((acc, [key]) => {
@@ -253,4 +253,3 @@ QuietDisabled.parameters = {
 	}
 };
 QuietDisabled.tags = ["docs-only"];
-

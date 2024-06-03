@@ -13,7 +13,7 @@ import "@spectrum-css/cyclebutton/dist/vars.css";
  * The cycle button component is an action button that cycles through two different icons, a play that then changes to a pause, for example.
  */
 export default {
-	title: "Deprecated/Cycle button",
+	title: "Cycle button",
 	component: "CycleButton",
 	argTypes: {
 		size: ActionButtonStories?.argTypes?.size ?? {},

@@ -4,7 +4,7 @@ import { Template } from "./template";
  * The progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.
  */
 export default {
-	title: "Components/Progress bar",
+	title: "Progress bar",
 	component: "ProgressBar",
 	argTypes: {
 		customWidth: { table: { disable: true } },

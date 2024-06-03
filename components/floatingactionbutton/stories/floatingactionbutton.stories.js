@@ -6,7 +6,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
  * The floating action button component is used to give users a more prominent button for high frequency actions.
  */
 export default {
-	title: "Components/Floating action button",
+	title: "Floating action button",
 	component: "FloatingActionButton",
 	argTypes: {
 		variant: {

@@ -6,7 +6,7 @@ import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.sto
  * A selectable list of assets, often used inside of miller columns.
  */
 export default {
-	title: "Components/Asset list",
+	title: "Asset list",
 	component: "AssetList",
 	argTypes: {
 		items: { table: { disable: true } },

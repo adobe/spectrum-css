@@ -15,7 +15,7 @@ const sizeOptions = ["50", "75", "100", "200", "300", "400", "500", "600", "700"
  * ```
  */
 export default {
-	title: "Components/Avatar",
+	title: "Avatar",
 	component: "Avatar",
 	argTypes: {
 		reducedMotion: { table: { disable: true } },

@@ -4,7 +4,7 @@ import { Template } from "./template";
  * Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken.
  */
 export default {
-	title: "Components/Toast",
+	title: "Toast",
 	component: "Toast",
 	argTypes: {
 		variant: {

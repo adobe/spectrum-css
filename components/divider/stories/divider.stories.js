@@ -4,7 +4,7 @@ import { Template } from "./template";
  * Dividers bring clarity to a layout by grouping and dividing content that exists in close proximity. It can also be used to establish rhythm and hierarchy.
  */
 export default {
-	title: "Components/Divider",
+	title: "Divider",
 	component: "Divider",
 	argTypes: {
 		size: {

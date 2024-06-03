@@ -4,7 +4,7 @@ import { Template } from "./template";
  * The color slider component lets users visually change an individual channel of a color.
  */
 export default {
-	title: "Components/Color slider",
+	title: "Color slider",
 	component: "ColorSlider",
 	argTypes: {
 		colorHandleStyle: { table: { disable: true } },

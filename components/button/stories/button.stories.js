@@ -10,7 +10,7 @@ import { Template } from "./template";
  * Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
  */
 export default {
-	title: "Components/Button",
+	title: "Button",
 	component: "Button",
 	argTypes: {
 		size: {

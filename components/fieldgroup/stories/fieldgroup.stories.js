@@ -3,7 +3,7 @@ import { Template } from "./template";
 import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
 
 export default {
-	title: "Components/Field group",
+	title: "Field group",
 	component: "FieldGroup",
 	argTypes: {
 		layout: {

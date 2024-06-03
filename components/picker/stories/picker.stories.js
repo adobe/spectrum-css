@@ -7,7 +7,7 @@ import { Template } from "./template";
  * A picker outlines a set of options for a user.
  */
 export default {
-	title: "Components/Picker",
+	title: "Picker",
 	component: "Picker",
 	argTypes: {
 		size: {

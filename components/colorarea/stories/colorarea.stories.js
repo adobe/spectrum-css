@@ -10,7 +10,7 @@ import { Template } from "./template";
  * - Marshall focus between the saturation and value sliders according to which keys are pressed (up/down for value, left/right for saturation)
  */
 export default {
-	title: "Components/Color area",
+	title: "Color area",
 	component: "ColorArea",
 	argTypes: {
 		customWidth: { table: { disable: true } },

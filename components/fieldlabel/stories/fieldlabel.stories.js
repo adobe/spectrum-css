@@ -4,7 +4,7 @@ import { Template } from "./template";
  * The field label component is used along with inputs to display a label for that input.
  */
 export default {
-	title: "Components/Field label",
+	title: "Field label",
 	component: "FieldLabel",
 	argTypes: {
 		size: {

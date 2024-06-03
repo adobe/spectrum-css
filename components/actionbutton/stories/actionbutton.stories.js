@@ -11,7 +11,7 @@ import { Template as Typography } from "@spectrum-css/typography/stories/templat
  * The action button component represents an action a user can take.
  */
 export default {
-	title: "Components/Action button",
+	title: "Action button",
 	component: "ActionButton",
 	argTypes: {
 		size: {
