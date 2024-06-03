@@ -17,7 +17,7 @@ import "@spectrum-css/searchwithin/dist/vars.css";
  * **This component is deprecated.** Please use a search field with a separate control to filter the search instead.
  */
 export default {
-	title: "Deprecated/Search within",
+	title: "Search within",
 	component: "SearchWithin",
 	argTypes: {
 		size: {

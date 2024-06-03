@@ -11,7 +11,7 @@ import "@spectrum-css/quickaction/dist/vars.css";
  * **This component is deprecated.** Please use an action bar to allow users to perform actions on either a single or multiple items at the same time, instead.
  */
 export default {
-	title: "Deprecated/Quick actions",
+	title: "Quick actions",
 	component: "QuickAction",
 	argTypes: {
 		content: { table: { disable: true } },

@@ -6,7 +6,7 @@ import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stori
  * Contextual help shows a user extra information in relation to another component or view.
  */
 export default {
-	title: "Components/Contextual help",
+	title: "Contextual help",
 	component: "ContextualHelp",
 	argTypes: {
 		title: {

@@ -9,13 +9,19 @@ const componentPkgs = readdirSync(componentsPath, {
 	.map((dirent) => dirent.name);
 
 module.exports = {
-	stories: [
-		"../components/*/stories/*.stories.js",
-		"../components/*/stories/*.mdx",
-		"./guides/*.mdx",
-		"./deprecated/*/*.stories.js",
-		"./deprecated/*/*.mdx",
-	],
+	stories: [{
+		directory: '../components',
+		files: '*/stories/*.@(stories.js|mdx)',
+		titlePrefix: 'Components',
+	}, {
+		directory: './guides',
+		files: '*.mdx',
+		titlePrefix: 'Guides',
+	}, {
+		directory: './deprecated',
+		files: '**/*.@(stories.js|mdx)',
+		titlePrefix: 'Deprecated',
+	}],
 	rootDir: "../",
 	staticDirs: ["../assets"],
 	addons: [
@@ -164,12 +170,6 @@ module.exports = {
 	},
 	framework: {
 		name: "@storybook/web-components-webpack5",
-	},
-	features: {
-		/* Code splitting flag; load stories on-demand */
-		storyStoreV7: true,
-		/* Builds stories.json to help with on-demand loading */
-		buildStoriesJson: true,
 	},
 	docs: {
 		autodocs: true, // see below for alternatives

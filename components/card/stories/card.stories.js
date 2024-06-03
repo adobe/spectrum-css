@@ -7,7 +7,7 @@ import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.sto
  * A card represents a rectangular space to contain text or images. Cards are typically used to encapsulate units of a data set, such as a gallery of image/caption pairs.
  */
 export default {
-	title: "Components/Card",
+	title: "Card",
 	component: "Card",
 	argTypes: {
 		image: {

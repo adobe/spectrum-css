@@ -12,7 +12,7 @@ import "@spectrum-css/splitbutton/dist/vars.css";
  * A split button surfaces an immediately invokable action via it's main button, as well as a list of alternative actions in its toggle-able menu overlay.
  */
 export default {
-	title: "Deprecated/Split button",
+	title: "Split button",
 	component: "SplitButton",
 	argTypes: {
 		size: {

@@ -5,7 +5,7 @@ import { Template } from "./template";
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
  */
 export default {
-	title: "Components/Text field",
+	title: "Text field",
 	component: "TextField",
 	argTypes: {
 		isValid: {

@@ -6,7 +6,7 @@ import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.j
  * The swatch group component is a collection of swatches.
  */
 export default {
-	title: "Components/Swatch group",
+	title: "Swatch group",
 	component: "SwatchGroup",
 	argTypes: {
 		...Swatch.argTypes,

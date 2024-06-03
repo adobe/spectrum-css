@@ -3,7 +3,7 @@ import { html } from "lit";
 import { Template } from "./template";
 
 export default {
-	title: "Components/Status light",
+	title: "Status light",
 	component: "Statuslight",
 	argTypes: {
 		size: {

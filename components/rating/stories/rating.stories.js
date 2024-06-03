@@ -4,7 +4,7 @@ import { Template } from "./template";
  * A rating element is used to display or collect a user's rating of an item as represented by a number of stars.
  */
 export default {
-	title: "Components/Rating",
+	title: "Rating",
 	component: "Rating",
 	argTypes: {
 		isEmphasized: {

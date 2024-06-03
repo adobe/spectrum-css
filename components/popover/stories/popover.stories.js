@@ -37,7 +37,7 @@ const placementOptions = [
  * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
  */
 export default {
-	title: "Components/Popover",
+	title: "Popover",
 	component: "Popover",
 	argTypes: {
 		trigger: { table: { disable: true } },

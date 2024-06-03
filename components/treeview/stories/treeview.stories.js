@@ -4,7 +4,7 @@ import { Template } from "./template";
  * The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.
  */
 export default {
-	title: "Components/Tree view",
+	title: "Tree view",
 	component: "TreeView",
 	argTypes: {
 		items: { table: { disable: true } },
