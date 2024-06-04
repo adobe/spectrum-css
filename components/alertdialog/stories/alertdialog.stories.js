@@ -44,9 +44,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-AlertDialog button"],
 		},
-		status: {
-			type: "migrated",
-		},
 		docs: {
 			story: {
 				height: "300px"

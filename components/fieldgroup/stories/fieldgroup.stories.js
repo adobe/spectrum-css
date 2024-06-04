@@ -48,9 +48,6 @@ export default {
 				...Radio.parameters.actions.handles
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

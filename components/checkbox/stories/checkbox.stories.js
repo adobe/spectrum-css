@@ -98,9 +98,6 @@ export default {
 		actions: {
 			handles: ["click input[type=\"checkbox\"]"],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

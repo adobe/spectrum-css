@@ -37,9 +37,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Toast button"],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

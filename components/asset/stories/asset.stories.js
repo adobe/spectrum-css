@@ -41,11 +41,6 @@ export default {
 		preset: "image",
 		image: "example-ava.png",
 	},
-	parameters: {
-		status: {
-			type: "migrated",
-		},
-	},
 };
 
 const AssetGroup = (args) => html`

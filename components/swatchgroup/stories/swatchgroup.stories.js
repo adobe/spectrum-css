@@ -63,9 +63,6 @@ export default {
 				...Swatch.parameters?.actions?.handles ?? [],
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

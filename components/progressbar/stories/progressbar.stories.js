@@ -70,9 +70,6 @@ export default {
 		actions: {
 			handles: [],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

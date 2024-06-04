@@ -116,9 +116,6 @@ export default {
 		actions: {
 			handles: [],
 		},
-		status: {
-			type: "migrated",
-		},
 		chromatic: { delay: 2000 },
 		docs: {
 			story: {

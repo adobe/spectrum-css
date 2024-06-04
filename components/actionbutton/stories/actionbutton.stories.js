@@ -147,9 +147,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
 		},
-		status: {
-			type: "migrated",
-		},
 		html: {
 			root: "#render-root"
 		}

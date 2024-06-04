@@ -193,9 +193,6 @@ export default {
 				"focusout .spectrum-Textfield"
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

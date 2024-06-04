@@ -72,9 +72,6 @@ export default {
 				...Menu.parameters.actions.handles,
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 		chromatic: { delay: 2000 },
 	},
 	decorators: [

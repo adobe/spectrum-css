@@ -51,9 +51,6 @@ export default {
 				...Menu.parameters.actions.handles,
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 		docs: {
 			story: {
 				height: "300px"

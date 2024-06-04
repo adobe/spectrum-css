@@ -73,9 +73,6 @@ export default {
 				...ActionButton.parameters.actions.handles,
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 		// Getting the Figma link: https://help.figma.com/hc/en-us/articles/360045003494-Storybook-and-Figma
 		design: {
 			type: "figma",
