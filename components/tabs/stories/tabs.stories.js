@@ -101,9 +101,6 @@ export default {
 	parameters: {
 		actions: {
 			handles: [".spectrum-Tabs-item"],
-		},
-		status: {
-			type: "migrated",
 		}
 	}
 };

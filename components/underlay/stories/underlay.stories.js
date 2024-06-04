@@ -27,9 +27,6 @@ export default {
 		chromatic: { disable: true },
 		actions: {
 			handles: []
-		},
-		status: {
-			type: "migrated"
 		}
 	}
 };
