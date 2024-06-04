@@ -75,11 +75,6 @@ export default {
 		isDisabled: false,
 		hasLink: true,
 	},
-	parameters: {
-		status: {
-			type: "migrated",
-		},
-	},
 };
 
 export const Default = Template.bind({});

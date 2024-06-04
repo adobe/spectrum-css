@@ -43,11 +43,6 @@ export default {
 		size: "m",
 		vertical: false,
 	},
-	parameters: {
-		status: {
-			type: "migrated",
-		},
-	},
 };
 
 export const Default = Template.bind({});

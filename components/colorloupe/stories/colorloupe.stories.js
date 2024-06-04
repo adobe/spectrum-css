@@ -28,9 +28,6 @@ export default {
 		actions: {
 			handles: [],
 		},
-		status: {
-			type: "migrated",
-		},
 		docs: {
 			story: {
 				height: "100px"

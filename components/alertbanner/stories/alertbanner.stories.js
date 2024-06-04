@@ -60,9 +60,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-AlertBanner button"],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

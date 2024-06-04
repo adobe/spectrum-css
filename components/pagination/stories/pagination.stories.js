@@ -35,9 +35,6 @@ export default {
 				...ActionButton.parameters.actions.handles
 			],
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

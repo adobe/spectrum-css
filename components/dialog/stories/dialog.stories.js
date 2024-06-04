@@ -62,9 +62,6 @@ export default {
 				height: "500px",
 			},
 		},
-		status: {
-			type: "migrated",
-		},
 	},
 };
 

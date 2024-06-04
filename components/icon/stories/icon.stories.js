@@ -91,11 +91,6 @@ export default {
 		iconName: "ABC",
 		size: "xl",
 	},
-	parameters: {
-		status: {
-			type: "migrated",
-		},
-	},
 };
 
 export const Default = (args) => window.isChromatic() ? TestTemplate(args) : Template({

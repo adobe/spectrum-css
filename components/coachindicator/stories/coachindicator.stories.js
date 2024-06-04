@@ -1,5 +1,4 @@
 import { html } from "lit";
-
 import { Template } from "./template";
 
 /**
@@ -37,9 +36,6 @@ export default {
 	parameters: {
 		actions: {
 			handles: [],
-		},
-		status: {
-			type: "migrated",
 		},
 	},
 };
