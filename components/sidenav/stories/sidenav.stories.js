@@ -38,9 +38,6 @@ export default {
 	parameters: {
 		actions: {
 			handles: []
-		},
-		status: {
-			type: "migrated"
 		}
 	}
 };
