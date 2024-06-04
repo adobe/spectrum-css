@@ -6,7 +6,7 @@ import { Template } from "./template";
  * The coach indicator component can be used to bring added attention to specific parts of a page.
  */
 export default {
-	title: "components/Coach indicator",
+	title: "Coach indicator",
 	component: "CoachIndicator",
 	argTypes: {
 		isQuiet: {

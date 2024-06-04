@@ -33,6 +33,7 @@ For more general information about how to contribute to the Spectrum CSS project
 - `decorators`: These assets interpret the arguments provided and apply the necessary stylesheet or markup changes to reflect the desired update.
 - `deprecated`: One folder for each deprecated component we are still including in our documentation but that does not live in the repository any longer.
 - `guides`: Manually written documentation for the project.
+- `types`: There are 3 primary assets stored in this folder: shared global properties (such as rootClass, customStyles, id, etc.), global controls (contexts available in the top toolbar), and states (optional shared properties to be imported into a story for consistency). Each file is surfaced to the `types/index.js` file for ease of importing.
 
 **Storybook files:**
 
@@ -88,10 +89,11 @@ We rely on the following add-ons to power our implementation:
 - [@etchteam/storybook-addon-status](https://storybook.js.org/addons/@etchteam/storybook-addon-status)
 - [@storybook/addon-interactions](https://github.com/storybookjs/storybook/tree/next/code/addons/interactions)
 - [@chromaui/addon-visual-tests](https://www.chromatic.com/docs/visual-testing-addon/)
+- [@storybook/addon-designs](https://storybook.js.org/addons/@storybook/addon-designs/)
 
 ## Writing stories
 
-The easiest way to begin writing stories for a new component is to run `yarn new story` or `yarn workspace @spectrum-css/generator new story`. This generator will prompt you to select your component folder name from a pre-populated list. You can search the list by starting to type. Press enter to select. This is not necessary if you used the `yarn new component` command to generate your package in the first place as it will have populated the templates for you at that time.
+The easiest way to begin writing stories for a new component is to run `yarn new story`. This generator will prompt you to select your component folder name from a pre-populated list. You can search the list by starting to type. Press enter to select. This is not necessary if you used the `yarn new component` command to generate your package as it will have populated the templates for you already.
 
 Inside the component's package folder, you should now see a stories folder containing 2 assets:
 
@@ -113,6 +115,54 @@ Arg types define the UI available to the Storybook visitor. Hereforeto called "c
 Notes on a few commonly used argTypes:
 
 - If your component does not include any animation, please hide the reducedMotion control to avoid confusion: `reducedMotion: { table: { disable: true } }`
+
+You can import state-based argTypes that are commonly used from the `types/states.js`. States available in this file include (but are not limited to):
+
+- `isOpen`
+- `isSelected`
+- `isValid`
+- `isInvalid`
+- `isFocused`
+- `isKeyboardFocused`
+- `isHovered`
+- `isActive`
+- `isLoading`
+- `isDisabled`
+- `isDragged`
+- `isRequired`
+- `isReadOnly`
+- `isChecked`
+
+To import shared types into your story, use the following syntax:
+
+```js
+import {
+	isActive,
+	isDisabled,
+	isFocused,
+	isHovered,
+	isSelected,
+} from "@spectrum-css/preview/types";
+
+export default {
+	argTypes: {
+		isDisabled,
+		isSelected,
+		isHovered,
+		isFocused,
+		isActive,
+	},
+	args: {
+		isDisabled: false,
+		isSelected: false,
+		isHovered: false,
+		isFocused: false,
+		isActive: false,
+	},
+};
+```
+
+Be sure to define a default value for these argTypes in your args section.
 
 #### Categories
 
@@ -163,18 +213,6 @@ image: {
     category: "Component",
   },
   control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
-},
-```
-
-```js
-isOpen: {
-  name: "Open",
-  type: { name: "boolean" },
-  table: {
-    type: { summary: "boolean" },
-    category: "State",
-  },
-  control: "boolean",
 },
 ```
 
@@ -240,11 +278,13 @@ import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/templ
 
 Be sure to rename the import to something other than Template as the main export in your template.js file will have the same name.
 
-Every component will have access to a few empty, global inputs to provide consistency in naming for common requirements.
+Every component will have access to a few empty, global inputs to provide consistency in naming for common requirements. You can find the full list in `.storybook/types/args.js`.
 
 - `rootClass`: this holds the top-level className of the component and should match the value set in the `args` of the stories.js file.
 - `id`: allows users to pass in a custom ID value and should be added to the top-level wrapper of the component.
+- `testId`: used to render a `data-test-id` value to be used by a testing suite to target specific elements.
 - `customClasses` (array): allows passing in additional classes to be applied to the top-level component. This is necessary for nesting templates inside others while allowing the parent to assign context to the child.
+- `customStyles` (object): allows passing in a style map object to provide custom inline CSS at the top-level of a component.
 - `...globals`: this spread variable should not be decomposed on import. Instead, add a desctructuring right after instantiation, i.e., `const { express } = globals`. These values map to the globally provided settings and allow you to make rendering choices based on these values.
 
 The rest of the variables provided in the Template function's input object will map to the argTypes you defined in your stories.js file.
