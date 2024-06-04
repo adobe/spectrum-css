@@ -1,24 +1,34 @@
 # Change Log
 
+## 14.0.0-next.7
+
+### Patch Changes
+
+- [#2725](https://github.com/adobe/spectrum-css/pull/2725) [`81edcde`](https://github.com/adobe/spectrum-css/commit/81edcde7fc606acd86b2bdb4379e0d2f96a5e211) Thanks [@jawinn](https://github.com/jawinn)! - #### refactor: remove spectrum-ButtonWithFocusRing placeholder class extend
+
+  Removes the need for the extend from this placeholder class, as the styles it provides have diverged slightly from what is in button and it was causing some unnecessary CSS to override.
+  This should not result in any changed visuals or behavior, as the same CSS has been integrated.
+
 ## 14.0.0-next.6
 
 ### Major Changes
 
-- [#2600](https://github.com/adobe/spectrum-css/pull/2600) [`3559678`](https://github.com/adobe/spectrum-css/commit/35596780a1309dd145fa565461d330ddfaf50e68) Thanks [@jawinn](https://github.com/jawinn)! 
+- [#2600](https://github.com/adobe/spectrum-css/pull/2600) [`3559678`](https://github.com/adobe/spectrum-css/commit/35596780a1309dd145fa565461d330ddfaf50e68) Thanks [@jawinn](https://github.com/jawinn)!
 
 #### Spectrum 2 migration
-  Button now uses Spectrum 2 tokens and specifications, which includes many color changes to all variants. A few other notable changes:
 
-  - Outline buttons are no longer available in accent and negative options — use the filled variant instead.
-  - Medium size is now the default. The class `.spectrum-Button--sizeM` is now unnecessary for this size, and has been removed.
-  - The `.spectrum-Button--fill` class is no longer needed and has been removed.
+Button now uses Spectrum 2 tokens and specifications, which includes many color changes to all variants. A few other notable changes:
 
-  The following `--mod` custom properties have been renamed:
+- Outline buttons are no longer available in accent and negative options — use the filled variant instead.
+- Medium size is now the default. The class `.spectrum-Button--sizeM` is now unnecessary for this size, and has been removed.
+- The `.spectrum-Button--fill` class is no longer needed and has been removed.
 
-  - `--mod-line-height-100` has been renamed to `--mod-button-line-height`
-  - `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`
-  - `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`
-  - `--mod-bold-font-weight` has been renamed to `--mod-button-font-weight`
+The following `--mod` custom properties have been renamed:
+
+- `--mod-line-height-100` has been renamed to `--mod-button-line-height`
+- `--mod-sans-font-family-stack` has been renamed to `--mod-button-font-family`
+- `--mod-animation-duration-100` has been renamed to `--mod-button-animation-duration`
+- `--mod-bold-font-weight` has been renamed to `--mod-button-font-weight`
 
 ## 14.0.0-next.5
 
