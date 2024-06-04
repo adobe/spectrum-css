@@ -1,0 +1,54 @@
+{
+  "selectors": [
+    ".spectrum-ColorSlider",
+    ".spectrum-ColorSlider--vertical",
+    ".spectrum-ColorSlider--vertical .spectrum-ColorSlider-handle",
+    ".spectrum-ColorSlider-checkerboard",
+    ".spectrum-ColorSlider-checkerboard,\n.spectrum-ColorSlider-gradient",
+    ".spectrum-ColorSlider-checkerboard:before",
+    ".spectrum-ColorSlider-gradient:dir(rtl),\n[dir=\"rtl\"] .spectrum-ColorSlider-gradient",
+    ".spectrum-ColorSlider-handle",
+    ".spectrum-ColorSlider-slider",
+    ".spectrum-ColorSlider.is-disabled",
+    ".spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-checkerboard",
+    ".spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-gradient",
+    ".spectrum-ColorSlider.is-focused"
+  ],
+  "mods": [
+    "--mod-color-slider-background-color-disabled",
+    "--mod-color-slider-border-color",
+    "--mod-color-slider-border-color-disabled",
+    "--mod-color-slider-border-rounding",
+    "--mod-color-slider-border-width",
+    "--mod-color-slider-control-track-height",
+    "--mod-color-slider-control-track-width",
+    "--mod-color-slider-handle-hitarea-border-radius",
+    "--mod-color-slider-length",
+    "--mod-color-slider-minimum-length",
+    "--mod-color-slider-vertical-control-track-width",
+    "--mod-color-slider-vertical-height",
+    "--mod-color-slider-vertical-minimum-height"
+  ],
+  "spectrum": [
+    "--spectrum-color-control-track-width",
+    "--spectrum-color-slider-border-color-local",
+    "--spectrum-color-slider-border-color-rgba",
+    "--spectrum-color-slider-border-opacity",
+    "--spectrum-color-slider-border-rounding",
+    "--spectrum-color-slider-border-width",
+    "--spectrum-color-slider-length",
+    "--spectrum-color-slider-minimum-length",
+    "--spectrum-component-top-to-text-75",
+    "--spectrum-disabled-background-color",
+    "--spectrum-gray-900-rgb",
+    "--spectrum-opacity-checkerboard-square-dark",
+    "--spectrum-opacity-checkerboard-square-light",
+    "--spectrum-opacity-checkerboard-square-size"
+  ],
+  "system": [],
+  "a11y": [
+    "--highcontrast-color-slider-background-color-disabled",
+    "--highcontrast-color-slider-border-color",
+    "--highcontrast-color-slider-border-color-disabled"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "selectors": [
+    ".spectrum-DropIndicator",
+    ".spectrum-DropIndicator--horizontal",
+    ".spectrum-DropIndicator--horizontal:after",
+    ".spectrum-DropIndicator--horizontal:after,\n.spectrum-DropIndicator--horizontal:before",
+    ".spectrum-DropIndicator--horizontal:before",
+    ".spectrum-DropIndicator--vertical",
+    ".spectrum-DropIndicator--vertical:after",
+    ".spectrum-DropIndicator--vertical:after,\n.spectrum-DropIndicator--vertical:before",
+    ".spectrum-DropIndicator--vertical:before",
+    ".spectrum-DropIndicator:after,\n.spectrum-DropIndicator:before"
+  ],
+  "mods": [
+    "--mod-dropindicator-border-color",
+    "--mod-dropindicator-border-size",
+    "--mod-dropindicator-circle-color",
+    "--mod-dropindicator-circle-size"
+  ],
+  "spectrum": [
+    "--spectrum-border-width-200",
+    "--spectrum-dropindicator-border-color",
+    "--spectrum-dropindicator-border-size",
+    "--spectrum-dropindicator-circle-color",
+    "--spectrum-dropindicator-circle-size",
+    "--spectrum-dropindicator-color"
+  ],
+  "system": [],
+  "a11y": ["--highcontrast-dropindicator-color"]
+}

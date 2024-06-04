@@ -1,0 +1,41 @@
+{
+	"name": "@spectrum-css/colorarea",
+	"version": "5.1.1",
+	"description": "The Spectrum CSS Color Area component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/colorarea",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/colorarea"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"files": [
+		"dist/*",
+		"CHANGELOG.md",
+		"package.json",
+		"stories/template.js",
+		"metadata/mods.md"
+	],
+	"peerDependencies": {
+		"@spectrum-css/colorhandle": ">=8",
+		"@spectrum-css/tokens": ">=14"
+	},
+	"devDependencies": {
+		"@spectrum-css/colorhandle": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
+	"publishConfig": {
+		"access": "public"
+	}
+}

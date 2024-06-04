@@ -1,0 +1,29 @@
+{
+  "selectors": [
+    ".spectrum-Asset",
+    ".spectrum-Asset-file,\n.spectrum-Asset-folder",
+    ".spectrum-Asset-fileBackground",
+    ".spectrum-Asset-fileOutline,\n.spectrum-Asset-folderOutline",
+    ".spectrum-Asset-folderBackground",
+    ".spectrum-Asset-image"
+  ],
+  "mods": [
+    "--mod-asset-file-background-color",
+    "--mod-asset-folder-background-color",
+    "--mod-asset-icon-margin",
+    "--mod-asset-icon-max-width",
+    "--mod-asset-icon-min-width",
+    "--mod-asset-icon-outline-color"
+  ],
+  "spectrum": [
+    "--spectrum-animation-duration-100",
+    "--spectrum-gray-300",
+    "--spectrum-gray-50",
+    "--spectrum-gray-500"
+  ],
+  "system": [],
+  "a11y": [
+    "--highcontrast-asset-file-background-color",
+    "--highcontrast-asset-folder-background-color"
+  ]
+}

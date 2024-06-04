@@ -1,0 +1,22 @@
+{
+  "selectors": [
+    ".spectrum-ButtonGroup",
+    ".spectrum-ButtonGroup .spectrum-ButtonGroup-item",
+    ".spectrum-ButtonGroup--sizeL,\n.spectrum-ButtonGroup--sizeM,\n.spectrum-ButtonGroup--sizeXL",
+    ".spectrum-ButtonGroup--sizeS",
+    ".spectrum-ButtonGroup--vertical"
+  ],
+  "mods": [
+    "--mod-buttongroup-justify-content",
+    "--mod-buttongroup-spacing-horizontal",
+    "--mod-buttongroup-spacing-vertical"
+  ],
+  "spectrum": [
+    "--spectrum-buttongroup-spacing-horizontal",
+    "--spectrum-buttongroup-spacing-vertical",
+    "--spectrum-spacing-200",
+    "--spectrum-spacing-300"
+  ],
+  "system": [],
+  "a11y": []
+}

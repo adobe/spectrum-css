@@ -1,0 +1,57 @@
+{
+	"name": "@spectrum-css/alertdialog",
+	"version": "2.1.1",
+	"description": "The Spectrum CSS alertdialog component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/alertdialog"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"files": [
+		"dist/*",
+		"CHANGELOG.md",
+		"package.json",
+		"stories/template.js",
+		"metadata/mods.md"
+	],
+	"peerDependencies": {
+		"@spectrum-css/buttongroup": ">=7",
+		"@spectrum-css/divider": ">=3",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/modal": ">=5",
+		"@spectrum-css/tokens": ">=14",
+		"@spectrum-css/underlay": ">=4"
+	},
+	"devDependencies": {
+		"@spectrum-css/buttongroup": "workspace:^",
+		"@spectrum-css/divider": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/modal": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-css/underlay": "workspace:^"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/buttongroup": {
+			"optional": true
+		},
+		"@spectrum-css/icon": {
+			"optional": true
+		}
+	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
+	"publishConfig": {
+		"access": "public"
+	}
+}

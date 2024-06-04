@@ -1,0 +1,47 @@
+{
+	"name": "@spectrum-css/actionmenu",
+	"version": "6.1.1",
+	"description": "The Spectrum CSS actionmenu component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/actionmenu",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/actionmenu"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"files": [
+		"dist/*",
+		"CHANGELOG.md",
+		"package.json",
+		"stories/template.js",
+		"metadata/mods.md"
+	],
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
+	"peerDependencies": {
+		"@spectrum-css/actionbutton": ">=6",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/menu": ">=7",
+		"@spectrum-css/popover": ">=7",
+		"@spectrum-css/tokens": ">=14"
+	},
+	"devDependencies": {
+		"@spectrum-css/actionbutton": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/popover": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

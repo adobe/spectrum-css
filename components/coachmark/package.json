@@ -1,0 +1,56 @@
+{
+	"name": "@spectrum-css/coachmark",
+	"version": "7.1.1",
+	"description": "The Spectrum CSS coachmark component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/coachmark",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/coachmark"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"main": "dist/index.css",
+	"files": [
+		"dist/*",
+		"CHANGELOG.md",
+		"package.json",
+		"stories/template.js",
+		"metadata/mods.md"
+	],
+	"peerDependencies": {
+		"@spectrum-css/actionbutton": ">=6",
+		"@spectrum-css/actionmenu": ">=6",
+		"@spectrum-css/button": ">=13",
+		"@spectrum-css/buttongroup": ">=7",
+		"@spectrum-css/menu": ">=7",
+		"@spectrum-css/popover": ">=7",
+		"@spectrum-css/tokens": ">=14"
+	},
+	"devDependencies": {
+		"@spectrum-css/actionbutton": "workspace:^",
+		"@spectrum-css/actionmenu": "workspace:^",
+		"@spectrum-css/button": "workspace:^",
+		"@spectrum-css/buttongroup": "workspace:^",
+		"@spectrum-css/menu": "workspace:^",
+		"@spectrum-css/popover": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/button": {
+			"optional": true
+		}
+	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
+	"publishConfig": {
+		"access": "public"
+	}
+}
