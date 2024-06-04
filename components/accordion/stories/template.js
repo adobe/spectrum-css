@@ -90,12 +90,10 @@ export const Template = ({
 		<div
 			class="${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--${density}`]:
-					typeof density !== "undefined" && density !== "regular",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}"
+			size=${ifDefined(size)}
+			density=${ifDefined(density == "regular" ? undefined : density)}
 			id=${ifDefined(id)}
 			role="region"
 			style=${ifDefined(styleMap(customStyles))}

@@ -40,7 +40,14 @@ export default {
 				category: "Component",
 			},
 			options: ["compact", "regular", "spacious"],
-			control: "select",
+			control: {
+				type: "select",
+				labels: {
+					regular: "regular (undefined)",
+					compact: "compact",
+					spacious: "spacious",
+				},
+			}
 		},
 	},
 	args: {
