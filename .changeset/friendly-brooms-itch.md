@@ -1,5 +1,7 @@
 ---
 "@spectrum-css/menu": major
+"@spectrum-css/popover": minor
+"@spectrum-css/tray": minor
 "@spectrum-css/tokens": patch
 ---
 
@@ -15,6 +17,8 @@ In addition to small token and minor style changes, there were several new featu
 - Menu items now receive corner rounding, which is visible on hover/focus/active states
 - The focus indicator has been updated--instead of a blue line on the left (start side) of the menu item, the whole element now receives an outline
 - Menu items now have the S2 down state transform
+
+In order to accommodate menu item focus outlines, horizontal padding has been added to popover and tray.
 
 The following mods have been added:
 
@@ -36,3 +40,5 @@ The following mods have been added:
 - `--mod-menu-section-description-line-height`
 - `--mod-menu-section-description-line-height-cjk`
 - `--mod-menu-section-header-to-description`
+- `--mod-popover-content-area-spacing-horizontal`
+- `--mod-tray-edge-to-content-area`
