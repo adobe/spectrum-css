@@ -4,7 +4,6 @@ import { when } from "lit/directives/when.js";
 
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
@@ -14,7 +13,7 @@ export const Template = ({
 	isOpen = true,
 	text,
 	variant,
-	hasActionButton,
+	actionButtonText = "Action",
 	customClasses = [],
 	...globals
 }) => {
@@ -26,36 +25,31 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				"is-open": isOpen,
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined" && variant !== "neutral",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 		>
 			<div class="${rootClass}-body">
 				<div class="${rootClass}-content">
-					${iconName
-						? Icon({
-								...globals,
-								iconName,
-								customClasses: [`${rootClass}-icon`],
+					${when(iconName, () =>
+						Icon({
+							...globals,
+							iconName,
+							customClasses: [`${rootClass}-icon`],
 						})
-						: ""}
+					)}
 					<p class="${rootClass}-text">${text}</p>
 				</div>
-				${when(hasActionButton, () =>
-				Button({
-					size: "m",
-					staticColor: "white",
-					treatment: "outline",
-					label: "Action",
-				}))}
+				${when(actionButtonText, () =>
+					Button({
+						size: "m",
+						variant: "staticWhite",
+						treatment: "outline",
+						label: actionButtonText,
+					})
+				)}
 			</div>
 			<div class="${rootClass}-end">
-				${Divider({
-					vertical: true,
-					size: "s",
-					tag: "div",
-					...globals,
-				})}
 				${CloseButton({
 					...globals,
 					size: "m",
