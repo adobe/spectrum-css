@@ -1,5 +1,8 @@
 
+import "@spectrum-css/tokens/dist/index.css";
 import { setConsoleOptions } from "@storybook/addon-console";
+import "./assets/base.css";
+import "./assets/typekit.js";
 import {
 	withActions,
 	withContextWrapper,
@@ -10,10 +13,6 @@ import {
 } from "./decorators/index.js";
 import DocumentationTemplate from './DocumentationTemplate.mdx';
 import { argTypes, globalTypes } from "./types";
-
-import "@spectrum-css/tokens";
-import "./assets/base.css";
-import "./assets/typekit.js";
 
 const panelExclude = setConsoleOptions({}).panelExclude || [];
 setConsoleOptions({
@@ -45,7 +44,13 @@ export const parameters = {
 			includeNames: true,
 		},
 	},
-	// chromatic: { forcedColors: 'active' },
+	chromatic: {
+		// This delay ensures tokens are loaded before the story is rendered
+		// @todo: explore a loader for this to ensure tokens load before stories without an arbitrary delay
+		delay: 500,
+		forcedColors: "none",
+		prefersReducedMotion: "no-preference",
+	},
 	controls: {
 		expanded: true,
 		hideNoControlsWarning: true,

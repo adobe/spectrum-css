@@ -108,12 +108,12 @@ export default {
 		},
 		staticColor: {
 			name: "Static color",
-			description: "Variants that can be used when a button needs to be placed on top of a colored background or a visual.",
+			description:
+        "Variants that can be used when a button needs to be placed on top of a colored background or a visual.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Advanced",
-
 			},
 			options: ["white", "black"],
 			control: "select",
@@ -136,33 +136,35 @@ export default {
 			handles: ["click .spectrum-Button"],
 		},
 		html: {
-			root: "#render-root"
-		}
+			root: "#render-root",
+		},
 	},
 	decorators: [
 		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 10px 10px;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "flex-start",
-					gap: "10px",
-					"--mod-detail-margin-end": "6px",
-				})}
-			>
-				${Story(context)}
-			</div>
-		`,
+      <style>
+        .spectrum-Detail {
+          display: inline-block;
+        }
+        .spectrum-Typography > div {
+          border: 1px solid var(--spectrum-gray-200);
+          border-radius: 4px;
+          padding: 0 10px 10px;
+          /* Why seafoam? Because it separates it from the component styles. */
+          --mod-detail-font-color: var(--spectrum-seafoam-900);
+        }
+      </style>
+      <div
+        style=${styleMap({
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          gap: "10px",
+          "--mod-detail-margin-end": "6px",
+        })}
+      >
+        ${Story(context)}
+      </div>
+    `,
 	],
 };
 
@@ -170,291 +172,309 @@ export default {
  * Multiple button variations displayed in one story template.
  * Used as the base template for the stories.
  */
-const CustomButton = ({
-	iconName,
-	...args
-}) => html`
-	${Template({
-		...args,
-		iconName: undefined,
-	})}
-	${Template({
-		...args,
-		iconName: iconName ?? "Edit",
-	})}
-	${Template({
-		...args,
-		hideLabel: true,
-		iconName: iconName ?? "Edit",
-	})}
+const CustomButton = ({ iconName, ...args }) => html`
+  ${Template({
+    ...args,
+    iconName: undefined,
+  })}
+  ${Template({
+    ...args,
+    iconName: iconName ?? "Edit",
+  })}
+  ${Template({
+    ...args,
+    hideLabel: true,
+    iconName: iconName ?? "Edit",
+  })}
 `;
 
 const States = (args) =>
 	html` <div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Default"],
-			})}
-			${Treatment(args)}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Selected"],
-			})}
-			${Treatment({
-				...args,
-				isSelected: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Focused"],
-			})}
-			${Treatment({
-				...args,
-				isFocused: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Hovered"],
-			})}
-			${Treatment({
-				...args,
-				isHovered: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Active"],
-			})}
-			${Treatment({
-				...args,
-				isActive: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Disabled"],
-			})}
-			${Treatment({
-				...args,
-				isDisabled: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Disabled + selected"],
-			})}
-			${Treatment({
-				...args,
-				isSelected: true,
-				isDisabled: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Pending"],
-			})}
-			${Treatment({
-				...args,
-				isPending: true,
-			})}
-		</div>`;
+      ${Typography({
+        semantics: "detail",
+        size: "s",
+        content: ["Default"],
+        customClasses: ["chromatic-ignore"],
+      })}
+      ${Treatment(args)}
+    </div>
+    <div>
+      ${Typography({
+        semantics: "detail",
+        size: "s",
+        content: ["Selected"],
+        customClasses: ["chromatic-ignore"],
+      })}
+      ${Treatment({
+        ...args,
+        isSelected: true,
+      })}
+    </div>
+    <div>
+      ${Typography({
+        semantics: "detail",
+        size: "s",
+        content: ["Focused"],
+        customClasses: ["chromatic-ignore"],
+      })}
+      ${Treatment({
+        ...args,
+        isFocused: true,
+      })}
+    </div>
+    <div>
+      ${Typography({
+        semantics: "detail",
+        size: "s",
+        content: ["Hovered"],
+        customClasses: ["chromatic-ignore"],
+      })}
+      ${Treatment({
+        ...args,
+        isHovered: true,
+      })}
+    </div>
+    <div>
+      ${Typography({
+        semantics: "detail",
+        size: "s",
+        content: ["Active"],
+        customClasses: ["chromatic-ignore"],
+      })}
+      ${Treatment({
+        ...args,
+        isActive: true,
+      })}
+    </div>
+    <div>
+      ${Typography({
+        semantics: "detail",
+        size: "s",
+        content: ["Disabled"],
+        customClasses: ["chromatic-ignore"],
+      })}
+      ${Treatment({
+        ...args,
+        isDisabled: true,
+      })}
+    </div>
+    <div>
+      ${Typography({
+        semantics: "detail",
+        size: "s",
+        content: ["Disabled + selected"],
+        customClasses: ["chromatic-ignore"],
+      })}
+      ${Treatment({
+        ...args,
+        isSelected: true,
+        isDisabled: true,
+      })}
+    </div>
+    <div>
+      ${Typography({
+        semantics: "detail",
+        size: "s",
+        content: ["Pending"],
+        customClasses: ["chromatic-ignore"],
+      })}
+      ${Treatment({
+        ...args,
+        isPending: true,
+      })}
+    </div>`;
 
 const Sizes = (args) =>
 	html` ${["s", "m", "l", "xl"].map((size) => {
-		return html` <div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: [
-					{
-						xxs: "Extra-extra-small",
-						xs: "Extra-small",
-						s: "Small",
-						m: "Medium",
-						l: "Large",
-						xl: "Extra-large",
-						xxl: "Extra-extra-large",
-					}[size],
-				],
-			})}
-			${Treatment({ ...args, size })}
-		</div>`;
-	})}`;
+    return html` <div>
+      ${Typography({
+        semantics: "detail",
+        size: "s",
+        content: [
+          {
+            xxs: "Extra-extra-small",
+            xs: "Extra-small",
+            s: "Small",
+            m: "Medium",
+            l: "Large",
+            xl: "Extra-large",
+            xxl: "Extra-extra-large",
+          }[size],
+        ],
+        customClasses: ["chromatic-ignore"],
+      })}
+      ${Treatment({ ...args, size })}
+    </div>`;
+  })}`;
 
 const Treatment = (args) =>
-	html`
-<div
-	style=${styleMap({
-		display: "flex",
-		gap: "10px",
-	})}
-	id="render-root"
->
-	${["fill", "outline"].map((treatment) => CustomButton({ ...args, treatment }))}
-</div>`;
+	html` <div
+    style=${styleMap({
+      display: "flex",
+      gap: "10px",
+    })}
+    id="render-root"
+  >
+    ${["fill", "outline"].map((treatment) =>
+      CustomButton({ ...args, treatment })
+    )}
+  </div>`;
 
-const Wrapping = (args) => html`
-	${Template({
-	...args,
-	customStyles: {
-		"max-inline-size": "480px",
-	},
-	iconName: "Edit",
-	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+const Wrapping = (args) => html` ${Template({
+  ...args,
+  customStyles: {
+    "max-inline-size": "480px",
+  },
+  iconName: "Edit",
+  label:
+    "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 })}
-	${Template({
-	...args,
-	customStyles: {
-		"max-inline-size": "480px",
-	},
-	// Uses a UI icon that is smaller than workflow sizing, to test alignment:
-	iconName: "Cross100",
-	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+${Template({
+  ...args,
+  customStyles: {
+    "max-inline-size": "480px",
+  },
+  // Uses a UI icon that is smaller than workflow sizing, to test alignment:
+  iconName: "Cross100",
+  label:
+    "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 })}
-	${Template({
-	...args,
-	customStyles: {
-		"max-inline-size": "480px",
-	},
-	// UI icon that is larger than workflow sizing:
-	iconName: "ArrowDown600",
-	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+${Template({
+  ...args,
+  customStyles: {
+    "max-inline-size": "480px",
+  },
+  // UI icon that is larger than workflow sizing:
+  iconName: "ArrowDown600",
+  label:
+    "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 })}`;
 
 const Variants = (args) =>
 	html` ${window.isChromatic()
-		? html` <div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Accent"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${States(args)}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Negative"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${States({
-							...args,
-							variant: "negative"
-						})}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Primary"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${States({
-							...args,
-							variant: "primary"
-						})}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Secondary"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${States({
-							...args,
-							variant: "secondary"
-						})}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Sizing"],
-					})}
-					<div
-						style=${styleMap({
-							display: "flex",
-							flexDirection: "column",
-							gap: "10px",
-						})}
-					>
-						${Sizes(args)}
-					</div>
-				</div>
-				<div class="spectrum-Typography">
-					${Typography({
-						semantics: "detail",
-						size: "l",
-						content: ["Wrapping"],
-					})}
-					<div
-						style=${styleMap({
-							"display": "flex",
-							"flex-direction": "column",
-							"gap": "10px",
-							"padding": "6px"
-						})}
-					>
-						${Wrapping(args)}
-					</div>
-				</div>
-		` : html`
-<div
-	style=${styleMap({
-		display: "flex",
-		gap: "10px",
-	})}
-	id="render-root"
->${CustomButton(args)}</div>`}`;
+    ? html`
+        <div class="spectrum-Typography">
+          ${Typography({
+            semantics: "detail",
+            size: "l",
+            content: ["Accent"],
+            customClasses: ["chromatic-ignore"],
+          })}
+          <div
+            style=${styleMap({
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
+            })}
+          >
+            ${States(args)}
+          </div>
+        </div>
+        <div class="spectrum-Typography">
+          ${Typography({
+            semantics: "detail",
+            size: "l",
+            content: ["Negative"],
+            customClasses: ["chromatic-ignore"],
+          })}
+          <div
+            style=${styleMap({
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
+            })}
+          >
+            ${States({
+              ...args,
+              variant: "negative",
+            })}
+          </div>
+        </div>
+        <div class="spectrum-Typography">
+          ${Typography({
+            semantics: "detail",
+            size: "l",
+            content: ["Primary"],
+            customClasses: ["chromatic-ignore"],
+          })}
+          <div
+            style=${styleMap({
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
+            })}
+          >
+            ${States({
+              ...args,
+              variant: "primary",
+            })}
+          </div>
+        </div>
+        <div class="spectrum-Typography">
+          ${Typography({
+            semantics: "detail",
+            size: "l",
+            content: ["Secondary"],
+            customClasses: ["chromatic-ignore"],
+          })}
+          <div
+            style=${styleMap({
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
+            })}
+          >
+            ${States({
+              ...args,
+              variant: "secondary",
+            })}
+          </div>
+        </div>
+        <div class="spectrum-Typography">
+          ${Typography({
+            semantics: "detail",
+            size: "l",
+            content: ["Sizing"],
+            customClasses: ["chromatic-ignore"],
+          })}
+          <div
+            style=${styleMap({
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
+            })}
+          >
+            ${Sizes(args)}
+          </div>
+        </div>
+        <div class="spectrum-Typography">
+          ${Typography({
+            semantics: "detail",
+            size: "l",
+            content: ["Wrapping"],
+            customClasses: ["chromatic-ignore"],
+          })}
+          <div
+            style=${styleMap({
+              display: "flex",
+              "flex-direction": "column",
+              gap: "10px",
+              padding: "6px",
+            })}
+          >
+            ${Wrapping(args)}
+          </div>
+        </div>
+      `
+    : html` <div
+        style=${styleMap({
+          display: "flex",
+          gap: "10px",
+        })}
+        id="render-root"
+      >
+        ${CustomButton(args)}
+      </div>`}`;
 
 export const Default = Variants.bind({});
 Default.args = {};

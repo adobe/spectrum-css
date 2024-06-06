@@ -60,11 +60,6 @@ export default {
 		isQuiet: false,
 		isDisabled: false
 	},
-	parameters: {
-		actions: {
-			handles: []
-		}
-	}
 };
 
 export const Default = Template.bind({});

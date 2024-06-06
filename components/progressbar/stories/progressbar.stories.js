@@ -66,11 +66,6 @@ export default {
 		label: "Loading",
 		value: 50,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

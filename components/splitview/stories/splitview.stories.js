@@ -69,11 +69,6 @@ export default {
 		isResizable: false,
 		componentHeight: "200px",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Horizontal = Template.bind({});

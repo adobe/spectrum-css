@@ -35,11 +35,6 @@ export default {
 		hasIcon: false,
 		iconName: "Folder"
 	},
-	parameters: {
-		actions: {
-			handles: []
-		}
-	}
 };
 
 export const Default = Template.bind({});

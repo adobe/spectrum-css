@@ -34,11 +34,6 @@ export default {
 		direction: "vertical",
 		size: "300px",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

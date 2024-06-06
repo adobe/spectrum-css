@@ -20,7 +20,7 @@ export default {
 				category: "Component",
 			},
 			options: ["s", "m", "l", "xl"],
-			control: "select"
+			control: "select",
 		},
 		orientation: {
 			name: "Orientation",
@@ -32,7 +32,7 @@ export default {
 			},
 			options: ["horizontal", "vertical", "overflow"],
 			control: "select",
-			default: "horizontal"
+			default: "horizontal",
 		},
 		isQuiet: {
 			name: "Quiet",
@@ -70,7 +70,7 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
-		}
+		},
 	},
 	args: {
 		rootClass: "spectrum-Tabs",
@@ -95,60 +95,92 @@ export default {
 				label: "Tab 3",
 				icon: "Document",
 				isDisabled: true,
-			}
+			},
 		],
 	},
 	parameters: {
 		actions: {
 			handles: [".spectrum-Tabs-item"],
-		}
-	}
+		},
+	},
 };
 
 const TabsGroup = (args) => html`
-  <div style="display: flex; flex-direction: ${args.orientation === "horizontal" ? "column" : "row"}; gap: 32px;">
-    ${Template({ ...args, content: [
-      {
-        id: "tab-1",
-        label: "Tab 1",
-        isSelected: true,
-      },
-      {
-        id: "tab-2",
-        label: "Tab 2",
-        isDisabled: true,
-      },
-      {
-        id: "tab-3",
-        label: "Tab 3",
-      }
-    ]})}
-    ${Template(args)}
-    ${Template({ ...args, iconOnly: true })}
+  <div
+    style="display: flex; flex-direction: ${args.orientation === "horizontal"
+      ? "column"
+      : "row"}; gap: 32px;"
+  >
+    ${Template({
+      ...args,
+      content: [
+        {
+          id: "tab-1",
+          label: "Tab 1",
+          isSelected: true,
+        },
+        {
+          id: "tab-2",
+          label: "Tab 2",
+          isDisabled: true,
+        },
+        {
+          id: "tab-3",
+          label: "Tab 3",
+        },
+      ],
+    })}
+    ${Template(args)} ${Template({ ...args, iconOnly: true })}
   </div>
 `;
 
 const Variants = (args) => html`
-  ${window.isChromatic() ? html`
-  <div style="display: grid; gap: 32px;${args.orientation === "overflow" ? " max-inline-size: 100px" : ""}">
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Default"] })}
-      ${TabsGroup(args)}
-    </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Emphasized"] })}
-      ${TabsGroup({ ...args, isEmphasized: true })}
-    </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Quiet"] })}
-      ${TabsGroup({ ...args, isQuiet: true })}
-    </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Quiet + compact"] })}
-      ${TabsGroup({ ...args, isQuiet: true, isCompact: true })}
-    </div>
-  </div>
-` : Template(args)}
+  ${window.isChromatic()
+    ? html`
+        <div
+          style="display: grid; gap: 32px;${args.orientation === "overflow"
+            ? " max-inline-size: 100px"
+            : ""}"
+        >
+          <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+            ${Typography({
+              semantics: "heading",
+              size: "s",
+              content: ["Default"],
+              customClasses: ["chromatic-ignore"],
+            })}
+            ${TabsGroup(args)}
+          </div>
+          <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+            ${Typography({
+              semantics: "heading",
+              size: "s",
+              content: ["Emphasized"],
+              customClasses: ["chromatic-ignore"],
+            })}
+            ${TabsGroup({ ...args, isEmphasized: true })}
+          </div>
+          <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+            ${Typography({
+              semantics: "heading",
+              size: "s",
+              content: ["Quiet"],
+              customClasses: ["chromatic-ignore"],
+            })}
+            ${TabsGroup({ ...args, isQuiet: true })}
+          </div>
+          <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+            ${Typography({
+              semantics: "heading",
+              size: "s",
+              content: ["Quiet + compact"],
+              customClasses: ["chromatic-ignore"],
+            })}
+            ${TabsGroup({ ...args, isQuiet: true, isCompact: true })}
+          </div>
+        </div>
+      `
+    : Template(args)}
 `;
 
 export const Default = Variants.bind({});
@@ -156,7 +188,7 @@ Default.args = {};
 
 export const Vertical = Variants.bind({});
 Vertical.args = {
-	orientation: "vertical"
+	orientation: "vertical",
 };
 
 export const Overflow = Variants.bind({});

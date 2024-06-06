@@ -80,9 +80,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 const AvatarSizes = (args) => html`
 	<div
 		style=${styleMap({
@@ -104,6 +102,7 @@ const AvatarSizes = (args) => html`
 					semantics: "detail",
 					size: "s",
 					content: [size],
+					customClasses: ["chromatic-ignore"],
 				})}
 			</div>
 		`))}

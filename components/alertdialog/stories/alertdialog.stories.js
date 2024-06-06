@@ -35,6 +35,7 @@ export default {
 			control: "boolean",
 		},
 		variant: { table: { disable: true } },
+		buttons: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-AlertDialog",
@@ -68,6 +69,11 @@ Default.args = {
 	content: "Smart filters are nondestructive and will preserve your original images.",
 };
 
+/**
+ * Information alert dialogs communicate important information that a user needs to acknowledge. Before using this kind of alert dialog, make sure it’s the appropriate communication channel for the message instead of a toast or a more lightweight messaging option.
+ *
+ * Note that an alert dialog can have a total of 3 buttons if the secondary outline button label is defined.
+ */
 export const Information = Template.bind({});
 Information.args = {
 	variant: "information",
@@ -88,6 +94,9 @@ Information.args = {
 	content: "If you enjoy our app, would you mind taking a moment to rate it?",
 };
 
+/**
+ * Warning alert dialogs communicate important information to users in relation to an issue that needs to be acknowledged, but does not block the user from moving forward.
+ */
 export const Warning = Template.bind({});
 Warning.args = {
 	variant: "warning",
@@ -105,6 +114,9 @@ Warning.args = {
 	content: "This format has not been verified and may not be viewable for some users. Do you want to continue publishing?",
 };
 
+/**
+ * Error alert dialogs communicate critical information about an issue that a user needs to acknowledge.
+ */
 export const Error = Template.bind({});
 Error.args = {
 	variant: "error",
@@ -123,6 +135,9 @@ Error.args = {
 
 };
 
+/**
+ * Destructive alert dialogs are for when a user needs to confirm an action that will impact their data or experience in a potentially negative way, such as deleting files or contacts.
+ */
 export const Destructive = Template.bind({});
 Destructive.args = {
 	variant: "destructive",
@@ -139,10 +154,6 @@ Destructive.args = {
 	content: "Are you sure you want to delete the 3 selected documents?",
 };
 
-
-/**
- * Stories for the MDX "Docs" only.
- */
 export const Scroll = Template.bind({});
 Scroll.tags = ["docs-only"];
 Scroll.args = {

@@ -113,10 +113,6 @@ export default {
 	},
 	parameters: {
 		layout: "centered",
-		actions: {
-			handles: [],
-		},
-		chromatic: { delay: 2000 },
 		docs: {
 			story: {
 				height: "300px"
@@ -153,14 +149,16 @@ const ChromaticTipPlacementVariants = (args) => html`
 				${Typography({
 					semantics: "detail",
 					size: "l",
-					content: [`${option}`],
+					content: [option],
+				customClasses: ["chromatic-ignore"],
 				})}
 				<div>
 					${when(optionDescription() !== null, () => html`
 						${Typography({
 							semantics: "detail",
 							size: "s",
-							content: [`${optionDescription()}`],
+							content: [optionDescription()],
+							customClasses: ["chromatic-ignore"],
 						})}
 					`)}
 				</div>

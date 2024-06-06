@@ -1,13 +1,14 @@
 import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-
-import "@spectrum-css/{{ folderName }}//index.css";
+import { styleMap } from "lit/directives/style-map.js";
+import "../index.css";
 
 export const Template = ({
   rootClass = "spectrum-{{ pascalCase name }}",
   size = "m",
   id,
+  testId,
   customClasses = [],
   customStyles = {},
   ...globals
@@ -19,8 +20,32 @@ export const Template = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
     id=${ifDefined(id)}
+    data-test-id=${ifDefined(testId)}
     style=${ifDefined(styleMap(customStyles))}
   >
     <!-- Component mark-up goes here -->
+  </div>
+`;
+
+export const {{ pascalCase name }}Group = (args) => html`
+  <div style=${styleMap({
+    "display": window.isChromatic() ? "none" : undefined,
+  })}>
+    ${Template(args)}
+  </div>
+  <div style=${styleMap({
+    "display": window.isChromatic() ? "flex" : "none",
+    "flex-wrap": "wrap",
+    "gap": "16px"
+  })}>
+    ${Template(args)}
+    ${Template({
+      ...args,
+      // variant1
+    })}
+    ${Template({
+      ...args,
+      // variant2
+    })}
   </div>
 `;

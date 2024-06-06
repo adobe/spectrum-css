@@ -32,11 +32,6 @@ export default {
 		variant: "and",
 		isDisabled: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

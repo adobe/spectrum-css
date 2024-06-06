@@ -60,11 +60,6 @@ export default {
 		isDragged: false,
 		isDisabled: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind();

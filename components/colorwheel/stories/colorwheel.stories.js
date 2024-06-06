@@ -42,19 +42,12 @@ export default {
 		isFocused: false,
 		isWithColorArea: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});
 Default.args = {};
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,

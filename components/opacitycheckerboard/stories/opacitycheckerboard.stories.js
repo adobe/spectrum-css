@@ -24,11 +24,6 @@ export default {
 		rootClass: "spectrum-OpacityCheckerboard",
 		backgroundPosition: "left top"
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 	decorators: [
 		(Story, context) => html`<div style=${styleMap({ inlineSize: "100px", blockSize: "100px" })}>${Story(context)}</div>`
 	],

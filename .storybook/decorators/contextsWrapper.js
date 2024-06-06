@@ -43,7 +43,6 @@ export const withContextWrapper = makeDecorator({
 
 			for (const container of containers) {
 				container.classList.toggle("spectrum", true);
-
 				container.classList.toggle("spectrum--express", isExpress);
 
 				for (const c of colors) {

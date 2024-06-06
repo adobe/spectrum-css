@@ -35,11 +35,6 @@ export default {
 		isOpen: true,
 		rootClass: "spectrum-Modal",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

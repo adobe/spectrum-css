@@ -97,7 +97,7 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [...Checkbox.parameters.actions.handles],
+			handles: [...(Checkbox.parameters?.actions?.handles ?? [])],
 		},
 	},
 };

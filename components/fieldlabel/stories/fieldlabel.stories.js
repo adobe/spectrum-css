@@ -62,11 +62,6 @@ export default {
 		isDisabled: false,
 		isRequired: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

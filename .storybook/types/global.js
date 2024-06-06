@@ -30,4 +30,18 @@ export default {
 			dynamicTitle: true,
 		},
 	},
+	testingPreview: {
+		title: "Testing preview",
+		description: "Enable the testing preview",
+		defaultValue: false,
+		type: "boolean",
+		toolbar: {
+			icon: "beaker",
+			items: [
+				{ value: false, title: "Hide test view" },
+				{ value: true, title: "Show test view" },
+			],
+			dynamicTitle: false,
+		},
+	},
 };

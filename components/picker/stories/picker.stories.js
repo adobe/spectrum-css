@@ -131,9 +131,6 @@ export default {
 		],
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
 		docs: {
 			story: {
 				height: "300px"

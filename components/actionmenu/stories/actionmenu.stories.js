@@ -67,12 +67,11 @@ export default {
 	parameters: {
 		actions: {
 			handles: [
-				...Popover.parameters.actions.handles,
-				...ActionButton.parameters.actions.handles,
-				...Menu.parameters.actions.handles,
+				...(Popover?.parameters?.actions?.handles ?? []),
+				...(ActionButton?.parameters?.actions?.handles ?? []),
+				...(Menu.parameters?.actions?.handles ?? []),
 			],
 		},
-		chromatic: { delay: 2000 },
 	},
 	decorators: [
 		(Story, context) => html`<div style="padding: 14px">${Story(context)}</div>`
@@ -90,7 +89,7 @@ Default.parameters = {
 	docs: {
 		story: {
 			inline: false,
-			iframeHeight: 250,
+			iframeHeight: "250px",
 		},
 	},
 };

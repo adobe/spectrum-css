@@ -40,11 +40,6 @@ export default {
 	args: {
 		rootClass: "spectrum-IllustratedMessage",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = (args) => html`

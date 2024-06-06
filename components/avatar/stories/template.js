@@ -27,13 +27,13 @@ export const Template = ({
 		${when(hasLink, () =>
 			html`
 				<a class="spectrum-Avatar-link" href="#">
-					<img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
+					<img class="${rootClass}-image" data-chromatic="ignore" src=${image} alt=${ifDefined(altText)} />
 				</a>
 				`
 		)}
 		${when(!hasLink, () =>
 			html`
-				<img class="${rootClass}-image" src=${image} alt=${ifDefined(altText)} />
+				<img class="${rootClass}-image" data-chromatic="ignore" src=${image} alt=${ifDefined(altText)} />
 			`
 		)}
 	</div>

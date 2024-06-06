@@ -52,9 +52,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
@@ -74,7 +72,7 @@ WithColorLoupe.parameters = {
 	docs: {
 		story: {
 			inline: false,
-			iframeHeight: 150,
+			iframeHeight: "150px",
 		},
 	},
 };

@@ -63,11 +63,6 @@ export default {
 		label: "Status",
 		variant: "info",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = (args) => html`

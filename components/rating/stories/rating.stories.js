@@ -70,11 +70,6 @@ export default {
 		max: 5,
 		value: 3,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

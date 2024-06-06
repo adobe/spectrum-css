@@ -100,11 +100,6 @@ export default {
 		isDropTarget: false,
 		useScroller: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

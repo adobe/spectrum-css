@@ -54,11 +54,6 @@ export default {
 		size: "s",
 		value: 50,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

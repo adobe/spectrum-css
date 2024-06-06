@@ -56,11 +56,6 @@ export default {
 		variant: "neutral",
 		isClosable: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = (args) => html`

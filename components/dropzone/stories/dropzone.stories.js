@@ -36,11 +36,6 @@ export default {
 		isDragged: false,
 		isFilled: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = (args) => html`

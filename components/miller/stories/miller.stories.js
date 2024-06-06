@@ -12,11 +12,6 @@ export default {
 	args: {
 		rootClass: "spectrum-MillerColumns",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const BranchesSelectable = Template.bind({});
