@@ -1,5 +1,17 @@
 # Change Log
 
+## 10.0.5
+
+### Patch Changes
+
+- [#2820](https://github.com/adobe/spectrum-css/pull/2820) [`1711ef8`](https://github.com/adobe/spectrum-css/commit/1711ef8a7aa8da1858019b77ed52e1dd1b86d3bf) Thanks [@castastrophe](https://github.com/castastrophe)! - Fixes for Storybook instance
+
+  - Bring back testing preview global toggle to toolbar after it was accidentally removed in a previous release
+  - Chromatic disable snapshot syntax corrected in multiple stories
+  - Update when token assets are loaded to correct snapshot inconsistencies
+  - Add the vrt-only flag to ForcedColors stories to prevent them from being included in the local Storybook view
+  - Fixes to the Coach Indicator story
+
 ## 10.0.4
 
 ### Patch Changes
@@ -35,7 +47,9 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="9.0.0"></a>
+
 ## 9.0.0
+
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@8.0.4...@spectrum-css/preview@9.0.0)
 
@@ -54,35 +68,45 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="8.0.4"></a>
+
 ## 8.0.4
+
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@8.0.3...@spectrum-css/preview@8.0.4)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="8.0.3"></a>
+
 ## 8.0.3
+
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@8.0.2...@spectrum-css/preview@8.0.3)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="8.0.2"></a>
+
 ## 8.0.2
+
 🗓
 2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@8.0.1...@spectrum-css/preview@8.0.2)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="8.0.1"></a>
+
 ## 8.0.1
+
 🗓
 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@8.0.0...@spectrum-css/preview@8.0.1)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="8.0.0"></a>
+
 ## 8.0.0
+
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.5.0...@spectrum-css/preview@8.0.0)
 
@@ -99,7 +123,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 This component has been deprecated. Use an action bar to allow users to perform actions on either a single or multiple items at the same time, instead.
 
 <a name="7.5.0"></a>
+
 ## 7.5.0
+
 🗓
 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.4.2...@spectrum-css/preview@7.5.0)
 
@@ -108,28 +134,36 @@ This component has been deprecated. Use an action bar to allow users to perform 
 - **preview:**add figma support to storybook [CSS-284] ([#1680](https://github.com/adobe/spectrum-css/issues/1680))([3c6194e](https://github.com/adobe/spectrum-css/commit/3c6194e))
 
 <a name="7.4.2"></a>
+
 ## 7.4.2
+
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="7.4.1"></a>
+
 ## 7.4.1
+
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.4.0...@spectrum-css/preview@7.4.1)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="7.4.0"></a>
+
 ## 7.4.0
+
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.3.0...@spectrum-css/preview@7.4.0)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="7.3.0"></a>
+
 ## 7.3.0
+
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.2.1...@spectrum-css/preview@7.3.0)
 
@@ -138,14 +172,18 @@ This component has been deprecated. Use an action bar to allow users to perform 
 \*migrate build packages to postcss v8 ([#2460](https://github.com/adobe/spectrum-css/issues/2460))([bd6c40e](https://github.com/adobe/spectrum-css/commit/bd6c40e))
 
 <a name="7.2.1"></a>
+
 ## 7.2.1
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.2.0...@spectrum-css/preview@7.2.1)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="7.2.0"></a>
+
 ## 7.2.0
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.1.0...@spectrum-css/preview@7.2.0)
 
@@ -158,7 +196,9 @@ This component has been deprecated. Use an action bar to allow users to perform 
 \*remove storybook-addon-pseudo-states ([#2401](https://github.com/adobe/spectrum-css/issues/2401))([4510975](https://github.com/adobe/spectrum-css/commit/4510975))
 
 <a name="7.1.0"></a>
+
 ## 7.1.0
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@7.0.0...@spectrum-css/preview@7.1.0)
 
@@ -167,7 +207,9 @@ This component has been deprecated. Use an action bar to allow users to perform 
 - **ui-icons:**graduate to 1.0 release ([#2366](https://github.com/adobe/spectrum-css/issues/2366))([afd369a](https://github.com/adobe/spectrum-css/commit/afd369a))
 
 <a name="7.0.0"></a>
+
 ## 7.0.0
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@6.0.1...@spectrum-css/preview@7.0.0)
 
@@ -186,7 +228,9 @@ This component has been deprecated. Use an action bar to allow users to perform 
 * NEW: @spectrum-css/ui-icons package for all SVG icons in the UI set.
 
 <a name="6.0.1"></a>
+
 ## 6.0.1
+
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@6.0.0...@spectrum-css/preview@6.0.1)
 
@@ -195,7 +239,9 @@ This component has been deprecated. Use an action bar to allow users to perform 
 - **storybook:**postcss parsing error for node_modules paths ([#2321](https://github.com/adobe/spectrum-css/issues/2321))([a6bd124](https://github.com/adobe/spectrum-css/commit/a6bd124))
 
 <a name="6.0.0"></a>
+
 ## 6.0.0
+
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@5.1.0...@spectrum-css/preview@6.0.0)
 
@@ -211,14 +257,18 @@ these legacy token packages, these assets no longer need to exist in the monorep
 structure for Spectrum CSS.
 
 <a name="5.1.1"></a>
+
 ## 5.1.1
+
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@5.1.0...@spectrum-css/preview@5.1.1)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="5.1.0"></a>
+
 ## 5.1.0
+
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@5.0.5...@spectrum-css/preview@5.1.0)
 
@@ -227,42 +277,54 @@ structure for Spectrum CSS.
 - **storybook:**move config folder to root ([#2267](https://github.com/adobe/spectrum-css/issues/2267))([5f7037d](https://github.com/adobe/spectrum-css/commit/5f7037d))
 
 <a name="5.0.5"></a>
+
 ## 5.0.5
+
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@5.0.4...@spectrum-css/preview@5.0.5)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="5.0.4"></a>
+
 ## 5.0.4
+
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@5.0.3...@spectrum-css/preview@5.0.4)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="5.0.3"></a>
+
 ## 5.0.3
+
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@5.0.2...@spectrum-css/preview@5.0.3)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="5.0.2"></a>
+
 ## 5.0.2
+
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@5.0.1...@spectrum-css/preview@5.0.2)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="5.0.1"></a>
+
 ## 5.0.1
+
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@5.0.0...@spectrum-css/preview@5.0.1)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="5.0.0"></a>
+
 ## 5.0.0
+
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.14...@spectrum-css/preview@5.0.0)
 
@@ -292,21 +354,27 @@ fix max nesting depth
 - fix(splitview): use vertical gripper width for vertical gripper
 
 <a name="4.1.14"></a>
+
 ## 4.1.14
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.13...@spectrum-css/preview@4.1.14)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.13"></a>
+
 ## 4.1.13
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.12...@spectrum-css/preview@4.1.13)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.12"></a>
+
 ## 4.1.12
+
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.11...@spectrum-css/preview@4.1.12)
 
@@ -315,42 +383,54 @@ fix max nesting depth
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="4.1.11"></a>
+
 ## 4.1.11
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.10...@spectrum-css/preview@4.1.11)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.10"></a>
+
 ## 4.1.10
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.8...@spectrum-css/preview@4.1.10)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.9"></a>
+
 ## 4.1.9
+
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.8...@spectrum-css/preview@4.1.9)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.8"></a>
+
 ## 4.1.8
+
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.7...@spectrum-css/preview@4.1.8)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.7"></a>
+
 ## 4.1.7
+
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.6...@spectrum-css/preview@4.1.7)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.6"></a>
+
 ## 4.1.6
+
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.5...@spectrum-css/preview@4.1.6)
 
@@ -359,42 +439,54 @@ fix max nesting depth
 \*revert prettier ([#2074](https://github.com/adobe/spectrum-css/issues/2074))([ebb98df](https://github.com/adobe/spectrum-css/commit/ebb98df))
 
 <a name="4.1.5"></a>
+
 ## 4.1.5
+
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.4...@spectrum-css/preview@4.1.5)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.4"></a>
+
 ## 4.1.4
+
 🗓
 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.3...@spectrum-css/preview@4.1.4)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.3"></a>
+
 ## 4.1.3
+
 🗓
 2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.2...@spectrum-css/preview@4.1.3)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.2"></a>
+
 ## 4.1.2
+
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.1...@spectrum-css/preview@4.1.2)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.1"></a>
+
 ## 4.1.1
+
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.1.0...@spectrum-css/preview@4.1.1)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="4.1.0"></a>
+
 ## 4.1.0
+
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@4.0.0...@spectrum-css/preview@4.1.0)
 
@@ -407,7 +499,9 @@ fix max nesting depth
 - **actionbutton:**update action button color tokens ([#1982](https://github.com/adobe/spectrum-css/issues/1982))([95e4353](https://github.com/adobe/spectrum-css/commit/95e4353))
 
 <a name="4.0.0"></a>
+
 ## 4.0.0
+
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.2.0...@spectrum-css/preview@4.0.0)
 
@@ -420,7 +514,9 @@ fix max nesting depth
     		Migrates the Tabs component to use `@adobe/spectrum-tokens`.
 
 <a name="3.2.0"></a>
+
 ## 3.2.0
+
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.1.3...@spectrum-css/preview@3.2.0)
 
@@ -433,28 +529,36 @@ fix max nesting depth
 \*revert prettier version bump ([#2004](https://github.com/adobe/spectrum-css/issues/2004))([29b179c](https://github.com/adobe/spectrum-css/commit/29b179c))
 
 <a name="3.1.3"></a>
+
 ## 3.1.3
+
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.1.2...@spectrum-css/preview@3.1.3)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="3.1.2"></a>
+
 ## 3.1.2
+
 🗓
 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.1.1...@spectrum-css/preview@3.1.2)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="3.1.1"></a>
+
 ## 3.1.1
+
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.1.0...@spectrum-css/preview@3.1.1)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="3.1.0"></a>
+
 ## 3.1.0
+
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.0.26...@spectrum-css/preview@3.1.0)
 
@@ -463,21 +567,27 @@ fix max nesting depth
 \*update to Storybook v7 ([#1935](https://github.com/adobe/spectrum-css/issues/1935))([6dcf09b](https://github.com/adobe/spectrum-css/commit/6dcf09b))
 
 <a name="3.0.26"></a>
+
 ## 3.0.26
+
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.0.25...@spectrum-css/preview@3.0.26)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="3.0.25"></a>
+
 ## 3.0.25
+
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.0.24...@spectrum-css/preview@3.0.25)
 
 **Note:** Version bump only for package @spectrum-css/preview
 
 <a name="3.0.24"></a>
+
 ## 3.0.24
+
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/preview@3.0.23...@spectrum-css/preview@3.0.24)
 
