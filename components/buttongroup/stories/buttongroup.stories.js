@@ -33,49 +33,31 @@ export default {
 		size: "m",
 		iconName: undefined,
 		vertical: false,
+		items: [
+			{
+				variant: "secondary",
+				treatment: "outline",
+				label: "No, thanks",
+			},
+			{
+				variant: "secondary",
+				treatment: "outline",
+				label: "Remind me later",
+
+			},
+			{
+				variant: "primary",
+				treatment: "fill",
+				label: "Rate now",
+			},
+		],
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	items: [
-		{
-			variant: "secondary",
-			treatment: "outline",
-			label: "No, thanks",
-		},
-		{
-			variant: "secondary",
-			treatment: "outline",
-			label: "Remind me later",
-
-		},
-		{
-			variant: "primary",
-			treatment: "fill",
-			label: "Rate now",
-		},
-	],
-};
+Default.args = {};
 
 export const Vertical = Template.bind({});
 Vertical.args = {
 	vertical: true,
-	items: [
-		{
-			variant: "secondary",
-			treatment: "outline",
-			label: "No, thanks",
-		},
-		{
-			variant: "secondary",
-			treatment: "outline",
-			label: "Remind me later",
-		},
-		{
-			variant: "primary",
-			treatment: "fill",
-			label: "Rate now",
-		},
-	],
 };

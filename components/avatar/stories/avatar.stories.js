@@ -102,6 +102,7 @@ const AvatarSizes = (args) => html`
 					semantics: "detail",
 					size: "s",
 					content: [size],
+					customClasses: ["chromatic-ignore"],
 				})}
 			</div>
 		`))}

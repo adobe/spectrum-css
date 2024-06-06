@@ -94,6 +94,9 @@ export default {
 		isFocused: false,
 		useDOWAbbrev: false,
 		buttonSize: ActionButtonStories.args.size,
+		month: months[6],
+		selectedDay: new Date(2023, 6, 3),
+		year: 2023,
 	},
 	parameters: {
 		actions: {
@@ -105,36 +108,34 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	month: months[6],
-	selectedDay: new Date(2023, 6, 3),
-	year: 2023,
-};
+Default.args = {};
 
 export const RangeSelection = Template.bind({});
 RangeSelection.args = {
-	month: months[6],
-	selectedDay: new Date(2023, 6, 3),
 	lastDay: new Date(2023, 6, 7),
-	year: 2023,
 	useDOWAbbrev: true,
 	padded: true,
 };
 
 export const TodayHighlighted = Template.bind({});
-TodayHighlighted.args = {};
+TodayHighlighted.args = {
+	month: undefined,
+	selectedDay: undefined,
+	year: undefined,
+};
 
 export const Disabled = Template.bind({});
+Disabled.tags = ["vrt-only"];
 Disabled.args = {
-	month: months[6],
-	selectedDay: new Date(2023, 6, 3),
-	year: 2023,
 	isDisabled: true
 };
 
 
 export const AbbreviatedWeekdays = Template.bind({});
 AbbreviatedWeekdays.args = {
+	month: undefined,
+	selectedDay: undefined,
+	year: undefined,
 	useDOWAbbrev: true,
 };
 AbbreviatedWeekdays.tags = ["docs-only"];
@@ -144,6 +145,9 @@ AbbreviatedWeekdays.parameters = {
 
 export const Focused = Template.bind({});
 Focused.args = {
+	month: undefined,
+	selectedDay: undefined,
+	year: undefined,
 	isFocused: true,
 };
 Focused.tags = ["docs-only"];

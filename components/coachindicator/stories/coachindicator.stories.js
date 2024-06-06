@@ -36,11 +36,19 @@ export default {
 export const Default = CoachIndicatorGroup.bind({});
 Default.args = {};
 Default.parameters = {
-	chromatic: { pauseAnimationAtEnd: true },
+	chromatic: {
+		prefersReducedMotion: "reduce",
+		pauseAnimationAtEnd: true,
+	},
 };
 
-export const WithReducedMotion = CoachIndicatorGroup.bind({});
-WithReducedMotion.tags = ["vrt-only"];
-WithReducedMotion.parameters = {
-	chromatic: { prefersReducedMotion: "reduce" },
+export const WithForcedColors = CoachIndicatorGroup.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	// Sets the forced-colors media feature for a specific story.
+	chromatic: {
+		forcedColors: "active",
+		prefersReducedMotion: "reduce"
+	},
 };
+WithForcedColors.args = {};

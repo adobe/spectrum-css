@@ -154,7 +154,8 @@ const PlacementVariants = (args) => html`
 						${Typography({
 							semantics: "detail",
 							size: "l",
-							content: [`${option}`],
+							content: [option],
+							customClasses: ["chromatic-ignore"],
 						})}
 						<div
 							style=${styleMap({
@@ -167,7 +168,8 @@ const PlacementVariants = (args) => html`
 								${Typography({
 									semantics: "detail",
 									size: "s",
-									content: [`${optionDescription()}`],
+									content: [optionDescription()],
+									customClasses: ["chromatic-ignore"],
 								})}
 							`)}
 							${Template({

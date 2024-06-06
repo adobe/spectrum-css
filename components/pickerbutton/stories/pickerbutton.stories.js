@@ -1,6 +1,5 @@
-import { Template } from "./template";
-
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Template } from "./template";
 
 /**
  * The picker button component is used as a dropdown trigger. See Combobox.
@@ -125,16 +124,19 @@ WithLabel.args = {
 };
 
 export const Disabled = Template.bind({});
+Disabled.tags = ["vrt-only"];
 Disabled.args = {
 	isDisabled: true
 };
 
 export const Quiet = Template.bind({});
+Quiet.tags = ["vrt-only"];
 Quiet.args = {
 	isQuiet: true
 };
 
 export const Express = Template.bind({});
+Express.tags = ["vrt-only"];
 Express.args = {
 	express: true
 };

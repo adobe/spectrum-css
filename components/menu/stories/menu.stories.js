@@ -132,6 +132,7 @@ const ChromaticMenuWithVariants = (args) => {
 			semantics: "detail",
 			size: "l",
 			content: [ item.stateTitle ],
+			customClasses: ["chromatic-ignore"],
 		})}
 		<div>
 			${Template({...args, ...item.args})}
@@ -396,7 +397,8 @@ const Sizes = (args) => ["s", "m", "l", "xl"].map((size) => html`
 					l: "Large",
 					xl: "Extra-large",
 				}[size]
-			]
+			],
+			customClasses: ["chromatic-ignore"],
 		})}
 		<div>
 			${Template({...args, size})}
@@ -440,6 +442,7 @@ const States = (args) => {
 				semantics: "detail",
 				size: "s",
 				content: [`${titlePrefix ? titlePrefix + ", ": ""}${stateItem.stateTitle}`],
+				customClasses: ["chromatic-ignore"],
 			})}
 			<div>
 				${Template({...args, ...stateItem.args})}
@@ -509,6 +512,7 @@ const WithValueStates = (args) => {
 			semantics: "detail",
 			size: "s",
 			content: [ valueItem.stateTitle ],
+			customClasses: ["chromatic-ignore"],
 		})}
 			<div>
 				${Template({ ...args, ...valueItem.args })}
@@ -566,6 +570,7 @@ const ChromaticMenuItem = (args) => {
 			semantics: "detail",
 			size: "l",
 			content: [sectionItem.sectionTitle],
+			customClasses: ["chromatic-ignore"],
 		})}
 		<div
 			style=${styleMap({

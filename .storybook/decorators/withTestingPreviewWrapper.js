@@ -1,5 +1,4 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
-
 import isChromatic from "chromatic/isChromatic";
 
 /**
