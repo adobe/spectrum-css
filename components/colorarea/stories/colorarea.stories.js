@@ -41,11 +41,6 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});
@@ -58,9 +53,7 @@ CustomSize.args = {
 };
 
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,

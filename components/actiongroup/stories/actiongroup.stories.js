@@ -63,7 +63,9 @@ export default {
 	},
 	parameters: {
 		actions: {
-			handles: [...ActionButton.parameters.actions.handles],
+			handles: [
+				...(ActionButton?.parameters?.actions?.handles ?? []),
+			],
 		},
 	},
 };

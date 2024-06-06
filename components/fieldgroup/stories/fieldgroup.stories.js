@@ -45,7 +45,7 @@ export default {
 	parameters: {
 		actions: {
 			handles: [
-				...Radio.parameters.actions.handles
+				...(Radio.parameters?.actions?.handles ?? [])
 			],
 		},
 	},

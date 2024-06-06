@@ -108,8 +108,8 @@ export default {
 	parameters: {
 		actions: {
 			handles: [
-				...ActionButton.parameters.actions.handles,
-				...Checkbox.parameters.actions.handles,
+				...(ActionButton.parameters?.actions?.handles ?? []),
+				...(Checkbox.parameters?.actions?.handles ?? []),
 			],
 		},
 	},
@@ -170,9 +170,7 @@ Horizontal.args = {
 	hasQuickAction: false,
 };
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 export const NoImage = Template.bind({});
 NoImage.args = {
 	title: "Card title",

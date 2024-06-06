@@ -32,16 +32,6 @@ export default {
 		isOpen: true,
 		heading: "New Messages",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-		docs: {
-			story: {
-				height: "200px"
-			}
-		},
-	},
 };
 
 export const Default = ({

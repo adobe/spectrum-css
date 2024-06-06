@@ -25,9 +25,6 @@ export default {
 	},
 	parameters: {
 		chromatic: { diffThreshold: 0.2 },
-		actions: {
-			handles: [],
-		},
 		docs: {
 			story: {
 				height: "100px"

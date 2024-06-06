@@ -46,11 +46,6 @@ export default {
 		isIndeterminate: false,
 		staticColor: undefined,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 const ProgressCircleGroup = (args) => html`

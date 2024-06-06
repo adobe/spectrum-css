@@ -64,13 +64,10 @@ export default {
 		],
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
+		chromatic: { disableSnapshot: true },
 		status: {
 			type: "deprecated"
 		},
-		chromatic: { disable: true },
 	},
 };
 

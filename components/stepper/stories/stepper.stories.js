@@ -84,11 +84,6 @@ export default {
 		isDisabled: false,
 		hideStepper: false
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = (args) => html`

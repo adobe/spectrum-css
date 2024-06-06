@@ -32,7 +32,7 @@ export default {
 	parameters: {
 		actions: {
 			handles: [
-				...ActionButton.parameters.actions.handles
+				...(ActionButton.parameters?.actions?.handles ?? [])
 			],
 		},
 	},

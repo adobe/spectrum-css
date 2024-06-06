@@ -11,7 +11,6 @@ import {
 import DocumentationTemplate from './DocumentationTemplate.mdx';
 import { argTypes, globalTypes } from "./types";
 
-import "@spectrum-css/tokens";
 import "./assets/base.css";
 import "./assets/typekit.js";
 

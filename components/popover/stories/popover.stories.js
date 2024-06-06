@@ -113,10 +113,6 @@ export default {
 	},
 	parameters: {
 		layout: "centered",
-		actions: {
-			handles: [],
-		},
-		chromatic: { delay: 2000 },
 		docs: {
 			story: {
 				height: "300px"

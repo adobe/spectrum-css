@@ -85,11 +85,6 @@ export default {
 				...(ActionButtonStories?.parameters?.actions?.handles ?? [])
 			],
 		},
-		docs: {
-			story: {
-				height: "200px",
-			},
-		},
 	},
 };
 
@@ -117,9 +112,7 @@ TopPopover.args = {
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 export const HelpDefault = Template.bind({});
 HelpDefault.args = {
 	title: "Permission required",

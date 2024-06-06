@@ -47,8 +47,8 @@ export default {
 	parameters: {
 		actions: {
 			handles: [
-				...ActionButton.parameters.actions.handles,
-				...Menu.parameters.actions.handles,
+				...(ActionButton.parameters?.actions?.handles ?? []),
+				...(Menu.parameters?.actions?.handles ?? []),
 			],
 		},
 		docs: {
@@ -70,7 +70,7 @@ WithMedia.parameters = {
 	docs: {
 		story: {
 			inline: false,
-			height: 475,
+			iframeHeight: "475px",
 		},
 	},
 };

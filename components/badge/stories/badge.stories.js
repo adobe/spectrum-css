@@ -71,11 +71,6 @@ export default {
 		label: "Badge",
 		fixed: "none"
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 	decorators: [
 		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
 	],
@@ -102,9 +97,7 @@ export const Default = BadgeGroup.bind({});
 Default.args = {};
 
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 const Variants = (args, variants) => html`
 	<div
 		style=${styleMap({

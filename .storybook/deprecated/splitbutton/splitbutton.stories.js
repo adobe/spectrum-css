@@ -59,10 +59,7 @@ export default {
 		iconName: "ChevronDown100",
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
-		chromatic: { disable: true },
+		chromatic: { disableSnapshot: true },
 		status: {
 			type: "deprecated"
 		},

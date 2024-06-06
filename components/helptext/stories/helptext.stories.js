@@ -77,11 +77,6 @@ export default {
 		isDisabled: false,
 		size: "m",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

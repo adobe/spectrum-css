@@ -80,9 +80,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 const AvatarSizes = (args) => html`
 	<div
 		style=${styleMap({

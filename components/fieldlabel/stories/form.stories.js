@@ -23,11 +23,6 @@ export default {
 		rootClass: "spectrum-Form",
 		labelsAbove: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 	decorators: [
 		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
 	],

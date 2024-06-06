@@ -65,9 +65,6 @@ const AssetGroup = (args) => html`
 
 export const Default = AssetGroup.bind({});
 
-/**
- * Stories for the MDX "Docs" only.
- */
 export const File = Template.bind({});
 File.tags = ["docs-only"];
 File.args = {

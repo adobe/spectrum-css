@@ -132,9 +132,7 @@ Disabled.args = {
 	isDisabled: true
 };
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 export const AbbreviatedWeekdays = Template.bind({});
 AbbreviatedWeekdays.args = {
 	useDOWAbbrev: true,

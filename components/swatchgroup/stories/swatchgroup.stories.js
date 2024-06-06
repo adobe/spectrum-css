@@ -60,7 +60,7 @@ export default {
 	parameters: {
 		actions: {
 			handles: [
-				...Swatch.parameters?.actions?.handles ?? [],
+				...(Swatch.parameters?.actions?.handles ?? []),
 			],
 		},
 	},

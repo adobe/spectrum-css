@@ -1,15 +1,13 @@
+import "@spectrum-css/tokens";
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
-
+import "./assets/index.css";
 import logo from "./assets/logo.svg";
+import "./assets/typekit.js";
 import pkg from "./package.json";
 
-import "@spectrum-css/tokens";
-import "./assets/index.css";
-
-import "./assets/typekit.js";
-
-document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
+const root = document.body ?? document.documentElement;
+if (root) root.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 
 addons.setConfig({
 	theme: create({

@@ -62,11 +62,6 @@ export default {
 		label: "Switch label",
 		size: "m",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

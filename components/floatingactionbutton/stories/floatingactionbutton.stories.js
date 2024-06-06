@@ -31,11 +31,6 @@ export default {
 		variant: "primary",
 		iconName: "AddCircle",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

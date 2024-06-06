@@ -24,7 +24,7 @@ export default {
 		rootClass: "spectrum-Underlay",
 	},
 	parameters: {
-		chromatic: { disable: true },
+		chromatic: { disableSnapshot: true },
 		actions: {
 			handles: []
 		}

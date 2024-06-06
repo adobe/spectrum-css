@@ -157,9 +157,6 @@ export default {
 		],
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
 		docs: {
 			story: {
 				height: "220px"
@@ -244,9 +241,7 @@ Quiet.args = {
 	isQuiet: true,
 };
 
-/**
- * Stories for the MDX "Docs" only.
- */
+
 
 // Standard
 export const WithLabel = Template.bind({});

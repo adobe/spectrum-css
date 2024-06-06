@@ -50,11 +50,6 @@ export default {
 		isInteractive: false,
 		withTooltip: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

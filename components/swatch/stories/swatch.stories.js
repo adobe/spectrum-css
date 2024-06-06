@@ -63,11 +63,6 @@ export default {
 		rounding: "regular",
 		swatchColor: "rgb(174, 216, 230)"
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

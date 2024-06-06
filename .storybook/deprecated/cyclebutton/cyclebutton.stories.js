@@ -41,7 +41,7 @@ export default {
 		actions: {
 			handles: [...(ActionButtonStories?.parameters?.actions?.handles ?? [])],
 		},
-		chromatic: { disable: true },
+		chromatic: { disableSnapshot: true },
 		status: {
 			type: "deprecated"
 		},

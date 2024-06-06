@@ -114,11 +114,6 @@ export default {
 		iconName: "ChevronDown",
 		position: "right"
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

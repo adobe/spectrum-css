@@ -34,11 +34,6 @@ export default {
 		iconName: undefined,
 		vertical: false,
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
 export const Default = Template.bind({});

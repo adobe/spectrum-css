@@ -1,3 +1,4 @@
+import "@spectrum-css/tokens/dist/index.css";
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 
 /**
