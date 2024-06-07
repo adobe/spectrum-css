@@ -1,3 +1,4 @@
+import { testContainerWithBorder } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -5,6 +6,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize, lowerCase } from "lodash-es";
+
 import "../index.css";
 
 /**
@@ -36,7 +38,7 @@ export const Template = ({
 	testId,
 	role,
 	...globals
-}) => {
+}, context) => {
 	return html`
 		<button
 			aria-label=${ifDefined(label)}
@@ -71,7 +73,7 @@ export const Template = ({
 					iconName: "CornerTriangle",
 					setName: "ui",
 					customClasses: [`${rootClass}-hold`],
-				})
+				}, context)
 			)}
 			${when(iconName, () =>
 				Icon({
@@ -80,7 +82,7 @@ export const Template = ({
 					iconName,
 					setName: iconSet,
 					customClasses: [`${rootClass}-icon`, ...customIconClasses],
-				})
+				}, context)
 			)}
 			${when(
 				label && !hideLabel,
@@ -90,27 +92,26 @@ export const Template = ({
 	`;
 };
 
-const ActionButtons = (args) => html` <div
+const ActionButtons = (args, context) => html` <div
 	style=${styleMap({
 		"display": "flex",
 		"gap": "16px",
 	})}
-	id="render-root"
 >
 	${Template({
 		...args,
 		label: "More",
 		iconName: undefined,
-	})}
+	}, context)}
 	${Template({
 		...args,
 		label: "More",
-	})}
-	${Template(args)}
+	}, context)}
+	${Template(args, context)}
 	${Template({
 		...args,
 		hasPopup: true,
-	})}
+	}, context)}
 	<!-- Save truncation for VRTs -->
 	${Template({
 		...args,
@@ -120,7 +121,7 @@ const ActionButtons = (args) => html` <div
 			display: window.isChromatic() ? undefined : "none",
 			maxInlineSize: "100px"
 		},
-	})}
+	}, context)}
 	${Template({
 		...args,
 		label: "Truncate this long content",
@@ -128,18 +129,21 @@ const ActionButtons = (args) => html` <div
 			display: window.isChromatic() ? undefined : "none",
 			maxInlineSize: "100px"
 		},
-	})}
+	}, context)}
 </div>`;
 
-const States = (args) =>
+const States = (args, context) =>
 	html` <div>
 			${Typography({
 				semantics: "detail",
 				size: "s",
 				content: ["Default"],
 				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons(args)}
+				customStyles: {
+					"display": "inline-block",
+				}
+			}, context)}
+			${ActionButtons(args, context)}
 		</div>
 		<div>
 			${Typography({
@@ -147,11 +151,14 @@ const States = (args) =>
 				size: "s",
 				content: ["Selected"],
 				customClasses: ["chromatic-ignore"],
-			})}
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
 			${ActionButtons({
 				...args,
 				isSelected: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -159,11 +166,14 @@ const States = (args) =>
 				size: "s",
 				content: ["Focused"],
 				customClasses: ["chromatic-ignore"],
-			})}
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
 			${ActionButtons({
 				...args,
 				isFocused: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -171,11 +181,14 @@ const States = (args) =>
 				size: "s",
 				content: ["Hovered"],
 				customClasses: ["chromatic-ignore"],
-			})}
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
 			${ActionButtons({
 				...args,
 				isHovered: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -183,11 +196,14 @@ const States = (args) =>
 				size: "s",
 				content: ["Active"],
 				customClasses: ["chromatic-ignore"],
-			})}
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
 			${ActionButtons({
 				...args,
 				isActive: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -195,11 +211,14 @@ const States = (args) =>
 				size: "s",
 				content: ["Disabled"],
 				customClasses: ["chromatic-ignore"],
-			})}
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
 			${ActionButtons({
 				...args,
 				isDisabled: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -207,15 +226,18 @@ const States = (args) =>
 				size: "s",
 				content: ["Disabled + selected"],
 				customClasses: ["chromatic-ignore"],
-			})}
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
 			${ActionButtons({
 				...args,
 				isSelected: true,
 				isDisabled: true,
-			})}
+			}, context)}
 		</div>`;
 
-const Sizes = (args) =>
+const Sizes = (args, context) =>
 	html` ${["s", "m", "l", "xl"].map((size) => {
 		return html` <div>
 			${Typography({
@@ -233,31 +255,20 @@ const Sizes = (args) =>
 					}[size],
 				],
 				customClasses: ["chromatic-ignore"],
-			})}
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
 			${ActionButtons({
 				...args,
 				size,
-			})}
+			}, context)}
 		</div>`;
 	})}`;
 
-export const Variants = (args) => html`
-	<style>
-		.spectrum-Detail { display: inline-block; }
-		.spectrum-Typography > div {
-			border: 1px solid var(--spectrum-gray-200);
-			border-radius: 4px;
-			padding: 0 1em 1em;
-			/* Why seafoam? Because it separates it from the component styles. */
-			--mod-detail-font-color: var(--spectrum-seafoam-900);
-		}
-	</style>
+export const Variants = (args, context) => html`
 	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
-		"flex-direction": "column",
-		"align-items": "flex-start",
-		"gap": "16px",
-		"--mod-detail-margin-end": "4.8px",
+		"display": !window.isChromatic() ? "none" : undefined,
 	})}>
 		<div class="spectrum-Typography">
 			${Typography({
@@ -265,13 +276,12 @@ export const Variants = (args) => html`
 				size: "l",
 				content: ["Standard"],
 				customClasses: ["chromatic-ignore"],
-			})}
-			<div style=${styleMap({
-				"display": "flex",
-				"flex-direction": "column",
-				"gap": "4.8px",
-			})}>
-				${States(args)}
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
+			<div style=${styleMap(testContainerWithBorder)}>
+				${States(args, context)}
 			</div>
 		</div>
 		<div class="spectrum-Typography">
@@ -280,16 +290,15 @@ export const Variants = (args) => html`
 				size: "l",
 				content: ["Emphasized"],
 				customClasses: ["chromatic-ignore"],
-			})}
-			<div style=${styleMap({
-				"display": "flex",
-				"flex-direction": "column",
-				"gap": "4.8px",
-			})}>
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
+			<div style=${styleMap(testContainerWithBorder)}>
 				${States({
 					...args,
 					isEmphasized: true,
-				})}
+				}, context)}
 			</div>
 		</div>
 		<div class="spectrum-Typography">
@@ -298,16 +307,15 @@ export const Variants = (args) => html`
 				size: "l",
 				content: ["Quiet"],
 				customClasses: ["chromatic-ignore"],
-			})}
-			<div style=${styleMap({
-				"display": "flex",
-				"flex-direction": "column",
-				"gap": "4.8px",
-			})}>
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
+			<div style=${styleMap(testContainerWithBorder)}>
 				${States({
 					...args,
 					isQuiet: true,
-				})}
+				}, context)}
 			</div>
 		</div>
 		<div class="spectrum-Typography">
@@ -316,19 +324,18 @@ export const Variants = (args) => html`
 				size: "l",
 				content: ["Sizing"],
 				customClasses: ["chromatic-ignore"],
-			})}
-			<div style=${styleMap({
-				"display": "flex",
-				"flex-direction": "column",
-				"gap": "4.8px",
-			})}>
-				${Sizes(args)}
+				customStyles: {
+					"display": "inline-block",
+				},
+			}, context)}
+			<div style=${styleMap(testContainerWithBorder)}>
+				${Sizes(args, context)}
 			</div>
 		</div>
 	</div>
 	<div style=${styleMap({
-		display: window.isChromatic() ? "none" : undefined,
+		"display": !window.isChromatic() ? undefined : "none",
 	})}>
-		${ActionButtons(args)}
+		${ActionButtons(args, context)}
 	</div>
 `;

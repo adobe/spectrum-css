@@ -1,6 +1,5 @@
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { html } from "lit";
-import { MenuItemWithVariants, MenuWithVariants, Template } from "./template";
+import { Default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { MenuItemStates, Template, Variants } from "./template";
 
 const menuArgTypes = {
 	selectionMode: {
@@ -158,119 +157,7 @@ export default {
 		maxInlineSize: "150px",
 		role: "listbox",
 		subrole: "option",
-		customStyles: { maxWidth: "400px" },
 		hasDividers: false,
-		items: [
-			{
-				idx: 1,
-				heading: "Menu header - Menu with icons",
-				id: "menu-heading-with-icons",
-				items: [
-					{
-						label: "Default menu item",
-						iconName: "Export"
-					},
-					{
-						label: "Focused menu item",
-						iconName: "FolderOpen",
-						isFocused: true
-					},
-					{
-						label: "A menu item with a longer label that causes the text to wrap to the next line",
-						iconName: "Send",
-					},
-					{
-						label: "Menu item with no icon",
-					},
-					{
-						label: "Disabled menu item",
-						iconName: "Share",
-						isDisabled: true,
-					},
-				],
-			},
-			{ type: "divider" },
-			{
-				idx: 2,
-				heading: "Menu header - With descriptions and icons",
-				id: "menu-heading-short-desc",
-				items: [
-					{
-						label: "Menu item with description",
-						description: "Short description",
-					},
-					{
-						label: "Selected item",
-						description: "This item is checked if single-select or multi-select mode is turned on",
-						isSelected: true,
-					},
-					{
-						label: "Selected item with icon",
-						iconName: "Cloud",
-						description: "This item is checked if single-select or multi-select mode is turned on",
-						isSelected: true,
-					},
-				],
-			},
-			{ type: "divider" },
-			{
-				idx: 3,
-				heading: "Menu header - With actions, icons, short descriptions, and values and longer header text that wraps",
-				id: "menu-heading-desc-icon-value",
-				hasActions: true,
-				items: [
-					{
-						label: "Menu item with action and a longer label that truncates if it is long enough to truncate",
-						iconName: "Cut",
-						description: "This item has a switch if multi-select mode is turned on.",
-					},
-					{
-						label: "Menu item with action",
-						iconName: "Copy",
-						description: "In multi-select mode, this item will be switched on. In single-select mode, this item will be checked.",
-						isSelected: true,
-					},
-					{
-						label: "Menu item with action and value",
-						iconName: "Paste",
-						description: "This item has a value. If multi-select mode is turned on, it also has a switch and the value can be used to label the switch.",
-						value: "⌘ C",
-					},
-					{
-						label: "Disabled menu item with action",
-						iconName: "Archive",
-						description: "Disabled menu item with description and icon",
-						isDisabled: true,
-					},
-				],
-			},
-			{
-				idx: 4,
-				heading: "Menu header - These menu items have drill-ins for a submenu",
-				id: "menu-heading-drillin",
-				items: [
-					{
-						label: "Menu item with drill-in",
-						isDrillIn: true,
-					},
-					{
-						label: "Menu item with drill-in and open submenu (not rendered)",
-						isDrillIn: true,
-						isOpen: true,
-					},
-					{
-						label: "Menu item with drill-in and value",
-						isDrillIn: true,
-						value: "Value",
-					},
-					{
-						label: "Disabled menu item with drill-in",
-						isDrillIn: true,
-						isDisabled: true,
-					}
-				],
-			},
-		],
 	},
 	parameters: {
 		actions: {
@@ -282,30 +169,140 @@ export default {
 			}
 		},
 	},
-	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 1em 1em;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
+};
+
+export const Default = Variants.bind({});
+Default.tags = ["dev", "test"];
+Default.argTypes = {
+	hasDividers: {
+		name: "Has dividers",
+		description: "Shows dividers between sections",
+		table: {
+			type: { summary: "boolean" },
+			category: "Component",
+		},
+		control: "boolean",
+	},
+};
+Default.args = {
+	role: "listbox",
+	subrole: "option",
+	customStyles: { maxWidth: "400px" },
+	items: [
+		{
+			idx: 1,
+			heading: "Menu header - Menu with icons",
+			id: "menu-heading-with-icons",
+			items: [
+				{
+					label: "Default menu item",
+					iconName: "Export"
+				},
+				{
+					label: "Focused menu item",
+					iconName: "FolderOpen",
+					isFocused: true
+				},
+				{
+					label: "A menu item with a longer label that causes the text to wrap to the next line",
+					iconName: "Send",
+				},
+				{
+					label: "Menu item with no icon",
+				},
+				{
+					label: "Disabled menu item",
+					iconName: "Share",
+					isDisabled: true,
+				},
+			],
+		},
+		{ type: "divider" },
+		{
+			idx: 2,
+			heading: "Menu header - With descriptions and icons",
+			id: "menu-heading-short-desc",
+			items: [
+				{
+					label: "Menu item with description",
+					description: "Short description",
+				},
+				{
+					label: "Selected item",
+					description: "This item is checked if single-select or multi-select mode is turned on",
+					isSelected: true,
+				},
+				{
+					label: "Selected item with icon",
+					iconName: "Cloud",
+					description: "This item is checked if single-select or multi-select mode is turned on",
+					isSelected: true,
+				},
+			],
+		},
+		{ type: "divider" },
+		{
+			idx: 3,
+			heading: "Menu header - With actions, icons, short descriptions, and values and longer header text that wraps",
+			id: "menu-heading-desc-icon-value",
+			hasActions: true,
+			items: [
+				{
+					label: "Menu item with action and a longer label that truncates if it is long enough to truncate",
+					iconName: "Cut",
+					description: "This item has a switch if multi-select mode is turned on.",
+				},
+				{
+					label: "Menu item with action",
+					iconName: "Copy",
+					description: "In multi-select mode, this item will be switched on. In single-select mode, this item will be checked.",
+					isSelected: true,
+				},
+				{
+					label: "Menu item with action and value",
+					iconName: "Paste",
+					description: "This item has a value. If multi-select mode is turned on, it also has a switch and the value can be used to label the switch.",
+					value: "⌘ C",
+				},
+				{
+					label: "Disabled menu item with action",
+					iconName: "Archive",
+					description: "Disabled menu item with description and icon",
+					isDisabled: true,
+				},
+			],
+		},
+		{
+			idx: 4,
+			heading: "Menu header - These menu items have drill-ins for a submenu",
+			id: "menu-heading-drillin",
+			items: [
+				{
+					label: "Menu item with drill-in",
+					isDrillIn: true,
+				},
+				{
+					label: "Menu item with drill-in and open submenu (not rendered)",
+					isDrillIn: true,
+					isOpen: true,
+				},
+				{
+					label: "Menu item with drill-in and value",
+					isDrillIn: true,
+					value: "Value",
+				},
+				{
+					label: "Disabled menu item with drill-in",
+					isDrillIn: true,
+					isDisabled: true,
 				}
-			</style>
-			${Story(context)}
-		`,
+			],
+		},
 	],
 };
 
-export const Default = MenuWithVariants.bind({});
-Default.argTypes = {
-	isTraySubmenu: { table: { disable: true } },
-};
-Default.args = {};
-
 export const Collapsible = Template.bind({});
+Collapsible.tags = ["dev", "test"];
 Collapsible.argTypes = {
 	selectionMode: { table: { disable: true } },
 	hasDividers: { table: { disable: true } },
@@ -380,7 +377,44 @@ Collapsible.args = {
 	],
 };
 
+export const MenuItemOnly = MenuItemStates.bind({});
+MenuItemOnly.argTypes = menuItemArgTypes;
+MenuItemOnly.tags = ["autodocs", "!dev", "test"];
+MenuItemOnly.parameters = {
+	docs: {
+		story: {
+			height: "30px"
+		}
+	},
+};
+MenuItemOnly.args = {
+	items: [
+		{
+			label: "Start a chat",
+			iconName: "Chat"
+		},
+	],
+	hasActions: false,
+	hasValue: false,
+	hasItemDescription: false,
+	isDisabled: false,
+	isItemActive: false,
+	isItemFocused: false,
+	isItemHovered: false,
+	isItemSelected: false,
+	singleItemDescription: "Menu item description",
+	singleItemValue: "Value",
+};
+
 export const TraySubmenu = Template.bind({});
+TraySubmenu.tags = ["autodocs", "!dev", "test"];
+TraySubmenu.parameters = {
+	docs: {
+		story: {
+			height: "150px"
+		}
+	},
+};
 TraySubmenu.argTypes = {
 	selectionMode: { table: { disable: true } },
 	hasDividers: { table: { disable: true } },
@@ -410,37 +444,16 @@ TraySubmenu.args = {
 	],
 };
 
-export const MenuItem = MenuItemWithVariants.bind({});
-MenuItem.argTypes = {
-	isItemActive: { table: { disable: true } },
-	isItemFocused: { table: { disable: true } },
-	isItemHovered: { table: { disable: true } },
-	...menuItemArgTypes,
-};
-MenuItem.args = {
-	items: [
-		{
-			label: "Start a chat",
-			iconName: "Chat"
-		},
-	],
-	hasActions: false,
-	hasValue: false,
-	hasItemDescription: false,
-	isDisabled: false,
-	isItemActive: false,
-	isItemFocused: false,
-	isItemHovered: false,
-	isItemSelected: false,
-	singleItemDescription: "Menu item description",
-	singleItemValue: "Value",
-};
-
 // story used in Picker component
 export const WithDividers = Template.bind({});
 WithDividers.storyName = "Standard with dividers";
-WithDividers.tags = ["docs-only"];
+WithDividers.tags = ["autodocs", "!dev"];
 WithDividers.parameters = {
+	docs: {
+		story: {
+			height: "150px"
+		}
+	},
 	chromatic: { disableSnapshot: true },
 };
 WithDividers.args = {
