@@ -3,6 +3,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
+import { useArgs } from "@storybook/preview-api";
+
 import "../index.css";
 
 export const Template = ({
@@ -18,6 +20,8 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 }) => {
+	const [, updateArgs] = useArgs();
+
 	return html`
 		<div
 			class=${classMap({
@@ -39,6 +43,10 @@ export const Template = ({
 				readOnly=${isReadOnly ? "readonly" : ""}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
+				@change=${() => {
+					if (isDisabled) return;
+					updateArgs({ isChecked: !isChecked });
+				}}
 			/>
 			<span class="${rootClass}-button ${rootClass}-button--sizeS"></span>
 			<label class="${rootClass}-label ${rootClass}-label--sizeS" for="radio-0"
