@@ -1,4 +1,5 @@
 import { Template } from "./template";
+import { html } from "lit";
 
 /**
  * The drop indicator component is used to show the insertion position into a list or table.
@@ -28,6 +29,7 @@ export default {
 			},
 			control: { type: "text" },
 		},
+		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-DropIndicator",
@@ -36,5 +38,33 @@ export default {
 	},
 };
 
+const DropIndicatorGroup = (args) => html`
+	<div style="display: flex; align-items: center; justify-content: space-around;">
+		${Template({
+			...args,
+			direction: "vertical",
+		})}
+		${Template({
+			...args,
+			direction: "horizontal",
+		})}
+	</div>
+`;
+
 export const Default = Template.bind({});
 Default.args = {};
+// the !autodocs tag removes the component from the auto-template
+Default.tags = ["!autodocs"];
+
+/*
+ * Stories for the MDX "docs" only.
+ * "storyName" refers to the display name/heading for a component
+ */
+
+export const DefaultGroup = DropIndicatorGroup.bind({});
+DefaultGroup.storyName = "Standard";
+DefaultGroup.tags = ["docs-only"];
+DefaultGroup.parameters = { 
+	chromatic: { disableSnapshot: true }
+};
+

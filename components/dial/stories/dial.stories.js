@@ -25,7 +25,7 @@ export default {
 			},
 			control: "text",
 		},
-		isFocused: {
+		isFocusVisible: {
 			name: "Focused",
 			type: { name: "boolean" },
 			table: {
@@ -52,16 +52,18 @@ export default {
 			},
 			control: "boolean",
 		},
+		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Dial",
 		size: "m",
-		isFocused: false,
+		isFocusVisible: false,
 		isDragged: false,
 		isDisabled: false,
 	},
 };
 
+// the !autodocs tag removes the component from the auto-template
 export const Default = Template.bind();
 Default.args = {};
 
@@ -69,6 +71,7 @@ export const DefaultExpress = Template.bind();
 DefaultExpress.args = {
 	express: true,
 };
+DefaultExpress.tags = ["!autodocs"];
 
 export const Small = Template.bind();
 Small.args = {
