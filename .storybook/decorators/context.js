@@ -59,7 +59,8 @@ export const withContextWrapper = makeDecorator({
 				if (hasStaticElement) {
 					if (container.querySelector(`.${args.rootClass}--staticBlack`)) {
 						container.style.background = "rgb(181, 209, 211)";
-					} else if (container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--overBackground`)) {
+					}
+					else if (container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--overBackground`)) {
 						container.style.background = "rgb(15, 121, 125)";
 					}
 				}

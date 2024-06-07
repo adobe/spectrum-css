@@ -1,6 +1,6 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from "@storybook/blocks";
 
-<Meta title="Deprecation workflow"/>
+<Meta title="Deprecation workflow" />
 
 # Deprecating a component
 
@@ -14,17 +14,18 @@ When a component is deprecated, it is no longer recommended for use. Though the 
 
 - Before starting a deprecation, connect with the Spectrum Web Components team to align on the timing of the deprecation. Make sure downstream users are aware that the component is being deprecated and have a migration path to the recommended alternative. Give downstream consumers time to express any concerns or blockers.
 - Add a new [Announcement](https://github.com/adobe/spectrum-css/discussions/new?category=announcements) to the Spectrum CSS repository to notify the community of the deprecation. Include the deprecation notice and any additional migration details that would be important for consumers. See the template below for an example of what to include in the announcement. Title should follow this format: `Deprecation notice: <component name>`.
-    ```markdown
-    As of Feb 15, 2024, the @spectrum-css/quickactions has been deprecated.
 
-    Please use an Action bar to allow users to perform actions on either a single or multiple items at the same time, instead.
+  ```markdown
+  As of Feb 15, 2024, the @spectrum-css/quickactions has been deprecated.
 
-    This component has been removed from the Spectrum CSS monorepo and will no longer receive new features. Bug fixes will be patched on a as-needed basis. If you find a critical bug, please open a bug report.
+  Please use an Action bar to allow users to perform actions on either a single or multiple items at the same time, instead.
 
-    Bug fixes will not longer be supported after the project migrates fully to Spectrum 2 (date TBD).
+  This component has been removed from the Spectrum CSS monorepo and will no longer receive new features. Bug fixes will be patched on a as-needed basis. If you find a critical bug, please open a bug report.
 
-    If you have any questions or concerns about this deprecation, please feel free to contribute to the discussion here or reach out to us directly.
-    ```
+  Bug fixes will not longer be supported after the project migrates fully to Spectrum 2 (date TBD).
+
+  If you have any questions or concerns about this deprecation, please feel free to contribute to the discussion here or reach out to us directly.
+  ```
 
 ### Flagging the component as deprecated
 
@@ -32,23 +33,21 @@ Before removing the component from the codebase, we need to flag the component a
 
 1. Create a new branch for the deprecation. i.e., `git checkout -b deprecate-quickaction`.
 2. Open up any `*.stories.js` files inside the component's folder:
-    a. Edit the title of any exported stories to be prefixed with the `Deprecated` category, i.e., `title: "Quick actions"`.
-    b. Update any local references to point to the package name instead, i.e.,<br/>_Original_:<br/>`import { Template } from "./template";`<br/><br/>_Updated to_:<br/>`import { Template } from "@spectrum-css/quickaction/stories/template.js";`.
-    c. In the parameters section, there are 2 important updates to make:
-        - Add `chromatic: { disableSnapshot: true },` to ensure it no longer runs regression tests.
-        - Update the `status` type to `deprecated`:
-            ```json
-            parameters: {
-                chromatic: { disableSnapshot: true },
-                status: { type: "deprecated" }
-            },
-            ```
+   a. Edit the title of any exported stories to be prefixed with the `Deprecated` category, i.e., `title: "Quick actions"`.
+   b. Update any local references to point to the package name instead, i.e.,<br/>_Original_:<br/>`import { Template } from "./template";`<br/><br/>_Updated to_:<br/>`import { Template } from "@spectrum-css/quickaction/stories/template.js";`.
+   c. In the parameters section, there are 2 important updates to make: - Add `chromatic: { disableSnapshot: true },` to ensure it no longer runs regression tests. - Update the `status` type to `deprecated`:
+   `json
+        parameters: {
+            chromatic: { disableSnapshot: true },
+            status: { type: "deprecated" }
+        },
+        `
 3. Update the status of the component to `Deprecated` in the `*.yml` file. Add any additional migration notes to the `deprecationNotice` keyword. i.e.,
-    ```yaml
-    name: Quick actions
-    status: Deprecated
-    deprecationNotice: Use an [action bar](actionbar.html) to allow users to perform actions on either a single or multiple items at the same time, instead.
-    ```
+   ```yaml
+   name: Quick actions
+   status: Deprecated
+   deprecationNotice: Use an [action bar](actionbar.html) to allow users to perform actions on either a single or multiple items at the same time, instead.
+   ```
 4. Commit these changes and open a pull request to the main branch. i.e., `git commit -m "chore(quickaction): prepare for deprecation"`.
 5. Once the pull request is approved, merge the changes into the main branch and publish the update to the package registry.
 

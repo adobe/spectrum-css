@@ -21,7 +21,7 @@
 			"{workspaceRoot}/stylelint.config.js",
 			"{workspaceRoot}/plugins/stylelint-*/index.js"
 		],
-		"eslint": ["{workspaceRoot}/.eslintrc.js"],
+		"eslint": ["{workspaceRoot}/.eslintrc"],
 		"prettier": ["{workspaceRoot}/.prettierrc"],
 		"tools": [
 			"{projectRoot}/*.json",
@@ -139,7 +139,7 @@
 				"commands": [
 					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.css {projectRoot}/**/*.css && stylelint --fix --cache --allow-empty-input {projectRoot}/*.css {projectRoot}/**/*.css",
 					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js",
-					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{yml,md} {projectRoot}/**/*.{yml,md}"
+					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{yml,md,mdx} {projectRoot}/**/*.{yml,md,mdx}"
 				]
 			}
 		},

@@ -6,7 +6,7 @@ export default {
 		title: "Text direction",
 		description: "Direction of the content flow",
 		defaultValue: "ltr",
-        type: "string",
+		type: "string",
 		toolbar: {
 			items: [
 				{ value: "ltr", title: "Left to right" },
@@ -19,7 +19,7 @@ export default {
 		title: "Language",
 		description: "Language of the content",
 		defaultValue: "en-US",
-        type: "string",
+		type: "string",
 		toolbar: {
 			items: [
 				{ value: "en-US", title: "🇺🇸", right: "English (US)" },

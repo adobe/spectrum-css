@@ -9,91 +9,107 @@
 		]
 	},
 	"targets": {
+		"build": {
+			"configurations": {
+				"ci": {
+					"commands": ["storybook build --config-dir ."]
+				},
+				"docs": {
+					"commands": [
+						"storybook build --config-dir . --output-dir ../dist/preview"
+					],
+					"outputs": ["{workspaceRoot}/dist/preview"]
+				}
+			},
+			"dependsOn": ["clean", "^build"],
+			"executor": "nx:run-commands",
+			"inputs": ["tools", { "externalDependencies": ["storybook"] }],
+			"options": {
+				"commands": [
+					"storybook build --config-dir . --output-dir ./storybook-static"
+				],
+				"cwd": "{projectRoot}"
+			},
+			"outputs": ["{projectRoot}/storybook-static"]
+		},
 		"clean": {
+			"configurations": {
+				"docs": {
+					"commands": [
+						"rimraf dist/preview",
+						"test -d dist/preview && echo \"Error: dist/preview directory could not be removed\" && exit 1 || exit 0"
+					],
+					"cwd": "{workspaceRoot}",
+					"inputs": [
+						"{workspaceRoot}/dist/preview",
+						{ "externalDependencies": ["rimraf"] }
+					]
+				}
+			},
+			"executor": "nx:run-commands",
 			"inputs": [
 				"{projectRoot}/storybook-static",
 				{ "externalDependencies": ["rimraf"] }
 			],
-			"executor": "nx:run-commands",
 			"options": {
-				"cwd": "{projectRoot}",
 				"commands": [
 					"rimraf storybook-static",
 					"test -d storybook-static && echo \"Error: storybook-static directory could not be removed\" && exit 1 || exit 0"
 				],
-				"parallel": false
-			},
-			"configurations": {
-				"docs": {
-					"inputs": [
-						"{workspaceRoot}/dist/preview",
-						{ "externalDependencies": ["rimraf"] }
-					],
-					"cwd": "{workspaceRoot}",
-					"commands": [
-						"rimraf dist/preview",
-						"test -d dist/preview && echo \"Error: dist/preview directory could not be removed\" && exit 1 || exit 0"
-					]
-				}
-			}
-		},
-		"build": {
-			"dependsOn": ["clean", "^build"],
-			"inputs": ["tools", { "externalDependencies": ["storybook"] }],
-			"outputs": ["{projectRoot}/storybook-static"],
-			"executor": "nx:run-commands",
-			"options": {
 				"cwd": "{projectRoot}",
-				"commands": [
-					"storybook build --config-dir . --output-dir ./storybook-static"
-				]
-			},
-			"configurations": {
-				"ci": {
-					"commands": ["storybook build --config-dir . --webpack-stats-json"]
-				},
-				"docs": {
-					"outputs": ["{workspaceRoot}/dist/preview"],
-					"commands": [
-						"storybook build --config-dir . --output-dir ../dist/preview"
-					]
-				}
+				"parallel": false
 			}
 		},
+		"format": {
+			"options": {
+				"commands": [
+					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/assets/*.css && stylelint --fix --cache --allow-empty-input {projectRoot}/assets/*.css",
+					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.{js,json} {projectRoot}/**/*.js --ignore-pattern \"!.storybook/\"",
+					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{yml,mdx}"
+				]
+			}
+		},
+		"lint": {
+			"options": {
+				"commands": [
+					"stylelint --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables {projectRoot}/assets/*.css --ignore-pattern {projectRoot}/dist",
+					"eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives {projectRoot}/*.{js,json} {projectRoot}/**/*.js --ignore-pattern \"!.storybook/\" || exit 0"
+				]
+			}},
 		"start": {
 			"cache": true,
 			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
 			"inputs": [
 				"tools",
 				{ "externalDependencies": ["storybook"] },
 				{ "env": "WATCH_MODE" }
 			],
-			"executor": "nx:run-commands",
 			"options": {
-				"cwd": "{projectRoot}",
-				"commands": ["WATCH_MODE=true storybook dev --config-dir ."]
+				"commands": ["WATCH_MODE=true storybook dev --config-dir ."],
+				"cwd": "{projectRoot}"
 			}
 		},
 		"test": {
 			"cache": true,
-			"inputs": [
-				"tools",
-				{ "externalDependencies": ["chromatic", "storybook"] },
-				{ "env": "CHROMATIC_PROJECT_TOKEN" }
-			],
-			"executor": "nx:run-commands",
-			"options": {
-				"cwd": "{projectRoot}",
-				"commands": [
-					"chromatic --only-changed --build-script-name build --junit-report"
-				]
-			},
 			"configurations": {
 				"scope": {
 					"commands": [
 						"chromatic --build-script-name build --junit-report --only-story-names"
 					]
 				}
+			},
+			"executor": "nx:run-commands",
+			"inputs": [
+				"tools",
+				{ "externalDependencies": ["chromatic", "storybook"] },
+				{ "env": "CHROMATIC_PROJECT_TOKEN" }
+			],
+			"options": {
+				"commands": [
+					"chromatic --only-changed --build-script-name build --junit-report"
+				],
+				"cwd": "{projectRoot}"
 			}
 		}
 	}

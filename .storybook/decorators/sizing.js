@@ -28,7 +28,7 @@ export const withSizingWrapper = makeDecorator({
 		};
 
 		context.parameters.html.root =
-			'.spectrum-Examples-item[data-value="m"] #scoped-root';
+			".spectrum-Examples-item[data-value=\"m\"] #scoped-root";
 		context.argTypes.size.table = {
 			...context.argTypes.size.table,
 			disable: true,

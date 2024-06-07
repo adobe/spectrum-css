@@ -53,23 +53,23 @@ export const isFocused = {
 };
 
 export const isHovered = {
-    name: "Hovered",
-    type: { name: "boolean" },
-    table: {
-        type: { summary: "boolean" },
-        category: "State",
-    },
-    control: "boolean",
+	name: "Hovered",
+	type: { name: "boolean" },
+	table: {
+		type: { summary: "boolean" },
+		category: "State",
+	},
+	control: "boolean",
 };
 
 export const isActive = {
-    name: "Active",
-    type: { name: "boolean" },
-    table: {
-        type: { summary: "boolean" },
-        category: "State",
-    },
-    control: "boolean",
+	name: "Active",
+	type: { name: "boolean" },
+	table: {
+		type: { summary: "boolean" },
+		category: "State",
+	},
+	control: "boolean",
 };
 
 export const isKeyboardFocused = {

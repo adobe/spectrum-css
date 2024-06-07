@@ -1,4 +1,4 @@
-import { Meta, Title } from '@storybook/blocks';
+import { Meta, Title } from "@storybook/blocks";
 
 <Meta title="Release workflow" />
 
@@ -19,9 +19,10 @@ Additionally, we use the [Conventional Commits](https://www.conventionalcommits.
 ### Changesets usage
 
 A changeset is a piece of information about changes made in a branch or a commit. It holds three bits of information:
-* What we need to release
-* What the next version we want to release is (using a [semver bump type](https://semver.org/))
-* A changelog entry for the released packages
+
+- What we need to release
+- What the next version we want to release is (using a [semver bump type](https://semver.org/))
+- A changelog entry for the released packages
 
 Not every change to the codebase will require a release, but any changes to files within the `/components` directory **will** require a release. Generally, when thinking about versioning and releases, it's a good idea to consider the question: "does this change need to be consumed by someone or something outside of Spectrum CSS?" If the answer to that question is "yes", then the changes will likely require a changeset.
 

@@ -1,10 +1,10 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from "@storybook/blocks";
 
-import Illustration from '../../assets/spectrum_illustration_2x.png';
+import Illustration from "../../assets/spectrum_illustration_2x.png";
 
-<Meta title="Contributing"/>
+<Meta title="Contributing" />
 
-<img src={Illustration} style={{marginTop: "-20px", marginBottom: "20px"}}/>
+<img src={Illustration} style={{ marginTop: "-20px", marginBottom: "20px" }} />
 
 # Getting started
 
@@ -43,15 +43,15 @@ For more general information about how to contribute to the Spectrum CSS project
 
 Packages can be loaded using their package name rather than a relative pathing approach, i.e., in a story:
 
-  ```js
-  import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-  ```
+```js
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+```
 
-  or in a template.js file:
+or in a template.js file:
 
-  ```js
-  import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-  ```
+```js
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+```
 
 CSS for other components can be loaded in a story using the package name (rather than the directory path), i.e. `@spectrum-css/toast` vs. `../toast/index.css`. The local version of the package is used regardless but the webpack settings will resolve the pathing for you.
 
@@ -59,23 +59,23 @@ For template development, we leverage lit and it's utilities to create dynamic H
 
 To import the utilities you need, use the following:
 
-  ```js
-  import { html } from "lit";
-  import { classMap } from "lit/directives/class-map.js";
-  import { ifDefined } from "lit/directives/if-defined.js";
-  ```
+```js
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+```
 
 Images can be loaded directly from the `assets/images` directory at the root of the project.
 
-  ```html
-  <img class="spectrum-Asset-image" src="example-ava.png" />
-  ```
+```html
+<img class="spectrum-Asset-image" src="example-ava.png" />
+```
 
 CSS assets will be run through their respective postcss configurations. This means you do not need to load dist assets into a story. It is recommended you load **local development assets** as they will be correctly compiled on the fly. i.e., in your template.js:
 
-  ```js
-  import "../index.css";
-  ```
+```js
+import "../index.css";
+```
 
 We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit for dynamic attribute assignment.
 
@@ -308,65 +308,65 @@ import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/templ
 import "../index.css";
 
 export const Template = ({
- rootClass = "spectrum-Tag",
- size = "m",
- iconName,
- avatarUrl,
- label,
- isSelected = false,
- isEmphasized = false,
- isDisabled = false,
- isInvalid = false,
- hasClearButton = false,
- id,
- customClasses = [],
- ...globals
+	rootClass = "spectrum-Tag",
+	size = "m",
+	iconName,
+	avatarUrl,
+	label,
+	isSelected = false,
+	isEmphasized = false,
+	isDisabled = false,
+	isInvalid = false,
+	hasClearButton = false,
+	id,
+	customClasses = [],
+	...globals
 }) => {
- return html`
-  <div
-    class=${classMap({
-      [rootClass]: true,
-      [`${rootClass}--size${size?.toUpperCase()}`]:
-      typeof size !== "undefined",
-      "is-emphasized": isEmphasized,
-      "is-disabled": isDisabled,
-      "is-invalid": isInvalid,
-      "is-selected": isSelected,
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}
-    id=${ifDefined(id)}
-    tabindex=${isDisabled ? "-1" : "0"}
-    style=${ifDefined(styleMap(customStyles))}
-  >
-   ${avatarUrl && !iconName
-    ? Avatar({
-      ...globals,
-      image: avatarUrl,
-      size: "50",
-      })
-    : ""} ${iconName
-    ? Icon({
-      ...globals,
-      iconName,
-      customClasses: [`${rootClass}s-itemIcon`],
-      })
-    : ""}
-   <span class="${rootClass}s-itemLabel">${label}</span>
-   ${hasClearButton
-    ? ClearButton({
-      ...globals,
-      customClasses: [`${rootClass}-clearButton`],
-      onclick: (evt) => {
-       const el = evt.target;
-       if (!el) return;
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				"is-emphasized": isEmphasized,
+				"is-disabled": isDisabled,
+				"is-invalid": isInvalid,
+				"is-selected": isSelected,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			tabindex=${isDisabled ? "-1" : "0"}
+			style=${ifDefined(styleMap(customStyles))}
+		>
+			${avatarUrl && !iconName
+				? Avatar({
+						...globals,
+						image: avatarUrl,
+						size: "50",
+					})
+				: ""} ${iconName
+				? Icon({
+						...globals,
+						iconName,
+						customClasses: [`${rootClass}s-itemIcon`],
+					})
+				: ""}
+			<span class="${rootClass}s-itemLabel">${label}</span>
+			${hasClearButton
+				? ClearButton({
+						...globals,
+						customClasses: [`${rootClass}-clearButton`],
+						onclick: (evt) => {
+							const el = evt.target;
+							if (!el) return;
 
-       const wrapper = el.closest(rootClass);
-       wrapper.parentNode.removeChild(wrapper);
-      },
-      })
-    : ""}
-  </div>
- `;
+							const wrapper = el.closest(rootClass);
+							wrapper.parentNode.removeChild(wrapper);
+						},
+					})
+				: ""}
+		</div>
+	`;
 };
 ```
 
@@ -377,25 +377,20 @@ Now that your stories are written, we need to add them to our visual regression 
 To optimize snapshot usage, we organize our stories into groups when rendered inside the Chromatic environment. This is done by adding an `window.isChromatic()` check and creating groups of stories (note: do not import the `isChromatic` function directly, there is added functionality we've included when sourcing it from`window`). See example below:
 
 ```js
-const AccordionGroup = ({
- customStyles = {},
- ...args
-}) => {
- return html`
-   ${Template(args)}
-   ${when(window.isChromatic(), () =>
-    Template({
-     ...args,
-     customStyles: { "max-inline-size": "300px"},
-    })
-   )}
-   ${when(window.isChromatic(), () =>
-    Template({
-     ...args,
-     disableAll: true,
-    })
-   )}
- `;
+const AccordionGroup = ({ customStyles = {}, ...args }) => {
+	return html`
+		${Template(args)} ${when(window.isChromatic(), () =>
+			Template({
+				...args,
+				customStyles: { "max-inline-size": "300px" },
+			}),
+		)} ${when(window.isChromatic(), () =>
+			Template({
+				...args,
+				disableAll: true,
+			}),
+		)}
+	`;
 };
 
 export const Default = AccordionGroup.bind({});
