@@ -9,7 +9,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ActionBar {
+:root {
 	--spectrum-actionbar-height: var(--spectrum-action-bar-height);
 	--spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-100);
 
@@ -86,10 +86,25 @@ governing permissions and limitations under the License.
 	block-size: 0;
 	opacity: 0;
 
-	&.is-open {
+	&[open] {
 		/* add ActionBar bottom margin to height for correct spacing even when sticky */
 		block-size: calc(var(--mod-actionbar-spacing-outer-edge, var(--spectrum-actionbar-spacing-outer-edge)) + var(--mod-actionbar-height, var(--spectrum-actionbar-height)));
 		opacity: 1;
+	}
+
+	&[emphasized] {
+		.spectrum-ActionBar-popover {
+			filter: none;
+			background-color: var(--mod-actionbar-emphasized-background-color, var(--spectrum-actionbar-emphasized-background-color));
+
+			/* border transparent instead of none so WHCM will have visible border */
+			border-color: transparent;
+		}
+
+		/* ensure text is legible on emphasized background */
+		.spectrum-FieldLabel {
+			color: var(--mod-actionbar-emphasized-item-counter-color, var(--spectrum-actionbar-emphasized-item-counter-color));
+		}
 	}
 
 	.spectrum-ActionBar-popover {
@@ -154,36 +169,21 @@ governing permissions and limitations under the License.
 		/* align to end by default */
 		margin-inline-start: auto;
 	}
-}
 
-.spectrum-ActionBar--emphasized {
-	.spectrum-ActionBar-popover {
-		filter: none;
-		background-color: var(--mod-actionbar-emphasized-background-color, var(--spectrum-actionbar-emphasized-background-color));
-
-		/* border transparent instead of none so WHCM will have visible border */
-		border-color: transparent;
+	&[variant="sticky"] {
+		inset-inline-start: 0;
+		inset-inline-end: 0;
+		position: sticky;
 	}
 
-	/* ensure text is legible on emphasized background */
-	.spectrum-FieldLabel {
-		color: var(--mod-actionbar-emphasized-item-counter-color, var(--spectrum-actionbar-emphasized-item-counter-color));
+	&[variant="fixed"] {
+		position: fixed;
 	}
-}
 
-.spectrum-ActionBar--sticky {
-	inset-inline-start: 0;
-	inset-inline-end: 0;
-	position: sticky;
-}
-
-.spectrum-ActionBar--fixed {
-	position: fixed;
-}
-
-/* flexible width */
-.spectrum-ActionBar--flexible {
-	.spectrum-ActionBar-popover {
-		inline-size: auto;
+	/* flexible width */
+	&[flexible] {
+		.spectrum-ActionBar-popover {
+			inline-size: auto;
+		}
 	}
 }
