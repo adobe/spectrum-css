@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.1.0
+
+### Minor Changes
+
+- [#2821](https://github.com/adobe/spectrum-css/pull/2821) [`0129dca`](https://github.com/adobe/spectrum-css/commit/0129dca2e6f3eb90ff536344ba7f53249b4a0bfe) Thanks [@castastrophe](https://github.com/castastrophe)! - Pull out decorators into their own files
+
 ## 10.0.5
 
 ### Patch Changes
