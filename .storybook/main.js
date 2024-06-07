@@ -10,17 +10,17 @@ const componentPkgs = readdirSync(componentsPath, {
 
 module.exports = {
 	stories: [{
-		directory: '../components',
-		files: '*/stories/*.@(stories.js|mdx)',
-		titlePrefix: 'Components',
+		directory: "../components",
+		files: "*/stories/*.@(stories.js|mdx)",
+		titlePrefix: "Components",
 	}, {
-		directory: './guides',
-		files: '*.mdx',
-		titlePrefix: 'Guides',
+		directory: "./guides",
+		files: "*.mdx",
+		titlePrefix: "Guides",
 	}, {
-		directory: './deprecated',
-		files: '**/*.@(stories.js|mdx)',
-		titlePrefix: 'Deprecated',
+		directory: "./deprecated",
+		files: "**/*.@(stories.js|mdx)",
+		titlePrefix: "Deprecated",
 	}],
 	rootDir: "../",
 	staticDirs: ["../assets"],
@@ -50,14 +50,14 @@ module.exports = {
 		// https://www.chromatic.com/docs/visual-testing-addon/
 		"@chromaui/addon-visual-tests",
 		// https://storybook.js.org/addons/@storybook/addon-designs/
-    	"@storybook/addon-designs",
+		"@storybook/addon-designs",
 	],
 	core: {
 		disableTelemetry: true,
 		disableWhatsNewNotifications: true,
 	},
 	webpackFinal: function (config) {
-		// Removing the global alias as it conflicts with the global npm pkg
+		/* eslint-disable no-unused-vars -- removing the global alias as it conflicts with the global npm pkg */
 		const { global, ...alias } = config.resolve.alias;
 		config.resolve.alias = alias;
 
@@ -65,8 +65,8 @@ module.exports = {
 		const storybookRules =
 			config && config.module && config.module.rules
 				? config.module.rules.filter(
-						(rule) => !(rule.test && rule.test.toString().includes("css"))
-				  )
+					(rule) => !(rule.test && rule.test.toString().includes("css"))
+				)
 				: [];
 		return {
 			...config,
@@ -144,10 +144,10 @@ module.exports = {
 										config: resolve(__dirname, "../postcss.config.js"),
 										additionalPlugins: {
 											"postcss-pseudo-classes": {
-												restrictTo: ['focus-visible', 'focus-within', 'hover', 'active', 'disabled'],
+												restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
 												allCombinations: true,
 												preserveBeforeAfter: false,
-												prefix: 'is-'
+												prefix: "is-"
 											},
 										}
 									},
@@ -162,7 +162,7 @@ module.exports = {
 					} /* Raw loader */,
 					{
 						resourceQuery: /raw/,
-						type: 'asset/source',
+						type: "asset/source",
 					},
 				],
 			},

@@ -11,7 +11,7 @@ import {
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 } from "./decorators/index.js";
-import DocumentationTemplate from './DocumentationTemplate.mdx';
+import DocumentationTemplate from "./DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
 
 const panelExclude = setConsoleOptions({}).panelExclude || [];
@@ -36,7 +36,7 @@ export const parameters = {
 	panelPosition: "bottom",
 	showToolbar: true,
 	isFullscreen: false,
-	actions: { argTypesRegex: '^on.*' },
+	actions: { argTypesRegex: "^on.*" },
 	options: {
 		storySort: {
 			method: "alphabetical-by-kind",
@@ -71,7 +71,7 @@ export const parameters = {
 	},
 	docs: {
 		autodocs: true,
-    	page: DocumentationTemplate,
+		page: DocumentationTemplate,
 		story: {
 			inline: true,
 			iframeHeight: "200px",

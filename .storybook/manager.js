@@ -18,8 +18,8 @@ addons.setConfig({
 		brandImage: logo,
 
 		fontBase:
-			'adobe-clean, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif',
-		fontCode: '"Source Code Pro", Monaco, monospace',
+			"adobe-clean, \"Source Sans Pro\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Ubuntu, \"Trebuchet MS\", \"Lucida Grande\", sans-serif",
+		fontCode: "\"Source Code Pro\", Monaco, monospace",
 
 		colorSecondary: "rgb(2, 101, 220)",
 
@@ -48,7 +48,7 @@ addons.setConfig({
 	sidebar: {
 		showRoots: false,
 		filters: {
-			patterns: (item) => !item.id.includes('forced-colors') && ['docs-only', 'vrt-only'].every(tag => !item.tags.includes(tag)),
+			patterns: (item) => !item.id.includes("forced-colors") && ["docs-only", "vrt-only"].every(tag => !item.tags.includes(tag)),
 		}
 	},
 });

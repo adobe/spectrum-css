@@ -9,7 +9,7 @@ export const withTextDirectionWrapper = makeDecorator({
 	parameterName: "textDecoration",
 	wrapper: (StoryFn, context) => {
 		const { globals, parameters } = context;
-		const defaultDirection = "ltr"
+		const defaultDirection = "ltr";
 		const textDirection = parameters.textDirection || globals.textDirection || defaultDirection;
 
 		useEffect(() => {

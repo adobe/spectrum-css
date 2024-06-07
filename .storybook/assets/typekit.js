@@ -1,7 +1,9 @@
+/* global Typekit */
+
 // This wrapper prevents loading the font more than once
 if (!window.Typekit) {
 	const kitId =
-		document.querySelector('[lang]:not([lang="en-US"])') === null
+		document.querySelector("[lang]:not([lang=\"en-US\"])") === null
 			? "mge7bvf"
 			: "rok6rmo";
 
@@ -32,7 +34,8 @@ if (!window.Typekit) {
 				kitId,
 				scriptTimeout: 3000,
 			});
-		} catch (b) {}
+		}
+		catch (b) {/* empty */}
 	};
 
 	document.body.appendChild(tk);
