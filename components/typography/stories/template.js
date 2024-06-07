@@ -3,10 +3,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
 import { capitalize } from "lodash-es";
-
-import "@spectrum-css/typography/index.css";
+import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Typography",

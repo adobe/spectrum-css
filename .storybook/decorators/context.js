@@ -1,4 +1,5 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { html } from "lit";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -8,7 +9,8 @@ export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { args, argTypes, viewMode, id } = context;
+		const { args = {}, argTypes = {}, viewMode, id, loaded = {} } = context;
+		const { tokens = {} } = loaded;
 
 		const getDefaultValue = (type) => {
 			if (!type) return null;
@@ -27,10 +29,30 @@ export const withContextWrapper = makeDecorator({
 		/** @type string */
 		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
 
-		const colors = ["light", "dark", "darkest"];
-		const scales = ["medium", "large"];
-
 		useEffect(() => {
+			const toggleStyles = (container, id, styleObj, add = true) => {
+				if (!container && !id) return;
+
+				let style = container.querySelector(`#${id}`);
+				const styles = styleObj ? Object.values(styleObj)[0] : undefined;
+
+				if (!add) {
+					if (style) style.remove();
+					return;
+				}
+
+				if (!style) {
+					style = document.createElement("style");
+					style.id = id;
+					container.appendChild(style);
+				}
+
+				if (!style) return;
+
+				if (add && styles) style.innerHTML = styles;
+				else style.remove();
+			};
+
 			let containers = [document.body];
 
 			const roots = [
@@ -42,17 +64,34 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			for (const container of containers) {
+				const styleContainer = container.querySelector("#styles-container");
+				const globalContainer = styleContainer.querySelector("#global");
+				const colorsContainer = styleContainer.querySelector("#colors");
+				const scalesContainer = styleContainer.querySelector("#scale");
+				const contextContainer = styleContainer.querySelector("#context");
+
 				container.classList.toggle("spectrum", true);
 				container.classList.toggle("spectrum--express", isExpress);
 
-				for (const c of colors) {
+				toggleStyles(globalContainer, "vars-base", tokens?.global?.base, true);
+				toggleStyles(contextContainer, "vars-base-spectrum", tokens?.spectrum?.base, true);
+				toggleStyles(contextContainer, "vars-base-express", tokens?.express?.base, isExpress);
+
+				for (const c of ["light", "dark", "darkest"]) {
 					container.classList.toggle(`spectrum--${c}`, c === color);
+
+					toggleStyles(colorsContainer, `vars-${c}`, tokens?.global?.[c], c === color);
+					toggleStyles(colorsContainer, `vars-${c}-spectrum`, tokens?.spectrum?.[c], c === color);
+					toggleStyles(colorsContainer, `vars-${c}-express`, tokens?.express?.[c], isExpress && c === color);
 				}
 
-				for (const s of scales) {
+				for (const s of ["medium", "large"]) {
 					container.classList.toggle(`spectrum--${s}`, s === scale);
-				}
 
+					toggleStyles(scalesContainer, `vars-${s}`, tokens?.global?.[s], s === scale);
+					toggleStyles(scalesContainer, `vars-${s}-spectrum`, tokens?.spectrum?.[s], s === scale);
+					toggleStyles(scalesContainer, `vars-${s}-express`, tokens?.express?.[s], isExpress && s === scale);
+				}
 
 				container.style.removeProperty("background");
 				const hasStaticElement = container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--staticBlack, .${args.rootClass}--overBackground`);
@@ -65,8 +104,16 @@ export const withContextWrapper = makeDecorator({
 					}
 				}
 			}
-		}, [color, scale, isExpress, args.staticColor]);
+		}, [color, scale, isExpress, tokens, args.staticColor]);
 
-		return StoryFn(context);
+		return html`
+			<div id="styles-container">
+				<div id="global"></div>
+				<div id="colors"></div>
+				<div id="scale"></div>
+				<div id="context"></div>
+			</div>
+			${StoryFn(context)}
+		`;
 	},
 });

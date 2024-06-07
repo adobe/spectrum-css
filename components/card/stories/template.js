@@ -1,17 +1,15 @@
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
-
-import { useArgs } from "@storybook/preview-api";
-
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
-
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 import "../index.css";
 
 export const Template = ({
@@ -87,17 +85,20 @@ export const Template = ({
               title || hasActions,
               () => html`
                 <div class="${rootClass}-header">
-                ${when(title, () => html`<div class="${rootClass}-title spectrum-Heading spectrum-Heading--sizeXS">${title}</div>`)}
+                ${when(title, () => Typography({
+                  customClasses: [`${rootClass}-title`],
+                  semantics: "heading",
+                  size: "xs",
+                  content: title,
+                }))}
                 ${when(hasActions && !isHorizontal,
-                  () => html`
-                    <div class="${rootClass}-actionButton">
-                      ${ActionButton({
-                        ...globals,
-                        iconName: "More",
-                        size: "m",
-                        isQuiet: true
-                      })}
-                    </div>`
+                  () => ActionButton({
+                    ...globals,
+                    iconName: "More",
+                    size: "m",
+                    isQuiet: true,
+                    customClasses: [`${rootClass}-actionButton`],
+                  })
                 )}
                 </div>`
             )}
@@ -105,7 +106,12 @@ export const Template = ({
               subtitle || description,
               () => html`
               <div class="${rootClass}-content">
-                ${when(subtitle, () => html`<div class="${rootClass}-subtitle spectrum-Detail spectrum-Detail--sizeS">${subtitle}</div>`)}
+                ${when(subtitle, () => Typography({
+                  customClasses: [`${rootClass}-subtitle`],
+                  semantics: "detail",
+                  size: "s",
+                  content: subtitle,
+                }))}
                 ${when(description, () => html`<div class="${rootClass}-description">${description}</div>`)}
               </div>`
             )}

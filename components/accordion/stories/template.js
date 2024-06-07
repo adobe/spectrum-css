@@ -1,13 +1,10 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-
 import "../index.css";
 
 export const AccordionItem = ({
@@ -126,3 +123,28 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const AccordionGroup = (args) => html`
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : undefined,
+	})}>
+		${Template(args)}
+	</div>
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "flex" : "none",
+		"flex-wrap": "wrap",
+		"gap": "28px"
+	})}>
+		${Template(args)}
+		${Template({
+			...args,
+			customStyles: {
+				maxInlineSize: "300px",
+			},
+		})}
+		${Template({
+			...args,
+			disableAll: true,
+		})}
+	</div>
+`;
