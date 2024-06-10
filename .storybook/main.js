@@ -17,10 +17,6 @@ module.exports = {
 		directory: "./guides",
 		files: "*.mdx",
 		titlePrefix: "Guides",
-	}, {
-		directory: "./deprecated",
-		files: "**/*.@(stories.js|mdx)",
-		titlePrefix: "Deprecated",
 	}],
 	rootDir: "../",
 	staticDirs: ["../assets"],
