@@ -1,5 +1,5 @@
 /*!
-Copyright 2024 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-Steplist {
 	/* The width of a step */
 	--spectrum-steplist-step-width: 80px;
 
@@ -35,28 +35,22 @@ governing permissions and limitations under the License.
 
 	/* Font size of the label */
 	--spectrum-steplist-label-text-size: 12px;
+
 	--spectrum-steplist-current-label-text-color: var(--spectrum-gray-800);
+
 	--spectrum-steplist-current-marker-color: var(--spectrum-gray-800);
+
 	--spectrum-steplist-complete-label-text-color: var(--spectrum-gray-700);
+
 	--spectrum-steplist-incomplete-label-color: var(--spectrum-gray-600);
+
 	--spectrum-steplist-complete-marker-background-color: var(--spectrum-gray-600);
+
 	--spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-300);
+
 	--spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-300);
+
 	--spectrum-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
-}
-
-@media (forced-colors: active) {
-	.spectrum-Steplist {
-		--highcontrast-steplist-complete-marker-background-color: CanvasText;
-		--highcontrast-steplist-current-marker-color: Highlight;
-		--highcontrast-steplist-current-marker-color-key-focus: Highlight;
-	}
-
-	@supports (color: SelectedItem) {
-		.spectrum-Steplist {
-			--highcontrast-steplist-current-marker-color: SelectedItem;
-		}
-	}
 }
 
 .spectrum-Steplist {
@@ -75,79 +69,249 @@ governing permissions and limitations under the License.
 	white-space: nowrap;
 	font-size: 0; /* To remove html whitespace between inline elements */
 	line-height: 16px; /* in case the container changes it */
+}
+
+.spectrum-Steplist--interactive {
+	.spectrum-Steplist-label,
+	.spectrum-Steplist-markerContainer {
+		/* Show cursor on hit zone when clickable */
+		cursor: pointer;
+	}
 
 	.spectrum-Steplist-item {
-		outline: none;
-		position: relative;
-		display: inline-block;
-		margin: 0;
-
-		/* Don't let tooltips mess up alignment */
-		vertical-align: bottom;
-
-		box-sizing: content-box;
-		inline-size: var(--mod-steplist-step-width, var(--spectrum-steplist-step-width));
-		padding-block: 0;
-		padding-inline: 0 calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2);
-
-		/* Completed State */
-		&[complete] {
-			.spectrum-Steplist-label {
-				color: var(--mod-steplist-complete-label-text-color, var(--spectrum-steplist-complete-label-text-color));
-			}
-
+		/* Step Focused */
+		&:focus,
+		&.is-focused,
+		*:focus {
 			.spectrum-Steplist-marker {
-				background-color: var(--highcontrast-steplist-complete-marker-background-color, var(--mod-steplist-complete-marker-background-color, var(--spectrum-steplist-complete-marker-background-color)));
-				border: none;
-			}
-
-			/* The next step's line should be solid */
-			& + .spectrum-Steplist-item .spectrum-Steplist-segment {
-				border-block-end-width: var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height));
-				border-block-end-style: solid;
-			}
-		}
-
-		/* Selected state */
-		&[selected] {
-			/* Focus */
-			&:focus,
-			*:focus {
-				outline: none;
-			}
-
-			.spectrum-Steplist-label {
-				color: var(--mod-steplist-current-label-text-color, var(--spectrum-steplist-current-label-text-color));
-			}
-
-			.spectrum-Steplist-marker {
-				border: none;
-				background-color: var(--highcontrast-steplist-current-marker-color, var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color)));
-			}
-		}
-
-		&[complete],
-		&[selected] {
-			.spectrum-Steplist-segment {
-				border-block-end-color: var(--mod-steplist-complete-segment-border-block-end-color, var(--spectrum-steplist-complete-segment-border-block-end-color));
+				background-color: var(--highcontrast-steplist-current-marker-color-key-focus, var(--mod-steplist-current-marker-color-key-focus, var(--spectrum-steplist-current-marker-color-key-focus)));
 			}
 		}
 	}
+}
+
+/* Small (w/o label or tooltip) */
+.spectrum-Steplist--small {
+	padding-block: var(--mod-steplist-small-topPadding, var(--spectrum-steplist-small-topPadding));
+	padding-inline: 0;
+
+	.spectrum-Steplist-item {
+		padding-block: 0;
+		padding-inline: 0 40px;
+		inline-size: 80px;
+
+		/* Disable Label */
+		.spectrum-Steplist-label {
+			display: none;
+		}
+
+		&:first-child,
+		&:last-child {
+			inline-size: 20px;
+		}
+
+		/* Disable first line */
+		&:first-child {
+			.spectrum-Steplist-markerContainer {
+				margin-inline-start: -10px;
+			}
+		}
+
+		&:last-child {
+			.spectrum-Steplist-markerContainer {
+				margin-inline-end: -10px;
+			}
+		}
+	}
+}
+
+.spectrum-Steplist-item {
+	outline: none;
+	position: relative;
+	display: inline-block;
+	margin: 0;
+
+	/* Don't let tooltips mess up alignment */
+	vertical-align: bottom;
+
+	box-sizing: content-box;
+	inline-size: var(--mod-steplist-step-width, var(--spectrum-steplist-step-width));
+	padding-block: 0;
+	padding-inline: 0 calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2);
+
+	/* Completed State */
+	&.is-complete {
+		.spectrum-Steplist-label {
+			color: var(--mod-steplist-complete-label-text-color, var(--spectrum-steplist-complete-label-text-color));
+		}
+
+		.spectrum-Steplist-marker {
+			background-color: var(--highcontrast-steplist-complete-marker-background-color, var(--mod-steplist-complete-marker-background-color, var(--spectrum-steplist-complete-marker-background-color)));
+			border: none;
+		}
+
+		/* The next step's line should be solid */
+		& + .spectrum-Steplist-item .spectrum-Steplist-segment {
+			border-block-end-width: var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height));
+			border-block-end-style: solid;
+		}
+	}
+
+	/* Selected state */
+	&.is-selected {
+		/* Focus */
+		&:focus,
+		*:focus {
+			outline: none;
+		}
+
+		.spectrum-Steplist-label {
+			color: var(--mod-steplist-current-label-text-color, var(--spectrum-steplist-current-label-text-color));
+		}
+
+		.spectrum-Steplist-marker {
+			border: none;
+			background-color: var(--highcontrast-steplist-current-marker-color, var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color)));
+		}
+	}
+
+	&.is-complete,
+	&.is-selected {
+		.spectrum-Steplist-segment {
+			border-block-end-color: var(--mod-steplist-complete-segment-border-block-end-color, var(--spectrum-steplist-complete-segment-border-block-end-color));
+		}
+	}
+}
+
+.spectrum-Steplist-label {
+	position: absolute;
+	inset-inline-start: 50%;
+	inset-block-end: var(--mod-steplist-label-labelOffset, var(--spectrum-steplist-label-labelOffset));
+
+	display: block;
+	inline-size: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5);
+
+	font-size: var(--mod-steplist-label-text-size, var(--spectrum-steplist-label-text-size));
+	white-space: normal;
+
+	transform: translateX(-50%);
+
+	color: var(--mod-steplist-incomplete-label-color, var(--spectrum-steplist-incomplete-label-color));
+
+	&:dir(rtl) {
+		transform: translateX(50%);
+	}
+}
+
+.spectrum-Steplist-markerContainer {
+	display: block;
+
+	z-index: 2;
+	position: absolute;
+	inset-block-end: -10px;
+	inset-inline-start: 50%;
+
+	inline-size: var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea));
+	block-size: var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea));
+
+	margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
+}
+
+/* Circle step marker */
+.spectrum-Steplist-marker {
+	box-sizing: border-box; /* So we can stroke nicely */
+	display: block;
+
+	position: absolute;
+	inset-block-start: 50%;
+	inset-inline-start: 50%;
+	margin-block-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
+	margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
+
+	inline-size: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
+	block-size: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
+
+	border-radius: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
+
+	border: 2px solid;
+	border-color: var(--mod-steplist-incomplete-marker-border-color, var(--spectrum-steplist-incomplete-marker-border-color));
+	background: transparent;
+}
+
+/* Step line */
+.spectrum-Steplist-segment {
+	display: block;
+	z-index: 1;
+	position: absolute;
+	inset-inline-end: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 1.5));
+
+	box-sizing: content-box;
+	inline-size: calc(calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2));
+	inset-block-end: calc(-1 * calc(var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height)) / 2));
+
+	/* Default is dashed */
+	border-block-end-width: var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height));
+	border-block-end-style: dashed;
+
+	border-block-end-color: var(--mod-steplist-incomplete-segment-border-block-end-color, var(--spectrum-steplist-incomplete-segment-border-block-end-color));
+}
+
+/* First step overrides */
+.spectrum-Steplist-item:first-child {
+	.spectrum-Steplist-markerContainer {
+		inset-inline-start: 0;
+	}
 
 	.spectrum-Steplist-label {
-		position: absolute;
+		inset-inline-start: 0;
+	}
+
+	.spectrum-Steplist-segment {
+		/* Not visible for first step */
+		display: none;
+	}
+}
+
+/* Last step overrides */
+.spectrum-Steplist-item:last-child {
+	.spectrum-Steplist-label {
+		inset-inline-start: auto;
+		inset-inline-end: 0;
+
+		transform: translateX(50%);
+
+		&:dir(rtl) {
+			transform: translateX(-50%);
+		}
+	}
+
+	.spectrum-Steplist-markerContainer {
+		inset-inline-start: auto;
+		inset-inline-end: 0;
+
+		margin-inline-start: 0;
+		margin-inline-end: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
+	}
+
+	.spectrum-Steplist-segment {
+		inset-inline-end: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
+		inset-inline-start: auto;
+	}
+}
+
+.spectrum-Steplist-item:first-child,
+.spectrum-Steplist-item:last-child {
+	inline-size: calc(calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2.5));
+}
+
+/* Single step */
+.spectrum-Steplist-item:only-child {
+	.spectrum-Steplist-label {
+		/* Be centered */
 		inset-inline-start: 50%;
-		inset-block-end: var(--mod-steplist-label-labelOffset, var(--spectrum-steplist-label-labelOffset));
 
-		display: block;
-		inline-size: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5);
-
-		font-size: var(--mod-steplist-label-text-size, var(--spectrum-steplist-label-text-size));
-		white-space: normal;
-
-		transform: translateX(-50%);
-
-		color: var(--mod-steplist-incomplete-label-color, var(--spectrum-steplist-incomplete-label-color));
+		/* Override last-child bits */
+		transform: translate(-50%);
 
 		&:dir(rtl) {
 			transform: translateX(50%);
@@ -155,181 +319,25 @@ governing permissions and limitations under the License.
 	}
 
 	.spectrum-Steplist-markerContainer {
-		display: block;
-
-		z-index: 2;
-		position: absolute;
-		inset-block-end: -10px;
+		/* Be centered */
 		inset-inline-start: 50%;
 
-		inline-size: var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea));
-		block-size: var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea));
-
+		/* Override last-child bits */
+		margin-inline-end: 0;
 		margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
 	}
+}
 
-	/* Circle step marker */
-	.spectrum-Steplist-marker {
-		box-sizing: border-box; /* So we can stroke nicely */
-		display: block;
-
-		position: absolute;
-		inset-block-start: 50%;
-		inset-inline-start: 50%;
-		margin-block-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
-		margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
-
-		inline-size: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
-		block-size: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
-
-		border-radius: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
-
-		border: 2px solid;
-		border-color: var(--mod-steplist-incomplete-marker-border-color, var(--spectrum-steplist-incomplete-marker-border-color));
-		background: transparent;
+@media (forced-colors: active) {
+	.spectrum-Steplist {
+		--highcontrast-steplist-complete-marker-background-color: CanvasText;
+		--highcontrast-steplist-current-marker-color: Highlight;
+		--highcontrast-steplist-current-marker-color-key-focus: Highlight;
 	}
 
-	/* Step line */
-	.spectrum-Steplist-segment {
-		display: block;
-		z-index: 1;
-		position: absolute;
-		inset-inline-end: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 1.5));
-
-		box-sizing: content-box;
-		inline-size: calc(calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2));
-		inset-block-end: calc(-1 * calc(var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height)) / 2));
-
-		/* Default is dashed */
-		border-block-end-width: var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height));
-		border-block-end-style: dashed;
-
-		border-block-end-color: var(--mod-steplist-incomplete-segment-border-block-end-color, var(--spectrum-steplist-incomplete-segment-border-block-end-color));
-	}
-
-	/* First step overrides */
-	.spectrum-Steplist-item:first-child {
-		.spectrum-Steplist-markerContainer {
-			inset-inline-start: 0;
-		}
-
-		.spectrum-Steplist-label {
-			inset-inline-start: 0;
-		}
-
-		.spectrum-Steplist-segment {
-			/* Not visible for first step */
-			display: none;
-		}
-	}
-
-	/* Last step overrides */
-	.spectrum-Steplist-item:last-child {
-		.spectrum-Steplist-label {
-			inset-inline-start: auto;
-			inset-inline-end: 0;
-
-			transform: translateX(50%);
-
-			&:dir(rtl) {
-				transform: translateX(-50%);
-			}
-		}
-
-		.spectrum-Steplist-markerContainer {
-			inset-inline-start: auto;
-			inset-inline-end: 0;
-
-			margin-inline-start: 0;
-			margin-inline-end: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
-		}
-
-		.spectrum-Steplist-segment {
-			inset-inline-end: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
-			inset-inline-start: auto;
-		}
-	}
-
-	.spectrum-Steplist-item:first-child,
-	.spectrum-Steplist-item:last-child {
-		inline-size: calc(calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2.5));
-	}
-
-	/* Single step */
-	.spectrum-Steplist-item:only-child {
-		.spectrum-Steplist-label {
-			/* Be centered */
-			inset-inline-start: 50%;
-
-			/* Override last-child bits */
-			transform: translate(-50%);
-
-			&:dir(rtl) {
-				transform: translateX(50%);
-			}
-		}
-
-		.spectrum-Steplist-markerContainer {
-			/* Be centered */
-			inset-inline-start: 50%;
-
-			/* Override last-child bits */
-			margin-inline-end: 0;
-			margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
-		}
-	}
-
-	&[interactive] {
-		.spectrum-Steplist-label,
-		.spectrum-Steplist-markerContainer {
-			/* Show cursor on hit zone when clickable */
-			cursor: pointer;
-		}
-
-		.spectrum-Steplist-item {
-			/* Step Focused */
-			&:focus,
-			&[focused],
-			*:focus {
-				.spectrum-Steplist-marker {
-					background-color: var(--highcontrast-steplist-current-marker-color-key-focus, var(--mod-steplist-current-marker-color-key-focus, var(--spectrum-steplist-current-marker-color-key-focus)));
-				}
-			}
-		}
-	}
-
-	/* Small (w/o label or tooltip) */
-	&[small] {
-		padding-block: var(--mod-steplist-small-topPadding, var(--spectrum-steplist-small-topPadding));
-		padding-inline: 0;
-
-		.spectrum-Steplist-item {
-			padding-block: 0;
-			padding-inline: 0 40px;
-			inline-size: 80px;
-
-			/* Disable Label */
-			.spectrum-Steplist-label {
-				display: none;
-			}
-
-			&:first-child,
-			&:last-child {
-				inline-size: 20px;
-			}
-
-			/* Disable first line */
-			&:first-child {
-				.spectrum-Steplist-markerContainer {
-					margin-inline-start: -10px;
-				}
-			}
-
-			&:last-child {
-				.spectrum-Steplist-markerContainer {
-					margin-inline-end: -10px;
-				}
-			}
+	@supports (color: SelectedItem) {
+		.spectrum-Steplist {
+			--highcontrast-steplist-current-marker-color: SelectedItem;
 		}
 	}
 }

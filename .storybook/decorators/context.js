@@ -1,8 +1,5 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 
-import tokens from "@spectrum-css/tokens?raw";
-import legacy from "@spectrum-css/tokens-legacy?raw";
-
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  * @description Global properties added to each component; determines what stylesheets are loaded
@@ -11,20 +8,28 @@ export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
 	wrapper: (StoryFn, context) => {
-		const { globals, args, viewMode, id } = context;
+		const { globals, args, argTypes, viewMode, id } = context;
 
-		console.log({ tokens, legacy });
+		const getDefaultValue = (type) => {
+			if (!type) return null;
+			if (type.defaultValue) return type.defaultValue;
+			return type.options ? type.options[0] : null;
+		};
 
 		// This property informs which context stylesheets to source
 		//    but does not source a stylesheet for itself
-		/** @type string */
-		const color = globals.color ?? "light";
-		/** @type string */
-		const scale = globals.scale ?? "medium";
-		/** @type string */
+		/** @type boolean */
 		const ctx = globals.context ?? "spectrum";
+		/** @type string */
+		const color = args.color ? args.color : getDefaultValue(argTypes.color) ?? "light";
+		/** @type string */
+		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
+
+		const colors = ["light", "dark", "darkest"];
+		const scales = ["medium", "large"];
 
 		useEffect(() => {
+			const isLegacy = ["legacy", "express"].includes(ctx);
 			let containers = [document.body];
 
 			const roots = [
@@ -36,27 +41,18 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			for (const container of containers) {
-				const isLegacy = ["legacy", "express"].includes(ctx);
-
-				if (isLegacy) {
-					legacy.use();
-					tokens.unuse();
-				} else {
-					tokens.use();
-					legacy.unuse();
-				}
-
 				container.classList.toggle("spectrum", true);
 				container.classList.toggle("spectrum--legacy", isLegacy);
-				container.classList.toggle(`spectrum--express`, ctx === "express");
+				container.classList.toggle("spectrum--express", ctx === "express");
 
-				for (const c of ["light", "dark"]) {
+				for (const c of colors) {
 					container.classList.toggle(`spectrum--${c}`, c === color);
 				}
 
-				for (const s of ["medium", "large"]) {
+				for (const s of scales) {
 					container.classList.toggle(`spectrum--${s}`, s === scale);
 				}
+
 
 				container.style.removeProperty("background");
 				const hasStaticElement = container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--staticBlack, .${args.rootClass}--overBackground`);

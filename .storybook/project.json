@@ -4,7 +4,8 @@
 		"tools": [
 			"{projectRoot}/assets",
 			"{projectRoot}/decorators",
-			"{projectRoot}/*.{js,html}"
+			"{projectRoot}/guides",
+			"{projectRoot}/*.{js,html,mdx}"
 		]
 	},
 	"targets": {
@@ -80,11 +81,7 @@
 			"dependsOn": ["^build"],
 			"executor": "nx:run-commands",
 			"inputs": [
-				"{projectRoot}/assets",
-				"{projectRoot}/decorators",
-				"{projectRoot}/*.js",
-				"{projectRoot}/*.html",
-				"{workspaceRoot}/components/*/dist",
+				"tools",
 				{ "externalDependencies": ["storybook"] },
 				{ "env": "WATCH_MODE" }
 			],
@@ -104,11 +101,7 @@
 			},
 			"executor": "nx:run-commands",
 			"inputs": [
-				"{projectRoot}/assets",
-				"{projectRoot}/decorators",
-				"{projectRoot}/*.js",
-				"{projectRoot}/*.html",
-				"{workspaceRoot}/components/*/dist",
+				"tools",
 				{ "externalDependencies": ["chromatic", "storybook"] },
 				{ "env": "CHROMATIC_PROJECT_TOKEN" }
 			],

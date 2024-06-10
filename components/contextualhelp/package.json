@@ -27,16 +27,16 @@
 		"@spectrum-css/popover": ">=7",
 		"@spectrum-css/tokens": ">=14"
 	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/link": {
-			"optional": true
-		}
-	},
 	"devDependencies": {
 		"@spectrum-css/actionbutton": "workspace:^",
 		"@spectrum-css/link": "workspace:^",
 		"@spectrum-css/popover": "workspace:^",
 		"@spectrum-css/tokens": "workspace:^"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/link": {
+			"optional": true
+		}
 	},
 	"keywords": [
 		"spectrum",

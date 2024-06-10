@@ -20,8 +20,11 @@ setConsoleOptions({
 });
 
 export const args = {
+	color: "light",
+	scale: "medium",
+	reducedMotion: false,
+	express: false,
 	customClasses: [],
-	customStyles: {},
 };
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
@@ -81,9 +84,9 @@ export const parameters = {
 	status: {
 		statuses: {
 			migrated: {
-				background: "rgba(93, 180, 31, 0.5)",
-				color: "rgb(41, 41, 41)",
-				description: "Migrated to S2",
+				background: "#f0f0f0",
+				color: "#444",
+				description: "Migrated to the latest tokens.",
 			},
 			deprecated: {
 				background: "rgb(211,21,16)",

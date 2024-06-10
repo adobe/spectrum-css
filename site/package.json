@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@spectrum-tools/documentation",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "A Spectrum-focused utility for building the documentation site.",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,8 +18,8 @@
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@adobe/spectrum-css-workflow-icons": "^1.5.4",
-    "@spectrum-css/tokens": "^14.0.0",
-    "@spectrum-css/ui-icons": "^1.1.1",
+    "@spectrum-css/tokens": "workspace:^",
+    "@spectrum-css/ui-icons": "workspace:^",
     "browser-sync": "^3.0.2",
     "colors": "^1.4.0",
     "dependency-solver": "^1.0.6",

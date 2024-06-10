@@ -308,59 +308,66 @@ import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/templ
 import "../index.css";
 
 export const Template = ({
- rootClass = "spectrum-Tag",
- size = "m",
- iconName,
- avatarUrl,
- label,
- isSelected = false,
- isEmphasized = false,
- isDisabled = false,
- isInvalid = false,
- hasClearButton = false,
- id,
- customClasses = [],
-}) => html`
-  <div
-   class=${classMap({
-    [rootClass]: true,
-    [`${rootClass}--size${size?.toUpperCase()}`]:
-     typeof size !== "undefined",
-    "is-emphasized": isEmphasized,
-    "is-disabled": isDisabled,
-    "is-invalid": isInvalid,
-    "is-selected": isSelected,
-    ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-   })}
-   id=${ifDefined(id)}
-   tabindex="0"
-  >
-   ${avatarUrl && !iconName
-    ? Avatar({
-      image: avatarUrl,
-      size: "50",
-      })
-    : ""} ${iconName
-    ? Icon({
-      iconName,
-      customClasses: [`${rootClass}s-itemIcon`],
-      })
-    : ""}
-   <span class="${rootClass}s-itemLabel">${label}</span>
-   ${hasClearButton
-    ? ClearButton({
-      customClasses: [`${rootClass}-clearButton`],
-      onclick: (evt) => {
-       const el = evt.target;
-       if (!el) return;
+	rootClass = "spectrum-Tag",
+	size = "m",
+	iconName,
+	avatarUrl,
+	label,
+	isSelected = false,
+	isEmphasized = false,
+	isDisabled = false,
+	isInvalid = false,
+	hasClearButton = false,
+	id,
+	customClasses = [],
+	...globals
+}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				"is-emphasized": isEmphasized,
+				"is-disabled": isDisabled,
+				"is-invalid": isInvalid,
+				"is-selected": isSelected,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			tabindex=${isDisabled ? "-1" : "0"}
+			style=${ifDefined(styleMap(customStyles))}
+		>
+			${avatarUrl && !iconName
+				? Avatar({
+						...globals,
+						image: avatarUrl,
+						size: "50",
+					})
+				: ""} ${iconName
+				? Icon({
+						...globals,
+						iconName,
+						customClasses: [`${rootClass}s-itemIcon`],
+					})
+				: ""}
+			<span class="${rootClass}s-itemLabel">${label}</span>
+			${hasClearButton
+				? ClearButton({
+						...globals,
+						customClasses: [`${rootClass}-clearButton`],
+						onclick: (evt) => {
+							const el = evt.target;
+							if (!el) return;
 
-       const wrapper = el.closest(rootClass);
-       wrapper.parentNode.removeChild(wrapper);
-      },
-      })
-    : ""}
-  </div>
- `;
+							const wrapper = el.closest(rootClass);
+							wrapper.parentNode.removeChild(wrapper);
+						},
+					})
+				: ""}
+		</div>
+	`;
+};
 ```
 
 ## Testing stories
@@ -391,6 +398,20 @@ Default.args = {};
 ```
 
 Ideally you should have a single story file for each component with multiple variations and states represented in the "Kitchen sink" grouping that only renders in Chromatic. To preview the groups locally, there is a global toolbar setting with a beaker icon called "Show testing preview" that will activate the Chromatic view.
+
+In the event that you don't want a story to be tested in Chromatic, you can use the `disabledSnapshot` paramter:
+
+```
+Default.parameters = {
+	chromatic: { disableSnapshot: true },
+}
+```
+
+Similarly, if a story is only for documentation purposes and shouldn't be shown in the sidebar, you can use the custom `docs-only` tag:
+
+```
+Default.tags = ["docs-only"];
+```
 
 ### Getting started
 

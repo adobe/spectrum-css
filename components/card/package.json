@@ -26,8 +26,18 @@
 		"@spectrum-css/asset": ">=5",
 		"@spectrum-css/checkbox": ">=9",
 		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/quickaction": ">=3",
 		"@spectrum-css/tokens": ">=14",
 		"@spectrum-css/typography": ">=6"
+	},
+	"devDependencies": {
+		"@spectrum-css/actionbutton": "workspace:^",
+		"@spectrum-css/asset": "workspace:^",
+		"@spectrum-css/checkbox": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/quickaction": "^3.1.1",
+		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-css/typography": "workspace:^"
 	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/actionbutton": {
@@ -42,17 +52,12 @@
 		"@spectrum-css/icon": {
 			"optional": true
 		},
+		"@spectrum-css/quickaction": {
+			"optional": true
+		},
 		"@spectrum-css/typography": {
 			"optional": true
 		}
-	},
-	"devDependencies": {
-		"@spectrum-css/actionbutton": "workspace:^",
-		"@spectrum-css/asset": "workspace:^",
-		"@spectrum-css/checkbox": "workspace:^",
-		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^",
-		"@spectrum-css/typography": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",

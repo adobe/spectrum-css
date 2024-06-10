@@ -1,6 +1,6 @@
 .u-scrollable.spectrum-Site-nav
   nav
-    ul.spectrum-SideNav&[multiLevel]
+    ul.spectrum-SideNav.spectrum-SideNav--multiLevel
       li.spectrum-SideNav-item(class=pageURL === 'getting-started.html' ? 'is-selected' : '')
         a.spectrum-SideNav-itemLink(href='get-started.html')
           span.spectrum-SideNav-link-text Get started
@@ -10,7 +10,7 @@
       li.spectrum-SideNav-item
         a.spectrum-SideNav-itemLink(href='#')
           span.spectrum-SideNav-link-text Components
-        ul.spectrum-SideNav&[multiLevel]
+        ul.spectrum-SideNav.spectrum-SideNav--multiLevel
           each item in nav
             unless item.status == "Deprecated"
               li.spectrum-SideNav-item(class=pageURL === item.href ? 'is-selected' : '')
@@ -22,7 +22,7 @@
       li.spectrum-SideNav-item
         a.spectrum-SideNav-itemLink(href='#')
           span.spectrum-SideNav-link-text Deprecated
-        ul.spectrum-SideNav&[multiLevel]
+        ul.spectrum-SideNav.spectrum-SideNav--multiLevel
           each item in nav
             if item.status == "Deprecated"
               li.spectrum-SideNav-item(class=pageURL === item.href ? 'is-selected' : '')

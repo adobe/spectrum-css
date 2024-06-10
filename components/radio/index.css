@@ -1,5 +1,5 @@
 /*!
-Copyright 2024 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,7 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+/*
+ * Radio:
+ *  ::before is to style the input circle (selection indicator)
+ *  ::after is to style the focus ring
+ */
+
+.spectrum-Radio {
 	/* selection indicator */
 	--spectrum-radio-button-border-color-default: var(--spectrum-gray-600);
 	--spectrum-radio-button-border-color-hover: var(--spectrum-gray-700);
@@ -60,14 +66,34 @@ governing permissions and limitations under the License.
 	/* animation all themes */
 	--spectrum-radio-animation-duration: var(--spectrum-animation-duration-100);
 
+	/* CJK language support all themes */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-radio-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	}
+
 	/* default radio size for no t-shirt size */
 	--spectrum-radio-height: var(--spectrum-component-height-100);
 	--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
 
 	/* default radio spacing for no t-shirt size */
 	--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-medium);
+}
 
-	/* start medium */
+.spectrum-Radio--sizeS {
+	--spectrum-radio-height: var(--spectrum-component-height-75);
+	--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-small);
+
+	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-75);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-75);
+	--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-small);
+
+	--spectrum-radio-font-size: var(--spectrum-font-size-75);
+}
+
+.spectrum-Radio--sizeM {
 	--spectrum-radio-height: var(--spectrum-component-height-100);
 	--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
 
@@ -77,60 +103,37 @@ governing permissions and limitations under the License.
 	--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-medium);
 
 	--spectrum-radio-font-size: var(--spectrum-font-size-100);
+}
 
-	/* end medium */
+.spectrum-Radio--sizeL {
+	--spectrum-radio-height: var(--spectrum-component-height-200);
+	--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-large);
 
-	.spectrum-Radio[emphasized] {
-		--spectrum-radio-button-checked-border-color-default: var(--spectrum-accent-color-900);
-		--spectrum-radio-button-checked-border-color-hover: var(--spectrum-accent-color-1000);
-		--spectrum-radio-button-checked-border-color-down: var(--spectrum-accent-color-1100);
-		--spectrum-radio-button-checked-border-color-focus: var(--spectrum-accent-color-1000);
-	}
+	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-200);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-200);
+	--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+	--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-large);
 
-	.spectrum-Radio {
-		/* CJK language support all themes */
-		&:lang(ja),
-		&:lang(zh),
-		&:lang(ko) {
-			--spectrum-radio-line-height-cjk: var(--spectrum-cjk-line-height-100);
-		}
+	--spectrum-radio-font-size: var(--spectrum-font-size-200);
+}
 
-		&[size="S"] {
-			--spectrum-radio-height: var(--spectrum-component-height-75);
-			--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-small);
+.spectrum-Radio--sizeXL {
+	--spectrum-radio-height: var(--spectrum-component-height-300);
+	--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-extra-large);
 
-			--spectrum-radio-text-to-control: var(--spectrum-text-to-control-75);
-			--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-75);
-			--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
-			--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-small);
+	--spectrum-radio-text-to-control: var(--spectrum-text-to-control-300);
+	--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-300);
+	--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+	--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-extra-large);
 
-			--spectrum-radio-font-size: var(--spectrum-font-size-75);
-		}
+	--spectrum-radio-font-size: var(--spectrum-font-size-300);
+}
 
-		&[size="L"] {
-			--spectrum-radio-height: var(--spectrum-component-height-200);
-			--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-large);
-
-			--spectrum-radio-text-to-control: var(--spectrum-text-to-control-200);
-			--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-200);
-			--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
-			--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-large);
-
-			--spectrum-radio-font-size: var(--spectrum-font-size-200);
-		}
-
-		&[size="XL"] {
-			--spectrum-radio-height: var(--spectrum-component-height-300);
-			--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-extra-large);
-
-			--spectrum-radio-text-to-control: var(--spectrum-text-to-control-300);
-			--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-300);
-			--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
-			--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-extra-large);
-
-			--spectrum-radio-font-size: var(--spectrum-font-size-300);
-		}
-	}
+.spectrum-Radio--emphasized {
+	--spectrum-radio-button-checked-border-color-default: var(--spectrum-accent-color-900);
+	--spectrum-radio-button-checked-border-color-hover: var(--spectrum-accent-color-1000);
+	--spectrum-radio-button-checked-border-color-down: var(--spectrum-accent-color-1100);
+	--spectrum-radio-button-checked-border-color-focus: var(--spectrum-accent-color-1000);
 }
 
 /* windows high contrast mode */
@@ -178,11 +181,6 @@ governing permissions and limitations under the License.
 	}
 }
 
-/*
- * Radio:
- *  ::before is to style the input circle (selection indicator)
- *  ::after is to style the focus ring
- */
 .spectrum-Radio {
 	display: inline-flex;
 	align-items: flex-start;
@@ -250,7 +248,7 @@ governing permissions and limitations under the License.
 		}
 	}
 
-	&[readOnly] {
+	&.is-readOnly {
 		.spectrum-Radio-input:read-only {
 			cursor: initial;
 		}
@@ -274,7 +272,7 @@ governing permissions and limitations under the License.
 	}
 }
 
-&[emphasized] {
+.spectrum-Radio--emphasized {
 	/* selection indicator emphasized */
 	.spectrum-Radio-input:checked + .spectrum-Radio-button::before {
 		border-color: var(--highcontrast-radio-emphasized-accent-color, var(--mod-radio-emphasized-accent-color, var(--spectrum-radio-emphasized-accent-color)));

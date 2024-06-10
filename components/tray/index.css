@@ -1,5 +1,5 @@
 /*!
-Copyright 2024 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-Tray {
 	/* Placeholder tokens */
 	--spectrum-tray-exit-animation-delay: 0ms;
 	--spectrum-tray-entry-animation-delay: 160ms;
@@ -26,18 +26,6 @@ governing permissions and limitations under the License.
 
 	--spectrum-tray-corner-radius: var(--spectrum-corner-radius-100);
 	--spectrum-tray-background-color: var(--spectrum-background-layer-2-color);
-}
-
-@media (forced-colors: active) {
-	.spectrum-Tray {
-		--highcontrast-tray-background-color: Canvas;
-
-		border: solid;
-
-		& .spectrum-Dialog {
-			border: none;
-		}
-	}
 }
 
 .spectrum-Tray-wrapper {
@@ -77,7 +65,7 @@ governing permissions and limitations under the License.
 
 	background-color: var(--highcontrast-tray-background-color, var(--mod-tray-background-color, var(--spectrum-tray-background-color)));
 
-	&[open] {
+	&.is-open {
 		/* Entry animations */
 		transition:
 			transform var(--mod-tray-entry-animation-duration, var(--spectrum-tray-entry-animation-duration)) cubic-bezier(0, 0, 0.4, 1) var(--mod-tray-entry-animation-delay, var(--spectrum-tray-entry-animation-delay)),
@@ -91,5 +79,17 @@ governing permissions and limitations under the License.
 		border-start-start-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
 		border-start-end-radius: var(--mod-tray-corner-radius, var(--spectrum-tray-corner-radius));
 		max-inline-size: var(--mod-tray-max-inline-size, var(--spectrum-tray-max-inline-size));
+	}
+}
+
+@media (forced-colors: active) {
+	.spectrum-Tray {
+		--highcontrast-tray-background-color: Canvas;
+
+		border: solid;
+
+		& .spectrum-Dialog {
+			border: none;
+		}
 	}
 }

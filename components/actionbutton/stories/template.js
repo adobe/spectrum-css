@@ -4,6 +4,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+import { capitalize, lowerCase } from "lodash-es";
+
 import "@spectrum-css/actionbutton/index.css";
 
 /**
@@ -46,6 +48,11 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
+				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--emphasized`]: isEmphasized,
+				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+					typeof staticColor !== "undefined",
+				["is-disabled"]: isDisabled,
 				["is-selected"]: isSelected,
 				["is-hover"]: isHovered,
 				["is-focus-visible"]: isFocused,
@@ -54,9 +61,6 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId)}
-			?quiet=${isQuiet}
-			?emphasized=${isEmphasized}
-			static=${ifDefined(staticColor)}
 			role=${ifDefined(role)}
 			style=${ifDefined(styleMap(customStyles))}
 			?disabled=${isDisabled}

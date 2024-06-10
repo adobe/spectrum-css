@@ -29,14 +29,6 @@
 		"@spectrum-css/modal": ">=5",
 		"@spectrum-css/tokens": ">=14"
 	},
-	"peerDependenciesMeta": {
-		"@spectrum-css/dialog": {
-			"optional": true
-		},
-		"@spectrum-css/divider": {
-			"optional": true
-		}
-	},
 	"devDependencies": {
 		"@spectrum-css/button": "workspace:^",
 		"@spectrum-css/dialog": "workspace:^",
@@ -44,6 +36,14 @@
 		"@spectrum-css/icon": "workspace:^",
 		"@spectrum-css/modal": "workspace:^",
 		"@spectrum-css/tokens": "workspace:^"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/dialog": {
+			"optional": true
+		},
+		"@spectrum-css/divider": {
+			"optional": true
+		}
 	},
 	"keywords": [
 		"spectrum",

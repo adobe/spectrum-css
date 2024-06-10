@@ -1,5 +1,5 @@
 /*!
-Copyright 2024 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,36 +10,34 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-Icon {
 	--spectrum-icon-size: var(--spectrum-workflow-icon-size-100);
+}
 
-	.spectrum-Icon {
-		/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
-		&[size="XXS"] {
-			--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxs);
-		}
+/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
+.spectrum-Icon--sizeXXS {
+	--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxs);
+}
 
-		&[size="XS"] {
-			--spectrum-icon-size: var(--spectrum-workflow-icon-size-50);
-		}
+.spectrum-Icon--sizeXS {
+	--spectrum-icon-size: var(--spectrum-workflow-icon-size-50);
+}
 
-		&[size="S"] {
-			--spectrum-icon-size: var(--spectrum-workflow-icon-size-75);
-		}
+.spectrum-Icon--sizeS {
+	--spectrum-icon-size: var(--spectrum-workflow-icon-size-75);
+}
 
-		&[size="L"] {
-			--spectrum-icon-size: var(--spectrum-workflow-icon-size-200);
-		}
+.spectrum-Icon--sizeL {
+	--spectrum-icon-size: var(--spectrum-workflow-icon-size-200);
+}
 
-		&[size="XL"] {
-			--spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
-		}
+.spectrum-Icon--sizeXL {
+	--spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
+}
 
-		/* XXL icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
-		&[size="XXL"] {
-			--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxl);
-		}
-	}
+/* XXL icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
+.spectrum-Icon--sizeXXL {
+	--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxl);
 }
 
 .spectrum-Icon {

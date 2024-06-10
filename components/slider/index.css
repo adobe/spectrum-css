@@ -1,5 +1,5 @@
 /*!
-Copyright 2024 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-Slider {
 	--spectrum-slider-track-color: var(--spectrum-gray-300);
 	--spectrum-slider-track-fill-color: var(--spectrum-gray-700);
 	--spectrum-slider-ramp-track-color: var(--spectrum-gray-400);
@@ -43,6 +43,52 @@ governing permissions and limitations under the License.
 	/* TODO: placeholder value for sideLabel variant value width */
 	--spectrum-slider-value-inline-size: 18px;
 
+	&:dir(rtl),
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
+}
+
+.spectrum-Slider--sizeS {
+	--spectrum-slider-font-size: var(--spectrum-font-size-75);
+	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-small);
+	--spectrum-slider-control-height: var(--spectrum-component-height-75);
+	--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
+	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
+	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
+	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
+	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-100);
+}
+
+.spectrum-Slider--sizeL {
+	--spectrum-slider-font-size: var(--spectrum-font-size-100);
+	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-large);
+	--spectrum-slider-control-height: var(--spectrum-component-height-200);
+	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
+	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
+	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
+	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
+	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
+
+	/* TODO: placeholder value for sideLabel variant value width */
+	--spectrum-slider-value-inline-size: 18px;
+}
+
+.spectrum-Slider--sizeXL {
+	--spectrum-slider-font-size: var(--spectrum-font-size-200);
+	--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-extra-large);
+	--spectrum-slider-control-height: var(--spectrum-component-height-300);
+	--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
+	--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
+	--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
+	--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
+	--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
+
+	/* TODO: placeholder value for sideLabel variant value width */
+	--spectrum-slider-value-inline-size: 22px;
+}
+
+.spectrum-Slider {
 	--spectrum-slider-cjk-line-height: var(--spectrum-cjk-line-height-100);
 
 	--spectrum-slider-min-size: var(--spectrum-spacing-900);
@@ -75,56 +121,585 @@ governing permissions and limitations under the License.
 	--spectrum-slider-track-handleoffset: var(--spectrum-slider-handle-gap);
 
 	--spectrum-slider-range-track-reset: 0;
+}
 
-	&:dir(rtl) {
-		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+.spectrum-Slider {
+	position: relative;
+
+	/* Don't let z-index'd child elements float above other things on the page */
+	z-index: 1;
+	display: block;
+	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
+
+	user-select: none;
+}
+
+.spectrum-Slider--sideLabel {
+	display: flex;
+	align-items: center;
+
+	.spectrum-Slider-labelContainer {
+		margin-block-start: 0;
 	}
 
-	.spectrum-Slider {
-		&[size="S"] {
-			--spectrum-slider-font-size: var(--spectrum-font-size-75);
-			--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-small);
-			--spectrum-slider-control-height: var(--spectrum-component-height-75);
-			--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
-			--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
-			--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
-			--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
-			--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-100);
+	.spectrum-Slider-labelContainer + .spectrum-Slider-controls {
+		margin-block-start: 0;
+	}
+
+	.spectrum-Slider-controls {
+		margin-inline-end: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
+	}
+
+	.spectrum-Slider-value {
+		margin-inline-start: var(--mod-slider-value-side-padding-inline, var(--spectrum-slider-value-side-padding-inline));
+		inline-size: var(--mod-slider-value-inline-size, var(--spectrum-slider-value-inline-size));
+		text-align: start;
+	}
+}
+
+.spectrum-Slider-controls {
+	display: inline-block;
+	box-sizing: border-box;
+	cursor: pointer;
+	position: relative;
+	z-index: auto;
+
+	/* These calculations prevent the track from spilling outside of the control */
+	inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
+	margin-inline-start: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
+
+	block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
+	vertical-align: top;
+}
+
+.spectrum-Slider-labelContainer + .spectrum-Slider-controls {
+	margin-block-start: calc(-1 * var(--spectrum-slider-control-to-field-label));
+}
+
+/* TODO: Sliders with ticks + tick mark labels require more margin-block-end.
+ As of February 2023 we do not have tokens yet tokens for Ramp and Tick variants,
+ using control-height here instead.  */
+.spectrum-Slider--tick {
+	margin-block-end: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
+}
+
+.spectrum-Slider-track,
+.spectrum-Slider-fill {
+	block-size: var(--mod-slider-track-fill-thickness, var(--spectrum-slider-track-fill-thickness));
+	box-sizing: border-box;
+
+	position: absolute;
+	z-index: 1;
+	inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--mod-slider-track-fill-thickness, var(--spectrum-slider-track-fill-thickness)) / 2);
+	inset-inline-start: 0;
+	inset-inline-end: auto;
+	pointer-events: none;
+
+	padding-block: 0;
+	padding-inline-start: 0;
+	padding-inline-end: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
+	margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+
+	&::before {
+		content: "";
+		display: block;
+		block-size: 100%;
+
+		/* reset all border radii */
+		border-start-start-radius: 0;
+		border-end-start-radius: 0;
+		border-start-end-radius: 0;
+		border-end-end-radius: 0;
+	}
+}
+
+.spectrum-Slider-track {
+	&:first-of-type {
+		&::before {
+			border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+			border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+		}
+	}
+
+	&:last-of-type {
+		&::before {
+			border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+			border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+		}
+	}
+}
+
+.spectrum-Slider-track ~ .spectrum-Slider-track {
+	inset-inline-start: auto;
+	inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
+	padding-block: 0;
+	padding-inline-start: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
+	padding-inline-end: 0;
+	margin-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
+	margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+}
+
+/* over-write for Range, without the LTR RTL post-css hack */
+.spectrum-Slider--range {
+	.spectrum-Slider-track ~ .spectrum-Slider-track {
+		padding-inline: var(--mod-slider-track-middle-handleoffset, var(--spectrum-slider-track-middle-handleoffset)) var(--mod-slider-track-middle-handleoffset, var(--spectrum-slider-track-middle-handleoffset));
+		inset-inline: auto;
+		margin-inline: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
+	}
+}
+
+.spectrum-Slider-fill {
+	margin-inline-start: 0;
+	padding-block: 0;
+	padding-inline-start: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap)));
+	padding-inline-end: 0;
+}
+
+.spectrum-Slider-fill--right {
+	padding-block: 0;
+	padding-inline-start: 0;
+	padding-inline-end: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap)));
+}
+
+.spectrum-Slider--range {
+	.spectrum-Slider-value {
+		user-select: text;
+	}
+
+	.spectrum-Slider-track {
+		&:first-of-type {
+			padding-inline-start: 0;
+			padding-inline-end: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
+			inset-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
+			inset-inline-end: auto;
+			margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
 		}
 
-		&[size="L"] {
-			--spectrum-slider-font-size: var(--spectrum-font-size-100);
-			--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-large);
-			--spectrum-slider-control-height: var(--spectrum-component-height-200);
-			--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
-			--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
-			--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
-			--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
-			--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
-
-			/* TODO: placeholder value for sideLabel variant value width */
-			--spectrum-slider-value-inline-size: 18px;
+		&:first-of-type::before {
+			border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+			border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
 		}
 
-		&[size="XL"] {
-			--spectrum-slider-font-size: var(--spectrum-font-size-200);
-			--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-extra-large);
-			--spectrum-slider-control-height: var(--spectrum-component-height-300);
-			--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
-			--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
-			--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
-			--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);
-			--spectrum-slider-value-side-padding-inline: var(--spectrum-spacing-200);
+		&:last-of-type {
+			padding-inline-start: var(--spectrum-slider-track-handleoffset);
+			padding-inline-end: 0;
+			inset-inline-start: auto;
+			inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
+			margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+		}
 
-			/* TODO: placeholder value for sideLabel variant value width */
-			--spectrum-slider-value-inline-size: 22px;
+		&:last-of-type::before {
+			border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+			border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
+		}
+	}
+}
+
+.spectrum-Slider-ramp {
+	margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
+	block-size: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
+
+	position: absolute;
+	inset-inline-start: var(--spectrum-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+	inset-inline-end: var(--spectrum-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+
+	svg {
+		inline-size: 100%;
+		block-size: 100%;
+
+		/* Flip the ramp automatically for RTL */
+		transform: var(--spectrum-logical-rotation);
+	}
+}
+
+.spectrum-Slider-handle {
+	position: absolute;
+	inset-inline-start: 0;
+	z-index: 2;
+	display: inline-block;
+	box-sizing: border-box;
+
+	inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+	block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+
+	inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / 2);
+	margin-block: 0;
+	margin-inline: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2) 0;
+	border-width: var(--mod-slider-handle-border-width, var(--spectrum-slider-handle-border-width));
+	border-style: solid;
+
+	border-radius: var(--mod-slider-handle-border-radius, var(--spectrum-slider-handle-border-radius));
+
+	transition: border-width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+
+	outline: none;
+
+	&:active,
+	&.is-dragged {
+		border-width: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
+	}
+
+	&:active,
+	&.is-focused,
+	&.is-dragged,
+	&.is-tophandle {
+		z-index: 3;
+	}
+
+	/* Focus indicator. */
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		inset-inline-start: 50%;
+		inset-block-start: 50%;
+
+		transition:
+			box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
+			inline-size var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
+			block-size var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
+
+		inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+		block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+		border-radius: 100%;
+
+		transform: translate(-50%, -50%);
+
+		.spectrum-Slider:dir(rtl) & {
+			transform: translate(50%, -50%);
+		}
+	}
+
+	/* Keyboard focused */
+	&.is-focused {
+		&::before {
+			inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
+			block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
+		}
+	}
+}
+
+.spectrum-Slider-input {
+	/*  Remove the margin for input in Firefox and Safari. */
+	margin: 0;
+
+	inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+	block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+	padding: 0;
+	position: absolute;
+
+	inset-block-start: var(--mod-slider-input-top-size, var(--spectrum-slider-input-top-size));
+	inset-inline-start: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
+	overflow: hidden;
+	opacity: 0.000001; /* stylelint-disable-line number-max-precision */
+	cursor: default;
+	appearance: none;
+	border: 0;
+	pointer-events: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.spectrum-Slider-labelContainer {
+	display: flex;
+	align-items: center;
+	position: relative;
+	inline-size: auto;
+
+	font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
+	line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
+
+	margin-block-start: var(--mod-slider-label-top-to-text, var(--spectrum-slider-label-top-to-text));
+
+	/* international support */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		line-height: var(--mod-slider-cjk-line-height, var(--spectrum-slider-cjk-line-height));
+	}
+}
+
+.spectrum-Slider-label {
+	padding-inline-start: 0;
+	flex-grow: 1;
+	font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
+}
+
+.spectrum-Slider-value {
+	flex-grow: 0;
+	padding-inline-end: 0;
+	cursor: default;
+	font-feature-settings: "tnum";
+	text-align: end;
+}
+
+.spectrum-Slider-value {
+	margin-inline-start: var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start));
+}
+
+/* setting tick marks in relation to label */
+.spectrum-Slider--tick {
+	.spectrum-Slider-handle {
+		background-color: var(--highcontrast-slider-tick-handle-background-color, var(--mod-slider-tick-handle-background-color, var(--spectrum-slider-tick-handle-background-color)));
+	}
+
+	.spectrum-Slider-controls {
+		margin-block-start: calc(var(--spectrum-text-to-visual-75) - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2);
+	}
+
+	.spectrum-Slider-tickLabel {
+		margin-block-start: calc(var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) + var(--spectrum-text-to-visual-75));
+	}
+}
+
+/* TODO: missing core-tokens for tick variant */
+.spectrum-Slider-ticks {
+	display: flex;
+	justify-content: space-between;
+	z-index: 0;
+	margin-inline: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
+
+	/* TODO: missing core-token for handle fill-color */
+	& ~ .spectrum-Slider-handleContainer {
+		.spectrum-Slider-handle {
+			background: var(--mod-slider-ticks-handle-background-color, var(--spectrum-slider-ticks-handle-background-color));
+		}
+	}
+}
+
+.spectrum-Slider-tick {
+	position: relative;
+	inline-size: var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width));
+
+	/* tick marks are centered half based on slider control height and tick height  */
+	inset-block-start: calc(var(--mod-slider-track-thickness, var(--spectrum-slider-control-height)) / 2 - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2);
+
+	&::after {
+		display: block;
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: calc(50% - calc(var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / 2));
+		content: "";
+		inline-size: var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width));
+		block-size: var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height));
+		border-radius: var(--mod-slider-tick-mark-border-radius, var(--spectrum-slider-tick-mark-border-radius));
+	}
+
+	.spectrum-Slider-tickLabel {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
+		line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
+		color: var(--highcontrast-slider-label-text-color, var(--mod-slider-tick-label-color, var(--spectrum-slider-tick-label-color)));
+	}
+
+	&:first-of-type,
+	&:last-of-type {
+		.spectrum-Slider-tickLabel {
+			display: block;
+			position: absolute;
+			margin-inline: 0;
+		}
+	}
+
+	&:first-of-type {
+		/* fix off-by-one alignment */
+		inset-inline-start: calc(var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / -2);
+
+		.spectrum-Slider-tickLabel {
+			inset-inline-start: 0;
+		}
+	}
+
+	&:last-of-type {
+		/* fix off-by-one alignment */
+		inset-inline-end: calc(var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / -2);
+
+		.spectrum-Slider-tickLabel {
+			inset-inline-end: 0;
+		}
+	}
+}
+
+/* backwards compatibility: these are not required, but they make the handle go to the edegs and align right */
+.spectrum-Slider-handleContainer,
+.spectrum-Slider-trackContainer {
+	inline-size: calc(100% + var(--spectrum-slider-handle-size));
+	position: absolute;
+	inset-block-start: 0;
+	margin-inline-start: calc(var(--spectrum-slider-handle-size) / 2 * -1);
+}
+
+.spectrum-Slider-trackContainer {
+	block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
+
+	/* stop edges from peeking out */
+	overflow: hidden;
+}
+
+/* Applies to the filled-offset variant to keep track the same color for highcontrast mode */
+.spectrum-Slider-track {
+	&::before {
+		background: var(--highcontrast-slider-track-color-static, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
+	}
+}
+
+/* All variants other than filled-offset get a new track color for highcontrast mode */
+.spectrum-Slider-track:not(:has(~ .spectrum-Slider-fill)) {
+	&::before {
+		background: var(--highcontrast-slider-track-color, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
+	}
+}
+
+.spectrum-Slider-labelContainer {
+	color: var(--highcontrast-slider-label-text-color, var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color)));
+}
+
+.spectrum-Slider--filled {
+	.spectrum-Slider-track:first-child {
+		&::before {
+			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+		}
+	}
+}
+
+.spectrum-Slider-fill {
+	&::before {
+		background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+	}
+}
+
+.spectrum-Slider-ramp {
+	path {
+		fill: var(--highcontrast-slider-ramp-track-color, var(--mod-slider-ramp-track-color, var(--spectrum-slider-ramp-track-color)));
+	}
+}
+
+.spectrum-Slider-handle {
+	border-color: var(--highcontrast-slider-handle-border-color, var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color)));
+	background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
+
+	&:hover {
+		border-color: var(--highcontrast-slider-handle-border-color-hover, var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover)));
+	}
+
+	/* Keyboard focused with focus indicator. */
+	&.is-focused {
+		border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
+
+		&::before {
+			box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
+		}
+	}
+
+	&:active,
+	&.is-dragged {
+		border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
+	}
+}
+
+.spectrum-Slider--ramp {
+	.spectrum-Slider-handle {
+		box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
+		background: var(--mod-slider-ramp-handle-background-color, var(--highcontrast-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color)));
+	}
+}
+
+.spectrum-Slider-input {
+	background: transparent;
+}
+
+.spectrum-Slider-tick {
+	&::after {
+		background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
+	}
+}
+
+.spectrum-Slider-handle {
+	&.is-dragged {
+		border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
+		background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
+	}
+}
+
+.spectrum-Slider--range {
+	.spectrum-Slider-track {
+		&:not(:first-of-type, :last-of-type)::before {
+			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
+		}
+	}
+}
+
+.spectrum-Slider.is-disabled {
+	cursor: default;
+
+	.spectrum-Slider-controls {
+		cursor: default;
+	}
+
+	.spectrum-Slider-tickLabel {
+		color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
+	}
+
+	.spectrum-Slider-labelContainer {
+		color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
+	}
+
+	.spectrum-Slider-handle {
+		border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled)));
+		background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color)));
+		cursor: default;
+		pointer-events: none;
+
+		&:hover,
+		&:active {
+			border-color: var(--highcontrast-disabled-border-color, var(--mod-disabled-border-color, var(--spectrum-disabled-border-color)));
+			background: var(--highcontrast-slider-handle-background-color-disabled, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
+		}
+	}
+
+	.spectrum-Slider-track {
+		&::before {
+			background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
+		}
+	}
+
+	&.spectrum-Slider--filled {
+		.spectrum-Slider-track:first-child::before {
+			background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
+		}
+	}
+
+	.spectrum-Slider-fill {
+		&::before {
+			background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
+		}
+	}
+
+	.spectrum-Slider-ramp {
+		path {
+			fill: var(--highcontrast-slider-ramp-track-color-disabled, var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled)));
+		}
+	}
+
+	.spectrum-Slider-tick {
+		&::after {
+			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled)));
+		}
+	}
+
+	&.spectrum-Slider--range {
+		.spectrum-Slider-track:not(:first-of-type, :last-of-type)::before {
+			background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
 		}
 	}
 }
 
 @media (forced-colors: active) {
-	:root {
-		/*  over-writes */
+	.spectrum-Slider {
 		--highcontrast-slider-track-color: ButtonText;
 		--highcontrast-slider-track-color-disabled: GrayText;
 		--highcontrast-slider-track-color-static: ButtonText;
@@ -153,550 +728,36 @@ governing permissions and limitations under the License.
 		--highcontrast-slider-label-text-color: CanvasText;
 		--highcontrast-slider-label-text-color-disabled: GrayText;
 
-		.spectrum-Slider {
-			.spectrum-Slider-handle[focused]::before {
-				forced-color-adjust: none;
-			}
-
-			&[ramp] .spectrum-Slider-handle {
-				/* forced-color-adjust required to ensure the "circle" around the handle is transparent */
-				forced-color-adjust: none;
-			}
-
-			/* Slider control hover and focus colors for high contrast mode */
-			/* Filled and range variants are excluded since the filled portion of the track uses Highlight */
-			&:not([disabled], &[filled], &[range]) {
-				.spectrum-Slider-controls:hover,
-				.spectrum-Slider-controls:active,
-				.spectrum-Slider-controls:focus-within,
-				.spectrum-Slider-controls[focused] {
-					--highcontrast-slider-track-fill-color: Highlight;
-					--highcontrast-slider-track-color: Highlight;
-					--highcontrast-slider-handle-border-color: Highlight;
-					--highcontrast-slider-ramp-track-color: Highlight;
-					--highcontrast-slider-tick-mark-color: Highlight;
-				}
-			}
-
-			/* Slider handle turns transparent in high contrast mode for ramp */
-			&[disabled] {
-				.spectrum-Slider-ramp + .spectrum-Slider-handle {
-					fill: ButtonFace;
-					background-color: ButtonFace;
-				}
-			}
-		}
-	}
-}
-
-.spectrum-Slider {
-	position: relative;
-
-	/* Don't let z-index'd child elements float above other things on the page */
-	z-index: 1;
-	display: block;
-	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
-
-	user-select: none;
-
-	.spectrum-Slider-controls {
-		display: inline-block;
-		box-sizing: border-box;
-		cursor: pointer;
-		position: relative;
-		z-index: auto;
-
-		/* These calculations prevent the track from spilling outside of the control */
-		inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
-		margin-inline-start: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
-
-		block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
-		vertical-align: top;
-	}
-
-	.spectrum-Slider-labelContainer + .spectrum-Slider-controls {
-		margin-block-start: calc(-1 * var(--spectrum-slider-control-to-field-label));
-	}
-
-	.spectrum-Slider-label {
-		padding-inline-start: 0;
-		flex-grow: 1;
-		font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
-	}
-
-	.spectrum-Slider-track,
-	.spectrum-Slider-fill {
-		block-size: var(--mod-slider-track-fill-thickness, var(--spectrum-slider-track-fill-thickness));
-		box-sizing: border-box;
-
-		position: absolute;
-		z-index: 1;
-		inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--mod-slider-track-fill-thickness, var(--spectrum-slider-track-fill-thickness)) / 2);
-		inset-inline-start: 0;
-		inset-inline-end: auto;
-		pointer-events: none;
-
-		padding-block: 0;
-		padding-inline-start: 0;
-		padding-inline-end: var(--mod-slider-handle-gap, var(--spectrum-slider-handle-gap));
-		margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
-
-		&::before {
-			content: "";
-			display: block;
-			block-size: 100%;
-
-			/* reset all border radii */
-			border-start-start-radius: 0;
-			border-end-start-radius: 0;
-			border-start-end-radius: 0;
-			border-end-end-radius: 0;
-		}
-	}
-
-	.spectrum-Slider-fill {
-		margin-inline-start: 0;
-		padding-block: 0;
-		padding-inline-start: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap)));
-		padding-inline-end: 0;
-
-		&::before {
-			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
-		}
-	}
-
-	.spectrum-Slider-fill--right {
-		padding-block: 0;
-		padding-inline-start: 0;
-		padding-inline-end: calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin)) + var(--spectrum-slider-handle-gap, var(--spectrum-slider-handle-gap)));
-	}
-
-	.spectrum-Slider-ramp {
-		margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
-		block-size: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
-
-		position: absolute;
-		inset-inline-start: var(--spectrum-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
-		inset-inline-end: var(--spectrum-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
-
-		svg {
-			inline-size: 100%;
-			block-size: 100%;
-
-			/* Flip the ramp automatically for RTL */
-			transform: var(--spectrum-logical-rotation);
-
-			path {
-				fill: var(--highcontrast-slider-ramp-track-color, var(--mod-slider-ramp-track-color, var(--spectrum-slider-ramp-track-color)));
-			}
-		}
-	}
-
-	.spectrum-Slider-handle {
-		position: absolute;
-		inset-inline-start: 0;
-		z-index: 2;
-		display: inline-block;
-		box-sizing: border-box;
-
-		inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
-		block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
-
-		inset-block-start: calc(var(--mod-slider-control-height, var(--spectrum-slider-control-height)) / 2 - var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / 2);
-		margin-block: 0;
-		margin-inline: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2) 0;
-		border-width: var(--mod-slider-handle-border-width, var(--spectrum-slider-handle-border-width));
-		border-style: solid;
-
-		border-radius: var(--mod-slider-handle-border-radius, var(--spectrum-slider-handle-border-radius));
-
-		transition: border-width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
-
-		outline: none;
-		border-color: var(--highcontrast-slider-handle-border-color, var(--mod-slider-handle-border-color, var(--spectrum-slider-handle-border-color)));
-		background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
-
-		&:hover {
-			border-color: var(--highcontrast-slider-handle-border-color-hover, var(--mod-slider-handle-border-color-hover, var(--spectrum-slider-handle-border-color-hover)));
+		.spectrum-Slider-handle.is-focused::before {
+			forced-color-adjust: none;
 		}
 
-		/* Keyboard focused with focus indicator. */
-		&[focused] {
-			border-color: var(--highcontrast-slider-handle-border-color-key-focus, var(--mod-slider-handle-border-color-key-focus, var(--spectrum-slider-handle-border-color-key-focus)));
+		&.spectrum-Slider--ramp .spectrum-Slider-handle {
+			/* forced-color-adjust is required to ensure the contrasting "circle" around the ramp handle (created by box-shadow) is visible. */
+			forced-color-adjust: none;
 		}
 
-		&[dragged] {
-			border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
-			background: var(--highcontrast-slider-handle-background-color, var(--mod-slider-handle-background-color, var(--spectrum-slider-handle-background-color)));
-		}
-
-		&:active,
-		&[dragged] {
-			border-width: var(--mod-slider-handle-border-width-down, var(--spectrum-slider-handle-border-width-down));
-			border-color: var(--highcontrast-slider-handle-border-color-down, var(--mod-slider-handle-border-color-down, var(--spectrum-slider-handle-border-color-down)));
-		}
-
-		&:active,
-		&[focused],
-		&[dragged],
-		&[tophandle] {
-			z-index: 3;
-		}
-
-		/* Focus indicator. */
-		&::before {
-			content: "";
-			display: block;
-			position: absolute;
-			inset-inline-start: 50%;
-			inset-block-start: 50%;
-
-			transition:
-				box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
-				inline-size var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out,
-				block-size var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-out;
-
-			inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
-			block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
-			border-radius: 100%;
-
-			transform: translate(-50%, -50%);
-
-			.spectrum-Slider:dir(rtl) & {
-				transform: translate(50%, -50%);
+		/* Slider control hover and focus colors for high contrast mode */
+		/* Filled and range variants are excluded since the filled portion of the track uses Highlight */
+		&:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) {
+			.spectrum-Slider-controls:hover,
+			.spectrum-Slider-controls:active,
+			.spectrum-Slider-controls:focus-within,
+			.spectrum-Slider-controls.is-focused {
+				--highcontrast-slider-track-fill-color: Highlight;
+				--highcontrast-slider-track-color: Highlight;
+				--highcontrast-slider-handle-border-color: Highlight;
+				--highcontrast-slider-ramp-track-color: Highlight;
+				--highcontrast-slider-tick-mark-color: Highlight;
 			}
 		}
 
-		/* Keyboard focused */
-		&[focused]::before {
-			box-shadow: 0 0 0 var(--spectrum-focus-indicator-thickness) var(--highcontrast-slider-handle-focus-ring-color-key-focus, var(--mod-slider-handle-focus-ring-color-key-focus, var(--spectrum-slider-handle-focus-ring-color-key-focus)));
-			inline-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
-			block-size: calc(var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) + var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) * 2);
-		}
-	}
-
-	.spectrum-Slider-input {
-		/*  Remove the margin for input in Firefox and Safari. */
-		margin: 0;
-
-		inline-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
-		block-size: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
-		padding: 0;
-		position: absolute;
-
-		inset-block-start: var(--mod-slider-input-top-size, var(--spectrum-slider-input-top-size));
-		inset-inline-start: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
-		overflow: hidden;
-		opacity: 0.000001; /* stylelint-disable-line number-max-precision */
-		cursor: default;
-		appearance: none;
-		border: 0;
-		pointer-events: none;
-		background: transparent;
-
-		&:focus {
-			outline: none;
-		}
-	}
-
-	.spectrum-Slider-labelContainer {
-		display: flex;
-		align-items: center;
-		position: relative;
-		inline-size: auto;
-
-		font-size: var(--mod-slider-font-size, var(--spectrum-slider-font-size));
-		line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
-
-		color: var(--highcontrast-slider-label-text-color, var(--mod-slider-label-text-color, var(--spectrum-slider-label-text-color)));
-
-		margin-block-start: var(--mod-slider-label-top-to-text, var(--spectrum-slider-label-top-to-text));
-
-		/* international support */
-		&:lang(ja),
-		&:lang(zh),
-		&:lang(ko) {
-			line-height: var(--mod-slider-cjk-line-height, var(--spectrum-slider-cjk-line-height));
-		}
-	}
-
-	.spectrum-Slider-value {
-		flex-grow: 0;
-		padding-inline-end: 0;
-		cursor: default;
-		font-feature-settings: "tnum";
-		text-align: end;
-
-		margin-inline-start: var(--mod-slider-label-margin-start, var(--spectrum-slider-label-margin-start));
-	}
-
-	/* TODO: missing core-tokens for tick variant */
-	.spectrum-Slider-ticks {
-		display: flex;
-		justify-content: space-between;
-		z-index: 0;
-		margin-inline: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
-
-		position: relative;
-		inline-size: var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width));
-
-		/* tick marks are centered half based on slider control height and tick height  */
-		inset-block-start: calc(var(--mod-slider-track-thickness, var(--spectrum-slider-control-height)) / 2 - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2);
-
-		/* TODO: missing core-token for handle fill-color */
-		& ~ .spectrum-Slider-handleContainer {
-			.spectrum-Slider-handle {
-				background: var(--mod-slider-ticks-handle-background-color, var(--spectrum-slider-ticks-handle-background-color));
+		/* Slider handle turns transparent in high contrast mode for ramp */
+		&.is-disabled {
+			.spectrum-Slider-ramp + .spectrum-Slider-handle {
+				fill: ButtonFace;
+				background-color: ButtonFace;
 			}
-		}
-
-		&::after {
-			display: block;
-			position: absolute;
-			inset-block-start: 0;
-			inset-inline-start: calc(50% - calc(var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / 2));
-			content: "";
-			inline-size: var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width));
-			block-size: var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height));
-			border-radius: var(--mod-slider-tick-mark-border-radius, var(--spectrum-slider-tick-mark-border-radius));
-		}
-
-		.spectrum-Slider-tickLabel {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: var(--mod-font-size-75, var(--spectrum-font-size-75));
-			line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
-			color: var(--highcontrast-slider-label-text-color, var(--mod-slider-tick-label-color, var(--spectrum-slider-tick-label-color)));
-		}
-
-		&:first-of-type,
-		&:last-of-type {
-			.spectrum-Slider-tickLabel {
-				display: block;
-				position: absolute;
-				margin-inline: 0;
-			}
-		}
-
-		&:first-of-type {
-			/* fix off-by-one alignment */
-			inset-inline-start: calc(var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / -2);
-
-			.spectrum-Slider-tickLabel {
-				inset-inline-start: 0;
-			}
-		}
-
-		&:last-of-type {
-			/* fix off-by-one alignment */
-			inset-inline-end: calc(var(--mod-slider-tick-mark-width, var(--spectrum-slider-tick-mark-width)) / -2);
-
-			.spectrum-Slider-tickLabel {
-				inset-inline-end: 0;
-			}
-		}
-	}
-
-	.spectrum-Slider-tick::after {
-		background-color: var(--highcontrast-slider-tick-mark-color, var(--mod-slider-tick-mark-color, var(--spectrum-slider-tick-mark-color)));
-	}
-
-	/* backwards compatibility: these are not required, but they make the handle go to the edegs and align right */
-	.spectrum-Slider-handleContainer,
-	.spectrum-Slider-trackContainer {
-		inline-size: calc(100% + var(--spectrum-slider-handle-size));
-		position: absolute;
-		inset-block-start: 0;
-		margin-inline-start: calc(var(--spectrum-slider-handle-size) / 2 * -1);
-	}
-
-	.spectrum-Slider-trackContainer {
-		block-size: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
-
-		/* stop edges from peeking out */
-		overflow: hidden;
-	}
-
-	/* Applies to the filled-offset variant to keep track the same color for highcontrast mode */
-	.spectrum-Slider-track {
-		&:first-of-type::before {
-			border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-			border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-		}
-
-		&:last-of-type::before {
-			border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-			border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-		}
-
-		&::before {
-			background: var(--highcontrast-slider-track-color-static, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
-		}
-
-		/* All variants other than filled-offset get a new track color for highcontrast mode */
-		&:not(:has(~ .spectrum-Slider-fill))::before {
-			background: var(--highcontrast-slider-track-color, var(--mod-slider-track-color, var(--spectrum-slider-track-color)));
-		}
-
-		& ~ & {
-			inset-inline-start: auto;
-			inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
-			padding-block: 0;
-			padding-inline-start: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
-			padding-inline-end: 0;
-			margin-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
-			margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
-		}
-	}
-
-	&[filled] .spectrum-Slider-track:first-child::before {
-		background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
-	}
-
-	&[sideLabel] {
-		display: flex;
-		align-items: center;
-
-		.spectrum-Slider-labelContainer {
-			margin-block-start: 0;
-		}
-
-		.spectrum-Slider-labelContainer + .spectrum-Slider-controls {
-			margin-block-start: 0;
-		}
-
-		.spectrum-Slider-controls {
-			margin-inline-end: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
-		}
-
-		.spectrum-Slider-value {
-			margin-inline-start: var(--mod-slider-value-side-padding-inline, var(--spectrum-slider-value-side-padding-inline));
-			inline-size: var(--mod-slider-value-inline-size, var(--spectrum-slider-value-inline-size));
-			text-align: start;
-		}
-	}
-
-	&[range] {
-		/* over-write for Range, without the LTR RTL post-css hack */
-		.spectrum-Slider-track ~ .spectrum-Slider-track {
-			padding-inline: var(--mod-slider-track-middle-handleoffset, var(--spectrum-slider-track-middle-handleoffset)) var(--mod-slider-track-middle-handleoffset, var(--spectrum-slider-track-middle-handleoffset));
-			inset-inline: auto;
-			margin-inline: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
-		}
-
-		.spectrum-Slider-value {
-			user-select: text;
-		}
-
-		.spectrum-Slider-track {
-			&:first-of-type {
-				padding-inline-start: 0;
-				padding-inline-end: var(--mod-slider-track-handleoffset, var(--spectrum-slider-track-handleoffset));
-				inset-inline-start: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
-				inset-inline-end: auto;
-				margin-inline-start: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
-			}
-
-			&:first-of-type::before {
-				border-start-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-				border-end-start-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-			}
-
-			&:last-of-type {
-				padding-inline-start: var(--spectrum-slider-track-handleoffset);
-				padding-inline-end: 0;
-				inset-inline-start: auto;
-				inset-inline-end: var(--mod-slider-range-track-reset, var(--spectrum-slider-range-track-reset));
-				margin-inline-end: var(--mod-slider-track-margin-offset, var(--spectrum-slider-track-margin-offset));
-			}
-
-			&:last-of-type::before {
-				border-start-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-				border-end-end-radius: var(--mod-slider-track-corner-radius, var(--spectrum-slider-track-corner-radius));
-			}
-		}
-
-		.spectrum-Slider-track:not(:first-of-type, :last-of-type)::before {
-			background: var(--highcontrast-slider-filled-track-fill-color, var(--mod-slider-track-fill-color, var(--spectrum-slider-track-fill-color)));
-		}
-	}
-
-	/* setting tick marks in relation to label */
-	&[tick] {
-		/* TODO: Sliders with ticks + tick mark labels require more margin-block-end.
-		As of February 2023 we do not have tokens yet tokens for Ramp and Tick variants,
-		using control-height here instead.  */
-		margin-block-end: var(--mod-slider-control-height, var(--spectrum-slider-control-height));
-
-		.spectrum-Slider-handle {
-			background-color: var(--highcontrast-slider-tick-handle-background-color, var(--mod-slider-tick-handle-background-color, var(--spectrum-slider-tick-handle-background-color)));
-		}
-
-		.spectrum-Slider-controls {
-			margin-block-start: calc(var(--spectrum-text-to-visual-75) - var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) / 2 - var(--mod-slider-track-thickness, var(--spectrum-slider-track-thickness)) / 2);
-		}
-
-		.spectrum-Slider-tickLabel {
-			margin-block-start: calc(var(--mod-slider-tick-mark-height, var(--spectrum-slider-tick-mark-height)) + var(--spectrum-text-to-visual-75));
-		}
-	}
-
-	&[ramp] .spectrum-Slider-handle {
-		box-shadow: 0 0 0 var(--spectrum-slider-handle-gap) var(--highcontrast-slider-ramp-handle-border-color-active, var(--mod-sectrum-slider-ramp-handle-border-color-active, var(--spectrum-slider-ramp-handle-border-color-active)));
-		background: var(--mod-slider-ramp-handle-background-color, var(--highcontrast-slider-ramp-handle-background-color, var(--spectrum-slider-ramp-handle-background-color)));
-	}
-
-	&[disabled] {
-		cursor: default;
-
-		.spectrum-Slider-controls {
-			cursor: default;
-		}
-
-		.spectrum-Slider-tickLabel {
-			color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
-		}
-
-		.spectrum-Slider-labelContainer {
-			color: var(--highcontrast-slider-label-text-color-disabled, var(--mod-slider-label-text-color-disabled, var(--spectrum-slider-label-text-color-disabled)));
-		}
-
-		.spectrum-Slider-handle {
-			border-color: var(--highcontrast-slider-handle-border-color-disabled, var(--mod-slider-handle-border-color-disabled, var(--spectrum-slider-handle-border-color-disabled)));
-			background: var(--highcontrast-slider-handle-disabled-background-color, var(--mod-slider-handle-disabled-background-color, var(--spectrum-slider-handle-disabled-background-color)));
-			cursor: default;
-			pointer-events: none;
-
-			&:hover,
-			&:active {
-				border-color: var(--highcontrast-disabled-border-color, var(--mod-disabled-border-color, var(--spectrum-disabled-border-color)));
-				background: var(--highcontrast-slider-handle-background-color-disabled, var(--mod-slider-handle-background-color-disabled, var(--spectrum-slider-handle-background-color-disabled)));
-			}
-		}
-
-		.spectrum-Slider-track::before {
-			background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
-		}
-
-		&[filled] .spectrum-Slider-track:first-child::before {
-			background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
-		}
-
-		.spectrum-Slider-fill::before {
-			background: var(--highcontrast-slider-track-fill-color-disabled, var(--mod-slider-track-fill-color-disabled, var(--spectrum-slider-track-fill-color-disabled)));
-		}
-
-		.spectrum-Slider-ramp path {
-			fill: var(--highcontrast-slider-ramp-track-color-disabled, var(--mod-slider-ramp-track-color-disabled, var(--spectrum-slider-ramp-track-color-disabled)));
-		}
-
-		.spectrum-Slider-tick::after {
-			background-color: var(--highcontrast-slider-tick-mark-color-disabled, var(--mod-slider-tick-mark-color-disabled, var(--spectrum-slider-tick-mark-color-disabled)));
-		}
-
-		&[range] .spectrum-Slider-track:not(:first-of-type, :last-of-type)::before {
-			background: var(--highcontrast-slider-track-color-disabled, var(--mod-slider-track-color-disabled, var(--spectrum-slider-track-color-disabled)));
 		}
 	}
 }

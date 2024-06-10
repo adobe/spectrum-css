@@ -1,0 +1,16 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "site",
+	"tags": ["component", "legacy"],
+	"targets": {
+		"build": {},
+		"clean": {},
+		"compare": {},
+		"format": {},
+		"lint": {},
+		"test": {
+			"defaultConfiguration": "scope"
+		},
+		"validate": {}
+	}
+}

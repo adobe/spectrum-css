@@ -1,0 +1,369 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* CSS Component */
+.spectrum-CSSComponent {
+	box-sizing: border-box;
+	inline-size: min(1080px, 100%);
+	margin: var(--spectrum-spacing-600) auto;
+	padding: 0 56px;
+}
+
+.spectrum-CSSComponent-heading {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-block-end: var(--spectrum-spacing-600);
+}
+
+.spectrum-CSSComponent-link {
+	display: flex;
+	align-items: center;
+
+	color: inherit;
+	text-decoration: none;
+
+	outline: none;
+
+	&:focus-visible,
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.spectrum-CSSComponent-statusContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	flex-grow: 1;
+	gap: 80px;
+	align-self: center;
+
+	> * {
+		flex-basis: min(370px, 50%);
+	}
+}
+
+.spectrum-CSSComponent-detailsTable {
+	--mod-table-cursor-row-default: default;
+	--mod-table-row-background-color-hover: transparent;
+	--mod-table-divider-color: transparent;
+	--mod-table-border-color: transparent;
+	--mod-table-row-line-height: 1.6;
+
+	border-spacing: 0;
+	margin-block-start: var(--spectrum-spacing-600);
+	margin-block-end: 36px;
+
+	& th {
+		block-size: var(--spectrum-spacing-300);
+		padding-inline-end: var(--spectrum-spacing-400);
+		font-weight: var(--spectrum-regular-font-weight);
+		text-align: start;
+	}
+}
+
+.spectrum-CSSComponent-sectionHeading {
+	margin-block-start: var(--spectrum-spacing-700);
+	margin-block-end: var(--spectrum-spacing-500);
+}
+
+.spectrum-CSSExample-status,
+.spectrum-CSSComponent-status {
+	min-block-size: 0 !important;
+	padding: 0 !important;
+}
+
+.spectrum-CSSComponent-status::before {
+	margin-inline-start: 0 !important;
+}
+
+.spectrum-CSSExample-status {
+	margin-inline-start: var(--spectrum-spacing-200);
+}
+
+.spectrum-CSSComponent-version {
+	flex-grow: 1;
+	text-align: end;
+}
+
+.spectrum-CSSComponent-description {
+	margin-block-start: var(--spectrum-spacing-400);
+	margin-block-end: var(--spectrum-spacing-700);
+}
+
+/* cards */
+.spectrum-CSSComponent-resources {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-block-end: var(--spectrum-spacing-500);
+
+	& .spectrum-Card {
+		margin-block-end: var(--spectrum-spacing-300);
+		margin-inline-end: var(--spectrum-spacing-300);
+	}
+}
+
+.spectrum-CSSComponent-resource--adobe,
+.spectrum-CSSComponent-resources a[href*="spectrum.adobe.com"] .spectrum-Card-preview {
+	color: rgb(250, 15, 0);
+	background-color: var(--spectrum-gray-100);
+}
+
+.spectrum-CSSComponent-resource--github,
+.spectrum-CSSComponent-resources a[href*="github.com"] .spectrum-Card-preview {
+	color: var(--spectrum-black);
+	background-color: var(--spectrum-transparent-black-200);
+}
+
+.spectrum-CSSComponent-resource--npm,
+.spectrum-CSSComponent-resources a[href*="npmjs.com"] .spectrum-Card-preview {
+	background-color: rgba(203, 56, 55, 10%);
+}
+
+.spectrum-CSSComponent-cardImage {
+	text-decoration: none;
+}
+
+.spectrum-CSSComponent-switcher {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var(--spectrum-spacing-500);
+	justify-content: flex-end;
+}
+
+.spectrum-CSS-switcherContainer {
+	margin-inline-start: var(--spectrum-spacing-300);
+	white-space: nowrap;
+}
+
+/* CSS Example */
+.spectrum-CSSExample {
+	margin-block-end: 64px;
+}
+
+.spectrum-CSSExample-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--spectrum-corner-radius-100);
+}
+
+.spectrum-CSSExample-heading {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-block-end: var(--spectrum-spacing-100) !important;
+}
+
+.spectrum-CSSExample-example,
+.spectrum-CSSExample-markup {
+	box-sizing: border-box;
+}
+
+:root {
+	--spectrum-docs-static-white-background-color: var(--spectrum-seafoam-900);
+	--spectrum-docs-static-black-background-color: var(--spectrum-seafoam-100);
+}
+
+.spectrum-CSSExample-example {
+	flex: 1 0 auto;
+	min-block-size: 0;
+	padding: var(--spectrum-spacing-500) var(--spectrum-spacing-600);
+	border-radius: var(--spectrum-corner-radius-100) var(--spectrum-corner-radius-100) 0 0;
+
+	&:has(> .spectrum-CSSExample-example-staticWhite) {
+		background-color: var(--spectrum-docs-static-white-background-color);
+		border-color: var(--spectrum-docs-static-white-background-color);
+	}
+
+	&:has(> .spectrum-CSSExample-example-staticBlack) {
+		background-color: var(--spectrum-docs-static-black-background-color);
+		border-color: var(--spectrum-docs-static-black-background-color);
+	}
+}
+
+.spectrum-CSSExample-markup {
+	position: relative;
+
+	overflow: hidden;
+
+	max-inline-size: 100%;
+	max-block-size: 192px;
+	padding: 10px 18px;
+
+	border-radius: 0 0 var(--spectrum-corner-radius-100) var(--spectrum-corner-radius-100);
+
+	&.is-open {
+		max-block-size: 100%;
+		padding-block-end: var(--spectrum-spacing-700);
+
+		& .spectrum-CSSExample-markupToggle::before {
+			display: none;
+		}
+	}
+}
+
+.spectrum-CSSExample-markupToggle + pre {
+	padding-block-end: var(--spectrum-spacing-100);
+}
+
+.spectrum-CSSExample-example--spacious {
+	position: relative;
+	block-size: 150px;
+}
+
+.spectrum-CSSExample-example--overlay {
+	position: relative;
+	min-block-size: var(--spectrum-spacing-800);
+}
+
+.spectrum-CSSExample-dialog {
+	position: relative !important;
+	z-index: 1 !important;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	transform: none !important;
+
+	inline-size: auto !important;
+	block-size: auto !important;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+
+	transition: none;
+}
+
+.spectrum-Examples,
+.spectrum-Examples-itemGroup {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var(--spectrum-spacing-100);
+	justify-content: space-between;
+}
+
+.spectrum-Examples--vertical {
+	flex-direction: column;
+}
+
+.spectrum-Examples-item .spectrum-Examples-itemHeading {
+	margin-block-end: var(--spectrum-spacing-100);
+}
+
+.spectrum-Button.spectrum-CSSExample-overlayShowButton {
+	position: absolute;
+	inset-block-start: 50%;
+	inset-inline-start: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.spectrum-CSSExample-markup pre code {
+	white-space: pre-wrap;
+}
+
+.spectrum-CSSExample-markupToggle {
+	position: absolute;
+	z-index: 0;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+
+	box-sizing: border-box;
+	padding: var(--spectrum-spacing-400);
+
+	font-size: var(--spectrum-font-size-50);
+	text-align: start;
+}
+
+.spectrum-CenteredImage {
+	display: block;
+	inline-size: max(720px, 100%);
+	margin: auto;
+}
+
+.spectrum-CodeBlock {
+	margin: var(--spectrum-spacing-200) 0;
+	padding: var(--spectrum-spacing-100) var(--spectrum-spacing-200);
+
+	border-style: solid;
+	border-width: var(--spectrum-border-width-100);
+	border-radius: var(--spectrum-spacing-50);
+}
+
+/* CSS Example */
+.spectrum-CSSExample-example {
+	background-color: var(--spectrum-background-layer-1-color, var(--spectrum-gray-100));
+}
+
+.spectrum-CSSExample-markup {
+	background-color: var(--spectrum-gray-75);
+	border-block-start: 1px solid var(--spectrum-gray-100);
+}
+
+.spectrum-CSSExample-markupToggle {
+	z-index: 1;
+	background-color: var(--spectrum-gray-75);
+}
+
+.spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle {
+	background-color: transparent;
+}
+
+.spectrum-CSSExample-example--overlay {
+	color: var(--spectrum-transparent-black-400);
+	background-color: var(--spectrum-transparent-black-400);
+}
+
+.spectrum-CSSExample-oldAPI {
+	color: var(--spectrum-negative-color-800);
+}
+
+.spectrum-CodeBlock {
+	background-color: var(--spectrum-gray-75);
+	border-color: var(--spectrum-gray-400);
+}
+
+@media screen and (width <= 960px) {
+	.spectrum-CSSComponent {
+		margin-block: var(--spectrum-spacing-100);
+		margin-inline: auto;
+		padding-inline: 0 var(--spectrum-spacing-600);
+	}
+
+	.spectrum-CSSComponent-description {
+		margin-block-end: var(--spectrum-spacing-200);
+	}
+
+	.spectrum-CSSExample {
+		margin-block-end: var(--spectrum-spacing-200);
+	}
+
+	.spectrum-CSSExample-example {
+		padding: var(--spectrum-spacing-200);
+	}
+
+	.spectrum-CSSComponent-header {
+		margin-block-end: var(--spectrum-spacing-200);
+	}
+
+	.spectrum-CSSComponent-statusContainer,
+	.spectrum-CSSComponent-version {
+		display: none;
+	}
+
+	.spectrum-CSSComponent-title {
+		font-size: var(--spectrum-font-size-500);
+	}
+}

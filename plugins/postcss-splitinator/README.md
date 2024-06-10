@@ -65,7 +65,7 @@ This plugin turns this:
   .component {
     --background-color: blue;
   }
-  .component[selected] {
+  .component.is-selected {
     --background-color: darkblue;
   }
   .component .icon {
@@ -77,7 +77,7 @@ This plugin turns this:
   .component {
     --background-color: purple;
   }
-  .component[selected] {
+  .component.is-selected {
     --background-color: darkpurple;
   }
   .component .icon {
@@ -103,7 +103,7 @@ Into this:
   --background-color: var(--system-component-background-color);
 }
 
-.component[selected] {
+.component.is-selected {
   --background-color: var(--system-component-selected-background-color);
 }
 ```

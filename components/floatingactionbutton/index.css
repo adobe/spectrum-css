@@ -1,5 +1,5 @@
 /*!
-Copyright 2024 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-FloatingActionButton {
 	--spectrum-floating-action-button-size: var(--spectrum-component-height-200);
 	--spectrum-floating-action-button-icon-size: var(--spectrum-workflow-icon-size-200);
 	--spectrum-floating-action-button-padding: var(--spectrum-component-pill-edge-to-visual-only-200);
@@ -29,23 +29,26 @@ governing permissions and limitations under the License.
 	--spectrum-floating-action-button-icon-color-hover: var(--spectrum-white);
 	--spectrum-floating-action-button-icon-color-down: var(--spectrum-white);
 	--spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-white);
+}
 
-	.spectrum-FloatingActionButton {
-		&[secondary] {
-			--spectrum-floating-action-button-background-color: var(--spectrum-background-layer-2-color);
-			--spectrum-floating-action-button-background-color-hover: var(--spectrum-background-layer-2-color);
-			--spectrum-floating-action-button-background-color-down: var(--spectrum-background-layer-2-color);
-			--spectrum-floating-action-button-background-color-key-focus: var(--spectrum-background-layer-2-color);
-			--spectrum-floating-action-button-icon-color: var(--spectrum-neutral-subdued-content-color-default);
-			--spectrum-floating-action-button-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-			--spectrum-floating-action-button-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-			--spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-		}
-	}
+.spectrum-FloatingActionButton--secondary {
+	--spectrum-floating-action-button-background-color: var(--spectrum-background-layer-2-color);
+	--spectrum-floating-action-button-background-color-hover: var(--spectrum-background-layer-2-color);
+	--spectrum-floating-action-button-background-color-down: var(--spectrum-background-layer-2-color);
+	--spectrum-floating-action-button-background-color-key-focus: var(--spectrum-background-layer-2-color);
+	--spectrum-floating-action-button-icon-color: var(--spectrum-neutral-subdued-content-color-default);
+	--spectrum-floating-action-button-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+	--spectrum-floating-action-button-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
+	--spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 }
 
 @media (forced-colors: active) {
-	:root {
+	.spectrum-FloatingActionButton {
+		&::after {
+			/* make sure focus-ring renders */
+			forced-color-adjust: none;
+		}
+
 		--highcontrast-floating-action-button-background-color: ButtonText;
 		--highcontrast-floating-action-button-background-color-hover: Highlight;
 		--highcontrast-floating-action-button-background-color-down: Highlight;
@@ -55,11 +58,6 @@ governing permissions and limitations under the License.
 		--highcontrast-floating-action-button-icon-color-hover: ButtonFace;
 		--highcontrast-floating-action-button-icon-color-down: ButtonFace;
 		--highcontrast-floating-action-button-icon-color-key-focus: ButtonFace;
-	}
-
-	.spectrum-FloatingActionButton::after {
-		/* make sure focus-ring renders */
-		forced-color-adjust: none;
 	}
 }
 

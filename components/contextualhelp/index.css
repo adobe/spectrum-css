@@ -1,5 +1,5 @@
 /*!
-Copyright 2024 Adobe. All rights reserved.
+Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-:root {
+.spectrum-ContextualHelp {
 	/* Layout Variables */
 	--spectrum-contextual-help-padding: var(--spectrum-spacing-400);
 	--spectrum-contextual-help-content-spacing: var(--spectrum-spacing-100);
@@ -27,40 +27,40 @@ governing permissions and limitations under the License.
 	}
 }
 
-@media (forced-colors: active) {
-	:root {
-		--highcontrast-contextual-help-heading-color: CanvasText;
-		--highcontrast-contextual-help-body-color: CanvasText;
-	}
-}
-
 .spectrum-ContextualHelp {
 	position: relative;
 	min-inline-size: var(--mod-spectrum-contextual-help-minimum-width, var(--spectrum-contextual-help-minimum-width));
+}
 
-	.spectrum-ContextualHelp-button {
-		display: flex;
+.spectrum-ContextualHelp-button {
+	display: flex;
+}
+
+.spectrum-ContextualHelp-popover {
+	padding-block: var(--mod-spectrum-contextual-help-padding, var(--spectrum-contextual-help-padding));
+	padding-inline: var(--mod-spectrum-contextual-help-padding, var(--spectrum-contextual-help-padding));
+	font-size: var(--mod-spectrum-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
+	color: var(--highcontrast-contextual-help-body-color, var(--mod-contextual-help-body-color, var(--spectrum-contextual-help-body-color)));
+
+	.spectrum-ContextualHelp-heading,
+	.spectrum-ContextualHelp-body {
+		margin: 0;
 	}
 
-	.spectrum-ContextualHelp-popover {
-		padding-block: var(--mod-spectrum-contextual-help-padding, var(--spectrum-contextual-help-padding));
-		padding-inline: var(--mod-spectrum-contextual-help-padding, var(--spectrum-contextual-help-padding));
-		font-size: var(--mod-spectrum-contextual-help-body-size, var(--spectrum-contextual-help-body-size));
-		color: var(--highcontrast-contextual-help-body-color, var(--mod-contextual-help-body-color, var(--spectrum-contextual-help-body-color)));
-
-		.spectrum-ContextualHelp-heading,
-		.spectrum-ContextualHelp-body {
-			margin: 0;
-		}
-
-		.spectrum-ContextualHelp-heading {
-			margin-block-end: var(--mod-spectrum-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
-			font-size: var(--mod-spectrum-contextual-help-heading-size, var(--spectrum-contextual-help-heading-size));
-			color: var(--highcontrast-contextual-help-heading-color, var(--mod-contextual-help-heading-color, var(--spectrum-contextual-help-heading-color)));
-		}
+	.spectrum-ContextualHelp-heading {
+		margin-block-end: var(--mod-spectrum-contextual-help-content-spacing, var(--spectrum-contextual-help-content-spacing));
+		font-size: var(--mod-spectrum-contextual-help-heading-size, var(--spectrum-contextual-help-heading-size));
+		color: var(--highcontrast-contextual-help-heading-color, var(--mod-contextual-help-heading-color, var(--spectrum-contextual-help-heading-color)));
 	}
+}
 
-	.spectrum-ContextualHelp-link {
-		margin-block-start: var(--mod-spectrum-contextual-help-link-spacing, var(--spectrum-contextual-help-link-spacing));
+.spectrum-ContextualHelp-link {
+	margin-block-start: var(--mod-spectrum-contextual-help-link-spacing, var(--spectrum-contextual-help-link-spacing));
+}
+
+@media (forced-colors: active) {
+	.spectrum-ContextualHelp {
+		--highcontrast-contextual-help-heading-color: CanvasText;
+		--highcontrast-contextual-help-body-color: CanvasText;
 	}
 }
