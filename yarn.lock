@@ -12374,9 +12374,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsonc@npm:^2.15.1":
-  version: 2.15.1
-  resolution: "eslint-plugin-jsonc@npm:2.15.1"
+"eslint-plugin-jsonc@npm:^2.16.0":
+  version: 2.16.0
+  resolution: "eslint-plugin-jsonc@npm:2.16.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     eslint-compat-utils: "npm:^0.5.0"
@@ -12387,7 +12387,7 @@ __metadata:
     synckit: "npm:^0.6.0"
   peerDependencies:
     eslint: ">=6.0.0"
-  checksum: 10c0/112d6f12368a7c19931d3850a4cdab61cd13daa06e114b88562144035e0b1b5b4a813e6bf49401744655384859d12a0574377207e065ac82eedf3aa4d994fc60
+  checksum: 10c0/20ca0eff6332e3647c816c83edf287c113605ee941401d2b015a52dd90fe4808639172c4b9e238b0deeea1a5cc6a9264daf6865ab09dde33a6bc65a3bb403cf1
   languageName: node
   linkType: hard
 
@@ -21047,7 +21047,7 @@ __metadata:
     diff: "npm:^5.2.0"
     diff2html: "npm:^3.4.48"
     eslint: "npm:^8.57.0"
-    eslint-plugin-jsonc: "npm:^2.15.1"
+    eslint-plugin-jsonc: "npm:^2.16.0"
     eslint-plugin-prettier: "npm:^5.1.3"
     fast-glob: "npm:^3.3.2"
     gh-pages: "npm:^6.1.1"
