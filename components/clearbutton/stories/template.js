@@ -36,6 +36,7 @@ export const Template = ({
 				...globals,
 				size,
 				iconName: "Cross",
+				setName: "ui",
 				customClasses: [`${rootClass}-icon`],
 			})}
 		</div>
