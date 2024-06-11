@@ -34,7 +34,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Asset-folderBackground {
-	fill: var(--highcontrast-asset-folder-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-300)));
+	fill: var(--highcontrast-asset-folder-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-200)));
 }
 
 .spectrum-Asset-fileBackground {
