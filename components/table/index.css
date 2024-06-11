@@ -83,14 +83,14 @@ governing permissions and limitations under the License.
 
 	/* Summary Row and Section Header Row */
 	--spectrum-table-summary-row-font-weight: var(--spectrum-bold-font-weight);
-	--spectrum-table-summary-row-background-color: var(--spectrum-gray-200);
+	--spectrum-table-summary-row-background-color: var(--spectrum-gray-100);
 
 	--spectrum-table-section-header-min-height: var(--spectrum-table-section-header-row-height-medium);
 	--spectrum-table-section-header-block-start-spacing: var(--spectrum-component-top-to-text-100);
 	--spectrum-table-section-header-block-end-spacing: var(--spectrum-component-bottom-to-text-100);
 
 	--spectrum-table-section-header-font-weight: var(--spectrum-bold-font-weight);
-	--spectrum-table-section-header-background-color: var(--spectrum-gray-200);
+	--spectrum-table-section-header-background-color: var(--spectrum-gray-100);
 
 	/* Collapsible and Thumbnails */
 	--spectrum-table-collapsible-tier-indent: var(--spectrum-spacing-300);
