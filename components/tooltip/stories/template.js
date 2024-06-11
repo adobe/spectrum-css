@@ -13,7 +13,7 @@ export const Template = ({
 	placement,
 	isOpen = true,
 	isFocused = false,
-	customStyles,
+	customStyles = {},
 	customClasses = [],
 }, context) => {
 	let variantIcon;

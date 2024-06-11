@@ -89,6 +89,11 @@ export const SwatchGroup = (args, context) => html`
 
 export const States = (args, context) => html`
 	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : undefined,
+	})}>
+		${Template(args, context)}
+	</div>
+	<div style=${styleMap({
 		"display": window.isChromatic() ? "flex" : "none",
 		"flex-direction": "column",
 		"gap": "16px",

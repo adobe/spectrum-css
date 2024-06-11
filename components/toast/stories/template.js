@@ -15,7 +15,7 @@ export const Template = ({
 	inlineButtonLabel,
 	variant,
 	customClasses = [],
-	customStyles,
+	customStyles = {},
 	id,
 	...globals
 }, context) => {
@@ -34,7 +34,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			styles=${styleMap(customStyles)}
+			style=${styleMap(customStyles)}
 		>
 			${when(variant, () =>
 				Icon({

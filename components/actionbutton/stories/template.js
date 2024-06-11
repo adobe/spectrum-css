@@ -242,15 +242,29 @@ const Sizes = (args) =>
 	})}`;
 
 export const Variants = (args) => html`
+	<style>
+		.spectrum-Detail { display: inline-block; }
+		.spectrum-Typography > div {
+			border: 1px solid var(--spectrum-gray-200);
+			border-radius: 4px;
+			padding: 0 1em 1em;
+			/* Why seafoam? Because it separates it from the component styles. */
+			--mod-detail-font-color: var(--spectrum-seafoam-900);
+		}
+	</style>
 	<div style=${styleMap({
-		display: window.isChromatic() ? undefined : "none",
+		"display": window.isChromatic() ? "flex" : "none",
+		"flex-direction": "column",
+		"align-items": "flex-start",
+		"gap": "16px",
+		"--mod-detail-margin-end": "4.8px",
 	})}>
 		<div class="spectrum-Typography">
 			${Typography({
 				semantics: "detail",
 				size: "l",
 				content: ["Standard"],
-					customClasses: ["chromatic-ignore"],
+				customClasses: ["chromatic-ignore"],
 			})}
 			<div style=${styleMap({
 				"display": "flex",
@@ -265,7 +279,7 @@ export const Variants = (args) => html`
 				semantics: "detail",
 				size: "l",
 				content: ["Emphasized"],
-					customClasses: ["chromatic-ignore"],
+				customClasses: ["chromatic-ignore"],
 			})}
 			<div style=${styleMap({
 				"display": "flex",
