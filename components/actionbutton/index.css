@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 @import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-ActionButton {
-	--spectrum-actionbutton-background-color-default: var(--spectrum-gray-75);
+	--spectrum-actionbutton-background-color-default: var(--spectrum-gray-50);
 	--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-200);
 	--spectrum-actionbutton-background-color-down: var(--spectrum-gray-300);
 	--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-200);

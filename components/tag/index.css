@@ -23,10 +23,10 @@ governing permissions and limitations under the License.
 	--spectrum-tag-size-large-corner-radius: var(--spectrum-corner-radius-100);
 
 	/* background */
-	--spectrum-tag-background-color: var(--spectrum-gray-75);
-	--spectrum-tag-background-color-hover: var(--spectrum-gray-75);
+	--spectrum-tag-background-color: var(--spectrum-gray-50);
+	--spectrum-tag-background-color-hover: var(--spectrum-gray-50);
 	--spectrum-tag-background-color-active: var(--spectrum-gray-200);
-	--spectrum-tag-background-color-focus: var(--spectrum-gray-75);
+	--spectrum-tag-background-color-focus: var(--spectrum-gray-50);
 
 	/* content color */
 	--spectrum-tag-content-color: var(--spectrum-neutral-subdued-content-color-default);
