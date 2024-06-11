@@ -53,7 +53,6 @@ export const Template = ({
 						...globals,
 						treatment: "outline",
 						variant: "primary",
-						iconName: false,
 						hideLabel: false,
 						label: "Ok",
 					})}

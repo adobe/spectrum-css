@@ -286,6 +286,7 @@ export const Template = ({
 					isDisabled,
 					size: buttonSize,
 					iconName: "ChevronLeft100",
+					iconSet: "ui",
 					customClasses: [`${rootClass}-prevMonth`],
 					onclick: previousHandler.bind(null, {
 						displayedMonth,
@@ -300,6 +301,7 @@ export const Template = ({
 					isDisabled,
 					size: buttonSize,
 					iconName: "ChevronRight100",
+					iconSet: "ui",
 					customClasses: [`${rootClass}-nextMonth`],
 					onclick: nextHandler.bind(null, {
 						displayedMonth,
