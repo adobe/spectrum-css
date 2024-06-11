@@ -1,5 +1,6 @@
 
-import "@spectrum-css/tokens/dist/index.css";
+import "@spectrum-css/tokens";
+import "@spectrum-css/tokens-legacy/dist/index.css";
 import { setConsoleOptions } from "@storybook/addon-console";
 import "./assets/base.css";
 import "./assets/typekit.js";
@@ -23,7 +24,6 @@ export const args = {
 	color: "light",
 	scale: "medium",
 	reducedMotion: false,
-	express: false,
 	customClasses: [],
 };
 

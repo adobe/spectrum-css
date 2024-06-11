@@ -27,6 +27,10 @@ module.exports = ({
 	}
 	else options.map = false;
 
+	if (file && !file.startsWith("/Users/carobert/Projects/spectrum/spectrum-css/components")) {
+		console.log(file, options);
+	}
+
 	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
 	if (file && file.includes("@spectrum-css/tokens-legacy")) {
 		additionalPlugins["postcss-selector-replace"] = {

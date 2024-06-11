@@ -51,17 +51,6 @@ export default {
 		type: { required: true },
 		control: "boolean",
 	},
-	express: {
-		name: "Express",
-		description: "The express theme is a variation of Spectrum.",
-		table: {
-			type: { summary: "boolean" },
-			defaultValue: { summary: false },
-			category: "Global",
-		},
-		type: { required: true },
-		control: "boolean",
-	},
 	/* None of these should show up in the args table but are necessary for rendering the templates */
 	rootClass: {
 		name: "Class name",

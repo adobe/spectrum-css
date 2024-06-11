@@ -19,7 +19,7 @@ export const withContextWrapper = makeDecorator({
 		// This property informs which context stylesheets to source
 		//    but does not source a stylesheet for itself
 		/** @type boolean */
-		const ctx = globals.context ?? "spectrum";
+		const ctx = args.express ? "express" : globals.context ?? "spectrum";
 		/** @type string */
 		const color = args.color ? args.color : getDefaultValue(argTypes.color) ?? "light";
 		/** @type string */
