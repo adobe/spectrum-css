@@ -2,6 +2,7 @@ import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
@@ -22,7 +23,7 @@ const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
 }).flat();
 
 /**
- * The icons component contains all UI icons used for components as well as the CSS for UI and workflow icons.
+ * The Icon component contains all of the CSS used for displaying both workflow and UI icons.
  */
 export default {
 	title: "Icon",
@@ -162,3 +163,194 @@ const TestTemplate = (args) => html`
 		)}
 	</div>
 `;
+
+/**
+ * Display all icon sizes for the Docs page.
+ */
+const WorkflowSizingTemplate = (args) => html`
+	<div
+		style=${styleMap({
+			"display": "flex",
+			"gap": "24px",
+			"flexWrap": "wrap",
+		})}
+	>
+		${["xs","s","m","l","xl"].map(
+			(size) => html`
+				<div
+					style=${styleMap({
+						"display": "flex",
+						"gap": "16px",
+						"flexDirection": "column",
+						"alignItems": "center",
+						"flexBasis": "80px",
+					})}
+				>
+					${Typography({
+						semantics: "detail",
+						size: "s",
+						content: [
+							{
+								xs: "Extra-small",
+								s: "Small",
+								m: "Medium",
+								l: "Large",
+								xl: "Extra-large",
+							}[size],
+						],
+						customStyles: {
+							"white-space": "nowrap",
+							"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+						}
+					})}
+					${Template({ ...args, size })}
+				</div>
+			`
+		)}
+	</div>
+`;
+
+
+/**
+ * Helper template function to display multiple icons using an array of icon names.
+ */
+const IconListTemplate = (args, iconsList = []) => html`
+	<div
+		style=${styleMap({
+			"display": "flex",
+			"gap": "32px",
+			"flexWrap": "wrap",
+		})}
+	>
+		${iconsList.map(
+			(iconName) => Template({
+				...args,
+				iconName,
+			})
+		)}
+	</div>
+`;
+
+/**
+ * Display examples of multiple workflow icons.
+ */
+const WorkflowDefaultTemplate = (args) => html`
+	${IconListTemplate(
+		{
+			...args,
+			setName: "workflow",
+			size: "xl",
+		}, 
+		[
+			"Alert",
+			"Asset",
+			"Actions",
+			"ArrowDown",
+			"Camera",
+			"Copy",
+			"DeviceDesktop",
+			"Download",
+			"FilterAdd",
+			"Form",
+			"Light",
+			"Polygon",
+		]
+	)}
+`;
+
+/**
+ * Display examples of all directions of a single UI arrow.
+ */
+const UIArrowsTemplate = (args) => html`
+	${IconListTemplate(
+		{
+			...args,
+			setName: "ui",
+		},
+		[
+			"ArrowRight100",
+			"ArrowLeft100",
+			"ArrowDown100",
+			"ArrowUp100",
+		]
+	)}
+`;
+
+/**
+ * Display examples of multiple UI icons.
+ */
+const UIDefaultTemplate = (args) => html`
+	<div style="margin-bottom: 32px;">
+		${IconListTemplate(
+			{
+				...args,
+				setName: "ui",
+			},  
+			[
+				"Asterisk100",
+				"Asterisk200",
+				"Asterisk300",
+			]
+		)}
+	</div>
+	<div>
+		${IconListTemplate(
+			{
+				...args,
+				setName: "ui",
+			}, 
+			[
+				"ChevronDown50",
+				"ChevronDown75",
+				"ChevronDown100",
+				"ChevronDown200",
+				"ChevronDown300",
+				"ChevronDown400",
+			]
+		)}
+	</div>
+`;
+
+/* Stories for the MDX "Docs" only. */
+
+/**
+ * A sampling of multiple Workflow icons.
+ */
+export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
+WorkflowDefault.tags = ["docs-only"];
+WorkflowDefault.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * An example of a Workflow icon displayed at all sizes, from small to extra-large.
+ */
+export const WorkflowSizing = WorkflowSizingTemplate.bind({});
+WorkflowSizing.tags = ["docs-only"];
+WorkflowSizing.args = {
+	setName: "workflow",
+	iconName: "Asset",
+};
+WorkflowSizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A sampling of a few UI icons.
+ */
+export const UIDefault = UIDefaultTemplate.bind({});
+UIDefault.storyName = "UI Default";
+UIDefault.tags = ["docs-only"];
+UIDefault.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A UI arrow displayed for all directions (left, right, up, down).
+ */
+export const UIArrows = UIArrowsTemplate.bind({});
+UIArrows.storyName = "UI Arrows";
+UIArrows.tags = ["docs-only"];
+UIArrows.parameters = {
+	chromatic: { disableSnapshot: true },
+};
