@@ -137,7 +137,7 @@ const PlacementVariants = (args) => html`
 					if (option.startsWith("start") || option.startsWith("end"))
 						return "Changes side with text direction (like a logical property)";
 					if (option.startsWith("left") || option.startsWith("right"))
-						return "Text direction does not effect the position";
+						return "Text direction does not affect the position";
 					return null;
 				};
 
@@ -162,10 +162,12 @@ const PlacementVariants = (args) => html`
 									content: [`${optionDescription()}`],
 								})}
 							`)}
+							<div>
 							${Template({
 								...args,
 								placement: option,
 							})}
+							</div>
 						</div>
 					</div>
 				`;
