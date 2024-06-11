@@ -20,6 +20,7 @@ export const Template = ({
 	label,
 	hideLabel = false,
 	iconName,
+	iconSet = "workflow",
 	iconAfterLabel = false,
 	variant,
 	staticColor,
@@ -77,14 +78,14 @@ export const Template = ({
       data-testid=${ifDefined(testId)}
     >
       ${when(iconName && !iconAfterLabel, () =>
-        Icon({ iconName, size }, context)
+        Icon({ iconName, setName: iconSet, size }, context)
       )}
       ${when(
         label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
       ${when(iconName && iconAfterLabel, () =>
-        Icon({ iconName, size }, context)
+        Icon({ iconName, setName: iconSet, size }, context)
       )}
       ${when(isPending, () =>
         ProgressCircle(

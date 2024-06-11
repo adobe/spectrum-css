@@ -35,6 +35,17 @@ setConsoleOptions({
 	],
 });
 
+import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
+import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
+
+let spriteContainer = document.querySelector("#icon-sprite-container");
+if (!spriteContainer) {
+	spriteContainer = document.createElement("div");
+	spriteContainer.id = "icon-sprite-container";
+	spriteContainer.innerHTML = workflowSprite + uiSprite;
+	document.body.appendChild(spriteContainer);
+}
+
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 const parameters = {
 	layout: "padded",

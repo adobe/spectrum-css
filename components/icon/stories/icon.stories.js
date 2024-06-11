@@ -8,21 +8,7 @@ import { IconGroup } from "./icon.test.js";
 import { Template } from "./template.js";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
-/**
- * Create a list of all UI Icons with their sizing numbers.
- *
- * The list is a little long until Storybook adds a way to use conditional options
- * in controls, e.g. a "uiSize" control with options pulled from uiIconSizes:
- * @see https://github.com/storybookjs/storybook/discussions/24235
- */
-const uiIconNameOptions = uiIconsWithDirections.map((iconName) => {
-	const baseIconName = iconName.replace(/(Left|Right|Up|Down)$/, "");
-	// Icons like Gripper that don't have sizes yet, represented by any empty array.
-	if (uiIconSizes[baseIconName]?.length == 0) {
-		return [baseIconName];
-	}
-	return uiIconSizes[baseIconName]?.map(sizeNum => iconName + sizeNum) ?? [];
-}).flat();
+const sizes = ["xs", "s", "m", "l", "xl", "xxl"];
 
 /**
  * The Icon component contains all of the CSS used for displaying both workflow and UI icons.
@@ -34,6 +20,14 @@ export default {
 		size: {
 			...size(["xs", "s", "m", "l", "xl", "xxl"]),
 			if: { arg: "setName", eq: "workflow" },
+		},
+		showLabel: {
+			name: "Show icon name",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
 		},
 		setName: {
 			name: "Icon set",
@@ -63,9 +57,7 @@ export default {
 				type: { summary: "string" },
 				category: "Content",
 			},
-			options: [
-				...uiIconNameOptions,
-			],
+			options: uiIconsWithDirections,
 			control: "select",
 			if: { arg: "setName", eq: "ui" },
 		},

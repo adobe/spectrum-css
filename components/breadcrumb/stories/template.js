@@ -39,6 +39,7 @@ export const Template = (
 							ActionButton(
 								{
 									iconName,
+                                    iconSet: item.iconSet,
 									isDisabled,
 									isQuiet: true,
 									customIconClasses: [`${rootClass}-folder`],

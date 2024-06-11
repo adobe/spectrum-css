@@ -63,8 +63,8 @@ export const Picker = ({
 			)}
 			${Icon({
 				size,
-				setName: "ui",
 				iconName: "ChevronDown",
+				setName: "ui",
 				customClasses: [`${rootClass}-menuIcon`],
 			}, context)}
 		</button>
