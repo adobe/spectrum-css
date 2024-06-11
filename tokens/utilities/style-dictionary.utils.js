@@ -43,6 +43,7 @@ module.exports = function ({ setName } = {}) {
 		}[setName] ?? setName;
 
 	if (isGlobal) scope = "global";
+	selector = isGlobal ? ".spectrum" : `.spectrum--${scope}`;
 
 	const getSets = (token) =>
 		token.path.filter((_, idx, array) => array[idx - 1] == "sets");

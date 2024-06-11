@@ -125,7 +125,6 @@ async function main({
 		console.log("");
 
 	}).catch((err) => {
-
 		console.log(`\n\n${key} 🔨`);
 		console.log(`${"".padStart(30, "-")}`);
 
