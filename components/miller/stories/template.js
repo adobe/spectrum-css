@@ -1,7 +1,6 @@
+import { Template as AssetList } from "@spectrum-css/assetlist/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-
-import { Template as AssetList } from "@spectrum-css/assetlist/stories/template.js";
 
 import "../index.css";
 
@@ -10,7 +9,7 @@ export const Template = ({
 	customClasses = [],
 	columns,
 	...globals
-}) => {
+}, context) => {
 	if (!columns) {
 		console.warn("MillerColumns: Column data is required for rendering.");
 		return html``;
@@ -29,7 +28,7 @@ export const Template = ({
 						${AssetList({
 							...globals,
 							items,
-						})}
+						}, context)}
 					</div>
 				`;
 			})}

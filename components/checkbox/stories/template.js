@@ -1,12 +1,10 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -27,9 +25,8 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
-
 
 	let iconSize = "75";
 	switch (size) {
@@ -82,13 +79,13 @@ export const Template = ({
 					size,
 					iconName: `Checkmark${iconSize}`,
 					customClasses: [`${rootClass}-checkmark`],
-				})}
+				}, context)}
 				${Icon({
 					...globals,
 					size,
 					iconName: `Dash${iconSize}`,
 					customClasses: [`${rootClass}-partialCheckmark`],
-				})}
+				}, context)}
 			</span>
 			${when(
 				label,

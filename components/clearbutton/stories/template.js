@@ -1,9 +1,8 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -16,7 +15,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	...globals
-}) => html`
+}, context) => html`
 	<button
 		type="reset"
 		class=${classMap({
@@ -37,7 +36,7 @@ export const Template = ({
 				size,
 				iconName: "Cross",
 				customClasses: [`${rootClass}-icon`],
-			})}
+			}, context)}
 		</div>
 	</button>
 `;

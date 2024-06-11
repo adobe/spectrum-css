@@ -37,7 +37,6 @@ export const Template = ({
 	role,
 	...globals
 }) => {
-
 	return html`
 		<button
 			aria-label=${ifDefined(label)}
@@ -243,72 +242,74 @@ const Sizes = (args) =>
 	})}`;
 
 export const Variants = (args) => html`
-	<div class="spectrum-Typography" style=${styleMap({
+	<div style=${styleMap({
 		display: window.isChromatic() ? undefined : "none",
 	})}>
-		${Typography({
-			semantics: "detail",
-			size: "l",
-			content: ["Standard"],
-				customClasses: ["chromatic-ignore"],
-		})}
-		<div style=${styleMap({
-			"display": "flex",
-			"flex-direction": "column",
-			"gap": "4.8px",
-		})}>
-			${States(args)}
-		</div>
-	</div>
-	<div class="spectrum-Typography">
-		${Typography({
-			semantics: "detail",
-			size: "l",
-			content: ["Emphasized"],
-				customClasses: ["chromatic-ignore"],
-		})}
-		<div style=${styleMap({
-			"display": "flex",
-			"flex-direction": "column",
-			"gap": "4.8px",
-		})}>
-			${States({
-				...args,
-				isEmphasized: true,
+		<div class="spectrum-Typography">
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Standard"],
+					customClasses: ["chromatic-ignore"],
 			})}
+			<div style=${styleMap({
+				"display": "flex",
+				"flex-direction": "column",
+				"gap": "4.8px",
+			})}>
+				${States(args)}
+			</div>
 		</div>
-	</div>
-	<div class="spectrum-Typography">
-		${Typography({
-			semantics: "detail",
-			size: "l",
-			content: ["Quiet"],
-			customClasses: ["chromatic-ignore"],
-		})}
-		<div style=${styleMap({
-			"display": "flex",
-			"flex-direction": "column",
-			"gap": "4.8px",
-		})}>
-			${States({
-				...args,
-				isQuiet: true,
+		<div class="spectrum-Typography">
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Emphasized"],
+					customClasses: ["chromatic-ignore"],
 			})}
+			<div style=${styleMap({
+				"display": "flex",
+				"flex-direction": "column",
+				"gap": "4.8px",
+			})}>
+				${States({
+					...args,
+					isEmphasized: true,
+				})}
+			</div>
 		</div>
-	</div>
-	<div class="spectrum-Typography">
-		${Typography({
-			semantics: "detail",
-			size: "l",
-			content: ["Sizing"],
-			customClasses: ["chromatic-ignore"],
-		})}
-		<div style=${styleMap({
-			"display": "flex",
-			"flex-direction": "column",
-			"gap": "4.8px",
-		})}>
-			${Sizes(args)}
+		<div class="spectrum-Typography">
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Quiet"],
+				customClasses: ["chromatic-ignore"],
+			})}
+			<div style=${styleMap({
+				"display": "flex",
+				"flex-direction": "column",
+				"gap": "4.8px",
+			})}>
+				${States({
+					...args,
+					isQuiet: true,
+				})}
+			</div>
+		</div>
+		<div class="spectrum-Typography">
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: ["Sizing"],
+				customClasses: ["chromatic-ignore"],
+			})}
+			<div style=${styleMap({
+				"display": "flex",
+				"flex-direction": "column",
+				"gap": "4.8px",
+			})}>
+				${Sizes(args)}
+			</div>
 		</div>
 	</div>
 	<div style=${styleMap({

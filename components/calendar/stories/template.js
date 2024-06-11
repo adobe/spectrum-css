@@ -31,7 +31,7 @@ export const Template = ({
 	nextHandler,
 	id,
 	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
 
@@ -291,7 +291,7 @@ export const Template = ({
 						displayedMonth,
 						displayedYear,
 					}),
-				})}
+				}, context)}
 				${ActionButton({
 					...globals,
 					label: "Next",
@@ -305,7 +305,7 @@ export const Template = ({
 						displayedMonth,
 						displayedYear,
 					}),
-				})}
+				}, context)}
 			</div>
 			<div
 				class="${rootClass}-body"

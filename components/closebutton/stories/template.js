@@ -1,10 +1,8 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-
 import { capitalize, lowerCase, upperCase } from "lodash-es";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -18,8 +16,7 @@ export const Template = ({
 	id,
 	onclick,
 	...globals
-}) => {
-
+}, context) => {
 	return html`
 		<button
 			class=${classMap({
@@ -40,7 +37,7 @@ export const Template = ({
 				size,
 				iconName: "Cross",
 				customClasses: [`${rootClass}-UIIcon`],
-			})}
+			}, context)}
 		</button>
 	`;
 };

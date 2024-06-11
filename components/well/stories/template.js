@@ -7,13 +7,13 @@ export const Template = ({
 	rootClass = "spectrum-Well",
 	customClasses = [],
 	content = [],
-}) => html`
+}, context) => html`
 	<span
 		class=${classMap({
 			[rootClass]: true,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 	>
-	${content.map((c) => (typeof c === "function" ? c({}) : c))}
+	${content.map((c) => (typeof c === "function" ? c({}, context) : c))}
 	</span>
 `;

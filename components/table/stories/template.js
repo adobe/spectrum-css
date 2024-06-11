@@ -29,7 +29,7 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	size = "m",
-}) => {
+}, context) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
 
 	// Use Table tags or Div tags.
@@ -49,7 +49,7 @@ export const TableRowItem = ({
 						size: "300",
 						imageURL: "example-card-landscape.png",
 						isCover: true,
-					})}
+					}, context)}
 					<div class="spectrum-Table-thumbnailContent">${content}</div>
 				</div>
 			`;
@@ -89,7 +89,7 @@ export const TableRowItem = ({
 						isEmphasized: tableIsEmphasized,
 						isChecked: isSelected,
 						customClasses: [`${rootClass}-checkbox`],
-					})
+					}, context)
 				)}
 			</${cellTag}>`
 		)}
@@ -113,7 +113,7 @@ export const TableRowItem = ({
 									customClasses: [`${rootClass}-disclosureIcon`],
 									ariaExpanded: isExpanded,
 									ariaControls,
-								})
+								}, context)
 							)}
 							${useThumbnail ? getCellContent(0) : html`<div class="${rootClass}-collapseContent">${getCellContent(0)}</div>`}
 						</div>
@@ -162,7 +162,7 @@ export const Template = ({
 	rowItems = [],
 	customClasses = [],
 	id,
-}) => {
+}, context) => {
 	if (!rowItems || !rowItems.length) return html``;
 
 	// Use Table tags or Div tags.
@@ -212,7 +212,7 @@ export const Template = ({
 							isChecked: false,
 							isIndeterminate: true,
 							customClasses: [`${rootClass}-checkbox`],
-						})}
+						}, context)}
 					</${thTag}>`
 				)}
 				<${thTag}
@@ -225,12 +225,12 @@ export const Template = ({
 						iconName: "ArrowDown100",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
-					})}<span class="${rootClass}-columnTitle">Column title</span>${
+					}, context)}<span class="${rootClass}-columnTitle">Column title</span>${
 					Icon({
 						iconName: "ChevronDown100",
 						size,
 						customClasses: [`${rootClass}-menuIcon`],
-					})}
+					}, context)}
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell is-sortable"
@@ -242,7 +242,7 @@ export const Template = ({
 						iconName: "ArrowDown100",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
-					})}<span class="${rootClass}-columnTitle">Column title</span>
+					}, context)}<span class="${rootClass}-columnTitle">Column title</span>
 				</${thTag}>
 				<${thTag}
 					class="${rootClass}-headCell"
@@ -265,7 +265,7 @@ export const Template = ({
 					showThumbnails,
 					tableIsEmphasized: isEmphasized,
 					...item,
-				})
+				}, context)
 			)}
 		</${tbodyTag}>
 	</${tableTag}>

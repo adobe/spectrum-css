@@ -61,6 +61,7 @@ const fetchIconDetails = ({
 	}, {});
 
 	return {
+		icons,
 		workflowIcons: [...new Set(workflowIcons)],
 		uiIcons: [...new Set(uiIcons)],
 		uiIconSizes,
@@ -101,7 +102,8 @@ export const Template = ({
 	fill,
 	id,
 	customClasses = [],
-	icons = {},
+	icons,
+	useRef = false,
 	...globals
 } = {}, context) => {
 	let {
@@ -118,6 +120,11 @@ export const Template = ({
 			uiIcons,
 			uiIconSizes
 		});
+
+		if(details.icons) {
+			icons = details.icons;
+		}
+
 		if (!workflowIcons && details.workflowIcons) {
 			workflowIcons = details.workflowIcons;
 		}
@@ -237,7 +244,7 @@ export const Template = ({
 		return acc;
 	}, "");
 
-	if (svgString) {
+	if (!useRef && svgString) {
 		return html`${unsafeSVG(
 			svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
 		)}`;

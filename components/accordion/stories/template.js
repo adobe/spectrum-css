@@ -20,7 +20,7 @@ export const AccordionItem = ({
 	customClasses = [],
 	onclick,
 	...globals
-}) => html`
+}, context) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -53,7 +53,7 @@ export const AccordionItem = ({
 					size: iconSize,
 					customClasses: [`${rootClass}Indicator`],
 					...globals,
-				})}
+				}, context)}
 			</span>
 		</h3>
 		<!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
@@ -78,7 +78,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
 
 	if (!items || !items.size) return html``;
@@ -118,33 +118,33 @@ export const Template = ({
 						});
 						updateArgs({ items: newItems });
 					},
-				});
+				}, context);
 			})}
 		</div>
 	`;
 };
 
-export const AccordionGroup = (args) => html`
+export const AccordionGroup = (args, context) => html`
 	<div style=${styleMap({
 		"display": window.isChromatic() ? "none" : undefined,
 	})}>
-		${Template(args)}
+		${Template(args, context)}
 	</div>
 	<div style=${styleMap({
 		"display": window.isChromatic() ? "flex" : "none",
 		"flex-wrap": "wrap",
 		"gap": "28px"
 	})}>
-		${Template(args)}
+		${Template(args, context)}
 		${Template({
 			...args,
 			customStyles: {
 				maxInlineSize: "300px",
 			},
-		})}
+		}, context)}
 		${Template({
 			...args,
 			disableAll: true,
-		})}
+		}, context)}
 	</div>
 `;

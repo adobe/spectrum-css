@@ -17,7 +17,7 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	customStyles = {},
-}) => {
+}, context) => {
 	if (!Array.isArray(content)) {
 		content = [content];
 	}
@@ -41,7 +41,7 @@ export const Template = ({
 					id,
 					customClasses,
 					...c,
-				});
+				}, context);
 			}
 
 			if (typeof semantics === "undefined") {

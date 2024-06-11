@@ -1,11 +1,9 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -20,7 +18,7 @@ export const Template = ({
 	customClasses = [],
 	id,
 	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -81,12 +79,12 @@ export const Template = ({
 							...globals,
 							iconName: "Star",
 							customClasses: [`${rootClass}-starActive`],
-						})}
+						}, context)}
 						${Icon({
 							...globals,
 							iconName: "StarOutline",
 							customClasses: [`${rootClass}-starInactive`],
-						})}
+						}, context)}
 					</span>
 				`
 			)}

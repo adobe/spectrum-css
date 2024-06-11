@@ -12,7 +12,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}) => html`
+}, context) => html`
 		<div
 			class=${classMap({
 				[`${rootClass}-wrapper`]: true,
@@ -25,14 +25,14 @@ export const Template = ({
 			content,
 			id,
 			skipWrapper: true,
-		})}
+		}, context)}
 		</div>
 	`;
 
 export const TrayGroup = ({
 	heading,
 	...args
-}) => html`
+}, context) => html`
 	<div>
 		${Template({
 			...args,
@@ -41,9 +41,9 @@ export const TrayGroup = ({
 					heading,
 					content: ["You have 5 new messages!"],
 					isDismissable: false,
-				})
+				}, context)
 			],
-		})}
+		}, context)}
 		${Template({
 			...args,
 			content: [
@@ -51,12 +51,12 @@ export const TrayGroup = ({
 					heading: "You have new messages waiting in your inbox",
 					content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
 					isDismissable: false,
-				})
+				}, context)
 			],
 			customStyles: {
 				"display": window.isChromatic() ? undefined : "none",
 				"justify-content": "flex-end"
 			},
-		})}
+		}, context)}
 	</div>
 `;

@@ -1,10 +1,11 @@
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -14,10 +15,10 @@ export const Template = ({
 	inlineButtonLabel,
 	variant,
 	customClasses = [],
+	customStyles,
 	id,
 	...globals
-}) => {
-
+}, context) => {
 	const iconName =
 		variant === "negative"
 			? "Alert"
@@ -33,27 +34,28 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
+			styles=${styleMap(customStyles)}
 		>
-			${variant
-				? Icon({
-						...globals,
-						iconName: ifDefined(iconName),
-						size: "m",
-						customClasses: [`${rootClass}-typeIcon`],
-				})
-				: ""}
+			${when(variant, () =>
+				Icon({
+					...globals,
+					iconName: ifDefined(iconName),
+					size: "m",
+					customClasses: [`${rootClass}-typeIcon`],
+				}, context)
+			)}
 			<div class="${rootClass}-body">
 				<div class="${rootClass}-content">${message}</div>
-				${inlineButtonLabel
-					? Button({
-							...globals,
-							variant: "secondary",
-							size: "m",
-							staticColor: "white",
-							treatment: "outline",
-							label: inlineButtonLabel,
-					})
-					: ""}
+				${when(inlineButtonLabel, () =>
+					Button({
+						...globals,
+						variant: "secondary",
+						size: "m",
+						staticColor: "white",
+						treatment: "outline",
+						label: inlineButtonLabel,
+					}, context)
+				)}
 			</div>
 			<div class="${rootClass}-buttons">
 				${CloseButton({
@@ -61,7 +63,7 @@ export const Template = ({
 					size: "m",
 					staticColor: "white",
 					onclick,
-				})}
+				}, context)}
 			</div>
 		</div>
 	`;

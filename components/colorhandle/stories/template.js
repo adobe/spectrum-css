@@ -1,8 +1,7 @@
-import { html } from "lit";
-import { when } from "lit/directives/when.js";
-
 import { Template as ColorLoupe } from "@spectrum-css/colorloupe/stories/template.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { html } from "lit";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -16,7 +15,7 @@ export const Template = ({
 		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
 	},
 	...globals
-}) => {
+}, context) => {
 	const withColorLoupeStyles = () => isWithColorLoupe ? {
 		"position": "absolute",
 		"inset-block": "75%",
@@ -49,6 +48,6 @@ export const Template = ({
 				...customStyles,
 				...withColorLoupeStyles()
 			},
-		})
+		}, context)
 	);
 };

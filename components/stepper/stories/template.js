@@ -1,10 +1,10 @@
+import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
+import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
-import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -23,8 +23,7 @@ export const Template = ({
 		"--mod-actionbutton-icon-size": "10px",
 	},
 	...globals
-}) => {
-
+}, context) => {
 	let iconSize = "75";
 	switch (size) {
 		case "s":
@@ -69,31 +68,31 @@ export const Template = ({
 				id: id ? `${id}-input` : undefined,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: [`${rootClass}-input`],
-			})}
-			${hideStepper
-				? ""
-				: html`<span class="${rootClass}-buttons">
-						${InfieldButton({
-							...globals,
-							size,
-							customClasses: [`${rootClass}-button`],
-							iconName: `ChevronUp${iconSize}`,
-							isDisabled,
-							isQuiet,
-							position: "top",
-							tabIndex: "-1"
-						})}
-						${InfieldButton({
-							...globals,
-							size,
-							customClasses: [`${rootClass}-button`],
-							iconName: `ChevronDown${iconSize}`,
-							isDisabled,
-							isQuiet,
-							position: "bottom",
-							tabIndex: "-1"
-						})}
-				  </span>`}
+			}, context)}
+			${when(!hideStepper, () => html`
+				<span class="${rootClass}-buttons">
+					${InfieldButton({
+						...globals,
+						size,
+						customClasses: [`${rootClass}-button`],
+						iconName: `ChevronUp${iconSize}`,
+						isDisabled,
+						isQuiet,
+						position: "top",
+						tabIndex: "-1"
+					}, context)}
+					${InfieldButton({
+						...globals,
+						size,
+						customClasses: [`${rootClass}-button`],
+						iconName: `ChevronDown${iconSize}`,
+						isDisabled,
+						isQuiet,
+						position: "bottom",
+						tabIndex: "-1"
+					}, context)}
+				</span>
+			`)}
 		</div>
 	`;
 };

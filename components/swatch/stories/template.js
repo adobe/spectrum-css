@@ -1,12 +1,11 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase } from "lodash-es";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
 import "../index.css";
 
@@ -17,10 +16,11 @@ export const Template = ({
 	isDisabled = false,
 	rounding = "regular",
 	customClasses = [],
-	swatchColor = "rgb(174, 216, 230)",
+	swatchColor,
 	customStyles = {},
 	id,
-}) => {
+	...globals
+}, context) => {
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -34,6 +34,7 @@ export const Template = ({
 						)}`]: typeof rounding !== "undefined" && rounding !== "regular",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
+				"is-nothing": !isDisabled && (typeof swatchColor === "undefined" || swatchColor === "transparent"),
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			?disabled=${isDisabled}
@@ -54,7 +55,46 @@ export const Template = ({
 		>
 			${OpacityCheckerboard({
 				customClasses: [`${rootClass}-fill`],
-			})}
+				content: [
+					...(isDisabled ? [Icon({
+						...globals,
+						customClasses: [`${rootClass}-disabledIcon`],
+						setName: "workflow",
+						iconName: "Cancel",
+					}, context)] : []),
+				]
+			}, context)}
 		</div>
 	`;
 };
+
+export const SwatchGroup = (args, context) => html`
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : undefined,
+	})}>
+		${Template(args, context)}
+	</div>
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "flex" : "none",
+		"flex-wrap": "wrap",
+		"gap": "16px",
+	})}>
+		${Template(args, context)}
+		${Template({ ...args, swatchColor: "rgba(174, 216, 230, 0.3)" }, context)}
+		${Template({ ...args, swatchColor: undefined }, context)}
+		${Template({ ...args, rounding: "none" }, context)}
+		${Template({ ...args, rounding: "full" }, context)}
+	</div>
+`;
+
+export const States = (args, context) => html`
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "flex" : "none",
+		"flex-direction": "column",
+		"gap": "16px",
+	})}>
+		${SwatchGroup(args, context)}
+		${SwatchGroup({ ...args, isDisabled: true }, context)}
+		${SwatchGroup({ ...args, isSelected: true }, context)}
+	</div>
+`;
