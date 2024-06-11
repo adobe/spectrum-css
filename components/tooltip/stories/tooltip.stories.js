@@ -115,7 +115,7 @@ export default {
 			<style>
 				.spectrum-Detail { display: inline-block; }
 				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-100);
+					border: 1px solid var(--spectrum-gray-75);
 					border-radius: 4px;
 					padding: 0 14px 14px;
 					/* Why seafoam? Because it separates it from the component styles. */
