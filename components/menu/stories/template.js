@@ -3,6 +3,7 @@ import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -10,6 +11,22 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+
+/**
+ * Get the tray submenu back arrow name with scale number (defined in design spec).
+ */
+const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
+	switch (size) {
+		case "s":
+			return `${iconName}200`;
+		case "l":
+			return `${iconName}400`;
+		case "xl":
+			return `${iconName}500`;
+		default:
+			return `${iconName}300`;
+	}
+};
 
 export const MenuItem = ({
 	description,
@@ -58,7 +75,7 @@ export const MenuItem = ({
         isCollapsible || (selectionMode == "single" && isSelected),
         () => Icon({
           ...globals,
-          iconName: isCollapsible ? "ChevronRight" : "Checkmark",
+          iconName: iconWithScale(size, isCollapsible ? "ChevronRight" : "Checkmark"),
           size,
           customClasses: [
             `${rootClass}Icon`,
@@ -136,7 +153,7 @@ export const MenuItem = ({
       `)}
       ${when(isDrillIn, () => Icon({
         ...globals,
-        iconName: "ChevronRight",
+        iconName: iconWithScale(size, "ChevronRight"),
         size,
         customClasses: [
           `${rootClass}Icon`,
@@ -152,22 +169,6 @@ export const MenuItem = ({
       }, context))}
   </li>
 `;
-
-/**
- * Get the tray submenu back arrow name with scale number (defined in design spec).
- */
-const backArrowWithScale = (size = "m", iconName = "ArrowLeft") => {
-	switch (size) {
-		case "s":
-			return `${iconName}200`;
-		case "l":
-			return `${iconName}400`;
-		case "xl":
-			return `${iconName}500`;
-		default:
-			return `${iconName}300`;
-	}
-};
 
 export const MenuGroup = ({
 	heading,
@@ -207,7 +208,7 @@ export const MenuGroup = ({
           <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
             ${Icon({
               ...globals,
-              iconName: backArrowWithScale(size),
+              iconName: iconWithScale(size),
               size,
               customClasses: ["spectrum-Menu-backIcon"]
             }, context)}
@@ -243,7 +244,6 @@ export const MenuGroup = ({
     }, context)}
   </li>
 `;
-
 
 export const Template = ({
 	customClasses = [],
@@ -333,3 +333,270 @@ export const Template = ({
 	if (isTraySubmenu) return Tray({ content: [menuMarkup] }, context);
 	return menuMarkup;
 };
+
+
+const Sizes = (args) => ["s", "m", "l", "xl"].map((size) => html`
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: [
+				{
+					s: "Small",
+					m: "Medium",
+					l: "Large",
+					xl: "Extra-large",
+				}[size]
+			],
+			customClasses: ["chromatic-ignore"],
+		})}
+		<div>
+			${Template({...args, size})}
+		</div>
+	</div>
+`);
+
+const States = (args) => {
+	const { titlePrefix, firstAndLast } = args;
+	let stateData = [
+		{
+			stateTitle: "Default",
+			args: {},
+		},
+		{
+			stateTitle: "Hover",
+			args: { ...args, isItemHovered: true },
+		},
+		{
+			stateTitle: "Active (Down)",
+			args: { ...args, isItemActive: true },
+		},
+		{
+			stateTitle: "Focused",
+			args: { ...args, isItemFocused: true },
+		},
+		{
+			stateTitle: "Disabled",
+			args: { ...args, isDisabled: true },
+		}
+	];
+
+	// if testing hover/active/focus feels too heavy handed, we can remove those states
+	if (firstAndLast) {
+		stateData = [stateData[0], stateData[stateData.length - 1]];
+	}
+
+	return stateData.map((stateItem) => html`
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: [`${titlePrefix ? titlePrefix + ", ": ""}${stateItem.stateTitle}`],
+				customClasses: ["chromatic-ignore"],
+			})}
+			<div>
+				${Template({...args, ...stateItem.args})}
+			</div>
+		</div>
+	`);
+};
+
+const SingleItemSelectedStates = (args) => {
+	return html`
+			${States({
+				...args,
+				items: [{ label: "Not selected", isSelected: false, ...args.items[0] }],
+				titlePrefix: "Not selected",
+				firstAndLast: true,
+			})}
+			${States({
+				...args,
+				items: [{ label: "Selected item", isSelected: true, ...args.items[0] }],
+				titlePrefix: "Selected",
+				firstAndLast: true,
+			})}
+	`;
+};
+
+const MultiCheckboxSelectedStates = (args) => {
+	return html`
+		${States({
+			...args,
+			items: [{ label: "Not selected", isSelected: false, ...args.items[0]}],
+			titlePrefix: "Not Selected",
+			firstAndLast: true,
+		})}
+		${States({
+			...args,
+			items: [{ label: "Selected item", isSelected: true, ...args.items[0]}],
+			titlePrefix: "Selected",
+			firstAndLast: true,
+		})}
+	`;
+};
+
+const WithValueStates = (args) => {
+	const baseValueArgs = {...args, hasValue: true, singleItemValue: "Value"};
+	const valueData = [
+		{
+			stateTitle: "With value",
+			args: { ...baseValueArgs },
+		},
+		{
+			stateTitle: "With value, disabled",
+			args: { ...baseValueArgs, isDisabled: true },
+		},
+		{
+			stateTitle: "With value and switch",
+			args: { ...baseValueArgs, hasActions: true },
+		},
+		{
+			stateTitle: "With value, truncated label",
+			args: { ...baseValueArgs, shouldTruncate: true, maxInlineSize: "195px", items: [{ label: "Truncated label on menu item" }] },
+		},
+	];
+
+	return valueData.map((valueItem) => html`
+		<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: [ valueItem.stateTitle ],
+			customClasses: ["chromatic-ignore"],
+		})}
+			<div>
+				${Template({ ...args, ...valueItem.args })}
+			</div>
+		</div>
+	`);
+};
+
+export const MenuItemWithVariants = (args, context) => html`
+  <div style=${styleMap({
+		display: window.isChromatic() ? "none" : undefined,
+	})}>
+    ${Template({
+      iconName: "Share",
+      ...args
+    }, context)}
+  </div>
+  <div style=${styleMap({
+		display: window.isChromatic() ? "flex" : "none",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "1rem",
+    "--mod-detail-margin-end": ".3rem",
+	})}>
+    ${[
+      {
+        sectionTitle: "No selection",
+        sectionMarkup: States(args),
+      },
+      {
+        sectionTitle: "With item description and truncation",
+        sectionMarkup: States({...args, shouldTruncate: true, maxInlineSize: "150px", items: [{ label: "This is a longer menu item that will truncate", description: "This is a description of the menu item"}]}),
+      },
+      {
+        sectionTitle: "Single selection",
+        sectionMarkup: SingleItemSelectedStates({...args, selectionMode: "single" }),
+      },
+      {
+        sectionTitle: "Single selection with icon",
+        sectionMarkup: SingleItemSelectedStates({...args, selectionMode: "single", items: [{ label: "With icon", iconName: "Share" }] }),
+      },
+      {
+        sectionTitle: "Multi-selection with checkboxes",
+        sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple"}),
+      },
+      {
+        sectionTitle: "Multi-selection with checkboxes and icon",
+        sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", items: [{ label: "With icon", iconName: "Share" }]}),
+      },
+      {
+        sectionTitle: "Multi-selection with switches",
+        sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", hasActions: true}),
+      },
+      {
+        sectionTitle: "Multi-selection with switches and switch label",
+        sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", hasActions: true, items: [{ label: "Menu item", value: "switch label"}]}),
+      },
+      {
+        sectionTitle: "With values",
+        sectionMarkup: WithValueStates(args),
+      },
+      {
+        sectionTitle: "Sizes",
+        sectionMarkup: Sizes({ ...args, selectionMode: "single", items: [{ label: "With sizing", isSelected: true, iconName: "Share" }] }),
+      },
+    ].map((sectionItem) => html`
+      <div class="spectrum-Typography">
+      ${Typography({
+        semantics: "detail",
+        size: "l",
+        content: [sectionItem.sectionTitle],
+        customClasses: ["chromatic-ignore"],
+      })}
+      <div
+        style=${styleMap({
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "1.5rem",
+        })}
+      >
+        ${sectionItem.sectionMarkup}
+      </div>
+    </div>
+    `)}
+  </div>
+`;
+
+export const MenuWithVariants = (args, context) => html`
+  <div style=${styleMap({
+		display: window.isChromatic() ? "none" : undefined,
+	})}>
+    ${Template(args, context)}
+  </div>
+  <div style=${styleMap({
+		display: window.isChromatic() ? "flex" : "none",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "1rem",
+    "--mod-detail-margin-end": ".3rem",
+	})}>
+    ${[
+      {
+        stateTitle: "No selection",
+        args: { ...args, selectionMode: "none" },
+      },
+      {
+        stateTitle: "With dividers",
+        args: { ...args, selectionMode: "none", hasDividers: true },
+      },
+      {
+        stateTitle: "Single selection",
+        args: { ...args, selectionMode: "single" },
+      },
+      {
+        stateTitle: "Multi selection",
+        args: { ...args, selectionMode: "multiple" },
+      },
+    ].map((item) => html`
+<style>
+  /* For this testing preview, this is the heading closest to the component and therefore needs a separate color */
+  .spectrum-Detail { --mod-detail-font-color: var(--spectrum-seafoam-900); }
+</style>
+<div class="spectrum-Typography">
+  ${Typography({
+    semantics: "detail",
+    size: "l",
+    content: [ item.stateTitle ],
+    customClasses: ["chromatic-ignore"],
+  })}
+  <div>
+    ${Template({...args, ...item.args})}
+  </div>
+</div>
+
+    `)}
+  </div>
+`;

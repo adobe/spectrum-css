@@ -30,21 +30,21 @@ governing permissions and limitations under the License.
 	--spectrum-card-divider-color: var(--spectrum-gray-300);
 
 	/* Typography */
-	--spectrum-card-title-font-family: var(--spectrum-heading-sans-serif-font-family);
+	--spectrum-card-title-font-family: var(--spectrum-sans-serif-font);
 	--spectrum-card-title-font-size: var(--spectrum-heading-size-xs);
 	--spectrum-card-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
 	--spectrum-card-title-font-style: var(--spectrum-heading-sans-serif-font-style);
 	--spectrum-card-title-line-height: var(--spectrum-heading-line-height);
 	--spectrum-card-title-font-color: var(--spectrum-heading-color);
 
-	--spectrum-card-subtitle-font-family: var(--spectrum-detail-sans-serif-font-family);
+	--spectrum-card-subtitle-font-family: var(--spectrum-sans-serif-font);
 	--spectrum-card-subtitle-font-size: var(--spectrum-detail-size-s);
 	--spectrum-card-subtitle-font-weight: var(--spectrum-detail-sans-serif-font-weight);
 	--spectrum-card-subtitle-font-style: var(--spectrum-detail-sans-serif-font-style);
 	--spectrum-card-subtitle-line-height: var(--spectrum-detail-line-height);
 	--spectrum-card-subtitle-font-color: var(--spectrum-detail-color);
 
-	--spectrum-card-body-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-card-body-font-family: var(--spectrum-sans-serif-font);
 	--spectrum-card-body-font-size: var(--spectrum-body-size-s);
 	--spectrum-card-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
 	--spectrum-card-body-font-style: var(--spectrum-body-sans-serif-font-style);

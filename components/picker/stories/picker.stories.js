@@ -1,4 +1,4 @@
-import { Default as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
+import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template";

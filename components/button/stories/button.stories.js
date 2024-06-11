@@ -135,9 +135,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Button"],
 		},
-		html: {
-			root: ".spectrum-Button:first-of-type",
-		},
 	},
 	decorators: [
 		(Story, context) => html`
