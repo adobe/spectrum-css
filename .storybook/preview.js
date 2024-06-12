@@ -41,10 +41,6 @@ else {
 }
 
 export const args = {
-	color: "light",
-	scale: "medium",
-	reducedMotion: false,
-	express: false,
 	customClasses: [],
 };
 
@@ -148,7 +144,15 @@ export const decorators = [
 
 export default {
 	globalTypes,
-	argTypes,
+	argTypes: {
+		...argTypes,
+		// Disable the following controls from the previews as they are migrated to the global scope
+		// but are still temporarily used in the stories for backwards compatibility.
+		color: { table: { disable: true } },
+		scale: { table: { disable: true } },
+		reducedMotion: { table: { disable: true } },
+		express: { table: { disable: true } },
+	},
 	args,
 	parameters,
 	decorators,

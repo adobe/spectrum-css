@@ -89,7 +89,7 @@ Default.parameters = {
 	docs: {
 		story: {
 			inline: false,
-			iframeHeight: "250px",
+			height: "250px",
 		},
 	},
 };

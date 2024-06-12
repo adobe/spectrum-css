@@ -72,7 +72,7 @@ WithColorLoupe.parameters = {
 	docs: {
 		story: {
 			inline: false,
-			iframeHeight: "150px",
+			height: "150px",
 		},
 	},
 };

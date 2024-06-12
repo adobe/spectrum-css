@@ -22,8 +22,8 @@ export const Template = ({
 	id,
 	...globals
 }, context) => {
-	const { scale } = globals;
 	const [, updateArgs] = useArgs();
+	const scale = window.__scale;
 
 	const Dialog = html`
 		<div

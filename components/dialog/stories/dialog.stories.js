@@ -59,6 +59,7 @@ export default {
 		},
 		docs: {
 			story: {
+				inline: false,
 				height: "500px",
 			},
 		},

@@ -10,6 +10,16 @@
 	"scripts": {
 		"build": "storybook build --config-dir . --output-dir ./storybook-static"
 	},
+	"exports": {
+		".": "./preview.js",
+		"./decorator": "./decorators/index.js",
+		"./types": "./types/index.js",
+		"./main": "./main.js",
+		"./manager": "./manager.js",
+		"./preview": "./preview.js",
+		"./package.json": "./package.json",
+		"./deprecated/*": "./deprecated/*"
+	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
 		"@spectrum-css/tokens": "workspace:^",

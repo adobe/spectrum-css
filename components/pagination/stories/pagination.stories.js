@@ -12,7 +12,6 @@ export default {
 			name: "Size",
 			type: { name: "string", required: true },
 			table: {
-				disable: true,
 				type: { summary: "string" },
 				category: "Component",
 			},

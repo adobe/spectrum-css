@@ -70,7 +70,7 @@ WithMedia.parameters = {
 	docs: {
 		story: {
 			inline: false,
-			iframeHeight: "475px",
+			height: "475px",
 		},
 	},
 };
