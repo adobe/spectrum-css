@@ -13,8 +13,10 @@
 	"exports": {
 		".": "./preview.js",
 		"./decorator": "./decorators/index.js",
+		"./decorators/*.js": "./decorators/*.js",
 		"./types": "./types/index.js",
 		"./main": "./main.js",
+		"./modes": "./modes/index.js",
 		"./manager": "./manager.js",
 		"./preview": "./preview.js",
 		"./package.json": "./package.json",

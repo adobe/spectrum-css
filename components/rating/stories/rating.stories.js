@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template } from "./template";
 
 /**
@@ -75,6 +76,16 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
 export const ReadOnly = Template.bind({});
 ReadOnly.args = {
 	isReadOnly: true,
@@ -94,10 +105,4 @@ ReadOnlyEmphasized.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
-};
-
-export const Express = Template.bind({});
-Express.tags = ["vrt-only"];
-Express.args = {
-	express: true,
 };

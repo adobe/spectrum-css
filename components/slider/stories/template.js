@@ -27,11 +27,9 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
-
-	const textDirection = window.__dir;
+	const textDirection = window.__dir ?? "ltr";
 
 	const rtl = !!(textDirection === "rtl");
 	const rangeLength = max - min;
@@ -150,7 +148,6 @@ export const Template = ({
 				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
 			>
 				${FieldLabel({
-					...globals,
 					size,
 					label,
 					isDisabled,

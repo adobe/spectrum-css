@@ -1,8 +1,8 @@
+import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
@@ -92,15 +92,31 @@ export default {
 		size: "xl",
 		useRef: true,
 	},
+	chromatic: {
+		modes: mobile,
+	},
 };
 
-export const Default = (args) => window.isChromatic() ? TestTemplate(args) : Template({
-	...args,
-	iconName: args.iconName ?? args.uiIconName,
-	setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
-});
+const Variants = (args, context) => {
+	return window.isChromatic() ? TestTemplate(args, context) : Template({
+		...args,
+		iconName: args.iconName ?? args.uiIconName,
+		setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+	}, context);
+};
 
+export const Default = Variants.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
 
 /**
  * Chromatic VRT template that displays multiple icons to cover various options.
@@ -187,8 +203,8 @@ const WorkflowSizingTemplate = (args) => html`
 					})}
 				>
 					${Typography({
-						semantics: "detail",
-						size: "s",
+						semantics: "heading",
+						size: "xs",
 						content: [
 							{
 								xs: "Extra-small",

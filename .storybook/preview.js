@@ -13,6 +13,7 @@ import {
 } from "./decorators/index.js";
 import DocumentationTemplate from "./DocumentationTemplate.mdx";
 import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
+import modes from "./modes";
 import { argTypes, globalTypes } from "./types";
 
 window.global = window;
@@ -75,6 +76,7 @@ export const parameters = {
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
 		pauseAnimationAtEnd: true,
+		modes,
 	},
 	controls: {
 		expanded: true,

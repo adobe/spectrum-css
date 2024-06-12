@@ -1,6 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { ActionBarGroup, Template } from "./template";
 
 /**
@@ -83,6 +84,17 @@ export default {
 export const Default = ActionBarGroup.bind({});
 Default.args = {};
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
 export const Emphasized = Template.bind({});
 Emphasized.tags = ["docs-only"];
 Emphasized.args = {

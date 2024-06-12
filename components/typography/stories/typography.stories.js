@@ -1,7 +1,6 @@
-import { Template } from "./template";
-
-import { html } from "lit";
-import { when } from "lit/directives/when.js";
+import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template, TypographyGroup } from "./template";
 
 /**
  * Spectrum typography is broken out into several separate components.
@@ -71,32 +70,9 @@ export default {
 		glyph: "sans-serif",
 		semantics: "body",
 	},
-	parameters: {
-		actions: {
-			handles: [],
-		},
-	},
 };
 
-const Sizes = (args) => {
-	let supportedSizes = ["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"];
-	if (args.semantics === "body") supportedSizes = ["xs", "s", "m", "l", "xl", "xxl", "xxxl"];
-	else if (args.semantics === "detail") supportedSizes = ["s", "m", "l", "xl"];
-	else if (args.semantics === "code") supportedSizes = ["xs", "s", "m", "l", "xl"];
-
-	return html`${window.isChromatic() ? html`
-		<div class="spectrum-Typography">
-			${supportedSizes.reverse().map((size) => {
-			return html`${Template({
-				...args,
-				content: [`${size} - ${args.content.join("")}`],
-				size,
-			})}${when(["detail", "code"].includes(args.semantics), () => html`<br/>`)}`;
-			})}
-		</div>` : Template(args)}`;
-};
-
-export const Default = Template.bind({});
+export const Default = TypographyGroup.bind({});
 Default.args = {
 	content: [
 		{
@@ -116,13 +92,27 @@ Default.args = {
 	],
 };
 
-export const Heading = Sizes.bind({});
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+export const Heading = (args, context) => Sizes({ Template, ...args }, context);
 Heading.args = {
 	semantics: "heading",
 	content: ["Aliquet Mauris Eu"],
 };
+Heading.tags = ["docs-only"];
+Heading.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
-export const Body = Sizes.bind({});
+export const Body = (args, context) => Sizes({ Template, ...args }, context);
 Body.argTypes = {
 	size: {
 		name: "Size",
@@ -136,8 +126,12 @@ Body.args = {
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 	],
 };
+Body.tags = ["docs-only"];
+Body.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
-export const Detail = Sizes.bind({});
+export const Detail = (args, context) => Sizes({ Template, ...args }, context);
 Detail.argTypes = {
 	size: {
 		name: "Size",
@@ -153,8 +147,9 @@ Detail.args = {
 	semantics: "detail",
 	content: ["Aliquet Mauris Eu"],
 };
+Detail.tags = ["docs-only"];
 
-export const Code = Sizes.bind({});
+export const Code = (args, context) => Sizes({ Template, ...args }, context);
 Code.argTypes = {
 	size: {
 		name: "Size",
@@ -166,3 +161,4 @@ Code.args = {
 	semantics: "code",
 	content: ["console.log('Hello World!');"],
 };
+Code.tags = ["docs-only"];

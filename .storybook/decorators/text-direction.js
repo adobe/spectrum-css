@@ -1,4 +1,4 @@
-import { makeDecorator, useArgs, useEffect, useGlobals } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers } from "./helpers";
 
 /**
@@ -9,11 +9,7 @@ export const withTextDirectionWrapper = makeDecorator({
 	name: "withTextDirectionWrapper",
 	parameterName: "textDecoration",
 	wrapper: (StoryFn, context) => {
-		const [, updateGlobals] = useGlobals();
-		const [, updateArgs] = useArgs();
-
 		const {
-			args = {},
 			globals: {
 				textDirection = "ltr",
 			} = {},
@@ -22,15 +18,6 @@ export const withTextDirectionWrapper = makeDecorator({
 		} = context;
 
 		window.__dir = textDirection;
-
-		/**
-		 * @deprecated allow temporary fallback support for values defined in the args
-		 * */
-		if (args.textDirection && args.textDirection !== textDirection) {
-			updateGlobals({ textDirection: args.textDirection });
-			// prevents unnecessary re-renders
-			updateArgs({ textDirection: undefined });
-		}
 
 		useEffect(() => {
 			if (!textDirection) return;

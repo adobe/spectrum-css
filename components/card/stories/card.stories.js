@@ -1,7 +1,7 @@
-import { Template } from "./template";
-
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { CardGroup, Template } from "./template";
 
 /**
  * A card represents a rectangular space to contain text or images. Cards are typically used to encapsulate units of a data set, such as a gallery of image/caption pairs.
@@ -115,26 +115,43 @@ export default {
 	},
 };
 
-const defaultArgs = {
+export const Default = CardGroup.bind({});
+Default.args = {
 	title: "Card title",
 	image: "example-card-portrait.png",
 	description: "Optional description that should be one or two lines",
 	footer: [ "Footer" ],
 };
 
-export const Default = Template.bind({});
-Default.args = defaultArgs;
-export const Selected = Template.bind({});
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
+export const Selected = Default.bind({});
+Selected.tags = ["docs-only"];
+Selected.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 Selected.args = {
-	...defaultArgs,
 	isSelected: true
 };
-export const Focused = Template.bind({});
+
+export const Focused = Default.bind({});
 Focused.args = {
-	...defaultArgs,
 	isFocused: true,
 	title: "Card title that is longer and should wrap",
 	customStyles: { "max-inline-size": "205px"},
+};
+Focused.tags = ["docs-only"];
+Focused.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const Quiet = Template.bind({});
@@ -145,6 +162,10 @@ Quiet.args = {
 	description: "10/15/18",
 	isQuiet: true,
 };
+Quiet.tags = ["docs-only"];
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const QuietFile = Template.bind({});
 QuietFile.storyName = "Quiet (file)";
@@ -152,13 +173,18 @@ QuietFile.args = {
 	title: "FileName",
 	description: "PDF",
 	showAsset: "file",
+	image: undefined,
 	isQuiet: true,
+};
+QuietFile.tags = ["docs-only"];
+QuietFile.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const Horizontal = Template.bind({});
-Horizontal.argTypes = {
-	hasActions: { table: { disable: true } },
-	hasQuickAction: { table: { disable: true } },
+Horizontal.tags = ["docs-only"];
+Horizontal.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 Horizontal.args = {
 	title: "Card title",
@@ -169,7 +195,6 @@ Horizontal.args = {
 	hasActions: false,
 	hasQuickAction: false,
 };
-
 
 export const NoImage = Template.bind({});
 NoImage.args = {

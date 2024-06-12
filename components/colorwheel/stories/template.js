@@ -15,7 +15,6 @@ export const Template = ({
 	colorHandleStyle = {
 		"--spectrum-picked-color": "rgb(255, 0, 0)",
 	},
-	...globals
 }, context) => html`
 	<div class=${classMap({
 		[rootClass]: true,
@@ -27,7 +26,6 @@ export const Template = ({
 			<div class="${rootClass}-colorarea-container">
 			${when(isWithColorArea, () => html`
 				${ColorArea({
-					...globals,
 					isDisabled,
 					customStyles: {
 						"--mod-colorarea-width": "80px",
@@ -47,7 +45,6 @@ export const Template = ({
 			})}></div>
 		</div>
 		${ColorHandle({
-			...globals,
 			isDisabled,
 			customClasses: [`${rootClass}-handle`],
 			customStyles: colorHandleStyle,

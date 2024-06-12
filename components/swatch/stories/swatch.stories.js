@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { States } from "./template";
 
 /**
@@ -67,3 +68,13 @@ export default {
 
 export const Default = States.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = States.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

@@ -1,4 +1,4 @@
-import { makeDecorator, useArgs, useEffect, useGlobals } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers";
 
 /**
@@ -8,11 +8,7 @@ export const withReducedMotionWrapper = makeDecorator({
 	name: "withReducedMotionWrapper",
 	parameterName: "reducedMotion",
 	wrapper: (StoryFn, context) => {
-		const [, updateGlobals] = useGlobals();
-		const [, updateArgs] = useArgs();
-
 		const {
-			args = {},
 			globals: {
 				reducedMotion = false,
 			} = {},
@@ -21,15 +17,6 @@ export const withReducedMotionWrapper = makeDecorator({
 		} = context;
 
 		window.__reducedMotion = reducedMotion;
-
-		/**
-		 * @deprecated allow temporary fallback support for values defined in the args
-		 * */
-		if (args.reducedMotion && args.reducedMotion !== reducedMotion) {
-			updateGlobals({ reducedMotion: args.reducedMotion });
-			// prevents unnecessary re-renders
-			updateArgs({ reducedMotion: undefined });
-		}
 
 		useEffect(() => {
 			for (const container of fetchContainers(id, viewMode === "docs")) {

@@ -1,12 +1,10 @@
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Variants, renderContent } from "@spectrum-css/preview/decorators/utilities.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -22,7 +20,6 @@ export const AssetListItem = ({
 	isSelected = false,
 	isBranch = false,
 	onclick = () => {},
-	...globals
 }) => html`
 	<li
 		class=${classMap({
@@ -37,7 +34,6 @@ export const AssetListItem = ({
 	>
 		${when(isSelectable, () =>
 		Checkbox({
-			...globals,
 			size: "m",
 			isChecked: isSelected,
 			ariaLabelledby,
@@ -49,17 +45,10 @@ export const AssetListItem = ({
 			() =>
 				html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
 		)}
-		${when(iconName, () =>
-			Icon({
-				iconName,
-				customClasses: [`${rootClass}Thumbnail`],
-				...globals,
-			})
-		)}
+		${when(iconName, () => Icon({ iconName, customClasses: [`${rootClass}Thumbnail`] }))}
 		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
 		${when(!isSelectable && !isBranch, () =>
 			Checkbox({
-				...globals,
 				size: "m",
 				isChecked: isSelected,
 				ariaLabelledby,
@@ -70,7 +59,6 @@ export const AssetListItem = ({
 			Icon({
 				iconName: "ChevronRight100",
 				customClasses: [`${rootClass}ChildIndicator`],
-				...globals,
 			})
 		)}
 	</li>
@@ -81,12 +69,7 @@ export const Template = ({
 	items = [],
 	customClasses = [],
 	id,
-	...globals
-}) => {
-	if (!items) return html``;
-
-	const [, updateArgs] = useArgs();
-
+}, context) => {
 	return html`
 		<ul
 			class=${classMap({
@@ -95,18 +78,15 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 		>
-			${items.map((item) => {
-				return AssetListItem({
+			${renderContent(items, {
+				callback: AssetListItem,
+				args: {
 					rootClass: `${rootClass}-item`,
-					onclick: () => {
-						if (item.isDisabled) return;
-						item.isSelected = !item.isSelected;
-						updateArgs({ items });
-					},
-					...item,
-					...globals,
-				});
+				},
+				context
 			})}
 		</ul>
 	`;
 };
+
+export const AssetListGroup = Variants({ Template });

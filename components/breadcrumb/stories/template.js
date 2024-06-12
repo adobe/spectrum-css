@@ -1,20 +1,22 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators/utilities.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-
 import "../index.css";
 
-export const Template = ({
-	rootClass = "spectrum-Breadcrumbs",
-	customClasses = [],
-	items = [],
-	variant,
-	isDragged = false,
-	...globals
-}) => html`
+export const Template = (
+	{
+		rootClass = "spectrum-Breadcrumbs",
+		customClasses = [],
+		items = [],
+		variant,
+		isDragged = false,
+	},
+	context,
+) => html`
 	<nav>
 		<ul
 			class=${classMap({
@@ -35,14 +37,16 @@ export const Template = ({
 					${when(
 						iconName,
 						() =>
-							ActionButton({
-								...globals,
-								iconName,
-								isDisabled,
-								isQuiet: true,
-								customIconClasses: [`${rootClass}-folder`],
-								size: "m",
-							}),
+							ActionButton(
+								{
+									iconName,
+									isDisabled,
+									isQuiet: true,
+									customIconClasses: [`${rootClass}-folder`],
+									size: "m",
+								},
+								context,
+							),
 						() =>
 							when(
 								idx !== arr.length - 1,
@@ -57,18 +61,57 @@ export const Template = ({
 								() =>
 									html`<a class="${rootClass}-itemLink" aria-current="page"
 										>${label}</a
-									>`
-							)
+									>`,
+							),
 					)}
 					${when(idx !== arr.length - 1, () =>
-						Icon({
-							...globals,
-							iconName: "ChevronRight100",
-							customClasses: [`${rootClass}-itemSeparator`],
-						})
+						Icon(
+							{
+								iconName: "ChevronRight100",
+								setName: "ui",
+								customClasses: [`${rootClass}-itemSeparator`],
+							},
+							context,
+						),
 					)}
 				</li>`;
 			})}
 		</ul>
 	</nav>
 `;
+
+export const BreadcrumbGroup = Variants({
+	Template,
+	testData: [{
+		testHeading: "Default"
+	}, {
+		testHeading: "Compact",
+		variant: "compact",
+	},
+	{
+		testHeading: "Multiline",
+		variant: "multiline",
+		items: [
+			{
+				label: "Nav root",
+			},
+			{
+				iconName: "FolderOpen",
+				isDisabled: true,
+			},
+			{
+				label: "Trend",
+				isDragged: true,
+			},
+			{
+				label: "January 2019 Assets",
+			},
+		],
+	}],
+	stateData: [
+		{
+			testHeading: "Dragged",
+			isDragged: true,
+		}
+	]
+});

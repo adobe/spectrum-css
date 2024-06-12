@@ -20,14 +20,11 @@ export default {
 		},
 	},
 	args: {
-		isOpen: true,
 		rootClass: "spectrum-Underlay",
+		isOpen: false,
 	},
 	parameters: {
 		chromatic: { disableSnapshot: true },
-		actions: {
-			handles: []
-		}
 	}
 };
 

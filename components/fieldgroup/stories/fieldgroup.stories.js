@@ -1,6 +1,7 @@
-import { Template } from "./template";
-
-import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
+import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
+import { FieldGroupSet, Template } from "./template";
 
 /**
  * A field group is a group of fields, usually radios (also known as a radio group) or checkboxes
@@ -9,7 +10,7 @@ import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
  * can be used to mark a field group as optional or required. The field group items other than the
  * label must be wrapped in a nested `div` with `.spectrum-FieldGroupInputLayout` to control their
  * layout separately from the label. Help text may or may not appear below a field group and is
- * necessary when denoting invalid checkbox fields, invalid radio button fields, and required 
+ * necessary when denoting invalid checkbox fields, invalid radio button fields, and required
  * fields. Invalid radio buttons and checkboxes are signified by negative help text.
  */
 export default {
@@ -63,36 +64,55 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-FieldGroup",
-		layout: "vertical",
 		inputType: "radio",
 		labelPosition: "top",
+		layout: "vertical",
 		isInvalid: false,
 		isRequired: false,
-		items: [
-			{
-				id: "1",
-				label: "Kittens",
-			},
-			{
-				id: "2",
-				label: "Puppies",
-				isChecked: true,
-			},
-		],
-		fieldLabel: "Field Group Label",
-		helpText: "Select an option.",
 	},
 	parameters: {
 		actions: {
 			handles: [
-				...(Radio.parameters?.actions?.handles ?? [])
+				...(RadioSettings.parameters?.actions?.handles ?? [])
 			],
 		},
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = FieldGroupSet.bind({});
+Default.args = {
+	label: "Select one of the following options:",
+	items: [
+		Radio({
+			id: "apple",
+			label: "Apples are best",
+			customClasses: ["spectrum-FieldGroup-item"],
+		}),
+		Radio({
+			id: "banana",
+			label: "Bananas forever",
+			customClasses: ["spectrum-FieldGroup-item"],
+		}),
+		Radio({
+			id: "pear",
+			label: "Pears or bust",
+			customClasses: ["spectrum-FieldGroup-item"],
+		}),
+	],
+};
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+
+// ********* DOCS ONLY ********* //
 export const VerticalRadio = Template.bind({});
 VerticalRadio.tags = ["docs-only"];
 VerticalRadio.args = {
@@ -157,7 +177,7 @@ InvalidCheckbox.parameters = {
 
 /**
  * Field groups can be marked as optional or required, depending on the situation.
- * 
+ *
 * If required, the field group must either contain a "(required)" label or an asterisk. If an asterisk is used, help text must explain what the asterisk means.
  */
 export const Required = Template.bind({});

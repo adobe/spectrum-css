@@ -17,14 +17,10 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-	...globals
 }, context) => {
-	const iconName =
-		variant === "negative"
-			? "Alert"
-			: variant === "positive"
-				? "CheckmarkCircle"
-				: "Info";
+	let iconName = "Info";
+	if (variant === "negative") iconName = "Alert";
+	if (variant === "positive") iconName = "CheckmarkCircle";
 
 	return html`
 		<div
@@ -38,8 +34,7 @@ export const Template = ({
 		>
 			${when(variant, () =>
 				Icon({
-					...globals,
-					iconName: ifDefined(iconName),
+					iconName,
 					size: "m",
 					customClasses: [`${rootClass}-typeIcon`],
 				}, context)
@@ -48,7 +43,6 @@ export const Template = ({
 				<div class="${rootClass}-content">${message}</div>
 				${when(inlineButtonLabel, () =>
 					Button({
-						...globals,
 						variant: "secondary",
 						size: "m",
 						staticColor: "white",
@@ -59,7 +53,6 @@ export const Template = ({
 			</div>
 			<div class="${rootClass}-buttons">
 				${CloseButton({
-					...globals,
 					size: "m",
 					staticColor: "white",
 					onclick,

@@ -1,6 +1,6 @@
-import { Template } from "./template";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template } from "./template";
 
 /**
  * The in-field button component is a button used inside a text field.
@@ -93,6 +93,16 @@ Quiet.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
 
 export const Stacked = Template.bind({});

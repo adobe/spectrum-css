@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template } from "./template";
 
 /**
@@ -33,31 +34,40 @@ export default {
 	args: {
 		rootClass: "spectrum-SideNav",
 		hasIcon: false,
-		iconName: "Folder"
+		iconName: "Folder",
+		items: [
+			{
+				id: "section1",
+				title: "Section title 1",
+				link: "#",
+				isSelected: true,
+			},
+			{
+				id: "section2",
+				title: "Section title 2",
+				link: "#",
+				isDisabled: true,
+			},
+			{
+				id: "section3",
+				title: "Section title 3",
+				link: "#",
+			},
+		],
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	items: [
-		{
-			id: "section1",
-			title: "Section title 1",
-			link: "#",
-			isSelected: true,
-		},
-		{
-			id: "section2",
-			title: "Section title 2",
-			link: "#",
-			isDisabled: true,
-		},
-		{
-			id: "section3",
-			title: "Section title 3",
-			link: "#",
-		},
-	],
+Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
 
 export const Multilevel = Template.bind({});

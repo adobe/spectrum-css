@@ -19,7 +19,6 @@ export const Template = ({
 	swatchColor,
 	customStyles = {},
 	id,
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
 
@@ -57,7 +56,6 @@ export const Template = ({
 				customClasses: [`${rootClass}-fill`],
 				content: [
 					...(isDisabled ? [Icon({
-						...globals,
 						customClasses: [`${rootClass}-disabledIcon`],
 						setName: "workflow",
 						iconName: "Cancel",

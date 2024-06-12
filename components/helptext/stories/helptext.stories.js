@@ -1,4 +1,5 @@
-import { Template } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Variants } from "./template";
 
 /**
  * Help text provides either an informative description or an error message that gives more context about what a user needs to input. It's commonly used in forms.
@@ -13,7 +14,7 @@ export default {
 			table: {
 				type: { summary: "string" },
 				disable: false,
-				category: "Component",
+				category: "Content",
 			},
 			control: { type: "text" },
 		},
@@ -55,18 +56,10 @@ export default {
 			table: {
 				type: { summary: "boolean" },
 				category: "State",
+
 			},
 			control: "boolean",
 		},
-		customStyles: {
-			name: "Custom styles",
-			description: "Storybook only styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Advanced",
-			},
-			if: { arg: "customStyles" }
-		}
 	},
 	args: {
 		rootClass: "spectrum-HelpText",
@@ -78,14 +71,15 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.storyName = "Neutral";
+export const Default = Variants.bind({});
 Default.args = {};
 
-export const Negative = Template.bind({});
-Negative.storyName = "Negative";
-Negative.args = {
-	variant: "negative",
-	text: "This is an example with wrapping text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-	customStyles: {"max-width": "350px"},
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

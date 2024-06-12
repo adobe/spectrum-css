@@ -1,5 +1,5 @@
 import { Template } from "./template";
-
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 /**
@@ -132,6 +132,17 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+// @todo combine variants into one snapshot
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
 
 export const Icon = Template.bind({});
 Icon.args = {

@@ -7,12 +7,10 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-MillerColumns",
 	customClasses = [],
-	columns,
-	...globals
+	columns = [],
 }, context) => {
-	if (!columns) {
+	if (!columns || !columns.length) {
 		console.warn("MillerColumns: Column data is required for rendering.");
-		return html``;
 	}
 
 	return html`
@@ -25,10 +23,7 @@ export const Template = ({
 			${columns.map(({ items }) => {
 				return html`
 					<div class="${rootClass}-item">
-						${AssetList({
-							...globals,
-							items,
-						}, context)}
+						${AssetList({ items }, context)}
 					</div>
 				`;
 			})}

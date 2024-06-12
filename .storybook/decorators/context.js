@@ -1,4 +1,4 @@
-import { makeDecorator, useArgs, useEffect, useGlobals } from "@storybook/preview-api";
+import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, fetchStyleContainer, toggleStyles } from "./helpers";
 
 /**
@@ -13,7 +13,6 @@ export const withContextWrapper = makeDecorator({
 			args: {
 				rootClass,
 				staticColor,
-				...args
 			} = {},
 			globals: {
 				color = "light",
@@ -27,9 +26,6 @@ export const withContextWrapper = makeDecorator({
 			} = {}
 		} = data;
 
-		const [, updateGlobals] = useGlobals();
-		const [, updateArgs] = useArgs();
-
 		const staticColorSettings = {
 			"black": {
 				background: "var(--spectrum-docs-static-black-background-color)",
@@ -41,30 +37,10 @@ export const withContextWrapper = makeDecorator({
 			},
 		};
 
-		/**
-		 * @deprecated allow temporary fallback support for values defined in the args
-		 * */
-		if (args.color && args.color !== color) {
-			updateGlobals({ color: args.color });
-			// prevents unnecessary re-renders
-			updateArgs({ color: undefined });
-		}
-
-		if (args.express && context !== "express") {
-			updateGlobals({ context: "express" });
-			// prevents unnecessary re-renders
-			updateArgs({ express: undefined });
-		}
-
-		if (args.scale && args.scale !== scale) {
-			updateGlobals({ scale: args.scale });
-			// prevents unnecessary re-renders
-			updateArgs({ scale: undefined });
-		}
-
 		window.__color = color;
 		window.__context = context;
 		window.__scale = scale;
+
 		useEffect(() => {
 			const isExpress = Boolean(context === "express");
 			const isLegacy = Boolean(context !== "spectrum2");

@@ -48,7 +48,7 @@ addons.setConfig({
 	sidebar: {
 		showRoots: false,
 		filters: {
-			patterns: (item) => !item.id.includes("forced-colors") && ["docs-only", "vrt-only"].every(tag => !item.tags.includes(tag)),
+			patterns: (item) => !["docs-only", "vrt-only"].some(tag => item.tags.includes(tag)),
 		}
 	},
 });

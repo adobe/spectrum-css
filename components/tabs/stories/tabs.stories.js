@@ -1,8 +1,7 @@
-import { html } from "lit";
-
-import { Template } from "./template";
-
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { html } from "lit";
+import { Template } from "./template";
 
 /**
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.
@@ -159,6 +158,16 @@ const Variants = (args) => html`
 
 export const Default = Variants.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
 
 export const Vertical = Variants.bind({});
 Vertical.args = {

@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template } from "./template";
 
 /**
@@ -99,28 +100,37 @@ export default {
 		showThumbnails: false,
 		isDropTarget: false,
 		useScroller: false,
+		rowItems: [
+			{
+				cellContent: "Row Item Alpha",
+			},
+			{
+				cellContent: "Row Item Bravo",
+			},
+			{
+				cellContent: "Row Item Charlie",
+			},
+			{
+				cellContent: "Row Item Delta",
+			},
+			{
+				cellContent: "Row Item Echo",
+			},
+		],
 	},
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	rowItems: [
-		{
-			cellContent: "Row Item Alpha",
-		},
-		{
-			cellContent: "Row Item Bravo",
-		},
-		{
-			cellContent: "Row Item Charlie",
-		},
-		{
-			cellContent: "Row Item Delta",
-		},
-		{
-			cellContent: "Row Item Echo",
-		},
-	],
+Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
 
 /**
