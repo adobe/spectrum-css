@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.2.0
+
+### Minor Changes
+
+- [#2803](https://github.com/adobe/spectrum-css/pull/2803) [`2c5e5eb`](https://github.com/adobe/spectrum-css/commit/2c5e5ebc4d1dca38f877ad1e31f69315831c5717) Thanks [@castastrophe](https://github.com/castastrophe)! - Feature to migrate Storybook to use Vite's builder instead of Webpack. This change reduces the configuration complexity with more built-in features that align with our needs.
+
 ## 10.1.0
 
 ### Minor Changes
