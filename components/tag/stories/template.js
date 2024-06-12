@@ -59,6 +59,7 @@ export const Template = ({
 					...globals,
 					size,
 					iconName,
+					setName: "workflow",
 					customClasses: [`${rootClass}-itemIcon`],
 				})
 				: ""}

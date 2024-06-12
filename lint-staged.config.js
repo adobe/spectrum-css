@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	"components/*/*.css": [
 		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write",
 		"stylelint --fix --cache --allow-empty-input --quiet"

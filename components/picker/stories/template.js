@@ -65,6 +65,7 @@ export const Picker = ({
 					...globals,
 					size,
 					iconName: "Alert",
+					setName: "workflow",
 					customClasses: [`${rootClass}-validationIcon`],
 				})
 				: ""}
