@@ -6,7 +6,9 @@ import { version } from "../package.json";
 import { ModalGroup } from "./modal.test.js";
 
 /**
- * A modal component is a dialog box/popup window that is displayed on top of the current page.
+ * A modal component is a dialog box/popup window that is displayed on top of the current page using `position: fixed`.
+ * This is a base component used by other components, and should not be used on its own. If you
+ * need a full-featured modal for displaying content, take a look at the [Dialog](?path=/docs/components-dialog--docs) component instead.
  */
 export default {
 	title: "Modal",
@@ -16,7 +18,7 @@ export default {
 		variant: {
 			name: "Sizing preference",
 			description:
-				"Controls how the modal fills the available space. <ul><li>\"responsive\" will fill the screen on small viewports.</li><li>\"fullscreen\" will fill almost all of the available screen space.</li><li>\"fullscreenTakeover\" will fill all of the available screen space.</li></ul>",
+				"Controls how the modal fills the available space. <ul><li>\"responsive\" will fill the screen on small viewports.</li><li>\"fullscreen\" will fill almost all of the available screen space. Includes an outer margin.</li><li>\"fullscreenTakeover\" will fill all of the available screen space.</li></ul>",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
@@ -35,7 +37,8 @@ export default {
 		customStyles: {
 			// Without this, the content sits right up against the edge of the modal
 			padding: "20px",
-		}
+		},
+		showUnderlay: false,
 	},
 	parameters: {
 		layout: "fullscreen",
@@ -70,16 +73,23 @@ Default.args = {
 		}, context),
 	],
 };
+Default.parameters = {
+	docs: {
+		story: {
+			inline: false,
+		},
+	},
+};
 
 export const Fullscreen = ModalGroup.bind({});
-// Fullscreen.tags = ["!dev"];
+Fullscreen.tags = ["!dev"];
 Fullscreen.args = {
 	...Default.args,
 	variant: "fullscreen",
 };
 
 export const FullscreenTakeover = ModalGroup.bind({});
-// FullscreenTakeover.tags = ["!dev"];
+FullscreenTakeover.tags = ["!dev"];
 FullscreenTakeover.args = {
 	...Default.args,
 	variant: "fullscreenTakeover",
