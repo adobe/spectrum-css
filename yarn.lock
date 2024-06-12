@@ -5989,7 +5989,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^14.2.0, @spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
+"@spectrum-css/tokens-legacy@npm:@spectrum-css/tokens@^14.2.0":
+  version: 14.2.0
+  resolution: "@spectrum-css/tokens@npm:14.2.0"
+  checksum: 10c0/fea6145cb4d0e25b4a77aad849d8785d196bcf3f51c57b2b0337436ba0649ce14d007f1bca790cf083f5c6134651592d6f0f5cf171b6f5ecea3aa6df139f6233
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
