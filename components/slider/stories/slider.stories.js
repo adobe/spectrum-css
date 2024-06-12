@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -120,7 +121,14 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 		showTicks: false,
-		labelPosition: "top"
+		labelPosition: "top",
+		label: "Slider label",
+		size: "m",
+		min: 10,
+		max: 20,
+		values: [14],
+		step: 2,
+		id: "spectrum-Slider",
 	},
 	parameters: {
 		actions: {
@@ -134,15 +142,7 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	label: "Slider label",
-	size: "m",
-	min: 10,
-	max: 20,
-	values: [14],
-	step: 2,
-	id: "spectrum-Slider",
-};
+Default.args = {};
 
 export const Filled = Template.bind({});
 Filled.args = {
@@ -187,6 +187,16 @@ WithFocus.args = {
 	...Default.args,
 	variant: "with focus",
 	isFocused: true,
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = WithFocus.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
 
 export const Gradient = Template.bind({});

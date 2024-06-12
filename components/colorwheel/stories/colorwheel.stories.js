@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -51,21 +52,31 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-
+// ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
+Disabled.tags = ["docs-only"];
 Disabled.args = {
 	isDisabled: true,
 };
-Disabled.tags = ["docs-only"];
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const WithColorArea = Template.bind({});
+WithColorArea.tags = ["docs-only"];
 WithColorArea.args = {
 	isWithColorArea: true,
 };
-WithColorArea.tags = ["docs-only"];
 WithColorArea.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

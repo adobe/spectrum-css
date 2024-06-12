@@ -1,5 +1,6 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ColorSliderGroup, Template } from "./template";
 
 /**
  * The color slider component lets users visually change an individual channel of a color.
@@ -50,20 +51,36 @@ export default {
 		isFocused: false,
 		gradientType: "gradient",
 		vertical: false,
-		gradientStops:
-			["rgb(255, 0, 0) 0%", "rgb(255, 255, 0) 17%", "rgb(0, 255, 0) 33%", "rgb(0, 255, 255) 50%", "rgb(0, 0, 255) 67%", "rgb(255, 0, 255) 83%", "rgb(255, 0, 0) 100%"],
 	},
 	parameters: {
 		componentVersion: version,
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default = ColorSliderGroup.bind({});
+Default.args = {
+	gradientStops:
+		["rgb(255, 0, 0) 0%", "rgb(255, 255, 0) 17%", "rgb(0, 255, 0) 33%", "rgb(0, 255, 255) 50%", "rgb(0, 0, 255) 67%", "rgb(255, 0, 255) 83%", "rgb(255, 0, 0) 100%"],
+};
 
-export const Vertical = Template.bind({});
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
+export const Vertical = Default.bind({});
 Vertical.args = {
 	vertical: true,
+};
+Vertical.tags = ["docs-only"];
+Vertical.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const Alpha = Template.bind({});
@@ -73,8 +90,12 @@ Alpha.args = {
 		"--spectrum-picked-color": "rgba(0, 0, 0, 1)",
 	},
 };
+Alpha.tags = ["docs-only"];
+Alpha.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
-export const WithImage = Template.bind({});
+export const WithImage = Default.bind({});
 WithImage.args = {
 	gradientType: "image",
 	colorHandleStyle: {
@@ -83,8 +104,16 @@ WithImage.args = {
 	},
 };
 WithImage.storyName = "Image";
+WithImage.tags = ["docs-only"];
+WithImage.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
-export const Disabled = Template.bind({});
+export const Disabled = Default.bind({});
 Disabled.args = {
 	isDisabled: true,
+};
+Disabled.tags = ["docs-only"];
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
 };

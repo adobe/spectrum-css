@@ -12,7 +12,8 @@ export const withTestingPreviewWrapper = makeDecorator({
 		const {
 			globals: {
 				testingPreview = false,
-			} = {}
+			} = {},
+			viewMode,
 		} = context;
 
 		function init(isTestingPreview) {
@@ -20,7 +21,7 @@ export const withTestingPreviewWrapper = makeDecorator({
 			if (typeof window.isChromatic !== "function") {
 				// If we're not in Chromatic and we want to show the testing preview, we need to override the isChromatic function
 				// Otherwise, we need to reset it to the original function (in case it was overridden previously)
-				window.isChromatic = typeof isChromatic === "function" && isChromatic() ? isChromatic : () => isTestingPreview;
+				window.isChromatic = typeof isChromatic === "function" && isChromatic() ? isChromatic : () => isTestingPreview && viewMode !== "docs";
 			}
 		}
 

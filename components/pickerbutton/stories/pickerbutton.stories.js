@@ -1,4 +1,5 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -127,6 +128,16 @@ WithLabel.args = {
 	label: "Select",
 };
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
 export const Disabled = Template.bind({});
 Disabled.tags = ["vrt-only"];
 Disabled.args = {
@@ -137,10 +148,4 @@ export const Quiet = Template.bind({});
 Quiet.tags = ["vrt-only"];
 Quiet.args = {
 	isQuiet: true
-};
-
-export const Express = Template.bind({});
-Express.tags = ["vrt-only"];
-Express.args = {
-	express: true
 };

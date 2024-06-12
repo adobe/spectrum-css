@@ -1,6 +1,6 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
-
 import { Template } from "./template";
 
 /**
@@ -62,30 +62,42 @@ export default {
 	},
 };
 
-export const Default = (args) => html`
-	<div>
-		${Template({
-			...args
-		})}
+const Variants = (args, context) => {
+	return html`
+		<div>
+			${Template(args, context)}
+			${
+				window.isChromatic() ?
+					Template({
+						...args,
+						headerText: "in-line alert header announcing something very long and in-line",
+						text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+						customStyles: {"max-width": "400px"}
+					})
+					&&
+					Template({
+						...args,
+						headerText: "in-line alert header announcing something very long and in-line",
+						text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+						customStyles: {"max-width": "400px"},
+						variant: "notice",
+						isClosable: true,
+					})
+				: null
+			}
+		</div>
+	`;
+};
 
-		${
-			window.isChromatic() ?
-				Template({
-					...args,
-					headerText: "in-line alert header announcing something very long and in-line",
-					text: "this is a very urgent alert with a lot of context, so the text has to wrap",
-					customStyles: {"max-width": "400px"}
-				})
-				&&
-				Template({
-					...args,
-					headerText: "in-line alert header announcing something very long and in-line",
-					text: "this is a very urgent alert with a lot of context, so the text has to wrap",
-					customStyles: {"max-width": "400px"},
-					variant: "notice",
-					isClosable: true,
-				})
-			: null
-		}
-	</div>
-`;
+export const Default = Variants.bind({});
+Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

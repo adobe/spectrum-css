@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -44,9 +45,6 @@ export default {
 		isWithColorLoupe: false,
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
 		componentVersion: version,
 	},
 };
@@ -54,7 +52,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-
+// ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
@@ -76,5 +74,15 @@ WithColorLoupe.parameters = {
 			inline: false,
 			height: "150px",
 		},
+	},
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
 	},
 };

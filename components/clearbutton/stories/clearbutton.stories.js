@@ -1,4 +1,4 @@
-
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -53,7 +53,18 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
+// ********* VRT ONLY ********* //
 export const OverBackground = Template.bind({});
+OverBackground.tags = ["vrt-only"];
 OverBackground.args = {
 	staticColor: "white",
+};
+
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

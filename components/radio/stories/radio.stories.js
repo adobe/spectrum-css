@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
@@ -92,31 +93,46 @@ export default {
 	},
 };
 
-export const Default = (args) => html`
-	<div style="display: flex; flex-direction: column; align-items: flex-start;">
-		${Template({
-			...args,
-			label: "Default"
-		})}
-		${Template({
-			...args,
-			isEmphasized: true,
-			isChecked: true,
-			label: "Emphasized radio button label that is so long it has to wrap",
-			customStyles: {
-				"max-width": "220px",
-			}
-		})}
-		${Template({
-			...args,
-			isDisabled: true,
-			label: "Disabled"
-		})}
-		${Template({
-			...args,
-			isDisabled: true,
-			isReadOnly: true,
-			label: "Read only"
-		})}
-	</div>
-`;
+const Variants = (args, context) => {
+	return html`
+		<div style="display: flex; flex-direction: column; align-items: flex-start;">
+			${Template({
+				...args,
+				label: "Default"
+			}, context)}
+			${Template({
+				...args,
+				isEmphasized: true,
+				isChecked: true,
+				label: "Emphasized radio button label that is so long it has to wrap",
+				customStyles: {
+					"max-width": "220px",
+				}
+			}, context)}
+			${Template({
+				...args,
+				isDisabled: true,
+				label: "Disabled"
+			}, context)}
+			${Template({
+				...args,
+				isDisabled: true,
+				isReadOnly: true,
+				label: "Read only"
+			}, context)}
+		</div>
+	`;
+};
+
+export const Default = Variants.bind({});
+Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

@@ -13,7 +13,6 @@ export const Template = ({
 	isFocused = false,
 	customWidth,
 	customHeight,
-	...globals
 }, context) => html`
 	<div
 		class=${classMap({
@@ -35,7 +34,6 @@ export const Template = ({
 			})}
 		></div>
 		${ColorHandle({
-			...globals,
 			isDisabled,
 			customClasses: [`${rootClass}-handle`],
 			customStyles: {

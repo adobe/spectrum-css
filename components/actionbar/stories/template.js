@@ -2,9 +2,10 @@ import { Template as ActionGroup } from "@spectrum-css/actiongroup/stories/templ
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators/utilities.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
+
 import "../index.css";
 
 export const Template = ({
@@ -16,7 +17,6 @@ export const Template = ({
 	isFixed = false,
 	isFlexible = false,
 	customClasses = [],
-	...globals
 }) => html`
 	<div
 		class=${classMap({
@@ -32,22 +32,15 @@ export const Template = ({
 		})}
 	>
 		${Popover({
-			...globals,
 			customClasses: [`${rootClass}-popover`],
 			isOpen,
 			content: [
 				CloseButton({
-					...globals,
 					label: "Clear selection",
 					staticColor: isEmphasized ? "white" : undefined,
 				}),
-				FieldLabel({
-					...globals,
-					size: "s",
-					label: "2 Selected",
-				}),
+				FieldLabel({ size: "s", label: "2 Selected" }),
 				ActionGroup({
-					...globals,
 					size: "m",
 					areQuiet: true,
 					staticColor: isEmphasized ? "white" : undefined,
@@ -71,22 +64,28 @@ export const Template = ({
 	</div>
 `;
 
-export const ActionBarGroup = (args) => html`
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "none" : undefined,
-	})}>
-		${Template(args)}
-	</div>
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
-		"flex-direction": "column",
-		"flex-wrap": "nowrap",
-		"gap": "16px"
-	})}>
-		${Template(args)}
-		${Template({
-			...args,
+export const ActionBarGroup = Variants({
+	Template,
+	testData: [
+		{},
+		{
+			testHeading: "Emphasized",
 			isEmphasized: true,
-		})}
-	</div>
-`;
+		},
+	],
+	stateData: [
+		// @todo these only work if rendered in an iframe
+		// {
+		// 	testHeading: "Sticky",
+		// 	isSticky: true,
+		// },
+		// {
+		// 	testHeading: "Fixed",
+		// 	isFixed: true,
+		// },
+		// {
+		// 	testHeading: "Flexible",
+		// 	isFlexible: true,
+		// },
+	],
+});

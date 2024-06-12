@@ -14,7 +14,6 @@ export const Template = ({
 	hasIcon,
 	iconName,
 	items = [],
-	...globals
 }, context) => html`
   <nav>
     <ul class=${classMap({
@@ -36,12 +35,7 @@ export const Template = ({
               :
               html`
               <a class="${rootClass}-itemLink">
-              ${when(hasIcon, () =>
-                Icon({
-                    ...globals,
-                    iconName,
-                  }, context)
-                )}
+                ${when(hasIcon, () => Icon({ iconName }, context))}
                 <span class="${rootClass}-link-text">${item.title}</span>
               </a>
               `
@@ -57,7 +51,6 @@ export const Template = ({
                     variant,
                     hasIcon,
                     iconName,
-                    ...globals,
                     ...item
                   }, context);
                 })}
@@ -69,7 +62,6 @@ export const Template = ({
           return SideNavItem({
             hasIcon,
             iconName,
-            ...globals,
             ...item
           }, context);
         }
@@ -90,33 +82,35 @@ export const SideNavItem = ({
 	hasIcon,
 	iconName,
 	customClasses = [],
-	...globals
 }, context) => {
-	const displayIcon = hasIcon & variant === "multiLevel" ? false : true;
 	return html`
-    <li id=${id} class=${classMap({
-      [`${rootClass}-item`]: true,
-      "is-selected": isSelected,
-      "is-disabled": isDisabled,
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}>
-      <a href=${link} class="${rootClass}-itemLink">
-        ${when(displayIcon, () =>
-          Icon({
-            ...globals,
-            iconName,
-          }, context)
-        )}
-        <span class="${rootClass}-link-text">${title}</span>
+    <li
+      id=${ifDefined(id)}
+      class=${classMap({
+        [`${rootClass}-item`]: true,
+        "is-selected": isSelected,
+        "is-disabled": isDisabled,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+    >
+      <a
+        href=${ifDefined(link)}
+        class=${classMap({
+          [`${rootClass}-itemLink`]: true,
+        })}
+      >
+        ${when(!hasIcon & variant !== "multiLevel", () => Icon({ iconName }, context))}
+        <span class=${classMap({
+          [`${rootClass}-link-text`]: true,
+        })}>
+          ${title}
+        </span>
       </a>
       ${when(levelThreeItems, () => html`
-        <ul class=${rootClass}>
-          ${repeat(levelThreeItems, (item) => item.id, (item) => {
-            return SideNavItem({
-              ...globals,
-              ...item
-            }, context);
-          })}
+        <ul class=${classMap({
+          [rootClass]: true,
+        })}>
+          ${repeat(levelThreeItems, (item) => item.id, (item) => SideNavItem(item, context))}
         </ul>`
       )}
     </li>

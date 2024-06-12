@@ -24,7 +24,6 @@ export const Template = ({
 	ariaLabelledby,
 	customStyles = {},
 	customClasses = [],
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
 
@@ -75,13 +74,11 @@ export const Template = ({
 			/>
 			<span class="${rootClass}-box">
 				${Icon({
-					...globals,
 					size,
 					iconName: `Checkmark${iconSize}`,
 					customClasses: [`${rootClass}-checkmark`],
 				}, context)}
 				${Icon({
-					...globals,
 					size,
 					iconName: `Dash${iconSize}`,
 					customClasses: [`${rootClass}-partialCheckmark`],

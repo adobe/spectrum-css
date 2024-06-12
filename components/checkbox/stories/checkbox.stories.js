@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
@@ -131,4 +132,14 @@ const CheckboxGroup = (args) => html`
 export const Default = CheckboxGroup.bind({});
 Default.args = {
 	id: "default-checkbox",
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

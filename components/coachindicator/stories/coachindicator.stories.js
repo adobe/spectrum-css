@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { CoachIndicatorGroup } from "./template";
 
@@ -46,13 +47,16 @@ Default.parameters = {
 	},
 };
 
-export const WithForcedColors = CoachIndicatorGroup.bind({});
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
 WithForcedColors.tags = ["vrt-only"];
 WithForcedColors.parameters = {
 	// Sets the forced-colors media feature for a specific story.
 	chromatic: {
 		forcedColors: "active",
-		prefersReducedMotion: "reduce"
+		prefersReducedMotion: "reduce",
+		pauseAnimationAtEnd: true,
+		modes: disableDefaultModes
+
 	},
 };
-WithForcedColors.args = {};

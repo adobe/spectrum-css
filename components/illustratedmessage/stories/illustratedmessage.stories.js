@@ -1,8 +1,8 @@
+import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
-
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
-import { Template } from "./template";
+import { Template, Variants } from "./template";
 
 /**
  * The Illustrated Message displays an illustration along with a heading and description. Optionally, part of the illustration can use an accent color. It can be used for status and errors, or as a call to action. For example, the Drop Zone component makes use of Illustrated Message as an area to drag and drop files.
@@ -36,7 +36,6 @@ export default {
 				disable: true,
 			},
 		},
-		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-IllustratedMessage",
@@ -46,29 +45,8 @@ export default {
 	},
 };
 
-export const Default = (args) => html`
-	<div>
-		${Template({
-			...args,
-			heading: "Error 404: Page not found",
-			description: [
-				"This page isn't available. Try checking the URL or visit a different page.",
-			],
-			useAccentColor: false,
-		})}
-		${window.isChromatic() ?
-			Template({
-				...args,
-				heading: "Error 404: This is not the page you're looking for",
-				description: [
-					"This page isn't available.",
-				],
-				useAccentColor: false,
-			})
-			: null
-		}
-	</div>
-`;
+export const Default = Variants.bind({});
+Default.args = {};
 
 /**
  * To use the accent color, the class `.spectrum-IllustratedMessage-accent` can be added to element(s) within the illustration SVG.
@@ -82,4 +60,14 @@ AccentColor.args = {
 		},
 	],
 	useAccentColor: true,
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

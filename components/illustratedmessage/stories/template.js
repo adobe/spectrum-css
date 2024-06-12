@@ -112,3 +112,30 @@ const illustrationSvgMarkup = (withAccentColorClass = false) => html`
 		/>
 	</svg>
 `;
+
+
+export const Variants = (args, context) => {
+	return html`
+		<div>
+			${Template({
+				...args,
+				heading: "Error 404: Page not found",
+				description: [
+					"This page isn't available. Try checking the URL or visit a different page.",
+				],
+				useAccentColor: false,
+			}, context)}
+			${window.isChromatic() ?
+				Template({
+					...args,
+					heading: "Error 404: This is not the page you're looking for",
+					description: [
+						"This page isn't available.",
+					],
+					useAccentColor: false,
+				}, context)
+				: null
+			}
+		</div>
+	`;
+};

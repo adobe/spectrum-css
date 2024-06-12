@@ -24,7 +24,6 @@ export const Template = ({
 	isRounded = false,
 	customStyles = {},
 	onclick,
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
 
@@ -62,7 +61,6 @@ export const Template = ({
 					</span>
 				`)}
 				${Icon({
-					...globals,
 					setName: iconType,
 					iconName: iconName ?? "ChevronDown",
 					size,

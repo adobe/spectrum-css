@@ -1,7 +1,7 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-
 import { Template } from "./template";
 
 /**
@@ -23,7 +23,11 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-OpacityCheckerboard",
-		backgroundPosition: "left top"
+		backgroundPosition: "left top",
+		customStyles: {
+			"inline-size": "100%",
+			"block-size": "100%"
+		}
 	},
 	parameters: {
 		componentVersion: version,
@@ -34,12 +38,7 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	customStyles: {
-		"inline-size": "100%",
-		"block-size": "100%"
-	}
-};
+Default.args = {};
 
 export const CheckerboardPosition = Template.bind({});
 CheckerboardPosition.args = {
@@ -55,5 +54,15 @@ CheckerboardPosition.parameters = {
 			story:
 				"An example of using the <code>--mod-opacity-checkerboard-position</code> custom property to adjust the position of the checkerboard pattern.",
 		},
+	},
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
 	},
 };

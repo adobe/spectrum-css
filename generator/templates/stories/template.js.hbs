@@ -1,7 +1,10 @@
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
+
 import "../index.css";
 
 export const Template = ({
@@ -29,23 +32,37 @@ export const Template = ({
 
 export const {{ pascalCase name }}Group = (args, context) => html`
   <div style=${styleMap({
-    "display": window.isChromatic() ? "none" : undefined,
+    "display": window.isChromatic() ? "none" : "contents",
   })}>
-    ${Template(args)}
+    ${Template(args, context)}
   </div>
   <div style=${styleMap({
     "display": window.isChromatic() ? "flex" : "none",
-    "flex-wrap": "wrap",
-    "gap": "16px"
+		"flex-direction": "column",
+		"align-items": "flex-start",
+		"gap": "32px",
   })}>
-    ${Template(args, context)}
-    ${Template({
-      ...args,
-      // variant1
-    }, context)}
-    ${Template({
-      ...args,
-      // variant2
-    }, context)}
+		${[{
+      heading: "Default",
+      /* Add your variant properties here */
+    }].map(({ heading, ...item }) => html`
+			<div class="spectrum-Typography">
+				${Typography({
+					semantics: "heading",
+					size: "s",
+					content: [heading],
+				}, context)}
+				<div style=${styleMap({
+					"padding": "12px",
+					"border": "1px solid var(--spectrum-gray-200)",
+					"border-radius": "4px",
+				})}>
+					${Template({
+						...args,
+						...item,
+					}, context)}
+				</div>
+			</div>
+		`)}
   </div>
 `;

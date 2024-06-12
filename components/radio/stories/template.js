@@ -1,9 +1,8 @@
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { useArgs } from "@storybook/preview-api";
 
 import "../index.css";
 

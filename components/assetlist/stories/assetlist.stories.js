@@ -1,6 +1,7 @@
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { AssetListGroup } from "./template";
 
 /**
  * A selectable list of assets, often used inside of miller columns.
@@ -22,7 +23,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = AssetListGroup.bind({});
 Default.args = {
 	items: [
 		{
@@ -59,4 +60,14 @@ Default.args = {
 			checkboxId: "checkbox-4",
 		},
 	],
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

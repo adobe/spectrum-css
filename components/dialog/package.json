@@ -47,6 +47,13 @@
 			"optional": true
 		}
 	},
+	"devDependencies": {
+		"@spectrum-css/closebutton": "workspace:^",
+		"@spectrum-css/divider": "workspace:^",
+		"@spectrum-css/modal": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-css/underlay": "workspace:^"
+	},
 	"keywords": [
 		"spectrum",
 		"css",

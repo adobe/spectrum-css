@@ -1,7 +1,7 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { version } from "../package.json";
-
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
 
 /**
@@ -160,6 +160,16 @@ const Variants = (args) => html`
 
 export const Default = Variants.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
 
 export const Vertical = Variants.bind({});
 Vertical.args = {

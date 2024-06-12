@@ -1,4 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators/utilities.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -24,7 +25,6 @@ export const TreeViewItem = ({
 	thumbnail,
 	items,
 	customClasses = [],
-	...globals
 }, context) => {
 	if (type === "heading") {
 		return html`
@@ -40,7 +40,6 @@ export const TreeViewItem = ({
 				</div>
 				${when(typeof items !== "undefined" && items.length > 0, () =>
 					Template({
-						...globals,
 						items: items,
 						size,
 						rootClass: "spectrum-TreeView",
@@ -79,7 +78,6 @@ export const TreeViewItem = ({
 			>
 				${when(typeof items !== "undefined", () =>
 					Icon({
-						...globals,
 						size,
 						setName: "ui",
 						iconName: "ChevronRight",
@@ -88,7 +86,6 @@ export const TreeViewItem = ({
 				)}
 				${when(icon, () =>
 					Icon({
-						...globals,
 						size,
 						iconName: icon,
 						setName: iconSet,
@@ -97,7 +94,6 @@ export const TreeViewItem = ({
 				)}
 				${when(thumbnail, () =>
 					Thumbnail({
-						...globals,
 						...thumbnail,
 						size: size == "s"  ? "200"
 							: size == "m"  ? "200"
@@ -117,7 +113,6 @@ export const TreeViewItem = ({
 			</a>
 			${when(typeof items !== "undefined" && items.length > 0, () =>
 				Template({
-					...globals,
 					items: items,
 					size,
 					rootClass: "spectrum-TreeView",
@@ -136,7 +131,6 @@ export const Template = ({
 	variant,
 	isQuiet,
 	items,
-	...globals
 }, context) => html`
 	<ul
 		class=${classMap({
@@ -153,10 +147,242 @@ export const Template = ({
 			items,
 			(item) => item.id,
 			(item) => TreeViewItem({
-				...globals,
 				...item,
 				size,
 			}, context),
 		)}
 	</ul>
 `;
+
+export const TreeViewGroup = Variants({
+	Template,
+	testData: [
+		{},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		},
+		{
+			testHeading: "Folders and files",
+			items: [
+				{
+					id: "label1",
+					label: "Label 1",
+					link: "#",
+					icon: "Document",
+				},
+				{
+					id: "group1",
+					label: "Group 1",
+					link: "#",
+					isOpen: true,
+					isSelected: true,
+					icon: "Folder",
+					items: [
+						{
+							id: "label2",
+							label: "Label 2",
+							link: "#",
+							icon: "Document",
+						},
+						{
+							id: "label3",
+							label: "Label 3",
+							link: "#",
+							icon: "Document",
+						},
+						{
+							id: "label4",
+							label: "This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
+							link: "#",
+							icon: "Document",
+						},
+					],
+				},
+				{
+					id: "group2",
+					label: "Group 2",
+					link: "#",
+					icon: "Folder",
+					items: [
+						{
+							id: "label3",
+							label: "Label 3",
+							link: "#",
+							icon: "Document",
+						},
+						{
+							id: "group3",
+							label: "Group 3",
+							link: "#",
+							icon: "Folder",
+							items: [
+								{
+									id: "label4",
+									label: "Label 4",
+									link: "#",
+									icon: "Document",
+								},
+							],
+						},
+					],
+				},
+			],
+		},
+		{
+			testHeading: "Thumbnails",
+			variant: "thumbnail",
+			items: [
+				{
+					id: "group1",
+					label: "Group 1",
+					link: "#",
+					isOpen: true,
+					thumbnail: {
+						imageURL: "thumbnail.png",
+						altText: "Woman crouching",
+					},
+					items: [
+						{
+							id: "label2",
+							label: "Label 2",
+							link: "#",
+							isSelected: true,
+							thumbnail: {
+								imageURL: "thumbnail.png",
+								altText: "Woman crouching",
+							},
+						},
+						{
+							id: "label3",
+							label: "Label 3",
+							link: "#",
+							thumbnail: {
+								imageURL: "flowers.png",
+								altText: "Flowers",
+							},
+						},
+					],
+				},
+			],
+		},
+		{
+			testHeading: "With sections",
+			items: [
+				{
+					type: "heading",
+					label: "Section 1",
+					items: [
+						{
+							id: "group1",
+							label: "Group 1",
+							link: "#",
+							isOpen: true,
+							items: [
+								{
+									id: "label2",
+									label: "Label 2",
+									link: "#",
+								},
+								{
+									id: "label3",
+									label: "Label 3",
+									link: "#",
+								},
+							],
+						},
+					],
+				},
+				{
+					type: "heading",
+					label: "Section 2",
+					items: [
+						{
+							id: "label4",
+							label: "Label 4",
+							link: "#",
+						},
+					]
+				},
+			],
+		}, {
+			testHeading: "With drop target",
+			items: [
+				{
+					id: "label2",
+					label: "Label 2",
+					link: "#",
+					isDropTarget: true,
+				},
+				{
+					id: "label3",
+					label: "Label 3",
+					link: "#",
+				},
+			],
+		}, {
+			testHeading: "Flat markup",
+			items: [
+				{
+					id: "label1",
+					label: "Label 1. This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
+					link: "#",
+					isSelected: true,
+				},
+				{
+					id: "group1",
+					label: "Group 1",
+					link: "#",
+					isOpen: true,
+					items: [],
+				},
+				{
+					id: "label2",
+					label: "Label 2",
+					link: "#",
+					isDisabled: true,
+					customClasses: ["spectrum-TreeView-item--indent1"],
+				},
+				{
+					id: "label3",
+					label: "Label 3",
+					link: "#",
+					customClasses: ["spectrum-TreeView-item--indent1"],
+				},
+				{
+					id: "label4",
+					label: "Label 4",
+					link: "#",
+				},
+				{
+					id: "group2",
+					label: "Group 2",
+					link: "#",
+					isOpen: true,
+					items: [],
+				},
+				{
+					id: "label5",
+					label: "Label 5",
+					link: "#",
+					customClasses: ["spectrum-TreeView-item--indent1"],
+				},
+				{
+					id: "group3",
+					label: "Group 3",
+					link: "#",
+					isOpen: true,
+					items: [],
+					customClasses: ["spectrum-TreeView-item--indent1"],
+				},
+				{
+					id: "label6",
+					label: "Label 6",
+					link: "#",
+					customClasses: ["spectrum-TreeView-item--indent2"],
+				},
+			],
+		}
+	],
+	sizeDirection: "row",
+});

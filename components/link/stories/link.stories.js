@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -58,8 +59,6 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Link",
-		url: "https://www.adobe.com",
-		text: "Link using spectrum-Link",
 		isQuiet: false,
 	},
 	parameters: {
@@ -71,4 +70,17 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	url: "https://www.adobe.com",
+	text: "Learn more about Adobe",
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

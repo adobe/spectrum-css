@@ -1,3 +1,5 @@
+import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { TrayGroup } from "./template";
 
@@ -26,9 +28,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Tray",
-		customClasses: ["spectrum-Modal"],
-		isOpen: true,
-		heading: "New messages",
+		isOpen: false,
 	},
 	parameters: {
 		chromatic: {
@@ -39,4 +39,38 @@ export default {
 };
 
 export const Default = TrayGroup.bind({});
-Default.args = {};
+Default.args = {
+	isOpen: true,
+	content: [
+		Dialog.bind(null, {
+			heading: "New messages",
+			content: ["You have 5 new messages!"],
+			isDismissable: false,
+		})
+	],
+};
+Default.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: {
+			...disableDefaultModes,
+			"Desktop": {},
+			"Mobile": {
+				// object with width
+				viewport: {
+					width: 480,
+				},
+			},
+		}
+	},
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = TrayGroup.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

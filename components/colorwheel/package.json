@@ -27,12 +27,6 @@
 		"@spectrum-css/colorloupe": ">=5",
 		"@spectrum-css/tokens": ">=14"
 	},
-	"devDependencies": {
-		"@spectrum-css/colorarea": "workspace:^",
-		"@spectrum-css/colorhandle": "workspace:^",
-		"@spectrum-css/colorloupe": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^"
-	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/colorarea": {
 			"optional": true
@@ -40,6 +34,12 @@
 		"@spectrum-css/colorloupe": {
 			"optional": true
 		}
+	},
+	"devDependencies": {
+		"@spectrum-css/colorarea": "workspace:^",
+		"@spectrum-css/colorhandle": "workspace:^",
+		"@spectrum-css/colorloupe": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",

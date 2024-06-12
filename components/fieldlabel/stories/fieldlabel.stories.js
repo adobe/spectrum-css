@@ -1,5 +1,6 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { FieldLabelGroup } from "./template";
 
 /**
  * The field label component is used along with inputs to display a label for that input.
@@ -68,30 +69,17 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = FieldLabelGroup.bind({});
 Default.args = {
 	label: "Label",
 };
 
-export const RightAligned = Template.bind({});
-RightAligned.args = {
-	label: "Label",
-	alignment: "right",
-	customStyles: { width: "72px" },
-};
-
-export const Required = Template.bind({});
-Required.args = {
-	label: "Label example",
-	alignment: "left",
-	isRequired: true,
-	customStyles: { width: "200px" },
-};
-
-export const WrappingAndRequired = Template.bind({});
-WrappingAndRequired.args = {
-	label: "Label example with longer text that will wrap to the next line. And with an asterisk that marks it as required.",
-	alignment: "left",
-	isRequired: true,
-	customStyles: { width: "200px" },
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

@@ -1,9 +1,9 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { version } from "../package.json";
-
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
 
 /**
@@ -155,8 +155,8 @@ const PlacementVariants = (args) => html`
 				return html`
 					<div class="spectrum-Typography">
 						${Typography({
-							semantics: "detail",
-							size: "l",
+							semantics: "heading",
+							size: "s",
 							content: [option],
 							customClasses: ["chromatic-ignore"],
 						})}
@@ -169,8 +169,8 @@ const PlacementVariants = (args) => html`
 							>
 							${when(optionDescription() !== null, () => html`
 								${Typography({
-									semantics: "detail",
-									size: "s",
+									semantics: "heading",
+									size: "xs",
 									content: [optionDescription()],
 									customClasses: ["chromatic-ignore"],
 								})}
@@ -189,3 +189,13 @@ const PlacementVariants = (args) => html`
 
 export const Default = PlacementVariants.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = PlacementVariants.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

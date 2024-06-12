@@ -4,7 +4,6 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -26,10 +25,7 @@ export const Picker = ({
 	isDisabled = false,
 	customClasses = [],
 	customStyles = {},
-	...globals
 }, context) => {
-	const [, updateArgs] = useArgs();
-
 	return html`
 		<button
 			class=${classMap({
@@ -48,8 +44,8 @@ export const Picker = ({
 			aria-haspopup="listbox"
 			style=${ifDefined(styleMap(customStyles))}
 			type="button"
-			@click=${() => {
-				updateArgs({ isOpen: !isOpen });
+			@click=${(e) => {
+				e.target.classList.toggle("is-open", !isOpen);
 			}}
 		>
 			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
@@ -61,14 +57,12 @@ export const Picker = ({
 			)}
 			${when(isInvalid && !isLoading, () =>
 				Icon({
-					...globals,
 					size,
 					iconName: "Alert",
 					customClasses: [`${rootClass}-validationIcon`],
 				}, context)
 			)}
 			${Icon({
-				...globals,
 				size,
 				setName: "ui",
 				iconName: "ChevronDown",
@@ -99,7 +93,6 @@ export const Template = ({
 	customPopoverStyles = {},
 	content = [],
 	id,
-	...globals
 }, context) => {
 	let iconName = "ChevronDown200";
 	switch (size) {
@@ -119,7 +112,6 @@ export const Template = ({
 	return html`
 		${when(label, () =>
 			FieldLabel({
-				...globals,
 				size,
 				label,
 				isDisabled,
@@ -130,7 +122,6 @@ export const Template = ({
 		${labelPosition == "left" ?
 			html`<div style="display: inline-block">
 				${Picker({
-					...globals,
 					rootClass,
 					size,
 					placeholder,
@@ -152,7 +143,6 @@ export const Template = ({
 			`
 		:
 			Picker({
-				...globals,
 				rootClass,
 				size,
 				placeholder,
@@ -180,7 +170,6 @@ export const Template = ({
 		)}
 		${when(content.length !== 0, () =>
 				Popover({
-					...globals,
 					isOpen: isOpen && !isDisabled,
 					withTip: false,
 					position: "bottom",
@@ -190,7 +179,6 @@ export const Template = ({
 				}, context)
 		)}
 		${when(withSwitch, () => Switch({
-			...globals,
 			size,
 			label: "Toggle switch",
 			customStyles: {

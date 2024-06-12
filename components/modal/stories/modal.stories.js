@@ -1,5 +1,6 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ModalGroup } from "./template";
 
 /**
  * A modal component is a dialog box/popup window that is displayed on top of the current page.
@@ -35,13 +36,23 @@ export default {
 	args: {
 		isOpen: true,
 		rootClass: "spectrum-Modal",
+		// @todo use a more exciting example
+		content: ["Modal is a base component used by other components, and should not be used on its own."],
 	},
 	parameters: {
 		componentVersion: version,
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {
-	content: ["Modal is a base component used by other components, and should not be used on its own."],
+export const Default = ModalGroup.bind({});
+Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

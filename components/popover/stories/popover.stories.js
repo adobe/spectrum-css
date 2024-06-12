@@ -1,38 +1,8 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { userEvent, within } from "@storybook/testing-library";
-import { html } from "lit";
-import { when } from "lit/directives/when.js";
-import { version } from "../package.json";
-
-import { Template } from "./template";
-
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
-
-const placementOptions = [
-	"top",
-	"top-left",
-	"top-right",
-	"top-start",
-	"top-end",
-	"bottom",
-	"bottom-left",
-	"bottom-right",
-	"bottom-start",
-	"bottom-end",
-	"right",
-	"right-bottom",
-	"right-top",
-	"left",
-	"left-bottom",
-	"left-top",
-	"start",
-	"start-top",
-	"start-bottom",
-	"end",
-	"end-top",
-	"end-bottom",
-];
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { version } from "../package.json";
+import { Template, Variants } from "./template";
 
 /**
  * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
@@ -72,45 +42,38 @@ export default {
 				category: "Component",
 			},
 			control: "select",
-			options: placementOptions,
+			options: [
+				"top",
+				"top-left",
+				"top-right",
+				"top-start",
+				"top-end",
+				"bottom",
+				"bottom-left",
+				"bottom-right",
+				"bottom-start",
+				"bottom-end",
+				"right",
+				"right-bottom",
+				"right-top",
+				"left",
+				"left-bottom",
+				"left-top",
+				"start",
+				"start-top",
+				"start-bottom",
+				"end",
+				"end-top",
+				"end-bottom",
+			],
 			if: { arg: "nested", truthy: false },
 		},
 	},
 	args: {
 		rootClass: "spectrum-Popover",
-		isOpen: false,
+		isOpen: true,
 		withTip: false,
 		position: "top",
-		testId: "popover-1",
-		id: "popover-1",
-		triggerId: "trigger",
-		trigger: (passthroughs) => ActionButton({
-			label: "Hop on pop(over)",
-			id: "trigger",
-			...passthroughs,
-		}),
-		content: [
-			() => Menu({
-				items: [
-					{
-						iconName: "Edit",
-						label: "Edit",
-					},
-					{
-						iconName: "Copy",
-						label: "Copy",
-					},
-					{
-						iconName: "Move",
-						label: "Move",
-					},
-					{
-						iconName: "Delete",
-						label: "Delete",
-					},
-				],
-			}),
-		],
 	},
 	parameters: {
 		layout: "centered",
@@ -121,86 +84,50 @@ export default {
 		},
 		componentVersion: version,
 	},
-	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div style="padding: 16px">${Story(context)}</div>
-		`,
+};
+
+export const Default = Template.bind({});
+Default.args = {
+	testId: "popover-1",
+	id: "popover-1",
+	triggerId: "trigger",
+	trigger: (passthroughs) => ActionButton({
+		isSelected: passthroughs.isOpen,
+		label: "Hop on pop(over)",
+		id: "trigger",
+		...passthroughs,
+	}),
+	content: [
+		(passthroughs) => Menu({
+			items: [
+				{
+					iconName: "Edit",
+					label: "Edit",
+				},
+				{
+					iconName: "Copy",
+					label: "Copy",
+				},
+				{
+					iconName: "Move",
+					label: "Move",
+				},
+				{
+					iconName: "Delete",
+					label: "Delete",
+				},
+			],
+			...passthroughs,
+		}),
 	],
 };
 
-
-const ChromaticTipPlacementVariants = (args) => html`
-	${placementOptions.map(option => {
-		const optionDescription = () => {
-			if (option.startsWith("start") || option.startsWith("end"))
-				return "Changes side with text direction (like a logical property)";
-			if (option.startsWith("left") || option.startsWith("right"))
-				return "Text direction does not affect the position";
-			return null;
-		};
-
-		return html`
-			<div class="spectrum-Typography" style="padding-bottom: 12rem;">
-				${Typography({
-					semantics: "detail",
-					size: "l",
-					content: [option],
-				customClasses: ["chromatic-ignore"],
-				})}
-				<div>
-					${when(optionDescription() !== null, () => html`
-						${Typography({
-							semantics: "detail",
-							size: "s",
-							content: [optionDescription()],
-							customClasses: ["chromatic-ignore"],
-						})}
-					`)}
-				</div>
-				<div style="padding-top: 2rem">
-					${Template({
-						...args,
-						position: option,
-						isOpen: true,
-						trigger: () => null,
-					})}
-				</div>
-			</div>
-		`;
-	})}
-`;
-
-export const Default = Template.bind({});
-Default.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-	await userEvent.click(canvas.getByRole("button"));
-};
-Default.args = {};
-
-export const WithTip = (args) => html`
-	${window.isChromatic() ? ChromaticTipPlacementVariants(args) : Template(args)}
-`;
-WithTip.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-	window.isChromatic() ? null : await userEvent.click(canvas.getByRole("button"));
-};
+export const WithTip = Variants.bind({});
 WithTip.args = {
 	withTip: true,
 };
 
 export const Nested = Template.bind({});
-Nested.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-	await userEvent.click(canvas.getAllByRole("button")[0]);
-	await userEvent.click(canvas.getAllByRole("button")[1]);
-};
 Nested.args = {
 	nested: true,
 	testId: "popover-nested",
@@ -263,4 +190,14 @@ Nested.args = {
 			],
 		}),
 	],
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
