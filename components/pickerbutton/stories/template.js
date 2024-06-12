@@ -4,6 +4,8 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
+
 import "../index.css";
 
 export const Template = ({
@@ -23,7 +25,7 @@ export const Template = ({
 	customStyles = {},
 	onclick,
 	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -54,18 +56,18 @@ export const Template = ({
 			}}
 		>
 			<div class="${rootClass}-fill">
-				${label
-					? html`<span class="${rootClass}-label is-placeholder"
-							>${label}</span
-					  >`
-					: ""}
+				${when(label, () => html`
+					<span class="${rootClass}-label is-placeholder">
+						${label}
+					</span>
+				`)}
 				${Icon({
 					...globals,
 					setName: iconType,
 					iconName: iconName ?? "ChevronDown",
 					size,
 					customClasses: [`${rootClass}-icon`],
-				})}
+				}, context)}
 			</div>
 		</button>
 	`;

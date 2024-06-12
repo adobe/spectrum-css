@@ -1,27 +1,21 @@
-const { resolve, join } = require("path");
-const { readdirSync, existsSync } = require("fs");
-
-const componentsPath = resolve(__dirname, "../components");
-const componentPkgs = readdirSync(componentsPath, {
-	withFileTypes: true,
-})
-	.filter((dirent) => dirent.isDirectory() && existsSync(join(dirent.path, dirent.name, "package.json")))
-	.map((dirent) => dirent.name);
-
-module.exports = {
-	stories: [{
-		directory: "../components",
-		files: "*/stories/*.@(stories.js|mdx)",
-		titlePrefix: "Components",
-	}, {
-		directory: "./guides",
-		files: "*.mdx",
-		titlePrefix: "Guides",
-	}, {
-		directory: "./deprecated",
-		files: "**/*.@(stories.js|mdx)",
-		titlePrefix: "Deprecated",
-	}],
+export default {
+	stories: [
+		{
+			directory: "../components",
+			files: "*/stories/*.@(stories.js|mdx)",
+			titlePrefix: "Components",
+		},
+		{
+			directory: "./guides",
+			files: "*.@(stories.js|mdx)",
+			titlePrefix: "Guides",
+		},
+		{
+			directory: "./deprecated",
+			files: "**/*.@(stories.js|mdx)",
+			titlePrefix: "Deprecated",
+		},
+	],
 	rootDir: "../",
 	staticDirs: ["../assets"],
 	addons: [
@@ -55,121 +49,32 @@ module.exports = {
 	core: {
 		disableTelemetry: true,
 		disableWhatsNewNotifications: true,
+		builder: "@storybook/builder-vite",
 	},
-	webpackFinal: function (config) {
-		/* eslint-disable no-unused-vars -- removing the global alias as it conflicts with the global npm pkg */
-		const { global, ...alias } = config.resolve.alias;
-		config.resolve.alias = alias;
+	async viteFinal(config, { configType }) {
+		const { mergeConfig } = await import("vite");
 
-		// Parse out any storybook rules for CSS so we can replace them with our own
-		const storybookRules =
-			config && config.module && config.module.rules
-				? config.module.rules.filter(
-					(rule) => !(rule.test && rule.test.toString().includes("css"))
-				)
-				: [];
-		return {
-			...config,
-			/* Suppress autoprefixer warnings from storybook build */
-			ignoreWarnings: [
-				...(config.ignoreWarnings ?? []),
-				/autoprefixer/,
-				/postcss/,
-				/.*stylelint.*/,
-			],
-			/* Add support for root node_modules imports */
-			resolve: {
-				...(config.resolve ? config.resolve : {}),
-				modules: [
-					...(config.resolve ? config.resolve.modules : []),
-					resolve(__dirname, "../node_modules"),
-				],
-				alias: {
-					...(config.resolve ? config.resolve.alias : {}),
-					...componentPkgs.reduce((pkgs, dir) => {
-						const pkg = require(resolve(componentsPath, dir, "package.json"));
-						pkgs[pkg.name] = resolve(componentsPath, dir);
-						return pkgs;
-					}, {}),
-				},
+		return mergeConfig(config, {
+			publicDir: "../assets",
+			port: 8080,
+			build: {
+				sourcemap: configType === "DEVELOPMENT",
+				manifest: true,
+				minify: configType === "PRODUCTION",
 			},
-			module: {
-				...(config.module ?? []),
-				rules: [
-					...storybookRules,
-					{
-						test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
-						use: [
-							{
-								loader: "file-loader",
-								options: {
-									outputPath: (url) => `assets/images/${url.replace(/_\//g, "")}`,
-								},
-							},
-						],
-					},
-					{
-						test: /\.css$/i,
-						sideEffects: true,
-						use: [
-							{
-								loader: "style-loader",
-								options: {
-									injectType: "linkTag",
-									attributes: {
-										"data-source": "processed",
-									},
-								},
-							},
-							{
-								loader: "file-loader",
-								options: {
-									name: "[path][name].[ext][query]",
-									outputPath: (url) => {
-										const cleanURL = url.replace(/_\//g, "");
-										if (/node_modules\/@spectrum-css/.test(url)) {
-											return `assets/css/${cleanURL.replace(/node_modules\/@spectrum-css\//g, "")}`;
-										}
-
-										return `assets/css/${cleanURL}`;
-									},
-									esModule: false,
-								},
-							},
-							{
-								loader: "postcss-loader",
-								options: {
-									implementation: require("postcss"),
-									postcssOptions: {
-										config: resolve(__dirname, "../postcss.config.js"),
-										additionalPlugins: {
-											"postcss-pseudo-classes": {
-												restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
-												allCombinations: true,
-												preserveBeforeAfter: false,
-												prefix: "is-"
-											},
-										}
-									},
-								},
-							},
-						],
-					},
-					{
-						test: /\.js$/,
-						enforce: "pre",
-						use: ["source-map-loader"],
-					} /* Raw loader */,
-					{
-						resourceQuery: /raw/,
-						type: "asset/source",
-					},
-				],
+			css: {
+				devSourcemap: configType === "DEVELOPMENT",
 			},
-		};
+		});
 	},
 	framework: {
-		name: "@storybook/web-components-webpack5",
+		name: "@storybook/web-components-vite",
+	},
+	features: {
+		/* Code splitting flag; load stories on-demand */
+		storyStoreV7: true,
+		/* Builds stories.json to help with on-demand loading */
+		buildStoriesJson: true,
 	},
 	docs: {
 		autodocs: true, // see below for alternatives

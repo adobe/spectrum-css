@@ -1,158 +1,32 @@
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
+import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
-import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
-
 import "../index.css";
 
-const Label = ({
-	hasActions,
-	isCollapsible,
-	label,
-	rootClass,
-	shouldTruncate,
-}) => {
-	if (isCollapsible) {
-		return html`<span class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }">${label}</span>`;
-	}
-	else {
-		return html`<span class=${classMap({
-      [`${rootClass}Label`]: true,
-      ["spectrum-Switch-label"]: hasActions,
-      ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
-      })}>
-      ${label}
-    </span>`;
+/**
+ * Get the tray submenu back arrow name with scale number (defined in design spec).
+ */
+const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
+	switch (size) {
+		case "s":
+			return `${iconName}200`;
+		case "l":
+			return `${iconName}400`;
+		case "xl":
+			return `${iconName}500`;
+		default:
+			return `${iconName}300`;
 	}
 };
-
-const Visual = ({
-	iconName,
-	rootClass,
-	size,
-	...globals
-}) => {
-	if (iconName) {
-		return html`
-    ${Icon({
-          ...globals,
-          iconName,
-          size,
-          customClasses: [
-            `${rootClass}Icon`,
-            `${rootClass}Icon--workflowIcon`
-          ]
-        })}
-    `;
-	}
-	return;
-};
-
-const StartAction = ({
-	hasActions,
-	idx,
-	isCollapsible,
-	isDisabled,
-	isSelected,
-	rootClass,
-	selectionMode,
-	size,
-	...globals
-}) => {
-	if (isCollapsible) {
-		return html`
-      ${Icon({
-        ...globals,
-        iconName: "ChevronRight100",
-        size,
-        customClasses: [
-          `${rootClass}Icon`,
-          "spectrum-Menu-chevron",
-        ],
-      })}
-    `;
-	}
-	else if (selectionMode == "single" && isSelected) {
-		return html`
-    ${Icon({
-      ...globals,
-      iconName: "Checkmark100",
-      size,
-      customClasses: [
-        `${rootClass}Icon`,
-        "spectrum-Menu-checkmark",
-      ],
-    })}`;
-	}
-	else if (selectionMode == "multiple" && !hasActions) {
-		return html`
-      ${Checkbox({
-        ...globals,
-        size,
-        isEmphasized: true,
-        isChecked: isSelected,
-        isDisabled,
-        id: `menu-checkbox-${idx}`,
-        customClasses: [
-          `${rootClass}Checkbox`,
-        ],
-      })}`;
-	}
-	return null;
-};
-
-const EndAction = ({
-	hasActions,
-	idx,
-	isDisabled,
-	isDrillIn,
-	isSelected,
-	rootClass,
-	selectionMode,
-	size,
-	value,
-	...globals
-}) => html`
-${value ? html`<span class="${rootClass}Value">${value}</span>` : ""}
-${hasActions && selectionMode == "multiple"
-  ? html`<div class="${rootClass}Actions">
-  ${Switch({
-      ...globals,
-      size,
-      isChecked: isSelected,
-      isDisabled,
-      label: null,
-      id: `menu-switch-${idx}`,
-      customClasses: [
-        `${rootClass}Switch`,
-      ],
-    })}
-    </div>`
-  : ""}
-  ${
-    isDrillIn ? html`${Icon({
-      ...globals,
-      iconName: "ChevronRight100",
-      size,
-      customClasses: [
-        `${rootClass}Icon`,
-        "spectrum-Menu-chevron",
-      ],
-    })}` : ""
-  }
-`;
-
-const Description = ({
-	description,
-	rootClass
-}) => html`<span class="${rootClass}Description">${description}</span>`;
 
 export const MenuItem = ({
 	description,
@@ -178,7 +52,7 @@ export const MenuItem = ({
 	selectionMode,
 	value,
 	...globals
-}) => html`
+}, context) => html`
   <li
     class=${classMap({
       [`${rootClass}`]: true,
@@ -197,30 +71,104 @@ export const MenuItem = ({
     aria-selected=${isSelected ? "true" : "false"}
     aria-disabled=${isDisabled ? "true" : "false"}
     tabindex=${ifDefined(!isDisabled ? "0" : undefined)}>
-      ${StartAction({ hasActions, idx, isCollapsible, isDisabled, isSelected, rootClass, selectionMode, size, ...globals })}
-      ${Visual({ iconName, rootClass, size, ...globals })}
-      ${Label({ hasActions, isCollapsible, label, rootClass, shouldTruncate })}
-      ${when(description, () => Description({ description, rootClass }))}
-      ${EndAction({ hasActions, idx, isDisabled, isDrillIn, isSelected, rootClass, selectionMode, size, value, ...globals })}
-      ${isCollapsible && items.length > 0 ? Template({ ...globals, items, isOpen, size, shouldTruncate }) : ""}
+      ${when(
+        isCollapsible || (selectionMode == "single" && isSelected),
+        () => Icon({
+          ...globals,
+          iconName: iconWithScale(size, isCollapsible ? "ChevronRight" : "Checkmark"),
+          size,
+          customClasses: [
+            `${rootClass}Icon`,
+            isCollapsible ? "spectrum-Menu-chevron" : "spectrum-Menu-checkmark",
+          ],
+        }, context)
+      )}
+      ${when(selectionMode === "multiple" && !hasActions, () => Checkbox({
+          ...globals,
+          size,
+          isEmphasized: true,
+          isChecked: isSelected,
+          isDisabled,
+          id: `menu-checkbox-${idx}`,
+          customClasses: [
+            `${rootClass}Checkbox`,
+          ],
+        }, context)
+      )}
+      ${when(iconName, () => Icon({
+        ...globals,
+        iconName,
+        size,
+        customClasses: [
+          `${rootClass}Icon`,
+          `${rootClass}Icon--workflowIcon`
+        ]
+      }, context))}
+      ${when(isCollapsible, () => html`
+        <span class=${classMap({
+          ["spectrum-Menu-sectionHeading"]: true,
+          [`${rootClass}Label--truncate`]: shouldTruncate,
+        })}>
+          ${label}
+        </span>
+      `, () => html`
+        <span class=${classMap({
+          [`${rootClass}Label`]: true,
+          ["spectrum-Switch-label"]: hasActions,
+          [`${rootClass}Label--truncate`]: shouldTruncate,
+        })}>
+          ${label}
+        </span>
+      `)}
+      ${when(description, () => html`
+        <span class=${classMap({
+          [`${rootClass}Description`]: true
+        })}>
+          ${description}
+        </span>
+      `)}
+      ${when(value, () => html`
+        <span class=${classMap({
+          [`${rootClass}Value`]: true
+        })}>
+          ${value}
+        </span>
+      `)}
+      ${when(hasActions && selectionMode == "multiple", () => html`
+        <div class=${classMap({
+          [`${rootClass}Actions`]: true
+        })}>
+          ${Switch({
+              ...globals,
+              size,
+              isChecked: isSelected,
+              isDisabled,
+              label: null,
+              id: `menu-switch-${idx}`,
+              customClasses: [
+                `${rootClass}Switch`,
+              ],
+            }, context)}
+        </div>
+      `)}
+      ${when(isDrillIn, () => Icon({
+        ...globals,
+        iconName: iconWithScale(size, "ChevronRight"),
+        size,
+        customClasses: [
+          `${rootClass}Icon`,
+          "spectrum-Menu-chevron",
+        ],
+      }, context))}
+      ${when(isCollapsible && items.length > 0, () => Template({
+        ...globals,
+        items,
+        isOpen,
+        size,
+        shouldTruncate
+      }, context))}
   </li>
 `;
-
-/**
- * Get the tray submenu back arrow name with scale number (defined in design spec).
- */
-const backArrowWithScale = (size = "m", iconName = "ArrowLeft") => {
-	switch (size) {
-		case "s":
-			return `${iconName}200`;
-		case "l":
-			return `${iconName}400`;
-		case "xl":
-			return `${iconName}500`;
-		default:
-			return `${iconName}300`;
-	}
-};
 
 export const MenuGroup = ({
 	heading,
@@ -235,37 +183,53 @@ export const MenuGroup = ({
 	subrole,
 	size,
 	...globals
-}) => html`
+}, context) => html`
   <li
     id=${ifDefined(id)}
     role="presentation"
   >
-    ${!isTraySubmenu
-      ? html`<span
-          class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }"
-          id=${id ?? `menu-heading-category-${idx}`}
-          aria-hidden="true"
-        >${heading}</span>`
-      : html`<div class="spectrum-Menu-back">
+    ${when(!isTraySubmenu, () => html`
+      <span
+        class=${classMap({
+          ["spectrum-Menu-sectionHeading"]: true,
+          ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+        })}
+        id=${ifDefined(id ?? `menu-heading-category-${idx}`)}
+        aria-hidden="true"
+      >
+        ${heading}
+      </span>
+    `, () => html`
+        <div
+          class=${classMap({
+            ["spectrum-Menu-back"]: true
+          })}
+        >
           <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
             ${Icon({
               ...globals,
-              iconName: backArrowWithScale(size),
+              iconName: iconWithScale(size),
               size,
               customClasses: ["spectrum-Menu-backIcon"]
-            })}
+            }, context)}
           </button>
-          ${heading
-          ? html`<span
-              class="spectrum-Menu-sectionHeading ${shouldTruncate ? "spectrum-Menu-itemLabel--truncate" : "" }"
-              style=${maxInlineSize ? `max-inline-size: ${maxInlineSize}px;` : ""}
-              id=${id ?? `menu-heading-category-${idx}`}
+          ${when(heading, () => html`
+            <span
+              class=${classMap({
+                ["spectrum-Menu-sectionHeading"]: true,
+                ["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+              })}
+              style=${styleMap({
+                "max-inline-size": maxInlineSize && `${maxInlineSize}px`,
+              })}
+              id=${ifDefined(id ?? `menu-heading-category-${idx}`)}
               aria-hidden="true"
-              >${heading}</span
-            >`
-          : ""}
-        </div>`
-    }
+            >
+              ${heading}
+            </span>
+          `)}
+        </div>
+    `)}
     ${Template({
       ...globals,
       role: "group",
@@ -277,10 +241,9 @@ export const MenuGroup = ({
       shouldTruncate: true,
       maxInlineSize,
       size,
-    })}
+    }, context)}
   </li>
 `;
-
 
 export const Template = ({
 	customClasses = [],
@@ -308,7 +271,7 @@ export const Template = ({
 	size,
 	subrole = "menuitem",
 	...globals
-}) => {
+}, context) => {
 	const menuMarkup = html`
     <ul
       class=${classMap({
@@ -342,7 +305,7 @@ export const Template = ({
             selectionMode,
             isTraySubmenu,
             shouldTruncate
-          });
+          }, context);
         else
           return MenuItem({
             ...globals,
@@ -362,13 +325,278 @@ export const Template = ({
             shouldTruncate,
             size,
             value: singleItemValue || i.value,
-          });
+          }, context);
       })}
     </ul>
   `;
 
-	if (isTraySubmenu) {
-		return Tray({ content: [menuMarkup] });
-	}
+	if (isTraySubmenu) return Tray({ content: [menuMarkup] }, context);
 	return menuMarkup;
 };
+
+
+const Sizes = (args) => ["s", "m", "l", "xl"].map((size) => html`
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: [
+				{
+					s: "Small",
+					m: "Medium",
+					l: "Large",
+					xl: "Extra-large",
+				}[size]
+			],
+			customClasses: ["chromatic-ignore"],
+		})}
+		<div>
+			${Template({...args, size})}
+		</div>
+	</div>
+`);
+
+const States = (args) => {
+	const { titlePrefix, firstAndLast } = args;
+	let stateData = [
+		{
+			stateTitle: "Default",
+			args: {},
+		},
+		{
+			stateTitle: "Hover",
+			args: { ...args, isItemHovered: true },
+		},
+		{
+			stateTitle: "Active (Down)",
+			args: { ...args, isItemActive: true },
+		},
+		{
+			stateTitle: "Focused",
+			args: { ...args, isItemFocused: true },
+		},
+		{
+			stateTitle: "Disabled",
+			args: { ...args, isDisabled: true },
+		}
+	];
+
+	// if testing hover/active/focus feels too heavy handed, we can remove those states
+	if (firstAndLast) {
+		stateData = [stateData[0], stateData[stateData.length - 1]];
+	}
+
+	return stateData.map((stateItem) => html`
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: [`${titlePrefix ? titlePrefix + ", ": ""}${stateItem.stateTitle}`],
+				customClasses: ["chromatic-ignore"],
+			})}
+			<div>
+				${Template({...args, ...stateItem.args})}
+			</div>
+		</div>
+	`);
+};
+
+const SingleItemSelectedStates = (args) => {
+	return html`
+			${States({
+				...args,
+				items: [{ label: "Not selected", isSelected: false, ...args.items[0] }],
+				titlePrefix: "Not selected",
+				firstAndLast: true,
+			})}
+			${States({
+				...args,
+				items: [{ label: "Selected item", isSelected: true, ...args.items[0] }],
+				titlePrefix: "Selected",
+				firstAndLast: true,
+			})}
+	`;
+};
+
+const MultiCheckboxSelectedStates = (args) => {
+	return html`
+		${States({
+			...args,
+			items: [{ label: "Not selected", isSelected: false, ...args.items[0]}],
+			titlePrefix: "Not Selected",
+			firstAndLast: true,
+		})}
+		${States({
+			...args,
+			items: [{ label: "Selected item", isSelected: true, ...args.items[0]}],
+			titlePrefix: "Selected",
+			firstAndLast: true,
+		})}
+	`;
+};
+
+const WithValueStates = (args) => {
+	const baseValueArgs = {...args, hasValue: true, singleItemValue: "Value"};
+	const valueData = [
+		{
+			stateTitle: "With value",
+			args: { ...baseValueArgs },
+		},
+		{
+			stateTitle: "With value, disabled",
+			args: { ...baseValueArgs, isDisabled: true },
+		},
+		{
+			stateTitle: "With value and switch",
+			args: { ...baseValueArgs, hasActions: true },
+		},
+		{
+			stateTitle: "With value, truncated label",
+			args: { ...baseValueArgs, shouldTruncate: true, maxInlineSize: "195px", items: [{ label: "Truncated label on menu item" }] },
+		},
+	];
+
+	return valueData.map((valueItem) => html`
+		<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: [ valueItem.stateTitle ],
+			customClasses: ["chromatic-ignore"],
+		})}
+			<div>
+				${Template({ ...args, ...valueItem.args })}
+			</div>
+		</div>
+	`);
+};
+
+export const MenuItemWithVariants = (args, context) => html`
+  <div style=${styleMap({
+		display: window.isChromatic() ? "none" : undefined,
+	})}>
+    ${Template({
+      iconName: "Share",
+      ...args
+    }, context)}
+  </div>
+  <div style=${styleMap({
+		display: window.isChromatic() ? "flex" : "none",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "1rem",
+    "--mod-detail-margin-end": ".3rem",
+	})}>
+    ${[
+      {
+        sectionTitle: "No selection",
+        sectionMarkup: States(args),
+      },
+      {
+        sectionTitle: "With item description and truncation",
+        sectionMarkup: States({...args, shouldTruncate: true, maxInlineSize: "150px", items: [{ label: "This is a longer menu item that will truncate", description: "This is a description of the menu item"}]}),
+      },
+      {
+        sectionTitle: "Single selection",
+        sectionMarkup: SingleItemSelectedStates({...args, selectionMode: "single" }),
+      },
+      {
+        sectionTitle: "Single selection with icon",
+        sectionMarkup: SingleItemSelectedStates({...args, selectionMode: "single", items: [{ label: "With icon", iconName: "Share" }] }),
+      },
+      {
+        sectionTitle: "Multi-selection with checkboxes",
+        sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple"}),
+      },
+      {
+        sectionTitle: "Multi-selection with checkboxes and icon",
+        sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", items: [{ label: "With icon", iconName: "Share" }]}),
+      },
+      {
+        sectionTitle: "Multi-selection with switches",
+        sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", hasActions: true}),
+      },
+      {
+        sectionTitle: "Multi-selection with switches and switch label",
+        sectionMarkup: MultiCheckboxSelectedStates({...args, selectionMode: "multiple", hasActions: true, items: [{ label: "Menu item", value: "switch label"}]}),
+      },
+      {
+        sectionTitle: "With values",
+        sectionMarkup: WithValueStates(args),
+      },
+      {
+        sectionTitle: "Sizes",
+        sectionMarkup: Sizes({ ...args, selectionMode: "single", items: [{ label: "With sizing", isSelected: true, iconName: "Share" }] }),
+      },
+    ].map((sectionItem) => html`
+      <div class="spectrum-Typography">
+      ${Typography({
+        semantics: "detail",
+        size: "l",
+        content: [sectionItem.sectionTitle],
+        customClasses: ["chromatic-ignore"],
+      })}
+      <div
+        style=${styleMap({
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "1.5rem",
+        })}
+      >
+        ${sectionItem.sectionMarkup}
+      </div>
+    </div>
+    `)}
+  </div>
+`;
+
+export const MenuWithVariants = (args, context) => html`
+  <div style=${styleMap({
+		display: window.isChromatic() ? "none" : undefined,
+	})}>
+    ${Template(args, context)}
+  </div>
+  <div style=${styleMap({
+		display: window.isChromatic() ? "flex" : "none",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "1rem",
+    "--mod-detail-margin-end": ".3rem",
+	})}>
+    ${[
+      {
+        stateTitle: "No selection",
+        args: { ...args, selectionMode: "none" },
+      },
+      {
+        stateTitle: "With dividers",
+        args: { ...args, selectionMode: "none", hasDividers: true },
+      },
+      {
+        stateTitle: "Single selection",
+        args: { ...args, selectionMode: "single" },
+      },
+      {
+        stateTitle: "Multi selection",
+        args: { ...args, selectionMode: "multiple" },
+      },
+    ].map((item) => html`
+<style>
+  /* For this testing preview, this is the heading closest to the component and therefore needs a separate color */
+  .spectrum-Detail { --mod-detail-font-color: var(--spectrum-seafoam-900); }
+</style>
+<div class="spectrum-Typography">
+  ${Typography({
+    semantics: "detail",
+    size: "l",
+    content: [ item.stateTitle ],
+    customClasses: ["chromatic-ignore"],
+  })}
+  <div>
+    ${Template({...args, ...item.args})}
+  </div>
+</div>
+
+    `)}
+  </div>
+`;

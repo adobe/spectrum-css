@@ -40,6 +40,18 @@ export default {
 	args: {
 		rootClass: "spectrum-AlertDialog",
 		isOpen: true,
+		variant: "confirmation",
+		heading: "Enable Smart Filters?",
+		buttons: [{
+			variant: "secondary",
+			treatment: "outline",
+			label: "Remind me later"
+		}, {
+			treatment: "fill",
+			label: "Enable",
+			variant: "accent"
+		}],
+		content: "Smart filters are nondestructive and will preserve your original images.",
 	},
 	parameters: {
 		actions: {
@@ -54,20 +66,7 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	variant: "confirmation",
-	heading: "Enable Smart Filters?",
-	buttons: [{
-		variant: "secondary",
-		treatment: "outline",
-		label: "Remind me later"
-	}, {
-		treatment: "fill",
-		label: "Enable",
-		variant: "accent"
-	}],
-	content: "Smart filters are nondestructive and will preserve your original images.",
-};
+Default.args = {};
 
 /**
  * Information alert dialogs communicate important information that a user needs to acknowledge. Before using this kind of alert dialog, make sure it’s the appropriate communication channel for the message instead of a toast or a more lightweight messaging option.

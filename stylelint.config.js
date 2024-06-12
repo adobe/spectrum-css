@@ -156,7 +156,7 @@ module.exports = {
 			},
 		},
 		{
-			files: ["site/**/*.css", "storybook/assets/*.css"],
+			files: ["site/**/*.css", ".storybook/assets/*.css"],
 			rules: {
 				"custom-property-pattern": null,
 				"spectrum-tools/no-unused-custom-properties": null,

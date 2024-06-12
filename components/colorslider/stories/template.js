@@ -1,11 +1,10 @@
+import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
+import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
-import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 
 import "../index.css";
 
@@ -29,7 +28,7 @@ export const Template = ({
 		"--spectrum-picked-color": "rgba(255, 0, 0)",
 	},
 	...globals
-}) => html`
+}, context) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -60,14 +59,14 @@ export const Template = ({
 				)
 			],
 			role: "presentation",
-		})}
+		}, context)}
 		${ColorHandle({
 			...globals,
 			isDisabled,
 			isFocused,
 			customClasses: [`${rootClass}-handle`],
 			customStyles: colorHandleStyle,
-		})}
+		}, context)}
 		<input
 			type="range"
 			class="${rootClass}-slider"

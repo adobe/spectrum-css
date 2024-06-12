@@ -1,8 +1,8 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import "../index.css";
 
 export const Template = ({
@@ -12,7 +12,7 @@ export const Template = ({
 	iconName,
 	customClasses = [],
 	...globals
-}) => html`
+}, context) => html`
 	<button
 		class=${classMap({
 			[rootClass]: true,
@@ -25,6 +25,6 @@ export const Template = ({
 			...globals,
 			iconName,
 			customClasses: [`${rootClass}-icon`],
-		})}
+		}, context)}
 	</button>
 `;

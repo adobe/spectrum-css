@@ -1,12 +1,11 @@
+import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
+import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-
-import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
-import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -25,11 +24,8 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	...globals
-}) => {
-
-	if(isInvalid) {
-		iconName = "Alert";
-	}
+}, context) => {
+	if(isInvalid) iconName = "Alert";
 
 	return html`
 		<div
@@ -47,24 +43,24 @@ export const Template = ({
 			tabindex=${isDisabled ? "-1" : "0"}
 			style=${ifDefined(styleMap(customStyles))}
 		>
-			${avatarUrl && !isInvalid
-				? Avatar({
+			${when(avatarUrl && !isInvalid, () =>
+				Avatar({
 					...globals,
 					image: avatarUrl,
 					size: "50",
-				})
-				: ""}
-			${iconName || isInvalid
-				? Icon({
+				}, context)
+			)}
+			${when(iconName || isInvalid, () =>
+				Icon({
 					...globals,
 					size,
 					iconName,
 					customClasses: [`${rootClass}-itemIcon`],
-				})
-				: ""}
+				}, context)
+			)}
 			<span class="${rootClass}-itemLabel">${label}</span>
-			${hasClearButton
-				? ClearButton({
+			${when(hasClearButton, () =>
+				ClearButton({
 					...globals,
 					size,
 					customClasses: [`${rootClass}-clearButton`],
@@ -75,8 +71,8 @@ export const Template = ({
 						const wrapper = el.closest(rootClass);
 						wrapper.parentNode.removeChild(wrapper);
 					},
-				})
-				: ""}
+				}, context)
+			)}
 		</div>
 	`;
 };

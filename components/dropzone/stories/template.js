@@ -1,10 +1,9 @@
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { AccentColor as IllustratedMessageStory } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { Template as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/template.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import "../index.css";
 
@@ -18,7 +17,7 @@ export const Template = ({
 	customLabel,
 	id,
 	...globals
-}) => html`
+}, context) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -35,13 +34,13 @@ export const Template = ({
 			...globals,
 			heading: customHeading ?? IllustratedMessageStory.args.heading,
 			description: customDescription ?? IllustratedMessageStory.args.description,
-		})}
+		}, context)}
 
 		<div class="${rootClass}-content">
 			${ActionButton({
 				label: customLabel ?? "Drop file to replace",
 				customClasses: [`${rootClass}-button`],
-			})}
+			}, context)}
 		</div>
 	</div>
 `;

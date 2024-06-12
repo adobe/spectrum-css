@@ -1,16 +1,15 @@
-import { useArgs } from "@storybook/preview-api";
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
-
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -28,11 +27,11 @@ export const Picker = ({
 	customClasses = [],
 	customStyles = {},
 	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
 
 	return html`
-	<button
+		<button
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
@@ -54,27 +53,27 @@ export const Picker = ({
 			}}
 		>
 			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
-			${isLoading
-				? ProgressCircle({
+			${when(isLoading, () =>
+				ProgressCircle({
 					size: "s",
 					isIndeterminate: true,
-				})
-				: ""}
-			${isInvalid && !isLoading
-				? Icon({
+				}, context)
+			)}
+			${when(isInvalid && !isLoading, () =>
+				Icon({
 					...globals,
 					size,
 					iconName: "Alert",
 					customClasses: [`${rootClass}-validationIcon`],
-				})
-				: ""}
+				}, context)
+			)}
 			${Icon({
 				...globals,
 				size,
 				setName: "ui",
 				iconName: "ChevronDown",
 				customClasses: [`${rootClass}-menuIcon`],
-			})}
+			}, context)}
 		</button>
 	`;
 };
@@ -101,7 +100,7 @@ export const Template = ({
 	content = [],
 	id,
 	...globals
-}) => {
+}, context) => {
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":
@@ -118,16 +117,16 @@ export const Template = ({
 	}
 
 	return html`
-		${label
-			? FieldLabel({
+		${when(label, () =>
+			FieldLabel({
 				...globals,
 				size,
 				label,
 				isDisabled,
 				customStyles: fieldLabelStyle,
 				alignment: labelPosition,
-			})
-			: ""}
+			}, context)
+		)}
 		${labelPosition == "left" ?
 			html`<div style="display: inline-block">
 				${Picker({
@@ -148,7 +147,7 @@ export const Template = ({
 					iconName,
 					labelPosition,
 					id,
-				})}
+				}, context)}
 			</div>
 			`
 		:
@@ -170,16 +169,15 @@ export const Template = ({
 				iconName,
 				labelPosition,
 				id,
-			})
+			}, context)
 		}
-
-		${helpText
-			? HelpText({
+		${when(helpText, () =>
+			HelpText({
 				text: helpText,
 				variant: isInvalid ? "negative" : "neutral",
 				hideIcon: true,
-			})
-			: ""}
+			}, context)
+		)}
 		${when(content.length !== 0, () =>
 				Popover({
 					...globals,
@@ -189,7 +187,7 @@ export const Template = ({
 					isQuiet,
 					customStyles: customPopoverStyles,
 					content,
-				})
+				}, context)
 		)}
 		${when(withSwitch, () => Switch({
 			...globals,
@@ -198,6 +196,6 @@ export const Template = ({
 			customStyles: {
 				"padding-inline-start": "15px"
 			}
-		}))}
+		}, context))}
 	`;
 };

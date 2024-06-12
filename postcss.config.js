@@ -14,6 +14,7 @@ const { join, sep, basename } = require("path");
 
 module.exports = ({
 	file,
+	cwd,
 	to,
 	splitinatorOptions = {
 		noSelectors: false,
@@ -32,7 +33,7 @@ module.exports = ({
 	const rootPath = __dirname;
 	const outputFilepath = to ?? file;
 	const relativePath = outputFilepath?.replace(rootPath, "");
-	const outputFilename = basename(outputFilepath, ".css");
+	const outputFilename = outputFilepath ? basename(outputFilepath, ".css") : undefined;
 	const pathParts = relativePath?.split(sep) ?? [];
 
 	const isBridge = pathParts.includes("bridge");
@@ -62,12 +63,17 @@ module.exports = ({
 
 	/*
 		This deconstruction has to do with how options are passed
-		to the postcss config via webpack's postcss-loader
+		to the postcss config via storybook
 	*/
-	if (options?.options?.additionalPlugins) {
+	if (cwd && cwd.endsWith(".storybook")) {
 		additionalPlugins = {
 			...additionalPlugins,
-			...options.options.additionalPlugins,
+			"postcss-pseudo-classes": {
+				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+				allCombinations: true,
+				preserveBeforeAfter: false,
+				prefix: "is-"
+			},
 		};
 	}
 
