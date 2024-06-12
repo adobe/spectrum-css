@@ -65,14 +65,15 @@ export const Picker = ({
 					...globals,
 					size,
 					iconName: "Alert",
+					setName: "workflow",
 					customClasses: [`${rootClass}-validationIcon`],
 				})
 				: ""}
 			${Icon({
 				...globals,
 				size,
-				setName: "ui",
 				iconName: "ChevronDown",
+				setName: "ui",
 				customClasses: [`${rootClass}-menuIcon`],
 			})}
 		</button>

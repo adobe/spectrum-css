@@ -326,8 +326,8 @@ const Wrapping = (args) => html` ${Template({
     "max-inline-size": "480px",
   },
   iconName: "Edit",
-  label:
-    "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+	iconSet: "workflow",
+	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 })}
 ${Template({
   ...args,
@@ -336,8 +336,8 @@ ${Template({
   },
   // Uses a UI icon that is smaller than workflow sizing, to test alignment:
   iconName: "Cross100",
-  label:
-    "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+	iconSet: "ui",
+	label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 })}
 ${Template({
   ...args,
@@ -345,9 +345,9 @@ ${Template({
     "max-inline-size": "480px",
   },
   // UI icon that is larger than workflow sizing:
-  iconName: "ArrowDown600",
-  label:
-    "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+  iconName: "ArrowDown400",
+  iconSet: "ui",
+  label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 })}`;
 
 const Variants = (args) =>
@@ -506,4 +506,5 @@ WithForcedColors.parameters = {
 };
 WithForcedColors.args = {
 	iconName: "Actions",
+	iconSet: "workflow",
 };

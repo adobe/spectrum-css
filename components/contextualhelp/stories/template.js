@@ -13,6 +13,7 @@ export const Template = ({
 	rootClass = "spectrum-ContextualHelp",
 	id,
 	iconName,
+	iconSet = "workflow",
 	title,
 	body,
 	link,
@@ -39,6 +40,7 @@ export const Template = ({
 			...globals,
 			size: "xs",
 			iconName,
+			iconSet,
 			customClasses: [`${rootClass}-button`],
 		})}
 		${Popover({

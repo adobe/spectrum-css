@@ -69,6 +69,7 @@ export const AssetListItem = ({
 		${when(isBranch, () =>
 			Icon({
 				iconName: "ChevronRight100",
+				setName: "ui",
 				customClasses: [`${rootClass}ChildIndicator`],
 				...globals,
 			})

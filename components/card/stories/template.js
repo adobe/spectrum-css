@@ -73,6 +73,7 @@ export const Template = ({
                   ...globals,
                   size: "xxl",
                   iconName: showAsset === "folder" ? "File" : "Document",
+                  setName: "workflow",
                 })
               )}
             </div>`,
@@ -94,6 +95,7 @@ export const Template = ({
                       ${ActionButton({
                         ...globals,
                         iconName: "More",
+                        iconSet: "workflow",
                         size: "m",
                         isQuiet: true
                       })}

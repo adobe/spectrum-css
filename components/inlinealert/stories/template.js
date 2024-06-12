@@ -41,6 +41,7 @@ export const Template = ({
 					${Icon({
 						...globals,
 						iconName,
+						setName: "workflow",
 						customClasses: [`${rootClass}-icon`],
 					})}
 			  `
@@ -53,7 +54,6 @@ export const Template = ({
 						...globals,
 						treatment: "outline",
 						variant: "primary",
-						iconName: false,
 						hideLabel: false,
 						label: "Ok",
 					})}

@@ -71,6 +71,7 @@ const StartAction = ({
       ${Icon({
         ...globals,
         iconName: "ChevronRight100",
+        setName: "ui",
         size,
         customClasses: [
           `${rootClass}Icon`,
@@ -84,6 +85,7 @@ const StartAction = ({
     ${Icon({
       ...globals,
       iconName: "Checkmark100",
+      setName: "ui",
       size,
       customClasses: [
         `${rootClass}Icon`,
@@ -140,6 +142,7 @@ ${hasActions && selectionMode == "multiple"
     isDrillIn ? html`${Icon({
       ...globals,
       iconName: "ChevronRight100",
+      setName: "ui",
       size,
       customClasses: [
         `${rootClass}Icon`,

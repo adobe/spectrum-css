@@ -42,6 +42,7 @@ export default {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
 		},
+		iconSet: { table: { disable: true } },
 		variant: {
 			name: "Background color variants",
 			type: { name: "string" },
@@ -68,6 +69,7 @@ export default {
 		size: "m",
 		variant: "neutral",
 		iconName: "Info",
+		iconSet: "workflow",
 		label: "Badge",
 		fixed: "none"
 	},

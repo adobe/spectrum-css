@@ -18,7 +18,6 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 }) => {
-
 	return html`
 		<div
 			class=${classMap({
