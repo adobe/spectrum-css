@@ -8,7 +8,7 @@ link(rel='stylesheet', type='text/css', href='css/prism/prism.css', data-prism)
 link(rel='stylesheet', type='text/css', href='components/tokens/index.css')
 
 each dep in dependencyOrder.filter((dep) => !["tokens", "commons", "quickaction", "cyclebutton", "searchwithin", "splitbutton"].includes(dep))
-  link(rel='stylesheet', type='text/css', href='components/' + dep + '/index.css', data-dependency=dep )
+  link(rel='stylesheet', type='text/css', href='components/' + dep + '/index.min.css', data-dependency=dep )
 
 <!-- deprecated components -->
 each dep in dependencyOrder.filter((dep) => ["quickaction", "cyclebutton", "searchwithin", "splitbutton"].includes(dep))
