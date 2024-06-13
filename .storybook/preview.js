@@ -1,17 +1,16 @@
-import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
-import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
+// import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
+// import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
 import { setConsoleOptions } from "@storybook/addon-console";
-import "./assets/base.css";
-import "./assets/typekit.js";
+import isChromatic from "chromatic/isChromatic";
 import {
 	withActions,
 	withContextWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
-	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
-} from "./decorators/index.js";
-import DocumentationTemplate from "./DocumentationTemplate.mdx";
+	withWrapperStyles,
+} from "./decorators";
+import DocumentationTemplate from './DocumentationTemplate.mdx';
 import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
 import { argTypes, globalTypes } from "./types";
 
@@ -28,24 +27,13 @@ setConsoleOptions({
 	],
 });
 
-// Inject the sprite sheets into the document
-let sprite = document.getElementById("spritesheets");
-if (!sprite) {
-	sprite = document.createElement("div");
-	sprite.id = "spritesheets";
-	sprite.innerHTML = workflowSprite + uiSprite;
-	document.body.appendChild(sprite);
-}
-else {
-	sprite.innerHTML = workflowSprite + uiSprite;
-}
+import "@spectrum-css/tokens";
+import "./assets/base.css";
+import "./assets/typekit.js";
 
 export const args = {
-	color: "light",
-	scale: "medium",
-	reducedMotion: false,
-	express: false,
 	customClasses: [],
+	wrapperStyles: {},
 };
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
@@ -98,6 +86,33 @@ export const parameters = {
 			wrapLines: true,
 		},
 	},
+	testingPreview: {
+		isTestEnv: isChromatic,
+		// Whether or not to show the text label next to the icon in the toolbar
+		showLabel: false,
+		// Whther or not to prefix groups with the name of the variant
+		withHeadings: true,
+		withBorder: "full",
+		options: {
+			// The name used to toggle this option in the testing grid
+			sizing: {
+				// The key of the option used by args or globals object
+				key: "size",
+				// Must be one of "args" or "globals"; defaults to "args"
+				scope: "args",
+				// How to label the value of the option in the testing grid
+				mapping: {
+					xxs: "Extra-extra-small",
+					xs: "Extra-small",
+					s: "Small",
+					m: "Medium",
+					l: "Large",
+					xl: "Extra-large",
+					xxl: "Extra-extra-large",
+				}
+			},
+		},
+	},
 	docs: {
 		autodocs: true,
 		page: DocumentationTemplate,
@@ -137,8 +152,8 @@ export const decorators = [
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withContextWrapper,
-	withTestingPreviewWrapper,
 	withActions,
+	withWrapperStyles,
 	// Attach the icons to the window object for use in the stories
 	(StoryFn, context) => {
 		if (context?.loaded?.icons) window.icons = context.loaded.icons;

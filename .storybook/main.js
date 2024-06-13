@@ -37,6 +37,7 @@ export default {
 		"@storybook/addon-a11y",
 		// https://www.npmjs.com/package/@whitespace/storybook-addon-html
 		"@whitespace/storybook-addon-html",
+		"@spectrum-tools/addon-testing-preview",
 		// https://storybook.js.org/addons/@etchteam/storybook-addon-status
 		"@etchteam/storybook-addon-status",
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/interactions
@@ -49,6 +50,8 @@ export default {
 	core: {
 		disableTelemetry: true,
 		disableWhatsNewNotifications: true,
+		crossOriginIsolated: true,
+		enableCrashReports: false,
 		builder: "@storybook/builder-vite",
 	},
 	async viteFinal(config, { configType }) {

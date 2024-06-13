@@ -16,10 +16,17 @@ export const Template = ({
 	variant,
 	hasActionButton,
 	customClasses = [],
-	...globals
 }) => {
-	const iconName =
-		variant === "negative" ? "Alert" : variant === "info" ? "Info" : "";
+	const negativeIcon = Icon({
+		iconName: "Alert",
+		setName: "workflow",
+		customClasses: [`${rootClass}-icon`],
+	});
+	const infoIcon = Icon({
+		iconName: "Info",
+		setName: "workflow",
+		customClasses: [`${rootClass}-icon`],
+	});
 
 	return html`
 		<div
@@ -32,13 +39,8 @@ export const Template = ({
 		>
 			<div class="${rootClass}-body">
 				<div class="${rootClass}-content">
-					${iconName
-						? Icon({
-								...globals,
-								iconName,
-								customClasses: [`${rootClass}-icon`],
-						})
-						: ""}
+					${when(variant === "negative", () => negativeIcon)}
+					${when(variant === "info", () => infoIcon)}
 					<p class="${rootClass}-text">${text}</p>
 				</div>
 				${when(hasActionButton, () =>
@@ -53,11 +55,9 @@ export const Template = ({
 				${Divider({
 					vertical: true,
 					size: "s",
-					tag: "div",
-					...globals,
+					tag: "div"
 				})}
 				${CloseButton({
-					...globals,
 					size: "m",
 					staticColor: "white",
 					onclick,

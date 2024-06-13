@@ -11,7 +11,6 @@ export const Template = ({
   testId,
   customClasses = [],
   customStyles = {},
-  ...globals
 }, context) => html`
   <div
     class=${classMap({
@@ -29,12 +28,12 @@ export const Template = ({
 
 export const {{ pascalCase name }}Group = (args, context) => html`
   <div style=${styleMap({
-    "display": window.isChromatic() ? "none" : undefined,
+    "display": window.isTestEnv() ? "none" : undefined,
   })}>
     ${Template(args)}
   </div>
   <div style=${styleMap({
-    "display": window.isChromatic() ? "flex" : "none",
+    "display": window.isTestEnv() ? "flex" : "none",
     "flex-wrap": "wrap",
     "gap": "16px"
   })}>

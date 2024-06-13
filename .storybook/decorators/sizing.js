@@ -1,52 +1,59 @@
 import { makeDecorator } from "@storybook/preview-api";
 import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  **/
 export const withSizingWrapper = makeDecorator({
 	name: "withSizingWrapper",
-	parameterName: "context",
+	parameterName: "sizing",
 	wrapper: (StoryFn, context) => {
-		const { argTypes, parameters } = context;
-		const sizes = argTypes?.size?.options || [];
-		const sizeVariants =
-			typeof parameters?.sizeVariants === "undefined"
-				? true
-				: parameters.sizeVariants;
-
-		/** To suppress the sizing wrapper, add `sizeVariants: false` to the parameters of a story */
-		if (sizes.length === 0 || !sizeVariants) return StoryFn(context);
-		const printSize = (size) => {
-			if (size === "xs") return "Extra-small";
-			if (size === "s") return "Small";
-			if (size === "m") return "Medium";
-			if (size === "l") return "Large";
-			if (size === "xl") return "Extra-large";
-			if (size === "xxl") return "Extra-extra-large";
-			return size;
+		const { argTypes = {} } = context;
+		const sizes = argTypes.size?.options ?? [];
+		const sizeMap = {
+			xxs: "Extra-extra-small",
+			xs: "Extra-small",
+			s: "Small",
+			m: "Medium",
+			l: "Large",
+			xl: "Extra-large",
+			xxl: "Extra-extra-large",
 		};
 
-		context.parameters.html.root =
-			".spectrum-Examples-item[data-value=\"m\"] #scoped-root";
-		context.argTypes.size.table = {
-			...context.argTypes.size.table,
-			disable: true,
-		};
+		const Typography = import("@spectrum-css/typography/stories/template")?.Template ?? null;
 
-		return html` <div class="spectrum-Examples">
+		return html`
+		<div style=${styleMap({ "display": sizes.length === 0 || !window.isTestEnv() ? undefined : "none" })}>
+			${StoryFn(context)}
+		</div>
+		<div data-size-container style=${styleMap({
+			"display": sizes.length === 0 || !window.isTestEnv() ? "none" : "flex",
+			"flex-direction": "column",
+			"align-items": "flex-start",
+			"gap": "24px",
+			"margin": "12px",
+		})}>
 			${sizes.map((size) => {
 				context.args.size = size;
-				return html` <div class="spectrum-Examples-item" data-value=${size}>
-					<div class="spectrum-Examples-itemGroup" id="scoped-root">
-						${StoryFn(context)}
+				return html`
+					<div>
+						${Typography({
+							semantics: "heading",
+							size: "xs",
+							content: [sizeMap[size]],
+						})}
+						<div
+							style=${styleMap({
+								"border": "1px solid var(--spectrum-gray-600)",
+								"border-radius": "4px",
+								"overflow": "auto",
+							})}
+						>
+							${StoryFn(context)}
+						</div>
 					</div>
-					<h4
-						class="spectrum-Detail spectrum-Detail--sizeXS spectrum-Examples-itemHeading"
-					>
-						${printSize(size)}
-					</h4>
-				</div>`;
+				`;
 			})}
 		</div>`;
 	},

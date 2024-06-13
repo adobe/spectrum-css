@@ -33,6 +33,7 @@ For more general information about how to contribute to the Spectrum CSS project
 - `decorators`: These assets interpret the arguments provided and apply the necessary stylesheet or markup changes to reflect the desired update.
 - `deprecated`: One folder for each deprecated component we are still including in our documentation but that does not live in the repository any longer.
 - `guides`: Manually written documentation for the project.
+- `modes`: Currently unused; these are the modes for Chromatic to use in rendering every story across our various supported contexts.
 - `types`: There are 3 primary assets stored in this folder: shared global properties (such as rootClass, customStyles, id, etc.), global controls (contexts available in the top toolbar), and states (optional shared properties to be imported into a story for consistency). Each file is surfaced to the `types/index.js` file for ease of importing.
 
 **Storybook files:**
@@ -166,11 +167,10 @@ Be sure to define a default value for these argTypes in your args section.
 
 #### Categories
 
-- `Global`: sourced automatically from preview.js. You can turn these off but we do not recommend adding any new controls here that are story-specific.
-- `Component`: controls that relate to the styling of the component; often these will be denoted by classes that include a `--` separator. i.e., `--quiet` or `--multiline`. These can be boolean, select dropdowns, radio buttons, etc. depending on the design rules for their application.
-- `Advanced`: these are controls that match the requirements of a component category but are not recommended to be used; styles designed for specific edge-cases or inoptimal use. i.e., `staticWhite`.
-- `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM.
+- `State`: represents the environment in which the component exists - is it focused? open? sticky? These are more commonly applied by interaction than statically sourced from the DOM. This category can be used to automatically populate visual regression tests when used with the `withStatesWrapper` decorator.
+- `Variant`: these controls represent design variants available for a component; often these will be denoted by classes that include a `--` separator. i.e., `--quiet` or `--multiline`. These can be boolean, select dropdowns, radio buttons, etc. depending on the design rules for their application. This category can be used to automatically populate visual regression tests when used with the `withVariantsWrapper` decorator.
 - `Content`: not specific to the rendering of this component. Text or subcomponents to be rendered inside that region but that is not opinionated. Often this would be represented by a slot in a web component. i.e., labels, content to render inside a dialog or modal.
+- `Advanced`: these are controls that match the requirements of a component category but are not recommended to be used; styles designed for specific edge-cases or inoptimal use. i.e., `staticWhite`.
 
 #### Icon dropdowns
 
@@ -285,7 +285,8 @@ Every component will have access to a few empty, global inputs to provide consis
 - `testId`: used to render a `data-test-id` value to be used by a testing suite to target specific elements.
 - `customClasses` (array): allows passing in additional classes to be applied to the top-level component. This is necessary for nesting templates inside others while allowing the parent to assign context to the child.
 - `customStyles` (object): allows passing in a style map object to provide custom inline CSS at the top-level of a component.
-- `...globals`: this spread variable should not be decomposed on import. Instead, add a desctructuring right after instantiation, i.e., `const { express } = globals`. These values map to the globally provided settings and allow you to make rendering choices based on these values.
+- `testId`: used to render a `data-test-id` value to be used by a testing suite to target specific elements.
+- `wrapperStyles` (object): used to pass custom inline CSS to be assigned to the root container of the story.
 
 The rest of the variables provided in the Template function's input object will map to the argTypes you defined in your stories.js file.
 
@@ -298,32 +299,35 @@ All return values for Template functions should be outputting TemplateResults. S
 ### Full example
 
 ```js
+import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
+import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { useGlobals } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
-import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
-
 import "../index.css";
 
-export const Template = ({
-  rootClass = "spectrum-Tag",
-  size = "m",
-  iconName,
-  avatarUrl,
-  label,
-  isSelected = false,
-  isEmphasized = false,
-  isDisabled = false,
-  isInvalid = false,
-  hasClearButton = false,
-  id,
-  customClasses = [],
-  customStyles = {},
-}) => {
+export const Template = (
+  {
+    rootClass = "spectrum-Tag",
+    size = "m",
+    iconName,
+    avatarUrl,
+    label,
+    isSelected = false,
+    isEmphasized = false,
+    isDisabled = false,
+    isInvalid = false,
+    hasClearButton = false,
+    id,
+    customClasses = [],
+    customStyles = {},
+  },
+  context,
+) => {
   return html`
     <div
       class=${classMap({
@@ -341,15 +345,21 @@ export const Template = ({
       tabindex="0"
     >
       ${when(avatarUrl && !iconName, () =>
-        Avatar({
-          image: avatarUrl,
-          size: "50",
-        }),
+        Avatar(
+          {
+            image: avatarUrl,
+            size: "50",
+          },
+          context,
+        ),
       )} ${when(iconName, () =>
-        Icon({
-          iconName,
-          customClasses: [`${rootClass}s-itemIcon`],
-        }),
+        Icon(
+          {
+            iconName,
+            customClasses: [`${rootClass}s-itemIcon`],
+          },
+          context,
+        ),
       )}
       <span
         class=${classMap({
@@ -358,16 +368,19 @@ export const Template = ({
         >${label}</span
       >
       ${when(hasClearButton, () =>
-        ClearButton({
-          customClasses: [`${rootClass}-clearButton`],
-          onclick: (evt) => {
-            const el = evt.target;
-            if (!el) return;
+        ClearButton(
+          {
+            customClasses: [`${rootClass}-clearButton`],
+            onclick: (evt) => {
+              const el = evt.target;
+              if (!el) return;
 
-            const wrapper = el.closest(rootClass);
-            wrapper.parentNode.removeChild(wrapper);
+              const wrapper = el.closest(rootClass);
+              wrapper.parentNode.removeChild(wrapper);
+            },
           },
-        }),
+          context,
+        ),
       )}
     </div>
   `;
@@ -378,7 +391,7 @@ export const Template = ({
 
 Now that your stories are written, we need to add them to our visual regression suite. We are using [chromatic](https://www.chromatic.com), a tool that is designed to work with Storybook.
 
-To optimize snapshot usage, we organize our stories into groups when rendered inside the Chromatic environment. This is done by adding an `window.isChromatic()` check and creating groups of stories (note: do not import the `isChromatic` function directly, there is added functionality we've included when sourcing it from`window`). See example below:
+To optimize snapshot usage, we organize our stories into groups when rendered inside the Chromatic environment. This is done by adding an `window.isTestEnv()` check and creating groups of stories (note: do not import the `isChromatic` function directly, there is added functionality we've included when sourcing it from`window`). See example below:
 
 In the `template.js` file:
 
@@ -391,7 +404,7 @@ export const AccordionGroup = ({ customStyles = {}, ...args }, context) => {
         customStyles: {
           ...customStyles,
           "max-inline-size": "300px",
-          display: window.isChromatic() ? undefined : "none",
+          display: !window.isTestEnv() ? "none" : customStyles.display,
         },
       },
       context,
@@ -401,7 +414,7 @@ export const AccordionGroup = ({ customStyles = {}, ...args }, context) => {
         disableAll: true,
         customStyles: {
           ...customStyles,
-          display: window.isChromatic() ? undefined : "none",
+          display: !window.isTestEnv() ? "none" : customStyles.display,
         },
       },
       context,

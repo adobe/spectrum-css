@@ -148,14 +148,14 @@ export const Default = Variants.bind({});
 Default.args = {};
 
 export const StaticBlack = Variants.bind({});
+StaticBlack.tags = ["vrt-only"];
 StaticBlack.args = {
 	staticColor: "black",
 };
 
 export const StaticWhite = Variants.bind({});
+StaticWhite.tags = ["vrt-only"];
 StaticWhite.args = {
-	/* Force dark mode to make typography readable */
-	color: "dark",
 	staticColor: "white",
 };
 

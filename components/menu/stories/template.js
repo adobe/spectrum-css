@@ -51,7 +51,6 @@ export const MenuItem = ({
 	size,
 	selectionMode,
 	value,
-	...globals
 }, context) => html`
   <li
     class=${classMap({
@@ -74,7 +73,6 @@ export const MenuItem = ({
       ${when(
         isCollapsible || (selectionMode == "single" && isSelected),
         () => Icon({
-          ...globals,
           iconName: iconWithScale(size, isCollapsible ? "ChevronRight" : "Checkmark"),
           size,
           customClasses: [
@@ -84,7 +82,6 @@ export const MenuItem = ({
         }, context)
       )}
       ${when(selectionMode === "multiple" && !hasActions, () => Checkbox({
-          ...globals,
           size,
           isEmphasized: true,
           isChecked: isSelected,
@@ -96,7 +93,6 @@ export const MenuItem = ({
         }, context)
       )}
       ${when(iconName, () => Icon({
-        ...globals,
         iconName,
         size,
         customClasses: [
@@ -139,7 +135,6 @@ export const MenuItem = ({
           [`${rootClass}Actions`]: true
         })}>
           ${Switch({
-              ...globals,
               size,
               isChecked: isSelected,
               isDisabled,
@@ -152,7 +147,6 @@ export const MenuItem = ({
         </div>
       `)}
       ${when(isDrillIn, () => Icon({
-        ...globals,
         iconName: iconWithScale(size, "ChevronRight"),
         size,
         customClasses: [
@@ -161,7 +155,6 @@ export const MenuItem = ({
         ],
       }, context))}
       ${when(isCollapsible && items.length > 0, () => Template({
-        ...globals,
         items,
         isOpen,
         size,
@@ -182,7 +175,6 @@ export const MenuGroup = ({
 	maxInlineSize,
 	subrole,
 	size,
-	...globals
 }, context) => html`
   <li
     id=${ifDefined(id)}
@@ -207,7 +199,6 @@ export const MenuGroup = ({
         >
           <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
             ${Icon({
-              ...globals,
               iconName: iconWithScale(size),
               size,
               customClasses: ["spectrum-Menu-backIcon"]
@@ -231,7 +222,6 @@ export const MenuGroup = ({
         </div>
     `)}
     ${Template({
-      ...globals,
       role: "group",
       subrole,
       labelledby: id ?? `menu-heading-category-${idx}`,
@@ -270,7 +260,6 @@ export const Template = ({
 	shouldTruncate,
 	size,
 	subrole = "menuitem",
-	...globals
 }, context) => {
 	const menuMarkup = html`
     <ul
@@ -291,7 +280,6 @@ export const Template = ({
       ${items.map((i, idx) => {
         if (i.type === "divider")
           return html`${hasDividers ? Divider({
-            ...globals,
             tag: "li",
             size: "s",
             customClasses: [`${rootClass}-divider`],
@@ -299,7 +287,6 @@ export const Template = ({
         else if (i.heading || i.isTraySubmenu)
           return MenuGroup({
             ...i,
-            ...globals,
             subrole,
             size,
             selectionMode,
@@ -308,7 +295,6 @@ export const Template = ({
           }, context);
         else
           return MenuItem({
-            ...globals,
             ...i,
             description: singleItemDescription || i.description,
             hasActions,
@@ -333,7 +319,6 @@ export const Template = ({
 	if (isTraySubmenu) return Tray({ content: [menuMarkup] }, context);
 	return menuMarkup;
 };
-
 
 const Sizes = (args) => ["s", "m", "l", "xl"].map((size) => html`
 	<div>

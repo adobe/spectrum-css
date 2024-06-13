@@ -65,16 +65,6 @@ export default {
 export const Default = Template.bind();
 Default.args = {};
 
-export const DefaultExpress = Template.bind();
-DefaultExpress.args = {
-	express: true,
-};
-
-export const Small = Template.bind();
-Small.args = {
-	size: "s",
-};
-
 export const WithLabel = Template.bind();
 WithLabel.args = {
 	label: "Volume",

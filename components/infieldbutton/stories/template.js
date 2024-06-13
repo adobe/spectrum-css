@@ -15,7 +15,6 @@ export const Template = ({
 	isDisabled,
 	isInvalid,
 	tabIndex = 0,
-	...globals
 }, context) => {
 	return html`
     <button
@@ -34,7 +33,6 @@ export const Template = ({
     >
     <div class="${rootClass}-fill">
       ${when(iconName, () => Icon({
-        ...globals,
         size,
         iconName,
         customClasses: [`${rootClass}-icon`],

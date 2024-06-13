@@ -134,9 +134,3 @@ Quiet.tags = ["vrt-only"];
 Quiet.args = {
 	isQuiet: true
 };
-
-export const Express = Template.bind({});
-Express.tags = ["vrt-only"];
-Express.args = {
-	express: true
-};

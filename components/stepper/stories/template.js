@@ -19,10 +19,9 @@ export const Template = ({
 	hideStepper = false,
 	customClasses = [],
 	id,
-	style = {
+	customStyles = {
 		"--mod-actionbutton-icon-size": "10px",
 	},
-	...globals
 }, context) => {
 	let iconSize = "75";
 	switch (size) {
@@ -53,10 +52,9 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(style))}
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			${Textfield({
-				...globals,
 				size,
 				type: "number",
 				min: "-2",
@@ -72,7 +70,6 @@ export const Template = ({
 			${when(!hideStepper, () => html`
 				<span class="${rootClass}-buttons">
 					${InfieldButton({
-						...globals,
 						size,
 						customClasses: [`${rootClass}-button`],
 						iconName: `ChevronUp${iconSize}`,
@@ -82,7 +79,6 @@ export const Template = ({
 						tabIndex: "-1"
 					}, context)}
 					${InfieldButton({
-						...globals,
 						size,
 						customClasses: [`${rootClass}-button`],
 						iconName: `ChevronDown${iconSize}`,

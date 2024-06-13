@@ -1,8 +1,7 @@
-import { html } from "lit";
-
-import { Template } from "./template";
-
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
+import { Template } from "./template";
 
 /**
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.
@@ -82,18 +81,18 @@ export default {
 			{
 				id: "tab-1",
 				label: "Tab 1",
-				icon: "Folder",
+				iconName: "Folder",
 				isSelected: true,
 			},
 			{
 				id: "tab-2",
 				label: "Tab 2",
-				icon: "Image",
+				iconName: "Image",
 			},
 			{
 				id: "tab-3",
 				label: "Tab 3",
-				icon: "Document",
+				iconName: "Document",
 				isDisabled: true,
 			},
 		],
@@ -135,26 +134,31 @@ const TabsGroup = (args) => html`
 `;
 
 const Variants = (args) => html`
-  ${window.isChromatic() ? html`
-  <div style="display: grid; gap: 32px;${args.orientation === "overflow" ? " max-inline-size: 100px" : ""}">
+  <div style=${styleMap({
+	"display": !window.isTestEnv() ? "none" : "grid",
+	"gap": "32px",
+	"max-inline-size": args.orientation === "overflow" ? "100px" : undefined,
+  })}>
     <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Default"], customClasses: ["chromatic-ignore"] })}
+      ${Typography({ semantics: "heading", size: "s", content: ["Default"] })}
       ${TabsGroup(args)}
     </div>
     <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Emphasized"], customClasses: ["chromatic-ignore"] })}
+      ${Typography({ semantics: "heading", size: "s", content: ["Emphasized"] })}
       ${TabsGroup({ ...args, isEmphasized: true })}
     </div>
     <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Quiet"], customClasses: ["chromatic-ignore"] })}
+      ${Typography({ semantics: "heading", size: "s", content: ["Quiet"] })}
       ${TabsGroup({ ...args, isQuiet: true })}
     </div>
     <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Quiet + compact"], customClasses: ["chromatic-ignore"] })}
+      ${Typography({ semantics: "heading", size: "s", content: ["Quiet + compact"] })}
       ${TabsGroup({ ...args, isQuiet: true, isCompact: true })}
     </div>
   </div>
-` : Template(args)}
+  <div style=${styleMap({
+	"display": !window.isTestEnv() ? "none" : undefined,
+  })}>${Template(args)}</div>
 `;
 
 export const Default = Variants.bind({});

@@ -49,13 +49,15 @@ export default {
 };
 
 const ProgressCircleGroup = (args) => html`
-	${window.isChromatic() ? html`
-		${Template(args)}
-		${Template({
-			...args,
-			isIndeterminate: true,
-		})}
-	` : Template(args)}
+	${Template(args)}
+	${Template({
+		...args,
+		isIndeterminate: true,
+		customStyles: {
+			...(args.customStyles ?? {}),
+			"display": window.isTestEnv() ? "none" : args?.customStyles?.display,
+		},
+	})}
 `;
 
 export const Default = ProgressCircleGroup.bind({});

@@ -1,9 +1,11 @@
+import { useGlobals } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 import { when } from "lit/directives/when.js";
+
 import "../index.css";
 
 /**
@@ -104,14 +106,13 @@ export const Template = ({
 	customClasses = [],
 	icons,
 	useRef = false,
-	...globals
-} = {}, context) => {
+}, context) => {
 	let {
 		scale = "medium",
 		workflowIcons,
 		uiIcons,
 		uiIconSizes,
-	} = globals;
+	} = useGlobals();
 
 	if (!workflowIcons || !uiIcons || !uiIconSizes) {
 		const details = fetchIconDetails({

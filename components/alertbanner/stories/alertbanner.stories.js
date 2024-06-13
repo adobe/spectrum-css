@@ -71,24 +71,27 @@ const AlertBannerGroup = (args) => html`
 			"gap": "16px",
 		})}
 	>
+		${Template(args)}
 		${Template({
-			...args,
-		})}
-		${window.isChromatic() ?
-		Template({
 			...args,
 			hasActionButton: true,
 			variant: "info",
-			text: "Your trial will expire in 3 days. Once it expires your files will be saved and ready for you to open again once you have purcahsed the software."
-		}): null }
-		${window.isChromatic() ?
-				Template({
-					...args,
+			text: "Your trial will expire in 3 days. Once it expires your files will be saved and ready for you to open again once you have purcahsed the software.",
+			customStyles: {
+				...(args?.customStyles ?? {}),
+				"display": !window.isTestEnv() ? "none" : undefined,
+			}
+		})}
+		${Template({
+			...args,
 			hasActionButton: true,
 			variant: "negative",
-			text: "Connection interupted. Check your network to continue."
-		})
-		: null }
+			text: "Connection interupted. Check your network to continue.",
+			customStyles: {
+				...(args?.customStyles ?? {}),
+				"display": !window.isTestEnv() ? "none" : undefined,
+			}
+		})}
 	</div>
 `;
 

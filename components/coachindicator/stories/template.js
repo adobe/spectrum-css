@@ -25,12 +25,12 @@ export const Template = ({
 export const CoachIndicatorGroup = (args) => {
 	return html`
 		<div style=${styleMap({
-			display: window.isChromatic() ? "none" : undefined,
+			display: window.isTestEnv() ? "none" : undefined,
 		})}>
 			${Template(args)}
 		</div>
 		<div style=${styleMap({
-			display: window.isChromatic() ? "flex" : "none",
+			display: window.isTestEnv() ? "flex" : "none",
 		})}>
 			${Template(args)}
 			${Template({
@@ -43,7 +43,7 @@ export const CoachIndicatorGroup = (args) => {
 				})}
 		</div>
 		<div style=${styleMap({
-			display: window.isChromatic() ? "flex" : "none",
+			display: window.isTestEnv() ? "flex" : "none",
 		})}>
 			${Template({
 				...args,

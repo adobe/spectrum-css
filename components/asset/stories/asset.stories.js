@@ -10,7 +10,6 @@ export default {
 	title: "Asset",
 	component: "Asset",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		scale: {
 			name: "Platform scale",
 			if: { arg: "preset", neq: "image" }
@@ -44,23 +43,26 @@ export default {
 };
 
 const AssetGroup = (args) => html`
-	${window.isChromatic() ? html`
-		<div style=${styleMap({
-			"display": "grid",
-			"grid-template-columns": "repeat(3, 200px)",
-			"gap": "8px"
-		})}>
-			${Template(args)}
-			${Template({
-				...args,
-				preset: "file",
-			})}
-			${Template({
-				...args,
-				preset: "folder",
-			})}
-		</div>
-	` : Template(args)}
+	<div style=${styleMap({
+		"display": !window.isTestEnv() ? "none" : "grid",
+		"grid-template-columns": "repeat(3, 200px)",
+		"gap": "8px"
+	})}>
+		${Template(args)}
+		${Template({
+			...args,
+			preset: "file",
+		})}
+		${Template({
+			...args,
+			preset: "folder",
+		})}
+	</div>
+	<div style=${styleMap({
+		"display": !window.isTestEnv() ? undefined : "none"
+	})}>
+		${Template(args)}
+	</div>
 `;
 
 export const Default = AssetGroup.bind({});

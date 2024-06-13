@@ -8,26 +8,27 @@ import { html } from "lit";
 export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
-	wrapper: (StoryFn, context) => {
-		const { args = {}, argTypes = {}, viewMode, id, loaded = {} } = context;
+	wrapper: (StoryFn, data) => {
+		const { args = {}, globals = {}, viewMode, id, loaded = {} } = data;
+		let { rootClass, staticColor } = args;
 		const { tokens = {} } = loaded;
 
-		const getDefaultValue = (type) => {
-			if (!type) return null;
-			if (type.defaultValue) return type.defaultValue;
-			return type.options ? type.options[0] : null;
+		const staticColorSettings = {
+			"black": {
+				background: "var(--spectrum-docs-static-black-background-color)",
+				color: "light"
+			},
+			"white": {
+				background: "var(--spectrum-docs-static-white-background-color)",
+				color: "dark"
+			},
 		};
 
-		// This property informs which context stylesheets to source
-		//    but does not source a stylesheet for itself
-		/** @type boolean */
-		const isExpress = args.express
-			? args.express
-			: getDefaultValue(argTypes.express);
-		/** @type string */
-		const color = args.color ? args.color : getDefaultValue(argTypes.color) ?? "light";
-		/** @type string */
-		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
+		let {
+			color = "light",
+			context = "spectrum1",
+			scale = "medium",
+		} = globals;
 
 		useEffect(() => {
 			const toggleStyles = (container, id, styleObj, add = true) => {
@@ -53,14 +54,21 @@ export const withContextWrapper = makeDecorator({
 				else style.remove();
 			};
 
+			const isExpress = Boolean(context === "express");
+			const isLegacy = Boolean(context !== "spectrum2");
 			let containers = [document.body];
 
+			// Storybook IDs used to target the container element for the docs pages
 			const roots = [
 				...document.querySelectorAll(`#story--${id}`),
 				...document.querySelectorAll(`#story--${id}--primary`)
 			];
+
+			// viewMode is either "docs" or "story"
 			if (viewMode === "docs" && roots.length > 0) {
 				containers = roots.map(root => root.closest(".docs-story") ?? root);
+				// add the default classes to the body to ensure labels, headings, and borders are styled correctly
+				document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 			}
 
 			for (const container of containers) {
@@ -70,7 +78,16 @@ export const withContextWrapper = makeDecorator({
 				const scalesContainer = styleContainer.querySelector("#scale");
 				const contextContainer = styleContainer.querySelector("#context");
 
+				const hasStaticElement = container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack, .${rootClass}--overBackground)`);
+				if (!staticColor && hasStaticElement) {
+					staticColor = (
+						container.querySelector(`.${rootClass}--staticWhite`) && "white" ||
+						container.querySelector(`.${rootClass}--staticBlack, .${rootClass}--overBackground`) && "black"
+					);
+				}
+
 				container.classList.toggle("spectrum", true);
+				container.classList.toggle("spectrum--legacy", isLegacy);
 				container.classList.toggle("spectrum--express", isExpress);
 
 				toggleStyles(globalContainer, "vars-base", tokens?.global?.base, true);
@@ -78,11 +95,13 @@ export const withContextWrapper = makeDecorator({
 				toggleStyles(contextContainer, "vars-base-express", tokens?.express?.base, isExpress);
 
 				for (const c of ["light", "dark", "darkest"]) {
-					container.classList.toggle(`spectrum--${c}`, c === color);
+					// Force light or dark mode if the static color is set
+                    const isColor = c === staticColorSettings[staticColor]?.color || !staticColor && c === color;
+					container.classList.toggle(`spectrum--${c}`, isColor);
 
-					toggleStyles(colorsContainer, `vars-${c}`, tokens?.global?.[c], c === color);
-					toggleStyles(colorsContainer, `vars-${c}-spectrum`, tokens?.spectrum?.[c], c === color);
-					toggleStyles(colorsContainer, `vars-${c}-express`, tokens?.express?.[c], isExpress && c === color);
+					toggleStyles(colorsContainer, `vars-${c}`, tokens?.global?.[c], isColor);
+					toggleStyles(colorsContainer, `vars-${c}-spectrum`, tokens?.spectrum?.[c], isColor);
+					toggleStyles(colorsContainer, `vars-${c}-express`, tokens?.express?.[c], isExpress && isColor);
 				}
 
 				for (const s of ["medium", "large"]) {
@@ -94,17 +113,12 @@ export const withContextWrapper = makeDecorator({
 				}
 
 				container.style.removeProperty("background");
-				const hasStaticElement = container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--staticBlack, .${args.rootClass}--overBackground`);
-				if (hasStaticElement) {
-					if (container.querySelector(`.${args.rootClass}--staticBlack`)) {
-						container.style.background = "rgb(181, 209, 211)";
-					}
-					else if (container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--overBackground`)) {
-						container.style.background = "rgb(15, 121, 125)";
-					}
+
+				if (hasStaticElement && staticColor && staticColorSettings[staticColor]) {
+					container.style.background = staticColorSettings[staticColor].background;
 				}
 			}
-		}, [color, scale, isExpress, tokens, args.staticColor]);
+		}, [color, context, staticColor, scale, viewMode, rootClass]);
 
 		return html`
 			<div id="styles-container">
@@ -113,7 +127,7 @@ export const withContextWrapper = makeDecorator({
 				<div id="scale"></div>
 				<div id="context"></div>
 			</div>
-			${StoryFn(context)}
+			${StoryFn(data)}
 		`;
 	},
 });

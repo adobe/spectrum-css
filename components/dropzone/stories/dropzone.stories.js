@@ -40,23 +40,21 @@ export default {
 
 export const Default = (args) => html`
 	<div>
+		${Template(args)}
 		${Template({
-			...args
+			...args,
+			customHeading: "Drag and drop your file to upload",
+			customDescription: [
+				() => {
+					return html`You can also ${Link({ url: "#", text: "select a file" })} from your computer.`;
+				}
+			],
+			customLabel: "Drag and drop to replace file upload",
+			customStyles: {
+				...(args.customStyles ?? {}),
+				"display": !window.isTestEnv() ? "none" : args?.customStyles?.display,
+			},
 		})}
-
-		${window.isChromatic() ?
-			Template({
-				...args,
-				customHeading: "Drag and drop your file to upload",
-				customDescription: [
-					() => {
-						return html`You can also ${Link({ url: "#", text: "select a file" })} from your computer.`;
-					}
-				],
-				customLabel: "Drag and drop to replace file upload"
-			})
-		: null
-	}
 	</div>
 `;
 Default.args = {};
