@@ -9,14 +9,15 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+
 .spectrum {
-  --system-spectrum-pickerbutton-spectrum-picker-button-background-color: var(--spectrum-gray-75);
-  --system-spectrum-pickerbutton-spectrum-picker-button-background-color-hover: var(--spectrum-gray-200);
-  --system-spectrum-pickerbutton-spectrum-picker-button-background-color-down: var(--spectrum-gray-300);
-  --system-spectrum-pickerbutton-spectrum-picker-button-background-color-key-focus: var(--spectrum-gray-200);
-  --system-spectrum-pickerbutton-spectrum-picker-button-border-color: inherit;
-  --system-spectrum-pickerbutton-spectrum-picker-button-border-radius: var(--spectrum-corner-radius-100);
-  --system-spectrum-pickerbutton-spectrum-picker-button-border-radius-rounded-sided: 0;
-  --system-spectrum-pickerbutton-spectrum-picker-button-border-radius-sided: 0;
-  --system-spectrum-pickerbutton-spectrum-picker-button-border-width: var(--spectrum-border-width-100);
+	--system-spectrum-pickerbutton-spectrum-picker-button-background-color: var(--spectrum-gray-75);
+	--system-spectrum-pickerbutton-spectrum-picker-button-background-color-hover: var(--spectrum-gray-200);
+	--system-spectrum-pickerbutton-spectrum-picker-button-background-color-down: var(--spectrum-gray-300);
+	--system-spectrum-pickerbutton-spectrum-picker-button-background-color-key-focus: var(--spectrum-gray-200);
+	--system-spectrum-pickerbutton-spectrum-picker-button-border-color: inherit;
+	--system-spectrum-pickerbutton-spectrum-picker-button-border-radius: var(--spectrum-corner-radius-100);
+	--system-spectrum-pickerbutton-spectrum-picker-button-border-radius-rounded-sided: 0;
+	--system-spectrum-pickerbutton-spectrum-picker-button-border-radius-sided: 0;
+	--system-spectrum-pickerbutton-spectrum-picker-button-border-width: var(--spectrum-border-width-100);
 }

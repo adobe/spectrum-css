@@ -15,6 +15,8 @@ governing permissions and limitations under the License.
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
+const { deflate } = require("zlib");
+const { promisify } = require("util");
 
 const fg = require("fast-glob");
 const postcss = require("postcss");
@@ -22,6 +24,8 @@ const postcssrc = require("postcss-load-config");
 const prettier = require("prettier");
 
 require("colors");
+
+const gzip = promisify(deflate);
 
 /**
  * A source of truth for commonly used directories
@@ -94,6 +98,13 @@ async function extractProperties(
 	return new Set([...content.matchAll(regex)].map((match) => match[1]) ?? []);
 }
 
+async function pretty(content, settings = {}) {
+	return prettier.format(content, {
+		parser: settings.parser ?? "css",
+		...settings
+	});
+}
+
 /**
  * Extract custom property modifers to report
  * @param {string} filepath
@@ -131,7 +142,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
 		promises.push(
 			fsp.writeFile(
 				path.join(cwd, "metadata/mods.md"),
-				(await prettier.format(
+				(await pretty(
 					[
 						"| Modifiable custom properties |\n| --- |",
 						...[...found].sort().map((result) => `| \`${result}\` |`),
@@ -152,7 +163,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
 	promises.push(
 		fsp.writeFile(
 			path.join(cwd, "dist/metadata.json"),
-			(await prettier.format(
+			(await pretty(
 				JSON.stringify({
 					selectors: [...selectors].sort(),
 					mods: [...found].sort(),
@@ -200,6 +211,8 @@ async function processCSS(content, input, output, {
 } = {}) {
 	if (!content) return Promise.reject(new Error("This function requires content be provided"));
 
+	const minify = path.basename(output, ".css").endsWith(".min");
+
 	const { plugins, options } = await postcssrc(
 		{
 			cwd,
@@ -207,6 +220,8 @@ async function processCSS(content, input, output, {
 			from: input,
 			to: output,
 			verbose: false,
+			shouldMinify: minify,
+			lint: true,
 			...postCSSOptions,
 		},
 		configPath // This is the path to the directory where the postcss.config.js lives
@@ -227,19 +242,33 @@ async function processCSS(content, input, output, {
 		});
 	}
 
-	const promises = [];
+	const formatted = await pretty(result.css.trimStart(), { printWidth: 500 });
 
-	if (result.css) {
-		const formatted = await prettier.format(result.css.trimStart(), { parser: "css", printWidth: 500 });
+	const promises = [
+		fsp.writeFile(output, formatted).then(() => {
+			const stats = fs.statSync(output);
+			return `${"✓".green}  ${relativePrint(output, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
+		}).catch((err) => {
+			if (!err) return;
+			console.log(`${"✗".red}  ${relativePrint(output, { cwd }).yellow} not written`);
+			return Promise.reject(err);
+		}),
+	];
+
+	if (minify) {
 		promises.push(
-			fsp.writeFile(output, formatted).then(() => {
-				const stats = fs.statSync(output);
-				return `${"✓".green}  ${relativePrint(output, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-			}).catch((err) => {
-				if (!err) return;
-				console.log(`${"✗".red}  ${relativePrint(output, { cwd }).yellow} not written`);
-				return Promise.reject(err);
-			})
+			gzip(formatted)
+				.then(zipped => fsp.writeFile(`${output}.gz`, zipped)
+					.then(() => {
+						const stats = fs.statSync(`${output}.gz`);
+						return `${"✓".green}  ${relativePrint(`${output}.gz`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
+					}).catch((err) => {
+						if (!err) return;
+						console.log(`${"✗".red}  ${relativePrint(`${output}.gz`, { cwd }).yellow} not written`);
+						return Promise.reject(err);
+					})
+				)
+				.catch((err) => Promise.resolve(err))
 		);
 	}
 
@@ -317,7 +346,7 @@ async function fetchContent(globs = [], {
  * @param {string} [config.cwd=] - Current working directory for the component being built
  * @returns Promise<string|void>
  */
-async function copy(from, to, { cwd, isDeprecated = true } = {}) {
+async function copy({ from, to, cwd, isDeprecated = false } = {}) {
 	if (!fs.existsSync(from)) return;
 
 	if (!fs.existsSync(path.dirname(to))) {
@@ -360,7 +389,7 @@ async function cleanFolder({ cwd = process.cwd() } = {}) {
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function build({ cwd = process.cwd(), clean = false } = {}) {
+async function build({ cwd = process.cwd(), clean = false, minify = false } = {}) {
 	// Nothing to do if there's no input file
 	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
 
@@ -376,17 +405,24 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 					// After building, extract the available modifiers
 					extractModifiers(path.join(cwd, "dist/index.css"), { cwd }),
 					// Copy index.css to index-vars.css for backwards compat, log as deprecated
-					copy(path.join(cwd, "dist/index.css"), path.join(cwd, "dist/index-vars.css"), { cwd }),
+					copy({
+						from: path.join(cwd, "dist/index.css"),
+						to: path.join(cwd, "dist/index-vars.css"),
+						cwd,
+						isDeprecated: true
+					}),
 				])
 				// Return the console output to be logged
 					.then(r => [r, ...reports])
 			),
+		minify ? processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.min.css"), { cwd, clean }) : Promise.resolve(),
 		// This was buildCSSWithoutThemes
-		processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist/index-base.css"), {
+		processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-base.css"), {
 			cwd,
 			clean,
 			lint: false,
 		}),
+		minify ? processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-base.min.css"), { cwd, clean }) : Promise.resolve(),
 		// This was buildCSSWithoutThemes
 		hasThemes ? processCSS(content, path.join(cwd, "index.css"), path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), {
 			cwd,
@@ -395,7 +431,11 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 			map: false,
 			env: "production",
 		}).then(async (reports) => {
-			return copy(path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), path.join(dirs.root, "tokens", "dist/css/components/bridge", `${componentName}.css`), { cwd, isDeprecated: false }).then(r => [...reports, r]);
+			return copy({
+				from: path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`),
+				to: path.join(dirs.root, "tokens", "dist/css/components/bridge", `${componentName}.css`),
+				cwd
+			}).then(r => [...reports, r]);
 		}) : Promise.resolve(),
 	]);
 }
@@ -407,7 +447,7 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
+async function buildThemes({ cwd = process.cwd(), minify = false, clean = false } = {}) {
 	// This fetches the content of the files and returns an array of objects with the content and input paths
 	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
 	const componentName = cwd?.split(path.sep)?.pop();
@@ -417,24 +457,47 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 
 	return Promise.all(
 		contentData.map(async ({ content, input }) => {
+			const themeOutputPath = path.join(cwd, "dist", input);
+			const isExpress = path.basename(input, ".css") === "express";
+
 			const promises = [
-				processCSS(content, path.join(cwd, input), path.join(cwd, "dist", input), { cwd, clean, lint: false }),
-				processCSS(content, path.join(cwd, input), path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`), { cwd, clean, lint: false, env: "production", map: false }).then(async (reports) => {
-					// Copy the build express & spectrum component tokens to the tokens package folder in src and dist output
-					// (dist included b/c tokens are typically built before components in the build order)
-					return copy(
-						path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`),
-						path.join(dirs.root, "tokens", "dist/css", "components", path.basename(input, ".css"), `${componentName}.css`),
-						{ cwd, isDeprecated: false }
-					).then(r => [...reports, r]);
-				}),
+				processCSS(content, path.join(cwd, input), themeOutputPath, { cwd, clean, lint: false })
+					.then(async (reports) => {
+						// Copy the theme tokens to the tokens package folder in src and dist output
+						// (dist included b/c tokens are typically built before components in the build order)
+						return Promise.all([
+							copy({
+								from: themeOutputPath,
+								to: path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`),
+								cwd,
+							}),
+							// @todo: should dist be using the minified version?
+							copy({
+								from: themeOutputPath,
+								to: path.join(dirs.root, "tokens", "dist/css", "components", path.basename(input, ".css"), `${componentName}.css`),
+								cwd
+							}),
+						]).then(r => [...reports, r]);
+					}),
 			];
 
 			// Additional processing for the express output because it includes both it and spectrum's content
-			if (path.basename(input, ".css") === "express") {
+			if (isExpress) {
 				promises.push(
-					processCSS(content, path.join(cwd, input), path.join(cwd, "dist/index-theme.css"), { cwd, clean, lint: false }),
+					processCSS(content, path.join(cwd, input), path.join(cwd, "dist", "index-theme.css"), { cwd, clean, lint: false }),
 				);
+			}
+
+			if (minify) {
+				promises.push(
+					processCSS(content, path.join(cwd, input), path.join(cwd, "dist", path.dirname(input), path.basename(input, ".css") + ".min.css"), { cwd, clean, lint: false }),
+				);
+
+				if (isExpress) {
+					promises.push(
+						processCSS(content, path.join(cwd, input), path.join(cwd, "dist", "index-theme.min.css"), { cwd, clean, lint: false })
+					);
+				}
 			}
 
 			return Promise.all(promises);
@@ -467,13 +530,17 @@ async function main({
 		clean = process.env.NODE_ENV === "production";
 	}
 
+	let minify = false;
+	if (process.env.NODE_ENV === "production") {
+		minify = true;
+	}
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
 	return Promise.all([
 		...(clean ? [cleanFolder({ cwd })] : []),
-		build({ cwd, clean }),
-		buildThemes({ cwd, clean }),
+		build({ cwd, clean, minify }),
+		buildThemes({ cwd, clean, minify }),
 	]).then((report) => {
 		const logs = report.flat(Infinity).filter(Boolean);
 
