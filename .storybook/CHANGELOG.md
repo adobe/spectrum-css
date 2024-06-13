@@ -1,5 +1,18 @@
 # Change Log
 
+## 10.3.0
+
+### Minor Changes
+
+- [#2840](https://github.com/adobe/spectrum-css/pull/2840) [`84a70bb`](https://github.com/adobe/spectrum-css/commit/84a70bb076ac7afd15122d3b53299a4f1ccd1af3) Thanks [@castastrophe](https://github.com/castastrophe)! - Tokens update to correct the background color used in documentation for static black.
+
+  Feature that updates storybook to move shared arg types to the global scope.
+
+### Patch Changes
+
+- Updated dependencies [[`84a70bb`](https://github.com/adobe/spectrum-css/commit/84a70bb076ac7afd15122d3b53299a4f1ccd1af3)]:
+  - @spectrum-css/tokens@14.3.1
+
 ## 10.2.0
 
 ### Minor Changes
