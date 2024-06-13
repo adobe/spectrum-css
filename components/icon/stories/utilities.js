@@ -1,10 +1,8 @@
-import path from "path";
-
 // Imports an array of all icon names in the workflow set
 import iconOpts from "@adobe/spectrum-css-workflow-icons";
 
 export const workflowIcons = (iconOpts || []).map((icon) =>
-	path.basename(icon, ".svg")
+	icon.replace(/\.svg$/, "")
 );
 
 /**
@@ -44,43 +42,3 @@ export const uiIconsWithDirections = [
 	"ChevronUp",
 	"ChevronDown",
 ];
-
-/**
- * Retrieve SVG markup from contents of loaded SVG file, pulling from
- * either the set of Workflow icons or UI icons.
- *
- * @param {object}
- * @returns {string} SVG HTML markup
- */
-export const fetchIconSVG = ({
-	iconName,
-	setName = "workflow",
-	...globals
-}) => {
-	if (!iconName) return;
-
-	const { scale } = globals;
-	let icon;
-
-	// Check "Workflow icons" first.
-	if (setName === "workflow") {
-		try {
-			icon = require(`@adobe/spectrum-css-workflow-icons/dist/${
-				scale !== "medium" ? "24" : "18"
-			}/${iconName}.svg?raw`);
-			if (icon) return (icon.default ?? icon).trim();
-		}
-		catch (e) {/* ignore */}
-	}
-
-	// Check "UI icons" for icon set if not yet found.
-	try {
-		icon = require(`@spectrum-css/ui-icons/dist/${
-			scale ? scale : "medium"
-		}/${iconName}.svg?raw`);
-		if (icon) return (icon.default ?? icon).trim();
-	}
-	catch (e) {/* ignore */}
-
-	return;
-};

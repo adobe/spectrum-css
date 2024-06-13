@@ -16,10 +16,10 @@
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
-					"node -e \"require('./tasks/token-rollup.js').default()\""
+					"node -e \"require('./tasks/token-rollup.js').default()\"",
+					"cp -a ./components ./dist/components"
 				],
-				"cwd": "{projectRoot}",
-				"parallel": false
+				"cwd": "{projectRoot}"
 			},
 			"outputs": [
 				"{projectRoot}/dist/index.css"

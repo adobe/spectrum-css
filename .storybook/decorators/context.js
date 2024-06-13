@@ -1,4 +1,5 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator, useArgs, useEffect, useGlobals } from "@storybook/preview-api";
+import { fetchContainers, fetchStyleContainer, toggleStyles } from "./helpers";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -7,66 +8,141 @@ import { makeDecorator, useEffect } from "@storybook/preview-api";
 export const withContextWrapper = makeDecorator({
 	name: "withContextWrapper",
 	parameterName: "context",
-	wrapper: (StoryFn, context) => {
-		const { globals, args, argTypes, viewMode, id } = context;
+	wrapper: (StoryFn, data) => {
+		const {
+			args: {
+				rootClass,
+				staticColor,
+				...args
+			} = {},
+			globals: {
+				color = "light",
+				context = "spectrum1",
+				scale = "medium",
+			} = {},
+			viewMode,
+			id,
+			loaded: {
+				tokens = {},
+				legacy = {},
+			} = {}
+		} = data;
 
-		const getDefaultValue = (type) => {
-			if (!type) return null;
-			if (type.defaultValue) return type.defaultValue;
-			return type.options ? type.options[0] : null;
+		const [, updateGlobals] = useGlobals();
+		const [, updateArgs] = useArgs();
+
+		const staticColorSettings = {
+			"black": {
+				background: "var(--spectrum-docs-static-black-background-color)",
+				color: "light"
+			},
+			"white": {
+				background: "var(--spectrum-docs-static-white-background-color)",
+				color: "dark"
+			},
 		};
 
-		// This property informs which context stylesheets to source
-		//    but does not source a stylesheet for itself
-		/** @type boolean */
-		const ctx = args.express ? "express" : globals.context ?? "spectrum";
-		/** @type string */
-		const color = args.color ? args.color : getDefaultValue(argTypes.color) ?? "light";
-		/** @type string */
-		const scale = args.scale ? args.scale : getDefaultValue(argTypes.scale) ?? "medium";
+		/**
+		 * @deprecated allow temporary fallback support for values defined in the args
+		 * */
+		if (args.color && args.color !== color) {
+			updateGlobals({ color: args.color });
+			// prevents unnecessary re-renders
+			updateArgs({ color: undefined });
+		}
 
-		const colors = ["light", "dark", "darkest"];
-		const scales = ["medium", "large"];
+		if (args.express && context !== "express") {
+			updateGlobals({ context: "express" });
+			// prevents unnecessary re-renders
+			updateArgs({ express: undefined });
+		}
+
+		if (args.scale && args.scale !== scale) {
+			updateGlobals({ scale: args.scale });
+			// prevents unnecessary re-renders
+			updateArgs({ scale: undefined });
+		}
+
+		window.__color = color;
+		window.__context = context;
+		window.__scale = scale;
 
 		useEffect(() => {
-			const isLegacy = ["legacy", "express"].includes(ctx);
-			let containers = [document.body];
+			const isExpress = Boolean(context === "express");
+			const isLegacy = Boolean(context !== "spectrum2");
 
-			const roots = [
-				...document.querySelectorAll(`#story--${id}`),
-				...document.querySelectorAll(`#story--${id}--primary`)
-			];
-			if (viewMode === "docs" && roots.length > 0) {
-				containers = roots.map(root => root.closest(".docs-story") ?? root);
+			let coreData = tokens;
+			if (isLegacy) {
+				coreData = legacy;
 			}
 
-			for (const container of containers) {
+			// viewMode is either "docs" or "story"
+			if (viewMode === "docs") {
+				// add the default classes to the body to ensure labels, headings, and borders are styled correctly
+				document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
+			}
+
+			for (const container of fetchContainers(id, viewMode === "docs")) {
+				// Wrapper div for all injected styles
+				const styleContainer = fetchStyleContainer("styles-container", container);
+
+				// Individual style containers for global, colors, scales, and context
+				const globalContainer = fetchStyleContainer("global", styleContainer);
+				const colorsContainer = fetchStyleContainer("colors", styleContainer);
+				const scalesContainer = fetchStyleContainer("scale", styleContainer);
+				const contextContainer = fetchStyleContainer("context", styleContainer);
+
+				// Check if the container has a static color element
+				const hasStaticElement = container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack, .${rootClass}--overBackground)`);
+				let staticKey = staticColor;
+				if (!staticKey && hasStaticElement) {
+					staticKey = (
+						container.querySelector(`.${rootClass}--staticWhite`) && "white" ||
+						container.querySelector(`.${rootClass}--staticBlack, .${rootClass}--overBackground`) && "black"
+					);
+				}
+
+				// Every container gets the spectrum class
 				container.classList.toggle("spectrum", true);
+
+				// S1 and S1 Express get the legacy class
 				container.classList.toggle("spectrum--legacy", isLegacy);
-				container.classList.toggle("spectrum--express", ctx === "express");
+				// Express only gets the express class
+				container.classList.toggle("spectrum--express", isExpress);
 
-				for (const c of colors) {
-					container.classList.toggle(`spectrum--${c}`, c === color);
+				// Add/remove the base styles for the global, spectrum, and express contexts
+				toggleStyles(globalContainer, "vars-base", !isLegacy ? coreData?.base : coreData?.global?.base, true);
+				toggleStyles(contextContainer, "vars-base-spectrum", coreData?.spectrum?.base, isLegacy);
+				toggleStyles(contextContainer, "vars-base-express", coreData?.express?.base, isLegacy && isExpress);
+
+				// @todo note that darkest is being deprecated in the S2 system
+				for (const c of ["light", "dark", "darkest"]) {
+					// Force light or dark mode if the static color is set
+                    const isColor = c === staticColorSettings[staticKey]?.color || !staticKey && c === color;
+
+					container.classList.toggle(`spectrum--${c}`, isColor);
+
+					toggleStyles(colorsContainer, `vars-${c}`, !isLegacy ? coreData?.[c] : coreData?.global?.[c], isColor);
+					toggleStyles(colorsContainer, `vars-${c}-spectrum`, coreData?.spectrum?.[c], isLegacy && isColor);
+					toggleStyles(colorsContainer, `vars-${c}-express`, coreData?.express?.[c], isLegacy && isExpress && isColor);
 				}
 
-				for (const s of scales) {
+				for (const s of ["medium", "large"]) {
 					container.classList.toggle(`spectrum--${s}`, s === scale);
+
+					toggleStyles(scalesContainer, `vars-${s}`, !isLegacy ? coreData?.[s] : coreData?.global?.[s], s === scale);
+					toggleStyles(scalesContainer, `vars-${s}-spectrum`, coreData?.spectrum?.[s], isLegacy && s === scale);
+					toggleStyles(scalesContainer, `vars-${s}-express`, coreData?.express?.[s], isLegacy && isExpress && s === scale);
 				}
 
-
+				// Start by removing the background color from the container and then add it back if needed
 				container.style.removeProperty("background");
-				const hasStaticElement = container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--staticBlack, .${args.rootClass}--overBackground`);
-				if (hasStaticElement) {
-					if (container.querySelector(`.${args.rootClass}--staticBlack`)) {
-						container.style.background = "rgb(181, 209, 211)";
-					}
-					else if (container.querySelector(`.${args.rootClass}--staticWhite, .${args.rootClass}--overBackground`)) {
-						container.style.background = "rgb(15, 121, 125)";
-					}
+				if (hasStaticElement && staticKey && staticColorSettings[staticKey]) {
+					container.style.background = staticColorSettings[staticKey].background;
 				}
 			}
-		}, [color, ctx, scale, args.staticColor]);
+		}, [color, context, staticColor, scale, viewMode, rootClass]);
 
-		return StoryFn(context);
+		return StoryFn(data);
 	},
 });

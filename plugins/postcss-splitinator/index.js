@@ -26,10 +26,6 @@ module.exports = ({
 		if (!referencesOnly && !noFlatVariables) return;
 
 		root.walkRules((rule) => {
-			if (referencesOnly) {
-				if (rule.selector !== ":root") rule.remove();
-			}
-
 			if (noFlatVariables) {
 				if (rule.selector === ":root") rule.remove();
 			}
@@ -37,6 +33,9 @@ module.exports = ({
 			// Remove all declarations that don't reference a variable
 			rule.walkDecls((decl) => {
 				if (referencesOnly && !decl.prop.startsWith("--")) {
+					decl.remove();
+				}
+				else if (!referencesOnly && noFlatVariables && decl.prop.startsWith("--")) {
 					decl.remove();
 				}
 			});

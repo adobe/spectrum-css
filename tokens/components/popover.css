@@ -1,0 +1,43 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+.spectrum-Popover {
+  --spectrum-popover-border-width: var(--spectrum-border-width-100);
+  --flow-direction: 1;
+  --spectrum-popover-animation-distance: var(--spectrum-spacing-100);
+  --spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
+  --spectrum-popover-border-color: var(--spectrum-gray-400);
+  --spectrum-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
+  --spectrum-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
+  --spectrum-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
+  --spectrum-popover-shadow-blur: var(--spectrum-drop-shadow-blur);
+  --spectrum-popover-shadow-color: var(--spectrum-drop-shadow-color);
+  --spectrum-popover-corner-radius: var(--spectrum-corner-radius-100);
+  --spectrum-popover-pointer-width: var(--spectrum-popover-tip-width);
+  --spectrum-popover-pointer-height: var(--spectrum-popover-tip-height);
+  --spectrum-popover-pointer-edge-offset: calc(var(--spectrum-corner-radius-100) + var(--spectrum-popover-tip-width) / 2);
+  --spectrum-popover-pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - var(--spectrum-popover-tip-width) / 2);
+}
+.spectrum-Popover:dir(rtl) {
+  --flow-direction: -1;
+}
+@media (forced-colors: active) {
+  .spectrum-Popover {
+    --highcontrast-popover-border-color: CanvasText;
+  }
+}
+.spectrum-Popover {
+  --spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
+}
+.spectrum-Popover * {
+  --mod-popover-filter: none;
+}
+/*# sourceMappingURL=vars.css.map */

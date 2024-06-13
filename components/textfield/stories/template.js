@@ -1,13 +1,12 @@
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
 import "../index.css";
 
@@ -44,7 +43,7 @@ export const Template = ({
 	onclick,
 	customStyles = {},
 	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
 
 	if (isInvalid) {
@@ -94,7 +93,7 @@ export const Template = ({
 			...globals,
 			size,
 			label: labelText,
-		}))}
+		}, context))}
 		${when(iconName, () => Icon({
 			...globals,
 			size,
@@ -106,7 +105,7 @@ export const Template = ({
 					: `${rootClass}-icon`,
 				...customIconClasses,
 			],
-		}))}
+		}, context))}
 		${when(multiline,
 			() => html`<textarea
 				placeholder=${ifDefined(placeholder)}
@@ -144,7 +143,7 @@ export const Template = ({
 			isIndeterminate: true,
 			size: "s",
 			customClasses: customProgressCircleClasses,
-		}))}
+		}, context))}
 	</div>
 	`;
 };

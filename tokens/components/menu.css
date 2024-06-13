@@ -1,0 +1,219 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+.spectrum-Menu {
+  --spectrum-menu-item-min-height: var(--spectrum-component-height-100);
+  --spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
+  --spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-100);
+  --spectrum-menu-item-label-font-size: var(--spectrum-font-size-100);
+  --spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-100);
+  --spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-100);
+  --spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-100);
+  --spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-100);
+  --spectrum-menu-item-description-font-size: var(--spectrum-font-size-75);
+  --spectrum-menu-section-header-font-size: var(--spectrum-font-size-100);
+  --spectrum-menu-section-header-min-width: var(--spectrum-component-height-100);
+  --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-medium);
+  --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-medium);
+  --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-medium);
+  --spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-medium);
+  --spectrum-menu-item-top-to-action: var(--spectrum-spacing-50);
+  --spectrum-menu-item-top-to-checkbox: var(--spectrum-spacing-50);
+  --spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
+  --spectrum-menu-item-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
+  --spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description);
+  --spectrum-menu-item-focus-indicator-width: var(--spectrum-border-width-200);
+  --spectrum-menu-item-focus-indicator-color: var(--spectrum-blue-800);
+  --spectrum-menu-item-label-to-value-area-min-spacing: var(--spectrum-spacing-100);
+  --spectrum-menu-item-label-content-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-menu-item-label-content-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-menu-item-label-content-color-down: var(--spectrum-neutral-content-color-down);
+  --spectrum-menu-item-label-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
+  --spectrum-menu-item-label-icon-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-menu-item-label-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-menu-item-label-icon-color-down: var(--spectrum-neutral-content-color-down);
+  --spectrum-menu-item-label-icon-color-focus: var(--spectrum-neutral-content-color-key-focus);
+  --spectrum-menu-item-label-content-color-disabled: var(--spectrum-disabled-content-color);
+  --spectrum-menu-item-label-icon-color-disabled: var(--spectrum-disabled-content-color);
+  --spectrum-menu-item-description-line-height: var(--spectrum-line-height-100);
+  --spectrum-menu-item-description-line-height-cjk: var(--spectrum-cjk-line-height-100);
+  --spectrum-menu-item-description-color-default: var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-menu-item-description-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+  --spectrum-menu-item-description-color-down: var(--spectrum-neutral-subdued-content-color-down);
+  --spectrum-menu-item-description-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+  --spectrum-menu-item-description-color-disabled: var(--spectrum-disabled-content-color);
+  --spectrum-menu-section-header-line-height: var(--spectrum-line-height-100);
+  --spectrum-menu-section-header-line-height-cjk: var(--spectrum-cjk-line-height-100);
+  --spectrum-menu-section-header-font-weight: var(--spectrum-bold-font-weight);
+  --spectrum-menu-section-header-color: var(--spectrum-gray-900);
+  --spectrum-menu-collapsible-icon-color: var(--spectrum-gray-900);
+  --spectrum-menu-checkmark-icon-color-default: var(--spectrum-accent-color-900);
+  --spectrum-menu-checkmark-icon-color-hover: var(--spectrum-accent-color-1000);
+  --spectrum-menu-checkmark-icon-color-down: var(--spectrum-accent-color-1100);
+  --spectrum-menu-checkmark-icon-color-focus: var(--spectrum-accent-color-1000);
+  --spectrum-menu-drillin-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-menu-drillin-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+  --spectrum-menu-drillin-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
+  --spectrum-menu-drillin-icon-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+  --spectrum-menu-item-value-color-default: var(--spectrum-neutral-subdued-content-color-default);
+  --spectrum-menu-item-value-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+  --spectrum-menu-item-value-color-down: var(--spectrum-neutral-subdued-content-color-down);
+  --spectrum-menu-item-value-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+  --spectrum-menu-checkmark-display-hidden: none;
+  --spectrum-menu-checkmark-display-shown: block;
+  --spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-shown);
+  --spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-medium);
+  --spectrum-menu-item-collapsible-has-icon-submenu-item-padding-x-start: calc(var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width));
+  --spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start: calc(var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width));
+}
+.spectrum-Menu--sizeS {
+  --spectrum-menu-item-min-height: var(--spectrum-component-height-75);
+  --spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-75);
+  --spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-75);
+  --spectrum-menu-item-label-font-size: var(--spectrum-font-size-75);
+  --spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-75);
+  --spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-75);
+  --spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-75);
+  --spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-75);
+  --spectrum-menu-item-description-font-size: var(--spectrum-font-size-50);
+  --spectrum-menu-section-header-font-size: var(--spectrum-font-size-75);
+  --spectrum-menu-section-header-min-width: var(--spectrum-component-height-75);
+  --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-small);
+  --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-small);
+  --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-small);
+  --spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-small);
+  --spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-small);
+}
+.spectrum-Menu--sizeL {
+  --spectrum-menu-item-min-height: var(--spectrum-component-height-200);
+  --spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-200);
+  --spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-200);
+  --spectrum-menu-item-label-font-size: var(--spectrum-font-size-200);
+  --spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-200);
+  --spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-200);
+  --spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-200);
+  --spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-200);
+  --spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-200);
+  --spectrum-menu-item-description-font-size: var(--spectrum-font-size-100);
+  --spectrum-menu-section-header-font-size: var(--spectrum-font-size-200);
+  --spectrum-menu-section-header-min-width: var(--spectrum-component-height-200);
+  --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-large);
+  --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-large);
+  --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-large);
+  --spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-large);
+  --spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-large);
+}
+.spectrum-Menu--sizeXL {
+  --spectrum-menu-item-min-height: var(--spectrum-component-height-300);
+  --spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-300);
+  --spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-300);
+  --spectrum-menu-item-label-font-size: var(--spectrum-font-size-300);
+  --spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-300);
+  --spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-300);
+  --spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-300);
+  --spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-300);
+  --spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-300);
+  --spectrum-menu-item-description-font-size: var(--spectrum-font-size-200);
+  --spectrum-menu-section-header-font-size: var(--spectrum-font-size-300);
+  --spectrum-menu-section-header-min-width: var(--spectrum-component-height-300);
+  --spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-extra-large);
+  --spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-extra-large);
+  --spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-extra-large);
+  --spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-extra-large);
+  --spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-extra-large);
+}
+@media (forced-colors: active) {
+  .spectrum-Menu {
+    --highcontrast-menu-item-background-color-default: ButtonFace;
+    --highcontrast-menu-item-color-default: ButtonText;
+    --highcontrast-menu-item-background-color-focus: Highlight;
+    --highcontrast-menu-item-color-focus: HighlightText;
+    --highcontrast-menu-checkmark-icon-color-default: Highlight;
+    --highcontrast-menu-item-color-disabled: GrayText;
+    --highcontrast-menu-item-focus-indicator-color: Highlight;
+    --highcontrast-menu-item-selected-background-color: Highlight;
+    --highcontrast-menu-item-selected-color: HighlightText;
+  }
+  @supports (color: SelectedItem) {
+    .spectrum-Menu {
+      --highcontrast-menu-item-selected-background-color: SelectedItem;
+      --highcontrast-menu-item-selected-color: SelectedItemText;
+    }
+  }
+  .spectrum-Menu .spectrum-Menu-item:focus .spectrum-Menu-itemCheckbox {
+    --highcontrast-checkbox-highlight-color-hover: ButtonText;
+    --highcontrast-checkbox-highlight-color-default: ButtonText;
+  }
+  .spectrum-Menu .spectrum-Menu-item:focus .spectrum-Menu-itemSwitch {
+    --highcontrast-switch-handle-border-color-hover: ButtonText;
+    --highcontrast-switch-handle-border-color-selected-default: ButtonText;
+    --highcontrast-switch-handle-border-color-selected-hover: ButtonText;
+    --highcontrast-switch-background-color-selected-default: ButtonText;
+    --highcontrast-switch-background-color-selected-hover: ButtonText;
+  }
+  .spectrum-Menu .spectrum-Menu-item--drillIn.is-open {
+    --highcontrast-menu-item-background-color-default: var(--highcontrast-menu-item-selected-background-color);
+    --highcontrast-menu-item-color-default: var(--highcontrast-menu-item-selected-color);
+  }
+  .spectrum-Menu .spectrum-Menu-item--collapsible.is-open.is-focused,
+  .spectrum-Menu .spectrum-Menu-item--collapsible.is-open:active,
+  .spectrum-Menu .spectrum-Menu-item--collapsible.is-open:focus {
+    --highcontrast-menu-item-color-focus: var(--highcontrast-menu-item-color-default);
+  }
+  @media (hover: hover) {
+    .spectrum-Menu .spectrum-Menu-item:hover .spectrum-Menu-itemCheckbox {
+      --highcontrast-checkbox-highlight-color-hover: ButtonText;
+      --highcontrast-checkbox-highlight-color-default: ButtonText;
+    }
+    .spectrum-Menu .spectrum-Menu-item:hover .spectrum-Menu-itemSwitch {
+      --highcontrast-switch-handle-border-color-hover: ButtonText;
+      --highcontrast-switch-handle-border-color-selected-default: ButtonText;
+      --highcontrast-switch-handle-border-color-selected-hover: ButtonText;
+      --highcontrast-switch-background-color-selected-default: ButtonText;
+      --highcontrast-switch-background-color-selected-hover: ButtonText;
+    }
+    .spectrum-Menu .spectrum-Menu-item--collapsible.is-open:hover {
+      --highcontrast-menu-item-color-focus: var(--highcontrast-menu-item-color-default);
+    }
+  }
+}
+.spectrum-Menu:lang(ja),
+.spectrum-Menu:lang(ko),
+.spectrum-Menu:lang(zh) {
+  --spectrum-menu-item-label-line-height: var(--mod-menu-item-label-line-height-cjk, var(--spectrum-menu-item-label-line-height-cjk));
+  --spectrum-menu-item-description-line-height: var(--mod-menu-item-description-line-height-cjk, var(--spectrum-menu-item-description-line-height-cjk));
+  --spectrum-menu-section-header-line-height: var(--mod-menu-section-header-line-height-cjk, var(--spectrum-menu-section-header-line-height-cjk));
+}
+.spectrum-Menu .spectrum-Menu-divider {
+  --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-medium);
+}
+.spectrum-Menu .spectrum-Menu-divider.spectrum-Divider--sizeS {
+  --spectrum-menu-divider-thickness: var(--spectrum-divider-thickness-small);
+}
+.spectrum-Menu.is-selectable .spectrum-Menu-item {
+  --spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-hidden);
+}
+.spectrum-Menu.is-selectable .spectrum-Menu-item.is-selected {
+  --spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-shown);
+}
+.spectrum-Menu-item .spectrum-Menu-itemCheckbox {
+  --mod-checkbox-top-to-text: 0;
+  --mod-checkbox-text-to-control: 0;
+}
+.spectrum-Menu-item:dir(rtl) {
+  --spectrum-menu-item-focus-indicator-direction-scalar: -1;
+}
+.spectrum-Menu-item--drillIn.is-open {
+  --spectrum-menu-item-background-color-default: var(--highcontrast-menu-item-selected-background-color, var(--mod-menu-item-background-color-hover, var(--spectrum-menu-item-background-color-hover)));
+}
+/*# sourceMappingURL=vars.css.map */

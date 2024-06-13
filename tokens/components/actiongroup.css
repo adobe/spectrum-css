@@ -1,0 +1,46 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+.spectrum-ActionGroup {
+  --spectrum-actiongroup-gap-size-compact: 0;
+  --spectrum-actiongroup-horizontal-spacing-compact: -1px;
+  --spectrum-actiongroup-vertical-spacing-compact: -1px;
+  --spectrum-actiongroup-button-spacing-reset: 0;
+  --spectrum-actiongroup-border-radius-reset: 0;
+  --spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
+}
+.spectrum-ActionGroup--sizeS,
+.spectrum-ActionGroup--sizeXS {
+  --spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
+  --spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
+}
+.spectrum-ActionGroup--sizeL,
+.spectrum-ActionGroup--sizeM,
+.spectrum-ActionGroup--sizeXL {
+  --spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
+  --spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
+}
+.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child {
+  --mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+}
+.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item {
+  --mod-actionbutton-focus-indicator-border-radius: 0px;
+}
+.spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child {
+  --mod-actionbutton-focus-indicator-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
+}
+.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child {
+  --mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px;
+}
+.spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:last-child {
+  --mod-actionbutton-focus-indicator-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+}
+/*# sourceMappingURL=vars.css.map */

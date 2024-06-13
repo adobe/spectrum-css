@@ -1,42 +1,52 @@
 /* global Typekit */
 
-// This wrapper prevents loading the font more than once
-if (!window.Typekit) {
-	const kitId =
-		document.querySelector("[lang]:not([lang=\"en-US\"])") === null
-			? "mge7bvf"
-			: "rok6rmo";
-
+window.addEventListener("DOMContentLoaded", () => {
 	const html = document.documentElement;
-	html.classList.add("wf-loading");
+	const root = document.head ?? document.body ?? html;
+	const isNotEnglish = root.querySelector("[lang]:not([lang=\"en-US\"])");
 
-	const t = setTimeout(function () {
-		html.classList.remove("wf-loading");
-		html.classList.add("wf-inactive");
-	}, 3000);
-
-	const tk = document.createElement("script");
-	let d = false;
-
-	// Always load over https
-	tk.src = "https://use.typekit.net/" + kitId + ".js";
-	tk.type = "text/javascript";
-	tk.async = "true";
-	tk.onload = tk.onreadystatechange = () => {
-		const a = this.readyState;
-		if (d || (a && a !== "complete" && a !== "loaded")) return;
-
-		d = true;
-		clearTimeout(t);
-
-		try {
-			window.Typekit = Typekit.load({
-				kitId,
-				scriptTimeout: 3000,
-			});
-		}
-		catch (b) {/* empty */}
+	const toggleClass = (state, force = true) => {
+		if (html) html.classList.toggle(`wf-${state}`, force);
+		else if (root) root.classList.toggle(`wf-${state}`, force);
 	};
 
-	document.body.appendChild(tk);
-}
+	const timeout = setTimeout(function () {
+		toggleClass("loading", false);
+		toggleClass("inactive");
+	}, 3000);
+
+	const config = {
+		kitId: isNotEnglish ? "mge7bvf" : "rok6rmo",
+		scriptTimeout: 3000,
+		active: () => {
+			toggleClass("loading");
+		},
+	};
+
+	// This wrapper prevents loading the font more than once
+	if (window && !window.Typekit) {
+		let d = false;
+		let tk = document.querySelector("#typekit");
+
+		if (!tk) {
+			tk = document.createElement("script");
+			tk.id = "typekit";
+			tk.src = `https://use.typekit.net/${config.kitId}.js`;
+			tk.type = "text/javascript";
+			tk.async = "true";
+			tk.onload = tk.onreadystatechange = function () {
+				const readyState = this.readyState;
+				if (d || (readyState && readyState !== "complete" && readyState !== "loaded")) return;
+
+				d = true;
+				clearTimeout(timeout);
+
+				try {
+					window.Typekit = Typekit.load(config);
+				}
+				catch (b) {/* empty */}
+			};
+			root.appendChild(tk);
+		}
+	}
+});

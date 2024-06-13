@@ -175,6 +175,7 @@ async function processCSS(content, input, output, {
 		{
 			cwd,
 			env: process.env.NODE_ENV ?? "development",
+			file: output,
 			from: input,
 			to: output,
 			verbose: false,
@@ -184,7 +185,6 @@ async function processCSS(content, input, output, {
 	);
 
 	const result = await postcss(plugins).process(content, options);
-
 	if (result.error) return Promise.reject(result.error);
 
 	if (!result.css) return Promise.reject(new Error(`No CSS was generated from the provided content for ${relativePrint(input, { cwd })}`));
@@ -306,6 +306,7 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 	if (!fs.existsSync(rootCSS)) return;
 
 	const content = await fsp.readFile(rootCSS, "utf8");
+	const componentName = cwd?.split(path.sep)?.pop();
 
 	if (!fs.existsSync(path.join(cwd, "dist"))) {
 		fs.mkdirSync(path.join(cwd, "dist"));
@@ -332,14 +333,23 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 			cwd,
 			clean,
 			referencesOnly: true,
-		}),
-	);
+		}).then(async (reports) => {
+			if (!fs.existsSync(path.join(cwd, "dist", "vars.css"))) {
+				return Promise.resolve(reports);
+			}
 
-	if (fs.existsSync(path.join(cwd, "bridge", "mods.css"))) {
-		promises.push(
-			fsp.copyFile(path.join(cwd, "bridge", "mods.css"), path.join(cwd, "dist", "mods-bridge.css")).then(() => `${"✓".green}  ${"dist/mods-bridge.css".yellow}`)
-		);
-	}
+			// Create the tokens directory if it doesn't exist
+			if (!fs.existsSync(path.join(dirs.root, "tokens", "components"))) {
+				fs.mkdirSync(path.join(dirs.root, "tokens", "components"), { recursive: true });
+			}
+
+			// After building, copy the vars to the tokens folder
+			return fsp.copyFile(path.join(cwd, "dist", "vars.css"), path.join(dirs.root, "tokens", "components", `${componentName}.css`))
+				// Return the console output to be logged
+				.then(r => [r, ...reports]);
+		}	,
+		),
+	);
 
 	return Promise.all(promises);
 }

@@ -1,7 +1,4 @@
-import { html } from "lit";
-import { Template } from "./template";
-
-import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
+import { TrayGroup } from "./template";
 
 /**
  * Tray dialogs are typically used to portray information on mobile device or smaller screens.
@@ -30,42 +27,14 @@ export default {
 		rootClass: "spectrum-Tray",
 		customClasses: ["spectrum-Modal"],
 		isOpen: true,
-		heading: "New Messages",
+		heading: "New messages",
 	},
+	parameters: {
+		chromatic: {
+			delay: 2000,
+		},
+	}
 };
 
-export const Default = ({
-	heading,
-	...args
-}) => html`
-	<div>
-		${Template({
-			...args,
-			content: [
-				() => Dialog({
-						heading,
-						content: ["You have 5 new messages!"],
-						isDismissable: false,
-					})
-			],
-		})}
-
-		${
-			window.isChromatic() ?
-			Template({
-				...args,
-				content: [
-					() => Dialog({
-							heading: "You have new messages waiting in your inbox",
-							content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
-							isDismissable: false,
-						})
-				],
-				customStyles: {
-					"justify-content": "flex-end"
-				},
-			})
-		: null
-	}
-	</div>
-`;
+export const Default = TrayGroup.bind({});
+Default.args = {};

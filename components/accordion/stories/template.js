@@ -1,13 +1,10 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-
 import "../index.css";
 
 export const AccordionItem = ({
@@ -23,7 +20,7 @@ export const AccordionItem = ({
 	customClasses = [],
 	onclick,
 	...globals
-}) => html`
+}, context) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -56,7 +53,7 @@ export const AccordionItem = ({
 					size: iconSize,
 					customClasses: [`${rootClass}Indicator`],
 					...globals,
-				})}
+				}, context)}
 			</span>
 		</h3>
 		<!-- WAI-ARIA 1.1: Item content role changed from "tabpanel" to "region" -->
@@ -81,7 +78,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
 
 	if (!items || !items.size) return html``;
@@ -121,8 +118,33 @@ export const Template = ({
 						});
 						updateArgs({ items: newItems });
 					},
-				});
+				}, context);
 			})}
 		</div>
 	`;
 };
+
+export const AccordionGroup = (args, context) => html`
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : undefined,
+	})}>
+		${Template(args, context)}
+	</div>
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "flex" : "none",
+		"flex-wrap": "wrap",
+		"gap": "28px"
+	})}>
+		${Template(args, context)}
+		${Template({
+			...args,
+			customStyles: {
+				maxInlineSize: "300px",
+			},
+		}, context)}
+		${Template({
+			...args,
+			disableAll: true,
+		}, context)}
+	</div>
+`;

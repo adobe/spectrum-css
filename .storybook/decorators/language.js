@@ -1,17 +1,25 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { fetchContainers } from "./helpers";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  **/
 export const withLanguageWrapper = makeDecorator({
 	name: "withLanguageWrapper",
-	parameterName: "context",
+	parameterName: "lang",
 	wrapper: (StoryFn, context) => {
-		const { globals } = context;
-		const lang = globals.lang;
+		const {
+			globals: {
+				lang = false,
+			} = {},
+			id,
+			viewMode,
+		} = context;
 
 		useEffect(() => {
-			if (lang) document.documentElement.lang = lang;
+			for (const container of fetchContainers(id, viewMode === "docs")) {
+				container.lang = lang;
+			}
 		}, [lang]);
 
 		return StoryFn(context);

@@ -23,20 +23,19 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}) => {
-
+}, context) => {
 	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)}/>` : svg ? html`${svg}` : "";
 
 	const checkerboardContent = html`
 			<div class="${rootClass}-image-wrapper">
-			${imageURL
-				? html`<img
-						class="${rootClass}-image"
-						src=${imageURL}
-						alt=${altText}
-					/>`
-				: ""}
-			${svg ? html`${svg}` : ""}
+			${when(imageURL, () => html`
+				<img
+					class="${rootClass}-image"
+					src=${imageURL}
+					alt=${altText}
+				/>
+			`)}
+			${when(svg, () => svg)}
 		</div>
 	`;
 
@@ -60,7 +59,7 @@ export const Template = ({
 					componentOnly: true,
 					customClasses: [`${rootClass}-layer-inner`],
 					content: checkerboardContent,
-				})}
+				}, context)}
 			</div>
 		`;
 
@@ -82,13 +81,13 @@ export const Template = ({
 			>
 				<div class="${rootClass}-background" style=${styleMap({backgroundColor})}></div>
 				<div class="${rootClass}-image-wrapper">
-					${imageURL
-						? html`<img
-								class="${rootClass}-image"
-								src=${imageURL}
-								alt=${altText}
-						  />`
-						: ""}
+					${when(imageURL, () => html`
+						<img
+							class="${rootClass}-image"
+							src=${imageURL}
+							alt=${altText}
+						/>
+					`)}
 				</div>
 			</div>
 		`;
@@ -114,7 +113,7 @@ export const Template = ({
 				rootClass: backgroundColor ? `${rootClass}-image-wrapper` : undefined,
 				customClasses: isLayer ? [`${rootClass}-layer-inner`] : !backgroundColor ? [`${rootClass}-image-wrapper`] : [],
 				content: image ? [image] : [],
-			})}
+			}, context)}
 		</div>
 	`;
 };

@@ -1,8 +1,7 @@
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
 
 import "../index.css";
 
@@ -13,8 +12,7 @@ export const Template = ({
 	isQuiet = false,
 	size,
 	...globals
-}) => {
-
+}, context) => {
 	return html`
 		<form
 			class=${classMap({
@@ -39,13 +37,13 @@ export const Template = ({
 				customInputClasses: [`${rootClass}-input`],
 				customIconClasses: [`${rootClass}-icon`],
 				autocomplete: false,
-			})}
+			}, context)}
 			${ClearButton({
 				...globals,
 				isDisabled,
 				size,
 				customClasses: [`${rootClass}-clearButton`],
-			})}
+			}, context)}
 		</form>
 	`;
 };

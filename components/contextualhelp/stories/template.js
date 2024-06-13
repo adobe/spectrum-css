@@ -1,11 +1,10 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Link } from "@spectrum-css/link/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Link } from "@spectrum-css/link/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 
 import "../index.css";
 
@@ -20,7 +19,7 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	...globals
-}) => html`
+}, context) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -40,7 +39,7 @@ export const Template = ({
 			size: "xs",
 			iconName,
 			customClasses: [`${rootClass}-button`],
-		})}
+		}, context)}
 		${Popover({
 			isOpen: true,
 			content: [
@@ -57,6 +56,6 @@ export const Template = ({
 			position: popoverPlacement,
 			customClasses: [`${rootClass}-popover`],
 			customStyles: { top: "25px" },
-		})}
+		}, context)}
 	</div>
 `;

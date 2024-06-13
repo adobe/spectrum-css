@@ -23,7 +23,6 @@ export const isValid = {
 	name: "Valid",
 	type: { name: "boolean" },
 	table: {
-		disable: true,
 		type: { summary: "boolean" },
 		category: "State",
 	},
