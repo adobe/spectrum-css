@@ -5,7 +5,7 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import { action } from "@storybook/addon-actions";
-import { useArgs, useGlobals } from "@storybook/preview-api";
+import { useArgs } from "@storybook/preview-api";
 
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
@@ -33,7 +33,7 @@ export const Template = ({
 	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
-	const [{ lang }] = useGlobals();
+	const lang = window.__lang;
 
 	const DOW = [
 		"Sunday",

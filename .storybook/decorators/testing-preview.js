@@ -9,9 +9,13 @@ export const withTestingPreviewWrapper = makeDecorator({
 	name: "withTestingPreviewWrapper",
 	parameterName: "testingPreview",
 	wrapper: (StoryFn, context) => {
-		const { globals } = context;
+		const {
+			globals: {
+				testingPreview = false,
+			} = {}
+		} = context;
 
-		function init(isTestingPreview = false) {
+		function init(isTestingPreview) {
 			// Prevents the "isChromatic" function from being over written
 			if (typeof window.isChromatic !== "function") {
 				// If we're not in Chromatic and we want to show the testing preview, we need to override the isChromatic function
@@ -20,9 +24,9 @@ export const withTestingPreviewWrapper = makeDecorator({
 			}
 		}
 
-		init(globals.testingPreview);
+		init(testingPreview);
 
-		useEffect(() => init(globals.testingPreview), [globals.testingPreview]);
+		useEffect(() => init(testingPreview), [testingPreview]);
 
 		return StoryFn(context);
 	},

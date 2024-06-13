@@ -4,7 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import { useArgs, useGlobals } from "@storybook/preview-api";
+import { useArgs } from "@storybook/preview-api";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
@@ -30,7 +30,8 @@ export const Template = ({
 	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
-	const [{ textDirection }] = useGlobals();
+
+	const textDirection = window.__dir;
 
 	const rtl = !!(textDirection === "rtl");
 	const rangeLength = max - min;

@@ -10,7 +10,6 @@ export default {
 	title: "Typography",
 	component: "Typography",
 	argTypes: {
-		reduceMotion: { table: { disable: true } },
 		semantics: {
 			name: "Semantic type",
 			type: { name: "string" },

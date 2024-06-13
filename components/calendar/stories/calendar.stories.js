@@ -13,7 +13,6 @@ export default {
 	title: "Calendar",
 	component: "Calendar",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		month: {
 			name: "Month",
 			type: { name: "string", required: true },

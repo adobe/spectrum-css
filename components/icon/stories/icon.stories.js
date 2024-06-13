@@ -29,7 +29,6 @@ export default {
 	title: "Icon",
 	component: "Icon",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		size: {
 			name: "Workflow Icon Size",
 			type: { name: "string", required: true },
@@ -241,7 +240,7 @@ const WorkflowDefaultTemplate = (args) => html`
 			...args,
 			setName: "workflow",
 			size: "xl",
-		}, 
+		},
 		[
 			"Alert",
 			"Asset",
@@ -286,7 +285,7 @@ const UIDefaultTemplate = (args) => html`
 			{
 				...args,
 				setName: "ui",
-			},  
+			},
 			[
 				"Asterisk100",
 				"Asterisk200",
@@ -299,7 +298,7 @@ const UIDefaultTemplate = (args) => html`
 			{
 				...args,
 				setName: "ui",
-			}, 
+			},
 			[
 				"ChevronDown50",
 				"ChevronDown75",

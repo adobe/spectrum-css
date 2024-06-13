@@ -3,7 +3,7 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import { useArgs, useGlobals } from "@storybook/preview-api";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -29,7 +29,7 @@ export const Template = ({
 	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
-	const [{ lang }] = useGlobals();
+	const lang = window.__lang;
 
 	// If selectedDay is a string, convert it to a Date object
 	if (typeof selectedDay === "string" && selectedDay.length > 0) {

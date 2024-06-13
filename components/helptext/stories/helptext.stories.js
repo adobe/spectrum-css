@@ -7,7 +7,6 @@ export default {
 	title: "Help text",
 	component: "HelpText",
 	argTypes: {
-		reducedMotion: { table: { disable: true } },
 		text: {
 			name: "Text",
 			type: { name: "string", required: true },
