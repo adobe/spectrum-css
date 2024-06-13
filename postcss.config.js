@@ -26,6 +26,7 @@ module.exports = ({
 	resolveImports = true,
 	shouldCombine = false,
 	lint = true,
+	shouldMinify = false,
 	verbose = true,
 	additionalPlugins = {},
 	env = process.env.NODE_ENV ?? "development",
@@ -50,7 +51,7 @@ module.exports = ({
 
 	if (outputFilename === "express" || pathParts.includes("express")) shouldCombine = true;
 
-	if (outputFilename === "index-base") {
+	if (outputFilename?.startsWith("index-base")) {
 		splitinatorOptions.noFlatVariables = true;
 	}
 
@@ -130,7 +131,7 @@ module.exports = ({
 						},
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
-						normalizeWhitespace: isProduction,
+						normalizeWhitespace: isProduction || shouldMinify,
 					},
 				],
 			},
