@@ -26,6 +26,7 @@ module.exports = ({
 	resolveImports = true,
 	shouldCombine = false,
 	lint = true,
+	shouldMinify = false,
 	verbose = true,
 	additionalPlugins = {},
 	minify = true,
@@ -51,7 +52,7 @@ module.exports = ({
 
 	if (outputFilename === "express" || pathParts.includes("express")) shouldCombine = true;
 
-	if (outputFilename === "index-base") {
+	if (outputFilename?.startsWith("index-base")) {
 		splitinatorOptions.noFlatVariables = true;
 	}
 
