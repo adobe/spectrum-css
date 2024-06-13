@@ -10,9 +10,34 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-Stepper {
+	--spectrum-stepper-border-width: var(--spectrum-border-width-100);
+
+	--spectrum-stepper-buttons-border-style: none;
+	--spectrum-stepper-buttons-border-width: 0;
+	--spectrum-stepper-buttons-border-color: var(--spectrum-gray-500);
+	--spectrum-stepper-buttons-background-color: var(--spectrum-gray-25);
+	--spectrum-stepper-buttons-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-stepper-buttons-border-color-focus: var(--spectrum-gray-800);
+	--spectrum-stepper-buttons-border-color-keyboard-focus: var(--spectrum-gray-900);
+
+	--spectrum-stepper-button-border-radius-reset: 0px;
+	--spectrum-stepper-button-border-width: var(--spectrum-border-width-100);
+
+	--spectrum-stepper-border-color: var(--spectrum-gray-500);
+	--spectrum-stepper-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
+	--spectrum-stepper-border-color-focus-hover: var(--spectrum-gray-800);
+	--spectrum-stepper-border-color-keyboard-focus: var(--spectrum-gray-900);
+
+	--spectrum-stepper-border-color-invalid: var(--spectrum-negative-border-color-default);
+	--spectrum-stepper-border-color-focus-invalid: var(--spectrum-negative-border-color-focus);
+	--spectrum-stepper-border-color-focus-hover-invalid: var(--spectrum-negative-border-color-focus-hover);
+	--spectrum-stepper-border-color-keyboard-focus-invalid: var(--spectrum-negative-border-color-key-focus);
+
+	--spectrum-stepper-button-background-color-focus: var(--spectrum-gray-200);
+	--spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-100);
+
 	/* Set defaults to medium size */
 	--spectrum-stepper-height: var(--spectrum-component-height-100);
 	--spectrum-stepper-border-radius: var(--spectrum-corner-radius-100);

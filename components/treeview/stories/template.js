@@ -1,10 +1,10 @@
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
+
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
 import "../index.css";
 
@@ -25,7 +25,7 @@ export const TreeViewItem = ({
 	items,
 	customClasses = [],
 	...globals
-}, context) => {
+}) => {
 	if (type === "heading") {
 		return html`
 			<li
@@ -38,15 +38,15 @@ export const TreeViewItem = ({
 				<div class="${rootClass}-heading">
 					<span class="${rootClass}-itemLabel">${label}</span>
 				</div>
-				${when(typeof items !== "undefined" && items.length > 0, () =>
-					Template({
-						...globals,
-						items: items,
-						size,
-						rootClass: "spectrum-TreeView",
-						customClasses: ["is-opened"],
-					}, context)
-				)}
+				${typeof items !== "undefined" && items.length > 0
+					? Template({
+							...globals,
+							items: items,
+							size,
+							rootClass: "spectrum-TreeView",
+							customClasses: ["is-opened"],
+					})
+					: ""}
 			</li>
 		`;
 	}
@@ -77,53 +77,49 @@ export const TreeViewItem = ({
 					closest.classList.toggle("is-open");
 				}}
 			>
-				${when(typeof items !== "undefined", () =>
-					Icon({
-						...globals,
-						size,
-						setName: "ui",
-						iconName: "ChevronRight",
-						customClasses: [`${rootClass}-itemIndicator`],
-					}, context)
-				)}
-				${when(icon, () =>
-					Icon({
-						...globals,
-						size,
-						iconName: icon,
-						setName: iconSet,
-						customClasses: [`${rootClass}-itemIcon`],
-					}, context)
-				)}
-				${when(thumbnail, () =>
-					Thumbnail({
-						...globals,
-						...thumbnail,
-						size: size == "s"  ? "200"
-							: size == "m"  ? "200"
-							: size == "l"  ? "400"
-							: size == "xl" ? "600"
-							: "300",
-						isLayer: true,
-						isSelected,
-						customClasses: [`${rootClass}-itemThumbnail`],
-					}, context)
-				)}
-				<span class=${classMap({
-					[`${rootClass}-itemLabel`]: true
-				})}>
-					${label}
-				</span>
+				${typeof items !== "undefined"
+					? Icon({
+							...globals,
+							size,
+							setName: "ui",
+							iconName: "ChevronRight",
+							customClasses: [`${rootClass}-itemIndicator`],
+					})
+					: ""}
+				${icon
+					? Icon({
+							...globals,
+							size,
+							iconName: icon,
+							setName: iconSet,
+							customClasses: [`${rootClass}-itemIcon`],
+					})
+					: ""}
+				${thumbnail
+					? Thumbnail({
+							...globals,
+							...thumbnail,
+							size: size == "s"  ? "200"
+								: size == "m"  ? "200"
+								: size == "l"  ? "400"
+								: size == "xl" ? "600"
+								: "300",
+							isLayer: true,
+							isSelected,
+							customClasses: [`${rootClass}-itemThumbnail`],
+					})
+					: ""}
+				<span class="${rootClass}-itemLabel">${label}</span>
 			</a>
-			${when(typeof items !== "undefined" && items.length > 0, () =>
-				Template({
-					...globals,
-					items: items,
-					size,
-					rootClass: "spectrum-TreeView",
-					customClasses: ["is-opened"],
-				}, context)
-			)}
+			${typeof items !== "undefined" && items.length > 0
+				? Template({
+						...globals,
+						items: items,
+						size,
+						rootClass: "spectrum-TreeView",
+						customClasses: ["is-opened"],
+				})
+				: ""}
 		</li>
 	`;
 };
@@ -137,7 +133,7 @@ export const Template = ({
 	isQuiet,
 	items,
 	...globals
-}, context) => html`
+}) => html`
 	<ul
 		class=${classMap({
 			[rootClass]: true,
@@ -152,11 +148,13 @@ export const Template = ({
 		${repeat(
 			items,
 			(item) => item.id,
-			(item) => TreeViewItem({
-				...globals,
-				...item,
-				size,
-			}, context),
+			(item) => {
+				return TreeViewItem({
+					...globals,
+					...item,
+					size,
+				});
+			}
 		)}
 	</ul>
 `;

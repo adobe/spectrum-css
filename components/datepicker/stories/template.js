@@ -1,12 +1,14 @@
-import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
-import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
-import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import { useArgs, useGlobals } from "@storybook/preview-api";
 import { html } from "lit";
 import { when } from "lit-html/directives/when.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+
+import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
+import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
+
+import { useArgs, useGlobals } from "@storybook/preview-api";
 
 import "../index.css";
 
@@ -26,9 +28,11 @@ export const Template = ({
 	selectedDay,
 	lastDay,
 	...globals
-}, context) => {
+}) => {
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
+
+
 
 	return html`
 		<div
@@ -65,7 +69,7 @@ export const Template = ({
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
-			}, context)}
+			})}
 			${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
 			${when(isRange, () => TextField({
 				...globals,
@@ -81,7 +85,7 @@ export const Template = ({
 				value: lastDay
 					? new Date(lastDay).toLocaleDateString(lang)
 					: undefined,
-			}, context))}
+			}))}
 			${PickerButton({
 				...globals,
 				customClasses: [`${rootClass}-button`],
@@ -98,7 +102,7 @@ export const Template = ({
 				onclick: function () {
 					updateArgs({ isOpen: !isOpen });
 				},
-			}, context)}
+			})}
 			${when(!readOnly && !isDisabled, () => html`
 				${Popover({
 					...globals,
@@ -114,9 +118,9 @@ export const Template = ({
 								width: undefined,
 						}
 						: {},
-					content: [Calendar(globals, context)],
+					content: [Calendar(globals)],
 					// @todo this implementation of calendar does not currently display range selections or selected date on first load
-				}, context)}`
+				})}`
 			)}
 		</div>
 	`;

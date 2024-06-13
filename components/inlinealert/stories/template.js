@@ -1,9 +1,10 @@
-import { Template as Button } from "@spectrum-css/button/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { html, nothing } from "lit";
+import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+
+import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -16,7 +17,7 @@ export const Template = ({
 	variant = "neutral",
 	isClosable = false,
 	...globals
-}, context) => {
+}) => {
 	let iconName;
 	switch (variant) {
 		case "info":
@@ -36,24 +37,29 @@ export const Template = ({
 
 	const iconMarkup =
 		typeof iconName !== "undefined"
-			? Icon({
-				...globals,
-				iconName,
-				customClasses: [`${rootClass}-icon`],
-			}, context) : nothing;
+			? html`
+					${Icon({
+						...globals,
+						iconName,
+						customClasses: [`${rootClass}-icon`],
+					})}
+			  `
+			: "";
 
-	const closableMarkup = isClosable ? html`
-		<div class="spectrum-InLineAlert-footer">
-			${Button({
-				...globals,
-				treatment: "outline",
-				variant: "primary",
-				iconName: false,
-				hideLabel: false,
-				label: "Ok",
-			})}
-		</div>
-	` : nothing;
+	const closableMarkup = isClosable
+		? html`
+				<div class="spectrum-InLineAlert-footer">
+					${Button({
+						...globals,
+						treatment: "outline",
+						variant: "primary",
+						iconName: false,
+						hideLabel: false,
+						label: "Ok",
+					})}
+				</div>
+		  `
+		: "";
 
 	return html`
 		<div

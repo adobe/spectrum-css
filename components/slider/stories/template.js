@@ -28,7 +28,8 @@ export const Template = ({
 	customStyles = {},
 	id,
 	...globals
-}, context) => {
+}) => {
+
 	const [, updateArgs] = useArgs();
 	const [{ textDirection }] = useGlobals();
 
@@ -156,19 +157,18 @@ export const Template = ({
 					id: id ? `${id}-label` : undefined,
 					forInput: id ? `${id}-1` : undefined,
 					customClasses: [`${rootClass}-label`],
-				}, context)}
+				})}
 				${when(values.length && labelPosition != "side", () => html`
-					<div
-						class="${rootClass}-value"
-						role="textbox"
-						aria-readonly="true"
-						aria-labelledby=${ifDefined(
-							id && label ? `${id}-label` : undefined
-						)}
-					>
-						${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
-					</div>
-				`)}
+				<div
+					class="${rootClass}-value"
+					role="textbox"
+					aria-readonly="true"
+					aria-labelledby=${ifDefined(
+						id && label ? `${id}-label` : undefined
+					)}
+				>
+					${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
+				</div>`)}
 			</div>`)}
 
 			<!-- Slider controls -->
@@ -227,21 +227,20 @@ export const Template = ({
 				})}
 			</div>
 			${when(values.length && labelPosition === "side", () => html`
+			<div
+				class="${rootClass}-labelContainer"
+				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
+			>
 				<div
-					class="${rootClass}-labelContainer"
-					role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
+					class="${rootClass}-value"
+					role="textbox"
+					aria-readonly="true"
+					aria-labelledby=${ifDefined(
+						id && label ? `${id}-label` : undefined
+					)}
 				>
-					<div
-						class="${rootClass}-value"
-						role="textbox"
-						aria-readonly="true"
-						aria-labelledby=${ifDefined(
-							id && label ? `${id}-label` : undefined
-						)}
-					>
-						${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
-					</div>
+					${values[0]}${values.length > 1 ? ` - ${values[1]}` : ""}
 				</div>
-			`)}
+			</div>`)}
 		</div>`;
 };

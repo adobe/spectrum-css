@@ -118,7 +118,7 @@ governing permissions and limitations under the License.
 .spectrum-CSSComponent-resource--adobe,
 .spectrum-CSSComponent-resources a[href*="spectrum.adobe.com"] .spectrum-Card-preview {
 	color: rgb(250, 15, 0);
-	background-color: var(--spectrum-gray-100);
+	background-color: var(--spectrum-gray-75);
 }
 
 .spectrum-CSSComponent-resource--github,
@@ -304,17 +304,17 @@ governing permissions and limitations under the License.
 
 /* CSS Example */
 .spectrum-CSSExample-example {
-	background-color: var(--spectrum-background-layer-1-color, var(--spectrum-gray-100));
+	background-color: var(--spectrum-background-layer-1-color, var(--spectrum-gray-75));
 }
 
 .spectrum-CSSExample-markup {
-	background-color: var(--spectrum-gray-75);
-	border-block-start: 1px solid var(--spectrum-gray-100);
+	background-color: var(--spectrum-gray-50);
+	border-block-start: 1px solid var(--spectrum-gray-75);
 }
 
 .spectrum-CSSExample-markupToggle {
 	z-index: 1;
-	background-color: var(--spectrum-gray-75);
+	background-color: var(--spectrum-gray-50);
 }
 
 .spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle {
@@ -331,7 +331,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CodeBlock {
-	background-color: var(--spectrum-gray-75);
+	background-color: var(--spectrum-gray-50);
 	border-color: var(--spectrum-gray-400);
 }
 

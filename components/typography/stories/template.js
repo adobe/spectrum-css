@@ -3,8 +3,10 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+
 import { capitalize } from "lodash-es";
-import "../index.css";
+
+import "@spectrum-css/typography/index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Typography",
@@ -17,7 +19,7 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	customStyles = {},
-}, context) => {
+}) => {
 	if (!Array.isArray(content)) {
 		content = [content];
 	}
@@ -41,7 +43,7 @@ export const Template = ({
 					id,
 					customClasses,
 					...c,
-				}, context);
+				});
 			}
 
 			if (typeof semantics === "undefined") {

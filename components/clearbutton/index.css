@@ -10,9 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-ClearButton {
+	--spectrum-clear-button-background-color: transparent;
+	--spectrum-clear-button-background-color-hover: transparent;
+	--spectrum-clear-button-background-color-down: transparent;
+	--spectrum-clear-button-background-color-key-focus: transparent;
+
 	--spectrum-clear-button-height: var(--spectrum-component-height-100);
 	--spectrum-clear-button-width: var(--spectrum-component-height-100);
 	--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);

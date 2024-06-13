@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+
 ## 5.1.1
 
 ### Patch Changes
@@ -25,7 +36,9 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
+
 ## 5.0.0
+
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@4.0.0...@spectrum-css/asset@5.0.0)
 
@@ -40,7 +53,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="4.0.0"></a>
+
 ## 4.0.0
+
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.1.2...@spectrum-css/asset@4.0.0)
 
@@ -56,21 +71,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - chore: add mods values for customization
 
 <a name="3.1.2"></a>
+
 ## 3.1.2
+
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.1.1...@spectrum-css/asset@3.1.2)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
 <a name="3.1.1"></a>
+
 ## 3.1.1
+
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/asset
 
 <a name="3.1.0"></a>
+
 ## 3.1.0
+
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.52...@spectrum-css/asset@3.1.0)
 
@@ -79,7 +100,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **asset,cyclebutton,quickaction,site:**deprecate skin.css assets ([#2438](https://github.com/adobe/spectrum-css/issues/2438))([d6de839](https://github.com/adobe/spectrum-css/commit/d6de839))
 
 <a name="3.0.52"></a>
+
 ## 3.0.52
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.51...@spectrum-css/asset@3.0.52)
 
@@ -88,14 +111,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **asset:**add whcm values for asset background color ([#2369](https://github.com/adobe/spectrum-css/issues/2369))([4c1c959](https://github.com/adobe/spectrum-css/commit/4c1c959))
 
 <a name="3.0.51"></a>
+
 ## 3.0.51
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.50...@spectrum-css/asset@3.0.51)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
 <a name="3.0.50"></a>
+
 ## 3.0.50
+
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.48...@spectrum-css/asset@3.0.50)
 
@@ -104,7 +131,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="3.0.49"></a>
+
 ## 3.0.49
+
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.48...@spectrum-css/asset@3.0.49)
 
@@ -113,35 +142,45 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="3.0.48"></a>
+
 ## 3.0.48
+
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.47...@spectrum-css/asset@3.0.48)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
 <a name="3.0.47"></a>
+
 ## 3.0.47
+
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.46...@spectrum-css/asset@3.0.47)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
 <a name="3.0.46"></a>
+
 ## 3.0.46
+
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.45...@spectrum-css/asset@3.0.46)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
 <a name="3.0.45"></a>
+
 ## 3.0.45
+
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.44...@spectrum-css/asset@3.0.45)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
 <a name="3.0.44"></a>
+
 ## 3.0.44
+
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.43...@spectrum-css/asset@3.0.44)
 
@@ -150,14 +189,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="3.0.43"></a>
+
 ## 3.0.43
+
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.42...@spectrum-css/asset@3.0.43)
 
 **Note:** Version bump only for package @spectrum-css/asset
 
 <a name="3.0.42"></a>
+
 ## 3.0.42
+
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/asset@3.0.41...@spectrum-css/asset@3.0.42)
 

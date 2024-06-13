@@ -149,14 +149,14 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: ["components/*/themes/*.css", "tokens/**/*.css"],
+			files: ["tokens/**/*.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
 			},
 		},
 		{
-			files: ["site/**/*.css", ".storybook/assets/*.css"],
+			files: ["site/**/*.css", "storybook/assets/*.css"],
 			rules: {
 				"custom-property-pattern": null,
 				"spectrum-tools/no-unused-custom-properties": null,

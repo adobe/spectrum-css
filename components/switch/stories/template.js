@@ -2,7 +2,6 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -17,6 +16,7 @@ export const Template = ({
 	customStyles = {},
 	id,
 }) => {
+
 	// ID attribute value for the input element.
 	const inputId = id ? `${id}-input` : "switch-onoff-0";
 
@@ -41,11 +41,11 @@ export const Template = ({
 				?checked=${isChecked}
 			/>
 			<span class="${rootClass}-switch"></span>
-			${when(label, () => html`
-				<label class="${rootClass}-label" for=${inputId}>
-					${label}
-				</label>
-			`)}
+			${label
+				? html`<label class="${rootClass}-label" for=${inputId}
+						>${label}</label
+				  >`
+				: ""}
 		</div>
 	`;
 };

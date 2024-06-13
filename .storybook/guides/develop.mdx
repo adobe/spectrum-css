@@ -14,11 +14,11 @@ Welcome to the development and exploration environment for Spectrum CSS, driven 
 
 This guide is intended to get you up to speed on how we work within Storybook in the Spectrum CSS project. It will cover the following topics:
 
-- [Architecture](#architecture)
-- [Writing stories](#writing-stories)
-- [Templates](#templates)
-- [Testing stories](#testing-stories)
-- [Changelog](#changelog)
+    - [Architecture](#architecture)
+    - [Writing stories](#writing-stories)
+    - [Templates](#templates)
+    - [Testing stories](#testing-stories)
+    - [Changelog](#changelog)
 
 For more general information about how to contribute to the Spectrum CSS project, take a look at our [contribution guidelines on GitHub](https://github.com/adobe/spectrum-css/blob/main/.github/CONTRIBUTING.md).
 
@@ -53,7 +53,7 @@ or in a template.js file:
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 ```
 
-CSS for other components can be loaded in a story using the package name (rather than the directory path), i.e. `@spectrum-css/toast` vs. `../toast/index.css`. The local version of the package is used regardless but the bundler settings will resolve the pathing for you.
+CSS for other components can be loaded in a story using the package name (rather than the directory path), i.e. `@spectrum-css/toast` vs. `../toast/index.css`. The local version of the package is used regardless but the webpack settings will resolve the pathing for you.
 
 For template development, we leverage lit and it's utilities to create dynamic HTML that responds to user configurations provided by the Storybook controls. This allows us to create a single source of truth for the component's mark-up and to ensure that the component is being used as intended.
 
@@ -77,7 +77,7 @@ CSS assets will be run through their respective postcss configurations. This mea
 import "../index.css";
 ```
 
-We are leaning on Storybook's `@storybook/web-components-vite` framework configuration as our stories rely on lit for dynamic attribute assignment.
+We are leaning on Storybook's `@storybook/web-components-webpack5` framework configuration as our stories rely on lit for dynamic attribute assignment.
 
 ### Add-ons
 
@@ -137,28 +137,28 @@ To import shared types into your story, use the following syntax:
 
 ```js
 import {
-  isActive,
-  isDisabled,
-  isFocused,
-  isHovered,
-  isSelected,
+	isActive,
+	isDisabled,
+	isFocused,
+	isHovered,
+	isSelected,
 } from "@spectrum-css/preview/types";
 
 export default {
-  argTypes: {
-    isDisabled,
-    isSelected,
-    isHovered,
-    isFocused,
-    isActive,
-  },
-  args: {
-    isDisabled: false,
-    isSelected: false,
-    isHovered: false,
-    isFocused: false,
-    isActive: false,
-  },
+	argTypes: {
+		isDisabled,
+		isSelected,
+		isHovered,
+		isFocused,
+		isActive,
+	},
+	args: {
+		isDisabled: false,
+		isSelected: false,
+		isHovered: false,
+		isFocused: false,
+		isActive: false,
+	},
 };
 ```
 
@@ -300,9 +300,7 @@ All return values for Template functions should be outputting TemplateResults. S
 ```js
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { when } from "lit/directives/when.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
@@ -310,67 +308,65 @@ import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/templ
 import "../index.css";
 
 export const Template = ({
-  rootClass = "spectrum-Tag",
-  size = "m",
-  iconName,
-  avatarUrl,
-  label,
-  isSelected = false,
-  isEmphasized = false,
-  isDisabled = false,
-  isInvalid = false,
-  hasClearButton = false,
-  id,
-  customClasses = [],
-  customStyles = {},
+	rootClass = "spectrum-Tag",
+	size = "m",
+	iconName,
+	avatarUrl,
+	label,
+	isSelected = false,
+	isEmphasized = false,
+	isDisabled = false,
+	isInvalid = false,
+	hasClearButton = false,
+	id,
+	customClasses = [],
+	...globals
 }) => {
-  return html`
-    <div
-      class=${classMap({
-        [rootClass]: true,
-        [`${rootClass}--size${size?.toUpperCase()}`]:
-          typeof size !== "undefined",
-        "is-emphasized": isEmphasized,
-        "is-disabled": isDisabled,
-        "is-invalid": isInvalid,
-        "is-selected": isSelected,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
-      style=${styleMap(customStyles)}
-      id=${ifDefined(id)}
-      tabindex="0"
-    >
-      ${when(avatarUrl && !iconName, () =>
-        Avatar({
-          image: avatarUrl,
-          size: "50",
-        }),
-      )} ${when(iconName, () =>
-        Icon({
-          iconName,
-          customClasses: [`${rootClass}s-itemIcon`],
-        }),
-      )}
-      <span
-        class=${classMap({
-          [`${rootClass}s-itemLabel`]: true,
-        })}
-        >${label}</span
-      >
-      ${when(hasClearButton, () =>
-        ClearButton({
-          customClasses: [`${rootClass}-clearButton`],
-          onclick: (evt) => {
-            const el = evt.target;
-            if (!el) return;
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				"is-emphasized": isEmphasized,
+				"is-disabled": isDisabled,
+				"is-invalid": isInvalid,
+				"is-selected": isSelected,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			tabindex=${isDisabled ? "-1" : "0"}
+			style=${ifDefined(styleMap(customStyles))}
+		>
+			${avatarUrl && !iconName
+				? Avatar({
+						...globals,
+						image: avatarUrl,
+						size: "50",
+					})
+				: ""} ${iconName
+				? Icon({
+						...globals,
+						iconName,
+						customClasses: [`${rootClass}s-itemIcon`],
+					})
+				: ""}
+			<span class="${rootClass}s-itemLabel">${label}</span>
+			${hasClearButton
+				? ClearButton({
+						...globals,
+						customClasses: [`${rootClass}-clearButton`],
+						onclick: (evt) => {
+							const el = evt.target;
+							if (!el) return;
 
-            const wrapper = el.closest(rootClass);
-            wrapper.parentNode.removeChild(wrapper);
-          },
-        }),
-      )}
-    </div>
-  `;
+							const wrapper = el.closest(rootClass);
+							wrapper.parentNode.removeChild(wrapper);
+						},
+					})
+				: ""}
+		</div>
+	`;
 };
 ```
 
@@ -380,39 +376,23 @@ Now that your stories are written, we need to add them to our visual regression 
 
 To optimize snapshot usage, we organize our stories into groups when rendered inside the Chromatic environment. This is done by adding an `window.isChromatic()` check and creating groups of stories (note: do not import the `isChromatic` function directly, there is added functionality we've included when sourcing it from`window`). See example below:
 
-In the `template.js` file:
-
 ```js
-export const AccordionGroup = ({ customStyles = {}, ...args }, context) => {
-  return html`
-    ${Template(args, context)} ${Template(
-      {
-        ...args,
-        customStyles: {
-          ...customStyles,
-          "max-inline-size": "300px",
-          display: window.isChromatic() ? undefined : "none",
-        },
-      },
-      context,
-    )} ${Template(
-      {
-        ...args,
-        disableAll: true,
-        customStyles: {
-          ...customStyles,
-          display: window.isChromatic() ? undefined : "none",
-        },
-      },
-      context,
-    )}
-  `;
+const AccordionGroup = ({ customStyles = {}, ...args }) => {
+	return html`
+		${Template(args)} ${when(window.isChromatic(), () =>
+			Template({
+				...args,
+				customStyles: { "max-inline-size": "300px" },
+			}),
+		)} ${when(window.isChromatic(), () =>
+			Template({
+				...args,
+				disableAll: true,
+			}),
+		)}
+	`;
 };
-```
 
-In the `*.stories.js` file:
-
-```js
 export const Default = AccordionGroup.bind({});
 Default.args = {};
 ```
@@ -421,22 +401,17 @@ Ideally you should have a single story file for each component with multiple var
 
 In the event that you don't want a story to be tested in Chromatic, you can use the `disabledSnapshot` paramter:
 
-```js
+```
 Default.parameters = {
-  chromatic: { disableSnapshot: true },
-};
+	chromatic: { disableSnapshot: true },
+}
 ```
 
-If a story should not be shown in the sidebar because it is only for:
+Similarly, if a story is only for documentation purposes and shouldn't be shown in the sidebar, you can use the custom `docs-only` tag:
 
-- Documentation purposes, you can use the custom tag:
-  ```js
-  Default.tags = ["docs-only"];
-  ```
-- Visual regression testing, you can use the custom tag:
-  ```js
-  Default.tags = ["vrt-only"];
-  ```
+```
+Default.tags = ["docs-only"];
+```
 
 ### Getting started
 

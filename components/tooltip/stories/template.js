@@ -1,8 +1,8 @@
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -13,9 +13,7 @@ export const Template = ({
 	placement,
 	isOpen = true,
 	isFocused = false,
-	customStyles = {},
-	customClasses = [],
-}, context) => {
+}) => {
 	let variantIcon;
 	if (variant === "info") {
 		variantIcon = "Info";
@@ -36,27 +34,20 @@ export const Template = ({
 				[`${rootClass}--${placement}`]: typeof placement !== "undefined",
 				"is-open": isOpen,
 				"is-focused": isFocused,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap(customStyles)}
 		>
 			${when(variantIcon, () =>
 				Icon({
 					iconName: variantIcon,
 					size: "m",
 					customClasses: [`${rootClass}-typeIcon`],
-				}, context)
+				})
 			)}
-			${when(label, () => html`
-				<span class=${classMap({
-					[`${rootClass}-label`]: true
-				})}>
-					${label}
-				</span>
-			`)}
-			<span class=${classMap({
-				[`${rootClass}-tip`]: true
-			})}></span>
+			${when(
+				label,
+				() => html`<span class="${rootClass}-label">${label}</span>`
+			)}
+			<span class="${rootClass}-tip"></span>
 		</span>
 	`;
 };

@@ -1,7 +1,9 @@
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { AccordionGroup, Template } from "./template.js";
+import { Template } from "./template.js";
 
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
@@ -139,20 +141,45 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Accordion-item"],
 		},
-		chromatic: { disableSnapshot: true },
 	},
 };
 
+const AccordionGroup = (args) => html`
+	${window.isChromatic() ? html`
+		<div style=${styleMap({
+			"display": "flex",
+			"flex-wrap": "wrap",
+			"gap": "28px"
+		})}>
+			${Template(args)}
+			${Template({
+				...args,
+				customStyles: {
+					maxInlineSize: "300px",
+				},
+			})}
+			${Template({
+				...args,
+				disableAll: true,
+			})}
+		</div>
+	` : Template(args)}
+`;
+
 export const Default = AccordionGroup.bind({});
 Default.args = {};
-Default.parameters = {
-	chromatic: { disableSnapshot: false },
-};
 
+/**
+ * Stories for the MDX "Docs" only.
+ * Based off of the base `Template` which does not have conditional Chromatic-only markup.
+ */
 export const Regular = Template.bind({});
 Regular.tags = ["docs-only"];
 Regular.args = {
 	density: "regular",
+};
+Regular.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const Compact = Template.bind({});
@@ -160,9 +187,15 @@ Compact.tags = ["docs-only"];
 Compact.args = {
 	density: "compact",
 };
+Compact.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Spacious = Template.bind({});
 Spacious.tags = ["docs-only"];
 Spacious.args = {
 	density: "spacious",
+};
+Spacious.parameters = {
+	chromatic: { disableSnapshot: true },
 };

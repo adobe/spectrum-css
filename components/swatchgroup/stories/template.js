@@ -1,8 +1,9 @@
-import { Template as Swatch } from "@spectrum-css/swatch/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+
+import { Template as Swatch } from "@spectrum-css/swatch/stories/template.js";
 
 import "../index.css";
 
@@ -15,7 +16,7 @@ export const Template = ({
 	items = [],
 	customStyles = {},
 	id,
-}, context) => html`
+}) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -33,6 +34,6 @@ export const Template = ({
 			size,
 			rounding,
 			...swatch,
-		}, context))}
+		}))}
 	</div>
 `;

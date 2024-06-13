@@ -1,12 +1,13 @@
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
-import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
 
 import "../index.css";
 
@@ -23,7 +24,8 @@ export const Template = ({
 	customStyles = {},
 	content = [],
 	...globals
-}, context) => {
+}) => {
+
 	if (!content || !content.length) {
 		console.warn("Tabs: content required");
 		return html``;
@@ -72,24 +74,22 @@ export const Template = ({
 						return html`
 							<div
 								class=${classMap({
-									[`${rootClass}-item`]: true,
-									"is-selected": item?.isSelected ?? false,
-									"is-disabled": item?.isDisabled ?? false,
-								})}
+							[`${rootClass}-item`]: true,
+							"is-selected": item?.isSelected ?? false,
+							"is-disabled": item?.isDisabled ?? false,
+						})}
 								tabindex="0"
 							>
 								${when(item.icon, () =>
-									Icon({
-										...globals,
-										iconName: item.icon,
-										size
-									}, context)
-								)}
-								${when(item.label && !iconOnly, () => html`
-									<span class="${rootClass}-itemLabel">
-										${item.label}
-									</span>
-								`)}
+							Icon({ ...globals, iconName: item.icon, size })
+						)}
+								${when(
+							item.label && !iconOnly,
+							() =>
+								html`<span class="${rootClass}-itemLabel"
+											>${item.label}</span
+										>`
+						)}
 								${selectionIndicator(item.isSelected)}
 							</div>
 						`;
@@ -103,7 +103,7 @@ export const Template = ({
 					isQuiet: true,
 					size,
 					isOpen,
-					placeholder: !iconOnly ? content?.[0].label : Icon({ ...globals, iconName: content?.[0].icon, size }, context),
+					placeholder: !iconOnly ? content?.[0].label : Icon({ ...globals, iconName: content?.[0].icon, size }),
 					name: content?.[0].label,
 					id: "tab-selector",
 					customPopoverStyles: {
@@ -123,9 +123,9 @@ export const Template = ({
 									label: !iconOnly ? item.label : undefined,
 								};
 							}),
-						}, context),
+						}),
 					]
-				}, context)}
+				})}
 				${selectionIndicator(true)}
 			`)}
 		</div>

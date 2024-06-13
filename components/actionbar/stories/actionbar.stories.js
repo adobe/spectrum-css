@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
-import { ActionBarGroup, Template } from "./template";
+import { Template } from "./template";
 
 /**
  * The action bar component is a floating full width bar that appears upon selection.
@@ -80,7 +80,7 @@ export default {
 	}
 };
 
-export const Default = ActionBarGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
 export const Emphasized = Template.bind({});

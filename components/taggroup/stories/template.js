@@ -1,8 +1,9 @@
-import { Template as Tag } from "@spectrum-css/tag/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+
+import { Template as Tag } from "@spectrum-css/tag/stories/template.js";
 
 import "../index.css";
 
@@ -14,7 +15,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	...globals
-}, context) => html`
+}) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -31,7 +32,7 @@ export const Template = ({
 				size: globals.size,
 				hasClearButton: isRemovable,
 				customClasses: [`${rootClass}-item`],
-			}, context);
+			});
 		})}
 	</div>
 `;

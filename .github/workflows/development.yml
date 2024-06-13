@@ -96,8 +96,6 @@ jobs:
                   files_yaml: |
                       styles:
                         - components/*/index.css
-                        - components/*/themes/spectrum.css
-                        - components/*/themes/express.css
                       eslint:
                         - components/*/stories/*.js
 

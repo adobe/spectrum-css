@@ -1,8 +1,10 @@
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
+
 import { capitalize, lowerCase } from "lodash-es";
+
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
 import "../index.css";
 
@@ -18,7 +20,7 @@ export const Template = ({
 	customStyles = {},
 	size = "m",
 	...globals
-}, context) => html`
+}) => html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
@@ -44,14 +46,14 @@ export const Template = ({
 				label,
 				alignment: "",
 				customClasses: [`${rootClass}-label`],
-			}, context)}
+			})}
 			${FieldLabel({
 				...globals,
 				size,
 				label: indeterminate ? "" : `${value}%`,
 				alignment: "",
 				customClasses: [`${rootClass}-percentage`],
-			}, context)}
+			})}
 			<div class="${rootClass}-track">
 				<div class="${rootClass}-fill" style="width: ${value}%;"></div>
 			</div>

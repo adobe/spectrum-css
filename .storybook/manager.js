@@ -1,4 +1,4 @@
-import "@spectrum-css/tokens/dist/index.css";
+import "@spectrum-css/tokens";
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
 import "./assets/index.css";

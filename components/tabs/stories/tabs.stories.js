@@ -135,26 +135,52 @@ const TabsGroup = (args) => html`
 `;
 
 const Variants = (args) => html`
-  ${window.isChromatic() ? html`
-  <div style="display: grid; gap: 32px;${args.orientation === "overflow" ? " max-inline-size: 100px" : ""}">
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Default"], customClasses: ["chromatic-ignore"] })}
-      ${TabsGroup(args)}
-    </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Emphasized"], customClasses: ["chromatic-ignore"] })}
-      ${TabsGroup({ ...args, isEmphasized: true })}
-    </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Quiet"], customClasses: ["chromatic-ignore"] })}
-      ${TabsGroup({ ...args, isQuiet: true })}
-    </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Quiet + compact"], customClasses: ["chromatic-ignore"] })}
-      ${TabsGroup({ ...args, isQuiet: true, isCompact: true })}
-    </div>
-  </div>
-` : Template(args)}
+  ${window.isChromatic()
+    ? html`
+        <div
+          style="display: grid; gap: 32px;${args.orientation === "overflow"
+            ? " max-inline-size: 100px"
+            : ""}"
+        >
+          <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+            ${Typography({
+              semantics: "heading",
+              size: "s",
+              content: ["Default"],
+              customClasses: ["chromatic-ignore"],
+            })}
+            ${TabsGroup(args)}
+          </div>
+          <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+            ${Typography({
+              semantics: "heading",
+              size: "s",
+              content: ["Emphasized"],
+              customClasses: ["chromatic-ignore"],
+            })}
+            ${TabsGroup({ ...args, isEmphasized: true })}
+          </div>
+          <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+            ${Typography({
+              semantics: "heading",
+              size: "s",
+              content: ["Quiet"],
+              customClasses: ["chromatic-ignore"],
+            })}
+            ${TabsGroup({ ...args, isQuiet: true })}
+          </div>
+          <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+            ${Typography({
+              semantics: "heading",
+              size: "s",
+              content: ["Quiet + compact"],
+              customClasses: ["chromatic-ignore"],
+            })}
+            ${TabsGroup({ ...args, isQuiet: true, isCompact: true })}
+          </div>
+        </div>
+      `
+    : Template(args)}
 `;
 
 export const Default = Variants.bind({});

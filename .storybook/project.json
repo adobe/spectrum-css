@@ -75,8 +75,7 @@
 					"stylelint --cache --allow-empty-input --report-descriptionless-disables --report-invalid-scope-disables --report-needless-disables {projectRoot}/assets/*.css --ignore-pattern {projectRoot}/dist",
 					"eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives {projectRoot}/*.{js,json} {projectRoot}/**/*.js --ignore-pattern \"!.storybook/\" || exit 0"
 				]
-			}
-		},
+			}},
 		"start": {
 			"cache": true,
 			"dependsOn": ["^build"],

@@ -1,10 +1,11 @@
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+
 import { Template as ActionGroup } from "@spectrum-css/actiongroup/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
+
 import "../index.css";
 
 export const Template = ({
@@ -67,26 +68,6 @@ export const Template = ({
 					],
 				}),
 			],
-		})}
-	</div>
-`;
-
-export const ActionBarGroup = (args) => html`
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "none" : undefined,
-	})}>
-		${Template(args)}
-	</div>
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
-		"flex-direction": "column",
-		"flex-wrap": "nowrap",
-		"gap": "16px"
-	})}>
-		${Template(args)}
-		${Template({
-			...args,
-			isEmphasized: true,
 		})}
 	</div>
 `;

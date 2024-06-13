@@ -1,4 +1,4 @@
-import { States } from "./template";
+import { Template } from "./template";
 
 /**
  * A swatch shows a small sample of a fill&emdash;such as a color, gradient, texture, or material&emdash;that is intended to be applied to an object.
@@ -65,5 +65,10 @@ export default {
 	},
 };
 
-export const Default = States.bind({});
+export const Default = Template.bind({});
 Default.args = {};
+
+export const Transparent = Template.bind({});
+Transparent.args = {
+	swatchColor: "rgba(174, 216, 230, 0.3)",
+};

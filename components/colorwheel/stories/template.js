@@ -1,8 +1,9 @@
-import { Template as ColorArea } from "@spectrum-css/colorarea/stories/template.js";
-import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
+
+import { Template as ColorArea } from "@spectrum-css/colorarea/stories/template.js";
+import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 
 import "../index.css";
 
@@ -16,7 +17,7 @@ export const Template = ({
 		"--spectrum-picked-color": "rgb(255, 0, 0)",
 	},
 	...globals
-}, context) => html`
+}) => html`
 	<div class=${classMap({
 		[rootClass]: true,
 		"is-disabled": isDisabled,
@@ -33,7 +34,7 @@ export const Template = ({
 						"--mod-colorarea-width": "80px",
 						"--mod-colorarea-height": "80px",
 					},
-				}, context)}
+				})}
 			`)}
 			</div>
 		</div>
@@ -51,6 +52,6 @@ export const Template = ({
 			isDisabled,
 			customClasses: [`${rootClass}-handle`],
 			customStyles: colorHandleStyle,
-		}, context)}
+		})}
 		<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
 	</div>`;

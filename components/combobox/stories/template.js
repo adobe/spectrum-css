@@ -1,12 +1,14 @@
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
+
 import { useArgs, useGlobals } from "@storybook/preview-api";
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 
 import "../index.css";
 
@@ -27,9 +29,10 @@ export const Template = ({
 	isLoading = false,
 	selectedDay,
 	...globals
-}, context) => {
+}) => {
 	const [, updateArgs] = useArgs();
 	const [{ lang }] = useGlobals();
+
 
 	// If selectedDay is a string, convert it to a Date object
 	if (typeof selectedDay === "string" && selectedDay.length > 0) {
@@ -44,7 +47,7 @@ export const Template = ({
 				label: fieldLabelText,
 				customStyles: { "max-inline-size": "100px"},
 				alignment: fieldLabelPosition === "left" && "left",
-			}, context) : null
+			}) : null
 		}
 		<div
 			class=${classMap({
@@ -86,7 +89,7 @@ export const Template = ({
 					onclick: function () {
 						if (!isOpen) updateArgs({ isOpen: true });
 					},
-				}, context),
+				}),
 				PickerButton({
 					...globals,
 					customClasses: [
@@ -105,7 +108,7 @@ export const Template = ({
 					onclick: function () {
 						updateArgs({ isOpen: !isOpen });
 					},
-				}, context),
+				}),
 				Popover({
 					...globals,
 					isOpen: isOpen && !isDisabled,
@@ -139,9 +142,9 @@ export const Template = ({
 									isDisabled: true,
 								},
 							],
-						}, context),
+						}),
 					],
-				}, context),
+				}),
 			]}
 		</div>
 	`;

@@ -30,6 +30,20 @@ export default {
 			dynamicTitle: true,
 		},
 	},
+	context: {
+		title: "Context",
+		description: "Determine which stylesheets to source to preview the component in that context",
+		defaultValue: "spectrum",
+		type: "string",
+		toolbar: {
+			items: [
+				{ value: "spectrum", title: "Spectrum 2", right: "Default"},
+				{ value: "legacy", title: "Spectrum 1", right: "Legacy" },
+				{ value: "express", title: "Express", right: "Legacy" },
+			],
+			dynamicTitle: true,
+		},
+	},
 	testingPreview: {
 		title: "Testing preview",
 		description: "Enable the testing preview",

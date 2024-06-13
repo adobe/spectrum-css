@@ -1,9 +1,10 @@
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { when } from "lit/directives/when.js";
+
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -15,7 +16,7 @@ export const Template = ({
 	iconName,
 	items = [],
 	...globals
-}, context) => html`
+}) => html`
   <nav>
     <ul class=${classMap({
       [rootClass]: true,
@@ -40,7 +41,7 @@ export const Template = ({
                 Icon({
                     ...globals,
                     iconName,
-                  }, context)
+                  })
                 )}
                 <span class="${rootClass}-link-text">${item.title}</span>
               </a>
@@ -59,19 +60,19 @@ export const Template = ({
                     iconName,
                     ...globals,
                     ...item
-                  }, context);
+                  });
                 })}
               </ul>
             </li>
           `;
         }
-        else {
+else {
           return SideNavItem({
             hasIcon,
             iconName,
             ...globals,
             ...item
-          }, context);
+          });
         }
       })}
     </ul>
@@ -91,7 +92,7 @@ export const SideNavItem = ({
 	iconName,
 	customClasses = [],
 	...globals
-}, context) => {
+}) => {
 	const displayIcon = hasIcon & variant === "multiLevel" ? false : true;
 	return html`
     <li id=${id} class=${classMap({
@@ -101,12 +102,12 @@ export const SideNavItem = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}>
       <a href=${link} class="${rootClass}-itemLink">
-        ${when(displayIcon, () =>
+        ${displayIcon ?
           Icon({
             ...globals,
             iconName,
-          }, context)
-        )}
+          })
+        : ""}
         <span class="${rootClass}-link-text">${title}</span>
       </a>
       ${when(levelThreeItems, () => html`
@@ -115,7 +116,7 @@ export const SideNavItem = ({
             return SideNavItem({
               ...globals,
               ...item
-            }, context);
+            });
           })}
         </ul>`
       )}

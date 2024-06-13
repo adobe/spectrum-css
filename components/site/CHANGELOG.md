@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+
 ## 5.1.1
 
 ### Patch Changes
@@ -25,7 +36,9 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
+
 ## 5.0.0
+
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.2.4...@spectrum-css/site@5.0.0)
 
@@ -40,42 +53,54 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="4.2.4"></a>
+
 ## 4.2.4
+
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.2.3...@spectrum-css/site@4.2.4)
 
 **Note:** Version bump only for package @spectrum-css/site
 
 <a name="4.2.3"></a>
+
 ## 4.2.3
+
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.2.2...@spectrum-css/site@4.2.3)
 
 **Note:** Version bump only for package @spectrum-css/site
 
 <a name="4.2.2"></a>
+
 ## 4.2.2
+
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.2.1...@spectrum-css/site@4.2.2)
 
 **Note:** Version bump only for package @spectrum-css/site
 
 <a name="4.2.1"></a>
+
 ## 4.2.1
+
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/site
 
 <a name="4.2.0"></a>
+
 ## 4.2.0
+
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.1.0...@spectrum-css/site@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/site
 
 <a name="4.1.0"></a>
+
 ## 4.1.0
+
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.0.4...@spectrum-css/site@4.1.0)
 
@@ -84,21 +109,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **asset,cyclebutton,quickaction,site:**deprecate skin.css assets ([#2438](https://github.com/adobe/spectrum-css/issues/2438))([d6de839](https://github.com/adobe/spectrum-css/commit/d6de839))
 
 <a name="4.0.4"></a>
+
 ## 4.0.4
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.0.3...@spectrum-css/site@4.0.4)
 
 **Note:** Version bump only for package @spectrum-css/site
 
 <a name="4.0.3"></a>
+
 ## 4.0.3
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.0.2...@spectrum-css/site@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/site
 
 <a name="4.0.2"></a>
+
 ## 4.0.2
+
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.0.0...@spectrum-css/site@4.0.2)
 
@@ -107,7 +138,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="4.0.1"></a>
+
 ## 4.0.1
+
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@4.0.0...@spectrum-css/site@4.0.1)
 
@@ -116,7 +149,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="4.0.0"></a>
+
 ## 4.0.0
+
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@3.0.22...@spectrum-css/site@4.0.0)
 
@@ -129,14 +164,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
     		replace focus-ring with native focus-visible pseudo class
 
 <a name="3.0.22"></a>
+
 ## 3.0.22
+
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@3.0.21...@spectrum-css/site@3.0.22)
 
 **Note:** Version bump only for package @spectrum-css/site
 
 <a name="3.0.21"></a>
+
 ## 3.0.21
+
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@3.0.20...@spectrum-css/site@3.0.21)
 
@@ -145,14 +184,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="3.0.20"></a>
+
 ## 3.0.20
+
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@3.0.19...@spectrum-css/site@3.0.20)
 
 **Note:** Version bump only for package @spectrum-css/site
 
 <a name="3.0.19"></a>
+
 ## 3.0.19
+
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@3.0.18...@spectrum-css/site@3.0.19)
 

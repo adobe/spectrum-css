@@ -9,9 +9,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-AlertBanner {
+	--spectrum-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default);
+
 	--spectrum-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
 	--spectrum-alert-banner-max-inline-size: var(--spectrum-alert-banner-width);
 	--spectrum-alert-banner-size: auto;

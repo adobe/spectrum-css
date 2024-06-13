@@ -17,7 +17,7 @@ export const Template = ({
 	isInvalid,
 	items,
 	...globals
-}, context) => html`
+}) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -33,7 +33,7 @@ export const Template = ({
 			size: "m",
 			label: "Field Group Label",
 			alignment: labelPosition === "side" ? "right" : "top",
-		}, context)}
+		})}
 
 		<div class="${rootClass}InputLayout">
 			${repeat(
@@ -44,7 +44,7 @@ export const Template = ({
 						...globals,
 						...item,
 						customClasses: [`${rootClass}-item`],
-					}, context);
+					});
 				}
 			)}
 			${HelpText({
@@ -52,7 +52,7 @@ export const Template = ({
 				size: "m",
 				text: "Select an option",
 				variant: isInvalid ? "negative" : "neutral",
-			}, context)}
+			})}
 		</div>
 	</div>
 `;

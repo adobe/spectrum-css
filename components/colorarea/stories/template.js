@@ -14,7 +14,7 @@ export const Template = ({
 	customWidth,
 	customHeight,
 	...globals
-}, context) => html`
+}) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -42,7 +42,7 @@ export const Template = ({
 				"--spectrum-picked-color": "rgba(255, 0, 0)",
 				"transform": customWidth ? "translate(var(--mod-colorarea-width), 0)" : undefined,
 			},
-		}, context)}
+		})}
 		<input
 			type="range"
 			class="spectrum-ColorArea-slider"

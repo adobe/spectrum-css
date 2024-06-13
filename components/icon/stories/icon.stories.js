@@ -91,7 +91,6 @@ export default {
 		setName: "workflow",
 		iconName: "ABC",
 		size: "xl",
-		useRef: true,
 	},
 };
 

@@ -1,5 +1,6 @@
-import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
-import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
+
+import "@spectrum-css/tokens";
+import "@spectrum-css/tokens-legacy/dist/index.css";
 import { setConsoleOptions } from "@storybook/addon-console";
 import "./assets/base.css";
 import "./assets/typekit.js";
@@ -12,39 +13,17 @@ import {
 	withTextDirectionWrapper,
 } from "./decorators/index.js";
 import DocumentationTemplate from "./DocumentationTemplate.mdx";
-import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
 import { argTypes, globalTypes } from "./types";
-
-window.global = window;
 
 const panelExclude = setConsoleOptions({}).panelExclude || [];
 setConsoleOptions({
-	panelExclude: [
-		...panelExclude,
-		/deprecated/,
-		/TypeError/,
-		/postcss/,
-		/stylelint/,
-	],
+	panelExclude: [...panelExclude, /deprecated/, /TypeError/, /postcss/, /stylelint/],
 });
-
-// Inject the sprite sheets into the document
-let sprite = document.getElementById("spritesheets");
-if (!sprite) {
-	sprite = document.createElement("div");
-	sprite.id = "spritesheets";
-	sprite.innerHTML = workflowSprite + uiSprite;
-	document.body.appendChild(sprite);
-}
-else {
-	sprite.innerHTML = workflowSprite + uiSprite;
-}
 
 export const args = {
 	color: "light",
 	scale: "medium",
 	reducedMotion: false,
-	express: false,
 	customClasses: [],
 };
 
@@ -61,24 +40,16 @@ export const parameters = {
 	options: {
 		storySort: {
 			method: "alphabetical-by-kind",
-			order: [
-				"Guides",
-				["Contributing", "*", "Adobe Code of Conduct", "Changelog"],
-				"Components",
-				["*", ["Docs", "Default", "*"]],
-				"Deprecated",
-				["*", ["Docs", "Default", "*"]],
-				"*",
-			],
+			order: ["Guides", ["Contributing", "*", "Adobe Code of Conduct", "Changelog"], "Components", ["*", ["Docs", "Default", "*"]], "Deprecated", ["*", ["Docs", "Default", "*"]], "*"],
 			includeNames: true,
 		},
 	},
 	chromatic: {
-		// @todo: use a loader to ensure tokens load before stories without arbitrary delay
+		// This delay ensures tokens are loaded before the story is rendered
+		// @todo: explore a loader for this to ensure tokens load before stories without an arbitrary delay
 		delay: 500,
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
-		pauseAnimationAtEnd: true,
 	},
 	controls: {
 		expanded: true,
@@ -103,7 +74,7 @@ export const parameters = {
 		page: DocumentationTemplate,
 		story: {
 			inline: true,
-			height: "200px",
+			iframeHeight: "200px",
 		},
 		source: {
 			type: "dynamic",
@@ -126,12 +97,6 @@ export const parameters = {
 	},
 };
 
-export const loaders = [
-	FontLoader,
-	IconLoader,
-	TokenLoader,
-];
-
 export const decorators = [
 	withTextDirectionWrapper,
 	withLanguageWrapper,
@@ -139,12 +104,11 @@ export const decorators = [
 	withContextWrapper,
 	withTestingPreviewWrapper,
 	withActions,
-	// Attach the icons to the window object for use in the stories
-	(StoryFn, context) => {
-		if (context?.loaded?.icons) window.icons = context.loaded.icons;
-		return StoryFn(context);
-	},
 ];
+
+// Use the document.fonts API to check if fonts have loaded
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/fonts API to
+export const loaders = document.fonts ? [async () => ({ fonts: await document.fonts.ready })] : [];
 
 export default {
 	globalTypes,

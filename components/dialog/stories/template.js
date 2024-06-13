@@ -1,13 +1,14 @@
-import { Template as Button } from "@spectrum-css/button/stories/template.js";
-import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
-import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
+
+import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
+import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
+import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
+import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 
 import "../index.css";
 
@@ -21,7 +22,7 @@ export const Template = ({
 	customClasses = [],
 	id,
 	...globals
-}, context) => {
+}) => {
 	const { scale } = globals;
 	const [, updateArgs] = useArgs();
 
@@ -45,9 +46,9 @@ export const Template = ({
 						horizontal: true,
 						customClasses: [`${rootClass}-divider`],
 						...globals,
-					}, context),
+					}),
 				])}
-				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}, context) : c))}</section>
+				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
 				${when(isDismissable, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
@@ -55,7 +56,7 @@ export const Template = ({
 						onclick: () => {
 							updateArgs({ isOpen: !isOpen });
 						},
-					}, context)
+					})
 				)}
 			</div>
 		</div>
@@ -66,7 +67,7 @@ export const Template = ({
 			${Underlay({
 				...globals,
 				isOpen,
-			}, context)}
+			})}
 			${Button({
 				...globals,
 				size: "m",
@@ -83,12 +84,12 @@ export const Template = ({
 				onclick: () => {
 					updateArgs({ isOpen: !isOpen });
 				},
-			}, context)}
+			})}
 			${Modal({
 				...globals,
 				isOpen,
 				content: Dialog,
-			}, context)}
+			})}
 		`;
 	}
 	else {

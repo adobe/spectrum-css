@@ -1,5 +1,17 @@
 # Change Log
 
+## 9.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+  - @spectrum-css/icon@8.0.0-s2-foundations.0
+
 ## 8.1.1
 
 ### Patch Changes
@@ -29,7 +41,9 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="8.0.0"></a>
+
 ## 8.0.0
+
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.3.6...@spectrum-css/fieldlabel@8.0.0)
 
@@ -44,35 +58,45 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="7.3.6"></a>
+
 ## 7.3.6
+
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.3.5...@spectrum-css/fieldlabel@7.3.6)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.3.5"></a>
+
 ## 7.3.5
+
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.3.4...@spectrum-css/fieldlabel@7.3.5)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.3.4"></a>
+
 ## 7.3.4
+
 🗓
 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.3.3...@spectrum-css/fieldlabel@7.3.4)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.3.3"></a>
+
 ## 7.3.3
+
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.3.2...@spectrum-css/fieldlabel@7.3.3)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.3.2"></a>
+
 ## 7.3.2
+
 🗓
 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.3.1...@spectrum-css/fieldlabel@7.3.2)
 
@@ -81,14 +105,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **picker:**quiet side label picker positioning ([#2465](https://github.com/adobe/spectrum-css/issues/2465))([537f0b8](https://github.com/adobe/spectrum-css/commit/537f0b8))
 
 <a name="7.3.1"></a>
+
 ## 7.3.1
+
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.3.0"></a>
+
 ## 7.3.0
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.2.1...@spectrum-css/fieldlabel@7.3.0)
 
@@ -97,14 +125,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="7.2.1"></a>
+
 ## 7.2.1
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.2.0...@spectrum-css/fieldlabel@7.2.1)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.2.0"></a>
+
 ## 7.2.0
+
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.1.5...@spectrum-css/fieldlabel@7.2.0)
 
@@ -113,42 +145,54 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **fieldlabel:**form - replace table layout with grid ([#2269](https://github.com/adobe/spectrum-css/issues/2269))([25591fc](https://github.com/adobe/spectrum-css/commit/25591fc)), closes[#2271](https://github.com/adobe/spectrum-css/issues/2271)
 
 <a name="7.1.5"></a>
+
 ## 7.1.5
+
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.1.3...@spectrum-css/fieldlabel@7.1.5)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.1.4"></a>
+
 ## 7.1.4
+
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.1.3...@spectrum-css/fieldlabel@7.1.4)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.1.3"></a>
+
 ## 7.1.3
+
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.1.2...@spectrum-css/fieldlabel@7.1.3)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.1.2"></a>
+
 ## 7.1.2
+
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.1.1...@spectrum-css/fieldlabel@7.1.2)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.1.1"></a>
+
 ## 7.1.1
+
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.1.0...@spectrum-css/fieldlabel@7.1.1)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.1.0"></a>
+
 ## 7.1.0
+
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.35...@spectrum-css/fieldlabel@7.1.0)
 
@@ -157,56 +201,72 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **fieldlabel:**required asterisk vertical alignment ([#2166](https://github.com/adobe/spectrum-css/issues/2166))([de7599e](https://github.com/adobe/spectrum-css/commit/de7599e))
 
 <a name="7.0.35"></a>
+
 ## 7.0.35
+
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.34...@spectrum-css/fieldlabel@7.0.35)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.34"></a>
+
 ## 7.0.34
+
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.33...@spectrum-css/fieldlabel@7.0.34)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.33"></a>
+
 ## 7.0.33
+
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.32...@spectrum-css/fieldlabel@7.0.33)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.32"></a>
+
 ## 7.0.32
+
 🗓
 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.31...@spectrum-css/fieldlabel@7.0.32)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.31"></a>
+
 ## 7.0.31
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.30...@spectrum-css/fieldlabel@7.0.31)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.30"></a>
+
 ## 7.0.30
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.29...@spectrum-css/fieldlabel@7.0.30)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.29"></a>
+
 ## 7.0.29
+
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.28...@spectrum-css/fieldlabel@7.0.29)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.28"></a>
+
 ## 7.0.28
+
 🗓
 2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.27...@spectrum-css/fieldlabel@7.0.28)
 
@@ -215,77 +275,99 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="7.0.27"></a>
+
 ## 7.0.27
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.26...@spectrum-css/fieldlabel@7.0.27)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.26"></a>
+
 ## 7.0.26
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.24...@spectrum-css/fieldlabel@7.0.26)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.25"></a>
+
 ## 7.0.25
+
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.24...@spectrum-css/fieldlabel@7.0.25)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.24"></a>
+
 ## 7.0.24
+
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.23...@spectrum-css/fieldlabel@7.0.24)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.23"></a>
+
 ## 7.0.23
+
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.22...@spectrum-css/fieldlabel@7.0.23)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.22"></a>
+
 ## 7.0.22
+
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.21...@spectrum-css/fieldlabel@7.0.22)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.21"></a>
+
 ## 7.0.21
+
 🗓
 2023-08-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.20...@spectrum-css/fieldlabel@7.0.21)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.20"></a>
+
 ## 7.0.20
+
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.19...@spectrum-css/fieldlabel@7.0.20)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.19"></a>
+
 ## 7.0.19
+
 🗓
 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.18...@spectrum-css/fieldlabel@7.0.19)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.18"></a>
+
 ## 7.0.18
+
 🗓
 2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.17...@spectrum-css/fieldlabel@7.0.18)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.17"></a>
+
 ## 7.0.17
+
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.16...@spectrum-css/fieldlabel@7.0.17)
 
@@ -294,56 +376,72 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 <a name="7.0.16"></a>
+
 ## 7.0.16
+
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.15...@spectrum-css/fieldlabel@7.0.16)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.15"></a>
+
 ## 7.0.15
+
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.14...@spectrum-css/fieldlabel@7.0.15)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.14"></a>
+
 ## 7.0.14
+
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.13...@spectrum-css/fieldlabel@7.0.14)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.13"></a>
+
 ## 7.0.13
+
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.12...@spectrum-css/fieldlabel@7.0.13)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.12"></a>
+
 ## 7.0.12
+
 🗓
 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.11...@spectrum-css/fieldlabel@7.0.12)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.11"></a>
+
 ## 7.0.11
+
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.10...@spectrum-css/fieldlabel@7.0.11)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.10"></a>
+
 ## 7.0.10
+
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.9...@spectrum-css/fieldlabel@7.0.10)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.9"></a>
+
 ## 7.0.9
+
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.8...@spectrum-css/fieldlabel@7.0.9)
 
@@ -352,14 +450,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="7.0.8"></a>
+
 ## 7.0.8
+
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.7...@spectrum-css/fieldlabel@7.0.8)
 
 **Note:** Version bump only for package @spectrum-css/fieldlabel
 
 <a name="7.0.7"></a>
+
 ## 7.0.7
+
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@7.0.6...@spectrum-css/fieldlabel@7.0.7)
 

@@ -1,5 +1,17 @@
 # Change Log
 
+## 11.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+  - @spectrum-css/ui-icons@2.0.0-s2-foundations.0
+
 ## 10.2.0
 
 ### Minor Changes

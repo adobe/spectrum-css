@@ -1,9 +1,10 @@
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+
+import { useArgs } from "@storybook/preview-api";
 
 import "../index.css";
 
@@ -21,13 +22,14 @@ export const Template = ({
 	trigger,
 	content = [],
 	...globals
-}, context) => {
+}) => {
 	const [, updateArgs] = useArgs();
 
 	if (content.length === 0) {
 		console.warn("Popover: No content provided.");
 		return html``;
 	}
+
 
 	const nestedPopover = id === "popover-nested" || id === "popover-nested-2";
 
@@ -160,7 +162,7 @@ export const Template = ({
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId)}
 		>
-			${content.map((c) => (typeof c === "function" ? c({}, context) : c))}
+			${content.map((c) => (typeof c === "function" ? c({}) : c))}
 			${withTip
 				? position && ["top", "bottom"].some((e) => position.startsWith(e))
 					? html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>`
