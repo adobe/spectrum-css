@@ -2266,8 +2266,8 @@
 
   --spectrum-tooltip-animation-distance:5px;
 
-  /* To get a square that measure 12px on the diagonal, the sides have to be 10px */
-	--spectrum-tooltip-tip-square-size:10px;
+  /* To get a square that measures 12px on the diagonal, the sides have to be 9px */
+	--spectrum-tooltip-tip-square-size:9px;
 
   --spectrum-ui-icon-medium-display:none;
   --spectrum-ui-icon-large-display:block;
@@ -3688,9 +3688,8 @@
 
   --spectrum-tooltip-animation-distance:var(--spectrum-spacing-75);
 
-  /* To get a square that measure 10px on the diagonal, the sides have to be 7px, but this has to
-		 be 8px because we have to account for antialiasing so there isn't a gap between tooltip and tip */
-	--spectrum-tooltip-tip-square-size:8px;
+  /* To get a square that measures 10px on the diagonal, the sides have to be 7px */
+	--spectrum-tooltip-tip-square-size:7px;
 
   --spectrum-ui-icon-medium-display:block;
   --spectrum-ui-icon-large-display:none;
