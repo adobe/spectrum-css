@@ -134,6 +134,7 @@ module.exports = ({
 					"cssnano-preset-advanced",
 					{
 						colormin: false,
+						reduceIdents: false,
 						discardComments: {
 							removeAllButFirst: true,
 						},
