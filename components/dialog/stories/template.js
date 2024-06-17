@@ -3,7 +3,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
-
+import { styleMap } from "lit/directives/style-map.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
@@ -16,32 +16,46 @@ export const Template = ({
 	rootClass = "spectrum-Dialog",
 	isDismissable = true,
 	isOpen = true,
+	size,
+	layout,
 	showModal = false,
 	heading,
 	content = [],
 	customClasses = [],
+	hasHeroImage = false,
+	heroImageUrl,
+	customStyles = {},
 	id,
 	...globals
 }) => {
-	const { scale } = globals;
 	const [, updateArgs] = useArgs();
 
 	const Dialog = html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${scale}`]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--dismissable`]: isDismissable,
+				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
 			role="dialog"
 			tabindex="-1"
 			aria-modal="true"
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			<div class="${rootClass}-grid">
+				${when(hasHeroImage, () =>
+					html`
+						<div 
+							class="spectrum-Dialog-hero"
+							style="background-image:url(${heroImageUrl ?  heroImageUrl : "example-card-portrait.png"})">
+						</div>
+					`
+				)}
 				${when(heading, () => [
-					html`<h1 class="${rootClass}-heading">${heading}</h1>`,
+					html`<h1 class="${rootClass}-heading">${heading.map((c) => (typeof c === "function" ? c({}) : c))}</h1>`,
 					Divider({
 						horizontal: true,
 						customClasses: [`${rootClass}-divider`],
@@ -88,6 +102,7 @@ export const Template = ({
 			${Modal({
 				...globals,
 				isOpen,
+				variant: layout,
 				content: Dialog,
 			})}
 		`;
