@@ -1,9 +1,11 @@
-import { Template } from "./template";
-
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { version } from "../package.json";
+import { Template } from "./template";
 
 /**
  * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.
+ * 
+ * The alert variants that were previously a part of Dialog were moved to their own component, [Alert Dialog](/docs/components-alert-dialog--docs).
  */
 export default {
 	title: "Components/Dialog",
@@ -14,19 +16,85 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
+		header: { 
+			name: "Additional header content",
+			description: "Controls header content",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
 			},
 			control: { type: "text" },
 		},
 		content: { table: { disable: true } },
-		isDismissable: {
-			name: "Dismissable",
+		hasFooter: {
+			name: "Has footer",
+			description: "Adds a footer to the dialog for additional context",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
+			control: "boolean",
+		},
+		hasCheckbox: {
+			name: "Has checkbox",
+			description: "Adds a checkbox to the footer content.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
+			control: { type: "boolean" },
+			if: { arg: "layout", eq: "default" },
+		},
+		footer: {
+			name: "Footer text",
+			description: "Text content of the dialog footer.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
+			if: { arg: "layout", eq: "default" },
+		},
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["small", "medium", "large"],
+			control: "select",
+		},
+		layout: {
+			name: "Layout",
+			type: { name: "string" },
+			defaultValue: "Default",
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+				defaultValue: { summary: "Default" },
+			},
+			// TODO: add the fullscreen and fullscreenTakeover layouts back to options[] once guidance on fullscreen dialogs is determined
+			options: ["default"],
+			control: "select",
+		},
+		isDismissible: {
+			name: "Dismissible",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "layout", eq: "default" },
 		},
 		showModal: {
 			name: "Wrap the dialog in a modal",
@@ -46,39 +114,171 @@ export default {
 			},
 			control: "boolean",
 		},
+		heroImageUrl: {
+			name: "Hero Image",
+			type: { name: "string" },
+			description: "Adds a cover image to the header of a dialog.",
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "layout", eq: "default" },
+		},
 	},
 	args: {
 		rootClass: "spectrum-Dialog",
-		isDismissable: true,
-		showModal: false,
+		hasFooter: true,
+		footer: "Do not show this message again.",
+		isDismissible: false,
 		isOpen: true,
+		showModal: false,
+		size: "medium",
+		layout: "default",
+		hasCheckbox: true,
 	},
 	parameters: {
 		actions: {
-			handles: ["click .spectrum-Dialog button"],
+			handles: [],
 		},
 		docs: {
 			story: {
+				inline: false,
 				height: "500px",
 			},
 		},
+		componentVersion: version,
 		status: {
 			type: "migrated",
 		},
 	},
 };
 
+const ExampleContent = "Standard dialog description. This should briefly communicate any additional information or context about the standard dialog title, to help users make one of the decisions offered by the buttons. Make it no more than a few short sentences.";
+
+/**
+ * The default size for dialog is medium.
+ */
 export const Default = Template.bind({});
 Default.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+	header: "*Required",
 	showModal: true,
 	content: [
 		() => Typography({
 			semantics: "body",
 			size: "m",
-			content: [
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis."
-			]
+			content: ExampleContent,
 		}),
 	],
+};
+
+// ********* DOCS ONLY ********* //
+export const DefaultSmall = Template.bind({});
+DefaultSmall.tags = ["!dev"];
+DefaultSmall.storyName = "Dialog - small",
+DefaultSmall.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+DefaultSmall.args = {
+	...Default.args,
+	size: "small",
+};
+
+export const DefaultLarge = Template.bind({});
+DefaultLarge.tags = ["!dev"];
+DefaultLarge.storyName = "Dialog - large",
+DefaultLarge.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+DefaultLarge.args = {
+	...Default.args,
+	size: "large",
+};
+
+/**
+ * A dialog that can be dismissed without taking an action.
+ */
+export const Dismissible = Template.bind({});
+Dismissible.tags = ["!dev"];
+Dismissible.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Dismissible.args = {
+	...Default.args,
+	isDismissible: true,
+};
+
+/**
+ * Dialogs can have a hero or cover image header.
+ */
+export const WithHero = Template.bind({});
+WithHero.tags = ["!dev"];
+WithHero.parameters = {
+	docs: {
+		story: {
+			height: "650px",
+		},
+	},
+	chromatic: { disableSnapshot: true },
+};
+WithHero.args = {
+	...Default.args,
+	hasHeroImage: true,
+	heroImageUrl: "example-card-portrait.png",
+};
+
+/**
+ * The content inside the body area can scroll when necessary.
+ */
+export const WithScroll = Template.bind({});
+WithScroll.args = {
+	...Default.args,
+	content: [ExampleContent, ExampleContent, ExampleContent, ExampleContent],
+	customStyles: {
+		"max-block-size": "400px",
+	}
+};
+WithScroll.tags = ["!dev"];
+WithScroll.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A fullscreen dialog will automatically fill almost all of the available screen space. A margin is included around the outside of the dialog.
+ */
+export const Fullscreen = Template.bind({});
+Fullscreen.args = {
+	...Default.args,
+	layout: "fullscreen",
+};
+Fullscreen.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+/* TODO: remove this tag once guidance for S2 fullscreen dialogs has been determined. */
+Fullscreen.tags = ["is-hidden-story"];
+
+/**
+ * A fullscreen takeover dialog will fill all of the available screen space.
+ */
+export const FullscreenTakeover = Template.bind({});
+FullscreenTakeover.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+FullscreenTakeover.args = {
+	...Default.args,
+	layout: "fullscreenTakeover",
+	content: [ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent],
+};
+/* TODO: remove this tag once guidance for S2 fullscreen dialogs has been determined. */
+FullscreenTakeover.tags = ["is-hidden-story"];
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+	},
 };
