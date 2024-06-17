@@ -9,10 +9,10 @@
 | `--mod-standard-dialog-heading-font-weight`             |
 | `--mod-standard-dialog-heading-line-height`             |
 | `--mod-standard-dialog-heading-text-color`              |
+| `--mod-standard-dialog-hero-block-size`                 |
 | `--mod-standard-dialog-max-width`                       |
 | `--mod-standard-dialog-max-width-large`                 |
 | `--mod-standard-dialog-max-width-small`                 |
-| `--mod-standard-dialog-hero-block-size`             |
 | `--mod-standard-dialog-min-inline-size`                 |
 | `--mod-standard-dialog-spacing-description-to-footer`   |
 | `--mod-standard-dialog-spacing-edge-to-close-button`    |
