@@ -1,5 +1,6 @@
 import { Template } from "./template";
-
+import {styleMap } from "lit/directives/style-map.js";
+import { html } from "lit";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 /**
@@ -14,11 +15,32 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Content",
 			},
 			control: { type: "text" },
 		},
 		content: { table: { disable: true } },
+		buttons: { table: { disable: true } },
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l"],
+			control: "select",
+		},
+		layout: {
+			name: "Layout",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["fullscreen", "fullscreenTakeover"],
+			control: "select",
+		},
 		isDismissable: {
 			name: "Dismissable",
 			type: { name: "boolean" },
@@ -47,15 +69,36 @@ export default {
 			control: "boolean",
 		},
 	},
+	hasHeroImage: {
+		name: "Has hero image",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Content",
+		},
+		control: "boolean",
+	},
+	heroImageUrl: {
+		name: "Hero Image",
+		type: { name: "string" },
+		table: {
+			type: { summary: "string" },
+			category: "Content",
+		},
+		control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+		if: { arg: "hasHeroImage", truthy: true },
+	},
 	args: {
 		rootClass: "spectrum-Dialog",
-		isDismissable: true,
+		isDismissable: false,
 		showModal: false,
 		isOpen: true,
+		size: "m",
+		hasHeroImage: false,
 	},
 	parameters: {
 		actions: {
-			handles: ["click .spectrum-Dialog button"],
+			handles: [],
 		},
 		docs: {
 			story: {
@@ -66,11 +109,56 @@ export default {
 			type: "migrated",
 		},
 	},
+	decorators: [
+		(Story, context) => {
+			if (!window.isChromatic()) return Story(context);
+			return html`
+				<style>
+					.spectrum-Detail { display: inline-block; }
+					.spectrum-Typography > div {
+						border: 1px solid var(--spectrum-gray-200);
+						border-radius: 4px;
+						padding: 0 1em 1em;
+						/* Why seafoam? Because it separates it from the component styles. */
+						--mod-detail-font-color: var(--spectrum-seafoam-900);
+					}
+				</style>
+				<div
+					style=${styleMap({
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+						gap: "1rem",
+						"--mod-detail-margin-end": ".3rem",
+					})}
+				>
+					${Story(context)}
+				</div>
+			`;
+		}
+	],
 };
+
+const ExampleButtonGroup = [{
+	variant: "secondary",
+	treatment: "outline",
+	label: "Remind me later"
+}, {
+	variant: "emphasized",
+	treatment: "fill",
+	label: "Rate now",
+}];
 
 export const Default = Template.bind({});
 Default.args = {
-	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+	heading: [
+		() => Typography({
+			semantics: "heading",
+			content: [
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+			]
+		}),
+	],
 	showModal: true,
 	content: [
 		() => Typography({
@@ -81,4 +169,5 @@ Default.args = {
 			]
 		}),
 	],
+	buttons: ExampleButtonGroup,
 };
