@@ -58,7 +58,7 @@ export const Default = ({
 				() => Dialog({
 						heading,
 						content: ["You have 5 new messages!"],
-						isDismissable: false,
+						isDismissible: false,
 					})
 			],
 		})}
@@ -71,7 +71,7 @@ export const Default = ({
 					() => Dialog({
 							heading: "You have new messages waiting in your inbox",
 							content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
-							isDismissable: false,
+							isDismissible: false,
 						})
 				],
 				customStyles: {

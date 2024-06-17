@@ -22,7 +22,7 @@ governing permissions and limitations under the License.
 	--spectrum-modal-max-width: 90%;
 
 	--spectrum-modal-background-color: var(--spectrum-gray-75);
-	--spectrum-modal-confirm-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-modal-confirm-border-radius: var(--spectrum-corner-radius-extra-large-default);
 	--spectrum-modal-confirm-exit-animation-duration: var(--spectrum-animation-duration-100);
 	--spectrum-modal-confirm-entry-animation-duration: var(--spectrum-animation-duration-500);
 	--spectrum-modal-confirm-entry-animation-delay: var(--spectrum-animation-duration-200);
@@ -92,28 +92,19 @@ governing permissions and limitations under the License.
 	pointer-events: auto;
 
 	/* Exit animations */
-	transition: opacity var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration)) var(--spectrum-animation-ease-in)
-			var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)),
-		visibility 0ms linear
-			calc(
-				var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)) +
-					var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration))
-			),
-		transform 0ms linear
-			calc(
-				var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)) +
-					var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration))
-			);
+	transition:
+		opacity var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration)) var(--spectrum-animation-ease-in) var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)),
+		visibility 0ms linear calc(var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)) + var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration))),
+		transform 0ms linear calc(var(--mod-modal-confirm-exit-animation-delay, var(--spectrum-modal-confirm-exit-animation-delay)) + var(--mod-modal-confirm-exit-animation-duration, var(--spectrum-modal-confirm-exit-animation-duration)));
 }
 
 .spectrum-Modal.is-open {
 	@extend %spectrum-overlay--open;
 
 	/* Entry animations */
-	transition: transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out)
-			var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay)),
-		opacity var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out)
-			var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay));
+	transition:
+		transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay)),
+		opacity var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay));
 
 	transform: translateY(0);
 }
