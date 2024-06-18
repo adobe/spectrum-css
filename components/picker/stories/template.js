@@ -14,44 +14,50 @@ import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 
 import "../index.css";
 
+/**
+ * Template for just the Picker. Does not include sibling Label and Help text.
+ */
 export const Picker = ({
 	rootClass = "spectrum-Picker",
 	size = "m",
-	labelPosition,
+	labelPosition = "top",
 	placeholder,
+	contentIconName,
 	isQuiet = false,
 	isKeyboardFocused = false,
 	isOpen = false,
 	isInvalid = false,
 	isLoading = false,
 	isDisabled = false,
+	isHovered = false,
+	isActive = false,
+	ariaLabeledBy,
 	customClasses = [],
 	customStyles = {},
 	...globals
 }) => {
 	const [, updateArgs] = useArgs();
 
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
+	// Use the chevron from the UI icon set for each size, as defined in the design spec.
+	let disclosureIconName = "ChevronDown100";
+	if (size == "s") { disclosureIconName = "ChevronDown75"; } 
+	else if (size == "l") { disclosureIconName = "ChevronDown200"; }
+	else if (size == "xl") { disclosureIconName = "ChevronDown300"; }
 
 	return html`
-	<button
+		<button
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]:
 					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
-				[`${rootClass}--sideLabel`]: labelPosition != "top",
+				[`${rootClass}--sideLabel`]: labelPosition == "side",
 				["is-invalid"]: isInvalid,
 				["is-open"]: isOpen,
 				["is-loading"]: isLoading,
 				["is-keyboardFocused"]: isKeyboardFocused,
+				["is-hover"]: isHovered,
+				["is-active"]: isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			?disabled=${isDisabled}
@@ -59,163 +65,144 @@ export const Picker = ({
 			style=${ifDefined(styleMap(customStyles))}
 			type="button"
 			@click=${() => {
+				if (window.isChromatic()) return;
 				updateArgs({ isOpen: !isOpen });
 			}}
+			aria-labelledby=${ifDefined(ariaLabeledBy)}
 		>
+			${when(contentIconName, () =>
+				Icon({
+					...globals,
+					iconName: contentIconName,
+					size,
+					customClasses: ["spectrum-Picker-icon"],
+				}))
+			}
 			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
-			${isLoading
-				? ProgressCircle({
+			${when(isLoading, () =>
+				ProgressCircle({
+					...globals,
 					size: "s",
 					isIndeterminate: true,
 				})
-				: ""}
-			${isInvalid && !isLoading
-				? Icon({
+			)}
+			${when(isInvalid && !isLoading, () =>
+				Icon({
 					...globals,
 					size,
 					iconName: "Alert",
 					customClasses: [`${rootClass}-validationIcon`],
 				})
-				: ""}
+			)}
 			${Icon({
 				...globals,
 				size,
 				setName: "ui",
-				iconName: "ChevronDown",
+				iconName: disclosureIconName,
 				customClasses: [`${rootClass}-menuIcon`],
 			})}
 		</button>
 	`;
 };
 
+/**
+ * Picker template used along with other sibling components, such as Field label and Help text.
+ */
 export const Template = ({
-	rootClass = "spectrum-Picker",
 	size = "m",
 	label,
 	labelPosition = "top",
-	placeholder,
 	helpText,
 	isQuiet = false,
-	isKeyboardFocused = false,
 	isOpen = false,
 	isInvalid = false,
-	isLoading = false,
 	isDisabled = false,
-	isReadOnly = false,
+	isLoading = false,
 	withSwitch = false,
 	fieldLabelStyle = {},
-	customClasses = [],
-	customStyles = {},
-	customPopoverStyles = {},
+	fieldLabelId = "default-picker",
+	customPopoverStyles = {
+		// Demonstrate popover at 100% of the width of the Picker.
+		minInlineSize: "100%",
+		"--mod-menu-inline-size": "100%",
+		// Helps ensure that Popover appears below the Picker, with side labels layout.
+		display: "block",
+	},
 	content = [],
-	id,
 	...globals
 }) => {
-	const { express } = globals;
-	try {
-		if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
-		else import(/* webpackPrefetch: true */ "../themes/express.css");
-	}
-	catch (e) {
-		console.warn(e);
-	}
+	const pickerMarkup = Picker({
+		...globals,
+		size,
+		isQuiet,
+		isOpen,
+		isInvalid,
+		isDisabled,
+		isLoading,
+		content,
+		labelPosition,
+		ariaLabeledBy: fieldLabelId,
+	});
 
-	let iconName = "ChevronDown200";
-	switch (size) {
-		case "s":
-			iconName = "ChevronDown75";
-			break;
-		case "m":
-			iconName = "ChevronDown100";
-			break;
-		case "xl":
-			iconName = "ChevronDown300";
-			break;
-		default:
-			iconName = "ChevronDown200";
-	}
+	const popoverMarkup = content.length !== 0 ? Popover({
+		isOpen: isOpen && !isDisabled && !isLoading,
+		withTip: false,
+		position: "bottom",
+		isQuiet,
+		content,
+		size,
+		customStyles: customPopoverStyles,
+	}) : "";
 
-	return html`
-		${label
-			? FieldLabel({
-				...globals,
-				size,
-				label,
-				isDisabled,
-				customStyles: fieldLabelStyle,
-				alignment: labelPosition,
-			})
-			: ""}
-		${labelPosition == "left" ?
-			html`<div style="display: inline-block">
-				${Picker({
-					...globals,
-					rootClass,
+	const helpTextMarkup = helpText ? HelpText({
+		size,
+		text: helpText,
+		variant: isInvalid ? "negative" : "neutral",
+		hideIcon: true,
+		isDisabled,
+	}) : "";
+
+	const markup = html`
+		<div 
+			style=${styleMap({
+				position: "relative",
+				display: "inline-block",
+				...(labelPosition == "side") && {
+					display: "flex",
+					flexWrap: "nowrap",
+				}
+			})}
+		>
+			${when(label, () =>
+				FieldLabel({
 					size,
-					placeholder,
-					isQuiet,
-					isKeyboardFocused,
-					isOpen,
-					isInvalid,
-					isLoading,
+					label,
 					isDisabled,
-					isReadOnly,
-					customClasses,
-					customStyles,
-					content,
-					iconName,
-					labelPosition,
-					id,
-				})}
-			</div>
-			`
-		:
-			Picker({
-				...globals,
-				rootClass,
-				size,
-				placeholder,
-				isQuiet,
-				isKeyboardFocused,
-				isOpen,
-				isInvalid,
-				isLoading,
-				isDisabled,
-				isReadOnly,
-				customClasses,
-				customStyles,
-				content,
-				iconName,
-				labelPosition,
-				id,
-			})
-		}
-
-		${helpText
-			? HelpText({
-				text: helpText,
-				variant: isInvalid ? "negative" : "neutral",
-				hideIcon: true,
-			})
-			: ""}
-		${when(content.length !== 0, () =>
-				Popover({
-					...globals,
-					isOpen: isOpen && !isDisabled,
-					withTip: false,
-					position: "bottom",
-					isQuiet,
-					customStyles: customPopoverStyles,
-					content,
+					style: fieldLabelStyle,
+					alignment: labelPosition == "side" ? "left" : undefined,
+					id: fieldLabelId,
 				})
-		)}
-		${when(withSwitch, () => Switch({
-			...globals,
-			size,
-			label: "Toggle switch",
-			customStyles: {
-				"padding-inline-start": "15px"
+			)}
+			${labelPosition == "side" 
+				? html`<div style="display: inline-block; position: relative;">${pickerMarkup} ${popoverMarkup} ${helpTextMarkup}</div>`
+				: html`${pickerMarkup} ${popoverMarkup} ${helpTextMarkup}`
 			}
-		}))}
-	`;
+			${when(withSwitch, () =>
+				Switch({
+					size,
+					label: "Toggle switch",
+					id: fieldLabelId + "-switch",
+					customStyles: {
+						"padding-inline-start": "15px"
+					}
+				})
+			)}
+		</div>`;
+
+	// Make sure there is a wrapper around sibling components when using the Chromatic
+	// template, so their layout is not affected by the flex and grid layouts used.
+	if (window.isChromatic()) {
+		return html`<div style="position: relative;">${markup}</div>`;
+	}
+	return markup;
 };

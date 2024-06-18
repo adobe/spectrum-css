@@ -1,5 +1,5 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
+Copyright 2024 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,492 +10,501 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
 @import "@spectrum-css/commons/basebutton.css";
 
 .spectrum-Picker {
-  /* font */
-  --spectrum-picker-font-size: var(--spectrum-font-size-100);
-  --spectrum-picker-font-weight: var(--spectrum-regular-font-weight);
-  --spectrum-picker-placeholder-font-style: var(--spectrum-default-font-style);
-  --spectrum-picker-line-height: var(--spectrum-line-height-100);
+	/* Font */
+	--spectrum-picker-font-size: var(--spectrum-font-size-100);
+	--spectrum-picker-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-picker-placeholder-font-style: var(--spectrum-default-font-style);
+	--spectrum-picker-line-height: var(--spectrum-line-height-100);
+	--spectrum-picker-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
-  /* height */
-  --spectrum-picker-block-size: var(--spectrum-component-height-100);
-  --spectrum-picker-inline-size: var(--spectrum-field-width);
+	/* Dimensions */
+	--spectrum-picker-block-size: var(--spectrum-component-height-100);
+	--spectrum-picker-inline-size: var(--spectrum-field-default-width-medium);
+	--spectrum-picker-min-inline-size: calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)));
 
-  /* border */
-  --spectrum-picker-border-radius: var(--spectrum-corner-radius-100);
+	/* Border */
+	--spectrum-picker-border-radius: var(--spectrum-corner-radius-medium-size-medium);
+	--spectrum-picker-border-width: var(--spectrum-border-width-200);
 
-  /* spacing */
-  --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
-  --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
-  --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-100);
-  --spectrum-picker-spacing-edge-to-text-quiet: var(--spectrum-field-edge-to-text-quiet);
-  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-component-top-to-text-100);
-  --spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
+	/* Spacing */
+	--spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
+	--spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+	--spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-100);
 
-  --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
-  --spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-medium);
-  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
-  --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
-  --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-medium);
-  --spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-medium);
-  --spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-100);
-  --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-100);
-  --spectrum-picker-spacing-edge-to-disclosure-icon-quiet: var(--spectrum-picker-end-edge-to-disclousure-icon-quiet);
+	/* Space from label component to Picker component. */
+	--spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
+	--spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
 
-  & + .spectrum-Popover--bottom.is-open {
-    --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
-  }
+	/* Space from optional starting icon to the text. */
+	--spectrum-picker-spacing-starting-icon-to-text: var(--spectrum-text-to-visual-100);
 
-  /* animation */
-  --spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
+	/* Space from text to either the disclosure icon or the alert/progress visual if present. */
+	--spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-text-to-visual-100);
 
-  /* color */
-  --spectrum-picker-font-color-default: var(--spectrum-neutral-content-color-default);
-  --spectrum-picker-font-color-default-open: var(--spectrum-neutral-content-color-focus);
-  --spectrum-picker-font-color-hover: var(--spectrum-neutral-content-color-hover);
-  --spectrum-picker-font-color-hover-open: var(--spectrum-neutral-content-color-focus-hover);
-  --spectrum-picker-font-color-active: var(--spectrum-neutral-content-color-down);
-  --spectrum-picker-font-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	/* Space from alert/progress visual to the disclosure icon (chevron). */
+	--spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
 
-  --spectrum-picker-icon-color-default: var(--spectrum-neutral-content-color-default);
-  --spectrum-picker-icon-color-default-open: var(--spectrum-neutral-content-color-focus);
-  --spectrum-picker-icon-color-hover: var(--spectrum-neutral-content-color-hover);
-  --spectrum-picker-icon-color-hover-open: var(--spectrum-neutral-content-color-focus-hover);
-  --spectrum-picker-icon-color-active: var(--spectrum-neutral-content-color-down);
-  --spectrum-picker-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	--spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-component-top-to-workflow-icon-100);
+	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-medium);
+	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-100);
+	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-100);
 
-  --spectrum-picker-border-color-error-default: var(--spectrum-negative-border-color-default);
-  --spectrum-picker-border-color-error-default-open: var(--spectrum-negative-border-color-focus);
-  --spectrum-picker-border-color-error-hover: var(--spectrum-negative-border-color-hover);
-  --spectrum-picker-border-color-error-hover-open: var(--spectrum-negative-border-color-focus-hover);
-  --spectrum-picker-border-color-error-active: var(--spectrum-negative-border-color-down);
-  --spectrum-picker-border-color-error-key-focus: var(--spectrum-negative-border-color-key-focus);
+	& + .spectrum-Popover--bottom.is-open {
+		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
+	}
 
-  --spectrum-picker-icon-color-error: var(--spectrum-negative-visual-color);
+	/* Animation */
+	--spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
 
-  --spectrum-picker-background-color-disabled: var(--spectrum-disabled-background-color);
-  --spectrum-picker-font-color-disabled: var(--spectrum-disabled-content-color);
-  --spectrum-picker-icon-color-disabled: var(--spectrum-disabled-content-color);
+	/* Color */
+	--spectrum-picker-background-color-default: var(--spectrum-gray-100);
+	--spectrum-picker-background-color-default-open: var(--spectrum-gray-200);
+	--spectrum-picker-background-color-hover: var(--spectrum-gray-200);
+	--spectrum-picker-background-color-hover-open: var(--spectrum-gray-200);
+	--spectrum-picker-background-color-active: var(--spectrum-gray-200);
+	--spectrum-picker-background-color-key-focus: var(--spectrum-gray-200);
 
-  /* special cases for focus indicator */
-  --spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-  --spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-  --spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--spectrum-picker-border-color-default: transparent;
+	--spectrum-picker-border-color-default-open: transparent;
+	--spectrum-picker-border-color-hover: transparent;
+	--spectrum-picker-border-color-hover-open: transparent;
+	--spectrum-picker-border-color-active: transparent;
+	--spectrum-picker-border-color-key-focus: transparent;
+
+	--spectrum-picker-font-color-default: var(--spectrum-neutral-content-color-default);
+	--spectrum-picker-font-color-default-open: var(--spectrum-neutral-content-color-focus);
+	--spectrum-picker-font-color-hover: var(--spectrum-neutral-content-color-hover);
+	--spectrum-picker-font-color-hover-open: var(--spectrum-neutral-content-color-focus-hover);
+	--spectrum-picker-font-color-active: var(--spectrum-neutral-content-color-down);
+	--spectrum-picker-font-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+
+	--spectrum-picker-icon-color-default: var(--spectrum-neutral-content-color-default);
+	--spectrum-picker-icon-color-default-open: var(--spectrum-neutral-content-color-focus);
+	--spectrum-picker-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+	--spectrum-picker-icon-color-hover-open: var(--spectrum-neutral-content-color-focus-hover);
+	--spectrum-picker-icon-color-active: var(--spectrum-neutral-content-color-down);
+	--spectrum-picker-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+
+	--spectrum-picker-border-color-error-default: var(--spectrum-negative-border-color-default);
+	--spectrum-picker-border-color-error-default-open: var(--spectrum-negative-border-color-focus);
+	--spectrum-picker-border-color-error-hover: var(--spectrum-negative-border-color-hover);
+	--spectrum-picker-border-color-error-hover-open: var(--spectrum-negative-border-color-focus-hover);
+	--spectrum-picker-border-color-error-active: var(--spectrum-negative-border-color-down);
+	--spectrum-picker-border-color-error-key-focus: var(--spectrum-negative-border-color-key-focus);
+
+	--spectrum-picker-icon-color-error: var(--spectrum-negative-visual-color);
+
+	--spectrum-picker-background-color-disabled: var(--spectrum-disabled-background-color);
+	--spectrum-picker-font-color-disabled: var(--spectrum-disabled-content-color);
+	--spectrum-picker-icon-color-disabled: var(--spectrum-disabled-content-color);
+
+	/* focus indicator */
+	--spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
 
 .spectrum-Picker--sizeS {
-  --spectrum-picker-font-size: var(--spectrum-font-size-75);
-  --spectrum-picker-block-size: var(--spectrum-component-height-75);
-  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-component-top-to-text-75);
-  --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-  --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
-  --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-75);
-  --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-75);
-  --spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-small);
-  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
-  --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-small);
-  --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-small);
-  --spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
-  --spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-75);
-  --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-75);
+	--spectrum-picker-font-size: var(--spectrum-font-size-75);
+	--spectrum-picker-block-size: var(--spectrum-component-height-75);
+	--spectrum-picker-inline-size: var(--spectrum-field-default-width-small);
+	--spectrum-picker-border-radius: var(--spectrum-corner-radius-medium-size-small);
+	--spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+	--spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	--spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-75);
+	--spectrum-picker-spacing-starting-icon-to-text: var(--spectrum-text-to-visual-75);
+	--spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-text-to-visual-75);
+	--spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
+	--spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-small);
+	--spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-component-top-to-workflow-icon-75);
+	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
+	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-75);
+	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-75);
 
-  & + .spectrum-Popover--bottom.is-open {
-    --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-small);
-  }
+	& + .spectrum-Popover--bottom.is-open {
+		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-small);
+	}
 }
 
 .spectrum-Picker--sizeL {
-  --spectrum-picker-font-size: var(--spectrum-font-size-200);
-  --spectrum-picker-block-size: var(--spectrum-component-height-200);
-  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-component-top-to-text-200);
-  --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
-  --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
-  --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-200);
-  --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-200);
-  --spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-large);
-  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
-  --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-large);
-  --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-large);
-  --spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-large);
-  --spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-200);
-  --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-200);
+	--spectrum-picker-font-size: var(--spectrum-font-size-200);
+	--spectrum-picker-inline-size: var(--spectrum-field-default-width-large);
+	--spectrum-picker-block-size: var(--spectrum-component-height-200);
+	--spectrum-picker-border-radius: var(--spectrum-corner-radius-medium-size-large);
+	--spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
+	--spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+	--spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-200);
+	--spectrum-picker-spacing-starting-icon-to-text: var(--spectrum-text-to-visual-200);
+	--spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-text-to-visual-200);
+	--spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
+	--spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-large);
+	--spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-component-top-to-workflow-icon-200);
+	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-large);
+	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-200);
+	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-200);
 
-  & + .spectrum-Popover--bottom.is-open {
-    --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-large);
-  }
+	& + .spectrum-Popover--bottom.is-open {
+		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-large);
+	}
 }
 
 .spectrum-Picker--sizeXL {
-  --spectrum-picker-font-size: var(--spectrum-font-size-300);
-  --spectrum-picker-block-size: var(--spectrum-component-height-300);
-  --spectrum-picker-spacing-top-to-text-side-label-quiet: var(--spectrum-component-top-to-text-300);
-  --spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
-  --spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
-  --spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-300);
-  --spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-300);
-  --spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-extra-large);
-  --spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
-  --spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
-  --spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-extra-large);
-  --spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-extra-large);
-  --spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-300);
-  --spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-300);
+	--spectrum-picker-font-size: var(--spectrum-font-size-300);
+	--spectrum-picker-inline-size: var(--spectrum-field-default-width-extra-large);
+	--spectrum-picker-block-size: var(--spectrum-component-height-300);
+	--spectrum-picker-border-radius: var(--spectrum-corner-radius-medium-size-extra-large);
+	--spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
+	--spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+	--spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-300);
+	--spectrum-picker-spacing-starting-icon-to-text: var(--spectrum-text-to-visual-300);
+	--spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-text-to-visual-300);
+	--spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
+	--spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
+	--spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-component-top-to-workflow-icon-300);
+	--spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-extra-large);
+	--spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-300);
+	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-300);
 
-  & + .spectrum-Popover--bottom.is-open {
-    --spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-extra-large);
-  }
-}
-
-/* Windows high contrast mode */
-@media (forced-colors: active) {
-  .spectrum-Picker {
-    --highcontrast-picker-focus-indicator-color: Highlight;
-
-    --highcontrast-picker-border-color-default: ButtonBorder;
-    --highcontrast-picker-border-color-hover: Highlight;
-    --highcontrast-picker-border-color-disabled: GrayText;
-
-    --highcontrast-picker-content-color-default: ButtonText;
-    --highcontrast-picker-content-color-disabled: GrayText;
-    --highcontrast-picker-background-color: ButtonFace;
-
-    &:focus-visible,
-    &.is-keyboardFocused {
-      --highcontrast-picker-border-color-hover: ButtonText;
-    }
-
-    /* Focus indicator */
-    &::after {
-      /* Make sure default transparent border stays transparent. */
-      forced-color-adjust: none;
-    }
-
-    .spectrum-Picker-label {
-      /* Remove additional text backplate added in WHCM (Edge). */
-      forced-color-adjust: none;
-    }
-  }
-}
-
-.spectrum-Picker {
-  @extend %spectrum-BaseButton;
-
-  /* Layout */
-  display: flex;
-  box-sizing: border-box;
-
-  /* Minimum width is 2 times the height */
-  max-inline-size: 100%;
-  min-inline-size: calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)));
-  inline-size: var(--mod-picker-inline-size, var(--spectrum-picker-inline-size));
-  block-size: var(--mod-picker-block-size, var(--spectrum-picker-block-size));
-  padding-block: 0;
-  margin-block-start: var(--mod-picker-spacing-label-to-picker, var(--spectrum-picker-spacing-label-to-picker));
-
-  padding-inline-start: var(--mod-picker-spacing-edge-to-text, var(--spectrum-picker-spacing-edge-to-text));
-  padding-inline-end: var(--mod-picker-spacing-edge-to-disclosure-icon, var(--spectrum-picker-spacing-edge-to-disclosure-icon));
-
-  border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
-  border-style: solid;
-  border-radius: var(--mod-picker-border-radius, var(--spectrum-picker-border-radius));
-
-  transition: background-color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)),
-    box-shadow var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)),
-    border-color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
-
-  color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-  background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default, var(--spectrum-picker-background-color-default)));
-  border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-default, var(--spectrum-picker-border-color-default)));
-
-  /* Focus indicator */
-  &::after {
-    pointer-events: none;
-    content: '';
-    position: absolute;
-    block-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2)
-                    + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
-
-    inline-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2)
-                    + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
-
-    margin-block-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap))
-                            + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness))
-                            + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
-
-    margin-inline-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap))
-                            + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness))
-                            + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
-
-    inset-inline: 0;
-    inset-block: 0;
-    border-style: solid;
-    border-width: var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness));
-    border-color: transparent;
-    border-radius: calc(
-      var(--mod-picker-border-radius, var(--spectrum-picker-border-radius)) +
-      var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) +
-      var(--mod-picker-border-width, var(--spectrum-picker-border-width))
-    );
-  }
-
-  &:hover {
-    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
-    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-hover, var(--spectrum-picker-background-color-hover)));
-    border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-hover, var(--spectrum-picker-border-color-hover)));
-
-    .spectrum-Picker-menuIcon {
-      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-hover, var(--spectrum-picker-icon-color-hover)));
-    }
-  }
-
-  &:active {
-    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-active, var(--spectrum-picker-background-color-active)));
-    border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-active, var(--spectrum-picker-border-color-active)));
-
-    /* Focus indicator */
-    &::after {
-      border-color: transparent;
-    }
-
-    &.is-placeholder .spectrum-Picker-label {
-      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-active, var(--spectrum-picker-font-color-active)));
-    }
-  }
-
-  &:focus-visible,
-  &.is-keyboardFocused {
-    outline: none;
-    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
-    border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
-    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
-
-    /* Focus indicator */
-    &::after {
-      border-color: var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
-    }
-
-    &.is-placeholder {
-      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
-    }
-
-    .spectrum-Picker-menuIcon {
-      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-key-focus, var(--spectrum-picker-icon-color-key-focus)));
-    }
-  }
-
-  &.is-invalid:not(:disabled, .is-disabled) {
-    border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-default, var(--spectrum-picker-border-color-error-default)));
-
-    .spectrum-Picker-validationIcon {
-      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-error, var(--spectrum-picker-icon-color-error)));
-    }
-
-    &:hover {
-      border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover, var(--spectrum-picker-border-color-error-hover)));
-    }
-
-    &:active {
-      border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-active, var(--spectrum-picker-border-color-error-active)));
-    }
-
-    &.is-open {
-      border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-default-open, var(--spectrum-picker-border-color-error-default-open)));
-    }
-
-    &.is-open:hover {
-      border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
-    }
-
-    &:focus-visible,
-    &.is-keyboardFocused {
-      border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
-    }
-  }
-
-  &.is-loading {
-    .spectrum-Picker-menuIcon {
-      color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
-    }
-  }
-
-  &.is-loading, &.is-invalid {
-    .spectrum-Picker-label {
-      /* @deprecation --mod-picker-spacing-text-to-alert-icon-inline-start has been renamed to --mod-picker-spacing-text-to-icon-inline-end
-	   and will be removed in a future version. */
-      margin-inline-end: var(--mod-picker-spacing-text-to-icon-inline-end, var(--mod-picker-spacing-text-to-alert-icon-inline-start, var(--spectrum-picker-spacing-text-to-icon-inline-end)));
-    }
-  }
-
-  &:disabled,
-  &.is-disabled {
-    cursor: default;
-    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
-    border-color: var(--highcontrast-picker-border-color-disabled, transparent);
-    color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
-
-    .spectrum-Picker-icon,
-    .spectrum-Picker-menuIcon,
-    .spectrum-Picker-validationIcon {
-      color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
-    }
-
-    .spectrum-Picker-label.is-placeholder {
-      color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
-    }
-  }
-
-  .spectrum-Picker-icon {
-    flex-shrink: 0;
-    margin-inline-end: var(--mod-picker-spacing-text-to-icon, var(--spectrum-picker-spacing-text-to-icon));
-  }
-}
-
-.spectrum-Picker.is-open:not(.spectrum-Picker--quiet) {
-  color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default-open, var(--spectrum-picker-font-color-default-open)));
-  background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default-open, var(--spectrum-picker-background-color-default-open)));
-  border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-default-open, var(--spectrum-picker-border-color-default-open)));
-
-  &:hover {
-    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover-open, var(--spectrum-picker-font-color-hover-open)));
-    background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-hover-open, var(--spectrum-picker-background-color-hover-open)));
-    border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-hover-open, var(--spectrum-picker-border-color-hover-open)));
-
-    .spectrum-Picker-menuIcon {
-      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-hover-open, var(--spectrum-picker-icon-color-hover-open)));
-    }
-  }
-
-  .spectrum-Picker-menuIcon {
-    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-default-open, var(--spectrum-picker-icon-color-default-open)));
-  }
-}
-
-.spectrum-Picker-label {
-  /* Be the biggest, but also shrink! */
-  flex: 1 1 auto;
-
-  white-space: nowrap;
-  overflow: hidden;
-
-  font-size: var(--mod-picker-font-size, var(--spectrum-picker-font-size));
-  line-height: var(--mod-picker-line-height, var(--spectrum-picker-line-height));
-  font-weight: var(--mod-picker-font-weight, var(--spectrum-picker-font-weight));
-
-  text-overflow: ellipsis;
-  text-align: start;
-
-  margin-block-start: var(--mod-picker-spacing-top-to-text, var(--spectrum-picker-spacing-top-to-text));
-  margin-block-end: calc(var(--mod-picker-spacing-bottom-to-text, var(--spectrum-picker-spacing-bottom-to-text)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
-
-  &.is-placeholder {
-    font-weight: var(--mod-picker-placeholder-font-weight, var(--spectrum-picker-font-weight));
-    font-style: var(--mod-picker-placeholder-font-style, var(--spectrum-picker-placeholder-font-style));
-    transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
-
-    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-
-    &:hover {
-      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
-    }
-
-    &:active {
-      color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-active, var(--spectrum-picker-font-color-active)));
-    }
-  }
-}
-
-/* The picker chevron */
-.spectrum-Picker-menuIcon {
-  display: inline-block;
-  position: relative;
-  vertical-align: top;
-  transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-out;
-  flex-shrink: 0;
-
-  margin-inline-start: var(--mod-picker-spacing-icon-to-disclosure-icon, var(--spectrum-picker-spacing-icon-to-disclosure-icon));
-  margin-block: var(--mod-picker-spacing-top-to-disclosure-icon, var(--spectrum-picker-spacing-top-to-disclosure-icon));
-
-  color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-default, var(--spectrum-picker-icon-color-default)));
-
-  &:active {
-    color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-active, var(--spectrum-picker-icon-color-active)));
-  }
-}
-
-.spectrum-Picker-validationIcon {
-  margin-block-start: calc(var(--mod-picker-spacing-top-to-alert-icon, var(--spectrum-picker-spacing-top-to-alert-icon)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
-  margin-block-end: calc(var(--mod-picker-spacing-top-to-alert-icon, var(--spectrum-picker-spacing-top-to-alert-icon)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
-}
-
-.spectrum-Picker .spectrum-ProgressCircle {
-  margin-block-start: calc(var(--mod-picker-spacing-top-to-progress-circle, var(--spectrum-picker-spacing-top-to-progress-circle)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
-  margin-block-end: calc(var(--mod-picker-spacing-top-to-progress-circle, var(--spectrum-picker-spacing-top-to-progress-circle)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
-}
-
-.spectrum-Picker-label ~ .spectrum-Picker-menuIcon {
-  margin-inline-start: var(--mod-picker-spacing-text-to-icon, var(--spectrum-picker-spacing-text-to-icon));
-}
-
-.spectrum-Picker + .spectrum-Popover--bottom.is-open {
-  transform: translateY(var(--mod-picker-spacing-picker-to-popover, var(--spectrum-picker-spacing-picker-to-popover)));
+	& + .spectrum-Popover--bottom.is-open {
+		--spectrum-picker-spacing-picker-to-popover: var(--spectrum-component-to-menu-extra-large);
+	}
 }
 
 .spectrum-Picker--quiet {
-  inline-size: auto;
-  min-inline-size: 0;
-  border: none;
-  border-radius: 0;
-  padding-inline: var(--mod-picker-spacing-edge-to-text-quiet, var(--spectrum-picker-spacing-edge-to-text-quiet));
-  margin-block-start: calc( var(--mod-picker-spacing-label-to-picker-quiet, var(--spectrum-picker-spacing-label-to-picker-quiet)) + (1px));
-  color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-  background-color: var(--highcontrast-picker-background-color, transparent);
+	--spectrum-picker-background-color-default: transparent;
+	--spectrum-picker-background-color-default-open: transparent;
+	--spectrum-picker-background-color-hover: transparent;
+	--spectrum-picker-background-color-hover-open: transparent;
+	--spectrum-picker-background-color-active: transparent;
+	--spectrum-picker-background-color-key-focus: transparent;
+	--spectrum-picker-background-color-disabled: transparent;
 
-  &.spectrum-Picker--sideLabel {
-    margin-block-start: 0;
-  }
+	--spectrum-picker-min-inline-size: var(--mod-picker-min-inline-size-quiet, 0);
+	--spectrum-picker-inline-size: var(--mod-picker-inline-size-quiet, auto);
+	--spectrum-picker-spacing-edge-to-text: var(--mod-picker-spacing-edge-to-text-quiet, var(--spectrum-field-edge-to-text-quiet));
+	--spectrum-picker-spacing-edge-to-disclosure-icon: var(--mod-picker-spacing-edge-to-disclosure-icon-quiet, var(--spectrum-picker-end-edge-to-disclousure-icon-quiet));
+	--spectrum-picker-spacing-label-to-picker: var(--mod-picker-spacing-label-to-picker-quiet, var(--spectrum-picker-spacing-label-to-picker-quiet));
+}
 
-  .spectrum-Picker-menuIcon {
-    margin-inline-end: var(--mod-picker-spacing-edge-to-disclosure-icon-quiet, var(--spectrum-picker-spacing-edge-to-disclosure-icon-quiet));
-  }
+.spectrum-Picker {
+	@extend %spectrum-BaseButton;
 
-  &::after {
-    border: none;
-    block-size: auto;
-    inline-size: auto;
-  }
+	display: flex;
+	box-sizing: border-box;
 
-  &:hover {
-    background-color: var(--highcontrast-picker-background-color, transparent);
-  }
+	max-inline-size: 100%;
+	min-inline-size: var(--mod-picker-min-inline-size, var(--spectrum-picker-min-inline-size));
+	inline-size: var(--mod-picker-inline-size, var(--spectrum-picker-inline-size));
+	block-size: var(--mod-picker-block-size, var(--spectrum-picker-block-size));
 
-  &:focus-visible,
-  &.is-keyboardFocused {
-    background-color: var(--highcontrast-picker-background-color, transparent);
+	margin-block-start: var(--mod-picker-spacing-label-to-picker, var(--spectrum-picker-spacing-label-to-picker));
+	padding-block: 0;
+	padding-inline-start: var(--mod-picker-spacing-edge-to-text, var(--spectrum-picker-spacing-edge-to-text));
+	padding-inline-end: var(--mod-picker-spacing-edge-to-disclosure-icon, var(--spectrum-picker-spacing-edge-to-disclosure-icon));
 
-    /* Focus indicator changes from a ring to a line underneath. */
-    &::after {
-      border: none;
-      border-radius: 0;
-      box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
-      margin: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1) 0;
-    }
-  }
+	border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
+	border-style: solid;
+	border-radius: var(--mod-picker-border-radius, var(--spectrum-picker-border-radius));
 
-  &:active,
-  &.is-open {
-    background-color: var(--highcontrast-picker-background-color, transparent);
-  }
+	transition:
+		background-color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)),
+		box-shadow var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)),
+		border-color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
 
-  &:disabled,
-  &.is-disabled {
-    background-color: var(--highcontrast-picker-background-color, transparent);
-  }
+	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
+	background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default, var(--spectrum-picker-background-color-default)));
+	border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-default, var(--spectrum-picker-border-color-default)));
+
+	/* Focus indicator */
+	&::after {
+		pointer-events: none;
+		content: "";
+		position: absolute;
+		block-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
+
+		inline-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
+
+		margin-block-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
+
+		margin-inline-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
+
+		inset-inline: 0;
+		inset-block: 0;
+		border-style: solid;
+		border-width: var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness));
+		border-color: transparent;
+		border-radius: calc(var(--mod-picker-border-radius, var(--spectrum-picker-border-radius)) + var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+	}
+
+	&:hover {
+		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
+		background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-hover, var(--spectrum-picker-background-color-hover)));
+		border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-hover, var(--spectrum-picker-border-color-hover)));
+
+		.spectrum-Picker-menuIcon {
+			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-hover, var(--spectrum-picker-icon-color-hover)));
+		}
+	}
+
+	&:active {
+		background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-active, var(--spectrum-picker-background-color-active)));
+		border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-active, var(--spectrum-picker-border-color-active)));
+		transform: perspective(max(var(--spectrum-downstate-height), var(--spectrum-downstate-width) * var(--spectrum-component-size-width-ratio-down))) translateZ(var(--spectrum-component-size-difference-down));
+
+		/* Focus indicator */
+		&::after {
+			border-color: transparent;
+		}
+
+		&.is-placeholder .spectrum-Picker-label {
+			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-active, var(--spectrum-picker-font-color-active)));
+		}
+	}
+
+	&:focus-visible,
+	&.is-keyboardFocused {
+		outline: none;
+		background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
+		border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
+		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
+
+		/* Focus indicator */
+		&::after {
+			border-color: var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+		}
+
+		&.is-placeholder {
+			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
+		}
+
+		.spectrum-Picker-menuIcon {
+			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-key-focus, var(--spectrum-picker-icon-color-key-focus)));
+		}
+	}
+
+	&.is-open:not(.spectrum-Picker--quiet, :disabled, .is-disabled, .is-loading) {
+		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default-open, var(--spectrum-picker-font-color-default-open)));
+		background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default-open, var(--spectrum-picker-background-color-default-open)));
+		border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-default-open, var(--spectrum-picker-border-color-default-open)));
+
+		&:hover {
+			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover-open, var(--spectrum-picker-font-color-hover-open)));
+			background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-hover-open, var(--spectrum-picker-background-color-hover-open)));
+			border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-hover-open, var(--spectrum-picker-border-color-hover-open)));
+
+			.spectrum-Picker-menuIcon {
+				color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-hover-open, var(--spectrum-picker-icon-color-hover-open)));
+			}
+		}
+
+		.spectrum-Picker-menuIcon {
+			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-default-open, var(--spectrum-picker-icon-color-default-open)));
+		}
+	}
+
+	&.is-invalid:not(:disabled, .is-disabled) {
+		border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-default, var(--spectrum-picker-border-color-error-default)));
+
+		.spectrum-Picker-validationIcon {
+			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-error, var(--spectrum-picker-icon-color-error)));
+		}
+
+		&:hover {
+			border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover, var(--spectrum-picker-border-color-error-hover)));
+		}
+
+		&:active {
+			border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-active, var(--spectrum-picker-border-color-error-active)));
+		}
+
+		&.is-open {
+			border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-default-open, var(--spectrum-picker-border-color-error-default-open)));
+		}
+
+		&.is-open:hover {
+			border-color: var(--highcontrast-picker-border-color-hover, var(--mod-picker-border-color-error-hover-open, var(--spectrum-picker-border-color-error-hover-open)));
+		}
+
+		&:focus-visible,
+		&.is-keyboardFocused {
+			border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-error-key-focus, var(--spectrum-picker-border-color-error-key-focus)));
+		}
+	}
+}
+
+/* Optional workflow icon that appears before the text within the picker. */
+.spectrum-Picker .spectrum-Picker-icon {
+	flex-shrink: 0;
+	margin-inline-end: var(--mod-picker-spacing-starting-icon-to-text, var(--spectrum-picker-spacing-starting-icon-to-text));
+}
+
+/* Value: the text within the Picker (current value or placeholder) */
+.spectrum-Picker-label {
+	flex: 1 1 auto;
+	white-space: nowrap;
+	overflow: hidden;
+
+	font-size: var(--mod-picker-font-size, var(--spectrum-picker-font-size));
+	line-height: var(--mod-picker-line-height, var(--spectrum-picker-line-height));
+	font-weight: var(--mod-picker-font-weight, var(--spectrum-picker-font-weight));
+
+	text-overflow: ellipsis;
+	text-align: start;
+
+	margin-block-start: var(--mod-picker-spacing-top-to-text, var(--spectrum-picker-spacing-top-to-text));
+	margin-block-end: calc(var(--mod-picker-spacing-bottom-to-text, var(--spectrum-picker-spacing-bottom-to-text)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+	margin-inline-end: var(--mod-picker-spacing-text-to-icon-inline-end, var(--spectrum-picker-spacing-text-to-icon-inline-end));
+
+	&.is-placeholder {
+		font-weight: var(--mod-picker-placeholder-font-weight, var(--spectrum-picker-font-weight));
+		font-style: var(--mod-picker-placeholder-font-style, var(--spectrum-picker-placeholder-font-style));
+		transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
+		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
+
+		&:hover {
+			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
+		}
+
+		&:active {
+			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-active, var(--spectrum-picker-font-color-active)));
+		}
+	}
+
+	/* CJK (Chinese, Japanese, and Korean) language support */
+	.spectrum-Picker:lang(ja) &,
+	.spectrum-Picker:lang(zh) &,
+	.spectrum-Picker:lang(ko) & {
+		line-height: var(--mod-picker-line-height-cjk, var(--spectrum-picker-line-height-cjk));
+	}
+}
+
+/* Disclosure icon (chevron) */
+.spectrum-Picker-menuIcon {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	flex-shrink: 0;
+	margin-block: var(--mod-picker-spacing-top-to-disclosure-icon, var(--spectrum-picker-spacing-top-to-disclosure-icon));
+	transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-out;
+	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-default, var(--spectrum-picker-icon-color-default)));
+
+	&:active {
+		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-active, var(--spectrum-picker-icon-color-active)));
+	}
+}
+
+.spectrum-Picker-validationIcon {
+	margin-block-start: calc(var(--mod-picker-spacing-top-to-alert-icon, var(--spectrum-picker-spacing-top-to-alert-icon)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+	margin-block-end: calc(var(--mod-picker-spacing-top-to-alert-icon, var(--spectrum-picker-spacing-top-to-alert-icon)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+	margin-inline-end: var(--mod-picker-spacing-icon-to-disclosure-icon, var(--spectrum-picker-spacing-icon-to-disclosure-icon));
+	flex-shrink: 0;
+}
+
+.spectrum-Picker .spectrum-ProgressCircle {
+	margin-block-start: calc(var(--mod-picker-spacing-top-to-progress-circle, var(--spectrum-picker-spacing-top-to-progress-circle)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+	margin-block-end: calc(var(--mod-picker-spacing-top-to-progress-circle, var(--spectrum-picker-spacing-top-to-progress-circle)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
+	margin-inline-end: var(--mod-picker-spacing-icon-to-disclosure-icon, var(--spectrum-picker-spacing-icon-to-disclosure-icon));
+}
+
+.spectrum-Picker + .spectrum-Popover--bottom.is-open {
+	transform: translateY(var(--mod-picker-spacing-picker-to-popover, var(--spectrum-picker-spacing-picker-to-popover)));
+}
+
+.spectrum-Picker--quiet {
+	border: none;
+	border-radius: 0;
+	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
+
+	&.spectrum-Picker--sideLabel {
+		margin-block-start: 0;
+	}
+
+	&::after {
+		border: none;
+		block-size: auto;
+		inline-size: auto;
+	}
+
+	&:focus-visible,
+	&.is-keyboardFocused {
+		/* Focus indicator changes from a ring to a line underneath. */
+		&::after {
+			border: none;
+			border-radius: 0;
+			box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+			margin: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1) 0;
+		}
+	}
 }
 
 .spectrum-Picker--sideLabel {
-  display: inline-flex;
-  vertical-align: top;
+	display: inline-flex;
+	vertical-align: top;
+}
+
+/* Disabled and loading states:
+   Make sure this appears after any use of :hover while postcss-hover-media-feature is being used. The plugin moves
+   all hover styles within a media query that changes the order of the CSS, affecting styles with the same specificity. */
+.spectrum-Picker:disabled,
+.spectrum-Picker.is-disabled {
+	cursor: default;
+	transform: none;
+	border-color: var(--highcontrast-picker-border-color-disabled, transparent);
+	color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
+
+	&:not(.spectrum-Picker--quiet) {
+		background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
+	}
+
+	.spectrum-Picker-icon,
+	.spectrum-Picker-menuIcon,
+	.spectrum-Picker-validationIcon {
+		color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
+	}
+
+	.spectrum-Picker-label.is-placeholder {
+		color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
+	}
+}
+
+.spectrum-Picker.is-loading {
+	transform: none;
+
+	.spectrum-Picker-menuIcon {
+		color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-icon-color-disabled, var(--spectrum-picker-icon-color-disabled)));
+	}
+}
+
+/* Forced colors / high contrast mode */
+@media (forced-colors: active) {
+	.spectrum-Picker {
+		--highcontrast-picker-focus-indicator-color: Highlight;
+
+		--highcontrast-picker-border-color-default: ButtonBorder;
+		--highcontrast-picker-border-color-hover: Highlight;
+		--highcontrast-picker-border-color-disabled: GrayText;
+
+		--highcontrast-picker-content-color-default: ButtonText;
+		--highcontrast-picker-content-color-disabled: GrayText;
+		--highcontrast-picker-background-color: ButtonFace;
+
+		&:focus-visible,
+		&.is-keyboardFocused {
+			--highcontrast-picker-border-color-hover: ButtonText;
+		}
+
+		/* Focus indicator */
+		&::after {
+			/* Make sure default transparent border stays transparent. */
+			forced-color-adjust: none;
+		}
+
+		.spectrum-Picker-label {
+			/* Remove additional text backplate added in WHCM (Edge). */
+			forced-color-adjust: none;
+		}
+	}
 }
