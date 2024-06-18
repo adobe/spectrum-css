@@ -1,5 +1,21 @@
 # Change Log
 
+## 4.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e) Thanks [@pfulton](https://github.com/pfulton)! - Fixes an issue where vars.css was not being populated with the correct values
+
+### Patch Changes
+
+- Updated dependencies [[`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e)]:
+  - @spectrum-css/divider@4.0.0-s2-foundations.1
+  - @spectrum-css/button@14.0.0-s2-foundations.1
+  - @spectrum-css/dialog@11.0.0-s2-foundations.1
+  - @spectrum-css/modal@6.0.0-s2-foundations.1
+  - @spectrum-css/icon@8.0.0-s2-foundations.1
+  - @spectrum-css/tokens@15.0.0-s2-foundations.1
+
 ## 4.0.0-s2-foundations.0
 
 ### Major Changes
