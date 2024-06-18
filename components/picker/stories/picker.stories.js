@@ -17,7 +17,7 @@ export default {
 		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
-			description: "The text for the field label",
+			description: "The label text that is displayed above or to the side of the Picker. This uses a separate Label component outside of the Picker markup.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -32,33 +32,28 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
+			control: {
+				type: "select",
+				labels: {
+					side: "side (inline start)",
+				},
+			},
 			options: ["top", "side"],
-			control: { type: "select" },
 		},
 		withSwitch: {
-			name: "Show switch component",
-			description: "Display a separate switch component after the picker. Helpful for testing alignment with the picker when using the side label.",
+			name: "Display Switch component",
+			description: "Displays a Switch component after the Picker. This is used for testing the vertical alignment between the side label, Picker, and Switch.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Advanced",
+				category: "Content",
 			},
 			control: "boolean",
 			if: { arg: "labelPosition", eq: "side" },
 		},
-		showWorkflowIcon: {
-			name: "Show workflow icon",
-			description: "Display optional workflow icon before the value or placeholder",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Advanced",
-			},
-			control: "boolean",
-		},
 		placeholder: {
-			name: "Placeholder",
-			description: "The placeholder text prompts a user to select an option from the picker menu. It disappears once a user selects an option. This will not be displayed if the `value` control is set.",
+			name: "Value or placeholder",
+			description: "The text within the Picker that represents its current value or placeholder.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -66,15 +61,16 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		currentValue: {
-			name: "Value",
-			description: "The value shows the option that a user has selected.",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Content",
-			},
-			control: { type: "text" },
+		contentIconName: {
+			...(IconStories?.argTypes?.iconName ?? {}),
+			name: "Icon",
+			description: "Optional workflow icon that appears before the value/placeholder text within the picker.",
+			if: false,
+		},
+		isQuiet: {
+            ...isQuiet,
+			description: "An alternative way to display the Picker without a visible background.",
+			name: "Quiet styling",
 		},
 		helpText: {
 			name: "Help text",
@@ -90,11 +86,18 @@ export default {
 		isOpen,
 		isKeyboardFocused,
 		isDisabled,
-		isLoading,
-		isInvalid,
+		isLoading: {
+            ...isLoading,
+            description: "When in the loading state, a progress circle will display next to the disclosure icon.",
+            if: { arg: "isDisabled", eq: false }
+        },
+		isInvalid: {
+            ...isInvalid,
+            description: "When in the invalid state, some styles change on the Picker, and an invalid icon displays next to the disclosure icon.",
+        },
 		isHovered,
 		isActive,
-		popoverContent: { table: { disable: true } },
+		content: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Picker",
@@ -140,6 +143,9 @@ export default {
 		packageJson,
 		metadata,
 	},
+	decorators: [
+		withDownStateDimensionCapture(".spectrum-Picker:not(:disabled, .is-disabled, .is-loading)"),
+	],
 };
 
 export const Default = PickerGroup.bind({});
