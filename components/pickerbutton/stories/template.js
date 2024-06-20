@@ -1,5 +1,6 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -70,3 +71,66 @@ export const Template = ({
 		</button>
 	`;
 };
+
+/**
+ * Displays the component with a custom icon (instead of the chevron UI icon).
+ * Two examples are shown; with a custom UI icon and a custom Workflow icon.
+ */
+export const CustomIconTemplate = (args) => html`
+	<div
+		style=${styleMap({
+			display: "flex",
+			gap: "24px",
+			flexWrap: "wrap",
+		})}
+	>
+		<div
+			style=${styleMap({
+				display: "flex",
+				gap: "16px",
+				flexDirection: "column",
+				alignItems: "center",
+				flexBasis: "80px",
+			})}
+		>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["UI icon"],
+				customStyles: {
+					"white-space": "nowrap",
+					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+				},
+			})}
+			${Template({
+				...args,
+				iconName: "ArrowDown100",
+				iconType: "ui",
+			})}
+		</div>
+		<div
+			style=${styleMap({
+				display: "flex",
+				gap: "16px",
+				flexDirection: "column",
+				alignItems: "center",
+				flexBasis: "80px",
+			})}
+		>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Workflow icon"],
+				customStyles: {
+					"white-space": "nowrap",
+					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+				},
+			})}
+			${Template({
+				...args,
+				iconName: "Add",
+				iconType: "workflow",
+			})}
+		</div>
+	</div>
+`;
