@@ -19,7 +19,27 @@ export default {
 			},
 			control: { type: "text" },
 		},
+		header: { 
+			name: "Additional header content",
+			description: "Controls header content",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
 		content: { table: { disable: true } },
+		footer: {
+			name: "Footer content",
+			description: "Controls footer content",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
 		buttons: { table: { disable: true } },
 		size: {
 			name: "Size",
@@ -43,6 +63,7 @@ export default {
 		},
 		isDismissable: {
 			name: "Dismissable",
+			description: "Controls whether a dialog can be dismissed without taking an action. Dismissible dialogs should never have buttons.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -68,25 +89,26 @@ export default {
 			},
 			control: "boolean",
 		},
-	},
-	hasHeroImage: {
-		name: "Has hero image",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Content",
+		hasHeroImage: {
+			name: "Has hero image",
+			description: "Adds a background cover image to the dialog header.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
+			control: "boolean",
 		},
-		control: "boolean",
-	},
-	heroImageUrl: {
-		name: "Hero Image",
-		type: { name: "string" },
-		table: {
-			type: { summary: "string" },
-			category: "Content",
+		heroImageUrl: {
+			name: "Hero Image",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "hasHeroImage", truthy: true },
 		},
-		control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
-		if: { arg: "hasHeroImage", truthy: true },
 	},
 	args: {
 		rootClass: "spectrum-Dialog",
@@ -151,14 +173,8 @@ const ExampleButtonGroup = [{
 
 export const Default = Template.bind({});
 Default.args = {
-	heading: [
-		() => Typography({
-			semantics: "heading",
-			content: [
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-			]
-		}),
-	],
+	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+	header: "* Required",
 	showModal: true,
 	content: [
 		() => Typography({
@@ -169,5 +185,6 @@ Default.args = {
 			]
 		}),
 	],
+	footer: "Please select.",
 	buttons: ExampleButtonGroup,
 };
