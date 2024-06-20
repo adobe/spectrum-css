@@ -5,10 +5,11 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
+import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
-import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 import "../index.css";
 
@@ -20,7 +21,10 @@ export const Template = ({
 	layout,
 	showModal = false,
 	heading,
+	header,
+	footer,
 	content = [],
+	buttons,
 	customClasses = [],
 	hasHeroImage = false,
 	heroImageUrl,
@@ -54,13 +58,43 @@ export const Template = ({
 						</div>
 					`
 				)}
-				${when(heading, () => [
-					html`<h1 class="${rootClass}-heading">${heading.map((c) => (typeof c === "function" ? c({}) : c))}</h1>`,
-					Divider({
-						horizontal: true,
-						customClasses: [`${rootClass}-divider`],
-						...globals,
-					}),
+				<div class="${rootClass}-header">
+					${when(heading, () => [
+						html`
+						<div class="${rootClass}-heading">
+							${Typography({
+								semantics: "heading",
+								size: "m",
+								content: heading
+							})
+						}
+						</div>
+						`
+					])}
+					${when(header, () => [
+						html`
+							${Typography({
+								semantics: "body",
+								size: "m",
+								content: header
+							})
+						}
+						`
+					])}
+				</div>
+				${when(layout, () => [
+					html`
+						<div class="${rootClass}-buttonGroup">
+							<div class="${rootClass}-buttonGroup--noFooter">
+								${ButtonGroup({
+									items: buttons,
+									onclick: () => {
+										updateArgs({ isOpen: !isOpen });
+									},
+								})}
+							</div>
+						</div>
+					`
 				])}
 				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
 				${when(isDismissable, () =>
@@ -70,7 +104,44 @@ export const Template = ({
 						onclick: () => {
 							updateArgs({ isOpen: !isOpen });
 						},
-					})
+					}), 
+				)}
+				${when(footer, () => 
+					html`
+						<div class="${rootClass}-footer">
+							${Typography({
+								semantics: "body",
+								size: "m",
+								content: footer,
+							})}
+							${when(!isDismissable, () => [
+								html`
+									<div class="${rootClass}-buttonGroup">
+										${ButtonGroup({
+											items: buttons,
+											onclick: () => {
+												updateArgs({ isOpen: !isOpen });
+											},
+										})}
+									</div>
+								`
+							])}
+						</div>
+					`
+				)}
+				${when(!footer && !isDismissable, () =>
+					html`
+						<div class="${rootClass}-buttonGroup">
+							<div class="${rootClass}-buttonGroup--noFooter">
+								${ButtonGroup({
+									items: buttons,
+									onclick: () => {
+										updateArgs({ isOpen: !isOpen });
+									},
+								})}
+							</div>
+						</div>
+					`
 				)}
 			</div>
 		</div>
