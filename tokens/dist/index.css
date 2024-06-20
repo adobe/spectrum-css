@@ -687,13 +687,6 @@
   --spectrum-icon-color-green-primary-default:var(--spectrum-green-800);
   --spectrum-icon-color-red-primary-default:var(--spectrum-red-700);
   --spectrum-icon-color-yellow-primary-default:var(--spectrum-yellow-1000);
-  --spectrum-menu-item-background-color-default-rgb:255, 255, 255;
-  --spectrum-menu-item-background-color-default-opacity:0;
-  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity)); /* --spectrum-gray-900 */
-  --spectrum-menu-item-background-color-hover:var(--spectrum-transparent-white-200);
-  --spectrum-menu-item-background-color-down:var(--spectrum-transparent-white-200);
-  --spectrum-menu-item-background-color-key-focus:var(--spectrum-transparent-white-200);
-
   /* Drop Zone background color rgb */
   --spectrum-drop-zone-background-color-rgb:var( --spectrum-blue-900-rgb); /* var(--spectrum-accent-color-900);*/
 
@@ -2958,13 +2951,6 @@
   --spectrum-icon-color-green-primary-default:var(--spectrum-green-900);
   --spectrum-icon-color-red-primary-default:var(--spectrum-red-900);
   --spectrum-icon-color-yellow-primary-default:var(--spectrum-yellow-400);
-  --spectrum-menu-item-background-color-default-rgb:0, 0, 0;
-  --spectrum-menu-item-background-color-default-opacity:0;
-  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity)); /* --spectrum-gray-900 */
-  --spectrum-menu-item-background-color-hover:var(--spectrum-transparent-black-200);
-  --spectrum-menu-item-background-color-down:var(--spectrum-transparent-black-200);
-  --spectrum-menu-item-background-color-key-focus:var(--spectrum-transparent-black-200);
-
   /* Drop Zone background color rgb */
   --spectrum-drop-zone-background-color-rgb:var(--spectrum-blue-800-rgb); /* var(--spectrum-accent-color-800);*/
 
@@ -3689,13 +3675,6 @@
   --spectrum-ui-icon-large-display:none;
 }
 .spectrum--darkest{
-  --spectrum-menu-item-background-color-default-rgb:255, 255, 255;
-  --spectrum-menu-item-background-color-default-opacity:0;
-  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity)); /* --spectrum-gray-900 */
-  --spectrum-menu-item-background-color-hover:var(--spectrum-transparent-white-200);
-  --spectrum-menu-item-background-color-down:var(--spectrum-transparent-white-200);
-  --spectrum-menu-item-background-color-key-focus:var(--spectrum-transparent-white-200);
-
   /* Drop Zone background color rgb */
   --spectrum-drop-zone-background-color-rgb:var( --spectrum-blue-900-rgb); /* var(--spectrum-accent-color-900);*/
 

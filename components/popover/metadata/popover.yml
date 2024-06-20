@@ -26,6 +26,10 @@ sections:
         - Tip SVG should be updated in the markup
         - Popover tip SVG polygon can retain the same markup and points for top and bottom (it is flipped in the CSS)
         - Popover tip SVG polygon can retain the same markup and points for left/right/start/end (it is flipped in the CSS)
+      ### Version 7.2.0
+      #### Additional padding added for Spectrum 2 components
+      This partial migration adds spacing to the sides of the popover to accommodate the menu and adds the mod:
+        - `--mod-popover-content-area-spacing-horizontal`
 
 examples:
   - id: popover
