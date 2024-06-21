@@ -1,7 +1,7 @@
+import { withSizingWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { html } from "lit";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ProgressCircleGroup, Template } from "./template";
 
 /**
  * Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.
@@ -33,7 +33,6 @@ export default {
 			name: "Static color",
 			type: { name: "string" },
 			table: {
-				disable: true,
 				type: { summary: "string" },
 				category: "Advanced",
 			},
@@ -52,37 +51,62 @@ export default {
 	},
 };
 
-const ProgressCircleGroup = (args, context) => html`
-	${window.isChromatic() ? html`
-		${Template(args, context)}
-		${Template({
-			...args,
-			isIndeterminate: true,
-		}, context)}
-	` : Template(args, context)}
-`;
-
 export const Default = ProgressCircleGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
 };
 
 export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["!autodocs", "!dev", "test"];
+StaticWhite.tags = ["!autodocs", "!dev"];
+StaticWhite.storyName = "Static white";
 StaticWhite.args = {
 	staticColor: "white",
 };
 StaticWhite.parameters = {
 	chromatic: {
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
+};
+
+// ********* DOCS ONLY ********* //
+export const Sizing = Template.bind({});
+Sizing.args = {};
+Sizing.tags = ["!dev"];
+Sizing.decorators = [withSizingWrapper];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The indeterminate progress circle displays a repeating animation for the inner fill.
+ */
+export const Indeterminate = Template.bind({});
+Indeterminate.args = {
+	isIndeterminate: true,
+};
+Indeterminate.tags = ["!dev"];
+Indeterminate.decorators = [withSizingWrapper];
+Indeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticWhiteDocs = Default.bind({});
+StaticWhiteDocs.tags = ["!dev"];
+StaticWhiteDocs.storyName = "Static white, indeterminate";
+StaticWhiteDocs.args = {
+	staticColor: "white",
+	isIndeterminate: true,
+};
+StaticWhiteDocs.decorators = [withSizingWrapper];
+StaticWhiteDocs.parameters = {
+	chromatic: { disableSnapshot: true },
 };

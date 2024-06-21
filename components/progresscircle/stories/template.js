@@ -1,3 +1,4 @@
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -56,3 +57,17 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const ProgressCircleGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Standard",
+		},
+		{
+			testHeading: "Indeterminate",
+			isIndeterminate: true,
+		},
+	],
+	stateData: [{}],
+});
