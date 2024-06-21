@@ -6,6 +6,7 @@
 | `--mod-textfield-background-color`                    |
 | `--mod-textfield-background-color-disabled`           |
 | `--mod-textfield-border-color`                        |
+| `--mod-textfield-border-color-disabled`               |
 | `--mod-textfield-border-color-focus`                  |
 | `--mod-textfield-border-color-focus-hover`            |
 | `--mod-textfield-border-color-hover`                  |
