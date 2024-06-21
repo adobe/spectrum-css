@@ -70,17 +70,17 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 
 	/* border width */
-	--spectrum-textfield-border-width: var(--spectrum-border-width-100);
+	--spectrum-textfield-border-width: var(--spectrum-border-width-200);
 
 	/*** Colors ***/
 	--spectrum-textfield-background-color: var(--spectrum-gray-25);
 
 	/* border  colors */
-	--spectrum-textfield-border-color: var(--spectrum-gray-500);
-	--spectrum-textfield-border-color-hover: var(--spectrum-gray-600);
+	--spectrum-textfield-border-color: var(--spectrum-gray-300);
+	--spectrum-textfield-border-color-hover: var(--spectrum-gray-400);
 	--spectrum-textfield-border-color-focus: var(--spectrum-gray-800);
 	--spectrum-textfield-border-color-focus-hover: var(--spectrum-gray-900);
-	--spectrum-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
+	--spectrum-textfield-border-color-keyboard-focus: var(--spectrum-gray-800);
 
 	/* Text Colors */
 	--spectrum-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
@@ -93,7 +93,8 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-text-color-readonly: var(--spectrum-neutral-content-color-default);
 
 	/* Disabled Colors */
-	--spectrum-textfield-background-color-disabled: var(--spectrum-disabled-background-color);
+	--spectrum-textfield-background-color-disabled: var(--spectrum-gray-25);
+	--spectrum-textfield-border-color-disabled: var(--spectrum-disabled-border-color);
 	--spectrum-textfield-text-color-disabled: var(--spectrum-disabled-content-color);
 
 	/* Invalid Colors */
@@ -121,9 +122,10 @@ governing permissions and limitations under the License.
 /********* Text field t-shirt sizes *********/
 .spectrum-Textfield--sizeS {
 	--spectrum-textfield-height: var(--spectrum-component-height-75);
-	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-100);
 	--spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-75);
 	--spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-75);
+	--spectrum-textfield-spacing-block-start: var(--spectrum-component-top-to-text-75);
+	--spectrum-textfield-spacing-block-end: var(--spectrum-component-bottom-to-text-75);
 	--spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-75);
 	--spectrum-textfield-icon-size-valid: var(--spectrum-checkmark-icon-size-75);
 	--spectrum-textfield-icon-spacing-inline-end-invalid: var(--spectrum-field-edge-to-alert-icon-small);
@@ -139,9 +141,10 @@ governing permissions and limitations under the License.
 
 .spectrum-Textfield--sizeL {
 	--spectrum-textfield-height: var(--spectrum-component-height-200);
-	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);
 	--spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-200);
 	--spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-200);
+	--spectrum-textfield-spacing-block-start: var(--spectrum-component-top-to-text-200);
+	--spectrum-textfield-spacing-block-end: var(--spectrum-component-bottom-to-text-200);
 	--spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-200);
 	--spectrum-textfield-icon-size-valid: var(--spectrum-checkmark-icon-size-200);
 	--spectrum-textfield-icon-spacing-inline-end-invalid: var(--spectrum-field-edge-to-alert-icon-large);
@@ -157,9 +160,10 @@ governing permissions and limitations under the License.
 
 .spectrum-Textfield--sizeXL {
 	--spectrum-textfield-height: var(--spectrum-component-height-300);
-	--spectrum-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-200);
 	--spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-300);
-	--spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-200);
+	--spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-300);
+	--spectrum-textfield-spacing-block-start: var(--spectrum-component-top-to-text-300);
+	--spectrum-textfield-spacing-block-end: var(--spectrum-component-bottom-to-text-300);
 	--spectrum-textfield-icon-size-invalid: var(--spectrum-workflow-icon-size-300);
 	--spectrum-textfield-icon-size-valid: var(--spectrum-checkmark-icon-size-300);
 	--spectrum-textfield-icon-spacing-inline-end-invalid: var(--spectrum-field-edge-to-alert-icon-extra-large);
@@ -437,7 +441,7 @@ governing permissions and limitations under the License.
 	.spectrum-Textfield.is-disabled:hover &,
 	&:disabled {
 		background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
-		border-color: transparent;
+		border-color: var(--mod-textfield-border-color-disabled, var(--spectrum-textfield-border-color-disabled));
 		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 
 		/* Disable the resize functionality when disabled */
