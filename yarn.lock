@@ -5073,6 +5073,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dialog@workspace:components/dialog"
   dependencies:
+    "@spectrum-css/buttongroup": "workspace:^"
     "@spectrum-css/closebutton": "workspace:^"
     "@spectrum-css/divider": "workspace:^"
     "@spectrum-css/modal": "workspace:^"
