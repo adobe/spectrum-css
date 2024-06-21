@@ -71,8 +71,8 @@ examples:
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Dismissible Dialog</span></button>
 
-      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" data-testid="modal">
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-modal">
+        <div class="spectrum-Modal" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissable" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
@@ -98,8 +98,8 @@ examples:
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open No Divider Dialog</span></button>
 
-      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" data-testid="modal">
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-modal">
+        <div class="spectrum-Modal" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissable spectrum-Dialog--noDivider" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading">Disclaimer</h1>
@@ -123,8 +123,8 @@ examples:
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Hero Dialog</span></button>
-      <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-        <div class="spectrum-Modal is-open" data-testid="modal">
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-modal">
+        <div class="spectrum-Modal" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--dismissable spectrum-Dialog--noDivider" role="dialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <div class="spectrum-Dialog-hero" style="background-image: url(img/example-card-portrait.jpg)"></div>
@@ -148,7 +148,7 @@ examples:
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Scrolling Dialog</span></button>
-      <div class="spectrum-Modal-wrapper">
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-modal">
         <div class="spectrum-Modal" data-testid="modal">
           <section class="spectrum-Dialog spectrum-Dialog--large" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
@@ -205,9 +205,9 @@ examples:
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Fullscreen Dialog</span></button>
-      <div class="spectrum-Modal-wrapper">
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-modal">
         <div class="spectrum-Modal spectrum-Modal--fullscreen" data-testid="modal">
-          <section class="spectrum-Dialog spectrum-Dialog--fullscreen" role="alertdialog" tabindex="-1" aria-modal="true">
+          <section class="spectrum-CSSExample-dialog spectrum-Dialog spectrum-Dialog--fullscreen" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Default Dialog - Fullscreen</h1>
               <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
@@ -262,9 +262,9 @@ examples:
     demoClassName: spectrum-CSSExample-example--overlay
     markup: |
       <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--outline spectrum-Button--staticWhite spectrum-CSSExample-overlayShowButton" onclick="openDialog(this.nextElementSibling)"><span class="spectrum-Button-label">Open Fullscreen Takeover Dialog</span></button>
-      <div class="spectrum-Modal-wrapper">
+      <div class="spectrum-Modal-wrapper spectrum-CSSExample-modal">
         <div class="spectrum-Modal spectrum-Modal--fullscreenTakeover" data-testid="modal">
-          <section class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover" role="alertdialog" tabindex="-1" aria-modal="true">
+          <section class="spectrum-CSSExample-dialog spectrum-Dialog spectrum-Dialog--fullscreenTakeover" role="alertdialog" tabindex="-1" aria-modal="true">
             <div class="spectrum-Dialog-grid">
               <h1 class="spectrum-Dialog-heading spectrum-Dialog-heading--noHeader">Fullscreen Takeover</h1>
               <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
