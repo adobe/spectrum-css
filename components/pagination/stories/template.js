@@ -50,6 +50,7 @@ export const Template = ({
 		`;
 	}
 	else if (variant == "button") {
+		// @todo This variant should be deprecated, as it uses the deprecated SplitButton component. 
 		return SplitButton({
 			position: "left",
 			variant: "accent",
@@ -60,6 +61,7 @@ export const Template = ({
 			customLastButtonClasses: ["spectrum-Pagination-nextButton"]
 		}, context);
 	}
+	// Default "listing" variant.
 	return html`
 		<nav
 			class=${classMap({
@@ -117,7 +119,10 @@ export const PaginationGroup = (args, context) => {
 			"flex-direction": "column",
 			"gap": "32px",
 		})}>
-			${Template(args, context)}
+			${Template({
+				...args,
+				variant: "listing",
+			}, context)}
 			${Template({
 				...args,
 				variant: "explicit",
