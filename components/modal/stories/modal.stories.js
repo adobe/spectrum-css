@@ -43,3 +43,10 @@ export const Default = Template.bind({});
 Default.args = {
 	content: ["Modal is a base component used by other components, and should not be used on its own."],
 };
+Default.parameters = {
+	docs: {
+		story: {
+			inline: false,
+		},
+	},
+};
