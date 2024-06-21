@@ -70,3 +70,16 @@ export function fetchContainers(id, isDocs = false) {
 
     return containers;
 }
+
+/**
+ * Object for mapping "size" arg values to their display names.
+ */
+export const sizeDisplayNames = {
+	xxs: "Extra-extra-small",
+	xs: "Extra-small",
+	s: "Small",
+	m: "Medium",
+	l: "Large",
+	xl: "Extra-large",
+	xxl: "Extra-extra-large",
+};
