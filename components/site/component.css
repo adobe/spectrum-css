@@ -245,6 +245,11 @@ governing permissions and limitations under the License.
 	transition: none;
 }
 
+/* Mimics the .spectrum-Modal-wrapper so the modals & dialogs are above the underlay */
+.spectrum-CSSExample-modal {
+	z-index: 2 !important;
+}
+
 .spectrum-Examples,
 .spectrum-Examples-itemGroup {
 	display: flex;
