@@ -33,3 +33,15 @@ body {
 svg:has(symbol):not(:has(use)) {
 	display: none;
 }
+
+/* set back to default h2 styles */
+#variants {
+	font-size: 24px;
+	margin-bottom: 8px;
+	color: rgb(46, 52, 56);
+	font-weight: bold;
+	line-height: normal;
+	letter-spacing: normal;
+	text-transform: none;
+	border-bottom: 1px solid hsla(203, 50%, 30%, 0.15)
+}

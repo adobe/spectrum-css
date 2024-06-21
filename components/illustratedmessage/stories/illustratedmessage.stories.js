@@ -5,7 +5,7 @@ import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Template } from "./template";
 
 /**
- * The illustrated message component is used for status and errors. It is also used for calls-to-action, such as within the drop zone component.
+ * The Illustrated Message displays an illustration along with a heading and description. Optionally, part of the illustration can use an accent color. It can be used for status and errors, or as a call to action. For example, the Drop Zone component makes use of Illustrated Message as an area to drag and drop files.
  */
 export default {
 	title: "Illustrated message",
@@ -36,6 +36,7 @@ export default {
 				disable: true,
 			},
 		},
+		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-IllustratedMessage",
@@ -67,7 +68,7 @@ export const Default = (args) => html`
 `;
 
 /**
- * An accent color class can be used on elements of the illustration SVG.
+ * To use the accent color, the class `.spectrum-IllustratedMessage-accent` can be added to element(s) within the illustration SVG.
  */
 export const AccentColor = Template.bind({});
 AccentColor.args = {

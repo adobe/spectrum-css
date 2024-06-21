@@ -51,6 +51,7 @@ export default {
 			},
 			control: "boolean"
 		},
+		isStacked: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-InfieldButton",
@@ -58,16 +59,30 @@ export default {
 		position: "left",
 		iconName: "Add",
 		isQuiet: false,
-		isDisabled: false
+		isDisabled: false,
+		isStacked: false,
 	},
 };
 
 export const Default = Template.bind({});
 Default.args = {};
 
-export const Right = Template.bind({});
-Right.args = {
+export const Start = Template.bind({});
+Start.tags = ["docs-only"];
+Start.args = {
+	position: "left"
+};
+Start.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const End = Template.bind({});
+End.tags = ["docs-only"];
+End.args = {
 	position: "right"
+};
+End.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const Quiet = Template.bind({});
@@ -78,4 +93,13 @@ Quiet.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true
+};
+
+export const Stacked = Template.bind({});
+Stacked.tags = ["docs-only"];
+Stacked.args = {
+	isStacked: true,
+};
+Stacked.parameters = {
+	chromatic: { disableSnapshot: true },
 };

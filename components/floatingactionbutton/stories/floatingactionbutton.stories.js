@@ -4,6 +4,8 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 
 /**
  * The floating action button component is used to give users a more prominent button for high frequency actions.
+ *
+ * When using floating action button in dark themes, the `background-layer-color-2` will often show up on the base color `gray-50` or `gray-75` or on content, images, etc.
  */
 export default {
 	title: "Floating action button",
@@ -25,6 +27,7 @@ export default {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
 		},
+		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-FloatingActionButton",
@@ -34,6 +37,7 @@ export default {
 };
 
 export const Default = Template.bind({});
+Default.storyName = "Default (Primary)";
 Default.args = {};
 
 export const Secondary = Template.bind({});
