@@ -33,7 +33,7 @@ export const Template = ({
 	isPending = false,
 	ariaExpanded,
 	ariaControls,
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -58,6 +58,7 @@ export const Template = ({
       @click=${onclick ?? function() {
         // Toggle the is-pending state on-click
         updateArgs({ isPending: true });
+
         setTimeout(() => {
           updateArgs({ isPending: false });
         }, 3000);
@@ -67,17 +68,17 @@ export const Template = ({
       aria-controls=${ifDefined(ariaControls)}
       data-testid=${ifDefined(testId)}
     >
-      ${when(iconName && !iconAfterLabel, () => Icon({ iconName, size }))}
+      ${when(iconName && !iconAfterLabel, () => Icon({ iconName, size }, context))}
       ${when(label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
-      ${when(iconName && iconAfterLabel, () => Icon({ iconName, size }))}
+      ${when(iconName && iconAfterLabel, () => Icon({ iconName, size }, context))}
       ${when(isPending, () => ProgressCircle({
         size: "s",
         testId: "progress-circle",
         staticColor,
         isIndeterminate: true,
-      }))}
+      }, context))}
     </button>
   `;
 };
@@ -86,20 +87,20 @@ export const Template = ({
  * Multiple button variations displayed in one story template.
  * Used as the base template for the stories.
  */
-const CustomButton = ({ iconName, ...args }) => html`
+const CustomButton = ({ iconName, ...args }, context) => html`
 	${Template({
 		...args,
 		iconName: undefined,
-	})}
+	}, context)}
 	${Template({
 		...args,
 		iconName: iconName ?? "Edit",
-	})}
+	}, context)}
 	${Template({
 		...args,
 		hideLabel: true,
 		iconName: iconName ?? "Edit",
-	})}
+	}, context)}
 `;
 
 export const ButtonGroups = Variants({

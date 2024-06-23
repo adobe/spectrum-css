@@ -11,10 +11,6 @@ import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
-		layout = "vertical",
-        inputType = "radio",
-        isReadOnly = false,
-        isRequired = false,
 export const Template = (
 	{
 		rootClass = "spectrum-FieldGroup",

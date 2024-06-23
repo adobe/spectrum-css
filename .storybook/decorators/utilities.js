@@ -1,3 +1,4 @@
+import "@spectrum-css/typography";
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -72,17 +73,23 @@ const Container = ({
           ...wrapperStyles,
         })}
       >
-        ${content}
+        ${renderContent(content)}
       </div>
     </div>
   `;
 };
 
-export const States = ({ Template, direction = "row", stateData = [], ...args }, context) => {
-  // Add a default value at the beginning of the array to represent the base state
-  stateData.unshift({});
-
-  const content = stateData.map(({
+export const States = ({
+  Template,
+  direction = "row",
+  stateData = [],
+  ...args
+}, context) => Container({
+  level: 2,
+  direction,
+  withBorder: false,
+  heading: undefined,
+  content: stateData.map(({
     testHeading = direction === "row" ? html`&nbsp;` : undefined,
     ...item
   }) =>
@@ -92,15 +99,8 @@ export const States = ({ Template, direction = "row", stateData = [], ...args },
       withBorder: false,
       content: Template({ ...args, ...item }, context),
     })
-  );
-
-  return Container({
-      level: 2,
-      direction,
-      withBorder: false,
-      content,
-    });
-};
+  )
+});
 
 export const Sizes = ({ Template, direction = "column", ...args }, context) => {
 	const sizes = context?.argTypes?.size?.options ?? [];
@@ -170,10 +170,19 @@ export const Variants = ({
             Template: customTemplate,
             testHeading,
             customContainerStyles = {},
-            withStates = stateData.length > 0,
+            withStates,
             // Capture any additional data to pass to the template
             ...item
           }) => {
+            if (typeof withStates === "undefined") {
+              withStates = stateData.length > 0;
+            }
+
+            if (stateData[0] && Object.keys(stateData[0]).length !== 0) {
+              // Add a default value at the beginning of the array to represent the base state
+              stateData.unshift({});
+            }
+
             // If a custom template is provided, use it, otherwise use the default template
             if (customTemplate) {
               Template = customTemplate;
@@ -206,9 +215,13 @@ export const Variants = ({
               },
               wrapperStyles: customContainerStyles,
               content: html`
-                ${when(
-                  withStates,
-                  () => States({ Template, stateData, direction: stateDirection, ...data }, context),
+                ${when(withStates, () =>
+                  States({
+                      Template,
+                      stateData,
+                      direction: stateDirection,
+                      ...data
+                    }, context),
                   () => Template(data, context)
                 )}
               `,

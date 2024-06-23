@@ -7,6 +7,7 @@ import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -37,14 +38,13 @@ export const Template = ({
 	}
 
 	return html`
-		${showFieldLabel ?
+		${when(showFieldLabel, () =>
 			FieldLabel({
 				size,
 				label: fieldLabelText,
 				customStyles: { "max-inline-size": "100px"},
 				alignment: fieldLabelPosition === "left" && "left",
-			}, context) : null
-		}
+			}, context))}
 		<div
 			class=${classMap({
 				[rootClass]: true,
