@@ -1,3 +1,4 @@
+import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
@@ -31,6 +32,7 @@ export default {
 			if: { arg: "isDragged", truthy: true },
 		},
 		...IllustratedMessage.argTypes,
+		label: ActionButton.argTypes.label,
 	},
 	args: {
 		rootClass: "spectrum-DropZone",
@@ -47,6 +49,7 @@ Default.args = {
 			return html`${Link({ url: "#", text: "Select a file" })} from your computer.`;
 		},
 	],
+	label: "Drop file to replace",
 	useAccentColor: true,
 	customStyles: {
 		width: "300px",

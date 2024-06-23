@@ -179,6 +179,11 @@ export const Variants = ({
               Template = customTemplate;
             }
 
+            // If a test heading is not provided, use the heading from the component data
+            if (typeof testHeading === "undefined") {
+              testHeading = item.heading;
+            }
+
             // Show the border if we are rendering the test in multiple states or if there are several
             // tests in the grid, this helps distinguish between tests
             const showBorder = withStates || testData.length > 1;
