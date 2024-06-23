@@ -360,6 +360,7 @@ Flat.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["vrt-only"];
 WithForcedColors.parameters = {
 	chromatic: {

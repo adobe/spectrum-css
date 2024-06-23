@@ -1,5 +1,4 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { AccentColor as IllustratedMessageStory } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { Template as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/template.js";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Variants } from "@spectrum-css/preview/decorators/utilities.js";
@@ -17,7 +16,9 @@ export const Template = (
 		isFilled = false,
 		customClasses = [],
 		customStyles = {},
-		customLabel,
+		heading,
+		description,
+		label,
 		id,
 	},
 	context
@@ -34,18 +35,12 @@ export const Template = (
     tabindex="0"
     style=${styleMap(customStyles)}
   >
-    ${IllustratedMessage(
-      {
-        heading: IllustratedMessageStory.args.heading,
-        description: IllustratedMessageStory.args.description,
-      },
-      context
-    )}
+    ${IllustratedMessage({ heading, description }, context)}
 
     <div class="${rootClass}-content">
       ${ActionButton(
         {
-          label: customLabel ?? "Drop file to replace",
+          label,
           customClasses: [`${rootClass}-button`],
         },
         context
@@ -59,23 +54,23 @@ export const DropzoneGroup = Variants({
 	testData: [
 		{},
 		{
-			heading: "Verbose example",
-			customHeading: "Drag and drop your file to upload",
-			customDescription: [
+			testHeading: "Verbose example",
+			heading: "Drag and drop your file to upload",
+			description: [
 				() => {
 					return html`You can also ${Link({ url: "#", text: "select a file" })} from your computer.`;
 				},
 			],
-			customLabel: "Drag and drop to replace file upload",
+			label: "Drag and drop to replace file upload",
 		},
 	],
 	stateData: [
 		{
-			heading: "Dragged",
+			testHeading: "Dragged",
 			isDragged: true,
 		},
 		{
-			heading: "Drag with fill",
+			testHeading: "Drag with fill",
 			isFilled: true,
 			isDragged: true,
 		},
