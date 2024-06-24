@@ -80,7 +80,7 @@ export const SwatchGroup = (args, context) => html`
 		"gap": "16px",
 	})}>
 		${Template(args, context)}
-		${Template({ ...args, swatchColor: "rgba(174, 216, 230, 0.3)" }, context)}
+		${Template({ ...args, swatchColor: "rgba(174, 216, 230, 30%)" }, context)}
 		${Template({ ...args, swatchColor: undefined }, context)}
 		${Template({ ...args, rounding: "none" }, context)}
 		${Template({ ...args, rounding: "full" }, context)}

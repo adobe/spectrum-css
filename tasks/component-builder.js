@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* eslint-disable no-console */
-
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
@@ -23,76 +21,14 @@ const prettier = require("prettier");
 
 require("colors");
 
-/**
- * A source of truth for commonly used directories
- * @type {object} dirs
- * @property {string} dirs.root
- * @property {string} dirs.components
- * @property {string} dirs.site
- * @property {string} dirs.publish
- */
-const dirs = {
-	root: path.join(__dirname, ".."),
-	components: path.join(__dirname, "../components"),
-	site: path.join(__dirname, "../site"),
-	publish: path.join(__dirname, "../dist"),
-};
-
-/** @type {(string) => string} */
-const relativePrint = (filename, { cwd = dirs.root }) => path.relative(cwd, filename);
-
-const bytesToSize = function (bytes) {
-	if (bytes === 0) return "0";
-
-	const sizes = ["bytes", "KB", "MB", "GB", "TB"];
-	// Determine the size identifier to use (KB, MB, etc)
-	const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-	if (i === 0) return (bytes / 1000).toFixed(2) + " " + sizes[1];
-	return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
-};
-
-/**
- * Determines the package name from a file path
- * @param {string} filePath
- * @returns {string}
- */
-function getPackageFromPath(filePath = process.cwd()) {
-	const parts = filePath.split(path.sep);
-
-	// Capture component name from a local or node_modules syntax
-	if (parts.includes("components") || parts.includes("@spectrum-css")) {
-		const index = parts.indexOf("components") ?? parts.indexOf("@spectrum-css");
-		return parts[index + 1];
-	}
-
-	// Check local root-level packages such as ui-icons & tokens
-	if (parts.includes("ui-icons")) return "ui-icons";
-	if (parts.includes("tokens")) return "tokens";
-
-	// This is a fallback best-guess scenario:
-	// Split the path from root dir and capture the first folder as the package name
-	const guessParts = path.relative(dirs.root, filePath).split(path.sep);
-	return guessParts[0];
-}
-
-/**
- * This regex will find all the custom properties that start with --mod-
- * and are defined inside a var() function. The last capture group will
- * ignore any mod properties that are followed by a colon, to exclude
- * sub-component passthrough properties that should not be listed as mods.
- * @param {string} content
- * @param {RegExp} [regex=]
- * @returns Set<string>
- */
-async function extractProperties(
-	content,
-	regex = /(--mod-(?:\w|-)+)(?!:|\w|-)/g
-) {
-	if (!content) return new Set();
-
-	// assign the matches to an array through the spread operator and map the results to the first capture group
-	return new Set([...content.matchAll(regex)].map((match) => match[1]) ?? []);
-}
+const {
+	dirs,
+	relativePrint,
+	bytesToSize,
+	getPackageFromPath,
+	extractProperties,
+	cleanFolder,
+} = require("./utilities.js");
 
 /**
  * Extract custom property modifers to report
@@ -114,42 +50,18 @@ async function extractModifiers(filepath, { cwd } = {}) {
 	const selectors = new Set();
 	const root = postcss.parse(content);
 	root.walkRules(rule => {
-		if (rule.selector) selectors.add(rule.selector);
+		if (rule.selectors) {
+			rule.selectors.forEach((selector) => {
+				selectors.add(selector);
+			});
+		}
 	});
 
 	if (!fs.existsSync(path.join(cwd, "dist"))) {
 		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
-	const promises = [];
-	if (found.size > 0) {
-		// If the metadata folder doesn't exist, create it
-		if (!fs.existsSync(path.join(cwd, "metadata"))) {
-			fs.mkdirSync(path.join(cwd, "metadata"));
-		}
-
-		promises.push(
-			fsp.writeFile(
-				path.join(cwd, "metadata/mods.md"),
-				(await prettier.format(
-					[
-						"| Modifiable custom properties |\n| --- |",
-						...[...found].sort().map((result) => `| \`${result}\` |`),
-					].join("\n"),
-					{ parser: "markdown" }
-				)),
-				{ encoding: "utf-8" }
-			)
-				.then(() => `${"✓".green}  ${"metadata/mods.md".padEnd(20, " ").yellow}  ${"-- deprecated --".gray}`)
-				.catch((err) => {
-					if (!err) return;
-					console.log(`${"✗".red}  ${"metadata/mods.md".yellow} not written`);
-					return Promise.reject(err);
-				})
-		);
-	}
-
-	promises.push(
+	return Promise.all([
 		fsp.writeFile(
 			path.join(cwd, "dist/metadata.json"),
 			(await prettier.format(
@@ -175,9 +87,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
 			console.log(`${"✗".red}  ${"dist/metadata.json".yellow} not written`);
 			return Promise.reject(err);
 		})
-	);
-
-	return Promise.all(promises);
+	]);
 }
 
 /**
@@ -193,8 +103,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
  */
 async function processCSS(content, input, output, {
 	cwd,
-	/* eslint-disable-next-line no-unused-vars */
-	clean = false,
+	// clean = false,
 	configPath = __dirname,
 	...postCSSOptions
 } = {}) {
@@ -204,6 +113,7 @@ async function processCSS(content, input, output, {
 		{
 			cwd,
 			env: process.env.NODE_ENV ?? "development",
+			file: output,
 			from: input,
 			to: output,
 			verbose: false,
@@ -213,7 +123,6 @@ async function processCSS(content, input, output, {
 	);
 
 	const result = await postcss(plugins).process(content, options);
-
 	if (result.error) return Promise.reject(result.error);
 
 	if (!result.css) return Promise.reject(new Error(`No CSS was generated from the provided content for ${relativePrint(input, { cwd })}`));
@@ -230,7 +139,9 @@ async function processCSS(content, input, output, {
 	const promises = [];
 
 	if (result.css) {
-		const formatted = await prettier.format(result.css.trimStart(), { parser: "css", printWidth: 500 });
+		// @todo: prettier can't process container style queries without throwing an error on a missing parenthesis
+		// const formatted = await prettier.format(result.css.trimStart(), { parser: "css", printWidth: 500 });
+		const formatted = result.css.trimStart();
 		promises.push(
 			fsp.writeFile(output, formatted).then(() => {
 				const stats = fs.statSync(output);
@@ -344,59 +255,44 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
  * The builder for the main entry point
  * @param {object} config
  * @param {string} config.cwd - Current working directory for the component being built
- * @returns Promise<void>
- */
-async function cleanFolder({ cwd = process.cwd() } = {}) {
-	// Nothing to do if there's no input file
-	if (!fs.existsSync(path.join(cwd, "dist"))) return Promise.resolve();
-
-	return fsp.rm(path.join(cwd, "dist"), { recursive: true, force: true }).then(() => fsp.mkdir(path.join(cwd, "dist")));
-}
-
-/**
- * The builder for the main entry point
- * @param {object} config
- * @param {string} config.cwd - Current working directory for the component being built
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
 async function build({ cwd = process.cwd(), clean = false } = {}) {
+	const rootCSS = path.join(cwd, "index.css");
 	// Nothing to do if there's no input file
-	if (!fs.existsSync(path.join(cwd, "index.css"))) return;
+	if (!fs.existsSync(rootCSS)) return;
 
-	const componentName = cwd?.split(path.sep)?.pop();
-	const content = await fsp.readFile(path.join(cwd, "index.css"), "utf8");
-	const hasThemes = fs.existsSync(path.join(cwd, "themes"));
+	const content = await fsp.readFile(rootCSS, "utf8");
+
+	// Create the dist directory if it doesn't exist
+	if (!fs.existsSync(path.join(cwd, "dist"))) {
+		fs.mkdirSync(path.join(cwd, "dist"));
+	}
 
 	return Promise.all([
-		// This was buildCSS
-		processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", "index.css"), { cwd, clean })
+		processCSS(content, rootCSS, path.join(cwd, "dist", "index.css"), {
+			cwd,
+			clean,
+			skipMapping: true,
+			referencesOnly: false,
+			preserveVariables: true,
+			stripLocalSelectors: false,
+		})
 			.then(async (reports) =>
-				Promise.all([
-					// After building, extract the available modifiers
-					extractModifiers(path.join(cwd, "dist/index.css"), { cwd }),
-					// Copy index.css to index-vars.css for backwards compat, log as deprecated
-					copy(path.join(cwd, "dist/index.css"), path.join(cwd, "dist/index-vars.css"), { cwd }),
-				])
+			// After building, extract the available modifiers
+				extractModifiers(path.join(cwd, "dist/index.css"), { cwd })
 				// Return the console output to be logged
 					.then(r => [r, ...reports])
 			),
-		// This was buildCSSWithoutThemes
-		processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist/index-base.css"), {
+		processCSS(content, rootCSS, path.join(cwd, "dist", "index-base.css"), {
 			cwd,
 			clean,
-			lint: false,
+			skipMapping: true,
+			referencesOnly: false,
+			stripLocalSelectors: false,
+			preserveVariables: false,
 		}),
-		// This was buildCSSWithoutThemes
-		hasThemes ? processCSS(content, path.join(cwd, "index.css"), path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), {
-			cwd,
-			clean,
-			lint: false,
-			map: false,
-			env: "production",
-		}).then(async (reports) => {
-			return copy(path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), path.join(dirs.root, "tokens", "dist/css/components/bridge", `${componentName}.css`), { cwd, isDeprecated: false }).then(r => [...reports, r]);
-		}) : Promise.resolve(),
 	]);
 }
 
@@ -415,31 +311,49 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	// Nothing to do if there's no content
 	if (!contentData || contentData.length === 0) return;
 
-	return Promise.all(
-		contentData.map(async ({ content, input }) => {
-			const promises = [
-				processCSS(content, path.join(cwd, input), path.join(cwd, "dist", input), { cwd, clean, lint: false }),
-				processCSS(content, path.join(cwd, input), path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`), { cwd, clean, lint: false, env: "production", map: false }).then(async (reports) => {
-					// Copy the build express & spectrum component tokens to the tokens package folder in src and dist output
-					// (dist included b/c tokens are typically built before components in the build order)
-					return copy(
-						path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`),
-						path.join(dirs.root, "tokens", "dist/css", "components", path.basename(input, ".css"), `${componentName}.css`),
-						{ cwd, isDeprecated: false }
-					).then(r => [...reports, r]);
-				}),
-			];
+	let imports = [];
+	const promises = contentData.map(async ({ content, input }) => {
+		if (!content) return Promise.reject(new Error(`No content found for ${relativePrint(input, { cwd })}`));
 
-			// Additional processing for the express output because it includes both it and spectrum's content
-			if (path.basename(input, ".css") === "express") {
-				promises.push(
-					processCSS(content, path.join(cwd, input), path.join(cwd, "dist/index-theme.css"), { cwd, clean, lint: false }),
-				);
-			}
+		imports.push(input);
 
-			return Promise.all(promises);
-		})
+		return processCSS(content, path.join(cwd, input), path.join(cwd, "dist", input), {
+			cwd,
+			clean,
+			lint: false,
+			skipMapping: true,
+			referencesOnly: false,
+			preserveVariables: true,
+			// Only output the new selectors with the system mappings
+			stripLocalSelectors: true,
+		}).then(async (reports) => {
+			// Copy the build express & spectrum component tokens to the tokens package folder in src and dist output
+			// (dist included b/c tokens are typically built before components in the build order)
+			return Promise.all([
+				copy(path.join(cwd, "dist", input), path.join(dirs.root, "tokens", "components", path.basename(input, ".css"), `${componentName}.css`), { cwd, isDeprecated: false }),
+				copy(path.join(cwd, "dist", input), path.join(dirs.root, "tokens", "dist", "css", "components", path.basename(input, ".css"), `${componentName}.css`), { cwd, isDeprecated: false }),
+			]).then(r => [...reports, r]);
+		});
+	});
+
+	promises.push(
+		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
+		processCSS(imports.map(i => `@import "${i}";`).join("\n"), path.join(cwd, "index-theme.css"), path.join(cwd, "dist", "index-theme.css"), {
+			cwd,
+			clean,
+			skipMapping: true,
+			preserveVariables: true,
+			stripLocalSelectors: false,
+			referencesOnly: true,
+		}).then(async (reports) => {
+			return Promise.all([
+				copy(path.join(cwd, "dist", "index-theme.css"), path.join(dirs.root, "tokens", "components", "bridge", `${componentName}.css`), { cwd, isDeprecated: false }),
+				copy(path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), path.join(dirs.root, "tokens", "dist/css/components/bridge", `${componentName}.css`), { cwd, isDeprecated: false }),
+			]).then(r => [...reports, r]);
+		}),
 	);
+
+	return Promise.all(promises);
 }
 
 /**
@@ -482,8 +396,8 @@ async function main({
 
 		if (logs && logs.length > 0) {
 			logs.sort((a,) => {
-				if (a.includes("✓")) return -1;
-				if (a.includes("🔍")) return 0;
+				if (typeof a === "string" && a.includes("✓")) return -1;
+				if (typeof a === "string" && a.includes("🔍")) return 0;
 				return 1;
 			}).forEach(log => console.log(log));
 		}

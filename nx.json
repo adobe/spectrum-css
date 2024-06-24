@@ -13,7 +13,7 @@
 		}
 	},
 	"namedInputs": {
-		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
+		"core": ["{projectRoot}/*.css"],
 		"scripts": ["{projectRoot}/stories/*.js"],
 		"docs": ["{projectRoot}/metadata/*.yml"],
 		"stylelint": [
@@ -53,7 +53,8 @@
 			"cache": true,
 			"dependsOn": [
 				"^build",
-				"clean"
+				"clean",
+				{ "target": "build", "projects": "tokens" }
 			],
 			"inputs": [
 				"core",
@@ -64,10 +65,7 @@
 			],
 			"outputs": [
 				"{projectRoot}/dist/*.{css,json}",
-				"{projectRoot}/dist/themes/*.css",
-				"{projectRoot}/dist/*.map",
-				"{projectRoot}/dist/themes/*.css.map",
-				"{projectRoot}/metadata/mods.md"
+				"{projectRoot}/dist/*.map"
 			],
 			"executor": "nx:run-commands",
 			"options": {
@@ -137,7 +135,7 @@
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
-					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.css {projectRoot}/**/*.css && stylelint --fix --cache --allow-empty-input {projectRoot}/*.css {projectRoot}/**/*.css",
+					"stylelint --fix --cache --allow-empty-input {projectRoot}/*.css {projectRoot}/**/*.css",
 					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js",
 					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{yml,md,mdx} {projectRoot}/**/*.{yml,md,mdx}"
 				]

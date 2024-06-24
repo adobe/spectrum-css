@@ -9,6 +9,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+
 import "../index.css";
 
 export const Template = ({
@@ -32,9 +33,16 @@ export const Template = ({
 	customClasses = [],
 	id,
 	role,
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
 
 	return html`
     <div
@@ -59,13 +67,11 @@ export const Template = ({
           ${when(
             !isHorizontal,
             () => Asset({
-              ...globals,
               image,
               preset: !image ? showAsset : undefined,
               isCardAssetOverride,
             }, context),
             () => Icon({
-              ...globals,
               size: "xxl",
               iconName: showAsset === "folder" ? "File" : "Document",
             }, context)
@@ -94,7 +100,6 @@ export const Template = ({
               `)}
               ${when(hasActions && !isHorizontal,
                 () => ActionButton({
-                  ...globals,
                   iconName: "More",
                   size: "m",
                   isQuiet: true,
@@ -134,11 +139,9 @@ export const Template = ({
       `)}
       ${when(hasQuickAction && !isHorizontal,
         () => QuickAction({
-          ...globals,
           noOverlay: true,
           content: [
             Checkbox({
-              ...globals,
               isChecked: isSelected,
               title: "Select",
             }, context),

@@ -24,9 +24,16 @@ export const Template = ({
 	ariaLabelledby,
 	customStyles = {},
 	customClasses = [],
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
 
 	let iconSize = "75";
 	switch (size) {
@@ -75,13 +82,11 @@ export const Template = ({
 			/>
 			<span class="${rootClass}-box">
 				${Icon({
-					...globals,
 					size,
 					iconName: `Checkmark${iconSize}`,
 					customClasses: [`${rootClass}-checkmark`],
 				}, context)}
 				${Icon({
-					...globals,
 					size,
 					iconName: `Dash${iconSize}`,
 					customClasses: [`${rootClass}-partialCheckmark`],

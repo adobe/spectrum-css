@@ -1,10 +1,9 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -18,33 +17,43 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	id,
-	...globals
-}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--size${size?.toUpperCase()}`]:
-				typeof size !== "undefined",
-			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-			[`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-		style=${ifDefined(styleMap(customStyles))}
-	>
-		${when(iconName, () =>
-			Icon({
-				...globals,
-				iconName,
-				customClasses: [
-					...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),
-					`${rootClass}-icon`,
-				],
-			})
-		)}
-		${when(
-			label,
-			() => html`<div class="${rootClass}-label">${label}</div>`
-		)}
-	</div>
-`;
+}, context) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
+
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+				[`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			style=${ifDefined(styleMap(customStyles))}
+		>
+			${when(iconName, () =>
+				Icon({
+					...globals,
+					iconName,
+					customClasses: [
+						...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),
+						`${rootClass}-icon`,
+					],
+				}, context)
+			)}
+			${when(
+				label,
+				() => html`<div class="${rootClass}-label">${label}</div>`
+			)}
+		</div>
+	`;
+};

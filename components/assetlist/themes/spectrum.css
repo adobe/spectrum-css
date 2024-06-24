@@ -1,0 +1,43 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@container style(--system: spectrum) {
+    .spectrum-AssetList {
+        --spectrum-assetlist-width: 272px;
+        --spectrum-assetlist-child-indicator-animation: var(--spectrum-animation-duration-100);
+
+        /* item */
+        --spectrum-assetlist-item-height: var(--spectrum-spacing-600);
+        --spectrum-assetlist-item-padding-inline-start: var(--spectrum-spacing-300);
+        --spectrum-assetlist-item-padding-inline-end: var(--spectrum-spacing-300);
+        --spectrum-assetlist-item-margin-block-end: var(--spectrum-spacing-75);
+        --spectrum-assetlist-item-border-radius: var(--spectrum-spacing-75);
+        --spectrum-assetlist-item-animation: var(--spectrum-animation-duration-100);
+        --spectrum-assetlist-item-font-size: var(--spectrum-font-size-100);
+        --spectrum-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
+        --spectrum-assetlist-item-background-color-down: var(--spectrum-gray-200);
+        --spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-100);
+
+        /* thumbnail */
+        --spectrum-assetlist-thumbnail-width: var(--spectrum-spacing-400);
+        --spectrum-assetlist-thumbnail-height: var(--spectrum-spacing-400);
+        --spectrum-assetlist-thumbnail-margin-inline-start: var(--spectrum-spacing-100);
+
+        /* label */
+        --spectrum-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
+        --spectrum-assetlist-label-color: var(--spectrum-neutral-content-color-default);
+
+        &:dir(rtl) {
+            --spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+        }
+    }
+}

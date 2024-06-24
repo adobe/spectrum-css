@@ -65,7 +65,7 @@ export default {
 	},
 };
 
-const AlertBannerGroup = (args) => html`
+const AlertBannerGroup = (args, context) => html`
 	<div
 		style=${styleMap({
 			"display": "flex",
@@ -73,23 +73,21 @@ const AlertBannerGroup = (args) => html`
 			"gap": "16px",
 		})}
 	>
-		${Template({
-			...args,
-		})}
+		${Template(args, context)}
 		${window.isChromatic() ?
 		Template({
 			...args,
 			hasActionButton: true,
 			variant: "info",
 			text: "Your trial will expire in 3 days. Once it expires your files will be saved and ready for you to open again once you have purcahsed the software."
-		}): null }
+		}, context): null }
 		${window.isChromatic() ?
 				Template({
 					...args,
 			hasActionButton: true,
 			variant: "negative",
 			text: "Connection interupted. Check your network to continue."
-		})
+		}, context)
 		: null }
 	</div>
 `;
