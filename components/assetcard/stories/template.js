@@ -1,12 +1,10 @@
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
-
-import { useArgs } from "@storybook/preview-api";
 import { camelCase } from "lodash-es";
-
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 
 import "../index.css";
 
@@ -23,9 +21,16 @@ export const Template = ({
 	isDropTarget = false,
 	customClasses = [],
 	id,
-	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
 
 	if (!image && !exampleImage) {
 		console.warn("AssetCard: image is required");
@@ -81,13 +86,12 @@ export const Template = ({
 					selection === "checkbox",
 					() =>
 						Checkbox({
-							...globals,
 							size: "m",
 							isEmphasized: true,
 							isChecked: isSelected,
 							ariaLabelledby: camelCase(title),
 							customClasses: [`${rootClass}-checkbox`],
-						}),
+						}, context),
 					() => html`<div class="${rootClass}-selectionOrder">1</div>`
 				)}
 			</div>

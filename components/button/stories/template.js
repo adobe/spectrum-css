@@ -1,15 +1,12 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-
 import { capitalize, lowerCase } from "lodash-es";
-
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
 import "../index.css";
 
@@ -35,9 +32,16 @@ export const Template = ({
 	isPending = false,
 	ariaExpanded,
 	ariaControls,
-	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
 
 	return html`
     <button
@@ -70,18 +74,17 @@ export const Template = ({
       aria-controls=${ifDefined(ariaControls)}
       data-testid=${ifDefined(testId)}
     >
-      ${when(iconName && !iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
+      ${when(iconName && !iconAfterLabel, () => Icon({ iconName, size }, context))}
       ${when(label && !hideLabel,
         () => html`<span class=${`${rootClass}-label`}>${label}</span>`
       )}
-      ${when(iconName && iconAfterLabel, () => Icon({ ...globals, iconName, size }))}
+      ${when(iconName && iconAfterLabel, () => Icon({ iconName, size }, context))}
       ${when(isPending, () => ProgressCircle({
-        ...globals,
         size: "s",
         testId: "progress-circle",
         staticColor,
         isIndeterminate: true,
-      }))}
+      }, context))}
     </button>
   `;
 };

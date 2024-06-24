@@ -323,7 +323,7 @@ export const IconGroup = (args, context) => {
 					style=${styleMap({
 						"display": "flex",
 						"gap": "16px",
-						"margin-bottom": "16px",
+						"margin-block-end": "16px",
 					})}
 				>
 					${["xs","s","m","l","xl","xxl"].map(

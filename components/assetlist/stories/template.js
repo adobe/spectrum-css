@@ -1,12 +1,10 @@
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -22,68 +20,72 @@ export const AssetListItem = ({
 	isSelected = false,
 	isBranch = false,
 	onclick = () => {},
-	...globals
-}) => html`
-	<li
-		class=${classMap({
-			[rootClass]: true,
-			"is-selectable": isSelectable,
-			"is-selected": isSelected,
-			"is-branch": isBranch,
-			"is-navigated": isNavigated,
-		})}
-		@click=${onclick}
-		tabindex="0"
-	>
-		${when(isSelectable, () =>
-		Checkbox({
-			...globals,
-			size: "m",
-			isChecked: isSelected,
-			ariaLabelledby,
-			id: checkboxId,
-			customClasses: [`${rootClass}Selector`],
-		}))}
-		${when(
-			image,
-			() =>
-				html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
-		)}
-		${when(iconName, () =>
-			Icon({
-				iconName,
-				customClasses: [`${rootClass}Thumbnail`],
-				...globals,
-			})
-		)}
-		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
-		${when(!isSelectable && !isBranch, () =>
+}, context) => {
+	return html`
+		<li
+			class=${classMap({
+				[rootClass]: true,
+				"is-selectable": isSelectable,
+				"is-selected": isSelected,
+				"is-branch": isBranch,
+				"is-navigated": isNavigated,
+			})}
+			@click=${onclick}
+			tabindex="0"
+		>
+			${when(isSelectable, () =>
 			Checkbox({
-				...globals,
 				size: "m",
 				isChecked: isSelected,
 				ariaLabelledby,
 				id: checkboxId,
 				customClasses: [`${rootClass}Selector`],
-			}))}
-		${when(isBranch, () =>
-			Icon({
-				iconName: "ChevronRight100",
-				customClasses: [`${rootClass}ChildIndicator`],
-				...globals,
-			})
-		)}
-	</li>
-`;
+			}, context))}
+			${when(
+				image,
+				() =>
+					html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
+			)}
+			${when(iconName, () =>
+				Icon({
+					iconName,
+					customClasses: [`${rootClass}Thumbnail`],
+				}, context)
+			)}
+			${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
+			${when(!isSelectable && !isBranch, () =>
+				Checkbox({
+					size: "m",
+					isChecked: isSelected,
+					ariaLabelledby,
+					id: checkboxId,
+					customClasses: [`${rootClass}Selector`],
+				}, context))}
+			${when(isBranch, () =>
+				Icon({
+					iconName: "ChevronRight100",
+					customClasses: [`${rootClass}ChildIndicator`],
+				}, context)
+			)}
+		</li>
+	`;
+};
 
 export const Template = ({
 	rootClass = "spectrum-AssetList",
 	items = [],
 	customClasses = [],
 	id,
-	...globals
-}) => {
+}, context) => {
 	if (!items) return html``;
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
 
 	const [, updateArgs] = useArgs();
 
@@ -104,8 +106,7 @@ export const Template = ({
 						updateArgs({ items });
 					},
 					...item,
-					...globals,
-				});
+				}, context);
 			})}
 		</ul>
 	`;

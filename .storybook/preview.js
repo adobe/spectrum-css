@@ -1,5 +1,7 @@
 import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
 import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
+import "@spectrum-css/tokens-legacy/dist/index.css?raw";
+import "@spectrum-css/tokens/dist/index.css?raw";
 import { setConsoleOptions } from "@storybook/addon-console";
 import "./assets/base.css";
 import "./assets/typekit.js";

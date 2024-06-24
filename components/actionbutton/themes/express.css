@@ -10,8 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./spectrum.css";
-
 @container (--system: express) {
 	.spectrum-ActionButton {
 		--spectrum-actionbutton-background-color-default: var(--spectrum-gray-200);
@@ -26,13 +24,32 @@ governing permissions and limitations under the License.
 
 		--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
 		--spectrum-actionbutton-border-color-disabled: transparent;
+        --spectrum-actionbutton-content-color-disabled: var(--spectrum-disabled-content-color);
 
 		&.spectrum-ActionButton--quiet {
 			--spectrum-actionbutton-background-color-default: transparent;
 			--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-300);
 			--spectrum-actionbutton-background-color-down: var(--spectrum-gray-400);
 			--spectrum-actionbutton-background-color-focus: var(--spectrum-gray-300);
+
+            --spectrum-actionbutton-border-color-default: transparent;
+            --spectrum-actionbutton-border-color-hover: transparent;
+            --spectrum-actionbutton-border-color-down: transparent;
+            --spectrum-actionbutton-border-color-focus: transparent;
+
+            --spectrum-actionbutton-background-color-disabled: transparent;
+            --spectrum-actionbutton-border-color-disabled: transparent;
 		}
+
+        &.is-selected {
+            --spectrum-actionbutton-border-color-default: transparent;
+            --spectrum-actionbutton-border-color-hover: transparent;
+            --spectrum-actionbutton-border-color-down: transparent;
+            --spectrum-actionbutton-border-color-focus: transparent;
+
+            --spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
+            --spectrum-actionbutton-border-color-disabled: transparent;
+        }
 
 		&.spectrum-ActionButton--staticBlack,
 		&.spectrum-ActionButton--staticWhite {
@@ -40,6 +57,15 @@ governing permissions and limitations under the License.
 			--spectrum-actionbutton-border-color-hover: transparent;
 			--spectrum-actionbutton-border-color-down: transparent;
 			--spectrum-actionbutton-border-color-focus: transparent;
+
+            &.spectrum-ActionButton--quiet {
+                --spectrum-actionbutton-border-color-default: transparent;
+                --spectrum-actionbutton-border-color-hover: transparent;
+                --spectrum-actionbutton-border-color-down: transparent;
+                --spectrum-actionbutton-border-color-focus: transparent;
+
+                --spectrum-actionbutton-border-color-disabled: transparent;
+            }
 		}
 
 		&.spectrum-ActionButton--staticBlack {
