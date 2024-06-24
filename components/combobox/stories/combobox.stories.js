@@ -167,49 +167,49 @@ export default {
 };
 
 const defaultVariants = (args) => html`
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+	<div style=${args.isOpen && "padding-block-end: 160px;"}>
 		${Template({
 			...args,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+	<div style=${args.isOpen && "padding-block-end: 160px;"}>
 		${Template({
 			...args,
 			isFocused: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+	<div style=${args.isOpen && "padding-block-end: 160px;"}>
 		${Template({
 			...args,
 			isKeyboardFocused: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+	<div style=${args.isOpen && "padding-block-end: 160px;"}>
 		${Template({
 			...args,
 			isDisabled: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+	<div style=${args.isOpen && "padding-block-end: 160px;"}>
 		${Template({
 			...args,
 			isLoading: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+	<div style=${args.isOpen && "padding-block-end: 160px;"}>
 		${Template({
 			...args,
 			isInvalid: true,
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+	<div style=${args.isOpen && "padding-block-end: 160px;"}>
 		${Template({
 			...args,
 			showFieldLabel: true,
 			fieldLabelText: "Select location, this label should wrap",
 		})}
 	</div>
-	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+	<div style=${args.isOpen && "padding-block-end: 160px;"}>
 		${Template({
 			...args,
 			showFieldLabel: true,

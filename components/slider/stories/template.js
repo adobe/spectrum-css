@@ -1,12 +1,10 @@
+import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
 import "../index.css";
 

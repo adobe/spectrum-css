@@ -12,7 +12,7 @@ export const Template = ({
 	isFocused = false,
 	isWithColorLoupe = false,
 	customStyles = {
-		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
+		"--spectrum-picked-color": "rgba(255, 0, 0, 50%)",
 	},
 	...globals
 }, context) => {

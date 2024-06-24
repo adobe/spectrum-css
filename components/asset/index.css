@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "themes/spectrum.css";
+
 .spectrum-Asset {
 	display: flex;
 	align-items: center;
@@ -34,11 +36,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Asset-folderBackground {
-	fill: var(--highcontrast-asset-folder-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-300)));
+	fill: var(--highcontrast-asset-folder-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-200)));
 }
 
 .spectrum-Asset-fileBackground {
-	fill: var(--highcontrast-asset-file-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-50)));
+	fill: var(--highcontrast-asset-file-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-25)));
 }
 
 .spectrum-Asset-folderOutline,

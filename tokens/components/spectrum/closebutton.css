@@ -3,14 +3,84 @@ Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
+
 Unless required by applicable law or agreed to in writing, software distributed under
 the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-.spectrum {
-  --system-spectrum-closebutton-background-color-default: transparent;
-  --system-spectrum-closebutton-background-color-hover: var(--spectrum-gray-200);
-  --system-spectrum-closebutton-background-color-down: var(--spectrum-gray-300);
-  --system-spectrum-closebutton-background-color-focus: var(--spectrum-gray-200);
-}
+
+.spectrum-CloseButton{
+        --spectrum-closebutton-background-color-default:transparent;
+        --spectrum-closebutton-background-color-hover:var(--spectrum-gray-100);
+        --spectrum-closebutton-background-color-down:var(--spectrum-gray-200);
+        --spectrum-closebutton-background-color-focus:var(--spectrum-gray-100);
+        --spectrum-closebutton-size-300:24px;
+        --spectrum-closebutton-size-400:32px;
+        --spectrum-closebutton-size-500:40px;
+        --spectrum-closebutton-size-600:48px;
+        --spectrum-closebutton-icon-color-default:var(--spectrum-neutral-content-color-default);
+        --spectrum-closebutton-icon-color-hover:var(--spectrum-neutral-content-color-hover);
+        --spectrum-closebutton-icon-color-down:var(--spectrum-neutral-content-color-down);
+        --spectrum-closebutton-icon-color-focus:var(--spectrum-neutral-content-color-key-focus);
+        --spectrum-closebutton-icon-color-disabled:var(--spectrum-disabled-content-color);
+        --spectrum-closebutton-focus-indicator-thickness:var(--spectrum-focus-indicator-thickness);
+        --spectrum-closebutton-focus-indicator-gap:var(--spectrum-focus-indicator-gap);
+        --spectrum-closebutton-focus-indicator-color:var(--spectrum-focus-indicator-color);
+        --spectrum-closebutton-height:var(--spectrum-component-height-100);
+        --spectrum-closebutton-width:var(--spectrum-closebutton-height);
+        --spectrum-closebutton-size:var(--spectrum-closebutton-size-400);
+        --spectrum-closebutton-border-radius:var(--spectrum-closebutton-size-400);
+
+        --spectrum-closebutton-animation-duration:var(--spectrum-animation-duration-100);
+    }
+
+.spectrum-Closebutton--sizeS{
+        --spectrum-closebutton-height:var(--spectrum-component-height-75);
+        --spectrum-closebutton-width:var(--spectrum-closebutton-height);
+        --spectrum-closebutton-size:var(--spectrum-closebutton-size-300);
+        --spectrum-closebutton-border-radius:var(--spectrum-closebutton-size-300);
+    }
+
+.spectrum-Closebutton--sizeM{
+        --spectrum-closebutton-height:var(--spectrum-component-height-100);
+        --spectrum-closebutton-width:var(--spectrum-closebutton-height);
+        --spectrum-closebutton-size:var(--spectrum-closebutton-size-400);
+        --spectrum-closebutton-border-radius:var(--spectrum-closebutton-size-400);
+    }
+
+.spectrum-Closebutton--sizeL{
+        --spectrum-closebutton-height:var(--spectrum-component-height-200);
+        --spectrum-closebutton-width:var(--spectrum-closebutton-height);
+        --spectrum-closebutton-size:var(--spectrum-closebutton-size-500);
+        --spectrum-closebutton-border-radius:var(--spectrum-closebutton-size-500);
+    }
+
+.spectrum-Closebutton--sizeXL{
+        --spectrum-closebutton-height:var(--spectrum-component-height-300);
+        --spectrum-closebutton-width:var(--spectrum-closebutton-height);
+        --spectrum-closebutton-size:var(--spectrum-closebutton-size-600);
+        --spectrum-closebutton-border-radius:var(--spectrum-closebutton-size-600);
+    }
+
+.spectrum-CloseButton--staticWhite{
+        --spectrum-closebutton-static-background-color-default:transparent;
+        --spectrum-closebutton-static-background-color-hover:var(--spectrum-transparent-white-300);
+        --spectrum-closebutton-static-background-color-down:var(--spectrum-transparent-white-400);
+        --spectrum-closebutton-static-background-color-focus:var(--spectrum-transparent-white-300);
+        --spectrum-closebutton-icon-color-default:var(--spectrum-white);
+        --spectrum-closebutton-icon-color-disabled:var(--spectrum-disabled-static-white-content-color);
+        --spectrum-closebutton-focus-indicator-color:var(--spectrum-static-white-focus-indicator-color);
+    }
+
+.spectrum-CloseButton--staticBlack{
+        --spectrum-closebutton-static-background-color-default:transparent;
+        --spectrum-closebutton-static-background-color-hover:var(--spectrum-transparent-black-300);
+        --spectrum-closebutton-static-background-color-down:var(--spectrum-transparent-black-400);
+        --spectrum-closebutton-static-background-color-focus:var(--spectrum-transparent-black-300);
+        --spectrum-closebutton-icon-color-default:var(--spectrum-black);
+        --spectrum-closebutton-icon-color-disabled:var(--spectrum-disabled-static-black-content-color);
+        --spectrum-closebutton-focus-indicator-color:var(--spectrum-static-black-focus-indicator-color);
+    }
+
+/*# sourceMappingURL=spectrum.css.map */

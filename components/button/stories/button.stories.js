@@ -1,10 +1,8 @@
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template";
 
 /**
@@ -171,31 +169,31 @@ export default {
  * Multiple button variations displayed in one story template.
  * Used as the base template for the stories.
  */
-const CustomButton = ({ iconName, ...args }) => html`
+const CustomButton = ({ iconName, ...args }, context) => html`
 	${Template({
 		...args,
 		iconName: undefined,
-	})}
+	}, context)}
 	${Template({
 		...args,
 		iconName: iconName ?? "Edit",
-	})}
+	}, context)}
 	${Template({
 		...args,
 		hideLabel: true,
 		iconName: iconName ?? "Edit",
-	})}
+	}, context)}
 `;
 
-const States = (args) =>
+const States = (args, context) =>
 	html` <div>
 			${Typography({
 				semantics: "detail",
 				size: "s",
 				content: ["Default"],
 				customClasses: ["chromatic-ignore"],
-			})}
-			${Treatment(args)}
+			}, context)}
+			${Treatment(args, context)}
 		</div>
 		<div>
 			${Typography({
@@ -203,11 +201,11 @@ const States = (args) =>
 				size: "s",
 				content: ["Selected"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${Treatment({
 				...args,
 				isSelected: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -215,11 +213,11 @@ const States = (args) =>
 				size: "s",
 				content: ["Focused"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${Treatment({
 				...args,
 				isFocused: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -227,11 +225,11 @@ const States = (args) =>
 				size: "s",
 				content: ["Hovered"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${Treatment({
 				...args,
 				isHovered: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -239,11 +237,11 @@ const States = (args) =>
 				size: "s",
 				content: ["Active"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${Treatment({
 				...args,
 				isActive: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -251,11 +249,11 @@ const States = (args) =>
 				size: "s",
 				content: ["Disabled"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${Treatment({
 				...args,
 				isDisabled: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -263,12 +261,12 @@ const States = (args) =>
 				size: "s",
 				content: ["Disabled + selected"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${Treatment({
 				...args,
 				isSelected: true,
 				isDisabled: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -276,14 +274,14 @@ const States = (args) =>
 				size: "s",
 				content: ["Pending"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${Treatment({
 				...args,
 				isPending: true,
-			})}
+			}, context)}
 		</div>`;
 
-const Sizes = (args) =>
+const Sizes = (args, context) =>
 	html` ${["s", "m", "l", "xl"].map((size) => {
 		return html` <div>
 			${Typography({
@@ -301,12 +299,12 @@ const Sizes = (args) =>
 					}[size],
 				],
 				customClasses: ["chromatic-ignore"],
-			})}
-			${Treatment({ ...args, size })}
+			}, context)}
+			${Treatment({ ...args, size }, context)}
 		</div>`;
 	})}`;
 
-const Treatment = (args) =>
+const Treatment = (args, context) =>
 	html` <div
 		style=${styleMap({
 			display: "flex",
@@ -314,11 +312,11 @@ const Treatment = (args) =>
 		})}
 	>
 		${["fill", "outline"].map((treatment) =>
-			CustomButton({ ...args, treatment }),
+			CustomButton({ ...args, treatment }, context),
 		)}
 	</div>`;
 
-const Wrapping = (args) =>
+const Wrapping = (args, context) =>
 	html` ${Template({
 		...args,
 		customStyles: {
@@ -327,7 +325,7 @@ const Wrapping = (args) =>
 		iconName: "Edit",
 		label:
 			"An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
-	})}
+	}, context)}
 	${Template({
 		...args,
 		customStyles: {
@@ -337,7 +335,7 @@ const Wrapping = (args) =>
 		iconName: "Cross100",
 		label:
 			"An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
-	})}
+	}, context)}
 	${Template({
 		...args,
 		customStyles: {
@@ -347,9 +345,9 @@ const Wrapping = (args) =>
 		iconName: "ArrowDown600",
 		label:
 			"An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
-	})}`;
+	}, context)}`;
 
-const Variants = (args) =>
+const Variants = (args, context) =>
 	html` ${window.isChromatic()
 		? html`
 				<div class="spectrum-Typography">
@@ -358,7 +356,7 @@ const Variants = (args) =>
 						size: "l",
 						content: ["Accent"],
 						customClasses: ["chromatic-ignore"],
-					})}
+					}, context)}
 					<div
 						style=${styleMap({
 							display: "flex",
@@ -366,7 +364,7 @@ const Variants = (args) =>
 							gap: "10px",
 						})}
 					>
-						${States(args)}
+						${States(args, context)}
 					</div>
 				</div>
 				<div class="spectrum-Typography">
@@ -375,7 +373,7 @@ const Variants = (args) =>
 						size: "l",
 						content: ["Negative"],
 						customClasses: ["chromatic-ignore"],
-					})}
+					}, context)}
 					<div
 						style=${styleMap({
 							display: "flex",
@@ -386,7 +384,7 @@ const Variants = (args) =>
 						${States({
 							...args,
 							variant: "negative",
-						})}
+						}, context)}
 					</div>
 				</div>
 				<div class="spectrum-Typography">
@@ -395,7 +393,7 @@ const Variants = (args) =>
 						size: "l",
 						content: ["Primary"],
 						customClasses: ["chromatic-ignore"],
-					})}
+					}, context)}
 					<div
 						style=${styleMap({
 							display: "flex",
@@ -406,7 +404,7 @@ const Variants = (args) =>
 						${States({
 							...args,
 							variant: "primary",
-						})}
+						}, context)}
 					</div>
 				</div>
 				<div class="spectrum-Typography">
@@ -415,7 +413,7 @@ const Variants = (args) =>
 						size: "l",
 						content: ["Secondary"],
 						customClasses: ["chromatic-ignore"],
-					})}
+					}, context)}
 					<div
 						style=${styleMap({
 							display: "flex",
@@ -426,7 +424,7 @@ const Variants = (args) =>
 						${States({
 							...args,
 							variant: "secondary",
-						})}
+						}, context)}
 					</div>
 				</div>
 				<div class="spectrum-Typography">
@@ -435,7 +433,7 @@ const Variants = (args) =>
 						size: "l",
 						content: ["Sizing"],
 						customClasses: ["chromatic-ignore"],
-					})}
+					}, context)}
 					<div
 						style=${styleMap({
 							display: "flex",
@@ -443,7 +441,7 @@ const Variants = (args) =>
 							gap: "10px",
 						})}
 					>
-						${Sizes(args)}
+						${Sizes(args, context)}
 					</div>
 				</div>
 				<div class="spectrum-Typography">
@@ -452,7 +450,7 @@ const Variants = (args) =>
 						size: "l",
 						content: ["Wrapping"],
 						customClasses: ["chromatic-ignore"],
-					})}
+					}, context)}
 					<div
 						style=${styleMap({
 							display: "flex",
@@ -461,7 +459,7 @@ const Variants = (args) =>
 							padding: "6px",
 						})}
 					>
-						${Wrapping(args)}
+						${Wrapping(args, context)}
 					</div>
 				</div>
 			`
@@ -471,7 +469,7 @@ const Variants = (args) =>
 					gap: "10px",
 				})}
 			>
-				${CustomButton(args)}
+				${CustomButton(args, context)}
 			</div>`}`;
 
 export const Default = Variants.bind({});

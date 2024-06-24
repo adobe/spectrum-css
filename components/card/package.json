@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/card",
-	"version": "8.1.1",
+	"version": "9.0.0-s2-foundations.1",
 	"description": "The Spectrum CSS card component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -35,7 +35,6 @@
 		"@spectrum-css/asset": "workspace:^",
 		"@spectrum-css/checkbox": "workspace:^",
 		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/quickaction": "^3.1.1",
 		"@spectrum-css/tokens": "workspace:^",
 		"@spectrum-css/typography": "workspace:^"
 	},
@@ -50,9 +49,6 @@
 			"optional": true
 		},
 		"@spectrum-css/icon": {
-			"optional": true
-		},
-		"@spectrum-css/quickaction": {
 			"optional": true
 		},
 		"@spectrum-css/typography": {

@@ -9,10 +9,13 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-.spectrum--express {
-  --system-spectrum-combobox-border-color-default: var(--spectrum-gray-400);
-  --system-spectrum-combobox-border-color-hover: var(--spectrum-gray-500);
-  --system-spectrum-combobox-border-color-focus: var(--spectrum-gray-900);
-  --system-spectrum-combobox-border-color-focus-hover: var(--spectrum-gray-800);
-  --system-spectrum-combobox-border-color-key-focus: var(--spectrum-gray-900);
-}
+
+.spectrum-Combobox{
+		--spectrum-combobox-border-color-default:var(--spectrum-gray-400);
+		--spectrum-combobox-border-color-hover:var(--spectrum-gray-500);
+		--spectrum-combobox-border-color-focus:var(--spectrum-gray-900);
+		--spectrum-combobox-border-color-focus-hover:var(--spectrum-gray-800);
+		--spectrum-combobox-border-color-key-focus:var(--spectrum-gray-900);
+	}
+
+/*# sourceMappingURL=express.css.map */

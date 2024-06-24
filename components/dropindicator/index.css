@@ -10,17 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "themes/spectrum.css";
+
 @media (forced-colors: active) {
 	.spectrum-DropIndicator {
 		--highcontrast-dropindicator-color: Highlight;
 	}
-}
-
-.spectrum-DropIndicator {
-	--spectrum-dropindicator-border-color: var(--spectrum-dropindicator-color);
-	--spectrum-dropindicator-circle-color: var(--spectrum-dropindicator-color);
-	--spectrum-dropindicator-border-size: var(--spectrum-border-width-200);
-	--spectrum-dropindicator-circle-size: 12px;
 }
 
 .spectrum-DropIndicator {
@@ -31,12 +26,12 @@ governing permissions and limitations under the License.
 	&::after {
 		content: "";
 		position: absolute;
+		box-sizing: border-box;
 		inline-size: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
 		block-size: var(--mod-dropindicator-circle-size, var(--spectrum-dropindicator-circle-size));
-		border-radius: 50%;
 		border: var(--mod-dropindicator-border-size, var(--spectrum-dropindicator-border-size)) solid;
-		box-sizing: border-box;
 		border-color: var(--highcontrast-dropindicator-color, var(--mod-dropindicator-circle-color, var(--spectrum-dropindicator-circle-color)));
+		border-radius: 50%;
 	}
 }
 

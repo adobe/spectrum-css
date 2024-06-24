@@ -10,86 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
-/* outer container, unstyled */
-.spectrum-AssetCard {
-	/* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
-	--spectrum-assetcard-asset-size: 224px;
-	--spectrum-assetcard-background-color: var(--spectrum-gray-200);
-	--spectrum-assetcard-asset-animation-duration: var(--spectrum-animation-duration-100);
-	--spectrum-assetcard-asset-container-border-size: 1px;
-	--spectrum-assetcard-header-margin-block-start: var(--spectrum-spacing-300);
-
-	--spectrum-assetcard-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-assetcard-border-color: transparent;
-	--spectrum-assetcard-border-color-hover: var(--spectrum-gray-500);
-	--spectrum-assetcard-border-color-down: var(--spectrum-gray-600);
-
-	--spectrum-assetcard-focus-ring-gap: 5px;
-	--spectrum-assetcard-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-
-	/* selection indicator - checkbox or number */
-	--spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-100-rgb), 0.9);
-	--spectrum-assetcard-selectionindicator-size: var(--spectrum-card-selection-background-size);
-	--spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-assetcard-selectionindicator-offset-y: 4px;
-	--spectrum-assetcard-selectionindicator-blur: 6px;
-	--spectrum-assetcard-selectionindicator-color: var(--spectrum-white);
-	--spectrum-assetcard-selectionindicator-font-weight: var(--spectrum-bold-font-weight);
-	--spectrum-assetcard-selectionindicator-font-size: var(--spectrum-font-size-400);
-
-	/* title */
-	--spectrum-assetcard-title-text-color: var(--spectrum-gray-900);
-	--spectrum-assetcard-title-font-family: var(--spectrum-sans-font-family-stack);
-	--spectrum-assetcard-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
-	--spectrum-assetcard-title-font-style: var(--spectrum-default-font-style);
-	--spectrum-assetcard-title-line-height: var(--spectrum-line-height-100);
-	--spectrum-assetcard-title-letter-spacing: 0;
-
-	/* header content */
-	--spectrum-assetcard-header-content-text-color: var(--spectrum-gray-900);
-	--spectrum-assetcard-header-content-font-family: var(--spectrum-sans-font-family-stack);
-	--spectrum-assetcard-header-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
-	--spectrum-assetcard-header-content-font-style: var(--spectrum-default-font-style);
-	--spectrum-assetcard-header-content-line-height: var(--spectrum-line-height-200);
-	--spectrum-assetcard-header-content-letter-spacing: 0;
-
-	/* content */
-	--spectrum-assetcard-content-text-color: var(--spectrum-gray-700);
-	--spectrum-assetcard-content-font-family: var(--spectrum-sans-font-family-stack);
-	--spectrum-assetcard-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
-	--spectrum-assetcard-content-font-style: var(--spectrum-default-font-style);
-	--spectrum-assetcard-content-line-height: var(--spectrum-line-height-200);
-	--spectrum-assetcard-content-letter-spacing: 0;
-
-	--spectrum-assetcard-content-margin-block-start: var(--spectrum-spacing-75);
-
-	&:lang(zh),
-	&:lang(ja),
-	&:lang(ko) {
-		--spectrum-assetcard-title-font-family: var(--spectrum-cjk-font-family-stack);
-		--spectrum-assetcard-title-font-style: var(--spectrum-heading-cjk-font-style);
-		--spectrum-assetcard-title-font-weight: var(--spectrum-heading-cjk-font-weight);
-		--spectrum-assetcard-title-font-size: var(--spectrum-heading-cjk-size-xs);
-		--spectrum-assetcard-title-line-height: var(--spectrum-heading-cjk-line-height);
-		--spectrum-assetcard-title-letter-spacing: var(--spectrum-cjk-letter-spacing);
-
-		--spectrum-assetcard-header-content-font-family: var(--spectrum-cjk-font-family-stack);
-		--spectrum-assetcard-header-content-font-weight: var(--spectrum-body-cjk-font-weight);
-		--spectrum-assetcard-header-content-line-height: var(--spectrum-body-cjk-line-height);
-		--spectrum-assetcard-header-content-font-style: var(--spectrum-body-cjk-font-style);
-		--spectrum-assetcard-header-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
-
-		--spectrum-assetcard-content-font-family: var(--spectrum-cjk-font-family-stack);
-		--spectrum-assetcard-content-font-weight: var(--spectrum-body-cjk-font-weight);
-		--spectrum-assetcard-content-line-height: var(--spectrum-body-cjk-line-height);
-		--spectrum-assetcard-content-font-style: var(--spectrum-body-cjk-font-style);
-		--spectrum-assetcard-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
-	}
-}
+@import "themes/spectrum.css";
 
 .spectrum-AssetCard {
+	cursor: pointer;
+
 	/* contain selection indicator */
 	position: relative;
 
@@ -98,7 +23,7 @@ governing permissions and limitations under the License.
 
 	inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
 
-	cursor: pointer;
+	outline: none;
 
 	&.is-selected,
 	&:hover,
@@ -119,8 +44,6 @@ governing permissions and limitations under the License.
 		}
 	}
 
-	outline: none;
-
 	&:focus-visible {
 		.spectrum-AssetCard-assetContainer::before {
 			opacity: 1;
@@ -140,25 +63,25 @@ governing permissions and limitations under the License.
 	inline-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
 	block-size: var(--mod-assetcard-asset-size, var(--spectrum-assetcard-asset-size));
 
-	border-radius: var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius));
-
 	background-color: var(--mod-assetcard-background-color, var(--spectrum-assetcard-background-color));
+
+	border-radius: var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius));
 
 	transition: border var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 
 	/* focus indicator */
 	&::before {
+		pointer-events: none;
 		content: "";
 
 		position: absolute;
 		inset: calc(-1 * var(--mod-assetcard-focus-ring-gap, var(--spectrum-assetcard-focus-ring-gap)));
 
+		opacity: 0;
+
 		border: var(--mod-assetcard-focus-indicator-thickness, var(--spectrum-assetcard-focus-indicator-thickness)) solid var(--mod-assectcard-focus-indicator-color, var(--spectrum-assestcard-focus-indicator-color));
 
 		border-radius: var(--mod-assetcard-focus-ring-border-radius, var(--spectrum-assetcard-focus-ring-border-radius));
-
-		opacity: 0;
-		pointer-events: none;
 		transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 	}
 
@@ -166,8 +89,8 @@ governing permissions and limitations under the License.
 	&::after {
 		content: "";
 		position: absolute;
-		inset: 0;
 		z-index: 3;
+		inset: 0;
 
 		border: var(--mod-assetcard-asset-container-border-size, var(--spectrum-assetcard-asset-container-border-size)) solid var(--mod-assetcard-border-color, var(--spectrum-assetcard-border-color));
 		border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
@@ -176,16 +99,15 @@ governing permissions and limitations under the License.
 
 /* the actual asset */
 .spectrum-AssetCard-asset {
-	object-fit: contain;
-
 	inline-size: 100%;
 	block-size: 100%;
+	object-fit: contain;
+
+	border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
 
 	transition:
 		inline-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out,
 		block-size var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
-
-	border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
 }
 
 /* header area, contains the header and optional content */
@@ -202,25 +124,24 @@ governing permissions and limitations under the License.
 .spectrum-AssetCard-title {
 	flex-grow: 1;
 
-	color: var(--mod-assetcard-title-text-color, var(--spectrum-assetcard-title-text-color));
-
 	font-family: var(--mod-assetcard-title-font-family, var(--spectrum-assetcard-title-font-family));
-	font-weight: var(--mod-assetcard-title-font-weight, var(--spectrum-assetcard-title-font-weight));
 	font-size: var(--mod-assetcard-title-font-size, var(--spectrum-assetcard-title-font-size));
-	line-height: var(--mod-assetcard-title-line-height, var(--spectrum-assetcard-title-line-height));
+	font-weight: var(--mod-assetcard-title-font-weight, var(--spectrum-assetcard-title-font-weight));
 	font-style: var(--mod-assetcard-title-font-style, var(--spectrum-assetcard-title-font-style));
+	line-height: var(--mod-assetcard-title-line-height, var(--spectrum-assetcard-title-line-height));
+
+	color: var(--mod-assetcard-title-text-color, var(--spectrum-assetcard-title-text-color));
 	letter-spacing: var(--mod-assetcard-title-letter-spacing, var(--spectrum-assetcard-title-letter-spacing));
 }
 
 /* optional content placed to the right of the title */
 .spectrum-AssetCard-headerContent {
-	color: var(--mod-assetcard-header-content-text-color, var(--spectrum-assetcard-header-content-text-color));
-
 	font-family: var(--mod-assetcard-header-content-font-family, var(--spectrum-assetcard-header-content-font-family));
 	font-size: var(--mod-assetcard-header-content-font-size, var(--spectrum-assetcard-header-content-font-size));
 	font-weight: var(--mod-assetcard-header-content-font-weight, var(--spectrum-assetcard-header-content-font-weight));
-	line-height: var(--mod-assetcard-header-content-line-height, var(--spectrum-assetcard-header-content-line-height));
 	font-style: var(--mod-assetcard-header-content-font-stlye, var(--spectrum-assetcard-header-content-font-style));
+	line-height: var(--mod-assetcard-header-content-line-height, var(--spectrum-assetcard-header-content-line-height));
+	color: var(--mod-assetcard-header-content-text-color, var(--spectrum-assetcard-header-content-text-color));
 	letter-spacing: var(--mod-assetcard-header-content-letter-spacing, var(--spectrum-assetcard-header-content-letter-spacing));
 }
 
@@ -231,36 +152,35 @@ governing permissions and limitations under the License.
 	/* space between the content and the header, place it on the content so content can be optional */
 	margin-block-start: var(--mod-assetcard-content-margin-block-start, var(--spectrum-assetcard-content-margin-block-start));
 
-	color: var(--mod-assetcard-content-text-color, var(--spectrum-assetcard-content-text-color));
-
 	font-family: var(--mod-assetcard-content-font-family, var(--spectrum-assetcard-content-font-family));
 	font-size: var(--mod-assetcard-content-font-size, var(--spectrum-assetcard-content-font-size));
 	font-weight: var(--mod-assetcard-content-font-weight, var(--spectrum-assetcard-content-font-weight));
-	line-height: var(--mod-assetcard-content-line-height, var(--spectrum-assetcard-content-line-height));
 	font-style: var(--mod-assetcard-content-font-style, var(--spectrum-assetcard-content-font-style));
+	line-height: var(--mod-assetcard-content-line-height, var(--spectrum-assetcard-content-line-height));
+
+	color: var(--mod-assetcard-content-text-color, var(--spectrum-assetcard-content-text-color));
 	letter-spacing: var(--mod-assetcard-content-letter-spacing, var(--spectrum-assetcard-content-letter-spacing));
 }
 
 /* Selection styles */
 .spectrum-AssetCard-selectionOverlay {
+	pointer-events: none;
 	position: absolute;
 	z-index: 1;
 	inset: 0;
 
 	background-color: transparent;
 
-	pointer-events: none;
-	transition: background-color var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
-
 	border-radius: calc(var(--mod-assetcard-border-radius, var(--spectrum-assetcard-border-radius)) - 1px);
+	transition: background-color var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
 }
 
 /* the checkbox or selection order indicator */
 .spectrum-AssetCard-selectionIndicator {
 	position: absolute;
 	z-index: 2;
-	inset-inline-start: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
 	inset-block-start: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
+	inset-inline-start: var(--mod-assetcard-selectionindicator-margin, var(--spectrum-assetcard-selectionindicator-margin));
 
 	display: none;
 	align-items: center;
@@ -268,17 +188,17 @@ governing permissions and limitations under the License.
 
 	inline-size: var(--mod-assetcard-selectionindicator-size, var(--spectrum-assetcard-selectionindicator-size));
 	block-size: var(--mod-assetcard-selectionindicator-size, var(--spectrum-assetcard-selectionindicator-size));
+	font-size: var(--mod-assetcard-selectionindicator-font-size, var(--spectrum-assetcard-selectionindicator-font-size));
+	font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
+
+	color: var(--highcontrast-assetcard-selectionindicator-color, var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color)));
+	background-color: transparent;
 
 	border-radius: var(--mod-assetcard-selectionindicator-border-radius, var(--spectrum-assetcard-selectionindicator-border-radius));
 
 	box-shadow: 0 var(--spectrum-assetcard-selectionindicator-offset-y) var(--spectrum-assetcard-selectionindicator-blur) rgb(0, 0, 0, 15%);
 
-	color: var(--highcontrast-assetcard-selectionindicator-color, var(--mod-assetcard-selectionindicator-color, var(--spectrum-assetcard-selectionindicator-color)));
-	font-weight: var(--mod-assetcard-selectionindicator-font-weight, var(--spectrum-assetcard-selectionindicator-font-weight));
-	font-size: var(--mod-assetcard-selectionindicator-font-size, var(--spectrum-assetcard-selectionindicator-font-size));
-
 	transition: opacity var(--mod-assetcard-asset-animation-duration, var(--spectrum-assetcard-asset-animation-duration)) ease-in-out;
-	background-color: transparent;
 }
 
 .spectrum-AssetCard-selectionOrder {
@@ -337,8 +257,8 @@ governing permissions and limitations under the License.
 	&:focus-visible,
 	&:hover {
 		.spectrum-AssetCard-selectionIndicator {
-			display: flex;
 			pointer-events: all;
+			display: flex;
 		}
 	}
 }
@@ -355,8 +275,8 @@ governing permissions and limitations under the License.
 
 	&.is-selected {
 		.spectrum-AssetCard-selectionIndicator {
-			display: flex;
 			pointer-events: all;
+			display: flex;
 		}
 	}
 }

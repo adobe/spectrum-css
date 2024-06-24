@@ -10,72 +10,51 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { join, sep, basename } = require("path");
+const { join } = require("path");
+const { cwd } = require("process");
 
 module.exports = ({
 	file,
-	cwd,
-	to,
-	splitinatorOptions = {
-		noSelectors: false,
-		noFlatVariables: false,
-		// @todo strip out all but the references to --system- variables
-		// NOT --system- definitions, only references
-		referencesOnly: false,
-	},
-	combine = false,
+	skipMapping = false,
+	referencesOnly = false,
+	preserveVariables = true,
+	stripLocalSelectors = false,
 	lint = true,
 	verbose = true,
+	minify = false,
 	additionalPlugins = {},
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
-	const rootPath = __dirname;
-	const outputFilepath = to ?? file;
-	const relativePath = outputFilepath?.replace(rootPath, "");
-	const outputFilename = outputFilepath ? basename(outputFilepath, ".css") : undefined;
-	const pathParts = relativePath?.split(sep) ?? [];
-
-	const isBridge = pathParts.includes("bridge");
-	const isTheme = ["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename === "index-theme";
-	const isExpress = outputFilename === "express" || pathParts.includes("express");
-
 	if (env === "development" && !options.map) {
 		options.map = { inline: false };
 	}
 	else options.map = false;
 
-	if (isTheme) {
-		splitinatorOptions.noSelectors = true;
+	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
+	if (file) {
+		if (typeof file === "string" && file.includes("@spectrum-css/tokens-legacy")) {
+			additionalPlugins["postcss-selector-replace"] = {
+				before: [".spectrum"],
+				after: [".spectrum.spectrum--legacy"],
+			};
+		}
 	}
 
-	if (isExpress) {
-		combine = true;
-	}
-
-	if (outputFilename === "index-base") {
-		splitinatorOptions.noFlatVariables = true;
-	}
-
-	if (isBridge) {
-		splitinatorOptions.referencesOnly = true;
-	}
-
-	/*
-		This deconstruction has to do with how options are passed
-		to the postcss config via storybook
-	*/
-	if (cwd && cwd.endsWith(".storybook")) {
-		additionalPlugins = {
-			...additionalPlugins,
-			"postcss-pseudo-classes": {
-				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
-				allCombinations: true,
-				preserveBeforeAfter: false,
-				prefix: "is-"
-			},
-		};
-	}
+	console.log({
+		"cwd": cwd,
+		"file": file,
+		"skipMapping": skipMapping,
+		"referencesOnly": referencesOnly,
+		"preserveVariables": preserveVariables,
+		"stripLocalSelectors": stripLocalSelectors,
+		"lint": lint,
+		"verbose": verbose,
+		"minify": minify,
+		"additionalPlugins": additionalPlugins,
+		"env": env,
+		"options": options
+	});
 
 	return {
 		...options,
@@ -83,7 +62,17 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- IMPORTS ---------------- */
 			/** @link https://github.com/postcss/postcss-import#postcss-import */
-			"postcss-import": {},
+			"postcss-import": {
+				plugins: [
+					require("postcss-splitinator")({
+						selectorPrefix: "spectrum",
+						skipMapping,
+						preserveVariables,
+						referencesOnly,
+						stripLocalSelectors
+					}),
+				],
+			},
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
@@ -91,11 +80,12 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
 			"postcss-splitinator": {
-				processIdentifier: (identifier) =>
-					identifier === "express" ? "spectrum--express" : identifier,
-				...splitinatorOptions,
+				selectorPrefix: "spectrum",
+				skipMapping,
+				preserveVariables,
+				referencesOnly,
+				stripLocalSelectors
 			},
-			"postcss-combininator": combine ? {} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
@@ -112,12 +102,11 @@ module.exports = ({
 				stage: 2,
 				env,
 				features: {
+					"custom-properties": true,
 					"logical-properties-and-values": false,
 					clamp: true,
 					"color-functional-notation": true,
-					"dir-pseudo-class": { preserve: true },
 					"nesting-rules": { noIsPseudoSelector: true },
-					// "focus-visible-pseudo-class": true,
 					// https://github.com/jsxtools/focus-within
 					"focus-within-pseudo-class": true,
 					"font-format-keywords": true,
@@ -140,6 +129,7 @@ module.exports = ({
 						},
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
+						normalizeWhitespace: minify
 					},
 				],
 			},
@@ -150,7 +140,7 @@ module.exports = ({
 					cache: true,
 					// Passing the config path saves a little time b/c it doesn't have to find it
 					configFile: join(__dirname, "stylelint.config.js"),
-					quiet: !verbose,
+					quiet: true, // !verbose,
 					allowEmptyInput: true,
 					ignorePath: join(__dirname, ".stylelintignore"),
 					reportNeedlessDisables: true,

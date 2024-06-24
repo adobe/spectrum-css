@@ -6,6 +6,8 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 import "../index.css";
 
+import "../index.css";
+
 export const Template = ({
 	rootClass = "spectrum-Typography",
 	semantics = "body",

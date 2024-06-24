@@ -40,6 +40,7 @@ export const Template = ({
 			label: fieldLabel,
 			alignment: labelPosition === "side" ? "right" : "top",
 		}, context)}
+
 		<div class="${rootClass}InputLayout">
 			${inputType === "radio" ? items.map((item) =>
 					Radio({

@@ -5,6 +5,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize, lowerCase } from "lodash-es";
+
 import "../index.css";
 
 /**
@@ -35,8 +36,16 @@ export const Template = ({
 	id,
 	testId,
 	role,
-	...globals
-}) => {
+}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
+
 	return html`
 		<button
 			aria-label=${ifDefined(label)}
@@ -66,21 +75,19 @@ export const Template = ({
 		>
 			${when(hasPopup, () =>
 				Icon({
-					...globals,
 					size,
 					iconName: "CornerTriangle",
 					setName: "ui",
 					customClasses: [`${rootClass}-hold`],
-				})
+				}, context)
 			)}
 			${when(iconName, () =>
 				Icon({
-					...globals,
 					size,
 					iconName,
 					setName: iconSet,
 					customClasses: [`${rootClass}-icon`, ...customIconClasses],
-				})
+				}, context)
 			)}
 			${when(
 				label && !hideLabel,
@@ -90,7 +97,7 @@ export const Template = ({
 	`;
 };
 
-const ActionButtons = (args) => html` <div
+const ActionButtons = (args, context) => html` <div
 	style=${styleMap({
 		"display": "flex",
 		"gap": "16px",
@@ -101,16 +108,16 @@ const ActionButtons = (args) => html` <div
 		...args,
 		label: "More",
 		iconName: undefined,
-	})}
+	}, context)}
 	${Template({
 		...args,
 		label: "More",
-	})}
-	${Template(args)}
+	}, context)}
+	${Template(args, context)}
 	${Template({
 		...args,
 		hasPopup: true,
-	})}
+	}, context)}
 	<!-- Save truncation for VRTs -->
 	${Template({
 		...args,
@@ -120,7 +127,7 @@ const ActionButtons = (args) => html` <div
 			display: window.isChromatic() ? undefined : "none",
 			maxInlineSize: "100px"
 		},
-	})}
+	}, context)}
 	${Template({
 		...args,
 		label: "Truncate this long content",
@@ -128,18 +135,18 @@ const ActionButtons = (args) => html` <div
 			display: window.isChromatic() ? undefined : "none",
 			maxInlineSize: "100px"
 		},
-	})}
+	}, context)}
 </div>`;
 
-const States = (args) =>
+const States = (args, context) =>
 	html` <div>
 			${Typography({
 				semantics: "detail",
 				size: "s",
 				content: ["Default"],
 				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons(args)}
+			}, context)}
+			${ActionButtons(args, context)}
 		</div>
 		<div>
 			${Typography({
@@ -159,11 +166,11 @@ const States = (args) =>
 				size: "s",
 				content: ["Focused"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${ActionButtons({
 				...args,
 				isFocused: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -171,11 +178,11 @@ const States = (args) =>
 				size: "s",
 				content: ["Hovered"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${ActionButtons({
 				...args,
 				isHovered: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -183,11 +190,11 @@ const States = (args) =>
 				size: "s",
 				content: ["Active"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${ActionButtons({
 				...args,
 				isActive: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -195,11 +202,11 @@ const States = (args) =>
 				size: "s",
 				content: ["Disabled"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${ActionButtons({
 				...args,
 				isDisabled: true,
-			})}
+			}, context)}
 		</div>
 		<div>
 			${Typography({
@@ -207,15 +214,15 @@ const States = (args) =>
 				size: "s",
 				content: ["Disabled + selected"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${ActionButtons({
 				...args,
 				isSelected: true,
 				isDisabled: true,
-			})}
+			}, context)}
 		</div>`;
 
-const Sizes = (args) =>
+const Sizes = (args, context) =>
 	html` ${["s", "m", "l", "xl"].map((size) => {
 		return html` <div>
 			${Typography({
@@ -233,15 +240,15 @@ const Sizes = (args) =>
 					}[size],
 				],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			${ActionButtons({
 				...args,
 				size,
-			})}
+			}, context)}
 		</div>`;
 	})}`;
 
-export const Variants = (args) => html`
+export const Variants = (args, context) => html`
 	<style>
 		.spectrum-Detail { display: inline-block; }
 		.spectrum-Typography > div {
@@ -265,13 +272,13 @@ export const Variants = (args) => html`
 				size: "l",
 				content: ["Standard"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			<div style=${styleMap({
 				"display": "flex",
 				"flex-direction": "column",
 				"gap": "4.8px",
 			})}>
-				${States(args)}
+				${States(args, context)}
 			</div>
 		</div>
 		<div class="spectrum-Typography">
@@ -280,7 +287,7 @@ export const Variants = (args) => html`
 				size: "l",
 				content: ["Emphasized"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			<div style=${styleMap({
 				"display": "flex",
 				"flex-direction": "column",
@@ -289,7 +296,7 @@ export const Variants = (args) => html`
 				${States({
 					...args,
 					isEmphasized: true,
-				})}
+				}, context)}
 			</div>
 		</div>
 		<div class="spectrum-Typography">
@@ -298,7 +305,7 @@ export const Variants = (args) => html`
 				size: "l",
 				content: ["Quiet"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			<div style=${styleMap({
 				"display": "flex",
 				"flex-direction": "column",
@@ -307,7 +314,7 @@ export const Variants = (args) => html`
 				${States({
 					...args,
 					isQuiet: true,
-				})}
+				}, context)}
 			</div>
 		</div>
 		<div class="spectrum-Typography">
@@ -316,19 +323,19 @@ export const Variants = (args) => html`
 				size: "l",
 				content: ["Sizing"],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			<div style=${styleMap({
 				"display": "flex",
 				"flex-direction": "column",
 				"gap": "4.8px",
 			})}>
-				${Sizes(args)}
+				${Sizes(args, context)}
 			</div>
 		</div>
 	</div>
 	<div style=${styleMap({
 		display: window.isChromatic() ? "none" : undefined,
 	})}>
-		${ActionButtons(args)}
+		${ActionButtons(args, context)}
 	</div>
 `;
