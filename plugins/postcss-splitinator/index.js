@@ -10,100 +10,175 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const valuesParser = require("postcss-values-parser");
+
+function extractFallbackValue(declValue) {
+	const parsed = valuesParser.parse(declValue);
+	let fallbackValue;
+
+	parsed.walk((node) => {
+		if (node.type === "function" && node.value === "var") {
+		// Assuming the second argument of the var() function is the fallback
+			const fallbackNode = node.nodes[2];
+			if (fallbackNode) {
+				// Convert the fallback node back to a string
+				fallbackValue = valuesParser.stringify(fallbackNode);
+			}
+		}
+	});
+
+	return fallbackValue;
+}
+
+// Reformat pseudo functions to use dash-formatted names
+const formatPseudos = (selector) => {
+	const matches = [...selector.matchAll(/:(\w+)(\((.*?)\))?/g)];
+	if (!matches || matches.length === 0) return selector;
+
+	let replacement = "";
+	for (const match of matches) {
+		const [, query, , value] = match;
+
+		if (!["where", "is"].includes(query)) {
+			replacement = replacement + `-${query}`;
+		}
+
+		if (value) {
+			if (value.includes(",")) {
+				replacement = replacement + `-${value.split(",").join("-")}`;
+			}
+			else {
+				replacement = replacement + `-${value}`;
+			}
+		}
+	}
+
+	return selector.replace(/:\w+\(.*?\)/g, replacement.replace(/\s/g, ""));
+};
+
+const fallbackNameProcessor = (selector, prop, identifierName) => {
+	selector = formatPseudos(selector);
+
+	// This regex is designed to pull spectrum-ActionButton out of a selector
+	let baseSelectorMatch = selector.match(/^\.([a-z]+-[A-Z][^-. ]+)/);
+	if (baseSelectorMatch) {
+		const [, baseSelector] = baseSelectorMatch;
+		const baseSelectorRegExp = new RegExp(baseSelector, "gi");
+		prop = prop.replace(baseSelectorRegExp, "");
+		selector = baseSelector + selector.replace(baseSelectorRegExp, "");
+	}
+
+	selector = selector.replace(/is-/g, "");
+
+	let selectorParts = selector.replace(/\s+/g, "").replace(/,/g, "").split(".");
+
+	return (
+		"--" +
+		(`${identifierName}-${selectorParts.join("-")}-${prop.substr(2)}`)
+			.replace(/-+/g, "-")
+			.toLowerCase()
+	);
+};
+
 /**
  * @typedef Options
- * @property {boolean} [noFlatVariables=false]
- * @property {boolean} [noSelectors=false]
+ * @property {string} [selectorPrefix] - The prefix to use for the new selectors
+ * @property {boolean} [skipMapping=false] - Skip the mapping step
+ * @property {boolean} [preserveVariables=false] - Keep the original custom properties in the output
+ * @property {boolean} [referencesOnly=false]
+ * @property {boolean} [stripLocalSelectors=false]
  * @property {(identifierValue: string, identifierName: string) => string} [processIdentifier]
- * @property {(selector: string, prop: string) => string} [getName]
+ * @property {(selector: string, prop: string, identifierName: string) => string} [getName]
 */
 
 /** @type import('postcss').PluginCreator<Options> */
 module.exports = ({
-	noFlatVariables = false,
-	noSelectors = false,
+	selectorPrefix,
+	skipMapping = false,
+	preserveVariables = true,
 	referencesOnly = false,
+	stripLocalSelectors = false,
 	processIdentifier,
-	getName = (selector, prop) => {
-		selector = selector.replace(/^:where\((.*?)\)$/, "$1");
-
-		// This regex is designed to pull spectrum-ActionButton out of a selector
-		let baseSelectorMatch = selector.match(/^\.([a-z]+-[A-Z][^-. ]+)/);
-		if (baseSelectorMatch) {
-			const [, baseSelector] = baseSelectorMatch;
-			const baseSelectorRegExp = new RegExp(baseSelector, "gi");
-			prop = prop.replace(baseSelectorRegExp, "");
-			selector = baseSelector + selector.replace(baseSelectorRegExp, "");
-		}
-
-		selector = selector.replace(/is-/g, "");
-
-		let selectorParts = selector.replace(/\s+/g, "").replace(/,/g, "").split(".");
-
-		return (
-			"--" +
-			(`system-${selectorParts.join("-")}-${prop.substr(2)}`)
-				.replace(/-+/g, "-")
-				.toLowerCase()
-		);
-	},
+	getName = fallbackNameProcessor,
 }) => ({
 	postcssPlugin: "postcss-splitinator",
 	OnceExit(root, { Rule, Declaration }) {
+		// Fallback function to process the identifier value and create a new selector
+		if (typeof processIdentifier !== "function") {
+			// If the base prefix exists and differs from the identifier value, append the identifier value to the base prefix as the new class name
+			processIdentifier = (identifierValue) => selectorPrefix && selectorPrefix !== identifierValue ? `.${selectorPrefix}-${identifierValue}` : `.${identifierValue}`;
+		}
+
+		// This object will store the mappings for each selector
 		const selectorMap = {};
 
+		// Step 1: loop over all the container style queries and create a new selector for each
+		// to be used as a theming toggle for components where style queries are not natively supported
+		// @todo should there be a support check around this?
 		root.walkAtRules(/container/, (container) => {
+
+			if (skipMapping) {
+				if (preserveVariables) {
+					// Iterate over each rule in the container and append them to the root
+					container.walkRules((rule) => {
+						root.append(rule);
+					});
+				}
+
+				container.remove();
+				return;
+			}
+
+			// Extract the custom property name and it's value to use in creating the new selector
+			// Identifier name is the prefix used for the custom properties created for the bridge
+			// Identifier value is used to create the new selector
 			const [, identifierName, identifierValue] = container.params.match(
 				/\(\s*--(.*?)\s*[:=]\s*(.*?)\s*\)/
 			);
 
-			const rule = new Rule({
-				selector: `.${
-					typeof processIdentifier === "function"
-						? processIdentifier(identifierValue, identifierName)
-						: identifierValue
-				}`,
-				source: container.source,
-			});
+			// Create a new rule using this selector to attach the new system-level custom properties
+			let rule;
 
-			if (!noFlatVariables) {
+			// If we're only interested in references, we can skip the next step of appending the new rule
+			if (!referencesOnly) {
+				rule = new Rule({
+					selector: processIdentifier(identifierValue, identifierName),
+					source: container.source,
+				});
+
 				container.parent.insertAfter(container, rule);
 			}
 
+			// Iterate over each custom property in the container to create a new mapping that supports the new selector
 			container.walkDecls(/^--/, (decl) => {
 				// Process rules that match multiple selectors separately to avoid weird var names and edge cases
 				// note: this doesn't support :where() and is likely brittle!
 				const selectors = decl.parent.selector.split(/\s*,\s*/);
 				selectors.forEach((selector) => {
-					const variableName = getName(selector, decl.prop);
+					const variableName = getName(selector, decl.prop, identifierName);
 					const newDecl = decl.clone({
 						prop: variableName,
 					});
 					newDecl.raws.before = "\n  ";
 
-					if (!noFlatVariables) {
-						rule.append(newDecl);
-					}
+					if (!referencesOnly) rule.append(newDecl);
 
 					const selectorNode = (selectorMap[selector] =
 						selectorMap[selector] || {});
 
-					// Check for fallbacks
+					// Check for fallbacks in the var() function
 					// todo: use valueparser instead of a regex
-					const fallbackMatch = decl.value.match(
-						/var\(\s*(.*?)\s*,\s*var\(\s*(.*?)\s*\)\)/
-					);
-					if (fallbackMatch) {
-						const [, override, fallback] = fallbackMatch;
-
+					const fallbackValue = extractFallbackValue(decl.value);
+					if (fallbackValue) {
 						// The final declaration should have the override present
 						selectorNode[
 							decl.prop
-						] = `var(${override}, var(${variableName}))`;
+						] = `var(${fallbackValue}, var(${variableName}))`;
 
 						// The system-level declaration should only have the fallback
-						newDecl.value = `var(${fallback})`;
-					} else {
+						newDecl.value = `var(${fallbackValue})`;
+					}
+					else {
 						selectorNode[decl.prop] = `var(${variableName})`;
 					}
 				});
@@ -112,23 +187,11 @@ module.exports = ({
 			container.remove();
 		});
 
-		if (noSelectors) return;
+		// Our job here is done
+		if (skipMapping) return;
+		if (stripLocalSelectors) return;
 
-		if (referencesOnly) {
-			// Empty out the root so we only have the references to --system- variables
-			// Keep the copyright notice at the top
-			// Find the copyright comment
-			let comment = root.first;
-			while (comment?.type !== "comment") {
-				comment = comment.next();
-				// Check the comment for the word "Copyright"
-				if (comment?.text.match(/Copyright/)) break;
-			}
-
-			root.removeAll();
-			if (comment) root.append(comment);
-		}
-
+		// This adds the new selectors to the root with their respective system-level mappings
 		for (let [selector, props] of Object.entries(selectorMap)) {
 			const rule = new Rule({ selector });
 

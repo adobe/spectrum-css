@@ -1,9 +1,8 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import "../index.css";
 
@@ -13,65 +12,70 @@ export const Template = ({
 	items = [],
 	variant,
 	isDragged = false,
-	...globals
-}) => html`
-	<nav>
-		<ul
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-		>
-			${items.map((item, idx, arr) => {
-				const { label, isDisabled, iconName } = item;
-				return html` <li
-					class=${classMap({
-						[`${rootClass}-item`]: true,
-						"is-dragged": isDragged && item.isDragged,
-					})}
-				>
-					${when(
-						iconName,
-						() =>
-							ActionButton({
-								...globals,
-								iconName,
-								isDisabled,
-								isQuiet: true,
-								customIconClasses: [`${rootClass}-folder`],
-								size: "m",
-							}),
-						() =>
-							when(
-								idx !== arr.length - 1,
-								() =>
-									html`<div
-										class=${classMap({
-											[`${rootClass}-itemLink`]: true,
-											"is-disabled": isDisabled,
-										})}
-										aria-disabled=${ifDefined(isDisabled ? "true" : undefined)}
-										role="link"
-										tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
-									>
-										${label}
-									</div>`,
-								() =>
-									html`<a class="${rootClass}-itemLink" aria-current="page"
-										>${label}</a
-									>`
-							)
-					)}
-					${when(idx !== arr.length - 1, () =>
-						Icon({
-							...globals,
-							iconName: "ChevronRight100",
-							customClasses: [`${rootClass}-itemSeparator`],
-						})
-					)}
-				</li>`;
-			})}
-		</ul>
-	</nav>
-`;
+}, context) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
+
+	return html`
+		<nav>
+			<ul
+				class=${classMap({
+					[rootClass]: true,
+					[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+			>
+				${items.map((item, idx, arr) => {
+					const { label, isDisabled, iconName } = item;
+					return html` <li
+						class=${classMap({
+							[`${rootClass}-item`]: true,
+							"is-disabled": isDisabled,
+							"is-dragged": isDragged && item.isDragged,
+						})}
+					>
+						${when(
+							iconName,
+							() =>
+								ActionButton({
+									iconName,
+									isDisabled,
+									isQuiet: true,
+									customIconClasses: [`${rootClass}-folder`],
+									size: "m",
+								}, context),
+							() =>
+								when(
+									idx !== arr.length - 1,
+									() =>
+										html`<div
+											class="${rootClass}-itemLink"
+											role="link"
+											tabindex="0"
+										>
+											${label}
+										</div>`,
+									() =>
+										html`<a class="${rootClass}-itemLink" aria-current="page"
+											>${label}</a
+										>`
+								)
+						)}
+						${when(idx !== arr.length - 1, () =>
+							Icon({
+								iconName: "ChevronRight100",
+								customClasses: [`${rootClass}-itemSeparator`],
+							}, context)
+						)}
+					</li>`;
+				})}
+			</ul>
+		</nav>
+	`;
+};

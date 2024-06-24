@@ -1,13 +1,11 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { action } from "@storybook/addon-actions";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { action } from "@storybook/addon-actions";
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
 import "../index.css";
 
@@ -30,10 +28,18 @@ export const Template = ({
 	previousHandler,
 	nextHandler,
 	id,
-	...globals
 }, context) => {
 	const [, updateArgs] = useArgs();
-	const lang = window.__lang;
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
+
+	const lang = globals.lang;
 
 	const DOW = [
 		"Sunday",
@@ -279,7 +285,6 @@ export const Template = ({
 					})}
 				</div>
 				${ActionButton({
-					...globals,
 					label: "Previous",
 					hideLabel: true,
 					isQuiet: true,
@@ -293,7 +298,6 @@ export const Template = ({
 					}),
 				}, context)}
 				${ActionButton({
-					...globals,
 					label: "Next",
 					hideLabel: true,
 					isQuiet: true,

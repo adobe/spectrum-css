@@ -1,11 +1,10 @@
-import { html } from "lit";
-import { classMap } from "lit/directives/class-map.js";
-import { when } from "lit/directives/when.js";
-
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -16,10 +15,18 @@ export const Template = ({
 	variant,
 	hasActionButton,
 	customClasses = [],
-	...globals
-}) => {
+}, context) => {
 	const iconName =
 		variant === "negative" ? "Alert" : variant === "info" ? "Info" : "";
+
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
 
 	return html`
 		<div
@@ -32,36 +39,32 @@ export const Template = ({
 		>
 			<div class="${rootClass}-body">
 				<div class="${rootClass}-content">
-					${iconName
-						? Icon({
-								...globals,
-								iconName,
-								customClasses: [`${rootClass}-icon`],
-						})
-						: ""}
+					${when(iconName, () => Icon({
+						iconName,
+						customClasses: [`${rootClass}-icon`],
+					}, context))}
 					<p class="${rootClass}-text">${text}</p>
 				</div>
 				${when(hasActionButton, () =>
-				Button({
-					size: "m",
-					staticColor: "white",
-					treatment: "outline",
-					label: "Action",
-				}))}
+					Button({
+						size: "m",
+						staticColor: "white",
+						treatment: "outline",
+						label: "Action",
+					}, context)
+				)}
 			</div>
 			<div class="${rootClass}-end">
 				${Divider({
 					vertical: true,
 					size: "s",
 					tag: "div",
-					...globals,
-				})}
+				}, context)}
 				${CloseButton({
-					...globals,
 					size: "m",
 					staticColor: "white",
 					onclick,
-				})}
+				}, context)}
 			</div>
 		</div>
 	`;

@@ -1,4 +1,4 @@
-@container (--system: spectrum) {
+@container style(--system: legacy) {
 	:where(.component) {
 		--background-color: blue;
 	}
@@ -10,7 +10,7 @@
 	}
 }
 
-@container (--system: express) {
+@container style(--system: express) {
 	:where(.component) {
 		--background-color: purple;
 	}

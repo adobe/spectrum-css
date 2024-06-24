@@ -147,7 +147,7 @@ const ChromaticTipPlacementVariants = (args) => html`
 		};
 
 		return html`
-			<div class="spectrum-Typography" style="padding-bottom: 12rem;">
+			<div class="spectrum-Typography" style="padding-block-end: 12rem;">
 				${Typography({
 					semantics: "detail",
 					size: "l",
@@ -164,7 +164,7 @@ const ChromaticTipPlacementVariants = (args) => html`
 						})}
 					`)}
 				</div>
-				<div style="padding-top: 2rem">
+				<div style="padding-block-start: 2rem">
 					${Template({
 						...args,
 						position: option,

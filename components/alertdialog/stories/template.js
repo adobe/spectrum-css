@@ -24,9 +24,16 @@ export const Template = ({
 	icon = false,
 	id,
 	customStyles = {},
-	...globals
-}) => {
+}, context) => {
 	const [, updateArgs] = useArgs();
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
 
 	const Dialog = html`
     <div
@@ -49,33 +56,27 @@ export const Template = ({
           size: "m",
           iconName: "Alert",
           customClasses: [`${rootClass}-icon`],
-          ...globals,
-        })) }
+        }, context)) }
       </div>
       ${Divider({
-            horizontal: true,
-            customClasses: [`${rootClass}-divider`],
-            ...globals,
-          })}
+          horizontal: true,
+          customClasses: [`${rootClass}-divider`],
+        }, context)}
       <section class="${rootClass}-content">${content}</section>
       ${ButtonGroup({
           items: buttons,
           onclick: () => {
             updateArgs({ isOpen: !isOpen });
           },
-        })
+        }, context)
       }
       </div>
     </div>
   `;
 
 	return  html`
-    ${Underlay({
-      ...globals,
-      isOpen,
-    })}
+    ${Underlay({ isOpen }, context)}
     ${Button({
-      ...globals,
       size: "m",
       variant: "secondary",
       label: "Click to open Alert Dialog",
@@ -90,11 +91,7 @@ export const Template = ({
       onclick: () => {
         updateArgs({ isOpen: !isOpen });
       },
-    })}
-    ${Modal({
-      ...globals,
-      isOpen,
-      content: Dialog,
-    })}
-      `;
+    }, context)}
+    ${Modal({ isOpen, content: Dialog }, context)}
+  `;
 };

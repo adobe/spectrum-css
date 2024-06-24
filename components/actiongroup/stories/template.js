@@ -1,7 +1,6 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 
 import "../index.css";
 
@@ -16,8 +15,15 @@ export const Template = ({
 	staticColor,
 	content = [],
 	customClasses = [],
-	...globals
-}) => {
+}, context) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
 
 	return html`
 		<div
@@ -36,16 +42,15 @@ export const Template = ({
 				switch (typeof item) {
 					case "object":
 						return ActionButton({
-							...globals,
 							size,
 							iconName: item.iconName,
 							isQuiet: areQuiet || item.isQuiet,
 							isEmphasized: areEmphasized || item.isEmphasized,
 							staticColor: staticColor ?? item.staticColor,
 							customClasses: [`${rootClass}-item`],
-						});
+						}, context);
 					case "function":
-						return item({ ...globals, size });
+						return item({ size }, context);
 					default:
 						return item;
 				}

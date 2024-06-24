@@ -10,121 +10,33 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
 @import "@spectrum-css/commons/basebutton.css";
-
-/* default for all buttons */
-.spectrum-Button {
-	--spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
-	--spectrum-button-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-button-border-width: var(--spectrum-border-width-200);
-	--spectrum-button-line-height: 1.2; /* Hack to keep buttons at 32px */
-
-	--spectrum-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
-	--spectrum-button-focus-ring-border-radius: calc(var(--spectrum-button-border-radius) + var(--spectrum-button-focus-ring-gap));
-	--spectrum-button-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
-	--spectrum-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-50);
-
-	--mod-progress-circle-position: absolute;
-}
-
-.spectrum-Button--sizeS {
-	--spectrum-button-min-width: calc(var(--spectrum-component-height-75) * var(--spectrum-button-minimum-width-multiplier));
-
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-75);
-	--spectrum-button-height: var(--spectrum-component-height-75);
-
-	--spectrum-button-font-size: var(--spectrum-font-size-75);
-
-	--spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-75) - var(--spectrum-button-border-width));
-	--spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-75);
-	--spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-75) - var(--spectrum-button-border-width));
-	--spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-75);
-	--spectrum-button-top-to-text: var(--spectrum-button-top-to-text-small);
-	--spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-small);
-	--spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-75);
-	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-75);
-}
-
-.spectrum-Button--sizeM {
-	--spectrum-button-min-width: calc(var(--spectrum-component-height-100) * var(--spectrum-button-minimum-width-multiplier));
-
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-100);
-	--spectrum-button-height: var(--spectrum-component-height-100);
-
-	--spectrum-button-font-size: var(--spectrum-font-size-100);
-
-	--spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-100) - var(--spectrum-button-border-width));
-	--spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-100);
-	--spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-100) - var(--spectrum-button-border-width));
-	--spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-100);
-	--spectrum-button-top-to-text: var(--spectrum-button-top-to-text-medium);
-	--spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
-	--spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-100);
-}
-
-.spectrum-Button--sizeL {
-	--spectrum-button-min-width: calc(var(--spectrum-component-height-200) * var(--spectrum-button-minimum-width-multiplier));
-
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-200);
-	--spectrum-button-height: var(--spectrum-component-height-200);
-
-	--spectrum-button-font-size: var(--spectrum-font-size-200);
-
-	--spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-200) - var(--spectrum-button-border-width));
-	--spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-200);
-	--spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-200) - var(--spectrum-button-border-width));
-	--spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-200);
-	--spectrum-button-top-to-text: var(--spectrum-button-top-to-text-large);
-	--spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-large);
-	--spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-200);
-	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-200);
-}
-
-.spectrum-Button--sizeXL {
-	--spectrum-button-min-width: calc(var(--spectrum-component-height-300) * var(--spectrum-button-minimum-width-multiplier));
-
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-300);
-	--spectrum-button-height: var(--spectrum-component-height-300);
-
-	--spectrum-button-font-size: var(--spectrum-font-size-300);
-
-	--spectrum-button-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-300) - var(--spectrum-button-border-width));
-	--spectrum-button-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-300);
-	--spectrum-button-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-300) - var(--spectrum-button-border-width));
-	--spectrum-button-padding-label-to-icon: var(--spectrum-text-to-visual-300);
-	--spectrum-button-top-to-text: var(--spectrum-button-top-to-text-extra-large);
-	--spectrum-button-bottom-to-text: var(--spectrum-button-bottom-to-text-extra-large);
-	--spectrum-button-top-to-icon: var(--spectrum-component-top-to-workflow-icon-300);
-	--spectrum-button-intended-icon-size: var(--spectrum-workflow-icon-size-300);
-}
+@import "themes/spectrum.css";
 
 .spectrum-Button {
 	@extend %spectrum-BaseButton;
 	@extend %spectrum-ButtonWithFocusRing;
-
-	border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
-	border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
-	border-style: solid;
-	font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
-	font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
+	position: relative;
 	gap: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
 	min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
 	min-block-size: var(--mod-button-height, var(--spectrum-button-height));
 
+	margin-block: var(--mod-button-margin-block);
+	margin-inline-start: var(--mod-button-margin-left);
+	margin-inline-end: var(--mod-button-margin-right);
+
 	/* Start with text-only padding */
 	padding-block: 0;
 	padding-inline: var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text));
-	position: relative;
+	font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
+	font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
 
 	/* let staticColor variants inherit their color */
 	color: inherit;
+	border-style: solid;
+	border-width: var(--mod-button-border-width, var(--spectrum-button-border-width));
 
-	margin-block: var(--mod-button-margin-block);
-	margin-inline-end: var(--mod-button-margin-right);
-	margin-inline-start: var(--mod-button-margin-left);
+	border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
 
 	&:hover,
 	&:active {
@@ -135,13 +47,13 @@ governing permissions and limitations under the License.
 		/* Any block-size difference between the intended workflow icon size and actual icon used.
        Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
 		--_icon-size-difference: max(0px, var(--spectrum-button-intended-icon-size) - var(--spectrum-icon-block-size, var(--spectrum-button-intended-icon-size)));
+		flex-shrink: 0;
+		align-self: flex-start;
 
 		margin-block-start: var(--mod-button-icon-margin-block-start, max(0px, var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) - var(--mod-button-border-width, var(--spectrum-button-border-width)) + (var(--_icon-size-difference, 0px) / 2)));
 
 		margin-inline-start: calc(var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) - var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text)));
 		color: inherit;
-		flex-shrink: 0;
-		align-self: flex-start;
 	}
 
 	/* correct focus indicator radius for t-shirt sizing */
@@ -156,8 +68,8 @@ governing permissions and limitations under the License.
 
 		.spectrum-Icon {
 			align-self: center;
-			margin-inline-start: 0;
 			margin-block-start: 0;
+			margin-inline-start: 0;
 		}
 
 		&::after {
@@ -172,10 +84,10 @@ a.spectrum-Button {
 
 .spectrum-Button-label {
 	@extend %spectrum-ButtonLabel;
+	align-self: start;
 	padding-block-start: calc(var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
 	padding-block-end: calc(var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
 	line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
-	align-self: start;
 	text-align: var(--mod-button-text-align, center);
 }
 
@@ -197,19 +109,20 @@ a.spectrum-Button {
 	transition: border-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
 
 	&::after {
+		pointer-events: none;
+		content: "";
 		position: absolute;
 		inset: 0;
 		margin: calc((var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) + var(--mod-button-border-width, var(--spectrum-button-border-width))) * -1);
 		border-radius: var(--mod-button-focus-ring-border-radius, var(--spectrum-button-focus-ring-border-radius));
 		transition: box-shadow var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
-		pointer-events: none;
-		content: "";
 	}
 
 	&:focus-visible {
+		outline: none;
+
 		/* Remove the default focus outline */
 		box-shadow: none;
-		outline: none;
 
 		&::after {
 			box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--highcontrast-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color))));
@@ -221,40 +134,40 @@ a.spectrum-Button {
 /* former skin.css, applied / copied from actionbutton/index.css  */
 .spectrum-Button {
 	@extend %spectrum-BaseButton;
+	color: var(--highcontrast-button-content-color-default, var(--mod-button-content-color-default, var(--spectrum-button-content-color-default)));
 
 	background-color: var(--highcontrast-button-background-color-default, var(--mod-button-background-color-default, var(--spectrum-button-background-color-default)));
 	border-color: var(--highcontrast-button-border-color-default, var(--mod-button-border-color-default, var(--spectrum-button-border-color-default)));
-	color: var(--highcontrast-button-content-color-default, var(--mod-button-content-color-default, var(--spectrum-button-content-color-default)));
 	transition:
 		border var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
 		color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
 		background-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear;
 
 	&:hover {
+		color: var(--highcontrast-button-content-color-hover, var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover)));
 		background-color: var(--highcontrast-button-background-color-hover, var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover)));
 		border-color: var(--highcontrast-button-border-color-hover, var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover)));
-		color: var(--highcontrast-button-content-color-hover, var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover)));
 	}
 
 	&:focus-visible {
+		color: var(--highcontrast-button-content-color-focus, var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus)));
 		background-color: var(--highcontrast-button-background-color-focus, var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus)));
 		border-color: var(--highcontrast-button-border-color-focus, var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus)));
-		color: var(--highcontrast-button-content-color-focus, var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus)));
 	}
 
 	&:active {
+		color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
 		background-color: var(--highcontrast-button-background-color-down, var(--mod-button-background-color-down, var(--spectrum-button-background-color-down)));
 		border-color: var(--highcontrast-button-border-color-down, var(--mod-button-border-color-down, var(--spectrum-button-border-color-down)));
-		color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
 	}
 
 	&:disabled,
 	&.is-disabled,
 	&[pending],
 	&.is-pending {
+		color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
 		background-color: var(--highcontrast-button-background-color-disabled, var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled)));
 		border-color: var(--highcontrast-button-border-color-disabled, var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled)));
-		color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
 	}
 
 	.spectrum-Icon,

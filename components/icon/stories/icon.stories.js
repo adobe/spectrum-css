@@ -141,7 +141,7 @@ const TestTemplate = (args) => html`
 			style=${styleMap({
 				"display": "flex",
 				"gap": "16px",
-				"margin-bottom": "16px",
+				"margin-block-end": "16px",
 			})}
 		>
 			${["xs","s","m","l","xl","xxl"].map(
@@ -171,7 +171,7 @@ const TestTemplate = (args) => html`
 /**
  * Display all icon sizes for the Docs page.
  */
-const WorkflowSizingTemplate = (args) => html`
+const WorkflowSizingTemplate = (args, context) => html`
 	<div
 		style=${styleMap({
 			"display": "flex",
@@ -206,8 +206,8 @@ const WorkflowSizingTemplate = (args) => html`
 							"white-space": "nowrap",
 							"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
 						}
-					})}
-					${Template({ ...args, size })}
+					}, context)}
+					${Template({ ...args, size }, context)}
 				</div>
 			`
 		)}
@@ -284,7 +284,7 @@ const UIArrowsTemplate = (args) => html`
  * Display examples of multiple UI icons.
  */
 const UIDefaultTemplate = (args) => html`
-	<div style="margin-bottom: 32px;">
+	<div style="margin-block-end: 32px;">
 		${IconListTemplate(
 			{
 				...args,

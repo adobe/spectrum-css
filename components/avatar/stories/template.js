@@ -14,27 +14,38 @@ export const Template = ({
 	hasLink,
 	id,
 	customClasses = [],
-}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--size${size}`]: true,
-			"is-disabled": isDisabled,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-	>
-		${when(hasLink, () =>
-			html`
-				<a class="spectrum-Avatar-link" href="#">
+}, context) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
+
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size}`]: true,
+				"is-disabled": isDisabled,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+		>
+			${when(hasLink, () =>
+				html`
+					<a class="spectrum-Avatar-link" href="#">
+						<img class="${rootClass}-image" data-chromatic="ignore" src=${image} alt=${ifDefined(altText)} />
+					</a>
+					`
+			)}
+			${when(!hasLink, () =>
+				html`
 					<img class="${rootClass}-image" data-chromatic="ignore" src=${image} alt=${ifDefined(altText)} />
-				</a>
 				`
-		)}
-		${when(!hasLink, () =>
-			html`
-				<img class="${rootClass}-image" data-chromatic="ignore" src=${image} alt=${ifDefined(altText)} />
-			`
-		)}
-	</div>
-`;
+			)}
+		</div>
+	`;
+};

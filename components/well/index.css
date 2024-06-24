@@ -10,21 +10,18 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Well {
-	--spectrum-well-border-width: var(--spectrum-border-width-100);
-	--spectrum-well-content-color: var(--spectrum-body-color);
-}
+@import "themes/spectrum.css";
 
 .spectrum-Well {
-	text-align: start;
 	display: block;
 	min-inline-size: var(--mod-well-min-width, var(--spectrum-well-min-width));
-	padding: var(--mod-well-padding, var(--spectrum-well-padding));
 	margin-block-start: var(--mod-well-margin-top, var(--spectrum-well-margin-top));
-	border-width: var(--mod-well-border-width, var(--spectrum-well-border-width));
-	border-style: solid;
-	border-radius: var(--mod-well-border-radius, var(--spectrum-well-border-radius));
+	padding: var(--mod-well-padding, var(--spectrum-well-padding));
+	color: var(--mod-well-content-color, var(--spectrum-well-content-color));
+	text-align: start;
 	background-color: var(--mod-well-background-color, rgba(var(--spectrum-gray-800-rgb), 0.02));
 	border-color: var(--mod-well-border-color, var(--spectrum-well-border-color));
-	color: var(--mod-well-content-color, var(--spectrum-well-content-color));
+	border-style: solid;
+	border-width: var(--mod-well-border-width, var(--spectrum-well-border-width));
+	border-radius: var(--mod-well-border-radius, var(--spectrum-well-border-radius));
 }

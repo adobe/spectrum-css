@@ -46,24 +46,24 @@ export default {
 	},
 };
 
-const AssetGroup = (args) => html`
+const AssetGroup = (args, context) => html`
 	${window.isChromatic() ? html`
 		<div style=${styleMap({
 			"display": "grid",
 			"grid-template-columns": "repeat(3, 200px)",
 			"gap": "8px"
 		})}>
-			${Template(args)}
+			${Template(args, context)}
 			${Template({
 				...args,
 				preset: "file",
-			})}
+			}, context)}
 			${Template({
 				...args,
 				preset: "folder",
-			})}
+			}, context)}
 		</div>
-	` : Template(args)}
+	` : Template(args, context)}
 `;
 
 export const Default = AssetGroup.bind({});

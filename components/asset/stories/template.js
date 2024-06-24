@@ -13,7 +13,16 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	isCardAssetOverride = false,
-}) => {
+}, context) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
+
 	let visual;
 	if (preset === "file") {
 		visual = svg`
@@ -33,10 +42,10 @@ export const Template = ({
 		visual = html`<img
 			class="${rootClass}-image"
 			src=${ifDefined(image)}
-			style=${isCardAssetOverride ? null : styleMap({
-				"max-width": "75%",
-				"max-height": "75%",
-				"object-fit": "contain",
+			style=${styleMap({
+				"max-width": isCardAssetOverride ? undefined : "75%",
+				"max-height": isCardAssetOverride ? undefined : "75%",
+				"object-fit": isCardAssetOverride ? undefined : "contain",
 			})}
 		/>`;
 	}
