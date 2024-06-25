@@ -22,6 +22,12 @@ export const Template = ({
 }) => {
 	const [, updateArgs] = useArgs();
 
+	// Create a unique ID for the input field and its associated label.
+	// Tack onto any existing id or name arg being set.
+	const inputId = typeof id !== "undefined" ? id += "-input"
+		: typeof name !== "undefined" ? id = name + "-input"
+			: "radio-0";
+
 	return html`
 		<div
 			class=${classMap({
@@ -39,8 +45,7 @@ export const Template = ({
 				type="radio"
 				name=${name}
 				class="${rootClass}-input"
-				id="radio-0"
-				readOnly=${isReadOnly ? "readonly" : ""}
+				id=${inputId}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
 				@change=${() => {
@@ -49,7 +54,7 @@ export const Template = ({
 				}}
 			/>
 			<span class="${rootClass}-button ${rootClass}-button--sizeS"></span>
-			<label class="${rootClass}-label ${rootClass}-label--sizeS" for="radio-0"
+			<label class="${rootClass}-label ${rootClass}-label--sizeS" for=${inputId}
 				>${label}</label
 			>
 		</div>
