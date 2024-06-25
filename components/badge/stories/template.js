@@ -17,7 +17,7 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	id,
-}, context) => {
+} = {}, context) => {
 	const { globals = {} } = context;
 
 	if (globals.context === "express") {
@@ -42,7 +42,6 @@ export const Template = ({
 		>
 			${when(iconName, () =>
 				Icon({
-					...globals,
 					iconName,
 					customClasses: [
 						...(typeof label === "undefined" ? [`${rootClass}-icon--no-label`] : []),

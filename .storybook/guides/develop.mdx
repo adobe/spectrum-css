@@ -43,6 +43,7 @@ Each component outputs the following assets to `dist`:
 - `index-theme.css`: This asset includes only the custom property definitions for the component as mapped to the system variables. This can be used in conjunction with `index-base.css` and the desired `themes/*.css` file to render a themed component.
 
 Each component outputs theme-specific assets to `dist/themes`. These assets include the system variables mapped to their global token counterparts. This file is meant to be loaded in conjunction with the `index-base.css` and `index-theme.css` files to render a themed component.
+
 - `themes/spectrum.css`: Represents the current Spectrum theme, aka Spectrum 2.
 - `themes/legacy.css`: Represents the legacy Spectrum theme, aka Spectrum 1. **deprecated**
 - `themes/express.css`: Represents the Express theme. **deprecated**
@@ -428,7 +429,10 @@ To optimize snapshot usage, we organize our stories into groups when rendered in
 In the `template.js` file:
 
 ```js
-export const AccordionGroup = ({ customStyles = {}, ...args }, context) => {
+export const AccordionGroup = (
+  { customStyles = {}, ...args } = {},
+  context,
+) => {
   return html`
     ${Template(args, context)} ${Template(
       {

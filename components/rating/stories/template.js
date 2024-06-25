@@ -17,8 +17,7 @@ export const Template = ({
 	isEmphasized = false,
 	customClasses = [],
 	id,
-	...globals
-}, context) => {
+} = {}, context = {}) => {
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -76,12 +75,10 @@ export const Template = ({
 						}}
 					>
 						${Icon({
-							...globals,
 							iconName: "Star",
 							customClasses: [`${rootClass}-starActive`],
 						}, context)}
 						${Icon({
-							...globals,
 							iconName: "StarOutline",
 							customClasses: [`${rootClass}-starInactive`],
 						}, context)}

@@ -28,7 +28,7 @@ const messages = ruleMessages(ruleName, {
 const valueParser = require("postcss-value-parser");
 
 /** @type {import('stylelint').Plugin} */
-const ruleFunction = (enabled, { ignoreList = [] } = {}, context) => {
+const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 	return (root, result) => {
 		const validOptions = validateOptions(
 			result,

@@ -13,7 +13,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}, context) => html`
+} = {}, context) => html`
 		<div
 			class=${classMap({
 				[`${rootClass}-wrapper`]: true,
@@ -33,7 +33,7 @@ export const Template = ({
 export const TrayGroup = ({
 	heading,
 	...args
-}, context) => html`
+} = {}, context) => html`
 	<div>
 		${Template({
 			...args,
