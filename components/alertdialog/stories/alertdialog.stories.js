@@ -1,6 +1,5 @@
+import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
-import { html } from "lit";
 import { version } from "../package.json";
 import { AlertDialogGroup, Template } from "./template";
 
@@ -57,12 +56,15 @@ export default {
 		},
 		componentVersion: version,
 	},
+	decorators: [
+		withUnderlayWrapper,
+	],
 };
 
 export const Default = AlertDialogGroup.bind({});
 Default.args = {
 	isOpen: true,
-	heading: "Enable Smart Filters?",
+	heading: "Enable smart filters?",
 	buttons: [{
 		variant: "secondary",
 		treatment: "outline",
@@ -94,6 +96,7 @@ WithForcedColors.parameters = {
 export const Information = Template.bind({});
 Information.tags = ["docs-only"];
 Information.args = {
+	isOpen: true,
 	variant: "information",
 	heading: "Informative Dialog with a wrapping title text because the text is longer than the width of the alert dialog",
 	buttons: [{
@@ -114,13 +117,6 @@ Information.args = {
 Information.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Information.decorators = [
-	(StoryFn, context) => html`
-		<style>.spectrum-Modal-wrapper { inline-size: 100%; }</style>
-		${Underlay({ isOpen: context.isOpen }, context)}
-		${StoryFn(context)}
-	`,
-];
 
 /**
  * Warning alert dialogs communicate important information to users in relation to an issue that needs to be acknowledged, but does not block the user from moving forward.
@@ -128,6 +124,7 @@ Information.decorators = [
 export const Warning = Template.bind({});
 Warning.tags = ["docs-only"];
 Warning.args = {
+	isOpen: true,
 	variant: "warning",
 	heading: "Unverified format",
 	icon: true,
@@ -145,13 +142,6 @@ Warning.args = {
 Warning.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Warning.decorators = [
-	(StoryFn, context) => html`
-		<style>.spectrum-Modal-wrapper { inline-size: 100%; }</style>
-		${Underlay({ isOpen: context.isOpen }, context)}
-		${StoryFn(context)}
-	`,
-];
 
 /**
  * Error alert dialogs communicate critical information about an issue that a user needs to acknowledge.
@@ -159,6 +149,7 @@ Warning.decorators = [
 export const Error = Template.bind({});
 Error.tags = ["docs-only"];
 Error.args = {
+	isOpen: true,
 	variant: "error",
 	heading: "Unable to share",
 	icon: true,
@@ -176,13 +167,6 @@ Error.args = {
 Error.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Error.decorators = [
-	(StoryFn, context) => html`
-		<style>.spectrum-Modal-wrapper { inline-size: 100%; }</style>
-		${Underlay({ isOpen: context.isOpen }, context)}
-		${StoryFn(context)}
-	`,
-];
 
 /**
  * Destructive alert dialogs are for when a user needs to confirm an action that will impact their data or experience in a potentially negative way, such as deleting files or contacts.
@@ -190,6 +174,7 @@ Error.decorators = [
 export const Destructive = Template.bind({});
 Destructive.tags = ["docs-only"];
 Destructive.args = {
+	isOpen: true,
 	variant: "destructive",
 	heading: "Delete 3 documents?",
 	buttons: [{
@@ -206,17 +191,11 @@ Destructive.args = {
 Destructive.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Destructive.decorators = [
-	(StoryFn, context) => html`
-		<style>.spectrum-Modal-wrapper { inline-size: 100%; }</style>
-		${Underlay({ isOpen: context.isOpen }, context)}
-		${StoryFn(context)}
-	`,
-];
 
 export const Scroll = Template.bind({});
 Scroll.tags = ["docs-only"];
 Scroll.args = {
+	isOpen: true,
 	variant: "confirmation",
 	heading: "Enable Smart Filters?",
 	buttons: [{
@@ -231,15 +210,8 @@ Scroll.args = {
 	content: "Smart filters are nondestructive and will preserve your original images. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices est eu lacus interdum, vitae volutpat tortor laoreet. Phasellus consectetur erat quis massa congue, vel placerat ipsum hendrerit. Aenean eleifend augue quam, quis blandit lacus pretium eget. Aliquam aliquam fermentum nunc, sed dictum metus varius in. Suspendisse in nisl libero. Nulla egestas massa eget lectus ullamcorper placerat. Vivamus cursus, nunc quis pharetra auctor, eros mi tempus elit, sit amet placerat ipsum velit ut dolor. Nam sit amet eleifend erat. Duis sollicitudin orci sit amet tellus tincidunt, vel lobortis risus pellentesque. Integer viverra urna elementum metus dignissim placerat. Nulla posuere eros ipsum. Pellentesque viverra urna justo, eu ultricies nisl fermentum et. Vivamus tristique porttitor dictum.",
 	customStyles: {
 		"max-block-size": "275px",
-	}
+	},
 };
 Scroll.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Scroll.decorators = [
-	(StoryFn, context) => html`
-		<style>.spectrum-Modal-wrapper { inline-size: 100%; }</style>
-		${Underlay({ isOpen: context.isOpen }, context)}
-		${StoryFn(context)}
-	`,
-];

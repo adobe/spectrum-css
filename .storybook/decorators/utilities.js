@@ -1,10 +1,8 @@
-// import "@spectrum-css/typography/dist/index.css";
-import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
+import "@spectrum-css/typography/dist/index.css";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-import { kebabCase } from "lodash-es";
 
 const Heading = ({
 	type = "heading",
@@ -25,7 +23,7 @@ const Heading = ({
     ${when(
       type === "code",
       () => html`<pre><code class=${classMap(derivedClasses)}>${content}</code></pre>`,
-      () => html`<a style=${styleMap({ "text-decoration": "none" })} name=${kebabCase(content)} href=${`#${kebabCase(content)}`}><h2 class=${classMap(derivedClasses)}>${content}</h2></a>`,
+      () => html`<h2 class=${classMap(derivedClasses)}>${content}</h2>`,
     )}
   `;
 };
@@ -41,6 +39,8 @@ const Container = ({
 		"display": "flex",
 		"flex-direction": "column",
 		"gap": "6px",
+    "padding-inline": "12px",
+    "padding-block-end": "12px",
 	},
 	wrapperStyles = {},
 }) => {
@@ -67,7 +67,10 @@ const Container = ({
           "display": "flex",
           "flex-direction": direction,
           "align-items": "flex-start",
-          "padding": withBorder ? "6px" : "0",
+          "justify-content": "center",
+          "padding-inline": withBorder ? "12px" : "0",
+          "padding-block-start": "12px",
+          "padding-block-end": withBorder ? "12px" : "0",
           "border": withBorder ? "1px solid var(--spectrum-gray-200)" : "none",
           "border-radius": withBorder ? "4px" : "0",
           ...spacingStyles,
@@ -103,7 +106,7 @@ export const States = ({
 	)
 });
 
-export const Sizes = ({ Template, direction = "column", ...args }, context) => {
+export const Sizes = ({ Template, direction = "column", ...args } = {}, context = {}) => {
 	const sizes = context?.argTypes?.size?.options ?? [];
 	if (!sizes.length) return nothing;
 
@@ -130,7 +133,7 @@ export const Variants = ({
 	stateData = [],
 	sizeDirection = "column",
 	stateDirection = "row",
-	overlayIsOpen = false,
+  withBorders = true,
 }) => {
 	if (!Template) {
 		throw new Error("Template is required");
@@ -145,8 +148,6 @@ export const Variants = ({
 
 
 		return html`
-      <!-- Underlay should be rendered only once in a testing environment -->
-      ${Underlay({ isOpen: overlayIsOpen }, context)}
       <!-- Simple, clean template preview for non-testing grid views -->
       <div
         style=${styleMap({
@@ -161,6 +162,7 @@ export const Variants = ({
         style=${styleMap({
           "display": window.isChromatic() ? "flex" : "none",
           "flex-direction": "column",
+          "align-items": "flex-start",
           "gap": "60px",
         })}
       >
@@ -189,14 +191,9 @@ export const Variants = ({
               Template = customTemplate;
             }
 
-            // If a test heading is not provided, use the heading from the component data
-            if (typeof testHeading === "undefined") {
-              testHeading = item.heading;
-            }
-
             // Show the border if we are rendering the test in multiple states or if there are several
             // tests in the grid, this helps distinguish between tests
-            const showBorder = withStates || testData.length > 1;
+            const showBorder = withBorders || withStates || testData.length > 1;
 
             const data = { ...args, ...item };
             if (Object.keys(data).includes("isOpen")) {

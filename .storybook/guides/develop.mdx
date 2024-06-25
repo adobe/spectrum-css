@@ -390,7 +390,10 @@ To optimize snapshot usage, we organize our stories into groups when rendered in
 In the `template.js` file:
 
 ```js
-export const AccordionGroup = ({ customStyles = {}, ...args }, context) => {
+export const AccordionGroup = (
+  { customStyles = {}, ...args } = {},
+  context = {},
+) => {
   return html`
     ${Template(args, context)} ${Template(
       {

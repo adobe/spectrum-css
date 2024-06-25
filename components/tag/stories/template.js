@@ -23,7 +23,7 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-}, context) => {
+} = {}, context = {}) => {
 	if(isInvalid) iconName = "Alert";
 
 	return html`
@@ -40,7 +40,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			tabindex=${isDisabled ? "-1" : "0"}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 		>
 			${when(avatarUrl && !isInvalid, () =>
 				Avatar({

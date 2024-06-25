@@ -17,7 +17,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}, context) => {
+} = {}, context = {}) => {
 	let iconName = "Info";
 	if (variant === "negative") iconName = "Alert";
 	if (variant === "positive") iconName = "CheckmarkCircle";

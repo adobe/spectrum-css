@@ -14,7 +14,7 @@ export const Template = ({
 	customStyles = {
 		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
 	},
-}, context) => {
+} = {}, context = {}) => {
 	const withColorLoupeStyles = () => isWithColorLoupe ? {
 		"position": "absolute",
 		"inset-block": "75%",

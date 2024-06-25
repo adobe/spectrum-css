@@ -78,7 +78,7 @@ const Template = ({
 	labelIconName = undefined,
 	position = "right",
 	label = "Split button",
-}, context) => {
+} = {}, context = {}) => {
 	return html`
 		<!-- Note: Only values that differ in express theme are included -->
 		<style>

@@ -25,9 +25,8 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}, context) => {
-	const { globals = {} } = context;
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
 
 	const textDirection = globals.textDirection ?? "ltr";
 	const rtl = !!(textDirection === "rtl");
@@ -132,12 +131,10 @@ export const Template = ({
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}
 			aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}
 			@focusin=${() => {
-				const focusClass = { isFocused: true };
-				updateArgs(focusClass);
+				updateArgs({ isFocused: true });
 			}}
 			@focusout=${() => {
-				const focusClass = { isFocused: false };
-				updateArgs(focusClass);
+				updateArgs({ isFocused: false });
 			}}
 		>
 			<!-- Label region -->

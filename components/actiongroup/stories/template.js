@@ -18,7 +18,7 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	customStyles = {},
-}, context) => {
+} = {}, context = {}) => {
 	return html`
 		<div
 			class=${classMap({

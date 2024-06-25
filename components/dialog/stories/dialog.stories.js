@@ -1,3 +1,4 @@
+import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
@@ -69,6 +70,9 @@ export default {
 			modes: mobile,
 		}
 	},
+	decorators: [
+		withUnderlayWrapper,
+	],
 };
 
 export const Default = DialogGroup.bind({});

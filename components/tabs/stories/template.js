@@ -22,7 +22,7 @@ export const Template = ({
 	iconOnly = false,
 	customStyles = {},
 	content = [],
-}, context) => {
+} = {}, context = {}) => {
 	if (!content || !content.length) {
 		console.warn("Tabs: content required");
 		return html``;
@@ -61,7 +61,7 @@ export const Template = ({
 				[`${rootClass}--compact`]: isCompact,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 		>
 			${when(!isOverflow, () => repeat(
 				content,

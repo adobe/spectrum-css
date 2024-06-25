@@ -18,8 +18,8 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-}) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
 	return html`
 		<div
@@ -31,7 +31,7 @@ export const Template = ({
 				"is-readOnly" : isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			id=${ifDefined(id)}
 		>
 			<input
@@ -39,7 +39,7 @@ export const Template = ({
 				name=${name}
 				class="${rootClass}-input"
 				id="radio-0"
-				readOnly=${isReadOnly ? "readonly" : ""}
+				?readOnly=${isReadOnly}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
 				@change=${() => {

@@ -15,7 +15,7 @@ export const Template = ({
 	customClasses = [],
 	variant,
 	items,
-}, context) => {
+} = {}, context = {}) => {
 	if (variant === "explicit") {
 		return html`
 			<nav

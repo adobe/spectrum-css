@@ -82,7 +82,7 @@ const Template = ({
 	content = [],
 	id,
 	customClasses = [],
-}, context) => {
+} = {}, context = {}) => {
 	if (!content.length) {
 		console.warn("QuickActions: requires content be passed in to render.");
 		return html``;

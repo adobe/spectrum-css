@@ -14,54 +14,33 @@ export const Template = ({
   testId,
   customClasses = [],
   customStyles = {},
-}, context) => html`
-  <div
-    class=${classMap({
-      [rootClass]: true,
-      [`${rootClass}--size${size.toUpperCase()}`]: true,
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}
-    id=${ifDefined(id)}
-    data-test-id=${ifDefined(testId)}
-    style=${ifDefined(styleMap(customStyles))}
-  >
-    <!-- Component mark-up goes here -->
-  </div>
-`;
+}, context) => {
+  return html`
+    <div
+      class=${classMap({
+        [rootClass]: true,
+        [`${rootClass}--size${size.toUpperCase()}`]: true,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+      id=${ifDefined(id)}
+      data-test-id=${ifDefined(testId)}
+      style=${ifDefined(styleMap(customStyles))}
+    >
+      <!-- Component mark-up goes here -->
+    </div>
+  `;
+};
 
-export const {{ pascalCase name }}Group = (args, context) => html`
-  <div style=${styleMap({
-    "display": window.isChromatic() ? "none" : "contents",
-  })}>
-    ${Template(args, context)}
-  </div>
-  <div style=${styleMap({
-    "display": window.isChromatic() ? "flex" : "none",
-		"flex-direction": "column",
-		"align-items": "flex-start",
-		"gap": "32px",
-  })}>
-		${[{
-      heading: "Default",
-      /* Add your variant properties here */
-    }].map(({ heading, ...item }) => html`
-			<div class="spectrum-Typography">
-				${Typography({
-					semantics: "heading",
-					size: "s",
-					content: [heading],
-				}, context)}
-				<div style=${styleMap({
-					"padding": "12px",
-					"border": "1px solid var(--spectrum-gray-200)",
-					"border-radius": "4px",
-				})}>
-					${Template({
-						...args,
-						...item,
-					}, context)}
-				</div>
-			</div>
-		`)}
-  </div>
-`;
+export const {{ pascalCase name }}Group = Variants({
+  Template,
+  testData: [
+    {
+      testHeading: "Default",
+    },
+    {
+      testHeading: "Variant1",
+      /* Add variant specific data here */
+    },
+  ],
+  stateData: [],
+});

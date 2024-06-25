@@ -1,6 +1,5 @@
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Variants } from "@spectrum-css/preview/decorators/utilities.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -25,8 +24,8 @@ export const Template = ({
 	customStyles = {},
 	id,
 	testId,
-}, context) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
 	if (!image && !exampleImage) {
 		console.warn("AssetCard: image is required");
@@ -48,9 +47,15 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			data-test-id=${ifDefined(testId)}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			@click=${() => {
 				updateArgs({ isSelected: !isSelected });
+			}}
+			@focusin=${() => {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${() => {
+				updateArgs({ isFocused: false });
 			}}
 			tabindex="0"
 			role="figure"

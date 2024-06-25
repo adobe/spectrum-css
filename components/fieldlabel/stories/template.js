@@ -20,7 +20,7 @@ export const Template = ({
 	alignment,
 	isDisabled,
 	isRequired,
-}, context) => {
+} = {}, context = {}) => {
 	if (!label) {
 		console.warn("FieldLabel: please provide a label for the field label.");
 	}

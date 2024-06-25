@@ -17,7 +17,7 @@ export const Template = ({
 	isFocused = false,
 	customStyles = {},
 	customClasses = [],
-}, context) => {
+} = {}, context = {}) => {
 	let variantIcon;
 	if (variant === "info") {
 		variantIcon = "Info";

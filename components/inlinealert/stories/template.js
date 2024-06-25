@@ -2,7 +2,6 @@ import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
@@ -15,7 +14,7 @@ export const Template = ({
 	text,
 	variant = "neutral",
 	isClosable = false,
-}, context) => {
+} = {}, context = {}) => {
 	let iconName;
 	switch (variant) {
 		case "info":
@@ -59,7 +58,7 @@ export const Template = ({
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 
 		>
 			<div class="${rootClass}-header">

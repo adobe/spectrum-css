@@ -1,5 +1,4 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -24,8 +23,8 @@ export const Template = ({
 	ariaLabelledby,
 	customStyles = {},
 	customClasses = [],
-}, context) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
 	let iconSize = "75";
 	switch (size) {
@@ -56,7 +55,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 		>
 			<input
 				type="checkbox"

@@ -1,7 +1,6 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { action } from "@storybook/addon-actions";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -33,9 +32,8 @@ export const Template = ({
 	previousHandler,
 	nextHandler,
 	id,
-}, context) => {
-	const { globals = {} } = context;
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
 
 	const lang = globals.lang ?? "en-US";
 
@@ -267,7 +265,7 @@ export const Template = ({
 				[`${rootClass}--padded`]: padded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			id=${ifDefined(id)}
 		>
 			<div class="${rootClass}-header">
@@ -364,17 +362,22 @@ export const Template = ({
 												[`${rootClass}-date`]: true,
 												"is-outsideMonth": thisDay.isOutsideMonth,
 												"is-today": thisDay.isToday,
-												// "is-focused": thisDay.isSelected, @todo
 												"is-range-selection": thisDay.isInRange,
-												// "is-range-start": thisDay.isRangeStart, @todo
-												// "is-range-end": thisDay.isRangeEnd, @todo
+												"is-range-start": thisDay.isRangeStart,
+												"is-range-end": thisDay.isRangeEnd,
 												"is-selected": thisDay.isSelected,
 												"is-selection-start": thisDay.isRangeStart,
 												"is-selection-end": thisDay.isRangeEnd,
 												"is-disabled": isDisabled,
-												"is-focused": isFocused && thisDay.isFocused,
+												"is-focused": (isFocused && thisDay.isFocused) || thisDay.isSelected,
 											})}
 											@click=${onDateClick.bind(null, thisDay)}
+											@focusin=${() => {
+												updateArgs({ isFocused: true });
+											}}
+											@focusout=${() => {
+												updateArgs({ isFocused: false });
+											}}
 											>${thisDay.date.getDate()}</span
 										>
 									</td>`

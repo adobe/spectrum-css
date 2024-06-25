@@ -69,7 +69,7 @@ export const Template = ({
 	items = [],
 	customClasses = [],
 	id,
-}, context) => {
+} = {}, context = {}) => {
 	return html`
 		<ul
 			class=${classMap({

@@ -3,8 +3,6 @@ import { Template as CloseButton } from "@spectrum-css/closebutton/stories/templ
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { Variants } from "@spectrum-css/preview/decorators/utilities.js";
-import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -21,9 +19,8 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	id,
-}, context) => {
-	const { globals = {} } = context;
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
 	const scale = globals.scale ?? "medium";
 
 	const Dialog = html`
@@ -64,7 +61,6 @@ export const Template = ({
 
 	if (showModal) {
 		return html`
-			${Underlay({ isOpen }, context)}
 			${Button({
 				size: "m",
 				variant: "secondary",

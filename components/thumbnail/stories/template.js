@@ -23,8 +23,10 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}, context) => {
-	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)}/>` : svg ? html`${svg}` : "";
+} = {}, context = {}) => {
+	const { updateArgs } = context;
+
+	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)} />` : svg ? html`${svg}` : "";
 
 	const checkerboardContent = html`
 			<div class="${rootClass}-image-wrapper">
@@ -104,9 +106,15 @@ export const Template = ({
 				[`${rootClass}--size${size}`]: typeof size !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-		style=${ifDefined(styleMap(customStyles))}
+		style=${styleMap(customStyles)}
 		id=${ifDefined(id)}
 		@click=${onclick}
+		@focusin=${() => {
+			updateArgs({ isFocused: true });
+		}}
+		@focusout=${() => {
+			updateArgs({ isFocused: false });
+		}}
 	>
 			${when(backgroundColor, () => html`<div class="${rootClass}-background" style=${ifDefined(styleMap({ backgroundColor }))}></div>`)}
 			${OpacityCheckerboard({

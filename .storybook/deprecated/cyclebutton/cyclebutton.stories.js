@@ -55,7 +55,7 @@ export const Default = (({
 	size = "m",
 	isDisabled = false,
 	onclick,
-}, context) => {
+} = {}, context = {}) => {
 	const [{
 		selectedIcon = "Pause",
 		initialIcon = "Play"

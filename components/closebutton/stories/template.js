@@ -15,7 +15,7 @@ export const Template = ({
 	customClasses = [],
 	id,
 	onclick,
-}, context) => {
+} = {}, context = {}) => {
 	return html`
 		<button
 			class=${classMap({

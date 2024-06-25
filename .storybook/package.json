@@ -12,7 +12,7 @@
 	},
 	"exports": {
 		".": "./preview.js",
-		"./decorator": "./decorators/index.js",
+		"./decorators": "./decorators/index.js",
 		"./decorators/*.js": "./decorators/*.js",
 		"./types": "./types/index.js",
 		"./blocks": "./blocks/index.js",
@@ -26,6 +26,7 @@
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
 		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-css/typography": "workspace:^",
 		"@spectrum-css/ui-icons": "workspace:^"
 	},
 	"devDependencies": {

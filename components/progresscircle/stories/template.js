@@ -37,7 +37,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			data-testid=${ifDefined(testId)}
 		>
 			<div class="spectrum-ProgressCircle-track"></div>
