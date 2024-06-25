@@ -21,7 +21,8 @@ export const Template = ({
 	trigger,
 	content = [],
 }, context) => {
-	const textDir = context?.globals?.textDirection ?? "ltr";
+	const { globals = {} } = context;
+	const textDir = globals.textDirection ?? "ltr";
 
 	if (content.length === 0) {
 		console.warn("Popover: Content is required.");

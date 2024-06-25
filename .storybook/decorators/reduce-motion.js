@@ -16,8 +16,6 @@ export const withReducedMotionWrapper = makeDecorator({
 			viewMode,
 		} = context;
 
-		window.__reducedMotion = reducedMotion;
-
 		useEffect(() => {
 			for (const container of fetchContainers(id, viewMode === "docs")) {
 				toggleStyles(container, "reduced-motion", `

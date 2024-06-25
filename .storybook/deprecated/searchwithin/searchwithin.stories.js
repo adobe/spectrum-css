@@ -160,8 +160,7 @@ const Template = ({
 	size = "m",
 	label,
 	placeholder,
-	...globals
-}) => html`
+}, context) => html`
 		<!-- Note: Only values that differ in express theme are included -->
 	<style>
 		.spectrum-SearchWithin {
@@ -179,7 +178,6 @@ const Template = ({
 		style=${ifDefined(styleMap(customStyles))}
 	>
 		${Picker({
-			...globals,
 			size,
 			placeholder: label,
 			label: undefined,
@@ -191,9 +189,8 @@ const Template = ({
 			withSwitch,
 			position: "left",
 			customClasses: [`${rootClass}-picker`],
-		})}
+		}, context)}
 		${Textfield({
-			...globals,
 			size,
 			autocomplete: false,
 			name: "search",
@@ -205,14 +202,12 @@ const Template = ({
 			isLoading,
 			isDisabled,
 			isKeyboardFocused,
-		})}
+		}, context)}
 		${ClearButton({
-			...globals,
 			size,
 			customClasses: [`${rootClass}-clearButton`],
-		})}
+		}, context)}
 		${Popover({
-			...globals,
 			isOpen: isOpen,
 			withTip: false,
 			position: "bottom",
@@ -223,7 +218,6 @@ const Template = ({
 			},
 			content: [
 				Menu({
-					...globals,
 					items: [
 						{ label: "Deselect" },
 						{ label: "Select Inverse" },
@@ -233,9 +227,9 @@ const Template = ({
 						{ label: "Save Selection" },
 						{ label: "Make Work Path", isDisabled: true },
 					],
-				}),
+				}, context),
 			],
-		})}
+		}, context)}
 	</form>
 `;
 

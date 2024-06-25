@@ -17,8 +17,6 @@ export const withTextDirectionWrapper = makeDecorator({
 			viewMode,
 		} = context;
 
-		window.__dir = textDirection;
-
 		useEffect(() => {
 			if (!textDirection) return;
 

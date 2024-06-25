@@ -1,4 +1,4 @@
-import "@spectrum-css/typography";
+// import "@spectrum-css/typography/dist/index.css";
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -7,21 +7,21 @@ import { when } from "lit/directives/when.js";
 import { kebabCase } from "lodash-es";
 
 const Heading = ({
-  type = "heading",
-  content,
-  size = "m",
-  weight,
-  customClasses = [],
+	type = "heading",
+	content,
+	size = "m",
+	weight,
+	customClasses = [],
 }) => {
-  const rootClass = type === "code" ? "spectrum-Code" : "spectrum-Heading";
-  const derivedClasses = {
-    [rootClass]: true,
-    [`${rootClass}--size${size?.toUpperCase()}`]: true,
-    [`${rootClass}--${weight}`]: type !== "code" && typeof weight !== "undefined",
-    ["chromatic-ignore"]: true,
-    ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-  };
-  return html`
+	const rootClass = type === "code" ? "spectrum-Code" : "spectrum-Heading";
+	const derivedClasses = {
+		[rootClass]: true,
+		[`${rootClass}--size${size?.toUpperCase()}`]: true,
+		[`${rootClass}--${weight}`]: type !== "code" && typeof weight !== "undefined",
+		["chromatic-ignore"]: true,
+		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	};
+	return html`
     ${when(
       type === "code",
       () => html`<pre><code class=${classMap(derivedClasses)}>${content}</code></pre>`,
@@ -31,34 +31,35 @@ const Heading = ({
 };
 
 const Container = ({
-  heading,
-  content,
-  type = "heading",
-  level = 1,
-  direction = "row",
-  withBorder = true,
-  containerStyles = {
-    "display": "flex",
-    "flex-direction": "column",
-    "gap": "6px",
-  },
-  wrapperStyles = {},
+	heading,
+	content,
+	type = "heading",
+	level = 1,
+	direction = "row",
+	withBorder = true,
+	containerStyles = {
+		"display": "flex",
+		"flex-direction": "column",
+		"gap": "6px",
+	},
+	wrapperStyles = {},
 }) => {
-  let headingConfig = { size: "l" };
-  let spacingStyles = {
-    "gap": direction === "row" ? "120px" : "32px",
-  };
-  if (level === 2) {
-    headingConfig = { size: "m", weight: "light" };
-    spacingStyles = {
-      "gap": direction === "row" ? "60px" : "32px",
-    };
-  } else if (level === 3) {
-    headingConfig = { size: "s", weight: "light" };
-    spacingStyles = { "gap": "12px" };
-  }
+	let headingConfig = { size: "l" };
+	let spacingStyles = {
+		"gap": direction === "row" ? "120px" : "32px",
+	};
+	if (level === 2) {
+		headingConfig = { size: "m", weight: "light" };
+		spacingStyles = {
+			"gap": direction === "row" ? "60px" : "32px",
+		};
+	}
+	else if (level === 3) {
+		headingConfig = { size: "s", weight: "light" };
+		spacingStyles = { "gap": "12px" };
+	}
 
-  return html`
+	return html`
     <div style=${styleMap(containerStyles)}>
       ${when(heading, () => Heading({ ...headingConfig, type, content: heading }))}
       <div
@@ -80,70 +81,70 @@ const Container = ({
 };
 
 export const States = ({
-  Template,
-  direction = "row",
-  stateData = [],
-  ...args
+	Template,
+	direction = "row",
+	stateData = [],
+	...args
 }, context) => Container({
-  level: 2,
-  direction,
-  withBorder: false,
-  heading: undefined,
-  content: stateData.map(({
-    testHeading = direction === "row" ? html`&nbsp;` : undefined,
-    ...item
-  }) =>
-    Container({
-      heading: stateData.some(({ testHeading }) => testHeading) ? testHeading : undefined,
-      level: 3,
-      withBorder: false,
-      content: Template({ ...args, ...item }, context),
-    })
-  )
+	level: 2,
+	direction,
+	withBorder: false,
+	heading: undefined,
+	content: stateData.map(({
+		testHeading = direction === "row" ? html`&nbsp;` : undefined,
+		...item
+	}) =>
+		Container({
+			heading: stateData.some(({ testHeading }) => testHeading) ? testHeading : undefined,
+			level: 3,
+			withBorder: false,
+			content: Template({ ...args, ...item }, context),
+		})
+	)
 });
 
 export const Sizes = ({ Template, direction = "column", ...args }, context) => {
 	const sizes = context?.argTypes?.size?.options ?? [];
-  if (!sizes.length) return nothing;
+	if (!sizes.length) return nothing;
 
-  const content = sizes.map((size) => Container({
-    heading: `[size=${size}]`,
-    type: "code",
-    level: 3,
-    withBorder: false,
-    content: Template({ ...args, size }, context)
-  }));
+	const content = sizes.map((size) => Container({
+		heading: `[size=${size}]`,
+		type: "code",
+		level: 3,
+		withBorder: false,
+		content: Template({ ...args, size }, context)
+	}));
 
 	return Container({
-      heading: "Sizing",
-      level: 2,
-      direction,
-      content,
-    });
+		heading: "Sizing",
+		level: 2,
+		direction,
+		content,
+	});
 };
 
 export const Variants = ({
-  Template,
-  // Test data defaults to an empty array so that we at least get the base component
-  testData = [{}],
-  stateData = [],
-  sizeDirection = "column",
-  stateDirection = "row",
-  overlayIsOpen = false,
+	Template,
+	// Test data defaults to an empty array so that we at least get the base component
+	testData = [{}],
+	stateData = [],
+	sizeDirection = "column",
+	stateDirection = "row",
+	overlayIsOpen = false,
 }) => {
-  if (!Template) {
-    throw new Error("Template is required");
-  }
+	if (!Template) {
+		throw new Error("Template is required");
+	}
 
-  return (args, context) => {
-    const isOpenInitial = args.isOpen;
-    // If a component is hidden due to the testing preview modes, force the isOpen property to be false
-    if (Object.keys(args).includes("isOpen")) {
-      args.isOpen = window.isChromatic() ? false : isOpenInitial;
-    }
+	return (args, context) => {
+		const isOpenInitial = args.isOpen;
+		// If a component is hidden due to the testing preview modes, force the isOpen property to be false
+		if (Object.keys(args).includes("isOpen")) {
+			args.isOpen = window.isChromatic() ? false : isOpenInitial;
+		}
 
 
-    return html`
+		return html`
       <!-- Underlay should be rendered only once in a testing environment -->
       ${Underlay({ isOpen: overlayIsOpen }, context)}
       <!-- Simple, clean template preview for non-testing grid views -->
@@ -233,25 +234,25 @@ export const Variants = ({
         ${Sizes({ Template, direction: sizeDirection, ...args }, context)}
       </div>
     `;
-  };
+	};
 };
 
 export const renderContent = (content = [], {
-  context = {},
-  args = {},
-  callback = (args, context) => {
-    console.log(JSON.stringify(args, null, 2), JSON.stringify(context, null, 2));
-    return nothing;
-  }
+	context = {},
+	args = {},
+	callback = (args, context) => {
+		console.log(JSON.stringify(args, null, 2), JSON.stringify(context, null, 2));
+		return nothing;
+	}
 } = {}) => {
 	// If the content is not an array, make it an array for easier processing
-  if (!Array.isArray(content)) {
-    content = [content];
-  }
+	if (!Array.isArray(content)) {
+		content = [content];
+	}
 
-  if (content.length === 0) return nothing;
+	if (content.length === 0) return nothing;
 
-  return html`
+	return html`
     ${content.map((c) => {
 			/* If the content is an object (but not a lit object), we need to merge the object with the template */
 			if (typeof c !== "string" && (typeof c === "object" && !c._$litType$)) {

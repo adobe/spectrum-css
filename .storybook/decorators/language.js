@@ -16,8 +16,6 @@ export const withLanguageWrapper = makeDecorator({
 			viewMode,
 		} = context;
 
-		window.__lang = lang ?? "en-US";
-
 		useEffect(() => {
 			for (const container of fetchContainers(id, viewMode === "docs")) {
 				container.lang = lang;

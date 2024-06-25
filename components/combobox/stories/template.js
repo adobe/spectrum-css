@@ -28,9 +28,10 @@ export const Template = ({
 	isLoading = false,
 	selectedDay,
 }, context) => {
+	const { globals = {} } = context;
 	const [, updateArgs] = useArgs();
 
-	const lang = window.__lang ?? "en-US";
+	const lang = globals.lang ?? "en-US";
 
 	// If selectedDay is a string, convert it to a Date object
 	if (typeof selectedDay === "string" && selectedDay.length > 0) {

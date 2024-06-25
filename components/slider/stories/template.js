@@ -26,9 +26,10 @@ export const Template = ({
 	customStyles = {},
 	id,
 }, context) => {
+	const { globals = {} } = context;
 	const [, updateArgs] = useArgs();
-	const textDirection = window.__dir ?? "ltr";
 
+	const textDirection = globals.textDirection ?? "ltr";
 	const rtl = !!(textDirection === "rtl");
 	const rangeLength = max - min;
 	const centerPoint = rangeLength / 2 + min;

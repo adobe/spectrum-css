@@ -22,8 +22,9 @@ export const Template = ({
 	customClasses = [],
 	id,
 }, context) => {
+	const { globals = {} } = context;
 	const [, updateArgs] = useArgs();
-	const scale = context?.globals?.scale ?? "medium";
+	const scale = globals.scale ?? "medium";
 
 	const Dialog = html`
 		<div

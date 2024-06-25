@@ -109,11 +109,12 @@ export const Template = ({
 	uiIcons,
 	uiIconSizes,
 } = {}, context) => {
-	const scale = context?.globals?.scale ?? "medium";
+	const { globals = {}, loaded = {} } = context;
+	const scale = globals.scale ?? "medium";
 
 	if (!workflowIcons || !uiIcons || !uiIconSizes) {
 		const details = fetchIconDetails({
-			icons: context?.loaded?.icons,
+			icons: loaded.icons,
 			workflowIcons,
 			uiIcons,
 			uiIconSizes

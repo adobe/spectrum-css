@@ -26,8 +26,9 @@ export const Template = ({
 	selectedDay,
 	lastDay,
 }, context) => {
+	const { globals = {} } = context;
 	const [, updateArgs] = useArgs();
-	const lang = context?.globals?.lang ?? "en-US";
+	const lang = globals.lang ?? "en-US";
 
 	return html`
 		<div

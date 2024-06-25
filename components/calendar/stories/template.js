@@ -34,9 +34,10 @@ export const Template = ({
 	nextHandler,
 	id,
 }, context) => {
+	const { globals = {} } = context;
 	const [, updateArgs] = useArgs();
 
-	const lang = window.__lang ?? "en-US";
+	const lang = globals.lang ?? "en-US";
 
 	const DOW = [
 		"Sunday",
