@@ -1,6 +1,6 @@
 # Change Log
 
-## 11.0.0-s2-foundations.0
+## 11.0.0-s2-foundations.2
 
 ### Major Changes
 
