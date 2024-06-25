@@ -18,8 +18,7 @@ export const Template = ({
 	customLabel,
 	customStyles = {},
 	id,
-	...globals
-}, context) => html`
+} = {}, context = {}) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -33,7 +32,6 @@ export const Template = ({
 		style=${ifDefined(styleMap(customStyles))}
 	>
 		${IllustratedMessage({
-			...globals,
 			heading: customHeading ?? IllustratedMessageStory.args.heading,
 			description: customDescription ?? IllustratedMessageStory.args.description,
 		}, context)}

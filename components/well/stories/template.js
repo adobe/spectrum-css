@@ -7,7 +7,7 @@ export const Template = ({
 	rootClass = "spectrum-Well",
 	customClasses = [],
 	content = [],
-}, context) => html`
+} = {}, context) => html`
 	<span
 		class=${classMap({
 			[rootClass]: true,

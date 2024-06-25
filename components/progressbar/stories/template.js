@@ -17,8 +17,7 @@ export const Template = ({
 	value,
 	customStyles = {},
 	size = "m",
-	...globals
-}, context) => html`
+} = {}, context = {}) => html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
@@ -39,14 +38,12 @@ export const Template = ({
 			aria-valuemax="100"
 		>
 			${FieldLabel({
-				...globals,
 				size,
 				label,
 				alignment: "",
 				customClasses: [`${rootClass}-label`],
 			}, context)}
 			${FieldLabel({
-				...globals,
 				size,
 				label: indeterminate ? "" : `${value}%`,
 				alignment: "",

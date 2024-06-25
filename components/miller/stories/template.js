@@ -8,8 +8,7 @@ export const Template = ({
 	rootClass = "spectrum-MillerColumns",
 	customClasses = [],
 	columns,
-	...globals
-}, context) => {
+} = {}, context) => {
 	if (!columns) {
 		console.warn("MillerColumns: Column data is required for rendering.");
 		return html``;
@@ -25,10 +24,7 @@ export const Template = ({
 			${columns.map(({ items }) => {
 				return html`
 					<div class="${rootClass}-item">
-						${AssetList({
-							...globals,
-							items,
-						}, context)}
+						${AssetList({ items }, context)}
 					</div>
 				`;
 			})}

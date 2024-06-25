@@ -12,7 +12,7 @@ export const Template = ({
 	items = [],
 	variant,
 	isDragged = false,
-}, context) => {
+} = {}, context) => {
 	const { globals = {} } = context;
 
 	if (globals.context === "express") {

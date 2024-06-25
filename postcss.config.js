@@ -11,7 +11,6 @@ governing permissions and limitations under the License.
 */
 
 const { join } = require("path");
-const { cwd } = require("process");
 
 module.exports = ({
 	file,
@@ -42,7 +41,7 @@ module.exports = ({
 	}
 
 	console.log({
-		"cwd": cwd,
+		"cwd": options.cwd,
 		"file": file,
 		"skipMapping": skipMapping,
 		"referencesOnly": referencesOnly,

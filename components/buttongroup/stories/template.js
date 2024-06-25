@@ -10,7 +10,7 @@ export const Template = ({
 	size = "m",
 	items = [],
 	vertical = false,
-}, context) => {
+} = {}, context) => {
 	const { globals = {} } = context;
 
 	if (globals.context === "express") {
