@@ -121,10 +121,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-colors-20240503210338":
-  version: 0.0.0-s2-foundations-colors-20240503210338
-  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-colors-20240503210338"
-  checksum: 10c0/4058fd50edfcab4171de6136d792db0040f89e46f22606338971dbb97f66529e45ddeecec6c34ccd1fe2c65c846b9a9035dc470f229fcc3e6619052307eaf0c0
+"@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20240603231133":
+  version: 0.0.0-s2-foundations-20240603231133
+  resolution: "@adobe/spectrum-tokens@npm:0.0.0-s2-foundations-20240603231133"
+  checksum: 10c0/1afb94954b73c7fa70d44d320474e2d737f0b5a6297b1a81803614653c72b30397ad1413483bf5306ea23380f12fe35e6e2d7a107d342e63ed1f7780e8ead354
   languageName: node
   linkType: hard
 
@@ -5661,7 +5661,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-colors-20240503210338"
+    "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-20240603231133"
     "@nxkit/style-dictionary": "npm:^5.0.0"
     cssnano: "npm:^7.0.1"
     cssnano-preset-advanced: "npm:^7.0.1"
