@@ -35,11 +35,10 @@ export const Template = ({
     >
       <div class="${rootClass}-fill">
         ${Icon({
-          ...globals,
           size,
           iconName: "ChevronUp75",
           customClasses: [`${rootClass}-icon`],
-        })}
+        }, context)}
       </div>
     </button>
     <button
@@ -59,11 +58,10 @@ export const Template = ({
     >
       <div class="${rootClass}-fill">
         ${Icon({
-          ...globals,
           size,
           iconName: "ChevronDown75",
           customClasses: [`${rootClass}-icon`],
-        })}
+        }, context)}
       </div>
     </button>
   ` : html`

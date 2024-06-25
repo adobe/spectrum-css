@@ -37,10 +37,6 @@ export const withContextWrapper = makeDecorator({
 			},
 		};
 
-		window.__color = color;
-		window.__context = context;
-		window.__scale = scale;
-
 		useEffect(() => {
 			const isExpress = Boolean(context === "express");
 			const isLegacy = Boolean(context !== "spectrum2");

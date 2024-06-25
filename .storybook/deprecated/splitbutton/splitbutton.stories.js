@@ -76,9 +76,8 @@ const Template = ({
 	iconName = "ChevronDown100",
 	labelIconName = undefined,
 	position = "right",
-	label = "Split Button",
-	...globals
-}) => {
+	label = "Split button",
+}, context) => {
 	return html`
 		<!-- Note: Only values that differ in express theme are included -->
 		<style>
@@ -118,7 +117,6 @@ const Template = ({
 			})}
 		>
 			${Button({
-				...globals,
 				variant,
 				size,
 				iconName: position === "right"
@@ -132,9 +130,8 @@ const Template = ({
 						: "spectrum-SplitButton-trigger",
 					...customFirstButtonClasses
 				]
-			})}
+			}, context)}
 			${Button({
-				...globals,
 				variant,
 				size,
 				iconName: position === "right"
@@ -149,11 +146,10 @@ const Template = ({
 						: "spectrum-SplitButton-action",
 					...customLastButtonClasses
 				]
-			})}
+			}, context)}
 		</div>
 	`;
 };
-
 
 export const Default = Template.bind({});
 Default.args = {};

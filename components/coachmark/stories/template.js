@@ -18,7 +18,8 @@ export const Template = ({
 	hasImage,
 	isOpen = true,
 }, context) => {
-	const scale = context?.globals?.scale ?? "medium";
+	const { globals = {} } = context;
+	const scale = globals.scale ?? "medium";
 
 	return html`
 		<div style=${styleMap({"margin-top": "8px"})}>
