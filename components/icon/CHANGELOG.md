@@ -1,5 +1,16 @@
 # Change Log
 
+## 8.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+### Patch Changes
+
+- Updated dependencies [[`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.2
+
 ## 8.0.0-s2-foundations.1
 
 ### Minor Changes
