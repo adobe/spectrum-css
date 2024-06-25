@@ -8,7 +8,7 @@ export default {
 	component: "Rating",
 	argTypes: {
 		isEmphasized: {
-			name: "Emphasized styling",
+			name: "Emphasized",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -36,25 +36,28 @@ export default {
 			control: "boolean",
 		},
 		isReadOnly: {
-			name: "Read only",
+			name: "Read-only",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "State",
 			},
 			control: "boolean",
 		},
 		max: {
 			name: "Maximum value",
+			description: "The total number of stars. Star ratings should always have 5 available stars. This shouldn't be increased or decreased to fit various containers.",
 			type: { name: "number" },
 			table: {
 				type: { summary: "number" },
 				category: "Content",
+				disable: true,
 			},
 			control: { type: "number" },
 		},
 		value: {
 			name: "Value",
+			description: "The current rating, represented by the number of selected stars.",
 			type: { name: "number" },
 			table: {
 				type: { summary: "number" },
@@ -67,6 +70,8 @@ export default {
 	args: {
 		rootClass: "spectrum-Rating",
 		isDisabled: false,
+		isEmphasized: false,
+		isReadOnly: false,
 		max: 5,
 		value: 3,
 	},
@@ -75,7 +80,11 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
+/**
+ * A non-interactive rating.
+ */
 export const ReadOnly = Template.bind({});
+ReadOnly.storyName = "Read-only";
 ReadOnly.args = {
 	isReadOnly: true,
 };
@@ -86,6 +95,7 @@ Emphasized.args = {
 };
 
 export const ReadOnlyEmphasized = Template.bind({});
+ReadOnlyEmphasized.storyName = "Read-only, emphasized";
 ReadOnlyEmphasized.args = {
 	isEmphasized: true,
 	isReadOnly: true,
@@ -96,8 +106,9 @@ Disabled.args = {
 	isDisabled: true,
 };
 
+// @todo This VRT only story can be removed when Express is tested via Chromatic modes.
 export const Express = Template.bind({});
-Express.tags = ["vrt-only"];
 Express.args = {
 	express: true,
 };
+Express.tags = ["!dev", "!autodocs"];
