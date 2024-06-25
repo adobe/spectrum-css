@@ -31,7 +31,9 @@ export const Template = ({
 			[`${rootClass}--${layout}`]: typeof layout !== "undefined",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
+		role=${inputType == "radio" ? "radiogroup" : "group"}
 		aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
+		aria-readonly=${ifDefined(isReadOnly && inputType == "radio" ? "true" : undefined)}
 	>
 		${FieldLabel({
 			...globals,
