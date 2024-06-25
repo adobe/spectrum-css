@@ -13,7 +13,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	isCardAssetOverride = false,
-}, context) => {
+} = {}, context = {}) => {
 	const { globals = {} } = context;
 
 	if (globals.context === "express") {

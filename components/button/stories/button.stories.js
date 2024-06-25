@@ -169,7 +169,7 @@ export default {
  * Multiple button variations displayed in one story template.
  * Used as the base template for the stories.
  */
-const CustomButton = ({ iconName, ...args }, context) => html`
+const CustomButton = ({ iconName, ...args } = {}, context = {}) => html`
 	${Template({
 		...args,
 		iconName: undefined,

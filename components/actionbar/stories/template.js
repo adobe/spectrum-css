@@ -17,7 +17,7 @@ export const Template = ({
 	isFixed = false,
 	isFlexible = false,
 	customClasses = [],
-}, context) => {
+} = {}, context) => {
 	const { globals = {} } = context;
 
 	if (globals.context === "express") {
@@ -95,25 +95,5 @@ export const ActionBarGroup = (args, context) => html`
 			...args,
 			isEmphasized: true,
 		}, context)}
-	</div>
-`;
-
-export const ActionBarGroup = (args) => html`
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "none" : undefined,
-	})}>
-		${Template(args)}
-	</div>
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
-		"flex-direction": "column",
-		"flex-wrap": "nowrap",
-		"gap": "16px"
-	})}>
-		${Template(args)}
-		${Template({
-			...args,
-			isEmphasized: true,
-		})}
 	</div>
 `;

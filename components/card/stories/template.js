@@ -33,7 +33,7 @@ export const Template = ({
 	customClasses = [],
 	id,
 	role,
-}, context) => {
+} = {}, context) => {
 	const [, updateArgs] = useArgs();
 	const { globals = {} } = context;
 

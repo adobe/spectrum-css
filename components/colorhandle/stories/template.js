@@ -14,8 +14,7 @@ export const Template = ({
 	customStyles = {
 		"--spectrum-picked-color": "rgba(255, 0, 0, 50%)",
 	},
-	...globals
-}, context) => {
+} = {}, context) => {
 	const withColorLoupeStyles = () => isWithColorLoupe ? {
 		"position": "absolute",
 		"inset-block": "75%",
@@ -24,7 +23,6 @@ export const Template = ({
 
 	return (
 		OpacityCheckerboard({
-			...globals,
 			customClasses: [
 				`${rootClass}`,
 				...!isDisabled && isFocused ? ["is-focused"] : [],
@@ -35,13 +33,12 @@ export const Template = ({
 				<div class="${rootClass}-inner"></div>
 				${when(isWithColorLoupe, () => html`
 					${ColorLoupe({
-						...globals,
 						isOpen: true,
 						customStyles: {
 							"inset-inline-start": "unset",
 							"inset-block-start": "unset",
 						}
-					})}
+					}, context)}
 				`)}
 			`],
 			customStyles: {

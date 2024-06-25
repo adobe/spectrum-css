@@ -1,9 +1,12 @@
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 import { when } from "lit/directives/when.js";
+import { uiIconSizes, uiIconsWithDirections } from "./utilities.js";
+
 import "../index.css";
 
 /**
@@ -104,8 +107,8 @@ export const Template = ({
 	customClasses = [],
 	icons,
 	useRef = false,
-	...globals
-} = {}, context) => {
+} = {}, context = {}) => {
+	const { globals = {}, loaded = {} } = context;
 	let {
 		scale = "medium",
 		workflowIcons,
@@ -113,9 +116,16 @@ export const Template = ({
 		uiIconSizes,
 	} = globals;
 
+	if (globals.context === "express") {
+		import("../themes/express.css");
+	}
+	else if (globals.context === "legacy") {
+		import("../themes/legacy.css");
+	}
+
 	if (!workflowIcons || !uiIcons || !uiIconSizes) {
 		const details = fetchIconDetails({
-			icons: context?.loaded?.icons,
+			icons: loaded?.icons,
 			workflowIcons,
 			uiIcons,
 			uiIconSizes
@@ -211,6 +221,8 @@ export const Template = ({
 				break;
 		}
 
+		console.log(iconName, idKey, sizeVal);
+
 		idKey += sizeVal;
 		iconName += sizeVal;
 	}
@@ -276,6 +288,8 @@ export const Template = ({
  */
 export const IconGroup = (args, context) => {
 	let icons = context?.loaded?.icons ?? {};
+	const sizes = context?.argTypes?.size?.options ?? ["xxs", "xs", "s", "m", "l", "xl"];
+
 	const {
 		workflowIcons,
 		uiIcons,
@@ -313,7 +327,7 @@ export const IconGroup = (args, context) => {
 		<div style=${styleMap({
 			display: window.isChromatic() ? "none" : undefined,
 		})}>
-			${Template({ ...args, icons, workflowIcons, uiIcons, uiIconSizes })}
+			${Template({ ...args, icons, workflowIcons, uiIcons, uiIconSizes }, context)}
 		</div>
 		<div style=${styleMap({
 			display: window.isChromatic() ? undefined : "none",
@@ -326,8 +340,8 @@ export const IconGroup = (args, context) => {
 						"margin-block-end": "16px",
 					})}
 				>
-					${["xs","s","m","l","xl","xxl"].map(
-						(size) => Template({ ...args, ...row_args, size, icons, workflowIcons, uiIcons, uiIconSizes })
+					${sizes.map(
+						(size) => Template({ ...args, ...row_args, size, icons, workflowIcons, uiIcons, uiIconSizes }, context)
 					)}
 				</div>`
 			)}
@@ -340,10 +354,10 @@ export const IconGroup = (args, context) => {
 						})}
 					>
 						${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
-							Template({ ...args, setName: "ui", iconName: iconName + iconSize, icons, workflowIcons, uiIcons, uiIconSizes  })
+							Template({ ...args, setName: "ui", iconName: iconName + iconSize, icons, workflowIcons, uiIcons, uiIconSizes }, context)
 						)}
 						${when(uiIconSizes[iconName]?.length == 0, () =>
-							Template({ ...args, setName: "ui", iconName, icons, workflowIcons, uiIcons, uiIconSizes  })
+							Template({ ...args, setName: "ui", iconName, icons, workflowIcons, uiIcons, uiIconSizes }, context)
 						)}
 					</div>`
 				)}
@@ -351,3 +365,233 @@ export const IconGroup = (args, context) => {
 		</div>
 	`;
 };
+
+/**
+ * Chromatic VRT template that displays multiple icons to cover various options.
+ */
+export const TestTemplate = (args, context) => {
+	args.iconName = args.iconName ?? args.uiIconName;
+	args.setName = args.setName ?? (args.uiIconName ? "ui" : "workflow");
+	const sizes = context?.argTypes?.size?.options ?? ["xxs", "xs", "s", "m", "l", "xl"];
+
+	return html`
+		<div style=${styleMap({
+			display: window.isChromatic() ? "none" : undefined,
+		})}>
+			${Template(args, context)}
+		</div>
+		<div style=${styleMap({
+			display: window.isChromatic() ? undefined : "none",
+		})}>
+			${[
+				{
+					setName: "workflow",
+					iconName: "Alert",
+					fill: "var(--spectrum-negative-content-color-default)",
+				},
+				{
+					setName: "workflow",
+					iconName: "Hand",
+				},
+				{
+					setName: "workflow",
+					iconName: "Help",
+				},
+				{
+					setName: "workflow",
+					iconName: "ArrowLeft",
+				},
+				{
+					setName: "workflow",
+					iconName: "ArrowRight",
+				},
+				{
+					setName: "workflow",
+					iconName: "ChevronDown",
+				}
+			].map((row_args) => html`
+				<div
+					style=${styleMap({
+						"display": "flex",
+						"gap": "16px",
+						"margin-block-end": "16px",
+					})}
+				>
+					${sizes.map(
+						(size) => Template({ ...args, ...row_args, size })
+					)}
+				</div>`
+			)}
+			<div style="margin-top:32px;">
+				${uiIconsWithDirections.map(iconName => html`
+					<div
+						style=${styleMap({
+							"display": "flex",
+							"gap": "16px",
+						})}
+					>
+						${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
+							Template({ ...args, setName: "ui", iconName: iconName + iconSize })
+						)}
+						${when(uiIconSizes[iconName]?.length == 0, () =>
+							Template({ ...args, setName: "ui", iconName })
+						)}
+					</div>`
+				)}
+			</div>
+		</div>
+	`;
+};
+
+/**
+ * Display all icon sizes for the Docs page.
+ */
+export const WorkflowSizingTemplate = (args, context) => {
+	const sizes = context?.argTypes?.size?.options ?? ["xxs", "xs", "s", "m", "l", "xl"];
+	return html`
+		<div
+			style=${styleMap({
+				"display": "flex",
+				"gap": "24px",
+				"flexWrap": "wrap",
+			})}
+		>
+			${sizes.map(
+				(size) => html`
+					<div
+						style=${styleMap({
+							"display": "flex",
+							"gap": "16px",
+							"flexDirection": "column",
+							"alignItems": "center",
+							"flexBasis": "80px",
+						})}
+					>
+						${Typography({
+							semantics: "detail",
+							size: "s",
+							content: [
+								{
+									xxs: "Extra-extra-small",
+									xs: "Extra-small",
+									s: "Small",
+									m: "Medium",
+									l: "Large",
+									xl: "Extra-large",
+									xxl: "Extra-extra-large",
+								}[size],
+							],
+							customClasses: ["chromatic-ignore"],
+							customStyles: {
+								"white-space": "nowrap",
+								"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+							}
+						}, context)}
+						${Template({ ...args, size }, context)}
+					</div>
+				`
+			)}
+		</div>
+	`;
+};
+
+
+/**
+ * Helper template function to display multiple icons using an array of icon names.
+ */
+const IconListTemplate = (args, iconsList = []) => html`
+	<div
+		style=${styleMap({
+			"display": "flex",
+			"gap": "32px",
+			"flexWrap": "wrap",
+		})}
+	>
+		${iconsList.map(
+			(iconName) => Template({
+				...args,
+				iconName,
+			})
+		)}
+	</div>
+`;
+
+/**
+ * Display examples of multiple workflow icons.
+ */
+export const WorkflowDefaultTemplate = (args) => html`
+	${IconListTemplate(
+		{
+			...args,
+			setName: "workflow",
+			size: "xl",
+		},
+		[
+			"Alert",
+			"Asset",
+			"Actions",
+			"ArrowDown",
+			"Camera",
+			"Copy",
+			"DeviceDesktop",
+			"Download",
+			"FilterAdd",
+			"Form",
+			"Light",
+			"Polygon",
+		]
+	)}
+`;
+
+/**
+ * Display examples of all directions of a single UI arrow.
+ */
+export const UIArrowsTemplate = (args) => html`
+	${IconListTemplate(
+		{
+			...args,
+			setName: "ui",
+		},
+		[
+			"ArrowRight100",
+			"ArrowLeft100",
+			"ArrowDown100",
+			"ArrowUp100",
+		]
+	)}
+`;
+
+/**
+ * Display examples of multiple UI icons.
+ */
+export const UIDefaultTemplate = (args) => html`
+	<div style="margin-block-end: 32px;">
+		${IconListTemplate(
+			{
+				...args,
+				setName: "ui",
+			},
+			[
+				"Asterisk100",
+				"Asterisk200",
+				"Asterisk300",
+			]
+		)}
+	</div>
+	<div>
+		${IconListTemplate(
+			{
+				...args,
+				setName: "ui",
+			},
+			[
+				"ChevronDown50",
+				"ChevronDown75",
+				"ChevronDown100",
+				"ChevronDown200",
+				"ChevronDown300",
+				"ChevronDown400",
+			]
+		)}
+	</div>
+`;

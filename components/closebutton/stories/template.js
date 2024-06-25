@@ -15,8 +15,7 @@ export const Template = ({
 	customClasses = [],
 	id,
 	onclick,
-	...globals
-}, context) => {
+} = {}, context = {}) => {
 	return html`
 		<button
 			class=${classMap({
@@ -33,7 +32,6 @@ export const Template = ({
 			@click=${onclick}
 		>
 			${Icon({
-				...globals,
 				size,
 				iconName: "Cross",
 				customClasses: [`${rootClass}-UIIcon`],
