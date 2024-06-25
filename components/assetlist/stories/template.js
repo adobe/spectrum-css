@@ -20,7 +20,7 @@ export const AssetListItem = ({
 	isSelected = false,
 	isBranch = false,
 	onclick = () => {},
-}, context) => {
+} = {}, context) => {
 	return html`
 		<li
 			class=${classMap({
@@ -76,7 +76,7 @@ export const Template = ({
 	items = [],
 	customClasses = [],
 	id,
-}, context) => {
+} = {}, context) => {
 	if (!items) return html``;
 	const { globals = {} } = context;
 

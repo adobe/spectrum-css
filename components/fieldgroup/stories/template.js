@@ -21,8 +21,7 @@ export const Template = ({
 	items,
 	fieldLabel,
 	helpText,
-	...globals
-}, context) => html`
+} = {}, context) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -34,7 +33,6 @@ export const Template = ({
 		aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
 	>
 		${FieldLabel({
-			...globals,
 			isRequired,
 			size: "m",
 			label: fieldLabel,
@@ -44,20 +42,17 @@ export const Template = ({
 		<div class="${rootClass}InputLayout">
 			${inputType === "radio" ? items.map((item) =>
 					Radio({
-						...globals,
 						...item,
 						isReadOnly,
 						name: "field-group-example",
 						customClasses: [`${rootClass}-item`],
 					}, context)) : items.map((item) =>
 					Checkbox({
-					...globals,
 					...item,
 					isReadOnly,
 					customClasses: [`${rootClass}-item`],
 					}, context))}
 			${HelpText({
-				...globals,
 				size: "m",
 				text: helpText,
 				variant: isInvalid ? "negative" : "neutral",

@@ -28,7 +28,7 @@ export const Template = ({
 	previousHandler,
 	nextHandler,
 	id,
-}, context) => {
+} = {}, context = {}) => {
 	const [, updateArgs] = useArgs();
 	const { globals = {} } = context;
 

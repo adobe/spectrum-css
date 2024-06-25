@@ -21,7 +21,7 @@ export const Template = ({
 	isDropTarget = false,
 	customClasses = [],
 	id,
-}, context) => {
+} = {}, context = {}) => {
 	const [, updateArgs] = useArgs();
 	const { globals = {} } = context;
 

@@ -22,8 +22,7 @@ export const Template = ({
 	iconOnly = false,
 	customStyles = {},
 	content = [],
-	...globals
-}, context) => {
+} = {}, context) => {
 	if (!content || !content.length) {
 		console.warn("Tabs: content required");
 		return html``;
@@ -33,21 +32,18 @@ export const Template = ({
 	const isHorizontal = orientation === "horizontal";
 	const isOverflow = orientation === "overflow";
 
-	const selectionIndicator = (isSelected) => when(
-		isSelected,
-		() => html`
-			<div
-				class="${rootClass}-selectionIndicator"
-				style=${ifDefined(
-					styleMap({
-						blockSize: isVertical ? "100%" : undefined,
-						inlineSize: !isVertical ? "100%" : undefined,
-						maxInlineSize: isOverflow ? "50px" : undefined,
-						marginInlineStart: isVertical ? "calc(-1 * var(--spectrum-tabs-start-to-edge))" : undefined,
-					})
-				)}
-			></div>`
-	);
+	const selectionIndicator = html`
+		<div
+			class="${rootClass}-selectionIndicator"
+			style=${ifDefined(
+				styleMap({
+					blockSize: isVertical ? "100%" : undefined,
+					inlineSize: !isVertical ? "100%" : undefined,
+					maxInlineSize: isOverflow ? "50px" : undefined,
+					marginInlineStart: isVertical ? "calc(-1 * var(--spectrum-tabs-start-to-edge))" : undefined,
+				})
+			)}
+		></div>`;
 
 	return html`
 		<div
@@ -80,7 +76,6 @@ export const Template = ({
 							>
 								${when(item.icon, () =>
 									Icon({
-										...globals,
 										iconName: item.icon,
 										size
 									}, context)
@@ -90,7 +85,7 @@ export const Template = ({
 										${item.label}
 									</span>
 								`)}
-								${selectionIndicator(item.isSelected)}
+								${when(item.isSelected, () => selectionIndicator)}
 							</div>
 						`;
 					}
@@ -103,7 +98,7 @@ export const Template = ({
 					isQuiet: true,
 					size,
 					isOpen,
-					placeholder: !iconOnly ? content?.[0].label : Icon({ ...globals, iconName: content?.[0].icon, size }, context),
+					placeholder: !iconOnly ? content?.[0].label : Icon({ iconName: content?.[0].icon, size }, context),
 					name: content?.[0].label,
 					id: "tab-selector",
 					customPopoverStyles: {

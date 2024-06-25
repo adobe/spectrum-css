@@ -24,7 +24,7 @@ export const Template = ({
 	icon = false,
 	id,
 	customStyles = {},
-}, context) => {
+} = {}, context) => {
 	const [, updateArgs] = useArgs();
 	const { globals = {} } = context;
 
@@ -56,7 +56,7 @@ export const Template = ({
           size: "m",
           iconName: "Alert",
           customClasses: [`${rootClass}-icon`],
-        }, context)) }
+        }, context))}
       </div>
       ${Divider({
           horizontal: true,

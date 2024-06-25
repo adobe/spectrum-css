@@ -14,7 +14,7 @@ export const Template = ({
 	hasLink,
 	id,
 	customClasses = [],
-}, context) => {
+} = {}, context = {}) => {
 	const { globals = {} } = context;
 
 	if (globals.context === "express") {

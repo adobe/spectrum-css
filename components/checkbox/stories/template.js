@@ -24,7 +24,7 @@ export const Template = ({
 	ariaLabelledby,
 	customStyles = {},
 	customClasses = [],
-}, context) => {
+} = {}, context = {}) => {
 	const [, updateArgs] = useArgs();
 	const { globals = {} } = context;
 

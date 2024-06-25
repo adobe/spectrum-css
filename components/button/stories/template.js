@@ -32,7 +32,7 @@ export const Template = ({
 	isPending = false,
 	ariaExpanded,
 	ariaControls,
-}, context) => {
+} = {}, context = {}) => {
 	const [, updateArgs] = useArgs();
 	const { globals = {} } = context;
 

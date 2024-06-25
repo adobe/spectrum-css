@@ -19,7 +19,7 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	customStyles = {},
-}, context) => {
+} = {}, context = {}) => {
 	if (!Array.isArray(content)) {
 		content = [content];
 	}

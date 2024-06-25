@@ -25,10 +25,10 @@ export const Template = ({
 	readOnly = false,
 	selectedDay,
 	lastDay,
-	...globals
-}, context) => {
+} = {}, context) => {
 	const [, updateArgs] = useArgs();
-	const lang = window.__lang;
+	const { globals = {} } = context;
+	const lang = globals.lang ?? "en-US";
 
 	return html`
 		<div
@@ -51,7 +51,6 @@ export const Template = ({
 			aria-haspopup="dialog"
 		>
 			${TextField({
-				...globals,
 				size: "m",
 				isQuiet,
 				isDisabled,
@@ -68,7 +67,6 @@ export const Template = ({
 			}, context)}
 			${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
 			${when(isRange, () => TextField({
-				...globals,
 				size: "m",
 				isQuiet,
 				isDisabled,
@@ -83,7 +81,6 @@ export const Template = ({
 					: undefined,
 			}, context))}
 			${PickerButton({
-				...globals,
 				customClasses: [`${rootClass}-button`],
 				size: "m",
 				iconType: "workflow",
@@ -101,7 +98,6 @@ export const Template = ({
 			}, context)}
 			${when(!readOnly && !isDisabled, () => html`
 				${Popover({
-					...globals,
 					isOpen: isOpen && !isDisabled && !readOnly,
 					withTip: false,
 					position: "bottom",

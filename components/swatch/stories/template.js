@@ -19,8 +19,7 @@ export const Template = ({
 	swatchColor,
 	customStyles = {},
 	id,
-	...globals
-}, context) => {
+} = {}, context) => {
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -56,12 +55,13 @@ export const Template = ({
 			${OpacityCheckerboard({
 				customClasses: [`${rootClass}-fill`],
 				content: [
-					...(isDisabled ? [Icon({
-						...globals,
-						customClasses: [`${rootClass}-disabledIcon`],
-						setName: "workflow",
-						iconName: "Cancel",
-					}, context)] : []),
+					...(isDisabled ? [
+						Icon({
+							customClasses: [`${rootClass}-disabledIcon`],
+							setName: "workflow",
+							iconName: "Cancel",
+						}, context)
+					] : []),
 				]
 			}, context)}
 		</div>

@@ -15,7 +15,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}, context) => html`
+} = {}, context = {}) => html`
     <form
         class=${classMap({
             [rootClass]: true,

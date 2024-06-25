@@ -15,7 +15,7 @@ export const Template = ({
 	variant,
 	hasActionButton,
 	customClasses = [],
-}, context) => {
+} = {}, context) => {
 	const iconName =
 		variant === "negative" ? "Alert" : variant === "info" ? "Info" : "";
 
