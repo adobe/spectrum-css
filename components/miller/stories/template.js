@@ -8,7 +8,7 @@ export const Template = ({
 	rootClass = "spectrum-MillerColumns",
 	customClasses = [],
 	columns = [],
-}, context) => {
+} = {}, context = {}) => {
 	if (!columns || !columns.length) {
 		console.warn("MillerColumns: Column data is required for rendering.");
 	}

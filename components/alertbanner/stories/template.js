@@ -16,10 +16,7 @@ export const Template = ({
 	variant,
 	hasActionButton,
 	customClasses = [],
-}) => {
-	const iconName =
-		variant === "negative" ? "Alert" : variant === "info" ? "Info" : "";
-
+} = {}, context = {}) => {
 	return html`
 		<div
 			class=${classMap({
@@ -29,13 +26,24 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 		>
-			<div class="${rootClass}-body">
-				<div class="${rootClass}-content">
-					${when(iconName, () => Icon({
-						iconName,
-						customClasses: [`${rootClass}-icon`],
-					}))}
-					<p class="${rootClass}-text">${text}</p>
+			<div class=${classMap({
+				[`${rootClass}-body`]: true
+			})}>
+				<div class=${classMap({
+					[`${rootClass}-content`]: true
+				})}>
+					${when(
+						["negative", "info"].some(type => variant === type),
+						() => Icon({
+							iconName: variant === "negative" ? "Alert" : "Info",
+							customClasses: [`${rootClass}-icon`],
+						}, context)
+					)}
+					${when(text, () => html`
+						<p class=${classMap({
+							[`${rootClass}-text`]: true
+						})}>${text}</p>
+					`)}
 				</div>
 				${when(hasActionButton, () =>
 					Button({
@@ -43,20 +51,22 @@ export const Template = ({
 						staticColor: "white",
 						treatment: "outline",
 						label: "Action",
-					})
+					}, context)
 				)}
 			</div>
-			<div class="${rootClass}-end">
+			<div class=${classMap({
+				[`${rootClass}-end`]: true
+			})}>
 				${Divider({
 					vertical: true,
 					size: "s",
 					tag: "div",
-				})}
+				}, context)}
 				${CloseButton({
 					size: "m",
 					staticColor: "white",
 					onclick,
-				})}
+				}, context)}
 			</div>
 		</div>
 	`;

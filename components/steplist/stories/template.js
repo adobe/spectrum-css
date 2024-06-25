@@ -17,7 +17,7 @@ export const SteplistItem = ({
 	isComplete = false,
 	isSelected = false,
 	id,
-}, context) => {
+} = {}, context = {}) => {
 	const labelMarkup =
 		!isSmall && !withTooltip && typeof label !== "undefined"
 			? html`<span class="spectrum-Steplist-label">${label}</span>`
@@ -79,7 +79,7 @@ export const Template = ({
 	withTooltip = false,
 	id,
 	customClasses = [],
-}, context) => {
+} = {}, context = {}) => {
 	if (!items || !items.length) return html``;
 
 	return html`

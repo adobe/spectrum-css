@@ -20,13 +20,9 @@ export const Template = ({
 	triggerId = "trigger",
 	trigger,
 	content = [],
-}, context) => {
+} = {}, context = {}) => {
 	const { globals = {} } = context;
 	const textDir = globals.textDirection ?? "ltr";
-
-	if (content.length === 0) {
-		console.warn("Popover: Content is required.");
-	}
 
 	const nestedPopover = id === "popover-nested" || id === "popover-nested-2";
 
@@ -215,7 +211,7 @@ export const Template = ({
 				[`${rootClass}--${position}`]: typeof position !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			role="presentation"
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId ?? id)}

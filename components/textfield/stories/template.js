@@ -10,6 +10,47 @@ import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
+/**
+ * @typedef API
+ * @property {string} [rootClass="spectrum-Textfield"]
+ * @property {string} [size="m"]
+ * @property {string[]} [customClasses=[]]
+ * @property {string[]} [customInputClasses=[]]
+ * @property {string[]} [customIconClasses=[]]
+ * @property {string[]} [customProgressCircleClasses=[]]
+ * @property {Record<string, string>} [customStyles={}]
+ * @property {boolean} [isInvalid=false]
+ * @property {boolean} [isValid=false]
+ * @property {boolean} [multiline=false]
+ * @property {boolean} [grows=false]
+ * @property {boolean} [isQuiet=false]
+ * @property {boolean} [isFocused=false]
+ * @property {boolean} [isDisabled=false]
+ * @property {boolean} [isRequired=false]
+ * @property {boolean} [isReadOnly=false]
+ * @property {boolean} [isKeyboardFocused=false]
+ * @property {boolean} [isLoading=false]
+ * @property {boolean} [displayLabel=false]
+ * @property {"top"|"side"} [labelPosition="top"]
+ * @property {string} [labelText]
+ * @property {string} [iconName]
+ * @property {string} [iconSet]
+ * @property {string} [pattern]
+ * @property {string|undefined} [placeholder]
+ * @property {string|undefined} [name]
+ * @property {string|undefined} [id]
+ * @property {HTMLInputElement[value]|HTMLTextAreaElement[value]} [value]
+ * @property {HTMLInputElement[type]} [type="text"]
+ * @property {boolean} [autocomplete=true]
+ * @property {Function} [onclick]
+ */
+
+/**
+ *
+ * @param {API} args
+ * @param {import('@storybook/types').StoryContext<import('@storybook/web-components').WebComponentsRenderer, API>} context
+ * @returns {import('lit').TemplateResult}
+ */
 export const Template = ({
 	rootClass = "spectrum-Textfield",
 	size = "m",
@@ -42,7 +83,10 @@ export const Template = ({
 	autocomplete = true,
 	onclick,
 	customStyles = {},
-}, context) => {
+} = {}, context = {}) => {
+	const { updateArgs } = context;
+
+	// Override icon name and set if the field is invalid or valid
 	if (isInvalid) {
 		iconName = "Alert";
 		iconSet = "workflow";
@@ -70,17 +114,19 @@ export const Template = ({
 				"is-readOnly": isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			@click=${onclick}
-			@focusin=${(e) => {
-				const focusClass = e.target?.classList?.contains("focus-ring");
-				e.target.classList.toggle("is-keyboardFocused", focusClass);
-				e.target.classList.toggle("is-focused", focusClass);
+			@focusin=${() => {
+				updateArgs({
+					isFocused: true,
+					isKeyboardFocused: true
+				});
 			}}
-			@focusout=${(e) => {
-				const focusClass = e.target?.classList?.contains("focus-ring");
-				e.target.classList.toggle("is-keyboardFocused", focusClass);
-				e.target.classList.toggle("is-focused", focusClass);
+			@focusout=${() => {
+				updateArgs({
+					isFocused: false,
+					isKeyboardFocused: false
+				});
 			}}
 			id=${ifDefined(id)}
 		>
@@ -104,11 +150,11 @@ export const Template = ({
 				placeholder=${ifDefined(placeholder)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
-				.value=${ifDefined(value)}
-				autocomplete=${autocomplete ? undefined : "off"}
+				.value=${value}
+				autocomplete=${ifDefined(autocomplete ? undefined : "off")}
 				?required=${isRequired}
 				?disabled=${isDisabled}
-				?readonly=${ifDefined(isReadOnly)}
+				?readonly=${isReadOnly}
 				pattern=${ifDefined(pattern)}
 				class=${classMap({
 					[`${rootClass}-input`]: true,
@@ -120,11 +166,11 @@ export const Template = ({
 				placeholder=${ifDefined(placeholder)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
-				.value=${ifDefined(value)}
-				autocomplete=${autocomplete ? undefined : "off"}
+				.value=${value}
+				autocomplete=${ifDefined(autocomplete ? undefined : "off")}
 				?required=${isRequired}
 				?disabled=${isDisabled}
-				?readonly=${ifDefined(isReadOnly)}
+				?readonly=${isReadOnly}
 				pattern=${ifDefined(pattern)}
 				class=${classMap({
 					[`${rootClass}-input`]: true,
@@ -140,7 +186,6 @@ export const Template = ({
 	</div>
 	`;
 };
-
 
 export const TextFieldGroup = Variants({
 	Template,

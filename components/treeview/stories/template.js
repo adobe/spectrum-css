@@ -25,7 +25,7 @@ export const TreeViewItem = ({
 	thumbnail,
 	items,
 	customClasses = [],
-}, context) => {
+} = {}, context = {}) => {
 	if (type === "heading") {
 		return html`
 			<li

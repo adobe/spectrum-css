@@ -29,7 +29,7 @@ export const Template = ({
       ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
     })}
     id=${ifDefined(id)}
-    style=${ifDefined(styleMap(customStyles))}
+    style=${styleMap(customStyles)}
   >
     ${when(iconName, () =>
       Icon({

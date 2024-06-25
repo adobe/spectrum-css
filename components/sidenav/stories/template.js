@@ -82,7 +82,7 @@ export const SideNavItem = ({
 	hasIcon,
 	iconName,
 	customClasses = [],
-}, context) => {
+} = {}, context = {}) => {
 	return html`
     <li
       id=${ifDefined(id)}

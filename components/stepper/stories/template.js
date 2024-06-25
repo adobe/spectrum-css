@@ -22,7 +22,7 @@ export const Template = ({
 	style = {
 		"--mod-actionbutton-icon-size": "10px",
 	},
-}, context) => {
+} = {}, context = {}) => {
 	let iconSize = "75";
 	switch (size) {
 		case "s":
@@ -52,7 +52,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(style))}
+			style=${styleMap(style)}
 		>
 			${Textfield({
 				size,

@@ -21,48 +21,52 @@ const Dialog = ({
 	icon = false,
 	id,
 	customStyles = {},
-}, context) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--${variant}`]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-		role="dialog"
-		tabindex="-1"
-		aria-modal="true"
-		aria-labelledby="dialog_label"
-		style=${ifDefined(styleMap(customStyles))}
-	>
-		<div class="${rootClass}-grid">
-			<div class="spectrum-AlertDialog-header">
-				<h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
-				${when(icon, () => Icon({
-					size: "m",
-					iconName: "Alert",
-					customClasses: [`${rootClass}-icon`],
-				}, context))}
+} = {}, context = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--${variant}`]: true,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			role="dialog"
+			tabindex="-1"
+			aria-modal="true"
+			aria-labelledby="dialog_label"
+			style=${styleMap(customStyles)}
+		>
+			<div class="${rootClass}-grid">
+				<div class="spectrum-AlertDialog-header">
+					<h1 class="${rootClass}-heading" id="dialog_label">${heading}</h1>
+					${when(icon, () => Icon({
+						size: "m",
+						iconName: "Alert",
+						customClasses: [`${rootClass}-icon`],
+					}, context))}
+				</div>
+				${Divider({
+					horizontal: true,
+					customClasses: [`${rootClass}-divider`],
+					}, context)}
+				<section class="${rootClass}-content">${content}</section>
+				${ButtonGroup({ items: buttons }, context)}
 			</div>
-			${Divider({
-				horizontal: true,
-				customClasses: [`${rootClass}-divider`],
-				}, context)}
-			<section class="${rootClass}-content">${content}</section>
-			${ButtonGroup({ items: buttons }, context)}
 		</div>
-	</div>
-`;
+	`;
+};
 
 export const Template = ({
 	isOpen = true,
 	customModalStyles = {},
 	skipWrapper = false,
 	...args
-}, context) => {
+} = {}, context = {}) => {
 	return Modal({
 		isOpen,
-		content: [Dialog(args, context)],
+		content: [
+			Dialog(args, context)
+		],
 		customStyles: customModalStyles,
 		skipWrapper,
 	}, context);
@@ -72,24 +76,6 @@ export const AlertDialogGroup = Variants({
 	Template,
 	testData: [{
 		skipWrapper: true,
-	}, {
-		skipWrapper: true,
-		variant: "information",
-		heading: "Informative Dialog with a wrapping title text because the text is longer than the width of the alert dialog",
-		buttons: [{
-			variant: "secondary",
-			treatment: "outline",
-			label: "No, thanks"
-		},{
-			variant: "secondary",
-			treatment: "outline",
-			label: "Remind me later"
-		}, {
-			variant: "primary",
-			treatment: "outline",
-			label: "Rate now",
-		}],
-		content: "If you enjoy our app, would you mind taking a moment to rate it?",
 	}, {
 		skipWrapper: true,
 		variant: "warning",
@@ -121,7 +107,6 @@ export const AlertDialogGroup = Variants({
 		}],
 		content: "An error occured while sharing your project. Please verify the email address and try again.",
 	}, {
-
 		skipWrapper: true,
 		variant: "destructive",
 		heading: "Delete 3 documents?",
@@ -135,6 +120,23 @@ export const AlertDialogGroup = Variants({
 			variant: "negative"
 		}],
 		content: "Are you sure you want to delete the 3 selected documents?",
+	}, {
+		skipWrapper: true,
+		variant: "information",
+		heading: "Informative Dialog with a wrapping title text because the text is longer than the width of the alert dialog",
+		buttons: [{
+			variant: "secondary",
+			treatment: "outline",
+			label: "No, thanks"
+		},{
+			variant: "secondary",
+			treatment: "outline",
+			label: "Remind me later"
+		}, {
+			variant: "primary",
+			treatment: "outline",
+			label: "Rate now",
+		}],
+		content: "If you enjoy our app, would you mind taking a moment to rate it?",
 	}],
-	overlayIsOpen: true,
 });

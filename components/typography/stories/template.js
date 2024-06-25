@@ -92,21 +92,21 @@ export const Template = (args, context) => {
 
 			if (semantics === "heading")
 				return html`
-					<h2 class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</h2>
+					<h2 class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</h2>
 				`;
 
 			if (semantics === "body")
 				return html`
-					<p class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</p>
+					<p class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</p>
 				`;
 
 			if (semantics === "code")
 				return html`
-					<code class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</code>
+					<code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</code>
 				`;
 
 			return html`
-				<span class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</span>
+				<span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</span>
 			`;
 		})}
 	`;

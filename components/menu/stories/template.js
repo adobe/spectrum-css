@@ -265,7 +265,7 @@ export const Template = ({
 	shouldTruncate,
 	size,
 	subrole = "menuitem",
-}, context) => {
+} = {}, context = {}) => {
 	const menuMarkup = html`
     <ul
       class=${classMap({

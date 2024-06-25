@@ -4,7 +4,6 @@ import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -38,7 +37,7 @@ export const Template = (
 	},
 	context
 ) => {
-	const [, updateArgs] = useArgs();
+	const { updateArgs } = context;
 
 	return html`
     <div
@@ -52,11 +51,17 @@ export const Template = (
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
-      style=${ifDefined(styleMap(customStyles))}
+      style=${styleMap(customStyles)}
       tabindex="0"
       role=${ifDefined(
         image || showAsset ? "figure" : isGrid ? "rowheader" : role
       )}
+			@focusin=${() => {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${() => {
+				updateArgs({ isFocused: false });
+			}}
     >
       ${when(image || showAsset, () =>
         when(

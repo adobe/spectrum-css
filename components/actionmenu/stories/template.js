@@ -14,7 +14,7 @@ export const Template = ({
 	iconName = "More",
 	size = "m",
 	...popoverArgs
-}, context) => {
+} = {}, context = {}) => {
 	if (!items.length) {
 		console.warn("ActionMenu: requires items be passed in to render.");
 	}
@@ -45,7 +45,7 @@ export const ActionMenuGroup = Variants({
 		id: "popover-1",
 		triggerId: "trigger-1",
 		customContainerStyles: {
-			"block-size": "200px",
+			"block-size": "250px",
 		},
 	}, {
 		testHeading: "Closed menu",

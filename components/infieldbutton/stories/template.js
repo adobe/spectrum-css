@@ -16,7 +16,7 @@ export const Template = ({
 	isInvalid,
 	isStacked,
 	tabIndex = 0,
-}, context) => {
+} = {}, context = {}) => {
 	return isStacked ? html`
     <button
       class=${classMap({

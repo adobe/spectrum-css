@@ -21,7 +21,7 @@ export const Template = ({
 			[rootClass]: true,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
-		style=${ifDefined(styleMap(customStyles))}
+		style=${styleMap(customStyles)}
 		role="list"
 		aria-label=${ifDefined(ariaLabel)}
 	>

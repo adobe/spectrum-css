@@ -11,7 +11,7 @@ export const Template = ({
 	isDisabled = false,
 	isQuiet = false,
 	size,
-}, context) => {
+} = {}, context = {}) => {
 	return html`
 		<form
 			class=${classMap({

@@ -13,6 +13,34 @@ import "../index.css";
 */
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+/**
+ * @typedef API
+ * @property {string} [rootClass="spectrum-ActionButton"]
+ * @property {string} [size="m"]
+ * @property {string|undefined} [iconName]
+ * @property {string|undefined} [iconSet]
+ * @property {string|undefined} [label]
+ * @property {boolean} [isQuiet=false]
+ * @property {boolean} [isSelected=false]
+ * @property {boolean} [isEmphasized=false]
+ * @property {boolean} [isHovered=false]
+ * @property {boolean} [isFocused=false]
+ * @property {boolean} [isActive=false]
+ * @property {boolean} [isDisabled=false]
+ * @property {"false" | "true" | "menu" | "listbox" | "tree" | "grid" | "dialog"} [hasPopup="false"]
+ * @see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup
+ * @property {string} [popupId]
+ * @property {boolean} [hideLabel=false]
+ * @property {"white"|"black"|undefined} [staticColor]
+ * @property {string[]} [customClasses=[]]
+ */
+
+/**
+ *
+ * @param {API} args
+ * @param {import('@storybook/types').StoryContext<import('@storybook/web-components').WebComponentsRenderer, API>} context
+ * @returns {import('lit').TemplateResult}
+ */
 export const Template = ({
 	rootClass = "spectrum-ActionButton",
 	size = "m",
@@ -37,11 +65,12 @@ export const Template = ({
 	id,
 	testId,
 	role = "button",
-}, context) => {
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 	return html`
 		<button
 			aria-label=${ifDefined(label)}
-			aria-haspopup=${hasPopup && hasPopup !== "false" ? hasPopup : undefined}
+			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
 			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
 			aria-pressed=${isSelected ? "true" : "false"}
 			class=${classMap({
@@ -62,9 +91,15 @@ export const Template = ({
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId)}
 			role=${ifDefined(role)}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
 			@click=${onclick}
+			@focusin=${() => {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${() => {
+				updateArgs({ isFocused: false });
+			}}
 		>
 			${when(hasPopup && hasPopup !== "false", () =>
 				Icon({
@@ -90,31 +125,35 @@ export const Template = ({
 	`;
 };
 
-const ActionButtons = (args, context) => html`
-	${Template(args, context)}
-	${Template({
-		...args,
-		iconName: undefined,
-	}, context)}
-	${Template({
-		...args,
-		hideLabel: true,
-	}, context)}
-	${Template({
-		...args,
-		hasPopup: "menu",
-		label: "Has pop-up",
-		iconName: undefined,
-	}, context)}
-`;
+const ActionButtons = (args, context) => {
+	return html`
+		${Template(args, context)}
+		${Template({
+			...args,
+			iconName: undefined,
+		}, context)}
+		${Template({
+			...args,
+			hideLabel: true,
+		}, context)}
+		${Template({
+			...args,
+			hasPopup: "menu",
+			label: "Has pop-up",
+			iconName: undefined,
+		}, context)}
+	`;
+};
 
-const Truncation = (args, context) => html`
-	${Template(args, context)}
-	${Template({
-		...args,
-		iconName: undefined,
-	}, context)}
-`;
+const Truncation = (args, context) => {
+	return html`
+		${Template(args, context)}
+		${Template({
+			...args,
+			iconName: undefined,
+		}, context)}
+	`;
+};
 
 export const ActionButtonGroup = Variants({
 	Template: ActionButtons,

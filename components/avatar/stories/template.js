@@ -18,31 +18,41 @@ export const Template = ({
 	hasLink,
 	id,
 	customClasses = [],
-}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--size${size}`]: true,
-			"is-disabled": isDisabled,
-			"is-focused": isFocused,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-	>
-		${when(hasLink, () =>
-			html`
-				<a class="spectrum-Avatar-link" href="#">
+}) => {
+	const { updateArgs } = context;
+
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size}`]: true,
+				"is-disabled": isDisabled,
+				"is-focused": isFocused,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			@focusin=${() => {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${() => {
+				updateArgs({ isFocused: false });
+			}}
+		>
+			${when(hasLink, () =>
+				html`
+					<a class="spectrum-Avatar-link" href="#">
+						<img class="${rootClass}-image" data-chromatic="ignore" src=${image} alt=${ifDefined(altText)} />
+					</a>
+					`
+			)}
+			${when(!hasLink, () =>
+				html`
 					<img class="${rootClass}-image" data-chromatic="ignore" src=${image} alt=${ifDefined(altText)} />
-				</a>
 				`
-		)}
-		${when(!hasLink, () =>
-			html`
-				<img class="${rootClass}-image" data-chromatic="ignore" src=${image} alt=${ifDefined(altText)} />
-			`
-		)}
-	</div>
-`;
+			)}
+		</div>
+	`;
+};
 
 export const AvatarSizes = (args, context) => {
 	const sizeOptions = context?.argTypes?.size?.options ?? [];

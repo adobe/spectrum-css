@@ -5,6 +5,7 @@ import "./assets/base.css";
 import "./assets/typekit.js";
 import {
 	withActions,
+	withArgEvents,
 	withContextWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
@@ -136,6 +137,7 @@ export const decorators = [
 	withReducedMotionWrapper,
 	withContextWrapper,
 	withTestingPreviewWrapper,
+	withArgEvents,
 	withActions,
 	// Attach the icons to the window object for use in the stories
 	(StoryFn, context) => {

@@ -6,7 +6,6 @@ import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
@@ -25,7 +24,7 @@ export const Picker = ({
 	isDisabled = false,
 	customClasses = [],
 	customStyles = {},
-}, context) => {
+} = {}, context = {}) => {
 	return html`
 		<button
 			class=${classMap({
@@ -42,7 +41,7 @@ export const Picker = ({
 			})}
 			?disabled=${isDisabled}
 			aria-haspopup="listbox"
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			type="button"
 			@click=${(e) => {
 				e.target.classList.toggle("is-open", !isOpen);
@@ -93,7 +92,7 @@ export const Template = ({
 	customPopoverStyles = {},
 	content = [],
 	id,
-}, context) => {
+} = {}, context = {}) => {
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":
