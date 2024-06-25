@@ -66,9 +66,8 @@ export const Template = ({
 					<span
 						class=${classMap({
 							[`${rootClass}-icon`]: true,
-							"is-selected": !isDisabled && idx <= value - 1,
-							"is-currentValue":
-								!isDisabled && !isReadOnly && idx === value - 1,
+							"is-selected": idx <= value - 1,
+							"is-currentValue": idx === value - 1,
 						})}
 						@click=${function() {
 							updateArgs({ value: idx + 1, isFocused: true });

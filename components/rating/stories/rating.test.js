@@ -22,7 +22,7 @@ export const RatingGroup = Variants({
 			isFocused: true,
 		},
 		{
-			testHeading: "Read only",
+			testHeading: "Read-only",
 			isReadOnly: true,
 		},
 	]
