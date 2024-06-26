@@ -80,26 +80,26 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const SemanticVariants = (args, context) => PreviewSets(semanticOptions, args, context);
-SemanticVariants.tags = ["docs-only"];
+SemanticVariants.tags = ["autodocs", "!dev"];
 SemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const NonSemanticVariants = (args, context) => PreviewSets(nonSemanticOptions, args, context);
-NonSemanticVariants.tags = ["docs-only"];
+NonSemanticVariants.tags = ["autodocs", "!dev"];
 NonSemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const FixedVariants = (args, context) => PreviewSets(fixedOptions, args, context);
-FixedVariants.tags = ["docs-only"];
+FixedVariants.tags = ["autodocs", "!dev"];
 FixedVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

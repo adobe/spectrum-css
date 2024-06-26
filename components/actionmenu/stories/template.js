@@ -15,17 +15,13 @@ export const Template = ({
 	size = "m",
 	...popoverArgs
 } = {}, context = {}) => {
-	if (!items.length) {
-		console.warn("ActionMenu: requires items be passed in to render.");
-	}
-
 	return Popover({
 		isOpen,
 		id,
 		testId: testId ?? id,
 		triggerId,
 		content: [
-			Menu({ items }, context)
+			Menu({ items, isOpen, size }, context)
 		],
 		trigger: (passthroughs) => ActionButton({
 			size,

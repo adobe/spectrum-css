@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -49,6 +50,12 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Content",
+			/* The `isSelected` property in the tree view component is used to indicate whether a specific item
+			in the tree view is currently selected or not. When `isSelected` is set to `true` for an item, it
+			visually highlights that item as selected, providing a visual cue to the user that it is the
+			currently active or focused item in the tree view. This property helps improve user experience by
+			making it easier for users to identify which item they are interacting with within the tree view
+			structure. */
 			},
 			control: "text",
 		},
@@ -94,24 +101,10 @@ export default {
 			control: "boolean",
 		},
 		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isSelected,
 			if: { arg: "isLayer" },
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
 	},
 	args: {
 		rootClass: "spectrum-Thumbnail",
@@ -149,7 +142,7 @@ WithBackground.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

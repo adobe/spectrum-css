@@ -1,5 +1,6 @@
 import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { CalendarGroup, Template } from "./template";
 
@@ -55,15 +56,7 @@ export default {
 			},
 			control: "number",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		padded: {
 			name: "Padded",
 			type: { name: "boolean" },
@@ -85,7 +78,7 @@ export default {
 		buttonSize: {
 			table: { disable: true },
 		},
-		isFocused: { table: { disable: true }, },
+		isFocused,
 	},
 	args: {
 		rootClass: "spectrum-Calendar",
@@ -117,7 +110,7 @@ export const AbbreviatedWeekdays = Template.bind({});
 AbbreviatedWeekdays.args = {
 	useDOWAbbrev: true,
 };
-AbbreviatedWeekdays.tags = ["docs-only"];
+AbbreviatedWeekdays.tags = ["autodocs", "!dev"];
 AbbreviatedWeekdays.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -131,7 +124,7 @@ RangeSelection.args = {
 	useDOWAbbrev: true,
 	padded: true,
 };
-RangeSelection.tags = ["docs-only"];
+RangeSelection.tags = ["autodocs", "!dev"];
 RangeSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -143,13 +136,13 @@ Focused.args = {
 	year: undefined,
 	isFocused: true,
 };
-Focused.tags = ["docs-only"];
+Focused.tags = ["autodocs", "!dev"];
 Focused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true
 };
@@ -160,7 +153,7 @@ Focused.parameters = {
 // ********* VRT ONLY ********* //
 
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

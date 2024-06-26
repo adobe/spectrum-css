@@ -1,7 +1,8 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isFocused, isHovered, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ActionButtonGroup } from "./template";
+import { ActionButtonGroup, ActionButtons } from "./template";
 
 /**
  * The action button component represents an action a user can take.
@@ -50,43 +51,12 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "isSelected", truthy: true }
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isHovered: {
-			name: "Hovered",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isSelected,
+		isHovered,
+		isFocused,
 		isActive: {
 			name: "Active",
 			type: { name: "boolean" },
@@ -153,9 +123,25 @@ Default.args = {
 	label: "More",
 };
 
+export const Emphasized = ActionButtons.bind({});
+Emphasized.tags = ["autodocs", "!dev"];
+Emphasized.args = {
+	iconName: "More",
+	label: "More",
+	isEmphasized: true,
+};
+
+export const Quiet = ActionButtons.bind({});
+Quiet.tags = ["autodocs", "!dev"];
+Quiet.args = {
+	iconName: "More",
+	label: "More",
+	isQuiet: true,
+};
+
 // ********* VRT ONLY ********* //
 export const StaticBlack = Default.bind({});
-StaticBlack.tags = ["vrt-only"];
+StaticBlack.tags = ["!autodocs", "!dev", "test"];
 StaticBlack.args = {
 	staticColor: "black",
 };
@@ -166,7 +152,7 @@ StaticBlack.parameters = {
 };
 
 export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["vrt-only"];
+StaticWhite.tags = ["!autodocs", "!dev", "test"];
 StaticWhite.args = {
 	staticColor: "white",
 };
@@ -177,7 +163,7 @@ StaticWhite.parameters = {
 };
 
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

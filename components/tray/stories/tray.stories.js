@@ -1,5 +1,6 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { TrayGroup } from "./template";
 
@@ -11,11 +12,7 @@ export default {
 	component: "Tray",
 	argTypes: {
 		content: { table: { disable: true } },
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: { disable: true },
-		},
+		isOpen,
 		heading: {
 			name: "Heading",
 			type: { name: "string" },
@@ -67,7 +64,7 @@ Default.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = TrayGroup.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

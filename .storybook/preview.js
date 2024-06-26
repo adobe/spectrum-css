@@ -1,8 +1,7 @@
 import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
 import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
+
 import { setConsoleOptions } from "@storybook/addon-console";
-import "./assets/base.css";
-import "./assets/typekit.js";
 import {
 	withActions,
 	withArgEvents,
@@ -11,11 +10,14 @@ import {
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
-} from "./decorators/index.js";
-import DocumentationTemplate from "./DocumentationTemplate.mdx";
-import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
+} from "./decorators";
+import { FontLoader, IconLoader, TokenLoader } from "./loaders";
 import modes from "./modes";
+import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
+
+import "./assets/base.css";
+import "./assets/typekit.js";
 
 window.global = window;
 
@@ -29,18 +31,6 @@ setConsoleOptions({
 		/stylelint/,
 	],
 });
-
-// Inject the sprite sheets into the document
-let sprite = document.getElementById("spritesheets");
-if (!sprite) {
-	sprite = document.createElement("div");
-	sprite.id = "spritesheets";
-	sprite.innerHTML = workflowSprite + uiSprite;
-	document.body.appendChild(sprite);
-}
-else {
-	sprite.innerHTML = workflowSprite + uiSprite;
-}
 
 export const args = {
 	customClasses: [],
@@ -85,7 +75,7 @@ export const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "#root-inner",
+		root: "[data-html-preview]",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -143,6 +133,19 @@ export const decorators = [
 	// Attach the icons to the window object for use in the stories
 	(StoryFn, context) => {
 		if (context?.loaded?.icons) window.icons = context.loaded.icons;
+
+		// Inject the sprite sheets into the document
+		let sprite = document.getElementById("spritesheets");
+		if (!sprite) {
+			sprite = document.createElement("div");
+			sprite.id = "spritesheets";
+			sprite.innerHTML = workflowSprite + uiSprite;
+			document.body.appendChild(sprite);
+		}
+		else {
+			sprite.innerHTML = workflowSprite + uiSprite;
+		}
+
 		return StoryFn(context);
 	},
 ];

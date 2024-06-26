@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused, isOpen } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
@@ -66,24 +67,9 @@ export default {
 			options: placementOptions,
 			control: "select",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-				disable: true,
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "showOnHover", truthy: true },
 		},
 		showOnHover: {
@@ -143,7 +129,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

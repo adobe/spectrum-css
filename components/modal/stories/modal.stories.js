@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { ModalGroup } from "./template";
 
@@ -9,14 +10,7 @@ export default {
 	title: "Modal",
 	component: "Modal",
 	argTypes: {
-		isOpen: {
-			description: "Whether the modal is open (visible).",
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		variant: {
 			description:
 				"Controls how the modal fills the available space. <ul><li>\"responsive\" will fill the screen on small viewports.</li><li>\"fullscreen\" will fill almost all of the available screen space.</li><li>\"fullscreenTakeover\" will fill all of the available screen space.</li></ul>",
@@ -49,7 +43,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

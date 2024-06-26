@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused, isInvalid, isValid } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template, TextFieldGroup } from "./template";
 
@@ -10,13 +11,8 @@ export default {
 	component: "TextField",
 	argTypes: {
 		isValid: {
-			name: "Valid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isValid,
+			if: { arg: "isInvalid", truthy: false },
 		},
 		displayLabel: {
 			name: "Display field label",
@@ -49,23 +45,10 @@ export default {
 			if: { arg: "displayLabel", truthy: true },
 		},
 		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isInvalid,
+			if: { arg: "isValid", truthy: false },
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
 		isKeyboardFocused: {
 			name: "Keyboard focused",
 			type: { name: "boolean" },
@@ -202,7 +185,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const TextArea = Template.bind({});
-TextArea.tags = ["docs-only"];
+TextArea.tags = ["autodocs", "!dev"];
 TextArea.args = {
 	labelText: "Username",
 	multiline: true,
@@ -213,7 +196,7 @@ TextArea.args = {
 // ********* VRT ONLY ********* //
 // @todo should this show text field and text area in the same snapshot?
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

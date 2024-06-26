@@ -1,4 +1,6 @@
+import { renderContent } from "@spectrum-css/preview/decorators/utilities.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -13,194 +15,146 @@ export const Template = ({
 	isOpen = false,
 	withTip = false,
 	position = "top",
+	customClasses = [],
 	id = "popover-1",
 	testId,
-	customClasses = [],
-	customStyles = {},
 	triggerId = "trigger",
+	customStyles = {},
 	trigger,
 	content = [],
 } = {}, context = {}) => {
+	const [, updateArgs] = useArgs();
 	const { globals = {} } = context;
-	const textDir = globals.textDirection ?? "ltr";
+	const textDir = globals.textDir ?? "ltr";
 
 	const nestedPopover = id === "popover-nested" || id === "popover-nested-2";
 
-	function alignPopover ({
-		count = 0,
-		triggerElement,
-		shouldBeOpen = false,
-		...e
-	}) {
-		if (!triggerElement) triggerElement = document.getElementById(triggerId);
+	const positionPopover = (count = 0) => {
+		// Nested popover is static and open, so we don't need transforms for it
+		if (nestedPopover || !isOpen) return;
 
-		// Check if the element is able to be measured, if not, try again in 500ms
-		if (!triggerElement) {
-			if (count < 10) {
-				setTimeout(() => alignPopover({
-					count: count++,
-					triggerElement,
-					shouldBeOpen,
-					...e
-				}), 500);
+		// No trigger? Nothing to do.
+		if (!position) return;
 
-				// If there is not a trigger, there's nothing to align the popover to
-				return;
+		// Get trigger element and popover
+		let element = document.querySelector(`#${triggerId}`);
+		const popover = document.querySelector(`#${id}`);
+
+		if (!element) {
+			if (count <= 10) {
+				setTimeout(() => positionPopover(count++), 100);
 			}
-			else {
-				console.warn("Popover: could not find trigger element.");
-				return;
-			}
+
+			// Use the popover container as the trigger
+			element = popover.parentElement;
 		}
 
-		const controlsId = triggerElement.getAttribute("aria-controls");
-		const popoverElement = controlsId ? document.getElementById(controlsId) : undefined ?? document.getElementById(id);
-		// If there is no popover, there's nothing to align
-		if (!popoverElement) return;
+		if (!popover) return;
 
-		// Get current state
-		let isPopoverOpen = popoverElement.classList.contains("is-open") || shouldBeOpen;
-		if (e?.type === "click") {
-			triggerElement.classList.toggle("is-selected", !isPopoverOpen);
-			popoverElement.classList.toggle("is-open", !isPopoverOpen);
-		}
-		else if (e?.type !== "resize") {
-			// Initial setup: make sure the elements are in the correct state
-			triggerElement.classList.toggle("is-selected", isPopoverOpen);
-			popoverElement.classList.toggle("is-open", isPopoverOpen);
-			popoverElement.parentElement?.style.setProperty("position", "relative");
-		}
+		const rect = element.getBoundingClientRect();
 
-		// Update the state of the isOpen variable
-		isPopoverOpen = popoverElement.classList.contains("is-open");
-
-		// If the popover is not open, don't do anything
-		if (!isPopoverOpen) return;
-
-		const styleContainer = document.getElementById("popover-positioning");
-		const popoverStyles = {};
 		const transforms = [];
-
-		const rect = triggerElement.getBoundingClientRect();
-
 		const triggerXCenter = (rect.left + rect.right) / 2;
 		const triggerYCenter = (rect.top + rect.bottom) / 2;
+		const popWidth = popover.offsetWidth ?? 0;
+		const popHeight = popover.offsetHeight ?? 0;
 
-		const popWidth = popoverElement.offsetWidth ?? 0;
-		const popHeight = popoverElement.offsetHeight ?? 0;
+		let x, y;
+		let xOffset = "+ 0px";
+		let yOffset = "+ 0px";
 
-		let x, y, xOffset, yOffset;
-
-		// Determine the horizontal placement for the popover, relative to the trigger
 		if (position.startsWith("top") || position.startsWith("bottom")) {
 			x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
 		}
-		else if (
-			(position.includes("end")) ||
-			(position.includes("right") && textDir === "ltr") ||
-			(position.includes("left") && textDir === "rtl")
-		) {
-			x = rect.right;
-			if (!withTip) xOffset = " + var(--spectrum-popover-animation-distance)";
+		if (position.includes("left") || position.includes("right") || position.startsWith("start") || position.startsWith("end")) {
+			y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
 		}
-		else if (
-			(position.includes("start")) ||
-			(position.includes("right") && textDir == "rtl") ||
-			(position.includes("left") && textDir == "ltr")
-		) {
-			x = rect.left - popWidth;
-
-			if (withTip) xOffset = " - ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)";
-			else xOffset = " - var(--spectrum-popover-animation-distance)";
-		}
-
-		// Determine the vertical placement for the popover, relative to the trigger
 		if (position.startsWith("top")) {
 			y = rect.top - popHeight;
-
-			if (withTip) yOffset = " - var(--spectrum-popover-pointer-height + var(--spectrum-popover-animation-distance) - 1px)";
-			else yOffset = " - var(--spectrum-popover-animation-distance)";
+			yOffset = withTip
+				? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
+				: "- var(--spectrum-popover-animation-distance)";
 		}
 		else if (position.startsWith("bottom")) {
-			y = rect.bottom - rect.top;
-			// if (withTip) yOffset = " - var(--spectrum-popover-pointer-height)"; //  - var(--spectrum-popover-animation-distance)
-			if (!withTip) yOffset = " - var(--spectrum-popover-pointer-height)"; //  - var(--spectrum-popover-animation-distance)
+			y = rect.bottom;
+			yOffset = "+ (var(--spectrum-popover-animation-distance))";
 		}
-		else {
-			y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
+		else if (position.includes("left")) {
+			if (textDir == "rtl") {
+				x = rect.right;
+				xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
+			}
+			else {
+				x = rect.left - popWidth;
+				xOffset = withTip
+					? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
+					: "- var(--spectrum-popover-animation-distance)";
+			}
+		}
+		else if (position.includes("right")) {
+			if (textDir == "rtl") {
+				x = rect.left - popWidth;
+				xOffset = withTip
+					? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
+					: "- var(--spectrum-popover-animation-distance)";
+			}
+			else {
+				x = rect.right;
+				xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
+			}
+		}
+		else if (position.includes("start")) {
+			x = rect.left - popWidth;
+			xOffset = withTip
+				? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
+				: "- var(--spectrum-popover-animation-distance)";
+		}
+		else if (position.includes("end")) {
+			x = rect.right;
+			xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
+		}
+
+		if (x) transforms.push(`translateX(calc(var(--flow-direction) * calc(${parseInt(x, 10)}px ${xOffset})))`);
+		if (y) transforms.push(`translateY(calc(${y}px ${yOffset}))`);
+
+		if (transforms.length > 0) {
+			popover.style.transform = transforms.join(" ");
 		}
 
 		// Add start and end styles
 		if (position === "top-start" || position === "bottom-start") {
-			popoverStyles["inset-inline-start"] = "calc(" + parseInt(popWidth / 2, 10) + "px - var(--spectrum-popover-pointer-edge-offset))";
+			popover.style["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
 		}
 		else if (position === "top-end" || position === "bottom-end") {
-			popoverStyles["inset-inline-start"] = "calc(-1 *" + parseInt(popWidth / 2, 10) + "px + var(--spectrum-popover-pointer-edge-offset))";
+			popover.style["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
 		}
-		else {
-			popoverStyles["inset-inline-start"] = parseInt(rect.width / 2 - popWidth, 10) + "px";
-		}
-
-		if (position === "left-top" || position === "right-top" || position === "start-top" || position === "end-top") {
-			popoverStyles["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
+		else if (position === "left-top" || position === "right-top" || position === "start-top" || position === "end-top") {
+			popover.style["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
 		}
 		else if (position === "left-bottom" || position === "right-bottom" || position === "start-bottom" || position === "end-bottom") {
-			popoverStyles["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
+			popover.style["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
 		}
-		else {
-			popoverStyles["inset-block-start"] = "0px";
-		}
+	};
 
-		x = parseInt(x, 10);
-		y = parseInt(y, 10);
-
-		if (x) transforms.push(`translateX(calc(var(--flow-direction) * ${xOffset ? `calc(${x}px${xOffset})` : `${x}px`}))`);
-		if (y) transforms.push(`translateY(calc(${y}px${yOffset ?? ""}))`);
-		if (transforms) {
-			popoverStyles["transform"] = transforms.join(" ");
-		}
-
-		// Print the popover inline styles to the console
-		if (styleContainer) {
-			styleContainer.innerHTML = `#${popoverElement.id} { ${Object.entries(popoverStyles).map(([key, value]) => `${key}: ${value};`).join(" ")} }`;
-		}
-	}
-
-	document.addEventListener("DOMContentLoaded", () => {
-		if (!triggerId || !id) {
-			console.warn("Popover: requires an id and triggerId to properly align.");
-			return;
-		}
-
-		// Attempt to align the popover when the page loads if it is open
-		if (isOpen) alignPopover({
-			triggerElement: document.getElementById(triggerId),
-			shouldBeOpen: isOpen,
-		});
+	window.addEventListener("DOMContentLoaded", () => {
+		setTimeout(positionPopover, 100);
 	});
 
-	// add a listener for resize events
-	window.addEventListener("resize", (e) => {
-		alignPopover({
-			triggerElement: document.getElementById(triggerId),
-			...e
-		});
+	window.addEventListener("resize", () => {
+		setTimeout(positionPopover, 100);
 	});
 
 	return html`
-		<style id="popover-positioning"></style>
 		${when(typeof trigger === "function", () => trigger({
 			isSelected: nestedPopover ?? isOpen,
+			isOpen: nestedPopover ?? true,
 			id: triggerId,
 			popupId: id,
-			onclick: (e) => {
-				alignPopover({
-					type: "click",
-					triggerElement: e.target,
-					...e
-				});
-			},
+			onclick: () => {
+				updateArgs({ isOpen: !isOpen });
+			}
 		}))}
+
 		<div
 			class=${classMap({
 				[rootClass]: true,
@@ -211,12 +165,16 @@ export const Template = ({
 				[`${rootClass}--${position}`]: typeof position !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap(customStyles)}
+			style=${ifDefined(styleMap({
+				"inset-inline-start": "0px",
+				"inset-block-start": "0px",
+				...customStyles,
+			}))}
 			role="presentation"
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId ?? id)}
 		>
-			${content.map((c) => (typeof c === "function" ? c({}, context) : c))}
+			${renderContent(content)}
 			${withTip
 				? position && ["top", "bottom"].some((e) => position.startsWith(e))
 					? html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>`

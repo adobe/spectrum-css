@@ -81,7 +81,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const SizeOptions = AvatarSizes.bind({});
-SizeOptions.tags = ["docs-only"];
+SizeOptions.tags = ["autodocs", "!dev"];
 SizeOptions.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -91,7 +91,7 @@ SizeOptions.args = {
 };
 
 export const NoLink = Template.bind({});
-NoLink.tags = ["docs-only"];
+NoLink.tags = ["autodocs", "!dev"];
 NoLink.args = {
 	hasLink: false,
 	image: "example-ava@2x.png",
@@ -102,7 +102,7 @@ NoLink.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	hasLink: false,
 	isDisabled: true,
@@ -115,7 +115,7 @@ Disabled.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

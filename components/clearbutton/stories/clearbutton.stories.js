@@ -55,13 +55,13 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const OverBackground = Template.bind({});
-OverBackground.tags = ["vrt-only"];
+OverBackground.tags = ["!autodocs", "!dev", "test"];
 OverBackground.args = {
 	staticColor: "white",
 };
 
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

@@ -1,6 +1,7 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template, Variants } from "./template";
 
@@ -14,16 +15,7 @@ export default {
 		trigger: { table: { disable: true } },
 		content: { table: { disable: true } },
 		nested: { table: { disable: true } },
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: { type: "boolean" },
-		},
+		isOpen,
 		withTip: {
 			name: "Show with tip",
 			type: { name: "boolean" },
@@ -194,7 +186,7 @@ Nested.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

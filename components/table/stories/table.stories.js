@@ -129,7 +129,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -437,20 +437,20 @@ Thumbnails.args = {
 	showThumbnails: true,
 	rowItems: [
 		{
-			cellContent: ["Table Row Alpha", "Test", "2"],
+			cellContent: ["Table Row Alpha", "!autodocs", "!dev", "test", "2"],
 		},
 		{
-			cellContent: ["Table Row Bravo", "Test", "28"],
+			cellContent: ["Table Row Bravo", "!autodocs", "!dev", "test", "28"],
 		},
 		{
 			cellContent: [
 				"Table Row Charlie. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-				"Test",
+				"!autodocs", "!dev", "test",
 				"23",
 			],
 		},
 		{
-			cellContent: ["Table Row Delta", "Test", "7"],
+			cellContent: ["Table Row Delta", "!autodocs", "!dev", "test", "7"],
 		},
 	],
 };

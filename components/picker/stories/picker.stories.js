@@ -1,5 +1,6 @@
 import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isInvalid, isOpen } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
@@ -69,15 +70,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isKeyboardFocused: {
 			name: "Keyboard focused",
 			type: { name: "boolean" },
@@ -105,15 +98,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isInvalid: {
-			name: "Invalid input",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
 		content: { table: { disable: true } },
 	},
 	args: {
@@ -252,7 +237,7 @@ Open.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Variants.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

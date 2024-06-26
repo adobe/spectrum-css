@@ -3,6 +3,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { ActionMenuGroup } from "./template";
 
@@ -15,15 +16,7 @@ export default {
 	argTypes: {
 		withTip: Popover.argTypes.withTip,
 		position: Popover.argTypes.position,
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
@@ -90,7 +83,7 @@ Default.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

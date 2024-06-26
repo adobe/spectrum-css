@@ -1,4 +1,3 @@
-import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
@@ -22,6 +21,7 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 	const scale = globals.scale ?? "medium";
+	const toggleOpen = () => updateArgs({ isOpen: !isOpen });
 
 	const Dialog = html`
 		<div
@@ -50,9 +50,7 @@ export const Template = ({
 				${when(isDismissable, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
-						onclick: () => {
-							updateArgs({ isOpen: !isOpen });
-						},
+						onclick: toggleOpen,
 					}, context)
 				)}
 			</div>
@@ -61,22 +59,6 @@ export const Template = ({
 
 	if (showModal) {
 		return html`
-			${Button({
-				size: "m",
-				variant: "secondary",
-				label: "Click to open dialog",
-				treatment: "outline",
-				customClasses: [],
-				customStyles: {
-					position: "absolute",
-					insetInlineStart: "50%",
-					insetBlockStart: "50%",
-					transform: "translate(-50%, -50%)",
-				},
-				onclick: () => {
-					updateArgs({ isOpen: !isOpen });
-				},
-			}, context)}
 			${Modal({
 				isOpen,
 				content: [ () => Dialog],

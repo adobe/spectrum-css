@@ -439,14 +439,16 @@ Default.parameters = {
 
 If a story should not be shown in the sidebar because it is only for:
 
-- Documentation purposes, you can use the custom tag:
+- Documentation purposes, you can use the tags:
   ```js
-  Default.tags = ["docs-only"];
+  Default.tags = ["autodocs", "!dev"];
   ```
-- Visual regression testing, you can use the custom tag:
+- Visual regression testing, you can use the following tags:
   ```js
-  Default.tags = ["vrt-only"];
+  Default.tags = ["test", "!autodocs", "!dev"];
   ```
+
+The `!` symbol is used to negate the tag. This is useful for filtering stories in the sidebar. The `autodocs` tag is used to denote stories that are only for documentation purposes and should not be included in the visual regression suite. The `dev` tag is used to denote stories that should be included in the storybook sidebar. The `test` tag is used to denote stories that should be included in the visual regression suite.
 
 ### Getting started
 

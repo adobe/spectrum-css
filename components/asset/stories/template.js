@@ -34,10 +34,10 @@ export const Template = ({
 		visual = html`<img
 			class="${rootClass}-image"
 			src=${ifDefined(image)}
-			style=${isCardAssetOverride ? null : styleMap({
-				"max-width": "75%",
-				"max-height": "75%",
-				"object-fit": "contain",
+			style=${styleMap({
+				"max-width": !isCardAssetOverride ? "75%" : undefined,
+				"max-height": !isCardAssetOverride ? "75%" : undefined,
+				"object-fit": !isCardAssetOverride ? "contain" : undefined,
 			})}
 		/>`;
 	}

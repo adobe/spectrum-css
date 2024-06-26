@@ -77,7 +77,7 @@ export default {
 		buildStoriesJson: true,
 	},
 	docs: {
-		autodocs: true, // see below for alternatives
-		defaultName: "Docs", // set to change the name of generated docs entries
+		autodocs: true,
+		defaultName: "Docs",
 	},
 };

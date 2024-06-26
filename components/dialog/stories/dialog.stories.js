@@ -1,5 +1,6 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
+import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
 import { DialogGroup } from "./template";
@@ -39,15 +40,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 	},
 	args: {
 		rootClass: "spectrum-Dialog",
@@ -92,7 +85,7 @@ Default.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

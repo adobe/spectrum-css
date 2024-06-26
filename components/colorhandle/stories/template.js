@@ -15,12 +15,6 @@ export const Template = ({
 		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
 	},
 } = {}, context = {}) => {
-	const withColorLoupeStyles = () => isWithColorLoupe ? {
-		"position": "absolute",
-		"inset-block": "75%",
-		"inset-inline": "50%"
-	} : null;
-
 	return OpacityCheckerboard({
 		customClasses: [
 			`${rootClass}`,
@@ -42,7 +36,9 @@ export const Template = ({
 		`],
 		customStyles: {
 			...customStyles,
-			...withColorLoupeStyles()
+			"position": isWithColorLoupe ? "absolute" : undefined,
+			"inset-block": isWithColorLoupe ? "75%" : undefined,
+			"inset-inline": isWithColorLoupe ? "50%" : undefined,
 		},
 	}, context);
 };

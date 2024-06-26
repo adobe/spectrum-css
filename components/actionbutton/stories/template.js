@@ -125,7 +125,7 @@ export const Template = ({
 	`;
 };
 
-const ActionButtons = (args, context) => {
+export const ActionButtons = (args, context) => {
 	return html`
 		${Template(args, context)}
 		${Template({

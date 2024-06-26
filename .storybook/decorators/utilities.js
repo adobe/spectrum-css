@@ -1,4 +1,5 @@
-import "@spectrum-css/typography/dist/index.css";
+import "@spectrum-css/typography";
+
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -153,6 +154,7 @@ export const Variants = ({
         style=${styleMap({
           "display": window.isChromatic() ? "none" : "contents",
         })}
+        data-html-preview
       >
         ${Template(args, context)}
       </div>
@@ -172,11 +174,12 @@ export const Variants = ({
           ({
             Template: customTemplate,
             testHeading,
-            customContainerStyles = {},
+            customContainerStyles,
             withStates,
             // Capture any additional data to pass to the template
             ...item
           }) => {
+            console.log(item);
             if (typeof withStates === "undefined") {
               withStates = stateData.length > 0;
             }

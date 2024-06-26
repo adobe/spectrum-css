@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { DialGroup } from "./template";
 
@@ -27,15 +28,7 @@ export default {
 			},
 			control: "text",
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
 		isDragged: {
 			name: "Dragged",
 			type: { name: "boolean" },
@@ -72,7 +65,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

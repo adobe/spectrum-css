@@ -1,5 +1,6 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
@@ -60,15 +61,7 @@ export default {
 			options: ["fill", "outline"],
 			control: "inline-radio",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isHovered: {
 			name: "Hovered",
 			type: { name: "boolean" },
@@ -78,15 +71,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
 		isActive: {
 			name: "Active",
 			type: { name: "boolean" },
@@ -170,7 +155,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["vrt-only"];
+StaticWhite.tags = ["!autodocs", "!dev", "test"];
 StaticWhite.args = {
 	staticColor: "white",
 };
@@ -181,7 +166,7 @@ StaticWhite.parameters = {
 };
 
 export const StaticBlack = Default.bind({});
-StaticBlack.tags = ["vrt-only"];
+StaticBlack.tags = ["!autodocs", "!dev", "test"];
 StaticBlack.args = {
 	staticColor: "black",
 };
@@ -192,7 +177,7 @@ StaticBlack.parameters = {
 };
 
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

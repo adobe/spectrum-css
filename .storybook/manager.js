@@ -47,8 +47,5 @@ addons.setConfig({
 	}),
 	sidebar: {
 		showRoots: false,
-		filters: {
-			patterns: (item) => !["docs-only", "vrt-only"].some(tag => item.tags.includes(tag)),
-		}
 	},
 });

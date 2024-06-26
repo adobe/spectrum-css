@@ -114,7 +114,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Variants.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -337,7 +337,7 @@ const UIDefaultTemplate = (args) => html`
  * A sampling of multiple Workflow icons.
  */
 export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
-WorkflowDefault.tags = ["docs-only"];
+WorkflowDefault.tags = ["autodocs", "!dev"];
 WorkflowDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -346,7 +346,7 @@ WorkflowDefault.parameters = {
  * An example of a Workflow icon displayed at all sizes, from small to extra-large.
  */
 export const WorkflowSizing = WorkflowSizingTemplate.bind({});
-WorkflowSizing.tags = ["docs-only"];
+WorkflowSizing.tags = ["autodocs", "!dev"];
 WorkflowSizing.args = {
 	setName: "workflow",
 	iconName: "Asset",
@@ -360,7 +360,7 @@ WorkflowSizing.parameters = {
  */
 export const UIDefault = UIDefaultTemplate.bind({});
 UIDefault.storyName = "UI Default";
-UIDefault.tags = ["docs-only"];
+UIDefault.tags = ["autodocs", "!dev"];
 UIDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -370,7 +370,7 @@ UIDefault.parameters = {
  */
 export const UIArrows = UIArrowsTemplate.bind({});
 UIArrows.storyName = "UI Arrows";
-UIArrows.tags = ["docs-only"];
+UIArrows.tags = ["autodocs", "!dev"];
 UIArrows.parameters = {
 	chromatic: { disableSnapshot: true },
 };

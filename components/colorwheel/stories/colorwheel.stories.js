@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -9,23 +10,9 @@ export default {
 	title: "Color wheel",
 	component: "ColorWheel",
 	argTypes: {
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
 		isWithColorArea: {
@@ -54,7 +41,7 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -63,7 +50,7 @@ Disabled.parameters = {
 };
 
 export const WithColorArea = Template.bind({});
-WithColorArea.tags = ["docs-only"];
+WithColorArea.tags = ["autodocs", "!dev"];
 WithColorArea.args = {
 	isWithColorArea: true,
 };
@@ -73,7 +60,7 @@ WithColorArea.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

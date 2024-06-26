@@ -1,5 +1,6 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { AlertDialogGroup, Template } from "./template";
 
@@ -28,15 +29,7 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		variant: { table: { disable: true } },
 		buttons: { table: { disable: true } },
 	},
@@ -79,7 +72,7 @@ Default.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -94,7 +87,7 @@ WithForcedColors.parameters = {
  * Note that an alert dialog can have a total of 3 buttons if the secondary outline button label is defined.
  */
 export const Information = Template.bind({});
-Information.tags = ["docs-only"];
+Information.tags = ["autodocs", "!dev"];
 Information.args = {
 	isOpen: true,
 	variant: "information",
@@ -122,7 +115,7 @@ Information.parameters = {
  * Warning alert dialogs communicate important information to users in relation to an issue that needs to be acknowledged, but does not block the user from moving forward.
  */
 export const Warning = Template.bind({});
-Warning.tags = ["docs-only"];
+Warning.tags = ["autodocs", "!dev"];
 Warning.args = {
 	isOpen: true,
 	variant: "warning",
@@ -147,7 +140,7 @@ Warning.parameters = {
  * Error alert dialogs communicate critical information about an issue that a user needs to acknowledge.
  */
 export const Error = Template.bind({});
-Error.tags = ["docs-only"];
+Error.tags = ["autodocs", "!dev"];
 Error.args = {
 	isOpen: true,
 	variant: "error",
@@ -172,7 +165,7 @@ Error.parameters = {
  * Destructive alert dialogs are for when a user needs to confirm an action that will impact their data or experience in a potentially negative way, such as deleting files or contacts.
  */
 export const Destructive = Template.bind({});
-Destructive.tags = ["docs-only"];
+Destructive.tags = ["autodocs", "!dev"];
 Destructive.args = {
 	isOpen: true,
 	variant: "destructive",
@@ -193,7 +186,7 @@ Destructive.parameters = {
 };
 
 export const Scroll = Template.bind({});
-Scroll.tags = ["docs-only"];
+Scroll.tags = ["autodocs", "!dev"];
 Scroll.args = {
 	isOpen: true,
 	variant: "confirmation",
