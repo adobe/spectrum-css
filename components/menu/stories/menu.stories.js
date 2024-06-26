@@ -441,7 +441,7 @@ MenuItem.args = {
 // story used in Picker component
 export const WithDividers = Template.bind({});
 WithDividers.storyName = "Standard with dividers";
-WithDividers.tags = ["docs-only"];
+WithDividers.tags = ["autodocs", "!dev"];
 WithDividers.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -460,7 +460,7 @@ WithDividers.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = MenuItemWithVariants.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators/utilities.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";

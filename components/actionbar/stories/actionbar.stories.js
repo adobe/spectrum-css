@@ -86,7 +86,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -96,7 +96,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Emphasized = Template.bind({});
-Emphasized.tags = ["docs-only"];
+Emphasized.tags = ["autodocs", "!dev"];
 Emphasized.args = {
 	isEmphasized: true,
 };

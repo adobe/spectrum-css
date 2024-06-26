@@ -163,7 +163,7 @@ Default.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -173,19 +173,19 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Regular = Default.bind({});
-Regular.tags = ["docs-only"];
+Regular.tags = ["autodocs", "!dev"];
 Regular.args = {
 	density: "regular",
 };
 
 export const Compact = Default.bind({});
-Compact.tags = ["docs-only"];
+Compact.tags = ["autodocs", "!dev"];
 Compact.args = {
 	density: "compact",
 };
 
 export const Spacious = Default.bind({});
-Spacious.tags = ["docs-only"];
+Spacious.tags = ["autodocs", "!dev"];
 Spacious.args = {
 	density: "spacious",
 };

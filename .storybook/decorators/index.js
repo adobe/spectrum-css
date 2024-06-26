@@ -11,3 +11,5 @@ export { withSizingWrapper } from "./sizing.js";
 
 /* External decorators exported for use in stories */
 export { withActions } from "@storybook/addon-actions/decorator";
+
+export * from "./utilities.js";

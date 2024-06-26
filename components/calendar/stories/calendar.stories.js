@@ -115,8 +115,22 @@ export const AbbreviatedWeekdays = Template.bind({});
 AbbreviatedWeekdays.args = {
 	useDOWAbbrev: true,
 };
-AbbreviatedWeekdays.tags = ["docs-only"];
+AbbreviatedWeekdays.tags = ["autodocs", "!dev"];
 AbbreviatedWeekdays.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const RangeSelection = Template.bind({});
+RangeSelection.args = {
+	month: months[6],
+	selectedDay: new Date(2023, 6, 3),
+	year: 2023,
+	lastDay: new Date(2023, 6, 7),
+	useDOWAbbrev: true,
+	padded: true,
+};
+RangeSelection.tags = ["autodocs", "!dev"];
+RangeSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
@@ -127,20 +141,24 @@ Focused.args = {
 	year: undefined,
 	isFocused: true,
 };
-Focused.tags = ["docs-only"];
+Focused.tags = ["autodocs", "!dev"];
+Focused.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Disabled = Template.bind({});
+Disabled.tags = ["autodocs", "!dev"];
+Disabled.args = {
+	isDisabled: true
+};
 Focused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
-export const Disabled = Template.bind({});
-Disabled.tags = ["vrt-only"];
-Disabled.args = {
-	isDisabled: true
-};
 
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

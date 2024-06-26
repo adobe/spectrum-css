@@ -55,7 +55,7 @@ CustomSize.args = {
 
 // ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -65,7 +65,7 @@ Disabled.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

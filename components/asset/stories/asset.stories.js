@@ -42,7 +42,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const File = Template.bind({});
-File.tags = ["docs-only"];
+File.tags = ["autodocs", "!dev"];
 File.args = {
 	preset: "file",
 };
@@ -51,7 +51,7 @@ File.parameters = {
 };
 
 export const Folder = Template.bind({});
-Folder.tags = ["docs-only"];
+Folder.tags = ["autodocs", "!dev"];
 Folder.args = {
 	preset: "folder",
 };
@@ -61,7 +61,7 @@ Folder.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

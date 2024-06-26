@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators/utilities.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";

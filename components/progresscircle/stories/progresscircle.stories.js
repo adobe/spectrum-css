@@ -63,7 +63,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -72,7 +72,7 @@ WithForcedColors.parameters = {
 };
 
 export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["vrt-only"];
+StaticWhite.tags = ["test", "!autodocs", "!dev"];
 StaticWhite.args = {
 	staticColor: "white",
 };

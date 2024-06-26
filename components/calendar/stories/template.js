@@ -1,5 +1,5 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { action } from "@storybook/addon-actions";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -366,8 +366,8 @@ export const Template = ({
 												"is-range-start": thisDay.isRangeStart,
 												"is-range-end": thisDay.isRangeEnd,
 												"is-selected": thisDay.isSelected,
-												"is-selection-start": thisDay.isRangeStart,
-												"is-selection-end": thisDay.isRangeEnd,
+												// "is-selection-start": thisDay.isRangeStart,
+												// "is-selection-end": thisDay.isRangeEnd,
 												"is-disabled": isDisabled,
 												"is-focused": (isFocused && thisDay.isFocused) || thisDay.isSelected,
 											})}
@@ -391,77 +391,44 @@ export const Template = ({
 	`;
 };
 
-export const CalendarGroup = (args, context) => html`
-	<div
-		style=${styleMap({
-			display: window.isChromatic() ? "none" : "contents",
-		})}
-	>
-		${Template(args, context)}
-	</div>
-	<div
-		style=${styleMap({
-			"display": window.isChromatic() ? "flex" : "none",
-			"flex-direction": "column",
-			"align-items": "flex-start",
-			"gap": "32px",
-		})}
-	>
-		${[
-			{
-				heading: "Default",
-			},
-			{
-				heading: "Range selection",
-				month: months[6],
-				selectedDay: new Date(2023, 6, 3),
-				year: 2023,
-				lastDay: new Date(2023, 6, 7),
-				useDOWAbbrev: true,
-				padded: true,
-			},
-			{
-				heading: "Today highlighted",
-				month: undefined,
-				selectedDay: undefined,
-				year: undefined,
-			},
-			{
-				heading: "Disabled",
-				isDisabled: true,
-			},
-			{
-				heading: "Focused",
-				isFocused: true,
-			},
-		].map(
-			({ heading, ...item }) => html`
-				<div class="spectrum-Typography">
-					${Typography(
-						{
-							semantics: "heading",
-							size: "s",
-							content: [heading],
-						},
-						context,
-					)}
-					<div
-						style=${styleMap({
-							padding: "12px",
-							border: "1px solid var(--spectrum-gray-200)",
-							"border-radius": "4px",
-						})}
-					>
-						${Template(
-							{
-								...args,
-								...item,
-							},
-							context,
-						)}
-					</div>
-				</div>
-			`,
-		)}
-	</div>
-`;
+export const CalendarGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Padded",
+			padded: true,
+		},
+		{
+			testHeading: "Abbreviated days of the week",
+			useDOWAbbrev: true,
+		},
+		{
+			testHeading: "Range selection",
+			month: months[6],
+			selectedDay: new Date(2023, 6, 3),
+			year: 2023,
+			lastDay: new Date(2023, 6, 7),
+			useDOWAbbrev: true,
+			padded: true,
+		},
+		{
+			testHeading: "Today highlighted",
+			month: undefined,
+			selectedDay: undefined,
+			year: undefined,
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+	]
+});

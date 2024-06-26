@@ -149,7 +149,7 @@ Range.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const QuietRange = Template.bind({});
-QuietRange.tags = ["docs-only"];
+QuietRange.tags = ["autodocs", "!dev"];
 QuietRange.args = {
 	lastDay: 3,
 	isRange: true,
@@ -166,7 +166,7 @@ QuietRange.parameters = {
 };
 
 export const Invalid = Template.bind({});
-Invalid.tags = ["docs-only"];
+Invalid.tags = ["autodocs", "!dev"];
 Invalid.args = {
 	isInvalid: true,
 	isOpen: false,
@@ -181,7 +181,7 @@ Invalid.parameters = {
 };
 
 export const QuietInvalid = Template.bind({});
-QuietInvalid.tags = ["docs-only"];
+QuietInvalid.tags = ["autodocs", "!dev"];
 QuietInvalid.args = {
 	isInvalid: true,
 	isQuiet: true,
@@ -198,7 +198,7 @@ QuietInvalid.parameters = {
 
 
 export const ReadOnly = Template.bind({});
-ReadOnly.tags = ["docs-only"];
+ReadOnly.tags = ["autodocs", "!dev"];
 ReadOnly.args = {
 	readOnly: true,
 };
@@ -212,7 +212,7 @@ ReadOnly.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -225,7 +225,7 @@ Disabled.parameters = {
 	}
 };
 export const QuietDisabled = Template.bind({});
-QuietDisabled.tags = ["docs-only"];
+QuietDisabled.tags = ["autodocs", "!dev"];
 QuietDisabled.args = {
 	isDisabled: true,
 	isQuiet: true,
@@ -241,7 +241,7 @@ QuietDisabled.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

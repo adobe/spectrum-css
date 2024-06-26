@@ -114,7 +114,7 @@ TopPopover.args = {
 
 // ********* DOCS ONLY ********* //
 export const HelpDefault = Template.bind({});
-HelpDefault.tags = ["docs-only"];
+HelpDefault.tags = ["autodocs", "!dev"];
 HelpDefault.args = {
 	title: "Permission required",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -125,7 +125,7 @@ HelpDefault.parameters = {
 };
 
 export const HelpWithLink = Template.bind({});
-HelpWithLink.tags = ["docs-only"];
+HelpWithLink.tags = ["autodocs", "!dev"];
 HelpWithLink.args = {
 	title: "Permission required",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -140,7 +140,7 @@ HelpWithLink.parameters = {
 };
 
 export const HelpTopPopover = Template.bind({});
-HelpTopPopover.tags = ["docs-only"];
+HelpTopPopover.tags = ["autodocs", "!dev"];
 HelpTopPopover.args = {
 	popoverPlacement: "top",
 	customStyles: { "max-inline-size": "275px" },
@@ -154,7 +154,7 @@ HelpTopPopover.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

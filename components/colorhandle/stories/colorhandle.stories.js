@@ -53,7 +53,7 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
 };
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -62,7 +62,7 @@ export const WithColorLoupe = Template.bind({});
 WithColorLoupe.args = {
 	isWithColorLoupe: true,
 };
-WithColorLoupe.tags = ["docs-only"];
+WithColorLoupe.tags = ["autodocs", "!dev"];
 WithColorLoupe.parameters = {
 	chromatic: { disableSnapshot: true },
 	docs: {
@@ -75,7 +75,7 @@ WithColorLoupe.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

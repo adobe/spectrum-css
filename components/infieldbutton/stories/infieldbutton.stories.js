@@ -68,7 +68,7 @@ export const Default = Template.bind({});
 Default.args = {};
 
 export const Start = Template.bind({});
-Start.tags = ["docs-only"];
+Start.tags = ["autodocs", "!dev"];
 Start.args = {
 	position: "left"
 };
@@ -77,7 +77,7 @@ Start.parameters = {
 };
 
 export const End = Template.bind({});
-End.tags = ["docs-only"];
+End.tags = ["autodocs", "!dev"];
 End.args = {
 	position: "right"
 };
@@ -97,7 +97,7 @@ Disabled.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -106,7 +106,7 @@ WithForcedColors.parameters = {
 };
 
 export const Stacked = Template.bind({});
-Stacked.tags = ["docs-only"];
+Stacked.tags = ["autodocs", "!dev"];
 Stacked.args = {
 	isStacked: true,
 };

@@ -46,9 +46,6 @@ addons.setConfig({
 		inputBorderRadius: 4,
 	}),
 	sidebar: {
-		showRoots: false,
-		filters: {
-			patterns: (item) => !["docs-only", "vrt-only"].some(tag => item.tags.includes(tag)),
-		}
+		showRoots: false
 	},
 });

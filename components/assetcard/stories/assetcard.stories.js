@@ -115,7 +115,7 @@ Portrait.args = {
 	exampleImage: "portrait",
 	content: ["Image"],
 };
-Portrait.tags = ["docs-only"];
+Portrait.tags = ["autodocs", "!dev"];
 Portrait.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -125,7 +125,7 @@ Landscape.args = {
 	title: "Landscape asset",
 	exampleImage: "landscape",
 };
-Landscape.tags = ["docs-only"];
+Landscape.tags = ["autodocs", "!dev"];
 Landscape.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -135,7 +135,7 @@ Square.args = {
 	title: "Square asset",
 	exampleImage: "square",
 };
-Square.tags = ["docs-only"];
+Square.tags = ["autodocs", "!dev"];
 Square.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -146,7 +146,7 @@ OptionalContent.args = {
 	headerContent: "39:02",
 	exampleImage: "square",
 };
-OptionalContent.tags = ["docs-only"];
+OptionalContent.tags = ["autodocs", "!dev"];
 OptionalContent.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -158,7 +158,7 @@ HighlightSelection.args = {
 	exampleImage: "portrait",
 	isSelected: true,
 };
-HighlightSelection.tags = ["docs-only"];
+HighlightSelection.tags = ["autodocs", "!dev"];
 HighlightSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -170,7 +170,7 @@ CheckboxSelection.args = {
 	exampleImage: "portrait",
 	isSelected: true,
 };
-CheckboxSelection.tags = ["docs-only"];
+CheckboxSelection.tags = ["autodocs", "!dev"];
 CheckboxSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -182,7 +182,7 @@ OrderedSelection.args = {
 	isSelected: true,
 	exampleImage: "landscape",
 };
-OrderedSelection.tags = ["docs-only"];
+OrderedSelection.tags = ["autodocs", "!dev"];
 OrderedSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -195,14 +195,14 @@ DropTarget.args = {
 	exampleImage: "portrait",
 	isSelected: true,
 };
-DropTarget.tags = ["docs-only"];
+DropTarget.tags = ["autodocs", "!dev"];
 DropTarget.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

@@ -248,7 +248,7 @@ Quiet.args = {
 // ********* DOCS ONLY ********* //
 // Standard
 export const WithLabel = Template.bind({});
-WithLabel.tags = ["docs-only"];
+WithLabel.tags = ["autodocs", "!dev"];
 WithLabel.args = {
 	showFieldLabel: true,
 	fieldLabelText: "Country",
@@ -259,7 +259,7 @@ WithLabel.parameters = {
 };
 
 export const Closed = Template.bind({});
-Closed.tags = ["docs-only"];
+Closed.tags = ["autodocs", "!dev"];
 Closed.args = {
 	isOpen: false,
 };
@@ -268,7 +268,7 @@ Closed.parameters = {
 };
 
 export const Invalid = Template.bind({});
-Invalid.tags = ["docs-only"];
+Invalid.tags = ["autodocs", "!dev"];
 Invalid.args = {
 	isInvalid: true,
 };
@@ -277,7 +277,7 @@ Invalid.parameters = {
 };
 
 export const Loading = Template.bind({});
-Loading.tags = ["docs-only"];
+Loading.tags = ["autodocs", "!dev"];
 Loading.args = {
 	isLoading: true,
 };
@@ -286,7 +286,7 @@ Loading.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -296,7 +296,7 @@ Disabled.parameters = {
 
 // Quiet
 export const QuietWithLabel = Template.bind({});
-QuietWithLabel.tags = ["docs-only"];
+QuietWithLabel.tags = ["autodocs", "!dev"];
 QuietWithLabel.args = {
 	showFieldLabel: true,
 	fieldLabelText: "Country",
@@ -307,7 +307,7 @@ QuietWithLabel.parameters = {
 };
 
 export const QuietClosed = Template.bind({});
-QuietClosed.tags = ["docs-only"];
+QuietClosed.tags = ["autodocs", "!dev"];
 QuietClosed.args = {
 	isQuiet: true,
 	isOpen: false,
@@ -317,7 +317,7 @@ QuietClosed.parameters = {
 };
 
 export const QuietInvalid = Template.bind({});
-QuietInvalid.tags = ["docs-only"];
+QuietInvalid.tags = ["autodocs", "!dev"];
 QuietInvalid.args = {
 	isQuiet: true,
 	isInvalid: true,
@@ -327,7 +327,7 @@ QuietInvalid.parameters = {
 };
 
 export const QuietLoading = Template.bind({});
-QuietLoading.tags = ["docs-only"];
+QuietLoading.tags = ["autodocs", "!dev"];
 QuietLoading.args = {
 	isQuiet: true,
 	isLoading: true,
@@ -337,7 +337,7 @@ QuietLoading.parameters = {
 };
 
 export const QuietDisabled = Template.bind({});
-QuietDisabled.tags = ["docs-only"];
+QuietDisabled.tags = ["autodocs", "!dev"];
 QuietDisabled.args = {
 	isQuiet: true,
 	isDisabled: true,
@@ -348,7 +348,7 @@ QuietDisabled.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ComboboxGroup.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

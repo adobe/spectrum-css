@@ -50,7 +50,7 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -59,7 +59,7 @@ Disabled.parameters = {
 };
 
 export const WithColorArea = Template.bind({});
-WithColorArea.tags = ["docs-only"];
+WithColorArea.tags = ["autodocs", "!dev"];
 WithColorArea.args = {
 	isWithColorArea: true,
 };
@@ -69,7 +69,7 @@ WithColorArea.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
