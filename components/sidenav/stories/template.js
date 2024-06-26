@@ -31,11 +31,13 @@ export const Template = ({
               "is-selected": item.isSelected,
               "is-disabled": item.isDisabled,
             })}>
-            ${item.heading ?
-              html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.heading}</h2>`
-              :
-              html`
-              <a class="${rootClass}-itemLink">
+            ${item.heading
+              ? html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.heading}</h2>`
+              : html`
+              <a
+                class="${rootClass}-itemLink"
+                aria-current=${ifDefined(item.isSelected ? "page" : undefined)}
+              >
               ${when(hasIcon, () =>
                 Icon({
                     ...globals,
