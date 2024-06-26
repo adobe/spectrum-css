@@ -10,8 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Well{
-        --spectrum-well-border-width:var(--spectrum-border-width-100);
-        --spectrum-well-content-color:var(--spectrum-body-color);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Well {
+	--spectrum-well-border-width: var(--system-spectrum-well-border-width);
+	--spectrum-well-content-color: var(--system-spectrum-well-content-color);
+}

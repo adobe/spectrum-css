@@ -10,74 +10,50 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-HelpText{
-        --spectrum-helptext-line-height:var(--spectrum-line-height-100);
-        --spectrum-helptext-content-color-default:var(--spectrum-neutral-subdued-content-color-default);
-        --spectrum-helptext-icon-color-default:var(--spectrum-neutral-subdued-content-color-default);
-        --spectrum-helptext-disabled-content-color:var(--spectrum-disabled-content-color);
-    }
-
-.spectrum-HelpText.spectrum-HelpText--neutral{
-            --spectrum-helptext-content-color-default:var(--spectrum-neutral-subdued-content-color-default);
-            --spectrum-helptext-icon-color-default:var(--spectrum-neutral-subdued-content-color-default);
-        }
-
-.spectrum-HelpText.spectrum-HelpText--negative{
-            --spectrum-helptext-content-color-default:var(--spectrum-negative-color-900);
-            --spectrum-helptext-icon-color-default:var(--spectrum-negative-color-900);
-        }
-
-.spectrum-HelpText.is-disabled{
-            --spectrum-helptext-content-color-default:var(--spectrum-helptext-disabled-content-color);
-            --spectrum-helptext-icon-color-default:var(--spectrum-helptext-disabled-content-color);
-        }
-
-.spectrum-HelpText:lang(ja),.spectrum-HelpText:lang(ko),.spectrum-HelpText:lang(zh){
-            --spectrum-helptext-line-height-cjk:var(--spectrum-cjk-line-height-100);
-        }
-
-.spectrum-HelpText--sizeS{
-        --spectrum-helptext-min-height:var(--spectrum-component-height-75);
-        --spectrum-helptext-icon-size:var(--spectrum-workflow-icon-size-75);
-        --spectrum-helptext-font-size:var(--spectrum-font-size-75);
-        --spectrum-helptext-text-to-visual:var(--spectrum-text-to-visual-75);
-        --spectrum-helptext-top-to-workflow-icon:var(--spectrum-help-text-top-to-workflow-icon-small);
-        --spectrum-helptext-bottom-to-workflow-icon:var(--spectrum-helptext-top-to-workflow-icon);
-        --spectrum-helptext-top-to-text:var(--spectrum-component-top-to-text-75);
-        --spectrum-helptext-bottom-to-text:var(--spectrum-component-bottom-to-text-75);
-    }
-
-.spectrum-HelpText--sizeM{
-        --spectrum-helptext-min-height:var(--spectrum-component-height-75);
-        --spectrum-helptext-icon-size:var(--spectrum-workflow-icon-size-100);
-        --spectrum-helptext-font-size:var(--spectrum-font-size-75);
-        --spectrum-helptext-text-to-visual:var(--spectrum-text-to-visual-75);
-        --spectrum-helptext-top-to-workflow-icon:var(--spectrum-help-text-top-to-workflow-icon-medium);
-        --spectrum-helptext-bottom-to-workflow-icon:var(--spectrum-helptext-top-to-workflow-icon);
-        --spectrum-helptext-top-to-text:var(--spectrum-component-top-to-text-75);
-        --spectrum-helptext-bottom-to-text:var(--spectrum-component-bottom-to-text-75);
-    }
-
-.spectrum-HelpText--sizeL{
-        --spectrum-helptext-min-height:var(--spectrum-component-height-100);
-        --spectrum-helptext-icon-size:var(--spectrum-workflow-icon-size-200);
-        --spectrum-helptext-font-size:var(--spectrum-font-size-100);
-        --spectrum-helptext-text-to-visual:var(--spectrum-text-to-visual-100);
-        --spectrum-helptext-top-to-workflow-icon:var(--spectrum-help-text-top-to-workflow-icon-large);
-        --spectrum-helptext-bottom-to-workflow-icon:var(--spectrum-helptext-top-to-workflow-icon);
-        --spectrum-helptext-top-to-text:var(--spectrum-component-top-to-text-100);
-        --spectrum-helptext-bottom-to-text:var(--spectrum-component-bottom-to-text-100);
-    }
-
-.spectrum-HelpText--sizeXL{
-        --spectrum-helptext-min-height:var(--spectrum-component-height-200);
-        --spectrum-helptext-icon-size:var(--spectrum-workflow-icon-size-300);
-        --spectrum-helptext-font-size:var(--spectrum-font-size-200);
-        --spectrum-helptext-text-to-visual:var(--spectrum-text-to-visual-200);
-        --spectrum-helptext-top-to-workflow-icon:var(--spectrum-help-text-top-to-workflow-icon-extra-large);
-        --spectrum-helptext-bottom-to-workflow-icon:var(--spectrum-helptext-top-to-workflow-icon);
-        --spectrum-helptext-top-to-text:var(--spectrum-component-top-to-text-200);
-        --spectrum-helptext-bottom-to-text:var(--spectrum-component-bottom-to-text-200);
-    }
-
-/*# sourceMappingURL=legacy.css.map */
+.spectrum-legacy {
+	--system-spectrum-helptext-line-height: var(--spectrum-line-height-100);
+	--system-spectrum-helptext-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--system-spectrum-helptext-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--system-spectrum-helptext-disabled-content-color: var(--spectrum-disabled-content-color);
+	--system-spectrum-helptext-neutral-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--system-spectrum-helptext-neutral-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--system-spectrum-helptext-negative-content-color-default: var(--spectrum-negative-color-900);
+	--system-spectrum-helptext-negative-icon-color-default: var(--spectrum-negative-color-900);
+	--system-spectrum-helptext-disabled-content-color-default: var(--spectrum-helptext-disabled-content-color);
+	--system-spectrum-helptext-disabled-icon-color-default: var(--spectrum-helptext-disabled-content-color);
+	--system-spectrum-helptext-lang-ja-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-spectrum-helptext-lang-zh-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-spectrum-helptext-lang-ko-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-spectrum-helptext-sizes-min-height: var(--spectrum-component-height-75);
+	--system-spectrum-helptext-sizes-icon-size: var(--spectrum-workflow-icon-size-75);
+	--system-spectrum-helptext-sizes-font-size: var(--spectrum-font-size-75);
+	--system-spectrum-helptext-sizes-text-to-visual: var(--spectrum-text-to-visual-75);
+	--system-spectrum-helptext-sizes-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-small);
+	--system-spectrum-helptext-sizes-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
+	--system-spectrum-helptext-sizes-top-to-text: var(--spectrum-component-top-to-text-75);
+	--system-spectrum-helptext-sizes-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	--system-spectrum-helptext-sizem-min-height: var(--spectrum-component-height-75);
+	--system-spectrum-helptext-sizem-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-spectrum-helptext-sizem-font-size: var(--spectrum-font-size-75);
+	--system-spectrum-helptext-sizem-text-to-visual: var(--spectrum-text-to-visual-75);
+	--system-spectrum-helptext-sizem-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-medium);
+	--system-spectrum-helptext-sizem-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
+	--system-spectrum-helptext-sizem-top-to-text: var(--spectrum-component-top-to-text-75);
+	--system-spectrum-helptext-sizem-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	--system-spectrum-helptext-sizel-min-height: var(--spectrum-component-height-100);
+	--system-spectrum-helptext-sizel-icon-size: var(--spectrum-workflow-icon-size-200);
+	--system-spectrum-helptext-sizel-font-size: var(--spectrum-font-size-100);
+	--system-spectrum-helptext-sizel-text-to-visual: var(--spectrum-text-to-visual-100);
+	--system-spectrum-helptext-sizel-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-large);
+	--system-spectrum-helptext-sizel-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
+	--system-spectrum-helptext-sizel-top-to-text: var(--spectrum-component-top-to-text-100);
+	--system-spectrum-helptext-sizel-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+	--system-spectrum-helptext-sizexl-min-height: var(--spectrum-component-height-200);
+	--system-spectrum-helptext-sizexl-icon-size: var(--spectrum-workflow-icon-size-300);
+	--system-spectrum-helptext-sizexl-font-size: var(--spectrum-font-size-200);
+	--system-spectrum-helptext-sizexl-text-to-visual: var(--spectrum-text-to-visual-200);
+	--system-spectrum-helptext-sizexl-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-extra-large);
+	--system-spectrum-helptext-sizexl-bottom-to-workflow-icon: var(--spectrum-helptext-top-to-workflow-icon);
+	--system-spectrum-helptext-sizexl-top-to-text: var(--spectrum-component-top-to-text-200);
+	--system-spectrum-helptext-sizexl-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+}

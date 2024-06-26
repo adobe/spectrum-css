@@ -10,33 +10,22 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Divider{
-        --spectrum-divider-thickness:var(--spectrum-divider-thickness-medium);
-        --spectrum-divider-background-color:var(--spectrum-divider-background-color-medium);
-        --spectrum-divider-background-color-small:var(--spectrum-gray-200);
-        --spectrum-divider-background-color-medium:var(--spectrum-gray-200);
-        --spectrum-divider-background-color-large:var(--spectrum-gray-800);
-        --spectrum-divider-background-color-small-static-white:var(--spectrum-transparent-white-300);
-        --spectrum-divider-background-color-medium-static-white:var(--spectrum-transparent-white-300);
-        --spectrum-divider-background-color-large-static-white:var(--spectrum-transparent-white-800);
-        --spectrum-divider-background-color-small-static-black:var(--spectrum-transparent-black-300);
-        --spectrum-divider-background-color-medium-static-black:var(--spectrum-transparent-black-300);
-        --spectrum-divider-background-color-large-static-black:var(--spectrum-transparent-black-800);
-    }
-
-.spectrum-Divider--sizeS{
-        --spectrum-divider-thickness:var(--spectrum-divider-thickness-small);
-        --spectrum-divider-background-color:var(--spectrum-divider-background-color-small);
-    }
-
-.spectrum-Divider--sizeM{
-        --spectrum-divider-thickness:var(--spectrum-divider-thickness-medium);
-        --spectrum-divider-background-color:var(--spectrum-divider-background-color-medium);
-    }
-
-.spectrum-Divider--sizeL{
-        --spectrum-divider-thickness:var(--spectrum-divider-thickness-large);
-        --spectrum-divider-background-color:var(--spectrum-divider-background-color-large);
-    }
-
-/*# sourceMappingURL=express.css.map */
+.spectrum-express {
+	--system-spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
+	--system-spectrum-divider-background-color: var(--spectrum-divider-background-color-medium);
+	--system-spectrum-divider-background-color-small: var(--spectrum-gray-200);
+	--system-spectrum-divider-background-color-medium: var(--spectrum-gray-200);
+	--system-spectrum-divider-background-color-large: var(--spectrum-gray-800);
+	--system-spectrum-divider-background-color-small-static-white: var(--spectrum-transparent-white-300);
+	--system-spectrum-divider-background-color-medium-static-white: var(--spectrum-transparent-white-300);
+	--system-spectrum-divider-background-color-large-static-white: var(--spectrum-transparent-white-800);
+	--system-spectrum-divider-background-color-small-static-black: var(--spectrum-transparent-black-300);
+	--system-spectrum-divider-background-color-medium-static-black: var(--spectrum-transparent-black-300);
+	--system-spectrum-divider-background-color-large-static-black: var(--spectrum-transparent-black-800);
+	--system-spectrum-divider-sizes-thickness: var(--spectrum-divider-thickness-small);
+	--system-spectrum-divider-sizes-background-color: var(--spectrum-divider-background-color-small);
+	--system-spectrum-divider-sizem-thickness: var(--spectrum-divider-thickness-medium);
+	--system-spectrum-divider-sizem-background-color: var(--spectrum-divider-background-color-medium);
+	--system-spectrum-divider-sizel-thickness: var(--spectrum-divider-thickness-large);
+	--system-spectrum-divider-sizel-background-color: var(--spectrum-divider-background-color-large);
+}
