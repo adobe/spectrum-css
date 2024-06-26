@@ -56,29 +56,86 @@ const formatPseudos = (selector) => {
 	return selector.replace(/:\w+\(.*?\)/g, replacement.replace(/\s/g, ""));
 };
 
-const fallbackNameProcessor = (selector, prop, identifierName) => {
-	selector = formatPseudos(selector);
+/**
+ * Replace combinators with logical descriptions to create a more readable variable name
+ * @param {string} selector
+ * @returns {string} An updated selector with the combinators replaced by logical descriptions
+ */
+function replaceCombinators(selector) {
+	return selector
+		.replace(/ \+ /g, "-next-to-")
+		.replace(/ > /g, "-child-of-")
+		.replace(/ ~ /g, "-sibling-of-")
+		.replace(/ /g, "-descendant-of-");
+}
 
-	// This regex is designed to pull spectrum-ActionButton out of a selector
-	let baseSelectorMatch = selector.match(/^\.([a-z]+-[A-Z][^-. ]+)/);
+/**
+ * Get the base selector for a given selector
+ * @param {string} selector
+ * @param {string} selectorPrefix
+ * @returns {string} The base selector
+ */
+function getBaseSelector(selector, selectorPrefix) {
+	// Default to the selector prefix if no base selector is found
+	let baseSelector = selectorPrefix;
+
+	// This regex is designed to pull spectrum-<ComponentName> out of a selector
+	let baseSelectorMatch = selector.match(new RegExp(`^.(${selectorPrefix}-[A-Z][^-. ]+)`));
 	if (baseSelectorMatch) {
-		const [, baseSelector] = baseSelectorMatch;
-		const baseSelectorRegExp = new RegExp(baseSelector, "gi");
-		prop = prop.replace(baseSelectorRegExp, "");
-		selector = baseSelector + selector.replace(baseSelectorRegExp, "");
+		const [, foundSelector] = baseSelectorMatch;
+		// @note is there any way this will capture a passthrough selector instead of the base selector for the component?
+		// @todo need to write a test case to verify this
+		if (foundSelector) baseSelector = foundSelector;
 	}
 
-	selector = selector.replace(/is-/g, "");
+	return baseSelector;
+}
 
-	let selectorParts = selector.replace(/\s+/g, "").replace(/,/g, "").split(".");
+/**
+ * Fallback function to process the name of the new variable
+ * @param {string} selector
+ * @param {string} prop
+ * @param {{ identifierName: string, identifierValue: string, selectorPrefix: string }} options
+ * @returns {string} The new variable name
+ */
+function getVariableName(selector, prop, { identifierName, identifierValue, selectorPrefix }) {
+	const baseSelector = getBaseSelector(selector, selectorPrefix);
 
-	return (
-		"--" +
-		(`${identifierName}-${selectorParts.join("-")}-${prop.substr(2)}`)
+	// @note what about :root, :host, or other special selectors?
+	selector = formatPseudos(selector);
+	selector = replaceCombinators(selector);
+
+	// @note why are we splitting on "."? What if we're not using classes?
+	// @todo need to write a test case to verify attribute selectors are handled correctly
+	// Split the selector into parts
+	let selectorParts = [selector, prop];
+
+	// Clean up the selector parts
+	selectorParts = selectorParts.map((part) =>
+		part
+			// Remove the base selector
+			.replace(new RegExp(baseSelector, "gi"), "")
+			// Remove the identifers if they exist
+			.replace(new RegExp(selectorPrefix, "gi"), "")
+			.replace(new RegExp(identifierName, "gi"), "")
+			.replace(new RegExp(identifierValue, "gi"), "")
+			// Remove state-based prefix
+			.replace(/is-/g, "")
+			// If a string has a lowercase letter followed by an uppercase letter, insert a dash between them
+			.replace(/([a-z])([A-Z])/g, "$1-$2")
+			// Remove all whitespace
+			.replace(/\s+/g, "")
+			// Remove non-alphanumeric characters
+			.replace(/\W/g, "-")
+			// Remove any leading or trailing dashes
+			.replace(/^-/g, "")
+			.replace(/-$/g, "")
+			// Replace multiple dashes with a single dash
 			.replace(/-+/g, "-")
-			.toLowerCase()
-	);
-};
+	).filter((part) => part.length > 0);
+
+	return `--${identifierName}-${baseSelector}-${selectorParts.join("-")}`.toLowerCase();
+}
 
 /**
  * @typedef Options
@@ -87,8 +144,7 @@ const fallbackNameProcessor = (selector, prop, identifierName) => {
  * @property {boolean} [preserveVariables=false] - When used with `skipMapping`, this option will preserve the variables defined inside the container query in the output by injecting them to the root selector.
  * @property {boolean} [referencesOnly=false] - This option will only output those variables that are referencing the newly created system variables and not the system variables themselves. This can be used as a bridge between an old and new implementation for the component.
  * @property {boolean} [stripLocalSelectors=false] - This option will remove the local selectors (those that map to system variables) from the output leaving only the system definitions.
- * @property {(identifierValue: string, identifierName: string) => string} [processIdentifier]
- * @property {(selector: string, prop: string, identifierName: string) => string} [getName]
+ * @property {(identifierValue: string, identifierName: string) => string} [processIdentifier] - A function that processes the identifier value and creates a new selector
 */
 
 /** @type import('postcss').PluginCreator<Options> */
@@ -99,7 +155,6 @@ module.exports = ({
 	referencesOnly = false,
 	stripLocalSelectors = false,
 	processIdentifier,
-	getName = fallbackNameProcessor,
 }) => ({
 	postcssPlugin: "postcss-splitinator",
 	OnceExit(root, { Rule, Declaration }) {
@@ -154,7 +209,11 @@ module.exports = ({
 				// note: this doesn't support :where() and is likely brittle!
 				const selectors = decl.parent.selector.split(/\s*,\s*/);
 				selectors.forEach((selector) => {
-					const variableName = getName(selector, decl.prop, identifierName);
+					const variableName = getVariableName(selector, decl.prop, {
+						identifierName,
+						identifierValue,
+						selectorPrefix
+					});
 					const newDecl = decl.clone({
 						prop: variableName,
 					});

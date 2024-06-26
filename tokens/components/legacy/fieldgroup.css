@@ -11,6 +11,6 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-legacy {
-	--system-spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
-	--system-spectrum-fieldgroup-readonly-delimiter: "\002c";
+	--system-spectrum-fieldgroup--margin: var(--spectrum-spacing-300);
+	--system-spectrum-fieldgroup--readonly-delimiter: "\002c";
 }

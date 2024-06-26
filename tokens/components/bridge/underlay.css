@@ -11,11 +11,11 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Underlay {
-	--spectrum-underlay-background-entry-animation-delay: var(--system-spectrum-underlay-background-entry-animation-delay);
-	--spectrum-underlay-background-exit-animation-ease: var(--system-spectrum-underlay-background-exit-animation-ease);
-	--spectrum-underlay-background-entry-animation-ease: var(--system-spectrum-underlay-background-entry-animation-ease);
-	--spectrum-underlay-background-exit-animation-duration: var(--system-spectrum-underlay-background-exit-animation-duration);
-	--spectrum-underlay-background-entry-animation-duration: var(--system-spectrum-underlay-background-entry-animation-duration);
-	--spectrum-underlay-background-exit-animation-delay: var(--system-spectrum-underlay-background-exit-animation-delay);
-	--spectrum-underlay-background-color: var(--system-spectrum-underlay-background-color);
+	--spectrum-underlay-background-entry-animation-delay: var(--system-spectrum-underlay--background-entry-animation-delay);
+	--spectrum-underlay-background-exit-animation-ease: var(--system-spectrum-underlay--background-exit-animation-ease);
+	--spectrum-underlay-background-entry-animation-ease: var(--system-spectrum-underlay--background-entry-animation-ease);
+	--spectrum-underlay-background-exit-animation-duration: var(--system-spectrum-underlay--background-exit-animation-duration);
+	--spectrum-underlay-background-entry-animation-duration: var(--system-spectrum-underlay--background-entry-animation-duration);
+	--spectrum-underlay-background-exit-animation-delay: var(--system-spectrum-underlay--background-exit-animation-delay);
+	--spectrum-underlay-background-color: var(--system-spectrum-underlay--background-color);
 }

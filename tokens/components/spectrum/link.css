@@ -11,15 +11,15 @@ governing permissions and limitations under the License.
 */
 
 .spectrum {
-	--system-spectrum-link-animation-duration: var(--spectrum-animation-duration-100);
-	--system-spectrum-link-text-color-primary-default: var(--spectrum-accent-content-color-default);
-	--system-spectrum-link-text-color-primary-hover: var(--spectrum-accent-content-color-hover);
-	--system-spectrum-link-text-color-primary-active: var(--spectrum-accent-content-color-down);
-	--system-spectrum-link-text-color-primary-focus: var(--spectrum-accent-content-color-key-focus);
-	--system-spectrum-link-text-color-secondary-default: var(--spectrum-neutral-content-color-default);
-	--system-spectrum-link-text-color-secondary-hover: var(--spectrum-neutral-content-color-hover);
-	--system-spectrum-link-text-color-secondary-active: var(--spectrum-neutral-content-color-down);
-	--system-spectrum-link-text-color-secondary-focus: var(--spectrum-neutral-content-color-key-focus);
-	--system-spectrum-link-text-color-white: var(--spectrum-white);
-	--system-spectrum-link-text-color-black: var(--spectrum-black);
+	--system-spectrum-link--animation-duration: var(--spectrum-animation-duration-100);
+	--system-spectrum-link--text-color-primary-default: var(--spectrum-accent-content-color-default);
+	--system-spectrum-link--text-color-primary-hover: var(--spectrum-accent-content-color-hover);
+	--system-spectrum-link--text-color-primary-active: var(--spectrum-accent-content-color-down);
+	--system-spectrum-link--text-color-primary-focus: var(--spectrum-accent-content-color-key-focus);
+	--system-spectrum-link--text-color-secondary-default: var(--spectrum-neutral-content-color-default);
+	--system-spectrum-link--text-color-secondary-hover: var(--spectrum-neutral-content-color-hover);
+	--system-spectrum-link--text-color-secondary-active: var(--spectrum-neutral-content-color-down);
+	--system-spectrum-link--text-color-secondary-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-spectrum-link--text-color-white: var(--spectrum-white);
+	--system-spectrum-link--text-color-black: var(--spectrum-black);
 }
