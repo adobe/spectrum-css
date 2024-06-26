@@ -18,7 +18,7 @@ export const Template = ({
 	hasLink,
 	id,
 	customClasses = [],
-}) => {
+} = {}, context = {}) => {
 	const { updateArgs } = context;
 
 	return html`

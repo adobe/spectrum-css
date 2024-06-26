@@ -57,7 +57,7 @@ Default.args = {
 			id: "form-example-amount",
 			content: Stepper.bind(null, {})
 		}
-],
+	],
 };
 
 // ********* VRT ONLY ********* //
