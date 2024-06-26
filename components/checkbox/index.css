@@ -288,6 +288,7 @@ governing permissions and limitations under the License.
 /* Emphasized */
 .spectrum-Checkbox--emphasized {
 	/* Checked and Indeterminate Default States */
+	.spectrum-Checkbox-input + .spectrum-Checkbox-box,
 	.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
 	&.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
 	&.is-indeterminate .spectrum-Checkbox-box {
