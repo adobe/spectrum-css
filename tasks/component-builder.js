@@ -99,7 +99,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
  * @param {string} [options.cwd=]
  * @param {boolean} [options.clean=false]
  * @param {import('postcss-load-config').ConfigContext} [options.postCSSOptions]
- * @returns {Promise<(string|void)[]>} Returns either the CSS content or void
+ * @returns {Promise<(string|void)[]>} Returns the console output for the build
  */
 async function processCSS(content, input, output, {
 	cwd,
@@ -259,11 +259,11 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
  * @returns Promise<void>
  */
 async function build({ cwd = process.cwd(), clean = false } = {}) {
-	const rootCSS = path.join(cwd, "index.css");
+	const indexSourceCSS = path.join(cwd, "index.css");
 	// Nothing to do if there's no input file
-	if (!fs.existsSync(rootCSS)) return;
+	if (!fs.existsSync(indexSourceCSS)) return;
 
-	const content = await fsp.readFile(rootCSS, "utf8");
+	const content = await fsp.readFile(indexSourceCSS, "utf8");
 
 	// Create the dist directory if it doesn't exist
 	if (!fs.existsSync(path.join(cwd, "dist"))) {
@@ -271,7 +271,7 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 	}
 
 	return Promise.all([
-		processCSS(content, rootCSS, path.join(cwd, "dist", "index.css"), {
+		processCSS(content, indexSourceCSS, path.join(cwd, "dist", "index.css"), {
 			cwd,
 			clean,
 			skipMapping: true,
@@ -285,7 +285,7 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 				// Return the console output to be logged
 					.then(r => [r, ...reports])
 			),
-		processCSS(content, rootCSS, path.join(cwd, "dist", "index-base.css"), {
+		processCSS(content, indexSourceCSS, path.join(cwd, "dist", "index-base.css"), {
 			cwd,
 			clean,
 			skipMapping: true,
@@ -311,17 +311,16 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	// Nothing to do if there's no content
 	if (!contentData || contentData.length === 0) return;
 
-	let imports = [];
+	const imports = contentData.map(({ input }) => input);
+	const importMap = imports.map(i => `@import "${i}";`).join("\n");
+
 	const promises = contentData.map(async ({ content, input }) => {
 		if (!content) return Promise.reject(new Error(`No content found for ${relativePrint(input, { cwd })}`));
-
-		imports.push(input);
-
 		return processCSS(content, path.join(cwd, input), path.join(cwd, "dist", input), {
 			cwd,
 			clean,
 			lint: false,
-			skipMapping: true,
+			skipMapping: false,
 			referencesOnly: false,
 			preserveVariables: true,
 			// Only output the new selectors with the system mappings
@@ -338,11 +337,10 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 
 	promises.push(
 		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
-		processCSS(imports.map(i => `@import "${i}";`).join("\n"), path.join(cwd, "index-theme.css"), path.join(cwd, "dist", "index-theme.css"), {
+		processCSS(importMap, path.join(cwd, "index.css"), path.join(cwd, "dist", "index-theme.css"), {
 			cwd,
 			clean,
-			skipMapping: true,
-			preserveVariables: true,
+			skipMapping: false,
 			stripLocalSelectors: false,
 			referencesOnly: true,
 		}).then(async (reports) => {
@@ -351,6 +349,26 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				copy(path.join(dirs.root, "tokens/components/bridge", `${componentName}.css`), path.join(dirs.root, "tokens", "dist/css/components/bridge", `${componentName}.css`), { cwd, isDeprecated: false }),
 			]).then(r => [...reports, r]);
 		}),
+	);
+
+	// Fetch the output of index-theme.css and the index-base.css into a new file: index-theme-switcher.css
+	promises.push(
+		fsp.readFile(path.join(cwd, "index.css"), "utf8")
+			.then(sourceContent =>
+				processCSS(
+					importMap + "\n" + sourceContent,
+					path.join(cwd, "index.css"),
+					path.join(cwd, "dist", "index-theme-switcher.css"),
+					{
+						cwd,
+						clean,
+						skipMapping: false,
+						preserveVariables: true,
+						stripLocalSelectors: false,
+						referencesOnly: false,
+					}
+				)
+			),
 	);
 
 	return Promise.all(promises);

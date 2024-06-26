@@ -10,24 +10,22 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Steplist{
-        --spectrum-steplist-step-width:80px;
-        --spectrum-steplist-marker-diameter:8px;
-        --spectrum-steplist-marker-hitArea:20px;
-        --spectrum-steplist-segment-height:2px;
-        --spectrum-steplist-topPadding:22px;
-        --spectrum-steplist-small-topPadding:11px;
-        --spectrum-steplist-sidePadding:60px;
-        --spectrum-steplist-label-labelOffset:10px;
-        --spectrum-steplist-label-text-size:12px;
-
-        --spectrum-steplist-current-label-text-color:var(--spectrum-gray-800);
-        --spectrum-steplist-current-marker-color:var(--spectrum-gray-800);
-        --spectrum-steplist-complete-label-text-color:var(--spectrum-gray-700);
-        --spectrum-steplist-incomplete-label-color:var(--spectrum-gray-600);
-        --spectrum-steplist-complete-marker-background-color:var(--spectrum-gray-600);
-        --spectrum-steplist-incomplete-marker-border-color:var(--spectrum-gray-200);
-        --spectrum-steplist-incomplete-segment-border-block-end-color:var(--spectrum-gray-200);
-        --spectrum-steplist-complete-segment-border-block-end-color:var(--spectrum-gray-600);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Steplist {
+	--spectrum-steplist-step-width: var(--system-spectrum-steplist-step-width);
+	--spectrum-steplist-marker-diameter: var(--system-spectrum-steplist-marker-diameter);
+	--spectrum-steplist-marker-hitArea: var(--system-spectrum-steplist-marker-hitarea);
+	--spectrum-steplist-segment-height: var(--system-spectrum-steplist-segment-height);
+	--spectrum-steplist-topPadding: var(--system-spectrum-steplist-toppadding);
+	--spectrum-steplist-small-topPadding: var(--system-spectrum-steplist-small-toppadding);
+	--spectrum-steplist-sidePadding: var(--system-spectrum-steplist-sidepadding);
+	--spectrum-steplist-label-labelOffset: var(--system-spectrum-steplist-label-labeloffset);
+	--spectrum-steplist-label-text-size: var(--system-spectrum-steplist-label-text-size);
+	--spectrum-steplist-current-label-text-color: var(--system-spectrum-steplist-current-label-text-color);
+	--spectrum-steplist-current-marker-color: var(--system-spectrum-steplist-current-marker-color);
+	--spectrum-steplist-complete-label-text-color: var(--system-spectrum-steplist-complete-label-text-color);
+	--spectrum-steplist-incomplete-label-color: var(--system-spectrum-steplist-incomplete-label-color);
+	--spectrum-steplist-complete-marker-background-color: var(--system-spectrum-steplist-complete-marker-background-color);
+	--spectrum-steplist-incomplete-marker-border-color: var(--system-spectrum-steplist-incomplete-marker-border-color);
+	--spectrum-steplist-incomplete-segment-border-block-end-color: var(--system-spectrum-steplist-incomplete-segment-border-block-end-color);
+	--spectrum-steplist-complete-segment-border-block-end-color: var(--system-spectrum-steplist-complete-segment-border-block-end-color);
+}

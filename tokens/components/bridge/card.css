@@ -10,70 +10,74 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Card{
-        --spectrum-card-background-color:var(--spectrum-background-layer-2-color);
-        --spectrum-card-body-spacing:var(--spectrum-spacing-400);
-        --spectrum-card-title-padding-top:var(--spectrum-spacing-300);
-        --spectrum-card-title-padding-right:var(--spectrum-spacing-400);
-        --spectrum-card-content-margin-top:var(--spectrum-spacing-100);
-        --spectrum-card-content-margin-bottom:var(--spectrum-spacing-300);
-        --spectrum-card-footer-padding-top:var(--spectrum-spacing-100);
-        --spectrum-card-subtitle-padding-right:var(--spectrum-spacing-100);
+.spectrum-Card {
+	--spectrum-card-background-color: var(--system-spectrum-card-background-color);
+	--spectrum-card-body-spacing: var(--system-spectrum-card-body-spacing);
+	--spectrum-card-title-padding-top: var(--system-spectrum-card-title-padding-top);
+	--spectrum-card-title-padding-right: var(--system-spectrum-card-title-padding-right);
+	--spectrum-card-content-margin-top: var(--system-spectrum-card-content-margin-top);
+	--spectrum-card-content-margin-bottom: var(--system-spectrum-card-content-margin-bottom);
+	--spectrum-card-footer-padding-top: var(--system-spectrum-card-footer-padding-top);
+	--spectrum-card-subtitle-padding-right: var(--system-spectrum-card-subtitle-padding-right);
+	--spectrum-card-border-width: var(--system-spectrum-card-border-width);
+	--spectrum-card-corner-radius: var(--system-spectrum-card-corner-radius);
+	--spectrum-card-border-color: var(--system-spectrum-card-border-color);
+	--spectrum-card-border-color-hover: var(--system-spectrum-card-border-color-hover);
+	--spectrum-card-border-color-selected: var(--system-spectrum-card-border-color-selected);
+	--spectrum-card-divider-color: var(--system-spectrum-card-divider-color);
+	--spectrum-card-title-font-family: var(--system-spectrum-card-title-font-family);
+	--spectrum-card-title-font-size: var(--system-spectrum-card-title-font-size);
+	--spectrum-card-title-font-weight: var(--system-spectrum-card-title-font-weight);
+	--spectrum-card-title-font-style: var(--system-spectrum-card-title-font-style);
+	--spectrum-card-title-line-height: var(--system-spectrum-card-title-line-height);
+	--spectrum-card-title-font-color: var(--system-spectrum-card-title-font-color);
+	--spectrum-card-body-font-family: var(--system-spectrum-card-body-font-family);
+	--spectrum-card-body-font-size: var(--system-spectrum-card-body-font-size);
+	--spectrum-card-body-font-weight: var(--system-spectrum-card-body-font-weight);
+	--spectrum-card-body-font-style: var(--system-spectrum-card-body-font-style);
+	--spectrum-card-body-line-height: var(--system-spectrum-card-body-line-height);
+	--spectrum-card-body-font-color: var(--system-spectrum-card-body-font-color);
+	--spectrum-card-actions-spacing: var(--system-spectrum-card-actions-spacing);
+	--spectrum-card-actions-size: var(--system-spectrum-card-actions-size);
+	--spectrum-card-actions-border-radius: var(--system-spectrum-card-actions-border-radius);
+	--spectrum-card-actions-background-color-rgb: var(--system-spectrum-card-actions-background-color-rgb);
+	--spectrum-card-actions-background-color-opacity: var(--system-spectrum-card-actions-background-color-opacity);
+	--spectrum-card-actions-drop-shadow-color: var(--system-spectrum-card-actions-drop-shadow-color);
+	--spectrum-card-actions-drop-shadow-x: var(--system-spectrum-card-actions-drop-shadow-x);
+	--spectrum-card-actions-drop-shadow-y: var(--system-spectrum-card-actions-drop-shadow-y);
+	--spectrum-card-actions-drop-shadow-blur: var(--system-spectrum-card-actions-drop-shadow-blur);
+	--spectrum-card-focus-indicator-color: var(--system-spectrum-card-focus-indicator-color);
+	--spectrum-card-focus-indicator-width: var(--system-spectrum-card-focus-indicator-width);
+	--spectrum-card-selected-background-opacity: var(--system-spectrum-card-selected-background-opacity);
+	--spectrum-card-preview-border-width-selected: var(--system-spectrum-card-preview-border-width-selected);
+	--spectrum-card-preview-background-color: var(--system-spectrum-card-preview-background-color);
+	--spectrum-card-preview-background-color-hover: var(--system-spectrum-card-preview-background-color-hover);
+	--spectrum-card-horizontal-body-padding: var(--system-spectrum-card-horizontal-body-padding);
+	--spectrum-card-horizontal-preview-padding: var(--system-spectrum-card-horizontal-preview-padding);
+}
 
-        --spectrum-card-border-width:var(--spectrum-border-width-100);
-        --spectrum-card-corner-radius:var(--spectrum-corner-radius-100);
-        --spectrum-card-border-color:var(--spectrum-gray-100);
-        --spectrum-card-border-color-hover:var(--spectrum-gray-200);
-        --spectrum-card-border-color-selected:var(--spectrum-blue-700);
+.spectrum--light .spectrum-Card {
+	--spectrum-card-selected-background-color-rgb: var(--system-spectrum-light-spectrum-card-spectrum-card-selected-background-color-rgb);
+}
 
-        --spectrum-card-divider-color:var(--spectrum-gray-200);
-        --spectrum-card-title-font-family:var(--spectrum-sans-font-family-stack);
-        --spectrum-card-title-font-size:var(--spectrum-heading-size-xxs);
-        --spectrum-card-title-font-weight:var(--spectrum-heading-sans-serif-font-weight);
-        --spectrum-card-title-font-style:var(--spectrum-heading-sans-serif-font-style);
-        --spectrum-card-title-line-height:var(--spectrum-heading-line-height);
-        --spectrum-card-title-font-color:var(--spectrum-heading-color);
+.spectrum--lightest .spectrum-Card {
+	--spectrum-card-selected-background-color-rgb: var(--system-spectrum-lightest-spectrum-card-spectrum-card-selected-background-color-rgb);
+}
 
-        --spectrum-card-body-font-family:var(--spectrum-sans-font-family-stack);
-        --spectrum-card-body-font-size:var(--spectrum-body-size-s);
-        --spectrum-card-body-font-weight:var(--spectrum-body-sans-serif-font-weight);
-        --spectrum-card-body-font-style:var(--spectrum-body-sans-serif-font-style);
-        --spectrum-card-body-line-height:var(--spectrum-body-line-height);
-        --spectrum-card-body-font-color:var(--spectrum-body-color);
-        --spectrum-card-actions-spacing:var(--spectrum-spacing-300);
-        --spectrum-card-actions-size:var(--spectrum-card-selection-background-size);
-        --spectrum-card-actions-border-radius:var(--spectrum-corner-radius-100);
-        --spectrum-card-actions-background-color-rgb:var(--spectrum-gray-100-rgb);
-        --spectrum-card-actions-background-color-opacity:var(--spectrum-card-selection-background-color-opacity);
-        --spectrum-card-actions-drop-shadow-color:var(--spectrum-drop-shadow-color);
-        --spectrum-card-actions-drop-shadow-x:var(--spectrum-drop-shadow-x);
-        --spectrum-card-actions-drop-shadow-y:var(--spectrum-drop-shadow-y);
-        --spectrum-card-actions-drop-shadow-blur:var(--spectrum-drop-shadow-blur);
-        --spectrum-card-focus-indicator-color:var(--spectrum-focus-indicator-color);
-        --spectrum-card-focus-indicator-width:var(--spectrum-focus-indicator-thickness);
-        --spectrum-card-selected-background-opacity:0.1;
+.spectrum--dark .spectrum-Card {
+	--spectrum-card-selected-background-color-rgb: var(--system-spectrum-dark-spectrum-card-spectrum-card-selected-background-color-rgb);
+}
 
-        --spectrum-card-preview-border-width-selected:var(--spectrum-border-width-100);
-        --spectrum-card-preview-background-color:var(--spectrum-background-base-color);
-        --spectrum-card-preview-background-color-hover:var(--spectrum-gray-200);
-        --spectrum-card-horizontal-body-padding:var(--spectrum-spacing-300);
-        --spectrum-card-horizontal-preview-padding:var(--spectrum-spacing-200)
-    }
+.spectrum--darkest .spectrum-Card {
+	--spectrum-card-selected-background-color-rgb: var(--system-spectrum-darkest-spectrum-card-spectrum-card-selected-background-color-rgb);
+}
 
-.spectrum--light :scope,.spectrum--lightest :scope{
-            --spectrum-card-selected-background-color-rgb:var(--spectrum-blue-900-rgb);
-        }
+.spectrum-Card--quiet {
+	--mod-card-content-margin-top: var(--system-spectrum-card-quiet-mod-card-content-margin-top);
+	--mod-card-minimum-width: var(--system-spectrum-card-quiet-mod-card-minimum-width);
+}
 
-.spectrum--dark :scope{
-            --spectrum-card-selected-background-color-rgb:var(--spectrum-blue-500-rgb);
-        }
-
-.spectrum--darkest :scope{
-            --spectrum-card-selected-background-color-rgb:var(--spectrum-blue-600-rgb);
-        }
-
-.spectrum-Card--gallery,.spectrum-Card--quiet{
-        --mod-card-content-margin-top:var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
-        --mod-card-minimum-width:var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Card--gallery {
+	--mod-card-content-margin-top: var(--system-spectrum-card-gallery-mod-card-content-margin-top);
+	--mod-card-minimum-width: var(--system-spectrum-card-gallery-mod-card-minimum-width);
+}

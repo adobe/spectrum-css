@@ -10,114 +10,92 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-TreeView{
-        --spectrum-treeview-line-height:var(--spectrum-line-height-200);
-        --spectrum-treeview-margin-block:1em;
-        --spectrum-treeview-font-size:var(--spectrum-font-size-100);
+.spectrum-TreeView {
+	--spectrum-treeview-line-height: var(--system-spectrum-treeview-line-height);
+	--spectrum-treeview-margin-block: var(--system-spectrum-treeview-margin-block);
+	--spectrum-treeview-font-size: var(--system-spectrum-treeview-font-size);
+	--spectrum-treeview-item-min-block-size: var(--system-spectrum-treeview-item-min-block-size);
+	--spectrum-treeview-item-indentation: var(--system-spectrum-treeview-item-indentation);
+	--spectrum-treeview-item-padding-inline-start: var(--system-spectrum-treeview-item-padding-inline-start);
+	--spectrum-treeview-item-padding-inline-end: var(--system-spectrum-treeview-item-padding-inline-end);
+	--spectrum-treeview-section-spacing: var(--system-spectrum-treeview-section-spacing);
+	--spectrum-treeview-heading-font-weight: var(--system-spectrum-treeview-heading-font-weight);
+	--spectrum-treeview-heading-bottom-to-text: var(--system-spectrum-treeview-heading-bottom-to-text);
+	--spectrum-treeview-heading-color: var(--system-spectrum-treeview-heading-color);
+	--spectrum-treeview-item-border-size: var(--system-spectrum-treeview-item-border-size);
+	--spectrum-treeview-item-border-size-selected: var(--system-spectrum-treeview-item-border-size-selected);
+	--spectrum-treeview-item-border-radius: var(--system-spectrum-treeview-item-border-radius);
+	--spectrum-treeview-item-border-color-selected: var(--system-spectrum-treeview-item-border-color-selected);
+	--spectrum-treeview-item-border-color-focus: var(--system-spectrum-treeview-item-border-color-focus);
+	--spectrum-treeview-item-background-color-hover: var(--system-spectrum-treeview-item-background-color-hover);
+	--spectrum-treeview-item-background-color-focus: var(--system-spectrum-treeview-item-background-color-focus);
+	--spectrum-treeview-item-border-color-quiet-selected: var(--system-spectrum-treeview-item-border-color-quiet-selected);
+	--spectrum-treeview-item-icon-gap: var(--system-spectrum-treeview-item-icon-gap);
+	--spectrum-treeview-item-icon-color: var(--system-spectrum-treeview-item-icon-color);
+	--spectrum-treeview-item-icon-color-hover: var(--system-spectrum-treeview-item-icon-color-hover);
+	--spectrum-treeview-item-icon-color-focus: var(--system-spectrum-treeview-item-icon-color-focus);
+	--spectrum-treeview-item-icon-color-selected: var(--system-spectrum-treeview-item-icon-color-selected);
+	--spectrum-treeview-item-icon-color-disabled: var(--system-spectrum-treeview-item-icon-color-disabled);
+	--spectrum-treeview-item-text-color: var(--system-spectrum-treeview-item-text-color);
+	--spectrum-treeview-item-text-color-selected: var(--system-spectrum-treeview-item-text-color-selected);
+	--spectrum-treeview-item-text-color-disabled: var(--system-spectrum-treeview-item-text-color-disabled);
+	--spectrum-treeview-item-text-color-focus: var(--system-spectrum-treeview-item-text-color-focus);
+	--spectrum-treeview-item-text-color-hover: var(--system-spectrum-treeview-item-text-color-hover);
+	--spectrum-treeview-indicator-margin-inline-start: var(--system-spectrum-treeview-indicator-margin-inline-start);
+	--spectrum-treeview-indicator-padding: var(--system-spectrum-treeview-indicator-padding);
+	--spectrum-treeview-item-min-block-size-thumbnail-offset: var(--system-spectrum-treeview-item-min-block-size-thumbnail-offset);
+	--spectrum-treeview-indicator-animation-duration: var(--system-spectrum-treeview-indicator-animation-duration);
+}
 
-        --spectrum-treeview-item-min-block-size:var(--spectrum-component-height-100);
-        --spectrum-treeview-item-indentation:var(--spectrum-treeview-item-indentation-medium);
+.spectrum-TreeView:dir(rtl) {
+	--spectrum-logical-rotation: var(--system-spectrum-treeview-dir-rtl-spectrum-logical-rotation);
+}
 
-        --spectrum-treeview-item-padding-inline-start:var(--spectrum-component-height-100);
-        --spectrum-treeview-item-padding-inline-end:var(--spectrum-component-edge-to-text-100);
+.spectrum-TreeView--sizeS {
+	--spectrum-treeview-font-size: var(--system-spectrum-treeview-sizes-font-size);
+	--spectrum-treeview-item-min-block-size: var(--system-spectrum-treeview-sizes-item-min-block-size);
+	--spectrum-treeview-item-indentation: var(--system-spectrum-treeview-sizes-item-indentation);
+	--spectrum-treeview-heading-bottom-to-text: var(--system-spectrum-treeview-sizes-heading-bottom-to-text);
+	--spectrum-treeview-item-padding-inline-start: var(--system-spectrum-treeview-sizes-item-padding-inline-start);
+	--spectrum-treeview-indicator-margin-inline-start: var(--system-spectrum-treeview-sizes-indicator-margin-inline-start);
+	--spectrum-treeview-item-padding-inline-end: var(--system-spectrum-treeview-sizes-item-padding-inline-end);
+	--spectrum-treeview-indicator-padding: var(--system-spectrum-treeview-sizes-indicator-padding);
+	--spectrum-treeview-item-min-block-size-thumbnail-offset: var(--system-spectrum-treeview-sizes-item-min-block-size-thumbnail-offset);
+}
 
-        --spectrum-treeview-section-spacing:var(--spectrum-treeview-item-indentation-medium);
-        --spectrum-treeview-heading-font-weight:var(--spectrum-bold-font-weight);
-        --spectrum-treeview-heading-bottom-to-text:var(--spectrum-component-edge-to-text-100);
-        --spectrum-treeview-heading-color:var(--spectrum-heading-color);
+.spectrum-TreeView--sizeL {
+	--spectrum-treeview-font-size: var(--system-spectrum-treeview-sizel-font-size);
+	--spectrum-treeview-item-indentation: var(--system-spectrum-treeview-sizel-item-indentation);
+	--spectrum-treeview-item-min-block-size: var(--system-spectrum-treeview-sizel-item-min-block-size);
+	--spectrum-treeview-heading-bottom-to-text: var(--system-spectrum-treeview-sizel-heading-bottom-to-text);
+	--spectrum-treeview-item-padding-inline-start: var(--system-spectrum-treeview-sizel-item-padding-inline-start);
+	--spectrum-treeview-indicator-margin-inline-start: var(--system-spectrum-treeview-sizel-indicator-margin-inline-start);
+	--spectrum-treeview-item-padding-inline-end: var(--system-spectrum-treeview-sizel-item-padding-inline-end);
+	--spectrum-treeview-indicator-padding: var(--system-spectrum-treeview-sizel-indicator-padding);
+	--spectrum-treeview-item-min-block-size-thumbnail-offset: var(--system-spectrum-treeview-sizel-item-min-block-size-thumbnail-offset);
+}
 
-        --spectrum-treeview-item-border-size:var(--spectrum-border-width-200);
-        --spectrum-treeview-item-border-size-selected:1px;
-        --spectrum-treeview-item-border-radius:0px;
+.spectrum-TreeView--sizeXL {
+	--spectrum-treeview-font-size: var(--system-spectrum-treeview-sizexl-font-size);
+	--spectrum-treeview-item-indentation: var(--system-spectrum-treeview-sizexl-item-indentation);
+	--spectrum-treeview-item-min-block-size: var(--system-spectrum-treeview-sizexl-item-min-block-size);
+	--spectrum-treeview-heading-bottom-to-text: var(--system-spectrum-treeview-sizexl-heading-bottom-to-text);
+	--spectrum-treeview-item-padding-inline-start: var(--system-spectrum-treeview-sizexl-item-padding-inline-start);
+	--spectrum-treeview-indicator-margin-inline-start: var(--system-spectrum-treeview-sizexl-indicator-margin-inline-start);
+	--spectrum-treeview-item-padding-inline-end: var(--system-spectrum-treeview-sizexl-item-padding-inline-end);
+	--spectrum-treeview-indicator-padding: var(--system-spectrum-treeview-sizexl-indicator-padding);
+	--spectrum-treeview-item-min-block-size-thumbnail-offset: var(--system-spectrum-treeview-sizexl-item-min-block-size-thumbnail-offset);
+}
 
-        --spectrum-treeview-item-border-color-selected:var(--spectrum-blue-800);
-        --spectrum-treeview-item-border-color-focus:var(--spectrum-blue-700);
+.spectrum-TreeView--quiet {
+	--mod-treeview-item-background-color-selected: var(--system-spectrum-treeview-quiet-mod-treeview-item-background-color-selected);
+	--mod-treeview-item-border-color-selected: var(--system-spectrum-treeview-quiet-mod-treeview-item-border-color-selected);
+}
 
-        --spectrum-treeview-item-background-color-hover:var(--spectrum-gray-100);
-        --spectrum-treeview-item-background-color-focus:var(--spectrum-gray-100);
+.spectrum-TreeView--thumbnail {
+	--mod-treeview-item-min-block-size: var(--system-spectrum-treeview-thumbnail-mod-treeview-item-min-block-size);
+}
 
-        --spectrum-treeview-item-border-color-quiet-selected:transparent;
-
-        --spectrum-treeview-item-icon-gap:var(--spectrum-text-to-visual-75);
-        --spectrum-treeview-item-icon-color:var(--spectrum-gray-700);
-        --spectrum-treeview-item-icon-color-hover:var(--spectrum-gray-900);
-        --spectrum-treeview-item-icon-color-focus:var(--spectrum-gray-900);
-        --spectrum-treeview-item-icon-color-selected:var(--spectrum-gray-900);
-        --spectrum-treeview-item-icon-color-disabled:var(--spectrum-disabled-content-color);
-
-        --spectrum-treeview-item-text-color:var(--spectrum-neutral-content-color-default);
-        --spectrum-treeview-item-text-color-selected:var(--spectrum-gray-900);
-        --spectrum-treeview-item-text-color-disabled:var(--spectrum-gray-500);
-        --spectrum-treeview-item-text-color-focus:var(--spectrum-gray-900);
-        --spectrum-treeview-item-text-color-hover:var(--spectrum-gray-900);
-
-        --spectrum-treeview-indicator-margin-inline-start:calc(var(--spectrum-component-height-100)*-1);
-        --spectrum-treeview-indicator-padding:var(--spectrum-disclosure-indicator-top-to-disclosure-icon-medium);
-
-        --spectrum-treeview-item-min-block-size-thumbnail-offset:var(--spectrum-treeview-item-min-block-size-thumbnail-offset-medium, 0px);
-
-        --spectrum-treeview-indicator-animation-duration:var(--spectrum-animation-duration-100)
-    }
-
-:scope:dir(rtl){
-            --spectrum-logical-rotation:matrix(-1, 0, 0, 1, 0, 0);
-        }
-
-.spectrum-TreeView--sizeS{
-        --spectrum-treeview-font-size:var(--spectrum-font-size-75);
-
-        --spectrum-treeview-item-min-block-size:var(--spectrum-component-height-75);
-        --spectrum-treeview-item-indentation:var(--spectrum-treeview-item-indentation-small);
-        --spectrum-treeview-heading-bottom-to-text:var(--spectrum-component-edge-to-text-75);
-
-        --spectrum-treeview-item-padding-inline-start:var(--spectrum-component-height-75);
-        --spectrum-treeview-indicator-margin-inline-start:calc(var(--spectrum-component-height-75)*-1);
-        --spectrum-treeview-item-padding-inline-end:var(--spectrum-component-edge-to-text-75);
-        --spectrum-treeview-indicator-padding:var(--spectrum-disclosure-indicator-top-to-disclosure-icon-small);
-
-        --spectrum-treeview-item-min-block-size-thumbnail-offset:6px;
-    }
-
-.spectrum-TreeView--sizeL{
-        --spectrum-treeview-font-size:var(--spectrum-font-size-200);
-
-        --spectrum-treeview-item-indentation:var(--spectrum-treeview-item-indentation-large);
-        --spectrum-treeview-item-min-block-size:var(--spectrum-component-height-200);
-        --spectrum-treeview-heading-bottom-to-text:var(--spectrum-component-edge-to-text-200);
-
-        --spectrum-treeview-item-padding-inline-start:var(--spectrum-component-height-200);
-        --spectrum-treeview-indicator-margin-inline-start:calc(var(--spectrum-component-height-200)*-1);
-        --spectrum-treeview-item-padding-inline-end:var(--spectrum-component-edge-to-text-200);
-        --spectrum-treeview-indicator-padding:var(--spectrum-disclosure-indicator-top-to-disclosure-icon-large);
-
-        --spectrum-treeview-item-min-block-size-thumbnail-offset:0px;
-    }
-
-.spectrum-TreeView--sizeXL{
-        --spectrum-treeview-font-size:var(--spectrum-font-size-300);
-
-        --spectrum-treeview-item-indentation:var(--spectrum-treeview-item-indentation-extra-large);
-        --spectrum-treeview-item-min-block-size:var(--spectrum-component-height-300);
-        --spectrum-treeview-heading-bottom-to-text:var(--spectrum-component-edge-to-text-300);
-
-        --spectrum-treeview-item-padding-inline-start:var(--spectrum-component-height-300);
-        --spectrum-treeview-indicator-margin-inline-start:calc(var(--spectrum-component-height-300)*-1);
-        --spectrum-treeview-item-padding-inline-end:var(--spectrum-component-edge-to-text-300);
-        --spectrum-treeview-indicator-padding:var(--spectrum-disclosure-indicator-top-to-disclosure-icon-extra-large);
-
-        --spectrum-treeview-item-min-block-size-thumbnail-offset:0px;
-    }
-
-.spectrum-TreeView--quiet{
-        --mod-treeview-item-background-color-selected:var(--highcontrast-treeview-item-background-color-selected, var(--mod-treeview-item-background-color-quiet-selected, var(--spectrum-treeview-item-background-color-quiet-selected)));
-        --mod-treeview-item-border-color-selected:var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected-quiet, transparent));
-    }
-
-.spectrum-TreeView--thumbnail{
-        --mod-treeview-item-min-block-size:var(--mod-treeview-item-min-block-size-thumbnail, calc(var(--spectrum-treeview-item-min-block-size) + var(--spectrum-treeview-item-min-block-size-thumbnail-offset)));
-    }
-
-.spectrum-TreeView--detached{
-        --mod-treeview-item-border-radius:var(--mod-treeview-item-border-radius-detached, var(--spectrum-corner-radius-100));
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-TreeView--detached {
+	--mod-treeview-item-border-radius: var(--system-spectrum-treeview-detached-mod-treeview-item-border-radius);
+}

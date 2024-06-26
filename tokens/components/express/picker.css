@@ -9,138 +9,108 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Picker{
-		--spectrum-picker-background-color-default:var(--spectrum-gray-200);
-		--spectrum-picker-background-color-default-open:var(--spectrum-gray-300);
-		--spectrum-picker-background-color-hover:var(--spectrum-gray-300);
-		--spectrum-picker-background-color-hover-open:var(--spectrum-gray-300);
-		--spectrum-picker-background-color-active:var(--spectrum-gray-400);
-		--spectrum-picker-background-color-key-focus:var(--spectrum-gray-300);
-
-		--spectrum-picker-border-color-default:transparent;
-		--spectrum-picker-border-color-default-open:transparent;
-		--spectrum-picker-border-color-hover:transparent;
-		--spectrum-picker-border-color-hover-open:transparent;
-		--spectrum-picker-border-color-active:transparent;
-		--spectrum-picker-border-color-key-focus:transparent;
-
-		--spectrum-picker-border-width:0px;
-        --spectrum-picker-font-size:var(--spectrum-font-size-100);
-        --spectrum-picker-font-weight:var(--spectrum-regular-font-weight);
-        --spectrum-picker-placeholder-font-style:var(--spectrum-default-font-style);
-        --spectrum-picker-line-height:var(--spectrum-line-height-100);
-        --spectrum-picker-block-size:var(--spectrum-component-height-100);
-        --spectrum-picker-inline-size:var(--spectrum-field-width);
-        --spectrum-picker-border-radius:var(--spectrum-corner-radius-100);
-        --spectrum-picker-spacing-top-to-text:var(--spectrum-component-top-to-text-100);
-        --spectrum-picker-spacing-bottom-to-text:var(--spectrum-component-bottom-to-text-100);
-        --spectrum-picker-spacing-edge-to-text:var(--spectrum-component-edge-to-text-100);
-        --spectrum-picker-spacing-edge-to-text-quiet:var(--spectrum-field-edge-to-text-quiet);
-        --spectrum-picker-spacing-label-to-picker:var(--spectrum-field-label-to-component);
-
-        --spectrum-picker-spacing-text-to-icon:var(--spectrum-text-to-visual-100);
-        --spectrum-picker-spacing-text-to-icon-inline-end:var(--spectrum-field-text-to-alert-icon-medium);
-        --spectrum-picker-spacing-icon-to-disclosure-icon:var(--spectrum-picker-visual-to-disclosure-icon-medium);
-        --spectrum-picker-spacing-label-to-picker-quiet:var(--spectrum-field-label-to-component-quiet-medium);
-        --spectrum-picker-spacing-top-to-alert-icon:var(--spectrum-field-top-to-alert-icon-medium);
-        --spectrum-picker-spacing-top-to-progress-circle:var(--spectrum-field-top-to-progress-circle-medium);
-        --spectrum-picker-spacing-top-to-disclosure-icon:var(--spectrum-field-top-to-disclosure-icon-100);
-        --spectrum-picker-spacing-edge-to-disclosure-icon:var(--spectrum-field-end-edge-to-disclosure-icon-100);
-        --spectrum-picker-spacing-edge-to-disclosure-icon-quiet:var(--spectrum-picker-end-edge-to-disclousure-icon-quiet);
-        --spectrum-picker-animation-duration:var(--spectrum-animation-duration-100);
-        --spectrum-picker-font-color-default:var(--spectrum-neutral-content-color-default);
-        --spectrum-picker-font-color-default-open:var(--spectrum-neutral-content-color-focus);
-        --spectrum-picker-font-color-hover:var(--spectrum-neutral-content-color-hover);
-        --spectrum-picker-font-color-hover-open:var(--spectrum-neutral-content-color-focus-hover);
-        --spectrum-picker-font-color-active:var(--spectrum-neutral-content-color-down);
-        --spectrum-picker-font-color-key-focus:var(--spectrum-neutral-content-color-key-focus);
-
-        --spectrum-picker-icon-color-default:var(--spectrum-neutral-content-color-default);
-        --spectrum-picker-icon-color-default-open:var(--spectrum-neutral-content-color-focus);
-        --spectrum-picker-icon-color-hover:var(--spectrum-neutral-content-color-hover);
-        --spectrum-picker-icon-color-hover-open:var(--spectrum-neutral-content-color-focus-hover);
-        --spectrum-picker-icon-color-active:var(--spectrum-neutral-content-color-down);
-        --spectrum-picker-icon-color-key-focus:var(--spectrum-neutral-content-color-key-focus);
-
-        --spectrum-picker-border-color-error-default:var(--spectrum-negative-border-color-default);
-        --spectrum-picker-border-color-error-default-open:var(--spectrum-negative-border-color-focus);
-        --spectrum-picker-border-color-error-hover:var(--spectrum-negative-border-color-hover);
-        --spectrum-picker-border-color-error-hover-open:var(--spectrum-negative-border-color-focus-hover);
-        --spectrum-picker-border-color-error-active:var(--spectrum-negative-border-color-down);
-        --spectrum-picker-border-color-error-key-focus:var(--spectrum-negative-border-color-key-focus);
-
-        --spectrum-picker-icon-color-error:var(--spectrum-negative-visual-color);
-
-        --spectrum-picker-background-color-disabled:var(--spectrum-disabled-background-color);
-        --spectrum-picker-font-color-disabled:var(--spectrum-disabled-content-color);
-        --spectrum-picker-icon-color-disabled:var(--spectrum-disabled-content-color);
-        --spectrum-picker-focus-indicator-gap:var(--spectrum-focus-indicator-gap);
-        --spectrum-picker-focus-indicator-thickness:var(--spectrum-focus-indicator-thickness);
-        --spectrum-picker-focus-indicator-color:var(--spectrum-focus-indicator-color);
-    }
-
-.spectrum-Picker+.spectrum-Popover--bottom.is-open{
-            --spectrum-picker-spacing-picker-to-popover:var(--spectrum-component-to-menu-medium);
-        }
-
-.spectrum-Picker--sizeS{
-        --spectrum-picker-font-size:var(--spectrum-font-size-75);
-        --spectrum-picker-block-size:var(--spectrum-component-height-75);
-        --spectrum-picker-spacing-top-to-text:var(--spectrum-component-top-to-text-75);
-        --spectrum-picker-spacing-bottom-to-text:var(--spectrum-component-bottom-to-text-75);
-        --spectrum-picker-spacing-edge-to-text:var(--spectrum-component-edge-to-text-75);
-        --spectrum-picker-spacing-text-to-icon:var(--spectrum-text-to-visual-75);
-        --spectrum-picker-spacing-text-to-icon-inline-end:var(--spectrum-field-text-to-alert-icon-small);
-        --spectrum-picker-spacing-icon-to-disclosure-icon:var(--spectrum-picker-visual-to-disclosure-icon-small);
-        --spectrum-picker-spacing-label-to-picker-quiet:var(--spectrum-field-label-to-component-quiet-small);
-        --spectrum-picker-spacing-top-to-alert-icon:var(--spectrum-field-top-to-alert-icon-small);
-        --spectrum-picker-spacing-top-to-progress-circle:var(--spectrum-field-top-to-progress-circle-small);
-        --spectrum-picker-spacing-top-to-disclosure-icon:var(--spectrum-field-top-to-disclosure-icon-75);
-        --spectrum-picker-spacing-edge-to-disclosure-icon:var(--spectrum-field-end-edge-to-disclosure-icon-75);
-    }
-
-.spectrum-Picker--sizeS+.spectrum-Popover--bottom.is-open{
-            --spectrum-picker-spacing-picker-to-popover:var(--spectrum-component-to-menu-small);
-        }
-
-.spectrum-Picker--sizeL{
-        --spectrum-picker-font-size:var(--spectrum-font-size-200);
-        --spectrum-picker-block-size:var(--spectrum-component-height-200);
-        --spectrum-picker-spacing-top-to-text:var(--spectrum-component-top-to-text-200);
-        --spectrum-picker-spacing-bottom-to-text:var(--spectrum-component-bottom-to-text-200);
-        --spectrum-picker-spacing-edge-to-text:var(--spectrum-component-edge-to-text-200);
-        --spectrum-picker-spacing-text-to-icon:var(--spectrum-text-to-visual-200);
-        --spectrum-picker-spacing-text-to-icon-inline-end:var(--spectrum-field-text-to-alert-icon-large);
-        --spectrum-picker-spacing-icon-to-disclosure-icon:var(--spectrum-picker-visual-to-disclosure-icon-large);
-        --spectrum-picker-spacing-label-to-picker-quiet:var(--spectrum-field-label-to-component-quiet-large);
-        --spectrum-picker-spacing-top-to-alert-icon:var(--spectrum-field-top-to-alert-icon-large);
-        --spectrum-picker-spacing-top-to-progress-circle:var(--spectrum-field-top-to-progress-circle-large);
-        --spectrum-picker-spacing-top-to-disclosure-icon:var(--spectrum-field-top-to-disclosure-icon-200);
-        --spectrum-picker-spacing-edge-to-disclosure-icon:var(--spectrum-field-end-edge-to-disclosure-icon-200);
-    }
-
-.spectrum-Picker--sizeL+.spectrum-Popover--bottom.is-open{
-            --spectrum-picker-spacing-picker-to-popover:var(--spectrum-component-to-menu-large);
-        }
-
-.spectrum-Picker--sizeXL{
-        --spectrum-picker-font-size:var(--spectrum-font-size-300);
-        --spectrum-picker-block-size:var(--spectrum-component-height-300);
-        --spectrum-picker-spacing-top-to-text:var(--spectrum-component-top-to-text-300);
-        --spectrum-picker-spacing-bottom-to-text:var(--spectrum-component-bottom-to-text-300);
-        --spectrum-picker-spacing-edge-to-text:var(--spectrum-component-edge-to-text-300);
-        --spectrum-picker-spacing-text-to-icon:var(--spectrum-text-to-visual-300);
-        --spectrum-picker-spacing-text-to-icon-inline-end:var(--spectrum-field-text-to-alert-icon-extra-large);
-        --spectrum-picker-spacing-icon-to-disclosure-icon:var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
-        --spectrum-picker-spacing-label-to-picker-quiet:var(--spectrum-field-label-to-component-quiet-extra-large);
-        --spectrum-picker-spacing-top-to-alert-icon:var(--spectrum-field-top-to-alert-icon-extra-large);
-        --spectrum-picker-spacing-top-to-progress-circle:var(--spectrum-field-top-to-progress-circle-extra-large);
-        --spectrum-picker-spacing-top-to-disclosure-icon:var(--spectrum-field-top-to-disclosure-icon-300);
-        --spectrum-picker-spacing-edge-to-disclosure-icon:var(--spectrum-field-end-edge-to-disclosure-icon-300);
-	}
-
-.spectrum-Picker--sizeXL+.spectrum-Popover--bottom.is-open{
-            --spectrum-picker-spacing-picker-to-popover:var(--spectrum-component-to-menu-extra-large);
-        }
-
-/*# sourceMappingURL=express.css.map */
+.spectrum-express {
+	--system-spectrum-picker-background-color-default: var(--spectrum-gray-200);
+	--system-spectrum-picker-background-color-default-open: var(--spectrum-gray-300);
+	--system-spectrum-picker-background-color-hover: var(--spectrum-gray-300);
+	--system-spectrum-picker-background-color-hover-open: var(--spectrum-gray-300);
+	--system-spectrum-picker-background-color-active: var(--spectrum-gray-400);
+	--system-spectrum-picker-background-color-key-focus: var(--spectrum-gray-300);
+	--system-spectrum-picker-border-color-default: transparent;
+	--system-spectrum-picker-border-color-default-open: transparent;
+	--system-spectrum-picker-border-color-hover: transparent;
+	--system-spectrum-picker-border-color-hover-open: transparent;
+	--system-spectrum-picker-border-color-active: transparent;
+	--system-spectrum-picker-border-color-key-focus: transparent;
+	--system-spectrum-picker-border-width: 0px;
+	--system-spectrum-picker-font-size: var(--spectrum-font-size-100);
+	--system-spectrum-picker-font-weight: var(--spectrum-regular-font-weight);
+	--system-spectrum-picker-placeholder-font-style: var(--spectrum-default-font-style);
+	--system-spectrum-picker-line-height: var(--spectrum-line-height-100);
+	--system-spectrum-picker-block-size: var(--spectrum-component-height-100);
+	--system-spectrum-picker-inline-size: var(--spectrum-field-width);
+	--system-spectrum-picker-border-radius: var(--spectrum-corner-radius-100);
+	--system-spectrum-picker-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
+	--system-spectrum-picker-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+	--system-spectrum-picker-spacing-edge-to-text: var(--spectrum-component-edge-to-text-100);
+	--system-spectrum-picker-spacing-edge-to-text-quiet: var(--spectrum-field-edge-to-text-quiet);
+	--system-spectrum-picker-spacing-label-to-picker: var(--spectrum-field-label-to-component);
+	--system-spectrum-picker-spacing-text-to-icon: var(--spectrum-text-to-visual-100);
+	--system-spectrum-picker-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-medium);
+	--system-spectrum-picker-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-medium);
+	--system-spectrum-picker-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-medium);
+	--system-spectrum-picker-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-medium);
+	--system-spectrum-picker-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-medium);
+	--system-spectrum-picker-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-100);
+	--system-spectrum-picker-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-100);
+	--system-spectrum-picker-spacing-edge-to-disclosure-icon-quiet: var(--spectrum-picker-end-edge-to-disclousure-icon-quiet);
+	--system-spectrum-picker-animation-duration: var(--spectrum-animation-duration-100);
+	--system-spectrum-picker-font-color-default: var(--spectrum-neutral-content-color-default);
+	--system-spectrum-picker-font-color-default-open: var(--spectrum-neutral-content-color-focus);
+	--system-spectrum-picker-font-color-hover: var(--spectrum-neutral-content-color-hover);
+	--system-spectrum-picker-font-color-hover-open: var(--spectrum-neutral-content-color-focus-hover);
+	--system-spectrum-picker-font-color-active: var(--spectrum-neutral-content-color-down);
+	--system-spectrum-picker-font-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-spectrum-picker-icon-color-default: var(--spectrum-neutral-content-color-default);
+	--system-spectrum-picker-icon-color-default-open: var(--spectrum-neutral-content-color-focus);
+	--system-spectrum-picker-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+	--system-spectrum-picker-icon-color-hover-open: var(--spectrum-neutral-content-color-focus-hover);
+	--system-spectrum-picker-icon-color-active: var(--spectrum-neutral-content-color-down);
+	--system-spectrum-picker-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-spectrum-picker-border-color-error-default: var(--spectrum-negative-border-color-default);
+	--system-spectrum-picker-border-color-error-default-open: var(--spectrum-negative-border-color-focus);
+	--system-spectrum-picker-border-color-error-hover: var(--spectrum-negative-border-color-hover);
+	--system-spectrum-picker-border-color-error-hover-open: var(--spectrum-negative-border-color-focus-hover);
+	--system-spectrum-picker-border-color-error-active: var(--spectrum-negative-border-color-down);
+	--system-spectrum-picker-border-color-error-key-focus: var(--spectrum-negative-border-color-key-focus);
+	--system-spectrum-picker-icon-color-error: var(--spectrum-negative-visual-color);
+	--system-spectrum-picker-background-color-disabled: var(--spectrum-disabled-background-color);
+	--system-spectrum-picker-font-color-disabled: var(--spectrum-disabled-content-color);
+	--system-spectrum-picker-icon-color-disabled: var(--spectrum-disabled-content-color);
+	--system-spectrum-picker-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-spectrum-picker-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-spectrum-picker-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-spectrum-picker-+-spectrum-popover-bottom-open-spacing-picker-to-popover: var(--spectrum-component-to-menu-medium);
+	--system-spectrum-picker-sizes-font-size: var(--spectrum-font-size-75);
+	--system-spectrum-picker-sizes-block-size: var(--spectrum-component-height-75);
+	--system-spectrum-picker-sizes-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+	--system-spectrum-picker-sizes-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	--system-spectrum-picker-sizes-spacing-edge-to-text: var(--spectrum-component-edge-to-text-75);
+	--system-spectrum-picker-sizes-spacing-text-to-icon: var(--spectrum-text-to-visual-75);
+	--system-spectrum-picker-sizes-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-small);
+	--system-spectrum-picker-sizes-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-small);
+	--system-spectrum-picker-sizes-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-small);
+	--system-spectrum-picker-sizes-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-small);
+	--system-spectrum-picker-sizes-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
+	--system-spectrum-picker-sizes-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-75);
+	--system-spectrum-picker-sizes-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-75);
+	--system-spectrum-picker-sizes+-spectrum-popover-bottom-open-spacing-picker-to-popover: var(--spectrum-component-to-menu-small);
+	--system-spectrum-picker-sizel-font-size: var(--spectrum-font-size-200);
+	--system-spectrum-picker-sizel-block-size: var(--spectrum-component-height-200);
+	--system-spectrum-picker-sizel-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
+	--system-spectrum-picker-sizel-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+	--system-spectrum-picker-sizel-spacing-edge-to-text: var(--spectrum-component-edge-to-text-200);
+	--system-spectrum-picker-sizel-spacing-text-to-icon: var(--spectrum-text-to-visual-200);
+	--system-spectrum-picker-sizel-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-large);
+	--system-spectrum-picker-sizel-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-large);
+	--system-spectrum-picker-sizel-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-large);
+	--system-spectrum-picker-sizel-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-large);
+	--system-spectrum-picker-sizel-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-large);
+	--system-spectrum-picker-sizel-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-200);
+	--system-spectrum-picker-sizel-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-200);
+	--system-spectrum-picker-sizel+-spectrum-popover-bottom-open-spacing-picker-to-popover: var(--spectrum-component-to-menu-large);
+	--system-spectrum-picker-sizexl-font-size: var(--spectrum-font-size-300);
+	--system-spectrum-picker-sizexl-block-size: var(--spectrum-component-height-300);
+	--system-spectrum-picker-sizexl-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
+	--system-spectrum-picker-sizexl-spacing-bottom-to-text: var(--spectrum-component-bottom-to-text-300);
+	--system-spectrum-picker-sizexl-spacing-edge-to-text: var(--spectrum-component-edge-to-text-300);
+	--system-spectrum-picker-sizexl-spacing-text-to-icon: var(--spectrum-text-to-visual-300);
+	--system-spectrum-picker-sizexl-spacing-text-to-icon-inline-end: var(--spectrum-field-text-to-alert-icon-extra-large);
+	--system-spectrum-picker-sizexl-spacing-icon-to-disclosure-icon: var(--spectrum-picker-visual-to-disclosure-icon-extra-large);
+	--system-spectrum-picker-sizexl-spacing-label-to-picker-quiet: var(--spectrum-field-label-to-component-quiet-extra-large);
+	--system-spectrum-picker-sizexl-spacing-top-to-alert-icon: var(--spectrum-field-top-to-alert-icon-extra-large);
+	--system-spectrum-picker-sizexl-spacing-top-to-progress-circle: var(--spectrum-field-top-to-progress-circle-extra-large);
+	--system-spectrum-picker-sizexl-spacing-top-to-disclosure-icon: var(--spectrum-field-top-to-disclosure-icon-300);
+	--system-spectrum-picker-sizexl-spacing-edge-to-disclosure-icon: var(--spectrum-field-end-edge-to-disclosure-icon-300);
+	--system-spectrum-picker-sizexl+-spectrum-popover-bottom-open-spacing-picker-to-popover: var(--spectrum-component-to-menu-extra-large);
+}

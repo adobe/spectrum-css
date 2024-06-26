@@ -10,11 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-OpacityCheckerboard{
-        --spectrum-opacity-checkerboard-dark:var(--spectrum-opacity-checkerboard-square-dark);
-        --spectrum-opacity-checkerboard-light:var(--spectrum-opacity-checkerboard-square-light);
-        --spectrum-opacity-checkerboard-size:var(--spectrum-opacity-checkerboard-square-size);
-        --spectrum-opacity-checkerboard-position:left top;
-    }
-
-/*# sourceMappingURL=legacy.css.map */
+.spectrum-legacy {
+	--system-spectrum-opacitycheckerboard-spectrum-opacity-checkerboard-dark: var(--spectrum-opacity-checkerboard-square-dark);
+	--system-spectrum-opacitycheckerboard-spectrum-opacity-checkerboard-light: var(--spectrum-opacity-checkerboard-square-light);
+	--system-spectrum-opacitycheckerboard-spectrum-opacity-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
+	--system-spectrum-opacitycheckerboard-spectrum-opacity-checkerboard-position: left top;
+}

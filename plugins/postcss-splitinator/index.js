@@ -83,10 +83,10 @@ const fallbackNameProcessor = (selector, prop, identifierName) => {
 /**
  * @typedef Options
  * @property {string} [selectorPrefix] - The prefix to use for the new selectors
- * @property {boolean} [skipMapping=false] - Skip the mapping step
- * @property {boolean} [preserveVariables=false] - Keep the original custom properties in the output
- * @property {boolean} [referencesOnly=false]
- * @property {boolean} [stripLocalSelectors=false]
+ * @property {boolean} [skipMapping=false] - Skip the mapping of the variables to the system variables. This can be useful if you only want to extract the variables and not map them to the system variables.
+ * @property {boolean} [preserveVariables=false] - When used with `skipMapping`, this option will preserve the variables defined inside the container query in the output by injecting them to the root selector.
+ * @property {boolean} [referencesOnly=false] - This option will only output those variables that are referencing the newly created system variables and not the system variables themselves. This can be used as a bridge between an old and new implementation for the component.
+ * @property {boolean} [stripLocalSelectors=false] - This option will remove the local selectors (those that map to system variables) from the output leaving only the system definitions.
  * @property {(identifierValue: string, identifierName: string) => string} [processIdentifier]
  * @property {(selector: string, prop: string, identifierName: string) => string} [getName]
 */
@@ -116,7 +116,6 @@ module.exports = ({
 		// to be used as a theming toggle for components where style queries are not natively supported
 		// @todo should there be a support check around this?
 		root.walkAtRules(/container/, (container) => {
-
 			if (skipMapping) {
 				if (preserveVariables) {
 					// Iterate over each rule in the container and append them to the root

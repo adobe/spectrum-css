@@ -9,11 +9,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ClearButton{
-		--spectrum-clear-button-background-color:var(--spectrum-gray-200);
-		--spectrum-clear-button-background-color-hover:var(--spectrum-gray-300);
-		--spectrum-clear-button-background-color-down:var(--spectrum-gray-400);
-		--spectrum-clear-button-background-color-key-focus:var(--spectrum-gray-300);
-	}
-
-/*# sourceMappingURL=express.css.map */
+.spectrum-express {
+	--system-spectrum-clearbutton-spectrum-clear-button-background-color: var(--spectrum-gray-200);
+	--system-spectrum-clearbutton-spectrum-clear-button-background-color-hover: var(--spectrum-gray-300);
+	--system-spectrum-clearbutton-spectrum-clear-button-background-color-down: var(--spectrum-gray-400);
+	--system-spectrum-clearbutton-spectrum-clear-button-background-color-key-focus: var(--spectrum-gray-300);
+}

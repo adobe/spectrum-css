@@ -10,29 +10,18 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ProgressCircle{
-        --spectrum-progress-circle-track-border-color:var(--spectrum-gray-200);
-        --spectrum-progress-circle-fill-border-color:var(--spectrum-accent-content-color-default);
-        --spectrum-progress-circle-track-border-color-over-background:var(--spectrum-transparent-white-300);
-        --spectrum-progress-circle-fill-border-color-over-background:var(--spectrum-transparent-white-900);
-        --spectrum-progress-circle-size:var(--spectrum-progress-circle-size-medium);
-        --spectrum-progress-circle-thickness:var(--spectrum-progress-circle-thickness-medium);
-        --spectrum-progress-circle-track-border-style:solid;
-    }
-
-.spectrum-ProgressCircle--small{
-        --spectrum-progress-circle-size:var(--spectrum-progress-circle-size-small);
-        --spectrum-progress-circle-thickness:var(--spectrum-progress-circle-thickness-small);
-    }
-
-.spectrum-ProgressCircle--medium{
-        --spectrum-progress-circle-size:var(--spectrum-progress-circle-size-medium);
-        --spectrum-progress-circle-thickness:var(--spectrum-progress-circle-thickness-medium);
-    }
-
-.spectrum-ProgressCircle--large{
-        --spectrum-progress-circle-size:var(--spectrum-progress-circle-size-large);
-        --spectrum-progress-circle-thickness:var(--spectrum-progress-circle-thickness-large);
-    }
-
-/*# sourceMappingURL=express.css.map */
+.spectrum-express {
+	--system-spectrum-progresscircle-spectrum-progress-circle-track-border-color: var(--spectrum-gray-200);
+	--system-spectrum-progresscircle-spectrum-progress-circle-fill-border-color: var(--spectrum-accent-content-color-default);
+	--system-spectrum-progresscircle-spectrum-progress-circle-track-border-color-over-background: var(--spectrum-transparent-white-300);
+	--system-spectrum-progresscircle-spectrum-progress-circle-fill-border-color-over-background: var(--spectrum-transparent-white-900);
+	--system-spectrum-progresscircle-spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
+	--system-spectrum-progresscircle-spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+	--system-spectrum-progresscircle-spectrum-progress-circle-track-border-style: solid;
+	--system-spectrum-progresscircle-small-spectrum-progress-circle-size: var(--spectrum-progress-circle-size-small);
+	--system-spectrum-progresscircle-small-spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-small);
+	--system-spectrum-progresscircle-medium-spectrum-progress-circle-size: var(--spectrum-progress-circle-size-medium);
+	--system-spectrum-progresscircle-medium-spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+	--system-spectrum-progresscircle-large-spectrum-progress-circle-size: var(--spectrum-progress-circle-size-large);
+	--system-spectrum-progresscircle-large-spectrum-progress-circle-thickness: var(--spectrum-progress-circle-thickness-large);
+}

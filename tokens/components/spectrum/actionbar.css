@@ -10,32 +10,29 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ActionBar{
-		--spectrum-actionbar-height:var(--spectrum-action-bar-height);
-		--spectrum-actionbar-corner-radius:var(--spectrum-corner-radius-100);
-		--spectrum-actionbar-item-counter-font-size:var(--spectrum-font-size-100);
-		--spectrum-actionbar-item-counter-line-height:var(--spectrum-line-height-100);
-		--spectrum-actionbar-item-counter-color:var(--spectrum-neutral-content-color-default);
-		--spectrum-actionbar-popover-background-color:var(--spectrum-gray-25);
-		--spectrum-actionbar-popover-border-color:var(--spectrum-gray-400);
-		--spectrum-actionbar-emphasized-background-color:var(--spectrum-informative-background-color-default);
-		--spectrum-actionbar-emphasized-item-counter-color:var(--spectrum-white);
-		--spectrum-actionbar-spacing-outer-edge:var(--spectrum-spacing-300);
-		--spectrum-actionbar-spacing-close-button-top:var(--spectrum-spacing-100);
-		--spectrum-actionbar-spacing-close-button-start:var(--spectrum-spacing-100);
-		--spectrum-actionbar-spacing-close-button-end:var(--spectrum-spacing-75);
-		--spectrum-actionbar-spacing-item-counter-top:var(--spectrum-action-bar-top-to-item-counter);
-		--spectrum-actionbar-spacing-item-counter-end:var(--spectrum-spacing-400);
-		--spectrum-actionbar-spacing-action-group-top:var(--spectrum-spacing-100);
-		--spectrum-actionbar-spacing-action-group-end:var(--spectrum-spacing-100);
-		--spectrum-actionbar-shadow-horizontal:var(--spectrum-drop-shadow-x);
-		--spectrum-actionbar-shadow-vertical:var(--spectrum-drop-shadow-y);
-		--spectrum-actionbar-shadow-blur:var(--spectrum-drop-shadow-blur);
-		--spectrum-actionbar-shadow-color:var(--spectrum-drop-shadow-color);
-	}
-
-.spectrum-ActionBar:lang(ja),.spectrum-ActionBar:lang(ko),.spectrum-ActionBar:lang(zh){
-			--spectrum-actionbar-item-counter-line-height-cjk:var(--spectrum-cjk-line-height-100);
-		}
-
-/*# sourceMappingURL=spectrum.css.map */
+.spectrum {
+	--system-spectrum-actionbar-height: var(--spectrum-action-bar-height);
+	--system-spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-100);
+	--system-spectrum-actionbar-item-counter-font-size: var(--spectrum-font-size-100);
+	--system-spectrum-actionbar-item-counter-line-height: var(--spectrum-line-height-100);
+	--system-spectrum-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
+	--system-spectrum-actionbar-popover-background-color: var(--spectrum-gray-25);
+	--system-spectrum-actionbar-popover-border-color: var(--spectrum-gray-400);
+	--system-spectrum-actionbar-emphasized-background-color: var(--spectrum-informative-background-color-default);
+	--system-spectrum-actionbar-emphasized-item-counter-color: var(--spectrum-white);
+	--system-spectrum-actionbar-spacing-outer-edge: var(--spectrum-spacing-300);
+	--system-spectrum-actionbar-spacing-close-button-top: var(--spectrum-spacing-100);
+	--system-spectrum-actionbar-spacing-close-button-start: var(--spectrum-spacing-100);
+	--system-spectrum-actionbar-spacing-close-button-end: var(--spectrum-spacing-75);
+	--system-spectrum-actionbar-spacing-item-counter-top: var(--spectrum-action-bar-top-to-item-counter);
+	--system-spectrum-actionbar-spacing-item-counter-end: var(--spectrum-spacing-400);
+	--system-spectrum-actionbar-spacing-action-group-top: var(--spectrum-spacing-100);
+	--system-spectrum-actionbar-spacing-action-group-end: var(--spectrum-spacing-100);
+	--system-spectrum-actionbar-shadow-horizontal: var(--spectrum-drop-shadow-x);
+	--system-spectrum-actionbar-shadow-vertical: var(--spectrum-drop-shadow-y);
+	--system-spectrum-actionbar-shadow-blur: var(--spectrum-drop-shadow-blur);
+	--system-spectrum-actionbar-shadow-color: var(--spectrum-drop-shadow-color);
+	--system-spectrum-actionbar-lang-ja-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-spectrum-actionbar-lang-zh-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-spectrum-actionbar-lang-ko-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
+}

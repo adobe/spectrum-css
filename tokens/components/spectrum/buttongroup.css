@@ -10,19 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ButtonGroup{
-        --spectrum-buttongroup-spacing-horizontal:var(--spectrum-spacing-300);
-        --spectrum-buttongroup-spacing-vertical:var(--spectrum-spacing-300);
-    }
-
-.spectrum-ButtonGroup--sizeS{
-        --spectrum-buttongroup-spacing-horizontal:var(--spectrum-spacing-200);
-        --spectrum-buttongroup-spacing-vertical:var(--spectrum-spacing-200);
-    }
-
-.spectrum-ButtonGroup--sizeL,.spectrum-ButtonGroup--sizeM,.spectrum-ButtonGroup--sizeXL{
-        --spectrum-buttongroup-spacing-horizontal:var(--spectrum-spacing-300);
-        --spectrum-buttongroup-spacing-vertical:var(--spectrum-spacing-300);
-    }
-
-/*# sourceMappingURL=spectrum.css.map */
+.spectrum {
+	--system-spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
+	--system-spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+	--system-spectrum-buttongroup-sizes-spacing-horizontal: var(--spectrum-spacing-200);
+	--system-spectrum-buttongroup-sizes-spacing-vertical: var(--spectrum-spacing-200);
+	--system-spectrum-buttongroup-sizem-spacing-horizontal: var(--spectrum-spacing-300);
+	--system-spectrum-buttongroup-sizem-spacing-vertical: var(--spectrum-spacing-300);
+	--system-spectrum-buttongroup-sizel-spacing-horizontal: var(--spectrum-spacing-300);
+	--system-spectrum-buttongroup-sizel-spacing-vertical: var(--spectrum-spacing-300);
+	--system-spectrum-buttongroup-sizexl-spacing-horizontal: var(--spectrum-spacing-300);
+	--system-spectrum-buttongroup-sizexl-spacing-vertical: var(--spectrum-spacing-300);
+}
