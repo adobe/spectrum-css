@@ -11,18 +11,18 @@ governing permissions and limitations under the License.
 */
 
 .spectrum {
-	--system-spectrum-popover-border-width: var(--spectrum-border-width-100);
-	--system-spectrum-popover-animation-distance: var(--spectrum-spacing-100);
-	--system-spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
-	--system-spectrum-popover-border-color: var(--spectrum-gray-400);
-	--system-spectrum-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
-	--system-spectrum-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
-	--system-spectrum-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
-	--system-spectrum-popover-shadow-blur: var(--spectrum-drop-shadow-blur);
-	--system-spectrum-popover-shadow-color: var(--spectrum-drop-shadow-color);
-	--system-spectrum-popover-corner-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-popover-pointer-width: var(--spectrum-popover-tip-width);
-	--system-spectrum-popover-pointer-height: var(--spectrum-popover-tip-height);
-	--system-spectrum-popover-pointer-edge-offset: calc(var(--spectrum-corner-radius-100) + var(--spectrum-popover-tip-width) / 2);
-	--system-spectrum-popover-pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - var(--spectrum-popover-tip-width) / 2);
+	--system-spectrum-popover--border-width: var(--spectrum-border-width-100);
+	--system-spectrum-popover--animation-distance: var(--spectrum-spacing-100);
+	--system-spectrum-popover--background-color: var(--spectrum-background-layer-2-color);
+	--system-spectrum-popover--border-color: var(--spectrum-gray-400);
+	--system-spectrum-popover--content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
+	--system-spectrum-popover--shadow-horizontal: var(--spectrum-drop-shadow-x);
+	--system-spectrum-popover--shadow-vertical: var(--spectrum-drop-shadow-y);
+	--system-spectrum-popover--shadow-blur: var(--spectrum-drop-shadow-blur);
+	--system-spectrum-popover--shadow-color: var(--spectrum-drop-shadow-color);
+	--system-spectrum-popover--corner-radius: var(--spectrum-corner-radius-100);
+	--system-spectrum-popover--pointer-width: var(--spectrum-popover-tip-width);
+	--system-spectrum-popover--pointer-height: var(--spectrum-popover-tip-height);
+	--system-spectrum-popover--pointer-edge-offset: calc(var(--spectrum-corner-radius-100) + var(--spectrum-popover-tip-width) / 2);
+	--system-spectrum-popover--pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - var(--spectrum-popover-tip-width) / 2);
 }

@@ -11,26 +11,26 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ButtonGroup {
-	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-spacing-horizontal);
-	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-spacing-vertical);
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup--spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup--spacing-vertical);
 }
 
 .spectrum-ButtonGroup--sizeS {
-	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-sizes-spacing-horizontal);
-	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-sizes-spacing-vertical);
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup--size-s--spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup--size-s--spacing-vertical);
 }
 
 .spectrum-ButtonGroup--sizeM {
-	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-sizem-spacing-horizontal);
-	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-sizem-spacing-vertical);
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup--size-m--spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup--size-m--spacing-vertical);
 }
 
 .spectrum-ButtonGroup--sizeL {
-	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-sizel-spacing-horizontal);
-	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-sizel-spacing-vertical);
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup--size-l--spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup--size-l--spacing-vertical);
 }
 
 .spectrum-ButtonGroup--sizeXL {
-	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-sizexl-spacing-horizontal);
-	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-sizexl-spacing-vertical);
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup--size-xl--spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup--size-xl--spacing-vertical);
 }

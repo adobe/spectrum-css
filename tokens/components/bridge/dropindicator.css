@@ -11,8 +11,8 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-DropIndicator {
-	--spectrum-dropindicator-border-color: var(--system-spectrum-dropindicator-border-color);
-	--spectrum-dropindicator-circle-color: var(--system-spectrum-dropindicator-circle-color);
-	--spectrum-dropindicator-border-size: var(--system-spectrum-dropindicator-border-size);
-	--spectrum-dropindicator-circle-size: var(--system-spectrum-dropindicator-circle-size);
+	--spectrum-dropindicator-border-color: var(--system-spectrum-dropindicator--border-color);
+	--spectrum-dropindicator-circle-color: var(--system-spectrum-dropindicator--circle-color);
+	--spectrum-dropindicator-border-size: var(--system-spectrum-dropindicator--border-size);
+	--spectrum-dropindicator-circle-size: var(--system-spectrum-dropindicator--circle-size);
 }

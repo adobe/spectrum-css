@@ -11,6 +11,6 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-FieldGroup {
-	--spectrum-fieldgroup-margin: var(--system-spectrum-fieldgroup-margin);
-	--spectrum-fieldgroup-readonly-delimiter: var(--system-spectrum-fieldgroup-readonly-delimiter);
+	--spectrum-fieldgroup-margin: var(--system-spectrum-fieldgroup--margin);
+	--spectrum-fieldgroup-readonly-delimiter: var(--system-spectrum-fieldgroup--readonly-delimiter);
 }
