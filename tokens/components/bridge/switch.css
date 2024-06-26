@@ -11,83 +11,83 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Switch {
-	--spectrum-switch-handle-border-color-default: var(--system-spectrum-switch-handle-border-color-default);
-	--spectrum-switch-handle-border-color-hover: var(--system-spectrum-switch-handle-border-color-hover);
-	--spectrum-switch-handle-border-color-down: var(--system-spectrum-switch-handle-border-color-down);
-	--spectrum-switch-handle-border-color-focus: var(--system-spectrum-switch-handle-border-color-focus);
-	--spectrum-switch-handle-border-color-selected-default: var(--system-spectrum-switch-handle-border-color-selected-default);
-	--spectrum-switch-handle-border-color-selected-hover: var(--system-spectrum-switch-handle-border-color-selected-hover);
-	--spectrum-switch-handle-border-color-selected-down: var(--system-spectrum-switch-handle-border-color-selected-down);
-	--spectrum-switch-handle-border-color-selected-focus: var(--system-spectrum-switch-handle-border-color-selected-focus);
-	--spectrum-switch-label-color-default: var(--system-spectrum-switch-label-color-default);
-	--spectrum-switch-label-color-hover: var(--system-spectrum-switch-label-color-hover);
-	--spectrum-switch-label-color-down: var(--system-spectrum-switch-label-color-down);
-	--spectrum-switch-label-color-focus: var(--system-spectrum-switch-label-color-focus);
-	--spectrum-switch-label-color-disabled: var(--system-spectrum-switch-label-color-disabled);
-	--spectrum-switch-background-color: var(--system-spectrum-switch-background-color);
-	--spectrum-switch-background-color-disabled: var(--system-spectrum-switch-background-color-disabled);
-	--spectrum-switch-background-color-selected-disabled: var(--system-spectrum-switch-background-color-selected-disabled);
-	--spectrum-switch-background-color-selected-default: var(--system-spectrum-switch-background-color-selected-default);
-	--spectrum-switch-background-color-selected-hover: var(--system-spectrum-switch-background-color-selected-hover);
-	--spectrum-switch-background-color-selected-down: var(--system-spectrum-switch-background-color-selected-down);
-	--spectrum-switch-background-color-selected-focus: var(--system-spectrum-switch-background-color-selected-focus);
-	--spectrum-switch-focus-indicator-thickness: var(--system-spectrum-switch-focus-indicator-thickness);
-	--spectrum-switch-focus-indicator-color: var(--system-spectrum-switch-focus-indicator-color);
-	--spectrum-switch-handle-background-color: var(--system-spectrum-switch-handle-background-color);
-	--spectrum-switch-handle-border-color-disabled: var(--system-spectrum-switch-handle-border-color-disabled);
+	--spectrum-switch-handle-border-color-default: var(--system-spectrum-switch--handle-border-color-default);
+	--spectrum-switch-handle-border-color-hover: var(--system-spectrum-switch--handle-border-color-hover);
+	--spectrum-switch-handle-border-color-down: var(--system-spectrum-switch--handle-border-color-down);
+	--spectrum-switch-handle-border-color-focus: var(--system-spectrum-switch--handle-border-color-focus);
+	--spectrum-switch-handle-border-color-selected-default: var(--system-spectrum-switch--handle-border-color-selected-default);
+	--spectrum-switch-handle-border-color-selected-hover: var(--system-spectrum-switch--handle-border-color-selected-hover);
+	--spectrum-switch-handle-border-color-selected-down: var(--system-spectrum-switch--handle-border-color-selected-down);
+	--spectrum-switch-handle-border-color-selected-focus: var(--system-spectrum-switch--handle-border-color-selected-focus);
+	--spectrum-switch-label-color-default: var(--system-spectrum-switch--label-color-default);
+	--spectrum-switch-label-color-hover: var(--system-spectrum-switch--label-color-hover);
+	--spectrum-switch-label-color-down: var(--system-spectrum-switch--label-color-down);
+	--spectrum-switch-label-color-focus: var(--system-spectrum-switch--label-color-focus);
+	--spectrum-switch-label-color-disabled: var(--system-spectrum-switch--label-color-disabled);
+	--spectrum-switch-background-color: var(--system-spectrum-switch--background-color);
+	--spectrum-switch-background-color-disabled: var(--system-spectrum-switch--background-color-disabled);
+	--spectrum-switch-background-color-selected-disabled: var(--system-spectrum-switch--background-color-selected-disabled);
+	--spectrum-switch-background-color-selected-default: var(--system-spectrum-switch--background-color-selected-default);
+	--spectrum-switch-background-color-selected-hover: var(--system-spectrum-switch--background-color-selected-hover);
+	--spectrum-switch-background-color-selected-down: var(--system-spectrum-switch--background-color-selected-down);
+	--spectrum-switch-background-color-selected-focus: var(--system-spectrum-switch--background-color-selected-focus);
+	--spectrum-switch-focus-indicator-thickness: var(--system-spectrum-switch--focus-indicator-thickness);
+	--spectrum-switch-focus-indicator-color: var(--system-spectrum-switch--focus-indicator-color);
+	--spectrum-switch-handle-background-color: var(--system-spectrum-switch--handle-background-color);
+	--spectrum-switch-handle-border-color-disabled: var(--system-spectrum-switch--handle-border-color-disabled);
 }
 
 .spectrum-Switch--disabled {
-	--spectrum-switch-label-color-default: var(--system-spectrum-switch-disabled-label-color-default);
+	--spectrum-switch-label-color-default: var(--system-spectrum-switch--disabled--label-color-default);
 }
 
 .spectrum-Switch.spectrum-Switch--emphasized {
-	--spectrum-switch-background-color-selected-default: var(--system-spectrum-switch-emphasized-background-color-selected-default);
-	--spectrum-switch-background-color-selected-hover: var(--system-spectrum-switch-emphasized-background-color-selected-hover);
-	--spectrum-switch-background-color-selected-down: var(--system-spectrum-switch-emphasized-background-color-selected-down);
-	--spectrum-switch-background-color-selected-focus: var(--system-spectrum-switch-emphasized-background-color-selected-focus);
-	--spectrum-switch-handle-border-color-selected-default: var(--system-spectrum-switch-emphasized-handle-border-color-selected-default);
-	--spectrum-switch-handle-border-color-selected-hover: var(--system-spectrum-switch-emphasized-handle-border-color-selected-hover);
-	--spectrum-switch-handle-border-color-selected-down: var(--system-spectrum-switch-emphasized-handle-border-color-selected-down);
-	--spectrum-switch-handle-border-color-selected-focus: var(--system-spectrum-switch-emphasized-handle-border-color-selected-focus);
+	--spectrum-switch-background-color-selected-default: var(--system-spectrum-switch--emphasized--background-color-selected-default);
+	--spectrum-switch-background-color-selected-hover: var(--system-spectrum-switch--emphasized--background-color-selected-hover);
+	--spectrum-switch-background-color-selected-down: var(--system-spectrum-switch--emphasized--background-color-selected-down);
+	--spectrum-switch-background-color-selected-focus: var(--system-spectrum-switch--emphasized--background-color-selected-focus);
+	--spectrum-switch-handle-border-color-selected-default: var(--system-spectrum-switch--emphasized--handle-border-color-selected-default);
+	--spectrum-switch-handle-border-color-selected-hover: var(--system-spectrum-switch--emphasized--handle-border-color-selected-hover);
+	--spectrum-switch-handle-border-color-selected-down: var(--system-spectrum-switch--emphasized--handle-border-color-selected-down);
+	--spectrum-switch-handle-border-color-selected-focus: var(--system-spectrum-switch--emphasized--handle-border-color-selected-focus);
 }
 
 .spectrum-Switch--sizeS {
-	--spectrum-switch-min-height: var(--system-spectrum-switch-sizes-min-height);
-	--spectrum-switch-control-width: var(--system-spectrum-switch-sizes-control-width);
-	--spectrum-switch-control-height: var(--system-spectrum-switch-sizes-control-height);
-	--spectrum-switch-control-label-spacing: var(--system-spectrum-switch-sizes-control-label-spacing);
-	--spectrum-switch-spacing-top-to-control: var(--system-spectrum-switch-sizes-spacing-top-to-control);
-	--spectrum-switch-spacing-top-to-label: var(--system-spectrum-switch-sizes-spacing-top-to-label);
-	--spectrum-switch-font-size: var(--system-spectrum-switch-sizes-font-size);
+	--spectrum-switch-min-height: var(--system-spectrum-switch--size-s--min-height);
+	--spectrum-switch-control-width: var(--system-spectrum-switch--size-s--control-width);
+	--spectrum-switch-control-height: var(--system-spectrum-switch--size-s--control-height);
+	--spectrum-switch-control-label-spacing: var(--system-spectrum-switch--size-s--control-label-spacing);
+	--spectrum-switch-spacing-top-to-control: var(--system-spectrum-switch--size-s--spacing-top-to-control);
+	--spectrum-switch-spacing-top-to-label: var(--system-spectrum-switch--size-s--spacing-top-to-label);
+	--spectrum-switch-font-size: var(--system-spectrum-switch--size-s--font-size);
 }
 
 .spectrum-Switch--sizeM {
-	--spectrum-switch-min-height: var(--system-spectrum-switch-sizem-min-height);
-	--spectrum-switch-control-width: var(--system-spectrum-switch-sizem-control-width);
-	--spectrum-switch-control-height: var(--system-spectrum-switch-sizem-control-height);
-	--spectrum-switch-control-label-spacing: var(--system-spectrum-switch-sizem-control-label-spacing);
-	--spectrum-switch-spacing-top-to-control: var(--system-spectrum-switch-sizem-spacing-top-to-control);
-	--spectrum-switch-spacing-top-to-label: var(--system-spectrum-switch-sizem-spacing-top-to-label);
-	--spectrum-switch-font-size: var(--system-spectrum-switch-sizem-font-size);
+	--spectrum-switch-min-height: var(--system-spectrum-switch--size-m--min-height);
+	--spectrum-switch-control-width: var(--system-spectrum-switch--size-m--control-width);
+	--spectrum-switch-control-height: var(--system-spectrum-switch--size-m--control-height);
+	--spectrum-switch-control-label-spacing: var(--system-spectrum-switch--size-m--control-label-spacing);
+	--spectrum-switch-spacing-top-to-control: var(--system-spectrum-switch--size-m--spacing-top-to-control);
+	--spectrum-switch-spacing-top-to-label: var(--system-spectrum-switch--size-m--spacing-top-to-label);
+	--spectrum-switch-font-size: var(--system-spectrum-switch--size-m--font-size);
 }
 
 .spectrum-Switch--sizeL {
-	--spectrum-switch-min-height: var(--system-spectrum-switch-sizel-min-height);
-	--spectrum-switch-control-width: var(--system-spectrum-switch-sizel-control-width);
-	--spectrum-switch-control-height: var(--system-spectrum-switch-sizel-control-height);
-	--spectrum-switch-control-label-spacing: var(--system-spectrum-switch-sizel-control-label-spacing);
-	--spectrum-switch-spacing-top-to-control: var(--system-spectrum-switch-sizel-spacing-top-to-control);
-	--spectrum-switch-spacing-top-to-label: var(--system-spectrum-switch-sizel-spacing-top-to-label);
-	--spectrum-switch-font-size: var(--system-spectrum-switch-sizel-font-size);
+	--spectrum-switch-min-height: var(--system-spectrum-switch--size-l--min-height);
+	--spectrum-switch-control-width: var(--system-spectrum-switch--size-l--control-width);
+	--spectrum-switch-control-height: var(--system-spectrum-switch--size-l--control-height);
+	--spectrum-switch-control-label-spacing: var(--system-spectrum-switch--size-l--control-label-spacing);
+	--spectrum-switch-spacing-top-to-control: var(--system-spectrum-switch--size-l--spacing-top-to-control);
+	--spectrum-switch-spacing-top-to-label: var(--system-spectrum-switch--size-l--spacing-top-to-label);
+	--spectrum-switch-font-size: var(--system-spectrum-switch--size-l--font-size);
 }
 
 .spectrum-Switch--sizeXL {
-	--spectrum-switch-min-height: var(--system-spectrum-switch-sizexl-min-height);
-	--spectrum-switch-control-width: var(--system-spectrum-switch-sizexl-control-width);
-	--spectrum-switch-control-height: var(--system-spectrum-switch-sizexl-control-height);
-	--spectrum-switch-control-label-spacing: var(--system-spectrum-switch-sizexl-control-label-spacing);
-	--spectrum-switch-spacing-top-to-control: var(--system-spectrum-switch-sizexl-spacing-top-to-control);
-	--spectrum-switch-spacing-top-to-label: var(--system-spectrum-switch-sizexl-spacing-top-to-label);
-	--spectrum-switch-font-size: var(--system-spectrum-switch-sizexl-font-size);
+	--spectrum-switch-min-height: var(--system-spectrum-switch--size-xl--min-height);
+	--spectrum-switch-control-width: var(--system-spectrum-switch--size-xl--control-width);
+	--spectrum-switch-control-height: var(--system-spectrum-switch--size-xl--control-height);
+	--spectrum-switch-control-label-spacing: var(--system-spectrum-switch--size-xl--control-label-spacing);
+	--spectrum-switch-spacing-top-to-control: var(--system-spectrum-switch--size-xl--spacing-top-to-control);
+	--spectrum-switch-spacing-top-to-label: var(--system-spectrum-switch--size-xl--spacing-top-to-label);
+	--spectrum-switch-font-size: var(--system-spectrum-switch--size-xl--font-size);
 }

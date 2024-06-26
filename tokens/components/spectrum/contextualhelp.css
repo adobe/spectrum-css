@@ -11,11 +11,11 @@ governing permissions and limitations under the License.
 */
 
 .spectrum {
-	--system-spectrum-contextualhelp-spectrum-contextual-help-padding: var(--spectrum-spacing-400);
-	--system-spectrum-contextualhelp-spectrum-contextual-help-content-spacing: var(--spectrum-spacing-100);
-	--system-spectrum-contextualhelp-spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
-	--system-spectrum-contextualhelp-spectrum-contextual-help-heading-size: var(--spectrum-contextual-help-title-size);
-	--system-spectrum-contextualhelp-spectrum-contextual-help-heading-color: var(--spectrum-heading-color);
-	--system-spectrum-contextualhelp-spectrum-contextual-help-body-color: var(--spectrum-body-color);
-	--system-spectrum-large-spectrum-contextualhelp-spectrum-contextual-help-content-spacing: var(--spectrum-spacing-200);
+	--system-spectrum-contextualhelp--contextual-help-padding: var(--spectrum-spacing-400);
+	--system-spectrum-contextualhelp--contextual-help-content-spacing: var(--spectrum-spacing-100);
+	--system-spectrum-contextualhelp--contextual-help-link-spacing: var(--spectrum-spacing-300);
+	--system-spectrum-contextualhelp--contextual-help-heading-size: var(--spectrum-contextual-help-title-size);
+	--system-spectrum-contextualhelp--contextual-help-heading-color: var(--spectrum-heading-color);
+	--system-spectrum-contextualhelp--contextual-help-body-color: var(--spectrum-body-color);
+	--system-spectrum--large-descendant-of-contextual-help--contextual-help-content-spacing: var(--spectrum-spacing-200);
 }

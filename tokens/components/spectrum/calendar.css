@@ -11,35 +11,35 @@ governing permissions and limitations under the License.
 */
 
 .spectrum {
-	--system-spectrum-calendar-day-width: var(--spectrum-component-height-100);
-	--system-spectrum-calendar-day-height: var(--spectrum-component-height-100);
-	--system-spectrum-calendar-border-radius-reset: 0;
-	--system-spectrum-calendar-border-width-reset: 0;
-	--system-spectrum-calendar-day-border-size: var(--spectrum-border-width-200);
-	--system-spectrum-calendar-margin-y: 24px;
-	--system-spectrum-calendar-margin-x: 32px;
-	--system-spectrum-calendar-day-padding: 4px;
-	--system-spectrum-calendar-width: calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding) * 2) * 7);
-	--system-spectrum-calendar-title-text-letter-spacing: 0.06em;
-	--system-spectrum-calendar-title-height: 32px;
-	--system-spectrum-calendar-title-text-size: var(--spectrum-font-size-300);
-	--system-spectrum-calendar-day-title-text-font-weight: var(--spectrum-bold-font-weight);
-	--system-spectrum-calendar-day-title-text-color: var(--spectrum-gray-700);
-	--system-spectrum-calendar-day-title-text-size: var(--spectrum-font-size-50);
-	--system-spectrum-calendar-day-text-size-han: var(--spectrum-font-size-50);
-	--system-spectrum-calendar-day-text-size: var(--spectrum-font-size-100);
-	--system-spectrum-calendar-day-text-color-selected: var(--spectrum-gray-900);
-	--system-spectrum-calendar-day-text-color-hover: var(--spectrum-gray-900);
-	--system-spectrum-calendar-day-text-color-cap-selected: var(--spectrum-gray-900);
-	--system-spectrum-calendar-day-text-font-weight-selected: var(--spectrum-bold-font-weight);
-	--system-spectrum-calendar-day-text-font-weight-cap-selected: var(--spectrum-bold-font-weight);
-	--system-spectrum-calendar-day-today-text-color: var(--spectrum-gray-800);
-	--system-spectrum-calendar-day-today-text-font-weight: var(--spectrum-bold-font-weight);
-	--system-spectrum-calendar-day-today-border-color: var(--spectrum-gray-800);
-	--system-spectrum-calendar-day-today-text-color-disabled: var(--spectrum-gray-500);
-	--system-spectrum-calendar-day-today-border-color-disabled: var(--spectrum-gray-400);
-	--system-spectrum-calendar-day-text-color-disabled: var(--spectrum-disabled-content-color);
-	--system-spectrum-calendar-day-text-color-key-focus: var(--spectrum-gray-900);
-	--system-spectrum-calendar-button-icon-color: var(--spectrum-gray-700);
-	--system-spectrum-calendar-dir-rtl-spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	--system-spectrum-calendar--day-width: var(--spectrum-component-height-100);
+	--system-spectrum-calendar--day-height: var(--spectrum-component-height-100);
+	--system-spectrum-calendar--border-radius-reset: 0;
+	--system-spectrum-calendar--border-width-reset: 0;
+	--system-spectrum-calendar--day-border-size: var(--spectrum-border-width-200);
+	--system-spectrum-calendar--margin-y: 24px;
+	--system-spectrum-calendar--margin-x: 32px;
+	--system-spectrum-calendar--day-padding: 4px;
+	--system-spectrum-calendar--width: calc((var(--spectrum-calendar-day-width) + var(--spectrum-calendar-day-padding) * 2) * 7);
+	--system-spectrum-calendar--title-text-letter-spacing: 0.06em;
+	--system-spectrum-calendar--title-height: 32px;
+	--system-spectrum-calendar--title-text-size: var(--spectrum-font-size-300);
+	--system-spectrum-calendar--day-title-text-font-weight: var(--spectrum-bold-font-weight);
+	--system-spectrum-calendar--day-title-text-color: var(--spectrum-gray-700);
+	--system-spectrum-calendar--day-title-text-size: var(--spectrum-font-size-50);
+	--system-spectrum-calendar--day-text-size-han: var(--spectrum-font-size-50);
+	--system-spectrum-calendar--day-text-size: var(--spectrum-font-size-100);
+	--system-spectrum-calendar--day-text-color-selected: var(--spectrum-gray-900);
+	--system-spectrum-calendar--day-text-color-hover: var(--spectrum-gray-900);
+	--system-spectrum-calendar--day-text-color-cap-selected: var(--spectrum-gray-900);
+	--system-spectrum-calendar--day-text-font-weight-selected: var(--spectrum-bold-font-weight);
+	--system-spectrum-calendar--day-text-font-weight-cap-selected: var(--spectrum-bold-font-weight);
+	--system-spectrum-calendar--day-today-text-color: var(--spectrum-gray-800);
+	--system-spectrum-calendar--day-today-text-font-weight: var(--spectrum-bold-font-weight);
+	--system-spectrum-calendar--day-today-border-color: var(--spectrum-gray-800);
+	--system-spectrum-calendar--day-today-text-color-disabled: var(--spectrum-gray-500);
+	--system-spectrum-calendar--day-today-border-color-disabled: var(--spectrum-gray-400);
+	--system-spectrum-calendar--day-text-color-disabled: var(--spectrum-disabled-content-color);
+	--system-spectrum-calendar--day-text-color-key-focus: var(--spectrum-gray-900);
+	--system-spectrum-calendar--button-icon-color: var(--spectrum-gray-700);
+	--system-spectrum-calendar: dir(rtl); --calendar-dir-rtl--logical-rotation: matrix(-1, 0, 0, 1, 0, 0)
 }
