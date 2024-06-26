@@ -11,8 +11,8 @@ governing permissions and limitations under the License.
 */
 
 .spectrum {
-	--system-spectrum-opacitycheckerboard-spectrum-opacity-checkerboard-dark: var(--spectrum-opacity-checkerboard-square-dark);
-	--system-spectrum-opacitycheckerboard-spectrum-opacity-checkerboard-light: var(--spectrum-opacity-checkerboard-square-light);
-	--system-spectrum-opacitycheckerboard-spectrum-opacity-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
-	--system-spectrum-opacitycheckerboard-spectrum-opacity-checkerboard-position: left top;
+	--system-spectrum-opacitycheckerboard--opacity-checkerboard-dark: var(--spectrum-opacity-checkerboard-square-dark);
+	--system-spectrum-opacitycheckerboard--opacity-checkerboard-light: var(--spectrum-opacity-checkerboard-square-light);
+	--system-spectrum-opacitycheckerboard--opacity-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
+	--system-spectrum-opacitycheckerboard--opacity-checkerboard-position: left top;
 }

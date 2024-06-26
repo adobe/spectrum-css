@@ -11,6 +11,6 @@ governing permissions and limitations under the License.
 */
 
 .spectrum {
-	--system-spectrum-taggroup-spectrum-tag-group-item-margin-block: var(--spectrum-spacing-75);
-	--system-spectrum-taggroup-spectrum-tag-group-item-margin-inline: var(--spectrum-spacing-75);
+	--system-spectrum-taggroup--tag-group-item-margin-block: var(--spectrum-spacing-75);
+	--system-spectrum-taggroup--tag-group-item-margin-inline: var(--spectrum-spacing-75);
 }

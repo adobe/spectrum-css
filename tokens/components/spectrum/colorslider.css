@@ -11,10 +11,10 @@ governing permissions and limitations under the License.
 */
 
 .spectrum {
-	--system-spectrum-colorslider-spectrum-color-slider-handle-margin-block: var(--spectrum-component-top-to-text-75);
-	--system-spectrum-colorslider-spectrum-color-slider-border-color-rgba: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-color-slider-border-opacity));
-	--system-spectrum-colorslider-spectrum-color-slider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
-	--system-spectrum-colorslider-spectrum-color-slider-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-	--system-spectrum-colorslider-spectrum-color-slider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
-	--system-spectrum-colorslider-mod-colorhandle-hitarea-border-radius: var(--mod-color-slider-handle-hitarea-border-radius, 0px);
+	--system-spectrum-colorslider--color-slider-handle-margin-block: var(--spectrum-component-top-to-text-75);
+	--system-spectrum-colorslider--color-slider-border-color-rgba: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-color-slider-border-opacity));
+	--system-spectrum-colorslider--color-slider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
+	--system-spectrum-colorslider--color-slider-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+	--system-spectrum-colorslider--color-slider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+	--system-spectrum-colorslider--mod-colorhandle-hitarea-border-radius: var(--mod-color-slider-handle-hitarea-border-radius, 0px);
 }
