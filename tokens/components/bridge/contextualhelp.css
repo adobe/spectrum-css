@@ -10,16 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ContextualHelp{
-        --spectrum-contextual-help-padding:var(--spectrum-spacing-400);
-        --spectrum-contextual-help-content-spacing:var(--spectrum-spacing-100);
-        --spectrum-contextual-help-link-spacing:var(--spectrum-spacing-300);
-        --spectrum-contextual-help-heading-size:var(--spectrum-contextual-help-title-size);
-        --spectrum-contextual-help-heading-color:var(--spectrum-heading-color);
-        --spectrum-contextual-help-body-color:var(--spectrum-body-color)
-    }
+.spectrum-ContextualHelp {
+	--spectrum-contextual-help-padding: var(--system-spectrum-contextualhelp-spectrum-contextual-help-padding);
+	--spectrum-contextual-help-content-spacing: var(--system-spectrum-contextualhelp-spectrum-contextual-help-content-spacing);
+	--spectrum-contextual-help-link-spacing: var(--system-spectrum-contextualhelp-spectrum-contextual-help-link-spacing);
+	--spectrum-contextual-help-heading-size: var(--system-spectrum-contextualhelp-spectrum-contextual-help-heading-size);
+	--spectrum-contextual-help-heading-color: var(--system-spectrum-contextualhelp-spectrum-contextual-help-heading-color);
+	--spectrum-contextual-help-body-color: var(--system-spectrum-contextualhelp-spectrum-contextual-help-body-color);
+}
 
-.spectrum--large :scope{
-            --spectrum-contextual-help-content-spacing:var(--spectrum-spacing-200);
-        }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum--large .spectrum-ContextualHelp {
+	--spectrum-contextual-help-content-spacing: var(--system-spectrum-large-spectrum-contextualhelp-spectrum-contextual-help-content-spacing);
+}

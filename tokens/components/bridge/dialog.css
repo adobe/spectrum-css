@@ -10,27 +10,25 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Dialog{
-        --spectrum-dialog-fullscreen-header-text-size:28px;
-        --spectrum-dialog-min-inline-size:288px;
-        --spectrum-dialog-confirm-small-width:400px;
-        --spectrum-dialog-confirm-medium-width:480px;
-        --spectrum-dialog-confirm-large-width:640px;
-        --spectrum-dialog-confirm-divider-block-spacing-start:var(--spectrum-spacing-300);
-        --spectrum-dialog-confirm-divider-block-spacing-end:var(--spectrum-spacing-200);
-        --spectrum-dialog-confirm-description-text-color:var(--spectrum-gray-800);
-        --spectrum-dialog-confirm-title-text-color:var(--spectrum-gray-900);
-        --spectrum-dialog-confirm-description-text-line-height:var(--spectrum-line-height-100);
-        --spectrum-dialog-confirm-title-text-line-height:var(--spectrum-line-height-100);
-        --spectrum-dialog-heading-font-weight:var(--spectrum-heading-sans-serif-font-weight);
-
-        --spectrum-dialog-confirm-description-padding:var(--spectrum-spacing-50);
-        --spectrum-dialog-confirm-description-margin:calc(var(--spectrum-spacing-50)*-1);
-        --spectrum-dialog-confirm-footer-padding-top:var(--spectrum-spacing-600);
-        --spectrum-dialog-confirm-gap-size:var(--spectrum-component-pill-edge-to-text-100);
-        --spectrum-dialog-confirm-buttongroup-padding-top:var(--spectrum-spacing-600);
-        --spectrum-dialog-confirm-close-button-size:var(--spectrum-component-height-100);
-        --spectrum-dialog-confirm-close-button-padding:calc(26px - var(--spectrum-component-bottom-to-text-300));
-        --spectrum-dialog-confirm-divider-height:var(--spectrum-spacing-50);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Dialog {
+	--spectrum-dialog-fullscreen-header-text-size: var(--system-spectrum-dialog-fullscreen-header-text-size);
+	--spectrum-dialog-min-inline-size: var(--system-spectrum-dialog-min-inline-size);
+	--spectrum-dialog-confirm-small-width: var(--system-spectrum-dialog-confirm-small-width);
+	--spectrum-dialog-confirm-medium-width: var(--system-spectrum-dialog-confirm-medium-width);
+	--spectrum-dialog-confirm-large-width: var(--system-spectrum-dialog-confirm-large-width);
+	--spectrum-dialog-confirm-divider-block-spacing-start: var(--system-spectrum-dialog-confirm-divider-block-spacing-start);
+	--spectrum-dialog-confirm-divider-block-spacing-end: var(--system-spectrum-dialog-confirm-divider-block-spacing-end);
+	--spectrum-dialog-confirm-description-text-color: var(--system-spectrum-dialog-confirm-description-text-color);
+	--spectrum-dialog-confirm-title-text-color: var(--system-spectrum-dialog-confirm-title-text-color);
+	--spectrum-dialog-confirm-description-text-line-height: var(--system-spectrum-dialog-confirm-description-text-line-height);
+	--spectrum-dialog-confirm-title-text-line-height: var(--system-spectrum-dialog-confirm-title-text-line-height);
+	--spectrum-dialog-heading-font-weight: var(--system-spectrum-dialog-heading-font-weight);
+	--spectrum-dialog-confirm-description-padding: var(--system-spectrum-dialog-confirm-description-padding);
+	--spectrum-dialog-confirm-description-margin: var(--system-spectrum-dialog-confirm-description-margin);
+	--spectrum-dialog-confirm-footer-padding-top: var(--system-spectrum-dialog-confirm-footer-padding-top);
+	--spectrum-dialog-confirm-gap-size: var(--system-spectrum-dialog-confirm-gap-size);
+	--spectrum-dialog-confirm-buttongroup-padding-top: var(--system-spectrum-dialog-confirm-buttongroup-padding-top);
+	--spectrum-dialog-confirm-close-button-size: var(--system-spectrum-dialog-confirm-close-button-size);
+	--spectrum-dialog-confirm-close-button-padding: var(--system-spectrum-dialog-confirm-close-button-padding);
+	--spectrum-dialog-confirm-divider-height: var(--system-spectrum-dialog-confirm-divider-height);
+}

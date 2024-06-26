@@ -10,87 +10,134 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Badge{
-        --spectrum-badge-corner-radius:var(--spectrum-corner-radius-100);
-        --spectrum-badge-line-height:var(--spectrum-line-height-100);
-        --spectrum-badge-line-height-cjk:var(--spectrum-cjk-line-height-100);
-        --spectrum-badge-label-icon-color:var(--spectrum-white);
-        --spectrum-badge-background-color-default:var(--spectrum-neutral-subdued-background-color-default);
-        --spectrum-badge-background-color-accent:var(--spectrum-accent-background-color-default);
-        --spectrum-badge-background-color-informative:var(--spectrum-informative-background-color-default);
-        --spectrum-badge-background-color-negative:var(--spectrum-negative-background-color-default);
-        --spectrum-badge-background-color-positive:var(--spectrum-positive-background-color-default);
-        --spectrum-badge-background-color-notice:var(--spectrum-notice-background-color-default);
-        --spectrum-badge-background-color-gray:var(--spectrum-gray-background-color-default);
-        --spectrum-badge-background-color-red:var(--spectrum-red-background-color-default);
-        --spectrum-badge-background-color-orange:var(--spectrum-orange-background-color-default);
-        --spectrum-badge-background-color-yellow:var(--spectrum-yellow-background-color-default);
-        --spectrum-badge-background-color-chartreuse:var(--spectrum-chartreuse-background-color-default);
-        --spectrum-badge-background-color-celery:var(--spectrum-celery-background-color-default);
-        --spectrum-badge-background-color-green:var(--spectrum-green-background-color-default);
-        --spectrum-badge-background-color-seafoam:var(--spectrum-seafoam-background-color-default);
-        --spectrum-badge-background-color-cyan:var(--spectrum-cyan-background-color-default);
-        --spectrum-badge-background-color-blue:var(--spectrum-blue-background-color-default);
-        --spectrum-badge-background-color-indigo:var(--spectrum-indigo-background-color-default);
-        --spectrum-badge-background-color-purple:var(--spectrum-purple-background-color-default);
-        --spectrum-badge-background-color-fuchsia:var(--spectrum-fuchsia-background-color-default);
-        --spectrum-badge-background-color-magenta:var(--spectrum-magenta-background-color-default);
-        --spectrum-badge-height:var(--spectrum-component-height-100);
-        --spectrum-badge-font-size:var(--spectrum-font-size-100);
-        --spectrum-badge-label-spacing-vertical-top:var(--spectrum-component-top-to-text-100);
-        --spectrum-badge-label-spacing-vertical-bottom:var(--spectrum-component-bottom-to-text-100);
-        --spectrum-badge-label-spacing-horizontal:var(--spectrum-component-edge-to-text-100);
-        --spectrum-badge-workflow-icon-size:var(--spectrum-workflow-icon-size-100);
-        --spectrum-badge-icon-text-spacing:var(--spectrum-text-to-visual-100);
-        --spectrum-badge-icon-spacing-horizontal:var(--spectrum-component-edge-to-visual-100);
-        --spectrum-badge-icon-spacing-vertical-top:var(--spectrum-component-top-to-workflow-icon-100);
-        --spectrum-badge-icon-only-spacing-horizontal:var(--spectrum-component-edge-to-visual-only-100);
-    }
+.spectrum-Badge {
+	--spectrum-badge-corner-radius: var(--system-spectrum-badge-corner-radius);
+	--spectrum-badge-line-height: var(--system-spectrum-badge-line-height);
+	--spectrum-badge-line-height-cjk: var(--system-spectrum-badge-line-height-cjk);
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-label-icon-color);
+	--spectrum-badge-background-color-default: var(--system-spectrum-badge-background-color-default);
+	--spectrum-badge-background-color-accent: var(--system-spectrum-badge-background-color-accent);
+	--spectrum-badge-background-color-informative: var(--system-spectrum-badge-background-color-informative);
+	--spectrum-badge-background-color-negative: var(--system-spectrum-badge-background-color-negative);
+	--spectrum-badge-background-color-positive: var(--system-spectrum-badge-background-color-positive);
+	--spectrum-badge-background-color-notice: var(--system-spectrum-badge-background-color-notice);
+	--spectrum-badge-background-color-gray: var(--system-spectrum-badge-background-color-gray);
+	--spectrum-badge-background-color-red: var(--system-spectrum-badge-background-color-red);
+	--spectrum-badge-background-color-orange: var(--system-spectrum-badge-background-color-orange);
+	--spectrum-badge-background-color-yellow: var(--system-spectrum-badge-background-color-yellow);
+	--spectrum-badge-background-color-chartreuse: var(--system-spectrum-badge-background-color-chartreuse);
+	--spectrum-badge-background-color-celery: var(--system-spectrum-badge-background-color-celery);
+	--spectrum-badge-background-color-green: var(--system-spectrum-badge-background-color-green);
+	--spectrum-badge-background-color-seafoam: var(--system-spectrum-badge-background-color-seafoam);
+	--spectrum-badge-background-color-cyan: var(--system-spectrum-badge-background-color-cyan);
+	--spectrum-badge-background-color-blue: var(--system-spectrum-badge-background-color-blue);
+	--spectrum-badge-background-color-indigo: var(--system-spectrum-badge-background-color-indigo);
+	--spectrum-badge-background-color-purple: var(--system-spectrum-badge-background-color-purple);
+	--spectrum-badge-background-color-fuchsia: var(--system-spectrum-badge-background-color-fuchsia);
+	--spectrum-badge-background-color-magenta: var(--system-spectrum-badge-background-color-magenta);
+	--spectrum-badge-height: var(--system-spectrum-badge-height);
+	--spectrum-badge-font-size: var(--system-spectrum-badge-font-size);
+	--spectrum-badge-label-spacing-vertical-top: var(--system-spectrum-badge-label-spacing-vertical-top);
+	--spectrum-badge-label-spacing-vertical-bottom: var(--system-spectrum-badge-label-spacing-vertical-bottom);
+	--spectrum-badge-label-spacing-horizontal: var(--system-spectrum-badge-label-spacing-horizontal);
+	--spectrum-badge-workflow-icon-size: var(--system-spectrum-badge-workflow-icon-size);
+	--spectrum-badge-icon-text-spacing: var(--system-spectrum-badge-icon-text-spacing);
+	--spectrum-badge-icon-spacing-horizontal: var(--system-spectrum-badge-icon-spacing-horizontal);
+	--spectrum-badge-icon-spacing-vertical-top: var(--system-spectrum-badge-icon-spacing-vertical-top);
+	--spectrum-badge-icon-only-spacing-horizontal: var(--system-spectrum-badge-icon-only-spacing-horizontal);
+}
 
-.spectrum-Badge--celery,.spectrum-Badge--chartreuse,.spectrum-Badge--orange,.spectrum-Badge--yellow{
-        --spectrum-badge-label-icon-color:var(--spectrum-black);
-    }
+.spectrum-Badge--orange {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-orange-label-icon-color);
+}
 
-.spectrum-Badge--blue,.spectrum-Badge--cyan,.spectrum-Badge--fuchsia,.spectrum-Badge--gray,.spectrum-Badge--green,.spectrum-Badge--indigo,.spectrum-Badge--magenta,.spectrum-Badge--purple,.spectrum-Badge--red,.spectrum-Badge--seafoam{
-        --spectrum-badge-label-icon-color:var(--spectrum-badge-label-icon-color-primary);
-    }
+.spectrum-Badge--yellow {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-yellow-label-icon-color);
+}
 
-.spectrum-Badge--sizeS{
-        --spectrum-badge-height:var(--spectrum-component-height-75);
-        --spectrum-badge-font-size:var(--spectrum-font-size-75);
-        --spectrum-badge-label-spacing-vertical-top:var(--spectrum-component-top-to-text-75);
-        --spectrum-badge-label-spacing-vertical-bottom:var(--spectrum-component-bottom-to-text-75);
-        --spectrum-badge-label-spacing-horizontal:var(--spectrum-component-edge-to-text-75);
-        --spectrum-badge-workflow-icon-size:var(--spectrum-workflow-icon-size-75);
-        --spectrum-badge-icon-text-spacing:var(--spectrum-text-to-visual-75);
-        --spectrum-badge-icon-spacing-horizontal:var(--spectrum-component-edge-to-visual-75);
-        --spectrum-badge-icon-spacing-vertical-top:var(--spectrum-component-top-to-workflow-icon-75);
-        --spectrum-badge-icon-only-spacing-horizontal:var(--spectrum-component-edge-to-visual-only-75);
-    }
+.spectrum-Badge--chartreuse {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-chartreuse-label-icon-color);
+}
 
-.spectrum-Badge--sizeL{
-        --spectrum-badge-height:var(--spectrum-component-height-100);
-        --spectrum-badge-font-size:var(--spectrum-font-size-200);
-        --spectrum-badge-label-spacing-vertical-top:var(--spectrum-component-top-to-text-200);
-        --spectrum-badge-label-spacing-vertical-bottom:var(--spectrum-component-bottom-to-text-200);
-        --spectrum-badge-label-spacing-horizontal:var(--spectrum-component-edge-to-text-200);
-        --spectrum-badge-workflow-icon-size:var(--spectrum-workflow-icon-size-200);
-        --spectrum-badge-icon-text-spacing:var(--spectrum-text-to-visual-200);
-        --spectrum-badge-icon-spacing-horizontal:var(--spectrum-component-edge-to-visual-200);
-        --spectrum-badge-icon-spacing-vertical-top:var(--spectrum-component-top-to-workflow-icon-200);
-        --spectrum-badge-icon-only-spacing-horizontal:var(--spectrum-component-edge-to-visual-only-200);
-    }
+.spectrum-Badge--celery {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-celery-label-icon-color);
+}
 
-.spectrum-Badge--sizeXL{
-        --spectrum-badge-height:var(--spectrum-component-height-100);
-        --spectrum-badge-font-size:var(--spectrum-font-size-300);
-        --spectrum-badge-label-spacing-vertical-top:var(--spectrum-component-top-to-text-300);
-        --spectrum-badge-label-spacing-vertical-bottom:var(--spectrum-component-bottom-to-text-300);
-        --spectrum-badge-label-spacing-horizontal:var(--spectrum-component-edge-to-text-300);
-        --spectrum-badge-workflow-icon-size:var(--spectrum-workflow-icon-size-300);
-        --spectrum-badge-icon-text-spacing:var(--spectrum-text-to-visual-300);
-        --spectrum-badge-icon-spacing-horizontal:var(--spectrum-component-edge-to-visual-300);
-        --spectrum-badge-icon-spacing-vertical-top:var(--spectrum-component-top-to-workflow-icon-300);
-        --spectrum-badge-icon-only-spacing-horizontal:var(--spectrum-component-edge-to-visual-only-300);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Badge--gray {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-gray-label-icon-color);
+}
+
+.spectrum-Badge--red {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-red-label-icon-color);
+}
+
+.spectrum-Badge--green {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-green-label-icon-color);
+}
+
+.spectrum-Badge--seafoam {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-seafoam-label-icon-color);
+}
+
+.spectrum-Badge--cyan {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-cyan-label-icon-color);
+}
+
+.spectrum-Badge--blue {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-blue-label-icon-color);
+}
+
+.spectrum-Badge--indigo {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-indigo-label-icon-color);
+}
+
+.spectrum-Badge--purple {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-purple-label-icon-color);
+}
+
+.spectrum-Badge--fuchsia {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-fuchsia-label-icon-color);
+}
+
+.spectrum-Badge--magenta {
+	--spectrum-badge-label-icon-color: var(--system-spectrum-badge-magenta-label-icon-color);
+}
+
+.spectrum-Badge--sizeS {
+	--spectrum-badge-height: var(--system-spectrum-badge-sizes-height);
+	--spectrum-badge-font-size: var(--system-spectrum-badge-sizes-font-size);
+	--spectrum-badge-label-spacing-vertical-top: var(--system-spectrum-badge-sizes-label-spacing-vertical-top);
+	--spectrum-badge-label-spacing-vertical-bottom: var(--system-spectrum-badge-sizes-label-spacing-vertical-bottom);
+	--spectrum-badge-label-spacing-horizontal: var(--system-spectrum-badge-sizes-label-spacing-horizontal);
+	--spectrum-badge-workflow-icon-size: var(--system-spectrum-badge-sizes-workflow-icon-size);
+	--spectrum-badge-icon-text-spacing: var(--system-spectrum-badge-sizes-icon-text-spacing);
+	--spectrum-badge-icon-spacing-horizontal: var(--system-spectrum-badge-sizes-icon-spacing-horizontal);
+	--spectrum-badge-icon-spacing-vertical-top: var(--system-spectrum-badge-sizes-icon-spacing-vertical-top);
+	--spectrum-badge-icon-only-spacing-horizontal: var(--system-spectrum-badge-sizes-icon-only-spacing-horizontal);
+}
+
+.spectrum-Badge--sizeL {
+	--spectrum-badge-height: var(--system-spectrum-badge-sizel-height);
+	--spectrum-badge-font-size: var(--system-spectrum-badge-sizel-font-size);
+	--spectrum-badge-label-spacing-vertical-top: var(--system-spectrum-badge-sizel-label-spacing-vertical-top);
+	--spectrum-badge-label-spacing-vertical-bottom: var(--system-spectrum-badge-sizel-label-spacing-vertical-bottom);
+	--spectrum-badge-label-spacing-horizontal: var(--system-spectrum-badge-sizel-label-spacing-horizontal);
+	--spectrum-badge-workflow-icon-size: var(--system-spectrum-badge-sizel-workflow-icon-size);
+	--spectrum-badge-icon-text-spacing: var(--system-spectrum-badge-sizel-icon-text-spacing);
+	--spectrum-badge-icon-spacing-horizontal: var(--system-spectrum-badge-sizel-icon-spacing-horizontal);
+	--spectrum-badge-icon-spacing-vertical-top: var(--system-spectrum-badge-sizel-icon-spacing-vertical-top);
+	--spectrum-badge-icon-only-spacing-horizontal: var(--system-spectrum-badge-sizel-icon-only-spacing-horizontal);
+}
+
+.spectrum-Badge--sizeXL {
+	--spectrum-badge-height: var(--system-spectrum-badge-sizexl-height);
+	--spectrum-badge-font-size: var(--system-spectrum-badge-sizexl-font-size);
+	--spectrum-badge-label-spacing-vertical-top: var(--system-spectrum-badge-sizexl-label-spacing-vertical-top);
+	--spectrum-badge-label-spacing-vertical-bottom: var(--system-spectrum-badge-sizexl-label-spacing-vertical-bottom);
+	--spectrum-badge-label-spacing-horizontal: var(--system-spectrum-badge-sizexl-label-spacing-horizontal);
+	--spectrum-badge-workflow-icon-size: var(--system-spectrum-badge-sizexl-workflow-icon-size);
+	--spectrum-badge-icon-text-spacing: var(--system-spectrum-badge-sizexl-icon-text-spacing);
+	--spectrum-badge-icon-spacing-horizontal: var(--system-spectrum-badge-sizexl-icon-spacing-horizontal);
+	--spectrum-badge-icon-spacing-vertical-top: var(--system-spectrum-badge-sizexl-icon-spacing-vertical-top);
+	--spectrum-badge-icon-only-spacing-horizontal: var(--system-spectrum-badge-sizexl-icon-only-spacing-horizontal);
+}

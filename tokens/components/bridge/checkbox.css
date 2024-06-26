@@ -10,84 +10,66 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Checkbox{
-		--spectrum-checkbox-control-color-default:var(--spectrum-gray-800);
-		--spectrum-checkbox-control-color-hover:var(--spectrum-gray-900);
-		--spectrum-checkbox-control-color-down:var(--spectrum-gray-900);
-		--spectrum-checkbox-control-color-focus:var(--spectrum-gray-900);
-        --spectrum-checkbox-control-color-default:var(--spectrum-gray-600);
-        --spectrum-checkbox-control-color-hover:var(--spectrum-gray-700);
-        --spectrum-checkbox-control-color-down:var(--spectrum-gray-800);
-        --spectrum-checkbox-control-color-focus:var(--spectrum-gray-700);
-        --spectrum-checkbox-content-color-default:var(--spectrum-neutral-content-color-default);
-        --spectrum-checkbox-content-color-hover:var(--spectrum-neutral-content-color-hover);
-        --spectrum-checkbox-content-color-down:var(--spectrum-neutral-content-color-down);
-        --spectrum-checkbox-content-color-focus:var(--spectrum-neutral-content-color-key-focus);
+.spectrum-Checkbox {
+	--spectrum-checkbox-control-color-default: var(--system-spectrum-checkbox-control-color-default);
+	--spectrum-checkbox-control-color-hover: var(--system-spectrum-checkbox-control-color-hover);
+	--spectrum-checkbox-control-color-down: var(--system-spectrum-checkbox-control-color-down);
+	--spectrum-checkbox-control-color-focus: var(--system-spectrum-checkbox-control-color-focus);
+	--spectrum-checkbox-content-color-default: var(--system-spectrum-checkbox-content-color-default);
+	--spectrum-checkbox-content-color-hover: var(--system-spectrum-checkbox-content-color-hover);
+	--spectrum-checkbox-content-color-down: var(--system-spectrum-checkbox-content-color-down);
+	--spectrum-checkbox-content-color-focus: var(--system-spectrum-checkbox-content-color-focus);
+	--spectrum-checkbox-focus-indicator-color: var(--system-spectrum-checkbox-focus-indicator-color);
+	--spectrum-checkbox-content-color-disabled: var(--system-spectrum-checkbox-content-color-disabled);
+	--spectrum-checkbox-control-color-disabled: var(--system-spectrum-checkbox-control-color-disabled);
+	--spectrum-checkbox-checkmark-color: var(--system-spectrum-checkbox-checkmark-color);
+	--spectrum-checkbox-invalid-color-default: var(--system-spectrum-checkbox-invalid-color-default);
+	--spectrum-checkbox-invalid-color-hover: var(--system-spectrum-checkbox-invalid-color-hover);
+	--spectrum-checkbox-invalid-color-down: var(--system-spectrum-checkbox-invalid-color-down);
+	--spectrum-checkbox-invalid-color-focus: var(--system-spectrum-checkbox-invalid-color-focus);
+	--spectrum-checkbox-emphasized-color-default: var(--system-spectrum-checkbox-emphasized-color-default);
+	--spectrum-checkbox-emphasized-color-hover: var(--system-spectrum-checkbox-emphasized-color-hover);
+	--spectrum-checkbox-emphasized-color-down: var(--system-spectrum-checkbox-emphasized-color-down);
+	--spectrum-checkbox-emphasized-color-focus: var(--system-spectrum-checkbox-emphasized-color-focus);
+	--spectrum-checkbox-control-selected-color-default: var(--system-spectrum-checkbox-control-selected-color-default);
+	--spectrum-checkbox-control-selected-color-hover: var(--system-spectrum-checkbox-control-selected-color-hover);
+	--spectrum-checkbox-control-selected-color-down: var(--system-spectrum-checkbox-control-selected-color-down);
+	--spectrum-checkbox-control-selected-color-focus: var(--system-spectrum-checkbox-control-selected-color-focus);
+	--spectrum-checkbox-font-size: var(--system-spectrum-checkbox-font-size);
+	--spectrum-checkbox-line-height: var(--system-spectrum-checkbox-line-height);
+	--spectrum-checkbox-line-height-cjk: var(--system-spectrum-checkbox-line-height-cjk);
+	--spectrum-checkbox-height: var(--system-spectrum-checkbox-height);
+	--spectrum-checkbox-control-size: var(--system-spectrum-checkbox-control-size);
+	--spectrum-checkbox-control-corner-radius: var(--system-spectrum-checkbox-control-corner-radius);
+	--spectrum-checkbox-focus-indicator-gap: var(--system-spectrum-checkbox-focus-indicator-gap);
+	--spectrum-checkbox-focus-indicator-thickness: var(--system-spectrum-checkbox-focus-indicator-thickness);
+	--spectrum-checkbox-border-width: var(--system-spectrum-checkbox-border-width);
+	--spectrum-checkbox-selected-border-width: var(--system-spectrum-checkbox-selected-border-width);
+	--spectrum-checkbox-top-to-text: var(--system-spectrum-checkbox-top-to-text);
+	--spectrum-checkbox-text-to-control: var(--system-spectrum-checkbox-text-to-control);
+	--spectrum-checkbox-animation-duration: var(--system-spectrum-checkbox-animation-duration);
+}
 
-        --spectrum-checkbox-focus-indicator-color:var(--spectrum-focus-indicator-color);
+.spectrum-Checkbox--sizeS {
+	--spectrum-checkbox-font-size: var(--system-spectrum-checkbox-sizes-font-size);
+	--spectrum-checkbox-height: var(--system-spectrum-checkbox-sizes-height);
+	--spectrum-checkbox-control-size: var(--system-spectrum-checkbox-sizes-control-size);
+	--spectrum-checkbox-top-to-text: var(--system-spectrum-checkbox-sizes-top-to-text);
+	--spectrum-checkbox-text-to-control: var(--system-spectrum-checkbox-sizes-text-to-control);
+}
 
-        --spectrum-checkbox-content-color-disabled:var(--spectrum-disabled-content-color);
-        --spectrum-checkbox-control-color-disabled:var(--spectrum-disabled-content-color);
-        --spectrum-checkbox-checkmark-color:var(--spectrum-gray-50);
+.spectrum-Checkbox--sizeL {
+	--spectrum-checkbox-font-size: var(--system-spectrum-checkbox-sizel-font-size);
+	--spectrum-checkbox-height: var(--system-spectrum-checkbox-sizel-height);
+	--spectrum-checkbox-control-size: var(--system-spectrum-checkbox-sizel-control-size);
+	--spectrum-checkbox-top-to-text: var(--system-spectrum-checkbox-sizel-top-to-text);
+	--spectrum-checkbox-text-to-control: var(--system-spectrum-checkbox-sizel-text-to-control);
+}
 
-        --spectrum-checkbox-invalid-color-default:var(--spectrum-negative-color-900);
-        --spectrum-checkbox-invalid-color-hover:var(--spectrum-negative-color-1000);
-        --spectrum-checkbox-invalid-color-down:var(--spectrum-negative-color-1100);
-        --spectrum-checkbox-invalid-color-focus:var(--spectrum-negative-color-1000);
-
-        --spectrum-checkbox-emphasized-color-default:var(--spectrum-accent-color-900);
-        --spectrum-checkbox-emphasized-color-hover:var(--spectrum-accent-color-1000);
-        --spectrum-checkbox-emphasized-color-down:var(--spectrum-accent-color-1100);
-        --spectrum-checkbox-emphasized-color-focus:var(--spectrum-accent-color-1000);
-
-        --spectrum-checkbox-control-selected-color-default:var(--spectrum-neutral-background-color-selected-default);
-        --spectrum-checkbox-control-selected-color-hover:var(--spectrum-neutral-background-color-selected-hover);
-        --spectrum-checkbox-control-selected-color-down:var(--spectrum-neutral-background-color-selected-down);
-        --spectrum-checkbox-control-selected-color-focus:var(--spectrum-neutral-background-color-selected-key-focus);
-        --spectrum-checkbox-font-size:var(--spectrum-font-size-100);
-        --spectrum-checkbox-line-height:var(--spectrum-line-height-100);
-        --spectrum-checkbox-line-height-cjk:var(--spectrum-cjk-line-height-100);
-        --spectrum-checkbox-height:var(--spectrum-component-height-100);
-        --spectrum-checkbox-control-size:var(--spectrum-checkbox-control-size-medium);
-        --spectrum-checkbox-control-corner-radius:var(--spectrum-corner-radius-75);
-
-        --spectrum-checkbox-focus-indicator-gap:var(--spectrum-focus-indicator-gap);
-        --spectrum-checkbox-focus-indicator-thickness:var(--spectrum-focus-indicator-thickness);
-
-        --spectrum-checkbox-border-width:var(--spectrum-border-width-200);
-        --spectrum-checkbox-selected-border-width:calc(var(--spectrum-checkbox-control-size)/2);
-        --spectrum-checkbox-top-to-text:var(--spectrum-component-top-to-text-100);
-        --spectrum-checkbox-text-to-control:var(--spectrum-text-to-control-100);
-        --spectrum-checkbox-animation-duration:var(--spectrum-animation-duration-100);
-	}
-
-.spectrum-Checkbox--sizeS{
-        --spectrum-checkbox-font-size:var(--spectrum-font-size-75);
-
-        --spectrum-checkbox-height:var(--spectrum-component-height-75);
-        --spectrum-checkbox-control-size:var(--spectrum-checkbox-control-size-small);
-
-        --spectrum-checkbox-top-to-text:var(--spectrum-component-top-to-text-75);
-        --spectrum-checkbox-text-to-control:var(--spectrum-text-to-control-75);
-    }
-
-.spectrum-Checkbox--sizeL{
-        --spectrum-checkbox-font-size:var(--spectrum-font-size-200);
-
-        --spectrum-checkbox-height:var(--spectrum-component-height-200);
-        --spectrum-checkbox-control-size:var(--spectrum-checkbox-control-size-large);
-
-        --spectrum-checkbox-top-to-text:var(--spectrum-component-top-to-text-200);
-        --spectrum-checkbox-text-to-control:var(--spectrum-text-to-control-200);
-    }
-
-.spectrum-Checkbox--sizeXL{
-        --spectrum-checkbox-font-size:var(--spectrum-font-size-300);
-
-        --spectrum-checkbox-height:var(--spectrum-component-height-300);
-        --spectrum-checkbox-control-size:var(--spectrum-checkbox-control-size-extra-large);
-
-        --spectrum-checkbox-top-to-text:var(--spectrum-component-top-to-text-300);
-        --spectrum-checkbox-text-to-control:var(--spectrum-text-to-control-300);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Checkbox--sizeXL {
+	--spectrum-checkbox-font-size: var(--system-spectrum-checkbox-sizexl-font-size);
+	--spectrum-checkbox-height: var(--system-spectrum-checkbox-sizexl-height);
+	--spectrum-checkbox-control-size: var(--system-spectrum-checkbox-sizexl-control-size);
+	--spectrum-checkbox-top-to-text: var(--system-spectrum-checkbox-sizexl-top-to-text);
+	--spectrum-checkbox-text-to-control: var(--system-spectrum-checkbox-sizexl-text-to-control);
+}

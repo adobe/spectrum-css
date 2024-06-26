@@ -40,38 +40,13 @@ module.exports = ({
 		}
 	}
 
-	console.log({
-		"cwd": options.cwd,
-		"file": file,
-		"skipMapping": skipMapping,
-		"referencesOnly": referencesOnly,
-		"preserveVariables": preserveVariables,
-		"stripLocalSelectors": stripLocalSelectors,
-		"lint": lint,
-		"verbose": verbose,
-		"minify": minify,
-		"additionalPlugins": additionalPlugins,
-		"env": env,
-		"options": options
-	});
-
 	return {
 		...options,
 		plugins: {
 			/* --------------------------------------------------- */
 			/* ------------------- IMPORTS ---------------- */
 			/** @link https://github.com/postcss/postcss-import#postcss-import */
-			"postcss-import": {
-				plugins: [
-					require("postcss-splitinator")({
-						selectorPrefix: "spectrum",
-						skipMapping,
-						preserveVariables,
-						referencesOnly,
-						stripLocalSelectors
-					}),
-				],
-			},
+			"postcss-import": {},
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},

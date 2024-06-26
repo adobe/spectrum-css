@@ -9,25 +9,24 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Rating{
-        --spectrum-rating-icon-color-default:var(--spectrum-neutral-subdued-content-color-default);
-        --spectrum-rating-icon-color-hover:var(--spectrum-neutral-subdued-content-color-hover);
-        --spectrum-rating-icon-color-down:var(--spectrum-neutral-subdued-content-color-down);
-        --spectrum-rating-icon-color-key-focus:var(--spectrum-neutral-subdued-content-color-key-focus);
-        --spectrum-rating-icon-height:var(--spectrum-workflow-icon-size-100);
-        --spectrum-rating-icon-width:var(--spectrum-workflow-icon-size-100);
-        --spectrum-rating-border-radius:var(--spectrum-corner-radius-100);
-        --spectrum-rating-focus-indicator-thickness:var(--spectrum-focus-indicator-thickness);
-        --spectrum-rating-focus-indicator-color:var(--spectrum-focus-indicator-color);
-        --spectrum-rating-focus-indicator-gap:var(--spectrum-focus-indicator-gap);
-        --spectrum-rating-icon-spacing-vertical-top:var(--spectrum-component-top-to-workflow-icon-100);
-        --spectrum-rating-indicator-border-radius:var(--spectrum-corner-radius-75);
-        --spectrum-rating-indicator-height:var(--spectrum-border-width-200);
-        --spectrum-rating-emphasized-icon-color-default:var(--spectrum-accent-content-color-default);
-        --spectrum-rating-emphasized-icon-color-hover:var(--spectrum-accent-content-color-hover);
-        --spectrum-rating-emphasized-icon-color-down:var(--spectrum-accent-content-color-down);
-        --spectrum-rating-emphasized-icon-color-key-focus:var(--spectrum-accent-content-color-key-focus);
-        --spectrum-rating-icon-color-disabled:var(--spectrum-disabled-content-color);
-        --spectrum-rating-icon-count:var(--spectrum-rating-icon-count);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Rating {
+	--spectrum-rating-icon-color-default: var(--system-spectrum-rating-icon-color-default);
+	--spectrum-rating-icon-color-hover: var(--system-spectrum-rating-icon-color-hover);
+	--spectrum-rating-icon-color-down: var(--system-spectrum-rating-icon-color-down);
+	--spectrum-rating-icon-color-key-focus: var(--system-spectrum-rating-icon-color-key-focus);
+	--spectrum-rating-icon-height: var(--system-spectrum-rating-icon-height);
+	--spectrum-rating-icon-width: var(--system-spectrum-rating-icon-width);
+	--spectrum-rating-border-radius: var(--system-spectrum-rating-border-radius);
+	--spectrum-rating-focus-indicator-thickness: var(--system-spectrum-rating-focus-indicator-thickness);
+	--spectrum-rating-focus-indicator-color: var(--system-spectrum-rating-focus-indicator-color);
+	--spectrum-rating-focus-indicator-gap: var(--system-spectrum-rating-focus-indicator-gap);
+	--spectrum-rating-icon-spacing-vertical-top: var(--system-spectrum-rating-icon-spacing-vertical-top);
+	--spectrum-rating-indicator-border-radius: var(--system-spectrum-rating-indicator-border-radius);
+	--spectrum-rating-indicator-height: var(--system-spectrum-rating-indicator-height);
+	--spectrum-rating-emphasized-icon-color-default: var(--system-spectrum-rating-emphasized-icon-color-default);
+	--spectrum-rating-emphasized-icon-color-hover: var(--system-spectrum-rating-emphasized-icon-color-hover);
+	--spectrum-rating-emphasized-icon-color-down: var(--system-spectrum-rating-emphasized-icon-color-down);
+	--spectrum-rating-emphasized-icon-color-key-focus: var(--system-spectrum-rating-emphasized-icon-color-key-focus);
+	--spectrum-rating-icon-color-disabled: var(--system-spectrum-rating-icon-color-disabled);
+	--spectrum-rating-icon-count: var(--system-spectrum-rating-icon-count);
+}

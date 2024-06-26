@@ -10,17 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ContextualHelp{
-        --spectrum-contextual-help-padding:var(--spectrum-spacing-400);
-        --spectrum-contextual-help-content-spacing:var(--spectrum-spacing-100);
-        --spectrum-contextual-help-link-spacing:var(--spectrum-spacing-300);
-        --spectrum-contextual-help-heading-size:var(--spectrum-contextual-help-title-size);
-        --spectrum-contextual-help-heading-color:var(--spectrum-heading-color);
-        --spectrum-contextual-help-body-color:var(--spectrum-body-color);
-    }
-
-.spectrum--large .spectrum-ContextualHelp{
-            --spectrum-contextual-help-content-spacing:var(--spectrum-spacing-200);
-        }
-
-/*# sourceMappingURL=spectrum.css.map */
+.spectrum {
+	--system-spectrum-contextualhelp-spectrum-contextual-help-padding: var(--spectrum-spacing-400);
+	--system-spectrum-contextualhelp-spectrum-contextual-help-content-spacing: var(--spectrum-spacing-100);
+	--system-spectrum-contextualhelp-spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
+	--system-spectrum-contextualhelp-spectrum-contextual-help-heading-size: var(--spectrum-contextual-help-title-size);
+	--system-spectrum-contextualhelp-spectrum-contextual-help-heading-color: var(--spectrum-heading-color);
+	--system-spectrum-contextualhelp-spectrum-contextual-help-body-color: var(--spectrum-body-color);
+	--system-spectrum-large-spectrum-contextualhelp-spectrum-contextual-help-content-spacing: var(--spectrum-spacing-200);
+}

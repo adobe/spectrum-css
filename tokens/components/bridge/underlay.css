@@ -10,14 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Underlay{
-        --spectrum-underlay-background-entry-animation-delay:var(--spectrum-animation-duration-0);
-        --spectrum-underlay-background-exit-animation-ease:var(--spectrum-animation-ease-in);
-        --spectrum-underlay-background-entry-animation-ease:var(--spectrum-animation-ease-out);
-        --spectrum-underlay-background-exit-animation-duration:var(--spectrum-animation-duration-100);
-        --spectrum-underlay-background-entry-animation-duration:var(--spectrum-animation-duration-600);
-        --spectrum-underlay-background-exit-animation-duration:var(--spectrum-animation-duration-300);
-        --spectrum-underlay-background-exit-animation-delay:var(--spectrum-animation-duration-200);
-        --spectrum-underlay-background-color:rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Underlay {
+	--spectrum-underlay-background-entry-animation-delay: var(--system-spectrum-underlay-background-entry-animation-delay);
+	--spectrum-underlay-background-exit-animation-ease: var(--system-spectrum-underlay-background-exit-animation-ease);
+	--spectrum-underlay-background-entry-animation-ease: var(--system-spectrum-underlay-background-entry-animation-ease);
+	--spectrum-underlay-background-exit-animation-duration: var(--system-spectrum-underlay-background-exit-animation-duration);
+	--spectrum-underlay-background-entry-animation-duration: var(--system-spectrum-underlay-background-entry-animation-duration);
+	--spectrum-underlay-background-exit-animation-delay: var(--system-spectrum-underlay-background-exit-animation-delay);
+	--spectrum-underlay-background-color: var(--system-spectrum-underlay-background-color);
+}

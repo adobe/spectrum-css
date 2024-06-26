@@ -10,27 +10,26 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-AssetList{
-        --spectrum-assetlist-width:272px;
-        --spectrum-assetlist-child-indicator-animation:var(--spectrum-animation-duration-100);
-        --spectrum-assetlist-item-height:var(--spectrum-spacing-600);
-        --spectrum-assetlist-item-padding-inline-start:var(--spectrum-spacing-300);
-        --spectrum-assetlist-item-padding-inline-end:var(--spectrum-spacing-300);
-        --spectrum-assetlist-item-margin-block-end:var(--spectrum-spacing-75);
-        --spectrum-assetlist-item-border-radius:var(--spectrum-spacing-75);
-        --spectrum-assetlist-item-animation:var(--spectrum-animation-duration-100);
-        --spectrum-assetlist-item-font-size:var(--spectrum-font-size-100);
-        --spectrum-assetlist-item-font-weight:var(--spectrum-regular-font-weight);
-        --spectrum-assetlist-item-background-color-down:var(--spectrum-gray-200);
-        --spectrum-assetlist-item-background-color-hover:var(--spectrum-gray-100);
-        --spectrum-assetlist-thumbnail-width:var(--spectrum-spacing-400);
-        --spectrum-assetlist-thumbnail-height:var(--spectrum-spacing-400);
-        --spectrum-assetlist-thumbnail-margin-inline-start:var(--spectrum-spacing-100);
-        --spectrum-assetlist-item-label-padding-inline-start:var(--spectrum-spacing-100);
-        --spectrum-assetlist-label-color:var(--spectrum-neutral-content-color-default)
-    }
+.spectrum-AssetList {
+	--spectrum-assetlist-width: var(--system-spectrum-assetlist-width);
+	--spectrum-assetlist-child-indicator-animation: var(--system-spectrum-assetlist-child-indicator-animation);
+	--spectrum-assetlist-item-height: var(--system-spectrum-assetlist-item-height);
+	--spectrum-assetlist-item-padding-inline-start: var(--system-spectrum-assetlist-item-padding-inline-start);
+	--spectrum-assetlist-item-padding-inline-end: var(--system-spectrum-assetlist-item-padding-inline-end);
+	--spectrum-assetlist-item-margin-block-end: var(--system-spectrum-assetlist-item-margin-block-end);
+	--spectrum-assetlist-item-border-radius: var(--system-spectrum-assetlist-item-border-radius);
+	--spectrum-assetlist-item-animation: var(--system-spectrum-assetlist-item-animation);
+	--spectrum-assetlist-item-font-size: var(--system-spectrum-assetlist-item-font-size);
+	--spectrum-assetlist-item-font-weight: var(--system-spectrum-assetlist-item-font-weight);
+	--spectrum-assetlist-item-background-color-down: var(--system-spectrum-assetlist-item-background-color-down);
+	--spectrum-assetlist-item-background-color-hover: var(--system-spectrum-assetlist-item-background-color-hover);
+	--spectrum-assetlist-thumbnail-width: var(--system-spectrum-assetlist-thumbnail-width);
+	--spectrum-assetlist-thumbnail-height: var(--system-spectrum-assetlist-thumbnail-height);
+	--spectrum-assetlist-thumbnail-margin-inline-start: var(--system-spectrum-assetlist-thumbnail-margin-inline-start);
+	--spectrum-assetlist-item-label-padding-inline-start: var(--system-spectrum-assetlist-item-label-padding-inline-start);
+	--spectrum-assetlist-label-color: var(--system-spectrum-assetlist-label-color);
+}
 
-:scope:dir(rtl){
-            --spectrum-logical-rotation:matrix(-1, 0, 0, 1, 0, 0);
-        }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-AssetList:dir(rtl) {
+	--spectrum-logical-rotation: var(--system-spectrum-assetlist-dir-rtl-spectrum-logical-rotation);
+}

@@ -10,56 +10,37 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Swatch{
-        --spectrum-swatch-focus-indicator-border-radius:8px;
-        --spectrum-swatch-icon-border-color:rgba(0, 0, 0, 0.51);
-        --spectrum-swatch-size:var(--spectrum-swatch-size-small);
-        --spectrum-swatch-border-radius:var(--spectrum-corner-radius-100);
-        --spectrum-swatch-border-thickness:var(--spectrum-border-width-100);
-        --spectrum-swatch-border-thickness-selected:var(--spectrum-border-width-200);
-        --spectrum-swatch-disabled-icon-size:var(--spectrum-workflow-icon-size-75);
-        --spectrum-swatch-slash-thickness:var(--spectrum-swatch-slash-thickness-small);
-        --spectrum-swatch-focus-indicator-thickness:var(--spectrum-focus-indicator-thickness);
-        --spectrum-swatch-focus-indicator-gap:var(--spectrum-focus-indicator-gap);
-        --spectrum-swatch-border-color-selected:var(--spectrum-gray-900);
-        --spectrum-swatch-inner-border-color-selected:var(--spectrum-gray-25);
-        --spectrum-swatch-disabled-icon-border-color:var(--spectrum-swatch-disabled-icon-border-color);
-        --spectrum-swatch-disabled-icon-color:var(--spectrum-white);
-        --spectrum-swatch-dash-icon-color:var(--spectrum-gray-800);
-        --spectrum-swatch-slash-icon-color:var(--spectrum-red-900);
-        --spectrum-swatch-focus-indicator-color:var(--spectrum-focus-indicator-color);
-    }
-
-.spectrum--light .spectrum-Swatch{
-            --spectrum-swatch-border-color:rgba(0, 0, 0, 0.51);
-        }
-
-.spectrum--dark .spectrum-Swatch,.spectrum--darkest .spectrum-Swatch{
-            --spectrum-swatch-border-color:rgba(255, 255, 255, 0.51);
-        }
-
-.spectrum-Swatch--sizeXS{
-        --spectrum-swatch-size:var(--spectrum-swatch-size-extra-small);
-        --spectrum-swatch-disabled-icon-size:var(--spectrum-workflow-icon-size-50);
-        --spectrum-swatch-slash-thickness:var(--spectrum-swatch-slash-thickness-extra-small);
-    }
-
-.spectrum-Swatch--sizeS{
-        --spectrum-swatch-size:var(--spectrum-swatch-size-small);
-        --spectrum-swatch-disabled-icon-size:var(--spectrum-workflow-icon-size-75);
-        --spectrum-swatch-slash-thickness:var(--spectrum-swatch-slash-thickness-small);
-    }
-
-.spectrum-Swatch--sizeM{
-        --spectrum-swatch-size:var(--spectrum-swatch-size-medium);
-        --spectrum-swatch-disabled-icon-size:var(--spectrum-workflow-icon-size-100);
-        --spectrum-swatch-slash-thickness:var(--spectrum-swatch-slash-thickness-medium);
-    }
-
-.spectrum-Swatch--sizeL{
-        --spectrum-swatch-size:var(--spectrum-swatch-size-large);
-        --spectrum-swatch-disabled-icon-size:var(--spectrum-workflow-icon-size-200);
-        --spectrum-swatch-slash-thickness:var(--spectrum-swatch-slash-thickness-large);
-    }
-
-/*# sourceMappingURL=express.css.map */
+.spectrum-express {
+	--system-spectrum-swatch-focus-indicator-border-radius: 8px;
+	--system-spectrum-swatch-icon-border-color: rgba(0, 0, 0, 51%);
+	--system-spectrum-swatch-size: var(--spectrum-swatch-size-small);
+	--system-spectrum-swatch-border-radius: var(--spectrum-corner-radius-100);
+	--system-spectrum-swatch-border-thickness: var(--spectrum-border-width-100);
+	--system-spectrum-swatch-border-thickness-selected: var(--spectrum-border-width-200);
+	--system-spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
+	--system-spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
+	--system-spectrum-swatch-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-spectrum-swatch-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-spectrum-swatch-border-color-selected: var(--spectrum-gray-900);
+	--system-spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-25);
+	--system-spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
+	--system-spectrum-swatch-disabled-icon-color: var(--spectrum-white);
+	--system-spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
+	--system-spectrum-swatch-slash-icon-color: var(--spectrum-red-900);
+	--system-spectrum-swatch-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-spectrum-light-spectrum-swatch-spectrum-swatch-border-color: rgba(0, 0, 0, 51%);
+	--system-spectrum-dark-spectrum-swatch-spectrum-swatch-border-color: rgba(255, 255, 255, 51%);
+	--system-spectrum-darkest-spectrum-swatch-spectrum-swatch-border-color: rgba(255, 255, 255, 51%);
+	--system-spectrum-swatch-sizexs-size: var(--spectrum-swatch-size-extra-small);
+	--system-spectrum-swatch-sizexs-disabled-icon-size: var(--spectrum-workflow-icon-size-50);
+	--system-spectrum-swatch-sizexs-slash-thickness: var(--spectrum-swatch-slash-thickness-extra-small);
+	--system-spectrum-swatch-sizes-size: var(--spectrum-swatch-size-small);
+	--system-spectrum-swatch-sizes-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
+	--system-spectrum-swatch-sizes-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
+	--system-spectrum-swatch-sizem-size: var(--spectrum-swatch-size-medium);
+	--system-spectrum-swatch-sizem-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-spectrum-swatch-sizem-slash-thickness: var(--spectrum-swatch-slash-thickness-medium);
+	--system-spectrum-swatch-sizel-size: var(--spectrum-swatch-size-large);
+	--system-spectrum-swatch-sizel-disabled-icon-size: var(--spectrum-workflow-icon-size-200);
+	--system-spectrum-swatch-sizel-slash-thickness: var(--spectrum-swatch-slash-thickness-large);
+}

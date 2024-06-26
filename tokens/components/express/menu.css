@@ -10,171 +10,120 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Menu{
-        --spectrum-menu-item-min-height:var(--spectrum-component-height-100);
-        --spectrum-menu-item-icon-height:var(--spectrum-workflow-icon-size-100);
-        --spectrum-menu-item-icon-width:var(--spectrum-workflow-icon-size-100);
-        --spectrum-menu-item-label-font-size:var(--spectrum-font-size-100);
-        --spectrum-menu-item-label-text-to-visual:var(--spectrum-text-to-visual-100);
-
-        --spectrum-menu-item-label-inline-edge-to-content:var(--spectrum-component-edge-to-text-100);
-        --spectrum-menu-item-top-edge-to-text:var(--spectrum-component-top-to-text-100);
-        --spectrum-menu-item-bottom-edge-to-text:var(--spectrum-component-bottom-to-text-100);
-
-        --spectrum-menu-item-text-to-control:var(--spectrum-text-to-control-100);
-
-        --spectrum-menu-item-description-font-size:var(--spectrum-font-size-75);
-
-        --spectrum-menu-section-header-font-size:var(--spectrum-font-size-100);
-        --spectrum-menu-section-header-min-width:var(--spectrum-component-height-100);
-
-        --spectrum-menu-item-selectable-edge-to-text-not-selected:var(--spectrum-menu-item-selectable-edge-to-text-not-selected-medium);
-
-        --spectrum-menu-item-checkmark-height:var(--spectrum-menu-item-checkmark-height-medium);
-        --spectrum-menu-item-checkmark-width:var(--spectrum-menu-item-checkmark-width-medium);
-        --spectrum-menu-item-top-to-checkmark:var(--spectrum-menu-item-top-to-selected-icon-medium);
-
-        --spectrum-menu-item-top-to-action:var(--spectrum-spacing-50);
-        --spectrum-menu-item-top-to-checkbox:var(--spectrum-spacing-50);
-
-        --spectrum-menu-item-label-line-height:var(--spectrum-line-height-100);
-        --spectrum-menu-item-label-line-height-cjk:var(--spectrum-cjk-line-height-100);
-        --spectrum-menu-item-label-to-description-spacing:var(--spectrum-menu-item-label-to-description);
-        --spectrum-menu-item-focus-indicator-width:var(--spectrum-border-width-200);
-        --spectrum-menu-item-focus-indicator-color:var(--spectrum-blue-800);
-        --spectrum-menu-item-label-to-value-area-min-spacing:var(--spectrum-spacing-100);
-
-        --spectrum-menu-item-label-content-color-default:var(--spectrum-neutral-content-color-default);
-        --spectrum-menu-item-label-content-color-hover:var(--spectrum-neutral-content-color-hover);
-        --spectrum-menu-item-label-content-color-down:var(--spectrum-neutral-content-color-down);
-        --spectrum-menu-item-label-content-color-focus:var(--spectrum-neutral-content-color-key-focus);
-
-        --spectrum-menu-item-label-icon-color-default:var(--spectrum-neutral-content-color-default);
-        --spectrum-menu-item-label-icon-color-hover:var(--spectrum-neutral-content-color-hover);
-        --spectrum-menu-item-label-icon-color-down:var(--spectrum-neutral-content-color-down);
-        --spectrum-menu-item-label-icon-color-focus:var(--spectrum-neutral-content-color-key-focus);
-
-        --spectrum-menu-item-label-content-color-disabled:var(--spectrum-disabled-content-color);
-        --spectrum-menu-item-label-icon-color-disabled:var(--spectrum-disabled-content-color);
-
-        --spectrum-menu-item-description-line-height:var(--spectrum-line-height-100);
-        --spectrum-menu-item-description-line-height-cjk:var(--spectrum-cjk-line-height-100);
-
-        --spectrum-menu-item-description-color-default:var(--spectrum-neutral-subdued-content-color-default);
-        --spectrum-menu-item-description-color-hover:var(--spectrum-neutral-subdued-content-color-hover);
-        --spectrum-menu-item-description-color-down:var(--spectrum-neutral-subdued-content-color-down);
-        --spectrum-menu-item-description-color-focus:var(--spectrum-neutral-subdued-content-color-key-focus);
-        --spectrum-menu-item-description-color-disabled:var(--spectrum-disabled-content-color);
-
-        --spectrum-menu-section-header-line-height:var(--spectrum-line-height-100);
-        --spectrum-menu-section-header-line-height-cjk:var(--spectrum-cjk-line-height-100);
-        --spectrum-menu-section-header-font-weight:var(--spectrum-bold-font-weight);
-        --spectrum-menu-section-header-color:var(--spectrum-gray-900);
-        --spectrum-menu-collapsible-icon-color:var(--spectrum-gray-900);
-
-        --spectrum-menu-checkmark-icon-color-default:var(--spectrum-accent-color-900);
-        --spectrum-menu-checkmark-icon-color-hover:var(--spectrum-accent-color-1000);
-        --spectrum-menu-checkmark-icon-color-down:var(--spectrum-accent-color-1100);
-        --spectrum-menu-checkmark-icon-color-focus:var(--spectrum-accent-color-1000);
-
-        --spectrum-menu-drillin-icon-color-default:var(--spectrum-neutral-subdued-content-color-default);
-        --spectrum-menu-drillin-icon-color-hover:var(--spectrum-neutral-subdued-content-color-hover);
-        --spectrum-menu-drillin-icon-color-down:var(--spectrum-neutral-subdued-content-color-down);
-        --spectrum-menu-drillin-icon-color-focus:var(--spectrum-neutral-subdued-content-color-key-focus);
-
-        --spectrum-menu-item-value-color-default:var(--spectrum-neutral-subdued-content-color-default);
-        --spectrum-menu-item-value-color-hover:var(--spectrum-neutral-subdued-content-color-hover);
-        --spectrum-menu-item-value-color-down:var(--spectrum-neutral-subdued-content-color-down);
-        --spectrum-menu-item-value-color-focus:var(--spectrum-neutral-subdued-content-color-key-focus);
-
-        --spectrum-menu-checkmark-display-hidden:none;
-        --spectrum-menu-checkmark-display-shown:block;
-        --spectrum-menu-checkmark-display:var(--spectrum-menu-checkmark-display-shown);
-
-        --spectrum-menu-back-icon-margin:var(--spectrum-navigational-indicator-top-to-back-icon-medium);
-        --spectrum-menu-item-collapsible-has-icon-submenu-item-padding-x-start:calc(var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width));
-        --spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start:calc(var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width));
-    }
-
-.spectrum-Menu--sizeS{
-        --spectrum-menu-item-min-height:var(--spectrum-component-height-75);
-        --spectrum-menu-item-icon-height:var(--spectrum-workflow-icon-size-75);
-        --spectrum-menu-item-icon-width:var(--spectrum-workflow-icon-size-75);
-        --spectrum-menu-item-label-font-size:var(--spectrum-font-size-75);
-        --spectrum-menu-item-label-text-to-visual:var(--spectrum-text-to-visual-75);
-
-        --spectrum-menu-item-label-inline-edge-to-content:var(--spectrum-component-edge-to-text-75);
-        --spectrum-menu-item-top-edge-to-text:var(--spectrum-component-top-to-text-75);
-        --spectrum-menu-item-bottom-edge-to-text:var(--spectrum-component-bottom-to-text-75);
-
-        --spectrum-menu-item-text-to-control:var(--spectrum-text-to-control-75);
-
-        --spectrum-menu-item-description-font-size:var(--spectrum-font-size-50);
-
-        --spectrum-menu-section-header-font-size:var(--spectrum-font-size-75);
-        --spectrum-menu-section-header-min-width:var(--spectrum-component-height-75);
-
-        --spectrum-menu-item-selectable-edge-to-text-not-selected:var(--spectrum-menu-item-selectable-edge-to-text-not-selected-small);
-
-        --spectrum-menu-item-checkmark-height:var(--spectrum-menu-item-checkmark-height-small);
-        --spectrum-menu-item-checkmark-width:var(--spectrum-menu-item-checkmark-width-small);
-        --spectrum-menu-item-top-to-checkmark:var(--spectrum-menu-item-top-to-selected-icon-small);
-
-        --spectrum-menu-back-icon-margin:var(--spectrum-navigational-indicator-top-to-back-icon-small);
-    }
-
-.spectrum-Menu--sizeL{
-        --spectrum-menu-item-min-height:var(--spectrum-component-height-200);
-        --spectrum-menu-item-icon-height:var(--spectrum-workflow-icon-size-200);
-        --spectrum-menu-item-icon-width:var(--spectrum-workflow-icon-size-200);
-        --spectrum-menu-item-label-font-size:var(--spectrum-font-size-200);
-        --spectrum-menu-item-label-text-to-visual:var(--spectrum-text-to-visual-200);
-
-        --spectrum-menu-item-label-inline-edge-to-content:var(--spectrum-component-edge-to-text-200);
-        --spectrum-menu-item-top-edge-to-text:var(--spectrum-component-top-to-text-200);
-        --spectrum-menu-item-bottom-edge-to-text:var(--spectrum-component-bottom-to-text-200);
-
-        --spectrum-menu-item-text-to-control:var(--spectrum-text-to-control-200);
-
-        --spectrum-menu-item-description-font-size:var(--spectrum-font-size-100);
-
-        --spectrum-menu-section-header-font-size:var(--spectrum-font-size-200);
-        --spectrum-menu-section-header-min-width:var(--spectrum-component-height-200);
-
-        --spectrum-menu-item-selectable-edge-to-text-not-selected:var(--spectrum-menu-item-selectable-edge-to-text-not-selected-large);
-
-        --spectrum-menu-item-checkmark-height:var(--spectrum-menu-item-checkmark-height-large);
-        --spectrum-menu-item-checkmark-width:var(--spectrum-menu-item-checkmark-width-large);
-        --spectrum-menu-item-top-to-checkmark:var(--spectrum-menu-item-top-to-selected-icon-large);
-
-        --spectrum-menu-back-icon-margin:var(--spectrum-navigational-indicator-top-to-back-icon-large);
-    }
-
-.spectrum-Menu--sizeXL{
-        --spectrum-menu-item-min-height:var(--spectrum-component-height-300);
-        --spectrum-menu-item-icon-height:var(--spectrum-workflow-icon-size-300);
-        --spectrum-menu-item-icon-width:var(--spectrum-workflow-icon-size-300);
-        --spectrum-menu-item-label-font-size:var(--spectrum-font-size-300);
-        --spectrum-menu-item-label-text-to-visual:var(--spectrum-text-to-visual-300);
-
-        --spectrum-menu-item-label-inline-edge-to-content:var(--spectrum-component-edge-to-text-300);
-        --spectrum-menu-item-top-edge-to-text:var(--spectrum-component-top-to-text-300);
-        --spectrum-menu-item-bottom-edge-to-text:var(--spectrum-component-bottom-to-text-300);
-
-        --spectrum-menu-item-text-to-control:var(--spectrum-text-to-control-300);
-
-        --spectrum-menu-item-description-font-size:var(--spectrum-font-size-200);
-
-        --spectrum-menu-section-header-font-size:var(--spectrum-font-size-300);
-        --spectrum-menu-section-header-min-width:var(--spectrum-component-height-300);
-
-        --spectrum-menu-item-selectable-edge-to-text-not-selected:var(--spectrum-menu-item-selectable-edge-to-text-not-selected-extra-large);
-
-        --spectrum-menu-item-checkmark-height:var(--spectrum-menu-item-checkmark-height-extra-large);
-        --spectrum-menu-item-checkmark-width:var(--spectrum-menu-item-checkmark-width-extra-large);
-        --spectrum-menu-item-top-to-checkmark:var(--spectrum-menu-item-top-to-selected-icon-extra-large);
-
-        --spectrum-menu-back-icon-margin:var(--spectrum-navigational-indicator-top-to-back-icon-extra-large);
-    }
-
-/*# sourceMappingURL=express.css.map */
+.spectrum-express {
+	--system-spectrum-menu-item-min-height: var(--spectrum-component-height-100);
+	--system-spectrum-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
+	--system-spectrum-menu-item-icon-width: var(--spectrum-workflow-icon-size-100);
+	--system-spectrum-menu-item-label-font-size: var(--spectrum-font-size-100);
+	--system-spectrum-menu-item-label-text-to-visual: var(--spectrum-text-to-visual-100);
+	--system-spectrum-menu-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-100);
+	--system-spectrum-menu-item-top-edge-to-text: var(--spectrum-component-top-to-text-100);
+	--system-spectrum-menu-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-100);
+	--system-spectrum-menu-item-text-to-control: var(--spectrum-text-to-control-100);
+	--system-spectrum-menu-item-description-font-size: var(--spectrum-font-size-75);
+	--system-spectrum-menu-section-header-font-size: var(--spectrum-font-size-100);
+	--system-spectrum-menu-section-header-min-width: var(--spectrum-component-height-100);
+	--system-spectrum-menu-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-medium);
+	--system-spectrum-menu-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-medium);
+	--system-spectrum-menu-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-medium);
+	--system-spectrum-menu-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-medium);
+	--system-spectrum-menu-item-top-to-action: var(--spectrum-spacing-50);
+	--system-spectrum-menu-item-top-to-checkbox: var(--spectrum-spacing-50);
+	--system-spectrum-menu-item-label-line-height: var(--spectrum-line-height-100);
+	--system-spectrum-menu-item-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-spectrum-menu-item-label-to-description-spacing: var(--spectrum-menu-item-label-to-description);
+	--system-spectrum-menu-item-focus-indicator-width: var(--spectrum-border-width-200);
+	--system-spectrum-menu-item-focus-indicator-color: var(--spectrum-blue-800);
+	--system-spectrum-menu-item-label-to-value-area-min-spacing: var(--spectrum-spacing-100);
+	--system-spectrum-menu-item-label-content-color-default: var(--spectrum-neutral-content-color-default);
+	--system-spectrum-menu-item-label-content-color-hover: var(--spectrum-neutral-content-color-hover);
+	--system-spectrum-menu-item-label-content-color-down: var(--spectrum-neutral-content-color-down);
+	--system-spectrum-menu-item-label-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-spectrum-menu-item-label-icon-color-default: var(--spectrum-neutral-content-color-default);
+	--system-spectrum-menu-item-label-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+	--system-spectrum-menu-item-label-icon-color-down: var(--spectrum-neutral-content-color-down);
+	--system-spectrum-menu-item-label-icon-color-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-spectrum-menu-item-label-content-color-disabled: var(--spectrum-disabled-content-color);
+	--system-spectrum-menu-item-label-icon-color-disabled: var(--spectrum-disabled-content-color);
+	--system-spectrum-menu-item-description-line-height: var(--spectrum-line-height-100);
+	--system-spectrum-menu-item-description-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-spectrum-menu-item-description-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--system-spectrum-menu-item-description-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+	--system-spectrum-menu-item-description-color-down: var(--spectrum-neutral-subdued-content-color-down);
+	--system-spectrum-menu-item-description-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+	--system-spectrum-menu-item-description-color-disabled: var(--spectrum-disabled-content-color);
+	--system-spectrum-menu-section-header-line-height: var(--spectrum-line-height-100);
+	--system-spectrum-menu-section-header-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-spectrum-menu-section-header-font-weight: var(--spectrum-bold-font-weight);
+	--system-spectrum-menu-section-header-color: var(--spectrum-gray-900);
+	--system-spectrum-menu-collapsible-icon-color: var(--spectrum-gray-900);
+	--system-spectrum-menu-checkmark-icon-color-default: var(--spectrum-accent-color-900);
+	--system-spectrum-menu-checkmark-icon-color-hover: var(--spectrum-accent-color-1000);
+	--system-spectrum-menu-checkmark-icon-color-down: var(--spectrum-accent-color-1100);
+	--system-spectrum-menu-checkmark-icon-color-focus: var(--spectrum-accent-color-1000);
+	--system-spectrum-menu-drillin-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--system-spectrum-menu-drillin-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+	--system-spectrum-menu-drillin-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
+	--system-spectrum-menu-drillin-icon-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+	--system-spectrum-menu-item-value-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--system-spectrum-menu-item-value-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+	--system-spectrum-menu-item-value-color-down: var(--spectrum-neutral-subdued-content-color-down);
+	--system-spectrum-menu-item-value-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+	--system-spectrum-menu-checkmark-display-hidden: none;
+	--system-spectrum-menu-checkmark-display-shown: block;
+	--system-spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-shown);
+	--system-spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-medium);
+	--system-spectrum-menu-item-collapsible-has-icon-submenu-item-padding-x-start: calc(var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width));
+	--system-spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start: calc(var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width));
+	--system-spectrum-menu-sizes-item-min-height: var(--spectrum-component-height-75);
+	--system-spectrum-menu-sizes-item-icon-height: var(--spectrum-workflow-icon-size-75);
+	--system-spectrum-menu-sizes-item-icon-width: var(--spectrum-workflow-icon-size-75);
+	--system-spectrum-menu-sizes-item-label-font-size: var(--spectrum-font-size-75);
+	--system-spectrum-menu-sizes-item-label-text-to-visual: var(--spectrum-text-to-visual-75);
+	--system-spectrum-menu-sizes-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-75);
+	--system-spectrum-menu-sizes-item-top-edge-to-text: var(--spectrum-component-top-to-text-75);
+	--system-spectrum-menu-sizes-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-75);
+	--system-spectrum-menu-sizes-item-text-to-control: var(--spectrum-text-to-control-75);
+	--system-spectrum-menu-sizes-item-description-font-size: var(--spectrum-font-size-50);
+	--system-spectrum-menu-sizes-section-header-font-size: var(--spectrum-font-size-75);
+	--system-spectrum-menu-sizes-section-header-min-width: var(--spectrum-component-height-75);
+	--system-spectrum-menu-sizes-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-small);
+	--system-spectrum-menu-sizes-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-small);
+	--system-spectrum-menu-sizes-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-small);
+	--system-spectrum-menu-sizes-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-small);
+	--system-spectrum-menu-sizes-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-small);
+	--system-spectrum-menu-sizel-item-min-height: var(--spectrum-component-height-200);
+	--system-spectrum-menu-sizel-item-icon-height: var(--spectrum-workflow-icon-size-200);
+	--system-spectrum-menu-sizel-item-icon-width: var(--spectrum-workflow-icon-size-200);
+	--system-spectrum-menu-sizel-item-label-font-size: var(--spectrum-font-size-200);
+	--system-spectrum-menu-sizel-item-label-text-to-visual: var(--spectrum-text-to-visual-200);
+	--system-spectrum-menu-sizel-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-200);
+	--system-spectrum-menu-sizel-item-top-edge-to-text: var(--spectrum-component-top-to-text-200);
+	--system-spectrum-menu-sizel-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-200);
+	--system-spectrum-menu-sizel-item-text-to-control: var(--spectrum-text-to-control-200);
+	--system-spectrum-menu-sizel-item-description-font-size: var(--spectrum-font-size-100);
+	--system-spectrum-menu-sizel-section-header-font-size: var(--spectrum-font-size-200);
+	--system-spectrum-menu-sizel-section-header-min-width: var(--spectrum-component-height-200);
+	--system-spectrum-menu-sizel-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-large);
+	--system-spectrum-menu-sizel-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-large);
+	--system-spectrum-menu-sizel-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-large);
+	--system-spectrum-menu-sizel-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-large);
+	--system-spectrum-menu-sizel-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-large);
+	--system-spectrum-menu-sizexl-item-min-height: var(--spectrum-component-height-300);
+	--system-spectrum-menu-sizexl-item-icon-height: var(--spectrum-workflow-icon-size-300);
+	--system-spectrum-menu-sizexl-item-icon-width: var(--spectrum-workflow-icon-size-300);
+	--system-spectrum-menu-sizexl-item-label-font-size: var(--spectrum-font-size-300);
+	--system-spectrum-menu-sizexl-item-label-text-to-visual: var(--spectrum-text-to-visual-300);
+	--system-spectrum-menu-sizexl-item-label-inline-edge-to-content: var(--spectrum-component-edge-to-text-300);
+	--system-spectrum-menu-sizexl-item-top-edge-to-text: var(--spectrum-component-top-to-text-300);
+	--system-spectrum-menu-sizexl-item-bottom-edge-to-text: var(--spectrum-component-bottom-to-text-300);
+	--system-spectrum-menu-sizexl-item-text-to-control: var(--spectrum-text-to-control-300);
+	--system-spectrum-menu-sizexl-item-description-font-size: var(--spectrum-font-size-200);
+	--system-spectrum-menu-sizexl-section-header-font-size: var(--spectrum-font-size-300);
+	--system-spectrum-menu-sizexl-section-header-min-width: var(--spectrum-component-height-300);
+	--system-spectrum-menu-sizexl-item-selectable-edge-to-text-not-selected: var(--spectrum-menu-item-selectable-edge-to-text-not-selected-extra-large);
+	--system-spectrum-menu-sizexl-item-checkmark-height: var(--spectrum-menu-item-checkmark-height-extra-large);
+	--system-spectrum-menu-sizexl-item-checkmark-width: var(--spectrum-menu-item-checkmark-width-extra-large);
+	--system-spectrum-menu-sizexl-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-extra-large);
+	--system-spectrum-menu-sizexl-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-extra-large);
+}

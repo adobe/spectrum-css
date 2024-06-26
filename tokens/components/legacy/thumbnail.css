@@ -10,73 +10,31 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Thumbnail{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-500);
-
-        --spectrum-thumbnail-border-radius:var(--spectrum-corner-radius-75);
-        --spectrum-thumbnail-border-width:var(--spectrum-border-width-100);
-        --spectrum-thumbnail-border-color-rgba:rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
-        --spectrum-thumbnail-layer-border-width-inner:var(--spectrum-border-width-400);
-        --spectrum-thumbnail-layer-border-color-inner:var(--spectrum-white);
-        --spectrum-thumbnail-layer-border-width-outer:var(--spectrum-border-width-100);
-        --spectrum-thumbnail-layer-border-color-outer:var(--spectrum-gray-500);
-
-        --spectrum-thumbnail-border-width-selected:var(--spectrum-border-width-200);
-        --spectrum-thumbnail-border-color-selected:var(--spectrum-accent-color-800);
-
-        --spectrum-thumbnail-focus-indicator-thickness:var(--spectrum-focus-indicator-thickness);
-        --spectrum-thumbnail-focus-indicator-gap:var(--spectrum-focus-indicator-gap);
-        --spectrum-thumbnail-focus-indicator-color:var(--spectrum-focus-indicator-color);
-
-        --spectrum-thumbnail-color-opacity-disabled:var(--spectrum-thumbnail-opacity-disabled);
-    }
-
-.spectrum-Thumbnail--size50{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-50);
-    }
-
-.spectrum-Thumbnail--size75{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-75);
-    }
-
-.spectrum-Thumbnail--size100{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-100);
-    }
-
-.spectrum-Thumbnail--size200{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-200);
-    }
-
-.spectrum-Thumbnail--size300{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-300);
-    }
-
-.spectrum-Thumbnail--size400{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-400);
-    }
-
-.spectrum-Thumbnail--size500{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-500);
-    }
-
-.spectrum-Thumbnail--size600{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-600);
-    }
-
-.spectrum-Thumbnail--size700{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-700);
-    }
-
-.spectrum-Thumbnail--size800{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-800);
-    }
-
-.spectrum-Thumbnail--size900{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-900);
-    }
-
-.spectrum-Thumbnail--size1000{
-        --spectrum-thumbnail-size:var(--spectrum-thumbnail-size-1000);
-    }
-
-/*# sourceMappingURL=legacy.css.map */
+.spectrum-legacy {
+	--system-spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
+	--system-spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
+	--system-spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
+	--system-spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
+	--system-spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
+	--system-spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
+	--system-spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
+	--system-spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
+	--system-spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
+	--system-spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
+	--system-spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
+	--system-spectrum-thumbnail-size50-size: var(--spectrum-thumbnail-size-50);
+	--system-spectrum-thumbnail-size75-size: var(--spectrum-thumbnail-size-75);
+	--system-spectrum-thumbnail-size100-size: var(--spectrum-thumbnail-size-100);
+	--system-spectrum-thumbnail-size200-size: var(--spectrum-thumbnail-size-200);
+	--system-spectrum-thumbnail-size300-size: var(--spectrum-thumbnail-size-300);
+	--system-spectrum-thumbnail-size400-size: var(--spectrum-thumbnail-size-400);
+	--system-spectrum-thumbnail-size500-size: var(--spectrum-thumbnail-size-500);
+	--system-spectrum-thumbnail-size600-size: var(--spectrum-thumbnail-size-600);
+	--system-spectrum-thumbnail-size700-size: var(--spectrum-thumbnail-size-700);
+	--system-spectrum-thumbnail-size800-size: var(--spectrum-thumbnail-size-800);
+	--system-spectrum-thumbnail-size900-size: var(--spectrum-thumbnail-size-900);
+	--system-spectrum-thumbnail-size1000-size: var(--spectrum-thumbnail-size-1000);
+}
