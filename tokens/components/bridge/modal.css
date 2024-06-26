@@ -10,17 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Modal{
-        --spectrum-modal-confirm-exit-animation-delay:var(--spectrum-animation-duration-0);
-        --spectrum-modal-fullscreen-margin:32px;
-        --spectrum-modal-max-height:90vh;
-        --spectrum-modal-max-width:90%;
-
-        --spectrum-modal-background-color:var(--spectrum-gray-75);
-        --spectrum-modal-confirm-border-radius:var(--spectrum-corner-radius-100);
-        --spectrum-modal-confirm-exit-animation-duration:var(--spectrum-animation-duration-100);
-        --spectrum-modal-confirm-entry-animation-duration:var(--spectrum-animation-duration-500);
-        --spectrum-modal-confirm-entry-animation-delay:var(--spectrum-animation-duration-200);
-        --spectrum-modal-transition-animation-duration:var(--spectrum-animation-duration-100);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Modal {
+	--spectrum-modal-confirm-exit-animation-delay: var(--system-spectrum-modal-confirm-exit-animation-delay);
+	--spectrum-modal-fullscreen-margin: var(--system-spectrum-modal-fullscreen-margin);
+	--spectrum-modal-max-height: var(--system-spectrum-modal-max-height);
+	--spectrum-modal-max-width: var(--system-spectrum-modal-max-width);
+	--spectrum-modal-background-color: var(--system-spectrum-modal-background-color);
+	--spectrum-modal-confirm-border-radius: var(--system-spectrum-modal-confirm-border-radius);
+	--spectrum-modal-confirm-exit-animation-duration: var(--system-spectrum-modal-confirm-exit-animation-duration);
+	--spectrum-modal-confirm-entry-animation-duration: var(--system-spectrum-modal-confirm-entry-animation-duration);
+	--spectrum-modal-confirm-entry-animation-delay: var(--system-spectrum-modal-confirm-entry-animation-delay);
+	--spectrum-modal-transition-animation-duration: var(--system-spectrum-modal-transition-animation-duration);
+}

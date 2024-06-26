@@ -10,9 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-FieldGroup{
-        --spectrum-fieldgroup-margin:var(--spectrum-spacing-300);
-        --spectrum-fieldgroup-readonly-delimiter:"\002c";
-    }
-
-/*# sourceMappingURL=spectrum.css.map */
+.spectrum {
+	--system-spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
+	--system-spectrum-fieldgroup-readonly-delimiter: "\002c";
+}

@@ -10,16 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Pagination{
-        --spectrum-pagination-counter-margin-inline-start:var(--spectrum-pagination-item-inline-spacing);
-        --spectrum-pagination-page-button-inline-spacing:var(--spectrum-pagination-item-inline-spacing);
-        --spectrum-pagination-counter-color:var(--spectrum-neutral-subdued-content-color-default);
-        --spectrum-pagination-counter-font-size:var(--spectrum-font-size-100);
-        --spectrum-pagination-counter-line-height:var(--spectrum-line-height-100);
-    }
-
-.spectrum-Pagination:dir(rtl){
-            --spectrum-logical-rotation:matrix(-1, 0, 0, 1, 0, 0);
-        }
-
-/*# sourceMappingURL=express.css.map */
+.spectrum-express {
+	--system-spectrum-pagination-counter-margin-inline-start: var(--spectrum-pagination-item-inline-spacing);
+	--system-spectrum-pagination-page-button-inline-spacing: var(--spectrum-pagination-item-inline-spacing);
+	--system-spectrum-pagination-counter-color: var(--spectrum-neutral-subdued-content-color-default);
+	--system-spectrum-pagination-counter-font-size: var(--spectrum-font-size-100);
+	--system-spectrum-pagination-counter-line-height: var(--spectrum-line-height-100);
+	--system-spectrum-pagination-dir-rtl-spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+}

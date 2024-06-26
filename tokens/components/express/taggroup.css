@@ -10,9 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-TagGroup{
-        --spectrum-tag-group-item-margin-block:var(--spectrum-spacing-75);
-        --spectrum-tag-group-item-margin-inline:var(--spectrum-spacing-75);
-    }
-
-/*# sourceMappingURL=express.css.map */
+.spectrum-express {
+	--system-spectrum-taggroup-spectrum-tag-group-item-margin-block: var(--spectrum-spacing-75);
+	--system-spectrum-taggroup-spectrum-tag-group-item-margin-inline: var(--spectrum-spacing-75);
+}

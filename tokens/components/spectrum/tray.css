@@ -10,17 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Tray{
-        --spectrum-tray-exit-animation-delay:0ms;
-        --spectrum-tray-entry-animation-delay:160ms;
-        --spectrum-tray-max-inline-size:375px;
-        --spectrum-tray-spacing-edge-to-tray-safe-zone:64px;
-
-        --spectrum-tray-entry-animation-duration:var(--spectrum-animation-duration-500);
-        --spectrum-tray-exit-animation-duration:var(--spectrum-animation-duration-100);
-
-        --spectrum-tray-corner-radius:var(--spectrum-corner-radius-100);
-        --spectrum-tray-background-color:var(--spectrum-background-layer-2-color);
-    }
-
-/*# sourceMappingURL=spectrum.css.map */
+.spectrum {
+	--system-spectrum-tray-exit-animation-delay: 0ms;
+	--system-spectrum-tray-entry-animation-delay: 160ms;
+	--system-spectrum-tray-max-inline-size: 375px;
+	--system-spectrum-tray-spacing-edge-to-tray-safe-zone: 64px;
+	--system-spectrum-tray-entry-animation-duration: var(--spectrum-animation-duration-500);
+	--system-spectrum-tray-exit-animation-duration: var(--spectrum-animation-duration-100);
+	--system-spectrum-tray-corner-radius: var(--spectrum-corner-radius-100);
+	--system-spectrum-tray-background-color: var(--spectrum-background-layer-2-color);
+}

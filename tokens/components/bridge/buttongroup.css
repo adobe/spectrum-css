@@ -10,18 +10,27 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ButtonGroup{
-        --spectrum-buttongroup-spacing-horizontal:var(--spectrum-spacing-300);
-        --spectrum-buttongroup-spacing-vertical:var(--spectrum-spacing-300);
-    }
+.spectrum-ButtonGroup {
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-spacing-vertical);
+}
 
-.spectrum-ButtonGroup--sizeS{
-        --spectrum-buttongroup-spacing-horizontal:var(--spectrum-spacing-200);
-        --spectrum-buttongroup-spacing-vertical:var(--spectrum-spacing-200);
-    }
+.spectrum-ButtonGroup--sizeS {
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-sizes-spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-sizes-spacing-vertical);
+}
 
-.spectrum-ButtonGroup--sizeL,.spectrum-ButtonGroup--sizeM,.spectrum-ButtonGroup--sizeXL{
-        --spectrum-buttongroup-spacing-horizontal:var(--spectrum-spacing-300);
-        --spectrum-buttongroup-spacing-vertical:var(--spectrum-spacing-300);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-ButtonGroup--sizeM {
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-sizem-spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-sizem-spacing-vertical);
+}
+
+.spectrum-ButtonGroup--sizeL {
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-sizel-spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-sizel-spacing-vertical);
+}
+
+.spectrum-ButtonGroup--sizeXL {
+	--spectrum-buttongroup-spacing-horizontal: var(--system-spectrum-buttongroup-sizexl-spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-spectrum-buttongroup-sizexl-spacing-vertical);
+}

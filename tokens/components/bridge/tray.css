@@ -10,16 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Tray{
-        --spectrum-tray-exit-animation-delay:0ms;
-        --spectrum-tray-entry-animation-delay:160ms;
-        --spectrum-tray-max-inline-size:375px;
-        --spectrum-tray-spacing-edge-to-tray-safe-zone:64px;
-
-        --spectrum-tray-entry-animation-duration:var(--spectrum-animation-duration-500);
-        --spectrum-tray-exit-animation-duration:var(--spectrum-animation-duration-100);
-
-        --spectrum-tray-corner-radius:var(--spectrum-corner-radius-100);
-        --spectrum-tray-background-color:var(--spectrum-background-layer-2-color);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Tray {
+	--spectrum-tray-exit-animation-delay: var(--system-spectrum-tray-exit-animation-delay);
+	--spectrum-tray-entry-animation-delay: var(--system-spectrum-tray-entry-animation-delay);
+	--spectrum-tray-max-inline-size: var(--system-spectrum-tray-max-inline-size);
+	--spectrum-tray-spacing-edge-to-tray-safe-zone: var(--system-spectrum-tray-spacing-edge-to-tray-safe-zone);
+	--spectrum-tray-entry-animation-duration: var(--system-spectrum-tray-entry-animation-duration);
+	--spectrum-tray-exit-animation-duration: var(--system-spectrum-tray-exit-animation-duration);
+	--spectrum-tray-corner-radius: var(--system-spectrum-tray-corner-radius);
+	--spectrum-tray-background-color: var(--system-spectrum-tray-background-color);
+}

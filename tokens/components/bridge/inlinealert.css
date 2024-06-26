@@ -10,33 +10,31 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-InLineAlert{
-        --spectrum-inlinealert-heading-font-family:var(--spectrum-sans-font-family-stack);
-        --spectrum-inlinealert-heading-font-weight:var(--spectrum-heading-sans-serif-font-weight);
-        --spectrum-inlinealert-heading-font-style:var(--spectrum-heading-sans-serif-font-style);
-        --spectrum-inlinealert-heading-font-size:var(--spectrum-heading-size-xxs);
-        --spectrum-inlinealert-heading-line-height:var(--spectrum-heading-line-height);
-
-        --spectrum-inlinealert-content-font-family:var(--spectrum-sans-font-family-stack);
-        --spectrum-inlinealert-content-font-weight:var(--spectrum-body-sans-serif-font-weight);
-        --spectrum-inlinealert-content-font-style:var(--spectrum-body-sans-serif-font-style);
-        --spectrum-inlinealert-content-font-size:var(--spectrum-body-size-s);
-        --spectrum-inlinealert-content-line-height:var(--spectrum-body-line-height);
-        --spectrum-inlinealert-border-width:var(--spectrum-border-width-200);
-        --spectrum-inlinealert-border-radius:var(--spectrum-corner-radius-100);
-        --spectrum-inlinealert-icon-size:var(--spectrum-workflow-icon-size-100);
-        --spectrum-inlinealert-min-inline-size:var(--spectrum-in-line-alert-minimum-width);
-        --spectrum-inlinealert-header-min-block-size:var(--spectrum-component-height-50);
-        --spectrum-inlinealert-spacing-edge-to-text:var(--spectrum-spacing-400);
-        --spectrum-inlinealert-spacing-header-to-icon:var(--spectrum-spacing-400);
-        --spectrum-inlinealert-spacing-header-content-button:var(--spectrum-spacing-300);
-        --spectrum-inlinealert-background-color:var(--spectrum-background-layer-2-color);
-        --spectrum-inlinealert-border-and-icon-color:var(--spectrum-neutral-visual-color);
-        --spectrum-inlinealert-header-color:var(--spectrum-heading-color);
-        --spectrum-inlinealert-content-color:var(--spectrum-body-color);
-        --spectrum-inlinealert-border-and-icon-color-info:var(--spectrum-informative-visual-color);
-        --spectrum-inlinealert-border-and-icon-color-positive:var(--spectrum-positive-visual-color);
-        --spectrum-inlinealert-border-and-icon-color-notice:var(--spectrum-notice-visual-color);
-        --spectrum-inlinealert-border-and-icon-color-negative:var(--spectrum-negative-visual-color);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-InLineAlert {
+	--spectrum-inlinealert-heading-font-family: var(--system-spectrum-inlinealert-heading-font-family);
+	--spectrum-inlinealert-heading-font-weight: var(--system-spectrum-inlinealert-heading-font-weight);
+	--spectrum-inlinealert-heading-font-style: var(--system-spectrum-inlinealert-heading-font-style);
+	--spectrum-inlinealert-heading-font-size: var(--system-spectrum-inlinealert-heading-font-size);
+	--spectrum-inlinealert-heading-line-height: var(--system-spectrum-inlinealert-heading-line-height);
+	--spectrum-inlinealert-content-font-family: var(--system-spectrum-inlinealert-content-font-family);
+	--spectrum-inlinealert-content-font-weight: var(--system-spectrum-inlinealert-content-font-weight);
+	--spectrum-inlinealert-content-font-style: var(--system-spectrum-inlinealert-content-font-style);
+	--spectrum-inlinealert-content-font-size: var(--system-spectrum-inlinealert-content-font-size);
+	--spectrum-inlinealert-content-line-height: var(--system-spectrum-inlinealert-content-line-height);
+	--spectrum-inlinealert-border-width: var(--system-spectrum-inlinealert-border-width);
+	--spectrum-inlinealert-border-radius: var(--system-spectrum-inlinealert-border-radius);
+	--spectrum-inlinealert-icon-size: var(--system-spectrum-inlinealert-icon-size);
+	--spectrum-inlinealert-min-inline-size: var(--system-spectrum-inlinealert-min-inline-size);
+	--spectrum-inlinealert-header-min-block-size: var(--system-spectrum-inlinealert-header-min-block-size);
+	--spectrum-inlinealert-spacing-edge-to-text: var(--system-spectrum-inlinealert-spacing-edge-to-text);
+	--spectrum-inlinealert-spacing-header-to-icon: var(--system-spectrum-inlinealert-spacing-header-to-icon);
+	--spectrum-inlinealert-spacing-header-content-button: var(--system-spectrum-inlinealert-spacing-header-content-button);
+	--spectrum-inlinealert-background-color: var(--system-spectrum-inlinealert-background-color);
+	--spectrum-inlinealert-border-and-icon-color: var(--system-spectrum-inlinealert-border-and-icon-color);
+	--spectrum-inlinealert-header-color: var(--system-spectrum-inlinealert-header-color);
+	--spectrum-inlinealert-content-color: var(--system-spectrum-inlinealert-content-color);
+	--spectrum-inlinealert-border-and-icon-color-info: var(--system-spectrum-inlinealert-border-and-icon-color-info);
+	--spectrum-inlinealert-border-and-icon-color-positive: var(--system-spectrum-inlinealert-border-and-icon-color-positive);
+	--spectrum-inlinealert-border-and-icon-color-notice: var(--system-spectrum-inlinealert-border-and-icon-color-notice);
+	--spectrum-inlinealert-border-and-icon-color-negative: var(--system-spectrum-inlinealert-border-and-icon-color-negative);
+}

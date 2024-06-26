@@ -11,415 +11,415 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Icon {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-100);
+	--spectrum-icon-size: var(--system-spectrum-icon-size);
 }
 
 .spectrum-Icon--sizeXXS {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxs);
+	--spectrum-icon-size: var(--system-spectrum-icon-sizexxs-size);
 }
 
 .spectrum-Icon--sizeXS {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-50);
+	--spectrum-icon-size: var(--system-spectrum-icon-sizexs-size);
 }
 
 .spectrum-Icon--sizeS {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-75);
+	--spectrum-icon-size: var(--system-spectrum-icon-sizes-size);
 }
 
 .spectrum-Icon--sizeL {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-200);
+	--spectrum-icon-size: var(--system-spectrum-icon-sizel-size);
 }
 
 .spectrum-Icon--sizeXL {
-	--spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
+	--spectrum-icon-size: var(--system-spectrum-icon-sizexl-size);
 }
 
 .spectrum-UIIcon-ChevronRight50 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-50);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronright50-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ChevronRight75 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-75);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronright75-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ChevronRight100 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-100);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronright100-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ChevronRight200 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-200);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronright200-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ChevronRight300 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-300);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronright300-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ChevronRight400 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-400);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronright400-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ChevronRight500 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-500);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronright500-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ChevronDown50 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-50);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevrondown50-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevrondown50-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronDown75 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-75);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevrondown75-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevrondown75-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronDown100 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-100);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevrondown100-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevrondown100-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronDown200 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-200);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevrondown200-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevrondown200-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronDown300 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-300);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevrondown300-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevrondown300-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronDown400 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-400);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevrondown400-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevrondown400-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronDown500 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-500);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevrondown500-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevrondown500-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronLeft50 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-50);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronleft50-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronleft50-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronLeft75 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-75);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronleft75-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronleft75-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronLeft100 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-100);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronleft100-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronleft100-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronLeft200 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-200);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronleft200-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronleft200-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronLeft300 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-300);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronleft300-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronleft300-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronLeft400 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-400);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronleft400-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronleft400-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronLeft500 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-500);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronleft500-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronleft500-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronUp50 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-50);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronup50-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronup50-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronUp75 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-75);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronup75-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronup75-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronUp100 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-100);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronup100-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronup100-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronUp200 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-200);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronup200-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronup200-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronUp300 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-300);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronup300-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronup300-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronUp400 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-400);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronup400-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronup400-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ChevronUp500 {
-	--spectrum-icon-size: var(--spectrum-chevron-icon-size-500);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-chevronup500-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-chevronup500-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowRight75 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-75);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowright75-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ArrowRight100 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-100);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowright100-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ArrowRight200 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-200);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowright200-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ArrowRight300 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-300);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowright300-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ArrowRight400 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-400);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowright400-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ArrowRight500 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-500);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowright500-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ArrowRight600 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-600);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowright600-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-ArrowDown75 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-75);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowdown75-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowdown75-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowDown100 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-100);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowdown100-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowdown100-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowDown200 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-200);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowdown200-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowdown200-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowDown300 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-300);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowdown300-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowdown300-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowDown400 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-400);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowdown400-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowdown400-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowDown500 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-500);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowdown500-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowdown500-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowDown600 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-600);
-	--spectrum-icon-transform: rotate(90deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowdown600-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowdown600-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowLeft75 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-75);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowleft75-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowleft75-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowLeft100 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-100);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowleft100-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowleft100-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowLeft200 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-200);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowleft200-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowleft200-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowLeft300 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-300);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowleft300-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowleft300-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowLeft400 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-400);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowleft400-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowleft400-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowLeft500 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-500);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowleft500-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowleft500-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowLeft600 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-600);
-	--spectrum-icon-transform: rotate(180deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowleft600-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowleft600-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowUp75 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-75);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowup75-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowup75-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowUp100 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-100);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowup100-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowup100-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowUp200 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-200);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowup200-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowup200-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowUp300 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-300);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowup300-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowup300-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowUp400 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-400);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowup400-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowup400-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowUp500 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-500);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowup500-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowup500-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-ArrowUp600 {
-	--spectrum-icon-size: var(--spectrum-arrow-icon-size-600);
-	--spectrum-icon-transform: rotate(270deg);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-arrowup600-spectrum-icon-size);
+	--spectrum-icon-transform: var(--system-spectrum-uiicon-arrowup600-spectrum-icon-transform);
 }
 
 .spectrum-UIIcon-Checkmark50 {
-	--spectrum-icon-size: var(--spectrum-checkmark-icon-size-50);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-checkmark50-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Checkmark75 {
-	--spectrum-icon-size: var(--spectrum-checkmark-icon-size-75);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-checkmark75-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Checkmark100 {
-	--spectrum-icon-size: var(--spectrum-checkmark-icon-size-100);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-checkmark100-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Checkmark200 {
-	--spectrum-icon-size: var(--spectrum-checkmark-icon-size-200);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-checkmark200-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Checkmark300 {
-	--spectrum-icon-size: var(--spectrum-checkmark-icon-size-300);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-checkmark300-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Checkmark400 {
-	--spectrum-icon-size: var(--spectrum-checkmark-icon-size-400);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-checkmark400-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Checkmark500 {
-	--spectrum-icon-size: var(--spectrum-checkmark-icon-size-500);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-checkmark500-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Checkmark600 {
-	--spectrum-icon-size: var(--spectrum-checkmark-icon-size-600);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-checkmark600-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Dash50 {
-	--spectrum-icon-size: var(--spectrum-dash-icon-size-50);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-dash50-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Dash75 {
-	--spectrum-icon-size: var(--spectrum-dash-icon-size-75);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-dash75-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Dash100 {
-	--spectrum-icon-size: var(--spectrum-dash-icon-size-100);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-dash100-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Dash200 {
-	--spectrum-icon-size: var(--spectrum-dash-icon-size-200);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-dash200-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Dash300 {
-	--spectrum-icon-size: var(--spectrum-dash-icon-size-300);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-dash300-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Dash400 {
-	--spectrum-icon-size: var(--spectrum-dash-icon-size-400);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-dash400-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Dash500 {
-	--spectrum-icon-size: var(--spectrum-dash-icon-size-500);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-dash500-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Dash600 {
-	--spectrum-icon-size: var(--spectrum-dash-icon-size-600);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-dash600-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Cross75 {
-	--spectrum-icon-size: var(--spectrum-cross-icon-size-75);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cross75-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Cross100 {
-	--spectrum-icon-size: var(--spectrum-cross-icon-size-100);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cross100-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Cross200 {
-	--spectrum-icon-size: var(--spectrum-cross-icon-size-200);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cross200-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Cross300 {
-	--spectrum-icon-size: var(--spectrum-cross-icon-size-300);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cross300-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Cross400 {
-	--spectrum-icon-size: var(--spectrum-cross-icon-size-400);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cross400-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Cross500 {
-	--spectrum-icon-size: var(--spectrum-cross-icon-size-500);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cross500-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Cross600 {
-	--spectrum-icon-size: var(--spectrum-cross-icon-size-600);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cross600-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-CornerTriangle75 {
-	--spectrum-icon-size: var(--spectrum-corner-triangle-icon-size-75);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cornertriangle75-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-CornerTriangle100 {
-	--spectrum-icon-size: var(--spectrum-corner-triangle-icon-size-100);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cornertriangle100-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-CornerTriangle200 {
-	--spectrum-icon-size: var(--spectrum-corner-triangle-icon-size-200);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cornertriangle200-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-CornerTriangle300 {
-	--spectrum-icon-size: var(--spectrum-corner-triangle-icon-size-300);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-cornertriangle300-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Asterisk75 {
-	--spectrum-icon-size: var(--spectrum-asterisk-icon-size-75);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-asterisk75-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Asterisk100 {
-	--spectrum-icon-size: var(--spectrum-asterisk-icon-size-100);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-asterisk100-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Asterisk200 {
-	--spectrum-icon-size: var(--spectrum-asterisk-icon-size-200);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-asterisk200-spectrum-icon-size);
 }
 
 .spectrum-UIIcon-Asterisk300 {
-	--spectrum-icon-size: var(--spectrum-asterisk-icon-size-300);
+	--spectrum-icon-size: var(--system-spectrum-uiicon-asterisk300-spectrum-icon-size);
 }

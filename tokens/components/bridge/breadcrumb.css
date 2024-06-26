@@ -10,63 +10,59 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Breadcrumbs{
-        --spectrum-breadcrumbs-block-size:var(--spectrum-breadcrumbs-height);
-        --spectrum-breadcrumbs-block-size-compact:var(--spectrum-breadcrumbs-height-compact);
-        --spectrum-breadcrumbs-block-size-multiline:var(--spectrum-breadcrumbs-height-multiline);
-        --spectrum-breadcrumbs-line-height:var(--spectrum-line-height-100);
-        --spectrum-breadcrumbs-font-size:var(--spectrum-font-size-200);
-        --spectrum-breadcrumbs-font-family:var(--spectrum-sans-font-family-stack);
-        --spectrum-breadcrumbs-font-weight:var(--spectrum-regular-font-weight);
-        --spectrum-breadcrumbs-font-size-current:var(--spectrum-font-size-200);
-        --spectrum-breadcrumbs-font-family-current:var(--spectrum-sans-font-family-stack);
-        --spectrum-breadcrumbs-font-weight-current:var(--spectrum-bold-font-weight);
-        --spectrum-breadcrumbs-font-size-compact:var(--spectrum-font-size-100);
-        --spectrum-breadcrumbs-font-family-compact:var(--spectrum-sans-font-family-stack);
-        --spectrum-breadcrumbs-font-weight-compact:var(--spectrum-regular-font-weight);
-        --spectrum-breadcrumbs-font-size-compact-current:var(--spectrum-font-size-100);
-        --spectrum-breadcrumbs-font-family-compact-current:var(--spectrum-sans-font-family-stack);
-        --spectrum-breadcrumbs-font-weight-compact-current:var(--spectrum-bold-font-weight);
-        --spectrum-breadcrumbs-font-size-multiline:var(--spectrum-font-size-75);
-        --spectrum-breadcrumbs-font-family-multiline:var(--spectrum-sans-font-family-stack);
-        --spectrum-breadcrumbs-font-weight-multiline:var(--spectrum-regular-font-weight);
-        --spectrum-breadcrumbs-font-size-multiline-current:var(--spectrum-font-size-300);
-        --spectrum-breadcrumbs-font-family-multiline-current:var(--spectrum-sans-font-family-stack);
-        --spectrum-breadcrumbs-font-weight-multiline-current:var(--spectrum-bold-font-weight);
-        --spectrum-breadcrumbs-text-decoration-thickness:var(--spectrum-text-underline-thickness);
-        --spectrum-breadcrumbs-text-decoration-gap:var(--spectrum-text-underline-gap);
-        --spectrum-breadcrumbs-separator-spacing-inline:var(--spectrum-text-to-visual-100);
-        --spectrum-breadcrumbs-text-spacing-block-start:var(--spectrum-breadcrumbs-top-to-text);
-        --spectrum-breadcrumbs-text-spacing-block-end:var(--spectrum-breadcrumbs-bottom-to-text);
-        --spectrum-breadcrumbs-icon-spacing-block:var(--spectrum-breadcrumbs-top-to-separator-icon);
-        --spectrum-breadcrumbs-text-spacing-block-start-compact:var(--spectrum-breadcrumbs-top-to-text-compact);
-        --spectrum-breadcrumbs-text-spacing-block-end-compact:var(--spectrum-breadcrumbs-bottom-to-text-compact);
-        --spectrum-breadcrumbs-icon-spacing-block-compact:var(--spectrum-breadcrumbs-top-to-separator-icon-compact);
-        --spectrum-breadcrumbs-text-spacing-block-start-multiline:var(--spectrum-breadcrumbs-top-to-text-multiline);
-        --spectrum-breadcrumbs-text-spacing-block-end-multiline:var(--spectrum-breadcrumbs-bottom-to-text-multiline);
-        --spectrum-breadcrumbs-text-spacing-block-between-multiline:var(--spectrum-breadcrumbs-top-text-to-bottom-text);
-        --spectrum-breadcrumbs-icon-spacing-block-start-multiline:var(--spectrum-breadcrumbs-top-to-separator-icon-multiline);
-        --spectrum-breadcrumbs-icon-spacing-block-between-multiline:var(--spectrum-breadcrumbs-separator-icon-to-bottom-text-multiline);
-        --spectrum-breadcrumbs-inline-start:var(--spectrum-breadcrumbs-start-edge-to-text);
-        --spectrum-breadcrumbs-inline-end:var(--spectrum-breadcrumbs-end-edge-to-text);
-        --spectrum-breadcrumbs-action-button-spacing-inline:var(--spectrum-breadcrumbs-truncated-menu-to-separator-icon);
-        --spectrum-breadcrumbs-action-button-spacing-block:var(--spectrum-breadcrumbs-top-to-truncated-menu);
-        --spectrum-breadcrumbs-action-button-spacing-block-compact:var(--spectrum-breadcrumbs-top-to-truncated-menu-compact);
-
-        --spectrum-breadcrumbs-action-button-spacing-inline-start:var(--spectrum-breadcrumbs-start-edge-to-truncated-menu);
-
-        --spectrum-breadcrumbs-action-button-spacing-block-multiline:var(--spectrum-breadcrumbs-top-to-truncated-menu-compact);
-        --spectrum-breadcrumbs-action-button-spacing-block-between-multiline:var(--spectrum-breadcrumbs-truncated-menu-to-bottom-text);
-        --spectrum-breadcrumbs-focus-indicator-thickness:var(--spectrum-focus-indicator-thickness);
-        --spectrum-breadcrumbs-focus-indicator-gap:var(--spectrum-focus-indicator-gap);
-        --spectrum-breadcrumbs-item-link-border-radius:var(--spectrum-corner-radius-100);
-        --spectrum-breadcrumbs-text-color:var(--spectrum-neutral-subdued-content-color-default);
-        --spectrum-breadcrumbs-text-color-current:var(--spectrum-neutral-content-color-default);
-        --spectrum-breadcrumbs-text-color-disabled:var(--spectrum-disabled-content-color);
-        --spectrum-breadcrumbs-separator-color:var(--spectrum-neutral-content-color-default);
-        --spectrum-breadcrumbs-action-button-color:var(--spectrum-neutral-subdued-content-color-default);
-        --spectrum-breadcrumbs-action-button-color-disabled:var(--spectrum-disabled-content-color);
-
-        --spectrum-breadcrumbs-focus-indicator-color:var(--spectrum-focus-indicator-color);
-    }
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Breadcrumbs {
+	--spectrum-breadcrumbs-block-size: var(--system-spectrum-breadcrumbs-block-size);
+	--spectrum-breadcrumbs-block-size-compact: var(--system-spectrum-breadcrumbs-block-size-compact);
+	--spectrum-breadcrumbs-block-size-multiline: var(--system-spectrum-breadcrumbs-block-size-multiline);
+	--spectrum-breadcrumbs-line-height: var(--system-spectrum-breadcrumbs-line-height);
+	--spectrum-breadcrumbs-font-size: var(--system-spectrum-breadcrumbs-font-size);
+	--spectrum-breadcrumbs-font-family: var(--system-spectrum-breadcrumbs-font-family);
+	--spectrum-breadcrumbs-font-weight: var(--system-spectrum-breadcrumbs-font-weight);
+	--spectrum-breadcrumbs-font-size-current: var(--system-spectrum-breadcrumbs-font-size-current);
+	--spectrum-breadcrumbs-font-family-current: var(--system-spectrum-breadcrumbs-font-family-current);
+	--spectrum-breadcrumbs-font-weight-current: var(--system-spectrum-breadcrumbs-font-weight-current);
+	--spectrum-breadcrumbs-font-size-compact: var(--system-spectrum-breadcrumbs-font-size-compact);
+	--spectrum-breadcrumbs-font-family-compact: var(--system-spectrum-breadcrumbs-font-family-compact);
+	--spectrum-breadcrumbs-font-weight-compact: var(--system-spectrum-breadcrumbs-font-weight-compact);
+	--spectrum-breadcrumbs-font-size-compact-current: var(--system-spectrum-breadcrumbs-font-size-compact-current);
+	--spectrum-breadcrumbs-font-family-compact-current: var(--system-spectrum-breadcrumbs-font-family-compact-current);
+	--spectrum-breadcrumbs-font-weight-compact-current: var(--system-spectrum-breadcrumbs-font-weight-compact-current);
+	--spectrum-breadcrumbs-font-size-multiline: var(--system-spectrum-breadcrumbs-font-size-multiline);
+	--spectrum-breadcrumbs-font-family-multiline: var(--system-spectrum-breadcrumbs-font-family-multiline);
+	--spectrum-breadcrumbs-font-weight-multiline: var(--system-spectrum-breadcrumbs-font-weight-multiline);
+	--spectrum-breadcrumbs-font-size-multiline-current: var(--system-spectrum-breadcrumbs-font-size-multiline-current);
+	--spectrum-breadcrumbs-font-family-multiline-current: var(--system-spectrum-breadcrumbs-font-family-multiline-current);
+	--spectrum-breadcrumbs-font-weight-multiline-current: var(--system-spectrum-breadcrumbs-font-weight-multiline-current);
+	--spectrum-breadcrumbs-text-decoration-thickness: var(--system-spectrum-breadcrumbs-text-decoration-thickness);
+	--spectrum-breadcrumbs-text-decoration-gap: var(--system-spectrum-breadcrumbs-text-decoration-gap);
+	--spectrum-breadcrumbs-separator-spacing-inline: var(--system-spectrum-breadcrumbs-separator-spacing-inline);
+	--spectrum-breadcrumbs-text-spacing-block-start: var(--system-spectrum-breadcrumbs-text-spacing-block-start);
+	--spectrum-breadcrumbs-text-spacing-block-end: var(--system-spectrum-breadcrumbs-text-spacing-block-end);
+	--spectrum-breadcrumbs-icon-spacing-block: var(--system-spectrum-breadcrumbs-icon-spacing-block);
+	--spectrum-breadcrumbs-text-spacing-block-start-compact: var(--system-spectrum-breadcrumbs-text-spacing-block-start-compact);
+	--spectrum-breadcrumbs-text-spacing-block-end-compact: var(--system-spectrum-breadcrumbs-text-spacing-block-end-compact);
+	--spectrum-breadcrumbs-icon-spacing-block-compact: var(--system-spectrum-breadcrumbs-icon-spacing-block-compact);
+	--spectrum-breadcrumbs-text-spacing-block-start-multiline: var(--system-spectrum-breadcrumbs-text-spacing-block-start-multiline);
+	--spectrum-breadcrumbs-text-spacing-block-end-multiline: var(--system-spectrum-breadcrumbs-text-spacing-block-end-multiline);
+	--spectrum-breadcrumbs-text-spacing-block-between-multiline: var(--system-spectrum-breadcrumbs-text-spacing-block-between-multiline);
+	--spectrum-breadcrumbs-icon-spacing-block-start-multiline: var(--system-spectrum-breadcrumbs-icon-spacing-block-start-multiline);
+	--spectrum-breadcrumbs-icon-spacing-block-between-multiline: var(--system-spectrum-breadcrumbs-icon-spacing-block-between-multiline);
+	--spectrum-breadcrumbs-inline-start: var(--system-spectrum-breadcrumbs-inline-start);
+	--spectrum-breadcrumbs-inline-end: var(--system-spectrum-breadcrumbs-inline-end);
+	--spectrum-breadcrumbs-action-button-spacing-inline: var(--system-spectrum-breadcrumbs-action-button-spacing-inline);
+	--spectrum-breadcrumbs-action-button-spacing-block: var(--system-spectrum-breadcrumbs-action-button-spacing-block);
+	--spectrum-breadcrumbs-action-button-spacing-block-compact: var(--system-spectrum-breadcrumbs-action-button-spacing-block-compact);
+	--spectrum-breadcrumbs-action-button-spacing-inline-start: var(--system-spectrum-breadcrumbs-action-button-spacing-inline-start);
+	--spectrum-breadcrumbs-action-button-spacing-block-multiline: var(--system-spectrum-breadcrumbs-action-button-spacing-block-multiline);
+	--spectrum-breadcrumbs-action-button-spacing-block-between-multiline: var(--system-spectrum-breadcrumbs-action-button-spacing-block-between-multiline);
+	--spectrum-breadcrumbs-focus-indicator-thickness: var(--system-spectrum-breadcrumbs-focus-indicator-thickness);
+	--spectrum-breadcrumbs-focus-indicator-gap: var(--system-spectrum-breadcrumbs-focus-indicator-gap);
+	--spectrum-breadcrumbs-item-link-border-radius: var(--system-spectrum-breadcrumbs-item-link-border-radius);
+	--spectrum-breadcrumbs-text-color: var(--system-spectrum-breadcrumbs-text-color);
+	--spectrum-breadcrumbs-text-color-current: var(--system-spectrum-breadcrumbs-text-color-current);
+	--spectrum-breadcrumbs-text-color-disabled: var(--system-spectrum-breadcrumbs-text-color-disabled);
+	--spectrum-breadcrumbs-separator-color: var(--system-spectrum-breadcrumbs-separator-color);
+	--spectrum-breadcrumbs-action-button-color: var(--system-spectrum-breadcrumbs-action-button-color);
+	--spectrum-breadcrumbs-action-button-color-disabled: var(--system-spectrum-breadcrumbs-action-button-color-disabled);
+	--spectrum-breadcrumbs-focus-indicator-color: var(--system-spectrum-breadcrumbs-focus-indicator-color);
+}

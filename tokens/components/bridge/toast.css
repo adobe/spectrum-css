@@ -9,41 +9,31 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Toast{
-		--spectrum-toast-background-color-default:var(--spectrum-neutral-subdued-background-color-default);
-		--spectrum-toast-font-weight:var(--spectrum-regular-font-weight);
-		--spectrum-toast-font-size:var(--spectrum-font-size-100);
-		--spectrum-toast-corner-radius:var(--spectrum-corner-radius-100);
-		--spectrum-toast-block-size:var(--spectrum-toast-height);
-		--spectrum-toast-max-inline-size:var(--spectrum-toast-maximum-width);
-		--spectrum-toast-border-width:var(--spectrum-border-width-100);
-
-		--spectrum-toast-line-height:var(--spectrum-line-height-100);
-		--spectrum-toast-line-height-cjk:var(--spectrum-cjk-line-height-100);
-		--spectrum-toast-spacing-icon-to-text:var(--spectrum-text-to-visual-100);
-
-		--spectrum-toast-spacing-start-edge-to-text-and-icon:var(--spectrum-spacing-300);
-		--spectrum-toast-spacing-text-and-action-button-to-divider:var(--spectrum-spacing-300);
-
-		--spectrum-toast-spacing-top-edge-to-divider:var(--spectrum-spacing-100);
-		--spectrum-toast-spacing-bottom-edge-to-divider:var(--spectrum-spacing-100);
-
-		--spectrum-toast-spacing-top-edge-to-icon:var(--spectrum-toast-top-to-workflow-icon);
-
-		--spectrum-toast-spacing-text-to-action-button-horizontal:var(--spectrum-spacing-300);
-		--spectrum-toast-spacing-close-button:var(--spectrum-spacing-100);
-
-		--spectrum-toast-spacing-block-start:var(--spectrum-spacing-100);
-		--spectrum-toast-spacing-block-end:var(--spectrum-spacing-100);
-
-		--spectrum-toast-spacing-top-edge-to-text:var(--spectrum-toast-top-to-text);
-		--spectrum-toast-spacing-bottom-edge-to-text:var(--spectrum-toast-bottom-to-text);
-		--spectrum-toast-negative-background-color-default:var(--spectrum-negative-background-color-default);
-		--spectrum-toast-positive-background-color-default:var(--spectrum-positive-background-color-default);
-		--spectrum-toast-informative-background-color-default:var(--spectrum-informative-background-color-default);
-
-		--spectrum-toast-text-and-icon-color:var(--spectrum-white);
-
-		--spectrum-toast-divider-color:var(--spectrum-transparent-white-300);
-	}
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Toast {
+	--spectrum-toast-background-color-default: var(--system-spectrum-toast-background-color-default);
+	--spectrum-toast-font-weight: var(--system-spectrum-toast-font-weight);
+	--spectrum-toast-font-size: var(--system-spectrum-toast-font-size);
+	--spectrum-toast-corner-radius: var(--system-spectrum-toast-corner-radius);
+	--spectrum-toast-block-size: var(--system-spectrum-toast-block-size);
+	--spectrum-toast-max-inline-size: var(--system-spectrum-toast-max-inline-size);
+	--spectrum-toast-border-width: var(--system-spectrum-toast-border-width);
+	--spectrum-toast-line-height: var(--system-spectrum-toast-line-height);
+	--spectrum-toast-line-height-cjk: var(--system-spectrum-toast-line-height-cjk);
+	--spectrum-toast-spacing-icon-to-text: var(--system-spectrum-toast-spacing-icon-to-text);
+	--spectrum-toast-spacing-start-edge-to-text-and-icon: var(--system-spectrum-toast-spacing-start-edge-to-text-and-icon);
+	--spectrum-toast-spacing-text-and-action-button-to-divider: var(--system-spectrum-toast-spacing-text-and-action-button-to-divider);
+	--spectrum-toast-spacing-top-edge-to-divider: var(--system-spectrum-toast-spacing-top-edge-to-divider);
+	--spectrum-toast-spacing-bottom-edge-to-divider: var(--system-spectrum-toast-spacing-bottom-edge-to-divider);
+	--spectrum-toast-spacing-top-edge-to-icon: var(--system-spectrum-toast-spacing-top-edge-to-icon);
+	--spectrum-toast-spacing-text-to-action-button-horizontal: var(--system-spectrum-toast-spacing-text-to-action-button-horizontal);
+	--spectrum-toast-spacing-close-button: var(--system-spectrum-toast-spacing-close-button);
+	--spectrum-toast-spacing-block-start: var(--system-spectrum-toast-spacing-block-start);
+	--spectrum-toast-spacing-block-end: var(--system-spectrum-toast-spacing-block-end);
+	--spectrum-toast-spacing-top-edge-to-text: var(--system-spectrum-toast-spacing-top-edge-to-text);
+	--spectrum-toast-spacing-bottom-edge-to-text: var(--system-spectrum-toast-spacing-bottom-edge-to-text);
+	--spectrum-toast-negative-background-color-default: var(--system-spectrum-toast-negative-background-color-default);
+	--spectrum-toast-positive-background-color-default: var(--system-spectrum-toast-positive-background-color-default);
+	--spectrum-toast-informative-background-color-default: var(--system-spectrum-toast-informative-background-color-default);
+	--spectrum-toast-text-and-icon-color: var(--system-spectrum-toast-text-and-icon-color);
+	--spectrum-toast-divider-color: var(--system-spectrum-toast-divider-color);
+}

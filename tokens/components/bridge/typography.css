@@ -10,158 +10,148 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum{
-		--spectrum-font-family-ar:myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
-		--spectrum-font-family-he:myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+.spectrum {
+	--spectrum-font-family-ar: var(--system-spectrum-spectrum-font-family-ar);
+	--spectrum-font-family-he: var(--system-spectrum-spectrum-font-family-he);
+	--spectrum-font-family: var(--system-spectrum-spectrum-font-family);
+	--spectrum-font-style: var(--system-spectrum-spectrum-font-style);
+	--spectrum-font-size: var(--system-spectrum-spectrum-font-size);
+}
 
-		--spectrum-font-family:var(--spectrum-sans-font-family-stack);
-		--spectrum-font-style:var(--spectrum-default-font-style);
-		--spectrum-font-size:var(--spectrum-font-size-100);
-	}
+.spectrum-Heading {
+	--spectrum-heading-sans-serif-font-family: var(--system-spectrum-heading-sans-serif-font-family);
+	--spectrum-heading-serif-font-family: var(--system-spectrum-heading-serif-font-family);
+	--spectrum-heading-cjk-font-family: var(--system-spectrum-heading-cjk-font-family);
+	--spectrum-heading-cjk-letter-spacing: var(--system-spectrum-heading-cjk-letter-spacing);
+	--spectrum-heading-font-color: var(--system-spectrum-heading-font-color);
+	--spectrum-heading-margin-start: var(--system-spectrum-heading-margin-start);
+	--spectrum-heading-margin-end: var(--system-spectrum-heading-margin-end);
+}
 
-.spectrum-Heading{
-		--spectrum-heading-sans-serif-font-family:var(--spectrum-sans-font-family-stack);
-		--spectrum-heading-serif-font-family:var(--spectrum-serif-font-family-stack);
-		--spectrum-heading-cjk-font-family:var(--spectrum-cjk-font-family-stack);
+.spectrum-Heading--sizeXXS {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexxs-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexxs-cjk-font-size);
+}
 
-		--spectrum-heading-cjk-letter-spacing:var(--spectrum-cjk-letter-spacing);
+.spectrum-Heading--sizeXS {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexs-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexs-cjk-font-size);
+}
 
-		--spectrum-heading-font-color:var(--spectrum-heading-color);
+.spectrum-Heading--sizeS {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizes-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizes-cjk-font-size);
+}
 
-		--spectrum-heading-margin-start:calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size))*var(--spectrum-heading-margin-top-multiplier));
-		--spectrum-heading-margin-end:calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size))*var(--spectrum-heading-margin-bottom-multiplier));
-	}
+.spectrum-Heading--sizeM {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizem-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizem-cjk-font-size);
+}
 
-.spectrum-Heading--sizeXXS{
-		--spectrum-heading-font-size:var(--spectrum-heading-size-xxs);
-		--spectrum-heading-cjk-font-size:var(--spectrum-heading-cjk-size-xxs);
-	}
+.spectrum-Heading--sizeL {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizel-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizel-cjk-font-size);
+}
 
-.spectrum-Heading--sizeXS{
-		--spectrum-heading-font-size:var(--spectrum-heading-size-xs);
-		--spectrum-heading-cjk-font-size:var(--spectrum-heading-cjk-size-xs);
-	}
+.spectrum-Heading--sizeXL {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexl-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexl-cjk-font-size);
+}
 
-.spectrum-Heading--sizeS{
-		--spectrum-heading-font-size:var(--spectrum-heading-size-s);
-		--spectrum-heading-cjk-font-size:var(--spectrum-heading-cjk-size-s);
-	}
+.spectrum-Heading--sizeXXL {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexxl-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexxl-cjk-font-size);
+}
 
-.spectrum-Heading--sizeM{
-		--spectrum-heading-font-size:var(--spectrum-heading-size-m);
-		--spectrum-heading-cjk-font-size:var(--spectrum-heading-cjk-size-m);
-	}
+.spectrum-Heading--sizeXXXL {
+	--spectrum-heading-font-size: var(--system-spectrum-heading-sizexxxl-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-spectrum-heading-sizexxxl-cjk-font-size);
+}
 
-.spectrum-Heading--sizeL{
-		--spectrum-heading-font-size:var(--spectrum-heading-size-l);
-		--spectrum-heading-cjk-font-size:var(--spectrum-heading-cjk-size-l);
-	}
+.spectrum-Body {
+	--spectrum-body-sans-serif-font-family: var(--system-spectrum-body-sans-serif-font-family);
+	--spectrum-body-serif-font-family: var(--system-spectrum-body-serif-font-family);
+	--spectrum-body-cjk-font-family: var(--system-spectrum-body-cjk-font-family);
+	--spectrum-body-cjk-letter-spacing: var(--system-spectrum-body-cjk-letter-spacing);
+	--spectrum-body-margin: var(--system-spectrum-body-margin);
+	--spectrum-body-font-color: var(--system-spectrum-body-font-color);
+}
 
-.spectrum-Heading--sizeXL{
-		--spectrum-heading-font-size:var(--spectrum-heading-size-xl);
-		--spectrum-heading-cjk-font-size:var(--spectrum-heading-cjk-size-xl);
-	}
+.spectrum-Body--sizeXS {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizexs-font-size);
+}
 
-.spectrum-Heading--sizeXXL{
-		--spectrum-heading-font-size:var(--spectrum-heading-size-xxl);
-		--spectrum-heading-cjk-font-size:var(--spectrum-heading-cjk-size-xxl);
-	}
+.spectrum-Body--sizeS {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizes-font-size);
+}
 
-.spectrum-Heading--sizeXXXL{
-		--spectrum-heading-font-size:var(--spectrum-heading-size-xxxl);
-		--spectrum-heading-cjk-font-size:var(--spectrum-heading-cjk-size-xxxl);
-	}
+.spectrum-Body--sizeM {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizem-font-size);
+}
 
-.spectrum-Body{
-		--spectrum-body-sans-serif-font-family:var(--spectrum-sans-font-family-stack);
-		--spectrum-body-serif-font-family:var(--spectrum-serif-font-family-stack);
-		--spectrum-body-cjk-font-family:var(--spectrum-cjk-font-family-stack);
+.spectrum-Body--sizeL {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizel-font-size);
+}
 
-		--spectrum-body-cjk-letter-spacing:var(--spectrum-cjk-letter-spacing);
+.spectrum-Body--sizeXL {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizexl-font-size);
+}
 
-		--spectrum-body-margin:calc(var(--mod-body-font-size, var(--spectrum-body-font-size))*var(--spectrum-body-margin-multiplier));
+.spectrum-Body--sizeXXL {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizexxl-font-size);
+}
 
-		--spectrum-body-font-color:var(--spectrum-body-color);
-	}
+.spectrum-Body--sizeXXXL {
+	--spectrum-body-font-size: var(--system-spectrum-body-sizexxxl-font-size);
+}
 
-.spectrum-Body--sizeXS{
-		--spectrum-body-font-size:var(--spectrum-body-size-xs);
-	}
+.spectrum-Detail {
+	--spectrum-detail-sans-serif-font-family: var(--system-spectrum-detail-sans-serif-font-family);
+	--spectrum-detail-serif-font-family: var(--system-spectrum-detail-serif-font-family);
+	--spectrum-detail-cjk-font-family: var(--system-spectrum-detail-cjk-font-family);
+	--spectrum-detail-margin-start: var(--system-spectrum-detail-margin-start);
+	--spectrum-detail-margin-end: var(--system-spectrum-detail-margin-end);
+	--spectrum-detail-font-color: var(--system-spectrum-detail-font-color);
+}
 
-.spectrum-Body--sizeS{
-		--spectrum-body-font-size:var(--spectrum-body-size-s);
-	}
+.spectrum-Detail--sizeS {
+	--spectrum-detail-font-size: var(--system-spectrum-detail-sizes-font-size);
+}
 
-.spectrum-Body--sizeM{
-		--spectrum-body-font-size:var(--spectrum-body-size-m);
-	}
+.spectrum-Detail--sizeM {
+	--spectrum-detail-font-size: var(--system-spectrum-detail-sizem-font-size);
+}
 
-.spectrum-Body--sizeL{
-		--spectrum-body-font-size:var(--spectrum-body-size-l);
-	}
+.spectrum-Detail--sizeL {
+	--spectrum-detail-font-size: var(--system-spectrum-detail-sizel-font-size);
+}
 
-.spectrum-Body--sizeXL{
-		--spectrum-body-font-size:var(--spectrum-body-size-xl);
-	}
+.spectrum-Detail--sizeXL {
+	--spectrum-detail-font-size: var(--system-spectrum-detail-sizexl-font-size);
+}
 
-.spectrum-Body--sizeXXL{
-		--spectrum-body-font-size:var(--spectrum-body-size-xxl);
-	}
+.spectrum-Code {
+	--spectrum-code-font-family: var(--system-spectrum-code-font-family);
+	--spectrum-code-cjk-letter-spacing: var(--system-spectrum-code-cjk-letter-spacing);
+	--spectrum-code-font-color: var(--system-spectrum-code-font-color);
+}
 
-.spectrum-Body--sizeXXXL{
-		--spectrum-body-font-size:var(--spectrum-body-size-xxxl);
-	}
+.spectrum-Code--sizeXS {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizexs-font-size);
+}
 
-.spectrum-Detail{
-		--spectrum-detail-sans-serif-font-family:var(--spectrum-sans-font-family-stack);
-		--spectrum-detail-serif-font-family:var(--spectrum-serif-font-family-stack);
-		--spectrum-detail-cjk-font-family:var(--spectrum-cjk-font-family-stack);
+.spectrum-Code--sizeS {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizes-font-size);
+}
 
-		--spectrum-detail-margin-start:calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size))*var(--spectrum-detail-margin-top-multiplier));
-		--spectrum-detail-margin-end:calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size))*var(--spectrum-detail-margin-bottom-multiplier));
+.spectrum-Code--sizeM {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizem-font-size);
+}
 
-		--spectrum-detail-font-color:var(--spectrum-detail-color);
-	}
+.spectrum-Code--sizeL {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizel-font-size);
+}
 
-.spectrum-Detail--sizeS{
-		--spectrum-detail-font-size:var(--spectrum-detail-size-s);
-	}
-
-.spectrum-Detail--sizeM{
-		--spectrum-detail-font-size:var(--spectrum-detail-size-m);
-	}
-
-.spectrum-Detail--sizeL{
-		--spectrum-detail-font-size:var(--spectrum-detail-size-l);
-	}
-
-.spectrum-Detail--sizeXL{
-		--spectrum-detail-font-size:var(--spectrum-detail-size-xl);
-	}
-
-.spectrum-Code{
-		--spectrum-code-font-family:var(--spectrum-code-font-family-stack);
-		--spectrum-code-cjk-letter-spacing:var(--spectrum-cjk-letter-spacing);
-		--spectrum-code-font-color:var(--spectrum-code-color);
-	}
-
-.spectrum-Code--sizeXS{
-		--spectrum-code-font-size:var(--spectrum-code-size-xs);
-	}
-
-.spectrum-Code--sizeS{
-		--spectrum-code-font-size:var(--spectrum-code-size-s);
-	}
-
-.spectrum-Code--sizeM{
-		--spectrum-code-font-size:var(--spectrum-code-size-m);
-	}
-
-.spectrum-Code--sizeL{
-		--spectrum-code-font-size:var(--spectrum-code-size-l);
-	}
-
-.spectrum-Code--sizeXL{
-		--spectrum-code-font-size:var(--spectrum-code-size-xl);
-	}
-/*# sourceMappingURL=index-theme.css.map */
+.spectrum-Code--sizeXL {
+	--spectrum-code-font-size: var(--system-spectrum-code-sizexl-font-size);
+}

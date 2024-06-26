@@ -10,63 +10,39 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-FieldLabel{
-        --spectrum-fieldlabel-min-height:var(--spectrum-component-height-75);
-        --spectrum-fieldlabel-color:var(--spectrum-neutral-subdued-content-color-default);
-
-        --spectrum-field-label-text-to-asterisk:var(--spectrum-field-label-text-to-asterisk-medium);
-
-        --spectrum-fieldlabel-font-weight:var(--spectrum-regular-font-weight);
-        --spectrum-fieldlabel-line-height:var(--spectrum-line-height-100);
-        --spectrum-fieldlabel-line-height-cjk:var(--spectrum-cjk-line-height-100);
-    }
-
-.spectrum-FieldLabel--sizeS{
-        --spectrum-fieldlabel-min-height:var(--spectrum-component-height-75);
-        --spectrum-fieldlabel-top-to-text:var(--spectrum-component-top-to-text-75);
-        --spectrum-fieldlabel-bottom-to-text:var(--spectrum-component-bottom-to-text-75);
-        --spectrum-fieldlabel-font-size:var(--spectrum-font-size-75);
-
-        --spectrum-fieldlabel-side-margin-block-start:var(--spectrum-field-label-top-margin-small);
-        --spectrum-fieldlabel-side-padding-right:var(--spectrum-spacing-100);
-
-        --spectrum-field-label-text-to-asterisk:var(--spectrum-field-label-text-to-asterisk-small);
-    }
-
-.spectrum-FieldLabel--sizeM{
-        --spectrum-fieldlabel-min-height:var(--spectrum-component-height-75);
-        --spectrum-fieldlabel-top-to-text:var(--spectrum-component-top-to-text-75);
-        --spectrum-fieldlabel-bottom-to-text:var(--spectrum-component-bottom-to-text-75);
-        --spectrum-fieldlabel-font-size:var(--spectrum-font-size-75);
-
-        --spectrum-fieldlabel-side-margin-block-start:var(--spectrum-field-label-top-margin-medium);
-        --spectrum-fieldlabel-side-padding-right:var(--spectrum-spacing-200);
-
-        --spectrum-field-label-text-to-asterisk:var(--spectrum-field-label-text-to-asterisk-medium);
-    }
-
-.spectrum-FieldLabel--sizeL{
-        --spectrum-fieldlabel-min-height:var(--spectrum-component-height-100);
-        --spectrum-fieldlabel-top-to-text:var(--spectrum-component-top-to-text-100);
-        --spectrum-fieldlabel-bottom-to-text:var(--spectrum-component-bottom-to-text-100);
-        --spectrum-fieldlabel-font-size:var(--spectrum-font-size-100);
-
-        --spectrum-fieldlabel-side-margin-block-start:var(--spectrum-field-label-top-margin-large);
-        --spectrum-fieldlabel-side-padding-right:var(--spectrum-spacing-200);
-
-        --spectrum-field-label-text-to-asterisk:var(--spectrum-field-label-text-to-asterisk-large);
-    }
-
-.spectrum-FieldLabel--sizeXL{
-        --spectrum-fieldlabel-min-height:var(--spectrum-component-height-200);
-        --spectrum-fieldlabel-top-to-text:var(--spectrum-component-top-to-text-200);
-        --spectrum-fieldlabel-bottom-to-text:var(--spectrum-component-bottom-to-text-200);
-        --spectrum-fieldlabel-font-size:var(--spectrum-font-size-200);
-
-        --spectrum-fieldlabel-side-margin-block-start:var(--spectrum-field-label-top-margin-extra-large);
-        --spectrum-fieldlabel-side-padding-right:var(--spectrum-spacing-200);
-
-        --spectrum-field-label-text-to-asterisk:var(--spectrum-field-label-text-to-asterisk-extra-large);
-    }
-
-/*# sourceMappingURL=legacy.css.map */
+.spectrum-legacy {
+	--system-spectrum-fieldlabel-min-height: var(--spectrum-component-height-75);
+	--system-spectrum-fieldlabel-color: var(--spectrum-neutral-subdued-content-color-default);
+	--system-spectrum-fieldlabel-spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-medium);
+	--system-spectrum-fieldlabel-font-weight: var(--spectrum-regular-font-weight);
+	--system-spectrum-fieldlabel-line-height: var(--spectrum-line-height-100);
+	--system-spectrum-fieldlabel-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-spectrum-fieldlabel-sizes-min-height: var(--spectrum-component-height-75);
+	--system-spectrum-fieldlabel-sizes-top-to-text: var(--spectrum-component-top-to-text-75);
+	--system-spectrum-fieldlabel-sizes-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	--system-spectrum-fieldlabel-sizes-font-size: var(--spectrum-font-size-75);
+	--system-spectrum-fieldlabel-sizes-side-margin-block-start: var(--spectrum-field-label-top-margin-small);
+	--system-spectrum-fieldlabel-sizes-side-padding-right: var(--spectrum-spacing-100);
+	--system-spectrum-fieldlabel-sizes-spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-small);
+	--system-spectrum-fieldlabel-sizem-min-height: var(--spectrum-component-height-75);
+	--system-spectrum-fieldlabel-sizem-top-to-text: var(--spectrum-component-top-to-text-75);
+	--system-spectrum-fieldlabel-sizem-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	--system-spectrum-fieldlabel-sizem-font-size: var(--spectrum-font-size-75);
+	--system-spectrum-fieldlabel-sizem-side-margin-block-start: var(--spectrum-field-label-top-margin-medium);
+	--system-spectrum-fieldlabel-sizem-side-padding-right: var(--spectrum-spacing-200);
+	--system-spectrum-fieldlabel-sizem-spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-medium);
+	--system-spectrum-fieldlabel-sizel-min-height: var(--spectrum-component-height-100);
+	--system-spectrum-fieldlabel-sizel-top-to-text: var(--spectrum-component-top-to-text-100);
+	--system-spectrum-fieldlabel-sizel-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+	--system-spectrum-fieldlabel-sizel-font-size: var(--spectrum-font-size-100);
+	--system-spectrum-fieldlabel-sizel-side-margin-block-start: var(--spectrum-field-label-top-margin-large);
+	--system-spectrum-fieldlabel-sizel-side-padding-right: var(--spectrum-spacing-200);
+	--system-spectrum-fieldlabel-sizel-spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-large);
+	--system-spectrum-fieldlabel-sizexl-min-height: var(--spectrum-component-height-200);
+	--system-spectrum-fieldlabel-sizexl-top-to-text: var(--spectrum-component-top-to-text-200);
+	--system-spectrum-fieldlabel-sizexl-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+	--system-spectrum-fieldlabel-sizexl-font-size: var(--spectrum-font-size-200);
+	--system-spectrum-fieldlabel-sizexl-side-margin-block-start: var(--spectrum-field-label-top-margin-extra-large);
+	--system-spectrum-fieldlabel-sizexl-side-padding-right: var(--spectrum-spacing-200);
+	--system-spectrum-fieldlabel-sizexl-spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-extra-large);
+}
