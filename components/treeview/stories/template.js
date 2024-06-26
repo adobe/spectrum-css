@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators/utilities.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";

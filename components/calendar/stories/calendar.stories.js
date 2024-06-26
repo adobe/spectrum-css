@@ -122,6 +122,20 @@ AbbreviatedWeekdays.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+export const RangeSelection = Template.bind({});
+RangeSelection.args = {
+	month: months[6],
+	selectedDay: new Date(2023, 6, 3),
+	year: 2023,
+	lastDay: new Date(2023, 6, 7),
+	useDOWAbbrev: true,
+	padded: true,
+};
+RangeSelection.tags = ["docs-only"];
+RangeSelection.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 export const Focused = Template.bind({});
 Focused.args = {
 	month: undefined,
@@ -134,12 +148,16 @@ Focused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-// ********* VRT ONLY ********* //
 export const Disabled = Template.bind({});
-Disabled.tags = ["vrt-only"];
+Disabled.tags = ["docs-only"];
 Disabled.args = {
 	isDisabled: true
 };
+Focused.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
 
 export const WithForcedColors = Default.bind({});
 WithForcedColors.tags = ["vrt-only"];
