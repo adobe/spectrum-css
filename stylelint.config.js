@@ -73,7 +73,7 @@ module.exports = {
 			},
 		],
 		/** @todo: would like to use "modern" eventually */
-		"color-function-notation": null,
+		"color-function-notation": ["modern", { "ignore": ["with-var-inside"] }],
 		"import-notation": null,
 		"property-no-unknown": [
 			true,

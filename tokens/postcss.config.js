@@ -1,5 +1,5 @@
 /*!
- * Copyright 2023 Adobe. All rights reserved.
+ * Copyright 2024 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -10,6 +10,8 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+const { join } = require("path");
 
 module.exports = () => ({
 	plugins: {
@@ -30,6 +32,15 @@ module.exports = () => ({
 					normalizeWhitespace: false,
 				},
 			],
+		},
+		stylelint: {
+			cache: true,
+			// Passing the config path saves a little time b/c it doesn't have to find it
+			configFile: join(__dirname, "..", "stylelint.config.js"),
+			quiet: true,
+			fix: true,
+			allowEmptyInput: true,
+			ignorePath: join(__dirname, "..", ".stylelintignore"),
 		},
 		"postcss-licensing": {
 			filename: "../COPYRIGHT",

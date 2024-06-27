@@ -14,7 +14,7 @@
 	:where(.component) {
 		--background-color: purple;
 	}
-	:where(.component.is-selected) {
+	:where(.component.is-selected, .component.is-selected .icon) {
 		--background-color: darkpurple;
 	}
 	:where(.component .icon) {
