@@ -11,18 +11,18 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ColorHandle {
-	--spectrum-colorhandle-size: var(--system-spectrum-colorhandle--size);
-	--spectrum-colorhandle-focused-size: var(--system-spectrum-colorhandle--focused-size);
-	--spectrum-colorhandle-hitarea-size: var(--system-spectrum-colorhandle--hitarea-size);
-	--spectrum-colorhandle-animation-duration: var(--system-spectrum-colorhandle--animation-duration);
-	--spectrum-colorhandle-animation-easing: var(--system-spectrum-colorhandle--animation-easing);
-	--spectrum-colorhandle-outer-border-color: var(--system-spectrum-colorhandle--outer-border-color);
-	--spectrum-colorhandle-outer-border-width: var(--system-spectrum-colorhandle--outer-border-width);
-	--spectrum-colorhandle-inner-border-color: var(--system-spectrum-colorhandle--inner-border-color);
-	--spectrum-colorhandle-inner-border-width: var(--system-spectrum-colorhandle--inner-border-width);
-	--spectrum-colorhandle-border-width: var(--system-spectrum-colorhandle--border-width);
-	--spectrum-colorhandle-border-color: var(--system-spectrum-colorhandle--border-color);
-	--spectrum-colorhandle-border-color-disabled: var(--system-spectrum-colorhandle--border-color-disabled);
-	--spectrum-colorhandle-fill-color-disabled: var(--system-spectrum-colorhandle--fill-color-disabled);
-	--mod-opacity-checkerboard-position: var(--system-spectrum-colorhandle--mod-opacity-checkerboard-position);
+	--spectrum-colorhandle-size: var(--system-spectrum-colorhandle-size);
+	--spectrum-colorhandle-focused-size: var(--system-spectrum-colorhandle-focused-size);
+	--spectrum-colorhandle-hitarea-size: var(--system-spectrum-colorhandle-hitarea-size);
+	--spectrum-colorhandle-animation-duration: var(--system-spectrum-colorhandle-animation-duration);
+	--spectrum-colorhandle-animation-easing: var(--system-spectrum-colorhandle-animation-easing);
+	--spectrum-colorhandle-outer-border-color: var(--system-spectrum-colorhandle-outer-border-color);
+	--spectrum-colorhandle-outer-border-width: var(--system-spectrum-colorhandle-outer-border-width);
+	--spectrum-colorhandle-inner-border-color: var(--system-spectrum-colorhandle-inner-border-color);
+	--spectrum-colorhandle-inner-border-width: var(--system-spectrum-colorhandle-inner-border-width);
+	--spectrum-colorhandle-border-width: var(--system-spectrum-colorhandle-border-width);
+	--spectrum-colorhandle-border-color: var(--system-spectrum-colorhandle-border-color);
+	--spectrum-colorhandle-border-color-disabled: var(--system-spectrum-colorhandle-border-color-disabled);
+	--spectrum-colorhandle-fill-color-disabled: var(--system-spectrum-colorhandle-fill-color-disabled);
+	--mod-opacity-checkerboard-position: var(--system-spectrum-colorhandle-opacity-checkerboard-position);
 }

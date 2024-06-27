@@ -11,13 +11,13 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ColorWheel {
-	--spectrum-colorwheel-width: var(--system-spectrum-colorwheel--width);
-	--spectrum-colorwheel-min-width: var(--system-spectrum-colorwheel--min-width);
-	--spectrum-colorwheel-height: var(--system-spectrum-colorwheel--height);
-	--spectrum-colorwheel-border-color: var(--system-spectrum-colorwheel--border-color);
-	--spectrum-colorwheel-border-width: var(--system-spectrum-colorwheel--border-width);
-	--spectrum-colorwheel-fill-color-disabled: var(--system-spectrum-colorwheel--fill-color-disabled);
-	--spectrum-colorwheel-track-width: var(--system-spectrum-colorwheel--track-width);
-	--spectrum-colorwheel-colorarea-margin: var(--system-spectrum-colorwheel--colorarea-margin);
-	--spectrum-colorwheel-colorhandle-position: var(--system-spectrum-colorwheel--colorhandle-position);
+	--spectrum-colorwheel-width: var(--system-spectrum-colorwheel-width);
+	--spectrum-colorwheel-min-width: var(--system-spectrum-colorwheel-min-width);
+	--spectrum-colorwheel-height: var(--system-spectrum-colorwheel-height);
+	--spectrum-colorwheel-border-color: var(--system-spectrum-colorwheel-border-color);
+	--spectrum-colorwheel-border-width: var(--system-spectrum-colorwheel-border-width);
+	--spectrum-colorwheel-fill-color-disabled: var(--system-spectrum-colorwheel-fill-color-disabled);
+	--spectrum-colorwheel-track-width: var(--system-spectrum-colorwheel-track-width);
+	--spectrum-colorwheel-colorarea-margin: var(--system-spectrum-colorwheel-colorarea-margin);
+	--spectrum-colorwheel-colorhandle-position: var(--system-spectrum-colorwheel-colorhandle-position);
 }

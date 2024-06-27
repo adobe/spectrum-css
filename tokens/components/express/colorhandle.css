@@ -11,18 +11,18 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-express {
-	--system-spectrum-colorhandle--size: var(--spectrum-color-handle-size);
-	--system-spectrum-colorhandle--focused-size: var(--spectrum-color-handle-size-key-focus);
-	--system-spectrum-colorhandle--hitarea-size: var(--spectrum-color-control-track-width);
-	--system-spectrum-colorhandle--animation-duration: var(--spectrum-animation-duration-100);
-	--system-spectrum-colorhandle--animation-easing: ease-in-out;
-	--system-spectrum-colorhandle--outer-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-outer-border-opacity));
-	--system-spectrum-colorhandle--outer-border-width: var(--spectrum-color-handle-outer-border-width);
-	--system-spectrum-colorhandle--inner-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity));
-	--system-spectrum-colorhandle--inner-border-width: var(--spectrum-color-handle-inner-border-width);
-	--system-spectrum-colorhandle--border-width: var(--spectrum-color-handle-border-width);
-	--system-spectrum-colorhandle--border-color: var(--spectrum-white);
-	--system-spectrum-colorhandle--border-color-disabled: var(--spectrum-disabled-content-color);
-	--system-spectrum-colorhandle--fill-color-disabled: var(--spectrum-disabled-background-color);
-	--system-spectrum-colorhandle--mod-opacity-checkerboard-position: 50%;
+	--system-spectrum-colorhandle-size: var(--spectrum-color-handle-size);
+	--system-spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
+	--system-spectrum-colorhandle-hitarea-size: var(--spectrum-color-control-track-width);
+	--system-spectrum-colorhandle-animation-duration: var(--spectrum-animation-duration-100);
+	--system-spectrum-colorhandle-animation-easing: ease-in-out;
+	--system-spectrum-colorhandle-outer-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-outer-border-opacity));
+	--system-spectrum-colorhandle-outer-border-width: var(--spectrum-color-handle-outer-border-width);
+	--system-spectrum-colorhandle-inner-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity));
+	--system-spectrum-colorhandle-inner-border-width: var(--spectrum-color-handle-inner-border-width);
+	--system-spectrum-colorhandle-border-width: var(--spectrum-color-handle-border-width);
+	--system-spectrum-colorhandle-border-color: var(--spectrum-white);
+	--system-spectrum-colorhandle-border-color-disabled: var(--spectrum-disabled-content-color);
+	--system-spectrum-colorhandle-fill-color-disabled: var(--spectrum-disabled-background-color);
+	--system-spectrum-colorhandle-opacity-checkerboard-position: 50%;
 }

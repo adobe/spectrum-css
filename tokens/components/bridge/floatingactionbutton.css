@@ -11,31 +11,31 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-FloatingActionButton {
-	--spectrum-floating-action-button-size: var(--system-spectrum-floatingactionbutton--floating-action-button-size);
-	--spectrum-floating-action-button-icon-size: var(--system-spectrum-floatingactionbutton--floating-action-button-icon-size);
-	--spectrum-floating-action-button-padding: var(--system-spectrum-floatingactionbutton--floating-action-button-padding);
-	--spectrum-floating-action-button-margin: var(--system-spectrum-floatingactionbutton--floating-action-button-margin);
-	--spectrum-floating-action-button-drop-shadow-x: var(--system-spectrum-floatingactionbutton--floating-action-button-drop-shadow-x);
-	--spectrum-floating-action-button-focus-ring-width: var(--system-spectrum-floatingactionbutton--floating-action-button-focus-ring-width);
-	--spectrum-floating-action-button-focus-ring-gap: var(--system-spectrum-floatingactionbutton--floating-action-button-focus-ring-gap);
-	--spectrum-floating-action-button-focus-ring-color: var(--system-spectrum-floatingactionbutton--floating-action-button-focus-ring-color);
-	--spectrum-floating-action-button-background-color: var(--system-spectrum-floatingactionbutton--floating-action-button-background-color);
-	--spectrum-floating-action-button-background-color-hover: var(--system-spectrum-floatingactionbutton--floating-action-button-background-color-hover);
-	--spectrum-floating-action-button-background-color-down: var(--system-spectrum-floatingactionbutton--floating-action-button-background-color-down);
-	--spectrum-floating-action-button-background-color-key-focus: var(--system-spectrum-floatingactionbutton--floating-action-button-background-color-key-focus);
-	--spectrum-floating-action-button-icon-color: var(--system-spectrum-floatingactionbutton--floating-action-button-icon-color);
-	--spectrum-floating-action-button-icon-color-hover: var(--system-spectrum-floatingactionbutton--floating-action-button-icon-color-hover);
-	--spectrum-floating-action-button-icon-color-down: var(--system-spectrum-floatingactionbutton--floating-action-button-icon-color-down);
-	--spectrum-floating-action-button-icon-color-key-focus: var(--system-spectrum-floatingactionbutton--floating-action-button-icon-color-key-focus);
+	--spectrum-floating-action-button-size: var(--system-spectrum-floatingactionbutton-floating-action-button-size);
+	--spectrum-floating-action-button-icon-size: var(--system-spectrum-floatingactionbutton-floating-action-button-icon-size);
+	--spectrum-floating-action-button-padding: var(--system-spectrum-floatingactionbutton-floating-action-button-padding);
+	--spectrum-floating-action-button-margin: var(--system-spectrum-floatingactionbutton-floating-action-button-margin);
+	--spectrum-floating-action-button-drop-shadow-x: var(--system-spectrum-floatingactionbutton-floating-action-button-drop-shadow-x);
+	--spectrum-floating-action-button-focus-ring-width: var(--system-spectrum-floatingactionbutton-floating-action-button-focus-ring-width);
+	--spectrum-floating-action-button-focus-ring-gap: var(--system-spectrum-floatingactionbutton-floating-action-button-focus-ring-gap);
+	--spectrum-floating-action-button-focus-ring-color: var(--system-spectrum-floatingactionbutton-floating-action-button-focus-ring-color);
+	--spectrum-floating-action-button-background-color: var(--system-spectrum-floatingactionbutton-floating-action-button-background-color);
+	--spectrum-floating-action-button-background-color-hover: var(--system-spectrum-floatingactionbutton-floating-action-button-background-color-hover);
+	--spectrum-floating-action-button-background-color-down: var(--system-spectrum-floatingactionbutton-floating-action-button-background-color-down);
+	--spectrum-floating-action-button-background-color-key-focus: var(--system-spectrum-floatingactionbutton-floating-action-button-background-color-key-focus);
+	--spectrum-floating-action-button-icon-color: var(--system-spectrum-floatingactionbutton-floating-action-button-icon-color);
+	--spectrum-floating-action-button-icon-color-hover: var(--system-spectrum-floatingactionbutton-floating-action-button-icon-color-hover);
+	--spectrum-floating-action-button-icon-color-down: var(--system-spectrum-floatingactionbutton-floating-action-button-icon-color-down);
+	--spectrum-floating-action-button-icon-color-key-focus: var(--system-spectrum-floatingactionbutton-floating-action-button-icon-color-key-focus);
 }
 
 .spectrum-FloatingActionButton--secondary {
-	--spectrum-floating-action-button-background-color: var(--system-spectrum-floatingactionbutton--secondary--floating-action-button-background-color);
-	--spectrum-floating-action-button-background-color-hover: var(--system-spectrum-floatingactionbutton--secondary--floating-action-button-background-color-hover);
-	--spectrum-floating-action-button-background-color-down: var(--system-spectrum-floatingactionbutton--secondary--floating-action-button-background-color-down);
-	--spectrum-floating-action-button-background-color-key-focus: var(--system-spectrum-floatingactionbutton--secondary--floating-action-button-background-color-key-focus);
-	--spectrum-floating-action-button-icon-color: var(--system-spectrum-floatingactionbutton--secondary--floating-action-button-icon-color);
-	--spectrum-floating-action-button-icon-color-hover: var(--system-spectrum-floatingactionbutton--secondary--floating-action-button-icon-color-hover);
-	--spectrum-floating-action-button-icon-color-down: var(--system-spectrum-floatingactionbutton--secondary--floating-action-button-icon-color-down);
-	--spectrum-floating-action-button-icon-color-key-focus: var(--system-spectrum-floatingactionbutton--secondary--floating-action-button-icon-color-key-focus);
+	--spectrum-floating-action-button-background-color: var(--system-spectrum-floatingactionbutton-secondary-floating-action-button-background-color);
+	--spectrum-floating-action-button-background-color-hover: var(--system-spectrum-floatingactionbutton-secondary-floating-action-button-background-color-hover);
+	--spectrum-floating-action-button-background-color-down: var(--system-spectrum-floatingactionbutton-secondary-floating-action-button-background-color-down);
+	--spectrum-floating-action-button-background-color-key-focus: var(--system-spectrum-floatingactionbutton-secondary-floating-action-button-background-color-key-focus);
+	--spectrum-floating-action-button-icon-color: var(--system-spectrum-floatingactionbutton-secondary-floating-action-button-icon-color);
+	--spectrum-floating-action-button-icon-color-hover: var(--system-spectrum-floatingactionbutton-secondary-floating-action-button-icon-color-hover);
+	--spectrum-floating-action-button-icon-color-down: var(--system-spectrum-floatingactionbutton-secondary-floating-action-button-icon-color-down);
+	--spectrum-floating-action-button-icon-color-key-focus: var(--system-spectrum-floatingactionbutton-secondary-floating-action-button-icon-color-key-focus);
 }
