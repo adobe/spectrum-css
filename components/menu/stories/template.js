@@ -1,9 +1,9 @@
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { markupWithLabel } from "@spectrum-css/preview/types";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -286,9 +286,12 @@ export const Template = ({
       role=${ifDefined(role)}
       aria-labelledby=${ifDefined(labelledby)}
       aria-disabled=${isDisabled ? "true" : "false"}
-      style=${maxInlineSize ? `max-inline-size: ${maxInlineSize};` : styleMap(customStyles)}
+      style=${styleMap({
+        "max-inline-size": maxInlineSize,
+        ...customStyles
+      })}
     >
-      ${items.map((i, idx) => {
+      ${when(items, () => items.map((i, idx) => {
         if (i.type === "divider")
           return html`${hasDividers ? Divider({
             ...globals,
@@ -326,7 +329,7 @@ export const Template = ({
             size,
             value: singleItemValue || i.value,
           }, context);
-      })}
+      }))}
     </ul>
   `;
 
@@ -334,110 +337,82 @@ export const Template = ({
 	return menuMarkup;
 };
 
+const Sizes = (args, context) => ["s", "m", "l", "xl"].map((size) => markupWithLabel({
+	s: "Small",
+	m: "Medium",
+	l: "Large",
+	xl: "Extra-large",
+}[size], Template({ ...args, size }, context), { size: "s" }), { withTestBorder: true });
 
-const Sizes = (args) => ["s", "m", "l", "xl"].map((size) => html`
-	<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: [
-				{
-					s: "Small",
-					m: "Medium",
-					l: "Large",
-					xl: "Extra-large",
-				}[size]
-			],
-			customClasses: ["chromatic-ignore"],
-		})}
-		<div>
-			${Template({...args, size})}
-		</div>
-	</div>
-`);
-
-const States = (args) => {
-	const { titlePrefix, firstAndLast } = args;
+const States = (args, context) => {
 	let stateData = [
 		{
-			stateTitle: "Default",
+			title: "Default",
 			args: {},
 		},
 		{
-			stateTitle: "Hover",
+			title: "Hover",
 			args: { ...args, isItemHovered: true },
 		},
 		{
-			stateTitle: "Active (Down)",
+			title: "Active (Down)",
 			args: { ...args, isItemActive: true },
 		},
 		{
-			stateTitle: "Focused",
+			title: "Focused",
 			args: { ...args, isItemFocused: true },
 		},
 		{
-			stateTitle: "Disabled",
+			title: "Disabled",
 			args: { ...args, isDisabled: true },
 		}
 	];
 
 	// if testing hover/active/focus feels too heavy handed, we can remove those states
-	if (firstAndLast) {
+	if (args.firstAndLast) {
 		stateData = [stateData[0], stateData[stateData.length - 1]];
 	}
 
-	return stateData.map((stateItem) => html`
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: [`${titlePrefix ? titlePrefix + ", ": ""}${stateItem.stateTitle}`],
-				customClasses: ["chromatic-ignore"],
-			})}
-			<div>
-				${Template({...args, ...stateItem.args})}
-			</div>
-		</div>
-	`);
+	return stateData.map((stateItem) => markupWithLabel(`${args.titlePrefix ? args.titlePrefix + ", ": ""}${stateItem.title}`, Template({...args, ...stateItem.args}, context), { size: "s" }));
 };
 
-const SingleItemSelectedStates = (args) => {
+const SingleItemSelectedStates = (args, context) => {
 	return html`
 			${States({
 				...args,
 				items: [{ label: "Not selected", isSelected: false, ...args.items[0] }],
 				titlePrefix: "Not selected",
 				firstAndLast: true,
-			})}
+			}, context)}
 			${States({
 				...args,
 				items: [{ label: "Selected item", isSelected: true, ...args.items[0] }],
 				titlePrefix: "Selected",
 				firstAndLast: true,
-			})}
+			}, context)}
 	`;
 };
 
-const MultiCheckboxSelectedStates = (args) => {
+const MultiCheckboxSelectedStates = (args, context) => {
 	return html`
 		${States({
 			...args,
 			items: [{ label: "Not selected", isSelected: false, ...args.items[0]}],
 			titlePrefix: "Not Selected",
 			firstAndLast: true,
-		})}
+		}, context)}
 		${States({
 			...args,
 			items: [{ label: "Selected item", isSelected: true, ...args.items[0]}],
 			titlePrefix: "Selected",
 			firstAndLast: true,
-		})}
+		}, context)}
 	`;
 };
 
-const WithValueStates = (args) => {
+const WithValueStates = (args, context) => {
 	const baseValueArgs = {...args, hasValue: true, singleItemValue: "Value"};
-	const valueData = [
+	return [
 		{
 			stateTitle: "With value",
 			args: { ...baseValueArgs },
@@ -454,39 +429,13 @@ const WithValueStates = (args) => {
 			stateTitle: "With value, truncated label",
 			args: { ...baseValueArgs, shouldTruncate: true, maxInlineSize: "195px", items: [{ label: "Truncated label on menu item" }] },
 		},
-	];
-
-	return valueData.map((valueItem) => html`
-		<div>
-		${Typography({
-			semantics: "detail",
-			size: "s",
-			content: [ valueItem.stateTitle ],
-			customClasses: ["chromatic-ignore"],
-		})}
-			<div>
-				${Template({ ...args, ...valueItem.args })}
-			</div>
-		</div>
-	`);
+	].map((valueItem) => markupWithLabel(valueItem.stateTitle, Template({ ...args, ...valueItem.args }, context), { size: "s" }));
 };
 
-export const MenuItemWithVariants = (args, context) => html`
+export const MenuItemStates = (args, context) => html`
   <div style=${styleMap({
-		display: window.isChromatic() ? "none" : undefined,
-	})}>
-    ${Template({
-      iconName: "Share",
-      ...args
-    }, context)}
-  </div>
-  <div style=${styleMap({
-		display: window.isChromatic() ? "flex" : "none",
-    flexDirection: "column",
-    alignItems: "flex-start",
-    gap: "1rem",
-    "--mod-detail-margin-end": ".3rem",
-	})}>
+    "display": window.isChromatic() ? undefined : "none"
+  })}>
     ${[
       {
         sectionTitle: "No selection",
@@ -528,75 +477,43 @@ export const MenuItemWithVariants = (args, context) => html`
         sectionTitle: "Sizes",
         sectionMarkup: Sizes({ ...args, selectionMode: "single", items: [{ label: "With sizing", isSelected: true, iconName: "Share" }] }),
       },
-    ].map((sectionItem) => html`
-      <div class="spectrum-Typography">
-      ${Typography({
-        semantics: "detail",
-        size: "l",
-        content: [sectionItem.sectionTitle],
-        customClasses: ["chromatic-ignore"],
-      })}
-      <div
-        style=${styleMap({
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "1.5rem",
-        })}
-      >
-        ${sectionItem.sectionMarkup}
-      </div>
-    </div>
-    `)}
+    ].map((sectionItem) => markupWithLabel(sectionItem.sectionTitle, sectionItem.sectionMarkup, { withTestBorder: true }))}
+  </div>
+  <div style=${styleMap({
+    "display": window.isChromatic() ? "none" : undefined
+  })}>
+    ${Template(args, context)}
   </div>
 `;
 
-export const MenuWithVariants = (args, context) => html`
-  <div style=${styleMap({
-		display: window.isChromatic() ? "none" : undefined,
+export const Variants = (args, context) => html`
+	<div style=${styleMap({
+		"display": window.isChromatic() ? undefined : "none"
 	})}>
-    ${Template(args, context)}
-  </div>
-  <div style=${styleMap({
-		display: window.isChromatic() ? "flex" : "none",
-    flexDirection: "column",
-    alignItems: "flex-start",
-    gap: "1rem",
-    "--mod-detail-margin-end": ".3rem",
+		${[
+			{
+				stateTitle: "No selection",
+				args: { ...args, selectionMode: "none" },
+			},
+			{
+				stateTitle: "With dividers",
+				args: { ...args, selectionMode: "none", hasDividers: true },
+			},
+			{
+				stateTitle: "Single selection",
+				args: { ...args, selectionMode: "single" },
+			},
+			{
+				stateTitle: "Multi selection",
+				args: { ...args, selectionMode: "multiple" },
+			},
+		].map((item) => html`
+			${markupWithLabel(item.stateTitle, Template({...args, ...item.args }, context), { withTestBorder: true })}
+		`)}
+	</div>
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : undefined
 	})}>
-    ${[
-      {
-        stateTitle: "No selection",
-        args: { ...args, selectionMode: "none" },
-      },
-      {
-        stateTitle: "With dividers",
-        args: { ...args, selectionMode: "none", hasDividers: true },
-      },
-      {
-        stateTitle: "Single selection",
-        args: { ...args, selectionMode: "single" },
-      },
-      {
-        stateTitle: "Multi selection",
-        args: { ...args, selectionMode: "multiple" },
-      },
-    ].map((item) => html`
-<style>
-  /* For this testing preview, this is the heading closest to the component and therefore needs a separate color */
-  .spectrum-Detail { --mod-detail-font-color: var(--spectrum-seafoam-900); }
-</style>
-<div class="spectrum-Typography">
-  ${Typography({
-    semantics: "detail",
-    size: "l",
-    content: [ item.stateTitle ],
-    customClasses: ["chromatic-ignore"],
-  })}
-  <div>
-    ${Template({...args, ...item.args})}
-  </div>
-</div>
-
-    `)}
-  </div>
+		${Template(args, context)}
+	</div>
 `;
