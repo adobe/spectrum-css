@@ -1,84 +1,85 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
 @container style(--system: spectrum) {
-    .spectrum-Thumbnail {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
+	.spectrum-Thumbnail {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
 
-        --spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
-        --spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
+		--spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
+		--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
 
-        /* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
-        --spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
-        --spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
-        --spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
-        --spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
-        --spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
+		/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
+		--spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
+		--spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
+		--spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
+		--spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
+		--spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
 
-        --spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
-        --spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
+		--spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
+		--spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
 
-        --spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-        --spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-        --spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
+		--spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+		--spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+		--spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-        --spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
-    }
+		--spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
+	}
 
-    .spectrum-Thumbnail--size50 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-50);
-    }
+	.spectrum-Thumbnail--size50 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-50);
+	}
 
-    .spectrum-Thumbnail--size75 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-75);
-    }
+	.spectrum-Thumbnail--size75 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-75);
+	}
 
-    .spectrum-Thumbnail--size100 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
-    }
+	.spectrum-Thumbnail--size100 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-100);
+	}
 
-    .spectrum-Thumbnail--size200 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-200);
-    }
+	.spectrum-Thumbnail--size200 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-200);
+	}
 
-    .spectrum-Thumbnail--size300 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-300);
-    }
+	.spectrum-Thumbnail--size300 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-300);
+	}
 
-    .spectrum-Thumbnail--size400 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-400);
-    }
+	.spectrum-Thumbnail--size400 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-400);
+	}
 
-    .spectrum-Thumbnail--size500 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
-    }
+	.spectrum-Thumbnail--size500 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
+	}
 
-    .spectrum-Thumbnail--size600 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-600);
-    }
+	.spectrum-Thumbnail--size600 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-600);
+	}
 
-    .spectrum-Thumbnail--size700 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-700);
-    }
+	.spectrum-Thumbnail--size700 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-700);
+	}
 
-    .spectrum-Thumbnail--size800 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-800);
-    }
+	.spectrum-Thumbnail--size800 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-800);
+	}
 
-    .spectrum-Thumbnail--size900 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-900);
-    }
+	.spectrum-Thumbnail--size900 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-900);
+	}
 
-    .spectrum-Thumbnail--size1000 {
-        --spectrum-thumbnail-size: var(--spectrum-thumbnail-size-1000);
-    }
+	.spectrum-Thumbnail--size1000 {
+		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-1000);
+	}
 }
