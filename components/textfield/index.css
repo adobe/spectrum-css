@@ -211,39 +211,22 @@ governing permissions and limitations under the License.
 /********* TEXT FIELD and TEXT AREA Outer Wrapper *********/
 .spectrum-Textfield {
 	position: relative;
-
-	/* prevent input from expanding to width of helptext */
-	inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
-
-	/*** ↓ Browser Mitigations for Text Field ↓ ***/
-	/* Edge - Use padding instead of text-indent because text-indent does not left align the text  */
-	text-indent: 0;
-
-	/* Edge - Show the overflow for input. */
-	overflow: visible;
-
-	/* Firefox and Safari - Remove the margin for input. */
-	margin: 0;
-
-	/* TODO: Determine if the vendor prefix toggling of appearance is still needed  */
-	/* Firefox -
-    Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
-    This has to come after -webkit-appearance or it gets overridden (#214)
-    Details: http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
-
-    Sets the opacity to 1 as normalize.css sets an opacity to placeholders
-    Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
-  */
-	/* stylelint-disable-next-line value-no-vendor-prefix */
-	appearance: textfield;
-
-	/* All browsers - Change the input font styles */
 	text-overflow: ellipsis;
+
+	/* Prevent input from expanding to width of Help text */
+	inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
 
 	/* Grid layout for child components */
 	display: inline-grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto auto;
+
+	/*** ↓ Browser Mitigations for Text Field ↓ ***/
+	/* Edge - Show the overflow for input. */
+	overflow: visible;
+
+	/* Firefox and Safari - Remove the margin for input. */
+	margin: 0;
 }
 
 .spectrum-Textfield.spectrum-Textfield--quiet {
@@ -393,8 +376,6 @@ governing permissions and limitations under the License.
 
 	padding-inline: calc(var(--mod-textfield-spacing-inline, var(--spectrum-textfield-spacing-inline)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
 
-	/* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
-	text-indent: 0;
 	vertical-align: top; /* used to align them correctly in forms. */
 	outline: none;
 	background-color: var(--mod-textfield-background-color, var(--spectrum-textfield-background-color));
@@ -406,64 +387,37 @@ governing permissions and limitations under the License.
 	font-family: var(--mod-textfield-font-family, var(--spectrum-textfield-font-family));
 	font-weight: var(--mod-textfield-font-weight, var(--spectrum-textfield-font-weight));
 	color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
-
-	/*** ↓ Browser Mitigations for Input ↓ ***/
-	/* Remove the margin for input in Firefox and Safari. */
-	margin: 0;
-
 	text-overflow: ellipsis;
-
-	/* TODO: Determine if the vendor prefix toggling of appearance is still needed  */
-	/* stylelint-disable-next-line value-no-vendor-prefix */
-	appearance: none;
-
-	/*
-    Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
-    This has to come after -webkit-appearance or it gets overridden (#214)
-    Details: http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
-
-    Sets the opacity to 1 as normalize.css sets an opacity to placeholders
-    Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
-  */
-	/* stylelint-disable-next-line value-no-vendor-prefix */
-	appearance: textfield;
 
 	/* place in same cell: input, focus indicator, and grows sizer */
 	grid-row: 2;
 	grid-column: 1 / span 2;
 
-	/* Remove the native clear button in IE */
-	/* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
-	&::-ms-clear {
-		inline-size: 0;
-		block-size: 0;
+	/*** ↓ Browser Mitigations for Input ↓ ***/
+	/* Firefox and Safari - Remove the margin for input. */
+	margin: 0;
+	appearance: none;
+
+	&[type="number"] {
+		/* stylelint-disable-next-line property-no-vendor-prefix -- Removes the native spin buttons in Firefox. */
+		-moz-appearance: textfield;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			/* stylelint-disable-next-line property-no-vendor-prefix -- Remove the native spin buttons in webkit-based browsers. */
+			-webkit-appearance: none;
+			margin: 0;
+		}
 	}
 
-	/* removes the native spin buttons */
-	/* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
-	&::-webkit-inner-spin-button,
-	&::-webkit-outer-spin-button {
-		/* stylelint-disable-next-line value-no-vendor-prefix */
-		appearance: none;
-		margin: 0;
-	}
-
-	/* removes the red border that appears in Firefox */
+	/* Removes the red border that appears in Firefox (normalize). */
 	&:-moz-ui-invalid {
 		box-shadow: none;
 	}
 
-	/* added to work with Edge, note, it needs double ::
-   * not single : which is what autoprefixer will add
-   */
-	/* stylelint-disable selector-no-vendor-prefix */
-	&::-ms-input-placeholder {
-		opacity: 1;
-	}
-	/* stylelint-enable selector-no-vendor-prefix */
-
 	/*** Input Placeholder Text ***/
 	&::placeholder {
+		/* Normalize opacity between browsers. */
 		opacity: 1;
 		font-size: var(--mod-textfield-placeholder-font-size, var(--spectrum-textfield-placeholder-font-size));
 		font-family: var(--mod-textfield-font-family, var(--spectrum-textfield-font-family));
@@ -479,13 +433,6 @@ governing permissions and limitations under the License.
 		&::placeholder {
 			font-style: normal;
 		}
-
-		/* stylelint-disable selector-no-vendor-prefix */
-		&::-ms-input-placeholder {
-			/* added to work with Edge, same as above */
-			font-style: normal;
-		}
-		/* stylelint-enable selector-no-vendor-prefix */
 	}
 
 	/* hover */
@@ -579,9 +526,6 @@ governing permissions and limitations under the License.
 		background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
 		border-color: transparent;
 		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
-
-		/* For safari mobile browser */
-		-webkit-text-fill-color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 
 		/* Disable the resize functionality when disabled */
 		resize: none;
