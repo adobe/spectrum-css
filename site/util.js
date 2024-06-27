@@ -1,14 +1,15 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
 /** @type import('markdown-it') */
 const md = require("markdown-it")({
@@ -57,9 +58,8 @@ md.renderer.rules.code_inline = function (tokens, idx, options, env, self) {
 			tokens[idx].attrPush(["class", className]);
 		} else {
 			// append class
-			tokens[idx].attrs[
-				aIndex
-			][1] = `${tokens[idx].attrs[aIndex][1]} ${className}`;
+			tokens[idx].attrs[aIndex][1] =
+				`${tokens[idx].attrs[aIndex][1]} ${className}`;
 		}
 
 		token.content = token.content.slice(1, -1);
@@ -94,30 +94,33 @@ exports.Prism = require("prismjs");
 exports.prettyPrintJSON = (json) => JSON.stringify(json, null, 2);
 
 /** @type (status: string) => "negative"|"notice"|"positive"|"neutral" */
-exports.getStatusLightVariant = (status) => ({
-	Deprecated: "negative",
-	"Beta Contribution": "notice",
-	Contribution: "notice",
-	Unverified: "notice",
-	Canon: "positive",
-	Verified: "positive",
-}[status] ?? "neutral");
+exports.getStatusLightVariant = (status) =>
+	({
+		Deprecated: "negative",
+		"Beta Contribution": "notice",
+		Contribution: "notice",
+		Unverified: "notice",
+		Canon: "positive",
+		Verified: "positive",
+	})[status] ?? "neutral";
 
 exports.getSlug = function (name, subName = undefined) {
 	if (!name) return;
 	if (subName) name += `-${subName}`;
-	return name.toLowerCase().replace(/[^a-z\-]/g, "");
+	return name.toLowerCase().replace(/[^a-z\\-]/g, "");
 };
 
 exports.populateDNAInfo = function (component) {
 	const getDNAStatus = function (dnaStatus) {
 		if (!dnaStatus) dnaStatus = "Contribution";
 
-		return {
-			Released: "Canon",
-			Beta: "Contribution",
-			Precursor: "Contribution",
-		}[dnaStatus] ?? dnaStatus;
+		return (
+			{
+				Released: "Canon",
+				Beta: "Contribution",
+				Precursor: "Contribution",
+			}[dnaStatus] ?? dnaStatus
+		);
 	};
 
 	if (!component.id) component.id = component.name?.toLowerCase();
@@ -132,12 +135,15 @@ exports.populateDNAInfo = function (component) {
 	}[component.status];
 
 	const dnaComponentStatus = component.dnaStatus;
-	component.dnaStatus = component.cssStatus === "Deprecated" ? "Deprecated" : getDNAStatus(dnaComponentStatus);
+	component.dnaStatus =
+		component.cssStatus === "Deprecated"
+			? "Deprecated"
+			: getDNAStatus(dnaComponentStatus);
 
 	if (!component?.examples) return;
 
 	return Promise.all(
-		component.examples.map(example => {
+		component.examples.map((example) => {
 			const pageData = {};
 			if (typeof example === "string") {
 				pageData.id = component.name;
@@ -159,6 +165,6 @@ exports.populateDNAInfo = function (component) {
 			component.examples[pageData.id] = pageData;
 
 			this.populateDNAInfo(pageData);
-		})
+		}),
 	);
 };

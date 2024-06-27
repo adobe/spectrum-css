@@ -1,5 +1,5 @@
 /*!
- * Copyright 2023 Adobe. All rights reserved.
+ * Copyright 2024 Adobe. All rights reserved.
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -37,11 +37,11 @@ svg:has(symbol):not(:has(use)) {
 /* set back to default h2 styles */
 #variants {
 	font-size: 24px;
-	margin-bottom: 8px;
+	margin-block-end: 8px;
 	color: rgb(46, 52, 56);
 	font-weight: bold;
 	line-height: normal;
 	letter-spacing: normal;
 	text-transform: none;
-	border-bottom: 1px solid hsla(203, 50%, 30%, 0.15)
+	border-block-end: 1px solid hsla(203deg, 50%, 30%, 15%);
 }
