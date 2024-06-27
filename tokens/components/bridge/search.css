@@ -11,94 +11,94 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Search {
-	--spectrum-search-border-radius: var(--system-spectrum-search--border-radius);
-	--spectrum-search-edge-to-visual: var(--system-spectrum-search--edge-to-visual);
-	--spectrum-search-border-color-default: var(--system-spectrum-search--border-color-default);
-	--spectrum-search-border-color-hover: var(--system-spectrum-search--border-color-hover);
-	--spectrum-search-border-color-focus: var(--system-spectrum-search--border-color-focus);
-	--spectrum-search-border-color-focus-hover: var(--system-spectrum-search--border-color-focus-hover);
-	--spectrum-search-border-color-key-focus: var(--system-spectrum-search--border-color-key-focus);
-	--spectrum-search-inline-size: var(--system-spectrum-search--inline-size);
-	--spectrum-search-block-size: var(--system-spectrum-search--block-size);
-	--spectrum-search-button-inline-size: var(--system-spectrum-search--button-inline-size);
-	--spectrum-search-min-inline-size: var(--system-spectrum-search--min-inline-size);
-	--spectrum-search-icon-size: var(--system-spectrum-search--icon-size);
-	--spectrum-search-text-to-icon: var(--system-spectrum-search--text-to-icon);
-	--spectrum-search-to-help-text: var(--system-spectrum-search--to-help-text);
-	--spectrum-search-top-to-text: var(--system-spectrum-search--top-to-text);
-	--spectrum-search-bottom-to-text: var(--system-spectrum-search--bottom-to-text);
-	--spectrum-search-focus-indicator-thickness: var(--system-spectrum-search--focus-indicator-thickness);
-	--spectrum-search-focus-indicator-gap: var(--system-spectrum-search--focus-indicator-gap);
-	--spectrum-search-focus-indicator-color: var(--system-spectrum-search--focus-indicator-color);
-	--spectrum-search-font-family: var(--system-spectrum-search--font-family);
-	--spectrum-search-font-weight: var(--system-spectrum-search--font-weight);
-	--spectrum-search-font-style: var(--system-spectrum-search--font-style);
-	--spectrum-search-line-height: var(--system-spectrum-search--line-height);
-	--spectrum-search-color-default: var(--system-spectrum-search--color-default);
-	--spectrum-search-color-hover: var(--system-spectrum-search--color-hover);
-	--spectrum-search-color-focus: var(--system-spectrum-search--color-focus);
-	--spectrum-search-color-focus-hover: var(--system-spectrum-search--color-focus-hover);
-	--spectrum-search-color-key-focus: var(--system-spectrum-search--color-key-focus);
-	--spectrum-search-border-width: var(--system-spectrum-search--border-width);
-	--spectrum-search-background-color: var(--system-spectrum-search--background-color);
-	--spectrum-search-color-disabled: var(--system-spectrum-search--color-disabled);
-	--spectrum-search-background-color-disabled: var(--system-spectrum-search--background-color-disabled);
-	--spectrum-search-border-color-disabled: var(--system-spectrum-search--border-color-disabled);
-	--mod-textfield-font-family: var(--system-spectrum-search--mod-textfield-font-family);
-	--mod-textfield-font-weight: var(--system-spectrum-search--mod-textfield-font-weight);
-	--mod-textfield-corner-radius: var(--system-spectrum-search--mod-textfield-corner-radius);
-	--mod-textfield-border-width: var(--system-spectrum-search--mod-textfield-border-width);
-	--mod-textfield-focus-indicator-gap: var(--system-spectrum-search--mod-textfield-focus-indicator-gap);
-	--mod-textfield-focus-indicator-width: var(--system-spectrum-search--mod-textfield-focus-indicator-width);
-	--mod-textfield-focus-indicator-color: var(--system-spectrum-search--mod-textfield-focus-indicator-color);
-	--mod-textfield-text-color-default: var(--system-spectrum-search--mod-textfield-text-color-default);
-	--mod-textfield-text-color-hover: var(--system-spectrum-search--mod-textfield-text-color-hover);
-	--mod-textfield-text-color-focus: var(--system-spectrum-search--mod-textfield-text-color-focus);
-	--mod-textfield-text-color-focus-hover: var(--system-spectrum-search--mod-textfield-text-color-focus-hover);
-	--mod-textfield-text-color-keyboard-focus: var(--system-spectrum-search--mod-textfield-text-color-keyboard-focus);
-	--mod-textfield-text-color-disabled: var(--system-spectrum-search--mod-textfield-text-color-disabled);
-	--mod-textfield-border-color: var(--system-spectrum-search--mod-textfield-border-color);
-	--mod-textfield-border-color-hover: var(--system-spectrum-search--mod-textfield-border-color-hover);
-	--mod-textfield-border-color-focus: var(--system-spectrum-search--mod-textfield-border-color-focus);
-	--mod-textfield-border-color-focus-hover: var(--system-spectrum-search--mod-textfield-border-color-focus-hover);
-	--mod-textfield-border-color-keyboard-focus: var(--system-spectrum-search--mod-textfield-border-color-keyboard-focus);
-	--mod-textfield-border-color-disabled: var(--system-spectrum-search--mod-textfield-border-color-disabled);
-	--mod-textfield-background-color: var(--system-spectrum-search--mod-textfield-background-color);
-	--mod-textfield-background-color-disabled: var(--system-spectrum-search--mod-textfield-background-color-disabled);
+	--spectrum-search-border-radius: var(--system-spectrum-search-border-radius);
+	--spectrum-search-edge-to-visual: var(--system-spectrum-search-edge-to-visual);
+	--spectrum-search-border-color-default: var(--system-spectrum-search-border-color-default);
+	--spectrum-search-border-color-hover: var(--system-spectrum-search-border-color-hover);
+	--spectrum-search-border-color-focus: var(--system-spectrum-search-border-color-focus);
+	--spectrum-search-border-color-focus-hover: var(--system-spectrum-search-border-color-focus-hover);
+	--spectrum-search-border-color-key-focus: var(--system-spectrum-search-border-color-key-focus);
+	--spectrum-search-inline-size: var(--system-spectrum-search-inline-size);
+	--spectrum-search-block-size: var(--system-spectrum-search-block-size);
+	--spectrum-search-button-inline-size: var(--system-spectrum-search-button-inline-size);
+	--spectrum-search-min-inline-size: var(--system-spectrum-search-min-inline-size);
+	--spectrum-search-icon-size: var(--system-spectrum-search-icon-size);
+	--spectrum-search-text-to-icon: var(--system-spectrum-search-text-to-icon);
+	--spectrum-search-to-help-text: var(--system-spectrum-search-to-help-text);
+	--spectrum-search-top-to-text: var(--system-spectrum-search-top-to-text);
+	--spectrum-search-bottom-to-text: var(--system-spectrum-search-bottom-to-text);
+	--spectrum-search-focus-indicator-thickness: var(--system-spectrum-search-focus-indicator-thickness);
+	--spectrum-search-focus-indicator-gap: var(--system-spectrum-search-focus-indicator-gap);
+	--spectrum-search-focus-indicator-color: var(--system-spectrum-search-focus-indicator-color);
+	--spectrum-search-font-family: var(--system-spectrum-search-font-family);
+	--spectrum-search-font-weight: var(--system-spectrum-search-font-weight);
+	--spectrum-search-font-style: var(--system-spectrum-search-font-style);
+	--spectrum-search-line-height: var(--system-spectrum-search-line-height);
+	--spectrum-search-color-default: var(--system-spectrum-search-color-default);
+	--spectrum-search-color-hover: var(--system-spectrum-search-color-hover);
+	--spectrum-search-color-focus: var(--system-spectrum-search-color-focus);
+	--spectrum-search-color-focus-hover: var(--system-spectrum-search-color-focus-hover);
+	--spectrum-search-color-key-focus: var(--system-spectrum-search-color-key-focus);
+	--spectrum-search-border-width: var(--system-spectrum-search-border-width);
+	--spectrum-search-background-color: var(--system-spectrum-search-background-color);
+	--spectrum-search-color-disabled: var(--system-spectrum-search-color-disabled);
+	--spectrum-search-background-color-disabled: var(--system-spectrum-search-background-color-disabled);
+	--spectrum-search-border-color-disabled: var(--system-spectrum-search-border-color-disabled);
+	--mod-textfield-font-family: var(--system-spectrum-search-textfield-font-family);
+	--mod-textfield-font-weight: var(--system-spectrum-search-textfield-font-weight);
+	--mod-textfield-corner-radius: var(--system-spectrum-search-textfield-corner-radius);
+	--mod-textfield-border-width: var(--system-spectrum-search-textfield-border-width);
+	--mod-textfield-focus-indicator-gap: var(--system-spectrum-search-textfield-focus-indicator-gap);
+	--mod-textfield-focus-indicator-width: var(--system-spectrum-search-textfield-focus-indicator-width);
+	--mod-textfield-focus-indicator-color: var(--system-spectrum-search-textfield-focus-indicator-color);
+	--mod-textfield-text-color-default: var(--system-spectrum-search-textfield-text-color-default);
+	--mod-textfield-text-color-hover: var(--system-spectrum-search-textfield-text-color-hover);
+	--mod-textfield-text-color-focus: var(--system-spectrum-search-textfield-text-color-focus);
+	--mod-textfield-text-color-focus-hover: var(--system-spectrum-search-textfield-text-color-focus-hover);
+	--mod-textfield-text-color-keyboard-focus: var(--system-spectrum-search-textfield-text-color-keyboard-focus);
+	--mod-textfield-text-color-disabled: var(--system-spectrum-search-textfield-text-color-disabled);
+	--mod-textfield-border-color: var(--system-spectrum-search-textfield-border-color);
+	--mod-textfield-border-color-hover: var(--system-spectrum-search-textfield-border-color-hover);
+	--mod-textfield-border-color-focus: var(--system-spectrum-search-textfield-border-color-focus);
+	--mod-textfield-border-color-focus-hover: var(--system-spectrum-search-textfield-border-color-focus-hover);
+	--mod-textfield-border-color-keyboard-focus: var(--system-spectrum-search-textfield-border-color-keyboard-focus);
+	--mod-textfield-border-color-disabled: var(--system-spectrum-search-textfield-border-color-disabled);
+	--mod-textfield-background-color: var(--system-spectrum-search-textfield-background-color);
+	--mod-textfield-background-color-disabled: var(--system-spectrum-search-textfield-background-color-disabled);
 }
 
 .spectrum-Search--sizeS {
-	--spectrum-search-border-radius: var(--system-spectrum-search--size-s--border-radius);
-	--spectrum-search-edge-to-visual: var(--system-spectrum-search--size-s--edge-to-visual);
-	--spectrum-search-block-size: var(--system-spectrum-search--size-s--block-size);
-	--spectrum-search-icon-size: var(--system-spectrum-search--size-s--icon-size);
-	--spectrum-search-text-to-icon: var(--system-spectrum-search--size-s--text-to-icon);
+	--spectrum-search-border-radius: var(--system-spectrum-search-size-s-border-radius);
+	--spectrum-search-edge-to-visual: var(--system-spectrum-search-size-s-edge-to-visual);
+	--spectrum-search-block-size: var(--system-spectrum-search-size-s-block-size);
+	--spectrum-search-icon-size: var(--system-spectrum-search-size-s-icon-size);
+	--spectrum-search-text-to-icon: var(--system-spectrum-search-size-s-text-to-icon);
 }
 
 .spectrum-Search--sizeL {
-	--spectrum-search-border-radius: var(--system-spectrum-search--size-l--border-radius);
-	--spectrum-search-edge-to-visual: var(--system-spectrum-search--size-l--edge-to-visual);
-	--spectrum-search-block-size: var(--system-spectrum-search--size-l--block-size);
-	--spectrum-search-icon-size: var(--system-spectrum-search--size-l--icon-size);
-	--spectrum-search-text-to-icon: var(--system-spectrum-search--size-l--text-to-icon);
+	--spectrum-search-border-radius: var(--system-spectrum-search-size-l-border-radius);
+	--spectrum-search-edge-to-visual: var(--system-spectrum-search-size-l-edge-to-visual);
+	--spectrum-search-block-size: var(--system-spectrum-search-size-l-block-size);
+	--spectrum-search-icon-size: var(--system-spectrum-search-size-l-icon-size);
+	--spectrum-search-text-to-icon: var(--system-spectrum-search-size-l-text-to-icon);
 }
 
 .spectrum-Search--sizeXL {
-	--spectrum-search-border-radius: var(--system-spectrum-search--size-xl--border-radius);
-	--spectrum-search-edge-to-visual: var(--system-spectrum-search--size-xl--edge-to-visual);
-	--spectrum-search-block-size: var(--system-spectrum-search--size-xl--block-size);
-	--spectrum-search-icon-size: var(--system-spectrum-search--size-xl--icon-size);
-	--spectrum-search-text-to-icon: var(--system-spectrum-search--size-xl--text-to-icon);
+	--spectrum-search-border-radius: var(--system-spectrum-search-size-xl-border-radius);
+	--spectrum-search-edge-to-visual: var(--system-spectrum-search-size-xl-edge-to-visual);
+	--spectrum-search-block-size: var(--system-spectrum-search-size-xl-block-size);
+	--spectrum-search-icon-size: var(--system-spectrum-search-size-xl-icon-size);
+	--spectrum-search-text-to-icon: var(--system-spectrum-search-size-xl-text-to-icon);
 }
 
 .spectrum-Search--quiet {
-	--spectrum-search-quiet-button-offset: var(--system-spectrum-search--quiet--quiet-button-offset);
-	--spectrum-search-background-color: var(--system-spectrum-search--quiet--background-color);
-	--spectrum-search-background-color-disabled: var(--system-spectrum-search--quiet--background-color-disabled);
-	--spectrum-search-border-color-disabled: var(--system-spectrum-search--quiet--border-color-disabled);
+	--spectrum-search-quiet-button-offset: var(--system-spectrum-search-quiet-quiet-button-offset);
+	--spectrum-search-background-color: var(--system-spectrum-search-quiet-background-color);
+	--spectrum-search-background-color-disabled: var(--system-spectrum-search-quiet-background-color-disabled);
+	--spectrum-search-border-color-disabled: var(--system-spectrum-search-quiet-border-color-disabled);
 }
 
 .spectrum-Search--quiet.spectrum-Search {
-	--spectrum-search-border-radius: var(--system-spectrum-search--quiet--border-radius);
-	--spectrum-search-edge-to-visual: var(--system-spectrum-search--quiet--edge-to-visual);
+	--spectrum-search-border-radius: var(--system-spectrum-search-quiet-border-radius);
+	--spectrum-search-edge-to-visual: var(--system-spectrum-search-quiet-edge-to-visual);
 }

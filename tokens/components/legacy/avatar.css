@@ -11,30 +11,30 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-legacy {
-	--system-spectrum-avatar--color-opacity: 1;
-	--system-spectrum-avatar--inline-size: var(--spectrum-avatar-size-100);
-	--system-spectrum-avatar--block-size: var(--spectrum-avatar-size-100);
-	--system-spectrum-avatar--border-radius: var(--spectrum-avatar-block-size);
-	--system-spectrum-avatar--focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--system-spectrum-avatar--focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--system-spectrum-avatar--focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--system-spectrum-avatar--color-opacity-disabled: var(--spectrum-avatar-opacity-disabled);
-	--system-spectrum-avatar--size50--inline-size: var(--spectrum-avatar-size-50);
-	--system-spectrum-avatar--size50--block-size: var(--spectrum-avatar-size-50);
-	--system-spectrum-avatar--size75--inline-size: var(--spectrum-avatar-size-75);
-	--system-spectrum-avatar--size75--block-size: var(--spectrum-avatar-size-75);
-	--system-spectrum-avatar--size100--inline-size: var(--spectrum-avatar-size-100);
-	--system-spectrum-avatar--size100--block-size: var(--spectrum-avatar-size-100);
-	--system-spectrum-avatar--size200--inline-size: var(--spectrum-avatar-size-200);
-	--system-spectrum-avatar--size200--block-size: var(--spectrum-avatar-size-200);
-	--system-spectrum-avatar--size300--inline-size: var(--spectrum-avatar-size-300);
-	--system-spectrum-avatar--size300--block-size: var(--spectrum-avatar-size-300);
-	--system-spectrum-avatar--size400--inline-size: var(--spectrum-avatar-size-400);
-	--system-spectrum-avatar--size400--block-size: var(--spectrum-avatar-size-400);
-	--system-spectrum-avatar--size500--inline-size: var(--spectrum-avatar-size-500);
-	--system-spectrum-avatar--size500--block-size: var(--spectrum-avatar-size-500);
-	--system-spectrum-avatar--size600--inline-size: var(--spectrum-avatar-size-600);
-	--system-spectrum-avatar--size600--block-size: var(--spectrum-avatar-size-600);
-	--system-spectrum-avatar--size700--inline-size: var(--spectrum-avatar-size-700);
-	--system-spectrum-avatar--size700--block-size: var(--spectrum-avatar-size-700);
+	--system-spectrum-avatar-color-opacity: 1;
+	--system-spectrum-avatar-inline-size: var(--spectrum-avatar-size-100);
+	--system-spectrum-avatar-block-size: var(--spectrum-avatar-size-100);
+	--system-spectrum-avatar-border-radius: var(--spectrum-avatar-block-size);
+	--system-spectrum-avatar-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-spectrum-avatar-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-spectrum-avatar-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-spectrum-avatar-color-opacity-disabled: var(--spectrum-avatar-opacity-disabled);
+	--system-spectrum-avatar-size50-inline-size: var(--spectrum-avatar-size-50);
+	--system-spectrum-avatar-size50-block-size: var(--spectrum-avatar-size-50);
+	--system-spectrum-avatar-size75-inline-size: var(--spectrum-avatar-size-75);
+	--system-spectrum-avatar-size75-block-size: var(--spectrum-avatar-size-75);
+	--system-spectrum-avatar-size100-inline-size: var(--spectrum-avatar-size-100);
+	--system-spectrum-avatar-size100-block-size: var(--spectrum-avatar-size-100);
+	--system-spectrum-avatar-size200-inline-size: var(--spectrum-avatar-size-200);
+	--system-spectrum-avatar-size200-block-size: var(--spectrum-avatar-size-200);
+	--system-spectrum-avatar-size300-inline-size: var(--spectrum-avatar-size-300);
+	--system-spectrum-avatar-size300-block-size: var(--spectrum-avatar-size-300);
+	--system-spectrum-avatar-size400-inline-size: var(--spectrum-avatar-size-400);
+	--system-spectrum-avatar-size400-block-size: var(--spectrum-avatar-size-400);
+	--system-spectrum-avatar-size500-inline-size: var(--spectrum-avatar-size-500);
+	--system-spectrum-avatar-size500-block-size: var(--spectrum-avatar-size-500);
+	--system-spectrum-avatar-size600-inline-size: var(--spectrum-avatar-size-600);
+	--system-spectrum-avatar-size600-block-size: var(--spectrum-avatar-size-600);
+	--system-spectrum-avatar-size700-inline-size: var(--spectrum-avatar-size-700);
+	--system-spectrum-avatar-size700-block-size: var(--spectrum-avatar-size-700);
 }

@@ -11,38 +11,38 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Calendar {
-	--spectrum-calendar-day-width: var(--system-spectrum-calendar--day-width);
-	--spectrum-calendar-day-height: var(--system-spectrum-calendar--day-height);
-	--spectrum-calendar-border-radius-reset: var(--system-spectrum-calendar--border-radius-reset);
-	--spectrum-calendar-border-width-reset: var(--system-spectrum-calendar--border-width-reset);
-	--spectrum-calendar-day-border-size: var(--system-spectrum-calendar--day-border-size);
-	--spectrum-calendar-margin-y: var(--system-spectrum-calendar--margin-y);
-	--spectrum-calendar-margin-x: var(--system-spectrum-calendar--margin-x);
-	--spectrum-calendar-day-padding: var(--system-spectrum-calendar--day-padding);
-	--spectrum-calendar-width: var(--system-spectrum-calendar--width);
-	--spectrum-calendar-title-text-letter-spacing: var(--system-spectrum-calendar--title-text-letter-spacing);
-	--spectrum-calendar-title-height: var(--system-spectrum-calendar--title-height);
-	--spectrum-calendar-title-text-size: var(--system-spectrum-calendar--title-text-size);
-	--spectrum-calendar-day-title-text-font-weight: var(--system-spectrum-calendar--day-title-text-font-weight);
-	--spectrum-calendar-day-title-text-color: var(--system-spectrum-calendar--day-title-text-color);
-	--spectrum-calendar-day-title-text-size: var(--system-spectrum-calendar--day-title-text-size);
-	--spectrum-calendar-day-text-size-han: var(--system-spectrum-calendar--day-text-size-han);
-	--spectrum-calendar-day-text-size: var(--system-spectrum-calendar--day-text-size);
-	--spectrum-calendar-day-text-color-selected: var(--system-spectrum-calendar--day-text-color-selected);
-	--spectrum-calendar-day-text-color-hover: var(--system-spectrum-calendar--day-text-color-hover);
-	--spectrum-calendar-day-text-color-cap-selected: var(--system-spectrum-calendar--day-text-color-cap-selected);
-	--spectrum-calendar-day-text-font-weight-selected: var(--system-spectrum-calendar--day-text-font-weight-selected);
-	--spectrum-calendar-day-text-font-weight-cap-selected: var(--system-spectrum-calendar--day-text-font-weight-cap-selected);
-	--spectrum-calendar-day-today-text-color: var(--system-spectrum-calendar--day-today-text-color);
-	--spectrum-calendar-day-today-text-font-weight: var(--system-spectrum-calendar--day-today-text-font-weight);
-	--spectrum-calendar-day-today-border-color: var(--system-spectrum-calendar--day-today-border-color);
-	--spectrum-calendar-day-today-text-color-disabled: var(--system-spectrum-calendar--day-today-text-color-disabled);
-	--spectrum-calendar-day-today-border-color-disabled: var(--system-spectrum-calendar--day-today-border-color-disabled);
-	--spectrum-calendar-day-text-color-disabled: var(--system-spectrum-calendar--day-text-color-disabled);
-	--spectrum-calendar-day-text-color-key-focus: var(--system-spectrum-calendar--day-text-color-key-focus);
-	--spectrum-calendar-button-icon-color: var(--system-spectrum-calendar--button-icon-color);
+	--spectrum-calendar-day-width: var(--system-spectrum-calendar-day-width);
+	--spectrum-calendar-day-height: var(--system-spectrum-calendar-day-height);
+	--spectrum-calendar-border-radius-reset: var(--system-spectrum-calendar-border-radius-reset);
+	--spectrum-calendar-border-width-reset: var(--system-spectrum-calendar-border-width-reset);
+	--spectrum-calendar-day-border-size: var(--system-spectrum-calendar-day-border-size);
+	--spectrum-calendar-margin-y: var(--system-spectrum-calendar-margin-y);
+	--spectrum-calendar-margin-x: var(--system-spectrum-calendar-margin-x);
+	--spectrum-calendar-day-padding: var(--system-spectrum-calendar-day-padding);
+	--spectrum-calendar-width: var(--system-spectrum-calendar-width);
+	--spectrum-calendar-title-text-letter-spacing: var(--system-spectrum-calendar-title-text-letter-spacing);
+	--spectrum-calendar-title-height: var(--system-spectrum-calendar-title-height);
+	--spectrum-calendar-title-text-size: var(--system-spectrum-calendar-title-text-size);
+	--spectrum-calendar-day-title-text-font-weight: var(--system-spectrum-calendar-day-title-text-font-weight);
+	--spectrum-calendar-day-title-text-color: var(--system-spectrum-calendar-day-title-text-color);
+	--spectrum-calendar-day-title-text-size: var(--system-spectrum-calendar-day-title-text-size);
+	--spectrum-calendar-day-text-size-han: var(--system-spectrum-calendar-day-text-size-han);
+	--spectrum-calendar-day-text-size: var(--system-spectrum-calendar-day-text-size);
+	--spectrum-calendar-day-text-color-selected: var(--system-spectrum-calendar-day-text-color-selected);
+	--spectrum-calendar-day-text-color-hover: var(--system-spectrum-calendar-day-text-color-hover);
+	--spectrum-calendar-day-text-color-cap-selected: var(--system-spectrum-calendar-day-text-color-cap-selected);
+	--spectrum-calendar-day-text-font-weight-selected: var(--system-spectrum-calendar-day-text-font-weight-selected);
+	--spectrum-calendar-day-text-font-weight-cap-selected: var(--system-spectrum-calendar-day-text-font-weight-cap-selected);
+	--spectrum-calendar-day-today-text-color: var(--system-spectrum-calendar-day-today-text-color);
+	--spectrum-calendar-day-today-text-font-weight: var(--system-spectrum-calendar-day-today-text-font-weight);
+	--spectrum-calendar-day-today-border-color: var(--system-spectrum-calendar-day-today-border-color);
+	--spectrum-calendar-day-today-text-color-disabled: var(--system-spectrum-calendar-day-today-text-color-disabled);
+	--spectrum-calendar-day-today-border-color-disabled: var(--system-spectrum-calendar-day-today-border-color-disabled);
+	--spectrum-calendar-day-text-color-disabled: var(--system-spectrum-calendar-day-text-color-disabled);
+	--spectrum-calendar-day-text-color-key-focus: var(--system-spectrum-calendar-day-text-color-key-focus);
+	--spectrum-calendar-button-icon-color: var(--system-spectrum-calendar-button-icon-color);
 }
 
 .spectrum-Calendar:dir(rtl) {
-	--spectrum-logical-rotation: var(--system-spectrum-calendar: dir(rtl) --calendar-dir-rtl--logical-rotation);
+	--spectrum-logical-rotation: var(--system-spectrum-calendar-dir-rtl-logical-rotation);
 }

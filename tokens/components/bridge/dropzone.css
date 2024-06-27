@@ -11,72 +11,72 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-DropZone {
-	--spectrum-drop-zone-padding: var(--system-spectrum-dropzone--drop-zone-padding);
-	--spectrum-drop-zone-illustration-to-heading: var(--system-spectrum-dropzone--drop-zone-illustration-to-heading);
-	--spectrum-drop-zone-heading-to-body: var(--system-spectrum-dropzone--drop-zone-heading-to-body);
-	--spectrum-drop-zone-border-width: var(--system-spectrum-dropzone--drop-zone-border-width);
-	--spectrum-drop-zone-corner-radius: var(--system-spectrum-dropzone--drop-zone-corner-radius);
-	--spectrum-drop-zone-border-color: var(--system-spectrum-dropzone--drop-zone-border-color);
-	--spectrum-drop-zone-heading-font-family: var(--system-spectrum-dropzone--drop-zone-heading-font-family);
-	--spectrum-drop-zone-heading-font-weight: var(--system-spectrum-dropzone--drop-zone-heading-font-weight);
-	--spectrum-drop-zone-heading-font-style: var(--system-spectrum-dropzone--drop-zone-heading-font-style);
-	--spectrum-drop-zone-heading-font-size: var(--system-spectrum-dropzone--drop-zone-heading-font-size);
-	--spectrum-drop-zone-heading-line-height: var(--system-spectrum-dropzone--drop-zone-heading-line-height);
-	--spectrum-drop-zone-heading-color: var(--system-spectrum-dropzone--drop-zone-heading-color);
-	--spectrum-drop-zone-body-font-family: var(--system-spectrum-dropzone--drop-zone-body-font-family);
-	--spectrum-drop-zone-body-font-weight: var(--system-spectrum-dropzone--drop-zone-body-font-weight);
-	--spectrum-drop-zone-body-font-style: var(--system-spectrum-dropzone--drop-zone-body-font-style);
-	--spectrum-drop-zone-body-font-size: var(--system-spectrum-dropzone--drop-zone-body-font-size);
-	--spectrum-drop-zone-body-line-height: var(--system-spectrum-dropzone--drop-zone-body-line-height);
-	--spectrum-drop-zone-body-color: var(--system-spectrum-dropzone--drop-zone-body-color);
-	--spectrum-drop-zone-background-color: var(--system-spectrum-dropzone--drop-zone-background-color);
-	--spectrum-drop-zone-border-color-hover: var(--system-spectrum-dropzone--drop-zone-border-color-hover);
-	--spectrum-drop-zone-illustration-color: var(--system-spectrum-dropzone--drop-zone-illustration-color);
-	--spectrum-drop-zone-illustration-color-hover: var(--system-spectrum-dropzone--drop-zone-illustration-color-hover);
-	--spectrum-drop-zone-content-height: var(--system-spectrum-dropzone--drop-zone-content-height);
-	--spectrum-drop-zone-content-max-width: var(--system-spectrum-dropzone--drop-zone-content-max-width);
-	--spectrum-drop-zone-content-edge-to-text: var(--system-spectrum-dropzone--drop-zone-content-edge-to-text);
-	--spectrum-drop-zone-content-top-to-text: var(--system-spectrum-dropzone--drop-zone-content-top-to-text);
-	--spectrum-drop-zone-content-bottom-to-text: var(--system-spectrum-dropzone--drop-zone-content-bottom-to-text);
-	--spectrum-drop-zone-content-font-family: var(--system-spectrum-dropzone--drop-zone-content-font-family);
-	--spectrum-drop-zone-content-font-weight: var(--system-spectrum-dropzone--drop-zone-content-font-weight);
-	--spectrum-drop-zone-content-font-style: var(--system-spectrum-dropzone--drop-zone-content-font-style);
-	--spectrum-drop-zone-content-font-size: var(--system-spectrum-dropzone--drop-zone-content-font-size);
-	--spectrum-drop-zone-content-line-height: var(--system-spectrum-dropzone--drop-zone-content-line-height);
-	--spectrum-drop-zone-content-background-color: var(--system-spectrum-dropzone--drop-zone-content-background-color);
-	--spectrum-drop-zone-content-color: var(--system-spectrum-dropzone--drop-zone-content-color);
-	--mod-illustrated-message-content-maximum-width: var(--system-spectrum-dropzone--mod-illustrated-message-content-maximum-width);
-	--mod-illustrated-message-illustration-color: var(--system-spectrum-dropzone--mod-illustrated-message-illustration-color);
-	--mod-illustrated-message-title-to-heading: var(--system-spectrum-dropzone--mod-illustrated-message-title-to-heading);
-	--mod-illustrated-message-heading-to-body: var(--system-spectrum-dropzone--mod-illustrated-message-heading-to-body);
-	--mod-illustrated-message-title-font-family: var(--system-spectrum-dropzone--mod-illustrated-message-title-font-family);
-	--mod-illustrated-message-title-font-weight: var(--system-spectrum-dropzone--mod-illustrated-message-title-font-weight);
-	--mod-illustrated-message-title-font-style: var(--system-spectrum-dropzone--mod-illustrated-message-title-font-style);
-	--mod-illustrated-message-title-font-size: var(--system-spectrum-dropzone--mod-illustrated-message-title-font-size);
-	--mod-illustrated-message-title-line-height: var(--system-spectrum-dropzone--mod-illustrated-message-title-line-height);
-	--mod-illustrated-message-title-color: var(--system-spectrum-dropzone--mod-illustrated-message-title-color);
-	--mod-illustrated-message-description-position: var(--system-spectrum-dropzone--mod-illustrated-message-description-position);
-	--mod-illustrated-message-description-z-index: var(--system-spectrum-dropzone--mod-illustrated-message-description-z-index);
-	--mod-illustrated-message-heading-to-description: var(--system-spectrum-dropzone--mod-illustrated-message-heading-to-description);
-	--mod-illustrated-message-description-font-family: var(--system-spectrum-dropzone--mod-illustrated-message-description-font-family);
-	--mod-illustrated-message-description-font-weight: var(--system-spectrum-dropzone--mod-illustrated-message-description-font-weight);
-	--mod-illustrated-message-description-font-style: var(--system-spectrum-dropzone--mod-illustrated-message-description-font-style);
-	--mod-illustrated-message-description-font-size: var(--system-spectrum-dropzone--mod-illustrated-message-description-font-size);
-	--mod-illustrated-message-description-line-height: var(--system-spectrum-dropzone--mod-illustrated-message-description-line-height);
-	--mod-illustrated-message-description-color: var(--system-spectrum-dropzone--mod-illustrated-message-description-color);
-	--mod-actionbutton-font-size: var(--system-spectrum-dropzone--mod-actionbutton-font-size);
-	--mod-actionbutton-label-color: var(--system-spectrum-dropzone--mod-actionbutton-label-color);
-	--mod-actionbutton-edge-to-text: var(--system-spectrum-dropzone--mod-actionbutton-edge-to-text);
+	--spectrum-drop-zone-padding: var(--system-spectrum-dropzone-drop-zone-padding);
+	--spectrum-drop-zone-illustration-to-heading: var(--system-spectrum-dropzone-drop-zone-illustration-to-heading);
+	--spectrum-drop-zone-heading-to-body: var(--system-spectrum-dropzone-drop-zone-heading-to-body);
+	--spectrum-drop-zone-border-width: var(--system-spectrum-dropzone-drop-zone-border-width);
+	--spectrum-drop-zone-corner-radius: var(--system-spectrum-dropzone-drop-zone-corner-radius);
+	--spectrum-drop-zone-border-color: var(--system-spectrum-dropzone-drop-zone-border-color);
+	--spectrum-drop-zone-heading-font-family: var(--system-spectrum-dropzone-drop-zone-heading-font-family);
+	--spectrum-drop-zone-heading-font-weight: var(--system-spectrum-dropzone-drop-zone-heading-font-weight);
+	--spectrum-drop-zone-heading-font-style: var(--system-spectrum-dropzone-drop-zone-heading-font-style);
+	--spectrum-drop-zone-heading-font-size: var(--system-spectrum-dropzone-drop-zone-heading-font-size);
+	--spectrum-drop-zone-heading-line-height: var(--system-spectrum-dropzone-drop-zone-heading-line-height);
+	--spectrum-drop-zone-heading-color: var(--system-spectrum-dropzone-drop-zone-heading-color);
+	--spectrum-drop-zone-body-font-family: var(--system-spectrum-dropzone-drop-zone-body-font-family);
+	--spectrum-drop-zone-body-font-weight: var(--system-spectrum-dropzone-drop-zone-body-font-weight);
+	--spectrum-drop-zone-body-font-style: var(--system-spectrum-dropzone-drop-zone-body-font-style);
+	--spectrum-drop-zone-body-font-size: var(--system-spectrum-dropzone-drop-zone-body-font-size);
+	--spectrum-drop-zone-body-line-height: var(--system-spectrum-dropzone-drop-zone-body-line-height);
+	--spectrum-drop-zone-body-color: var(--system-spectrum-dropzone-drop-zone-body-color);
+	--spectrum-drop-zone-background-color: var(--system-spectrum-dropzone-drop-zone-background-color);
+	--spectrum-drop-zone-border-color-hover: var(--system-spectrum-dropzone-drop-zone-border-color-hover);
+	--spectrum-drop-zone-illustration-color: var(--system-spectrum-dropzone-drop-zone-illustration-color);
+	--spectrum-drop-zone-illustration-color-hover: var(--system-spectrum-dropzone-drop-zone-illustration-color-hover);
+	--spectrum-drop-zone-content-height: var(--system-spectrum-dropzone-drop-zone-content-height);
+	--spectrum-drop-zone-content-max-width: var(--system-spectrum-dropzone-drop-zone-content-max-width);
+	--spectrum-drop-zone-content-edge-to-text: var(--system-spectrum-dropzone-drop-zone-content-edge-to-text);
+	--spectrum-drop-zone-content-top-to-text: var(--system-spectrum-dropzone-drop-zone-content-top-to-text);
+	--spectrum-drop-zone-content-bottom-to-text: var(--system-spectrum-dropzone-drop-zone-content-bottom-to-text);
+	--spectrum-drop-zone-content-font-family: var(--system-spectrum-dropzone-drop-zone-content-font-family);
+	--spectrum-drop-zone-content-font-weight: var(--system-spectrum-dropzone-drop-zone-content-font-weight);
+	--spectrum-drop-zone-content-font-style: var(--system-spectrum-dropzone-drop-zone-content-font-style);
+	--spectrum-drop-zone-content-font-size: var(--system-spectrum-dropzone-drop-zone-content-font-size);
+	--spectrum-drop-zone-content-line-height: var(--system-spectrum-dropzone-drop-zone-content-line-height);
+	--spectrum-drop-zone-content-background-color: var(--system-spectrum-dropzone-drop-zone-content-background-color);
+	--spectrum-drop-zone-content-color: var(--system-spectrum-dropzone-drop-zone-content-color);
+	--mod-illustrated-message-content-maximum-width: var(--system-spectrum-dropzone-illustrated-message-content-maximum-width);
+	--mod-illustrated-message-illustration-color: var(--system-spectrum-dropzone-illustrated-message-illustration-color);
+	--mod-illustrated-message-title-to-heading: var(--system-spectrum-dropzone-illustrated-message-title-to-heading);
+	--mod-illustrated-message-heading-to-body: var(--system-spectrum-dropzone-illustrated-message-heading-to-body);
+	--mod-illustrated-message-title-font-family: var(--system-spectrum-dropzone-illustrated-message-title-font-family);
+	--mod-illustrated-message-title-font-weight: var(--system-spectrum-dropzone-illustrated-message-title-font-weight);
+	--mod-illustrated-message-title-font-style: var(--system-spectrum-dropzone-illustrated-message-title-font-style);
+	--mod-illustrated-message-title-font-size: var(--system-spectrum-dropzone-illustrated-message-title-font-size);
+	--mod-illustrated-message-title-line-height: var(--system-spectrum-dropzone-illustrated-message-title-line-height);
+	--mod-illustrated-message-title-color: var(--system-spectrum-dropzone-illustrated-message-title-color);
+	--mod-illustrated-message-description-position: var(--system-spectrum-dropzone-illustrated-message-description-position);
+	--mod-illustrated-message-description-z-index: var(--system-spectrum-dropzone-illustrated-message-description-z-index);
+	--mod-illustrated-message-heading-to-description: var(--system-spectrum-dropzone-illustrated-message-heading-to-description);
+	--mod-illustrated-message-description-font-family: var(--system-spectrum-dropzone-illustrated-message-description-font-family);
+	--mod-illustrated-message-description-font-weight: var(--system-spectrum-dropzone-illustrated-message-description-font-weight);
+	--mod-illustrated-message-description-font-style: var(--system-spectrum-dropzone-illustrated-message-description-font-style);
+	--mod-illustrated-message-description-font-size: var(--system-spectrum-dropzone-illustrated-message-description-font-size);
+	--mod-illustrated-message-description-line-height: var(--system-spectrum-dropzone-illustrated-message-description-line-height);
+	--mod-illustrated-message-description-color: var(--system-spectrum-dropzone-illustrated-message-description-color);
+	--mod-actionbutton-font-size: var(--system-spectrum-dropzone-actionbutton-font-size);
+	--mod-actionbutton-label-color: var(--system-spectrum-dropzone-actionbutton-label-color);
+	--mod-actionbutton-edge-to-text: var(--system-spectrum-dropzone-actionbutton-edge-to-text);
 }
 
 .spectrum-DropZone:lang(ja) {
-	--spectrum-drop-zone-heading-font-size: var(--system-spectrum-dropzone: lang(ja) --drop-zone-lang-ja--drop-zone-heading-font-size);
+	--spectrum-drop-zone-heading-font-size: var(--system-spectrum-dropzone-lang-ja-drop-zone-heading-font-size);
 }
 
 .spectrum-DropZone:lang(zh) {
-	--spectrum-drop-zone-heading-font-size: var(--system-spectrum-dropzone: lang(zh) --drop-zone-lang-zh--drop-zone-heading-font-size);
+	--spectrum-drop-zone-heading-font-size: var(--system-spectrum-dropzone-lang-zh-drop-zone-heading-font-size);
 }
 
 .spectrum-DropZone:lang(ko) {
-	--spectrum-drop-zone-heading-font-size: var(--system-spectrum-dropzone: lang(ko) --drop-zone-lang-ko--drop-zone-heading-font-size);
+	--spectrum-drop-zone-heading-font-size: var(--system-spectrum-dropzone-lang-ko-drop-zone-heading-font-size);
 }

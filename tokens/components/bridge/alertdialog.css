@@ -11,25 +11,25 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-AlertDialog {
-	--spectrum-alert-dialog-min-width: var(--system-spectrum-alertdialog--alert-dialog-min-width);
-	--spectrum-alert-dialog-max-width: var(--system-spectrum-alertdialog--alert-dialog-max-width);
-	--spectrum-alert-dialog-icon-size: var(--system-spectrum-alertdialog--alert-dialog-icon-size);
-	--spectrum-alert-dialog-warning-icon-color: var(--system-spectrum-alertdialog--alert-dialog-warning-icon-color);
-	--spectrum-alert-dialog-error-icon-color: var(--system-spectrum-alertdialog--alert-dialog-error-icon-color);
-	--spectrum-alert-dialog-title-font-family: var(--system-spectrum-alertdialog--alert-dialog-title-font-family);
-	--spectrum-alert-dialog-title-font-weight: var(--system-spectrum-alertdialog--alert-dialog-title-font-weight);
-	--spectrum-alert-dialog-title-font-style: var(--system-spectrum-alertdialog--alert-dialog-title-font-style);
-	--spectrum-alert-dialog-title-font-size: var(--system-spectrum-alertdialog--alert-dialog-title-font-size);
-	--spectrum-alert-dialog-title-line-height: var(--system-spectrum-alertdialog--alert-dialog-title-line-height);
-	--spectrum-alert-dialog-title-color: var(--system-spectrum-alertdialog--alert-dialog-title-color);
-	--spectrum-alert-dialog-body-font-family: var(--system-spectrum-alertdialog--alert-dialog-body-font-family);
-	--spectrum-alert-dialog-body-font-weight: var(--system-spectrum-alertdialog--alert-dialog-body-font-weight);
-	--spectrum-alert-dialog-body-font-style: var(--system-spectrum-alertdialog--alert-dialog-body-font-style);
-	--spectrum-alert-dialog-body-font-size: var(--system-spectrum-alertdialog--alert-dialog-body-font-size);
-	--spectrum-alert-dialog-body-line-height: var(--system-spectrum-alertdialog--alert-dialog-body-line-height);
-	--spectrum-alert-dialog-body-color: var(--system-spectrum-alertdialog--alert-dialog-body-color);
-	--spectrum-alert-dialog-title-to-divider: var(--system-spectrum-alertdialog--alert-dialog-title-to-divider);
-	--spectrum-alert-dialog-divider-to-description: var(--system-spectrum-alertdialog--alert-dialog-divider-to-description);
-	--spectrum-alert-dialog-title-to-icon: var(--system-spectrum-alertdialog--alert-dialog-title-to-icon);
-	--mod-buttongroup-justify-content: var(--system-spectrum-alertdialog--mod-buttongroup-justify-content);
+	--spectrum-alert-dialog-min-width: var(--system-spectrum-alertdialog-alert-dialog-min-width);
+	--spectrum-alert-dialog-max-width: var(--system-spectrum-alertdialog-alert-dialog-max-width);
+	--spectrum-alert-dialog-icon-size: var(--system-spectrum-alertdialog-alert-dialog-icon-size);
+	--spectrum-alert-dialog-warning-icon-color: var(--system-spectrum-alertdialog-alert-dialog-warning-icon-color);
+	--spectrum-alert-dialog-error-icon-color: var(--system-spectrum-alertdialog-alert-dialog-error-icon-color);
+	--spectrum-alert-dialog-title-font-family: var(--system-spectrum-alertdialog-alert-dialog-title-font-family);
+	--spectrum-alert-dialog-title-font-weight: var(--system-spectrum-alertdialog-alert-dialog-title-font-weight);
+	--spectrum-alert-dialog-title-font-style: var(--system-spectrum-alertdialog-alert-dialog-title-font-style);
+	--spectrum-alert-dialog-title-font-size: var(--system-spectrum-alertdialog-alert-dialog-title-font-size);
+	--spectrum-alert-dialog-title-line-height: var(--system-spectrum-alertdialog-alert-dialog-title-line-height);
+	--spectrum-alert-dialog-title-color: var(--system-spectrum-alertdialog-alert-dialog-title-color);
+	--spectrum-alert-dialog-body-font-family: var(--system-spectrum-alertdialog-alert-dialog-body-font-family);
+	--spectrum-alert-dialog-body-font-weight: var(--system-spectrum-alertdialog-alert-dialog-body-font-weight);
+	--spectrum-alert-dialog-body-font-style: var(--system-spectrum-alertdialog-alert-dialog-body-font-style);
+	--spectrum-alert-dialog-body-font-size: var(--system-spectrum-alertdialog-alert-dialog-body-font-size);
+	--spectrum-alert-dialog-body-line-height: var(--system-spectrum-alertdialog-alert-dialog-body-line-height);
+	--spectrum-alert-dialog-body-color: var(--system-spectrum-alertdialog-alert-dialog-body-color);
+	--spectrum-alert-dialog-title-to-divider: var(--system-spectrum-alertdialog-alert-dialog-title-to-divider);
+	--spectrum-alert-dialog-divider-to-description: var(--system-spectrum-alertdialog-alert-dialog-divider-to-description);
+	--spectrum-alert-dialog-title-to-icon: var(--system-spectrum-alertdialog-alert-dialog-title-to-icon);
+	--mod-buttongroup-justify-content: var(--system-spectrum-alertdialog-buttongroup-justify-content);
 }
