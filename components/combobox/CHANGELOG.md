@@ -1,5 +1,19 @@
 # Change Log
 
+## 4.0.0-s2-foundations.5
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`de1d39f`](https://github.com/adobe/spectrum-css/commit/de1d39fdedc297032735acf97d0f87b6f2e45f50) Thanks [@pfulton](https://github.com/pfulton)! - Fix to how the system mapped custom property names are generated; adding support for pseudo functions, combinators, and complex selectors
+
+- Updated dependencies [[`de1d39f`](https://github.com/adobe/spectrum-css/commit/de1d39fdedc297032735acf97d0f87b6f2e45f50)]:
+  - @spectrum-css/progresscircle@4.0.0-s2-foundations.5
+  - @spectrum-css/pickerbutton@6.0.0-s2-foundations.5
+  - @spectrum-css/textfield@8.0.0-s2-foundations.5
+  - @spectrum-css/popover@8.0.0-s2-foundations.5
+  - @spectrum-css/menu@8.0.0-s2-foundations.5
+  - @spectrum-css/tokens@15.0.0-s2-foundations.5
+
 ## 4.0.0-s2-foundations.4
 
 ### Patch Changes
