@@ -2,7 +2,7 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { AccordionGroup } from "./template.js";
+import { AccordionGroup, Template } from "./template.js";
 
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
@@ -162,8 +162,9 @@ Default.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = AccordionGroup.bind({});
 WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.args = Default.args;
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -172,20 +173,23 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Regular = Default.bind({});
+export const Regular = Template.bind({});
 Regular.tags = ["autodocs", "!dev"];
 Regular.args = {
+	...Default.args,
 	density: "regular",
 };
 
-export const Compact = Default.bind({});
+export const Compact = Template.bind({});
 Compact.tags = ["autodocs", "!dev"];
 Compact.args = {
+	...Default.args,
 	density: "compact",
 };
 
-export const Spacious = Default.bind({});
+export const Spacious = Template.bind({});
 Spacious.tags = ["autodocs", "!dev"];
 Spacious.args = {
+	...Default.args,
 	density: "spacious",
 };

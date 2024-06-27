@@ -1,9 +1,26 @@
 import "@spectrum-css/typography/dist/index.css";
+
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
+
+/**
+ * A single content item can be a string, object, or function.
+ * @typedef {import('@storybook/types').ArgsStoryFn} StorybookFunction
+ */
+
+/**
+ * Renders a heading or code block with testing details for user's reference. Excluded from testing snapshot logic using "chromatic-ignore".
+ * @param {Object} Settings
+ * @param {("heading"|"code")} Settings.type - The type of content to render
+ * @param {string} Settings.content - The content to render.
+ * @param {string} Settings.size - The size of the heading
+ * @param {string} Settings.weight - The weight of the heading
+ * @param {string[]} Settings.customClasses - Additional classes to apply to the element
+ * @returns
+ */
 const Heading = ({
 	type = "heading",
 	content,
@@ -234,9 +251,20 @@ export const Variants = ({
 	};
 };
 
+/**
+ * A single content item can be a string, object, or function.
+ * @typedef {(string|Object|StorybookFunction)} ContentItem
+ */
+
+/**
+ * A utility for rendering content in a template that may be an array (preferred) or a single item. That item can be a string, object, or function.
+ * @param {ContentItem|ContentItem[]} content
+ * @param {{ args: Parameters<StorybookFunction>[0], context: Parameters<StorybookFunction>[1], callback: StorybookFunction }} options
+ * @returns
+ */
 export const renderContent = (content = [], {
-	context = {},
 	args = {},
+	context = {},
 	callback = (args, context) => {
 		console.log(JSON.stringify(args, null, 2), JSON.stringify(context, null, 2));
 		return nothing;
