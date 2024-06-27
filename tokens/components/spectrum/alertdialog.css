@@ -11,25 +11,25 @@ governing permissions and limitations under the License.
 */
 
 .spectrum {
-	--system-spectrum-alertdialog--alert-dialog-min-width: var(--spectrum-alert-dialog-minimum-width);
-	--system-spectrum-alertdialog--alert-dialog-max-width: var(--spectrum-alert-dialog-maximum-width);
-	--system-spectrum-alertdialog--alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100);
-	--system-spectrum-alertdialog--alert-dialog-warning-icon-color: var(--spectrum-notice-visual-color);
-	--system-spectrum-alertdialog--alert-dialog-error-icon-color: var(--spectrum-negative-visual-color);
-	--system-spectrum-alertdialog--alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
-	--system-spectrum-alertdialog--alert-dialog-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
-	--system-spectrum-alertdialog--alert-dialog-title-font-style: var(--spectrum-heading-sans-serif-font-style);
-	--system-spectrum-alertdialog--alert-dialog-title-font-size: var(--spectrum-alert-dialog-title-size);
-	--system-spectrum-alertdialog--alert-dialog-title-line-height: var(--spectrum-heading-line-height);
-	--system-spectrum-alertdialog--alert-dialog-title-color: var(--spectrum-heading-color);
-	--system-spectrum-alertdialog--alert-dialog-body-font-family: var(--spectrum-sans-font-family-stack);
-	--system-spectrum-alertdialog--alert-dialog-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
-	--system-spectrum-alertdialog--alert-dialog-body-font-style: var(--spectrum-body-sans-serif-font-style);
-	--system-spectrum-alertdialog--alert-dialog-body-font-size: var(--spectrum-alert-dialog-description-size);
-	--system-spectrum-alertdialog--alert-dialog-body-line-height: var(--spectrum-line-height-100);
-	--system-spectrum-alertdialog--alert-dialog-body-color: var(--spectrum-body-color);
-	--system-spectrum-alertdialog--alert-dialog-title-to-divider: var(--spectrum-spacing-200);
-	--system-spectrum-alertdialog--alert-dialog-divider-to-description: var(--spectrum-spacing-300);
-	--system-spectrum-alertdialog--alert-dialog-title-to-icon: var(--spectrum-spacing-300);
-	--system-spectrum-alertdialog--mod-buttongroup-justify-content: flex-end;
+	--system-spectrum-alertdialog-alert-dialog-min-width: var(--spectrum-alert-dialog-minimum-width);
+	--system-spectrum-alertdialog-alert-dialog-max-width: var(--spectrum-alert-dialog-maximum-width);
+	--system-spectrum-alertdialog-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-spectrum-alertdialog-alert-dialog-warning-icon-color: var(--spectrum-notice-visual-color);
+	--system-spectrum-alertdialog-alert-dialog-error-icon-color: var(--spectrum-negative-visual-color);
+	--system-spectrum-alertdialog-alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
+	--system-spectrum-alertdialog-alert-dialog-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	--system-spectrum-alertdialog-alert-dialog-title-font-style: var(--spectrum-heading-sans-serif-font-style);
+	--system-spectrum-alertdialog-alert-dialog-title-font-size: var(--spectrum-alert-dialog-title-size);
+	--system-spectrum-alertdialog-alert-dialog-title-line-height: var(--spectrum-heading-line-height);
+	--system-spectrum-alertdialog-alert-dialog-title-color: var(--spectrum-heading-color);
+	--system-spectrum-alertdialog-alert-dialog-body-font-family: var(--spectrum-sans-font-family-stack);
+	--system-spectrum-alertdialog-alert-dialog-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--system-spectrum-alertdialog-alert-dialog-body-font-style: var(--spectrum-body-sans-serif-font-style);
+	--system-spectrum-alertdialog-alert-dialog-body-font-size: var(--spectrum-alert-dialog-description-size);
+	--system-spectrum-alertdialog-alert-dialog-body-line-height: var(--spectrum-line-height-100);
+	--system-spectrum-alertdialog-alert-dialog-body-color: var(--spectrum-body-color);
+	--system-spectrum-alertdialog-alert-dialog-title-to-divider: var(--spectrum-spacing-200);
+	--system-spectrum-alertdialog-alert-dialog-divider-to-description: var(--spectrum-spacing-300);
+	--system-spectrum-alertdialog-alert-dialog-title-to-icon: var(--spectrum-spacing-300);
+	--system-spectrum-alertdialog-buttongroup-justify-content: flex-end;
 }

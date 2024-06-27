@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-SwatchGroup {
-	--spectrum-swatchgroup-spacing-compact: var(--system-spectrum-swatchgroup--spacing-compact);
-	--spectrum-swatchgroup-spacing-regular: var(--system-spectrum-swatchgroup--spacing-regular);
-	--spectrum-swatchgroup-spacing-spacious: var(--system-spectrum-swatchgroup--spacing-spacious);
+	--spectrum-swatchgroup-spacing-compact: var(--system-spectrum-swatchgroup-spacing-compact);
+	--spectrum-swatchgroup-spacing-regular: var(--system-spectrum-swatchgroup-spacing-regular);
+	--spectrum-swatchgroup-spacing-spacious: var(--system-spectrum-swatchgroup-spacing-spacious);
 }
