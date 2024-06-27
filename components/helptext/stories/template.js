@@ -17,7 +17,7 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-}, context) => html`
+} = {}, context) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,

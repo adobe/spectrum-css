@@ -10,7 +10,7 @@ export const Template = ({
 	description,
 	customClasses = [],
 	useAccentColor = false,
-}, context) => html`
+} = {}, context) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,

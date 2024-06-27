@@ -10,11 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
 .spectrum-{{ pascalCase name }} {
   /* Variables defined here */
   /* --spectrum-{{ folderName }}-... */
+
+  /* Properties defined here */
+  color: var(--highcontrast-{{ folderName }}-content-color-default, var(--mod-{{ folderName }}-content-color-default, var(--spectrum-{{ folderName }}-content-color-default)));
 
   &:lang(ja),
   &:lang(zh),
@@ -34,9 +35,4 @@ governing permissions and limitations under the License.
 
     forced-color-adjust: none;
   }
-}
-
-.spectrum-{{ pascalCase name }} {
-  /* Properties defined here */
-  color: var(--highcontrast-{{ folderName }}-content-color-default, var(--mod-{{ folderName }}-content-color-default, var(--spectrum-{{ folderName }}-content-color-default)));
 }

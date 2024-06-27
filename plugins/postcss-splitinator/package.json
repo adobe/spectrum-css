@@ -10,7 +10,8 @@
     "test": "ava"
   },
   "dependencies": {
-    "postcss": "^8.4.38"
+    "postcss": "^8.4.38",
+    "postcss-values-parser": "^6.0.2"
   },
   "publishConfig": {
     "access": "public"

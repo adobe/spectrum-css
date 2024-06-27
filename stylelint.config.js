@@ -1,4 +1,5 @@
 const { join } = require("path");
+const { propertyGroups } = require("stylelint-config-clean-order");
 
 module.exports = {
 	allowEmptyInput: true,
@@ -81,21 +82,30 @@ module.exports = {
 			},
 		],
 		"declaration-block-no-duplicate-custom-properties": true,
-		"declaration-property-value-no-unknown": [true, {
-			ignoreProperties: {
-				"color": ["CanvasText"]
+		"declaration-property-value-no-unknown": [
+			true,
+			{
+				ignoreProperties: {
+					color: ["CanvasText"],
+				},
 			},
-		}],
+		],
 		"value-keyword-case": [
 			"lower",
 			{
 				camelCaseSvgKeywords: true,
-				ignoreKeywords: ["Transparent", "Text"]
+				ignoreKeywords: ["Transparent", "Text"],
 			},
 		],
 		"selector-not-notation": "complex",
-		"order/order": null,
-		"order/properties-order": null,
+		"order/order": ["custom-properties", "declarations"],
+		"order/properties-order": [
+			propertyGroups.map((properties) => ({ properties })),
+			{
+				severity: "warning",
+				unspecified: "bottomAlphabetical",
+			},
+		],
 		"header/header": [
 			join(__dirname, "COPYRIGHT"),
 			{
@@ -121,46 +131,40 @@ module.exports = {
 		],
 		/** Local/custom plugins */
 		"spectrum-tools/no-missing-var": true,
+		// @todo bring this back after setting it up to read in the props from themes/*.css
+		"spectrum-tools/no-unused-custom-properties": null,
+		"spectrum-tools/no-unknown-custom-properties": null,
 		/** @note this enables reporting of unused variables in a file */
-		"spectrum-tools/no-unused-custom-properties": [
-			true,
-			{
-				ignoreList: [/^--mod-/, /^--highcontrast-/, /^--system-/],
-				disableFix: true,
-				severity: "warning",
-			},
-		],
-		"spectrum-tools/no-unknown-custom-properties": [
-			true,
-			{
-				/** @note this is a list of custom properties that are allowed to be unknown */
-				ignoreList: [
-					/^--mod-/,
-					/^--highcontrast-/,
-					/^--system-/,
-					/^--spectrum-(global|alias|component)-/,
-					/^--spectrum-animation-/,
-				],
-				skipDependencies: false,
-				disableFix: true,
-				severity: "warning",
-			},
-		],
+		// "spectrum-tools/no-unused-custom-properties": [
+		// 	true,
+		// 	{
+		// 		ignoreList: [/^--mod-/, /^--highcontrast-/, /^--system-/],
+		// 		disableFix: true,
+		// 		severity: "warning",
+		// 	},
+		// ],
+		// "spectrum-tools/no-unknown-custom-properties": [
+		// 	true,
+		// 	{
+		// 		/** @note this is a list of custom properties that are allowed to be unknown */
+		// 		ignoreList: [
+		// 			/^--mod-/,
+		// 			/^--highcontrast-/,
+		// 			/^--system-/,
+		// 			/^--spectrum-(global|alias|component)-/,
+		// 			/^--spectrum-animation-/,
+		// 		],
+		// 		skipDependencies: false,
+		// 		disableFix: true,
+		// 		severity: "warning",
+		// 	},
+		// ],
 	},
 	overrides: [
 		{
-			files: ["components/*/themes/*.css", "tokens/**/*.css"],
-			rules: {
-				"spectrum-tools/no-unused-custom-properties": null,
-				"spectrum-tools/no-unknown-custom-properties": null,
-			},
-		},
-		{
-			files: ["site/**/*.css", ".storybook/assets/*.css"],
+			files: ["site/**/*.css", "storybook/assets/*.css"],
 			rules: {
 				"custom-property-pattern": null,
-				"spectrum-tools/no-unused-custom-properties": null,
-				"spectrum-tools/no-unknown-custom-properties": null,
 				"color-function-notation": null,
 			},
 		},

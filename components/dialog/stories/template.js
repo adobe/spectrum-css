@@ -20,10 +20,10 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	id,
-	...globals
-}, context) => {
+} = {}, context) => {
 	const [, updateArgs] = useArgs();
-	const scale = window.__scale;
+	const { globals = {} } = context;
+	const scale = globals.scale ?? "medium";
 
 	const Dialog = html`
 		<div
@@ -44,14 +44,12 @@ export const Template = ({
 					Divider({
 						horizontal: true,
 						customClasses: [`${rootClass}-divider`],
-						...globals,
 					}, context),
 				])}
 				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}, context) : c))}</section>
 				${when(isDismissable, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
-						...globals,
 						onclick: () => {
 							updateArgs({ isOpen: !isOpen });
 						},
@@ -63,12 +61,8 @@ export const Template = ({
 
 	if (showModal) {
 		return html`
-			${Underlay({
-				...globals,
-				isOpen,
-			}, context)}
+			${Underlay({ isOpen }, context)}
 			${Button({
-				...globals,
 				size: "m",
 				variant: "secondary",
 				label: "Click to open dialog",
@@ -85,7 +79,6 @@ export const Template = ({
 				},
 			}, context)}
 			${Modal({
-				...globals,
 				isOpen,
 				content: Dialog,
 			}, context)}

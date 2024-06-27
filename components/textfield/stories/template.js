@@ -42,8 +42,7 @@ export const Template = ({
 	autocomplete = true,
 	onclick,
 	customStyles = {},
-	...globals
-}, context) => {
+} = {}, context = {}) => {
 	const [, updateArgs] = useArgs();
 
 	if (isInvalid) {
@@ -90,12 +89,10 @@ export const Template = ({
 			id=${ifDefined(id)}
 		>
 		${when(displayLabel, () => FieldLabel({
-			...globals,
 			size,
 			label: labelText,
 		}, context))}
 		${when(iconName, () => Icon({
-			...globals,
 			size,
 			iconName,
 			setName: iconSet,
@@ -111,11 +108,11 @@ export const Template = ({
 				placeholder=${ifDefined(placeholder)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
-				.value=${ifDefined(value)}
-				autocomplete=${autocomplete ? undefined : "off"}
+				.value=${value}
+				autocomplete=${ifDefined(autocomplete ? undefined : "off")}
 				?required=${isRequired}
 				?disabled=${isDisabled}
-				?readonly=${ifDefined(isReadOnly)}
+				?readonly=${isReadOnly}
 				pattern=${ifDefined(pattern)}
 				class=${classMap({
 					[`${rootClass}-input`]: true,
@@ -127,11 +124,11 @@ export const Template = ({
 				placeholder=${ifDefined(placeholder)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
-				.value=${ifDefined(value)}
-				autocomplete=${autocomplete ? undefined : "off"}
+				.value=${value}
+				autocomplete=${ifDefined(autocomplete ? undefined : "off")}
 				?required=${isRequired}
 				?disabled=${isDisabled}
-				?readonly=${ifDefined(isReadOnly)}
+				?readonly=${isReadOnly}
 				pattern=${ifDefined(pattern)}
 				class=${classMap({
 					[`${rootClass}-input`]: true,

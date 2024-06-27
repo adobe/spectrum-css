@@ -10,46 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-Divider {
-	/* default thickness no size */
-	--spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
-
-	/* default background color no size */
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-medium);
-
-	/* background colors */
-	--spectrum-divider-background-color-small: var(--spectrum-gray-300);
-	--spectrum-divider-background-color-medium: var(--spectrum-gray-300);
-	--spectrum-divider-background-color-large: var(--spectrum-gray-800);
-
-	/* static white background colors */
-	--spectrum-divider-background-color-small-static-white: var(--spectrum-transparent-white-300);
-	--spectrum-divider-background-color-medium-static-white: var(--spectrum-transparent-white-300);
-	--spectrum-divider-background-color-large-static-white: var(--spectrum-transparent-white-800);
-
-	/* static black background colors */
-	--spectrum-divider-background-color-small-static-black: var(--spectrum-transparent-black-300);
-	--spectrum-divider-background-color-medium-static-black: var(--spectrum-transparent-black-300);
-	--spectrum-divider-background-color-large-static-black: var(--spectrum-transparent-black-800);
-}
-
-/* small divider */
-.spectrum-Divider--sizeS {
-	--spectrum-divider-thickness: var(--spectrum-divider-thickness-small);
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-small);
-}
-
-/* medium divider */
-.spectrum-Divider--sizeM {
-	--spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-medium);
-}
-
-/* large divider */
-.spectrum-Divider--sizeL {
-	--spectrum-divider-thickness: var(--spectrum-divider-thickness-large);
-	--spectrum-divider-background-color: var(--spectrum-divider-background-color-large);
-}
+@import "themes/spectrum.css";
 
 /* windows high contrast mode */
 @media (forced-colors: active) {
@@ -68,17 +29,16 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Divider {
-	block-size: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-	inline-size: 100%;
-
 	/* Show the overflow for hr in Edge and IE. */
 	overflow: visible;
+	inline-size: 100%;
+	block-size: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
+
+	background-color: var(--mod-divider-background-color, var(--spectrum-divider-background-color));
 
 	border: none;
 	border-width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
 	border-radius: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-
-	background-color: var(--mod-divider-background-color, var(--spectrum-divider-background-color));
 }
 
 /* static white variant colors */
@@ -113,8 +73,8 @@ governing permissions and limitations under the License.
 
 /* vertical dividers */
 .spectrum-Divider--vertical {
-	inline-size: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-	margin-block: var(--mod-divider-vertical-margin);
-	block-size: var(--mod-divider-vertical-height, 100%);
 	align-self: var(--mod-divider-vertical-align);
+	inline-size: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
+	block-size: var(--mod-divider-vertical-height, 100%);
+	margin-block: var(--mod-divider-vertical-margin);
 }

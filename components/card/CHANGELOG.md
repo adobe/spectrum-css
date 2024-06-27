@@ -1,5 +1,69 @@
 # Change Log
 
+## 9.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df) Thanks [@pfulton](https://github.com/pfulton)! - fixes a compilation issue in the tokens dist artifacts
+
+### Patch Changes
+
+- Updated dependencies [[`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.3
+  - @spectrum-css/typography@7.0.0-s2-foundations.3
+  - @spectrum-css/checkbox@10.0.0-s2-foundations.3
+  - @spectrum-css/asset@6.0.0-s2-foundations.3
+  - @spectrum-css/icon@8.0.0-s2-foundations.3
+  - @spectrum-css/tokens@15.0.0-s2-foundations.3
+
+## 9.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+### Patch Changes
+
+- Updated dependencies [[`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.2
+  - @spectrum-css/typography@7.0.0-s2-foundations.2
+  - @spectrum-css/checkbox@10.0.0-s2-foundations.2
+  - @spectrum-css/asset@6.0.0-s2-foundations.2
+  - @spectrum-css/icon@8.0.0-s2-foundations.2
+  - @spectrum-css/tokens@15.0.0-s2-foundations.2
+
+## 9.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e) Thanks [@pfulton](https://github.com/pfulton)! - Fixes an issue where vars.css was not being populated with the correct values
+
+### Patch Changes
+
+- Updated dependencies [[`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.1
+  - @spectrum-css/typography@7.0.0-s2-foundations.1
+  - @spectrum-css/checkbox@10.0.0-s2-foundations.1
+  - @spectrum-css/asset@6.0.0-s2-foundations.1
+  - @spectrum-css/icon@8.0.0-s2-foundations.1
+  - @spectrum-css/tokens@15.0.0-s2-foundations.1
+
+## 9.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.0
+  - @spectrum-css/checkbox@10.0.0-s2-foundations.0
+  - @spectrum-css/asset@6.0.0-s2-foundations.0
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+  - @spectrum-css/icon@8.0.0-s2-foundations.0
+  - @spectrum-css/typography@7.0.0-s2-foundations.0
+
 ## 8.1.1
 
 ### Patch Changes
@@ -37,7 +101,9 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="8.0.0"></a>
+
 ## 8.0.0
+
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@7.0.2...@spectrum-css/card@8.0.0)
 
@@ -56,21 +122,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * Imports added to index.css and themes/express.css
 
 <a name="7.0.2"></a>
+
 ## 7.0.2
+
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@7.0.1...@spectrum-css/card@7.0.2)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="7.0.1"></a>
+
 ## 7.0.1
+
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@7.0.0...@spectrum-css/card@7.0.1)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="7.0.0"></a>
+
 ## 7.0.0
+
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.4.1...@spectrum-css/card@7.0.0)
 
@@ -87,21 +159,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 This component has been deprecated. Use an action bar to allow users to perform actions on either a single or multiple items at the same time, instead.
 
 <a name="6.4.1"></a>
+
 ## 6.4.1
+
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.4.0"></a>
+
 ## 6.4.0
+
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.3.1...@spectrum-css/card@6.4.0)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.3.1"></a>
+
 ## 6.3.1
+
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.3.0...@spectrum-css/card@6.3.1)
 
@@ -112,7 +190,9 @@ This component has been deprecated. Use an action bar to allow users to perform 
   **card:**revert misnamed instance of background color mod([80b3b78](https://github.com/adobe/spectrum-css/commit/80b3b78))
 
 <a name="6.3.0"></a>
+
 ## 6.3.0
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.2.2...@spectrum-css/card@6.3.0)
 
@@ -121,14 +201,18 @@ This component has been deprecated. Use an action bar to allow users to perform 
 \*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="6.2.2"></a>
+
 ## 6.2.2
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.2.1...@spectrum-css/card@6.2.2)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.2.1"></a>
+
 ## 6.2.1
+
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.2.0...@spectrum-css/card@6.2.1)
 
@@ -137,7 +221,9 @@ This component has been deprecated. Use an action bar to allow users to perform 
 - **card:**focus outline only on keyboard focus([268e3cc](https://github.com/adobe/spectrum-css/commit/268e3cc))
 
 <a name="6.2.0"></a>
+
 ## 6.2.0
+
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.24...@spectrum-css/card@6.2.0)
 
@@ -146,7 +232,9 @@ This component has been deprecated. Use an action bar to allow users to perform 
 - **card:**add additional mod properties ([#2279](https://github.com/adobe/spectrum-css/issues/2279))([a290816](https://github.com/adobe/spectrum-css/commit/a290816))
 
 <a name="6.1.0"></a>
+
 ## 6.1.0
+
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.24...@spectrum-css/card@6.1.0)
 
@@ -155,175 +243,225 @@ This component has been deprecated. Use an action bar to allow users to perform 
 - **card:**add additional mod properties ([#2279](https://github.com/adobe/spectrum-css/issues/2279))([a290816](https://github.com/adobe/spectrum-css/commit/a290816))
 
 <a name="6.0.24"></a>
+
 ## 6.0.24
+
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.23...@spectrum-css/card@6.0.24)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.23"></a>
+
 ## 6.0.23
+
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.22...@spectrum-css/card@6.0.23)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.22"></a>
+
 ## 6.0.22
+
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.21...@spectrum-css/card@6.0.22)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.21"></a>
+
 ## 6.0.21
+
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.20...@spectrum-css/card@6.0.21)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.20"></a>
+
 ## 6.0.20
+
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.19...@spectrum-css/card@6.0.20)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.19"></a>
+
 ## 6.0.19
+
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.18...@spectrum-css/card@6.0.19)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.18"></a>
+
 ## 6.0.18
+
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.17...@spectrum-css/card@6.0.18)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.17"></a>
+
 ## 6.0.17
+
 🗓
 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.16...@spectrum-css/card@6.0.17)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.16"></a>
+
 ## 6.0.16
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.15...@spectrum-css/card@6.0.16)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.15"></a>
+
 ## 6.0.15
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.14...@spectrum-css/card@6.0.15)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.14"></a>
+
 ## 6.0.14
+
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.13...@spectrum-css/card@6.0.14)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.13"></a>
+
 ## 6.0.13
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.12...@spectrum-css/card@6.0.13)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.12"></a>
+
 ## 6.0.12
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.10...@spectrum-css/card@6.0.12)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.11"></a>
+
 ## 6.0.11
+
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.10...@spectrum-css/card@6.0.11)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.10"></a>
+
 ## 6.0.10
+
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.9...@spectrum-css/card@6.0.10)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.9"></a>
+
 ## 6.0.9
+
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.8...@spectrum-css/card@6.0.9)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.8"></a>
+
 ## 6.0.8
+
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.7...@spectrum-css/card@6.0.8)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.7"></a>
+
 ## 6.0.7
+
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.6...@spectrum-css/card@6.0.7)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.6"></a>
+
 ## 6.0.6
+
 🗓
 2023-07-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.5...@spectrum-css/card@6.0.6)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.5"></a>
+
 ## 6.0.5
+
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.4...@spectrum-css/card@6.0.5)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.4"></a>
+
 ## 6.0.4
+
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.3...@spectrum-css/card@6.0.4)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.3"></a>
+
 ## 6.0.3
+
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.2...@spectrum-css/card@6.0.3)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.2"></a>
+
 ## 6.0.2
+
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.1...@spectrum-css/card@6.0.2)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.1"></a>
+
 ## 6.0.1
+
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@6.0.0...@spectrum-css/card@6.0.1)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="6.0.0"></a>
+
 ## 6.0.0
+
 🗓
 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.41...@spectrum-css/card@6.0.0)
 
@@ -336,21 +474,27 @@ This component has been deprecated. Use an action bar to allow users to perform 
     		migrates the Card component to use `@adobe/spectrum-tokens`
 
 <a name="5.0.41"></a>
+
 ## 5.0.41
+
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.40...@spectrum-css/card@5.0.41)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="5.0.40"></a>
+
 ## 5.0.40
+
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.39...@spectrum-css/card@5.0.40)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="5.0.39"></a>
+
 ## 5.0.39
+
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.38...@spectrum-css/card@5.0.39)
 
@@ -359,14 +503,18 @@ This component has been deprecated. Use an action bar to allow users to perform 
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="5.0.38"></a>
+
 ## 5.0.38
+
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.37...@spectrum-css/card@5.0.38)
 
 **Note:** Version bump only for package @spectrum-css/card
 
 <a name="5.0.37"></a>
+
 ## 5.0.37
+
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/card@5.0.36...@spectrum-css/card@5.0.37)
 

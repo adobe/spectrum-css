@@ -1,5 +1,69 @@
 # Change Log
 
+## 4.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df) Thanks [@pfulton](https://github.com/pfulton)! - fixes a compilation issue in the tokens dist artifacts
+
+### Patch Changes
+
+- Updated dependencies [[`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df)]:
+  - @spectrum-css/divider@4.0.0-s2-foundations.3
+  - @spectrum-css/button@14.0.0-s2-foundations.3
+  - @spectrum-css/dialog@11.0.0-s2-foundations.3
+  - @spectrum-css/modal@6.0.0-s2-foundations.3
+  - @spectrum-css/icon@8.0.0-s2-foundations.3
+  - @spectrum-css/tokens@15.0.0-s2-foundations.3
+
+## 4.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+### Patch Changes
+
+- Updated dependencies [[`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58)]:
+  - @spectrum-css/divider@4.0.0-s2-foundations.2
+  - @spectrum-css/button@14.0.0-s2-foundations.2
+  - @spectrum-css/dialog@11.0.0-s2-foundations.2
+  - @spectrum-css/modal@6.0.0-s2-foundations.2
+  - @spectrum-css/icon@8.0.0-s2-foundations.2
+  - @spectrum-css/tokens@15.0.0-s2-foundations.2
+
+## 4.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e) Thanks [@pfulton](https://github.com/pfulton)! - Fixes an issue where vars.css was not being populated with the correct values
+
+### Patch Changes
+
+- Updated dependencies [[`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e)]:
+  - @spectrum-css/divider@4.0.0-s2-foundations.1
+  - @spectrum-css/button@14.0.0-s2-foundations.1
+  - @spectrum-css/dialog@11.0.0-s2-foundations.1
+  - @spectrum-css/modal@6.0.0-s2-foundations.1
+  - @spectrum-css/icon@8.0.0-s2-foundations.1
+  - @spectrum-css/tokens@15.0.0-s2-foundations.1
+
+## 4.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/divider@4.0.0-s2-foundations.0
+  - @spectrum-css/button@14.0.0-s2-foundations.0
+  - @spectrum-css/modal@6.0.0-s2-foundations.0
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+  - @spectrum-css/dialog@11.0.0-s2-foundations.0
+  - @spectrum-css/icon@8.0.0-s2-foundations.0
+
 ## 3.1.1
 
 ### Patch Changes
@@ -37,7 +101,9 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="3.0.0"></a>
+
 ## 3.0.0
+
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.2.7...@spectrum-css/tray@3.0.0)
 
@@ -52,21 +118,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="2.2.7"></a>
+
 ## 2.2.7
+
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.2.6...@spectrum-css/tray@2.2.7)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.2.6"></a>
+
 ## 2.2.6
+
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.2.5...@spectrum-css/tray@2.2.6)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.2.5"></a>
+
 ## 2.2.5
+
 🗓
 2024-02-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.2.4...@spectrum-css/tray@2.2.5)
 
@@ -75,35 +147,45 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **tray:**full width at portrait orientation ([#2547](https://github.com/adobe/spectrum-css/issues/2547))([c9a79f2](https://github.com/adobe/spectrum-css/commit/c9a79f2))
 
 <a name="2.2.4"></a>
+
 ## 2.2.4
+
 🗓
 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.2.3...@spectrum-css/tray@2.2.4)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.2.3"></a>
+
 ## 2.2.3
+
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.2.2...@spectrum-css/tray@2.2.3)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.2.2"></a>
+
 ## 2.2.2
+
 🗓
 2024-02-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.2.1...@spectrum-css/tray@2.2.2)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.2.1"></a>
+
 ## 2.2.1
+
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.2.0"></a>
+
 ## 2.2.0
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.22...@spectrum-css/tray@2.2.0)
 
@@ -112,105 +194,135 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="2.1.22"></a>
+
 ## 2.1.22
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.21...@spectrum-css/tray@2.1.22)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.21"></a>
+
 ## 2.1.21
+
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.20...@spectrum-css/tray@2.1.21)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.20"></a>
+
 ## 2.1.20
+
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.18...@spectrum-css/tray@2.1.20)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.19"></a>
+
 ## 2.1.19
+
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.18...@spectrum-css/tray@2.1.19)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.18"></a>
+
 ## 2.1.18
+
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.17...@spectrum-css/tray@2.1.18)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.17"></a>
+
 ## 2.1.17
+
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.16...@spectrum-css/tray@2.1.17)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.16"></a>
+
 ## 2.1.16
+
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.15...@spectrum-css/tray@2.1.16)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.15"></a>
+
 ## 2.1.15
+
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.14...@spectrum-css/tray@2.1.15)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.14"></a>
+
 ## 2.1.14
+
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.13...@spectrum-css/tray@2.1.14)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.13"></a>
+
 ## 2.1.13
+
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.12...@spectrum-css/tray@2.1.13)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.12"></a>
+
 ## 2.1.12
+
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.11...@spectrum-css/tray@2.1.12)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.11"></a>
+
 ## 2.1.11
+
 🗓
 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.10...@spectrum-css/tray@2.1.11)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.10"></a>
+
 ## 2.1.10
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.9...@spectrum-css/tray@2.1.10)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.9"></a>
+
 ## 2.1.9
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.8...@spectrum-css/tray@2.1.9)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.8"></a>
+
 ## 2.1.8
+
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.7...@spectrum-css/tray@2.1.8)
 
@@ -219,56 +331,72 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="2.1.7"></a>
+
 ## 2.1.7
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.6...@spectrum-css/tray@2.1.7)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.6"></a>
+
 ## 2.1.6
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.4...@spectrum-css/tray@2.1.6)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.5"></a>
+
 ## 2.1.5
+
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.4...@spectrum-css/tray@2.1.5)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.4"></a>
+
 ## 2.1.4
+
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.3...@spectrum-css/tray@2.1.4)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.3"></a>
+
 ## 2.1.3
+
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.2...@spectrum-css/tray@2.1.3)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.2"></a>
+
 ## 2.1.2
+
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.1...@spectrum-css/tray@2.1.2)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.1"></a>
+
 ## 2.1.1
+
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.1.0...@spectrum-css/tray@2.1.1)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.1.0"></a>
+
 ## 2.1.0
+
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.57...@spectrum-css/tray@2.1.0)
 
@@ -277,56 +405,72 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **tray:**use token for top and bottom edge to content area([ac54820](https://github.com/adobe/spectrum-css/commit/ac54820))
 
 <a name="2.0.57"></a>
+
 ## 2.0.57
+
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.56...@spectrum-css/tray@2.0.57)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.0.56"></a>
+
 ## 2.0.56
+
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.55...@spectrum-css/tray@2.0.56)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.0.55"></a>
+
 ## 2.0.55
+
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.54...@spectrum-css/tray@2.0.55)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.0.54"></a>
+
 ## 2.0.54
+
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.53...@spectrum-css/tray@2.0.54)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.0.53"></a>
+
 ## 2.0.53
+
 🗓
 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.52...@spectrum-css/tray@2.0.53)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.0.52"></a>
+
 ## 2.0.52
+
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.51...@spectrum-css/tray@2.0.52)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.0.51"></a>
+
 ## 2.0.51
+
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.50...@spectrum-css/tray@2.0.51)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.0.50"></a>
+
 ## 2.0.50
+
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.49...@spectrum-css/tray@2.0.50)
 
@@ -335,14 +479,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="2.0.49"></a>
+
 ## 2.0.49
+
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.48...@spectrum-css/tray@2.0.49)
 
 **Note:** Version bump only for package @spectrum-css/tray
 
 <a name="2.0.48"></a>
+
 ## 2.0.48
+
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tray@2.0.47...@spectrum-css/tray@2.0.48)
 

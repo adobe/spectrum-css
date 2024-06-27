@@ -1,5 +1,53 @@
 # Change Log
 
+## 6.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df) Thanks [@pfulton](https://github.com/pfulton)! - fixes a compilation issue in the tokens dist artifacts
+
+### Patch Changes
+
+- Updated dependencies [[`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.3
+  - @spectrum-css/tokens@15.0.0-s2-foundations.3
+
+## 6.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+### Patch Changes
+
+- Updated dependencies [[`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.2
+  - @spectrum-css/tokens@15.0.0-s2-foundations.2
+
+## 6.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e) Thanks [@pfulton](https://github.com/pfulton)! - Fixes an issue where vars.css was not being populated with the correct values
+
+### Patch Changes
+
+- Updated dependencies [[`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.1
+  - @spectrum-css/tokens@15.0.0-s2-foundations.1
+
+## 6.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.0
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+
 ## 5.1.0
 
 ### Minor Changes
@@ -20,7 +68,9 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="5.0.0"></a>
+
 ## 5.0.0
+
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.2.5...@spectrum-css/actiongroup@5.0.0)
 
@@ -35,119 +85,153 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="4.2.5"></a>
+
 ## 4.2.5
+
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.2.4...@spectrum-css/actiongroup@4.2.5)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.2.4"></a>
+
 ## 4.2.4
+
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.2.3...@spectrum-css/actiongroup@4.2.4)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.2.3"></a>
+
 ## 4.2.3
+
 🗓
 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.2.2...@spectrum-css/actiongroup@4.2.3)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.2.2"></a>
+
 ## 4.2.2
+
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.2.1...@spectrum-css/actiongroup@4.2.2)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.2.1"></a>
+
 ## 4.2.1
+
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.2.0"></a>
+
 ## 4.2.0
+
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.10...@spectrum-css/actiongroup@4.2.0)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.10"></a>
+
 ## 4.1.10
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.9...@spectrum-css/actiongroup@4.1.10)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.9"></a>
+
 ## 4.1.9
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.8...@spectrum-css/actiongroup@4.1.9)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.8"></a>
+
 ## 4.1.8
+
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.7...@spectrum-css/actiongroup@4.1.8)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.7"></a>
+
 ## 4.1.7
+
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.5...@spectrum-css/actiongroup@4.1.7)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.6"></a>
+
 ## 4.1.6
+
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.5...@spectrum-css/actiongroup@4.1.6)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.5"></a>
+
 ## 4.1.5
+
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.4...@spectrum-css/actiongroup@4.1.5)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.4"></a>
+
 ## 4.1.4
+
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.3...@spectrum-css/actiongroup@4.1.4)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.3"></a>
+
 ## 4.1.3
+
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.2...@spectrum-css/actiongroup@4.1.3)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.2"></a>
+
 ## 4.1.2
+
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.1...@spectrum-css/actiongroup@4.1.2)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.1"></a>
+
 ## 4.1.1
+
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.1.0...@spectrum-css/actiongroup@4.1.1)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.1.0"></a>
+
 ## 4.1.0
+
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.0.7...@spectrum-css/actiongroup@4.1.0)
 
@@ -156,28 +240,36 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **actiongroup:**add support for extra small ([#2154](https://github.com/adobe/spectrum-css/issues/2154))([f115fa0](https://github.com/adobe/spectrum-css/commit/f115fa0))
 
 <a name="4.0.7"></a>
+
 ## 4.0.7
+
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.0.6...@spectrum-css/actiongroup@4.0.7)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.0.6"></a>
+
 ## 4.0.6
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.0.5...@spectrum-css/actiongroup@4.0.6)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.0.5"></a>
+
 ## 4.0.5
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.0.4...@spectrum-css/actiongroup@4.0.5)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.0.4"></a>
+
 ## 4.0.4
+
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.0.3...@spectrum-css/actiongroup@4.0.4)
 
@@ -186,28 +278,36 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="4.0.3"></a>
+
 ## 4.0.3
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.0.2...@spectrum-css/actiongroup@4.0.3)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.0.2"></a>
+
 ## 4.0.2
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.0.0...@spectrum-css/actiongroup@4.0.2)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.0.1"></a>
+
 ## 4.0.1
+
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@4.0.0...@spectrum-css/actiongroup@4.0.1)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="4.0.0"></a>
+
 ## 4.0.0
+
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.61...@spectrum-css/actiongroup@4.0.0)
 
@@ -220,63 +320,81 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
     		use native focus-visible pseudo class for focus styling
 
 <a name="3.0.61"></a>
+
 ## 3.0.61
+
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.60...@spectrum-css/actiongroup@3.0.61)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.60"></a>
+
 ## 3.0.60
+
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.59...@spectrum-css/actiongroup@3.0.60)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.59"></a>
+
 ## 3.0.59
+
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.58...@spectrum-css/actiongroup@3.0.59)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.58"></a>
+
 ## 3.0.58
+
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.57...@spectrum-css/actiongroup@3.0.58)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.57"></a>
+
 ## 3.0.57
+
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.56...@spectrum-css/actiongroup@3.0.57)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.56"></a>
+
 ## 3.0.56
+
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.55...@spectrum-css/actiongroup@3.0.56)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.55"></a>
+
 ## 3.0.55
+
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.54...@spectrum-css/actiongroup@3.0.55)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.54"></a>
+
 ## 3.0.54
+
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.53...@spectrum-css/actiongroup@3.0.54)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.53"></a>
+
 ## 3.0.53
+
 🗓
 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.52...@spectrum-css/actiongroup@3.0.53)
 
@@ -285,21 +403,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **actiongroup:**fix variable names for focus indicator border radius([ec8c8ec](https://github.com/adobe/spectrum-css/commit/ec8c8ec))
 
 <a name="3.0.52"></a>
+
 ## 3.0.52
+
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.51...@spectrum-css/actiongroup@3.0.52)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.51"></a>
+
 ## 3.0.51
+
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.50...@spectrum-css/actiongroup@3.0.51)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.50"></a>
+
 ## 3.0.50
+
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.49...@spectrum-css/actiongroup@3.0.50)
 
@@ -308,14 +432,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="3.0.49"></a>
+
 ## 3.0.49
+
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.48...@spectrum-css/actiongroup@3.0.49)
 
 **Note:** Version bump only for package @spectrum-css/actiongroup
 
 <a name="3.0.48"></a>
+
 ## 3.0.48
+
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actiongroup@3.0.47...@spectrum-css/actiongroup@3.0.48)
 

@@ -26,8 +26,7 @@ export const Picker = ({
 	isDisabled = false,
 	customClasses = [],
 	customStyles = {},
-	...globals
-}, context) => {
+} = {}, context) => {
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -61,14 +60,12 @@ export const Picker = ({
 			)}
 			${when(isInvalid && !isLoading, () =>
 				Icon({
-					...globals,
 					size,
 					iconName: "Alert",
 					customClasses: [`${rootClass}-validationIcon`],
 				}, context)
 			)}
 			${Icon({
-				...globals,
 				size,
 				setName: "ui",
 				iconName: "ChevronDown",
@@ -99,8 +96,7 @@ export const Template = ({
 	customPopoverStyles = {},
 	content = [],
 	id,
-	...globals
-}, context) => {
+} = {}, context) => {
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":
@@ -119,7 +115,6 @@ export const Template = ({
 	return html`
 		${when(label, () =>
 			FieldLabel({
-				...globals,
 				size,
 				label,
 				isDisabled,
@@ -130,7 +125,6 @@ export const Template = ({
 		${labelPosition == "left" ?
 			html`<div style="display: inline-block">
 				${Picker({
-					...globals,
 					rootClass,
 					size,
 					placeholder,
@@ -152,7 +146,6 @@ export const Template = ({
 			`
 		:
 			Picker({
-				...globals,
 				rootClass,
 				size,
 				placeholder,
@@ -180,7 +173,6 @@ export const Template = ({
 		)}
 		${when(content.length !== 0, () =>
 				Popover({
-					...globals,
 					isOpen: isOpen && !isDisabled,
 					withTip: false,
 					position: "bottom",
@@ -190,7 +182,6 @@ export const Template = ({
 				}, context)
 		)}
 		${when(withSwitch, () => Switch({
-			...globals,
 			size,
 			label: "Toggle switch",
 			customStyles: {

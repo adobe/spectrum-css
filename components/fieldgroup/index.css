@@ -10,18 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+@import "themes/spectrum.css";
+
 /* fieldgroup/index.css
  *
  * fieldgroup contains four component dependences:
  * radio, checkbox, helptext, fieldlabel
  *
  */
-
-/* custom properties */
-.spectrum-FieldGroup {
-	--spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
-	--spectrum-fieldgroup-readonly-delimiter: "\002c";
-}
 
 /* field group */
 .spectrum-FieldGroup {

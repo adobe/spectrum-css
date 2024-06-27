@@ -1,4 +1,5 @@
-import { makeDecorator, useArgs, useEffect, useGlobals } from "@storybook/preview-api";
+import "@spectrum-css/tokens/dist/index.css";
+import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, fetchStyleContainer, toggleStyles } from "./helpers";
 
 /**
@@ -13,22 +14,19 @@ export const withContextWrapper = makeDecorator({
 			args: {
 				rootClass,
 				staticColor,
-				...args
 			} = {},
 			globals: {
 				color = "light",
-				context = "spectrum1",
+				context = "spectrum",
 				scale = "medium",
 			} = {},
 			viewMode,
 			id,
 			loaded: {
 				tokens = {},
+				legacy = {},
 			} = {}
 		} = data;
-
-		const [, updateGlobals] = useGlobals();
-		const [, updateArgs] = useArgs();
 
 		const staticColorSettings = {
 			"black": {
@@ -41,34 +39,9 @@ export const withContextWrapper = makeDecorator({
 			},
 		};
 
-		/**
-		 * @deprecated allow temporary fallback support for values defined in the args
-		 * */
-		if (args.color && args.color !== color) {
-			updateGlobals({ color: args.color });
-			// prevents unnecessary re-renders
-			updateArgs({ color: undefined });
-		}
-
-		if (args.express && context !== "express") {
-			updateGlobals({ context: "express" });
-			// prevents unnecessary re-renders
-			updateArgs({ express: undefined });
-		}
-
-		if (args.scale && args.scale !== scale) {
-			updateGlobals({ scale: args.scale });
-			// prevents unnecessary re-renders
-			updateArgs({ scale: undefined });
-		}
-
-		window.__color = color;
-		window.__context = context;
-		window.__scale = scale;
-
 		useEffect(() => {
 			const isExpress = Boolean(context === "express");
-			const isLegacy = Boolean(context !== "spectrum2");
+			const isLegacy = Boolean(context !== "spectrum");
 
 			// viewMode is either "docs" or "story"
 			if (viewMode === "docs") {
@@ -105,9 +78,11 @@ export const withContextWrapper = makeDecorator({
 				container.classList.toggle("spectrum--express", isExpress);
 
 				// Add/remove the base styles for the global, spectrum, and express contexts
-				toggleStyles(globalContainer, "vars-base", tokens?.global?.base, true);
-				toggleStyles(contextContainer, "vars-base-spectrum", tokens?.spectrum?.base, true); // @todo this probably becomes "legacy" in the updated system
-				toggleStyles(contextContainer, "vars-base-express", tokens?.express?.base, isExpress);
+				toggleStyles(globalContainer, "vars-base", !isLegacy ? tokens?.base : legacy?.global?.base, true);
+				if (isLegacy) {
+					toggleStyles(contextContainer, "vars-base-spectrum", legacy?.spectrum?.base, true); // @todo this probably becomes "legacy" in the updated system
+					toggleStyles(contextContainer, "vars-base-express", legacy?.express?.base, isExpress);
+				}
 
 				// @todo note that darkest is being deprecated in the S2 system
 				for (const c of ["light", "dark", "darkest"]) {
@@ -116,17 +91,21 @@ export const withContextWrapper = makeDecorator({
 
 					container.classList.toggle(`spectrum--${c}`, isColor);
 
-					toggleStyles(colorsContainer, `vars-${c}`, tokens?.global?.[c], isColor);
-					toggleStyles(colorsContainer, `vars-${c}-spectrum`, tokens?.spectrum?.[c], isColor);
-					toggleStyles(colorsContainer, `vars-${c}-express`, tokens?.express?.[c], isExpress && isColor);
+					toggleStyles(colorsContainer, `vars-${c}`, !isLegacy ? tokens?.[c] : legacy?.global?.[c], isColor);
+					if (isLegacy) {
+						toggleStyles(colorsContainer, `vars-${c}-spectrum`, legacy?.spectrum?.[c], isColor);
+						toggleStyles(colorsContainer, `vars-${c}-express`, legacy?.express?.[c], isExpress && isColor);
+					}
 				}
 
 				for (const s of ["medium", "large"]) {
 					container.classList.toggle(`spectrum--${s}`, s === scale);
 
-					toggleStyles(scalesContainer, `vars-${s}`, tokens?.global?.[s], s === scale);
-					toggleStyles(scalesContainer, `vars-${s}-spectrum`, tokens?.spectrum?.[s], s === scale);
-					toggleStyles(scalesContainer, `vars-${s}-express`, tokens?.express?.[s], isExpress && s === scale);
+					toggleStyles(scalesContainer, `vars-${s}`, !isLegacy ? tokens?.[s] : legacy?.global?.[s], s === scale);
+					if (isLegacy) {
+						toggleStyles(scalesContainer, `vars-${s}-spectrum`, legacy?.spectrum?.[s], s === scale);
+						toggleStyles(scalesContainer, `vars-${s}-express`, legacy?.express?.[s], isExpress && s === scale);
+					}
 				}
 
 				// Start by removing the background color from the container and then add it back if needed

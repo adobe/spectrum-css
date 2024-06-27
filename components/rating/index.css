@@ -10,37 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
-.spectrum-Rating {
-	/* Icon */
-	--spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
-	--spectrum-rating-icon-width: var(--spectrum-workflow-icon-size-100);
-
-	/* Focus ring */
-	--spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-
-	/* Spacing (top/bottom edge to icon) */
-	--spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
-
-	/* Indicator height */
-	--spectrum-rating-indicator-height: var(--spectrum-border-width-200);
-
-	/* Colors */
-	/* selected + emphasized */
-	--spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
-	--spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
-	--spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
-	--spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
-
-	/* Disabled */
-	--spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
-	--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
-}
+@import "themes/spectrum.css";
 
 .spectrum-Rating {
 	&.is-focused {
@@ -79,6 +49,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Rating {
+	cursor: pointer;
 	position: relative;
 	display: inline-flex;
 	flex: 0 0 auto;
@@ -86,16 +57,14 @@ governing permissions and limitations under the License.
 	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
 
 	inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
-	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
 	padding-inline: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) - 1.5px);
-
-	cursor: pointer;
+	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
 
 	&.is-disabled,
 	&.is-readOnly {
-		cursor: default;
 		pointer-events: none;
+		cursor: default;
 	}
 
 	/* When the entire component is hovered, show all solid icons */
@@ -111,22 +80,22 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Rating-input {
+	pointer-events: none;
 	position: absolute;
 	z-index: 0;
 	inline-size: 100%;
 	block-size: 100%;
 	margin: 0;
 	opacity: 0;
-	pointer-events: none;
 }
 
 .spectrum-Rating-icon {
 	position: relative;
-	background-size: contain;
-	background-repeat: no-repeat;
 	inline-size: var(--mod-rating-icon-width, var(--spectrum-rating-icon-width));
 	block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
 	padding-block: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
+	background-repeat: no-repeat;
+	background-size: contain;
 
 	.spectrum-Rating-starActive {
 		display: none;
@@ -147,14 +116,14 @@ governing permissions and limitations under the License.
 	}
 
 	&.is-currentValue::after {
-		border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
 		content: "";
-		block-size: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
-		inline-size: var(--spectrum-rating-indicator-width);
+		position: absolute;
 
 		/* position the indicator relative to the element's total bottom size (including bottom padding) */
 		inset-block-end: calc((var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)) * 2) - 1px);
-		position: absolute;
+		inline-size: var(--spectrum-rating-indicator-width);
+		block-size: var(--mod-rating-indicator-height, var(--spectrum-rating-indicator-height));
+		border-radius: var(--mod-rating-indicator-border-radius, var(--spectrum-rating-indicator-border-radius));
 	}
 
 	/* All stars following the hovered star */

@@ -20,7 +20,8 @@ require("colors");
 
 const uiIcons = require.resolve("@spectrum-css/ui-icons");
 
-const { dirs, getPackageFromPath } = require("./utilities");
+const { getPackageFromPath } = require("./utilities");
+const { dirs } = require("../../tasks/utilities");
 
 const {
 	fetchData_forGlobal,
@@ -75,7 +76,7 @@ async function main() {
 				},
 			},
 			{
-				match: ["*/index.css", "*/themes/*.css"],
+				match: ["*/index.css", "*/**/*.css"],
 				options: {
 					cwd: dirs.components,
 					ignore: ["*/dist/*"],

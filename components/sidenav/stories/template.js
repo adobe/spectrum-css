@@ -14,8 +14,7 @@ export const Template = ({
 	hasIcon,
 	iconName,
 	items = [],
-	...globals
-}, context) => html`
+} = {}, context) => html`
   <nav>
     <ul class=${classMap({
       [rootClass]: true,
@@ -37,10 +36,7 @@ export const Template = ({
               html`
               <a class="${rootClass}-itemLink">
               ${when(hasIcon, () =>
-                Icon({
-                    ...globals,
-                    iconName,
-                  }, context)
+                Icon({ iconName }, context)
                 )}
                 <span class="${rootClass}-link-text">${item.title}</span>
               </a>
@@ -57,7 +53,6 @@ export const Template = ({
                     variant,
                     hasIcon,
                     iconName,
-                    ...globals,
                     ...item
                   }, context);
                 })}
@@ -69,7 +64,6 @@ export const Template = ({
           return SideNavItem({
             hasIcon,
             iconName,
-            ...globals,
             ...item
           }, context);
         }
@@ -90,8 +84,7 @@ export const SideNavItem = ({
 	hasIcon,
 	iconName,
 	customClasses = [],
-	...globals
-}, context) => {
+} = {}, context) => {
 	const displayIcon = hasIcon & variant === "multiLevel" ? false : true;
 	return html`
     <li id=${id} class=${classMap({
@@ -102,20 +95,14 @@ export const SideNavItem = ({
     })}>
       <a href=${link} class="${rootClass}-itemLink">
         ${when(displayIcon, () =>
-          Icon({
-            ...globals,
-            iconName,
-          }, context)
+          Icon({ iconName }, context)
         )}
         <span class="${rootClass}-link-text">${title}</span>
       </a>
       ${when(levelThreeItems, () => html`
         <ul class=${rootClass}>
           ${repeat(levelThreeItems, (item) => item.id, (item) => {
-            return SideNavItem({
-              ...globals,
-              ...item
-            }, context);
+            return SideNavItem({ ...item }, context);
           })}
         </ul>`
       )}

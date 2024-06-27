@@ -3,6 +3,7 @@ import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
+
 import "../index.css";
 
 export const Template = ({
@@ -12,7 +13,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}, context) => html`
+} = {}, context) => html`
 		<div
 			class=${classMap({
 				[`${rootClass}-wrapper`]: true,
@@ -32,7 +33,7 @@ export const Template = ({
 export const TrayGroup = ({
 	heading,
 	...args
-}, context) => html`
+} = {}, context) => html`
 	<div>
 		${Template({
 			...args,

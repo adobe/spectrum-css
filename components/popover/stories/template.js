@@ -20,8 +20,7 @@ export const Template = ({
 	customStyles = {},
 	trigger,
 	content = [],
-	...globals
-}, context) => {
+} = {}, context) => {
 	const [, updateArgs] = useArgs();
 
 	if (content.length === 0) {
@@ -33,7 +32,6 @@ export const Template = ({
 
 	return html`
 		${when(typeof trigger === "function", () => trigger({
-			...globals,
 			isSelected: isOpen,
 			isOpen: nestedPopover ?? true,
 			onclick: () => {
@@ -143,7 +141,7 @@ export const Template = ({
 					});
 				}, 100);
 				}
-		}))}
+		}, context))}
 
 		<div
 			class=${classMap({

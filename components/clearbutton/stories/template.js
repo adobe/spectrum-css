@@ -14,8 +14,7 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-	...globals
-}, context) => html`
+} = {}, context = {}) => html`
 	<button
 		type="reset"
 		class=${classMap({
@@ -32,7 +31,6 @@ export const Template = ({
 	>
 		<div class="${rootClass}-fill">
 			${Icon({
-				...globals,
 				size,
 				iconName: "Cross",
 				customClasses: [`${rootClass}-icon`],

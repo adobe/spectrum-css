@@ -10,52 +10,50 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./spectrum.css";
-
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Tag {
 		/* border */
-		--spectrum-tag-background-color: transparent;
-		--spectrum-tag-background-color-hover: var(--spectrum-gray-300);
-		--spectrum-tag-background-color-active: var(--spectrum-gray-400);
-		--spectrum-tag-background-color-focus: var(--spectrum-gray-300);
+		--spectrum-tag-border-color: var(--spectrum-gray-700);
+		--spectrum-tag-border-color-hover: var(--spectrum-gray-800);
+		--spectrum-tag-border-color-active: var(--spectrum-gray-900);
+		--spectrum-tag-border-color-focus: var(--spectrum-gray-800);
 
-		/* express has pill style full corner radius */
-		--spectrum-tag-size-small-corner-radius: var(--spectrum-component-height-75);
-		--spectrum-tag-size-medium-corner-radius: var(--spectrum-component-height-100);
-		--spectrum-tag-size-large-corner-radius: var(--spectrum-component-height-200);
+		/* corner border radius */
+		--spectrum-tag-size-small-corner-radius: var(--spectrum-corner-radius-100);
+		--spectrum-tag-size-medium-corner-radius: var(--spectrum-corner-radius-100);
+		--spectrum-tag-size-large-corner-radius: var(--spectrum-corner-radius-100);
 
 		/* background */
-		--spectrum-tag-border-color: var(--spectrum-gray-300);
-		--spectrum-tag-border-color-hover: var(--spectrum-gray-400);
-		--spectrum-tag-border-color-active: var(--spectrum-gray-500);
-		--spectrum-tag-border-color-focus: var(--spectrum-gray-400);
+		--spectrum-tag-background-color: var(--spectrum-gray-75);
+		--spectrum-tag-background-color-hover: var(--spectrum-gray-75);
+		--spectrum-tag-background-color-active: var(--spectrum-gray-200);
+		--spectrum-tag-background-color-focus: var(--spectrum-gray-75);
 
 		/* content color */
-		--spectrum-tag-content-color: var(--spectrum-neutral-content-color-default);
-		--spectrum-tag-content-color-hover: var(--spectrum-neutral-content-color-hover);
-		--spectrum-tag-content-color-active: var(--spectrum-neutral-content-color-down);
-		--spectrum-tag-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
+		--spectrum-tag-content-color: var(--spectrum-neutral-subdued-content-color-default);
+		--spectrum-tag-content-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+		--spectrum-tag-content-color-active: var(--spectrum-neutral-subdued-content-color-down);
+		--spectrum-tag-content-color-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 
-		/* selected */
-		--spectrum-tag-border-color-selected: var(--spectrum-neutral-background-color-default);
-		--spectrum-tag-border-color-selected-hover: var(--spectrum-neutral-background-color-hover);
-		--spectrum-tag-border-color-selected-active: var(--spectrum-neutral-background-color-down);
-		--spectrum-tag-border-color-selected-focus: var(--spectrum-neutral-background-color-key-focus);
+		/* selected variant */
+		--spectrum-tag-border-color-selected: var(--spectrum-neutral-subdued-background-color-default);
+		--spectrum-tag-border-color-selected-hover: var(--spectrum-neutral-subdued-background-color-hover);
+		--spectrum-tag-border-color-selected-active: var(--spectrum-neutral-subdued-background-color-down);
+		--spectrum-tag-border-color-selected-focus: var(--spectrum-neutral-subdued-background-color-key-focus);
 
-		/* disabled */
-		--spectrum-tag-border-color-disabled: var(--spectrum-disabled-border-color);
-		--spectrum-tag-background-color-disabled: transparent;
+		/* disabled variant */
+		--spectrum-tag-border-color-disabled: transparent;
+		--spectrum-tag-background-color-disabled: var(--spectrum-disabled-background-color);
 
 		/* tokens based on theme and t-shirt size */
-		--spectrum-tag-size-small-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-75);
-		--spectrum-tag-size-small-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-75);
-		--spectrum-tag-size-small-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-75);
-		--spectrum-tag-size-medium-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-100);
-		--spectrum-tag-size-medium-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-100);
-		--spectrum-tag-size-medium-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-100);
-		--spectrum-tag-size-large-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-200);
-		--spectrum-tag-size-large-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-200);
-		--spectrum-tag-size-large-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-200);
+		--spectrum-tag-size-small-spacing-inline-start: var(--spectrum-component-edge-to-visual-75);
+		--spectrum-tag-size-small-label-spacing-inline-end: var(--spectrum-component-edge-to-text-75);
+		--spectrum-tag-size-small-clear-button-spacing-inline-end: var(--spectrum-component-edge-to-visual-75);
+		--spectrum-tag-size-medium-spacing-inline-start: var(--spectrum-component-edge-to-visual-100);
+		--spectrum-tag-size-medium-label-spacing-inline-end: var(--spectrum-component-edge-to-text-100);
+		--spectrum-tag-size-medium-clear-button-spacing-inline-end: var(--spectrum-component-edge-to-visual-100);
+		--spectrum-tag-size-large-spacing-inline-start: var(--spectrum-component-edge-to-visual-200);
+		--spectrum-tag-size-large-label-spacing-inline-end: var(--spectrum-component-edge-to-text-200);
+		--spectrum-tag-size-large-clear-button-spacing-inline-end: var(--spectrum-component-edge-to-visual-200);
 	}
 }

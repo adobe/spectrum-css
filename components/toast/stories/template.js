@@ -17,8 +17,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-	...globals
-}, context) => {
+} = {}, context) => {
 	const iconName =
 		variant === "negative"
 			? "Alert"
@@ -38,7 +37,6 @@ export const Template = ({
 		>
 			${when(variant, () =>
 				Icon({
-					...globals,
 					iconName: ifDefined(iconName),
 					size: "m",
 					customClasses: [`${rootClass}-typeIcon`],
@@ -48,7 +46,6 @@ export const Template = ({
 				<div class="${rootClass}-content">${message}</div>
 				${when(inlineButtonLabel, () =>
 					Button({
-						...globals,
 						variant: "secondary",
 						size: "m",
 						staticColor: "white",
@@ -59,7 +56,6 @@ export const Template = ({
 			</div>
 			<div class="${rootClass}-buttons">
 				${CloseButton({
-					...globals,
 					size: "m",
 					staticColor: "white",
 					onclick,

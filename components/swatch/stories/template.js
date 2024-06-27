@@ -19,8 +19,7 @@ export const Template = ({
 	swatchColor,
 	customStyles = {},
 	id,
-	...globals
-}, context) => {
+} = {}, context) => {
 	const [, updateArgs] = useArgs();
 
 	return html`
@@ -56,12 +55,13 @@ export const Template = ({
 			${OpacityCheckerboard({
 				customClasses: [`${rootClass}-fill`],
 				content: [
-					...(isDisabled ? [Icon({
-						...globals,
-						customClasses: [`${rootClass}-disabledIcon`],
-						setName: "workflow",
-						iconName: "Cancel",
-					}, context)] : []),
+					...(isDisabled ? [
+						Icon({
+							customClasses: [`${rootClass}-disabledIcon`],
+							setName: "workflow",
+							iconName: "Cancel",
+						}, context)
+					] : []),
 				]
 			}, context)}
 		</div>
@@ -80,7 +80,7 @@ export const SwatchGroup = (args, context) => html`
 		"gap": "16px",
 	})}>
 		${Template(args, context)}
-		${Template({ ...args, swatchColor: "rgba(174, 216, 230, 0.3)" }, context)}
+		${Template({ ...args, swatchColor: "rgba(174, 216, 230, 30%)" }, context)}
 		${Template({ ...args, swatchColor: undefined }, context)}
 		${Template({ ...args, rounding: "none" }, context)}
 		${Template({ ...args, rounding: "full" }, context)}

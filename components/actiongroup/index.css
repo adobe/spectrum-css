@@ -10,26 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "./themes/express.css";
-
-.spectrum-ActionGroup {
-	--spectrum-actiongroup-button-spacing-reset: 0;
-	--spectrum-actiongroup-border-radius-reset: 0;
-	--spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
-}
-
-.spectrum-ActionGroup--sizeXS,
-.spectrum-ActionGroup--sizeS {
-	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
-	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
-}
-
-.spectrum-ActionGroup--sizeM,
-.spectrum-ActionGroup--sizeL,
-.spectrum-ActionGroup--sizeXL {
-	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
-}
+@import "themes/spectrum.css";
 
 .spectrum-ActionGroup {
 	display: flex;
@@ -53,9 +34,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-ActionGroup--vertical {
-	gap: var(--mod-actiongroup-vertical-spacing-regular, var(--spectrum-actiongroup-vertical-spacing-regular));
 	display: inline-flex;
 	flex-direction: column;
+	gap: var(--mod-actiongroup-vertical-spacing-regular, var(--spectrum-actiongroup-vertical-spacing-regular));
 }
 
 .spectrum-ActionGroup--compact {
@@ -67,16 +48,16 @@ governing permissions and limitations under the License.
 
 	.spectrum-ActionGroup-item {
 		position: relative;
-		border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 		z-index: 0;
+		border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 
 		&:first-child {
 			/* Action button passthrough styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
 
 			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 			border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-			margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
 		}
 
 		& + .spectrum-ActionGroup-item {
@@ -90,11 +71,11 @@ governing permissions and limitations under the License.
 		&:last-child {
 			/* Action button passthrough styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px;
+			margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
+			margin-inline-end: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 
 			border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 			border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-			margin-inline-start: var(--mod-actiongroup-horizontal-spacing-compact, var(--spectrum-actiongroup-horizontal-spacing-compact));
-			margin-inline-end: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 		}
 
 		&.is-selected {
@@ -125,29 +106,29 @@ governing permissions and limitations under the License.
 		&:first-child {
 			/* Action button passthrough styling */
 			--mod-actionbutton-focus-indicator-border-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) 0px 0px;
+			margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+			margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+			margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
 
 			border-start-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 			border-start-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-			margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
-			margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
-			margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
 		}
 
 		& + .spectrum-ActionGroup-item {
-			margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
-			margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
 			margin-block-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
 			margin-block-end: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+			margin-inline-start: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
+			margin-inline-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
 		}
 
 		&:last-child {
 			/* Action button passthrough styling */
 			--mod-actionbutton-focus-indicator-border-radius: 0px 0px var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius)) var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
+			margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
+			margin-block-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
 
 			border-end-start-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
 			border-end-end-radius: var(--mod-actiongroup-border-radius, var(--spectrum-actiongroup-border-radius));
-			margin-block-start: var(--mod-actiongroup-vertical-spacing-compact, var(--spectrum-actiongroup-vertical-spacing-compact));
-			margin-block-end: var(--mod-actiongroup-button-spacing-reset, var(--spectrum-actiongroup-button-spacing-reset));
 		}
 	}
 }

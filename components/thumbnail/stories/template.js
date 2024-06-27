@@ -23,7 +23,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}, context) => {
+} = {}, context = {}) => {
 	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)}/>` : svg ? html`${svg}` : "";
 
 	const checkerboardContent = html`

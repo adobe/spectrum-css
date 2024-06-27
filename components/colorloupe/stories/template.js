@@ -9,7 +9,7 @@ export const Template = ({
 	rootClass = "spectrum-ColorLoupe",
 	isOpen,
 	customStyles = {
-		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
+		"--spectrum-picked-color": "rgba(255, 0, 0, 50%)",
 		"inset-block-start": "5px",
 		"inset-inline-start": "5px",
 	},

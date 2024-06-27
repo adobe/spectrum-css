@@ -27,7 +27,6 @@ const messages = ruleMessages(ruleName, {
 	expected: (prop) => `Custom property ${prop.magenta} not defined`,
 });
 
-const fg = require("fast-glob");
 const postcss = require("postcss");
 const valueParser = require("postcss-value-parser");
 
@@ -69,14 +68,6 @@ const ruleFunction = (enabled, options = {}) => {
 		const componentRoot = parts.slice(0, rootIdx + 2).join(path.sep);
 
 		const sharedDefinitions = new Set();
-
-		for (const themePath of fg.sync(["themes/*.css"], { cwd: componentRoot, absolute: true })) {
-			const content = fs.readFileSync(themePath, "utf8");
-			if (!content) continue;
-			postcss.parse(content).walkDecls(/^--/, ({ prop }) => {
-				sharedDefinitions.add(prop);
-			});
-		}
 
 		function fetchResolutions(depName) {
 			let req;

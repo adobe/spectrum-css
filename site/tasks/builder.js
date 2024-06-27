@@ -11,8 +11,6 @@ governing permissions and limitations under the License.
 */
 
 const {
-	dirs,
-	relativePrint,
 	getFolderDependencyOrder,
 	getPackageFromPath,
 } = require("./utilities");
@@ -30,6 +28,7 @@ const npmFetch = require("npm-registry-fetch");
 
 // Import the component-builder-simple to process the site styles
 const { processCSS } = require("../../tasks/component-builder.js");
+const { dirs, timeInMs, relativePrint } = require("../../tasks/utilities");
 
 require("colors");
 
@@ -40,9 +39,7 @@ const tokens = require.resolve("@spectrum-css/tokens");
 const workflowIcons = require.resolve("@adobe/spectrum-css-workflow-icons");
 const uiIcons = require.resolve("@spectrum-css/ui-icons");
 
-const deprecatedComponents = ["quickaction", "cyclebutton", "searchwithin", "splitbutton"];
-
-const timeInMs = (seconds, nanoseconds) => (seconds * 1000000000 + nanoseconds) / 1000000;
+const deprecatedComponents = [];
 
 /**
  * @typedef {Object} SiteUtilities
@@ -341,8 +338,6 @@ async function fetchData_forPackage(file, data = {}) {
 			"icon",
 			"statuslight",
 			"link",
-			"page",
-			"site",
 			"typography",
 			"tooltip",
 			"sidenav",
@@ -474,7 +469,7 @@ async function build_forPackage(componentName, globalData = {}) {
 	/** @todo how do we load dependencies not hosted in the repo? */
 	return Promise.all([
 		buildPages_forPackage(componentName, globalData),
-		copy_Assets(["*.css", "themes/*.css", "*.json"], {
+		copy_Assets(["*.css", "**/*.css", "*.json"], {
 			cwd: path.join(dirName, "dist"),
 			outputDir,
 			allowEmpty: true,
@@ -572,8 +567,6 @@ async function buildPage_forSite(file, globalData = {}) {
 				"icon",
 				"statuslight",
 				"link",
-				"page",
-				"site",
 				"typography",
 				"tooltip",
 				"sidenav",

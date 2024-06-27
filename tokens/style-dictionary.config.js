@@ -35,7 +35,6 @@ StyleDictionary.registerFormat(CSSSetsFormatter);
  */
 const tokensPath = require.resolve("@adobe/spectrum-tokens/package.json");
 const tokensDir = path.dirname(tokensPath);
-const setNames = ["desktop", "mobile", "light", "dark", "darkest"];
 
 module.exports = {
 	source: [`${tokensDir}/src/*.json`],
@@ -50,21 +49,8 @@ module.exports = {
 			prefix: "spectrum",
 			files: [
 				generateFileConfig(),
-				...["spectrum", "express"].map((subSystemName) =>
-					generateFileConfig({ subSystemName })
-				),
-				...setNames.map((context) => generateFileConfig({ setName: context })),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "spectrum",
-					})
-				),
-				...setNames.map((context) =>
-					generateFileConfig({
-						setName: context,
-						subSystemName: "express",
-					})
+				...["desktop", "mobile", "light", "dark"].map((context) =>
+					generateFileConfig({ setName: context }),
 				),
 			],
 		},

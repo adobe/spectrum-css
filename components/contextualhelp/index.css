@@ -10,22 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-.spectrum-ContextualHelp {
-	/* Layout Variables */
-	--spectrum-contextual-help-padding: var(--spectrum-spacing-400);
-	--spectrum-contextual-help-content-spacing: var(--spectrum-spacing-100);
-	--spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
-
-	/* Typography Variables */
-	--spectrum-contextual-help-heading-size: var(--spectrum-contextual-help-title-size);
-	--spectrum-contextual-help-heading-color: var(--spectrum-heading-color);
-	--spectrum-contextual-help-body-color: var(--spectrum-body-color);
-
-	/* Mobile styling */
-	.spectrum--large & {
-		--spectrum-contextual-help-content-spacing: var(--spectrum-spacing-200);
-	}
-}
+@import "themes/spectrum.css";
 
 .spectrum-ContextualHelp {
 	position: relative;

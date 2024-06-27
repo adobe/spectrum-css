@@ -20,8 +20,6 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 }) => {
-	const [, updateArgs] = useArgs();
-
 	return html`
 		<div
 			class=${classMap({

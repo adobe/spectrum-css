@@ -1,5 +1,61 @@
 # Change Log
 
+## 4.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df) Thanks [@pfulton](https://github.com/pfulton)! - fixes a compilation issue in the tokens dist artifacts
+
+### Patch Changes
+
+- Updated dependencies [[`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.3
+  - @spectrum-css/popover@8.0.0-s2-foundations.3
+  - @spectrum-css/link@6.0.0-s2-foundations.3
+  - @spectrum-css/tokens@15.0.0-s2-foundations.3
+
+## 4.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+### Patch Changes
+
+- Updated dependencies [[`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.2
+  - @spectrum-css/popover@8.0.0-s2-foundations.2
+  - @spectrum-css/link@6.0.0-s2-foundations.2
+  - @spectrum-css/tokens@15.0.0-s2-foundations.2
+
+## 4.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e) Thanks [@pfulton](https://github.com/pfulton)! - Fixes an issue where vars.css was not being populated with the correct values
+
+### Patch Changes
+
+- Updated dependencies [[`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.1
+  - @spectrum-css/popover@8.0.0-s2-foundations.1
+  - @spectrum-css/link@6.0.0-s2-foundations.1
+  - @spectrum-css/tokens@15.0.0-s2-foundations.1
+
+## 4.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.0
+  - @spectrum-css/popover@8.0.0-s2-foundations.0
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+  - @spectrum-css/link@6.0.0-s2-foundations.0
+
 ## 3.1.1
 
 ### Patch Changes
@@ -33,7 +89,9 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="3.0.0"></a>
+
 ## 3.0.0
+
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.1.5...@spectrum-css/contextualhelp@3.0.0)
 
@@ -48,42 +106,54 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="2.1.5"></a>
+
 ## 2.1.5
+
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.1.4...@spectrum-css/contextualhelp@2.1.5)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.1.4"></a>
+
 ## 2.1.4
+
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.1.3...@spectrum-css/contextualhelp@2.1.4)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.1.3"></a>
+
 ## 2.1.3
+
 🗓
 2024-02-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.1.2...@spectrum-css/contextualhelp@2.1.3)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.1.2"></a>
+
 ## 2.1.2
+
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.1.1...@spectrum-css/contextualhelp@2.1.2)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.1.1"></a>
+
 ## 2.1.1
+
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.1.0"></a>
+
 ## 2.1.0
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.45...@spectrum-css/contextualhelp@2.1.0)
 
@@ -92,35 +162,45 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="2.0.45"></a>
+
 ## 2.0.45
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.44...@spectrum-css/contextualhelp@2.0.45)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.44"></a>
+
 ## 2.0.44
+
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.43...@spectrum-css/contextualhelp@2.0.44)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.43"></a>
+
 ## 2.0.43
+
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.41...@spectrum-css/contextualhelp@2.0.43)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.42"></a>
+
 ## 2.0.42
+
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.41...@spectrum-css/contextualhelp@2.0.42)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.41"></a>
+
 ## 2.0.41
+
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.40...@spectrum-css/contextualhelp@2.0.41)
 
@@ -129,70 +209,90 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **contextualhelp:**use spectrum-tokens var for font-size([7f29eda](https://github.com/adobe/spectrum-css/commit/7f29eda))
 
 <a name="2.0.40"></a>
+
 ## 2.0.40
+
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.39...@spectrum-css/contextualhelp@2.0.40)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.39"></a>
+
 ## 2.0.39
+
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.38...@spectrum-css/contextualhelp@2.0.39)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.38"></a>
+
 ## 2.0.38
+
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.37...@spectrum-css/contextualhelp@2.0.38)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.37"></a>
+
 ## 2.0.37
+
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.36...@spectrum-css/contextualhelp@2.0.37)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.36"></a>
+
 ## 2.0.36
+
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.35...@spectrum-css/contextualhelp@2.0.36)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.35"></a>
+
 ## 2.0.35
+
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.34...@spectrum-css/contextualhelp@2.0.35)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.34"></a>
+
 ## 2.0.34
+
 🗓
 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.33...@spectrum-css/contextualhelp@2.0.34)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.33"></a>
+
 ## 2.0.33
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.32...@spectrum-css/contextualhelp@2.0.33)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.32"></a>
+
 ## 2.0.32
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.31...@spectrum-css/contextualhelp@2.0.32)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.31"></a>
+
 ## 2.0.31
+
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.30...@spectrum-css/contextualhelp@2.0.31)
 
@@ -201,119 +301,153 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="2.0.30"></a>
+
 ## 2.0.30
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.29...@spectrum-css/contextualhelp@2.0.30)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.29"></a>
+
 ## 2.0.29
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.27...@spectrum-css/contextualhelp@2.0.29)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.28"></a>
+
 ## 2.0.28
+
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.27...@spectrum-css/contextualhelp@2.0.28)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.27"></a>
+
 ## 2.0.27
+
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.26...@spectrum-css/contextualhelp@2.0.27)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.26"></a>
+
 ## 2.0.26
+
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.25...@spectrum-css/contextualhelp@2.0.26)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.25"></a>
+
 ## 2.0.25
+
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.24...@spectrum-css/contextualhelp@2.0.25)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.24"></a>
+
 ## 2.0.24
+
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.23...@spectrum-css/contextualhelp@2.0.24)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.23"></a>
+
 ## 2.0.23
+
 🗓
 2023-07-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.22...@spectrum-css/contextualhelp@2.0.23)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.22"></a>
+
 ## 2.0.22
+
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.21...@spectrum-css/contextualhelp@2.0.22)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.21"></a>
+
 ## 2.0.21
+
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.20...@spectrum-css/contextualhelp@2.0.21)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.20"></a>
+
 ## 2.0.20
+
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.19...@spectrum-css/contextualhelp@2.0.20)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.19"></a>
+
 ## 2.0.19
+
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.18...@spectrum-css/contextualhelp@2.0.19)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.18"></a>
+
 ## 2.0.18
+
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.17...@spectrum-css/contextualhelp@2.0.18)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.17"></a>
+
 ## 2.0.17
+
 🗓
 2023-06-28 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.16...@spectrum-css/contextualhelp@2.0.17)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.16"></a>
+
 ## 2.0.16
+
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.15...@spectrum-css/contextualhelp@2.0.16)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.15"></a>
+
 ## 2.0.15
+
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.14...@spectrum-css/contextualhelp@2.0.15)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.14"></a>
+
 ## 2.0.14
+
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.13...@spectrum-css/contextualhelp@2.0.14)
 
@@ -322,14 +456,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="2.0.13"></a>
+
 ## 2.0.13
+
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.12...@spectrum-css/contextualhelp@2.0.13)
 
 **Note:** Version bump only for package @spectrum-css/contextualhelp
 
 <a name="2.0.12"></a>
+
 ## 2.0.12
+
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/contextualhelp@2.0.11...@spectrum-css/contextualhelp@2.0.12)
 

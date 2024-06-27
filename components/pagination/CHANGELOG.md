@@ -1,5 +1,65 @@
 # Change Log
 
+## 9.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df) Thanks [@pfulton](https://github.com/pfulton)! - fixes a compilation issue in the tokens dist artifacts
+
+### Patch Changes
+
+- Updated dependencies [[`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.3
+  - @spectrum-css/textfield@8.0.0-s2-foundations.3
+  - @spectrum-css/button@14.0.0-s2-foundations.3
+  - @spectrum-css/icon@8.0.0-s2-foundations.3
+  - @spectrum-css/tokens@15.0.0-s2-foundations.3
+
+## 9.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+### Patch Changes
+
+- Updated dependencies [[`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.2
+  - @spectrum-css/textfield@8.0.0-s2-foundations.2
+  - @spectrum-css/button@14.0.0-s2-foundations.2
+  - @spectrum-css/icon@8.0.0-s2-foundations.2
+  - @spectrum-css/tokens@15.0.0-s2-foundations.2
+
+## 9.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e) Thanks [@pfulton](https://github.com/pfulton)! - Fixes an issue where vars.css was not being populated with the correct values
+
+### Patch Changes
+
+- Updated dependencies [[`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.1
+  - @spectrum-css/textfield@8.0.0-s2-foundations.1
+  - @spectrum-css/button@14.0.0-s2-foundations.1
+  - @spectrum-css/icon@8.0.0-s2-foundations.1
+  - @spectrum-css/tokens@15.0.0-s2-foundations.1
+
+## 9.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.0
+  - @spectrum-css/textfield@8.0.0-s2-foundations.0
+  - @spectrum-css/button@14.0.0-s2-foundations.0
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+  - @spectrum-css/icon@8.0.0-s2-foundations.0
+
 ## 8.1.1
 
 ### Patch Changes
@@ -35,7 +95,9 @@ All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 <a name="8.0.0"></a>
+
 ## 8.0.0
+
 🗓
 2024-04-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.1.6...@spectrum-css/pagination@8.0.0)
 
@@ -50,42 +112,54 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Imports added to index.css and themes/express.css
 
 <a name="7.1.6"></a>
+
 ## 7.1.6
+
 🗓
 2024-03-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.1.5...@spectrum-css/pagination@7.1.6)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.1.5"></a>
+
 ## 7.1.5
+
 🗓
 2024-02-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.1.4...@spectrum-css/pagination@7.1.5)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.1.4"></a>
+
 ## 7.1.4
+
 🗓
 2024-02-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.1.3...@spectrum-css/pagination@7.1.4)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.1.3"></a>
+
 ## 7.1.3
+
 🗓
 2024-02-06
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.1.2"></a>
+
 ## 7.1.2
+
 🗓
 2024-02-05 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.1.1...@spectrum-css/pagination@7.1.2)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.1.1"></a>
+
 ## 7.1.1
+
 🗓
 2024-01-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.1.0...@spectrum-css/pagination@7.1.1)
 
@@ -94,7 +168,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*deprecate logical transform plugin ([#2437](https://github.com/adobe/spectrum-css/issues/2437))([ff5dda6](https://github.com/adobe/spectrum-css/commit/ff5dda6))
 
 <a name="7.1.0"></a>
+
 ## 7.1.0
+
 🗓
 2024-01-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.0.5...@spectrum-css/pagination@7.1.0)
 
@@ -103,42 +179,54 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 \*remove theme files without content([1eadd4f](https://github.com/adobe/spectrum-css/commit/1eadd4f))
 
 <a name="7.0.5"></a>
+
 ## 7.0.5
+
 🗓
 2023-12-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.0.4...@spectrum-css/pagination@7.0.5)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.0.4"></a>
+
 ## 7.0.4
+
 🗓
 2023-12-04 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.0.3...@spectrum-css/pagination@7.0.4)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.0.3"></a>
+
 ## 7.0.3
+
 🗓
 2023-11-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.0.1...@spectrum-css/pagination@7.0.3)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.0.2"></a>
+
 ## 7.0.2
+
 🗓
 2023-11-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.0.1...@spectrum-css/pagination@7.0.2)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.0.1"></a>
+
 ## 7.0.1
+
 🗓
 2023-11-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@7.0.0...@spectrum-css/pagination@7.0.1)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="7.0.0"></a>
+
 ## 7.0.0
+
 🗓
 2023-10-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.50...@spectrum-css/pagination@7.0.0)
 
@@ -184,70 +272,90 @@ docs(pagination): add button style pagination to storybook
 Add the "Button style" version of Pagination from the docs to Storybook.
 
 <a name="6.0.50"></a>
+
 ## 6.0.50
+
 🗓
 2023-09-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.49...@spectrum-css/pagination@6.0.50)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.49"></a>
+
 ## 6.0.49
+
 🗓
 2023-09-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.48...@spectrum-css/pagination@6.0.49)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.48"></a>
+
 ## 6.0.48
+
 🗓
 2023-09-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.47...@spectrum-css/pagination@6.0.48)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.47"></a>
+
 ## 6.0.47
+
 🗓
 2023-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.46...@spectrum-css/pagination@6.0.47)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.46"></a>
+
 ## 6.0.46
+
 🗓
 2023-09-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.45...@spectrum-css/pagination@6.0.46)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.45"></a>
+
 ## 6.0.45
+
 🗓
 2023-09-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.44...@spectrum-css/pagination@6.0.45)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.44"></a>
+
 ## 6.0.44
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.43...@spectrum-css/pagination@6.0.44)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.43"></a>
+
 ## 6.0.43
+
 🗓
 2023-08-31 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.42...@spectrum-css/pagination@6.0.43)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.42"></a>
+
 ## 6.0.42
+
 🗓
 2023-08-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.41...@spectrum-css/pagination@6.0.42)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.41"></a>
+
 ## 6.0.41
+
 🗓
 2023-08-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.40...@spectrum-css/pagination@6.0.41)
 
@@ -256,56 +364,72 @@ Add the "Button style" version of Pagination from the docs to Storybook.
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
 
 <a name="6.0.40"></a>
+
 ## 6.0.40
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.39...@spectrum-css/pagination@6.0.40)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.39"></a>
+
 ## 6.0.39
+
 🗓
 2023-08-22 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.37...@spectrum-css/pagination@6.0.39)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.38"></a>
+
 ## 6.0.38
+
 🗓
 2023-08-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.37...@spectrum-css/pagination@6.0.38)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.37"></a>
+
 ## 6.0.37
+
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.36...@spectrum-css/pagination@6.0.37)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.36"></a>
+
 ## 6.0.36
+
 🗓
 2023-08-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.35...@spectrum-css/pagination@6.0.36)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.35"></a>
+
 ## 6.0.35
+
 🗓
 2023-08-07 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.34...@spectrum-css/pagination@6.0.35)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.34"></a>
+
 ## 6.0.34
+
 🗓
 2023-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.33...@spectrum-css/pagination@6.0.34)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.33"></a>
+
 ## 6.0.33
+
 🗓
 2023-07-24 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.32...@spectrum-css/pagination@6.0.33)
 
@@ -314,49 +438,63 @@ Add the "Button style" version of Pagination from the docs to Storybook.
 \*icon sizing in Storybook story templates ([#2037](https://github.com/adobe/spectrum-css/issues/2037))([c90c8a3](https://github.com/adobe/spectrum-css/commit/c90c8a3))
 
 <a name="6.0.32"></a>
+
 ## 6.0.32
+
 🗓
 2023-07-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.31...@spectrum-css/pagination@6.0.32)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.31"></a>
+
 ## 6.0.31
+
 🗓
 2023-07-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.30...@spectrum-css/pagination@6.0.31)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.30"></a>
+
 ## 6.0.30
+
 🗓
 2023-07-11 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.29...@spectrum-css/pagination@6.0.30)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.29"></a>
+
 ## 6.0.29
+
 🗓
 2023-06-29 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.28...@spectrum-css/pagination@6.0.29)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.28"></a>
+
 ## 6.0.28
+
 🗓
 2023-06-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.27...@spectrum-css/pagination@6.0.28)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.27"></a>
+
 ## 6.0.27
+
 🗓
 2023-06-15 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.26...@spectrum-css/pagination@6.0.27)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.26"></a>
+
 ## 6.0.26
+
 🗓
 2023-06-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.25...@spectrum-css/pagination@6.0.26)
 
@@ -365,14 +503,18 @@ Add the "Button style" version of Pagination from the docs to Storybook.
 \*restore files to pre-formatted state([491dbcb](https://github.com/adobe/spectrum-css/commit/491dbcb))
 
 <a name="6.0.25"></a>
+
 ## 6.0.25
+
 🗓
 2023-06-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.24...@spectrum-css/pagination@6.0.25)
 
 **Note:** Version bump only for package @spectrum-css/pagination
 
 <a name="6.0.24"></a>
+
 ## 6.0.24
+
 🗓
 2023-06-01 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/pagination@6.0.23...@spectrum-css/pagination@6.0.24)
 
