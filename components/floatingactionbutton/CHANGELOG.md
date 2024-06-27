@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.0.0-s2-foundations.4
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`485128c`](https://github.com/adobe/spectrum-css/commit/485128ca7947acb064f31e4118044a3f7e3f88b5) Thanks [@pfulton](https://github.com/pfulton)! - Corrects a faulty regex that was negatively affecting compilation of custom properties
+
+- Updated dependencies [[`485128c`](https://github.com/adobe/spectrum-css/commit/485128ca7947acb064f31e4118044a3f7e3f88b5)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.4
+
 ## 3.0.0-s2-foundations.3
 
 ### Minor Changes
