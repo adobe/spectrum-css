@@ -1,14 +1,15 @@
 /*!
-Copyright 2023 Adobe. All rights reserved.
-This file is licensed to you under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License. You may obtain a copy
-of the License at http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
-OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License.
-*/
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
 const { join, sep, basename } = require("path");
 
@@ -135,28 +136,28 @@ module.exports = ({
 					{
 						colormin: false,
 						reduceIdents: false,
-						discardComments: {
-							removeAllButFirst: true,
-						},
+						discardComments: { removeAll: true },
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
 					},
 				],
 			},
+			"postcss-licensing": {
+				filename: "COPYRIGHT",
+			},
 			/* --------------------------------------------------- */
 			/* ------------------- REPORTING --------------------- */
-			stylelint: lint
-				? {
-					cache: true,
-					// Passing the config path saves a little time b/c it doesn't have to find it
-					configFile: join(__dirname, "stylelint.config.js"),
-					quiet: !verbose,
-					allowEmptyInput: true,
-					ignorePath: join(__dirname, ".stylelintignore"),
-					reportNeedlessDisables: true,
-					reportInvalidScopeDisables: true,
-				}
-				: false,
+			stylelint: {
+				cache: true,
+				fix: true,
+				// Passing the config path saves a little time b/c it doesn't have to find it
+				configFile: join(__dirname, "stylelint.config.js"),
+				quiet: !verbose || lint,
+				allowEmptyInput: true,
+				ignorePath: join(__dirname, ".stylelintignore"),
+				reportNeedlessDisables: lint,
+				reportInvalidScopeDisables: lint,
+			},
 			"postcss-reporter": verbose
 				? {
 					clearAllMessages: true,
