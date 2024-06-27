@@ -10,14 +10,15 @@
  * governing permissions and limitations under the License.
  */
 
+import stylelint from "stylelint";
+import { isRegExp, isString } from "stylelint/lib/utils/validateTypes.mjs";
+
 const {
 	createPlugin,
 	utils: { report, ruleMessages, validateOptions }
-} = require("stylelint");
+} = stylelint;
 
-const { isString, isRegExp } = require("stylelint/lib/utils/validateTypes");
-
-require("colors");
+import "colors";
 
 const ruleName = "spectrum-tools/no-unused-custom-properties";
 const messages = ruleMessages(ruleName, {
@@ -25,7 +26,7 @@ const messages = ruleMessages(ruleName, {
 	referenced: (prop) => `Custom property ${prop.magenta}'s references have been removed`,
 });
 
-const valueParser = require("postcss-value-parser");
+import valueParser from "postcss-value-parser";
 
 /** @type {import('stylelint').Plugin} */
 const ruleFunction = (enabled, { ignoreList = [] } = {}, context) => {
@@ -174,7 +175,8 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context) => {
 	};
 };
 
-module.exports.ruleName = ruleName;
-module.exports.messages = messages;
 
-module.exports = createPlugin(ruleName, ruleFunction);
+ruleFunction.ruleName = ruleName;
+ruleFunction.messages = messages;
+
+export default createPlugin(ruleName, ruleFunction);
