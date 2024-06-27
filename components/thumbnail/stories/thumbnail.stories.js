@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template } from "./template";
 
 /**
@@ -129,6 +130,7 @@ export default {
 	},
 };
 
+// @todo combine variants into one snapshot
 export const Default = Template.bind({});
 Default.args = {};
 
@@ -141,4 +143,14 @@ Layer.args = {
 export const WithBackground = Template.bind({});
 WithBackground.args = {
 	backgroundColor: "orange",
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

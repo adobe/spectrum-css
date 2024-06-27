@@ -4,7 +4,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
-import { useArgs } from "@storybook/preview-api";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 
@@ -27,12 +26,10 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-	...globals
-}, context) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
 
-	const textDirection = window.__dir;
-
+	const textDirection = globals.textDirection ?? "ltr";
 	const rtl = !!(textDirection === "rtl");
 	const rangeLength = max - min;
 	const centerPoint = rangeLength / 2 + min;
@@ -135,12 +132,10 @@ export const Template = ({
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}
 			aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}
 			@focusin=${() => {
-				const focusClass = { isFocused: true };
-				updateArgs(focusClass);
+				updateArgs({ isFocused: true });
 			}}
 			@focusout=${() => {
-				const focusClass = { isFocused: false };
-				updateArgs(focusClass);
+				updateArgs({ isFocused: false });
 			}}
 		>
 			<!-- Label region -->
@@ -150,7 +145,6 @@ export const Template = ({
 				role=${ifDefined(values.length > 1 ? "presentation" : undefined)}
 			>
 				${FieldLabel({
-					...globals,
 					size,
 					label,
 					isDisabled,

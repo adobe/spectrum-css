@@ -1,15 +1,17 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
+import { action } from "@storybook/addon-actions";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { action } from "@storybook/addon-actions";
-import { useArgs } from "@storybook/preview-api";
-
-import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-
 import "../index.css";
+
+const months = [...Array(12).keys()].map((key) =>
+	new Date(0, key).toLocaleString("en", { month: "long" })
+);
 
 export const Template = ({
 	rootClass = "spectrum-Calendar",
@@ -30,10 +32,10 @@ export const Template = ({
 	previousHandler,
 	nextHandler,
 	id,
-	...globals
-}, context) => {
-	const [, updateArgs] = useArgs();
-	const lang = window.__lang;
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
+
+	const lang = globals.lang ?? "en-US";
 
 	const DOW = [
 		"Sunday",
@@ -263,7 +265,7 @@ export const Template = ({
 				[`${rootClass}--padded`]: padded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			id=${ifDefined(id)}
 		>
 			<div class="${rootClass}-header">
@@ -279,7 +281,6 @@ export const Template = ({
 					})}
 				</div>
 				${ActionButton({
-					...globals,
 					label: "Previous",
 					hideLabel: true,
 					isQuiet: true,
@@ -293,7 +294,6 @@ export const Template = ({
 					}),
 				}, context)}
 				${ActionButton({
-					...globals,
 					label: "Next",
 					hideLabel: true,
 					isQuiet: true,
@@ -362,17 +362,22 @@ export const Template = ({
 												[`${rootClass}-date`]: true,
 												"is-outsideMonth": thisDay.isOutsideMonth,
 												"is-today": thisDay.isToday,
-												// "is-focused": thisDay.isSelected, @todo
 												"is-range-selection": thisDay.isInRange,
-												// "is-range-start": thisDay.isRangeStart, @todo
-												// "is-range-end": thisDay.isRangeEnd, @todo
+												"is-range-start": thisDay.isRangeStart,
+												"is-range-end": thisDay.isRangeEnd,
 												"is-selected": thisDay.isSelected,
-												"is-selection-start": thisDay.isRangeStart,
-												"is-selection-end": thisDay.isRangeEnd,
+												// "is-selection-start": thisDay.isRangeStart,
+												// "is-selection-end": thisDay.isRangeEnd,
 												"is-disabled": isDisabled,
-												"is-focused": isFocused && thisDay.isFocused,
+												"is-focused": (isFocused && thisDay.isFocused) || thisDay.isSelected,
 											})}
 											@click=${onDateClick.bind(null, thisDay)}
+											@focusin=${() => {
+												updateArgs({ isFocused: true });
+											}}
+											@focusout=${() => {
+												updateArgs({ isFocused: false });
+											}}
 											>${thisDay.date.getDate()}</span
 										>
 									</td>`
@@ -385,3 +390,45 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const CalendarGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Padded",
+			padded: true,
+		},
+		{
+			testHeading: "Abbreviated days of the week",
+			useDOWAbbrev: true,
+		},
+		{
+			testHeading: "Range selection",
+			month: months[6],
+			selectedDay: new Date(2023, 6, 3),
+			year: 2023,
+			lastDay: new Date(2023, 6, 7),
+			useDOWAbbrev: true,
+			padded: true,
+		},
+		{
+			testHeading: "Today highlighted",
+			month: undefined,
+			selectedDay: undefined,
+			year: undefined,
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+	]
+});

@@ -1,7 +1,5 @@
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
-
-import { Template } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { AssetGroup, Template } from "./template";
 
 /**
  * Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.
@@ -10,10 +8,6 @@ export default {
 	title: "Asset",
 	component: "Asset",
 	argTypes: {
-		scale: {
-			name: "Platform scale",
-			if: { arg: "preset", neq: "image" }
-		},
 		preset: {
 			name: "Preset asset types",
 			type: { name: "string" },
@@ -37,35 +31,18 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Asset",
-		preset: "image",
-		image: "example-ava.png",
 	},
 };
 
-const AssetGroup = (args) => html`
-	${window.isChromatic() ? html`
-		<div style=${styleMap({
-			"display": "grid",
-			"grid-template-columns": "repeat(3, 200px)",
-			"gap": "8px"
-		})}>
-			${Template(args)}
-			${Template({
-				...args,
-				preset: "file",
-			})}
-			${Template({
-				...args,
-				preset: "folder",
-			})}
-		</div>
-	` : Template(args)}
-`;
-
 export const Default = AssetGroup.bind({});
+Default.args = {
+	preset: "image",
+	image: "example-ava.png",
+};
 
+// ********* DOCS ONLY ********* //
 export const File = Template.bind({});
-File.tags = ["docs-only"];
+File.tags = ["autodocs", "!dev"];
 File.args = {
 	preset: "file",
 };
@@ -74,10 +51,20 @@ File.parameters = {
 };
 
 export const Folder = Template.bind({});
-Folder.tags = ["docs-only"];
+Folder.tags = ["autodocs", "!dev"];
 Folder.args = {
 	preset: "folder",
 };
 Folder.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

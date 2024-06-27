@@ -1,6 +1,5 @@
 import { svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
@@ -21,7 +20,7 @@ export const Template = ({
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      style=${ifDefined(styleMap(customStyles))}
+      style=${styleMap(customStyles)}
     >
       <defs>
         <path

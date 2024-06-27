@@ -1,4 +1,5 @@
 import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template";
@@ -139,8 +140,7 @@ export default {
 	},
 };
 
-
-const ChromaticPickerGroup = (args) => html`
+const Variants = (args) => html`
 	<div style=${styleMap({
 		"display": window.isChromatic() ? "grid" : "none",
 		"gap": "20px",
@@ -240,7 +240,7 @@ const ChromaticPickerGroup = (args) => html`
 	</div>
 `;
 
-export const Default = ChromaticPickerGroup.bind({});
+export const Default = Variants.bind({});
 Default.args = {};
 
 export const Open = Template.bind({});
@@ -248,16 +248,13 @@ Open.args = {
 	isOpen: true,
 };
 
-export const Express = ChromaticPickerGroup.bind({});
-Express.tags = ["vrt-only"];
-Express.args = {
-	express: true,
-};
-
-export const WithForcedColors = ChromaticPickerGroup.bind({});
-WithForcedColors.tags = ["vrt-only"];
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
-	// Sets the forced-colors media feature for a specific story.
-	chromatic: { forcedColors: "active" },
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
 WithForcedColors.args = {};

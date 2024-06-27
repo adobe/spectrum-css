@@ -22,8 +22,7 @@ export const Template = ({
 	iconOnly = false,
 	customStyles = {},
 	content = [],
-	...globals
-}, context) => {
+} = {}, context = {}) => {
 	if (!content || !content.length) {
 		console.warn("Tabs: content required");
 		return html``;
@@ -62,7 +61,7 @@ export const Template = ({
 				[`${rootClass}--compact`]: isCompact,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 		>
 			${when(!isOverflow, () => repeat(
 				content,
@@ -80,7 +79,6 @@ export const Template = ({
 							>
 								${when(item.icon, () =>
 									Icon({
-										...globals,
 										iconName: item.icon,
 										size
 									}, context)
@@ -103,7 +101,7 @@ export const Template = ({
 					isQuiet: true,
 					size,
 					isOpen,
-					placeholder: !iconOnly ? content?.[0].label : Icon({ ...globals, iconName: content?.[0].icon, size }, context),
+					placeholder: !iconOnly ? content?.[0].label : Icon({ iconName: content?.[0].icon, size }, context),
 					name: content?.[0].label,
 					id: "tab-selector",
 					customPopoverStyles: {

@@ -1,6 +1,9 @@
-import { html } from "lit";
+import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template as Stepper } from "@spectrum-css/stepper/stories/template.js";
+import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
+import { FormGroup } from "./form.template.js";
 
-import { Template } from "./form.template.js";
 
 /**
  * The form component is used for aligning multiple inputs and field groups within a form.
@@ -14,7 +17,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "State",
+				category: "Component",
 			},
 			control: "boolean",
 		},
@@ -23,17 +26,46 @@ export default {
 		rootClass: "spectrum-Form",
 		labelsAbove: false,
 	},
-	decorators: [
-		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
+};
+
+export const Default = FormGroup.bind({});
+Default.args = {
+	items: [
+		{
+			label: "Company title",
+			id: "form-example-company",
+			content: TextField.bind(null, {
+				multiline: true,
+				name: "field",
+			})
+		}, {
+			label: "Email address",
+			id: "form-example-email",
+			content: TextField.bind(null, {
+				type: "email",
+				name: "email",
+			})
+		}, {
+			label: "Country",
+			id: "form-example-country",
+			content: Picker.bind(null, {
+				placeholder: "Select a country",
+				name: "country",
+			})
+		}, {
+			label: "Amount",
+			id: "form-example-amount",
+			content: Stepper.bind(null, {})
+		}
 	],
 };
 
-export const Standard = Template.bind({});
-Standard.args = {
-	labelsAbove: false,
-};
-
-export const LabelsAbove = Template.bind({});
-LabelsAbove.args = {
-	labelsAbove: true,
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

@@ -1,6 +1,6 @@
-import { Template } from "./template";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template } from "./template";
 
 /**
  * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.
@@ -132,6 +132,17 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+// @todo combine variants into one snapshot
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
 
 export const Icon = Template.bind({});
 Icon.args = {

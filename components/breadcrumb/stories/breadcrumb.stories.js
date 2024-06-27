@@ -1,4 +1,5 @@
-import { Template } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { BreadcrumbGroup } from "./template";
 
 /**
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
@@ -34,7 +35,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = BreadcrumbGroup.bind({});
 Default.args = {
 	items: [
 		{
@@ -51,23 +52,12 @@ Default.args = {
 	],
 };
 
-export const NestedMultiline = Template.bind({});
-NestedMultiline.args = {
-	items: [
-		{
-			label: "Nav root",
-		},
-		{
-			iconName: "FolderOpen",
-			isDisabled: true,
-		},
-		{
-			label: "Trend",
-			isDragged: true,
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
-	variant: "multiline",
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

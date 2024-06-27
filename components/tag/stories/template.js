@@ -23,8 +23,7 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-	...globals
-}, context) => {
+} = {}, context = {}) => {
 	if(isInvalid) iconName = "Alert";
 
 	return html`
@@ -41,18 +40,16 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			tabindex=${isDisabled ? "-1" : "0"}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 		>
 			${when(avatarUrl && !isInvalid, () =>
 				Avatar({
-					...globals,
 					image: avatarUrl,
 					size: "50",
 				}, context)
 			)}
 			${when(iconName || isInvalid, () =>
 				Icon({
-					...globals,
 					size,
 					iconName,
 					customClasses: [`${rootClass}-itemIcon`],
@@ -61,7 +58,6 @@ export const Template = ({
 			<span class="${rootClass}-itemLabel">${label}</span>
 			${when(hasClearButton, () =>
 				ClearButton({
-					...globals,
 					size,
 					customClasses: [`${rootClass}-clearButton`],
 					onclick: (evt) => {

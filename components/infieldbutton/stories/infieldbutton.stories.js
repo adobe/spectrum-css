@@ -1,6 +1,6 @@
-import { Template } from "./template";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template } from "./template";
 
 /**
  * The in-field button component is a button used inside a text field.
@@ -68,7 +68,7 @@ export const Default = Template.bind({});
 Default.args = {};
 
 export const Start = Template.bind({});
-Start.tags = ["docs-only"];
+Start.tags = ["autodocs", "!dev"];
 Start.args = {
 	position: "left"
 };
@@ -77,7 +77,7 @@ Start.parameters = {
 };
 
 export const End = Template.bind({});
-End.tags = ["docs-only"];
+End.tags = ["autodocs", "!dev"];
 End.args = {
 	position: "right"
 };
@@ -95,8 +95,18 @@ Disabled.args = {
 	isDisabled: true
 };
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
 export const Stacked = Template.bind({});
-Stacked.tags = ["docs-only"];
+Stacked.tags = ["autodocs", "!dev"];
 Stacked.args = {
 	isStacked: true,
 };

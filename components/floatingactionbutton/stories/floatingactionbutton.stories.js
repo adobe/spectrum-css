@@ -1,6 +1,6 @@
-import { Template } from "./template";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template } from "./template";
 
 /**
  * The floating action button component is used to give users a more prominent button for high frequency actions.
@@ -43,4 +43,14 @@ Default.args = {};
 export const Secondary = Template.bind({});
 Secondary.args = {
 	variant: "secondary",
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

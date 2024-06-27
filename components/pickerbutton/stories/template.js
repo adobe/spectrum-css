@@ -1,5 +1,4 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -24,9 +23,8 @@ export const Template = ({
 	isRounded = false,
 	customStyles = {},
 	onclick,
-	...globals
-}, context) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
 	return html`
 		<button
@@ -45,7 +43,7 @@ export const Template = ({
 				[`${rootClass}--quiet`]: isQuiet,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			id=${ifDefined(id)}
 			aria-haspopup="listbox"
 			?disabled=${isDisabled}
@@ -62,7 +60,6 @@ export const Template = ({
 					</span>
 				`)}
 				${Icon({
-					...globals,
 					setName: iconType,
 					iconName: iconName ?? "ChevronDown",
 					size,

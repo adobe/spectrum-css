@@ -29,7 +29,7 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	size = "m",
-}, context) => {
+} = {}, context = {}) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
 
 	// Use Table tags or Div tags.
@@ -162,7 +162,7 @@ export const Template = ({
 	rowItems = [],
 	customClasses = [],
 	id,
-}, context) => {
+} = {}, context = {}) => {
 	if (!rowItems || !rowItems.length) return html``;
 
 	// Use Table tags or Div tags.

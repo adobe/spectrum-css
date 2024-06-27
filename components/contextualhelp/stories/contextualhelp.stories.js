@@ -1,6 +1,6 @@
-import { Template } from "./template";
-
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template } from "./template";
 
 /**
  * Contextual help shows a user extra information in relation to another component or view.
@@ -112,19 +112,20 @@ TopPopover.args = {
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };
 
-
+// ********* DOCS ONLY ********* //
 export const HelpDefault = Template.bind({});
+HelpDefault.tags = ["autodocs", "!dev"];
 HelpDefault.args = {
 	title: "Permission required",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	iconName: "Help",
 };
-HelpDefault.tags = ["docs-only"];
 HelpDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const HelpWithLink = Template.bind({});
+HelpWithLink.tags = ["autodocs", "!dev"];
 HelpWithLink.args = {
 	title: "Permission required",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -134,12 +135,12 @@ HelpWithLink.args = {
 	},
 	iconName: "Help",
 };
-HelpWithLink.tags = ["docs-only"];
 HelpWithLink.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const HelpTopPopover = Template.bind({});
+HelpTopPopover.tags = ["autodocs", "!dev"];
 HelpTopPopover.args = {
 	popoverPlacement: "top",
 	customStyles: { "max-inline-size": "275px" },
@@ -147,7 +148,16 @@ HelpTopPopover.args = {
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	iconName: "Help",
 };
-HelpTopPopover.tags = ["docs-only"];
 HelpTopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

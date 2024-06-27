@@ -1,4 +1,5 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template } from "./template";
 
 /**
@@ -146,7 +147,9 @@ Range.parameters = {
 	},
 };
 
+// ********* DOCS ONLY ********* //
 export const QuietRange = Template.bind({});
+QuietRange.tags = ["autodocs", "!dev"];
 QuietRange.args = {
 	lastDay: 3,
 	isRange: true,
@@ -161,9 +164,9 @@ QuietRange.parameters = {
 		}
 	},
 };
-QuietRange.tags = ["docs-only"];
 
 export const Invalid = Template.bind({});
+Invalid.tags = ["autodocs", "!dev"];
 Invalid.args = {
 	isInvalid: true,
 	isOpen: false,
@@ -176,9 +179,9 @@ Invalid.parameters = {
 		}
 	},
 };
-Invalid.tags = ["docs-only"];
 
 export const QuietInvalid = Template.bind({});
+QuietInvalid.tags = ["autodocs", "!dev"];
 QuietInvalid.args = {
 	isInvalid: true,
 	isQuiet: true,
@@ -192,9 +195,10 @@ QuietInvalid.parameters = {
 		}
 	},
 };
-QuietInvalid.tags = ["docs-only"];
+
 
 export const ReadOnly = Template.bind({});
+ReadOnly.tags = ["autodocs", "!dev"];
 ReadOnly.args = {
 	readOnly: true,
 };
@@ -206,9 +210,9 @@ ReadOnly.parameters = {
 		}
 	}
 };
-ReadOnly.tags = ["docs-only"];
 
 export const Disabled = Template.bind({});
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -220,9 +224,8 @@ Disabled.parameters = {
 		}
 	}
 };
-Disabled.tags = ["docs-only"];
-
 export const QuietDisabled = Template.bind({});
+QuietDisabled.tags = ["autodocs", "!dev"];
 QuietDisabled.args = {
 	isDisabled: true,
 	isQuiet: true,
@@ -235,4 +238,13 @@ QuietDisabled.parameters = {
 		}
 	}
 };
-QuietDisabled.tags = ["docs-only"];
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

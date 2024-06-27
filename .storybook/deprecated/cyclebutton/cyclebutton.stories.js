@@ -54,8 +54,7 @@ export const Default = (({
 	size = "m",
 	isDisabled = false,
 	onclick,
-	...globals
-}) => {
+} = {}, context = {}) => {
 	const [{
 		selectedIcon = "Pause",
 		initialIcon = "Play"
@@ -68,7 +67,6 @@ export const Default = (({
 			.spectrum--large { --spectrum-global-dimension-size-85: 9px; }
 		</style>
 		${ActionButton({
-			...globals,
 			customClasses: [rootClass, ...customClasses],
 			isQuiet: true,
 			isDisabled,
@@ -85,7 +83,7 @@ export const Default = (({
 						selectedIcon: initialIcon
 					});
 				},
-		})}
+		}, context)}
 	`;
 }).bind({});
 Default.args = {};

@@ -5,6 +5,7 @@ import "./assets/base.css";
 import "./assets/typekit.js";
 import {
 	withActions,
+	withArgEvents,
 	withContextWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
@@ -13,6 +14,7 @@ import {
 } from "./decorators/index.js";
 import DocumentationTemplate from "./DocumentationTemplate.mdx";
 import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
+import modes from "./modes";
 import { argTypes, globalTypes } from "./types";
 
 window.global = window;
@@ -75,6 +77,7 @@ export const parameters = {
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
 		pauseAnimationAtEnd: true,
+		modes,
 	},
 	controls: {
 		expanded: true,
@@ -134,6 +137,7 @@ export const decorators = [
 	withReducedMotionWrapper,
 	withContextWrapper,
 	withTestingPreviewWrapper,
+	withArgEvents,
 	withActions,
 	// Attach the icons to the window object for use in the stories
 	(StoryFn, context) => {

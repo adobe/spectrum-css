@@ -1,4 +1,5 @@
 import { {{ pascalCase name }}Group } from "./template.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 
 /**
   * {{ description }}
@@ -38,8 +39,12 @@ export default {
 export const Default = {{ pascalCase name }}Group.bind({});
 Default.args = {};
 
-export const WithForcedColors = {{ pascalCase name }}Group.bind({});
-WithForcedColors.tags = ["vrt-only"];
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
-	chromatic: { forcedColors: "active" },
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

@@ -2,7 +2,6 @@ import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { when } from "lit-html/directives/when.js";
 import { classMap } from "lit/directives/class-map.js";
@@ -25,10 +24,9 @@ export const Template = ({
 	readOnly = false,
 	selectedDay,
 	lastDay,
-	...globals
-}, context) => {
-	const [, updateArgs] = useArgs();
-	const lang = window.__lang;
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
+	const lang = globals.lang ?? "en-US";
 
 	return html`
 		<div
@@ -51,7 +49,6 @@ export const Template = ({
 			aria-haspopup="dialog"
 		>
 			${TextField({
-				...globals,
 				size: "m",
 				isQuiet,
 				isDisabled,
@@ -68,7 +65,6 @@ export const Template = ({
 			}, context)}
 			${when(isRange, () => html`<div class=${rootClass}-rangeDash></div>`)}
 			${when(isRange, () => TextField({
-				...globals,
 				size: "m",
 				isQuiet,
 				isDisabled,
@@ -83,7 +79,6 @@ export const Template = ({
 					: undefined,
 			}, context))}
 			${PickerButton({
-				...globals,
 				customClasses: [`${rootClass}-button`],
 				size: "m",
 				iconType: "workflow",
@@ -101,7 +96,6 @@ export const Template = ({
 			}, context)}
 			${when(!readOnly && !isDisabled, () => html`
 				${Popover({
-					...globals,
 					isOpen: isOpen && !isDisabled && !readOnly,
 					withTip: false,
 					position: "bottom",
@@ -114,7 +108,7 @@ export const Template = ({
 								width: undefined,
 						}
 						: {},
-					content: [Calendar(globals, context)],
+					content: [Calendar({}, context)],
 					// @todo this implementation of calendar does not currently display range selections or selected date on first load
 				}, context)}`
 			)}

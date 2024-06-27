@@ -1,7 +1,7 @@
-import { Template } from "./template";
-
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { CardGroup, Template } from "./template";
 
 /**
  * A card represents a rectangular space to contain text or images. Cards are typically used to encapsulate units of a data set, such as a gallery of image/caption pairs.
@@ -115,26 +115,43 @@ export default {
 	},
 };
 
-const defaultArgs = {
+export const Default = CardGroup.bind({});
+Default.args = {
 	title: "Card title",
 	image: "example-card-portrait.png",
 	description: "Optional description that should be one or two lines",
 	footer: [ "Footer" ],
 };
 
-export const Default = Template.bind({});
-Default.args = defaultArgs;
-export const Selected = Template.bind({});
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
+export const Selected = Default.bind({});
+Selected.tags = ["autodocs", "!dev"];
+Selected.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 Selected.args = {
-	...defaultArgs,
 	isSelected: true
 };
-export const Focused = Template.bind({});
+
+export const Focused = Default.bind({});
 Focused.args = {
-	...defaultArgs,
 	isFocused: true,
 	title: "Card title that is longer and should wrap",
 	customStyles: { "max-inline-size": "205px"},
+};
+Focused.tags = ["autodocs", "!dev"];
+Focused.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const Quiet = Template.bind({});
@@ -145,6 +162,10 @@ Quiet.args = {
 	description: "10/15/18",
 	isQuiet: true,
 };
+Quiet.tags = ["autodocs", "!dev"];
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const QuietFile = Template.bind({});
 QuietFile.storyName = "Quiet (file)";
@@ -152,13 +173,18 @@ QuietFile.args = {
 	title: "FileName",
 	description: "PDF",
 	showAsset: "file",
+	image: undefined,
 	isQuiet: true,
+};
+QuietFile.tags = ["autodocs", "!dev"];
+QuietFile.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const Horizontal = Template.bind({});
-Horizontal.argTypes = {
-	hasActions: { table: { disable: true } },
-	hasQuickAction: { table: { disable: true } },
+Horizontal.tags = ["autodocs", "!dev"];
+Horizontal.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 Horizontal.args = {
 	title: "Card title",
@@ -170,13 +196,12 @@ Horizontal.args = {
 	hasQuickAction: false,
 };
 
-
 export const NoImage = Template.bind({});
 NoImage.args = {
 	title: "Card title",
 	description: "Optional description that should be one or two lines",
 };
-NoImage.tags = ["docs-only"];
+NoImage.tags = ["autodocs", "!dev"];
 NoImage.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -188,7 +213,7 @@ QuietFolder.args = {
 	description: "10/15/18",
 	isQuiet: true,
 };
-QuietFolder.tags = ["docs-only"];
+QuietFolder.tags = ["autodocs", "!dev"];
 QuietFolder.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -202,7 +227,7 @@ QuietFocused.args = {
 	isQuiet: true,
 	isFocused: true,
 };
-QuietFocused.tags = ["docs-only"];
+QuietFocused.tags = ["autodocs", "!dev"];
 QuietFocused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -216,7 +241,7 @@ QuietSelected.args = {
 	isQuiet: true,
 	isSelected: true,
 };
-QuietSelected.tags = ["docs-only"];
+QuietSelected.tags = ["autodocs", "!dev"];
 QuietSelected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -233,7 +258,7 @@ AssetPreview.args = {
 		"width": "200px",
 	}
 };
-AssetPreview.tags = ["docs-only"];
+AssetPreview.tags = ["autodocs", "!dev"];
 AssetPreview.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -250,7 +275,7 @@ Gallery.args = {
 		"width": "700px",
 	}
 };
-Gallery.tags = ["docs-only"];
+Gallery.tags = ["autodocs", "!dev"];
 Gallery.parameters = {
 	chromatic: { disableSnapshot: true },
 };

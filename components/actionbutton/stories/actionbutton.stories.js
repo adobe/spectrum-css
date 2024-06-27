@@ -1,5 +1,6 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Variants } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { ActionButtonGroup } from "./template";
 
 /**
  * The action button component represents an action a user can take.
@@ -105,13 +106,14 @@ export default {
 		},
 		hasPopup: {
 			name: "Has popup",
-			description: "True if the button triggers a popup action.",
-			type: { name: "boolean" },
+			description: "If the button triggers a popup action, this should be set to reflect the type of element that pops-up.",
+			type: { name: "string" },
 			table: {
-				type: { summary: "boolean" },
-				category: "Advanced",
+				type: { summary: "string" },
+				category: "Accessibility",
 			},
-			control: "boolean",
+			control: "select",
+			options: ["true", "menu", "listbox", "tree", "grid", "dialog", "false"],
 		},
 		staticColor: {
 			name: "Static color",
@@ -127,10 +129,9 @@ export default {
 	args: {
 		rootClass: "spectrum-ActionButton",
 		size: "m",
-		iconName: "More",
 		isQuiet: false,
 		isEmphasized: false,
-		hasPopup: false,
+		hasPopup: "false",
 		isActive: false,
 		isFocused: false,
 		isHovered: false,
@@ -144,23 +145,40 @@ export default {
 	},
 };
 
-export const Default = Variants.bind({});
-Default.args = {};
+export const Default = ActionButtonGroup.bind({});
+Default.args = {
+	iconName: "More",
+	label: "More",
+};
 
-export const StaticBlack = Variants.bind({});
+// ********* VRT ONLY ********* //
+export const StaticBlack = Default.bind({});
+StaticBlack.tags = ["test", "!autodocs", "!dev"];
 StaticBlack.args = {
 	staticColor: "black",
 };
-
-export const StaticWhite = Variants.bind({});
-StaticWhite.args = {
-	/* Force dark mode to make typography readable */
-	color: "dark",
-	staticColor: "white",
+StaticBlack.parameters = {
+	chromatic: {
+		modes: disableDefaultModes
+	},
 };
 
-export const WithForcedColors = Variants.bind({});
-WithForcedColors.tags = ["vrt-only"];
+export const StaticWhite = Default.bind({});
+StaticWhite.tags = ["test", "!autodocs", "!dev"];
+StaticWhite.args = {
+	staticColor: "white",
+};
+StaticWhite.parameters = {
+	chromatic: {
+		modes: disableDefaultModes
+	},
+};
+
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
-	chromatic: { forcedColors: "active" },
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
