@@ -11,14 +11,14 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-express {
-	--system-spectrum-modal--confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
-	--system-spectrum-modal--fullscreen-margin: 32px;
-	--system-spectrum-modal--max-height: 90vh;
-	--system-spectrum-modal--max-width: 90%;
-	--system-spectrum-modal--background-color: var(--spectrum-gray-75);
-	--system-spectrum-modal--confirm-border-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-modal--confirm-exit-animation-duration: var(--spectrum-animation-duration-100);
-	--system-spectrum-modal--confirm-entry-animation-duration: var(--spectrum-animation-duration-500);
-	--system-spectrum-modal--confirm-entry-animation-delay: var(--spectrum-animation-duration-200);
-	--system-spectrum-modal--transition-animation-duration: var(--spectrum-animation-duration-100);
+	--system-spectrum-modal-confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
+	--system-spectrum-modal-fullscreen-margin: 32px;
+	--system-spectrum-modal-max-height: 90vh;
+	--system-spectrum-modal-max-width: 90%;
+	--system-spectrum-modal-background-color: var(--spectrum-gray-75);
+	--system-spectrum-modal-confirm-border-radius: var(--spectrum-corner-radius-100);
+	--system-spectrum-modal-confirm-exit-animation-duration: var(--spectrum-animation-duration-100);
+	--system-spectrum-modal-confirm-entry-animation-duration: var(--spectrum-animation-duration-500);
+	--system-spectrum-modal-confirm-entry-animation-delay: var(--spectrum-animation-duration-200);
+	--system-spectrum-modal-transition-animation-duration: var(--spectrum-animation-duration-100);
 }

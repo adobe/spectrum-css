@@ -139,9 +139,7 @@ async function processCSS(content, input, output, {
 	const promises = [];
 
 	if (result.css) {
-		// @todo: prettier can't process container style queries without throwing an error on a missing parenthesis
-		// const formatted = await prettier.format(result.css.trimStart(), { parser: "css", printWidth: 500 });
-		const formatted = result.css.trimStart();
+		const formatted = await prettier.format(result.css.trimStart(), { parser: "css", printWidth: 500 });
 		promises.push(
 			fsp.writeFile(output, formatted).then(() => {
 				const stats = fs.statSync(output);

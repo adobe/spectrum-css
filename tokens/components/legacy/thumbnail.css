@@ -11,30 +11,30 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-legacy {
-	--system-spectrum-thumbnail--size: var(--spectrum-thumbnail-size-500);
-	--system-spectrum-thumbnail--border-radius: var(--spectrum-corner-radius-75);
-	--system-spectrum-thumbnail--border-width: var(--spectrum-border-width-100);
-	--system-spectrum-thumbnail--border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
-	--system-spectrum-thumbnail--layer-border-width-inner: var(--spectrum-border-width-400);
-	--system-spectrum-thumbnail--layer-border-color-inner: var(--spectrum-white);
-	--system-spectrum-thumbnail--layer-border-width-outer: var(--spectrum-border-width-100);
-	--system-spectrum-thumbnail--layer-border-color-outer: var(--spectrum-gray-500);
-	--system-spectrum-thumbnail--border-width-selected: var(--spectrum-border-width-200);
-	--system-spectrum-thumbnail--border-color-selected: var(--spectrum-accent-color-800);
-	--system-spectrum-thumbnail--focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--system-spectrum-thumbnail--focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--system-spectrum-thumbnail--focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--system-spectrum-thumbnail--color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
-	--system-spectrum-thumbnail--size50--size: var(--spectrum-thumbnail-size-50);
-	--system-spectrum-thumbnail--size75--size: var(--spectrum-thumbnail-size-75);
-	--system-spectrum-thumbnail--size100--size: var(--spectrum-thumbnail-size-100);
-	--system-spectrum-thumbnail--size200--size: var(--spectrum-thumbnail-size-200);
-	--system-spectrum-thumbnail--size300--size: var(--spectrum-thumbnail-size-300);
-	--system-spectrum-thumbnail--size400--size: var(--spectrum-thumbnail-size-400);
-	--system-spectrum-thumbnail--size500--size: var(--spectrum-thumbnail-size-500);
-	--system-spectrum-thumbnail--size600--size: var(--spectrum-thumbnail-size-600);
-	--system-spectrum-thumbnail--size700--size: var(--spectrum-thumbnail-size-700);
-	--system-spectrum-thumbnail--size800--size: var(--spectrum-thumbnail-size-800);
-	--system-spectrum-thumbnail--size900--size: var(--spectrum-thumbnail-size-900);
-	--system-spectrum-thumbnail--size1000--size: var(--spectrum-thumbnail-size-1000);
+	--system-spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
+	--system-spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
+	--system-spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
+	--system-spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
+	--system-spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
+	--system-spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
+	--system-spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);
+	--system-spectrum-thumbnail-layer-border-color-outer: var(--spectrum-gray-500);
+	--system-spectrum-thumbnail-border-width-selected: var(--spectrum-border-width-200);
+	--system-spectrum-thumbnail-border-color-selected: var(--spectrum-accent-color-800);
+	--system-spectrum-thumbnail-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-spectrum-thumbnail-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-spectrum-thumbnail-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-spectrum-thumbnail-color-opacity-disabled: var(--spectrum-thumbnail-opacity-disabled);
+	--system-spectrum-thumbnail-size50-size: var(--spectrum-thumbnail-size-50);
+	--system-spectrum-thumbnail-size75-size: var(--spectrum-thumbnail-size-75);
+	--system-spectrum-thumbnail-size100-size: var(--spectrum-thumbnail-size-100);
+	--system-spectrum-thumbnail-size200-size: var(--spectrum-thumbnail-size-200);
+	--system-spectrum-thumbnail-size300-size: var(--spectrum-thumbnail-size-300);
+	--system-spectrum-thumbnail-size400-size: var(--spectrum-thumbnail-size-400);
+	--system-spectrum-thumbnail-size500-size: var(--spectrum-thumbnail-size-500);
+	--system-spectrum-thumbnail-size600-size: var(--spectrum-thumbnail-size-600);
+	--system-spectrum-thumbnail-size700-size: var(--spectrum-thumbnail-size-700);
+	--system-spectrum-thumbnail-size800-size: var(--spectrum-thumbnail-size-800);
+	--system-spectrum-thumbnail-size900-size: var(--spectrum-thumbnail-size-900);
+	--system-spectrum-thumbnail-size1000-size: var(--spectrum-thumbnail-size-1000);
 }

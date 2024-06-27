@@ -32,7 +32,8 @@ function extractFallbackValue(declValue) {
 
 // Reformat pseudo functions to use dash-formatted names
 const formatPseudos = (selector) => {
-	const matches = [...selector.matchAll(/:(\w+)(\((.*?)\))?/g)];
+	const pseudoRegex = /:(\w+)(\((.*?)\))?/g;
+	const matches = [...selector.matchAll(pseudoRegex)];
 	if (!matches || matches.length === 0) return selector;
 
 	let replacement = "";
@@ -53,7 +54,7 @@ const formatPseudos = (selector) => {
 		}
 	}
 
-	return selector.replace(/:\w+\(.*?\)/g, replacement.replace(/\s/g, ""));
+	return selector.replaceAll(pseudoRegex, replacement);
 };
 
 /**
@@ -80,7 +81,7 @@ function getBaseSelector(selector, selectorPrefix) {
 	let baseSelector = selectorPrefix;
 
 	// This regex is designed to pull spectrum-<ComponentName> out of a selector
-	let baseSelectorMatch = selector.match(new RegExp(`^.(${selectorPrefix}-[A-Z][^-. ]+)`));
+	let baseSelectorMatch = selector.match(new RegExp(`^.(${selectorPrefix}-[A-Z][^\\W-.\\s]+)`));
 	if (baseSelectorMatch) {
 		const [, foundSelector] = baseSelectorMatch;
 		// @note is there any way this will capture a passthrough selector instead of the base selector for the component?
@@ -101,40 +102,35 @@ function getBaseSelector(selector, selectorPrefix) {
 function getVariableName(selector, prop, { identifierName, identifierValue, selectorPrefix }) {
 	const baseSelector = getBaseSelector(selector, selectorPrefix);
 
+	const cleanPropertyName = (prop) => prop
+		// Remove the base selector
+		.replace(new RegExp(baseSelector, "gi"), "")
+		// Remove the identifers if they exist
+		.replace(new RegExp(selectorPrefix, "gi"), "")
+		.replace(new RegExp(identifierName, "gi"), "")
+		.replace(new RegExp(identifierValue, "gi"), "")
+		// Remove mod from the new property name
+		.replace(/mod/g, "")
+		// Remove state-based prefix
+		.replace(/is-/g, "")
+		// If a string has a lowercase letter followed by an uppercase letter, insert a dash between them
+		.replace(/([a-z])([A-Z])/g, "$1-$2")
+		// Remove all whitespace
+		.replace(/\s+/g, "")
+		// Remove non-alphanumeric characters
+		.replace(/\W/g, "-")
+		// Replace multiple dashes with a single dash
+		.replace(/-+/g, "-")
+		// Remove any leading or trailing dashes
+		.replace(/^-/g, "")
+		.replace(/-$/g, "");
+
+	let propertyName = selector;
 	// @note what about :root, :host, or other special selectors?
-	selector = formatPseudos(selector);
-	selector = replaceCombinators(selector);
+	propertyName = formatPseudos(propertyName);
+	propertyName = replaceCombinators(propertyName);
 
-	// @note why are we splitting on "."? What if we're not using classes?
-	// @todo need to write a test case to verify attribute selectors are handled correctly
-	// Split the selector into parts
-	let selectorParts = [selector, prop];
-
-	// Clean up the selector parts
-	selectorParts = selectorParts.map((part) =>
-		part
-			// Remove the base selector
-			.replace(new RegExp(baseSelector, "gi"), "")
-			// Remove the identifers if they exist
-			.replace(new RegExp(selectorPrefix, "gi"), "")
-			.replace(new RegExp(identifierName, "gi"), "")
-			.replace(new RegExp(identifierValue, "gi"), "")
-			// Remove state-based prefix
-			.replace(/is-/g, "")
-			// If a string has a lowercase letter followed by an uppercase letter, insert a dash between them
-			.replace(/([a-z])([A-Z])/g, "$1-$2")
-			// Remove all whitespace
-			.replace(/\s+/g, "")
-			// Remove non-alphanumeric characters
-			.replace(/\W/g, "-")
-			// Remove any leading or trailing dashes
-			.replace(/^-/g, "")
-			.replace(/-$/g, "")
-			// Replace multiple dashes with a single dash
-			.replace(/-+/g, "-")
-	).filter((part) => part.length > 0);
-
-	return `--${identifierName}-${baseSelector}-${selectorParts.join("-")}`.toLowerCase();
+	return `--${identifierName}-${baseSelector}-${cleanPropertyName(`${propertyName}-${prop}`)}`.toLowerCase();
 }
 
 /**

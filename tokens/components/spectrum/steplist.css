@@ -11,21 +11,21 @@ governing permissions and limitations under the License.
 */
 
 .spectrum {
-	--system-spectrum-steplist--step-width: 80px;
-	--system-spectrum-steplist--marker-diameter: 8px;
-	--system-spectrum-steplist--marker-hit-area: 20px;
-	--system-spectrum-steplist--segment-height: 2px;
-	--system-spectrum-steplist--top-padding: 22px;
-	--system-spectrum-steplist--small-top-padding: 11px;
-	--system-spectrum-steplist--side-padding: 60px;
-	--system-spectrum-steplist--label-label-offset: 10px;
-	--system-spectrum-steplist--label-text-size: 12px;
-	--system-spectrum-steplist--current-label-text-color: var(--spectrum-gray-800);
-	--system-spectrum-steplist--current-marker-color: var(--spectrum-gray-800);
-	--system-spectrum-steplist--complete-label-text-color: var(--spectrum-gray-700);
-	--system-spectrum-steplist--incomplete-label-color: var(--spectrum-gray-600);
-	--system-spectrum-steplist--complete-marker-background-color: var(--spectrum-gray-600);
-	--system-spectrum-steplist--incomplete-marker-border-color: var(--spectrum-gray-200);
-	--system-spectrum-steplist--incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
-	--system-spectrum-steplist--complete-segment-border-block-end-color: var(--spectrum-gray-600);
+	--system-spectrum-steplist-step-width: 80px;
+	--system-spectrum-steplist-marker-diameter: 8px;
+	--system-spectrum-steplist-marker-hit-area: 20px;
+	--system-spectrum-steplist-segment-height: 2px;
+	--system-spectrum-steplist-top-padding: 22px;
+	--system-spectrum-steplist-small-top-padding: 11px;
+	--system-spectrum-steplist-side-padding: 60px;
+	--system-spectrum-steplist-label-label-offset: 10px;
+	--system-spectrum-steplist-label-text-size: 12px;
+	--system-spectrum-steplist-current-label-text-color: var(--spectrum-gray-800);
+	--system-spectrum-steplist-current-marker-color: var(--spectrum-gray-800);
+	--system-spectrum-steplist-complete-label-text-color: var(--spectrum-gray-700);
+	--system-spectrum-steplist-incomplete-label-color: var(--spectrum-gray-600);
+	--system-spectrum-steplist-complete-marker-background-color: var(--spectrum-gray-600);
+	--system-spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-200);
+	--system-spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
+	--system-spectrum-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
 }

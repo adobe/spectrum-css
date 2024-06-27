@@ -11,26 +11,26 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-ProgressCircle {
-	--spectrum-progress-circle-track-border-color: var(--system-spectrum-progresscircle--progress-circle-track-border-color);
-	--spectrum-progress-circle-fill-border-color: var(--system-spectrum-progresscircle--progress-circle-fill-border-color);
-	--spectrum-progress-circle-track-border-color-over-background: var(--system-spectrum-progresscircle--progress-circle-track-border-color-over-background);
-	--spectrum-progress-circle-fill-border-color-over-background: var(--system-spectrum-progresscircle--progress-circle-fill-border-color-over-background);
-	--spectrum-progress-circle-size: var(--system-spectrum-progresscircle--progress-circle-size);
-	--spectrum-progress-circle-thickness: var(--system-spectrum-progresscircle--progress-circle-thickness);
-	--spectrum-progress-circle-track-border-style: var(--system-spectrum-progresscircle--progress-circle-track-border-style);
+	--spectrum-progress-circle-track-border-color: var(--system-spectrum-progresscircle-progress-circle-track-border-color);
+	--spectrum-progress-circle-fill-border-color: var(--system-spectrum-progresscircle-progress-circle-fill-border-color);
+	--spectrum-progress-circle-track-border-color-over-background: var(--system-spectrum-progresscircle-progress-circle-track-border-color-over-background);
+	--spectrum-progress-circle-fill-border-color-over-background: var(--system-spectrum-progresscircle-progress-circle-fill-border-color-over-background);
+	--spectrum-progress-circle-size: var(--system-spectrum-progresscircle-progress-circle-size);
+	--spectrum-progress-circle-thickness: var(--system-spectrum-progresscircle-progress-circle-thickness);
+	--spectrum-progress-circle-track-border-style: var(--system-spectrum-progresscircle-progress-circle-track-border-style);
 }
 
 .spectrum-ProgressCircle--small {
-	--spectrum-progress-circle-size: var(--system-spectrum-progresscircle--small--progress-circle-size);
-	--spectrum-progress-circle-thickness: var(--system-spectrum-progresscircle--small--progress-circle-thickness);
+	--spectrum-progress-circle-size: var(--system-spectrum-progresscircle-small-progress-circle-size);
+	--spectrum-progress-circle-thickness: var(--system-spectrum-progresscircle-small-progress-circle-thickness);
 }
 
 .spectrum-ProgressCircle--medium {
-	--spectrum-progress-circle-size: var(--system-spectrum-progresscircle--medium--progress-circle-size);
-	--spectrum-progress-circle-thickness: var(--system-spectrum-progresscircle--medium--progress-circle-thickness);
+	--spectrum-progress-circle-size: var(--system-spectrum-progresscircle-medium-progress-circle-size);
+	--spectrum-progress-circle-thickness: var(--system-spectrum-progresscircle-medium-progress-circle-thickness);
 }
 
 .spectrum-ProgressCircle--large {
-	--spectrum-progress-circle-size: var(--system-spectrum-progresscircle--large--progress-circle-size);
-	--spectrum-progress-circle-thickness: var(--system-spectrum-progresscircle--large--progress-circle-thickness);
+	--spectrum-progress-circle-size: var(--system-spectrum-progresscircle-large-progress-circle-size);
+	--spectrum-progress-circle-thickness: var(--system-spectrum-progresscircle-large-progress-circle-thickness);
 }

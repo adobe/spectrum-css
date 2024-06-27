@@ -11,30 +11,30 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Divider {
-	--spectrum-divider-thickness: var(--system-spectrum-divider--thickness);
-	--spectrum-divider-background-color: var(--system-spectrum-divider--background-color);
-	--spectrum-divider-background-color-small: var(--system-spectrum-divider--background-color-small);
-	--spectrum-divider-background-color-medium: var(--system-spectrum-divider--background-color-medium);
-	--spectrum-divider-background-color-large: var(--system-spectrum-divider--background-color-large);
-	--spectrum-divider-background-color-small-static-white: var(--system-spectrum-divider--background-color-small-static-white);
-	--spectrum-divider-background-color-medium-static-white: var(--system-spectrum-divider--background-color-medium-static-white);
-	--spectrum-divider-background-color-large-static-white: var(--system-spectrum-divider--background-color-large-static-white);
-	--spectrum-divider-background-color-small-static-black: var(--system-spectrum-divider--background-color-small-static-black);
-	--spectrum-divider-background-color-medium-static-black: var(--system-spectrum-divider--background-color-medium-static-black);
-	--spectrum-divider-background-color-large-static-black: var(--system-spectrum-divider--background-color-large-static-black);
+	--spectrum-divider-thickness: var(--system-spectrum-divider-thickness);
+	--spectrum-divider-background-color: var(--system-spectrum-divider-background-color);
+	--spectrum-divider-background-color-small: var(--system-spectrum-divider-background-color-small);
+	--spectrum-divider-background-color-medium: var(--system-spectrum-divider-background-color-medium);
+	--spectrum-divider-background-color-large: var(--system-spectrum-divider-background-color-large);
+	--spectrum-divider-background-color-small-static-white: var(--system-spectrum-divider-background-color-small-static-white);
+	--spectrum-divider-background-color-medium-static-white: var(--system-spectrum-divider-background-color-medium-static-white);
+	--spectrum-divider-background-color-large-static-white: var(--system-spectrum-divider-background-color-large-static-white);
+	--spectrum-divider-background-color-small-static-black: var(--system-spectrum-divider-background-color-small-static-black);
+	--spectrum-divider-background-color-medium-static-black: var(--system-spectrum-divider-background-color-medium-static-black);
+	--spectrum-divider-background-color-large-static-black: var(--system-spectrum-divider-background-color-large-static-black);
 }
 
 .spectrum-Divider--sizeS {
-	--spectrum-divider-thickness: var(--system-spectrum-divider--size-s--thickness);
-	--spectrum-divider-background-color: var(--system-spectrum-divider--size-s--background-color);
+	--spectrum-divider-thickness: var(--system-spectrum-divider-size-s-thickness);
+	--spectrum-divider-background-color: var(--system-spectrum-divider-size-s-background-color);
 }
 
 .spectrum-Divider--sizeM {
-	--spectrum-divider-thickness: var(--system-spectrum-divider--size-m--thickness);
-	--spectrum-divider-background-color: var(--system-spectrum-divider--size-m--background-color);
+	--spectrum-divider-thickness: var(--system-spectrum-divider-size-m-thickness);
+	--spectrum-divider-background-color: var(--system-spectrum-divider-size-m-background-color);
 }
 
 .spectrum-Divider--sizeL {
-	--spectrum-divider-thickness: var(--system-spectrum-divider--size-l--thickness);
-	--spectrum-divider-background-color: var(--system-spectrum-divider--size-l--background-color);
+	--spectrum-divider-thickness: var(--system-spectrum-divider-size-l-thickness);
+	--spectrum-divider-background-color: var(--system-spectrum-divider-size-l-background-color);
 }

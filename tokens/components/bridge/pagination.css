@@ -11,13 +11,13 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Pagination {
-	--spectrum-pagination-counter-margin-inline-start: var(--system-spectrum-pagination--counter-margin-inline-start);
-	--spectrum-pagination-page-button-inline-spacing: var(--system-spectrum-pagination--page-button-inline-spacing);
-	--spectrum-pagination-counter-color: var(--system-spectrum-pagination--counter-color);
-	--spectrum-pagination-counter-font-size: var(--system-spectrum-pagination--counter-font-size);
-	--spectrum-pagination-counter-line-height: var(--system-spectrum-pagination--counter-line-height);
+	--spectrum-pagination-counter-margin-inline-start: var(--system-spectrum-pagination-counter-margin-inline-start);
+	--spectrum-pagination-page-button-inline-spacing: var(--system-spectrum-pagination-page-button-inline-spacing);
+	--spectrum-pagination-counter-color: var(--system-spectrum-pagination-counter-color);
+	--spectrum-pagination-counter-font-size: var(--system-spectrum-pagination-counter-font-size);
+	--spectrum-pagination-counter-line-height: var(--system-spectrum-pagination-counter-line-height);
 }
 
 .spectrum-Pagination:dir(rtl) {
-	--spectrum-logical-rotation: var(--system-spectrum-pagination: dir(rtl) --pagination-dir-rtl--logical-rotation);
+	--spectrum-logical-rotation: var(--system-spectrum-pagination-dir-rtl-logical-rotation);
 }
