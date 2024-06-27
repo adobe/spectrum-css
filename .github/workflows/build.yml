@@ -143,6 +143,8 @@ jobs:
             - name: Check if there are changes
               shell: bash
               run: |
+                git add .
+                yarn lint-staged --quiet --allow-empty || true
                 if [[ -z $(git status --porcelain) ]]; then
                     echo "No changes detected"
                     exit 0

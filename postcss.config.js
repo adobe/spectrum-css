@@ -25,11 +25,13 @@ module.exports = ({
 	},
 	combine = false,
 	lint = true,
+	shouldMinify = false,
 	verbose = true,
 	additionalPlugins = {},
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
+	const isProduction = env.toLowerCase() === "production";
 	const rootPath = __dirname;
 	const outputFilepath = to ?? file;
 	const relativePath = outputFilepath?.replace(rootPath, "");
@@ -37,10 +39,10 @@ module.exports = ({
 	const pathParts = relativePath?.split(sep) ?? [];
 
 	const isBridge = pathParts.includes("bridge");
-	const isTheme = ["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename === "index-theme";
-	const isExpress = outputFilename === "express" || pathParts.includes("express");
+	const isTheme = ["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename.startsWith("index-theme");
+	const isExpress = outputFilename.startsWith("express") || pathParts.includes("express");
 
-	if (env === "development" && !options.map) {
+	if (!isProduction && !options.map) {
 		options.map = { inline: false };
 	}
 	else options.map = false;
@@ -53,7 +55,7 @@ module.exports = ({
 		combine = true;
 	}
 
-	if (outputFilename === "index-base") {
+	if (outputFilename.startsWith("index-base")) {
 		splitinatorOptions.noFlatVariables = true;
 	}
 
@@ -138,6 +140,7 @@ module.exports = ({
 						discardComments: {
 							removeAllButFirst: true,
 						},
+						normalizeWhitespace: shouldMinify,
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
 					},

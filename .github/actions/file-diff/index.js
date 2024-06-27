@@ -12,7 +12,7 @@
  */
 
 const { existsSync } = require("fs");
-const { join, sep } = require("path");
+const { join, sep, dirname } = require("path");
 
 const core = require("@actions/core");
 
@@ -85,8 +85,6 @@ async function run() {
 			`**Total size**: ${bytesToSize(overallHeadSize)}<sup>*</sup>`,
 		];
 
-		let summaryTable = [];
-
 		if (sections.length === 0) {
 			summary.push(...["", " 🎉 No changes detected in any packages"]);
 		} else {
@@ -96,7 +94,7 @@ async function run() {
 			 */
 			let changeSummary = "";
 			if (baseOutput.size > 0 && hasBase && hasChange) {
-				changeSummary = `**Total change (Δ)**: ${printChange(overallHeadSize, overallBaseSize)} (${printPercentChange(overallHeadSize, overallBaseSize)})`;
+				changeSummary = `**Total change (Δ)**: ${printChange(overallBaseSize, overallHeadSize)} (${printPercentChange(overallHeadSize, overallBaseSize)})`;
 			} else if (baseOutput.size > 0 && hasBase && !hasChange) {
 				changeSummary = `No change in file sizes`;
 			}
@@ -105,17 +103,8 @@ async function run() {
 				summary.push(
 					changeSummary,
 					"",
-					"<small><em>Table reports on changes to a package's main file. Other changes can be found in the collapsed <a href=\"#details\">Details</a> section below.</em></small>",
-					""
 				);
 			}
-
-			markdown.push(
-				"<a name=\"details\"></a>",
-				`<details>`,
-				`<summary><b>Details</b></summary>`,
-				""
-			);
 
 			sections.map(({ name, filePath, headMainSize, baseMainSize, hasChange, mainFile, fileMap }) => {
 				if (!hasChange) return;
@@ -151,37 +140,53 @@ async function run() {
 					) {
 						data.push(printChange(headMainSize, baseMainSize));
 					}
-
-					if (data.length > 0) {
-						summaryTable.push([name, bytesToSize(headMainSize), data]);
-					}
 				}
 
 
 				const md = ["", `#### ${name}`, ""];
 				md.push(
 					...[
-						["File", "Head", ...(hasBase ? ["Base", "Δ"] : [])],
-						[" - ", " - ", ...(hasBase ? [" - ", " - "] : [])],
+						["Filename", "Head", "Minified", "Gzipped", ...(hasBase ? ["Compared to base"] : [])],
+						[" - ", " - ", "-", "-", ...(hasBase ? [" - "] : [])],
 					].map((row) => `| ${row.join(" | ")} |`),
+
 					...[...fileMap.entries()]
 						.reduce(
 							(
 								table, // accumulator
 								[readableFilename, { headByteSize = 0, baseByteSize = 0 }] // deconstructed filemap entry; i.e., Map<key, { ...values }> = [key, { ...values }]
 							) => {
+								// table is an array containing the printable data for the markdown table
+								if (readableFilename.endsWith(".map")) return table;
+
+								const removedOnBranch = isRemoved(headByteSize, baseByteSize);
+								// @todo should there be any normalization before comparing the file names?
+								const isMainFile = readableFilename === mainFile;
+
+								// If the file is a minified file, don't include it separately in the table
+								if (/\.min\.css/.test(readableFilename)) return table;
+
+								const gzipName = readableFilename.replace(/\.([a-z]+)$/, ".min.$1.gz");
+								const minName = readableFilename.replace(/\.([a-z]+)$/, ".min.$1");
+
+								const size = removedOnBranch ? " - " : bytesToSize(headByteSize);
+								const gzipSize = removedOnBranch ? " - " : gzipName ? bytesToSize(fileMap.get(gzipName)?.headByteSize ?? 0) : "-";
+								const minSize = removedOnBranch ? " - " : minName ? bytesToSize(fileMap.get(minName)?.headByteSize ?? 0) : "-";
+
+								const delta = removedOnBranch ? "🚨 deleted, moved, or renamed" : isNew(headByteSize, baseByteSize) ? "🎉 **new**" : `${printChange(headByteSize, baseByteSize)}${difference(baseByteSize, headByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`;
+
 								// @todo readable filename can be linked to html diff of the file?
 								// https://github.com/adobe/spectrum-css/pull/2093/files#diff-6badd53e481452b5af234953767029ef2e364427dd84cdeed25f5778b6fca2e6
 								return [
 									...table,
 									[
-										readableFilename === mainFile ? `**${readableFilename}**` : readableFilename,
+										// Bold the main file to help it stand out
+										isMainFile ? `**${readableFilename}**` : readableFilename,
 										// If the file was removed, note it's absense with a dash; otherwise, note it's size
-										isRemoved(headByteSize, baseByteSize) ? " - " : bytesToSize(headByteSize),
-										...(hasBase ? [
-											bytesToSize(baseByteSize),
-											isRemoved(headByteSize, baseByteSize) ? "🚨 deleted, moved, or renamed" : isNew(headByteSize, baseByteSize) ? "🎉 **new**" : `${printChange(headByteSize, baseByteSize)}${difference(headByteSize, baseByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`,
-										] : []),
+										size,
+										minSize,
+										gzipSize,
+										...(hasBase ? [delta] : []),
 									]
 								];
 							},
@@ -193,25 +198,28 @@ async function run() {
 				markdown.push(...md);
 			});
 
-			markdown.push("", `</details>`);
-		}
+			// If there is more than 1 component updated, add a details/summary section to the markdown at the start of the array
+			if (markdown.length > 5) {
+				markdown.unshift(
+					"<a name=\"details\"></a>",
+					"<details>",
+					"<summary><b>File change details</b></summary>",
+					""
+				);
 
-		if (summaryTable.length > 0) {
-			// Add the headings to the summary table if it contains data
-			summaryTable = [
-				["Package", "Size", ...(hasBase ? ["Δ"] : [])],
-				["-", "-", ...(hasBase ? ["-"] : [])],
-				...summaryTable,
-			];
+				markdown.push(
+					"",
+					"</details>"
+				);
+			}
 
-			summary.push(...summaryTable.map((row) => `| ${row.join(" | ")} |`));
+			markdown.push("");
 		}
 
 		markdown.push(
 			"",
 			"<small>",
-			"* <em>Size determined by adding together the size of the main file for all packages in the library.</em><br/>",
-			"* <em>Results are not gzipped or minified.</em><br/>",
+			"* <em>Size is the sum of all main files for packages in the library.</em><br/>",
 			"* <em>An ASCII character in UTF-8 is 8 bits or 1 byte.</em>",
 			"</small>"
 		);
@@ -282,7 +290,7 @@ const printChange = function (v1, v0) {
 	const d = difference(v1, v0);
 	return d === 0
 		? `-`
-		: `${d > 0 ? "⬆" : "⬇"} ${bytesToSize(Math.abs(d))}`;
+		: `${d > 0 ? "🔴 ⬆" : "🟢 ⬇"} ${bytesToSize(Math.abs(d))}`;
 };
 
 /**
@@ -313,10 +321,17 @@ const makeTable = function (PACKAGES, filePath, path) {
 		// Read in the main asset file from the package.json
 		const packagePath = join(path, filePath, packageName, "package.json");
 
-		let mainFile = "index.css";
+		let mainFile = "index.min.css";
 		if (existsSync(packagePath)) {
 			const { main } = require(packagePath) ?? {};
-			if (main) mainFile = main.replace(/^.*\/dist\//, "");
+			if (main) {
+				mainFile = main.replace(/^.*\/dist\//, "");
+
+				// Check if a minified output of this file exists
+				if (existsSync(join(dirname(packagePath), main.replace(/\.css$/, ".min.css")))) {
+					mainFile = mainFile.replace(/\.css$/, ".min.css");
+				}
+			}
 		}
 
 		const mainFileOnly = [...fileMap.keys()].filter((file) => file.endsWith(mainFile));
