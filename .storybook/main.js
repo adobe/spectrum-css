@@ -80,4 +80,11 @@ export default {
 		autodocs: true, // see below for alternatives
 		defaultName: "Docs", // set to change the name of generated docs entries
 	},
+	refs: {
+		"web-components": {
+			title: "Spectrum web components",
+			url: "https://opensource.adobe.com/spectrum-web-components/storybook/",
+			expanded: false,
+		},
+	},
 };
