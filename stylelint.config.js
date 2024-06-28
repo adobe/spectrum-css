@@ -90,6 +90,7 @@ module.exports = {
 				},
 			},
 		],
+		"declaration-block-no-shorthand-property-overrides": true,
 		"value-keyword-case": [
 			"lower",
 			{
