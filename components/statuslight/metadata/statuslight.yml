@@ -6,8 +6,23 @@ sections:
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/statuslight/metadata/mods.md">here</a>.
   - name: Migration Guide
     description: |
-      ### T-shirt sizing
-      Status Light now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-StatusLight--size*` class.
+      ### Version 8.0.0
+      #### S2 Migration
+      Status light now uses Spectrum 2 tokens and specifications. The following properties have been adjusted:
+      - Medium is now the default size and `.spectrum-Switch--sizeM` has been removed.
+      - New mods were created, while some were removed:
+        - New mods:
+          - `--mod-statuslight-font-family`
+          - `--mod-statuslight-font-style`
+          - `--mod-statuslight-nonsemantic-brown-color`
+          - `--mod-statuslight-nonsemantic-cinnamon-color`
+          - `--mod-statuslight-nonsemantic-pink-color`
+          - `--mod-statuslight-nonsemantic-silver-color`
+          - `--mod-statuslight-nonsemantic-turquoise-color`
+        - Removed mods:
+          - `--mod-statuslight-semantic-accent-color`
+      - The neutral variant label uses `default-font-family` instead of italic.
+      - The semantic accent variant has been removed.
 examples:
   - id: statuslight-sizing
     name: Sizing
@@ -61,16 +76,16 @@ examples:
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--purple">Purple Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--fuchsia">Fuchsia Status</div>
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--magenta">Magenta Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--pink">Pink Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--turquoise">Turquoise Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--cinnamon">Cinnamon Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--brown">Brown Status</div>
+      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--silver">Silver Status</div>
   - id: statuslight-neutral
     name: Neutral
     status: Verified
     markup: |
       <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--neutral">Paused</div>
-  - id: statuslight-accent
-    name: Accent
-    status: Verified
-    markup: |
-      <div class="spectrum-StatusLight spectrum-StatusLight--sizeS spectrum-StatusLight--info">Accent</div>
   - id: statuslight-info
     name: Info
     status: Verified
