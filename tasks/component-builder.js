@@ -134,16 +134,18 @@ async function processCSS(
 			new Error("This function requires content be provided"),
 		);
 
+	const ctx = {
+		cwd,
+		env: process.env.NODE_ENV ?? "development",
+		file: output,
+		from: input,
+		to: output,
+		verbose: false,
+		...postCSSOptions,
+	};
+
 	const { plugins, options } = await postcssrc(
-		{
-			cwd,
-			env: process.env.NODE_ENV ?? "development",
-			file: output,
-			from: input,
-			to: output,
-			verbose: false,
-			...postCSSOptions,
-		},
+		ctx,
 		configPath, // This is the path to the directory where the postcss.config.js lives
 	);
 

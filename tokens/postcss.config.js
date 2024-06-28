@@ -11,39 +11,18 @@
  * governing permissions and limitations under the License.
  */
 
-const { join } = require("path");
-
-module.exports = () => ({
-	plugins: {
-		// "postcss-import": {},
+module.exports = ({
+	resolveImports = false,
+	...options
+}) => require("../postcss.config.js")({
+	...options,
+	resolveImports,
+	env: "production",
+	additionalPlugins: {
 		"postcss-rgb-mapping": {},
 		"postcss-sorting": {
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",
-		},
-		cssnano: {
-			preset: [
-				"cssnano-preset-advanced",
-				{
-					colormin: false,
-					discardComments: { removeAll: true },
-					// @todo yarn add -DW css-declaration-sorter
-					cssDeclarationSorter: false, // @todo { order: "smacss" },
-					normalizeWhitespace: false,
-				},
-			],
-		},
-		stylelint: {
-			cache: true,
-			// Passing the config path saves a little time b/c it doesn't have to find it
-			configFile: join(__dirname, "..", "stylelint.config.js"),
-			quiet: true,
-			fix: true,
-			allowEmptyInput: true,
-			ignorePath: join(__dirname, "..", ".stylelintignore"),
-		},
-		"postcss-licensing": {
-			filename: "../COPYRIGHT",
 		},
 	},
 });

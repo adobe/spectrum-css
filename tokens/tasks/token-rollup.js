@@ -37,7 +37,7 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
 	const inputs = await fg(inputGlob, { cwd });
 	const contents = inputs.map(input => `@import "${path.basename(input)}";`).join("\n");
 	if (!contents) return;
-	return processCSS(contents, inputs[0], outputPath, { cwd, clean, configPath: cwd, map: false });
+	return processCSS(contents, inputs[0], outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true });
 }
 
 /**
@@ -62,7 +62,8 @@ async function main({
 	const compiledOutputPath = path.join(cwd, "dist", "css");
 
 	return Promise.all([
-		index(["dist/css/components/*.css"], path.join(compiledOutputPath, "components", "index.css"), { cwd, clean }),
+		...["spectrum", "legacy", "express"].map(theme => index([`dist/css/components/${theme}/*.css`], path.join(compiledOutputPath, "components", theme, "index.css"), { cwd, clean })),
+		index(["dist/css/components/bridge/*.css"], path.join(compiledOutputPath, "components", "bridge", "index.css"), { cwd, clean }),
 		index(["dist/css/*-vars.css"], path.join(compiledOutputPath, "index.css"), { cwd, clean }),
 	]).then((report) => {
 		const logs = report.flat(Infinity).filter(Boolean);
@@ -72,6 +73,7 @@ async function main({
 
 		if (logs && logs.length > 0) {
 			logs.sort((a,) => {
+				if (!a || typeof a !== "string") return 1;
 				if (a.includes("✓")) return -1;
 				if (a.includes("🔍")) return 0;
 				return 1;
