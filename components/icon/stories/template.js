@@ -221,8 +221,6 @@ export const Template = ({
 				break;
 		}
 
-		console.log(iconName, idKey, sizeVal);
-
 		idKey += sizeVal;
 		iconName += sizeVal;
 	}
