@@ -19,6 +19,7 @@ module.exports = ({
 	referencesOnly = false,
 	preserveVariables = true,
 	stripLocalSelectors = false,
+	resolveImports = true,
 	lint = true,
 	verbose = true,
 	minify = false,
@@ -26,7 +27,8 @@ module.exports = ({
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
-	if (env === "development" && !options.map) {
+	const isProduction = env.toLowerCase() === "production";
+	if (!isProduction && !options.map) {
 		options.map = { inline: false };
 	}
 	else options.map = false;
@@ -47,7 +49,7 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- IMPORTS ---------------- */
 			/** @link https://github.com/postcss/postcss-import#postcss-import */
-			"postcss-import": {},
+			"postcss-import": resolveImports ? {} : false,
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
@@ -122,7 +124,8 @@ module.exports = ({
 				reportInvalidScopeDisables: lint,
 			},
 			"postcss-licensing": {
-				filename: "COPYRIGHT",
+				filename: "./COPYRIGHT",
+				cwd: __dirname,
 				skipIfEmpty: true,
 			},
 			"postcss-reporter": verbose

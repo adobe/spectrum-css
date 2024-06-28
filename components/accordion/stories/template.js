@@ -32,7 +32,6 @@ export const AccordionItem = ({
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
-			@click=${onclick}
 		>
 			<!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
 			<h3 class="${rootClass}Heading">
@@ -44,6 +43,7 @@ export const AccordionItem = ({
 					id="spectrum-accordion-item-${idx}-header"
 					aria-controls="spectrum-accordion-item-${idx}-content"
 					aria-expanded="${open ? "true" : "false"}"
+					@click=${onclick}
 				>
 					${heading}
 				</button>
