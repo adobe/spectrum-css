@@ -1,6 +1,7 @@
 import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
 import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
 import { setConsoleOptions } from "@storybook/addon-console";
+import DocumentationTemplate from "./DocumentationTemplate.mdx";
 import "./assets/base.css";
 import "./assets/typekit.js";
 import {
@@ -11,7 +12,6 @@ import {
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 } from "./decorators/index.js";
-import DocumentationTemplate from "./DocumentationTemplate.mdx";
 import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
 import { argTypes, globalTypes } from "./types";
 
@@ -61,9 +61,9 @@ export const parameters = {
 				"Guides",
 				["Contributing", "*", "Adobe Code of Conduct", "Changelog"],
 				"Components",
-				["*", ["Docs", "Default", "*"]],
+				["*", ["Docs", "Default", "Standard", "Sizing", "*"]],
 				"Deprecated",
-				["*", ["Docs", "Default", "*"]],
+				["*", ["Docs", "Default", "Standard", "Sizing", "*"]],
 				"*",
 			],
 			includeNames: true,

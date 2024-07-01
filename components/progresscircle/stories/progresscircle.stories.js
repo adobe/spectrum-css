@@ -1,5 +1,6 @@
 import { html } from "lit";
 
+import { withSizingWrapper } from "@spectrum-css/preview/decorator";
 import { Template } from "./template";
 
 /**
@@ -32,7 +33,6 @@ export default {
 			name: "Static color",
 			type: { name: "string" },
 			table: {
-				disable: true,
 				type: { summary: "string" },
 				category: "Advanced",
 			},
@@ -48,6 +48,7 @@ export default {
 	},
 };
 
+// Story specific templates
 const ProgressCircleGroup = (args) => html`
 	${window.isChromatic() ? html`
 		${Template(args)}
@@ -58,10 +59,32 @@ const ProgressCircleGroup = (args) => html`
 	` : Template(args)}
 `;
 
+// Stories
 export const Default = ProgressCircleGroup.bind({});
 Default.args = {};
 
+export const Sizing = ProgressCircleGroup.bind({});
+Sizing.args = {};
+Sizing.decorators = [withSizingWrapper];
+
+/**
+ * The indeterminate progress circle displays a repeating animation for the inner fill.
+ */
+export const Indeterminate = Template.bind({});
+Indeterminate.args = {
+	isIndeterminate: true,
+};
+Indeterminate.tags = ["docs-only"];
+Indeterminate.decorators = [withSizingWrapper];
+Indeterminate.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 export const StaticWhite = ProgressCircleGroup.bind({});
+StaticWhite.storyName = "Static white, indeterminate";
 StaticWhite.args = {
 	staticColor: "white",
+	isIndeterminate: true,
 };
+StaticWhite.decorators = [withSizingWrapper];
+StaticWhite.tags = ["docs-only"];

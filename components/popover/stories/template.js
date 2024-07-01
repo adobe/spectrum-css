@@ -71,13 +71,25 @@ export const Template = ({
 					}
 					if (position.startsWith("top")) {
 						y = rect.top - popHeight;
-						yOffset = withTip
-							? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
-							: "- var(--spectrum-popover-animation-distance)";
+						if (isOpen) {
+							yOffset = withTip
+								? "- (var(--spectrum-popover-pointer-height) - 1px)"
+								: "";
+						}
+						else {
+							yOffset = withTip
+								? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
+								: "- var(--spectrum-popover-animation-distance)";
+						}
 					}
 					else if (position.startsWith("bottom")) {
 						y = rect.bottom;
-						yOffset = "+ (var(--spectrum-popover-animation-distance))";
+						if (isOpen) {
+							yOffset = "";
+						}
+						else {
+							yOffset = "+ (var(--spectrum-popover-animation-distance))";
+						}
 					}
 					else if (position.includes("left")) {
 						if (textDir == "rtl") {
