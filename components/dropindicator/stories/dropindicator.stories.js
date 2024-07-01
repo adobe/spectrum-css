@@ -1,4 +1,5 @@
 import { Template } from "./template";
+import { DropIndicatorGroup } from "./template";
 
 /**
  * The drop indicator component is used to show the insertion position into a list or table.
@@ -38,3 +39,17 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
+
+/*
+ * Stories for the MDX "docs" only.
+ * "storyName" refers to the display name/heading for a component
+ */
+
+export const DefaultGroup = DropIndicatorGroup.bind({});
+DefaultGroup.storyName = "Standard";
+DefaultGroup.tags = ["autodocs", "!dev"];
+DefaultGroup.parameters = { 
+	chromatic: { disableSnapshot: true }
+};
+

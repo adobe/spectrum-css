@@ -25,7 +25,7 @@ export default {
 			},
 			control: "text",
 		},
-		isFocused: {
+		isFocusVisible: {
 			name: "Focused",
 			type: { name: "boolean" },
 			table: {
@@ -56,7 +56,7 @@ export default {
 	args: {
 		rootClass: "spectrum-Dial",
 		size: "m",
-		isFocused: false,
+		isFocusVisible: false,
 		isDragged: false,
 		isDisabled: false,
 	},
@@ -68,6 +68,10 @@ Default.args = {};
 export const DefaultExpress = Template.bind();
 DefaultExpress.args = {
 	express: true,
+};
+DefaultExpress.tags = ["autodocs", "!dev"];
+DefaultExpress.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const Small = Template.bind();
