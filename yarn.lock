@@ -5967,7 +5967,7 @@ __metadata:
     lodash: "npm:^4.17.21"
     lunr: "npm:^2.3.9"
     markdown-it: "npm:^14.1.0"
-    markdown-it-anchor: "npm:^8.6.7"
+    markdown-it-anchor: "npm:^9.0.1"
     markdown-it-attrs: "npm:^4.1.6"
     markdown-it-prism: "npm:^2.3.0"
     npm-registry-fetch: "npm:^17.0.1"
@@ -15546,13 +15546,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it-anchor@npm:^8.6.7":
-  version: 8.6.7
-  resolution: "markdown-it-anchor@npm:8.6.7"
+"markdown-it-anchor@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "markdown-it-anchor@npm:9.0.1"
   peerDependencies:
     "@types/markdown-it": "*"
     markdown-it: "*"
-  checksum: 10c0/f117866488013b7e4085a6b59d12bf62879181aef65ea2851f01ed1b763b8c052580c2c27fa8bd009421886220c6beeb373a65af9e885ce63a36ee9f8dcd0e89
+  checksum: 10c0/8ebae5e591ff62f981a843b2eda9237f0610bbe0aea8fc5f7bf4a8a8699f429aa004b39df0f241ec0422a14ef1ec700aeefa5402f25263d89201017c56fb874d
   languageName: node
   linkType: hard
 
