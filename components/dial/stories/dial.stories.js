@@ -70,6 +70,9 @@ DefaultExpress.args = {
 	express: true,
 };
 DefaultExpress.tags = ["autodocs", "!dev"];
+DefaultExpress.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Small = Template.bind();
 Small.args = {
