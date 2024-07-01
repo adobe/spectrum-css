@@ -62,3 +62,20 @@ export const CoachIndicatorGroup = (args) => {
 		</div>
 	`;
 };
+
+export const AllVariantsGroup = (args) => html`
+	<div style="display: flex; flex-direction: column; padding: 16px">
+		${Template({
+				...args,
+				variant: "default"
+			})}
+		${Template({
+				...args,
+				variant: "dark"
+			})}
+		${Template({
+				...args,
+				variant: "light"
+				})}
+	</div>
+`;

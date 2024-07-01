@@ -28,7 +28,6 @@ export const Template = ({
 				return html` <li
 					class=${classMap({
 						[`${rootClass}-item`]: true,
-						"is-disabled": isDisabled,
 						"is-dragged": isDragged && item.isDragged,
 					})}
 				>
@@ -48,7 +47,10 @@ export const Template = ({
 								idx !== arr.length - 1,
 								() =>
 									html`<div
-										class="${rootClass}-itemLink"
+										class=${classMap({
+											[`${rootClass}-itemLink`]: true,
+											"is-disabled": isDisabled,
+										})}
 										role="link"
 										tabindex="0"
 									>
