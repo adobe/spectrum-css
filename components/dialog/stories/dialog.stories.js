@@ -145,7 +145,9 @@ Default.args = {
 export const DefaultSmall = Template.bind({});
 DefaultSmall.tags = ["autodocs", "!dev"];
 DefaultSmall.storyName = "Dialog - small",
-DefaultSmall.parameters = {};
+DefaultSmall.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 DefaultSmall.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	showModal: true,
@@ -158,7 +160,9 @@ DefaultSmall.args = {
 export const DefaultLarge = Template.bind({});
 DefaultLarge.tags = ["autodocs", "!dev"];
 DefaultLarge.storyName = "Dialog - large",
-DefaultLarge.parameters = {};
+DefaultLarge.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 DefaultLarge.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	showModal: true,
@@ -173,7 +177,9 @@ DefaultLarge.args = {
  */
 export const Dismissible = Template.bind({});
 Dismissible.tags = ["autodocs", "!dev"];
-Dismissible.parameters = {};
+Dismissible.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 Dismissible.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	showModal: true,
@@ -188,7 +194,9 @@ Dismissible.args = {
  */
 export const NoDivider = Template.bind({});
 NoDivider.tags = ["autodocs", "!dev"];
-NoDivider.parameters = {};
+NoDivider.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 NoDivider.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	showModal: true,
@@ -210,6 +218,7 @@ WithHero.parameters = {
 			height: "650px",
 		},
 	},
+	chromatic: { disableSnapshot: true },
 };
 WithHero.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -246,7 +255,9 @@ WithScroll.parameters = {
  */
 export const Fullscreen = Template.bind({});
 Fullscreen.tags = ["autodocs", "!dev"];
-Fullscreen.parameters = {};
+Fullscreen.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 Fullscreen.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	showModal: true,
@@ -261,7 +272,9 @@ Fullscreen.args = {
  */
 export const FullscreenTakeover = Template.bind({});
 FullscreenTakeover.tags = ["autodocs", "!dev"];
-FullscreenTakeover.parameters = {};
+FullscreenTakeover.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 FullscreenTakeover.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	showModal: true,
