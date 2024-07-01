@@ -62,7 +62,7 @@ export const Template = ({
 						horizontal: true,
 						customClasses: [`${rootClass}-divider`],
 						...globals,
-					}),
+					}, context),
 				)}
 				<section class="${rootClass}-content">
 					${content.map((c) => (typeof c === "function" ? c({}) : c))}
