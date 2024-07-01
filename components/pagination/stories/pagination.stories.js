@@ -82,7 +82,7 @@ Default.args = {};
  * number of pages.
  */
 export const Explicit = Template.bind({});
-Explicit.tags = ["docs-only"];
+Explicit.tags = ["!dev"];
 Explicit.args = {
 	variant: "explicit",
 };
