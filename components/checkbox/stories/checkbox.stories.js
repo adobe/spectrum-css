@@ -177,7 +177,7 @@ Default.tags = ["!autodocs"];
  * Stories for the MDX "Docs" only.
  */
 export const DefaultVariants = AllVariantsCheckboxGroup.bind({});
-DefaultVariants.tags = ["docs-only"];
+DefaultVariants.tags = ["autodocs", "!dev"];
 DefaultVariants.parameters = {
 	chromatic: { disableSnapshot: true }
 };
@@ -188,7 +188,7 @@ Emphasized.args = {
 	id: "checkbox-emphasized",
 	isEmphasized: true,
 };
-Emphasized.tags = ["docs-only", "!autodocs"];
+Emphasized.tags = ["!autodocs"];
 Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -198,7 +198,7 @@ EmphasizedVariants.args = {
 	id: "checkbox-emphasized",
 	isEmphasized: true,
 };
-EmphasizedVariants.tags = ["docs-only"];
+EmphasizedVariants.tags = ["autodocs", "!dev"];
 EmphasizedVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };

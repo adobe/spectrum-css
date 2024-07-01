@@ -91,7 +91,7 @@ Dragged.args = {
 	],
 	isDragged: true,
 };
-Dragged.tags = ["docs-only"];
+Dragged.tags = ["autodocs", "!dev"];
 Dragged.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -113,7 +113,7 @@ Nested.args = {
 		},
 	],
 };
-Nested.tags = ["docs-only"];
+Nested.tags = ["autodocs", "!dev"];
 Nested.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -135,7 +135,7 @@ NestedRootVisible.args = {
 		},
 	],
 };
-NestedRootVisible.tags = ["docs-only"];
+NestedRootVisible.tags = ["autodocs", "!dev"];
 NestedRootVisible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -156,7 +156,7 @@ Multiline.args = {
 	],
 	variant: "multiline",
 };
-Multiline.tags = ["docs-only"];
+Multiline.tags = ["autodocs", "!dev"];
 Multiline.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -178,7 +178,7 @@ MultilineDragged.args = {
 	variant: "multiline",
 	isDragged: true,
 };
-MultilineDragged.tags = ["docs-only"];
+MultilineDragged.tags = ["autodocs", "!dev"];
 MultilineDragged.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -202,7 +202,7 @@ MultilineNestedRootVisible.args = {
 	],
 	variant: "multiline",
 };
-MultilineNestedRootVisible.tags = ["docs-only"];
+MultilineNestedRootVisible.tags = ["autodocs", "!dev"];
 MultilineNestedRootVisible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -223,7 +223,7 @@ Compact.args = {
 	],
 	variant: "compact",
 };
-Compact.tags = ["docs-only"];
+Compact.tags = ["autodocs", "!dev"];
 Compact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -246,7 +246,7 @@ CompactNested.args = {
 	],
 	variant: "compact",
 };
-CompactNested.tags = ["docs-only"];
+CompactNested.tags = ["autodocs", "!dev"];
 CompactNested.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -270,7 +270,7 @@ CompactNestedRootVisible.args = {
 	],
 	variant: "compact",
 };
-CompactNestedRootVisible.tags = ["docs-only"];
+CompactNestedRootVisible.tags = ["autodocs", "!dev"];
 CompactNestedRootVisible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -298,7 +298,7 @@ Disabled.args = {
 		},
 	],
 };
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };

@@ -80,14 +80,14 @@ const AllVariantsGroup = (args) => html`
  * "storyName" refers to the display name/heading for a component
  */
 export const DefaultVariants = AllVariantsGroup.bind({});
-DefaultVariants.tags = ["docs-only"];
+DefaultVariants.tags = ["autodocs", "!dev"];
 DefaultVariants.storyName = "Standard";
 DefaultVariants.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
 export const QuietVariants = AllVariantsGroup.bind({});
-QuietVariants.tags = ["docs-only"];
+QuietVariants.tags = ["autodocs", "!dev"];
 QuietVariants.storyName = "Quiet";
 QuietVariants.args = {
 	isQuiet: true,

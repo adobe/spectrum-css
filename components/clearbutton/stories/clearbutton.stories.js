@@ -105,7 +105,7 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
 };
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true }
 };
@@ -114,7 +114,7 @@ Disabled.parameters = {
  * The `.spectrum-ClearButton--quiet` class will use a transparent background (including when the Express theme is active).
  */
 export const Quiet = Template.bind({});
-Quiet.tags = ["docs-only"];
+Quiet.tags = ["autodocs", "!dev"];
 Quiet.parameters = {
 	chromatic: { disableSnapshot: true }
 };
