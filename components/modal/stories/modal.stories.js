@@ -3,7 +3,7 @@ import { Template } from "./template";
 /**
  * A modal component is a dialog box/popup window that is displayed on top of the current page using `position: fixed`.
  * This is a base component used by other components, and should not be used on its own. If you
- * need a full-featured modal for displaying content, take a look at the Dialog component instead.
+ * need a full-featured modal for displaying content, take a look at the [Dialog](?path=/docs/components-dialog--docs) component instead.
  */
 export default {
 	title: "Modal",
