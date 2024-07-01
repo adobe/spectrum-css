@@ -78,4 +78,4 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Convert new TODO items to issues
-              uses: alstr/todo-to-issue-action@v4
+              uses: alstr/todo-to-issue-action@v5
