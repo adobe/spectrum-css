@@ -1,5 +1,5 @@
 import { Template } from "./template";
-import { html } from "lit";
+import { DropIndicatorGroup } from "./template";
 
 /**
  * The drop indicator component is used to show the insertion position into a list or table.
@@ -37,22 +37,9 @@ export default {
 	},
 };
 
-const DropIndicatorGroup = (args) => html`
-	<div style="display: flex; align-items: center; justify-content: space-around;">
-		${Template({
-			...args,
-			direction: "vertical",
-		})}
-		${Template({
-			...args,
-			direction: "horizontal",
-		})}
-	</div>
-`;
-
 export const Default = Template.bind({});
 Default.args = {};
-Default.tags = ["autodocs", "!dev"];
+Default.tags = ["!autodocs"];
 
 /*
  * Stories for the MDX "docs" only.
