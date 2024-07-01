@@ -73,10 +73,13 @@ export default {
 };
 
 export const Default = PaginationGroup.bind({});
+Default.storyName = "Default (Listing)";
 Default.args = {};
 
 /**
- * Pagination's explicit variant uses the text field component to represent the current page, and text with the total number of pages. Along with action buttons for previous and next navigation.
+ * Pagination's explicit variant uses the text field component to represent the current page number,
+ * and action buttons for the previous and next navigation. It also displays text with the total
+ * number of pages.
  */
 export const Explicit = Template.bind({});
 Explicit.tags = ["docs-only"];
