@@ -1,6 +1,5 @@
-import { html } from "lit";
-
-import { Template } from "./template";
+import { CheckboxGroup } from "./template";
+import { AllVariantsCheckboxGroup } from "./template";
 
 /**
  * Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.
@@ -105,66 +104,6 @@ export default {
 			handles: ["click input[type=\"checkbox\"]"],
 		},
 	},
-};
-
-const CheckboxGroup = (args) => html`
-	<div style="display: flex; flex-direction: column; padding: 16px">
-		${Template({
-			...args,
-			iconName: undefined,
-		})}
-		${Template({
-			...args,
-			isChecked: true,
-		})}
-		${Template({
-			...args,
-			isIndeterminate: true,
-		})}
-		${Template({
-			...args,
-			isDisabled: true,
-		})}
-		${Template({
-			...args,
-			label: "Checkbox with an extraordinarily long label. Please don't do this but if you did, it should wrap text when it gets longer than the container that houses the checkbox with the unacceptably long label",
-      customStyles: { "max-inline-size": "200px" },
-		})}
-	</div>
-`;
-
-const AllVariantsCheckboxGroup = (args) => {
-	return html`
-		<div style="display: flex;">
-			<div style="display: flex; flex-direction: column;">
-				<h4 style="margin: 0; padding-left: 16px;">Default</h4>
-				${CheckboxGroup({
-					...args,
-				})}
-			</div>
-			<div style="display: flex; flex-direction: column;">
-				<h4 style="margin: 0; padding-left: 16px;">Invalid</h4>
-				${CheckboxGroup({
-					...args,
-					isInvalid: true,
-				})}
-			</div>
-			<div style="display: flex; flex-direction: column;">
-				<h4 style="margin: 0; padding-left: 16px;">Disabled</h4>
-				${CheckboxGroup({
-					...args,
-					isDisabled: true,
-				})}
-			</div>
-			<div style="display: flex; flex-direction: column;">
-				<h4 style="margin: 0; padding-left: 16px;">Read-Only</h4>
-				${CheckboxGroup({
-					...args,
-					isReadOnly: true,
-				})}
-			</div>
-		</div>
-	`;
 };
 
 export const Default = CheckboxGroup.bind({});
