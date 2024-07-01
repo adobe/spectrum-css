@@ -1,5 +1,6 @@
 import { Template } from "./template";
-
+import {styleMap } from "lit/directives/style-map.js";
+import { html } from "lit";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 /**
@@ -14,13 +15,55 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
+		header: { 
+			name: "Additional header content",
+			description: "Controls header content",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
 			},
 			control: { type: "text" },
 		},
 		content: { table: { disable: true } },
+		footer: {
+			name: "Footer content",
+			description: "Controls footer content",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
+		buttons: { table: { disable: true } },
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l"],
+			control: "select",
+		},
+		layout: {
+			name: "Layout",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["fullscreen", "fullscreenTakeover"],
+			control: "select",
+		},
 		isDismissable: {
 			name: "Dismissable",
+			description: "Controls whether a dialog can be dismissed without taking an action. Dismissible dialogs should never have buttons.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -46,16 +89,38 @@ export default {
 			},
 			control: "boolean",
 		},
+		hasHeroImage: {
+			name: "Has hero image",
+			description: "Adds a background cover image to the dialog header.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
+			control: "boolean",
+		},
+		heroImageUrl: {
+			name: "Hero Image",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "hasHeroImage", truthy: true },
+		},
 	},
 	args: {
 		rootClass: "spectrum-Dialog",
-		isDismissable: true,
+		isDismissable: false,
 		showModal: false,
 		isOpen: true,
+		size: "m",
+		hasHeroImage: false,
 	},
 	parameters: {
 		actions: {
-			handles: ["click .spectrum-Dialog button"],
+			handles: [],
 		},
 		docs: {
 			story: {
@@ -66,11 +131,207 @@ export default {
 			type: "migrated",
 		},
 	},
+	decorators: [
+		(Story, context) => {
+			if (!window.isChromatic()) return Story(context);
+			return html`
+				<style>
+					.spectrum-Detail { display: inline-block; }
+					.spectrum-Typography > div {
+						border: 1px solid var(--spectrum-gray-200);
+						border-radius: 4px;
+						padding: 0 1em 1em;
+						/* Why seafoam? Because it separates it from the component styles. */
+						--mod-detail-font-color: var(--spectrum-seafoam-900);
+					}
+				</style>
+				<div
+					style=${styleMap({
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+						gap: "1rem",
+						"--mod-detail-margin-end": ".3rem",
+					})}
+				>
+					${Story(context)}
+				</div>
+			`;
+		}
+	],
 };
 
-export const Default = Template.bind({});
+const ExampleButtonGroup = [{
+	variant: "secondary",
+	treatment: "outline",
+	label: "Remind me later"
+}, {
+	variant: "emphasized",
+	treatment: "fill",
+	label: "Rate now",
+}];
+
+const Sizes = (args) =>
+	html` ${["s", "m", "l"].map((size) => {
+		return html`
+			<div>
+				${Typography({
+					semantics: "detail",
+					size: "s",
+					content: [
+						{
+							s: "Small",
+							m: "Medium",
+							l: "Large",
+						}[size],
+					],
+				})}
+				${Template({
+						...args,
+						showModal: false,
+						isDismissable: false,
+						size,
+				})}
+			</div>
+		`;
+	})}`;
+
+const DismissibleSizes = (args) =>
+	html` ${["s", "m", "l"].map((size) => {
+		return html`
+			<div>
+				${Typography({
+					semantics: "detail",
+					size: "s",
+					content: [
+						{
+							s: "Small",
+							m: "Medium",
+							l: "Large",
+						}[size],
+					],
+				})}
+				${Template({
+						...args,
+						showModal: false,
+						isDismissable: true,
+						size,
+				})}
+			</div>
+		`;
+	})}`;
+
+const Layouts = (args) =>
+	html` 
+	${["fullscreen", "fullscreenTakeover"].map((variant) => {
+		return html`
+			<div style="padding-block-end: 2rem">
+				${Typography({
+					semantics: "detail",
+					variant: "fullscreen",
+					content: [
+						{
+							fullscreen: "Fullscreen",
+							fullscreenTakeover: "Fullscreen Takeover",
+						}[variant],
+					],
+				})}
+				${Template({
+					...args,
+					showModal: false,
+					layout: variant,
+					isDismissable: false,
+				})}
+			</div>
+		`;
+	})}`;
+
+const WithHero = (args) =>
+	html`
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Default"],
+			})}
+			${Template({
+				...args,
+				size: "m",
+				showModal: false,
+				hasHeroImage: true,
+				isDismissable: false,
+			})}
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Dismissible"],
+			})}
+			${Template({
+				...args,
+				size: "m",
+				showModal: false,
+				hasHeroImage: true,
+				isDismissable: true,
+			})}
+		</div>
+	`;
+
+const ChromaticVariants = (args) => {
+	const sectionData = [
+		{
+			sectionName: "Sizes, Non-dismissible",
+			componentMarkup: Sizes({
+				...args,
+			}),
+		},
+		{
+			sectionName: "Sizes, dismissible",
+			componentMarkup: DismissibleSizes({
+				...args,
+			}),
+		},
+		{
+			sectionName: "Layouts",
+			componentMarkup: Layouts({
+				...args,
+			}),
+			gridColumns: 1,
+		},
+		{
+			sectionName: "Hero/Cover Image",
+			componentMarkup: WithHero({
+				...args,
+			})
+		},
+	];
+
+	return sectionData.map((data) => html`
+		<div class="spectrum-Typography">
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: [data.sectionName],
+			})}
+			<div
+				style=${styleMap({
+					display: "grid",
+					gap: "1.5rem",
+					gridTemplateColumns: `repeat(${data?.gridColumns?.toString() ?? "4"}, 1fr)`,
+				})}
+			>
+				${data.componentMarkup}
+			</div>
+		</div>
+	`);
+};
+
+export const Default = (args) => window.isChromatic() ? ChromaticVariants(args) : Template(args);
+
 Default.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+	header: "* Required",
 	showModal: true,
 	content: [
 		() => Typography({
@@ -81,4 +342,6 @@ Default.args = {
 			]
 		}),
 	],
+	footer: "Please select.",
+	buttons: ExampleButtonGroup,
 };
