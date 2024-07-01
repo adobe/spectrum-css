@@ -233,33 +233,34 @@ WithLabel.args = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["vrt-only"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
 
 export const Quiet = Template.bind({});
 Quiet.storyName = "Quiet with label";
-Quiet.tags = ["vrt-only"];
+Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
 	label: "All",
 };
 
+// @todo This VRT only story can be removed when Express is handled by the addition of Chromatic modes.
 export const Express = Template.bind({});
-Express.tags = ["vrt-only", "!autodocs"];
+Express.tags = ["!dev", "!autodocs"];
 Express.args = {
 	express: true,
 };
 
 export const Sizing = SizingTemplate.bind({});
-Sizing.tags = ["docs-only"];
+Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const Open = Template.bind({});
-Open.tags = ["docs-only"];
+Open.tags = ["!dev"];
 Open.args = {
 	isOpen: true,
 };
@@ -272,7 +273,7 @@ Open.parameters = {
  */
 export const CustomIcon = CustomIconTemplate.bind({});
 CustomIcon.storyName = "With custom icon";
-CustomIcon.tags = ["docs-only"];
+CustomIcon.tags = ["!dev"];
 CustomIcon.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -281,7 +282,7 @@ CustomIcon.parameters = {
  * The `spectrum-PickerButton--rounded` class increases the amount of rounding on the rounded corners.
  */
 export const Rounded = Template.bind({});
-Rounded.tags = ["docs-only"];
+Rounded.tags = ["!dev"];
 Rounded.args = {
 	isRounded: true,
 };
