@@ -39,7 +39,6 @@ export default {
 			control: "boolean",
 		},
 		tag: { table: { disable: true } },
-		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Divider",

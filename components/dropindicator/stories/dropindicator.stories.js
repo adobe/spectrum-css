@@ -29,7 +29,6 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-DropIndicator",

@@ -52,7 +52,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Dial",

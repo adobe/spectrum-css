@@ -96,7 +96,6 @@ export default {
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
 			if: { arg: "hasHeroImage", truthy: true },
 		},
-		reducedMotion: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Dialog",
