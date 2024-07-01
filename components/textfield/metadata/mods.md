@@ -20,6 +20,8 @@
 | `--mod-textfield-character-count-font-family`         |
 | `--mod-textfield-character-count-font-size`           |
 | `--mod-textfield-character-count-font-weight`         |
+| `--mod-textfield-character-count-line-height`         |
+| `--mod-textfield-character-count-line-height-cjk`     |
 | `--mod-textfield-character-count-spacing-block`       |
 | `--mod-textfield-character-count-spacing-block-side`  |
 | `--mod-textfield-character-count-spacing-inline`      |
@@ -44,6 +46,8 @@
 | `--mod-textfield-icon-spacing-inline-start-valid`     |
 | `--mod-textfield-label-spacing-block`                 |
 | `--mod-textfield-label-spacing-inline-side-label`     |
+| `--mod-textfield-line-height`                         |
+| `--mod-textfield-line-height-cjk`                     |
 | `--mod-textfield-min-width`                           |
 | `--mod-textfield-placeholder-font-size`               |
 | `--mod-textfield-spacing-block-end`                   |
