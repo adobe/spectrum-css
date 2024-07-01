@@ -62,7 +62,6 @@ export default {
 	},
 };
 
-// the !autodocs tag removes the component from the auto-template
 export const Default = Template.bind();
 Default.args = {};
 
@@ -70,7 +69,7 @@ export const DefaultExpress = Template.bind();
 DefaultExpress.args = {
 	express: true,
 };
-DefaultExpress.tags = ["!autodocs"];
+DefaultExpress.tags = ["autodocs", "!dev"];
 
 export const Small = Template.bind();
 Small.args = {

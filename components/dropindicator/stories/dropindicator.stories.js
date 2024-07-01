@@ -52,8 +52,7 @@ const DropIndicatorGroup = (args) => html`
 
 export const Default = Template.bind({});
 Default.args = {};
-// the !autodocs tag removes the component from the auto-template
-Default.tags = ["!autodocs"];
+Default.tags = ["autodocs", "!dev"];
 
 /*
  * Stories for the MDX "docs" only.
@@ -62,7 +61,7 @@ Default.tags = ["!autodocs"];
 
 export const DefaultGroup = DropIndicatorGroup.bind({});
 DefaultGroup.storyName = "Standard";
-DefaultGroup.tags = ["docs-only"];
+DefaultGroup.tags = ["autodocs", "!dev"];
 DefaultGroup.parameters = { 
 	chromatic: { disableSnapshot: true }
 };

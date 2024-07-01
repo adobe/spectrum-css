@@ -143,7 +143,7 @@ Default.args = {
  * Stories for "docs only."
  */
 export const DefaultSmall = Template.bind({});
-DefaultSmall.tags = ["docs-only"];
+DefaultSmall.tags = ["autodocs", "!dev"];
 DefaultSmall.storyName = "Dialog - small",
 DefaultSmall.parameters = {};
 DefaultSmall.args = {
@@ -156,7 +156,7 @@ DefaultSmall.args = {
 };
 
 export const DefaultLarge = Template.bind({});
-DefaultLarge.tags = ["docs-only"];
+DefaultLarge.tags = ["autodocs", "!dev"];
 DefaultLarge.storyName = "Dialog - large",
 DefaultLarge.parameters = {};
 DefaultLarge.args = {
@@ -172,7 +172,7 @@ DefaultLarge.args = {
  * A dialog that can be dismissed without taking an action. Dismissible dialogs should never have buttons.
  */
 export const Dismissible = Template.bind({});
-Dismissible.tags = ["docs-only"];
+Dismissible.tags = ["autodocs", "!dev"];
 Dismissible.parameters = {};
 Dismissible.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -187,7 +187,7 @@ Dismissible.args = {
  * Dialogs can forgo the divider if they have content that spans the entire width of the dialog.
  */
 export const NoDivider = Template.bind({});
-NoDivider.tags = ["docs-only"];
+NoDivider.tags = ["autodocs", "!dev"];
 NoDivider.parameters = {};
 NoDivider.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -203,7 +203,7 @@ NoDivider.args = {
  * Dialogs can have a hero or cover image header.
  */
 export const WithHero = Template.bind({});
-WithHero.tags = ["docs-only"];
+WithHero.tags = ["autodocs", "!dev"];
 WithHero.parameters = {
 	docs: {
 		story: {
@@ -236,7 +236,7 @@ WithScroll.args = {
 		"max-block-size": "400px",
 	}
 };
-WithScroll.tags = ["docs-only"];
+WithScroll.tags = ["autodocs", "!dev"];
 WithScroll.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -245,7 +245,7 @@ WithScroll.parameters = {
  * A fullscreen dialog will automatically fill almost all of the available screen space. A margin is included around the outside of the dialog.
  */
 export const Fullscreen = Template.bind({});
-Fullscreen.tags = ["docs-only"];
+Fullscreen.tags = ["autodocs", "!dev"];
 Fullscreen.parameters = {};
 Fullscreen.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -260,7 +260,7 @@ Fullscreen.args = {
  * A fullscreen takeover dialog will fill all of the available screen space.
  */
 export const FullscreenTakeover = Template.bind({});
-FullscreenTakeover.tags = ["docs-only"];
+FullscreenTakeover.tags = ["autodocs", "!dev"];
 FullscreenTakeover.parameters = {};
 FullscreenTakeover.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",

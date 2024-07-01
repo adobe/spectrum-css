@@ -112,7 +112,7 @@ const AllDividerSizes = (args) => html`
 `;
 
 export const Sizes = AllDividerSizes.bind({});
-Sizes.tags = ["docs-only"];
+Sizes.tags = ["autodocs", "!dev"];
 Sizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -122,7 +122,7 @@ Sizes.parameters = {
  */
 export const VerticalGroup = AllDividerSizes.bind({});
 VerticalGroup.storyName = "Vertical";
-VerticalGroup.tags = ["docs-only"];
+VerticalGroup.tags = ["autodocs", "!dev"];
 VerticalGroup.args = {
 	vertical: true,
 };
@@ -132,7 +132,7 @@ VerticalGroup.parameters = {
 
 export const StaticWhiteGroup = AllDividerSizes.bind({});
 StaticWhiteGroup.storyName = "Static white";
-StaticWhiteGroup.tags = ["docs-only"];
+StaticWhiteGroup.tags = ["autodocs", "!dev"];
 StaticWhiteGroup.args = {
 	staticColor: "white",
 };
@@ -142,7 +142,7 @@ StaticWhiteGroup.parameters = {
 
 export const StaticBlackGroup = AllDividerSizes.bind({});
 StaticBlackGroup.storyName = "Static black";
-StaticBlackGroup.tags = ["docs-only"];
+StaticBlackGroup.tags = ["autodocs", "!dev"];
 StaticBlackGroup.args = {
 	staticColor: "black",
 };
