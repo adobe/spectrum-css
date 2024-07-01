@@ -154,7 +154,7 @@ governing permissions and limitations under the License.
 	margin-block-end: var(--spectrum-standard-dialog-spacing-title-to-description);
 
 	/* Without this, buttons will be stretched */
-	align-items: center;
+	align-items: flex-start;
 	justify-content: flex-end;
 
 	box-sizing: border-box;
