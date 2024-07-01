@@ -1,6 +1,5 @@
 import { CoachIndicatorGroup } from "./template";
-import { html } from "lit";
-import { Template } from "./template";
+import { AllVariantsGroup } from "./template";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.
@@ -37,7 +36,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = CoachIndicatorGroup.bind({});
 Default.args = {};
 Default.parameters = {
 	chromatic: {
@@ -57,23 +56,6 @@ WithForcedColors.parameters = {
 	},
 };
 WithForcedColors.args = {};
-
-const AllVariantsGroup = (args) => html`
-	<div style="display: flex; flex-direction: column; padding: 16px">
-		${Template({
-				...args,
-				variant: "default"
-			})}
-		${Template({
-				...args,
-				variant: "dark"
-			})}
-		${Template({
-				...args,
-				variant: "light"
-				})}
-	</div>
-`;
 
 /*
  * Stories for the MDX "Docs" only.
