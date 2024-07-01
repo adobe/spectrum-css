@@ -1,6 +1,5 @@
-import { html } from "lit";
 import { Template } from "./template";
-import { styleMap } from "lit/directives/style-map.js";
+import { AllDividerSizes } from "./template";
 
 /**
  * Dividers bring clarity to a layout by grouping and dividing content that exists in close proximity. It can also be used to establish rhythm and hierarchy.
@@ -64,52 +63,6 @@ Default.parameters = {
  * Stories for the MDX "Docs" only.
  * "storyName" refers to the display name/heading for a component
  */
-const AllDividerSizes = (args) => html`
-	<div>
-		<div style="display: flex; flex-direction: column; padding: 16px;">
-			<h3 style="
-				${styleMap({
-					"margin": 0,
-					"color": args.staticColor === "white" ? "rgb(255, 255, 255)": "inherit",
-				})}
-			">
-				Small
-			</h3>
-			${Template({
-				...args,
-				size: "s"
-			})}
-		</div>
-		<div style="display: flex; flex-direction: column; padding: 16px;">
-			<h3 style="
-				${styleMap({
-					"margin": 0,
-					"color": args.staticColor === "white" ? "rgb(255, 255, 255)": "inherit",
-				})}
-			">
-				Medium (default)
-			</h3>
-			${Template({
-				...args,
-				size: "m"
-			})}
-		</div>
-		<div style="display: flex; flex-direction: column; padding: 16px;">
-			<h3 style="
-				${styleMap({
-					"margin": 0,
-					"color": args.staticColor === "white" ? "rgb(255, 255, 255)": "inherit",
-				})}
-			">
-				Large
-			</h3>
-			${Template({
-				...args,
-				size: "l"
-			})}
-		</div>	
-	</div>
-`;
 
 export const Sizes = AllDividerSizes.bind({});
 Sizes.tags = ["autodocs", "!dev"];
