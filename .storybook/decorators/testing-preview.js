@@ -1,9 +1,10 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
+import { makeDecorator } from "@storybook/preview-api";
 import isChromatic from "chromatic/isChromatic";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
- * @description Lets you preview the Chromatic testing view locally
+ * @description Lets you preview the Chromatic testing view locally. Sets a boolean for context.isChromaticView
+ * 	to be used for conditional rendering within story templates.
  **/
 export const withTestingPreviewWrapper = makeDecorator({
 	name: "withTestingPreviewWrapper",
@@ -12,22 +13,39 @@ export const withTestingPreviewWrapper = makeDecorator({
 		const {
 			globals: {
 				testingPreview = false,
-			} = {}
+			} = {},
+			viewMode,
 		} = context;
 
-		function init(isTestingPreview) {
-			// Prevents the "isChromatic" function from being over written
-			if (typeof window.isChromatic !== "function") {
-				// If we're not in Chromatic and we want to show the testing preview, we need to override the isChromatic function
-				// Otherwise, we need to reset it to the original function (in case it was overridden previously)
-				window.isChromatic = typeof isChromatic === "function" && isChromatic() ? isChromatic : () => isTestingPreview;
-			}
-		}
+		// Ensure context.args exists.
+		context.args = context.args ?? {};
+	
+		// Add a boolean to the context that indicates whether the Chromatic view is enabled.
+		context.args.isChromaticView = isChromaticViewEnabled(testingPreview, viewMode === "docs");
 
-		init(testingPreview);
-
-		useEffect(() => init(testingPreview), [testingPreview]);
+		// Backwards compatability with existing use of this custom function.
+		// @todo This can be removed from window after changing everywhere it is accessed to use args.isChromaticView instead.
+		window.isChromatic = () => context.args.isChromaticView;
 
 		return StoryFn(context);
 	},
 });
+
+/**
+ * Whether Chromatic is viewing the story, or the user has turned on the global
+ * parameter through the toolbar to view the Chromatic template.
+ * 
+ * Always returns false when viewing autodocs.
+ * 
+ * @param {boolean} isTestingPreview
+ * @param {boolean} isDocsPage
+ * @returns {boolean}
+ */
+const isChromaticViewEnabled = (isTestingPreview, isDocsPage) => {
+	// Use Chromatic's method to determine whether the story is being viewed by Chromatic.
+	if (isChromatic?.()) {
+		return true;
+	}
+	// Otherwise, check if the testing preview should be shown to the user in Storybook.
+	return isTestingPreview === true && isDocsPage === false;
+}
