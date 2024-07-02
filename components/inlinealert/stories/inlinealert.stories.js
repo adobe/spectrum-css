@@ -1,5 +1,5 @@
 import { html } from "lit";
-
+import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template";
 
 /**
@@ -58,29 +58,72 @@ export default {
 	},
 };
 
-export const Default = (args) => html`
-	<div>
+export const Default = (args, context) => html`
+	<div style=${styleMap({
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "flex-start",
+		gap: "1rem",
+		"--mod-detail-margin-end": ".3rem",
+	})}>
 		${Template({
 			...args
 		})}
 
 		${
 			window.isChromatic() ?
-				Template({
-					...args,
-					headerText: "in-line alert header announcing something very long and in-line",
-					text: "this is a very urgent alert with a lot of context, so the text has to wrap",
-					customStyles: {"max-width": "400px"}
-				})
-				&&
-				Template({
-					...args,
-					headerText: "in-line alert header announcing something very long and in-line",
-					text: "this is a very urgent alert with a lot of context, so the text has to wrap",
-					customStyles: {"max-width": "400px"},
-					variant: "notice",
-					isClosable: true,
-				})
+				html`
+					<div style=${styleMap({
+						display: "flex",
+						alignItems: "flex-start",
+						flexDirection: "column",
+						gap: "1rem",
+						"--mod-detail-margin-end": ".3rem",
+					})}>
+						${Template({
+							...args,
+							headerText: "in-line alert header announcing something very long and in-line",
+							text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+							customStyles: {"max-width": "400px"}
+						}, context)}
+						${Template({
+							...args,
+							headerText: "in-line alert header announcing something very long and in-line",
+							text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+							variant: "info",
+							customStyles: {"max-width": "400px"},
+						}, context)}
+						${Template({
+							...args,
+							headerText: "in-line alert header announcing something very long and in-line",
+							text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+							variant: "negative",
+							customStyles: {"max-width": "400px"},
+						}, context)}
+						${Template({
+							...args,
+							headerText: "in-line alert header announcing something very long and in-line",
+							text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+							variant: "positive",
+							customStyles: {"max-width": "400px"},
+						}, context)}
+						${Template({
+							...args,
+							headerText: "in-line alert header announcing something very long and in-line",
+							text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+							variant: "notice",
+							customStyles: {"max-width": "400px"},
+						}, context)}
+						${Template({
+							...args,
+							headerText: "closable alert header announcing something very long and in-line",
+							text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+							customStyles: {"max-width": "400px"},
+							variant: "positive",
+							isClosable: true,
+						}, context)}
+					</div>
+				`
 			: null
 		}
 	</div>
