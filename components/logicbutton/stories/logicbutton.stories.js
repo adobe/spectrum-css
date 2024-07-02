@@ -32,6 +32,13 @@ export default {
 		variant: "and",
 		isDisabled: false,
 	},
+	parameters: {
+		docs: {
+			story: {
+				height: "auto",
+			},
+		},
+	},
 };
 
 export const Default = Template.bind({});
@@ -41,8 +48,14 @@ export const Or = Template.bind({});
 Or.args = {
 	variant: "or"
 };
+Or.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
 };
