@@ -91,6 +91,76 @@ const Variants = (args, context) => {
 
 export const Default = Variants.bind({});
 Default.args = {};
+Default.storyName = "Default (neutral)";
+
+// ********* DOCS ONLY ********* //
+/**
+ * _Spectrum for Adobe Express uses a different icon. Use the SX_Info_18_S.svg icon in the Express workflow icon set._
+ */
+export const Informative = Template.bind({});
+Informative.args = {
+	variant: "info",
+	headerText: "Informative in-line alert header",
+};
+Informative.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Informative.tags = ["autodocs", "!dev"];
+
+/**
+ * _Spectrum for Adobe Express uses a different icon. Use the SX_Alert_18_S.svg icon in the Express workflow icon set._
+ */
+export const Negative = Template.bind({});
+Negative.args = {
+	variant: "negative",
+	headerText: "Negative in-line alert header",
+};
+Negative.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Negative.tags = ["autodocs", "!dev"];
+
+/**
+ * _Spectrum for Adobe Express uses a different icon. Use the SX_CheckmarkCircle_18_S.svg icon in the Express workflow icon set._
+ */
+export const Positive = Template.bind({});
+Positive.args = {
+	variant: "positive",
+	headerText: "Positive in-line alert header",
+};
+Positive.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Positive.tags = ["autodocs", "!dev"];
+
+/**
+ * _Spectrum for Adobe Express uses a different icon. Use the SX_Alert_18_S.svg icon in the Express workflow icon set._
+ */
+export const Notice = Template.bind({});
+Notice.args = {
+	variant: "notice",
+	headerText: "Notice in-line alert header",
+};
+Notice.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Notice.tags = ["autodocs", "!dev"];
+
+/**
+ * An in-line alert with a close button in the footer. Combine this strategy with any variant.
+ * 
+ * _Spectrum for Adobe Express uses a different icon. Use the SX_Alert_18_S.svg icon in the Express workflow icon set._
+ */
+export const Closable = Template.bind({});
+Closable.args = {
+	variant: "negative",
+	isClosable: true,
+	headerText: "Incorrect payment information - error",
+};
+Closable.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Closable.tags = ["autodocs", "!dev"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Variants.bind({});
