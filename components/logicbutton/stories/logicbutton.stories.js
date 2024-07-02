@@ -35,7 +35,12 @@ export default {
 		isDisabled: false,
 	},
 	parameters: {
-		componentVersion: version,
+		componentVersion: version,	
+		docs: {
+			story: {
+				height: "auto",
+			},
+		},
 	},
 };
 
@@ -46,10 +51,16 @@ export const Or = Template.bind({});
 Or.args = {
 	variant: "or"
 };
+Or.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
