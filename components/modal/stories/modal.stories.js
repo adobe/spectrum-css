@@ -1,7 +1,9 @@
 import { Template } from "./template";
 
 /**
- * A modal component is a dialog box/popup window that is displayed on top of the current page.
+ * A modal component is a dialog box/popup window that is displayed on top of the current page using `position: fixed`.
+ * This is a base component used by other components, and should not be used on its own. If you
+ * need a full-featured modal for displaying content, take a look at the [Dialog](?path=/docs/components-dialog--docs) component instead.
  */
 export default {
 	title: "Modal",
@@ -17,7 +19,7 @@ export default {
 		},
 		variant: {
 			description:
-				"Controls how the modal fills the available space. <ul><li>\"responsive\" will fill the screen on small viewports.</li><li>\"fullscreen\" will fill almost all of the available screen space.</li><li>\"fullscreenTakeover\" will fill all of the available screen space.</li></ul>",
+				"Controls how the modal fills the available space. <ul><li>\"responsive\" will fill the screen on small viewports.</li><li>\"fullscreen\" will fill almost all of the available screen space. Includes an outer margin.</li><li>\"fullscreenTakeover\" will fill all of the available screen space.</li></ul>",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
@@ -40,4 +42,11 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
 	content: ["Modal is a base component used by other components, and should not be used on its own."],
+};
+Default.parameters = {
+	docs: {
+		story: {
+			inline: false,
+		},
+	},
 };

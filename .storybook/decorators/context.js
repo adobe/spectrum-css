@@ -134,6 +134,11 @@ export const withContextWrapper = makeDecorator({
 				if (hasStaticElement && staticKey && staticColorSettings[staticKey]) {
 					container.style.background = staticColorSettings[staticKey].background;
 				}
+
+				// Demonstrate the "Modal" component with a different darker background, so its bounds are visible.
+				if (rootClass == "spectrum-Modal") {
+					container.style.background = "var(--spectrum-transparent-black-400)";
+				}
 			}
 		}, [color, context, staticColor, scale, viewMode, rootClass]);
 

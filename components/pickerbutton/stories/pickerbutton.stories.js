@@ -1,8 +1,12 @@
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
+
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
 
 /**
- * The picker button component is used as a dropdown trigger. See Combobox.
+ * The picker button component is used as a dropdown trigger within other components such as combobox.
  */
 export default {
 	title: "Picker button",
@@ -49,7 +53,7 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
-			if: { arg: "isDisabled", truthy: false }
+			if: { arg: "isDisabled", truthy: false },
 		},
 		isRounded: {
 			name: "Rounded",
@@ -86,11 +90,13 @@ export default {
 				category: "State",
 			},
 			control: "boolean",
-			if: { arg: "isDisabled", truthy: false }
+			if: { arg: "isDisabled", truthy: false },
 		},
 		position: {
 			name: "Position",
-			type: { name: "string" },
+			description:
+				"Which side the picker button is displayed on. This determines which corners are rounded.",
+			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
@@ -108,35 +114,178 @@ export default {
 		isQuiet: false,
 		isDisabled: false,
 		isFocused: false,
-		isKeyboardFocused: false,
 		iconType: "ui",
 		iconName: "ChevronDown",
-		position: "right"
+		position: "right",
 	},
 };
 
+// Story specific templates
+const SizingTemplate = (args) => html`
+	<div
+		style=${styleMap({
+			display: "flex",
+			gap: "24px",
+			flexWrap: "wrap",
+		})}
+	>
+		${["s", "m", "l", "xl"].map(
+			(size) => html`
+				<div
+					style=${styleMap({
+						display: "flex",
+						gap: "16px",
+						flexDirection: "column",
+						alignItems: "center",
+						flexBasis: "80px",
+					})}
+				>
+					${Typography({
+						semantics: "detail",
+						size: "s",
+						content: [
+							{
+								s: "Small",
+								m: "Medium",
+								l: "Large",
+								xl: "Extra-large",
+							}[size],
+						],
+						customStyles: {
+							"white-space": "nowrap",
+							"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+						},
+					})}
+					${Template({ ...args, size })}
+				</div>
+			`,
+		)}
+	</div>
+`;
+
+const CustomIconTemplate = (args) => html`
+	<div
+		style=${styleMap({
+			display: "flex",
+			gap: "24px",
+			flexWrap: "wrap",
+		})}
+	>
+		<div
+			style=${styleMap({
+				display: "flex",
+				gap: "16px",
+				flexDirection: "column",
+				alignItems: "center",
+				flexBasis: "80px",
+			})}
+		>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["UI icon"],
+				customStyles: {
+					"white-space": "nowrap",
+					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+				},
+			})}
+			${Template({
+				...args,
+				iconName: "ArrowDown100",
+				iconType: "ui",
+			})}
+		</div>
+		<div
+			style=${styleMap({
+				display: "flex",
+				gap: "16px",
+				flexDirection: "column",
+				alignItems: "center",
+				flexBasis: "80px",
+			})}
+		>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Workflow icon"],
+				customStyles: {
+					"white-space": "nowrap",
+					"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+				},
+			})}
+			${Template({
+				...args,
+				iconName: "Add",
+				iconType: "workflow",
+			})}
+		</div>
+	</div>
+`;
+
+// Stories
 export const Default = Template.bind({});
 Default.args = {};
 
 export const WithLabel = Template.bind({});
+WithLabel.storyName = "With label";
 WithLabel.args = {
 	label: "Select",
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["vrt-only"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
-	isDisabled: true
+	isDisabled: true,
 };
 
 export const Quiet = Template.bind({});
-Quiet.tags = ["vrt-only"];
+Quiet.storyName = "Quiet with label";
+Quiet.tags = ["!dev"];
 Quiet.args = {
-	isQuiet: true
+	isQuiet: true,
+	label: "All",
 };
 
+// @todo This VRT only story can be removed when Express is handled by the addition of Chromatic modes.
 export const Express = Template.bind({});
-Express.tags = ["vrt-only"];
+Express.tags = ["!dev", "!autodocs"];
 Express.args = {
-	express: true
+	express: true,
+};
+
+export const Sizing = SizingTemplate.bind({});
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Open = Template.bind({});
+Open.tags = ["!dev"];
+Open.args = {
+	isOpen: true,
+};
+Open.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * This example uses a custom icon instead of the chevron UI icon.
+ */
+export const CustomIcon = CustomIconTemplate.bind({});
+CustomIcon.storyName = "With custom icon";
+CustomIcon.tags = ["!dev"];
+CustomIcon.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The `spectrum-PickerButton--rounded` class increases the amount of rounding on the rounded corners.
+ */
+export const Rounded = Template.bind({});
+Rounded.tags = ["!dev"];
+Rounded.args = {
+	isRounded: true,
+};
+Rounded.parameters = {
+	chromatic: { disableSnapshot: true },
 };
