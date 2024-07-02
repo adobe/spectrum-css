@@ -79,9 +79,15 @@ export default {
 	},
 };
 
+/**
+ * Miller columns that allow both files and folders to be selected.
+ */
 export const BranchesSelectable = Template.bind({});
 BranchesSelectable.args = {};
 
+/**
+ * Miller columns that only allow files to be selected.
+ */
 export const FilesSelectable = Template.bind({});
 FilesSelectable.args = {
 	columns: [
