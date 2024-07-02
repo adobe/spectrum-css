@@ -117,7 +117,7 @@ const ActionButtons = (args) => html` <div
 		label: "Truncate this long content",
 		iconName: undefined,
 		customStyles: {
-			display: window.isChromatic() ? undefined : "none",
+			display: args?.isChromaticView ? undefined : "none",
 			maxInlineSize: "100px"
 		},
 	})}
@@ -125,7 +125,7 @@ const ActionButtons = (args) => html` <div
 		...args,
 		label: "Truncate this long content",
 		customStyles: {
-			display: window.isChromatic() ? undefined : "none",
+			display: args?.isChromaticView ? undefined : "none",
 			maxInlineSize: "100px"
 		},
 	})}
@@ -253,7 +253,7 @@ export const Variants = (args) => html`
 		}
 	</style>
 	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
+		"display": args?.isChromaticView ? "flex" : "none",
 		"flex-direction": "column",
 		"align-items": "flex-start",
 		"gap": "16px",
@@ -327,7 +327,7 @@ export const Variants = (args) => html`
 		</div>
 	</div>
 	<div style=${styleMap({
-		display: window.isChromatic() ? "none" : undefined,
+		display: args?.isChromaticView ? "none" : undefined,
 	})}>
 		${ActionButtons(args)}
 	</div>

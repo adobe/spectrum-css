@@ -108,12 +108,12 @@ export const Template = ({
 export const PaginationGroup = (args, context) => {
 	return html`
 		<div style=${styleMap({
-			"display": window.isChromatic() ? "none" : undefined,
+			"display": args?.isChromaticView ? "none" : undefined,
 		})}>
 			${Template(args, context)}
 		</div>
 		<div style=${styleMap({
-			"display": window.isChromatic() ? "flex" : "none",
+			"display": args?.isChromaticView ? "flex" : "none",
 			"flex-direction": "column",
 			"gap": "32px",
 		})}>
