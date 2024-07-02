@@ -1,4 +1,6 @@
 import { Template } from "./template";
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 
 /**
  * A link allows users to navigate to a different location. They can be presented in-line inside a paragraph or as standalone text.
@@ -69,7 +71,69 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = (args, context) => html`
+	<div style=${styleMap({
+		display: "flex",
+		flexDirection: "column",
+		alignItems: "flex-start",
+		gap: "1rem",
+		"--mod-detail-margin-end": ".3rem",
+	})}>
+		${Template({
+			...args
+		})}
+
+		${
+			window.isChromatic() ?
+				html`
+					<div style=${styleMap({
+						display: "flex",
+						alignItems: "flex-start",
+						flexDirection: "column",
+						gap: "1rem",
+						"--mod-detail-margin-end": ".3rem",
+					})}>
+					${Template({
+							...args,
+							variant: "primary",
+						}, context)}
+						${Template({
+							...args,
+							variant: "secondary",
+						}, context)}
+						<!-- ${Template({
+							...args,
+							staticColor: "white",
+							}, context)}
+						${Template({
+							...args,
+							staticColor: "black",
+							}, context)} -->
+						${Template({
+							...args,
+							isQuiet: true,
+						}, context)}
+						${Template({
+							...args,
+							isQuiet: true,
+							variant: "secondary",
+						}, context)}
+						<!-- ${Template({
+							...args,
+							staticColor: "white",
+							isQuiet: true,
+						}, context)}
+						${Template({
+							...args,
+							staticColor: "black",
+							isQuiet: true,
+						}, context)} -->
+					</div>
+				`
+			: null
+		}
+	</div>
+`;
 Default.storyName = "Primary";
 Default.args = {};
 
