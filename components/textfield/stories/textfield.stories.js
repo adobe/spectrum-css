@@ -84,15 +84,6 @@ export default {
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
 		multiline: {
 			name: "Multiline",
 			type: { name: "boolean" },
@@ -183,7 +174,6 @@ export default {
 		size: "m",
 		multiline: false,
 		grows: false,
-		isQuiet: false,
 	},
 	parameters: {
 		actions: {
