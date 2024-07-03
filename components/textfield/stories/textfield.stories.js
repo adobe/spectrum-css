@@ -174,6 +174,7 @@ export default {
 		size: "m",
 		multiline: false,
 		grows: false,
+		pattern: "",
 	},
 	parameters: {
 		actions: {
