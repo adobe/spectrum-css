@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
-
+import { ifDefined } from "lit/directives/if-defined.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
@@ -28,7 +28,6 @@ export const Template = ({
 				return html` <li
 					class=${classMap({
 						[`${rootClass}-item`]: true,
-						"is-disabled": isDisabled,
 						"is-dragged": isDragged && item.isDragged,
 					})}
 				>
@@ -48,9 +47,13 @@ export const Template = ({
 								idx !== arr.length - 1,
 								() =>
 									html`<div
-										class="${rootClass}-itemLink"
+										class=${classMap({
+											[`${rootClass}-itemLink`]: true,
+											"is-disabled": isDisabled,
+										})}
+										aria-disabled=${ifDefined(isDisabled ? "true" : undefined)}
 										role="link"
-										tabindex="0"
+										tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
 									>
 										${label}
 									</div>`,

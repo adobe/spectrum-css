@@ -269,7 +269,8 @@ governing permissions and limitations under the License.
 	margin-block-start: var(--mod-breadcrumbs-text-spacing-block-start, var(--spectrum-breadcrumbs-text-spacing-block-start));
 	margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end, var(--spectrum-breadcrumbs-text-spacing-block-end));
 
-	&.is-disabled {
+	&.is-disabled,
+	&[aria-disabled="true"] {
 		color: var(--highcontrast-breadcrumbs-text-color-disabled, var(--mod-breadcrumbs-text-color-disabled, var(--spectrum-breadcrumbs-text-color-disabled)));
 	}
 
