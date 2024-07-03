@@ -15,6 +15,7 @@ export const Template = ({
 	rootClass = "spectrum-Textfield",
 	size = "m",
 	customClasses = [],
+	customCharacterCountClasses = [],
 	customInputClasses = [],
 	customIconClasses = [],
 	customProgressCircleClasses = [],
@@ -22,12 +23,14 @@ export const Template = ({
 	isValid = false,
 	multiline = false,
 	grows = false,
+	hasCharacterCount = false,
 	isFocused = false,
 	isDisabled = false,
 	isRequired = false,
 	isReadOnly = false,
 	isKeyboardFocused = false,
 	isLoading = false,
+	characterCount,
 	displayLabel = false,
 	labelPosition = "top",
 	labelText,
@@ -93,6 +96,17 @@ export const Template = ({
 			size,
 			label: labelText,
 		}))}
+		${when(hasCharacterCount, () => html`
+				<span
+					id=${ifDefined(id ? `character-count-${id}` : undefined)}
+					class=${classMap({
+						[`${rootClass}-characterCount`]: true,
+						...customCharacterCountClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+					})}
+				>
+					${characterCount}
+				</span>
+			`)}
 		${when(iconName, () => Icon({
 			...globals,
 			size,

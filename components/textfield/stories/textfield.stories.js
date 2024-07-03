@@ -157,9 +157,25 @@ export default {
 				disable: true,
 			},
 		},
+		hasCharacterCount: {
+			name: "Has character count",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		characterCount: {
+			table: {
+				disable: true,
+			},
+		},
 	},
 	args: {
 		rootClass: "spectrum-Textfield",
+		characterCount: "50",
+		hasCharacterCount: false,
 		isValid: false,
 		isInvalid: false,
 		isDisabled: false,
