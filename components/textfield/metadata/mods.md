@@ -17,6 +17,7 @@
 | `--mod-textfield-border-color-invalid-keyboard-focus` |
 | `--mod-textfield-border-color-keyboard-focus`         |
 | `--mod-textfield-border-width`                        |
+| `--mod-textfield-character-count-color`               |
 | `--mod-textfield-character-count-font-family`         |
 | `--mod-textfield-character-count-font-size`           |
 | `--mod-textfield-character-count-font-weight`         |

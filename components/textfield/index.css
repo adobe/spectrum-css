@@ -59,6 +59,7 @@ governing permissions and limitations under the License.
 	--spectrum-textfield-placeholder-font-size: var(--spectrum-font-size-100);
 
 	/* character count */
+	--spectrum-textfield-character-count-color: var(--spectrum-neutral-subdued-content-color-default);
 	--spectrum-textfield-character-count-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-textfield-character-count-font-weight: var(--spectrum-regular-font-weight);
 	--spectrum-textfield-character-count-font-size: var(--spectrum-font-size-100);
@@ -275,6 +276,7 @@ governing permissions and limitations under the License.
 
 /********* Child Element - Character Count *********/
 .spectrum-Textfield-characterCount {
+	color: var(--mod-textfield-character-count-color, var(--spectrum-textfield-character-count-color));
 	display: inline-flex;
 	align-items: flex-end;
 	justify-content: flex-end;
