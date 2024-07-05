@@ -40,7 +40,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--dismissable`]: isDismissable,
-				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
+				[`${rootClass}--${layout}`]: typeof layout !== "undefined" && layout !== "default",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -82,7 +82,7 @@ export const Template = ({
 						`
 					])}
 				</div>
-				${when(layout, () => [
+				${when(layout !== "default", () => [
 					html`
 						<div class="${rootClass}-buttonGroup">
 							<div class="${rootClass}-buttonGroup--noFooter">
@@ -96,42 +96,16 @@ export const Template = ({
 						</div>
 					`
 				])}
-				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
-				${when(isDismissable, () =>
+				${when(isDismissable, () => 
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
 						...globals,
 						onclick: () => {
 							updateArgs({ isOpen: !isOpen });
 						},
-					}), 
-				)}
-				${when(footer, () => 
-					html`
-						<div class="${rootClass}-footer">
-							${Typography({
-								semantics: "body",
-								size: "m",
-								content: footer,
-							})}
-							${when(!isDismissable, () => [
-								html`
-									<div class="${rootClass}-buttonGroup">
-										${ButtonGroup({
-											items: buttons,
-											onclick: () => {
-												updateArgs({ isOpen: !isOpen });
-											},
-										})}
-									</div>
-								`
-							])}
-						</div>
-					`
-				)}
-				${when(!footer && !isDismissable, () =>
-					html`
-						<div class="${rootClass}-buttonGroup">
+					}),
+					() => html`
+					<div class="${rootClass}-buttonGroup">
 							<div class="${rootClass}-buttonGroup--noFooter">
 								${ButtonGroup({
 									items: buttons,
@@ -140,6 +114,18 @@ export const Template = ({
 									},
 								})}
 							</div>
+						</div>
+					`
+				)}
+				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
+				${when(footer, () => 
+					html`
+						<div class="${rootClass}-footer">
+							${Typography({
+								semantics: "body",
+								size: "m",
+								content: footer,
+							})}
 						</div>
 					`
 				)}

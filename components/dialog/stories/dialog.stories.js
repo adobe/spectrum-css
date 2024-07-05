@@ -58,7 +58,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["fullscreen", "fullscreenTakeover"],
+			options: ["default", "fullscreen", "fullscreenTakeover"],
 			control: "select",
 		},
 		isDismissable: {
@@ -70,7 +70,7 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
-			if: { arg: "layout", truthy: false },
+			if: { arg: "layout", eq: "default" },
 		},
 		showModal: {
 			name: "Wrap the dialog in a modal",
@@ -99,7 +99,7 @@ export default {
 				category: "Content",
 			},
 			control: "boolean",
-			if: { arg: "layout", truthy: false },
+			if: { arg: "layout", eq: "default" },
 		},
 		heroImageUrl: {
 			name: "Hero Image",
@@ -118,6 +118,7 @@ export default {
 		showModal: false,
 		isOpen: true,
 		size: "m",
+		layout: "default",
 		hasHeroImage: false,
 	},
 	parameters: {
