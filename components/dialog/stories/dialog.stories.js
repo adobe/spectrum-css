@@ -70,6 +70,7 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "layout", truthy: false },
 		},
 		showModal: {
 			name: "Wrap the dialog in a modal",

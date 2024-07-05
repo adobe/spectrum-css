@@ -327,6 +327,11 @@ governing permissions and limitations under the License.
 		grid-area: heading;
 	}
 
+	/* @todo: can fullscreen/fullscreenTakeover dialogs be dismissible/have a close button? */
+	.spectrum-Dialog-closeButton {
+		display: none;
+	}
+
 	.spectrum-Dialog-content {
 		max-block-size: none;
 	}
