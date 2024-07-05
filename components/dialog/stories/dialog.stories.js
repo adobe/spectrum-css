@@ -99,6 +99,7 @@ export default {
 				category: "Content",
 			},
 			control: "boolean",
+			if: { arg: "layout", truthy: false },
 		},
 		heroImageUrl: {
 			name: "Hero Image",
