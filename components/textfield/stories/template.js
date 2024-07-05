@@ -6,6 +6,7 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 
@@ -16,6 +17,7 @@ export const Template = ({
 	size = "m",
 	customClasses = [],
 	customCharacterCountClasses = [],
+	customHelpTextClasses = [],
 	customInputClasses = [],
 	customIconClasses = [],
 	customProgressCircleClasses = [],
@@ -24,6 +26,7 @@ export const Template = ({
 	multiline = false,
 	grows = false,
 	hasCharacterCount = false,
+	helpText,
 	isFocused = false,
 	isDisabled = false,
 	isRequired = false,
@@ -152,6 +155,15 @@ export const Template = ({
 				})}
 			/>`
 		)}
+		${when(helpText, () => HelpText({
+			...globals,
+			size,
+			hideIcon: true,
+			text: helpText,
+			variant: isInvalid ? "negative" : "neutral",
+			id: ifDefined(`helptext-${id}`),
+			customClasses: customHelpTextClasses,
+		}))}
 		${when(isLoading, () => ProgressCircle({
 			isIndeterminate: true,
 			size: "s",

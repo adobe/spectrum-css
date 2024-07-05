@@ -47,6 +47,25 @@ export default {
 			control: "text",
 			if: { arg: "displayLabel", truthy: true },
 		},
+		displayHelpText: {
+			name: "Display help text",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		helpText: {
+			name: "Help text",
+			type: { name: "text" },
+			table: {
+				type: { summary: "text" },
+				category: "Component",
+			},
+			control: "text",
+			if: { arg: "displayHelpText", truthy: true },
+		},
 		isInvalid: {
 			name: "Invalid",
 			type: { name: "boolean" },
@@ -187,6 +206,8 @@ export default {
 		displayLabel: false,
 		labelPosition: "top",
 		labelText: "Username",
+		displayHelpText: false,
+		helpText: "Create a username with at least 5 characters",
 		size: "m",
 		multiline: false,
 		grows: false,
