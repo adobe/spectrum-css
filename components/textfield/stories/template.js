@@ -124,7 +124,7 @@ export const Template = ({
 		}))}
 		${when(multiline,
 			() => html`<textarea
-				placeholder=${ifDefined(placeholder)}
+				placeholder=${ifDefined(placeholder && placeholder.trim() ? placeholder : undefined)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
 				.value=${ifDefined(value)}
@@ -140,7 +140,7 @@ export const Template = ({
 			/>`,
 			() => html`<input
 				type=${ifDefined(type)}
-				placeholder=${ifDefined(placeholder)}
+				placeholder=${ifDefined(placeholder && placeholder.trim() ? placeholder : undefined)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
 				.value=${ifDefined(value)}
