@@ -410,7 +410,8 @@ governing permissions and limitations under the License.
 	}
 
 	/* keyboard focus */
-	.is-keyboardFocused & {
+	.is-keyboardFocused &,
+	&:focus-visible {
 		border-color: var(--highcontrast-textfield-border-color-keyboard-focus, var(--mod-textfield-border-color-keyboard-focus, var(--spectrum-textfield-border-color-keyboard-focus)));
 		color: var(--highcontrast-textfield-text-color-keyboard-focus, var(--mod-textfield-text-color-keyboard-focus, var(--spectrum-textfield-text-color-keyboard-focus)));
 
