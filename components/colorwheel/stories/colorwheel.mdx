@@ -1,13 +1,25 @@
-import { ArgTypes, Canvas, Meta, Description, Title } from '@storybook/blocks';
+import {
+  ArgTypes,
+  Canvas,
+  Meta,
+  Description,
+  Title,
+  Subtitle,
+} from "@storybook/blocks";
+import { ComponentDetails } from "@spectrum-css/preview/blocks";
 
-import * as ColorWheelStories from './colorwheel.stories';
+import * as ColorWheelStories from "./colorwheel.stories";
 
 <Meta of={ColorWheelStories} title="Docs" />
 
 <Title of={ColorWheelStories} />
+<Subtitle of={ColorWheelStories} />
+<ComponentDetails />
+
 <Description of={ColorWheelStories} />
 
 ## Usage notes:
+
 - For a given rotation on the wheel, X, the `.spectrum-ColorHandle` should be moved by applying the style property `transform: translate(${Y * Math.cos(X)}px, ${Y * Math.sin(X)}px)`, where Y is `((radius - .spectrum-colorwheel-track-width) / 2))`
 - Set the value attribute of `.spectrum-ColorWheel-value` to the currently selected color (i.e. `hsl(326, 100%, 50%)`)
 - Add `.is-dragged` when the handle is being dragged

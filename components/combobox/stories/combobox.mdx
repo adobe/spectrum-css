@@ -1,14 +1,26 @@
-import { Canvas, ArgTypes, Meta, Description, Title } from '@storybook/blocks';
-
-import * as ComboboxStories from './combobox.stories';
+import {
+  Canvas,
+  ArgTypes,
+  Meta,
+  Description,
+  Title,
+  Subtitle,
+} from "@storybook/blocks";
+import { ComponentDetails } from "@spectrum-css/preview/blocks";
+import * as ComboboxStories from "./combobox.stories";
 
 <Meta of={ComboboxStories} title="Docs" />
 
 <Title of={ComboboxStories} />
+<Subtitle of={ComboboxStories} />
+<ComponentDetails />
+
 <Description of={ComboboxStories} />
 
 ## Usage notes
+
 ### General notes
+
 - Combobox uses `.spectrum-PickerButton` instead of a `.spectrum-Picker`
 - The following classes must be added:
   - `.spectrum-Combobox-textfield` is required on the Textfield outer element (`.spectrum-Textfield`)
@@ -16,6 +28,7 @@ import * as ComboboxStories from './combobox.stories';
   - `.spectrum-Combobox-button` is required on the FieldButton (`.spectrum-ActionButton spectrum-ActionButton--sizeM`)
 
 ### Indicating validity and focus
+
 Validity and focus must be bubbled up to the parent so descendants siblings can be styled. Implementations should add the following classes to the `.spectrum-Combobox` parent class in the following situations:
 
 - `.is-focused` - when the input or button is focused with the mouse

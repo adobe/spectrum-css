@@ -1,10 +1,20 @@
-import { ArgTypes, Canvas, Meta, Description, Title } from '@storybook/blocks';
-
-import * as AssetCardStories from './assetcard.stories';
+import {
+  ArgTypes,
+  Canvas,
+  Meta,
+  Description,
+  Title,
+  Subtitle,
+} from "@storybook/blocks";
+import { ComponentDetails } from "@spectrum-css/preview/blocks";
+import * as AssetCardStories from "./assetcard.stories";
 
 <Meta of={AssetCardStories} title="Docs" />
 
 <Title of={AssetCardStories} />
+<Subtitle of={AssetCardStories} />
+<ComponentDetails />
+
 <Description of={AssetCardStories} />
 
 ## Portrait

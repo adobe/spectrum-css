@@ -1,10 +1,21 @@
-import { ArgTypes, Canvas, Meta, Description, Title } from '@storybook/blocks';
+import {
+  ArgTypes,
+  Canvas,
+  Meta,
+  Description,
+  Title,
+  Subtitle,
+} from "@storybook/blocks";
+import { ComponentDetails } from "@spectrum-css/preview/blocks";
 
-import * as FieldGroupStories from './fieldgroup.stories';
+import * as FieldGroupStories from "./fieldgroup.stories";
 
 <Meta of={FieldGroupStories} title="Docs" />
 
 <Title of={FieldGroupStories} />
+<Subtitle of={FieldGroupStories} />
+<ComponentDetails />
+
 <Description of={FieldGroupStories} />
 
 ## Variants
@@ -14,9 +25,11 @@ import * as FieldGroupStories from './fieldgroup.stories';
 A vertical group of fields:
 
 #### Vertical Radio
+
 <Canvas of={FieldGroupStories.VerticalRadio} />
 
 #### Vertical Checkbox
+
 <Canvas of={FieldGroupStories.VerticalCheckbox} />
 
 ### Horizontal
@@ -24,9 +37,11 @@ A vertical group of fields:
 A horizontal group of fields:
 
 #### Horizontal Radio
+
 <Canvas of={FieldGroupStories.HorizontalRadio} />
 
 #### Horizontal Checkbox
+
 <Canvas of={FieldGroupStories.HorizontalCheckbox} />
 
 ### Invalid
@@ -34,42 +49,52 @@ A horizontal group of fields:
 An invalid group of fields:
 
 #### Invalid Radio
+
 <Canvas of={FieldGroupStories.InvalidRadio} />
 
 #### Invalid Checkbox
+
 <Canvas of={FieldGroupStories.InvalidCheckbox} />
 
 ### Required or optional
+
 <Description of={FieldGroupStories.Required} />
 <Description of={FieldGroupStories.Optional} />
 
 #### Required
+
 <Canvas of={FieldGroupStories.Required} />
 
 #### Required Asterisk
+
 <Canvas of={FieldGroupStories.RequiredAsterisk} />
 
 #### Optional
+
 <Canvas of={FieldGroupStories.Optional} />
 
-
 ### Side label position
+
 <Description of={FieldGroupStories.VerticalSideLabelRadio} />
 
 #### Side Label Vertical Radio
+
 <Canvas of={FieldGroupStories.VerticalSideLabelRadio} />
 
 #### Side Label Horizontal Radio
+
 <Canvas of={FieldGroupStories.HorizontalSideLabelRadio} />
 
 #### Side Label Vertical Checkbox
+
 <Canvas of={FieldGroupStories.VerticalSideLabelCheckbox} />
 
 #### Side Label Horizontal Checkbox
+
 <Canvas of={FieldGroupStories.HorizontalSideLabelCheckbox} />
 
-
 ### Read-only checkboxes
+
 <Description of={FieldGroupStories.ReadOnly} />
 
 <Canvas of={FieldGroupStories.ReadOnly} />
