@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -34,6 +35,9 @@ export default {
 	args: {
 		isOpen: true,
 		rootClass: "spectrum-Modal",
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

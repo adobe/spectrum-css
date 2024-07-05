@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { CoachIndicatorGroup } from "./template";
 
 /**
@@ -30,6 +31,9 @@ export default {
 	args: {
 		rootClass: "spectrum-CoachIndicator",
 		isQuiet: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

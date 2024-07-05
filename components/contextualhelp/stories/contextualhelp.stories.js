@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
@@ -85,6 +86,7 @@ export default {
 				...(ActionButtonStories?.parameters?.actions?.handles ?? [])
 			],
 		},
+		componentVersion: version,
 	},
 };
 

@@ -120,6 +120,7 @@ export const parameters = {
 			},
 		},
 	},
+	componentVersion: undefined,
 };
 
 export const loaders = [

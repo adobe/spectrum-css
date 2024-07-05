@@ -1,8 +1,8 @@
 import { html } from "lit";
-
-import { Template } from "./template";
+import { version } from "../package.json";
 
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Template } from "./template";
 
 /**
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.
@@ -102,6 +102,7 @@ export default {
 		actions: {
 			handles: [".spectrum-Tabs-item"],
 		},
+		componentVersion: version,
 	},
 };
 

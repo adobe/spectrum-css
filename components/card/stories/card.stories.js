@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
@@ -112,6 +113,7 @@ export default {
 				...(Checkbox.parameters?.actions?.handles ?? []),
 			],
 		},
+		componentVersion: version,
 	},
 };
 

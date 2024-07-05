@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -39,6 +40,9 @@ export default {
 		rootClass: "spectrum-Asset",
 		preset: "image",
 		image: "example-ava.png",
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

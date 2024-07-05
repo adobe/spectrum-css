@@ -1,7 +1,8 @@
-import { Template } from "./template";
-
 import { html } from "lit";
 import { when } from "lit/directives/when.js";
+import { version } from "../package.json";
+
+import { Template } from "./template";
 
 /**
  * Spectrum typography is broken out into several separate components.
@@ -75,6 +76,7 @@ export default {
 		actions: {
 			handles: [],
 		},
+		componentVersion: version,
 	},
 };
 

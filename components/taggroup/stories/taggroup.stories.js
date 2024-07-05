@@ -1,6 +1,8 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
+
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
 /**
@@ -58,6 +60,7 @@ export default {
 				...(TagStories.parameters.actions.handles ?? [])
 			],
 		},
+		componentVersion: version,
 	},
 };
 

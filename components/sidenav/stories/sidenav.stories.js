@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -34,6 +35,9 @@ export default {
 		rootClass: "spectrum-SideNav",
 		hasIcon: false,
 		iconName: "Folder"
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

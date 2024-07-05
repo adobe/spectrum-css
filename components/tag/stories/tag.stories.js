@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
@@ -127,6 +128,7 @@ export default {
 		actions: {
 			handles: [],
 		},
+		componentVersion: version,
 	},
 };
 

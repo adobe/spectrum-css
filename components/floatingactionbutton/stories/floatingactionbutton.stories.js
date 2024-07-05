@@ -1,6 +1,7 @@
-import { Template } from "./template";
+import { version } from "../package.json";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Template } from "./template";
 
 /**
  * The floating action button component is used to give users a more prominent button for high frequency actions.
@@ -33,6 +34,9 @@ export default {
 		rootClass: "spectrum-FloatingActionButton",
 		variant: "primary",
 		iconName: "AddCircle",
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

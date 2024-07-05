@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -99,6 +100,9 @@ export default {
 		showThumbnails: false,
 		isDropTarget: false,
 		useScroller: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

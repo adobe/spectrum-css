@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -31,6 +32,9 @@ export default {
 	args: {
 		rootClass: "spectrum-Breadcrumbs",
 		isDragged: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

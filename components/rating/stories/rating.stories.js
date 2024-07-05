@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -69,6 +70,9 @@ export default {
 		isDisabled: false,
 		max: 5,
 		value: 3,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

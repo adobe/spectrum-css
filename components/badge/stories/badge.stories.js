@@ -1,9 +1,9 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-
-import { Template } from "./template";
+import { version } from "../package.json";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Template } from "./template";
 
 const semanticOptions = ["neutral", "accent", "informative", "positive", "negative"];
 const nonSemanticOptions = ["gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"];
@@ -70,6 +70,9 @@ export default {
 		iconName: "Info",
 		label: "Badge",
 		fixed: "none"
+	},
+	parameters: {
+		componentVersion: version,
 	},
 	decorators: [
 		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`

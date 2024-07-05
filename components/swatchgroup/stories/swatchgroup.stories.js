@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
@@ -63,6 +64,7 @@ export default {
 				...(Swatch.parameters?.actions?.handles ?? []),
 			],
 		},
+		componentVersion: version,
 	},
 };
 

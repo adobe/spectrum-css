@@ -1,6 +1,7 @@
 import { userEvent, within } from "@storybook/testing-library";
 import { html } from "lit";
 
+import { version } from "../package.json";
 import { Template } from "./template";
 
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
@@ -72,6 +73,7 @@ export default {
 				...(Menu.parameters?.actions?.handles ?? []),
 			],
 		},
+		componentVersion: version,
 	},
 	decorators: [
 		(Story, context) => html`<div style="padding: 14px">${Story(context)}</div>`

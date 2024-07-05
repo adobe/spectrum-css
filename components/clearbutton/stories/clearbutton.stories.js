@@ -1,4 +1,5 @@
 
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -43,6 +44,9 @@ export default {
 		rootClass: "spectrum-ClearButton",
 		size: "m",
 		isDisabled: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

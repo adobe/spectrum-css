@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { States } from "./template";
 
 /**
@@ -62,6 +63,9 @@ export default {
 		isDisabled: false,
 		rounding: "regular",
 		swatchColor: "rgb(174, 216, 230)"
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

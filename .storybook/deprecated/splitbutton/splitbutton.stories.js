@@ -63,6 +63,7 @@ export default {
 		status: {
 			type: "deprecated"
 		},
+		componentVersion: "8.1.2",
 	},
 };
 

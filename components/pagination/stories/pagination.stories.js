@@ -1,4 +1,5 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories";
+import { version } from "../package.json";
 import { PaginationGroup } from "./template";
 
 /**
@@ -52,6 +53,7 @@ export default {
 				...(ActionButton.parameters?.actions?.handles ?? [])
 			],
 		},
+		componentVersion: version,
 	},
 };
 

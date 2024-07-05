@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -42,6 +43,9 @@ export default {
 		rootClass: "spectrum-Divider",
 		size: "m",
 		vertical: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

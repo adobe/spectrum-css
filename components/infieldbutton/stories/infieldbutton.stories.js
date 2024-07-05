@@ -1,6 +1,7 @@
-import { Template } from "./template";
+import { version } from "../package.json";
 
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Template } from "./template";
 
 /**
  * The in-field button component is a button used inside a text field.
@@ -61,6 +62,9 @@ export default {
 		isQuiet: false,
 		isDisabled: false,
 		isStacked: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

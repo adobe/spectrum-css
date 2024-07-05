@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -60,6 +61,7 @@ export default {
 		actions: {
 			handles: ["click .spectrum-AlertBanner button"],
 		},
+		componentVersion: version,
 	},
 };
 

@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -75,6 +76,9 @@ export default {
 		hideIcon: false,
 		isDisabled: false,
 		size: "m",
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

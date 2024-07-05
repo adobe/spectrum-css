@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./meter.template";
 
 /**
@@ -53,6 +54,9 @@ export default {
 		meterFill: "default",
 		size: "s",
 		value: 50,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

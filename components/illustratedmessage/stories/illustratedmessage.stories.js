@@ -1,7 +1,7 @@
 import { html } from "lit";
+import { version } from "../package.json";
 
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
-
 import { Template } from "./template";
 
 /**
@@ -40,6 +40,9 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-IllustratedMessage",
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

@@ -45,6 +45,7 @@ export default {
 		status: {
 			type: "deprecated"
 		},
+		componentVersion: "3.1.3",
 	},
 };
 

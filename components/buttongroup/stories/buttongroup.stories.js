@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -51,6 +52,9 @@ export default {
 				label: "Rate now",
 			},
 		],
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

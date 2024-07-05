@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -41,6 +42,9 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 		isWithColorArea: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

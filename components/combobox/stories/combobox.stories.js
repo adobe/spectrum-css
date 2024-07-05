@@ -1,8 +1,8 @@
 import { html } from "lit";
-
-import { Template } from "./template";
+import { version } from "../package.json";
 
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { Template } from "./template";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
@@ -162,6 +162,7 @@ export default {
 				height: "220px"
 			}
 		},
+		componentVersion: version,
 	},
 };
 
