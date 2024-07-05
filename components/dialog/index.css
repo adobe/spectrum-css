@@ -65,6 +65,7 @@ governing permissions and limitations under the License.
 	background-color: var(--spectrum-standard-dialog-background-color);
 	outline: none;
 	border-radius: var(--mod-standard-dialog-border-radius, var(--spectrum-standard-dialog-border-radius));
+	overflow: hidden;
 
 	.spectrum--large & {
 		--spectrum-standard-dialog-spacing-edge-to-content: var(--spectrum-spacing-400);
@@ -86,12 +87,11 @@ governing permissions and limitations under the License.
 
 	block-size: var(--mod-standard-dialog-min-hero-block-size, var(--spectrum-standard-dialog-min-hero-block-size));
 
-	border-start-start-radius: var(--mod-standard-dialog-border-radius, var(--spectrum-standard-dialog-border-radius));
-	border-start-end-radius: var(--mod-standard-dialog-border-radius, var(--spectrum-standard-dialog-border-radius));
+	/* border-start-start-radius: var(--mod-standard-dialog-border-radius, var(--spectrum-standard-dialog-border-radius));
+	border-start-end-radius: var(--mod-standard-dialog-border-radius, var(--spectrum-standard-dialog-border-radius)); */
 
 	background-size: cover;
 	background-position: center center;
-	overflow: hidden;
 }
 
 /* Non-Dismissible Dialog (no close button) */
