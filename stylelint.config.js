@@ -68,7 +68,7 @@ module.exports = {
 				severity: "warning",
 			},
 		],
-		"color-function-notation": ["modern", { "ignore": ["with-var-inside"] }],
+		"color-function-notation": ["modern", { ignore: ["with-var-inside"] }],
 		"import-notation": null,
 		"property-no-unknown": [
 			true,
@@ -86,6 +86,8 @@ module.exports = {
 			},
 		],
 		"declaration-block-no-shorthand-property-overrides": true,
+		/* not compatible with nesting approach */
+		"no-descending-specificity": null,
 		"value-keyword-case": [
 			"lower",
 			{
@@ -113,7 +115,10 @@ module.exports = {
 		],
 		"csstools/use-logical": true,
 		/** Performance */
-		"plugin/no-low-performance-animation-properties": [true, { severity: "warning" }],
+		"plugin/no-low-performance-animation-properties": [
+			true,
+			{ severity: "warning" },
+		],
 		"plugin/selector-bem-pattern": [
 			{
 				preset: "suit",

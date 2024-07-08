@@ -15,11 +15,7 @@ export const withContextWrapper = makeDecorator({
 				rootClass,
 				staticColor,
 			} = {},
-			globals: {
-				color = "light",
-				context = "spectrum",
-				scale = "medium",
-			} = {},
+			globals = {},
 			viewMode,
 			id,
 			loaded: {
@@ -27,6 +23,10 @@ export const withContextWrapper = makeDecorator({
 				legacy = {},
 			} = {}
 		} = data;
+
+		let color = globals.color ?? "light";
+		let context = globals.context ?? "spectrum";
+		let scale = globals.scale ?? "medium";
 
 		const staticColorSettings = {
 			"black": {
@@ -84,7 +84,10 @@ export const withContextWrapper = makeDecorator({
 					toggleStyles(contextContainer, "vars-base-express", legacy?.express?.base, isExpress);
 				}
 
-				for (const c of ["light", "dark"]) {
+				// Darkest is deprecated in Spectrum 2
+				if (!isLegacy && color === "darkest") color = "dark";
+
+				for (let c of ["light", "dark", "darkest"]) {
 					// Force light or dark mode if the static color is set
                     const isColor = c === staticColorSettings[staticKey]?.color || !staticKey && c === color;
 

@@ -12,13 +12,13 @@
  */
 
 .spectrum-ColorWheel {
-	--spectrum-colorwheel-width: var(--system-spectrum-colorwheel-width);
-	--spectrum-colorwheel-min-width: var(--system-spectrum-colorwheel-min-width);
-	--spectrum-colorwheel-height: var(--system-spectrum-colorwheel-height);
-	--spectrum-colorwheel-border-color: var(--system-spectrum-colorwheel-border-color);
-	--spectrum-colorwheel-border-width: var(--system-spectrum-colorwheel-border-width);
-	--spectrum-colorwheel-fill-color-disabled: var(--system-spectrum-colorwheel-fill-color-disabled);
-	--spectrum-colorwheel-track-width: var(--system-spectrum-colorwheel-track-width);
-	--spectrum-colorwheel-colorarea-margin: var(--system-spectrum-colorwheel-colorarea-margin);
-	--spectrum-colorwheel-colorhandle-position: var(--system-spectrum-colorwheel-colorhandle-position);
+	--spectrum-colorwheel-width: var(--system-colorwheel-width);
+	--spectrum-colorwheel-min-width: var(--system-colorwheel-min-width);
+	--spectrum-colorwheel-height: var(--system-colorwheel-height);
+	--spectrum-colorwheel-border-color: var(--system-colorwheel-border-color);
+	--spectrum-colorwheel-border-width: var(--system-colorwheel-border-width);
+	--spectrum-colorwheel-fill-color-disabled: var(--system-colorwheel-fill-color-disabled);
+	--spectrum-colorwheel-track-width: var(--system-colorwheel-track-width);
+	--spectrum-colorwheel-colorarea-margin: var(--system-colorwheel-colorarea-margin);
+	--spectrum-colorwheel-colorhandle-position: var(--system-colorwheel-colorhandle-position);
 }

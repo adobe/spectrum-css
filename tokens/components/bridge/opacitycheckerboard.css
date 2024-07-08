@@ -12,8 +12,8 @@
  */
 
 .spectrum-OpacityCheckerboard {
-	--spectrum-opacity-checkerboard-dark: var(--system-spectrum-opacitycheckerboard-opacity-checkerboard-dark);
-	--spectrum-opacity-checkerboard-light: var(--system-spectrum-opacitycheckerboard-opacity-checkerboard-light);
-	--spectrum-opacity-checkerboard-size: var(--system-spectrum-opacitycheckerboard-opacity-checkerboard-size);
-	--spectrum-opacity-checkerboard-position: var(--system-spectrum-opacitycheckerboard-opacity-checkerboard-position);
+	--spectrum-opacity-checkerboard-dark: var(--system-opacitycheckerboard-opacity-checkerboard-dark);
+	--spectrum-opacity-checkerboard-light: var(--system-opacitycheckerboard-opacity-checkerboard-light);
+	--spectrum-opacity-checkerboard-size: var(--system-opacitycheckerboard-opacity-checkerboard-size);
+	--spectrum-opacity-checkerboard-position: var(--system-opacitycheckerboard-opacity-checkerboard-position);
 }

@@ -12,66 +12,66 @@
  */
 
 .spectrum-Thumbnail {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size);
-	--spectrum-thumbnail-border-radius: var(--system-spectrum-thumbnail-border-radius);
-	--spectrum-thumbnail-border-width: var(--system-spectrum-thumbnail-border-width);
-	--spectrum-thumbnail-border-color-rgba: var(--system-spectrum-thumbnail-border-color-rgba);
-	--spectrum-thumbnail-layer-border-width-inner: var(--system-spectrum-thumbnail-layer-border-width-inner);
-	--spectrum-thumbnail-layer-border-color-inner: var(--system-spectrum-thumbnail-layer-border-color-inner);
-	--spectrum-thumbnail-layer-border-width-outer: var(--system-spectrum-thumbnail-layer-border-width-outer);
-	--spectrum-thumbnail-layer-border-color-outer: var(--system-spectrum-thumbnail-layer-border-color-outer);
-	--spectrum-thumbnail-border-width-selected: var(--system-spectrum-thumbnail-border-width-selected);
-	--spectrum-thumbnail-border-color-selected: var(--system-spectrum-thumbnail-border-color-selected);
-	--spectrum-thumbnail-focus-indicator-thickness: var(--system-spectrum-thumbnail-focus-indicator-thickness);
-	--spectrum-thumbnail-focus-indicator-gap: var(--system-spectrum-thumbnail-focus-indicator-gap);
-	--spectrum-thumbnail-focus-indicator-color: var(--system-spectrum-thumbnail-focus-indicator-color);
-	--spectrum-thumbnail-color-opacity-disabled: var(--system-spectrum-thumbnail-color-opacity-disabled);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size);
+	--spectrum-thumbnail-border-radius: var(--system-thumbnail-border-radius);
+	--spectrum-thumbnail-border-width: var(--system-thumbnail-border-width);
+	--spectrum-thumbnail-border-color-rgba: var(--system-thumbnail-border-color-rgba);
+	--spectrum-thumbnail-layer-border-width-inner: var(--system-thumbnail-layer-border-width-inner);
+	--spectrum-thumbnail-layer-border-color-inner: var(--system-thumbnail-layer-border-color-inner);
+	--spectrum-thumbnail-layer-border-width-outer: var(--system-thumbnail-layer-border-width-outer);
+	--spectrum-thumbnail-layer-border-color-outer: var(--system-thumbnail-layer-border-color-outer);
+	--spectrum-thumbnail-border-width-selected: var(--system-thumbnail-border-width-selected);
+	--spectrum-thumbnail-border-color-selected: var(--system-thumbnail-border-color-selected);
+	--spectrum-thumbnail-focus-indicator-thickness: var(--system-thumbnail-focus-indicator-thickness);
+	--spectrum-thumbnail-focus-indicator-gap: var(--system-thumbnail-focus-indicator-gap);
+	--spectrum-thumbnail-focus-indicator-color: var(--system-thumbnail-focus-indicator-color);
+	--spectrum-thumbnail-color-opacity-disabled: var(--system-thumbnail-color-opacity-disabled);
 }
 
 .spectrum-Thumbnail--size50 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size50-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-50-size);
 }
 
 .spectrum-Thumbnail--size75 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size75-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-75-size);
 }
 
 .spectrum-Thumbnail--size100 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size100-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-100-size);
 }
 
 .spectrum-Thumbnail--size200 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size200-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-200-size);
 }
 
 .spectrum-Thumbnail--size300 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size300-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-300-size);
 }
 
 .spectrum-Thumbnail--size400 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size400-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-400-size);
 }
 
 .spectrum-Thumbnail--size500 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size500-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-500-size);
 }
 
 .spectrum-Thumbnail--size600 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size600-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-600-size);
 }
 
 .spectrum-Thumbnail--size700 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size700-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-700-size);
 }
 
 .spectrum-Thumbnail--size800 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size800-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-800-size);
 }
 
 .spectrum-Thumbnail--size900 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size900-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-900-size);
 }
 
 .spectrum-Thumbnail--size1000 {
-	--spectrum-thumbnail-size: var(--system-spectrum-thumbnail-size1000-size);
+	--spectrum-thumbnail-size: var(--system-thumbnail-size-1000-size);
 }

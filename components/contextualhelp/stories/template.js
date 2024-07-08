@@ -8,6 +8,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-ContextualHelp",
@@ -19,42 +21,44 @@ export const Template = ({
 	popoverPlacement,
 	customStyles = {},
 	customClasses = [],
-} = {}, context = {}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-		style=${ifDefined(styleMap(customStyles))}
-	>
-		${when(popoverPlacement.includes("top"), () => html`
-			<div
-				class="dummy-spacing"
-				style="position: relative; height: 200px;"
-			></div> `
-		)}
-		${ActionButton({
-			size: "xs",
-			iconName,
-			customClasses: [`${rootClass}-button`],
-		}, context)}
-		${Popover({
-			isOpen: true,
-			content: [
-				title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : nothing,
-				body ? html`<p class="${rootClass}-body">${body}</p>` : nothing,
-				link
-					? Link({
-							text: link.text,
-							url: link.url,
-							customClasses: [`${rootClass}-link`],
-					})
-					: nothing,
-			],
-			position: popoverPlacement,
-			customClasses: [`${rootClass}-popover`],
-			customStyles: { top: "25px" },
-		}, context)}
-	</div>
-`;
+} = {}, context = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			style=${ifDefined(styleMap(customStyles))}
+		>
+			${when(popoverPlacement.includes("top"), () => html`
+				<div
+					class="dummy-spacing"
+					style="position: relative; height: 200px;"
+				></div> `
+			)}
+			${ActionButton({
+				size: "xs",
+				iconName,
+				customClasses: [`${rootClass}-button`],
+			}, context)}
+			${Popover({
+				isOpen: true,
+				content: [
+					title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : nothing,
+					body ? html`<p class="${rootClass}-body">${body}</p>` : nothing,
+					link
+						? Link({
+								text: link.text,
+								url: link.url,
+								customClasses: [`${rootClass}-link`],
+						})
+						: nothing,
+				],
+				position: popoverPlacement,
+				customClasses: [`${rootClass}-popover`],
+				customStyles: { top: "25px" },
+			}, context)}
+		</div>
+	`;
+};

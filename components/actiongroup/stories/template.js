@@ -3,6 +3,8 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-ActionGroup",
@@ -16,15 +18,6 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") {
-		import("../themes/express.css");
-	}
-	else if (globals.context === "legacy") {
-		import("../themes/legacy.css");
-	}
-
 	return html`
 		<div
 			class=${classMap({

@@ -6,6 +6,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-HelpText",
@@ -17,26 +19,28 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-} = {}, context) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			"is-disabled": isDisabled,
-			[`${rootClass}--size${size?.toUpperCase()}`]:
-				typeof size !== "undefined",
-			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${styleMap(customStyles)}
-		id=${ifDefined(id)}
-	>
-		${when(!hideIcon && variant == "negative", () =>
-			Icon({
-				iconName: "Alert",
-				size,
-				customClasses: [`${rootClass}-validationIcon`],
-			}, context)
-		)}
-		<div class=${`${rootClass}-text`}>${text}</div>
-	</div>
-`;
+} = {}, context) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				"is-disabled": isDisabled,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap(customStyles)}
+			id=${ifDefined(id)}
+		>
+			${when(!hideIcon && variant == "negative", () =>
+				Icon({
+					iconName: "Alert",
+					size,
+					customClasses: [`${rootClass}-validationIcon`],
+				}, context)
+			)}
+			<div class=${`${rootClass}-text`}>${text}</div>
+		</div>
+	`;
+};
