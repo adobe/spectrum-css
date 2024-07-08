@@ -82,51 +82,59 @@ export const Template = ({
 						`
 					])}
 				</div>
-				${when(layout !== "default", () => [
-					html`
-						<div class="${rootClass}-buttonGroup">
-							<div class="${rootClass}-buttonGroup--noFooter">
-								${ButtonGroup({
-									items: buttons,
-									onclick: () => {
-										updateArgs({ isOpen: !isOpen });
-									},
-								})}
-							</div>
-						</div>
-					`
-				])}
-				${when(isDismissable, () => 
+
+				${when(isDismissable, () =>
 					CloseButton({
-						customClasses: [`${rootClass}-closeButton`],
-						...globals,
-						onclick: () => {
-							updateArgs({ isOpen: !isOpen });
-						},
-					}),
-					() => html`
+            customClasses: [`${rootClass}-closeButton`],
+            ...globals,
+            onclick: () => {
+              updateArgs({ isOpen: !isOpen });
+            },
+          }), 
+				)}
+
+				${when(layout === "fullscreen" || layout === "fullscreenTakeover", () => html`
 					<div class="${rootClass}-buttonGroup">
-							<div class="${rootClass}-buttonGroup--noFooter">
+						${ButtonGroup({
+							items: buttons,
+							onclick: () => {
+								updateArgs({ isOpen: !isOpen });
+							},
+						})}
+					</div>`
+				)}
+
+				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
+				
+				${when(footer, () => html`
+					<div class="${rootClass}-footer">
+						${Typography({
+							semantics: "body",
+							size: "m",
+							content: footer,
+						})}
+						${when(!isDismissable, () => html`
+							<div class="${rootClass}-buttonGroup">
 								${ButtonGroup({
 									items: buttons,
 									onclick: () => {
 										updateArgs({ isOpen: !isOpen });
 									},
 								})}
-							</div>
-						</div>
-					`
-				)}
-				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
-				${when(footer, () => 
-					html`
-						<div class="${rootClass}-footer">
-							${Typography({
-								semantics: "body",
-								size: "m",
-								content: footer,
-							})}
-						</div>
+							</div>`
+						)}
+					</div>`, 
+					() => html`
+						${when(!isDismissable, () => html`
+							<div class="${rootClass}-buttonGroup ${rootClass}-buttonGroup--noFooter">
+								${ButtonGroup({
+									items: buttons,
+									onclick: () => {
+										updateArgs({ isOpen: !isOpen });
+									},
+								})}
+							</div>`
+						)}
 					`
 				)}
 			</div>
