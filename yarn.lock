@@ -15031,9 +15031,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^15.2.5":
-  version: 15.2.5
-  resolution: "lint-staged@npm:15.2.5"
+"lint-staged@npm:^15.2.7":
+  version: 15.2.7
+  resolution: "lint-staged@npm:15.2.7"
   dependencies:
     chalk: "npm:~5.3.0"
     commander: "npm:~12.1.0"
@@ -15047,7 +15047,7 @@ __metadata:
     yaml: "npm:~2.4.2"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c0/89c54489783510f86df15756659facade82e849c0cbfb564fe047b82be91c5d2b1b5608a4bfc5237bd7b9fd0e1206e66aa3e4f8cad3ac51e37a098b8492c2fa6
+  checksum: 10c0/c14399f9782ae222a1748144254f24b5b9afc816dc8840bd02d50f523c6582796ff18410767eb1a73cf1a83bc6e492dea7b1c4f0912bf3e434c068221f13c878
   languageName: node
   linkType: hard
 
@@ -20456,7 +20456,7 @@ __metadata:
     gh-pages: "npm:^6.1.1"
     husky: "npm:^9.0.11"
     jsonc-eslint-parser: "npm:^2.4.0"
-    lint-staged: "npm:^15.2.5"
+    lint-staged: "npm:^15.2.7"
     lodash: "npm:^4.17.21"
     node-gyp: "npm:^10.1.0"
     npm-registry-fetch: "npm:^17.0.1"
