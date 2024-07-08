@@ -16,7 +16,7 @@
 	.spectrum-Swatch {
 		/* Placeholder tokens */
 		--spectrum-swatch-focus-indicator-border-radius: 8px;
-		--spectrum-swatch-icon-border-color: rgba(0, 0, 0, 51%);
+		--spectrum-swatch-icon-border-color: rgb(0 0 0 / 51%);
 
 		/* Size */
 		--spectrum-swatch-size: var(--spectrum-swatch-size-small);
@@ -64,12 +64,12 @@
 
 	/* Light theme placeholder tokens */
 	.spectrum--light {
-		--spectrum-swatch-border-color: rgba(0, 0, 0, 51%);
+		--spectrum-swatch-border-color: rgb(0 0 0 / 51%);
 	}
 
 	/* Dark and Darkest theme placeholder tokens */
 	.spectrum--dark,
 	.spectrum--darkest {
-		--spectrum-swatch-border-color: rgba(255, 255, 255, 51%);
+		--spectrum-swatch-border-color: rgb(255 255 255 / 51%);
 	}
 }

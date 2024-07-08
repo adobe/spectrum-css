@@ -16,7 +16,7 @@
 	.spectrum-Swatch {
 		/* Placeholder tokens */
 		--spectrum-swatch-focus-indicator-border-radius: 8px;
-		--spectrum-swatch-icon-border-color: rgba(0, 0, 0, 51%);
+		--spectrum-swatch-icon-border-color: rgb(0 0 0 / 51%);
 
 		/* Size */
 		--spectrum-swatch-size: var(--spectrum-swatch-size-small);

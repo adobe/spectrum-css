@@ -116,7 +116,7 @@
 	position: absolute;
 	inset-block: var(--spectrum-colorwheel-border-width);
 	inset-inline: var(--spectrum-colorwheel-border-width);
-	background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
+	background: conic-gradient(from 90deg, red, rgb(255 128 0), rgb(255 255 0), rgb(128 255 0), rgb(0 255 0), rgb(0 255 128), rgb(0 255 255), rgb(0 128 255), rgb(0 0 255), rgb(128 0 255), rgb(255 0 255), rgb(255 0 128), red);
 	clip-path: path(evenodd, var(--mod-colorwheel-path, var(--spectrum-colorwheel-path)));
 
 	&.is-disabled {
