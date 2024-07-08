@@ -12,9 +12,9 @@
  */
 
 .spectrum--express {
-	--system-spectrum-combobox-border-color-default: var(--spectrum-gray-400);
-	--system-spectrum-combobox-border-color-hover: var(--spectrum-gray-500);
-	--system-spectrum-combobox-border-color-focus: var(--spectrum-gray-900);
-	--system-spectrum-combobox-border-color-focus-hover: var(--spectrum-gray-800);
-	--system-spectrum-combobox-border-color-key-focus: var(--spectrum-gray-900);
+	--system-combobox-border-color-default: var(--spectrum-gray-400);
+	--system-combobox-border-color-hover: var(--spectrum-gray-500);
+	--system-combobox-border-color-focus: var(--spectrum-gray-900);
+	--system-combobox-border-color-focus-hover: var(--spectrum-gray-800);
+	--system-combobox-border-color-key-focus: var(--spectrum-gray-900);
 }

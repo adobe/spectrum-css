@@ -12,20 +12,20 @@
  */
 
 .spectrum--express {
-	--system-spectrum-actiongroup-gap-size-compact: 0;
-	--system-spectrum-actiongroup-horizontal-spacing-compact: -1px;
-	--system-spectrum-actiongroup-vertical-spacing-compact: -1px;
-	--system-spectrum-actiongroup-button-spacing-reset: 0;
-	--system-spectrum-actiongroup-border-radius-reset: 0;
-	--system-spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-actiongroup-size-xs-horizontal-spacing-regular: var(--spectrum-spacing-75);
-	--system-spectrum-actiongroup-size-s-horizontal-spacing-regular: var(--spectrum-spacing-75);
-	--system-spectrum-actiongroup-size-xs-vertical-spacing-regular: var(--spectrum-spacing-75);
-	--system-spectrum-actiongroup-size-s-vertical-spacing-regular: var(--spectrum-spacing-75);
-	--system-spectrum-actiongroup-size-m-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-spectrum-actiongroup-size-l-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-spectrum-actiongroup-size-xl-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-spectrum-actiongroup-size-m-vertical-spacing-regular: var(--spectrum-spacing-100);
-	--system-spectrum-actiongroup-size-l-vertical-spacing-regular: var(--spectrum-spacing-100);
-	--system-spectrum-actiongroup-size-xl-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-actiongroup-gap-size-compact: 0;
+	--system-actiongroup-horizontal-spacing-compact: -1px;
+	--system-actiongroup-vertical-spacing-compact: -1px;
+	--system-actiongroup-button-spacing-reset: 0;
+	--system-actiongroup-border-radius-reset: 0;
+	--system-actiongroup-border-radius: var(--spectrum-corner-radius-100);
+	--system-actiongroup-size-xs-horizontal-spacing-regular: var(--spectrum-spacing-75);
+	--system-actiongroup-size-s-horizontal-spacing-regular: var(--spectrum-spacing-75);
+	--system-actiongroup-size-xs-vertical-spacing-regular: var(--spectrum-spacing-75);
+	--system-actiongroup-size-s-vertical-spacing-regular: var(--spectrum-spacing-75);
+	--system-actiongroup-size-m-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-actiongroup-size-l-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-actiongroup-size-xl-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-actiongroup-size-m-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-actiongroup-size-l-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-actiongroup-size-xl-vertical-spacing-regular: var(--spectrum-spacing-100);
 }

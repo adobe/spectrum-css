@@ -12,139 +12,138 @@
  */
 
 .spectrum-Accordion {
-	--spectrum-accordion-item-height: var(--system-spectrum-accordion-item-height);
-	--spectrum-accordion-item-width: var(--system-spectrum-accordion-item-width);
-	--spectrum-accordion-disclosure-indicator-height: var(--system-spectrum-accordion-disclosure-indicator-height);
-	--spectrum-accordion-disclosure-indicator-to-text-space: var(--system-spectrum-accordion-disclosure-indicator-to-text-space);
-	--spectrum-accordion-edge-to-disclosure-indicator-space: var(--system-spectrum-accordion-edge-to-disclosure-indicator-space);
-	--spectrum-accordion-edge-to-text-space: var(--system-spectrum-accordion-edge-to-text-space);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-item-header-bottom-to-text-space);
-	--spectrum-accordion-focus-indicator-gap: var(--system-spectrum-accordion-focus-indicator-gap);
-	--spectrum-accordion-focus-indicator-thickness: var(--system-spectrum-accordion-focus-indicator-thickness);
-	--spectrum-accordion-corner-radius: var(--system-spectrum-accordion-corner-radius);
-	--spectrum-accordion-item-content-area-top-to-content: var(--system-spectrum-accordion-item-content-area-top-to-content);
-	--spectrum-accordion-item-content-area-bottom-to-content: var(--system-spectrum-accordion-item-content-area-bottom-to-content);
-	--spectrum-accordion-component-edge-to-text: var(--system-spectrum-accordion-component-edge-to-text);
-	--spectrum-accordion-item-header-font: var(--system-spectrum-accordion-item-header-font);
-	--spectrum-accordion-item-header-font-weight: var(--system-spectrum-accordion-item-header-font-weight);
-	--spectrum-accordion-item-header-font-style: var(--system-spectrum-accordion-item-header-font-style);
-	--spectrum-accordion-item-header-font-size: var(--system-spectrum-accordion-item-header-font-size);
-	--spectrum-accordion-item-header-line-height: var(--system-spectrum-accordion-item-header-line-height);
-	--spectrum-accordion-item-content-font: var(--system-spectrum-accordion-item-content-font);
-	--spectrum-accordion-item-content-font-weight: var(--system-spectrum-accordion-item-content-font-weight);
-	--spectrum-accordion-item-content-font-style: var(--system-spectrum-accordion-item-content-font-style);
-	--spectrum-accordion-item-content-font-size: var(--system-spectrum-accordion-item-content-font-size);
-	--spectrum-accordion-item-content-line-height: var(--system-spectrum-accordion-item-content-line-height);
-	--spectrum-accordion-background-color-default: var(--system-spectrum-accordion-background-color-default);
-	--spectrum-accordion-background-color-hover: var(--system-spectrum-accordion-background-color-hover);
-	--spectrum-accordion-background-color-down: var(--system-spectrum-accordion-background-color-down);
-	--spectrum-accordion-background-color-key-focus: var(--system-spectrum-accordion-background-color-key-focus);
-	--spectrum-accordion-item-header-color-default: var(--system-spectrum-accordion-item-header-color-default);
-	--spectrum-accordion-item-header-color-hover: var(--system-spectrum-accordion-item-header-color-hover);
-	--spectrum-accordion-item-header-color-down: var(--system-spectrum-accordion-item-header-color-down);
-	--spectrum-accordion-item-header-color-key-focus: var(--system-spectrum-accordion-item-header-color-key-focus);
-	--spectrum-accordion-item-header-disabled-color: var(--system-spectrum-accordion-item-header-disabled-color);
-	--spectrum-accordion-item-content-disabled-color: var(--system-spectrum-accordion-item-content-disabled-color);
-	--spectrum-accordion-item-content-color: var(--system-spectrum-accordion-item-content-color);
-	--spectrum-accordion-focus-indicator-color: var(--system-spectrum-accordion-focus-indicator-color);
-	--spectrum-accordion-divider-color: var(--system-spectrum-accordion-divider-color);
-	--spectrum-accordion-min-block-size: var(--system-spectrum-accordion-min-block-size);
+	--spectrum-accordion-item-height: var(--system-accordion-item-height);
+	--spectrum-accordion-item-width: var(--system-accordion-item-width);
+	--spectrum-accordion-disclosure-indicator-height: var(--system-accordion-disclosure-indicator-height);
+	--spectrum-accordion-disclosure-indicator-to-text-space: var(--system-accordion-disclosure-indicator-to-text-space);
+	--spectrum-accordion-edge-to-disclosure-indicator-space: var(--system-accordion-edge-to-disclosure-indicator-space);
+	--spectrum-accordion-edge-to-text-space: var(--system-accordion-edge-to-text-space);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-item-header-bottom-to-text-space);
+	--spectrum-accordion-focus-indicator-gap: var(--system-accordion-focus-indicator-gap);
+	--spectrum-accordion-focus-indicator-thickness: var(--system-accordion-focus-indicator-thickness);
+	--spectrum-accordion-corner-radius: var(--system-accordion-corner-radius);
+	--spectrum-accordion-item-content-area-top-to-content: var(--system-accordion-item-content-area-top-to-content);
+	--spectrum-accordion-item-content-area-bottom-to-content: var(--system-accordion-item-content-area-bottom-to-content);
+	--spectrum-accordion-component-edge-to-text: var(--system-accordion-component-edge-to-text);
+	--spectrum-accordion-item-header-font: var(--system-accordion-item-header-font);
+	--spectrum-accordion-item-header-font-weight: var(--system-accordion-item-header-font-weight);
+	--spectrum-accordion-item-header-font-style: var(--system-accordion-item-header-font-style);
+	--spectrum-accordion-item-header-font-size: var(--system-accordion-item-header-font-size);
+	--spectrum-accordion-item-header-line-height: var(--system-accordion-item-header-line-height);
+	--spectrum-accordion-item-content-font: var(--system-accordion-item-content-font);
+	--spectrum-accordion-item-content-font-weight: var(--system-accordion-item-content-font-weight);
+	--spectrum-accordion-item-content-font-style: var(--system-accordion-item-content-font-style);
+	--spectrum-accordion-item-content-font-size: var(--system-accordion-item-content-font-size);
+	--spectrum-accordion-item-content-line-height: var(--system-accordion-item-content-line-height);
+	--spectrum-accordion-background-color-default: var(--system-accordion-background-color-default);
+	--spectrum-accordion-background-color-hover: var(--system-accordion-background-color-hover);
+	--spectrum-accordion-background-color-down: var(--system-accordion-background-color-down);
+	--spectrum-accordion-background-color-key-focus: var(--system-accordion-background-color-key-focus);
+	--spectrum-accordion-item-header-color-default: var(--system-accordion-item-header-color-default);
+	--spectrum-accordion-item-header-color-hover: var(--system-accordion-item-header-color-hover);
+	--spectrum-accordion-item-header-color-down: var(--system-accordion-item-header-color-down);
+	--spectrum-accordion-item-header-color-key-focus: var(--system-accordion-item-header-color-key-focus);
+	--spectrum-accordion-item-header-disabled-color: var(--system-accordion-item-header-disabled-color);
+	--spectrum-accordion-item-content-disabled-color: var(--system-accordion-item-content-disabled-color);
+	--spectrum-accordion-item-content-color: var(--system-accordion-item-content-color);
+	--spectrum-accordion-focus-indicator-color: var(--system-accordion-focus-indicator-color);
+	--spectrum-accordion-divider-color: var(--system-accordion-divider-color);
 }
 
 .spectrum-Accordion:dir(rtl) {
-	--spectrum-logical-rotation: var(--system-spectrum-accordion-dir-rtl-logical-rotation);
+	--spectrum-logical-rotation: var(--system-accordion-dir-rtl-logical-rotation);
 }
 
 .spectrum-Accordion:lang(ja) {
-	--spectrum-accordion-item-header-line-height: var(--system-spectrum-accordion-lang-ja-item-header-line-height);
-	--spectrum-accordion-item-content-line-height: var(--system-spectrum-accordion-lang-ja-item-content-line-height);
+	--spectrum-accordion-item-header-line-height: var(--system-accordion-lang-ja-item-header-line-height);
+	--spectrum-accordion-item-content-line-height: var(--system-accordion-lang-ja-item-content-line-height);
 }
 
 .spectrum-Accordion:lang(zh) {
-	--spectrum-accordion-item-header-line-height: var(--system-spectrum-accordion-lang-zh-item-header-line-height);
-	--spectrum-accordion-item-content-line-height: var(--system-spectrum-accordion-lang-zh-item-content-line-height);
+	--spectrum-accordion-item-header-line-height: var(--system-accordion-lang-zh-item-header-line-height);
+	--spectrum-accordion-item-content-line-height: var(--system-accordion-lang-zh-item-content-line-height);
 }
 
 .spectrum-Accordion:lang(ko) {
-	--spectrum-accordion-item-header-line-height: var(--system-spectrum-accordion-lang-ko-item-header-line-height);
-	--spectrum-accordion-item-content-line-height: var(--system-spectrum-accordion-lang-ko-item-content-line-height);
+	--spectrum-accordion-item-header-line-height: var(--system-accordion-lang-ko-item-header-line-height);
+	--spectrum-accordion-item-content-line-height: var(--system-accordion-lang-ko-item-content-line-height);
 }
 
 .spectrum-Accordion--compact {
-	--spectrum-accordion-item-height: var(--system-spectrum-accordion-compact-item-height);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-compact-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-compact-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-height: var(--system-accordion-compact-item-height);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-compact-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-compact-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--compact.spectrum-Accordion--sizeS {
-	--spectrum-accordion-item-height: var(--system-spectrum-accordion-compact-size-s-item-height);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-compact-size-s-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-compact-size-s-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-height: var(--system-accordion-compact-size-s-item-height);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-compact-size-s-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-compact-size-s-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--compact.spectrum-Accordion--sizeL {
-	--spectrum-accordion-item-height: var(--system-spectrum-accordion-compact-size-l-item-height);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-compact-size-l-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-compact-size-l-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-height: var(--system-accordion-compact-size-l-item-height);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-compact-size-l-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-compact-size-l-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--compact.spectrum-Accordion--sizeXL {
-	--spectrum-accordion-item-height: var(--system-spectrum-accordion-compact-size-xl-item-height);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-compact-size-xl-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-compact-size-xl-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-height: var(--system-accordion-compact-size-xl-item-height);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-compact-size-xl-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-compact-size-xl-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--spacious {
-	--spectrum-accordion-item-header-line-height: var(--system-spectrum-accordion-spacious-item-header-line-height);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-spacious-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-spacious-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-header-line-height: var(--system-accordion-spacious-item-header-line-height);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-spacious-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-spacious-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--spacious.spectrum-Accordion--sizeS {
-	--spectrum-accordion-item-header-line-height: var(--system-spectrum-accordion-spacious-size-s-item-header-line-height);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-spacious-size-s-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-spacious-size-s-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-header-line-height: var(--system-accordion-spacious-size-s-item-header-line-height);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-spacious-size-s-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-spacious-size-s-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--spacious.spectrum-Accordion--sizeL {
-	--spectrum-accordion-item-header-line-height: var(--system-spectrum-accordion-spacious-size-l-item-header-line-height);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-spacious-size-l-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-spacious-size-l-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-header-line-height: var(--system-accordion-spacious-size-l-item-header-line-height);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-spacious-size-l-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-spacious-size-l-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--spacious.spectrum-Accordion--sizeXL {
-	--spectrum-accordion-item-header-line-height: var(--system-spectrum-accordion-spacious-size-xl-item-header-line-height);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-spacious-size-xl-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-spacious-size-xl-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-header-line-height: var(--system-accordion-spacious-size-xl-item-header-line-height);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-spacious-size-xl-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-spacious-size-xl-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--sizeS {
-	--spectrum-accordion-item-height: var(--system-spectrum-accordion-size-s-item-height);
-	--spectrum-accordion-disclosure-indicator-height: var(--system-spectrum-accordion-size-s-disclosure-indicator-height);
-	--spectrum-accordion-component-edge-to-text: var(--system-spectrum-accordion-size-s-component-edge-to-text);
-	--spectrum-accordion-item-header-font-size: var(--system-spectrum-accordion-size-s-item-header-font-size);
-	--spectrum-accordion-item-content-font-size: var(--system-spectrum-accordion-size-s-item-content-font-size);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-size-s-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-size-s-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-height: var(--system-accordion-size-s-item-height);
+	--spectrum-accordion-disclosure-indicator-height: var(--system-accordion-size-s-disclosure-indicator-height);
+	--spectrum-accordion-component-edge-to-text: var(--system-accordion-size-s-component-edge-to-text);
+	--spectrum-accordion-item-header-font-size: var(--system-accordion-size-s-item-header-font-size);
+	--spectrum-accordion-item-content-font-size: var(--system-accordion-size-s-item-content-font-size);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-size-s-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-size-s-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--sizeL {
-	--spectrum-accordion-item-height: var(--system-spectrum-accordion-size-l-item-height);
-	--spectrum-accordion-disclosure-indicator-height: var(--system-spectrum-accordion-size-l-disclosure-indicator-height);
-	--spectrum-accordion-component-edge-to-text: var(--system-spectrum-accordion-size-l-component-edge-to-text);
-	--spectrum-accordion-item-header-font-size: var(--system-spectrum-accordion-size-l-item-header-font-size);
-	--spectrum-accordion-item-content-font-size: var(--system-spectrum-accordion-size-l-item-content-font-size);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-size-l-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-size-l-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-height: var(--system-accordion-size-l-item-height);
+	--spectrum-accordion-disclosure-indicator-height: var(--system-accordion-size-l-disclosure-indicator-height);
+	--spectrum-accordion-component-edge-to-text: var(--system-accordion-size-l-component-edge-to-text);
+	--spectrum-accordion-item-header-font-size: var(--system-accordion-size-l-item-header-font-size);
+	--spectrum-accordion-item-content-font-size: var(--system-accordion-size-l-item-content-font-size);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-size-l-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-size-l-item-header-bottom-to-text-space);
 }
 
 .spectrum-Accordion--sizeXL {
-	--spectrum-accordion-item-height: var(--system-spectrum-accordion-size-xl-item-height);
-	--spectrum-accordion-disclosure-indicator-height: var(--system-spectrum-accordion-size-xl-disclosure-indicator-height);
-	--spectrum-accordion-component-edge-to-text: var(--system-spectrum-accordion-size-xl-component-edge-to-text);
-	--spectrum-accordion-item-header-font-size: var(--system-spectrum-accordion-size-xl-item-header-font-size);
-	--spectrum-accordion-item-content-font-size: var(--system-spectrum-accordion-size-xl-item-content-font-size);
-	--spectrum-accordion-item-header-top-to-text-space: var(--system-spectrum-accordion-size-xl-item-header-top-to-text-space);
-	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-spectrum-accordion-size-xl-item-header-bottom-to-text-space);
+	--spectrum-accordion-item-height: var(--system-accordion-size-xl-item-height);
+	--spectrum-accordion-disclosure-indicator-height: var(--system-accordion-size-xl-disclosure-indicator-height);
+	--spectrum-accordion-component-edge-to-text: var(--system-accordion-size-xl-component-edge-to-text);
+	--spectrum-accordion-item-header-font-size: var(--system-accordion-size-xl-item-header-font-size);
+	--spectrum-accordion-item-content-font-size: var(--system-accordion-size-xl-item-content-font-size);
+	--spectrum-accordion-item-header-top-to-text-space: var(--system-accordion-size-xl-item-header-top-to-text-space);
+	--spectrum-accordion-item-header-bottom-to-text-space: var(--system-accordion-size-xl-item-header-bottom-to-text-space);
 }

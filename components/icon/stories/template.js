@@ -5,9 +5,12 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 import { when } from "lit/directives/when.js";
+
 import { uiIconSizes, uiIconsWithDirections } from "./utilities.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
@@ -115,13 +118,6 @@ export const Template = ({
 		uiIcons,
 		uiIconSizes,
 	} = globals;
-
-	if (globals.context === "express") {
-		import("../themes/express.css");
-	}
-	else if (globals.context === "legacy") {
-		import("../themes/legacy.css");
-	}
 
 	if (!workflowIcons || !uiIcons || !uiIconSizes) {
 		const details = fetchIconDetails({

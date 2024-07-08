@@ -8,6 +8,8 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-Calendar",
@@ -32,14 +34,7 @@ export const Template = ({
 	const [, updateArgs] = useArgs();
 	const { globals = {} } = context;
 
-	if (globals.context === "express") {
-		import("../themes/express.css");
-	}
-	else if (globals.context === "legacy") {
-		import("../themes/legacy.css");
-	}
-
-	const lang = globals.lang;
+	const lang = globals.lang ?? "en-US";
 
 	const DOW = [
 		"Sunday",

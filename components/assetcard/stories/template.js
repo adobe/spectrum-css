@@ -7,6 +7,8 @@ import { when } from "lit/directives/when.js";
 import { camelCase } from "lodash-es";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-AssetCard",
@@ -23,14 +25,6 @@ export const Template = ({
 	id,
 } = {}, context = {}) => {
 	const [, updateArgs] = useArgs();
-	const { globals = {} } = context;
-
-	if (globals.context === "express") {
-		import("../themes/express.css");
-	}
-	else if (globals.context === "legacy") {
-		import("../themes/legacy.css");
-	}
 
 	if (!image && !exampleImage) {
 		console.warn("AssetCard: image is required");

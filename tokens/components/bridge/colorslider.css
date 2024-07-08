@@ -12,10 +12,10 @@
  */
 
 .spectrum-ColorSlider {
-	--spectrum-color-slider-handle-margin-block: var(--system-spectrum-colorslider-color-slider-handle-margin-block);
-	--spectrum-color-slider-border-color-rgba: var(--system-spectrum-colorslider-color-slider-border-color-rgba);
-	--spectrum-color-slider-checkerboard-size: var(--system-spectrum-colorslider-color-slider-checkerboard-size);
-	--spectrum-color-slider-checkerboard-dark-color: var(--system-spectrum-colorslider-color-slider-checkerboard-dark-color);
-	--spectrum-color-slider-checkerboard-light-color: var(--system-spectrum-colorslider-color-slider-checkerboard-light-color);
-	--mod-colorhandle-hitarea-border-radius: var(--system-spectrum-colorslider-colorhandle-hitarea-border-radius);
+	--spectrum-color-slider-handle-margin-block: var(--system-colorslider-color-slider-handle-margin-block);
+	--spectrum-color-slider-border-color-rgba: var(--system-colorslider-color-slider-border-color-rgba);
+	--spectrum-color-slider-checkerboard-size: var(--system-colorslider-color-slider-checkerboard-size);
+	--spectrum-color-slider-checkerboard-dark-color: var(--system-colorslider-color-slider-checkerboard-dark-color);
+	--spectrum-color-slider-checkerboard-light-color: var(--system-colorslider-color-slider-checkerboard-light-color);
+	--mod-colorhandle-hitarea-border-radius: var(--system-colorslider-colorhandle-hitarea-border-radius);
 }

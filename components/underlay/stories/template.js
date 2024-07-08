@@ -4,6 +4,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-Underlay",
@@ -11,16 +13,18 @@ export const Template = ({
 	customStyles = {},
 	content,
 	isOpen = true,
-}) => html`
-  <div
-    class=${classMap({
-      [rootClass]: true,
-      "is-open": isOpen,
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}
-    id="spectrum-underlay"
-    style=${ifDefined(styleMap(customStyles))}
-  >
-    ${content}
-  </div>
-`;
+}) => {
+	return html`
+    <div
+      class=${classMap({
+        [rootClass]: true,
+        "is-open": isOpen,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}
+      id="spectrum-underlay"
+      style=${ifDefined(styleMap(customStyles))}
+    >
+      ${content}
+    </div>
+  `;
+};

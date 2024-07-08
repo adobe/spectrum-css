@@ -12,21 +12,21 @@
  */
 
 .spectrum--express {
-	--system-spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
-	--system-spectrum-divider-background-color: var(--spectrum-divider-background-color-medium);
-	--system-spectrum-divider-background-color-small: var(--spectrum-gray-200);
-	--system-spectrum-divider-background-color-medium: var(--spectrum-gray-200);
-	--system-spectrum-divider-background-color-large: var(--spectrum-gray-800);
-	--system-spectrum-divider-background-color-small-static-white: var(--spectrum-transparent-white-300);
-	--system-spectrum-divider-background-color-medium-static-white: var(--spectrum-transparent-white-300);
-	--system-spectrum-divider-background-color-large-static-white: var(--spectrum-transparent-white-800);
-	--system-spectrum-divider-background-color-small-static-black: var(--spectrum-transparent-black-300);
-	--system-spectrum-divider-background-color-medium-static-black: var(--spectrum-transparent-black-300);
-	--system-spectrum-divider-background-color-large-static-black: var(--spectrum-transparent-black-800);
-	--system-spectrum-divider-size-s-thickness: var(--spectrum-divider-thickness-small);
-	--system-spectrum-divider-size-s-background-color: var(--spectrum-divider-background-color-small);
-	--system-spectrum-divider-size-m-thickness: var(--spectrum-divider-thickness-medium);
-	--system-spectrum-divider-size-m-background-color: var(--spectrum-divider-background-color-medium);
-	--system-spectrum-divider-size-l-thickness: var(--spectrum-divider-thickness-large);
-	--system-spectrum-divider-size-l-background-color: var(--spectrum-divider-background-color-large);
+	--system-divider-thickness: var(--spectrum-divider-thickness-medium);
+	--system-divider-background-color: var(--system-divider-background-color-medium);
+	--system-divider-background-color-small: var(--spectrum-gray-200);
+	--system-divider-background-color-medium: var(--spectrum-gray-200);
+	--system-divider-background-color-large: var(--spectrum-gray-800);
+	--system-divider-background-color-small-static-white: var(--spectrum-transparent-white-300);
+	--system-divider-background-color-medium-static-white: var(--spectrum-transparent-white-300);
+	--system-divider-background-color-large-static-white: var(--spectrum-transparent-white-800);
+	--system-divider-background-color-small-static-black: var(--spectrum-transparent-black-300);
+	--system-divider-background-color-medium-static-black: var(--spectrum-transparent-black-300);
+	--system-divider-background-color-large-static-black: var(--spectrum-transparent-black-800);
+	--system-divider-size-s-thickness: var(--spectrum-divider-thickness-small);
+	--system-divider-size-s-background-color: var(--system-divider-background-color-small);
+	--system-divider-size-m-thickness: var(--spectrum-divider-thickness-medium);
+	--system-divider-size-m-background-color: var(--system-divider-background-color-medium);
+	--system-divider-size-l-thickness: var(--spectrum-divider-thickness-large);
+	--system-divider-size-l-background-color: var(--system-divider-background-color-large);
 }

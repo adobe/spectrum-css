@@ -12,6 +12,6 @@
  */
 
 .spectrum {
-	--system-spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
-	--system-spectrum-fieldgroup-readonly-delimiter: "\002c";
+	--system-fieldgroup-margin: var(--spectrum-spacing-300);
+	--system-fieldgroup-readonly-delimiter: "\002c";
 }

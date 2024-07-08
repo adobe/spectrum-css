@@ -7,6 +7,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const AssetListItem = ({
 	rootClass = "spectrum-AssetList-item",
@@ -20,7 +22,7 @@ export const AssetListItem = ({
 	isSelected = false,
 	isBranch = false,
 	onclick = () => {},
-} = {}, context) => {
+} = {}, context = {}) => {
 	return html`
 		<li
 			class=${classMap({
@@ -76,17 +78,7 @@ export const Template = ({
 	items = [],
 	customClasses = [],
 	id,
-} = {}, context) => {
-	if (!items) return html``;
-	const { globals = {} } = context;
-
-	if (globals.context === "express") {
-		import("../themes/express.css");
-	}
-	else if (globals.context === "legacy") {
-		import("../themes/legacy.css");
-	}
-
+} = {}, context = {}) => {
 	const [, updateArgs] = useArgs();
 
 	return html`

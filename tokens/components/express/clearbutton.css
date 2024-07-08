@@ -12,8 +12,8 @@
  */
 
 .spectrum--express {
-	--system-spectrum-clearbutton-clear-button-background-color: var(--spectrum-gray-200);
-	--system-spectrum-clearbutton-clear-button-background-color-hover: var(--spectrum-gray-300);
-	--system-spectrum-clearbutton-clear-button-background-color-down: var(--spectrum-gray-400);
-	--system-spectrum-clearbutton-clear-button-background-color-key-focus: var(--spectrum-gray-300);
+	--system-clearbutton-clear-button-background-color: var(--spectrum-gray-200);
+	--system-clearbutton-clear-button-background-color-hover: var(--spectrum-gray-300);
+	--system-clearbutton-clear-button-background-color-down: var(--spectrum-gray-400);
+	--system-clearbutton-clear-button-background-color-key-focus: var(--spectrum-gray-300);
 }

@@ -12,6 +12,6 @@
  */
 
 .spectrum-TagGroup {
-	--spectrum-tag-group-item-margin-block: var(--system-spectrum-taggroup-tag-group-item-margin-block);
-	--spectrum-tag-group-item-margin-inline: var(--system-spectrum-taggroup-tag-group-item-margin-inline);
+	--spectrum-tag-group-item-margin-block: var(--system-taggroup-tag-group-item-margin-block);
+	--spectrum-tag-group-item-margin-inline: var(--system-taggroup-tag-group-item-margin-inline);
 }

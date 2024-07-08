@@ -12,15 +12,15 @@
  */
 
 .spectrum-Link {
-	--spectrum-link-animation-duration: var(--system-spectrum-link-animation-duration);
-	--spectrum-link-text-color-primary-default: var(--system-spectrum-link-text-color-primary-default);
-	--spectrum-link-text-color-primary-hover: var(--system-spectrum-link-text-color-primary-hover);
-	--spectrum-link-text-color-primary-active: var(--system-spectrum-link-text-color-primary-active);
-	--spectrum-link-text-color-primary-focus: var(--system-spectrum-link-text-color-primary-focus);
-	--spectrum-link-text-color-secondary-default: var(--system-spectrum-link-text-color-secondary-default);
-	--spectrum-link-text-color-secondary-hover: var(--system-spectrum-link-text-color-secondary-hover);
-	--spectrum-link-text-color-secondary-active: var(--system-spectrum-link-text-color-secondary-active);
-	--spectrum-link-text-color-secondary-focus: var(--system-spectrum-link-text-color-secondary-focus);
-	--spectrum-link-text-color-white: var(--system-spectrum-link-text-color-white);
-	--spectrum-link-text-color-black: var(--system-spectrum-link-text-color-black);
+	--spectrum-link-animation-duration: var(--system-link-animation-duration);
+	--spectrum-link-text-color-primary-default: var(--system-link-text-color-primary-default);
+	--spectrum-link-text-color-primary-hover: var(--system-link-text-color-primary-hover);
+	--spectrum-link-text-color-primary-active: var(--system-link-text-color-primary-active);
+	--spectrum-link-text-color-primary-focus: var(--system-link-text-color-primary-focus);
+	--spectrum-link-text-color-secondary-default: var(--system-link-text-color-secondary-default);
+	--spectrum-link-text-color-secondary-hover: var(--system-link-text-color-secondary-hover);
+	--spectrum-link-text-color-secondary-active: var(--system-link-text-color-secondary-active);
+	--spectrum-link-text-color-secondary-focus: var(--system-link-text-color-secondary-focus);
+	--spectrum-link-text-color-white: var(--system-link-text-color-white);
+	--spectrum-link-text-color-black: var(--system-link-text-color-black);
 }

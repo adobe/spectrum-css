@@ -1,3 +1,5 @@
+import path from "node:path";
+
 export default {
 	stories: [
 		{
@@ -66,6 +68,7 @@ export default {
 			css: {
 				devSourcemap: configType === "DEVELOPMENT",
 			},
+			postcss: path.join(__dirname, "postcss.config.js"),
 		});
 	},
 	framework: {

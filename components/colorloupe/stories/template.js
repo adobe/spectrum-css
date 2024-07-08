@@ -4,6 +4,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorLoupe",
@@ -14,7 +16,8 @@ export const Template = ({
 		"inset-inline-start": "5px",
 	},
 	customClasses = [],
-}) => svg`
+}) => {
+	return svg`
     <svg
       class=${classMap({
         [rootClass]: true,
@@ -48,4 +51,5 @@ export const Template = ({
         <use xlink:href="#loupe-path" mask="url(#loupe-mask)" class="spectrum-ColorLoupe-outer-border" />
       </g>
     </svg>
-`;
+  `;
+};

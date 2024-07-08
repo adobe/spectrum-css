@@ -10,6 +10,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-Combobox",
@@ -80,9 +82,7 @@ export const Template = ({
 					customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 					placeholder: "Type here this text should truncate",
 					name: "field",
-					value: globals.selectedDay
-						? new Date(globals.selectedDay).toLocaleDateString(lang)
-						: undefined,
+					value: selectedDay,
 					onclick: function () {
 						if (!isOpen) updateArgs({ isOpen: true });
 					},

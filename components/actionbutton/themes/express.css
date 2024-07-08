@@ -27,6 +27,80 @@
 		--spectrum-actionbutton-border-color-disabled: transparent;
 		--spectrum-actionbutton-content-color-disabled: var(--spectrum-disabled-content-color);
 
+		--spectrum-actionbutton-border-color-default-selected: transparent;
+		--spectrum-actionbutton-border-color-hover-selected: transparent;
+		--spectrum-actionbutton-border-color-down-selected: transparent;
+		--spectrum-actionbutton-border-color-focus-selected: transparent;
+
+		--spectrum-actionbutton-background-color-disabled-selected: var(--spectrum-disabled-background-color);
+		--spectrum-actionbutton-border-color-disabled-selected: transparent;
+
+		&.spectrum-ActionButton--sizeXS {
+			--spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-50) * 2) + var(--spectrum-workflow-icon-size-50));
+			--spectrum-actionbutton-height: var(--spectrum-component-height-50);
+
+			--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-50);
+			--spectrum-actionbutton-font-size: var(--spectrum-font-size-50);
+			--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-50);
+			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-extra-small);
+			--spectrum-actionbutton-edge-to-visual: calc(var(--spectrum-component-edge-to-visual-50) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-text: calc(var(--spectrum-component-edge-to-text-50) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-visual-only: calc(var(--spectrum-component-edge-to-visual-only-50) - var(--spectrum-actionbutton-border-width));
+		}
+
+		&.spectrum-ActionButton--sizeS {
+			--spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-75) * 2) + var(--spectrum-workflow-icon-size-75));
+			--spectrum-actionbutton-height: var(--spectrum-component-height-75);
+
+			--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-75);
+			--spectrum-actionbutton-font-size: var(--spectrum-font-size-75);
+			--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-75);
+			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-small);
+			--spectrum-actionbutton-edge-to-visual: calc(var(--spectrum-component-edge-to-visual-75) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-text: calc(var(--spectrum-component-edge-to-text-75) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-visual-only: calc(var(--spectrum-component-edge-to-visual-only-75) - var(--spectrum-actionbutton-border-width));
+		}
+
+		&,
+		&.spectrum-ActionButton--sizeM {
+			--spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-100) * 2) + var(--spectrum-workflow-icon-size-100));
+			--spectrum-actionbutton-height: var(--spectrum-component-height-100);
+
+			--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-100);
+			--spectrum-actionbutton-font-size: var(--spectrum-font-size-100);
+			--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-100);
+			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-medium);
+			--spectrum-actionbutton-edge-to-visual: calc(var(--spectrum-component-edge-to-visual-100) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-text: calc(var(--spectrum-component-edge-to-text-100) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-visual-only: calc(var(--spectrum-component-edge-to-visual-only-100) - var(--spectrum-actionbutton-border-width));
+		}
+
+		&.spectrum-ActionButton--sizeL {
+			--spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-200) * 2) + var(--spectrum-workflow-icon-size-200));
+			--spectrum-actionbutton-height: var(--spectrum-component-height-200);
+
+			--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-200);
+			--spectrum-actionbutton-font-size: var(--spectrum-font-size-200);
+			--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-200);
+			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-large);
+			--spectrum-actionbutton-edge-to-visual: calc(var(--spectrum-component-edge-to-visual-200) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-text: calc(var(--spectrum-component-edge-to-text-200) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-visual-only: calc(var(--spectrum-component-edge-to-visual-only-200) - var(--spectrum-actionbutton-border-width));
+		}
+
+		&.spectrum-ActionButton--sizeXL {
+			--spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-300) * 2) + var(--spectrum-workflow-icon-size-300));
+			--spectrum-actionbutton-height: var(--spectrum-component-height-300);
+
+			--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-300);
+			--spectrum-actionbutton-font-size: var(--spectrum-font-size-300);
+			--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-300);
+			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-extra-large);
+			--spectrum-actionbutton-edge-to-visual: calc(var(--spectrum-component-edge-to-visual-300) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-text: calc(var(--spectrum-component-edge-to-text-300) - var(--spectrum-actionbutton-border-width));
+			--spectrum-actionbutton-edge-to-visual-only: calc(var(--spectrum-component-edge-to-visual-only-300) - var(--spectrum-actionbutton-border-width));
+		}
+
 		&.spectrum-ActionButton--quiet {
 			--spectrum-actionbutton-background-color-default: transparent;
 			--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-300);
@@ -42,14 +116,18 @@
 			--spectrum-actionbutton-border-color-disabled: transparent;
 		}
 
-		&.is-selected {
-			--spectrum-actionbutton-border-color-default: transparent;
-			--spectrum-actionbutton-border-color-hover: transparent;
-			--spectrum-actionbutton-border-color-down: transparent;
-			--spectrum-actionbutton-border-color-focus: transparent;
+		&.spectrum-ActionButton--staticBlack {
+			--spectrum-actionbutton-background-color-default: var(--spectrum-transparent-black-200);
+			--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-black-300);
+			--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-black-400);
+			--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-black-300);
+		}
 
-			--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-background-color);
-			--spectrum-actionbutton-border-color-disabled: transparent;
+		&.spectrum-ActionButton--staticWhite {
+			--spectrum-actionbutton-background-color-default: var(--spectrum-transparent-white-200);
+			--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-white-300);
+			--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-white-400);
+			--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-white-300);
 		}
 
 		&.spectrum-ActionButton--staticBlack,
@@ -67,20 +145,6 @@
 
 				--spectrum-actionbutton-border-color-disabled: transparent;
 			}
-		}
-
-		&.spectrum-ActionButton--staticBlack {
-			--spectrum-actionbutton-background-color-default: var(--spectrum-transparent-black-200);
-			--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-black-300);
-			--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-black-400);
-			--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-black-300);
-		}
-
-		&.spectrum-ActionButton--staticWhite {
-			--spectrum-actionbutton-background-color-default: var(--spectrum-transparent-white-200);
-			--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-white-300);
-			--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-white-400);
-			--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-white-300);
 		}
 	}
 }

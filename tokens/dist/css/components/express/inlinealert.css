@@ -12,30 +12,30 @@
  */
 
 .spectrum--express {
-	--system-spectrum-inlinealert-heading-font-family: var(--spectrum-sans-font-family-stack);
-	--system-spectrum-inlinealert-heading-font-weight: var(--spectrum-heading-sans-serif-font-weight);
-	--system-spectrum-inlinealert-heading-font-style: var(--spectrum-heading-sans-serif-font-style);
-	--system-spectrum-inlinealert-heading-font-size: var(--spectrum-heading-size-xxs);
-	--system-spectrum-inlinealert-heading-line-height: var(--spectrum-heading-line-height);
-	--system-spectrum-inlinealert-content-font-family: var(--spectrum-sans-font-family-stack);
-	--system-spectrum-inlinealert-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
-	--system-spectrum-inlinealert-content-font-style: var(--spectrum-body-sans-serif-font-style);
-	--system-spectrum-inlinealert-content-font-size: var(--spectrum-body-size-s);
-	--system-spectrum-inlinealert-content-line-height: var(--spectrum-body-line-height);
-	--system-spectrum-inlinealert-border-width: var(--spectrum-border-width-200);
-	--system-spectrum-inlinealert-border-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-inlinealert-icon-size: var(--spectrum-workflow-icon-size-100);
-	--system-spectrum-inlinealert-min-inline-size: var(--spectrum-in-line-alert-minimum-width);
-	--system-spectrum-inlinealert-header-min-block-size: var(--spectrum-component-height-50);
-	--system-spectrum-inlinealert-spacing-edge-to-text: var(--spectrum-spacing-400);
-	--system-spectrum-inlinealert-spacing-header-to-icon: var(--spectrum-spacing-400);
-	--system-spectrum-inlinealert-spacing-header-content-button: var(--spectrum-spacing-300);
-	--system-spectrum-inlinealert-background-color: var(--spectrum-background-layer-2-color);
-	--system-spectrum-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
-	--system-spectrum-inlinealert-header-color: var(--spectrum-heading-color);
-	--system-spectrum-inlinealert-content-color: var(--spectrum-body-color);
-	--system-spectrum-inlinealert-border-and-icon-color-info: var(--spectrum-informative-visual-color);
-	--system-spectrum-inlinealert-border-and-icon-color-positive: var(--spectrum-positive-visual-color);
-	--system-spectrum-inlinealert-border-and-icon-color-notice: var(--spectrum-notice-visual-color);
-	--system-spectrum-inlinealert-border-and-icon-color-negative: var(--spectrum-negative-visual-color);
+	--system-inlinealert-heading-font-family: var(--spectrum-sans-font-family-stack);
+	--system-inlinealert-heading-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	--system-inlinealert-heading-font-style: var(--spectrum-heading-sans-serif-font-style);
+	--system-inlinealert-heading-font-size: var(--spectrum-heading-size-xxs);
+	--system-inlinealert-heading-line-height: var(--spectrum-heading-line-height);
+	--system-inlinealert-content-font-family: var(--spectrum-sans-font-family-stack);
+	--system-inlinealert-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--system-inlinealert-content-font-style: var(--spectrum-body-sans-serif-font-style);
+	--system-inlinealert-content-font-size: var(--spectrum-body-size-s);
+	--system-inlinealert-content-line-height: var(--spectrum-body-line-height);
+	--system-inlinealert-border-width: var(--spectrum-border-width-200);
+	--system-inlinealert-border-radius: var(--spectrum-corner-radius-100);
+	--system-inlinealert-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-inlinealert-min-inline-size: var(--spectrum-in-line-alert-minimum-width);
+	--system-inlinealert-header-min-block-size: var(--spectrum-component-height-50);
+	--system-inlinealert-spacing-edge-to-text: var(--spectrum-spacing-400);
+	--system-inlinealert-spacing-header-to-icon: var(--spectrum-spacing-400);
+	--system-inlinealert-spacing-header-content-button: var(--spectrum-spacing-300);
+	--system-inlinealert-background-color: var(--spectrum-background-layer-2-color);
+	--system-inlinealert-border-and-icon-color: var(--spectrum-neutral-visual-color);
+	--system-inlinealert-header-color: var(--spectrum-heading-color);
+	--system-inlinealert-content-color: var(--spectrum-body-color);
+	--system-inlinealert-border-and-icon-color-info: var(--spectrum-informative-visual-color);
+	--system-inlinealert-border-and-icon-color-positive: var(--spectrum-positive-visual-color);
+	--system-inlinealert-border-and-icon-color-notice: var(--spectrum-notice-visual-color);
+	--system-inlinealert-border-and-icon-color-negative: var(--spectrum-negative-visual-color);
 }
