@@ -12,23 +12,23 @@
  */
 
 .spectrum {
-	--system-spectrum-rating-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
-	--system-spectrum-rating-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-	--system-spectrum-rating-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-	--system-spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-	--system-spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
-	--system-spectrum-rating-icon-width: var(--spectrum-workflow-icon-size-100);
-	--system-spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
-	--system-spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--system-spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--system-spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--system-spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-	--system-spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
-	--system-spectrum-rating-indicator-height: var(--spectrum-border-width-200);
-	--system-spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
-	--system-spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
-	--system-spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
-	--system-spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
-	--system-spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
-	--system-spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
+	--system-rating-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--system-rating-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+	--system-rating-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
+	--system-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+	--system-rating-icon-height: var(--spectrum-workflow-icon-size-100);
+	--system-rating-icon-width: var(--spectrum-workflow-icon-size-100);
+	--system-rating-border-radius: var(--spectrum-corner-radius-100);
+	--system-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
+	--system-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
+	--system-rating-indicator-height: var(--spectrum-border-width-200);
+	--system-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
+	--system-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
+	--system-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
+	--system-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
+	--system-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
+	--system-rating-icon-count: var(--system-rating-icon-count);
 }

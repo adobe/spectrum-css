@@ -7,6 +7,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-DropZone",
@@ -18,29 +20,31 @@ export const Template = ({
 	customLabel,
 	customStyles = {},
 	id,
-} = {}, context = {}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			"is-dragged": isDragged,
-			"is-filled": isFilled,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-		role="region"
-		tabindex="0"
-		style=${ifDefined(styleMap(customStyles))}
-	>
-		${IllustratedMessage({
-			heading: customHeading ?? IllustratedMessageStory.args.heading,
-			description: customDescription ?? IllustratedMessageStory.args.description,
-		}, context)}
-
-		<div class="${rootClass}-content">
-			${ActionButton({
-				label: customLabel ?? "Drop file to replace",
-				customClasses: [`${rootClass}-button`],
+} = {}, context = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				"is-dragged": isDragged,
+				"is-filled": isFilled,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			role="region"
+			tabindex="0"
+			style=${ifDefined(styleMap(customStyles))}
+		>
+			${IllustratedMessage({
+				heading: customHeading ?? IllustratedMessageStory.args.heading,
+				description: customDescription ?? IllustratedMessageStory.args.description,
 			}, context)}
+
+			<div class="${rootClass}-content">
+				${ActionButton({
+					label: customLabel ?? "Drop file to replace",
+					customClasses: [`${rootClass}-button`],
+				}, context)}
+			</div>
 		</div>
-	</div>
-`;
+	`;
+};

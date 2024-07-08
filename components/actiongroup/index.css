@@ -18,6 +18,9 @@
 	flex-wrap: wrap;
 	gap: var(--mod-actiongroup-horizontal-spacing-regular, var(--spectrum-actiongroup-horizontal-spacing-regular));
 
+	margin-block: var(--mod-actiongroup-margin-block, var(--mod-actiongroup-margin-block-start, 0) var(--mod-actiongroup-margin-block-end, 0));
+	margin-inline: var(--mod-actiongroup-margin-inline, var(--mod-actiongroup-margin-inline-start, 0) var(--mod-actiongroup-margin-inline-end, 0));
+
 	.spectrum-ActionGroup-item {
 		flex-shrink: 0;
 

@@ -12,14 +12,14 @@
  */
 
 .spectrum-ContextualHelp {
-	--spectrum-contextual-help-padding: var(--system-spectrum-contextualhelp-contextual-help-padding);
-	--spectrum-contextual-help-content-spacing: var(--system-spectrum-contextualhelp-contextual-help-content-spacing);
-	--spectrum-contextual-help-link-spacing: var(--system-spectrum-contextualhelp-contextual-help-link-spacing);
-	--spectrum-contextual-help-heading-size: var(--system-spectrum-contextualhelp-contextual-help-heading-size);
-	--spectrum-contextual-help-heading-color: var(--system-spectrum-contextualhelp-contextual-help-heading-color);
-	--spectrum-contextual-help-body-color: var(--system-spectrum-contextualhelp-contextual-help-body-color);
+	--spectrum-contextual-help-padding: var(--system-contextualhelp-contextual-help-padding);
+	--spectrum-contextual-help-content-spacing: var(--system-contextualhelp-contextual-help-content-spacing);
+	--spectrum-contextual-help-link-spacing: var(--system-contextualhelp-contextual-help-link-spacing);
+	--spectrum-contextual-help-heading-size: var(--system-contextualhelp-contextual-help-heading-size);
+	--spectrum-contextual-help-heading-color: var(--system-contextualhelp-contextual-help-heading-color);
+	--spectrum-contextual-help-body-color: var(--system-contextualhelp-contextual-help-body-color);
 }
 
 .spectrum--large .spectrum-ContextualHelp {
-	--spectrum-contextual-help-content-spacing: var(--system-spectrum-large-descendant-of-contextual-help-contextual-help-content-spacing);
+	--spectrum-contextual-help-content-spacing: var(--system--large-descendant-of-contextual-help-contextual-help-content-spacing);
 }

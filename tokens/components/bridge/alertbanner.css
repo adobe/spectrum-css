@@ -12,29 +12,29 @@
  */
 
 .spectrum-AlertBanner {
-	--spectrum-alert-banner-netural-background: var(--system-spectrum-alertbanner-alert-banner-netural-background);
-	--spectrum-alert-banner-min-height: var(--system-spectrum-alertbanner-alert-banner-min-height);
-	--spectrum-alert-banner-max-inline-size: var(--system-spectrum-alertbanner-alert-banner-max-inline-size);
-	--spectrum-alert-banner-size: var(--system-spectrum-alertbanner-alert-banner-size);
-	--spectrum-alert-banner-font-size: var(--system-spectrum-alertbanner-alert-banner-font-size);
-	--spectrum-alert-banner-icon-size: var(--system-spectrum-alertbanner-alert-banner-icon-size);
-	--spectrum-alert-banner-icon-to-text: var(--system-spectrum-alertbanner-alert-banner-icon-to-text);
-	--spectrum-alert-banner-start-edge: var(--system-spectrum-alertbanner-alert-banner-start-edge);
-	--spectrum-alert-banner-text-to-button-horizontal: var(--system-spectrum-alertbanner-alert-banner-text-to-button-horizontal);
-	--spectrum-alert-banner-text-to-divider: var(--system-spectrum-alertbanner-alert-banner-text-to-divider);
-	--spectrum-alert-banner-top-icon: var(--system-spectrum-alertbanner-alert-banner-top-icon);
-	--spectrum-alert-banner-top-text: var(--system-spectrum-alertbanner-alert-banner-top-text);
-	--spectrum-alert-banner-bottom-text: var(--system-spectrum-alertbanner-alert-banner-bottom-text);
-	--spectrum-alert-banner-informative-background: var(--system-spectrum-alertbanner-alert-banner-informative-background);
-	--spectrum-alert-banner-negative-background: var(--system-spectrum-alertbanner-alert-banner-negative-background);
-	--spectrum-alert-banner-font-color: var(--system-spectrum-alertbanner-alert-banner-font-color);
-	--mod-divider-vertical-margin: var(--system-spectrum-alertbanner-divider-vertical-margin);
-	--mod-divider-vertical-height: var(--system-spectrum-alertbanner-divider-vertical-height);
-	--mod-divider-vertical-align: var(--system-spectrum-alertbanner-divider-vertical-align);
-	--mod-button-margin-block: var(--system-spectrum-alertbanner-button-margin-block);
-	--mod-button-margin-right: var(--system-spectrum-alertbanner-button-margin-right);
-	--mod-button-margin-left: var(--system-spectrum-alertbanner-button-margin-left);
-	--mod-closebutton-margin-inline: var(--system-spectrum-alertbanner-closebutton-margin-inline);
-	--mod-closebutton-margin-top: var(--system-spectrum-alertbanner-closebutton-margin-top);
-	--mod-closebutton-align-self: var(--system-spectrum-alertbanner-closebutton-align-self);
+	--spectrum-alert-banner-netural-background: var(--system-alertbanner-alert-banner-netural-background);
+	--spectrum-alert-banner-min-height: var(--system-alertbanner-alert-banner-min-height);
+	--spectrum-alert-banner-max-inline-size: var(--system-alertbanner-alert-banner-max-inline-size);
+	--spectrum-alert-banner-size: var(--system-alertbanner-alert-banner-size);
+	--spectrum-alert-banner-font-size: var(--system-alertbanner-alert-banner-font-size);
+	--spectrum-alert-banner-icon-size: var(--system-alertbanner-alert-banner-icon-size);
+	--spectrum-alert-banner-icon-to-text: var(--system-alertbanner-alert-banner-icon-to-text);
+	--spectrum-alert-banner-start-edge: var(--system-alertbanner-alert-banner-start-edge);
+	--spectrum-alert-banner-text-to-button-horizontal: var(--system-alertbanner-alert-banner-text-to-button-horizontal);
+	--spectrum-alert-banner-text-to-divider: var(--system-alertbanner-alert-banner-text-to-divider);
+	--spectrum-alert-banner-top-icon: var(--system-alertbanner-alert-banner-top-icon);
+	--spectrum-alert-banner-top-text: var(--system-alertbanner-alert-banner-top-text);
+	--spectrum-alert-banner-bottom-text: var(--system-alertbanner-alert-banner-bottom-text);
+	--spectrum-alert-banner-informative-background: var(--system-alertbanner-alert-banner-informative-background);
+	--spectrum-alert-banner-negative-background: var(--system-alertbanner-alert-banner-negative-background);
+	--spectrum-alert-banner-font-color: var(--system-alertbanner-alert-banner-font-color);
+	--mod-divider-vertical-margin: var(--system-alertbanner-divider-vertical-margin);
+	--mod-divider-vertical-height: var(--system-alertbanner-divider-vertical-height);
+	--mod-divider-vertical-align: var(--system-alertbanner-divider-vertical-align);
+	--mod-button-margin-block: var(--system-alertbanner-button-margin-block);
+	--mod-button-margin-right: var(--system-alertbanner-button-margin-right);
+	--mod-button-margin-left: var(--system-alertbanner-button-margin-left);
+	--mod-closebutton-margin-inline: var(--system-alertbanner-closebutton-margin-inline);
+	--mod-closebutton-margin-top: var(--system-alertbanner-closebutton-margin-top);
+	--mod-closebutton-align-self: var(--system-alertbanner-closebutton-align-self);
 }

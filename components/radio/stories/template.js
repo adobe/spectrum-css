@@ -1,25 +1,27 @@
+import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import { useArgs } from "@storybook/preview-api";
-
 import "../index.css";
+import "../themes/express.css";
+import "../themes/legacy.css";
 
 export const Template = ({
 	rootClass = "spectrum-Radio",
 	size = "m",
 	label,
 	name,
-	isEmphasized,
-	isChecked,
-	isDisabled,
-	isReadOnly,
+	isEmphasized = false,
+	isChecked = false,
+	isDisabled = false,
+	isReadOnly = false,
 	id,
 	customClasses = [],
 	customStyles = {},
 }) => {
+	const [, updateArgs] = useArgs();
 	return html`
 		<div
 			class=${classMap({
@@ -38,7 +40,7 @@ export const Template = ({
 				name=${name}
 				class="${rootClass}-input"
 				id="radio-0"
-				readOnly=${isReadOnly ? "readonly" : ""}
+				?readonly=${isReadOnly}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
 				@change=${() => {

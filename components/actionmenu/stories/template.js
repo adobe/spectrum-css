@@ -1,5 +1,3 @@
-import { html } from "lit";
-
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
@@ -15,12 +13,7 @@ export const Template = ({
 	label,
 	iconName,
 	size = "m",
-} = {}, context) => {
-	if (!items.length) {
-		console.warn("ActionMenu: requires items be passed in to render.");
-		return html``;
-	}
-
+} = {}, context = {}) => {
 	return Popover({
 		position: "bottom",
 		isOpen,

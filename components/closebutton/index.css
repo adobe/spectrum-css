@@ -63,6 +63,7 @@ a.spectrum-CloseButton {
 	position: relative;
 	display: inline-flex;
 	flex-direction: row;
+	flex-shrink: var(--mod-closebutton-flex-shrink);
 	align-items: center;
 	align-self: var(--mod-closebutton-align-self);
 
@@ -70,9 +71,9 @@ a.spectrum-CloseButton {
 	inline-size: var(--mod-closebutton-width, var(--spectrum-closebutton-width));
 
 	block-size: var(--mod-closebutton-height, var(--spectrum-closebutton-height));
-	margin-block-start: var(--mod-closebutton-margin-top);
 
-	margin-inline: var(--mod-closebutton-margin-inline);
+	margin-block: var(--mod-closebutton-margin-block, var(--mod-closebutton-margin-block-start, var(--mod-closebutton-margin-top, 0)) var(--mod-closebutton-margin-block-end, 0));
+	margin-inline: var(--mod-closebutton-margin-inline, var(--mod-closebutton-margin-inline-start, 0) var(--mod-closebutton-margin-inline-end, 0));
 	padding: 0;
 
 	color: inherit;
