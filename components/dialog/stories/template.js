@@ -176,3 +176,159 @@ export const Template = ({
 		return Dialog;
 	}
 };
+
+const Sizes = (args) =>
+	html` ${["s", "m", "l"].map((size) => {
+		return html`
+			<div>
+				${Typography({
+					semantics: "detail",
+					size: "s",
+					content: [
+						{
+							s: "Small",
+							m: "Medium",
+							l: "Large",
+						}[size],
+					],
+				})}
+				${Template({
+						...args,
+						showModal: false,
+						isDismissable: false,
+						size,
+				})}
+			</div>
+		`;
+	})}`;
+
+const DismissibleSizes = (args) =>
+	html` ${["s", "m", "l"].map((size) => {
+		return html`
+			<div>
+				${Typography({
+					semantics: "detail",
+					size: "s",
+					content: [
+						{
+							s: "Small",
+							m: "Medium",
+							l: "Large",
+						}[size],
+					],
+				})}
+				${Template({
+						...args,
+						showModal: false,
+						isDismissable: true,
+						size,
+				})}
+			</div>
+		`;
+	})}`;
+
+const Layouts = (args) =>
+	html` 
+	${["fullscreen", "fullscreenTakeover"].map((variant) => {
+		return html`
+			<div style="padding-block-end: 2rem">
+				${Typography({
+					semantics: "detail",
+					variant: "fullscreen",
+					content: [
+						{
+							fullscreen: "Fullscreen",
+							fullscreenTakeover: "Fullscreen Takeover",
+						}[variant],
+					],
+				})}
+				${Template({
+					...args,
+					showModal: false,
+					layout: variant,
+					isDismissable: false,
+				})}
+			</div>
+		`;
+	})}`;
+
+const WithHero = (args) =>
+	html`
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Default"],
+			})}
+			${Template({
+				...args,
+				size: "m",
+				showModal: false,
+				hasHeroImage: true,
+				isDismissable: false,
+			})}
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: ["Dismissible"],
+			})}
+			${Template({
+				...args,
+				size: "m",
+				showModal: false,
+				hasHeroImage: true,
+				isDismissable: true,
+			})}
+		</div>
+	`;
+
+export const ChromaticVariants = (args) => {
+	const sectionData = [
+		{
+			sectionName: "Sizes, Non-dismissible",
+			componentMarkup: Sizes({
+				...args,
+			}),
+		},
+		{
+			sectionName: "Sizes, dismissible",
+			componentMarkup: DismissibleSizes({
+				...args,
+			}),
+		},
+		{
+			sectionName: "Layouts",
+			componentMarkup: Layouts({
+				...args,
+			}),
+			gridColumns: 1,
+		},
+		{
+			sectionName: "Hero/Cover Image",
+			componentMarkup: WithHero({
+				...args,
+			})
+		},
+	];
+
+	return sectionData.map((data) => html`
+		<div class="spectrum-Typography">
+			${Typography({
+				semantics: "detail",
+				size: "l",
+				content: [data.sectionName],
+			})}
+			<div
+				style=${styleMap({
+					display: "grid",
+					gap: "1.5rem",
+					gridTemplateColumns: `repeat(${data?.gridColumns?.toString() ?? "4"}, 1fr)`,
+				})}
+			>
+				${data.componentMarkup}
+			</div>
+		</div>
+	`);
+};
