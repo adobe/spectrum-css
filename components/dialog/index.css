@@ -121,6 +121,7 @@ governing permissions and limitations under the License.
 	inline-size: 100%;
 }
 
+/* the dialog's heading/title */
 .spectrum-Dialog-heading {
 	grid-area: heading;
 
@@ -135,6 +136,9 @@ governing permissions and limitations under the License.
 	color: var(--mod-standard-dialog-heading-text-color, var(--spectrum-standard-dialog-heading-text-color));
 	outline: none; /* Hide focus outline */
 
+	/* prevent the heading from moving out of the header element if additional content is long */
+	min-inline-size: 50%;
+
 	&.spectrum-Dialog-heading--noHeader {
 		grid-area: heading-start / heading-start / header-end / header-end;
 		padding-inline-end: 0;
@@ -146,24 +150,25 @@ governing permissions and limitations under the License.
 	}
 }
 
+/* the container for the heading and any additional header content */
 .spectrum-Dialog-header {
 	grid-area: header;
 	display: flex;
-	inline-size: fit-content;
 	max-inline-size: 100%;
 	margin-block-end: var(--spectrum-standard-dialog-spacing-title-to-description);
 
 	/* Without this, buttons will be stretched */
 	align-items: flex-start;
-	justify-content: flex-end;
+	justify-content: flex-start;
 
 	box-sizing: border-box;
 
 	outline: none; /* Hide focus outline around header */
 
-	.spectrum-Body {
-		/* additional header content should grow/shrink with the text. */
-		min-inline-size: fit-content;
+	> .spectrum-Body {
+		/* additional header content should grow/shrink with the text, but only until it takes up half of the footer */
+		inline-size: fit-content;
+		max-inline-size: 50%;
 
 		/* Remove the default margin on the Typography in the header */
 		margin-block: 0;
@@ -197,6 +202,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Dialog-footer {
 	grid-area: footer;
+	max-inline-size: 100%;
 
 	/* this padding isn't built into the grid because it disappears with this footer */
 	padding-block-start: var(--mod-standard-dialog-spacing-description-to-footer, var(--spectrum-standard-dialog-spacing-description-to-footer));
@@ -214,15 +220,12 @@ governing permissions and limitations under the License.
 
 	.spectrum-Body {
 		/* To keep the footer text from wrapping prematurely */
-		min-inline-size: fit-content;
+		inline-size: fit-content;
+		max-inline-size: 50%;
 
 		/* Remove the default margin on the Typography in the footer content */
 		margin-block-end: 0;
 	}
-}
-
-.spectrum-Dialog-buttonGroup--noFooter {
-	padding-block-start: var(--mod-standard-dialog-spacing-description-to-footer, var(--spectrum-standard-dialog-spacing-description-to-footer));
 }
 
 .spectrum-Dialog-buttonGroup {
@@ -230,15 +233,10 @@ governing permissions and limitations under the License.
 
 	/* this padding should be safe as button group is always end aligned */
 	padding-inline-start: var(--mod-standard-dialog-spacing-footer-to-button-group, var(--spectrum-standard-dialog-spacing-footer-to-button-group));
+}
 
-	&.spectrum-Dialog-buttonGroup--noFooter {
-		grid-area: footer-start / footer-start / buttonGroup-end / buttonGroup-end;
-	}
-
-	/* overrides ButtonGroup's justify-content: normal */
-	.spectrum-ButtonGroup {
-		justify-content: flex-end;
-	}
+.spectrum-Dialog-buttonGroup--noFooter {
+	padding-block-start: var(--mod-standard-dialog-spacing-description-to-footer, var(--spectrum-standard-dialog-spacing-description-to-footer));
 }
 
 /* Dismissible Dialog (with close button) */
@@ -248,8 +246,7 @@ governing permissions and limitations under the License.
 		auto
 		1fr
 		auto
-		minmax(0, auto)
-		minmax(0, calc(var(--spectrum-standard-dialog-spacing-edge-to-content) - var(--spectrum-standard-dialog-spacing-edge-to-close-button)))
+		minmax(0, var(--spectrum-standard-dialog-spacing-edge-to-header-content-inline-end))
 		var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
 	grid-template-rows:
 		auto
@@ -259,19 +256,19 @@ governing permissions and limitations under the License.
 		auto
 		var(--mod-standard-dialog-spacing-grid-padding, var(--spectrum-standard-dialog-spacing-grid-padding));
 	grid-template-areas:
-		"hero hero    hero    hero        hero        hero        hero"
-		".    .       .       .           .           closeButton closeButton"
-		".    heading header  header      typeIcon    closeButton closeButton"
-		".    content content content     content     content     ."
-		".    footer  footer  .           .           .           ."
-		".    .       .       .           .           .           .";
-
-	.spectrum-Dialog-header {
-		margin-inline-end: var(--spectrum-standard-dialog-spacing-edge-to-header-content-inline-end);
-	}
+		"hero hero    hero    hero    hero        hero"
+		".    .       .       .       closeButton closeButton"
+		".    heading header  header  closeButton closeButton"
+		".    content content content content     ."
+		".    footer  footer  footer  footer      ."
+		".    .       .       .       .           .";
 
 	.spectrum-Dialog-footer {
 		grid-area: footer;
+
+		> .spectrum-Body {
+			max-inline-size: 100%;
+		}
 	}
 }
 
@@ -336,11 +333,6 @@ governing permissions and limitations under the License.
 		max-block-size: none;
 	}
 
-	.spectrum-Dialog-footer,
-	.spectrum-Dialog-buttonGroup .spectrum-Dialog-buttonGroup--noFooter {
-		padding-block-start: 0;
-	}
-
 	.spectrum-Dialog-footer {
 		display: none;
 	}
@@ -401,12 +393,19 @@ governing permissions and limitations under the License.
 			".    heading heading heading     heading     closeButton closeButton"
 			".    header  header  header      header      header      ."
 			".    content content content     content     content     ."
-			".    footer  footer  .           .           .           ."
+			".    footer  footer  footer      footer      footer      ."
 			".    .       .       .           .           .           .";
 	}
 
 	.spectrum-Dialog .spectrum-Dialog-header {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 		justify-content: flex-start;
+
+		> .spectrum-Body {
+			max-inline-size: unset;
+		}
 	}
 
 	.spectrum-Dialog--fullscreen,
@@ -432,12 +431,11 @@ governing permissions and limitations under the License.
 				".    buttonGroup  ."
 				".    .            .";
 		}
-	}
 
-	.spectrum-Dialog-header {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+		.spectrum-Dialog-buttonGroup > .spectrum-ButtonGroup {
+			/* to override ButtonGroup's justify-content: normal and handle not having footer content */
+			justify-content: flex-end;
+		}
 	}
 
 	.spectrum-Dialog-heading {
