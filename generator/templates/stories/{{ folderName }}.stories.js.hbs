@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { {{ pascalCase name }}Group } from "./template.js";
 
 /**
@@ -28,6 +29,7 @@ export default {
     actions: {
       handles: ["click .spectrum-{{ pascalCase name }}"],
     },
+    componentVersion: version,
     design: {
       type: "figma",
       url: "",
