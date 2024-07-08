@@ -13,7 +13,7 @@
 
 @container style(--system: spectrum) {
 	.spectrum-AssetCard {
-		--spectrum-assetcard-overlay-background-color: rgba(27, 127, 245, 10%);
+		--spectrum-assetcard-overlay-background-color: rgb(27 127 245 / 10%);
 
 		/* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
 		--spectrum-assetcard-asset-size: 224px;

@@ -27,12 +27,6 @@
 		"@spectrum-css/icon": ">=7",
 		"@spectrum-css/tokens": ">=14"
 	},
-	"devDependencies": {
-		"@spectrum-css/avatar": "workspace:^",
-		"@spectrum-css/clearbutton": "workspace:^",
-		"@spectrum-css/icon": "workspace:^",
-		"@spectrum-css/tokens": "workspace:^"
-	},
 	"peerDependenciesMeta": {
 		"@spectrum-css/avatar": {
 			"optional": true
@@ -40,6 +34,12 @@
 		"@spectrum-css/icon": {
 			"optional": true
 		}
+	},
+	"devDependencies": {
+		"@spectrum-css/avatar": "workspace:^",
+		"@spectrum-css/clearbutton": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
 	},
 	"keywords": [
 		"spectrum",

@@ -83,10 +83,6 @@
 		.spectrum--dark & {
 			--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
 		}
-
-		.spectrum--darkest & {
-			--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-600-rgb);
-		}
 	}
 
 	/* Quiet/Gallery */
