@@ -23,7 +23,7 @@ export const withTestingPreviewWrapper = makeDecorator({
 		// Add a boolean to the context that indicates whether the Chromatic view is enabled.
 		context.args.isChromaticView = isChromaticViewEnabled(testingPreview, viewMode === "docs");
 
-		// Backwards compatability with existing use of this custom function.
+		// Backwards compatibility with existing use of this custom function.
 		// @todo This can be removed from window after changing everywhere it is accessed to use args.isChromaticView instead.
 		window.isChromatic = () => context.args.isChromaticView;
 
