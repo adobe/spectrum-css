@@ -84,8 +84,7 @@ export const withContextWrapper = makeDecorator({
 					toggleStyles(contextContainer, "vars-base-express", legacy?.express?.base, isExpress);
 				}
 
-				// @todo note that darkest is being deprecated in the S2 system
-				for (const c of ["light", "dark", "darkest"]) {
+				for (const c of ["light", "dark"]) {
 					// Force light or dark mode if the static color is set
                     const isColor = c === staticColorSettings[staticKey]?.color || !staticKey && c === color;
 

@@ -39,10 +39,6 @@ module.exports = {
 		],
 		"selector-attribute-quotes": null,
 		"block-no-empty": null,
-		/* Could probably dig into this further, might be useful */
-		"no-descending-specificity": null,
-		/* Not useful at the moment */
-		"no-duplicate-selectors": null,
 		"selector-class-pattern": null,
 		"declaration-empty-line-before": null,
 		"comment-empty-line-before": [
@@ -72,7 +68,6 @@ module.exports = {
 				severity: "warning",
 			},
 		],
-		/** @todo: would like to use "modern" eventually */
 		"color-function-notation": ["modern", { "ignore": ["with-var-inside"] }],
 		"import-notation": null,
 		"property-no-unknown": [
@@ -118,7 +113,7 @@ module.exports = {
 		],
 		"csstools/use-logical": true,
 		/** Performance */
-		// "plugin/no-low-performance-animation-properties": [true, { severity: "warning" }],
+		"plugin/no-low-performance-animation-properties": [true, { severity: "warning" }],
 		"plugin/selector-bem-pattern": [
 			{
 				preset: "suit",
@@ -132,7 +127,7 @@ module.exports = {
 		],
 		/** Local/custom plugins */
 		"spectrum-tools/no-missing-var": true,
-		// @todo bring this back after setting it up to read in the props from themes/*.css
+		/** @todo bring this back after setting it up to read in the props from themes/*.css */
 		"spectrum-tools/no-unused-custom-properties": null,
 		"spectrum-tools/no-unknown-custom-properties": null,
 		/** @note this enables reporting of unused variables in a file */

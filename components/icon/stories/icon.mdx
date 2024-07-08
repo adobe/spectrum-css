@@ -1,6 +1,6 @@
-import { Canvas, ArgTypes, Meta, Description, Title } from '@storybook/blocks';
+import { Canvas, ArgTypes, Meta, Description, Title } from "@storybook/blocks";
 
-import * as IconStories from './icon.stories';
+import * as IconStories from "./icon.stories";
 
 <Meta of={IconStories} title="Docs" />
 
@@ -14,7 +14,7 @@ The SVG icons used in Spectrum CSS are a part of two different icon sets, "workf
 ### Workflow icons
 
 The workflow icon set contains several hundred icons to choose from.
-These icons can be seen in use within Button, Action button, Menu, and many other components. 
+These icons can be seen in use within Button, Action button, Menu, and many other components.
 Here is an example with just a few of these icons:
 
 <Canvas of={IconStories.WorkflowDefault} />
@@ -31,8 +31,8 @@ the [Combobox component](?path=/docs/components-combobox--docs) is one example.
 Unlike workflow icons, each UI icon comes in specific numbered sizes. They do not use "t-shirt" sizing.
 They have unique classes applied that set their size in CSS. For example:
 
-  - `.spectrum-UIIcon-Asterisk300`
-  - `.spectrum-UIIcon-ChevronDown75`
+- `.spectrum-UIIcon-Asterisk300`
+- `.spectrum-UIIcon-ChevronDown75`
 
 Different UI icons have different number sizes available. The smallest size for some may be "50", while others may start at "100". Some have up to a "600" size.
 Some may only have two different sizes, while others have six. Because of this, they can't be mapped one to one to t-shirt sizes. The correct UI icon sizes to use for each of a component's
@@ -55,12 +55,15 @@ with:
 ## Repositories for the icon SVG files
 
 The UI icon SVGs are within the Spectrum CSS repository, which has its own package published to NPM:
-  - GitHub: [adobe/spectrum-css — ui-icons folder](https://github.com/adobe/spectrum-css/tree/main/ui-icons)
-  - NPM: [@spectrum-css/ui-icons](https://www.npmjs.com/package/@spectrum-css/ui-icons).
+
+- GitHub: [adobe/spectrum-css — ui-icons folder](https://github.com/adobe/spectrum-css/tree/main/ui-icons)
+- NPM: [@spectrum-css/ui-icons](https://www.npmjs.com/package/@spectrum-css/ui-icons).
 
 The workflow icon SVGs are within a separate respository, which is also published to NPM:
-  - GitHub: [adobe/spectrum-css-workflow-icons](https://github.com/adobe/spectrum-css-workflow-icons)
-  - NPM: [@adobe/spectrum-css-workflow-icons](https://www.npmjs.com/package/@adobe/spectrum-css-workflow-icons).
+
+- GitHub: [adobe/spectrum-css-workflow-icons](https://github.com/adobe/spectrum-css-workflow-icons)
+- NPM: [@adobe/spectrum-css-workflow-icons](https://www.npmjs.com/package/@adobe/spectrum-css-workflow-icons).
 
 ## Properties
+
 <ArgTypes />
