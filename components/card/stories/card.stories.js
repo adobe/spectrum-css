@@ -178,7 +178,7 @@ NoImage.args = {
 	title: "Card title",
 	description: "Optional description that should be one or two lines",
 };
-NoImage.tags = ["docs-only"];
+NoImage.tags = ["autodocs", "!dev"];
 NoImage.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -190,7 +190,7 @@ QuietFolder.args = {
 	description: "10/15/18",
 	isQuiet: true,
 };
-QuietFolder.tags = ["docs-only"];
+QuietFolder.tags = ["autodocs", "!dev"];
 QuietFolder.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -204,7 +204,7 @@ QuietFocused.args = {
 	isQuiet: true,
 	isFocused: true,
 };
-QuietFocused.tags = ["docs-only"];
+QuietFocused.tags = ["autodocs", "!dev"];
 QuietFocused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -218,7 +218,7 @@ QuietSelected.args = {
 	isQuiet: true,
 	isSelected: true,
 };
-QuietSelected.tags = ["docs-only"];
+QuietSelected.tags = ["autodocs", "!dev"];
 QuietSelected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -235,7 +235,7 @@ AssetPreview.args = {
 		"width": "200px",
 	}
 };
-AssetPreview.tags = ["docs-only"];
+AssetPreview.tags = ["autodocs", "!dev"];
 AssetPreview.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -252,7 +252,7 @@ Gallery.args = {
 		"width": "700px",
 	}
 };
-Gallery.tags = ["docs-only"];
+Gallery.tags = ["autodocs", "!dev"];
 Gallery.parameters = {
 	chromatic: { disableSnapshot: true },
 };

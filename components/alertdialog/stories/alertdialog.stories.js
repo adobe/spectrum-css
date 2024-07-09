@@ -156,7 +156,7 @@ Destructive.args = {
 };
 
 export const Scroll = Template.bind({});
-Scroll.tags = ["docs-only"];
+Scroll.tags = ["autodocs", "!dev"];
 Scroll.args = {
 	variant: "confirmation",
 	heading: "Enable Smart Filters?",

@@ -387,6 +387,7 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				preserveVariables: true,
 				// Only output the new selectors with the system mappings
 				stripLocalSelectors: true,
+				map: false,
 			},
 		).then(async (reports = []) => {
 			// Copy the build express & spectrum component tokens to the tokens package folder in src and dist output
@@ -395,8 +396,7 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				copy(
 					path.join(cwd, "dist", input),
 					path.join(
-						dirs.root,
-						"tokens",
+						dirs.tokens,
 						"components",
 						path.basename(input, ".css"),
 						`${componentName}.css`,
@@ -406,8 +406,7 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				copy(
 					path.join(cwd, "dist", input),
 					path.join(
-						dirs.root,
-						"tokens",
+						dirs.tokens,
 						"dist",
 						"css",
 						"components",
@@ -432,14 +431,14 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				skipMapping: false,
 				stripLocalSelectors: false,
 				referencesOnly: true,
+				map: false,
 			},
 		).then(async (reports = []) => {
 			return Promise.all([
 				copy(
 					path.join(cwd, "dist", "index-theme.css"),
 					path.join(
-						dirs.root,
-						"tokens",
+						dirs.tokens,
 						"components",
 						"bridge",
 						`${componentName}.css`,
@@ -448,14 +447,17 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				),
 				copy(
 					path.join(
-						dirs.root,
-						"tokens/components/bridge",
+						dirs.tokens,
+						"components",
+						"bridge",
 						`${componentName}.css`,
 					),
 					path.join(
-						dirs.root,
-						"tokens",
-						"dist/css/components/bridge",
+						dirs.tokens,
+						"dist",
+						"css",
+						"components",
+						"bridge",
 						`${componentName}.css`,
 					),
 					{ cwd, isDeprecated: false },

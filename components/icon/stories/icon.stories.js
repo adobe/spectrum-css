@@ -1,5 +1,5 @@
-import { TestTemplate, UIArrowsTemplate, UIDefaultTemplate, WorkflowDefaultTemplate, WorkflowSizingTemplate } from "./template";
 import { version } from "../package.json";
+import { TestTemplate, UIArrowsTemplate, UIDefaultTemplate, WorkflowDefaultTemplate, WorkflowSizingTemplate } from "./template";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
 /**
@@ -102,7 +102,7 @@ Default.args = {
  * A sampling of multiple Workflow icons.
  */
 export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
-WorkflowDefault.tags = ["docs-only"];
+WorkflowDefault.tags = ["autodocs", "!dev"];
 WorkflowDefault.args = {
 	iconName: "ABC",
 };
@@ -114,7 +114,7 @@ WorkflowDefault.parameters = {
  * An example of a Workflow icon displayed at all sizes, from small to extra-large.
  */
 export const WorkflowSizing = WorkflowSizingTemplate.bind({});
-WorkflowSizing.tags = ["docs-only"];
+WorkflowSizing.tags = ["autodocs", "!dev"];
 WorkflowSizing.args = {
 	iconName: "Asset",
 };
@@ -127,7 +127,7 @@ WorkflowSizing.parameters = {
  */
 export const UIDefault = UIDefaultTemplate.bind({});
 UIDefault.storyName = "UI Default";
-UIDefault.tags = ["docs-only"];
+UIDefault.tags = ["autodocs", "!dev"];
 UIDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -137,7 +137,7 @@ UIDefault.parameters = {
  */
 export const UIArrows = UIArrowsTemplate.bind({});
 UIArrows.storyName = "UI Arrows";
-UIArrows.tags = ["docs-only"];
+UIArrows.tags = ["autodocs", "!dev"];
 UIArrows.parameters = {
 	chromatic: { disableSnapshot: true },
 };

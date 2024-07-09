@@ -56,7 +56,7 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
 };
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -65,7 +65,7 @@ export const WithColorArea = Template.bind({});
 WithColorArea.args = {
 	isWithColorArea: true,
 };
-WithColorArea.tags = ["docs-only"];
+WithColorArea.tags = ["autodocs", "!dev"];
 WithColorArea.parameters = {
 	chromatic: { disableSnapshot: true },
 };

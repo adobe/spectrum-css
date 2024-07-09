@@ -13,7 +13,6 @@
 
 const rootConfig = require(__dirname, "../postcss.config");
 
-console.log("👋");
 module.exports = (options) => rootConfig({
 	skipMapping: true,
 	referencesOnly: false,

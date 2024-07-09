@@ -69,7 +69,7 @@ const AssetGroup = (args, context) => html`
 export const Default = AssetGroup.bind({});
 
 export const File = Template.bind({});
-File.tags = ["docs-only"];
+File.tags = ["autodocs", "!dev"];
 File.args = {
 	preset: "file",
 };
@@ -78,7 +78,7 @@ File.parameters = {
 };
 
 export const Folder = Template.bind({});
-Folder.tags = ["docs-only"];
+Folder.tags = ["autodocs", "!dev"];
 Folder.args = {
 	preset: "folder",
 };

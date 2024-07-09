@@ -113,13 +113,13 @@ const AvatarSizes = (args) => html`
 `;
 
 export const SizeOptions = AvatarSizes.bind({});
-SizeOptions.tags = ["docs-only"];
+SizeOptions.tags = ["autodocs", "!dev"];
 SizeOptions.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const NoLink = Template.bind({});
-NoLink.tags = ["docs-only"];
+NoLink.tags = ["autodocs", "!dev"];
 NoLink.args = {
 	hasLink: false,
 };
@@ -128,7 +128,7 @@ NoLink.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	hasLink: false,
 	isDisabled: true,
