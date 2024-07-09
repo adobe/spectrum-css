@@ -1,5 +1,15 @@
 # Change Log
 
+## 15.0.0-s2-foundations.6
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`130e137`](https://github.com/adobe/spectrum-css/commit/130e1372b223641efe0a3a23c83ff1d01a70bf1d) Thanks [@pfulton](https://github.com/pfulton)! - This update pre-resolves the bundler assets to make them easier to serve as a single entry point.
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0) Thanks [@pfulton](https://github.com/pfulton)! - Inject missing tokens into theme files and adjust logic in the splitinator tool to replace nested variable references to the new system mappings
+
 ## 15.0.0-s2-foundations.5
 
 ### Patch Changes

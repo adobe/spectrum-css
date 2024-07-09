@@ -1,6 +1,5 @@
 import { svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
@@ -10,11 +9,7 @@ import "../themes/legacy.css";
 export const Template = ({
 	rootClass = "spectrum-ColorLoupe",
 	isOpen,
-	customStyles = {
-		"--spectrum-picked-color": "rgba(255, 0, 0, 50%)",
-		"inset-block-start": "5px",
-		"inset-inline-start": "5px",
-	},
+	customStyles = {},
 	customClasses = [],
 }) => {
 	return svg`
@@ -24,8 +19,12 @@ export const Template = ({
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      style=${ifDefined(styleMap(customStyles))}
-    >
+      style=${styleMap({
+        "--spectrum-picked-color": "rgba(255, 0, 0, 50%)",
+        "inset-block-start": "5px",
+        "inset-inline-start": "5px",
+        ...customStyles
+      })}>
       <defs>
         <path
           id="loupe-path"

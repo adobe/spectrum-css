@@ -23,9 +23,7 @@ export const Template = ({
 	useDOWAbbrev = false,
 	buttonSize = "s",
 	customClasses = [],
-	customStyles = {
-		"--mod-actionbutton-icon-size": "10px",
-	},
+	customStyles = {},
 	onDateClick,
 	previousHandler,
 	nextHandler,
@@ -264,7 +262,10 @@ export const Template = ({
 				[`${rootClass}--padded`]: padded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${ifDefined(styleMap({
+				"--mod-actionbutton-icon-size": "10px",
+				...customStyles
+			}))}
 			id=${ifDefined(id)}
 		>
 			<div class="${rootClass}-header">

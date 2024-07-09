@@ -1,8 +1,6 @@
-import { html } from "lit";
-import { version } from "../package.json";
-
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
-import { Template } from "./template";
+import { version } from "../package.json";
+import { ComboboxGroup, Template } from "./template";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
@@ -166,83 +164,13 @@ export default {
 	},
 };
 
-const defaultVariants = (args) => html`
-	<div style=${args.isOpen && "padding-block-end: 160px;"}>
-		${Template({
-			...args,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-block-end: 160px;"}>
-		${Template({
-			...args,
-			isFocused: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-block-end: 160px;"}>
-		${Template({
-			...args,
-			isKeyboardFocused: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-block-end: 160px;"}>
-		${Template({
-			...args,
-			isDisabled: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-block-end: 160px;"}>
-		${Template({
-			...args,
-			isLoading: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-block-end: 160px;"}>
-		${Template({
-			...args,
-			isInvalid: true,
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-block-end: 160px;"}>
-		${Template({
-			...args,
-			showFieldLabel: true,
-			fieldLabelText: "Select location, this label should wrap",
-		})}
-	</div>
-	<div style=${args.isOpen && "padding-block-end: 160px;"}>
-		${Template({
-			...args,
-			showFieldLabel: true,
-			fieldLabelText: "Select location, this label should wrap",
-			fieldLabelPosition: "left",
-		})}
-	</div>
-`;
-
-const closedVariants = (args) => defaultVariants({...args, isOpen: false});
-
-const chromaticKitchenSink = (args) => html`
-	<div style="display: flex; gap: 16px; flex-direction: column;">
-		${closedVariants(args)}
-	</div>
-	<div style="display: flex; gap: 16px; flex-direction: column; margin-top: 32px;">
-		${defaultVariants(args)}
-	</div>
-`;
-
-export const Default = (args) => window.isChromatic() ? chromaticKitchenSink(args) : Template(args);
+export const Default = ComboboxGroup.bind({});
 Default.args = {};
 
-export const Quiet = (args) => window.isChromatic()
-	? chromaticKitchenSink(args)
-	: Template({
-		...args
-	});
+export const Quiet = ComboboxGroup.bind({});
 Quiet.args = {
 	isQuiet: true,
 };
-
-
 
 // Standard
 export const WithLabel = Template.bind({});
