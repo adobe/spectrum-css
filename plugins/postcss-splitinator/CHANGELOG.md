@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.1.1-s2-foundations.0
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0) Thanks [@pfulton](https://github.com/pfulton)! - Inject missing tokens into theme files and adjust logic in the splitinator tool to replace nested variable references to the new system mappings
+
 ## 2.1.0
 
 ### Minor Changes
