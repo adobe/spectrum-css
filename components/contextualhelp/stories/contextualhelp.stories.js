@@ -121,7 +121,7 @@ HelpDefault.args = {
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	iconName: "Help",
 };
-HelpDefault.tags = ["docs-only"];
+HelpDefault.tags = ["autodocs", "!dev"];
 HelpDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -136,7 +136,7 @@ HelpWithLink.args = {
 	},
 	iconName: "Help",
 };
-HelpWithLink.tags = ["docs-only"];
+HelpWithLink.tags = ["autodocs", "!dev"];
 HelpWithLink.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -149,7 +149,7 @@ HelpTopPopover.args = {
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	iconName: "Help",
 };
-HelpTopPopover.tags = ["docs-only"];
+HelpTopPopover.tags = ["autodocs", "!dev"];
 HelpTopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
 };

@@ -125,7 +125,7 @@ TodayHighlighted.args = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["vrt-only"];
+Disabled.tags = ["test", "!autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true
 };
@@ -138,7 +138,7 @@ AbbreviatedWeekdays.args = {
 	year: undefined,
 	useDOWAbbrev: true,
 };
-AbbreviatedWeekdays.tags = ["docs-only"];
+AbbreviatedWeekdays.tags = ["autodocs", "!dev"];
 AbbreviatedWeekdays.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -150,7 +150,7 @@ Focused.args = {
 	year: undefined,
 	isFocused: true,
 };
-Focused.tags = ["docs-only"];
+Focused.tags = ["autodocs", "!dev"];
 Focused.parameters = {
 	chromatic: { disableSnapshot: true },
 };

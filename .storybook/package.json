@@ -1,37 +1,43 @@
 {
 	"name": "@spectrum-css/preview",
-	"version": "11.0.0-s2-foundations.5",
+	"version": "10.4.0",
 	"description": "A Spectrum CSS preview",
 	"license": "Apache-2.0",
 	"author": "Adobe",
 	"homepage": "https://opensource.adobe.com/spectrum-css/preview",
 	"type": "module",
+	"module": "main.js",
+	"scripts": {
+		"build": "storybook build --config-dir . --output-dir ./storybook-static"
+	},
 	"exports": {
 		".": "./preview.js",
-		"./decorator": "./decorators/index.js",
+		"./decorators": "./decorators/index.js",
+		"./decorators/*.js": "./decorators/*.js",
 		"./types": "./types/index.js",
+		"./types/*.js": "./types/*.js",
 		"./blocks": "./blocks/index.js",
 		"./main": "./main.js",
+		"./modes": "./modes/index.js",
+		"./modes/*.js": "./modes/*.js",
+		"./loaders": "./loaders/index.js",
+		"./loaders/*.js": "./loaders/*.js",
 		"./manager": "./manager.js",
 		"./preview": "./preview.js",
 		"./package.json": "./package.json",
 		"./deprecated/*": "./deprecated/*"
 	},
-	"module": "main.js",
-	"scripts": {
-		"build": "storybook build --config-dir . --output-dir ./storybook-static"
-	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
 		"@spectrum-css/tokens": "workspace:^",
-		"@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@v14.3.1",
+		"@spectrum-css/typography": "workspace:^",
 		"@spectrum-css/ui-icons": "workspace:^"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.24.5",
 		"@chromaui/addon-visual-tests": "^1.0.0",
 		"@etchteam/storybook-addon-status": "^5.0.0",
-		"@storybook/addon-a11y": "^8.1.10",
+		"@storybook/addon-a11y": "^8.1.6",
 		"@storybook/addon-actions": "^8.1.6",
 		"@storybook/addon-console": "^3.0.0",
 		"@storybook/addon-designs": "^8.0.2",

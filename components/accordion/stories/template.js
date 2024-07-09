@@ -22,7 +22,7 @@ export const AccordionItem = ({
 	customStyles = {},
 	customClasses = [],
 	onclick,
-} = {}, context) => {
+} = {}, context = {}) => {
 	return html`
 		<div
 			class=${classMap({
@@ -80,7 +80,7 @@ export const Template = ({
 	disableAll = false,
 	customClasses = [],
 	customStyles = {},
-} = {}, context) => {
+} = {}, context = {}) => {
 	const [, updateArgs] = useArgs();
 
 	return html`

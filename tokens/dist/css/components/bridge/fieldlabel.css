@@ -18,9 +18,14 @@
 	--spectrum-fieldlabel-font-weight: var(--system-fieldlabel-font-weight);
 	--spectrum-fieldlabel-line-height: var(--system-fieldlabel-line-height);
 	--spectrum-fieldlabel-line-height-cjk: var(--system-fieldlabel-line-height-cjk);
+	--spectrum-fieldlabel-top-to-text: var(--system-fieldlabel-top-to-text);
+	--spectrum-fieldlabel-bottom-to-text: var(--system-fieldlabel-bottom-to-text);
+	--spectrum-fieldlabel-font-size: var(--system-fieldlabel-font-size);
+	--spectrum-fieldlabel-side-margin-block-start: var(--system-fieldlabel-side-margin-block-start);
+	--spectrum-fieldlabel-side-padding-right: var(--system-fieldlabel-side-padding-right);
 }
 
-.spectrum-FieldLabel--sizeS {
+.spectrum-FieldLabel.spectrum-FieldLabel--sizeS {
 	--spectrum-fieldlabel-min-height: var(--system-fieldlabel-size-s-min-height);
 	--spectrum-fieldlabel-top-to-text: var(--system-fieldlabel-size-s-top-to-text);
 	--spectrum-fieldlabel-bottom-to-text: var(--system-fieldlabel-size-s-bottom-to-text);
@@ -30,7 +35,7 @@
 	--spectrum-field-label-text-to-asterisk: var(--system-fieldlabel-size-s-field-label-text-to-asterisk);
 }
 
-.spectrum-FieldLabel--sizeM {
+.spectrum-FieldLabel.spectrum-FieldLabel--sizeM {
 	--spectrum-fieldlabel-min-height: var(--system-fieldlabel-size-m-min-height);
 	--spectrum-fieldlabel-top-to-text: var(--system-fieldlabel-size-m-top-to-text);
 	--spectrum-fieldlabel-bottom-to-text: var(--system-fieldlabel-size-m-bottom-to-text);
@@ -40,7 +45,7 @@
 	--spectrum-field-label-text-to-asterisk: var(--system-fieldlabel-size-m-field-label-text-to-asterisk);
 }
 
-.spectrum-FieldLabel--sizeL {
+.spectrum-FieldLabel.spectrum-FieldLabel--sizeL {
 	--spectrum-fieldlabel-min-height: var(--system-fieldlabel-size-l-min-height);
 	--spectrum-fieldlabel-top-to-text: var(--system-fieldlabel-size-l-top-to-text);
 	--spectrum-fieldlabel-bottom-to-text: var(--system-fieldlabel-size-l-bottom-to-text);
@@ -50,7 +55,7 @@
 	--spectrum-field-label-text-to-asterisk: var(--system-fieldlabel-size-l-field-label-text-to-asterisk);
 }
 
-.spectrum-FieldLabel--sizeXL {
+.spectrum-FieldLabel.spectrum-FieldLabel--sizeXL {
 	--spectrum-fieldlabel-min-height: var(--system-fieldlabel-size-xl-min-height);
 	--spectrum-fieldlabel-top-to-text: var(--system-fieldlabel-size-xl-top-to-text);
 	--spectrum-fieldlabel-bottom-to-text: var(--system-fieldlabel-size-xl-bottom-to-text);

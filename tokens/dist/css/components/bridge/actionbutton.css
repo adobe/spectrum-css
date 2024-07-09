@@ -23,12 +23,9 @@
 	--spectrum-actionbutton-background-color-disabled: var(--system-actionbutton-background-color-disabled);
 	--spectrum-actionbutton-border-color-disabled: var(--system-actionbutton-border-color-disabled);
 	--spectrum-actionbutton-content-color-disabled: var(--system-actionbutton-content-color-disabled);
-	--spectrum-actionbutton-border-color-default-selected: var(--system-actionbutton-border-color-default-selected);
-	--spectrum-actionbutton-border-color-hover-selected: var(--system-actionbutton-border-color-hover-selected);
-	--spectrum-actionbutton-border-color-down-selected: var(--system-actionbutton-border-color-down-selected);
-	--spectrum-actionbutton-border-color-focus-selected: var(--system-actionbutton-border-color-focus-selected);
-	--spectrum-actionbutton-background-color-disabled-selected: var(--system-actionbutton-background-color-disabled-selected);
-	--spectrum-actionbutton-border-color-disabled-selected: var(--system-actionbutton-border-color-disabled-selected);
+	--spectrum-actionbutton-animation-duration: var(--system-actionbutton-animation-duration);
+	--spectrum-actionbutton-border-radius: var(--system-actionbutton-border-radius);
+	--spectrum-actionbutton-border-width: var(--system-actionbutton-border-width);
 	--spectrum-actionbutton-min-width: var(--system-actionbutton-min-width);
 	--spectrum-actionbutton-height: var(--system-actionbutton-height);
 	--spectrum-actionbutton-icon-size: var(--system-actionbutton-icon-size);
@@ -38,9 +35,6 @@
 	--spectrum-actionbutton-edge-to-visual: var(--system-actionbutton-edge-to-visual);
 	--spectrum-actionbutton-edge-to-text: var(--system-actionbutton-edge-to-text);
 	--spectrum-actionbutton-edge-to-visual-only: var(--system-actionbutton-edge-to-visual-only);
-	--spectrum-actionbutton-animation-duration: var(--system-actionbutton-animation-duration);
-	--spectrum-actionbutton-border-radius: var(--system-actionbutton-border-radius);
-	--spectrum-actionbutton-border-width: var(--system-actionbutton-border-width);
 	--spectrum-actionbutton-content-color-default: var(--system-actionbutton-content-color-default);
 	--spectrum-actionbutton-content-color-hover: var(--system-actionbutton-content-color-hover);
 	--spectrum-actionbutton-content-color-down: var(--system-actionbutton-content-color-down);
@@ -49,6 +43,12 @@
 	--spectrum-actionbutton-focus-indicator-thickness: var(--system-actionbutton-focus-indicator-thickness);
 	--spectrum-actionbutton-focus-indicator-color: var(--system-actionbutton-focus-indicator-color);
 	--spectrum-actionbutton-focus-indicator-border-radius: var(--system-actionbutton-focus-indicator-border-radius);
+	--spectrum-actionbutton-border-color-default-selected: var(--system-actionbutton-border-color-default-selected);
+	--spectrum-actionbutton-border-color-hover-selected: var(--system-actionbutton-border-color-hover-selected);
+	--spectrum-actionbutton-border-color-down-selected: var(--system-actionbutton-border-color-down-selected);
+	--spectrum-actionbutton-border-color-focus-selected: var(--system-actionbutton-border-color-focus-selected);
+	--spectrum-actionbutton-background-color-disabled-selected: var(--system-actionbutton-background-color-disabled-selected);
+	--spectrum-actionbutton-border-color-disabled-selected: var(--system-actionbutton-border-color-disabled-selected);
 	--spectrum-actionbutton-background-color-default-selected: var(--system-actionbutton-background-color-default-selected);
 	--spectrum-actionbutton-background-color-hover-selected: var(--system-actionbutton-background-color-hover-selected);
 	--spectrum-actionbutton-background-color-down-selected: var(--system-actionbutton-background-color-down-selected);

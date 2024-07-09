@@ -1,21 +1,23 @@
 import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
 import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
-import "@spectrum-css/tokens-legacy/dist/index.css?raw";
-import "@spectrum-css/tokens/dist/index.css?raw";
+
 import { setConsoleOptions } from "@storybook/addon-console";
-import "./assets/base.css";
-import "./assets/typekit.js";
 import {
 	withActions,
+	withArgEvents,
 	withContextWrapper,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
-} from "./decorators/index.js";
-import DocumentationTemplate from "./DocumentationTemplate.mdx";
-import { FontLoader, IconLoader, TokenLoader } from "./loaders/index.js";
+} from "./decorators";
+import { FontLoader, IconLoader, TokenLoader } from "./loaders";
+// import modes from "./modes";
+import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
+
+import "./assets/base.css";
+import "./assets/typekit.js";
 
 window.global = window;
 
@@ -29,18 +31,6 @@ setConsoleOptions({
 		/stylelint/,
 	],
 });
-
-// Inject the sprite sheets into the document
-let sprite = document.getElementById("spritesheets");
-if (!sprite) {
-	sprite = document.createElement("div");
-	sprite.id = "spritesheets";
-	sprite.innerHTML = workflowSprite + uiSprite;
-	document.body.appendChild(sprite);
-}
-else {
-	sprite.innerHTML = workflowSprite + uiSprite;
-}
 
 export const args = {
 	customClasses: [],
@@ -72,11 +62,10 @@ export const parameters = {
 		},
 	},
 	chromatic: {
-		// @todo: use a loader to ensure tokens load before stories without arbitrary delay
-		delay: 500,
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
 		pauseAnimationAtEnd: true,
+		// modes,
 	},
 	controls: {
 		expanded: true,
@@ -84,7 +73,7 @@ export const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "#root-inner",
+		root: "[data-html-preview]",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -137,10 +126,24 @@ export const decorators = [
 	withReducedMotionWrapper,
 	withContextWrapper,
 	withTestingPreviewWrapper,
+	withArgEvents,
 	withActions,
 	// Attach the icons to the window object for use in the stories
 	(StoryFn, context) => {
 		if (context?.loaded?.icons) window.icons = context.loaded.icons;
+
+		// Inject the sprite sheets into the document
+		let sprite = document.getElementById("spritesheets");
+		if (!sprite) {
+			sprite = document.createElement("div");
+			sprite.id = "spritesheets";
+			sprite.innerHTML = workflowSprite + uiSprite;
+			document.body.appendChild(sprite);
+		}
+		else {
+			sprite.innerHTML = workflowSprite + uiSprite;
+		}
+
 		return StoryFn(context);
 	},
 ];

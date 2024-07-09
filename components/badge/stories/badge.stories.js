@@ -129,19 +129,19 @@ const Variants = (args, variants) => html`
 `;
 
 export const SemanticVariants = (args) => Variants(args, semanticOptions);
-SemanticVariants.tags = ["docs-only"];
+SemanticVariants.tags = ["autodocs", "!dev"];
 SemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const NonSemanticVariants = (args) => Variants(args, nonSemanticOptions);
-NonSemanticVariants.tags = ["docs-only"];
+NonSemanticVariants.tags = ["autodocs", "!dev"];
 NonSemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const FixedVariants = (args) => Variants(args, fixedOptions);
-FixedVariants.tags = ["docs-only"];
+FixedVariants.tags = ["autodocs", "!dev"];
 FixedVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
