@@ -1,4 +1,5 @@
 import { html } from "lit";
+import { version } from "../package.json";
 
 import { Template } from "./template";
 
@@ -55,6 +56,9 @@ export default {
 		text: "This is an alert.",
 		variant: "neutral",
 		isClosable: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

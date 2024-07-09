@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -61,6 +62,9 @@ export default {
 		alignment: "left",
 		isDisabled: false,
 		isRequired: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

@@ -1,4 +1,5 @@
 import { html } from "lit";
+import { version } from "../package.json";
 
 import { Template } from "./form.template.js";
 
@@ -22,6 +23,9 @@ export default {
 	args: {
 		rootClass: "spectrum-Form",
 		labelsAbove: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 	decorators: [
 		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`

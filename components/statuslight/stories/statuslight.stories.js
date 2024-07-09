@@ -1,5 +1,5 @@
 import { html } from "lit";
-
+import { version } from "../package.json";
 import { Template } from "./template";
 
 export default {
@@ -62,6 +62,9 @@ export default {
 		size: "m",
 		label: "Status",
 		variant: "info",
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

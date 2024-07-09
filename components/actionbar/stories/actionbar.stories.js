@@ -1,6 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
+import { version } from "../package.json";
 import { ActionBarGroup, Template } from "./template";
 
 /**
@@ -77,7 +78,8 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/file/MPtRIVRzPp2VHiEplwXL2X/S-%2F-Manual?node-id=465%3A3127&t=xbooxCWItOFgG2xM-1",
 		},
-	}
+		componentVersion: version,
+	},
 };
 
 export const Default = ActionBarGroup.bind({});

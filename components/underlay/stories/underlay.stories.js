@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -27,8 +28,9 @@ export default {
 		chromatic: { disableSnapshot: true },
 		actions: {
 			handles: []
-		}
-	}
+		},
+		componentVersion: version,
+	},
 };
 
 export const Default = Template.bind({});

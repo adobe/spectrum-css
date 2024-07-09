@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -50,6 +51,7 @@ export default {
 		actions: {
 			handles: ["click .spectrum-TreeView-itemLink"],
 		},
+		componentVersion: version,
 	},
 };
 

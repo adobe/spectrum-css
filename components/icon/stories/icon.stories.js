@@ -1,6 +1,7 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { version } from "../package.json";
 
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
@@ -91,6 +92,9 @@ export default {
 		iconName: "ABC",
 		size: "xl",
 		useRef: true,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

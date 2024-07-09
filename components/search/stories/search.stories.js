@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template.js";
 
 /**
@@ -49,6 +50,7 @@ export default {
 				"click .spectrum-Search-icon",
 			],
 		},
+		componentVersion: version,
 	},
 };
 

@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { TrayGroup } from "./template";
 
 /**
@@ -33,6 +34,7 @@ export default {
 		chromatic: {
 			delay: 2000,
 		},
+		componentVersion: version,
 	}
 };
 

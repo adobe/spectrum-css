@@ -1,6 +1,6 @@
-import { Template } from "./template";
-
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
+import { version } from "../package.json";
+import { Template } from "./template";
 
 /**
  * A selectable list of assets, often used inside of miller columns.
@@ -18,6 +18,7 @@ export default {
 		actions: {
 			handles: [...(Checkbox.parameters?.actions?.handles ?? [])],
 		},
+		componentVersion: version,
 	},
 };
 

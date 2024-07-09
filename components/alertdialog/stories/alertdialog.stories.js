@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -61,7 +62,8 @@ export default {
 			story: {
 				height: "300px"
 			}
-		}
+		},
+		componentVersion: version,
 	},
 };
 

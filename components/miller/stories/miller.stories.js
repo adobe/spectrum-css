@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -11,6 +12,9 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-MillerColumns",
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

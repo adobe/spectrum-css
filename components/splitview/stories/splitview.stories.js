@@ -1,5 +1,5 @@
 import { within } from "@storybook/testing-library";
-
+import { version } from "../package.json";
 import { Template } from "./template";
 
 export default {
@@ -68,6 +68,9 @@ export default {
 		rootClass: "spectrum-SplitView",
 		isResizable: false,
 		componentHeight: "200px",
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

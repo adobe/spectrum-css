@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -40,6 +41,9 @@ export default {
 		rootClass: "spectrum-ColorArea",
 		isDisabled: false,
 		isFocused: false,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

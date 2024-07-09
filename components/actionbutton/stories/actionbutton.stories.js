@@ -1,4 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { version } from "../package.json";
 import { Variants } from "./template";
 
 /**
@@ -141,6 +142,7 @@ export default {
 		actions: {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
 		},
+		componentVersion: version,
 	},
 };
 

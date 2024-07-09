@@ -1,4 +1,5 @@
 import { html } from "lit";
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -193,6 +194,7 @@ export default {
 				"focusout .spectrum-Textfield"
 			],
 		},
+		componentVersion: version,
 	},
 };
 

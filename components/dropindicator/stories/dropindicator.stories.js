@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -33,6 +34,9 @@ export default {
 		rootClass: "spectrum-DropIndicator",
 		direction: "vertical",
 		size: "300px",
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

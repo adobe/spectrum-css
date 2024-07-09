@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -126,6 +127,7 @@ export default {
 		actions: {
 			handles: [],
 		},
+		componentVersion: version,
 	},
 };
 

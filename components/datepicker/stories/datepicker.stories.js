@@ -1,4 +1,5 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -121,6 +122,7 @@ export default {
 				height: "350px"
 			}
 		},
+		componentVersion: version,
 	},
 };
 

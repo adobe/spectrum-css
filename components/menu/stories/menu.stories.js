@@ -1,5 +1,6 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { html } from "lit";
+import { version } from "../package.json";
 import { MenuItemWithVariants, MenuWithVariants, Template } from "./template";
 
 const menuArgTypes = {
@@ -281,6 +282,7 @@ export default {
 				height: "300px"
 			}
 		},
+		componentVersion: version,
 	},
 	decorators: [
 		(Story, context) => html`

@@ -1,6 +1,7 @@
-import { Template } from "./template";
+import { version } from "../package.json";
 
 import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
+import { Template } from "./template";
 
 /**
  * A field group is a group of fields, usually radios (also known as a radio group) or checkboxes
@@ -88,6 +89,7 @@ export default {
 				...(Radio.parameters?.actions?.handles ?? [])
 			],
 		},
+		componentVersion: version,
 	},
 };
 

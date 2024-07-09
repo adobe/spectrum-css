@@ -2,6 +2,7 @@ import { Template as Typography } from "@spectrum-css/typography/stories/templat
 import { userEvent, within } from "@storybook/testing-library";
 import { html } from "lit";
 import { when } from "lit/directives/when.js";
+import { version } from "../package.json";
 
 import { Template } from "./template";
 
@@ -118,6 +119,7 @@ export default {
 				height: "300px"
 			}
 		},
+		componentVersion: version,
 	},
 	decorators: [
 		(Story, context) => html`

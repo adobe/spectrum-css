@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
+import { version } from "../package.json";
 
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template";
@@ -73,6 +74,9 @@ export default {
 		altText: "Avatar",
 		isDisabled: false,
 		hasLink: true,
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 

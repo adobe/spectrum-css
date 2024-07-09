@@ -1,5 +1,6 @@
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
+import { version } from "../package.json";
 
 import { Template } from "./template";
 
@@ -23,6 +24,9 @@ export default {
 	args: {
 		rootClass: "spectrum-OpacityCheckerboard",
 		backgroundPosition: "left top"
+	},
+	parameters: {
+		componentVersion: version,
 	},
 	decorators: [
 		(Story, context) => html`<div style=${styleMap({ inlineSize: "100px", blockSize: "100px" })}>${Story(context)}</div>`

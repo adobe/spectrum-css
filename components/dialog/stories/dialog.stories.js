@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -63,6 +64,7 @@ export default {
 				height: "500px",
 			},
 		},
+		componentVersion: version,
 	},
 };
 

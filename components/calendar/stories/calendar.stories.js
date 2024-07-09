@@ -1,6 +1,6 @@
-import { Template } from "./template";
-
 import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { version } from "../package.json";
+import { Template } from "./template";
 
 const months = [...Array(12).keys()].map((key) =>
 	new Date(0, key).toLocaleString("en", { month: "long" })
@@ -103,6 +103,7 @@ export default {
 				...(ActionButtonStories.parameters.actions.handles ?? [])
 			],
 		},
+		componentVersion: version,
 	},
 };
 

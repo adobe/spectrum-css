@@ -1,3 +1,4 @@
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -62,6 +63,7 @@ export default {
 		label: "Switch label",
 		size: "m",
 	},
+	componentVersion: version,
 };
 
 export const Default = Template.bind({});

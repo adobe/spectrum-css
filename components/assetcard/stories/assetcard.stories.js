@@ -1,6 +1,6 @@
-import { Template } from "./template";
-
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
+import { version } from "../package.json";
+import { Template } from "./template";
 
 /**
  * The asset card component allows users to select and manage assets and their metadata in a grid.
@@ -99,6 +99,7 @@ export default {
 		actions: {
 			handles: [...(Checkbox.parameters?.actions?.handles ?? [])],
 		},
+		componentVersion: version,
 	},
 };
 

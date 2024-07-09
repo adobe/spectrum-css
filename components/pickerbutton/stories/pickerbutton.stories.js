@@ -1,4 +1,5 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -112,6 +113,9 @@ export default {
 		iconType: "ui",
 		iconName: "ChevronDown",
 		position: "right"
+	},
+	parameters: {
+		componentVersion: version,
 	},
 };
 
