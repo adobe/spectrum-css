@@ -1,7 +1,7 @@
 
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { version } from "../package.json";
+import packageJSON from "../package.json";
 import { AccordionGroup, Template } from "./template.js";
 
 /**
@@ -141,7 +141,8 @@ export default {
 			handles: ["click .spectrum-Accordion-item"],
 		},
 		chromatic: { disableSnapshot: true },
-		componentVersion: version,
+		packageData: packageJSON,
+		componentVersion: packageJSON.version,
 	},
 };
 
@@ -152,19 +153,19 @@ Default.parameters = {
 };
 
 export const Regular = Template.bind({});
-Regular.tags = ["docs-only"];
+Regular.tags = ["autodocs", "!dev"];
 Regular.args = {
 	density: "regular",
 };
 
 export const Compact = Template.bind({});
-Compact.tags = ["docs-only"];
+Compact.tags = ["autodocs", "!dev"];
 Compact.args = {
 	density: "compact",
 };
 
 export const Spacious = Template.bind({});
-Spacious.tags = ["docs-only"];
+Spacious.tags = ["autodocs", "!dev"];
 Spacious.args = {
 	density: "spacious",
 };

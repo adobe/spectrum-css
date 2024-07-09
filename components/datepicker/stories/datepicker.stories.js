@@ -163,7 +163,7 @@ QuietRange.parameters = {
 		}
 	},
 };
-QuietRange.tags = ["docs-only"];
+QuietRange.tags = ["autodocs", "!dev"];
 
 export const Invalid = Template.bind({});
 Invalid.args = {
@@ -178,7 +178,7 @@ Invalid.parameters = {
 		}
 	},
 };
-Invalid.tags = ["docs-only"];
+Invalid.tags = ["autodocs", "!dev"];
 
 export const QuietInvalid = Template.bind({});
 QuietInvalid.args = {
@@ -194,7 +194,7 @@ QuietInvalid.parameters = {
 		}
 	},
 };
-QuietInvalid.tags = ["docs-only"];
+QuietInvalid.tags = ["autodocs", "!dev"];
 
 export const ReadOnly = Template.bind({});
 ReadOnly.args = {
@@ -208,7 +208,7 @@ ReadOnly.parameters = {
 		}
 	}
 };
-ReadOnly.tags = ["docs-only"];
+ReadOnly.tags = ["autodocs", "!dev"];
 
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -222,7 +222,7 @@ Disabled.parameters = {
 		}
 	}
 };
-Disabled.tags = ["docs-only"];
+Disabled.tags = ["autodocs", "!dev"];
 
 export const QuietDisabled = Template.bind({});
 QuietDisabled.args = {
@@ -237,4 +237,4 @@ QuietDisabled.parameters = {
 		}
 	}
 };
-QuietDisabled.tags = ["docs-only"];
+QuietDisabled.tags = ["autodocs", "!dev"];

@@ -47,7 +47,7 @@ Default.parameters = {
 };
 
 export const WithForcedColors = CoachIndicatorGroup.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	// Sets the forced-colors media feature for a specific story.
 	chromatic: {

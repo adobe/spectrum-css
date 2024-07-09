@@ -1,8 +1,8 @@
-import { version } from "../package.json";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -489,14 +489,8 @@ StaticBlack.args = {
 	staticColor: "black",
 };
 
-export const Express = Variants.bind();
-Express.tags = ["vrt-only"];
-Express.args = {
-	express: true,
-};
-
 export const WithForcedColors = Variants.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: { forcedColors: "active" },
 };

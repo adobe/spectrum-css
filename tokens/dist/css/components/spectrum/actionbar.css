@@ -17,6 +17,7 @@
 	--system-actionbar-item-counter-font-size: var(--spectrum-font-size-100);
 	--system-actionbar-item-counter-line-height: var(--spectrum-line-height-100);
 	--system-actionbar-item-counter-color: var(--spectrum-neutral-content-color-default);
+	--system-actionbar-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
 	--system-actionbar-popover-background-color: var(--spectrum-gray-25);
 	--system-actionbar-popover-border-color: var(--spectrum-gray-400);
 	--system-actionbar-emphasized-background-color: var(--spectrum-informative-background-color-default);
@@ -33,7 +34,4 @@
 	--system-actionbar-shadow-vertical: var(--spectrum-drop-shadow-y);
 	--system-actionbar-shadow-blur: var(--spectrum-drop-shadow-blur);
 	--system-actionbar-shadow-color: var(--spectrum-drop-shadow-color);
-	--system-actionbar-lang-ja-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	--system-actionbar-lang-zh-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	--system-actionbar-lang-ko-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
 }

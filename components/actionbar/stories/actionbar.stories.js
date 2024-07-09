@@ -86,7 +86,7 @@ export const Default = ActionBarGroup.bind({});
 Default.args = {};
 
 export const Emphasized = Template.bind({});
-Emphasized.tags = ["docs-only"];
+Emphasized.tags = ["autodocs", "!dev"];
 Emphasized.args = {
 	isEmphasized: true,
 };

@@ -1,8 +1,7 @@
+import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-
-import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { Template } from "./template";
 
 /**
@@ -251,14 +250,8 @@ Open.args = {
 	isOpen: true,
 };
 
-export const Express = ChromaticPickerGroup.bind({});
-Express.tags = ["vrt-only"];
-Express.args = {
-	express: true,
-};
-
 export const WithForcedColors = ChromaticPickerGroup.bind({});
-WithForcedColors.tags = ["vrt-only"];
+WithForcedColors.tags = ["test", "!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	// Sets the forced-colors media feature for a specific story.
 	chromatic: { forcedColors: "active" },
