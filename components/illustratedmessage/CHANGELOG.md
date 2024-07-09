@@ -1,5 +1,15 @@
 # Change Log
 
+## 8.0.0-s2-foundations.6
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0) Thanks [@pfulton](https://github.com/pfulton)! - Inject missing tokens into theme files and adjust logic in the splitinator tool to replace nested variable references to the new system mappings
+
+- Updated dependencies [[`130e137`](https://github.com/adobe/spectrum-css/commit/130e1372b223641efe0a3a23c83ff1d01a70bf1d), [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.6
+  - @spectrum-css/typography@7.0.0-s2-foundations.6
+
 ## 8.0.0-s2-foundations.5
 
 ### Patch Changes
