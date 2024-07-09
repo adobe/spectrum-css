@@ -1,5 +1,13 @@
 # Change Log
 
+## 10.4.0
+
+### Minor Changes
+
+- [#2892](https://github.com/adobe/spectrum-css/pull/2892) [`e6fd9f6`](https://github.com/adobe/spectrum-css/commit/e6fd9f6bab4940d946e51cd396e49d3faf025565) Thanks [@jawinn](https://github.com/jawinn)! - Adds a custom doc block to Storybook: `<ComponentDetails />`
+  This displays the current version number of the component on each component's Docs page. This doc block is added to the
+  default docs MDX template and to all components with custom docs templates.
+
 ## 10.3.0
 
 ### Minor Changes
