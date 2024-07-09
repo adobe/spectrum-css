@@ -1,5 +1,5 @@
-import { TestTemplate, UIArrowsTemplate, UIDefaultTemplate, WorkflowDefaultTemplate, WorkflowSizingTemplate } from "./template";
 import { version } from "../package.json";
+import { TestTemplate, UIArrowsTemplate, UIDefaultTemplate, WorkflowDefaultTemplate, WorkflowSizingTemplate } from "./template";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
 /**
