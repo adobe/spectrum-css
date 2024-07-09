@@ -9,6 +9,7 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 import "../index.css";
 
@@ -172,3 +173,137 @@ export const Template = ({
 	</div>
 	`;
 };
+
+const renderDataWithHeading = (data) => html`
+	${data.map(item => html`
+		<div>
+			${item.testHeading ? html`
+				<div
+					style=${styleMap({
+						marginBottom: "10px",
+					})}
+				>
+					${Typography({
+						semantics: "detail",
+						size: "l",
+						content: [item.testHeading]
+					})}
+				</div>
+			` : ""}
+			${Template({...item})}
+		</div>
+	`)}
+`;
+
+const Variants = ({ testData, stateData }) => (args) => html`
+	<div style="display: flex; flex-direction: column; gap: 32px;">
+		${window.isChromatic() ?
+			html`
+				${renderDataWithHeading(testData)}
+				${renderDataWithHeading(stateData)}
+			`
+			: html`
+				${Template({...args})}
+				${Template({
+					...args,
+					multiline: true,
+				})}
+			`
+		}
+	</div>
+`;
+
+export const TextFieldGroup = Variants({
+	Template,
+	testData: [{
+	},
+	{
+		testHeading: "With field label",
+		displayLabel: true,
+		labelText: "Username",
+	},
+	{
+		testHeading: "With side label",
+		displayLabel: true,
+		labelText: "Username",
+		labelPosition: "side",
+	},
+	{
+		testHeading: "With value",
+		displayLabel: true,
+		labelText: "Username",
+		value: "username@reallylongemail.com"
+	},
+	{
+		testHeading: "With placeholder",
+		placeholder: "Username",
+	},
+	{
+		testHeading: "With help text",
+		displayLabel: true,
+		labelText: "Username",
+		helpText: "Please enter a username between 8 and 16 characters",
+	},
+	{
+		testHeading: "Text area",
+		multiline: true,
+	},
+	{
+		testHeading: "Text area with label",
+		displayLabel: true,
+		labelText: "Username",
+		multiline: true,
+	},
+	{
+		testHeading: "Text area with value",
+		displayLabel: true,
+		labelText: "Username",
+		multiline: true,
+		value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+	},
+	{
+		testHeading: "Text area with character count",
+		displayLabel: true,
+		labelText: "Comments",
+		multiline: true,
+		hasCharacterCount: true,
+		characterCount: 400,
+		value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+	}
+	],
+	stateData: [
+		{
+			testHeading: "Invalid",
+			isInvalid: true,
+		}, 
+		{
+			testHeading: "Valid",
+			isValid: true,
+		}, 
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		}, 
+		{
+			testHeading: "Keyboard focused",
+			isKeyboardFocused: true,
+		}, 
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		}, 
+		{
+			testHeading: "Required",
+			isRequired: true,
+		}, 
+		{
+			testHeading: "Read-only",
+			value: "username@reallylongemail.com",
+			isReadOnly: true,
+		}, 
+		{
+			testHeading: "Loading",
+			isLoading: true,
+		}
+	],
+});

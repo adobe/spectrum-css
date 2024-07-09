@@ -1,5 +1,4 @@
-import { html } from "lit";
-import { Template } from "./template";
+import { TextFieldGroup } from "./template";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
@@ -114,6 +113,7 @@ export default {
 		},
 		multiline: {
 			name: "Multiline",
+			description: "Turns text field into textarea",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -237,79 +237,5 @@ export default {
 	},
 };
 
-const TextFieldGroup = (args) => html`
-	<div style="display: flex; flex-direction: column; gap: 32px;">
-		${Template({
-			...args
-		})}
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-			})
-			: html`` }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username that is really long and wraps onto a second line",
-				isInvalid: true,
-			})
-			: html`` }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				labelPosition: "side",
-				isValid: true,
-				value: "username@reallylongemail.com"
-			})
-			: html`` }
-	</div>
-`;
-
-const TextAreaGroup = (args) => html`
-	<div style="display: flex; flex-direction: column; gap: 32px;">
-		${Template({
-			...args,
-			multiline: true,
-			value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-		})}
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username that is really long and wraps onto a second line",
-				isInvalid: true,
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				labelPosition: "side",
-				isValid: true,
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-	</div>
-`;
-
 export const Default = TextFieldGroup.bind({});
 Default.args = {};
-
-export const TextArea = TextAreaGroup.bind({});
-TextArea.args = {
-	multiline: true,
-	grows: true,
-	value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-};
