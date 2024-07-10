@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-radio-button-border-color-default: var(--spectrum-gray-600);
 	--system-radio-button-border-color-hover: var(--spectrum-gray-700);
 	--system-radio-button-border-color-down: var(--spectrum-gray-800);
@@ -80,3 +80,12 @@
 	--system-radio-emphasized-button-checked-border-color-down: var(--spectrum-accent-color-1100);
 	--system-radio-emphasized-button-checked-border-color-focus: var(--spectrum-accent-color-1000);
 }
+
+.spectrum--express {
+	--system-radio-button-border-color-default: var(--spectrum-gray-800);
+	--system-radio-button-border-color-hover: var(--spectrum-gray-900);
+	--system-radio-button-border-color-down: var(--spectrum-gray-900);
+	--system-radio-button-border-color-focus: var(--spectrum-gray-900);
+}
+
+/*# sourceMappingURL=express.css.map */

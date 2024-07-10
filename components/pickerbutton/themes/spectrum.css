@@ -11,12 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-PickerButton {
-		--spectrum-picker-button-background-color: var(--spectrum-gray-50);
-		--spectrum-picker-button-background-color-hover: var(--spectrum-gray-100);
-		--spectrum-picker-button-background-color-down: var(--spectrum-gray-200);
-		--spectrum-picker-button-background-color-key-focus: var(--spectrum-gray-100);
+		--spectrum-picker-button-background-color: var(--spectrum-gray-75);
+		--spectrum-picker-button-background-color-hover: var(--spectrum-gray-200);
+		--spectrum-picker-button-background-color-down: var(--spectrum-gray-300);
+		--spectrum-picker-button-background-color-key-focus: var(--spectrum-gray-200);
 
 		--spectrum-picker-button-border-color: inherit;
 		--spectrum-picker-button-border-radius: var(--spectrum-corner-radius-100);
@@ -52,27 +52,27 @@
 		--spectrum-picker-button-background-animation-duration: var(--spectrum-animation-duration-100);
 
 		&:disabled {
-			--mod-picker-button-background-color: var(--mod-picker-button-background-color-disabled, var(--spectrum-disabled-background-color));
-			--mod-picker-button-background-color-hover: var(--mod-picker-button-background-color-hover-disabled, var(--spectrum-disabled-background-color));
-			--mod-picker-button-background-color-down: var(--mod-picker-button-background-color-down-disabled, var(--spectrum-disabled-background-color));
-			--mod-picker-button-border-color: var(--mod-picker-button-border-color-disabled, var(--spectrum-disabled-background-color));
+			--spectrum-picker-button-background-color: var(--mod-picker-button-background-color-disabled, var(--spectrum-disabled-background-color));
+			--spectrum-picker-button-background-color-hover: var(--mod-picker-button-background-color-hover-disabled, var(--spectrum-disabled-background-color));
+			--spectrum-picker-button-background-color-down: var(--mod-picker-button-background-color-down-disabled, var(--spectrum-disabled-background-color));
+			--spectrum-picker-button-border-color: var(--mod-picker-button-border-color-disabled, var(--spectrum-disabled-background-color));
 
-			--mod-picker-button-font-color: var(--mod-picker-button-font-color-disabled, var(--spectrum-disabled-content-color));
-			--mod-picker-button-font-color-hover: var(--mod-picker-button-font-color-hover-disabled, var(--spectrum-disabled-content-color));
-			--mod-picker-button-font-color-down: var(--mod-picker-button-font-color-down-disabled, var(--spectrum-disabled-content-color));
+			--spectrum-picker-button-font-color: var(--mod-picker-button-font-color-disabled, var(--spectrum-disabled-content-color));
+			--spectrum-picker-button-font-color-hover: var(--mod-picker-button-font-color-hover-disabled, var(--spectrum-disabled-content-color));
+			--spectrum-picker-button-font-color-down: var(--mod-picker-button-font-color-down-disabled, var(--spectrum-disabled-content-color));
 
-			--mod-picker-button-icon-color: var(--mod-picker-button-icon-color-disabled, var(--spectrum-disabled-content-color));
-			--mod-picker-button-icon-color-hover: var(--mod-picker-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
-			--mod-picker-button-icon-color-down: var(--mod-picker-button-icon-color-down-disabled, var(--spectrum-disabled-content-color));
+			--spectrum-picker-button-icon-color: var(--mod-picker-button-icon-color-disabled, var(--spectrum-disabled-content-color));
+			--spectrum-picker-button-icon-color-hover: var(--mod-picker-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
+			--spectrum-picker-button-icon-color-down: var(--mod-picker-button-icon-color-down-disabled, var(--spectrum-disabled-content-color));
 		}
 
 		&.spectrum-PickerButton--quiet {
-			--mod-picker-button-background-color: var(--mod-picker-button-background-color-quiet, transparent);
-			--mod-picker-button-background-color-hover: var(--mod-picker-button-background-color-hover-quiet, transparent);
-			--mod-picker-button-background-color-down: var(--mod-picker-button-background-color-down-quiet, transparent);
-			--mod-picker-button-background-color-key-focus: var(--mod-picker-button-background-color-key-focus-quiet, transparent);
+			--spectrum-picker-button-background-color: var(--mod-picker-button-background-color-quiet, transparent);
+			--spectrum-picker-button-background-color-hover: var(--mod-picker-button-background-color-hover-quiet, transparent);
+			--spectrum-picker-button-background-color-down: var(--mod-picker-button-background-color-down-quiet, transparent);
+			--spectrum-picker-button-background-color-key-focus: var(--mod-picker-button-background-color-key-focus-quiet, transparent);
 
-			--mod-picker-button-border-color: var(--mod-picker-button-border-color-quiet, transparent);
+			--spectrum-picker-button-border-color: var(--mod-picker-button-border-color-quiet, transparent);
 		}
 
 		&.spectrum-PickerButton--sizeS {

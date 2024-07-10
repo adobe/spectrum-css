@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum.css";
+@import "themes/spectrum-two.css";
 
 /********* HIGH CONTRAST *********/
 @media (forced-colors: active) {
@@ -70,6 +70,15 @@
 		.spectrum-Table-checkbox .spectrum-Checkbox-box::before {
 			outline: var(--highcontrast-table-selected-row-text-color) 1px solid;
 		}
+	}
+}
+
+.spectrum-Table {
+	/* @passthrough for nested component(s) */
+	--mod-thumbnail-size: var(--mod-table-thumbnail-size, var(--spectrum-table-thumbnail-size));
+
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	}
 }
 
@@ -183,7 +192,7 @@
 
 	&.is-drop-target {
 		/* Make sure negative offset outline is not covered by borders. */
-		--mod-table-border-color: transparent;
+		--spectrum-table-border-color: transparent;
 		outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
 		outline-style: solid;
 		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
@@ -333,7 +342,7 @@
 
 	&.is-drop-target {
 		/* Make sure negative offset outline is not covered by borders. */
-		--mod-table-border-color: var(--highcontrast-table-focus-indicator-color, transparent);
+		--spectrum-table-border-color: var(--highcontrast-table-focus-indicator-color, transparent);
 		outline-color: var(--highcontrast-table-focus-indicator-color, var(--mod-table-drop-zone-outline-color, var(--spectrum-table-drop-zone-outline-color)));
 		outline-style: solid;
 		outline-width: var(--mod-table-focus-indicator-thickness, var(--spectrum-table-focus-indicator-thickness));
@@ -458,7 +467,7 @@
 	border-radius: var(--mod-table-border-radius, var(--spectrum-table-border-radius));
 
 	&.spectrum-Table--quiet {
-		--mod-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-75)));
+		--spectrum-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-75)));
 		border-block-start: none;
 	}
 

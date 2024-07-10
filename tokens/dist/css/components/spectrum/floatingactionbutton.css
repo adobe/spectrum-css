@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-floatingactionbutton-floating-action-button-size: var(--spectrum-component-height-200);
 	--system-floatingactionbutton-floating-action-button-icon-size: var(--spectrum-workflow-icon-size-200);
 	--system-floatingactionbutton-floating-action-button-padding: var(--spectrum-component-pill-edge-to-visual-only-200);
@@ -37,3 +37,5 @@
 	--system-floatingactionbutton-secondary-floating-action-button-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
 	--system-floatingactionbutton-secondary-floating-action-button-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

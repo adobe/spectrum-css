@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-ActionBar {
 		--spectrum-actionbar-height: var(--spectrum-action-bar-height);
 		--spectrum-actionbar-corner-radius: var(--spectrum-corner-radius-100);
@@ -25,7 +25,7 @@
 		--spectrum-actionbar-item-counter-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
 		/* colors - applied to popover */
-		--spectrum-actionbar-popover-background-color: var(--spectrum-gray-25);
+		--spectrum-actionbar-popover-background-color: var(--spectrum-gray-50);
 		--spectrum-actionbar-popover-border-color: var(--spectrum-gray-400);
 
 		/* emphasized variation colors */

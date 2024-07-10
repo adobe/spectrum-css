@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-helptext-line-height: var(--spectrum-line-height-100);
 	--system-helptext-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
 	--system-helptext-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
@@ -58,3 +58,5 @@
 	--system-helptext-size-xl-top-to-text: var(--spectrum-component-top-to-text-200);
 	--system-helptext-size-xl-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

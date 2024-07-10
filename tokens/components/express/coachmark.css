@@ -11,14 +11,14 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-coachmark-min-width: var(--spectrum-coach-mark-minimum-width);
 	--system-coachmark-width: var(--spectrum-coach-mark-width);
 	--system-coachmark-max-width: var(--spectrum-coach-mark-maximum-width);
 	--system-coachmark-media-height: var(--spectrum-coach-mark-media-height);
 	--system-coachmark-media-min-height: var(--spectrum-coach-mark-media-minimum-height);
-	--system-coachmark-border-size: var(--system-coachmark-popover-border-width);
-	--system-coachmark-border-radius: var(--system-coachmark-popover-corner-radius);
+	--system-coachmark-border-size: var(--mod-popover-border-width);
+	--system-coachmark-border-radius: var(--mod-popover-corner-radius);
 	--system-coachmark-padding: var(--spectrum-coach-mark-edge-to-content);
 	--system-coachmark-heading-to-action-button: var(--spectrum-spacing-300);
 	--system-coachmark-header-to-body: var(--spectrum-spacing-200);
@@ -42,9 +42,6 @@
 	--system-coachmark-step-line-height: var(--spectrum-body-line-height);
 	--system-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
 	--system-coachmark-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
-	--system-coachmark-buttongroup-justify-content: flex-end;
-	--system-coachmark-popover-border-width: var(--spectrum-border-width-100);
-	--system-coachmark-popover-corner-radius: var(--spectrum-corner-radius-100);
-	--system-coachmark-popover-content-area-spacing-vertical: 0;
-	--system-coachmark-button-edge-to-visual-only: 9px;
 }
+
+/*# sourceMappingURL=express.css.map */

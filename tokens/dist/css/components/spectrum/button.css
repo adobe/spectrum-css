@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-button-animation-duration: var(--spectrum-animation-duration-100);
 	--system-button-border-radius: var(--spectrum-corner-radius-100);
 	--system-button-border-width: var(--spectrum-border-width-200);
@@ -21,11 +21,10 @@
 	--system-button-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
 	--system-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	--system-button-intended-icon-size: var(--spectrum-workflow-icon-size-50);
-	--system-button-progress-circle-position: absolute;
-	--system-button-background-color-default: var(--spectrum-gray-50);
-	--system-button-background-color-hover: var(--spectrum-gray-100);
-	--system-button-background-color-down: var(--spectrum-gray-200);
-	--system-button-background-color-focus: var(--spectrum-gray-100);
+	--system-button-background-color-default: var(--spectrum-gray-75);
+	--system-button-background-color-hover: var(--spectrum-gray-200);
+	--system-button-background-color-down: var(--spectrum-gray-300);
+	--system-button-background-color-focus: var(--spectrum-gray-200);
 	--system-button-border-color-default: var(--spectrum-gray-400);
 	--system-button-border-color-hover: var(--spectrum-gray-500);
 	--system-button-border-color-down: var(--spectrum-gray-600);
@@ -113,9 +112,9 @@
 	--system-button-primary-border-color-disabled: transparent;
 	--system-button-primary-content-color-disabled: var(--spectrum-disabled-content-color);
 	--system-button-primary-outline-background-color-default: transparent;
-	--system-button-primary-outline-background-color-hover: var(--spectrum-gray-200);
+	--system-button-primary-outline-background-color-hover: var(--spectrum-gray-300);
 	--system-button-primary-outline-background-color-down: var(--spectrum-gray-400);
-	--system-button-primary-outline-background-color-focus: var(--spectrum-gray-200);
+	--system-button-primary-outline-background-color-focus: var(--spectrum-gray-300);
 	--system-button-primary-outline-border-color-default: var(--spectrum-gray-800);
 	--system-button-primary-outline-border-color-hover: var(--spectrum-gray-900);
 	--system-button-primary-outline-border-color-down: var(--spectrum-gray-900);
@@ -127,10 +126,10 @@
 	--system-button-primary-outline-background-color-disabled: transparent;
 	--system-button-primary-outline-border-color-disabled: var(--spectrum-disabled-border-color);
 	--system-button-primary-outline-content-color-disabled: var(--spectrum-disabled-content-color);
-	--system-button-secondary-background-color-default: var(--spectrum-gray-100);
-	--system-button-secondary-background-color-hover: var(--spectrum-gray-200);
+	--system-button-secondary-background-color-default: var(--spectrum-gray-200);
+	--system-button-secondary-background-color-hover: var(--spectrum-gray-300);
 	--system-button-secondary-background-color-down: var(--spectrum-gray-400);
-	--system-button-secondary-background-color-focus: var(--spectrum-gray-200);
+	--system-button-secondary-background-color-focus: var(--spectrum-gray-300);
 	--system-button-secondary-border-color-default: transparent;
 	--system-button-secondary-border-color-hover: transparent;
 	--system-button-secondary-border-color-down: transparent;
@@ -143,10 +142,10 @@
 	--system-button-secondary-border-color-disabled: transparent;
 	--system-button-secondary-content-color-disabled: var(--spectrum-disabled-content-color);
 	--system-button-secondary-outline-background-color-default: transparent;
-	--system-button-secondary-outline-background-color-hover: var(--spectrum-gray-200);
+	--system-button-secondary-outline-background-color-hover: var(--spectrum-gray-300);
 	--system-button-secondary-outline-background-color-down: var(--spectrum-gray-400);
-	--system-button-secondary-outline-background-color-focus: var(--spectrum-gray-200);
-	--system-button-secondary-outline-border-color-default: var(--spectrum-gray-200);
+	--system-button-secondary-outline-background-color-focus: var(--spectrum-gray-300);
+	--system-button-secondary-outline-border-color-default: var(--spectrum-gray-300);
 	--system-button-secondary-outline-border-color-hover: var(--spectrum-gray-400);
 	--system-button-secondary-outline-border-color-down: var(--spectrum-gray-500);
 	--system-button-secondary-outline-border-color-focus: var(--spectrum-gray-400);
@@ -158,9 +157,9 @@
 	--system-button-secondary-outline-border-color-disabled: var(--spectrum-disabled-border-color);
 	--system-button-secondary-outline-content-color-disabled: var(--spectrum-disabled-content-color);
 	--system-button-quiet-background-color-default: transparent;
-	--system-button-quiet-background-color-hover: var(--spectrum-gray-100);
-	--system-button-quiet-background-color-down: var(--spectrum-gray-200);
-	--system-button-quiet-background-color-focus: var(--spectrum-gray-100);
+	--system-button-quiet-background-color-hover: var(--spectrum-gray-200);
+	--system-button-quiet-background-color-down: var(--spectrum-gray-300);
+	--system-button-quiet-background-color-focus: var(--spectrum-gray-200);
 	--system-button-quiet-border-color-default: transparent;
 	--system-button-quiet-border-color-hover: transparent;
 	--system-button-quiet-border-color-down: transparent;
@@ -333,52 +332,6 @@
 	--system-button-static-black-secondary-outline-background-color-disabled: transparent;
 	--system-button-static-black-secondary-outline-border-color-disabled: var(--spectrum-disabled-static-black-border-color);
 	--system-button-static-black-secondary-outline-content-color-disabled: var(--spectrum-disabled-static-black-content-color);
-	--system-button-size-s-min-width: calc(var(--spectrum-component-height-75) * var(--spectrum-button-minimum-width-multiplier));
-	--system-button-size-s-border-radius: var(--spectrum-component-pill-edge-to-text-75);
-	--system-button-size-s-height: var(--spectrum-component-height-75);
-	--system-button-size-s-font-size: var(--spectrum-font-size-75);
-	--system-button-size-s-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-75) - var(--system-button-border-width));
-	--system-button-size-s-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-75);
-	--system-button-size-s-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-75) - var(--system-button-border-width));
-	--system-button-size-s-padding-label-to-icon: var(--spectrum-text-to-visual-75);
-	--system-button-size-s-top-to-text: var(--spectrum-button-top-to-text-small);
-	--system-button-size-s-bottom-to-text: var(--spectrum-button-bottom-to-text-small);
-	--system-button-size-s-top-to-icon: var(--spectrum-component-top-to-workflow-icon-75);
-	--system-button-size-s-intended-icon-size: var(--spectrum-workflow-icon-size-75);
-	--system-button-size-m-min-width: calc(var(--spectrum-component-height-100) * var(--spectrum-button-minimum-width-multiplier));
-	--system-button-size-m-border-radius: var(--spectrum-component-pill-edge-to-text-100);
-	--system-button-size-m-height: var(--spectrum-component-height-100);
-	--system-button-size-m-font-size: var(--spectrum-font-size-100);
-	--system-button-size-m-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-100) - var(--system-button-border-width));
-	--system-button-size-m-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-100);
-	--system-button-size-m-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-100) - var(--system-button-border-width));
-	--system-button-size-m-padding-label-to-icon: var(--spectrum-text-to-visual-100);
-	--system-button-size-m-top-to-text: var(--spectrum-button-top-to-text-medium);
-	--system-button-size-m-bottom-to-text: var(--spectrum-button-bottom-to-text-medium);
-	--system-button-size-m-top-to-icon: var(--spectrum-component-top-to-workflow-icon-100);
-	--system-button-size-m-intended-icon-size: var(--spectrum-workflow-icon-size-100);
-	--system-button-size-l-min-width: calc(var(--spectrum-component-height-200) * var(--spectrum-button-minimum-width-multiplier));
-	--system-button-size-l-border-radius: var(--spectrum-component-pill-edge-to-text-200);
-	--system-button-size-l-height: var(--spectrum-component-height-200);
-	--system-button-size-l-font-size: var(--spectrum-font-size-200);
-	--system-button-size-l-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-200) - var(--system-button-border-width));
-	--system-button-size-l-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-200);
-	--system-button-size-l-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-200) - var(--system-button-border-width));
-	--system-button-size-l-padding-label-to-icon: var(--spectrum-text-to-visual-200);
-	--system-button-size-l-top-to-text: var(--spectrum-button-top-to-text-large);
-	--system-button-size-l-bottom-to-text: var(--spectrum-button-bottom-to-text-large);
-	--system-button-size-l-top-to-icon: var(--spectrum-component-top-to-workflow-icon-200);
-	--system-button-size-l-intended-icon-size: var(--spectrum-workflow-icon-size-200);
-	--system-button-size-xl-min-width: calc(var(--spectrum-component-height-300) * var(--spectrum-button-minimum-width-multiplier));
-	--system-button-size-xl-border-radius: var(--spectrum-component-pill-edge-to-text-300);
-	--system-button-size-xl-height: var(--spectrum-component-height-300);
-	--system-button-size-xl-font-size: var(--spectrum-font-size-300);
-	--system-button-size-xl-edge-to-visual: calc(var(--spectrum-component-pill-edge-to-visual-300) - var(--system-button-border-width));
-	--system-button-size-xl-edge-to-visual-only: var(--spectrum-component-pill-edge-to-visual-only-300);
-	--system-button-size-xl-edge-to-text: calc(var(--spectrum-component-pill-edge-to-text-300) - var(--system-button-border-width));
-	--system-button-size-xl-padding-label-to-icon: var(--spectrum-text-to-visual-300);
-	--system-button-size-xl-top-to-text: var(--spectrum-button-top-to-text-extra-large);
-	--system-button-size-xl-bottom-to-text: var(--spectrum-button-bottom-to-text-extra-large);
-	--system-button-size-xl-top-to-icon: var(--spectrum-component-top-to-workflow-icon-300);
-	--system-button-size-xl-intended-icon-size: var(--spectrum-workflow-icon-size-300);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

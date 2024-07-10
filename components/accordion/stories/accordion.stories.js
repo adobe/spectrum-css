@@ -1,6 +1,7 @@
 
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { html } from "lit";
 import packageJSON from "../package.json";
 import { AccordionGroup, Template } from "./template.js";
 
@@ -124,7 +125,7 @@ export default {
 					content: Typography({
 						semantics: "body",
 						content: [
-							`Students who provide a valid school-issued email address at purchase are eligible to save over 60% on Creative Cloud All Apps, which includes 20+ apps such as Photoshop, Illustrator, InDesign, Acrobat Pro, and more. ${Link(
+							html`Students who provide a valid school-issued email address at purchase are eligible to save over 60% on Creative Cloud All Apps, which includes 20+ apps such as Photoshop, Illustrator, InDesign, Acrobat Pro, and more. ${Link(
 								{
 									url: "https://www.adobe.com/creativecloud/buy/students.html",
 									text: "Learn more about Creative Cloud for students.",

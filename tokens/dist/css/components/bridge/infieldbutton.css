@@ -40,14 +40,14 @@
 }
 
 .spectrum-InfieldButton:disabled {
-	--mod-infield-button-background-color: var(--system-infieldbutton-disabled-infield-button-background-color);
-	--mod-infield-button-background-color-hover: var(--system-infieldbutton-disabled-infield-button-background-color-hover);
-	--mod-infield-button-background-color-down: var(--system-infieldbutton-disabled-infield-button-background-color-down);
-	--mod-infield-button-border-color: var(--system-infieldbutton-disabled-infield-button-border-color);
-	--mod-infield-button-icon-color: var(--system-infieldbutton-disabled-infield-button-icon-color);
-	--mod-infield-button-icon-color-hover: var(--system-infieldbutton-disabled-infield-button-icon-color-hover);
-	--mod-infield-button-icon-color-down: var(--system-infieldbutton-disabled-infield-button-icon-color-down);
-	--mod-infield-button-icon-color-key-focus: var(--system-infieldbutton-disabled-infield-button-icon-color-key-focus);
+	--spectrum-infield-button-background-color: var(--system-infieldbutton-disabled-infield-button-background-color);
+	--spectrum-infield-button-background-color-hover: var(--system-infieldbutton-disabled-infield-button-background-color-hover);
+	--spectrum-infield-button-background-color-down: var(--system-infieldbutton-disabled-infield-button-background-color-down);
+	--spectrum-infield-button-border-color: var(--system-infieldbutton-disabled-infield-button-border-color);
+	--spectrum-infield-button-icon-color: var(--system-infieldbutton-disabled-infield-button-icon-color);
+	--spectrum-infield-button-icon-color-hover: var(--system-infieldbutton-disabled-infield-button-icon-color-hover);
+	--spectrum-infield-button-icon-color-down: var(--system-infieldbutton-disabled-infield-button-icon-color-down);
+	--spectrum-infield-button-icon-color-key-focus: var(--system-infieldbutton-disabled-infield-button-icon-color-key-focus);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--sizeS {
@@ -75,47 +75,48 @@
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--top {
-	--mod-infield-button-width: var(--system-infieldbutton-top-infield-button-width);
+	--spectrum-infield-button-width: var(--system-infieldbutton-top-infield-button-width);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--bottom {
-	--mod-infield-button-width: var(--system-infieldbutton-bottom-infield-button-width);
+	--spectrum-infield-button-width: var(--system-infieldbutton-bottom-infield-button-width);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeS {
-	--mod-infield-button-width: var(--system-infieldbutton-top-size-s-infield-button-width);
+	--spectrum-infield-button-width: var(--system-infieldbutton-top-size-s-infield-button-width);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeS {
-	--mod-infield-button-width: var(--system-infieldbutton-bottom-size-s-infield-button-width);
+	--spectrum-infield-button-width: var(--system-infieldbutton-bottom-size-s-infield-button-width);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeL {
-	--mod-infield-button-width: var(--system-infieldbutton-top-size-l-infield-button-width);
+	--spectrum-infield-button-width: var(--system-infieldbutton-top-size-l-infield-button-width);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeL {
-	--mod-infield-button-width: var(--system-infieldbutton-bottom-size-l-infield-button-width);
+	--spectrum-infield-button-width: var(--system-infieldbutton-bottom-size-l-infield-button-width);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--top.spectrum-InfieldButton--sizeXL {
-	--mod-infield-button-width: var(--system-infieldbutton-top-size-xl-infield-button-width);
+	--spectrum-infield-button-width: var(--system-infieldbutton-top-size-xl-infield-button-width);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--bottom.spectrum-InfieldButton--sizeXL {
-	--mod-infield-button-width: var(--system-infieldbutton-bottom-size-xl-infield-button-width);
+	--spectrum-infield-button-width: var(--system-infieldbutton-bottom-size-xl-infield-button-width);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--quiet {
-	--mod-infield-button-background-color: var(--system-infieldbutton-quiet-infield-button-background-color);
-	--mod-infield-button-background-color-hover: var(--system-infieldbutton-quiet-infield-button-background-color-hover);
-	--mod-infield-button-background-color-down: var(--system-infieldbutton-quiet-infield-button-background-color-down);
-	--mod-infield-button-background-color-key-focus: var(--system-infieldbutton-quiet-infield-button-background-color-key-focus);
-	--mod-infield-border-color: var(--system-infieldbutton-quiet-infield-border-color);
-	--mod-infield-button-border-width: var(--system-infieldbutton-quiet-infield-button-border-width);
+	--spectrum-infield-button-background-color: var(--system-infieldbutton-quiet-infield-button-background-color);
+	--spectrum-infield-button-background-color-hover: var(--system-infieldbutton-quiet-infield-button-background-color-hover);
+	--spectrum-infield-button-background-color-down: var(--system-infieldbutton-quiet-infield-button-background-color-down);
+	--spectrum-infield-button-background-color-key-focus: var(--system-infieldbutton-quiet-infield-button-background-color-key-focus);
+	--spectrum-infield-border-color: var(--system-infieldbutton-quiet-infield-border-color);
+	--spectrum-infield-button-border-width: var(--system-infieldbutton-quiet-infield-button-border-width);
 }
 
 .spectrum-InfieldButton.spectrum-InfieldButton--quiet:disabled {
-	--mod-infield-button-background-color: var(--system-infieldbutton-quiet-disabled-infield-button-background-color);
-	--mod-infield-button-border-color: var(--system-infieldbutton-quiet-disabled-infield-button-border-color);
+	--spectrum-infield-button-background-color: var(--system-infieldbutton-quiet-disabled-infield-button-background-color);
+	--spectrum-infield-button-border-color: var(--system-infieldbutton-quiet-disabled-infield-button-border-color);
 }
+/*# sourceMappingURL=index-theme.css.map */

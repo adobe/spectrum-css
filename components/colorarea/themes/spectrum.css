@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-ColorArea {
 		--spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
 		--spectrum-colorarea-border-color: rgb(0 0 0 / 10%); /* TODO replace with token --spectrum-color-area-border-color and --spectrum-color-area-border-opacity using RGBA function */

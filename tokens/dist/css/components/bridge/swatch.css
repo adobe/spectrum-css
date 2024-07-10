@@ -31,18 +31,6 @@
 	--spectrum-swatch-focus-indicator-color: var(--system-swatch-focus-indicator-color);
 }
 
-.spectrum--light .spectrum-Swatch {
-	--spectrum-swatch-border-color: var(--system--light-descendant-of-swatch-swatch-border-color);
-}
-
-.spectrum--dark .spectrum-Swatch {
-	--spectrum-swatch-border-color: var(--system--dark-descendant-of-swatch-swatch-border-color);
-}
-
-.spectrum--darkest .spectrum-Swatch {
-	--spectrum-swatch-border-color: var(--system--darkest-descendant-of-swatch-swatch-border-color);
-}
-
 .spectrum-Swatch--sizeXS {
 	--spectrum-swatch-size: var(--system-swatch-size-xs-size);
 	--spectrum-swatch-disabled-icon-size: var(--system-swatch-size-xs-disabled-icon-size);
@@ -78,3 +66,4 @@
 .spectrum--darkest {
 	--spectrum-swatch-border-color: var(--system--darkest-swatch-border-color);
 }
+/*# sourceMappingURL=index-theme.css.map */

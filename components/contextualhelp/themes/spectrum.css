@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-ContextualHelp {
 		/* Layout Variables */
 		--spectrum-contextual-help-padding: var(--spectrum-spacing-400);

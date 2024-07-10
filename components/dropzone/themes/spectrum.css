@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-DropZone {
 		--spectrum-drop-zone-padding: var(--spectrum-spacing-400);
 		--spectrum-drop-zone-illustration-to-heading: var(--spectrum-spacing-400);
@@ -56,6 +56,7 @@
 		--spectrum-drop-zone-content-background-color: var(--spectrum-accent-visual-color);
 		--spectrum-drop-zone-content-color: var(--spectrum-white);
 
+		/* cjk language support */
 		--spectrum-drop-zone-heading-font-size-cjk: var(--spectrum-drop-zone-cjk-title-size);
 	}
 }

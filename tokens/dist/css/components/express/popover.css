@@ -11,67 +11,25 @@
  * governing permissions and limitations under the License.
  */
 
+.spectrum--legacy {
+	--system-popover-border-width: var(--spectrum-border-width-100);
+	--system-popover-animation-distance: var(--spectrum-spacing-100);
+	--system-popover-background-color: var(--spectrum-background-layer-2-color);
+	--system-popover-border-color: var(--spectrum-gray-400);
+	--system-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
+	--system-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
+	--system-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
+	--system-popover-shadow-blur: var(--spectrum-drop-shadow-blur);
+	--system-popover-shadow-color: var(--spectrum-drop-shadow-color);
+	--system-popover-corner-radius: var(--spectrum-corner-radius-100);
+	--system-popover-pointer-width: var(--spectrum-popover-tip-width);
+	--system-popover-pointer-height: var(--spectrum-popover-tip-height);
+	--system-popover-pointer-edge-offset: calc(var(--spectrum-corner-radius-100) + var(--spectrum-popover-tip-width) / 2);
+	--system-popover-pointer-edge-spacing: calc(var(--system-popover-pointer-edge-offset) - var(--spectrum-popover-tip-width) / 2);
+}
+
 .spectrum--express {
 	--system-popover-border-width: 0;
-	--system-popover-progressbar-animation-ease-in-out-indeterminate: var(--spectrum-animation-ease-in-out);
-	--system-popover-progressbar-animation-duration-indeterminate: var(--spectrum-animation-duration-2000);
-	--system-popover-progressbar-corner-radius: var(--spectrum-corner-radius-100);
-	--system-popover-progressbar-fill-size-indeterminate: 70%;
-	--system-popover-progressbar-size-2400: 192px;
-	--system-popover-progressbar-size-2500: 200px;
-	--system-popover-progressbar-size-2800: 224px;
-	--system-popover-progressbar-font-size: var(--spectrum-font-size-75);
-	--system-popover-progressbar-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	--system-popover-progressbar-min-size: var(--spectrum-progress-bar-minimum-width);
-	--system-popover-progressbar-max-size: var(--spectrum-progress-bar-maximum-width);
-	--system-popover-progressbar-thickness: var(--spectrum-progress-bar-thickness-medium);
-	--system-popover-progressbar-line-height: var(--spectrum-line-height-100);
-	--system-popover-progressbar-spacing-label-to-progressbar: var(--spectrum-spacing-75);
-	--system-popover-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
-	--system-popover-progressbar-spacing-label-to-text: var(--spectrum-spacing-200);
-	--system-popover-progressbar-text-color: var(--spectrum-neutral-content-color-default);
-	--system-popover-progressbar-track-color: var(--spectrum-gray-200);
-	--system-popover-progressbar-fill-color: var(--spectrum-accent-color-900);
-	--system-popover-progressbar-fill-color-positive: var(--spectrum-positive-visual-color);
-	--system-popover-progressbar-fill-color-notice: var(--spectrum-notice-visual-color);
-	--system-popover-progressbar-fill-color-negative: var(--spectrum-negative-visual-color);
-	--system-popover-progressbar-label-and-value-white: var(--spectrum-white);
-	--system-popover-progressbar-track-color-white: var(--spectrum-transparent-white-300);
-	--system-popover-progressbar-fill-color-white: var(--spectrum-white);
-	--system-popover-meter-min-width: var(--spectrum-meter-minimum-width);
-	--system-popover-meter-max-width: var(--spectrum-meter-maximum-width);
-	--system-popover-meter-inline-size: var(--spectrum-meter-default-width);
-	--system-popover-meter-thickness-s: var(--system-popover-meter-thickness-small);
-	--system-popover-meter-thickness-l: var(--system-popover-meter-thickness-large);
-	--system-popover-meter-top-to-text: var(--spectrum-component-top-to-text);
-	--system-progressbar-size-s-size-default: var(--system-popover-progressbar-size-2400);
-	--system-meter-size-s-progressbar-size-default: var(--system-popover-progressbar-size-2400);
-	--system-progressbar-size-s-font-size: var(--spectrum-font-size-75);
-	--system-meter-size-s-progressbar-font-size: var(--spectrum-font-size-75);
-	--system-progressbar-size-s-thickness: var(--spectrum-progress-bar-thickness-small);
-	--system-meter-size-s-progressbar-thickness: var(--spectrum-progress-bar-thickness-small);
-	--system-progressbar-size-s-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-	--system-meter-size-s-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-	--system-progressbar-size-m-size-default: var(--system-popover-progressbar-size-2400);
-	--system-progressbar-size-m-font-size: var(--spectrum-font-size-75);
-	--system-progressbar-size-m-thickness: var(--spectrum-progress-bar-thickness-large);
-	--system-progressbar-size-m-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-	--system-progressbar-size-l-size-default: var(--system-popover-progressbar-size-2500);
-	--system-meter-size-l-progressbar-size-default: var(--system-popover-progressbar-size-2500);
-	--system-progressbar-size-l-font-size: var(--spectrum-font-size-100);
-	--system-meter-size-l-progressbar-font-size: var(--spectrum-font-size-100);
-	--system-progressbar-size-l-thickness: var(--spectrum-progress-bar-thickness-large);
-	--system-meter-size-l-progressbar-thickness: var(--spectrum-progress-bar-thickness-large);
-	--system-progressbar-size-l-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
-	--system-meter-size-l-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
-	--system-progressbar-size-xl-size-default: var(--system-popover-progressbar-size-2800);
-	--system-progressbar-size-xl-font-size: var(--spectrum-font-size-200);
-	--system-progressbar-size-xl-thickness: var(--spectrum-progress-bar-thickness-extra-large);
-	--system-progressbar-size-xl-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
-	--system-meter-progressbar-size-default: var(--mod-meter-inline-size, var(--system-popover-meter-inline-size));
-	--system-meter-progressbar-max-size: var(--mod-meter-max-width, var(--system-popover-meter-max-width));
-	--system-meter-progressbar-min-size: var(--mod-meter-min-width, var(--system-popover-meter-min-width));
-	--system-meter-size-s-progressbar-thickness: var(--system-popover-meter-thickness-s);
-	--system-meter-size-l-progressbar-thickness: var(--system-popover-meter-thickness-l);
-	--system-meter-size-l-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 }
+
+/*# sourceMappingURL=express.css.map */

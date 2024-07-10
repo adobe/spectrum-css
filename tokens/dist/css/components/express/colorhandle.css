@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-colorhandle-size: var(--spectrum-color-handle-size);
 	--system-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
 	--system-colorhandle-hitarea-size: var(--spectrum-color-control-track-width);
@@ -27,3 +27,5 @@
 	--system-colorhandle-fill-color-disabled: var(--spectrum-disabled-background-color);
 	--system-colorhandle-opacity-checkerboard-position: 50%;
 }
+
+/*# sourceMappingURL=express.css.map */

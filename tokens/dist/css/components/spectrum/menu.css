@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-menu-item-min-height: var(--spectrum-component-height-100);
 	--system-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
 	--system-menu-item-icon-width: var(--spectrum-workflow-icon-size-100);
@@ -128,3 +128,5 @@
 	--system-menu-size-xl-item-top-to-checkmark: var(--spectrum-menu-item-top-to-selected-icon-extra-large);
 	--system-menu-size-xl-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-extra-large);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

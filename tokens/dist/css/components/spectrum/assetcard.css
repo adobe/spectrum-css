@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-assetcard-overlay-background-color: rgba(27, 127, 245, 0.1);
 	--system-assetcard-asset-size: 224px;
 	--system-assetcard-background-color: var(--spectrum-gray-100);
@@ -100,3 +100,5 @@
 	--system-assetcard-lang-ja-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
 	--system-assetcard-lang-ko-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

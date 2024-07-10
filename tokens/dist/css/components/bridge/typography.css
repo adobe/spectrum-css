@@ -27,6 +27,8 @@
 	--spectrum-heading-font-color: var(--system-heading-font-color);
 	--spectrum-heading-margin-start: var(--system-heading-margin-start);
 	--spectrum-heading-margin-end: var(--system-heading-margin-end);
+	--spectrum-heading-font-size: var(--system-heading-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-heading-cjk-font-size);
 }
 
 .spectrum-Heading--sizeXXS {
@@ -76,6 +78,7 @@
 	--spectrum-body-cjk-letter-spacing: var(--system-body-cjk-letter-spacing);
 	--spectrum-body-margin: var(--system-body-margin);
 	--spectrum-body-font-color: var(--system-body-font-color);
+	--spectrum-body-font-size: var(--system-body-font-size);
 }
 
 .spectrum-Body--sizeXS {
@@ -113,6 +116,7 @@
 	--spectrum-detail-margin-start: var(--system-detail-margin-start);
 	--spectrum-detail-margin-end: var(--system-detail-margin-end);
 	--spectrum-detail-font-color: var(--system-detail-font-color);
+	--spectrum-detail-font-size: var(--system-detail-font-size);
 }
 
 .spectrum-Detail--sizeS {
@@ -135,6 +139,7 @@
 	--spectrum-code-font-family: var(--system-code-font-family);
 	--spectrum-code-cjk-letter-spacing: var(--system-code-cjk-letter-spacing);
 	--spectrum-code-font-color: var(--system-code-font-color);
+	--spectrum-code-font-size: var(--system-code-font-size);
 }
 
 .spectrum-Code--sizeXS {

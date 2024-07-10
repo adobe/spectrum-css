@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-alertbanner-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default);
 	--system-alertbanner-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
 	--system-alertbanner-alert-banner-max-inline-size: var(--spectrum-alert-banner-width);
@@ -38,3 +38,9 @@
 	--system-alertbanner-closebutton-margin-top: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
 	--system-alertbanner-closebutton-align-self: flex-start;
 }
+
+.spectrum--express {
+	--system-alertbanner-alert-banner-netural-background: var(--spectrum-neutral-background-color-default);
+}
+
+/*# sourceMappingURL=express.css.map */

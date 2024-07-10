@@ -103,3 +103,9 @@
 	--spectrum-search-border-radius: var(--system-search-quiet-border-radius);
 	--spectrum-search-edge-to-visual: var(--system-search-quiet-edge-to-visual);
 }
+
+.spectrum-Search--sizeM {
+	--spectrum-search-border-radius: var(--system-search-size-m-border-radius);
+	--spectrum-search-edge-to-visual: var(--system-search-size-m-edge-to-visual);
+}
+/*# sourceMappingURL=index-theme.css.map */

@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-ColorHandle {
 		--spectrum-colorhandle-size: var(--spectrum-color-handle-size);
 		--spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);

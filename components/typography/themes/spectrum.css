@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum {
 		--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
 		--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
@@ -49,6 +49,7 @@
 		--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-s);
 	}
 
+	.spectrum-Heading,
 	.spectrum-Heading--sizeM {
 		--spectrum-heading-font-size: var(--spectrum-heading-size-m);
 		--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-m);
@@ -94,6 +95,7 @@
 		--spectrum-body-font-size: var(--spectrum-body-size-s);
 	}
 
+	.spectrum-Body,
 	.spectrum-Body--sizeM {
 		--spectrum-body-font-size: var(--spectrum-body-size-m);
 	}
@@ -129,6 +131,7 @@
 		--spectrum-detail-font-size: var(--spectrum-detail-size-s);
 	}
 
+	.spectrum-Detail,
 	.spectrum-Detail--sizeM {
 		--spectrum-detail-font-size: var(--spectrum-detail-size-m);
 	}
@@ -155,6 +158,7 @@
 		--spectrum-code-font-size: var(--spectrum-code-size-s);
 	}
 
+	.spectrum-Code,
 	.spectrum-Code--sizeM {
 		--spectrum-code-font-size: var(--spectrum-code-size-m);
 	}

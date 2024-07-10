@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-Underlay {
 		--spectrum-underlay-background-entry-animation-delay: var(--spectrum-animation-duration-0);
 		--spectrum-underlay-background-exit-animation-ease: var(--spectrum-animation-ease-in);

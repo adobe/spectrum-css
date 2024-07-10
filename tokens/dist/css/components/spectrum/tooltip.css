@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-subdued-background-color-default);
 	--system-tooltip-animation-duration: var(--spectrum-animation-duration-100);
 	--system-tooltip-margin: 0px;
@@ -42,3 +42,5 @@
 	--system-tooltip-pointer-corner-spacing: var(--spectrum-corner-radius-100);
 	--system-tooltip-background-color-default: var(--system-tooltip-backgound-color-default-neutral);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

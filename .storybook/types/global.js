@@ -1,11 +1,13 @@
-// Rendered as controls; these properties are assigned to the document root element
+/**
+ * Rendered as controls; these properties are assigned to the document root element
+ */
 
 /** @type import('@storybook/types').GlobalTypes */
 export default {
 	context: {
 		title: "Design context",
 		description: "The variation of Spectrum to use in the component",
-		defaultValue: "spectrum",
+		defaultValue: "legacy", // @todo switch back to spectrum after baselines are looking good
 		type: "string",
 		showName: true,
 		toolbar: {

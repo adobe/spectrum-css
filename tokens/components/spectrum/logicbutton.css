@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-logicbutton-logic-button-height: 24px;
 	--system-logicbutton-logic-button-padding: var(--spectrum-component-edge-to-text-50);
 	--system-logicbutton-logic-button-font-size: var(--spectrum-font-size-100);
@@ -36,3 +36,5 @@
 	--system-logicbutton-disabled-logic-button-or-background-color-hover: var(--mod-logic-button-or-background-color-hover-disabled, var(--spectrum-gray-100));
 	--system-logicbutton-disabled-logic-button-or-border-color-hover: var(--mod-logic-button-or-border-color-hover-disabled, var(--spectrum-gray-100));
 }
+
+/*# sourceMappingURL=spectrum.css.map */

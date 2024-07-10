@@ -1,0 +1,92 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+@container style(--system: spectrum) {
+	.spectrum-AssetCard {
+		--spectrum-assetcard-overlay-background-color: rgb(27 127 245 / 10%);
+
+		/* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
+		--spectrum-assetcard-asset-size: 224px;
+		--spectrum-assetcard-background-color: var(--spectrum-gray-100);
+		--spectrum-assetcard-asset-animation-duration: var(--spectrum-animation-duration-100);
+		--spectrum-assetcard-asset-container-border-size: 1px;
+		--spectrum-assetcard-header-margin-block-start: var(--spectrum-spacing-300);
+
+		--spectrum-assetcard-border-radius: var(--spectrum-corner-radius-100);
+		--spectrum-assetcard-border-color: transparent;
+		--spectrum-assetcard-border-color-hover: var(--spectrum-gray-500);
+		--spectrum-assetcard-border-color-down: var(--spectrum-gray-600);
+
+		--spectrum-assetcard-focus-ring-gap: 5px;
+		--spectrum-assetcard-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+
+		/* selection indicator - checkbox or number */
+		--spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-100-rgb), 0.9);
+		--spectrum-assetcard-selectionindicator-size: var(--spectrum-card-selection-background-size);
+		--spectrum-assetcard-selectionindicator-border-radius: var(--spectrum-corner-radius-100);
+		--spectrum-assetcard-selectionindicator-offset-y: 4px;
+		--spectrum-assetcard-selectionindicator-blur: 6px;
+		--spectrum-assetcard-selectionindicator-color: var(--spectrum-white);
+		--spectrum-assetcard-selectionindicator-font-weight: var(--spectrum-bold-font-weight);
+		--spectrum-assetcard-selectionindicator-font-size: var(--spectrum-font-size-400);
+
+		/* title */
+		--spectrum-assetcard-title-text-color: var(--spectrum-gray-900);
+		--spectrum-assetcard-title-font-family: var(--spectrum-sans-font-family-stack);
+		--spectrum-assetcard-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+		--spectrum-assetcard-title-font-style: var(--spectrum-default-font-style);
+		--spectrum-assetcard-title-line-height: var(--spectrum-line-height-100);
+		--spectrum-assetcard-title-letter-spacing: 0;
+
+		/* header content */
+		--spectrum-assetcard-header-content-text-color: var(--spectrum-gray-900);
+		--spectrum-assetcard-header-content-font-family: var(--spectrum-sans-font-family-stack);
+		--spectrum-assetcard-header-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+		--spectrum-assetcard-header-content-font-style: var(--spectrum-default-font-style);
+		--spectrum-assetcard-header-content-line-height: var(--spectrum-line-height-200);
+		--spectrum-assetcard-header-content-letter-spacing: 0;
+
+		/* content */
+		--spectrum-assetcard-content-text-color: var(--spectrum-gray-700);
+		--spectrum-assetcard-content-font-family: var(--spectrum-sans-font-family-stack);
+		--spectrum-assetcard-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+		--spectrum-assetcard-content-font-style: var(--spectrum-default-font-style);
+		--spectrum-assetcard-content-line-height: var(--spectrum-line-height-200);
+		--spectrum-assetcard-content-letter-spacing: 0;
+
+		--spectrum-assetcard-content-margin-block-start: var(--spectrum-spacing-75);
+
+		&:lang(zh),
+		&:lang(ja),
+		&:lang(ko) {
+			--spectrum-assetcard-title-font-family: var(--spectrum-cjk-font-family-stack);
+			--spectrum-assetcard-title-font-style: var(--spectrum-heading-cjk-font-style);
+			--spectrum-assetcard-title-font-weight: var(--spectrum-heading-cjk-font-weight);
+			--spectrum-assetcard-title-font-size: var(--spectrum-heading-cjk-size-xs);
+			--spectrum-assetcard-title-line-height: var(--spectrum-heading-cjk-line-height);
+			--spectrum-assetcard-title-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+			--spectrum-assetcard-header-content-font-family: var(--spectrum-cjk-font-family-stack);
+			--spectrum-assetcard-header-content-font-weight: var(--spectrum-body-cjk-font-weight);
+			--spectrum-assetcard-header-content-line-height: var(--spectrum-body-cjk-line-height);
+			--spectrum-assetcard-header-content-font-style: var(--spectrum-body-cjk-font-style);
+			--spectrum-assetcard-header-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+			--spectrum-assetcard-content-font-family: var(--spectrum-cjk-font-family-stack);
+			--spectrum-assetcard-content-font-weight: var(--spectrum-body-cjk-font-weight);
+			--spectrum-assetcard-content-line-height: var(--spectrum-body-cjk-line-height);
+			--spectrum-assetcard-content-font-style: var(--spectrum-body-cjk-font-style);
+			--spectrum-assetcard-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
+		}
+	}
+}

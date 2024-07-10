@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-Accordion {
 		--spectrum-accordion-item-height: var(--spectrum-component-height-200);
 		--spectrum-accordion-item-width: var(--spectrum-accordion-minimum-width);

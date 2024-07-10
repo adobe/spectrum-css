@@ -8,7 +8,7 @@ import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
 import "../themes/express.css";
-import "../themes/legacy.css";
+import "../themes/spectrum.css";
 
 /**
  * @todo load order should not influence the icon size but it is; fix this

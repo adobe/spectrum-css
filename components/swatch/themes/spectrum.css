@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	/* Swatch tokens */
 	.spectrum-Swatch {
 		/* Placeholder tokens */
@@ -60,5 +60,16 @@
 		--spectrum-swatch-size: var(--spectrum-swatch-size-large);
 		--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-200);
 		--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-large);
+	}
+
+	/* Light theme placeholder tokens */
+	.spectrum--light {
+		--spectrum-swatch-border-color: rgb(0 0 0 / 51%);
+	}
+
+	/* Dark and Darkest theme placeholder tokens */
+	.spectrum--dark,
+	.spectrum--darkest {
+		--spectrum-swatch-border-color: rgb(255 255 255 / 51%);
 	}
 }

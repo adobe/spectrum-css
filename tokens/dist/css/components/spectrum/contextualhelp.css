@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-contextualhelp-contextual-help-padding: var(--spectrum-spacing-400);
 	--system-contextualhelp-contextual-help-content-spacing: var(--spectrum-spacing-100);
 	--system-contextualhelp-contextual-help-link-spacing: var(--spectrum-spacing-300);
@@ -20,3 +20,5 @@
 	--system-contextualhelp-contextual-help-body-color: var(--spectrum-body-color);
 	--system--large-descendant-of-contextual-help-contextual-help-content-spacing: var(--spectrum-spacing-200);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-underlay-background-entry-animation-delay: var(--spectrum-animation-duration-0);
 	--system-underlay-background-exit-animation-ease: var(--spectrum-animation-ease-in);
 	--system-underlay-background-entry-animation-ease: var(--spectrum-animation-ease-out);
@@ -21,3 +21,5 @@
 	--system-underlay-background-exit-animation-delay: var(--spectrum-animation-duration-200);
 	--system-underlay-background-color: rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
 }
+
+/*# sourceMappingURL=express.css.map */

@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-sidenav-focus-ring-size: var(--spectrum-focus-indicator-thickness);
 	--system-sidenav-focus-ring-gap: var(--spectrum-focus-indicator-gap);
 	--system-sidenav-focus-ring-color: var(--spectrum-focus-indicator-color);
@@ -77,3 +77,5 @@
 	--system-sidenav-lang-zh-header-line-height: var(--spectrum-cjk-line-height-100);
 	--system-sidenav-lang-ko-header-line-height: var(--spectrum-cjk-line-height-100);
 }
+
+/*# sourceMappingURL=express.css.map */

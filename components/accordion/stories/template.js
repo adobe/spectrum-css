@@ -1,4 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { renderContent } from "@spectrum-css/preview/decorators/utilities.js";
 import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -8,7 +9,7 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 import "../themes/express.css";
-import "../themes/legacy.css";
+import "../themes/spectrum.css";
 
 export const AccordionItem = ({
 	heading,
@@ -65,7 +66,7 @@ export const AccordionItem = ({
 				id="spectrum-accordion-item-${idx}-content"
 				aria-labelledby="spectrum-accordion-item-${idx}-header"
 			>
-				${content}
+				${renderContent(content)}
 			</div>
 		</div>
 	`;
@@ -123,27 +124,29 @@ export const Template = ({
 	`;
 };
 
-export const AccordionGroup = (args, context) => html`
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "none" : undefined,
-	})}>
-		${Template(args, context)}
-	</div>
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
-		"flex-wrap": "wrap",
-		"gap": "28px"
-	})}>
-		${Template(args, context)}
-		${Template({
-			...args,
-			customStyles: {
-				maxInlineSize: "300px",
-			},
-		}, context)}
-		${Template({
-			...args,
-			disableAll: true,
-		}, context)}
-	</div>
-`;
+export const AccordionGroup = (args, context) => {
+	return html`
+		<div style=${styleMap({
+			"display": window.isChromatic() ? "none" : undefined,
+		})}>
+			${Template(args, context)}
+		</div>
+		<div style=${styleMap({
+			"display": window.isChromatic() ? "flex" : "none",
+			"flex-wrap": "wrap",
+			"gap": "28px"
+		})}>
+			${Template(args, context)}
+			${Template({
+				...args,
+				customStyles: {
+					maxInlineSize: "300px",
+				},
+			}, context)}
+			${Template({
+				...args,
+				disableAll: true,
+			}, context)}
+		</div>
+	`;
+};

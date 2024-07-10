@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-avatar-color-opacity: 1;
 	--system-avatar-inline-size: var(--spectrum-avatar-size-100);
 	--system-avatar-block-size: var(--spectrum-avatar-size-100);
@@ -39,3 +39,5 @@
 	--system-avatar-size-700-inline-size: var(--spectrum-avatar-size-700);
 	--system-avatar-size-700-block-size: var(--spectrum-avatar-size-700);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-swatch-focus-indicator-border-radius: 8px;
 	--system-swatch-icon-border-color: rgba(0, 0, 0, 0.51);
 	--system-swatch-size: var(--spectrum-swatch-size-small);
@@ -29,9 +29,6 @@
 	--system-swatch-dash-icon-color: var(--spectrum-gray-800);
 	--system-swatch-slash-icon-color: var(--spectrum-red-900);
 	--system-swatch-focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--system--light-descendant-of-swatch-swatch-border-color: rgba(0, 0, 0, 0.51);
-	--system--dark-descendant-of-swatch-swatch-border-color: rgba(255, 255, 255, 0.51);
-	--system--darkest-descendant-of-swatch-swatch-border-color: rgba(255, 255, 255, 0.51);
 	--system-swatch-size-xs-size: var(--spectrum-swatch-size-extra-small);
 	--system-swatch-size-xs-disabled-icon-size: var(--spectrum-workflow-icon-size-50);
 	--system-swatch-size-xs-slash-thickness: var(--spectrum-swatch-slash-thickness-extra-small);
@@ -44,4 +41,9 @@
 	--system-swatch-size-l-size: var(--spectrum-swatch-size-large);
 	--system-swatch-size-l-disabled-icon-size: var(--spectrum-workflow-icon-size-200);
 	--system-swatch-size-l-slash-thickness: var(--spectrum-swatch-slash-thickness-large);
+	--system--light-swatch-border-color: rgba(0, 0, 0, 0.51);
+	--system--dark-swatch-border-color: rgba(255, 255, 255, 0.51);
+	--system--darkest-swatch-border-color: rgba(255, 255, 255, 0.51);
 }
+
+/*# sourceMappingURL=express.css.map */

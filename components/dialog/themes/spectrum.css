@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-Dialog {
 		/* The font-size of the fullscreen dialog header */
 		--spectrum-dialog-fullscreen-header-text-size: 28px;

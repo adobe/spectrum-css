@@ -89,14 +89,15 @@
 }
 
 .spectrum-TreeView--quiet {
-	--mod-treeview-item-background-color-selected: var(--system-treeview-quiet-item-background-color-selected);
-	--mod-treeview-item-border-color-selected: var(--system-treeview-quiet-item-border-color-selected);
+	--spectrum-treeview-item-background-color-selected: var(--system-treeview-quiet-item-background-color-selected);
+	--spectrum-treeview-item-border-color-selected: var(--system-treeview-quiet-item-border-color-selected);
 }
 
 .spectrum-TreeView--thumbnail {
-	--mod-treeview-item-min-block-size: var(--system-treeview-thumbnail-item-min-block-size);
+	--spectrum-treeview-item-min-block-size: var(--system-treeview-thumbnail-item-min-block-size);
 }
 
 .spectrum-TreeView--detached {
-	--mod-treeview-item-border-radius: var(--system-treeview-detached-item-border-radius);
+	--spectrum-treeview-item-border-radius: var(--system-treeview-detached-item-border-radius);
 }
+/*# sourceMappingURL=index-theme.css.map */

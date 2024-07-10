@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-colorwheel-width: var(--spectrum-color-wheel-width);
 	--system-colorwheel-min-width: var(--spectrum-color-wheel-minimum-width);
 	--system-colorwheel-height: var(--spectrum-color-wheel-width);
@@ -22,3 +22,5 @@
 	--system-colorwheel-colorarea-margin: var(--spectrum-color-wheel-color-area-margin);
 	--system-colorwheel-colorhandle-position: calc(var(--system-colorwheel-width) / 2 - var(--system-colorwheel-track-width) / 2);
 }
+
+/*# sourceMappingURL=express.css.map */

@@ -11,9 +11,47 @@
  * governing permissions and limitations under the License.
  */
 
+.spectrum--legacy {
+	--system-clearbutton-clear-button-background-color: transparent;
+	--system-clearbutton-clear-button-background-color-hover: transparent;
+	--system-clearbutton-clear-button-background-color-down: transparent;
+	--system-clearbutton-clear-button-background-color-key-focus: transparent;
+	--system-clearbutton-clear-button-height: var(--spectrum-component-height-100);
+	--system-clearbutton-clear-button-width: var(--spectrum-component-height-100);
+	--system-clearbutton-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);
+	--system-clearbutton-clear-button-icon-color: var(--spectrum-neutral-content-color-default);
+	--system-clearbutton-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+	--system-clearbutton-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
+	--system-clearbutton-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-clearbutton-size-s-clear-button-height: var(--spectrum-component-height-75);
+	--system-clearbutton-size-s-clear-button-width: var(--spectrum-component-height-75);
+	--system-clearbutton-size-l-clear-button-height: var(--spectrum-component-height-200);
+	--system-clearbutton-size-l-clear-button-width: var(--spectrum-component-height-200);
+	--system-clearbutton-size-xl-clear-button-height: var(--spectrum-component-height-300);
+	--system-clearbutton-size-xl-clear-button-width: var(--spectrum-component-height-300);
+	--system-clearbutton-quiet-clear-button-background-color: var(--spectrum-clear-button-background-color-quiet, transparent);
+	--system-clearbutton-quiet-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-quiet, transparent);
+	--system-clearbutton-quiet-clear-button-background-color-down: var(--spectrum-clear-button-background-color-down-quiet, transparent);
+	--system-clearbutton-quiet-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-key-focus-quiet, transparent);
+	--system-clearbutton-over-background-clear-button-icon-color: var(--spectrum-clear-button-icon-color-over-background, var(--spectrum-white));
+	--system-clearbutton-over-background-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-over-background, var(--spectrum-white));
+	--system-clearbutton-over-background-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-over-background, var(--spectrum-white));
+	--system-clearbutton-over-background-clear-button-icon-color-key-focus: var(--spectrum-clear-button-icon-color-key-focus-over-background, var(--spectrum-white));
+	--system-clearbutton-over-background-clear-button-background-color: var(--spectrum-clear-button-background-color-over-background, transparent);
+	--system-clearbutton-over-background-clear-button-background-color-hover: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
+	--system-clearbutton-over-background-clear-button-background-color-down: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-400));
+	--system-clearbutton-over-background-clear-button-background-color-key-focus: var(--spectrum-clear-button-background-color-hover-over-background, var(--spectrum-transparent-white-300));
+	--system-clearbutton-disabled-clear-button-icon-color: var(--mod-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color));
+	--system-clearbutton-disabled-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
+	--system-clearbutton-disabled-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-disabled, var(--spectrum-disabled-content-color));
+	--system-clearbutton-disabled-clear-button-background-color: var(--mod-clear-button-background-color-disabled, transparent);
+}
+
 .spectrum--express {
 	--system-clearbutton-clear-button-background-color: var(--spectrum-gray-200);
 	--system-clearbutton-clear-button-background-color-hover: var(--spectrum-gray-300);
 	--system-clearbutton-clear-button-background-color-down: var(--spectrum-gray-400);
 	--system-clearbutton-clear-button-background-color-key-focus: var(--spectrum-gray-300);
 }
+
+/*# sourceMappingURL=express.css.map */

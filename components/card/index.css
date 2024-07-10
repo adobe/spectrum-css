@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum.css";
+@import "themes/spectrum-two.css";
 
 .spectrum-Card {
 	position: relative;
@@ -23,7 +23,7 @@
 	text-decoration: none;
 
 	/* @deprecation --mod-spectrum-card-background-color has been renamed to
-		--mod-card-background-color. The fallback will be removed in a future version. */
+		--spectrum-card-background-color. The fallback will be removed in a future version. */
 	background-color: var(--highcontrast-card-background-color, var(--mod-card-background-color, var(--mod-spectrum-card-background-color, var(--spectrum-card-background-color))));
 
 	border: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
@@ -88,7 +88,7 @@
 	}
 
 	&.is-drop-target {
-		--mod-card-background-color: var(--spectrum-card-background-color-quiet, var(--spectrum-background-base-color));
+		--spectrum-card-background-color: var(--spectrum-card-background-color-quiet, var(--spectrum-background-base-color));
 		background-color: var(--mod-card-background-color, var(--spectrum-card-background-color));
 
 		border-color: var(--highcontrast-card-border-color-selected, var(--mod-card-border-color-selected, var(--spectrum-card-border-color-selected)));

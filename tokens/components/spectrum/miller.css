@@ -11,9 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-millercolumns-inline-size: 272px;
 	--system-millercolumns-padding: var(--spectrum-spacing-100);
 	--system-millercolumns-margin-inline-start: var(--spectrum-spacing-100);
 	--system-millercolumns-margin-inline-end: var(--spectrum-spacing-100);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

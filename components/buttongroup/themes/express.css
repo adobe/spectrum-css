@@ -11,29 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: express) {
-	.spectrum-ButtonGroup {
-		--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-		--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-	}
-
-	.spectrum-ButtonGroup--sizeS {
-		--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
-		--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
-	}
-
-	.spectrum-ButtonGroup--sizeM {
-		--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-		--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-	}
-
-	.spectrum-ButtonGroup--sizeL {
-		--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-		--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-	}
-
-	.spectrum-ButtonGroup--sizeXL {
-		--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-		--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-	}
-}
+@import "./spectrum.css";

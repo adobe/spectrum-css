@@ -11,9 +11,16 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum.css";
+@import "themes/spectrum-two.css";
 
 .spectrum-CoachMark {
+	/** @passthroughs */
+	--mod-buttongroup-justify-content: flex-end;
+	--mod-popover-border-width: var(--spectrum-border-width-100);
+	--mod-popover-corner-radius: var(--spectrum-corner-radius-100);
+	--mod-popover-content-area-spacing-vertical: 0;
+	--mod-button-edge-to-visual-only: 9px;
+
 	position: relative;
 	inline-size: var(--mod-coachmark-width, var(--spectrum-coachmark-width));
 	min-inline-size: var(--mod-coachmark-min-width, var(--spectrum-coachmark-min-width));

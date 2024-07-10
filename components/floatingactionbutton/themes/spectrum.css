@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-FloatingActionButton {
 		--spectrum-floating-action-button-size: var(--spectrum-component-height-200);
 		--spectrum-floating-action-button-icon-size: var(--spectrum-workflow-icon-size-200);
