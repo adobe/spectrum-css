@@ -79,5 +79,3 @@
 	--system-treeview-thumbnail-item-min-block-size: var(--mod-treeview-item-min-block-size-thumbnail, calc(var(--system-treeview-item-min-block-size) + var(--system-treeview-item-min-block-size-thumbnail-offset)));
 	--system-treeview-detached-item-border-radius: var(--mod-treeview-item-border-radius-detached, var(--spectrum-corner-radius-100));
 }
-
-/*# sourceMappingURL=express.css.map */
