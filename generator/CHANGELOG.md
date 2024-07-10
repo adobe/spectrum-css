@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.0-s2-foundations.5
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`ff8d033`](https://github.com/adobe/spectrum-css/commit/ff8d033f2148e915b7496121b59b680e8d77ca6a) Thanks [@pfulton](https://github.com/pfulton)! - Incorporated a few additional bug fixes found in VRT
+
 ## 5.0.0-s2-foundations.4
 
 ### Patch Changes
