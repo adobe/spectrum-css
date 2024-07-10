@@ -1,18 +1,17 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
 @import "@spectrum-css/commons/basebutton.css";
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {
@@ -51,24 +50,20 @@
 	/* Layout */
 	display: flex;
 	box-sizing: border-box;
-	inline-size: var(--mod-picker-inline-size, var(--spectrum-picker-inline-size));
-	min-inline-size: calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)));
 
 	/* Minimum width is 2 times the height */
 	max-inline-size: 100%;
+	min-inline-size: calc(var(--spectrum-picker-minimum-width-multiplier) * var(--mod-picker-block-size, var(--spectrum-picker-block-size)));
+	inline-size: var(--mod-picker-inline-size, var(--spectrum-picker-inline-size));
 	block-size: var(--mod-picker-block-size, var(--spectrum-picker-block-size));
-	margin-block-start: var(--mod-picker-spacing-label-to-picker, var(--spectrum-picker-spacing-label-to-picker));
 	padding-block: 0;
+	margin-block-start: var(--mod-picker-spacing-label-to-picker, var(--spectrum-picker-spacing-label-to-picker));
 
 	padding-inline-start: var(--mod-picker-spacing-edge-to-text, var(--spectrum-picker-spacing-edge-to-text));
 	padding-inline-end: var(--mod-picker-spacing-edge-to-disclosure-icon, var(--spectrum-picker-spacing-edge-to-disclosure-icon));
 
-	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-	background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default, var(--spectrum-picker-background-color-default)));
-	border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-default, var(--spectrum-picker-border-color-default)));
-	border-style: solid;
-
 	border-width: var(--mod-picker-border-width, var(--spectrum-picker-border-width));
+	border-style: solid;
 	border-radius: var(--mod-picker-border-radius, var(--spectrum-picker-border-radius));
 
 	transition:
@@ -76,24 +71,28 @@
 		box-shadow var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)),
 		border-color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
 
+	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
+	background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-default, var(--spectrum-picker-background-color-default)));
+	border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-default, var(--spectrum-picker-border-color-default)));
+
 	/* Focus indicator */
 	&::after {
 		pointer-events: none;
 		content: "";
 		position: absolute;
-		inset-block: 0;
-
-		inset-inline: 0;
+		block-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
 
 		inline-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
-		block-size: calc(100% + (var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) * 2) + (var(--mod-picker-border-width, var(--spectrum-picker-border-width)) * 2));
 
 		margin-block-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
 
 		margin-inline-start: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1);
-		border-color: transparent;
+
+		inset-inline: 0;
+		inset-block: 0;
 		border-style: solid;
 		border-width: var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness));
+		border-color: transparent;
 		border-radius: calc(var(--mod-picker-border-radius, var(--spectrum-picker-border-radius)) + var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
 	}
 
@@ -123,10 +122,10 @@
 
 	&:focus-visible,
 	&.is-keyboardFocused {
-		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
+		outline: none;
 		background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-key-focus, var(--spectrum-picker-background-color-key-focus)));
 		border-color: var(--highcontrast-picker-border-color-default, var(--mod-picker-border-color-key-focus, var(--spectrum-picker-border-color-key-focus)));
-		outline: none;
+		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-key-focus, var(--spectrum-picker-font-color-key-focus)));
 
 		/* Focus indicator */
 		&::after {
@@ -213,29 +212,28 @@
 }
 
 .spectrum-Picker-label {
-	overflow: hidden;
-
 	/* Be the biggest, but also shrink! */
 	flex: 1 1 auto;
+
+	white-space: nowrap;
+	overflow: hidden;
+
+	font-size: var(--mod-picker-font-size, var(--spectrum-picker-font-size));
+	line-height: var(--mod-picker-line-height, var(--spectrum-picker-line-height));
+	font-weight: var(--mod-picker-font-weight, var(--spectrum-picker-font-weight));
+
+	text-overflow: ellipsis;
+	text-align: start;
 
 	margin-block-start: var(--mod-picker-spacing-top-to-text, var(--spectrum-picker-spacing-top-to-text));
 	margin-block-end: calc(var(--mod-picker-spacing-bottom-to-text, var(--spectrum-picker-spacing-bottom-to-text)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
 
-	font-size: var(--mod-picker-font-size, var(--spectrum-picker-font-size));
-	font-weight: var(--mod-picker-font-weight, var(--spectrum-picker-font-weight));
-	line-height: var(--mod-picker-line-height, var(--spectrum-picker-line-height));
-	text-align: start;
-
-	text-overflow: ellipsis;
-
-	white-space: nowrap;
-
 	&.is-placeholder {
 		font-weight: var(--mod-picker-placeholder-font-weight, var(--spectrum-picker-font-weight));
 		font-style: var(--mod-picker-placeholder-font-style, var(--spectrum-picker-placeholder-font-style));
+		transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
 
 		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-		transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-in-out;
 
 		&:hover {
 			color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-hover, var(--spectrum-picker-font-color-hover)));
@@ -249,16 +247,16 @@
 
 /* The picker chevron */
 .spectrum-Picker-menuIcon {
-	position: relative;
 	display: inline-block;
-	flex-shrink: 0;
-	margin-block: var(--mod-picker-spacing-top-to-disclosure-icon, var(--spectrum-picker-spacing-top-to-disclosure-icon));
-
-	margin-inline-start: var(--mod-picker-spacing-icon-to-disclosure-icon, var(--spectrum-picker-spacing-icon-to-disclosure-icon));
-
-	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-default, var(--spectrum-picker-icon-color-default)));
+	position: relative;
 	vertical-align: top;
 	transition: color var(--mod-picker-animation-duration, var(--spectrum-picker-animation-duration)) ease-out;
+	flex-shrink: 0;
+
+	margin-inline-start: var(--mod-picker-spacing-icon-to-disclosure-icon, var(--spectrum-picker-spacing-icon-to-disclosure-icon));
+	margin-block: var(--mod-picker-spacing-top-to-disclosure-icon, var(--spectrum-picker-spacing-top-to-disclosure-icon));
+
+	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-default, var(--spectrum-picker-icon-color-default)));
 
 	&:active {
 		color: var(--highcontrast-picker-content-color-default, var(--mod-picker-icon-color-active, var(--spectrum-picker-icon-color-active)));
@@ -286,12 +284,12 @@
 .spectrum-Picker--quiet {
 	inline-size: auto;
 	min-inline-size: 0;
-	margin-block-start: calc(var(--mod-picker-spacing-label-to-picker-quiet, var(--spectrum-picker-spacing-label-to-picker-quiet)) + (1px));
-	padding-inline: var(--mod-picker-spacing-edge-to-text-quiet, var(--spectrum-picker-spacing-edge-to-text-quiet));
-	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
-	background-color: var(--highcontrast-picker-background-color, transparent);
 	border: none;
 	border-radius: 0;
+	padding-inline: var(--mod-picker-spacing-edge-to-text-quiet, var(--spectrum-picker-spacing-edge-to-text-quiet));
+	margin-block-start: calc(var(--mod-picker-spacing-label-to-picker-quiet, var(--spectrum-picker-spacing-label-to-picker-quiet)) + (1px));
+	color: var(--highcontrast-picker-content-color-default, var(--mod-picker-font-color-default, var(--spectrum-picker-font-color-default)));
+	background-color: var(--highcontrast-picker-background-color, transparent);
 
 	&.spectrum-Picker--sideLabel {
 		margin-block-start: 0;
@@ -302,9 +300,9 @@
 	}
 
 	&::after {
-		inline-size: auto;
-		block-size: auto;
 		border: none;
+		block-size: auto;
+		inline-size: auto;
 	}
 
 	&:hover {
@@ -317,10 +315,10 @@
 
 		/* Focus indicator changes from a ring to a line underneath. */
 		&::after {
-			margin: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1) 0;
 			border: none;
 			border-radius: 0;
 			box-shadow: 0 var(--mod-picker-focus-indicator-thickness, var(--spectrum-picker-focus-indicator-thickness)) 0 0 var(--highcontrast-picker-focus-indicator-color, var(--mod-picker-focus-indicator-color, var(--spectrum-picker-focus-indicator-color)));
+			margin: calc((var(--mod-picker-focus-indicator-gap, var(--spectrum-picker-focus-indicator-gap)) + var(--mod-picker-border-width, var(--spectrum-picker-border-width))) * -1) 0;
 		}
 	}
 
@@ -346,9 +344,9 @@
 .spectrum-Picker:disabled,
 .spectrum-Picker.is-disabled {
 	cursor: default;
-	color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
 	background-color: var(--highcontrast-picker-background-color, var(--mod-picker-background-color-disabled, var(--spectrum-picker-background-color-disabled)));
 	border-color: var(--highcontrast-picker-border-color-disabled, transparent);
+	color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
 
 	.spectrum-Picker-icon,
 	.spectrum-Picker-menuIcon,

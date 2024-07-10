@@ -1,17 +1,46 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-@import "themes/spectrum-two.css";
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "./themes/spectrum-two.css";
+
+.spectrum-AssetList {
+	--spectrum-assetlist-width: 272px;
+	--spectrum-assetlist-child-indicator-animation: var(--spectrum-animation-duration-100);
+
+	/* item */
+	--spectrum-assetlist-item-height: var(--spectrum-spacing-600);
+	--spectrum-assetlist-item-padding-inline-start: var(--spectrum-spacing-300);
+	--spectrum-assetlist-item-padding-inline-end: var(--spectrum-spacing-300);
+	--spectrum-assetlist-item-margin-block-end: var(--spectrum-spacing-75);
+	--spectrum-assetlist-item-border-radius: var(--spectrum-spacing-75);
+	--spectrum-assetlist-item-animation: var(--spectrum-animation-duration-100);
+	--spectrum-assetlist-item-font-size: var(--spectrum-font-size-100);
+	--spectrum-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
+	--spectrum-assetlist-item-background-color-down: var(--spectrum-gray-300);
+	--spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-200);
+
+	/* thumbnail */
+	--spectrum-assetlist-thumbnail-width: var(--spectrum-spacing-400);
+	--spectrum-assetlist-thumbnail-height: var(--spectrum-spacing-400);
+	--spectrum-assetlist-thumbnail-margin-inline-start: var(--spectrum-spacing-100);
+
+	/* label */
+	--spectrum-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
+	--spectrum-assetlist-label-color: var(--spectrum-neutral-content-color-default);
+
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
+}
 
 .spectrum-AssetList {
 	margin-block-start: 0;
@@ -20,31 +49,32 @@
 }
 
 .spectrum-AssetList-item {
-	cursor: pointer;
 	position: relative;
+	color: var(--highcontrast-assetlist-label-color, var(--mod-assetlist-label-color, var(--spectrum-assetlist-label-color)));
 
 	display: flex;
-	align-items: center;
 	box-sizing: border-box;
+	align-items: center;
 
 	inline-size: var(--mod-assetlist-width, var(--spectrum-assetlist-width));
 	block-size: var(--mod-assetlist-item-height, var(--spectrum-assetlist-item-height));
-	margin-block: 0 var(--mod-assetlist-item-margin-bottom, var(--spectrum-assetlist-item-margin-block-end));
-	margin-inline: 0;
 
 	padding-block: 0;
 	padding-inline: var(--mod-assetlist-item-padding-inline-start, var(--spectrum-assetlist-item-padding-inline-start)) var(--mod-assetlist-item-padding-inline-end, var(--spectrum-assetlist-item-padding-inline-end));
+	margin-block: 0 var(--mod-assetlist-item-margin-bottom, var(--spectrum-assetlist-item-margin-block-end));
+	margin-inline: 0;
+
+	border-radius: var(--mod-assetlist-item-border-radius, var(--spectrum-assetlist-item-border-radius));
+
+	transition: background-color var(--mod-assetlist-item-animation, var(--spectrum-assetlist-item-animation)) ease-in-out;
 
 	font-size: var(--mod-assetlist-item-font-size, var(--spectrum-assetlist-item-font-size));
 	font-weight: var(--mod-assetlist-item-font-weight, var(--spectrum-assetlist-item-font-weight));
 	font-style: normal;
-	color: var(--highcontrast-assetlist-label-color, var(--mod-assetlist-label-color, var(--spectrum-assetlist-label-color)));
 
-	border-radius: var(--mod-assetlist-item-border-radius, var(--spectrum-assetlist-item-border-radius));
+	cursor: pointer;
 
 	outline: none;
-
-	transition: background-color var(--mod-assetlist-item-animation, var(--spectrum-assetlist-item-animation)) ease-in-out;
 
 	&::before {
 		content: "";
@@ -78,13 +108,13 @@
 	}
 
 	.spectrum-AssetList-itemThumbnail {
+		/* Remove the border on images inside links in IE 10-. */
+		border-style: none;
+
 		inline-size: var(--mod-assetlist-thumbnail-width, var(--spectrum-assetlist-thumbnail-width));
 		block-size: var(--mod-assetlist-thumnail-height, var(--spectrum-assetlist-thumbnail-height));
 		margin-inline-start: var(--mod-assetlist-thumbnail-margin-left, var(--spectrum-assetlist-thumbnail-margin-inline-start));
 		vertical-align: middle;
-
-		/* Remove the border on images inside links in IE 10-. */
-		border-style: none;
 	}
 
 	&:hover {
@@ -128,28 +158,28 @@
 }
 
 .spectrum-AssetList-itemChildIndicator {
-	transform: var(--spectrum-logical-rotation);
 	display: none;
 	transition: transform ease var(--mod-assetlist-child-indicator-animation, var(--spectrum-assetlist-child-indicator-animation));
+	transform: var(--spectrum-logical-rotation);
 }
 
 .spectrum-AssetList-itemLabel {
-	overflow: hidden;
 	flex: 1;
 	padding-inline-start: var(--mod-assetlist-item-label-padding-inline-start, var(--spectrum-assetlist-item-label-padding-inline-start));
 
 	text-overflow: ellipsis;
+	overflow: hidden;
 	white-space: nowrap;
 }
 
 @media (forced-colors: active) {
 	.spectrum-AssetList-item {
+		forced-color-adjust: none;
 		--highcontrast-assetlist-border-color-key-focus: Highlight;
 		--highcontrast-assetlist-item-background-color-hover: Highlight;
 		--highcontrast-assetlist-item-background-color-selected-hover: Highlight;
 		--highcontrast-assetlist-label-color: ButtonText;
 		--highcontrast-assetlist-item-background-color-selected: SelectedItem;
-		forced-color-adjust: none;
 
 		&:hover,
 		&.is-selected,

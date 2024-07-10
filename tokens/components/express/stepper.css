@@ -62,8 +62,9 @@
 	--system-stepper-invalid-focused-infield-button-border-color: var(--mod-stepper-border-color-focus-invalid, var(--system-stepper-border-color-focus-invalid));
 	--system-stepper-invalid-focus-infield-button-border-color: var(--mod-stepper-border-color-focus-invalid, var(--system-stepper-border-color-focus-invalid));
 	--system-stepper-invalid-hover-infield-button-border-color: var(--mod-stepper-border-color-hover-invalid, var(--spectrum-negative-border-color-hover));
-	--system-stepper-invalid-focused-hover-infield-button-border-color: var(--mod-stepper-border-color-focus-hover-invalid, var(--system-stepper-border-color-focus-hover-invalid));
 	--system-stepper-invalid-focus-hover-focus-hover-infield-button-border-color: var(--mod-stepper-border-color-focus-hover-invalid, var(--system-stepper-border-color-focus-hover-invalid));
+	--system-stepper-invalid-focused-hover-infield-button-border-color: var(--mod-stepper-border-color-focus-hover-invalid, var(--system-stepper-border-color-focus-hover-invalid));
+	--system-stepper-invalid-focus-hover-infield-button-border-color: var(--mod-stepper-border-color-focus-hover-invalid, var(--system-stepper-border-color-focus-hover-invalid));
 	--system-stepper-invalid-keyboard-focused-infield-button-border-color: var(--mod-stepper-border-color-keyboard-focus-invalid, var(--system-stepper-border-color-keyboard-focus-invalid));
 	--system-stepper-invalid-focus-visible-infield-button-border-color: var(--mod-stepper-border-color-keyboard-focus-invalid, var(--system-stepper-border-color-keyboard-focus-invalid));
 }
@@ -93,3 +94,5 @@
 	--system-stepper-disabled-buttons-background-color: var(--spectrum-disabled-background-color);
 	--system-stepper-disabled-buttons-border-width: 0;
 }
+
+/*# sourceMappingURL=express.css.map */

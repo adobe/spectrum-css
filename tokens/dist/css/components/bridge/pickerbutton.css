@@ -43,6 +43,7 @@
 	--spectrum-picker-button-background-animation-duration: var(--system-pickerbutton-picker-button-background-animation-duration);
 }
 
+.spectrum-PickerButton.is-disabled,
 .spectrum-PickerButton:disabled {
 	--spectrum-picker-button-background-color: var(--system-pickerbutton-disabled-picker-button-background-color);
 	--spectrum-picker-button-background-color-hover: var(--system-pickerbutton-disabled-picker-button-background-color-hover);

@@ -1,96 +1,95 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-@import "themes/spectrum-two.css";
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "./themes/spectrum-two.css";
 
 .spectrum-SideNav {
 	display: flex;
 	flex-direction: column;
-	margin: 0;
-	padding: 0;
 
 	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .spectrum-SideNav-item {
-	margin-inline: 0;
 	list-style-type: none;
+	margin-inline: 0;
 
 	&.is-disabled {
 		/* Disable all children */
 		.spectrum-SideNav-itemLink {
-			pointer-events: none;
+			background-color: var(--highcontrast-sidenav-background-disabled, var(--mod-sidenav-background-disabled, var(--spectrum-sidenav-background-disabled)));
+			color: var(--highcontrast-sidenav-content-disabled-color, var(--mod-sidenav-content-disabled-color, var(--spectrum-sidenav-content-disabled-color)));
 
 			cursor: default;
-			color: var(--highcontrast-sidenav-content-disabled-color, var(--mod-sidenav-content-disabled-color, var(--spectrum-sidenav-content-disabled-color)));
-			background-color: var(--highcontrast-sidenav-background-disabled, var(--mod-sidenav-background-disabled, var(--spectrum-sidenav-background-disabled)));
+			pointer-events: none;
 		}
 	}
 }
 
 .spectrum-SideNav-item.is-selected {
 	.spectrum-SideNav-itemLink {
-		color: var(--highcontrast-sidenav-content-color-default-selected, var(--mod-sidenav-content-color-default-selected, var(--spectrum-sidenav-content-color-default-selected)));
 		background-color: var(--highcontrast-sidenav-item-background-default-selected, var(--mod-sidenav-item-background-default-selected, var(--spectrum-sidenav-item-background-default-selected)));
+		color: var(--highcontrast-sidenav-content-color-default-selected, var(--mod-sidenav-content-color-default-selected, var(--spectrum-sidenav-content-color-default-selected)));
 
 		&:hover {
-			color: var(--mod-sidenav-content-color-hover-selected, var(--spectrum-sidenav-content-color-hover-selected));
 			background-color: var(--highcontrast-sidenav-background-hover-selected, var(--mod-sidenav-background-hover-selected, var(--spectrum-sidenav-background-hover-selected)));
+			color: var(--mod-sidenav-content-color-hover-selected, var(--spectrum-sidenav-content-color-hover-selected));
 		}
 
 		&:active {
-			color: var(--mod-sidenav-content-color-down-selected, var(--spectrum-sidenav-content-color-down-selected));
 			background-color: var(--highcontrast-sidenav-item-background-down-selected, var(--mod-sidenav-item-background-down-selected, var(--spectrum-sidenav-item-background-down-selected)));
+			color: var(--mod-sidenav-content-color-down-selected, var(--spectrum-sidenav-content-color-down-selected));
 		}
 
 		&.is-keyboardFocused,
 		&:focus-visible {
-			color: var(--mod-sidenav-content-color-key-focus-selected, var(--spectrum-sidenav-content-color-key-focus-selected));
 			background-color: var(--highcontrast-sidenav-background-key-focus-selected, var(--mod-sidenav-background-key-focus-selected, var(--spectrum-sidenav-background-key-focus-selected)));
+			color: var(--mod-sidenav-content-color-key-focus-selected, var(--spectrum-sidenav-content-color-key-focus-selected));
 		}
 	}
 }
 
 .spectrum-SideNav-itemLink {
-	cursor: pointer;
+	padding-inline: var(--mod-sidenav-inline-padding, var(--spectrum-sidenav-inline-padding));
+	margin-block-end: var(--mod-sidenav-gap, var(--spectrum-sidenav-gap));
 	position: relative;
 	display: inline-flex;
 	justify-content: start;
 	box-sizing: border-box;
+	word-break: break-word;
+	hyphens: auto;
+	cursor: pointer;
+	transition:
+		background-color var(--spectrum-animation-duration-100) ease-out,
+		color var(--spectrum-animation-duration-100) ease-out;
+
+	border-radius: var(--mod-sidenav-border-radius, var(--spectrum-sidenav-border-radius));
+
+	background-color: var(--highcontrast-sidenav-background-default, var(--mod-sidenav-background-default, var(--spectrum-sidenav-background-default)));
+	color: var(--highcontrast-sidenav-content-color-default, var(--mod-sidenav-content-color-default, var(--spectrum-sidenav-content-color-default)));
 
 	inline-size: var(--mod-sidenav-width, var(--spectrum-sidenav-width));
 	min-inline-size: var(--mod-sidenav-min-width, var(--spectrum-sidenav-min-width));
 	max-inline-size: var(--mod-sidenav-max-width, var(--spectrum-sidenav-max-width));
 	min-block-size: var(--mod-sidenav-min-height, var(--spectrum-sidenav-min-height));
-	margin-block-end: var(--mod-sidenav-gap, var(--spectrum-sidenav-gap));
-	padding-inline: var(--mod-sidenav-inline-padding, var(--spectrum-sidenav-inline-padding));
 
 	font-family: var(--mod-sidenav-text-font-family, var(--spectrum-sidenav-text-font-family));
 	font-size: var(--mod-sidenav-text-font-size, var(--spectrum-sidenav-text-font-size));
 	font-weight: var(--mod-sidenav-text-font-weight, var(--spectrum-sidenav-text-font-weight));
 	font-style: var(--mod-sidenav-text-font-style, var(--spectrum-sidenav-text-font-style));
-	line-height: var(--mod-sidenav-text-line-height, var(--spectrum-sidenav-text-line-height));
-	hyphens: auto;
-	color: var(--highcontrast-sidenav-content-color-default, var(--mod-sidenav-content-color-default, var(--spectrum-sidenav-content-color-default)));
 	text-decoration: none;
-	word-break: break-word;
-
-	background-color: var(--highcontrast-sidenav-background-default, var(--mod-sidenav-background-default, var(--spectrum-sidenav-background-default)));
-
-	border-radius: var(--mod-sidenav-border-radius, var(--spectrum-sidenav-border-radius));
-	transition:
-		background-color var(--spectrum-animation-duration-100) ease-out,
-		color var(--spectrum-animation-duration-100) ease-out;
+	line-height: var(--mod-sidenav-text-line-height, var(--spectrum-sidenav-text-line-height));
 
 	.spectrum-SideNav-link-text {
 		margin-block-start: var(--mod-sidenav-top-to-label, var(--spectrum-sidenav-top-to-label));
@@ -98,29 +97,29 @@
 	}
 
 	.spectrum-Icon {
-		flex-shrink: 0;
 		inline-size: var(--mod-sidenav-icon-size, var(--spectrum-sidenav-icon-size));
 		block-size: var(--mod-sidenav-icon-size, var(--spectrum-sidenav-icon-size));
-		margin-block-start: var(--mod-sidenav-top-to-icon, var(--spectrum-sidenav-top-to-icon));
 		margin-inline-end: var(--mod-sidenav-icon-spacing, var(--spectrum-sidenav-icon-spacing));
+		margin-block-start: var(--mod-sidenav-top-to-icon, var(--spectrum-sidenav-top-to-icon));
+		flex-shrink: 0;
 	}
 
 	&:hover {
-		color: var(--highcontrast-sidenav-content-color-hover, var(--mod-sidenav-content-color-hover, var(--spectrum-sidenav-content-color-hover)));
 		background-color: var(--highcontrast-sidenav-background-hover, var(--mod-sidenav-background-hover, var(--spectrum-sidenav-background-hover)));
+		color: var(--highcontrast-sidenav-content-color-hover, var(--mod-sidenav-content-color-hover, var(--spectrum-sidenav-content-color-hover)));
 	}
 
 	&:active {
-		color: var(--highcontrast-sidenav-content-color-down, var(--mod-sidenav-content-color-down, var(--spectrum-sidenav-content-color-down)));
 		background-color: var(--highcontrast-sidenav-item-background-down, var(--mod-sidenav-item-background-down, var(--spectrum-sidenav-item-background-down)));
+		color: var(--highcontrast-sidenav-content-color-down, var(--mod-sidenav-content-color-down, var(--spectrum-sidenav-content-color-down)));
 	}
 
 	&.is-keyboardFocused,
 	&:focus-visible {
-		color: var(--highcontrast-sidenav-content-color-key-focus, var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus)));
-		background-color: var(--highcontrast-sidenav-background-key-focus, var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus)));
 		outline: var(--highcontrast-sidenav-focus-ring-color, var(--mod-sidenav-focus-ring-color, var(--spectrum-sidenav-focus-ring-color))) solid var(--mod-sidenav-focus-ring-size, var(--spectrum-sidenav-focus-ring-size));
 		outline-offset: var(--mod-sidenav-focus-ring-gap, var(--spectrum-sidenav-focus-ring-gap));
+		background-color: var(--highcontrast-sidenav-background-key-focus, var(--mod-sidenav-background-key-focus, var(--spectrum-sidenav-background-key-focus)));
+		color: var(--highcontrast-sidenav-content-color-key-focus, var(--mod-sidenav-content-color-key-focus, var(--spectrum-sidenav-content-color-key-focus)));
 	}
 }
 
@@ -128,26 +127,26 @@
 	margin-block-start: calc(var(--mod-sidenav-heading-top-margin, var(--spectrum-sidenav-heading-top-margin)) - var(--mod-sidenav-gap, var(--spectrum-sidenav-gap)));
 	margin-block-end: var(--mod-sidenav-heading-bottom-margin, var(--spectrum-sidenav-heading-bottom-margin));
 	padding-inline: var(--mod-sidenav-inline-padding, var(--spectrum-sidenav-inline-padding));
+	color: var(--mod-sidenav-header-color, var(--spectrum-sidenav-header-color));
 	font-size: var(--mod-sidenav-header-font-size, var(--spectrum-sidenav-header-font-size));
 	font-weight: var(--mod-sidenav-header-font-weight, var(--spectrum-sidenav-header-font-weight));
 	font-style: var(--mod-sidenav-header-font-style, var(--spectrum-sidenav-header-font-style));
 	line-height: var(--mod-sidenav-header-line-height, var(--spectrum-sidenav-header-line-height));
-	color: var(--mod-sidenav-header-color, var(--spectrum-sidenav-header-color));
 }
 
 .spectrum-SideNav--multiLevel {
 	.spectrum-SideNav-itemLink {
 		font-family: var(--mod-sidenav-top-level-font-family, var(--spectrum-sidenav-top-level-font-family));
-		font-size: var(--mod-sidenav-top-level-font-size, var(--spectrum-sidenav-top-level-font-size));
 		font-weight: var(--mod-sidenav-top-level-font-weight, var(--spectrum-sidenav-top-level-font-weight));
 		font-style: var(--mod-sidenav-top-level-font-style, var(--spectrum-sidenav-top-level-font-style));
+		font-size: var(--mod-sidenav-top-level-font-size, var(--spectrum-sidenav-top-level-font-size));
 		line-height: var(--mod-sidenav-top-level-line-height, var(--spectrum-sidenav-top-level-line-height));
 	}
 
 	.spectrum-SideNav {
 		.spectrum-SideNav-itemLink {
-			padding-inline-start: var(--mod-sidenav-start-to-content-second-level, var(--spectrum-sidenav-start-to-content-second-level));
 			font-weight: var(--mod-sidenav-text-font-weight, var(--spectrum-sidenav-text-font-weight));
+			padding-inline-start: var(--mod-sidenav-start-to-content-second-level, var(--spectrum-sidenav-start-to-content-second-level));
 		}
 
 		.spectrum-SideNav .spectrum-SideNav-itemLink {
@@ -177,6 +176,7 @@
 	}
 
 	.spectrum-SideNav-item {
+		forced-color-adjust: none;
 		--highcontrast-sidenav-content-disabled-color: GrayText;
 
 		--highcontrast-sidenav-focus-ring-color: Highlight;
@@ -196,6 +196,5 @@
 		--highcontrast-sidenav-top-level-font-color: ButtonText;
 		--highcontrast-sidenav-content-color-default: ButtonText;
 		--highcontrast-sidenav-content-color-down: HighlightText;
-		forced-color-adjust: none;
 	}
 }

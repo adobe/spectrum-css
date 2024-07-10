@@ -1,18 +1,17 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
 @import "@spectrum-css/commons/basebutton.css";
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-LogicButton {
 	@extend %spectrum-BaseButton;
@@ -21,20 +20,18 @@
 	block-size: var(--mod-logic-button-height, var(--spectrum-logic-button-height));
 	padding: var(--mod-logic-button-padding, var(--spectrum-logic-button-padding));
 
+	border-width: var(--mod-logic-button-border-width, var(--spectrum-logic-button-border-width));
+	border-radius: var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius));
+
 	font-size: var(--mod-logic-button-font-size, var(--spectrum-logic-button-font-size));
 	font-weight: var(--mod-logic-button-font-weight, var(--spectrum-logic-button-font-weight));
 	line-height: 0;
-
-	border-width: var(--mod-logic-button-border-width, var(--spectrum-logic-button-border-width));
-	border-radius: var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius));
 
 	&::after {
 		/* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
 		border-radius: calc(var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius)) + var(--mod-logic-button-focus-indicator-gap, var(--spectrum-logic-button-focus-indicator-gap)));
 	}
-}
 
-.spectrum-LogicButton {
 	&:focus-visible {
 		outline: none;
 
@@ -45,9 +42,9 @@
 }
 
 .spectrum-LogicButton--and {
-	color: var(--highcontrast-logic-button-and-text-color, var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color)));
 	background-color: var(--highcontrast-logic-button-and-background-color, var(--mod-logic-button-and-background-color, var(--spectrum-logic-button-and-background-color)));
 	border-color: var(--highcontrast-logic-button-and-border-color, var(--mod-logic-button-and-border-color, var(--spectrum-logic-button-and-border-color)));
+	color: var(--highcontrast-logic-button-and-text-color, var(--mod-logic-button-and-text-color, var(--spectrum-logic-button-and-text-color)));
 
 	&:hover:not([disabled]) {
 		background-color: var(--highcontrast-logic-button-and-background-color-hover, var(--mod-logic-button-and-background-color-hover, var(--spectrum-logic-button-and-background-color-hover)));
@@ -56,9 +53,9 @@
 }
 
 .spectrum-LogicButton--or {
-	color: var(--highcontrast-logic-button-or-text-color, var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color)));
 	background-color: var(--highcontrast-logic-button-or-background-color, var(--mod-logic-button-or-background-color, var(--spectrum-logic-button-or-background-color)));
 	border-color: var(--highcontrast-logic-button-or-border-color, var(--mod-logic-button-or-border-color, var(--spectrum-logic-button-or-border-color)));
+	color: var(--highcontrast-logic-button-or-text-color, var(--mod-logic-button-or-text-color, var(--spectrum-logic-button-or-text-color)));
 
 	&:hover:not([disabled]) {
 		background-color: var(--highcontrast-logic-button-or-background-color-hover, var(--mod-logic-button-or-background-color-hover, var(--spectrum-logic-button-or-background-color-hover)));
@@ -73,16 +70,6 @@
 	}
 
 	.spectrum-LogicButton {
-		--highcontrast-logic-button-and-background-color: ButtonFace;
-		--highcontrast-logic-button-and-background-color-hover: ButtonFace;
-		--highcontrast-logic-button-and-border-color: ButtonText;
-		--highcontrast-logic-button-and-border-color-hover: Highlight;
-		--highcontrast-logic-button-and-text-color: ButtonText;
-		--highcontrast-logic-button-or-background-color: ButtonFace;
-		--highcontrast-logic-button-or-background-color-hover: ButtonFace;
-		--highcontrast-logic-button-or-border-color: ButtonText;
-		--highcontrast-logic-button-or-border-color-hover: Highlight;
-		--highcontrast-logic-button-or-text-color: ButtonText;
 		forced-color-adjust: none;
 
 		&:disabled,
@@ -94,5 +81,16 @@
 			--highcontrast-logic-button-or-border-color: GrayText;
 			--highcontrast-logic-button-or-text-color: GrayText;
 		}
+
+		--highcontrast-logic-button-and-background-color: ButtonFace;
+		--highcontrast-logic-button-and-background-color-hover: ButtonFace;
+		--highcontrast-logic-button-and-border-color: ButtonText;
+		--highcontrast-logic-button-and-border-color-hover: Highlight;
+		--highcontrast-logic-button-and-text-color: ButtonText;
+		--highcontrast-logic-button-or-background-color: ButtonFace;
+		--highcontrast-logic-button-or-background-color-hover: ButtonFace;
+		--highcontrast-logic-button-or-border-color: ButtonText;
+		--highcontrast-logic-button-or-border-color-hover: Highlight;
+		--highcontrast-logic-button-or-text-color: ButtonText;
 	}
 }

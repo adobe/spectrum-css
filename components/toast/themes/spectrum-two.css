@@ -13,12 +13,11 @@
 
 @container style(--system: spectrum) {
 	.spectrum-Toast {
-		--spectrum-toast-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
-
 		/* Hardcoded variables */
 		--spectrum-toast-font-weight: var(--spectrum-regular-font-weight);
 
 		/* Size */
+
 		--spectrum-toast-font-size: var(--spectrum-font-size-100);
 		--spectrum-toast-corner-radius: var(--spectrum-corner-radius-100);
 		--spectrum-toast-block-size: var(--spectrum-toast-height);
@@ -29,6 +28,7 @@
 		--spectrum-toast-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
 		/* Space */
+
 		--spectrum-toast-spacing-icon-to-text: var(--spectrum-text-to-visual-100);
 
 		--spectrum-toast-spacing-start-edge-to-text-and-icon: var(--spectrum-spacing-300);
@@ -49,6 +49,7 @@
 		--spectrum-toast-spacing-bottom-edge-to-text: var(--spectrum-toast-bottom-to-text);
 
 		/* Color */
+		--spectrum-toast-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 		--spectrum-toast-negative-background-color-default: var(--spectrum-negative-background-color-default);
 		--spectrum-toast-positive-background-color-default: var(--spectrum-positive-background-color-default);
 		--spectrum-toast-informative-background-color-default: var(--spectrum-informative-background-color-default);

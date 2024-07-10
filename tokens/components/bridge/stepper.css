@@ -97,6 +97,7 @@
 	--mod-infield-button-border-color: var(--system-stepper-invalid-focus-infield-button-border-color);
 }
 
+.spectrum-Stepper.is-invalid.is-hover,
 .spectrum-Stepper.is-invalid:hover {
 	--mod-infield-button-border-color: var(--system-stepper-invalid-hover-infield-button-border-color);
 }
@@ -109,10 +110,20 @@
 	--mod-infield-button-border-color: var(--system-stepper-invalid-focus-hover-focus-hover-infield-button-border-color);
 }
 
+.spectrum-Stepper.is-invalid.is-focused.is-hover {
+	--mod-infield-button-border-color: var(--system-stepper-invalid-focused-hover-infield-button-border-color);
+}
+
+.spectrum-Stepper.is-invalid:focus.is-hover {
+	--mod-infield-button-border-color: var(--system-stepper-invalid-focus-hover-infield-button-border-color);
+}
+
 .spectrum-Stepper.is-invalid.is-keyboardFocused {
 	--mod-infield-button-border-color: var(--system-stepper-invalid-keyboard-focused-infield-button-border-color);
 }
 
+.spectrum-Stepper.is-invalid.is-focus-visible,
 .spectrum-Stepper.is-invalid:focus-visible {
 	--mod-infield-button-border-color: var(--system-stepper-invalid-focus-visible-infield-button-border-color);
 }
+/*# sourceMappingURL=index-theme.css.map */

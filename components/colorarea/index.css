@@ -1,17 +1,26 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
+
+.spectrum-ColorArea {
+	--spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
+	--spectrum-colorarea-border-color: rgba(0, 0, 0, 10%); /* TODO replace with token --spectrum-color-area-border-color and --spectrum-color-area-border-opacity using RGBA function */
+	--spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
+	--spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
+	--spectrum-colorarea-height: var(--spectrum-color-area-height);
+	--spectrum-colorarea-width: var(--spectrum-color-area-width);
+	--spectrum-colorarea-min-width: var(--spectrum-color-area-minimum-width);
+	--spectrum-colorarea-min-height: var(--spectrum-color-area-minimum-height);
+}
 
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
@@ -34,17 +43,17 @@
 }
 
 .spectrum-ColorArea {
-	cursor: default;
-	user-select: none;
 	position: relative;
 	display: inline-block;
-	box-sizing: border-box;
-	inline-size: var(--mod-colorarea-width, var(--spectrum-colorarea-width));
+	cursor: default;
+	user-select: none;
 	min-inline-size: var(--mod-colorarea-min-width, var(--spectrum-colorarea-min-width));
-	block-size: var(--mod-colorarea-height, var(--spectrum-colorarea-height));
 	min-block-size: var(--mod-colorarea-min-height, var(--spectrum-colorarea-min-height));
-	border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
+	inline-size: var(--mod-colorarea-width, var(--spectrum-colorarea-width));
+	block-size: var(--mod-colorarea-height, var(--spectrum-colorarea-height));
+	box-sizing: border-box;
 	border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
+	border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
 
 	&.is-focused {
 		z-index: 2;
@@ -62,8 +71,8 @@
 }
 
 .spectrum-ColorArea-handle {
-	inset-block-start: 0;
 	transform: translate(calc(var(--mod-colorarea-width, var(--spectrum-colorarea-width)) - var(--spectrum-colorarea-border-width)), 0);
+	inset-block-start: 0;
 
 	&:dir(rtl) {
 		inset-inline-end: 0;
@@ -77,13 +86,13 @@
 }
 
 .spectrum-ColorArea-slider {
-	pointer-events: none;
+	opacity: 0;
 	position: absolute;
-	z-index: 0;
 	inset-block-start: 0;
 	inset-inline-start: 0;
 	inline-size: 100%;
 	block-size: 100%;
+	z-index: 0;
 	margin: 0;
-	opacity: 0;
+	pointer-events: none;
 }

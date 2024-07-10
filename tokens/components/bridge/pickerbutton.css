@@ -43,6 +43,7 @@
 	--spectrum-picker-button-background-animation-duration: var(--system-pickerbutton-picker-button-background-animation-duration);
 }
 
+.spectrum-PickerButton.is-disabled,
 .spectrum-PickerButton:disabled {
 	--spectrum-picker-button-background-color: var(--system-pickerbutton-disabled-picker-button-background-color);
 	--spectrum-picker-button-background-color-hover: var(--system-pickerbutton-disabled-picker-button-background-color-hover);
@@ -87,3 +88,4 @@
 	--spectrum-picker-button-font-size: var(--system-pickerbutton-size-xl-picker-button-font-size);
 	--spectrum-picker-button-fill-padding: var(--system-pickerbutton-size-xl-picker-button-fill-padding);
 }
+/*# sourceMappingURL=index-theme.css.map */

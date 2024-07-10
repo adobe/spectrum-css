@@ -1,29 +1,23 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
 @import "@spectrum-css/commons/overlay.css";
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 /* Used to position the modal */
 .spectrum-Modal-wrapper {
-	/* Don't catch clicks */
-	pointer-events: none;
 	position: fixed;
-
-	/* Appear above underlay */
-	z-index: 2;
-	inset-block-start: 0;
 	inset-inline-start: 0;
+	inset-block-start: 0;
 
 	display: flex;
 	align-items: center;
@@ -46,6 +40,12 @@
 
 	visibility: hidden;
 
+	/* Don't catch clicks */
+	pointer-events: none;
+
+	/* Appear above underlay */
+	z-index: 2;
+
 	/* Be invisible by default */
 	transition: visibility 0ms linear var(--mod-modal-transition-animation-duration, var(--spectrum-modal-transition-animation-duration));
 
@@ -56,24 +56,24 @@
 
 .spectrum-Modal {
 	@extend %spectrum-overlay;
-	pointer-events: auto;
+
+	/* Start offset by the animation distance */
+	transform: translateY(var(--mod-modal-confirm-entry-animation-distance, var(--spectrum-modal-confirm-entry-animation-distance)));
 
 	/* Appear above underlay */
 	z-index: 2;
 
-	/* Start offset by the animation distance */
-	transform: translateY(var(--mod-modal-confirm-entry-animation-distance, var(--spectrum-modal-confirm-entry-animation-distance)));
-	overflow: hidden;
-	max-inline-size: var(--mod-modal-max-width, var(--spectrum-modal-max-width));
-
 	/* Don't be bigger than the screen */
 	max-block-size: var(--mod-modal-max-height, var(--spectrum-modal-max-height));
+	max-inline-size: var(--mod-modal-max-width, var(--spectrum-modal-max-width));
 
 	background: var(--mod-modal-background-color, var(--spectrum-modal-background-color));
 
 	/* border-radius includes legacy token fallback, which can be deprecated once component is migrated */
 	border-radius: var(--mod-modal-confirm-border-radius, var(--spectrum-modal-confirm-border-radius));
+	overflow: hidden;
 	outline: none; /* Firefox shows outline */
+	pointer-events: auto;
 
 	/* Exit animations */
 	transition:
@@ -85,20 +85,20 @@
 .spectrum-Modal.is-open {
 	@extend %spectrum-overlay--open;
 
-	transform: translateY(0);
-
 	/* Entry animations */
 	transition:
 		transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay)),
 		opacity var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay));
+
+	transform: translateY(0);
 }
 
 /* Responsive modals will fill the screen on small viewports */
 @media only screen and (device-width <= 400px), only screen and (device-height <= 350px) {
 	.spectrum-Modal--responsive {
 		inline-size: 100%;
-		max-inline-size: 100%;
 		block-size: 100%;
+		max-inline-size: 100%;
 		max-block-size: 100%;
 		border-radius: 0;
 	}
@@ -113,10 +113,10 @@
 /** @unofficial */
 .spectrum-Modal--fullscreen {
 	position: fixed;
-	inset-block-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-block-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
 	inset-inline-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+	inset-block-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
 	inset-inline-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+	inset-block-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
 	max-inline-size: none;
 	max-block-size: none;
 }
@@ -124,10 +124,10 @@
 .spectrum-Modal--fullscreenTakeover {
 	position: fixed;
 	inset: 0;
-
-	box-sizing: border-box;
 	max-inline-size: none;
 	max-block-size: none;
+
+	box-sizing: border-box;
 
 	/* Remove the border since we've taken over */
 	border: none;

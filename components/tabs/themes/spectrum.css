@@ -1,17 +1,16 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-@container style(--system: legacy) {
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@container (--system: legacy) {
 	.spectrum-Tabs {
 		--spectrum-tabs-font-weight: var(--spectrum-default-font-weight);
 
@@ -46,7 +45,7 @@
 		--spectrum-tabs-selection-indicator-color: var(--spectrum-neutral-subdued-content-color-down);
 
 		--spectrum-tabs-list-background-direction: top;
-		--spectrum-tabs-divider-background-color: var(--spectrum-gray-200);
+		--spectrum-tabs-divider-background-color: var(--spectrum-gray-300);
 		--spectrum-tabs-divider-size: var(--spectrum-border-width-200);
 		--spectrum-tabs-divider-border-radius: 1px;
 
@@ -102,55 +101,55 @@
 		}
 
 		&.spectrum-Tabs--emphasized {
-			--spectrum-tabs-color-selected: var(--mod-tabs-color-selected-emphasized, var(--spectrum-accent-content-color-default));
-			--spectrum-tabs-color-hover: var(--mod-tabs-color-hover-emphasized, var(--spectrum-accent-content-color-hover));
-			--spectrum-tabs-color-key-focus: var(--mod-tabs-color-key-focus-emphasized, var(--spectrum-accent-content-color-key-focus));
+			--mod-tabs-color-selected: var(--mod-tabs-color-selected-emphasized, var(--spectrum-accent-content-color-default));
+			--mod-tabs-color-hover: var(--mod-tabs-color-hover-emphasized, var(--spectrum-accent-content-color-hover));
+			--mod-tabs-color-key-focus: var(--mod-tabs-color-key-focus-emphasized, var(--spectrum-accent-content-color-key-focus));
 
-			--spectrum-tabs-selection-indicator-color: var(--mod-tabs-selection-indicator-color-emphasized, var(--spectrum-accent-content-color-default));
+			--mod-tabs-selection-indicator-color: var(--mod-tabs-selection-indicator-color-emphasized, var(--spectrum-accent-content-color-default));
+		}
+	}
+
+	.spectrum-Tabs--vertical {
+		--mod-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
+	}
+
+	.spectrum-Tabs--vertical-right {
+		--mod-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical-right, left);
+	}
+
+	.spectrum-Tabs--vertical:dir(rtl) {
+		--mod-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, left);
+	}
+
+	.spectrum-Tabs--vertical-right:dir(rtl) {
+		--mod-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
+	}
+
+	.spectrum-Tabs.spectrum-Tabs--compact {
+		--mod-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium));
+		--mod-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
+		--mod-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
+		--mod-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium));
+
+		&.spectrum-Tabs--sizeS {
+			--mod-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-small));
+			--mod-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-small));
+			--mod-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-small));
+			--mod-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-small));
 		}
 
-		&.spectrum-Tabs--vertical {
-			--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
+		&.spectrum-Tabs--sizeL {
+			--mod-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-large));
+			--mod-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-large));
+			--mod-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-large));
+			--mod-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-large));
 		}
 
-		&.spectrum-Tabs--vertical-right {
-			--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical-right, left);
-		}
-
-		&.spectrum-Tabs--vertical:dir(rtl) {
-			--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, left);
-		}
-
-		&.spectrum-Tabs--vertical-right:dir(rtl) {
-			--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
-		}
-
-		&.spectrum-Tabs--compact {
-			--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium));
-			--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
-			--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
-			--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium));
-
-			&.spectrum-Tabs--sizeS {
-				--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-small));
-				--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-small));
-				--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-small));
-				--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-small));
-			}
-
-			&.spectrum-Tabs--sizeL {
-				--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-large));
-				--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-large));
-				--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-large));
-				--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-large));
-			}
-
-			&.spectrum-Tabs--sizeXL {
-				--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-extra-large));
-				--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-extra-large));
-				--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-extra-large));
-				--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-extra-large));
-			}
+		&.spectrum-Tabs--sizeXL {
+			--mod-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-extra-large));
+			--mod-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-extra-large));
+			--mod-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-extra-large));
+			--mod-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-extra-large));
 		}
 	}
 }

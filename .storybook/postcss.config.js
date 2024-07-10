@@ -18,5 +18,14 @@ module.exports = (options) => rootConfig({
 	referencesOnly: false,
 	preserveVariables: false,
 	stripLocalSelectors: false,
+	buildSource: "storybook",
+	additionalPlugins: {
+		"postcss-pseudo-classes": {
+			restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+			allCombinations: true,
+			preserveBeforeAfter: false,
+			prefix: "is-"
+		},
+	},
 	...options,
 });

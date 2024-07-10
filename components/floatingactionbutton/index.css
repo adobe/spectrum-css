@@ -1,17 +1,48 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-@import "themes/spectrum-two.css";
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "./themes/spectrum-two.css";
+
+.spectrum-FloatingActionButton {
+	--spectrum-floating-action-button-size: var(--spectrum-component-height-200);
+	--spectrum-floating-action-button-icon-size: var(--spectrum-workflow-icon-size-200);
+	--spectrum-floating-action-button-padding: var(--spectrum-component-pill-edge-to-visual-only-200);
+	--spectrum-floating-action-button-margin: var(--spectrum-spacing-200);
+	--spectrum-floating-action-button-drop-shadow-x: var(--spectrum-drop-shadow-x);
+
+	--spectrum-floating-action-button-focus-ring-width: var(--spectrum-focus-indicator-thickness);
+	--spectrum-floating-action-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
+	--spectrum-floating-action-button-focus-ring-color: var(--spectrum-focus-indicator-color);
+
+	--spectrum-floating-action-button-background-color: var(--spectrum-accent-background-color-default);
+	--spectrum-floating-action-button-background-color-hover: var(--spectrum-accent-background-color-hover);
+	--spectrum-floating-action-button-background-color-down: var(--spectrum-accent-background-color-down);
+	--spectrum-floating-action-button-background-color-key-focus: var(--spectrum-accent-background-color-key-focus);
+	--spectrum-floating-action-button-icon-color: var(--spectrum-white);
+	--spectrum-floating-action-button-icon-color-hover: var(--spectrum-white);
+	--spectrum-floating-action-button-icon-color-down: var(--spectrum-white);
+	--spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-white);
+}
+
+.spectrum-FloatingActionButton--secondary {
+	--spectrum-floating-action-button-background-color: var(--spectrum-background-layer-2-color);
+	--spectrum-floating-action-button-background-color-hover: var(--spectrum-background-layer-2-color);
+	--spectrum-floating-action-button-background-color-down: var(--spectrum-background-layer-2-color);
+	--spectrum-floating-action-button-background-color-key-focus: var(--spectrum-background-layer-2-color);
+	--spectrum-floating-action-button-icon-color: var(--spectrum-neutral-subdued-content-color-default);
+	--spectrum-floating-action-button-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
+	--spectrum-floating-action-button-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
+	--spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
+}
 
 @media (forced-colors: active) {
 	.spectrum-FloatingActionButton {
@@ -34,19 +65,19 @@
 
 .spectrum-FloatingActionButton {
 	cursor: pointer;
-	position: relative;
-	inline-size: var(--mod-floating-action-button-size, var(--spectrum-floating-action-button-size));
 	block-size: var(--mod-floating-action-button-size, var(--spectrum-floating-action-button-size));
-	margin-block-end: var(--mod-floating-action-button-margin, var(--spectrum-floating-action-button-margin));
-	margin-inline-end: var(--mod-floating-action-button-margin, var(--spectrum-floating-action-button-margin));
-	padding-block: var(--mod-floating-action-button-padding, var(--spectrum-floating-action-button-padding));
+	inline-size: var(--mod-floating-action-button-size, var(--spectrum-floating-action-button-size));
+	border-radius: var(--mod-floating-action-button-border-radius, 50%);
 	padding-inline: var(--mod-floating-action-button-padding, var(--spectrum-floating-action-button-padding));
+	padding-block: var(--mod-floating-action-button-padding, var(--spectrum-floating-action-button-padding));
+	margin-inline-end: var(--mod-floating-action-button-margin, var(--spectrum-floating-action-button-margin));
+	margin-block-end: var(--mod-floating-action-button-margin, var(--spectrum-floating-action-button-margin));
+	border: none;
+	box-shadow: var(--mod-floating-action-button-drop-shadow-x, var(--spectrum-floating-action-button-drop-shadow-x)) var(--mod-floating-action-button-drop-shadow-y, var(--spectrum-floating-action-button-drop-shadow-y)) var(--mod-floating-action-button-drop-shadow-blur, var(--spectrum-floating-action-button-drop-shadow-blur)) var(--mod-floating-action-button-drop-shadow-color, var(--spectrum-floating-action-button-drop-shadow-color));
+	position: relative;
 
 	/* default is primary */
 	background-color: var(--highcontrast-floating-action-button-background-color, var(--mod-floating-action-button-background-color, var(--spectrum-floating-action-button-background-color)));
-	border: none;
-	border-radius: var(--mod-floating-action-button-border-radius, 50%);
-	box-shadow: var(--mod-floating-action-button-drop-shadow-x, var(--spectrum-floating-action-button-drop-shadow-x)) var(--mod-floating-action-button-drop-shadow-y, var(--spectrum-floating-action-button-drop-shadow-y)) var(--mod-floating-action-button-drop-shadow-blur, var(--spectrum-floating-action-button-drop-shadow-blur)) var(--mod-floating-action-button-drop-shadow-color, var(--spectrum-floating-action-button-drop-shadow-color));
 
 	&:hover {
 		background-color: var(--highcontrast-floating-action-button-background-color-hover, var(--mod-floating-action-button-background-color-hover, var(--spectrum-floating-action-button-background-color-hover)));
@@ -73,19 +104,19 @@
 		}
 
 		&::after {
-			pointer-events: none;
-			content: "";
 			position: absolute;
 			inset: 0;
 			margin: calc(-1 * var(--mod-floating-action-button-focus-ring-gap, var(--spectrum-floating-action-button-focus-ring-gap)));
-			border-radius: var(--mod-floating-action-button-border-radius, 50%);
 			box-shadow: 0 0 0 var(--mod-floating-action-button-focus-ring-width, var(--spectrum-floating-action-button-focus-ring-width)) var(--highcontrast-floating-action-button-focus-ring-color, var(--mod-afloating-action-button-focus-ring-color, var(--spectrum-floating-action-button-focus-ring-color)));
+			border-radius: var(--mod-floating-action-button-border-radius, 50%);
+			pointer-events: none;
+			content: "";
 		}
 	}
 }
 
 .spectrum-Icon.spectrum-FloatingActionButton-icon {
-	inline-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
 	block-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
+	inline-size: var(--mod-floating-action-button-icon-size, var(--spectrum-floating-action-button-icon-size));
 	fill: var(--highcontrast-floating-action-button-icon-color, var(--mod-floating-action-button-icon-color, var(--spectrum-floating-action-button-icon-color)));
 }

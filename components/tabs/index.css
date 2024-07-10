@@ -1,23 +1,23 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-@import "themes/spectrum-two.css";
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "./themes/spectrum-two.css";
 
 .spectrum-Tabs {
+	display: flex;
+
 	/* Contain the selection indicator */
 	position: relative;
 	z-index: 0;
-	display: flex;
 
 	margin: 0;
 	padding-block: 0;
@@ -29,30 +29,28 @@
 }
 
 .spectrum-Tabs-item {
-	cursor: pointer;
-
 	/* Contain the focus ring */
 	position: relative;
-
-	/* Float above the tab line */
-	z-index: 1;
 	box-sizing: border-box;
 
 	block-size: calc(var(--mod-tabs-item-height, var(--spectrum-tabs-item-height)) - var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size)));
 
-	color: var(--highcontrast-tabs-color, var(--mod-tabs-color, var(--spectrum-tabs-color)));
+	/* Float above the tab line */
+	z-index: 1;
 
 	text-decoration: none;
 	white-space: nowrap;
-	outline: none;
+
+	color: var(--highcontrast-tabs-color, var(--mod-tabs-color, var(--spectrum-tabs-color)));
 
 	transition: color var(--mod-tabs-animation-duration, var(--spectrum-tabs-animation-duration)) ease-out;
+	cursor: pointer;
+	outline: none;
 
 	.spectrum-Icon {
-		inline-size: var(--mod-tabs-icon-size, var(--spectrum-tabs-icon-size));
-
 		/* Vertical centering */
 		block-size: var(--mod-tabs-icon-size, var(--spectrum-tabs-icon-size));
+		inline-size: var(--mod-tabs-icon-size, var(--spectrum-tabs-icon-size));
 		margin-block-start: var(--mod-tabs-top-to-icon, var(--spectrum-tabs-top-to-icon));
 
 		& + .spectrum-Tabs-itemLabel {
@@ -61,21 +59,22 @@
 	}
 
 	&::before {
-		pointer-events: none;
 		content: "";
 		position: absolute;
+
+		box-sizing: border-box;
+
+		block-size: calc(100% - var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text)));
+		inline-size: calc(100% + var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)) * 2);
 
 		inset-block-start: calc(var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text)) / 2);
 		inset-inline-start: calc(-1 * var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)));
 		inset-inline-end: calc(-1 * var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)));
 
-		box-sizing: border-box;
-		inline-size: calc(100% + var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)) * 2);
-
-		block-size: calc(100% - var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text)));
-
 		border: var(--mod-tabs-focus-indicator-width, var(--spectrum-tabs-focus-indicator-width)) solid transparent;
 		border-radius: var(--mod-tabs-focus-indicator-border-radius, var(--spectrum-tabs-focus-indicator-border-radius));
+
+		pointer-events: none;
 	}
 
 	&:hover {
@@ -107,18 +106,18 @@
 .spectrum-Tabs-itemLabel {
 	cursor: pointer;
 	display: inline-block;
+	vertical-align: top;
+
+	font-family: var(--mod-tabs-font-family, var(--spectrum-tabs-font-family));
+	font-style: var(--mod-tabs-font-style, var(--spectrum-tabs-font-style));
+	font-size: var(--mod-tabs-font-size, var(--spectrum-tabs-font-size));
+	font-weight: var(--mod-tabs-font-weight, var(--spectrum-tabs-font-weight));
+	line-height: var(--mod-tabs-line-height, var(--spectrum-tabs-line-height));
 	margin-block-start: var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text));
 	margin-block-end: var(--mod-tabs-bottom-to-text, var(--spectrum-tabs-bottom-to-text));
 
-	font-family: var(--mod-tabs-font-family, var(--spectrum-tabs-font-family));
-	font-size: var(--mod-tabs-font-size, var(--spectrum-tabs-font-size));
-	font-weight: var(--mod-tabs-font-weight, var(--spectrum-tabs-font-weight));
-	font-style: var(--mod-tabs-font-style, var(--spectrum-tabs-font-style));
-	line-height: var(--mod-tabs-line-height, var(--spectrum-tabs-line-height));
-
 	/* support links */
 	text-decoration: none;
-	vertical-align: top;
 
 	&:empty {
 		/* Hide the tab label if it's not being used */
@@ -128,16 +127,16 @@
 
 .spectrum-Tabs-selectionIndicator {
 	position: absolute;
+	inset-inline-start: 0;
+	background-color: var(--highcontrast-tabs-selection-indicator-color, var(--mod-tabs-selection-indicator-color, var(--spectrum-tabs-selection-indicator-color)));
 
 	/* Be below the tab */
 	z-index: 0;
-	inset-inline-start: 0;
-	transform-origin: top left;
-	background-color: var(--highcontrast-tabs-selection-indicator-color, var(--mod-tabs-selection-indicator-color, var(--spectrum-tabs-selection-indicator-color)));
-
-	border-radius: var(--mod-tabs-divider-border-radius, var(--spectrum-tabs-divider-border-radius));
 
 	transition: transform var(--mod-tabs-animation-duration, var(--spectrum-tabs-animation-duration)) var(--mod-tabs-animation-ease, var(--spectrum-tabs-animation-ease));
+	transform-origin: top left;
+
+	border-radius: var(--mod-tabs-divider-border-radius, var(--spectrum-tabs-divider-border-radius));
 }
 
 .spectrum-Tabs--horizontal {
@@ -159,10 +158,9 @@
 	}
 
 	&.spectrum-Tabs--compact {
-		align-items: end;
-
 		/* The ActionButton is taller than the tabs, so don't push tabs around */
 		box-sizing: content-box;
+		align-items: end;
 	}
 }
 
@@ -189,12 +187,12 @@
 
 	.spectrum-Tabs-item {
 		block-size: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
+		line-height: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
+		padding-block: 0;
 
 		margin-block-end: var(--mod-tabs-item-vertical-spacing, var(--spectrum-tabs-item-vertical-spacing));
 		margin-inline-start: var(--mod-tabs-start-to-edge, var(--spectrum-tabs-start-to-edge));
 		margin-inline-end: var(--mod-tabs-start-to-edge, var(--spectrum-tabs-start-to-edge));
-		padding-block: 0;
-		line-height: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
 
 		&::before {
 			inset-inline-start: calc(-1 * var(--mod-tabs-focus-indicator-gap, var(--spectrum-tabs-focus-indicator-gap)));
@@ -207,8 +205,8 @@
 
 	.spectrum-Tabs-selectionIndicator {
 		position: absolute;
-		inset-block-start: 0;
 		inset-inline-start: 0;
+		inset-block-start: 0;
 		inline-size: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size));
 	}
 }
@@ -237,8 +235,8 @@
 
 		.spectrum-Tabs-item {
 			.spectrum-Icon {
-				position: relative;
 				z-index: 1;
+				position: relative;
 			}
 
 			.spectrum-Tabs-itemLabel {
@@ -260,8 +258,8 @@
 
 		&.spectrum-Tabs--vertical.spectrum-Tabs--compact .spectrum-Tabs-item {
 			&::before {
-				inset-block-start: 0;
 				block-size: 100%;
+				inset-block-start: 0;
 			}
 		}
 

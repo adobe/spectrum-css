@@ -39,6 +39,7 @@
 	--spectrum-infield-button-fill-justify-content: var(--system-infieldbutton-infield-button-fill-justify-content);
 }
 
+.spectrum-InfieldButton.is-disabled,
 .spectrum-InfieldButton:disabled {
 	--spectrum-infield-button-background-color: var(--system-infieldbutton-disabled-infield-button-background-color);
 	--spectrum-infield-button-background-color-hover: var(--system-infieldbutton-disabled-infield-button-background-color-hover);
@@ -115,7 +116,9 @@
 	--spectrum-infield-button-border-width: var(--system-infieldbutton-quiet-infield-button-border-width);
 }
 
+.spectrum-InfieldButton.spectrum-InfieldButton--quiet.is-disabled,
 .spectrum-InfieldButton.spectrum-InfieldButton--quiet:disabled {
 	--spectrum-infield-button-background-color: var(--system-infieldbutton-quiet-disabled-infield-button-background-color);
 	--spectrum-infield-button-border-color: var(--system-infieldbutton-quiet-disabled-infield-button-border-color);
 }
+/*# sourceMappingURL=index-theme.css.map */

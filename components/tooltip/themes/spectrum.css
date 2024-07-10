@@ -1,20 +1,17 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-@container style(--system: legacy) {
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@container (--system: legacy) {
 	.spectrum-Tooltip {
-		--spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-subdued-background-color-default);
-
 		--spectrum-tooltip-animation-duration: var(--spectrum-animation-duration-100);
 
 		/* override if additional spacing to source is required */
@@ -45,6 +42,7 @@
 		--spectrum-tooltip-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-75);
 
 		/* colors */
+		--spectrum-tooltip-background-color-default-neutral: var(--spectrum-neutral-subdued-background-color-default);
 		--spectrum-tooltip-background-color-informative: var(--spectrum-informative-background-color-default);
 		--spectrum-tooltip-background-color-positive: var(--spectrum-positive-background-color-default);
 		--spectrum-tooltip-background-color-negative: var(--spectrum-negative-background-color-default);

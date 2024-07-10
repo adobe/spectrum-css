@@ -27,6 +27,8 @@ module.exports = ({
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
+	console.log(options?.buildSource);
+
 	const isProduction = env.toLowerCase() === "production";
 	if (!isProduction && !options.map) {
 		options.map = { inline: false };
@@ -42,6 +44,8 @@ module.exports = ({
 			};
 		}
 	}
+
+	console.log(additionalPlugins);
 
 	return {
 		...options,
@@ -62,6 +66,12 @@ module.exports = ({
 				preserveVariables,
 				referencesOnly,
 				stripLocalSelectors
+			},
+			"postcss-pseudo-classes": {
+				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+				allCombinations: true,
+				preserveBeforeAfter: false,
+				prefix: "is-"
 			},
 			...additionalPlugins,
 			/* --------------------------------------------------- */

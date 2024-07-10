@@ -1,39 +1,38 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-@import "themes/spectrum-two.css";
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "./themes/spectrum-two.css";
 
 .spectrum-Tag {
-	user-select: none;
+	border-color: var(--highcontrast-tag-border-color, var(--mod-tag-border-color, var(--spectrum-tag-border-color)));
+	background-color: var(--highcontrast-tag-background-color, var(--mod-tag-background-color, var(--spectrum-tag-background-color)));
+	color: var(--highcontrast-tag-content-color, var(--mod-tag-content-color, var(--spectrum-tag-content-color)));
+
+	border-radius: var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius));
+	border-width: var(--mod-tag-border-width, var(--spectrum-tag-border-width));
+	border-style: solid;
+
+	padding-inline-start: calc(var(--mod-tag-spacing-inline-start, var(--spectrum-tag-spacing-inline-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+	padding-inline-end: 0;
+
+	block-size: var(--mod-tag-height, var(--spectrum-tag-height));
 	position: relative;
 	display: inline-flex;
 	align-items: center;
 	box-sizing: border-box;
-	max-inline-size: 100%;
-
-	block-size: var(--mod-tag-height, var(--spectrum-tag-height));
-
-	padding-inline-start: calc(var(--mod-tag-spacing-inline-start, var(--spectrum-tag-spacing-inline-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-	padding-inline-end: 0;
-	color: var(--highcontrast-tag-content-color, var(--mod-tag-content-color, var(--spectrum-tag-content-color)));
 	vertical-align: bottom;
-	background-color: var(--highcontrast-tag-background-color, var(--mod-tag-background-color, var(--spectrum-tag-background-color)));
-	border-color: var(--highcontrast-tag-border-color, var(--mod-tag-border-color, var(--spectrum-tag-border-color)));
-	border-style: solid;
-	border-width: var(--mod-tag-border-width, var(--spectrum-tag-border-width));
-
-	border-radius: var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius));
+	max-inline-size: 100%;
 	outline: none;
+	user-select: none;
 
 	transition:
 		border-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
@@ -42,8 +41,8 @@
 		background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 
 	.spectrum-Tag-itemIcon {
-		inline-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
 		block-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
+		inline-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
 
 		margin-block-start: calc(var(--mod-tag-icon-spacing-block-start, var(--spectrum-tag-icon-spacing-block-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		margin-block-end: calc(var(--mod-tag-icon-spacing-block-end, var(--spectrum-tag-icon-spacing-block-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
@@ -58,11 +57,10 @@
 
 	/* clear button */
 	.spectrum-Tag-clearButton {
-		/* width of fill neutralized to ensure correct inline spacing within tag */
-		--mod-clear-button-width: fit-content;
-		--spectrum-clearbutton-fill-size: fit-content;
-		--spectrum-clearbutton-fill-background-color: transparent;
 		box-sizing: border-box;
+
+		padding-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+		padding-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
 		/* move button negative calc to cancel label end margin, then add button start margin */
 		margin-inline-start: calc(var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start)) + (var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) * -1));
@@ -70,172 +68,175 @@
 		/* end spacing is theme-specific */
 		margin-inline-end: calc(var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-clear-button-spacing-inline-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
-		padding-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-		padding-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-
 		/* ensure clear button is correct color */
 		color: currentColor;
 
+		/* width of fill neutralized to ensure correct inline spacing within tag */
+		--mod-clear-button-width: fit-content;
+		--spectrum-clearbutton-fill-size: fit-content;
+		--spectrum-clearbutton-fill-background-color: transparent;
+
 		.spectrum-ClearButton-fill {
+			background-color: var(--mod-clearbutton-fill-background-color, var(--spectrum-clearbutton-fill-background-color));
+
 			inline-size: var(--mod-clearbutton-fill-size, var(--spectrum-clearbutton-fill-size));
 			block-size: var(--mod-clearbutton-fill-size, var(--spectrum-clearbutton-fill-size));
-			background-color: var(--mod-clearbutton-fill-background-color, var(--spectrum-clearbutton-fill-background-color));
 		}
 	}
 
 	.spectrum-Tag-itemLabel {
-		cursor: default;
-		overflow: hidden;
+		block-size: 100%;
+		box-sizing: border-box;
+		line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));
+		font-weight: var(--mod-tag-label-font-weight, var(--spectrum-tag-label-font-weight));
 
 		flex: 1 1 auto;
-		box-sizing: border-box;
-		block-size: 100%;
+		font-size: var(--mod-tag-font-size, var(--spectrum-tag-font-size));
+		cursor: default;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+
+		padding-block-start: calc(var(--mod-tag-label-spacing-block, var(--spectrum-tag-label-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
 		/* space from label text to end edge */
 		margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-
-		padding-block-start: calc(var(--mod-tag-label-spacing-block, var(--spectrum-tag-label-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-		font-size: var(--mod-tag-font-size, var(--spectrum-tag-font-size));
-		font-weight: var(--mod-tag-label-font-weight, var(--spectrum-tag-label-font-weight));
-		line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));
-		text-overflow: ellipsis;
-		white-space: nowrap;
 	}
 
 	&:hover {
-		color: var(--highcontrast-tag-content-color-hover, var(--mod-tag-content-color-hover, var(--spectrum-tag-content-color-hover)));
-		background-color: var(--highcontrast-tag-background-color-hover, var(--mod-tag-background-color-hover, var(--spectrum-tag-background-color-hover)));
 		border-color: var(--highcontrast-tag-border-color-hover, var(--mod-tag-border-color-hover, var(--spectrum-tag-border-color-hover)));
+		background-color: var(--highcontrast-tag-background-color-hover, var(--mod-tag-background-color-hover, var(--spectrum-tag-background-color-hover)));
+		color: var(--highcontrast-tag-content-color-hover, var(--mod-tag-content-color-hover, var(--spectrum-tag-content-color-hover)));
 	}
 
 	&:active {
-		color: var(--highcontrast-tag-content-color-active, var(--mod-tag-content-color-active, var(--spectrum-tag-content-color-active)));
-		background-color: var(--highcontrast-tag-background-color-active, var(--mod-tag-background-color-active, var(--spectrum-tag-background-color-active)));
 		border-color: var(--highcontrast-tag-border-color-active, var(--mod-tag-border-color-active, var(--spectrum-tag-border-color-active)));
+		background-color: var(--highcontrast-tag-background-color-active, var(--mod-tag-background-color-active, var(--spectrum-tag-background-color-active)));
+		color: var(--highcontrast-tag-content-color-active, var(--mod-tag-content-color-active, var(--spectrum-tag-content-color-active)));
 	}
 
 	&:focus-visible,
 	&.is-focused {
-		color: var(--highcontrast-tag-content-color-focus, var(--mod-tag-content-color-focus, var(--spectrum-tag-content-color-focus)));
-		background-color: var(--highcontrast-tag-background-color-focus, var(--mod-tag-background-color-focus, var(--spectrum-tag-background-color-focus)));
 		border-color: var(--highcontrast-tag-border-color-focus, var(--mod-tag-border-color-focus, var(--spectrum-tag-border-color-focus)));
+		background-color: var(--highcontrast-tag-background-color-focus, var(--mod-tag-background-color-focus, var(--spectrum-tag-background-color-focus)));
+		color: var(--highcontrast-tag-content-color-focus, var(--mod-tag-content-color-focus, var(--spectrum-tag-content-color-focus)));
 
 		/* focus indicator */
 		&::after {
-			pointer-events: none;
 			content: "";
+			display: inline-block;
 			position: absolute;
 			inset-block-start: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
 			inset-block-end: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
 			inset-inline-start: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
 			inset-inline-end: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
-			display: inline-block;
 			border-color: var(--highcontrast-tag-focus-ring-color, var(--mod-tag-focus-ring-color, var(--spectrum-tag-focus-ring-color)));
-			border-style: solid;
-			border-width: var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness));
 			border-radius: calc(var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius)) + var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) + var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+			border-width: var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness));
+			border-style: solid;
+			pointer-events: none;
 		}
 	}
 }
 
 /* selected */
 .spectrum-Tag.is-selected {
-	color: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-tag-content-color-selected)));
-	background-color: var(--highcontrast-tag-background-color-selected, var(--mod-tag-background-color-selected, var(--spectrum-tag-background-color-selected)));
 	border-color: var(--highcontrast-tag-border-color-selected, var(--mod-tag-border-color-selected, var(--spectrum-tag-border-color-selected)));
+	background-color: var(--highcontrast-tag-background-color-selected, var(--mod-tag-background-color-selected, var(--spectrum-tag-background-color-selected)));
+	color: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-tag-content-color-selected)));
 
 	&:hover {
-		color: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-tag-content-color-selected)));
-		background-color: var(--highcontrast-tag-background-color-selected-hover, var(--mod-tag-background-color-selected-hover, var(--spectrum-tag-background-color-selected-hover)));
 		border-color: var(--highcontrast-tag-border-color-selected-hover, var(--mod-tag-border-color-selected-hover, var(--spectrum-tag-border-color-selected-hover)));
+		background-color: var(--highcontrast-tag-background-color-selected-hover, var(--mod-tag-background-color-selected-hover, var(--spectrum-tag-background-color-selected-hover)));
+		color: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-tag-content-color-selected)));
 	}
 
 	&:active {
-		background-color: var(--highcontrast-tag-background-color-selected-active, var(--mod-tag-background-color-selected-active, var(--spectrum-tag-background-color-selected-active)));
 		border-color: var(--highcontrast-tag-border-color-selected-active, var(--mod-tag-border-color-selected-active, var(--spectrum-tag-border-color-selected-active)));
+		background-color: var(--highcontrast-tag-background-color-selected-active, var(--mod-tag-background-color-selected-active, var(--spectrum-tag-background-color-selected-active)));
 	}
 
 	&:focus-visible,
 	&.is-focused {
-		background-color: var(--highcontrast-tag-background-color-selected-focus, var(--mod-tag-background-color-selected-focus, var(--spectrum-tag-background-color-selected-focus)));
 		border-color: var(--highcontrast-tag-border-color-selected-focus, var(--mod-tag-border-color-selected-focus, var(--spectrum-tag-border-color-selected-focus)));
+		background-color: var(--highcontrast-tag-background-color-selected-focus, var(--mod-tag-background-color-selected-focus, var(--spectrum-tag-background-color-selected-focus)));
 	}
 }
 
 .spectrum-Tag.is-invalid {
-	color: var(--highcontrast-tag-content-color-invalid, var(--mod-tag-content-color-invalid, var(--spectrum-tag-content-color-invalid)));
 	border-color: var(--highcontrast-tag-border-color-invalid, var(--mod-tag-border-color-invalid, var(--spectrum-tag-border-color-invalid)));
+	color: var(--highcontrast-tag-content-color-invalid, var(--mod-tag-content-color-invalid, var(--spectrum-tag-content-color-invalid)));
 
 	&:hover {
-		color: var(--highcontrast-tag-content-color-invalid-hover, var(--mod-tag-content-color-invalid-hover, var(--spectrum-tag-content-color-invalid-hover)));
 		border-color: var(--highcontrast-tag-border-color-invalid-hover, var(--mod-tag-border-color-invalid-hover, var(--spectrum-tag-border-color-invalid-hover)));
+		color: var(--highcontrast-tag-content-color-invalid-hover, var(--mod-tag-content-color-invalid-hover, var(--spectrum-tag-content-color-invalid-hover)));
 	}
 
 	&:active {
-		color: var(--highcontrast-tag-content-color-invalid-active, var(--mod-tag-content-color-invalid-active, var(--spectrum-tag-content-color-invalid-active)));
 		border-color: var(--highcontrast-tag-border-color-invalid-active, var(--mod-tag-border-color-invalid-active, var(--spectrum-tag-border-color-invalid-active)));
+		color: var(--highcontrast-tag-content-color-invalid-active, var(--mod-tag-content-color-invalid-active, var(--spectrum-tag-content-color-invalid-active)));
 	}
 
 	&:focus-visible,
 	&.is-focused {
-		color: var(--highcontrast-tag-content-color-invalid-focus, var(--mod-tag-content-color-invalid-focus, var(--spectrum-tag-content-color-invalid-focus)));
 		border-color: var(--highcontrast-tag-border-color-invalid-focus, var(--mod-tag-border-color-invalid-focus, var(--spectrum-tag-border-color-invalid-focus)));
+		color: var(--highcontrast-tag-content-color-invalid-focus, var(--mod-tag-content-color-invalid-focus, var(--spectrum-tag-content-color-invalid-focus)));
 	}
 
 	&.is-selected {
-		color: var(--highcontrast-tag-content-color-invalid-selected, var(--mod-tag-content-color-invalid-selected, var(--spectrum-tag-content-color-invalid-selected)));
-		background-color: var(--highcontrast-tag-background-color-invalid-selected, var(--mod-tag-background-color-invalid-selected, var(--spectrum-tag-background-color-invalid-selected)));
 		border-color: var(--highcontrast-tag-border-color-invalid-selected, var(--mod-tag-border-color-invalid-selected, var(--spectrum-tag-border-color-invalid-selected)));
+		background-color: var(--highcontrast-tag-background-color-invalid-selected, var(--mod-tag-background-color-invalid-selected, var(--spectrum-tag-background-color-invalid-selected)));
+		color: var(--highcontrast-tag-content-color-invalid-selected, var(--mod-tag-content-color-invalid-selected, var(--spectrum-tag-content-color-invalid-selected)));
 
 		&:hover {
-			color: var(--highcontrast-tag-content-color-invalid-selected, var(--mod-tag-content-color-invalid-selected, var(--spectrum-tag-content-color-invalid-selected)));
-			background-color: var(--highcontrast-tag-background-color-invalid-selected-hover, var(--mod-tag-background-color-invalid-selected-hover, var(--spectrum-tag-background-color-invalid-selected-hover)));
 			border-color: var(--highcontrast-tag-border-color-invalid-selected-hover, var(--mod-tag-border-color-invalid-selected-hover, var(--spectrum-tag-border-color-invalid-selected-hover)));
+			background-color: var(--highcontrast-tag-background-color-invalid-selected-hover, var(--mod-tag-background-color-invalid-selected-hover, var(--spectrum-tag-background-color-invalid-selected-hover)));
+			color: var(--highcontrast-tag-content-color-invalid-selected, var(--mod-tag-content-color-invalid-selected, var(--spectrum-tag-content-color-invalid-selected)));
 		}
 
 		&:active {
-			background-color: var(--highcontrast-tag-background-color-invalid-selected-active, var(--mod-tag-background-color-invalid-selected-active, var(--spectrum-tag-background-color-invalid-selected-active)));
 			border-color: var(--highcontrast-tag-border-color-invalid-selected-active, var(--mod-tag-border-color-invalid-selected-active, var(--spectrum-tag-border-color-invalid-selected-active)));
+			background-color: var(--highcontrast-tag-background-color-invalid-selected-active, var(--mod-tag-background-color-invalid-selected-active, var(--spectrum-tag-background-color-invalid-selected-active)));
 		}
 
 		&:focus-visible,
 		&.is-focused {
-			background-color: var(--highcontrast-tag-background-color-invalid-selected-focus, var(--mod-tag-background-color-invalid-selected-focus, var(--spectrum-tag-background-color-invalid-selected-focus)));
 			border-color: var(--highcontrast-tag-border-color-invalid-selected-focus, var(--mod-tag-border-color-invalid-selected-focus, var(--spectrum-tag-border-color-invalid-selected-focus)));
+			background-color: var(--highcontrast-tag-background-color-invalid-selected-focus, var(--mod-tag-background-color-invalid-selected-focus, var(--spectrum-tag-background-color-invalid-selected-focus)));
 		}
 	}
 }
 
 /* emphasized */
 .spectrum-Tag.is-emphasized {
-	color: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-tag-content-color-emphasized)));
-	background-color: var(--highcontrast-tag-background-color-emphasized, var(--mod-tag-background-color-emphasized, var(--spectrum-tag-background-color-emphasized)));
 	border-color: var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, var(--spectrum-tag-border-color-emphasized)));
+	background-color: var(--highcontrast-tag-background-color-emphasized, var(--mod-tag-background-color-emphasized, var(--spectrum-tag-background-color-emphasized)));
+	color: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-tag-content-color-emphasized)));
 
 	&:hover {
-		color: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-tag-content-color-emphasized)));
-		background-color: var(--highcontrast-tag-background-color-emphasized-hover, var(--mod-tag-background-color-emphasized-hover, var(--spectrum-tag-background-color-emphasized-hover)));
 		border-color: var(--highcontrast-tag-border-color-emphasized-hover, var(--mod-tag-border-color-emphasized-hover, var(--spectrum-tag-border-color-emphasized-hover)));
+		background-color: var(--highcontrast-tag-background-color-emphasized-hover, var(--mod-tag-background-color-emphasized-hover, var(--spectrum-tag-background-color-emphasized-hover)));
+		color: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-tag-content-color-emphasized)));
 	}
 
 	&:active {
-		background-color: var(--highcontrast-tag-background-color-emphasized-active, var(--mod-tag-background-color-emphasized-active, var(--spectrum-tag-background-color-emphasized-active)));
 		border-color: var(--highcontrast-tag-border-color-emphasized-active, var(--mod-tag-border-color-emphasized-active, var(--spectrum-tag-border-color-emphasized-active)));
+		background-color: var(--highcontrast-tag-background-color-emphasized-active, var(--mod-tag-background-color-emphasized-active, var(--spectrum-tag-background-color-emphasized-active)));
 	}
 
 	&:focus-visible,
 	&.is-focused {
-		background-color: var(--highcontrast-tag-background-color-emphasized-focus, var(--mod-tag-background-color-emphasized-focus, var(--spectrum-tag-background-color-emphasized-focus)));
 		border-color: var(--highcontrast-tag-border-color-emphasized-focus, var(--mod-tag-border-color-emphasized-focus, var(--spectrum-tag-border-color-emphasized-focus)));
+		background-color: var(--highcontrast-tag-background-color-emphasized-focus, var(--mod-tag-background-color-emphasized-focus, var(--spectrum-tag-background-color-emphasized-focus)));
 	}
 }
 
 /* disabled */
 .spectrum-Tag.is-disabled {
-	pointer-events: none;
-	color: var(--highcontrast-tag-content-color-disabled, var(--mod-tag-content-color-disabled, var(--spectrum-tag-content-color-disabled)));
-	background-color: var(--highcontrast-tag-background-color-disabled, var(--mod-tag-background-color-disabled, var(--spectrum-tag-background-color-disabled)));
 	border-color: var(--highcontrast-tag-border-color-disabled, var(--mod-tag-border-color-disabled, var(--spectrum-tag-border-color-disabled)));
+	background-color: var(--highcontrast-tag-background-color-disabled, var(--mod-tag-background-color-disabled, var(--spectrum-tag-background-color-disabled)));
+	color: var(--highcontrast-tag-content-color-disabled, var(--mod-tag-content-color-disabled, var(--spectrum-tag-content-color-disabled)));
+	pointer-events: none;
 
 	.spectrum-Avatar {
 		opacity: var(--mod-avatar-opacity-disabled, var(--spectrum-avatar-opacity-disabled));
@@ -245,6 +246,8 @@
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-Tag {
+		forced-color-adjust: none;
+
 		--highcontrast-tag-border-color: ButtonText;
 		--highcontrast-tag-border-color-hover: ButtonText;
 		--highcontrast-tag-border-color-active: ButtonText;
@@ -261,7 +264,6 @@
 		--highcontrast-tag-content-color-focus: ButtonText;
 
 		--highcontrast-tag-focus-ring-color: Highlight;
-		forced-color-adjust: none;
 
 		&.is-selected {
 			--highcontrast-tag-border-color-selected: Highlight;

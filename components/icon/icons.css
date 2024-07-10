@@ -1,0 +1,44 @@
+/*!
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+.spectrum-Icon,
+.spectrum-UIIcon {
+	--spectrum-icon-inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size)));
+	--spectrum-icon-block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size)));
+
+	transform: var(--spectrum-icon-transform,);
+	display: inline-block;
+	inline-size: var(--spectrum-icon-inline-size);
+	block-size: var(--spectrum-icon-block-size);
+
+	/* Use custom pass through or inherit the text color. */
+	color: var(--mod-icon-color, inherit);
+
+	/* Fill should match the current text color. */
+	fill: currentColor;
+
+	/* Hide the SVG overflow in IE. */
+	&:not(:root) {
+		overflow: hidden;
+	}
+
+	/* Don't catch clicks or hover, otherwise they may not escape the SVG. */
+	pointer-events: none;
+}
+
+@media (forced-colors: active) {
+	.spectrum-Icon,
+	.spectrum-UIIcon {
+		/* Automatically adjust the SVG to pick up the text color for High Contrast mode */
+		forced-color-adjust: auto;
+	}
+}

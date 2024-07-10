@@ -1,17 +1,16 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-@import "themes/spectrum-two.css";
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+@import "./themes/spectrum-two.css";
 
 @media (forced-colors: active) {
 	.spectrum-Toast {
@@ -23,12 +22,14 @@
 }
 
 .spectrum-Toast {
+	box-sizing: border-box;
 	display: inline-flex;
 	flex-direction: row;
 	align-items: stretch;
-	box-sizing: border-box;
-	max-inline-size: var(--mod-toast-max-inline-size, var(--spectrum-toast-max-inline-size));
 	min-block-size: var(--mod-toast-block-size, var(--spectrum-toast-block-size));
+	max-inline-size: var(--mod-toast-max-inline-size, var(--spectrum-toast-max-inline-size));
+
+	border-radius: var(--mod-toast-corner-radius, var(--spectrum-toast-corner-radius));
 
 	padding-inline-start: var(--mod-toast-spacing-start-edge-to-text-and-icon, var(--spectrum-toast-spacing-start-edge-to-text-and-icon));
 
@@ -36,16 +37,14 @@
 	font-weight: var(--mod-toast-font-weight, var(--spectrum-toast-font-weight));
 
 	-webkit-font-smoothing: antialiased;
-	color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
 
 	background-color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
-
-	border-radius: var(--mod-toast-corner-radius, var(--spectrum-toast-corner-radius));
+	color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
 }
 
 .spectrum-Toast--negative {
-	color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
 	background-color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
+	color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
 
 	.spectrum-Toast-closeButton:focus-visible:not(:active) {
 		color: var(--highcontrast-toast-negative-background-color-default, var(--mod-toast-negative-background-color-default, var(--spectrum-toast-negative-background-color-default)));
@@ -53,8 +52,8 @@
 }
 
 .spectrum-Toast--info {
-	color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
 	background-color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
+	color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
 
 	.spectrum-Toast-closeButton:focus-visible:not(:active) {
 		color: var(--highcontrast-toast-informative-background-color-default, var(--mod-toast-informative-background-color-default, var(--spectrum-toast-informative-background-color-default)));
@@ -62,8 +61,8 @@
 }
 
 .spectrum-Toast--positive {
-	color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
 	background-color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
+	color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
 
 	.spectrum-Toast-closeButton:focus-visible:not(:active) {
 		color: var(--highcontrast-toast-positive-background-color-default, var(--mod-toast-positive-background-color-default, var(--spectrum-toast-positive-background-color-default)));
@@ -71,32 +70,32 @@
 }
 
 .spectrum-Toast-typeIcon {
-	flex-grow: 0;
 	flex-shrink: 0;
+	flex-grow: 0;
 
 	margin-block-start: var(--mod-toast-spacing-top-edge-to-icon, var(--spectrum-toast-spacing-top-edge-to-icon));
-	margin-inline-start: 0;
 	margin-inline-end: var(--mod-toast-spacing-icon-to-text, var(--spectrum-toast-spacing-icon-to-text));
+	margin-inline-start: 0;
 
 	color: var(--highcontrast-toast-text-and-icon-color, var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color)));
 }
 
 .spectrum-Toast-content {
-	display: inline-block;
 	flex: 1 1 auto;
+	display: inline-block;
 	box-sizing: border-box;
 
 	padding-block-start: calc(var(--mod-toast-spacing-top-edge-to-text, var(--spectrum-toast-spacing-top-edge-to-text)) - var(--mod-toast-spacing-block-start, var(--spectrum-toast-spacing-block-start)));
 	padding-block-end: calc(var(--mod-toast-spacing-bottom-edge-to-text, var(--spectrum-toast-spacing-bottom-edge-to-text)) - var(--mod-toast-spacing-block-end, var(--spectrum-toast-spacing-block-end)));
-	padding-inline-start: 0;
 
 	padding-inline-end: var(--mod-toast-spacing-text-to-action-button-horizontal, var(--spectrum-toast-spacing-text-to-action-button-horizontal));
+	padding-inline-start: 0;
 
 	line-height: var(--mod-toast-line-height, var(--spectrum-toast-line-height));
 
-	color: var(--highcontrast-toast-text-and-icon-color, var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color)));
-
 	text-align: start;
+
+	color: var(--highcontrast-toast-text-and-icon-color, var(--mod-toast-text-and-icon-color, var(--spectrum-toast-text-and-icon-color)));
 
 	&:lang(ja),
 	&:lang(zh),
@@ -112,10 +111,10 @@
 
 	margin-block-start: var(--mod-toast-spacing-top-edge-to-divider, var(--spectrum-toast-spacing-top-edge-to-divider));
 	margin-block-end: var(--mod-toast-spacing-bottom-edge-to-divider, var(--spectrum-toast-spacing-bottom-edge-to-divider));
-	padding-inline-end: var(--mod-toast-spacing-close-button, var(--spectrum-toast-spacing-close-button));
 
 	/* Divider color for Text | Action Button */
 	border-inline-start-color: var(--mod-toast-divider-color, var(--spectrum-toast-divider-color));
+	padding-inline-end: var(--mod-toast-spacing-close-button, var(--spectrum-toast-spacing-close-button));
 
 	.spectrum-CloseButton {
 		align-self: flex-start;
@@ -124,9 +123,9 @@
 
 .spectrum-Toast-body {
 	display: flex;
-	flex: 1 1 auto;
 	flex-wrap: wrap;
 	align-items: center;
+	flex: 1 1 auto;
 	align-self: center;
 
 	padding-block-start: var(--mod-toast-spacing-block-start, var(--spectrum-toast-spacing-block-start));
@@ -144,8 +143,8 @@
 
 	& + .spectrum-Toast-buttons {
 		padding-inline-start: var(--mod-toast-spacing-close-button, var(--spectrum-toast-spacing-close-button));
-		border-inline-start-style: solid;
 
 		border-inline-start-width: 1px;
+		border-inline-start-style: solid;
 	}
 }

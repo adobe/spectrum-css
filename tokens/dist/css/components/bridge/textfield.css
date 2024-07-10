@@ -78,9 +78,10 @@
 	--spectrum-text-area-min-inline-size: var(--system-textfield-text-area-min-inline-size);
 	--spectrum-text-area-min-block-size: var(--system-textfield-text-area-min-block-size);
 	--spectrum-text-area-min-block-size-quiet: var(--system-textfield-text-area-min-block-size-quiet);
+	--spectrum-textfield-character-count-spacing-block-quiet: var(--system-textfield-character-count-spacing-block-quiet);
 }
 
-.spectrum-Textfield--sizeS {
+.spectrum-Textfield.spectrum-Textfield--sizeS {
 	--spectrum-textfield-height: var(--system-textfield-size-s-height);
 	--spectrum-textfield-label-spacing-block-quiet: var(--system-textfield-size-s-label-spacing-block-quiet);
 	--spectrum-textfield-label-spacing-inline-side-label: var(--system-textfield-size-s-label-spacing-inline-side-label);
@@ -101,7 +102,7 @@
 	--spectrum-text-area-min-block-size-quiet: var(--system-textfield-size-s-text-area-min-block-size-quiet);
 }
 
-.spectrum-Textfield--sizeM {
+.spectrum-Textfield.spectrum-Textfield--sizeM {
 	--spectrum-textfield-height: var(--system-textfield-size-m-height);
 	--spectrum-textfield-label-spacing-block-quiet: var(--system-textfield-size-m-label-spacing-block-quiet);
 	--spectrum-textfield-label-spacing-inline-side-label: var(--system-textfield-size-m-label-spacing-inline-side-label);
@@ -122,7 +123,7 @@
 	--spectrum-text-area-min-block-size-quiet: var(--system-textfield-size-m-text-area-min-block-size-quiet);
 }
 
-.spectrum-Textfield--sizeL {
+.spectrum-Textfield.spectrum-Textfield--sizeL {
 	--spectrum-textfield-height: var(--system-textfield-size-l-height);
 	--spectrum-textfield-label-spacing-block-quiet: var(--system-textfield-size-l-label-spacing-block-quiet);
 	--spectrum-textfield-label-spacing-inline-side-label: var(--system-textfield-size-l-label-spacing-inline-side-label);
@@ -143,7 +144,7 @@
 	--spectrum-text-area-min-block-size-quiet: var(--system-textfield-size-l-text-area-min-block-size-quiet);
 }
 
-.spectrum-Textfield--sizeXL {
+.spectrum-Textfield.spectrum-Textfield--sizeXL {
 	--spectrum-textfield-height: var(--system-textfield-size-xl-height);
 	--spectrum-textfield-label-spacing-block-quiet: var(--system-textfield-size-xl-label-spacing-block-quiet);
 	--spectrum-textfield-label-spacing-inline-side-label: var(--system-textfield-size-xl-label-spacing-inline-side-label);

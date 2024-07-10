@@ -37,6 +37,18 @@
 		--spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
 	}
 
+	/* XXL icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
+	.spectrum-Icon--sizeXXL {
+		--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxl);
+	}
+
+	/*
+	* UI icons list
+	* -------------
+	* - Unlike workflow icons, UI icons come in various sizes, defined by their own tokens.
+	* - Their base icon is rotated for directional variations (e.g. left and down).
+	*/
+
 	/* Chevron */
 	.spectrum-UIIcon-ChevronRight50 {
 		--spectrum-icon-size: var(--spectrum-chevron-icon-size-50);
