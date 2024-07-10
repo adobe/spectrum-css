@@ -49,6 +49,7 @@ Default.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	// Sets the forced-colors media feature for a specific story.

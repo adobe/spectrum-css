@@ -196,6 +196,7 @@ TextArea.args = {
 // ********* VRT ONLY ********* //
 // @todo should this show text field and text area in the same snapshot?
 export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {

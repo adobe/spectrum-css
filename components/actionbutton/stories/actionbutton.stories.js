@@ -163,6 +163,7 @@ StaticWhite.parameters = {
 };
 
 export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
