@@ -98,7 +98,8 @@
 		/* @deprecation --mod-focus-indicator-gap has been renamed and will be removed in a future version. */
 		margin: calc((var(--mod-button-focus-ring-gap, var(--spectrum-button-focus-ring-gap)) + var(--mod-button-border-width, var(--spectrum-button-border-width))) * -1);
 
-		border-radius: var(--mod-button-focus-ring-border-radius, var(--spectrum-button-focus-ring-border-radius));
+		/* border-radius: var(--mod-button-focus-ring-border-radius, var(--spectrum-button-focus-ring-border-radius)); */
+		border-radius: calc(var(--mod-button-focus-ring-border-radius, var(--spectrum-button-border-radius)) + var(--spectrum-button-focus-ring-gap));
 
 		/* @deprecation --mod-animation-duration-100 has been renamed and will be removed in a future version. */
 		transition:

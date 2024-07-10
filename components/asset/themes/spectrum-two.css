@@ -12,4 +12,10 @@
  */
 
 @container style(--system: spectrum) {
+	.spectrum-Asset {
+		--spectrum-asset-transition-duration: var(--spectrum-animation-duration-100);
+		--spectrum-asset-folder-background-color: var(--spectrum-gray-200);
+		--spectrum-asset-file-background-color: var(--spectrum-gray-25);
+		--spectrum-asset-icon-outline-color: var(--spectrum-gray-500);
+	}
 }

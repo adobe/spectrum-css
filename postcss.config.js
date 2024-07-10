@@ -11,10 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-const { join } = require("path");
+const { join, sep } = require("path");
 
 module.exports = ({
 	file,
+	cwd,
 	skipMapping = false,
 	referencesOnly = false,
 	preserveVariables = true,
@@ -41,6 +42,22 @@ module.exports = ({
 				after: [".spectrum.spectrum--legacy"],
 			};
 		}
+	}
+
+	if (cwd.split(sep).pop() === ".storybook") {
+		skipMapping = false;
+		referencesOnly = false;
+		preserveVariables = true;
+		stripLocalSelectors = false;
+		additionalPlugins = {
+			...additionalPlugins,
+			"postcss-pseudo-classes": {
+				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+				allCombinations: true,
+				preserveBeforeAfter: false,
+				prefix: "is-"
+			},
+		};
 	}
 
 	return {
