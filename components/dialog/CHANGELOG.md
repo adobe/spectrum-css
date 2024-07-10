@@ -1,5 +1,20 @@
 # Change Log
 
+## 11.0.0-s2-foundations.7
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`24a51cc`](https://github.com/adobe/spectrum-css/commit/24a51cc3b682a06a5133c4f5bf72c11a2337ee22) Thanks [@pfulton](https://github.com/pfulton)! - Revert themes asset naming to simplify code review; bug fixes in custom property loading from theme assets
+
+### Patch Changes
+
+- Updated dependencies [[`24a51cc`](https://github.com/adobe/spectrum-css/commit/24a51cc3b682a06a5133c4f5bf72c11a2337ee22)]:
+  - @spectrum-css/closebutton@6.0.0-s2-foundations.7
+  - @spectrum-css/underlay@5.0.0-s2-foundations.7
+  - @spectrum-css/divider@4.0.0-s2-foundations.7
+  - @spectrum-css/modal@6.0.0-s2-foundations.7
+  - @spectrum-css/tokens@15.0.0-s2-foundations.7
+
 ## 11.0.0-s2-foundations.6
 
 ### Patch Changes
