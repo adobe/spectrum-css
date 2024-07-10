@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-MillerColumns {
 		--spectrum-millercolumns-inline-size: 272px;
 		--spectrum-millercolumns-padding: var(--spectrum-spacing-100);

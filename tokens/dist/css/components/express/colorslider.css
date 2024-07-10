@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-colorslider-color-slider-handle-margin-block: var(--spectrum-component-top-to-text-75);
 	--system-colorslider-color-slider-border-color-rgba: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-color-slider-border-opacity));
 	--system-colorslider-color-slider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);
@@ -19,3 +19,5 @@
 	--system-colorslider-color-slider-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 	--system-colorslider-colorhandle-hitarea-border-radius: var(--mod-color-slider-handle-hitarea-border-radius, 0px);
 }
+
+/*# sourceMappingURL=express.css.map */

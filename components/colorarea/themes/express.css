@@ -11,15 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: express) {
-	.spectrum-ColorArea {
-		--spectrum-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
-		--spectrum-colorarea-border-color: rgb(0 0 0 / 10%); /* TODO replace with token --spectrum-color-area-border-color and --spectrum-color-area-border-opacity using RGBA function */
-		--spectrum-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
-		--spectrum-colorarea-border-width: var(--spectrum-color-area-border-width);
-		--spectrum-colorarea-height: var(--spectrum-color-area-height);
-		--spectrum-colorarea-width: var(--spectrum-color-area-width);
-		--spectrum-colorarea-min-width: var(--spectrum-color-area-minimum-width);
-		--spectrum-colorarea-min-height: var(--spectrum-color-area-minimum-height);
-	}
-}
+@import "./spectrum.css";

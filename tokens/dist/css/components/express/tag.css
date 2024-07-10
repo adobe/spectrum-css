@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-tag-border-color: var(--spectrum-gray-700);
 	--system-tag-border-color-hover: var(--spectrum-gray-800);
 	--system-tag-border-color-active: var(--spectrum-gray-900);
@@ -43,3 +43,38 @@
 	--system-tag-size-large-label-spacing-inline-end: var(--spectrum-component-edge-to-text-200);
 	--system-tag-size-large-clear-button-spacing-inline-end: var(--spectrum-component-edge-to-visual-200);
 }
+
+.spectrum--express {
+	--system-tag-background-color: transparent;
+	--system-tag-background-color-hover: var(--spectrum-gray-300);
+	--system-tag-background-color-active: var(--spectrum-gray-400);
+	--system-tag-background-color-focus: var(--spectrum-gray-300);
+	--system-tag-size-small-corner-radius: var(--spectrum-component-height-75);
+	--system-tag-size-medium-corner-radius: var(--spectrum-component-height-100);
+	--system-tag-size-large-corner-radius: var(--spectrum-component-height-200);
+	--system-tag-border-color: var(--spectrum-gray-300);
+	--system-tag-border-color-hover: var(--spectrum-gray-400);
+	--system-tag-border-color-active: var(--spectrum-gray-500);
+	--system-tag-border-color-focus: var(--spectrum-gray-400);
+	--system-tag-content-color: var(--spectrum-neutral-content-color-default);
+	--system-tag-content-color-hover: var(--spectrum-neutral-content-color-hover);
+	--system-tag-content-color-active: var(--spectrum-neutral-content-color-down);
+	--system-tag-content-color-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-tag-border-color-selected: var(--spectrum-neutral-background-color-default);
+	--system-tag-border-color-selected-hover: var(--spectrum-neutral-background-color-hover);
+	--system-tag-border-color-selected-active: var(--spectrum-neutral-background-color-down);
+	--system-tag-border-color-selected-focus: var(--spectrum-neutral-background-color-key-focus);
+	--system-tag-border-color-disabled: var(--spectrum-disabled-border-color);
+	--system-tag-background-color-disabled: transparent;
+	--system-tag-size-small-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-75);
+	--system-tag-size-small-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-75);
+	--system-tag-size-small-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-75);
+	--system-tag-size-medium-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-100);
+	--system-tag-size-medium-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-100);
+	--system-tag-size-medium-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-100);
+	--system-tag-size-large-spacing-inline-start: var(--spectrum-component-pill-edge-to-visual-200);
+	--system-tag-size-large-label-spacing-inline-end: var(--spectrum-component-pill-edge-to-text-200);
+	--system-tag-size-large-clear-button-spacing-inline-end: var(--spectrum-component-pill-edge-to-visual-200);
+}
+
+/*# sourceMappingURL=express.css.map */

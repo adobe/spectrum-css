@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-colorloupe-width: var(--spectrum-color-loupe-width);
 	--system-colorloupe-height: var(--spectrum-color-loupe-height);
 	--system-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
@@ -27,3 +27,5 @@
 	--system-colorloupe-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
 	--system-colorloupe-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 }
+
+/*# sourceMappingURL=express.css.map */

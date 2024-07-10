@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-switch-handle-border-color-default: var(--spectrum-gray-600);
 	--system-switch-handle-border-color-hover: var(--spectrum-gray-700);
 	--system-switch-handle-border-color-down: var(--spectrum-gray-800);
@@ -74,3 +74,16 @@
 	--system-switch-size-xl-spacing-top-to-label: var(--spectrum-component-top-to-text-300);
 	--system-switch-size-xl-font-size: var(--spectrum-font-size-300);
 }
+
+.spectrum--express {
+	--system-switch-handle-border-color-default: var(--spectrum-gray-800);
+	--system-switch-handle-border-color-hover: var(--spectrum-gray-900);
+	--system-switch-handle-border-color-down: var(--spectrum-gray-900);
+	--system-switch-handle-border-color-focus: var(--spectrum-gray-900);
+	--system-switch-handle-border-color-selected-default: var(--spectrum-gray-800);
+	--system-switch-handle-border-color-selected-hover: var(--spectrum-gray-900);
+	--system-switch-handle-border-color-selected-down: var(--spectrum-gray-900);
+	--system-switch-handle-border-color-selected-focus: var(--spectrum-gray-900);
+}
+
+/*# sourceMappingURL=express.css.map */

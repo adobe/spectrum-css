@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-Card {
 		/* Default Layout */
 		--spectrum-card-background-color: var(--spectrum-background-layer-2-color);
@@ -83,12 +83,16 @@
 		.spectrum--dark & {
 			--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
 		}
+
+		.spectrum--darkest & {
+			--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-600-rgb);
+		}
 	}
 
 	/* Quiet/Gallery */
 	.spectrum-Card--quiet,
 	.spectrum-Card--gallery {
-		--mod-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
-		--mod-card-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
+		--spectrum-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
+		--spectrum-card-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
 	}
 }

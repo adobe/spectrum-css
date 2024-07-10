@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-inlinealert-heading-font-family: var(--spectrum-sans-font-family-stack);
 	--system-inlinealert-heading-font-weight: var(--spectrum-heading-sans-serif-font-weight);
 	--system-inlinealert-heading-font-style: var(--spectrum-heading-sans-serif-font-style);
@@ -39,3 +39,5 @@
 	--system-inlinealert-border-and-icon-color-notice: var(--spectrum-notice-visual-color);
 	--system-inlinealert-border-and-icon-color-negative: var(--spectrum-negative-visual-color);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

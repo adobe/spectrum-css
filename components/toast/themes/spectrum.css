@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-Toast {
 		--spectrum-toast-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 

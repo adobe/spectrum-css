@@ -74,11 +74,12 @@
 }
 
 .spectrum-Card--quiet {
-	--mod-card-content-margin-top: var(--system-card-quiet-content-margin-top);
-	--mod-card-minimum-width: var(--system-card-quiet-minimum-width);
+	--spectrum-card-content-margin-top: var(--system-card-quiet-content-margin-top);
+	--spectrum-card-minimum-width: var(--system-card-quiet-minimum-width);
 }
 
 .spectrum-Card--gallery {
-	--mod-card-content-margin-top: var(--system-card-gallery-content-margin-top);
-	--mod-card-minimum-width: var(--system-card-gallery-minimum-width);
+	--spectrum-card-content-margin-top: var(--system-card-gallery-content-margin-top);
+	--spectrum-card-minimum-width: var(--system-card-gallery-minimum-width);
 }
+/*# sourceMappingURL=index-theme.css.map */

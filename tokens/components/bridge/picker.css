@@ -14,9 +14,9 @@
 .spectrum-Picker {
 	--spectrum-picker-background-color-default: var(--system-picker-background-color-default);
 	--spectrum-picker-background-color-default-open: var(--system-picker-background-color-default-open);
+	--spectrum-picker-background-color-active: var(--system-picker-background-color-active);
 	--spectrum-picker-background-color-hover: var(--system-picker-background-color-hover);
 	--spectrum-picker-background-color-hover-open: var(--system-picker-background-color-hover-open);
-	--spectrum-picker-background-color-active: var(--system-picker-background-color-active);
 	--spectrum-picker-background-color-key-focus: var(--system-picker-background-color-key-focus);
 	--spectrum-picker-border-color-default: var(--system-picker-border-color-default);
 	--spectrum-picker-border-color-default-open: var(--system-picker-border-color-default-open);
@@ -137,3 +137,4 @@
 .spectrum-Picker--sizeXL + .spectrum-Popover--bottom.is-open {
 	--spectrum-picker-spacing-picker-to-popover: var(--system-picker-size-xl-next-to-popover-bottom-open-spacing-to-popover);
 }
+/*# sourceMappingURL=index-theme.css.map */

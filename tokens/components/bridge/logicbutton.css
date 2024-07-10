@@ -29,14 +29,15 @@
 
 .spectrum-LogicButton.is-disabled,
 .spectrum-LogicButton:disabled {
-	--mod-logic-button-and-background-color: var(--system-logicbutton-disabled-logic-button-and-background-color);
-	--mod-logic-button-and-border-color: var(--system-logicbutton-disabled-logic-button-and-border-color);
-	--mod-logic-button-and-text-color: var(--system-logicbutton-disabled-logic-button-and-text-color);
-	--mod-logic-button-and-background-color-hover: var(--system-logicbutton-disabled-logic-button-and-background-color-hover);
-	--mod-logic-button-and-border-color-hover: var(--system-logicbutton-disabled-logic-button-and-border-color-hover);
-	--mod-logic-button-or-background-color: var(--system-logicbutton-disabled-logic-button-or-background-color);
-	--mod-logic-button-or-border-color: var(--system-logicbutton-disabled-logic-button-or-border-color);
-	--mod-logic-button-or-text-color: var(--system-logicbutton-disabled-logic-button-or-text-color);
-	--mod-logic-button-or-background-color-hover: var(--system-logicbutton-disabled-logic-button-or-background-color-hover);
-	--mod-logic-button-or-border-color-hover: var(--system-logicbutton-disabled-logic-button-or-border-color-hover);
+	--spectrum-logic-button-and-background-color: var(--system-logicbutton-disabled-logic-button-and-background-color);
+	--spectrum-logic-button-and-border-color: var(--system-logicbutton-disabled-logic-button-and-border-color);
+	--spectrum-logic-button-and-text-color: var(--system-logicbutton-disabled-logic-button-and-text-color);
+	--spectrum-logic-button-and-background-color-hover: var(--system-logicbutton-disabled-logic-button-and-background-color-hover);
+	--spectrum-logic-button-and-border-color-hover: var(--system-logicbutton-disabled-logic-button-and-border-color-hover);
+	--spectrum-logic-button-or-background-color: var(--system-logicbutton-disabled-logic-button-or-background-color);
+	--spectrum-logic-button-or-border-color: var(--system-logicbutton-disabled-logic-button-or-border-color);
+	--spectrum-logic-button-or-text-color: var(--system-logicbutton-disabled-logic-button-or-text-color);
+	--spectrum-logic-button-or-background-color-hover: var(--system-logicbutton-disabled-logic-button-or-background-color-hover);
+	--spectrum-logic-button-or-border-color-hover: var(--system-logicbutton-disabled-logic-button-or-border-color-hover);
 }
+/*# sourceMappingURL=index-theme.css.map */

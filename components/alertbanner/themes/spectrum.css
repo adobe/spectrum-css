@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-AlertBanner {
 		--spectrum-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default);
 
@@ -25,7 +25,6 @@
 		--spectrum-alert-banner-icon-to-text: var(--spectrum-text-to-visual-300);
 		--spectrum-alert-banner-start-edge: var(--spectrum-spacing-300);
 		--spectrum-alert-banner-text-to-button-horizontal: var(--spectrum-spacing-300);
-		/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- internal reference below; todo solve for this edge case in the plugin */
 		--spectrum-alert-banner-text-to-divider: var(--spectrum-spacing-300);
 		--spectrum-alert-banner-top-icon: var(--spectrum-alert-banner-top-to-workflow-icon);
 		--spectrum-alert-banner-top-text: var(--spectrum-alert-banner-top-to-text);

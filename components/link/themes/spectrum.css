@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-Link {
 		--spectrum-link-animation-duration: var(--spectrum-animation-duration-100);
 

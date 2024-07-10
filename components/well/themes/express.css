@@ -11,9 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: express) {
-	.spectrum-Well {
-		--spectrum-well-border-width: var(--spectrum-border-width-100);
-		--spectrum-well-content-color: var(--spectrum-body-color);
-	}
-}
+@import "./spectrum.css";

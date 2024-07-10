@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-illustratedmessage-illustrated-message-description-max-inline-size: var(--spectrum-illustrated-message-maximum-width);
 	--system-illustratedmessage-illustrated-message-heading-max-inline-size: var(--spectrum-illustrated-message-maximum-width);
 	--system-illustratedmessage-illustrated-message-title-to-heading: var(--spectrum-spacing-400);
@@ -34,3 +34,5 @@
 	--system-illustratedmessage-lang-zh-illustrated-message-title-font-size: var(--spectrum-illustrated-message-cjk-title-size);
 	--system-illustratedmessage-lang-ko-illustrated-message-title-font-size: var(--spectrum-illustrated-message-cjk-title-size);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

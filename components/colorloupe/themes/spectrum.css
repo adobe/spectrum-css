@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-ColorLoupe {
 		--spectrum-colorloupe-width: var(--spectrum-color-loupe-width);
 		--spectrum-colorloupe-height: var(--spectrum-color-loupe-height);

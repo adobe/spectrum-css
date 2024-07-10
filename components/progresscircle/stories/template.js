@@ -5,7 +5,7 @@ import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 import "../themes/express.css";
-import "../themes/legacy.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	id,

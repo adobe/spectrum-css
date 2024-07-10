@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-SwatchGroup {
 		--spectrum-swatchgroup-spacing-compact: var(--spectrum-spacing-50);
 		--spectrum-swatchgroup-spacing-regular: var(--spectrum-spacing-75);

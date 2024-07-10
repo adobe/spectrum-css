@@ -6,7 +6,7 @@ import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
 import "../themes/express.css";
-import "../themes/legacy.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressBar",

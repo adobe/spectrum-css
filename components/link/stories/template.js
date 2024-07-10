@@ -5,7 +5,7 @@ import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
 import "../themes/express.css";
-import "../themes/legacy.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Link",
@@ -16,19 +16,21 @@ export const Template = ({
 	isQuiet = false,
 	id,
 	customClasses = [],
-}) => html`
-	<a
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--quiet`]: isQuiet,
-			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-			[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
-				typeof staticColor !== "undefined",
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-		href=${ifDefined(url)}
-	>
-		${text}
-	</a>
-`;
+} = {}) => {
+	return html`
+		<a
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+					typeof staticColor !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			href=${ifDefined(url)}
+		>
+			${text}
+		</a>
+	`;
+};

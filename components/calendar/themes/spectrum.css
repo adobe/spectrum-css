@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-Calendar {
 		--spectrum-calendar-day-width: var(--spectrum-component-height-100);
 		--spectrum-calendar-day-height: var(--spectrum-component-height-100);

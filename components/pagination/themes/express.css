@@ -11,16 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: express) {
-	.spectrum-Pagination {
-		--spectrum-pagination-counter-margin-inline-start: var(--spectrum-pagination-item-inline-spacing);
-		--spectrum-pagination-page-button-inline-spacing: var(--spectrum-pagination-item-inline-spacing);
-		--spectrum-pagination-counter-color: var(--spectrum-neutral-subdued-content-color-default);
-		--spectrum-pagination-counter-font-size: var(--spectrum-font-size-100);
-		--spectrum-pagination-counter-line-height: var(--spectrum-line-height-100);
-
-		&:dir(rtl) {
-			--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
-		}
-	}
-}
+@import "./spectrum.css";

@@ -1,49 +1,21 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
-@container style(--system: express) {
+@import "./spectrum.css";
+
+@container (--system: express) {
 	.spectrum-Rating {
-		--spectrum-rating-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
-		--spectrum-rating-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-		--spectrum-rating-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-		--spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-
-		/* Icon */
-		--spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
-		--spectrum-rating-icon-width: var(--spectrum-workflow-icon-size-100);
-
-		/* Focus ring */
-		--spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
-		--spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-		--spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
-		--spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-
-		/* Spacing (top/bottom edge to icon) */
-		--spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-		--spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
-
-		/* Indicator height */
-		--spectrum-rating-indicator-height: var(--spectrum-border-width-200);
-
-		/* Colors */
-		/* selected + emphasized */
-		--spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
-		--spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
-		--spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
-		--spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
-
-		/* Disabled */
-		--spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
-		--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
+		--spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
+		--spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+		--spectrum-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
+		--spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
 	}
 }

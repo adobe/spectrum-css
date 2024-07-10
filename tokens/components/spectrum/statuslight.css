@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-statuslight-corner-radius: 50%;
 	--system-statuslight-font-weight: 400;
 	--system-statuslight-border-width: var(--spectrum-border-width-100);
@@ -75,3 +75,5 @@
 	--system-statuslight-size-xl-spacing-top-to-label: var(--spectrum-component-top-to-text-300);
 	--system-statuslight-size-xl-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-300);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

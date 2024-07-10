@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-combobox-border-color-default: var(--spectrum-gray-500);
 	--system-combobox-border-color-hover: var(--spectrum-gray-600);
 	--system-combobox-border-color-focus: var(--spectrum-gray-500);
@@ -131,3 +131,5 @@
 	--system-combobox-quiet-size-l-spacing-label-to: var(--spectrum-field-label-to-component-quiet-large);
 	--system-combobox-quiet-size-xl-spacing-label-to: var(--spectrum-field-label-to-component-quiet-extra-large);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

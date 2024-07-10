@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-FieldLabel {
 		--spectrum-fieldlabel-min-height: var(--spectrum-component-height-75);
 		--spectrum-fieldlabel-color: var(--spectrum-neutral-subdued-content-color-default);

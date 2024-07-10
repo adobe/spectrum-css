@@ -11,11 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-closebutton-background-color-default: transparent;
-	--system-closebutton-background-color-hover: var(--spectrum-gray-100);
-	--system-closebutton-background-color-down: var(--spectrum-gray-200);
-	--system-closebutton-background-color-focus: var(--spectrum-gray-100);
+	--system-closebutton-background-color-hover: var(--spectrum-gray-200);
+	--system-closebutton-background-color-down: var(--spectrum-gray-300);
+	--system-closebutton-background-color-focus: var(--spectrum-gray-200);
 	--system-closebutton-size-300: 24px;
 	--system-closebutton-size-400: 32px;
 	--system-closebutton-size-500: 40px;
@@ -64,3 +64,5 @@
 	--system-closebutton-static-black-icon-color-disabled: var(--spectrum-disabled-static-black-content-color);
 	--system-closebutton-static-black-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

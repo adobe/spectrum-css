@@ -1,0 +1,79 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum {
+	--system-statuslight-corner-radius: 50%;
+	--system-statuslight-font-weight: 400;
+	--system-statuslight-border-width: var(--spectrum-border-width-100);
+	--system-statuslight-height: var(--spectrum-component-height-100);
+	--system-statuslight-dot-size: var(--spectrum-status-light-dot-size-medium);
+	--system-statuslight-line-height: var(--spectrum-line-height-100);
+	--system-statuslight-line-height-cjk: var(--spectrum-cjk-line-height-100);
+	--system-statuslight-font-size: var(--spectrum-font-size-100);
+	--system-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-100);
+	--system-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-medium);
+	--system-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
+	--system-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100);
+	--system-statuslight-content-color-default: var(--spectrum-neutral-content-color-default);
+	--system-statuslight-subdued-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--system-statuslight-semantic-neutral-color: var(--spectrum-neutral-visual-color);
+	--system-statuslight-semantic-accent-color: var(--spectrum-accent-visual-color);
+	--system-statuslight-semantic-negative-color: var(--spectrum-negative-visual-color);
+	--system-statuslight-semantic-info-color: var(--spectrum-informative-visual-color);
+	--system-statuslight-semantic-notice-color: var(--spectrum-notice-visual-color);
+	--system-statuslight-semantic-positive-color: var(--spectrum-positive-visual-color);
+	--system-statuslight-nonsemantic-gray-color: var(--spectrum-gray-visual-color);
+	--system-statuslight-nonsemantic-red-color: var(--spectrum-red-visual-color);
+	--system-statuslight-nonsemantic-orange-color: var(--spectrum-orange-visual-color);
+	--system-statuslight-nonsemantic-yellow-color: var(--spectrum-yellow-visual-color);
+	--system-statuslight-nonsemantic-chartreuse-color: var(--spectrum-chartreuse-visual-color);
+	--system-statuslight-nonsemantic-celery-color: var(--spectrum-celery-visual-color);
+	--system-statuslight-nonsemantic-green-color: var(--spectrum-green-visual-color);
+	--system-statuslight-nonsemantic-seafoam-color: var(--spectrum-seafoam-visual-color);
+	--system-statuslight-nonsemantic-cyan-color: var(--spectrum-cyan-visual-color);
+	--system-statuslight-nonsemantic-blue-color: var(--spectrum-blue-visual-color);
+	--system-statuslight-nonsemantic-indigo-color: var(--spectrum-indigo-visual-color);
+	--system-statuslight-nonsemantic-purple-color: var(--spectrum-purple-visual-color);
+	--system-statuslight-nonsemantic-fuchsia-color: var(--spectrum-fuchsia-visual-color);
+	--system-statuslight-nonsemantic-magenta-color: var(--spectrum-magenta-visual-color);
+	--system-statuslight-size-s-height: var(--spectrum-component-height-75);
+	--system-statuslight-size-s-dot-size: var(--spectrum-status-light-dot-size-small);
+	--system-statuslight-size-s-font-size: var(--spectrum-font-size-75);
+	--system-statuslight-size-s-spacing-dot-to-label: var(--spectrum-text-to-visual-75);
+	--system-statuslight-size-s-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-small);
+	--system-statuslight-size-s-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
+	--system-statuslight-size-s-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-75);
+	--system-statuslight-size-m-height: var(--spectrum-component-height-100);
+	--system-statuslight-size-m-dot-size: var(--spectrum-status-light-dot-size-medium);
+	--system-statuslight-size-m-font-size: var(--spectrum-font-size-100);
+	--system-statuslight-size-m-spacing-dot-to-label: var(--spectrum-text-to-visual-100);
+	--system-statuslight-size-m-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-medium);
+	--system-statuslight-size-m-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
+	--system-statuslight-size-m-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100);
+	--system-statuslight-size-l-height: var(--spectrum-component-height-200);
+	--system-statuslight-size-l-dot-size: var(--spectrum-status-light-dot-size-large);
+	--system-statuslight-size-l-font-size: var(--spectrum-font-size-200);
+	--system-statuslight-size-l-spacing-dot-to-label: var(--spectrum-text-to-visual-200);
+	--system-statuslight-size-l-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-large);
+	--system-statuslight-size-l-spacing-top-to-label: var(--spectrum-component-top-to-text-200);
+	--system-statuslight-size-l-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-200);
+	--system-statuslight-size-xl-height: var(--spectrum-component-height-300);
+	--system-statuslight-size-xl-dot-size: var(--spectrum-status-light-dot-size-extra-large);
+	--system-statuslight-size-xl-font-size: var(--spectrum-font-size-300);
+	--system-statuslight-size-xl-spacing-dot-to-label: var(--spectrum-text-to-visual-300);
+	--system-statuslight-size-xl-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-extra-large);
+	--system-statuslight-size-xl-spacing-top-to-label: var(--spectrum-component-top-to-text-300);
+	--system-statuslight-size-xl-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-300);
+}
+
+/*# sourceMappingURL=spectrum-two.css.map */

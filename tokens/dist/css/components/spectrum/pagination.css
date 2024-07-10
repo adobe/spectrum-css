@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-pagination-counter-margin-inline-start: var(--spectrum-pagination-item-inline-spacing);
 	--system-pagination-page-button-inline-spacing: var(--spectrum-pagination-item-inline-spacing);
 	--system-pagination-counter-color: var(--spectrum-neutral-subdued-content-color-default);
@@ -19,3 +19,5 @@
 	--system-pagination-counter-line-height: var(--spectrum-line-height-100);
 	--system-pagination-dir-rtl-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

@@ -87,52 +87,53 @@
 }
 
 .spectrum-Tabs.spectrum-Tabs--emphasized {
-	--mod-tabs-color-selected: var(--system-tabs-emphasized-color-selected);
-	--mod-tabs-color-hover: var(--system-tabs-emphasized-color-hover);
-	--mod-tabs-color-key-focus: var(--system-tabs-emphasized-color-key-focus);
-	--mod-tabs-selection-indicator-color: var(--system-tabs-emphasized-selection-indicator-color);
+	--spectrum-tabs-color-selected: var(--system-tabs-emphasized-color-selected);
+	--spectrum-tabs-color-hover: var(--system-tabs-emphasized-color-hover);
+	--spectrum-tabs-color-key-focus: var(--system-tabs-emphasized-color-key-focus);
+	--spectrum-tabs-selection-indicator-color: var(--system-tabs-emphasized-selection-indicator-color);
 }
 
 .spectrum-Tabs--vertical {
-	--mod-tabs-list-background-direction: var(--system-tabs-vertical-list-background-direction);
+	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-list-background-direction);
 }
 
 .spectrum-Tabs--vertical-right {
-	--mod-tabs-list-background-direction: var(--system-tabs-vertical-right-list-background-direction);
+	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-right-list-background-direction);
 }
 
 .spectrum-Tabs--vertical:dir(rtl) {
-	--mod-tabs-list-background-direction: var(--system-tabs-vertical-dir-rtl-list-background-direction);
+	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-dir-rtl-list-background-direction);
 }
 
 .spectrum-Tabs--vertical-right:dir(rtl) {
-	--mod-tabs-list-background-direction: var(--system-tabs-vertical-right-dir-rtl-list-background-direction);
+	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-right-dir-rtl-list-background-direction);
 }
 
 .spectrum-Tabs.spectrum-Tabs--compact {
-	--mod-tabs-item-height: var(--system-tabs-compact-item-height);
-	--mod-tabs-top-to-text: var(--system-tabs-compact-top-to-text);
-	--mod-tabs-bottom-to-text: var(--system-tabs-compact-bottom-to-text);
-	--mod-tabs-top-to-icon: var(--system-tabs-compact-top-to-icon);
+	--spectrum-tabs-item-height: var(--system-tabs-compact-item-height);
+	--spectrum-tabs-top-to-text: var(--system-tabs-compact-top-to-text);
+	--spectrum-tabs-bottom-to-text: var(--system-tabs-compact-bottom-to-text);
+	--spectrum-tabs-top-to-icon: var(--system-tabs-compact-top-to-icon);
 }
 
 .spectrum-Tabs.spectrum-Tabs--compact.spectrum-Tabs--sizeS {
-	--mod-tabs-item-height: var(--system-tabs-compact-size-s-item-height);
-	--mod-tabs-top-to-text: var(--system-tabs-compact-size-s-top-to-text);
-	--mod-tabs-bottom-to-text: var(--system-tabs-compact-size-s-bottom-to-text);
-	--mod-tabs-top-to-icon: var(--system-tabs-compact-size-s-top-to-icon);
+	--spectrum-tabs-item-height: var(--system-tabs-compact-size-s-item-height);
+	--spectrum-tabs-top-to-text: var(--system-tabs-compact-size-s-top-to-text);
+	--spectrum-tabs-bottom-to-text: var(--system-tabs-compact-size-s-bottom-to-text);
+	--spectrum-tabs-top-to-icon: var(--system-tabs-compact-size-s-top-to-icon);
 }
 
 .spectrum-Tabs.spectrum-Tabs--compact.spectrum-Tabs--sizeL {
-	--mod-tabs-item-height: var(--system-tabs-compact-size-l-item-height);
-	--mod-tabs-top-to-text: var(--system-tabs-compact-size-l-top-to-text);
-	--mod-tabs-bottom-to-text: var(--system-tabs-compact-size-l-bottom-to-text);
-	--mod-tabs-top-to-icon: var(--system-tabs-compact-size-l-top-to-icon);
+	--spectrum-tabs-item-height: var(--system-tabs-compact-size-l-item-height);
+	--spectrum-tabs-top-to-text: var(--system-tabs-compact-size-l-top-to-text);
+	--spectrum-tabs-bottom-to-text: var(--system-tabs-compact-size-l-bottom-to-text);
+	--spectrum-tabs-top-to-icon: var(--system-tabs-compact-size-l-top-to-icon);
 }
 
 .spectrum-Tabs.spectrum-Tabs--compact.spectrum-Tabs--sizeXL {
-	--mod-tabs-item-height: var(--system-tabs-compact-size-xl-item-height);
-	--mod-tabs-top-to-text: var(--system-tabs-compact-size-xl-top-to-text);
-	--mod-tabs-bottom-to-text: var(--system-tabs-compact-size-xl-bottom-to-text);
-	--mod-tabs-top-to-icon: var(--system-tabs-compact-size-xl-top-to-icon);
+	--spectrum-tabs-item-height: var(--system-tabs-compact-size-xl-item-height);
+	--spectrum-tabs-top-to-text: var(--system-tabs-compact-size-xl-top-to-text);
+	--spectrum-tabs-bottom-to-text: var(--system-tabs-compact-size-xl-bottom-to-text);
+	--spectrum-tabs-top-to-icon: var(--system-tabs-compact-size-xl-top-to-icon);
 }
+/*# sourceMappingURL=index-theme.css.map */

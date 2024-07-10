@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum.css";
+@import "themes/spectrum-two.css";
 
 @media (forced-colors: active) {
 	.spectrum-Stepper {
@@ -42,6 +42,10 @@
 }
 
 .spectrum-Stepper {
+	/*** MODS for sub components ***/
+	--mod-infield-button-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-buttons-border-color, var(--spectrum-stepper-buttons-border-color)));
+	--mod-infield-button-border-width: var(--mod-stepper-button-border-width, var(--spectrum-stepper-button-border-width));
+	--mod-textfield-border-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
 	--mod-textfield-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
 
 	position: relative;

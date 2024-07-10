@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-dialog-fullscreen-header-text-size: 28px;
 	--system-dialog-min-inline-size: 288px;
 	--system-dialog-confirm-small-width: 400px;
@@ -33,3 +33,5 @@
 	--system-dialog-confirm-close-button-padding: calc(26px - var(--spectrum-component-bottom-to-text-300));
 	--system-dialog-confirm-divider-height: var(--spectrum-spacing-50);
 }
+
+/*# sourceMappingURL=express.css.map */

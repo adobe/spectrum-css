@@ -73,11 +73,6 @@
 	--spectrum-table-cell-background-color: var(--system-table-cell-background-color);
 	--spectrum-table-selected-cell-background-color: var(--system-table-selected-cell-background-color);
 	--spectrum-table-selected-cell-background-color-focus: var(--system-table-selected-cell-background-color-focus);
-	--mod-thumbnail-size: var(--system-table-thumbnail-size);
-}
-
-.spectrum-Table:dir(rtl) {
-	--spectrum-logical-rotation: var(--system-table-dir-rtl-logical-rotation);
 }
 
 .spectrum-Table--sizeS {
@@ -141,75 +136,75 @@
 }
 
 .spectrum-Table--compact {
-	--mod-table-min-row-height: var(--system-table-compact-min-row-height);
-	--mod-table-row-top-to-text: var(--system-table-compact-row-top-to-text);
-	--mod-table-row-bottom-to-text: var(--system-table-compact-row-bottom-to-text);
-	--mod-table-row-checkbox-block-spacing: var(--system-table-compact-row-checkbox-block-spacing);
-	--mod-table-thumbnail-block-spacing: var(--system-table-compact-thumbnail-block-spacing);
-	--mod-table-thumbnail-size: var(--system-table-compact-thumbnail-size);
+	--spectrum-table-min-row-height: var(--system-table-compact-min-row-height);
+	--spectrum-table-row-top-to-text: var(--system-table-compact-row-top-to-text);
+	--spectrum-table-row-bottom-to-text: var(--system-table-compact-row-bottom-to-text);
+	--spectrum-table-row-checkbox-block-spacing: var(--system-table-compact-row-checkbox-block-spacing);
+	--spectrum-table-thumbnail-block-spacing: var(--system-table-compact-thumbnail-block-spacing);
+	--spectrum-table-thumbnail-size: var(--system-table-compact-thumbnail-size);
 }
 
 .spectrum-Table--compact.spectrum-Table--sizeS {
-	--mod-table-min-row-height: var(--system-table-compact-size-s-min-row-height);
-	--mod-table-row-top-to-text: var(--system-table-compact-size-s-row-top-to-text);
-	--mod-table-row-bottom-to-text: var(--system-table-compact-size-s-row-bottom-to-text);
-	--mod-table-row-checkbox-block-spacing: var(--system-table-compact-size-s-row-checkbox-block-spacing);
-	--mod-table-thumbnail-block-spacing: var(--system-table-compact-size-s-thumbnail-block-spacing);
-	--mod-table-thumbnail-size: var(--system-table-compact-size-s-thumbnail-size);
+	--spectrum-table-min-row-height: var(--system-table-compact-size-s-min-row-height);
+	--spectrum-table-row-top-to-text: var(--system-table-compact-size-s-row-top-to-text);
+	--spectrum-table-row-bottom-to-text: var(--system-table-compact-size-s-row-bottom-to-text);
+	--spectrum-table-row-checkbox-block-spacing: var(--system-table-compact-size-s-row-checkbox-block-spacing);
+	--spectrum-table-thumbnail-block-spacing: var(--system-table-compact-size-s-thumbnail-block-spacing);
+	--spectrum-table-thumbnail-size: var(--system-table-compact-size-s-thumbnail-size);
 }
 
 .spectrum-Table--compact.spectrum-Table--sizeL {
-	--mod-table-min-row-height: var(--system-table-compact-size-l-min-row-height);
-	--mod-table-row-top-to-text: var(--system-table-compact-size-l-row-top-to-text);
-	--mod-table-row-bottom-to-text: var(--system-table-compact-size-l-row-bottom-to-text);
-	--mod-table-row-checkbox-block-spacing: var(--system-table-compact-size-l-row-checkbox-block-spacing);
-	--mod-table-thumbnail-block-spacing: var(--system-table-compact-size-l-thumbnail-block-spacing);
-	--mod-table-thumbnail-size: var(--system-table-compact-size-l-thumbnail-size);
+	--spectrum-table-min-row-height: var(--system-table-compact-size-l-min-row-height);
+	--spectrum-table-row-top-to-text: var(--system-table-compact-size-l-row-top-to-text);
+	--spectrum-table-row-bottom-to-text: var(--system-table-compact-size-l-row-bottom-to-text);
+	--spectrum-table-row-checkbox-block-spacing: var(--system-table-compact-size-l-row-checkbox-block-spacing);
+	--spectrum-table-thumbnail-block-spacing: var(--system-table-compact-size-l-thumbnail-block-spacing);
+	--spectrum-table-thumbnail-size: var(--system-table-compact-size-l-thumbnail-size);
 }
 
 .spectrum-Table--compact.spectrum-Table--sizeXL {
-	--mod-table-min-row-height: var(--system-table-compact-size-xl-min-row-height);
-	--mod-table-row-top-to-text: var(--system-table-compact-size-xl-row-top-to-text);
-	--mod-table-row-bottom-to-text: var(--system-table-compact-size-xl-row-bottom-to-text);
-	--mod-table-row-checkbox-block-spacing: var(--system-table-compact-size-xl-row-checkbox-block-spacing);
-	--mod-table-thumbnail-block-spacing: var(--system-table-compact-size-xl-thumbnail-block-spacing);
-	--mod-table-thumbnail-size: var(--system-table-compact-size-xl-thumbnail-size);
+	--spectrum-table-min-row-height: var(--system-table-compact-size-xl-min-row-height);
+	--spectrum-table-row-top-to-text: var(--system-table-compact-size-xl-row-top-to-text);
+	--spectrum-table-row-bottom-to-text: var(--system-table-compact-size-xl-row-bottom-to-text);
+	--spectrum-table-row-checkbox-block-spacing: var(--system-table-compact-size-xl-row-checkbox-block-spacing);
+	--spectrum-table-thumbnail-block-spacing: var(--system-table-compact-size-xl-thumbnail-block-spacing);
+	--spectrum-table-thumbnail-size: var(--system-table-compact-size-xl-thumbnail-size);
 }
 
 .spectrum-Table--spacious {
-	--mod-table-min-row-height: var(--system-table-spacious-min-row-height);
-	--mod-table-row-top-to-text: var(--system-table-spacious-row-top-to-text);
-	--mod-table-row-bottom-to-text: var(--system-table-spacious-row-bottom-to-text);
-	--mod-table-row-checkbox-block-spacing: var(--system-table-spacious-row-checkbox-block-spacing);
-	--mod-table-thumbnail-block-spacing: var(--system-table-spacious-thumbnail-block-spacing);
-	--mod-table-thumbnail-size: var(--system-table-spacious-thumbnail-size);
+	--spectrum-table-min-row-height: var(--system-table-spacious-min-row-height);
+	--spectrum-table-row-top-to-text: var(--system-table-spacious-row-top-to-text);
+	--spectrum-table-row-bottom-to-text: var(--system-table-spacious-row-bottom-to-text);
+	--spectrum-table-row-checkbox-block-spacing: var(--system-table-spacious-row-checkbox-block-spacing);
+	--spectrum-table-thumbnail-block-spacing: var(--system-table-spacious-thumbnail-block-spacing);
+	--spectrum-table-thumbnail-size: var(--system-table-spacious-thumbnail-size);
 }
 
 .spectrum-Table--spacious.spectrum-Table--sizeS {
-	--mod-table-min-row-height: var(--system-table-spacious-size-s-min-row-height);
-	--mod-table-row-top-to-text: var(--system-table-spacious-size-s-row-top-to-text);
-	--mod-table-row-bottom-to-text: var(--system-table-spacious-size-s-row-bottom-to-text);
-	--mod-table-row-checkbox-block-spacing: var(--system-table-spacious-size-s-row-checkbox-block-spacing);
-	--mod-table-thumbnail-block-spacing: var(--system-table-spacious-size-s-thumbnail-block-spacing);
-	--mod-table-thumbnail-size: var(--system-table-spacious-size-s-thumbnail-size);
+	--spectrum-table-min-row-height: var(--system-table-spacious-size-s-min-row-height);
+	--spectrum-table-row-top-to-text: var(--system-table-spacious-size-s-row-top-to-text);
+	--spectrum-table-row-bottom-to-text: var(--system-table-spacious-size-s-row-bottom-to-text);
+	--spectrum-table-row-checkbox-block-spacing: var(--system-table-spacious-size-s-row-checkbox-block-spacing);
+	--spectrum-table-thumbnail-block-spacing: var(--system-table-spacious-size-s-thumbnail-block-spacing);
+	--spectrum-table-thumbnail-size: var(--system-table-spacious-size-s-thumbnail-size);
 }
 
 .spectrum-Table--spacious.spectrum-Table--sizeL {
-	--mod-table-min-row-height: var(--system-table-spacious-size-l-min-row-height);
-	--mod-table-row-top-to-text: var(--system-table-spacious-size-l-row-top-to-text);
-	--mod-table-row-bottom-to-text: var(--system-table-spacious-size-l-row-bottom-to-text);
-	--mod-table-row-checkbox-block-spacing: var(--system-table-spacious-size-l-row-checkbox-block-spacing);
-	--mod-table-thumbnail-block-spacing: var(--system-table-spacious-size-l-thumbnail-block-spacing);
-	--mod-table-thumbnail-size: var(--system-table-spacious-size-l-thumbnail-size);
+	--spectrum-table-min-row-height: var(--system-table-spacious-size-l-min-row-height);
+	--spectrum-table-row-top-to-text: var(--system-table-spacious-size-l-row-top-to-text);
+	--spectrum-table-row-bottom-to-text: var(--system-table-spacious-size-l-row-bottom-to-text);
+	--spectrum-table-row-checkbox-block-spacing: var(--system-table-spacious-size-l-row-checkbox-block-spacing);
+	--spectrum-table-thumbnail-block-spacing: var(--system-table-spacious-size-l-thumbnail-block-spacing);
+	--spectrum-table-thumbnail-size: var(--system-table-spacious-size-l-thumbnail-size);
 }
 
 .spectrum-Table--spacious.spectrum-Table--sizeXL {
-	--mod-table-min-row-height: var(--system-table-spacious-size-xl-min-row-height);
-	--mod-table-row-top-to-text: var(--system-table-spacious-size-xl-row-top-to-text);
-	--mod-table-row-bottom-to-text: var(--system-table-spacious-size-xl-row-bottom-to-text);
-	--mod-table-row-checkbox-block-spacing: var(--system-table-spacious-size-xl-row-checkbox-block-spacing);
-	--mod-table-thumbnail-block-spacing: var(--system-table-spacious-size-xl-thumbnail-block-spacing);
-	--mod-table-thumbnail-size: var(--system-table-spacious-size-xl-thumbnail-size);
+	--spectrum-table-min-row-height: var(--system-table-spacious-size-xl-min-row-height);
+	--spectrum-table-row-top-to-text: var(--system-table-spacious-size-xl-row-top-to-text);
+	--spectrum-table-row-bottom-to-text: var(--system-table-spacious-size-xl-row-bottom-to-text);
+	--spectrum-table-row-checkbox-block-spacing: var(--system-table-spacious-size-xl-row-checkbox-block-spacing);
+	--spectrum-table-thumbnail-block-spacing: var(--system-table-spacious-size-xl-thumbnail-block-spacing);
+	--spectrum-table-thumbnail-size: var(--system-table-spacious-size-xl-thumbnail-size);
 }
 
 .spectrum-Table--emphasized {
@@ -218,8 +213,9 @@
 }
 
 .spectrum-Table--quiet {
-	--mod-table-border-radius: var(--system-table-quiet-border-radius);
-	--mod-table-outer-border-inline-width: var(--system-table-quiet-outer-border-inline-width);
-	--mod-table-header-background-color: var(--system-table-quiet-header-background-color);
-	--mod-table-row-background-color: var(--system-table-quiet-row-background-color);
+	--spectrum-table-border-radius: var(--system-table-quiet-border-radius);
+	--spectrum-table-outer-border-inline-width: var(--system-table-quiet-outer-border-inline-width);
+	--spectrum-table-header-background-color: var(--system-table-quiet-header-background-color);
+	--spectrum-table-row-background-color: var(--system-table-quiet-row-background-color);
 }
+/*# sourceMappingURL=index-theme.css.map */

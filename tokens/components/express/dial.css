@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-dial-background-color-default: var(--spectrum-gray-75);
 	--system-dial-handle-marker-color-disabled: var(--spectrum-gray-200);
 	--system-dial-border-color-disabled: var(--spectrum-gray-200);
@@ -45,3 +45,5 @@
 	--system-dial-small-width: 24px;
 	--system-dial-small-height: 24px;
 }
+
+/*# sourceMappingURL=express.css.map */

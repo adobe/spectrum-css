@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-breadcrumbs-block-size: var(--spectrum-breadcrumbs-height);
 	--system-breadcrumbs-block-size-compact: var(--spectrum-breadcrumbs-height-compact);
 	--system-breadcrumbs-block-size-multiline: var(--spectrum-breadcrumbs-height-multiline);
@@ -67,3 +67,5 @@
 	--system-breadcrumbs-action-button-color-disabled: var(--spectrum-disabled-content-color);
 	--system-breadcrumbs-focus-indicator-color: var(--spectrum-focus-indicator-color);
 }
+
+/*# sourceMappingURL=express.css.map */

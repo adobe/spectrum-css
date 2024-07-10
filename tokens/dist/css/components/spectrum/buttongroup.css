@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
 	--system-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
 	--system-buttongroup-size-s-spacing-horizontal: var(--spectrum-spacing-200);
@@ -23,3 +23,5 @@
 	--system-buttongroup-size-xl-spacing-horizontal: var(--spectrum-spacing-300);
 	--system-buttongroup-size-xl-spacing-vertical: var(--spectrum-spacing-300);
 }
+
+/*# sourceMappingURL=spectrum.css.map */

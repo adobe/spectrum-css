@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-HelpText {
 		--spectrum-helptext-line-height: var(--spectrum-line-height-100);
 		--spectrum-helptext-content-color-default: var(--spectrum-neutral-subdued-content-color-default);

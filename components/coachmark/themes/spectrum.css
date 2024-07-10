@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-CoachMark {
 		--spectrum-coachmark-min-width: var(--spectrum-coach-mark-minimum-width);
 		--spectrum-coachmark-width: var(--spectrum-coach-mark-width);
@@ -51,12 +51,5 @@
 		--spectrum-coachmark-step-line-height: var(--spectrum-body-line-height);
 		--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
 		--spectrum-coachmark-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
-
-		/* mods */
-		--mod-buttongroup-justify-content: flex-end;
-		--mod-popover-border-width: var(--spectrum-border-width-100);
-		--mod-popover-corner-radius: var(--spectrum-corner-radius-100);
-		--mod-popover-content-area-spacing-vertical: 0;
-		--mod-button-edge-to-visual-only: 9px;
 	}
 }

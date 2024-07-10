@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-table-header-top-to-text: var(--spectrum-table-column-header-row-top-to-text-medium);
 	--system-table-header-bottom-to-text: var(--spectrum-table-column-header-row-bottom-to-text-medium);
 	--system-table-min-header-height: var(--spectrum-component-height-100);
@@ -70,11 +70,9 @@
 	--system-table-thumbnail-to-text: var(--spectrum-text-to-visual-100);
 	--system-table-thumbnail-block-spacing: var(--spectrum-table-thumbnail-to-top-minimum-medium-regular);
 	--system-table-thumbnail-size: var(--spectrum-thumbnail-size-300);
-	--system-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--system-table-quiet-row-background-color, var(--system-table-row-background-color)));
+	--system-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--mod-table-row-background-color, var(--system-table-row-background-color)));
 	--system-table-selected-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--mod-table-selected-row-background-color-non-emphasized, var(--system-table-selected-row-background-color-non-emphasized)));
 	--system-table-selected-cell-background-color-focus: var(--highcontrast-table-selected-row-background-color-focus, var(--mod-table-selected-row-background-color-non-emphasized-focus, var(--system-table-selected-row-background-color-non-emphasized-focus)));
-	--system-table-thumbnail-size: var(--mod-table-thumbnail-size, var(--system-system-table-thumbnail-size));
-	--system-table-dir-rtl-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	--system-table-size-s-min-header-height: var(--spectrum-component-height-100);
 	--system-table-size-s-header-top-to-text: var(--spectrum-table-column-header-row-top-to-text-small);
 	--system-table-size-s-header-bottom-to-text: var(--spectrum-table-column-header-row-bottom-to-text-small);
@@ -181,3 +179,5 @@
 	--system-table-quiet-header-background-color: var(--mod-table-header-background-color--quiet, var(--spectrum-transparent-white-100));
 	--system-table-quiet-row-background-color: var(--mod-table-row-background-color--quiet, var(--spectrum-transparent-white-100));
 }
+
+/*# sourceMappingURL=express.css.map */

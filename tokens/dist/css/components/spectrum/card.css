@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-card-background-color: var(--spectrum-background-layer-2-color);
 	--system-card-body-spacing: var(--spectrum-spacing-400);
 	--system-card-title-padding-top: var(--spectrum-spacing-300);
@@ -58,8 +58,11 @@
 	--system--light-descendant-of-card-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
 	--system--lightest-descendant-of-card-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
 	--system--dark-descendant-of-card-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
+	--system--darkest-descendant-of-card-card-selected-background-color-rgb: var(--spectrum-blue-600-rgb);
 	--system-card-quiet-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
 	--system-card-gallery-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
 	--system-card-quiet-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
 	--system-card-gallery-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
 }
+
+/*# sourceMappingURL=spectrum.css.map */

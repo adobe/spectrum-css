@@ -11,14 +11,14 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
-	--system-search-border-radius: var(--spectrum-corner-radius-100);
-	--system-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
+.spectrum--legacy {
 	--system-search-border-color-default: var(--spectrum-gray-500);
 	--system-search-border-color-hover: var(--spectrum-gray-600);
 	--system-search-border-color-focus: var(--spectrum-gray-800);
 	--system-search-border-color-focus-hover: var(--spectrum-gray-900);
 	--system-search-border-color-key-focus: var(--spectrum-gray-900);
+	--system-search-border-radius: var(--spectrum-corner-radius-100);
+	--system-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 	--system-search-inline-size: var(--spectrum-field-width);
 	--system-search-block-size: var(--spectrum-component-height-100);
 	--system-search-button-inline-size: var(--system-search-block-size);
@@ -67,3 +67,23 @@
 	--system-search-quiet-border-radius: 0;
 	--system-search-quiet-edge-to-visual: var(--spectrum-field-edge-to-visual-quiet);
 }
+
+.spectrum--express {
+	--system-search-border-radius: calc(var(--spectrum-component-height-100) / 2);
+	--system-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
+	--system-search-border-color-default: var(--spectrum-gray-400);
+	--system-search-border-color-hover: var(--spectrum-gray-500);
+	--system-search-border-color-focus: var(--spectrum-gray-800);
+	--system-search-border-color-focus-hover: var(--spectrum-gray-900);
+	--system-search-border-color-key-focus: var(--spectrum-gray-900);
+	--system-search-size-s-border-radius: calc(var(--spectrum-component-height-75) / 2);
+	--system-search-size-s-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-75);
+	--system-search-size-m-border-radius: calc(var(--spectrum-component-height-100) / 2);
+	--system-search-size-m-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
+	--system-search-size-l-border-radius: calc(var(--spectrum-component-height-200) / 2);
+	--system-search-size-l-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-200);
+	--system-search-size-xl-border-radius: calc(var(--spectrum-component-height-300) / 2);
+	--system-search-size-xl-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-300);
+}
+
+/*# sourceMappingURL=express.css.map */

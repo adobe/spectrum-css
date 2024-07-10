@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
+.spectrum--legacy {
 	--system-datepicker-initial-height: var(--spectrum-component-height-100);
 	--system-datepicker-border-radius: var(--spectrum-corner-radius-100);
 	--system-datepicker-border-radius-quiet: 0;
@@ -53,3 +53,5 @@
 	--system-datepicker-padding-inline-end-invalid: calc(var(--system-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) + var(--system-datepicker-icon-to-button) + var(--system-datepicker-icon-size) - var(--system-datepicker-border-width) * 2);
 	--system-datepicker-padding-inline-end-invalid-quiet: calc(var(--system-datepicker-pickerbutton-width-quiet) + var(--system-datepicker-icon-size) + var(--system-datepicker-icon-to-text));
 }
+
+/*# sourceMappingURL=spectrum.css.map */

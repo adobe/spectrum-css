@@ -11,9 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-dropindicator-border-color: var(--spectrum-dropindicator-color);
 	--system-dropindicator-circle-color: var(--spectrum-dropindicator-color);
 	--system-dropindicator-border-size: var(--spectrum-border-width-200);
 	--system-dropindicator-circle-size: 12px;
 }
+
+/*# sourceMappingURL=express.css.map */

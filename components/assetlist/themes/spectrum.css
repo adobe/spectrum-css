@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
+@container style(--system: legacy) {
 	.spectrum-AssetList {
 		--spectrum-assetlist-width: 272px;
 		--spectrum-assetlist-child-indicator-animation: var(--spectrum-animation-duration-100);

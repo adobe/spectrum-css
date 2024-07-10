@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
+.spectrum--legacy {
 	--system-rating-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
 	--system-rating-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
 	--system-rating-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
@@ -32,3 +32,12 @@
 	--system-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
 	--system-rating-icon-count: var(--system-rating-icon-count);
 }
+
+.spectrum--express {
+	--system-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
+	--system-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+	--system-rating-icon-color-down: var(--spectrum-neutral-content-color-down);
+	--system-rating-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+}
+
+/*# sourceMappingURL=express.css.map */

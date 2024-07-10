@@ -7,7 +7,7 @@ import { capitalize } from "lodash-es";
 
 import "../index.css";
 import "../themes/express.css";
-import "../themes/legacy.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Typography",
@@ -24,6 +24,8 @@ export const Template = ({
 	if (!Array.isArray(content)) {
 		content = [content];
 	}
+
+	console.log(content);
 
 	const contentLength = content.length;
 
