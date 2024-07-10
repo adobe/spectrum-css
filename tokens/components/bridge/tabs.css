@@ -93,19 +93,19 @@
 	--spectrum-tabs-selection-indicator-color: var(--system-tabs-emphasized-selection-indicator-color);
 }
 
-.spectrum-Tabs--vertical {
+.spectrum-Tabs.spectrum-Tabs--vertical {
 	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-list-background-direction);
 }
 
-.spectrum-Tabs--vertical-right {
+.spectrum-Tabs.spectrum-Tabs--vertical-right {
 	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-right-list-background-direction);
 }
 
-.spectrum-Tabs--vertical:dir(rtl) {
+.spectrum-Tabs.spectrum-Tabs--vertical:dir(rtl) {
 	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-dir-rtl-list-background-direction);
 }
 
-.spectrum-Tabs--vertical-right:dir(rtl) {
+.spectrum-Tabs.spectrum-Tabs--vertical-right:dir(rtl) {
 	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-right-dir-rtl-list-background-direction);
 }
 
@@ -136,4 +136,19 @@
 	--spectrum-tabs-bottom-to-text: var(--system-tabs-compact-size-xl-bottom-to-text);
 	--spectrum-tabs-top-to-icon: var(--system-tabs-compact-size-xl-top-to-icon);
 }
-/*# sourceMappingURL=index-theme.css.map */
+
+.spectrum-Tabs--vertical {
+	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-list-background-direction);
+}
+
+.spectrum-Tabs--vertical-right {
+	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-right-list-background-direction);
+}
+
+.spectrum-Tabs--vertical:dir(rtl) {
+	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-dir-rtl-list-background-direction);
+}
+
+.spectrum-Tabs--vertical-right:dir(rtl) {
+	--spectrum-tabs-list-background-direction: var(--system-tabs-vertical-right-dir-rtl-list-background-direction);
+}

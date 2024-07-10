@@ -86,4 +86,4 @@
 "@spectrum-css/tokens": minor
 ---
 
-fixes a compilation issue in the tokens dist artifacts
+Fixes a compilation issue in the tokens dist artifacts

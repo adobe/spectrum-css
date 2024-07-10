@@ -53,5 +53,3 @@
 	--system-datepicker-padding-inline-end-invalid: calc(var(--system-datepicker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) + var(--system-datepicker-icon-to-button) + var(--system-datepicker-icon-size) - var(--system-datepicker-border-width) * 2);
 	--system-datepicker-padding-inline-end-invalid-quiet: calc(var(--system-datepicker-pickerbutton-width-quiet) + var(--system-datepicker-icon-size) + var(--system-datepicker-icon-to-text));
 }
-
-/*# sourceMappingURL=spectrum-two.css.map */
