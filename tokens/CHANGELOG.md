@@ -1,5 +1,15 @@
 # Change Log
 
+## 15.0.0-s2-foundations.6
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`130e137`](https://github.com/adobe/spectrum-css/commit/130e1372b223641efe0a3a23c83ff1d01a70bf1d) Thanks [@pfulton](https://github.com/pfulton)! - This update pre-resolves the bundler assets to make them easier to serve as a single entry point.
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`ff8d033`](https://github.com/adobe/spectrum-css/commit/ff8d033f2148e915b7496121b59b680e8d77ca6a) Thanks [@pfulton](https://github.com/pfulton)! - Incorporated a few additional bug fixes found in VRT
+
 ## 15.0.0-s2-foundations.5
 
 ### Patch Changes

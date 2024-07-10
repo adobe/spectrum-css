@@ -1,5 +1,18 @@
 # Change Log
 
+## 10.0.0-s2-foundations.6
+
+### Patch Changes
+
+- [#2886](https://github.com/adobe/spectrum-css/pull/2886) [`a01ac07`](https://github.com/adobe/spectrum-css/commit/a01ac075ae227574628f72b4c0fe61f1f53792c5) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Ensures disabled breadrumb items behave as expected. They are conditionally left out of tab order depending on their `isDisabled` value. Uses [aria-disabled="true"] and applies `is-disabled` class to `.spectrum-Breadcrumb-itemLink`.
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`ff8d033`](https://github.com/adobe/spectrum-css/commit/ff8d033f2148e915b7496121b59b680e8d77ca6a) Thanks [@pfulton](https://github.com/pfulton)! - Incorporated a few additional bug fixes found in VRT
+
+- Updated dependencies [[`130e137`](https://github.com/adobe/spectrum-css/commit/130e1372b223641efe0a3a23c83ff1d01a70bf1d), [`ff8d033`](https://github.com/adobe/spectrum-css/commit/ff8d033f2148e915b7496121b59b680e8d77ca6a)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.6
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.6
+  - @spectrum-css/icon@8.0.0-s2-foundations.6
+
 ## 10.0.0-s2-foundations.5
 
 ### Patch Changes
