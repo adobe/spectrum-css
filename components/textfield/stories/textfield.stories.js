@@ -165,6 +165,7 @@ export default {
 		multiline: false,
 		grows: false,
 		isQuiet: false,
+		value: "",
 	},
 	parameters: {
 		actions: {

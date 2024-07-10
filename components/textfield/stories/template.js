@@ -78,7 +78,7 @@ export const Template = ({
 	placeholder,
 	name,
 	id,
-	value,
+	value = "",
 	type = "text",
 	autocomplete = true,
 	onclick,
@@ -206,7 +206,7 @@ export const TextFieldGroup = Variants({
 		testHeading: "With value",
 		displayLabel: true,
 		labelText: "Username",
-		value: "username@reallylongemail.com"
+		value: "UsernameWiderThanInput@ReallyLongEmail.com"
 	},
 	{
 		testHeading: "Text area",
