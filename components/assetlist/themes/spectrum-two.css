@@ -36,9 +36,5 @@
 		/* label */
 		--spectrum-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
 		--spectrum-assetlist-label-color: var(--spectrum-neutral-content-color-default);
-
-		&:dir(rtl) {
-			--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
-		}
 	}
 }

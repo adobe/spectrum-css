@@ -106,7 +106,7 @@
 }
 
 .spectrum-Stepper.is-invalid:focus:hover {
-	--mod-infield-button-border-color: var(--system-stepper-invalid-focus-hover-focus-hover-infield-button-border-color);
+	--mod-infield-button-border-color: var(--system-stepper-invalid-focus-hover-infield-button-border-color);
 }
 
 .spectrum-Stepper.is-invalid.is-keyboardFocused {
@@ -116,3 +116,4 @@
 .spectrum-Stepper.is-invalid:focus-visible {
 	--mod-infield-button-border-color: var(--system-stepper-invalid-focus-visible-infield-button-border-color);
 }
+/*# sourceMappingURL=index-theme.css.map */

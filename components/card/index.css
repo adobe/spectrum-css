@@ -22,9 +22,7 @@
 	min-inline-size: var(--mod-card-minimum-width, var(--spectrum-card-minimum-width));
 	text-decoration: none;
 
-	/* @deprecation --mod-spectrum-card-background-color has been renamed to
-		--spectrum-card-background-color. The fallback will be removed in a future version. */
-	background-color: var(--highcontrast-card-background-color, var(--mod-card-background-color, var(--mod-spectrum-card-background-color, var(--spectrum-card-background-color))));
+	background-color: var(--highcontrast-card-background-color, var(--mod-card-background-color, var(--spectrum-card-background-color)));
 
 	border: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
 	border-color: var(--highcontrast-card-border-color, var(--mod-card-border-color, var(--spectrum-card-border-color)));

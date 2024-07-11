@@ -25,8 +25,8 @@
 		--spectrum-assetlist-item-animation: var(--spectrum-animation-duration-100);
 		--spectrum-assetlist-item-font-size: var(--spectrum-font-size-100);
 		--spectrum-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
-		--spectrum-assetlist-item-background-color-down: var(--spectrum-gray-200);
-		--spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-100);
+		--spectrum-assetlist-item-background-color-down: var(--spectrum-gray-300);
+		--spectrum-assetlist-item-background-color-hover: var(--spectrum-gray-200);
 
 		/* thumbnail */
 		--spectrum-assetlist-thumbnail-width: var(--spectrum-spacing-400);
@@ -36,9 +36,5 @@
 		/* label */
 		--spectrum-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
 		--spectrum-assetlist-label-color: var(--spectrum-neutral-content-color-default);
-
-		&:dir(rtl) {
-			--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
-		}
 	}
 }

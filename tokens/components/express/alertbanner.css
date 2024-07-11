@@ -28,17 +28,10 @@
 	--system-alertbanner-alert-banner-informative-background: var(--spectrum-informative-background-color-default);
 	--system-alertbanner-alert-banner-negative-background: var(--spectrum-negative-background-color-default);
 	--system-alertbanner-alert-banner-font-color: var(--spectrum-white);
-	--system-alertbanner-divider-vertical-margin: var(--mod-alert-banner-edge-to-divider, var(--spectrum-alert-banner-edge-to-divider));
-	--system-alertbanner-divider-vertical-height: auto;
-	--system-alertbanner-divider-vertical-align: stretch;
-	--system-alertbanner-button-margin-block: var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button));
-	--system-alertbanner-button-margin-right: var(--mod-alert-banner-text-to-divider, var(--system-alertbanner-alert-banner-text-to-divider));
-	--system-alertbanner-button-margin-left: auto;
-	--system-alertbanner-closebutton-margin-inline: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
-	--system-alertbanner-closebutton-margin-top: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
-	--system-alertbanner-closebutton-align-self: flex-start;
 }
 
 .spectrum--express {
 	--system-alertbanner-alert-banner-netural-background: var(--spectrum-neutral-background-color-default);
 }
+
+/*# sourceMappingURL=express.css.map */

@@ -1,7 +1,7 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers";
 
-// import "@spectrum-css/tokens/dist/index.css";
+import "@spectrum-css/tokens/dist/index.css";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
