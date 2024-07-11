@@ -51,7 +51,7 @@ module.exports = ({
 				// Remove the provided prefix if used
 				.replace(new RegExp(selectorPrefix, "gi"), "")
 				// Remove mod from the new property name
-				.replace(/mod/g, "")
+				.replace(/-?mod-/g, "-")
 				// Remove state-based prefix
 				.replace(/is-/g, "")
 				// Remove the internal identifier marker
@@ -96,73 +96,22 @@ module.exports = ({
 			return fallbackValue;
 		}
 
-
-		/**
-		 * Reformat pseudo functions to use dash-formatted names
-		 * @param {string} selector
-		 * @returns {string} The reformatted selector
-		 */
-		function formatPseudos (selector) {
-			console.log('formatPseudos', selector);
-
-
-			selector = selector.toString();
-			const pseudoRegex = /:(\w+)\((.+?)\)/g;
-			const matches = [...selector.matchAll(pseudoRegex)];
-			if (!matches || matches.length === 0) return selector;
-
-			let replacement = "";
-			for (const match of matches) {
-				// const [, query, , value, ...bar] = match;
-				const bar = match;
-				const [, query, value] = bar;
-
-				replacement = replacement + `-${query}`;
-
-				console.log(bar);
-				if (value) {
-					if (value.includes(",")) {
-						replacement = replacement + `-${value.split(",").join("-")}`;
-					}
-					else {
-						replacement = replacement + `-${value}`;
-					}
-				}
-			}
-			console.log(selector.replace(pseudoRegex, replacement));
-
-			return selector.replace(pseudoRegex, replacement);
-		}
-
-		/**
-		 * Replace combinators with logical descriptions to create a more readable variable name
-		 * @param {string} selector
-		 * @returns {string} An updated selector with the combinators replaced by logical descriptions
-		 */
-		function replaceCombinators(selector) {
-			return selector
-				.replace(/ \+ /g, "-next-to-")
-				.replace(/ > /g, "-child-of-")
-				.replace(/ ~ /g, "-sibling-of-")
-				.replace(/ /g, "-descendant-of-");
-		}
-
 		/**
 		 * Get the base selector for a given selector
 		 * @param {string} selector
 		 * @returns {string} The base selector
 		 */
-		function getBaseSelector(s) {
+		function getBaseSelector(selector) {
 			let baseSelector;
 
-			if (!s || !s.nodes) return baseSelector;
+			if (!selector || !selector.nodes) return baseSelector;
 
 			// This regex is designed to pull spectrum-<ComponentName> out of a selector
 			const baseRegex = new RegExp(`^(${selectorPrefix ? `${selectorPrefix}-` : ""}[A-Z][^\\W-.\\s]+)`);
 
 			// Iterate over the selector nodes to find a common root class name
 			const found = [];
-			s.each((node) => {
+			selector.each((node) => {
 				if (node.type !== "class") return;
 				if (!node.value) return;
 
@@ -179,15 +128,14 @@ module.exports = ({
 			}
 
 			let countMap = new Map();
+
 			// Find and return the most common base selector in the array
-			found.forEach((selector) => {
-				countMap.set(selector, (countMap.get(selector) || 0) + 1);
-			});
+			found.forEach((s) => countMap.set(s, (countMap.get(s) || 0) + 1));
 
 			let count = 0;
-			for (let [selector, c] of countMap.entries()) {
+			for (let [s, c] of countMap.entries()) {
 				if (c > count) {
-					baseSelector = selector;
+					baseSelector = s;
 					count = c;
 				}
 			}
@@ -217,26 +165,47 @@ module.exports = ({
 					.replace(new RegExp(identifierValue, "gi"), "")
 			) : prop;
 
-			const property = [];
-			selector.each((node) => {
+			let property = [];
+
+			function processSelector(node) {
 				if (node.type === "pseudo") {
-					console.log('pseudo', node);
-				}
-				else if (node.type === "combinator") {
-					console.log('combinator', node);
+					property.push(node.value.slice(1));
 				}
 				else if (node.type === "tag") {
-					console.log('tag', node);
-				}
-				else if (node.type === "class") {
-					console.log('class', node);
 					property.push(node.value);
 				}
-			});
+				else if (node.type === "combinator") {
+					switch (node.value) {
+						case " ":
+							property.push("descendant-of");
+							break;
+						case ">":
+							property.push("child-of");
+							break;
+						case "+":
+							property.push("next-to");
+							break;
+						case "~":
+							property.push("sibling-of");
+							break;
+					}
+				}
+				else if (node.type === "class") {
+					if (node.value === baseSelector) return;
+					property.push(clean(node.value));
+					return;
+				}
 
-			console.log(property);
+				if (!node.nodes) return;
+				node.each(processSelector);
+			}
 
-			return `--${[identifierName, baseSelector, clean([...property, prop].join("-"))].join("-").toLowerCase()}`;
+			selector.each(processSelector);
+
+			// Dedupe the property array, removing the 2nd instance of a property
+			property = property.filter((value, index) => property.indexOf(value) === index).filter(Boolean);
+
+			return `--${[identifierName, baseSelector, clean([...property, prop].filter(Boolean).join("-"))].join("-").toLowerCase()}`;
 		}
 
 		/**
@@ -343,7 +312,6 @@ module.exports = ({
 						const selectorNode = selectorMap[selector];
 
 						// Check for fallbacks in the var() function
-						// todo: use valueparser instead of a regex
 						const fallbackValue = extractFallbackValue(decl.value);
 						if (fallbackValue) {
 							// The final declaration should have the override present

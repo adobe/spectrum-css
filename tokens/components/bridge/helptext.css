@@ -19,13 +19,13 @@
 }
 
 .spectrum-HelpText.spectrum-HelpText--neutral {
-	--spectrum-helptext-content-color-default: var(--system-helptext-neutral-content-color-default);
-	--spectrum-helptext-icon-color-default: var(--system-helptext-neutral-icon-color-default);
+	--spectrum-helptext-content-color-default: var(--system-help-text-neutral-content-color-default);
+	--spectrum-helptext-icon-color-default: var(--system-help-text-neutral-icon-color-default);
 }
 
 .spectrum-HelpText.spectrum-HelpText--negative {
-	--spectrum-helptext-content-color-default: var(--system-helptext-negative-content-color-default);
-	--spectrum-helptext-icon-color-default: var(--system-helptext-negative-icon-color-default);
+	--spectrum-helptext-content-color-default: var(--system-help-text-negative-content-color-default);
+	--spectrum-helptext-icon-color-default: var(--system-help-text-negative-icon-color-default);
 }
 
 .spectrum-HelpText.is-disabled {

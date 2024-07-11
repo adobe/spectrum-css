@@ -18,16 +18,16 @@
 	--system-actiongroup-button-spacing-reset: 0;
 	--system-actiongroup-border-radius-reset: 0;
 	--system-actiongroup-border-radius: var(--spectrum-corner-radius-100);
-	--system-actiongroup-size-xs-horizontal-spacing-regular: var(--spectrum-spacing-75);
-	--system-actiongroup-size-s-horizontal-spacing-regular: var(--spectrum-spacing-75);
-	--system-actiongroup-size-xs-vertical-spacing-regular: var(--spectrum-spacing-75);
-	--system-actiongroup-size-s-vertical-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-xs-horizontal-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-s-horizontal-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-xs-vertical-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-s-vertical-spacing-regular: var(--spectrum-spacing-75);
 	--system-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-actiongroup-size-m-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-actiongroup-size-l-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-actiongroup-size-xl-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-m-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-l-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-xl-horizontal-spacing-regular: var(--spectrum-spacing-100);
 	--system-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
-	--system-actiongroup-size-m-vertical-spacing-regular: var(--spectrum-spacing-100);
-	--system-actiongroup-size-l-vertical-spacing-regular: var(--spectrum-spacing-100);
-	--system-actiongroup-size-xl-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-m-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-l-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-xl-vertical-spacing-regular: var(--spectrum-spacing-100);
 }
