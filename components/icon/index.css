@@ -21,7 +21,7 @@
 	display: inline-block;
 
 	/* Use custom pass through or inherit the text color. */
-	color: var(--mod-icon-color, inherit);
+	color: var(--mod-icon-color, var(--spectrum-icon-color, inherit));
 
 	/* Fill should match the current text color. */
 	fill: currentColor;

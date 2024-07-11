@@ -40,22 +40,16 @@ const {
 async function extractModifiers(filepath, { cwd } = {}) {
 	if (!fs.existsSync(filepath)) return Promise.resolve();
 
+	const componentName = cwd.split(path.sep).pop();
 	const content = await fsp.readFile(filepath, { encoding: "utf-8" });
 
 	/* Remove duplicates using a Set and sort the results (default is alphabetical) */
-	const found = await extractProperties(content);
-	const spectrum = await extractProperties(
-		content,
-		/(--spectrum-(?:\w|-)+)(?!:|\w|-)/g,
-	);
-	const system = await extractProperties(
-		content,
-		/(--system-(?:\w|-)+)(?!:|\w|-)/g,
-	);
-	const highContrast = await extractProperties(
-		content,
-		/(--highcontrast-(?:\w|-)+)(?!:|\w|-)/g,
-	);
+	const meta = extractProperties(content, {
+		modifiers: ["mod"],
+		spectrum: ["spectrum"],
+		system: ["system"],
+		"high-contrast": ["highcontrast"],
+	});
 
 	const selectors = new Set();
 	const root = postcss.parse(content);
@@ -71,6 +65,17 @@ async function extractModifiers(filepath, { cwd } = {}) {
 		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
+	// Iterate over the spectrum values and see if the 2nd part of the variable
+	// name matches the component name
+	const spectrum = meta.spectrum ?? [];
+	const componentLevel = new Set(spectrum.map((value) => {
+		const parts = value.slice(0, 2).split("-");
+		// console.log(parts, componentName);
+		if (parts.length > 1 && parts[1] === componentName) return value;
+		if (parts[1] + parts[2] === componentName) return value;
+		return;
+	}).filter(Boolean));
+
 	return Promise.all([
 		fsp
 			.writeFile(
@@ -78,11 +83,10 @@ async function extractModifiers(filepath, { cwd } = {}) {
 				await prettier.format(
 					JSON.stringify(
 						{
+							sourceFile: path.relative(cwd, filepath),
 							selectors: [...selectors].sort(),
-							mods: [...found].sort(),
-							spectrum: [...spectrum].sort(),
-							system: [...system].sort(),
-							a11y: [...highContrast].sort(),
+							component: [...componentLevel].sort(),
+							...meta,
 						},
 						null,
 						2,
@@ -95,8 +99,7 @@ async function extractModifiers(filepath, { cwd } = {}) {
 				const stats = fs.statSync(path.join(cwd, "dist/metadata.json"));
 				return [
 					`${"✓".green}  ${"dist/metadata.json".padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
-					`🔍  ${`${found.size}`.underline} modifiable custom propert${found.size === 1 ? "y" : "ies"}`,
-					`🔍  ${`${selectors.size}`.underline} selector${found.size === 1 ? "" : "s"}`,
+					`🔍  ${`${selectors.size}`.underline} selector${selectors.size === 1 ? "" : "s"}`,
 				];
 			})
 			.catch((err) => {
@@ -329,12 +332,7 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 			referencesOnly: false,
 			preserveVariables: true,
 			stripLocalSelectors: false,
-		}).then(async (reports = []) =>
-			// After building, extract the available modifiers
-			extractModifiers(path.join(cwd, "dist/index.css"), { cwd })
-				// Return the console output to be logged
-				.then((r) => [r, ...reports]),
-		),
+		}),
 		processCSS(
 			content,
 			indexSourceCSS,
@@ -481,7 +479,12 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 					stripLocalSelectors: false,
 					referencesOnly: false,
 				},
-			),
+			).then(async (reports = []) => {
+				return Promise.all([
+					// After building, extract the available modifiers
+					extractModifiers(path.join(cwd, "dist/index-theme-switcher.css"), { cwd }),
+				]).then((r) => [...reports, r]);
+			}),
 		),
 	);
 

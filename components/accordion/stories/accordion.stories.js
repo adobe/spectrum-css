@@ -2,7 +2,7 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
-import packageJSON from "../package.json";
+import { version } from "../package.json";
 import { AccordionGroup, Template } from "./template.js";
 
 /**
@@ -142,8 +142,7 @@ export default {
 			handles: ["click .spectrum-Accordion-item"],
 		},
 		chromatic: { disableSnapshot: true },
-		packageData: packageJSON,
-		componentVersion: packageJSON.version,
+		componentVersion: version,
 	},
 };
 

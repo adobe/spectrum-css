@@ -29,7 +29,7 @@
 	--system-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
 	--system-progressbar-spacing-label-to-text: var(--spectrum-spacing-200);
 	--system-progressbar-text-color: var(--spectrum-neutral-content-color-default);
-	--system-progressbar-track-color: var(--spectrum-gray-200);
+	--system-progressbar-track-color: var(--spectrum-gray-300);
 	--system-progressbar-fill-color: var(--spectrum-accent-color-900);
 	--system-progressbar-fill-color-positive: var(--spectrum-positive-visual-color);
 	--system-progressbar-fill-color-notice: var(--spectrum-notice-visual-color);
@@ -74,5 +74,3 @@
 	--system-meter-size-l-progressbar-thickness: var(--system-progressbar-meter-thickness-l);
 	--system-meter-size-l-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 }
-
-/*# sourceMappingURL=express.css.map */

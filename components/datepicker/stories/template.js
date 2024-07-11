@@ -112,7 +112,13 @@ export const Template = ({
 								width: undefined,
 						}
 						: {},
-					content: [Calendar(globals, context)],
+					content: [
+						Calendar({
+							selectedDay,
+							lastDay,
+							isDisabled,
+						}, context)
+					],
 					// @todo this implementation of calendar does not currently display range selections or selected date on first load
 				}, context)}`
 			)}
