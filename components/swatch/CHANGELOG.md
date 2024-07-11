@@ -1,5 +1,17 @@
 # Change Log
 
+## 7.0.0-s2-foundations.8
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`2633985`](https://github.com/adobe/spectrum-css/commit/2633985775ef5a8fad929e275e55e99b75b10959) Thanks [@pfulton](https://github.com/pfulton)! - Update system property tooling (splitinator) to leverage the selector parser
+
+### Patch Changes
+
+- Updated dependencies [[`2633985`](https://github.com/adobe/spectrum-css/commit/2633985775ef5a8fad929e275e55e99b75b10959)]:
+  - @spectrum-css/opacitycheckerboard@3.0.0-s2-foundations.8
+  - @spectrum-css/tokens@15.0.0-s2-foundations.8
+
 ## 7.0.0-s2-foundations.7
 
 ### Major Changes
