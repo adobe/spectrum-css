@@ -17,6 +17,10 @@
 	margin-block-start: 0;
 	margin-block-end: 0;
 	padding: 0;
+
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 .spectrum-AssetList-item {

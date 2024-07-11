@@ -30,7 +30,4 @@
 	--spectrum-assetlist-item-label-padding-inline-start: var(--system-assetlist-item-label-padding-inline-start);
 	--spectrum-assetlist-label-color: var(--system-assetlist-label-color);
 }
-
-.spectrum-AssetList:dir(rtl) {
-	--spectrum-logical-rotation: var(--system-assetlist-dir-rtl-logical-rotation);
-}
+/*# sourceMappingURL=index-theme.css.map */

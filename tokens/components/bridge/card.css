@@ -58,19 +58,19 @@
 }
 
 .spectrum--light .spectrum-Card {
-	--spectrum-card-selected-background-color-rgb: var(--system--light-descendant-of-card-card-selected-background-color-rgb);
+	--spectrum-card-selected-background-color-rgb: var(--system-card-light-descendant-of-selected-background-color-rgb);
 }
 
 .spectrum--lightest .spectrum-Card {
-	--spectrum-card-selected-background-color-rgb: var(--system--lightest-descendant-of-card-card-selected-background-color-rgb);
+	--spectrum-card-selected-background-color-rgb: var(--system-card-lightest-descendant-of-selected-background-color-rgb);
 }
 
 .spectrum--dark .spectrum-Card {
-	--spectrum-card-selected-background-color-rgb: var(--system--dark-descendant-of-card-card-selected-background-color-rgb);
+	--spectrum-card-selected-background-color-rgb: var(--system-card-dark-descendant-of-selected-background-color-rgb);
 }
 
 .spectrum--darkest .spectrum-Card {
-	--spectrum-card-selected-background-color-rgb: var(--system--darkest-descendant-of-card-card-selected-background-color-rgb);
+	--spectrum-card-selected-background-color-rgb: var(--system-card-darkest-descendant-of-selected-background-color-rgb);
 }
 
 .spectrum-Card--quiet {
@@ -82,3 +82,4 @@
 	--spectrum-card-content-margin-top: var(--system-card-gallery-content-margin-top);
 	--spectrum-card-minimum-width: var(--system-card-gallery-minimum-width);
 }
+/*# sourceMappingURL=index-theme.css.map */

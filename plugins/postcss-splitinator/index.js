@@ -12,6 +12,7 @@
  */
 
 const valuesParser = require("postcss-values-parser");
+const selectorParser = require("postcss-selector-parser");
 
 /**
  * @typedef Options
@@ -50,7 +51,7 @@ module.exports = ({
 				// Remove the provided prefix if used
 				.replace(new RegExp(selectorPrefix, "gi"), "")
 				// Remove mod from the new property name
-				.replace(/mod/g, "")
+				.replace(/-?mod-/g, "-")
 				// Remove state-based prefix
 				.replace(/is-/g, "")
 				// Remove the internal identifier marker
@@ -95,71 +96,52 @@ module.exports = ({
 			return fallbackValue;
 		}
 
-
-		/**
-		 * Reformat pseudo functions to use dash-formatted names
-		 * @param {string} selector
-		 * @returns {string} The reformatted selector
-		 */
-		function formatPseudos (selector) {
-			const pseudoRegex = /:(\w+)(\((.*?)\))?/g;
-			const matches = [...selector.matchAll(pseudoRegex)];
-			if (!matches || matches.length === 0) return selector;
-
-			let replacement = "";
-			for (const match of matches) {
-				const [, query, , value] = match;
-
-				if (!["where", "is"].includes(query)) {
-					replacement = replacement + `-${query}`;
-				}
-
-				if (value) {
-					if (value.includes(",")) {
-						replacement = replacement + `-${value.split(",").join("-")}`;
-					}
-					else {
-						replacement = replacement + `-${value}`;
-					}
-				}
-			}
-
-			return selector.replace(pseudoRegex, replacement);
-		}
-
-		/**
-		 * Replace combinators with logical descriptions to create a more readable variable name
-		 * @param {string} selector
-		 * @returns {string} An updated selector with the combinators replaced by logical descriptions
-		 */
-		function replaceCombinators(selector) {
-			return selector
-				.replace(/ \+ /g, "-next-to-")
-				.replace(/ > /g, "-child-of-")
-				.replace(/ ~ /g, "-sibling-of-")
-				.replace(/ /g, "-descendant-of-");
-		}
-
 		/**
 		 * Get the base selector for a given selector
 		 * @param {string} selector
 		 * @returns {string} The base selector
 		 */
 		function getBaseSelector(selector) {
-			// Default to the selector prefix if no base selector is found
 			let baseSelector;
 
+			if (!selector || !selector.nodes) return baseSelector;
+
 			// This regex is designed to pull spectrum-<ComponentName> out of a selector
-			let baseSelectorMatch = selector.match(new RegExp(`^.(${selectorPrefix ? `${selectorPrefix}-` : ""}[A-Z][^\\W-.\\s]+)`));
-			if (baseSelectorMatch) {
-				const [, foundSelector] = baseSelectorMatch;
-				// @note is there any way this will capture a passthrough selector instead of the base selector for the component?
-				// @todo need to write a test case to verify this
-				if (foundSelector) baseSelector = foundSelector;
+			const baseRegex = new RegExp(`^(${selectorPrefix ? `${selectorPrefix}-` : ""}[A-Z][^\\W-.\\s]+)`);
+
+			// Iterate over the selector nodes to find a common root class name
+			const found = [];
+			selector.each((node) => {
+				if (node.type !== "class") return;
+				if (!node.value) return;
+
+				const value = node.value ?? node.toString();
+				const matches = value.match(baseRegex);
+				if (!matches) return;
+
+				const [, foundSelector] = matches;
+				if (foundSelector) found.push(foundSelector);
+			});
+
+			if (found.length === 1) {
+				return cleanPropertyName(found[0].toLowerCase());
+			}
+
+			let countMap = new Map();
+
+			// Find and return the most common base selector in the array
+			found.forEach((s) => countMap.set(s, (countMap.get(s) || 0) + 1));
+
+			let count = 0;
+			for (let [s, c] of countMap.entries()) {
+				if (c > count) {
+					baseSelector = s;
+					count = c;
+				}
 			}
 
 			// Remove the selector prefix from the returned base selector
-			return baseSelector ? cleanPropertyName(baseSelector.toLowerCase()) : baseSelector;
+			return baseSelector ? cleanPropertyName(baseSelector) : baseSelector;
 		}
 
 		/**
@@ -170,7 +152,7 @@ module.exports = ({
 		 * @returns {string} The new variable name
 		 */
 		function getVariableName(selector, prop, { identifierName, identifierValue }) {
-			const baseSelector = getBaseSelector(selector);
+			const baseSelector = getBaseSelector(selector) ?? "";
 
 			const clean = (prop) => prop ? cleanPropertyName(
 				prop
@@ -183,12 +165,47 @@ module.exports = ({
 					.replace(new RegExp(identifierValue, "gi"), "")
 			) : prop;
 
-			let propertyName = selector;
-			// @note what about :root, :host, or other special selectors?
-			propertyName = formatPseudos(propertyName);
-			propertyName = replaceCombinators(propertyName);
+			let property = [];
 
-			return `--${[identifierName, baseSelector, clean([propertyName, prop].join("-"))].join("-").toLowerCase()}`;
+			function processSelector(node) {
+				if (node.type === "pseudo") {
+					property.push(node.value.slice(1));
+				}
+				else if (node.type === "tag") {
+					property.push(node.value);
+				}
+				else if (node.type === "combinator") {
+					switch (node.value) {
+						case " ":
+							property.push("descendant-of");
+							break;
+						case ">":
+							property.push("child-of");
+							break;
+						case "+":
+							property.push("next-to");
+							break;
+						case "~":
+							property.push("sibling-of");
+							break;
+					}
+				}
+				else if (node.type === "class") {
+					if (node.value === baseSelector) return;
+					property.push(clean(node.value));
+					return;
+				}
+
+				if (!node.nodes) return;
+				node.each(processSelector);
+			}
+
+			selector.each(processSelector);
+
+			// Dedupe the property array, removing the 2nd instance of a property
+			property = property.filter((value, index) => property.indexOf(value) === index).filter(Boolean);
+
+			return `--${[identifierName, baseSelector, clean([...property, prop].filter(Boolean).join("-"))].join("-").toLowerCase()}`;
 		}
 
 		/**
@@ -268,49 +285,48 @@ module.exports = ({
 
 			// Iterate over each custom property in the container to create a new mapping that supports the new selector
 			container.walkDecls(/^--/, (decl) => {
-				// Process rules that match multiple selectors separately to avoid weird var names and edge cases
-				// note: this doesn't support :where() and is likely brittle!
-				const selectors = decl.parent.selector.split(/\s*,\s*/);
-				selectors.forEach((selector) => {
-					// Check if the property is already mapped
-					const variableName = getVariableName(selector, decl.prop, {
-						identifierName,
-						identifierValue,
-						selectorPrefix
+				selectorParser((selectors) => {
+					selectors.each((s) => {
+						// Check if the property is already mapped
+						const variableName = getVariableName(s, decl.prop, {
+							identifierName,
+							identifierValue,
+							selectorPrefix
+						});
+
+						const newDecl = decl.clone({
+							prop: variableName,
+						});
+						newDecl.raws.before = "\n  ";
+
+						const uniqueSet = conversionMap.get(decl.prop) ?? new Set();
+						conversionMap.set(decl.prop, uniqueSet.add(variableName));
+
+						if (!referencesOnly) {
+							rule.append(newDecl);
+						}
+
+						const selector = s.toString();
+						selectorMap[selector] = selectorMap[selector] ?? {};
+
+						const selectorNode = selectorMap[selector];
+
+						// Check for fallbacks in the var() function
+						const fallbackValue = extractFallbackValue(decl.value);
+						if (fallbackValue) {
+							// The final declaration should have the override present
+							selectorNode[decl.prop] = `var(${fallbackValue}, var(${variableName}))`;
+
+							// The system-level declaration should only have the fallback
+							newDecl.value = `var(${fallbackValue})`;
+						}
+						else {
+							selectorNode[decl.prop] = `var(${variableName})`;
+						}
+
+						selectorMap[selector] = selectorNode;
 					});
-
-					const newDecl = decl.clone({
-						prop: variableName,
-					});
-					newDecl.raws.before = "\n  ";
-
-					const uniqueSet = conversionMap.get(decl.prop) ?? new Set();
-					conversionMap.set(decl.prop, uniqueSet.add(variableName));
-
-					if (!referencesOnly) {
-						rule.append(newDecl);
-					}
-
-					selectorMap[selector] = selectorMap[selector] ?? {};
-
-					const selectorNode = selectorMap[selector];
-
-					// Check for fallbacks in the var() function
-					// todo: use valueparser instead of a regex
-					const fallbackValue = extractFallbackValue(decl.value);
-					if (fallbackValue) {
-						// The final declaration should have the override present
-						selectorNode[decl.prop] = `var(${fallbackValue}, var(${variableName}))`;
-
-						// The system-level declaration should only have the fallback
-						newDecl.value = `var(${fallbackValue})`;
-					}
-					else {
-						selectorNode[decl.prop] = `var(${variableName})`;
-					}
-
-					selectorMap[selector] = selectorNode;
-				});
+				}).processSync(decl.parent.selector, { lossless: false });
 			});
 
 			systemMap.set(identifierName, selectorMap);

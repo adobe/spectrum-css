@@ -34,20 +34,5 @@
 		--spectrum-alert-banner-informative-background: var(--spectrum-informative-background-color-default);
 		--spectrum-alert-banner-negative-background: var(--spectrum-negative-background-color-default);
 		--spectrum-alert-banner-font-color: var(--spectrum-white);
-
-		/* settings for nested Divider */
-		--mod-divider-vertical-margin: var(--mod-alert-banner-edge-to-divider, var(--spectrum-alert-banner-edge-to-divider));
-		--mod-divider-vertical-height: auto;
-		--mod-divider-vertical-align: stretch;
-
-		/* settings for nested Button */
-		--mod-button-margin-block: var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button));
-		--mod-button-margin-right: var(--mod-alert-banner-text-to-divider, var(--spectrum-alert-banner-text-to-divider));
-		--mod-button-margin-left: auto;
-
-		/* settings for nested CloseButton */
-		--mod-closebutton-margin-inline: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
-		--mod-closebutton-margin-top: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
-		--mod-closebutton-align-self: flex-start;
 	}
 }

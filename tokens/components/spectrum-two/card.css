@@ -55,11 +55,13 @@
 	--system-card-preview-background-color-hover: var(--spectrum-gray-200);
 	--system-card-horizontal-body-padding: var(--spectrum-spacing-300);
 	--system-card-horizontal-preview-padding: var(--spectrum-spacing-200);
-	--system--light-descendant-of-card-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
-	--system--lightest-descendant-of-card-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
-	--system--dark-descendant-of-card-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
+	--system-card-light-descendant-of-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
+	--system-card-lightest-descendant-of-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
+	--system-card-dark-descendant-of-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
 	--system-card-quiet-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
 	--system-card-gallery-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
 	--system-card-quiet-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
 	--system-card-gallery-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
 }
+
+/*# sourceMappingURL=spectrum-two.css.map */

@@ -14,6 +14,9 @@
 @import "themes/spectrum-two.css";
 
 .spectrum-AlertDialog {
+	/* mods for nested component */
+	--mod-buttongroup-justify-content: flex-end;
+
 	display: flex;
 	box-sizing: border-box;
 	inline-size: fit-content;

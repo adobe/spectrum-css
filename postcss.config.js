@@ -49,14 +49,11 @@ module.exports = ({
 		referencesOnly = false;
 		preserveVariables = true;
 		stripLocalSelectors = false;
-		additionalPlugins = {
-			...additionalPlugins,
-			"postcss-pseudo-classes": {
-				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
-				allCombinations: true,
-				preserveBeforeAfter: false,
-				prefix: "is-"
-			},
+		additionalPlugins["postcss-pseudo-classes"] = {
+			restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+			allCombinations: true,
+			preserveBeforeAfter: false,
+			prefix: "is-"
 		};
 	}
 
