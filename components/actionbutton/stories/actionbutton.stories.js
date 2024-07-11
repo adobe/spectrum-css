@@ -108,6 +108,8 @@ export default {
 		isHovered: false,
 		isSelected: false,
 		isDisabled: false,
+		iconName: "More",
+		label: "",
 	},
 	parameters: {
 		actions: {
@@ -119,14 +121,12 @@ export default {
 
 export const Default = ActionButtonGroup.bind({});
 Default.args = {
-	iconName: "More",
 	label: "More",
 };
 
 export const Emphasized = ActionButtons.bind({});
 Emphasized.tags = ["autodocs", "!dev"];
 Emphasized.args = {
-	iconName: "More",
 	label: "More",
 	isEmphasized: true,
 };
@@ -134,16 +134,15 @@ Emphasized.args = {
 export const Quiet = ActionButtons.bind({});
 Quiet.tags = ["autodocs", "!dev"];
 Quiet.args = {
-	iconName: "More",
 	label: "More",
 	isQuiet: true,
 };
 
 // ********* VRT ONLY ********* //
 export const StaticBlack = Default.bind({});
-StaticBlack.args = Default.args;
 StaticBlack.tags = ["!autodocs", "!dev", "test"];
 StaticBlack.args = {
+	...Default.args,
 	staticColor: "black",
 };
 StaticBlack.parameters = {
@@ -153,9 +152,9 @@ StaticBlack.parameters = {
 };
 
 export const StaticWhite = Default.bind({});
-StaticWhite.args = Default.args;
 StaticWhite.tags = ["!autodocs", "!dev", "test"];
 StaticWhite.args = {
+	...Default.args,
 	staticColor: "white",
 };
 StaticWhite.parameters = {

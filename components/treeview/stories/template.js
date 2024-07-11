@@ -382,6 +382,29 @@ export const TreeViewGroup = Variants({
 					customClasses: ["spectrum-TreeView-item--indent2"],
 				},
 			],
+		}, {
+			testHeading: "Overflow behavior",
+			items: [
+				{
+					id: "label1",
+					label: "Label 1",
+					link: "#",
+				},
+				{
+					id: "label1",
+					label: "This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
+					link: "#",
+					isSelected: true,
+				},
+				{
+					id: "label1",
+					label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+					link: "#",
+				},
+			],
+			customStyles: {
+				maxInlineSize: "600px",
+			},
 		}
 	],
 	sizeDirection: "row",

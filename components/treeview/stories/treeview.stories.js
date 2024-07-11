@@ -103,9 +103,6 @@ Default.args = {
 			],
 		},
 	],
-	customStyles: {
-		maxInlineSize: "600px",
-	},
 };
 
 // ********* DOCS ONLY ********* //
