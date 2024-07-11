@@ -15,6 +15,9 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const postcss = require("postcss");
+const valuesParser = require("postcss-values-parser");
+
 /**
  * A source of truth for commonly used directories
  * @type {object} dirs
@@ -78,17 +81,49 @@ function getPackageFromPath(filePath = process.cwd()) {
  * ignore any mod properties that are followed by a colon, to exclude
  * sub-component passthrough properties that should not be listed as mods.
  * @param {string} content
- * @param {RegExp} [regex=]
- * @returns Set<string>
+ * @param {{ [string]: (string)[] }} [meta={}]
+ * @returns { [string]: string[] }
  */
-async function extractProperties(
+function extractProperties(
 	content,
-	regex = /(--mod-(?:\w|-)+)(?!:|\w|-)/g
+	meta = {},
 ) {
 	if (!content) return new Set();
 
-	// assign the matches to an array through the spread operator and map the results to the first capture group
-	return new Set([...content.matchAll(regex)].map((match) => match[1]) ?? []);
+	const found = {};
+
+	// Process CSS content through the valuesParser an postcss to capture
+	// all the custom properties defined and used in the CSS
+	postcss.parse(content).walkDecls((decl) => {
+		Object.entries(meta).forEach(([key, values]) => {
+			found[key] = found[key] ?? new Set();
+
+			values.forEach((value) => {
+				if (decl.prop.startsWith("--") && decl.prop.startsWith(`--${value}-`)) {
+					found[key].add(decl.prop);
+				}
+			});
+
+			// Parse the value of the declaration to extract custom properties
+			valuesParser.parse(decl.value).walk((node) => {
+				if (node.type !== "word" || !node.isVariable) return;
+
+				// Extract the custom property name from the var() function
+				values.forEach((value) => {
+					if (node.value.startsWith(`--${value}-`)) {
+						found[key].add(node.value);
+					}
+				});
+			});
+		});
+	});
+
+	// Sort the custom properties alphabetically and return them as an array
+	Object.keys(found).forEach((key) => {
+		found[key] = [...found[key]].sort();
+	});
+
+	return found;
 }
 
 /**

@@ -35,6 +35,10 @@
 	--spectrum-icon-size: var(--system-icon-size-xl-size);
 }
 
+.spectrum-Icon--sizeXXL {
+	--spectrum-icon-size: var(--system-icon-size-xxl-size);
+}
+
 .spectrum-UIIcon-ChevronRight50 {
 	--spectrum-icon-size: var(--system-uiicon-chevron-right-50-icon-size);
 }
@@ -424,4 +428,3 @@
 .spectrum-UIIcon-Asterisk300 {
 	--spectrum-icon-size: var(--system-uiicon-asterisk-300-icon-size);
 }
-/*# sourceMappingURL=index-theme.css.map */

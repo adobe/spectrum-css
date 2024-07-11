@@ -32,7 +32,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["xxs", "xs", "s", "m", "l", "xl"],
+			options: ["xs", "s", "m", "l", "xl", "xxl"],
 			control: "select",
 			if: { arg: "setName", eq: "workflow" },
 		},

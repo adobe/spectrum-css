@@ -47,7 +47,7 @@
 	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
 	background-size: cover;
 	border-color: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
-	border-style: var(--mod-drop-zone-border-style, dashed);
+	border-style: var(--mod-drop-zone-border-style, var(--spectrum-drop-zone-border-style, dashed));
 	border-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
 	border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
 
@@ -58,8 +58,7 @@
 	}
 
 	&.is-dragged {
-		/* @deprecation --spectrum-drop-zone-border-style--dragged will be removed during the S2 migration; please update your code to --mod-drop-zone-border-style-dragged */
-		--spectrum-drop-zone-border-style: var(--mod-drop-zone-border-style--dragged, var(--mod-drop-zone-border-style-dragged, solid));
+		--spectrum-drop-zone-border-style: var(--mod-drop-zone-border-style-dragged, solid);
 		--spectrum-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-background-color-opacity)));
 		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
 
@@ -89,7 +88,7 @@
 .spectrum-DropZone-content {
 	position: relative;
 	z-index: 10;
-	display: var(--mod-drop-zone-content-display, none);
+	display: var(--mod-drop-zone-content-display, var(--spectrum-drop-zone-content-display, none));
 	align-items: center;
 	justify-content: center;
 	block-size: 100%;

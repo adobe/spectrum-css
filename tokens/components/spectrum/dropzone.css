@@ -17,7 +17,7 @@
 	--system-dropzone-drop-zone-heading-to-body: var(--spectrum-spacing-75);
 	--system-dropzone-drop-zone-border-width: var(--spectrum-border-width-200);
 	--system-dropzone-drop-zone-corner-radius: var(--spectrum-corner-radius-100);
-	--system-dropzone-drop-zone-border-color: var(--spectrum-gray-200);
+	--system-dropzone-drop-zone-border-color: var(--spectrum-gray-300);
 	--system-dropzone-drop-zone-heading-font-family: var(--spectrum-sans-font-family-stack);
 	--system-dropzone-drop-zone-heading-font-weight: var(--spectrum-heading-sans-serif-font-weight);
 	--system-dropzone-drop-zone-heading-font-style: var(--spectrum-heading-sans-serif-font-style);
@@ -48,5 +48,3 @@
 	--system-dropzone-drop-zone-content-color: var(--spectrum-white);
 	--system-dropzone-drop-zone-heading-font-size-cjk: var(--spectrum-drop-zone-cjk-title-size);
 }
-
-/*# sourceMappingURL=spectrum.css.map */

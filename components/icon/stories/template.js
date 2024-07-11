@@ -223,7 +223,7 @@ export const Template = ({
 
 	// Fetch SVG file markup, and set optional fill color.
 	let inlineStyle;
-	if (fill) inlineStyle = `color: ${fill}`;
+	if (fill) inlineStyle = `color: ${fill};`;
 
 	let svgString;
 	if (icons && icons[setName]?.[scale]?.[idKey]) {
@@ -252,7 +252,7 @@ export const Template = ({
 
 	if (!useRef && svgString) {
 		return html`${unsafeSVG(
-			svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
+			svgString.replace(/<svg/, `<svg class="${classesAsString}" style="${inlineStyle}" focusable="false" aria-hidden="true" role="img"`)
 		)}`;
 	}
 
@@ -366,7 +366,7 @@ export const IconGroup = (args, context) => {
 export const TestTemplate = (args, context) => {
 	args.iconName = args.iconName ?? args.uiIconName;
 	args.setName = args.setName ?? (args.uiIconName ? "ui" : "workflow");
-	const sizes = context?.argTypes?.size?.options ?? ["xxs", "xs", "s", "m", "l", "xl"];
+	const sizes = context?.argTypes?.size?.options ?? ["xs", "s", "m", "l", "xl", "xxl"];
 
 	return html`
 		<div style=${styleMap({

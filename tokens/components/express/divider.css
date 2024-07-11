@@ -14,8 +14,8 @@
 .spectrum--legacy {
 	--system-divider-thickness: var(--spectrum-divider-thickness-medium);
 	--system-divider-background-color: var(--system-divider-background-color-medium);
-	--system-divider-background-color-small: var(--spectrum-gray-200);
-	--system-divider-background-color-medium: var(--spectrum-gray-200);
+	--system-divider-background-color-small: var(--spectrum-gray-300);
+	--system-divider-background-color-medium: var(--spectrum-gray-300);
 	--system-divider-background-color-large: var(--spectrum-gray-800);
 	--system-divider-background-color-small-static-white: var(--spectrum-transparent-white-300);
 	--system-divider-background-color-medium-static-white: var(--spectrum-transparent-white-300);
@@ -30,5 +30,3 @@
 	--system-divider-size-l-thickness: var(--spectrum-divider-thickness-large);
 	--system-divider-size-l-background-color: var(--system-divider-background-color-large);
 }
-
-/*# sourceMappingURL=express.css.map */

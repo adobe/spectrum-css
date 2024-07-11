@@ -1,4 +1,3 @@
-// import { setConsoleOptions } from "@storybook/addon-console";
 import {
 	withActions,
 	withContextWrapper,
@@ -21,17 +20,6 @@ import "./assets/base.css";
 import "./assets/typekit.js";
 
 window.global = window;
-
-// const panelExclude = setConsoleOptions({}).panelExclude || [];
-// setConsoleOptions({
-// 	panelExclude: [
-// 		...panelExclude,
-// 		/deprecated/,
-// 		/TypeError/,
-// 		/postcss/,
-// 		/stylelint/,
-// 	],
-// });
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 const parameters = {
