@@ -246,8 +246,5 @@ export const TextFieldGroup = Variants({
 	}, {
 		testHeading: "Read-only",
 		isReadOnly: true,
-	}, {
-		testHeading: "Loading",
-		isLoading: true,
 	}]
 });

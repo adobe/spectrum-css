@@ -33,7 +33,7 @@ export default {
 		},
 	},
 	args: {
-		rootClass: "spectrum-Toast"
+		rootClass: "spectrum-Toast",
 	},
 	parameters: {
 		actions: {
@@ -72,7 +72,8 @@ Positive.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {

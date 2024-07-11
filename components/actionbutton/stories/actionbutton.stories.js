@@ -141,6 +141,7 @@ Quiet.args = {
 
 // ********* VRT ONLY ********* //
 export const StaticBlack = Default.bind({});
+StaticBlack.args = Default.args;
 StaticBlack.tags = ["!autodocs", "!dev", "test"];
 StaticBlack.args = {
 	staticColor: "black",
@@ -152,6 +153,7 @@ StaticBlack.parameters = {
 };
 
 export const StaticWhite = Default.bind({});
+StaticWhite.args = Default.args;
 StaticWhite.tags = ["!autodocs", "!dev", "test"];
 StaticWhite.args = {
 	staticColor: "white",

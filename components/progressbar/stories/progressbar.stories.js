@@ -64,6 +64,8 @@ export default {
 		rootClass: "spectrum-ProgressBar",
 		size: "m",
 		labelPosition: "top",
+		value: 0,
+		label: "",
 	},
 };
 
@@ -88,7 +90,8 @@ export const StaticWhite = Default.bind({});
 StaticWhite.tags = ["!autodocs", "!dev", "test"];
 StaticWhite.args = {
 	staticColor: "white",
-	label: "Loading your fonts, images, and icons"
+	label: "Loading your fonts, images, and icons",
+	value: 50,
 };
 StaticWhite.parameters = {
 	chromatic: {

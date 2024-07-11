@@ -86,6 +86,7 @@ const Variants = (args, context) => html`
 		"display": window.isChromatic() ? "flex" : "none",
 		"flex-direction": "column",
 		"gap": "8px",
+		"padding": "16px",
 	})}>
 		${Template({
 			...args,
