@@ -51,7 +51,7 @@ governing permissions and limitations under the License.
 		--spectrum-actionbutton-focus-indicator-color: var(--spectrum-focus-indicator-color);
 		--spectrum-actionbutton-focus-indicator-border-radius: calc(var(--spectrum-actionbutton-border-radius) + var(--spectrum-actionbutton-focus-indicator-gap));
 
-		&.is-selected {
+		&.is-selected:not(:disabled, .is-disabled) {
 			--spectrum-actionbutton-border-color-default: transparent;
 			--spectrum-actionbutton-border-color-hover: transparent;
 			--spectrum-actionbutton-border-color-down: transparent;
@@ -188,7 +188,7 @@ governing permissions and limitations under the License.
 			--spectrum-actionbutton-border-color-disabled: var(--spectrum-disabled-static-black-border-color);
 			--spectrum-actionbutton-content-color-disabled: var(--spectrum-disabled-static-black-content-color);
 
-			&.is-selected {
+			&.is-selected:not(:disabled) {
 				--spectrum-actionbutton-background-color-default: var(--spectrum-transparent-black-800);
 				--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-black-900);
 				--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-black-900);
@@ -226,7 +226,7 @@ governing permissions and limitations under the License.
 			--spectrum-actionbutton-border-color-disabled: var(--spectrum-disabled-static-white-border-color);
 			--spectrum-actionbutton-content-color-disabled: var(--spectrum-disabled-static-white-content-color);
 
-			&.is-selected {
+			&.is-selected:not(:disabled) {
 				--spectrum-actionbutton-background-color-default: var(--spectrum-transparent-white-800);
 				--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-white-900);
 				--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-white-900);

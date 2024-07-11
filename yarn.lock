@@ -18729,6 +18729,7 @@ __metadata:
   resolution: "postcss-splitinator@workspace:plugins/postcss-splitinator"
   dependencies:
     postcss: "npm:^8.4.38"
+    postcss-selector-parser: "npm:^6.1.0"
     postcss-values-parser: "npm:^6.0.2"
   languageName: unknown
   linkType: soft

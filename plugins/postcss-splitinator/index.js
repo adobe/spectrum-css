@@ -12,6 +12,7 @@
  */
 
 const valuesParser = require("postcss-values-parser");
+const selectorParser = require("postcss-selector-parser");
 
 /**
  * @typedef Options
@@ -102,18 +103,23 @@ module.exports = ({
 		 * @returns {string} The reformatted selector
 		 */
 		function formatPseudos (selector) {
-			const pseudoRegex = /:(\w+)(\((.*?)\))?/g;
+			console.log('formatPseudos', selector);
+
+
+			selector = selector.toString();
+			const pseudoRegex = /:(\w+)\((.+?)\)/g;
 			const matches = [...selector.matchAll(pseudoRegex)];
 			if (!matches || matches.length === 0) return selector;
 
 			let replacement = "";
 			for (const match of matches) {
-				const [, query, , value] = match;
+				// const [, query, , value, ...bar] = match;
+				const bar = match;
+				const [, query, value] = bar;
 
-				if (!["where", "is"].includes(query)) {
-					replacement = replacement + `-${query}`;
-				}
+				replacement = replacement + `-${query}`;
 
+				console.log(bar);
 				if (value) {
 					if (value.includes(",")) {
 						replacement = replacement + `-${value.split(",").join("-")}`;
@@ -123,6 +129,7 @@ module.exports = ({
 					}
 				}
 			}
+			console.log(selector.replace(pseudoRegex, replacement));
 
 			return selector.replace(pseudoRegex, replacement);
 		}
@@ -145,21 +152,48 @@ module.exports = ({
 		 * @param {string} selector
 		 * @returns {string} The base selector
 		 */
-		function getBaseSelector(selector) {
-			// Default to the selector prefix if no base selector is found
+		function getBaseSelector(s) {
 			let baseSelector;
 
+			if (!s || !s.nodes) return baseSelector;
+
 			// This regex is designed to pull spectrum-<ComponentName> out of a selector
-			let baseSelectorMatch = selector.match(new RegExp(`^.(${selectorPrefix ? `${selectorPrefix}-` : ""}[A-Z][^\\W-.\\s]+)`));
-			if (baseSelectorMatch) {
-				const [, foundSelector] = baseSelectorMatch;
-				// @note is there any way this will capture a passthrough selector instead of the base selector for the component?
-				// @todo need to write a test case to verify this
-				if (foundSelector) baseSelector = foundSelector;
+			const baseRegex = new RegExp(`^(${selectorPrefix ? `${selectorPrefix}-` : ""}[A-Z][^\\W-.\\s]+)`);
+
+			// Iterate over the selector nodes to find a common root class name
+			const found = [];
+			s.each((node) => {
+				if (node.type !== "class") return;
+				if (!node.value) return;
+
+				const value = node.value ?? node.toString();
+				const matches = value.match(baseRegex);
+				if (!matches) return;
+
+				const [, foundSelector] = matches;
+				if (foundSelector) found.push(foundSelector);
+			});
+
+			if (found.length === 1) {
+				return cleanPropertyName(found[0].toLowerCase());
+			}
+
+			let countMap = new Map();
+			// Find and return the most common base selector in the array
+			found.forEach((selector) => {
+				countMap.set(selector, (countMap.get(selector) || 0) + 1);
+			});
+
+			let count = 0;
+			for (let [selector, c] of countMap.entries()) {
+				if (c > count) {
+					baseSelector = selector;
+					count = c;
+				}
 			}
 
 			// Remove the selector prefix from the returned base selector
-			return baseSelector ? cleanPropertyName(baseSelector.toLowerCase()) : baseSelector;
+			return baseSelector ? cleanPropertyName(baseSelector) : baseSelector;
 		}
 
 		/**
@@ -170,7 +204,7 @@ module.exports = ({
 		 * @returns {string} The new variable name
 		 */
 		function getVariableName(selector, prop, { identifierName, identifierValue }) {
-			const baseSelector = getBaseSelector(selector);
+			const baseSelector = getBaseSelector(selector) ?? "";
 
 			const clean = (prop) => prop ? cleanPropertyName(
 				prop
@@ -183,12 +217,26 @@ module.exports = ({
 					.replace(new RegExp(identifierValue, "gi"), "")
 			) : prop;
 
-			let propertyName = selector;
-			// @note what about :root, :host, or other special selectors?
-			propertyName = formatPseudos(propertyName);
-			propertyName = replaceCombinators(propertyName);
+			const property = [];
+			selector.each((node) => {
+				if (node.type === "pseudo") {
+					console.log('pseudo', node);
+				}
+				else if (node.type === "combinator") {
+					console.log('combinator', node);
+				}
+				else if (node.type === "tag") {
+					console.log('tag', node);
+				}
+				else if (node.type === "class") {
+					console.log('class', node);
+					property.push(node.value);
+				}
+			});
 
-			return `--${[identifierName, baseSelector, clean([propertyName, prop].join("-"))].join("-").toLowerCase()}`;
+			console.log(property);
+
+			return `--${[identifierName, baseSelector, clean([...property, prop].join("-"))].join("-").toLowerCase()}`;
 		}
 
 		/**
@@ -268,49 +316,49 @@ module.exports = ({
 
 			// Iterate over each custom property in the container to create a new mapping that supports the new selector
 			container.walkDecls(/^--/, (decl) => {
-				// Process rules that match multiple selectors separately to avoid weird var names and edge cases
-				// note: this doesn't support :where() and is likely brittle!
-				const selectors = decl.parent.selector.split(/\s*,\s*/);
-				selectors.forEach((selector) => {
-					// Check if the property is already mapped
-					const variableName = getVariableName(selector, decl.prop, {
-						identifierName,
-						identifierValue,
-						selectorPrefix
+				selectorParser((selectors) => {
+					selectors.each((s) => {
+						// Check if the property is already mapped
+						const variableName = getVariableName(s, decl.prop, {
+							identifierName,
+							identifierValue,
+							selectorPrefix
+						});
+
+						const newDecl = decl.clone({
+							prop: variableName,
+						});
+						newDecl.raws.before = "\n  ";
+
+						const uniqueSet = conversionMap.get(decl.prop) ?? new Set();
+						conversionMap.set(decl.prop, uniqueSet.add(variableName));
+
+						if (!referencesOnly) {
+							rule.append(newDecl);
+						}
+
+						const selector = s.toString();
+						selectorMap[selector] = selectorMap[selector] ?? {};
+
+						const selectorNode = selectorMap[selector];
+
+						// Check for fallbacks in the var() function
+						// todo: use valueparser instead of a regex
+						const fallbackValue = extractFallbackValue(decl.value);
+						if (fallbackValue) {
+							// The final declaration should have the override present
+							selectorNode[decl.prop] = `var(${fallbackValue}, var(${variableName}))`;
+
+							// The system-level declaration should only have the fallback
+							newDecl.value = `var(${fallbackValue})`;
+						}
+						else {
+							selectorNode[decl.prop] = `var(${variableName})`;
+						}
+
+						selectorMap[selector] = selectorNode;
 					});
-
-					const newDecl = decl.clone({
-						prop: variableName,
-					});
-					newDecl.raws.before = "\n  ";
-
-					const uniqueSet = conversionMap.get(decl.prop) ?? new Set();
-					conversionMap.set(decl.prop, uniqueSet.add(variableName));
-
-					if (!referencesOnly) {
-						rule.append(newDecl);
-					}
-
-					selectorMap[selector] = selectorMap[selector] ?? {};
-
-					const selectorNode = selectorMap[selector];
-
-					// Check for fallbacks in the var() function
-					// todo: use valueparser instead of a regex
-					const fallbackValue = extractFallbackValue(decl.value);
-					if (fallbackValue) {
-						// The final declaration should have the override present
-						selectorNode[decl.prop] = `var(${fallbackValue}, var(${variableName}))`;
-
-						// The system-level declaration should only have the fallback
-						newDecl.value = `var(${fallbackValue})`;
-					}
-					else {
-						selectorNode[decl.prop] = `var(${variableName})`;
-					}
-
-					selectorMap[selector] = selectorNode;
-				});
+				}).processSync(decl.parent.selector, { lossless: false });
 			});
 
 			systemMap.set(identifierName, selectorMap);
