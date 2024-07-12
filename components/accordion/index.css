@@ -15,7 +15,7 @@
 
 .spectrum-Accordion {
 	/** @note used for internal calculation on itemHeader and iconContainer */
-	--spectrum-accordion-min-block-size: max(
+	--_min-block-size: max(
 		var(--mod-accordion-item-height, var(--spectrum-accordion-item-height)),
 		calc(var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) + var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space)) + (var(--mod-accordion-item-header-font-size, var(--spectrum-accordion-item-header-font-size)) * var(--mod-accordion-item-header-line-height, var(--spectrum-accordion-item-header-line-height))))
 	);
@@ -98,7 +98,7 @@
 	box-sizing: border-box;
 	inline-size: 100%;
 
-	min-block-size: var(--mod-accordion-min-block-size, var(--spectrum-accordion-min-block-size));
+	min-block-size: var(--mod-accordion-min-block-size, var(--_min-block-size));
 	padding-block: var(--mod-accordion-item-header-top-to-text-space, var(--spectrum-accordion-item-header-top-to-text-space)) var(--mod-accordion-item-header-bottom-to-text-space, var(--spectrum-accordion-item-header-bottom-to-text-space));
 
 	padding-inline-start: calc(var(--mod-accordion-disclosure-indicator-to-text-space, var(--spectrum-accordion-disclosure-indicator-to-text-space)) + var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height)));
@@ -155,7 +155,7 @@
 
 .spectrum-Accordion-itemIconContainer {
 	position: absolute;
-	inset-block-start: max(0px, calc((var(--mod-accordion-min-block-size, var(--spectrum-accordion-min-block-size)) - var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height))) / 2));
+	inset-block-start: max(0px, calc((var(--mod-accordion-min-block-size, var(--_min-block-size)) - var(--mod-accordion-disclosure-indicator-height, var(--spectrum-accordion-disclosure-indicator-height))) / 2));
 	display: flex;
 	align-items: center;
 	justify-content: center;

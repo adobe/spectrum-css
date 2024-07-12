@@ -59,7 +59,7 @@ module.exports = {
 			},
 		],
 		"max-nesting-depth": [3, { severity: "warning" }],
-		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system)/, {}],
+		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system|_)/, {}],
 		/** @note use floats for opacity because it minifies better than percent */
 		"alpha-value-notation": ["percentage", { exceptProperties: ["opacity"] }],
 		"function-no-unknown": [
