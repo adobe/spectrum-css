@@ -51,10 +51,12 @@ export const Template = ({
 							${when(hasActionMenu, () =>
 								ActionMenu({
 									isOpen,
-									popoverPosition: "right",
+									position: "bottom",
 									id: "popover-nested-2",
 									triggerId: "trigger-nested-2",
 									customStyles: {
+                    "inset-inline-start": "unset",
+                    "inset-block-start": "unset",
 										"margin-block-start": "30px",
 										"margin-inline-start": "-32px"
 									},
