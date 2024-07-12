@@ -20,14 +20,13 @@ body {
 	--spectrum-font-size: var(--spectrum-font-size-100);
 
 	margin: 0;
-	background-color: var(--spectrum-background-layer-2-color);
-
-	/* @todo: add back the text color and update VRTs */
-	/* color: var(--spectrum-neutral-content-color-default); */
 
 	font-family: var(--spectrum-font-family);
-	font-style: var(--spectrum-font-style);
 	font-size: var(--spectrum-font-size);
+	font-style: var(--spectrum-font-style);
+
+	color: var(--spectrum-neutral-content-color-default);
+	background-color: var(--spectrum-background-layer-2-color);
 }
 
 body:lang(ar) {

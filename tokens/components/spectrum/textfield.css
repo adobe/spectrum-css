@@ -18,7 +18,6 @@
 	--system-textfield-border-color-focus-hover: var(--spectrum-gray-900);
 	--system-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
 	--system-textfield-border-width: var(--spectrum-border-width-100);
-	--system-textfield-input-line-height: var(--system-textfield-height);
 	--system-textfield-texfield-animation-duration: var(--spectrum-animation-duration-100);
 	--system-textfield-width: 240px;
 	--system-textfield-min-width: var(--spectrum-text-field-minimum-width-multiplier);
@@ -28,7 +27,6 @@
 	--system-textfield-spacing-block-end: var(--spectrum-component-bottom-to-text-100);
 	--system-textfield-spacing-block-quiet: var(--spectrum-field-edge-to-border-quiet);
 	--system-textfield-label-spacing-block: var(--spectrum-field-label-to-component);
-	--system-textfield-label-spacing-inline-side-label: var(--spectrum-spacing-100);
 	--system-textfield-helptext-spacing-block: var(--spectrum-help-text-to-component);
 	--system-textfield-icon-spacing-inline-end-quiet-invalid: var(--spectrum-field-edge-to-alert-icon-quiet);
 	--system-textfield-icon-spacing-inline-end-quiet-valid: var(--spectrum-field-edge-to-validation-icon-quiet);
@@ -40,7 +38,7 @@
 	--system-textfield-character-count-spacing-inline-side: var(--spectrum-side-label-character-count-to-field);
 	--system-textfield-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
 	--system-textfield-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--system-textfield-background-color: var(--spectrum-gray-25);
+	--system-textfield-background-color: var(--spectrum-gray-50);
 	--system-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
 	--system-textfield-text-color-hover: var(--spectrum-neutral-content-color-hover);
 	--system-textfield-text-color-focus: var(--spectrum-neutral-content-color-focus);

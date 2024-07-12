@@ -39,7 +39,7 @@ export const Template = ({
 	placeholder,
 	name,
 	id,
-	value,
+	value = null,
 	type = "text",
 	autocomplete = true,
 	onclick,
@@ -110,7 +110,7 @@ export const Template = ({
 				placeholder=${ifDefined(placeholder)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
-				value=${ifDefined(value)}
+				.value=${value}
 				autocomplete=${ifDefined(autocomplete ? undefined : "off")}
 				?required=${isRequired}
 				?disabled=${isDisabled}
@@ -126,7 +126,7 @@ export const Template = ({
 				placeholder=${ifDefined(placeholder)}
 				name=${ifDefined(name)}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
-				value=${ifDefined(value)}
+				.value=${value}
 				autocomplete=${ifDefined(autocomplete ? undefined : "off")}
 				?required=${isRequired}
 				?disabled=${isDisabled}
