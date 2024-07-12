@@ -1,5 +1,4 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { TrayGroup } from "./template";
@@ -49,14 +48,7 @@ Default.args = {
 Default.parameters = {
 	chromatic: {
 		modes: {
-			...disableDefaultModes,
-			"Desktop": {
-				viewport: {
-					width: 1600,
-				},
-			},
-			"Mobile": {
-				// object with width
+			"Small Viewport": {
 				viewport: {
 					width: 480,
 				},
