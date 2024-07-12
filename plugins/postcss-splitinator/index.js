@@ -11,8 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-const valuesParser = require("postcss-values-parser");
 const selectorParser = require("postcss-selector-parser");
+const {
+	cleanPropertyName,
+	extractFallbackValue,
+	getVariableName,
+	checkForReplacement
+} = require("./utilities");
 
 /**
  * @typedef Options
@@ -39,206 +44,6 @@ module.exports = ({
 		if (typeof processIdentifier !== "function") {
 			// If the base prefix exists and differs from the identifier value, append the identifier value to the base prefix as the new class name
 			processIdentifier = (identifierValue) => selectorPrefix && selectorPrefix !== identifierValue ? `.${selectorPrefix}--${identifierValue}` : `.${identifierValue}`;
-		}
-
-		/**
-		 * Clean the property name to be used as a variable name
-		 * @param {string} prop
-		 * @returns {string} The clean variable name
-		 */
-		function cleanPropertyName(prop) {
-			return prop ? prop
-				// Remove the provided prefix if used
-				.replace(new RegExp(selectorPrefix, "gi"), "")
-				// Remove mod from the new property name
-				.replace(/-?mod-/g, "-")
-				// Remove state-based prefix
-				.replace(/is-/g, "")
-				// Remove the internal identifier marker
-				.replace(/^_/g, "")
-				// If a string has a lowercase letter followed by an uppercase letter, insert a dash between them
-				.replace(/([a-z])([A-Z])/g, "$1-$2")
-				// If a string has two uppercase letters followed by a lowercase letter, insert a dash between them
-				.replace(/([A-Z])([A-Z])([a-z])/g, "$1-$2$3")
-				.replace(/([a-z])([0-9])/g, "$1-$2")
-				// Remove all whitespace
-				.replace(/\s+/g, "")
-				// Remove non-alphanumeric characters
-				.replace(/\W/g, "-")
-				// Replace multiple dashes with a single dash
-				.replace(/-+/g, "-")
-				// Remove any leading or trailing dashes
-				.replace(/^-/g, "")
-				.replace(/-$/g, "")
-				.toLowerCase() : prop;
-		}
-
-		/**
-		 * Extract the fallback value from a var() function
-		 * @param {string} declValue
-		 * @returns {string} The fallback value
-		 */
-		function extractFallbackValue(declValue) {
-			const parsed = valuesParser.parse(declValue);
-			let fallbackValue;
-
-			parsed.walk((node) => {
-				if (node.type === "function" && node.value === "var") {
-				// Assuming the second argument of the var() function is the fallback
-					const fallbackNode = node.nodes[2];
-					if (fallbackNode) {
-						// Convert the fallback node back to a string
-						fallbackValue = valuesParser.stringify(fallbackNode);
-					}
-				}
-			});
-
-			return fallbackValue;
-		}
-
-		/**
-		 * Get the base selector for a given selector
-		 * @param {string} selector
-		 * @returns {string} The base selector
-		 */
-		function getBaseSelector(selector) {
-			let baseSelector;
-
-			if (!selector || !selector.nodes) return baseSelector;
-
-			// This regex is designed to pull spectrum-<ComponentName> out of a selector
-			const baseRegex = new RegExp(`^(${selectorPrefix ? `${selectorPrefix}-` : ""}[A-Z][^\\W-.\\s]+)`);
-
-			// Iterate over the selector nodes to find a common root class name
-			const found = [];
-			selector.each((node) => {
-				if (node.type !== "class") return;
-				if (!node.value) return;
-
-				const value = node.value ?? node.toString();
-				const matches = value.match(baseRegex);
-				if (!matches) return;
-
-				const [, foundSelector] = matches;
-				if (foundSelector) found.push(foundSelector);
-			});
-
-			if (found.length === 1) {
-				return cleanPropertyName(found[0].toLowerCase());
-			}
-
-			let countMap = new Map();
-
-			// Find and return the most common base selector in the array
-			found.forEach((s) => countMap.set(s, (countMap.get(s) || 0) + 1));
-
-			let count = 0;
-			for (let [s, c] of countMap.entries()) {
-				if (c > count) {
-					baseSelector = s;
-					count = c;
-				}
-			}
-
-			// Remove the selector prefix from the returned base selector
-			return baseSelector ? cleanPropertyName(baseSelector) : baseSelector;
-		}
-
-		/**
-		 * Fallback function to process the name of the new variable
-		 * @param {string} selector
-		 * @param {string} prop
-		 * @param {{ identifierName: string, identifierValue: string, selectorPrefix: string }} options
-		 * @returns {string} The new variable name
-		 */
-		function getVariableName(selector, prop, { identifierName, identifierValue }) {
-			const baseSelector = getBaseSelector(selector) ?? "";
-
-			const clean = (prop) => prop ? cleanPropertyName(
-				prop
-					.replace(new RegExp(selectorPrefix, "gi"), "")
-					// Remove the identifers if they exist
-					.replace(new RegExp(baseSelector, "gi"), "")
-					// Check for identifiers in the property name that don't include the dash
-					.replace(new RegExp(baseSelector?.replace(/-/g, ""), "gi"), "")
-					.replace(new RegExp(identifierName, "gi"), "")
-					.replace(new RegExp(identifierValue, "gi"), "")
-			) : prop;
-
-			let property = [];
-
-			function processSelector(node) {
-				if (node.type === "pseudo") {
-					property.push(node.value.slice(1));
-				}
-				else if (node.type === "tag") {
-					property.push(node.value);
-				}
-				else if (node.type === "combinator") {
-					switch (node.value) {
-						case " ":
-							property.push("descendant-of");
-							break;
-						case ">":
-							property.push("child-of");
-							break;
-						case "+":
-							property.push("next-to");
-							break;
-						case "~":
-							property.push("sibling-of");
-							break;
-					}
-				}
-				else if (node.type === "class") {
-					if (node.value === baseSelector) return;
-					property.push(clean(node.value));
-					return;
-				}
-
-				if (!node.nodes) return;
-				node.each(processSelector);
-			}
-
-			selector.each(processSelector);
-
-			// Dedupe the property array, removing the 2nd instance of a property
-			property = property.filter((value, index) => property.indexOf(value) === index).filter(Boolean);
-
-			return `--${[identifierName, baseSelector, clean([...property, prop].filter(Boolean).join("-"))].join("-").toLowerCase()}`;
-		}
-
-		/**
-		 * Check for a replacement value based on the provided guesses
-		 * @param {import('postcss').Declaration} decl
-		 * @param {string} replace
-		 * @param {string[]} guesses
-		 * @param {string[]} systemValues
-		 * @returns {string|undefined|void} The updated declaration value
-		 */
-		function checkForReplacement(decl, replace, guesses = [], systemValues = []) {
-			if (!decl || !replace || guesses.length === 0) return;
-
-			const replacer = new RegExp(replace, "g");
-
-			for (const g of guesses) {
-				if (systemValues.includes(g)) {
-					return decl.value.replace(replacer, g);
-				}
-
-				const values = systemValues.filter((value) => value.startsWith(g));
-				if (values.length === 0) continue;
-
-				if (values.length === 1) {
-					return decl.value.replace(replacer, values[0]);
-				}
-
-				if (values.length > 1) {
-					return decl.value.replace(replacer, values[0]);
-				}
-
-				continue;
-			}
 		}
 
 		// This object will store the mappings for each selector
@@ -284,7 +89,7 @@ module.exports = ({
 			}
 
 			// Iterate over each custom property in the container to create a new mapping that supports the new selector
-			container.walkDecls(/^--/, (decl) => {
+			container.walkDecls(/^--[A-Z|a-z]/, (decl) => {
 				selectorParser((selectors) => {
 					selectors.each((s) => {
 						// Check if the property is already mapped
@@ -351,7 +156,7 @@ module.exports = ({
 						}
 
 						const replacement = checkForReplacement(decl, prop, [
-							`--${identifierName}-${cleanPropertyName(prop)}`,
+							`--${identifierName}-${cleanPropertyName(prop, { selectorPrefix })}`,
 						], systemValues);
 
 						if (replacement) {
@@ -360,7 +165,7 @@ module.exports = ({
 						}
 
 						// @note: this will be an empty variable because we didn't find a match but it will match the format of the other variables
-						decl.value = decl.value.replace(new RegExp(decl.prop, "g"), `--${identifierName}-${cleanPropertyName(decl.prop)}`);
+						decl.value = decl.value.replace(new RegExp(decl.prop, "g"), `--${identifierName}-${cleanPropertyName(decl.prop, { selectorPrefix })}`);
 					}
 				});
 			}
