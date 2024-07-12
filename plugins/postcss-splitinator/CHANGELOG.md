@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.2.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`50044e7`](https://github.com/adobe/spectrum-css/commit/50044e7faa5d4e00ac623b32b1e4364c89688850) Thanks [@pfulton](https://github.com/pfulton)! - New Feature
+
+  Set the script up to automatically ignore underscore prefixed custom properties, treating these as "internal-only"
+
 ## 2.1.1-s2-foundations.0
 
 ### Patch Changes

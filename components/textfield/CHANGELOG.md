@@ -1,5 +1,11 @@
 # Change Log
 
+## 8.0.0-s2-foundations.9
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`50044e7`](https://github.com/adobe/spectrum-css/commit/50044e7faa5d4e00ac623b32b1e4364c89688850) Thanks [@pfulton](https://github.com/pfulton)! - Fix line-height discrepency
+
 ## 8.0.0-s2-foundations.8
 
 ### Major Changes
