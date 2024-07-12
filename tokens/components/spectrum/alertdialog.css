@@ -12,24 +12,24 @@
  */
 
 .spectrum--legacy {
-	--system-alertdialog-alert-dialog-min-width: var(--spectrum-alert-dialog-minimum-width);
-	--system-alertdialog-alert-dialog-max-width: var(--spectrum-alert-dialog-maximum-width);
-	--system-alertdialog-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100);
-	--system-alertdialog-alert-dialog-warning-icon-color: var(--spectrum-notice-visual-color);
-	--system-alertdialog-alert-dialog-error-icon-color: var(--spectrum-negative-visual-color);
-	--system-alertdialog-alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
-	--system-alertdialog-alert-dialog-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
-	--system-alertdialog-alert-dialog-title-font-style: var(--spectrum-heading-sans-serif-font-style);
-	--system-alertdialog-alert-dialog-title-font-size: var(--spectrum-alert-dialog-title-size);
-	--system-alertdialog-alert-dialog-title-line-height: var(--spectrum-heading-line-height);
-	--system-alertdialog-alert-dialog-title-color: var(--spectrum-heading-color);
-	--system-alertdialog-alert-dialog-body-font-family: var(--spectrum-sans-font-family-stack);
-	--system-alertdialog-alert-dialog-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
-	--system-alertdialog-alert-dialog-body-font-style: var(--spectrum-body-sans-serif-font-style);
-	--system-alertdialog-alert-dialog-body-font-size: var(--spectrum-alert-dialog-description-size);
-	--system-alertdialog-alert-dialog-body-line-height: var(--spectrum-line-height-100);
-	--system-alertdialog-alert-dialog-body-color: var(--spectrum-body-color);
-	--system-alertdialog-alert-dialog-title-to-divider: var(--spectrum-spacing-200);
-	--system-alertdialog-alert-dialog-divider-to-description: var(--spectrum-spacing-300);
-	--system-alertdialog-alert-dialog-title-to-icon: var(--spectrum-spacing-300);
+	--system-alert-dialog-alert-dialog-min-width: var(--spectrum-alert-dialog-minimum-width);
+	--system-alert-dialog-alert-dialog-max-width: var(--spectrum-alert-dialog-maximum-width);
+	--system-alert-dialog-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-alert-dialog-alert-dialog-warning-icon-color: var(--spectrum-notice-visual-color);
+	--system-alert-dialog-alert-dialog-error-icon-color: var(--spectrum-negative-visual-color);
+	--system-alert-dialog-alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
+	--system-alert-dialog-alert-dialog-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	--system-alert-dialog-alert-dialog-title-font-style: var(--spectrum-heading-sans-serif-font-style);
+	--system-alert-dialog-alert-dialog-title-font-size: var(--spectrum-alert-dialog-title-size);
+	--system-alert-dialog-alert-dialog-title-line-height: var(--spectrum-heading-line-height);
+	--system-alert-dialog-alert-dialog-title-color: var(--spectrum-heading-color);
+	--system-alert-dialog-alert-dialog-body-font-family: var(--spectrum-sans-font-family-stack);
+	--system-alert-dialog-alert-dialog-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--system-alert-dialog-alert-dialog-body-font-style: var(--spectrum-body-sans-serif-font-style);
+	--system-alert-dialog-alert-dialog-body-font-size: var(--spectrum-alert-dialog-description-size);
+	--system-alert-dialog-alert-dialog-body-line-height: var(--spectrum-line-height-100);
+	--system-alert-dialog-alert-dialog-body-color: var(--spectrum-body-color);
+	--system-alert-dialog-alert-dialog-title-to-divider: var(--spectrum-spacing-200);
+	--system-alert-dialog-alert-dialog-divider-to-description: var(--spectrum-spacing-300);
+	--system-alert-dialog-alert-dialog-title-to-icon: var(--spectrum-spacing-300);
 }

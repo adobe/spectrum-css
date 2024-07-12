@@ -14,32 +14,46 @@
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
 	"main": "dist/index.css",
+	"exports": {
+		".": "./dist/css/index.css",
+		"./dist/index.css": "./dist/css/index.css",
+		"./dist/css/*.css": "./dist/css/*.css",
+		"./package.json": "./package.json",
+		"./*.md": "./*.md",
+		"./dist/css/components/bridge": "./dist/components/bridge/index.css",
+		"./dist/css/components/bridge/*.css": "./dist/components/bridge/*.css",
+		"./dist/css/components/express": "./dist/components/express/index.css",
+		"./dist/css/components/express/*.css": "./dist/components/express/*.css",
+		"./dist/css/components/spectrum": "./dist/components/spectrum/index.css",
+		"./dist/css/components/spectrum/*.css": "./dist/components/spectrum/*.css",
+		"./dist/css/components/spectrum-two": "./dist/components/spectrum-two/index.css",
+		"./dist/css/components/spectrum-two/*.css": "./dist/components/spectrum-two/*.css"
+	},
 	"files": [
 		"dist",
 		"CHANGELOG.md",
 		"README.md",
 		"package.json"
 	],
+	"devDependencies": {
+		"@adobe/spectrum-tokens": "0.0.0-s2-foundations-colors-20240503210338",
+		"@nxkit/style-dictionary": "^5.0.0",
+		"cssnano": "^7.0.4",
+		"cssnano-preset-advanced": "^7.0.4",
+		"postcss": "^8.4.39",
+		"postcss-cli": "^11.0.0",
+		"postcss-rgb-mapping": "workspace:^",
+		"postcss-sorting": "^8.0.2",
+		"prettier": "^3.3.2",
+		"style-dictionary": "^3.9.2",
+		"style-dictionary-sets": "^2.3.0"
+	},
 	"keywords": [
 		"spectrum",
 		"css",
 		"design system",
 		"adobe"
 	],
-	"devDependencies": {
-		"@adobe/spectrum-tokens": "0.0.0-s2-foundations-colors-20240503210338",
-		"@nxkit/style-dictionary": "^5.0.0",
-		"cssnano": "^7.0.3",
-		"cssnano-preset-advanced": "^7.0.1",
-		"postcss": "^8.4.38",
-		"postcss-cli": "^11.0.0",
-		"postcss-licensing": "^2.0.0",
-		"postcss-rgb-mapping": "workspace:^",
-		"postcss-sorting": "^8.0.2",
-		"prettier": "^3.2.5",
-		"style-dictionary": "^3.9.2",
-		"style-dictionary-sets": "^2.3.0"
-	},
 	"publishConfig": {
 		"access": "public"
 	}

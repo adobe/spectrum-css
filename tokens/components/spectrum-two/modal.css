@@ -12,14 +12,14 @@
  */
 
 .spectrum {
-	--system-modal-confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
-	--system-modal-fullscreen-margin: 32px;
-	--system-modal-max-height: 90vh;
-	--system-modal-max-width: 90%;
-	--system-modal-background-color: var(--spectrum-gray-75);
-	--system-modal-confirm-border-radius: var(--spectrum-corner-radius-100);
-	--system-modal-confirm-exit-animation-duration: var(--spectrum-animation-duration-100);
-	--system-modal-confirm-entry-animation-duration: var(--spectrum-animation-duration-500);
-	--system-modal-confirm-entry-animation-delay: var(--spectrum-animation-duration-200);
-	--system-modal-transition-animation-duration: var(--spectrum-animation-duration-100);
+	--system-modal-modal-confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
+	--system-modal-modal-fullscreen-margin: 32px;
+	--system-modal-modal-max-height: 90vh;
+	--system-modal-modal-max-width: 90%;
+	--system-modal-modal-background-color: var(--spectrum-gray-75);
+	--system-modal-modal-confirm-border-radius: var(--spectrum-corner-radius-100);
+	--system-modal-modal-confirm-exit-animation-duration: var(--spectrum-animation-duration-100);
+	--system-modal-modal-confirm-entry-animation-duration: var(--spectrum-animation-duration-500);
+	--system-modal-modal-confirm-entry-animation-delay: var(--spectrum-animation-duration-200);
+	--system-modal-modal-transition-animation-duration: var(--spectrum-animation-duration-100);
 }

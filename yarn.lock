@@ -5688,9 +5688,9 @@ __metadata:
     chromatic: "npm:^11.4.1"
     lit: "npm:^3.1.3"
     lodash-es: "npm:^4.17.21"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.4.39"
     postcss-pseudo-classes: "npm:^0.4.0"
-    prettier: "npm:^3.2.5"
+    prettier: "npm:^3.3.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-syntax-highlighter: "npm:^15.5.0"
@@ -6055,14 +6055,13 @@ __metadata:
   dependencies:
     "@adobe/spectrum-tokens": "npm:0.0.0-s2-foundations-colors-20240503210338"
     "@nxkit/style-dictionary": "npm:^5.0.0"
-    cssnano: "npm:^7.0.3"
-    cssnano-preset-advanced: "npm:^7.0.1"
-    postcss: "npm:^8.4.38"
+    cssnano: "npm:^7.0.4"
+    cssnano-preset-advanced: "npm:^7.0.4"
+    postcss: "npm:^8.4.39"
     postcss-cli: "npm:^11.0.0"
-    postcss-licensing: "npm:^2.0.0"
     postcss-rgb-mapping: "workspace:^"
     postcss-sorting: "npm:^8.0.2"
-    prettier: "npm:^3.2.5"
+    prettier: "npm:^3.3.2"
     style-dictionary: "npm:^3.9.2"
     style-dictionary-sets: "npm:^2.3.0"
   languageName: unknown
@@ -6226,7 +6225,7 @@ __metadata:
     c8: "npm:^9.1.0"
     colors: "npm:^1.4.0"
     fast-glob: "npm:^3.3.2"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.4.39"
     postcss-value-parser: "npm:^4.2.0"
     stylelint: "npm:^15.11.0"
   peerDependencies:
@@ -10585,6 +10584,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cssnano-preset-advanced@npm:^7.0.4":
+  version: 7.0.4
+  resolution: "cssnano-preset-advanced@npm:7.0.4"
+  dependencies:
+    autoprefixer: "npm:^10.4.19"
+    browserslist: "npm:^4.23.1"
+    cssnano-preset-default: "npm:^7.0.4"
+    postcss-discard-unused: "npm:^7.0.1"
+    postcss-merge-idents: "npm:^7.0.0"
+    postcss-reduce-idents: "npm:^7.0.0"
+    postcss-zindex: "npm:^7.0.0"
+  peerDependencies:
+    postcss: ^8.4.31
+  checksum: 10c0/38666657b6ddb39a0e256d4e59dbb132a67465c438c02b136f1551ab709855124f0221ec94d77b52dae72d15a0104252cde39a84aa24126943a84b416783155d
+  languageName: node
+  linkType: hard
+
 "cssnano-preset-default@npm:^7.0.1":
   version: 7.0.1
   resolution: "cssnano-preset-default@npm:7.0.1"
@@ -10665,6 +10681,46 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cssnano-preset-default@npm:^7.0.4":
+  version: 7.0.4
+  resolution: "cssnano-preset-default@npm:7.0.4"
+  dependencies:
+    browserslist: "npm:^4.23.1"
+    css-declaration-sorter: "npm:^7.2.0"
+    cssnano-utils: "npm:^5.0.0"
+    postcss-calc: "npm:^10.0.0"
+    postcss-colormin: "npm:^7.0.1"
+    postcss-convert-values: "npm:^7.0.2"
+    postcss-discard-comments: "npm:^7.0.1"
+    postcss-discard-duplicates: "npm:^7.0.0"
+    postcss-discard-empty: "npm:^7.0.0"
+    postcss-discard-overridden: "npm:^7.0.0"
+    postcss-merge-longhand: "npm:^7.0.2"
+    postcss-merge-rules: "npm:^7.0.2"
+    postcss-minify-font-values: "npm:^7.0.0"
+    postcss-minify-gradients: "npm:^7.0.0"
+    postcss-minify-params: "npm:^7.0.1"
+    postcss-minify-selectors: "npm:^7.0.2"
+    postcss-normalize-charset: "npm:^7.0.0"
+    postcss-normalize-display-values: "npm:^7.0.0"
+    postcss-normalize-positions: "npm:^7.0.0"
+    postcss-normalize-repeat-style: "npm:^7.0.0"
+    postcss-normalize-string: "npm:^7.0.0"
+    postcss-normalize-timing-functions: "npm:^7.0.0"
+    postcss-normalize-unicode: "npm:^7.0.1"
+    postcss-normalize-url: "npm:^7.0.0"
+    postcss-normalize-whitespace: "npm:^7.0.0"
+    postcss-ordered-values: "npm:^7.0.1"
+    postcss-reduce-initial: "npm:^7.0.1"
+    postcss-reduce-transforms: "npm:^7.0.0"
+    postcss-svgo: "npm:^7.0.1"
+    postcss-unique-selectors: "npm:^7.0.1"
+  peerDependencies:
+    postcss: ^8.4.31
+  checksum: 10c0/0083821e778bdf7b8aa9589408a01a717be730f73584e7b81756a6fcf87af05b8f17342025e666572a8d573cc30783f2d817b0f7ad63670398bc3135b017ccad
+  languageName: node
+  linkType: hard
+
 "cssnano-utils@npm:^5.0.0":
   version: 5.0.0
   resolution: "cssnano-utils@npm:5.0.0"
@@ -10683,6 +10739,18 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/4cbcd1e0ebe0bd83196cc5b16b3a60d3ebc98326c79b2f71df597bb73c8e3ee1f42b89159d7a038acc398251184d648d9dd516f4194e46746f3af6fa74b4aec7
+  languageName: node
+  linkType: hard
+
+"cssnano@npm:^7.0.4":
+  version: 7.0.4
+  resolution: "cssnano@npm:7.0.4"
+  dependencies:
+    cssnano-preset-default: "npm:^7.0.4"
+    lilconfig: "npm:^3.1.2"
+  peerDependencies:
+    postcss: ^8.4.31
+  checksum: 10c0/3939a0b37b11cb4bae92f7916517c7ba21257551f92517b49a640d5df32e855fb7e73321f4be44d2c2de578309c05d711cdcb1976e95607b1b7f92bd4cbd1350
   languageName: node
   linkType: hard
 
@@ -17834,7 +17902,7 @@ __metadata:
   resolution: "postcss-combininator@workspace:plugins/postcss-combininator"
   dependencies:
     ava: "npm:^6.1.3"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.4.39"
   languageName: unknown
   linkType: soft
 
@@ -17862,6 +17930,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-convert-values@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "postcss-convert-values@npm:7.0.2"
+  dependencies:
+    browserslist: "npm:^4.23.1"
+    postcss-value-parser: "npm:^4.2.0"
+  peerDependencies:
+    postcss: ^8.4.31
+  checksum: 10c0/beb59faf6aae97e6d3c233c5e6ed06cc60d65c49eec576036e3d0da1a831a1e827e3d41f5e81d016440b4f0bdf1406268ae069c4d5b38a6667b310c3da079d22
+  languageName: node
+  linkType: hard
+
 "postcss-custom-media@npm:^10.0.6":
   version: 10.0.6
   resolution: "postcss-custom-media@npm:10.0.6"
@@ -17881,7 +17961,7 @@ __metadata:
   resolution: "postcss-custom-properties-mapping@workspace:plugins/postcss-custom-properties-mapping"
   dependencies:
     fast-glob: "npm:^3.3.2"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.4.39"
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     postcss: ">=8"
@@ -17983,6 +18063,17 @@ __metadata:
   peerDependencies:
     postcss: ^8.4.31
   checksum: 10c0/1c460a508ba85c8ebb90fc688f64a7e3ff28b6ab1c678fe4a581248f9d807b2bd4d0b0fa5b287240d6f8bbee4bad719929adcc165115173220fca914a8f510dc
+  languageName: node
+  linkType: hard
+
+"postcss-discard-unused@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "postcss-discard-unused@npm:7.0.1"
+  dependencies:
+    postcss-selector-parser: "npm:^6.1.0"
+  peerDependencies:
+    postcss: ^8.4.31
+  checksum: 10c0/052c5df3da059c7e14e29e9cbf439105ed38d034a4320a4d6ae39361b5b62ac0ba71386aa98313a7e29e013915bb82bb4ad51223e671f1651f9cc5fcb07b92d7
   languageName: node
   linkType: hard
 
@@ -18646,24 +18737,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-rgb-mapping@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "postcss-rgb-mapping@npm:1.1.0"
-  dependencies:
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^7.0.0 || ^8.0.0
-  checksum: 10c0/c8a8af676bf2c45bde2442d677b805aff3cd42de8aebfcddb8d97d11800429d6a7563a6df032a328dfd8a7ca13a8ee198517e44f7e10af0eb5385f5e98b9e48a
-  languageName: node
-  linkType: hard
-
 "postcss-rgb-mapping@workspace:^, postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping":
   version: 0.0.0-use.local
   resolution: "postcss-rgb-mapping@workspace:plugins/postcss-rgb-mapping"
   dependencies:
     ava: "npm:^6.1.3"
     c8: "npm:^9.1.0"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.4.39"
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     postcss: ">=8.0.0"
@@ -18886,7 +18966,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-fallback@npm:prettier@^3, prettier@npm:^3.1.1, prettier@npm:^3.2.5":
+"prettier-fallback@npm:prettier@^3, prettier@npm:^3.1.1":
   version: 3.2.5
   resolution: "prettier@npm:3.2.5"
   bin:
@@ -18910,6 +18990,15 @@ __metadata:
   bin:
     prettier: bin-prettier.js
   checksum: 10c0/463ea8f9a0946cd5b828d8cf27bd8b567345cf02f56562d5ecde198b91f47a76b7ac9eae0facd247ace70e927143af6135e8cf411986b8cb8478784a4d6d724a
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "prettier@npm:3.3.2"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10c0/39ed27d17f0238da6dd6571d63026566bd790d3d0edac57c285fbab525982060c8f1e01955fe38134ab10f0951a6076da37f015db8173c02f14bc7f0803a384c
   languageName: node
   linkType: hard
 
@@ -20769,7 +20858,7 @@ __metadata:
     nx: "npm:^19.2.3"
     open: "npm:^10.1.0"
     pajv: "npm:^1.2.0"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.4.39"
     postcss-add-theming-layer: "workspace:^"
     postcss-extend: "npm:^1.0.5"
     postcss-hover-media-feature: "npm:^1.0.2"
@@ -20778,10 +20867,11 @@ __metadata:
     postcss-load-config: "npm:^5.1.0"
     postcss-preset-env: "npm:^9.5.9"
     postcss-reporter: "npm:^7.1.0"
-    postcss-rgb-mapping: "npm:^1.1.0"
+    postcss-rgb-mapping: "workspace:^"
     postcss-selector-replace: "npm:^1.0.2"
+    postcss-sorting: "npm:^8.0.2"
     postcss-values-parser: "npm:^6.0.2"
-    prettier: "npm:^3.2.5"
+    prettier: "npm:^3.3.2"
     rimraf: "npm:^5.0.7"
     stylelint: "npm:^15.11.0"
     stylelint-config-clean-order: "npm:^5.4.2"

@@ -12,21 +12,21 @@
  */
 
 .spectrum {
-	--system-assetlist-width: 272px;
-	--system-assetlist-child-indicator-animation: var(--spectrum-animation-duration-100);
-	--system-assetlist-item-height: var(--spectrum-spacing-600);
-	--system-assetlist-item-padding-inline-start: var(--spectrum-spacing-300);
-	--system-assetlist-item-padding-inline-end: var(--spectrum-spacing-300);
-	--system-assetlist-item-margin-block-end: var(--spectrum-spacing-75);
-	--system-assetlist-item-border-radius: var(--spectrum-spacing-75);
-	--system-assetlist-item-animation: var(--spectrum-animation-duration-100);
-	--system-assetlist-item-font-size: var(--spectrum-font-size-100);
-	--system-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
-	--system-assetlist-item-background-color-down: var(--spectrum-gray-200);
-	--system-assetlist-item-background-color-hover: var(--spectrum-gray-100);
-	--system-assetlist-thumbnail-width: var(--spectrum-spacing-400);
-	--system-assetlist-thumbnail-height: var(--spectrum-spacing-400);
-	--system-assetlist-thumbnail-margin-inline-start: var(--spectrum-spacing-100);
-	--system-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
-	--system-assetlist-label-color: var(--spectrum-neutral-content-color-default);
+	--system-asset-list-assetlist-width: 272px;
+	--system-asset-list-assetlist-child-indicator-animation: var(--spectrum-animation-duration-100);
+	--system-asset-list-assetlist-item-height: var(--spectrum-spacing-600);
+	--system-asset-list-assetlist-item-padding-inline-start: var(--spectrum-spacing-300);
+	--system-asset-list-assetlist-item-padding-inline-end: var(--spectrum-spacing-300);
+	--system-asset-list-assetlist-item-margin-block-end: var(--spectrum-spacing-75);
+	--system-asset-list-assetlist-item-border-radius: var(--spectrum-spacing-75);
+	--system-asset-list-assetlist-item-animation: var(--spectrum-animation-duration-100);
+	--system-asset-list-assetlist-item-font-size: var(--spectrum-font-size-100);
+	--system-asset-list-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
+	--system-asset-list-assetlist-item-background-color-down: var(--spectrum-gray-200);
+	--system-asset-list-assetlist-item-background-color-hover: var(--spectrum-gray-100);
+	--system-asset-list-assetlist-thumbnail-width: var(--spectrum-spacing-400);
+	--system-asset-list-assetlist-thumbnail-height: var(--spectrum-spacing-400);
+	--system-asset-list-assetlist-thumbnail-margin-inline-start: var(--spectrum-spacing-100);
+	--system-asset-list-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
+	--system-asset-list-assetlist-label-color: var(--spectrum-neutral-content-color-default);
 }

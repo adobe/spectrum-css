@@ -12,77 +12,77 @@
  */
 
 .spectrum-SideNav {
-	--spectrum-sidenav-focus-ring-size: var(--system-sidenav-focus-ring-size);
-	--spectrum-sidenav-focus-ring-gap: var(--system-sidenav-focus-ring-gap);
-	--spectrum-sidenav-focus-ring-color: var(--system-sidenav-focus-ring-color);
-	--spectrum-sidenav-min-height: var(--system-sidenav-min-height);
-	--spectrum-sidenav-width: var(--system-sidenav-width);
-	--spectrum-sidenav-min-width: var(--system-sidenav-min-width);
-	--spectrum-sidenav-max-width: var(--system-sidenav-max-width);
-	--spectrum-sidenav-border-radius: var(--system-sidenav-border-radius);
-	--spectrum-sidenav-icon-size: var(--system-sidenav-icon-size);
-	--spectrum-sidenav-icon-spacing: var(--system-sidenav-icon-spacing);
-	--spectrum-sidenav-inline-padding: var(--system-sidenav-inline-padding);
-	--spectrum-sidenav-gap: var(--system-sidenav-gap);
-	--spectrum-sidenav-top-to-icon: var(--system-sidenav-top-to-icon);
-	--spectrum-sidenav-top-to-label: var(--system-sidenav-top-to-label);
-	--spectrum-sidenav-bottom-to-label: var(--system-sidenav-bottom-to-label);
-	--spectrum-sidenav-start-to-content-second-level: var(--system-sidenav-start-to-content-second-level);
-	--spectrum-sidenav-start-to-content-third-level: var(--system-sidenav-start-to-content-third-level);
-	--spectrum-sidenav-start-to-content-with-icon-second-level: var(--system-sidenav-start-to-content-with-icon-second-level);
-	--spectrum-sidenav-start-to-content-with-icon-third-level: var(--system-sidenav-start-to-content-with-icon-third-level);
-	--spectrum-sidenav-heading-top-margin: var(--system-sidenav-heading-top-margin);
-	--spectrum-sidenav-heading-bottom-margin: var(--system-sidenav-heading-bottom-margin);
-	--spectrum-sidenav-background-disabled: var(--system-sidenav-background-disabled);
-	--spectrum-sidenav-background-default: var(--system-sidenav-background-default);
-	--spectrum-sidenav-background-hover: var(--system-sidenav-background-hover);
-	--spectrum-sidenav-item-background-down: var(--system-sidenav-item-background-down);
-	--spectrum-sidenav-background-key-focus: var(--system-sidenav-background-key-focus);
-	--spectrum-sidenav-item-background-default-selected: var(--system-sidenav-item-background-default-selected);
-	--spectrum-sidenav-background-hover-selected: var(--system-sidenav-background-hover-selected);
-	--spectrum-sidenav-item-background-down-selected: var(--system-sidenav-item-background-down-selected);
-	--spectrum-sidenav-background-key-focus-selected: var(--system-sidenav-background-key-focus-selected);
-	--spectrum-sidenav-header-color: var(--system-sidenav-header-color);
-	--spectrum-sidenav-content-disabled-color: var(--system-sidenav-content-disabled-color);
-	--spectrum-sidenav-content-color-default: var(--system-sidenav-content-color-default);
-	--spectrum-sidenav-content-color-hover: var(--system-sidenav-content-color-hover);
-	--spectrum-sidenav-content-color-down: var(--system-sidenav-content-color-down);
-	--spectrum-sidenav-content-color-key-focus: var(--system-sidenav-content-color-key-focus);
-	--spectrum-sidenav-content-color-default-selected: var(--system-sidenav-content-color-default-selected);
-	--spectrum-sidenav-content-color-hover-selected: var(--system-sidenav-content-color-hover-selected);
-	--spectrum-sidenav-content-color-down-selected: var(--system-sidenav-content-color-down-selected);
-	--spectrum-sidenav-content-color-key-focus-selected: var(--system-sidenav-content-color-key-focus-selected);
-	--spectrum-sidenav-text-font-family: var(--system-sidenav-text-font-family);
-	--spectrum-sidenav-text-font-weight: var(--system-sidenav-text-font-weight);
-	--spectrum-sidenav-text-font-style: var(--system-sidenav-text-font-style);
-	--spectrum-sidenav-text-font-size: var(--system-sidenav-text-font-size);
-	--spectrum-sidenav-text-line-height: var(--system-sidenav-text-line-height);
-	--spectrum-sidenav-top-level-font-family: var(--system-sidenav-top-level-font-family);
-	--spectrum-sidenav-top-level-font-weight: var(--system-sidenav-top-level-font-weight);
-	--spectrum-sidenav-top-level-font-style: var(--system-sidenav-top-level-font-style);
-	--spectrum-sidenav-top-level-font-size: var(--system-sidenav-top-level-font-size);
-	--spectrum-sidenav-top-level-line-height: var(--system-sidenav-top-level-line-height);
-	--spectrum-sidenav-header-font-family: var(--system-sidenav-header-font-family);
-	--spectrum-sidenav-header-font-weight: var(--system-sidenav-header-font-weight);
-	--spectrum-sidenav-header-font-style: var(--system-sidenav-header-font-style);
-	--spectrum-sidenav-header-font-size: var(--system-sidenav-header-font-size);
-	--spectrum-sidenav-header-line-height: var(--system-sidenav-header-line-height);
+	--spectrum-sidenav-focus-ring-size: var(--system-side-nav-sidenav-focus-ring-size);
+	--spectrum-sidenav-focus-ring-gap: var(--system-side-nav-sidenav-focus-ring-gap);
+	--spectrum-sidenav-focus-ring-color: var(--system-side-nav-sidenav-focus-ring-color);
+	--spectrum-sidenav-min-height: var(--system-side-nav-sidenav-min-height);
+	--spectrum-sidenav-width: var(--system-side-nav-sidenav-width);
+	--spectrum-sidenav-min-width: var(--system-side-nav-sidenav-min-width);
+	--spectrum-sidenav-max-width: var(--system-side-nav-sidenav-max-width);
+	--spectrum-sidenav-border-radius: var(--system-side-nav-sidenav-border-radius);
+	--spectrum-sidenav-icon-size: var(--system-side-nav-sidenav-icon-size);
+	--spectrum-sidenav-icon-spacing: var(--system-side-nav-sidenav-icon-spacing);
+	--spectrum-sidenav-inline-padding: var(--system-side-nav-sidenav-inline-padding);
+	--spectrum-sidenav-gap: var(--system-side-nav-sidenav-gap);
+	--spectrum-sidenav-top-to-icon: var(--system-side-nav-sidenav-top-to-icon);
+	--spectrum-sidenav-top-to-label: var(--system-side-nav-sidenav-top-to-label);
+	--spectrum-sidenav-bottom-to-label: var(--system-side-nav-sidenav-bottom-to-label);
+	--spectrum-sidenav-start-to-content-second-level: var(--system-side-nav-sidenav-start-to-content-second-level);
+	--spectrum-sidenav-start-to-content-third-level: var(--system-side-nav-sidenav-start-to-content-third-level);
+	--spectrum-sidenav-start-to-content-with-icon-second-level: var(--system-side-nav-sidenav-start-to-content-with-icon-second-level);
+	--spectrum-sidenav-start-to-content-with-icon-third-level: var(--system-side-nav-sidenav-start-to-content-with-icon-third-level);
+	--spectrum-sidenav-heading-top-margin: var(--system-side-nav-sidenav-heading-top-margin);
+	--spectrum-sidenav-heading-bottom-margin: var(--system-side-nav-sidenav-heading-bottom-margin);
+	--spectrum-sidenav-background-disabled: var(--system-side-nav-sidenav-background-disabled);
+	--spectrum-sidenav-background-default: var(--system-side-nav-sidenav-background-default);
+	--spectrum-sidenav-background-hover: var(--system-side-nav-sidenav-background-hover);
+	--spectrum-sidenav-item-background-down: var(--system-side-nav-sidenav-item-background-down);
+	--spectrum-sidenav-background-key-focus: var(--system-side-nav-sidenav-background-key-focus);
+	--spectrum-sidenav-item-background-default-selected: var(--system-side-nav-sidenav-item-background-default-selected);
+	--spectrum-sidenav-background-hover-selected: var(--system-side-nav-sidenav-background-hover-selected);
+	--spectrum-sidenav-item-background-down-selected: var(--system-side-nav-sidenav-item-background-down-selected);
+	--spectrum-sidenav-background-key-focus-selected: var(--system-side-nav-sidenav-background-key-focus-selected);
+	--spectrum-sidenav-header-color: var(--system-side-nav-sidenav-header-color);
+	--spectrum-sidenav-content-disabled-color: var(--system-side-nav-sidenav-content-disabled-color);
+	--spectrum-sidenav-content-color-default: var(--system-side-nav-sidenav-content-color-default);
+	--spectrum-sidenav-content-color-hover: var(--system-side-nav-sidenav-content-color-hover);
+	--spectrum-sidenav-content-color-down: var(--system-side-nav-sidenav-content-color-down);
+	--spectrum-sidenav-content-color-key-focus: var(--system-side-nav-sidenav-content-color-key-focus);
+	--spectrum-sidenav-content-color-default-selected: var(--system-side-nav-sidenav-content-color-default-selected);
+	--spectrum-sidenav-content-color-hover-selected: var(--system-side-nav-sidenav-content-color-hover-selected);
+	--spectrum-sidenav-content-color-down-selected: var(--system-side-nav-sidenav-content-color-down-selected);
+	--spectrum-sidenav-content-color-key-focus-selected: var(--system-side-nav-sidenav-content-color-key-focus-selected);
+	--spectrum-sidenav-text-font-family: var(--system-side-nav-sidenav-text-font-family);
+	--spectrum-sidenav-text-font-weight: var(--system-side-nav-sidenav-text-font-weight);
+	--spectrum-sidenav-text-font-style: var(--system-side-nav-sidenav-text-font-style);
+	--spectrum-sidenav-text-font-size: var(--system-side-nav-sidenav-text-font-size);
+	--spectrum-sidenav-text-line-height: var(--system-side-nav-sidenav-text-line-height);
+	--spectrum-sidenav-top-level-font-family: var(--system-side-nav-sidenav-top-level-font-family);
+	--spectrum-sidenav-top-level-font-weight: var(--system-side-nav-sidenav-top-level-font-weight);
+	--spectrum-sidenav-top-level-font-style: var(--system-side-nav-sidenav-top-level-font-style);
+	--spectrum-sidenav-top-level-font-size: var(--system-side-nav-sidenav-top-level-font-size);
+	--spectrum-sidenav-top-level-line-height: var(--system-side-nav-sidenav-top-level-line-height);
+	--spectrum-sidenav-header-font-family: var(--system-side-nav-sidenav-header-font-family);
+	--spectrum-sidenav-header-font-weight: var(--system-side-nav-sidenav-header-font-weight);
+	--spectrum-sidenav-header-font-style: var(--system-side-nav-sidenav-header-font-style);
+	--spectrum-sidenav-header-font-size: var(--system-side-nav-sidenav-header-font-size);
+	--spectrum-sidenav-header-line-height: var(--system-side-nav-sidenav-header-line-height);
 }
 
 .spectrum-SideNav:lang(ja) {
-	--spectrum-sidenav-text-line-height: var(--system-sidenav-lang-ja-text-line-height);
-	--spectrum-sidenav-top-level-line-height: var(--system-sidenav-lang-ja-top-level-line-height);
-	--spectrum-sidenav-header-line-height: var(--system-sidenav-lang-ja-header-line-height);
+	--spectrum-sidenav-text-line-height: var(--system-side-nav-lang-ja-sidenav-text-line-height);
+	--spectrum-sidenav-top-level-line-height: var(--system-side-nav-lang-ja-sidenav-top-level-line-height);
+	--spectrum-sidenav-header-line-height: var(--system-side-nav-lang-ja-sidenav-header-line-height);
 }
 
 .spectrum-SideNav:lang(zh) {
-	--spectrum-sidenav-text-line-height: var(--system-sidenav-lang-zh-text-line-height);
-	--spectrum-sidenav-top-level-line-height: var(--system-sidenav-lang-zh-top-level-line-height);
-	--spectrum-sidenav-header-line-height: var(--system-sidenav-lang-zh-header-line-height);
+	--spectrum-sidenav-text-line-height: var(--system-side-nav-lang-zh-sidenav-text-line-height);
+	--spectrum-sidenav-top-level-line-height: var(--system-side-nav-lang-zh-sidenav-top-level-line-height);
+	--spectrum-sidenav-header-line-height: var(--system-side-nav-lang-zh-sidenav-header-line-height);
 }
 
 .spectrum-SideNav:lang(ko) {
-	--spectrum-sidenav-text-line-height: var(--system-sidenav-lang-ko-text-line-height);
-	--spectrum-sidenav-top-level-line-height: var(--system-sidenav-lang-ko-top-level-line-height);
-	--spectrum-sidenav-header-line-height: var(--system-sidenav-lang-ko-header-line-height);
+	--spectrum-sidenav-text-line-height: var(--system-side-nav-lang-ko-sidenav-text-line-height);
+	--spectrum-sidenav-top-level-line-height: var(--system-side-nav-lang-ko-sidenav-top-level-line-height);
+	--spectrum-sidenav-header-line-height: var(--system-side-nav-lang-ko-sidenav-header-line-height);
 }

@@ -12,11 +12,11 @@
  */
 
 .spectrum {
-	--system-contextualhelp-contextual-help-padding: var(--spectrum-spacing-400);
-	--system-contextualhelp-contextual-help-content-spacing: var(--spectrum-spacing-100);
-	--system-contextualhelp-contextual-help-link-spacing: var(--spectrum-spacing-300);
-	--system-contextualhelp-contextual-help-heading-size: var(--spectrum-contextual-help-title-size);
-	--system-contextualhelp-contextual-help-heading-color: var(--spectrum-heading-color);
-	--system-contextualhelp-contextual-help-body-color: var(--spectrum-body-color);
-	--system-contextualhelp-large-descendant-of-contextual-help-content-spacing: var(--spectrum-spacing-200);
+	--system-contextual-help-contextual-help-padding: var(--spectrum-spacing-400);
+	--system-contextual-help-contextual-help-content-spacing: var(--spectrum-spacing-100);
+	--system-contextual-help-contextual-help-link-spacing: var(--spectrum-spacing-300);
+	--system-contextual-help-contextual-help-heading-size: var(--spectrum-contextual-help-title-size);
+	--system-contextual-help-contextual-help-heading-color: var(--spectrum-heading-color);
+	--system-contextual-help-contextual-help-body-color: var(--spectrum-body-color);
+	--system-large-contextual-help-contextual-help-content-spacing: var(--spectrum-spacing-200);
 }

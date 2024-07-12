@@ -12,8 +12,8 @@
  */
 
 .spectrum-DropIndicator {
-	--spectrum-dropindicator-border-color: var(--system-dropindicator-border-color);
-	--spectrum-dropindicator-circle-color: var(--system-dropindicator-circle-color);
-	--spectrum-dropindicator-border-size: var(--system-dropindicator-border-size);
-	--spectrum-dropindicator-circle-size: var(--system-dropindicator-circle-size);
+	--spectrum-dropindicator-border-color: var(--system-drop-indicator-dropindicator-border-color);
+	--spectrum-dropindicator-circle-color: var(--system-drop-indicator-dropindicator-circle-color);
+	--spectrum-dropindicator-border-size: var(--system-drop-indicator-dropindicator-border-size);
+	--spectrum-dropindicator-circle-size: var(--system-drop-indicator-dropindicator-circle-size);
 }

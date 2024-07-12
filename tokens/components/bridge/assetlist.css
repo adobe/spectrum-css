@@ -12,21 +12,21 @@
  */
 
 .spectrum-AssetList {
-	--spectrum-assetlist-width: var(--system-assetlist-width);
-	--spectrum-assetlist-child-indicator-animation: var(--system-assetlist-child-indicator-animation);
-	--spectrum-assetlist-item-height: var(--system-assetlist-item-height);
-	--spectrum-assetlist-item-padding-inline-start: var(--system-assetlist-item-padding-inline-start);
-	--spectrum-assetlist-item-padding-inline-end: var(--system-assetlist-item-padding-inline-end);
-	--spectrum-assetlist-item-margin-block-end: var(--system-assetlist-item-margin-block-end);
-	--spectrum-assetlist-item-border-radius: var(--system-assetlist-item-border-radius);
-	--spectrum-assetlist-item-animation: var(--system-assetlist-item-animation);
-	--spectrum-assetlist-item-font-size: var(--system-assetlist-item-font-size);
-	--spectrum-assetlist-item-font-weight: var(--system-assetlist-item-font-weight);
-	--spectrum-assetlist-item-background-color-down: var(--system-assetlist-item-background-color-down);
-	--spectrum-assetlist-item-background-color-hover: var(--system-assetlist-item-background-color-hover);
-	--spectrum-assetlist-thumbnail-width: var(--system-assetlist-thumbnail-width);
-	--spectrum-assetlist-thumbnail-height: var(--system-assetlist-thumbnail-height);
-	--spectrum-assetlist-thumbnail-margin-inline-start: var(--system-assetlist-thumbnail-margin-inline-start);
-	--spectrum-assetlist-item-label-padding-inline-start: var(--system-assetlist-item-label-padding-inline-start);
-	--spectrum-assetlist-label-color: var(--system-assetlist-label-color);
+	--spectrum-assetlist-width: var(--system-asset-list-assetlist-width);
+	--spectrum-assetlist-child-indicator-animation: var(--system-asset-list-assetlist-child-indicator-animation);
+	--spectrum-assetlist-item-height: var(--system-asset-list-assetlist-item-height);
+	--spectrum-assetlist-item-padding-inline-start: var(--system-asset-list-assetlist-item-padding-inline-start);
+	--spectrum-assetlist-item-padding-inline-end: var(--system-asset-list-assetlist-item-padding-inline-end);
+	--spectrum-assetlist-item-margin-block-end: var(--system-asset-list-assetlist-item-margin-block-end);
+	--spectrum-assetlist-item-border-radius: var(--system-asset-list-assetlist-item-border-radius);
+	--spectrum-assetlist-item-animation: var(--system-asset-list-assetlist-item-animation);
+	--spectrum-assetlist-item-font-size: var(--system-asset-list-assetlist-item-font-size);
+	--spectrum-assetlist-item-font-weight: var(--system-asset-list-assetlist-item-font-weight);
+	--spectrum-assetlist-item-background-color-down: var(--system-asset-list-assetlist-item-background-color-down);
+	--spectrum-assetlist-item-background-color-hover: var(--system-asset-list-assetlist-item-background-color-hover);
+	--spectrum-assetlist-thumbnail-width: var(--system-asset-list-assetlist-thumbnail-width);
+	--spectrum-assetlist-thumbnail-height: var(--system-asset-list-assetlist-thumbnail-height);
+	--spectrum-assetlist-thumbnail-margin-inline-start: var(--system-asset-list-assetlist-thumbnail-margin-inline-start);
+	--spectrum-assetlist-item-label-padding-inline-start: var(--system-asset-list-assetlist-item-label-padding-inline-start);
+	--spectrum-assetlist-label-color: var(--system-asset-list-assetlist-label-color);
 }

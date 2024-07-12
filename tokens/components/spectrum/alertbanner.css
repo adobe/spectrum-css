@@ -12,20 +12,20 @@
  */
 
 .spectrum--legacy {
-	--system-alertbanner-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default);
-	--system-alertbanner-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
-	--system-alertbanner-alert-banner-max-inline-size: var(--spectrum-alert-banner-width);
-	--system-alertbanner-alert-banner-size: auto;
-	--system-alertbanner-alert-banner-font-size: var(--spectrum-font-size-100);
-	--system-alertbanner-alert-banner-icon-size: var(--spectrum-workflow-icon-size-100);
-	--system-alertbanner-alert-banner-icon-to-text: var(--spectrum-text-to-visual-300);
-	--system-alertbanner-alert-banner-start-edge: var(--spectrum-spacing-300);
-	--system-alertbanner-alert-banner-text-to-button-horizontal: var(--spectrum-spacing-300);
-	--system-alertbanner-alert-banner-text-to-divider: var(--spectrum-spacing-300);
-	--system-alertbanner-alert-banner-top-icon: var(--spectrum-alert-banner-top-to-workflow-icon);
-	--system-alertbanner-alert-banner-top-text: var(--spectrum-alert-banner-top-to-text);
-	--system-alertbanner-alert-banner-bottom-text: var(--spectrum-alert-banner-bottom-to-text);
-	--system-alertbanner-alert-banner-informative-background: var(--spectrum-informative-background-color-default);
-	--system-alertbanner-alert-banner-negative-background: var(--spectrum-negative-background-color-default);
-	--system-alertbanner-alert-banner-font-color: var(--spectrum-white);
+	--system-alert-banner-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default);
+	--system-alert-banner-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
+	--system-alert-banner-alert-banner-max-inline-size: var(--spectrum-alert-banner-width);
+	--system-alert-banner-alert-banner-size: auto;
+	--system-alert-banner-alert-banner-font-size: var(--spectrum-font-size-100);
+	--system-alert-banner-alert-banner-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-alert-banner-alert-banner-icon-to-text: var(--spectrum-text-to-visual-300);
+	--system-alert-banner-alert-banner-start-edge: var(--spectrum-spacing-300);
+	--system-alert-banner-alert-banner-text-to-button-horizontal: var(--spectrum-spacing-300);
+	--system-alert-banner-alert-banner-text-to-divider: var(--spectrum-spacing-300);
+	--system-alert-banner-alert-banner-top-icon: var(--spectrum-alert-banner-top-to-workflow-icon);
+	--system-alert-banner-alert-banner-top-text: var(--spectrum-alert-banner-top-to-text);
+	--system-alert-banner-alert-banner-bottom-text: var(--spectrum-alert-banner-bottom-to-text);
+	--system-alert-banner-alert-banner-informative-background: var(--spectrum-informative-background-color-default);
+	--system-alert-banner-alert-banner-negative-background: var(--spectrum-negative-background-color-default);
+	--system-alert-banner-alert-banner-font-color: var(--spectrum-white);
 }

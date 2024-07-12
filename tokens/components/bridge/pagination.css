@@ -12,11 +12,11 @@
  */
 
 .spectrum-Pagination {
-	--spectrum-pagination-counter-margin-inline-start: var(--system-pagination-counter-margin-inline-start);
-	--spectrum-pagination-page-button-inline-spacing: var(--system-pagination-page-button-inline-spacing);
-	--spectrum-pagination-counter-color: var(--system-pagination-counter-color);
-	--spectrum-pagination-counter-font-size: var(--system-pagination-counter-font-size);
-	--spectrum-pagination-counter-line-height: var(--system-pagination-counter-line-height);
+	--spectrum-pagination-counter-margin-inline-start: var(--system-pagination-pagination-counter-margin-inline-start);
+	--spectrum-pagination-page-button-inline-spacing: var(--system-pagination-pagination-page-button-inline-spacing);
+	--spectrum-pagination-counter-color: var(--system-pagination-pagination-counter-color);
+	--spectrum-pagination-counter-font-size: var(--system-pagination-pagination-counter-font-size);
+	--spectrum-pagination-counter-line-height: var(--system-pagination-pagination-counter-line-height);
 }
 
 .spectrum-Pagination:dir(rtl) {

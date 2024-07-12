@@ -12,6 +12,6 @@
  */
 
 .spectrum {
-	--system-well-border-width: var(--spectrum-border-width-100);
-	--system-well-content-color: var(--spectrum-body-color);
+	--system-well-well-border-width: var(--spectrum-border-width-100);
+	--system-well-well-content-color: var(--spectrum-body-color);
 }

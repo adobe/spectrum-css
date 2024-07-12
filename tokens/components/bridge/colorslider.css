@@ -12,10 +12,10 @@
  */
 
 .spectrum-ColorSlider {
-	--spectrum-color-slider-handle-margin-block: var(--system-colorslider-color-slider-handle-margin-block);
-	--spectrum-color-slider-border-color-rgba: var(--system-colorslider-color-slider-border-color-rgba);
-	--spectrum-color-slider-checkerboard-size: var(--system-colorslider-color-slider-checkerboard-size);
-	--spectrum-color-slider-checkerboard-dark-color: var(--system-colorslider-color-slider-checkerboard-dark-color);
-	--spectrum-color-slider-checkerboard-light-color: var(--system-colorslider-color-slider-checkerboard-light-color);
-	--mod-colorhandle-hitarea-border-radius: var(--system-colorslider-colorhandle-hitarea-border-radius);
+	--spectrum-color-slider-handle-margin-block: var(--system-color-slider-color-slider-handle-margin-block);
+	--spectrum-color-slider-border-color-rgba: var(--system-color-slider-color-slider-border-color-rgba);
+	--spectrum-color-slider-checkerboard-size: var(--system-color-slider-color-slider-checkerboard-size);
+	--spectrum-color-slider-checkerboard-dark-color: var(--system-color-slider-color-slider-checkerboard-dark-color);
+	--spectrum-color-slider-checkerboard-light-color: var(--system-color-slider-color-slider-checkerboard-light-color);
+	--mod-colorhandle-hitarea-border-radius: var(--system-color-slider-colorhandle-hitarea-border-radius);
 }

@@ -12,18 +12,18 @@
  */
 
 .spectrum {
-	--system-colorloupe-width: var(--spectrum-color-loupe-width);
-	--system-colorloupe-height: var(--spectrum-color-loupe-height);
-	--system-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
-	--system-colorloupe-animation-distance: 8px;
-	--system-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
-	--system-colorloupe-drop-shadow-y: var(--spectrum-color-loupe-drop-shadow-y);
-	--system-colorloupe-drop-shadow-blur: var(--spectrum-color-loupe-drop-shadow-blur);
-	--system-colorloupe-drop-shadow-color: var(--spectrum-color-loupe-drop-shadow-color);
-	--system-colorloupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
-	--system-colorloupe-inner-border-width: var(--spectrum-color-loupe-inner-border-width);
-	--system-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
-	--system-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
-	--system-colorloupe-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
-	--system-colorloupe-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+	--system-color-loupe-colorloupe-width: var(--spectrum-color-loupe-width);
+	--system-color-loupe-colorloupe-height: var(--spectrum-color-loupe-height);
+	--system-color-loupe-colorloupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
+	--system-color-loupe-colorloupe-animation-distance: 8px;
+	--system-color-loupe-colorloupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
+	--system-color-loupe-colorloupe-drop-shadow-y: var(--spectrum-color-loupe-drop-shadow-y);
+	--system-color-loupe-colorloupe-drop-shadow-blur: var(--spectrum-color-loupe-drop-shadow-blur);
+	--system-color-loupe-colorloupe-drop-shadow-color: var(--spectrum-color-loupe-drop-shadow-color);
+	--system-color-loupe-colorloupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
+	--system-color-loupe-colorloupe-inner-border-width: var(--spectrum-color-loupe-inner-border-width);
+	--system-color-loupe-colorloupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
+	--system-color-loupe-colorloupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
+	--system-color-loupe-colorloupe-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+	--system-color-loupe-colorloupe-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
 }
