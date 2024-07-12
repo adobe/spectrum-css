@@ -208,8 +208,9 @@
 	font-size: var(--mod-textfield-placeholder-font-size, var(--spectrum-textfield-placeholder-font-size));
 	font-weight: var(--mod-textfield-font-weight, var(--spectrum-textfield-font-weight));
 
-	/* no mod defined to allow for maximum compatibility */
-	line-height: var(--spectrum-textfield-input-line-height);
+	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
+	/* no line-height mod defined to allow for maximum compatibility */
+	line-height: calc(var(--spectrum-textfield-height) - (var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))) * 2);
 	color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
 
 	/* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */

@@ -1,3 +1,4 @@
+import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -9,11 +10,6 @@ import { capitalize, lowerCase } from "lodash-es";
 import "../index.css";
 import "../themes/express.css";
 import "../themes/spectrum.css";
-
-/**
- * @todo load order should not influence the icon size but it is; fix this
-*/
-import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 export const Template = ({
 	rootClass = "spectrum-ActionButton",

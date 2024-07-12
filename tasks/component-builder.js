@@ -70,7 +70,6 @@ async function extractModifiers(filepath, { cwd } = {}) {
 	const spectrum = meta.spectrum ?? [];
 	const componentLevel = new Set(spectrum.map((value) => {
 		const parts = value.slice(0, 2).split("-");
-		// console.log(parts, componentName);
 		if (parts.length > 1 && parts[1] === componentName) return value;
 		if (parts[1] + parts[2] === componentName) return value;
 		return;
@@ -160,7 +159,6 @@ async function processCSS(
 	if (!fs.existsSync(path.dirname(output))) {
 		await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
 			if (!err) return;
-			// @todo pretty print these are relative paths
 			console.log(
 				`${"✗".red}  problem making the ${relativePrint(path.dirname(output), { cwd }).yellow} directory`,
 			);
