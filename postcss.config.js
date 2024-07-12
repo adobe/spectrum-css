@@ -70,7 +70,7 @@ module.exports = ({
 			"postcss-hover-media-feature": {},
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
-			"postcss-splitinator": {
+			"postcss-add-theming-layer": {
 				selectorPrefix: "spectrum",
 				skipMapping,
 				preserveVariables,

@@ -38,7 +38,7 @@ module.exports = ({
 	stripLocalSelectors = false,
 	processIdentifier,
 }) => ({
-	postcssPlugin: "postcss-splitinator",
+	postcssPlugin: "postcss-add-theming-layer",
 	OnceExit(root, { Rule, Declaration }) {
 		// Fallback function to process the identifier value and create a new selector
 		if (typeof processIdentifier !== "function") {

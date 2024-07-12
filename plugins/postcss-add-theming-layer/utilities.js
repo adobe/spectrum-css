@@ -19,7 +19,7 @@ const valuesParser = require("postcss-values-parser");
  * @param {{ selectorPrefix: string }} options
  * @returns {string} The clean variable name
  */
-export function cleanPropertyName(prop, { selectorPrefix = "" } = {}) {
+function cleanPropertyName(prop, { selectorPrefix = "" } = {}) {
 	if (!prop) return;
 	return (
 		prop
@@ -54,7 +54,7 @@ export function cleanPropertyName(prop, { selectorPrefix = "" } = {}) {
  * @param {string} declValue
  * @returns {string} The fallback value
  */
-export function extractFallbackValue(declValue) {
+function extractFallbackValue(declValue) {
 	const parsed = valuesParser.parse(declValue);
 	let fallbackValue;
 
@@ -78,7 +78,7 @@ export function extractFallbackValue(declValue) {
  * @param {{ selectorPrefix: string }} options
  * @returns {string} The base selector
  */
-export function getBaseSelector(selector, { selectorPrefix = "" } = {}) {
+function getBaseSelector(selector, { selectorPrefix = "" } = {}) {
 	let baseSelector;
 
 	if (!selector || !selector.nodes) return baseSelector;
@@ -130,7 +130,7 @@ export function getBaseSelector(selector, { selectorPrefix = "" } = {}) {
  * @param {{ identifierName: string, identifierValue: string, selectorPrefix: string }} options
  * @returns {string} The new variable name
  */
-export function getVariableName(
+function getVariableName(
 	selector,
 	prop,
 	{ selectorPrefix = "", identifierName, identifierValue } = {},
@@ -162,8 +162,7 @@ export function getVariableName(
 		}
 		else if (node.type === "combinator") {
 			switch (node.value) {
-				case " ":
-					property.push("descendant-of");
+				case " ": // Descendant combinator
 					break;
 				case ">":
 					property.push("child-of");
@@ -193,7 +192,7 @@ export function getVariableName(
 		.filter((value, index) => property.indexOf(value) === index)
 		.filter(Boolean);
 
-	return `--${[identifierName, baseSelector, clean([...property, prop].filter(Boolean).join("-"))].join("-").toLowerCase()}`;
+	return `--${[identifierName, baseSelector, clean([...property, prop].filter(Boolean).join("-"))].filter(Boolean).join("-").toLowerCase()}`;
 }
 
 /**
@@ -204,7 +203,7 @@ export function getVariableName(
  * @param {string[]} systemValues
  * @returns {string|undefined|void} The updated declaration value
  */
-export function checkForReplacement(
+function checkForReplacement(
 	decl,
 	replace,
 	guesses = [],
@@ -233,3 +232,11 @@ export function checkForReplacement(
 		continue;
 	}
 }
+
+module.exports = {
+	cleanPropertyName,
+	extractFallbackValue,
+	getBaseSelector,
+	getVariableName,
+	checkForReplacement,
+};

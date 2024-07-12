@@ -20,14 +20,7 @@ function compare(
 	t,
 	fixtureFilePath,
 	expectedFilePath,
-	options = {
-		processIdentifier: (identifier) => {
-			if (identifier === "express") {
-				return "spectrum--express";
-			}
-			return identifier;
-		},
-	}
+	options = {}
 ) {
 	return postcss([plugin(options)])
 		.process(readFile(`./fixtures/${fixtureFilePath}`), {
