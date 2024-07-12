@@ -1,5 +1,5 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
+import modes, {disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
@@ -59,14 +59,35 @@ export default {
 			},
 		},
 		componentVersion: version,
-		chromatic: {
-			modes: mobile,
-		}
 	},
 	decorators: [
 		withUnderlayWrapper,
 	],
 };
+
+// the "TallerViewport" modes are accommodating the underlay, which is position: fixed,
+// and Chromatic's treatment of position:fixed elements. By increasing the viewport height,
+// it doesn't look like the background color just stops without wrapping the
+// entire container of templates.
+const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
+	acc[key] = { 
+		...modes[key],
+		viewport: {
+			height: "1200px",
+		}
+	};
+	return acc;
+}, {});
+
+const mobileModeWithTallerViewport = Object.keys(mobile).reduce((acc, key) => {
+	acc[key] = { 
+		...mobile[key],
+		viewport: {
+			height: "1000px",
+		}
+	};
+	return acc;
+}, {});
 
 export const Default = DialogGroup.bind({});
 Default.args = {
@@ -82,6 +103,13 @@ Default.args = {
 		}, context),
 	],
 };
+Default.parameters = {
+	chromatic: {
+		modes: {
+			...defaultModesWithTallerViewport,
+			...mobileModeWithTallerViewport }
+	},
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
@@ -90,6 +118,6 @@ WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
 };
