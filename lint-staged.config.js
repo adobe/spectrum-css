@@ -1,5 +1,5 @@
 module.exports = {
-	"*.css": [
+	"*.css,!plugins/*/{expected,fixtures}/*.css": [
 		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write",
 	],
 	"*.{js,json}": [

@@ -17897,15 +17897,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-combininator@workspace:plugins/postcss-combininator":
-  version: 0.0.0-use.local
-  resolution: "postcss-combininator@workspace:plugins/postcss-combininator"
-  dependencies:
-    ava: "npm:^6.1.3"
-    postcss: "npm:^8.4.39"
-  languageName: unknown
-  linkType: soft
-
 "postcss-convert-values@npm:^7.0.0":
   version: 7.0.0
   resolution: "postcss-convert-values@npm:7.0.0"
@@ -18642,6 +18633,16 @@ __metadata:
   checksum: 10c0/8e0c8f5c2e7b8385a770c13185986dc50d7a73b10b98c65c2f86bb4cd2860de722caef8172b1676962dafbbc044d6be1955f2a092e951976a30d4ee33b0d7571
   languageName: node
   linkType: hard
+
+"postcss-property-rollup@workspace:plugins/postcss-property-rollup":
+  version: 0.0.0-use.local
+  resolution: "postcss-property-rollup@workspace:plugins/postcss-property-rollup"
+  dependencies:
+    ava: "npm:^6.1.3"
+    c8: "npm:^9.1.0"
+    postcss: "npm:^8.4.39"
+  languageName: unknown
+  linkType: soft
 
 "postcss-pseudo-class-any-link@npm:^9.0.2":
   version: 9.0.2

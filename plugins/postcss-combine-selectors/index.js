@@ -13,17 +13,23 @@
 
 /**
  * @typedef Options
+ * @property ignore {string[]} - List of selectors to ignore
+ * @property newSelector {string} - New selector to create with the combined declarations
  */
 
 /** @type import('postcss').PluginCreator<Options> */
-module.exports = () => {
+module.exports = ({
+	ignore = [],
+	newSelector,
+} = {}) => {
 	return {
-		postcssPlugin: "postcss-combininator",
-		OnceExit(root) {
+		postcssPlugin: "postcss-property-rollup",
+		OnceExit(root, { Rule }) {
 			const rules = [];
 			const declarations = {};
 
 			root.walkRules((rule) => {
+				if (ignore.includes(rule.selector)) return;
 				rules.push(rule);
 				rule.walkDecls(/^--/, (decl) => {
 					declarations[decl.prop] = decl;
@@ -33,6 +39,23 @@ module.exports = () => {
 
 			if (!rules.length) return;
 
+			if (newSelector) {
+				// Create a new rule with the combined declarations
+				const newRule = new Rule({ selector: newSelector });
+				for (const decl of Object.values(declarations)) {
+					newRule.append(decl);
+				}
+				root.append(newRule);
+
+				// Remove the rules from the root
+				rules.forEach((rule) => {
+					rule.remove();
+				});
+
+				return;
+			}
+
+			// If no new selector is provided, combine the declarations into the last rule
 			const lastIdx = rules.length - 1;
 			const lastRule = rules[lastIdx];
 			if (!lastRule) return;
