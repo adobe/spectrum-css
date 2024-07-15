@@ -5,33 +5,7 @@ name: Lint
 
 on:
     workflow_dispatch:
-        inputs:
-            styles_added_files:
-                type: string
-                required: false
-            styles_modified_files:
-                type: string
-                required: false
-            eslint_added_files:
-                type: string
-                required: false
-            eslint_modified_files:
-                type: string
-                required: false
     workflow_call:
-        inputs:
-            styles_added_files:
-                type: string
-                required: false
-            styles_modified_files:
-                type: string
-                required: false
-            eslint_added_files:
-                type: string
-                required: false
-            eslint_modified_files:
-                type: string
-                required: false
 
 permissions:
     contents: read
@@ -77,24 +51,20 @@ jobs:
               run: yarn install --immutable
 
             - name: Lint component styles
-              if: ${{ inputs.styles_added_files != '' || inputs.styles_modified_files != '' }}
-              uses: reviewdog/action-stylelint@v1.18.1
+              uses: reviewdog/action-stylelint@v1.28.0
               with:
                   fail_on_error: true
                   level: error
                   reporter: github-pr-check
                   filter_mode: diff_context
-                #   stylelint_input: "components/*/index.css components/*/themes/*.css"
-                  stylelint_input: "${{ inputs.styles_added_files }} ${{ inputs.styles_modified_files }}"
+                  stylelint_input: "components/*/*.css components/*/themes/*.css"
                   stylelint_config: stylelint.config.js
 
             - name: Run eslint on packages and stories
-              uses: reviewdog/action-eslint@v1.20.0
-              if: ${{ inputs.eslint_added_files != '' || inputs.eslint_modified_files != '' }}
+              uses: reviewdog/action-eslint@v1.30.0
               with:
                   fail_on_error: true
                   level: error
                   reporter: github-pr-check
                   filter_mode: diff_context
-                #   eslint_flags: "components/*/stories/*.js"
-                  eslint_flags: "${{ inputs.eslint_added_files }} ${{ inputs.eslint_modified_files }}"
+                  eslint_flags: "components/*/stories/*.js"

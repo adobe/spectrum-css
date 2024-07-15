@@ -18634,9 +18634,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-property-rollup@workspace:plugins/postcss-property-rollup":
+"postcss-property-rollup@workspace:plugins/postcss-combine-selectors":
   version: 0.0.0-use.local
-  resolution: "postcss-property-rollup@workspace:plugins/postcss-property-rollup"
+  resolution: "postcss-property-rollup@workspace:plugins/postcss-combine-selectors"
   dependencies:
     ava: "npm:^6.1.3"
     c8: "npm:^9.1.0"
