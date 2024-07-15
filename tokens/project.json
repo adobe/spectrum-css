@@ -13,18 +13,18 @@
 		"build": {
 			"cache": false,
 			"dependsOn": ["clean", "style-dictionary"],
-			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"executor": "nx:run-commands",
+			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
 					"postcss ./custom-express/*.css --dir ./dist/css/express/",
 					"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
-					"cp -r ./components ./dist/css/components",
+					"test -d ./dist/css/components && cp -r ./components ./dist/css/components || mkdir -p ./dist/css/components",
 					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
 					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css",
-					"mv ./dist/css/spectrum/custom-dark-vars.css ./dist/css/spectrum/dark-vars.css",
-					"mv ./dist/css/spectrum/custom-light-vars.css ./dist/css/spectrum/light-vars.css",
-					"mv ./dist/css/spectrum/custom-darkest-vars.css ./dist/css/spectrum/darkest-vars.css",
+					"mv ./custom-spectrum/custom-dark-vars.css ./dist/css/spectrum/dark-vars.css",
+					"mv ./custom-spectrum/custom-light-vars.css ./dist/css/spectrum/light-vars.css",
+					"mv ./custom-spectrum/custom-darkest-vars.css ./dist/css/spectrum/darkest-vars.css",
 					"cat ./dist/css/spectrum/medium-vars.css ./dist/css/spectrum/custom-medium-vars.css | postcss --output ./dist/css/spectrum/medium-vars.css",
 					"cat ./dist/css/spectrum/large-vars.css ./dist/css/spectrum/custom-large-vars.css | postcss --output ./dist/css/spectrum/large-vars.css",
 					"cat ./dist/css/spectrum/global-vars.css ./dist/css/spectrum/custom-vars.css | postcss --output ./dist/css/spectrum/global-vars.css",
@@ -48,16 +48,16 @@
 		},
 		"clean": {
 			"cache": false,
-			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
-			"outputs": [],
 			"executor": "nx:run-commands",
+			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
 			"options": {
 				"commands": [
 					"rimraf {projectRoot}/dist",
 					"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
 				],
 				"parallel": false
-			}
+			},
+			"outputs": []
 		},
 		"style-dictionary": {
 			"dependsOn": ["clean"],

@@ -6013,7 +6013,7 @@ __metadata:
     c8: "npm:^9.1.0"
     colors: "npm:^1.4.0"
     fast-glob: "npm:^3.3.2"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.4.39"
     postcss-value-parser: "npm:^4.2.0"
     stylelint: "npm:^15.11.0"
   peerDependencies:
@@ -9662,7 +9662,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-name@npm:~1.1.4":
+"color-name@npm:^1.1.4, color-name@npm:~1.1.4":
   version: 1.1.4
   resolution: "color-name@npm:1.1.4"
   checksum: 10c0/a1a3f914156960902f46f7f56bc62effc6c94e84b2cae157a526b1c1f74b677a47ec602bf68a61abfa2b42d15b7c5651c6dbe72a43af720bc588dff885b10f95
@@ -14443,6 +14443,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-url-superb@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "is-url-superb@npm:4.0.0"
+  checksum: 10c0/354ea8246d5b5a828e41bb4ed66c539a7b74dc878ee4fa84b148df312b14b08118579d64f0893b56a0094e3b4b1e6082d2fbe2e3792998d7edffde1c0f3dfdd9
+  languageName: node
+  linkType: hard
+
 "is-weakmap@npm:^2.0.2":
   version: 2.0.2
   resolution: "is-weakmap@npm:2.0.2"
@@ -17453,6 +17460,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-add-theming-layer@workspace:^, postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer":
+  version: 0.0.0-use.local
+  resolution: "postcss-add-theming-layer@workspace:plugins/postcss-add-theming-layer"
+  dependencies:
+    ava: "npm:^6.1.3"
+    c8: "npm:^9.1.0"
+    postcss: "npm:^8.4.39"
+    postcss-selector-parser: "npm:^6.1.1"
+    postcss-values-parser: "npm:^6.0.2"
+  languageName: unknown
+  linkType: soft
+
 "postcss-attribute-case-insensitive@npm:^6.0.3":
   version: 6.0.3
   resolution: "postcss-attribute-case-insensitive@npm:6.0.3"
@@ -17590,15 +17609,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-combininator@workspace:^, postcss-combininator@workspace:plugins/postcss-combininator":
-  version: 0.0.0-use.local
-  resolution: "postcss-combininator@workspace:plugins/postcss-combininator"
-  dependencies:
-    ava: "npm:^6.1.3"
-    postcss: "npm:^8.4.38"
-  languageName: unknown
-  linkType: soft
-
 "postcss-convert-values@npm:^7.0.0":
   version: 7.0.0
   resolution: "postcss-convert-values@npm:7.0.0"
@@ -17642,7 +17652,7 @@ __metadata:
   resolution: "postcss-custom-properties-mapping@workspace:plugins/postcss-custom-properties-mapping"
   dependencies:
     fast-glob: "npm:^3.3.2"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.4.39"
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     postcss: ">=8"
@@ -18313,6 +18323,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-property-rollup@workspace:^, postcss-property-rollup@workspace:plugins/postcss-property-rollup":
+  version: 0.0.0-use.local
+  resolution: "postcss-property-rollup@workspace:plugins/postcss-property-rollup"
+  dependencies:
+    ava: "npm:^6.1.3"
+    c8: "npm:^9.1.0"
+    postcss: "npm:^8.4.39"
+  languageName: unknown
+  linkType: soft
+
 "postcss-pseudo-class-any-link@npm:^9.0.2":
   version: 9.0.2
   resolution: "postcss-pseudo-class-any-link@npm:9.0.2"
@@ -18413,7 +18433,7 @@ __metadata:
   dependencies:
     ava: "npm:^6.1.3"
     c8: "npm:^9.1.0"
-    postcss: "npm:^8.4.38"
+    postcss: "npm:^8.4.39"
     postcss-value-parser: "npm:^4.2.0"
   peerDependencies:
     postcss: ">=8.0.0"
@@ -18469,6 +18489,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-selector-parser@npm:^6.1.1":
+  version: 6.1.1
+  resolution: "postcss-selector-parser@npm:6.1.1"
+  dependencies:
+    cssesc: "npm:^3.0.0"
+    util-deprecate: "npm:^1.0.2"
+  checksum: 10c0/5608765e033fee35d448e1f607ffbaa750eb86901824a8bc4a911ea8bc137cb82f29239330787427c5d3695afd90d8721e190f211dbbf733e25033d8b3100763
+  languageName: node
+  linkType: hard
+
 "postcss-sorting@npm:^8.0.2":
   version: 8.0.2
   resolution: "postcss-sorting@npm:8.0.2"
@@ -18477,14 +18507,6 @@ __metadata:
   checksum: 10c0/955c72d8d71b6b54dcdcbcef765a593803512d215cef12a49b71d1abf8ab8d2dacb5645dbb5a0a6535609aab6bffb834599d6073f28fe61e589a4437af85e243
   languageName: node
   linkType: hard
-
-"postcss-splitinator@workspace:^, postcss-splitinator@workspace:plugins/postcss-splitinator":
-  version: 0.0.0-use.local
-  resolution: "postcss-splitinator@workspace:plugins/postcss-splitinator"
-  dependencies:
-    postcss: "npm:^8.4.38"
-  languageName: unknown
-  linkType: soft
 
 "postcss-svgo@npm:^7.0.0":
   version: 7.0.0
@@ -18539,6 +18561,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-values-parser@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "postcss-values-parser@npm:6.0.2"
+  dependencies:
+    color-name: "npm:^1.1.4"
+    is-url-superb: "npm:^4.0.0"
+    quote-unquote: "npm:^1.0.0"
+  peerDependencies:
+    postcss: ^8.2.9
+  checksum: 10c0/633b8bc7c46f7b6e2b1cb1f33aa0222a5cacb7f485eb41e6f902b5f37ab9884cd8e7e7b0706afb7e3c7766d85096b59e65f59a1eaefac55e2fc952a24f23bcb8
+  languageName: node
+  linkType: hard
+
 "postcss-zindex@npm:^7.0.0":
   version: 7.0.0
   resolution: "postcss-zindex@npm:7.0.0"
@@ -18568,6 +18603,17 @@ __metadata:
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.2.0"
   checksum: 10c0/955407b8f70cf0c14acf35dab3615899a2a60a26718a63c848cf3c29f2467b0533991b985a2b994430d890bd7ec2b1963e36352b0774a19143b5f591540f7c06
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.39":
+  version: 8.4.39
+  resolution: "postcss@npm:8.4.39"
+  dependencies:
+    nanoid: "npm:^3.3.7"
+    picocolors: "npm:^1.0.1"
+    source-map-js: "npm:^1.2.0"
+  checksum: 10c0/16f5ac3c4e32ee76d1582b3c0dcf1a1fdb91334a45ad755eeb881ccc50318fb8d64047de4f1601ac96e30061df203f0f2e2edbdc0bfc49b9c57bc9fb9bedaea3
   languageName: node
   linkType: hard
 
@@ -19001,6 +19047,13 @@ __metadata:
   version: 5.1.1
   resolution: "quick-lru@npm:5.1.1"
   checksum: 10c0/a24cba5da8cec30d70d2484be37622580f64765fb6390a928b17f60cd69e8dbd32a954b3ff9176fa1b86d86ff2ba05252fae55dc4d40d0291c60412b0ad096da
+  languageName: node
+  linkType: hard
+
+"quote-unquote@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "quote-unquote@npm:1.0.0"
+  checksum: 10c0/eba86bb7f68ada486f5608c5c71cc155235f0408b8a0a180436cdf2457ae86f56a17de6b0bc5a1b7ae5f27735b3b789662cdf7f3b8195ac816cd0289085129ec
   languageName: node
   linkType: hard
 
@@ -20467,14 +20520,16 @@ __metadata:
     open: "npm:^10.1.0"
     pajv: "npm:^1.2.0"
     postcss: "npm:^8.4.38"
-    postcss-combininator: "workspace:^"
+    postcss-add-theming-layer: "workspace:^"
     postcss-extend: "npm:^1.0.5"
     postcss-hover-media-feature: "npm:^1.0.2"
     postcss-import: "npm:^16.1.0"
+    postcss-licensing: "npm:^2.0.0"
     postcss-load-config: "npm:^5.1.0"
     postcss-preset-env: "npm:^9.5.13"
+    postcss-property-rollup: "workspace:^"
     postcss-reporter: "npm:^7.1.0"
-    postcss-splitinator: "workspace:^"
+    postcss-sorting: "npm:^8.0.2"
     prettier: "npm:^3.2.5"
     rimraf: "npm:^5.0.7"
     stylelint: "npm:^15.11.0"

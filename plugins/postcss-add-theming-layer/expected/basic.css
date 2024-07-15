@@ -1,0 +1,41 @@
+.legacy {
+	--system-component-background-color: blue;
+	--system-component-selected-background-color: darkblue;
+	--system-component-icon-color: gray;
+	--system-where-component-background-color: blue;
+	--system-component-where-selected-background-color: darkblue;
+	--system-component-has-icon-color: gray;
+}
+
+.modern {
+	--system-component-background-color: purple;
+	--system-component-selected-background-color: indigo;
+	--system-component-icon-color: white;
+	--system-where-component-background-color: indigo;
+	--system-component-where-selected-background-color: darkpurple;
+	--system-component-has-icon-color: white;
+}
+
+.component {
+	--background-color: var(--system-component-background-color);
+}
+
+.component.is-selected {
+	--background-color: var(--system-component-selected-background-color);
+}
+
+.component .icon {
+	--color: var(--system-component-icon-color);
+}
+
+:where(.component) {
+	--background-color: var(--system-where-component-background-color);
+}
+
+.component:where(:selected, .is-selected) {
+	--background-color: var(--system-component-where-selected-background-color);
+}
+
+.component:has(.icon) {
+	--color: var(--system-component-has-icon-color);
+}

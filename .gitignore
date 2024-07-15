@@ -1,9 +1,13 @@
 dist
 dist-site
-!tokens/dist/index.css
+
+tokens/components
+tokens/dist
 !tokens/dist/css/*.css
 !tokens/dist/css/express/*.css
 !tokens/dist/css/spectrum/*.css
+
+!components/*/dist/metadata.json
 
 # Not committing the map assets, these are dev-only
 *.map

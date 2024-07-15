@@ -37,6 +37,9 @@ async function index({ cwd = process.cwd(), clean = false } = {}) {
 
 		const inputs = await fg(["dist/css/components/" + dir + "/*.css"], { cwd });
 		const contents = inputs.map(input => `@import "./${path.basename(input)}";`).join("\n");
+
+		if (!contents) return;
+
 		return processCSS(contents, inputs[0], outputPath, { cwd, clean, configPath: cwd, map: false });
 	}));
 }

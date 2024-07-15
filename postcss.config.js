@@ -90,12 +90,16 @@ module.exports = ({
 			"postcss-hover-media-feature": {},
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
-			"postcss-splitinator": {
+			"postcss-add-theming-layer": {
 				processIdentifier: (identifier) =>
 					identifier === "express" ? "spectrum--express" : identifier,
 				...splitinatorOptions,
 			},
-			"postcss-combininator": combine ? {} : false,
+			"postcss-property-rollup": combine ? {} : false,
+			"postcss-sorting": {
+				order: ["custom-properties", "declarations", "at-rules", "rules"],
+				"properties-order": "alphabetical",
+			},
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
@@ -135,13 +139,15 @@ module.exports = ({
 					{
 						colormin: false,
 						reduceIdents: false,
-						discardComments: {
-							removeAllButFirst: true,
-						},
+						discardComments: { removeAll: true },
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
+						normalizeWhitespace: false,
 					},
 				],
+			},
+			"postcss-licensing": {
+				filename: "./COPYRIGHT",
 			},
 			/* --------------------------------------------------- */
 			/* ------------------- REPORTING --------------------- */

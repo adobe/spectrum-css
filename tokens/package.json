@@ -20,12 +20,6 @@
 		"README.md",
 		"package.json"
 	],
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
 	"devDependencies": {
 		"@adobe/spectrum-tokens": "12.25.0",
 		"@nxkit/style-dictionary": "^5.0.0",
@@ -40,6 +34,12 @@
 		"style-dictionary": "^3.9.2",
 		"style-dictionary-sets": "^2.3.0"
 	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
 	"publishConfig": {
 		"access": "public"
 	}

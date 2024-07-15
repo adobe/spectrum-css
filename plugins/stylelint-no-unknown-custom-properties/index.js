@@ -1,5 +1,5 @@
 /*!
- * Copyright 2023 Adobe. All rights reserved.
+ * Copyright 2024 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
  * of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -27,7 +27,6 @@ const messages = ruleMessages(ruleName, {
 	expected: (prop) => `Custom property ${prop.magenta} not defined`,
 });
 
-const fg = require("fast-glob");
 const postcss = require("postcss");
 const valueParser = require("postcss-value-parser");
 
@@ -69,14 +68,6 @@ const ruleFunction = (enabled, options = {}) => {
 		const componentRoot = parts.slice(0, rootIdx + 2).join(path.sep);
 
 		const sharedDefinitions = new Set();
-
-		for (const themePath of fg.sync(["themes/*.css"], { cwd: componentRoot, absolute: true })) {
-			const content = fs.readFileSync(themePath, "utf8");
-			if (!content) continue;
-			postcss.parse(content).walkDecls(/^--/, ({ prop }) => {
-				sharedDefinitions.add(prop);
-			});
-		}
 
 		function fetchResolutions(depName) {
 			let req;
