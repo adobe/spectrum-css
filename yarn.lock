@@ -17886,16 +17886,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-load-config@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "postcss-load-config@npm:5.1.0"
+"postcss-load-config@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "postcss-load-config@npm:6.0.1"
   dependencies:
     lilconfig: "npm:^3.1.1"
-    yaml: "npm:^2.4.2"
   peerDependencies:
     jiti: ">=1.21.0"
     postcss: ">=8.0.9"
     tsx: ^4.8.1
+    yaml: ^2.4.2
   peerDependenciesMeta:
     jiti:
       optional: true
@@ -17903,7 +17903,9 @@ __metadata:
       optional: true
     tsx:
       optional: true
-  checksum: 10c0/1631f2869619387166cf0aa900b5f3f652578862c0abbd8d9e9e1d679929c42720dd65f7ce60ccf930f94d4440ebdc3aa6b69d33e2df82b761a079d8cba87e23
+    yaml:
+      optional: true
+  checksum: 10c0/74173a58816dac84e44853f7afbd283f4ef13ca0b6baeba27701214beec33f9e309b128f8102e2b173e8d45ecba45d279a9be94b46bf48d219626aa9b5730848
   languageName: node
   linkType: hard
 
@@ -20470,7 +20472,7 @@ __metadata:
     postcss-extend: "npm:^1.0.5"
     postcss-hover-media-feature: "npm:^1.0.2"
     postcss-import: "npm:^16.1.0"
-    postcss-load-config: "npm:^5.1.0"
+    postcss-load-config: "npm:^6.0.1"
     postcss-preset-env: "npm:^9.5.13"
     postcss-reporter: "npm:^7.1.0"
     postcss-splitinator: "workspace:^"
@@ -22844,7 +22846,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.4.2, yaml@npm:~2.4.2":
+"yaml@npm:~2.4.2":
   version: 2.4.2
   resolution: "yaml@npm:2.4.2"
   bin:
