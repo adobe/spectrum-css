@@ -26,31 +26,22 @@ export const Template = ({
 	const [, updateArgs] = useArgs();
 	const { globals = {} } = context;
 	const textDir = globals.textDir ?? "ltr";
+	const isNestedPopover = id === "popover-nested" || id === "popover-nested-2";
 
-	const nestedPopover = id === "popover-nested" || id === "popover-nested-2";
+	/**
+	 * Adjust popover's position in relation to the source/trigger element.
+	 * Changes both the transform and the absolute positioning.
+	 */
+	const positionPopover = () => {
+		// Nested popover is static and open, so we don't need to reposition it.
+		if (isNestedPopover || !isOpen || !position) return;
 
-	const positionPopover = (count = 0) => {
-		// Nested popover is static and open, so we don't need transforms for it
-		if (nestedPopover || !isOpen) return;
-
-		// No trigger? Nothing to do.
-		if (!position) return;
-
-		// Get trigger element and popover
-		let element = document.querySelector(`#${triggerId}`);
+		// Get trigger (source) and popover elements
+		const element = document.querySelector(`#${triggerId}`);
 		const popover = document.querySelector(`#${id}`);
 
-		if (!element) {
-			if (count <= 10) {
-				setTimeout(() => positionPopover(count++), 100);
-			}
-
-			// Use the popover container as the trigger
-			element = popover.parentElement;
-		}
-
-		if (!popover) return;
-
+		if (!element || !popover) return;
+	
 		const rect = element.getBoundingClientRect();
 
 		const transforms = [];
@@ -114,6 +105,7 @@ export const Template = ({
 			xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
 		}
 
+		// Offset popover with translateX and/or translateY.
 		if (x) transforms.push(`translateX(calc(var(--flow-direction) * calc(${parseInt(x, 10)}px ${xOffset})))`);
 		if (y) transforms.push(`translateY(calc(${y}px ${yOffset}))`);
 
@@ -121,18 +113,26 @@ export const Template = ({
 			popover.style.transform = transforms.join(" ");
 		}
 
-		// Add start and end styles
+		// Add start and end styles 
 		if (position === "top-start" || position === "bottom-start") {
 			popover.style["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
+			popover.style["inset-block-start"] = "0px";
 		}
 		else if (position === "top-end" || position === "bottom-end") {
 			popover.style["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
+			popover.style["inset-block-start"] = "0px";
 		}
 		else if (position === "left-top" || position === "right-top" || position === "start-top" || position === "end-top") {
 			popover.style["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
+			popover.style["inset-inline-start"] = "0px";
 		}
 		else if (position === "left-bottom" || position === "right-bottom" || position === "start-bottom" || position === "end-bottom") {
 			popover.style["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
+			popover.style["inset-inline-start"] = "0px";
+		}
+		else {
+			popover.style["inset-inline-start"] = "0px";
+			popover.style["inset-block-start"] = "0px";
 		}
 	};
 
@@ -146,8 +146,8 @@ export const Template = ({
 
 	return html`
 		${when(typeof trigger === "function", () => trigger({
-			isSelected: nestedPopover ?? isOpen,
-			isOpen: nestedPopover ?? true,
+			isSelected: isNestedPopover ?? isOpen,
+			isOpen: isNestedPopover ?? true,
 			id: triggerId,
 			popupId: id,
 			onclick: () => {
@@ -165,11 +165,7 @@ export const Template = ({
 				[`${rootClass}--${position}`]: typeof position !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap({
-				"inset-inline-start": "0px",
-				"inset-block-start": "0px",
-				...customStyles,
-			}))}
+			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId ?? id)}
@@ -213,18 +209,20 @@ export const Variants = (args, context) => {
 							customClasses: ["chromatic-ignore"],
 						}, context)}
 						<div style=${styleMap({
-							"padding": "1rem",
+							"padding": "16px",
 							"block-size": "200px",
 							"inline-size": "200px",
 							"border": "1px solid var(--spectrum-gray-200)",
 							"border-radius": "4px",
 						})}>
-							${Template({
-								...args,
-								position: option,
-								isOpen: true,
-								trigger: () => null,
-							}, context)}
+							<div style="position: relative">
+								${Template({
+									...args,
+									position: option,
+									isOpen: true,
+									trigger: () => null,
+								}, context)}
+							</div>
 						</div>
 						${when(optionDescription, () => html`
 							${Typography({

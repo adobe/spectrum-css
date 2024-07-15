@@ -2,9 +2,9 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
+import { html } from "lit";
 import { version } from "../package.json";
 import { Template, Variants } from "./template";
-
 /**
  * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
  */
@@ -66,6 +66,7 @@ export default {
 		isOpen: true,
 		withTip: false,
 		position: "top",
+		content: [html`<div style="padding-inline: 8px;">Basic popover text content with some added padding.</div>`],
 	},
 	parameters: {
 		layout: "centered",
