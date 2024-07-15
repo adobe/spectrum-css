@@ -445,6 +445,6 @@ governing permissions and limitations under the License.
 
 @media (forced-colors: active) {
 	.spectrum-Dialog {
-		border: solid;
+		border: 1px solid var(--highcontrast-standard-dialog-border-color, rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity)));
 	}
 }
