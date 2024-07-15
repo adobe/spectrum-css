@@ -14,7 +14,7 @@
 @import "themes/spectrum-two.css";
 
 /* Typography */
-.spectrum {
+.spectrum-Typography {
 	font-family: var(--spectrum-font-family);
 	font-size: var(--spectrum-font-size);
 	font-style: var(--spectrum-font-style);
@@ -25,6 +25,21 @@
 
 	&:lang(he) {
 		font-family: var(--spectrum-font-family-he);
+	}
+
+	/* Add margin when inside a Typography component */
+	.spectrum-Heading {
+		--spectrum-heading-margin-start: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier));
+		--spectrum-heading-margin-end: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier));
+	}
+
+	.spectrum-Body {
+		--spectrum-body-margin-end: calc(var(--mod-body-font-size, var(--spectrum-body-font-size)) * var(--spectrum-body-margin-multiplier));
+	}
+
+	.spectrum-Detail {
+		--spectrum-detail-margin-start: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-top-multiplier));
+		--spectrum-detail-margin-end: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-bottom-multiplier));
 	}
 }
 
@@ -49,8 +64,8 @@
 
 /* Heading */
 .spectrum-Heading {
-	margin-block-start: 0;
-	margin-block-end: 0;
+	margin-block-start: var(--mod-heading-margin-start, var(--spectrum-heading-margin-start, 0));
+	margin-block-end: var(--mod-heading-margin-end, var(--spectrum-heading-margin-end, 0));
 	font-family: var(--mod-heading-sans-serif-font-family, var(--spectrum-heading-sans-serif-font-family));
 	font-size: var(--mod-heading-font-size, var(--spectrum-heading-font-size));
 	font-weight: var(--mod-heading-sans-serif-font-weight, var(--spectrum-heading-sans-serif-font-weight));
@@ -287,16 +302,10 @@
 	}
 }
 
-/* Add margin when inside a Typography component */
-.spectrum-Typography .spectrum-Heading {
-	margin-block-start: var(--mod-heading-margin-start, var(--spectrum-heading-margin-start));
-	margin-block-end: var(--mod-heading-margin-end, var(--spectrum-heading-margin-end));
-}
-
 /* Body */
 .spectrum-Body {
-	margin-block-start: 0;
-	margin-block-end: 0;
+	margin-block-start: var(--mod-body-margin-start, var(--mod-body-margin, var(--spectrum-body-margin-start, 0)));
+	margin-block-end: var(--mod-body-margin-end, var(--mod-body-margin, var(--spectrum-body-margin-end, 0)));
 	font-family: var(--mod-body-sans-serif-font-family, var(--spectrum-body-sans-serif-font-family));
 	font-size: var(--mod-body-font-size, var(--spectrum-body-font-size));
 	font-weight: var(--mod-body-sans-serif-font-weight, var(--spectrum-body-sans-serif-font-weight));
@@ -382,15 +391,10 @@
 	}
 }
 
-/* Add margin when inside a Typography component */
-.spectrum-Typography .spectrum-Body {
-	margin-block-end: var(--mod-body-margin, var(--spectrum-body-margin));
-}
-
 /* Detail */
 .spectrum-Detail {
-	margin-block-start: 0;
-	margin-block-end: 0;
+	margin-block-start: var(--mod-detail-margin-start, var(--spectrum-detail-margin-start, 0));
+	margin-block-end: var(--mod-detail-margin-end, var(--spectrum-detail-margin-end, 0));
 	font-family: var(--mod-detail-sans-serif-font-family, var(--spectrum-detail-sans-serif-font-family));
 	font-size: var(--mod-detail-font-size, var(--spectrum-detail-font-size));
 	font-weight: var(--mod-detail-sans-serif-font-weight, var(--spectrum-detail-sans-serif-font-weight));
@@ -551,16 +555,10 @@
 	}
 }
 
-/* Add margin when inside a Typography component */
-.spectrum-Typography .spectrum-Detail {
-	margin-block-start: var(--mod-detail-margin-start, var(--spectrum-detail-margin-start));
-	margin-block-end: var(--mod-detail-margin-end, var(--spectrum-detail-margin-end));
-}
-
 /* Code */
 .spectrum-Code {
-	margin-block-start: 0;
-	margin-block-end: 0;
+	margin-block-start: var(--mod-code-margin-start, var(--spectrum-code-margin-end, 0));
+	margin-block-end: var(--mod-code-margin-end, var(--spectrum-code-margin-end, 0));
 	font-family: var(--mod-code-font-family, var(--spectrum-code-font-family));
 	font-size: var(--mod-code-font-size, var(--spectrum-code-font-size));
 	font-weight: var(--mod-code-font-weight, var(--spectrum-code-font-weight));

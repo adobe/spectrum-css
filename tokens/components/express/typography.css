@@ -22,8 +22,6 @@
 	--system-heading-heading-cjk-font-family: var(--spectrum-cjk-font-family-stack);
 	--system-heading-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
 	--system-heading-heading-font-color: var(--spectrum-heading-color);
-	--system-heading-heading-margin-start: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-top-multiplier));
-	--system-heading-heading-margin-end: calc(var(--mod-heading-font-size, var(--spectrum-heading-font-size)) * var(--spectrum-heading-margin-bottom-multiplier));
 	--system-heading-size-xxs-heading-font-size: var(--spectrum-heading-size-xxs);
 	--system-heading-size-xxs-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxs);
 	--system-heading-size-xs-heading-font-size: var(--spectrum-heading-size-xs);
@@ -46,7 +44,6 @@
 	--system-body-body-serif-font-family: var(--spectrum-serif-font-family-stack);
 	--system-body-body-cjk-font-family: var(--spectrum-cjk-font-family-stack);
 	--system-body-body-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
-	--system-body-body-margin: calc(var(--mod-body-font-size, var(--spectrum-body-font-size)) * var(--spectrum-body-margin-multiplier));
 	--system-body-body-font-color: var(--spectrum-body-color);
 	--system-body-size-xs-body-font-size: var(--spectrum-body-size-xs);
 	--system-body-size-s-body-font-size: var(--spectrum-body-size-s);
@@ -59,8 +56,6 @@
 	--system-detail-detail-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
 	--system-detail-detail-serif-font-family: var(--spectrum-serif-font-family-stack);
 	--system-detail-detail-cjk-font-family: var(--spectrum-cjk-font-family-stack);
-	--system-detail-detail-margin-start: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-top-multiplier));
-	--system-detail-detail-margin-end: calc(var(--mod-detail-font-size, var(--spectrum-detail-font-size)) * var(--spectrum-detail-margin-bottom-multiplier));
 	--system-detail-detail-font-color: var(--spectrum-detail-color);
 	--system-detail-size-s-detail-font-size: var(--spectrum-detail-size-s);
 	--system-detail-detail-font-size: var(--spectrum-detail-size-m);
