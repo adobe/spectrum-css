@@ -77,6 +77,10 @@ export default {
 		},
 		componentVersion: version,
 	},
+	decorators: [
+		// Add padding for VRT so drop shadows are not cut off.
+		(story) => window.isChromatic() ? html`<div style="padding: 32px;">${story()}</div>` : story(),
+	],
 };
 
 export const Default = Template.bind({});

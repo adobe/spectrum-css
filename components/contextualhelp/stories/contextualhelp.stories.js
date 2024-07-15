@@ -1,5 +1,6 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -79,6 +80,8 @@ export default {
 		rootClass: "spectrum-ContextualHelp",
 		iconName: "Info",
 		popoverPlacement: "bottom-start",
+		title: "Permission required",
+		body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	},
 	parameters: {
 		actions: {
@@ -88,18 +91,17 @@ export default {
 		},
 		componentVersion: version,
 	},
+	decorators: [
+		// Add padding for VRT so drop shadows are not cut off.
+		(story) => window.isChromatic() ? html`<div style="padding: 32px;">${story()}</div>` : story(),
+	],
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	title: "Permission required",
-	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-};
+Default.args = {};
 
 export const WithLink = Template.bind({});
 WithLink.args = {
-	title: "Permission required",
-	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	link: {
 		text: "Learn about permissions",
 		url: "#",
@@ -118,8 +120,6 @@ TopPopover.args = {
 export const HelpDefault = Template.bind({});
 HelpDefault.tags = ["autodocs", "!dev"];
 HelpDefault.args = {
-	title: "Permission required",
-	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	iconName: "Help",
 };
 HelpDefault.parameters = {
@@ -129,8 +129,6 @@ HelpDefault.parameters = {
 export const HelpWithLink = Template.bind({});
 HelpWithLink.tags = ["autodocs", "!dev"];
 HelpWithLink.args = {
-	title: "Permission required",
-	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	link: {
 		text: "Learn about permissions",
 		url: "#",
@@ -155,7 +153,8 @@ HelpTopPopover.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
