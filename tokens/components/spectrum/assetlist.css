@@ -12,21 +12,21 @@
  */
 
 .spectrum--legacy {
-	--system-asset-list-assetlist-width: 272px;
-	--system-asset-list-assetlist-child-indicator-animation: var(--spectrum-animation-duration-100);
-	--system-asset-list-assetlist-item-height: var(--spectrum-spacing-600);
-	--system-asset-list-assetlist-item-padding-inline-start: var(--spectrum-spacing-300);
-	--system-asset-list-assetlist-item-padding-inline-end: var(--spectrum-spacing-300);
-	--system-asset-list-assetlist-item-margin-block-end: var(--spectrum-spacing-75);
-	--system-asset-list-assetlist-item-border-radius: var(--spectrum-spacing-75);
-	--system-asset-list-assetlist-item-animation: var(--spectrum-animation-duration-100);
-	--system-asset-list-assetlist-item-font-size: var(--spectrum-font-size-100);
-	--system-asset-list-assetlist-item-font-weight: var(--spectrum-regular-font-weight);
-	--system-asset-list-assetlist-item-background-color-down: var(--spectrum-gray-300);
-	--system-asset-list-assetlist-item-background-color-hover: var(--spectrum-gray-200);
-	--system-asset-list-assetlist-thumbnail-width: var(--spectrum-spacing-400);
-	--system-asset-list-assetlist-thumbnail-height: var(--spectrum-spacing-400);
-	--system-asset-list-assetlist-thumbnail-margin-inline-start: var(--spectrum-spacing-100);
-	--system-asset-list-assetlist-item-label-padding-inline-start: var(--spectrum-spacing-100);
-	--system-asset-list-assetlist-label-color: var(--spectrum-neutral-content-color-default);
+	--system-asset-list-width: 272px;
+	--system-asset-list-child-indicator-animation: var(--spectrum-animation-duration-100);
+	--system-asset-list-item-height: var(--spectrum-spacing-600);
+	--system-asset-list-item-padding-inline-start: var(--spectrum-spacing-300);
+	--system-asset-list-item-padding-inline-end: var(--spectrum-spacing-300);
+	--system-asset-list-item-margin-block-end: var(--spectrum-spacing-75);
+	--system-asset-list-item-border-radius: var(--spectrum-spacing-75);
+	--system-asset-list-item-animation: var(--spectrum-animation-duration-100);
+	--system-asset-list-item-font-size: var(--spectrum-font-size-100);
+	--system-asset-list-item-font-weight: var(--spectrum-regular-font-weight);
+	--system-asset-list-item-background-color-down: var(--spectrum-gray-300);
+	--system-asset-list-item-background-color-hover: var(--spectrum-gray-200);
+	--system-asset-list-thumbnail-width: var(--spectrum-spacing-400);
+	--system-asset-list-thumbnail-height: var(--spectrum-spacing-400);
+	--system-asset-list-thumbnail-margin-inline-start: var(--spectrum-spacing-100);
+	--system-asset-list-item-label-padding-inline-start: var(--spectrum-spacing-100);
+	--system-asset-list-label-color: var(--spectrum-neutral-content-color-default);
 }

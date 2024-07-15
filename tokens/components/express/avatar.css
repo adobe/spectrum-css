@@ -12,30 +12,30 @@
  */
 
 .spectrum--legacy {
-	--system-avatar-avatar-color-opacity: 1;
-	--system-avatar-avatar-inline-size: var(--spectrum-avatar-size-100);
-	--system-avatar-avatar-block-size: var(--spectrum-avatar-size-100);
-	--system-avatar-avatar-border-radius: var(--spectrum-avatar-block-size);
-	--system-avatar-avatar-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--system-avatar-avatar-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--system-avatar-avatar-focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--system-avatar-avatar-color-opacity-disabled: var(--spectrum-avatar-opacity-disabled);
-	--system-avatar-size-50-avatar-inline-size: var(--spectrum-avatar-size-50);
-	--system-avatar-size-50-avatar-block-size: var(--spectrum-avatar-size-50);
-	--system-avatar-size-75-avatar-inline-size: var(--spectrum-avatar-size-75);
-	--system-avatar-size-75-avatar-block-size: var(--spectrum-avatar-size-75);
-	--system-avatar-size-100-avatar-inline-size: var(--spectrum-avatar-size-100);
-	--system-avatar-size-100-avatar-block-size: var(--spectrum-avatar-size-100);
-	--system-avatar-size-200-avatar-inline-size: var(--spectrum-avatar-size-200);
-	--system-avatar-size-200-avatar-block-size: var(--spectrum-avatar-size-200);
-	--system-avatar-size-300-avatar-inline-size: var(--spectrum-avatar-size-300);
-	--system-avatar-size-300-avatar-block-size: var(--spectrum-avatar-size-300);
-	--system-avatar-size-400-avatar-inline-size: var(--spectrum-avatar-size-400);
-	--system-avatar-size-400-avatar-block-size: var(--spectrum-avatar-size-400);
-	--system-avatar-size-500-avatar-inline-size: var(--spectrum-avatar-size-500);
-	--system-avatar-size-500-avatar-block-size: var(--spectrum-avatar-size-500);
-	--system-avatar-size-600-avatar-inline-size: var(--spectrum-avatar-size-600);
-	--system-avatar-size-600-avatar-block-size: var(--spectrum-avatar-size-600);
-	--system-avatar-size-700-avatar-inline-size: var(--spectrum-avatar-size-700);
-	--system-avatar-size-700-avatar-block-size: var(--spectrum-avatar-size-700);
+	--system-avatar-color-opacity: 1;
+	--system-avatar-inline-size: var(--spectrum-avatar-size-100);
+	--system-avatar-block-size: var(--spectrum-avatar-size-100);
+	--system-avatar-border-radius: var(--system-avatar-block-size);
+	--system-avatar-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-avatar-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-avatar-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-avatar-color-opacity-disabled: var(--spectrum-avatar-opacity-disabled);
+	--system-avatar-size-50-inline-size: var(--spectrum-avatar-size-50);
+	--system-avatar-size-50-block-size: var(--spectrum-avatar-size-50);
+	--system-avatar-size-75-inline-size: var(--spectrum-avatar-size-75);
+	--system-avatar-size-75-block-size: var(--spectrum-avatar-size-75);
+	--system-avatar-size-100-inline-size: var(--spectrum-avatar-size-100);
+	--system-avatar-size-100-block-size: var(--spectrum-avatar-size-100);
+	--system-avatar-size-200-inline-size: var(--spectrum-avatar-size-200);
+	--system-avatar-size-200-block-size: var(--spectrum-avatar-size-200);
+	--system-avatar-size-300-inline-size: var(--spectrum-avatar-size-300);
+	--system-avatar-size-300-block-size: var(--spectrum-avatar-size-300);
+	--system-avatar-size-400-inline-size: var(--spectrum-avatar-size-400);
+	--system-avatar-size-400-block-size: var(--spectrum-avatar-size-400);
+	--system-avatar-size-500-inline-size: var(--spectrum-avatar-size-500);
+	--system-avatar-size-500-block-size: var(--spectrum-avatar-size-500);
+	--system-avatar-size-600-inline-size: var(--spectrum-avatar-size-600);
+	--system-avatar-size-600-block-size: var(--spectrum-avatar-size-600);
+	--system-avatar-size-700-inline-size: var(--spectrum-avatar-size-700);
+	--system-avatar-size-700-block-size: var(--spectrum-avatar-size-700);
 }

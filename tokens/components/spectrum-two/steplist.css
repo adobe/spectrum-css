@@ -12,21 +12,21 @@
  */
 
 .spectrum {
-	--system-steplist-steplist-step-width: 80px;
-	--system-steplist-steplist-marker-diameter: 8px;
-	--system-steplist-steplist-marker-hit-area: 20px;
-	--system-steplist-steplist-segment-height: 2px;
-	--system-steplist-steplist-top-padding: 22px;
-	--system-steplist-steplist-small-top-padding: 11px;
-	--system-steplist-steplist-side-padding: 60px;
-	--system-steplist-steplist-label-label-offset: 10px;
-	--system-steplist-steplist-label-text-size: 12px;
-	--system-steplist-steplist-current-label-text-color: var(--spectrum-gray-800);
-	--system-steplist-steplist-current-marker-color: var(--spectrum-gray-800);
-	--system-steplist-steplist-complete-label-text-color: var(--spectrum-gray-700);
-	--system-steplist-steplist-incomplete-label-color: var(--spectrum-gray-600);
-	--system-steplist-steplist-complete-marker-background-color: var(--spectrum-gray-600);
-	--system-steplist-steplist-incomplete-marker-border-color: var(--spectrum-gray-200);
-	--system-steplist-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
-	--system-steplist-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
+	--system-steplist-step-width: 80px;
+	--system-steplist-marker-diameter: 8px;
+	--system-steplist-marker-hit-area: 20px;
+	--system-steplist-segment-height: 2px;
+	--system-steplist-top-padding: 22px;
+	--system-steplist-small-top-padding: 11px;
+	--system-steplist-side-padding: 60px;
+	--system-steplist-label-label-offset: 10px;
+	--system-steplist-label-text-size: 12px;
+	--system-steplist-current-label-text-color: var(--spectrum-gray-800);
+	--system-steplist-current-marker-color: var(--spectrum-gray-800);
+	--system-steplist-complete-label-text-color: var(--spectrum-gray-700);
+	--system-steplist-incomplete-label-color: var(--spectrum-gray-600);
+	--system-steplist-complete-marker-background-color: var(--spectrum-gray-600);
+	--system-steplist-incomplete-marker-border-color: var(--spectrum-gray-200);
+	--system-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
+	--system-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
 }

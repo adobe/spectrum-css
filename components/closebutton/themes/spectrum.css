@@ -38,7 +38,6 @@
 
 		/* Size */
 		--spectrum-closebutton-height: var(--spectrum-component-height-100);
-		--spectrum-closebutton-width: var(--spectrum-closebutton-height);
 		--spectrum-closebutton-size: var(--spectrum-closebutton-size-400);
 		--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-400);
 
@@ -47,28 +46,24 @@
 
 	.spectrum-Closebutton--sizeS {
 		--spectrum-closebutton-height: var(--spectrum-component-height-75);
-		--spectrum-closebutton-width: var(--spectrum-closebutton-height);
 		--spectrum-closebutton-size: var(--spectrum-closebutton-size-300);
 		--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-300);
 	}
 
 	.spectrum-Closebutton--sizeM {
 		--spectrum-closebutton-height: var(--spectrum-component-height-100);
-		--spectrum-closebutton-width: var(--spectrum-closebutton-height);
 		--spectrum-closebutton-size: var(--spectrum-closebutton-size-400);
 		--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-400);
 	}
 
 	.spectrum-Closebutton--sizeL {
 		--spectrum-closebutton-height: var(--spectrum-component-height-200);
-		--spectrum-closebutton-width: var(--spectrum-closebutton-height);
 		--spectrum-closebutton-size: var(--spectrum-closebutton-size-500);
 		--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-500);
 	}
 
 	.spectrum-Closebutton--sizeXL {
 		--spectrum-closebutton-height: var(--spectrum-component-height-300);
-		--spectrum-closebutton-width: var(--spectrum-closebutton-height);
 		--spectrum-closebutton-size: var(--spectrum-closebutton-size-600);
 		--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-600);
 	}

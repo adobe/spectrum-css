@@ -12,57 +12,57 @@
  */
 
 .spectrum-Avatar {
-	--spectrum-avatar-color-opacity: var(--system-avatar-avatar-color-opacity);
-	--spectrum-avatar-inline-size: var(--system-avatar-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-avatar-block-size);
-	--spectrum-avatar-border-radius: var(--system-avatar-avatar-border-radius);
-	--spectrum-avatar-focus-indicator-thickness: var(--system-avatar-avatar-focus-indicator-thickness);
-	--spectrum-avatar-focus-indicator-gap: var(--system-avatar-avatar-focus-indicator-gap);
-	--spectrum-avatar-focus-indicator-color: var(--system-avatar-avatar-focus-indicator-color);
-	--spectrum-avatar-color-opacity-disabled: var(--system-avatar-avatar-color-opacity-disabled);
+	--spectrum-avatar-color-opacity: var(--system-avatar-color-opacity);
+	--spectrum-avatar-inline-size: var(--system-avatar-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-block-size);
+	--spectrum-avatar-border-radius: var(--system-avatar-border-radius);
+	--spectrum-avatar-focus-indicator-thickness: var(--system-avatar-focus-indicator-thickness);
+	--spectrum-avatar-focus-indicator-gap: var(--system-avatar-focus-indicator-gap);
+	--spectrum-avatar-focus-indicator-color: var(--system-avatar-focus-indicator-color);
+	--spectrum-avatar-color-opacity-disabled: var(--system-avatar-color-opacity-disabled);
 }
 
 .spectrum-Avatar--size50 {
-	--spectrum-avatar-inline-size: var(--system-avatar-size-50-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-size-50-avatar-block-size);
+	--spectrum-avatar-inline-size: var(--system-avatar-size-50-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-size-50-block-size);
 }
 
 .spectrum-Avatar--size75 {
-	--spectrum-avatar-inline-size: var(--system-avatar-size-75-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-size-75-avatar-block-size);
+	--spectrum-avatar-inline-size: var(--system-avatar-size-75-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-size-75-block-size);
 }
 
 .spectrum-Avatar--size100 {
-	--spectrum-avatar-inline-size: var(--system-avatar-size-100-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-size-100-avatar-block-size);
+	--spectrum-avatar-inline-size: var(--system-avatar-size-100-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-size-100-block-size);
 }
 
 .spectrum-Avatar--size200 {
-	--spectrum-avatar-inline-size: var(--system-avatar-size-200-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-size-200-avatar-block-size);
+	--spectrum-avatar-inline-size: var(--system-avatar-size-200-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-size-200-block-size);
 }
 
 .spectrum-Avatar--size300 {
-	--spectrum-avatar-inline-size: var(--system-avatar-size-300-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-size-300-avatar-block-size);
+	--spectrum-avatar-inline-size: var(--system-avatar-size-300-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-size-300-block-size);
 }
 
 .spectrum-Avatar--size400 {
-	--spectrum-avatar-inline-size: var(--system-avatar-size-400-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-size-400-avatar-block-size);
+	--spectrum-avatar-inline-size: var(--system-avatar-size-400-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-size-400-block-size);
 }
 
 .spectrum-Avatar--size500 {
-	--spectrum-avatar-inline-size: var(--system-avatar-size-500-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-size-500-avatar-block-size);
+	--spectrum-avatar-inline-size: var(--system-avatar-size-500-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-size-500-block-size);
 }
 
 .spectrum-Avatar--size600 {
-	--spectrum-avatar-inline-size: var(--system-avatar-size-600-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-size-600-avatar-block-size);
+	--spectrum-avatar-inline-size: var(--system-avatar-size-600-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-size-600-block-size);
 }
 
 .spectrum-Avatar--size700 {
-	--spectrum-avatar-inline-size: var(--system-avatar-size-700-avatar-inline-size);
-	--spectrum-avatar-block-size: var(--system-avatar-size-700-avatar-block-size);
+	--spectrum-avatar-inline-size: var(--system-avatar-size-700-inline-size);
+	--spectrum-avatar-block-size: var(--system-avatar-size-700-block-size);
 }

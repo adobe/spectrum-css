@@ -109,17 +109,29 @@
 }
 
 .spectrum-Card-quickActions {
+	pointer-events: auto;
+
 	position: absolute;
 	inset-block-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
-
 	inset-inline-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
+
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	box-sizing:border-box;
 
 	inline-size: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
 	block-size: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
 	visibility: hidden;
+
 	background-color: rgba(var(--mod-card-actions-background-color-rgb, var(--spectrum-card-actions-background-color-rgb)), var(--mod-card-actions-background-color-opacity, var(--spectrum-card-actions-background-color-opacity)));
 	border-radius: var(--mod-card-actions-border-radius, var(--spectrum-card-actions-border-radius));
 	box-shadow: var(--mod-card-actions-drop-shadow-x, var(--spectrum-card-actions-drop-shadow-x)) var(--mod-card-actions-drop-shadow-y, var(--spectrum-card-actions-drop-shadow-y)) var(--mod-card-actions-drop-shadow-blur, var(--spectrum-card-actions-drop-shadow-blur)) var(--mod-card-actions-drop-shadow-color, var(--spectrum-card-actions-drop-shadow-color));
+
+	transition:
+		transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
+		opacity var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
+		visibility 0ms linear var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms));
 }
 
 .spectrum-Card-actions {

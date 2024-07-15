@@ -12,21 +12,21 @@
  */
 
 .spectrum-Steplist {
-	--spectrum-steplist-step-width: var(--system-steplist-steplist-step-width);
-	--spectrum-steplist-marker-diameter: var(--system-steplist-steplist-marker-diameter);
-	--spectrum-steplist-marker-hitArea: var(--system-steplist-steplist-marker-hit-area);
-	--spectrum-steplist-segment-height: var(--system-steplist-steplist-segment-height);
-	--spectrum-steplist-topPadding: var(--system-steplist-steplist-top-padding);
-	--spectrum-steplist-small-topPadding: var(--system-steplist-steplist-small-top-padding);
-	--spectrum-steplist-sidePadding: var(--system-steplist-steplist-side-padding);
-	--spectrum-steplist-label-labelOffset: var(--system-steplist-steplist-label-label-offset);
-	--spectrum-steplist-label-text-size: var(--system-steplist-steplist-label-text-size);
-	--spectrum-steplist-current-label-text-color: var(--system-steplist-steplist-current-label-text-color);
-	--spectrum-steplist-current-marker-color: var(--system-steplist-steplist-current-marker-color);
-	--spectrum-steplist-complete-label-text-color: var(--system-steplist-steplist-complete-label-text-color);
-	--spectrum-steplist-incomplete-label-color: var(--system-steplist-steplist-incomplete-label-color);
-	--spectrum-steplist-complete-marker-background-color: var(--system-steplist-steplist-complete-marker-background-color);
-	--spectrum-steplist-incomplete-marker-border-color: var(--system-steplist-steplist-incomplete-marker-border-color);
-	--spectrum-steplist-incomplete-segment-border-block-end-color: var(--system-steplist-steplist-incomplete-segment-border-block-end-color);
-	--spectrum-steplist-complete-segment-border-block-end-color: var(--system-steplist-steplist-complete-segment-border-block-end-color);
+	--spectrum-steplist-step-width: var(--system-steplist-step-width);
+	--spectrum-steplist-marker-diameter: var(--system-steplist-marker-diameter);
+	--spectrum-steplist-marker-hitArea: var(--system-steplist-marker-hit-area);
+	--spectrum-steplist-segment-height: var(--system-steplist-segment-height);
+	--spectrum-steplist-topPadding: var(--system-steplist-top-padding);
+	--spectrum-steplist-small-topPadding: var(--system-steplist-small-top-padding);
+	--spectrum-steplist-sidePadding: var(--system-steplist-side-padding);
+	--spectrum-steplist-label-labelOffset: var(--system-steplist-label-label-offset);
+	--spectrum-steplist-label-text-size: var(--system-steplist-label-text-size);
+	--spectrum-steplist-current-label-text-color: var(--system-steplist-current-label-text-color);
+	--spectrum-steplist-current-marker-color: var(--system-steplist-current-marker-color);
+	--spectrum-steplist-complete-label-text-color: var(--system-steplist-complete-label-text-color);
+	--spectrum-steplist-incomplete-label-color: var(--system-steplist-incomplete-label-color);
+	--spectrum-steplist-complete-marker-background-color: var(--system-steplist-complete-marker-background-color);
+	--spectrum-steplist-incomplete-marker-border-color: var(--system-steplist-incomplete-marker-border-color);
+	--spectrum-steplist-incomplete-segment-border-block-end-color: var(--system-steplist-incomplete-segment-border-block-end-color);
+	--spectrum-steplist-complete-segment-border-block-end-color: var(--system-steplist-complete-segment-border-block-end-color);
 }

@@ -12,8 +12,8 @@
  */
 
 .spectrum--legacy {
-	--system-asset-asset-transition-duration: var(--spectrum-animation-duration-100);
-	--system-asset-asset-folder-background-color: var(--spectrum-gray-300);
-	--system-asset-asset-file-background-color: var(--spectrum-gray-50);
-	--system-asset-asset-icon-outline-color: var(--spectrum-gray-500);
+	--system-asset-transition-duration: var(--spectrum-animation-duration-100);
+	--system-asset-folder-background-color: var(--spectrum-gray-300);
+	--system-asset-file-background-color: var(--spectrum-gray-50);
+	--system-asset-icon-outline-color: var(--spectrum-gray-500);
 }

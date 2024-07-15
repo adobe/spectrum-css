@@ -103,7 +103,7 @@ function getBaseSelector(selector, { selectorPrefix = "" } = {}) {
 	});
 
 	if (found.length === 1) {
-		return cleanPropertyName(found[0].toLowerCase(), { selectorPrefix });
+		return cleanPropertyName(found[0], { selectorPrefix });
 	}
 
 	let countMap = new Map();
@@ -135,7 +135,7 @@ function getVariableName(
 	prop,
 	{ selectorPrefix = "", identifierName, identifierValue } = {},
 ) {
-	const baseSelector = getBaseSelector(selector) ?? "";
+	const baseSelector = getBaseSelector(selector, { selectorPrefix }) ?? "";
 
 	const clean = (prop) =>
 		prop &&

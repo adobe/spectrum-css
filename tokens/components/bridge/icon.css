@@ -12,31 +12,31 @@
  */
 
 .spectrum-Icon {
-	--spectrum-icon-size: var(--system-icon-icon-size);
+	--spectrum-icon-size: var(--system-icon-size);
 }
 
 .spectrum-Icon--sizeXXS {
-	--spectrum-icon-size: var(--system-icon-size-xxs-icon-size);
+	--spectrum-icon-size: var(--system-icon-size-xxs-size);
 }
 
 .spectrum-Icon--sizeXS {
-	--spectrum-icon-size: var(--system-icon-size-xs-icon-size);
+	--spectrum-icon-size: var(--system-icon-size-xs-size);
 }
 
 .spectrum-Icon--sizeS {
-	--spectrum-icon-size: var(--system-icon-size-s-icon-size);
+	--spectrum-icon-size: var(--system-icon-size-s-size);
 }
 
 .spectrum-Icon--sizeL {
-	--spectrum-icon-size: var(--system-icon-size-l-icon-size);
+	--spectrum-icon-size: var(--system-icon-size-l-size);
 }
 
 .spectrum-Icon--sizeXL {
-	--spectrum-icon-size: var(--system-icon-size-xl-icon-size);
+	--spectrum-icon-size: var(--system-icon-size-xl-size);
 }
 
 .spectrum-Icon--sizeXXL {
-	--spectrum-icon-size: var(--system-icon-size-xxl-icon-size);
+	--spectrum-icon-size: var(--system-icon-size-xxl-size);
 }
 
 .spectrum-UIIcon-ChevronRight50 {

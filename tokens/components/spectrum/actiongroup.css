@@ -12,22 +12,22 @@
  */
 
 .spectrum--legacy {
-	--system-action-group-actiongroup-gap-size-compact: 0;
-	--system-action-group-actiongroup-horizontal-spacing-compact: -1px;
-	--system-action-group-actiongroup-vertical-spacing-compact: -1px;
-	--system-action-group-actiongroup-button-spacing-reset: 0;
-	--system-action-group-actiongroup-border-radius-reset: 0;
-	--system-action-group-actiongroup-border-radius: var(--spectrum-corner-radius-100);
-	--system-action-group-action-group-size-xs-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
-	--system-action-group-action-group-size-s-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
-	--system-action-group-action-group-size-xs-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
-	--system-action-group-action-group-size-s-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
-	--system-action-group-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-action-group-action-group-size-m-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-action-group-action-group-size-l-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-action-group-action-group-size-xl-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--system-action-group-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
-	--system-action-group-action-group-size-m-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
-	--system-action-group-action-group-size-l-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
-	--system-action-group-action-group-size-xl-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-gap-size-compact: 0;
+	--system-action-group-horizontal-spacing-compact: -1px;
+	--system-action-group-vertical-spacing-compact: -1px;
+	--system-action-group-button-spacing-reset: 0;
+	--system-action-group-border-radius-reset: 0;
+	--system-action-group-border-radius: var(--spectrum-corner-radius-100);
+	--system-action-group-size-xs-horizontal-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-s-horizontal-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-xs-vertical-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-s-vertical-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-m-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-l-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-xl-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-m-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-l-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-xl-vertical-spacing-regular: var(--spectrum-spacing-100);
 }

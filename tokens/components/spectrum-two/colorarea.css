@@ -12,12 +12,12 @@
  */
 
 .spectrum {
-	--system-color-area-colorarea-border-radius: var(--spectrum-color-area-border-rounding);
-	--system-color-area-colorarea-border-color: rgba(0, 0, 0, 0.1);
-	--system-color-area-colorarea-disabled-background-color: var(--spectrum-disabled-background-color);
-	--system-color-area-colorarea-border-width: var(--spectrum-color-area-border-width);
-	--system-color-area-colorarea-height: var(--spectrum-color-area-height);
-	--system-color-area-colorarea-width: var(--spectrum-color-area-width);
-	--system-color-area-colorarea-min-width: var(--spectrum-color-area-minimum-width);
-	--system-color-area-colorarea-min-height: var(--spectrum-color-area-minimum-height);
+	--system-color-area-border-radius: var(--spectrum-color-area-border-rounding);
+	--system-color-area-border-color: rgba(0, 0, 0, 0.1);
+	--system-color-area-disabled-background-color: var(--spectrum-disabled-background-color);
+	--system-color-area-border-width: var(--spectrum-color-area-border-width);
+	--system-color-area-height: var(--spectrum-color-area-height);
+	--system-color-area-width: var(--spectrum-color-area-width);
+	--system-color-area-min-width: var(--spectrum-color-area-minimum-width);
+	--system-color-area-min-height: var(--spectrum-color-area-minimum-height);
 }

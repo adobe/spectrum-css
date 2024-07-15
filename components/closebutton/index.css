@@ -68,7 +68,7 @@ a.spectrum-CloseButton {
 	align-self: var(--mod-closebutton-align-self);
 
 	justify-content: center;
-	inline-size: var(--mod-closebutton-width, var(--spectrum-closebutton-width));
+	inline-size: var(--mod-closebutton-width, var(--spectrum-closebutton-width, var(--spectrum-closebutton-height)));
 
 	block-size: var(--mod-closebutton-height, var(--spectrum-closebutton-height));
 

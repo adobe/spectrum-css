@@ -12,23 +12,23 @@
  */
 
 .spectrum-Rating {
-	--spectrum-rating-icon-color-default: var(--system-rating-rating-icon-color-default);
-	--spectrum-rating-icon-color-hover: var(--system-rating-rating-icon-color-hover);
-	--spectrum-rating-icon-color-down: var(--system-rating-rating-icon-color-down);
-	--spectrum-rating-icon-color-key-focus: var(--system-rating-rating-icon-color-key-focus);
-	--spectrum-rating-icon-height: var(--system-rating-rating-icon-height);
-	--spectrum-rating-icon-width: var(--system-rating-rating-icon-width);
-	--spectrum-rating-border-radius: var(--system-rating-rating-border-radius);
-	--spectrum-rating-focus-indicator-thickness: var(--system-rating-rating-focus-indicator-thickness);
-	--spectrum-rating-focus-indicator-color: var(--system-rating-rating-focus-indicator-color);
-	--spectrum-rating-focus-indicator-gap: var(--system-rating-rating-focus-indicator-gap);
-	--spectrum-rating-icon-spacing-vertical-top: var(--system-rating-rating-icon-spacing-vertical-top);
-	--spectrum-rating-indicator-border-radius: var(--system-rating-rating-indicator-border-radius);
-	--spectrum-rating-indicator-height: var(--system-rating-rating-indicator-height);
-	--spectrum-rating-emphasized-icon-color-default: var(--system-rating-rating-emphasized-icon-color-default);
-	--spectrum-rating-emphasized-icon-color-hover: var(--system-rating-rating-emphasized-icon-color-hover);
-	--spectrum-rating-emphasized-icon-color-down: var(--system-rating-rating-emphasized-icon-color-down);
-	--spectrum-rating-emphasized-icon-color-key-focus: var(--system-rating-rating-emphasized-icon-color-key-focus);
-	--spectrum-rating-icon-color-disabled: var(--system-rating-rating-icon-color-disabled);
-	--spectrum-rating-icon-count: var(--system-rating-rating-icon-count);
+	--spectrum-rating-icon-color-default: var(--system-rating-icon-color-default);
+	--spectrum-rating-icon-color-hover: var(--system-rating-icon-color-hover);
+	--spectrum-rating-icon-color-down: var(--system-rating-icon-color-down);
+	--spectrum-rating-icon-color-key-focus: var(--system-rating-icon-color-key-focus);
+	--spectrum-rating-icon-height: var(--system-rating-icon-height);
+	--spectrum-rating-icon-width: var(--system-rating-icon-width);
+	--spectrum-rating-border-radius: var(--system-rating-border-radius);
+	--spectrum-rating-focus-indicator-thickness: var(--system-rating-focus-indicator-thickness);
+	--spectrum-rating-focus-indicator-color: var(--system-rating-focus-indicator-color);
+	--spectrum-rating-focus-indicator-gap: var(--system-rating-focus-indicator-gap);
+	--spectrum-rating-icon-spacing-vertical-top: var(--system-rating-icon-spacing-vertical-top);
+	--spectrum-rating-indicator-border-radius: var(--system-rating-indicator-border-radius);
+	--spectrum-rating-indicator-height: var(--system-rating-indicator-height);
+	--spectrum-rating-emphasized-icon-color-default: var(--system-rating-emphasized-icon-color-default);
+	--spectrum-rating-emphasized-icon-color-hover: var(--system-rating-emphasized-icon-color-hover);
+	--spectrum-rating-emphasized-icon-color-down: var(--system-rating-emphasized-icon-color-down);
+	--spectrum-rating-emphasized-icon-color-key-focus: var(--system-rating-emphasized-icon-color-key-focus);
+	--spectrum-rating-icon-color-disabled: var(--system-rating-icon-color-disabled);
+	--spectrum-rating-icon-count: var(--system-rating-icon-count);
 }

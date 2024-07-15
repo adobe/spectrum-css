@@ -2,8 +2,6 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -36,8 +34,6 @@ export const Template = ({
 	id,
 	role,
 } = {}, context) => {
-	const [, updateArgs] = useArgs();
-
 	return html`
     <div
       class=${classMap({
@@ -132,19 +128,11 @@ export const Template = ({
         </div>
       `)}
       ${when(hasQuickAction && !isHorizontal,
-        () => QuickAction({
-          noOverlay: true,
-          content: [
-            Checkbox({
-              isChecked: isSelected,
-              title: "Select",
-            }, context),
-          ],
-          onclick: () => {
-            updateArgs({ isSelected: !isSelected });
-          },
+        () => Checkbox({
           customClasses: [`${rootClass}-quickActions`],
-        }, context)
+          isChecked: isSelected,
+          title: "Select",
+        }, context),
       )}
     </div>
   `;

@@ -12,14 +12,14 @@
  */
 
 .spectrum {
-	--system-button-group-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--system-button-group-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-	--system-button-group-size-s-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
-	--system-button-group-size-s-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
-	--system-button-group-size-m-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--system-button-group-size-m-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-	--system-button-group-size-l-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--system-button-group-size-l-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-	--system-button-group-size-xl-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--system-button-group-size-xl-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
+	--system-button-group-spacing-horizontal: var(--spectrum-spacing-300);
+	--system-button-group-spacing-vertical: var(--spectrum-spacing-300);
+	--system-button-group-size-s-spacing-horizontal: var(--spectrum-spacing-200);
+	--system-button-group-size-s-spacing-vertical: var(--spectrum-spacing-200);
+	--system-button-group-size-m-spacing-horizontal: var(--spectrum-spacing-300);
+	--system-button-group-size-m-spacing-vertical: var(--spectrum-spacing-300);
+	--system-button-group-size-l-spacing-horizontal: var(--spectrum-spacing-300);
+	--system-button-group-size-l-spacing-vertical: var(--spectrum-spacing-300);
+	--system-button-group-size-xl-spacing-horizontal: var(--spectrum-spacing-300);
+	--system-button-group-size-xl-spacing-vertical: var(--spectrum-spacing-300);
 }

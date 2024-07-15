@@ -12,39 +12,39 @@
  */
 
 .spectrum-Dial {
-	--spectrum-dial-background-color-default: var(--system-dial-dial-background-color-default);
-	--spectrum-dial-handle-marker-color-disabled: var(--system-dial-dial-handle-marker-color-disabled);
-	--spectrum-dial-border-color-disabled: var(--system-dial-dial-border-color-disabled);
-	--spectrum-dial-handle-marker-color: var(--system-dial-dial-handle-marker-color);
-	--spectrum-dial-border-color: var(--system-dial-dial-border-color);
-	--spectrum-dial-handle-marker-color-down: var(--system-dial-dial-handle-marker-color-down);
-	--spectrum-dial-border-color-down: var(--system-dial-dial-border-color-down);
-	--spectrum-dial-handle-marker-color-hover: var(--system-dial-dial-handle-marker-color-hover);
-	--spectrum-dial-border-color-hover: var(--system-dial-dial-border-color-hover);
-	--spectrum-dial-handle-marker-color-key-focus: var(--system-dial-dial-handle-marker-color-key-focus);
-	--spectrum-dial-border-color-key-focus: var(--system-dial-dial-border-color-key-focus);
-	--spectrum-dial-handle-marker-color-mouse-focus: var(--system-dial-dial-handle-marker-color-mouse-focus);
-	--spectrum-dial-border-color-mouse-focus: var(--system-dial-dial-border-color-mouse-focus);
-	--spectrum-dial-min-max-tick-color: var(--system-dial-dial-min-max-tick-color);
-	--spectrum-dial-label-text-color: var(--system-dial-dial-label-text-color);
-	--spectrum-dial-label-text-color-disabled: var(--system-dial-dial-label-text-color-disabled);
-	--spectrum-dial-handle-border-color-disabled: var(--system-dial-dial-handle-border-color-disabled);
-	--spectrum-dial-container-width: var(--system-dial-dial-container-width);
-	--spectrum-dial-handle-marker-width: var(--system-dial-dial-handle-marker-width);
-	--spectrum-dial-handle-marker-height: var(--system-dial-dial-handle-marker-height);
-	--spectrum-dial-handle-marker-border-radius: var(--system-dial-dial-handle-marker-border-radius);
-	--spectrum-dial-handle-size: var(--system-dial-dial-handle-size);
-	--spectrum-dial-min-height: var(--system-dial-dial-min-height);
-	--spectrum-dial-controls-min-height: var(--system-dial-dial-controls-min-height);
-	--spectrum-dial-min-max-tick-angles: var(--system-dial-dial-min-max-tick-angles);
-	--spectrum-dial-width: var(--system-dial-dial-width);
-	--spectrum-dial-height: var(--system-dial-dial-height);
-	--spectrum-dial-handle-border-size: var(--system-dial-dial-handle-border-size);
-	--spectrum-dial-label-text-size: var(--system-dial-dial-label-text-size);
-	--spectrum-dial-label-line-height: var(--system-dial-dial-label-line-height);
+	--spectrum-dial-background-color-default: var(--system-dial-background-color-default);
+	--spectrum-dial-handle-marker-color-disabled: var(--system-dial-handle-marker-color-disabled);
+	--spectrum-dial-border-color-disabled: var(--system-dial-border-color-disabled);
+	--spectrum-dial-handle-marker-color: var(--system-dial-handle-marker-color);
+	--spectrum-dial-border-color: var(--system-dial-border-color);
+	--spectrum-dial-handle-marker-color-down: var(--system-dial-handle-marker-color-down);
+	--spectrum-dial-border-color-down: var(--system-dial-border-color-down);
+	--spectrum-dial-handle-marker-color-hover: var(--system-dial-handle-marker-color-hover);
+	--spectrum-dial-border-color-hover: var(--system-dial-border-color-hover);
+	--spectrum-dial-handle-marker-color-key-focus: var(--system-dial-handle-marker-color-key-focus);
+	--spectrum-dial-border-color-key-focus: var(--system-dial-border-color-key-focus);
+	--spectrum-dial-handle-marker-color-mouse-focus: var(--system-dial-handle-marker-color-mouse-focus);
+	--spectrum-dial-border-color-mouse-focus: var(--system-dial-border-color-mouse-focus);
+	--spectrum-dial-min-max-tick-color: var(--system-dial-min-max-tick-color);
+	--spectrum-dial-label-text-color: var(--system-dial-label-text-color);
+	--spectrum-dial-label-text-color-disabled: var(--system-dial-label-text-color-disabled);
+	--spectrum-dial-handle-border-color-disabled: var(--system-dial-handle-border-color-disabled);
+	--spectrum-dial-container-width: var(--system-dial-container-width);
+	--spectrum-dial-handle-marker-width: var(--system-dial-handle-marker-width);
+	--spectrum-dial-handle-marker-height: var(--system-dial-handle-marker-height);
+	--spectrum-dial-handle-marker-border-radius: var(--system-dial-handle-marker-border-radius);
+	--spectrum-dial-handle-size: var(--system-dial-handle-size);
+	--spectrum-dial-min-height: var(--system-dial-min-height);
+	--spectrum-dial-controls-min-height: var(--system-dial-controls-min-height);
+	--spectrum-dial-min-max-tick-angles: var(--system-dial-min-max-tick-angles);
+	--spectrum-dial-width: var(--system-dial-width);
+	--spectrum-dial-height: var(--system-dial-height);
+	--spectrum-dial-handle-border-size: var(--system-dial-handle-border-size);
+	--spectrum-dial-label-text-size: var(--system-dial-label-text-size);
+	--spectrum-dial-label-line-height: var(--system-dial-label-line-height);
 }
 
 .spectrum-Dial--small {
-	--spectrum-dial-width: var(--system-dial-small-dial-width);
-	--spectrum-dial-height: var(--system-dial-small-dial-height);
+	--spectrum-dial-width: var(--system-dial-small-width);
+	--spectrum-dial-height: var(--system-dial-small-height);
 }

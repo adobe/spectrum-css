@@ -12,12 +12,12 @@
  */
 
 .spectrum {
-	--system-icon-icon-size: var(--spectrum-workflow-icon-size-100);
-	--system-icon-size-xxs-icon-size: var(--spectrum-workflow-icon-size-xxs);
-	--system-icon-size-xs-icon-size: var(--spectrum-workflow-icon-size-50);
-	--system-icon-size-s-icon-size: var(--spectrum-workflow-icon-size-75);
-	--system-icon-size-l-icon-size: var(--spectrum-workflow-icon-size-200);
-	--system-icon-size-xl-icon-size: var(--spectrum-workflow-icon-size-300);
+	--system-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-icon-size-xxs-size: var(--spectrum-workflow-icon-size-xxs);
+	--system-icon-size-xs-size: var(--spectrum-workflow-icon-size-50);
+	--system-icon-size-s-size: var(--spectrum-workflow-icon-size-75);
+	--system-icon-size-l-size: var(--spectrum-workflow-icon-size-200);
+	--system-icon-size-xl-size: var(--spectrum-workflow-icon-size-300);
 	--system-ui-icon-chevron-right-50-icon-size: var(--spectrum-chevron-icon-size-50);
 	--system-ui-icon-chevron-right-75-icon-size: var(--spectrum-chevron-icon-size-75);
 	--system-ui-icon-chevron-right-100-icon-size: var(--spectrum-chevron-icon-size-100);

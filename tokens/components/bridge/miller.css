@@ -12,8 +12,8 @@
  */
 
 .spectrum-MillerColumns {
-	--spectrum-millercolumns-inline-size: var(--system-miller-columns-millercolumns-inline-size);
-	--spectrum-millercolumns-padding: var(--system-miller-columns-millercolumns-padding);
-	--spectrum-millercolumns-margin-inline-start: var(--system-miller-columns-millercolumns-margin-inline-start);
-	--spectrum-millercolumns-margin-inline-end: var(--system-miller-columns-millercolumns-margin-inline-end);
+	--spectrum-millercolumns-inline-size: var(--system-miller-columns-inline-size);
+	--spectrum-millercolumns-padding: var(--system-miller-columns-padding);
+	--spectrum-millercolumns-margin-inline-start: var(--system-miller-columns-margin-inline-start);
+	--spectrum-millercolumns-margin-inline-end: var(--system-miller-columns-margin-inline-end);
 }

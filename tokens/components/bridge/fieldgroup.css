@@ -12,6 +12,6 @@
  */
 
 .spectrum-FieldGroup {
-	--spectrum-fieldgroup-margin: var(--system-field-group-fieldgroup-margin);
-	--spectrum-fieldgroup-readonly-delimiter: var(--system-field-group-fieldgroup-readonly-delimiter);
+	--spectrum-fieldgroup-margin: var(--system-field-group-margin);
+	--spectrum-fieldgroup-readonly-delimiter: var(--system-field-group-readonly-delimiter);
 }

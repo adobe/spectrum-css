@@ -12,7 +12,7 @@
  */
 
 .spectrum-SwatchGroup {
-	--spectrum-swatchgroup-spacing-compact: var(--system-swatch-group-swatchgroup-spacing-compact);
-	--spectrum-swatchgroup-spacing-regular: var(--system-swatch-group-swatchgroup-spacing-regular);
-	--spectrum-swatchgroup-spacing-spacious: var(--system-swatch-group-swatchgroup-spacing-spacious);
+	--spectrum-swatchgroup-spacing-compact: var(--system-swatch-group-spacing-compact);
+	--spectrum-swatchgroup-spacing-regular: var(--system-swatch-group-spacing-regular);
+	--spectrum-swatchgroup-spacing-spacious: var(--system-swatch-group-spacing-spacious);
 }
