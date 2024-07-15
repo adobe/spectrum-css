@@ -36,7 +36,6 @@ module.exports = ({
 
 	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
 	if (file) {
-		console.log(file, cwd.split(sep).pop());
 		if (typeof file === "string" && file.includes("@spectrum-css/tokens-legacy")) {
 			additionalPlugins["postcss-selector-replace"] = {
 				before: [".spectrum"],

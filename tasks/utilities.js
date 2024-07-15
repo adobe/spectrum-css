@@ -38,7 +38,7 @@ const dirs = {
 const timeInMs = (seconds, nanoseconds) => (seconds * 1000000000 + nanoseconds) / 1000000;
 
 /** @type {(string) => string} */
-const relativePrint = (filename, { cwd = dirs.root }) => path.relative(cwd, filename);
+const relativePrint = (filename, { cwd = dirs.root } = {}) => path.relative(cwd, filename);
 
 const bytesToSize = function (bytes) {
 	if (bytes === 0) return "0";

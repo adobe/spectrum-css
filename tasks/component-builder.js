@@ -76,6 +76,30 @@ async function extractModifiers(filepath, { cwd } = {}) {
 	}).filter(Boolean));
 
 	return Promise.all([
+		fsp.writeFile(
+			path.join(cwd, "dist/mods.md"),
+			await prettier.format(
+				`${[
+					"| Modifiable custom properties |",
+					"| --- |",
+					...(meta?.modifiers ?? []).map((mod) => `| ${mod} |`),
+				].join("\n")}`,
+				{ parser: "markdown" },
+			),
+			{ encoding: "utf-8" },
+		)
+			.then(() => {
+				const stats = fs.statSync(path.join(cwd, "dist/mods.md"));
+				return [
+					`${"✓".green}  ${"dist/mods.md".padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
+					`🔍  ${`${selectors.size}`.underline} selector${selectors.size === 1 ? "" : "s"}`,
+				];
+			})
+			.catch((err) => {
+				if (!err) return;
+				console.log(`${"✗".red}  ${"dist/mmods.md".yellow} not written`);
+				return Promise.reject(err);
+			}),
 		fsp
 			.writeFile(
 				path.join(cwd, "dist/metadata.json"),
