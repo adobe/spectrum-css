@@ -18,12 +18,6 @@
  *
  */
 
-/* custom properties */
-.spectrum-FieldGroup {
-	--spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
-	--spectrum-fieldgroup-readonly-delimiter: "\002c";
-}
-
 /* field group */
 .spectrum-FieldGroup {
 	display: flex;

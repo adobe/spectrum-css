@@ -1,17 +1,18 @@
-import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
-import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
-
-import { setConsoleOptions } from "@storybook/addon-console";
 import {
 	withActions,
 	withArgEvents,
 	withContextWrapper,
+	withIconSpriteSheet,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 } from "./decorators";
-import { FontLoader, IconLoader, TokenLoader } from "./loaders";
+import {
+	FontLoader,
+	IconLoader,
+	TokenLoader,
+} from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
@@ -21,23 +22,8 @@ import "./assets/typekit.js";
 
 window.global = window;
 
-const panelExclude = setConsoleOptions({}).panelExclude || [];
-setConsoleOptions({
-	panelExclude: [
-		...panelExclude,
-		/deprecated/,
-		/TypeError/,
-		/postcss/,
-		/stylelint/,
-	],
-});
-
-export const args = {
-	customClasses: [],
-};
-
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
-export const parameters = {
+const parameters = {
 	layout: "padded",
 	showNav: true,
 	showTabs: true,
@@ -62,8 +48,6 @@ export const parameters = {
 		},
 	},
 	chromatic: {
-		// @todo: use a loader to ensure tokens load before stories without arbitrary delay
-		delay: 500,
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
 		pauseAnimationAtEnd: true,
@@ -75,7 +59,6 @@ export const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "[data-html-preview]",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -116,53 +99,28 @@ export const parameters = {
 	componentVersion: undefined,
 };
 
-export const loaders = [
-	FontLoader,
-	IconLoader,
-	TokenLoader,
-];
-
-export const decorators = [
-	withTextDirectionWrapper,
-	withLanguageWrapper,
-	withReducedMotionWrapper,
-	withContextWrapper,
-	withTestingPreviewWrapper,
-	withArgEvents,
-	withActions,
-	// Attach the icons to the window object for use in the stories
-	(StoryFn, context) => {
-		if (context?.loaded?.icons) window.icons = context.loaded.icons;
-
-		// Inject the sprite sheets into the document
-		let sprite = document.getElementById("spritesheets");
-		if (!sprite) {
-			sprite = document.createElement("div");
-			sprite.id = "spritesheets";
-			sprite.innerHTML = workflowSprite + uiSprite;
-			document.body.appendChild(sprite);
-		}
-		else {
-			sprite.innerHTML = workflowSprite + uiSprite;
-		}
-
-		return StoryFn(context);
-	},
-];
-
 export default {
-	globalTypes,
-	argTypes: {
-		...argTypes,
-		// Disable the following controls from the previews as they are migrated to the global scope
-		// but are still temporarily used in the stories for backwards compatibility.
-		color: { table: { disable: true } },
-		scale: { table: { disable: true } },
-		reducedMotion: { table: { disable: true } },
-		express: { table: { disable: true } },
-	},
-	args,
+	title: "Spectrum CSS",
 	parameters,
-	decorators,
-	loaders,
+	argTypes,
+	globalTypes,
+	args: {
+		customClasses: [],
+		customStyles: {},
+	},
+	decorators: [
+		withArgEvents,
+		withTextDirectionWrapper,
+		withLanguageWrapper,
+		withReducedMotionWrapper,
+		withContextWrapper,
+		withTestingPreviewWrapper,
+		withActions,
+		withIconSpriteSheet,
+	],
+	loaders: [
+		FontLoader,
+		IconLoader,
+		TokenLoader,
+	],
 };

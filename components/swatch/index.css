@@ -97,20 +97,19 @@
 /* Swatch styles */
 /* stylelint-disable max-nesting-depth */
 .spectrum-Swatch {
-	inline-size: var(--mod-swatch-size, var(--spectrum-swatch-size));
-	block-size: var(--mod-swatch-size, var(--spectrum-swatch-size));
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	/* don't let double clicking select stuff */
+	user-select: none;
 
 	/* contain selection indicator and focus-ring */
 	position: relative;
 
-	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	inline-size: var(--mod-swatch-size, var(--spectrum-swatch-size));
+	block-size: var(--mod-swatch-size, var(--spectrum-swatch-size));
 
-	/* don't let double clicking select stuff */
-	user-select: none;
+	outline: none;
 
 	.spectrum-Swatch-disabledIcon {
 		inline-size: var(--mod-swatch-disabled-icon-size, var(--spectrum-swatch-disabled-icon-size));
@@ -163,8 +162,8 @@
 		}
 
 		.spectrum-Swatch-mixedValueIcon {
-			color: var(--spectrum-swatch-dash-icon-color);
 			display: block;
+			color: var(--spectrum-swatch-dash-icon-color);
 		}
 	}
 
@@ -176,10 +175,10 @@
 			background-image: none;
 
 			&::after {
-				inline-size: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness));
 				content: "";
 				position: absolute;
 				transform: rotate(-45deg);
+				inline-size: var(--mod-swatch-slash-thickness, var(--spectrum-swatch-slash-thickness));
 				block-size: 200%; /* just needs to be bigger than a swatch */
 				background: var(--highcontrast-swatch-fill-foreground-color, var(--mod-swatch-slash-icon-color, var(--spectrum-swatch-slash-icon-color)));
 			}
@@ -203,17 +202,16 @@
 
 	/* selection indicator */
 	&::before {
+		pointer-events: none;
 		content: "";
 		position: absolute;
 		inset: 0;
 
-		border-width: var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected));
-		border-style: solid;
-		border-color: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-swatch-border-color-selected)));
-
 		opacity: 0;
+		border-color: var(--highcontrast-swatch-border-color-selected, var(--mod-swatch-border-color-selected, var(--spectrum-swatch-border-color-selected)));
+		border-style: solid;
 
-		pointer-events: none;
+		border-width: var(--mod-swatch-border-thickness-selected, var(--spectrum-swatch-border-thickness-selected));
 	}
 
 	/* focus-ring */
@@ -223,10 +221,10 @@
 		inset: calc(-2 * var(--mod-swatch-focus-indicator-gap, var(--spectrum-swatch-focus-indicator-gap)));
 
 		opacity: 0;
+		border-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-swatch-focus-indicator-color)));
+		border-style: solid;
 
 		border-width: var(--mod-swatch-focus-indicator-thickness, var(--spectrum-swatch-focus-indicator-thickness));
-		border-style: solid;
-		border-color: var(--highcontrast-swatch-focus-indicator-color, var(--mod-swatch-focus-indicator-color, var(--spectrum-swatch-focus-indicator-color)));
 		border-radius: var(--mod-swatch-focus-indicator-border-radius, var(--spectrum-swatch-focus-indicator-border-radius));
 
 		transition: opacity var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
@@ -241,17 +239,16 @@
 /* stylelint-enable max-nesting-depth */
 
 .spectrum-Swatch-fill {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	inline-size: 100%;
-	block-size: 100%;
-	box-sizing: border-box;
-
 	position: relative;
 
 	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+
+	inline-size: 100%;
+	block-size: 100%;
 
 	border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
 
@@ -259,15 +256,15 @@
 	&::before {
 		content: "";
 		position: absolute;
-		inset: 0;
 		z-index: 0;
+		inset: 0;
 
 		/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
 		background-color: var(--spectrum-picked-color, transparent);
+		border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
 
 		/* Swatch border */
 		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)));
-		border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
 	}
 }
 
@@ -275,28 +272,27 @@
 .spectrum-Swatch--noBorder {
 	.spectrum-Swatch-fill {
 		&::before {
-			box-shadow: none;
-
 			/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background-color: var(--spectrum-picked-color, transparent);
+			box-shadow: none;
 		}
 	}
 }
 
 .spectrum-Swatch-mixedValueIcon {
-	display: none;
 	pointer-events: none;
+	display: none;
 
 	/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
 	color: var(--spectrum-picked-color, transparent);
 }
 
 .spectrum-Swatch-disabledIcon {
+	pointer-events: none;
 	position: relative;
 	z-index: 2;
 
 	display: none;
-	pointer-events: none;
 
 	color: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color)));
 	stroke: var(--highcontrast-swatch-disabled-icon-color, var(--mod-swatch-disabled-icon-color, var(--spectrum-swatch-disabled-icon-color)));
@@ -349,10 +345,9 @@
 }
 
 .spectrum-Swatch-image {
-	object-fit: contain;
-
 	inline-size: 100%;
 	block-size: 100%;
+	object-fit: contain;
 
 	transition:
 		width var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,

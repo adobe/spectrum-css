@@ -4,6 +4,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { Template as ProgressBar } from "./template.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	customClasses = [],

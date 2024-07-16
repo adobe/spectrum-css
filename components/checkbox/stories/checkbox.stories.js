@@ -97,29 +97,29 @@ export default {
 	},
 };
 
-const CheckboxGroup = (args) => html`
+const CheckboxGroup = (args, context) => html`
 	<div style="display: flex; flex-direction: column; padding: 16px">
 		${Template({
 			...args,
 			iconName: undefined,
-		})}
+		}, context)}
 		${Template({
 			...args,
 			isChecked: true,
-		})}
+		}, context)}
 		${Template({
 			...args,
 			isIndeterminate: true,
-		})}
+		}, context)}
 			${Template({
 			...args,
 			isDisabled: true,
-		})}
+		}, context)}
 		${Template({
 			...args,
 			label: "Checkbox with wrapping label text",
 			customStyles: { "max-inline-size": "100px" },
-		})}
+		}, context)}
 	</div>
 `;
 

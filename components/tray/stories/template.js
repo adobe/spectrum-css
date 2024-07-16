@@ -6,6 +6,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tray",
@@ -14,7 +16,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-}, context) => html`
+} = {}, context) => html`
 		<div
 			class=${classMap({
 				[`${rootClass}-wrapper`]: true,

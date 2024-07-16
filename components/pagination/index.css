@@ -37,9 +37,9 @@
 }
 
 .spectrum-Pagination-counter {
+	margin-inline-start: var(--mod-pagination-counter-margin-inline-start, var(--spectrum-pagination-counter-margin-inline-start));
 	font-size: var(--mod-pagination-counter-font-size, var(--spectrum-pagination-counter-font-size));
 	line-height: var(--mod-pagination-counter-line-height, var(--spectrum-pagination-counter-line-height));
-	margin-inline-start: var(--mod-pagination-counter-margin-inline-start, var(--spectrum-pagination-counter-margin-inline-start));
 	color: var(--mod-pagination-counter-color, var(--spectrum-pagination-counter-color));
 }
 

@@ -36,13 +36,7 @@ const Container = ({
 	level = 1,
 	direction = "row",
 	withBorder = true,
-	containerStyles = {
-		"display": "flex",
-		"flex-direction": "column",
-		"gap": "6px",
-    "padding-inline": "12px",
-    "padding-block-end": "12px",
-	},
+	containerStyles = {},
 	wrapperStyles = {},
 }) => {
 	let headingConfig = { size: "l" };
@@ -61,7 +55,14 @@ const Container = ({
 	}
 
 	return html`
-    <div style=${styleMap(containerStyles)}>
+    <div style=${styleMap({
+      "display": "flex",
+      "flex-direction": "column",
+      "gap": "6px",
+      "padding-inline": "12px",
+      "padding-block-end": "12px",
+      ...containerStyles
+    })}>
       ${when(heading, () => Heading({ ...headingConfig, type, content: heading }))}
       <div
         style=${styleMap({

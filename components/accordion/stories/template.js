@@ -1,5 +1,6 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Variants } from "@spectrum-css/preview/decorators";
+import { renderContent } from "@spectrum-css/preview/decorators/utilities.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -7,6 +8,8 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const AccordionItem = ({
 	heading,
@@ -30,7 +33,7 @@ export const AccordionItem = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			style=${styleMap(customStyles)}
+			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
 			@click=${onclick}
 		>
@@ -44,6 +47,7 @@ export const AccordionItem = ({
 					id="spectrum-accordion-item-${idx}-header"
 					aria-controls="spectrum-accordion-item-${idx}-content"
 					aria-expanded="${open ? "true" : "false"}"
+					@click=${onclick}
 				>
 					${heading}
 				</button>
@@ -63,7 +67,7 @@ export const AccordionItem = ({
 				id="spectrum-accordion-item-${idx}-content"
 				aria-labelledby="spectrum-accordion-item-${idx}-header"
 			>
-				${content}
+				${renderContent(content)}
 			</div>
 		</div>
 	`;

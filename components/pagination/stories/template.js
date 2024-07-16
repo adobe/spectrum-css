@@ -1,6 +1,5 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
-import { Default as SplitButton } from "@spectrum-css/preview/deprecated/splitbutton/splitbutton.stories.js";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -8,6 +7,8 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Pagination",
@@ -48,17 +49,7 @@ export const Template = ({
 			</nav>
 		`;
 	}
-	else if (variant == "button") {
-		return SplitButton({
-			position: "left",
-			variant: "accent",
-			label: "Next",
-			iconName: "ChevronLeft100",
-			labelIconName: "ChevronRight100",
-			customFirstButtonClasses: ["spectrum-Pagination-prevButton"],
-			customLastButtonClasses: ["spectrum-Pagination-nextButton"]
-		}, context);
-	}
+
 	return html`
 		<nav
 			class=${classMap({

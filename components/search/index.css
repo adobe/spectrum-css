@@ -132,8 +132,8 @@
 
 /* Standard / Default */
 .spectrum-Search {
-	display: inline-block;
 	position: relative;
+	display: inline-block;
 	inline-size: var(--mod-search-inline-size, var(--spectrum-search-inline-size));
 	min-inline-size: var(--mod-search-min-inline-size, var(--spectrum-search-min-inline-size));
 
@@ -144,8 +144,8 @@
 
 .spectrum-Search-clearButton {
 	position: absolute;
-	inset-inline-end: 0;
 	inset-block-start: 0;
+	inset-inline-end: 0;
 	border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
 
 	.spectrum-ClearButton-fill {
@@ -162,12 +162,11 @@
 }
 
 .spectrum-Search-icon {
-	display: block;
+	--spectrum-search-color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
 	position: absolute;
 	inset-block: 0;
+	display: block;
 	margin-block: auto;
-
-	--spectrum-search-color: var(--highcontrast-search-color-default, var(--mod-search-color-default, var(--spectrum-search-color-default)));
 	color: var(--spectrum-search-color);
 
 	.spectrum-Search-textfield:hover & {
@@ -193,6 +192,13 @@
 }
 
 .spectrum-Search-input {
+	block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
+	padding-block-start: calc(var(--mod-search-top-to-text, var(--spectrum-search-top-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
+	padding-block-end: calc(var(--mod-search-bottom-to-text, var(--spectrum-search-bottom-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
+
+	font-style: var(--mod-search-font-style, var(--spectrum-search-font-style));
+	line-height: var(--mod-search-line-height, var(--spectrum-search-line-height));
+
 	/* Correct the odd appearance of input[type="search"] in Chrome and Safari. */
 	/* Without this, it gets overridden by .spectrum-Textfield */
 	appearance: none;
@@ -202,13 +208,6 @@
 	&::-webkit-search-decoration {
 		appearance: none;
 	}
-
-	block-size: var(--mod-search-block-size, var(--spectrum-search-block-size));
-	padding-block-start: calc(var(--mod-search-top-to-text, var(--spectrum-search-top-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
-	padding-block-end: calc(var(--mod-search-bottom-to-text, var(--spectrum-search-bottom-to-text)) - var(--mod-search-border-width, var(--spectrum-search-border-width)));
-
-	font-style: var(--mod-search-font-style, var(--spectrum-search-font-style));
-	line-height: var(--mod-search-line-height, var(--spectrum-search-line-height));
 }
 
 /* Standard / Default Only */
@@ -230,9 +229,9 @@
 	}
 
 	&.spectrum-Search .spectrum-Search-input {
-		border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
+		padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
 		padding-inline-start: calc(var(--mod-search-edge-to-visual, var(--spectrum-search-edge-to-visual)) + var(--mod-search-icon-size, var(--spectrum-search-icon-size)) + var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon)));
 		padding-inline-end: calc(var(--mod-search-button-inline-size, var(--spectrum-search-button-inline-size)) - var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
-		padding-block-start: var(--mod-search-top-to-text, var(--spectrum-search-top-to-text));
+		border-radius: var(--mod-search-border-radius, var(--spectrum-search-border-radius));
 	}
 }

@@ -12,31 +12,6 @@
  */
 
 .spectrum-ButtonGroup {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
-
-.spectrum-ButtonGroup--sizeS {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
-}
-
-.spectrum-ButtonGroup--sizeM {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
-
-.spectrum-ButtonGroup--sizeL {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
-
-.spectrum-ButtonGroup--sizeXL {
-	--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-	--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
-}
-
-.spectrum-ButtonGroup {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--mod-buttongroup-spacing-horizontal, var(--spectrum-buttongroup-spacing-horizontal));

@@ -69,17 +69,16 @@
 }
 
 .spectrum-Divider {
-	block-size: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-	inline-size: 100%;
-
 	/* Show the overflow for hr in Edge and IE. */
 	overflow: visible;
+	inline-size: 100%;
+	block-size: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
+
+	background-color: var(--mod-divider-background-color, var(--spectrum-divider-background-color));
 
 	border: none;
 	border-width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
 	border-radius: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-
-	background-color: var(--mod-divider-background-color, var(--spectrum-divider-background-color));
 }
 
 /* static white variant colors */
@@ -114,8 +113,8 @@
 
 /* vertical dividers */
 .spectrum-Divider--vertical {
-	inline-size: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-	margin-block: var(--mod-divider-vertical-margin);
-	block-size: var(--mod-divider-vertical-height, 100%);
 	align-self: var(--mod-divider-vertical-align);
+	inline-size: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
+	block-size: var(--mod-divider-vertical-height, 100%);
+	margin-block: var(--mod-divider-vertical-margin);
 }

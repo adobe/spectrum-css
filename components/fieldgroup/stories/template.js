@@ -10,74 +10,75 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
-export const Template = (
-	{
-		rootClass = "spectrum-FieldGroup",
-		customClasses = [],
-		layout = "vertical",
-		inputType = "radio",
-		isReadOnly = false,
-		isRequired = false,
-		label,
-		labelPosition,
-		isInvalid,
-		helpText,
-		items = [],
-	} = {},
-	context = {},
-) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--${labelPosition}label`]:
-				typeof labelPosition !== "undefined",
-			[`${rootClass}--${layout}`]: typeof layout !== "undefined",
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
-		type=${ifDefined(inputType)}
-		aria-readonly=${ifDefined(isReadOnly ? "true" : undefined)}
-		aria-required=${ifDefined(isRequired ? "true" : undefined)}
-	>
-		${when(label, () =>
-			FieldLabel(
-				{
-					size: "m",
-					label,
-					alignment: labelPosition === "side" ? "right" : "top",
-				},
-				context,
-			),
-		)}
+export const Template = ({
+	rootClass = "spectrum-FieldGroup",
+	customClasses = [],
+	layout = "vertical",
+	inputType = "radio",
+	isReadOnly = false,
+	isRequired = false,
+	label,
+	labelPosition,
+	isInvalid,
+	helpText,
+	items = [],
+} = {}, context = {}) => {
+	return html`
 		<div
 			class=${classMap({
-				[`${rootClass}InputLayout`]: true,
+				[rootClass]: true,
+				[`${rootClass}--${labelPosition}label`]:
+					typeof labelPosition !== "undefined",
+				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
+			type=${ifDefined(inputType)}
+			aria-readonly=${ifDefined(isReadOnly ? "true" : undefined)}
+			aria-required=${ifDefined(isRequired ? "true" : undefined)}
 		>
-			${repeat(
-				items,
-				(item) => item.id,
-				(item) => {
-					if (typeof item === "function") {
-						return item({}, context);
-					}
-					return item;
-				},
-			)}
-			${when(helpText, () =>
-				HelpText(
+			${when(label, () =>
+				FieldLabel(
 					{
 						size: "m",
-						text: helpText,
-						variant: isInvalid ? "negative" : "neutral",
+						label,
+						alignment: labelPosition === "side" ? "right" : "top",
 					},
 					context,
 				),
 			)}
+			<div
+				class=${classMap({
+					[`${rootClass}InputLayout`]: true,
+				})}
+			>
+				${repeat(
+					items,
+					(item) => item.id,
+					(item) => {
+						if (typeof item === "function") {
+							return item({}, context);
+						}
+						return item;
+					},
+				)}
+				${when(helpText, () =>
+					HelpText(
+						{
+							size: "m",
+							text: helpText,
+							variant: isInvalid ? "negative" : "neutral",
+						},
+						context,
+					),
+				)}
+			</div>
 		</div>
-	</div>
-`;
+	`;
+};
 
 export const FieldGroupSet = (args, context) => html`
 	<div

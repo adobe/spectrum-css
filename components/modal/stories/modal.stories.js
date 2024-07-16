@@ -40,7 +40,7 @@ export default {
 	decorators: [
 		/**
 		 * Ensure modal is is not cropped out of the Chromatic screenshot.
-		 * @see https://www.chromatic.com/docs/snapshots/#why-isn%E2%80%99t-my-modal-or-dialog-captured 
+		 * @see https://www.chromatic.com/docs/snapshots/#why-isn%E2%80%99t-my-modal-or-dialog-captured
 		 */
 		(story) => window.isChromatic() ? html`<div style="width: 1200px; height: 800px;">${story()}</div>` : story()
 	],

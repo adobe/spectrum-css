@@ -8,6 +8,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Popover",
@@ -41,7 +43,7 @@ export const Template = ({
 		const popover = document.querySelector(`#${id}`);
 
 		if (!element || !popover) return;
-	
+
 		const rect = element.getBoundingClientRect();
 
 		const transforms = [];
@@ -113,7 +115,7 @@ export const Template = ({
 			popover.style.transform = transforms.join(" ");
 		}
 
-		// Add start and end styles 
+		// Add start and end styles
 		if (position === "top-start" || position === "bottom-start") {
 			popover.style["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
 			popover.style["inset-block-start"] = "0px";
