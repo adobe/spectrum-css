@@ -95,10 +95,14 @@
     "@spectrum-tools/stylelint-no-unused-custom-properties": "1.3.2",
     "@spectrum-tools/documentation": "2.0.2",
     "@spectrum-css/tokens": "14.2.0",
-    "@spectrum-css/ui-icons": "1.1.2"
+    "@spectrum-css/ui-icons": "1.1.2",
+    "postcss-add-theming-layer": "2.1.1-s2-foundations.0",
+    "postcss-property-rollup": "2.0.1"
   },
   "changesets": [
+    "cyan-actors-rest",
     "gentle-ties-hang",
+    "lovely-ducks-listen",
     "modern-beds-provide",
     "moody-shirts-kick",
     "purple-chairs-melt",
@@ -107,6 +111,8 @@
     "seven-pens-collect",
     "sharp-pianos-reply",
     "sharp-vans-flow",
+    "sixty-ears-heal",
+    "tasty-years-cheat",
     "three-buckets-walk"
   ]
 }
