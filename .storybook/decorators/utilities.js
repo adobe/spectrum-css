@@ -156,7 +156,6 @@ export const Variants = ({
           "display": window.isChromatic() ? "none" : "contents",
         })}
         data-html-preview
-        foo
       >
         ${Template(args, context)}
       </div>
@@ -169,7 +168,6 @@ export const Variants = ({
           "align-items": "flex-start",
           "gap": "60px",
         })}
-        foo
       >
         <!-- Test data can include: a custom template, descriptive heading, and container styles -->
         <!-- Tests can also opt out of rendering the test in each available state -->

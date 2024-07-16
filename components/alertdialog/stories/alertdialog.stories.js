@@ -1,4 +1,4 @@
-import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
+import { withOverlayWrapper } from "@spectrum-css/preview/decorators";
 import modes, { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
@@ -50,7 +50,7 @@ export default {
 		componentVersion: version,
 	},
 	decorators: [
-		withUnderlayWrapper,
+		withOverlayWrapper,
 	],
 };
 

@@ -1,4 +1,4 @@
-import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
+import { withOverlayWrapper } from "@spectrum-css/preview/decorators";
 import modes, { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -61,7 +61,7 @@ export default {
 		componentVersion: version,
 	},
 	decorators: [
-		withUnderlayWrapper,
+		withOverlayWrapper,
 	],
 };
 
