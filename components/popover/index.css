@@ -13,43 +13,7 @@
 
 @import "./themes/express.css";
 @import "@spectrum-css/commons/overlay.css";
-
-.spectrum-Popover {
-	/* Used in positioning popover for storybook */
-	--flow-direction: 1;
-
-	&:dir(rtl) {
-		--flow-direction: -1;
-	}
-
-	/* animation distance is equal to and responsible for popover offset */
-	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
-
-	--spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
-	--spectrum-popover-border-color: var(--spectrum-gray-400);
-
-	/* popover inner padding */
-	--spectrum-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
-
-	/* popover drop shadow */
-	--spectrum-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
-	--spectrum-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
-	--spectrum-popover-shadow-blur: var(--spectrum-drop-shadow-blur);
-	--spectrum-popover-shadow-color: var(--spectrum-drop-shadow-color);
-
-	/* popover corner radius */
-	--spectrum-popover-corner-radius: var(--spectrum-corner-radius-100);
-
-	/* pointer tip dimensions */
-	--spectrum-popover-pointer-width: var(--spectrum-popover-tip-width);
-	--spectrum-popover-pointer-height: var(--spectrum-popover-tip-height);
-
-	/* pointer tip - default spacing to edge - corner radius plus half of tip width to neutralize override */
-	--spectrum-popover-pointer-edge-offset: calc(var(--spectrum-corner-radius-100) + (var(--spectrum-popover-tip-width) / 2));
-
-	/* pointer tip - spacing to edge will center pointer to source - apply in markup by setting '--spectrum-popover-pointer-edge-offset' value == half of source */
-	--spectrum-popover-pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - (var(--spectrum-popover-tip-width) / 2));
-}
+@import "themes/spectrum-two.css";
 
 /* windows high contrast mode */
 @media (forced-colors: active) {
@@ -59,36 +23,44 @@
 }
 
 .spectrum-Popover {
+	/* Used in positioning popover for storybook */
+	--flow-direction: 1;
+
+	&:dir(rtl) {
+		--flow-direction: -1;
+	}
+
 	--spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
+
 	@extend %spectrum-overlay;
-
-	box-sizing: border-box;
 	position: absolute;
-
-	outline: none; /* Hide focus outline */
-
-	padding: var(--mod-popover-content-area-spacing-vertical, var(--spectrum-popover-content-area-spacing-vertical)) 0;
 
 	display: inline-flex;
 	flex-direction: column;
 
-	border-style: solid;
-	border-radius: var(--mod-popover-corner-radius, var(--spectrum-popover-corner-radius));
-	border-color: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color)));
-	border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
+	box-sizing: border-box;
+
+	padding: var(--mod-popover-content-area-spacing-vertical, var(--spectrum-popover-content-area-spacing-vertical)) 0;
 
 	background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
 	filter: var(--mod-popover-filter, var(--spectrum-popover-filter));
+	border-color: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color)));
+
+	border-style: solid;
+	border-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
+	border-radius: var(--mod-popover-corner-radius, var(--spectrum-popover-corner-radius));
+
+	outline: none; /* Hide focus outline */
 
 	/* has tip triangle */
 	&.spectrum-Popover--withTip {
 		.spectrum-Popover-tip {
 			/* triangle polygon */
 			.spectrum-Popover-tip-triangle {
-				stroke-linecap: square;
-				stroke-linejoin: miter;
 				fill: var(--highcontrast-popover-background-color, var(--mod-popover-background-color, var(--spectrum-popover-background-color)));
 				stroke: var(--highcontrast-popover-border-color, var(--mod-popover-border-color, var(--spectrum-popover-border-color)));
+				stroke-linecap: square;
+				stroke-linejoin: miter;
 				stroke-width: var(--mod-popover-border-width, var(--spectrum-popover-border-width));
 			}
 		}
@@ -237,15 +209,15 @@
 	&.spectrum-Popover--bottom-start,
 	&.spectrum-Popover--bottom-end {
 		.spectrum-Popover-tip {
-			inline-size: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
-			block-size: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
 			position: absolute;
 			inset-block-start: 100%;
 			inset-inline: 0;
-			margin: auto;
 
 			/* https://stackoverflow.com/questions/44170229/how-to-prevent-half-pixel-svg-shift-on-high-pixel-ratio-devices-retina */
 			transform: translate(0, 0);
+			inline-size: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
+			block-size: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
+			margin: auto;
 		}
 	}
 
@@ -333,10 +305,11 @@
 	&.spectrum-Popover--end-top,
 	&.spectrum-Popover--end-bottom {
 		.spectrum-Popover-tip {
+			inset-block: 0;
+
 			/* swap height and width for vertical triangle */
 			inline-size: var(--mod-popover-pointer-height, var(--spectrum-popover-pointer-height));
 			block-size: var(--mod-popover-pointer-width, var(--spectrum-popover-pointer-width));
-			inset-block: 0;
 		}
 	}
 
@@ -345,9 +318,9 @@
 	&.spectrum-Popover--left-bottom,
 	&.spectrum-Popover--left-top {
 		.spectrum-Popover-tip {
+			right: auto;
 			/* stylelint-disable-next-line csstools/use-logical -- intentional, left stays on the same side even for RTL */
 			left: 100%;
-			right: auto;
 		}
 	}
 
@@ -407,10 +380,9 @@
 	&.spectrum-Popover--end-bottom {
 		/* tip triangle  */
 		.spectrum-Popover-tip {
-			margin-inline-end: 100%;
-
 			/* flip tip to point right ▷ */
 			transform: scaleX(-1);
+			margin-inline-end: 100%;
 
 			&:dir(rtl) {
 				/* flip tip to point left ◁ */

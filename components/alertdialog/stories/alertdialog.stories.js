@@ -1,4 +1,4 @@
-import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
+import { withOverlayWrapper } from "@spectrum-css/preview/decorators";
 import modes, { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
@@ -50,7 +50,7 @@ export default {
 		componentVersion: version,
 	},
 	decorators: [
-		withUnderlayWrapper,
+		withOverlayWrapper,
 	],
 };
 
@@ -59,7 +59,7 @@ export default {
 // it doesn't look like the background color just stops without wrapping the
 // entire container of templates.
 const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
-	acc[key] = { 
+	acc[key] = {
 		...modes[key],
 		viewport: {
 			height: "2000px",

@@ -1,0 +1,31 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum--legacy {
+	--system-color-loupe-width: var(--spectrum-color-loupe-width);
+	--system-color-loupe-height: var(--spectrum-color-loupe-height);
+	--system-color-loupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);
+	--system-color-loupe-animation-distance: 8px;
+	--system-color-loupe-drop-shadow-x: var(--spectrum-drop-shadow-x);
+	--system-color-loupe-drop-shadow-y: var(--spectrum-color-loupe-drop-shadow-y);
+	--system-color-loupe-drop-shadow-blur: var(--spectrum-color-loupe-drop-shadow-blur);
+	--system-color-loupe-drop-shadow-color: var(--spectrum-color-loupe-drop-shadow-color);
+	--system-color-loupe-outer-border-width: var(--spectrum-color-loupe-outer-border-width);
+	--system-color-loupe-inner-border-width: var(--spectrum-color-loupe-inner-border-width);
+	--system-color-loupe-outer-border-color: var(--spectrum-color-loupe-outer-border);
+	--system-color-loupe-inner-border-color: var(--spectrum-color-loupe-inner-border);
+	--system-color-loupe-checkerboard-dark-color: var(--spectrum-opacity-checkerboard-square-dark);
+	--system-color-loupe-checkerboard-light-color: var(--spectrum-opacity-checkerboard-square-light);
+}
+
+/*# sourceMappingURL=spectrum.css.map */

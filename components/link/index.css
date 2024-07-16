@@ -50,17 +50,18 @@
 }
 
 .spectrum-Link {
-	/* Remove the gray background on active links in IE 10. */
-	background-color: transparent;
-
-	/* Remove gaps in links underline in iOS 8+ and Safari 8+. */
-	text-decoration-skip: objects;
-	text-decoration: underline;
-	transition: color var(--mod-link-animation-duration, var(--spectrum-link-animation-duration)) ease-in-out;
-	outline: none;
 	cursor: pointer;
 
 	color: var(--highcontrast-link-text-color-primary-default, var(--mod-link-text-color-primary-default, var(--spectrum-link-text-color-primary-default)));
+	text-decoration: underline;
+
+	/* Remove the gray background on active links in IE 10. */
+	background-color: transparent;
+	outline: none;
+	transition: color var(--mod-link-animation-duration, var(--spectrum-link-animation-duration)) ease-in-out;
+
+	/* Remove gaps in links underline in iOS 8+ and Safari 8+. */
+	text-decoration-skip: objects;
 
 	&:hover {
 		color: var(--highcontrast-link-text-color-primary-hover, var(--mod-link-text-color-primary-hover, var(--spectrum-link-text-color-primary-hover)));
@@ -73,8 +74,8 @@
 	&:focus-visible {
 		color: var(--highcontrast-link-text-color-primary-focus, var(--mod-link-text-color-primary-focus, var(--spectrum-link-text-color-primary-focus)));
 		text-decoration: underline;
-		text-decoration-style: double;
 		text-decoration-color: var(--highcontrast-link-focus-color, inherit);
+		text-decoration-style: double;
 	}
 }
 

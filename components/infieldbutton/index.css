@@ -113,34 +113,34 @@
 }
 
 .spectrum-InfieldButton {
-	border-style: none;
-	background-color: transparent;
 	cursor: pointer;
 
 	display: flex;
-	justify-content: center;
 	align-items: center;
-
-	block-size: var(--mod-infield-button-height, var(--spectrum-infield-button-height));
+	justify-content: center;
 	inline-size: var(--mod-infield-button-width, var(--spectrum-infield-button-width));
 
+	block-size: var(--mod-infield-button-height, var(--spectrum-infield-button-height));
+
 	padding: var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill));
+	background-color: transparent;
+	border-style: none;
 
 	.spectrum-InfieldButton-fill {
-		block-size: 100%;
 		inline-size: 100%;
-
-		background-color: var(--mod-infield-button-background-color, var(--spectrum-infield-button-background-color));
-
-		border-width: var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width));
-		border-style: solid;
-		border-color: var(--highcontrast-infield-button-border-color, var(--mod-infield-button-border-color, var(--spectrum-infield-button-border-color)));
-		border-end-end-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
-		border-start-end-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
-		border-end-start-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
-		border-start-start-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
+		block-size: 100%;
 
 		padding: var(--mod-infield-button-fill-padding, var(--spectrum-infield-button-fill-padding));
+
+		background-color: var(--mod-infield-button-background-color, var(--spectrum-infield-button-background-color));
+		border-color: var(--highcontrast-infield-button-border-color, var(--mod-infield-button-border-color, var(--spectrum-infield-button-border-color)));
+		border-style: solid;
+
+		border-width: var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width));
+		border-start-start-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
+		border-start-end-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
+		border-end-start-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
+		border-end-end-radius: var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius));
 	}
 
 	.spectrum-InfieldButton-icon {
@@ -149,15 +149,15 @@
 
 	&.spectrum-InfieldButton--right {
 		.spectrum-InfieldButton-fill {
-			border-end-start-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
 			border-start-start-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
+			border-end-start-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
 		}
 	}
 
 	&.spectrum-InfieldButton--left {
 		.spectrum-InfieldButton-fill {
-			border-end-end-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
 			border-start-end-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
+			border-end-end-radius: var(--mod-infield-button-border-radius-reset, var(--spectrum-infield-button-border-radius-reset));
 		}
 	}
 
@@ -239,11 +239,11 @@
 	.spectrum-InfieldButton-fill {
 		padding-block-start: calc(var(--mod-infield-button-stacked-fill-padding-inner, var(--spectrum-infield-button-stacked-fill-padding-inner)) - var(--mod-infield-button-edge-to-fill, var(--spectrum-infield-button-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 		padding-block-end: calc(var(--mod-infield-button-stacked-fill-padding-outer, var(--spectrum-infield-button-stacked-fill-padding-outer)) - var(--mod-infield-button-inner-edge-to-fill, var(--spectrum-infield-button-inner-edge-to-fill)) - var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
-		border-end-start-radius: var(--mod-infield-button-stacked-bottom-border-radius-end-start, var(--spectrum-infield-button-stacked-bottom-border-radius-end-start));
+		border-block-end-width: var(--mod-infield-button-stacked-bottom-border-block-end-width, var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 		border-start-start-radius: var(--mod-infield-button-stacked-border-radius-reset, var(--spectrum-infield-button-stacked-border-radius-reset));
 		border-start-end-radius: var(--mod-infield-button-stacked-border-radius-reset, var(--spectrum-infield-button-stacked-border-radius-reset));
+		border-end-start-radius: var(--mod-infield-button-stacked-bottom-border-radius-end-start, var(--spectrum-infield-button-stacked-bottom-border-radius-end-start));
 		border-end-end-radius: var(--mod-infield-button-stacked-bottom-border-radius-end-end, var(--mod-infield-button-border-radius, var(--spectrum-infield-button-border-radius)));
-		border-block-end-width: var(--mod-infield-button-stacked-bottom-border-block-end-width, var(--mod-infield-button-border-width, var(--spectrum-infield-button-border-width)));
 	}
 }
 

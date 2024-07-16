@@ -1,0 +1,37 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum--legacy {
+	--system-alert-dialog-min-width: var(--spectrum-alert-dialog-minimum-width);
+	--system-alert-dialog-max-width: var(--spectrum-alert-dialog-maximum-width);
+	--system-alert-dialog-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-alert-dialog-warning-icon-color: var(--spectrum-notice-visual-color);
+	--system-alert-dialog-error-icon-color: var(--spectrum-negative-visual-color);
+	--system-alert-dialog-title-font-family: var(--spectrum-sans-font-family-stack);
+	--system-alert-dialog-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	--system-alert-dialog-title-font-style: var(--spectrum-heading-sans-serif-font-style);
+	--system-alert-dialog-title-font-size: var(--spectrum-alert-dialog-title-size);
+	--system-alert-dialog-title-line-height: var(--spectrum-heading-line-height);
+	--system-alert-dialog-title-color: var(--spectrum-heading-color);
+	--system-alert-dialog-body-font-family: var(--spectrum-sans-font-family-stack);
+	--system-alert-dialog-body-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--system-alert-dialog-body-font-style: var(--spectrum-body-sans-serif-font-style);
+	--system-alert-dialog-body-font-size: var(--spectrum-alert-dialog-description-size);
+	--system-alert-dialog-body-line-height: var(--spectrum-line-height-100);
+	--system-alert-dialog-body-color: var(--spectrum-body-color);
+	--system-alert-dialog-title-to-divider: var(--spectrum-spacing-200);
+	--system-alert-dialog-divider-to-description: var(--spectrum-spacing-300);
+	--system-alert-dialog-title-to-icon: var(--spectrum-spacing-300);
+}
+
+/*# sourceMappingURL=express.css.map */

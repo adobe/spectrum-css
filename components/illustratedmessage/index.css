@@ -54,16 +54,16 @@
 }
 
 .spectrum-IllustratedMessage {
-	block-size: 100%;
+	pointer-events: var(--mod-illustrated-message-pointer-events, auto);
 
 	display: var(--mod-illustrated-message-display, flex);
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	max-inline-size: var(--mod-illustrated-message-content-maximum-width);
+	block-size: 100%;
 
 	text-align: center;
-	pointer-events: var(--mod-illustrated-message-pointer-events, auto);
-	max-inline-size: var(--mod-illustrated-message-content-maximum-width);
 }
 
 .spectrum-IllustratedMessage-illustration {
@@ -82,33 +82,32 @@
 }
 
 .spectrum-IllustratedMessage-heading {
-	font-family: var(--mod-illustrated-message-title-font-family, var(--spectrum-illustrated-message-title-font-family));
-	font-weight: var(--mod-illustrated-message-title-font-weight, var(--spectrum-illustrated-message-title-font-weight));
-	font-style: var(--mod-illustrated-message-title-font-style, var(--spectrum-illustrated-message-title-font-style));
-	font-size: var(--mod-illustrated-message-title-font-size, var(--spectrum-illustrated-message-title-font-size));
-	line-height: var(--mod-illustrated-message-title-line-height, var(--spectrum-illustrated-message-title-line-height));
-
-	color: var(--mod-illustrated-message-title-color, var(--spectrum-illustrated-message-title-color));
-
 	max-inline-size: var(--mod-illustrated-message-heading-max-inline-size, var(--spectrum-illustrated-message-heading-max-inline-size));
 	margin-block-start: 0;
 	margin-block-end: var(--mod-illustrated-message-heading-to-body, 0);
+	font-family: var(--mod-illustrated-message-title-font-family, var(--spectrum-illustrated-message-title-font-family));
+	font-size: var(--mod-illustrated-message-title-font-size, var(--spectrum-illustrated-message-title-font-size));
+	font-weight: var(--mod-illustrated-message-title-font-weight, var(--spectrum-illustrated-message-title-font-weight));
+	font-style: var(--mod-illustrated-message-title-font-style, var(--spectrum-illustrated-message-title-font-style));
+	line-height: var(--mod-illustrated-message-title-line-height, var(--spectrum-illustrated-message-title-line-height));
+
+	color: var(--mod-illustrated-message-title-color, var(--spectrum-illustrated-message-title-color));
 }
 
 .spectrum-IllustratedMessage-description {
+	pointer-events: var(--mod-illustrated-message-description-pointer-events, auto);
 	position: var(--mod-illustrated-message-description-position);
 	z-index: var(--mod-illustrated-message-description-z-index);
-	pointer-events: var(--mod-illustrated-message-description-pointer-events, auto);
-
-	font-family: var(--mod-illustrated-message-description-font-family, var(--spectrum-illustrated-message-description-font-family));
-	font-weight: var(--mod-illustrated-message-description-font-weight, var(--spectrum-illustrated-message-description-font-weight));
-	font-style: var(--mod-illustrated-message-description-font-style, var(--spectrum-illustrated-message-description-font-style));
-	font-size: var(--mod-illustrated-message-description-font-size, var(--spectrum-illustrated-message-description-font-size));
-	line-height: var(--mod-illustrated-message-description-line-height, var(--spectrum-illustrated-message-description-line-height));
-
-	color: var(--mod-illustrated-message-description-color, var(--spectrum-illustrated-message-description-color));
 
 	max-inline-size: var(--mod-illustrated-message-description-max-inline-size, var(--spectrum-illustrated-message-description-max-inline-size));
 	margin-block-start: var(--mod-illustrated-message-heading-to-description, var(--spectrum-illustrated-message-heading-to-description));
 	margin-block-end: 0;
+
+	font-family: var(--mod-illustrated-message-description-font-family, var(--spectrum-illustrated-message-description-font-family));
+	font-size: var(--mod-illustrated-message-description-font-size, var(--spectrum-illustrated-message-description-font-size));
+	font-weight: var(--mod-illustrated-message-description-font-weight, var(--spectrum-illustrated-message-description-font-weight));
+	font-style: var(--mod-illustrated-message-description-font-style, var(--spectrum-illustrated-message-description-font-style));
+	line-height: var(--mod-illustrated-message-description-line-height, var(--spectrum-illustrated-message-description-line-height));
+
+	color: var(--mod-illustrated-message-description-color, var(--spectrum-illustrated-message-description-color));
 }

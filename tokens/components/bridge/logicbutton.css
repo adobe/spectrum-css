@@ -1,0 +1,43 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum-LogicButton {
+	--spectrum-logic-button-height: var(--system-logic-button-height);
+	--spectrum-logic-button-padding: var(--system-logic-button-padding);
+	--spectrum-logic-button-font-size: var(--system-logic-button-font-size);
+	--spectrum-logic-button-font-weight: var(--system-logic-button-font-weight);
+	--spectrum-logic-button-border-width: var(--system-logic-button-border-width);
+	--spectrum-logic-button-border-radius: var(--system-logic-button-border-radius);
+	--spectrum-logic-button-focus-indicator-width: var(--system-logic-button-focus-indicator-width);
+	--spectrum-logic-button-focus-indicator-gap: var(--system-logic-button-focus-indicator-gap);
+	--spectrum-logic-button-focus-indicator-color: var(--system-logic-button-focus-indicator-color);
+	--spectrum-logic-button-and-text-color: var(--system-logic-button-and-text-color);
+	--spectrum-logic-button-and-background-color-hover: var(--system-logic-button-and-background-color-hover);
+	--spectrum-logic-button-and-border-color-hover: var(--system-logic-button-and-border-color-hover);
+	--spectrum-logic-button-or-text-color: var(--system-logic-button-or-text-color);
+}
+
+.spectrum-LogicButton.is-disabled,
+.spectrum-LogicButton:disabled {
+	--spectrum-logic-button-and-background-color: var(--system-logic-button-disabled-and-background-color);
+	--spectrum-logic-button-and-border-color: var(--system-logic-button-disabled-and-border-color);
+	--spectrum-logic-button-and-text-color: var(--system-logic-button-disabled-and-text-color);
+	--spectrum-logic-button-and-background-color-hover: var(--system-logic-button-disabled-and-background-color-hover);
+	--spectrum-logic-button-and-border-color-hover: var(--system-logic-button-disabled-and-border-color-hover);
+	--spectrum-logic-button-or-background-color: var(--system-logic-button-disabled-or-background-color);
+	--spectrum-logic-button-or-border-color: var(--system-logic-button-disabled-or-border-color);
+	--spectrum-logic-button-or-text-color: var(--system-logic-button-disabled-or-text-color);
+	--spectrum-logic-button-or-background-color-hover: var(--system-logic-button-disabled-or-background-color-hover);
+	--spectrum-logic-button-or-border-color-hover: var(--system-logic-button-disabled-or-border-color-hover);
+}
+/*# sourceMappingURL=index-theme.css.map */

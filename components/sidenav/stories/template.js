@@ -6,6 +6,8 @@ import { repeat } from "lit/directives/repeat.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-SideNav",
@@ -14,7 +16,7 @@ export const Template = ({
 	hasIcon,
 	iconName,
 	items = [],
-}, context) => html`
+} = {}, context) => html`
   <nav>
     <ul class=${classMap({
       [rootClass]: true,
@@ -35,7 +37,9 @@ export const Template = ({
               :
               html`
               <a class="${rootClass}-itemLink">
-                ${when(hasIcon, () => Icon({ iconName }, context))}
+              ${when(hasIcon, () =>
+                Icon({ iconName }, context)
+                )}
                 <span class="${rootClass}-link-text">${item.title}</span>
               </a>
               `
@@ -82,35 +86,26 @@ export const SideNavItem = ({
 	hasIcon,
 	iconName,
 	customClasses = [],
-} = {}, context = {}) => {
+} = {}, context) => {
+	const displayIcon = hasIcon & variant === "multiLevel" ? false : true;
 	return html`
-    <li
-      id=${ifDefined(id)}
-      class=${classMap({
-        [`${rootClass}-item`]: true,
-        "is-selected": isSelected,
-        "is-disabled": isDisabled,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
-    >
-      <a
-        href=${ifDefined(link)}
-        class=${classMap({
-          [`${rootClass}-itemLink`]: true,
-        })}
-      >
-        ${when(!hasIcon & variant !== "multiLevel", () => Icon({ iconName }, context))}
-        <span class=${classMap({
-          [`${rootClass}-link-text`]: true,
-        })}>
-          ${title}
-        </span>
+    <li id=${id} class=${classMap({
+      [`${rootClass}-item`]: true,
+      "is-selected": isSelected,
+      "is-disabled": isDisabled,
+      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+    })}>
+      <a href=${link} class="${rootClass}-itemLink">
+        ${when(displayIcon, () =>
+          Icon({ iconName }, context)
+        )}
+        <span class="${rootClass}-link-text">${title}</span>
       </a>
       ${when(levelThreeItems, () => html`
-        <ul class=${classMap({
-          [rootClass]: true,
-        })}>
-          ${repeat(levelThreeItems, (item) => item.id, (item) => SideNavItem(item, context))}
+        <ul class=${rootClass}>
+          ${repeat(levelThreeItems, (item) => item.id, (item) => {
+            return SideNavItem({ ...item }, context);
+          })}
         </ul>`
       )}
     </li>

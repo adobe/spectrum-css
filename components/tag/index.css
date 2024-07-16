@@ -14,194 +14,26 @@
 @import "./themes/express.css";
 
 .spectrum-Tag {
-	/* TODO - replace placeholder disabled avatar opacity with correct token once avatar is migrated */
-	--spectrum-avatar-opacity-disabled: 0.3;
-
-	--spectrum-tag-animation-duration: var(--spectrum-animation-duration-100);
-	--spectrum-tag-border-width: var(--spectrum-border-width-100);
-
-	/* focus ring */
-	--spectrum-tag-focus-ring-thickness: var(--spectrum-focus-indicator-thickness);
-	--spectrum-tag-focus-ring-gap: var(--spectrum-focus-indicator-gap);
-	--spectrum-tag-focus-ring-color: var(--spectrum-focus-indicator-color);
-
-	/* label */
-	--spectrum-tag-label-line-height: var(--spectrum-line-height-100);
-	--spectrum-tag-label-font-weight: var(--spectrum-regular-font-weight);
-
-	/* selected */
-	--spectrum-tag-content-color-selected: var(--spectrum-gray-50);
-	--spectrum-tag-background-color-selected: var(--spectrum-neutral-background-color-selected-default);
-	--spectrum-tag-background-color-selected-hover: var(--spectrum-neutral-background-color-selected-hover);
-	--spectrum-tag-background-color-selected-active: var(--spectrum-neutral-background-color-selected-down);
-	--spectrum-tag-background-color-selected-focus: var(--spectrum-neutral-background-color-selected-key-focus);
-
-	/* invalid variant */
-	--spectrum-tag-border-color-invalid: var(--spectrum-negative-color-900);
-	--spectrum-tag-border-color-invalid-hover: var(--spectrum-negative-color-1000);
-	--spectrum-tag-border-color-invalid-active: var(--spectrum-negative-color-1100);
-	--spectrum-tag-border-color-invalid-focus: var(--spectrum-negative-color-1000);
-
-	/* invalid variant content */
-	--spectrum-tag-content-color-invalid: var(--spectrum-negative-content-color-default);
-	--spectrum-tag-content-color-invalid-hover: var(--spectrum-negative-content-color-hover);
-	--spectrum-tag-content-color-invalid-active: var(--spectrum-negative-content-color-down);
-	--spectrum-tag-content-color-invalid-focus: var(--spectrum-negative-content-color-key-focus);
-
-	/* invalid selected variant */
-	--spectrum-tag-border-color-invalid-selected: var(--spectrum-negative-background-color-default);
-	--spectrum-tag-border-color-invalid-selected-hover: var(--spectrum-negative-background-color-hover);
-	--spectrum-tag-border-color-invalid-selected-focus: var(--spectrum-negative-background-color-down);
-	--spectrum-tag-border-color-invalid-selected-active: var(--spectrum-negative-background-color-key-focus);
-	--spectrum-tag-background-color-invalid-selected: var(--spectrum-negative-background-color-default);
-	--spectrum-tag-background-color-invalid-selected-hover: var(--spectrum-negative-background-color-hover);
-	--spectrum-tag-background-color-invalid-selected-active: var(--spectrum-negative-background-color-down);
-	--spectrum-tag-background-color-invalid-selected-focus: var(--spectrum-negative-background-color-key-focus);
-
-	/* invalid selected variant content */
-	--spectrum-tag-content-color-invalid-selected: var(--spectrum-white);
-
-	/* emphasized variant */
-	--spectrum-tag-border-color-emphasized: var(--spectrum-accent-background-color-default);
-	--spectrum-tag-border-color-emphasized-hover: var(--spectrum-accent-background-color-hover);
-	--spectrum-tag-border-color-emphasized-active: var(--spectrum-accent-background-color-down);
-	--spectrum-tag-border-color-emphasized-focus: var(--spectrum-accent-background-color-key-focus);
-	--spectrum-tag-background-color-emphasized: var(--spectrum-accent-background-color-default);
-	--spectrum-tag-background-color-emphasized-hover: var(--spectrum-accent-background-color-hover);
-	--spectrum-tag-background-color-emphasized-active: var(--spectrum-accent-background-color-down);
-	--spectrum-tag-background-color-emphasized-focus: var(--spectrum-accent-background-color-key-focus);
-
-	/* emphasized variant content */
-	--spectrum-tag-content-color-emphasized: var(--spectrum-white);
-
-	/* disabled variant content */
-	--spectrum-tag-content-color-disabled: var(--spectrum-disabled-content-color);
-
-	/* ↧↧↧ Fallback defaults in case of no t-shirt size - set to Medium styles ↧↧↧ */
-	/* icon spacing fallback if no t-shirt size */
-	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
-	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
-	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
-
-	/* avatar spacing fallback if no t-shirt size */
-	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium);
-	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
-	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
-
-	/* label spacing fallback if no t-shirt size */
-	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
-
-	/* clear button inline spacing fallback if no t-shirt size */
-	--spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
-
-	/* tag defaults if no t-shirt size */
-	--spectrum-tag-height: var(--spectrum-component-height-100);
-
-	/* text defaults if no t-shirt size */
-	--spectrum-tag-font-size: var(--spectrum-font-size-100);
-
-	/* clear button spacing if no t-shirt size */
-	--spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
-}
-
-/* t-shirt sizes */
-.spectrum-Tag--sizeS {
-	--spectrum-tag-height: var(--spectrum-component-height-75);
-	--spectrum-tag-font-size: var(--spectrum-font-size-75);
-	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-75);
-
-	--spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-75);
-	--spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-small);
-
-	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-75);
-	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-75);
-	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-75);
-
-	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-small);
-	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-small);
-	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-75);
-
-	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-75);
-
-	/* tokens based on theme and t-shirt size */
-	--spectrum-tag-corner-radius: var(--spectrum-tag-size-small-corner-radius);
-	--spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-small-spacing-inline-start);
-	--spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-small-label-spacing-inline-end);
-	--spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-small-clear-button-spacing-inline-end);
-}
-
-.spectrum-Tag--sizeM {
-	--spectrum-tag-height: var(--spectrum-component-height-100);
-	--spectrum-tag-font-size: var(--spectrum-font-size-100);
-	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-100);
-
-	--spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-100);
-	--spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-medium);
-
-	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-100);
-
-	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-medium); /* 6px 9px */
-	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-medium);
-	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-100);
-
-	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-100);
-
-	/* tokens based on theme and t-shirt size */
-	--spectrum-tag-corner-radius: var(--spectrum-tag-size-medium-corner-radius);
-	--spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-medium-spacing-inline-start);
-	--spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-medium-label-spacing-inline-end);
-	--spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-medium-clear-button-spacing-inline-end);
-}
-
-.spectrum-Tag--sizeL {
-	--spectrum-tag-height: var(--spectrum-component-height-200);
-	--spectrum-tag-font-size: var(--spectrum-font-size-200);
-	--spectrum-tag-icon-size: var(--spectrum-workflow-icon-size-200);
-
-	--spectrum-tag-clear-button-spacing-inline-start: var(--spectrum-text-to-visual-200);
-	--spectrum-tag-clear-button-spacing-block: var(--spectrum-tag-top-to-cross-icon-large);
-
-	--spectrum-tag-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-200);
-	--spectrum-tag-icon-spacing-block-end: var(--spectrum-component-top-to-workflow-icon-200);
-	--spectrum-tag-icon-spacing-inline-end: var(--spectrum-text-to-visual-200);
-
-	--spectrum-tag-avatar-spacing-block-start: var(--spectrum-tag-top-to-avatar-large);
-	--spectrum-tag-avatar-spacing-block-end: var(--spectrum-tag-top-to-avatar-large);
-	--spectrum-tag-avatar-spacing-inline-end: var(--spectrum-text-to-visual-200);
-
-	--spectrum-tag-label-spacing-block: var(--spectrum-component-top-to-text-200);
-
-	/* tokens based on theme and t-shirt size */
-	--spectrum-tag-corner-radius: var(--spectrum-tag-size-large-corner-radius);
-	--spectrum-tag-spacing-inline-start: var(--spectrum-tag-size-large-spacing-inline-start);
-	--spectrum-tag-label-spacing-inline-end: var(--spectrum-tag-size-large-label-spacing-inline-end);
-	--spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-large-clear-button-spacing-inline-end);
-}
-
-.spectrum-Tag {
-	border-color: var(--highcontrast-tag-border-color, var(--mod-tag-border-color, var(--spectrum-tag-border-color)));
-	background-color: var(--highcontrast-tag-background-color, var(--mod-tag-background-color, var(--spectrum-tag-background-color)));
-	color: var(--highcontrast-tag-content-color, var(--mod-tag-content-color, var(--spectrum-tag-content-color)));
-
-	border-radius: var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius));
-	border-width: var(--mod-tag-border-width, var(--spectrum-tag-border-width));
-	border-style: solid;
-
-	padding-inline-start: calc(var(--mod-tag-spacing-inline-start, var(--spectrum-tag-spacing-inline-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-	padding-inline-end: 0;
-
-	block-size: var(--mod-tag-height, var(--spectrum-tag-height));
+	user-select: none;
 	position: relative;
 	display: inline-flex;
 	align-items: center;
 	box-sizing: border-box;
-	vertical-align: bottom;
 	max-inline-size: 100%;
+
+	block-size: var(--mod-tag-height, var(--spectrum-tag-height));
+
+	padding-inline-start: calc(var(--mod-tag-spacing-inline-start, var(--spectrum-tag-spacing-inline-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+	padding-inline-end: 0;
+	color: var(--highcontrast-tag-content-color, var(--mod-tag-content-color, var(--spectrum-tag-content-color)));
+	vertical-align: bottom;
+	background-color: var(--highcontrast-tag-background-color, var(--mod-tag-background-color, var(--spectrum-tag-background-color)));
+	border-color: var(--highcontrast-tag-border-color, var(--mod-tag-border-color, var(--spectrum-tag-border-color)));
+	border-style: solid;
+	border-width: var(--mod-tag-border-width, var(--spectrum-tag-border-width));
+
+	border-radius: var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius));
 	outline: none;
-	user-select: none;
 
 	transition:
 		border-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out,
@@ -210,8 +42,8 @@
 		background-color var(--mod-tag-animation-duration, var(--spectrum-tag-animation-duration)) ease-in-out;
 
 	.spectrum-Tag-itemIcon {
-		block-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
 		inline-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
+		block-size: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
 
 		margin-block-start: calc(var(--mod-tag-icon-spacing-block-start, var(--spectrum-tag-icon-spacing-block-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		margin-block-end: calc(var(--mod-tag-icon-spacing-block-end, var(--spectrum-tag-icon-spacing-block-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
@@ -226,10 +58,11 @@
 
 	/* clear button */
 	.spectrum-Tag-clearButton {
+		/* width of fill neutralized to ensure correct inline spacing within tag */
+		--mod-clear-button-width: fit-content;
+		--spectrum-clearbutton-fill-size: fit-content;
+		--spectrum-clearbutton-fill-background-color: transparent;
 		box-sizing: border-box;
-
-		padding-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-		padding-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
 		/* move button negative calc to cancel label end margin, then add button start margin */
 		margin-inline-start: calc(var(--mod-tag-clear-button-spacing-inline-start, var(--spectrum-tag-clear-button-spacing-inline-start)) + (var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) * -1));
@@ -237,175 +70,172 @@
 		/* end spacing is theme-specific */
 		margin-inline-end: calc(var(--mod-tag-clear-button-spacing-inline-end, var(--spectrum-tag-clear-button-spacing-inline-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 
+		padding-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+		padding-block-end: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+
 		/* ensure clear button is correct color */
 		color: currentColor;
 
-		/* width of fill neutralized to ensure correct inline spacing within tag */
-		--mod-clear-button-width: fit-content;
-		--spectrum-clearbutton-fill-size: fit-content;
-		--spectrum-clearbutton-fill-background-color: transparent;
-
 		.spectrum-ClearButton-fill {
-			background-color: var(--mod-clearbutton-fill-background-color, var(--spectrum-clearbutton-fill-background-color));
-
 			inline-size: var(--mod-clearbutton-fill-size, var(--spectrum-clearbutton-fill-size));
 			block-size: var(--mod-clearbutton-fill-size, var(--spectrum-clearbutton-fill-size));
+			background-color: var(--mod-clearbutton-fill-background-color, var(--spectrum-clearbutton-fill-background-color));
 		}
 	}
 
 	.spectrum-Tag-itemLabel {
-		block-size: 100%;
-		box-sizing: border-box;
-		line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));
-		font-weight: var(--mod-tag-label-font-weight, var(--spectrum-tag-label-font-weight));
-
-		flex: 1 1 auto;
-		font-size: var(--mod-tag-font-size, var(--spectrum-tag-font-size));
 		cursor: default;
 		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
 
-		padding-block-start: calc(var(--mod-tag-label-spacing-block, var(--spectrum-tag-label-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+		flex: 1 1 auto;
+		box-sizing: border-box;
+		block-size: 100%;
 
 		/* space from label text to end edge */
 		margin-inline-end: calc(var(--mod-tag-label-spacing-inline-end, var(--spectrum-tag-label-spacing-inline-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+
+		padding-block-start: calc(var(--mod-tag-label-spacing-block, var(--spectrum-tag-label-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
+		font-size: var(--mod-tag-font-size, var(--spectrum-tag-font-size));
+		font-weight: var(--mod-tag-label-font-weight, var(--spectrum-tag-label-font-weight));
+		line-height: var(--mod-tag-label-line-height, var(--spectrum-tag-label-line-height));
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	&:hover {
-		border-color: var(--highcontrast-tag-border-color-hover, var(--mod-tag-border-color-hover, var(--spectrum-tag-border-color-hover)));
-		background-color: var(--highcontrast-tag-background-color-hover, var(--mod-tag-background-color-hover, var(--spectrum-tag-background-color-hover)));
 		color: var(--highcontrast-tag-content-color-hover, var(--mod-tag-content-color-hover, var(--spectrum-tag-content-color-hover)));
+		background-color: var(--highcontrast-tag-background-color-hover, var(--mod-tag-background-color-hover, var(--spectrum-tag-background-color-hover)));
+		border-color: var(--highcontrast-tag-border-color-hover, var(--mod-tag-border-color-hover, var(--spectrum-tag-border-color-hover)));
 	}
 
 	&:active {
-		border-color: var(--highcontrast-tag-border-color-active, var(--mod-tag-border-color-active, var(--spectrum-tag-border-color-active)));
-		background-color: var(--highcontrast-tag-background-color-active, var(--mod-tag-background-color-active, var(--spectrum-tag-background-color-active)));
 		color: var(--highcontrast-tag-content-color-active, var(--mod-tag-content-color-active, var(--spectrum-tag-content-color-active)));
+		background-color: var(--highcontrast-tag-background-color-active, var(--mod-tag-background-color-active, var(--spectrum-tag-background-color-active)));
+		border-color: var(--highcontrast-tag-border-color-active, var(--mod-tag-border-color-active, var(--spectrum-tag-border-color-active)));
 	}
 
 	&:focus-visible,
 	&.is-focused {
-		border-color: var(--highcontrast-tag-border-color-focus, var(--mod-tag-border-color-focus, var(--spectrum-tag-border-color-focus)));
-		background-color: var(--highcontrast-tag-background-color-focus, var(--mod-tag-background-color-focus, var(--spectrum-tag-background-color-focus)));
 		color: var(--highcontrast-tag-content-color-focus, var(--mod-tag-content-color-focus, var(--spectrum-tag-content-color-focus)));
+		background-color: var(--highcontrast-tag-background-color-focus, var(--mod-tag-background-color-focus, var(--spectrum-tag-background-color-focus)));
+		border-color: var(--highcontrast-tag-border-color-focus, var(--mod-tag-border-color-focus, var(--spectrum-tag-border-color-focus)));
 
 		/* focus indicator */
 		&::after {
+			pointer-events: none;
 			content: "";
-			display: inline-block;
 			position: absolute;
 			inset-block-start: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
 			inset-block-end: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
 			inset-inline-start: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
 			inset-inline-end: calc(-1 * var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)) - var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness)));
+			display: inline-block;
 			border-color: var(--highcontrast-tag-focus-ring-color, var(--mod-tag-focus-ring-color, var(--spectrum-tag-focus-ring-color)));
-			border-radius: calc(var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius)) + var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) + var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
-			border-width: var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness));
 			border-style: solid;
-			pointer-events: none;
+			border-width: var(--mod-tag-focus-ring-thickness, var(--spectrum-tag-focus-ring-thickness));
+			border-radius: calc(var(--mod-tag-corner-radius, var(--spectrum-tag-corner-radius)) + var(--mod-tag-focus-ring-gap, var(--spectrum-tag-focus-ring-gap)) + var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		}
 	}
 }
 
 /* selected */
 .spectrum-Tag.is-selected {
-	border-color: var(--highcontrast-tag-border-color-selected, var(--mod-tag-border-color-selected, var(--spectrum-tag-border-color-selected)));
-	background-color: var(--highcontrast-tag-background-color-selected, var(--mod-tag-background-color-selected, var(--spectrum-tag-background-color-selected)));
 	color: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-tag-content-color-selected)));
+	background-color: var(--highcontrast-tag-background-color-selected, var(--mod-tag-background-color-selected, var(--spectrum-tag-background-color-selected)));
+	border-color: var(--highcontrast-tag-border-color-selected, var(--mod-tag-border-color-selected, var(--spectrum-tag-border-color-selected)));
 
 	&:hover {
-		border-color: var(--highcontrast-tag-border-color-selected-hover, var(--mod-tag-border-color-selected-hover, var(--spectrum-tag-border-color-selected-hover)));
-		background-color: var(--highcontrast-tag-background-color-selected-hover, var(--mod-tag-background-color-selected-hover, var(--spectrum-tag-background-color-selected-hover)));
 		color: var(--highcontrast-tag-content-color-selected, var(--mod-tag-content-color-selected, var(--spectrum-tag-content-color-selected)));
+		background-color: var(--highcontrast-tag-background-color-selected-hover, var(--mod-tag-background-color-selected-hover, var(--spectrum-tag-background-color-selected-hover)));
+		border-color: var(--highcontrast-tag-border-color-selected-hover, var(--mod-tag-border-color-selected-hover, var(--spectrum-tag-border-color-selected-hover)));
 	}
 
 	&:active {
-		border-color: var(--highcontrast-tag-border-color-selected-active, var(--mod-tag-border-color-selected-active, var(--spectrum-tag-border-color-selected-active)));
 		background-color: var(--highcontrast-tag-background-color-selected-active, var(--mod-tag-background-color-selected-active, var(--spectrum-tag-background-color-selected-active)));
+		border-color: var(--highcontrast-tag-border-color-selected-active, var(--mod-tag-border-color-selected-active, var(--spectrum-tag-border-color-selected-active)));
 	}
 
 	&:focus-visible,
 	&.is-focused {
-		border-color: var(--highcontrast-tag-border-color-selected-focus, var(--mod-tag-border-color-selected-focus, var(--spectrum-tag-border-color-selected-focus)));
 		background-color: var(--highcontrast-tag-background-color-selected-focus, var(--mod-tag-background-color-selected-focus, var(--spectrum-tag-background-color-selected-focus)));
+		border-color: var(--highcontrast-tag-border-color-selected-focus, var(--mod-tag-border-color-selected-focus, var(--spectrum-tag-border-color-selected-focus)));
 	}
 }
 
 .spectrum-Tag.is-invalid {
-	border-color: var(--highcontrast-tag-border-color-invalid, var(--mod-tag-border-color-invalid, var(--spectrum-tag-border-color-invalid)));
 	color: var(--highcontrast-tag-content-color-invalid, var(--mod-tag-content-color-invalid, var(--spectrum-tag-content-color-invalid)));
+	border-color: var(--highcontrast-tag-border-color-invalid, var(--mod-tag-border-color-invalid, var(--spectrum-tag-border-color-invalid)));
 
 	&:hover {
-		border-color: var(--highcontrast-tag-border-color-invalid-hover, var(--mod-tag-border-color-invalid-hover, var(--spectrum-tag-border-color-invalid-hover)));
 		color: var(--highcontrast-tag-content-color-invalid-hover, var(--mod-tag-content-color-invalid-hover, var(--spectrum-tag-content-color-invalid-hover)));
+		border-color: var(--highcontrast-tag-border-color-invalid-hover, var(--mod-tag-border-color-invalid-hover, var(--spectrum-tag-border-color-invalid-hover)));
 	}
 
 	&:active {
-		border-color: var(--highcontrast-tag-border-color-invalid-active, var(--mod-tag-border-color-invalid-active, var(--spectrum-tag-border-color-invalid-active)));
 		color: var(--highcontrast-tag-content-color-invalid-active, var(--mod-tag-content-color-invalid-active, var(--spectrum-tag-content-color-invalid-active)));
+		border-color: var(--highcontrast-tag-border-color-invalid-active, var(--mod-tag-border-color-invalid-active, var(--spectrum-tag-border-color-invalid-active)));
 	}
 
 	&:focus-visible,
 	&.is-focused {
-		border-color: var(--highcontrast-tag-border-color-invalid-focus, var(--mod-tag-border-color-invalid-focus, var(--spectrum-tag-border-color-invalid-focus)));
 		color: var(--highcontrast-tag-content-color-invalid-focus, var(--mod-tag-content-color-invalid-focus, var(--spectrum-tag-content-color-invalid-focus)));
+		border-color: var(--highcontrast-tag-border-color-invalid-focus, var(--mod-tag-border-color-invalid-focus, var(--spectrum-tag-border-color-invalid-focus)));
 	}
 
 	&.is-selected {
-		border-color: var(--highcontrast-tag-border-color-invalid-selected, var(--mod-tag-border-color-invalid-selected, var(--spectrum-tag-border-color-invalid-selected)));
-		background-color: var(--highcontrast-tag-background-color-invalid-selected, var(--mod-tag-background-color-invalid-selected, var(--spectrum-tag-background-color-invalid-selected)));
 		color: var(--highcontrast-tag-content-color-invalid-selected, var(--mod-tag-content-color-invalid-selected, var(--spectrum-tag-content-color-invalid-selected)));
+		background-color: var(--highcontrast-tag-background-color-invalid-selected, var(--mod-tag-background-color-invalid-selected, var(--spectrum-tag-background-color-invalid-selected)));
+		border-color: var(--highcontrast-tag-border-color-invalid-selected, var(--mod-tag-border-color-invalid-selected, var(--spectrum-tag-border-color-invalid-selected)));
 
 		&:hover {
-			border-color: var(--highcontrast-tag-border-color-invalid-selected-hover, var(--mod-tag-border-color-invalid-selected-hover, var(--spectrum-tag-border-color-invalid-selected-hover)));
-			background-color: var(--highcontrast-tag-background-color-invalid-selected-hover, var(--mod-tag-background-color-invalid-selected-hover, var(--spectrum-tag-background-color-invalid-selected-hover)));
 			color: var(--highcontrast-tag-content-color-invalid-selected, var(--mod-tag-content-color-invalid-selected, var(--spectrum-tag-content-color-invalid-selected)));
+			background-color: var(--highcontrast-tag-background-color-invalid-selected-hover, var(--mod-tag-background-color-invalid-selected-hover, var(--spectrum-tag-background-color-invalid-selected-hover)));
+			border-color: var(--highcontrast-tag-border-color-invalid-selected-hover, var(--mod-tag-border-color-invalid-selected-hover, var(--spectrum-tag-border-color-invalid-selected-hover)));
 		}
 
 		&:active {
-			border-color: var(--highcontrast-tag-border-color-invalid-selected-active, var(--mod-tag-border-color-invalid-selected-active, var(--spectrum-tag-border-color-invalid-selected-active)));
 			background-color: var(--highcontrast-tag-background-color-invalid-selected-active, var(--mod-tag-background-color-invalid-selected-active, var(--spectrum-tag-background-color-invalid-selected-active)));
+			border-color: var(--highcontrast-tag-border-color-invalid-selected-active, var(--mod-tag-border-color-invalid-selected-active, var(--spectrum-tag-border-color-invalid-selected-active)));
 		}
 
 		&:focus-visible,
 		&.is-focused {
-			border-color: var(--highcontrast-tag-border-color-invalid-selected-focus, var(--mod-tag-border-color-invalid-selected-focus, var(--spectrum-tag-border-color-invalid-selected-focus)));
 			background-color: var(--highcontrast-tag-background-color-invalid-selected-focus, var(--mod-tag-background-color-invalid-selected-focus, var(--spectrum-tag-background-color-invalid-selected-focus)));
+			border-color: var(--highcontrast-tag-border-color-invalid-selected-focus, var(--mod-tag-border-color-invalid-selected-focus, var(--spectrum-tag-border-color-invalid-selected-focus)));
 		}
 	}
 }
 
 /* emphasized */
 .spectrum-Tag.is-emphasized {
-	border-color: var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, var(--spectrum-tag-border-color-emphasized)));
-	background-color: var(--highcontrast-tag-background-color-emphasized, var(--mod-tag-background-color-emphasized, var(--spectrum-tag-background-color-emphasized)));
 	color: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-tag-content-color-emphasized)));
+	background-color: var(--highcontrast-tag-background-color-emphasized, var(--mod-tag-background-color-emphasized, var(--spectrum-tag-background-color-emphasized)));
+	border-color: var(--highcontrast-tag-border-color-emphasized, var(--mod-tag-border-color-emphasized, var(--spectrum-tag-border-color-emphasized)));
 
 	&:hover {
-		border-color: var(--highcontrast-tag-border-color-emphasized-hover, var(--mod-tag-border-color-emphasized-hover, var(--spectrum-tag-border-color-emphasized-hover)));
-		background-color: var(--highcontrast-tag-background-color-emphasized-hover, var(--mod-tag-background-color-emphasized-hover, var(--spectrum-tag-background-color-emphasized-hover)));
 		color: var(--highcontrast-tag-content-color-emphasized, var(--mod-tag-content-color-emphasized, var(--spectrum-tag-content-color-emphasized)));
+		background-color: var(--highcontrast-tag-background-color-emphasized-hover, var(--mod-tag-background-color-emphasized-hover, var(--spectrum-tag-background-color-emphasized-hover)));
+		border-color: var(--highcontrast-tag-border-color-emphasized-hover, var(--mod-tag-border-color-emphasized-hover, var(--spectrum-tag-border-color-emphasized-hover)));
 	}
 
 	&:active {
-		border-color: var(--highcontrast-tag-border-color-emphasized-active, var(--mod-tag-border-color-emphasized-active, var(--spectrum-tag-border-color-emphasized-active)));
 		background-color: var(--highcontrast-tag-background-color-emphasized-active, var(--mod-tag-background-color-emphasized-active, var(--spectrum-tag-background-color-emphasized-active)));
+		border-color: var(--highcontrast-tag-border-color-emphasized-active, var(--mod-tag-border-color-emphasized-active, var(--spectrum-tag-border-color-emphasized-active)));
 	}
 
 	&:focus-visible,
 	&.is-focused {
-		border-color: var(--highcontrast-tag-border-color-emphasized-focus, var(--mod-tag-border-color-emphasized-focus, var(--spectrum-tag-border-color-emphasized-focus)));
 		background-color: var(--highcontrast-tag-background-color-emphasized-focus, var(--mod-tag-background-color-emphasized-focus, var(--spectrum-tag-background-color-emphasized-focus)));
+		border-color: var(--highcontrast-tag-border-color-emphasized-focus, var(--mod-tag-border-color-emphasized-focus, var(--spectrum-tag-border-color-emphasized-focus)));
 	}
 }
 
 /* disabled */
 .spectrum-Tag.is-disabled {
-	border-color: var(--highcontrast-tag-border-color-disabled, var(--mod-tag-border-color-disabled, var(--spectrum-tag-border-color-disabled)));
-	background-color: var(--highcontrast-tag-background-color-disabled, var(--mod-tag-background-color-disabled, var(--spectrum-tag-background-color-disabled)));
-	color: var(--highcontrast-tag-content-color-disabled, var(--mod-tag-content-color-disabled, var(--spectrum-tag-content-color-disabled)));
 	pointer-events: none;
+	color: var(--highcontrast-tag-content-color-disabled, var(--mod-tag-content-color-disabled, var(--spectrum-tag-content-color-disabled)));
+	background-color: var(--highcontrast-tag-background-color-disabled, var(--mod-tag-background-color-disabled, var(--spectrum-tag-background-color-disabled)));
+	border-color: var(--highcontrast-tag-border-color-disabled, var(--mod-tag-border-color-disabled, var(--spectrum-tag-border-color-disabled)));
 
 	.spectrum-Avatar {
 		opacity: var(--mod-avatar-opacity-disabled, var(--spectrum-avatar-opacity-disabled));
@@ -415,8 +245,6 @@
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-Tag {
-		forced-color-adjust: none;
-
 		--highcontrast-tag-border-color: ButtonText;
 		--highcontrast-tag-border-color-hover: ButtonText;
 		--highcontrast-tag-border-color-active: ButtonText;
@@ -433,6 +261,7 @@
 		--highcontrast-tag-content-color-focus: ButtonText;
 
 		--highcontrast-tag-focus-ring-color: Highlight;
+		forced-color-adjust: none;
 
 		&.is-selected {
 			--highcontrast-tag-border-color-selected: Highlight;

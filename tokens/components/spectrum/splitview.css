@@ -1,0 +1,33 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum--legacy {
+	--system-split-view-vertical-width: 100%;
+	--system-split-view-vertical-gripper-width: 50%;
+	--system-split-view-vertical-gripper-outer-width: 100%;
+	--system-split-view-vertical-gripper-reset: 0;
+	--system-split-view-background-color: var(--spectrum-gray-75);
+	--system-split-view-content-color: var(--spectrum-body-color);
+	--system-split-view-handle-background-color: var(--spectrum-gray-200);
+	--system-split-view-handle-background-color-hover: var(--spectrum-gray-400);
+	--system-split-view-handle-background-color-down: var(--spectrum-gray-800);
+	--system-split-view-handle-background-color-focus: var(--spectrum-focus-indicator-color);
+	--system-split-view-handle-width: var(--spectrum-border-width-200);
+	--system-split-view-gripper-border-radius: var(--spectrum-corner-radius-75);
+	--system-split-view-gripper-width: var(--spectrum-border-width-400);
+	--system-split-view-gripper-height: 16px;
+	--system-split-view-gripper-border-width-horizontal: 3px;
+	--system-split-view-gripper-border-width-vertical: var(--spectrum-border-width-400);
+}
+
+/*# sourceMappingURL=spectrum.css.map */

@@ -1,5 +1,5 @@
-import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
-import modes, {disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
+import { withOverlayWrapper } from "@spectrum-css/preview/decorators";
+import modes, { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
@@ -61,7 +61,7 @@ export default {
 		componentVersion: version,
 	},
 	decorators: [
-		withUnderlayWrapper,
+		withOverlayWrapper,
 	],
 };
 
@@ -70,7 +70,7 @@ export default {
 // it doesn't look like the background color just stops without wrapping the
 // entire container of templates.
 const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
-	acc[key] = { 
+	acc[key] = {
 		...modes[key],
 		viewport: {
 			height: "1200px",
@@ -80,7 +80,7 @@ const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
 }, {});
 
 const mobileModeWithTallerViewport = Object.keys(mobile).reduce((acc, key) => {
-	acc[key] = { 
+	acc[key] = {
 		...mobile[key],
 		viewport: {
 			height: "1000px",

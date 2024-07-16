@@ -27,9 +27,8 @@ const messages = ruleMessages(ruleName, {
 	expected: (prop) => `Custom property ${prop.magenta} not defined`,
 });
 
-const fg = require("fast-glob");
 const postcss = require("postcss");
-const valueParser = require("postcss-value-parser");
+const valueParser = require("postcss-values-parser");
 
 /** @type {import('stylelint').Plugin} */
 const ruleFunction = (enabled, options = {}) => {
@@ -69,14 +68,6 @@ const ruleFunction = (enabled, options = {}) => {
 		const componentRoot = parts.slice(0, rootIdx + 2).join(path.sep);
 
 		const sharedDefinitions = new Set();
-
-		for (const themePath of fg.sync(["themes/*.css"], { cwd: componentRoot, absolute: true })) {
-			const content = fs.readFileSync(themePath, "utf8");
-			if (!content) continue;
-			postcss.parse(content).walkDecls(/^--/, ({ prop }) => {
-				sharedDefinitions.add(prop);
-			});
-		}
 
 		function fetchResolutions(depName) {
 			let req;
@@ -134,7 +125,7 @@ const ruleFunction = (enabled, options = {}) => {
 		/* Collect variable use information */
 		root.walkDecls((decl) => {
 			// Parse value and get a list of variables used
-			const parsed = valueParser(decl.value);
+			const parsed = valueParser.parse(decl.value);
 			parsed.walk((node) => {
 				if (node.type !== "function" || node.value !== "var") {
 					return;

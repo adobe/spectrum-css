@@ -151,23 +151,22 @@
 }
 
 .spectrum-Badge {
-	min-block-size: var(--mod-badge-height, var(--spectrum-badge-height));
-	inline-size: auto;
-
-	display: inline-flex;
-	vertical-align: middle;
+	cursor: default;
 	position: relative;
 
-	cursor: default;
+	display: inline-flex;
+	inline-size: auto;
+	min-block-size: var(--mod-badge-height, var(--spectrum-badge-height));
 
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
-
-	border-radius: var(--mod-badge-corner-radius, var(--spectrum-badge-corner-radius));
-	border: 1px solid transparent;
+	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
+	vertical-align: middle;
 
 	background: var(--mod-badge-background-color-default, var(--spectrum-badge-background-color-default));
-	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
+	border: 1px solid transparent;
+
+	border-radius: var(--mod-badge-corner-radius, var(--spectrum-badge-corner-radius));
 }
 
 /* background color variants */
@@ -275,13 +274,13 @@
 
 /* label */
 .spectrum-Badge-label {
-	font-size: var(--mod-badge-font-size, var(--spectrum-badge-font-size));
-	line-height: var(--mod-badge-line-height, var(--spectrum-badge-line-height));
-
-	padding-inline-end: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
-	padding-inline-start: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
 	padding-block-start: var(--mod-badge-label-spacing-vertical-top, var(--spectrum-badge-label-spacing-vertical-top));
 	padding-block-end: var(--mod-badge-label-spacing-vertical-bottom, var(--spectrum-badge-label-spacing-vertical-bottom));
+	padding-inline-start: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
+
+	padding-inline-end: var(--mod-badge-label-spacing-horizontal, var(--spectrum-badge-label-spacing-horizontal));
+	font-size: var(--mod-badge-font-size, var(--spectrum-badge-font-size));
+	line-height: var(--mod-badge-line-height, var(--spectrum-badge-line-height));
 
 	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
 
@@ -300,18 +299,17 @@
 
 /* optional icon */
 .spectrum-Badge-icon {
-	block-size: var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
-	inline-size: var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
-
 	/* ensures icon does not shrink when badge width is limited */
 	flex: 0 0 var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
+	inline-size: var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
+	block-size: var(--mod-badge-workflow-icon-size, var(--spectrum-badge-workflow-icon-size));
+	padding-block-start: var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top));
+	padding-block-end: var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top));
 
 	padding-inline-start: var(--mod-badge-icon-spacing-horizontal, var(--spectrum-badge-icon-spacing-horizontal));
 
 	/* icon with label has reduced padding between icon and text */
 	padding-inline-end: var(--mod-badge-icon-text-spacing, var(--spectrum-badge-icon-text-spacing));
-	padding-block-start: var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top));
-	padding-block-end: var(--mod-badge-icon-spacing-vertical-top, var(--spectrum-badge-icon-spacing-vertical-top));
 
 	color: var(--mod-badge-label-icon-color, var(--spectrum-badge-label-icon-color));
 }

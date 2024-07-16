@@ -1,4 +1,3 @@
-
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
@@ -165,15 +164,10 @@ Default.parameters = {
 	chromatic: { disableSnapshot: false },
 };
 
-// ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
-WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
-WithForcedColors.parameters = {
-	chromatic: {
-		forcedColors: "active",
-		modes: disableDefaultModes
-	},
+export const Regular = Template.bind({});
+Regular.tags = ["autodocs", "!dev"];
+Regular.args = {
+	density: "regular",
 };
 
 // ********* DOCS ONLY ********* //
@@ -189,4 +183,15 @@ Spacious.tags = ["autodocs", "!dev"];
 Spacious.args = {
 	items: content,
 	density: "spacious",
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

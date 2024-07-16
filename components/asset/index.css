@@ -24,7 +24,7 @@
 	max-inline-size: 100%;
 	max-block-size: 100%;
 	object-fit: contain;
-	transition: opacity var(--spectrum-animation-duration-100);
+	transition: opacity var(--spectrum-asset-transition-duration);
 }
 
 .spectrum-Asset-folder,
@@ -35,16 +35,16 @@
 }
 
 .spectrum-Asset-folderBackground {
-	fill: var(--highcontrast-asset-folder-background-color, var(--mod-asset-folder-background-color, var(--spectrum-gray-300)));
+	fill: var(--highcontrast-asset-folder-background-color, var(--mod-asset-folder-background-color, var(--spectrum-asset-folder-background-color)));
 }
 
 .spectrum-Asset-fileBackground {
-	fill: var(--highcontrast-asset-file-background-color, var(--mod-asset-file-background-color, var(--spectrum-gray-50)));
+	fill: var(--highcontrast-asset-file-background-color, var(--mod-asset-file-background-color, var(--spectrum-asset-file-background-color)));
 }
 
 .spectrum-Asset-folderOutline,
 .spectrum-Asset-fileOutline {
-	fill: var(--mod-asset-icon-outline-color, var(--spectrum-gray-500));
+	fill: var(--mod-asset-icon-outline-color, var(--spectrum-asset-icon-outline-color));
 }
 
 @media (forced-colors: active) {

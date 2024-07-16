@@ -1,0 +1,25 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum--legacy {
+	--system-color-area-border-radius: var(--spectrum-color-area-border-rounding);
+	--system-color-area-border-color: rgba(0, 0, 0, 0.1);
+	--system-color-area-disabled-background-color: var(--spectrum-disabled-background-color);
+	--system-color-area-border-width: var(--spectrum-color-area-border-width);
+	--system-color-area-height: var(--spectrum-color-area-height);
+	--system-color-area-width: var(--spectrum-color-area-width);
+	--system-color-area-min-width: var(--spectrum-color-area-minimum-width);
+	--system-color-area-min-height: var(--spectrum-color-area-minimum-height);
+}
+
+/*# sourceMappingURL=spectrum.css.map */

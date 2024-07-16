@@ -1,0 +1,37 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum--legacy {
+	--system-dialog-fullscreen-header-text-size: 28px;
+	--system-dialog-min-inline-size: 288px;
+	--system-dialog-confirm-small-width: 400px;
+	--system-dialog-confirm-medium-width: 480px;
+	--system-dialog-confirm-large-width: 640px;
+	--system-dialog-confirm-divider-block-spacing-start: var(--spectrum-spacing-300);
+	--system-dialog-confirm-divider-block-spacing-end: var(--spectrum-spacing-200);
+	--system-dialog-confirm-description-text-color: var(--spectrum-gray-800);
+	--system-dialog-confirm-title-text-color: var(--spectrum-gray-900);
+	--system-dialog-confirm-description-text-line-height: var(--spectrum-line-height-100);
+	--system-dialog-confirm-title-text-line-height: var(--spectrum-line-height-100);
+	--system-dialog-heading-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	--system-dialog-confirm-description-padding: var(--spectrum-spacing-50);
+	--system-dialog-confirm-description-margin: calc(var(--spectrum-spacing-50) * -1);
+	--system-dialog-confirm-footer-padding-top: var(--spectrum-spacing-600);
+	--system-dialog-confirm-gap-size: var(--spectrum-component-pill-edge-to-text-100);
+	--system-dialog-confirm-buttongroup-padding-top: var(--spectrum-spacing-600);
+	--system-dialog-confirm-close-button-size: var(--spectrum-component-height-100);
+	--system-dialog-confirm-close-button-padding: calc(26px - var(--spectrum-component-bottom-to-text-300));
+	--system-dialog-confirm-divider-height: var(--spectrum-spacing-50);
+}
+
+/*# sourceMappingURL=express.css.map */
