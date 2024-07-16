@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.6.0
+
+### Minor Changes
+
+- [#2867](https://github.com/adobe/spectrum-css/pull/2867) [`a0bd4eb`](https://github.com/adobe/spectrum-css/commit/a0bd4eb2ab43352c4bdedcb26f93138aacf99aee) Thanks [@castastrophe](https://github.com/castastrophe)! - New feature: Add a look-through to the Spectrum Web Components Storybook project to create an easier connection between components that exist in CSS and those in SWC.
+
 ## 10.5.0
 
 ### Minor Changes
