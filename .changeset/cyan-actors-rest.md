@@ -1,14 +1,7 @@
 ---
-"@spectrum-tools/stylelint-no-unknown-custom-properties": patch
-"@spectrum-tools/stylelint-no-unused-custom-properties": patch
-"postcss-custom-properties-mapping": patch
-"postcss-add-theming-layer": patch
-"@spectrum-tools/stylelint-no-missing-var": patch
 "@spectrum-css/floatingactionbutton": patch
 "@spectrum-css/opacitycheckerboard": patch
 "@spectrum-css/illustratedmessage": patch
-"postcss-combininator": patch
-"postcss-rgb-mapping": patch
 "@spectrum-css/coachindicator": patch
 "@spectrum-css/contextualhelp": patch
 "@spectrum-css/progresscircle": patch
@@ -88,10 +81,8 @@
 "@spectrum-css/well": patch
 "@spectrum-css/tag": patch
 "@spectrum-css/preview": patch
-"@spectrum-css/generator": patch
 "@spectrum-css/ui-icons": patch
 "@spectrum-css/tokens": patch
-"@spectrum-tools/documentation": patch
 ---
 
-Doing a widespread release on all packages to ensure the latest content is beign pulled through
+Doing a widespread release on all packages to ensure the latest compiled CSS is published.

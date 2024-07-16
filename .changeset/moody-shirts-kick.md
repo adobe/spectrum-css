@@ -45,7 +45,6 @@
 "@spectrum-css/tabs": major
 "@spectrum-css/tag": major
 "@spectrum-css/preview": major
-"@spectrum-css/generator": major
 "@spectrum-css/tokens": major
 "@spectrum-css/actionmenu": major
 "@spectrum-css/alertdialog": major
@@ -86,4 +85,4 @@
 "@spectrum-css/ui-icons": major
 ---
 
-S2 colors + grays foundation
+S2 colors and grays foundation mapping

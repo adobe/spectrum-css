@@ -13,22 +13,22 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
-	"main": "dist/index.css",
 	"exports": {
 		".": "./dist/css/index.css",
-		"./dist/index.css": "./dist/css/index.css",
-		"./dist/css/*.css": "./dist/css/*.css",
-		"./package.json": "./package.json",
 		"./*.md": "./*.md",
+		"./dist/css/*.css": "./dist/css/*.css",
 		"./dist/css/components/bridge": "./dist/components/bridge/index.css",
 		"./dist/css/components/bridge/*.css": "./dist/components/bridge/*.css",
 		"./dist/css/components/express": "./dist/components/express/index.css",
 		"./dist/css/components/express/*.css": "./dist/components/express/*.css",
 		"./dist/css/components/spectrum": "./dist/components/spectrum/index.css",
-		"./dist/css/components/spectrum/*.css": "./dist/components/spectrum/*.css",
 		"./dist/css/components/spectrum-two": "./dist/components/spectrum-two/index.css",
-		"./dist/css/components/spectrum-two/*.css": "./dist/components/spectrum-two/*.css"
+		"./dist/css/components/spectrum-two/*.css": "./dist/components/spectrum-two/*.css",
+		"./dist/css/components/spectrum/*.css": "./dist/components/spectrum/*.css",
+		"./dist/index.css": "./dist/css/index.css",
+		"./package.json": "./package.json"
 	},
+	"main": "dist/index.css",
 	"files": [
 		"dist",
 		"CHANGELOG.md",

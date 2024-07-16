@@ -1,13 +1,7 @@
 ---
-"@spectrum-tools/stylelint-no-unknown-custom-properties": minor
-"@spectrum-tools/stylelint-no-unused-custom-properties": minor
-"postcss-add-theming-layer": minor
-"@spectrum-tools/stylelint-no-missing-var": minor
 "@spectrum-css/floatingactionbutton": minor
-"postcss-property-rollup": minor
 "@spectrum-css/opacitycheckerboard": minor
 "@spectrum-css/illustratedmessage": minor
-"postcss-rgb-mapping": minor
 "@spectrum-css/coachindicator": minor
 "@spectrum-css/contextualhelp": minor
 "@spectrum-css/progresscircle": minor
@@ -87,10 +81,8 @@
 "@spectrum-css/well": minor
 "@spectrum-css/tag": minor
 "@spectrum-css/preview": minor
-"@spectrum-css/generator": minor
 "@spectrum-css/ui-icons": minor
 "@spectrum-css/tokens": minor
-"@spectrum-tools/documentation": minor
 ---
 
 Across the board version update to latest build system state

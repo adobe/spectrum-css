@@ -2,7 +2,6 @@
 "@spectrum-css/floatingactionbutton": patch
 "@spectrum-css/opacitycheckerboard": patch
 "@spectrum-css/illustratedmessage": patch
-"postcss-splitinator": patch
 "@spectrum-css/coachindicator": patch
 "@spectrum-css/contextualhelp": patch
 "@spectrum-css/progresscircle": patch

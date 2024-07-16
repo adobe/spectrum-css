@@ -25,8 +25,6 @@ export const Template = ({
 		content = [content];
 	}
 
-	console.log(content);
-
 	const contentLength = content.length;
 
 	// If there is no content, return an empty string, no need for additional processing

@@ -81,9 +81,8 @@
 "@spectrum-css/well": patch
 "@spectrum-css/tag": patch
 "@spectrum-css/preview": patch
-"@spectrum-css/generator": patch
 "@spectrum-css/ui-icons": patch
 "@spectrum-css/tokens": patch
 ---
 
-Corrects a faulty regex that was negatively affecting compilation of custom properties
+Corrects a faulty regex that was negatively affecting compilation of custom properties.
