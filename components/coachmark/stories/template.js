@@ -3,7 +3,6 @@ import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/templ
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
@@ -19,7 +18,7 @@ export const Template = ({
 	hasPagination,
 	hasImage,
 	isOpen = true,
-} = {}, context) => {
+} = {}, context = {}) => {
 	const { globals = {} } = context;
 	const scale = globals.scale ?? "medium";
 
@@ -30,7 +29,7 @@ export const Template = ({
 					[rootClass]: true,
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 				})}
-				style=${ifDefined(styleMap(customStyles))}
+				style=${styleMap(customStyles)}
 			>
 				${Popover({
 					nested: true,
@@ -54,11 +53,12 @@ export const Template = ({
 							${when(hasActionMenu, () =>
 								ActionMenu({
 									isOpen,
-									popoverPosition: "right",
-									popoverTestId: "popover-nested-2",
-									popoverId: "popover-nested-2",
-									popoverTriggerId: "trigger-nested-2",
+									position: "bottom",
+									id: "popover-nested-2",
+									triggerId: "trigger-nested-2",
 									customStyles: {
+                    "inset-inline-start": "unset",
+                    "inset-block-start": "unset",
 										"margin-block-start": "30px",
 										"margin-inline-start": "-32px"
 									},

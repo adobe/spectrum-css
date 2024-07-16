@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
@@ -51,20 +52,37 @@ export default {
 	},
 };
 
-const ProgressCircleGroup = (args) => html`
+const ProgressCircleGroup = (args, context) => html`
 	${window.isChromatic() ? html`
-		${Template(args)}
+		${Template(args, context)}
 		${Template({
 			...args,
 			isIndeterminate: true,
-		})}
-	` : Template(args)}
+		}, context)}
+	` : Template(args, context)}
 `;
 
 export const Default = ProgressCircleGroup.bind({});
 Default.args = {};
 
-export const StaticWhite = ProgressCircleGroup.bind({});
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+export const StaticWhite = Default.bind({});
+StaticWhite.tags = ["!autodocs", "!dev", "test"];
 StaticWhite.args = {
 	staticColor: "white",
+};
+StaticWhite.parameters = {
+	chromatic: {
+		modes: disableDefaultModes
+	},
 };

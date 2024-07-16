@@ -1,3 +1,5 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -8,23 +10,9 @@ export default {
 	title: "Color handle",
 	component: "ColorHandle",
 	argTypes: {
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
 		isWithColorLoupe: {
@@ -44,9 +32,6 @@ export default {
 		isWithColorLoupe: false,
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
 		componentVersion: version,
 	},
 };
@@ -54,7 +39,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
-
+// ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
@@ -76,5 +61,15 @@ WithColorLoupe.parameters = {
 			inline: false,
 			height: "150px",
 		},
+	},
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
 	},
 };

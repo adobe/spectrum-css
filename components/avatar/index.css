@@ -42,6 +42,7 @@
 	}
 }
 
+.spectrum-Avatar.is-focused:not(.is-disabled),
 .spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible {
 	&::after {
 		pointer-events: none;

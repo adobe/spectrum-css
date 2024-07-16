@@ -1,4 +1,5 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { PaginationGroup } from "./template";
 
@@ -59,3 +60,13 @@ export default {
 
 export const Default = PaginationGroup.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = PaginationGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

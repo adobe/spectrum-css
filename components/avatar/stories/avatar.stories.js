@@ -1,11 +1,6 @@
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { Template } from "./template";
-
-const sizeOptions = ["50", "75", "100", "200", "300", "400", "500", "600", "700"];
+import { AvatarGroup, AvatarSizes, Template } from "./template";
 
 /**
  * An image representing a user. Note that a div wrapper is required for avatar:
@@ -26,7 +21,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: sizeOptions,
+			options: ["50", "75", "100", "200", "300", "400", "500", "600", "700"],
 			control: "select",
 		},
 		image: {
@@ -70,8 +65,6 @@ export default {
 	args: {
 		rootClass: "spectrum-Avatar",
 		size: "700",
-		image: "example-ava@2x.png",
-		altText: "Avatar",
 		isDisabled: false,
 		hasLink: true,
 	},
@@ -80,48 +73,29 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default = AvatarGroup.bind({});
+Default.args = {
+	image: "example-ava@2x.png",
+	altText: "Avatar",
+};
 
-
-const AvatarSizes = (args) => html`
-	<div
-		style=${styleMap({
-			"display": "flex",
-			"gap": "16px",
-		})}
-	>
-		${sizeOptions.map((size) => (html`
-			<div
-				style=${styleMap({
-					"display": "flex",
-					"gap": "16px",
-					"flex-direction": "column",
-					"align-items": "center",
-				})}
-			>
-				${Template({...args, size})}
-				${Typography({
-					semantics: "detail",
-					size: "s",
-					content: [size],
-					customClasses: ["chromatic-ignore"],
-				})}
-			</div>
-		`))}
-	</div>
-`;
-
+// ********* DOCS ONLY ********* //
 export const SizeOptions = AvatarSizes.bind({});
 SizeOptions.tags = ["autodocs", "!dev"];
 SizeOptions.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+SizeOptions.args = {
+	image: "example-ava@2x.png",
+	altText: "Avatar",
 };
 
 export const NoLink = Template.bind({});
 NoLink.tags = ["autodocs", "!dev"];
 NoLink.args = {
 	hasLink: false,
+	image: "example-ava@2x.png",
+	altText: "Avatar",
 };
 NoLink.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -132,7 +106,20 @@ Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	hasLink: false,
 	isDisabled: true,
+	image: "example-ava@2x.png",
+	altText: "Avatar",
 };
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

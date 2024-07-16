@@ -1,6 +1,8 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import { Variants, renderContent } from "@spectrum-css/preview/decorators/utilities.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 import "../themes/express.css";
@@ -17,6 +19,7 @@ export const Template = ({
 	staticColor,
 	content = [],
 	customClasses = [],
+	customStyles = {},
 } = {}, context = {}) => {
 	return html`
 		<div
@@ -30,24 +33,45 @@ export const Template = ({
 				[`${rootClass}--justified`]: justified,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			style=${styleMap(customStyles)}
 		>
-			${content.map((item) => {
-				switch (typeof item) {
-					case "object":
-						return ActionButton({
-							size,
-							iconName: item.iconName,
-							isQuiet: areQuiet || item.isQuiet,
-							isEmphasized: areEmphasized || item.isEmphasized,
-							staticColor: staticColor ?? item.staticColor,
-							customClasses: [`${rootClass}-item`],
-						}, context);
-					case "function":
-						return item({ size }, context);
-					default:
-						return item;
-				}
+			${renderContent(content, {
+				callback: ActionButton,
+				args: {
+					staticColor,
+					isQuiet: areQuiet,
+					isEmphasized: areEmphasized,
+					customClasses: [`${rootClass}-item`],
+				},
+				context
 			})}
 		</div>
 	`;
 };
+
+export const ActionGroups = Variants({
+	Template,
+	testData: [
+		{},
+		{
+			testHeading: "Compact",
+			compact: true,
+		},
+		{
+			testHeading: "Justified",
+			justified: true,
+		},
+		{
+			testHeading: "Quiet",
+			areQuiet: true,
+		},
+		{
+			testHeading: "Emphasized",
+			areEmphasized: true,
+		},
+		{
+			testHeading: "Vertical",
+			vertical: true,
+		},
+	],
+});

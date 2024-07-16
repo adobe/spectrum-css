@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -12,6 +13,66 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-MillerColumns",
+		columns: [
+			{
+				items: [
+					{
+						label: "Folder 1",
+						isBranch: true,
+						isSelectable: true,
+						isSelected: false,
+						ariaLabelledby: "assetitemlabel-1",
+						checkboxId: "checkbox-1",
+					},
+					{
+						label: "Folder 2",
+						isBranch: true,
+						isSelectable: true,
+						isSelected: true,
+						ariaLabelledby: "assetitemlabel-2",
+						checkboxId: "checkbox-2",
+					},
+					{
+						label: "Folder 3",
+						isBranch: true,
+						isSelectable: true,
+						isSelected: false,
+						image: "example-ava.png",
+						ariaLabelledby: "assetitemlabel-3",
+						checkboxId: "checkbox-3",
+					},
+				],
+			},
+			{
+				items: [
+					{
+						label: "Folder 2.1",
+						isBranch: true,
+						isSelectable: true,
+						isSelected: false,
+						ariaLabelledby: "assetitemlabel-4",
+						checkboxId: "checkbox-4",
+					},
+					{
+						label: "File 2.1",
+						isBranch: true,
+						isSelectable: true,
+						isSelected: true,
+						ariaLabelledby: "assetitemlabel-5",
+						checkboxId: "checkbox-5",
+					},
+					{
+						label: "File 2.2",
+						isBranch: true,
+						isSelectable: true,
+						isSelected: true,
+						image: "example-ava.png",
+						ariaLabelledby: "assetitemlabel-6",
+						checkboxId: "checkbox-6",
+					},
+				],
+			},
+		],
 	},
 	parameters: {
 		componentVersion: version,
@@ -19,68 +80,7 @@ export default {
 };
 
 export const BranchesSelectable = Template.bind({});
-BranchesSelectable.args = {
-	columns: [
-		{
-			items: [
-				{
-					label: "Folder 1",
-					isBranch: true,
-					isSelectable: true,
-					isSelected: false,
-					ariaLabelledby: "assetitemlabel-1",
-					checkboxId: "checkbox-1",
-				},
-				{
-					label: "Folder 2",
-					isBranch: true,
-					isSelectable: true,
-					isSelected: true,
-					ariaLabelledby: "assetitemlabel-2",
-					checkboxId: "checkbox-2",
-				},
-				{
-					label: "Folder 3",
-					isBranch: true,
-					isSelectable: true,
-					isSelected: false,
-					image: "example-ava.png",
-					ariaLabelledby: "assetitemlabel-3",
-					checkboxId: "checkbox-3",
-				},
-			],
-		},
-		{
-			items: [
-				{
-					label: "Folder 2.1",
-					isBranch: true,
-					isSelectable: true,
-					isSelected: false,
-					ariaLabelledby: "assetitemlabel-4",
-					checkboxId: "checkbox-4",
-				},
-				{
-					label: "File 2.1",
-					isBranch: true,
-					isSelectable: true,
-					isSelected: true,
-					ariaLabelledby: "assetitemlabel-5",
-					checkboxId: "checkbox-5",
-				},
-				{
-					label: "File 2.2",
-					isBranch: true,
-					isSelectable: true,
-					isSelected: true,
-					image: "example-ava.png",
-					ariaLabelledby: "assetitemlabel-6",
-					checkboxId: "checkbox-6",
-				},
-			],
-		},
-	],
-};
+BranchesSelectable.args = {};
 
 export const FilesSelectable = Template.bind({});
 FilesSelectable.args = {
@@ -143,4 +143,14 @@ FilesSelectable.args = {
 			],
 		},
 	],
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

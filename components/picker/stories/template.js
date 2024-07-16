@@ -4,10 +4,8 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
@@ -28,9 +26,7 @@ export const Picker = ({
 	isDisabled = false,
 	customClasses = [],
 	customStyles = {},
-} = {}, context) => {
-	const [, updateArgs] = useArgs();
-
+} = {}, context = {}) => {
 	return html`
 		<button
 			class=${classMap({
@@ -47,10 +43,10 @@ export const Picker = ({
 			})}
 			?disabled=${isDisabled}
 			aria-haspopup="listbox"
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			type="button"
-			@click=${() => {
-				updateArgs({ isOpen: !isOpen });
+			@click=${(e) => {
+				e.target.classList.toggle("is-open", !isOpen);
 			}}
 		>
 			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
@@ -98,7 +94,7 @@ export const Template = ({
 	customPopoverStyles = {},
 	content = [],
 	id,
-} = {}, context) => {
+} = {}, context = {}) => {
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":

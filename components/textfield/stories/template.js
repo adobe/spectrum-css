@@ -1,7 +1,7 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -12,6 +12,47 @@ import "../index.css";
 import "../themes/express.css";
 import "../themes/spectrum.css";
 
+/**
+ * @typedef API
+ * @property {string} [rootClass="spectrum-Textfield"]
+ * @property {string} [size="m"]
+ * @property {string[]} [customClasses=[]]
+ * @property {string[]} [customInputClasses=[]]
+ * @property {string[]} [customIconClasses=[]]
+ * @property {string[]} [customProgressCircleClasses=[]]
+ * @property {Record<string, string>} [customStyles={}]
+ * @property {boolean} [isInvalid=false]
+ * @property {boolean} [isValid=false]
+ * @property {boolean} [multiline=false]
+ * @property {boolean} [grows=false]
+ * @property {boolean} [isQuiet=false]
+ * @property {boolean} [isFocused=false]
+ * @property {boolean} [isDisabled=false]
+ * @property {boolean} [isRequired=false]
+ * @property {boolean} [isReadOnly=false]
+ * @property {boolean} [isKeyboardFocused=false]
+ * @property {boolean} [isLoading=false]
+ * @property {boolean} [displayLabel=false]
+ * @property {"top"|"side"} [labelPosition="top"]
+ * @property {string} [labelText]
+ * @property {string} [iconName]
+ * @property {string} [iconSet]
+ * @property {string} [pattern]
+ * @property {string|undefined} [placeholder]
+ * @property {string|undefined} [name]
+ * @property {string|undefined} [id]
+ * @property {HTMLInputElement[value]|HTMLTextAreaElement[value]} [value]
+ * @property {HTMLInputElement[type]} [type="text"]
+ * @property {boolean} [autocomplete=true]
+ * @property {Function} [onclick]
+ */
+
+/**
+ *
+ * @param {API} args
+ * @param {import('@storybook/types').StoryContext<import('@storybook/web-components').WebComponentsRenderer, API>} context
+ * @returns {import('lit').TemplateResult}
+ */
 export const Template = ({
 	rootClass = "spectrum-Textfield",
 	size = "m",
@@ -39,14 +80,15 @@ export const Template = ({
 	placeholder,
 	name,
 	id,
-	value = null,
+	value = "",
 	type = "text",
 	autocomplete = true,
 	onclick,
 	customStyles = {},
 } = {}, context = {}) => {
-	const [, updateArgs] = useArgs();
+	const { updateArgs } = context;
 
+	// Override icon name and set if the field is invalid or valid
 	if (isInvalid) {
 		iconName = "Alert";
 		iconSet = "workflow";
@@ -74,19 +116,19 @@ export const Template = ({
 				"is-readOnly": isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			@click=${onclick}
-			@focusin=${(e) => {
-				const focusClass = e.target?.classList?.contains("focus-ring")
-					? { isKeyboardFocused: true }
-					: { isFocused: true };
-				updateArgs(focusClass);
+			@focusin=${() => {
+				updateArgs({
+					isFocused: true,
+					isKeyboardFocused: true
+				});
 			}}
-			@focusout=${(e) => {
-				const focusClass = e.target?.classList?.contains("focus-ring")
-					? { isKeyboardFocused: false }
-					: { isFocused: false };
-				updateArgs(focusClass);
+			@focusout=${() => {
+				updateArgs({
+					isFocused: false,
+					isKeyboardFocused: false
+				});
 			}}
 			id=${ifDefined(id)}
 		>
@@ -146,3 +188,65 @@ export const Template = ({
 	</div>
 	`;
 };
+
+export const TextFieldGroup = Variants({
+	Template,
+	testData: [{
+	},
+	{
+		testHeading: "With field label",
+		displayLabel: true,
+		labelText: "Username",
+	},
+	{
+		testHeading: "With side label",
+		displayLabel: true,
+		labelText: "Username",
+		labelPosition: "side",
+	},
+	{
+		testHeading: "With value",
+		displayLabel: true,
+		labelText: "Username",
+		value: "UsernameWiderThanInput@ReallyLongEmail.com"
+	},
+	{
+		testHeading: "Text area",
+		multiline: true,
+	},
+	{
+		testHeading: "Text area with label",
+		displayLabel: true,
+		labelText: "Username",
+		multiline: true,
+	},
+	{
+		testHeading: "Text area with value",
+		displayLabel: true,
+		labelText: "Username",
+		multiline: true,
+		value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+	}],
+	stateData: [{
+		testHeading: "Invalid",
+		isInvalid: true,
+	}, {
+		testHeading: "Valid",
+		isInvalid: true,
+	}, {
+		testHeading: "Focused",
+		isFocused: true,
+	}, {
+		testHeading: "Keyboard focused",
+		isKeyboardFocused: true,
+	}, {
+		testHeading: "Disabled",
+		isDisabled: true,
+	}, {
+		testHeading: "Required",
+		isRequired: true,
+	}, {
+		testHeading: "Read-only",
+		isReadOnly: true,
+	}]
+});

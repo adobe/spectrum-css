@@ -1,5 +1,4 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -28,11 +27,9 @@ export const Template = ({
 	customStyles = {},
 	id,
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-	const [, updateArgs] = useArgs();
+	const { globals = {}, updateArgs } = context;
 
 	const textDirection = globals.textDirection ?? "ltr";
-
 	const rtl = !!(textDirection === "rtl");
 	const rangeLength = max - min;
 	const centerPoint = rangeLength / 2 + min;
@@ -135,12 +132,10 @@ export const Template = ({
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}
 			aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}
 			@focusin=${() => {
-				const focusClass = { isFocused: true };
-				updateArgs(focusClass);
+				updateArgs({ isFocused: true });
 			}}
 			@focusout=${() => {
-				const focusClass = { isFocused: false };
-				updateArgs(focusClass);
+				updateArgs({ isFocused: false });
 			}}
 		>
 			<!-- Label region -->

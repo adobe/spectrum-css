@@ -1,9 +1,7 @@
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
-import { version } from "../package.json";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { Template } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { version } from "../package.json";
+import { BadgeGroup, PreviewSets } from "./template";
 
 const semanticOptions = ["neutral", "accent", "informative", "positive", "negative"];
 const nonSemanticOptions = ["gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"];
@@ -67,81 +65,45 @@ export default {
 		rootClass: "spectrum-Badge",
 		size: "m",
 		variant: "neutral",
-		iconName: "Info",
-		label: "Badge",
 		fixed: "none"
 	},
 	parameters: {
 		componentVersion: version,
 	},
-	decorators: [
-		(Story, context) => html`<div style="padding: 16px">${Story(context)}</div>`
-	],
 };
 
-const BadgeGroup = (args) => html`
-	${Template({
-		...args,
-		iconName: undefined,
-	})}
-	${Template(args)}
-	${Template({
-		...args,
-		label: undefined,
-	})}
-	${Template({
-		...args,
-		label: "24 days left in trial",
-		customStyles: { "max-inline-size": "120px" },
-	})}
-`;
-
 export const Default = BadgeGroup.bind({});
-Default.args = {};
+Default.args = {
+	iconName: "Info",
+	label: "Badge",
+};
 
-
-
-const Variants = (args, variants) => html`
-	<div
-		style=${styleMap({
-			"display": "flex",
-			"gap": "16px",
-			"flex-wrap": "wrap"
-		})}
-	>
-		${variants.map((variant) => {
-			const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
-			const label = capitalizeFirstLetter(variant);
-			return ( html`
-				<div
-					style=${styleMap({
-						"display": "flex",
-						"gap": "16px",
-						"flex-direction": "column",
-						"align-items": "center",
-					})}
-				>
-					${Template({...args, variant, label})}
-				</div>
-			`);
-	})}
-	</div>
-`;
-
-export const SemanticVariants = (args) => Variants(args, semanticOptions);
+// ********* DOCS ONLY ********* //
+export const SemanticVariants = (args, context) => PreviewSets(semanticOptions, args, context);
 SemanticVariants.tags = ["autodocs", "!dev"];
 SemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const NonSemanticVariants = (args) => Variants(args, nonSemanticOptions);
+export const NonSemanticVariants = (args, context) => PreviewSets(nonSemanticOptions, args, context);
 NonSemanticVariants.tags = ["autodocs", "!dev"];
 NonSemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const FixedVariants = (args) => Variants(args, fixedOptions);
+export const FixedVariants = (args, context) => PreviewSets(fixedOptions, args, context);
 FixedVariants.tags = ["autodocs", "!dev"];
 FixedVariants.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

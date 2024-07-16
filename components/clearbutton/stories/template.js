@@ -16,29 +16,27 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-} = {}, context = {}) => {
-	return html`
-		<button
-			type="reset"
-			class=${classMap({
-				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--overBackground`]: staticColor === "white",
-				"is-disabled": isDisabled,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(customStyles))}
-			?disabled=${isDisabled}
-		>
-			<div class="${rootClass}-fill">
-				${Icon({
-					size,
-					iconName: "Cross",
-					customClasses: [`${rootClass}-icon`],
-				}, context)}
-			</div>
-		</button>
-	`;
-};
+}, context) => html`
+	<button
+		type="reset"
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			[`${rootClass}--overBackground`]: staticColor === "white",
+			"is-disabled": isDisabled,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		id=${ifDefined(id)}
+		style=${styleMap(customStyles)}
+		?disabled=${isDisabled}
+	>
+		<div class="${rootClass}-fill">
+			${Icon({
+				size,
+				iconName: "Cross",
+				customClasses: [`${rootClass}-icon`],
+			}, context)}
+		</div>
+	</button>
+`;

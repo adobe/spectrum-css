@@ -79,7 +79,14 @@ export default {
 		buildStoriesJson: true,
 	},
 	docs: {
-		autodocs: true, // see below for alternatives
-		defaultName: "Docs", // set to change the name of generated docs entries
+		autodocs: true,
+		defaultName: "Docs",
+	},
+	refs: {
+		"web-components": {
+			title: "Spectrum web components",
+			url: "https://opensource.adobe.com/spectrum-web-components/storybook/",
+			expanded: false,
+		},
 	},
 };

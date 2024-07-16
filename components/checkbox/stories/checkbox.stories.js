@@ -1,6 +1,9 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isInvalid } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
+
 
 /**
  * Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.
@@ -37,15 +40,7 @@ export default {
 			},
 			control: { type: "boolean" },
 		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -131,4 +126,15 @@ const CheckboxGroup = (args, context) => html`
 export const Default = CheckboxGroup.bind({});
 Default.args = {
 	id: "default-checkbox",
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

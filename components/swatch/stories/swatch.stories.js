@@ -1,3 +1,5 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { States } from "./template";
 
@@ -46,15 +48,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isSelected,
 	},
 	args: {
 		rootClass: "spectrum-Swatch",
@@ -71,3 +65,13 @@ export default {
 
 export const Default = States.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = States.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

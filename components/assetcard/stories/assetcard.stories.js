@@ -1,6 +1,8 @@
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { AssetCardGroup, Template } from "./template";
 
 /**
  * The asset card component allows users to select and manage assets and their metadata in a grid.
@@ -59,24 +61,8 @@ export default {
 			options: ["checkbox", "highlight", "ordered"],
 			control: "select",
 		},
-		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isSelected,
+		isFocused,
 		isDropTarget: {
 			name: "Drop target",
 			type: { name: "boolean" },
@@ -89,7 +75,6 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-AssetCard",
-		exampleImage: "portrait",
 		selection: "checkbox",
 		isSelected: false,
 		isFocused: false,
@@ -103,10 +88,23 @@ export default {
 	},
 };
 
+export const Default = AssetCardGroup.bind({});
+Default.args = {
+	title: "Portrait asset",
+	exampleImage: "portrait",
+	content: ["Image"],
+};
+
+// ********* DOCS ONLY ********* //
 export const Portrait = Template.bind({});
 Portrait.args = {
 	title: "Portrait asset",
+	exampleImage: "portrait",
 	content: ["Image"],
+};
+Portrait.tags = ["autodocs", "!dev"];
+Portrait.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const Landscape = Template.bind({});
@@ -114,11 +112,19 @@ Landscape.args = {
 	title: "Landscape asset",
 	exampleImage: "landscape",
 };
+Landscape.tags = ["autodocs", "!dev"];
+Landscape.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Square = Template.bind({});
 Square.args = {
 	title: "Square asset",
 	exampleImage: "square",
+};
+Square.tags = ["autodocs", "!dev"];
+Square.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const OptionalContent = Template.bind({});
@@ -127,19 +133,33 @@ OptionalContent.args = {
 	headerContent: "39:02",
 	exampleImage: "square",
 };
+OptionalContent.tags = ["autodocs", "!dev"];
+OptionalContent.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const HighlightSelection = Template.bind({});
 HighlightSelection.args = {
 	title: "Highlight selection",
 	selection: "highlight",
+	exampleImage: "portrait",
 	isSelected: true,
+};
+HighlightSelection.tags = ["autodocs", "!dev"];
+HighlightSelection.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const CheckboxSelection = Template.bind({});
 CheckboxSelection.args = {
 	title: "Checkbox selection",
 	selection: "checkbox",
+	exampleImage: "portrait",
 	isSelected: true,
+};
+CheckboxSelection.tags = ["autodocs", "!dev"];
+CheckboxSelection.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const OrderedSelection = Template.bind({});
@@ -149,11 +169,31 @@ OrderedSelection.args = {
 	isSelected: true,
 	exampleImage: "landscape",
 };
+OrderedSelection.tags = ["autodocs", "!dev"];
+OrderedSelection.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const DropTarget = Template.bind({});
 DropTarget.args = {
 	title: "Drop target",
 	selection: "highlight",
 	isDropTarget: true,
+	exampleImage: "portrait",
 	isSelected: true,
+};
+DropTarget.tags = ["autodocs", "!dev"];
+DropTarget.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

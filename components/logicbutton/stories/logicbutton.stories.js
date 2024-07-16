@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -49,4 +50,14 @@ Or.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

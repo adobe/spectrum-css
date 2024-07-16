@@ -1,4 +1,3 @@
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -20,8 +19,9 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-}) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { updateArgs } = context;
+
 	return html`
 		<div
 			class=${classMap({
@@ -32,7 +32,7 @@ export const Template = ({
 				"is-readOnly" : isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			id=${ifDefined(id)}
 		>
 			<input
@@ -40,7 +40,7 @@ export const Template = ({
 				name=${name}
 				class="${rootClass}-input"
 				id="radio-0"
-				?readonly=${isReadOnly}
+				?readOnly=${isReadOnly}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
 				@change=${() => {

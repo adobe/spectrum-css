@@ -1,3 +1,4 @@
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -36,9 +37,9 @@ export const Template = ({
 			class="${rootClass}-image"
 			src=${ifDefined(image)}
 			style=${styleMap({
-				"max-width": isCardAssetOverride ? undefined : "75%",
-				"max-height": isCardAssetOverride ? undefined : "75%",
-				"object-fit": isCardAssetOverride ? undefined : "contain",
+				"max-width": !isCardAssetOverride ? "75%" : undefined,
+				"max-height": !isCardAssetOverride ? "75%" : undefined,
+				"object-fit": !isCardAssetOverride ? "contain" : undefined,
 			})}
 		/>`;
 	}
@@ -54,3 +55,28 @@ export const Template = ({
 		${visual}
 	</div>`;
 };
+
+export const AssetGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Image preset",
+		},
+		{
+			testHeading: "File preset",
+			image: undefined,
+			preset: "file",
+			customStyles: {
+				"min-inline-size": "150px",
+			},
+		},
+		{
+			testHeading: "Folder preset",
+			image: undefined,
+			preset: "folder",
+			customStyles: {
+				"min-inline-size": "150px",
+			}
+		},
+	],
+});

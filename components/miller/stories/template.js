@@ -9,11 +9,10 @@ import "../themes/spectrum.css";
 export const Template = ({
 	rootClass = "spectrum-MillerColumns",
 	customClasses = [],
-	columns,
-} = {}, context) => {
-	if (!columns) {
+	columns = [],
+} = {}, context = {}) => {
+	if (!columns || !columns.length) {
 		console.warn("MillerColumns: Column data is required for rendering.");
-		return html``;
 	}
 
 	return html`

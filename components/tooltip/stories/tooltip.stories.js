@@ -1,10 +1,9 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused, isOpen } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-import { when } from "lit/directives/when.js";
 import { version } from "../package.json";
-
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { Template } from "./template";
+import { PlacementVariants } from "./template";
 
 /**
  * Tooltips show contextual help or information about specific components when a user hovers or focuses on them.
@@ -68,24 +67,9 @@ export default {
 			options: placementOptions,
 			control: "select",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-				disable: true,
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "showOnHover", truthy: true },
 		},
 		showOnHover: {
@@ -140,52 +124,16 @@ export default {
 	],
 };
 
-const PlacementVariants = (args) => html`
-	${window.isChromatic()
-		? html`
-			${placementOptions.map(option => {
-				const optionDescription = () => {
-					if (option.startsWith("start") || option.startsWith("end"))
-						return "Changes side with text direction (like a logical property)";
-					if (option.startsWith("left") || option.startsWith("right"))
-						return "Text direction does not effect the position";
-					return null;
-				};
-
-				return html`
-					<div class="spectrum-Typography">
-						${Typography({
-							semantics: "detail",
-							size: "l",
-							content: [option],
-							customClasses: ["chromatic-ignore"],
-						})}
-						<div
-							style=${styleMap({
-									"display": "flex",
-									"flex-direction": "column",
-									"gap": "4.8px",
-								})}
-							>
-							${when(optionDescription() !== null, () => html`
-								${Typography({
-									semantics: "detail",
-									size: "s",
-									content: [optionDescription()],
-									customClasses: ["chromatic-ignore"],
-								})}
-							`)}
-							${Template({
-								...args,
-								placement: option,
-							})}
-						</div>
-					</div>
-				`;
-			})}`
-		: Template(args)
-	}
-`;
-
 export const Default = PlacementVariants.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

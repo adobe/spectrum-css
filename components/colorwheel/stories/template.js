@@ -17,8 +17,26 @@ export const Template = ({
 	colorHandleStyle = {
 		"--spectrum-picked-color": "rgb(255, 0, 0)",
 	},
-} = {}, context = {}) => {
-	return html`
+}, context) => html`
+	<div class=${classMap({
+		[rootClass]: true,
+		"is-disabled": isDisabled,
+		"is-focused": isFocused,
+		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	})}>
+		<div class="${rootClass}-inner">
+			<div class="${rootClass}-colorarea-container">
+			${when(isWithColorArea, () => html`
+				${ColorArea({
+					isDisabled,
+					customStyles: {
+						"--mod-colorarea-width": "80px",
+						"--mod-colorarea-height": "80px",
+					},
+				}, context)}
+			`)}
+			</div>
+		</div>
 		<div class=${classMap({
 			[rootClass]: true,
 			"is-disabled": isDisabled,
@@ -54,5 +72,10 @@ export const Template = ({
 			}, context)}
 			<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
 		</div>
-	`;
-};
+		${ColorHandle({
+			isDisabled,
+			customClasses: [`${rootClass}-handle`],
+			customStyles: colorHandleStyle,
+		}, context)}
+		<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
+	</div>`;

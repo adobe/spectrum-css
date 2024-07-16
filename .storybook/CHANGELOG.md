@@ -86,6 +86,12 @@
   - @spectrum-css/ui-icons@2.0.0-s2-foundations.2
   - @spectrum-css/tokens@15.0.0-s2-foundations.2
 
+## 10.5.0
+
+### Minor Changes
+
+- [#2844](https://github.com/adobe/spectrum-css/pull/2844) [`7b19d63`](https://github.com/adobe/spectrum-css/commit/7b19d6352c7a4d2c03b7e9d886ec3ee91edda0bf) Thanks [@castastrophe](https://github.com/castastrophe)! - Feature: enable Chromatic modes for scaled testing!
+
 ## 10.4.0
 
 ### Minor Changes

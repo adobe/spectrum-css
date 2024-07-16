@@ -19,12 +19,8 @@ export const Template = ({
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      style=${styleMap({
-        "--spectrum-picked-color": "rgba(255, 0, 0, 50%)",
-        "inset-block-start": "5px",
-        "inset-inline-start": "5px",
-        ...customStyles
-      })}>
+      style=${styleMap(customStyles)}
+    >
       <defs>
         <path
           id="loupe-path"

@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -32,7 +33,7 @@ export default {
 		},
 	},
 	args: {
-		rootClass: "spectrum-Toast"
+		rootClass: "spectrum-Toast",
 	},
 	parameters: {
 		actions: {
@@ -42,6 +43,7 @@ export default {
 	},
 };
 
+// @todo combine variants into one snapshot
 export const Default = Template.bind({});
 Default.args = {
 	message: "File has been archived",
@@ -67,4 +69,15 @@ Positive.args = {
 	variant: "positive",
 	message: "Copied to clipboard",
 	inlineButtonLabel: "Eject",
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

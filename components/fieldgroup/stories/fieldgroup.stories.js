@@ -1,7 +1,9 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isInvalid } from "@spectrum-css/preview/types";
+import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
+import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { version } from "../package.json";
-
-import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
-import { Template } from "./template";
+import { FieldGroupSet, Template } from "./template";
 
 /**
  * A field group is a group of fields, usually radios (also known as a radio group) or checkboxes
@@ -47,15 +49,7 @@ export default {
 			options: ["top", "side"],
 			control: "select",
 		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
 		items: { table: { disable: true } },
 		fieldLabel: { table: { disable: true } },
 		helpText: { table: { disable: true } },
@@ -64,37 +58,57 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-FieldGroup",
-		layout: "vertical",
 		inputType: "radio",
 		labelPosition: "top",
+		layout: "vertical",
 		isInvalid: false,
 		isRequired: false,
-		items: [
-			{
-				id: "1",
-				label: "Kittens",
-			},
-			{
-				id: "2",
-				label: "Puppies",
-				isChecked: true,
-			},
-		],
-		fieldLabel: "Field Group Label",
-		helpText: "Select an option.",
 	},
 	parameters: {
 		actions: {
 			handles: [
-				...(Radio.parameters?.actions?.handles ?? [])
+				...(RadioSettings.parameters?.actions?.handles ?? [])
 			],
 		},
 		componentVersion: version,
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = FieldGroupSet.bind({});
+Default.args = {
+	label: "Select one of the following options:",
+	items: [
+		Radio({
+			id: "apple",
+			label: "Apples are best",
+			customClasses: ["spectrum-FieldGroup-item"],
+		}),
+		Radio({
+			id: "banana",
+			label: "Bananas forever",
+			customClasses: ["spectrum-FieldGroup-item"],
+		}),
+		Radio({
+			id: "pear",
+			label: "Pears or bust",
+			customClasses: ["spectrum-FieldGroup-item"],
+		}),
+	],
+};
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+
+// ********* DOCS ONLY ********* //
 export const VerticalRadio = Template.bind({});
 VerticalRadio.tags = ["autodocs", "!dev"];
 VerticalRadio.args = {

@@ -1,7 +1,8 @@
+import { renderContent } from "@spectrum-css/preview/decorators/utilities.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 import "../themes/express.css";
@@ -13,7 +14,9 @@ export const Template = ({
 	customStyles = {},
 	content,
 	isOpen = true,
-}) => {
+} = {}, context = {}) => {
+	const { updateArgs } = context;
+
 	return html`
     <div
       class=${classMap({
@@ -22,9 +25,11 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id="spectrum-underlay"
-      style=${ifDefined(styleMap(customStyles))}
-    >
-      ${content}
-    </div>
+      style=${styleMap(customStyles)}
+      @click=${() => {
+        updateArgs({ isOpen: !isOpen });
+      }}
+    ></div>
+    ${when(content, () => renderContent(content, context))}
   `;
 };

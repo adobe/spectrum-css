@@ -13,7 +13,7 @@ export const Template = ({
 	id,
 	iconName,
 	customClasses = [],
-} = {}, context = {}) => html`
+}, context) => html`
 	<button
 		class=${classMap({
 			[rootClass]: true,

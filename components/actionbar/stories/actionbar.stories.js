@@ -1,6 +1,8 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { ActionBarGroup, Template } from "./template";
 
@@ -11,15 +13,7 @@ export default {
 	title: "Action bar",
 	component: "ActionBar",
 	argTypes: {
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isEmphasized: {
 			name: "Emphasized styling",
 			type: { name: "boolean" },
@@ -85,6 +79,18 @@ export default {
 export const Default = ActionBarGroup.bind({});
 Default.args = {};
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
 export const Emphasized = Template.bind({});
 Emphasized.tags = ["autodocs", "!dev"];
 Emphasized.args = {

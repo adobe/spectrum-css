@@ -1,6 +1,6 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { renderContent } from "@spectrum-css/preview/decorators/utilities.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -35,6 +35,7 @@ export const AccordionItem = ({
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap(customStyles))}
 			role="presentation"
+			@click=${onclick}
 		>
 			<!-- WAI-ARIA 1.1: Item header is a <button> wrapped within a <h3> element, rather than a <div> element with role="tab" -->
 			<h3 class="${rootClass}Heading">
@@ -76,13 +77,14 @@ export const Template = ({
 	rootClass = "spectrum-Accordion",
 	size = "m",
 	density = "regular",
-	items,
+	items = [],
 	id,
 	disableAll = false,
+	collapseAll = false,
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
-	const [, updateArgs] = useArgs();
+	const { updateArgs } = context;
 
 	return html`
 		<div
@@ -96,17 +98,18 @@ export const Template = ({
 			})}"
 			id=${ifDefined(id)}
 			role="region"
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 		>
 			${repeat(Array.from(items.keys()), (heading, idx) => {
 				const item = items.get(heading);
 				return AccordionItem({
+					...item,
 					rootClass: `${rootClass}-item`,
 					heading,
 					idx,
 					iconSize: `${size}`,
 					isDisabled: item.isDisabled || disableAll,
-					...item,
+					isOpen: collapseAll === true ? false : item.isOpen,
 					onclick: () => {
 						if (item.isDisabled) return;
 
@@ -124,29 +127,46 @@ export const Template = ({
 	`;
 };
 
-export const AccordionGroup = (args, context) => {
-	return html`
-		<div style=${styleMap({
-			"display": window.isChromatic() ? "none" : undefined,
-		})}>
-			${Template(args, context)}
-		</div>
-		<div style=${styleMap({
-			"display": window.isChromatic() ? "flex" : "none",
-			"flex-wrap": "wrap",
-			"gap": "28px"
-		})}>
-			${Template(args, context)}
-			${Template({
-				...args,
-				customStyles: {
-					maxInlineSize: "300px",
-				},
-			}, context)}
-			${Template({
-				...args,
-				disableAll: true,
-			}, context)}
-		</div>
-	`;
-};
+export const AccordionGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Standard",
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+		},
+		{
+			testHeading: "Compact",
+			density: "compact",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+			withStates: false,
+		},
+		{
+			testHeading: "Spacious",
+			density: "spacious",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+			withStates: false,
+		},
+		{
+			testHeading: "Text wrapping",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "300px",
+			},
+			withStates: false,
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			disableAll: true,
+		},
+	],
+});

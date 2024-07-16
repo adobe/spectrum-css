@@ -11,6 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
+export { withArgEvents } from "./arg-events.js";
 export { withContextWrapper } from "./context.js";
 export { withIconSpriteSheet } from "./icon-sprites.js";
 export { withLanguageWrapper } from "./language.js";

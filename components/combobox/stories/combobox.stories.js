@@ -1,6 +1,10 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused, isInvalid, isOpen } from "@spectrum-css/preview/types";
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-import { ComboboxGroup, Template } from "./template";
+import { Template } from "./template";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
@@ -19,15 +23,7 @@ export default {
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isQuiet: {
 			name: "Quiet styling",
 			type: { name: "boolean" },
@@ -37,24 +33,8 @@ export default {
 			},
 			control: "boolean",
 		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
+		isFocused,
 		isKeyboardFocused: {
 			name: "Keyboard Focused",
 			type: { name: "boolean" },
@@ -164,6 +144,78 @@ export default {
 	},
 };
 
+const Variants = (args, context) => html`
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+		${Template(args, context)}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+		${Template({
+			...args,
+			isFocused: true,
+		}, context)}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+		${Template({
+			...args,
+			isKeyboardFocused: true,
+		}, context)}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+		${Template({
+			...args,
+			isDisabled: true,
+		}, context)}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+		${Template({
+			...args,
+			isLoading: true,
+		}, context)}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+		${Template({
+			...args,
+			isInvalid: true,
+		}, context)}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+		${Template({
+			...args,
+			showFieldLabel: true,
+			fieldLabelText: "Select location, this label should wrap",
+		}, context)}
+	</div>
+	<div style=${args.isOpen && "padding-bottom: 160px;"}>
+		${Template({
+			...args,
+			showFieldLabel: true,
+			fieldLabelText: "Select location, this label should wrap",
+			fieldLabelPosition: "left",
+		}, context)}
+	</div>
+`;
+
+const ComboboxGroup = (args, context) => html`
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : "contents",
+	})}>
+		${Template(args, context)}
+	</div>
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "contents" : "none",
+	})}>
+		<div style="display: flex; gap: 16px; flex-direction: column;">
+			${Variants({
+				...args,
+				isOpen: false,
+			}, context)}
+		</div>
+		<div style="display: flex; gap: 16px; flex-direction: column; margin-top: 32px;">
+			${Variants(args, context)}
+		</div>
+	</div>
+`;
+
 export const Default = ComboboxGroup.bind({});
 Default.args = {};
 
@@ -172,6 +224,7 @@ Quiet.args = {
 	isQuiet: true,
 };
 
+// ********* DOCS ONLY ********* //
 // Standard
 export const WithLabel = Template.bind({});
 WithLabel.tags = ["autodocs", "!dev"];
@@ -270,4 +323,14 @@ QuietDisabled.args = {
 };
 QuietDisabled.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = ComboboxGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

@@ -1,4 +1,7 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isInvalid, isOpen, isValid } from "@spectrum-css/preview/types";
+import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -17,15 +20,7 @@ export default {
 			if (["rootClass", "isDisabled"].includes(key)) return acc;
 			return { ...acc, [key]: { table: { disable: true } } };
 		}, {}),
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isQuiet: {
 			name: "Quiet styling",
 			type: { name: "boolean" },
@@ -36,13 +31,7 @@ export default {
 			control: "boolean",
 		},
 		isValid: {
-			name: "Valid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isValid,
 			if: { arg: "isInvalid", truthy: false },
 		},
 		isDateTimeRange: {
@@ -56,13 +45,7 @@ export default {
 			if: { arg: "isRange", truthy: true },
 		},
 		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isInvalid,
 			if: { arg: "isValid", truthy: false },
 		},
 		isDisabled: {
@@ -124,6 +107,10 @@ export default {
 		},
 		componentVersion: version,
 	},
+	decorators: [
+		// Add padding for VRT so drop shadows are not cut off.
+		(story) => window.isChromatic() ? html`<div style="padding: 32px; min-height: 450px;">${story()}</div>` : story(),
+	],
 };
 
 export const Default = Template.bind({});
@@ -148,7 +135,9 @@ Range.parameters = {
 	},
 };
 
+// ********* DOCS ONLY ********* //
 export const QuietRange = Template.bind({});
+QuietRange.tags = ["autodocs", "!dev"];
 QuietRange.args = {
 	lastDay: 3,
 	isRange: true,
@@ -163,9 +152,9 @@ QuietRange.parameters = {
 		}
 	},
 };
-QuietRange.tags = ["autodocs", "!dev"];
 
 export const Invalid = Template.bind({});
+Invalid.tags = ["autodocs", "!dev"];
 Invalid.args = {
 	isInvalid: true,
 	isOpen: false,
@@ -178,9 +167,9 @@ Invalid.parameters = {
 		}
 	},
 };
-Invalid.tags = ["autodocs", "!dev"];
 
 export const QuietInvalid = Template.bind({});
+QuietInvalid.tags = ["autodocs", "!dev"];
 QuietInvalid.args = {
 	isInvalid: true,
 	isQuiet: true,
@@ -194,9 +183,10 @@ QuietInvalid.parameters = {
 		}
 	},
 };
-QuietInvalid.tags = ["autodocs", "!dev"];
+
 
 export const ReadOnly = Template.bind({});
+ReadOnly.tags = ["autodocs", "!dev"];
 ReadOnly.args = {
 	readOnly: true,
 };
@@ -208,9 +198,9 @@ ReadOnly.parameters = {
 		}
 	}
 };
-ReadOnly.tags = ["autodocs", "!dev"];
 
 export const Disabled = Template.bind({});
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -222,9 +212,8 @@ Disabled.parameters = {
 		}
 	}
 };
-Disabled.tags = ["autodocs", "!dev"];
-
 export const QuietDisabled = Template.bind({});
+QuietDisabled.tags = ["autodocs", "!dev"];
 QuietDisabled.args = {
 	isDisabled: true,
 	isQuiet: true,
@@ -237,4 +226,13 @@ QuietDisabled.parameters = {
 		}
 	}
 };
-QuietDisabled.tags = ["autodocs", "!dev"];
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

@@ -1,5 +1,4 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -20,7 +19,7 @@ export const Template = ({
 	customClasses = [],
 	id,
 } = {}, context = {}) => {
-	const [, updateArgs] = useArgs();
+	const { updateArgs } = context;
 
 	return html`
 		<div

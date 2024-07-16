@@ -1,6 +1,6 @@
-import { version } from "../package.json";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -47,4 +47,14 @@ Default.args = {};
 export const Secondary = Template.bind({});
 Secondary.args = {
 	variant: "secondary",
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

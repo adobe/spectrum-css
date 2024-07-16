@@ -19,13 +19,10 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
-} = {}, context) => {
-	const iconName =
-		variant === "negative"
-			? "Alert"
-			: variant === "positive"
-				? "CheckmarkCircle"
-				: "Info";
+} = {}, context = {}) => {
+	let iconName = "Info";
+	if (variant === "negative") iconName = "Alert";
+	if (variant === "positive") iconName = "CheckmarkCircle";
 
 	return html`
 		<div
@@ -39,7 +36,7 @@ export const Template = ({
 		>
 			${when(variant, () =>
 				Icon({
-					iconName: ifDefined(iconName),
+					iconName,
 					size: "m",
 					customClasses: [`${rootClass}-typeIcon`],
 				}, context)

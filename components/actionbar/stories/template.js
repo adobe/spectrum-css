@@ -2,9 +2,9 @@ import { Template as ActionGroup } from "@spectrum-css/actiongroup/stories/templ
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 import "../themes/express.css";
@@ -71,22 +71,28 @@ export const Template = ({
 	`;
 };
 
-export const ActionBarGroup = (args, context) => html`
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "none" : undefined,
-	})}>
-		${Template(args, context)}
-	</div>
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
-		"flex-direction": "column",
-		"flex-wrap": "nowrap",
-		"gap": "16px"
-	})}>
-		${Template(args, context)}
-		${Template({
-			...args,
+export const ActionBarGroup = Variants({
+	Template,
+	testData: [
+		{},
+		{
+			testHeading: "Emphasized",
 			isEmphasized: true,
-		}, context)}
-	</div>
-`;
+		},
+	],
+	stateData: [
+		// @todo these only work if rendered in an iframe
+		// {
+		// 	testHeading: "Sticky",
+		// 	isSticky: true,
+		// },
+		// {
+		// 	testHeading: "Fixed",
+		// 	isFixed: true,
+		// },
+		// {
+		// 	testHeading: "Flexible",
+		// 	isFlexible: true,
+		// },
+	],
+});

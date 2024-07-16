@@ -33,6 +33,7 @@ const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
 export const MenuItem = ({
 	description,
 	iconName,
+	iconSet = "workflow",
 	hasActions,
 	id,
 	idx = 0,
@@ -53,7 +54,7 @@ export const MenuItem = ({
 	size,
 	selectionMode,
 	value,
-} = {}, context) => html`
+}, context) => html`
   <li
     class=${classMap({
       [`${rootClass}`]: true,
@@ -76,6 +77,7 @@ export const MenuItem = ({
         isCollapsible || (selectionMode == "single" && isSelected),
         () => Icon({
           iconName: iconWithScale(size, isCollapsible ? "ChevronRight" : "Checkmark"),
+          setName: "ui",
           size,
           customClasses: [
             `${rootClass}Icon`,
@@ -96,6 +98,7 @@ export const MenuItem = ({
       )}
       ${when(iconName, () => Icon({
         iconName,
+        setName: iconSet,
         size,
         customClasses: [
           `${rootClass}Icon`,
@@ -150,6 +153,7 @@ export const MenuItem = ({
       `)}
       ${when(isDrillIn, () => Icon({
         iconName: iconWithScale(size, "ChevronRight"),
+        setName: "ui",
         size,
         customClasses: [
           `${rootClass}Icon`,
@@ -177,7 +181,7 @@ export const MenuGroup = ({
 	maxInlineSize,
 	subrole,
 	size,
-} = {}, context) => html`
+}, context) => html`
   <li
     id=${ifDefined(id)}
     role="presentation"
@@ -202,6 +206,7 @@ export const MenuGroup = ({
           <button aria-label="Back to previous menu" class="spectrum-Menu-backButton" type="button" role="menuitem">
             ${Icon({
               iconName: iconWithScale(size),
+              setName: "ui",
               size,
               customClasses: ["spectrum-Menu-backIcon"]
             }, context)}
@@ -262,7 +267,7 @@ export const Template = ({
 	shouldTruncate,
 	size,
 	subrole = "menuitem",
-} = {}, context) => {
+} = {}, context = {}) => {
 	const menuMarkup = html`
     <ul
       class=${classMap({
@@ -301,6 +306,7 @@ export const Template = ({
             description: singleItemDescription || i.description,
             hasActions,
             iconName: itemIcon || i.iconName,
+            iconSet: i.iconSet || "workflow",
             idx,
             isActive: isItemActive,
             isDisabled: isDisabled || i.isDisabled,
@@ -322,12 +328,11 @@ export const Template = ({
 	return menuMarkup;
 };
 
-
-const Sizes = (args) => ["s", "m", "l", "xl"].map((size) => html`
+const Sizes = (args, context) => ["s", "m", "l", "xl"].map((size) => html`
 	<div>
 		${Typography({
-			semantics: "detail",
-			size: "s",
+			semantics: "heading",
+			size: "xs",
 			content: [
 				{
 					s: "Small",
@@ -337,14 +342,14 @@ const Sizes = (args) => ["s", "m", "l", "xl"].map((size) => html`
 				}[size]
 			],
 			customClasses: ["chromatic-ignore"],
-		})}
+		}, context)}
 		<div>
-			${Template({...args, size})}
+			${Template({...args, size}, context)}
 		</div>
 	</div>
 `);
 
-const States = (args) => {
+const States = (args, context) => {
 	const { titlePrefix, firstAndLast } = args;
 	let stateData = [
 		{
@@ -377,13 +382,13 @@ const States = (args) => {
 	return stateData.map((stateItem) => html`
 		<div>
 			${Typography({
-				semantics: "detail",
-				size: "s",
+				semantics: "heading",
+				size: "xs",
 				content: [`${titlePrefix ? titlePrefix + ", ": ""}${stateItem.stateTitle}`],
 				customClasses: ["chromatic-ignore"],
-			})}
+			}, context)}
 			<div>
-				${Template({...args, ...stateItem.args})}
+				${Template({...args, ...stateItem.args}, context)}
 			</div>
 		</div>
 	`);
@@ -447,8 +452,8 @@ const WithValueStates = (args) => {
 	return valueData.map((valueItem) => html`
 		<div>
 		${Typography({
-			semantics: "detail",
-			size: "s",
+			semantics: "heading",
+			size: "xs",
 			content: [ valueItem.stateTitle ],
 			customClasses: ["chromatic-ignore"],
 		})}
@@ -518,22 +523,22 @@ export const MenuItemWithVariants = (args, context) => html`
       },
     ].map((sectionItem) => html`
       <div class="spectrum-Typography">
-      ${Typography({
-        semantics: "detail",
-        size: "l",
-        content: [sectionItem.sectionTitle],
-        customClasses: ["chromatic-ignore"],
-      })}
-      <div
-        style=${styleMap({
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "1.5rem",
+        ${Typography({
+          semantics: "heading",
+          size: "s",
+          content: [sectionItem.sectionTitle],
+          customClasses: ["chromatic-ignore"],
         })}
-      >
-        ${sectionItem.sectionMarkup}
+        <div
+          style=${styleMap({
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "1.5rem",
+          })}
+        >
+          ${sectionItem.sectionMarkup}
+        </div>
       </div>
-    </div>
     `)}
   </div>
 `;
@@ -549,7 +554,6 @@ export const MenuWithVariants = (args, context) => html`
     flexDirection: "column",
     alignItems: "flex-start",
     gap: "1rem",
-    "--mod-detail-margin-end": ".3rem",
 	})}>
     ${[
       {
@@ -569,14 +573,10 @@ export const MenuWithVariants = (args, context) => html`
         args: { ...args, selectionMode: "multiple" },
       },
     ].map((item) => html`
-<style>
-  /* For this testing preview, this is the heading closest to the component and therefore needs a separate color */
-  .spectrum-Detail { --mod-detail-font-color: var(--spectrum-seafoam-900); }
-</style>
 <div class="spectrum-Typography">
   ${Typography({
-    semantics: "detail",
-    size: "l",
+    semantics: "heading",
+    size: "s",
     content: [ item.stateTitle ],
     customClasses: ["chromatic-ignore"],
   })}
@@ -584,7 +584,6 @@ export const MenuWithVariants = (args, context) => html`
     ${Template({...args, ...item.args})}
   </div>
 </div>
-
     `)}
   </div>
 `;

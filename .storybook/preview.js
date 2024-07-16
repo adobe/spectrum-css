@@ -1,5 +1,6 @@
 import {
 	withActions,
+	withArgEvents,
 	withContextWrapper,
 	withIconSpriteSheet,
 	withLanguageWrapper,
@@ -7,12 +8,12 @@ import {
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 } from "./decorators";
-// import modes from "./modes";
 import {
 	FontLoader,
 	IconLoader,
 	TokenLoader,
 } from "./loaders";
+import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
 
@@ -50,7 +51,7 @@ const parameters = {
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
 		pauseAnimationAtEnd: true,
-		// modes,
+		modes,
 	},
 	controls: {
 		expanded: true,
@@ -108,6 +109,7 @@ export default {
 		customStyles: {},
 	},
 	decorators: [
+		withArgEvents,
 		withTextDirectionWrapper,
 		withLanguageWrapper,
 		withReducedMotionWrapper,
