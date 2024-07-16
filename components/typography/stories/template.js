@@ -1,23 +1,28 @@
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
+
 import "../index.css";
 
-export const Template = ({
-	rootClass = "spectrum-Typography",
-	semantics = "body",
-	size = "m",
-	variant,
-	weight,
-	glyph = "sans-serif",
-	id,
-	content = [],
-	customClasses = [],
-	customStyles = {},
-}, context) => {
+export const Template = (args, context) => {
+	let {
+		rootClass = "spectrum-Typography",
+		semantics = "body",
+		size = "m",
+		variant,
+		weight,
+		glyph = "sans-serif",
+		id,
+		content = [],
+		customClasses = [],
+		customStyles = {},
+	} = args;
+
+	// If the content is not an array, make it an array for easier processing
 	if (!Array.isArray(content)) {
 		content = [content];
 	}
@@ -31,17 +36,7 @@ export const Template = ({
 		${content.map((c) => {
 			/* If the content is an object (but not a lit object), we need to merge the object with the template */
 			if (typeof c !== "string" && (typeof c === "object" && !c._$litType$)) {
-				return Template({
-					rootClass,
-					semantics,
-					size,
-					variant,
-					weight,
-					glyph,
-					id,
-					customClasses,
-					...c,
-				}, context);
+				return Template({ ...args, ...c }, context);
 			}
 
 			if (typeof semantics === "undefined") {
@@ -97,21 +92,21 @@ export const Template = ({
 
 			if (semantics === "heading")
 				return html`
-					<h2 class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</h2>
+					<h2 class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</h2>
 				`;
 
 			if (semantics === "body")
 				return html`
-					<p class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</p>
+					<p class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</p>
 				`;
 
 			if (semantics === "code")
 				return html`
-					<code class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</code>
+					<code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</code>
 				`;
 
 			return html`
-				<span class=${classMap(classes)} style=${ifDefined(styleMap(customStyles))} id=${ifDefined(id)}>${c}</span>
+				<span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</span>
 			`;
 		})}
 	`;
@@ -123,3 +118,5 @@ export const Template = ({
 		() => processedContent
 	)}`;
 };
+
+export const TypographyGroup = Variants({ Template });

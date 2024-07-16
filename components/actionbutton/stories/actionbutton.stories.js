@@ -1,6 +1,8 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isFocused, isHovered, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Variants } from "./template";
+import { ActionButtonGroup, ActionButtons } from "./template";
 
 /**
  * The action button component represents an action a user can take.
@@ -49,43 +51,12 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "isSelected", truthy: true }
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isHovered: {
-			name: "Hovered",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isSelected,
+		isHovered,
+		isFocused,
 		isActive: {
 			name: "Active",
 			type: { name: "boolean" },
@@ -106,13 +77,14 @@ export default {
 		},
 		hasPopup: {
 			name: "Has popup",
-			description: "True if the button triggers a popup action.",
-			type: { name: "boolean" },
+			description: "If the button triggers a popup action, this should be set to reflect the type of element that pops-up.",
+			type: { name: "string" },
 			table: {
-				type: { summary: "boolean" },
-				category: "Advanced",
+				type: { summary: "string" },
+				category: "Accessibility",
 			},
-			control: "boolean",
+			control: "select",
+			options: ["true", "menu", "listbox", "tree", "grid", "dialog", "false"],
 		},
 		staticColor: {
 			name: "Static color",
@@ -128,15 +100,16 @@ export default {
 	args: {
 		rootClass: "spectrum-ActionButton",
 		size: "m",
-		iconName: "More",
 		isQuiet: false,
 		isEmphasized: false,
-		hasPopup: false,
+		hasPopup: "false",
 		isActive: false,
 		isFocused: false,
 		isHovered: false,
 		isSelected: false,
 		isDisabled: false,
+		iconName: "More",
+		label: "",
 	},
 	parameters: {
 		actions: {
@@ -146,23 +119,56 @@ export default {
 	},
 };
 
-export const Default = Variants.bind({});
-Default.args = {};
+export const Default = ActionButtonGroup.bind({});
+Default.args = {
+	label: "More",
+};
 
-export const StaticBlack = Variants.bind({});
+export const Emphasized = ActionButtons.bind({});
+Emphasized.tags = ["autodocs", "!dev"];
+Emphasized.args = {
+	label: "More",
+	isEmphasized: true,
+};
+
+export const Quiet = ActionButtons.bind({});
+Quiet.tags = ["autodocs", "!dev"];
+Quiet.args = {
+	label: "More",
+	isQuiet: true,
+};
+
+// ********* VRT ONLY ********* //
+export const StaticBlack = Default.bind({});
+StaticBlack.tags = ["!autodocs", "!dev", "test"];
 StaticBlack.args = {
+	...Default.args,
 	staticColor: "black",
 };
-
-export const StaticWhite = Variants.bind({});
-StaticWhite.args = {
-	/* Force dark mode to make typography readable */
-	color: "dark",
-	staticColor: "white",
+StaticBlack.parameters = {
+	chromatic: {
+		modes: disableDefaultModes
+	},
 };
 
-export const WithForcedColors = Variants.bind({});
-WithForcedColors.tags = ["vrt-only"];
+export const StaticWhite = Default.bind({});
+StaticWhite.tags = ["!autodocs", "!dev", "test"];
+StaticWhite.args = {
+	...Default.args,
+	staticColor: "white",
+};
+StaticWhite.parameters = {
+	chromatic: {
+		modes: disableDefaultModes
+	},
+};
+
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
-	chromatic: { forcedColors: "active" },
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

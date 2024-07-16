@@ -1,4 +1,6 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused, isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -43,13 +45,7 @@ export default {
 			control: { type: "text" },
 		},
 		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isOpen,
 			if: { arg: "isDisabled", truthy: false }
 		},
 		isRounded: {
@@ -80,13 +76,7 @@ export default {
 			control: "boolean",
 		},
 		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isFocused,
 			if: { arg: "isDisabled", truthy: false }
 		},
 		position: {
@@ -127,20 +117,24 @@ WithLabel.args = {
 	label: "Select",
 };
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
 export const Disabled = Template.bind({});
-Disabled.tags = ["vrt-only"];
+Disabled.tags = ["!autodocs", "!dev", "test"];
 Disabled.args = {
 	isDisabled: true
 };
 
 export const Quiet = Template.bind({});
-Quiet.tags = ["vrt-only"];
+Quiet.tags = ["!autodocs", "!dev", "test"];
 Quiet.args = {
 	isQuiet: true
-};
-
-export const Express = Template.bind({});
-Express.tags = ["vrt-only"];
-Express.args = {
-	express: true
 };

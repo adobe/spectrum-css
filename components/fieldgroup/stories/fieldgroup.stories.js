@@ -1,7 +1,9 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isInvalid } from "@spectrum-css/preview/types";
+import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
+import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { version } from "../package.json";
-
-import { default as Radio } from "@spectrum-css/radio/stories/radio.stories.js";
-import { Template } from "./template";
+import { FieldGroupSet, Template } from "./template";
 
 /**
  * A field group is a group of fields, usually radios (also known as a radio group) or checkboxes
@@ -10,7 +12,7 @@ import { Template } from "./template";
  * can be used to mark a field group as optional or required. The field group items other than the
  * label must be wrapped in a nested `div` with `.spectrum-FieldGroupInputLayout` to control their
  * layout separately from the label. Help text may or may not appear below a field group and is
- * necessary when denoting invalid checkbox fields, invalid radio button fields, and required 
+ * necessary when denoting invalid checkbox fields, invalid radio button fields, and required
  * fields. Invalid radio buttons and checkboxes are signified by negative help text.
  */
 export default {
@@ -47,15 +49,7 @@ export default {
 			options: ["top", "side"],
 			control: "select",
 		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
 		items: { table: { disable: true } },
 		fieldLabel: { table: { disable: true } },
 		helpText: { table: { disable: true } },
@@ -64,39 +58,59 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-FieldGroup",
-		layout: "vertical",
 		inputType: "radio",
 		labelPosition: "top",
+		layout: "vertical",
 		isInvalid: false,
 		isRequired: false,
-		items: [
-			{
-				id: "1",
-				label: "Kittens",
-			},
-			{
-				id: "2",
-				label: "Puppies",
-				isChecked: true,
-			},
-		],
-		fieldLabel: "Field Group Label",
-		helpText: "Select an option.",
 	},
 	parameters: {
 		actions: {
 			handles: [
-				...(Radio.parameters?.actions?.handles ?? [])
+				...(RadioSettings.parameters?.actions?.handles ?? [])
 			],
 		},
 		componentVersion: version,
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = FieldGroupSet.bind({});
+Default.args = {
+	label: "Select one of the following options:",
+	items: [
+		Radio({
+			id: "apple",
+			label: "Apples are best",
+			customClasses: ["spectrum-FieldGroup-item"],
+		}),
+		Radio({
+			id: "banana",
+			label: "Bananas forever",
+			customClasses: ["spectrum-FieldGroup-item"],
+		}),
+		Radio({
+			id: "pear",
+			label: "Pears or bust",
+			customClasses: ["spectrum-FieldGroup-item"],
+		}),
+	],
+};
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+
+// ********* DOCS ONLY ********* //
 export const VerticalRadio = Template.bind({});
-VerticalRadio.tags = ["docs-only"];
+VerticalRadio.tags = ["autodocs", "!dev"];
 VerticalRadio.args = {
 	layout: "vertical",
 	inputType: "radio",
@@ -106,7 +120,7 @@ VerticalRadio.parameters = {
 };
 
 export const VerticalCheckbox = Template.bind({});
-VerticalCheckbox.tags = ["docs-only"];
+VerticalCheckbox.tags = ["autodocs", "!dev"];
 VerticalCheckbox.args = {
 	layout: "vertical",
 	inputType: "checkbox",
@@ -116,7 +130,7 @@ VerticalCheckbox.parameters = {
 };
 
 export const HorizontalRadio = Template.bind({});
-HorizontalRadio.tags = ["docs-only"];
+HorizontalRadio.tags = ["autodocs", "!dev"];
 HorizontalRadio.args = {
 	layout: "horizontal",
 	inputType: "radio",
@@ -126,7 +140,7 @@ HorizontalRadio.parameters = {
 };
 
 export const HorizontalCheckbox = Template.bind({});
-HorizontalCheckbox.tags = ["docs-only"];
+HorizontalCheckbox.tags = ["autodocs", "!dev"];
 HorizontalCheckbox.args = {
 	layout: "horizontal",
 	inputType: "checkbox",
@@ -136,7 +150,7 @@ HorizontalCheckbox.parameters = {
 };
 
 export const InvalidRadio = Template.bind({});
-InvalidRadio.tags = ["docs-only"];
+InvalidRadio.tags = ["autodocs", "!dev"];
 InvalidRadio.args = {
 	layout: "horizontal",
 	inputType: "radio",
@@ -147,7 +161,7 @@ InvalidRadio.parameters = {
 };
 
 export const InvalidCheckbox = Template.bind({});
-InvalidCheckbox.tags = ["docs-only"];
+InvalidCheckbox.tags = ["autodocs", "!dev"];
 InvalidCheckbox.args = {
 	layout: "horizontal",
 	inputType: "checkbox",
@@ -159,11 +173,11 @@ InvalidCheckbox.parameters = {
 
 /**
  * Field groups can be marked as optional or required, depending on the situation.
- * 
+ *
 * If required, the field group must either contain a "(required)" label or an asterisk. If an asterisk is used, help text must explain what the asterisk means.
  */
 export const Required = Template.bind({});
-Required.tags = ["docs-only"];
+Required.tags = ["autodocs", "!dev"];
 Required.args = {
 	inputType: "radio",
 	fieldLabel: "Radio group label (required)"
@@ -173,7 +187,7 @@ Required.parameters = {
 };
 
 export const RequiredAsterisk = Template.bind({});
-RequiredAsterisk.tags = ["docs-only"];
+RequiredAsterisk.tags = ["autodocs", "!dev"];
 RequiredAsterisk.args = {
 	fieldLabel: "Checkbox group label",
 	inputType: "checkbox",
@@ -187,7 +201,7 @@ RequiredAsterisk.parameters = {
  * Optional field groups can be denoted with text added to the end of the label "(optional)" or have no indication at all.
  */
 export const Optional = Template.bind({});
-Optional.tags = ["docs-only"];
+Optional.tags = ["autodocs", "!dev"];
 Optional.args = {
 	fieldLabel: "Checkbox group label (optional)",
 	helpText: "",
@@ -201,7 +215,7 @@ Optional.parameters = {
  * The field group label has two layout options: the label can be top aligned with `spectrum-FieldGroup spectrum-FieldGroup--toplabel`, or side aligned with `spectrum-FieldGroup spectrum-FieldGroup--sidelabel`.
  */
 export const VerticalSideLabelRadio = Template.bind({});
-VerticalSideLabelRadio.tags = ["docs-only"];
+VerticalSideLabelRadio.tags = ["autodocs", "!dev"];
 VerticalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
@@ -212,7 +226,7 @@ VerticalSideLabelRadio.parameters = {
 };
 
 export const HorizontalSideLabelRadio = Template.bind({});
-HorizontalSideLabelRadio.tags = ["docs-only"];
+HorizontalSideLabelRadio.tags = ["autodocs", "!dev"];
 HorizontalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
@@ -223,7 +237,7 @@ HorizontalSideLabelRadio.parameters = {
 };
 
 export const VerticalSideLabelCheckbox = Template.bind({});
-VerticalSideLabelCheckbox.tags = ["docs-only"];
+VerticalSideLabelCheckbox.tags = ["autodocs", "!dev"];
 VerticalSideLabelCheckbox.args = {
 	labelPosition: "side",
 	inputType: "checkbox",
@@ -234,7 +248,7 @@ VerticalSideLabelCheckbox.parameters = {
 };
 
 export const HorizontalSideLabelCheckbox = Template.bind({});
-HorizontalSideLabelCheckbox.tags = ["docs-only"];
+HorizontalSideLabelCheckbox.tags = ["autodocs", "!dev"];
 HorizontalSideLabelCheckbox.args = {
 	labelPosition: "side",
 	inputType: "checkbox",
@@ -248,7 +262,7 @@ HorizontalSideLabelCheckbox.parameters = {
  * A group of read-only checkboxes that have been checked. In U.S. English, use commas to delineate items within read-only checkbox groups. In other languages, use the locale-specific formatting.
  */
 export const ReadOnly = Template.bind({});
-ReadOnly.tags = ["docs-only"];
+ReadOnly.tags = ["autodocs", "!dev"];
 ReadOnly.args = {
 	isReadOnly: true,
 	inputType: "checkbox",

@@ -1,5 +1,8 @@
+import { Default as DialogStory } from "@spectrum-css/dialog/stories/dialog.stories.js";
+import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
+import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 /**
  * An underlay component is used with modal and dialog. It lays over the rest of the page to deliver a blocking layer between the two contexts.
@@ -8,35 +11,36 @@ export default {
 	title: "Underlay",
 	component: "Underlay",
 	argTypes: {
-		isOpen: {
-			description: "Whether the underlay is open (visible).",
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		content: {
 			table: { disable: true }
 		},
 	},
 	args: {
-		isOpen: true,
 		rootClass: "spectrum-Underlay",
+		isOpen: false,
 	},
 	parameters: {
-		chromatic: { disableSnapshot: true },
-		actions: {
-			handles: []
+		docs: {
+			story: {
+				inline: false,
+				height: "500px",
+			},
 		},
+		chromatic: { disableSnapshot: true },
 		componentVersion: version,
-	},
+	}
 };
 
 export const Default = Template.bind({});
+Default.tags = ["autodocs", "!test"];
 Default.args = {
 	isOpen: true,
 	content: [
-		"This is a underlay. Don't use it like this. Use it with a Modal and a Dialog.",
+		(passthrough) => Dialog({
+			...DialogStory.args,
+			...passthrough,
+			showModal: true,
+		})
 	],
 };

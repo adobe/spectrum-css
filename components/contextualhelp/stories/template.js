@@ -18,7 +18,6 @@ export const Template = ({
 	popoverPlacement,
 	customStyles = {},
 	customClasses = [],
-	...globals
 }, context) => html`
 	<div
 		class=${classMap({
@@ -26,7 +25,7 @@ export const Template = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
-		style=${ifDefined(styleMap(customStyles))}
+		style=${styleMap(customStyles)}
 	>
 		${popoverPlacement.includes("top")
 			? html`<div
@@ -35,7 +34,6 @@ export const Template = ({
 				></div> `
 			: ""}
 		${ActionButton({
-			...globals,
 			size: "xs",
 			iconName,
 			customClasses: [`${rootClass}-button`],

@@ -1,5 +1,7 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { DialGroup } from "./template";
 
 /**
  * A dial is an input control used for selecting a value within a range, similar to a slider. It's often used in audio and video mixing and editing applications, where horizontal space is limited.
@@ -26,15 +28,7 @@ export default {
 			},
 			control: "text",
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
 		isDragged: {
 			name: "Dragged",
 			type: { name: "boolean" },
@@ -66,25 +60,16 @@ export default {
 	},
 };
 
-export const Default = Template.bind();
+export const Default = DialGroup.bind();
 Default.args = {};
 
-export const DefaultExpress = Template.bind();
-DefaultExpress.args = {
-	express: true,
-};
-
-export const Small = Template.bind();
-Small.args = {
-	size: "s",
-};
-
-export const WithLabel = Template.bind();
-WithLabel.args = {
-	label: "Volume",
-};
-
-export const Disabled = Template.bind();
-Disabled.args = {
-	isDisabled: true,
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

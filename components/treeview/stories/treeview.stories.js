@@ -1,5 +1,6 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { Template, TreeViewGroup } from "./template";
 
 /**
  * The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.
@@ -29,23 +30,11 @@ export default {
 			},
 			control: "boolean",
 		},
-		customStyles: {
-			name: "Custom styles",
-			description: "Storybook only styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Advanced",
-			},
-			if: { arg: "customStyles" }
-		}
 	},
 	args: {
 		rootClass: "spectrum-TreeView",
 		size: "m",
 		isQuiet: false,
-		customStyles: {
-			maxInlineSize: "600px",
-		},
 	},
 	parameters: {
 		actions: {
@@ -55,7 +44,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = TreeViewGroup.bind({});
 Default.args = {
 	items: [
 		{
@@ -116,6 +105,7 @@ Default.args = {
 	],
 };
 
+// ********* DOCS ONLY ********* //
 export const FoldersAndFiles = Template.bind({});
 FoldersAndFiles.args = {
 	items: [
@@ -183,6 +173,10 @@ FoldersAndFiles.args = {
 		},
 	],
 };
+FoldersAndFiles.tags = ["autodocs", "!dev"];
+FoldersAndFiles.parameters = {
+	chromatic: { disableAllSnapshots: true },
+};
 
 export const Thumbnails = Template.bind({});
 Thumbnails.args = {
@@ -220,6 +214,10 @@ Thumbnails.args = {
 			],
 		},
 	],
+};
+Thumbnails.tags = ["autodocs", "!dev"];
+Thumbnails.parameters = {
+	chromatic: { disableAllSnapshots: true },
 };
 
 export const WithSections = Template.bind({});
@@ -262,6 +260,10 @@ WithSections.args = {
 		},
 	],
 };
+WithSections.tags = ["autodocs", "!dev"];
+WithSections.parameters = {
+	chromatic: { disableAllSnapshots: true },
+};
 
 export const WithDropTarget = Template.bind({});
 WithDropTarget.args = {
@@ -278,6 +280,10 @@ WithDropTarget.args = {
 			link: "#",
 		},
 	],
+};
+WithDropTarget.tags = ["autodocs", "!dev"];
+WithDropTarget.parameters = {
+	chromatic: { disableAllSnapshots: true },
 };
 
 export const Flat = Template.bind({});
@@ -343,4 +349,19 @@ Flat.args = {
 			customClasses: ["spectrum-TreeView-item--indent2"],
 		},
 	],
+};
+Flat.tags = ["autodocs", "!dev"];
+Flat.parameters = {
+	chromatic: { disableAllSnapshots: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

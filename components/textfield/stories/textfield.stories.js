@@ -1,6 +1,7 @@
-import { html } from "lit";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused, isInvalid, isValid } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { Template, TextFieldGroup } from "./template";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
@@ -10,13 +11,8 @@ export default {
 	component: "TextField",
 	argTypes: {
 		isValid: {
-			name: "Valid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isValid,
+			if: { arg: "isInvalid", truthy: false },
 		},
 		displayLabel: {
 			name: "Display field label",
@@ -49,23 +45,10 @@ export default {
 			if: { arg: "displayLabel", truthy: true },
 		},
 		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
+			...isInvalid,
+			if: { arg: "isValid", truthy: false },
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocused,
 		isKeyboardFocused: {
 			name: "Keyboard focused",
 			type: { name: "boolean" },
@@ -163,9 +146,7 @@ export default {
 			control: "text",
 		},
 		value: {
-			table: {
-				disable: true,
-			},
+			table: { disable: true },
 		},
 	},
 	args: {
@@ -180,11 +161,11 @@ export default {
 		isLoading: false,
 		displayLabel: false,
 		labelPosition: "top",
-		labelText: "Username",
 		size: "m",
 		multiline: false,
 		grows: false,
 		isQuiet: false,
+		value: "",
 	},
 	parameters: {
 		actions: {
@@ -198,79 +179,29 @@ export default {
 	},
 };
 
-const TextFieldGroup = (args) => html`
-	<div style="display: flex; flex-direction: column; gap: 32px;">
-		${Template({
-			...args
-		})}
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-			})
-			: html`` }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username that is really long and wraps onto a second line",
-				isInvalid: true,
-			})
-			: html`` }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				labelPosition: "side",
-				isValid: true,
-				value: "username@reallylongemail.com"
-			})
-			: html`` }
-	</div>
-`;
-
-const TextAreaGroup = (args) => html`
-	<div style="display: flex; flex-direction: column; gap: 32px;">
-		${Template({
-			...args,
-			multiline: true,
-			value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-		})}
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username that is really long and wraps onto a second line",
-				isInvalid: true,
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-		${window.isChromatic() ?
-			Template({
-				displayLabel: true,
-				labelText: "Username",
-				labelPosition: "side",
-				isValid: true,
-				multiline: true,
-				value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-			})
-			: null }
-	</div>
-`;
-
 export const Default = TextFieldGroup.bind({});
-Default.args = {};
+Default.args = {
+	labelText: "Username",
+};
 
-export const TextArea = TextAreaGroup.bind({});
+// ********* DOCS ONLY ********* //
+export const TextArea = Template.bind({});
+TextArea.tags = ["autodocs", "!dev"];
 TextArea.args = {
+	labelText: "Username",
 	multiline: true,
 	grows: true,
 	value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+};
+
+// ********* VRT ONLY ********* //
+// @todo should this show text field and text area in the same snapshot?
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

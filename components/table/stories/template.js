@@ -1,12 +1,11 @@
-import { classMap } from "lit/directives/class-map.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { when } from "lit/directives/when.js";
-import { html, literal } from "lit/static-html.js";
-
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
+import { html, literal } from "lit/static-html.js";
 
 import "../index.css";
 
@@ -29,7 +28,7 @@ export const TableRowItem = ({
 	ariaControls,
 	customClasses = [],
 	size = "m",
-}, context) => {
+} = {}, context = {}) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
 
 	// Use Table tags or Div tags.
@@ -162,7 +161,7 @@ export const Template = ({
 	rowItems = [],
 	customClasses = [],
 	id,
-}, context) => {
+} = {}, context = {}) => {
 	if (!rowItems || !rowItems.length) return html``;
 
 	// Use Table tags or Div tags.

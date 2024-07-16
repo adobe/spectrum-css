@@ -14,7 +14,6 @@ export const Template = ({
 	id,
 	customClasses = [],
 	customStyles = {},
-	...globals
 }, context) => html`
 	<button
 		type="reset"
@@ -27,12 +26,11 @@ export const Template = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
-		style=${ifDefined(styleMap(customStyles))}
+		style=${styleMap(customStyles)}
 		?disabled=${isDisabled}
 	>
 		<div class="${rootClass}-fill">
 			${Icon({
-				...globals,
 				size,
 				iconName: "Cross",
 				customClasses: [`${rootClass}-icon`],

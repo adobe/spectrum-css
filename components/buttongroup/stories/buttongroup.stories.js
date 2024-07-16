@@ -1,5 +1,6 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ButtonGroup } from "./template";
 
 /**
  * A grouping of buttons.
@@ -34,34 +35,41 @@ export default {
 		size: "m",
 		iconName: undefined,
 		vertical: false,
-		items: [
-			{
-				variant: "secondary",
-				treatment: "outline",
-				label: "No, thanks",
-			},
-			{
-				variant: "secondary",
-				treatment: "outline",
-				label: "Remind me later",
-
-			},
-			{
-				variant: "primary",
-				treatment: "fill",
-				label: "Rate now",
-			},
-		],
 	},
 	parameters: {
 		componentVersion: version,
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default = ButtonGroup.bind({});
+Default.args = {
+	items: [
+		{
+			variant: "secondary",
+			treatment: "outline",
+			label: "No, thanks",
+		},
+		{
+			variant: "secondary",
+			treatment: "outline",
+			label: "Remind me later",
 
-export const Vertical = Template.bind({});
-Vertical.args = {
-	vertical: true,
+		},
+		{
+			variant: "primary",
+			treatment: "fill",
+			label: "Rate now",
+		},
+	],
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

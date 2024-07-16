@@ -1,6 +1,8 @@
 import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { CalendarGroup, Template } from "./template";
 
 const months = [...Array(12).keys()].map((key) =>
 	new Date(0, key).toLocaleString("en", { month: "long" })
@@ -18,7 +20,7 @@ export default {
 			type: { name: "string", required: true },
 			table: {
 				type: { summary: "number" },
-				category: "Component",
+				category: "Content",
 			},
 			options: months,
 			control: "select",
@@ -30,7 +32,7 @@ export default {
 			type: { name: "number" },
 			table: {
 				type: { summary: "datetime" },
-				category: "Component",
+				category: "Content",
 			},
 			control: "date",
 			if: { arg: "isDisabled", truthy: false },
@@ -41,7 +43,7 @@ export default {
 			type: { name: "number" },
 			table: {
 				type: { summary: "datetime" },
-				category: "Component",
+				category: "Content",
 			},
 			control: "date",
 		},
@@ -50,19 +52,11 @@ export default {
 			type: { name: "number", required: true },
 			table: {
 				type: { summary: "number" },
-				category: "Component",
+				category: "Content",
 			},
 			control: "number",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		padded: {
 			name: "Padded",
 			type: { name: "boolean" },
@@ -84,7 +78,7 @@ export default {
 		buttonSize: {
 			table: { disable: true },
 		},
-		isFocused: { table: { disable: true }, },
+		isFocused,
 	},
 	args: {
 		rootClass: "spectrum-Calendar",
@@ -93,9 +87,6 @@ export default {
 		isFocused: false,
 		useDOWAbbrev: false,
 		buttonSize: ActionButtonStories.args.size,
-		month: months[6],
-		selectedDay: new Date(2023, 6, 3),
-		year: 2023,
 	},
 	parameters: {
 		actions: {
@@ -107,39 +98,34 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default = CalendarGroup.bind({});
+Default.args = {
+	month: months[6],
+	selectedDay: new Date(2023, 6, 3),
+	year: 2023,
+};
+
+// ********* DOCS ONLY ********* //
+export const AbbreviatedWeekdays = Template.bind({});
+AbbreviatedWeekdays.args = {
+	useDOWAbbrev: true,
+};
+AbbreviatedWeekdays.tags = ["autodocs", "!dev"];
+AbbreviatedWeekdays.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const RangeSelection = Template.bind({});
 RangeSelection.args = {
+	month: months[6],
+	selectedDay: new Date(2023, 6, 3),
+	year: 2023,
 	lastDay: new Date(2023, 6, 7),
 	useDOWAbbrev: true,
 	padded: true,
 };
-
-export const TodayHighlighted = Template.bind({});
-TodayHighlighted.args = {
-	month: undefined,
-	selectedDay: undefined,
-	year: undefined,
-};
-
-export const Disabled = Template.bind({});
-Disabled.tags = ["vrt-only"];
-Disabled.args = {
-	isDisabled: true
-};
-
-
-export const AbbreviatedWeekdays = Template.bind({});
-AbbreviatedWeekdays.args = {
-	month: undefined,
-	selectedDay: undefined,
-	year: undefined,
-	useDOWAbbrev: true,
-};
-AbbreviatedWeekdays.tags = ["docs-only"];
-AbbreviatedWeekdays.parameters = {
+RangeSelection.tags = ["autodocs", "!dev"];
+RangeSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
@@ -150,7 +136,28 @@ Focused.args = {
 	year: undefined,
 	isFocused: true,
 };
-Focused.tags = ["docs-only"];
+Focused.tags = ["autodocs", "!dev"];
 Focused.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+export const Disabled = Template.bind({});
+Disabled.tags = ["autodocs", "!dev"];
+Disabled.args = {
+	isDisabled: true
+};
+Focused.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

@@ -1,4 +1,5 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -17,7 +18,6 @@ export const Template = ({
 	value,
 	customStyles = {},
 	size = "m",
-	...globals
 }, context) => html`
 		<div
 			class=${classMap({
@@ -39,21 +39,122 @@ export const Template = ({
 			aria-valuemax="100"
 		>
 			${FieldLabel({
-				...globals,
 				size,
 				label,
-				alignment: "",
 				customClasses: [`${rootClass}-label`],
 			}, context)}
 			${FieldLabel({
-				...globals,
 				size,
 				label: indeterminate ? "" : `${value}%`,
-				alignment: "",
 				customClasses: [`${rootClass}-percentage`],
 			}, context)}
 			<div class="${rootClass}-track">
 				<div class="${rootClass}-fill" style="width: ${value}%;"></div>
 			</div>
 		</div>
-	`;
+`;
+
+const Sizes = (args, context) => html`
+  ${["s", "m", "l", "xl"].map((size) => html`
+    <div>
+			${Typography({
+				semantics: "heading",
+				size: "xs",
+				content: [
+					{
+						xxs: "Extra-extra-small",
+						xs: "Extra-small",
+						s: "Small",
+						m: "Medium",
+						l: "Large",
+						xl: "Extra-large",
+						xxl: "Extra-extra-large",
+					}[size],
+				],
+				customClasses: ["chromatic-ignore"],
+			}, context)}
+			${Template({ ...args, size }, context)}
+		</div>
+  `)}
+`;
+
+export const ProgressBarGroup = (args, context) => html`
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : "contents"
+	})}>
+		${Template(args, context)}
+	</div>
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "flex" : "none",
+		"flex-direction": "column",
+		"align-items": "flex-start",
+		"gap": "32px",
+	})}>
+		<div style=${styleMap({
+			"display": window.isChromatic() ? "flex" : "none",
+			"flex-direction": "column",
+			"align-items": "flex-start",
+			"gap": "32px",
+			"border": "1px solid var(--spectrum-gray-200)",
+			"border-radius": "4px",
+			"padding": "12px",
+		})}>
+			${Template(args, context)}
+			<div>
+				${Typography({
+					semantics: "heading",
+					size: "xs",
+					content: ["Side label"],
+					customClasses: ["chromatic-ignore"],
+				}, context)}
+				${Template({
+					...args,
+					labelPosition: "side",
+				}, context)}
+			</div>
+			<div>
+				${Typography({
+					semantics: "heading",
+					size: "xs",
+					content: ["Custom width"],
+					customClasses: ["chromatic-ignore"],
+				}, context)}
+				${Template({
+					...args,
+					customWidth: "225px",
+				}, context)}
+			</div>
+			<div>
+				${Typography({
+					semantics: "heading",
+					size: "xs",
+					content: ["Indeterminate"],
+					customClasses: ["chromatic-ignore"],
+				}, context)}
+				${Template({
+					...args,
+					indeterminate: "indeterminate",
+				}, context)}
+			</div>
+		</div>
+		<div>
+			${Typography({
+				semantics: "heading",
+				size: "s",
+				content: ["Sizing"],
+				customClasses: ["chromatic-ignore"],
+			}, context)}
+			<div style=${styleMap({
+				"display": window.isChromatic() ? "flex" : "none",
+				"flex-direction": "column",
+				"align-items": "flex-start",
+				"gap": "32px",
+				"border": "1px solid var(--spectrum-gray-200)",
+				"border-radius": "4px",
+				"padding": "12px",
+			})}>
+				${Sizes(args, context)}
+			</div>
+		</div>
+	</div>
+`;

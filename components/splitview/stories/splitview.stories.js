@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { within } from "@storybook/testing-library";
 import { version } from "../package.json";
 import { Template } from "./template";
@@ -68,6 +69,10 @@ export default {
 		rootClass: "spectrum-SplitView",
 		isResizable: false,
 		componentHeight: "200px",
+		orientation: "horizontal",
+		isCollapsible: false,
+		panelLabels: ["Left", "Right"],
+		panelStyles: ["width: 304px;", "flex: 1;"],
 	},
 	parameters: {
 		componentVersion: version,
@@ -75,13 +80,7 @@ export default {
 };
 
 export const Horizontal = Template.bind({});
-Horizontal.args = {
-	orientation: "horizontal",
-	isResizable: false,
-	isCollapsible: false,
-	panelLabels: ["Left", "Right"],
-	panelStyles: ["width: 304px;", "flex: 1;"],
-};
+Horizontal.args = {};
 
 export const HorizontallyResizable = Template.bind({});
 HorizontallyResizable.args = {
@@ -163,4 +162,14 @@ VerticalCollapsedBottom.args = {
 	collapsePosition: "bottom",
 	panelLabels: ["Top", "Bottom"],
 	panelStyles: ["flex: 1;", "height: 0;"],
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = HorizontallyFocused.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

@@ -3,10 +3,10 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -26,10 +26,9 @@ export const Template = ({
 	isKeyboardFocused = false,
 	isLoading = false,
 	selectedDay,
-	...globals
-}, context) => {
-	const [, updateArgs] = useArgs();
-	const lang = window.__lang;
+} = {}, context = {}) => {
+	const { globals = {}, updateArgs } = context;
+	const lang = globals.lang ?? "en-US";
 
 	// If selectedDay is a string, convert it to a Date object
 	if (typeof selectedDay === "string" && selectedDay.length > 0) {
@@ -37,15 +36,13 @@ export const Template = ({
 	}
 
 	return html`
-		${showFieldLabel ?
+		${when(showFieldLabel, () =>
 			FieldLabel({
-				...globals,
 				size,
 				label: fieldLabelText,
 				customStyles: { "max-inline-size": "100px"},
 				alignment: fieldLabelPosition === "left" && "left",
-			}, context) : null
-		}
+			}, context))}
 		<div
 			class=${classMap({
 				[rootClass]: true,
@@ -64,7 +61,6 @@ export const Template = ({
 		>
 			${[
 				TextField({
-					...globals,
 					size,
 					isQuiet,
 					isDisabled,
@@ -80,15 +76,14 @@ export const Template = ({
 					customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 					placeholder: "Type here this text should truncate",
 					name: "field",
-					value: globals.selectedDay
-						? new Date(globals.selectedDay).toLocaleDateString(lang)
+					value: selectedDay
+						? new Date(selectedDay).toLocaleDateString(lang)
 						: undefined,
 					onclick: function () {
 						if (!isOpen) updateArgs({ isOpen: true });
 					},
 				}, context),
 				PickerButton({
-					...globals,
 					customClasses: [
 						`${rootClass}-button`,
 						... isInvalid ? ["is-invalid"] : [],
@@ -107,7 +102,6 @@ export const Template = ({
 					},
 				}, context),
 				Popover({
-					...globals,
 					isOpen: isOpen && !isDisabled,
 					withTip: false,
 					position: "bottom",
@@ -122,7 +116,6 @@ export const Template = ({
 						: {},
 					content: [
 						Menu({
-							...globals,
 							size,
 							items: [
 								{

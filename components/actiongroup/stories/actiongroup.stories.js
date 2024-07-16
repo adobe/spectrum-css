@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
-
+import { ActionGroups } from "./template.js";
 /**
  * The action group component is a collection of action buttons.
  */
@@ -71,55 +71,32 @@ export default {
 	},
 };
 
-const items = [
-	{
-		iconName: "Edit",
-		label: "Edit",
-	},
-	{
-		iconName: "Copy",
-		label: "Copy",
-	},
-	{
-		iconName: "Delete",
-		label: "Delete",
-		isSelected: true,
-	},
-];
-
-export const Default = Template.bind({});
+export const Default = ActionGroups.bind({});
 Default.args = {
-	content: items
+	content: [
+		{
+			iconName: "Edit",
+			label: "Edit",
+		},
+		{
+			iconName: "Copy",
+			label: "Copy",
+		},
+		{
+			iconName: "Delete",
+			label: "Delete",
+			isSelected: true,
+		},
+	],
 };
 
-
-export const Compact = Template.bind({});
-Compact.args = {
-	compact: true,
-	content: items
-};
-
-export const Vertical = Template.bind({});
-Vertical.args = {
-	vertical: true,
-	content: items
-};
-
-export const VerticalCompact = Template.bind({});
-VerticalCompact.args = {
-	vertical: true,
-	compact: true,
-	content: items
-};
-
-export const Justified = Template.bind({});
-Justified.args = {
-	justified: true,
-	content: items
-};
-
-export const Quiet = Template.bind({});
-Quiet.args = {
-	areQuiet: true,
-	content: items
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

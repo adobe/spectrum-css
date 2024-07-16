@@ -1,3 +1,5 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -17,16 +19,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isFocused: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-				disable: true,
-			},
-			control: "boolean",
-		},
+		isFocused,
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -79,6 +72,16 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
 export const ReadOnly = Template.bind({});
 ReadOnly.args = {
 	isReadOnly: true,
@@ -98,10 +101,4 @@ ReadOnlyEmphasized.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
-};
-
-export const Express = Template.bind({});
-Express.tags = ["vrt-only"];
-Express.args = {
-	express: true,
 };

@@ -1,6 +1,6 @@
-import { version } from "../package.json";
-
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { version } from "../package.json";
 import { Template } from "./template";
 
 /**
@@ -72,7 +72,7 @@ export const Default = Template.bind({});
 Default.args = {};
 
 export const Start = Template.bind({});
-Start.tags = ["docs-only"];
+Start.tags = ["autodocs", "!dev"];
 Start.args = {
 	position: "left"
 };
@@ -81,7 +81,7 @@ Start.parameters = {
 };
 
 export const End = Template.bind({});
-End.tags = ["docs-only"];
+End.tags = ["autodocs", "!dev"];
 End.args = {
 	position: "right"
 };
@@ -99,8 +99,18 @@ Disabled.args = {
 	isDisabled: true
 };
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
 export const Stacked = Template.bind({});
-Stacked.tags = ["docs-only"];
+Stacked.tags = ["autodocs", "!dev"];
 Stacked.args = {
 	isStacked: true,
 };

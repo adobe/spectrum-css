@@ -1,6 +1,8 @@
-import { html } from "lit";
+import { Default as Link } from "@spectrum-css/link/stories/link.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Default as Typography } from "@spectrum-css/typography/stories/typography.stories.js";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { WellGroup } from "./template";
 
 /**
  * A well is a content container that displays non-editable content separate from other content on the screen. Often this is used to display preformatted text, such as code/markup examples on a documentation page.
@@ -22,13 +24,21 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = WellGroup.bind({});
 Default.args = {
 	content: [
-		() => html`
-			<em>Well done is better than well said.</em><br />
-			<strong>Benjamin Franklin</strong>
-			<br /><br />Well said Ben!
-		`
+		() => Typography(Typography.args),
+		() => Link(Link.args),
 	],
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

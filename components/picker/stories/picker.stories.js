@@ -1,8 +1,9 @@
+import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isInvalid, isOpen } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-
-import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { Template } from "./template";
 
 /**
@@ -69,15 +70,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isOpen: {
-			name: "Open",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isOpen,
 		isKeyboardFocused: {
 			name: "Keyboard focused",
 			type: { name: "boolean" },
@@ -105,15 +98,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isInvalid: {
-			name: "Invalid input",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
 		content: { table: { disable: true } },
 	},
 	args: {
@@ -140,10 +125,13 @@ export default {
 		},
 		componentVersion: version,
 	},
+	decorators: [
+		// Add padding for VRT so drop shadows are not cut off.
+		(story) => window.isChromatic() ? html`<div style="padding: 32px; min-height: 400px;">${story()}</div>` : story(),
+	],
 };
 
-
-const ChromaticPickerGroup = (args) => html`
+const Variants = (args) => html`
 	<div style=${styleMap({
 		"display": window.isChromatic() ? "grid" : "none",
 		"gap": "20px",
@@ -243,7 +231,7 @@ const ChromaticPickerGroup = (args) => html`
 	</div>
 `;
 
-export const Default = ChromaticPickerGroup.bind({});
+export const Default = Variants.bind({});
 Default.args = {};
 
 export const Open = Template.bind({});
@@ -251,16 +239,13 @@ Open.args = {
 	isOpen: true,
 };
 
-export const Express = ChromaticPickerGroup.bind({});
-Express.tags = ["vrt-only"];
-Express.args = {
-	express: true,
-};
-
-export const WithForcedColors = ChromaticPickerGroup.bind({});
-WithForcedColors.tags = ["vrt-only"];
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
-	// Sets the forced-colors media feature for a specific story.
-	chromatic: { forcedColors: "active" },
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
 WithForcedColors.args = {};

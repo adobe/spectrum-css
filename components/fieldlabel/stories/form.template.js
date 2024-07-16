@@ -1,11 +1,11 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
-import { Template as Stepper } from "@spectrum-css/stepper/stories/template.js";
-import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -15,6 +15,7 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	id,
+	items = [],
 }, context) => html`
     <form
         class=${classMap({
@@ -23,61 +24,65 @@ export const Template = ({
             ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
         })}
         id=${ifDefined(id)}
-        style=${ifDefined(styleMap(customStyles))}
+        style=${styleMap(customStyles)}
     >
-        <div class="spectrum-Form-item">
-            ${FieldLabel({
-                label: "Company title",
-                forInput: "form-example-company",
-                alignment: labelsAbove ? undefined : "left",
-            }, context)}
-            <div class="spectrum-Form-itemField">
-                ${TextField({
-                    multiline: true,
-                    name: "field",
-                    id: "form-example-company",
-                }, context)}
-            </div>
-        </div>
-        <div class="spectrum-Form-item">
-            ${FieldLabel({
-                label: "Email address",
-                forInput: "form-example-email",
-                alignment: labelsAbove ? undefined : "left",
-            }, context)}
-            <div class="spectrum-Form-itemField">
-                ${TextField({
-                    name: "email",
-                    type: "email",
-                    id: "form-example-email",
-                }, context)}
-            </div>
-        </div>
-        <div class="spectrum-Form-item">
-            ${FieldLabel({
-                label: "Country",
-                forInput: "form-example-country",
-                alignment: labelsAbove ? undefined : "left",
-            }, context)}
-            <div class="spectrum-Form-itemField">
-                ${Picker({
-                    placeholder: "Select a country",
-                    name: "country",
-                    id: "form-example-country",
-                }, context)}
-            </div>
-        </div>
-        <div class="spectrum-Form-item">
-            ${FieldLabel({
-                label: "Amount",
-                forInput: "form-example-amount-input",
-                alignment: labelsAbove ? undefined : "left",
-            }, context)}
-            <div class="spectrum-Form-itemField">
-                ${Stepper({
-                    id: "form-example-amount"
-                }, context)}
-            </div>
-        </div>
+        ${repeat(items, (item) => item.id, ({ label, content, ...item }) => {
+            if (!content) return;
+
+            return html`
+                <div class=${classMap({
+                    [`${rootClass}-item`]: true,
+                })}>
+                    ${when(label, () => FieldLabel({
+                        label,
+                        forInput: item.id,
+                        alignment: labelsAbove ? undefined : "left",
+                    }, context))}
+                    <div class=${classMap({
+                        [`${rootClass}-itemField`]: true,
+                    })}>
+                        ${typeof content === "function" ? content({ ...item }, context) : content}
+                    </div>
+                </div>
+            `;
+        })}
     </form>
+`;
+
+export const FormGroup = (args, context) => html`
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : "contents"
+	})}>
+		${Template(args, context)}
+	</div>
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "flex" : "none",
+		"flex-direction": "column",
+		"align-items": "flex-start",
+		"gap": "8px",
+	})}>
+		${[{}, {
+            heading: "Labels above",
+            labelsAbove: true,
+        }].map(({ heading, ...item }) => html`
+			<div>
+				${Typography({
+					semantics: "heading",
+					size: "s",
+					content: [heading],
+				}, context)}
+                <div style=${styleMap({
+                    "border": "1px solid var(--spectrum-gray-200)",
+                    "border-radius": "4px",
+                    "padding": "12px",
+                    "margin-block-end": "32px",
+                })}>
+                    ${Template({
+                        ...args,
+                        ...item,
+                    }, context)}
+                </div>
+			</div>
+		`)}
+	</div>
 `;

@@ -4,6 +4,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 import { when } from "lit/directives/when.js";
+
 import "../index.css";
 
 /**
@@ -104,18 +105,16 @@ export const Template = ({
 	customClasses = [],
 	icons,
 	useRef = false,
-	...globals
-} = {}, context) => {
-	let {
-		scale = "medium",
-		workflowIcons,
-		uiIcons,
-		uiIconSizes,
-	} = globals;
+	workflowIcons,
+	uiIcons,
+	uiIconSizes,
+} = {}, context = {}) => {
+	const { globals = {}, loaded = {} } = context;
+	const scale = globals.scale ?? "medium";
 
 	if (!workflowIcons || !uiIcons || !uiIconSizes) {
 		const details = fetchIconDetails({
-			icons: context?.loaded?.icons,
+			icons: loaded.icons,
 			workflowIcons,
 			uiIcons,
 			uiIconSizes

@@ -1,10 +1,11 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize, lowerCase } from "lodash-es";
+
 import "../index.css";
 
 /**
@@ -12,6 +13,34 @@ import "../index.css";
 */
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
+/**
+ * @typedef API
+ * @property {string} [rootClass="spectrum-ActionButton"]
+ * @property {string} [size="m"]
+ * @property {string|undefined} [iconName]
+ * @property {string|undefined} [iconSet]
+ * @property {string|undefined} [label]
+ * @property {boolean} [isQuiet=false]
+ * @property {boolean} [isSelected=false]
+ * @property {boolean} [isEmphasized=false]
+ * @property {boolean} [isHovered=false]
+ * @property {boolean} [isFocused=false]
+ * @property {boolean} [isActive=false]
+ * @property {boolean} [isDisabled=false]
+ * @property {"false" | "true" | "menu" | "listbox" | "tree" | "grid" | "dialog"} [hasPopup="false"]
+ * @see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup
+ * @property {string} [popupId]
+ * @property {boolean} [hideLabel=false]
+ * @property {"white"|"black"|undefined} [staticColor]
+ * @property {string[]} [customClasses=[]]
+ */
+
+/**
+ *
+ * @param {API} args
+ * @param {import('@storybook/types').StoryContext<import('@storybook/web-components').WebComponentsRenderer, API>} context
+ * @returns {import('lit').TemplateResult}
+ */
 export const Template = ({
 	rootClass = "spectrum-ActionButton",
 	size = "m",
@@ -25,7 +54,8 @@ export const Template = ({
 	isFocused = false,
 	isActive = false,
 	isDisabled = false,
-	hasPopup = false,
+	hasPopup = "false",
+	popupId,
 	hideLabel = false,
 	staticColor,
 	customClasses = [],
@@ -34,13 +64,14 @@ export const Template = ({
 	onclick,
 	id,
 	testId,
-	role,
-	...globals
-}) => {
+	role = "button",
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 	return html`
 		<button
 			aria-label=${ifDefined(label)}
-			aria-haspopup=${hasPopup ? "true" : "false"}
+			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
+			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
 			aria-pressed=${isSelected ? "true" : "false"}
 			class=${classMap({
 				[rootClass]: true,
@@ -60,27 +91,31 @@ export const Template = ({
 			id=${ifDefined(id)}
 			data-testid=${ifDefined(testId)}
 			role=${ifDefined(role)}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
 			@click=${onclick}
+			@focusin=${() => {
+				updateArgs({ isFocused: true });
+			}}
+			@focusout=${() => {
+				updateArgs({ isFocused: false });
+			}}
 		>
-			${when(hasPopup, () =>
+			${when(hasPopup && hasPopup !== "false", () =>
 				Icon({
-					...globals,
 					size,
 					iconName: "CornerTriangle",
-					setName: "ui",
+					setName: "workflow",
 					customClasses: [`${rootClass}-hold`],
-				})
+				}, context)
 			)}
 			${when(iconName, () =>
 				Icon({
-					...globals,
 					size,
 					iconName,
 					setName: iconSet,
 					customClasses: [`${rootClass}-icon`, ...customIconClasses],
-				})
+				}, context)
 			)}
 			${when(
 				label && !hideLabel,
@@ -90,245 +125,79 @@ export const Template = ({
 	`;
 };
 
-const ActionButtons = (args) => html` <div
-	style=${styleMap({
-		"display": "flex",
-		"gap": "16px",
-	})}
-	id="render-root"
->
-	${Template({
-		...args,
-		label: "More",
-		iconName: undefined,
-	})}
-	${Template({
-		...args,
-		label: "More",
-	})}
-	${Template(args)}
-	${Template({
-		...args,
-		hasPopup: true,
-	})}
-	<!-- Save truncation for VRTs -->
-	${Template({
-		...args,
-		label: "Truncate this long content",
-		iconName: undefined,
-		customStyles: {
-			display: window.isChromatic() ? undefined : "none",
-			maxInlineSize: "100px"
+export const ActionButtons = (args, context) => {
+	return html`
+		${Template(args, context)}
+		${Template({
+			...args,
+			iconName: undefined,
+		}, context)}
+		${Template({
+			...args,
+			hideLabel: true,
+		}, context)}
+		${Template({
+			...args,
+			hasPopup: "menu",
+			label: "Has pop-up",
+			iconName: undefined,
+		}, context)}
+	`;
+};
+
+const Truncation = (args, context) => {
+	return html`
+		${Template(args, context)}
+		${Template({
+			...args,
+			iconName: undefined,
+		}, context)}
+	`;
+};
+
+export const ActionButtonGroup = Variants({
+	Template: ActionButtons,
+	stateDirection: "column",
+	testData: [
+		{
+			testHeading: "Standard"
 		},
-	})}
-	${Template({
-		...args,
-		label: "Truncate this long content",
-		customStyles: {
-			display: window.isChromatic() ? undefined : "none",
-			maxInlineSize: "100px"
+		{
+			testHeading: "Emphasized",
+			isEmphasized: true,
 		},
-	})}
-</div>`;
-
-const States = (args) =>
-	html` <div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Default"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons(args)}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Selected"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons({
-				...args,
-				isSelected: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Focused"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons({
-				...args,
-				isFocused: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Hovered"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons({
-				...args,
-				isHovered: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Active"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons({
-				...args,
-				isActive: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Disabled"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons({
-				...args,
-				isDisabled: true,
-			})}
-		</div>
-		<div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: ["Disabled + selected"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons({
-				...args,
-				isSelected: true,
-				isDisabled: true,
-			})}
-		</div>`;
-
-const Sizes = (args) =>
-	html` ${["s", "m", "l", "xl"].map((size) => {
-		return html` <div>
-			${Typography({
-				semantics: "detail",
-				size: "s",
-				content: [
-					{
-						xxs: "Extra-extra-small",
-						xs: "Extra-small",
-						s: "Small",
-						m: "Medium",
-						l: "Large",
-						xl: "Extra-large",
-						xxl: "Extra-extra-large",
-					}[size],
-				],
-				customClasses: ["chromatic-ignore"],
-			})}
-			${ActionButtons({
-				...args,
-				size,
-			})}
-		</div>`;
-	})}`;
-
-export const Variants = (args) => html`
-	<style>
-		.spectrum-Detail { display: inline-block; }
-		.spectrum-Typography > div {
-			border: 1px solid var(--spectrum-gray-200);
-			border-radius: 4px;
-			padding: 0 1em 1em;
-			/* Why seafoam? Because it separates it from the component styles. */
-			--mod-detail-font-color: var(--spectrum-seafoam-900);
-		}
-	</style>
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
-		"flex-direction": "column",
-		"align-items": "flex-start",
-		"gap": "16px",
-		"--mod-detail-margin-end": "4.8px",
-	})}>
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Standard"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			<div style=${styleMap({
-				"display": "flex",
-				"flex-direction": "column",
-				"gap": "4.8px",
-			})}>
-				${States(args)}
-			</div>
-		</div>
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Emphasized"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			<div style=${styleMap({
-				"display": "flex",
-				"flex-direction": "column",
-				"gap": "4.8px",
-			})}>
-				${States({
-					...args,
-					isEmphasized: true,
-				})}
-			</div>
-		</div>
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Quiet"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			<div style=${styleMap({
-				"display": "flex",
-				"flex-direction": "column",
-				"gap": "4.8px",
-			})}>
-				${States({
-					...args,
-					isQuiet: true,
-				})}
-			</div>
-		</div>
-		<div class="spectrum-Typography">
-			${Typography({
-				semantics: "detail",
-				size: "l",
-				content: ["Sizing"],
-				customClasses: ["chromatic-ignore"],
-			})}
-			<div style=${styleMap({
-				"display": "flex",
-				"flex-direction": "column",
-				"gap": "4.8px",
-			})}>
-				${Sizes(args)}
-			</div>
-		</div>
-	</div>
-	<div style=${styleMap({
-		display: window.isChromatic() ? "none" : undefined,
-	})}>
-		${ActionButtons(args)}
-	</div>
-`;
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		},
+		{
+			Template: Truncation,
+			testHeading: "Truncation",
+			label: "Truncate this long content",
+			customStyles: {
+				maxInlineSize: "100px"
+			},
+			withStates: false,
+		},
+	],
+	stateData: [{
+		testHeading: "Disabled",
+		isDisabled: true,
+	}, {
+		testHeading: "Selected",
+		isSelected: true,
+	}, {
+		testHeading: "Focused",
+		isFocused: true,
+	}, {
+		testHeading: "Hovered",
+		isHovered: true,
+	}, {
+		testHeading: "Active",
+		isActive: true,
+	}, {
+		testHeading: "Disabled + selected",
+		isDisabled: true,
+		isSelected: true,
+	}],
+});

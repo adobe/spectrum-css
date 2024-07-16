@@ -1,4 +1,5 @@
-import { Template } from "./template";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { ProgressBarGroup } from "./template";
 
 /**
  * The progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.
@@ -63,28 +64,37 @@ export default {
 		rootClass: "spectrum-ProgressBar",
 		size: "m",
 		labelPosition: "top",
-		label: "Loading",
-		value: 50,
+		value: 0,
+		label: "",
 	},
 };
 
-export const Default = Template.bind({});
-Default.args = {};
-
-export const CustomWidth = Template.bind({});
-CustomWidth.args = {
-	customWidth: "500px",
+export const Default = ProgressBarGroup.bind({});
+Default.args = {
+	label: "Loading",
+	value: 50,
 };
 
-export const Indeterminate = Template.bind({});
-Indeterminate.args = {
-	indeterminate: "indeterminate",
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
 
-export const StaticWhite = Template.bind({});
+export const StaticWhite = Default.bind({});
+StaticWhite.tags = ["!autodocs", "!dev", "test"];
 StaticWhite.args = {
-	/* Force dark mode to make typography readable */
-	color: "dark",
 	staticColor: "white",
-	label: "Loading your fonts, images, and icons"
+	label: "Loading your fonts, images, and icons",
+	value: 50,
+};
+StaticWhite.parameters = {
+	chromatic: {
+		modes: disableDefaultModes
+	},
 };

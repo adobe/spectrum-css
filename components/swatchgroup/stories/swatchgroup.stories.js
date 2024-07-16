@@ -1,7 +1,7 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
 import { version } from "../package.json";
 import { Template } from "./template";
-
-import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
 
 /**
  * The swatch group component is a collection of swatches.
@@ -70,3 +70,13 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};

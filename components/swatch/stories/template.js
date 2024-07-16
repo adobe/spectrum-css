@@ -1,6 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -19,9 +18,8 @@ export const Template = ({
 	swatchColor,
 	customStyles = {},
 	id,
-	...globals
-}, context) => {
-	const [, updateArgs] = useArgs();
+} = {}, context = {}) => {
+	const { updateArgs } = context;
 
 	return html`
 		<div
@@ -57,7 +55,6 @@ export const Template = ({
 				customClasses: [`${rootClass}-fill`],
 				content: [
 					...(isDisabled ? [Icon({
-						...globals,
 						customClasses: [`${rootClass}-disabledIcon`],
 						setName: "workflow",
 						iconName: "Cancel",

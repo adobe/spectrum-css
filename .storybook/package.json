@@ -12,10 +12,16 @@
 	},
 	"exports": {
 		".": "./preview.js",
-		"./decorator": "./decorators/index.js",
+		"./decorators": "./decorators/index.js",
+		"./decorators/*.js": "./decorators/*.js",
 		"./types": "./types/index.js",
+		"./types/*.js": "./types/*.js",
 		"./blocks": "./blocks/index.js",
 		"./main": "./main.js",
+		"./modes": "./modes/index.js",
+		"./modes/*.js": "./modes/*.js",
+		"./loaders": "./loaders/index.js",
+		"./loaders/*.js": "./loaders/*.js",
 		"./manager": "./manager.js",
 		"./preview": "./preview.js",
 		"./package.json": "./package.json",
@@ -24,6 +30,7 @@
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
 		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-css/typography": "workspace:^",
 		"@spectrum-css/ui-icons": "workspace:^"
 	},
 	"devDependencies": {

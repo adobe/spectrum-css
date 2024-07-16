@@ -82,8 +82,7 @@ const Template = ({
 	content = [],
 	id,
 	customClasses = [],
-	...globals
-}) => {
+} = {}, context = {}) => {
 	if (!content.length) {
 		console.warn("QuickActions: requires content be passed in to render.");
 		return html``;
@@ -135,7 +134,7 @@ const Template = ({
 		>
 			${content.map((c) => {
 				if ((typeof c === "object" && c.iconName) || c.label) {
-					return ActionButton({ ...globals, ...c, isQuiet: true });
+					return ActionButton({ ...c, isQuiet: true }, context);
 				} else return c;
 			})}
 		</div>

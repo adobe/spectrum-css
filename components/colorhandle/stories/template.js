@@ -14,40 +14,31 @@ export const Template = ({
 	customStyles = {
 		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
 	},
-	...globals
-}, context) => {
-	const withColorLoupeStyles = () => isWithColorLoupe ? {
-		"position": "absolute",
-		"inset-block": "75%",
-		"inset-inline": "50%"
-	} : null;
-
-	return (
-		OpacityCheckerboard({
-			...globals,
-			customClasses: [
-				`${rootClass}`,
-				...!isDisabled && isFocused ? ["is-focused"] : [],
-				...isDisabled ? ["is-disabled"] : [],
-				...customClasses,
-			],
-			content: [html `
-				<div class="${rootClass}-inner"></div>
-				${when(isWithColorLoupe, () => html`
-					${ColorLoupe({
-						...globals,
-						isOpen: true,
-						customStyles: {
-							"inset-inline-start": "unset",
-							"inset-block-start": "unset",
-						}
-					})}
-				`)}
-			`],
-			customStyles: {
-				...customStyles,
-				...withColorLoupeStyles()
-			},
-		}, context)
-	);
+} = {}, context = {}) => {
+	return OpacityCheckerboard({
+		customClasses: [
+			`${rootClass}`,
+			...!isDisabled && isFocused ? ["is-focused"] : [],
+			...isDisabled ? ["is-disabled"] : [],
+			...customClasses,
+		],
+		content: [html `
+			<div class="${rootClass}-inner"></div>
+			${when(isWithColorLoupe, () => html`
+				${ColorLoupe({
+					isOpen: true,
+					customStyles: {
+						"inset-inline-start": "unset",
+						"inset-block-start": "unset",
+					}
+				})}
+			`)}
+		`],
+		customStyles: {
+			...customStyles,
+			"position": isWithColorLoupe ? "absolute" : undefined,
+			"inset-block": isWithColorLoupe ? "75%" : undefined,
+			"inset-inline": isWithColorLoupe ? "50%" : undefined,
+		},
+	}, context);
 };

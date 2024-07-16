@@ -1,4 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
 import { MenuItemWithVariants, MenuWithVariants, Template } from "./template";
@@ -438,10 +439,11 @@ MenuItem.args = {
 	singleItemValue: "Value",
 };
 
+// ********* DOCS ONLY ********* //
 // story used in Picker component
 export const WithDividers = Template.bind({});
 WithDividers.storyName = "Standard with dividers";
-WithDividers.tags = ["docs-only"];
+WithDividers.tags = ["autodocs", "!dev"];
 WithDividers.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -456,4 +458,14 @@ WithDividers.args = {
 		{ label: "Make work path", isDisabled: true },
 	],
 	hasDividers: true,
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = MenuItemWithVariants.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

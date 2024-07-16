@@ -1,3 +1,4 @@
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -50,6 +51,23 @@ export default {
 		isSmall: false,
 		isInteractive: false,
 		withTooltip: false,
+		items: [
+			{
+				label: "Step 1",
+				isComplete: true,
+			},
+			{
+				label: "Step 2",
+				isComplete: true,
+			},
+			{
+				label: "Step 3",
+				isSelected: true,
+			},
+			{
+				label: "Step 4",
+			},
+		],
 	},
 	parameters: {
 		componentVersion: version,
@@ -57,22 +75,14 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	items: [
-		{
-			label: "Step 1",
-			isComplete: true,
-		},
-		{
-			label: "Step 2",
-			isComplete: true,
-		},
-		{
-			label: "Step 3",
-			isSelected: true,
-		},
-		{
-			label: "Step 4",
-		},
-	],
+Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

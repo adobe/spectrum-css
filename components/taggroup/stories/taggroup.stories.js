@@ -1,7 +1,7 @@
-import { version } from "../package.json";
-import { Template } from "./template";
-
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
+import { version } from "../package.json";
+import { TagGroups, Template } from "./template";
 
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
@@ -40,19 +40,11 @@ export default {
 			},
 			control: "boolean",
 		},
-		customStyles: {
-			description: "Custom styles for testing the story, applied to the parent element.",
-			table: {
-				type: { summary: "object" },
-				category: "Storybook Only",
-			},
-			if: { arg: "customStyles" }
-		}
 	},
 	args: {
 		rootClass: "spectrum-TagGroup",
-		ariaLabel: "Tags",
 		isRemovable: false,
+		size: "m",
 	},
 	parameters: {
 		actions: {
@@ -64,27 +56,9 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = TagGroups.bind({});
 Default.args = {
-	size: "l",
-	items: [
-		{
-			label: "Tag 1",
-		},
-		{
-			label: "Tag 1",
-		},
-		{
-			label: "Tag 3",
-		},
-	],
-};
-
-export const Removable = Template.bind({});
-Removable.args = {
-	size: "l",
-	isRemovable: true,
-	isEmphasized: true,
+	ariaLabel: "Tags",
 	items: [
 		{
 			label: "Tag 1",
@@ -98,17 +72,18 @@ Removable.args = {
 	],
 };
 
+// ********* DOCS ONLY ********* //
+/**
+ * When horizontal space is limited in a tag group, the individual tags wrap to form another line.
+ */
 export const OverflowItems = Template.bind({});
+OverflowItems.tags = ["autodocs", "!dev"];
 OverflowItems.parameters = {
-	docs: {
-		description: {
-			story:
-				"When horizontal space is limited in a tag group, the individual tags wrap to form another line.",
-		},
+	chromatic: {
+		disableSnapshot: true,
 	},
 };
 OverflowItems.args = {
-	size: "m",
 	isRemovable: true,
 	isEmphasized: false,
 	customStyles: {"max-width": "300px"},
@@ -135,4 +110,15 @@ OverflowItems.args = {
 			label: "Tag 7",
 		},
 	],
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };

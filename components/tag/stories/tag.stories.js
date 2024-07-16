@@ -1,7 +1,8 @@
+import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isInvalid, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
-
-import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 
 /**
  * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.
@@ -72,15 +73,7 @@ export default {
 			control: "boolean",
 			if: { arg: "isInvalid", truthy: false },
 		},
-		isInvalid: {
-			name: "Invalid",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isInvalid,
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -90,15 +83,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isSelected: {
-			name: "Selected",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isSelected,
 		hasClearButton: {
 			name: "Clear button",
 			description: "True if a button is present to clear the tag.",
@@ -134,6 +119,17 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+// @todo combine variants into one snapshot
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
 
 export const Icon = Template.bind({});
 Icon.args = {

@@ -27,7 +27,6 @@ export const isValid = {
 		category: "State",
 	},
 	control: "boolean",
-	if: { arg: "isInvalid", truthy: false },
 };
 
 export const isInvalid = {
@@ -38,7 +37,6 @@ export const isInvalid = {
 		category: "State",
 	},
 	control: "boolean",
-	if: { arg: "isValid", truthy: false },
 };
 
 export const isFocused = {
