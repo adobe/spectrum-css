@@ -1,12 +1,20 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid } from "@spectrum-css/preview/types";
-import { html } from "lit";
+import {
+	CheckboxGroup,
+	AllVariantsCheckboxGroup,
+} from "./template";
 import { version } from "../package.json";
-import { Template } from "./template";
 
 
 /**
  * Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.
+ * 
+ * ## Usage notes  
+ * 
+ * Checkboxes should not be used on their own. They should always be used within a [Field group](/docs/components-field-group--docs). Invalid checkboxes are indicated with an alert [Help text](/docs/components-help-text--docs) when included in a Field group.  
+ * 
+ * When the label is too long for the horizontal space available, it wraps to form another line.  
  */
 export default {
 	title: "Checkbox",
@@ -97,36 +105,39 @@ export default {
 	},
 };
 
-const CheckboxGroup = (args) => html`
-	<div style="display: flex; flex-direction: column; padding: 16px">
-		${Template({
-			...args,
-			iconName: undefined,
-		})}
-		${Template({
-			...args,
-			isChecked: true,
-		})}
-		${Template({
-			...args,
-			isIndeterminate: true,
-		})}
-			${Template({
-			...args,
-			isDisabled: true,
-		})}
-		${Template({
-			...args,
-			label: "Checkbox with wrapping label text",
-			customStyles: { "max-inline-size": "100px" },
-		})}
-	</div>
-`;
-
 export const Default = CheckboxGroup.bind({});
 Default.args = {
 	id: "default-checkbox",
 };
+Default.tags = ["!autodocs"];
+
+export const DefaultVariants = AllVariantsCheckboxGroup.bind({});
+DefaultVariants.tags = ["autodocs", "!dev"];
+DefaultVariants.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+DefaultVariants.storyName = "Standard";
+
+export const Emphasized = CheckboxGroup.bind({});
+Emphasized.args = {
+	id: "checkbox-emphasized",
+	isEmphasized: true,
+};
+Emphasized.tags = ["!autodocs", "!dev"];
+Emphasized.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const EmphasizedVariants = AllVariantsCheckboxGroup.bind({});
+EmphasizedVariants.args = {
+	id: "checkbox-emphasized",
+	isEmphasized: true,
+};
+EmphasizedVariants.tags = ["autodocs", "!dev"];
+EmphasizedVariants.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+EmphasizedVariants.storyName = "Emphasized";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
