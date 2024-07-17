@@ -207,7 +207,7 @@ const Variants = (args) => html`
 					...args,
 					isOpen: false,
 					withSwitch: true,
-					placeholder: "Select your contry of origin",
+					placeholder: "Select your country of origin",
 					isQuiet: true,
 				})}
 		</div>
@@ -220,7 +220,7 @@ const Variants = (args) => html`
 				isQuiet: true,
 				fieldLabelStyle: {"max-width": "90px"},
 				label: "Enter country, text should wrap",
-				placeholder: "Select your contry of origin"
+				placeholder: "Select your country of origin"
 			})}
 		</div>
 	</div>
