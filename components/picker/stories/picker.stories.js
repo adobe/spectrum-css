@@ -104,8 +104,8 @@ export default {
 	args: {
 		rootClass: "spectrum-Picker",
 		size: "m",
-		label: "Country",
-		placeholder: "Select a country",
+		label: "ทั้งหมด",
+		placeholder: "ทั้งหมด",
 		isQuiet: false,
 		isKeyboardFocused: false,
 		isLoading: false,
