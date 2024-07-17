@@ -49,7 +49,6 @@
 | `--mod-picker-icon-color-hover-open`                   |
 | `--mod-picker-icon-color-key-focus`                    |
 | `--mod-picker-inline-size`                             |
-| `--mod-picker-line-height`                             |
 | `--mod-picker-placeholder-font-style`                  |
 | `--mod-picker-placeholder-font-weight`                 |
 | `--mod-picker-spacing-bottom-to-text`                  |

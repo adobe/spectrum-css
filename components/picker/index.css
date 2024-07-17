@@ -19,7 +19,9 @@
 	--spectrum-picker-font-size: var(--spectrum-font-size-100);
 	--spectrum-picker-font-weight: var(--spectrum-regular-font-weight);
 	--spectrum-picker-placeholder-font-style: var(--spectrum-default-font-style);
-	--spectrum-picker-line-height: var(--spectrum-line-height-100);
+
+	/* set picker line-height to the height of the picker - prevents the cutting off of diacritics in some languages */
+	--spectrum-picker-line-height: var(--spectrum-picker-block-size);
 
 	/* height */
 	--spectrum-picker-block-size: var(--spectrum-component-height-100);
@@ -352,7 +354,9 @@
 	overflow: hidden;
 
 	font-size: var(--mod-picker-font-size, var(--spectrum-picker-font-size));
-	line-height: var(--mod-picker-line-height, var(--spectrum-picker-line-height));
+
+	/* no mod defined to allow for maximum compatibility */
+	line-height: var(--spectrum-picker-line-height);
 	font-weight: var(--mod-picker-font-weight, var(--spectrum-picker-font-weight));
 
 	text-overflow: ellipsis;
