@@ -2,6 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase, upperCase } from "lodash-es";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 import "../index.css";
 
@@ -49,3 +50,27 @@ export const Template = ({
 		role="separator"
 	></div>`;
 };
+
+export const AllDividerSizes = (args, context) => html`
+	${["s", "m", "l"].map((size) => html`
+		<div style="${styleMap({
+			"display": "flex",
+			"flex-direction": "column",
+			"padding": "16px",
+		})}">
+			${Typography({
+				semantics: "heading",
+				size: "s",
+					content: [{
+						s: "Small",
+						m: "Medium (default)",
+						l: "Large",
+					}[size]],
+			})}
+			${Template({
+					...args,
+					size,
+			}, context)}
+		</div>	
+	`)}
+`;
