@@ -71,13 +71,22 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.storyName = "Primary";
 Default.args = {
 	url: "https://www.adobe.com",
 	text: "Learn more about Adobe",
 };
+Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
+/**
+ * The default link style is called "Primary."
+ */
+export const Primary = Default.bind({});
+Primary.args = {
+	...Default.args,
+};
+Primary.tags = ["autodocs", "!dev"];
+
 export const Secondary = Template.bind({});
 Secondary.args = {
 	variant: "secondary",
