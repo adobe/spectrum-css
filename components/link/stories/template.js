@@ -30,3 +30,11 @@ export const Template = ({
 		${text}
 	</a>
 `;
+
+export const TemplateWithFillerText = (args, context) => html`
+	<div>
+		Hello, I'm a
+		${Template({...args, context})}
+		. Nice to meet you!
+	</div>
+`;

@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { Template, TemplateWithFillerText } from "./template";
 
 /**
  * A link allows users to navigate to a different location. They can be presented in-line inside a paragraph or as standalone text.
@@ -73,7 +73,7 @@ export default {
 export const Default = Template.bind({});
 Default.args = {
 	url: "https://www.adobe.com",
-	text: "Learn more about Adobe",
+	text: "Link using spectrum-Link",
 };
 Default.tags = ["!autodocs"];
 
@@ -81,13 +81,13 @@ Default.tags = ["!autodocs"];
 /**
  * The default link style is called "Primary."
  */
-export const Primary = Default.bind({});
+export const Primary = TemplateWithFillerText.bind({});
 Primary.args = {
 	...Default.args,
 };
 Primary.tags = ["autodocs", "!dev"];
 
-export const Secondary = Template.bind({});
+export const Secondary = TemplateWithFillerText.bind({});
 Secondary.args = {
 	variant: "secondary",
 	text: "Link using spectrum-Link--secondary"
@@ -97,7 +97,7 @@ Secondary.parameters = {
 };
 Secondary.tags = ["autodocs", "!dev"];
 
-export const QuietPrimary = Template.bind({});
+export const QuietPrimary = TemplateWithFillerText.bind({});
 QuietPrimary.storyName = "Quiet (Primary)";
 QuietPrimary.args = {
 	isQuiet: true,
@@ -108,7 +108,7 @@ QuietPrimary.parameters = {
 };
 QuietPrimary.tags = ["autodocs", "!dev"];
 
-export const QuietSecondary = Template.bind({});
+export const QuietSecondary = TemplateWithFillerText.bind({});
 QuietSecondary.storyName = "Quiet (Secondary)";
 QuietSecondary.args = {
 	isQuiet: true,
