@@ -25,3 +25,21 @@ export const Template = ({
 		}))}
 	></div>
 `;
+
+export const DropIndicatorGroup = (args) => html`
+	<div style="
+		display: flex;
+		gap: 16px;
+		align-items: center;
+		justify-content: space-around;"
+	>
+		${Template({
+			...args,
+			direction: "vertical",
+		})}
+		${Template({
+			...args,
+			direction: "horizontal",
+		})}
+	</div>
+`;
