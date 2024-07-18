@@ -89,9 +89,11 @@ const Variants = (args, context) => {
 	`;
 };
 
+/**
+ * The default inline alert is also considered "neutral."
+ */
 export const Default = Variants.bind({});
 Default.args = {};
-Default.storyName = "Default (neutral)";
 
 // ********* DOCS ONLY ********* //
 /**
