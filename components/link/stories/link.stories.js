@@ -67,6 +67,11 @@ export default {
 			handles: ["click .spectrum-Link"],
 		},
 		componentVersion: version,
+		docs: {
+			story: {
+				height: "30px",
+			},
+		},
 	},
 };
 
