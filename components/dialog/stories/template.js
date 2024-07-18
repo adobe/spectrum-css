@@ -4,6 +4,7 @@ import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
@@ -11,13 +12,19 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Dialog",
-	isDismissable = true,
+	isDismissible = true,
+	hasDivider = true,
 	isOpen = true,
 	showModal = false,
 	heading,
 	content = [],
 	customClasses = [],
 	id,
+	size = "medium",
+	layout,
+	hasHeroImage = false,
+	heroImageUrl,
+	customStyles = {},
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 	const scale = globals.scale ?? "medium";
@@ -30,26 +37,38 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--${scale}`]: true,
-				[`${rootClass}--dismissable`]: isDismissable,
+				[`${rootClass}--${size}`]: typeof size !== "undefined", 
+				[`${rootClass}--dismissable`]: isDismissible,
+				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
+				[`${rootClass}--noDivider`]: !hasDivider,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
 			role="dialog"
 			tabindex="-1"
 			aria-modal="true"
+			style=${ifDefined(styleMap(customStyles))}
 		>
 			<div class="${rootClass}-grid">
-				${when(heading, () => [
-					html`<h1 class="${rootClass}-heading">${heading}</h1>`,
+				${when(hasHeroImage, () =>
+					html`
+						<div 
+							class="spectrum-Dialog-hero"
+							style="background-image:url(${heroImageUrl ?  heroImageUrl : "example-card-portrait.png"})">
+						</div>
+					`
+				)}
+				<h1 class="${rootClass}-heading">${heading}</h1>
+				${when(hasDivider, () =>
 					Divider({
 						horizontal: true,
 						customClasses: [`${rootClass}-divider`],
 					}, context),
-				])}
+				)}
 				<section class="${rootClass}-content">
 					${content.map((c) => (typeof c === "function" ? c({}, context) : c))}
 				</section>
-				${when(isDismissable, () =>
+				${when(isDismissible, () =>
 					CloseButton({
 						customClasses: [`${rootClass}-closeButton`],
 						onclick: toggleOpen,
@@ -64,6 +83,7 @@ export const Template = ({
 			${Modal({
 				isOpen,
 				content: [ () => Dialog],
+				variant: layout,
 			}, context)}
 		`;
 	}
@@ -77,11 +97,29 @@ export const DialogGroup = Variants({
 	testData: [
 		{
 			showModal: false,
+			isDismissible: true,
 		},
 		{
-			testHeading: "Not dismissable",
-			isDismissable: false,
+			testHeading: "Not dismissible",
+			isDismissible: false,
 			showModal: false,
 		},
+		{
+			testHeading: "With hero",
+			hasHeroImage: true,
+			isDismissible: true,
+			hasDivider: false,
+			showModal: false,
+		},
+		{
+			testHeading: "Fullscreen",
+			layout: "fullscreen",
+			showModal: false,
+		},
+		{
+			testHeading: "Takeover",
+			layout: "fullscreenTakeover",
+			showModal: false,
+		}
 	],
 });
