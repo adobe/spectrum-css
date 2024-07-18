@@ -11,7 +11,7 @@ export const Template = ({
 	rootClass = "spectrum-Dial",
 	size = "m",
 	label,
-	isFocused = false,
+	isFocusVisible = false,
 	isDragged = false,
 	isDisabled = false,
 	min = 0,
@@ -70,7 +70,7 @@ export const Template = ({
 			</div>`
 		)}
 		<div class="${rootClass}-controls">
-			<div class="${rootClass}-handle ${isDragged ? "is-dragged": ""} ${isFocused ? "is-focused": ""}" tabindex="0">
+			<div class="${rootClass}-handle ${isDragged ? "is-dragged": ""} ${isFocusVisible ? "is-focus-visible": ""}" tabindex="0">
 				<input
 					type="range"
 					class="${rootClass}-input"
@@ -92,8 +92,8 @@ const Sizes = (args, context) => ["s", "m", "l", "xl"].map((size) => html`
 	<div>
 		${Typography({
 			semantics: "heading",
-              size: "m",
-              weight: "light",
+      size: "m",
+      weight: "light",
 			content: [
 				{
 					s: "Small",
