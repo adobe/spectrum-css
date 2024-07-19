@@ -2237,7 +2237,7 @@
 	--spectrum-treeview-item-indentation-extra-large: 30px;
 	--spectrum-treeview-indicator-inset-block-start: 6px;
 	--spectrum-treeview-item-min-block-size-thumbnail-offset-medium: 2px;
-	--spectrum-tooltip-animation-distance: 5px;
+	--spectrum-tooltip-tip-square-size: 10px;
 	--spectrum-ui-icon-medium-display: none;
 	--spectrum-ui-icon-large-display: block;
 	--spectrum-well-border-radius: 5px;
@@ -3624,7 +3624,7 @@
 	--spectrum-treeview-item-indentation-large: 20px;
 	--spectrum-treeview-item-indentation-extra-large: var(--spectrum-spacing-400);
 	--spectrum-treeview-item-min-block-size-thumbnail-offset-medium: 0px;
-	--spectrum-tooltip-animation-distance: var(--spectrum-spacing-75);
+	--spectrum-tooltip-tip-square-size: 8px;
 	--spectrum-ui-icon-medium-display: block;
 	--spectrum-ui-icon-large-display: none;
 	--spectrum-well-border-radius: var(--spectrum-spacing-75);
