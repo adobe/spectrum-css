@@ -81,6 +81,7 @@ Small.args = {
 Small.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Small.tags = ["autodocs", "!dev"];
 
 export const WithLabel = Template.bind();
 WithLabel.args = {
@@ -89,6 +90,7 @@ WithLabel.args = {
 WithLabel.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+WithLabel.tags = ["autodocs", "!dev"];
 
 export const Disabled = Template.bind();
 Disabled.args = {
@@ -97,6 +99,7 @@ Disabled.args = {
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Disabled.tags = ["autodocs", "!dev"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
