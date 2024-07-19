@@ -1,5 +1,11 @@
 # Change Log
 
+## 8.1.4
+
+### Patch Changes
+
+- [#2914](https://github.com/adobe/spectrum-css/pull/2914) [`3c3e7da`](https://github.com/adobe/spectrum-css/commit/3c3e7dadf4094a18e175b8bfefee01866172a4d4) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Changes picker margin to padding in order to accommodate text with diacritics that may be cut off vertically.
+
 ## 8.1.3
 
 ### Patch Changes
