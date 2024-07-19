@@ -116,7 +116,7 @@ DefaultVariants.tags = ["autodocs", "!dev"];
 DefaultVariants.parameters = {
 	chromatic: { disableSnapshot: true }
 };
-DefaultVariants.storyName = "Standard";
+DefaultVariants.storyName = "Default";
 
 export const Emphasized = CheckboxGroup.bind({});
 Emphasized.args = {
