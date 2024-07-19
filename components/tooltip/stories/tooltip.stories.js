@@ -21,16 +21,6 @@ export default {
 			},
 			control: "text",
 		},
-		variant: {
-			name: "Variant",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["neutral", "info", "positive", "negative"],
-			control: "inline-radio",
-		},
 		placement: {
 			name: "Placement",
 			description: "The placement of the tooltip relative to the source. Note that placements that start with left/right do not change with text direction, but start/end placements do.",
@@ -86,7 +76,6 @@ export default {
 		isOpen: true,
 		isFocused: false,
 		showOnHover: false,
-		variant: "neutral",
 		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	},
 	parameters: {
