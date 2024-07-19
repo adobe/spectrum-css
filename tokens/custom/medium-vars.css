@@ -109,7 +109,9 @@
 	--spectrum-treeview-item-indentation-extra-large: var(--spectrum-spacing-400);
 	--spectrum-treeview-item-min-block-size-thumbnail-offset-medium: 0px;
 
-	--spectrum-tooltip-animation-distance: var(--spectrum-spacing-75);
+	/* To get a square that measures 10px on the diagonal, the sides have to be 8px */
+	--spectrum-tooltip-tip-square-size: 8px;
+
 	--spectrum-ui-icon-medium-display: block;
 	--spectrum-ui-icon-large-display: none;
 
