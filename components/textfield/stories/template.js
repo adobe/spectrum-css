@@ -133,7 +133,7 @@ export const Template = ({
 				?required=${isRequired}
 				?disabled=${isDisabled}
 				?readonly=${ifDefined(isReadOnly)}
-				pattern=${ifDefined(pattern)}
+				pattern=${ifDefined(pattern && pattern.trim() ? pattern : undefined)}
 				class=${classMap({
 					[`${rootClass}-input`]: true,
 					...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -149,7 +149,7 @@ export const Template = ({
 				?required=${isRequired}
 				?disabled=${isDisabled}
 				?readonly=${ifDefined(isReadOnly)}
-				pattern=${ifDefined(pattern)}
+				pattern=${ifDefined(pattern && pattern.trim() ? pattern : undefined)}
 				class=${classMap({
 					[`${rootClass}-input`]: true,
 					...customInputClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
