@@ -9,9 +9,9 @@
 	"exports": {
 		".": "./preview.js",
 		"./blocks": "./blocks/index.js",
+		"./blocks/*": "./blocks/*",
 		"./decorators": "./decorators/index.js",
 		"./decorators/*": "./decorators/*",
-		"./deprecated/*": "./deprecated/*",
 		"./loaders": "./loaders/index.js",
 		"./loaders/*": "./loaders/*",
 		"./main": "./main.js",
@@ -20,6 +20,7 @@
 		"./modes/*": "./modes/*",
 		"./package.json": "./package.json",
 		"./preview": "./preview.js",
+		"./templates/*": "./templates/*",
 		"./types": "./types/index.js",
 		"./types/*": "./types/*"
 	},
@@ -38,6 +39,7 @@
 		"@babel/core": "^7.26.0",
 		"@chromaui/addon-visual-tests": "^1.0.0",
 		"@etchteam/storybook-addon-status": "^5.0.0",
+		"@faker-js/faker": "^8.4.1",
 		"@storybook/addon-a11y": "^8.3.6",
 		"@storybook/addon-actions": "^8.3.6",
 		"@storybook/addon-console": "^3.0.0",
