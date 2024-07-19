@@ -13,17 +13,17 @@ governing permissions and limitations under the License.
 @import "./themes/express.css";
 
 .spectrum-Textfield {
+	--spectrum-texfield-animation-duration: var(--spectrum-animation-duration-100);
+
 	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
 	/* disallow mod for max compatibility */
 	--spectrum-textfield-input-line-height: var(--spectrum-textfield-height);
-	--spectrum-texfield-animation-duration: var(--spectrum-animation-duration-100);
 
+	/* default height/width/border radius */
+	--spectrum-textfield-height: var(--spectrum-component-height-100);
 	--spectrum-textfield-width: var(--spectrum-field-default-width-medium);
 	--spectrum-textfield-min-width: var(--spectrum-text-field-minimum-width-multiplier);
 	--spectrum-textfield-corner-radius: var(--spectrum-corner-radius-medium-size-medium);
-
-	/* default height */
-	--spectrum-textfield-height: var(--spectrum-component-height-100);
 
 	/* default spacing */
 	--spectrum-textfield-spacing-inline: var(--spectrum-component-edge-to-text-100);
