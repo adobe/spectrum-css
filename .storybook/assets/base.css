@@ -34,7 +34,7 @@ svg:has(symbol):not(:has(use)) {
 	display: none;
 }
 
-/* set back to default h2 styles */
+/* Make sure heading provided by <Stories/> doc block uses styles consistent with the default H2. */
 #variants {
 	font-size: 24px;
 	margin-block-end: 8px;
@@ -44,4 +44,10 @@ svg:has(symbol):not(:has(use)) {
 	letter-spacing: normal;
 	text-transform: none;
 	border-block-end: 1px solid hsla(203deg, 50%, 30%, 15%);
+}
+
+.sb-story {
+	/* Prevent inline stories in the Docs from cutting off content (which is different than the regular
+	story view), due to Storybook's inline style that sets overflow: auto */
+	overflow: visible !important;
 }
