@@ -15,7 +15,7 @@ const modes = {
     "Context: Spectrum 1": {
         scale: "medium",
         color: "light",
-        textDirection: "ltr",
+        lang: "en_US",
         context: "legacy",
     },
     "Context: Express": {
@@ -27,7 +27,7 @@ const modes = {
     "Dark | RTL": {
         scale: "medium",
         color: "dark",
-        textDirection: "rtl",
+        lang: "ar",
     },
 };
 
@@ -38,4 +38,35 @@ export const disableDefaultModes = {
         acc[key] = { disable: true };
         return acc;
     }, {}),
+};
+
+export const mobile = {
+    "Mobile": {
+        scale: "large",
+    },
+};
+
+export const viewports = {
+    small: {
+        width: 480,
+    },
+};
+
+export const i18n = {
+    // This is the default language, so we don't need to specify it here
+    // "English": {
+    //     lang: "en_US",
+    // },
+    "Hebrew": {
+        lang: "he",
+    },
+    "Japanese": {
+        lang: "ja",
+    },
+    "Korean": {
+        lang: "ko",
+    },
+    "Arabic": {
+        lang: "ar",
+    },
 };
