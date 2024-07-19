@@ -11,7 +11,6 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Tooltip",
 	label,
-	variant = "neutral",
 	placement,
 	isOpen = true,
 	isFocused = false,
@@ -42,8 +41,6 @@ export const Template = ({
 		<span
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${variant}`]:
-					typeof variant !== "undefined" && variant !== "neutral",
 				[`${rootClass}--${placement}`]: typeof placement !== "undefined",
 				"is-open": isOpen,
 				"is-focused": isFocused,
