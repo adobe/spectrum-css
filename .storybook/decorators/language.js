@@ -1,5 +1,7 @@
-import { makeDecorator, useEffect } from "@storybook/preview-api";
-import { fetchContainers } from "./helpers.js";
+import { allFakers } from "@faker-js/faker";
+import { makeDecorator, useEffect } from '@storybook/preview-api';
+import { capitalize } from "lodash-es";
+import { fetchContainers } from "./helpers";
 /* global Typekit */
 
 /**
@@ -17,9 +19,21 @@ export const withLanguageWrapper = makeDecorator({
 			viewMode,
 		} = context;
 
-		useEffect(() => {
-			const isNotEnglish = lang && lang !== "en-US";
+		const isNotEnglish = lang && lang !== "en-US";
+		const isRTL = ["ar", "fa", "he"].includes(lang);
 
+		// @todo: this can't be used for VRT because the strings are random
+		// Attach the generator tool to the parameters for use in the story
+		context.generator = allFakers?.[lang];
+
+		// Add a custom generator for titles
+		context.generator.lorem.title = (count) => capitalize(context.generator.lorem.words(count));
+
+		// Add a textDirection property to the globals for use in the story
+		context.globals.textDirection = isRTL ? "rtl" : "ltr";
+
+
+		useEffect(() => {
 			// If it is US-language or unset use the rok6rmo Adobe font web project id (smaller size),
 			// otherwise use the mge7bvf kit with all the language settings (larger size)
 			const kitId = isNotEnglish ? "mge7bvf" : "rok6rmo";
@@ -55,10 +69,12 @@ export const withLanguageWrapper = makeDecorator({
 				} catch (e) {/* empty */}
 			}
 
+			// Set the language and direction on the relevant containers
 			for (const container of fetchContainers(id, viewMode === "docs")) {
 				container.lang = lang;
+				container.dir = !isRTL ? "ltr" : "rtl";
 			}
-		}, [lang]);
+		}, [lang, isNotEnglish, isRTL, viewMode, id]);
 
 		return StoryFn(context);
 	},
