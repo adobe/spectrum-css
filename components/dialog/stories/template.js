@@ -26,17 +26,13 @@ export const Template = ({
 	heroImageUrl,
 	customStyles = {},
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-	const scale = globals.scale ?? "medium";
-	const toggleOpen = function () {
-		updateArgs({ isOpen: !isOpen });
-	};
+	const { updateArgs } = context;
+	const toggleOpen = () => updateArgs({ isOpen: !isOpen });
 
 	const Dialog = html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${scale}`]: true,
 				[`${rootClass}--${size}`]: typeof size !== "undefined", 
 				[`${rootClass}--dismissable`]: isDismissible,
 				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
