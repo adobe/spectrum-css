@@ -52,7 +52,7 @@ Default.args = {};
 Default.tags = ["!autodocs"];
 
 /**
- * The default logic button is the and variant. 
+ * The default logic button is the And variant. 
  */
 export const And = Default.bind({});
 And.args = {
