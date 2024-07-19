@@ -110,6 +110,9 @@ Disabled.parameters = {
  * The `.spectrum-ClearButton--quiet` class will use a transparent background (including when the Express theme is active).
  */
 export const Quiet = Template.bind({});
+Quiet.args = {
+	isQuiet: true,
+};
 Quiet.tags = ["autodocs", "!dev"];
 Quiet.parameters = {
 	chromatic: { disableSnapshot: true }
