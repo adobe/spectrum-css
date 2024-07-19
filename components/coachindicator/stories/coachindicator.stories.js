@@ -55,7 +55,7 @@ Default.tags = ["!autodocs"];
 
 export const DefaultVariants = AllVariantsGroup.bind({});
 DefaultVariants.tags = ["autodocs", "!dev"];
-DefaultVariants.storyName = "Standard";
+DefaultVariants.storyName = "Default";
 DefaultVariants.parameters = {
 	chromatic: { disableSnapshot: true }
 };
