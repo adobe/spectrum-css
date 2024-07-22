@@ -142,6 +142,7 @@ export default {
 		},
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 const Variants = (args, context) => html`

@@ -66,6 +66,7 @@ export default {
 		chromatic: { disableSnapshot: true },
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 /* Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions. */

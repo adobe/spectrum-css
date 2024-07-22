@@ -99,6 +99,7 @@ export default {
 			modes: mobile,
 		},
 	},
+	tags: ["!autodocs"],
 };
 
 const Variants = (args, context) => {

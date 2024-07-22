@@ -34,6 +34,7 @@ export default {
 	parameters: {
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = Template.bind({});

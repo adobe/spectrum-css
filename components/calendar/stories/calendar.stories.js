@@ -96,6 +96,7 @@ export default {
 		},
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = CalendarGroup.bind({});

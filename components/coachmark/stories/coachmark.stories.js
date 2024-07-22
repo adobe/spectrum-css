@@ -62,6 +62,7 @@ export default {
 			modes: mobile,
 		}
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = Template.bind({});

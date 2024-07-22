@@ -70,6 +70,7 @@ export default {
 	parameters: {
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = BadgeGroup.bind({});
