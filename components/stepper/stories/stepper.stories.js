@@ -1,9 +1,14 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isInvalid } from "@spectrum-css/preview/types";
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { 
+	Template,
+	SizingTemplate,
+	QuietTemplate,
+	DisabledTemplate,
+	DefaultTemplate,
+	StepperGroup,
+} from "./template";
 
 /**
  * A stepper can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value.
@@ -76,133 +81,54 @@ export default {
 	},
 };
 
-const Variants = (args, context) => html`
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "none": "contents",
-	})}>
-		${Template(args, context)}
-	</div>
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
-		"flex-direction": "column",
-		"gap": "8px",
-		"padding": "16px",
-	})}>
-		${Template({
-			...args,
-			isFocused: true,
-		})}
-		${Template({
-			...args,
-			isKeyboardFocused: true,
-		})}
-		${Template({
-			...args,
-			isInvalid: true,
-		})}
-		${Template({
-			...args,
-			isInvalid: true,
-			isFocused: true,
-		})}
-		${Template({
-			...args,
-			isInvalid: true,
-			isKeyboardFocused: true,
-		})}
-		${Template({
-			...args,
-			isDisabled: true,
-		})}
-		${Template({
-			...args,
-			isQuiet: true,
-		})}
-		${Template({
-			...args,
-			isQuiet: true,
-			isFocused: true,
-		})}
-		${Template({
-			...args,
-			isQuiet: true,
-			isKeyboardFocused: true,
-		})}
-		${Template({
-			...args,
-			isQuiet: true,
-			isInvalid: true,
-		})}
-		${Template({
-			...args,
-			isQuiet: true,
-			isInvalid: true,
-			isFocused: true,
-		})}
-		${Template({
-			...args,
-			isQuiet: true,
-			isInvalid: true,
-			isKeyboardFocused: true,
-		})}
-		${Template({
-			...args,
-			isQuiet: true,
-			isDisabled: true,
-		})}
-		${Template({
-			...args,
-			hideStepper: true,
-		})}
-		${Template({
-			...args,
-			hideStepper: true,
-			isFocused: true,
-		})}
-		${Template({
-			...args,
-			hideStepper: true,
-			isKeyboardFocused: true,
-		})}
-		${Template({
-			...args,
-			hideStepper: true,
-			isInvalid: true,
-		})}
-		${Template({
-			...args,
-			hideStepper: true,
-			isInvalid: true,
-			isFocused: true,
-		})}
-		${Template({
-			...args,
-			hideStepper: true,
-			isInvalid: true,
-			isKeyboardFocused: true,
-		})}
-		${Template({
-			...args,
-			hideStepper: true,
-			isDisabled: true,
-		})}
-	</div>
-`;
 
-export const Default = Variants.bind({});
+export const Default = StepperGroup.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
+
+export const Standard = SizingTemplate.bind({});
+Standard.tags = ["autodocs", "!dev"];
+Standard.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Standard.storyName = "Default";
+
+export const DefaultStates = DefaultTemplate.bind({});
+DefaultStates.args = {};
+DefaultStates.tags = ["autodocs", "!dev"];
+DefaultStates.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+DefaultStates.storyName = "Default";
+
+export const DisabledStates = DisabledTemplate.bind({});
+DisabledStates.args = {};
+DisabledStates.tags = ["autodocs", "!dev"];
+DisabledStates.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+DisabledStates.storyName = "Disabled";
+
+export const QuietStates = QuietTemplate.bind({});
+QuietStates.args = {};
+QuietStates.tags = ["autodocs", "!dev"];
+QuietStates.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+QuietStates.storyName = "Quiet";
+
+export const HideStepper = Template.bind({});
+HideStepper.args = {
+	hideStepper: true,
+};
+HideStepper.tags = ["autodocs", "!dev"];
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Variants.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Default.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
 		modes: disableDefaultModes
 	},
-};
-
-export const HideStepper = Template.bind({});
-HideStepper.args = {
-	hideStepper: true,
 };
