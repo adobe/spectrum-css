@@ -1,5 +1,17 @@
 # Change Log
 
+## 8.0.0-s2-foundations.10
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`494da11`](https://github.com/adobe/spectrum-css/commit/494da118554c2ecc425564e42d25424325efc331) Thanks [@pfulton](https://github.com/pfulton)! - ## Feature [@spectrum-css/icon]
+
+  Update source files to load the mappings from component-level to global tokens for size and transform values. This will allow for more consistent and predictable behavior when using the `size` and `transform` props on icons when switching between contexts for S1, S2, and Express.
+
+  ## Patch [@spectrum-css/typography]
+
+  Remove the sourcemap footer from compiled assets.
+
 ## 8.0.0-s2-foundations.9
 
 ### Major Changes
