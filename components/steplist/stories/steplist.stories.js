@@ -1,9 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { Template, SteplistGroup } from "./template";
 
 /**
  * A steplist can communicate the progress of a task or workflow. It can help users understand where they are in a process and what they need to do next.
+ * 
+ * All variants of steplist can be static or interactive.
  */
 export default {
 	title: "Steplist",
@@ -76,6 +78,33 @@ export default {
 
 export const Default = Template.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
+
+export const Standard = SteplistGroup.bind({});
+Standard.tags = ["autodocs", "!dev"];
+Standard.storyName = "Default";
+Standard.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A steplist with labels.
+ */
+export const WithLabel = SteplistGroup.bind({});
+WithLabel.args = {};
+WithLabel.tags = ["!dev"];
+WithLabel.storyName = "With label";
+
+/**
+ * A steplist with tooltips.
+ */
+export const WithTooltip = SteplistGroup.bind({});
+WithTooltip.args = {
+	...Default.args,
+	withTooltip: true,
+};
+WithTooltip.tags = ["autodocs","!dev"];
+WithTooltip.storyName = "With tooltip";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
