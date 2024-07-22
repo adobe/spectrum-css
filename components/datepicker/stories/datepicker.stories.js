@@ -138,7 +138,7 @@ Range.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const QuietRange = Template.bind({});
-QuietRange.tags = ["autodocs", "!dev"];
+QuietRange.tags = ["!dev"];
 QuietRange.args = {
 	lastDay: 3,
 	isRange: true,
@@ -155,7 +155,7 @@ QuietRange.parameters = {
 };
 
 export const Invalid = Template.bind({});
-Invalid.tags = ["autodocs", "!dev"];
+Invalid.tags = ["!dev"];
 Invalid.args = {
 	isInvalid: true,
 	isOpen: false,
@@ -170,7 +170,7 @@ Invalid.parameters = {
 };
 
 export const QuietInvalid = Template.bind({});
-QuietInvalid.tags = ["autodocs", "!dev"];
+QuietInvalid.tags = ["!dev"];
 QuietInvalid.args = {
 	isInvalid: true,
 	isQuiet: true,
@@ -187,7 +187,7 @@ QuietInvalid.parameters = {
 
 
 export const ReadOnly = Template.bind({});
-ReadOnly.tags = ["autodocs", "!dev"];
+ReadOnly.tags = ["!dev"];
 ReadOnly.args = {
 	readOnly: true,
 };
@@ -201,7 +201,7 @@ ReadOnly.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -214,7 +214,7 @@ Disabled.parameters = {
 	}
 };
 export const QuietDisabled = Template.bind({});
-QuietDisabled.tags = ["autodocs", "!dev"];
+QuietDisabled.tags = ["!dev"];
 QuietDisabled.args = {
 	isDisabled: true,
 	isQuiet: true,

@@ -443,7 +443,7 @@ MenuItem.args = {
 // story used in Picker component
 export const WithDividers = Template.bind({});
 WithDividers.storyName = "Standard with dividers";
-WithDividers.tags = ["autodocs", "!dev"];
+WithDividers.tags = ["!dev"];
 WithDividers.parameters = {
 	chromatic: { disableSnapshot: true },
 };

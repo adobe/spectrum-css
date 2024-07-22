@@ -93,7 +93,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Emphasized = Template.bind({});
-Emphasized.tags = ["autodocs", "!dev"];
+Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	isEmphasized: true,
 };

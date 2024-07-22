@@ -111,7 +111,7 @@ export const AbbreviatedWeekdays = Template.bind({});
 AbbreviatedWeekdays.args = {
 	useDOWAbbrev: true,
 };
-AbbreviatedWeekdays.tags = ["autodocs", "!dev"];
+AbbreviatedWeekdays.tags = ["!dev"];
 AbbreviatedWeekdays.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -125,7 +125,7 @@ RangeSelection.args = {
 	useDOWAbbrev: true,
 	padded: true,
 };
-RangeSelection.tags = ["autodocs", "!dev"];
+RangeSelection.tags = ["!dev"];
 RangeSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -137,13 +137,13 @@ Focused.args = {
 	year: undefined,
 	isFocused: true,
 };
-Focused.tags = ["autodocs", "!dev"];
+Focused.tags = ["!dev"];
 Focused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true
 };

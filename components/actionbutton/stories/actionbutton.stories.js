@@ -125,14 +125,14 @@ Default.args = {
 };
 
 export const Emphasized = ActionButtons.bind({});
-Emphasized.tags = ["autodocs", "!dev"];
+Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	label: "More",
 	isEmphasized: true,
 };
 
 export const Quiet = ActionButtons.bind({});
-Quiet.tags = ["autodocs", "!dev"];
+Quiet.tags = ["!dev"];
 Quiet.args = {
 	label: "More",
 	isQuiet: true,

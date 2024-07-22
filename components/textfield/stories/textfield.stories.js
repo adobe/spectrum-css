@@ -186,7 +186,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const TextArea = Template.bind({});
-TextArea.tags = ["autodocs", "!dev"];
+TextArea.tags = ["!dev"];
 TextArea.args = {
 	labelText: "Username",
 	multiline: true,

@@ -103,7 +103,7 @@ Portrait.args = {
 	exampleImage: "portrait",
 	content: ["Image"],
 };
-Portrait.tags = ["autodocs", "!dev"];
+Portrait.tags = ["!dev"];
 Portrait.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -113,7 +113,7 @@ Landscape.args = {
 	title: "Landscape asset",
 	exampleImage: "landscape",
 };
-Landscape.tags = ["autodocs", "!dev"];
+Landscape.tags = ["!dev"];
 Landscape.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -123,7 +123,7 @@ Square.args = {
 	title: "Square asset",
 	exampleImage: "square",
 };
-Square.tags = ["autodocs", "!dev"];
+Square.tags = ["!dev"];
 Square.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -134,7 +134,7 @@ OptionalContent.args = {
 	headerContent: "39:02",
 	exampleImage: "square",
 };
-OptionalContent.tags = ["autodocs", "!dev"];
+OptionalContent.tags = ["!dev"];
 OptionalContent.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -146,7 +146,7 @@ HighlightSelection.args = {
 	exampleImage: "portrait",
 	isSelected: true,
 };
-HighlightSelection.tags = ["autodocs", "!dev"];
+HighlightSelection.tags = ["!dev"];
 HighlightSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -158,7 +158,7 @@ CheckboxSelection.args = {
 	exampleImage: "portrait",
 	isSelected: true,
 };
-CheckboxSelection.tags = ["autodocs", "!dev"];
+CheckboxSelection.tags = ["!dev"];
 CheckboxSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -170,7 +170,7 @@ OrderedSelection.args = {
 	isSelected: true,
 	exampleImage: "landscape",
 };
-OrderedSelection.tags = ["autodocs", "!dev"];
+OrderedSelection.tags = ["!dev"];
 OrderedSelection.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -183,7 +183,7 @@ DropTarget.args = {
 	exampleImage: "portrait",
 	isSelected: true,
 };
-DropTarget.tags = ["autodocs", "!dev"];
+DropTarget.tags = ["!dev"];
 DropTarget.parameters = {
 	chromatic: { disableSnapshot: true },
 };

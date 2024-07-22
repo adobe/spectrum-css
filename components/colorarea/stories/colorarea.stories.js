@@ -47,7 +47,7 @@ CustomSize.args = {
 
 // ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true,
 };

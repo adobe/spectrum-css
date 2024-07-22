@@ -58,7 +58,7 @@ Default.args = {
  * To use the accent color, the class `.spectrum-IllustratedMessage-accent` can be added to element(s) within the illustration SVG.
  */
 export const AccentColor = Template.bind({});
-AccentColor.tags = ["autodocs", "!dev"];
+AccentColor.tags = ["!dev"];
 AccentColor.args = {
 	heading: "Drag and drop your file",
 	description: [

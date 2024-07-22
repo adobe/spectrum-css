@@ -33,7 +33,7 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.tags = ["autodocs", "!test"];
+Default.tags = ["!test"];
 Default.args = {
 	isOpen: true,
 	content: [

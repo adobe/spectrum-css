@@ -179,14 +179,14 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Compact = Template.bind({});
-Compact.tags = ["autodocs", "!dev"];
+Compact.tags = ["!dev"];
 Compact.args = {
 	items: content,
 	density: "compact",
 };
 
 export const Spacious = Template.bind({});
-Spacious.tags = ["autodocs", "!dev"];
+Spacious.tags = ["!dev"];
 Spacious.args = {
 	items: content,
 	density: "spacious",

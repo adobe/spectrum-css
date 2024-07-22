@@ -72,7 +72,7 @@ export const Default = Template.bind({});
 Default.args = {};
 
 export const Start = Template.bind({});
-Start.tags = ["autodocs", "!dev"];
+Start.tags = ["!dev"];
 Start.args = {
 	position: "left"
 };
@@ -81,7 +81,7 @@ Start.parameters = {
 };
 
 export const End = Template.bind({});
-End.tags = ["autodocs", "!dev"];
+End.tags = ["!dev"];
 End.args = {
 	position: "right"
 };
@@ -110,7 +110,7 @@ WithForcedColors.parameters = {
 };
 
 export const Stacked = Template.bind({});
-Stacked.tags = ["autodocs", "!dev"];
+Stacked.tags = ["!dev"];
 Stacked.args = {
 	isStacked: true,
 };

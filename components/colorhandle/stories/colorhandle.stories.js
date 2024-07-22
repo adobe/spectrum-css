@@ -45,7 +45,7 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
 };
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -54,7 +54,7 @@ export const WithColorLoupe = Template.bind({});
 WithColorLoupe.args = {
 	isWithColorLoupe: true,
 };
-WithColorLoupe.tags = ["autodocs", "!dev"];
+WithColorLoupe.tags = ["!dev"];
 WithColorLoupe.parameters = {
 	chromatic: { disableSnapshot: true },
 	docs: {

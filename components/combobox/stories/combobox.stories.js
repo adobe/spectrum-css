@@ -228,7 +228,7 @@ Quiet.args = {
 // ********* DOCS ONLY ********* //
 // Standard
 export const WithLabel = Template.bind({});
-WithLabel.tags = ["autodocs", "!dev"];
+WithLabel.tags = ["!dev"];
 WithLabel.args = {
 	showFieldLabel: true,
 	fieldLabelText: "Country",
@@ -239,7 +239,7 @@ WithLabel.parameters = {
 };
 
 export const Closed = Template.bind({});
-Closed.tags = ["autodocs", "!dev"];
+Closed.tags = ["!dev"];
 Closed.args = {
 	isOpen: false,
 };
@@ -248,7 +248,7 @@ Closed.parameters = {
 };
 
 export const Invalid = Template.bind({});
-Invalid.tags = ["autodocs", "!dev"];
+Invalid.tags = ["!dev"];
 Invalid.args = {
 	isInvalid: true,
 };
@@ -257,7 +257,7 @@ Invalid.parameters = {
 };
 
 export const Loading = Template.bind({});
-Loading.tags = ["autodocs", "!dev"];
+Loading.tags = ["!dev"];
 Loading.args = {
 	isLoading: true,
 };
@@ -266,7 +266,7 @@ Loading.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -276,7 +276,7 @@ Disabled.parameters = {
 
 // Quiet
 export const QuietWithLabel = Template.bind({});
-QuietWithLabel.tags = ["autodocs", "!dev"];
+QuietWithLabel.tags = ["!dev"];
 QuietWithLabel.args = {
 	showFieldLabel: true,
 	fieldLabelText: "Country",
@@ -287,7 +287,7 @@ QuietWithLabel.parameters = {
 };
 
 export const QuietClosed = Template.bind({});
-QuietClosed.tags = ["autodocs", "!dev"];
+QuietClosed.tags = ["!dev"];
 QuietClosed.args = {
 	isQuiet: true,
 	isOpen: false,
@@ -297,7 +297,7 @@ QuietClosed.parameters = {
 };
 
 export const QuietInvalid = Template.bind({});
-QuietInvalid.tags = ["autodocs", "!dev"];
+QuietInvalid.tags = ["!dev"];
 QuietInvalid.args = {
 	isQuiet: true,
 	isInvalid: true,
@@ -307,7 +307,7 @@ QuietInvalid.parameters = {
 };
 
 export const QuietLoading = Template.bind({});
-QuietLoading.tags = ["autodocs", "!dev"];
+QuietLoading.tags = ["!dev"];
 QuietLoading.args = {
 	isQuiet: true,
 	isLoading: true,
@@ -317,7 +317,7 @@ QuietLoading.parameters = {
 };
 
 export const QuietDisabled = Template.bind({});
-QuietDisabled.tags = ["autodocs", "!dev"];
+QuietDisabled.tags = ["!dev"];
 QuietDisabled.args = {
 	isQuiet: true,
 	isDisabled: true,

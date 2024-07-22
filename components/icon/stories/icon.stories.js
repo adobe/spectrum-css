@@ -338,7 +338,7 @@ const UIDefaultTemplate = (args) => html`
  * A sampling of multiple Workflow icons.
  */
 export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
-WorkflowDefault.tags = ["autodocs", "!dev"];
+WorkflowDefault.tags = ["!dev"];
 WorkflowDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -347,7 +347,7 @@ WorkflowDefault.parameters = {
  * An example of a Workflow icon displayed at all sizes, from small to extra-large.
  */
 export const WorkflowSizing = WorkflowSizingTemplate.bind({});
-WorkflowSizing.tags = ["autodocs", "!dev"];
+WorkflowSizing.tags = ["!dev"];
 WorkflowSizing.args = {
 	setName: "workflow",
 	iconName: "Asset",
@@ -361,7 +361,7 @@ WorkflowSizing.parameters = {
  */
 export const UIDefault = UIDefaultTemplate.bind({});
 UIDefault.storyName = "UI Default";
-UIDefault.tags = ["autodocs", "!dev"];
+UIDefault.tags = ["!dev"];
 UIDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -371,7 +371,7 @@ UIDefault.parameters = {
  */
 export const UIArrows = UIArrowsTemplate.bind({});
 UIArrows.storyName = "UI Arrows";
-UIArrows.tags = ["autodocs", "!dev"];
+UIArrows.tags = ["!dev"];
 UIArrows.parameters = {
 	chromatic: { disableSnapshot: true },
 };

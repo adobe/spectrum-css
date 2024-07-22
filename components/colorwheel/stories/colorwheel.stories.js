@@ -42,7 +42,7 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true,
 };
@@ -51,7 +51,7 @@ Disabled.parameters = {
 };
 
 export const WithColorArea = Template.bind({});
-WithColorArea.tags = ["autodocs", "!dev"];
+WithColorArea.tags = ["!dev"];
 WithColorArea.args = {
 	isWithColorArea: true,
 };

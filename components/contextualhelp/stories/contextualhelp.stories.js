@@ -119,7 +119,7 @@ TopPopover.args = {
 
 // ********* DOCS ONLY ********* //
 export const HelpDefault = Template.bind({});
-HelpDefault.tags = ["autodocs", "!dev"];
+HelpDefault.tags = ["!dev"];
 HelpDefault.args = {
 	iconName: "Help",
 };
@@ -128,7 +128,7 @@ HelpDefault.parameters = {
 };
 
 export const HelpWithLink = Template.bind({});
-HelpWithLink.tags = ["autodocs", "!dev"];
+HelpWithLink.tags = ["!dev"];
 HelpWithLink.args = {
 	link: {
 		text: "Learn about permissions",
@@ -141,7 +141,7 @@ HelpWithLink.parameters = {
 };
 
 export const HelpTopPopover = Template.bind({});
-HelpTopPopover.tags = ["autodocs", "!dev"];
+HelpTopPopover.tags = ["!dev"];
 HelpTopPopover.args = {
 	popoverPlacement: "top",
 	customStyles: { "max-inline-size": "275px" },

@@ -47,7 +47,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const File = Template.bind({});
-File.tags = ["autodocs", "!dev"];
+File.tags = ["!dev"];
 File.args = {
 	preset: "file",
 };
@@ -56,7 +56,7 @@ File.parameters = {
 };
 
 export const Folder = Template.bind({});
-Folder.tags = ["autodocs", "!dev"];
+Folder.tags = ["!dev"];
 Folder.args = {
 	preset: "folder",
 };

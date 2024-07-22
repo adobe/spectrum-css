@@ -82,7 +82,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const SizeOptions = AvatarSizes.bind({});
-SizeOptions.tags = ["autodocs", "!dev"];
+SizeOptions.tags = ["!dev"];
 SizeOptions.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -92,7 +92,7 @@ SizeOptions.args = {
 };
 
 export const NoLink = Template.bind({});
-NoLink.tags = ["autodocs", "!dev"];
+NoLink.tags = ["!dev"];
 NoLink.args = {
 	hasLink: false,
 	image: "example-ava@2x.png",
@@ -103,7 +103,7 @@ NoLink.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	hasLink: false,
 	isDisabled: true,

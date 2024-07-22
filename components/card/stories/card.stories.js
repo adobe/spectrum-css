@@ -124,7 +124,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Selected = Default.bind({});
-Selected.tags = ["autodocs", "!dev"];
+Selected.tags = ["!dev"];
 Selected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -138,7 +138,7 @@ Focused.args = {
 	title: "Card title that is longer and should wrap",
 	customStyles: { "max-inline-size": "205px"},
 };
-Focused.tags = ["autodocs", "!dev"];
+Focused.tags = ["!dev"];
 Focused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -151,7 +151,7 @@ Quiet.args = {
 	description: "10/15/18",
 	isQuiet: true,
 };
-Quiet.tags = ["autodocs", "!dev"];
+Quiet.tags = ["!dev"];
 Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -165,13 +165,13 @@ QuietFile.args = {
 	image: undefined,
 	isQuiet: true,
 };
-QuietFile.tags = ["autodocs", "!dev"];
+QuietFile.tags = ["!dev"];
 QuietFile.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const Horizontal = Template.bind({});
-Horizontal.tags = ["autodocs", "!dev"];
+Horizontal.tags = ["!dev"];
 Horizontal.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -190,7 +190,7 @@ NoImage.args = {
 	title: "Card title",
 	description: "Optional description that should be one or two lines",
 };
-NoImage.tags = ["autodocs", "!dev"];
+NoImage.tags = ["!dev"];
 NoImage.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -202,7 +202,7 @@ QuietFolder.args = {
 	description: "10/15/18",
 	isQuiet: true,
 };
-QuietFolder.tags = ["autodocs", "!dev"];
+QuietFolder.tags = ["!dev"];
 QuietFolder.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -216,7 +216,7 @@ QuietFocused.args = {
 	isQuiet: true,
 	isFocused: true,
 };
-QuietFocused.tags = ["autodocs", "!dev"];
+QuietFocused.tags = ["!dev"];
 QuietFocused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -230,7 +230,7 @@ QuietSelected.args = {
 	isQuiet: true,
 	isSelected: true,
 };
-QuietSelected.tags = ["autodocs", "!dev"];
+QuietSelected.tags = ["!dev"];
 QuietSelected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -247,7 +247,7 @@ AssetPreview.args = {
 		"width": "200px",
 	}
 };
-AssetPreview.tags = ["autodocs", "!dev"];
+AssetPreview.tags = ["!dev"];
 AssetPreview.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -264,7 +264,7 @@ Gallery.args = {
 		"width": "700px",
 	}
 };
-Gallery.tags = ["autodocs", "!dev"];
+Gallery.tags = ["!dev"];
 Gallery.parameters = {
 	chromatic: { disableSnapshot: true },
 };
