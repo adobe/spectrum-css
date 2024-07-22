@@ -1,6 +1,8 @@
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 
@@ -107,3 +109,43 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const SteplistGroup = (args, context) => html`
+	<style>
+		.spectrum-Detail { 
+			display: inline-block;
+			/* Why seafoam? Because it separates it from the component styles. */
+			--mod-detail-font-color: var(--spectrum-seafoam-900);
+		}
+	</style>
+
+	<div style=${styleMap({
+		"display": "flex",
+		"flex-direction": "column",
+		"align-items": "flex-start",
+		"gap": "32px",
+		"--mod-detail-margin-end": "4.8px",
+	})}>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: "Static",
+			})}
+			${Template({
+				...args,
+			}, context)}
+		</div>
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: "Interactive",
+			})}
+			${Template({
+				...args,
+				isInteractive: true,
+			}, context)}
+		</div>
+	</div>
+`;
