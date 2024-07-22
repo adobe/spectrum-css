@@ -1,24 +1,24 @@
 import { setConsoleOptions } from "@storybook/addon-console";
 import {
-	withActions,
-	withArgEvents,
-	withContextWrapper,
-	withIconSpriteSheet,
-	withLanguageWrapper,
-	withReducedMotionWrapper,
-	withTestingPreviewWrapper,
-	withTextDirectionWrapper,
+  withActions,
+  withArgEvents,
+  withContextWrapper,
+  withIconSpriteSheet,
+  withLanguageWrapper,
+  withReducedMotionWrapper,
+  withTestingPreviewWrapper,
+  withTextDirectionWrapper,
 } from "./decorators";
 import {
-	FontLoader,
-	IconLoader,
-	TokenLoader
+  FontLoader,
+  IconLoader,
+  TokenLoader
 } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import {
-	argTypes,
-	globalTypes
+  argTypes,
+  globalTypes
 } from "./types";
 
 import "./assets/base.css";
@@ -86,7 +86,6 @@ export const parameters = {
 		},
 	},
 	docs: {
-		autodocs: true,
 		page: DocumentationTemplate,
 		story: {
 			inline: true,
@@ -140,4 +139,5 @@ export default {
 		IconLoader,
 		TokenLoader,
 	],
+	tags: ["autodocs"],
 };

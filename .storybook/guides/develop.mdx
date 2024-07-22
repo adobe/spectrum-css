@@ -437,18 +437,23 @@ Default.parameters = {
 };
 ```
 
-If a story should not be shown in the sidebar because it is only for:
+#### Story tags
 
-- Documentation purposes, you can use the tags:
-  ```js
-  Default.tags = ["autodocs", "!dev"];
-  ```
-- Visual regression testing, you can use the following tags:
-  ```js
-  Default.tags = ["test", "!autodocs", "!dev"];
-  ```
+Through this project's global configuration, all stories include the `autodocs` tag by default, which causes them to appear on the component's "Docs" page. The `dev` tag, which Storybook applies by default, denotes stories that should be included in the Storybook sidebar.
+A story's [tags](https://storybook.js.org/docs/writing-stories/tags#built-in-tags) can be configured for a few different purposes. The `!` symbol is used to negate the tag:
 
-The `!` symbol is used to negate the tag. This is useful for filtering stories in the sidebar. The `autodocs` tag is used to denote stories that are only for documentation purposes and should not be included in the visual regression suite. The `dev` tag is used to denote stories that should be included in the storybook sidebar. The `test` tag is used to denote stories that should be included in the visual regression suite.
+- If a story should not be shown in the sidebar:
+  ```js
+  Default.tags = ["!dev"];
+  ```
+- If a story should not be shown on the component's "Docs" page:
+  ```js
+  Default.tags = ["!autodocs"];
+  ```
+- For stories that are for visual regression testing only, both tags can be used:
+  ```js
+  Default.tags = ["!autodocs", "!dev"];
+  ```
 
 ### Getting started
 

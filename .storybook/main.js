@@ -76,7 +76,6 @@ export default {
 		buildStoriesJson: true,
 	},
 	docs: {
-		autodocs: true,
 		defaultName: "Docs",
 	},
 	refs: {
