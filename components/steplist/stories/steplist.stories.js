@@ -80,20 +80,15 @@ export const Default = Template.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
 
+/**
+ * A steplist with labels.
+ */
 export const Standard = SteplistGroup.bind({});
 Standard.tags = ["autodocs", "!dev"];
 Standard.storyName = "Default";
 Standard.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
-/**
- * A steplist with labels.
- */
-export const WithLabel = SteplistGroup.bind({});
-WithLabel.args = {};
-WithLabel.tags = ["!dev"];
-WithLabel.storyName = "With label";
 
 /**
  * A steplist with tooltips.
