@@ -1,10 +1,21 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { Template, SizingTemplate } from "./template";
 
 /**
  * A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.
+ * 
+ * ## Indicating focus
+ * Focus must be bubbled up to the parent so its descendants can be styled.
+ *
+ * Thus, implementations should add the following class to the `.spectrum-Slider` parent class in the following situations:
+ *
+ * - `.is-disabled`: when the slider is disabled
+ * 
+ * Implementations should also bubble the following class to the `.spectrum-Slider-controls` parent class in the following situations:
+
+ * - `.is-focused`: when the handle input is focused with the mouse or keyboard
  */
 export default {
 	title: "Slider",
@@ -96,6 +107,16 @@ export default {
 			control: "boolean",
 			if: { arg: "variant", neq: "ramp" },
 		},
+		showTickLabels: {
+			name: "Show associated tick labels",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+			if: { arg: "showTicks", truthy: true },
+		},
 		isDisabled: {
 			name: "Disabled",
 			type: { name: "boolean" },
@@ -116,6 +137,7 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 		showTicks: false,
+		showTickLabels: false,
 		labelPosition: "top",
 		label: "Slider label",
 		size: "m",
@@ -139,43 +161,77 @@ export default {
 export const Default = Template.bind({});
 Default.args = {};
 
+/**
+ * Sliders should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These sliders should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
+ */
+export const WithLabel = Template.bind({});
+WithLabel.args = {
+	...Default.args,
+};
+WithLabel.tags = ["autodocs", "!dev"];
+
+/**
+ * With fill.
+ */
 export const Filled = Template.bind({});
 Filled.args = {
 	...Default.args,
 	variant: "filled",
 };
+Filled.tags = ["autodocs", "!dev"];
 
+/**
+ * With fill and offset.
+ */
 export const FilledOffset = Template.bind({});
 FilledOffset.args = {
 	...Default.args,
 	min: 0,
 	variant: "offset",
 };
+FilledOffset.tags = ["autodocs", "!dev"];
 
 export const Ramp = Template.bind({});
 Ramp.args = {
 	...Default.args,
 	variant: "ramp",
 };
+Ramp.tags = ["autodocs", "!dev"];
 
+/**
+ * A range slider with two handles.
+ */
 export const Range = Template.bind({});
 Range.args = {
 	...Default.args,
 	values: [14, 16],
 };
+Range.tags = ["autodocs", "!dev"];
 
+/**
+ * Spectrum tick slider.
+ */
 export const Tick = Template.bind({});
-Tick.args = {
+Tick.args = {};
+Tick.tags = ["autodocs", "!dev"];
+
+/**
+ * Spectrum tick slider with tick labels.
+ */
+export const WithTickLabels = Template.bind({});
+WithTickLabels.args = {
 	...Default.args,
-	label: undefined,
 	showTicks: true,
+	showTickLabels: true,
 };
+WithTickLabels.tags = ["autodocs", "!dev"];
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	...Default.args,
 	isDisabled: true,
 };
+Disabled.tags = ["autodocs", "!dev"];
 
 export const WithFocus = Template.bind({});
 WithFocus.args = {
@@ -183,16 +239,7 @@ WithFocus.args = {
 	variant: "with focus",
 	isFocused: true,
 };
-
-// ********* VRT ONLY ********* //
-export const WithForcedColors = WithFocus.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
-WithForcedColors.parameters = {
-	chromatic: {
-		forcedColors: "active",
-		modes: disableDefaultModes
-	},
-};
+WithFocus.tags = ["autodocs", "!dev"];
 
 export const Gradient = Template.bind({});
 Gradient.args = {
@@ -205,9 +252,28 @@ Gradient.args = {
 	},
 	label: "Slider label that is long and wraps to the next line",
 };
+Gradient.tags = ["autodocs", "!dev"];
 
 export const SideLabel = Template.bind({});
 SideLabel.args = {
 	...Default.args,
 	labelPosition: "side",
+};
+SideLabel.tags = ["autodocs", "!dev"];
+
+export const Sizes = SizingTemplate.bind({});
+Sizes.args = {};
+Sizes.tags = ["autodocs", "!dev"];
+Sizes.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = WithFocus.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
