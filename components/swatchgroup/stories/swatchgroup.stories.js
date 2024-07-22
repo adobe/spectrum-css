@@ -1,10 +1,35 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
+import { isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import {
+	Template,
+	RoundingTemplate,
+	SizingTemplate,
+} from "./template";
+
+// @todo --lightBorder doesn't exist in the CSS for swatch
 
 /**
- * The swatch group component is a collection of swatches.
+ * The swatch group component is a collection of [swatches](?path=/docs/components-swatch--docs).
+ * 
+ * ## Usage notes
+ * 
+ * ### Corner rounding in swatch groups
+ * 
+ * A corner rounding of “none” (`.spectrum-Swatch--roundingNone` class) should be used in a swatch group in order to help minimize the Hermann grid illusion that happens at the intersections of the white space within the group.
+ * 
+ * The only exception is when a swatch group only takes up a single row. In that case, use any of the rounding options.
+ * 
+ * ### Border only for low-contrast swatches
+ * 
+ * Swatches within a swatch group with low contrast (below 3:1 contrast with the background) have a less prominent border compared to the swatch component when used by itself, and should have the `.spectrum-Swatch--lightBorder` class. Low contrast color swatches have a border of gray-900 at 20%. This reduces the likelihood of the UI interfering with color perception and comparisons.
+ * 
+ * Swatches should have the `.spectrum-Swatch--noBorder` class, otherwise. 
+ * 
+ * ### Density
+ * 
+ * Swatch groups come in 3 densities: regular (default), compact, and spacious. Compact and spacious densities retain the same swatch size as regular density, but have less or more padding between each swatch, respectively.
  */
 export default {
 	title: "Swatch group",
@@ -21,7 +46,14 @@ export default {
 			options: ["regular", "compact", "spacious"],
 			control: "select",
 		},
+		isSelected,
 		swatchColor: { table: { disable: true } },
+		isRectangle: { table: { disable: true } },
+		withBorder: { table: { disable: true } },
+		isGradient: { table: { disable: true } },
+		isImage: { table: { disable: true } },
+		isMixedValue: { table: { disable: true } },
+		gradient: { table: { disable: true } },
 		items: {
 			name: "Swatches",
 			table: { disable: true },
@@ -36,6 +68,8 @@ export default {
 		size: "m",
 		density: "regular",
 		rounding: "none",
+		isDisabled: false,
+		isSelected: false,
 		items: [
 			{swatchColor: "rgb(22, 135, 140)",},
 			{swatchColor: "rgb(33, 132, 113)",},
@@ -65,11 +99,48 @@ export default {
 			],
 		},
 		componentVersion: version,
+		docs: {
+			story: {
+				height: "50px",
+			},
+		},
 	},
 };
 
+/**
+ * The default swatch group has regular density.
+ */
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	rounding: "none",
+};
+
+// ********* DOCS ONLY ********* //
+export const Compact = Template.bind({});
+Compact.args = {
+	density: "compact",
+};
+Compact.tags = ["autodocs", "!dev"];
+
+export const Spacious = Template.bind({});
+Spacious.args = {
+	density: "spacious",
+};
+Spacious.tags = ["autodocs", "!dev"];
+
+/**
+ * Only use rounded swatches if there is a single row.
+ */
+export const Rounding = RoundingTemplate.bind({});
+Rounding.args = {};
+Rounding.tags = ["autodocs", "!dev"];
+
+/**
+ * Use any size swatches as necessary. The medium size is the default option. This only affects the size of each individual swatch, not the spacing between them.
+ */
+export const Sizing = SizingTemplate.bind({});
+Sizing.args = {};
+Sizing.tags = ["autodocs", "!dev"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
