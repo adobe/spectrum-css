@@ -5,6 +5,7 @@ import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 import { when } from "lit/directives/when.js";
 
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import "../index.css";
 
 /**
@@ -101,7 +102,7 @@ export const Template = ({
 	setName,
 	iconName,
 	fill,
-	id,
+	id = getRandomId("icon"),
 	customClasses = [],
 	icons,
 	useRef = false,

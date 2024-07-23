@@ -49,6 +49,9 @@ export const File = Template.bind({});
 File.tags = ["autodocs", "!dev"];
 File.args = {
 	preset: "file",
+	customStyles: {
+		"min-inline-size": "150px",
+	},
 };
 File.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -58,6 +61,9 @@ export const Folder = Template.bind({});
 Folder.tags = ["autodocs", "!dev"];
 Folder.args = {
 	preset: "folder",
+	customStyles: {
+		"min-inline-size": "150px",
+	},
 };
 Folder.parameters = {
 	chromatic: { disableSnapshot: true },

@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -12,7 +12,7 @@ export const AccordionItem = ({
 	heading,
 	content,
 	rootClass = "spectrum-Accordion-item",
-	id,
+	id = getRandomId("accordion-item"),
 	idx = 0,
 	isDisabled = false,
 	isOpen = false,
@@ -74,7 +74,7 @@ export const Template = ({
 	size = "m",
 	density = "regular",
 	items = [],
-	id,
+	id = getRandomId("accordion"),
 	disableAll = false,
 	collapseAll = false,
 	customClasses = [],

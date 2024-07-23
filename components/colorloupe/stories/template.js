@@ -1,3 +1,4 @@
+import { Variants } from "@spectrum-css/preview/decorators";
 import { svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -6,21 +7,24 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorLoupe",
-	isOpen,
-	customStyles = {
-		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
-		"inset-block-start": "5px",
-		"inset-inline-start": "5px",
-	},
+	isOpen = true,
+	isDisabled = false,
+	customStyles = {},
 	customClasses = [],
 }) => svg`
     <svg
       class=${classMap({
         [rootClass]: true,
         "is-open": isOpen,
+        "is-disabled": isDisabled,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      style=${styleMap(customStyles)}
+      style=${styleMap({
+        "--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
+        "inset-block-start": "5px",
+        "inset-inline-start": "5px",
+        ...customStyles
+      })}
     >
       <defs>
         <path
@@ -48,3 +52,32 @@ export const Template = ({
       </g>
     </svg>
 `;
+
+export const ColorLoupeGroup = Variants({
+	Template,
+	skipBorders: true,
+	testData: [
+		{
+			testHeading: "Default",
+			wrapperStyles: {
+				"block-size": "100px",
+			}
+		},
+		{
+			testHeading: "Custom color",
+			customStyles: {
+				"--spectrum-picked-color": "teal",
+			},
+			wrapperStyles: {
+				"block-size": "100px",
+			}
+		},
+	],
+	stateData: [
+		// @todo there aren't any disabled styles
+		// {
+		// 	testHeading: "Disabled",
+		// 	isDisabled: true,
+		// },
+	],
+});

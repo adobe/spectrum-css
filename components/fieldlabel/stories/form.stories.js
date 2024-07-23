@@ -5,7 +5,6 @@ import { Template as TextField } from "@spectrum-css/textfield/stories/template.
 import { version } from "../package.json";
 import { FormGroup } from "./form.template.js";
 
-
 /**
  * The form component is used for aligning multiple inputs and field groups within a form.
  */
@@ -38,34 +37,47 @@ Default.args = {
 		{
 			label: "Company title",
 			id: "form-example-company",
-			content: TextField.bind(null, {
-				multiline: true,
-				name: "field",
-			})
+			content: [
+				(passthroughs, context) => TextField({
+					...passthroughs,
+					multiline: true,
+					name: "field",
+				}, context),
+			],
 		}, {
 			label: "Email address",
 			id: "form-example-email",
-			content: TextField.bind(null, {
-				type: "email",
-				name: "email",
-			})
+			content: [
+				(passthroughs, context) => TextField({
+					...passthroughs,
+					type: "email",
+					name: "email",
+				}, context),
+			],
 		}, {
 			label: "Country",
 			id: "form-example-country",
-			content: Picker.bind(null, {
-				placeholder: "Select a country",
-				name: "country",
-			})
+			content: [
+				(passthroughs, context) => Picker({
+					...passthroughs,
+					placeholder: "Select a country",
+					name: "country",
+				}, context),
+			],
 		}, {
 			label: "Amount",
 			id: "form-example-amount",
-			content: Stepper.bind(null, {})
+			content: [
+				(passthroughs, context) => Stepper({
+					...passthroughs,
+				}, context),
+			]
 		}
 	],
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = FormGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {

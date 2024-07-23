@@ -34,4 +34,10 @@ export const Template = ({
 	`;
 };
 
-export const ModalGroup = Variants({ Template });
+export const ModalGroup = Variants({
+	Template,
+	skipBorders: true,
+	testData: [
+		{},
+	]
+});

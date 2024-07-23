@@ -1,3 +1,4 @@
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -7,7 +8,7 @@ import { repeat } from "lit/directives/repeat.js";
 import "../index.css";
 
 export const SteplistItem = ({
-	rootClass,
+	rootClass = "spectrum-Steplist-item",
 	isSmall = false,
 	isInteractive = false,
 	withTooltip = false,
@@ -16,7 +17,7 @@ export const SteplistItem = ({
 	ariaSetSize = 4,
 	isComplete = false,
 	isSelected = false,
-	id,
+	id = getRandomId("steplist-item"),
 } = {}, context = {}) => {
 	const labelMarkup =
 		!isSmall && !withTooltip && typeof label !== "undefined"
@@ -28,7 +29,7 @@ export const SteplistItem = ({
 			${withTooltip && !isSmall && typeof label !== "undefined"
 				? Tooltip({
 						label,
-						isOpen: false,
+						isOpen: true,
 						placement: "top",
 						showOnHover: true,
 				}, context)
@@ -77,7 +78,7 @@ export const Template = ({
 	isSmall = false,
 	isInteractive = false,
 	withTooltip = false,
-	id,
+	id = getRandomId("steplist"),
 	customClasses = [],
 } = {}, context = {}) => {
 	if (!items || !items.length) return html``;
@@ -107,3 +108,24 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const SteplistGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Small",
+			isSmall: false,
+		},
+		{
+			testHeading: "Interactive",
+			isInteractive: false,
+		},
+		{
+			testHeading: "With tooltip",
+			withTooltip: false,
+		},
+	],
+});

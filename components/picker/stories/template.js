@@ -2,6 +2,7 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { html } from "lit";
@@ -91,7 +92,7 @@ export const Template = ({
 	customStyles = {},
 	customPopoverStyles = {},
 	content = [],
-	id,
+	id = getRandomId("picker"),
 } = {}, context = {}) => {
 	let iconName = "ChevronDown200";
 	switch (size) {
@@ -173,7 +174,12 @@ export const Template = ({
 					withTip: false,
 					position: "bottom",
 					isQuiet,
-					customStyles: customPopoverStyles,
+					trigger: undefined,
+					customStyles: {
+						"inset-block-start": "30px",
+						"inset-inline-start": "50px",
+						...customPopoverStyles
+					},
 					content,
 				}, context)
 		)}
@@ -186,3 +192,32 @@ export const Template = ({
 		}, context))}
 	`;
 };
+
+export const PickerGroup = Variants({
+	Template,
+	wrapperStyles: {
+		"align-items": "flex-start",
+	},
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Explicit",
+			variant: "explicit",
+		},
+		{
+			testHeading: "Button",
+			variant: "button",
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Open",
+			isOpen: true,
+			wrapperStyles: {
+				"min-block-size": "250px",
+			},
+		}
+	]
+});

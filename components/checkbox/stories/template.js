@@ -1,4 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -19,7 +20,7 @@ export const Template = ({
 	isReadOnly = false,
 	title,
 	value,
-	id,
+	id = getRandomId("checkbox"),
 	ariaLabelledby,
 	customStyles = {},
 	customClasses = [],
@@ -90,3 +91,46 @@ export const Template = ({
 		</label>
 	`;
 };
+
+export const CheckboxGroup = Variants({
+	Template,
+	stateDirection: "row",
+	sizeDirection: "row",
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Emphasized",
+			isEmphasized: true,
+		},
+		{
+			testHeading: "Truncation",
+			withStates: false,
+			label: "Checkbox with wrapping label text",
+			customStyles: { "max-inline-size": "100px" },
+		}
+	],
+	stateData: [
+		{
+			testHeading: "Checked",
+			isChecked: true,
+		},
+		{
+			testHeading: "Invalid",
+			isInvalid: true,
+		},
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Indeterminate",
+			isIndeterminate: true,
+		},
+		{
+			testHeading: "Read only",
+			isReadOnly: true,
+		},
+	]
+});

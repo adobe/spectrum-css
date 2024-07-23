@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ColorWheelGroup, Template } from "./template";
 
 /**
  * The color wheel component lets users visually change an individual channel of a color on a circular track.
@@ -36,7 +36,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = ColorWheelGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
@@ -59,7 +59,7 @@ WithColorArea.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = ColorWheelGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {

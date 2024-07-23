@@ -1,4 +1,5 @@
 import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -17,11 +18,9 @@ export const Template = ({
 	isInvalid = false,
 	isDisabled = false,
 	hideStepper = false,
+	id = getRandomId("stepper"),
 	customClasses = [],
-	id,
-	style = {
-		"--mod-actionbutton-icon-size": "10px",
-	},
+	customStyles = {},
 } = {}, context = {}) => {
 	let iconSize = "75";
 	switch (size) {
@@ -52,7 +51,10 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			style=${styleMap(style)}
+			style=${styleMap({
+				"--mod-actionbutton-icon-size": "10px",
+				...customStyles
+			})}
 		>
 			${Textfield({
 				size,
@@ -92,3 +94,48 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const StepperGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		},
+		{
+			testHeading: "Hide stepper",
+			hideStepper: true,
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+		{
+			testHeading: "Keyboard-focused",
+			isKeyboardFocused: true,
+		},
+		{
+			testHeading: "Invalid",
+			isInvalid: true,
+		},
+		{
+			testHeading: "Invalid + focused",
+			isInvalid: true,
+			isFocused: true,
+		},
+		{
+			testHeading: "Invalid + keyboard-focused",
+			isInvalid: true,
+			isFocused: true,
+		},
+	]
+});

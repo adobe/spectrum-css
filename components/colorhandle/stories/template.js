@@ -1,5 +1,6 @@
 import { Template as ColorLoupe } from "@spectrum-css/colorloupe/stories/template.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { when } from "lit/directives/when.js";
 
@@ -11,9 +12,8 @@ export const Template = ({
 	isDisabled = false,
 	isFocused = false,
 	isWithColorLoupe = false,
-	customStyles = {
-		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
-	},
+	selectedColor = "rgba(255 0 0 / 50%)",
+	customStyles = {},
 } = {}, context = {}) => {
 	return OpacityCheckerboard({
 		customClasses: [
@@ -27,6 +27,7 @@ export const Template = ({
 			${when(isWithColorLoupe, () => html`
 				${ColorLoupe({
 					isOpen: true,
+					isDisabled,
 					customStyles: {
 						"inset-inline-start": "unset",
 						"inset-block-start": "unset",
@@ -35,10 +36,49 @@ export const Template = ({
 			`)}
 		`],
 		customStyles: {
-			...customStyles,
 			"position": isWithColorLoupe ? "absolute" : undefined,
 			"inset-block": isWithColorLoupe ? "75%" : undefined,
 			"inset-inline": isWithColorLoupe ? "50%" : undefined,
+			...customStyles,
+			"--spectrum-picked-color": selectedColor,
 		},
 	}, context);
 };
+
+export const ColorHandleGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+			wrapperStyles: {
+				"inline-size": "50px",
+				"block-size": "20px",
+				"align-items": "flex-end",
+				"justify-content": "center",
+				"margin-block-end": "20px",
+			},
+		},
+		{
+			testHeading: "With color loupe",
+			isWithColorLoupe: true,
+			wrapperStyles: {
+				"inline-size": "60px",
+				"block-size": "120px",
+				"align-items": "flex-end",
+				"justify-content": "center",
+			},
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+			isFocused: false,
+		},
+		{
+			testHeading: "Focused",
+			isDisabled: false,
+			isFocused: true,
+		},
+	],
+});

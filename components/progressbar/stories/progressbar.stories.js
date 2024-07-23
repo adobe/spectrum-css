@@ -9,7 +9,6 @@ export default {
 	component: "ProgressBar",
 	argTypes: {
 		customWidth: { table: { disable: true } },
-		indeterminate: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -19,6 +18,15 @@ export default {
 			},
 			options: ["s", "m", "l", "xl"],
 			control: "select",
+		},
+		isIndeterminate: {
+			name: "Indeterminate state",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
 		},
 		labelPosition: {
 			name: "Label position",
@@ -47,7 +55,7 @@ export default {
 				category: "Content",
 			},
 			control: { type: "range", min: 0, max: 100,},
-			if: { arg: "indeterminate", truthy: false },
+			if: { arg: "isIndeterminate", truthy: false },
 		},
 		staticColor: {
 			name: "Static color",
@@ -65,7 +73,7 @@ export default {
 		size: "m",
 		labelPosition: "top",
 		value: 0,
-		label: "",
+		isIndeterminate: false,
 	},
 };
 

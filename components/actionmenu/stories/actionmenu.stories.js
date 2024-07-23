@@ -60,8 +60,6 @@ export default {
 export const Default = ActionMenuGroup.bind({});
 Default.args = {
 	isOpen: true,
-	id: "popover-0",
-	triggerId: "trigger-0",
 	position: "bottom",
 	label: "More actions",
 	iconName: "More",

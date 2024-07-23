@@ -1,4 +1,4 @@
-import { useArgs } from "@storybook/preview-api";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -11,11 +11,11 @@ export const Template = ({
 	size = "m",
 	label,
 	name,
-	isEmphasized,
-	isChecked,
-	isDisabled,
-	isReadOnly,
-	id,
+	isEmphasized = false,
+	isChecked = false,
+	isDisabled = false,
+	isReadOnly = false,
+	id = getRandomId("radio"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
@@ -54,3 +54,39 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const RadioGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default"
+		},
+		{
+			testHeading: "Emphasized",
+			isEmphasized: true,
+		},
+		{
+			testHeading: "Truncation",
+			withStates: false,
+			label: "Emphasized radio button label that is so long it has to wrap",
+			customStyles: {
+				"max-width": "220px",
+			}
+
+		}
+	],
+	stateData: [
+		{
+			testHeading: "Checked",
+			isChecked: true,
+		},
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Read Only",
+			isReadOnly: true,
+		},
+	]
+});

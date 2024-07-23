@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -16,7 +16,7 @@ export const Template = ({
 	isFocused = false,
 	size = "700",
 	hasLink,
-	id,
+	id = getRandomId("avatar"),
 	customClasses = [],
 } = {}, context = {}) => {
 	const { updateArgs } = context;
@@ -91,6 +91,7 @@ export const AvatarSizes = (args, context) => {
 
 export const AvatarGroup = Variants({
 	Template,
+	skipBorders: true,
 	stateData: [{
 		testHeading: "Not linked",
 		hasLink: false,

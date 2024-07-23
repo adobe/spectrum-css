@@ -1,5 +1,5 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { action } from "@storybook/addon-actions";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -25,13 +25,11 @@ export const Template = ({
 	useDOWAbbrev = false,
 	buttonSize = "s",
 	customClasses = [],
-	customStyles = {
-		"--mod-actionbutton-icon-size": "10px",
-	},
+	customStyles = {},
 	onDateClick,
 	previousHandler,
 	nextHandler,
-	id,
+	id = getRandomId("calendar"),
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 
@@ -265,7 +263,10 @@ export const Template = ({
 				[`${rootClass}--padded`]: padded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap(customStyles)}
+			style=${styleMap({
+				"--mod-actionbutton-icon-size": "10px",
+				...customStyles
+			})}
 			id=${ifDefined(id)}
 		>
 			<div class="${rootClass}-header">

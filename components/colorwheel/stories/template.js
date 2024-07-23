@@ -1,5 +1,6 @@
 import { Template as ColorArea } from "@spectrum-css/colorarea/stories/template.js";
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
@@ -12,9 +13,7 @@ export const Template = ({
 	isDisabled = false,
 	isFocused = false,
 	isWithColorArea = false,
-	colorHandleStyle = {
-		"--spectrum-picked-color": "rgb(255, 0, 0)",
-	},
+	colorHandleStyle = {},
 }, context) => html`
 	<div class=${classMap({
 		[rootClass]: true,
@@ -46,8 +45,36 @@ export const Template = ({
 		</div>
 		${ColorHandle({
 			isDisabled,
+			isFocused,
 			customClasses: [`${rootClass}-handle`],
-			customStyles: colorHandleStyle,
+			customStyles: {
+				"--spectrum-picked-color": "rgb(255, 0, 0)",
+				...colorHandleStyle
+			},
 		}, context)}
 		<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
 	</div>`;
+
+
+export const ColorWheelGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "With color area",
+			isWithColorArea: true,
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+	],
+});

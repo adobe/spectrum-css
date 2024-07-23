@@ -1,6 +1,4 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { Template as ProgressBar } from "./template.js";
 
 import "../index.css";
@@ -21,51 +19,25 @@ export const Template = ({
 	...item,
 }, context);
 
-export const MeterGroup = (args, context) => html`
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "none" : "contents"
-	})}>
-		${Template(args, context)}
-	</div>
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "flex" : "none",
-		"flex-direction": "column",
-		"align-items": "flex-start",
-		"gap": "32px",
-	})}>
-		${[{},
+
+export const MeterGroup = Variants({
+	Template,
+	skipBorders: true,
+	testData: [
 		{
-			heading: "Large",
-			size: "l",
+			testHeading: "Default",
+		},
+		...["positive", "negative", "notice"].map((fill) => ({
+			testHeading: `Fill: ${fill}`,
+			fill,
+		})),
+		{
+			testHeading: "Side label",
+			labelPosition: "side",
 		},
 		{
-			heading: "Positive",
-			fill: "positive",
-		},
-		{
-			heading: "Negative",
-			fill: "negative",
-		},
-		{
-			heading: "Notice",
-			fill: "notice",
-		},
-		{
-			heading: "Text overflow",
-			fill: "notice",
+			testHeading: "Text overflow",
 			label: "Storage space remaining for XYZ user"
-		}].map(({ heading, ...item }) => html`
-			<div>
-				${Typography({
-					semantics: "heading",
-					size: "xs",
-					content: [heading],
-				}, context)}
-				${Template({
-					...args,
-					...item,
-				}, context)}
-			</div>
-		`)}
-	</div>
-`;
+		},
+	],
+});

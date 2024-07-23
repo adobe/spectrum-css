@@ -1,4 +1,5 @@
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -22,7 +23,7 @@ export const Template = ({
 	onclick,
 	customClasses = [],
 	customStyles = {},
-	id,
+	id = getRandomId("thumbnail"),
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
@@ -125,3 +126,34 @@ export const Template = ({
 		</div>
 	`;
 };
+
+
+export const ThumbnailGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default"
+		},
+		{
+			testHeading: "Layer",
+			isLayer: true,
+			isSelected: false,
+		},
+		{
+			testHeading: "With background",
+			backgroundColor: "orange",
+		}
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Selected",
+			isSelected: true,
+			// Use the test heading as the key for which stories to apply this state to
+			include: ["Layer"],
+		}
+	]
+});

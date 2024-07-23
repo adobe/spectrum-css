@@ -102,11 +102,22 @@ export default {
 };
 
 const Variants = (args, context) => {
-	return window.isChromatic() ? TestTemplate(args, context) : Template({
-		...args,
-		iconName: args.iconName ?? args.uiIconName,
-		setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
-	}, context);
+	return html`
+		<div style=${styleMap({
+			"display": window.isChromatic() ? "none" : undefined,
+		})}>
+			${TestTemplate(args, context)}
+		</div>
+		<div style=${styleMap({
+			"display": window.isChromatic() ? undefined : "none",
+		})}>
+			${TestTemplate({
+				...args,
+				iconName: args.iconName ?? args.uiIconName,
+				setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+			}, context)}
+		</div>
+	`;
 };
 
 export const Default = Variants.bind({});

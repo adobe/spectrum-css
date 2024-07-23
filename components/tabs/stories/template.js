@@ -1,6 +1,7 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -129,3 +130,52 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const TabsGroups = Variants({
+	Template,
+	wrapperStyles: {
+		"gap": "80px",
+	},
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Emphasized",
+			isEmphasized: true,
+		},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		},
+		{
+			testHeading: "Compact",
+			isCompact: true,
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Label only",
+			content: [
+				{
+					id: "tab-1",
+					label: "Tab 1",
+					isSelected: true,
+				},
+				{
+					id: "tab-2",
+					label: "Tab 2",
+				},
+				{
+					id: "tab-3",
+					label: "Tab 3",
+					isDisabled: true,
+				},
+			],
+		},
+		{
+			testHeading: "Icon only",
+			iconOnly: true
+		},
+	]
+});

@@ -1,8 +1,9 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
@@ -13,7 +14,7 @@ export const TreeViewItem = ({
 	rootClass = "spectrum-TreeView",
 	size = "m",
 	type,
-	id,
+	id = getRandomId("treeview-item"),
 	link,
 	label,
 	isSelected,
@@ -131,7 +132,9 @@ export const Template = ({
 	variant,
 	isQuiet,
 	items,
-}, context) => html`
+	id = getRandomId("treeview"),
+	testId,
+} = {}, context = {}) => html`
 	<ul
 		class=${classMap({
 			[rootClass]: true,
@@ -142,6 +145,8 @@ export const Template = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		style=${styleMap(customStyles)}
+		id=${id}
+		data-testid=${ifDefined(testId)}
 	>
 		${repeat(
 			items,
@@ -156,8 +161,11 @@ export const Template = ({
 
 export const TreeViewGroup = Variants({
 	Template,
+	skipBorders: true,
 	testData: [
-		{},
+		{
+			testHeading: "Default",
+		},
 		{
 			testHeading: "Quiet",
 			isQuiet: true,
@@ -193,7 +201,7 @@ export const TreeViewGroup = Variants({
 						},
 						{
 							id: "label4",
-							label: "This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
+							label: "Label 4",
 							link: "#",
 							icon: "Document",
 						},
@@ -325,7 +333,7 @@ export const TreeViewGroup = Variants({
 			items: [
 				{
 					id: "label1",
-					label: "Label 1. This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
+					label: "Label 1",
 					link: "#",
 					isSelected: true,
 				},

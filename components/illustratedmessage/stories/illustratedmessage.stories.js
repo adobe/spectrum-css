@@ -68,6 +68,9 @@ AccentColor.args = {
 	],
 	useAccentColor: true,
 };
+AccentColor.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = IllustratedMessageGroup.bind({});

@@ -8,7 +8,7 @@ export const withArgEvents = makeDecorator({
 	name: "withArgEvents",
 	parameterName: "argEvents",
 	wrapper: (StoryFn, context) => {
-		const [, updateArgs] = useArgs();
+		const [, updateArgs] = useArgs(context.args);
 
 		// Bind the updateArgs function for use in nested templates
 		context.updateArgs = updateArgs;

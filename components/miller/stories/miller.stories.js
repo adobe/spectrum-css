@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { MillerGroup, Template } from "./template";
 
 /**
  * Miller columns are a browsing/visualization technique that can be applied to tree structures. The columns allow for multiple levels of the hierarchy to be open at once and provide a visual representation of the current location.
@@ -79,10 +79,11 @@ export default {
 	},
 };
 
-export const BranchesSelectable = Template.bind({});
+export const BranchesSelectable = MillerGroup.bind({});
 BranchesSelectable.args = {};
 
 export const FilesSelectable = Template.bind({});
+FilesSelectable.tags = ["autodocs", "!dev"];
 FilesSelectable.args = {
 	columns: [
 		{
@@ -144,9 +145,14 @@ FilesSelectable.args = {
 		},
 	],
 };
+FilesSelectable.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	}
+};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = MillerGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {

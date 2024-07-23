@@ -39,12 +39,13 @@ export default {
 		variant: "confirmation",
 	},
 	parameters: {
+		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-AlertDialog button"],
 		},
 		docs: {
 			story: {
-				height: "300px"
+				height: "300px",
 			}
 		},
 		componentVersion: version,
@@ -59,7 +60,7 @@ export default {
 // it doesn't look like the background color just stops without wrapping the
 // entire container of templates.
 const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
-	acc[key] = { 
+	acc[key] = {
 		...modes[key],
 		viewport: {
 			height: "2000px",

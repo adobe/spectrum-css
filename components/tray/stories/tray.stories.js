@@ -1,4 +1,5 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
+import { disableDefaultModes, viewports } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { TrayGroup } from "./template";
@@ -27,8 +28,13 @@ export default {
 		isOpen: false,
 	},
 	parameters: {
+		layout: "fullscreen",
 		chromatic: {
-			delay: 2000,
+			modes: {
+				"Viewport | small": {
+					viewport: viewports.small,
+				},
+			},
 		},
 		componentVersion: version,
 	}
@@ -45,17 +51,6 @@ Default.args = {
 		})
 	],
 };
-Default.parameters = {
-	chromatic: {
-		modes: {
-			"Small Viewport": {
-				viewport: {
-					width: 480,
-				},
-			},
-		}
-	},
-};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
@@ -64,8 +59,6 @@ WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: {
-			...Default.parameters.chromatic.modes,
-		}
+		modes: disableDefaultModes,
 	},
 };

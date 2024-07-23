@@ -1,3 +1,4 @@
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { Template as Swatch } from "@spectrum-css/swatch/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -14,8 +15,8 @@ export const Template = ({
 	rounding = "regular",
 	items = [],
 	customStyles = {},
-	id,
-}, context) => html`
+	id = getRandomId("swatchgroup"),
+} = {}, context = {}) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -36,3 +37,10 @@ export const Template = ({
 		}, context))}
 	</div>
 `;
+
+export const SwatchGroup = Variants({
+	Template,
+	testData: [
+		{}
+	],
+});

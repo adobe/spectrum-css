@@ -1,13 +1,14 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 
 export const Template = ({
-	id,
+	id = getRandomId("actionmenu"),
 	testId,
-	triggerId,
+	triggerId = getRandomId("actionmenu-trigger"),
 	customClasses = [],
+	customStyles = {},
 	items = [],
 	isOpen = false,
 	label,
@@ -15,22 +16,33 @@ export const Template = ({
 	size = "m",
 	...popoverArgs
 } = {}, context = {}) => {
+	const { updateArgs } = context;
 	return Popover({
+		size,
 		isOpen,
+		withTip: false,
 		id,
 		testId: testId ?? id,
 		triggerId,
-		content: [
-			Menu({ items, isOpen, size }, context)
-		],
+		position: "bottom-start",
+		customStyles: {
+			"inset-block-start": "50px",
+			"inset-inline-start": "20px",
+			...customStyles,
+		},
 		trigger: (passthroughs) => ActionButton({
+			...passthroughs,
 			size,
 			label,
 			hasPopup: "menu",
 			iconName,
+			id: triggerId,
 			customClasses,
-			...passthroughs,
+			onclick: () => updateArgs({ isOpen: !isOpen }),
 		}, context),
+		content: [
+			Menu({ items, isOpen, size }, context)
+		],
 		...popoverArgs,
 	});
 };
@@ -38,16 +50,13 @@ export const Template = ({
 export const ActionMenuGroup = Variants({
 	Template,
 	testData: [{
-		id: "popover-1",
-		triggerId: "trigger-1",
-		customContainerStyles: {
-			"block-size": "250px",
+		wrapperStyles: {
+			"min-block-size": "200px",
+			"align-items": "flex-start",
 		},
 	}, {
 		testHeading: "Closed menu",
 		isOpen: false,
-		id: "popover-2",
-		triggerId: "trigger-2",
 		items: [
 			{
 				label: "Edit",
@@ -62,7 +71,5 @@ export const ActionMenuGroup = Variants({
 		testHeading: "Custom icon",
 		isOpen: false,
 		iconName: "Add",
-		id: "popover-3",
-		triggerId: "trigger-3",
 	}],
 });

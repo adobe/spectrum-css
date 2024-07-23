@@ -146,7 +146,7 @@ Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true
 };
-Focused.parameters = {
+Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

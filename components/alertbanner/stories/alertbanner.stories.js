@@ -59,6 +59,9 @@ Default.args = {
 	isOpen: true,
 	hasActionButton: true,
 	text: "Your trial has expired",
+	customStyles: {
+		"inline-size": "600px",
+	}
 };
 
 // ********* VRT ONLY ********* //

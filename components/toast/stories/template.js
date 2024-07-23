@@ -1,6 +1,7 @@
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -16,7 +17,7 @@ export const Template = ({
 	variant,
 	customClasses = [],
 	customStyles = {},
-	id,
+	id = getRandomId("toast"),
 } = {}, context = {}) => {
 	let iconName = "Info";
 	if (variant === "negative") iconName = "Alert";
@@ -61,3 +62,30 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const ToastGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default"
+		},
+		{
+			testHeading: "Info",
+			variant: "info",
+			message: "A new version of Lightroom Classic is now available",
+			inlineButtonLabel: "Update",
+		},
+		{
+			testHeading: "Negative",
+			variant: "negative",
+			message: "Unable to delete file",
+			inlineButtonLabel: "Eject",
+		},
+		{
+			testHeading: "Positive",
+			variant: "positive",
+			message: "Copied to clipboard",
+			inlineButtonLabel: "Eject",
+		}
+	]
+});

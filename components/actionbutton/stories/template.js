@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -62,7 +62,7 @@ export const Template = ({
 	customStyles = {},
 	customIconClasses = [],
 	onclick,
-	id,
+	id = getRandomId("actionbutton"),
 	testId,
 	role = "button",
 } = {}, context = {}) => {
@@ -88,8 +88,8 @@ export const Template = ({
 				["is-active"]: isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			id=${ifDefined(id)}
-			data-testid=${ifDefined(testId)}
+			id=${id}
+			data-testid=${testId ?? id}
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
@@ -157,10 +157,10 @@ const Truncation = (args, context) => {
 
 export const ActionButtonGroup = Variants({
 	Template: ActionButtons,
-	stateDirection: "column",
+	sizeDirection: "row",
 	testData: [
 		{
-			testHeading: "Standard"
+			testHeading: "Standard",
 		},
 		{
 			testHeading: "Emphasized",

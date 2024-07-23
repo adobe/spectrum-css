@@ -24,6 +24,13 @@ export default {
 			type: { name: "array" },
 			table: { disable: true },
 		},
+		selectedColor: {
+			name: "Selected color",
+			description: "The color of the handle.",
+			type: { name: "string" },
+			accept: "hex, rgb, rgba",
+			control: "color",
+		},
 		gradientType: {
 			name: "Gradient type",
 			description: "The gradient can be defined in the markup using CSS or with an image.",
@@ -38,6 +45,7 @@ export default {
 		isFocused: false,
 		gradientType: "gradient",
 		vertical: false,
+		selectedColor: "rgba(255 0 0 / 0%)",
 	},
 	parameters: {
 		componentVersion: version,
@@ -74,9 +82,7 @@ Vertical.parameters = {
 export const Alpha = Template.bind({});
 Alpha.args = {
 	gradientStops: ["rgba(0, 0, 0, 1) 0%", "rgba(0, 0, 0, 0) 100%"],
-	colorHandleStyle: {
-		"--spectrum-picked-color": "rgba(0, 0, 0, 1)",
-	},
+	selectedColor: "rgba(0, 0, 0, 1)",
 };
 Alpha.tags = ["autodocs", "!dev"];
 Alpha.parameters = {
@@ -86,8 +92,8 @@ Alpha.parameters = {
 export const WithImage = Default.bind({});
 WithImage.args = {
 	gradientType: "image",
+	selectedColor: "#df6a7d",
 	colorHandleStyle: {
-		"--spectrum-picked-color": "#df6a7d",
 		"inset-inline-start": "50%",
 	},
 };

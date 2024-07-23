@@ -78,26 +78,29 @@ export const Default = FieldGroupSet.bind({});
 Default.args = {
 	label: "Select one of the following options:",
 	items: [
-		Radio({
+		(passthroughs, context) => Radio({
+			...passthroughs,
 			id: "apple",
 			label: "Apples are best",
 			customClasses: ["spectrum-FieldGroup-item"],
-		}),
-		Radio({
+		}, context),
+		(passthroughs, context) => Radio({
+			...passthroughs,
 			id: "banana",
 			label: "Bananas forever",
 			customClasses: ["spectrum-FieldGroup-item"],
-		}),
-		Radio({
+		}, context),
+		(passthroughs, context) => Radio({
+			...passthroughs,
 			id: "pear",
 			label: "Pears or bust",
 			customClasses: ["spectrum-FieldGroup-item"],
-		}),
+		}, context),
 	],
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = FieldGroupSet.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {

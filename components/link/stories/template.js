@@ -1,3 +1,4 @@
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators/utilities.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -12,7 +13,11 @@ export const Template = ({
 	variant,
 	staticColor,
 	isQuiet = false,
-	id,
+	isHovered = false,
+	isActive = false,
+	isFocused = false,
+	isVisited = false,
+	id = getRandomId("link"),
 	customClasses = [],
 }) => html`
 	<a
@@ -22,6 +27,10 @@ export const Template = ({
 			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 			[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
 				typeof staticColor !== "undefined",
+			"is-hover": isHovered,
+			"is-active": isActive,
+			"is-focus-visible": isFocused,
+			"is-visited": isVisited,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
@@ -30,3 +39,38 @@ export const Template = ({
 		${text}
 	</a>
 `;
+
+export const LinkGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Secondary",
+			variant: "secondary",
+		},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		}
+	],
+	stateData: [
+		{
+			testHeading: "Hovered",
+			isHovered: true,
+		},
+		{
+			testHeading: "Active",
+			isActive: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+		{
+			testHeading: "Visited",
+			isVisited: true,
+		},
+	],
+});

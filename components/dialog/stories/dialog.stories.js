@@ -1,9 +1,9 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
-import modes, {disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
+import modes, { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
-import { DialogGroup } from "./template";
+import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./template";
 
 /**
  * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.
@@ -12,18 +12,38 @@ export default {
 	title: "Dialog",
 	component: "Dialog",
 	argTypes: {
-		heading: {
-			name: "Heading",
-			type: { name: "string" },
+		heading: { table: { disable: true } },
+		content: { table: { disable: true } },
+		footer: { table: { disable: true } },
+		hasFooter: {
+			name: "Has footer",
+			type: { name: "boolean" },
 			table: {
-				type: { summary: "string" },
+				type: { summary: "boolean" },
 				category: "Component",
 			},
-			control: { type: "text" },
+			control: "boolean",
 		},
-		content: { table: { disable: true } },
 		isDismissable: {
 			name: "Dismissable",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		isFullScreen: {
+			name: "Fullscreen",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		isFullScreenTakeover: {
+			name: "Fullscreen takeover",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -44,11 +64,15 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Dialog",
+		hasFooter: true,
 		isDismissable: true,
+		isFullScreen: false,
+		isFullScreenTakeover: false,
 		isOpen: true,
 		showModal: true,
 	},
 	parameters: {
+		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-Dialog button"],
 		},
@@ -70,7 +94,7 @@ export default {
 // it doesn't look like the background color just stops without wrapping the
 // entire container of templates.
 const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
-	acc[key] = { 
+	acc[key] = {
 		...modes[key],
 		viewport: {
 			height: "1200px",
@@ -80,7 +104,7 @@ const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
 }, {});
 
 const mobileModeWithTallerViewport = Object.keys(mobile).reduce((acc, key) => {
-	acc[key] = { 
+	acc[key] = {
 		...mobile[key],
 		viewport: {
 			height: "1000px",
@@ -90,6 +114,7 @@ const mobileModeWithTallerViewport = Object.keys(mobile).reduce((acc, key) => {
 }, {});
 
 export const Default = DialogGroup.bind({});
+Default.tags = ["autodocs", "dev", "test"];
 Default.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	content: [
@@ -107,13 +132,29 @@ Default.parameters = {
 	chromatic: {
 		modes: {
 			...defaultModesWithTallerViewport,
-			...mobileModeWithTallerViewport }
+			...mobileModeWithTallerViewport
+		}
 	},
 };
 
+export const Fullscreen = DialogFullscreen.bind({});
+Fullscreen.tags = ["!autodocs", "dev", "test"];
+Fullscreen.args = {
+	...Default.args,
+};
+
+export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
+FullscreenTakeover.tags = ["!autodocs", "dev", "test"];
+FullscreenTakeover.args = {
+	...Default.args,
+};
+
+
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
-WithForcedColors.args = Default.args;
+export const WithForcedColors = DialogGroup.bind({});
+WithForcedColors.args = {
+	...Default.args,
+};
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {

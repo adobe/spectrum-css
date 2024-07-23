@@ -193,10 +193,13 @@ TextArea.args = {
 	grows: true,
 	value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
 };
+TextArea.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
 // @todo should this show text field and text area in the same snapshot?
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = TextFieldGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
