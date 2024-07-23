@@ -158,21 +158,6 @@ export const Template = ({
 				hideIcon: true,
 			}, context)
 		)}
-		${when(content.length !== 0, () =>
-				Popover({
-					isOpen: isOpen && !isDisabled,
-					withTip: false,
-					position: "bottom",
-					isQuiet,
-					trigger: undefined,
-					customStyles: {
-						"inset-block-start": "30px",
-						"inset-inline-start": "50px",
-						...customPopoverStyles
-					},
-					content,
-				}, context)
-		)}
 		${when(withSwitch, () => Switch({
 			size,
 			label: "Toggle switch",

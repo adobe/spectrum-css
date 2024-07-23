@@ -115,10 +115,15 @@ Default.args = {
 	],
 };
 
+// ********* DOCS ONLY ********* //
 export const Nested = Template.bind({});
 Nested.args = {
 	position: "right-top",
 	isOpen: true,
+	customStyles: {
+		"inset-inline-start": "60px",
+		"inset-block-start": "0",
+	},
 	trigger: (passthroughs) => ActionButton({
 		label: "Menu",
 		...passthroughs,
@@ -138,8 +143,8 @@ Nested.args = {
 			position: "right-top",
 			isOpen: true,
 			customStyles: {
-				"inset-inline-start": "100px",
-				"inset-block-start": "40px",
+				"inset-inline-start": "110px",
+				"inset-block-start": "0",
 			},
 			trigger: (passthroughs, context) => ActionButton({
 				label: "More options",

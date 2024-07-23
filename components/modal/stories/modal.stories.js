@@ -37,6 +37,9 @@ export default {
 	},
 	parameters: {
 		layout: "fullscreen",
+		docs: {
+			story: { height: "600px" },
+		},
 		componentVersion: version,
 	},
 	decorators: [

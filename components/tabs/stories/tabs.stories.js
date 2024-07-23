@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { TabsGroups } from "./tabs.test";
+import { Template } from "./template";
 
 /**
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.
@@ -117,7 +118,8 @@ WithForcedColors.parameters = {
 	},
 };
 
-export const Vertical = TabsGroups.bind({});
+// ********* DOCS ONLY ********* //
+export const Vertical = Template.bind({});
 Vertical.tags = ["autodocs", "!dev"];
 Vertical.args = {
 	orientation: "vertical",
@@ -128,7 +130,7 @@ Vertical.parameters = {
 	},
 };
 
-export const Overflow = TabsGroups.bind({});
+export const Overflow = Template.bind({});
 Overflow.tags = ["autodocs", "!dev"];
 Overflow.args = {
 	orientation: "overflow",
