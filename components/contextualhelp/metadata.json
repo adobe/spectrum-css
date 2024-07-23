@@ -1,0 +1,43 @@
+{
+  "selectors": [
+    ".spectrum--large .spectrum-ContextualHelp",
+    ".spectrum-ContextualHelp",
+    ".spectrum-ContextualHelp-button",
+    ".spectrum-ContextualHelp-link",
+    ".spectrum-ContextualHelp-popover",
+    ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body,\n.spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading",
+    ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading"
+  ],
+  "mods": [
+    "--mod-contextual-help-body-color",
+    "--mod-contextual-help-heading-color",
+    "--mod-spectrum-contextual-help-body-size",
+    "--mod-spectrum-contextual-help-content-spacing",
+    "--mod-spectrum-contextual-help-heading-size",
+    "--mod-spectrum-contextual-help-link-spacing",
+    "--mod-spectrum-contextual-help-minimum-width",
+    "--mod-spectrum-contextual-help-padding"
+  ],
+  "spectrum": [
+    "--spectrum-body-color",
+    "--spectrum-contextual-help-body-color",
+    "--spectrum-contextual-help-body-size",
+    "--spectrum-contextual-help-content-spacing",
+    "--spectrum-contextual-help-heading-color",
+    "--spectrum-contextual-help-heading-size",
+    "--spectrum-contextual-help-link-spacing",
+    "--spectrum-contextual-help-minimum-width",
+    "--spectrum-contextual-help-padding",
+    "--spectrum-contextual-help-title-size",
+    "--spectrum-heading-color",
+    "--spectrum-spacing-100",
+    "--spectrum-spacing-200",
+    "--spectrum-spacing-300",
+    "--spectrum-spacing-400"
+  ],
+  "system": [],
+  "a11y": [
+    "--highcontrast-contextual-help-body-color",
+    "--highcontrast-contextual-help-heading-color"
+  ]
+}

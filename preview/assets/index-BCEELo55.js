@@ -1,0 +1,1 @@
+const o={"Context: Spectrum 1":{scale:"medium",color:"light",textDirection:"ltr",context:"spectrum1"},"Context: Express":{context:"express"},"Dark | RTL":{color:"dark",textDirection:"rtl"}},r={...Object.keys(o).reduce((e,t)=>(e[t]={disable:!0},e),{})},s={Mobile:{scale:"large"}};export{s as a,r as d,o as m};

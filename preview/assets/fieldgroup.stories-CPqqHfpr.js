@@ -1,0 +1,46 @@
+import{d as ae}from"./index-BCEELo55.js";import{e as te}from"./states-DzrSzBKQ.js";import{R as oe,T as C}from"./radio.stories-BOB-GwY3.js";import{T as R}from"./template-BSRXx7Ch.js";import{T as ie}from"./template-D7lOzDBB.js";import{T as re}from"./template-CO7DuZY3.js";import{Template as se}from"./template-Df-YB4AQ.js";import"./lit-element-CJjJlyWZ.js";import{x as z}from"./lit-html-BdGv-Ldy.js";import{a as L}from"./class-map-sTkR_Npl.js";import{o as p}from"./if-defined-Bo9G1hLT.js";import{c as ne}from"./repeat-Du-egFmu.js";import{o as F}from"./style-map-yx2CMG_J.js";import{n as q}from"./when-BR7zwNJC.js";const de="5.1.1",e=({rootClass:s="spectrum-FieldGroup",customClasses:d=[],layout:l="vertical",inputType:T="radio",isReadOnly:X=!1,isRequired:Y=!1,label:w,labelPosition:S,isInvalid:I,helpText:G,items:Z=[]}={},$={})=>z`
+	<div
+		class=${L({[s]:!0,[`${s}--${S}label`]:typeof S<"u",[`${s}--${l}`]:typeof l<"u",...d.reduce((n,ee)=>({...n,[ee]:!0}),{})})}
+		aria-invalid=${p(I?"true":void 0)}
+		type=${p(T)}
+		aria-readonly=${p(X?"true":void 0)}
+		aria-required=${p(Y?"true":void 0)}
+	>
+		${q(w,()=>ie({size:"m",label:w,alignment:S==="side"?"right":"top"},$))}
+		<div
+			class=${L({[`${s}InputLayout`]:!0})}
+		>
+			${ne(Z,n=>n.id,n=>typeof n=="function"?n({},$):n)}
+			${q(G,()=>re({size:"m",text:G,variant:I?"negative":"neutral"},$))}
+		</div>
+	</div>
+`,le=(s,d)=>z`
+	<div
+		style=${F({display:window.isChromatic()?"none":"contents"})}
+	>
+		${e(s,d)}
+	</div>
+	<div
+		style=${F({display:window.isChromatic()?"flex":"none","flex-direction":"column","align-items":"flex-start",gap:"32px"})}
+	>
+		${[{},{heading:"Horizontal",layout:"horizontal",items:[R({id:"apple",label:"Apples are best",customClasses:["spectrum-FieldGroup-item"]}),R({id:"banana",label:"Bananas forever",customClasses:["spectrum-FieldGroup-item"]}),R({id:"cherry",label:"Cherries ftw",customClasses:["spectrum-FieldGroup-item"]})]},{heading:"Label Position: Side",label:"Pick one:",labelPosition:"side",helpText:"Select an option to continue."},{heading:"Invalid",isInvalid:!0,helpText:"Select an option to continue."}].map(({heading:l,...T})=>z`
+				<div>
+					${se({semantics:"heading",size:"l",content:[l],customClasses:["chromatic-ignore"]})}
+					<div
+						style=${F({padding:"12px",border:"1px solid var(--spectrum-gray-200)","border-radius":"4px"})}
+					>
+						${e({...s,...T},d)}
+					</div>
+				</div>
+			`)}
+	</div>
+`;var H,O;const pe={title:"Field group",component:"FieldGroup",argTypes:{inputType:{name:"Input type",type:{name:"string"},table:{type:{summary:"string"},category:"Component"},options:["checkbox","radio"],control:"select"},layout:{name:"Layout",type:{name:"string",required:!0},table:{type:{summary:"string"},category:"Component"},options:["vertical","horizontal"],control:"select"},labelPosition:{name:"Label Position",type:{name:"string"},table:{type:{summary:"string"},category:"Component"},options:["top","side"],control:"select"},isInvalid:te,items:{table:{disable:!0}},fieldLabel:{table:{disable:!0}},helpText:{table:{disable:!0}},isRequired:{table:{disable:!0}},isReadOnly:{table:{disable:!0}}},args:{rootClass:"spectrum-FieldGroup",inputType:"radio",labelPosition:"top",layout:"vertical",isInvalid:!1,isRequired:!1},parameters:{actions:{handles:[...((O=(H=oe.parameters)==null?void 0:H.actions)==null?void 0:O.handles)??[]]},componentVersion:de,docs:{description:{component:`A field group is a group of fields, usually radios (also known as a radio group) or checkboxes
+(also known as a checkbox group). A field group is composed of a field label, a group of radio
+inputs or checkboxes, and an optional help text component. The field label within the field group
+can be used to mark a field group as optional or required. The field group items other than the
+label must be wrapped in a nested \`div\` with \`.spectrum-FieldGroupInputLayout\` to control their
+layout separately from the label. Help text may or may not appear below a field group and is
+necessary when denoting invalid checkbox fields, invalid radio button fields, and required
+fields. Invalid radio buttons and checkboxes are signified by negative help text.`}}}},c=le.bind({});c.args={label:"Select one of the following options:",items:[C({id:"apple",label:"Apples are best",customClasses:["spectrum-FieldGroup-item"]}),C({id:"banana",label:"Bananas forever",customClasses:["spectrum-FieldGroup-item"]}),C({id:"pear",label:"Pears or bust",customClasses:["spectrum-FieldGroup-item"]})]};const a=c.bind({});a.args=c.args;a.tags=["!autodocs","!dev","test"];a.parameters={chromatic:{forcedColors:"active",modes:ae}};const u=e.bind({});u.tags=["autodocs","!dev"];u.args={layout:"vertical",inputType:"radio"};u.parameters={chromatic:{disableSnapshot:!0}};const m=e.bind({});m.tags=["autodocs","!dev"];m.args={layout:"vertical",inputType:"checkbox"};m.parameters={chromatic:{disableSnapshot:!0}};const b=e.bind({});b.tags=["autodocs","!dev"];b.args={layout:"horizontal",inputType:"radio"};b.parameters={chromatic:{disableSnapshot:!0}};const h=e.bind({});h.tags=["autodocs","!dev"];h.args={layout:"horizontal",inputType:"checkbox"};h.parameters={chromatic:{disableSnapshot:!0}};const g=e.bind({});g.tags=["autodocs","!dev"];g.args={layout:"horizontal",inputType:"radio",isInvalid:!0};g.parameters={chromatic:{disableSnapshot:!0}};const y=e.bind({});y.tags=["autodocs","!dev"];y.args={layout:"horizontal",inputType:"checkbox",isInvalid:!0};y.parameters={chromatic:{disableSnapshot:!0}};const t=e.bind({});t.tags=["autodocs","!dev"];t.args={inputType:"radio",fieldLabel:"Radio group label (required)"};t.parameters={chromatic:{disableSnapshot:!0}};const f=e.bind({});f.tags=["autodocs","!dev"];f.args={fieldLabel:"Checkbox group label",inputType:"checkbox",isRequired:!0};f.parameters={chromatic:{disableSnapshot:!0}};const o=e.bind({});o.tags=["autodocs","!dev"];o.args={fieldLabel:"Checkbox group label (optional)",helpText:"",inputType:"checkbox"};o.parameters={chromatic:{disableSnapshot:!0}};const i=e.bind({});i.tags=["autodocs","!dev"];i.args={labelPosition:"side",inputType:"radio",layout:"vertical"};i.parameters={chromatic:{disableSnapshot:!0}};const v=e.bind({});v.tags=["autodocs","!dev"];v.args={labelPosition:"side",inputType:"radio",layout:"horizontal"};v.parameters={chromatic:{disableSnapshot:!0}};const x=e.bind({});x.tags=["autodocs","!dev"];x.args={labelPosition:"side",inputType:"checkbox",layout:"vertical"};x.parameters={chromatic:{disableSnapshot:!0}};const k=e.bind({});k.tags=["autodocs","!dev"];k.args={labelPosition:"side",inputType:"checkbox",layout:"horizontal"};k.parameters={chromatic:{disableSnapshot:!0}};const r=e.bind({});r.tags=["autodocs","!dev"];r.args={isReadOnly:!0,inputType:"checkbox"};r.parameters={chromatic:{disableSnapshot:!0}};var P,V,A;a.parameters={...a.parameters,docs:{...(P=a.parameters)==null?void 0:P.docs,source:{originalSource:"FieldGroupSet.bind({})",...(A=(V=a.parameters)==null?void 0:V.docs)==null?void 0:A.source}}};var _,D,j;t.parameters={...t.parameters,docs:{...(_=t.parameters)==null?void 0:_.docs,description:{story:`Field groups can be marked as optional or required, depending on the situation.
+
+If required, the field group must either contain a "(required)" label or an asterisk. If an asterisk is used, help text must explain what the asterisk means.`,...(j=(D=t.parameters)==null?void 0:D.docs)==null?void 0:j.description}}};var B,E,M;o.parameters={...o.parameters,docs:{...(B=o.parameters)==null?void 0:B.docs,description:{story:'Optional field groups can be denoted with text added to the end of the label "(optional)" or have no indication at all.',...(M=(E=o.parameters)==null?void 0:E.docs)==null?void 0:M.description}}};var W,U,J;i.parameters={...i.parameters,docs:{...(W=i.parameters)==null?void 0:W.docs,description:{story:"The field group label has two layout options: the label can be top aligned with `spectrum-FieldGroup spectrum-FieldGroup--toplabel`, or side aligned with `spectrum-FieldGroup spectrum-FieldGroup--sidelabel`.",...(J=(U=i.parameters)==null?void 0:U.docs)==null?void 0:J.description}}};var K,N,Q;r.parameters={...r.parameters,docs:{...(K=r.parameters)==null?void 0:K.docs,description:{story:"A group of read-only checkboxes that have been checked. In U.S. English, use commas to delineate items within read-only checkbox groups. In other languages, use the locale-specific formatting.",...(Q=(N=r.parameters)==null?void 0:N.docs)==null?void 0:Q.description}}};const ce=["Default","WithForcedColors","VerticalRadio","VerticalCheckbox","HorizontalRadio","HorizontalCheckbox","InvalidRadio","InvalidCheckbox","Required","RequiredAsterisk","Optional","VerticalSideLabelRadio","HorizontalSideLabelRadio","VerticalSideLabelCheckbox","HorizontalSideLabelCheckbox","ReadOnly"],Re=Object.freeze(Object.defineProperty({__proto__:null,Default:c,HorizontalCheckbox:h,HorizontalRadio:b,HorizontalSideLabelCheckbox:k,HorizontalSideLabelRadio:v,InvalidCheckbox:y,InvalidRadio:g,Optional:o,ReadOnly:r,Required:t,RequiredAsterisk:f,VerticalCheckbox:m,VerticalRadio:u,VerticalSideLabelCheckbox:x,VerticalSideLabelRadio:i,WithForcedColors:a,__namedExportsOrder:ce,default:pe},Symbol.toStringTag,{value:"Module"}));export{Re as F,b as H,g as I,o as O,t as R,u as V,m as a,h as b,y as c,f as d,i as e,v as f,x as g,k as h,r as i};

@@ -1,0 +1,123 @@
+import{a as z,d as j}from"./index-BCEELo55.js";import{Template as J}from"./template-Df-YB4AQ.js";import"./lit-element-CJjJlyWZ.js";import{x as a}from"./lit-html-BdGv-Ldy.js";import{o as d}from"./style-map-yx2CMG_J.js";import{n as K}from"./when-BR7zwNJC.js";import{T as l}from"./template-D5ShUZ_q.js";const q="7.1.1",_=["123.svg","3DMaterials.svg","ABC.svg","AEMScreens.svg","Actions.svg","AdDisplay.svg","AdPrint.svg","Add.svg","AddCircle.svg","AddTo.svg","AddToSelection.svg","Airplane.svg","Alert.svg","AlertAdd.svg","AlertCheck.svg","AlertCircle.svg","AlertCircleFilled.svg","Algorithm.svg","Alias.svg","AlignBottom.svg","AlignCenter.svg","AlignLeft.svg","AlignMiddle.svg","AlignRight.svg","AlignTop.svg","Amusementpark.svg","Anchor.svg","AnchorSelect.svg","Annotate.svg","AnnotatePen.svg","Answer.svg","AnswerFavorite.svg","App.svg","AppRefresh.svg","AppleFiles.svg","ApplicationDelivery.svg","ApproveReject.svg","Apps.svg","Archive.svg","ArchiveRemove.svg","ArrowDown.svg","ArrowLeft.svg","ArrowRight.svg","ArrowUp.svg","ArrowUpRight.svg","Artboard.svg","Article.svg","Asset.svg","AssetCheck.svg","AssetsAdded.svg","AssetsDownloaded.svg","AssetsExpired.svg","AssetsLinkedPublished.svg","AssetsModified.svg","AssetsPublished.svg","Asterisk.svg","At.svg","Attach.svg","AttachmentExclude.svg","Attributes.svg","Audio.svg","AutomatedSegment.svg","Back.svg","Back30Seconds.svg","BackAndroid.svg","Beaker.svg","BeakerCheck.svg","BeakerShare.svg","Bell.svg","BidRule.svg","BidRuleAdd.svg","Blower.svg","Blur.svg","Book.svg","Bookmark.svg","BookmarkSingle.svg","BookmarkSingleOutline.svg","BookmarkSmall.svg","BookmarkSmallOutline.svg","Boolean.svg","Border.svg","Box.svg","BoxAdd.svg","BoxExport.svg","BoxImport.svg","Brackets.svg","BracketsSquare.svg","Branch1.svg","Branch2.svg","Branch3.svg","BranchCircle.svg","BreadcrumbNavigation.svg","Breakdown.svg","BreakdownAdd.svg","Briefcase.svg","Browse.svg","Brush.svg","Bug.svg","Building.svg","BulkEditUsers.svg","Button.svg","CCLibrary.svg","Calculator.svg","Calendar.svg","CalendarAdd.svg","CalendarLocked.svg","CalendarUnlocked.svg","CallCenter.svg","Camera.svg","CameraFlip.svg","CameraRefresh.svg","Campaign.svg","CampaignAdd.svg","CampaignClose.svg","CampaignDelete.svg","CampaignEdit.svg","Cancel.svg","Capitals.svg","Captcha.svg","Car.svg","Card.svg","Channel.svg","Chat.svg","ChatAdd.svg","CheckPause.svg","Checkmark.svg","CheckmarkCircle.svg","CheckmarkCircleOutline.svg","ChevronDoubleLeft.svg","ChevronDoubleRight.svg","ChevronDown.svg","ChevronLeft.svg","ChevronRight.svg","ChevronUp.svg","ChevronUpDown.svg","Circle.svg","CircleFilled.svg","ClassicGridView.svg","Clock.svg","ClockCheck.svg","CloneStamp.svg","Close.svg","CloseCaptions.svg","CloseCircle.svg","Cloud.svg","CloudDisconnected.svg","CloudError.svg","CloudOutline.svg","Code.svg","Collection.svg","CollectionAdd.svg","CollectionAddTo.svg","CollectionCheck.svg","CollectionEdit.svg","CollectionExclude.svg","CollectionLink.svg","ColorFill.svg","ColorPalette.svg","ColorWheel.svg","ColumnSettings.svg","ColumnTwoA.svg","ColumnTwoB.svg","ColumnTwoC.svg","Comment.svg","Compare.svg","Compass.svg","Condition.svg","ConfidenceFour.svg","ConfidenceOne.svg","ConfidenceThree.svg","ConfidenceTwo.svg","Contrast.svg","ConversionFunnel.svg","Copy.svg","CoverImage.svg","CreditCard.svg","Crop.svg","CropLightning.svg","CropRotate.svg","Crosshairs.svg","Curate.svg","Cut.svg","Dashboard.svg","Data.svg","DataAdd.svg","DataBook.svg","DataCheck.svg","DataCorrelated.svg","DataDownload.svg","DataEdit.svg","DataMapping.svg","DataRefresh.svg","DataRemove.svg","DataSettings.svg","DataUnavailable.svg","DataUpload.svg","DataUser.svg","Date.svg","DateInput.svg","Deduplication.svg","Delegate.svg","Delete.svg","DeleteOutline.svg","Demographic.svg","Deselect.svg","DeselectCircular.svg","DesktopAndMobile.svg","DeviceDesktop.svg","DeviceLaptop.svg","DevicePhone.svg","DevicePhoneRefresh.svg","DevicePreview.svg","DeviceRotateLandscape.svg","DeviceRotatePortrait.svg","DeviceTV.svg","DeviceTablet.svg","Devices.svg","DistributeBottomEdge.svg","DistributeHorizontalCenter.svg","DistributeHorizontally.svg","DistributeLeftEdge.svg","DistributeRightEdge.svg","DistributeSpaceHoriz.svg","DistributeSpaceVert.svg","DistributeTopEdge.svg","DistributeVerticalCenter.svg","DistributeVertically.svg","Divide.svg","DividePath.svg","Document.svg","DocumentFragment.svg","DocumentFragmentGroup.svg","DocumentOutline.svg","DocumentRefresh.svg","Dolly.svg","Download.svg","DownloadFromCloud.svg","DownloadFromCloudOutline.svg","Draft.svg","DragHandle.svg","Draw.svg","Dropdown.svg","Duplicate.svg","Edit.svg","EditCircle.svg","EditExclude.svg","EditIn.svg","EditInLight.svg","Education.svg","Effects.svg","Efficient.svg","Ellipse.svg","Email.svg","EmailCancel.svg","EmailCheck.svg","EmailExclude.svg","EmailExcludeOutline.svg","EmailGear.svg","EmailGearOutline.svg","EmailKey.svg","EmailKeyOutline.svg","EmailLightning.svg","EmailNotification.svg","EmailOutline.svg","EmailRefresh.svg","EmailSchedule.svg","Engagement.svg","Erase.svg","Event.svg","EventExclude.svg","EventShare.svg","Events.svg","ExcludeOverlap.svg","Experience.svg","ExperienceAdd.svg","ExperienceAddTo.svg","ExperienceExport.svg","ExperienceImport.svg","Export.svg","ExportOriginal.svg","Exposure.svg","Extension.svg","FacebookCoverImage.svg","Fast.svg","FastForward.svg","FastForwardCircle.svg","Feature.svg","Feed.svg","FeedAdd.svg","FeedManagement.svg","Feedback.svg","FileAdd.svg","FileCSV.svg","FileCampaign.svg","FileChart.svg","FileCheckedOut.svg","FileCode.svg","FileData.svg","FileEmail.svg","FileExcel.svg","FileFolder.svg","FileGear.svg","FileGlobe.svg","FileHTML.svg","FileImportant.svg","FileJson.svg","FileKey.svg","FileMobile.svg","FilePDF.svg","FileShare.svg","FileSingleWebPage.svg","FileSpace.svg","FileTemplate.svg","FileTxt.svg","FileUser.svg","FileWord.svg","FileWorkflow.svg","FileXML.svg","FileZip.svg","FilingCabinet.svg","Filmroll.svg","FilmrollAutoAdd.svg","Filter.svg","FilterAdd.svg","FilterCheck.svg","FilterDelete.svg","FilterEdit.svg","FilterHeart.svg","FilterRemove.svg","FilterStar.svg","FindAndReplace.svg","Flag.svg","FlagExclude.svg","FlashAuto.svg","FlashOff.svg","FlashOn.svg","Flashlight.svg","FlashlightOff.svg","FlashlightOn.svg","FlipHorizontal.svg","FlipVertical.svg","Folder.svg","Folder2Color.svg","FolderAdd.svg","FolderAddTo.svg","FolderArchive.svg","FolderDelete.svg","FolderGear.svg","FolderLocked.svg","FolderOpen.svg","FolderOpenOutline.svg","FolderOutline.svg","FolderRemove.svg","FolderSearch.svg","FolderUser.svg","Follow.svg","FollowOff.svg","ForPlacementOnly.svg","Forecast.svg","Form.svg","Forward.svg","FullScreen.svg","FullScreenExit.svg","Function.svg","Game.svg","Gauge1.svg","Gauge2.svg","Gauge3.svg","Gauge4.svg","Gauge5.svg","Gears.svg","GearsAdd.svg","GearsDelete.svg","GearsEdit.svg","GenderFemale.svg","GenderMale.svg","Gift.svg","Globe.svg","GlobeCheck.svg","GlobeClock.svg","GlobeEnter.svg","GlobeExit.svg","GlobeGrid.svg","GlobeOutline.svg","GlobeRemove.svg","GlobeSearch.svg","GlobeStrike.svg","GlobeStrikeClock.svg","Gradient.svg","GraphArea.svg","GraphAreaStacked.svg","GraphBarHorizontal.svg","GraphBarHorizontalAdd.svg","GraphBarHorizontalStacked.svg","GraphBarVertical.svg","GraphBarVerticalAdd.svg","GraphBarVerticalStacked.svg","GraphBubble.svg","GraphBullet.svg","GraphConfidenceBands.svg","GraphDonut.svg","GraphDonutAdd.svg","GraphGantt.svg","GraphHistogram.svg","GraphPathing.svg","GraphPie.svg","GraphProfitCurve.svg","GraphScatter.svg","GraphStream.svg","GraphStreamRanked.svg","GraphStreamRankedAdd.svg","GraphSunburst.svg","GraphTree.svg","GraphTrend.svg","GraphTrendAdd.svg","GraphTrendAlert.svg","Graphic.svg","Group.svg","Hammer.svg","Hand.svg","Hand0.svg","Hand1.svg","Hand2.svg","Hand3.svg","Hand4.svg","Heal.svg","Heart.svg","Help.svg","HelpOutline.svg","Histogram.svg","History.svg","Home.svg","Homepage.svg","HotFixes.svg","HotelBed.svg","IdentityService.svg","Image.svg","ImageAdd.svg","ImageAlbum.svg","ImageAutoMode.svg","ImageCarousel.svg","ImageCheck.svg","ImageCheckedOut.svg","ImageMapCircle.svg","ImageMapPolygon.svg","ImageMapRectangle.svg","ImageNext.svg","ImageProfile.svg","ImageSearch.svg","ImageText.svg","Images.svg","Import.svg","Inbox.svg","Individual.svg","Info.svg","InfoOutline.svg","IntersectOverlap.svg","InvertAdj.svg","Invite.svg","Journey.svg","JourneyAction.svg","JourneyData.svg","JourneyEvent.svg","JourneyEvent2.svg","JourneyReports.svg","JourneyVoyager.svg","JumpToTop.svg","Key.svg","KeyClock.svg","KeyExclude.svg","Keyboard.svg","Label.svg","LabelExclude.svg","Labels.svg","Landscape.svg","Launch.svg","Layers.svg","LayersBackward.svg","LayersBringToFront.svg","LayersForward.svg","LayersSendToBack.svg","Light.svg","Line.svg","LineHeight.svg","LinearGradient.svg","Link.svg","LinkCheck.svg","LinkGlobe.svg","LinkNav.svg","LinkOff.svg","LinkOut.svg","LinkOutLight.svg","LinkPage.svg","LinkUser.svg","Location.svg","LocationBasedDate.svg","LocationBasedEvent.svg","LocationContribution.svg","LockClosed.svg","LockOpen.svg","LogOut.svg","Login.svg","Looks.svg","LoupeView.svg","MBox.svg","MagicWand.svg","Magnify.svg","Mailbox.svg","MapView.svg","MarginBottom.svg","MarginLeft.svg","MarginRight.svg","MarginTop.svg","MarketingActivities.svg","Maximize.svg","Measure.svg","Menu.svg","Merge.svg","MergeLayers.svg","Messenger.svg","Minimize.svg","MobileServices.svg","ModernGridView.svg","Money.svg","Monitoring.svg","Moon.svg","More.svg","MoreCircle.svg","MoreSmall.svg","MoreSmallList.svg","MoreSmallListVert.svg","MoreVertical.svg","Move.svg","MoveLeftRight.svg","MoveTo.svg","MoveUpDown.svg","MovieCamera.svg","Multiple.svg","MultipleAdd.svg","MultipleCheck.svg","MultipleExclude.svg","NamingOrder.svg","NewItem.svg","News.svg","NewsAdd.svg","NoEdit.svg","Note.svg","NoteAdd.svg","OS.svg","Offer.svg","OfferDelete.svg","OnAir.svg","OpenIn.svg","OpenInLight.svg","OpenRecent.svg","OpenRecentOutline.svg","Orbit.svg","Organisations.svg","Organize.svg","OutlinePath.svg","PaddingBottom.svg","PaddingLeft.svg","PaddingRight.svg","PaddingTop.svg","PageBreak.svg","PageExclude.svg","PageGear.svg","PageRule.svg","PageShare.svg","PageTag.svg","PagesExclude.svg","Pan.svg","Panel.svg","Paste.svg","PasteHTML.svg","PasteList.svg","PasteText.svg","Pattern.svg","Pause.svg","PauseCircle.svg","Pawn.svg","Pending.svg","PeopleGroup.svg","PersonalizationField.svg","Perspective.svg","PinOff.svg","PinOn.svg","Pivot.svg","PlatformDataMapping.svg","Play.svg","PlayCircle.svg","Plug.svg","Polygon.svg","PolygonSelect.svg","PopIn.svg","Portrait.svg","Preset.svg","Preview.svg","Print.svg","PrintPreview.svg","Project.svg","ProjectAdd.svg","ProjectEdit.svg","ProjectNameEdit.svg","Promote.svg","Properties.svg","PropertiesCopy.svg","PublishCheck.svg","PublishPending.svg","PublishReject.svg","PublishRemove.svg","PublishSchedule.svg","PushNotification.svg","Question.svg","QuickSelect.svg","RSS.svg","RadialGradient.svg","Rail.svg","RailBottom.svg","RailLeft.svg","RailRight.svg","RailRightClose.svg","RailRightOpen.svg","RailTop.svg","RangeMask.svg","RealTimeCustomerProfile.svg","RectSelect.svg","Rectangle.svg","Redo.svg","Refresh.svg","RegionSelect.svg","Relevance.svg","Remove.svg","RemoveCircle.svg","Rename.svg","Reorder.svg","Replay.svg","Replies.svg","Reply.svg","ReplyAll.svg","Report.svg","ReportAdd.svg","Resize.svg","Retweet.svg","Reuse.svg","Revenue.svg","Revert.svg","Rewind.svg","RewindCircle.svg","Ribbon.svg","RotateCCW.svg","RotateCCWBold.svg","RotateCW.svg","RotateCWBold.svg","RotateLeft.svg","RotateLeftOutline.svg","RotateRight.svg","RotateRightOutline.svg","SMS.svg","SMSKey.svg","SMSLightning.svg","SMSRefresh.svg","SQLQuery.svg","Sampler.svg","Sandbox.svg","SaveAsFloppy.svg","SaveFloppy.svg","SaveTo.svg","SaveToLight.svg","Scribble.svg","Search.svg","Seat.svg","SeatAdd.svg","Segmentation.svg","Segments.svg","Select.svg","SelectAdd.svg","SelectBox.svg","SelectBoxAll.svg","SelectCircular.svg","SelectContainer.svg","SelectGear.svg","SelectIntersect.svg","SelectSubtract.svg","Selection.svg","SelectionChecked.svg","SelectionMove.svg","Send.svg","SentimentNegative.svg","SentimentNeutral.svg","SentimentPositive.svg","Separator.svg","Servers.svg","Settings.svg","Shapes.svg","Share.svg","ShareAndroid.svg","ShareCheck.svg","ShareLight.svg","ShareWindows.svg","Sharpen.svg","Shield.svg","Ship.svg","Shop.svg","ShoppingCart.svg","ShowAllLayers.svg","ShowMenu.svg","ShowOneLayer.svg","Shuffle.svg","Slice.svg","Slow.svg","SmallCaps.svg","Snapshot.svg","SocialNetwork.svg","SortOrderDown.svg","SortOrderUp.svg","Spam.svg","Spellcheck.svg","Spin.svg","SplitView.svg","SpotHeal.svg","Stadium.svg","Stage.svg","Stamp.svg","Star.svg","StarOutline.svg","Starburst.svg","StepBackward.svg","StepBackwardCircle.svg","StepForward.svg","StepForwardCircle.svg","Stop.svg","StopCircle.svg","Stopwatch.svg","Straighten.svg","StraightenOutline.svg","StrokeWidth.svg","Subscribe.svg","SubtractBackPath.svg","SubtractFromSelection.svg","SubtractFrontPath.svg","SuccessMetric.svg","Summarize.svg","Survey.svg","Switch.svg","Sync.svg","SyncRemove.svg","Table.svg","TableAdd.svg","TableAndChart.svg","TableColumnAddLeft.svg","TableColumnAddRight.svg","TableColumnMerge.svg","TableColumnRemoveCenter.svg","TableColumnSplit.svg","TableEdit.svg","TableHistogram.svg","TableMergeCells.svg","TableRowAddBottom.svg","TableRowAddTop.svg","TableRowMerge.svg","TableRowRemoveCenter.svg","TableRowSplit.svg","TableSelectColumn.svg","TableSelectRow.svg","TagBold.svg","TagItalic.svg","TagUnderline.svg","Target.svg","Targeted.svg","TaskList.svg","Teapot.svg","Temperature.svg","TestAB.svg","TestABEdit.svg","TestABGear.svg","TestABRemove.svg","TestProfile.svg","Text.svg","TextAdd.svg","TextAlignCenter.svg","TextAlignJustify.svg","TextAlignLeft.svg","TextAlignRight.svg","TextBaselineShift.svg","TextBold.svg","TextBulleted.svg","TextBulletedAttach.svg","TextBulletedHierarchy.svg","TextBulletedHierarchyExclude.svg","TextColor.svg","TextDecrease.svg","TextEdit.svg","TextExclude.svg","TextIncrease.svg","TextIndentDecrease.svg","TextIndentIncrease.svg","TextItalic.svg","TextKerning.svg","TextLetteredLowerCase.svg","TextLetteredUpperCase.svg","TextNumbered.svg","TextParagraph.svg","TextRomanLowercase.svg","TextRomanUppercase.svg","TextSize.svg","TextSizeAdd.svg","TextSpaceAfter.svg","TextSpaceBefore.svg","TextStrikethrough.svg","TextStroke.svg","TextStyle.svg","TextSubscript.svg","TextSuperscript.svg","TextTracking.svg","TextUnderline.svg","ThumbDown.svg","ThumbDownOutline.svg","ThumbUp.svg","ThumbUpOutline.svg","Tips.svg","Train.svg","TransferToPlatform.svg","Transparency.svg","Trap.svg","TreeCollapse.svg","TreeCollapseAll.svg","TreeExpand.svg","TreeExpandAll.svg","TrendInspect.svg","TrimPath.svg","Trophy.svg","Type.svg","USA.svg","Underline.svg","Undo.svg","Ungroup.svg","Unlink.svg","Unmerge.svg","UploadToCloud.svg","UploadToCloudOutline.svg","User.svg","UserActivity.svg","UserAdd.svg","UserAdmin.svg","UserArrow.svg","UserCheckedOut.svg","UserDeveloper.svg","UserEdit.svg","UserExclude.svg","UserGroup.svg","UserLock.svg","UserShare.svg","UsersAdd.svg","UsersExclude.svg","UsersLock.svg","UsersShare.svg","Variable.svg","VectorDraw.svg","VideoCheckedOut.svg","VideoFilled.svg","VideoOutline.svg","ViewAllTags.svg","ViewBiWeek.svg","ViewCard.svg","ViewColumn.svg","ViewDay.svg","ViewDetail.svg","ViewGrid.svg","ViewList.svg","ViewRow.svg","ViewSingle.svg","ViewStack.svg","ViewWeek.svg","ViewedMarkAs.svg","Vignette.svg","Visibility.svg","VisibilityOff.svg","Visit.svg","VisitShare.svg","VoiceOver.svg","VolumeMute.svg","VolumeOne.svg","VolumeThree.svg","VolumeTwo.svg","Watch.svg","WebPage.svg","WebPages.svg","Workflow.svg","WorkflowAdd.svg","Wrench.svg","ZoomIn.svg","ZoomOut.svg"],Q=(_||[]).map(e=>e.replace(/\.svg$/,"")),p={Arrow:["75","100","200","300","400","500","600"],Asterisk:["75","100","200","300"],Checkmark:["50","75","100","200","300","400","500","600"],Chevron:["50","75","100","200","300","400","500"],CornerTriangle:["75","100","200","300"],Cross:["75","100","200","300","400","500","600"],Dash:["50","75","100","200","300","400","500","600"],SingleGripper:[],DoubleGripper:[],TripleGripper:[]},Z=Object.keys(p),W=[...Z.filter(e=>!["Chevron","Arrow"].includes(e)),"ArrowRight","ArrowLeft","ArrowUp","ArrowDown","ChevronRight","ChevronLeft","ChevronUp","ChevronDown"],X=W.map(e=>{var g,c;const s=e.replace(/(Left|Right|Up|Down)$/,"");return((g=p[s])==null?void 0:g.length)==0?[s]:((c=p[s])==null?void 0:c.map(u=>e+u))??[]}).flat(),Y={title:"Icon",component:"Icon",argTypes:{size:{name:"Workflow Icon Size",type:{name:"string",required:!0},table:{type:{summary:"string"},category:"Component"},options:["xs","s","m","l","xl","xxl"],control:"select",if:{arg:"setName",eq:"workflow"}},setName:{name:"Icon set",type:{name:"string",required:!0},table:{type:{summary:"string"},category:"Content"},options:["ui","workflow"],control:"inline-radio"},iconName:{name:"Workflow icons",type:{name:"string"},table:{type:{summary:"string"},category:"Content"},options:Q,control:"select",if:{arg:"setName",eq:"workflow"}},uiIconName:{name:"UI icons",type:{name:"string"},table:{type:{summary:"string"},category:"Content"},options:[...X],control:"select",if:{arg:"setName",eq:"ui"}},fill:{name:"Fill color",type:{name:"string"},table:{type:{summary:"string"},category:"Advanced"},control:"color"},useRef:{table:{disable:!0}}},args:{rootClass:"spectrum-Icon",setName:"workflow",iconName:"ABC",size:"xl",useRef:!0},parameters:{componentVersion:q,chromatic:{modes:z},docs:{description:{component:"The Icon component contains all of the CSS used for displaying both workflow and UI icons."}}}},$=(e,s)=>window.isChromatic()?ee(e):l({...e,iconName:e.iconName??e.uiIconName,setName:e.setName??(e.uiIconName?"ui":"workflow")},s),n=$.bind({});n.args={};const i=$.bind({});i.tags=["!autodocs","!dev","test"];i.parameters={chromatic:{forcedColors:"active",modes:j}};const ee=e=>a`
+    ${[{setName:"workflow",iconName:"Alert",fill:"var(--spectrum-negative-content-color-default)"},{setName:"workflow",iconName:"Hand"},{setName:"workflow",iconName:"Help"},{setName:"workflow",iconName:"ArrowLeft"},{setName:"workflow",iconName:"ArrowRight"},{setName:"workflow",iconName:"ChevronDown"}].map(s=>a`
+        <div
+            style=${d({display:"flex",gap:"16px","margin-bottom":"16px"})}
+        >
+            ${["xs","s","m","l","xl","xxl"].map(g=>l({...e,...s,size:g}))}
+        </div>`)}
+    <div style="margin-top:32px;">
+        ${W.map(s=>{var g,c;return a`
+            <div
+                style=${d({display:"flex",gap:"16px"})}
+            >
+                ${(g=p[s.replace(/(Left|Right|Up|Down)$/,"")])==null?void 0:g.map(u=>l({...e,setName:"ui",iconName:s+u}))}
+                ${K(((c=p[s])==null?void 0:c.length)==0,()=>l({...e,setName:"ui",iconName:s}))}
+            </div>`})}
+    </div>
+`,se=e=>a`
+    <div
+        style=${d({display:"flex",gap:"24px",flexWrap:"wrap"})}
+    >
+        ${["xs","s","m","l","xl"].map(s=>a`
+                <div
+                    style=${d({display:"flex",gap:"16px",flexDirection:"column",alignItems:"center",flexBasis:"80px"})}
+                >
+                    ${J({semantics:"heading",size:"xs",content:[{xs:"Extra-small",s:"Small",m:"Medium",l:"Large",xl:"Extra-large"}[s]],customStyles:{"white-space":"nowrap","--mod-detail-font-color":"var(--spectrum-seafoam-900)"}})}
+                    ${l({...e,size:s})}
+                </div>
+            `)}
+    </div>
+`,m=(e,s=[])=>a`
+    <div
+        style=${d({display:"flex",gap:"32px",flexWrap:"wrap"})}
+    >
+        ${s.map(g=>l({...e,iconName:g}))}
+    </div>
+`,ge=e=>a`
+    ${m({...e,setName:"workflow",size:"xl"},["Alert","Asset","Actions","ArrowDown","Camera","Copy","DeviceDesktop","Download","FilterAdd","Form","Light","Polygon"])}
+`,ve=e=>a`
+    ${m({...e,setName:"ui"},["ArrowRight100","ArrowLeft100","ArrowDown100","ArrowUp100"])}
+`,te=e=>a`
+    <div style="margin-bottom: 32px;">
+        ${m({...e,setName:"ui"},["Asterisk100","Asterisk200","Asterisk300"])}
+    </div>
+    <div>
+        ${m({...e,setName:"ui"},["ChevronDown50","ChevronDown75","ChevronDown100","ChevronDown200","ChevronDown300","ChevronDown400"])}
+    </div>
+`,o=ge.bind({});o.tags=["autodocs","!dev"];o.parameters={chromatic:{disableSnapshot:!0}};const v=se.bind({});v.tags=["autodocs","!dev"];v.args={setName:"workflow",iconName:"Asset"};v.parameters={chromatic:{disableSnapshot:!0}};const t=te.bind({});t.storyName="UI Default";t.tags=["autodocs","!dev"];t.parameters={chromatic:{disableSnapshot:!0}};const r=ve.bind({});r.storyName="UI Arrows";r.tags=["autodocs","!dev"];r.parameters={chromatic:{disableSnapshot:!0}};var h,C,w;n.parameters={...n.parameters,docs:{...(h=n.parameters)==null?void 0:h.docs,source:{originalSource:`(args, context) => {
+  return window.isChromatic() ? TestTemplate(args, context) : Template({
+    ...args,
+    iconName: args.iconName ?? args.uiIconName,
+    setName: args.setName ?? (args.uiIconName ? "ui" : "workflow")
+  }, context);
+}`,...(w=(C=n.parameters)==null?void 0:C.docs)==null?void 0:w.source}}};var S,A,f;i.parameters={...i.parameters,docs:{...(S=i.parameters)==null?void 0:S.docs,source:{originalSource:`(args, context) => {
+  return window.isChromatic() ? TestTemplate(args, context) : Template({
+    ...args,
+    iconName: args.iconName ?? args.uiIconName,
+    setName: args.setName ?? (args.uiIconName ? "ui" : "workflow")
+  }, context);
+}`,...(f=(A=i.parameters)==null?void 0:A.docs)==null?void 0:f.source}}};var T,x,k,D,b;o.parameters={...o.parameters,docs:{...(T=o.parameters)==null?void 0:T.docs,source:{originalSource:`args => html\`
+    \${IconListTemplate({
+  ...args,
+  setName: "workflow",
+  size: "xl"
+}, ["Alert", "Asset", "Actions", "ArrowDown", "Camera", "Copy", "DeviceDesktop", "Download", "FilterAdd", "Form", "Light", "Polygon"])}
+\``,...(k=(x=o.parameters)==null?void 0:x.docs)==null?void 0:k.source},description:{story:"A sampling of multiple Workflow icons.",...(b=(D=o.parameters)==null?void 0:D.docs)==null?void 0:b.description}}};var y,F,R,L,E;v.parameters={...v.parameters,docs:{...(y=v.parameters)==null?void 0:y.docs,source:{originalSource:`args => html\`
+    <div
+        style=\${styleMap({
+  "display": "flex",
+  "gap": "24px",
+  "flexWrap": "wrap"
+})}
+    >
+        \${["xs", "s", "m", "l", "xl"].map(size => html\`
+                <div
+                    style=\${styleMap({
+  "display": "flex",
+  "gap": "16px",
+  "flexDirection": "column",
+  "alignItems": "center",
+  "flexBasis": "80px"
+})}
+                >
+                    \${Typography({
+  semantics: "heading",
+  size: "xs",
+  content: [{
+    xs: "Extra-small",
+    s: "Small",
+    m: "Medium",
+    l: "Large",
+    xl: "Extra-large"
+  }[size]],
+  customStyles: {
+    "white-space": "nowrap",
+    "--mod-detail-font-color": "var(--spectrum-seafoam-900)"
+  }
+})}
+                    \${Template({
+  ...args,
+  size
+})}
+                </div>
+            \`)}
+    </div>
+\``,...(R=(F=v.parameters)==null?void 0:F.docs)==null?void 0:R.source},description:{story:"An example of a Workflow icon displayed at all sizes, from small to extra-large.",...(E=(L=v.parameters)==null?void 0:L.docs)==null?void 0:E.description}}};var P,B,I,G,O;t.parameters={...t.parameters,docs:{...(P=t.parameters)==null?void 0:P.docs,source:{originalSource:`args => html\`
+    <div style="margin-bottom: 32px;">
+        \${IconListTemplate({
+  ...args,
+  setName: "ui"
+}, ["Asterisk100", "Asterisk200", "Asterisk300"])}
+    </div>
+    <div>
+        \${IconListTemplate({
+  ...args,
+  setName: "ui"
+}, ["ChevronDown50", "ChevronDown75", "ChevronDown100", "ChevronDown200", "ChevronDown300", "ChevronDown400"])}
+    </div>
+\``,...(I=(B=t.parameters)==null?void 0:B.docs)==null?void 0:I.source},description:{story:"A sampling of a few UI icons.",...(O=(G=t.parameters)==null?void 0:G.docs)==null?void 0:O.description}}};var M,N,U,V,H;r.parameters={...r.parameters,docs:{...(M=r.parameters)==null?void 0:M.docs,source:{originalSource:`args => html\`
+    \${IconListTemplate({
+  ...args,
+  setName: "ui"
+}, ["ArrowRight100", "ArrowLeft100", "ArrowDown100", "ArrowUp100"])}
+\``,...(U=(N=r.parameters)==null?void 0:N.docs)==null?void 0:U.source},description:{story:"A UI arrow displayed for all directions (left, right, up, down).",...(H=(V=r.parameters)==null?void 0:V.docs)==null?void 0:H.description}}};const re=["Default","WithForcedColors","WorkflowDefault","WorkflowSizing","UIDefault","UIArrows"],pe=Object.freeze(Object.defineProperty({__proto__:null,Default:n,UIArrows:r,UIDefault:t,WithForcedColors:i,WorkflowDefault:o,WorkflowSizing:v,__namedExportsOrder:re,default:Y},Symbol.toStringTag,{value:"Module"}));export{pe as I,t as U,o as W,v as a,r as b,Y as c};

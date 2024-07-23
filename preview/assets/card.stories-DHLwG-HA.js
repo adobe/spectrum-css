@@ -1,0 +1,112 @@
+import me from"./actionbutton.stories-A3GYwxv4.js";import ge from"./checkbox.stories-Cz09ON8t.js";import{d as fe}from"./index-BCEELo55.js";import{b as he,d as be}from"./states-DzrSzBKQ.js";import{T as ae}from"./template-Zxf6qo95.js";import{T as $e}from"./template-s_xyte4A.js";import{T as ve}from"./template-BSRXx7Ch.js";import{T as ye}from"./template-D5ShUZ_q.js";import"./lit-element-CJjJlyWZ.js";import{x as a}from"./lit-html-BdGv-Ldy.js";import{a as d}from"./class-map-sTkR_Npl.js";import{o as O}from"./if-defined-Bo9G1hLT.js";import{Template as se}from"./template-Df-YB4AQ.js";import{o as v}from"./style-map-yx2CMG_J.js";import{n as s}from"./when-BR7zwNJC.js";const Se="8.1.1",we=({rootClass:e="spectrum-QuickActions",size:t="m",isOpen:i=!1,textOnly:r=!1,position:n,content:b=[],id:G,customClasses:S=[],...$})=>b.length?(b.some(o=>o.icon)||(r=!0),a`
+		<div
+			class="${d({[e]:!0,[`${e}--size${t==null?void 0:t.toUpperCase()}`]:typeof t<"u","is-open":i,[`${e}--${n}`]:typeof n<"u",[`${e}--textOnly`]:r,...S.reduce((o,Q)=>({...o,[Q]:!0}),{})})}"
+			id=${O(G)}
+		>
+			${b.map(o=>typeof o=="object"&&o.iconName||o.label?ae({...$,...o,isQuiet:!0}):o)}
+		</div>
+	`):(console.warn("QuickActions: requires content be passed in to render."),a``),c=({rootClass:e="spectrum-Card",image:t,title:i,subtitle:r,description:n,footer:b,isFocused:G=!1,isSelected:S=!1,isHorizontal:$=!1,isQuiet:o=!1,isGallery:Q=!1,isCardAssetOverride:ie=!1,isGrid:re=!1,hasQuickAction:oe=!1,hasActions:j=!1,showAsset:w,customStyles:de={},customClasses:ne=[],id:ce,role:le},A)=>{const{updateArgs:k}=A;return a`
+    <div
+      class=${d({[e]:!0,"is-selected":S,"is-focused":G,[`${e}--quiet`]:o,[`${e}--gallery`]:Q,[`${e}--horizontal`]:$,...ne.reduce((ue,pe)=>({...ue,[pe]:!0}),{})})}
+      id=${O(ce)}
+      style=${v(de)}
+      tabindex="0"
+      role=${O(t||w?"figure":re?"rowheader":le)}
+			@focusin=${()=>{k({isFocused:!0})}}
+			@focusout=${()=>{k({isFocused:!1})}}
+    >
+      ${s(t||w,()=>s(w||Q&&t,()=>a`
+            <div
+              class=${d({[`${e}-preview`]:!0})}
+            >
+              ${s(!$,()=>$e({image:t,preset:t?void 0:w,isCardAssetOverride:ie}),()=>ye({size:"xxl",iconName:w==="folder"?"File":"Document"},A))}
+            </div>
+          `,()=>a`
+            <div
+              class=${d({[`${e}-coverPhoto`]:!0})}
+              style=${v({"background-image":`url(${t})`})}
+            ></div>
+          `))}
+      ${s(i||r,()=>a` <div
+            class=${d({[`${e}-body`]:!0})}
+          >
+            ${s(i||j,()=>a`
+                <div
+                  class=${d({[`${e}-header`]:!0})}
+                >
+                  ${s(i,()=>a`
+                      <div
+                        class=${d({[`${e}-title`]:!0})}
+                      >
+                        ${i}
+                      </div>
+                    `)}
+                  ${s(j&&!$,()=>ae({iconName:"More",size:"m",isQuiet:!0,customClasses:[`${e}-actionButton`]},A))}
+                </div>
+              `)}
+            ${s(r||n,()=>a`
+                <div
+                  class=${d({[`${e}-content`]:!0})}
+                >
+                  ${s(r,()=>a`
+                      <div
+                        class=${d({[`${e}-subtitle`]:!0})}
+                      >
+                        ${r}
+                      </div>
+                    `)}
+                  ${s(n,()=>a`
+                      <div
+                        class=${d({[`${e}-description`]:!0})}
+                      >
+                        ${n}
+                      </div>
+                    `)}
+                </div>
+              `)}
+          </div>`)}
+      ${s(b,()=>a`
+          <div
+            class=${d({[`${e}-footer`]:!0})}
+          >
+            ${b}
+          </div>
+        `)}
+      ${s(oe&&!$,()=>we({noOverlay:!0,content:[ve({isChecked:S,title:"Select"},A)],onclick:()=>{k({isSelected:!S})},customClasses:[`${e}-quickActions`]}))}
+    </div>
+  `},xe=(e,t)=>a`
+  <div
+    style=${v({display:"flex","flex-direction":"row","flex-wrap":"wrap",gap:"32px"})}
+  >
+    ${[{},{heading:"Selected",isSelected:!0},{heading:"Focused",isFocused:!0}].map(({heading:i,...r})=>a`
+        <div>
+          ${se({semantics:"heading",size:"m",weight:"light",content:[i??a`&nbsp;`],customClasses:["chromatic-ignore"]})}
+          <div>
+            ${c({...e,...r},t)}
+          </div>
+        </div>
+      `)}
+  </div>
+`,Qe=(e,t)=>a`
+  <div
+    style=${v({display:window.isChromatic()?"none":"contents"})}
+  >
+    ${c(e,t)}
+  </div>
+  <div
+    style=${v({display:window.isChromatic()?"flex":"none","flex-direction":"column","align-items":"flex-start",gap:"32px"})}
+  >
+    ${[{heading:"Default"},{heading:"No image",title:"Card title",description:"Optional description that should be one or two lines",footer:void 0,image:void 0},{heading:"Horizontal",title:"Card title",description:"jpg",showAsset:"file",isQuiet:!1,isHorizontal:!0,hasActions:!1,hasQuickAction:!1,footer:void 0},{heading:"Quiet",title:"Name",showAsset:"image",image:"example-ava@2x.png",description:"10/15/18",isQuiet:!0,footer:void 0},{heading:"Quiet file",title:"FileName",description:"PDF",showAsset:"file",image:void 0,isQuiet:!0,footer:void 0},{heading:"Quiet folder",title:"Name",showAsset:"folder",description:"10/15/18",isQuiet:!0,image:void 0,footer:void 0},{heading:"Asset preview",title:"Card title",showAsset:"image",image:"example-card-portrait.png",description:"jpg",hasActions:!1,isCardAssetOverride:!0,customStyles:{width:"200px"},footer:void 0},{heading:"Gallery",title:"Card title",showAsset:"image",image:"example-card-landscape.png",description:"jpg",isGallery:!0,isCardAssetOverride:!0,customStyles:{width:"700px"},footer:void 0},{heading:"Text wrap",title:"Card title that is longer and should wrap",customStyles:{"max-inline-size":"205px"},footer:void 0,withStates:!1}].map(({heading:i,withStates:r=!0,...n})=>a`
+        <div
+          class="spectrum-Typography"
+        >
+          ${s(i,()=>se({semantics:"heading",size:"l",content:[i],customClasses:["chromatic-ignore"]}))}
+          <div
+            style=${v({padding:"12px",border:"1px solid var(--spectrum-gray-200)","border-radius":"4px"})}
+          >
+            ${s(r,()=>xe({...e,...n},t),()=>c({...e,...n},t))}
+          </div>
+        </div>
+      `)}
+  </div>
+`;var D,z,_,P;const Ae={title:"Card",component:"Card",argTypes:{image:{name:"Image",type:{name:"string"},table:{type:{summary:"string"},category:"Component"},control:{type:"file",accept:".svg,.png,.jpg,.jpeg,.webc"}},isQuiet:{name:"Quiet styling",type:{name:"boolean"},table:{type:{summary:"boolean"},category:"Component"},control:"boolean"},isSelected:he,isFocused:be,hasActions:{name:"Card actions",type:{name:"boolean"},table:{type:{summary:"boolean"},category:"Component"},control:"boolean"},hasQuickAction:{name:"Quick action",table:{disable:!0}},showAsset:{name:"Show asset",type:{name:"string"},table:{type:{summary:"string | boolean"},category:"Component"},options:["image","file","folder"],control:"select"},title:{name:"Title",type:{name:"string"},table:{type:{summary:"string"},category:"Content"},control:{type:"text"}},description:{name:"Description",type:{name:"string"},table:{type:{summary:"string"},category:"Content"},control:{type:"text"}},footer:{table:{disable:!0}},isGallery:{table:{disable:!0}},isCardAssetOverride:{table:{disable:!0}},isGrid:{table:{disable:!0}},isHorizontal:{table:{disable:!0}},isDropTarget:{table:{disable:!0}}},args:{rootClass:"spectrum-Card",isSelected:!1,isFocused:!1,isQuiet:!1,isGrid:!1,isGallery:!1,isDropTarget:!1,hasActions:!0,hasQuickAction:!0},parameters:{actions:{handles:[...((z=(D=me.parameters)==null?void 0:D.actions)==null?void 0:z.handles)??[],...((P=(_=ge.parameters)==null?void 0:_.actions)==null?void 0:P.handles)??[]]},componentVersion:Se,docs:{description:{component:"A card represents a rectangular space to contain text or images. Cards are typically used to encapsulate units of a data set, such as a gallery of image/caption pairs."}}}},y=Qe.bind({});y.args={title:"Card title",image:"example-card-portrait.png",description:"Optional description that should be one or two lines",footer:["Footer"]};const l=y.bind({});l.args=y.args;l.tags=["!autodocs","!dev","test"];l.parameters={chromatic:{forcedColors:"active",modes:fe}};const u=y.bind({});u.tags=["autodocs","!dev"];u.parameters={chromatic:{disableSnapshot:!0}};u.args={isSelected:!0};const p=y.bind({});p.args={isFocused:!0,title:"Card title that is longer and should wrap",customStyles:{"max-inline-size":"205px"}};p.tags=["autodocs","!dev"];p.parameters={chromatic:{disableSnapshot:!0}};const h=c.bind({});h.args={title:"Name",showAsset:"image",image:"example-ava@2x.png",description:"10/15/18",isQuiet:!0};h.tags=["autodocs","!dev"];h.parameters={chromatic:{disableSnapshot:!0}};const x=c.bind({});x.storyName="Quiet (file)";x.args={title:"FileName",description:"PDF",showAsset:"file",image:void 0,isQuiet:!0};x.tags=["autodocs","!dev"];x.parameters={chromatic:{disableSnapshot:!0}};const C=c.bind({});C.tags=["autodocs","!dev"];C.parameters={chromatic:{disableSnapshot:!0}};C.args={title:"Card title",description:"jpg",showAsset:"file",isQuiet:!1,isHorizontal:!0,hasActions:!1,hasQuickAction:!1};const F=c.bind({});F.args={title:"Card title",description:"Optional description that should be one or two lines"};F.tags=["autodocs","!dev"];F.parameters={chromatic:{disableSnapshot:!0}};const m=h.bind({});m.args={title:"Name",showAsset:"folder",description:"10/15/18",isQuiet:!0};m.tags=["autodocs","!dev"];m.parameters={chromatic:{disableSnapshot:!0}};const g=h.bind({});g.args={title:"Name",showAsset:"image",image:"example-ava@2x.png",description:"10/15/18",isQuiet:!0,isFocused:!0};g.tags=["autodocs","!dev"];g.parameters={chromatic:{disableSnapshot:!0}};const f=h.bind({});f.args={title:"Name",showAsset:"image",image:"example-ava@2x.png",description:"10/15/18",isQuiet:!0,isSelected:!0};f.tags=["autodocs","!dev"];f.parameters={chromatic:{disableSnapshot:!0}};const T=c.bind({});T.args={title:"Card title",showAsset:"image",image:"example-card-portrait.png",description:"jpg",hasActions:!1,isCardAssetOverride:!0,customStyles:{width:"200px"}};T.tags=["autodocs","!dev"];T.parameters={chromatic:{disableSnapshot:!0}};const N=c.bind({});N.args={title:"Card title",showAsset:"image",image:"example-card-landscape.png",description:"jpg",isGallery:!0,isCardAssetOverride:!0,customStyles:{width:"700px"}};N.tags=["autodocs","!dev"];N.parameters={chromatic:{disableSnapshot:!0}};var H,q,I;l.parameters={...l.parameters,docs:{...(H=l.parameters)==null?void 0:H.docs,source:{originalSource:"CardGroup.bind({})",...(I=(q=l.parameters)==null?void 0:q.docs)==null?void 0:I.source}}};var M,B,W;u.parameters={...u.parameters,docs:{...(M=u.parameters)==null?void 0:M.docs,source:{originalSource:"CardGroup.bind({})",...(W=(B=u.parameters)==null?void 0:B.docs)==null?void 0:W.source}}};var E,U,V;p.parameters={...p.parameters,docs:{...(E=p.parameters)==null?void 0:E.docs,source:{originalSource:"CardGroup.bind({})",...(V=(U=p.parameters)==null?void 0:U.docs)==null?void 0:V.source}}};var J,K,L;m.parameters={...m.parameters,docs:{...(J=m.parameters)==null?void 0:J.docs,source:{originalSource:"Template.bind({})",...(L=(K=m.parameters)==null?void 0:K.docs)==null?void 0:L.source}}};var R,X,Y;g.parameters={...g.parameters,docs:{...(R=g.parameters)==null?void 0:R.docs,source:{originalSource:"Template.bind({})",...(Y=(X=g.parameters)==null?void 0:X.docs)==null?void 0:Y.source}}};var Z,ee,te;f.parameters={...f.parameters,docs:{...(Z=f.parameters)==null?void 0:Z.docs,source:{originalSource:"Template.bind({})",...(te=(ee=f.parameters)==null?void 0:ee.docs)==null?void 0:te.source}}};const Ce=["Default","WithForcedColors","Selected","Focused","Quiet","QuietFile","Horizontal","NoImage","QuietFolder","QuietFocused","QuietSelected","AssetPreview","Gallery"],Be=Object.freeze(Object.defineProperty({__proto__:null,AssetPreview:T,Default:y,Focused:p,Gallery:N,Horizontal:C,NoImage:F,Quiet:h,QuietFile:x,QuietFocused:g,QuietFolder:m,QuietSelected:f,Selected:u,WithForcedColors:l,__namedExportsOrder:Ce,default:Ae},Symbol.toStringTag,{value:"Module"}));export{T as A,Be as C,y as D,p as F,N as G,C as H,F as N,h as Q,u as S,x as a,m as b,g as c,f as d};

@@ -1,0 +1,26 @@
+import{j as e}from"./jsx-runtime-_09DdfSq.js";import{u as o}from"./index-CXGxovgH.js";import{ae as a,af as i}from"./index-BreQY16V.js";import"./iframe-MtCp54vn.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DxKRhftL.js";import"./index-DrFu-skq.js";function t(s){const n={a:"a",code:"code",h2:"h2",h3:"h3",li:"li",p:"p",strong:"strong",ul:"ul",...o(),...s.components};return e.jsxs(e.Fragment,{children:[e.jsx(a,{title:"Release workflow"}),`
+`,e.jsx(i,{children:"Release workflow"}),`
+`,e.jsx(n.h2,{id:"versioning",children:"Versioning"}),`
+`,e.jsxs(n.p,{children:["This project versions components independently, meaning each component has its own version number, updated independently of other components. We follow ",e.jsx(n.a,{href:"https://semver.org/",rel:"nofollow",children:"semantic versioning"})," and as such, each release is versioned according to the following rules:"]}),`
+`,e.jsxs(n.ul,{children:[`
+`,e.jsxs(n.li,{children:[e.jsx(n.strong,{children:"Major"}),": Breaking changes such as API changes, the removal of features, or changes to ",e.jsx(n.code,{children:"--mod"})," custom properties"]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.strong,{children:"Minor"}),": New features or enhancements"]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.strong,{children:"Patch"}),": Bug fixes or minor improvements"]}),`
+`]}),`
+`,e.jsxs(n.p,{children:["Versioning (and package publishing) is handled by ",e.jsx(n.a,{href:"https://github.com/changesets/changesets",rel:"nofollow",children:"Changesets"}),", which lets contributors declare how their changes should be released."]}),`
+`,e.jsxs(n.p,{children:["Additionally, we use the ",e.jsx(n.a,{href:"https://www.conventionalcommits.org/",rel:"nofollow",children:"Conventional Commits"})," specification for writing our commit messages to help communicate the types of changes we're making to the codebase."]}),`
+`,e.jsx(n.h3,{id:"changesets-usage",children:"Changesets usage"}),`
+`,e.jsx(n.p,{children:"A changeset is a piece of information about changes made in a branch or a commit. It holds three bits of information:"}),`
+`,e.jsxs(n.ul,{children:[`
+`,e.jsx(n.li,{children:"What we need to release"}),`
+`,e.jsxs(n.li,{children:["What the next version we want to release is (using a ",e.jsx(n.a,{href:"https://semver.org/",rel:"nofollow",children:"semver bump type"}),")"]}),`
+`,e.jsx(n.li,{children:"A changelog entry for the released packages"}),`
+`]}),`
+`,e.jsxs(n.p,{children:["Not every change to the codebase will require a release, but any changes to files within the ",e.jsx(n.code,{children:"/components"})," directory ",e.jsx(n.strong,{children:"will"}),` require a release. Generally, when thinking about versioning and releases, it's a good idea to consider the question: "does this change need to be consumed by someone or something outside of Spectrum CSS?" If the answer to that question is "yes", then the changes will likely require a changeset.`]}),`
+`,e.jsxs(n.p,{children:["A changeset can be ",e.jsx(n.a,{href:"https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md#i-am-in-a-multi-package-repository-a-mono-repo",rel:"nofollow",children:"added locally by the author"})," by invoking the command line script, or it can be added during the Pull Request process by a project maintainer via the ",e.jsx(n.a,{href:"https://github.com/changesets/bot",rel:"nofollow",children:"Changesets GitHub bot"}),". The result of either method will be a single commit that adds a markdown file with YAML frontmatter describing the changes."]}),`
+`,e.jsxs(n.p,{children:["Additionally, ",e.jsx(n.a,{href:"https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md#tips-on-adding-changesets",rel:"nofollow",children:"multiple changesets"})," can be added to a Pull Request."]}),`
+`,e.jsx(n.h2,{id:"releasing",children:"Releasing"}),`
+`,e.jsxs(n.p,{children:["Releases are handled via Changesets. Specifically, via the ",e.jsx(n.a,{href:"https://github.com/changesets/action",rel:"nofollow",children:"Changesets GitHub action"}),". When there are new changesets on the ",e.jsx(n.a,{href:"https://github.com/changesets/changesets/blob/main/docs/config-file-options.md#basebranch-git-branch-name",rel:"nofollow",children:"configured baseBranch"})," (usually ",e.jsx(n.code,{children:"main"})," in our repo), the action will create a new Pull Request with all of the package versions updated and changelogs updated. The Pull Request can then be merged back into ",e.jsx(n.code,{children:"main"})," and the updated packages can be published manually or automatically via the action."]}),`
+`,e.jsx(n.p,{children:"This allows for maintainers and contributors to review the proposed version and changelog updates and make changes as necessary before the publish step."}),`
+`,e.jsx(n.h2,{id:"prereleases",children:"Prereleases"}),`
+`,e.jsxs(n.p,{children:["Information about Changesets and prereleases can be found ",e.jsx(n.a,{href:"https://github.com/changesets/changesets/blob/main/docs/prereleases.md",rel:"nofollow",children:"here"}),"."]})]})}function p(s={}){const{wrapper:n}={...o(),...s.components};return n?e.jsx(n,{...s,children:e.jsx(t,{...s})}):t(s)}export{p as default};
