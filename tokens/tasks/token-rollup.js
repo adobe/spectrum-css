@@ -17,7 +17,7 @@ const path = require("path");
 
 const fg = require("fast-glob");
 
-const { processCSS } = require("../../tasks/component-builder");
+const { processCSS } = require("../../tasks/component-builder.js");
 
 require("colors");
 

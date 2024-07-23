@@ -25,8 +25,8 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 	const textDir = globals.textDir ?? "ltr";
-	const isNestedPopover = id === "popover-nested" || id === "popover-nested-2";
-	const isTopBottom = position.startsWith("top") || position.startsWith("bottom");
+	const isNestedPopover = id.split("-").includes("nested");
+	const isTopBottom = position && ["top", "bottom"].some((e) => position.startsWith(e));
 
 	/**
 	 * Adjust popover's position in relation to the source/trigger element.
@@ -145,16 +145,18 @@ export const Template = ({
 	});
 
 	return html`
-		${when(typeof trigger === "function", (passthroughs, context) => trigger({
-			onclick: function() {
-				updateArgs({ isOpen: !isOpen });
-			},
-			...passthroughs,
-			isSelected: isNestedPopover ?? isOpen,
-			isOpen: isNestedPopover ?? true,
-			id: triggerId,
-			popupId: id,
-		}, context))}
+		${when(typeof trigger === "function", 
+            (passthroughs, context) => trigger({
+			    onclick: function() {
+				    updateArgs({ isOpen: !isOpen });
+			    },
+			    ...passthroughs,
+			    isSelected: isNestedPopover ?? isOpen,
+			    isOpen: isNestedPopover ?? true,
+			    id: triggerId,
+			    popupId: id,
+		    }, context)
+        )}
 
         <div
             class=${classMap({
