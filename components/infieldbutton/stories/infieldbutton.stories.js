@@ -1,6 +1,8 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isActive, isDisabled, isFocused, isHovered } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
+import { InfieldButtonGroup } from "./infieldbutton.test";
 import { Template } from "./template";
 
 /**
@@ -43,15 +45,10 @@ export default {
 			...IconStories?.argTypes?.iconName ?? {},
 			if: false,
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean"
-		},
+		isDisabled,
+		isFocused,
+		isActive,
+		isHovered,
 		isStacked: { table: { disable: true } },
 	},
 	args: {
@@ -61,6 +58,9 @@ export default {
 		iconName: "Add",
 		isQuiet: false,
 		isDisabled: false,
+		isFocused: false,
+		isHovered: false,
+		isActive: false,
 		isStacked: false,
 	},
 	parameters: {
@@ -68,7 +68,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = InfieldButtonGroup.bind({});
 Default.args = {};
 
 export const Start = Template.bind({});
@@ -90,17 +90,25 @@ End.parameters = {
 };
 
 export const Quiet = Template.bind({});
+Quiet.tags = ["autodocs", "!dev"];
 Quiet.args = {
 	isQuiet: true
 };
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Disabled = Template.bind({});
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true
 };
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = InfieldButtonGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

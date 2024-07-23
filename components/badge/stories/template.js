@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -18,7 +18,7 @@ export const Template = ({
 	fixed,
 	customStyles = {},
 	customClasses = [],
-	id,
+	id = getRandomId("badge"),
 }) => html`
   <div
     class=${classMap({
@@ -45,47 +45,6 @@ export const Template = ({
     ${when(label, () => html`<div class="${rootClass}-label">${label}</div>`)}
   </div>
 `;
-
-const Badges = (args, context) => {
-	return html`${[
-    {
-      iconName: undefined,
-    },
-    {
-      label: undefined,
-    },
-    {
-      label: "24 days left in trial",
-      customStyles: { "max-inline-size": "120px" },
-    },
-  ].map((overrides) => Template({ ...args, ...overrides }, context))} `;
-};
-
-export const BadgeGroup = Variants({
-	Template: Badges,
-	testData: [
-		...["neutral", "accent", "informative", "positive", "negative"].map((variant) =>
-			({
-				testHeading: capitalize(variant),
-				variant,
-			})
-		),
-		...["gray", "red", "orange", "yellow", "chartreuse", "celery", "green", "seafoam", "cyan", "blue", "indigo", "purple", "fuchsia", "magenta"].map((variant) =>
-			({
-				testHeading: capitalize(variant),
-				variant,
-			})
-		),
-		...["none", "fixed-inline-start", "fixed-inline-end", "fixed-block-start", "fixed-block-end"].map((fixed) =>
-			({
-				testHeading: `Layout ${fixed}`,
-				size: "xl",
-				variant: "informative",
-				fixed,
-			})
-		),
-	],
-});
 
 export const PreviewSets = (variants, args, context) => html`
 	<div

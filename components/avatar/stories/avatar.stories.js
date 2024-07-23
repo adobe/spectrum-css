@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { AvatarGroup, AvatarSizes, Template } from "./template";
+import { AvatarGroup } from "./avatar.test";
+import { AvatarSizes, Template } from "./template";
 
 /**
  * An image representing a user. Note that a div wrapper is required for avatar:
@@ -115,7 +116,7 @@ Disabled.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = AvatarGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

@@ -6,7 +6,8 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorLoupe",
-	isOpen,
+	isOpen = true,
+	isDisabled = false,
 	customStyles = {},
 	customClasses = [],
 }) => svg`
@@ -14,6 +15,7 @@ export const Template = ({
       class=${classMap({
         [rootClass]: true,
         "is-open": isOpen,
+        "is-disabled": isDisabled,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       style=${styleMap({

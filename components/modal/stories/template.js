@@ -1,4 +1,4 @@
-import { Variants, renderContent } from "@spectrum-css/preview/decorators/utilities.js";
+import { renderContent } from "@spectrum-css/preview/decorators/utilities.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -33,5 +33,3 @@ export const Template = ({
 		)}
 	`;
 };
-
-export const ModalGroup = Variants({ Template });

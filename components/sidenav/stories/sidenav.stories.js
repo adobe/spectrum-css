@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
+import { SideNavGroup } from "./sidenav.test";
 import { Template } from "./template";
 
 /**
@@ -61,11 +62,11 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = SideNavGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = SideNavGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
@@ -74,7 +75,9 @@ WithForcedColors.parameters = {
 	},
 };
 
+// ********* DOCS ONLY ********* //
 export const Multilevel = Template.bind({});
+Multilevel.tags = ["autodocs", "!dev"];
 Multilevel.args = {
 	variant: "multiLevel",
 	items: [
@@ -125,8 +128,12 @@ Multilevel.args = {
 		},
 	]
 };
+Multilevel.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const WithHeading = Template.bind({});
+WithHeading.tags = ["autodocs", "!dev"];
 WithHeading.args = {
 	items: [
 		{
@@ -153,8 +160,12 @@ WithHeading.args = {
 		}
 	]
 };
+WithHeading.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const WithIcons = Template.bind({});
+WithIcons.tags = ["autodocs", "!dev"];
 WithIcons .args = {
 	variant: "multiLevel",
 	hasIcon: true,
@@ -194,4 +205,7 @@ WithIcons .args = {
 			link: "#",
 		},
 	]
+};
+WithIcons.parameters = {
+	chromatic: { disableSnapshot: true },
 };

@@ -1,7 +1,8 @@
-import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { html } from "lit";
 import { version } from "../package.json";
-import { Template, TypographyGroup } from "./template";
+import { Template } from "./template";
+import { TypographyGroup } from "./typography.test";
 
 /**
  * Spectrum typography is broken out into several separate components.
@@ -81,12 +82,26 @@ Default.args = {
 	content: [
 		{
 			semantics: "heading",
-			content: ["Aliquet Mauris Eu"],
+			content: ["Aliquet mauris eu"],
 		},
 		{
 			content: [
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 			],
+		},
+		{
+			variant: ["emphasized"],
+			content: [
+				"Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			],
+		},
+		{
+			semantics: "code",
+			content: ["console.log('Hello World!');"],
+		},
+		{
+			semantics: "detail",
+			content: [html`<br/>`, "Aliquet mauris eu"],
 		},
 		{
 			content: [
@@ -97,7 +112,7 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = TypographyGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
@@ -107,17 +122,19 @@ WithForcedColors.parameters = {
 	},
 };
 
-export const Heading = (args, context) => Sizes({ Template, ...args }, context);
+// ********* DOCS ONLY ********* //
+export const Heading = Template.bind({});
+Heading.tags = ["!dev"];
 Heading.args = {
 	semantics: "heading",
-	content: ["Aliquet Mauris Eu"],
+	content: ["Aliquet mauris eu"],
 };
-Heading.tags = ["!dev"];
 Heading.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Body = (args, context) => Sizes({ Template, ...args }, context);
+export const Body = Template.bind({});
+Body.tags = ["!dev"];
 Body.argTypes = {
 	size: {
 		name: "Size",
@@ -131,12 +148,11 @@ Body.args = {
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 	],
 };
-Body.tags = ["!dev"];
 Body.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Detail = (args, context) => Sizes({ Template, ...args }, context);
+export const Detail = Template.bind({});
 Detail.argTypes = {
 	size: {
 		name: "Size",
@@ -153,8 +169,12 @@ Detail.args = {
 	content: ["Aliquet Mauris Eu"],
 };
 Detail.tags = ["!dev"];
+Detail.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
-export const Code = (args, context) => Sizes({ Template, ...args }, context);
+export const Code = Template.bind({});
+Code.tags = ["!dev"];
 Code.argTypes = {
 	size: {
 		name: "Size",
@@ -166,4 +186,6 @@ Code.args = {
 	semantics: "code",
 	content: ["console.log('Hello World!');"],
 };
-Code.tags = ["!dev"];
+Code.parameters = {
+	chromatic: { disableSnapshot: true },
+};

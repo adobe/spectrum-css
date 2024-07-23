@@ -12,42 +12,47 @@ export const Template = ({
 	isDisabled = false,
 	isFocused = false,
 	isWithColorArea = false,
-	colorHandleStyle = {
-		"--spectrum-picked-color": "rgb(255, 0, 0)",
-	},
-}, context) => html`
-	<div class=${classMap({
-		[rootClass]: true,
-		"is-disabled": isDisabled,
-		"is-focused": isFocused,
-		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-	})}>
-		<div class="${rootClass}-inner">
-			<div class="${rootClass}-colorarea-container">
-			${when(isWithColorArea, () => html`
-				${ColorArea({
-					isDisabled,
-					customStyles: {
-						"--mod-colorarea-width": "80px",
-						"--mod-colorarea-height": "80px",
-					},
-				}, context)}
-			`)}
-			</div>
-		</div>
+	colorHandleStyle = {},
+} = {}, context = {}) => {
+	return html`
 		<div class=${classMap({
-			[`${rootClass}-border`]: true,
+			[rootClass]: true,
 			"is-disabled": isDisabled,
+			"is-focused": isFocused,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}>
+			<div class="${rootClass}-inner">
+				<div class="${rootClass}-colorarea-container">
+				${when(isWithColorArea, () => html`
+					${ColorArea({
+						isDisabled,
+						customStyles: {
+							"--mod-colorarea-width": "80px",
+							"--mod-colorarea-height": "80px",
+						},
+					}, context)}
+				`)}
+				</div>
+			</div>
 			<div class=${classMap({
-				[`${rootClass}-wheel`]: true,
+				[`${rootClass}-border`]: true,
 				"is-disabled": isDisabled,
-			})}></div>
+			})}>
+				<div class=${classMap({
+					[`${rootClass}-wheel`]: true,
+					"is-disabled": isDisabled,
+				})}></div>
+			</div>
+			${ColorHandle({
+				isDisabled,
+				isFocused,
+				customClasses: [`${rootClass}-handle`],
+				customStyles: {
+					"--spectrum-picked-color": "rgb(255, 0, 0)",
+					...colorHandleStyle
+				},
+			}, context)}
+			<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
 		</div>
-		${ColorHandle({
-			isDisabled,
-			customClasses: [`${rootClass}-handle`],
-			customStyles: colorHandleStyle,
-		}, context)}
-		<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
-	</div>`;
+	`;
+};

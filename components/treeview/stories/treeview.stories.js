@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template, TreeViewGroup } from "./template";
+import { Template } from "./template";
+import { TreeViewGroup } from "./treeview.test";
 
 /**
  * The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.
@@ -175,7 +176,7 @@ FoldersAndFiles.args = {
 };
 FoldersAndFiles.tags = ["!dev"];
 FoldersAndFiles.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const Thumbnails = Template.bind({});
@@ -217,7 +218,7 @@ Thumbnails.args = {
 };
 Thumbnails.tags = ["!dev"];
 Thumbnails.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const WithSections = Template.bind({});
@@ -262,7 +263,7 @@ WithSections.args = {
 };
 WithSections.tags = ["!dev"];
 WithSections.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const WithDropTarget = Template.bind({});
@@ -283,7 +284,7 @@ WithDropTarget.args = {
 };
 WithDropTarget.tags = ["!dev"];
 WithDropTarget.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const Flat = Template.bind({});
@@ -352,11 +353,11 @@ Flat.args = {
 };
 Flat.tags = ["!dev"];
 Flat.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = TreeViewGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
