@@ -1,6 +1,5 @@
 import { Template as ColorHandle } from "@spectrum-css/colorhandle/stories/template.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -25,9 +24,8 @@ export const Template = ({
 		"rgb(255, 0, 0)",
 	],
 	gradientType = "gradient",
-	colorHandleStyle = {
-		"--spectrum-picked-color": "rgba(255, 0, 0)",
-	},
+	selectedColor = "rgb(255, 0, 0)",
+	colorHandleStyle = {},
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 	return html`
@@ -75,48 +73,16 @@ export const Template = ({
       ${ColorHandle({
         isDisabled,
         isFocused,
+		selectedColor,
         customClasses: [`${rootClass}-handle`],
         customStyles: colorHandleStyle,
       }, context)}
-      <input type="range" class="${rootClass}-slider" min="0" max="100" step="1" />
+      <input
+	  	type="color"
+		value=${selectedColor}
+		class=${classMap({
+			[`${rootClass}-slider`]: true
+		})} />
     </div>
   `;
 };
-
-export const ColorSliderGroup = Variants({
-	Template,
-	testData: [
-		{
-			testHeading: "Default",
-		},
-		{
-			testHeading: "Vertical",
-			vertical: true,
-		},
-		{
-			testHeading: "Alpha",
-			gradientStops: ["rgba(0, 0, 0, 1) 0%", "rgba(0, 0, 0, 0) 100%"],
-			colorHandleStyle: {
-				"--spectrum-picked-color": "rgba(0, 0, 0, 1)",
-			},
-		},
-		{
-			testHeading: "With Image",
-			gradientType: "image",
-			colorHandleStyle: {
-				"--spectrum-picked-color": "#df6a7d",
-				"inset-inline-start": "50%",
-			},
-		},
-	],
-	stateData: [
-		{
-			testHeading: "Disabled",
-			isDisabled: true,
-		},
-		{
-			testHeading: "Focused",
-			isFocused: true,
-		},
-	],
-});

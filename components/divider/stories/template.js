@@ -12,7 +12,8 @@ export const Template = ({
 	staticColor,
 	vertical = false,
 	customClasses = [],
-}) => {
+	customStyles = {},
+} = {}) => {
 	if (tag === "hr") {
 		return html` <hr
 			class=${classMap({
@@ -24,9 +25,10 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap({
-				"min-height": vertical == true ? "20px" : undefined,
-				height: vertical == true ? "auto" : undefined,
+				"block-size": vertical ? "auto" : undefined,
+				"inline-size": !vertical ? "100%" : undefined,
 				"align-self": vertical == true ? "stretch" : undefined,
+				...customStyles,
 			})}
 			role="separator"
 		/>`;
@@ -45,6 +47,7 @@ export const Template = ({
 			"min-height": vertical == true ? "20px" : undefined,
 			height: vertical == true ? "auto" : undefined,
 			"align-self": vertical == true ? "stretch" : undefined,
+			...customStyles,
 		})}
 		role="separator"
 	></div>`;

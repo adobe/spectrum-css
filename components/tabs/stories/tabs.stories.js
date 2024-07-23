@@ -1,8 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { html } from "lit";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { TabsGroups } from "./tabs.test.js";
+import { Template } from "./template.js";
 
 /**
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.
@@ -106,63 +105,11 @@ export default {
 	},
 };
 
-const TabsGroup = (args) => html`
-  <div
-    style="display: flex; flex-direction: ${args.orientation === "horizontal"
-      ? "column"
-      : "row"}; gap: 32px;"
-  >
-    ${Template({
-      ...args,
-      content: [
-        {
-          id: "tab-1",
-          label: "Tab 1",
-          isSelected: true,
-        },
-        {
-          id: "tab-2",
-          label: "Tab 2",
-          isDisabled: true,
-        },
-        {
-          id: "tab-3",
-          label: "Tab 3",
-        },
-      ],
-    })}
-    ${Template(args)} ${Template({ ...args, iconOnly: true })}
-  </div>
-`;
-
-const Variants = (args) => html`
-  ${window.isChromatic() ? html`
-  <div style="display: grid; gap: 32px;${args.orientation === "overflow" ? " max-inline-size: 100px" : ""}">
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Default"], customClasses: ["chromatic-ignore"] })}
-      ${TabsGroup(args)}
-    </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Emphasized"], customClasses: ["chromatic-ignore"] })}
-      ${TabsGroup({ ...args, isEmphasized: true })}
-    </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Quiet"], customClasses: ["chromatic-ignore"] })}
-      ${TabsGroup({ ...args, isQuiet: true })}
-    </div>
-    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
-      ${Typography({ semantics: "heading", size: "s", content: ["Quiet + compact"], customClasses: ["chromatic-ignore"] })}
-      ${TabsGroup({ ...args, isQuiet: true, isCompact: true })}
-    </div>
-  </div>
-` : Template(args)}
-`;
-
-export const Default = Variants.bind({});
+export const Default = TabsGroups.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Variants.bind({});
+export const WithForcedColors = TabsGroups.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
@@ -171,12 +118,25 @@ WithForcedColors.parameters = {
 	},
 };
 
-export const Vertical = Variants.bind({});
+// ********* DOCS ONLY ********* //
+export const Vertical = Template.bind({});
+Vertical.tags = ["autodocs", "!dev"];
 Vertical.args = {
 	orientation: "vertical",
 };
+Vertical.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
-export const Overflow = Variants.bind({});
+export const Overflow = Template.bind({});
+Overflow.tags = ["autodocs", "!dev"];
 Overflow.args = {
 	orientation: "overflow",
+};
+Overflow.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
 };

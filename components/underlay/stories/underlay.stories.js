@@ -20,11 +20,12 @@ export default {
 		rootClass: "spectrum-Underlay",
 		isOpen: false,
 	},
+	tags: ["autodocs", "!test"],
 	parameters: {
+		layout: "fullscreen",
 		docs: {
 			story: {
 				inline: false,
-				height: "500px",
 			},
 		},
 		chromatic: { disableSnapshot: true },

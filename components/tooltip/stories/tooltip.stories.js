@@ -3,7 +3,7 @@ import { isFocused, isOpen } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-import { PlacementVariants } from "./template";
+import { PlacementVariants } from "./tooltip.test.js";
 
 /**
  * Tooltips show contextual help or information about specific components when a user hovers or focuses on them.

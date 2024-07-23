@@ -1,6 +1,5 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -15,8 +14,8 @@ export const Template = (
 		items = [],
 		variant,
 		isDragged = false,
-	},
-	context,
+	} = {},
+	context = {},
 ) => html`
 	<nav>
 		<ul
@@ -83,39 +82,3 @@ export const Template = (
 		</ul>
 	</nav>
 `;
-
-export const BreadcrumbGroup = Variants({
-	Template,
-	testData: [{
-		testHeading: "Default"
-	}, {
-		testHeading: "Compact",
-		variant: "compact",
-	},
-	{
-		testHeading: "Multiline",
-		variant: "multiline",
-		items: [
-			{
-				label: "Nav root",
-			},
-			{
-				iconName: "FolderOpen",
-				isDisabled: true,
-			},
-			{
-				label: "Trend",
-				isDragged: true,
-			},
-			{
-				label: "January 2019 Assets",
-			},
-		],
-	}],
-	stateData: [
-		{
-			testHeading: "Dragged",
-			isDragged: true,
-		}
-	]
-});

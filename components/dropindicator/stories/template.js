@@ -11,17 +11,19 @@ export const Template = ({
 	customStyles = {},
 	direction = "vertical",
 	size = "300px",
-}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--${direction}`]: typeof direction !== "undefined",
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${ifDefined(styleMap({
-			blockSize: direction == "vertical" ? size : undefined,
-			inlineSize: direction == "horizontal" ? size : undefined,
-			...customStyles,
-		}))}
-	></div>
-`;
+} = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--${direction}`]: typeof direction !== "undefined",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${ifDefined(styleMap({
+				"block-size": direction == "vertical" ? size : undefined,
+				"inline-size": direction == "horizontal" ? size : undefined,
+				...customStyles,
+			}))}
+		></div>
+	`;
+};

@@ -1,3 +1,4 @@
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -10,11 +11,11 @@ export const Template = ({
 	size = "m",
 	label,
 	name,
-	isEmphasized,
-	isChecked,
-	isDisabled,
-	isReadOnly,
-	id,
+	isEmphasized = false,
+	isChecked = false,
+	isDisabled = false,
+	isReadOnly = false,
+	id = getRandomId("radio"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {

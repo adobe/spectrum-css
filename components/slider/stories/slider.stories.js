@@ -1,7 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { SliderGroup } from "./slider.test.js";
+import { Template } from "./template.js";
 
 /**
  * A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.
@@ -123,7 +124,6 @@ export default {
 		max: 20,
 		values: [14],
 		step: 2,
-		id: "spectrum-Slider",
 	},
 	parameters: {
 		actions: {
@@ -136,13 +136,20 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = SliderGroup.bind({});
 Default.args = {};
 
+// ********* DOCS ONLY ********* //
 export const Filled = Template.bind({});
 Filled.args = {
 	...Default.args,
 	variant: "filled",
+};
+Filled.tags = ["autodocs", "!dev"];
+Filled.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
 };
 
 export const FilledOffset = Template.bind({});
@@ -151,17 +158,35 @@ FilledOffset.args = {
 	min: 0,
 	variant: "offset",
 };
+FilledOffset.tags = ["autodocs", "!dev"];
+FilledOffset.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
 export const Ramp = Template.bind({});
 Ramp.args = {
 	...Default.args,
 	variant: "ramp",
 };
+Ramp.tags = ["autodocs", "!dev"];
+Ramp.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
 export const Range = Template.bind({});
 Range.args = {
 	...Default.args,
 	values: [14, 16],
+};
+Range.tags = ["autodocs", "!dev"];
+Range.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
 };
 
 export const Tick = Template.bind({});
@@ -170,27 +195,34 @@ Tick.args = {
 	label: undefined,
 	showTicks: true,
 };
+Tick.tags = ["autodocs", "!dev"];
+Tick.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	...Default.args,
 	isDisabled: true,
 };
+Disabled.tags = ["autodocs", "!dev"];
+Disabled.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
 export const WithFocus = Template.bind({});
 WithFocus.args = {
 	...Default.args,
-	variant: "with focus",
 	isFocused: true,
 };
-
-// ********* VRT ONLY ********* //
-export const WithForcedColors = WithFocus.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
-WithForcedColors.parameters = {
+WithFocus.tags = ["autodocs", "!dev"];
+WithFocus.parameters = {
 	chromatic: {
-		forcedColors: "active",
-		modes: disableDefaultModes
+		disableSnapshot: true,
 	},
 };
 
@@ -205,9 +237,31 @@ Gradient.args = {
 	},
 	label: "Slider label that is long and wraps to the next line",
 };
+Gradient.tags = ["autodocs", "!dev"];
+Gradient.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
 export const SideLabel = Template.bind({});
 SideLabel.args = {
 	...Default.args,
 	labelPosition: "side",
+};
+SideLabel.tags = ["autodocs", "!dev"];
+SideLabel.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = SliderGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
