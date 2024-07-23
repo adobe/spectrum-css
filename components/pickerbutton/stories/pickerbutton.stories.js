@@ -123,6 +123,7 @@ WithForcedColors.parameters = {
 	},
 };
 
+// ********* DOCS ONLY ********* //
 export const WithLabel = Template.bind({});
 WithLabel.tags = ["autodocs", "!dev"];
 WithLabel.args = {
