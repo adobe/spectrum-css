@@ -1032,3 +1032,17 @@ show space above and below, fill horizontally
 - docs: add migration guide
 
 Co-authored-by: Jian Liao <jianliao@adobe.com>
+
+### Migration guide
+
+- **Thumbnail sizing**
+
+  Thumbnail sizes are specified by appending a number to the size class: `.spectrum-Thumbnail--size*`. Sizes scale expotentially and are based on the Spectrum type scale. These range from size-50 to size-1000.
+
+- **Image cover**
+
+  Thumbnail now offers a way to control the content inside a child `img` tag by adding a modifier `spectrum-Thumbnail--cover` class in addition to the `spectrum-Thumbnail` class.
+
+- **Remove focus-ring class**
+
+  Adds variant for when thumbnails are used in layer management (such as the Compact or Detail Layers panels). When used this way the thumbnail is given a thick blue border when selected.
