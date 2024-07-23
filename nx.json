@@ -8,7 +8,7 @@
 		}
 	},
 	"namedInputs": {
-		"core": ["{projectRoot}/*.css"],
+		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
 		"docs": ["{projectRoot}/metadata/*.yml"],
 		"eslint": ["{workspaceRoot}/.eslintrc"],
 		"prettier": ["{workspaceRoot}/.prettierrc"],
