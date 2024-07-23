@@ -13,11 +13,6 @@ governing permissions and limitations under the License.
 
 .spectrum--light,
 .spectrum--lightest {
-  --spectrum-menu-item-background-color-default: rgba(0, 0, 0, 0); /* --spectrum-gray-900 */
-  --spectrum-menu-item-background-color-hover: var(--spectrum-transparent-black-200);
-  --spectrum-menu-item-background-color-down: var(--spectrum-transparent-black-200);
-  --spectrum-menu-item-background-color-key-focus: var(--spectrum-transparent-black-200);
-
   /* Drop Zone background color rgb */
   --spectrum-drop-zone-background-color-rgb: var(--spectrum-blue-800-rgb); /* var(--spectrum-accent-color-800);*/
 

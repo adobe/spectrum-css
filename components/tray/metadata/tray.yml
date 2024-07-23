@@ -6,6 +6,12 @@ sections:
   - name: Custom Properties API
     description: |
       This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/tray/metadata/mods.md">here</a>.
+  - name: Migration Guide
+    description: |
+      ### Version 3.2.0
+      #### Additional padding added for Spectrum 2 components
+      This partial migration adds spacing to the sides of the tray to accommodate the menu and adds the mod:
+        - `--mod-tray-edge-to-content-area`
 SpectrumSiteSlug: https://spectrum.adobe.com/page/tray/
 examples:
   - id: tray

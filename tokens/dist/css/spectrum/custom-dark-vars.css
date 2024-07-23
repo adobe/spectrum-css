@@ -1,11 +1,4 @@
 .spectrum--dark{
-  --spectrum-menu-item-background-color-default-rgb:255, 255, 255;
-  --spectrum-menu-item-background-color-default-opacity:0;
-  --spectrum-menu-item-background-color-default:rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity)); /* --spectrum-gray-900 */
-  --spectrum-menu-item-background-color-hover:var(--spectrum-transparent-white-200);
-  --spectrum-menu-item-background-color-down:var(--spectrum-transparent-white-200);
-  --spectrum-menu-item-background-color-key-focus:var(--spectrum-transparent-white-200);
-
   /* Drop Zone background color rgb */
   --spectrum-drop-zone-background-color-rgb:var( --spectrum-blue-900-rgb); /* var(--spectrum-accent-color-900);*/
 
