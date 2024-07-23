@@ -150,6 +150,11 @@
 	/* Swatch fill: Image, Gradient, SVG */
 	&.is-image {
 		.spectrum-Swatch-fill {
+			/* Undefined variables allows custom stylesheet or JS to pass the value to this element */
+			background:
+				center / cover no-repeat var(--spectrum-background, transparent),
+				var(--spectrum-gradient, transparent);
+
 			&::before {
 				background-color: transparent;
 			}
@@ -284,6 +289,7 @@
 }
 
 .spectrum-Swatch-mixedValueIcon {
+	z-index: 2;
 	display: none;
 	pointer-events: none;
 
