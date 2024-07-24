@@ -1,6 +1,7 @@
+import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { ButtonGroup } from "./template";
+import { ButtonGroup } from "./buttongroup.test";
 
 /**
  * A grouping of buttons.
@@ -29,6 +30,14 @@ export default {
 			control: "boolean",
 		},
 		items: { table: { disable: true } },
+		iconName: {
+			...Icon.argTypes.iconName,
+			table: { disable: true },
+		},
+		iconSet: {
+			...Icon.argTypes.setName,
+			table: { disable: true },
+		},
 	},
 	args: {
 		rootClass: "spectrum-ButtonGroup",
@@ -64,9 +73,9 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = ButtonGroup.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

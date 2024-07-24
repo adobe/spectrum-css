@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Variants } from "./template";
+import { HelpTextGroup } from "./helptext.test";
 
 /**
  * Help text provides either an informative description or an error message that gives more context about what a user needs to input. It's commonly used in forms.
@@ -75,13 +75,13 @@ export default {
 	},
 };
 
-export const Default = Variants.bind({});
+export const Default = HelpTextGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = HelpTextGroup.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

@@ -1,7 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isInvalid, isValid } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template, TextFieldGroup } from "./template";
+import { Template } from "./template";
+import { TextFieldGroup } from "./textfield.test";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
@@ -193,12 +194,15 @@ TextArea.args = {
 	grows: true,
 	value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
 };
+TextArea.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
 // @todo should this show text field and text area in the same snapshot?
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = TextFieldGroup.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

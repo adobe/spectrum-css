@@ -2,6 +2,7 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { html } from "lit";
@@ -10,6 +11,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Picker = ({
 	rootClass = "spectrum-Picker",
@@ -91,7 +94,7 @@ export const Template = ({
 	customStyles = {},
 	customPopoverStyles = {},
 	content = [],
-	id,
+	id = getRandomId("picker"),
 } = {}, context = {}) => {
 	let iconName = "ChevronDown200";
 	switch (size) {
@@ -118,30 +121,13 @@ export const Template = ({
 				alignment: labelPosition,
 			}, context)
 		)}
-		${labelPosition == "left" ?
-			html`<div style="display: inline-block">
-				${Picker({
-					rootClass,
-					size,
-					placeholder,
-					isQuiet,
-					isKeyboardFocused,
-					isOpen,
-					isInvalid,
-					isLoading,
-					isDisabled,
-					isReadOnly,
-					customClasses,
-					customStyles,
-					content,
-					iconName,
-					labelPosition,
-					id,
-				}, context)}
-			</div>
-			`
-		:
-			Picker({
+		${Popover({
+			isOpen: isOpen && !isDisabled,
+			withTip: false,
+			position: "bottom",
+			isQuiet,
+			trigger: (passthroughs, context) => Picker({
+				...passthroughs,
 				rootClass,
 				size,
 				placeholder,
@@ -153,13 +139,18 @@ export const Template = ({
 				isDisabled,
 				isReadOnly,
 				customClasses,
-				customStyles,
+				customStyles: {
+					"display": labelPosition == "left" ? "inline-block" : undefined,
+					...customStyles,
+				},
 				content,
 				iconName,
 				labelPosition,
 				id,
-			}, context)
-		}
+			}, context),
+			customStyles: customPopoverStyles,
+			content,
+		}, context)}
 		${when(helpText, () =>
 			HelpText({
 				text: helpText,
@@ -173,7 +164,12 @@ export const Template = ({
 					withTip: false,
 					position: "bottom",
 					isQuiet,
-					customStyles: customPopoverStyles,
+					trigger: undefined,
+					customStyles: {
+						"inset-block-start": "30px",
+						"inset-inline-start": "50px",
+						...customPopoverStyles
+					},
 					content,
 				}, context)
 		)}

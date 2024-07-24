@@ -76,7 +76,7 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 			const usedInDecl = new Set();
 
 			// Parse value and get a list of variables used
-			const parsed = valueParser(decl.value);
+			const parsed = valueParser.parse(decl.value);
 			parsed.walk((node) => {
 				if (node.type !== "function" || node.value !== "var" || !node.nodes.length) {
 					return;
