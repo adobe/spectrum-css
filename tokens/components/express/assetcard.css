@@ -11,6 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
+.spectrum--legacy {
+	--system-asset-card-overlay-background-color: rgba(27, 127, 245, 0.1);
+}
+
 .spectrum--express {
-	--system-spectrum-assetcard-overlay-background-color: rgba(109, 115, 246, 0.2);
+	--system-asset-card-overlay-background-color: rgba(109, 115, 246, 0.2);
 }

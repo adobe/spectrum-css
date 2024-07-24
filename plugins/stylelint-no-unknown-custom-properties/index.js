@@ -133,7 +133,7 @@ const ruleFunction = (enabled, options = {}) => {
 		/* Collect variable use information */
 		root.walkDecls((decl) => {
 			// Parse value and get a list of variables used
-			const parsed = valueParser(decl.value);
+			const parsed = valueParser.parse(decl.value);
 			parsed.walk((node) => {
 				if (node.type !== "function" || node.value !== "var") {
 					return;

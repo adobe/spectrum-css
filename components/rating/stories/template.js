@@ -1,10 +1,13 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Rating",
@@ -15,7 +18,7 @@ export const Template = ({
 	isDisabled = true,
 	isEmphasized = false,
 	customClasses = [],
-	id,
+	id = getRandomId("rating"),
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 

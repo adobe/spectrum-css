@@ -107,7 +107,7 @@ exports.getStatusLightVariant = (status) =>
 exports.getSlug = function (name, subName = undefined) {
 	if (!name) return;
 	if (subName) name += `-${subName}`;
-	return name.toLowerCase().replace(/[^a-z\\-]/g, "");
+	return name.toLowerCase().replace(/[^a-z-]/g, "");
 };
 
 exports.populateDNAInfo = function (component) {

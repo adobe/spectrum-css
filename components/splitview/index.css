@@ -11,59 +11,38 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-SplitView {
-	--spectrum-splitview-vertical-width: 100%;
-	--spectrum-splitview-vertical-gripper-width: 50%;
-	--spectrum-splitview-vertical-gripper-outer-width: 100%;
-	--spectrum-splitview-vertical-gripper-reset: 0;
-
-	--spectrum-splitview-background-color: var(--spectrum-gray-100);
-	--spectrum-splitview-content-color: var(--spectrum-body-color);
-
-	--spectrum-splitview-handle-background-color: var(--spectrum-gray-300);
-	--spectrum-splitview-handle-background-color-hover: var(--spectrum-gray-400);
-	--spectrum-splitview-handle-background-color-down: var(--spectrum-gray-800);
-	--spectrum-splitview-handle-background-color-focus: var(--spectrum-focus-indicator-color);
-	--spectrum-splitview-handle-width: var(--spectrum-border-width-200);
-
-	--spectrum-splitview-gripper-border-radius: var(--spectrum-corner-radius-75);
-	--spectrum-splitview-gripper-width: var(--spectrum-border-width-400);
-	--spectrum-splitview-gripper-height: 16px; /* No good token to use for this */
-	--spectrum-splitview-gripper-border-width-horizontal: 3px; /* No good token to use for this */
-	--spectrum-splitview-gripper-border-width-vertical: var(--spectrum-border-width-400);
-}
+ @import "themes/spectrum-two.css";
 
 .spectrum-SplitView {
-	display: flex;
 	overflow: hidden;
+	display: flex;
 }
 
 .spectrum-SplitView-pane {
 	block-size: 100%;
-	background-color: var(--mod-splitview-background-color, var(--spectrum-splitview-background-color));
 	color: var(--mod-splitview-content-color, var(--spectrum-splitview-content-color));
+	background-color: var(--mod-splitview-background-color, var(--spectrum-splitview-background-color));
 }
 
 .spectrum-SplitView-gripper {
-	content: "";
-	display: block;
-	position: absolute;
-	border-style: solid;
-	border-radius: var(--mod-splitview-gripper-border-radius, var(--spectrum-splitview-gripper-border-radius));
-	border-color: var(--highcontrast-splitview-handle-background-color, var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color)));
-
-	inset-block-start: 50%;
-	transform: translate(0, -50%);
-
 	/* Prevent touch-action on handle */
 	touch-action: none;
+	content: "";
+	position: absolute;
+
+	inset-block-start: 50%;
 
 	/* half of (width + horizontal border - handle width) * -1 (for negative opposite) */
 	inset-inline-start: calc(((var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width)) + (2 * var(--mod-splitview-gripper-border-width-vertical, var(--spectrum-splitview-gripper-border-width-vertical))) - var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width))) / 2) * -1);
+	transform: translate(0, -50%);
+	display: block;
 	inline-size: var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width));
 	block-size: var(--mod-splitview-gripper-height, var(--spectrum-splitview-gripper-height));
+	border-color: var(--highcontrast-splitview-handle-background-color, var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color)));
+	border-style: solid;
 	border-block-width: var(--mod-splitview-gripper-border-width-vertical, var(--spectrum-splitview-gripper-border-width-vertical));
 	border-inline-width: var(--mod-splitview-gripper-border-width-horizontal, var(--spectrum-splitview-gripper-border-width-horizontal));
+	border-radius: var(--mod-splitview-gripper-border-radius, var(--spectrum-splitview-gripper-border-radius));
 
 	&::before {
 		background-color: var(--highcontrast-splitview-handle-background-color, var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color)));
@@ -71,17 +50,17 @@
 }
 
 .spectrum-SplitView-splitter {
-	/* Contains the gripper */
-	position: relative;
-
-	background-color: var(--highcontrast-splitview-handle-background-color, var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color)));
-
 	/* Prevent text selection while dragging */
 	user-select: none;
 
+	/* Contains the gripper */
+	position: relative;
+	z-index: 1;
+
 	inline-size: var(--mod-splitview-handle-width, var(--spectrum-splitview-handle-width));
 	block-size: 100%;
-	z-index: 1;
+
+	background-color: var(--highcontrast-splitview-handle-background-color, var(--mod-splitview-handle-background-color, var(--spectrum-splitview-handle-background-color)));
 
 	&.is-collapsed-start,
 	&.is-collapsed-end {
@@ -105,8 +84,8 @@
 
 	&.is-collapsed-end {
 		.spectrum-SplitView-gripper {
-			inset-inline-end: 0;
 			inset-inline-start: auto;
+			inset-inline-end: 0;
 		}
 	}
 }
@@ -144,8 +123,8 @@
 	}
 
 	&:focus-visible {
-		outline: none;
 		background-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
+		outline: none;
 
 		.spectrum-SplitView-gripper {
 			border-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
@@ -162,16 +141,16 @@
 	flex-direction: column;
 
 	.spectrum-SplitView-pane {
-		block-size: auto;
 		inline-size: var(--mod-splitview-vertical-width, var(--spectrum-splitview-vertical-width));
+		block-size: auto;
 	}
 
 	.spectrum-SplitView-gripper {
 		/* half of (height + vertical border - handle width) * -1 (for negative opposite) */
 		inset-block-start: calc(((var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width)) + (2 * var(--mod-splitview-gripper-border-width-vertical, var(--spectrum-splitview-gripper-border-width-vertical))) - var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width))) / 2) * -1);
+		inset-inline-start: var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width));
 
 		transform: translate(calc(-1 * var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width))), 0);
-		inset-inline-start: var(--mod-splitview-vertical-gripper-width, var(--spectrum-splitview-vertical-gripper-width));
 		inline-size: var(--mod-splitview-gripper-height, var(--spectrum-splitview-gripper-height));
 		block-size: var(--mod-splitview-gripper-width, var(--spectrum-splitview-gripper-width));
 

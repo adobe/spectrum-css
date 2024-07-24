@@ -16,15 +16,18 @@ export const withContextWrapper = makeDecorator({
 			} = {},
 			globals: {
 				color = "light",
-				context = "legacy",
+				context = "spectrum",
 				scale = "medium",
 			} = {},
 			viewMode,
 			id,
 			loaded: {
 				tokens = {},
+				legacy = {},
 			} = {}
 		} = data;
+
+		const tokenData = context === "spectrum" ? tokens : legacy;
 
 		const staticColorSettings = {
 			"black": {
@@ -42,6 +45,9 @@ export const withContextWrapper = makeDecorator({
 			const isModern = Boolean(context === "spectrum");
 			const isExpress = Boolean(context === "express");
 
+			// Legacy is either Spectrum 1 or Express
+			const isLegacy = ["legacy", "express"].includes(context);
+
 			// viewMode is either "docs" or "story"
 			if (viewMode === "docs" && !isRaw) {
 				// add the default classes to the body to ensure labels, headings, and borders are styled correctly
@@ -49,6 +55,15 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			for (const container of fetchContainers(id, viewMode === "docs")) {
+				const loadStyles = (key, condition = true) => {
+					// Add/remove the base styles for the global, spectrum, and express contexts
+					toggleStyles(container, `vars-${key}-global`, tokenData?.global?.[key], condition);
+
+					// Note: Express requires loading both spectrum + express tokens
+					toggleStyles(container, `vars-${key}-legacy`, legacy?.spectrum?.[key], condition && isLegacy);
+					toggleStyles(container, `vars-${key}-express`, legacy?.express?.[key], condition && isExpress);
+				};
+
 				// Check if the container has a static color element
 				const hasStaticElement = container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack, .${rootClass}--overBackground)`);
 				let staticKey = staticColor;
@@ -67,12 +82,7 @@ export const withContextWrapper = makeDecorator({
 				// Express only gets the express class
 				container.classList.toggle("spectrum--express", isExpress);
 
-				// Add/remove the base styles for the global, spectrum, and express contexts
-				toggleStyles(container, "vars-global", tokens?.global?.base, true);
-
-				// Note: Express requires loading both spectrum + express tokens
-				toggleStyles(container, "vars-shared-legacy", tokens?.spectrum?.base, !isModern);
-				toggleStyles(container, "vars-shared-express", tokens?.express?.base, isExpress);
+				if (!isRaw) loadStyles("base");
 
 				// Darkest is deprecated in Spectrum 2
 				if (isModern && color === "darkest") color = "dark";
@@ -82,23 +92,14 @@ export const withContextWrapper = makeDecorator({
                     const isColor = c === staticColorSettings[staticKey]?.color || !staticKey && c === color;
 
 					container.classList.toggle(`spectrum--${c}`, isColor && !isRaw);
-
-					toggleStyles(container, `vars-global-${c}`, tokens?.global?.[c], isColor);
-
-					// Note: Express requires loading both spectrum + express tokens
-					toggleStyles(container, `vars-${c}-legacy`, tokens?.spectrum?.[c], isColor && !isModern);
-					toggleStyles(container, `vars-${c}-express`, tokens?.express?.[c], isColor && isExpress);
+					if (!isRaw) loadStyles(c, isColor);
 				}
 
 				for (const s of ["medium", "large"]) {
                     const isScale = s === scale;
 					container.classList.toggle(`spectrum--${s}`, isScale && !isRaw);
 
-					toggleStyles(container, `vars-global-${s}`, tokens?.global?.[s], isScale);
-
-					// Note: Express requires loading both spectrum + express tokens
-					toggleStyles(container, `vars-${s}-legacy`, tokens?.spectrum?.[s], isScale && !isModern);
-					toggleStyles(container, `vars-${s}-express`, tokens?.express?.[s], isScale && isExpress);
+					loadStyles(s, isScale);
 				}
 
 				// Start by removing the background color from the container and then add it back if needed
@@ -107,7 +108,7 @@ export const withContextWrapper = makeDecorator({
 					container.style.background = staticColorSettings[staticKey].background;
 				}
 			}
-		}, [color, context, staticColor, scale, viewMode, rootClass, tokens, staticColorSettings]);
+		}, [color, context, staticColor, scale, viewMode, rootClass, tokenData, legacy, staticColorSettings]);
 
 		return StoryFn(data);
 	},

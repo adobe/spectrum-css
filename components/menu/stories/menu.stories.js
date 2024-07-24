@@ -1,149 +1,9 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { html } from "lit";
+import { disableDefaultModes, viewports } from "@spectrum-css/preview/modes";
+import { isActive, isDisabled, isFocused, isHovered, isOpen, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { MenuItemWithVariants, MenuWithVariants, Template } from "./template";
-
-const menuArgTypes = {
-	selectionMode: {
-		name: "Selection mode",
-		description: "Determines whether items in the menu can be selected, and how many",
-		type: { name: "string", required: true },
-		table: {
-			type: { summary: "string" },
-			category: "Selection",
-		},
-		options: ["none", "single", "multiple"],
-		control: "select",
-	},
-	size: {
-		name: "Size",
-		type: { name: "string", required: true },
-		table: {
-			type: { summary: "string" },
-			category: "Component",
-		},
-		options: ["s", "m", "l", "xl"],
-		control: "select",
-	},
-	shouldTruncate: {
-		name: "Truncate menu item label",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Component",
-		},
-		control: "boolean",
-	},
-	maxInlineSize: {
-		name: "Max inline size",
-		type: { name: "text", required: true },
-		table: {
-			type: { summary: "text" },
-			category: "Component",
-		},
-		control: "text",
-		if: { arg: "shouldTruncate", truthy: true },
-	},
-	hasDividers: {
-		name: "Has dividers",
-		description: "Shows dividers between sections",
-		table: {
-			type: { summary: "boolean" },
-			category: "Component",
-		},
-		control: "boolean",
-	},
-	isTraySubmenu: {
-		name: "Is tray submenu",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Component",
-		},
-		control: "boolean",
-	},
-	labelledby: { table: { disable: true } },
-	items: { table: { disable: true } },
-	role: { table: { disable: true } },
-	subrole: { table: { disable: true } },
-};
-
-const menuItemArgTypes = {
-	isDisabled: {
-		name: "Menu item is disabled",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "State",
-		},
-		control: "boolean",
-	},
-	itemIcon: {
-		...(IconStories?.argTypes?.iconName ?? {}),
-		if: false,
-	},
-	isItemSelected: {
-		name: "Menu item is selected",
-		description: "Selected state when single or multi-select mode is turned on",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Selection",
-			control: "boolean"
-		},
-		if: { arg: "selectionMode", not: { eq: "none" } },
-	},
-	hasItemDescription: {
-		name: "Has menu item description",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Content",
-			control: "boolean",
-		},
-	},
-	hasActions: {
-		name: "Has switches",
-		description: "If multiple selection is enabled, show switches instead of checkboxes to show which items have been selected",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Selection",
-		},
-		control: "boolean",
-		if: { arg: "selectionMode", eq: "multiple" },
-	},
-	singleItemDescription: {
-		name: "Menu item description for single menu item",
-		type: { name: "text", required: true },
-		table: {
-			type: { summary: "text" },
-			category: "Content",
-		},
-		control: "text",
-		if: { arg: "hasItemDescription", truthy: true },
-	},
-	hasValue: {
-		name: "Has value text",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Content",
-			control: "boolean",
-		},
-	},
-	singleItemValue: {
-		name: "Menu item value for single menu item",
-		type: { name: "text", required: true },
-		table: {
-			type: { summary: "text" },
-			category: "Content",
-		},
-		control: "text",
-		if: { arg: "hasValue", truthy: true },
-	},
-};
+import { MenuItemGroup, MenuTraySubmenu, MenuWithVariants } from "./menu.test";
+import { Template } from "./template";
 
 /**
  * A menu is used for creating a menu list. The various elements inside a menu can be: a menu group, a menu item, or a menu divider. Often a menu will appear in a popover so that it displays as a togglig menu.
@@ -151,16 +11,67 @@ const menuItemArgTypes = {
 export default {
 	title: "Menu",
 	component: "Menu",
-	argTypes: menuArgTypes,
+	argTypes: {
+		selectionMode: {
+			name: "Selection mode",
+			description: "Determines whether items in the menu can be selected, and how many",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Selection",
+			},
+			options: ["none", "single", "multiple"],
+			control: "select",
+		},
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
+		shouldTruncate: {
+			name: "Truncate menu item label",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		hasDividers: {
+			name: "Has dividers",
+			description: "Shows dividers between sections",
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		isTraySubmenu: {
+			name: "Is tray submenu",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		labelledby: { table: { disable: true } },
+		items: { table: { disable: true } },
+		role: { table: { disable: true } },
+		subrole: { table: { disable: true } },
+	},
 	args: {
 		rootClass: "spectrum-Menu",
 		selectionMode: "none",
 		size: "m",
 		shouldTruncate: false,
-		maxInlineSize: "150px",
 		role: "listbox",
 		subrole: "option",
-		customStyles: { maxWidth: "400px" },
 		hasDividers: false,
 		items: [
 			{
@@ -285,21 +196,6 @@ export default {
 		},
 		componentVersion: version,
 	},
-	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 1em 1em;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			${Story(context)}
-		`,
-	],
 };
 
 export const Default = MenuWithVariants.bind({});
@@ -308,11 +204,113 @@ Default.argTypes = {
 };
 Default.args = {};
 
+export const TraySubmenu = MenuTraySubmenu.bind({});
+TraySubmenu.argTypes = {
+	selectionMode: { table: { disable: true } },
+	hasDividers: { table: { disable: true } },
+};
+TraySubmenu.args = {
+	selectionMode: "multiple",
+	customStyles: {
+		"--mod-menu-inline-size": "100%",
+	},
+	isTraySubmenu: true,
+	items: [
+		{
+			heading: "Snap to",
+			items: [
+				{
+					label: "Guides",
+					isSelected: true,
+				},
+				{
+					label: "Grid",
+				},
+				{
+					label: "Rulers",
+				},
+			]
+		}
+	],
+};
+TraySubmenu.parameters = {
+	chromatic: {
+		"Viewport | small": {
+			viewport: viewports.small,
+		},
+	},
+};
+
+export const MenuItem = MenuItemGroup.bind({});
+MenuItem.argTypes = {
+	isDisabled,
+	isActive,
+	isFocused,
+	isHovered,
+	isOpen,
+	isSelected,
+	label: {
+		name: "Label",
+		type: { name: "string" },
+		table: {
+			type: { summary: "string" },
+			category: "Content",
+		},
+	},
+	description: {
+		name: "Description",
+		description: "Additional information about the menu item",
+		type: { name: "string" },
+		table: {
+			type: { summary: "string" },
+			category: "Content",
+		},
+	},
+	value: {
+		name: "Value",
+		description: "Value of the menu item",
+		type: { name: "string" },
+		table: {
+			type: { summary: "string" },
+			category: "Content",
+		},
+	},
+	iconName: {
+		...(IconStories?.argTypes?.iconName ?? {}),
+		if: false,
+	},
+	hasActions: {
+		name: "Has switches",
+		description: "If multiple selection is enabled, show switches instead of checkboxes to show which items have been selected",
+		type: { name: "boolean" },
+		table: {
+			type: { summary: "boolean" },
+			category: "Selection",
+		},
+		control: "boolean",
+		if: { arg: "selectionMode", eq: "multiple" },
+	},
+	// These settings are not used in the MenuItem story
+	hasDividers: { table: { disable: true } },
+	isTraySubmenu: { table: { disable: true } },
+};
+MenuItem.args = {
+	label: "Start a chat",
+	iconName: "Chat",
+	description: "Menu item description",
+	value: "⌘ N",
+};
+
+// ********* DOCS ONLY ********* //
 export const Collapsible = Template.bind({});
 Collapsible.argTypes = {
 	selectionMode: { table: { disable: true } },
 	hasDividers: { table: { disable: true } },
 	isTraySubmenu: { table: { disable: true } },
+};
+Collapsible.tags = ["autodocs", "dev"];
+Collapsible.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 Collapsible.args = {
 	shouldTruncate: true,
@@ -383,63 +381,6 @@ Collapsible.args = {
 	],
 };
 
-export const TraySubmenu = Template.bind({});
-TraySubmenu.argTypes = {
-	selectionMode: { table: { disable: true } },
-	hasDividers: { table: { disable: true } },
-};
-TraySubmenu.args = {
-	selectionMode: "multiple",
-	customStyles: {
-		"--mod-menu-inline-size": "100%",
-	},
-	isTraySubmenu: true,
-	items: [
-		{
-			heading: "Snap to",
-			items: [
-				{
-					label: "Guides",
-					isSelected: true,
-				},
-				{
-					label: "Grid",
-				},
-				{
-					label: "Rulers",
-				},
-			]
-		}
-	],
-};
-
-export const MenuItem = MenuItemWithVariants.bind({});
-MenuItem.argTypes = {
-	isItemActive: { table: { disable: true } },
-	isItemFocused: { table: { disable: true } },
-	isItemHovered: { table: { disable: true } },
-	...menuItemArgTypes,
-};
-MenuItem.args = {
-	items: [
-		{
-			label: "Start a chat",
-			iconName: "Chat"
-		},
-	],
-	hasActions: false,
-	hasValue: false,
-	hasItemDescription: false,
-	isDisabled: false,
-	isItemActive: false,
-	isItemFocused: false,
-	isItemHovered: false,
-	isItemSelected: false,
-	singleItemDescription: "Menu item description",
-	singleItemValue: "Value",
-};
-
-// ********* DOCS ONLY ********* //
 // story used in Picker component
 export const WithDividers = Template.bind({});
 WithDividers.storyName = "Standard with dividers";
@@ -461,8 +402,8 @@ WithDividers.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = MenuItemWithVariants.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+export const WithForcedColors = MenuItemGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

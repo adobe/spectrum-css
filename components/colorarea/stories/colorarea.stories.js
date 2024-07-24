@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
+import { ColorAreaGroup } from "./colorarea.test";
 import { Template } from "./template";
 
 /**
@@ -35,16 +36,20 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = ColorAreaGroup.bind({});
 Default.args = {};
 
+// ********* DOCS ONLY ********* //
 export const CustomSize = Template.bind({});
+CustomSize.tags = ["autodocs", "!dev"];
 CustomSize.args = {
 	customWidth: "80px",
 	customHeight: "80px",
 };
+CustomSize.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
-// ********* DOCS ONLY ********* //
 export const Disabled = Template.bind({});
 Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
@@ -55,8 +60,8 @@ Disabled.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+export const WithForcedColors = ColorAreaGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
