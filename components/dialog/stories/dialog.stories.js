@@ -178,7 +178,7 @@ export const Default = (args) => window.isChromatic() ? ChromaticVariants(args) 
 
 Default.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-	header: "* Required",
+	header: "*Required",
 	showModal: true,
 	content: [
 		() => Typography({

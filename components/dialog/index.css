@@ -231,6 +231,11 @@ governing permissions and limitations under the License.
 .spectrum-Dialog-buttonGroup {
 	grid-area: buttonGroup;
 
+	& > .spectrum-ButtonGroup {
+		/* to override ButtonGroup's justify-content: normal and/or not having footer content */
+		justify-content: flex-end;
+	}
+
 	/* this padding should be safe as button group is always end aligned */
 	padding-inline-start: var(--mod-standard-dialog-spacing-footer-to-button-group, var(--spectrum-standard-dialog-spacing-footer-to-button-group));
 }
@@ -430,11 +435,6 @@ governing permissions and limitations under the License.
 				".    content      ."
 				".    buttonGroup  ."
 				".    .            .";
-		}
-
-		.spectrum-Dialog-buttonGroup > .spectrum-ButtonGroup {
-			/* to override ButtonGroup's justify-content: normal and handle not having footer content */
-			justify-content: flex-end;
 		}
 	}
 
