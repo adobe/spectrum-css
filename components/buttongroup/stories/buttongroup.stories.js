@@ -1,3 +1,4 @@
+import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { ButtonGroup } from "./template";
@@ -29,6 +30,14 @@ export default {
 			control: "boolean",
 		},
 		items: { table: { disable: true } },
+		iconName: {
+			...Icon.argTypes.iconName,
+			table: { disable: true },
+		},
+		iconSet: {
+			...Icon.argTypes.setName,
+			table: { disable: true },
+		},
 	},
 	args: {
 		rootClass: "spectrum-ButtonGroup",

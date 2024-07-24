@@ -6,9 +6,9 @@ import { html } from "lit";
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  * @description Ensures the Underlay component is rendered only once.
  **/
-export const withOverlayWrapper = makeDecorator({
-	name: "withOverlayWrapper",
-	parameterName: "withOverlay",
+export const withUnderlayWrapper = makeDecorator({
+	name: "withUnderlayWrapper",
+	parameterName: "withUnderlay",
 	// @todo: should this be opt-in?
 	// skipIfNoParametersOrOptions: true,
 	wrapper: (StoryFn, context) => {

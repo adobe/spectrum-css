@@ -1,4 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -10,8 +11,8 @@ import "../themes/express.css";
 import "../themes/spectrum.css";
 
 export const Template = ({
-	id,
 	rootClass = "spectrum-PickerButton",
+	id = getRandomId("pickerbutton"),
 	size = "m",
 	label,
 	position,
@@ -71,3 +72,38 @@ export const Template = ({
 		</button>
 	`;
 };
+
+export const PickerGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "With label",
+			label: "Select",
+		},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		},
+		{
+			testHeading: "Rounded",
+			isRounded: true,
+		},
+		{
+			testHeading: "Position: left",
+			position: "left",
+		}
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+	]
+});

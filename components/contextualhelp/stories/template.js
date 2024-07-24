@@ -1,7 +1,8 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { html } from "lit";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
+import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -12,7 +13,7 @@ import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ContextualHelp",
-	id,
+	id = getRandomId("contextualhelp"),
 	iconName,
 	title,
 	body,
@@ -29,19 +30,14 @@ export const Template = ({
 		id=${ifDefined(id)}
 		style=${styleMap(customStyles)}
 	>
-		${popoverPlacement.includes("top")
-			? html`<div
-					class="dummy-spacing"
-					style="position: relative; height: 200px;"
-				></div> `
-			: ""}
-		${ActionButton({
-			size: "xs",
-			iconName,
-			customClasses: [`${rootClass}-button`],
-		}, context)}
 		${Popover({
 			isOpen: true,
+			trigger: (passthrough) => ActionButton({
+				...passthrough,
+				size: "xs",
+				iconName,
+				customClasses: [`${rootClass}-button`],
+			}, context),
 			content: [
 				title ? html`<h2 class="${rootClass}-heading">${title}</h2>` : "",
 				body ? html`<p class="${rootClass}-body">${body}</p>` : "",
@@ -51,11 +47,44 @@ export const Template = ({
 							url: link.url,
 							customClasses: [`${rootClass}-link`],
 					})
-					: "",
+					: nothing,
 			],
 			position: popoverPlacement,
 			customClasses: [`${rootClass}-popover`],
-			customStyles: { top: "25px" },
+			customStyles,
 		}, context)}
 	</div>
 `;
+
+export const ContextualHelpGroup = Variants({
+	Template,
+	wrapperStyles: {
+		"inline-size": "400px"
+	},
+	testData: [
+		{
+			testHeading: "Default",
+			wrapperStyles: {
+				"min-block-size": "170px",
+				"align-items": "flex-start",
+			},
+			customStyles: {
+				"max-inline-size": "275px",
+			},
+		},
+		{
+			testHeading: "With link",
+			wrapperStyles: {
+				"min-block-size": "210px",
+				"align-items": "flex-start",
+			},
+			customStyles: {
+				"max-inline-size": "275px",
+			},
+			link: {
+				text: "Learn about permissions",
+				url: "#",
+			},
+		},
+	],
+});

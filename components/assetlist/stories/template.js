@@ -1,6 +1,6 @@
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Variants, renderContent } from "@spectrum-css/preview/decorators/utilities.js";
+import { Variants, getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -70,7 +70,7 @@ export const Template = ({
 	rootClass = "spectrum-AssetList",
 	items = [],
 	customClasses = [],
-	id,
+	id = getRandomId("assetlist"),
 } = {}, context = {}) => {
 	return html`
 		<ul

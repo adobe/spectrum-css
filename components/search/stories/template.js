@@ -1,4 +1,5 @@
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -46,3 +47,22 @@ export const Template = ({
 		</form>
 	`;
 };
+
+export const SearchGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+	]
+});

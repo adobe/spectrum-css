@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -12,32 +12,29 @@ import "../index.css";
 import "../themes/express.css";
 import "../themes/spectrum.css";
 
-export const Template = (
-	{
-		rootClass = "spectrum-Button",
-		id,
-		testId,
-		customClasses = [],
-		customStyles = {},
-		size = "m",
-		label,
-		hideLabel = false,
-		iconName,
-		iconAfterLabel = false,
-		variant,
-		staticColor,
-		treatment,
-		onclick,
-		isDisabled = false,
-		isHovered = false,
-		isFocused = false,
-		isActive = false,
-		isPending = false,
-		ariaExpanded,
-		ariaControls,
-	} = {},
-	context = {}
-) => {
+export const Template = ({
+	rootClass = "spectrum-Button",
+	id = getRandomId("button"),
+	testId,
+	customClasses = [],
+	customStyles = {},
+	size = "m",
+	label,
+	hideLabel = false,
+	iconName,
+	iconAfterLabel = false,
+	variant,
+	staticColor,
+	treatment,
+	onclick,
+	isDisabled = false,
+	isHovered = false,
+	isFocused = false,
+	isActive = false,
+	isPending = false,
+	ariaExpanded,
+	ariaControls,
+} = {}, context = {}) => {
 	const { updateArgs } = context;
 
 	return html`

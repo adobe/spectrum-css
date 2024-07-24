@@ -38,6 +38,7 @@ export const Template = ({
 
 export const TagGroups = Variants({
 	Template,
+	sizeDirection: "row",
 	testData: [
 		{
 			testHeading: "Default",

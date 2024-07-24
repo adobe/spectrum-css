@@ -2,7 +2,7 @@ import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { PickerGroup, Template } from "./template";
 
 /**
  * The picker button component is used as a dropdown trigger. See Combobox.
@@ -109,16 +109,11 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = PickerGroup.bind({});
 Default.args = {};
 
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-	label: "Select",
-};
-
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = PickerGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
@@ -127,14 +122,29 @@ WithForcedColors.parameters = {
 	},
 };
 
+export const WithLabel = Template.bind({});
+WithLabel.tags = ["autodocs", "!dev"];
+WithLabel.args = {
+	label: "Select",
+};
+WithLabel.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 export const Disabled = Template.bind({});
-Disabled.tags = ["!autodocs", "!dev", "test"];
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true
 };
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Quiet = Template.bind({});
-Quiet.tags = ["!autodocs", "!dev", "test"];
+Quiet.tags = ["autodocs", "!dev"];
 Quiet.args = {
 	isQuiet: true
+};
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
 };

@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { within } from "@storybook/testing-library";
+import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { SplitViewGroup, Template } from "./template";
 
 export default {
 	title: "Split view",
@@ -35,6 +35,7 @@ export default {
 				disable: true,
 			},
 		},
+		isFocused,
 		collapsePosition: {
 			name: "Collapse position",
 			type: "string",
@@ -68,6 +69,7 @@ export default {
 	args: {
 		rootClass: "spectrum-SplitView",
 		isResizable: false,
+		isFocused: false,
 		componentHeight: "200px",
 		orientation: "horizontal",
 		isCollapsible: false,
@@ -79,7 +81,7 @@ export default {
 	},
 };
 
-export const Horizontal = Template.bind({});
+export const Horizontal = SplitViewGroup.bind({});
 Horizontal.args = {};
 
 export const HorizontallyResizable = Template.bind({});
@@ -90,20 +92,23 @@ HorizontallyResizable.args = {
 	panelLabels: ["Left", "Right"],
 	panelStyles: ["width: 304px;", "flex: 1;"],
 };
+HorizontallyResizable.tags = ["autodocs", "!dev"];
+HorizontallyResizable.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const HorizontallyFocused = Template.bind({});
-HorizontallyFocused.play = async ({ canvasElement }) => {
-	const canvas = within(canvasElement);
-
-	await canvas.getByTestId("splitter").focus();
-
-};
 HorizontallyFocused.args = {
 	orientation: "horizontal",
+	isFocused: true,
 	isResizable: true,
 	isCollapsible: false,
 	panelLabels: ["Left", "Right"],
 	panelStyles: ["width: 304px;", "flex: 1;"],
+};
+HorizontallyFocused.tags = ["autodocs", "!dev"];
+HorizontallyFocused.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const HorizontalCollapsedLeft = Template.bind({});
@@ -115,6 +120,10 @@ HorizontalCollapsedLeft.args = {
 	panelLabels: ["Left", "Right"],
 	panelStyles: ["width: 0;", "flex: 1;"],
 };
+HorizontalCollapsedLeft.tags = ["autodocs", "!dev"];
+HorizontalCollapsedLeft.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const HorizontalCollapsedRight = Template.bind({});
 HorizontalCollapsedRight.args = {
@@ -125,6 +134,10 @@ HorizontalCollapsedRight.args = {
 	panelLabels: ["Left", "Right"],
 	panelStyles: ["flex: 1;", "width: 0;"],
 };
+HorizontalCollapsedRight.tags = ["autodocs", "!dev"];
+HorizontalCollapsedRight.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Vertical = Template.bind({});
 Vertical.args = {
@@ -134,6 +147,10 @@ Vertical.args = {
 	panelLabels: ["Top", "Bottom"],
 	panelStyles: ["height: 50px;", "flex: 1;"],
 };
+Vertical.tags = ["autodocs", "!dev"];
+Vertical.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const VerticallyResizable = Template.bind({});
 VerticallyResizable.args = {
@@ -142,6 +159,10 @@ VerticallyResizable.args = {
 	isCollapsible: false,
 	panelLabels: ["Top", "Bottom"],
 	panelStyles: ["height: 50px;", "flex: 1;"],
+};
+VerticallyResizable.tags = ["autodocs", "!dev"];
+VerticallyResizable.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 export const VerticalCollapsedTop = Template.bind({});
@@ -153,6 +174,10 @@ VerticalCollapsedTop.args = {
 	panelLabels: ["Top", "Bottom"],
 	panelStyles: ["height: 0;", "flex: 1;"],
 };
+VerticalCollapsedTop.tags = ["autodocs", "!dev"];
+VerticalCollapsedTop.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const VerticalCollapsedBottom = Template.bind({});
 VerticalCollapsedBottom.args = {
@@ -162,6 +187,10 @@ VerticalCollapsedBottom.args = {
 	collapsePosition: "bottom",
 	panelLabels: ["Top", "Bottom"],
 	panelStyles: ["flex: 1;", "height: 0;"],
+};
+VerticalCollapsedBottom.tags = ["autodocs", "!dev"];
+VerticalCollapsedBottom.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

@@ -1,4 +1,4 @@
-import { withOverlayWrapper } from "@spectrum-css/preview/decorators";
+import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import modes, { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
@@ -39,18 +39,19 @@ export default {
 		variant: "confirmation",
 	},
 	parameters: {
+		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-AlertDialog button"],
 		},
 		docs: {
 			story: {
-				height: "300px"
+				height: "300px",
 			}
 		},
 		componentVersion: version,
 	},
 	decorators: [
-		withOverlayWrapper,
+		withUnderlayWrapper,
 	],
 };
 

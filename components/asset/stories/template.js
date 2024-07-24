@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -12,7 +12,7 @@ export const Template = ({
 	rootClass = "spectrum-Asset",
 	image,
 	preset,
-	id,
+	id = getRandomId("asset"),
 	customClasses = [],
 	customStyles = {},
 	isCardAssetOverride = false,

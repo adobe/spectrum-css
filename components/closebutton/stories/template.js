@@ -1,4 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -15,7 +16,7 @@ export const Template = ({
 	staticColor,
 	isDisabled = false,
 	customClasses = [],
-	id,
+	id = getRandomId("closebutton"),
 	onclick,
 } = {}, context = {}) => {
 	return html`
@@ -41,3 +42,20 @@ export const Template = ({
 		</button>
 	`;
 };
+
+export const CloseButtonGroup = Variants({
+	Template,
+	stateDirection: "row",
+	sizeDirection: "row",
+	testData: [
+		{
+			testHeading: "Default",
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+	]
+});

@@ -61,6 +61,10 @@ nav .spectrum-Site-logo {
 	block-size: 40px;
 }
 
+.docs-story > div:first-child {
+	padding: 20px !important;
+}
+
 .docblock-argstable-body tr td {
 	letter-spacing: unset;
 	font-size: 11px;

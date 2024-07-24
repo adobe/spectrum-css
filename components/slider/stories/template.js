@@ -1,4 +1,5 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -25,12 +26,11 @@ export const Template = ({
 	isFocused = false,
 	customClasses = [],
 	customStyles = {},
-	id,
+	id = getRandomId("slider"),
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 
-	const textDirection = globals.textDirection ?? "ltr";
-	const rtl = !!(textDirection === "rtl");
+	const isRTL = globals.textDirection !== "rtl";
 	const rangeLength = max - min;
 	const centerPoint = rangeLength / 2 + min;
 	const isRamp = variant === "ramp";
@@ -52,7 +52,7 @@ export const Template = ({
 	};
 
 	function renderTrack({ position, width }) {
-		const direction = rtl ? "right" : "left";
+		const direction = isRTL ? "right" : "left";
 		return html`
 			<div
 				class="${rootClass}-track"
@@ -78,7 +78,7 @@ export const Template = ({
 	}
 
 	function renderHandle({ position, value, idx = 0 }) {
-		const direction = rtl ? "right" : "left";
+		const direction = isRTL ? "left" : "right";
 		return html`
 			<div
 				class=${classMap({
@@ -208,7 +208,7 @@ export const Template = ({
 									})}
 									style=${ifDefined(
 										styleMap({
-											[rtl ? "right" : "left"]: `${
+											[isRTL ? "right" : "left"]: `${
 												value > centerPoint
 													? getPosition(centerPoint)
 													: getPosition(value)
@@ -240,3 +240,63 @@ export const Template = ({
 			`)}
 		</div>`;
 };
+
+
+export const SliderGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Filled",
+			variant: "filled",
+		},
+		{
+			testHeading: "Filled offset",
+			variant: "offset",
+			min: 0,
+		},
+		{
+			testHeading: "Ramp",
+			variant: "ramp",
+		},
+		{
+			testHeading: "Range",
+			values: [14, 16],
+		},
+		{
+			testHeading: "Tick",
+			label: undefined,
+			showTicks: true,
+		},
+		{
+			testHeading: "Side label",
+			labelPosition: "side",
+		},
+		{
+			testHeading: "Gradient",
+			customStyles: {
+				"--spectrum-slider-track-color":
+					"linear-gradient(to right, red, green 100%)",
+				"--spectrum-slider-track-color-rtl":
+					"linear-gradient(to left, red, green 100%)",
+			},
+		},
+		{
+			testHeading: "Truncation",
+			withStates: false,
+			label: "Slider label that is long and wraps to the next line",
+		}
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+	]
+});

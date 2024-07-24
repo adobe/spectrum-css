@@ -69,7 +69,7 @@ export const withContextWrapper = makeDecorator({
 				container.classList.toggle("spectrum", !isRaw);
 
 				// S1 and S1 Express get the legacy class
-				container.classList.toggle("spectrum--legacy", isLegacy);
+				container.classList.toggle("spectrum--legacy", !isModern);
 				// Express only gets the express class
 				container.classList.toggle("spectrum--express", isExpress);
 

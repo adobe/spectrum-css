@@ -1,12 +1,9 @@
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { renderContent, Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { repeat } from "lit/directives/repeat.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
@@ -40,8 +37,9 @@ export const Template = ({
 			aria-readonly=${ifDefined(isReadOnly ? "true" : undefined)}
 			aria-required=${ifDefined(isRequired ? "true" : undefined)}
 		>
-			${when(label, () =>
-				FieldLabel(
+			${renderContent(items, { args: { isReadOnly, isRequired }, context })}
+			${when(helpText, () =>
+				HelpText(
 					{
 						size: "m",
 						label,
@@ -55,16 +53,7 @@ export const Template = ({
 					[`${rootClass}InputLayout`]: true,
 				})}
 			>
-				${repeat(
-					items,
-					(item) => item.id,
-					(item) => {
-						if (typeof item === "function") {
-							return item({}, context);
-						}
-						return item;
-					},
-				)}
+				${renderContent(items, { args: { isReadOnly, isRequired }, context })}
 				${when(helpText, () =>
 					HelpText(
 						{
@@ -80,85 +69,52 @@ export const Template = ({
 	`;
 };
 
-export const FieldGroupSet = (args, context) => html`
-	<div
-		style=${styleMap({
-			display: window.isChromatic() ? "none" : "contents",
-		})}
-	>
-		${Template(args, context)}
-	</div>
-	<div
-		style=${styleMap({
-			display: window.isChromatic() ? "flex" : "none",
-			"flex-direction": "column",
-			"align-items": "flex-start",
-			gap: "32px",
-		})}
-	>
-		${[
-			{},
-			{
-				heading: "Horizontal",
-				layout: "horizontal",
-				items: [
-					Checkbox({
-						id: "apple",
-						label: "Apples are best",
-						customClasses: ["spectrum-FieldGroup-item"],
-					}),
-					Checkbox({
-						id: "banana",
-						label: "Bananas forever",
-						customClasses: ["spectrum-FieldGroup-item"],
-					}),
-					Checkbox({
-						id: "cherry",
-						label: "Cherries ftw",
-						customClasses: ["spectrum-FieldGroup-item"],
-					}),
-				],
-			},
-			{
-				heading: "Label Position: Side",
-				label: "Pick one:",
-				labelPosition: "side",
-				helpText: "Select an option to continue.",
-			},
-			{
-				heading: "Invalid",
-				isInvalid: true,
-				helpText: "Select an option to continue.",
-			},
-		].map(
-			({ heading, ...item }) => html`
-				<div>
-					${Typography(
-						{
-							semantics: "heading",
-							size: "l",
-							content: [heading],
-							customClasses: ["chromatic-ignore"],
-						},
-						context,
-					)}
-					<div
-						style=${styleMap({
-							padding: "12px",
-							border: "1px solid var(--spectrum-gray-200)",
-							"border-radius": "4px",
-						})}
-					>
-						${Template(
-							{
-								...args,
-								...item,
-							},
-							context,
-						)}
-					</div>
-				</div>
-			`,
-		)}
-	</div>
-`;
+export const FieldGroupSet = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Horizontal",
+			layout: "horizontal",
+			items: [
+				(passthroughs, context) => Checkbox({
+					...passthroughs,
+					id: "apple",
+					label: "Apples are best",
+					customClasses: ["spectrum-FieldGroup-item"],
+				}, context),
+				(passthroughs, context) => Checkbox({
+					...passthroughs,
+					id: "banana",
+					label: "Bananas forever",
+					customClasses: ["spectrum-FieldGroup-item"],
+				}, context),
+				(passthroughs, context) => Checkbox({
+					...passthroughs,
+					id: "cherry",
+					label: "Cherries ftw",
+					customClasses: ["spectrum-FieldGroup-item"],
+				}, context),
+			],
+		},
+		{
+			testHeading: "Label position: side",
+			label: "Pick one:",
+			labelPosition: "side",
+			helpText: "Select an option to continue.",
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Invalid",
+			isInvalid: true,
+			helpText: "Select an option to continue.",
+		},
+		{
+			testHeading: "Read only",
+			isReadOnly: true,
+		},
+	]
+});

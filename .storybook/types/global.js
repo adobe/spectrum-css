@@ -82,10 +82,11 @@ export default {
 		type: "string",
 		toolbar: {
 			items: [
-				{ value: "en-US", title: "🇺🇸", right: "English (US)" },
-				{ value: "ja", title: "🇯🇵", right: "Japanese" },
-				{ value: "ko", title: "🇰🇷", right: "한국어" },
-				{ value: "zh", title: "🇨🇳", right: "中文" },
+				{ value: "en-US", title: "English", right: "English (US)" },
+				{ value: "he", title: "Hebrew", right: "עִברִית" },
+				{ value: "ja", title: "Japanese", right: "日本語" },
+				{ value: "ko", title: "Korean", right: "한국어" },
+				{ value: "ar", title: "Arabic", right: "عربي" },
 			],
 			dynamicTitle: true,
 		},

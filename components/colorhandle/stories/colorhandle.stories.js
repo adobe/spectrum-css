@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ColorHandleGroup, Template } from "./template";
 
 /**
  * The color handle component is used with color area, color slider and color wheel as the color selector.
@@ -36,7 +36,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = ColorHandleGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
@@ -65,7 +65,7 @@ WithColorLoupe.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = ColorHandleGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {

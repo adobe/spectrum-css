@@ -1,7 +1,8 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isActive, isFocused, isHovered } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { FloatingActionButtonGroup, Template } from "./template";
 
 /**
  * The floating action button component is used to give users a more prominent button for high frequency actions.
@@ -24,6 +25,9 @@ export default {
 			options: ["primary", "secondary"],
 			control: "radio",
 		},
+		isActive,
+		isHovered,
+		isFocused,
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
@@ -34,23 +38,32 @@ export default {
 		rootClass: "spectrum-FloatingActionButton",
 		variant: "primary",
 		iconName: "AddCircle",
+		isHovered: false,
+		isFocused: false,
+		isActive: false,
 	},
 	parameters: {
 		componentVersion: version,
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = FloatingActionButtonGroup.bind({});
 Default.storyName = "Default (Primary)";
 Default.args = {};
 
 export const Secondary = Template.bind({});
+Secondary.tags = ["autodocs", "!dev"];
 Secondary.args = {
 	variant: "secondary",
 };
+Secondary.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	}
+};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = FloatingActionButtonGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {

@@ -1,3 +1,4 @@
+import { setConsoleOptions } from "@storybook/addon-console";
 import {
 	withActions,
 	withArgEvents,
@@ -6,7 +7,7 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
-	withTextDirectionWrapper,
+	withTextDirectionWrapper
 } from "./decorators";
 import {
 	FontLoader,
@@ -18,13 +19,23 @@ import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import { argTypes, globalTypes } from "./types";
 
 import "./assets/base.css";
-import "./assets/typekit.js";
 
 window.global = window;
 
+const panelExclude = setConsoleOptions({}).panelExclude || [];
+setConsoleOptions({
+	panelExclude: [
+		...panelExclude,
+		/deprecated/,
+		/TypeError/,
+		/postcss/,
+		/stylelint/,
+	],
+});
+
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 const parameters = {
-	layout: "padded",
+	layout: "centered",
 	showNav: true,
 	showTabs: true,
 	showPanel: true,
@@ -59,6 +70,7 @@ const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
+		root: "[data-html-preview]:first-of-type",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -75,7 +87,6 @@ const parameters = {
 		page: DocumentationTemplate,
 		story: {
 			inline: true,
-			height: "200px",
 		},
 		source: {
 			type: "dynamic",
@@ -110,9 +121,9 @@ export default {
 	},
 	decorators: [
 		withArgEvents,
-		withTextDirectionWrapper,
 		withLanguageWrapper,
 		withReducedMotionWrapper,
+		withTextDirectionWrapper,
 		withContextWrapper,
 		withTestingPreviewWrapper,
 		withActions,

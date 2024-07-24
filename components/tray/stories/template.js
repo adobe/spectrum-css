@@ -1,6 +1,6 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -15,8 +15,8 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	customStyles = {},
-	id,
-} = {}, context) => html`
+	id = getRandomId("tray"),
+} = {}, context = {}) => html`
 		<div
 			class=${classMap({
 				[`${rootClass}-wrapper`]: true,
@@ -38,11 +38,12 @@ export const TrayGroup = Variants({
 	testData: [
 		{
 			content: [
-				Dialog.bind(null, {
+				(passthroughs, context) => Dialog({
+					...passthroughs,
 					heading: "You have new messages waiting in your inbox",
 					content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
 					isDismissable: true,
-				})
+				}, context)
 			],
 		},
 	],

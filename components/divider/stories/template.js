@@ -1,3 +1,4 @@
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -14,6 +15,7 @@ export const Template = ({
 	staticColor,
 	vertical = false,
 	customClasses = [],
+	customStyles = {},
 }) => {
 	if (tag === "hr") {
 		return html` <hr
@@ -26,9 +28,10 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap({
-				"min-height": vertical == true ? "20px" : undefined,
-				height: vertical == true ? "auto" : undefined,
+				"block-size": vertical ? "auto" : undefined,
+				"inline-size": !vertical ? "100%" : undefined,
 				"align-self": vertical == true ? "stretch" : undefined,
+				...customStyles,
 			})}
 			role="separator"
 		/>`;
@@ -47,7 +50,36 @@ export const Template = ({
 			"min-height": vertical == true ? "20px" : undefined,
 			height: vertical == true ? "auto" : undefined,
 			"align-self": vertical == true ? "stretch" : undefined,
+			...customStyles,
 		})}
 		role="separator"
 	></div>`;
 };
+
+export const DividerGroup = Variants({
+	Template,
+	skipBorders: true,
+	testData: [
+		{
+			testHeading: "Default",
+			vertical: false,
+			customStyles: {
+				"min-inline-size": "200px",
+			},
+		},
+		{
+			testHeading: "Non-HR",
+			tag: "div",
+			customStyles: {
+				"min-inline-size": "200px",
+			},
+		},
+		{
+			testHeading: "Vertical",
+			vertical: true,
+			customStyles: {
+				"min-block-size": "100px",
+			},
+		}
+	],
+});

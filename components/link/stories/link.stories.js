@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isActive, isFocused, isHovered } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { LinkGroup } from "./template";
 
 /**
  * A link allow users to navigate to a different location. They can be presented in-line inside a paragraph or as a standalone text.
@@ -37,6 +38,18 @@ export default {
 			options: ["secondary"],
 			control: "select",
 		},
+		isHovered,
+		isActive,
+		isFocused,
+		isVisited: {
+			name: "Visited",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		staticColor: {
 			name: "Static color",
 			type: { name: "string" },
@@ -60,6 +73,10 @@ export default {
 	args: {
 		rootClass: "spectrum-Link",
 		isQuiet: false,
+		isHovered: false,
+		isActive: false,
+		isFocused: false,
+		isVisited: false,
 	},
 	parameters: {
 		actions: {
@@ -69,14 +86,14 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = LinkGroup.bind({});
 Default.args = {
 	url: "https://www.adobe.com",
 	text: "Learn more about Adobe",
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = LinkGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {

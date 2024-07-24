@@ -27,9 +27,8 @@ export const Template = ({
 		"rgb(255, 0, 0)",
 	],
 	gradientType = "gradient",
-	colorHandleStyle = {
-		"--spectrum-picked-color": "rgba(255, 0, 0)",
-	},
+	selectedColor = "rgb(255, 0, 0)",
+	colorHandleStyle = {},
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 	return html`
@@ -77,10 +76,16 @@ export const Template = ({
       ${ColorHandle({
         isDisabled,
         isFocused,
+		selectedColor,
         customClasses: [`${rootClass}-handle`],
         customStyles: colorHandleStyle,
       }, context)}
-      <input type="range" class="${rootClass}-slider" min="0" max="100" step="1" />
+      <input
+	  	type="color"
+		value=${selectedColor}
+		class=${classMap({
+			[`${rootClass}-slider`]: true
+		})} />
     </div>
   `;
 };
@@ -90,16 +95,28 @@ export const ColorSliderGroup = Variants({
 	testData: [
 		{
 			testHeading: "Default",
+			wrapperStyles: {
+				// Adjust for the indicator
+				"padding-inline": "20px",
+			},
 		},
 		{
 			testHeading: "Vertical",
 			vertical: true,
+			wrapperStyles: {
+				// Adjust for the indicator
+				"padding-block": "20px",
+			},
 		},
 		{
 			testHeading: "Alpha",
 			gradientStops: ["rgba(0, 0, 0, 1) 0%", "rgba(0, 0, 0, 0) 100%"],
 			colorHandleStyle: {
 				"--spectrum-picked-color": "rgba(0, 0, 0, 1)",
+			},
+			wrapperStyles: {
+				// Adjust for the indicator
+				"padding-inline": "20px",
 			},
 		},
 		{

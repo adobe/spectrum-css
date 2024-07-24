@@ -31,12 +31,11 @@ export default {
 export const Default = MeterGroup.bind({});
 Default.args = {
 	value: 50,
-	size: "s",
 	label: "Storage space",
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = MeterGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {

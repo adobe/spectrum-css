@@ -1,6 +1,7 @@
 import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { when } from "lit-html/directives/when.js";
@@ -13,7 +14,7 @@ import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-DatePicker",
-	id,
+	id = getRandomId("datepicker"),
 	customClasses = [],
 	isOpen = true,
 	isInvalid = false,
@@ -29,6 +30,8 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 	const lang = globals.lang ?? "en-US";
+
+	const triggerId = getRandomId("datepicker-trigger");
 
 	return html`
 		<div
@@ -60,6 +63,7 @@ export const Template = ({
 				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
 				placeholder: "Choose a date",
 				name: "field",
+				id: triggerId,
 				value: selectedDay ? new Date(selectedDay).toLocaleDateString(lang) : undefined,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
@@ -100,16 +104,12 @@ export const Template = ({
 				${Popover({
 					isOpen: isOpen && !isDisabled && !readOnly,
 					withTip: false,
-					position: "bottom",
+					position: "bottom-start",
 					isQuiet,
-					customStyles: isOpen
-						? {
-								position: "absolute",
-								top: "100%",
-								left: "0",
-								width: undefined,
-						}
-						: {},
+					triggerId,
+					customStyles: {
+						"inset-block-start": "30px",
+					},
 					content: [Calendar({}, context)],
 					// @todo this implementation of calendar does not currently display range selections or selected date on first load
 				}, context)}`
@@ -117,3 +117,51 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const DatePickerGroup = Variants({
+	Template,
+	wrapperStyles: {
+		"padding-right": "50px",
+		"min-block-size": "360px",
+		"min-inline-size": "310px",
+		"align-items": "flex-start",
+	},
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		},
+		{
+			testHeading: "Range",
+			isRange: true,
+			lastDay: 3,
+		}
+	],
+	stateData: [
+		{
+			testHeading: "Invalid",
+			isInvalid: true,
+		},
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+			wrapperStyles: {
+				"min-block-size": "30px",
+			}
+		},
+		{
+			testHeading: "Required",
+			isRequired: true,
+		},
+		{
+			testHeading: "Read only",
+			readOnly: true,
+			wrapperStyles: {
+				"min-block-size": "30px",
+			}
+		}
+	]
+});

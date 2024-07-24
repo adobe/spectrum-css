@@ -175,7 +175,7 @@ FoldersAndFiles.args = {
 };
 FoldersAndFiles.tags = ["autodocs", "!dev"];
 FoldersAndFiles.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const Thumbnails = Template.bind({});
@@ -217,7 +217,7 @@ Thumbnails.args = {
 };
 Thumbnails.tags = ["autodocs", "!dev"];
 Thumbnails.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const WithSections = Template.bind({});
@@ -262,7 +262,7 @@ WithSections.args = {
 };
 WithSections.tags = ["autodocs", "!dev"];
 WithSections.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const WithDropTarget = Template.bind({});
@@ -283,7 +283,7 @@ WithDropTarget.args = {
 };
 WithDropTarget.tags = ["autodocs", "!dev"];
 WithDropTarget.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const Flat = Template.bind({});
@@ -352,7 +352,7 @@ Flat.args = {
 };
 Flat.tags = ["autodocs", "!dev"];
 Flat.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

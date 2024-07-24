@@ -1,5 +1,5 @@
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -24,7 +24,7 @@ export const Template = ({
 	isDropTarget = false,
 	customClasses = [],
 	customStyles = {},
-	id,
+	id = getRandomId("assetcard"),
 	testId,
 } = {}, context = {}) => {
 	const { updateArgs } = context;
@@ -48,7 +48,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			data-test-id=${ifDefined(testId)}
+			data-testid=${ifDefined(testId)}
 			style=${styleMap(customStyles)}
 			@click=${() => {
 				updateArgs({ isSelected: !isSelected });

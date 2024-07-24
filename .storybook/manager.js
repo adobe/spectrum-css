@@ -3,7 +3,6 @@ import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming";
 import "./assets/index.css";
 import logo from "./assets/logo.svg";
-import "./assets/typekit.js";
 import pkg from "./package.json";
 
 const root = document.body ?? document.documentElement;

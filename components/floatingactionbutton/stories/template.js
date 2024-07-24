@@ -1,7 +1,9 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Variants, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
 import "../themes/express.css";
@@ -10,17 +12,25 @@ import "../themes/spectrum.css";
 export const Template = ({
 	rootClass = "spectrum-FloatingActionButton",
 	variant,
-	id,
+	id = getRandomId("floating"),
 	iconName,
+	isHovered = false,
+	isFocused = false,
+	isActive = false,
 	customClasses = [],
+	customStyles = {}
 }, context) => html`
 	<button
 		class=${classMap({
 			[rootClass]: true,
+			"is-hover": isHovered,
+			"is-focus-visible": isFocused,
+			"is-active": isActive,
 			[`${rootClass}--${variant}`]: variant !== undefined,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		id=${ifDefined(id)}
+		style=${styleMap(customStyles)}
 	>
 		${Icon({
 			iconName,
@@ -28,3 +38,30 @@ export const Template = ({
 		}, context)}
 	</button>
 `;
+
+export const FloatingActionButtonGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Secondary",
+			variant: "secondary",
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Hovered",
+			isHovered: true,
+		},
+		{
+			testHeading: "Active",
+			isActive: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+	]
+});

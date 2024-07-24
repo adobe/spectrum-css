@@ -1,6 +1,7 @@
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId, Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -22,7 +23,7 @@ export const Template = ({
 	isDisabled = false,
 	isInvalid = false,
 	hasClearButton = false,
-	id,
+	id = getRandomId("tag"),
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
@@ -74,3 +75,53 @@ export const Template = ({
 		</div>
 	`;
 };
+
+
+export const TagGroups = Variants({
+	Template,
+	sizeDirection: "row",
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Is removable",
+			hasClearButton: true,
+		},
+		{
+			testHeading: "With icon",
+			hasIcon: true,
+			iconName: "Info",
+		},
+		{
+			testHeading: "With avatar",
+			hasAvatar: true,
+			avatarUrl: "example-ava.png",
+		},
+		{
+			testHeading: "Truncated",
+			label: "Tag label that truncates when it gets too long",
+			customStyles: {
+				"max-inline-size": "200px"
+			}
+		}
+	],
+	stateData: [
+		{
+			testHeading: "Invalid",
+			isInvalid: true,
+		},
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Selected",
+			isSelected: true,
+		},
+		{
+			testHeading: "Emphasized",
+			isEmphasized: true,
+		},
+	]
+});

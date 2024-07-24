@@ -130,12 +130,22 @@ Emphasized.args = {
 	label: "More",
 	isEmphasized: true,
 };
+Emphasized.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
 export const Quiet = ActionButtons.bind({});
 Quiet.tags = ["autodocs", "!dev"];
 Quiet.args = {
 	label: "More",
 	isQuiet: true,
+};
+Quiet.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
 };
 
 // ********* VRT ONLY ********* //

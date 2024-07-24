@@ -50,6 +50,7 @@ export default {
 			},
 			control: "boolean",
 		},
+		customPopoverStyles: { table: { disable: true } }
 	},
 	args: {
 		rootClass: "spectrum-ActionBar",
@@ -77,7 +78,14 @@ export default {
 };
 
 export const Default = ActionBarGroup.bind({});
-Default.args = {};
+Default.args = {
+	customPopoverStyles: {
+		// Prevent the popover from being rendered offscreen
+		"--spectrum-popover-animation-distance": "-10px",
+		"inline-size": "600px",
+		"max-inline-size": "100%",
+	}
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
@@ -95,6 +103,12 @@ export const Emphasized = Template.bind({});
 Emphasized.tags = ["autodocs", "!dev"];
 Emphasized.args = {
 	isEmphasized: true,
+	customPopoverStyles: {
+		// Prevent the popover from being rendered offscreen
+		"--spectrum-popover-animation-distance": "-10px",
+		"inline-size": "600px",
+		"max-inline-size": "100%",
+	}
 };
 Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },

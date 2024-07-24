@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+@import "@spectrum-css/typography";
+
 body {
 	margin: 0;
 
@@ -33,6 +35,11 @@ svg:has(symbol):not(:has(use)) {
 	display: none;
 }
 
+/* --- DOCS STYLES --- */
+.innerZoomElementWrapper .sb-story {
+	padding: 10px !important;
+}
+
 /* Make sure heading provided by <Stories/> doc block uses styles consistent with the default H2. */
 #variants {
 	font-size: 24px;
@@ -43,6 +50,13 @@ svg:has(symbol):not(:has(use)) {
 	letter-spacing: normal;
 	text-transform: none;
 	border-block-end: 1px solid hsla(203deg, 50%, 30%, 15%);
+}
+
+/* Force the modal wrapper to be contained by the frame not the viewport */
+#root-inner {
+	.spectrum-Modal-wrapper {
+		inline-size: 100% !important;
+	}
 }
 
 .sb-story {

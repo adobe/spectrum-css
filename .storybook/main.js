@@ -58,7 +58,6 @@ export default {
 
 		return mergeConfig(config, {
 			publicDir: "../assets",
-			port: 8080,
 			build: {
 				sourcemap: configType === "DEVELOPMENT",
 				manifest: true,

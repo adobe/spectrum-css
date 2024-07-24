@@ -389,7 +389,8 @@ export const Template = (
           },
           context,
         ),
-      )} ${when(iconName, () =>
+      )}
+      ${when(iconName, () =>
         Icon(
           {
             iconName,
@@ -438,7 +439,8 @@ export const AccordionGroup = (
   context = {},
 ) => {
   return html`
-    ${Template(args, context)} ${Template(
+    ${Template(args, context)}
+    ${Template(
       {
         ...args,
         customStyles: {
@@ -448,7 +450,8 @@ export const AccordionGroup = (
         },
       },
       context,
-    )} ${Template(
+    )}
+    ${Template(
       {
         ...args,
         disableAll: true,
