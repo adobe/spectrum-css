@@ -15,6 +15,8 @@ export const Template = ({
 	customWidth,
 	isIndeterminate = false,
 	label,
+	trackFill,
+	progressBarFill,
 	value,
 	customStyles = {},
 	size = "m",
@@ -48,8 +50,148 @@ export const Template = ({
 				label: isIndeterminate || typeof value === "undefined" ? "" : `${value}%`,
 				customClasses: [`${rootClass}-percentage`],
 			}, context)}
-			<div class="${rootClass}-track">
-				<div class="${rootClass}-fill" style="width: ${value}%;"></div>
+
+			<div
+				class="${rootClass}-track"
+				style="--mod-progressbar-track-color: ${ifDefined(trackFill)}">
+				<div
+					class="${rootClass}-fill"
+					style=
+						"width: ${value}%;
+						${progressBarFill !== undefined
+							? `--mod-progressbar-fill-color: ${progressBarFill}` 
+							: undefined}"
+				></div>
 			</div>
 		</div>
+`;
+
+const Sizes = (args, context) => html`
+  ${["s", "m", "l", "xl"].map((size) => html`
+    <div>
+			${Typography({
+				semantics: "heading",
+				size: "xs",
+				content: [
+					{
+						xxs: "Extra-extra-small",
+						xs: "Extra-small",
+						s: "Small",
+						m: "Medium",
+						l: "Large",
+						xl: "Extra-large",
+						xxl: "Extra-extra-large",
+					}[size],
+				],
+				customClasses: ["chromatic-ignore"],
+			}, context)}
+			${Template({ ...args, size }, context)}
+		</div>
+  `)}
+`;
+
+export const ProgressBarGroup = (args, context) => html`
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "none" : "contents"
+	})}>
+		${Template(args, context)}
+	</div>
+	<div style=${styleMap({
+		"display": window.isChromatic() ? "flex" : "none",
+		"flex-direction": "column",
+		"align-items": "flex-start",
+		"gap": "32px",
+	})}>
+		<div style=${styleMap({
+			"display": window.isChromatic() ? "flex" : "none",
+			"flex-direction": "column",
+			"align-items": "flex-start",
+			"gap": "32px",
+			"border": "1px solid var(--spectrum-gray-200)",
+			"border-radius": "4px",
+			"padding": "12px",
+		})}>
+			${Template(args, context)}
+			<div>
+				${Typography({
+					semantics: "heading",
+					size: "xs",
+					content: ["Side label"],
+					customClasses: ["chromatic-ignore"],
+				}, context)}
+				${Template({
+					...args,
+					labelPosition: "side",
+				}, context)}
+			</div>
+			<div>
+				${Typography({
+					semantics: "heading",
+					size: "xs",
+					content: ["Custom width"],
+					customClasses: ["chromatic-ignore"],
+				}, context)}
+				${Template({
+					...args,
+					customWidth: "225px",
+				}, context)}
+			</div>
+			<div>
+				${Typography({
+					semantics: "heading",
+					size: "xs",
+					content: ["Indeterminate"],
+					customClasses: ["chromatic-ignore"],
+				}, context)}
+				${Template({
+					...args,
+					indeterminate: "indeterminate",
+				}, context)}
+			</div>
+		</div>
+		<div>
+			${Typography({
+				semantics: "heading",
+				size: "s",
+				content: ["Sizing"],
+				customClasses: ["chromatic-ignore"],
+			}, context)}
+			<div style=${styleMap({
+				"display": window.isChromatic() ? "flex" : "none",
+				"flex-direction": "column",
+				"align-items": "flex-start",
+				"gap": "32px",
+				"border": "1px solid var(--spectrum-gray-200)",
+				"border-radius": "4px",
+				"padding": "12px",
+			})}>
+				${Sizes(args, context)}
+			</div>
+		</div>
+		<!-- The gradient story below supports linear-gradients used by Express. Adding trackFill or progressBarFill args
+		 to any template will set the --mod-progressbar-track-color or --mod-progressbar-fill-color custom properties. -->
+		 <div>
+			${Typography({
+				semantics: "heading",
+				size: "s",
+				content: ["Gradient support"],
+				customClasses: ["chromatic-ignore"],
+			}, context)}
+			<div style=${styleMap({
+				"display": window.isChromatic() ? "flex" : "none",
+				"flex-direction": "column",
+				"align-items": "flex-start",
+				"gap": "32px",
+				"border": "1px solid var(--spectrum-gray-200)",
+				"border-radius": "4px",
+				"padding": "12px",
+			})}>
+				${Template({
+					...args,
+					trackFill: "linear-gradient(to right, hotpink, orange)",
+					progressBarFill: "linear-gradient(to left, teal, purple)",
+				}, context)}
+			</div>
+		</div>
+	</div>
 `;
