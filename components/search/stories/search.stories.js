@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template.js";
+import { SearchGroup } from "./search.test";
 
 /**
  * This component contains a single input field with both a magnifying glass icon and a "reset" button displayed within it.
@@ -55,12 +55,12 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = SearchGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+export const WithForcedColors = SearchGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

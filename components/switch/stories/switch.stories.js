@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
+import { SwitchGroup } from "./switch.test";
 import { Template } from "./template";
 
 /**
@@ -67,12 +68,12 @@ export default {
 	componentVersion: version,
 };
 
-export const Default = Template.bind({});
+export const Default = SwitchGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+export const WithForcedColors = SwitchGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -80,19 +81,32 @@ WithForcedColors.parameters = {
 	},
 };
 
+// ********* DOCS ONLY ********* //
 export const Emphasized = Template.bind({});
+Emphasized.tags = ["autodocs", "!dev"];
 Emphasized.args = {
 	isEmphasized: true,
 	label: "Switch label that is so long it wraps to the next line",
 	customStyles: {"max-width": "250px"}
 };
+Emphasized.parameters = {
+	chromatic: { disableSnapshot: true }
+};
 
 export const Checked = Template.bind({});
+Checked.tags = ["autodocs", "!dev"];
 Checked.args = {
 	isChecked: true
 };
+Checked.parameters = {
+	chromatic: { disableSnapshot: true }
+};
 
 export const Disabled = Template.bind({});
+Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true }
 };

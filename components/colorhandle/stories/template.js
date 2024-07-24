@@ -4,6 +4,8 @@ import { html } from "lit";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorHandle",
@@ -11,6 +13,7 @@ export const Template = ({
 	isDisabled = false,
 	isFocused = false,
 	isWithColorLoupe = false,
+	selectedColor = "rgba(255 0 0 / 50%)",
 	customStyles = {},
 } = {}, context = {}) => {
 	return OpacityCheckerboard({
@@ -25,6 +28,7 @@ export const Template = ({
 			${when(isWithColorLoupe, () => html`
 				${ColorLoupe({
 					isOpen: true,
+					isDisabled,
 					customStyles: {
 						"inset-inline-start": "unset",
 						"inset-block-start": "unset",
@@ -33,11 +37,11 @@ export const Template = ({
 			`)}
 		`],
 		customStyles: {
-			"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
-			...customStyles,
 			"position": isWithColorLoupe ? "absolute" : undefined,
 			"inset-block": isWithColorLoupe ? "75%" : undefined,
 			"inset-inline": isWithColorLoupe ? "50%" : undefined,
+			...customStyles,
+			"--spectrum-picked-color": selectedColor,
 		},
 	}, context);
 };

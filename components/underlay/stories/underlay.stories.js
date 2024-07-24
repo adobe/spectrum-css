@@ -2,7 +2,7 @@ import { Default as DialogStory } from "@spectrum-css/dialog/stories/dialog.stor
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template.js";
+import { Template } from "./template";
 
 /**
  * An underlay component is used with modal and dialog. It lays over the rest of the page to deliver a blocking layer between the two contexts.
@@ -20,11 +20,12 @@ export default {
 		rootClass: "spectrum-Underlay",
 		isOpen: false,
 	},
+	tags: ["autodocs", "!test"],
 	parameters: {
+		layout: "fullscreen",
 		docs: {
 			story: {
 				inline: false,
-				height: "500px",
 			},
 		},
 		chromatic: { disableSnapshot: true },
@@ -33,7 +34,6 @@ export default {
 };
 
 export const Default = Template.bind({});
-Default.tags = ["autodocs", "!test"];
 Default.args = {
 	isOpen: true,
 	content: [

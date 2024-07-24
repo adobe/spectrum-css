@@ -1,10 +1,8 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-import { ButtonGroups } from "./template";
+import { ButtonGroups } from "./button.test";
 
 /**
  * Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
@@ -121,41 +119,14 @@ export default {
 		},
 		componentVersion: version,
 	},
-	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail {
-					display: inline-block;
-				}
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 10px 10px;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div
-				style=${styleMap({
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "flex-start",
-					gap: "10px",
-					"--mod-detail-margin-end": "6px",
-				})}
-			>
-				${Story(context)}
-			</div>
-		`,
-	],
 };
 
 export const Default = ButtonGroups.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["!autodocs", "!dev", "test"];
+export const StaticWhite = ButtonGroups.bind({});
+StaticWhite.tags = ["!autodocs", "!dev"];
 StaticWhite.args = {
 	staticColor: "white",
 };
@@ -165,8 +136,8 @@ StaticWhite.parameters = {
 	},
 };
 
-export const StaticBlack = Default.bind({});
-StaticBlack.tags = ["!autodocs", "!dev", "test"];
+export const StaticBlack = ButtonGroups.bind({});
+StaticBlack.tags = ["!autodocs", "!dev"];
 StaticBlack.args = {
 	staticColor: "black",
 };
@@ -176,9 +147,9 @@ StaticBlack.parameters = {
 	},
 };
 
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = ButtonGroups.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
