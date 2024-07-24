@@ -1,10 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { States } from "./template";
+import { SwatchGroup } from "./swatch.test";
 
 /**
- * A swatch shows a small sample of a fill&emdash;such as a color, gradient, texture, or material&emdash;that is intended to be applied to an object.
+ * A swatch shows a small sample of a fill--such as a color, gradient, texture, or material--that is intended to be applied to an object.
  */
 export default {
 	title: "Swatch",
@@ -63,11 +63,11 @@ export default {
 	},
 };
 
-export const Default = States.bind({});
+export const Default = SwatchGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = States.bind({});
+export const WithForcedColors = SwatchGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

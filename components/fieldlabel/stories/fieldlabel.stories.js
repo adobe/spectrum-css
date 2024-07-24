@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { FieldLabelGroup } from "./template";
+import { FieldLabelGroup } from "./fieldlabel.test";
 
 /**
  * The field label component is used along with inputs to display a label for that input.
@@ -75,7 +75,7 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = FieldLabelGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

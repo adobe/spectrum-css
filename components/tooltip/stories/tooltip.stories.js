@@ -1,9 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-import { PlacementVariants } from "./template";
+import { PlacementVariants } from "./tooltip.test";
 
 /**
  * Tooltips show contextual help or information about specific components when a user hovers or focuses on them.
@@ -97,31 +95,6 @@ export default {
 		},
 		componentVersion: version,
 	},
-	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 14px 14px;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			<div
-				style=${styleMap({
-					"display": "flex",
-					"flex-direction": "column",
-					"align-items": "flex-start",
-					"gap": "16px",
-					"--mod-detail-margin-end": "4.8px",
-				})}
-			>
-				${Story(context)}
-			</div>
-		`,
-	],
 };
 
 export const Default = PlacementVariants.bind({});

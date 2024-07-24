@@ -13,28 +13,19 @@
 		"build": {
 			"cache": false,
 			"dependsOn": ["clean", "style-dictionary"],
-			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"executor": "nx:run-commands",
+			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"postcss ./custom-express/*.css --dir ./dist/css/express/",
-					"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
 					"cp -r ./components ./dist/css/components",
-					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
-					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css",
-					"mv ./dist/css/spectrum/custom-dark-vars.css ./dist/css/spectrum/dark-vars.css",
-					"mv ./dist/css/spectrum/custom-light-vars.css ./dist/css/spectrum/light-vars.css",
-					"mv ./dist/css/spectrum/custom-darkest-vars.css ./dist/css/spectrum/darkest-vars.css",
-					"cat ./dist/css/spectrum/medium-vars.css ./dist/css/spectrum/custom-medium-vars.css | postcss --output ./dist/css/spectrum/medium-vars.css",
-					"cat ./dist/css/spectrum/large-vars.css ./dist/css/spectrum/custom-large-vars.css | postcss --output ./dist/css/spectrum/large-vars.css",
-					"cat ./dist/css/spectrum/global-vars.css ./dist/css/spectrum/custom-vars.css | postcss --output ./dist/css/spectrum/global-vars.css",
-					"mv ./dist/css/express/custom-dark-vars.css ./dist/css/express/dark-vars.css",
-					"mv ./dist/css/express/custom-light-vars.css ./dist/css/express/light-vars.css",
-					"mv ./dist/css/express/custom-darkest-vars.css ./dist/css/express/darkest-vars.css",
-					"cat ./dist/css/express/medium-vars.css ./dist/css/express/custom-medium-vars.css | postcss --output ./dist/css/express/medium-vars.css",
-					"cat ./dist/css/express/large-vars.css ./dist/css/express/custom-large-vars.css | postcss --output ./dist/css/express/large-vars.css",
-					"cat ./dist/css/express/global-vars.css ./dist/css/express/custom-vars.css | postcss --output ./dist/css/express/global-vars.css",
+					"cat ./dist/css/global-vars.css ./custom/global-vars.css | postcss --output ./dist/css/global-vars.css",
+					"cat ./dist/css/medium-vars.css ./custom/medium-vars.css | postcss --output ./dist/css/medium-vars.css",
+					"cat ./dist/css/large-vars.css ./custom/large-vars.css | postcss --output ./dist/css/large-vars.css",
+					"cat ./dist/css/light-vars.css ./custom/light-vars.css | postcss --output ./dist/css/light-vars.css",
+					"cat ./dist/css/dark-vars.css ./custom/dark-vars.css | postcss --output ./dist/css/dark-vars.css",
+					"postcss ./dist/css/*.css --replace",
 					"node --no-warnings -e \"require('./tasks/token-rollup.js').default()\"",
+					"postcss ./dist/css/index.css --config ../postcss.config.js --output ./dist/index.css",
 					"find dist -type f -empty -delete",
 					"prettier --write dist/**/*.css"
 				],
@@ -48,16 +39,16 @@
 		},
 		"clean": {
 			"cache": false,
-			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
-			"outputs": [],
 			"executor": "nx:run-commands",
+			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
 			"options": {
 				"commands": [
 					"rimraf {projectRoot}/dist",
 					"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
 				],
 				"parallel": false
-			}
+			},
+			"outputs": []
 		},
 		"style-dictionary": {
 			"dependsOn": ["clean"],

@@ -1,0 +1,70 @@
+import { Variants } from "@spectrum-css/preview/decorators";
+import { Template } from "./template";
+
+export const ComboBoxGroup = Variants({
+	Template,
+	sizeDirection: "row",
+	wrapperStyles: {
+		"align-items": "flex-start",
+	},
+	testData: [
+		{
+			testHeading: "Default",
+			isOpen: false,
+		},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+			isOpen: false,
+		},
+		{
+			testHeading: "Open",
+			isOpen: true,
+			wrapperStyles: {
+				"min-block-size": "170px",
+			},
+		},
+		{
+			testHeading: "Quiet + open",
+			isQuiet: true,
+			isOpen: true,
+			wrapperStyles: {
+				"min-block-size": "170px",
+			},
+		},
+		{
+			testHeading: "With field label top",
+			showFieldLabel: true,
+			isOpen: false,
+			fieldLabelPosition: "top",
+		},
+		{
+			testHeading: "With field label left",
+			showFieldLabel: true,
+			isOpen: false,
+			fieldLabelPosition: "left",
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "Invalid",
+			isInvalid: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+		{
+			testHeading: "Keyboard focused",
+			isKeyboardFocused: true,
+		},
+		{
+			testHeading: "Loading",
+			isLoading: true,
+		},
+	],
+});
