@@ -22,7 +22,6 @@ import {
 } from "./types";
 
 import "./assets/base.css";
-import "./assets/typekit.js";
 
 window.global = window;
 
