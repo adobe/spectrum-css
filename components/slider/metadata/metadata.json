@@ -87,9 +87,7 @@
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover",
-    ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range).js-focus-within .spectrum-Slider-controls[focus-within]",
-    "[dir=\"rtl\"] .spectrum-Slider",
-    "[dir=\"rtl\"] .spectrum-Slider .spectrum-Slider-handle:before"
+    ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range).js-focus-within .spectrum-Slider-controls[focus-within]"
   ],
   "modifiers": [
     "--mod-animation-duration-100",
@@ -240,13 +238,10 @@
     "--spectrum-font-size-75",
     "--spectrum-gray-100",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
     "--spectrum-gray-400",
-    "--spectrum-gray-50",
-    "--spectrum-gray-600",
     "--spectrum-gray-700",
+    "--spectrum-gray-75",
     "--spectrum-gray-800",
-    "--spectrum-gray-900",
     "--spectrum-line-height-100",
     "--spectrum-logical-rotation",
     "--spectrum-neutral-content-color-default",
@@ -256,23 +251,7 @@
     "--spectrum-spacing-900",
     "--spectrum-text-to-visual-75"
   ],
-  "system-theme": [
-    "--system-spectrum-slider-handle-background-color",
-    "--system-spectrum-slider-handle-background-color-disabled",
-    "--system-spectrum-slider-handle-border-color",
-    "--system-spectrum-slider-handle-border-color-down",
-    "--system-spectrum-slider-handle-border-color-hover",
-    "--system-spectrum-slider-handle-border-color-key-focus",
-    "--system-spectrum-slider-handle-disabled-background-color",
-    "--system-spectrum-slider-handle-focus-ring-color-key-focus",
-    "--system-spectrum-slider-ramp-handle-background-color",
-    "--system-spectrum-slider-ramp-track-color",
-    "--system-spectrum-slider-ramp-track-color-disabled",
-    "--system-spectrum-slider-tick-mark-color",
-    "--system-spectrum-slider-ticks-handle-background-color",
-    "--system-spectrum-slider-track-color",
-    "--system-spectrum-slider-track-fill-color"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-disabled-border-color",

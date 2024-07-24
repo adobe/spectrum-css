@@ -2,7 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum--dark .spectrum-Card",
-    ".spectrum--darkest .spectrum-Card",
     ".spectrum--light .spectrum-Card",
     ".spectrum--lightest .spectrum-Card",
     ".spectrum-Card",
@@ -139,7 +138,7 @@
     "--mod-card-title-line-height",
     "--mod-card-title-padding-right",
     "--mod-card-title-padding-top",
-    "--mod-spectrum-card-background-color"
+    "--mod-overlay-animation-duration"
   ],
   "component": [
     "--spectrum-card-actions-background-color-opacity",
@@ -197,7 +196,6 @@
     "--spectrum-background-base-color",
     "--spectrum-background-layer-2-color",
     "--spectrum-blue-500-rgb",
-    "--spectrum-blue-600-rgb",
     "--spectrum-blue-700",
     "--spectrum-blue-900-rgb",
     "--spectrum-body-color",
@@ -213,9 +211,9 @@
     "--spectrum-drop-shadow-y",
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-thickness",
+    "--spectrum-gray-100",
     "--spectrum-gray-100-rgb",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
     "--spectrum-heading-color",
     "--spectrum-heading-line-height",
     "--spectrum-heading-sans-serif-font-style",

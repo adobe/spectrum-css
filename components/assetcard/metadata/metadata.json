@@ -156,8 +156,8 @@
     "--spectrum-default-font-style",
     "--spectrum-focus-indicator-thickness",
     "--spectrum-font-size-400",
+    "--spectrum-gray-100",
     "--spectrum-gray-100-rgb",
-    "--spectrum-gray-200",
     "--spectrum-gray-500",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
@@ -174,7 +174,7 @@
     "--spectrum-spacing-75",
     "--spectrum-white"
   ],
-  "system-theme": ["--system-spectrum-assetcard-overlay-background-color"],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-assectcard-border-color-selected-down",

@@ -121,8 +121,7 @@
     ".spectrum-Table-thumbnailInner .spectrum-Table-thumbnailContent",
     ".spectrum-Table-thumbnailInner .spectrum-Thumbnail",
     ".spectrum-Table:dir(rtl)",
-    ".spectrum-Table:not(.spectrum-Table-scroller)",
-    "[dir=\"rtl\"] .spectrum-Table"
+    ".spectrum-Table:not(.spectrum-Table-scroller)"
   ],
   "modifiers": [
     "--mod-table-border-color",
@@ -249,6 +248,7 @@
     "--spectrum-table-focus-indicator-color",
     "--spectrum-table-focus-indicator-thickness",
     "--spectrum-table-header-background-color",
+    "--spectrum-table-header-background-color--quiet",
     "--spectrum-table-header-bottom-to-text",
     "--spectrum-table-header-checkbox-block-spacing",
     "--spectrum-table-header-font-weight",
@@ -403,9 +403,9 @@
     "--spectrum-font-size-75",
     "--spectrum-gray-100",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
-    "--spectrum-gray-50",
+    "--spectrum-gray-25",
     "--spectrum-gray-700-rgb",
+    "--spectrum-gray-75",
     "--spectrum-gray-900-rgb",
     "--spectrum-line-height-100",
     "--spectrum-logical-rotation",

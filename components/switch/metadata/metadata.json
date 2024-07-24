@@ -72,8 +72,7 @@
     ".spectrum-Switch:hover .spectrum-Switch-input[disabled] ~ .spectrum-Switch-label",
     ".spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch",
     ".spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before",
-    ".spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked ~ .spectrum-Switch-label",
-    "[dir=\"rtl\"] .spectrum-Switch-input:checked + .spectrum-Switch-switch:before"
+    ".spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked ~ .spectrum-Switch-label"
   ],
   "modifiers": [
     "--mod-animation-duration-100",
@@ -182,10 +181,10 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-300",
+    "--spectrum-gray-200",
+    "--spectrum-gray-50",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
-    "--spectrum-gray-75",
     "--spectrum-gray-800",
     "--spectrum-gray-900",
     "--spectrum-line-height-100",
@@ -202,16 +201,7 @@
     "--spectrum-text-to-control-300",
     "--spectrum-text-to-control-75"
   ],
-  "system-theme": [
-    "--system-spectrum-switch-handle-border-color-default",
-    "--system-spectrum-switch-handle-border-color-down",
-    "--system-spectrum-switch-handle-border-color-focus",
-    "--system-spectrum-switch-handle-border-color-hover",
-    "--system-spectrum-switch-handle-border-color-selected-default",
-    "--system-spectrum-switch-handle-border-color-selected-down",
-    "--system-spectrum-switch-handle-border-color-selected-focus",
-    "--system-spectrum-switch-handle-border-color-selected-hover"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-switch-background-color",

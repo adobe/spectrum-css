@@ -8,8 +8,7 @@
     ".spectrum-ColorLoupe-inner-border",
     ".spectrum-ColorLoupe-outer-border",
     ".spectrum-ColorLoupe.is-open",
-    ".spectrum-ColorLoupe:dir(rtl)",
-    "[dir=\"rtl\"] .spectrum-ColorLoupe"
+    ".spectrum-ColorLoupe:dir(rtl)"
   ],
   "modifiers": [
     "--mod-colorloupe-animation-distance",

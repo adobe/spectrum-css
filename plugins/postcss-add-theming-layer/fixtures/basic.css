@@ -1,0 +1,49 @@
+@container style(--system: legacy) {
+	.component {
+		--background-color: blue;
+	}
+	.component.is-selected {
+		--background-color: darkblue;
+	}
+	.component .icon {
+		--color: gray;
+	}
+
+	:where(.component) {
+		--background-color: blue;
+	}
+
+	.component:where(:selected, .is-selected) {
+		--background-color: darkblue;
+	}
+
+	.component:has(.icon) {
+		--color: gray;
+	}
+}
+
+@container style(--system: modern) {
+	.component {
+		--background-color: purple;
+	}
+
+	.component.is-selected {
+		--background-color: indigo;
+	}
+
+	.component .icon {
+		--color: white;
+	}
+
+	:where(.component) {
+		--background-color: indigo;
+	}
+
+	.component:where(:selected, .is-selected) {
+		--background-color: darkpurple;
+	}
+
+	.component:has(.icon) {
+		--color: white;
+	}
+}

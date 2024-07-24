@@ -48,8 +48,7 @@
     ".spectrum-TreeView-itemLink:hover:before",
     ".spectrum-TreeView-section > .spectrum-TreeView",
     ".spectrum-TreeView-section:not(:first-child)",
-    ".spectrum-TreeView:dir(rtl)",
-    "[dir=\"rtl\"] .spectrum-TreeView"
+    ".spectrum-TreeView:dir(rtl)"
   ],
   "modifiers": [
     "--mod-treeview-font-size",
@@ -67,7 +66,6 @@
     "--mod-treeview-item-border-color-focus",
     "--mod-treeview-item-border-color-selected",
     "--mod-treeview-item-border-color-selected-quiet",
-    "--mod-treeview-item-border-radius",
     "--mod-treeview-item-border-radius-detached",
     "--mod-treeview-item-border-size",
     "--mod-treeview-item-border-size-selected",
@@ -158,7 +156,7 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-200",
+    "--spectrum-gray-100",
     "--spectrum-gray-500",
     "--spectrum-gray-700",
     "--spectrum-gray-900",

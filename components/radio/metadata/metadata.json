@@ -45,8 +45,7 @@
     ".spectrum-Radio:hover .spectrum-Radio-label",
     ".spectrum-Radio:lang(ja)",
     ".spectrum-Radio:lang(ko)",
-    ".spectrum-Radio:lang(zh)",
-    "[dir=\"rtl\"] .spectrum-Radio .spectrum-Radio-button:after"
+    ".spectrum-Radio:lang(zh)"
   ],
   "modifiers": [
     "--mod-radio-animation-duration",
@@ -151,11 +150,10 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
+    "--spectrum-gray-50",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
-    "--spectrum-gray-75",
     "--spectrum-gray-800",
-    "--spectrum-gray-900",
     "--spectrum-line-height-100",
     "--spectrum-neutral-background-color-selected-default",
     "--spectrum-neutral-background-color-selected-down",
@@ -170,16 +168,7 @@
     "--spectrum-text-to-control-300",
     "--spectrum-text-to-control-75"
   ],
-  "system-theme": [
-    "--system-spectrum-radio-button-border-color-default",
-    "--system-spectrum-radio-button-border-color-down",
-    "--system-spectrum-radio-button-border-color-focus",
-    "--system-spectrum-radio-button-border-color-hover",
-    "--system-spectrum-radio-emphasized-button-checked-border-color-default",
-    "--system-spectrum-radio-emphasized-button-checked-border-color-down",
-    "--system-spectrum-radio-emphasized-button-checked-border-color-focus",
-    "--system-spectrum-radio-emphasized-button-checked-border-color-hover"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-radio-button-background-color",

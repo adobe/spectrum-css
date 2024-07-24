@@ -72,9 +72,6 @@
     "--spectrum-component-height-300",
     "--spectrum-component-height-75",
     "--spectrum-disabled-content-color",
-    "--spectrum-gray-200",
-    "--spectrum-gray-300",
-    "--spectrum-gray-400",
     "--spectrum-in-field-button-edge-to-fill",
     "--spectrum-neutral-content-color-default",
     "--spectrum-neutral-content-color-down",
@@ -84,12 +81,7 @@
     "--spectrum-transparent-white-400",
     "--spectrum-white"
   ],
-  "system-theme": [
-    "--system-spectrum-clearbutton-spectrum-clear-button-background-color",
-    "--system-spectrum-clearbutton-spectrum-clear-button-background-color-down",
-    "--system-spectrum-clearbutton-spectrum-clear-button-background-color-hover",
-    "--system-spectrum-clearbutton-spectrum-clear-button-background-color-key-focus"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-clear-button-icon-color-hover"]
 }

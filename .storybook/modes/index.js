@@ -12,13 +12,19 @@
  */
 
 const modes = {
-    "Context: Spectrum 1": {
+    "Spectrum 2": {
+        scale: "medium",
+        color: "light",
+        textDirection: "ltr",
+        context: "spectrum",
+    },
+    "Legacy | Spectrum 1": {
         scale: "medium",
         color: "light",
         textDirection: "ltr",
         context: "legacy",
     },
-    "Context: Express": {
+    "Legacy | Express": {
         scale: "medium",
         color: "light",
         textDirection: "ltr",
@@ -28,6 +34,7 @@ const modes = {
         scale: "medium",
         color: "dark",
         textDirection: "rtl",
+        context: "spectrum",
     },
 };
 

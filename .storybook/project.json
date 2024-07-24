@@ -11,7 +11,7 @@
 			"{projectRoot}/modes",
 			"{projectRoot}/templates",
 			"{projectRoot}/types",
-			"{projectRoot}/*.{js,html,mdx}"
+			"{projectRoot}/*.{js,html}"
 		]
 	},
 	"targets": {
@@ -27,7 +27,7 @@
 					"outputs": ["{workspaceRoot}/dist/preview"]
 				}
 			},
-			"dependsOn": ["clean", "^build"],
+			"dependsOn": ["clean", "^build", { "projects": "tag:component", "target": "report" }],
 			"executor": "nx:run-commands",
 			"inputs": ["tools", { "externalDependencies": ["storybook"] }],
 			"options": {

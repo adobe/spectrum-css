@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tokens",
-	"version": "14.3.1",
+	"version": "15.0.0-s2-foundations.9",
 	"description": "The Spectrum CSS tokens package",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -13,6 +13,21 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+	"exports": {
+		".": "./dist/css/index.css",
+		"./*.md": "./*.md",
+		"./dist/css/*.css": "./dist/css/*.css",
+		"./dist/css/components/bridge": "./dist/components/bridge/index.css",
+		"./dist/css/components/bridge/*.css": "./dist/components/bridge/*.css",
+		"./dist/css/components/express": "./dist/components/express/index.css",
+		"./dist/css/components/express/*.css": "./dist/components/express/*.css",
+		"./dist/css/components/spectrum": "./dist/components/spectrum/index.css",
+		"./dist/css/components/spectrum-two": "./dist/components/spectrum-two/index.css",
+		"./dist/css/components/spectrum-two/*.css": "./dist/components/spectrum-two/*.css",
+		"./dist/css/components/spectrum/*.css": "./dist/components/spectrum/*.css",
+		"./dist/index.css": "./dist/css/index.css",
+		"./package.json": "./package.json"
+	},
 	"main": "dist/index.css",
 	"files": [
 		"dist",
@@ -20,26 +35,25 @@
 		"README.md",
 		"package.json"
 	],
+	"devDependencies": {
+		"@adobe/spectrum-tokens": "0.0.0-s2-foundations-colors-20240503210338",
+		"@nxkit/style-dictionary": "^5.0.0",
+		"cssnano": "^7.0.4",
+		"cssnano-preset-advanced": "^7.0.4",
+		"postcss": "^8.4.41",
+		"postcss-cli": "^11.0.0",
+		"postcss-rgb-mapping": "workspace:^",
+		"postcss-sorting": "^8.0.2",
+		"prettier": "^3.3.2",
+		"style-dictionary": "^3.9.2",
+		"style-dictionary-sets": "^2.3.0"
+	},
 	"keywords": [
 		"spectrum",
 		"css",
 		"design system",
 		"adobe"
 	],
-	"devDependencies": {
-		"@adobe/spectrum-tokens": "12.25.0",
-		"@nxkit/style-dictionary": "^5.0.0",
-		"cssnano": "^7.0.3",
-		"cssnano-preset-advanced": "^7.0.4",
-		"postcss": "^8.4.41",
-		"postcss-cli": "^11.0.0",
-		"postcss-licensing": "^2.0.0",
-		"postcss-rgb-mapping": "workspace:^",
-		"postcss-sorting": "^8.0.2",
-		"prettier": "^3.2.5",
-		"style-dictionary": "^3.9.2",
-		"style-dictionary-sets": "^2.3.0"
-	},
 	"publishConfig": {
 		"access": "public"
 	}

@@ -69,8 +69,7 @@
     ".spectrum-Combobox:hover:has(:focus) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Textfield.is-disabled .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-loading .spectrum-Textfield-validationIcon",
-    ".spectrum-Textfield.is-readOnly .spectrum-Textfield-validationIcon",
-    "[dir=\"rtl\"] .spectrum-Combobox-progress-circle"
+    ".spectrum-Textfield.is-readOnly .spectrum-Textfield-validationIcon"
   ],
   "modifiers": [
     "--mod-combobox-alert-icon-color",
@@ -212,11 +211,8 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-400",
     "--spectrum-gray-500",
     "--spectrum-gray-600",
-    "--spectrum-gray-800",
-    "--spectrum-gray-900",
     "--spectrum-line-height-100",
     "--spectrum-negative-border-color-default",
     "--spectrum-negative-border-color-focus",
@@ -228,13 +224,7 @@
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
   ],
-  "system-theme": [
-    "--system-spectrum-combobox-border-color-default",
-    "--system-spectrum-combobox-border-color-focus",
-    "--system-spectrum-combobox-border-color-focus-hover",
-    "--system-spectrum-combobox-border-color-hover",
-    "--system-spectrum-combobox-border-color-key-focus"
-  ],
+  "system-theme": [],
   "passthroughs": [
     "--mod-picker-button-background-color",
     "--mod-picker-button-background-color-disabled",

@@ -18,8 +18,7 @@
     ".spectrum-Toast-content:lang(ja)",
     ".spectrum-Toast-content:lang(ko)",
     ".spectrum-Toast-content:lang(zh)",
-    ".spectrum-Toast-typeIcon",
-    "[dir=\"rtl\"] .spectrum-Toast-body .spectrum-Button"
+    ".spectrum-Toast-typeIcon"
   ],
   "modifiers": [
     "--mod-toast-background-color-default",
@@ -90,7 +89,6 @@
     "--spectrum-informative-background-color-default",
     "--spectrum-line-height-100",
     "--spectrum-negative-background-color-default",
-    "--spectrum-neutral-background-color-default",
     "--spectrum-neutral-subdued-background-color-default",
     "--spectrum-positive-background-color-default",
     "--spectrum-regular-font-weight",
@@ -100,7 +98,7 @@
     "--spectrum-transparent-white-300",
     "--spectrum-white"
   ],
-  "system-theme": ["--system-spectrum-toast-background-color-default"],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-toast-background-color-default",

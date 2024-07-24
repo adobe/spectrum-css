@@ -13,51 +13,34 @@
 		"build": {
 			"cache": false,
 			"dependsOn": ["clean", "style-dictionary"],
-			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"executor": "nx:run-commands",
+			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"postcss ./custom-express/*.css --dir ./dist/css/express/",
-					"postcss ./custom-spectrum/*.css --dir ./dist/css/spectrum/",
-					"cp -r ./components ./dist/css/components",
-					"postcss ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css --replace",
-					"cat ./dist/css/*.css ./dist/css/spectrum/*.css ./dist/css/express/*.css | postcss --output ./dist/index.css",
-					"mv ./dist/css/spectrum/custom-dark-vars.css ./dist/css/spectrum/dark-vars.css",
-					"mv ./dist/css/spectrum/custom-light-vars.css ./dist/css/spectrum/light-vars.css",
-					"mv ./dist/css/spectrum/custom-darkest-vars.css ./dist/css/spectrum/darkest-vars.css",
-					"cat ./dist/css/spectrum/medium-vars.css ./dist/css/spectrum/custom-medium-vars.css | postcss --output ./dist/css/spectrum/medium-vars.css",
-					"cat ./dist/css/spectrum/large-vars.css ./dist/css/spectrum/custom-large-vars.css | postcss --output ./dist/css/spectrum/large-vars.css",
-					"cat ./dist/css/spectrum/global-vars.css ./dist/css/spectrum/custom-vars.css | postcss --output ./dist/css/spectrum/global-vars.css",
-					"mv ./dist/css/express/custom-dark-vars.css ./dist/css/express/dark-vars.css",
-					"mv ./dist/css/express/custom-light-vars.css ./dist/css/express/light-vars.css",
-					"mv ./dist/css/express/custom-darkest-vars.css ./dist/css/express/darkest-vars.css",
-					"cat ./dist/css/express/medium-vars.css ./dist/css/express/custom-medium-vars.css | postcss --output ./dist/css/express/medium-vars.css",
-					"cat ./dist/css/express/large-vars.css ./dist/css/express/custom-large-vars.css | postcss --output ./dist/css/express/large-vars.css",
-					"cat ./dist/css/express/global-vars.css ./dist/css/express/custom-vars.css | postcss --output ./dist/css/express/global-vars.css",
-					"node --no-warnings -e \"require('./tasks/token-rollup.js').default()\"",
-					"find dist -type f -empty -delete",
-					"prettier --write dist/**/*.css"
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e \"require('./tasks/token-rollup.js').default()\"",
+					"cross-env NODE_OPTIONS=\"--no-warnings\" postcss ./dist/css/*.css --replace"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false
 			},
 			"outputs": [
-				"{projectRoot}/dist/css/express",
-				"{projectRoot}/dist/css/spectrum"
+				"{projectRoot}/dist/css/components",
+				"{projectRoot}/dist/css/*-vars.css",
+				"{projectRoot}/dist/index.css"
 			]
 		},
 		"clean": {
 			"cache": false,
-			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
-			"outputs": [],
 			"executor": "nx:run-commands",
+			"inputs": ["{projectRoot}/dist", { "externalDependencies": ["rimraf"] }],
 			"options": {
 				"commands": [
 					"rimraf {projectRoot}/dist",
 					"test -d {projectRoot}/dist && echo \"Error: dist directory could not be removed\" && exit 1 || exit 0"
 				],
 				"parallel": false
-			}
+			},
+			"outputs": []
 		},
 		"style-dictionary": {
 			"dependsOn": ["clean"],
@@ -75,16 +58,12 @@
 				"tsConfig": "./tsconfig.json"
 			},
 			"outputs": [
-				"{projectRoot}/dist/global-vars.css",
-				"{projectRoot}/dist/light-vars.css",
-				"{projectRoot}/dist/dark-vars.css",
-				"{projectRoot}/dist/darkest-vars.css",
-				"{projectRoot}/dist/medium-vars.css",
-				"{projectRoot}/dist/large-vars.css",
-				"{projectRoot}/dist/specrum/global-vars.css",
-				"{projectRoot}/dist/express/global-vars.css",
-				"{projectRoot}/dist/specrum/medium-vars.css",
-				"{projectRoot}/dist/specrum/large-vars.css"
+				"{projectRoot}/dist/css/global-vars.css",
+				"{projectRoot}/dist/css/light-vars.css",
+				"{projectRoot}/dist/css/dark-vars.css",
+				"{projectRoot}/dist/css/darkest-vars.css",
+				"{projectRoot}/dist/css/medium-vars.css",
+				"{projectRoot}/dist/css/large-vars.css"
 			]
 		}
 	}

@@ -36,7 +36,6 @@
     ".spectrum-ProgressBar.spectrum-ProgressBar--staticWhite .spectrum-ProgressBar-percentage",
     ".spectrum-ProgressBar.spectrum-ProgressBar--staticWhite .spectrum-ProgressBar-track",
     "0%",
-    "[dir=\"rtl\"] .spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill",
     "to"
   ],
   "modifiers": [
@@ -114,7 +113,7 @@
     "--spectrum-font-size-100",
     "--spectrum-font-size-200",
     "--spectrum-font-size-75",
-    "--spectrum-gray-300",
+    "--spectrum-gray-200",
     "--spectrum-line-height-100",
     "--spectrum-meter-default-width",
     "--spectrum-meter-inline-size",

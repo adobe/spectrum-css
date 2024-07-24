@@ -40,10 +40,7 @@
     ".spectrum-Steplist-label:dir(rtl)",
     ".spectrum-Steplist-marker",
     ".spectrum-Steplist-markerContainer",
-    ".spectrum-Steplist-segment",
-    "[dir=\"rtl\"] .spectrum-Steplist-item:last-child .spectrum-Steplist-label",
-    "[dir=\"rtl\"] .spectrum-Steplist-item:only-child .spectrum-Steplist-label",
-    "[dir=\"rtl\"] .spectrum-Steplist-label"
+    ".spectrum-Steplist-segment"
   ],
   "modifiers": [
     "--mod-steplist-complete-label-text-color",
@@ -86,7 +83,7 @@
     "--spectrum-steplist-topPadding"
   ],
   "global": [
-    "--spectrum-gray-300",
+    "--spectrum-gray-200",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
     "--spectrum-gray-800"
