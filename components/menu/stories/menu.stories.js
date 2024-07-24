@@ -462,7 +462,7 @@ WithDividers.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = MenuItemWithVariants.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

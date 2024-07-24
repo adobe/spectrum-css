@@ -1,5 +1,5 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
-import modes, {disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
+import modes, { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
@@ -114,7 +114,7 @@ Default.parameters = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

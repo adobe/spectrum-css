@@ -71,7 +71,7 @@ AccentColor.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = IllustratedMessageGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
