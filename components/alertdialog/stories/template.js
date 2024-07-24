@@ -2,7 +2,7 @@ import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/templ
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -10,8 +10,10 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
-const Dialog = ({
+export const Dialog = ({
 	rootClass = "spectrum-AlertDialog",
 	heading,
 	content,
@@ -19,7 +21,7 @@ const Dialog = ({
 	buttons,
 	variant,
 	icon = false,
-	id,
+	id = getRandomId("alertdialog"),
 	customStyles = {},
 } = {}, context = {}) => {
 	return html`
@@ -71,72 +73,3 @@ export const Template = ({
 		skipWrapper,
 	}, context);
 };
-
-export const AlertDialogGroup = Variants({
-	Template,
-	testData: [{
-		skipWrapper: true,
-	}, {
-		skipWrapper: true,
-		variant: "warning",
-		heading: "Unverified format",
-		icon: true,
-		buttons: [{
-			variant: "secondary",
-			treatment: "outline",
-			label: "Cancel"
-		}, {
-			treatment: "outline",
-			label: "Continue",
-			variant: "primary"
-		}],
-		content: "This format has not been verified and may not be viewable for some users. Do you want to continue publishing?",
-	}, {
-		skipWrapper: true,
-		variant: "error",
-		heading: "Unable to share",
-		icon: true,
-		buttons: [{
-			variant: "secondary",
-			treatment: "outline",
-			label: "Cancel"
-		}, {
-			treatment: "outline",
-			label: "Continue",
-			variant: "primary"
-		}],
-		content: "An error occured while sharing your project. Please verify the email address and try again.",
-	}, {
-		skipWrapper: true,
-		variant: "destructive",
-		heading: "Delete 3 documents?",
-		buttons: [{
-			variant: "secondary",
-			treatment: "outline",
-			label: "Cancel"
-		}, {
-			treatment: "fill",
-			label: "Delete",
-			variant: "negative"
-		}],
-		content: "Are you sure you want to delete the 3 selected documents?",
-	}, {
-		skipWrapper: true,
-		variant: "information",
-		heading: "Informative Dialog with a wrapping title text because the text is longer than the width of the alert dialog",
-		buttons: [{
-			variant: "secondary",
-			treatment: "outline",
-			label: "No, thanks"
-		},{
-			variant: "secondary",
-			treatment: "outline",
-			label: "Remind me later"
-		}, {
-			variant: "primary",
-			treatment: "outline",
-			label: "Rate now",
-		}],
-		content: "If you enjoy our app, would you mind taking a moment to rate it?",
-	}],
-});

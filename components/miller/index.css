@@ -11,30 +11,25 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-MillerColumns {
-	--spectrum-millercolumns-inline-size: 272px;
-	--spectrum-millercolumns-padding: var(--spectrum-spacing-100);
-	--spectrum-millercolumns-margin-inline-start: var(--spectrum-spacing-100);
-	--spectrum-millercolumns-margin-inline-end: var(--spectrum-spacing-100);
-}
+@import "themes/spectrum-two.css";
 
 .spectrum-MillerColumns {
-	overflow-x: auto;
-	white-space: nowrap;
 	user-select: none;
+	overflow-x: auto;
 	padding: var(--mod-millercolumns-padding, var(--spectrum-millercolumns-padding)) 0;
+	white-space: nowrap;
 }
 
 .spectrum-MillerColumns-item {
+	overflow: auto;
 	display: inline-block;
 	inline-size: var(--mod-millercolumns-inline-size, var(--spectrum-millercolumns-inline-size));
+	block-size: 100%;
+	margin: 0;
+	margin-inline-end: var(--mod-millercolumns-margin-inline-end, var(--spectrum-millercolumns-margin-inline-end));
+	padding: 0;
 	vertical-align: top;
 	outline: none;
-	margin: 0;
-	padding: 0;
-	margin-inline-end: var(--mod-millercolumns-margin-inline-end, var(--spectrum-millercolumns-margin-inline-end));
-	overflow: auto;
-	block-size: 100%;
 
 	&:first-child {
 		margin-inline-start: var(--mod-millercolumns-margin-inline-start, var(--spectrum-millercolumns-margin-inline-start));

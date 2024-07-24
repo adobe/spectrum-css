@@ -1,5 +1,5 @@
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -7,6 +7,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Thumbnail",
@@ -23,7 +25,7 @@ export const Template = ({
 	onclick,
 	customClasses = [],
 	customStyles = {},
-	id,
+	id = getRandomId("thumbnail"),
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
@@ -123,41 +125,6 @@ export const Template = ({
 				customClasses: isLayer ? [`${rootClass}-layer-inner`] : !backgroundColor ? [`${rootClass}-image-wrapper`] : [],
 				content: image ? [image] : [],
 			}, context)}
-		</div>
-	`;
-};
-
-export const SizingGroup = (args, context) => {
-	const sizeOptions = context?.argTypes?.size?.options ?? [];
-	if (!sizeOptions.length) {
-		return html`<div>No size options</div>`;
-	}
-
-	return html`
-		<div
-			style=${styleMap({
-				"display": "flex",
-				"gap": "16px",
-			})}
-		>
-			${sizeOptions.map((size) => (html`
-				<div
-					style=${styleMap({
-						"display": "flex",
-						"gap": "16px",
-						"flex-direction": "column",
-						"align-items": "center",
-					})}
-				>
-					${Template({...args, size})}
-					${Typography({
-						semantics: "heading",
-						size: "xs",
-						content: [size],
-						customClasses: ["chromatic-ignore"],
-					})}
-				</div>
-			`))}
 		</div>
 	`;
 };

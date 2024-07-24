@@ -1,3 +1,4 @@
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -5,20 +6,22 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Switch",
 	size = "m",
 	label = "Switch label",
-	isDisabled,
-	isChecked,
-	isEmphasized,
+	isDisabled = false,
+	isChecked = false,
+	isEmphasized = false,
 	customClasses = [],
 	customStyles = {},
-	id,
-}) => {
+	id = getRandomId("switch"),
+} = {}) => {
 	// ID attribute value for the input element.
-	const inputId = id ? `${id}-input` : "switch-onoff-0";
+	const inputId = getRandomId("switch-input");
 
 	return html`
 		<div

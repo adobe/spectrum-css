@@ -21,6 +21,10 @@
 					"projects": "tag:component",
 					"target": "build"
 				},
+				{
+					"projects": "ui-icons",
+					"target": "build"
+				},
 				"clean"
 			],
 			"inputs": ["core", "tools"],

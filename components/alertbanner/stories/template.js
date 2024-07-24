@@ -2,20 +2,27 @@ import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-AlertBanner",
+	id = getRandomId("alertbanner"),
+	testId,
 	isOpen = true,
 	text,
 	variant,
 	hasActionButton,
 	customClasses = [],
+	customStyles = {},
 } = {}, context = {}) => {
 	return html`
 		<div
@@ -25,6 +32,9 @@ export const Template = ({
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			style=${styleMap(customStyles)}
+			id=${id}
+			data-testid=${ifDefined(testId)}
 		>
 			<div class=${classMap({
 				[`${rootClass}-body`]: true
@@ -71,28 +81,3 @@ export const Template = ({
 		</div>
 	`;
 };
-
-export const AlertBannerGroup = Variants({
-	Template,
-	testData: [
-		{
-			testHeading: "Neutral",
-		},
-		{
-			testHeading: "Informational",
-			text: "Your trial will expire in 3 days. Once it expires your files will be saved and ready for you to open again once you have purcahsed the software.",
-			variant: "info",
-			hasActionButton: false,
-		},
-		{
-			testHeading: "Warning",
-			text: "Connection interupted. Check your network to continue.",
-			variant: "negative",
-			hasActionButton: true,
-		},
-		{
-			testHeading: "Closed",
-			isOpen: false,
-		},
-	],
-});

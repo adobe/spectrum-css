@@ -1,7 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { html } from "lit";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ProgressCircleGroup } from "./progresscircle.test";
 
 /**
  * Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.
@@ -52,21 +51,11 @@ export default {
 	},
 };
 
-const ProgressCircleGroup = (args, context) => html`
-	${window.isChromatic() ? html`
-		${Template(args, context)}
-		${Template({
-			...args,
-			isIndeterminate: true,
-		}, context)}
-	` : Template(args, context)}
-`;
-
 export const Default = ProgressCircleGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = ProgressCircleGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
@@ -76,7 +65,7 @@ WithForcedColors.parameters = {
 	},
 };
 
-export const StaticWhite = Default.bind({});
+export const StaticWhite = ProgressCircleGroup.bind({});
 StaticWhite.tags = ["!autodocs", "!dev"];
 StaticWhite.args = {
 	staticColor: "white",

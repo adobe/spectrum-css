@@ -1,7 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { html } from "lit";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { RadioGroup } from "./radio.test";
 
 /**
  * A radio selector allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
@@ -93,42 +92,11 @@ export default {
 	},
 };
 
-const Variants = (args, context) => {
-	return html`
-		<div style="display: flex; flex-direction: column; align-items: flex-start;">
-			${Template({
-				...args,
-				label: "Default"
-			}, context)}
-			${Template({
-				...args,
-				isEmphasized: true,
-				isChecked: true,
-				label: "Emphasized radio button label that is so long it has to wrap",
-				customStyles: {
-					"max-width": "220px",
-				}
-			}, context)}
-			${Template({
-				...args,
-				isDisabled: true,
-				label: "Disabled"
-			}, context)}
-			${Template({
-				...args,
-				isDisabled: true,
-				isReadOnly: true,
-				label: "Read only"
-			}, context)}
-		</div>
-	`;
-};
-
-export const Default = Variants.bind({});
+export const Default = RadioGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Variants.bind({});
+export const WithForcedColors = RadioGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

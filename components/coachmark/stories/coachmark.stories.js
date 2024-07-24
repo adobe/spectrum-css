@@ -2,6 +2,7 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
+import { CoachMarkGroup } from "./coachmark.test";
 import { Template } from "./template";
 
 /**
@@ -46,6 +47,7 @@ export default {
 		hasImage: false,
 	},
 	parameters: {
+		layout: "fullscreen",
 		actions: {
 			handles: [
 				...(ActionButton.parameters?.actions?.handles ?? []),
@@ -65,10 +67,11 @@ export default {
 	tags: ["!autodocs"],
 };
 
-export const Default = Template.bind({});
+export const Default = CoachMarkGroup.bind({});
 Default.args = {};
 
 export const WithMedia = Template.bind({});
+WithMedia.tags = ["autodocs", "!dev"];
 WithMedia.args = {
 	hasImage: true,
 };
@@ -79,10 +82,13 @@ WithMedia.parameters = {
 			height: "475px",
 		},
 	},
+	chromatic: {
+		disableSnapshot: true,
+	},
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = CoachMarkGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

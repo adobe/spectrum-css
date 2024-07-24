@@ -5,7 +5,7 @@ import { default as Popover } from "@spectrum-css/popover/stories/popover.storie
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ActionMenuGroup } from "./template";
+import { ActionMenuGroup } from "./actionmenu.test";
 
 /**
  * The action menu component is an action button with a popover. The `is-selected` class should be applied to the button when the menu is open. Note that the accessibility roles are different for an action menu compared to a normal menu.
@@ -60,8 +60,6 @@ export default {
 export const Default = ActionMenuGroup.bind({});
 Default.args = {
 	isOpen: true,
-	id: "popover-0",
-	triggerId: "trigger-0",
 	position: "bottom",
 	label: "More actions",
 	iconName: "More",
@@ -82,7 +80,7 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = ActionMenuGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

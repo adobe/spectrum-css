@@ -1,7 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { SizingGroup, Template } from "./template";
+import { Template } from "./template.js";
+import { ThumbnailGroup } from "./thumbnail.test.js";
 
 /**
  * A thumbnail is used to display a preview of an image, layer, or effect.
@@ -120,33 +121,39 @@ export default {
 };
 
 // @todo combine variants into one snapshot
-export const Default = Template.bind({});
-Default.args = {
-	imageURL: "example-ava.png",
-	altText: "Shantanu",
-};
+export const Default = ThumbnailGroup.bind({});
+Default.args = {};
 
+// ********* DOCS ONLY ********* //
 /**
  * The layer variant is used in layer management (such as the Compact or Detail Layers panels).
  */
 export const Layer = Template.bind({});
+Layer.tags = ["autodocs", "!dev"];
 Layer.args = {
 	isLayer: true,
 	isSelected: false,
 	imageURL: "flowers.png",
 	altText: "Flowers",
 };
+Layer.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * Thumbnail supports transparent images with a background (color or image) behind them.
  */
 export const WithBackground = Template.bind({});
+WithBackground.tags = ["autodocs", "!dev"];
 WithBackground.args = {
 	backgroundColor: "orange",
 };
+WithBackground.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = ThumbnailGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
