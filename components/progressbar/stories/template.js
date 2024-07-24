@@ -4,6 +4,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase } from "lodash-es";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 import "../index.css";
 
@@ -15,6 +16,8 @@ export const Template = ({
 	customWidth,
 	indeterminate,
 	label,
+	trackFill,
+	progressBarFill,
 	value,
 	customStyles = {},
 	size = "m",
@@ -48,8 +51,18 @@ export const Template = ({
 				label: indeterminate ? "" : `${value}%`,
 				customClasses: [`${rootClass}-percentage`],
 			}, context)}
-			<div class="${rootClass}-track">
-				<div class="${rootClass}-fill" style="width: ${value}%;"></div>
+
+			<div
+				class="${rootClass}-track"
+				style="--mod-progressbar-track-color: ${ifDefined(trackFill)}">
+				<div
+					class="${rootClass}-fill"
+					style=
+						"width: ${value}%;
+						${progressBarFill !== undefined
+							? `--mod-progressbar-fill-color: ${progressBarFill}` 
+							: undefined}"
+				></div>
 			</div>
 		</div>
 `;
@@ -154,6 +167,31 @@ export const ProgressBarGroup = (args, context) => html`
 				"padding": "12px",
 			})}>
 				${Sizes(args, context)}
+			</div>
+		</div>
+		<!-- The gradient story below supports linear-gradients used by Express. Adding trackFill or progressBarFill args
+		 to any template will set the --mod-progressbar-track-color or --mod-progressbar-fill-color custom properties. -->
+		 <div>
+			${Typography({
+				semantics: "heading",
+				size: "s",
+				content: ["Gradient support"],
+				customClasses: ["chromatic-ignore"],
+			}, context)}
+			<div style=${styleMap({
+				"display": window.isChromatic() ? "flex" : "none",
+				"flex-direction": "column",
+				"align-items": "flex-start",
+				"gap": "32px",
+				"border": "1px solid var(--spectrum-gray-200)",
+				"border-radius": "4px",
+				"padding": "12px",
+			})}>
+				${Template({
+					...args,
+					trackFill: "linear-gradient(to right, hotpink, orange)",
+					progressBarFill: "linear-gradient(to left, teal, purple)",
+				}, context)}
 			</div>
 		</div>
 	</div>
