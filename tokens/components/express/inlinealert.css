@@ -1,0 +1,41 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum--legacy {
+	--system-in-line-alert-heading-font-family: var(--spectrum-sans-font-family-stack);
+	--system-in-line-alert-heading-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	--system-in-line-alert-heading-font-style: var(--spectrum-heading-sans-serif-font-style);
+	--system-in-line-alert-heading-font-size: var(--spectrum-heading-size-xxs);
+	--system-in-line-alert-heading-line-height: var(--spectrum-heading-line-height);
+	--system-in-line-alert-content-font-family: var(--spectrum-sans-font-family-stack);
+	--system-in-line-alert-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--system-in-line-alert-content-font-style: var(--spectrum-body-sans-serif-font-style);
+	--system-in-line-alert-content-font-size: var(--spectrum-body-size-s);
+	--system-in-line-alert-content-line-height: var(--spectrum-body-line-height);
+	--system-in-line-alert-border-width: var(--spectrum-border-width-200);
+	--system-in-line-alert-border-radius: var(--spectrum-corner-radius-100);
+	--system-in-line-alert-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-in-line-alert-min-inline-size: var(--spectrum-in-line-alert-minimum-width);
+	--system-in-line-alert-header-min-block-size: var(--spectrum-component-height-50);
+	--system-in-line-alert-spacing-edge-to-text: var(--spectrum-spacing-400);
+	--system-in-line-alert-spacing-header-to-icon: var(--spectrum-spacing-400);
+	--system-in-line-alert-spacing-header-content-button: var(--spectrum-spacing-300);
+	--system-in-line-alert-background-color: var(--spectrum-background-layer-2-color);
+	--system-in-line-alert-border-and-icon-color: var(--spectrum-neutral-visual-color);
+	--system-in-line-alert-header-color: var(--spectrum-heading-color);
+	--system-in-line-alert-content-color: var(--spectrum-body-color);
+	--system-in-line-alert-border-and-icon-color-info: var(--spectrum-informative-visual-color);
+	--system-in-line-alert-border-and-icon-color-positive: var(--spectrum-positive-visual-color);
+	--system-in-line-alert-border-and-icon-color-notice: var(--spectrum-notice-visual-color);
+	--system-in-line-alert-border-and-icon-color-negative: var(--spectrum-negative-visual-color);
+}
