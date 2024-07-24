@@ -27,7 +27,46 @@ For more general information about how to contribute to the Spectrum CSS project
 - [Node.js](https://nodejs.org/en/) (v20 or later)
 - [Yarn](https://yarnpkg.com/getting-started/install)
 
-## Architecture
+## Component architecture
+
+Each component has the following files:
+
+- `index.css` - The source file for all styles related to the component. This contains all selectors and css properties for the component but specifically lacks any custom properties or variables. These values are sourced from the `themes` directory.
+- `themes/*.css` - The theme-specific, component-level custom properties used to style the component. These files are meant to be loaded with the source styles.
+- `stories/*.stories.js` and `stories/template.js` - The storybook assets for rendering components in Storybook and used in visual regression testing.
+- `stories/*.mdx` - This asset generates the component-specific documentation and is rendered in Storybook as the Docs page.
+
+Each component outputs the following assets to `dist`:
+
+- `index.css`: This asset includes the base CSS and the `themes/spectrum-two.css` definitions (without the system mapping layer). This asset is meant to be used in a environment where only the current Spectrum theme is supported.
+- `index-base.css`: This asset includes only the base CSS; that is, the CSS without any custom property definitions. This can be used in conjunction with `index-theme.css` and the desired `themes/*.css` file to render a themed component.
+- `index-theme.css`: This asset includes only the custom property definitions for the component as mapped to the system variables. This can be used in conjunction with `index-base.css` and the desired `themes/*.css` file to render a themed component.
+
+Each component outputs theme-specific assets to `dist/themes`. These assets include the system variables mapped to their global token counterparts. This file is meant to be loaded in conjunction with the `index-base.css` and `index-theme.css` files to render a themed component.
+
+- `themes/spectrum-two.css`: Represents the current Spectrum theme, aka Spectrum 2.
+- `themes/spectrum.css`: Represents the legacy Spectrum theme, aka Spectrum 1. **deprecated**
+- `themes/express.css`: Represents the Express theme. **deprecated**
+
+## Adding a new component
+
+1. Generate a new component using the `yarn new component` command. The generator will prompt you to answer questions about your component.
+2. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/tokens`, and most rely on `@spectrum-css/icon`.
+3. Once your folder has been generated, you can run `yarn start` in the root of the project to begin developing.
+4. The `index.css` file is where most of your styles will be added. Add any custom property mappings to the global token library in the `themes/spectrum-two.css` asset.
+5. Inside the `stories` directory you will find a `template.js`, `*.stories.js`, and `*.mdx` file.
+   - In the `*.stories.js` file, define the available knobs and properties for your component, as well as any standard variations you want to surface in [Storybook](https://storybook.js.org/docs/react/writing-stories/introduction).
+   - Update the `template.js` file with the markup, using [lit-html syntax](https://lit.dev/docs/templates/overview/) to adjust results based on the provided settings from the Storybook knobs.
+   - Update the `*.mdx` file with the documentation for your component.
+
+_Note_: Because we use scoped packages, before it can be published, you must manually publish the new component as public:
+
+```shell
+cd components/newcomponent
+npm publish --access=public
+```
+
+## Storybook architecture
 
 - `assets`: This folder contains static, unprocessed assets for inclusion in the stories.
 - `decorators`: These assets interpret the arguments provided and apply the necessary stylesheet or markup changes to reflect the desired update.
@@ -75,6 +114,8 @@ CSS assets will be run through their respective postcss configurations. This mea
 
 ```js
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 ```
 
 We are leaning on Storybook's `@storybook/web-components-vite` framework configuration as our stories rely on lit for dynamic attribute assignment.
@@ -303,6 +344,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = (
   {
@@ -346,7 +389,8 @@ export const Template = (
           },
           context,
         ),
-      )} ${when(iconName, () =>
+      )}
+      ${when(iconName, () =>
         Icon(
           {
             iconName,
@@ -395,7 +439,8 @@ export const AccordionGroup = (
   context = {},
 ) => {
   return html`
-    ${Template(args, context)} ${Template(
+    ${Template(args, context)}
+    ${Template(
       {
         ...args,
         customStyles: {
@@ -405,7 +450,8 @@ export const AccordionGroup = (
         },
       },
       context,
-    )} ${Template(
+    )}
+    ${Template(
       {
         ...args,
         disableAll: true,

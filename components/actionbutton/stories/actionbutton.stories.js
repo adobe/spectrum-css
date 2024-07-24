@@ -2,7 +2,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ActionButtonGroup, ActionButtons } from "./template";
+import { ActionButtonGroup, ActionButtons } from "./actionbutton.test";
 
 /**
  * The action button component represents an action a user can take.
@@ -124,11 +124,17 @@ Default.args = {
 	label: "More",
 };
 
+// ********* DOCS ONLY ********* //
 export const Emphasized = ActionButtons.bind({});
 Emphasized.tags = ["autodocs", "!dev"];
 Emphasized.args = {
 	label: "More",
 	isEmphasized: true,
+};
+Emphasized.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
 };
 
 export const Quiet = ActionButtons.bind({});
@@ -137,10 +143,15 @@ Quiet.args = {
 	label: "More",
 	isQuiet: true,
 };
+Quiet.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
 
 // ********* VRT ONLY ********* //
-export const StaticBlack = Default.bind({});
-StaticBlack.tags = ["!autodocs", "!dev", "test"];
+export const StaticBlack = ActionButtonGroup.bind({});
+StaticBlack.tags = ["!autodocs", "!dev"];
 StaticBlack.args = {
 	...Default.args,
 	staticColor: "black",
@@ -151,8 +162,8 @@ StaticBlack.parameters = {
 	},
 };
 
-export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["!autodocs", "!dev", "test"];
+export const StaticWhite = ActionButtonGroup.bind({});
+StaticWhite.tags = ["!autodocs", "!dev"];
 StaticWhite.args = {
 	...Default.args,
 	staticColor: "white",
@@ -163,9 +174,9 @@ StaticWhite.parameters = {
 	},
 };
 
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = ActionButtonGroup.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

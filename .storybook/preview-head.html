@@ -1,0 +1,42 @@
+<!-- This preconnect opens the connection for typekit to more quickly load fonts -->
+<link rel="preconnect" href="https://use.typekit.net" crossorigin />
+
+<!-- This is the script that attempts to pre-load the typekit fonts -->
+ <script src="https://use.typekit.net/rok6rmo.js" id="typekit" type="text/javascript" async></script>
+ <script>
+    try {
+        window.TypeKit = Typekit.load({
+            kitId: "rok6rmo",
+            async: true,
+            scriptTimeout: 3000,
+            active: () => {
+                // Fire a custom event to indicate the Adobe Fonts have loaded
+                document.dispatchEvent(new CustomEvent("typekit-loaded", { detail: { kitId: config.kitId } }));
+            },
+        });
+    } catch (e) {}
+
+    // Add an observer to detect changes to the lang attribute
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === "lang") {
+                const lang = mutation.target.getAttribute("lang");
+                const isNotEnglish = lang && lang !== "en-US";
+                const kitId = isNotEnglish ? "mge7bvf" : "rok6rmo";
+
+                if (window.Typekit) {
+                    window.Typekit.load({ ...config, kitId });
+                }
+            }
+        });
+    });
+
+    // Observe changes to the lang attribute on the html element
+    observer.observe(document.documentElement, { attributes: true });
+</script>
+
+<script type="module">
+    if (!("anchorName" in document.documentElement.style)) {
+      import("https://unpkg.com/@oddbird/css-anchor-positioning");
+    }
+  </script>

@@ -1,4 +1,4 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -7,6 +7,8 @@ import { when } from "lit/directives/when.js";
 import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 /**
  * @todo load order should not influence the icon size but it is; fix this
@@ -62,7 +64,7 @@ export const Template = ({
 	customStyles = {},
 	customIconClasses = [],
 	onclick,
-	id,
+	id = getRandomId("actionbutton"),
 	testId,
 	role = "button",
 } = {}, context = {}) => {
@@ -88,8 +90,8 @@ export const Template = ({
 				["is-active"]: isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			id=${ifDefined(id)}
-			data-testid=${ifDefined(testId)}
+			id=${id}
+			data-testid=${testId ?? id}
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
@@ -124,80 +126,3 @@ export const Template = ({
 		</button>
 	`;
 };
-
-export const ActionButtons = (args, context) => {
-	return html`
-		${Template(args, context)}
-		${Template({
-			...args,
-			iconName: undefined,
-		}, context)}
-		${Template({
-			...args,
-			hideLabel: true,
-		}, context)}
-		${Template({
-			...args,
-			hasPopup: "menu",
-			label: "Has pop-up",
-			iconName: undefined,
-		}, context)}
-	`;
-};
-
-const Truncation = (args, context) => {
-	return html`
-		${Template(args, context)}
-		${Template({
-			...args,
-			iconName: undefined,
-		}, context)}
-	`;
-};
-
-export const ActionButtonGroup = Variants({
-	Template: ActionButtons,
-	stateDirection: "column",
-	testData: [
-		{
-			testHeading: "Standard"
-		},
-		{
-			testHeading: "Emphasized",
-			isEmphasized: true,
-		},
-		{
-			testHeading: "Quiet",
-			isQuiet: true,
-		},
-		{
-			Template: Truncation,
-			testHeading: "Truncation",
-			label: "Truncate this long content",
-			customStyles: {
-				maxInlineSize: "100px"
-			},
-			withStates: false,
-		},
-	],
-	stateData: [{
-		testHeading: "Disabled",
-		isDisabled: true,
-	}, {
-		testHeading: "Selected",
-		isSelected: true,
-	}, {
-		testHeading: "Focused",
-		isFocused: true,
-	}, {
-		testHeading: "Hovered",
-		isHovered: true,
-	}, {
-		testHeading: "Active",
-		isActive: true,
-	}, {
-		testHeading: "Disabled + selected",
-		isDisabled: true,
-		isSelected: true,
-	}],
-});

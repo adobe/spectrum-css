@@ -1,6 +1,8 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { AvatarGroup, AvatarSizes, Template } from "./template";
+import { AvatarGroup } from "./avatar.test";
+import { Template } from "./template";
 
 /**
  * An image representing a user. Note that a div wrapper is required for avatar:
@@ -80,6 +82,8 @@ Default.args = {
 };
 
 // ********* DOCS ONLY ********* //
+const AvatarSizes = Sizes({ Template });
+
 export const SizeOptions = AvatarSizes.bind({});
 SizeOptions.tags = ["autodocs", "!dev"];
 SizeOptions.parameters = {
@@ -114,9 +118,9 @@ Disabled.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = AvatarGroup.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

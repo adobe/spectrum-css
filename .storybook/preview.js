@@ -7,12 +7,12 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
-	withTextDirectionWrapper,
+	withTextDirectionWrapper
 } from "./decorators";
 import {
 	FontLoader,
 	IconLoader,
-	TokenLoader
+	TokenLoader,
 } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
@@ -22,7 +22,6 @@ import {
 } from "./types";
 
 import "./assets/base.css";
-import "./assets/typekit.js";
 
 window.global = window;
 
@@ -38,8 +37,8 @@ setConsoleOptions({
 });
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
-export const parameters = {
-	layout: "padded",
+const parameters = {
+	layout: "centered",
 	showNav: true,
 	showTabs: true,
 	showPanel: true,
@@ -63,8 +62,6 @@ export const parameters = {
 		},
 	},
 	chromatic: {
-		// @todo: use a loader to ensure tokens load before stories without arbitrary delay
-		delay: 500,
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
 		pauseAnimationAtEnd: true,
@@ -76,7 +73,7 @@ export const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "[data-html-preview]",
+		root: "[data-html-preview]:first-of-type",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -93,7 +90,6 @@ export const parameters = {
 		page: DocumentationTemplate,
 		story: {
 			inline: true,
-			height: "200px",
 		},
 		source: {
 			type: "dynamic",
@@ -117,27 +113,25 @@ export const parameters = {
 	componentVersion: undefined,
 };
 
-export const decorators = [
-	withTextDirectionWrapper,
-	withLanguageWrapper,
-	withReducedMotionWrapper,
-	withContextWrapper,
-	withTestingPreviewWrapper,
-	withArgEvents,
-	withActions,
-	withIconSpriteSheet,
-];
-
 export default {
 	title: "Spectrum CSS",
-	globalTypes,
+	parameters,
 	argTypes,
+	globalTypes,
 	args: {
 		customClasses: [],
 		customStyles: {},
 	},
-	parameters,
-	decorators,
+	decorators: [
+		withArgEvents,
+		withLanguageWrapper,
+		withReducedMotionWrapper,
+		withTextDirectionWrapper,
+		withContextWrapper,
+		withTestingPreviewWrapper,
+		withActions,
+		withIconSpriteSheet,
+	],
 	loaders: [
 		FontLoader,
 		IconLoader,
