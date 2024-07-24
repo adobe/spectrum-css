@@ -3,7 +3,8 @@ import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.sto
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { CardGroup, Template } from "./template";
+import { CardGroup } from "./card.test";
+import { Template } from "./template";
 
 /**
  * A card represents a rectangular space to contain text or images. Cards are typically used to encapsulate units of a data set, such as a gallery of image/caption pairs.
@@ -112,7 +113,7 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = CardGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
@@ -123,8 +124,8 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Selected = Default.bind({});
-Selected.tags = ["!dev"];
+export const Selected = Template.bind({});
+Selected.tags = ["autodocs", "!dev"];
 Selected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -132,7 +133,7 @@ Selected.args = {
 	isSelected: true
 };
 
-export const Focused = Default.bind({});
+export const Focused = Template.bind({});
 Focused.args = {
 	isFocused: true,
 	title: "Card title that is longer and should wrap",

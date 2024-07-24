@@ -1,20 +1,22 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html, svg } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Asset",
 	image,
 	preset,
-	id,
+	id = getRandomId("asset"),
 	customClasses = [],
 	customStyles = {},
 	isCardAssetOverride = false,
-}) => {
+} = {}) => {
 	let visual;
 	if (preset === "file") {
 		visual = svg`
@@ -53,28 +55,3 @@ export const Template = ({
 		${visual}
 	</div>`;
 };
-
-export const AssetGroup = Variants({
-	Template,
-	testData: [
-		{
-			testHeading: "Image preset",
-		},
-		{
-			testHeading: "File preset",
-			image: undefined,
-			preset: "file",
-			customStyles: {
-				"min-inline-size": "150px",
-			},
-		},
-		{
-			testHeading: "Folder preset",
-			image: undefined,
-			preset: "folder",
-			customStyles: {
-				"min-inline-size": "150px",
-			}
-		},
-	],
-});

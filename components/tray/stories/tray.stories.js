@@ -1,7 +1,8 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
+import { disableDefaultModes, viewports } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { TrayGroup } from "./template";
+import { TrayGroup } from "./tray.test";
 
 /**
  * Tray dialogs are typically used to portray information on mobile device or smaller screens.
@@ -27,8 +28,18 @@ export default {
 		isOpen: false,
 	},
 	parameters: {
+		layout: "fullscreen",
+		docs: {
+			story: {
+				height: "300px",
+			},
+		},
 		chromatic: {
-			delay: 2000,
+			modes: {
+				"Viewport | small": {
+					viewport: viewports.small,
+				},
+			},
 		},
 		componentVersion: version,
 	}
@@ -38,34 +49,22 @@ export const Default = TrayGroup.bind({});
 Default.args = {
 	isOpen: true,
 	content: [
-		Dialog.bind(null, {
+		(passthroughs, context) => Dialog({
+			...passthroughs,
 			heading: "New messages",
 			content: ["You have 5 new messages!"],
 			isDismissable: false,
-		})
+		}, context)
 	],
-};
-Default.parameters = {
-	chromatic: {
-		modes: {
-			"Small Viewport": {
-				viewport: {
-					width: 480,
-				},
-			},
-		}
-	},
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = TrayGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: {
-			...Default.parameters.chromatic.modes,
-		}
+		modes: disableDefaultModes,
 	},
 };

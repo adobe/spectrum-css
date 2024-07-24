@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
+import { MillerGroup } from "./miller.test";
 import { Template } from "./template";
 
 /**
@@ -79,10 +80,11 @@ export default {
 	},
 };
 
-export const BranchesSelectable = Template.bind({});
+export const BranchesSelectable = MillerGroup.bind({});
 BranchesSelectable.args = {};
 
 export const FilesSelectable = Template.bind({});
+FilesSelectable.tags = ["autodocs", "!dev"];
 FilesSelectable.args = {
 	columns: [
 		{
@@ -144,9 +146,14 @@ FilesSelectable.args = {
 		},
 	],
 };
+FilesSelectable.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	}
+};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = MillerGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

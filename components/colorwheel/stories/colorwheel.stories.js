@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
+import { ColorWheelGroup } from "./colorwheel.test";
 import { Template } from "./template";
 
 /**
@@ -37,7 +38,7 @@ export default {
 	tags: ["!autodocs"],
 };
 
-export const Default = Template.bind({});
+export const Default = ColorWheelGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
@@ -60,7 +61,7 @@ WithColorArea.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = ColorWheelGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

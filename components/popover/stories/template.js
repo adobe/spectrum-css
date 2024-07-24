@@ -1,5 +1,4 @@
-import { renderContent } from "@spectrum-css/preview/decorators";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -7,6 +6,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Popover",
@@ -15,9 +16,9 @@ export const Template = ({
 	withTip = false,
 	position = "top",
 	customClasses = [],
-	id = "popover-1",
+	id = getRandomId("popover"),
 	testId,
-	triggerId = "trigger",
+	triggerId = getRandomId("popover-trigger"),
 	customStyles = {},
 	trigger,
 	content = [],
@@ -25,6 +26,7 @@ export const Template = ({
 	const { globals = {}, updateArgs } = context;
 	const textDir = globals.textDir ?? "ltr";
 	const isNestedPopover = id === "popover-nested" || id === "popover-nested-2";
+	const isTopBottom = position.startsWith("top") || position.startsWith("bottom");
 
 	/**
 	 * Adjust popover's position in relation to the source/trigger element.
@@ -154,86 +156,34 @@ export const Template = ({
 			popupId: id,
 		}, context))}
 
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				"is-open": isOpen,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--withTip`]: withTip,
-				[`${rootClass}--${position}`]: typeof position !== "undefined",
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${ifDefined(styleMap(customStyles))}
-			role="presentation"
-			id=${ifDefined(id)}
-			data-testid=${ifDefined(testId ?? id)}
-		>
-			${renderContent(content)}
-			${withTip
-				? position && ["top", "bottom"].some((e) => position.startsWith(e))
-					? html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>`
-					: html`<svg class="${rootClass}-tip" viewBox="0 -0.5 9 16" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 -1,17"></svg>`
-				: ""}
-		</div>
-	`;
-};
-
-export const Variants = (args, context) => {
-	const placementOptions = context?.argTypes?.position?.options ?? [];
-	return html`
-		<div style=${styleMap({
-			"display": window.isChromatic() ? "none" : "contents",
-		})}>
-			${Template(args, context)}
-		</div>
-		<div style=${styleMap({
-			"display": window.isChromatic() ? "flex" : "none",
-			"flex-direction": "column",
-			"align-items": "flex-start",
-		})} class="spectrum-Typography">
-			${placementOptions.map(option => {
-				let optionDescription;
-				if (option.startsWith("start") || option.startsWith("end"))
-					optionDescription = "Changes side with text direction (like a logical property)";
-				if (option.startsWith("left") || option.startsWith("right"))
-					optionDescription = "Text direction does not affect the position";
-
-				return html`
-					<div>
-						${Typography({
-							semantics: "heading",
-							size: "s",
-							content: [option],
-							customClasses: ["chromatic-ignore"],
-						}, context)}
-						<div style=${styleMap({
-							"padding": "16px",
-							"block-size": "200px",
-							"inline-size": "200px",
-							"border": "1px solid var(--spectrum-gray-200)",
-							"border-radius": "4px",
-						})}>
-							<div style="position: relative">
-								${Template({
-									...args,
-									position: option,
-									isOpen: true,
-									trigger: () => null,
-								}, context)}
-							</div>
-						</div>
-						${when(optionDescription, () => html`
-							${Typography({
-								semantics: "body",
-								size: "s",
-								content: [html`<sup>*</sup> ${optionDescription}`],
-								customClasses: ["chromatic-ignore"],
-							}, context)}
-						`)}
-					</div>
-				`;
-			})}
-		</div>
+        <div
+            class=${classMap({
+                [rootClass]: true,
+                "is-open": isOpen,
+                [`${rootClass}--size${size?.toUpperCase()}`]:
+                    typeof size !== "undefined",
+                [`${rootClass}--withTip`]: withTip,
+                [`${rootClass}--${position}`]: typeof position !== "undefined",
+                ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+            })}
+            role="presentation"
+            id=${ifDefined(id)}
+            data-testid=${ifDefined(testId ?? id)}
+            style=${styleMap(customStyles)}
+        >
+            ${renderContent(content)}
+            ${when(withTip, () => html`
+                <svg
+                    class=${classMap({ [`${rootClass}-tip`]: true })}
+                    viewBox=${isTopBottom ? "0 -0.5 16 9" : "0 -0.5 9 16"}
+                    width="10"
+                >
+                    <path
+                        class=${classMap({ [`${rootClass}-tip-triangle`]: true })}
+                        d=${isTopBottom ? "M-1,-1 8,8 17,-1" : "M-1,-1 8,8 -1,17"}
+                    ></path>
+                </svg>
+            `)}
+        </div>
 	`;
 };
