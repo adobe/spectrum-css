@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "postcss-property-rollup",
+  "version": "2.0.1",
+  "description": "Combines custom properties from multiple selectors into a single selector",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "main": "index.js",
+  "peerDependencies": {
+    "postcss": ">=8"
+  },
+  "devDependencies": {
+    "ava": "^6.1.3",
+    "c8": "^10.1.2",
+    "postcss": "^8.4.39"
+  },
+  "keywords": [
+    "css",
+    "theming",
+    "custom properties",
+    "postcss",
+    "postcss-plugin"
+  ]
+}
