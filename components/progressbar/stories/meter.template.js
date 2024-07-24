@@ -67,5 +67,27 @@ export const MeterGroup = (args, context) => html`
 				}, context)}
 			</div>
 		`)}
+
+		<!-- The gradient story below supports linear-gradients used by Express. For use cases that require a custom linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS. -->
+		 <div>
+			${Typography({
+				semantics: "heading",
+				size: "s",
+				content: ["Gradient support"],
+				customClasses: ["chromatic-ignore"],
+			}, context)}
+			<div style=${styleMap({
+				"display": window.isChromatic() ? "flex" : "none",
+				"flex-direction": "column",
+				"align-items": "flex-start",
+				"gap": "32px",
+			})}>
+				${Template({
+					...args,
+					trackFill: "linear-gradient(to right, hotpink, orange)",
+					progressBarFill: "linear-gradient(to left, teal, purple)",
+				}, context)}
+			</div>
+		</div>
 	</div>
 `;
