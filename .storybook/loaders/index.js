@@ -1,49 +1,22 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
 
 // Use the document.fonts API to check if fonts have loaded
 export const FontLoader = async () => ({
 	fonts: document.fonts ? await document.fonts.ready : true,
 });
 
-export const IconLoader = async () => ({
-	icons: {
-		workflow: {
-			medium: await import.meta.glob(
-				"/node_modules/@adobe/spectrum-css-workflow-icons/dist/18/*.svg",
-				{
-					eager: true,
-					query: "?raw",
-					import: "default",
-				}
-			),
-			large: await import.meta.glob(
-				"/node_modules/@adobe/spectrum-css-workflow-icons/dist/24/*.svg",
-				{
-					eager: true,
-					query: "?raw",
-					import: "default",
-				}
-			),
-		},
-		ui: {
-			medium: await import.meta.glob(
-				"/node_modules/@spectrum-css/ui-icons/dist/medium/*.svg",
-				{
-					eager: true,
-					query: "?raw",
-					import: "default",
-				}
-			),
-			large: await import.meta.glob(
-				"/node_modules/@spectrum-css/ui-icons/dist/large/*.svg",
-				{
-					eager: true,
-					query: "?raw",
-					import: "default",
-				}
-			),
-		},
-	},
-});
+export { IconLoader } from "./icon-loader.js";
 
 export const TokenLoader = async () => ({
 	tokens: {
