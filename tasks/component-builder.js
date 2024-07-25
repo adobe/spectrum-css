@@ -213,7 +213,11 @@ async function processCSS(content, input, output, {
 		configPath // This is the path to the directory where the postcss.config.js lives
 	);
 
-	const result = await postcss(plugins).process(content, options);
+	const result = await postcss(plugins).process(content, {
+		from: input,
+		to: output,
+		...options
+	});
 
 	if (result.error) return Promise.reject(result.error);
 
