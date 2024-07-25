@@ -19,3 +19,5 @@
 - Remove unused fallbacks in argTypes for global args
 - Flag the darkest color as deprecated in the dropdown menu
 - Change string "Japanese" to "日本語" in the language dropdown to align with other items in the menu
+- Correct invalid useArgs useage at the story-level
+- Correct misplaced custom style definition from out of the fallbacks object (calendar)

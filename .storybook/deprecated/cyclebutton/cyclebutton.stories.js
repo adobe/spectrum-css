@@ -1,7 +1,6 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 
 import "@spectrum-css/cyclebutton/dist/index-vars.css";
@@ -55,11 +54,10 @@ export const Default = (({
 	size = "m",
 	isDisabled = false,
 	onclick,
+	selectedIcon = "Pause",
+	initialIcon = "Play"
 } = {}, context = {}) => {
-	const [{
-		selectedIcon = "Pause",
-		initialIcon = "Play"
-	}, updateArgs] = useArgs();
+	const { updateArgs } = context;
 
 	return html`
 		<!-- Note: These dimensions don't change in express theme -->

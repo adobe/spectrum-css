@@ -11,9 +11,7 @@ export const Template = ({
 	isDisabled = false,
 	isFocused = false,
 	isWithColorLoupe = false,
-	customStyles = {
-		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
-	},
+	customStyles = {},
 } = {}, context = {}) => {
 	return OpacityCheckerboard({
 		customClasses: [
@@ -35,6 +33,7 @@ export const Template = ({
 			`)}
 		`],
 		customStyles: {
+			"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
 			...customStyles,
 			"position": isWithColorLoupe ? "absolute" : undefined,
 			"inset-block": isWithColorLoupe ? "75%" : undefined,
