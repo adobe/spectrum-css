@@ -49,7 +49,8 @@ module.exports = {
 			{
 				except: ["first-nested"],
 				ignore: ["after-comment", "stylelint-commands"],
-				ignoreComments: [/^passthroughs?/],
+				// don't require a newline before a passthrough flag
+				ignoreComments: [/^@?passthroughs?/],
 			},
 		],
 		"declaration-block-no-redundant-longhand-properties": null,
