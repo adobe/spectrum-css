@@ -34,7 +34,7 @@
 					"cat ./dist/css/express/medium-vars.css ./dist/css/express/custom-medium-vars.css | postcss --output ./dist/css/express/medium-vars.css",
 					"cat ./dist/css/express/large-vars.css ./dist/css/express/custom-large-vars.css | postcss --output ./dist/css/express/large-vars.css",
 					"cat ./dist/css/express/global-vars.css ./dist/css/express/custom-vars.css | postcss --output ./dist/css/express/global-vars.css",
-					"node -e \"require('./tasks/token-rollup.js').default()\"",
+					"node --no-warnings -e \"require('./tasks/token-rollup.js').default()\"",
 					"find dist -type f -empty -delete",
 					"prettier --write dist/**/*.css"
 				],

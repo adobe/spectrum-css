@@ -18,11 +18,11 @@
 		"build": {
 			"configurations": {
 				"ci": {
-					"commands": ["storybook build --config-dir ."]
+					"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --config-dir ."]
 				},
 				"docs": {
 					"commands": [
-						"storybook build --config-dir . --output-dir ../dist/preview"
+						"cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --config-dir . --output-dir ../dist/preview"
 					],
 					"outputs": ["{workspaceRoot}/dist/preview"]
 				}
@@ -32,7 +32,7 @@
 			"inputs": ["tools", { "externalDependencies": ["storybook"] }],
 			"options": {
 				"commands": [
-					"storybook build --config-dir . --output-dir ./storybook-static"
+					"cross-env NODE_OPTIONS=\"--no-warnings\" storybook build --config-dir . --output-dir ./storybook-static"
 				],
 				"cwd": "{projectRoot}"
 			},
@@ -93,7 +93,7 @@
 				{ "env": "WATCH_MODE" }
 			],
 			"options": {
-				"commands": ["WATCH_MODE=true storybook dev --port 8080 --config-dir ."],
+				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" WATCH_MODE=true storybook dev --port 8080 --config-dir ."],
 				"cwd": "{projectRoot}"
 			}
 		},

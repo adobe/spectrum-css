@@ -24,7 +24,7 @@
 		"clean:docs": "rimraf dist",
 		"clean:preview": "nx clean storybook",
 		"cleaner": "nx run-many --target clean --projects",
-		"compare": "cross-env NODE_ENV=production node ./tasks/compare-compiled-output.js",
+		"compare": "cross-env NODE_ENV=production node --no-warnings ./tasks/compare-compiled-output.js",
 		"dev": "cross-env NODE_ENV=production nx run storybook:build:docs && nx start docs",
 		"format": "yarn formatter tag:component",
 		"formatter": "nx run-many --target format --projects",
