@@ -87,7 +87,7 @@
 				{ "env": "WATCH_MODE" }
 			],
 			"options": {
-				"commands": ["WATCH_MODE=true storybook dev --config-dir ."],
+				"commands": ["WATCH_MODE=true storybook dev --port 8080 --config-dir ."],
 				"cwd": "{projectRoot}"
 			}
 		},
