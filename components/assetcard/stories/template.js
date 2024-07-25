@@ -48,13 +48,13 @@ export const Template = ({
 			id=${ifDefined(id)}
 			data-test-id=${ifDefined(testId)}
 			style=${styleMap(customStyles)}
-			@click=${() => {
+			@click=${function() {
 				updateArgs({ isSelected: !isSelected });
 			}}
-			@focusin=${() => {
+			@focusin=${function() {
 				updateArgs({ isFocused: true });
 			}}
-			@focusout=${() => {
+			@focusout=${function() {
 				updateArgs({ isFocused: false });
 			}}
 			tabindex="0"

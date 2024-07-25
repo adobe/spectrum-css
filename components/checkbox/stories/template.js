@@ -65,7 +65,7 @@ export const Template = ({
 				?disabled=${isDisabled || isReadOnly}
 				title=${ifDefined(title)}
 				value=${ifDefined(value)}
-				@change=${() => {
+				@change=${function() {
 					if (isDisabled) return;
 					updateArgs({ isChecked: !isChecked });
 				}}

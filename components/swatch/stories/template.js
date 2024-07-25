@@ -42,11 +42,13 @@ export const Template = ({
 				...customStyles,
 			}))}
 			tabindex="0"
-			@click=${() => {
+			@click=${function() {
 				updateArgs({ isSelected: !isSelected });
 			}}
-			@focusout=${() => updateArgs({ isSelected: false })}
-			@keypress=${(e) => {
+			@focusout=${function() {
+				updateArgs({ isSelected: false });
+			}}
+			@keypress=${function(e) {
 				if (e.key !== "Enter" && e.key !== " ") return;
 				updateArgs({ isSelected: !isSelected });
 			}}

@@ -21,7 +21,9 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 	const scale = globals.scale ?? "medium";
-	const toggleOpen = () => updateArgs({ isOpen: !isOpen });
+	const toggleOpen = function () {
+		updateArgs({ isOpen: !isOpen });
+	};
 
 	const Dialog = html`
 		<div

@@ -216,7 +216,7 @@ export const Template = ({
 		 * @param {Event} evt
 		 * @returns {void}
 		 */
-		onDateClick = (thisDay, evt) => {
+		onDateClick = function (thisDay, evt) {
 			if (!thisDay || thisDay.isDisabled || !thisDay.date) return;
 
 			updateArgs({ selectedDay: thisDay.date });
@@ -225,7 +225,7 @@ export const Template = ({
 	}
 
 	if (!previousHandler || typeof previousHandler !== "function") {
-		previousHandler = ({ displayedMonth, displayedYear }) => {
+		previousHandler = function({ displayedMonth, displayedYear }) {
 			if (
 				typeof displayedMonth === "undefined" ||
 				typeof displayedYear === "undefined"
@@ -375,10 +375,10 @@ export const Template = ({
 												"is-focused": (isFocused && thisDay.isFocused) || thisDay.isSelected,
 											})}
 											@click=${onDateClick.bind(null, thisDay)}
-											@focusin=${() => {
+											@focusin=${function() {
 												updateArgs({ isFocused: true });
 											}}
-											@focusout=${() => {
+											@focusout=${function() {
 												updateArgs({ isFocused: false });
 											}}
 											>${thisDay.date.getDate()}</span

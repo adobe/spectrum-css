@@ -56,10 +56,10 @@ export const Template = (
       role=${ifDefined(
         image || showAsset ? "figure" : isGrid ? "rowheader" : role
       )}
-			@focusin=${() => {
+			@focusin=${function() {
 				updateArgs({ isFocused: true });
 			}}
-			@focusout=${() => {
+			@focusout=${function() {
 				updateArgs({ isFocused: false });
 			}}
     >
@@ -206,7 +206,7 @@ export const Template = (
                 context
               ),
             ],
-            onclick: () => {
+            onclick: function() {
               updateArgs({ isSelected: !isSelected });
             },
             customClasses: [`${rootClass}-quickActions`],

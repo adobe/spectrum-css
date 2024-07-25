@@ -28,10 +28,10 @@ export const Template = ({
 				"--mod-colorarea-width": customWidth,
 				...customStyles,
 			})}
-			@focusin=${() => {
+			@focusin=${function() {
 				updateArgs({ isFocused: true });
 			}}
-			@focusout=${() => {
+			@focusout=${function() {
 				updateArgs({ isFocused: false });
 			}}
 		>
