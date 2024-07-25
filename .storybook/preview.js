@@ -1,11 +1,9 @@
-import workflowSprite from "@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg?raw";
-import uiSprite from "@spectrum-css/ui-icons/dist/spectrum-css-icons.svg?raw";
-
 import { setConsoleOptions } from "@storybook/addon-console";
 import {
 	withActions,
 	withArgEvents,
 	withContextWrapper,
+	withIconSpriteSheet,
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
@@ -130,24 +128,7 @@ export const decorators = [
 	withTestingPreviewWrapper,
 	withArgEvents,
 	withActions,
-	// Attach the icons to the window object for use in the stories
-	(StoryFn, context) => {
-		if (context?.loaded?.icons) window.icons = context.loaded.icons;
-
-		// Inject the sprite sheets into the document
-		let sprite = document.getElementById("spritesheets");
-		if (!sprite) {
-			sprite = document.createElement("div");
-			sprite.id = "spritesheets";
-			sprite.innerHTML = workflowSprite + uiSprite;
-			document.body.appendChild(sprite);
-		}
-		else {
-			sprite.innerHTML = workflowSprite + uiSprite;
-		}
-
-		return StoryFn(context);
-	},
+	withIconSpriteSheet,
 ];
 
 export default {
