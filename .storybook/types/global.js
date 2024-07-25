@@ -1,18 +1,20 @@
-// Rendered as controls; these properties are assigned to the document root element
+/**
+ * Rendered as controls; these properties are assigned to the document root element
+ */
 
 /** @type import('@storybook/types').GlobalTypes */
 export default {
 	context: {
 		title: "Design context",
 		description: "The variation of Spectrum to use in the component",
-		defaultValue: "spectrum1",
+		defaultValue: "legacy",
 		type: "string",
 		showName: true,
 		toolbar: {
 			items: [
+				{ value: "legacy", title: "Spectrum 1", right: "default" },
 				{ value: "express", title: "Express" },
-				{ value: "spectrum1", title: "Spectrum 1", right: "default" },
-				// { value: "spectrum2", title: "Spectrum 2", right: "default" },
+				{ value: "raw", title: "Token-free", right: "raw" },
 			],
 			dynamicTitle: true,
 		},
@@ -27,7 +29,7 @@ export default {
 			items: [
 				{ value: "light", title: "Light", right: "default" },
 				{ value: "dark", title: "Dark" },
-				{ value: "darkest", title: "Darkest" },
+				{ value: "darkest", title: "Darkest", right: "deprecated" },
 			],
 			dynamicTitle: true,
 		},
@@ -80,7 +82,7 @@ export default {
 		toolbar: {
 			items: [
 				{ value: "en-US", title: "🇺🇸", right: "English (US)" },
-				{ value: "ja", title: "🇯🇵", right: "Japanese" },
+				{ value: "ja", title: "🇯🇵", right: "日本語" },
 				{ value: "ko", title: "🇰🇷", right: "한국어" },
 				{ value: "zh", title: "🇨🇳", right: "中文" },
 			],
