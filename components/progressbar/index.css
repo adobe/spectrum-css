@@ -235,7 +235,7 @@
 	}
 
 	.spectrum-ProgressBar-track {
-		background: var(--mod-progressbar-track-color-white, var(--spectrum-progressbar-track-color-white));
+		background-color: var(--spectrum-progressbar-track-color-white);
 	}
 }
 
