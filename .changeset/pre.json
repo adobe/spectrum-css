@@ -86,9 +86,18 @@
     "@spectrum-css/well": "5.2.1",
     "@spectrum-css/generator": "4.0.2",
     "@spectrum-css/tokens": "14.2.0",
-    "@spectrum-css/ui-icons": "1.1.2"
+    "@spectrum-css/ui-icons": "1.1.2",
+    "@spectrum-tools/gh-action-file-diff": "2.0.6",
+    "postcss-add-theming-layer": "2.1.1-s2-foundations.0",
+    "postcss-property-rollup": "2.0.1",
+    "postcss-rgb-mapping": "2.0.0",
+    "@spectrum-tools/stylelint-no-missing-var": "2.0.0",
+    "@spectrum-tools/stylelint-no-unknown-custom-properties": "2.0.0",
+    "@spectrum-tools/stylelint-no-unused-custom-properties": "2.0.0",
+    "@spectrum-tools/documentation": "2.0.2"
   },
   "changesets": [
+    "calm-socks-speak",
     "cyan-actors-rest",
     "gentle-ties-hang",
     "green-geese-prove",
