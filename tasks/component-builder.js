@@ -78,7 +78,7 @@ async function processCSS(
 	}
 
 	// If the output file is a minified file, force the minify flag to true
-	if (path.basename(output, ".css").endsWith(".min")) minify = true;
+	if (output && path.basename(output, ".css").endsWith(".min")) minify = true;
 
 	const ctx = {
 		cwd,
@@ -133,18 +133,7 @@ async function processCSS(
 
 	if (minify) {
 		promises.push(
-			gzip(formatted)
-				.then(zipped => fsp.writeFile(`${output}.gz`, zipped)
-					.then(() => {
-						const stats = fs.statSync(`${output}.gz`);
-						return `${"✓".green}  ${relativePrint(`${output}.gz`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-					}).catch((err) => {
-						if (!err) return;
-						console.log(`${"✗".red}  ${relativePrint(`${output}.gz`, { cwd }).yellow} not written`);
-						return Promise.reject(err);
-					})
-				)
-				.catch((err) => Promise.resolve(err))
+			gzip(formatted).then(zipped => writeAndReport(zipped, `${output}.gz`, { cwd }))
 		);
 	}
 
@@ -181,7 +170,11 @@ async function build({ cwd = process.cwd(), clean = false, minify = false, compo
 
 	const indexOutputPath = path.join(cwd, "dist", "index.css");
 
-	// These methods are used to build and minify the CSS content; settings are unique to the core component file
+	/**
+	 * Abstraction to run the build twice, once vanilla and once minified
+	 * @param {string} fileRoot - The root name of the file to be built (e.g. index, index-base), not including the extension
+	 * @param {object} postCSSOptions - The options to be passed to the postcss processor
+	 */
 	const buildAndMinify = (fileRoot, postCSSOptions) => {
 		return Promise.all([
 			processCSS(content, path.join(cwd, "index.css"), path.join(cwd, "dist", `${fileRoot}.css`), {
@@ -238,7 +231,13 @@ async function buildThemes({ cwd = process.cwd(), minify = false, clean = false 
 	const imports = contentData.map(({ input }) => input);
 	const importMap = imports.map((i) => `@import "${i}";`).join("\n");
 
-	// These methods are used to build and minify the CSS content; settings are unique to the theme files
+
+	/**
+	 * Abstraction to run the build twice, once vanilla and once minified
+	 * @param {string} content - The content of the file to be built
+	 * @param {string} fileRoot - The root name of the file to be built (e.g. index, index-base), not including the extension
+	 * @param {object} postCSSOptions - The options to be passed to the postcss processor
+	 */
 	const buildAndMinify = (content, fileRoot, postCSSOptions) => {
 		return Promise.all([
 			processCSS(content, path.join(cwd, (fileRoot !== "index-theme" ? fileRoot : "index") + ".css"), path.join(cwd, "dist", `${fileRoot}.css`), {
@@ -260,11 +259,10 @@ async function buildThemes({ cwd = process.cwd(), minify = false, clean = false 
 				new Error(`No content found for ${relativePrint(input, { cwd })}`),
 			);
 
-		const theme = path.basename(input, ".css");
+		const theme = input.replace(/\.css$/, "");
 
 		return buildAndMinify(
 			content,
-			// remove all file extensions from the theme name
 			theme,
 			{
 				lint: false,
@@ -309,6 +307,7 @@ async function main({
 	componentName = process.env.NX_TASK_TARGET_PROJECT,
 	cwd,
 	clean,
+	minify = false,
 } = {}) {
 	if (!cwd && componentName) {
 		cwd = path.join(dirs.components, componentName);
@@ -324,10 +323,10 @@ async function main({
 		clean = process.env.NODE_ENV === "production";
 	}
 
-	let minify = false;
 	if (process.env.NODE_ENV === "production") {
 		minify = true;
 	}
+
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
