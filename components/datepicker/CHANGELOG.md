@@ -1,5 +1,20 @@
 # Change Log
 
+## 4.0.0-s2-foundations.10
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`7ac79b0`](https://github.com/adobe/spectrum-css/commit/7ac79b0cf6bda71c89ffe9bcd9df2bab01226419) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to index.css imports to ensure appropriate system mappings get loaded
+
+### Patch Changes
+
+- Updated dependencies [[`7ac79b0`](https://github.com/adobe/spectrum-css/commit/7ac79b0cf6bda71c89ffe9bcd9df2bab01226419)]:
+  - @spectrum-css/pickerbutton@6.0.0-s2-foundations.10
+  - @spectrum-css/textfield@8.0.0-s2-foundations.10
+  - @spectrum-css/calendar@6.0.0-s2-foundations.10
+  - @spectrum-css/popover@8.0.0-s2-foundations.10
+  - @spectrum-css/tokens@15.0.0-s2-foundations.10
+
 ## 4.0.0-s2-foundations.9
 
 ### Major Changes
