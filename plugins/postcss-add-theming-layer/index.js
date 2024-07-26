@@ -32,6 +32,7 @@ const {
 /** @type import('postcss').PluginCreator<Options> */
 module.exports = ({
 	selectorPrefix,
+	withRandomPostfix = false,
 	skipMapping = false,
 	preserveVariables = true,
 	referencesOnly = false,
@@ -39,7 +40,7 @@ module.exports = ({
 	processIdentifier,
 }) => ({
 	postcssPlugin: "postcss-add-theming-layer",
-	OnceExit(root, { Rule, Declaration }) {
+	OnceExit(root, { Rule, Declaration, Comment }) {
 		// Fallback function to process the identifier value and create a new selector
 		if (typeof processIdentifier !== "function") {
 			// If the base prefix exists and differs from the identifier value, append the identifier value to the base prefix as the new class name
@@ -96,7 +97,8 @@ module.exports = ({
 						const variableName = getVariableName(s, decl.prop, {
 							identifierName,
 							identifierValue,
-							selectorPrefix
+							selectorPrefix,
+							withRandomPostfix,
 						});
 
 						const newDecl = decl.clone({
@@ -174,8 +176,12 @@ module.exports = ({
 		});
 
 		// Our job here is done
-		if (skipMapping) return;
-		if (stripLocalSelectors) return;
+		if (skipMapping || stripLocalSelectors) return;
+
+		// Create a new comment node to indicate that system-level mappings are generated values and should not be used as API
+		const comment = new Comment({
+			text: "/*! These are generated values and should not be used as API */",
+		});
 
 		for (let [, selectorMap] of systemMap.entries()) {
 			// This adds the new selectors to the root with their respective system-level mappings
@@ -189,6 +195,7 @@ module.exports = ({
 					rule.append(decl);
 				}
 
+				root.append(comment);
 				root.append(rule);
 			}
 		}
