@@ -1,5 +1,18 @@
 # Change Log
 
+## 9.0.0-s2-foundations.10
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0844aad`](https://github.com/adobe/spectrum-css/commit/0844aadba2fefb844a66370ff6e9b4704f6c1543) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to index.css imports to ensure appropriate system mappings get loaded
+
+### Patch Changes
+
+- Updated dependencies [[`0844aad`](https://github.com/adobe/spectrum-css/commit/0844aadba2fefb844a66370ff6e9b4704f6c1543)]:
+  - @spectrum-css/opacitycheckerboard@3.0.0-s2-foundations.10
+  - @spectrum-css/colorloupe@6.0.0-s2-foundations.10
+  - @spectrum-css/tokens@15.0.0-s2-foundations.10
+
 ## 9.0.0-s2-foundations.9
 
 ### Major Changes
