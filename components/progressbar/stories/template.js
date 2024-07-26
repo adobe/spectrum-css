@@ -53,7 +53,8 @@ export const Template = ({
 
 			<div
 				class="${rootClass}-track"
-				style="--mod-progressbar-track-color: ${ifDefined(trackFill)}">
+				style="--mod-progressbar-track-color: ${staticColor !== "white" ? ifDefined(trackFill) : undefined}"
+			>
 				<div
 					class="${rootClass}-fill"
 					style=
