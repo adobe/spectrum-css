@@ -1,5 +1,6 @@
-import { Template } from "./template";
-
+import { Template, ChromaticVariants } from "./template";
+import {styleMap } from "lit/directives/style-map.js";
+import { html } from "lit";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 /**
@@ -14,19 +15,74 @@ export default {
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
-				category: "Component",
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
+		header: { 
+			name: "Additional header content",
+			description: "Controls header content",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
 			},
 			control: { type: "text" },
 		},
 		content: { table: { disable: true } },
+		hasCheckbox: {
+			name: "Checkbox in footer",
+			description: "Adds a checkbox to the footer content.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "boolean" },
+			if: { arg: "layout", eq: "default" },
+		},
+		footer: {
+			name: "Footer text",
+			description: "Text content of the dialog footer.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
+			if: { arg: "layout", eq: "default" },
+		},
+		buttons: { table: { disable: true } },
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l"],
+			control: "select",
+		},
+		layout: {
+			name: "Layout",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["default", "fullscreen", "fullscreenTakeover"],
+			control: "select",
+		},
 		isDismissable: {
 			name: "Dismissable",
+			description: "Controls whether a dialog can be dismissed without taking an action. Dismissible dialogs should never have buttons.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "layout", eq: "default" },
 		},
 		showModal: {
 			name: "Wrap the dialog in a modal",
@@ -46,16 +102,42 @@ export default {
 			},
 			control: "boolean",
 		},
+		hasHeroImage: {
+			name: "Has hero image",
+			description: "Adds a background cover image to the dialog header.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
+			control: "boolean",
+			if: { arg: "layout", eq: "default" },
+		},
+		heroImageUrl: {
+			name: "Hero Image",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
+			if: { arg: "hasHeroImage", truthy: true },
+		},
 	},
 	args: {
 		rootClass: "spectrum-Dialog",
-		isDismissable: true,
+		isDismissable: false,
 		showModal: false,
 		isOpen: true,
+		size: "m",
+		layout: "default",
+		hasHeroImage: false,
+		hasCheckbox: false,
+		footer: "Please select."
 	},
 	parameters: {
 		actions: {
-			handles: ["click .spectrum-Dialog button"],
+			handles: [],
 		},
 		docs: {
 			story: {
@@ -66,11 +148,51 @@ export default {
 			type: "migrated",
 		},
 	},
+	decorators: [
+		(Story, context) => {
+			if (!window.isChromatic()) return Story(context);
+			return html`
+				<style>
+					.spectrum-Detail { display: inline-block; }
+					.spectrum-Typography > div {
+						border: 1px solid var(--spectrum-gray-200);
+						border-radius: 4px;
+						padding: 0 1em 1em;
+						/* Why seafoam? Because it separates it from the component styles. */
+						--mod-detail-font-color: var(--spectrum-seafoam-900);
+					}
+				</style>
+				<div
+					style=${styleMap({
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "flex-start",
+						gap: "1rem",
+						"--mod-detail-margin-end": ".3rem",
+					})}
+				>
+					${Story(context)}
+				</div>
+			`;
+		}
+	],
 };
 
-export const Default = Template.bind({});
+const ExampleButtonGroup = [{
+	variant: "secondary",
+	treatment: "outline",
+	label: "Remind me later"
+}, {
+	variant: "emphasized",
+	treatment: "fill",
+	label: "Rate now",
+}];
+
+export const Default = (args) => window.isChromatic() ? ChromaticVariants(args) : Template(args);
+
 Default.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+	header: "*Required",
 	showModal: true,
 	content: [
 		() => Typography({
@@ -81,4 +203,5 @@ Default.args = {
 			]
 		}),
 	],
+	buttons: ExampleButtonGroup,
 };
