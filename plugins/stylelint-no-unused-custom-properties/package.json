@@ -4,19 +4,19 @@
   "description": "Report on any unused custom property definitions",
   "license": "Apache-2.0",
   "author": "Adobe",
-  "type": "module",
   "contributors": [
     "Cassondra Roberts <castastrophe@users.noreply.github.com>"
   ],
+  "type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "ava"
-  },
   "files": [
     "package.json",
     "index.js",
     "*.md"
   ],
+  "scripts": {
+    "test": "ava"
+  },
   "dependencies": {
     "colors": "^1.4.0",
     "postcss-values-parser": "^6.0.2"
