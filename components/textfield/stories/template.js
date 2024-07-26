@@ -116,13 +116,13 @@ export const Template = ({
 			})}
 			style=${styleMap(customStyles)}
 			@click=${onclick}
-			@focusin=${() => {
+			@focusin=${function() {
 				updateArgs({
 					isFocused: true,
 					isKeyboardFocused: true
 				});
 			}}
-			@focusout=${() => {
+			@focusout=${function() {
 				updateArgs({
 					isFocused: false,
 					isKeyboardFocused: false

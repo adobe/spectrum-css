@@ -7,11 +7,7 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-ColorLoupe",
 	isOpen,
-	customStyles = {
-		"--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
-		"inset-block-start": "5px",
-		"inset-inline-start": "5px",
-	},
+	customStyles = {},
 	customClasses = [],
 }) => svg`
     <svg
@@ -20,7 +16,12 @@ export const Template = ({
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      style=${styleMap(customStyles)}
+      style=${styleMap({
+        "--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
+        "inset-block-start": "5px",
+        "inset-inline-start": "5px",
+        ...customStyles
+      })}
     >
       <defs>
         <path

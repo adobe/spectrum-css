@@ -109,10 +109,10 @@ export const Template = ({
 		style=${styleMap(customStyles)}
 		id=${ifDefined(id)}
 		@click=${onclick}
-		@focusin=${() => {
+		@focusin=${function() {
 			updateArgs({ isFocused: true });
 		}}
-		@focusout=${() => {
+		@focusout=${function() {
 			updateArgs({ isFocused: false });
 		}}
 	>

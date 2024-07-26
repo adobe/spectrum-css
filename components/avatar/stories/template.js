@@ -31,10 +31,10 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			@focusin=${() => {
+			@focusin=${function() {
 				updateArgs({ isFocused: true });
 			}}
-			@focusout=${() => {
+			@focusout=${function() {
 				updateArgs({ isFocused: false });
 			}}
 		>

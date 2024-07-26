@@ -1,5 +1,4 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -100,7 +99,7 @@ export const Template = ({
 					step=${ifDefined(step)}
 					min=${ifDefined(min)}
 					max=${ifDefined(max)}
-					@change=${(event) => {
+					@change=${function(event) {
 						if (isDisabled) return;
 						updateArgs({ value: event.target.value });
 					}}
@@ -130,10 +129,10 @@ export const Template = ({
 			})}
 			role=${ifDefined(values.length > 1 ? "group" : undefined)}
 			aria-labelledby=${ifDefined(label && id ? `${id}-label` : undefined)}
-			@focusin=${() => {
+			@focusin=${function() {
 				updateArgs({ isFocused: true });
 			}}
-			@focusout=${() => {
+			@focusout=${function() {
 				updateArgs({ isFocused: false });
 			}}
 		>

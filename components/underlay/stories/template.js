@@ -24,7 +24,7 @@ export const Template = ({
       })}
       id="spectrum-underlay"
       style=${styleMap(customStyles)}
-      @click=${() => {
+      @click=${function() {
         updateArgs({ isOpen: !isOpen });
       }}
     ></div>

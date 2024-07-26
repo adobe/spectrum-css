@@ -40,10 +40,10 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       style=${styleMap(customStyles)}
-      @focusin=${() => {
+      @focusin=${function() {
         updateArgs({ isFocused: true });
       }}
-      @focusout=${() => {
+      @focusout=${function() {
         updateArgs({ isFocused: false });
       }}
     >

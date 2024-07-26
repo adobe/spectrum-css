@@ -25,9 +25,7 @@ export const Template = ({
 	useDOWAbbrev = false,
 	buttonSize = "s",
 	customClasses = [],
-	customStyles = {
-		"--mod-actionbutton-icon-size": "10px",
-	},
+	customStyles = {},
 	onDateClick,
 	previousHandler,
 	nextHandler,
@@ -218,7 +216,7 @@ export const Template = ({
 		 * @param {Event} evt
 		 * @returns {void}
 		 */
-		onDateClick = (thisDay, evt) => {
+		onDateClick = function (thisDay, evt) {
 			if (!thisDay || thisDay.isDisabled || !thisDay.date) return;
 
 			updateArgs({ selectedDay: thisDay.date });
@@ -227,7 +225,7 @@ export const Template = ({
 	}
 
 	if (!previousHandler || typeof previousHandler !== "function") {
-		previousHandler = ({ displayedMonth, displayedYear }) => {
+		previousHandler = function({ displayedMonth, displayedYear }) {
 			if (
 				typeof displayedMonth === "undefined" ||
 				typeof displayedYear === "undefined"
@@ -265,7 +263,10 @@ export const Template = ({
 				[`${rootClass}--padded`]: padded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap(customStyles)}
+			style=${styleMap({
+				"--mod-actionbutton-icon-size": "10px",
+				...customStyles
+			})}
 			id=${ifDefined(id)}
 		>
 			<div class="${rootClass}-header">
@@ -287,6 +288,7 @@ export const Template = ({
 					isDisabled,
 					size: buttonSize,
 					iconName: "ChevronLeft100",
+					iconSet: "ui",
 					customClasses: [`${rootClass}-prevMonth`],
 					onclick: previousHandler.bind(null, {
 						displayedMonth,
@@ -300,6 +302,7 @@ export const Template = ({
 					isDisabled,
 					size: buttonSize,
 					iconName: "ChevronRight100",
+					iconSet: "ui",
 					customClasses: [`${rootClass}-nextMonth`],
 					onclick: nextHandler.bind(null, {
 						displayedMonth,
@@ -372,10 +375,10 @@ export const Template = ({
 												"is-focused": (isFocused && thisDay.isFocused) || thisDay.isSelected,
 											})}
 											@click=${onDateClick.bind(null, thisDay)}
-											@focusin=${() => {
+											@focusin=${function() {
 												updateArgs({ isFocused: true });
 											}}
-											@focusout=${() => {
+											@focusout=${function() {
 												updateArgs({ isFocused: false });
 											}}
 											>${thisDay.date.getDate()}</span

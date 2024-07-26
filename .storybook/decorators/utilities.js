@@ -179,7 +179,6 @@ export const Variants = ({
             // Capture any additional data to pass to the template
             ...item
           }) => {
-            console.log(item);
             if (typeof withStates === "undefined") {
               withStates = stateData.length > 0;
             }

@@ -68,10 +68,10 @@ export const Template = (
           updateArgs({ isPending: false });
         }, 3000);
       }}
-      @focusin=${() => {
+      @focusin=${function() {
         updateArgs({ isFocused: true });
       }}
-      @focusout=${() => {
+      @focusout=${function() {
         updateArgs({ isFocused: false });
       }}
       aria-label=${ifDefined(hideLabel ? iconName : undefined)}

@@ -1,6 +1,5 @@
-import { renderContent } from "@spectrum-css/preview/decorators/utilities.js";
+import { renderContent } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -23,8 +22,7 @@ export const Template = ({
 	trigger,
 	content = [],
 } = {}, context = {}) => {
-	const [, updateArgs] = useArgs();
-	const { globals = {} } = context;
+	const { globals = {}, updateArgs } = context;
 	const textDir = globals.textDir ?? "ltr";
 	const isNestedPopover = id === "popover-nested" || id === "popover-nested-2";
 
@@ -41,7 +39,7 @@ export const Template = ({
 		const popover = document.querySelector(`#${id}`);
 
 		if (!element || !popover) return;
-	
+
 		const rect = element.getBoundingClientRect();
 
 		const transforms = [];
@@ -113,7 +111,7 @@ export const Template = ({
 			popover.style.transform = transforms.join(" ");
 		}
 
-		// Add start and end styles 
+		// Add start and end styles
 		if (position === "top-start" || position === "bottom-start") {
 			popover.style["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
 			popover.style["inset-block-start"] = "0px";
@@ -145,15 +143,16 @@ export const Template = ({
 	});
 
 	return html`
-		${when(typeof trigger === "function", () => trigger({
+		${when(typeof trigger === "function", (passthroughs, context) => trigger({
+			onclick: function() {
+				updateArgs({ isOpen: !isOpen });
+			},
+			...passthroughs,
 			isSelected: isNestedPopover ?? isOpen,
 			isOpen: isNestedPopover ?? true,
 			id: triggerId,
 			popupId: id,
-			onclick: () => {
-				updateArgs({ isOpen: !isOpen });
-			}
-		}))}
+		}, context))}
 
 		<div
 			class=${classMap({

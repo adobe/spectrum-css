@@ -1,4 +1,3 @@
-import { useArgs } from "@storybook/preview-api";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -42,7 +41,7 @@ export const Template = ({
 				?readOnly=${isReadOnly}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
-				@change=${() => {
+				@change=${function() {
 					if (isDisabled) return;
 					updateArgs({ isChecked: !isChecked });
 				}}

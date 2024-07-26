@@ -29,10 +29,10 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			@focusin=${() => {
+			@focusin=${function() {
 				updateArgs({ isFocused: true });
 			}}
-			@focusout=${() => {
+			@focusout=${function() {
 				updateArgs({ isFocused: false });
 			}}
 		>
@@ -48,7 +48,7 @@ export const Template = ({
 				aria-label="Rating"
 				?readonly=${isReadOnly}
 				?disabled=${isDisabled}
-				@change=${(e) => {
+				@change=${function(e) {
 					const rating = e.target.closest(`.${rootClass}`);
 					if (!rating) return;
 
@@ -69,7 +69,7 @@ export const Template = ({
 							"is-currentValue":
 								!isDisabled && !isReadOnly && idx === value - 1,
 						})}
-						@click=${() => {
+						@click=${function() {
 							updateArgs({ value: idx + 1, isFocused: true });
 						}}
 					>

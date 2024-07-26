@@ -15,6 +15,8 @@ export const Template = ({
 	size = "m",
 	...popoverArgs
 } = {}, context = {}) => {
+	const { updateArgs } = context;
+
 	return Popover({
 		isOpen,
 		id,
@@ -30,6 +32,11 @@ export const Template = ({
 			iconName,
 			customClasses,
 			...passthroughs,
+			onclick: function () {
+				updateArgs({
+					isOpen: !isOpen,
+				});
+			}
 		}, context),
 		...popoverArgs,
 	});

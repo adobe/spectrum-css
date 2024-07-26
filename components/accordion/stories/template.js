@@ -106,7 +106,7 @@ export const Template = ({
 					iconSize: `${size}`,
 					isDisabled: item.isDisabled || disableAll,
 					isOpen: collapseAll === true ? false : item.isOpen,
-					onclick: () => {
+					onclick: function() {
 						if (item.isDisabled) return;
 
 						// Update the args

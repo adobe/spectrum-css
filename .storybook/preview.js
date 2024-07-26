@@ -9,10 +9,17 @@ import {
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper,
 } from "./decorators";
-import { FontLoader, IconLoader, TokenLoader } from "./loaders";
+import {
+	FontLoader,
+	IconLoader,
+	TokenLoader
+} from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
-import { argTypes, globalTypes } from "./types";
+import {
+	argTypes,
+	globalTypes
+} from "./types";
 
 import "./assets/base.css";
 import "./assets/typekit.js";
@@ -29,10 +36,6 @@ setConsoleOptions({
 		/stylelint/,
 	],
 });
-
-export const args = {
-	customClasses: [],
-};
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 export const parameters = {
@@ -114,12 +117,6 @@ export const parameters = {
 	componentVersion: undefined,
 };
 
-export const loaders = [
-	FontLoader,
-	IconLoader,
-	TokenLoader,
-];
-
 export const decorators = [
 	withTextDirectionWrapper,
 	withLanguageWrapper,
@@ -132,18 +129,18 @@ export const decorators = [
 ];
 
 export default {
+	title: "Spectrum CSS",
 	globalTypes,
-	argTypes: {
-		...argTypes,
-		// Disable the following controls from the previews as they are migrated to the global scope
-		// but are still temporarily used in the stories for backwards compatibility.
-		color: { table: { disable: true } },
-		scale: { table: { disable: true } },
-		reducedMotion: { table: { disable: true } },
-		express: { table: { disable: true } },
+	argTypes,
+	args: {
+		customClasses: [],
+		customStyles: {},
 	},
-	args,
 	parameters,
 	decorators,
-	loaders,
+	loaders: [
+		FontLoader,
+		IconLoader,
+		TokenLoader,
+	],
 };
