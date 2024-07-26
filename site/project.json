@@ -13,27 +13,6 @@
 		]
 	},
 	"targets": {
-		"build": {
-			"cache": false,
-			"dependsOn": [
-				"^build",
-				{
-					"projects": "tag:component",
-					"target": "build"
-				},
-				{
-					"projects": "ui-icons",
-					"target": "build"
-				},
-				"clean"
-			],
-			"inputs": ["core", "tools"],
-			"options": {
-				"commands": ["node -e \"require('./tasks').builder()\""],
-				"cwd": "{projectRoot}"
-			},
-			"outputs": ["{workspaceRoot}/dist"]
-		},
 		"clean": {
 			"inputs": [
 				"{workspaceRoot}/dist",
@@ -46,16 +25,33 @@
 				]
 			}
 		},
+		"build": {
+			"cache": false,
+			"dependsOn": [
+				"^build",
+				{
+					"target": "build",
+					"projects": "tag:component"
+				},
+				"clean"
+			],
+			"inputs": ["core", "tools"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"options": {
+				"cwd": "{projectRoot}",
+				"commands": ["node -e \"require('./tasks').builder()\""]
+			}
+		},
 		"start": {
 			"cache": false,
 			"dependsOn": ["build"],
-			"executor": "nx:run-commands",
 			"inputs": ["core", "tools"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
 			"options": {
-				"commands": ["node -e \"require('./tasks').server()\""],
-				"cwd": "{projectRoot}"
-			},
-			"outputs": ["{workspaceRoot}/dist"]
+				"cwd": "{projectRoot}",
+				"commands": ["node -e \"require('./tasks').server()\""]
+			}
 		}
 	}
 }
