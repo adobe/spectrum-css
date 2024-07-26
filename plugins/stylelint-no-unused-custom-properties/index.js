@@ -28,7 +28,7 @@ const messages = ruleMessages(ruleName, {
 	referenced: (prop) => `Custom property ${prop.magenta}'s references have been removed`,
 });
 
-import valueParser from "postcss-value-parser";
+import valueParser from "postcss-values-parser";
 
 /** @type {import('stylelint').Plugin} */
 const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
