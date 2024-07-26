@@ -1128,5 +1128,5 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 ### Migration guide
 
-- **Circle loader component renamed**  
+- **Circle loader component renamed**
   Circle loader is now known as Progress circle. Replace all `.spectrum-CircleLoader*` classnames with `.spectrum-ProgressCircle*`.
