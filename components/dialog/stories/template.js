@@ -10,6 +10,7 @@ import { Template as CloseButton } from "@spectrum-css/closebutton/stories/templ
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 
 import "../index.css";
 
@@ -23,6 +24,7 @@ export const Template = ({
 	heading,
 	header,
 	footer,
+	hasCheckbox = false,
 	content = [],
 	buttons,
 	customClasses = [],
@@ -108,11 +110,19 @@ export const Template = ({
 				
 				${when(footer, () => html`
 					<div class="${rootClass}-footer">
-						${Typography({
-							semantics: "body",
-							size: "m",
-							content: footer,
-						})}
+						${when(hasCheckbox, () => html`
+							${Checkbox({
+								label: footer,
+							})}
+						`,
+						() => html`
+							${Typography({
+								semantics: "body",
+								size: "m",
+								content: footer,
+							})}
+						`)}
+
 						${when(!isDismissable, () => html`
 							<div class="${rootClass}-buttonGroup">
 								${ButtonGroup({

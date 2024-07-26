@@ -30,15 +30,27 @@ export default {
 			control: { type: "text" },
 		},
 		content: { table: { disable: true } },
+		hasCheckbox: {
+			name: "Checkbox in footer",
+			description: "Adds a checkbox to the footer content.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "boolean" },
+			if: { arg: "layout", eq: "default" },
+		},
 		footer: {
-			name: "Footer content",
-			description: "Controls footer content",
+			name: "Footer text",
+			description: "Text content of the dialog footer.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Content",
 			},
 			control: { type: "text" },
+			if: { arg: "layout", eq: "default" },
 		},
 		buttons: { table: { disable: true } },
 		size: {
@@ -120,6 +132,8 @@ export default {
 		size: "m",
 		layout: "default",
 		hasHeroImage: false,
+		hasCheckbox: false,
+		footer: "Please select."
 	},
 	parameters: {
 		actions: {
@@ -189,6 +203,5 @@ Default.args = {
 			]
 		}),
 	],
-	footer: "Please select.",
 	buttons: ExampleButtonGroup,
 };
