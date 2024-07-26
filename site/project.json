@@ -49,13 +49,13 @@
 		"start": {
 			"cache": false,
 			"dependsOn": ["build"],
-			"executor": "nx:run-commands",
 			"inputs": ["core", "tools"],
+			"outputs": ["{workspaceRoot}/dist"],
+			"executor": "nx:run-commands",
 			"options": {
 				"commands": ["node --no-warnings -e \"require('./tasks').server()\""],
 				"cwd": "{projectRoot}"
-			},
-			"outputs": ["{workspaceRoot}/dist"]
+			}
 		}
 	}
 }
