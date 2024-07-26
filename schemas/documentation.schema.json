@@ -5,14 +5,51 @@
 	"version": "1",
 	"description": "A validation schema for the Spectrum CSS documentation data.",
 	"properties": {
+		"id": {
+			"type": "string",
+			"description": "The unique identifier to use for this example set."
+		},
+		"name": {
+			"type": "string",
+			"description": "The human-readable title for the element."
+		},
+		"description": {
+			"type": "string",
+			"description": "A short description of the element's purpose and goals. For migration or additional context, add that information to the sections property."
+		},
+		"status": {
+			"$ref": "#/definitions/status"
+		},
 		"SpectrumSiteSlug": {
 			"type": "string",
 			"format": "uri",
 			"description": "The URL for the Spectrum design specifications for this element."
 		},
-		"description": {
+		"sections": {
+			"description": "These are the sections of the documentation for the element that describe how to use the component and best practices.",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "The id for the section."
+					},
+					"name": {
+						"type": "string",
+						"description": "The title for the section."
+					},
+					"description": {
+						"type": "string",
+						"description": "The content of the section."
+					}
+				},
+				"required": ["description"]
+			}
+		},
+		"examplesHeading": {
 			"type": "string",
-			"description": "A short description of the element's purpose and goals. For migration or additional context, add that information to the sections property."
+			"description": "The human-readable title for the element."
 		},
 		"examples": {
 			"description": "These are the examples of the element in use.",
@@ -22,6 +59,14 @@
 					{
 						"type": "object",
 						"properties": {
+							"id": {
+								"type": "string",
+								"description": "The unique identifier to use for this example set."
+							},
+							"name": {
+								"type": "string",
+								"description": "The specific human-readable title for the example set."
+							},
 							"demoClassName": {
 								"type": "string",
 								"description": "The specific human-readable title for the example set."
@@ -30,9 +75,8 @@
 								"type": "string",
 								"description": "The description for the example set."
 							},
-							"id": {
-								"type": "string",
-								"description": "The unique identifier to use for this example set."
+							"status": {
+								"$ref": "#/definitions/status"
 							},
 							"markup": {
 								"description": "The HTML markup for the example.",
@@ -47,6 +91,14 @@
 												{
 													"type": "object",
 													"properties": {
+														"id": {
+															"type": "string",
+															"description": "The unique identifier to use for this example set."
+														},
+														"title": {
+															"type": "string",
+															"description": "The title for the section."
+														},
 														"description": {
 															"type": "string",
 															"description": "The description for the example set."
@@ -66,14 +118,6 @@
 																	]
 																}
 															]
-														},
-														"id": {
-															"type": "string",
-															"description": "The unique identifier to use for this example set."
-														},
-														"title": {
-															"type": "string",
-															"description": "The title for the section."
 														}
 													}
 												},
@@ -84,13 +128,6 @@
 										}
 									}
 								]
-							},
-							"name": {
-								"type": "string",
-								"description": "The specific human-readable title for the example set."
-							},
-							"status": {
-								"$ref": "#/definitions/status"
 							}
 						},
 						"required": ["id", "markup"],
@@ -101,43 +138,6 @@
 					}
 				]
 			}
-		},
-		"examplesHeading": {
-			"type": "string",
-			"description": "The human-readable title for the element."
-		},
-		"id": {
-			"type": "string",
-			"description": "The unique identifier to use for this example set."
-		},
-		"name": {
-			"type": "string",
-			"description": "The human-readable title for the element."
-		},
-		"sections": {
-			"description": "These are the sections of the documentation for the element that describe how to use the component and best practices.",
-			"type": "array",
-			"items": {
-				"type": "object",
-				"properties": {
-					"description": {
-						"type": "string",
-						"description": "The content of the section."
-					},
-					"id": {
-						"type": "string",
-						"description": "The id for the section."
-					},
-					"name": {
-						"type": "string",
-						"description": "The title for the section."
-					}
-				},
-				"required": ["description"]
-			}
-		},
-		"status": {
-			"$ref": "#/definitions/status"
 		}
 	},
 	"definitions": {

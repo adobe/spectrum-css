@@ -90,8 +90,6 @@ jobs:
     plugin_tests:
         name: Plugin tests
         runs-on: ubuntu-latest
-        needs: [changed_files]
-        if: ${{ needs.changed_files.outputs.plugins_added_files != '' || needs.changed_files.outputs.plugins_modified_files != '' }}
         steps:
             - name: Check out code
               uses: actions/checkout@v4
