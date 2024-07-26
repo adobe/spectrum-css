@@ -87,17 +87,15 @@ async function run() {
 
 		if (sections.length === 0) {
 			summary.push(...["", " 🎉 No changes detected in any packages"]);
-		}
-		else {
+		} else {
 			/**
 			 * Calculate the change in size
 			 * PR - base / base = change
 			 */
 			let changeSummary = "";
 			if (baseOutput.size > 0 && hasBase && hasChange) {
-				changeSummary = `**Total change (Δ)**: ${printChange(overallBaseSize, overallHeadSize)} (${printPercentChange(overallHeadSize, overallBaseSize)})`;
-			}
-			else if (baseOutput.size > 0 && hasBase && !hasChange) {
+				changeSummary = `**Total change (Δ)**: ${printChange(overallHeadSize, overallBaseSize)} (${printPercentChange(overallHeadSize, overallBaseSize)})`;
+			} else if (baseOutput.size > 0 && hasBase && !hasChange) {
 				changeSummary = "No change in file sizes";
 			}
 
@@ -124,6 +122,9 @@ async function run() {
 								table, // accumulator
 								[readableFilename, { headByteSize = 0, baseByteSize = 0 }] // deconstructed filemap entry; i.e., Map<key, { ...values }> = [key, { ...values }]
 							) => {
+								// @todo readable filename can be linked to html diff of the file?
+								// https://github.com/adobe/spectrum-css/pull/2093/files#diff-6badd53e481452b5af234953767029ef2e364427dd84cdeed25f5778b6fca2e6
+
 								// table is an array containing the printable data for the markdown table
 								if (readableFilename.endsWith(".map")) return table;
 
@@ -137,14 +138,11 @@ async function run() {
 								const gzipName = readableFilename.replace(/\.([a-z]+)$/, ".min.$1.gz");
 								const minName = readableFilename.replace(/\.([a-z]+)$/, ".min.$1");
 
-								const size = removedOnBranch ? " - " : bytesToSize(headByteSize);
+								const size = removedOnBranch ? "🚨 deleted/moved" : bytesToSize(headByteSize);
 								const gzipSize = removedOnBranch ? " - " : gzipName ? bytesToSize(fileMap.get(gzipName)?.headByteSize ?? 0) : "-";
 								const minSize = removedOnBranch ? " - " : minName ? bytesToSize(fileMap.get(minName)?.headByteSize ?? 0) : "-";
 
-								const delta = removedOnBranch ? "🚨 deleted, moved, or renamed" : isNew(headByteSize, baseByteSize) ? "🎉 **new**" : `${printChange(headByteSize, baseByteSize)}${difference(baseByteSize, headByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`;
-
-								// @todo readable filename can be linked to html diff of the file?
-								// https://github.com/adobe/spectrum-css/pull/2093/files#diff-6badd53e481452b5af234953767029ef2e364427dd84cdeed25f5778b6fca2e6
+								const delta = `${isNew(headByteSize, baseByteSize) ? "🆕 " : ""}${printChange(headByteSize, baseByteSize)}${difference(baseByteSize, headByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`;
 
 								return [
 									...table,
@@ -168,7 +166,7 @@ async function run() {
 			});
 
 			// If there is more than 1 component updated, add a details/summary section to the markdown at the start of the array
-			if (markdown.length > 5) {
+			if (markdown.length > 1) {
 				markdown.unshift(
 					"<a name=\"details\"></a>",
 					"<details>",
@@ -232,12 +230,10 @@ async function run() {
 					hasBase && headMainSize !== baseMainSize ? "true" : "false"
 				);
 			}
-		}
-		else {
+		} else {
 			core.setOutput("total-size", 0);
 		}
-	}
-	catch (error) {
+	} catch (error) {
 		core.error(error.stack);
 		core.setFailed(error.message);
 	}

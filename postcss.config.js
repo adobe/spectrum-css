@@ -59,6 +59,10 @@ module.exports = ({
 		splitinatorOptions.referencesOnly = true;
 	}
 
+	if (!shouldMinify && outputFilename?.includes(".min.")) {
+		shouldMinify = true;
+	}
+
 	return {
 		...options,
 		plugins: {
@@ -131,7 +135,7 @@ module.exports = ({
 						},
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
-						normalizeWhitespace: isProduction || shouldMinify,
+						normalizeWhitespace: shouldMinify,
 					},
 				],
 			},
