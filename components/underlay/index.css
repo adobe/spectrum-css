@@ -21,10 +21,8 @@ governing permissions and limitations under the License.
 	--spectrum-underlay-background-exit-animation-duration: var(--spectrum-animation-duration-300);
 	--spectrum-underlay-background-exit-animation-delay: var(--spectrum-animation-duration-200);
 
-	/* TODO update to --spectrum-overlay-color token once it is pointing to correct black RGB token */
+	/* TODO Cannot use --spectrum-overlay-color token until it is pointing to a token without the alpha value. */
 	--spectrum-underlay-background-color: rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
-
-	/* --spectrum-underlay-background-color: rgba(var(--spectrum-overlay-color), var(--spectrum-overlay-opacity)); */
 }
 
 .spectrum-Underlay {
