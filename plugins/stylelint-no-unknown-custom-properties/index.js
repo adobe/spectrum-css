@@ -32,7 +32,7 @@ const messages = ruleMessages(ruleName, {
 
 import fg from "fast-glob";
 import { parse } from "postcss";
-import valueParser from "postcss-value-parser";
+import valueParser from "postcss-values-parser";
 
 /** @type {import('stylelint').Plugin} */
 const ruleFunction = (enabled, options = {}) => {
