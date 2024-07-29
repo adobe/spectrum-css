@@ -59,13 +59,15 @@ function extractFallbackValue(declValue) {
 	let fallbackValue;
 
 	parsed.walk((node) => {
-		if (node.type === "function" && node.value === "var") {
-			// Assuming the second argument of the var() function is the fallback
-			const fallbackNode = node.nodes[2];
-			if (fallbackNode) {
-				// Convert the fallback node back to a string
-				fallbackValue = valuesParser.stringify(fallbackNode);
-			}
+		if (node.type !== "func" || node.value !== "var") {
+			return;
+		}
+
+		// Assuming the second argument of the var() function is the fallback
+		const fallbackNode = node.nodes[2];
+		if (fallbackNode) {
+			// Convert the fallback node back to a string
+			fallbackValue = valuesParser.stringify(fallbackNode);
 		}
 	});
 
