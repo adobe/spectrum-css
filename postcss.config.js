@@ -75,7 +75,8 @@ module.exports = ({
 				skipMapping,
 				preserveVariables,
 				referencesOnly,
-				stripLocalSelectors
+				stripLocalSelectors,
+				withRandomPostfix: false,
 			},
 			...additionalPlugins,
 			/* --------------------------------------------------- */
@@ -115,9 +116,7 @@ module.exports = ({
 					{
 						colormin: false,
 						reduceIdents: false,
-						discardComments: {
-							removeAll: true,
-						},
+						discardComments: true, // { removeAll: true },
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
 						normalizeWhitespace: minify

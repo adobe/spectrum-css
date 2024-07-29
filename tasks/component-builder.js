@@ -17,7 +17,6 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
-const fg = require("fast-glob");
 const postcss = require("postcss");
 const postcssrc = require("postcss-load-config");
 const prettier = require("prettier");
@@ -29,7 +28,9 @@ const {
 	relativePrint,
 	bytesToSize,
 	getPackageFromPath,
+	fetchContent,
 	extractProperties,
+	writeAndReport,
 	cleanFolder,
 } = require("./utilities.js");
 
@@ -187,112 +188,13 @@ async function processCSS(
 
 	if (!result.css) return Promise.resolve();
 
-	if (!fs.existsSync(path.dirname(output))) {
-		await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
-			if (!err) return;
-			console.log(
-				`${"✗".red}  problem making the ${relativePrint(path.dirname(output), { cwd }).yellow} directory`,
-			);
-			return Promise.reject(err);
-		});
-	}
-
-	const promises = [];
-
-	const formatted = await prettier.format(result.css, {
-		parser: "css",
-		filepath: input,
-		printWidth: 500,
-		tabWidth: 2,
-		useTabs: true,
-	});
-
-	promises.push(
-		fsp
-			.writeFile(output, formatted)
-			.then(() => {
-				const stats = fs.statSync(output);
-				return `${"✓".green}  ${relativePrint(output, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-			})
-			.catch((err) => {
-				if (!err) return;
-				console.log(
-					`${"✗".red}  ${relativePrint(output, { cwd }).yellow} not written`,
-				);
-				return Promise.reject(err);
-			}),
-	);
-
-	if (result.map) {
-		promises.push(
-			fsp
-				.writeFile(`${output}.map`, result.map.toString().trimStart())
-				.then(() => {
-					const stats = fs.statSync(output);
-					return `${"✓".green}  ${relativePrint(`${output}.map`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
-				})
-				.catch((err) => {
-					if (!err) return;
-					console.log(
-						`${"✗".red}  ${relativePrint(`${output}.map`, { cwd }).yellow} not written`,
-					);
-					return Promise.reject(err);
-				}),
-		);
-	}
-
-	return Promise.all(promises);
-}
-
-/**
- * Fetch content from glob input and optionally combine results
- * @param {(string|RegExp)[]} globs
- * @param {object} options
- * @param {string} [options.cwd=]
- * @param {string} [options.shouldCombine=false] If true, combine the assets read in into one string
- * @param {import('fast-glob').Options} [options.fastGlobOptions={}] Additional options for fast-glob
- * @returns {Promise<{ content: string, input: string }[]>}
- */
-async function fetchContent(
-	globs = [],
-	{ cwd, shouldCombine = false, ...fastGlobOptions } = {},
-) {
-	const files = await fg(globs, {
-		onlyFiles: true,
-		...fastGlobOptions,
-		cwd,
-	});
-
-	if (!files.length) return Promise.resolve([]);
-
-	const fileData = await Promise.all(
-		files.map(async (file) => ({
-			input: path.join(cwd, file),
-			content: await fsp.readFile(path.join(cwd, file), "utf8"),
-		})),
-	);
-
-	// Combine the content into 1 file; @todo do this in future using CSS imports
-	if (shouldCombine) {
-		let content = "";
-		fileData.forEach((dataset) => {
-			if (dataset.content) content += "\n\n" + dataset.content;
-		});
-
-		return Promise.resolve([
-			{
-				content,
-				input: fileData[0].input,
-			},
-		]);
-	}
-
-	return Promise.all(
-		files.map(async (file) => ({
-			content: await fsp.readFile(path.join(cwd, file), "utf8"),
-			input: file,
-		})),
-	);
+	// Return once all the promises have resolved
+	return Promise.all([
+		// Push the resulting CSS content through Prettier before writing it to the file system
+		writeAndReport(result.css, output, { cwd }),
+		// If a source map was generated, write it out to the file system
+		result.map ? writeAndReport(result.map.toString().trimStart(), `${output}.map`, { cwd }) : Promise.resolve(),
+	]);
 }
 
 /**

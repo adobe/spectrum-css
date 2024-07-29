@@ -133,7 +133,7 @@ function getBaseSelector(selector, { selectorPrefix = "" } = {}) {
 function getVariableName(
 	selector,
 	prop,
-	{ selectorPrefix = "", identifierName, identifierValue } = {},
+	{ selectorPrefix = "", withRandomPostfix = true, identifierName, identifierValue } = {},
 ) {
 	const baseSelector = getBaseSelector(selector, { selectorPrefix }) ?? "";
 
@@ -192,7 +192,10 @@ function getVariableName(
 		.filter((value, index) => property.indexOf(value) === index)
 		.filter(Boolean);
 
-	return `--${[identifierName, baseSelector, clean([...property, prop].filter(Boolean).join("-"))].filter(Boolean).join("-").toLowerCase()}`;
+	// Create a random numerical identifier with a length of 7
+	const randomIdentifier = withRandomPostfix ? Math.random().toString().slice(2, 9) : "";
+
+	return `--${[identifierName, baseSelector, clean([...property, prop].filter(Boolean).join("-")),randomIdentifier].filter(Boolean).join("-").toLowerCase()}`;
 }
 
 /**

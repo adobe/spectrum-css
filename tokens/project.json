@@ -17,16 +17,9 @@
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"cp -r ./components ./dist/css/components",
-					"cat ./dist/css/global-vars.css ./custom/global-vars.css | postcss --output ./dist/css/global-vars.css",
-					"cat ./dist/css/medium-vars.css ./custom/medium-vars.css | postcss --output ./dist/css/medium-vars.css",
-					"cat ./dist/css/large-vars.css ./custom/large-vars.css | postcss --output ./dist/css/large-vars.css",
-					"cat ./dist/css/light-vars.css ./custom/light-vars.css | postcss --output ./dist/css/light-vars.css",
-					"cat ./dist/css/dark-vars.css ./custom/dark-vars.css | postcss --output ./dist/css/dark-vars.css",
+					"node -e \"require('./tasks/builder.js').default()\"",
 					"postcss ./dist/css/*.css --replace",
-					"node -e \"require('./tasks/token-rollup.js').default()\"",
-					"postcss ./dist/css/index.css --config ../postcss.config.js --output ./dist/index.css",
-					"prettier --write dist/**/*.css"
+					"postcss ./dist/css/index.css --config ../postcss.config.js --output ./dist/index.css"
 				],
 				"cwd": "{projectRoot}",
 				"parallel": false

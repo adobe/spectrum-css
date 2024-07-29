@@ -15,7 +15,9 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const fg = require("fast-glob");
 const postcss = require("postcss");
+const prettier = require("prettier");
 const valuesParser = require("postcss-values-parser");
 
 /**
@@ -49,6 +51,30 @@ const bytesToSize = function (bytes) {
 	if (i === 0) return (bytes / 1000).toFixed(2) + " " + sizes[1];
 	return (bytes / Math.pow(1024, i)).toFixed(2) + " " + sizes[i];
 };
+
+/**
+ * A utility to resolve the prettier settings and format the content
+ * @param {string} content
+ * @param {object} [options={}]
+ * @param {string} [options.filePath=process.cwd()] - The file path to resolve the prettier settings from
+ * @param {object} [prettierSettings={}] - Additional prettier settings to apply
+ * @returns {Promise<string>}
+*/
+async function pretty(content, {
+	filepath = process.cwd(),
+	...prettierSettings
+} = {}) {
+	let options = fs.existsSync(filepath) ? await prettier.resolveConfig(filepath) : {};
+	// Combine the prettier settings with the provided settings
+	options = { ...options, ...prettierSettings };
+
+	// If no parser was provided or inferred, return the string as is
+	if (typeof options?.parser == "undefined" || path.extname(filepath).endsWith("map")) {
+		return content;
+	}
+
+	return prettier.format(content?.trim(), options);
+}
 
 /**
  * Determines the package name from a file path
@@ -139,12 +165,167 @@ async function cleanFolder({ cwd = process.cwd() } = {}) {
 	return fsp.rm(path.join(cwd, "dist"), { recursive: true, force: true }).then(() => fsp.mkdir(path.join(cwd, "dist")));
 }
 
+/**
+ * If the output directory does not exist, create it (recursively)
+ * @param {string} output - The output file path
+ * @param {object} [options={}]
+ * @param {string} [options.cwd=] - The current working directory, used for relative path printing
+ * @returns Promise<void>
+ */
+async function makeOutputDir(output, { cwd = process.cwd() } = {}) {
+	const outputDir = path.dirname(output);
+	if (fs.existsSync(outputDir)) return Promise.resolve();
+
+	return fsp.mkdir(outputDir, { recursive: true }).catch((err) => {
+		if (!err) return;
+		return Promise.reject(
+			new Error(`${"✗".red}  problem making the ${relativePrint(outputDir, { cwd }).yellow} directory`)
+		);
+	});
+}
+/**
+ * Inject a deprecation notice into the content after the copyright
+ * @param {string} filepath - The file path to inject the notice into
+ * @param {object} [options={}]
+ * @param {string} [options.notice="This file will be removed in a future release"] - The deprecation notice to inject
+ * @param {string} [options.filepath] - The file path to inject the notice into
+ * @returns {Promise<void>}
+ */
+async function injectDeprecationNotice(content, {
+	notice = "This file will be removed in a future release",
+	filepath,
+} = {}) {
+	const ext = filepath && path.extname(filepath).replace(".", "")?.toLowerCase();
+
+	let commentFormat = "\n/* @deprecation: %s */\n\n";
+	switch (ext) {
+		case "md":
+		case "markdown":
+			commentFormat = "\n_Note_: %s.\n\n";
+			break;
+		case "js":
+			commentFormat = "\n/** @deprecation: %s */\n\n";
+			break;
+	}
+
+	notice = commentFormat.replace("%s", notice);
+
+	// Parse the content with to find where the copyright notice ends
+	// and inject the deprecation notice after it; should work for CSS and JS
+	const lines = content.split("\n");
+	const index = lines.findIndex(line => line.toLowerCase().includes("copyright"));
+	// If the match is found, inject the deprecation notice after the comment block
+	// by reading in the subsequent lines and finding the closing comment tag */
+	if (index > -1) {
+		const closingComment = lines.slice(index).findIndex(line => line.includes("*/"));
+		if (closingComment > -1) {
+			// Inject the deprecation notice after the closing comment tag
+			lines.splice(index + closingComment + 1, 0, notice);
+		}
+	}
+	else {
+		// If no match is found, inject the deprecation notice at the top of the file
+		lines.unshift(notice);
+	}
+
+	return lines.join("\n");
+}
+
+/**
+ * If the output directory does not exist, create it (recursively)
+ * @param {string} content - The content to write to the file
+ * @param {string} filepath - The output file path
+ * @param {object} [options={}]
+ * @param {string} [options.cwd=process.cwd()] - The current working directory, used for relative path printing
+ * @param {string} [options.isDeprecated=false] - If true, the file is marked as deprecated
+ * @returns Promise<string|void>
+ */
+async function writeAndReport(content, filepath, {
+	cwd = process.cwd(),
+	isDeprecated = false,
+	parser = "css"
+} = {}) {
+	// If the content is empty, return early
+	if (!content || content.trim() === "") return Promise.resolve();
+
+	// Ensure the output directory exists
+	await makeOutputDir(filepath, { cwd });
+
+	// If the file is marked as deprecated, inject a deprecation notice
+	if (isDeprecated) await injectDeprecationNotice(content, { filepath });
+
+	return pretty(content, { filepath, parser }).then(formatted =>
+		fsp.writeFile(filepath, formatted).then(() => {
+			const stats = fs.statSync(filepath);
+			return `${"✓".green}  ${relativePrint(filepath, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}  ${isDeprecated ? "-- deprecated --".gray : ""}`;
+		}).catch(() => {
+			return `${"✗".red}  ${relativePrint(filepath, { cwd }).yellow} not written`;
+		})
+	);
+}
+
+/**
+ * Fetch content from glob input and optionally combine results
+ * @param {(string|RegExp)[]} globs
+ * @param {object} options
+ * @param {string} [options.cwd=]
+ * @param {string} [options.shouldCombine=false] If true, combine the assets read in into one string
+ * @param {import('fast-glob').Options} [options.fastGlobOptions={}] Additional options for fast-glob
+ * @returns {Promise<{ content: string, input: string }[]>}
+ */
+async function fetchContent(
+	globs = [],
+	{ cwd, shouldCombine = false, ...fastGlobOptions } = {},
+) {
+	const files = await fg(globs, {
+		onlyFiles: true,
+		...fastGlobOptions,
+		cwd,
+	});
+
+	if (!files.length) return Promise.resolve([]);
+
+	const fileData = await Promise.all(
+		files.map(async (file) => ({
+			input: path.join(cwd, file),
+			content: await fsp.readFile(path.join(cwd, file), "utf8"),
+		})),
+	);
+
+	// Combine the content into 1 file; @todo do this in future using CSS imports
+	if (shouldCombine) {
+		let content = "";
+		fileData.forEach((dataset) => {
+			if (dataset.content) content += "\n\n" + dataset.content;
+		});
+
+		return Promise.resolve([
+			{
+				content,
+				input: fileData[0].input,
+			},
+		]);
+	}
+
+	return Promise.all(
+		files.map(async (file) => ({
+			content: await fsp.readFile(path.join(cwd, file), "utf8"),
+			input: file,
+		})),
+	);
+}
+
 module.exports = {
 	dirs,
+	pretty,
 	timeInMs,
 	relativePrint,
 	bytesToSize,
 	getPackageFromPath,
 	extractProperties,
+	fetchContent,
+	makeOutputDir,
+	writeAndReport,
+	injectDeprecationNotice,
 	cleanFolder,
 };
