@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -7,14 +7,12 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 export const AccordionItem = ({
 	heading,
 	content,
 	rootClass = "spectrum-Accordion-item",
-	id = getRandomId("accordion-item"),
+	id,
 	idx = 0,
 	isDisabled = false,
 	isOpen = false,
@@ -32,7 +30,7 @@ export const AccordionItem = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			style=${ifDefined(styleMap(customStyles))}
+			style=${styleMap(customStyles)}
 			role="presentation"
 			@click=${onclick}
 		>
@@ -46,7 +44,6 @@ export const AccordionItem = ({
 					id="spectrum-accordion-item-${idx}-header"
 					aria-controls="spectrum-accordion-item-${idx}-content"
 					aria-expanded="${open ? "true" : "false"}"
-					@click=${onclick}
 				>
 					${heading}
 				</button>
@@ -66,7 +63,7 @@ export const AccordionItem = ({
 				id="spectrum-accordion-item-${idx}-content"
 				aria-labelledby="spectrum-accordion-item-${idx}-header"
 			>
-				${renderContent(content)}
+				${content}
 			</div>
 		</div>
 	`;
@@ -77,7 +74,7 @@ export const Template = ({
 	size = "m",
 	density = "regular",
 	items = [],
-	id = getRandomId("accordion"),
+	id,
 	disableAll = false,
 	collapseAll = false,
 	customClasses = [],
@@ -125,3 +122,47 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const AccordionGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Standard",
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+		},
+		{
+			testHeading: "Compact",
+			density: "compact",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+			withStates: false,
+		},
+		{
+			testHeading: "Spacious",
+			density: "spacious",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "500px",
+			},
+			withStates: false,
+		},
+		{
+			testHeading: "Text wrapping",
+			collapseAll: true,
+			customStyles: {
+				maxInlineSize: "300px",
+			},
+			withStates: false,
+		},
+	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			disableAll: true,
+		},
+	],
+});

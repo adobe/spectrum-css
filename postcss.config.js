@@ -35,26 +35,18 @@ module.exports = ({
 	else options.map = false;
 
 	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
-	if (file) {
-		if (typeof file === "string" && file.includes("@spectrum-css/tokens-legacy")) {
-			additionalPlugins["postcss-selector-replace"] = {
-				before: [".spectrum"],
-				after: [".spectrum.spectrum--legacy"],
-			};
-		}
+	if (typeof file === "string" && file.includes("@spectrum-css/tokens-legacy")) {
+		additionalPlugins["postcss-selector-replace"] = {
+			before: [".spectrum"],
+			after: [".spectrum.spectrum--legacy"],
+		};
 	}
 
-	if (cwd.split(sep).pop() === ".storybook") {
+	if (cwd && cwd.split(sep).pop() === ".storybook") {
 		skipMapping = false;
 		referencesOnly = false;
 		preserveVariables = true;
 		stripLocalSelectors = false;
-		additionalPlugins["postcss-pseudo-classes"] = {
-			restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
-			allCombinations: true,
-			preserveBeforeAfter: false,
-			prefix: "is-"
-		};
 	}
 
 	return {
@@ -68,6 +60,12 @@ module.exports = ({
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
 			"postcss-hover-media-feature": {},
+			"postcss-pseudo-classes": !isProduction ? {
+				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+				allCombinations: true,
+				preserveBeforeAfter: false,
+				prefix: "is-"
+			} : false,
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
 			"postcss-add-theming-layer": {

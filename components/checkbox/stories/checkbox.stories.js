@@ -1,7 +1,9 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid } from "@spectrum-css/preview/types";
+import { html } from "lit";
 import { version } from "../package.json";
-import { CheckboxGroup } from "./checkbox.test";
+import { Template } from "./template";
+
 
 /**
  * Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.
@@ -95,15 +97,41 @@ export default {
 	},
 };
 
+const CheckboxGroup = (args) => html`
+	<div style="display: flex; flex-direction: column; padding: 16px">
+		${Template({
+			...args,
+			iconName: undefined,
+		})}
+		${Template({
+			...args,
+			isChecked: true,
+		})}
+		${Template({
+			...args,
+			isIndeterminate: true,
+		})}
+			${Template({
+			...args,
+			isDisabled: true,
+		})}
+		${Template({
+			...args,
+			label: "Checkbox with wrapping label text",
+			customStyles: { "max-inline-size": "100px" },
+		})}
+	</div>
+`;
+
 export const Default = CheckboxGroup.bind({});
 Default.args = {
 	id: "default-checkbox",
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = CheckboxGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

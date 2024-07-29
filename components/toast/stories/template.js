@@ -1,7 +1,6 @@
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -9,8 +8,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Toast",
@@ -19,7 +16,7 @@ export const Template = ({
 	variant,
 	customClasses = [],
 	customStyles = {},
-	id = getRandomId("toast"),
+	id,
 } = {}, context = {}) => {
 	let iconName = "Info";
 	if (variant === "negative") iconName = "Alert";

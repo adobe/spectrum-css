@@ -1,8 +1,6 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isFocused, isHovered } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { FloatingActionButtonGroup } from "./floatingactionbutton.test";
 import { Template } from "./template";
 
 /**
@@ -26,9 +24,6 @@ export default {
 			options: ["primary", "secondary"],
 			control: "radio",
 		},
-		isActive,
-		isHovered,
-		isFocused,
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
@@ -39,34 +34,24 @@ export default {
 		rootClass: "spectrum-FloatingActionButton",
 		variant: "primary",
 		iconName: "AddCircle",
-		isHovered: false,
-		isFocused: false,
-		isActive: false,
 	},
 	parameters: {
 		componentVersion: version,
 	},
 };
 
-export const Default = FloatingActionButtonGroup.bind({});
+export const Default = Template.bind({});
 Default.storyName = "Default (Primary)";
 Default.args = {};
 
-// ********* DOCS ONLY ********* //
 export const Secondary = Template.bind({});
-Secondary.tags = ["autodocs", "!dev"];
 Secondary.args = {
 	variant: "secondary",
 };
-Secondary.parameters = {
-	chromatic: {
-		disableSnapshot: true,
-	}
-};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = FloatingActionButtonGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

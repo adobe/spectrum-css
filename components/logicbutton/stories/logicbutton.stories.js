@@ -1,6 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { LogicButtonGroup } from "./logicbutton.test";
 import { Template } from "./template";
 
 /**
@@ -40,31 +39,22 @@ export default {
 	},
 };
 
-export const Default = LogicButtonGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
-// ********* DOCS ONLY ********* //
 export const Or = Template.bind({});
-Or.tags = ["autodocs", "!dev"];
 Or.args = {
 	variant: "or"
 };
-Or.parameters = {
-	chromatic: { disable: true }
-};
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true
 };
-Disabled.parameters = {
-	chromatic: { disable: true }
-};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = LogicButtonGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-import { OpacityCheckboardGroup } from "./opacitycheckerboard.test";
 import { Template } from "./template";
 
 /**
@@ -24,25 +25,27 @@ export default {
 		rootClass: "spectrum-OpacityCheckerboard",
 		backgroundPosition: "left top",
 		customStyles: {
-			"inline-size": "100px",
-			"block-size": "100px"
+			"inline-size": "100%",
+			"block-size": "100%"
 		}
 	},
 	parameters: {
 		componentVersion: version,
 	},
+	decorators: [
+		(Story, context) => html`<div style=${styleMap({ inlineSize: "100px", blockSize: "100px" })}>${Story(context)}</div>`
+	],
 };
 
-export const Default = OpacityCheckboardGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
 export const CheckerboardPosition = Template.bind({});
-CheckerboardPosition.tags = ["autodocs", "!dev"];
 CheckerboardPosition.args = {
 	backgroundPosition: "center center",
 	customStyles: {
-		"inline-size": "100px",
-		"block-size": "100px"
+		"inline-size": "100%",
+		"block-size": "100%"
 	}
 };
 CheckerboardPosition.parameters = {
@@ -52,14 +55,11 @@ CheckerboardPosition.parameters = {
 				"An example of using the <code>--mod-opacity-checkerboard-position</code> custom property to adjust the position of the checkerboard pattern.",
 		},
 	},
-	chromatic: {
-		disableSnapshot: true,
-	}
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = OpacityCheckboardGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

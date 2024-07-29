@@ -2,8 +2,7 @@ import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import modes, { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { AlertDialogGroup } from "./alertdialog.test";
-import { Template } from "./template";
+import { AlertDialogGroup, Template } from "./template";
 
 /**
  * Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.
@@ -40,13 +39,12 @@ export default {
 		variant: "confirmation",
 	},
 	parameters: {
-		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-AlertDialog button"],
 		},
 		docs: {
 			story: {
-				height: "300px",
+				height: "300px"
 			}
 		},
 		componentVersion: version,
@@ -61,7 +59,7 @@ export default {
 // it doesn't look like the background color just stops without wrapping the
 // entire container of templates.
 const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
-	acc[key] = {
+	acc[key] = { 
 		...modes[key],
 		viewport: {
 			height: "2000px",
@@ -92,9 +90,9 @@ Default.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = AlertDialogGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
