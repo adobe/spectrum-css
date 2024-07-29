@@ -223,7 +223,7 @@
 }
 
 /* Static White */
-.spectrum-ProgressBar--staticWhite {
+.spectrum-ProgressBar.spectrum-ProgressBar--staticWhite {
 	.spectrum-ProgressBar-fill {
 		color: var(--mod-progressbar-label-and-value-white, var(--spectrum-progressbar-label-and-value-white));
 		background-color: var(--mod-progressbar-fill-color-white, var(--spectrum-progressbar-fill-color-white));
