@@ -1,5 +1,11 @@
 # Change Log
 
+## 15.0.0-s2-foundations.11
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b92416b`](https://github.com/adobe/spectrum-css/commit/b92416b0126aa0164c791f5635a66e509b3b4184) Thanks [@pfulton](https://github.com/pfulton)! - Fix unsupported variables created in components/actionbutton/themes/spectrum.css
+
 ## 15.0.0-s2-foundations.10
 
 ### Minor Changes
