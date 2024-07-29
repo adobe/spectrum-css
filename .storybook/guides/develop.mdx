@@ -439,9 +439,7 @@ Default.parameters = {
 
 #### Story tags
 
-Through this project's global configuration, all stories include the `autodocs` tag by default, which causes them to appear on the component's "Docs" page. The `dev` tag, which Storybook applies by default, denotes stories that should be included in the Storybook sidebar.
-A story's [tags](https://storybook.js.org/docs/writing-stories/tags#built-in-tags) can be configured for a few different purposes. The `!` symbol is used to negate the tag:
-
+A story's [tags](https://storybook.js.org/docs/writing-stories/tags#built-in-tags) can be configured for a few different purposes. Through this project's global configuration, all stories include the `autodocs` tag by default, which causes them to appear on the component's "Docs" page. The `dev` tag, which Storybook applies by default, denotes stories that should be included in the Storybook sidebar. The `!` symbol is used to negate the tag.
 - If a story should not be shown in the sidebar:
   ```js
   Default.tags = ["!dev"];
