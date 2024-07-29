@@ -1,6 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { TableGroup } from "./table.test";
 import { Template } from "./template";
 
 /**
@@ -125,12 +124,12 @@ export default {
 	},
 };
 
-export const Default = TableGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = TableGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -138,12 +137,10 @@ WithForcedColors.parameters = {
 	},
 };
 
-// ********* DOCS ONLY ********* //
 /**
  * An example showing both the optional summary row, and a row marked as selected.
  */
 export const SummaryAndSelected = Template.bind({});
-SummaryAndSelected.tags = ["autodocs", "dev"];
 SummaryAndSelected.args = {
 	rowItems: [
 		{
@@ -165,12 +162,8 @@ SummaryAndSelected.args = {
 		},
 	],
 };
-SummaryAndSelected.parameters = {
-	chromatic: { disableSnapshot: true }
-};
 
 export const MultiSelect = Template.bind({});
-MultiSelect.tags = ["autodocs", "dev"];
 MultiSelect.storyName = "Multi-select";
 MultiSelect.args = {
 	rowItems: [
@@ -206,15 +199,11 @@ MultiSelect.args = {
 		},
 	],
 };
-MultiSelect.parameters = {
-	chromatic: { disableSnapshot: true }
-};
 
 /**
  * An example showing the use of the scrollable wrapper element with table markup. This allows a fixed height and scrolling, along with column headers that are fixed to the top on scroll.
  */
 export const Scrollable = Template.bind({});
-Scrollable.tags = ["autodocs", "dev"];
 Scrollable.args = {
 	useScroller: true,
 	rowItems: [
@@ -243,15 +232,11 @@ Scrollable.args = {
 		},
 	],
 };
-Scrollable.parameters = {
-	chromatic: { disableSnapshot: true }
-};
 
 /**
  * A table can also be made up of divs if needed. This uses both the div markup, and the scrollable wrapper.
  */
 export const DivsScrollable = Template.bind({});
-DivsScrollable.tags = ["autodocs", "!dev"];
 DivsScrollable.storyName = "Divs and scrollable";
 DivsScrollable.args = {
 	useDivs: true,
@@ -289,12 +274,8 @@ DivsScrollable.args = {
 		},
 	],
 };
-DivsScrollable.parameters = {
-	chromatic: { disableSnapshot: true }
-};
 
 export const SectionHeader = Template.bind({});
-SectionHeader.tags = ["autodocs", "dev"];
 SectionHeader.args = {
 	rowItems: [
 		{
@@ -322,12 +303,8 @@ SectionHeader.args = {
 		},
 	],
 };
-SectionHeader.parameters = {
-	chromatic: { disableSnapshot: true }
-};
 
 export const Collapsible = Template.bind({});
-Collapsible.tags = ["autodocs", "dev"];
 Collapsible.args = {
 	rowItems: [
 		{
@@ -386,13 +363,9 @@ Collapsible.args = {
 		},
 	],
 };
-Collapsible.parameters = {
-	chromatic: { disableSnapshot: true }
-};
 
 export const CollapsibleMultiSelect = Template.bind({});
 CollapsibleMultiSelect.storyName = "Collapsible Multi-select";
-CollapsibleMultiSelect.tags = ["autodocs", "dev"];
 CollapsibleMultiSelect.args = {
 	rowItems: [
 		{
@@ -458,12 +431,8 @@ CollapsibleMultiSelect.args = {
 		},
 	],
 };
-CollapsibleMultiSelect.parameters = {
-	chromatic: { disableSnapshot: true }
-};
 
 export const Thumbnails = Template.bind({});
-Thumbnails.tags = ["autodocs", "dev"];
 Thumbnails.args = {
 	showThumbnails: true,
 	rowItems: [
@@ -485,12 +454,8 @@ Thumbnails.args = {
 		},
 	],
 };
-Thumbnails.parameters = {
-	chromatic: { disableSnapshot: true }
-};
 
 export const ThumbnailsCollapsible = Template.bind({});
-ThumbnailsCollapsible.tags = ["autodocs", "dev"];
 ThumbnailsCollapsible.args = {
 	showThumbnails: true,
 	rowItems: [
@@ -530,15 +495,11 @@ ThumbnailsCollapsible.args = {
 		},
 	],
 };
-ThumbnailsCollapsible.parameters = {
-	chromatic: { disableSnapshot: true }
-};
 
 /**
  * In addition to the overall table, individual rows can be designated as a drop target. Only one dropzone row should show at a time, but this example sets multiple at different parts of the table to test that they all display the same.
  */
 export const RowDropzone = Template.bind({});
-RowDropzone.tags = ["autodocs", "dev"];
 RowDropzone.args = {
 	rowItems: [
 		{
@@ -563,7 +524,4 @@ RowDropzone.args = {
 			isDropTarget: true,
 		},
 	],
-};
-RowDropzone.parameters = {
-	chromatic: { disableSnapshot: true }
 };

@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { html } from "lit";
 import { version } from "../package.json";
-import { DropIndicatorGroup } from "./dropindicator.test";
+import { Template } from "./template";
 
 /**
  * The drop indicator component is used to show the insertion position into a list or table.
@@ -39,14 +40,18 @@ export default {
 	parameters: {
 		componentVersion: version,
 	},
+	decorators: [
+		// Add padding for VRT because the end point circles have negative positioning outside of the story root element.
+		(story) => window.isChromatic() ? html`<div style="padding: 16px;">${story()}</div>` : story(),
+	],
 };
 
-export const Default = DropIndicatorGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = DropIndicatorGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

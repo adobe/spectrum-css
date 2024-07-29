@@ -1,5 +1,12 @@
 # Change Log
 
+## 11.0.0-s2-foundations.8
+
+### Patch Changes
+
+- Updated dependencies [[`4265d20`](https://github.com/adobe/spectrum-css/commit/4265d208b6eb2db923e558fca100b4532b964e45)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.11
+
 ## 11.0.0-s2-foundations.7
 
 ### Patch Changes

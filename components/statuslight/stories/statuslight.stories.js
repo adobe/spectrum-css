@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { html } from "lit";
 import { version } from "../package.json";
-import { StatusLightGroup } from "./statuslight.test";
+import { Template } from "./template";
 
 export default {
 	title: "Status light",
@@ -68,12 +69,30 @@ export default {
 	},
 };
 
-export const Default = StatusLightGroup.bind({});
+// @todo needs optimizations
+const Variants = (args, context) => {
+	return html`
+		<div>
+			${Template(args, context)}
+			${
+				window.isChromatic() ?
+				Template({
+					...args,
+					label: "Status light label that is long and wraps to the next line",
+					customStyles: {"max-width": "150px"}
+				}, context)
+			: null
+		}
+		</div>
+	`;
+};
+
+export const Default = Variants.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = StatusLightGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

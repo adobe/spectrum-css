@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { MeterGroup } from "./meter.test";
-import { default as ProgressBar } from "./progressbar.stories";
+import { Template } from "./meter.template.js";
+import { default as ProgressBar } from "./progressbar.stories.js";
 
 /**
  * The meter component is a visual representations of a quantity or an achievement. Their progress is determined by user actions, rather than system actions.
@@ -28,16 +28,17 @@ export default {
 	},
 };
 
-export const Default = MeterGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	value: 50,
+	size: "s",
 	label: "Storage space",
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = MeterGroup.bind({});
+export const WithForcedColors = Template.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

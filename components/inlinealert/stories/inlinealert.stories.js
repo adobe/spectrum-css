@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { html } from "lit";
 import { version } from "../package.json";
-import { InlineAlertGroup } from "./inlinealert.test";
+import { Template } from "./template";
 
 /**
  * In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.
@@ -61,12 +62,39 @@ export default {
 	},
 };
 
-export const Default = InlineAlertGroup.bind({});
+const Variants = (args, context) => {
+	return html`
+		<div>
+			${Template(args, context)}
+			${
+				window.isChromatic() ?
+					Template({
+						...args,
+						headerText: "in-line alert header announcing something very long and in-line",
+						text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+						customStyles: {"max-width": "400px"}
+					})
+					&&
+					Template({
+						...args,
+						headerText: "in-line alert header announcing something very long and in-line",
+						text: "this is a very urgent alert with a lot of context, so the text has to wrap",
+						customStyles: {"max-width": "400px"},
+						variant: "notice",
+						isClosable: true,
+					})
+				: null
+			}
+		</div>
+	`;
+};
+
+export const Default = Variants.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = InlineAlertGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

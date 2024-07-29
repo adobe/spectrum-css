@@ -2,8 +2,7 @@ import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
-import { IllustratedMessageGroup } from "./illustratedmessage.test";
-import { Template } from "./template";
+import { IllustratedMessageGroup, Template } from "./template";
 
 /**
  * The Illustrated Message displays an illustration along with a heading and description. Optionally, part of the illustration can use an accent color. It can be used for status and errors, or as a call to action. For example, the Drop Zone component makes use of Illustrated Message as an area to drag and drop files.
@@ -69,13 +68,10 @@ AccentColor.args = {
 	],
 	useAccentColor: true,
 };
-AccentColor.parameters = {
-	chromatic: { disableSnapshot: true },
-};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = IllustratedMessageGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

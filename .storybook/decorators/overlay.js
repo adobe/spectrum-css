@@ -9,8 +9,6 @@ import { html } from "lit";
 export const withUnderlayWrapper = makeDecorator({
 	name: "withUnderlayWrapper",
 	parameterName: "withUnderlay",
-	// @todo: should this be opt-in?
-	// skipIfNoParametersOrOptions: true,
 	wrapper: (StoryFn, context) => {
 		const {
             args: {

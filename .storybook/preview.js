@@ -7,12 +7,12 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
-	withTextDirectionWrapper
+	withTextDirectionWrapper,
 } from "./decorators";
 import {
 	FontLoader,
 	IconLoader,
-	TokenLoader,
+	TokenLoader
 } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
@@ -37,8 +37,8 @@ setConsoleOptions({
 });
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
-const parameters = {
-	layout: "centered",
+export const parameters = {
+	layout: "padded",
 	showNav: true,
 	showTabs: true,
 	showPanel: true,
@@ -62,6 +62,8 @@ const parameters = {
 		},
 	},
 	chromatic: {
+		// @todo: use a loader to ensure tokens load before stories without arbitrary delay
+		delay: 500,
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
 		pauseAnimationAtEnd: true,
@@ -73,7 +75,7 @@ const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "[data-html-preview]:first-of-type",
+		root: "[data-html-preview]",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -90,6 +92,7 @@ const parameters = {
 		page: DocumentationTemplate,
 		story: {
 			inline: true,
+			height: "200px",
 		},
 		source: {
 			type: "dynamic",
@@ -113,25 +116,27 @@ const parameters = {
 	componentVersion: undefined,
 };
 
+export const decorators = [
+	withTextDirectionWrapper,
+	withLanguageWrapper,
+	withReducedMotionWrapper,
+	withContextWrapper,
+	withTestingPreviewWrapper,
+	withArgEvents,
+	withActions,
+	withIconSpriteSheet,
+];
+
 export default {
 	title: "Spectrum CSS",
-	parameters,
-	argTypes,
 	globalTypes,
+	argTypes,
 	args: {
 		customClasses: [],
 		customStyles: {},
 	},
-	decorators: [
-		withArgEvents,
-		withLanguageWrapper,
-		withReducedMotionWrapper,
-		withTextDirectionWrapper,
-		withContextWrapper,
-		withTestingPreviewWrapper,
-		withActions,
-		withIconSpriteSheet,
-	],
+	parameters,
+	decorators,
 	loaders: [
 		FontLoader,
 		IconLoader,

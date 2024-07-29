@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { ActionGroups } from "./actiongroup.test";
+import { ActionGroups } from "./template.js";
 /**
  * The action group component is a collection of action buttons.
  */
@@ -91,9 +91,9 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = ActionGroups.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

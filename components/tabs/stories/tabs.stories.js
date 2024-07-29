@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { html } from "lit";
 import { version } from "../package.json";
-import { TabsGroups } from "./tabs.test";
 import { Template } from "./template";
 
 /**
@@ -105,12 +106,64 @@ export default {
 	},
 };
 
-export const Default = TabsGroups.bind({});
+const TabsGroup = (args) => html`
+  <div
+    style="display: flex; flex-direction: ${args.orientation === "horizontal"
+      ? "column"
+      : "row"}; gap: 32px;"
+  >
+    ${Template({
+      ...args,
+      content: [
+        {
+          id: "tab-1",
+          label: "Tab 1",
+          isSelected: true,
+        },
+        {
+          id: "tab-2",
+          label: "Tab 2",
+          isDisabled: true,
+        },
+        {
+          id: "tab-3",
+          label: "Tab 3",
+        },
+      ],
+    })}
+    ${Template(args)} ${Template({ ...args, iconOnly: true })}
+  </div>
+`;
+
+const Variants = (args) => html`
+  ${window.isChromatic() ? html`
+  <div style="display: grid; gap: 32px;${args.orientation === "overflow" ? " max-inline-size: 100px" : ""}">
+    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+      ${Typography({ semantics: "heading", size: "s", content: ["Default"], customClasses: ["chromatic-ignore"] })}
+      ${TabsGroup(args)}
+    </div>
+    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+      ${Typography({ semantics: "heading", size: "s", content: ["Emphasized"], customClasses: ["chromatic-ignore"] })}
+      ${TabsGroup({ ...args, isEmphasized: true })}
+    </div>
+    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+      ${Typography({ semantics: "heading", size: "s", content: ["Quiet"], customClasses: ["chromatic-ignore"] })}
+      ${TabsGroup({ ...args, isQuiet: true })}
+    </div>
+    <div style="display: flex; flex-flow: column nowrap; gap: 8px;">
+      ${Typography({ semantics: "heading", size: "s", content: ["Quiet + compact"], customClasses: ["chromatic-ignore"] })}
+      ${TabsGroup({ ...args, isQuiet: true, isCompact: true })}
+    </div>
+  </div>
+` : Template(args)}
+`;
+
+export const Default = Variants.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = TabsGroups.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -118,25 +171,12 @@ WithForcedColors.parameters = {
 	},
 };
 
-// ********* DOCS ONLY ********* //
-export const Vertical = Template.bind({});
-Vertical.tags = ["autodocs", "!dev"];
+export const Vertical = Variants.bind({});
 Vertical.args = {
 	orientation: "vertical",
 };
-Vertical.parameters = {
-	chromatic: {
-		disableSnapshot: true,
-	},
-};
 
-export const Overflow = Template.bind({});
-Overflow.tags = ["autodocs", "!dev"];
+export const Overflow = Variants.bind({});
 Overflow.args = {
 	orientation: "overflow",
-};
-Overflow.parameters = {
-	chromatic: {
-		disableSnapshot: true,
-	},
 };

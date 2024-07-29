@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { CoachIndicatorGroup } from "./coachindicator.test";
+import { CoachIndicatorGroup } from "./template";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.
@@ -48,9 +48,9 @@ Default.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = CoachIndicatorGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	// Sets the forced-colors media feature for a specific story.
 	chromatic: {
