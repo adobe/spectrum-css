@@ -1,5 +1,5 @@
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -8,8 +8,6 @@ import { when } from "lit/directives/when.js";
 import { camelCase } from "lodash-es";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-AssetCard",
@@ -24,7 +22,7 @@ export const Template = ({
 	isDropTarget = false,
 	customClasses = [],
 	customStyles = {},
-	id = getRandomId("assetcard"),
+	id,
 	testId,
 } = {}, context = {}) => {
 	const { updateArgs } = context;
@@ -48,7 +46,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			data-testid=${ifDefined(testId)}
+			data-test-id=${ifDefined(testId)}
 			style=${styleMap(customStyles)}
 			@click=${function() {
 				updateArgs({ isSelected: !isSelected });
@@ -103,3 +101,52 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const AssetCardGroup = Variants({
+	Template,
+	testData: [{
+		testHeading: "Portrait",
+		title: "Portrait asset",
+		content: ["Image"],
+	},
+	{
+		testHeading: "Landscape",
+		title: "Landscape asset",
+		exampleImage: "landscape",
+	},
+	{
+		testHeading: "Square asset",
+		title: "Square asset",
+		exampleImage: "square",
+	},
+	{
+		testHeading: "Video asset",
+		title: "MVI_0123.mp4",
+		headerContent: "39:02",
+		exampleImage: "square",
+	},
+	{
+		testHeading: "With ordinal",
+		title: "Ordered selection",
+		selection: "ordered",
+		exampleImage: "landscape",
+	},
+	{
+		testHeading: "Highlighted selection",
+		title: "Highlight selection",
+		selection: "highlight",
+	},
+	{
+		testHeading: "Drop target",
+		title: "Drop target",
+		selection: "highlight",
+		isDropTarget: true,
+	}],
+	stateData: [{
+		testHeading: "Selected",
+		isSelected: true,
+	}, {
+		testHeading: "Focused",
+		isFocused: true,
+	}]
+});

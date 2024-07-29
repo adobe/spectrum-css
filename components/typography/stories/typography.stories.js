@@ -1,8 +1,7 @@
+import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { html } from "lit";
 import { version } from "../package.json";
-import { Template } from "./template";
-import { TypographyGroup } from "./typography.test";
+import { Template, TypographyGroup } from "./template";
 
 /**
  * Spectrum typography is broken out into several separate components.
@@ -82,26 +81,12 @@ Default.args = {
 	content: [
 		{
 			semantics: "heading",
-			content: ["Aliquet mauris eu"],
+			content: ["Aliquet Mauris Eu"],
 		},
 		{
 			content: [
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 			],
-		},
-		{
-			variant: ["emphasized"],
-			content: [
-				"Ut et lectus finibus, aliquet mauris eu, tincidunt mi. Donec scelerisque orci sit amet venenatis luctus. Morbi eget lacus est. Duis iaculis magna quis aliquam lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-			],
-		},
-		{
-			semantics: "code",
-			content: ["console.log('Hello World!');"],
-		},
-		{
-			semantics: "detail",
-			content: [html`<br/>`, "Aliquet mauris eu"],
 		},
 		{
 			content: [
@@ -112,9 +97,9 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = TypographyGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -122,19 +107,17 @@ WithForcedColors.parameters = {
 	},
 };
 
-// ********* DOCS ONLY ********* //
-export const Heading = Template.bind({});
-Heading.tags = ["autodocs", "!dev"];
+export const Heading = (args, context) => Sizes({ Template, ...args }, context);
 Heading.args = {
 	semantics: "heading",
-	content: ["Aliquet mauris eu"],
+	content: ["Aliquet Mauris Eu"],
 };
+Heading.tags = ["autodocs", "!dev"];
 Heading.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Body = Template.bind({});
-Body.tags = ["autodocs", "!dev"];
+export const Body = (args, context) => Sizes({ Template, ...args }, context);
 Body.argTypes = {
 	size: {
 		name: "Size",
@@ -148,11 +131,12 @@ Body.args = {
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 	],
 };
+Body.tags = ["autodocs", "!dev"];
 Body.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Detail = Template.bind({});
+export const Detail = (args, context) => Sizes({ Template, ...args }, context);
 Detail.argTypes = {
 	size: {
 		name: "Size",
@@ -169,12 +153,8 @@ Detail.args = {
 	content: ["Aliquet Mauris Eu"],
 };
 Detail.tags = ["autodocs", "!dev"];
-Detail.parameters = {
-	chromatic: { disableSnapshot: true },
-};
 
-export const Code = Template.bind({});
-Code.tags = ["autodocs", "!dev"];
+export const Code = (args, context) => Sizes({ Template, ...args }, context);
 Code.argTypes = {
 	size: {
 		name: "Size",
@@ -186,6 +166,4 @@ Code.args = {
 	semantics: "code",
 	content: ["console.log('Hello World!');"],
 };
-Code.parameters = {
-	chromatic: { disableSnapshot: true },
-};
+Code.tags = ["autodocs", "!dev"];

@@ -1,5 +1,4 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -7,8 +6,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Slider",
@@ -26,11 +23,12 @@ export const Template = ({
 	isFocused = false,
 	customClasses = [],
 	customStyles = {},
-	id = getRandomId("slider"),
+	id,
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 
-	const isRTL = globals.textDirection !== "rtl";
+	const textDirection = globals.textDirection ?? "ltr";
+	const rtl = !!(textDirection === "rtl");
 	const rangeLength = max - min;
 	const centerPoint = rangeLength / 2 + min;
 	const isRamp = variant === "ramp";
@@ -52,7 +50,7 @@ export const Template = ({
 	};
 
 	function renderTrack({ position, width }) {
-		const direction = isRTL ? "right" : "left";
+		const direction = rtl ? "right" : "left";
 		return html`
 			<div
 				class="${rootClass}-track"
@@ -78,7 +76,7 @@ export const Template = ({
 	}
 
 	function renderHandle({ position, value, idx = 0 }) {
-		const direction = isRTL ? "left" : "right";
+		const direction = rtl ? "right" : "left";
 		return html`
 			<div
 				class=${classMap({
@@ -87,9 +85,11 @@ export const Template = ({
 					"is-dragged": false, // note: this only applies z-index; no other styles
 					"is-tophandle": false, // todo: when is this supposed to be used
 				})}
-				style=${styleMap({
-					[direction]: position ? `${position}%` : undefined,
-				})}
+				style=${ifDefined(
+					styleMap({
+						[direction]: position ? `${position}%` : undefined,
+					})
+				)}
 			>
 				<input
 					type="range"
@@ -123,7 +123,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			style=${styleMap({
-				"inline-size": "240px",
+				"max-width": "240px",
 				["--spectrum-slider-track-color"]: fillColor,
 				...customStyles,
 			})}
@@ -206,7 +206,7 @@ export const Template = ({
 									})}
 									style=${ifDefined(
 										styleMap({
-											[isRTL ? "right" : "left"]: `${
+											[rtl ? "right" : "left"]: `${
 												value > centerPoint
 													? getPosition(centerPoint)
 													: getPosition(value)

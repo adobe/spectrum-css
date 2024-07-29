@@ -2,8 +2,8 @@ import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 import { version } from "../package.json";
-import { IconGroup } from "./icon.test";
 import { Template } from "./template";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
@@ -101,12 +101,20 @@ export default {
 	},
 };
 
-export const Default = IconGroup.bind({});
+const Variants = (args, context) => {
+	return window.isChromatic() ? TestTemplate(args, context) : Template({
+		...args,
+		iconName: args.iconName ?? args.uiIconName,
+		setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+	}, context);
+};
+
+export const Default = Variants.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = IconGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Variants.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -115,58 +123,71 @@ WithForcedColors.parameters = {
 };
 
 /**
- * Helper template function to display multiple icons using an array of icon names.
+ * Chromatic VRT template that displays multiple icons to cover various options.
  */
-const IconListTemplate = (args, iconsList = [], context) => html`
-	<div
-		style=${styleMap({
-			"display": "flex",
-			"gap": "32px",
-			"flexWrap": "wrap",
-		})}
-	>
-		${iconsList.map(
-			(iconName) => Template({ ...args, iconName }, context)
+const TestTemplate = (args) => html`
+	${[
+	{
+		setName: "workflow",
+		iconName: "Alert",
+		fill: "var(--spectrum-negative-content-color-default)",
+	},
+	{
+		setName: "workflow",
+		iconName: "Hand",
+	},
+	{
+		setName: "workflow",
+		iconName: "Help",
+	},
+	{
+		setName: "workflow",
+		iconName: "ArrowLeft",
+	},
+	{
+		setName: "workflow",
+		iconName: "ArrowRight",
+	},
+	{
+		setName: "workflow",
+		iconName: "ChevronDown",
+	}
+].map((row_args) => html`
+		<div
+			style=${styleMap({
+				"display": "flex",
+				"gap": "16px",
+				"margin-bottom": "16px",
+			})}
+		>
+			${["xs","s","m","l","xl","xxl"].map(
+				(size) => Template({ ...args, ...row_args, size })
+			)}
+		</div>`
+	)}
+	<div style="margin-top:32px;">
+		${uiIconsWithDirections.map(iconName => html`
+			<div
+				style=${styleMap({
+					"display": "flex",
+					"gap": "16px",
+				})}
+			>
+				${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
+					Template({ ...args, setName: "ui", iconName: iconName + iconSize })
+				)}
+				${when(uiIconSizes[iconName]?.length == 0, () =>
+					Template({ ...args, setName: "ui", iconName })
+				)}
+			</div>`
 		)}
 	</div>
 `;
 
-/* Stories for the MDX "Docs" only. */
-
 /**
- * A sampling of multiple Workflow icons.
+ * Display all icon sizes for the Docs page.
  */
-export const WorkflowDefault = (args, context) => IconListTemplate(
-	{
-		...args,
-		setName: "workflow",
-		size: "xl",
-	},
-	[
-		"Alert",
-		"Asset",
-		"Actions",
-		"ArrowDown",
-		"Camera",
-		"Copy",
-		"DeviceDesktop",
-		"Download",
-		"FilterAdd",
-		"Form",
-		"Light",
-		"Polygon",
-	],
-	context
-);
-WorkflowDefault.tags = ["autodocs", "!dev"];
-WorkflowDefault.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * An example of a Workflow icon displayed at all sizes, from small to extra-large.
- */
-export const WorkflowSizing = (args, context) => html`
+const WorkflowSizingTemplate = (args) => html`
 	<div
 		style=${styleMap({
 			"display": "flex",
@@ -202,25 +223,83 @@ export const WorkflowSizing = (args, context) => html`
 							"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
 						}
 					})}
-					${Template({ ...args, size }, context)}
+					${Template({ ...args, size })}
 				</div>
 			`
 		)}
 	</div>
 `;
-WorkflowSizing.tags = ["autodocs", "!dev"];
-WorkflowSizing.args = {
-	setName: "workflow",
-	iconName: "Asset",
-};
-WorkflowSizing.parameters = {
-	chromatic: { disableSnapshot: true },
-};
+
 
 /**
- * A sampling of a few UI icons.
+ * Helper template function to display multiple icons using an array of icon names.
  */
-export const UIDefault = (args, context) => html`
+const IconListTemplate = (args, iconsList = []) => html`
+	<div
+		style=${styleMap({
+			"display": "flex",
+			"gap": "32px",
+			"flexWrap": "wrap",
+		})}
+	>
+		${iconsList.map(
+			(iconName) => Template({
+				...args,
+				iconName,
+			})
+		)}
+	</div>
+`;
+
+/**
+ * Display examples of multiple workflow icons.
+ */
+const WorkflowDefaultTemplate = (args) => html`
+	${IconListTemplate(
+		{
+			...args,
+			setName: "workflow",
+			size: "xl",
+		},
+		[
+			"Alert",
+			"Asset",
+			"Actions",
+			"ArrowDown",
+			"Camera",
+			"Copy",
+			"DeviceDesktop",
+			"Download",
+			"FilterAdd",
+			"Form",
+			"Light",
+			"Polygon",
+		]
+	)}
+`;
+
+/**
+ * Display examples of all directions of a single UI arrow.
+ */
+const UIArrowsTemplate = (args) => html`
+	${IconListTemplate(
+		{
+			...args,
+			setName: "ui",
+		},
+		[
+			"ArrowRight100",
+			"ArrowLeft100",
+			"ArrowDown100",
+			"ArrowUp100",
+		]
+	)}
+`;
+
+/**
+ * Display examples of multiple UI icons.
+ */
+const UIDefaultTemplate = (args) => html`
 	<div style="margin-bottom: 32px;">
 		${IconListTemplate(
 			{
@@ -231,8 +310,7 @@ export const UIDefault = (args, context) => html`
 				"Asterisk100",
 				"Asterisk200",
 				"Asterisk300",
-			],
-			context
+			]
 		)}
 	</div>
 	<div>
@@ -248,11 +326,39 @@ export const UIDefault = (args, context) => html`
 				"ChevronDown200",
 				"ChevronDown300",
 				"ChevronDown400",
-			],
-			context
+			]
 		)}
 	</div>
 `;
+
+/* Stories for the MDX "Docs" only. */
+
+/**
+ * A sampling of multiple Workflow icons.
+ */
+export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
+WorkflowDefault.tags = ["autodocs", "!dev"];
+WorkflowDefault.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * An example of a Workflow icon displayed at all sizes, from small to extra-large.
+ */
+export const WorkflowSizing = WorkflowSizingTemplate.bind({});
+WorkflowSizing.tags = ["autodocs", "!dev"];
+WorkflowSizing.args = {
+	setName: "workflow",
+	iconName: "Asset",
+};
+WorkflowSizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A sampling of a few UI icons.
+ */
+export const UIDefault = UIDefaultTemplate.bind({});
 UIDefault.storyName = "UI Default";
 UIDefault.tags = ["autodocs", "!dev"];
 UIDefault.parameters = {
@@ -262,19 +368,7 @@ UIDefault.parameters = {
 /**
  * A UI arrow displayed for all directions (left, right, up, down).
  */
-export const UIArrows = (args, context) => IconListTemplate(
-	{
-		...args,
-		setName: "ui",
-	},
-	[
-		"ArrowRight100",
-		"ArrowLeft100",
-		"ArrowDown100",
-		"ArrowUp100",
-	],
-	context
-);
+export const UIArrows = UIArrowsTemplate.bind({});
 UIArrows.storyName = "UI Arrows";
 UIArrows.tags = ["autodocs", "!dev"];
 UIArrows.parameters = {

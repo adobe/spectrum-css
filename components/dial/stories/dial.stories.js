@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { DialGroup } from "./dial.test";
+import { DialGroup } from "./template";
 
 /**
  * A dial is an input control used for selecting a value within a range, similar to a slider. It's often used in audio and video mixing and editing applications, where horizontal space is limited.
@@ -64,9 +64,9 @@ export const Default = DialGroup.bind();
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = DialGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

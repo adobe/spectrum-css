@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { ProgressBarGroup } from "./progressbar.test";
+import { ProgressBarGroup } from "./template";
 
 /**
  * The progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.
@@ -9,6 +9,7 @@ export default {
 	component: "ProgressBar",
 	argTypes: {
 		customWidth: { table: { disable: true } },
+		indeterminate: { table: { disable: true } },
 		size: {
 			name: "Size",
 			type: { name: "string", required: true },
@@ -18,15 +19,6 @@ export default {
 			},
 			options: ["s", "m", "l", "xl"],
 			control: "select",
-		},
-		isIndeterminate: {
-			name: "Indeterminate state",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
 		},
 		labelPosition: {
 			name: "Label position",
@@ -55,7 +47,7 @@ export default {
 				category: "Content",
 			},
 			control: { type: "range", min: 0, max: 100,},
-			if: { arg: "isIndeterminate", truthy: false },
+			if: { arg: "indeterminate", truthy: false },
 		},
 		staticColor: {
 			name: "Static color",
@@ -73,7 +65,7 @@ export default {
 		size: "m",
 		labelPosition: "top",
 		value: 0,
-		isIndeterminate: false,
+		label: "",
 	},
 };
 
@@ -84,9 +76,9 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = ProgressBarGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -95,7 +87,7 @@ WithForcedColors.parameters = {
 };
 
 export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
+StaticWhite.tags = ["!autodocs", "!dev", "test"];
 StaticWhite.args = {
 	staticColor: "white",
 	label: "Loading your fonts, images, and icons",

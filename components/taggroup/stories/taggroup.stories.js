@@ -1,8 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 import { version } from "../package.json";
-import { TagGroups } from "./taggroup.test";
-import { Template } from "./template";
+import { TagGroups, Template } from "./template";
 
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
@@ -114,9 +113,9 @@ OverflowItems.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = TagGroups.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
