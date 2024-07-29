@@ -11,9 +11,14 @@
  * governing permissions and limitations under the License.
  */
 
-@import "@spectrum-css/typography";
-
 body {
+	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+
+	--spectrum-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-font-style: var(--spectrum-default-font-style);
+	--spectrum-font-size: var(--spectrum-font-size-100);
+
 	margin: 0;
 
 	font-family: var(--spectrum-font-family);
@@ -81,7 +86,7 @@ button.sidebar-item {
 }
 
 button[data-action="collapse-root"] {
-	font-family: var(--system-font-family, var(--spectrum-font-family, var(--spectrum-sans-font-family-stack)));
+	font-family: var(--spectrum-sans-font-family-stack);
 	font-style: var(--spectrum-detail-sans-serif-font-style);
 	font-weight: var(--spectrum-detail-sans-serif-font-weight);
 	font-size: var(--spectrum-detail-size-m);

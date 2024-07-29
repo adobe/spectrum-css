@@ -1,4 +1,3 @@
-
 export default {
 	stories: [
 		{
@@ -19,7 +18,6 @@ export default {
 	],
 	rootDir: "../",
 	staticDirs: ["../assets"],
-	port: 6006,
 	addons: [
 		{
 			name: "@storybook/addon-essentials",
