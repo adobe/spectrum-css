@@ -47,7 +47,6 @@ export const Template = ({
 				max=${max}
 				value=${value}
 				aria-label="Rating"
-				?readonly=${isReadOnly}
 				?disabled=${isDisabled}
 				@change=${function(e) {
 					const rating = e.target.closest(`.${rootClass}`);
