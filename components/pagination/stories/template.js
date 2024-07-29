@@ -4,10 +4,9 @@ import { Template as Textfield } from "@spectrum-css/textfield/stories/template.
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
+import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Pagination",
@@ -88,5 +87,30 @@ export const Template = ({
 				customClasses: [`${rootClass}-nextButton`],
 			}, context)}
 		</nav>
+	`;
+};
+
+export const PaginationGroup = (args, context) => {
+	return html`
+		<div style=${styleMap({
+			"display": window.isChromatic() ? "none" : undefined,
+		})}>
+			${Template(args, context)}
+		</div>
+		<div style=${styleMap({
+			"display": window.isChromatic() ? "flex" : "none",
+			"flex-direction": "column",
+			"gap": "32px",
+		})}>
+			${Template(args, context)}
+			${Template({
+				...args,
+				variant: "explicit",
+			}, context)}
+			${Template({
+				...args,
+				variant: "button",
+			}, context)}
+		</div>
 	`;
 };

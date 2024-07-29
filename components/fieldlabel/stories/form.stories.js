@@ -3,7 +3,8 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as Stepper } from "@spectrum-css/stepper/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { version } from "../package.json";
-import { FormGroup } from "./form.test";
+import { Template } from "./form.template.js";
+
 
 /**
  * The form component is used for aligning multiple inputs and field groups within a form.
@@ -31,55 +32,42 @@ export default {
 	},
 };
 
-export const Default = FormGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	items: [
 		{
 			label: "Company title",
 			id: "form-example-company",
-			content: [
-				(passthroughs, context) => TextField({
-					...passthroughs,
-					multiline: true,
-					name: "field",
-				}, context),
-			],
+			content: TextField.bind(null, {
+				multiline: true,
+				name: "field",
+			})
 		}, {
 			label: "Email address",
 			id: "form-example-email",
-			content: [
-				(passthroughs, context) => TextField({
-					...passthroughs,
-					type: "email",
-					name: "email",
-				}, context),
-			],
+			content: TextField.bind(null, {
+				type: "email",
+				name: "email",
+			})
 		}, {
 			label: "Country",
 			id: "form-example-country",
-			content: [
-				(passthroughs, context) => Picker({
-					...passthroughs,
-					placeholder: "Select a country",
-					name: "country",
-				}, context),
-			],
+			content: Picker.bind(null, {
+				placeholder: "Select a country",
+				name: "country",
+			})
 		}, {
 			label: "Amount",
 			id: "form-example-amount",
-			content: [
-				(passthroughs, context) => Stepper({
-					...passthroughs,
-				}, context),
-			]
+			content: Stepper.bind(null, {})
 		}
 	],
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = FormGroup.bind({});
+export const WithForcedColors = Template.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

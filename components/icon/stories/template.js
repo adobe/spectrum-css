@@ -1,12 +1,11 @@
-import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
@@ -102,7 +101,7 @@ export const Template = ({
 	setName,
 	iconName,
 	fill,
-	id = getRandomId("icon"),
+	id,
 	customClasses = [],
 	icons,
 	useRef = false,
@@ -269,4 +268,85 @@ export const Template = ({
 		<title id=${idKey}>${idKey.replace(/([A-Z])/g, " $1").trim()}</title>
 		<use xlink:href="#${iconID}" href="#${iconID}" />
 	</svg>`;
+};
+
+/**
+ * Chromatic VRT template that displays multiple icons to cover various options.
+ */
+export const IconGroup = (args, context) => {
+	let icons = context?.loaded?.icons ?? {};
+	const {
+		workflowIcons,
+		uiIcons,
+		uiIconSizes,
+		uiIconsWithDirections
+	} = fetchIconDetails({ icons });
+
+	const testData = [{
+		setName: "workflow",
+		iconName: "Alert",
+		fill: "var(--spectrum-negative-content-color-default)",
+	},
+	{
+		setName: "workflow",
+		iconName: "Hand",
+	},
+	{
+		setName: "workflow",
+		iconName: "Help",
+	},
+	{
+		setName: "workflow",
+		iconName: "ArrowLeft",
+	},
+	{
+		setName: "workflow",
+		iconName: "ArrowRight",
+	},
+	{
+		setName: "workflow",
+		iconName: "ChevronDown",
+	}];
+
+	return html`
+		<div style=${styleMap({
+			display: window.isChromatic() ? "none" : undefined,
+		})}>
+			${Template({ ...args, icons, workflowIcons, uiIcons, uiIconSizes })}
+		</div>
+		<div style=${styleMap({
+			display: window.isChromatic() ? undefined : "none",
+		})}>
+			${testData.map((row_args) => html`
+				<div
+					style=${styleMap({
+						"display": "flex",
+						"gap": "16px",
+						"margin-bottom": "16px",
+					})}
+				>
+					${["xs","s","m","l","xl","xxl"].map(
+						(size) => Template({ ...args, ...row_args, size, icons, workflowIcons, uiIcons, uiIconSizes })
+					)}
+				</div>`
+			)}
+			<div style=${styleMap({ "margin-top": "32px" })}>
+				${uiIconsWithDirections.map(iconName => html`
+					<div
+						style=${styleMap({
+							"display": "flex",
+							"gap": "16px",
+						})}
+					>
+						${uiIconSizes[iconName.replace(/(Left|Right|Up|Down)$/, "")]?.map((iconSize) =>
+							Template({ ...args, setName: "ui", iconName: iconName + iconSize, icons, workflowIcons, uiIcons, uiIconSizes  })
+						)}
+						${when(uiIconSizes[iconName]?.length == 0, () =>
+							Template({ ...args, setName: "ui", iconName, icons, workflowIcons, uiIcons, uiIconSizes  })
+						)}
+					</div>`
+				)}
+			</div>
+		</div>
+	`;
 };

@@ -3,21 +3,18 @@ import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-SplitView",
 	customClasses = [],
 	orientation = "horizontal",
 	isResizable = false,
-	isFocused = false,
 	isCollapsible = false,
 	collapsePosition,
 	panelLabels = [],
 	panelStyles = [],
 	componentHeight = "200px",
-} = {}) => {
+}) => {
 	const collapsible = isCollapsible;
 	const collapsibleStart =
 		(typeof collapsePosition !== "undefined" && collapsePosition === "left") ||
@@ -48,7 +45,6 @@ export const Template = ({
 				class=${classMap({
 					[`${rootClass}-splitter`]: true,
 					["is-draggable"]: isResizable,
-					"is-focused": isFocused,
 					[`is-collapsed-${collapsibleClassName}`]: isCollapsible,
 				})}
 				tabindex="0"

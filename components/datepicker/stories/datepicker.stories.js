@@ -3,7 +3,6 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isOpen, isValid } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
-import { DatePickerGroup } from "./datepicker.test";
 import { Template } from "./template";
 
 /**
@@ -115,28 +114,21 @@ export default {
 	],
 };
 
-export const Default = DatePickerGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
-// ********* DOCS ONLY ********* //
 export const Quiet = Template.bind({});
-Quiet.tags = ["autodocs", "!dev"];
 Quiet.args = {
 	isQuiet: true,
 };
-Quiet.parameters = {
-	chromatic: { disableSnapshot: true },
-};
 
 export const Range = Template.bind({});
-Range.tags = ["autodocs", "!dev"];
 Range.args = {
 	lastDay: 3,
 	isRange: true,
 	isOpen: false,
 };
 Range.parameters = {
-	chromatic: { disableSnapshot: true },
 	docs: {
 		story: {
 			height: "50px"
@@ -144,6 +136,7 @@ Range.parameters = {
 	},
 };
 
+// ********* DOCS ONLY ********* //
 export const QuietRange = Template.bind({});
 QuietRange.tags = ["!dev"];
 QuietRange.args = {
@@ -236,8 +229,8 @@ QuietDisabled.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = DatePickerGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

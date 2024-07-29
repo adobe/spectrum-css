@@ -1,7 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { RatingGroup } from "./rating.test";
 import { Template } from "./template";
 
 /**
@@ -70,12 +69,12 @@ export default {
 	},
 };
 
-export const Default = RatingGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = RatingGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -83,40 +82,23 @@ WithForcedColors.parameters = {
 	},
 };
 
-// ********* DOCS ONLY ********* //
 export const ReadOnly = Template.bind({});
-ReadOnly.tags = ["autodocs", "!dev"];
 ReadOnly.args = {
 	isReadOnly: true,
 };
-ReadOnly.parameters = {
-	chromatic: { disable: true },
-};
 
 export const Emphasized = Template.bind({});
-Emphasized.tags = ["autodocs", "!dev"];
 Emphasized.args = {
 	isEmphasized: true,
 };
-Emphasized.parameters = {
-	chromatic: { disable: true },
-};
 
 export const ReadOnlyEmphasized = Template.bind({});
-ReadOnlyEmphasized.tags = ["autodocs", "!dev"];
 ReadOnlyEmphasized.args = {
 	isEmphasized: true,
 	isReadOnly: true,
 };
-ReadOnlyEmphasized.parameters = {
-	chromatic: { disable: true },
-};
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true,
-};
-Disabled.parameters = {
-	chromatic: { disable: true },
 };

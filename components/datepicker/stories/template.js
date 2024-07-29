@@ -1,7 +1,6 @@
 import { Template as Calendar } from "@spectrum-css/calendar/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { when } from "lit-html/directives/when.js";
@@ -9,12 +8,10 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-DatePicker",
-	id = getRandomId("datepicker"),
+	id,
 	customClasses = [],
 	isOpen = true,
 	isInvalid = false,
@@ -30,8 +27,6 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 	const lang = globals.lang ?? "en-US";
-
-	const triggerId = getRandomId("datepicker-trigger");
 
 	return html`
 		<div
@@ -63,7 +58,6 @@ export const Template = ({
 				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
 				placeholder: "Choose a date",
 				name: "field",
-				id: triggerId,
 				value: selectedDay ? new Date(selectedDay).toLocaleDateString(lang) : undefined,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
@@ -104,12 +98,16 @@ export const Template = ({
 				${Popover({
 					isOpen: isOpen && !isDisabled && !readOnly,
 					withTip: false,
-					position: "bottom-start",
+					position: "bottom",
 					isQuiet,
-					triggerId,
-					customStyles: {
-						"inset-block-start": "30px",
-					},
+					customStyles: isOpen
+						? {
+								position: "absolute",
+								top: "100%",
+								left: "0",
+								width: undefined,
+						}
+						: {},
 					content: [Calendar({}, context)],
 					// @todo this implementation of calendar does not currently display range selections or selected date on first load
 				}, context)}`

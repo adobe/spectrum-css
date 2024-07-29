@@ -1,7 +1,7 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { html } from "lit";
 import { version } from "../package.json";
-import { ContextualHelpGroup } from "./contextualhelp.test";
 import { Template } from "./template";
 
 /**
@@ -82,14 +82,8 @@ export default {
 		popoverPlacement: "bottom-start",
 		title: "Permission required",
 		body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-		customStyles: { "max-inline-size": "275px" },
 	},
 	parameters: {
-		docs: {
-			story: {
-				height: "250px",
-			},
-		},
 		actions: {
 			handles: [
 				...(ActionButtonStories?.parameters?.actions?.handles ?? [])
@@ -100,34 +94,26 @@ export default {
 	tags: ["!autodocs"],
 };
 
-export const Default = ContextualHelpGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
-// ********* DOCS ONLY ********* //
 export const WithLink = Template.bind({});
-WithLink.tags = ["autodocs", "!dev"];
 WithLink.args = {
 	link: {
 		text: "Learn about permissions",
 		url: "#",
 	},
 };
-WithLink.parameters = {
-	chromatic: { disableSnapshot: true },
-};
 
 export const TopPopover = Template.bind({});
-TopPopover.tags = ["autodocs", "!dev"];
 TopPopover.args = {
 	popoverPlacement: "top",
 	customStyles: { "max-inline-size": "275px" },
 	title: "Top popover example of text wrapping in the title",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };
-TopPopover.parameters = {
-	chromatic: { disableSnapshot: true },
-};
 
+// ********* DOCS ONLY ********* //
 export const HelpDefault = Template.bind({});
 HelpDefault.tags = ["!dev"];
 HelpDefault.args = {
@@ -164,9 +150,9 @@ HelpTopPopover.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = ContextualHelpGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
