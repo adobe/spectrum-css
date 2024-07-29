@@ -2,7 +2,6 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { TagGroups } from "./tag.test";
 import { Template } from "./template";
 
 /**
@@ -118,13 +117,13 @@ export default {
 	},
 };
 
-export const Default = TagGroups.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
 // @todo combine variants into one snapshot
-export const WithForcedColors = TagGroups.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -132,34 +131,21 @@ WithForcedColors.parameters = {
 	},
 };
 
-// ********* DOCS ONLY ********* //
 export const Icon = Template.bind({});
-Icon.tags = ["autodocs", "!dev"];
 Icon.args = {
 	hasIcon: true,
 	iconName: "Info",
 	label: "Tag label that truncates when it gets too long",
 	customStyles: {"max-inline-size": "200px"}
 };
-Icon.parameters = {
-	chromatic: { disableSnapshot: true },
-};
 
 export const Avatar = Template.bind({});
-Avatar.tags = ["autodocs", "!dev"];
 Avatar.args = {
 	hasAvatar: true,
 	avatarUrl: "example-ava.png"
 };
-Avatar.parameters = {
-	chromatic: { disableSnapshot: true },
-};
 
 export const Removable = Template.bind({});
-Removable.tags = ["autodocs", "!dev"];
 Removable.args = {
 	hasClearButton: true,
-};
-Removable.parameters = {
-	chromatic: { disableSnapshot: true },
 };

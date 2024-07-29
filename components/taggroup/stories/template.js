@@ -1,3 +1,4 @@
+import { Variants } from "@spectrum-css/preview/decorators";
 import { Template as Tag } from "@spectrum-css/tag/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -5,8 +6,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-TagGroup",

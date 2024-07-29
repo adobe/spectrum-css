@@ -404,7 +404,7 @@ FoldersAndFiles.args = {
 };
 FoldersAndFiles.tags = ["!dev"];
 FoldersAndFiles.parameters = {
-	chromatic: { disableSnapshot: true },
+	chromatic: { disableAllSnapshots: true },
 };
 
 
@@ -450,7 +450,7 @@ Thumbnails.args = {
 };
 Thumbnails.tags = ["!dev"];
 Thumbnails.parameters = {
-	chromatic: { disableSnapshot: true },
+	chromatic: { disableAllSnapshots: true },
 };
 
 /**
@@ -509,7 +509,7 @@ Sections.args = {
 };
 WithSections.tags = ["!dev"];
 WithSections.parameters = {
-	chromatic: { disableSnapshot: true },
+	chromatic: { disableAllSnapshots: true },
 };
 
 
@@ -534,7 +534,7 @@ DropTarget.args = {
 };
 WithDropTarget.tags = ["!dev"];
 WithDropTarget.parameters = {
-	chromatic: { disableSnapshot: true },
+	chromatic: { disableAllSnapshots: true },
 };
 
 export const FlatMarkup = Template.bind({});
@@ -606,9 +606,9 @@ FlatMarkup.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = TreeViewGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

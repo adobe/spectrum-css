@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { BreadcrumbGroup } from "./breadcrumb.test";
+import { BreadcrumbGroup } from "./template";
 
 /**
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
@@ -57,9 +57,9 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = BreadcrumbGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

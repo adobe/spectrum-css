@@ -1,9 +1,9 @@
+
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
-import { AccordionGroup } from "./accordion.test";
-import { Template } from "./template";
+import { AccordionGroup, Template } from "./template.js";
 
 /**
  * The accordion element contains a list of items that can be expanded or collapsed to reveal additional content or information associated with each item. There can be zero expanded items, exactly one expanded item, or more than one item expanded at a time, depending on the configuration. This list of items is defined by child accordion item elements.
@@ -63,6 +63,7 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Accordion-item"],
 		},
+		chromatic: { disableSnapshot: true },
 		componentVersion: version,
 	},
 	tags: ["!autodocs"],
@@ -161,25 +162,27 @@ export const Default = AccordionGroup.bind({});
 Default.args = {
 	items: content,
 };
+Default.parameters = {
+	chromatic: { disableSnapshot: false },
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Default.bind({});
+WithForcedColors.args = Default.args;
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
 
 // ********* DOCS ONLY ********* //
-export const Regular = Template.bind({});
-Regular.tags = ["autodocs", "!dev"];
-Regular.args = {
-	density: "regular",
-};
-Regular.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
 export const Compact = Template.bind({});
 Compact.tags = ["!dev"];
 Compact.args = {
 	items: content,
 	density: "compact",
-};
-Compact.parameters = {
-	chromatic: { disableSnapshot: true },
 };
 
 export const Spacious = Template.bind({});
@@ -187,18 +190,4 @@ Spacious.tags = ["!dev"];
 Spacious.args = {
 	items: content,
 	density: "spacious",
-};
-Spacious.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-// ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
-WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
-WithForcedColors.parameters = {
-	chromatic: {
-		forcedColors: "active",
-		modes: disableDefaultModes
-	},
 };

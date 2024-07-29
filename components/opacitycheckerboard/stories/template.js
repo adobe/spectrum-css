@@ -1,36 +1,30 @@
-import { getRandomId, renderContent } from "@spectrum-css/preview/decorators/utilities.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-OpacityCheckerboard",
 	backgroundPosition,
 	customClasses = [],
 	customStyles = {},
-	id = getRandomId("opacity-checkerboard"),
+	id,
 	content = [],
 	role,
-} = {}, context = {}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${ifDefined(styleMap({
-				"--mod-opacity-checkerboard-position": backgroundPosition,
-				...customStyles,
-			}))}
-			role=${ifDefined(role)}
-			id=${ifDefined(id)}
-		>
-			${renderContent(content, { context })}
-		</div>
-	`;
-};
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		style=${ifDefined(styleMap({
+			"--mod-opacity-checkerboard-position": backgroundPosition,
+			...customStyles,
+		}))}
+		role=${ifDefined(role)}
+		id=${ifDefined(id)}
+	>
+		${content}
+	</div>`;

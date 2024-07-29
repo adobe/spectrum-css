@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { DividerGroup } from "./divider.test";
+import { Template } from "./template";
 
 /**
  * Dividers bring clarity to a layout by grouping and dividing content that exists in close proximity. It can also be used to establish rhythm and hierarchy.
@@ -44,21 +44,18 @@ export default {
 		rootClass: "spectrum-Divider",
 		size: "m",
 		vertical: false,
-		customStyles: {
-			"min-inline-size": "200px",
-		},
 	},
 	parameters: {
 		componentVersion: version,
 	},
 };
 
-export const Default = DividerGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = DividerGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

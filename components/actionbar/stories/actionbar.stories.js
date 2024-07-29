@@ -4,8 +4,7 @@ import { default as Popover } from "@spectrum-css/popover/stories/popover.storie
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ActionBarGroup } from "./actionbar.test";
-import { Template } from "./template";
+import { ActionBarGroup, Template } from "./template";
 
 /**
  * The action bar component is a floating full width bar that appears upon selection.
@@ -51,7 +50,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		customPopoverStyles: { table: { disable: true } }
 	},
 	args: {
 		rootClass: "spectrum-ActionBar",
@@ -80,19 +78,12 @@ export default {
 };
 
 export const Default = ActionBarGroup.bind({});
-Default.args = {
-	customPopoverStyles: {
-		// Prevent the popover from being rendered offscreen
-		"--spectrum-popover-animation-distance": "-10px",
-		"inline-size": "600px",
-		"max-inline-size": "100%",
-	}
-};
+Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = ActionBarGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -105,12 +96,6 @@ export const Emphasized = Template.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	isEmphasized: true,
-	customPopoverStyles: {
-		// Prevent the popover from being rendered offscreen
-		"--spectrum-popover-animation-distance": "-10px",
-		"inline-size": "600px",
-		"max-inline-size": "100%",
-	}
 };
 Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },

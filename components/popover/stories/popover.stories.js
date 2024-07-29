@@ -4,9 +4,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
-import { PopoverGroup } from "./popover.test";
-import { Template } from "./template";
-
+import { Template, Variants } from "./template";
 /**
  * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
  */
@@ -67,13 +65,11 @@ export default {
 		rootClass: "spectrum-Popover",
 		isOpen: true,
 		withTip: false,
-		position: "bottom",
-		content: [
-			html`<p>Basic popover text content with some added padding.</p>`
-		],
+		position: "top",
+		content: [html`<div style="padding-inline: 8px;">Basic popover text content with some added padding.</div>`],
 	},
 	parameters: {
-		layout: "fullscreen",
+		layout: "centered",
 		docs: {
 			story: {
 				height: "300px"
@@ -81,18 +77,25 @@ export default {
 		},
 		componentVersion: version,
 	},
+	decorators: [
+		// Add padding for VRT so drop shadows are not cut off.
+		(story) => window.isChromatic() ? html`<div style="padding: 32px;">${story()}</div>` : story(),
+	],
 };
 
-export const Default = PopoverGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {
-	trigger: (passthroughs, context) => ActionButton({
-		isActive: passthroughs.isOpen,
+	testId: "popover-1",
+	id: "popover-1",
+	triggerId: "trigger",
+	trigger: (passthroughs) => ActionButton({
+		isSelected: passthroughs.isOpen,
 		label: "Hop on pop(over)",
+		id: "trigger",
 		...passthroughs,
-	}, context),
+	}),
 	content: [
-		(passthroughs, context) => Menu({
-			...passthroughs,
+		(passthroughs) => Menu({
 			items: [
 				{
 					iconName: "Edit",
@@ -111,49 +114,62 @@ Default.args = {
 					label: "Delete",
 				},
 			],
-		}, context),
+			...passthroughs,
+		}),
 	],
 };
 
-// ********* DOCS ONLY ********* //
+export const WithTip = Variants.bind({});
+WithTip.args = {
+	withTip: true,
+};
+
 export const Nested = Template.bind({});
 Nested.args = {
-	position: "right-top",
+	nested: true,
+	testId: "popover-nested",
+	id: "popover-nested",
+	triggerId: "trigger-nested",
 	isOpen: true,
 	customStyles: {
-		"inset-inline-start": "60px",
-		"inset-block-start": "0",
+		"margin-inline-start": "8px",
 	},
 	trigger: (passthroughs) => ActionButton({
-		label: "Menu",
+		label: "Hop on pop(over)",
+		id: "trigger-nested",
 		...passthroughs,
 	}),
 	content: [
-		(passthroughs, context) => Menu({
-			...passthroughs,
+		() => Menu({
 			items: [
 				{
 					iconName: "Edit",
 					label: "Edit",
 				},
 			],
-		}, context),
-		(passthroughs, context) => Template({
-			...passthroughs,
-			position: "right-top",
+		}),
+		() => Nested({
+			position: "right",
+			testId: "popover-nested-2",
+			id: "popover-nested-2",
+			triggerId: "trigger-nested-2",
 			isOpen: true,
 			customStyles: {
-				"inset-inline-start": "110px",
-				"inset-block-start": "0",
+				"margin-inline-start": "136px",
+				"margin-block-start": "32px"
 			},
-			trigger: (passthroughs, context) => ActionButton({
-				label: "More options",
+			trigger: (passthroughs) => ActionButton({
+				label: "Hop on pop(over) 2",
+				id: "trigger-nested-2",
 				...passthroughs,
-			}, context),
+			}),
 			content: [
-				(passthroughs, context) => Menu({
-					...passthroughs,
+				() => Menu({
 					items: [
+						{
+							iconName: "Edit",
+							label: "Edit",
+						},
 						{
 							iconName: "Copy",
 							label: "Copy",
@@ -167,20 +183,16 @@ Nested.args = {
 							label: "Delete",
 						},
 					],
-				}, context),
+				}),
 			],
-		}, context),
+		}),
 	],
-};
-Nested.tags = ["autodocs", "!dev"];
-Nested.parameters = {
-	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = PopoverGroup.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
