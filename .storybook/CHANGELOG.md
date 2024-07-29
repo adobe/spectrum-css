@@ -1,5 +1,14 @@
 # Change Log
 
+## 10.7.0
+
+### Minor Changes
+
+- [#2930](https://github.com/adobe/spectrum-css/pull/2930) [`c079b88`](https://github.com/adobe/spectrum-css/commit/c079b88db055eda3a1473cd0f1e2936ed223dddd) Thanks [@castastrophe](https://github.com/castastrophe)! - ## New feature for @spectrum-css Storybook
+
+  - Additional UI styling for docs visibility/usability
+  - Font loading improvements to signal completion by Typekit
+
 ## 10.6.1
 
 ### Patch Changes
