@@ -18,6 +18,11 @@ export const Template = ({
 	swatchColor,
 	customStyles = {},
 	id,
+	isImage = false,
+	imageUrl,
+	isGradient = false,
+	isMixedValue = false,
+	gradient,
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
@@ -32,6 +37,9 @@ export const Template = ({
 						)}`]: typeof rounding !== "undefined" && rounding !== "regular",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
+				"is-image": (isImage || isGradient)
+					&& (typeof gradient !== "undefined" || gradient !== "transparent" || imageUrl !== "undefined"),
+				"is-mixedValue": !isDisabled && isMixedValue,
 				"is-nothing": !isDisabled && (typeof swatchColor === "undefined" || swatchColor === "transparent"),
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -39,6 +47,8 @@ export const Template = ({
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap({
 				"--spectrum-picked-color": swatchColor,
+				"--spectrum-gradient": gradient,
+				"--spectrum-background": `url(${imageUrl})`,
 				...customStyles,
 			}))}
 			tabindex="0"
@@ -60,6 +70,11 @@ export const Template = ({
 						customClasses: [`${rootClass}-disabledIcon`],
 						setName: "workflow",
 						iconName: "Cancel",
+					}, context)] : []),
+					...(isMixedValue ? [Icon({
+						customClasses: [`${rootClass}-mixedValueIcon`],
+						setName: "ui",
+						iconName: "Dash",
 					}, context)] : []),
 				]
 			}, context)}
