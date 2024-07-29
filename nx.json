@@ -47,7 +47,7 @@
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'"
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-builder.js\").default()'"
 				]
 			},
 			"outputs": [
@@ -152,7 +152,7 @@
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings -e 'require(\"./tasks/component-reporter.js\").default()'"
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
 				]
 			},
 			"outputs": [

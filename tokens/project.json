@@ -17,7 +17,7 @@
 			"inputs": ["core", "tools", { "externalDependencies": ["postcss"] }],
 			"options": {
 				"commands": [
-					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e \"require('./tasks/token-rollup.js').default()\"",
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/token-rollup.js\").default()'",
 					"cross-env NODE_OPTIONS=\"--no-warnings\" postcss ./dist/css/*.css --replace"
 				],
 				"cwd": "{projectRoot}",
