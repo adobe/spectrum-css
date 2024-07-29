@@ -3,8 +3,14 @@
 	"namedInputs": {
 		"tools": [
 			"{projectRoot}/assets",
+			"{projectRoot}/blocks",
 			"{projectRoot}/decorators",
+			"{projectRoot}/deprecated",
 			"{projectRoot}/guides",
+			"{projectRoot}/loaders",
+			"{projectRoot}/modes",
+			"{projectRoot}/templates",
+			"{projectRoot}/types",
 			"{projectRoot}/*.{js,html,mdx}"
 		]
 	},
