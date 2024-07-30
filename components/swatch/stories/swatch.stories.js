@@ -108,6 +108,7 @@ export default {
 				category: "Component",
 			},
 			control: "boolean",
+			if: { arg: "isImage", eq: false },
 		},
 		gradient: {
 			name: "Gradient values",
@@ -139,6 +140,9 @@ export default {
 		withBorder: "default",
 		isRectangle: false,
 		isMixedValue: false,
+		isImage: false,
+		isGradient: false,
+		imageUrl: "example-ava@2x.png",
 	},
 	parameters: {
 		componentVersion: version,
@@ -204,7 +208,7 @@ Nothing.args = {};
 Nothing.tags = ["autodocs", "!dev"];
 
 /**
- * When a swatch represents multiple values that are not identical, the preview shows a gray-50 fill and a dash UI icon.
+ * When a swatch represents multiple values that are not identical, the preview shows a `gray-50` fill and a dash UI icon.
  */
 export const MixedValue = Template.bind({});
 MixedValue.args = {

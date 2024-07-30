@@ -6,6 +6,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase } from "lodash-es";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -41,7 +42,7 @@ export const Template = ({
 				[`${rootClass}--${withBorder}`]: typeof withBorder !== "undefined" && withBorder !== "default",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
-				"is-image": (isImage || isGradient)
+				"is-image": (isImage || isGradient || isMixedValue)
 				&& (typeof gradient !== "undefined" || gradient !== "transparent" || imageUrl !== "undefined"),
 				"is-mixedValue": !isDisabled && isMixedValue,
 				[`${rootClass}--rectangle`]: typeof isRectangle !== "undefined" && isRectangle !== false,
@@ -52,8 +53,6 @@ export const Template = ({
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap({
 				"--spectrum-picked-color": swatchColor,
-				"--spectrum-gradient": gradient,
-				"--spectrum-background": `url(${imageUrl})`,
 				...customStyles,
 			}))}
 			tabindex="0"
@@ -68,22 +67,39 @@ export const Template = ({
 				updateArgs({ isSelected: !isSelected });
 			}}
 		>
-			${OpacityCheckerboard({
-				customClasses: [`${rootClass}-fill`],
-				content: [
-					...(isDisabled ? [Icon({
-						customClasses: [`${rootClass}-disabledIcon`],
-						setName: "workflow",
-						iconName: "Cancel",
-					}, context)] : []),
-					...(isMixedValue ? [Icon({
-						customClasses: [`${rootClass}-mixedValueIcon`],
-						setName: "ui",
-						iconName: "Dash",
-					}, context)] : []),
-				]
-			}, context)}
-		</div>
+			${when(isImage || isGradient, () => html`
+				${when(isImage, () => html`
+					<div class="${rootClass}-fill" >
+						<img src="${imageUrl}" alt="" class="${rootClass}-image" />
+					</div>
+				`,
+				() => html`
+					${OpacityCheckerboard({
+						customClasses: [`${rootClass}-fill`],
+						content: [
+							html`<div class='spectrum-Swatch-image' style='background: ${ifDefined(gradient)}'></div>`
+						],
+					}, context)}
+				`
+				)}`,
+				() => html`
+					${OpacityCheckerboard({
+						customClasses: [`${rootClass}-fill`],
+						content: [
+							...(isDisabled ? [Icon({
+								customClasses: [`${rootClass}-disabledIcon`],
+								setName: "workflow",
+								iconName: "Cancel",
+							}, context)] : []),
+							...(isMixedValue ? [Icon({
+								customClasses: [`${rootClass}-mixedValueIcon`],
+								setName: "ui",
+								iconName: "Dash",
+							}, context)] : []),
+						]
+					})}
+				`
+			)}
 	`;
 };
 
