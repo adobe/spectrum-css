@@ -54,11 +54,6 @@ export default {
 				...(Menu.parameters?.actions?.handles ?? []),
 			],
 		},
-		docs: {
-			story: {
-				height: "300px"
-			}
-		},
 		componentVersion: version,
 		chromatic: {
 			modes: mobile,
@@ -76,12 +71,6 @@ WithMedia.args = {
 	hasImage: true,
 };
 WithMedia.parameters = {
-	docs: {
-		story: {
-			inline: false,
-			height: "475px",
-		},
-	},
 	chromatic: {
 		disableSnapshot: true,
 	},

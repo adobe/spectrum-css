@@ -5,7 +5,6 @@ import { isOpen } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
 import { PopoverGroup } from "./popover.test";
-import { Template } from "./template";
 
 /**
  * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
@@ -73,12 +72,6 @@ export default {
 		],
 	},
 	parameters: {
-		layout: "fullscreen",
-		docs: {
-			story: {
-				height: "300px"
-			}
-		},
 		componentVersion: version,
 	},
 };
@@ -116,66 +109,67 @@ Default.args = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Nested = Template.bind({});
-Nested.args = {
-	position: "right-top",
-	isOpen: true,
-	customStyles: {
-		"inset-inline-start": "60px",
-		"inset-block-start": "0",
-	},
-	trigger: (passthroughs) => ActionButton({
-		label: "Menu",
-		...passthroughs,
-	}),
-	content: [
-		(passthroughs, context) => Menu({
-			...passthroughs,
-			items: [
-				{
-					iconName: "Edit",
-					label: "Edit",
-				},
-			],
-		}, context),
-		(passthroughs, context) => Template({
-			...passthroughs,
-			position: "right-top",
-			isOpen: true,
-			customStyles: {
-				"inset-inline-start": "110px",
-				"inset-block-start": "0",
-			},
-			trigger: (passthroughs, context) => ActionButton({
-				label: "More options",
-				...passthroughs,
-			}, context),
-			content: [
-				(passthroughs, context) => Menu({
-					...passthroughs,
-					items: [
-						{
-							iconName: "Copy",
-							label: "Copy",
-						},
-						{
-							iconName: "Move",
-							label: "Move",
-						},
-						{
-							iconName: "Delete",
-							label: "Delete",
-						},
-					],
-				}, context),
-			],
-		}, context),
-	],
-};
-Nested.tags = ["autodocs", "!dev"];
-Nested.parameters = {
-	chromatic: { disableSnapshot: true },
-};
+// @todo: address this later when we have a better way to handle nested popovers
+// export const Nested = Template.bind({});
+// Nested.args = {
+// 	position: "right-top",
+// 	isOpen: true,
+// 	customStyles: {
+// 		"inset-inline-start": "60px",
+// 		"inset-block-start": "0",
+// 	},
+// 	trigger: (passthroughs) => ActionButton({
+// 		label: "Menu",
+// 		...passthroughs,
+// 	}),
+// 	content: [
+// 		(passthroughs, context) => Menu({
+// 			...passthroughs,
+// 			items: [
+// 				{
+// 					iconName: "Edit",
+// 					label: "Edit",
+// 				},
+// 			],
+// 		}, context),
+// 		(passthroughs, context) => Template({
+// 			...passthroughs,
+// 			position: "right-top",
+// 			isOpen: true,
+// 			customStyles: {
+// 				"inset-inline-start": "110px",
+// 				"inset-block-start": "0",
+// 			},
+// 			trigger: (passthroughs, context) => ActionButton({
+// 				label: "More options",
+// 				...passthroughs,
+// 			}, context),
+// 			content: [
+// 				(passthroughs, context) => Menu({
+// 					...passthroughs,
+// 					items: [
+// 						{
+// 							iconName: "Copy",
+// 							label: "Copy",
+// 						},
+// 						{
+// 							iconName: "Move",
+// 							label: "Move",
+// 						},
+// 						{
+// 							iconName: "Delete",
+// 							label: "Delete",
+// 						},
+// 					],
+// 				}, context),
+// 			],
+// 		}, context),
+// 	],
+// };
+// Nested.tags = ["autodocs", "!dev"];
+// Nested.parameters = {
+// 	chromatic: { disableSnapshot: true },
+// };
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = PopoverGroup.bind({});

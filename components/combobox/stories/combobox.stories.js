@@ -107,11 +107,6 @@ export default {
 		testId: "combobox",
 	},
 	parameters: {
-		docs: {
-			story: {
-				height: "220px"
-			}
-		},
 		componentVersion: version,
 	},
 	tags: ["!autodocs"],

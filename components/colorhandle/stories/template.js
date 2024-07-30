@@ -1,6 +1,7 @@
 import { Template as ColorLoupe } from "@spectrum-css/colorloupe/stories/template.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
 import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
@@ -14,32 +15,37 @@ export const Template = ({
 	selectedColor = "rgba(255 0 0 / 50%)",
 	customStyles = {},
 } = {}, context = {}) => {
-	return OpacityCheckerboard({
-		customClasses: [
-			`${rootClass}`,
-			...!isDisabled && isFocused ? ["is-focused"] : [],
-			...isDisabled ? ["is-disabled"] : [],
-			...customClasses,
-		],
-		content: [html `
-			<div class="${rootClass}-inner"></div>
-			${when(isWithColorLoupe, () => html`
-				${ColorLoupe({
-					isOpen: true,
-					isDisabled,
-					customStyles: {
-						"inset-inline-start": "unset",
-						"inset-block-start": "unset",
-					}
-				})}
-			`)}
-		`],
-		customStyles: {
-			"position": isWithColorLoupe ? "absolute" : undefined,
-			"inset-block": isWithColorLoupe ? "75%" : undefined,
-			"inset-inline": isWithColorLoupe ? "50%" : undefined,
-			...customStyles,
-			"--spectrum-picked-color": selectedColor,
-		},
-	}, context);
+	return html`
+		<div style=${styleMap({
+			// Why 67px? That's the height of the color loupe element
+			"padding-block-start": isWithColorLoupe ? "67px" : 0,
+			"padding-inline": isWithColorLoupe ? "6px" : 0,
+		})}>
+			${OpacityCheckerboard({
+				customClasses: [
+					`${rootClass}`,
+					...!isDisabled && isFocused ? ["is-focused"] : [],
+					...isDisabled ? ["is-disabled"] : [],
+					...customClasses,
+				],
+				customStyles: {
+					...customStyles,
+					"position": "relative",
+					"margin": "10px",
+					"--spectrum-picked-color": selectedColor,
+				},
+				content: [
+					html `
+						<div class="${rootClass}-inner"></div>
+						${when(isWithColorLoupe, () => html`
+							${ColorLoupe({
+								isOpen: true,
+								isDisabled,
+							})}
+						`)}
+					`
+				],
+			}, context)}
+		</div>
+	`;
 };

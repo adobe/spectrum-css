@@ -19,51 +19,53 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 	customPopoverStyles = {},
-}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--size${size?.toUpperCase()}`]:
-				typeof size !== "undefined",
-			[`${rootClass}--emphasized`]: isEmphasized,
-			[`${rootClass}--sticky`]: isSticky,
-			[`${rootClass}--fixed`]: isFixed,
-			[`${rootClass}--flexible`]: isFlexible,
-			"is-open": isOpen,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${styleMap(customStyles)}
-	>
-		${Popover({
-			customStyles: customPopoverStyles,
-			customClasses: [`${rootClass}-popover`],
-			isOpen,
-			content: [
-				CloseButton({
-					label: "Clear selection",
-					staticColor: isEmphasized ? "white" : undefined,
-				}),
-				FieldLabel({ size: "s", label: "2 Selected" }),
-				ActionGroup({
-					size: "m",
-					areQuiet: true,
-					staticColor: isEmphasized ? "white" : undefined,
-					content: [
-						{
-							iconName: "Edit",
-							label: "Edit",
-						},
-						{
-							iconName: "Copy",
-							label: "Copy",
-						},
-						{
-							iconName: "Delete",
-							label: "Delete",
-						},
-					],
-				}),
-			],
-		})}
-	</div>
-`;
+} = {}, context = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--emphasized`]: isEmphasized,
+				[`${rootClass}--sticky`]: isSticky,
+				[`${rootClass}--fixed`]: isFixed,
+				[`${rootClass}--flexible`]: isFlexible,
+				"is-open": isOpen,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap(customStyles)}
+		>
+			${Popover({
+				customStyles: customPopoverStyles,
+				customClasses: [`${rootClass}-popover`],
+				isOpen,
+				content: [
+					CloseButton({
+						label: "Clear selection",
+						staticColor: isEmphasized ? "white" : undefined,
+					}, context),
+					FieldLabel({ size: "s", label: "2 Selected" }, context),
+					ActionGroup({
+						size: "m",
+						areQuiet: true,
+						staticColor: isEmphasized ? "white" : undefined,
+						content: [
+							{
+								iconName: "Edit",
+								label: "Edit",
+							},
+							{
+								iconName: "Copy",
+								label: "Copy",
+							},
+							{
+								iconName: "Delete",
+								label: "Delete",
+							},
+						],
+					}, context),
+				],
+			}, context)}
+		</div>
+	`;
+};

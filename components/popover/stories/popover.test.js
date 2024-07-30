@@ -30,15 +30,6 @@ export const PopoverGroup = Variants({
 		].map((position) => ({
 			testHeading: `Position: ${position}`,
 			position,
-			trigger: undefined,
-			wrapperStyles: {
-				"inline-size": "200px",
-				"block-size": "200px",
-				"display": "flex",
-				// Align button where the popover can fit next to it in the container
-				"justify-content": "center",
-				"align-items": "center",
-			},
 		})),
 	],
 	stateData: [

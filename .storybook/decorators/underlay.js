@@ -14,10 +14,19 @@ export const withUnderlayWrapper = makeDecorator({
             args: {
                 isOpen = false,
             } = {},
+			globals: {
+				testingPreview = false,
+			} = {},
 		} = context;
 
 		return html`
-            ${Underlay({ isOpen }, context)}
+            ${Underlay({
+				isOpen,
+				customStyles: {
+					"block-size": testingPreview ? "100%" : undefined,
+					"inline-size": testingPreview ? "100%" : undefined,
+				},
+			}, context)}
             ${StoryFn(context)}
         `;
 	},

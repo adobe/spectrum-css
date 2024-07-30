@@ -20,17 +20,11 @@ export const ComboBoxGroup = Variants({
 		{
 			testHeading: "Open",
 			isOpen: true,
-			wrapperStyles: {
-				"min-block-size": "170px",
-			},
 		},
 		{
 			testHeading: "Quiet + open",
 			isQuiet: true,
 			isOpen: true,
-			wrapperStyles: {
-				"min-block-size": "170px",
-			},
 		},
 		{
 			testHeading: "With field label top",
