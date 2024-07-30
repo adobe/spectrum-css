@@ -91,6 +91,18 @@ Standard.parameters = {
 };
 
 /**
+ * A steplist without labels. This variant does not have visible labels or tooltips.
+ */
+export const Small = SteplistGroup.bind({});
+Small.tags = ["autodocs", "!dev"];
+Small.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+Small.args = {
+	isSmall: true,
+};
+
+/**
  * A steplist with tooltips.
  */
 export const WithTooltip = SteplistGroup.bind({});
