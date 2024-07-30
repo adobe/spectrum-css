@@ -46,7 +46,7 @@ export default {
 		isFocused: false,
 		gradientType: "gradient",
 		vertical: false,
-		selectedColor: "rgba(255 0 0 / 0%)",
+		selectedColor: "rgba(255, 0, 0, 1)",
 	},
 	parameters: {
 		componentVersion: version,

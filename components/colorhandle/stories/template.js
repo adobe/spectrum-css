@@ -12,7 +12,7 @@ export const Template = ({
 	isDisabled = false,
 	isFocused = false,
 	isWithColorLoupe = false,
-	selectedColor = "rgba(255 0 0 / 50%)",
+	selectedColor = "rgba(255, 0, 0, 50%)",
 	customStyles = {},
 } = {}, context = {}) => {
 	return html`
@@ -30,8 +30,6 @@ export const Template = ({
 				],
 				customStyles: {
 					...customStyles,
-					"position": "relative",
-					"margin": "10px",
 					"--spectrum-picked-color": selectedColor,
 				},
 				content: [
@@ -41,6 +39,7 @@ export const Template = ({
 							${ColorLoupe({
 								isOpen: true,
 								isDisabled,
+								selectedColor,
 							})}
 						`)}
 					`

@@ -90,7 +90,7 @@ ReadOnly.args = {
 	isReadOnly: true,
 };
 ReadOnly.parameters = {
-	chromatic: { disable: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const Emphasized = Template.bind({});
@@ -99,7 +99,7 @@ Emphasized.args = {
 	isEmphasized: true,
 };
 Emphasized.parameters = {
-	chromatic: { disable: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const ReadOnlyEmphasized = Template.bind({});
@@ -109,7 +109,7 @@ ReadOnlyEmphasized.args = {
 	isReadOnly: true,
 };
 ReadOnlyEmphasized.parameters = {
-	chromatic: { disable: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const Disabled = Template.bind({});
@@ -118,5 +118,5 @@ Disabled.args = {
 	isDisabled: true,
 };
 Disabled.parameters = {
-	chromatic: { disable: true },
+	chromatic: { disableSnapshot: true },
 };

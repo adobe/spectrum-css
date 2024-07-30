@@ -10,7 +10,7 @@ export const Template = ({
 	isDisabled = false,
 	customStyles = {},
 	customClasses = [],
-  selectedColor = "rgba(255, 0, 0, 0.5)"
+	selectedColor = "rgba(255, 0, 0, 0.5)",
 } = {}) => svg`
     <svg
       class=${classMap({
@@ -21,7 +21,7 @@ export const Template = ({
       })}
       style=${styleMap({
         "--spectrum-picked-color": selectedColor,
-        ...customStyles
+        ...customStyles,
       })}
     >
       <defs>

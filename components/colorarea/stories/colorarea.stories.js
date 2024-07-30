@@ -25,11 +25,19 @@ export default {
 			...isFocused,
 			if: { arg: "isDisabled", truthy: false },
 		},
+		selectedColor: {
+			name: "Selected color",
+			description: "The color of the handle.",
+			type: { name: "string" },
+			accept: "hex, rgb, rgba",
+			control: "color",
+		},
 	},
 	args: {
 		rootClass: "spectrum-ColorArea",
 		isDisabled: false,
 		isFocused: false,
+		selectedColor: "rgba(255, 0, 0, 1)",
 	},
 	parameters: {
 		componentVersion: version,

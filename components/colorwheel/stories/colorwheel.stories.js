@@ -25,12 +25,20 @@ export default {
 			},
 			control: "boolean",
 		},
+		selectedColor: {
+			name: "Selected color",
+			description: "The color of the handle.",
+			type: { name: "string" },
+			accept: "hex, rgb, rgba",
+			control: "color",
+		},
 	},
 	args: {
 		rootClass: "spectrum-ColorWheel",
 		isDisabled: false,
 		isFocused: false,
 		isWithColorArea: false,
+		selectedColor: "rgba(255, 0, 0, 50%)",
 	},
 	parameters: {
 		componentVersion: version,
