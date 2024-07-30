@@ -80,12 +80,7 @@ export default {
 };
 
 export const Default = ActionBarGroup.bind({});
-Default.args = {
-	// customPopoverStyles: {
-	// 	// Prevent the popover from being rendered offscreen
-	// 	"--spectrum-popover-animation-distance": "-10px",
-	// }
-};
+Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ActionBarGroup.bind({});
@@ -103,10 +98,6 @@ export const Emphasized = Template.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	isEmphasized: true,
-	// customPopoverStyles: {
-	// 	// Prevent the popover from being rendered offscreen
-	// 	"--spectrum-popover-animation-distance": "-10px",
-	// }
 };
 Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },

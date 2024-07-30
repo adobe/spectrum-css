@@ -50,7 +50,7 @@ Or.args = {
 	variant: "or"
 };
 Or.parameters = {
-	chromatic: { disable: true }
+	chromatic: { disableSnapshot: true }
 };
 
 export const Disabled = Template.bind({});
@@ -59,7 +59,7 @@ Disabled.args = {
 	isDisabled: true
 };
 Disabled.parameters = {
-	chromatic: { disable: true }
+	chromatic: { disableSnapshot: true }
 };
 
 // ********* VRT ONLY ********* //

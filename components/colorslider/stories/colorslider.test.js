@@ -22,9 +22,7 @@ export const ColorSliderGroup = Variants({
 		{
 			testHeading: "Alpha",
 			gradientStops: ["rgba(0, 0, 0, 1) 0%", "rgba(0, 0, 0, 0) 100%"],
-			colorHandleStyle: {
-				"--spectrum-picked-color": "rgba(0, 0, 0, 1)",
-			},
+			selectedColor: "rgba(0, 0, 0, 1)",
 			wrapperStyles: {
 				// Adjust for the indicator
 				"padding-inline": "20px",
@@ -33,8 +31,8 @@ export const ColorSliderGroup = Variants({
 		{
 			testHeading: "With Image",
 			gradientType: "image",
+			selectedColor: "#df6a7d",
 			colorHandleStyle: {
-				"--spectrum-picked-color": "#df6a7d",
 				"inset-inline-start": "50%",
 			},
 		},

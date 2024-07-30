@@ -206,9 +206,6 @@ TraySubmenu.argTypes = {
 };
 TraySubmenu.args = {
 	selectionMode: "multiple",
-	// customStyles: {
-	// 	"--mod-menu-inline-size": "100%",
-	// },
 	isTraySubmenu: true,
 	items: [
 		{

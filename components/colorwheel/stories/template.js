@@ -13,6 +13,7 @@ export const Template = ({
 	isFocused = false,
 	isWithColorArea = false,
 	colorHandleStyle = {},
+	selectedColor = "rgba(255, 0, 0, 50%)",
 } = {}, context = {}) => {
 	return html`
 		<div class=${classMap({
@@ -30,6 +31,7 @@ export const Template = ({
 							"--mod-colorarea-width": "80px",
 							"--mod-colorarea-height": "80px",
 						},
+						selectedColor,
 					}, context)}
 				`)}
 				</div>
@@ -47,10 +49,8 @@ export const Template = ({
 				isDisabled,
 				isFocused,
 				customClasses: [`${rootClass}-handle`],
-				customStyles: {
-					"--spectrum-picked-color": "rgb(255, 0, 0)",
-					...colorHandleStyle
-				},
+				selectedColor,
+				customStyles: colorHandleStyle,
 			}, context)}
 			<input type="range" class="${rootClass}-slider" aria-label="hue" min="0" max="360" step="">
 		</div>

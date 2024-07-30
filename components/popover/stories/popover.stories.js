@@ -67,26 +67,33 @@ export default {
 		rootClass: "spectrum-Popover",
 		isOpen: true,
 		withTip: false,
-		position: "bottom",
-		content: [
-			html`<p>Basic popover text content with some added padding.</p>`
-		],
+		position: "right",
+		content: [html`<div style="padding-inline: 8px;">Basic popover text content with some added padding.</div>`],
 	},
 	parameters: {
+		layout: "centered",
+		docs: {
+			story: {
+				height: "300px"
+			}
+		},
 		componentVersion: version,
 	},
+	decorators: [
+		// Add padding for VRT so drop shadows are not cut off.
+		(story) => window.isChromatic() ? html`<div style="padding: 32px;">${story()}</div>` : story(),
+	],
 };
 
 export const Default = PopoverGroup.bind({});
 Default.args = {
-	trigger: (passthroughs, context) => ActionButton({
-		isActive: passthroughs.isOpen,
+	trigger: (passthroughs) => ActionButton({
+		isSelected: true,
 		label: "Hop on pop(over)",
 		...passthroughs,
-	}, context),
+	}),
 	content: [
-		(passthroughs, context) => Menu({
-			...passthroughs,
+		(passthroughs) => Menu({
 			items: [
 				{
 					iconName: "Edit",
@@ -105,49 +112,47 @@ Default.args = {
 					label: "Delete",
 				},
 			],
-		}, context),
+			...passthroughs,
+		}),
 	],
 };
 
-// ********* DOCS ONLY ********* //
+export const WithTip = PopoverGroup.bind({});
+WithTip.args = {
+	withTip: true,
+	position: "top",
+};
+
 export const Nested = Template.bind({});
 Nested.args = {
-	position: "right-top",
+	position: "right",
 	isOpen: true,
-	customStyles: {
-		"inset-inline-start": "60px",
-		"inset-block-start": "0",
-	},
 	trigger: (passthroughs) => ActionButton({
-		label: "Menu",
+		label: "Hop on pop(over)",
 		...passthroughs,
 	}),
 	content: [
-		(passthroughs, context) => Menu({
-			...passthroughs,
+		Menu.bind(null, {
 			items: [
 				{
 					iconName: "Edit",
 					label: "Edit",
 				},
 			],
-		}, context),
-		(passthroughs, context) => Template({
-			...passthroughs,
-			position: "right-top",
+		}),
+		Template.bind(null, {
+			position: "right",
 			isOpen: true,
-			customStyles: {
-				"inset-inline-start": "110px",
-				"inset-block-start": "0",
-			},
-			trigger: (passthroughs, context) => ActionButton({
+			trigger: ActionButton.bind(null, {
 				label: "More options",
-				...passthroughs,
-			}, context),
+			}),
 			content: [
-				(passthroughs, context) => Menu({
-					...passthroughs,
+				Menu.bind(null, {
 					items: [
+						{
+							iconName: "Edit",
+							label: "Edit",
+						},
 						{
 							iconName: "Copy",
 							label: "Copy",
@@ -161,14 +166,10 @@ Nested.args = {
 							label: "Delete",
 						},
 					],
-				}, context),
+				}),
 			],
-		}, context),
+		}),
 	],
-};
-Nested.tags = ["autodocs", "!dev"];
-Nested.parameters = {
-	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

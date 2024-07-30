@@ -24,7 +24,7 @@ export const Template = ({
 		"rgb(255, 0, 0)",
 	],
 	gradientType = "gradient",
-	selectedColor = "rgb(255, 0, 0)",
+	selectedColor = "rgba(255, 0, 0, 1)",
 	colorHandleStyle = {},
 } = {}, context = {}) => {
 	const { updateArgs } = context;
@@ -73,7 +73,7 @@ export const Template = ({
       ${ColorHandle({
         isDisabled,
         isFocused,
-		selectedColor,
+        selectedColor,
         customClasses: [`${rootClass}-handle`],
         customStyles: colorHandleStyle,
       }, context)}

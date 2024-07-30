@@ -67,7 +67,7 @@ Default.args = {
 	],
 };
 Default.parameters = {
-	chromatic: { disable: true }
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
