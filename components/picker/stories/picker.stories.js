@@ -112,7 +112,10 @@ export default {
 		isOpen: false,
 		withSwitch: false,
 		content: [
-			() => MenuStories(MenuStories.args)
+			(passthrough, context) => MenuStories({
+				...passthrough,
+				...MenuStories.args,
+			}, context)
 		],
 	},
 	parameters: {

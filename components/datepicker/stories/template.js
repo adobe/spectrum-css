@@ -10,7 +10,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 
 import "../index.css";
 
-export const Template = ({
+export const DatePicker = ({
 	rootClass = "spectrum-DatePicker",
 	id = getRandomId("datepicker"),
 	customClasses = [],
@@ -98,20 +98,35 @@ export const Template = ({
 					updateArgs({ isOpen: !isOpen });
 				},
 			}, context)}
-			${when(!readOnly && !isDisabled, () => html`
-				${Popover({
-					isOpen: isOpen && !isDisabled && !readOnly,
-					withTip: false,
-					position: "bottom-start",
-					isQuiet,
-					triggerId,
-					customStyles: {
-						"inset-block-start": "30px",
-					},
-					content: [Calendar({}, context)],
-					// @todo this implementation of calendar does not currently display range selections or selected date on first load
-				}, context)}`
-			)}
 		</div>
+	`;
+};
+
+export const Template = ({
+	isOpen = true,
+	isQuiet = false,
+	isDisabled = false,
+	readOnly = false,
+	...args
+} = {}, context = {}) => {
+	return html`
+		${Popover({
+			isOpen: isOpen && !isDisabled && !readOnly,
+			withTip: false,
+			position: "bottom-start",
+			isQuiet,
+			trigger: (passthroughs) => DatePicker({
+				...passthroughs,
+				isOpen,
+				isQuiet,
+				isDisabled,
+				readOnly,
+				...args,
+			}, context),
+			content: [
+				(passthroughs) => Calendar(passthroughs, context)
+			],
+			// @todo this implementation of calendar does not currently display range selections or selected date on first load
+		}, context)}
 	`;
 };

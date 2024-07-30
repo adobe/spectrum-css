@@ -16,8 +16,6 @@ export const Template = ({
 	size = "m",
 	...popoverArgs
 } = {}, context = {}) => {
-	const { updateArgs } = context;
-
 	return Popover({
 		size,
 		isOpen,
@@ -25,30 +23,26 @@ export const Template = ({
 		id,
 		testId: testId ?? id,
 		triggerId,
+		trigger: (passthroughs) =>
+			ActionButton({
+				...passthroughs,
+				size,
+				label,
+				hasPopup: "menu",
+				iconName,
+				id: triggerId,
+				customClasses,
+			}, context),
 		position: "bottom-start",
-		customStyles: {
-			"inset-block-start": "50px",
-			"inset-inline-start": "20px",
-			...customStyles,
-		},
-		trigger: (passthroughs) => ActionButton({
-			...passthroughs,
-			size,
-			label,
-			hasPopup: "menu",
-			iconName,
-			id: triggerId,
-			customClasses,
-			...passthroughs,
-			onclick: function () {
-				updateArgs({
-					isOpen: !isOpen,
-				});
-			}
-		}, context),
+		customStyles,
 		content: [
-			Menu({ items, isOpen, size }, context)
+			(passthroughs) => Menu({
+				...passthroughs,
+				items,
+				isOpen,
+				size
+			}, context)
 		],
 		...popoverArgs,
-	});
+	}, context);
 };

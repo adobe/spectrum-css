@@ -7,23 +7,22 @@ import { Template as TextField } from "@spectrum-css/textfield/stories/template.
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
-export const Template = ({
+const Combobox = ({
 	rootClass = "spectrum-Combobox",
 	id = getRandomId("combobox"),
 	testId,
 	customClasses = [],
+	customStyles = {},
 	size = "m",
 	isOpen = true,
 	isInvalid = false,
 	isQuiet = false,
 	isDisabled = false,
-	showFieldLabel = false,
-	fieldLabelText = "Select location",
-	fieldLabelPosition = "top",
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
@@ -37,8 +36,81 @@ export const Template = ({
 		selectedDay = new Date(selectedDay).toLocaleDateString({ language: lang });
 	}
 
-	const pickerId = getRandomId("picker");
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				"is-open": !isDisabled && isOpen,
+				[`${rootClass}--quiet`]: isQuiet,
+				"is-invalid": !isDisabled && isInvalid,
+				"is-focused": !isDisabled && isFocused,
+				"is-keyboardFocused": !isDisabled && isKeyboardFocused,
+				"is-loading": isLoading,
+				"is-disabled": isDisabled,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId ?? id)}
+			style=${styleMap(customStyles)}
+		>
+			${TextField({
+				size,
+				isQuiet,
+				isDisabled,
+				isInvalid,
+				isFocused,
+				isKeyboardFocused,
+				customClasses: [
+					`${rootClass}-textfield`,
+					...(isLoading ? ["is-loading"] : []),
+				],
+				customInputClasses: [`${rootClass}-input`],
+				isLoading,
+				customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
+				placeholder: "Type here this text should truncate",
+				name: "field",
+				value: selectedDay
+					? new Date(selectedDay).toLocaleDateString(lang)
+					: undefined,
+				onclick: function () {
+					if (!isOpen) updateArgs({ isOpen: true });
+				},
+			}, context)}
+			${PickerButton({
+				customClasses: [
+					`${rootClass}-button`,
+					... isInvalid ? ["is-invalid"] : [],
+				],
+				size,
+				iconType: "ui",
+				iconName: "ChevronDown",
+				isQuiet,
+				id: getRandomId("picker"),
+				isOpen,
+				isFocused,
+				isKeyboardFocused,
+				isDisabled,
+				position: "right",
+				onclick: function () {
+					updateArgs({ isOpen: !isOpen });
+				},
+			}, context)}
+		</div>
+	`;
+};
 
+export const Template = ({
+	size = "m",
+	isOpen = true,
+	isQuiet = false,
+	isDisabled = false,
+	showFieldLabel = false,
+	fieldLabelText = "Select location",
+	fieldLabelPosition = "top",
+	...args
+} = {}, context = {}) => {
 	return html`
 		<div>
 			${when(showFieldLabel, () =>
@@ -47,105 +119,44 @@ export const Template = ({
 					label: fieldLabelText,
 					customStyles: { "max-inline-size": "100px"},
 					alignment: fieldLabelPosition === "left" && "left",
-				}, context))}
-			<div
-				class=${classMap({
-					[rootClass]: true,
-					[`${rootClass}--size${size?.toUpperCase()}`]:
-						typeof size !== "undefined",
-					"is-open": !isDisabled && isOpen,
-					[`${rootClass}--quiet`]: isQuiet,
-					"is-invalid": !isDisabled && isInvalid,
-					"is-focused": !isDisabled && isFocused,
-					"is-keyboardFocused": !isDisabled && isKeyboardFocused,
-					"is-loading": isLoading,
-					"is-disabled": isDisabled,
-					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-				id=${ifDefined(id)}
-				data-testid=${ifDefined(testId ?? id)}
-			>
-				${[
-					TextField({
+				}, context)
+			)}
+			${[
+				Popover({
+					isOpen: isOpen && !isDisabled,
+					withTip: false,
+					position: "bottom-start",
+					isQuiet,
+					trigger: (passthrough) => Combobox({
 						size,
+						isOpen,
 						isQuiet,
 						isDisabled,
-						isInvalid,
-						isFocused,
-						isKeyboardFocused,
-						customClasses: [
-							`${rootClass}-textfield`,
-							...(isLoading ? ["is-loading"] : []),
-						],
-						customInputClasses: [`${rootClass}-input`],
-						isLoading,
-						customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
-						placeholder: "Type here this text should truncate",
-						name: "field",
-						value: selectedDay
-							? new Date(selectedDay).toLocaleDateString(lang)
-							: undefined,
-						onclick: function () {
-							if (!isOpen) updateArgs({ isOpen: true });
-						},
+						...args,
+						...passthrough,
 					}, context),
-					Popover({
-						isOpen: isOpen && !isDisabled,
-						withTip: false,
-						position: "bottom-right",
-						isQuiet,
-						triggerId: pickerId,
-						trigger: (passthrough) => PickerButton({
-							...passthrough,
-							customClasses: [
-								`${rootClass}-button`,
-								... isInvalid ? ["is-invalid"] : [],
-							],
+					content: [
+						Menu({
 							size,
-							iconType: "ui",
-							iconName: "ChevronDown",
-							isQuiet,
-							id: pickerId,
-							isOpen,
-							isFocused,
-							isKeyboardFocused,
-							isDisabled,
-							position: "right",
-							onclick: function () {
-								updateArgs({ isOpen: !isOpen });
-							},
+							items: [
+								{
+									label: "Ballard",
+								},
+								{
+									label: "Fremont",
+								},
+								{
+									label: "Greenwood",
+								},
+								{
+									label: "United States of America",
+									isDisabled: true,
+								},
+							],
 						}, context),
-						customStyles: isOpen
-							? {
-									position: "absolute",
-									top: "100%",
-									left: "0",
-									width: "100%",
-							}
-							: {},
-						content: [
-							Menu({
-								size,
-								items: [
-									{
-										label: "Ballard",
-									},
-									{
-										label: "Fremont",
-									},
-									{
-										label: "Greenwood",
-									},
-									{
-										label: "United States of America",
-										isDisabled: true,
-									},
-								],
-							}, context),
-						],
-					}, context),
-				]}
-			</div>
+					],
+				}, context),
+			]}
 		</div>
 	`;
 };

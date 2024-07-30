@@ -383,6 +383,12 @@ export const Template = (
 		</ul>
 	`;
 
-	if (isTraySubmenu) return Tray({ content: [menuMarkup] }, context);
+	if (isTraySubmenu) return Tray({
+		isOpen: true,
+		content: [
+			menuMarkup
+		],
+	}, context);
+
 	return menuMarkup;
 };

@@ -41,11 +41,6 @@ export default {
 		position: Popover.args.position,
 	},
 	parameters: {
-		docs: {
-			story: {
-				height: "250px",
-			},
-		},
 		actions: {
 			handles: [
 				...(Popover?.parameters?.actions?.handles ?? []),

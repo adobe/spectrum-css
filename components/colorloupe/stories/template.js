@@ -10,7 +10,8 @@ export const Template = ({
 	isDisabled = false,
 	customStyles = {},
 	customClasses = [],
-}) => svg`
+  selectedColor = "rgba(255, 0, 0, 0.5)"
+} = {}) => svg`
     <svg
       class=${classMap({
         [rootClass]: true,
@@ -19,9 +20,7 @@ export const Template = ({
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       style=${styleMap({
-        "--spectrum-picked-color": "rgba(255, 0, 0, 0.5)",
-        "inset-block-start": "5px",
-        "inset-inline-start": "5px",
+        "--spectrum-picked-color": selectedColor,
         ...customStyles
       })}
     >

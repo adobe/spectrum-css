@@ -189,11 +189,6 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Menu-item"],
 		},
-		docs: {
-			story: {
-				height: "300px"
-			}
-		},
 		componentVersion: version,
 	},
 };
@@ -211,9 +206,9 @@ TraySubmenu.argTypes = {
 };
 TraySubmenu.args = {
 	selectionMode: "multiple",
-	customStyles: {
-		"--mod-menu-inline-size": "100%",
-	},
+	// customStyles: {
+	// 	"--mod-menu-inline-size": "100%",
+	// },
 	isTraySubmenu: true,
 	items: [
 		{
@@ -234,6 +229,13 @@ TraySubmenu.args = {
 	],
 };
 TraySubmenu.parameters = {
+	layout: "fullscreen",
+	docs: {
+		story: {
+			inline: false,
+			height: "400px"
+		}
+	},
 	chromatic: {
 		"Viewport | small": {
 			viewport: viewports.small,

@@ -73,12 +73,6 @@ export default {
 		],
 	},
 	parameters: {
-		layout: "fullscreen",
-		docs: {
-			story: {
-				height: "300px"
-			}
-		},
 		componentVersion: version,
 	},
 };

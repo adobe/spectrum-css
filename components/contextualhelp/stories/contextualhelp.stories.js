@@ -85,11 +85,6 @@ export default {
 		customStyles: { "max-inline-size": "275px" },
 	},
 	parameters: {
-		docs: {
-			story: {
-				height: "250px",
-			},
-		},
 		actions: {
 			handles: [
 				...(ActionButtonStories?.parameters?.actions?.handles ?? [])

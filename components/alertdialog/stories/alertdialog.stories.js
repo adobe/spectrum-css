@@ -1,5 +1,5 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
-import modes, { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { AlertDialogGroup } from "./alertdialog.test.js";
@@ -56,20 +56,6 @@ export default {
 	],
 };
 
-// the "TallerViewport" modes are accommodating the underlay, which is position: fixed,
-// and Chromatic's treatment of position:fixed elements. By increasing the viewport height,
-// it doesn't look like the background color just stops without wrapping the
-// entire container of templates.
-const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
-	acc[key] = {
-		...modes[key],
-		viewport: {
-			height: "2000px",
-		}
-	};
-	return acc;
-}, {});
-
 export const Default = AlertDialogGroup.bind({});
 Default.args = {
 	isOpen: true,
@@ -84,11 +70,6 @@ Default.args = {
 		variant: "accent"
 	}],
 	content: "Smart filters are nondestructive and will preserve your original images.",
-};
-Default.parameters = {
-	chromatic: {
-		modes: defaultModesWithTallerViewport,
-	},
 };
 
 // ********* VRT ONLY ********* //
