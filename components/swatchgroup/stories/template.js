@@ -13,6 +13,7 @@ export const Template = ({
 	size = "m",
 	density = "regular",
 	rounding = "regular",
+	withBorder = "noBorder",
 	items = [],
 	customStyles = {},
 	isDisabled =false, 
@@ -37,6 +38,7 @@ export const Template = ({
 			rounding,
 			isDisabled: isDisabled,
 			isSelected: isSelected,
+			withBorder,
 			...swatch,
 		}, context))}
 	</div>

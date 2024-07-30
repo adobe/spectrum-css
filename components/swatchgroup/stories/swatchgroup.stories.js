@@ -23,9 +23,9 @@ import {
  * 
  * ### Border only for low-contrast swatches
  * 
- * Swatches within a swatch group with low contrast (below 3:1 contrast with the background) have a less prominent border compared to the swatch component when used by itself, and should have the `.spectrum-Swatch--lightBorder` class. Low contrast color swatches have a border of gray-900 at 20%. This reduces the likelihood of the UI interfering with color perception and comparisons.
+ * Swatches within a swatch group with low contrast (below 3:1 contrast with the background) have a less prominent border compared to the swatch component when used by itself, and should have the `.spectrum-Swatch--lightBorder` class. Low contrast color swatches have a border of `gray-900` at 20%. This reduces the likelihood of the UI interfering with color perception and comparisons.
  * 
- * Swatches should have the `.spectrum-Swatch--noBorder` class, otherwise. 
+ * Swatches within a swatch group should have the `.spectrum-Swatch--noBorder` class, otherwise. 
  * 
  * ### Density
  * 
@@ -49,7 +49,6 @@ export default {
 		isSelected,
 		swatchColor: { table: { disable: true } },
 		isRectangle: { table: { disable: true } },
-		withBorder: { table: { disable: true } },
 		isGradient: { table: { disable: true } },
 		isImage: { table: { disable: true } },
 		isMixedValue: { table: { disable: true } },
@@ -62,6 +61,17 @@ export default {
 			name: "Container width",
 			table: { disable: true },
 		},
+		withBorder: {
+			name: "Border",
+			description: "Use the `lightBorder` class when grouped swatches have a color contrast ratio of less than 3:1.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string", required: true },
+				category: "Component",
+			},
+			options: ["noBorder", "lightBorder"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-SwatchGroup",
@@ -72,7 +82,6 @@ export default {
 		isSelected: false,
 		items: [
 			{swatchColor: "rgb(22, 135, 140)",},
-			{swatchColor: "rgb(33, 132, 113)",},
 			{swatchColor: "rgb(33, 132, 113)",},
 			{swatchColor: "rgb(254, 132, 152)",},
 			{swatchColor: "rgb(255, 127, 96)",},
@@ -141,6 +150,37 @@ Rounding.tags = ["autodocs", "!dev"];
 export const Sizing = SizingTemplate.bind({});
 Sizing.args = {};
 Sizing.tags = ["autodocs", "!dev"];
+
+/**
+ * Swatches within a swatch group with low contrast (below 3:1 contrast with the background) have a less prominent border compared to the swatch component when used by itself.
+ * Low contrast color swatches have a border of `gray-900` at 20%. This reduces the likelihood of the UI interfering with color perception and comparisons.
+ * In this example, the lower contrast swatches utilize the `.spectrum-Swatch--lightBorder` class.
+ */
+export const WithLightBorder = Template.bind({});
+WithLightBorder.args = {
+	items: [
+		{swatchColor: "rgb(22, 135, 140)",},
+		{swatchColor: "rgb(33, 132, 113)",},
+		{swatchColor: "rgb(254, 132, 152)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(255, 127, 96)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(255, 209, 24)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(120, 91, 199)",},
+		{swatchColor: "rgb(225, 234, 119)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(0, 225, 171)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(248, 239, 187)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(254, 205, 215)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(212, 182, 237)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(153, 219, 244)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(171, 238, 221)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(187, 182, 175)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(238, 211, 190)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(0, 143, 242)",},
+		{swatchColor: "rgb(60, 49, 199)",},
+		{swatchColor: "rgb(254, 71, 144)",},
+	],
+};
+WithLightBorder.tags = ["autodocs", "!dev"];
+WithLightBorder.storyName = "With light border";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
