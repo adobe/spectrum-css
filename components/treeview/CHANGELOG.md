@@ -1018,3 +1018,28 @@ Co-authored-by: Jian Liao <jianliao@adobe.com>
 ### ✨ Features
 
 - move to individually versioned packages with Lerna ([#265](https://github.com/adobe/spectrum-css/issues/265)) ([cb7fd4b](https://github.com/adobe/spectrum-css/commit/cb7fd4b)), closes [#231](https://github.com/adobe/spectrum-css/issues/231) [#214](https://github.com/adobe/spectrum-css/issues/214) [#229](https://github.com/adobe/spectrum-css/issues/229) [#240](https://github.com/adobe/spectrum-css/issues/240) [#239](https://github.com/adobe/spectrum-css/issues/239) [#161](https://github.com/adobe/spectrum-css/issues/161) [#242](https://github.com/adobe/spectrum-css/issues/242) [#246](https://github.com/adobe/spectrum-css/issues/246) [#219](https://github.com/adobe/spectrum-css/issues/219) [#235](https://github.com/adobe/spectrum-css/issues/235) [#189](https://github.com/adobe/spectrum-css/issues/189) [#248](https://github.com/adobe/spectrum-css/issues/248) [#232](https://github.com/adobe/spectrum-css/issues/232) [#248](https://github.com/adobe/spectrum-css/issues/248) [#218](https://github.com/adobe/spectrum-css/issues/218) [#237](https://github.com/adobe/spectrum-css/issues/237) [#255](https://github.com/adobe/spectrum-css/issues/255) [#256](https://github.com/adobe/spectrum-css/issues/256) [#258](https://github.com/adobe/spectrum-css/issues/258) [#257](https://github.com/adobe/spectrum-css/issues/257) [#259](https://github.com/adobe/spectrum-css/issues/259)
+
+### Migration guide
+
+- **Additional classes**
+
+  - `.spectrum-TreeView-label` is now required to wrap labels to enable truncation behavior
+  - `.spectrum-Treeview-icon` is now required on all non-indicator icons
+
+- **Renamed classes**
+
+  - `.spectrum-TreeView-standalone` renamed to `.spectrum-TreeView-detached`
+  - `.spectrum-TreeView-indicator` renamed to `.spectrum-TreeView-itemIndicator`
+  - `.spectrum-TreeView-icon` renamed to `.spectrum-TreeView-itemIcon`
+
+- **Moved classes**
+
+  - `.is-drop-target` and `.is-selected` must be placed on the `.spectrum-TreeView-item` element
+
+- **Workflow icon size**
+
+  Please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
+
+- **Revised sections markup**
+
+  The markup for sections has changed so that the heading is now a child of an `li` instead of the `ul`, to ensure valid markup. An additional class `.spectrum-TreeView-section` has been added for the first level `li` elements that contain the section heading and its child tree view.
