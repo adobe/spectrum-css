@@ -69,7 +69,7 @@ export default {
 				type: { summary: "string", required: true },
 				category: "Component",
 			},
-			options: ["default", "noBorder"],
+			options: ["default", "noBorder", "lightBorder"],
 			control: "select",
 		},
 		isRectangle: {
@@ -191,6 +191,11 @@ Selected.args = {
 };
 Selected.tags = ["autodocs", "!dev"];
 
+/**
+ * By default, swatches have a border. However, when swatches are used within a swatch group, there are additional border considerations. 
+ * - When color swatches are used in a [swatch group](?path=/docs/components-swatch-group--docs), they typically have the `.spectrum-Swatch--noBorder` class.
+ * - When and only when color swatches used in a [swatch group](?path=/docs/components-swatch-group--docs) have low contrast (below 3:1 contrast with the background), those swatches will have a less prominent border compared to the swatch component when used by itself. They individually use the `.spectrum-Swatch--lightBorder` class.
+ */
 export const Border = BorderGroup.bind({});
 Border.tags = ["autodocs", "!dev"];
 

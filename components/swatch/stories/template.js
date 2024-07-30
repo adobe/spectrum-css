@@ -210,7 +210,7 @@ export const RoundingGroup = (args, context) => html`
 `;
 
 export const BorderGroup = (args, context) => html `
-	<div style="display: flex; gap: 8px; padding: 8px 0;">
+	<div style="display: flex; flex-direction: column; gap: 8px; padding: 8px 0;">
 		<div>
 		${Typography({
 			semantics: "detail",
@@ -232,6 +232,18 @@ export const BorderGroup = (args, context) => html `
 		${Template({
 			...args,
 			withBorder: "noBorder",
+			}, context)}
+		</div>
+		<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Light border"],
+			customClasses: ["chromatic-ignore"],
+		})}
+		${Template({
+			...args,
+			withBorder: "lightBorder",
 			}, context)}
 		</div>
 	</div>
