@@ -233,12 +233,11 @@ export const DefaultTemplate = (args, context) => html`
 				${Typography({
 					semantics: "detail",
 					size: "s",
-					content: ["Invalid, keyboard focused"],
+					content: ["Keyboard focused"],
 					customClasses: ["chromatic-ignore"],
 				})}
 				${Template({
 					...args,
-					isInvalid: true,
 					isKeyboardFocused: true,
 				}, context)}
 			</div>
@@ -252,11 +251,12 @@ export const DefaultTemplate = (args, context) => html`
 				${Typography({
 					semantics: "detail",
 					size: "s",
-					content: ["Keyboard focused"],
+					content: ["Invalid, keyboard focused"],
 					customClasses: ["chromatic-ignore"],
 				})}
 				${Template({
 					...args,
+					isInvalid: true,
 					isKeyboardFocused: true,
 				}, context)}
 			</div>
@@ -369,13 +369,12 @@ export const QuietTemplate = (args, context) => html`
 				${Typography({
 					semantics: "detail",
 					size: "s",
-					content: ["Invalid, keyboard focused"],
+					content: ["Keyboard focused"],
 					customClasses: ["chromatic-ignore"],
 				})}
 				${Template({
 					...args,
 					isQuiet: true,
-					isInvalid: true,
 					isKeyboardFocused: true,
 				}, context)}
 			</div>
@@ -389,12 +388,13 @@ export const QuietTemplate = (args, context) => html`
 				${Typography({
 					semantics: "detail",
 					size: "s",
-					content: ["Keyboard focused"],
+					content: ["Invalid, keyboard focused"],
 					customClasses: ["chromatic-ignore"],
 				})}
 				${Template({
 					...args,
 					isQuiet: true,
+					isInvalid: true,
 					isKeyboardFocused: true,
 				}, context)}
 			</div>

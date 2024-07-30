@@ -86,12 +86,11 @@ export const Default = StepperGroup.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
 
-export const Standard = SizingTemplate.bind({});
-Standard.tags = ["autodocs", "!dev"];
-Standard.parameters = {
+export const Sizing = SizingTemplate.bind({});
+Sizing.tags = ["autodocs", "!dev"];
+Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Standard.storyName = "Default";
 
 export const DefaultStates = DefaultTemplate.bind({});
 DefaultStates.args = {};
