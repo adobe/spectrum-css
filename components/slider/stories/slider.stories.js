@@ -158,17 +158,21 @@ export default {
 	},
 };
 
+/**
+ * Sliders should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These sliders should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
+ */
 export const Default = Template.bind({});
 Default.args = {};
 
 /**
- * Sliders should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These sliders should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
+ * If a slider's label is undefined, it should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
  */
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-	...Default.args,
+export const WithoutLabel = Template.bind({});
+WithoutLabel.args = { 
+	label: "",
 };
-WithLabel.tags = ["autodocs", "!dev"];
+WithoutLabel.tags = ["autodocs", "!dev"];
+WithoutLabel.storyName = "Without label";
 
 /**
  * With fill.
@@ -212,19 +216,22 @@ Range.tags = ["autodocs", "!dev"];
  * Spectrum tick slider.
  */
 export const Tick = Template.bind({});
-Tick.args = {};
+Tick.args = {
+	showTicks: true,
+};
 Tick.tags = ["autodocs", "!dev"];
 
 /**
  * Spectrum tick slider with tick labels.
  */
-export const WithTickLabels = Template.bind({});
-WithTickLabels.args = {
+export const TickWithLabels = Template.bind({});
+TickWithLabels.args = {
 	...Default.args,
 	showTicks: true,
 	showTickLabels: true,
 };
-WithTickLabels.tags = ["autodocs", "!dev"];
+TickWithLabels.tags = ["autodocs", "!dev"];
+TickWithLabels.storyName = "Tick with labels";
 
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -233,13 +240,12 @@ Disabled.args = {
 };
 Disabled.tags = ["autodocs", "!dev"];
 
-export const WithFocus = Template.bind({});
-WithFocus.args = {
+export const Focused = Template.bind({});
+Focused.args = {
 	...Default.args,
-	variant: "with focus",
 	isFocused: true,
 };
-WithFocus.tags = ["autodocs", "!dev"];
+Focused.tags = ["autodocs", "!dev"];
 
 export const Gradient = Template.bind({});
 Gradient.args = {
@@ -254,23 +260,24 @@ Gradient.args = {
 };
 Gradient.tags = ["autodocs", "!dev"];
 
-export const SideLabel = Template.bind({});
-SideLabel.args = {
+export const WithSideLabel = Template.bind({});
+WithSideLabel.args = {
 	...Default.args,
 	labelPosition: "side",
 };
-SideLabel.tags = ["autodocs", "!dev"];
+WithSideLabel.tags = ["autodocs", "!dev"];
+WithSideLabel.storyName = "With side label";
 
-export const Sizes = SizingTemplate.bind({});
-Sizes.args = {};
-Sizes.tags = ["autodocs", "!dev"];
-Sizes.parameters = {
+export const Sizing = SizingTemplate.bind({});
+Sizing.args = {};
+Sizing.tags = ["autodocs", "!dev"];
+Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = WithFocus.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+export const WithForcedColors = Focused.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
