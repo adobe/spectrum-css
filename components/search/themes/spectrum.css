@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: legacy) {
+@container style(--system: legacy) {
 	.spectrum-Search {
 		--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
 		--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);

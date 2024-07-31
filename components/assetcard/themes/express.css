@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-AssetCard {
 		--spectrum-assetcard-overlay-background-color: rgba(109 115 246 / 20%);
 	}
