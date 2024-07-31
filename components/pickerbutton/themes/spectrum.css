@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: legacy) {
+@container style(--system: legacy) {
 	.spectrum-PickerButton {
 		--spectrum-picker-button-background-color: var(--spectrum-gray-75);
 		--spectrum-picker-button-background-color-hover: var(--spectrum-gray-200);

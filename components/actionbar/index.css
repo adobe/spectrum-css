@@ -77,6 +77,13 @@
 	}
 
 	.spectrum-ActionBar-popover {
+		/* @passthrough start */
+		--mod-popover-background-color: var(--mod-actionbar-popover-background-color, var(--spectrum-actionbar-popover-background-color));
+		--mod-popover-filter: var(--mod-actionbar-popover-filter, drop-shadow(var(--mod-actionbar-shadow-horizontal, var(--spectrum-actionbar-shadow-horizontal)) var(--mod-actionbar-shadow-vertical, var(--spectrum-actionbar-shadow-vertical)) var(--mod-actionbar-shadow-blur, var(--spectrum-actionbar-shadow-blur)) var(--mod-actionbar-shadow-color, var(--spectrum-actionbar-shadow-color))));
+		--mod-popover-border-color: var(--highcontrast-actionbar-popover-border-color, var(--mod-actionbar-popover-border-color, var(--spectrum-actionbar-popover-border-color)));
+		--mod-popover-corner-radius: var(--mod-actionbar-corner-radius, var(--spectrum-actionbar-corner-radius));
+		/* @passthrough end */
+
 		/* Let clicks do their thing */
 		pointer-events: auto;
 
@@ -87,20 +94,13 @@
 		display: flex;
 		flex-direction: row;
 
-		box-sizing: border-box;
 		inline-size: var(--mod-actionbar-popover-inline-size, 100%);
 
-		/* popover is ActionBar height */
+		/* Set popover is action bar height */
 		block-size: var(--mod-actionbar-height, var(--spectrum-actionbar-height));
 		margin: auto;
 		padding-block-start: 0;
 		padding-block-end: 0;
-		background-color: var(--mod-actionbar-popover-background-color, var(--spectrum-actionbar-popover-background-color));
-
-		filter: var(--mod-actionbar-popover-filter, drop-shadow(var(--mod-actionbar-shadow-horizontal, var(--spectrum-actionbar-shadow-horizontal)) var(--mod-actionbar-shadow-vertical, var(--spectrum-actionbar-shadow-vertical)) var(--mod-actionbar-shadow-blur, var(--spectrum-actionbar-shadow-blur)) var(--mod-actionbar-shadow-color, var(--spectrum-actionbar-shadow-color))));
-		border-color: var(--highcontrast-actionbar-popover-border-color, var(--mod-actionbar-popover-border-color, var(--spectrum-actionbar-popover-border-color)));
-
-		border-radius: var(--mod-actionbar-corner-radius, var(--spectrum-actionbar-corner-radius));
 	}
 }
 

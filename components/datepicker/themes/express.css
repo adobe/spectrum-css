@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-DatePicker {
 		--spectrum-datepicker-initial-height: var(--spectrum-component-height-75);
 	}
