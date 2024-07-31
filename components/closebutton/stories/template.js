@@ -5,6 +5,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { capitalize, lowerCase, upperCase } from "lodash-es";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-CloseButton",

@@ -37,7 +37,6 @@
 	--spectrum-coach-indicator-quiet-animation-keyframe-0-scale: var(--system-coach-indicator-quiet-animation-keyframe-0-scale);
 }
 
-.spectrum-CoachIndicator--quiet,
 .spectrum-CoachIndicator.spectrum-CoachIndicator--quiet {
 	--spectrum-coach-indicator-min-inline-size: var(--system-coach-indicator-quiet-min-inline-size);
 	--spectrum-coach-indicator-min-block-size: var(--system-coach-indicator-quiet-min-block-size);

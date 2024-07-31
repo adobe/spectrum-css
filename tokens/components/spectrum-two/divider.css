@@ -22,11 +22,7 @@
 	--system-divider-background-color-medium-static-black: var(--spectrum-transparent-black-300);
 	--system-divider-background-color-large-static-black: var(--spectrum-transparent-black-800);
 	--system-divider-size-s-thickness: var(--spectrum-divider-thickness-small);
-	--system-divider-size-s-background-color: var(--system-divider-background-color-small, var(--spectrum-gray-200));
 	--system-divider-thickness: var(--spectrum-divider-thickness-medium);
 	--system-divider-size-m-thickness: var(--spectrum-divider-thickness-medium);
-	--system-divider-background-color: var(--system-divider-background-color-medium, var(--spectrum-gray-200));
-	--system-divider-size-m-background-color: var(--system-divider-background-color-medium, var(--spectrum-gray-200));
 	--system-divider-size-l-thickness: var(--spectrum-divider-thickness-large);
-	--system-divider-size-l-background-color: var(--system-divider-background-color-large, var(--spectrum-gray-800));
 }

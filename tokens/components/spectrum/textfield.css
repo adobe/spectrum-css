@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-textfield-border-color: var(--spectrum-gray-500);
 	--system-textfield-border-color-hover: var(--spectrum-gray-600);
 	--system-textfield-border-color-focus: var(--spectrum-gray-800);
@@ -38,7 +38,7 @@
 	--system-textfield-character-count-spacing-inline-side: var(--spectrum-side-label-character-count-to-field);
 	--system-textfield-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
 	--system-textfield-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--system-textfield-background-color: var(--spectrum-gray-50);
+	--system-textfield-background-color: var(--spectrum-gray-25);
 	--system-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
 	--system-textfield-text-color-hover: var(--spectrum-neutral-content-color-hover);
 	--system-textfield-text-color-focus: var(--spectrum-neutral-content-color-focus);

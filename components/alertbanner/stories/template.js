@@ -8,6 +8,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-AlertBanner",

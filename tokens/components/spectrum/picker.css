@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-picker-background-color-default: var(--spectrum-gray-75);
 	--system-picker-background-color-default-open: var(--spectrum-gray-200);
 	--system-picker-background-color-active: var(--spectrum-gray-300);

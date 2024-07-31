@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--express {
 	--system-drop-zone-padding: var(--spectrum-spacing-400);
 	--system-drop-zone-illustration-to-heading: var(--spectrum-spacing-400);
 	--system-drop-zone-heading-to-body: var(--spectrum-spacing-75);

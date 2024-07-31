@@ -69,10 +69,6 @@
 	--spectrum-card-selected-background-color-rgb: var(--system-card-dark-selected-background-color-rgb);
 }
 
-.spectrum--darkest .spectrum-Card {
-	--spectrum-card-selected-background-color-rgb: var(--system-card-darkest-selected-background-color-rgb);
-}
-
 .spectrum-Card--quiet {
 	--spectrum-card-content-margin-top: var(--system-card-quiet-content-margin-top);
 	--spectrum-card-minimum-width: var(--system-card-quiet-minimum-width);
