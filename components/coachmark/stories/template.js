@@ -118,9 +118,7 @@ export const Template = (args, context) => {
 				customClasses: [`${args.rootClass}-popover`],
 				isOpen: true,
 				position: "right-top",
-				trigger: (passthrough) => CoachIndicator({
-					...passthrough,
-				}, context),
+				trigger: (passthrough) => CoachIndicator(passthrough, context),
 				content: [
 					CoachContainer(args, context)
 				],

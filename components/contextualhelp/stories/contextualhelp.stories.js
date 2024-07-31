@@ -91,8 +91,12 @@ export default {
 			],
 		},
 		packageJson: pkgJson,
+		docs: {
+			story: {
+				height: "200px",
+			},
+		},
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = ContextualHelpGroup.bind({});
@@ -124,6 +128,11 @@ TopPopover.args = {
 };
 TopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "auto",
+		},
+	},
 };
 
 export const HelpDefault = Template.bind({});
@@ -162,6 +171,11 @@ HelpTopPopover.args = {
 };
 HelpTopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "auto",
+		},
+	},
 };
 
 // ********* VRT ONLY ********* //

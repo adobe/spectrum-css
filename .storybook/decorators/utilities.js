@@ -16,7 +16,7 @@ import { capitalize } from "lodash-es";
 const Heading = ({
 	type = "heading",
 	content,
-	size = "m",
+	size = "l",
 	weight,
 	customClasses = [],
 } = {}) => {
@@ -28,7 +28,7 @@ const Heading = ({
 		skipLineBreak: true,
 		customClasses: ["chromatic-ignore", ...customClasses],
 		customStyles: {
-			"color": type !== "code" ? "var(--spectrum-gray-600)" : undefined,
+			"color": type !== "code" ? "var(--spectrum-heading-color)" : undefined,
 		}
 	});
 };
@@ -79,8 +79,8 @@ export const Container = ({
 		<div
 			data-outer-container
 			style=${styleMap({
-        "z-index": "1",
-        "position": "relative",
+				"z-index": "1",
+				"position": "relative",
 				"display": "flex",
 				"flex-direction": "column",
 				"flex-wrap": "nowrap",
@@ -273,7 +273,6 @@ export const Sizes = ({
 		withBorder,
 		heading: withHeading ? "Sizing" : undefined,
 		argKey: "size",
-		level: 3,
 		labels: {
 			xxs: "Extra-extra-small",
 			xs: "Extra-small",
@@ -325,14 +324,19 @@ export const Variants = ({
 	}
 
 	return (args, context) => {
+		// Fetch any docs configurations from the context to use for VRT
 		const { parameters = {} } = context;
-		const storyHeight = parameters.docs?.story?.height;
+
+		const height = parameters?.docs?.story?.height;
+		const width = parameters?.docs?.story?.width;
 
 		return html`
 			<!-- Simple, clean template preview for non-testing grid views -->
 			<div
 				style=${styleMap({
 					"padding": "12px",
+					"min-block-size": typeof height === "number" ? `${height}px` : height,
+					"min-inline-size": typeof width === "number" ? `${width}px` : width,
 					...wrapperStyles,
 					"display": window.isChromatic() ? "none" : wrapperStyles.display,
 				})}
@@ -388,14 +392,12 @@ export const Variants = ({
 						}
 
 						const combinedStyles = {
-							"min-block-size": storyHeight,
 							...wrapperStyles,
 							...testWrapperStyles,
 						};
 
 						return Container({
 							heading: testHeading,
-							level: withStates ? 1 : 3,
 							withBorder,
 							containerStyles: {
 								// the z-index is necessary to ensure elements always appear above the overlay
