@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-s2-foundations.7
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1) Thanks [@pfulton](https://github.com/pfulton)! - Updated build to set cssnano to discardUnused: false
+
 ## 2.0.0-s2-foundations.6
 
 ### Minor Changes
