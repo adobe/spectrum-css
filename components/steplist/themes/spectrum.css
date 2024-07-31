@@ -11,40 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: legacy) {
-	.spectrum-Steplist {
-		/* The width of a step */
-		--spectrum-steplist-step-width: 80px;
-
-		/* The diameter of the marker */
-		--spectrum-steplist-marker-diameter: 8px;
-
-		/* The width of the hit area */
-		--spectrum-steplist-marker-hitArea: 20px;
-
-		/* The height of the line */
-		--spectrum-steplist-segment-height: 2px;
-
-		/* This gives enough space for one line of text */
-		--spectrum-steplist-topPadding: 22px;
-		--spectrum-steplist-small-topPadding: 11px;
-
-		/* This gives enough space for the longest possible label */
-		--spectrum-steplist-sidePadding: 60px;
-
-		/* Offset from the BOTTOM of the steplist */
-		--spectrum-steplist-label-labelOffset: 10px;
-
-		/* Font size of the label */
-		--spectrum-steplist-label-text-size: 12px;
-
-		--spectrum-steplist-current-label-text-color: var(--spectrum-gray-800);
-		--spectrum-steplist-current-marker-color: var(--spectrum-gray-800);
-		--spectrum-steplist-complete-label-text-color: var(--spectrum-gray-700);
-		--spectrum-steplist-incomplete-label-color: var(--spectrum-gray-600);
-		--spectrum-steplist-complete-marker-background-color: var(--spectrum-gray-600);
-		--spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-200);
-		--spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-200);
-		--spectrum-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
-	}
-}
+@import "./spectrum-two.css";

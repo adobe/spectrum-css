@@ -11,13 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-textfield-border-color: var(--spectrum-gray-500);
-	--system-textfield-border-color-hover: var(--spectrum-gray-600);
+.spectrum.spectrum--express {
+	--system-textfield-border-color: var(--spectrum-gray-400);
+	--system-textfield-border-color-hover: var(--spectrum-gray-500);
 	--system-textfield-border-color-focus: var(--spectrum-gray-800);
 	--system-textfield-border-color-focus-hover: var(--spectrum-gray-900);
 	--system-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
-	--system-textfield-border-width: var(--spectrum-border-width-100);
+	--system-textfield-border-width: var(--spectrum-border-width-200);
 	--system-textfield-texfield-animation-duration: var(--spectrum-animation-duration-100);
 	--system-textfield-width: 240px;
 	--system-textfield-min-width: var(--spectrum-text-field-minimum-width-multiplier);
@@ -38,7 +38,7 @@
 	--system-textfield-character-count-spacing-inline-side: var(--spectrum-side-label-character-count-to-field);
 	--system-textfield-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
 	--system-textfield-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--system-textfield-background-color: var(--spectrum-gray-50);
+	--system-textfield-background-color: var(--spectrum-gray-25);
 	--system-textfield-text-color-default: var(--spectrum-neutral-content-color-default);
 	--system-textfield-text-color-hover: var(--spectrum-neutral-content-color-hover);
 	--system-textfield-text-color-focus: var(--spectrum-neutral-content-color-focus);
@@ -150,13 +150,4 @@
 	--system-textfield-size-xl-character-count-spacing-block-quiet: var(--spectrum-character-count-to-field-quiet-extra-large);
 	--system-textfield-size-xl-character-count-spacing-block-side: var(--spectrum-side-label-character-count-top-margin-extra-large);
 	--system-textfield-size-xl-text-area-min-block-size-quiet: var(--spectrum-component-height-300);
-}
-
-.spectrum--express {
-	--system-textfield-border-color: var(--spectrum-gray-400);
-	--system-textfield-border-color-hover: var(--spectrum-gray-500);
-	--system-textfield-border-color-focus: var(--spectrum-gray-800);
-	--system-textfield-border-color-focus-hover: var(--spectrum-gray-900);
-	--system-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
-	--system-textfield-border-width: var(--spectrum-border-width-200);
 }

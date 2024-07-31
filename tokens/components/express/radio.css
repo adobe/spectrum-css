@@ -11,11 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-radio-button-border-color-default: var(--spectrum-gray-600);
-	--system-radio-button-border-color-hover: var(--spectrum-gray-700);
-	--system-radio-button-border-color-down: var(--spectrum-gray-800);
-	--system-radio-button-border-color-focus: var(--spectrum-gray-700);
+.spectrum.spectrum--express {
+	--system-radio-button-border-color-default: var(--spectrum-gray-800);
+	--system-radio-button-border-color-hover: var(--spectrum-gray-900);
+	--system-radio-button-border-color-down: var(--spectrum-gray-900);
+	--system-radio-button-border-color-focus: var(--spectrum-gray-900);
 	--system-radio-neutral-content-color: var(--spectrum-neutral-content-color-default);
 	--system-radio-neutral-content-color-hover: var(--spectrum-neutral-content-color-hover);
 	--system-radio-neutral-content-color-down: var(--spectrum-neutral-content-color-down);
@@ -79,11 +79,4 @@
 	--system-radio-emphasized-button-checked-border-color-hover: var(--spectrum-accent-color-1000);
 	--system-radio-emphasized-button-checked-border-color-down: var(--spectrum-accent-color-1100);
 	--system-radio-emphasized-button-checked-border-color-focus: var(--spectrum-accent-color-1000);
-}
-
-.spectrum--express {
-	--system-radio-button-border-color-default: var(--spectrum-gray-800);
-	--system-radio-button-border-color-hover: var(--spectrum-gray-900);
-	--system-radio-button-border-color-down: var(--spectrum-gray-900);
-	--system-radio-button-border-color-focus: var(--spectrum-gray-900);
 }

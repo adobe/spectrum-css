@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-checkbox-control-color-default: var(--spectrum-gray-600);
 	--system-checkbox-control-color-hover: var(--spectrum-gray-700);
 	--system-checkbox-control-color-down: var(--spectrum-gray-800);

@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-asset-list-width: 272px;
 	--system-asset-list-child-indicator-animation: var(--spectrum-animation-duration-100);
 	--system-asset-list-item-height: var(--spectrum-spacing-600);

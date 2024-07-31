@@ -11,17 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: legacy) {
-	.spectrum-Underlay {
-		--spectrum-underlay-background-entry-animation-delay: var(--spectrum-animation-duration-0);
-		--spectrum-underlay-background-exit-animation-ease: var(--spectrum-animation-ease-in);
-		--spectrum-underlay-background-entry-animation-ease: var(--spectrum-animation-ease-out);
-		--spectrum-underlay-background-exit-animation-duration: var(--spectrum-animation-duration-100);
-		--spectrum-underlay-background-entry-animation-duration: var(--spectrum-animation-duration-600);
-		--spectrum-underlay-background-exit-animation-duration: var(--spectrum-animation-duration-300);
-		--spectrum-underlay-background-exit-animation-delay: var(--spectrum-animation-duration-200);
-
-		/* TODO update to --spectrum-overlay-color token once an RGB stripped value is available */
-		--spectrum-underlay-background-color: rgba(var(--spectrum-black-rgb), var(--spectrum-overlay-opacity));
-	}
-}
+@import "./spectrum-two.css";

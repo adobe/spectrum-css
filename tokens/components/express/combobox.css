@@ -11,12 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-combobox-border-color-default: var(--spectrum-gray-500);
-	--system-combobox-border-color-hover: var(--spectrum-gray-600);
-	--system-combobox-border-color-focus: var(--spectrum-gray-500);
-	--system-combobox-border-color-focus-hover: var(--spectrum-gray-600);
-	--system-combobox-border-color-key-focus: var(--spectrum-gray-600);
+.spectrum.spectrum--express {
+	--system-combobox-border-color-default: var(--spectrum-gray-400);
+	--system-combobox-border-color-hover: var(--spectrum-gray-500);
+	--system-combobox-border-color-focus: var(--spectrum-gray-900);
+	--system-combobox-border-color-focus-hover: var(--spectrum-gray-800);
+	--system-combobox-border-color-key-focus: var(--spectrum-gray-900);
 	--system-combobox-inline-size: var(--spectrum-field-width);
 	--system-combobox-block-size: var(--spectrum-component-height-100);
 	--system-combobox-min-inline-size: calc(var(--spectrum-combo-box-minimum-width-multiplier) * var(--system-combobox-block-size));
@@ -130,12 +130,4 @@
 	--system-combobox-quiet-size-m-spacing-label-to: var(--spectrum-field-label-to-component-quiet-medium);
 	--system-combobox-quiet-size-l-spacing-label-to: var(--spectrum-field-label-to-component-quiet-large);
 	--system-combobox-quiet-size-xl-spacing-label-to: var(--spectrum-field-label-to-component-quiet-extra-large);
-}
-
-.spectrum--express {
-	--system-combobox-border-color-default: var(--spectrum-gray-400);
-	--system-combobox-border-color-hover: var(--spectrum-gray-500);
-	--system-combobox-border-color-focus: var(--spectrum-gray-900);
-	--system-combobox-border-color-focus-hover: var(--spectrum-gray-800);
-	--system-combobox-border-color-key-focus: var(--spectrum-gray-900);
 }
