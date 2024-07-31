@@ -1,5 +1,19 @@
 # Change Log
 
+## 4.0.0-s2-foundations.11
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1) Thanks [@pfulton](https://github.com/pfulton)! - Updated build to set cssnano to discardUnused: false
+
+### Patch Changes
+
+- Updated dependencies [[`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.12
+  - @spectrum-css/popover@8.0.0-s2-foundations.11
+  - @spectrum-css/link@6.0.0-s2-foundations.11
+  - @spectrum-css/tokens@15.0.0-s2-foundations.12
+
 ## 4.0.0-s2-foundations.10
 
 ### Minor Changes
