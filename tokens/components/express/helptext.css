@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--express {
 	--system-help-text-line-height: var(--spectrum-line-height-100);
 	--system-help-text-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
 	--system-help-text-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);

@@ -11,8 +11,14 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./spectrum-two.css";
+
 @container style(--system: legacy) {
 	.spectrum-AssetCard {
-		--spectrum-assetcard-overlay-background-color: rgba(27, 127, 245, 10%);
+		--spectrum-assetcard-background-color: var(--spectrum-gray-100);
+		--spectrum-assetcard-border-color-hover: var(--spectrum-gray-500);
+		--spectrum-assetcard-border-color-down: var(--spectrum-gray-600);
+
+		--spectrum-assetcard-selectionindicator-background-color-default: rgba(var(--spectrum-gray-100-rgb), 0.9);
 	}
 }

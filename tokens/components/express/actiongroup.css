@@ -11,10 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-action-group-gap-size-compact: 0;
-	--system-action-group-horizontal-spacing-compact: -1px;
-	--system-action-group-vertical-spacing-compact: -1px;
+.spectrum.spectrum--express {
+	--system-action-group-gap-size-compact: var(--spectrum-spacing-50);
+	--system-action-group-horizontal-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
+	--system-action-group-vertical-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
 	--system-action-group-button-spacing-reset: 0;
 	--system-action-group-border-radius-reset: 0;
 	--system-action-group-border-radius: var(--spectrum-corner-radius-100);
@@ -30,10 +30,4 @@
 	--system-action-group-size-m-vertical-spacing-regular: var(--spectrum-spacing-100);
 	--system-action-group-size-l-vertical-spacing-regular: var(--spectrum-spacing-100);
 	--system-action-group-size-xl-vertical-spacing-regular: var(--spectrum-spacing-100);
-}
-
-.spectrum--express {
-	--system-action-group-gap-size-compact: var(--spectrum-spacing-50);
-	--system-action-group-horizontal-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
-	--system-action-group-vertical-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
 }

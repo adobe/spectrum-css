@@ -54,15 +54,3 @@
 	--spectrum-swatch-disabled-icon-size: var(--system-swatch-size-l-disabled-icon-size);
 	--spectrum-swatch-slash-thickness: var(--system-swatch-size-l-slash-thickness);
 }
-
-.spectrum--light {
-	--spectrum-swatch-border-color: var(--system-light-swatch-border-color);
-}
-
-.spectrum--dark {
-	--spectrum-swatch-border-color: var(--system-dark-swatch-border-color);
-}
-
-.spectrum--darkest {
-	--spectrum-swatch-border-color: var(--system-darkest-swatch-border-color);
-}

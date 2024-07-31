@@ -401,6 +401,8 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 			return Promise.reject(
 				new Error(`No content found for ${relativePrint(input, { cwd })}`),
 			);
+
+		const theme = path.basename(input, ".css");
 		return processCSS(
 			content,
 			path.join(cwd, input),
@@ -414,6 +416,8 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				preserveVariables: true,
 				// Only output the new selectors with the system mappings
 				stripLocalSelectors: true,
+				shouldCombine: true,
+				theme,
 				map: false,
 			},
 		).then(async (reports = []) => {

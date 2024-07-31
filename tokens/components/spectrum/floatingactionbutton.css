@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-floating-action-button-size: var(--spectrum-component-height-200);
 	--system-floating-action-button-icon-size: var(--spectrum-workflow-icon-size-200);
 	--system-floating-action-button-padding: var(--spectrum-component-pill-edge-to-visual-only-200);

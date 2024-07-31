@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-stepper-border-width: var(--spectrum-border-width-100);
 	--system-stepper-buttons-border-style: none;
 	--system-stepper-buttons-border-width: 0;
@@ -43,6 +43,9 @@
 	--system-stepper-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	--system-stepper-button-offset: calc(var(--system-stepper-button-width) / 2);
 	--system-stepper-animation-duration: var(--spectrum-animation-duration-100);
+	--system-stepper-infield-button-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-buttons-border-color, var(--system-stepper-buttons-border-color)));
+	--system-stepper-infield-button-border-width: var(--mod-stepper-button-border-width, var(--system-stepper-button-border-width));
+	--system-stepper-textfield-border-width: var(--mod-stepper-border-width, var(--system-stepper-border-width));
 	--system-stepper-size-s-button-width: var(--spectrum-in-field-button-width-stacked-small);
 	--system-stepper-size-s-height: var(--spectrum-component-height-75);
 	--system-stepper-size-l-button-width: var(--spectrum-in-field-button-width-stacked-large);

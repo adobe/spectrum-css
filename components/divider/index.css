@@ -40,6 +40,19 @@
 	border: none;
 	border-width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
 	border-radius: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
+
+	&.spectrum-Divider--sizeS {
+		--spectrum-divider-background-color: var(--spectrum-divider-background-color-small);
+	}
+
+	&,
+	&.spectrum-Divider--sizeM {
+		--spectrum-divider-background-color: var(--spectrum-divider-background-color-medium);
+	}
+
+	&.spectrum-Divider--sizeL {
+		--spectrum-divider-background-color: var(--spectrum-divider-background-color-large);
+	}
 }
 
 /* static white variant colors */

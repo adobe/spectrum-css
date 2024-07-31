@@ -11,8 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-tabs-font-weight: var(--spectrum-default-font-weight);
+.spectrum.spectrum--express {
+	--system-tabs-font-weight: var(--spectrum-bold-font-weight);
 	--system-tabs-item-height: var(--spectrum-tab-item-height-medium);
 	--system-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-medium);
 	--system-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-medium);
@@ -99,8 +99,4 @@
 	--system-tabs-compact-size-xl-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-extra-large));
 	--system-tabs-compact-size-xl-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-extra-large));
 	--system-tabs-compact-size-xl-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-extra-large));
-}
-
-.spectrum--express {
-	--system-tabs-font-weight: var(--spectrum-bold-font-weight);
 }

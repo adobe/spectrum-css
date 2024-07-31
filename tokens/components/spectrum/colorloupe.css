@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-color-loupe-width: var(--spectrum-color-loupe-width);
 	--system-color-loupe-height: var(--spectrum-color-loupe-height);
 	--system-color-loupe-offset: var(--spectrum-color-loupe-bottom-to-color-handle);

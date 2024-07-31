@@ -11,11 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-checkbox-control-color-default: var(--spectrum-gray-600);
-	--system-checkbox-control-color-hover: var(--spectrum-gray-700);
-	--system-checkbox-control-color-down: var(--spectrum-gray-800);
-	--system-checkbox-control-color-focus: var(--spectrum-gray-700);
+.spectrum.spectrum--express {
+	--system-checkbox-control-color-default: var(--spectrum-gray-800);
+	--system-checkbox-control-color-hover: var(--spectrum-gray-900);
+	--system-checkbox-control-color-down: var(--spectrum-gray-900);
+	--system-checkbox-control-color-focus: var(--spectrum-gray-900);
 	--system-checkbox-content-color-default: var(--spectrum-neutral-content-color-default);
 	--system-checkbox-content-color-hover: var(--spectrum-neutral-content-color-hover);
 	--system-checkbox-content-color-down: var(--spectrum-neutral-content-color-down);
@@ -69,11 +69,4 @@
 	--system-checkbox-size-xl-control-size: var(--spectrum-checkbox-control-size-extra-large);
 	--system-checkbox-size-xl-top-to-text: var(--spectrum-component-top-to-text-300);
 	--system-checkbox-size-xl-text-to-control: var(--spectrum-text-to-control-300);
-}
-
-.spectrum--express {
-	--system-checkbox-control-color-default: var(--spectrum-gray-800);
-	--system-checkbox-control-color-hover: var(--spectrum-gray-900);
-	--system-checkbox-control-color-down: var(--spectrum-gray-900);
-	--system-checkbox-control-color-focus: var(--spectrum-gray-900);
 }
