@@ -1,4 +1,5 @@
 import { setConsoleOptions } from "@storybook/addon-console";
+import isChromatic from "chromatic/isChromatic";
 import {
 	withActions,
 	withArgEvents,
@@ -38,7 +39,7 @@ setConsoleOptions({
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 export const parameters = {
-	layout: "padded",
+	layout: isChromatic ? "padded" : "centered",
 	showNav: true,
 	showTabs: true,
 	showPanel: true,
@@ -75,7 +76,7 @@ export const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "[data-html-preview]",
+		root: "[data-html-preview]:first-of-type",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -92,7 +93,6 @@ export const parameters = {
 		page: DocumentationTemplate,
 		story: {
 			inline: true,
-			height: "200px",
 		},
 		source: {
 			type: "dynamic",

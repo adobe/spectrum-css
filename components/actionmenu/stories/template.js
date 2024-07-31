@@ -44,6 +44,12 @@ export const Template = ({
 
 export const ActionMenuGroup = Variants({
 	Template,
+	wrapperStyles: {
+		"min-block-size": "250px",
+		// "display": "flex",
+		// "flex-direction": "column",
+		// "align-items": "center",
+	},
 	testData: [{
 		id: "popover-1",
 		triggerId: "trigger-1",

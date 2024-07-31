@@ -100,11 +100,6 @@ export default {
 				...(CalendarStories.parameters.actions.handles ?? [])
 			],
 		},
-		docs: {
-			story: {
-				height: "350px"
-			}
-		},
 		componentVersion: version,
 	},
 	decorators: [
@@ -127,13 +122,6 @@ Range.args = {
 	isRange: true,
 	isOpen: false,
 };
-Range.parameters = {
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
-};
 
 // ********* DOCS ONLY ********* //
 export const QuietRange = Template.bind({});
@@ -146,11 +134,6 @@ QuietRange.args = {
 };
 QuietRange.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const Invalid = Template.bind({});
@@ -161,11 +144,6 @@ Invalid.args = {
 };
 Invalid.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const QuietInvalid = Template.bind({});
@@ -177,11 +155,6 @@ QuietInvalid.args = {
 };
 QuietInvalid.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 
@@ -192,11 +165,6 @@ ReadOnly.args = {
 };
 ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px",
-		}
-	}
 };
 
 export const Disabled = Template.bind({});
@@ -206,11 +174,6 @@ Disabled.args = {
 };
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px",
-		}
-	}
 };
 export const QuietDisabled = Template.bind({});
 QuietDisabled.tags = ["autodocs", "!dev"];
@@ -220,11 +183,6 @@ QuietDisabled.args = {
 };
 QuietDisabled.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px",
-		}
-	}
 };
 
 // ********* VRT ONLY ********* //

@@ -1,6 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { html } from "lit";
 import { version } from "../package.json";
 import { MenuItemWithVariants, MenuWithVariants, Template } from "./template";
 
@@ -278,28 +277,8 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Menu-item"],
 		},
-		docs: {
-			story: {
-				height: "300px"
-			}
-		},
 		componentVersion: version,
 	},
-	decorators: [
-		(Story, context) => html`
-			<style>
-				.spectrum-Detail { display: inline-block; }
-				.spectrum-Typography > div {
-					border: 1px solid var(--spectrum-gray-200);
-					border-radius: 4px;
-					padding: 0 1em 1em;
-					/* Why seafoam? Because it separates it from the component styles. */
-					--mod-detail-font-color: var(--spectrum-seafoam-900);
-				}
-			</style>
-			${Story(context)}
-		`,
-	],
 };
 
 export const Default = MenuWithVariants.bind({});

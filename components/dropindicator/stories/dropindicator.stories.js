@@ -1,5 +1,4 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -40,10 +39,6 @@ export default {
 	parameters: {
 		componentVersion: version,
 	},
-	decorators: [
-		// Add padding for VRT because the end point circles have negative positioning outside of the story root element.
-		(story) => window.isChromatic() ? html`<div style="padding: 16px;">${story()}</div>` : story(),
-	],
 };
 
 export const Default = Template.bind({});

@@ -56,12 +56,6 @@ WithColorLoupe.args = {
 WithColorLoupe.tags = ["autodocs", "!dev"];
 WithColorLoupe.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			inline: false,
-			height: "150px",
-		},
-	},
 };
 
 // ********* VRT ONLY ********* //

@@ -49,6 +49,7 @@ export default {
 		showModal: true,
 	},
 	parameters: {
+		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-Dialog button"],
 		},
@@ -70,7 +71,7 @@ export default {
 // it doesn't look like the background color just stops without wrapping the
 // entire container of templates.
 const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
-	acc[key] = { 
+	acc[key] = {
 		...modes[key],
 		viewport: {
 			height: "1200px",
@@ -80,7 +81,7 @@ const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
 }, {});
 
 const mobileModeWithTallerViewport = Object.keys(mobile).reduce((acc, key) => {
-	acc[key] = { 
+	acc[key] = {
 		...mobile[key],
 		viewport: {
 			height: "1000px",

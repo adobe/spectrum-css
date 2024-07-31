@@ -46,16 +46,12 @@ export default {
 		hasImage: false,
 	},
 	parameters: {
+		layout: "fullscreen",
 		actions: {
 			handles: [
 				...(ActionButton.parameters?.actions?.handles ?? []),
 				...(Menu.parameters?.actions?.handles ?? []),
 			],
-		},
-		docs: {
-			story: {
-				height: "300px"
-			}
 		},
 		componentVersion: version,
 		chromatic: {

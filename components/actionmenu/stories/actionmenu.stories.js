@@ -36,16 +36,11 @@ export default {
 		triggerId: { table: { disable: true } },
 	},
 	args: {
-		isOpen: false,
-		withTip: Popover.args.withTip,
-		position: Popover.args.position,
+		isOpen: true,
+		withTip: false,
+		position: "bottom",
 	},
 	parameters: {
-		docs: {
-			story: {
-				height: "250px",
-			},
-		},
 		actions: {
 			handles: [
 				...(Popover?.parameters?.actions?.handles ?? []),
@@ -59,9 +54,10 @@ export default {
 
 export const Default = ActionMenuGroup.bind({});
 Default.args = {
-	isOpen: true,
 	id: "popover-0",
 	triggerId: "trigger-0",
+	isOpen: true,
+	withTip: false,
 	position: "bottom",
 	label: "More actions",
 	iconName: "More",

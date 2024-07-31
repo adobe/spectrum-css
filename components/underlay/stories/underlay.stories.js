@@ -21,10 +21,10 @@ export default {
 		isOpen: false,
 	},
 	parameters: {
+		layout: "fullscreen",
 		docs: {
 			story: {
 				inline: false,
-				height: "500px",
 			},
 		},
 		chromatic: { disableSnapshot: true },
