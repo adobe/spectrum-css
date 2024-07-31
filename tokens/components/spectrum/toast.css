@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-toast-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
 	--system-toast-font-weight: var(--spectrum-regular-font-weight);
 	--system-toast-font-size: var(--spectrum-font-size-100);

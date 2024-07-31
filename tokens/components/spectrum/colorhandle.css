@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-color-handle-size: var(--spectrum-color-handle-size);
 	--system-color-handle-focused-size: var(--spectrum-color-handle-size-key-focus);
 	--system-color-handle-hitarea-size: var(--spectrum-color-control-track-width);

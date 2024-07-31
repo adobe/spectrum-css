@@ -11,8 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-date-picker-initial-height: var(--spectrum-component-height-100);
+.spectrum.spectrum--express {
+	--system-date-picker-initial-height: var(--spectrum-component-height-75);
 	--system-date-picker-border-radius: var(--spectrum-corner-radius-100);
 	--system-date-picker-border-radius-quiet: 0;
 	--system-date-picker-border-width: var(--spectrum-border-width-100);
@@ -52,8 +52,4 @@
 	--system-date-picker-padding-inline-end-quiet: calc(var(--system-date-picker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) - var(--system-date-picker-quiet-button-offset));
 	--system-date-picker-padding-inline-end-invalid: calc(var(--system-date-picker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) + var(--system-date-picker-icon-to-button) + var(--system-date-picker-icon-size) - var(--system-date-picker-border-width) * 2);
 	--system-date-picker-padding-inline-end-invalid-quiet: calc(var(--system-date-picker-pickerbutton-width-quiet) + var(--system-date-picker-icon-size) + var(--system-date-picker-icon-to-text));
-}
-
-.spectrum--express {
-	--system-date-picker-initial-height: var(--spectrum-component-height-75);
 }

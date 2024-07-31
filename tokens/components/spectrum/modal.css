@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-modal-confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
 	--system-modal-fullscreen-margin: 32px;
 	--system-modal-max-height: 90vh;

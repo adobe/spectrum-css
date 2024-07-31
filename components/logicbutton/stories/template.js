@@ -2,6 +2,8 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-LogicButton",

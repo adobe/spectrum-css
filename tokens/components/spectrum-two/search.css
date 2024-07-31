@@ -12,13 +12,13 @@
  */
 
 .spectrum {
+	--system-search-border-radius: var(--spectrum-corner-radius-100);
+	--system-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 	--system-search-border-color-default: var(--spectrum-gray-500);
 	--system-search-border-color-hover: var(--spectrum-gray-600);
 	--system-search-border-color-focus: var(--spectrum-gray-800);
 	--system-search-border-color-focus-hover: var(--spectrum-gray-900);
 	--system-search-border-color-key-focus: var(--spectrum-gray-900);
-	--system-search-border-radius: var(--spectrum-corner-radius-100);
-	--system-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 	--system-search-inline-size: var(--spectrum-field-width);
 	--system-search-block-size: var(--spectrum-component-height-100);
 	--system-search-button-inline-size: var(--system-search-block-size);
