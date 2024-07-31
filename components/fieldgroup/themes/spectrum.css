@@ -11,9 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: legacy) {
-	.spectrum-FieldGroup {
-		--spectrum-fieldgroup-margin: var(--spectrum-spacing-300);
-		--spectrum-fieldgroup-readonly-delimiter: "\002c";
-	}
-}
+@import "./spectrum-two.css";

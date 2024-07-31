@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--express {
 	--system-color-wheel-width: var(--spectrum-color-wheel-width);
 	--system-color-wheel-min-width: var(--spectrum-color-wheel-minimum-width);
 	--system-color-wheel-height: var(--spectrum-color-wheel-width);

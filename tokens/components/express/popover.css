@@ -11,8 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-popover-border-width: var(--spectrum-border-width-100);
+.spectrum.spectrum--express {
+	--system-popover-border-width: 0;
 	--system-popover-animation-distance: var(--spectrum-spacing-100);
 	--system-popover-background-color: var(--spectrum-background-layer-2-color);
 	--system-popover-border-color: var(--spectrum-gray-400);
@@ -26,8 +26,4 @@
 	--system-popover-pointer-height: var(--spectrum-popover-tip-height);
 	--system-popover-pointer-edge-offset: calc(var(--spectrum-corner-radius-100) + var(--spectrum-popover-tip-width) / 2);
 	--system-popover-pointer-edge-spacing: calc(var(--system-popover-pointer-edge-offset) - var(--spectrum-popover-tip-width) / 2);
-}
-
-.spectrum--express {
-	--system-popover-border-width: 0;
 }

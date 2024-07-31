@@ -11,11 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: legacy) {
-	.spectrum-MillerColumns {
-		--spectrum-millercolumns-inline-size: 272px;
-		--spectrum-millercolumns-padding: var(--spectrum-spacing-100);
-		--spectrum-millercolumns-margin-inline-start: var(--spectrum-spacing-100);
-		--spectrum-millercolumns-margin-inline-end: var(--spectrum-spacing-100);
-	}
-}
+@import "./spectrum-two.css";
