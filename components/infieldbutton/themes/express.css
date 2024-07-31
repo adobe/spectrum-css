@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-InfieldButton {
 		--spectrum-infield-button-border-width: 0;
 		--spectrum-infield-button-border-color: transparent;

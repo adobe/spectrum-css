@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: legacy) {
+@container style(--system: legacy) {
 	.spectrum-InfieldButton {
 		--spectrum-infield-button-border-width: var(--spectrum-border-width-100);
 		--spectrum-infield-button-border-color: inherit;

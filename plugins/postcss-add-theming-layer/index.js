@@ -173,9 +173,11 @@ module.exports = ({
 			container.remove();
 		});
 
+		// has keyframes
+		// if (debug) console.log("2", root);
+
 		// Our job here is done
-		if (skipMapping) return;
-		if (stripLocalSelectors) return;
+		if (skipMapping || stripLocalSelectors) return;
 
 		for (let [, selectorMap] of systemMap.entries()) {
 			// This adds the new selectors to the root with their respective system-level mappings

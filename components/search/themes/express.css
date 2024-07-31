@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Search {
 		--spectrum-search-border-radius: calc(var(--spectrum-component-height-100) / 2);
 		--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
