@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-date-picker-initial-height: var(--spectrum-component-height-100);
 	--system-date-picker-border-radius: var(--spectrum-corner-radius-100);
 	--system-date-picker-border-radius-quiet: 0;

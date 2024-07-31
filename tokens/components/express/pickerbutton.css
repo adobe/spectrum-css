@@ -11,16 +11,16 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-picker-button-background-color: var(--spectrum-gray-75);
-	--system-picker-button-background-color-hover: var(--spectrum-gray-200);
-	--system-picker-button-background-color-down: var(--spectrum-gray-300);
-	--system-picker-button-background-color-key-focus: var(--spectrum-gray-200);
-	--system-picker-button-border-color: inherit;
-	--system-picker-button-border-radius: var(--spectrum-corner-radius-100);
-	--system-picker-button-border-radius-rounded-sided: 0;
-	--system-picker-button-border-radius-sided: 0;
-	--system-picker-button-border-width: var(--spectrum-border-width-100);
+.spectrum.spectrum--express {
+	--system-picker-button-background-color: var(--spectrum-gray-200);
+	--system-picker-button-background-color-hover: var(--spectrum-gray-300);
+	--system-picker-button-background-color-down: var(--spectrum-gray-400);
+	--system-picker-button-background-color-key-focus: var(--spectrum-gray-300);
+	--system-picker-button-border-color: none;
+	--system-picker-button-border-radius: var(--spectrum-corner-radius-75);
+	--system-picker-button-border-radius-rounded-sided: var(--spectrum-corner-radius-200);
+	--system-picker-button-border-radius-sided: var(--spectrum-corner-radius-75);
+	--system-picker-button-border-width: 0px;
 	--system-picker-button-height: var(--spectrum-component-height-100);
 	--system-picker-button-width: var(--spectrum-component-height-100);
 	--system-picker-button-gap: var(--spectrum-text-to-visual-50);
@@ -71,16 +71,4 @@
 	--system-picker-button-size-xl-label-padding: var(--spectrum-text-to-visual-300);
 	--system-picker-button-size-xl-font-size: var(--spectrum-font-size-300);
 	--system-picker-button-size-xl-fill-padding: var(--spectrum-field-edge-to-disclosure-icon-300);
-}
-
-.spectrum--express {
-	--system-picker-button-background-color: var(--spectrum-gray-200);
-	--system-picker-button-background-color-hover: var(--spectrum-gray-300);
-	--system-picker-button-background-color-down: var(--spectrum-gray-400);
-	--system-picker-button-background-color-key-focus: var(--spectrum-gray-300);
-	--system-picker-button-border-color: none;
-	--system-picker-button-border-radius: var(--spectrum-corner-radius-75);
-	--system-picker-button-border-radius-rounded-sided: var(--spectrum-corner-radius-200);
-	--system-picker-button-border-radius-sided: var(--spectrum-corner-radius-75);
-	--system-picker-button-border-width: 0px;
 }

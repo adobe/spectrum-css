@@ -30,18 +30,15 @@
 
 		&.spectrum-Divider--sizeS {
 			--spectrum-divider-thickness: var(--spectrum-divider-thickness-small);
-			--spectrum-divider-background-color: var(--spectrum-divider-background-color-small, var(--spectrum-gray-200));
 		}
 
 		&,
 		&.spectrum-Divider--sizeM {
 			--spectrum-divider-thickness: var(--spectrum-divider-thickness-medium);
-			--spectrum-divider-background-color: var(--spectrum-divider-background-color-medium, var(--spectrum-gray-200));
 		}
 
 		&.spectrum-Divider--sizeL {
 			--spectrum-divider-thickness: var(--spectrum-divider-thickness-large);
-			--spectrum-divider-background-color: var(--spectrum-divider-background-color-large, var(--spectrum-gray-800));
 		}
 	}
 }

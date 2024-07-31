@@ -11,21 +11,21 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
-	--system-slider-track-color: var(--spectrum-gray-300);
-	--system-slider-track-fill-color: var(--spectrum-gray-700);
-	--system-slider-ramp-track-color: var(--spectrum-gray-400);
+.spectrum.spectrum--express {
+	--system-slider-track-color: var(--spectrum-gray-200);
+	--system-slider-track-fill-color: var(--spectrum-gray-600);
+	--system-slider-ramp-track-color: var(--spectrum-gray-300);
 	--system-slider-ramp-track-color-disabled: var(--spectrum-gray-200);
-	--system-slider-handle-background-color: transparent;
-	--system-slider-handle-background-color-disabled: transparent;
-	--system-slider-ramp-handle-background-color: var(--spectrum-gray-100);
-	--system-slider-ticks-handle-background-color: var(--spectrum-gray-100);
-	--system-slider-handle-border-color: var(--spectrum-gray-700);
-	--system-slider-handle-disabled-background-color: var(--spectrum-gray-100);
-	--system-slider-tick-mark-color: var(--spectrum-gray-300);
-	--system-slider-handle-border-color-hover: var(--spectrum-gray-800);
-	--system-slider-handle-border-color-down: var(--spectrum-gray-800);
-	--system-slider-handle-border-color-key-focus: var(--spectrum-gray-800);
+	--system-slider-handle-background-color: var(--spectrum-gray-50);
+	--system-slider-handle-background-color-disabled: var(--spectrum-gray-50);
+	--system-slider-ramp-handle-background-color: var(--spectrum-gray-50);
+	--system-slider-ticks-handle-background-color: var(--spectrum-gray-50);
+	--system-slider-handle-border-color: var(--spectrum-gray-800);
+	--system-slider-handle-disabled-background-color: var(--spectrum-gray-50);
+	--system-slider-tick-mark-color: var(--spectrum-gray-200);
+	--system-slider-handle-border-color-hover: var(--spectrum-gray-900);
+	--system-slider-handle-border-color-down: var(--spectrum-gray-900);
+	--system-slider-handle-border-color-key-focus: var(--spectrum-gray-900);
 	--system-slider-handle-focus-ring-color-key-focus: var(--spectrum-focus-indicator-color);
 	--system-slider-font-size: var(--spectrum-font-size-75);
 	--system-slider-handle-size: var(--spectrum-slider-handle-size-medium);
@@ -88,22 +88,4 @@
 	--system-slider-input-left: calc(var(--system-slider-handle-margin-left) / 4);
 	--system-slider-track-handleoffset: var(--spectrum-slider-handle-gap);
 	--system-slider-range-track-reset: 0;
-}
-
-.spectrum--express {
-	--system-slider-track-color: var(--spectrum-gray-200);
-	--system-slider-track-fill-color: var(--spectrum-gray-600);
-	--system-slider-ramp-track-color: var(--spectrum-gray-300);
-	--system-slider-ramp-track-color-disabled: var(--spectrum-gray-200);
-	--system-slider-handle-background-color: var(--spectrum-gray-50);
-	--system-slider-handle-background-color-disabled: var(--spectrum-gray-50);
-	--system-slider-ramp-handle-background-color: var(--spectrum-gray-50);
-	--system-slider-ticks-handle-background-color: var(--spectrum-gray-50);
-	--system-slider-handle-border-color: var(--spectrum-gray-800);
-	--system-slider-handle-disabled-background-color: var(--spectrum-gray-50);
-	--system-slider-tick-mark-color: var(--spectrum-gray-200);
-	--system-slider-handle-border-color-hover: var(--spectrum-gray-900);
-	--system-slider-handle-border-color-down: var(--spectrum-gray-900);
-	--system-slider-handle-border-color-key-focus: var(--spectrum-gray-900);
-	--system-slider-handle-focus-ring-color-key-focus: var(--spectrum-focus-indicator-color);
 }

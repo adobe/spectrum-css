@@ -11,11 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: legacy) {
-	.spectrum-DropIndicator {
-		--spectrum-dropindicator-border-color: var(--spectrum-dropindicator-color);
-		--spectrum-dropindicator-circle-color: var(--spectrum-dropindicator-color);
-		--spectrum-dropindicator-border-size: var(--spectrum-border-width-200);
-		--spectrum-dropindicator-circle-size: 12px;
-	}
-}
+@import "./spectrum-two.css";

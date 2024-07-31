@@ -12,14 +12,15 @@
  */
 
 module.exports = ({
-	resolveImports = false,
+	resolveImports = true,
 	...options
 }) => require("../postcss.config.js")({
 	...options,
 	resolveImports,
 	env: "production",
+	map: false,
 	additionalPlugins: {
-		"postcss-rgb-mapping": {},
+		"@spectrum-tools/postcss-rgb-mapping": {},
 		"postcss-sorting": {
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",

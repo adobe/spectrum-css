@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--express {
 	--system-tree-view-line-height: var(--spectrum-line-height-200);
 	--system-tree-view-margin-block: 1em;
 	--system-tree-view-font-size: var(--spectrum-font-size-100);
