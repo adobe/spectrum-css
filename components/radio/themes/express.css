@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Radio {
 		/* selection indicator */
 		--spectrum-radio-button-border-color-default: var(--spectrum-gray-800);

@@ -17,7 +17,7 @@ export const Template = ({
 	isFixed = false,
 	isFlexible = false,
 	customClasses = [],
-}) => html`
+} = {}, context = {}) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -38,8 +38,8 @@ export const Template = ({
 				CloseButton({
 					label: "Clear selection",
 					staticColor: isEmphasized ? "white" : undefined,
-				}),
-				FieldLabel({ size: "s", label: "2 Selected" }),
+				}, context),
+				FieldLabel({ size: "s", label: "2 Selected" }, context),
 				ActionGroup({
 					size: "m",
 					areQuiet: true,
@@ -58,9 +58,9 @@ export const Template = ({
 							label: "Delete",
 						},
 					],
-				}),
+				}, context),
 			],
-		})}
+		}, context)}
 	</div>
 `;
 

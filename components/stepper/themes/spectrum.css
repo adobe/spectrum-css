@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: legacy) {
+@container style(--system: legacy) {
 	.spectrum-Stepper {
 		--spectrum-stepper-border-width: var(--spectrum-border-width-100);
 
