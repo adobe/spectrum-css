@@ -1,5 +1,21 @@
 # Change Log
 
+## 4.0.0-s2-foundations.11
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`8e772ef`](https://github.com/adobe/spectrum-css/commit/8e772efd757f5e88fd4048a5c0229472f9bf90cf) Thanks [@pfulton](https://github.com/pfulton)! - Updated build to set cssnano to discardUnused: false
+
+### Patch Changes
+
+- Updated dependencies [[`8e772ef`](https://github.com/adobe/spectrum-css/commit/8e772efd757f5e88fd4048a5c0229472f9bf90cf)]:
+  - @spectrum-css/divider@4.0.0-s2-foundations.11
+  - @spectrum-css/button@14.0.0-s2-foundations.11
+  - @spectrum-css/dialog@11.0.0-s2-foundations.11
+  - @spectrum-css/modal@6.0.0-s2-foundations.11
+  - @spectrum-css/icon@8.0.0-s2-foundations.12
+  - @spectrum-css/tokens@15.0.0-s2-foundations.12
+
 ## 4.0.0-s2-foundations.10
 
 ### Minor Changes
