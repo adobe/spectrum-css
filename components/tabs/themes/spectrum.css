@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: legacy) {
+@container style(--system: legacy) {
 	.spectrum-Tabs {
 		--spectrum-tabs-font-weight: var(--spectrum-default-font-weight);
 
