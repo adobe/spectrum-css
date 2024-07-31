@@ -5,7 +5,7 @@ import { version } from "../package.json";
 import { WellGroup } from "./template";
 
 /**
- * A well is a content container that displays non-editable content separate from other content on the screen. Often this is used to display preformatted text, such as code/markup examples on a documentation page.
+ * A well is a content container that displays non-editable content separate from other content on the screen. Often this is used to display preformatted text, such as code/markup examples on a documentation page. The well may also be labeled by an optional heading outside of the component.
  */
 export default {
 	title: "Well",
