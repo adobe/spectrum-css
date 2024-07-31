@@ -11,16 +11,17 @@
  * governing permissions and limitations under the License.
  */
 
-const { join, sep } = require("path");
+const { join } = require("path");
 
 module.exports = ({
 	file,
-	cwd,
 	skipMapping = false,
 	referencesOnly = false,
 	preserveVariables = true,
 	stripLocalSelectors = false,
 	resolveImports = true,
+	shouldCombine = false,
+	theme = "spectrum",
 	lint = true,
 	verbose = true,
 	minify = false,
@@ -29,10 +30,18 @@ module.exports = ({
 	...options
 } = {}) => {
 	const isProduction = env.toLowerCase() === "production";
-	if (!isProduction && !options.map) {
-		options.map = { inline: false };
+
+	if (typeof options?.map === "undefined") {
+		options.map = isProduction ? false : { inline: false };
 	}
-	else options.map = false;
+
+	let baseClass = ".spectrum";
+	if (theme === "spectrum") {
+		baseClass += ".spectrum--legacy";
+	}
+	else if (theme === "express") {
+		baseClass += ".spectrum--express";
+	}
 
 	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
 	if (typeof file === "string" && file.includes("@spectrum-css/tokens-legacy")) {
@@ -42,12 +51,12 @@ module.exports = ({
 		};
 	}
 
-	if (cwd && cwd.split(sep).pop() === ".storybook") {
-		skipMapping = false;
-		referencesOnly = false;
-		preserveVariables = true;
-		stripLocalSelectors = false;
-	}
+	// if (cwd && cwd.split(sep).pop() === ".storybook") {
+	// 	skipMapping = false;
+	// 	referencesOnly = false;
+	// 	preserveVariables = true;
+	// 	stripLocalSelectors = false;
+	// }
 
 	return {
 		...options,
@@ -68,7 +77,7 @@ module.exports = ({
 			} : false,
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
-			"postcss-add-theming-layer": {
+			"@spectrum-tools/postcss-add-theming-layer": {
 				selectorPrefix: "spectrum",
 				skipMapping,
 				preserveVariables,
@@ -76,6 +85,9 @@ module.exports = ({
 				stripLocalSelectors,
 				debug: verbose,
 			},
+			"@spectrum-tools/postcss-property-rollup": shouldCombine ? {
+				newSelector: baseClass,
+			} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */

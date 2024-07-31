@@ -51,7 +51,6 @@
 		--spectrum-actionbutton-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 		--spectrum-actionbutton-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-
 		&.spectrum-ActionButton--quiet {
 			--spectrum-actionbutton-background-color-default: transparent;
 			--spectrum-actionbutton-background-color-hover: var(--spectrum-gray-100);

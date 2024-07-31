@@ -1,7 +1,6 @@
 {
-  "private": true,
-  "name": "postcss-add-theming-layer",
-  "version": "2.1.1-s2-foundations.0",
+  "name": "@spectrum-tools/postcss-add-theming-layer",
+  "version": "0.0.0",
   "description": "Leveraging style container queries to create an abstraction layer for supporting multiple theming systems",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -24,7 +23,7 @@
   "devDependencies": {
     "ava": "^6.1.3",
     "c8": "^10.1.2",
-    "postcss": "^8.4.39"
+    "postcss": "^8.4.40"
   },
   "keywords": [
     "css",
