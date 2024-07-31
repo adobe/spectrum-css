@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--legacy {
 	--system-close-button-background-color-default: transparent;
 	--system-close-button-background-color-hover: var(--spectrum-gray-200);
 	--system-close-button-background-color-down: var(--spectrum-gray-300);
@@ -29,19 +29,24 @@
 	--system-close-button-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--system-close-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	--system-close-button-height: var(--spectrum-component-height-100);
+	--system-close-button-width: var(--spectrum-closebutton-height);
 	--system-close-button-size: var(--system-close-button-size-400);
 	--system-close-button-border-radius: var(--system-close-button-size-400);
 	--system-close-button-animation-duration: var(--spectrum-animation-duration-100);
 	--system-closebutton-size-s-height: var(--spectrum-component-height-75);
+	--system-closebutton-size-s-width: var(--spectrum-closebutton-height);
 	--system-closebutton-size-s-size: var(--system-close-button-size-300);
 	--system-closebutton-size-s-border-radius: var(--system-close-button-size-300);
 	--system-closebutton-size-m-height: var(--spectrum-component-height-100);
+	--system-closebutton-size-m-width: var(--spectrum-closebutton-height);
 	--system-closebutton-size-m-size: var(--system-close-button-size-400);
 	--system-closebutton-size-m-border-radius: var(--system-close-button-size-400);
 	--system-closebutton-size-l-height: var(--spectrum-component-height-200);
+	--system-closebutton-size-l-width: var(--spectrum-closebutton-height);
 	--system-closebutton-size-l-size: var(--system-close-button-size-500);
 	--system-closebutton-size-l-border-radius: var(--system-close-button-size-500);
 	--system-closebutton-size-xl-height: var(--spectrum-component-height-300);
+	--system-closebutton-size-xl-width: var(--spectrum-closebutton-height);
 	--system-closebutton-size-xl-size: var(--system-close-button-size-600);
 	--system-closebutton-size-xl-border-radius: var(--system-close-button-size-600);
 	--system-close-button-static-white-static-background-color-default: transparent;

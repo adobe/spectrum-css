@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--legacy {
+.spectrum.spectrum--express {
 	--system-link-animation-duration: var(--spectrum-animation-duration-100);
 	--system-link-text-color-primary-default: var(--spectrum-accent-content-color-default);
 	--system-link-text-color-primary-hover: var(--spectrum-accent-content-color-hover);
