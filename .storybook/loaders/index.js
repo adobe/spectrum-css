@@ -11,6 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-export { FontLoader } from "./font-loader.js";
+// Use the document.fonts API to check if fonts have loaded
+export const FontLoader = async () => ({
+	fonts: document.fonts ? await document.fonts.ready : true,
+});
+
 export { IconLoader } from "./icon-loader.js";
 export { TokenLoader } from "./token-loader.js";

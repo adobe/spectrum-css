@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: legacy) {
+@container style(--system: legacy) {
 	.spectrum-Textfield {
 		--spectrum-textfield-border-color: var(--spectrum-gray-500);
 		--spectrum-textfield-border-color-hover: var(--spectrum-gray-600);

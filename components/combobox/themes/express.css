@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Combobox {
 		--spectrum-combobox-border-color-default: var(--spectrum-gray-400);
 		--spectrum-combobox-border-color-hover: var(--spectrum-gray-500);

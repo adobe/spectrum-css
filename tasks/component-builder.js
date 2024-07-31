@@ -187,8 +187,8 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 				clean,
 				skipMapping: true,
 				referencesOnly: false,
-				stripLocalSelectors: false,
 				preserveVariables: false,
+				stripLocalSelectors: false,
 			},
 		),
 	]);

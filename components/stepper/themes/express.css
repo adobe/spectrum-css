@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Stepper {
 		--spectrum-stepper-border-width: var(--spectrum-border-width-200);
 
