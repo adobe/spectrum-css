@@ -6,7 +6,7 @@ import { AllVariantsCoachIndicatorGroup } from "./template";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.
- * 
+ *
  * Coach indicator is primarily used along with the [coach mark](/docs/components-coach-mark--docs) component.
  */
 export default {
@@ -41,6 +41,12 @@ Default.parameters = {
 	chromatic: {
 		prefersReducedMotion: "reduce",
 		pauseAnimationAtEnd: true,
+		modes: {
+			// Skips the dark mode/RTL b/c no changes are made to the component
+			"Dark | RTL": {
+				disable: true,
+			},
+		},
 	},
 };
 Default.tags = ["!autodocs"];

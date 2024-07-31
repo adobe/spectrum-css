@@ -109,6 +109,7 @@ export default {
 		layout: "default",
 	},
 	parameters: {
+		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-Dialog button"],
 		},
