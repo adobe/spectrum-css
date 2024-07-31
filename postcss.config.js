@@ -73,7 +73,8 @@ module.exports = ({
 				skipMapping,
 				preserveVariables,
 				referencesOnly,
-				stripLocalSelectors
+				stripLocalSelectors,
+				debug: verbose,
 			},
 			...additionalPlugins,
 			/* --------------------------------------------------- */
@@ -113,6 +114,7 @@ module.exports = ({
 					{
 						colormin: false,
 						reduceIdents: false,
+						discardUnused: false,
 						discardComments: {
 							removeAll: true,
 						},
