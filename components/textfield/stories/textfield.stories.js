@@ -217,7 +217,7 @@ export default {
 		labelText: "Username",
 		displayHelpText: false,
 		helpText: "Create a username with at least 5 characters",
-		placeholder: "Username",
+		placeholder: "",
 		size: "m",
 		multiline: false,
 		grows: false,

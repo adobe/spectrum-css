@@ -235,10 +235,6 @@ export const TextFieldGroup = Variants({
 		value: "UsernameWiderThanInput@ReallyLongEmail.com"
 	},
 	{
-		testHeading: "With placeholder",
-		placeholder: "Username",
-	},
-	{
 		testHeading: "With help text",
 		displayLabel: true,
 		labelText: "Username",
