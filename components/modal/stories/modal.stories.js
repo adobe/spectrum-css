@@ -1,6 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import { html } from "lit";
 import { version } from "../package.json";
 import { ModalGroup } from "./template";
 
@@ -35,15 +34,12 @@ export default {
 		content: ["Modal is a base component used by other components, and should not be used on its own."],
 	},
 	parameters: {
+		layout: "fullscreen",
+		docs: {
+			story: { height: "800px" },
+		},
 		componentVersion: version,
 	},
-	decorators: [
-		/**
-		 * Ensure modal is is not cropped out of the Chromatic screenshot.
-		 * @see https://www.chromatic.com/docs/snapshots/#why-isn%E2%80%99t-my-modal-or-dialog-captured 
-		 */
-		(story) => window.isChromatic() ? html`<div style="width: 1200px; height: 800px;">${story()}</div>` : story()
-	],
 };
 
 export const Default = ModalGroup.bind({});

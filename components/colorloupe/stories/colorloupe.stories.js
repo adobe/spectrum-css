@@ -17,12 +17,6 @@ export default {
 		isOpen: true,
 	},
 	parameters: {
-		chromatic: { diffThreshold: 0.2 },
-		docs: {
-			story: {
-				height: "100px"
-			}
-		},
 		componentVersion: version,
 	},
 };

@@ -27,8 +27,11 @@ export default {
 		isOpen: false,
 	},
 	parameters: {
-		chromatic: {
-			delay: 2000,
+		layout: "fullscreen",
+		docs: {
+			story: {
+				height: "300px",
+			},
 		},
 		componentVersion: version,
 	}

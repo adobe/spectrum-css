@@ -1,6 +1,5 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -91,10 +90,6 @@ export default {
 		},
 		componentVersion: version,
 	},
-	decorators: [
-		// Add padding for VRT so drop shadows are not cut off.
-		(story) => window.isChromatic() ? html`<div style="padding: 32px; min-height: 300px;">${story()}</div>` : story(),
-	],
 };
 
 export const Default = Template.bind({});

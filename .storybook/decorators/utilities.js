@@ -1,5 +1,4 @@
 import "@spectrum-css/typography";
-
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -132,6 +131,7 @@ export const Variants = ({
 	// Test data defaults to an empty array so that we at least get the base component
 	testData = [{}],
 	stateData = [],
+  wrapperStyles = {},
 	sizeDirection = "column",
 	stateDirection = "row",
   withBorders = true,
@@ -141,6 +141,17 @@ export const Variants = ({
 	}
 
 	return (args, context) => {
+    // Fetch any docs configurations from the context to use for VRT
+    if (context?.parameters?.docs?.story?.height) {
+      // Subtract 10px to account for the block margin
+      wrapperStyles["min-block-size"] = context.parameters.docs.story.height;
+    }
+
+    if (context?.parameters?.docs?.story?.width) {
+      // Subtract 10px to account for the inline margin
+      wrapperStyles["min-inline-size"] = context.parameters.docs.story.width;
+    }
+
 		const isOpenInitial = args.isOpen;
 		// If a component is hidden due to the testing preview modes, force the isOpen property to be false
 		if (Object.keys(args).includes("isOpen")) {
@@ -152,7 +163,8 @@ export const Variants = ({
       <!-- Simple, clean template preview for non-testing grid views -->
       <div
         style=${styleMap({
-          "display": window.isChromatic() ? "none" : "contents",
+          ...wrapperStyles,
+          "display": window.isChromatic() ? "none" : wrapperStyles.display ?? "contents",
         })}
         data-html-preview
       >
@@ -162,10 +174,11 @@ export const Variants = ({
       <!-- Start testing grid markup -->
       <div
         style=${styleMap({
-          "display": window.isChromatic() ? "flex" : "none",
           "flex-direction": "column",
           "align-items": "flex-start",
           "gap": "60px",
+          ...wrapperStyles,
+          "display": window.isChromatic() ? "flex" : "none",
         })}
       >
         <!-- Test data can include: a custom template, descriptive heading, and container styles -->

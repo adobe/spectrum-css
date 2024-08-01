@@ -69,18 +69,8 @@ export default {
 		content: [html`<div style="padding-inline: 8px;">Basic popover text content with some added padding.</div>`],
 	},
 	parameters: {
-		layout: "centered",
-		docs: {
-			story: {
-				height: "300px"
-			}
-		},
 		componentVersion: version,
 	},
-	decorators: [
-		// Add padding for VRT so drop shadows are not cut off.
-		(story) => window.isChromatic() ? html`<div style="padding: 32px;">${story()}</div>` : story(),
-	],
 };
 
 export const Default = Template.bind({});
