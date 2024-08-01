@@ -363,6 +363,10 @@
 	}
 }
 
+/**
+ * The input is visually hidden (with opacity), and remains accessible using assistive tech.
+ * It is still sized and positioned where it would naturally be present so that touch users can find it with haptics.
+ */
 .spectrum-Slider-input {
 	/*  Remove the margin for input in Firefox and Safari. */
 	margin: 0;
@@ -375,6 +379,7 @@
 	inset-block-start: var(--mod-slider-input-top-size, var(--spectrum-slider-input-top-size));
 	inset-inline-start: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
 	overflow: hidden;
+	/* @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
 	opacity: 0.000001; /* stylelint-disable-line number-max-precision */
 	cursor: default;
 	appearance: none;

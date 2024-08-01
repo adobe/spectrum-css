@@ -227,12 +227,17 @@
 	}
 }
 
+/**
+ * The input is visually hidden (with opacity), and remains accessible using assistive tech.
+ * It is still sized and positioned where it would naturally be present so that touch users can find it with haptics.
+ */
 .spectrum-Dial-input {
 	/*  Remove the margin for input in Firefox and Safari. */
 	margin: 0;
 	padding: 0;
 	position: absolute;
 	overflow: hidden;
+	/* @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
 	opacity: 0.000001;
 	cursor: default;
 	appearance: none;

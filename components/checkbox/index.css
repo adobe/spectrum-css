@@ -399,6 +399,10 @@
 	}
 }
 
+/**
+ * The input is visually hidden (with opacity), and remains accessible using assistive tech.
+ * It is still sized and positioned where it would naturally be present so that touch users can find it with haptics.
+ */
 .spectrum-Checkbox-input {
 	color: var(--mod-checkbox-control-color-default, var(--spectrum-checkbox-control-color-default));
 
@@ -423,6 +427,7 @@
 	inline-size: 100%;
 	block-size: 100%;
 
+	/* @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
 	opacity: 0.0001;
 	z-index: 1;
 
