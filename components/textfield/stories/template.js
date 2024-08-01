@@ -292,7 +292,7 @@ export const TextFieldGroup = Variants({
 	},
 	{
 		testHeading: "Read-only",
-		value: "username@reallylongemail.com",
+		value: "UsernameWiderThanInput@ReallyLongEmail.com",
 		isReadOnly: true,
 	}]
 });
