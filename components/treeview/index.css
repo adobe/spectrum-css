@@ -65,6 +65,10 @@
 	list-style: none;
 	outline: none;
 
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
 	/* Close (hide) nested treeviews by default. */
 	.spectrum-TreeView {
 		position: static;
