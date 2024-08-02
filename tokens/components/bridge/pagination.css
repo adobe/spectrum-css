@@ -18,7 +18,3 @@
 	--spectrum-pagination-counter-font-size: var(--system-pagination-counter-font-size);
 	--spectrum-pagination-counter-line-height: var(--system-pagination-counter-line-height);
 }
-
-.spectrum-Pagination:dir(rtl) {
-	--spectrum-logical-rotation: var(--system-pagination-dir-rtl-logical-rotation);
-}
