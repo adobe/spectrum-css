@@ -59,10 +59,6 @@
 		--spectrum-treeview-item-min-block-size-thumbnail-offset: var(--spectrum-treeview-item-min-block-size-thumbnail-offset-medium, 0px);
 
 		--spectrum-treeview-indicator-animation-duration: var(--spectrum-animation-duration-100);
-
-		&:dir(rtl) {
-			--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
-		}
 	}
 
 	.spectrum-TreeView--sizeS {
