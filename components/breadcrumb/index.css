@@ -176,6 +176,8 @@
 	display: inline-flex;
 	white-space: nowrap;
 
+	align-items: center;
+
 	font-family: var(--mod-breadcrumbs-font-family, var(--spectrum-breadcrumbs-font-family));
 	font-size: var(--mod-breadcrumbs-font-size, var(--spectrum-breadcrumbs-font-size));
 	font-weight: var(--mod-breadcrumbs-font-weight, var(--spectrum-breadcrumbs-font-weight));
