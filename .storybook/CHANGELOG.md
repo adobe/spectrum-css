@@ -1,5 +1,13 @@
 # Change Log
 
+## 10.8.0
+
+### Minor Changes
+
+- [#2924](https://github.com/adobe/spectrum-css/pull/2924) [`ce021b4`](https://github.com/adobe/spectrum-css/commit/ce021b4b932d938134a1288fd665d56d4b4d144e) Thanks [@jawinn](https://github.com/jawinn)! - Updates the way that autodocs is configured, as documented in the [Storybook migration guide
+  for 8.0.x to 8.1.x])(https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#mainjs-docsautodocs-is-deprecated).
+  The `docs.autodocs` setting in `main.js` was deprecated and is being removed in Storybook 9.0.
+
 ## 10.7.0
 
 ### Minor Changes
