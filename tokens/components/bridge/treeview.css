@@ -48,10 +48,6 @@
 	--spectrum-treeview-indicator-animation-duration: var(--system-tree-view-indicator-animation-duration);
 }
 
-.spectrum-TreeView:dir(rtl) {
-	--spectrum-logical-rotation: var(--system-tree-view-dir-rtl-logical-rotation);
-}
-
 .spectrum-TreeView--sizeS {
 	--spectrum-treeview-font-size: var(--system-tree-view-size-s-font-size);
 	--spectrum-treeview-item-min-block-size: var(--system-tree-view-size-s-item-min-block-size);

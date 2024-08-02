@@ -50,9 +50,5 @@
 		--spectrum-calendar-day-text-color-key-focus: var(--spectrum-gray-900);
 
 		--spectrum-calendar-button-icon-color: var(--spectrum-gray-700);
-
-		&:dir(rtl) {
-			--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
-		}
 	}
 }

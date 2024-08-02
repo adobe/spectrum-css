@@ -46,7 +46,6 @@
 	--system-tree-view-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-medium);
 	--system-tree-view-item-min-block-size-thumbnail-offset: var(--spectrum-treeview-item-min-block-size-thumbnail-offset-medium, 0px);
 	--system-tree-view-indicator-animation-duration: var(--spectrum-animation-duration-100);
-	--system-tree-view-dir-rtl-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
 	--system-tree-view-size-s-font-size: var(--spectrum-font-size-75);
 	--system-tree-view-size-s-item-min-block-size: var(--spectrum-component-height-75);
 	--system-tree-view-size-s-item-indentation: var(--spectrum-treeview-item-indentation-small);
