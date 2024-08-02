@@ -1,4 +1,5 @@
 import { Variants, renderContent } from "@spectrum-css/preview/decorators/utilities.js";
+import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -14,6 +15,7 @@ export const Template = ({
 	variant,
 	content = [],
 	skipWrapper = false,
+	showUnderlay = false,
 } = {}, context = {}) => {
 	const Modal = html`
 		<div class=${classMap({
@@ -27,6 +29,9 @@ export const Template = ({
 	`;
 
 	return html`
+		${when(showUnderlay,
+			() => Underlay({ isOpen })
+		)}
 		${when(skipWrapper,
 			() => Modal,
 			() => html`<div class=${classMap({ [`${rootClass}-wrapper`]: true })}>${Modal}</div>`
