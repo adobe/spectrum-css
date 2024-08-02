@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.0.0-s2-foundations.11
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05) Thanks [@pfulton](https://github.com/pfulton)! - - Accordion: Flatten sizing variables in theme layer
+  - ActionButton: Fix typo in variable name "\*-defaul-selectedt"
+  - Move out rtl logical transform from theme to index.css for: calendar, pagination, treeview
+
+### Patch Changes
+
+- Updated dependencies [[`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.13
+
 ## 3.0.0-s2-foundations.10
 
 ### Major Changes
