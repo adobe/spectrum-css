@@ -43,7 +43,3 @@
 	--spectrum-calendar-day-text-color-key-focus: var(--system-calendar-day-text-color-key-focus);
 	--spectrum-calendar-button-icon-color: var(--system-calendar-button-icon-color);
 }
-
-.spectrum-Calendar:dir(rtl) {
-	--spectrum-logical-rotation: var(--system-calendar-dir-rtl-logical-rotation);
-}

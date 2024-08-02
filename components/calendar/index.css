@@ -16,6 +16,10 @@
 .spectrum-Calendar {
 	display: inline-block;
 	inline-size: var(--mod-calendar-width, var(--spectrum-calendar-width));
+
+	&:dir(rtl) {
+		--spectrum-logical-rotation: matrix(-1, 0, 0, 1, 0, 0);
+	}
 }
 
 .spectrum-Calendar--padded {
