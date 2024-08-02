@@ -62,8 +62,6 @@ export const parameters = {
 		},
 	},
 	chromatic: {
-		// @todo: use a loader to ensure tokens load before stories without arbitrary delay
-		delay: 500,
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
 		pauseAnimationAtEnd: true,
