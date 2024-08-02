@@ -1,3 +1,4 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { renderContent } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
@@ -179,19 +180,21 @@ export const Template = ({
 	`;
 };
 
-export const Variants = (args, context) => {
+/**
+ * Template that displays a Popover with every value of the "position" option.
+ */
+export const TipPlacementVariants = (args, context) => {
 	const placementOptions = context?.argTypes?.position?.options ?? [];
 	return html`
-		<div style=${styleMap({
-			"display": window.isChromatic() ? "none" : "contents",
-		})}>
-			${Template(args, context)}
-		</div>
-		<div style=${styleMap({
-			"display": window.isChromatic() ? "flex" : "none",
-			"flex-direction": "column",
-			"align-items": "flex-start",
-		})} class="spectrum-Typography">
+		<div
+			style=${styleMap({
+				"display": "grid",
+				"gap": "16px",
+				"grid-template-columns": "repeat(auto-fit, minmax(232px, 1fr))",
+				"max-width": "1000px",
+			})} 
+			class="spectrum-Typography"
+		>
 			${placementOptions.map(option => {
 				let optionDescription;
 				if (option.startsWith("start") || option.startsWith("end"))
@@ -237,3 +240,22 @@ export const Variants = (args, context) => {
 		</div>
 	`;
 };
+
+/**
+ * Contains a source button with a fixed width, and an always open Popover.
+ */
+export const FixedWidthSourceTemplate = (args) => html`
+	${ActionButton({
+		label: "Source",
+		customStyles: {
+			width: "100px",
+			display: "block",
+		},
+	})}
+	${Template({
+		...args,
+		position: "bottom-start",
+		isOpen: true,
+		trigger: () => null,
+	})}
+`;

@@ -20,6 +20,12 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
+	// Create a unique ID for the input field and its associated label.
+	// Tack onto any existing id or name arg being set.
+	const inputId = typeof id !== "undefined" ? id += "-input"
+		: typeof name !== "undefined" ? id = name + "-input"
+			: "radio-0";
+
 	return html`
 		<div
 			class=${classMap({
@@ -37,8 +43,7 @@ export const Template = ({
 				type="radio"
 				name=${name}
 				class="${rootClass}-input"
-				id="radio-0"
-				?readOnly=${isReadOnly}
+				id=${inputId}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
 				@change=${function() {
@@ -47,9 +52,73 @@ export const Template = ({
 				}}
 			/>
 			<span class="${rootClass}-button ${rootClass}-button--sizeS"></span>
-			<label class="${rootClass}-label ${rootClass}-label--sizeS" for="radio-0"
+			<label class="${rootClass}-label ${rootClass}-label--sizeS" for=${inputId}
 				>${label}</label
 			>
 		</div>
 	`;
 };
+
+export const ChromaticGroupTemplate = (args, context) => html`
+	<div style="display: flex; flex-direction: column; align-items: flex-start;">
+		${Template({
+			...args,
+			label: "Default, not selected",
+			name: (typeof args.name != "undefined" ? args.name + "-" : "") + "test-1",
+		}, context)}
+		${Template({
+			...args,
+			isChecked: true,
+			isEmphasized: false,
+			label: "Default, selected",
+			customStyles: {
+				"max-width": "220px",
+			},
+			name: (typeof args.name != "undefined" ? args.name + "-" : "") + "test-2",
+		}, context)}
+		${Template({
+			...args,
+			isChecked: true,
+			isEmphasized: true,
+			label: "Emphasized, selected",
+			customStyles: {
+				"max-width": "220px",
+			},
+			name: (typeof args.name != "undefined" ? args.name + "-" : "") + "test-3",
+		}, context)}
+		${Template({
+			...args,
+			isDisabled: true,
+			label: "Disabled",
+			name: (typeof args.name != "undefined" ? args.name + "-" : "") + "test-4",
+		}, context)}
+		${Template({
+			...args,
+			isDisabled: true,
+			isReadOnly: true,
+			label: "Read-only",
+			name: (typeof args.name != "undefined" ? args.name + "-" : "") + "test-5",
+		}, context)}
+	</div>
+`;
+
+export const BasicGroupTemplate = (args, context) => html`
+	<div style="display: flex; flex-direction: column; align-items: flex-start;">
+		${Template({
+			...args,
+			label: "Example label",
+			id: "radio-1-" + args?.id ?? "default",
+			name: "radio-example-" + args?.name ?? "default",
+		}, context)}
+		${Template({
+			...args,
+			isChecked: true,
+			label: "Initially selected radio button that has wrapping label text",
+			customStyles: {
+				"max-width": "220px",
+			},
+			id: "radio-2-" + args?.id ?? "default",
+			name: "radio-example-" + args?.name ?? "default",
+		}, context)}
+	</div>
+`;

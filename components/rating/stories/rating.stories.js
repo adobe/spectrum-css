@@ -5,13 +5,15 @@ import { Template } from "./template";
 
 /**
  * A rating element is used to display or collect a user's rating of an item as represented by a number of stars.
+ * 
+ * All active stars have the class `is-selected` applied. Additionally, the current value (the last active star) has the class `is-currentValue` applied.
  */
 export default {
 	title: "Rating",
 	component: "Rating",
 	argTypes: {
 		isEmphasized: {
-			name: "Emphasized styling",
+			name: "Emphasized",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -30,25 +32,28 @@ export default {
 			control: "boolean",
 		},
 		isReadOnly: {
-			name: "Read only",
+			name: "Read-only",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Component",
+				category: "State",
 			},
 			control: "boolean",
 		},
 		max: {
 			name: "Maximum value",
+			description: "The total number of stars. Star ratings should always have 5 available stars. This shouldn't be increased or decreased to fit various containers.",
 			type: { name: "number" },
 			table: {
 				type: { summary: "number" },
 				category: "Content",
+				disable: true,
 			},
 			control: { type: "number" },
 		},
 		value: {
 			name: "Value",
+			description: "The current rating, represented by the number of selected stars.",
 			type: { name: "number" },
 			table: {
 				type: { summary: "number" },
@@ -61,6 +66,8 @@ export default {
 	args: {
 		rootClass: "spectrum-Rating",
 		isDisabled: false,
+		isEmphasized: false,
+		isReadOnly: false,
 		max: 5,
 		value: 3,
 	},
@@ -69,20 +76,19 @@ export default {
 	},
 };
 
+/**
+ * A initial value of three is used for the following examples, to demonstrate both active and inactive stars.
+ */
 export const Default = Template.bind({});
 Default.args = {};
 
-// ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
-WithForcedColors.parameters = {
-	chromatic: {
-		forcedColors: "active",
-		modes: disableDefaultModes
-	},
-};
+// @todo Make use of Variants() utility template and combine these four into one for VRTs, including hover and focus.
 
+/**
+ * A non-interactive rating.
+ */
 export const ReadOnly = Template.bind({});
+ReadOnly.storyName = "Read-only";
 ReadOnly.args = {
 	isReadOnly: true,
 };
@@ -93,6 +99,7 @@ Emphasized.args = {
 };
 
 export const ReadOnlyEmphasized = Template.bind({});
+ReadOnlyEmphasized.storyName = "Read-only, emphasized";
 ReadOnlyEmphasized.args = {
 	isEmphasized: true,
 	isReadOnly: true,
@@ -101,4 +108,14 @@ ReadOnlyEmphasized.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
+};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = Template.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
 };
