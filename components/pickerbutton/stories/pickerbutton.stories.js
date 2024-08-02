@@ -119,7 +119,7 @@ WithLabel.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -128,13 +128,13 @@ WithForcedColors.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["!autodocs", "!dev", "test"];
+Disabled.tags = ["!autodocs", "!dev"];
 Disabled.args = {
 	isDisabled: true
 };
 
 export const Quiet = Template.bind({});
-Quiet.tags = ["!autodocs", "!dev", "test"];
+Quiet.tags = ["!autodocs", "!dev"];
 Quiet.args = {
 	isQuiet: true
 };

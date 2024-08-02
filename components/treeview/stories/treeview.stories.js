@@ -173,7 +173,7 @@ FoldersAndFiles.args = {
 		},
 	],
 };
-FoldersAndFiles.tags = ["autodocs", "!dev"];
+FoldersAndFiles.tags = ["!dev"];
 FoldersAndFiles.parameters = {
 	chromatic: { disableAllSnapshots: true },
 };
@@ -215,7 +215,7 @@ Thumbnails.args = {
 		},
 	],
 };
-Thumbnails.tags = ["autodocs", "!dev"];
+Thumbnails.tags = ["!dev"];
 Thumbnails.parameters = {
 	chromatic: { disableAllSnapshots: true },
 };
@@ -260,7 +260,7 @@ WithSections.args = {
 		},
 	],
 };
-WithSections.tags = ["autodocs", "!dev"];
+WithSections.tags = ["!dev"];
 WithSections.parameters = {
 	chromatic: { disableAllSnapshots: true },
 };
@@ -281,7 +281,7 @@ WithDropTarget.args = {
 		},
 	],
 };
-WithDropTarget.tags = ["autodocs", "!dev"];
+WithDropTarget.tags = ["!dev"];
 WithDropTarget.parameters = {
 	chromatic: { disableAllSnapshots: true },
 };
@@ -350,7 +350,7 @@ Flat.args = {
 		},
 	],
 };
-Flat.tags = ["autodocs", "!dev"];
+Flat.tags = ["!dev"];
 Flat.parameters = {
 	chromatic: { disableAllSnapshots: true },
 };
@@ -358,7 +358,7 @@ Flat.parameters = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

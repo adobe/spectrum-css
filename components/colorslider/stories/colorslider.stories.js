@@ -42,6 +42,7 @@ export default {
 	parameters: {
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = ColorSliderGroup.bind({});
@@ -53,7 +54,7 @@ Default.args = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -66,7 +67,7 @@ export const Vertical = Default.bind({});
 Vertical.args = {
 	vertical: true,
 };
-Vertical.tags = ["autodocs", "!dev"];
+Vertical.tags = ["!dev"];
 Vertical.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -78,7 +79,7 @@ Alpha.args = {
 		"--spectrum-picked-color": "rgba(0, 0, 0, 1)",
 	},
 };
-Alpha.tags = ["autodocs", "!dev"];
+Alpha.tags = ["!dev"];
 Alpha.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -92,7 +93,7 @@ WithImage.args = {
 	},
 };
 WithImage.storyName = "Image";
-WithImage.tags = ["autodocs", "!dev"];
+WithImage.tags = ["!dev"];
 WithImage.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -101,7 +102,7 @@ export const Disabled = Default.bind({});
 Disabled.args = {
 	isDisabled: true,
 };
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };

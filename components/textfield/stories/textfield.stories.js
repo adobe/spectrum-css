@@ -186,7 +186,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const TextArea = Template.bind({});
-TextArea.tags = ["autodocs", "!dev"];
+TextArea.tags = ["!dev"];
 TextArea.args = {
 	labelText: "Username",
 	multiline: true,
@@ -198,7 +198,7 @@ TextArea.args = {
 // @todo should this show text field and text area in the same snapshot?
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

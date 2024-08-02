@@ -70,6 +70,7 @@ export default {
 	parameters: {
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = BadgeGroup.bind({});
@@ -80,19 +81,19 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const SemanticVariants = (args, context) => PreviewSets(semanticOptions, args, context);
-SemanticVariants.tags = ["autodocs", "!dev"];
+SemanticVariants.tags = ["!dev"];
 SemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const NonSemanticVariants = (args, context) => PreviewSets(nonSemanticOptions, args, context);
-NonSemanticVariants.tags = ["autodocs", "!dev"];
+NonSemanticVariants.tags = ["!dev"];
 NonSemanticVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const FixedVariants = (args, context) => PreviewSets(fixedOptions, args, context);
-FixedVariants.tags = ["autodocs", "!dev"];
+FixedVariants.tags = ["!dev"];
 FixedVariants.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -100,7 +101,7 @@ FixedVariants.parameters = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

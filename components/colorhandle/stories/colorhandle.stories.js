@@ -34,6 +34,7 @@ export default {
 	parameters: {
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = Template.bind({});
@@ -44,7 +45,7 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
 };
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -53,7 +54,7 @@ export const WithColorLoupe = Template.bind({});
 WithColorLoupe.args = {
 	isWithColorLoupe: true,
 };
-WithColorLoupe.tags = ["autodocs", "!dev"];
+WithColorLoupe.tags = ["!dev"];
 WithColorLoupe.parameters = {
 	chromatic: { disableSnapshot: true },
 	docs: {
@@ -66,7 +67,7 @@ WithColorLoupe.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

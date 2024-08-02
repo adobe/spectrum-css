@@ -72,6 +72,7 @@ export default {
 		},
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = FieldGroupSet.bind({});
@@ -99,7 +100,7 @@ Default.args = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -110,7 +111,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const VerticalRadio = Template.bind({});
-VerticalRadio.tags = ["autodocs", "!dev"];
+VerticalRadio.tags = ["!dev"];
 VerticalRadio.args = {
 	layout: "vertical",
 	inputType: "radio",
@@ -120,7 +121,7 @@ VerticalRadio.parameters = {
 };
 
 export const VerticalCheckbox = Template.bind({});
-VerticalCheckbox.tags = ["autodocs", "!dev"];
+VerticalCheckbox.tags = ["!dev"];
 VerticalCheckbox.args = {
 	layout: "vertical",
 	inputType: "checkbox",
@@ -130,7 +131,7 @@ VerticalCheckbox.parameters = {
 };
 
 export const HorizontalRadio = Template.bind({});
-HorizontalRadio.tags = ["autodocs", "!dev"];
+HorizontalRadio.tags = ["!dev"];
 HorizontalRadio.args = {
 	layout: "horizontal",
 	inputType: "radio",
@@ -140,7 +141,7 @@ HorizontalRadio.parameters = {
 };
 
 export const HorizontalCheckbox = Template.bind({});
-HorizontalCheckbox.tags = ["autodocs", "!dev"];
+HorizontalCheckbox.tags = ["!dev"];
 HorizontalCheckbox.args = {
 	layout: "horizontal",
 	inputType: "checkbox",
@@ -150,7 +151,7 @@ HorizontalCheckbox.parameters = {
 };
 
 export const InvalidRadio = Template.bind({});
-InvalidRadio.tags = ["autodocs", "!dev"];
+InvalidRadio.tags = ["!dev"];
 InvalidRadio.args = {
 	layout: "horizontal",
 	inputType: "radio",
@@ -161,7 +162,7 @@ InvalidRadio.parameters = {
 };
 
 export const InvalidCheckbox = Template.bind({});
-InvalidCheckbox.tags = ["autodocs", "!dev"];
+InvalidCheckbox.tags = ["!dev"];
 InvalidCheckbox.args = {
 	layout: "horizontal",
 	inputType: "checkbox",
@@ -177,7 +178,7 @@ InvalidCheckbox.parameters = {
 * If required, the field group must either contain a "(required)" label or an asterisk. If an asterisk is used, help text must explain what the asterisk means.
  */
 export const Required = Template.bind({});
-Required.tags = ["autodocs", "!dev"];
+Required.tags = ["!dev"];
 Required.args = {
 	inputType: "radio",
 	fieldLabel: "Radio group label (required)"
@@ -187,7 +188,7 @@ Required.parameters = {
 };
 
 export const RequiredAsterisk = Template.bind({});
-RequiredAsterisk.tags = ["autodocs", "!dev"];
+RequiredAsterisk.tags = ["!dev"];
 RequiredAsterisk.args = {
 	fieldLabel: "Checkbox group label",
 	inputType: "checkbox",
@@ -201,7 +202,7 @@ RequiredAsterisk.parameters = {
  * Optional field groups can be denoted with text added to the end of the label "(optional)" or have no indication at all.
  */
 export const Optional = Template.bind({});
-Optional.tags = ["autodocs", "!dev"];
+Optional.tags = ["!dev"];
 Optional.args = {
 	fieldLabel: "Checkbox group label (optional)",
 	helpText: "",
@@ -215,7 +216,7 @@ Optional.parameters = {
  * The field group label has two layout options: the label can be top aligned with `spectrum-FieldGroup spectrum-FieldGroup--toplabel`, or side aligned with `spectrum-FieldGroup spectrum-FieldGroup--sidelabel`.
  */
 export const VerticalSideLabelRadio = Template.bind({});
-VerticalSideLabelRadio.tags = ["autodocs", "!dev"];
+VerticalSideLabelRadio.tags = ["!dev"];
 VerticalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
@@ -226,7 +227,7 @@ VerticalSideLabelRadio.parameters = {
 };
 
 export const HorizontalSideLabelRadio = Template.bind({});
-HorizontalSideLabelRadio.tags = ["autodocs", "!dev"];
+HorizontalSideLabelRadio.tags = ["!dev"];
 HorizontalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
@@ -237,7 +238,7 @@ HorizontalSideLabelRadio.parameters = {
 };
 
 export const VerticalSideLabelCheckbox = Template.bind({});
-VerticalSideLabelCheckbox.tags = ["autodocs", "!dev"];
+VerticalSideLabelCheckbox.tags = ["!dev"];
 VerticalSideLabelCheckbox.args = {
 	labelPosition: "side",
 	inputType: "checkbox",
@@ -248,7 +249,7 @@ VerticalSideLabelCheckbox.parameters = {
 };
 
 export const HorizontalSideLabelCheckbox = Template.bind({});
-HorizontalSideLabelCheckbox.tags = ["autodocs", "!dev"];
+HorizontalSideLabelCheckbox.tags = ["!dev"];
 HorizontalSideLabelCheckbox.args = {
 	labelPosition: "side",
 	inputType: "checkbox",
@@ -262,7 +263,7 @@ HorizontalSideLabelCheckbox.parameters = {
  * A group of read-only checkboxes that have been checked. In U.S. English, use commas to delineate items within read-only checkbox groups. In other languages, use the locale-specific formatting.
  */
 export const ReadOnly = Template.bind({});
-ReadOnly.tags = ["autodocs", "!dev"];
+ReadOnly.tags = ["!dev"];
 ReadOnly.args = {
 	isReadOnly: true,
 	inputType: "checkbox",

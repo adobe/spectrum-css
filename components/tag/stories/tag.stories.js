@@ -123,7 +123,7 @@ Default.args = {};
 // ********* VRT ONLY ********* //
 // @todo combine variants into one snapshot
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

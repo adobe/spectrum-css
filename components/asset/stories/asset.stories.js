@@ -36,6 +36,7 @@ export default {
 	parameters: {
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = AssetGroup.bind({});
@@ -46,7 +47,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const File = Template.bind({});
-File.tags = ["autodocs", "!dev"];
+File.tags = ["!dev"];
 File.args = {
 	preset: "file",
 };
@@ -55,7 +56,7 @@ File.parameters = {
 };
 
 export const Folder = Template.bind({});
-Folder.tags = ["autodocs", "!dev"];
+Folder.tags = ["!dev"];
 Folder.args = {
 	preset: "folder",
 };
@@ -66,7 +67,7 @@ Folder.parameters = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

@@ -66,6 +66,7 @@ export default {
 		chromatic: { disableSnapshot: true },
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 /* Content sourced from: https://www.adobe.com/products/catalog.html#:~:text=Frequently%20asked%20questions. */
@@ -168,7 +169,7 @@ Default.parameters = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -178,14 +179,14 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Compact = Template.bind({});
-Compact.tags = ["autodocs", "!dev"];
+Compact.tags = ["!dev"];
 Compact.args = {
 	items: content,
 	density: "compact",
 };
 
 export const Spacious = Template.bind({});
-Spacious.tags = ["autodocs", "!dev"];
+Spacious.tags = ["!dev"];
 Spacious.args = {
 	items: content,
 	density: "spacious",

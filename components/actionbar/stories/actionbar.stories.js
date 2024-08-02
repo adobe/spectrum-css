@@ -74,6 +74,7 @@ export default {
 		},
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = ActionBarGroup.bind({});
@@ -82,7 +83,7 @@ Default.args = {};
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -92,7 +93,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Emphasized = Template.bind({});
-Emphasized.tags = ["autodocs", "!dev"];
+Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	isEmphasized: true,
 };

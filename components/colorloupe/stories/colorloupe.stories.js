@@ -25,6 +25,7 @@ export default {
 		},
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = Template.bind({});
@@ -32,7 +33,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

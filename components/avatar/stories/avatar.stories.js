@@ -71,6 +71,7 @@ export default {
 	parameters: {
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 };
 
 export const Default = AvatarGroup.bind({});
@@ -81,7 +82,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const SizeOptions = AvatarSizes.bind({});
-SizeOptions.tags = ["autodocs", "!dev"];
+SizeOptions.tags = ["!dev"];
 SizeOptions.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -91,7 +92,7 @@ SizeOptions.args = {
 };
 
 export const NoLink = Template.bind({});
-NoLink.tags = ["autodocs", "!dev"];
+NoLink.tags = ["!dev"];
 NoLink.args = {
 	hasLink: false,
 	image: "example-ava@2x.png",
@@ -102,7 +103,7 @@ NoLink.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	hasLink: false,
 	isDisabled: true,
@@ -116,7 +117,7 @@ Disabled.parameters = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

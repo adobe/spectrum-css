@@ -91,6 +91,7 @@ export default {
 		},
 		componentVersion: version,
 	},
+	tags: ["!autodocs"],
 	decorators: [
 		// Add padding for VRT so drop shadows are not cut off.
 		(story) => window.isChromatic() ? html`<div style="padding: 32px; min-height: 300px;">${story()}</div>` : story(),
@@ -118,7 +119,7 @@ TopPopover.args = {
 
 // ********* DOCS ONLY ********* //
 export const HelpDefault = Template.bind({});
-HelpDefault.tags = ["autodocs", "!dev"];
+HelpDefault.tags = ["!dev"];
 HelpDefault.args = {
 	iconName: "Help",
 };
@@ -127,7 +128,7 @@ HelpDefault.parameters = {
 };
 
 export const HelpWithLink = Template.bind({});
-HelpWithLink.tags = ["autodocs", "!dev"];
+HelpWithLink.tags = ["!dev"];
 HelpWithLink.args = {
 	link: {
 		text: "Learn about permissions",
@@ -140,7 +141,7 @@ HelpWithLink.parameters = {
 };
 
 export const HelpTopPopover = Template.bind({});
-HelpTopPopover.tags = ["autodocs", "!dev"];
+HelpTopPopover.tags = ["!dev"];
 HelpTopPopover.args = {
 	popoverPlacement: "top",
 	customStyles: { "max-inline-size": "275px" },
@@ -155,7 +156,7 @@ HelpTopPopover.parameters = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

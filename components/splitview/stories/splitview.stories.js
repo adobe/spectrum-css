@@ -166,7 +166,7 @@ VerticalCollapsedBottom.args = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = HorizontallyFocused.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

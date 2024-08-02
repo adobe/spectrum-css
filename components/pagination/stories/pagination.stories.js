@@ -63,7 +63,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = PaginationGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

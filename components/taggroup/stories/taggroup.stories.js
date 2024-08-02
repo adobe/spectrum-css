@@ -77,7 +77,7 @@ Default.args = {
  * When horizontal space is limited in a tag group, the individual tags wrap to form another line.
  */
 export const OverflowItems = Template.bind({});
-OverflowItems.tags = ["autodocs", "!dev"];
+OverflowItems.tags = ["!dev"];
 OverflowItems.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -115,7 +115,7 @@ OverflowItems.args = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev", "test"];
+WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
