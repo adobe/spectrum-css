@@ -31,7 +31,7 @@ export const Template = ({
 	if (showOnHover) {
 		document.addEventListener("DOMContentLoaded", () => {
 			[...document.querySelectorAll(`.${rootClass}`)].forEach(tooltip => {
-				tooltip.parentElement.classList.add("u-tooltip-showOnHover");
+				tooltip.parentElement?.classList.add("u-tooltip-showOnHover");
 			});
 		});
 	}
