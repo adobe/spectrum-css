@@ -77,7 +77,7 @@ jobs:
               run: yarn install --immutable
 
             - name: Lint component styles
-              if: ${{ inputs.styles_added_files != '' || inputs.styles_modified_files != '' }}
+              # if: ${{ inputs.styles_added_files != '' || inputs.styles_modified_files != '' }}
               uses: reviewdog/action-stylelint@v1.27.0
               with:
                   fail_on_error: true
