@@ -18,6 +18,7 @@ export const Template = ({
 	...item,
 }, context);
 
+/* The gradient story below supports linear-gradients used by Express. For use cases that require a custom linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS. */
 export const MeterGroup = (args, context) => html`
 	<div style=${styleMap({
 		"display": window.isChromatic() ? "none" : "contents"
@@ -64,8 +65,6 @@ export const MeterGroup = (args, context) => html`
 				}, context)}
 			</div>
 		`)}
-
-		<!-- The gradient story below supports linear-gradients used by Express. For use cases that require a custom linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS. -->
 		 <div>
 			${Typography({
 				semantics: "heading",

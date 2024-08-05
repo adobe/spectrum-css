@@ -91,6 +91,7 @@ const Sizes = (args, context) => html`
   `)}
 `;
 
+/* The gradient story below supports linear-gradients used by Express. For use cases that require a custom linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS. */
 export const ProgressBarGroup = (args, context) => html`
 	<div style=${styleMap({
 		"display": window.isChromatic() ? "none" : "contents"
@@ -169,8 +170,6 @@ export const ProgressBarGroup = (args, context) => html`
 				${Sizes(args, context)}
 			</div>
 		</div>
-		<!-- The gradient story below supports linear-gradients used by Express. Adding trackFill or progressBarFill args
-		 to any template will set the --mod-progressbar-track-color or --mod-progressbar-fill-color custom properties. -->
 		 <div>
 			${Typography({
 				semantics: "heading",
