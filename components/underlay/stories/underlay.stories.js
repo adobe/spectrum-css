@@ -20,12 +20,11 @@ export default {
 		rootClass: "spectrum-Underlay",
 		isOpen: false,
 	},
-	tags: ["!test"],
 	parameters: {
-		layout: "fullscreen",
 		docs: {
 			story: {
 				inline: false,
+				height: "500px",
 			},
 		},
 		chromatic: { disableSnapshot: true },

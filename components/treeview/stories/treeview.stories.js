@@ -1,6 +1,7 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template, SizingGroup } from "./template.js";
+import { Template } from "./template.js";
 import { TreeViewGroup } from "./treeview.test.js";
 
 /**
@@ -110,7 +111,12 @@ Default.args = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Sizing = SizingGroup.bind({});
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args
+}, context);
 Sizing.args = Default.args;
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
