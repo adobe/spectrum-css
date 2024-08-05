@@ -1,4 +1,3 @@
-import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
@@ -38,7 +37,10 @@ export default {
 	parameters: {
 		layout: "fullscreen",
 		docs: {
-			story: { height: "600px" },
+			story: {
+				height: "800px",
+				width: "800px"
+			},
 		},
 		componentVersion: version,
 	},
@@ -50,17 +52,21 @@ export default {
 export const Default = ModalGroup.bind({});
 Default.args = {
 	content: [
-		(passthroughs, context) => Dialog({
-			heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+		(passthroughs, context) => Typography({
+			semantics: "heading",
+			customClasses: ["chromatic-ignore"],
+			size: "m",
 			content: [
-				(passthroughs, context) => Typography({
-					semantics: "body",
-					size: "m",
-					content: [
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis."
-					],
-					...passthroughs,
-				}, context),
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+			],
+			...passthroughs,
+		}, context),
+		(passthroughs, context) => Typography({
+			semantics: "body",
+			customClasses: ["chromatic-ignore"],
+			size: "m",
+			content: [
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis."
 			],
 			...passthroughs,
 		}, context),

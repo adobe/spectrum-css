@@ -108,8 +108,12 @@ export default {
 	},
 	parameters: {
 		componentVersion: version,
+		docs: {
+			story: {
+				height: "220px"
+			}
+		},
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = ComboBoxGroup.bind({});
@@ -195,7 +199,7 @@ Disabled.parameters = {
 
 // Quiet
 export const Quiet = Template.bind({});
-Quiet.tags = ["autodocs", "!dev"];
+Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
 };

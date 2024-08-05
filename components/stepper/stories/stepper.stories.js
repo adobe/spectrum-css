@@ -90,7 +90,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const HideStepper = Template.bind({});
-HideStepper.tags = ["autodocs", "!dev"];
+HideStepper.tags = ["!dev"];
 HideStepper.args = {
 	hideStepper: true,
 };

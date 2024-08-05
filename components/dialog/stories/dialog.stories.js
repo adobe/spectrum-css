@@ -1,5 +1,5 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import modes, { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
@@ -72,7 +72,6 @@ export default {
 		showModal: true,
 	},
 	parameters: {
-		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-Dialog button"],
 		},
@@ -89,8 +88,32 @@ export default {
 	],
 };
 
+// the "TallerViewport" modes are accommodating the underlay, which is position: fixed,
+// and Chromatic's treatment of position:fixed elements. By increasing the viewport height,
+// it doesn't look like the background color just stops without wrapping the
+// entire container of templates.
+const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
+	acc[key] = {
+		...modes[key],
+		viewport: {
+			height: "1200px",
+		}
+	};
+	return acc;
+}, {});
+
+const mobileModeWithTallerViewport = Object.keys(mobile).reduce((acc, key) => {
+	acc[key] = {
+		...mobile[key],
+		viewport: {
+			height: "1000px",
+		}
+	};
+	return acc;
+}, {});
+
 export const Default = DialogGroup.bind({});
-Default.tags = ["autodocs", "dev", "test"];
+Default.tags = ["dev"];
 Default.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	content: [
@@ -104,18 +127,22 @@ Default.args = {
 		}, context),
 	],
 };
+Default.parameters = {
+	chromatic: {
+		modes: {
+			...defaultModesWithTallerViewport,
+			...mobileModeWithTallerViewport,
+		}
+	},
+};
 
 export const Fullscreen = DialogFullscreen.bind({});
-Fullscreen.tags = ["!autodocs", "dev", "test"];
-Fullscreen.args = {
-	...Default.args,
-};
+Fullscreen.tags = ["!autodocs", "dev"];
+Fullscreen.args = Default.args;
 
 export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
-FullscreenTakeover.tags = ["!autodocs", "dev", "test"];
-FullscreenTakeover.args = {
-	...Default.args,
-};
+FullscreenTakeover.tags = ["!autodocs", "dev"];
+FullscreenTakeover.args = Default.args;
 
 
 // ********* VRT ONLY ********* //

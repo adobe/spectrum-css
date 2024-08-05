@@ -52,7 +52,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 export const Info = Template.bind({});
-Info.tags = ["autodocs", "!dev"];
+Info.tags = ["!dev"];
 Info.args = {
 	variant: "info",
 	message: "A new version of Lightroom Classic is now available",
@@ -63,7 +63,7 @@ Info.parameters = {
 };
 
 export const Negative = Template.bind({});
-Negative.tags = ["autodocs", "!dev"];
+Negative.tags = ["!dev"];
 Negative.args = {
 	variant: "negative",
 	message: "Unable to delete file",
@@ -74,7 +74,7 @@ Negative.parameters = {
 };
 
 export const Positive = Template.bind({});
-Positive.tags = ["autodocs", "!dev"];
+Positive.tags = ["!dev"];
 Positive.args = {
 	variant: "positive",
 	message: "Copied to clipboard",

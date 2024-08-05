@@ -50,7 +50,7 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 export const CustomSize = Template.bind({});
-CustomSize.tags = ["autodocs", "!dev"];
+CustomSize.tags = ["!dev"];
 CustomSize.args = {
 	customWidth: "80px",
 	customHeight: "80px",

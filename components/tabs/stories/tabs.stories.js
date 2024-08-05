@@ -120,7 +120,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Vertical = Template.bind({});
-Vertical.tags = ["autodocs", "!dev"];
+Vertical.tags = ["!dev"];
 Vertical.args = {
 	orientation: "vertical",
 };
@@ -131,7 +131,7 @@ Vertical.parameters = {
 };
 
 export const Overflow = Template.bind({});
-Overflow.tags = ["autodocs", "!dev"];
+Overflow.tags = ["!dev"];
 Overflow.args = {
 	orientation: "overflow",
 };

@@ -49,6 +49,11 @@ export default {
 			],
 		},
 		componentVersion: version,
+		docs: {
+			story: {
+				height: "250px",
+			}
+		}
 	},
 };
 

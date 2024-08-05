@@ -125,7 +125,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const WithLabel = Template.bind({});
-WithLabel.tags = ["autodocs", "!dev"];
+WithLabel.tags = ["!dev"];
 WithLabel.args = {
 	label: "Select",
 };
@@ -134,7 +134,7 @@ WithLabel.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true
 };
@@ -143,7 +143,7 @@ Disabled.parameters = {
 };
 
 export const Quiet = Template.bind({});
-Quiet.tags = ["autodocs", "!dev"];
+Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true
 };

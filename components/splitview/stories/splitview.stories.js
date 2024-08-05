@@ -94,7 +94,7 @@ HorizontallyResizable.args = {
 	panelLabels: ["Left", "Right"],
 	panelStyles: ["width: 304px;", "flex: 1;"],
 };
-HorizontallyResizable.tags = ["autodocs", "!dev"];
+HorizontallyResizable.tags = ["!dev"];
 HorizontallyResizable.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -108,7 +108,7 @@ HorizontallyFocused.args = {
 	panelLabels: ["Left", "Right"],
 	panelStyles: ["width: 304px;", "flex: 1;"],
 };
-HorizontallyFocused.tags = ["autodocs", "!dev"];
+HorizontallyFocused.tags = ["!dev"];
 HorizontallyFocused.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -122,7 +122,7 @@ HorizontalCollapsedLeft.args = {
 	panelLabels: ["Left", "Right"],
 	panelStyles: ["width: 0;", "flex: 1;"],
 };
-HorizontalCollapsedLeft.tags = ["autodocs", "!dev"];
+HorizontalCollapsedLeft.tags = ["!dev"];
 HorizontalCollapsedLeft.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -136,7 +136,7 @@ HorizontalCollapsedRight.args = {
 	panelLabels: ["Left", "Right"],
 	panelStyles: ["flex: 1;", "width: 0;"],
 };
-HorizontalCollapsedRight.tags = ["autodocs", "!dev"];
+HorizontalCollapsedRight.tags = ["!dev"];
 HorizontalCollapsedRight.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -149,7 +149,7 @@ Vertical.args = {
 	panelLabels: ["Top", "Bottom"],
 	panelStyles: ["height: 50px;", "flex: 1;"],
 };
-Vertical.tags = ["autodocs", "!dev"];
+Vertical.tags = ["!dev"];
 Vertical.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -162,7 +162,7 @@ VerticallyResizable.args = {
 	panelLabels: ["Top", "Bottom"],
 	panelStyles: ["height: 50px;", "flex: 1;"],
 };
-VerticallyResizable.tags = ["autodocs", "!dev"];
+VerticallyResizable.tags = ["!dev"];
 VerticallyResizable.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -176,7 +176,7 @@ VerticalCollapsedTop.args = {
 	panelLabels: ["Top", "Bottom"],
 	panelStyles: ["height: 0;", "flex: 1;"],
 };
-VerticalCollapsedTop.tags = ["autodocs", "!dev"];
+VerticalCollapsedTop.tags = ["!dev"];
 VerticalCollapsedTop.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -190,7 +190,7 @@ VerticalCollapsedBottom.args = {
 	panelLabels: ["Top", "Bottom"],
 	panelStyles: ["flex: 1;", "height: 0;"],
 };
-VerticalCollapsedBottom.tags = ["autodocs", "!dev"];
+VerticalCollapsedBottom.tags = ["!dev"];
 VerticalCollapsedBottom.parameters = {
 	chromatic: { disableSnapshot: true },
 };

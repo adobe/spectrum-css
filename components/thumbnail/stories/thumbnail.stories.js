@@ -126,7 +126,7 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 export const Layer = Template.bind({});
-Layer.tags = ["autodocs", "!dev"];
+Layer.tags = ["!dev"];
 Layer.args = {
 	isLayer: true,
 	isSelected: false,
@@ -136,7 +136,7 @@ Layer.parameters = {
 };
 
 export const WithBackground = Template.bind({});
-WithBackground.tags = ["autodocs", "!dev"];
+WithBackground.tags = ["!dev"];
 WithBackground.args = {
 	backgroundColor: "orange",
 };

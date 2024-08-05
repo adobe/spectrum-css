@@ -145,7 +145,7 @@ Filled.args = {
 	...Default.args,
 	variant: "filled",
 };
-Filled.tags = ["autodocs", "!dev"];
+Filled.tags = ["!dev"];
 Filled.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -158,7 +158,7 @@ FilledOffset.args = {
 	min: 0,
 	variant: "offset",
 };
-FilledOffset.tags = ["autodocs", "!dev"];
+FilledOffset.tags = ["!dev"];
 FilledOffset.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -170,7 +170,7 @@ Ramp.args = {
 	...Default.args,
 	variant: "ramp",
 };
-Ramp.tags = ["autodocs", "!dev"];
+Ramp.tags = ["!dev"];
 Ramp.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -182,7 +182,7 @@ Range.args = {
 	...Default.args,
 	values: [14, 16],
 };
-Range.tags = ["autodocs", "!dev"];
+Range.tags = ["!dev"];
 Range.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -195,7 +195,7 @@ Tick.args = {
 	label: undefined,
 	showTicks: true,
 };
-Tick.tags = ["autodocs", "!dev"];
+Tick.tags = ["!dev"];
 Tick.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -207,7 +207,7 @@ Disabled.args = {
 	...Default.args,
 	isDisabled: true,
 };
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -219,7 +219,7 @@ WithFocus.args = {
 	...Default.args,
 	isFocused: true,
 };
-WithFocus.tags = ["autodocs", "!dev"];
+WithFocus.tags = ["!dev"];
 WithFocus.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -237,7 +237,7 @@ Gradient.args = {
 	},
 	label: "Slider label that is long and wraps to the next line",
 };
-Gradient.tags = ["autodocs", "!dev"];
+Gradient.tags = ["!dev"];
 Gradient.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -249,7 +249,7 @@ SideLabel.args = {
 	...Default.args,
 	labelPosition: "side",
 };
-SideLabel.tags = ["autodocs", "!dev"];
+SideLabel.tags = ["!dev"];
 SideLabel.parameters = {
 	chromatic: {
 		disableSnapshot: true,

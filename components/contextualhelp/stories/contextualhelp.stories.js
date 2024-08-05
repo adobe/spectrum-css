@@ -100,7 +100,7 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 export const WithLink = Template.bind({});
-WithLink.tags = ["autodocs", "!dev"];
+WithLink.tags = ["!dev"];
 WithLink.args = {
 	link: {
 		text: "Learn about permissions",
@@ -112,7 +112,7 @@ WithLink.parameters = {
 };
 
 export const TopPopover = Template.bind({});
-TopPopover.tags = ["autodocs", "!dev"];
+TopPopover.tags = ["!dev"];
 TopPopover.args = {
 	popoverPlacement: "top",
 	customStyles: { "max-inline-size": "275px" },

@@ -84,7 +84,7 @@ export const BranchesSelectable = MillerGroup.bind({});
 BranchesSelectable.args = {};
 
 export const FilesSelectable = Template.bind({});
-FilesSelectable.tags = ["autodocs", "!dev"];
+FilesSelectable.tags = ["!dev"];
 FilesSelectable.args = {
 	columns: [
 		{

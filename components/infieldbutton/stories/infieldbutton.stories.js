@@ -90,7 +90,7 @@ End.parameters = {
 };
 
 export const Quiet = Template.bind({});
-Quiet.tags = ["autodocs", "!dev"];
+Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true
 };
@@ -99,7 +99,7 @@ Quiet.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true
 };

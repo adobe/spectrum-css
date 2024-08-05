@@ -77,7 +77,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Multilevel = Template.bind({});
-Multilevel.tags = ["autodocs", "!dev"];
+Multilevel.tags = ["!dev"];
 Multilevel.args = {
 	variant: "multiLevel",
 	items: [
@@ -133,7 +133,7 @@ Multilevel.parameters = {
 };
 
 export const WithHeading = Template.bind({});
-WithHeading.tags = ["autodocs", "!dev"];
+WithHeading.tags = ["!dev"];
 WithHeading.args = {
 	items: [
 		{
@@ -165,7 +165,7 @@ WithHeading.parameters = {
 };
 
 export const WithIcons = Template.bind({});
-WithIcons.tags = ["autodocs", "!dev"];
+WithIcons.tags = ["!dev"];
 WithIcons .args = {
 	variant: "multiLevel",
 	hasIcon: true,

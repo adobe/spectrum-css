@@ -120,6 +120,11 @@ export default {
 	},
 	parameters: {
 		componentVersion: version,
+		docs: {
+			story: {
+				height: "400px"
+			}
+		},
 	},
 };
 
