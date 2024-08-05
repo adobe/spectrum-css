@@ -18,161 +18,193 @@ export const Template = ({
 	testId,
 	triggerId = getRandomId("popover-trigger"),
 	customStyles = {},
+	popoverWrapperStyles = {},
+	popoverHeight = 142,
+	popoverWidth = 89,
+	popoverAlignment = {},
+	skipAlignment = false,
 	trigger,
 	content = [],
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-	const textDir = globals.textDirection ?? "ltr";
+	const { updateArgs } = context;
 
-	/**
-	 * Adjust popover's position in relation to the source/trigger element.
-	 * Changes both the transform and the absolute positioning.
-	 */
-	const positionPopover = (element, popover) => {
-		// Nested popover is static and open, so we don't need to reposition it.
-		if (!isOpen || !position) return;
-		if (!element || !popover) return;
-
-		const rect = element.getBoundingClientRect();
-
-		const transforms = [];
-		const triggerXCenter = (rect.left + rect.right) / 2;
-		const triggerYCenter = (rect.top + rect.bottom) / 2;
-		const popWidth = popover.offsetWidth ?? 0;
-		const popHeight = popover.offsetHeight ?? 0;
-
-		let x, y;
-		let xOffset = "+ 0px";
-		let yOffset = "+ 0px";
-
-		if (position.startsWith("top") || position.startsWith("bottom")) {
-			x = triggerXCenter - (popWidth > 0 ? popWidth / 2 : popWidth);
+	// We need to wait for the popover to render before we can get the actual height and width
+	// of the popover to set the custom properties. This is a temporary solution until we can
+	// set up anchor positioning successfully via CSS.
+	document.addEventListener("DOMContentLoaded", function() {
+		if (typeof popoverHeight !== "undefined" && typeof popoverWidth !== "undefined") {
+			return;
 		}
-		if (position.includes("left") || position.includes("right") || position.startsWith("start") || position.startsWith("end")) {
-			y = triggerYCenter - (popHeight > 0 ? popHeight / 2 : popHeight);
-		}
-		if (position.startsWith("top")) {
-			y = rect.top - popHeight;
-			yOffset = withTip
-				? "- (var(--spectrum-popover-pointer-height) + var(--spectrum-popover-animation-distance) - 1px)"
-				: "- var(--spectrum-popover-animation-distance)";
-		}
-		else if (position.startsWith("bottom")) {
-			y = rect.bottom;
-			yOffset = "+ (var(--spectrum-popover-animation-distance))";
-		}
-		else if (position.includes("left")) {
-			if (textDir == "rtl") {
-				x = rect.right;
-				xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
+
+		setTimeout(() => {
+			// Get the actual height and width of the popover
+			const popover = document.getElementById(id);
+			const rect = popover.getBoundingClientRect();
+
+			let shouldChange = false;
+			if (popoverHeight !== parseInt(rect.height, 10)) {
+				shouldChange = true;
 			}
-			else {
-				x = rect.left - popWidth;
-				xOffset = withTip
-					? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
-					: "- var(--spectrum-popover-animation-distance)";
+			else if (popoverWidth !== parseInt(rect.width, 10)) {
+				shouldChange = true;
 			}
-		}
-		else if (position.includes("right")) {
-			if (textDir == "rtl") {
-				x = rect.left - popWidth;
-				xOffset = withTip
-					? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
-					: "- var(--spectrum-popover-animation-distance)";
-			}
-			else {
-				x = rect.right;
-				xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
-			}
-		}
-		else if (position.includes("start")) {
-			x = rect.left - popWidth;
-			xOffset = withTip
-				? "- ((var(--spectrum-popover-pointer-width) / 2) + var(--spectrum-popover-animation-distance) - 2px)"
-				: "- var(--spectrum-popover-animation-distance)";
-		}
-		else if (position.includes("end")) {
-			x = rect.right;
-			xOffset = withTip ? "+ 0px" : "+ var(--spectrum-popover-animation-distance)";
-		}
 
-		// Offset popover with translateX and/or translateY.
-		if (x) transforms.push(`translateX(calc(var(--flow-direction) * calc(${parseInt(x, 10)}px ${xOffset})))`);
-		if (y) transforms.push(`translateY(calc(${y}px ${yOffset}))`);
+			// Do nothing if the height and width are the same; prevent loops
+			if (!shouldChange) return;
 
-		if (transforms.length > 0) {
-			popover.style.transform = transforms.join(" ");
-		}
-
-		// Add start and end styles
-		if (position === "top-start" || position === "bottom-start") {
-			popover.style["inset-inline-start"] = "calc(" + (popWidth / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-			popover.style["inset-block-start"] = "0px";
-		}
-		else if (position === "top-end" || position === "bottom-end") {
-			popover.style["inset-inline-start"] = "calc(-1 *" + (popWidth / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
-			popover.style["inset-block-start"] = "0px";
-		}
-		else if (position === "left-top" || position === "right-top" || position === "start-top" || position === "end-top") {
-			popover.style["inset-block-start"] = "calc(" + (popHeight / 2) + "px - var(--spectrum-popover-pointer-edge-offset))";
-			popover.style["inset-inline-start"] = "0px";
-		}
-		else if (position === "left-bottom" || position === "right-bottom" || position === "start-bottom" || position === "end-bottom") {
-			popover.style["inset-block-start"] = "calc(-1 *" + (popHeight / 2) + "px + var(--spectrum-popover-pointer-edge-offset))";
-			popover.style["inset-inline-start"] = "0px";
-		}
-		else {
-			popover.style["inset-inline-start"] = "0px";
-			popover.style["inset-block-start"] = "0px";
-		}
-	};
-
-	window.addEventListener("DOMContentLoaded", () => {
-		const element = document.getElementById(triggerId);
-		const popover = document.getElementById(id);
-		console.log(triggerId, element);
-		setTimeout(() => positionPopover(element, popover), 200);
+			// Write the actual height and width of the popover to the CSS custom properties
+			updateArgs({
+				popoverWidth: parseInt(rect.width, 10),
+				popoverHeight: parseInt(rect.height, 10),
+			});
+		}, 500);
 	});
 
-	window.addEventListener("resize", () => {
-		const element = document.getElementById(triggerId);
-		const popover = document.getElementById(id);
-		setTimeout(() => positionPopover(element, popover), 100);
-	});
+	if (!skipAlignment) {
+		switch (position) {
+			case "top":
+				popoverWrapperStyles["inline-size"] = "var(--spectrum-popover-width)";
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["inset-inline-start"] = "0";
+				break;
+			case "top-left":
+				// Ignore the width of the popover and make it left-aligned
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["left"] = "0";
+				break;
+			case "top-right":
+				// Ignore the width of the popover and make it right-aligned
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["right"] = "0";
+				break;
+			case "top-start":
+				// Ignore the width of the popover and make it start-aligned
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["inset-inline-start"] = "0";
+				break;
+			case "top-end":
+				// Ignore the width of the popover and make it end-aligned
+				popoverAlignment["inset-block-end"] = "100%";
+				popoverAlignment["inset-inline-end"] = "0";
+				break;
+			case "bottom":
+				popoverWrapperStyles["inline-size"] = "var(--spectrum-popover-width)";
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["inset-inline-start"] = "0";
+				break;
+			case "bottom-left":
+				// Ignore the width of the popover and make it left-aligned
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["left"] = "0";
+				break;
+			case "bottom-right":
+				// Ignore the width of the popover and make it right-aligned
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["right"] = "0";
+				break;
+			case "bottom-start":
+				// Ignore the width of the popover and make it start-aligned
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["inset-inline-start"] = "0";
+				break;
+			case "bottom-end":
+				// Ignore the width of the popover and make it end-aligned
+				popoverAlignment["inset-block-start"] = "100%";
+				popoverAlignment["inset-inline-end"] = "0";
+				break;
+			case "right":
+				popoverAlignment["left"] = withTip ? "100%" : "100%";
+				break;
+			case "right-top":
+				popoverAlignment["left"] = withTip ? "100%" : "100%";
+				popoverAlignment["top"] = "0";
+				break;
+			case "right-bottom":
+				popoverAlignment["left"] = withTip ? "100%" : "100%";
+				popoverAlignment["bottom"] = "0";
+				break;
+			case "left":
+				popoverAlignment["right"] = withTip ? "100%" : "100%";
+				break;
+			case "left-top":
+				popoverAlignment["right"] = withTip ? "100%" : "100%";
+				popoverAlignment["top"] = "0";
+				break;
+			case "left-bottom":
+				popoverAlignment["right"] = withTip ? "100%" : "100%";
+				popoverAlignment["bottom"] = "0";
+				break;
+			case "start":
+				popoverAlignment["inset-inline-end"] = withTip ? "100%" : "100%";
+				break;
+			case "start-top":
+				popoverAlignment["inset-inline-end"] = withTip ? "100%" : "100%";
+				popoverAlignment["top"] = "0";
+				break;
+			case "start-bottom":
+				popoverAlignment["inset-inline-end"] = withTip ? "100%" : "100%";
+				popoverAlignment["bottom"] = "0";
+				break;
+			case "end":
+				popoverAlignment["inset-inline-start"] = withTip ? "100%" : "100%";
+				break;
+			case "end-top":
+				popoverAlignment["inset-inline-start"] = withTip ? "100%" : "100%";
+				popoverAlignment["top"] = "0";
+				break;
+			case "end-bottom":
+				popoverAlignment["inset-inline-start"] = withTip ? "100%" : "100%";
+				popoverAlignment["bottom"] = "0";
+				break;
+		}
+	}
 
 	return html`
-		${when(typeof trigger === "function", (passthroughs) => trigger({
-			...passthroughs,
-			isSelected: isOpen,
-			isOpen,
-			id: triggerId,
-			popupId: id,
-			onclick: function() {
-				updateArgs({ isOpen: !isOpen });
-			},
-		}, context))}
+		<div style=${styleMap({
+			"--spectrum-popover-height": `${popoverHeight}px`,
+			"--spectrum-popover-width": `${popoverWidth}px`,
+			"position": "relative",
+			"display": "inline-flex",
+			"align-items": "center",
+			"justify-content": "center",
+			...popoverWrapperStyles,
+		})}>
+			${when(typeof trigger === "function", (passthroughs) => trigger({
+				...passthroughs,
+				isSelected: isOpen,
+				isOpen,
+				id: triggerId,
+				popupId: id,
+				onclick: function() {
+					updateArgs({ isOpen: !isOpen });
+				},
+			}, context))}
 
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				"is-open": isOpen,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
-				[`${rootClass}--withTip`]: withTip,
-				[`${rootClass}--${position}`]: typeof position !== "undefined",
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-			})}
-			style=${ifDefined(styleMap(customStyles))}
-			role="presentation"
-			id=${ifDefined(id)}
-			data-testid=${ifDefined(testId ?? id)}
-		>
-			${renderContent(content)}
-			${withTip
-				? position && ["top", "bottom"].some((e) => position.startsWith(e))
-					? html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>`
-					: html`<svg class="${rootClass}-tip" viewBox="0 -0.5 9 16" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 -1,17"></svg>`
-				: ""}
+			<div
+				class=${classMap({
+					[rootClass]: true,
+					"is-open": isOpen,
+					[`${rootClass}--size${size?.toUpperCase()}`]:
+						typeof size !== "undefined",
+					[`${rootClass}--withTip`]: withTip,
+					[`${rootClass}--${position}`]: typeof position !== "undefined",
+					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+				})}
+				style=${ifDefined(styleMap({
+					...popoverAlignment,
+					...customStyles
+				}))}
+				role="presentation"
+				id=${ifDefined(id)}
+				data-testid=${ifDefined(testId ?? id)}
+			>
+				${renderContent(content)}
+				${withTip
+					? position && ["top", "bottom"].some((e) => position.startsWith(e))
+						? html`<svg class="${rootClass}-tip" viewBox="0 -0.5 16 9" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 17,-1"></svg>`
+						: html`<svg class="${rootClass}-tip" viewBox="0 -0.5 9 16" width="10"><path class="${rootClass}-tip-triangle" d="M-1,-1 8,8 -1,17"></svg>`
+					: ""}
+			</div>
 		</div>
 	`;
 };

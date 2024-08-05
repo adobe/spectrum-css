@@ -25,6 +25,7 @@ export const Picker = ({
 	isDisabled = false,
 	customClasses = [],
 	customStyles = {},
+	onclick,
 } = {}, context = {}) => {
 	return html`
 		<button
@@ -44,9 +45,7 @@ export const Picker = ({
 			aria-haspopup="listbox"
 			style=${styleMap(customStyles)}
 			type="button"
-			@click=${(e) => {
-				e.target.classList.toggle("is-open", !isOpen);
-			}}
+			@click=${onclick}
 		>
 			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
 			${when(isLoading, () =>
@@ -90,10 +89,11 @@ export const Template = ({
 	fieldLabelStyle = {},
 	customClasses = [],
 	customStyles = {},
-	customPopoverStyles = {},
 	content = [],
 	id = getRandomId("picker"),
 } = {}, context = {}) => {
+	const { updateArgs } = context;
+
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":
@@ -122,8 +122,7 @@ export const Template = ({
 		${Popover({
 			isOpen: isOpen && !isDisabled,
 			withTip: false,
-			position: "bottom-start",
-			isQuiet,
+			position: "bottom-end",
 			trigger: (passthroughs, context) => Picker({
 				...passthroughs,
 				rootClass,
@@ -145,8 +144,10 @@ export const Template = ({
 				iconName,
 				labelPosition,
 				id,
+				onclick: function() {
+					updateArgs({ isOpen: !isOpen });
+				},
 			}, context),
-			customStyles: customPopoverStyles,
 			content,
 		}, context)}
 		${when(helpText, () =>

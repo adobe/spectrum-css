@@ -82,7 +82,7 @@ export default {
 		popoverPlacement: "bottom-start",
 		title: "Permission required",
 		body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-		customStyles: { "max-inline-size": "275px" },
+		customStyles: { "inline-size": "275px" },
 	},
 	parameters: {
 		actions: {
@@ -115,7 +115,10 @@ export const TopPopover = Template.bind({});
 TopPopover.tags = ["!dev"];
 TopPopover.args = {
 	popoverPlacement: "top",
-	customStyles: { "max-inline-size": "275px" },
+	customStyles: {
+		"inline-size": "275px",
+		"margin-top": "170px",
+	},
 	title: "Top popover example of text wrapping in the title",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };
@@ -149,7 +152,10 @@ export const HelpTopPopover = Template.bind({});
 HelpTopPopover.tags = ["!dev"];
 HelpTopPopover.args = {
 	popoverPlacement: "top",
-	customStyles: { "max-inline-size": "275px" },
+	customStyles: {
+		"inline-size": "275px",
+		"margin-top": "170px",
+	},
 	title: "Top popover example of text wrapping in the title",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	iconName: "Help",

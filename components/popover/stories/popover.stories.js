@@ -2,7 +2,6 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import { html } from "lit";
 import { version } from "../package.json";
 import { PopoverGroup } from "./popover.test.js";
 import { Template } from "./template.js";
@@ -16,7 +15,6 @@ export default {
 	argTypes: {
 		trigger: { table: { disable: true } },
 		content: { table: { disable: true } },
-		nested: { table: { disable: true } },
 		isOpen,
 		withTip: {
 			name: "Show with tip",
@@ -60,40 +58,36 @@ export default {
 				"end-top",
 				"end-bottom",
 			],
-			if: { arg: "nested", truthy: false },
 		},
+		popoverHeight: { table: { disable: true } },
+		popoverWidth: { table: { disable: true } },
+		popoverAlignment: { table: { disable: true } },
+		popoverWrapperStyles: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Popover",
 		isOpen: true,
 		withTip: false,
-		position: "right",
-		content: [html`<div style="padding-inline: 8px;">Basic popover text content with some added padding.</div>`],
+		position: "bottom",
+		popoverHeight: 142,
+		popoverWidth: 89,
+		withTestContainer: false,
 	},
 	parameters: {
 		layout: "centered",
-		docs: {
-			story: {
-				height: "300px"
-			}
-		},
 		componentVersion: version,
 	},
-	decorators: [
-		// Add padding for VRT so drop shadows are not cut off.
-		(story) => window.isChromatic() ? html`<div style="padding: 32px;">${story()}</div>` : story(),
-	],
 };
 
 export const Default = PopoverGroup.bind({});
 Default.args = {
-	trigger: (passthroughs) => ActionButton({
+	trigger: (passthroughs, context) => ActionButton({
 		isSelected: true,
-		label: "Hop on pop(over)",
+		label: "Actions",
 		...passthroughs,
-	}),
+	}, context),
 	content: [
-		(passthroughs) => Menu({
+		(passthroughs, context) => Menu({
 			items: [
 				{
 					iconName: "Edit",
@@ -113,41 +107,44 @@ Default.args = {
 				},
 			],
 			...passthroughs,
-		}),
+		}, context),
 	],
 };
 
-export const WithTip = PopoverGroup.bind({});
+export const WithTip = Template.bind({});
+WithTip.tags = ["!dev"];
 WithTip.args = {
+	...Default.args,
 	withTip: true,
-	position: "top",
 };
 
 export const Nested = Template.bind({});
 Nested.args = {
-	position: "right",
+	position: "right-top",
 	isOpen: true,
-	trigger: (passthroughs) => ActionButton({
-		label: "Hop on pop(over)",
+	trigger: (passthroughs, context) => ActionButton({
+		label: "Actions",
 		...passthroughs,
-	}),
+	}, context),
 	content: [
-		Menu.bind(null, {
+		(passthroughs, context) => Menu({
 			items: [
 				{
 					iconName: "Edit",
 					label: "Edit",
 				},
 			],
-		}),
-		Template.bind(null, {
-			position: "right",
+			...passthroughs,
+		}, context),
+		(passthroughs, context) => Template({
+			position: "right-top",
 			isOpen: true,
-			trigger: ActionButton.bind(null, {
-				label: "More options",
-			}),
+			trigger: (passthroughs, context) => ActionButton({
+				label: "More actions",
+				...passthroughs,
+			}, context),
 			content: [
-				Menu.bind(null, {
+				(passthroughs, context) => Menu({
 					items: [
 						{
 							iconName: "Edit",
@@ -166,9 +163,11 @@ Nested.args = {
 							label: "Delete",
 						},
 					],
-				}),
+					...passthroughs,
+				}, context),
 			],
-		}),
+			...passthroughs,
+		}, context),
 	],
 };
 

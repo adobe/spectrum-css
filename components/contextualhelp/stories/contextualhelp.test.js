@@ -7,13 +7,15 @@ export const ContextualHelpGroup = Variants({
 		{
 			testHeading: "Default",
 			customStyles: {
-				"max-inline-size": "275px",
+				"inline-size": "275px",
+				"margin-bottom": "170px",
 			},
 		},
 		{
 			testHeading: "With link",
 			customStyles: {
-				"max-inline-size": "275px",
+				"inline-size": "275px",
+				"margin-bottom": "200px",
 			},
 			link: {
 				text: "Learn about permissions",
