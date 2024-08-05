@@ -13,6 +13,7 @@ export const Template = ({
 	placement,
 	isOpen = true,
 	isFocused = false,
+	showOnHover = false,
 	customStyles = {},
 	customClasses = [],
 } = {}, context = {}) => {
@@ -25,6 +26,14 @@ export const Template = ({
 	}
 	else if (variant === "negative") {
 		variantIcon = "Alert";
+	}
+
+	if (showOnHover) {
+		document.addEventListener("DOMContentLoaded", () => {
+			[...document.querySelectorAll(`.${rootClass}`)].forEach(tooltip => {
+				tooltip.parentElement.classList.add("u-tooltip-showOnHover");
+			});
+		});
 	}
 
 	return html`

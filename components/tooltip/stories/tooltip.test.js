@@ -1,44 +1,18 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { capitalize } from "lodash-es";
 import { Template } from "./template.js";
+import { default as TooltipStory } from "./tooltip.stories.js";
 
 export const PlacementVariants = Variants({
 	Template,
 	testData: [
-		...["neutral", "info", "positive", "negative"].map(variant => ({
+		...(TooltipStory?.argTypes?.variant?.options ?? []).map(variant => ({
 			testHeading: capitalize(variant),
 			variant,
 		})),
-		...[
-			"top",
-			"top-left",
-			"top-right",
-			"top-start",
-			"top-end",
-			"bottom",
-			"bottom-left",
-			"bottom-right",
-			"bottom-start",
-			"bottom-end",
-			"right",
-			"right-bottom",
-			"right-top",
-			"left",
-			"left-bottom",
-			"left-top",
-			"start",
-			"start-top",
-			"start-bottom",
-			"end",
-			"end-top",
-			"end-bottom",
-		].map(placement => ({
+		...(TooltipStory?.argTypes?.placement?.options ?? []).map(placement => ({
 			testHeading: capitalize(placement.replace(/-/g, " ")),
 			placement,
 		})),
 	],
-	stateData: [{
-		testHeading: "Focused",
-		isFocused: true,
-	}]
 });

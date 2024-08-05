@@ -51,6 +51,8 @@ export const Template = ({
 				position: popoverPlacement,
 				customClasses: [`${rootClass}-popover`],
 				customStyles,
+				popoverWidth: 275,
+				popoverHeight: 150,
 			}, context)}
 		</div>
 	`;

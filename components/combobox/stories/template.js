@@ -112,7 +112,9 @@ export const Template = ({
 	...args
 } = {}, context = {}) => {
 	return html`
-		<div>
+		<div style=${styleMap({
+			["margin-block-end"]: isOpen && !isDisabled ? "152px" : undefined,
+		})}>
 			${when(showFieldLabel, () =>
 				FieldLabel({
 					size,
@@ -155,6 +157,8 @@ export const Template = ({
 							],
 						}, context),
 					],
+					popoverWidth: 166,
+					popoverHeight: 142,
 				}, context),
 			]}
 		</div>
