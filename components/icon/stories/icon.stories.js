@@ -3,8 +3,8 @@ import { Template as Typography } from "@spectrum-css/typography/stories/templat
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-import { IconGroup } from "./icon.test";
-import { Template } from "./template";
+import { IconGroup } from "./icon.test.js";
+import { Template } from "./template.js";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
 /**

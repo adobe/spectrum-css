@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { SliderGroup } from "./slider.test";
-import { Template } from "./template";
+import { SliderGroup } from "./slider.test.js";
+import { Template } from "./template.js";
 
 /**
  * A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.

@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ColorLoupeGroup } from "./colorloupe.test";
+import { ColorLoupeGroup } from "./colorloupe.test.js";
 
 /**
  * The color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.

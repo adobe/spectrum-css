@@ -3,7 +3,7 @@ import modes, { disableDefaultModes, mobile } from "@spectrum-css/preview/modes"
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
-import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test";
+import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
 
 /**
  * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.

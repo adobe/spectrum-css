@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
-import { Template } from "./template";
-import { TypographyGroup } from "./typography.test";
+import { Template } from "./template.js";
+import { TypographyGroup } from "./typography.test.js";
 
 /**
  * Spectrum typography is broken out into several separate components.

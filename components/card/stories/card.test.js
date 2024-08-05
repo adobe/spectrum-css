@@ -1,5 +1,5 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 export const CardGroup = Variants({
 	Template,

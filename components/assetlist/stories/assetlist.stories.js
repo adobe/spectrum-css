@@ -1,7 +1,7 @@
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { AssetListGroup } from "./assetlist.test";
+import { AssetListGroup } from "./assetlist.test.js";
 
 /**
  * A selectable list of assets, often used inside of miller columns.

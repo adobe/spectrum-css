@@ -2,8 +2,8 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { InfieldButtonGroup } from "./infieldbutton.test";
-import { Template } from "./template";
+import { InfieldButtonGroup } from "./infieldbutton.test.js";
+import { Template } from "./template.js";
 
 /**
  * The in-field button component is a button used inside a text field.

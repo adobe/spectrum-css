@@ -4,8 +4,8 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
-import { PopoverGroup } from "./popover.test";
-import { Template } from "./template";
+import { PopoverGroup } from "./popover.test.js";
+import { Template } from "./template.js";
 
 /**
  * A popover is used to display transient content (menus, options, additional actions etc.) and appears when clicking/tapping on a source (tools, buttons, etc.). It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.

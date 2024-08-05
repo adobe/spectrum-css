@@ -1,7 +1,7 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 export const IllustratedMessageGroup = Variants({
 	Template,

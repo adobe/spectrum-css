@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { SwitchGroup } from "./switch.test";
-import { Template } from "./template";
+import { SwitchGroup } from "./switch.test.js";
+import { Template } from "./template.js";
 
 /**
  * A switch is used to turn an option on or off. Switches allow users to select the state of a single option at a time.

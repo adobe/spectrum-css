@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { SearchGroup } from "./search.test";
+import { SearchGroup } from "./search.test.js";
 
 /**
  * This component contains a single input field with both a magnifying glass icon and a "reset" button displayed within it.

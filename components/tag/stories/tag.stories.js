@@ -2,8 +2,8 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { TagGroups } from "./tag.test";
-import { Template } from "./template";
+import { TagGroups } from "./tag.test.js";
+import { Template } from "./template.js";
 
 /**
  * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.

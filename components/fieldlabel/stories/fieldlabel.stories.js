@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { FieldLabelGroup } from "./fieldlabel.test";
+import { FieldLabelGroup } from "./fieldlabel.test.js";
 
 /**
  * The field label component is used along with inputs to display a label for that input.

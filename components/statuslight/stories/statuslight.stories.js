@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { StatusLightGroup } from "./statuslight.test";
+import { StatusLightGroup } from "./statuslight.test.js";
 
 export default {
 	title: "Status light",

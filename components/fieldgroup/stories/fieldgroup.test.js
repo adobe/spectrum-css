@@ -1,6 +1,6 @@
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 export const FieldGroupSet = Variants({
 	Template,

@@ -2,8 +2,8 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isFocused, isHovered } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { FloatingActionButtonGroup } from "./floatingactionbutton.test";
-import { Template } from "./template";
+import { FloatingActionButtonGroup } from "./floatingactionbutton.test.js";
+import { Template } from "./template.js";
 
 /**
  * The floating action button component is used to give users a more prominent button for high frequency actions.

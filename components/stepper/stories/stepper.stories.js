@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isInvalid } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { StepperGroup } from "./stepper.test";
-import { Template } from "./template";
+import { StepperGroup } from "./stepper.test.js";
+import { Template } from "./template.js";
 
 /**
  * A stepper can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value.

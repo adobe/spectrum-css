@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ColorHandleGroup } from "./colorhandle.test";
-import { Template } from "./template";
+import { ColorHandleGroup } from "./colorhandle.test.js";
+import { Template } from "./template.js";
 
 /**
  * The color handle component is used with color area, color slider and color wheel as the color selector.

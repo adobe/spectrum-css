@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { ClearButtonGroup } from "./clearbutton.test";
+import { ClearButtonGroup } from "./clearbutton.test.js";
 
 /**
  * The clear button component is an in-field button used in search and tag.

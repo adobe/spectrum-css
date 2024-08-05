@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { RatingGroup } from "./rating.test";
-import { Template } from "./template";
+import { RatingGroup } from "./rating.test.js";
+import { Template } from "./template.js";
 
 /**
  * A rating element is used to display or collect a user's rating of an item as represented by a number of stars.

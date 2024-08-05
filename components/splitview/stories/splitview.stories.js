@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { SplitViewGroup } from "./splitview.test";
-import { Template } from "./template";
+import { SplitViewGroup } from "./splitview.test.js";
+import { Template } from "./template.js";
 
 export default {
 	title: "Split view",

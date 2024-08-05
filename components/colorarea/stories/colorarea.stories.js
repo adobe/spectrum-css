@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ColorAreaGroup } from "./colorarea.test";
-import { Template } from "./template";
+import { ColorAreaGroup } from "./colorarea.test.js";
+import { Template } from "./template.js";
 
 /**
  * The color area component allows users to visually select two properties of a color simultaneously. It's commonly used together with a color slider or color wheel. Some usage notes:

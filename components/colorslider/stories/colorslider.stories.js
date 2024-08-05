@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ColorSliderGroup } from "./colorslider.test";
-import { Template } from "./template";
+import { ColorSliderGroup } from "./colorslider.test.js";
+import { Template } from "./template.js";
 
 /**
  * The color slider component lets users visually change an individual channel of a color.

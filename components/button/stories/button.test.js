@@ -1,7 +1,7 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { capitalize } from "lodash-es";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 /**
  * Multiple button variations displayed in one story template.

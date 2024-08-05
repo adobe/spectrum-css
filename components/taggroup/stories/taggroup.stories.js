@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
 import { version } from "../package.json";
-import { TagGroups } from "./taggroup.test";
-import { Template } from "./template";
+import { TagGroups } from "./taggroup.test.js";
+import { Template } from "./template.js";
 
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 

@@ -1,6 +1,6 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { capitalize } from "lodash-es";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 export const PlacementVariants = Variants({
 	Template,

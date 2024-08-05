@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
-import { ThumbnailGroup } from "./thumbnail.test";
+import { Template } from "./template.js";
+import { ThumbnailGroup } from "./thumbnail.test.js";
 
 /**
  * A thumbnail is used to display a preview of an image, layer, or effect.

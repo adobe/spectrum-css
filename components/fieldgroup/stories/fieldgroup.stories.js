@@ -3,8 +3,8 @@ import { isInvalid } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { version } from "../package.json";
-import { FieldGroupSet } from "./fieldgroup.test";
-import { Template } from "./template";
+import { FieldGroupSet } from "./fieldgroup.test.js";
+import { Template } from "./template.js";
 
 /**
  * A field group is a group of fields, usually radios (also known as a radio group) or checkboxes

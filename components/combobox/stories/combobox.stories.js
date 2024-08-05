@@ -2,8 +2,8 @@ import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isInvalid, isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ComboBoxGroup } from "./combobox.test";
-import { Template } from "./template";
+import { ComboBoxGroup } from "./combobox.test.js";
+import { Template } from "./template.js";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.

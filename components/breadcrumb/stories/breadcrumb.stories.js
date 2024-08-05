@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { BreadcrumbGroup } from "./breadcrumb.test";
+import { BreadcrumbGroup } from "./breadcrumb.test.js";
 
 /**
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.

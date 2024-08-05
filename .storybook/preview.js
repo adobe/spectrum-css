@@ -89,7 +89,7 @@ const parameters = {
 		page: DocumentationTemplate,
 		story: {
 			inline: true,
-			height: "200px"
+			height: "200px",
 		},
 		source: {
 			type: "dynamic",

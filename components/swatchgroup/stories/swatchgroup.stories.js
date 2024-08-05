@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
 import { version } from "../package.json";
-import { SwatchGroup } from "./swatchgroup.test";
+import { SwatchGroup } from "./swatchgroup.test.js";
 
 /**
  * The swatch group component is a collection of swatches.

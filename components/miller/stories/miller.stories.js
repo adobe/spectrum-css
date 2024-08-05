@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { MillerGroup } from "./miller.test";
-import { Template } from "./template";
+import { MillerGroup } from "./miller.test.js";
+import { Template } from "./template.js";
 
 /**
  * Miller columns are a browsing/visualization technique that can be applied to tree structures. The columns allow for multiple levels of the hierarchy to be open at once and provide a visual representation of the current location.

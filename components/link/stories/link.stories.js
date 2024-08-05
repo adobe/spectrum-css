@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isFocused, isHovered } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { LinkGroup } from "./link.test";
+import { LinkGroup } from "./link.test.js";
 
 /**
  * A link allow users to navigate to a different location. They can be presented in-line inside a paragraph or as a standalone text.

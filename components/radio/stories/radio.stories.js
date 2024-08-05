@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { RadioGroup } from "./radio.test";
+import { RadioGroup } from "./radio.test.js";
 
 /**
  * A radio selector allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.

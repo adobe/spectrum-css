@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { LogicButtonGroup } from "./logicbutton.test";
-import { Template } from "./template";
+import { LogicButtonGroup } from "./logicbutton.test.js";
+import { Template } from "./template.js";
 
 /**
  * A logic button displays an operator within a boolean logic sequence.

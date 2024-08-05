@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { TableGroup } from "./table.test";
-import { Template } from "./template";
+import { TableGroup } from "./table.test.js";
+import { Template } from "./template.js";
 
 /**
  * A table is used to create a container for displaying information. It allows users to sort, compare, and take action on large amounts of data.

@@ -4,8 +4,8 @@ import { default as Popover } from "@spectrum-css/popover/stories/popover.storie
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ActionBarGroup } from "./actionbar.test";
-import { Template } from "./template";
+import { ActionBarGroup } from "./actionbar.test.js";
+import { Template } from "./template.js";
 
 /**
  * The action bar component is a floating full width bar that appears upon selection.

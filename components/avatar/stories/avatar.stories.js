@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { AvatarGroup } from "./avatar.test";
+import { AvatarGroup } from "./avatar.test.js";
 import { AvatarSizes, Template } from "./template";
 
 /**

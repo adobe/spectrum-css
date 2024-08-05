@@ -3,7 +3,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
-import { ModalGroup } from "./modal.test";
+import { ModalGroup } from "./modal.test.js";
 
 /**
  * A modal component is a dialog box/popup window that is displayed on top of the current page.

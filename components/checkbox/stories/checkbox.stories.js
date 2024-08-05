@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { CheckboxGroup } from "./checkbox.test";
+import { CheckboxGroup } from "./checkbox.test.js";
 
 /**
  * Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.

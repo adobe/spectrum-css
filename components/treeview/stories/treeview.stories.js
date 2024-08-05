@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
-import { TreeViewGroup } from "./treeview.test";
+import { Template } from "./template.js";
+import { TreeViewGroup } from "./treeview.test.js";
 
 /**
  * The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.

@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { CoachIndicatorGroup } from "./coachindicator.test";
+import { CoachIndicatorGroup } from "./coachindicator.test.js";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.

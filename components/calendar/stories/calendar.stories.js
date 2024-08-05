@@ -2,8 +2,8 @@ import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { CalendarGroup } from "./calendar.test";
-import { Template } from "./template";
+import { CalendarGroup } from "./calendar.test.js";
+import { Template } from "./template.js";
 
 const months = [...Array(12).keys()].map((key) =>
 	new Date(0, key).toLocaleString("en", { month: "long" })

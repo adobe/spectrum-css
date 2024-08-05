@@ -2,8 +2,8 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { CoachMarkGroup } from "./coachmark.test";
-import { Template } from "./template";
+import { CoachMarkGroup } from "./coachmark.test.js";
+import { Template } from "./template.js";
 
 /**
  * The coach mark component can be used to bring added attention to specific parts of a page. It is a separate component from the coach indicator.

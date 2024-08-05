@@ -2,7 +2,7 @@ import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.sto
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { PickerGroup } from "./picker.test";
+import { PickerGroup } from "./picker.test.js";
 
 /**
  * A picker outlines a set of options for a user.

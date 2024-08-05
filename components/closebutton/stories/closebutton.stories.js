@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { CloseButtonGroup } from "./closebutton.test";
+import { CloseButtonGroup } from "./closebutton.test.js";
 
 /**
  * A button used to close or dismiss components.

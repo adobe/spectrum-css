@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { ActionGroups } from "./actiongroup.test";
+import { ActionGroups } from "./actiongroup.test.js";
 /**
  * The action group component is a collection of action buttons.
  */

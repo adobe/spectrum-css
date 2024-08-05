@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { SideNavGroup } from "./sidenav.test";
-import { Template } from "./template";
+import { SideNavGroup } from "./sidenav.test.js";
+import { Template } from "./template.js";
 
 /**
  * Side nav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.

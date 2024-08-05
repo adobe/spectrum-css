@@ -2,8 +2,8 @@ import { default as CalendarStories } from "@spectrum-css/calendar/stories/calen
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isOpen, isValid } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { DatePickerGroup } from "./datepicker.test";
-import { Template } from "./template";
+import { DatePickerGroup } from "./datepicker.test.js";
+import { Template } from "./template.js";
 
 /**
  * A date picker displays a text field input with a button next to it, and can display two text fields next to each other for choosing a date range.

@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { SwatchGroup } from "./swatch.test";
+import { SwatchGroup } from "./swatch.test.js";
 
 /**
  * A swatch shows a small sample of a fill--such as a color, gradient, texture, or material--that is intended to be applied to an object.

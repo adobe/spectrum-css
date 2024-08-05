@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { ProgressBarGroup } from "./progressbar.test";
+import { ProgressBarGroup } from "./progressbar.test.js";
 
 /**
  * The progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.

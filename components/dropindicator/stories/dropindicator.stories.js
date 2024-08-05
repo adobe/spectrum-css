@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { DropIndicatorGroup } from "./dropindicator.test";
+import { DropIndicatorGroup } from "./dropindicator.test.js";
 
 /**
  * The drop indicator component is used to show the insertion position into a list or table.

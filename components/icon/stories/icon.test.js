@@ -2,7 +2,7 @@ import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-import { Template } from "./template";
+import { Template } from "./template.js";
 import { uiIconSizes, uiIconsWithDirections } from "./utilities.js";
 
 /**

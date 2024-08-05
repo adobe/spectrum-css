@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { TabsGroups } from "./tabs.test";
-import { Template } from "./template";
+import { TabsGroups } from "./tabs.test.js";
+import { Template } from "./template.js";
 
 /**
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit.

@@ -1,8 +1,8 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { ContextualHelpGroup } from "./contextualhelp.test";
-import { Template } from "./template";
+import { ContextualHelpGroup } from "./contextualhelp.test.js";
+import { Template } from "./template.js";
 
 /**
  * Contextual help shows a user extra information in relation to another component or view.

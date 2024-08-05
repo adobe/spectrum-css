@@ -3,7 +3,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as Stepper } from "@spectrum-css/stepper/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { version } from "../package.json";
-import { FormGroup } from "./form.test";
+import { FormGroup } from "./form.test.js";
 
 /**
  * The form component is used for aligning multiple inputs and field groups within a form.

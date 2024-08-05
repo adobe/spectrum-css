@@ -1,7 +1,7 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { ButtonGroup } from "./buttongroup.test";
+import { ButtonGroup } from "./buttongroup.test.js";
 
 /**
  * A grouping of buttons.

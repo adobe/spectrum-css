@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { MeterGroup } from "./meter.test";
+import { MeterGroup } from "./meter.test.js";
 import { default as ProgressBar } from "./progressbar.stories";
 
 /**

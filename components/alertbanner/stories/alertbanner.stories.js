@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { AlertBannerGroup } from "./alertbanner.test";
+import { AlertBannerGroup } from "./alertbanner.test.js";
 
 /**
  * The alert banner show pressing and high-signal messages, such as system alerts. They're meant to be noticed and prompt users to take action.

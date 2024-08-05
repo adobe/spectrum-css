@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isInvalid, isValid } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
-import { TextFieldGroup } from "./textfield.test";
+import { Template } from "./template.js";
+import { TextFieldGroup } from "./textfield.test.js";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.

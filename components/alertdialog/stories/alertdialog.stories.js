@@ -2,8 +2,8 @@ import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import modes, { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { AlertDialogGroup } from "./alertdialog.test";
-import { Template } from "./template";
+import { AlertDialogGroup } from "./alertdialog.test.js";
+import { Template } from "./template.js";
 
 
 // the "TallerViewport" modes are accommodating the underlay, which is position: fixed,

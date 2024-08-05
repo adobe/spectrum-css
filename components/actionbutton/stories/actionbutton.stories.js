@@ -2,7 +2,7 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ActionButtonGroup, ActionButtons } from "./actionbutton.test";
+import { ActionButtonGroup, ActionButtons } from "./actionbutton.test.js";
 
 /**
  * The action button component represents an action a user can take.

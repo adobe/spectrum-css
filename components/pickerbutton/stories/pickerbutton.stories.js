@@ -2,8 +2,8 @@ import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { PickerGroup } from "./pickerbutton.test";
-import { Template } from "./template";
+import { PickerGroup } from "./pickerbutton.test.js";
+import { Template } from "./template.js";
 
 /**
  * The picker button component is used as a dropdown trigger. See Combobox.

@@ -1,6 +1,6 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 export const ActionButtons = (args, context) => {
 	return html`

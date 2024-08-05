@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { OpacityCheckboardGroup } from "./opacitycheckerboard.test";
-import { Template } from "./template";
+import { OpacityCheckboardGroup } from "./opacitycheckerboard.test.js";
+import { Template } from "./template.js";
 
 /**
  * Opacity checkerboard is used with other components to highlight opacity.
