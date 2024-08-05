@@ -15,7 +15,7 @@
 		"scripts": ["{projectRoot}/stories/*.js"],
 		"stylelint": [
 			"{workspaceRoot}/.stylelintignore",
-			"{workspaceRoot}/stylelint.config.mjs",
+			"{workspaceRoot}/stylelint.config.js",
 			"{workspaceRoot}/plugins/stylelint-*/index.js"
 		],
 		"tools": [
