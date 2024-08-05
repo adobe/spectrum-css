@@ -88,9 +88,6 @@ export default {
 		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	},
 	parameters: {
-		actions: {
-			handles: [],
-		},
 		componentVersion: version,
 	},
 };
@@ -99,7 +96,7 @@ export const Default = PlacementVariants.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = PlacementVariants.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
