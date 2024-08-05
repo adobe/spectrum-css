@@ -134,7 +134,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Icon = Template.bind({});
-Icon.tags = ["autodocs", "!dev"];
+Icon.tags = ["!dev"];
 Icon.args = {
 	hasIcon: true,
 	iconName: "Info",
@@ -146,7 +146,7 @@ Icon.parameters = {
 };
 
 export const Avatar = Template.bind({});
-Avatar.tags = ["autodocs", "!dev"];
+Avatar.tags = ["!dev"];
 Avatar.args = {
 	hasAvatar: true,
 	avatarUrl: "example-ava.png"
@@ -156,7 +156,7 @@ Avatar.parameters = {
 };
 
 export const Removable = Template.bind({});
-Removable.tags = ["autodocs", "!dev"];
+Removable.tags = ["!dev"];
 Removable.args = {
 	hasClearButton: true,
 };

@@ -83,7 +83,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Emphasized = Template.bind({});
-Emphasized.tags = ["autodocs", "!dev"];
+Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	isEmphasized: true,
 	label: "Switch label that is so long it wraps to the next line",
@@ -94,7 +94,7 @@ Emphasized.parameters = {
 };
 
 export const Checked = Template.bind({});
-Checked.tags = ["autodocs", "!dev"];
+Checked.tags = ["!dev"];
 Checked.args = {
 	isChecked: true
 };
@@ -103,7 +103,7 @@ Checked.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true
 };

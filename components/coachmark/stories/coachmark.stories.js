@@ -47,7 +47,6 @@ export default {
 		hasImage: false,
 	},
 	parameters: {
-		layout: "fullscreen",
 		actions: {
 			handles: [
 				...(ActionButton.parameters?.actions?.handles ?? []),
@@ -57,6 +56,11 @@ export default {
 		componentVersion: version,
 		chromatic: {
 			modes: mobile,
+		},
+		docs: {
+			story: {
+				height: "300px",
+			}
 		}
 	},
 	tags: ["!autodocs"],
@@ -66,13 +70,19 @@ export const Default = CoachMarkGroup.bind({});
 Default.args = {};
 
 export const WithMedia = Template.bind({});
-WithMedia.tags = ["autodocs", "!dev"];
+WithMedia.tags = ["!dev"];
 WithMedia.args = {
 	hasImage: true,
 };
 WithMedia.parameters = {
 	chromatic: {
 		disableSnapshot: true,
+	},
+	docs: {
+		story: {
+			inline: false,
+			height: "475px",
+		},
 	},
 };
 

@@ -143,7 +143,7 @@ WithForcedColors.parameters = {
  * An example showing both the optional summary row, and a row marked as selected.
  */
 export const SummaryAndSelected = Template.bind({});
-SummaryAndSelected.tags = ["autodocs", "dev"];
+
 SummaryAndSelected.args = {
 	rowItems: [
 		{
@@ -170,7 +170,7 @@ SummaryAndSelected.parameters = {
 };
 
 export const MultiSelect = Template.bind({});
-MultiSelect.tags = ["autodocs", "dev"];
+
 MultiSelect.storyName = "Multi-select";
 MultiSelect.args = {
 	rowItems: [
@@ -214,7 +214,7 @@ MultiSelect.parameters = {
  * An example showing the use of the scrollable wrapper element with table markup. This allows a fixed height and scrolling, along with column headers that are fixed to the top on scroll.
  */
 export const Scrollable = Template.bind({});
-Scrollable.tags = ["autodocs", "dev"];
+
 Scrollable.args = {
 	useScroller: true,
 	rowItems: [
@@ -251,7 +251,7 @@ Scrollable.parameters = {
  * A table can also be made up of divs if needed. This uses both the div markup, and the scrollable wrapper.
  */
 export const DivsScrollable = Template.bind({});
-DivsScrollable.tags = ["autodocs", "!dev"];
+DivsScrollable.tags = ["!dev"];
 DivsScrollable.storyName = "Divs and scrollable";
 DivsScrollable.args = {
 	useDivs: true,
@@ -294,7 +294,7 @@ DivsScrollable.parameters = {
 };
 
 export const SectionHeader = Template.bind({});
-SectionHeader.tags = ["autodocs", "dev"];
+
 SectionHeader.args = {
 	rowItems: [
 		{
@@ -327,7 +327,7 @@ SectionHeader.parameters = {
 };
 
 export const Collapsible = Template.bind({});
-Collapsible.tags = ["autodocs", "dev"];
+
 Collapsible.args = {
 	rowItems: [
 		{
@@ -392,7 +392,7 @@ Collapsible.parameters = {
 
 export const CollapsibleMultiSelect = Template.bind({});
 CollapsibleMultiSelect.storyName = "Collapsible Multi-select";
-CollapsibleMultiSelect.tags = ["autodocs", "dev"];
+
 CollapsibleMultiSelect.args = {
 	rowItems: [
 		{
@@ -463,7 +463,7 @@ CollapsibleMultiSelect.parameters = {
 };
 
 export const Thumbnails = Template.bind({});
-Thumbnails.tags = ["autodocs", "dev"];
+
 Thumbnails.args = {
 	showThumbnails: true,
 	rowItems: [
@@ -490,7 +490,7 @@ Thumbnails.parameters = {
 };
 
 export const ThumbnailsCollapsible = Template.bind({});
-ThumbnailsCollapsible.tags = ["autodocs", "dev"];
+
 ThumbnailsCollapsible.args = {
 	showThumbnails: true,
 	rowItems: [
@@ -538,7 +538,7 @@ ThumbnailsCollapsible.parameters = {
  * In addition to the overall table, individual rows can be designated as a drop target. Only one dropzone row should show at a time, but this example sets multiple at different parts of the table to test that they all display the same.
  */
 export const RowDropzone = Template.bind({});
-RowDropzone.tags = ["autodocs", "dev"];
+
 RowDropzone.args = {
 	rowItems: [
 		{

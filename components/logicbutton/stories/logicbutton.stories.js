@@ -45,7 +45,7 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 export const Or = Template.bind({});
-Or.tags = ["autodocs", "!dev"];
+Or.tags = ["!dev"];
 Or.args = {
 	variant: "or"
 };
@@ -54,7 +54,7 @@ Or.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true
 };

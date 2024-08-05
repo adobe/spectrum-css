@@ -190,6 +190,11 @@ export default {
 			handles: ["click .spectrum-Menu-item"],
 		},
 		componentVersion: version,
+		docs: {
+			story: {
+				height: "300px"
+			}
+		},
 	},
 };
 
@@ -307,7 +312,7 @@ Collapsible.argTypes = {
 	hasDividers: { table: { disable: true } },
 	isTraySubmenu: { table: { disable: true } },
 };
-Collapsible.tags = ["autodocs", "dev"];
+
 Collapsible.parameters = {
 	chromatic: { disableSnapshot: true },
 };

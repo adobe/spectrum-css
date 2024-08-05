@@ -32,8 +32,12 @@ export default {
 	},
 	parameters: {
 		componentVersion: version,
+		docs: {
+			story: {
+				height: "100px"
+			}
+		},
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = ColorLoupeGroup.bind({});

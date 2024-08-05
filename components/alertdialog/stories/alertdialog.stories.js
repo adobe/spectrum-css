@@ -55,7 +55,6 @@ export default {
 		variant: "confirmation",
 	},
 	parameters: {
-		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-AlertDialog button"],
 		},

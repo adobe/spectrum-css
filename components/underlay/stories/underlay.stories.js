@@ -20,7 +20,7 @@ export default {
 		rootClass: "spectrum-Underlay",
 		isOpen: false,
 	},
-	tags: ["autodocs", "!test"],
+	tags: ["!test"],
 	parameters: {
 		layout: "fullscreen",
 		docs: {

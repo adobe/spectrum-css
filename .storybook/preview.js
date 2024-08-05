@@ -17,8 +17,8 @@ import {
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import {
-  argTypes,
-  globalTypes
+	argTypes,
+	globalTypes
 } from "./types";
 
 import "./assets/base.css";
@@ -38,7 +38,7 @@ setConsoleOptions({
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
 const parameters = {
-	layout: "centered",
+	layout: "padded",
 	showNav: true,
 	showTabs: true,
 	showPanel: true,
@@ -89,6 +89,7 @@ const parameters = {
 		page: DocumentationTemplate,
 		story: {
 			inline: true,
+			height: "200px"
 		},
 		source: {
 			type: "dynamic",
@@ -136,5 +137,5 @@ export default {
 		IconLoader,
 		TokenLoader,
 	],
-	tags: ["autodocs"],
+	tags: ["autodocs", "dev"],
 };

@@ -70,6 +70,12 @@ WithColorLoupe.args = {
 WithColorLoupe.tags = ["!dev"];
 WithColorLoupe.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			inline: false,
+			height: "150px",
+		},
+	},
 };
 
 // ********* VRT ONLY ********* //

@@ -85,7 +85,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const ReadOnly = Template.bind({});
-ReadOnly.tags = ["autodocs", "!dev"];
+ReadOnly.tags = ["!dev"];
 ReadOnly.args = {
 	isReadOnly: true,
 };
@@ -94,7 +94,7 @@ ReadOnly.parameters = {
 };
 
 export const Emphasized = Template.bind({});
-Emphasized.tags = ["autodocs", "!dev"];
+Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	isEmphasized: true,
 };
@@ -103,7 +103,7 @@ Emphasized.parameters = {
 };
 
 export const ReadOnlyEmphasized = Template.bind({});
-ReadOnlyEmphasized.tags = ["autodocs", "!dev"];
+ReadOnlyEmphasized.tags = ["!dev"];
 ReadOnlyEmphasized.args = {
 	isEmphasized: true,
 	isReadOnly: true,
@@ -113,7 +113,7 @@ ReadOnlyEmphasized.parameters = {
 };
 
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true,
 };

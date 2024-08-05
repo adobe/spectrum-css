@@ -54,7 +54,7 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 export const Secondary = Template.bind({});
-Secondary.tags = ["autodocs", "!dev"];
+Secondary.tags = ["!dev"];
 Secondary.args = {
 	variant: "secondary",
 };

@@ -37,7 +37,7 @@ export const Default = OpacityCheckboardGroup.bind({});
 Default.args = {};
 
 export const CheckerboardPosition = Template.bind({});
-CheckerboardPosition.tags = ["autodocs", "!dev"];
+CheckerboardPosition.tags = ["!dev"];
 CheckerboardPosition.args = {
 	backgroundPosition: "center center",
 	customStyles: {
