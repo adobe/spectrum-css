@@ -5,7 +5,7 @@ import { Template as Typography } from "@spectrum-css/typography/stories/templat
 import { version } from "../package.json";
 import {
 	Template,
-	DialogGroup
+	DialogGroup,
 } from "./template";
 
 /**
@@ -317,7 +317,7 @@ FullscreenTakeover.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = DialogGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

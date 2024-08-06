@@ -89,9 +89,16 @@ export const Template = ({
 };
 
 export const DialogGroup = Variants({
-	Template,
+	Template: (args, context) => (
+		/**
+		 * Template that forces showModal to false when isChromatic() is true, in order
+		 * for Sizes within the Variants() template to display correctly.
+		 */
+		window.isChromatic() ? Template({ ...args, showModal: false }, context) : Template(args, context)
+	),
 	testData: [
 		{
+			testHeading: "Default",
 			showModal: false,
 			isDismissible: true,
 		},
@@ -103,6 +110,10 @@ export const DialogGroup = Variants({
 		{
 			testHeading: "With hero",
 			hasHeroImage: true,
+			showModal: false,
+		},
+		{
+			testHeading: "No divider",
 			isDismissible: true,
 			hasDivider: false,
 			showModal: false,
