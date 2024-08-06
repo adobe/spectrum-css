@@ -3,6 +3,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase, upperCase } from "lodash-es";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 
 import "../index.css";
 
@@ -88,3 +89,31 @@ export const AllDividerSizes = (args, context) => {
 		`)}
 	`;
 };
+
+export const DividerGroup = Variants({
+	Template,
+	skipBorders: true,
+	testData: [
+		{
+			testHeading: "Default",
+			vertical: false,
+			customStyles: {
+				"min-inline-size": "200px",
+			},
+		},
+		{
+			testHeading: "Non-HR",
+			tag: "div",
+			customStyles: {
+				"min-inline-size": "200px",
+			},
+		},
+		{
+			testHeading: "Vertical",
+			vertical: true,
+			customStyles: {
+				"min-block-size": "100px",
+			},
+		}
+	],
+});

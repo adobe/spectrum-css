@@ -1,8 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import {
-	Template, 
 	AllDividerSizes,
+	DividerGroup,
 } from "./template";
 
 /**
@@ -56,7 +56,7 @@ export default {
 /**
  * The default size for divider is medium.
  */
-export const Default = Template.bind({});
+export const Default = DividerGroup.bind({});
 Default.args = {};
 Default.parameters = {
 	docs: {
@@ -101,7 +101,7 @@ StaticBlackGroup.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = DividerGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
