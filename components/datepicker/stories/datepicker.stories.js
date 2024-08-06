@@ -103,7 +103,7 @@ export default {
 		componentVersion: version,
 		docs: {
 			story: {
-				height: "350px"
+				height: "50px"
 			}
 		},
 	},
@@ -111,6 +111,13 @@ export default {
 
 export const Default = DatePickerGroup.bind({});
 Default.args = {};
+Default.parameters = {
+	docs: {
+		story: {
+			height: "300px"
+		}
+	},
+};
 
 // ********* DOCS ONLY ********* //
 export const Quiet = Template.bind({});
@@ -120,6 +127,11 @@ Quiet.args = {
 };
 Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px"
+		}
+	},
 };
 
 export const Range = Template.bind({});
@@ -131,11 +143,6 @@ Range.args = {
 };
 Range.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const QuietRange = Template.bind({});
@@ -148,11 +155,6 @@ QuietRange.args = {
 };
 QuietRange.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const Invalid = Template.bind({});
@@ -163,11 +165,6 @@ Invalid.args = {
 };
 Invalid.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const QuietInvalid = Template.bind({});
@@ -179,11 +176,6 @@ QuietInvalid.args = {
 };
 QuietInvalid.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const ReadOnly = Template.bind({});
@@ -193,11 +185,6 @@ ReadOnly.args = {
 };
 ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const Disabled = Template.bind({});
@@ -207,11 +194,6 @@ Disabled.args = {
 };
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const QuietDisabled = Template.bind({});
@@ -222,11 +204,6 @@ QuietDisabled.args = {
 };
 QuietDisabled.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 // ********* VRT ONLY ********* //

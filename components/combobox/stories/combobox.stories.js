@@ -108,11 +108,6 @@ export default {
 	},
 	parameters: {
 		componentVersion: version,
-		docs: {
-			story: {
-				height: "220px"
-			}
-		},
 	},
 };
 
