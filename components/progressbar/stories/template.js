@@ -4,7 +4,6 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase } from "lodash-es";
-import { ifDefined } from "lit/directives/if-defined.js";
 
 import "../index.css";
 
@@ -16,8 +15,6 @@ export const Template = ({
 	customWidth,
 	indeterminate,
 	label,
-	trackFill,
-	progressBarFill,
 	value,
 	customStyles = {},
 	size = "m",
@@ -54,15 +51,10 @@ export const Template = ({
 
 			<div
 				class="${rootClass}-track"
-				style="--mod-progressbar-track-color: ${staticColor !== "white" ? ifDefined(trackFill) : undefined}"
 			>
 				<div
 					class="${rootClass}-fill"
-					style=
-						"width: ${value}%;
-						${progressBarFill !== undefined
-							? `--mod-progressbar-fill-color: ${progressBarFill}` 
-							: undefined}"
+					style="width: ${value}%"
 				></div>
 			</div>
 		</div>
@@ -189,8 +181,10 @@ export const ProgressBarGroup = (args, context) => html`
 			})}>
 				${Template({
 					...args,
-					trackFill: "linear-gradient(to right, hotpink, orange)",
-					progressBarFill: "linear-gradient(to left, teal, purple)",
+					customStyles: {
+						"--mod-progressbar-fill-color": "linear-gradient(to left, teal, purple)",
+						"--mod-progressbar-track-color": "linear-gradient(to right, hotpink, orange)",
+					},
 				}, context)}
 			</div>
 		</div>

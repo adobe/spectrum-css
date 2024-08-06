@@ -7,6 +7,7 @@ import "../index.css";
 
 export const Template = ({
 	customClasses = [],
+	customStyles = {},
 	fill,
 	size = "s",
 	...item
@@ -18,6 +19,9 @@ export const Template = ({
 		typeof fill !== "undefined" ? `is-${fill}` : null,
 	].filter(Boolean),
 	size,
+	customStyles: {
+		...customStyles,
+	},
 	...item,
 }, context);
 
@@ -83,8 +87,10 @@ export const MeterGroup = (args, context) => html`
 			})}>
 				${Template({
 					...args,
-					trackFill: "linear-gradient(to right, hotpink, orange)",
-					progressBarFill: "linear-gradient(to left, teal, purple)",
+					customStyles: {
+						"--mod-progressbar-fill-color": "linear-gradient(to left, teal, purple)",
+						"--mod-progressbar-track-color": "linear-gradient(to right, hotpink, orange)",
+					},
 				}, context)}
 			</div>
 		</div>

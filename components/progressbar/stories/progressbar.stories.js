@@ -49,8 +49,6 @@ export default {
 			control: { type: "range", min: 0, max: 100,},
 			if: { arg: "indeterminate", truthy: false },
 		},
-		trackFill: { table: { disable: true } },
-		progressBarFill: { table: { disable: true } },
 		staticColor: {
 			name: "Static color",
 			type: { name: "string" },
