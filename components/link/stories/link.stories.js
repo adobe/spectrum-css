@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isQuiet, staticColor } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -37,25 +38,8 @@ export default {
 			options: ["secondary"],
 			control: "select",
 		},
-		staticColor: {
-			name: "Static color",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Advanced",
-			},
-			options: ["white", "black"],
-			control: "select",
-		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		staticColor,
+		isQuiet,
 	},
 	args: {
 		rootClass: "spectrum-Link",

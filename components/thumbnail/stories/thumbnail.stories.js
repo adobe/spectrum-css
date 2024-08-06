@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused, isSelected } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isSelected, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -11,29 +11,7 @@ export default {
 	component: "Thumbnail",
 	argTypes: {
 		reduceMotion: { table: { disable: true } },
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: [
-				"50",
-				"75",
-				"100",
-				"200",
-				"300",
-				"400",
-				"500",
-				"600",
-				"700",
-				"800",
-				"900",
-				"1000",
-			],
-			control: "select",
-		},
+		size: size([50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000], false),
 		imageURL: {
 			name: "Image URL",
 			type: { name: "string" },
@@ -91,15 +69,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isSelected: {
 			...isSelected,
 			if: { arg: "isLayer" },

@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDragged } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { BreadcrumbGroup } from "./template";
 
@@ -20,15 +21,7 @@ export default {
 			options: ["compact", "multiline"],
 			control: "inline-radio",
 		},
-		isDragged: {
-			name: "Dragged",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean"
-		},
+		isDragged,
 	},
 	args: {
 		rootClass: "spectrum-Breadcrumbs",
