@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -10,16 +10,7 @@ export default {
 	title: "Slider",
 	component: "Slider",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -96,15 +87,7 @@ export default {
 			control: "boolean",
 			if: { arg: "variant", neq: "ramp" },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
 			...isFocused,
 			if: { arg: "isDisabled", truthy: false },

@@ -6,7 +6,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-import { capitalize, lowerCase } from "lodash-es";
+import { capitalize } from "lodash-es";
 
 import "../index.css";
 
@@ -46,7 +46,7 @@ export const Template = (
         [`${rootClass}--${variant}`]: typeof variant !== "undefined",
         [`${rootClass}--size${size?.toUpperCase()}`]:
           typeof size !== "undefined",
-        [`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+        [`${rootClass}--static${capitalize(staticColor)}`]:
           typeof staticColor !== "undefined",
         [`${rootClass}--iconOnly`]: hideLabel,
         ["is-pending"]: isPending,

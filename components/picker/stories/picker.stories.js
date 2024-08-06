@@ -1,6 +1,6 @@
 import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isInvalid, isOpen } from "@spectrum-css/preview/types";
+import { isDisabled, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
@@ -13,16 +13,7 @@ export default {
 	title: "Picker",
 	component: "Picker",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -61,43 +52,11 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isQuiet,
 		isOpen,
-		isKeyboardFocused: {
-			name: "Keyboard focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isLoading: {
-			name: "Loading",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isKeyboardFocused,
+		isDisabled,
+		isLoading,
 		isInvalid,
 		content: { table: { disable: true } },
 	},

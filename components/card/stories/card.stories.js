@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused, isSelected } from "@spectrum-css/preview/types";
+import { isFocused, isQuiet, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { CardGroup, Template } from "./template";
 
@@ -21,15 +21,7 @@ export default {
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
 		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isQuiet,
 		isSelected,
 		isFocused,
 		hasActions: {

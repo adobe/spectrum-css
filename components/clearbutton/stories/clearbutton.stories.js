@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, size, staticColor } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -9,35 +10,11 @@ export default {
 	title: "Clear button",
 	component: "ClearButton",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		size: size(["s", "m", "l", "xl"]),
+		isDisabled,
 		staticColor: {
-			name: "Static color",
-			type: { name: "string" },
-			table: {
-				disable: true,
-				type: { summary: "string" },
-				category: "Advanced",
-			},
+			...staticColor,
 			options: ["white"],
-			control: "select",
 		},
 	},
 	args: {
