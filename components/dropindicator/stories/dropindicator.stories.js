@@ -2,7 +2,6 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
 import {
-	Template,
 	DropIndicatorGroup,
 } from "./template";
 
@@ -49,7 +48,7 @@ export default {
 	],
 };
 
-export const Default = Template.bind({});
+export const Default = DropIndicatorGroup.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
 
@@ -62,7 +61,7 @@ DefaultGroup.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = DropIndicatorGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

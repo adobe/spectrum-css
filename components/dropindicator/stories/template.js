@@ -2,6 +2,7 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 
 import "../index.css";
 
@@ -26,20 +27,23 @@ export const Template = ({
 	></div>
 `;
 
-export const DropIndicatorGroup = (args) => html`
-	<div style="
-		display: flex;
-		gap: 16px;
-		align-items: center;
-		justify-content: space-around;"
-	>
-		${Template({
-			...args,
-			direction: "vertical",
-		})}
-		${Template({
-			...args,
+export const DropIndicatorGroup = Variants({
+	Template,
+	skipBorders: true,
+	testData: [
+		{
+			testHeading: "Horizontal",
 			direction: "horizontal",
-		})}
-	</div>
-`;
+			wrapperStyles: {
+				"padding-block": "10px",
+			}
+		},
+		{
+			testHeading: "Vertical",
+			direction: "vertical",
+			wrapperStyles: {
+				"padding-inline": "10px",
+			}
+		},
+	],
+});
