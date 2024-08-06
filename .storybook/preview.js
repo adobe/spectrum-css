@@ -12,13 +12,12 @@ import {
 import {
 	FontLoader,
 	IconLoader,
-	TokenLoader
 } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import {
-  argTypes,
-  globalTypes
+	argTypes,
+	globalTypes
 } from "./types";
 
 import "./assets/base.css";
@@ -62,8 +61,6 @@ export const parameters = {
 		},
 	},
 	chromatic: {
-		// @todo: use a loader to ensure tokens load before stories without arbitrary delay
-		delay: 500,
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
 		pauseAnimationAtEnd: true,
@@ -139,7 +136,6 @@ export default {
 	loaders: [
 		FontLoader,
 		IconLoader,
-		TokenLoader,
 	],
 	tags: ["autodocs"],
 };
