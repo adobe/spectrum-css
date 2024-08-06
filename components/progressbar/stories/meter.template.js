@@ -4,6 +4,7 @@ import "../index.css";
 
 export const Template = ({
 	customClasses = [],
+	customStyles = {},
 	fill,
 	size = "s",
 	...item
@@ -15,6 +16,7 @@ export const Template = ({
 		typeof fill !== "undefined" ? `is-${fill}` : null,
 	].filter(Boolean),
 	size,
+	customStyles,
 	...item,
 }, context);
 
@@ -52,6 +54,13 @@ export const MeterGroup = (args, context) => html`
 			heading: "Text overflow",
 			fill: "notice",
 			label: "Storage space remaining for XYZ user"
+		},
+		{
+			heading: "Gradient support", 
+			customStyles: {
+				"--mod-progressbar-fill-color": "linear-gradient(to left, teal, purple)",
+				"--mod-progressbar-track-color": "linear-gradient(to right, hotpink, orange)",
+			}
 		}].map(({ heading, ...item }) => html`
 			<div>
 				${Typography({
@@ -65,25 +74,5 @@ export const MeterGroup = (args, context) => html`
 				}, context)}
 			</div>
 		`)}
-		 <div>
-			${Typography({
-				semantics: "heading",
-				size: "s",
-				content: ["Gradient support"],
-				customClasses: ["chromatic-ignore"],
-			}, context)}
-			<div style=${styleMap({
-				"display": window.isChromatic() ? "flex" : "none",
-				"flex-direction": "column",
-				"align-items": "flex-start",
-				"gap": "32px",
-			})}>
-				${Template({
-					...args,
-					trackFill: "linear-gradient(to right, hotpink, orange)",
-					progressBarFill: "linear-gradient(to left, teal, purple)",
-				}, context)}
-			</div>
-		</div>
 	</div>
 `;
