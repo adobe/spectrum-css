@@ -113,7 +113,7 @@ export const Sizing = SizingGroup.bind({});
 Sizing.args = Default.args;
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 
@@ -138,7 +138,7 @@ Selected.args = {
 	]
 };
 Selected.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -152,7 +152,7 @@ Quiet.args = {
 	isQuiet: true,
 };
 Quiet.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -165,7 +165,7 @@ Detached.args = {
 	variant: "detached",
 };
 Detached.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -180,7 +180,7 @@ DetachedQuiet.args = {
 	isQuiet: true,
 };
 DetachedQuiet.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -249,7 +249,7 @@ Disabled.args = {
 	],
 };
 Disabled.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -325,7 +325,7 @@ FoldersAndFiles.args = {
 };
 FoldersAndFiles.tags = ["!dev"];
 FoldersAndFiles.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 
@@ -371,7 +371,7 @@ Thumbnails.args = {
 };
 Thumbnails.tags = ["!dev"];
 Thumbnails.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -385,7 +385,7 @@ ThumbnailsQuiet.args = {
 	isQuiet: true,
 };
 ThumbnailsQuiet.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 export const Sections = Template.bind({});
@@ -430,7 +430,7 @@ Sections.args = {
 };
 Sections.tags = ["!dev"];
 Sections.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 
@@ -455,7 +455,7 @@ DropTarget.args = {
 };
 DropTarget.tags = ["!dev"];
 DropTarget.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -528,7 +528,7 @@ Flat.args = {
 };
 Flat.tags = ["!dev"];
 Flat.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
