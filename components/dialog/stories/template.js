@@ -98,7 +98,6 @@ export const DialogGroup = Variants({
 	),
 	testData: [
 		{
-			testHeading: "Default",
 			showModal: false,
 			isDismissible: true,
 		},

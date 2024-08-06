@@ -126,7 +126,7 @@ const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
 	acc[key] = { 
 		...modes[key],
 		viewport: {
-			height: "4000px",
+			height: "5300px",
 		}
 	};
 	return acc;
@@ -136,7 +136,7 @@ const mobileModeWithTallerViewport = Object.keys(mobile).reduce((acc, key) => {
 	acc[key] = { 
 		...mobile[key],
 		viewport: {
-			height: "1000px",
+			height: "5600px",
 		}
 	};
 	return acc;
