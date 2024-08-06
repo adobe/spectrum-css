@@ -320,6 +320,7 @@ export const Variants = ({
       <!-- Start testing grid markup -->
       <div
         style=${styleMap({
+          "inline-size": "fit-content",
           "padding": "24px",
           "display": window.isChromatic() ? "flex" : "none",
           "flex-direction": "column",

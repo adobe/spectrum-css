@@ -14,7 +14,12 @@ export const LinkGroup = Variants({
 		{
 			testHeading: "Quiet",
 			isQuiet: true,
-		}
+		},
+		{
+			testHeading: "Quiet, Secondary",
+			isQuiet: true,
+			variant: "secondary",
+		},
 	],
 	stateData: [
 		{
