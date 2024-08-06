@@ -14,7 +14,7 @@ export default {
 			items: [
 				{ value: "spectrum", title: "Spectrum 2", right: "default" },
 				{ value: "legacy", title: "Spectrum 1", right: "legacy" },
-				{ value: "express", title: "Express" },
+				{ value: "express", title: "Express", right: "legacy" },
 				{ value: "raw", title: "Token-free", right: "raw" },
 			],
 			dynamicTitle: true,
