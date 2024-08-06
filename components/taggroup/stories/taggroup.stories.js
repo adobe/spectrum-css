@@ -79,7 +79,7 @@ Default.args = {
  * A tag group can contain removable tags when the context is for editing, or non-removable tags when tags are read-only, but removable and non-removable tags cannot be combined within the tag group.
  */
 export const Removable = Template.bind({});
-Removable.tags = ["autodocs", "!dev"];
+Removable.tags = ["!dev"];
 Removable.parameters = {
 	chromatic: {
 		disableSnapshot: true,

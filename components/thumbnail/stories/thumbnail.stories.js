@@ -157,7 +157,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Focused = Template.bind({});
-Focused.tags = ["autodocs", "!dev"];
+Focused.tags = ["!dev"];
 Focused.args = {
 	imageURL: "example-ava.png",
 	altText: "Shantanu",
@@ -173,7 +173,7 @@ Focused.parameters = {
  * Thumbnail should only be displayed as disabled if the entire component is also disabled.
  */
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	imageURL: "example-ava.png",
 	altText: "Shantanu",
@@ -189,7 +189,7 @@ Disabled.parameters = {
  * Thumbnail sizes scale exponentially, based on the Spectrum type scale, ranging from size-50 to size-1000.
  */
 export const Sizing = SizingGroup.bind({});
-Sizing.tags = ["autodocs", "!dev"];
+Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: {
 		disableSnapshot: true,
@@ -201,7 +201,7 @@ Sizing.parameters = {
  */
 export const Cover = Template.bind({});
 Cover.storyName = "Image Fit (Cover)";
-Cover.tags = ["autodocs", "!dev"];
+Cover.tags = ["!dev"];
 Cover.args = {
 	imageURL: "example-card-landscape.png",
 	altText: "Landscape with mountains and lake",
@@ -218,7 +218,7 @@ Cover.parameters = {
  */
 export const Portrait = Template.bind({});
 Portrait.storyName = "Image Fit (Portrait)";
-Portrait.tags = ["autodocs", "!dev"];
+Portrait.tags = ["!dev"];
 Portrait.args = {
 	imageURL: "example-card-portrait.png",
 	altText: "Cityscape with lights",
@@ -234,7 +234,7 @@ Portrait.parameters = {
  */
 export const Landscape = Template.bind({});
 Landscape.storyName = "Image Fit (Landscape)";
-Landscape.tags = ["autodocs", "!dev"];
+Landscape.tags = ["!dev"];
 Landscape.args = {
 	imageURL: "example-card-landscape.png",
 	altText: "Landscape with mountains and lake",
@@ -250,7 +250,7 @@ Landscape.parameters = {
  */
 export const SelectedLayer = Template.bind({});
 SelectedLayer.storyName = "Layer (Selected)";
-SelectedLayer.tags = ["autodocs", "!dev"];
+SelectedLayer.tags = ["!dev"];
 SelectedLayer.args = {
 	imageURL: "flowers.png",
 	altText: "Flowers",
