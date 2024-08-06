@@ -26,11 +26,6 @@
 	/* Fill should match the current text color. */
 	fill: currentColor;
 
-	/* Hide the SVG overflow in IE. */
-	&:not(:root) {
-		overflow: hidden;
-	}
-
 	/* Don't catch clicks or hover, otherwise they may not escape the SVG. */
 	pointer-events: none;
 }
