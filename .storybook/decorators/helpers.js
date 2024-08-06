@@ -4,11 +4,10 @@ import { global } from '@storybook/global';
  * @type (container: HTMLElement, id: string, styleObj: object, add: boolean = true) => void
  * @description Fetches the style container for the given ID or creates a new one
  **/
-export function toggleStyles(container, id, styleObj, add = true) {
+export function toggleStyles(container, id, styles, add = true) {
 	if (!container && !id) return;
 
 	let style = container.querySelector(`#${id}`);
-	const styles = styleObj ? Object.values(styleObj)[0] : undefined;
 
 	if (!add) {
 		if (style) style.remove();
