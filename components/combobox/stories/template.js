@@ -111,9 +111,12 @@ export const Template = ({
 	fieldLabelPosition = "top",
 	...args
 } = {}, context = {}) => {
+	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
 	return html`
 		<div style=${styleMap({
-			["margin-block-end"]: isOpen && !isDisabled ? "152px" : undefined,
+			// This accounts for the height of the popover when it is open to prevent testing issues
+			// and allow docs containers to be the right height
+			["margin-block-end"]: isOpen && !isDisabled ? `${popoverHeight}px` : undefined,
 		})}>
 			${when(showFieldLabel, () =>
 				FieldLabel({
@@ -157,8 +160,8 @@ export const Template = ({
 							],
 						}, context),
 					],
-					popoverWidth: 166,
-					popoverHeight: 142,
+					popoverWidth: size === "s" ? 140 : size === "l" ? 191 : size === "xl" ? 192 : 166, // default value is "m"
+					popoverHeight,
 				}, context),
 			]}
 		</div>

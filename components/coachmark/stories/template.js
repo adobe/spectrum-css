@@ -36,13 +36,7 @@ export const CoachContainer = ({
 				${when(hasActionMenu, () =>
 					ActionMenu({
 						isOpen,
-						position: "bottom",
-						customStyles: {
-							"inset-inline-start": "unset",
-							"inset-block-start": "unset",
-							"margin-block-start": "30px",
-							"margin-inline-start": "-32px",
-						},
+						position: "bottom-start",
 						iconName: "More",
 						size: scale === "large" ? "s" : "m",
 						items: [
@@ -53,6 +47,8 @@ export const CoachContainer = ({
 								label: "Reset tour",
 							},
 						],
+						popoverHeight: 68,
+						popoverWidth: 84,
 					}, context),
 				)}
 			</div>

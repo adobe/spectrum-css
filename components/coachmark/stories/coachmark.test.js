@@ -47,6 +47,7 @@ export const CoachMarkGroup = Variants({
 			hasPagination: false,
 			hasActionMenu: true,
 			hasImage: false,
+			isOpen: true,
 			wrapperStyles: {
 				"background-color": "var(--spectrum-gray-50, white)"
 			},

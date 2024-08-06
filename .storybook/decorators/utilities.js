@@ -2,6 +2,7 @@ import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { capitalize } from "lodash";
 
 /**
  * Renders a heading or code block that identifies the test case and is ignored by the snapshots.
@@ -71,8 +72,8 @@ const Container = ({
 
   const borderStyles = {};
   if (withBorder) {
-    borderStyles["padding-inline"] = "12px";
-    borderStyles["padding-block"] = "12px";
+    borderStyles["padding-inline"] = "24px";
+    borderStyles["padding-block"] = "24px";
     borderStyles["border"] = "1px solid var(--spectrum-gray-200)";
     borderStyles["border-radius"] = "4px";
     gap = 80;
@@ -84,6 +85,7 @@ const Container = ({
       style=${styleMap({
         "position": "relative",
         "display": "flex",
+        "align-items": "flex-start",
         "flex-direction": "column",
         "flex-wrap": "nowrap",
         "gap": heading && level > 1 ? `${parseInt(24 / level, 10)}px` : undefined,
@@ -104,8 +106,8 @@ const Container = ({
           "flex-direction": direction,
           "flex-wrap": "wrap",
           "column-gap": `${parseInt(gap / level, 10)}px`,
-          "row-gap": "20px",
-          "align-items": heading && level > 1 ? "center" : undefined,
+          "row-gap": "24px",
+          "align-items": heading && level > 1 ? "flex-start" : undefined,
           "justify-content": direction === "column" ? "center" : "flex-start",
           ...borderStyles,
           ...wrapperStyles,
@@ -181,6 +183,52 @@ export const States = ({
 };
 
 /**
+ * Iterates over the provided arg options and renders the template for each option in a testing grid.
+ * Data for each size is collected from the default args for the story this is bound to.
+ * @param {Object} props
+ * @param {Function} props.Template - The template to render for each state.
+ * @param {Object} props.wrapperStyles - Additional styles to apply to the content wrapper.
+ * @param {string} props.direction - The direction of the size content.
+ * @param {string} props.heading - The heading to render above the grid.
+ * @param {string} props.argKey - The key to use for the argTypes to pass the property back to the template.
+ * @param {string[]} props.options - The options to render in the grid.
+ * @param {string[]} props.labels - The labels to render for each option.
+ * @param {number} props.level - The level of the heading to render.
+ * @param {Object} props.args - The arguments to pass to the template.
+ * @param {Object} context - The context to pass to the template.
+ */
+export const ArgGrid = ({
+  Template,
+  wrapperStyles = {},
+  direction = "row",
+  heading,
+  argKey,
+  options,
+  labels = {},
+  level = 2,
+  withBorder = true,
+  ...args
+} = {}, context = {}) => {
+	if (typeof options === "undefined" || !options.length) return nothing;
+  if (typeof argKey === "undefined") {
+    console.warn("ArgGrid: argKey is required to render the grid.");
+    return nothing;
+  }
+
+	return Container({
+		heading,
+		direction,
+		content: options.map((opt) => Container({
+      heading: labels[opt] ?? capitalize(opt),
+      level,
+      withBorder,
+      wrapperStyles,
+      content: Template({ ...args, [argKey]: opt }, context)
+    })),
+	});
+};
+
+/**
  * Iterates over the sizes defined in the argTypes and renders the template for each size in a testing grid.
  * Data for each size is collected from the default args for the story this is bound to.
  * @param {Object} props
@@ -194,33 +242,28 @@ export const Sizes = ({
   Template,
   wrapperStyles = {},
   direction = "row",
-  withBorder = true,
-  withHeading = true,
   ...args
 } = {}, context = {}) => {
-	const sizes = context?.argTypes?.size?.options ?? [];
-	if (!sizes.length) return nothing;
-
-	return Container({
-		heading: withHeading ? "Sizing" : undefined,
-		direction,
-    withBorder,
-		content: sizes.map((size) => Container({
-      heading: {
-        xxs: "Extra-extra-small",
-        xs: "Extra-small",
-        s: "Small",
-        m: "Medium",
-        l: "Large",
-        xl: "Extra-large",
-        xxl: "Extra-extra-large",
-      }[size] ?? size,
-      level: 3,
-      withBorder: false,
-      wrapperStyles,
-      content: Template({ ...args, size }, context)
-    })),
-	});
+  return ArgGrid({
+    Template,
+    wrapperStyles,
+    direction,
+    heading: "Sizes",
+    argKey: "size",
+    options: context?.argTypes?.size?.options,
+    withBorder: false,
+    level: 3,
+    labels: {
+      xxs: "Extra-extra-small",
+      xs: "Extra-small",
+      s: "Small",
+      m: "Medium",
+      l: "Large",
+      xl: "Extra-large",
+      xxl: "Extra-extra-large",
+    },
+    ...args
+  });
 };
 
 
@@ -265,7 +308,7 @@ export const Variants = ({
       <!-- Simple, clean template preview for non-testing grid views -->
       <div
         style=${styleMap({
-          "padding": "10px",
+          "padding": "12px",
           ...wrapperStyles,
           "display": window.isChromatic() ? "none" : wrapperStyles.display,
         })}
@@ -277,14 +320,14 @@ export const Variants = ({
       <!-- Start testing grid markup -->
       <div
         style=${styleMap({
-          "inline-size": "fit-content",
-          "padding": "10px",
+          "padding": "24px",
           "display": window.isChromatic() ? "flex" : "none",
           "flex-direction": "column",
           "flex-wrap": "wrap",
           "align-items": "flex-start",
-          "gap": "20px",
+          "gap": "24px",
         })}
+        data-testing-grid
       >
         <!-- Test data can include: a custom template, descriptive heading, and container styles -->
         <!-- Tests can also opt out of rendering the test in each available state -->
@@ -307,7 +350,7 @@ export const Variants = ({
             }
 
             // If a custom template is provided, use it, otherwise use the default template
-            if (typeof AltTemplate !== "undefined") TestTemplate = AltTemplate;
+            if (typeof AltTemplate === "undefined") AltTemplate = TestTemplate;
 
             // Show the border if we are rendering the test in multiple states or if there are several
             // tests in the grid, this helps distinguish between tests
@@ -328,7 +371,7 @@ export const Variants = ({
 
             return Container({
               heading: testHeading,
-              level: 1,
+              level: withStates ? 1 : 3,
               withBorder,
               containerStyles: {
                 // the z-index is necessary to ensure elements always appear above the overlay
@@ -340,13 +383,13 @@ export const Variants = ({
               content: html`
                 ${when(withStates, () =>
                   States({
-                      Template: TestTemplate,
+                      Template: AltTemplate,
                       stateData,
                       direction: stateDirection,
                       wrapperStyles: combinedStyles,
                       ...data
                     }, context),
-                  () => TestTemplate(data, context)
+                  () => AltTemplate(data, context)
                 )}
               `,
             });
@@ -354,7 +397,14 @@ export const Variants = ({
         )}
 
         <!-- If sizing exists for the component, it will render all sizes for testing -->
-        ${when(withSizes, () => Sizes({ Template: TestTemplate, wrapperStyles, direction: sizeDirection, ...args }, context))}
+        ${when(withSizes, () =>
+          Sizes({
+            Template: TestTemplate,
+            wrapperStyles,
+            direction: sizeDirection,
+            ...args
+          }, context)
+        )}
       </div>
     `;
 	};

@@ -101,11 +101,11 @@ export const Template = ({
 				updateArgs({ isFocused: false });
 			}}
 		>
-			${when(typeof hasPopup !== "undefined" && hasPopup !== "false", () =>
+			${when(hasPopup && hasPopup !== "false", () =>
 				Icon({
 					size,
 					iconName: "CornerTriangle",
-					setName: "workflow",
+					setName: "ui",
 					customClasses: [`${rootClass}-hold`],
 				}, context)
 			)}
