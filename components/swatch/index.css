@@ -40,12 +40,14 @@
 	/* Light theme placeholder tokens */
 	.spectrum--light & {
 		--spectrum-swatch-border-color: rgba(0, 0, 0, 51%);
+		--spectrum-swatch-border-color-light: rgba(0, 0, 0, 20%);
 	}
 
 	/* Dark and Darkest theme placeholder tokens */
 	.spectrum--dark &,
 	.spectrum--darkest & {
 		--spectrum-swatch-border-color: rgba(255, 255, 255, 51%);
+		--spectrum-swatch-border-color-light: rgba(255, 255, 255, 20%);
 	}
 }
 
@@ -279,6 +281,14 @@
 
 			/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background-color: var(--spectrum-picked-color, transparent);
+		}
+	}
+}
+
+.spectrum-Swatch--lightBorder {
+	.spectrum-Swatch-fill {
+		&::before {
+			box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color-light, var(--mod-swatch-border-color-light, var(--spectrum-swatch-border-color-light)));
 		}
 	}
 }

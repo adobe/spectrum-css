@@ -2,6 +2,7 @@
 | -------------------------------------------- |
 | `--mod-animation-duration-100`               |
 | `--mod-swatch-border-color`                  |
+| `--mod-swatch-border-color-light`            |
 | `--mod-swatch-border-color-selected`         |
 | `--mod-swatch-border-radius`                 |
 | `--mod-swatch-border-thickness`              |
