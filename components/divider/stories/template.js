@@ -51,26 +51,40 @@ export const Template = ({
 	></div>`;
 };
 
-export const AllDividerSizes = (args, context) => html`
-	${["s", "m", "l"].map((size) => html`
-		<div style="${styleMap({
-			"display": "flex",
-			"flex-direction": "column",
-			"padding": "16px",
-		})}">
+export const AllDividerSizes = (args, context) => {
+	// Color for heading that shows the name of the size. Adjustments for static white and black backgrounds,
+	// which don't change with the color context.
+	let headingColor = "var(--spectrum-seafoam-900)";
+	if (context?.args?.staticColor == "white") { headingColor = "rgb(255, 255, 255)"; }
+	if (context?.args?.staticColor == "black") { headingColor = "rgb(0, 0, 0)"; }
+
+	return html`
+		${["s", "m", "l"].map((size) => html`
+			<div style=${styleMap({
+				display: "flex",
+				gap: "16px",
+				flexDirection: "column",
+				alignItems: "flex-start",
+				})}
+			>
 			${Typography({
-				semantics: "heading",
-				size: "s",
-					content: [{
-						s: "Small",
-						m: "Medium (default)",
-						l: "Large",
-					}[size]],
-			})}
+							semantics: "heading",
+							size: "xs",
+							content: [{
+								s: "Small",
+								m: "Medium (default)",
+								l: "Large",
+							}[size]],
+							customClasses: ["chromatic-ignore"],
+							customStyles: {
+								"white-space": "nowrap",
+								"--mod-heading-font-color": headingColor,
+							},
+						})}
 			${Template({
 					...args,
 					size,
 			}, context)}
-		</div>	
-	`)}
-`;
+		`)}
+	`;
+};

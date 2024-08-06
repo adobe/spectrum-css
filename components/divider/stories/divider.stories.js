@@ -67,9 +67,9 @@ Default.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Sizes = AllDividerSizes.bind({});
-Sizes.tags = ["autodocs", "!dev"];
-Sizes.parameters = {
+export const Sizing = AllDividerSizes.bind({});
+Sizing.tags = ["autodocs", "!dev"];
+Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
@@ -86,6 +86,20 @@ VerticalGroup.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+export const StaticWhiteGroup = AllDividerSizes.bind({});
+StaticWhiteGroup.storyName = "Static white";
+StaticWhiteGroup.tags = ["!dev", "test"];
+StaticWhiteGroup.args = {
+	staticColor: "white",
+};
+
+export const StaticBlackGroup = AllDividerSizes.bind({});
+StaticBlackGroup.storyName = "Static black";
+StaticBlackGroup.tags = ["!dev", "test"];
+StaticBlackGroup.args = {
+	staticColor: "black",
+};
+
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
@@ -94,18 +108,4 @@ WithForcedColors.parameters = {
 		forcedColors: "active",
 		modes: disableDefaultModes
 	},
-};
-
-export const StaticWhiteGroup = AllDividerSizes.bind({});
-StaticWhiteGroup.storyName = "Static white";
-StaticWhiteGroup.tags = ["!autodocs", "!dev", "test"];
-StaticWhiteGroup.args = {
-	staticColor: "white",
-};
-
-export const StaticBlackGroup = AllDividerSizes.bind({});
-StaticBlackGroup.storyName = "Static black";
-StaticBlackGroup.tags = ["!autodocs", "!dev", "test"];
-StaticBlackGroup.args = {
-	staticColor: "black",
 };
