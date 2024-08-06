@@ -27,7 +27,6 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Content",
-				disable: true,
 			},
 			control: { type: "text" },
 		},
@@ -76,7 +75,7 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 /**
- * A tag group can contain removable tags when the context is for editing, or non-removable tags when tags are read-only, but removable and non-removable tags cannot be combined within the tag group.
+ * A tag group can contain removable tags when the context is for editing or non-removable tags when tags are read-only. Removable and non-removable tags cannot be combined within the tag group.
  */
 export const Removable = Template.bind({});
 Removable.tags = ["!dev"];
@@ -105,15 +104,12 @@ Removable.args = {
 		},
 		{
 			label: "Tag 5",
-			isInvalid: true,
 		},
 		{
 			label: "Tag 6",
-			isEmphasized: true,
 		},
 		{
 			label: "Tag 7",
-			isDisabled: true,
 		},
 	],
 };
