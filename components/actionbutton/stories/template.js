@@ -69,6 +69,7 @@ export const Template = ({
 	role = "button",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+
 	return html`
 		<button
 			aria-label=${ifDefined(label)}
