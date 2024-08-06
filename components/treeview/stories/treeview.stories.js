@@ -253,12 +253,90 @@ Disabled.parameters = {
 };
 
 /**
+ * A tree view drawn without nesting, suitable for infinite scrolling. With this version of the treeview, you must manage the visibility of "child items" manually based on the open state of the "parent item." The level of visual indentation is handled by a numbered `indent` variant class.
+ *
+ * This example sets a maximum width of 500px (`max-inline-size`) in order to demonstrate how longer text truncates.
+ */
+export const Flat = Template.bind({});
+Flat.storyName = "Flat Markup";
+Flat.args = {
+	customStyles: {
+		"max-inline-size": "500px",
+	},
+	items: [
+		{
+			id: "label1",
+			label: "Label 1. This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
+			link: "#",
+		},
+		{
+			id: "group1",
+			label: "Group 1",
+			link: "#",
+			isOpen: true,
+			items: [],
+		},
+		{
+			id: "label2",
+			label: "Label 2",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "label3",
+			label: "Label 3",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "label4",
+			label: "Label 4",
+			link: "#",
+		},
+		{
+			id: "group2",
+			label: "Group 2",
+			link: "#",
+			isOpen: true,
+			items: [],
+		},
+		{
+			id: "label5",
+			label: "Label 5",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "group3",
+			label: "Group 3",
+			link: "#",
+			isOpen: true,
+			items: [],
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "label6",
+			label: "Label 6",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent2"],
+		},
+	],
+};
+Flat.tags = ["!dev"];
+Flat.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
  * Icons can be used to add clarification about tree view items. These help to signify content types, which creates easier reference and context within the hierarchy.
  *
- * In this example, a nested tree view with folder and file icons is shown. 
+ * In this example, a nested tree view with folder and file icons is shown. This example also sets a maximum width of 500px (`max-inline-size`) in order to demonstrate how longer text truncates.
  */
 export const FoldersAndFiles = Template.bind({});
 FoldersAndFiles.args = {
+	customStyles: {
+		"max-inline-size": "500px",
+	},
 	items: [
 		{
 			id: "label1",
@@ -455,79 +533,6 @@ DropTarget.args = {
 };
 DropTarget.tags = ["!dev"];
 DropTarget.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * A tree view drawn without nesting, suitable for infinite scrolling. With this version of the treeview, you must manage the visibility of "child items" manually based on the open state of the "parent item." The level of visual indentation is handled by a numbered `indent` variant class.
- */
-export const Flat = Template.bind({});
-Flat.storyName = "Flat Markup";
-Flat.args = {
-	customStyles: {
-		"width": "500px",
-	},
-	items: [
-		{
-			id: "label1",
-			label: "Label 1. This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
-			link: "#",
-		},
-		{
-			id: "group1",
-			label: "Group 1",
-			link: "#",
-			isOpen: true,
-			items: [],
-		},
-		{
-			id: "label2",
-			label: "Label 2",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "label3",
-			label: "Label 3",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "label4",
-			label: "Label 4",
-			link: "#",
-		},
-		{
-			id: "group2",
-			label: "Group 2",
-			link: "#",
-			isOpen: true,
-			items: [],
-		},
-		{
-			id: "label5",
-			label: "Label 5",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "group3",
-			label: "Group 3",
-			link: "#",
-			isOpen: true,
-			items: [],
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "label6",
-			label: "Label 6",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent2"],
-		},
-	],
-};
-Flat.tags = ["!dev"];
-Flat.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
