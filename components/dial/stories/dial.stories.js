@@ -102,7 +102,7 @@ Disabled.parameters = {
 Disabled.tags = ["autodocs", "!dev"];
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = DialGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
