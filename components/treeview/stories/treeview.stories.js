@@ -111,7 +111,7 @@ Default.args = {
 // ********* DOCS ONLY ********* //
 export const Sizing = SizingGroup.bind({});
 Sizing.args = Default.args;
-Sizing.tags = ["autodocs", "!dev"];
+Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableAllSnapshots: true },
 };
@@ -121,7 +121,7 @@ Sizing.parameters = {
  * A tree view with a selected item.
  */
 export const Selected = Default.bind({});
-Selected.tags = ["autodocs", "!dev"];
+Selected.tags = ["!dev"];
 Selected.args = {
 	items: [
 		{
@@ -146,7 +146,7 @@ Selected.parameters = {
  */
 export const Quiet = Default.bind({});
 Quiet.storyName = "Selected (Quiet)";
-Quiet.tags = ["autodocs", "!dev"];
+Quiet.tags = ["!dev"];
 Quiet.args = {
 	...Selected.args,
 	isQuiet: true,
@@ -159,7 +159,7 @@ Quiet.parameters = {
  * Detached tree views are meant to be used outside of a panel. Items in detached tree views have rounded corners.
  */
 export const Detached = Default.bind({});
-Detached.tags = ["autodocs", "!dev"];
+Detached.tags = ["!dev"];
 Detached.args = {
 	...Selected.args,
 	variant: "detached",
@@ -173,7 +173,7 @@ Detached.parameters = {
  */
 export const DetachedQuiet = Default.bind({});
 DetachedQuiet.storyName = "Detached (Quiet)";
-DetachedQuiet.tags = ["autodocs", "!dev"];
+DetachedQuiet.tags = ["!dev"];
 DetachedQuiet.args = {
 	...Selected.args,
 	variant: "detached",
@@ -187,7 +187,7 @@ DetachedQuiet.parameters = {
  * In this example, the Label 2 and Group 2 are disabled.
  */
 export const Disabled = Template.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 Disabled.args = {
 	items: [
 		{
@@ -379,7 +379,7 @@ Thumbnails.parameters = {
  */
 export const ThumbnailsQuiet = Template.bind({});
 ThumbnailsQuiet.storyName = "Thumbnails (Quiet)";
-ThumbnailsQuiet.tags = ["autodocs", "!dev"];
+ThumbnailsQuiet.tags = ["!dev"];
 ThumbnailsQuiet.args = {
 	...Thumbnails.args,
 	isQuiet: true,
@@ -428,7 +428,7 @@ Sections.args = {
 		},
 	],
 };
-Sections.tags = ["autodocs", "!dev"];
+Sections.tags = ["!dev"];
 Sections.parameters = {
 	chromatic: { disableAllSnapshots: true },
 };
@@ -453,7 +453,7 @@ DropTarget.args = {
 		},
 	],
 };
-DropTarget.tags = ["autodocs", "!dev"];
+DropTarget.tags = ["!dev"];
 DropTarget.parameters = {
 	chromatic: { disableAllSnapshots: true },
 };
