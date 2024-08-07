@@ -1,0 +1,55 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum--large .spectrum-ContextualHelp",
+    ".spectrum-ContextualHelp",
+    ".spectrum-ContextualHelp-button",
+    ".spectrum-ContextualHelp-link",
+    ".spectrum-ContextualHelp-popover",
+    ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-body",
+    ".spectrum-ContextualHelp-popover .spectrum-ContextualHelp-heading"
+  ],
+  "component": [
+    "--spectrum-contextual-help-body-color",
+    "--spectrum-contextual-help-body-size",
+    "--spectrum-contextual-help-content-spacing",
+    "--spectrum-contextual-help-heading-color",
+    "--spectrum-contextual-help-heading-size",
+    "--spectrum-contextual-help-link-spacing",
+    "--spectrum-contextual-help-minimum-width",
+    "--spectrum-contextual-help-padding",
+    "--spectrum-contextual-help-title-size"
+  ],
+  "modifiers": [
+    "--mod-contextual-help-body-color",
+    "--mod-contextual-help-heading-color",
+    "--mod-spectrum-contextual-help-body-size",
+    "--mod-spectrum-contextual-help-content-spacing",
+    "--mod-spectrum-contextual-help-heading-size",
+    "--mod-spectrum-contextual-help-link-spacing",
+    "--mod-spectrum-contextual-help-minimum-width",
+    "--mod-spectrum-contextual-help-padding"
+  ],
+  "theming-layer": [
+    "--system-contextual-help-body-color",
+    "--system-contextual-help-content-spacing",
+    "--system-contextual-help-heading-color",
+    "--system-contextual-help-heading-size",
+    "--system-contextual-help-large-content-spacing",
+    "--system-contextual-help-link-spacing",
+    "--system-contextual-help-padding"
+  ],
+  "high-contrast": [
+    "--highcontrast-contextual-help-body-color",
+    "--highcontrast-contextual-help-heading-color"
+  ],
+  "global": [
+    "--spectrum-body-color",
+    "--spectrum-heading-color",
+    "--spectrum-spacing-100",
+    "--spectrum-spacing-200",
+    "--spectrum-spacing-300",
+    "--spectrum-spacing-400"
+  ]
+}

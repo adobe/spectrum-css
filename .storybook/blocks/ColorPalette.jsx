@@ -5,7 +5,7 @@ import { capitalize } from "lodash-es";
 import React from "react";
 import { Body, Heading } from "./Typography";
 
-const SwatchGroupLabel = styled.div({
+export const SwatchGroupLabel = styled.div({
 	alignSelf: "flex-start",
 	display: "flex",
 	flexDirection: "column",
@@ -17,14 +17,14 @@ const SwatchGroupLabel = styled.div({
 	marginBlockStart: 16,
 });
 
-const SwatchSet = styled.div({
+export const SwatchSet = styled.div({
 	display: "flex",
 	flexDirection: "column",
 	alignItems: "start",
 	gap: 2,
 });
 
-const Swatch = styled.div(({ theme, background }) => ({
+export const Swatch = styled.div(({ theme, background }) => ({
 	position: "relative",
 	inlineSize: 80,
 	blockSize: 80,
@@ -43,7 +43,7 @@ const Swatch = styled.div(({ theme, background }) => ({
 	},
 }));
 
-const SwatchColors = styled.div({
+export const SwatchColors = styled.div({
 	display: "inline-flex",
 	flexDirection: "row",
 	flexWrap: "wrap",
@@ -52,21 +52,14 @@ const SwatchColors = styled.div({
 	justifyContent: "flex-start",
 });
 
-const SwatchGroup = styled.div({
+export const SwatchGroup = styled.div({
 	display: "flex",
 	flexDirection: "column",
 	flex: 1,
 	position: "relative",
 });
 
-const Swatches = styled.div({
-	flex: 1,
-	display: "flex",
-	flexDirection: "row",
-	gap: 50,
-});
-
-const Item = styled.div({
+const List = styled.div({
 	display: "grid",
 	gap: 24,
 	gridTemplateColumns: "1fr auto",
@@ -74,30 +67,21 @@ const Item = styled.div({
 	alignItems: "center",
 	justifyContent: "center",
 });
-
-const List = styled.div(({ theme }) => ({
-	display: "grid",
-	gap: 24,
-	gridTemplateColumns: "1fr auto",
-	gridTemplateRows: "auto",
-	alignItems: "center",
-	justifyContent: "center",
-}));
 
 /**
  * A single color row your styleguide showing title, subtitle and one or more colors, used
  * as a child of `ColorPalette`.
  */
-export const ColorItem = ({ title, color, theme = "light", values = [] }) => {
+export const ColorItem = ({ title, color, theme = "light", values = [], ...props }) => {
 	return (
 		<>
 			<SwatchGroupLabel className="swatch-group-label">
 				<Heading size="s">{title ?? capitalize(color)}</Heading>
 			</SwatchGroupLabel>
-			<SwatchGroup className="swatch-group">
+			<SwatchGroup className="swatch-group" {...props}>
 				<SwatchColors className="swatch-colors">
 					{values.map((value) => {
-						const resolved = spectrum?.[`${color}-${value}`]?.sets?.[theme]?.value ?? color;
+						const resolved = spectrum?.[`${color}-${value}`]?.value ?? spectrum?.[`${color}-${value}`]?.sets?.[theme]?.value ?? color;
 						return (
 							<SwatchSet className="swatch-set">
 								<Body className="swatch-label" size="s">

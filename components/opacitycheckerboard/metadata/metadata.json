@@ -1,0 +1,27 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [".spectrum", ".spectrum-OpacityCheckerboard"],
+  "component": [
+    "--spectrum-opacity-checkerboard-dark",
+    "--spectrum-opacity-checkerboard-light",
+    "--spectrum-opacity-checkerboard-position",
+    "--spectrum-opacity-checkerboard-size",
+    "--spectrum-opacity-checkerboard-square-dark",
+    "--spectrum-opacity-checkerboard-square-light",
+    "--spectrum-opacity-checkerboard-square-size"
+  ],
+  "modifiers": [
+    "--mod-opacity-checkerboard-dark",
+    "--mod-opacity-checkerboard-light",
+    "--mod-opacity-checkerboard-position",
+    "--mod-opacity-checkerboard-size"
+  ],
+  "theming-layer": [
+    "--system-opacity-checkerboard-dark",
+    "--system-opacity-checkerboard-light",
+    "--system-opacity-checkerboard-position",
+    "--system-opacity-checkerboard-size"
+  ],
+  "high-contrast": [],
+  "global": []
+}

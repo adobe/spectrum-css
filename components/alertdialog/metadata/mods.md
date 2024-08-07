@@ -22,3 +22,5 @@
 | `--mod-alert-dialog-title-to-divider`       |
 | `--mod-alert-dialog-title-to-icon`          |
 | `--mod-alert-dialog-warning-icon-color`     |
+| `--mod-buttongroup-justify-content`         |
+| `--mod-icon-color`                          |
