@@ -1,0 +1,30 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum-SwatchGroup",
+    ".spectrum-SwatchGroup--compact",
+    ".spectrum-SwatchGroup--spacious"
+  ],
+  "component": [
+    "--spectrum-swatchgroup-spacing-compact",
+    "--spectrum-swatchgroup-spacing-regular",
+    "--spectrum-swatchgroup-spacing-spacious"
+  ],
+  "modifiers": [
+    "--mod-swatchgroup-spacing-compact",
+    "--mod-swatchgroup-spacing-regular",
+    "--mod-swatchgroup-spacing-spacious"
+  ],
+  "theming-layer": [
+    "--system-swatch-group-spacing-compact",
+    "--system-swatch-group-spacing-regular",
+    "--system-swatch-group-spacing-spacious"
+  ],
+  "high-contrast": [],
+  "global": [
+    "--spectrum-spacing-100",
+    "--spectrum-spacing-50",
+    "--spectrum-spacing-75"
+  ]
+}
