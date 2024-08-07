@@ -1,5 +1,11 @@
 # Change Log
 
+## 15.0.0-s2-foundations.15
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`58a89ea`](https://github.com/adobe/spectrum-css/commit/58a89ea464c387111511271a5f5afce044f11042) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-237] accordion item border height set to 0 for non-first-child elements
+
 ## 15.0.0-s2-foundations.14
 
 ### Minor Changes
