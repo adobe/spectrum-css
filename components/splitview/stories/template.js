@@ -9,6 +9,7 @@ export const Template = ({
 	customClasses = [],
 	orientation = "horizontal",
 	isResizable = false,
+	isFocused = false,
 	isCollapsible = false,
 	collapsePosition,
 	panelLabels = [],
@@ -44,6 +45,7 @@ export const Template = ({
 			<div
 				class=${classMap({
 					[`${rootClass}-splitter`]: true,
+					["is-focused"]: isFocused,
 					["is-draggable"]: isResizable,
 					[`is-collapsed-${collapsibleClassName}`]: isCollapsible,
 				})}

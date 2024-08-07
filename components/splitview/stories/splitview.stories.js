@@ -35,6 +35,15 @@ export default {
 				disable: true,
 			},
 		},
+		isFocused: {
+			name: "Focusable",
+			type: "boolean",
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+				disable: true,
+			},
+		},
 		collapsePosition: {
 			name: "Collapse position",
 			type: "string",
@@ -100,6 +109,7 @@ HorizontallyFocused.play = async ({ canvasElement }) => {
 };
 HorizontallyFocused.args = {
 	orientation: "horizontal",
+	isFocused: true,
 	isResizable: true,
 	isCollapsible: false,
 	panelLabels: ["Left", "Right"],
