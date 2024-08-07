@@ -3,6 +3,7 @@ import { html } from "lit";
 import { version } from "../package.json";
 import {
 	DropIndicatorGroup,
+	DocsDropIndicatorGroup,
 } from "./template";
 
 /**
@@ -53,7 +54,7 @@ Default.args = {};
 Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
-export const DefaultGroup = DropIndicatorGroup.bind({});
+export const DefaultGroup = DocsDropIndicatorGroup.bind({});
 DefaultGroup.storyName = "Default";
 DefaultGroup.tags = ["autodocs", "!dev"];
 DefaultGroup.parameters = { 

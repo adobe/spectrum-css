@@ -47,3 +47,20 @@ export const DropIndicatorGroup = Variants({
 		},
 	],
 });
+
+export const DocsDropIndicatorGroup = (args, context) => html`
+	<div style=${styleMap({
+		"display": "flex",
+		"align-items": "center",
+		"gap": "16px",
+		"justify-content": "space-evenly",
+	})}>
+	${Template({
+			...args,
+		}, context)}
+		${Template({
+			...args,
+			direction: "horizontal",
+		}, context)}
+	</div>
+`;
