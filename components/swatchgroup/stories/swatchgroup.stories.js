@@ -129,27 +129,27 @@ export const Compact = Template.bind({});
 Compact.args = {
 	density: "compact",
 };
-Compact.tags = ["autodocs", "!dev"];
+Compact.tags = ["!dev"];
 
 export const Spacious = Template.bind({});
 Spacious.args = {
 	density: "spacious",
 };
-Spacious.tags = ["autodocs", "!dev"];
+Spacious.tags = ["!dev"];
 
 /**
  * Only use rounded swatches if there is a single row.
  */
 export const Rounding = RoundingTemplate.bind({});
 Rounding.args = {};
-Rounding.tags = ["autodocs", "!dev"];
+Rounding.tags = ["!dev"];
 
 /**
  * Use any size swatches as necessary. The medium size is the default option. This only affects the size of each individual swatch, not the spacing between them.
  */
 export const Sizing = SizingTemplate.bind({});
 Sizing.args = {};
-Sizing.tags = ["autodocs", "!dev"];
+Sizing.tags = ["!dev"];
 
 /**
  * Swatches within a swatch group with low contrast (below 3:1 contrast with the background) have a less prominent border compared to the swatch component when used by itself.
@@ -179,7 +179,7 @@ WithLightBorder.args = {
 		{swatchColor: "rgb(254, 71, 144)",},
 	],
 };
-WithLightBorder.tags = ["autodocs", "!dev"];
+WithLightBorder.tags = ["!dev"];
 WithLightBorder.storyName = "With light border";
 
 // ********* VRT ONLY ********* //

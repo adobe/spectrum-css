@@ -162,7 +162,7 @@ Default.args = {};
  * The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
  */
 export const Sizing = SizingGroup.bind({});
-Sizing.tags = ["autodocs", "!dev"];
+Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -171,13 +171,13 @@ Sizing.parameters = {
  * A swatch in a disabled state shows that the swatch exists, but is not available in that circumstance. Even though swatches can have a disabled state, hide unavailable swatches when possible to reduce visual clutter and ease cognitive load. Only show disabled swatches if hiding them would cause confusion to your users.
  */
 export const Disabled = DisabledGroup.bind({});
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 
 /**
  * Default rounding and full rounding are usually used when a swatch is presented by itself near other components. A rounding of “none” is used in a swatch group to help minimize the Hermann grid illusion that happens at the intersections of white space in the group.
  */
 export const Rounding = RoundingGroup.bind({});
-Rounding.tags = ["autodocs", "!dev"];
+Rounding.tags = ["!dev"];
 Rounding.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -189,7 +189,7 @@ export const Selected = Template.bind({});
 Selected.args = {
 	isSelected: true,
 };
-Selected.tags = ["autodocs", "!dev"];
+Selected.tags = ["!dev"];
 
 /**
  * By default, swatches have a border. However, when swatches are used within a swatch group, there are additional border considerations. 
@@ -197,7 +197,7 @@ Selected.tags = ["autodocs", "!dev"];
  * - When and only when color swatches used in a [swatch group](?path=/docs/components-swatch-group--docs) have low contrast (below 3:1 contrast with the background), those swatches will have a less prominent border compared to the swatch component when used by itself. They individually use the `.spectrum-Swatch--lightBorder` class.
  */
 export const Border = BorderGroup.bind({});
-Border.tags = ["autodocs", "!dev"];
+Border.tags = ["!dev"];
 
 /** 
  * Swatches can have a square or a rectangle shape with an aspect ratio of 2:1. The square shape is the default and is used in swatch groups (e.g., a palette of colors).
@@ -206,11 +206,11 @@ export const Rectangle = Template.bind({});
 Rectangle.args = {
 	isRectangle: true,
 };
-Rectangle.tags = ["autodocs", "!dev"];
+Rectangle.tags = ["!dev"];
 
 export const Nothing = NothingGroup.bind({});
 Nothing.args = {};
-Nothing.tags = ["autodocs", "!dev"];
+Nothing.tags = ["!dev"];
 
 /**
  * When a swatch represents multiple values that are not identical, the preview shows a `gray-50` fill and a dash UI icon.
@@ -220,21 +220,21 @@ MixedValue.args = {
 	isMixedValue: true,
 	swatchColor: "var(--spectrum-gray-50)",
 };
-MixedValue.tags = ["autodocs", "!dev"];
+MixedValue.tags = ["!dev"];
 
 export const Gradient = Template.bind({});
 Gradient.args = {
 	isGradient: true,
 	gradient: "linear-gradient(to right, rgba(0, 0, 0, 88%), rgb(174, 216, 230))",
 };
-Gradient.tags = ["autodocs", "!dev"];
+Gradient.tags = ["!dev"];
 
 export const Image = Template.bind({});
 Image.args = {
 	isImage: true,
 	imageUrl: "example-ava@2x.png",
 };
-Image.tags = ["autodocs", "!dev"];
+Image.tags = ["!dev"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = States.bind({});

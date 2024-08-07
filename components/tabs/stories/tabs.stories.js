@@ -167,7 +167,7 @@ export const Vertical = VerticalGroup.bind({});
 Vertical.args = {
 	orientation: "vertical",
 };
-Vertical.tags = ["autodocs", "!dev"];
+Vertical.tags = ["!dev"];
 
 export const VerticalRight = Template.bind({});
 VerticalRight.args = {
@@ -175,7 +175,7 @@ VerticalRight.args = {
 	hasRightAlignedTabs: true,
 };
 VerticalRight.storyName = "Vertical right";
-VerticalRight.tags = ["autodocs", "!dev"];
+VerticalRight.tags = ["!dev"];
 
 /**
  * When there are too many tabs to fit horizontally across the viewport, the tabs component can be displayed as a [quiet picker](/docs/components-picker--docs).
@@ -186,7 +186,7 @@ export const Overflow = OverflowGroup.bind({});
 Overflow.args = {
 	orientation: "overflow",
 };
-Overflow.tags = ["autodocs", "!dev"];
+Overflow.tags = ["!dev"];
 Overflow.parameters = {
 	docs: {
 		story: {
@@ -220,7 +220,7 @@ Sizing.args = {
 		},
 	],
 };
-Sizing.tags = ["autodocs", "!dev"];
+Sizing.tags = ["!dev"];
 
 /**
  * Quiet tabs have no visible divider across the tab items apart from the one that shows the selected tab item. These should be used as sub-level navigation or for containers.
@@ -248,7 +248,7 @@ Quiet.args = {
 		},
 	],
 };
-Quiet.tags = ["autodocs", "!dev"];
+Quiet.tags = ["!dev"];
 
 /**
  * Compact tabs should never be used without the quiet variation.
@@ -277,7 +277,7 @@ Compact.args = {
 		},
 	],
 };
-Compact.tags = ["autodocs", "!dev"];
+Compact.tags = ["!dev"];
 
 /**
  * A tab item in a disabled state shows that the tab item exists, but is not available in that circumstance.
@@ -304,7 +304,7 @@ Disabled.args = {
 		},
 	],
 };
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 
 /**
  * Emphasized tabs have blue text for the selected state for visual prominence and to draw more attention to them. This is optimal for when the selection should call attention, such as the main navigation for a website.
@@ -313,7 +313,7 @@ export const Emphasized = Template.bind({});
 Emphasized.args = {
 	isEmphasized: true,
 };
-Emphasized.tags = ["autodocs", "!dev"];
+Emphasized.tags = ["!dev"];
 
 /**
  * Tab items can alternatively be anchor tags (`<a>`) instead of `div` elements to allow for navigation to on-page anchors. Do not use horizontal tabs for this adaptation.
@@ -324,7 +324,7 @@ Anchors.args = {
 	orientation: "vertical",
 	useAnchors: true,
 };
-Anchors.tags = ["autodocs", "!dev"];
+Anchors.tags = ["!dev"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
