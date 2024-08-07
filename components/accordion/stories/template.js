@@ -1,14 +1,11 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
-
-export const AccordionItem = ({
+export const ItemTemplate = ({
 	heading,
 	content,
 	rootClass = "spectrum-Accordion-item",
@@ -20,7 +17,12 @@ export const AccordionItem = ({
 	customStyles = {},
 	customClasses = [],
 	onclick,
+	disableAll = false,
+	collapseAll = false,
 } = {}, context = {}) => {
+	if (disableAll) isDisabled = true;
+	if (collapseAll) isOpen = false;
+
 	return html`
 		<div
 			class=${classMap({
@@ -75,13 +77,9 @@ export const Template = ({
 	density = "regular",
 	items = [],
 	id,
-	disableAll = false,
-	collapseAll = false,
 	customClasses = [],
 	customStyles = {},
-} = {}, context = {}) => {
-	const { updateArgs } = context;
-
+} = {}) => {
 	return html`
 		<div
 			class="${classMap({
@@ -96,73 +94,12 @@ export const Template = ({
 			role="region"
 			style=${styleMap(customStyles)}
 		>
-			${repeat(Array.from(items.keys()), (heading, idx) => {
-				const item = items.get(heading);
-				return AccordionItem({
-					...item,
-					rootClass: `${rootClass}-item`,
-					heading,
-					idx,
-					iconSize: `${size}`,
-					isDisabled: item.isDisabled || disableAll,
-					isOpen: collapseAll === true ? false : item.isOpen,
-					onclick: function() {
-						if (item.isDisabled) return;
-
-						// Update the args
-						const newItems = new Map(items);
-						newItems.set(heading, {
-							...item,
-							isOpen: !item.isOpen,
-						});
-						updateArgs({ items: newItems });
-					},
-				}, context);
-			})}
+			${repeat(items,
+				(_, idx) => idx,
+				(item) => html`
+					<spectrum-accordion-item .args=${item}></spectrum-accordion-item>
+				`
+			)}
 		</div>
 	`;
 };
-
-export const AccordionGroup = Variants({
-	Template,
-	testData: [
-		{
-			testHeading: "Standard",
-			customStyles: {
-				maxInlineSize: "500px",
-			},
-		},
-		{
-			testHeading: "Compact",
-			density: "compact",
-			collapseAll: true,
-			customStyles: {
-				maxInlineSize: "500px",
-			},
-			withStates: false,
-		},
-		{
-			testHeading: "Spacious",
-			density: "spacious",
-			collapseAll: true,
-			customStyles: {
-				maxInlineSize: "500px",
-			},
-			withStates: false,
-		},
-		{
-			testHeading: "Text wrapping",
-			collapseAll: true,
-			customStyles: {
-				maxInlineSize: "300px",
-			},
-			withStates: false,
-		},
-	],
-	stateData: [
-		{
-			testHeading: "Disabled",
-			disableAll: true,
-		},
-	],
-});
