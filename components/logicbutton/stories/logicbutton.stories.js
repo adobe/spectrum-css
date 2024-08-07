@@ -1,6 +1,9 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import {
+	Template, 
+	DisabledTemplate,
+} from "./template";
 
 /**
  * A logic button displays an operator within a boolean logic sequence.
@@ -35,21 +38,42 @@ export default {
 		isDisabled: false,
 	},
 	parameters: {
-		componentVersion: version,
+		componentVersion: version,	
+		docs: {
+			story: {
+				height: "auto",
+			},
+		},
 	},
 };
 
 export const Default = Template.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
+
+/**
+ * The default logic button is the And variant. 
+ */
+export const And = Default.bind({});
+And.args = {
+	...Default.args,
+};
+And.tags = ["autodocs", "!dev"];
 
 export const Or = Template.bind({});
 Or.args = {
 	variant: "or"
 };
+Or.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
-export const Disabled = Template.bind({});
+export const Disabled = DisabledTemplate.bind({});
 Disabled.args = {
 	isDisabled: true
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
