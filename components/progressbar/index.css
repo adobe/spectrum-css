@@ -142,6 +142,20 @@
 	}
 }
 
+.spectrum-Meter {
+	&.is-positive .spectrum-ProgressBar-fill {
+		background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive)));
+	}
+
+	&.is-notice .spectrum-ProgressBar-fill {
+		background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice)));
+	}
+
+	&.is-negative .spectrum-ProgressBar-fill {
+		background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative)));
+	}
+}
+
 @keyframes indeterminate-loop-rtl {
 	from {
 		transform: translate(var(--mod-progressbar-size-default, var(--spectrum-progressbar-fill-size-indeterminate)));
