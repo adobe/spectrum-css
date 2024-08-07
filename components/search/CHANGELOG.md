@@ -1,5 +1,16 @@
 # Change Log
 
+## 8.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`d06b762`](https://github.com/adobe/spectrum-css/commit/d06b762232592342dcea35c8ff4d309edb00d588) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-236] Search: internal property references including calc moved out of theme files; express theme updated to match format of spectrum-two theme selectors; spectrum-two theme adds new --spectrum-search-min-inline-multiplier abstraction for internal calc, removes passthroughs, adds in a sizeM theme instead of relying on defaults
+
+### Patch Changes
+
+- Updated dependencies [[`58a89ea`](https://github.com/adobe/spectrum-css/commit/58a89ea464c387111511271a5f5afce044f11042)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.15
+
 ## 8.0.0-s2-foundations.12
 
 ### Minor Changes
