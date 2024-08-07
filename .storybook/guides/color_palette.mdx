@@ -1,0 +1,326 @@
+import { Meta, Title } from "@storybook/blocks";
+import { ColorPalette, ColorItem } from "../blocks/ColorPalette";
+import { ThemeContainer } from "../blocks/ThemeContainer";
+import { Heading } from "../blocks/Typography";
+import data from "@adobe/spectrum-tokens/dist/json/variables.json";
+
+<Meta title="Design tokens" />
+<Title>Design tokens</Title>
+
+## Color palette
+
+The Spectrum CSS color palette is a collection of named colors that are used throughout the design system. These colors are defined in the `@spectrum-css/tokens` package and are available as CSS custom properties.
+
+<ThemeContainer>
+  <Heading>Light theme</Heading>
+  <ColorPalette>
+    <ColorItem
+      color="gray"
+      values={[25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]}
+    />
+    <ColorItem
+      color="silver"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="cinnamon"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="red"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="orange"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="yellow"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="brown"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="chartreuse"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="celery"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="green"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="seafoam"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="turquoise"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="cyan"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="blue"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="indigo"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="purple"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="fuchsia"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="pink"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="magenta"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+  </ColorPalette>
+</ThemeContainer>
+
+<ThemeContainer theme="dark">
+  <Heading>Dark theme</Heading>
+  <ColorPalette>
+    <ColorItem
+      color="gray"
+      theme="dark"
+      values={[25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]}
+    />
+    <ColorItem
+      color="silver"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="cinnamon"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="red"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="orange"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="yellow"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="brown"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="chartreuse"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="celery"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="green"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="seafoam"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="turquoise"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="cyan"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="blue"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="indigo"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="purple"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="fuchsia"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="pink"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+    <ColorItem
+      color="magenta"
+      theme="dark"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400, 1500, 1600,
+      ]}
+    />
+  </ColorPalette>
+</ThemeContainer>
+
+<ThemeContainer theme="light">
+    <Heading>Transparent colors</Heading>
+
+    <ColorPalette background="linear-gradient(81deg, rgba(253,221,242,1) 0%, rgba(249,246,203,1) 100%)">
+        <ColorItem
+            title="Transparent black"
+            values={[
+                25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
+            ]}
+        />
+    </ColorPalette>
+
+    <ColorPalette>
+        <ColorItem
+            title="Transparent white"
+            values={[
+                25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
+            ]}
+        />
+    </ColorPalette>
+
+</ThemeContainer>
