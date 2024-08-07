@@ -1,5 +1,16 @@
 # Change Log
 
+## 5.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`975b4fb`](https://github.com/adobe/spectrum-css/commit/975b4fb631d7203e772c2e879fbec610f933286f) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-235] meter properties moved out of theme and into index.css
+
+### Patch Changes
+
+- Updated dependencies [[`975b4fb`](https://github.com/adobe/spectrum-css/commit/975b4fb631d7203e772c2e879fbec610f933286f), [`975b4fb`](https://github.com/adobe/spectrum-css/commit/975b4fb631d7203e772c2e879fbec610f933286f)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.14
+
 ## 5.0.0-s2-foundations.12
 
 ### Minor Changes
