@@ -1,5 +1,6 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { PaginationGroup } from "./template";
 
@@ -10,19 +11,8 @@ export default {
 	title: "Pagination",
 	component: "Pagination",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		variant: {
-			table: { disable: true },
-		},
+		size: size(["s", "m", "l", "xl"]),
+		variant: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Pagination",

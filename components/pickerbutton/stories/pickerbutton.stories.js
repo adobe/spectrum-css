@@ -1,6 +1,6 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused, isOpen } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -11,16 +11,7 @@ export default {
 	title: "Picker button",
 	component: "PickerButton",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		iconType: {
 			name: "Icon",
 			type: { name: "string", required: false },
@@ -57,24 +48,8 @@ export default {
 			},
 			control: "boolean",
 		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isQuiet,
+		isDisabled,
 		isFocused: {
 			...isFocused,
 			if: { arg: "isDisabled", truthy: false }

@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isQuiet, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template, TreeViewGroup } from "./template";
 
@@ -11,25 +12,8 @@ export default {
 	argTypes: {
 		items: { table: { disable: true } },
 		variant: { table: { disable: true } },
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		isQuiet: {
-			name: "Quiet",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		size: size(["s", "m", "l", "xl"]),
+		isQuiet,
 	},
 	args: {
 		rootClass: "spectrum-TreeView",

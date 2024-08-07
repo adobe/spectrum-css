@@ -1,5 +1,6 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
 import { MenuItemWithVariants, MenuWithVariants, Template } from "./template";
@@ -16,16 +17,7 @@ const menuArgTypes = {
 		options: ["none", "single", "multiple"],
 		control: "select",
 	},
-	size: {
-		name: "Size",
-		type: { name: "string", required: true },
-		table: {
-			type: { summary: "string" },
-			category: "Component",
-		},
-		options: ["s", "m", "l", "xl"],
-		control: "select",
-	},
+	size: size(["s", "m", "l", "xl"]),
 	shouldTruncate: {
 		name: "Truncate menu item label",
 		type: { name: "boolean" },
@@ -70,28 +62,14 @@ const menuArgTypes = {
 };
 
 const menuItemArgTypes = {
-	isDisabled: {
-		name: "Menu item is disabled",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "State",
-		},
-		control: "boolean",
-	},
+	isDisabled,
 	itemIcon: {
 		...(IconStories?.argTypes?.iconName ?? {}),
 		if: false,
 	},
-	isItemSelected: {
-		name: "Menu item is selected",
+	isSelected: {
+		...isSelected,
 		description: "Selected state when single or multi-select mode is turned on",
-		type: { name: "boolean" },
-		table: {
-			type: { summary: "boolean" },
-			category: "Selection",
-			control: "boolean"
-		},
 		if: { arg: "selectionMode", not: { eq: "none" } },
 	},
 	hasItemDescription: {
@@ -434,7 +412,7 @@ MenuItem.args = {
 	isItemActive: false,
 	isItemFocused: false,
 	isItemHovered: false,
-	isItemSelected: false,
+	isSelected: false,
 	singleItemDescription: "Menu item description",
 	singleItemValue: "Value",
 };
