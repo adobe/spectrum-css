@@ -19,9 +19,7 @@ export const Template = ({
 		typeof fill !== "undefined" ? `is-${fill}` : null,
 	].filter(Boolean),
 	size,
-	customStyles: {
-		...customStyles,
-	},
+	customStyles,
 	...item,
 }, context);
 
