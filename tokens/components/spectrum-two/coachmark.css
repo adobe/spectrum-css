@@ -42,4 +42,7 @@
 	--system-coach-mark-step-line-height: var(--spectrum-body-line-height);
 	--system-coach-mark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
 	--system-coach-mark-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
+	--system-coach-mark-popover-border-width: var(--spectrum-border-width-100);
+	--system-coach-mark-popover-corner-radius: var(--spectrum-corner-radius-100);
+	--system-coach-mark-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
 }
