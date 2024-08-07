@@ -116,17 +116,5 @@
 			--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-l);
 			--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 		}
-
-		&.is-positive .spectrum-ProgressBar-fill {
-			background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-positive, var(--spectrum-progressbar-fill-color-positive)));
-		}
-
-		&.is-notice .spectrum-ProgressBar-fill {
-			background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-notice, var(--spectrum-progressbar-fill-color-notice)));
-		}
-
-		&.is-negative .spectrum-ProgressBar-fill {
-			background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color-negative, var(--spectrum-progressbar-fill-color-negative)));
-		}
 	}
 }
