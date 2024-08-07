@@ -1,5 +1,16 @@
 # Change Log
 
+## 7.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#2954](https://github.com/adobe/spectrum-css/pull/2954) [`2d89227`](https://github.com/adobe/spectrum-css/commit/2d892277adbc1d8d5598bdf85130d3499fd31e13) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Reimplements support for the `spectrum-Swatch--lightBorder` class for swatches specifically in a swatch group.
+
+### Patch Changes
+
+- Updated dependencies [[`58a89ea`](https://github.com/adobe/spectrum-css/commit/58a89ea464c387111511271a5f5afce044f11042)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.15
+
 ## 7.0.0-s2-foundations.12
 
 ### Minor Changes
