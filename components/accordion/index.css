@@ -86,6 +86,11 @@
 		border-block-start-color: var(--mod-accordion-divider-color, var(--spectrum-accordion-divider-color));
 	}
 
+	/* Remove the top border width from non-first-child items */
+	&:not(:first-of-type) {
+		border-block-start-width: 0;
+	}
+
 	&.is-open {
 		.spectrum-Accordion-itemHeader:hover {
 			background-color: var(--mod-accordion-background-color-hover, var(--spectrum-accordion-background-color-hover));

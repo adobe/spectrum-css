@@ -1,8 +1,8 @@
 import { Meta, Title } from "@storybook/blocks";
-import { ColorPalette, ColorItem } from "../blocks/ColorPalette";
-import { ThemeContainer } from "../blocks/ThemeContainer";
-import { Heading } from "../blocks/Typography";
+import { ColorPalette, ColorItem, ThemeContainer, Heading } from "../blocks";
 import data from "@adobe/spectrum-tokens/dist/json/variables.json";
+import lightGradient from "../assets/gradient-background-light.png";
+import darkGradient from "../assets/gradient-background-dark.png";
 
 <Meta title="Design tokens" />
 <Title>Design tokens</Title>
@@ -302,25 +302,35 @@ The Spectrum CSS color palette is a collection of named colors that are used thr
   </ColorPalette>
 </ThemeContainer>
 
-<ThemeContainer theme="light">
-    <Heading>Transparent colors</Heading>
+<br />
+<br />
 
-    <ColorPalette background="linear-gradient(81deg, rgba(253,221,242,1) 0%, rgba(249,246,203,1) 100%)">
-        <ColorItem
-            title="Transparent black"
-            values={[
-                25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
-            ]}
-        />
-    </ColorPalette>
+### Transparent colors
 
-    <ColorPalette>
-        <ColorItem
-            title="Transparent white"
-            values={[
-                25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
-            ]}
-        />
-    </ColorPalette>
+<ThemeContainer
+  theme="light"
+  style={{ background: `url(${lightGradient})`, backgroundSize: "cover" }}
+>
+  <ColorPalette>
+    <ColorItem
+      title="Transparent black"
+      color="transparent-black"
+      values={[25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]}
+    />
+  </ColorPalette>
+</ThemeContainer>
 
+<br />
+
+<ThemeContainer
+  theme="dark"
+  style={{ background: `url(${darkGradient})`, backgroundSize: "cover" }}
+>
+  <ColorPalette>
+    <ColorItem
+      title="Transparent white"
+      color="transparent-white"
+      values={[25, 50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]}
+    />
+  </ColorPalette>
 </ThemeContainer>

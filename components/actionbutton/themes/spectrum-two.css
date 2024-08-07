@@ -67,15 +67,15 @@
 		}
 
 		&.is-selected {
-			--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected, var(--spectrum-neutral-background-color-selected-default));
-			--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected, var(--spectrum-neutral-background-color-selected-hover));
-			--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected, var(--spectrum-neutral-background-color-selected-down));
-			--mod-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected, var(--spectrum-neutral-background-color-selected-key-focus));
+			--spectrum-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected, var(--spectrum-neutral-background-color-selected-default));
+			--spectrum-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected, var(--spectrum-neutral-background-color-selected-hover));
+			--spectrum-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected, var(--spectrum-neutral-background-color-selected-down));
+			--spectrum-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected, var(--spectrum-neutral-background-color-selected-key-focus));
 
-			--mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected, var(--spectrum-gray-50));
-			--mod-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected, var(--spectrum-gray-50));
-			--mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected, var(--spectrum-gray-50));
-			--mod-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected, var(--spectrum-gray-50));
+			--spectrum-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected, var(--spectrum-gray-50));
+			--spectrum-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected, var(--spectrum-gray-50));
+			--spectrum-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected, var(--spectrum-gray-50));
+			--spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected, var(--spectrum-gray-50));
 
 			--spectrum-actionbutton-border-color-default: transparent;
 			--spectrum-actionbutton-border-color-hover: transparent;
@@ -86,15 +86,15 @@
 			--spectrum-actionbutton-border-color-disabled: transparent;
 
 			&.spectrum-ActionButton--emphasized {
-				--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected-emphasized, var(--spectrum-accent-background-color-default));
-				--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected-emphasized, var(--spectrum-accent-background-color-hover));
-				--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected-emphasized, var(--spectrum-accent-background-color-down));
-				--mod-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected-emphasized, var(--spectrum-accent-background-color-key-focus));
+				--spectrum-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected-emphasized, var(--spectrum-accent-background-color-default));
+				--spectrum-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected-emphasized, var(--spectrum-accent-background-color-hover));
+				--spectrum-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected-emphasized, var(--spectrum-accent-background-color-down));
+				--spectrum-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected-emphasized, var(--spectrum-accent-background-color-key-focus));
 
-				--mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected-emphasized, var(--spectrum-white));
-				--mod-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected-emphasized, var(--spectrum-white));
-				--mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected-emphasized, var(--spectrum-white));
-				--mod-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected-emphasized, var(--spectrum-white));
+				--spectrum-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected-emphasized, var(--spectrum-white));
+				--spectrum-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected-emphasized, var(--spectrum-white));
+				--spectrum-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected-emphasized, var(--spectrum-white));
+				--spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected-emphasized, var(--spectrum-white));
 			}
 		}
 
@@ -199,18 +199,18 @@
 			--spectrum-actionbutton-content-color-disabled: var(--spectrum-disabled-static-black-content-color);
 
 			&.is-selected {
-				--mod-actionbutton-background-color-default: var(--spectrum-transparent-black-800);
-				--mod-actionbutton-background-color-hover: var(--spectrum-transparent-black-900);
-				--mod-actionbutton-background-color-down: var(--spectrum-transparent-black-900);
-				--mod-actionbutton-background-color-focus: var(--spectrum-transparent-black-900);
+				--spectrum-actionbutton-background-color-default: var(--spectrum-transparent-black-800);
+				--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-black-900);
+				--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-black-900);
+				--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-black-900);
 
-				--mod-actionbutton-content-color-default-selected: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
-				--mod-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
-				--mod-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
-				--mod-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
+				--spectrum-actionbutton-content-color-default-selected: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
+				--spectrum-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
+				--spectrum-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
+				--spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
 
-				--mod-actionbutton-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
-				--mod-actionbutton-border-color-disabled: transparent;
+				--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-black-background-color);
+				--spectrum-actionbutton-border-color-disabled: transparent;
 			}
 		}
 
@@ -237,18 +237,18 @@
 			--spectrum-actionbutton-content-color-disabled: var(--spectrum-disabled-static-white-content-color);
 
 			&.is-selected {
-				--mod-actionbutton-background-color-default: var(--spectrum-transparent-white-800);
-				--mod-actionbutton-background-color-hover: var(--spectrum-transparent-white-900);
-				--mod-actionbutton-background-color-down: var(--spectrum-transparent-white-900);
-				--mod-actionbutton-background-color-focus: var(--spectrum-transparent-white-900);
+				--spectrum-actionbutton-background-color-default: var(--spectrum-transparent-white-800);
+				--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-white-900);
+				--spectrum-actionbutton-background-color-down: var(--spectrum-transparent-white-900);
+				--spectrum-actionbutton-background-color-focus: var(--spectrum-transparent-white-900);
 
-				--mod-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
-				--mod-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
-				--mod-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
-				--mod-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+				--spectrum-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+				--spectrum-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+				--spectrum-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
+				--spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
 
-				--mod-actionbutton-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
-				--mod-actionbutton-border-color-disabled: transparent;
+				--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
+				--spectrum-actionbutton-border-color-disabled: transparent;
 			}
 		}
 	}
