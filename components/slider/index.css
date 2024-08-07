@@ -111,7 +111,7 @@
 	position: relative;
 
 	/* Don't let z-index'd child elements float above other things on the page */
-	z-index: 1;
+	z-index: 0;
 	display: block;
 	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
 
