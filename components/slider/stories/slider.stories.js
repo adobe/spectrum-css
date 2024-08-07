@@ -247,6 +247,9 @@ Focused.args = {
 };
 Focused.tags = ["autodocs", "!dev"];
 
+/**
+ * A gradient can be added to the track of any slider to give more meaning to the range of values. Tracks with a gradient can also have a fill. A gradient track should not be used for choosing a precise color; use a [color slider](/docs/components-color-slider--docs), [color area](/docs/components-color-area--docs), or [color wheel](/docs/components-color-wheel--docs) instead.
+ */
 export const Gradient = Template.bind({});
 Gradient.args = {
 	...Default.args,
