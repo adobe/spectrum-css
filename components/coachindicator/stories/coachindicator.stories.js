@@ -1,9 +1,14 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { CoachIndicatorGroup } from "./template";
+import {
+	AllVariantsGroup,
+	CoachIndicatorGroup
+} from "./template";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.
+ * 
+ * Coach indicator is primarily used along with the [Coach mark](/docs/components-coach-mark--docs) component.
  */
 export default {
 	title: "Coach indicator",
@@ -46,6 +51,24 @@ Default.parameters = {
 		pauseAnimationAtEnd: true,
 	},
 };
+Default.tags = ["!autodocs"];
+
+export const DefaultVariants = AllVariantsGroup.bind({});
+DefaultVariants.tags = ["autodocs", "!dev"];
+DefaultVariants.storyName = "Default";
+DefaultVariants.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+export const QuietVariants = AllVariantsGroup.bind({});
+QuietVariants.tags = ["autodocs", "!dev"];
+QuietVariants.storyName = "Quiet";
+QuietVariants.args = {
+	isQuiet: true,
+};
+QuietVariants.parameters = {
+	chromatic: { disableSnapshot: true }
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
@@ -57,7 +80,6 @@ WithForcedColors.parameters = {
 		forcedColors: "active",
 		prefersReducedMotion: "reduce",
 		pauseAnimationAtEnd: true,
-		modes: disableDefaultModes
-
+		modes: disableDefaultModes,
 	},
 };

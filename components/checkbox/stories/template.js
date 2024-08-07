@@ -90,3 +90,68 @@ export const Template = ({
 		</label>
 	`;
 };
+
+export const CheckboxGroup = (args, context) => html`
+	<div style="display: flex; flex-direction: column; padding: 16px">
+		${Template({
+			...args,
+			context,
+			iconName: undefined,
+		})}
+		${Template({
+			...args,
+			context,
+			isChecked: true,
+		})}
+		${Template({
+			...args,
+			context,
+			isIndeterminate: true,
+		})}
+		${Template({
+			...args,
+			context,
+			isDisabled: true,
+		})}
+		${Template({
+			...args,
+			context,
+			label: "Checkbox with an extraordinarily long label. Please don't do this but if you did, it should wrap text when it gets longer than the container that houses the checkbox with the unacceptably long label",
+      customStyles: { "max-inline-size": "200px" },
+		})}
+	</div>
+`;
+
+export const AllVariantsCheckboxGroup = (args, context) => {
+	return html`
+		<div style="display: flex;">
+			<div style="display: flex; flex-direction: column;">
+				<h4 style="margin: 0; padding-left: 16px;">Default</h4>
+				${CheckboxGroup({
+					...args,
+				}, context)}
+			</div>
+			<div style="display: flex; flex-direction: column;">
+				<h4 style="margin: 0; padding-left: 16px;">Invalid</h4>
+				${CheckboxGroup({
+					...args,
+					isInvalid: true,
+				}, context)}
+			</div>
+			<div style="display: flex; flex-direction: column;">
+				<h4 style="margin: 0; padding-left: 16px;">Disabled</h4>
+				${CheckboxGroup({
+					...args,
+					isDisabled: true,
+				}, context)}
+			</div>
+			<div style="display: flex; flex-direction: column;">
+				<h4 style="margin: 0; padding-left: 16px;">Read-Only</h4>
+				${CheckboxGroup({
+					...args,
+					isReadOnly: true,
+				}, context)}
+			</div>
+		</div>
+	`;
+};

@@ -87,7 +87,7 @@ export const Template = (
 export const BreadcrumbGroup = Variants({
 	Template,
 	testData: [{
-		testHeading: "Default"
+		testHeading: "Default",
 	}, {
 		testHeading: "Compact",
 		variant: "compact",
@@ -101,7 +101,6 @@ export const BreadcrumbGroup = Variants({
 			},
 			{
 				iconName: "FolderOpen",
-				isDisabled: true,
 			},
 			{
 				label: "Trend",
@@ -116,6 +115,25 @@ export const BreadcrumbGroup = Variants({
 		{
 			testHeading: "Dragged",
 			isDragged: true,
+		},
+		{
+			testHeading: "Disabled",
+			items: [
+				{
+					label: "Nav root",
+				},
+				{
+					iconName: "FolderOpen",
+					isDisabled: true,
+				},
+				{
+					label: "Trend",
+					isDisabled: true,
+				},
+				{
+					label: "January 2019 Assets",
+				},
+			],
 		}
 	]
 });

@@ -10,6 +10,7 @@ export const Template = ({
 	rootClass = "spectrum-ClearButton",
 	isDisabled = false,
 	size = "m",
+	isQuiet = false,
 	staticColor,
 	id,
 	customClasses = [],
@@ -21,6 +22,7 @@ export const Template = ({
 			[rootClass]: true,
 			[`${rootClass}--size${size?.toUpperCase()}`]:
 				typeof size !== "undefined",
+			[`${rootClass}--quiet`]: isQuiet,
 			[`${rootClass}--overBackground`]: staticColor === "white",
 			"is-disabled": isDisabled,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
