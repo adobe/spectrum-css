@@ -159,7 +159,7 @@ export default {
 };
 
 /**
- * Sliders should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These sliders should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
+ * Sliders should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined.
  */
 export const Default = Template.bind({});
 Default.args = {};
