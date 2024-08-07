@@ -13,3 +13,4 @@
 | `--mod-color-slider-vertical-control-track-width` |
 | `--mod-color-slider-vertical-height`              |
 | `--mod-color-slider-vertical-minimum-height`      |
+| `--mod-colorhandle-hitarea-border-radius`         |

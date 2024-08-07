@@ -49,16 +49,20 @@ async function extractModifiers(filepath, { cwd } = {}) {
 	const meta = extractProperties(content, {
 		modifiers: ["mod"],
 		spectrum: ["spectrum"],
-		system: ["system"],
+		"theming-layer": ["system"],
 		"high-contrast": ["highcontrast"],
 	});
 
+	const baseSelectors = [".spectrum", ".spectrum--express", ".spectrum--legacy"];
 	const selectors = new Set();
 	const root = postcss.parse(content);
 	root.walkRules((rule) => {
 		if (rule.selectors) {
 			rule.selectors.forEach((selector) => {
-				selectors.add(selector);
+				// If the selector is not a base selector, add it to the set
+				if (baseSelectors.some((base) => selector !== base)) {
+					selectors.add(selector);
+				}
 			});
 		}
 	});
@@ -71,40 +75,45 @@ async function extractModifiers(filepath, { cwd } = {}) {
 	// name matches the component name
 	const spectrum = meta.spectrum ?? [];
 	const componentLevel = new Set(spectrum.map((value) => {
-		const parts = value.slice(0, 2).split("-");
+		const parts = value.slice(2).split("-");
 		if (parts.length > 1 && parts[1] === componentName) return value;
 		if (parts[1] + parts[2] === componentName) return value;
 		return;
 	}).filter(Boolean));
 
+	// Filter out the component level values from the global spectrum values
+	meta.global = spectrum.filter((value) => !componentLevel.has(value));
+
+	// Remove the spectrum values from the meta object
+	delete meta.spectrum;
+
 	return Promise.all([
 		fsp.writeFile(
-			path.join(cwd, "dist/mods.md"),
+			path.join(cwd, "metadata/mods.md"),
 			await prettier.format(
 				`${[
 					"| Modifiable custom properties |",
 					"| --- |",
-					...(meta?.modifiers ?? []).map((mod) => `| ${mod} |`),
+					...(meta?.modifiers ?? []).map((mod) => `| \`${mod}\` |`),
 				].join("\n")}`,
 				{ parser: "markdown" },
 			),
 			{ encoding: "utf-8" },
 		)
 			.then(() => {
-				const stats = fs.statSync(path.join(cwd, "dist/mods.md"));
+				const stats = fs.statSync(path.join(cwd, "metadata/mods.md"));
 				return [
-					`${"✓".green}  ${"dist/mods.md".padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
-					`🔍  ${`${selectors.size}`.underline} selector${selectors.size === 1 ? "" : "s"}`,
+					`${"✓".green}  ${"metadata/mods.md".padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
 				];
 			})
 			.catch((err) => {
 				if (!err) return;
-				console.log(`${"✗".red}  ${"dist/mmods.md".yellow} not written`);
+				console.log(`${"✗".red}  ${"metadata/mods.md".yellow} not written`);
 				return Promise.reject(err);
 			}),
 		fsp
 			.writeFile(
-				path.join(cwd, "dist/metadata.json"),
+				path.join(cwd, "metadata/metadata.json"),
 				await prettier.format(
 					JSON.stringify(
 						{
@@ -121,15 +130,14 @@ async function extractModifiers(filepath, { cwd } = {}) {
 				{ encoding: "utf-8" },
 			)
 			.then(() => {
-				const stats = fs.statSync(path.join(cwd, "dist/metadata.json"));
+				const stats = fs.statSync(path.join(cwd, "metadata/metadata.json"));
 				return [
-					`${"✓".green}  ${"dist/metadata.json".padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
-					`🔍  ${`${selectors.size}`.underline} selector${selectors.size === 1 ? "" : "s"}`,
+					`${"✓".green}  ${"metadata/metadata.json".padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
 				];
 			})
 			.catch((err) => {
 				if (!err) return;
-				console.log(`${"✗".red}  ${"dist/metadata.json".yellow} not written`);
+				console.log(`${"✗".red}  ${"metadata/metadata.json".yellow} not written`);
 				return Promise.reject(err);
 			}),
 	]);

@@ -33,6 +33,10 @@
 
 /* Standard / Default */
 .spectrum-Search {
+	/* Using a component-level token for this internal variable */
+	--spectrum-search-button-inline-size: var(--spectrum-search-block-size);
+	--spectrum-search-min-inline-size: calc(var(--spectrum-search-min-inline-multiplier) * var(--spectrum-search-block-size));
+
 	/* Settings for nested Textfield component. */
 	--mod-textfield-font-family: var(--mod-search-font-family, var(--spectrum-search-font-family));
 	--mod-textfield-font-weight: var(--mod-search-font-weight, var(--spectrum-search-font-weight));
@@ -153,6 +157,8 @@
 
 /* Quiet Variant */
 .spectrum-Search--quiet {
+	--spectrum-search-quiet-button-offset: calc((var(--mod-search-block-size, var(--spectrum-search-block-size)) / 2) - (var(--mod-workflow-icon-size-100, var(--spectrum-search-icon-size)) / 2));
+
 	.spectrum-Search-clearButton {
 		transform: translateX(var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
 	}
