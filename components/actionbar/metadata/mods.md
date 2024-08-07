@@ -1,5 +1,6 @@
 | Modifiable custom properties                    |
 | ----------------------------------------------- |
+| `--mod-actionbar-block-size`                    |
 | `--mod-actionbar-corner-radius`                 |
 | `--mod-actionbar-emphasized-background-color`   |
 | `--mod-actionbar-emphasized-item-counter-color` |
@@ -8,8 +9,12 @@
 | `--mod-actionbar-item-counter-font-size`        |
 | `--mod-actionbar-item-counter-line-height`      |
 | `--mod-actionbar-item-counter-line-height-cjk`  |
+| `--mod-actionbar-opacity`                       |
 | `--mod-actionbar-popover-background-color`      |
 | `--mod-actionbar-popover-border-color`          |
+| `--mod-actionbar-popover-filter`                |
+| `--mod-actionbar-popover-inline-size`           |
+| `--mod-actionbar-position`                      |
 | `--mod-actionbar-shadow-blur`                   |
 | `--mod-actionbar-shadow-color`                  |
 | `--mod-actionbar-shadow-horizontal`             |
@@ -22,3 +27,22 @@
 | `--mod-actionbar-spacing-item-counter-end`      |
 | `--mod-actionbar-spacing-item-counter-top`      |
 | `--mod-actionbar-spacing-outer-edge`            |
+| `--mod-actiongroup-margin-block-start`          |
+| `--mod-actiongroup-margin-inline-end`           |
+| `--mod-actiongroup-margin-inline-start`         |
+| `--mod-closebutton-flex-shrink`                 |
+| `--mod-closebutton-margin-block-start`          |
+| `--mod-closebutton-margin-inline-end`           |
+| `--mod-closebutton-margin-inline-start`         |
+| `--mod-field-label-bottom-to-text`              |
+| `--mod-field-label-top-to-text`                 |
+| `--mod-fieldlabel-color`                        |
+| `--mod-fieldlabel-font-size`                    |
+| `--mod-fieldlabel-line-height`                  |
+| `--mod-fieldlabel-line-height-cjk`              |
+| `--mod-fieldlabel-margin-block-start`           |
+| `--mod-fieldlabel-margin-inline-end`            |
+| `--mod-popover-background-color`                |
+| `--mod-popover-border-color`                    |
+| `--mod-popover-corner-radius`                   |
+| `--mod-popover-filter`                          |

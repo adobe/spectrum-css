@@ -1,9 +1,5 @@
 | Modifiable custom properties                        |
 | --------------------------------------------------- |
-| `--mod-animation-duration-100`                      |
-| `--mod-button-animation-duration`                   |
-| `--mod-button-font-family`                          |
-| `--mod-button-line-height`                          |
 | `--mod-closebutton-align-self`                      |
 | `--mod-closebutton-animation-duraction`             |
 | `--mod-closebutton-animation-duration`              |
@@ -12,6 +8,7 @@
 | `--mod-closebutton-background-color-focus`          |
 | `--mod-closebutton-background-color-hover`          |
 | `--mod-closebutton-border-radius`                   |
+| `--mod-closebutton-flex-shrink`                     |
 | `--mod-closebutton-focus-indicator-color`           |
 | `--mod-closebutton-focus-indicator-gap`             |
 | `--mod-closebutton-focus-indicator-thickness`       |
@@ -21,7 +18,12 @@
 | `--mod-closebutton-icon-color-down`                 |
 | `--mod-closebutton-icon-color-focus`                |
 | `--mod-closebutton-icon-color-hover`                |
+| `--mod-closebutton-margin-block`                    |
+| `--mod-closebutton-margin-block-end`                |
+| `--mod-closebutton-margin-block-start`              |
 | `--mod-closebutton-margin-inline`                   |
+| `--mod-closebutton-margin-inline-end`               |
+| `--mod-closebutton-margin-inline-start`             |
 | `--mod-closebutton-margin-top`                      |
 | `--mod-closebutton-size`                            |
 | `--mod-closebutton-static-background-color-default` |
@@ -29,5 +31,3 @@
 | `--mod-closebutton-static-background-color-focus`   |
 | `--mod-closebutton-static-background-color-hover`   |
 | `--mod-closebutton-width`                           |
-| `--mod-line-height-100`                             |
-| `--mod-sans-font-family-stack`                      |

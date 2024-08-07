@@ -1,0 +1,47 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum--legacy",
+    ".spectrum-Asset",
+    ".spectrum-Asset-file",
+    ".spectrum-Asset-fileBackground",
+    ".spectrum-Asset-fileOutline",
+    ".spectrum-Asset-folder",
+    ".spectrum-Asset-folderBackground",
+    ".spectrum-Asset-folderOutline",
+    ".spectrum-Asset-image"
+  ],
+  "component": [
+    "--spectrum-asset-file-background-color",
+    "--spectrum-asset-folder-background-color",
+    "--spectrum-asset-icon-outline-color",
+    "--spectrum-asset-transition-duration"
+  ],
+  "modifiers": [
+    "--mod-asset-file-background-color",
+    "--mod-asset-folder-background-color",
+    "--mod-asset-icon-margin",
+    "--mod-asset-icon-max-width",
+    "--mod-asset-icon-min-width",
+    "--mod-asset-icon-outline-color"
+  ],
+  "theming-layer": [
+    "--system-asset-file-background-color",
+    "--system-asset-folder-background-color",
+    "--system-asset-icon-outline-color",
+    "--system-asset-transition-duration"
+  ],
+  "high-contrast": [
+    "--highcontrast-asset-file-background-color",
+    "--highcontrast-asset-folder-background-color"
+  ],
+  "global": [
+    "--spectrum-animation-duration-100",
+    "--spectrum-gray-200",
+    "--spectrum-gray-25",
+    "--spectrum-gray-300",
+    "--spectrum-gray-50",
+    "--spectrum-gray-500"
+  ]
+}
