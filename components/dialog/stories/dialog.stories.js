@@ -175,7 +175,7 @@ Default.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const DefaultSmall = Template.bind({});
-DefaultSmall.tags = ["autodocs", "!dev"];
+DefaultSmall.tags = ["!dev"];
 DefaultSmall.storyName = "Dialog - small",
 DefaultSmall.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -190,7 +190,7 @@ DefaultSmall.args = {
 };
 
 export const DefaultLarge = Template.bind({});
-DefaultLarge.tags = ["autodocs", "!dev"];
+DefaultLarge.tags = ["!dev"];
 DefaultLarge.storyName = "Dialog - large",
 DefaultLarge.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -208,7 +208,7 @@ DefaultLarge.args = {
  * A dialog that can be dismissed without taking an action. Dismissible dialogs should never have buttons.
  */
 export const Dismissible = Template.bind({});
-Dismissible.tags = ["autodocs", "!dev"];
+Dismissible.tags = ["!dev"];
 Dismissible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -225,7 +225,7 @@ Dismissible.args = {
  * Dialogs can forgo the divider if they have content that spans the entire width of the dialog.
  */
 export const NoDivider = Template.bind({});
-NoDivider.tags = ["autodocs", "!dev"];
+NoDivider.tags = ["!dev"];
 NoDivider.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -243,7 +243,7 @@ NoDivider.args = {
  * Dialogs can have a hero or cover image header.
  */
 export const WithHero = Template.bind({});
-WithHero.tags = ["autodocs", "!dev"];
+WithHero.tags = ["!dev"];
 WithHero.parameters = {
 	docs: {
 		story: {
@@ -277,7 +277,7 @@ WithScroll.args = {
 		"max-block-size": "400px",
 	}
 };
-WithScroll.tags = ["autodocs", "!dev"];
+WithScroll.tags = ["!dev"];
 WithScroll.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -286,7 +286,7 @@ WithScroll.parameters = {
  * A fullscreen dialog will automatically fill almost all of the available screen space. A margin is included around the outside of the dialog.
  */
 export const Fullscreen = Template.bind({});
-Fullscreen.tags = ["autodocs", "!dev"];
+Fullscreen.tags = ["!dev"];
 Fullscreen.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -303,7 +303,7 @@ Fullscreen.args = {
  * A fullscreen takeover dialog will fill all of the available screen space.
  */
 export const FullscreenTakeover = Template.bind({});
-FullscreenTakeover.tags = ["autodocs", "!dev"];
+FullscreenTakeover.tags = ["!dev"];
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },
 };

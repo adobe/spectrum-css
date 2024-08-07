@@ -73,7 +73,6 @@ export default {
 export const Default = DialGroup.bind();
 Default.args = {};
 
-// ********* DOCS ONLY ********* //
 export const Small = Template.bind();
 Small.args = {
 	size: "s",
@@ -81,7 +80,7 @@ Small.args = {
 Small.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Small.tags = ["autodocs", "!dev"];
+Small.tags = ["!dev"];
 
 export const WithLabel = Template.bind();
 WithLabel.args = {
@@ -90,7 +89,7 @@ WithLabel.args = {
 WithLabel.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-WithLabel.tags = ["autodocs", "!dev"];
+WithLabel.tags = ["!dev"];
 
 export const Disabled = Template.bind();
 Disabled.args = {
@@ -99,7 +98,7 @@ Disabled.args = {
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Disabled.tags = ["autodocs", "!dev"];
+Disabled.tags = ["!dev"];
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = DialGroup.bind({});

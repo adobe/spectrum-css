@@ -56,7 +56,7 @@ Default.tags = ["!autodocs"];
 // ********* DOCS ONLY ********* //
 export const DefaultGroup = DocsDropIndicatorGroup.bind({});
 DefaultGroup.storyName = "Default";
-DefaultGroup.tags = ["autodocs", "!dev"];
+DefaultGroup.tags = ["!dev"];
 DefaultGroup.parameters = { 
 	chromatic: { disableSnapshot: true }
 };

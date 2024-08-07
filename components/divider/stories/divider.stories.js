@@ -68,7 +68,7 @@ Default.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Sizing = AllDividerSizes.bind({});
-Sizing.tags = ["autodocs", "!dev"];
+Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -78,7 +78,7 @@ Sizing.parameters = {
  */
 export const VerticalGroup = AllDividerSizes.bind({});
 VerticalGroup.storyName = "Vertical";
-VerticalGroup.tags = ["autodocs", "!dev"];
+VerticalGroup.tags = ["!dev"];
 VerticalGroup.args = {
 	vertical: true,
 };
