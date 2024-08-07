@@ -51,5 +51,10 @@
 		--spectrum-coachmark-step-line-height: var(--spectrum-body-line-height);
 		--spectrum-coachmark-step-font-size: var(--spectrum-coach-mark-pagination-body-size);
 		--spectrum-coachmark-step-to-bottom: var(--spectrum-coach-mark-pagination-text-to-bottom-edge);
+
+		/* passthrough abstractions */
+		--spectrum-coachmark-popover-border-width: var(--spectrum-border-width-100);
+		--spectrum-coachmark-popover-corner-radius: var(--spectrum-corner-radius-100);
+		--spectrum-coachmark-buttongroup-spacing-horizontal: var(--spectrum-spacing-100);
 	}
 }
