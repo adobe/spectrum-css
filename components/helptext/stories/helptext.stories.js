@@ -1,5 +1,4 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Variants } from "./template";
 
@@ -30,7 +29,16 @@ export default {
 			options: ["neutral", "negative"],
 			control: "inline-radio",
 		},
-		size: size(["s", "m", "l", "xl"]),
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		hideIcon: {
 			name: "Hide icon",
 			type: { name: "boolean" },
@@ -43,7 +51,16 @@ export default {
 			control: "boolean",
 			if: { arg: "variant", eq: "negative" },
 		},
-		isDisabled,
+		isDisabled: {
+			name: "Disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-HelpText",

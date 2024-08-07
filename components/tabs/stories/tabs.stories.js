@@ -1,5 +1,4 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isEmphasized, isQuiet, size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { version } from "../package.json";
@@ -13,7 +12,16 @@ export default {
 	component: "Tabs",
 	argTypes: {
 		content: { table: { disable: true } },
-		size: size(["s", "m", "l", "xl"]),
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		orientation: {
 			name: "Orientation",
 			type: { name: "string", required: true },
@@ -26,8 +34,24 @@ export default {
 			control: "select",
 			default: "horizontal",
 		},
-		isQuiet,
-		isEmphasized,
+		isQuiet: {
+			name: "Quiet",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isEmphasized: {
+			name: "Emphasized",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 		isCompact: {
 			name: "Compact",
 			type: { name: "boolean" },

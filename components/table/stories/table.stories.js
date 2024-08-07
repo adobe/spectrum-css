@@ -1,5 +1,4 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isEmphasized, isQuiet, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -10,7 +9,15 @@ export default {
 	title: "Table",
 	component: "Table",
 	argTypes: {
-		size: size(["s", "m", "l", "xl"]),
+		size: {
+			name: "Size",
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		density: {
 			name: "Density",
 			table: {
@@ -20,8 +27,24 @@ export default {
 			options: ["standard", "compact", "spacious"],
 			control: "select",
 		},
-		isQuiet,
-		isEmphasized,
+		isQuiet: {
+			name: "Quiet styling",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
+		isEmphasized: {
+			name: "Emphasized",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		useDivs: {
 			name: "Use Divs for Markup",
 			description:
@@ -56,7 +79,7 @@ export default {
 			control: "boolean",
 		},
 		isDropTarget: {
-			name: "Dropzone (Drop target)",
+			name: "Dropzone (Drop Target)",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },

@@ -1,5 +1,4 @@
 import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
@@ -32,7 +31,14 @@ export default {
 	component: "Icon",
 	argTypes: {
 		size: {
-			...size(["xs", "s", "m", "l", "xl", "xxl"]),
+			name: "Workflow Icon Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["xs", "s", "m", "l", "xl", "xxl"],
+			control: "select",
 			if: { arg: "setName", eq: "workflow" },
 		},
 		setName: {

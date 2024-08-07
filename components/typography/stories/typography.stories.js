@@ -1,6 +1,5 @@
 import { Sizes } from "@spectrum-css/preview/decorators/utilities.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template, TypographyGroup } from "./template";
 
@@ -22,7 +21,16 @@ export default {
 			options: ["heading", "body", "detail", "code"],
 			control: "inline-radio",
 		},
-		size: size(["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"]),
+		size: {
+			name: "Size",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+			control: "select",
+		},
 		weight: {
 			name: "Weight",
 			type: { name: "string" },
@@ -111,7 +119,11 @@ Heading.parameters = {
 
 export const Body = (args, context) => Sizes({ Template, ...args }, context);
 Body.argTypes = {
-	size: size(["xs", "s", "m", "l", "xl", "xxl", "xxxl"]),
+	size: {
+		name: "Size",
+		options: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+		table: { disable: true },
+	},
 };
 Body.args = {
 	semantics: "body",
@@ -126,7 +138,11 @@ Body.parameters = {
 
 export const Detail = (args, context) => Sizes({ Template, ...args }, context);
 Detail.argTypes = {
-	size: size(["s", "m", "l", "xl"]),
+	size: {
+		name: "Size",
+		options: ["s", "m", "l", "xl"],
+		table: { disable: true },
+	},
 	weight: {
 		options: ["light"],
 		if: { arg: "semantics", eq: "detail"},
@@ -140,7 +156,11 @@ Detail.tags = ["!dev"];
 
 export const Code = (args, context) => Sizes({ Template, ...args }, context);
 Code.argTypes = {
-	size: size(["xs", "s", "m", "l", "xl"]),
+	size: {
+		name: "Size",
+		options: ["xs", "s", "m", "l", "xl"],
+		table: { disable: true },
+	},
 };
 Code.args = {
 	semantics: "code",

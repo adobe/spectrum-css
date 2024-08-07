@@ -1,5 +1,4 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { ButtonGroup } from "./template";
 
@@ -10,7 +9,16 @@ export default {
 	title: "Button group",
 	component: "ButtonGroup",
 	argTypes: {
-		size: size(["s", "m", "l", "xl"]),
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		vertical: {
 			name: "Vertical layout",
 			type: { name: "boolean" },

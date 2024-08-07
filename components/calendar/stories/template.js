@@ -19,7 +19,7 @@ export const Template = ({
 	selectedDay,
 	lastDay,
 	year,
-	isPadded,
+	padded,
 	isDisabled = false,
 	isFocused = false,
 	useDOWAbbrev = false,
@@ -260,7 +260,7 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--padded`]: isPadded,
+				[`${rootClass}--padded`]: padded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap({
@@ -402,7 +402,7 @@ export const CalendarGroup = Variants({
 		},
 		{
 			testHeading: "Padded",
-			isPadded: true,
+			padded: true,
 		},
 		{
 			testHeading: "Abbreviated days of the week",
@@ -415,7 +415,7 @@ export const CalendarGroup = Variants({
 			year: 2023,
 			lastDay: new Date(2023, 6, 7),
 			useDOWAbbrev: true,
-			isPadded: true,
+			padded: true,
 		},
 		{
 			testHeading: "Today highlighted",

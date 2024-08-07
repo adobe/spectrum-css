@@ -1,6 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isQuiet, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template";
 
@@ -11,8 +10,25 @@ export default {
 	title: "In-field button",
 	component: "InFieldButton",
 	argTypes: {
-		size: size(["s", "m", "l", "xl"]),
-		isQuiet,
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select"
+		},
+		isQuiet: {
+			name: "Quiet",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean"
+		},
 		position: {
 			name: "Position",
 			type: { name: "string", required: true },
@@ -27,7 +43,15 @@ export default {
 			...IconStories?.argTypes?.iconName ?? {},
 			if: false,
 		},
-		isDisabled,
+		isDisabled: {
+			name: "Disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean"
+		},
 		isStacked: { table: { disable: true } },
 	},
 	args: {

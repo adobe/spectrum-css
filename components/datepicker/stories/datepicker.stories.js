@@ -1,6 +1,6 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isInvalid, isOpen, isQuiet, isRequired, isValid } from "@spectrum-css/preview/types";
+import { isInvalid, isOpen, isValid } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
@@ -21,7 +21,15 @@ export default {
 			return { ...acc, [key]: { table: { disable: true } } };
 		}, {}),
 		isOpen,
-		isQuiet,
+		isQuiet: {
+			name: "Quiet styling",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Component",
+			},
+			control: "boolean",
+		},
 		isValid: {
 			...isValid,
 			if: { arg: "isInvalid", truthy: false },
@@ -40,9 +48,33 @@ export default {
 			...isInvalid,
 			if: { arg: "isValid", truthy: false },
 		},
-		isDisabled,
-		isRequired,
-		isReadOnly,
+		isDisabled: {
+			name: "Disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isRequired: {
+			name: "Required",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		readOnly: {
+			name: "Read only",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 		content: { table: { disable: true } },
 		isRange: { table: {disable: true} },
 	},
@@ -56,7 +88,7 @@ export default {
 		isValid: false,
 		isDisabled: false,
 		isRequired: false,
-		isReadOnly: false,
+		readOnly: false,
 		month: "March",
 		selectedDay: 1,
 		year: 2023,
@@ -154,12 +186,12 @@ QuietInvalid.parameters = {
 };
 
 
-export const isReadOnly = Template.bind({});
-isReadOnly.tags = ["!dev"];
-isReadOnly.args = {
-	isReadOnly: true,
+export const ReadOnly = Template.bind({});
+ReadOnly.tags = ["!dev"];
+ReadOnly.args = {
+	readOnly: true,
 };
-isReadOnly.parameters = {
+ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
 	docs: {
 		story: {

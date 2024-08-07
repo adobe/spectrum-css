@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-import { capitalize } from "lodash-es";
+import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
 
@@ -79,7 +79,7 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--emphasized`]: isEmphasized,
-				[`${rootClass}--static${capitalize(staticColor)}`]:
+				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
 					typeof staticColor !== "undefined",
 				["is-disabled"]: isDisabled,
 				["is-selected"]: isSelected,
@@ -93,11 +93,7 @@ export const Template = ({
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
-			@click=${onclick ?? function() {
-				updateArgs({
-					isSelected: !isSelected
-				});
-			}}
+			@click=${onclick}
 			@focusin=${function() {
 				updateArgs({ isFocused: true });
 			}}

@@ -1,5 +1,4 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isChecked, isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
@@ -11,7 +10,16 @@ export default {
 	title: "Radio",
 	component: "Radio",
 	argTypes: {
-		size: size(["s", "m", "l", "xl"]),
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -30,10 +38,42 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		isEmphasized,
-		isChecked,
-		isDisabled,
-		isReadOnly,
+		isEmphasized: {
+			name: "Emphasized styling",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: { type: "boolean" },
+		},
+		isChecked: {
+			name: "Radio selected",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: { type: "boolean" },
+		},
+		isDisabled: {
+			name: "Disabled",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
+		isReadOnly: {
+			name: "Read Only",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-Radio",

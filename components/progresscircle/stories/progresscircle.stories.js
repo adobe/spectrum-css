@@ -1,5 +1,4 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template";
@@ -11,11 +10,35 @@ export default {
 	title: "Progress circle",
 	component: "ProgressCircle",
 	argTypes: {
-		size: size(["s", "m", "l"]),
-		isIndeterminate,
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l"],
+			control: "select",
+		},
+		isIndeterminate: {
+			name: "Indeterminate",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "State",
+			},
+			control: "boolean",
+		},
 		staticColor: {
-			...staticColor,
+			name: "Static color",
+			type: { name: "string" },
+			table: {
+				disable: true,
+				type: { summary: "string" },
+				category: "Advanced",
+			},
 			options: ["white"],
+			control: "select",
 		},
 	},
 	args: {

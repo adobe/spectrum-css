@@ -3,7 +3,7 @@ import { Template as Typography } from "@spectrum-css/typography/stories/templat
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { capitalize } from "lodash-es";
+import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
 
@@ -24,7 +24,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--${labelPosition}Label`]: typeof labelPosition !== "undefined",
-				[`${rootClass}--static${capitalize(staticColor)}`]: typeof staticColor !== "undefined",
+				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]: typeof staticColor !== "undefined",
 				[`${rootClass}--${indeterminate}`]: typeof indeterminate !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}

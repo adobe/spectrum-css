@@ -57,7 +57,7 @@ export default {
 			control: "number",
 		},
 		isDisabled,
-		isPadded: {
+		padded: {
 			name: "Padded",
 			type: { name: "boolean" },
 			table: {
@@ -82,7 +82,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Calendar",
-		isPadded: false,
+		padded: false,
 		isDisabled: false,
 		isFocused: false,
 		useDOWAbbrev: false,
@@ -123,7 +123,7 @@ RangeSelection.args = {
 	year: 2023,
 	lastDay: new Date(2023, 6, 7),
 	useDOWAbbrev: true,
-	isPadded: true,
+	padded: true,
 };
 RangeSelection.tags = ["!dev"];
 RangeSelection.parameters = {

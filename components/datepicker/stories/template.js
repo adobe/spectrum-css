@@ -21,7 +21,7 @@ export const Template = ({
 	isDateTimeRange = false,
 	isDisabled = false,
 	isRequired = false,
-	isReadOnly = false,
+	readOnly = false,
 	selectedDay,
 	lastDay,
 } = {}, context = {}) => {
@@ -44,7 +44,7 @@ export const Template = ({
 			id=${ifDefined(id)}
 			aria-disabled=${isDisabled ? "true" : "false"}
 			aria-invalid=${ifDefined(isInvalid && !isDisabled ? "false" : undefined)}
-			aria-readonly=${ifDefined(isReadOnly ? "true" : "false")}
+			aria-readonly=${ifDefined(readOnly ? "true" : "false")}
 			aria-required=${ifDefined(isRequired ? "true" : "false")}
 			aria-haspopup="dialog"
 		>
@@ -52,7 +52,7 @@ export const Template = ({
 				size: "m",
 				isQuiet,
 				isDisabled,
-				isReadOnly,
+				isReadOnly: readOnly,
 				isInvalid: !isRange ? isInvalid : undefined,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
@@ -69,7 +69,7 @@ export const Template = ({
 				isQuiet,
 				isDisabled,
 				isInvalid,
-				isReadOnly,
+				isReadOnly: readOnly,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
 				placeholder: "Choose a date",
@@ -84,7 +84,7 @@ export const Template = ({
 				iconType: "workflow",
 				iconName: "Calendar",
 				isQuiet,
-				customStyles: isReadOnly ? { "display": "none" } : undefined,
+				customStyles: readOnly ? { "display": "none" } : undefined,
 				// @todo this is not added to the button on the website; need to make sure it's not a bug
 				// isOpen,
 				isInvalid,
@@ -94,9 +94,9 @@ export const Template = ({
 					updateArgs({ isOpen: !isOpen });
 				},
 			}, context)}
-			${when(!isReadOnly && !isDisabled, () => html`
+			${when(!readOnly && !isDisabled, () => html`
 				${Popover({
-					isOpen: isOpen && !isDisabled && !isReadOnly,
+					isOpen: isOpen && !isDisabled && !readOnly,
 					withTip: false,
 					position: "bottom",
 					isQuiet,

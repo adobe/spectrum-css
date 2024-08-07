@@ -1,6 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { BadgeGroup, PreviewSets } from "./template";
 
@@ -18,7 +17,16 @@ export default {
 	title: "Badge",
 	component: "Badge",
 	argTypes: {
-		size: size(["s", "m", "l", "xl"]),
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		label: {
 			name: "Label",
 			type: { name: "string" },

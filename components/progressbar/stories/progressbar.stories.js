@@ -1,5 +1,4 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size, staticColor } from "@spectrum-css/preview/types";
 import { ProgressBarGroup } from "./template";
 
 /**
@@ -11,7 +10,16 @@ export default {
 	argTypes: {
 		customWidth: { table: { disable: true } },
 		indeterminate: { table: { disable: true } },
-		size: size(["s", "m", "l", "xl"]),
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l", "xl"],
+			control: "select",
+		},
 		labelPosition: {
 			name: "Label position",
 			type: { name: "string" },
@@ -42,8 +50,14 @@ export default {
 			if: { arg: "indeterminate", truthy: false },
 		},
 		staticColor: {
-			...staticColor,
+			name: "Static color",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Advanced",
+			},
 			options: ["white"],
+			control: "select",
 		},
 	},
 	args: {
