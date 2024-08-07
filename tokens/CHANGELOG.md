@@ -1,5 +1,13 @@
 # Change Log
 
+## 15.0.0-s2-foundations.14
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`975b4fb`](https://github.com/adobe/spectrum-css/commit/975b4fb631d7203e772c2e879fbec610f933286f) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-238] t-shirt-based calc moved out of theme into base css
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`975b4fb`](https://github.com/adobe/spectrum-css/commit/975b4fb631d7203e772c2e879fbec610f933286f) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-235] meter properties moved out of theme and into index.css
+
 ## 15.0.0-s2-foundations.13
 
 ### Minor Changes
