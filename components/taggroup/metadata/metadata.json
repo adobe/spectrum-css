@@ -1,0 +1,18 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [".spectrum", ".spectrum-TagGroup", ".spectrum-TagGroup-item"],
+  "component": [
+    "--spectrum-tag-group-item-margin-block",
+    "--spectrum-tag-group-item-margin-inline"
+  ],
+  "modifiers": [
+    "--mod-tag-group-item-margin-block",
+    "--mod-tag-group-item-margin-inline"
+  ],
+  "theming-layer": [
+    "--system-tag-group-item-margin-block",
+    "--system-tag-group-item-margin-inline"
+  ],
+  "high-contrast": [],
+  "global": ["--spectrum-spacing-75"]
+}

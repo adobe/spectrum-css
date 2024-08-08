@@ -1,6 +1,6 @@
 module.exports = {
-	"*.css": [
-		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write"
+	"*.css,!plugins/*/{expected,fixtures}/*.css": [
+		"prettier --no-error-on-unmatched-pattern --ignore-unknown --log-level silent --write",
 	],
 	"*.{js,json}": [
 		"eslint --fix --cache --no-error-on-unmatched-pattern --quiet --ignore-pattern \"!.storybook/\""

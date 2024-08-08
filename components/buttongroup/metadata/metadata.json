@@ -1,0 +1,36 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum-ButtonGroup",
+    ".spectrum-ButtonGroup .spectrum-ButtonGroup-item",
+    ".spectrum-ButtonGroup--sizeL",
+    ".spectrum-ButtonGroup--sizeM",
+    ".spectrum-ButtonGroup--sizeS",
+    ".spectrum-ButtonGroup--sizeXL",
+    ".spectrum-ButtonGroup--vertical"
+  ],
+  "component": [
+    "--spectrum-buttongroup-spacing-horizontal",
+    "--spectrum-buttongroup-spacing-vertical"
+  ],
+  "modifiers": [
+    "--mod-buttongroup-justify-content",
+    "--mod-buttongroup-spacing-horizontal",
+    "--mod-buttongroup-spacing-vertical"
+  ],
+  "theming-layer": [
+    "--system-button-group-size-l-spacing-horizontal",
+    "--system-button-group-size-l-spacing-vertical",
+    "--system-button-group-size-m-spacing-horizontal",
+    "--system-button-group-size-m-spacing-vertical",
+    "--system-button-group-size-s-spacing-horizontal",
+    "--system-button-group-size-s-spacing-vertical",
+    "--system-button-group-size-xl-spacing-horizontal",
+    "--system-button-group-size-xl-spacing-vertical",
+    "--system-button-group-spacing-horizontal",
+    "--system-button-group-spacing-vertical"
+  ],
+  "high-contrast": [],
+  "global": ["--spectrum-spacing-200", "--spectrum-spacing-300"]
+}

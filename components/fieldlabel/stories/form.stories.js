@@ -3,7 +3,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Template as Stepper } from "@spectrum-css/stepper/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { version } from "../package.json";
-import { FormGroup } from "./form.template.js";
+import { Template } from "./form.template.js";
 
 
 /**
@@ -32,7 +32,7 @@ export default {
 	},
 };
 
-export const Default = FormGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	items: [
 		{
@@ -65,9 +65,9 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = Template.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

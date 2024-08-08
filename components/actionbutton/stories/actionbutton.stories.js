@@ -140,7 +140,7 @@ Quiet.args = {
 
 // ********* VRT ONLY ********* //
 export const StaticBlack = Default.bind({});
-StaticBlack.tags = ["!autodocs", "!dev"];
+StaticBlack.tags = ["!autodocs", "!dev", "test"];
 StaticBlack.args = {
 	...Default.args,
 	staticColor: "black",
@@ -152,7 +152,7 @@ StaticBlack.parameters = {
 };
 
 export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
+StaticWhite.tags = ["!autodocs", "!dev", "test"];
 StaticWhite.args = {
 	...Default.args,
 	staticColor: "white",
@@ -165,7 +165,7 @@ StaticWhite.parameters = {
 
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

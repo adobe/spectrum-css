@@ -67,7 +67,7 @@ WithColorLoupe.parameters = {
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Template.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

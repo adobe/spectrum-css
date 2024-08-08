@@ -15,7 +15,7 @@ window.adobeGlobalnavConfig = {
 
 			var styles = `
         #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme {
-          background-color: var(--spectrum-gray-50);
+          background-color: var(--spectrum-gray-25);
         }
 
         #AdobeFooterNav.Footernav-wrapper.has-spectrum-css-customTheme .Footernav-disclaimer {

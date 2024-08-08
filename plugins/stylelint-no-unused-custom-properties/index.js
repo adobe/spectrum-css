@@ -28,7 +28,7 @@ const messages = ruleMessages(ruleName, {
 	referenced: (prop) => `Custom property ${prop.magenta}'s references have been removed`,
 });
 
-import valueParser from "postcss-value-parser";
+import valuesParser from "postcss-values-parser";
 
 /** @type {import('stylelint').Plugin} */
 const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
@@ -76,9 +76,9 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 			const usedInDecl = new Set();
 
 			// Parse value and get a list of variables used
-			const parsed = valueParser(decl.value);
+			const parsed = valuesParser.parse(decl.value);
 			parsed.walk((node) => {
-				if (node.type !== "function" || node.value !== "var" || !node.nodes.length) {
+				if (node.type !== "func" || node.name !== "var" || !node.nodes.length) {
 					return;
 				}
 
@@ -188,7 +188,6 @@ const ruleFunction = (enabled, { ignoreList = [] } = {}, context = {}) => {
 		});
 	};
 };
-
 
 ruleFunction.ruleName = ruleName;
 ruleFunction.messages = messages;

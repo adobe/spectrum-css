@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Rating {
 		--spectrum-rating-icon-color-default: var(--spectrum-neutral-content-color-default);
 		--spectrum-rating-icon-color-hover: var(--spectrum-neutral-content-color-hover);

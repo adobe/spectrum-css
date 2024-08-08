@@ -1,24 +1,23 @@
 import { setConsoleOptions } from "@storybook/addon-console";
 import {
-  withActions,
-  withArgEvents,
-  withContextWrapper,
-  withIconSpriteSheet,
-  withLanguageWrapper,
-  withReducedMotionWrapper,
-  withTestingPreviewWrapper,
-  withTextDirectionWrapper,
+	withActions,
+	withArgEvents,
+	withContextWrapper,
+	withIconSpriteSheet,
+	withLanguageWrapper,
+	withReducedMotionWrapper,
+	withTestingPreviewWrapper,
+	withTextDirectionWrapper,
 } from "./decorators";
 import {
-  FontLoader,
-  IconLoader,
-  TokenLoader
+	FontLoader,
+	IconLoader,
 } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import {
-  argTypes,
-  globalTypes
+	argTypes,
+	globalTypes
 } from "./types";
 
 import "./assets/base.css";
@@ -137,7 +136,6 @@ export default {
 	loaders: [
 		FontLoader,
 		IconLoader,
-		TokenLoader,
 	],
 	tags: ["autodocs"],
 };

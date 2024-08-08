@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Tag {
 		/* border */
 		--spectrum-tag-background-color: transparent;

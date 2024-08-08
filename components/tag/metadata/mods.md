@@ -1,6 +1,7 @@
 | Modifiable custom properties                         |
 | ---------------------------------------------------- |
 | `--mod-avatar-opacity-disabled`                      |
+| `--mod-clear-button-width`                           |
 | `--mod-clearbutton-fill-background-color`            |
 | `--mod-clearbutton-fill-size`                        |
 | `--mod-tag-animation-duration`                       |

@@ -11,8 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: spectrum) {
-	.spectrum-DatePicker {
-		--spectrum-datepicker-initial-height: var(--spectrum-component-height-100);
-	}
-}
+@import "./spectrum-two.css";

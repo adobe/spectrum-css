@@ -99,7 +99,7 @@ Default.args = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -107,17 +107,20 @@ WithForcedColors.parameters = {
 	},
 };
 
+// ********* DOCS ONLY ********* //
 export const Heading = (args, context) => Sizes({ Template, ...args }, context);
+Heading.tags = ["!dev"];
 Heading.args = {
 	semantics: "heading",
 	content: ["Aliquet Mauris Eu"],
 };
-Heading.tags = ["!dev"];
+Heading.tags = ["autodocs", "!dev"];
 Heading.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 export const Body = (args, context) => Sizes({ Template, ...args }, context);
+Body.tags = ["!dev"];
 Body.argTypes = {
 	size: {
 		name: "Size",
@@ -131,7 +134,7 @@ Body.args = {
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 	],
 };
-Body.tags = ["!dev"];
+Body.tags = ["autodocs", "!dev"];
 Body.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -153,8 +156,12 @@ Detail.args = {
 	content: ["Aliquet Mauris Eu"],
 };
 Detail.tags = ["!dev"];
+Detail.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Code = (args, context) => Sizes({ Template, ...args }, context);
+Code.tags = ["!dev"];
 Code.argTypes = {
 	size: {
 		name: "Size",
@@ -166,4 +173,4 @@ Code.args = {
 	semantics: "code",
 	content: ["console.log('Hello World!');"],
 };
-Code.tags = ["!dev"];
+Code.tags = ["autodocs", "!dev"];

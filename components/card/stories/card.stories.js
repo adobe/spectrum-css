@@ -114,7 +114,7 @@ Default.args = {
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -124,7 +124,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 export const Selected = Default.bind({});
-Selected.tags = ["!dev"];
+Selected.tags = ["autodocs", "!dev"];
 Selected.parameters = {
 	chromatic: { disableSnapshot: true },
 };

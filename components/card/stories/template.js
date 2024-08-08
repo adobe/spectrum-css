@@ -2,7 +2,6 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -11,6 +10,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = (
 	{
@@ -194,18 +195,10 @@ export const Template = (
         `
       )}
       ${when(hasQuickAction && !isHorizontal, () =>
-        QuickAction(
+        Checkbox(
           {
-            noOverlay: true,
-            content: [
-              Checkbox(
-                {
-                  isChecked: isSelected,
-                  title: "Select",
-                },
-                context
-              ),
-            ],
+            isChecked: isSelected,
+            title: "Select",
             onclick: function() {
               updateArgs({ isSelected: !isSelected });
             },

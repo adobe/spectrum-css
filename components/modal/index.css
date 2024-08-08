@@ -12,29 +12,18 @@
  */
 
 @import "@spectrum-css/commons/overlay.css";
-
-.spectrum-Modal {
-	/* Bug: this must be 0ms, not 0 */
-	--spectrum-modal-confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
-
-	/* Distance between top and bottom of modal and edge of window for fullscreen modal */
-	--spectrum-modal-fullscreen-margin: 32px;
-	--spectrum-modal-max-height: 90vh;
-	--spectrum-modal-max-width: 90%;
-
-	--spectrum-modal-background-color: var(--spectrum-gray-100);
-	--spectrum-modal-confirm-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-modal-confirm-exit-animation-duration: var(--spectrum-animation-duration-100);
-	--spectrum-modal-confirm-entry-animation-duration: var(--spectrum-animation-duration-500);
-	--spectrum-modal-confirm-entry-animation-delay: var(--spectrum-animation-duration-200);
-	--spectrum-modal-transition-animation-duration: var(--spectrum-animation-duration-100);
-}
+@import "themes/spectrum-two.css";
 
 /* Used to position the modal */
 .spectrum-Modal-wrapper {
+	/* Don't catch clicks */
+	pointer-events: none;
 	position: fixed;
-	inset-inline-start: 0;
+
+	/* Appear above underlay */
+	z-index: 2;
 	inset-block-start: 0;
+	inset-inline-start: 0;
 
 	display: flex;
 	align-items: center;
@@ -57,12 +46,6 @@
 
 	visibility: hidden;
 
-	/* Don't catch clicks */
-	pointer-events: none;
-
-	/* Appear above underlay */
-	z-index: 2;
-
 	/* Be invisible by default */
 	transition: visibility 0ms linear var(--mod-modal-transition-animation-duration, var(--spectrum-modal-transition-animation-duration));
 
@@ -73,24 +56,24 @@
 
 .spectrum-Modal {
 	@extend %spectrum-overlay;
-
-	/* Start offset by the animation distance */
-	transform: translateY(var(--mod-modal-confirm-entry-animation-distance, var(--spectrum-modal-confirm-entry-animation-distance)));
+	pointer-events: auto;
 
 	/* Appear above underlay */
 	z-index: 2;
 
+	/* Start offset by the animation distance */
+	transform: translateY(var(--mod-modal-confirm-entry-animation-distance, var(--spectrum-modal-confirm-entry-animation-distance)));
+	overflow: hidden;
+	max-inline-size: var(--mod-modal-max-width, var(--spectrum-modal-max-width));
+
 	/* Don't be bigger than the screen */
 	max-block-size: var(--mod-modal-max-height, var(--spectrum-modal-max-height));
-	max-inline-size: var(--mod-modal-max-width, var(--spectrum-modal-max-width));
 
 	background: var(--mod-modal-background-color, var(--spectrum-modal-background-color));
 
 	/* border-radius includes legacy token fallback, which can be deprecated once component is migrated */
 	border-radius: var(--mod-modal-confirm-border-radius, var(--spectrum-modal-confirm-border-radius));
-	overflow: hidden;
 	outline: none; /* Firefox shows outline */
-	pointer-events: auto;
 
 	/* Exit animations */
 	transition:
@@ -102,20 +85,20 @@
 .spectrum-Modal.is-open {
 	@extend %spectrum-overlay--open;
 
+	transform: translateY(0);
+
 	/* Entry animations */
 	transition:
 		transform var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay)),
 		opacity var(--mod-modal-confirm-entry-animation-duration, var(--spectrum-modal-confirm-entry-animation-duration)) var(--spectrum-animation-ease-out) var(--mod-modal-confirm-entry-animation-delay, var(--spectrum-modal-confirm-entry-animation-delay));
-
-	transform: translateY(0);
 }
 
 /* Responsive modals will fill the screen on small viewports */
 @media only screen and (device-width <= 400px), only screen and (device-height <= 350px) {
 	.spectrum-Modal--responsive {
 		inline-size: 100%;
-		block-size: 100%;
 		max-inline-size: 100%;
+		block-size: 100%;
 		max-block-size: 100%;
 		border-radius: 0;
 	}
@@ -130,10 +113,10 @@
 /** @unofficial */
 .spectrum-Modal--fullscreen {
 	position: fixed;
-	inset-inline-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
 	inset-block-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
-	inset-inline-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
 	inset-block-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+	inset-inline-start: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
+	inset-inline-end: var(--mod-modal-fullscreen-margin, var(--spectrum-modal-fullscreen-margin));
 	max-inline-size: none;
 	max-block-size: none;
 }
@@ -141,10 +124,10 @@
 .spectrum-Modal--fullscreenTakeover {
 	position: fixed;
 	inset: 0;
-	max-inline-size: none;
-	max-block-size: none;
 
 	box-sizing: border-box;
+	max-inline-size: none;
+	max-block-size: none;
 
 	/* Remove the border since we've taken over */
 	border: none;

@@ -115,7 +115,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Variants.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
@@ -338,7 +338,7 @@ const UIDefaultTemplate = (args) => html`
  * A sampling of multiple Workflow icons.
  */
 export const WorkflowDefault = WorkflowDefaultTemplate.bind({});
-WorkflowDefault.tags = ["!dev"];
+WorkflowDefault.tags = ["autodocs", "!dev"];
 WorkflowDefault.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -347,7 +347,7 @@ WorkflowDefault.parameters = {
  * An example of a Workflow icon displayed at all sizes, from small to extra-large.
  */
 export const WorkflowSizing = WorkflowSizingTemplate.bind({});
-WorkflowSizing.tags = ["!dev"];
+WorkflowSizing.tags = ["autodocs", "!dev"];
 WorkflowSizing.args = {
 	setName: "workflow",
 	iconName: "Asset",

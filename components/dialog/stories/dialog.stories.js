@@ -112,7 +112,7 @@ Default.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = DialogGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

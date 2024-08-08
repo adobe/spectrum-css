@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
 */
 
-const valueParser = require("postcss-value-parser");
+const valuesParser = require("postcss-values-parser");
 
 /** @typedef {object} Options */
 
@@ -33,7 +33,7 @@ function rgbMappingFunction () {
 			const isProcessed = prop.endsWith("rgb") || prop.endsWith("opacity");
 
 			/* Parse the value for it's parts */
-			const parsedValue = valueParser(value) || [];
+			const parsedValue = valuesParser.parse(value) || [];
 			/* Determine if the value has an rgb or rgba value */
 			const hasRGBValue = parsedValue.nodes.length ? parsedValue.nodes.some((node) => node.type === "function" && (["rgb", "rgba"].some(func => node.value === func))) : false;
 

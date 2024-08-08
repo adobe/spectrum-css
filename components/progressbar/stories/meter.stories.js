@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { MeterGroup } from "./meter.template.js";
+import { Template } from "./meter.template.js";
 import { default as ProgressBar } from "./progressbar.stories.js";
 
 /**
@@ -28,7 +28,7 @@ export default {
 	},
 };
 
-export const Default = MeterGroup.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	value: 50,
 	size: "s",
@@ -36,9 +36,9 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = Template.bind({});
 WithForcedColors.args = Default.args;
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

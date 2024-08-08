@@ -1,0 +1,36 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum-DropIndicator",
+    ".spectrum-DropIndicator--horizontal",
+    ".spectrum-DropIndicator--horizontal:after",
+    ".spectrum-DropIndicator--horizontal:before",
+    ".spectrum-DropIndicator--vertical",
+    ".spectrum-DropIndicator--vertical:after",
+    ".spectrum-DropIndicator--vertical:before",
+    ".spectrum-DropIndicator:after",
+    ".spectrum-DropIndicator:before"
+  ],
+  "component": [
+    "--spectrum-dropindicator-border-color",
+    "--spectrum-dropindicator-border-size",
+    "--spectrum-dropindicator-circle-color",
+    "--spectrum-dropindicator-circle-size",
+    "--spectrum-dropindicator-color"
+  ],
+  "modifiers": [
+    "--mod-dropindicator-border-color",
+    "--mod-dropindicator-border-size",
+    "--mod-dropindicator-circle-color",
+    "--mod-dropindicator-circle-size"
+  ],
+  "theming-layer": [
+    "--system-drop-indicator-border-color",
+    "--system-drop-indicator-border-size",
+    "--system-drop-indicator-circle-color",
+    "--system-drop-indicator-circle-size"
+  ],
+  "high-contrast": ["--highcontrast-dropindicator-color"],
+  "global": ["--spectrum-border-width-200"]
+}

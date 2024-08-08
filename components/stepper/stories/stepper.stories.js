@@ -194,7 +194,7 @@ Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Variants.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.tags = ["!autodocs", "!dev", "test"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",

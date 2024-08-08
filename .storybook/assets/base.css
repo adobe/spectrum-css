@@ -14,10 +14,26 @@
 @import "@spectrum-css/typography";
 
 body {
+
+	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+
 	margin: 0;
 
+	font-family: var(--spectrum-sans-font-family-stack);
+	font-size: var(--spectrum-font-size-100);
+	font-style: var(--spectrum-default-font-style
+	);
 	color: var(--spectrum-neutral-content-color-default);
 	background-color: var(--spectrum-background-layer-2-color);
+
+	&:lang(ar) {
+		font-family: var(--spectrum-font-family-ar);
+	}
+
+	&:lang(he) {
+		font-family: var(--spectrum-font-family-he);
+	}
 }
 
 .spectrum {

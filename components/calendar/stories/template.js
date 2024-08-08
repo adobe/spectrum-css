@@ -8,6 +8,8 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 const months = [...Array(12).keys()].map((key) =>
 	new Date(0, key).toLocaleString("en", { month: "long" })

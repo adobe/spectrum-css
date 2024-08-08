@@ -11,8 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: spectrum) {
-	.spectrum-Tooltip {
-		--spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-subdued-background-color-default);
-	}
-}
+@import "./spectrum-two.css";

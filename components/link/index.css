@@ -11,25 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-Link {
-	--spectrum-link-animation-duration: var(--spectrum-animation-duration-100);
-
-	/* Colors */
-	/* Primary */
-	--spectrum-link-text-color-primary-default: var(--spectrum-accent-content-color-default);
-	--spectrum-link-text-color-primary-hover: var(--spectrum-accent-content-color-hover);
-	--spectrum-link-text-color-primary-active: var(--spectrum-accent-content-color-down);
-	--spectrum-link-text-color-primary-focus: var(--spectrum-accent-content-color-key-focus);
-
-	/* Secondary */
-	--spectrum-link-text-color-secondary-default: var(--spectrum-neutral-content-color-default);
-	--spectrum-link-text-color-secondary-hover: var(--spectrum-neutral-content-color-hover);
-	--spectrum-link-text-color-secondary-active: var(--spectrum-neutral-content-color-down);
-	--spectrum-link-text-color-secondary-focus: var(--spectrum-neutral-content-color-key-focus);
-
-	--spectrum-link-text-color-white: var(--spectrum-white);
-	--spectrum-link-text-color-black: var(--spectrum-black);
-}
+@import "themes/spectrum-two.css";
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {
@@ -50,17 +32,18 @@
 }
 
 .spectrum-Link {
-	/* Remove the gray background on active links in IE 10. */
-	background-color: transparent;
-
-	/* Remove gaps in links underline in iOS 8+ and Safari 8+. */
-	text-decoration-skip: objects;
-	text-decoration: underline;
-	transition: color var(--mod-link-animation-duration, var(--spectrum-link-animation-duration)) ease-in-out;
-	outline: none;
 	cursor: pointer;
 
 	color: var(--highcontrast-link-text-color-primary-default, var(--mod-link-text-color-primary-default, var(--spectrum-link-text-color-primary-default)));
+	text-decoration: underline;
+
+	/* Remove the gray background on active links in IE 10. */
+	background-color: transparent;
+	outline: none;
+	transition: color var(--mod-link-animation-duration, var(--spectrum-link-animation-duration)) ease-in-out;
+
+	/* Remove gaps in links underline in iOS 8+ and Safari 8+. */
+	text-decoration-skip: objects;
 
 	&:hover {
 		color: var(--highcontrast-link-text-color-primary-hover, var(--mod-link-text-color-primary-hover, var(--spectrum-link-text-color-primary-hover)));
@@ -73,8 +56,8 @@
 	&:focus-visible {
 		color: var(--highcontrast-link-text-color-primary-focus, var(--mod-link-text-color-primary-focus, var(--spectrum-link-text-color-primary-focus)));
 		text-decoration: underline;
-		text-decoration-style: double;
 		text-decoration-color: var(--highcontrast-link-focus-color, inherit);
+		text-decoration-style: double;
 	}
 }
 
