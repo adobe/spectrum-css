@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`7eb68bb`](https://github.com/adobe/spectrum-css/commit/7eb68bb0091195d151f2406a983b0a4caadf66a9) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-233] Moves inset-inline-start and inset-inline-end to sticky variant to fix issue with fixed actionbar unexpectedly taking up full width
+
 ## 9.0.0-s2-foundations.12
 
 ### Minor Changes
