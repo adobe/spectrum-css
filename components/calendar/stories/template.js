@@ -1,5 +1,5 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { action } from "@storybook/addon-actions";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -8,10 +8,6 @@ import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-
-const months = [...Array(12).keys()].map((key) =>
-	new Date(0, key).toLocaleString("en", { month: "long" })
-);
 
 export const Template = ({
 	rootClass = "spectrum-Calendar",
@@ -29,7 +25,7 @@ export const Template = ({
 	onDateClick,
 	previousHandler,
 	nextHandler,
-	id,
+	id = getRandomId("calendar"),
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 
@@ -393,45 +389,3 @@ export const Template = ({
 		</div>
 	`;
 };
-
-export const CalendarGroup = Variants({
-	Template,
-	testData: [
-		{
-			testHeading: "Default",
-		},
-		{
-			testHeading: "Padded",
-			padded: true,
-		},
-		{
-			testHeading: "Abbreviated days of the week",
-			useDOWAbbrev: true,
-		},
-		{
-			testHeading: "Range selection",
-			month: months[6],
-			selectedDay: new Date(2023, 6, 3),
-			year: 2023,
-			lastDay: new Date(2023, 6, 7),
-			useDOWAbbrev: true,
-			padded: true,
-		},
-		{
-			testHeading: "Today highlighted",
-			month: undefined,
-			selectedDay: undefined,
-			year: undefined,
-		},
-	],
-	stateData: [
-		{
-			testHeading: "Disabled",
-			isDisabled: true,
-		},
-		{
-			testHeading: "Focused",
-			isFocused: true,
-		},
-	]
-});

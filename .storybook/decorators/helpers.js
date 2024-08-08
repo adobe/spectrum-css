@@ -7,6 +7,7 @@ import { global } from '@storybook/global';
 export function toggleStyles(container, id, styleObj, add = true) {
 	if (!container && !id) return;
 
+	// Check if the style is already added by searching for the provided ID
 	let style = container.querySelector(`#${id}`);
 	const styles = styleObj ? Object.values(styleObj)[0] : undefined;
 
@@ -18,6 +19,8 @@ export function toggleStyles(container, id, styleObj, add = true) {
 	if (!style) {
 		style = document.createElement("style");
 		style.id = id;
+
+		// Add the new style element to the container
 		container.appendChild(style);
 	}
 

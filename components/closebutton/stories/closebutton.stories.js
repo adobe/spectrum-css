@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { CloseButtonGroup } from "./closebutton.test.js";
 
 /**
  * A button used to close or dismiss components.
@@ -52,11 +52,11 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = CloseButtonGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = CloseButtonGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

@@ -1,4 +1,5 @@
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -22,7 +23,7 @@ export const Template = ({
 	onclick,
 	customClasses = [],
 	customStyles = {},
-	id,
+	id = getRandomId("thumbnail"),
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 

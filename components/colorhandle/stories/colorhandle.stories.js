@@ -1,7 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ColorHandleGroup } from "./colorhandle.test.js";
+import { Template } from "./template.js";
 
 /**
  * The color handle component is used with color area, color slider and color wheel as the color selector.
@@ -24,12 +25,24 @@ export default {
 			},
 			control: "boolean",
 		},
+		selectedColor: {
+			name: "Selected color",
+			description: "The color of the handle.",
+			type: { name: "string" },
+			accept: "hex, rgb, rgba",
+			control: "color",
+		},
 	},
 	args: {
 		rootClass: "spectrum-ColorHandle",
 		isDisabled: false,
 		isFocused: false,
 		isWithColorLoupe: false,
+		selectedColor: "rgba(255 0 0 / 50%)",
+		customStyles: {
+			"position": "relative",
+			"margin": "10px",
+		}
 	},
 	parameters: {
 		componentVersion: version,
@@ -37,7 +50,7 @@ export default {
 	tags: ["!autodocs"],
 };
 
-export const Default = Template.bind({});
+export const Default = ColorHandleGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
@@ -66,7 +79,7 @@ WithColorLoupe.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = ColorHandleGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

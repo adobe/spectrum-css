@@ -15,13 +15,6 @@
 @import "@spectrum-css/commons/overlay.css";
 
 .spectrum-Popover {
-	/* Used in positioning popover for storybook */
-	--flow-direction: 1;
-
-	&:dir(rtl) {
-		--flow-direction: -1;
-	}
-
 	/* animation distance is equal to and responsible for popover offset */
 	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
 

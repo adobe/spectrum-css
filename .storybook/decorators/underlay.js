@@ -1,6 +1,7 @@
 import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 import { makeDecorator } from "@storybook/preview-api";
 import { html } from "lit";
+import { when } from "lit/directives/when.js";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
@@ -14,11 +15,16 @@ export const withUnderlayWrapper = makeDecorator({
             args: {
                 isOpen = false,
             } = {},
+			parameters: {
+				withUnderlay = true
+			} = {},
 		} = context;
 
+		// Expand the underlay to fill the entire screen when testing previews
+		// to ensure the underlay is always visible in snapshots
 		return html`
-            ${Underlay({ isOpen }, context)}
-            ${StoryFn(context)}
+			${when(withUnderlay, () => Underlay({ isOpen }, context))}
+			${StoryFn(context)}
         `;
 	},
 });

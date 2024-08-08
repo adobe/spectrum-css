@@ -10,7 +10,7 @@ export const Template = ({
 	variant = "info",
 	label,
 	customStyles = {},
-}) => html`
+} = {}) => html`
 	<div
 		class=${classMap({
 			[rootClass]: true,

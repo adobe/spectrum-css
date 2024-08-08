@@ -4,7 +4,8 @@ import { default as Popover } from "@spectrum-css/popover/stories/popover.storie
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ActionBarGroup, Template } from "./template";
+import { ActionBarGroup } from "./actionbar.test.js";
+import { Template } from "./template.js";
 
 /**
  * The action bar component is a floating full width bar that appears upon selection.
@@ -50,6 +51,7 @@ export default {
 			},
 			control: "boolean",
 		},
+		customPopoverStyles: { table: { disable: true } }
 	},
 	args: {
 		rootClass: "spectrum-ActionBar",
@@ -81,7 +83,7 @@ export const Default = ActionBarGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = ActionBarGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

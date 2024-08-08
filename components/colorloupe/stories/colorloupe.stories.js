@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isOpen } from "@spectrum-css/preview/types";
+import { isDisabled, isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ColorLoupeGroup } from "./colorloupe.test.js";
 
 /**
  * The color loupe component shows the output color that would otherwise be covered by a cursor, stylus, or finger during color selection.
@@ -11,28 +11,40 @@ export default {
 	component: "ColorLoupe",
 	argTypes: {
 		isOpen,
+		isDisabled,
+		selectedColor: {
+			name: "Selected color",
+			type: { name: "string" },
+			accept: "hex, rgb, rgba",
+			control: "color",
+		},
 	},
 	args: {
 		rootClass: "spectrum-ColorLoupe",
 		isOpen: true,
+		isDisabled: false,
+		selectedColor: "rgba(255, 0, 0, 0.5)",
+		customStyles: {
+			"position": "relative",
+			"inset-block-end": "0",
+			"inset-inline-end": "0",
+		}
 	},
 	parameters: {
-		chromatic: { diffThreshold: 0.2 },
+		componentVersion: version,
 		docs: {
 			story: {
 				height: "100px"
 			}
 		},
-		componentVersion: version,
 	},
-	tags: ["!autodocs"],
 };
 
-export const Default = Template.bind({});
+export const Default = ColorLoupeGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = ColorLoupeGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ClearButtonGroup } from "./clearbutton.test.js";
 
 /**
  * The clear button component is an in-field button used in search and tag.
@@ -50,17 +50,17 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = ClearButtonGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const OverBackground = Template.bind({});
+export const OverBackground = ClearButtonGroup.bind({});
 OverBackground.tags = ["!autodocs", "!dev"];
 OverBackground.args = {
 	staticColor: "white",
 };
 
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = ClearButtonGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

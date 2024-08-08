@@ -3,7 +3,8 @@ import { isInvalid } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { version } from "../package.json";
-import { FieldGroupSet, Template } from "./template";
+import { FieldGroupSet } from "./fieldgroup.test.js";
+import { Template } from "./template.js";
 
 /**
  * A field group is a group of fields, usually radios (also known as a radio group) or checkboxes
@@ -79,26 +80,29 @@ export const Default = FieldGroupSet.bind({});
 Default.args = {
 	label: "Select one of the following options:",
 	items: [
-		Radio({
+		(passthroughs, context) => Radio({
+			...passthroughs,
 			id: "apple",
 			label: "Apples are best",
 			customClasses: ["spectrum-FieldGroup-item"],
-		}),
-		Radio({
+		}, context),
+		(passthroughs, context) => Radio({
+			...passthroughs,
 			id: "banana",
 			label: "Bananas forever",
 			customClasses: ["spectrum-FieldGroup-item"],
-		}),
-		Radio({
+		}, context),
+		(passthroughs, context) => Radio({
+			...passthroughs,
 			id: "pear",
 			label: "Pears or bust",
 			customClasses: ["spectrum-FieldGroup-item"],
-		}),
+		}, context),
 	],
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = FieldGroupSet.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

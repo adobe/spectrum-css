@@ -13,6 +13,7 @@ export const Template = ({
 	isFocused = false,
 	customWidth,
 	customHeight,
+	selectedColor = "rgba(255, 0, 0, 1)",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 	return html`
@@ -45,7 +46,7 @@ export const Template = ({
 				isDisabled,
 				customClasses: [`${rootClass}-handle`],
 				customStyles: {
-					"--spectrum-picked-color": "rgba(255, 0, 0)",
+					"--spectrum-picked-color": selectedColor,
 					"transform": customWidth ? "translate(var(--mod-colorarea-width), 0)" : undefined,
 				},
 			}, context)}
