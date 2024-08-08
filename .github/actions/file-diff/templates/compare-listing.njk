@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="utf-8"/>
+        <meta name="theme-color" content="#e1251b" />
+
+        <!-- Load component stylesheets -->
+        <link rel="stylesheet" type="text/css" href="{{ "../components/typography/dist/index.css" | safe }}"/>
+
+        <link rel="stylesheet" type="text/css" href="{{ "../components/table/dist/index.css" | safe }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "../components/badge/dist/index.css" | safe }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "../components/button/dist/index.css" | safe }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "../components/card/dist/index.css" | safe }}"/>
+
+        <link rel="stylesheet" type="text/css" href="{{ "../components/icon/dist/index.css" | safe }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ "../components/sidenav/dist/index.css" | safe }}"/>
+
+        <link rel="stylesheet" type="text/css" href="{{ "../tokens/dist/index.css" | safe }}"/>
+
+        <style>
+            body {
+                --mod-detail-margin-start: 0;
+                --mod-table-cursor-row-default: auto;
+
+                font-family: var(--spectrum-default-font-family);
+                background-color: var(--spectrum-background-layer-1-color);
+                color: var(--spectrum-neutral-content-color-default);
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+                margin: 0;
+
+                scroll-behavior: smooth;
+                scroll-margin-block-start: 2em;
+            }
+            .spectrum-Container {
+                display: flex;
+                flex-flow: row-reverse nowrap;
+                gap: .5em;
+
+                width: min(1480px, 98vw);
+                margin-inline: auto;
+            }
+            .spectrum-Container-main {
+                flex-grow: 1;
+                max-height: 100vh;
+                overflow-y: auto;
+            }
+            .spectrum-Container-main header {
+                margin-block-start: 50px;
+                margin-block-end: 2em;
+            }
+            .spectrum-Grid {
+                --mod-heading-margin-end: 1em;
+
+                display: grid;
+                gap: 1em;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+        </style>
+    </head>
+    <body class="spectrum spectrum--light spectrum--medium">
+        <a name="#top"></a>
+        <div class="spectrum-Container">
+            {{ nav | safe }}
+
+            <main class="spectrum-Container-main">
+                <header class="spectrum-Typography">
+                    <h1 class="spectrum-Heading spectrum-Heading--sizeXL">Compiled asset comparison</h1>
+                </header>
+
+                <section class="spectrum-Grid">
+                    {% for component, details in data -%}
+                    <div class="spectrum-Card">
+                        <div class="spectrum-Card-body">
+                            <div class="spectrum-Card-header">
+                                <h2 class="spectrum-Card-title">@spectrum-css/{{ component }}</h2>
+                                <div class="spectrum-Card-actionButton">
+                                    {%- if details.files | hasChange %}
+                                    <a class="spectrum-Button spectrum-Button--sizeS spectrum-Button--accent" href="{{ "diffs/" | safe }}{{ component }}/index.html">
+                                        <span class="spectrum-Button-label">View changes</span>
+                                    </a>
+                                    {%- else %}
+                                    <span class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral"><span class="spectrum-Badge-label">No change</span></span>
+                                    {%- endif %}
+                                </div>
+                            </div>
+                            <div class="spectrum-Card-content">
+                                <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet">
+                                    <thead class="spectrum-Table-head">
+                                        <tr class="spectrum-Table-row">
+                                            <th class="spectrum-Table-headCell">Filename</th>
+                                            <th class="spectrum-Table-headCell" colspan="2">Size</th>
+                                        </tr>
+                                        <tr class="spectrum-Table-row">
+                                            <th class="spectrum-Table-headCell"></th>
+                                            <th class="spectrum-Table-headCell">Local</th>
+                                            <th class="spectrum-Table-headCell">{% if details.tag %}v{{ details.tag }}{% endif %}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="spectrum-Table-body">
+                                    {% for file, fileData in details.files -%}
+                                        <tr class="spectrum-Table-row">
+                                            <td class="spectrum-Table-cell">{{ file }}</td>
+                                            <td class="spectrum-Table-cell">{% if fileData and fileData.local and fileData.local.size %}{{ fileData.local.size | bytesToSize }}{% else %}<span class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--negative"><span class="spectrum-Badge-label">removed</span></span>{% endif %}</td>
+                                            <td class="spectrum-Table-cell">{% if fileData and fileData.npm and fileData.npm.size %}{{ fileData.npm.size | bytesToSize }}{% else %}<span class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--notice"><span class="spectrum-Badge-label">new</span></span>{% endif %}</td>
+                                        </tr>
+                                    {%- endfor -%}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%- endfor -%}
+                </section>
+            </main>
+        </div>
+
+        <!-- For Adobe Clean font support -->
+        <script src="https://use.typekit.net/bbk5msc.js"></script>
+
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                // This wrapper prevents loading the font more than once
+                if (!window.Typekit) {
+                    const kitId =
+                        document.querySelector('[lang]:not([lang="en-US"])') === null
+                            ? "mge7bvf"
+                            : "rok6rmo";
+
+                    const html = document.documentElement;
+                    html.classList.add("wf-loading");
+
+                    const t = setTimeout(function () {
+                        html.classList.remove("wf-loading");
+                        html.classList.add("wf-inactive");
+                    }, 3000);
+
+                    const tk = document.createElement("script");
+                    let d = false;
+
+                    // Always load over https
+                    tk.src = "https://use.typekit.net/" + kitId + ".js";
+                    tk.type = "text/javascript";
+                    tk.async = "true";
+                    tk.onload = tk.onreadystatechange = () => {
+                        const a = this.readyState;
+                        if (d || (a && a !== "complete" && a !== "loaded")) return;
+
+                        d = true;
+                        clearTimeout(t);
+
+                        try {
+                            window.Typekit = Typekit.load({
+                                kitId,
+                                scriptTimeout: 3000,
+                                active: function () {
+                                    var loader = document.getElementById("loader");
+                                    if (loader) {
+                                        setTimeout(function () {
+                                            // Hide the loader
+                                            loader.style.display = "none";
+                                        }, 125);
+                                    }
+                                },
+                            });
+                        } catch (b) {}
+                    };
+
+                    const script = document.getElementsByTagName("script")[0];
+                    script.parentNode.insertBefore(tk, script);
+                }
+            });
+
+            try {
+                Typekit.load();
+            } catch (e) {}
+        </script>
+    </body>
+</html>
