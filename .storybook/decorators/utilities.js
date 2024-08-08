@@ -83,7 +83,6 @@ const Container = ({
     <div
       data-outer-container
       style=${styleMap({
-        "position": "relative",
         "display": "flex",
         "align-items": "flex-start",
         "flex-direction": "column",
@@ -320,7 +319,6 @@ export const Variants = ({
       <!-- Start testing grid markup -->
       <div
         style=${styleMap({
-          "inline-size": "fit-content",
           "padding": "24px",
           "display": window.isChromatic() ? "flex" : "none",
           "flex-direction": "column",

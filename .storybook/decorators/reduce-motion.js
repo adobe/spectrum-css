@@ -1,5 +1,5 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
-import { fetchContainers, toggleStyles } from "./helpers";
+import { fetchContainers, toggleStyles } from "./helpers.js";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
