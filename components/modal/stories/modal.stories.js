@@ -2,6 +2,7 @@ import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import isChromatic from "chromatic/isChromatic";
 import { version } from "../package.json";
 import { ModalGroup } from "./modal.test.js";
 
@@ -43,6 +44,8 @@ export default {
 			},
 		},
 		componentVersion: version,
+		// Force the underlay off for Chromatic snapshots only
+		withUnderlayWrapper: isChromatic() ? false : true,
 	},
 	decorators: [
 		withUnderlayWrapper,

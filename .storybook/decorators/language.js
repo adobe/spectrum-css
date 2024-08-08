@@ -1,5 +1,5 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
-import { fetchContainers } from "./helpers";
+import { fetchContainers } from "./helpers.js";
 /* global Typekit */
 
 /**
