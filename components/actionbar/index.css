@@ -57,8 +57,6 @@
 	position: var(--mod-actionbar-position);
 	z-index: 1;
 	inset-block-end: 0;
-	inset-inline-start: 0;
-	inset-inline-end: 0;
 
 	/* Account for fixed width */
 	box-sizing: border-box;
@@ -117,6 +115,8 @@
 
 .spectrum-ActionBar--sticky {
 	--mod-actionbar-position: sticky;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
 }
 
 .spectrum-ActionBar--fixed {
