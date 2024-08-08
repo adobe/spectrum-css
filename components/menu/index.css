@@ -291,17 +291,46 @@
 	}
 }
 
-.spectrum-Menu-itemIcon {
+.spectrum-Menu-itemIcon.spectrum-Icon {
 	fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
 	color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
 }
 
-.spectrum-Menu-checkmark {
-	align-self: center;
+.spectrum-Menu-checkmark.spectrum-Icon {
 	display: var(--mod-menu-checkmark-display, var(--spectrum-menu-checkmark-display));
+	block-size: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
+	inline-size: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
+
 	fill: var(--highcontrast-menu-checkmark-icon-color-default, var(--mod-menu-checkmark-icon-color-default, var(--spectrum-menu-checkmark-icon-color-default)));
 	color: var(--highcontrast-menu-checkmark-icon-color-default, var(--mod-menu-checkmark-icon-color-default, var(--spectrum-menu-checkmark-icon-color-default)));
 	opacity: 1;
+
+	margin-block-start: calc(var(--mod-menu-item-top-to-checkmark, var(--spectrum-menu-item-top-to-checkmark)) - var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
+
+	/* Checkmarks have text or an icon directly next to them. */
+	margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+}
+
+.spectrum-Menu-chevron.spectrum-Icon {
+	block-size: var(--spectrum-menu-item-checkmark-height);
+	inline-size: var(--spectrum-menu-item-checkmark-width);
+
+	/* Chevrons (aka collapsibles) have text or an icon directly next to them. */
+	margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+}
+
+.spectrum-Menu-chevron:dir(rtl) {
+	transform: rotate(-180deg);
+}
+
+.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+	block-size: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
+	inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
+}
+
+.spectrum-Menu-itemIcon--workflowIcon {
+	/* Always provide space at the end of a workflow icon. */
+	margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
 }
 
 /* Presentational list items for sections and dividers. */
@@ -545,8 +574,6 @@
 .spectrum-Menu-chevron {
 	grid-area: chevronArea;
 	align-self: center;
-	block-size: var(--spectrum-menu-item-checkmark-height);
-	inline-size: var(--spectrum-menu-item-checkmark-width);
 }
 
 .spectrum-Menu-item--collapsible .spectrum-Menu-chevron {
@@ -563,7 +590,7 @@
     start at 5th column, to account for icons & match sectionHeadingArea
     ". chevronAreaCollapsible . iconArea sectionHeadingArea  .  .  ."
     stretch to last column
-  */
+  	*/
 	grid-column: 5 / -1;
 }
 
@@ -579,30 +606,6 @@
 
 .spectrum-Menu-item--drillIn .spectrum-Menu-chevron {
 	grid-area: chevronAreaDrillIn;
-}
-
-.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
-	block-size: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
-	inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
-}
-
-.spectrum-Menu-checkmark {
-	block-size: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
-	inline-size: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
-	margin-block-start: calc(var(--mod-menu-item-top-to-checkmark, var(--spectrum-menu-item-top-to-checkmark)) - var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
-
-	/* Checkmarks have text or an icon directly next to them. */
-	margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
-}
-
-.spectrum-Menu-itemIcon--workflowIcon {
-	/* Always provide space at the end of a workflow icon. */
-	margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
-}
-
-.spectrum-Menu-chevron {
-	/* Chevrons (aka collapsibles) have text or an icon directly next to them. */
-	margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 }
 
 .spectrum-Menu-itemDescription {
@@ -680,10 +683,6 @@
 	}
 }
 
-.spectrum-Menu-chevron:dir(rtl) {
-	transform: rotate(-180deg);
-}
-
 /*
   assume that if an item is collapsible, it will
   have a chevron and we need to adjust position of submenu items to account for that
@@ -694,9 +693,9 @@
 
 	.spectrum-Menu-item {
 		/*
-      allow item to take up full width of parent,
-      but make the content start where the parent item's label text starts
-    */
+		allow item to take up full width of parent,
+		but make the content start where the parent item's label text starts
+		*/
 		padding-inline-start: var(--mod-menu-item-collapsible-no-icon-submenu-item-padding-x-start, var(--spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start));
 	}
 }
@@ -827,7 +826,7 @@
 	line-height: var(--mod-menu-section-header-line-height, var(--spectrum-menu-section-header-line-height));
 }
 
-.spectrum-Menu-backIcon {
+.spectrum-Menu-backIcon.spectrum-Icon {
 	margin-block: var(--mod-menu-back-icon-margin-block, var(--spectrum-menu-back-icon-margin));
 	margin-inline: var(--mod-menu-back-icon-margin-inline, var(--spectrum-menu-back-icon-margin));
 	fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-back-icon-color-default));
