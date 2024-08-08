@@ -16,9 +16,12 @@ addons.setConfig({
 		brandUrl: pkg.homepage ?? "https://opensource.adobe.com/spectrum-css",
 		brandImage: logo,
 
-		fontBase:
-			"adobe-clean, \"Source Sans Pro\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Ubuntu, \"Trebuchet MS\", \"Lucida Grande\", sans-serif",
-		fontCode: "\"Source Code Pro\", Monaco, monospace",
+		typography: {
+			fonts: {
+				base: "adobe-clean, \"Source Sans Pro\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Ubuntu, \"Trebuchet MS\", \"Lucida Grande\", sans-serif",
+				code: "\"Source Code Pro\", Monaco, monospace",
+			}
+		},
 
 		colorSecondary: "rgb(2, 101, 220)",
 
@@ -33,10 +36,9 @@ addons.setConfig({
 		textColor: "rgb(34, 34, 34)",
 
 		// Toolbar default and active colors
-		barTextColor:
-			"rgb(34, 34, 34)" /* --spectrum-neutral-content-color-default */,
-		barSelectedColor: "rgb(2, 101, 220)" /* --spectrum-global-color-blue-900 */,
-		// barBg: 'rgb(248, 248, 248)', /* --spectrum-alias-background-color-default */
+		barTextColor: "rgb(34, 34, 34)",
+		barSelectedColor: "rgb(2, 101, 220)",
+		// barBg: 'rgb(248, 248, 248)',
 
 		// Form colors
 		inputBg: "rgb(255, 255, 255)",
