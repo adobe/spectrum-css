@@ -47,7 +47,7 @@ WithForcedColors.parameters = {
 };
 
 export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["!autodocs", "!dev", "test"];
+StaticWhite.tags = ["!autodocs", "!dev"];
 StaticWhite.args = {
 	staticColor: "white",
 	label: "Loading your fonts, images, and icons",
