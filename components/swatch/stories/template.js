@@ -1,21 +1,30 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as OpacityCheckerboard } from "@spectrum-css/opacitycheckerboard/stories/template.js";
+import { Template as Typography} from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase } from "lodash-es";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Swatch",
 	size = "m",
+	withBorder = "default",
+	isRectangle = false,
+	isImage = false,
+	imageUrl,
+	isGradient = false,
+	isMixedValue = false,
 	isSelected = false,
 	isDisabled = false,
 	rounding = "regular",
 	customClasses = [],
 	swatchColor,
+	gradient,
 	customStyles = {},
 	id,
 } = {}, context = {}) => {
@@ -30,8 +39,13 @@ export const Template = ({
 				[`${rootClass}--rounding${capitalize(
 							lowerCase(rounding)
 						)}`]: typeof rounding !== "undefined" && rounding !== "regular",
+				[`${rootClass}--${withBorder}`]: typeof withBorder !== "undefined" && withBorder !== "default",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
+				"is-image": (isImage || isGradient || isMixedValue)
+				&& (typeof gradient !== "undefined" || gradient !== "transparent" || imageUrl !== "undefined"),
+				"is-mixedValue": !isDisabled && isMixedValue,
+				[`${rootClass}--rectangle`]: typeof isRectangle !== "undefined" && isRectangle !== false,
 				"is-nothing": !isDisabled && (typeof swatchColor === "undefined" || swatchColor === "transparent"),
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -53,17 +67,39 @@ export const Template = ({
 				updateArgs({ isSelected: !isSelected });
 			}}
 		>
-			${OpacityCheckerboard({
-				customClasses: [`${rootClass}-fill`],
-				content: [
-					...(isDisabled ? [Icon({
-						customClasses: [`${rootClass}-disabledIcon`],
-						setName: "workflow",
-						iconName: "Cancel",
-					}, context)] : []),
-				]
-			}, context)}
-		</div>
+			${when(isImage || isGradient, () => html`
+				${when(isImage, () => html`
+					<div class="${rootClass}-fill" >
+						<img src="${imageUrl}" alt="" class="${rootClass}-image" />
+					</div>
+				`,
+				() => html`
+					${OpacityCheckerboard({
+						customClasses: [`${rootClass}-fill`],
+						content: [
+							html`<div class='spectrum-Swatch-image' style='background: ${ifDefined(gradient)}'></div>`
+						],
+					}, context)}
+				`
+				)}`,
+				() => html`
+					${OpacityCheckerboard({
+						customClasses: [`${rootClass}-fill`],
+						content: [
+							...(isDisabled ? [Icon({
+								customClasses: [`${rootClass}-disabledIcon`],
+								setName: "workflow",
+								iconName: "Cancel",
+							}, context)] : []),
+							...(isMixedValue ? [Icon({
+								customClasses: [`${rootClass}-mixedValueIcon`],
+								setName: "ui",
+								iconName: "Dash",
+							}, context)] : []),
+						]
+					})}
+				`
+			)}
 	`;
 };
 
@@ -101,4 +137,186 @@ export const States = (args, context) => html`
 		${SwatchGroup({ ...args, isDisabled: true }, context)}
 		${SwatchGroup({ ...args, isSelected: true }, context)}
 	</div>
+`;
+
+export const SizingGroup = (args, context) => html`
+	${["xs", "s", "m", "l"].map((size) => html`
+		<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: [
+					{
+						xs: "Extra-small",
+						s: "Small",
+						m: "Medium (default)",
+						l: "Large",
+					}[size]
+				],
+				customClasses: ["chromatic-ignore"],
+			})}
+			<div style="display: flex; gap: 8px; padding: 8px 0;">
+				${Template({
+					...args,
+					size},
+				context)}
+				${Template({
+					...args,
+					size,
+					swatchColor: "rgba(174, 216, 230, 0.3)",
+					}, context)}
+			</div>
+		</div>
+	`)}
+`;
+
+export const RoundingGroup = (args, context) => html`
+	<div style=${styleMap({
+		"display": "flex",
+		"flex-direction": "column",
+		"flex-wrap": "wrap",
+		"gap": "8px",
+	})}>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Default"],
+			customClasses: ["chromatic-ignore"],
+		})}
+		${Template({
+			...args,
+			rounding: "default",
+		}, context)}
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Full"],
+			customClasses: ["chromatic-ignore"],
+		})}
+		${Template({
+			...args,
+			rounding: "full",
+		}, context)}
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["None"],
+			customClasses: ["chromatic-ignore"],
+		})}
+		${Template({
+			...args,
+			rounding: "none",
+		}, context)}
+`;
+
+export const BorderGroup = (args, context) => html `
+	<div style="display: flex; flex-direction: column; gap: 8px; padding: 8px 0;">
+		<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Default"],
+			customClasses: ["chromatic-ignore"],
+		})}
+		${Template({
+			...args,
+			}, context)}
+		</div>
+		<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["None"],
+			customClasses: ["chromatic-ignore"],
+		})}
+		${Template({
+			...args,
+			withBorder: "noBorder",
+			}, context)}
+		</div>
+		<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: ["Light border"],
+			customClasses: ["chromatic-ignore"],
+		})}
+		${Template({
+			...args,
+			withBorder: "lightBorder",
+			}, context)}
+		</div>
+	</div>
+`;
+
+export const NothingGroup = (args, context) => html`
+${["xs", "s", "m", "l"].map((size) => html`
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: [
+				{
+					xs: "Extra-small",
+					s: "Small",
+					m: "Medium (default)",
+					l: "Large",
+				}[size]
+			],
+			customClasses: ["chromatic-ignore"],
+		})}
+		<div style="display: flex; gap: 8px; padding: 8px 0;">
+			${Template({
+				...args,
+				size,
+				swatchColor: "transparent",
+				}, context)}
+			${Template({
+				...args,
+				size,
+				rounding: "full",
+				swatchColor: "transparent",
+				}, context)}
+				${Template({
+				...args,
+				size,
+				swatchColor: "transparent",
+				isRectangle: true,
+				}, context)}
+		</div>
+	</div>
+`)}
+`;
+
+export const DisabledGroup = (args, context) => html`
+${["xs", "s", "m", "l"].map((size) => html`
+	<div>
+		${Typography({
+			semantics: "detail",
+			size: "s",
+			content: [
+				{
+					xs: "Extra-small",
+					s: "Small",
+					m: "Medium (default)",
+					l: "Large",
+				}[size]
+			],
+			customClasses: ["chromatic-ignore"],
+		})}
+		<div style="display: flex; gap: 8px; padding: 8px 0;">
+			${Template({
+				...args,
+				size,
+				isDisabled: true, 
+				}, context)}
+			${Template({
+				...args,
+				size,
+				isDisabled: true,
+				rounding: "full",
+				}, context)}
+		</div>
+	</div>
+`)}
 `;

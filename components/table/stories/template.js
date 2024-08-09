@@ -6,6 +6,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 import { html, literal } from "lit/static-html.js";
+import { styleMap } from "lit/directives/style-map.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 
 import "../index.css";
 
@@ -20,6 +22,7 @@ export const TableRowItem = ({
 	isCollapsible = false,
 	isExpanded = false,
 	isHidden = false,
+	hasColumnDividers = false,
 	tier,
 	isLastTier = false,
 	useDivs = false,
@@ -80,7 +83,10 @@ export const TableRowItem = ({
 		${when(showCheckbox && !isSectionHeader, () => html`
 			<${cellTag}
 				role="gridcell"
-				class="spectrum-Table-cell spectrum-Table-checkboxCell"
+				class=${classMap({
+					[`${rootClass}-cell`]: true,
+					[`${rootClass}-checkboxCell`]: true,
+				})}
 			>
 				${when(!isSummaryRow, () =>
 					Checkbox({
@@ -101,6 +107,7 @@ export const TableRowItem = ({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--collapsible`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
+							[`${rootClass}-cell--divider`]: hasColumnDividers,
 						})}
 					>
 						<div class="${rootClass}-collapseInner">
@@ -123,6 +130,7 @@ export const TableRowItem = ({
 						class=${classMap({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
+							[`${rootClass}-cell--divider`]: hasColumnDividers,
 						})}
 						colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
 					>${getCellContent(0)}</${cellTag}>`
@@ -134,6 +142,7 @@ export const TableRowItem = ({
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
 					[`${rootClass}-cell--thumbnail`]: useThumbnail,
+					[`${rootClass}-cell--divider`]: hasColumnDividers,
 				})}
 			>${getCellContent(1)}</${cellTag}>
 
@@ -141,6 +150,7 @@ export const TableRowItem = ({
 				role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
+					[`${rootClass}-cell--divider`]: hasColumnDividers,
 				})}
 			>${getCellContent(2)}</${cellTag}>`
 		)}
@@ -158,6 +168,7 @@ export const Template = ({
 	useScroller = false,
 	showThumbnails = false,
 	isDropTarget = false,
+	hasColumnDividers = false,
 	rowItems = [],
 	customClasses = [],
 	id,
@@ -262,6 +273,7 @@ export const Template = ({
 					size,
 					useDivs,
 					showThumbnails,
+					hasColumnDividers,
 					tableIsEmphasized: isEmphasized,
 					...item,
 				}, context)
@@ -290,3 +302,79 @@ export const Template = ({
 		return tableHtml;
 	}
 };
+
+export const SizingTemplate = (args, context) => html`
+	${["s", "m", "l", "xl"].map(size => html`
+		<div style=${styleMap({
+			"display": "flex",
+			"flex-direction": "column",
+			"gap": "8px",
+		})}>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: [
+					{
+						s: "Small",
+						m: "Medium (default)",
+						l: "Large",
+						xl: "Extra-large",
+						}[size]
+				],
+				customClasses: ["chromatic-ignore"],
+			})}
+			<div style=${styleMap({
+				"margin": "0 0 32px",
+			})}>
+			${Template({
+				...args,
+				size,
+				rowItems: [
+					{
+						cellContent: "Row Item Alpha",
+					},
+					{
+						cellContent: "Row Item Bravo",
+					},
+					{
+						cellContent: "Row Item Charlie",
+					},
+					{
+						cellContent: "Row Item Delta",
+					},
+					{
+						cellContent: "Row Item Echo",
+					},
+				],
+			}, context)}
+			</div>
+		</div>
+	`)}
+`;
+
+export const BodyTemplate = (args, context) => html`
+<div style=${styleMap({
+				"padding": "2px",
+			})}>
+			${Template({
+				...args,
+				rowItems: [
+					{
+						cellContent: "Row Item Alpha",
+					},
+					{
+						cellContent: "Row Item Bravo",
+					},
+					{
+						cellContent: "Row Item Charlie",
+					},
+					{
+						cellContent: "Row Item Delta",
+					},
+					{
+						cellContent: "Row Item Echo",
+					},
+				],
+			}, context)}
+			</div>
+`;
