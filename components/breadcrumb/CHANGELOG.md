@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.1.3
+
+### Patch Changes
+
+- [#2961](https://github.com/adobe/spectrum-css/pull/2961) [`e1d9ff4`](https://github.com/adobe/spectrum-css/commit/e1d9ff4cd09e0a62d91be3d7e5703ab703adf6a9) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Aligns breadcrumb item text node to center of container. This should ensure the text and separator icon are center-aligned.
+
 ## 9.1.2
 
 ### Patch Changes
