@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.2.0
+
+### Minor Changes
+
+- [#2954](https://github.com/adobe/spectrum-css/pull/2954) [`2d89227`](https://github.com/adobe/spectrum-css/commit/2d892277adbc1d8d5598bdf85130d3499fd31e13) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Reimplements support for the `spectrum-Swatch--lightBorder` class for swatches specifically in a swatch group.
+
 ## 6.1.1
 
 ### Patch Changes
