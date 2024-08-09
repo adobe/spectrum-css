@@ -48,8 +48,14 @@ export const Template = ({
 				label: indeterminate ? "" : `${value}%`,
 				customClasses: [`${rootClass}-percentage`],
 			}, context)}
-			<div class="${rootClass}-track">
-				<div class="${rootClass}-fill" style="width: ${value}%;"></div>
+
+			<div
+				class="${rootClass}-track"
+			>
+				<div
+					class="${rootClass}-fill"
+					style="width: ${value}%"
+				></div>
 			</div>
 		</div>
 `;
@@ -78,6 +84,7 @@ const Sizes = (args, context) => html`
   `)}
 `;
 
+/* The gradient story below supports linear-gradients used by Express. For use cases that require a custom linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS. */
 export const ProgressBarGroup = (args, context) => html`
 	<div style=${styleMap({
 		"display": window.isChromatic() ? "none" : "contents"
@@ -154,6 +161,31 @@ export const ProgressBarGroup = (args, context) => html`
 				"padding": "12px",
 			})}>
 				${Sizes(args, context)}
+			</div>
+		</div>
+		 <div>
+			${Typography({
+				semantics: "heading",
+				size: "s",
+				content: ["Gradient support"],
+				customClasses: ["chromatic-ignore"],
+			}, context)}
+			<div style=${styleMap({
+				"display": window.isChromatic() ? "flex" : "none",
+				"flex-direction": "column",
+				"align-items": "flex-start",
+				"gap": "32px",
+				"border": "1px solid var(--spectrum-gray-200)",
+				"border-radius": "4px",
+				"padding": "12px",
+			})}>
+				${Template({
+					...args,
+					customStyles: {
+						"--mod-progressbar-fill-color": "linear-gradient(to left, teal, purple)",
+						"--mod-progressbar-track-color": "linear-gradient(to right, hotpink, orange)",
+					},
+				}, context)}
 			</div>
 		</div>
 	</div>

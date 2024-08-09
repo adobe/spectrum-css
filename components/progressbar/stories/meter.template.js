@@ -7,6 +7,7 @@ import "../index.css";
 
 export const Template = ({
 	customClasses = [],
+	customStyles = {},
 	fill,
 	size = "s",
 	...item
@@ -18,9 +19,11 @@ export const Template = ({
 		typeof fill !== "undefined" ? `is-${fill}` : null,
 	].filter(Boolean),
 	size,
+	customStyles,
 	...item,
 }, context);
 
+/* The gradient story below supports linear-gradients used by Express. For use cases that require a custom linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS. */
 export const MeterGroup = (args, context) => html`
 	<div style=${styleMap({
 		"display": window.isChromatic() ? "none" : "contents"
@@ -54,6 +57,13 @@ export const MeterGroup = (args, context) => html`
 			heading: "Text overflow",
 			fill: "notice",
 			label: "Storage space remaining for XYZ user"
+		},
+		{
+			heading: "Gradient support", 
+			customStyles: {
+				"--mod-progressbar-fill-color": "linear-gradient(to left, teal, purple)",
+				"--mod-progressbar-track-color": "linear-gradient(to right, hotpink, orange)",
+			}
 		}].map(({ heading, ...item }) => html`
 			<div>
 				${Typography({
