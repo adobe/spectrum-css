@@ -194,11 +194,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 \*feat(stepper)!: stepper migrate tokens (#1960)([3a4c217](https://github.com/adobe/spectrum-css/commit/3a4c217)), closes[#1960](https://github.com/adobe/spectrum-css/issues/1960)
 
-    	###
-    	🛑 BREAKING CHANGES
+### Migration Guide
 
-    		*
-    		migrates Stepper to use `@adobe/spectrum-tokens`
+#### Use InFieldButton instead of FieldButton
+
+Stepper now uses InFieldButtons instead of FieldButtons for the up/down buttons.
+
+### 🛑 BREAKING CHANGES
+
+- migrates Stepper to use `@adobe/spectrum-tokens`
 
 Additionally:
 

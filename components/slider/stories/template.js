@@ -4,6 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template";
 
 import "../index.css";
 
@@ -19,6 +20,7 @@ export const Template = ({
 	labelPosition,
 	fillColor = "rgb(213, 213, 213)",
 	showTicks = false,
+	showTickLabels = false,
 	isDisabled = false,
 	isFocused = false,
 	customClasses = [],
@@ -68,7 +70,9 @@ export const Template = ({
 		for (let i = from; i <= to; i += step) {
 			ticks.push(html`
 				<div class="${rootClass}-tick">
-					<div class="${rootClass}-tickLabel">${i}</div>
+					<div class="${rootClass}-tickLabel">
+						${when(showTickLabels, () => html`${i}`, undefined)}
+					</div>
 				</div>
 			`);
 		}
@@ -238,3 +242,40 @@ export const Template = ({
 			`)}
 		</div>`;
 };
+
+export const SizingTemplate = (args, context) => 
+	html` ${["s", "m", "l", "xl"].map((size) => {
+		return html`
+		<style>
+			.spectrum-Detail { 
+				display: inline-block;
+				/* Why seafoam? Because it separates it from the component styles. */
+				--mod-detail-font-color: var(--spectrum-seafoam-900);
+			}
+		</style>
+			<div>
+			${Typography({
+				semantics: "detail",
+				size: "s",
+				content: [
+					{
+						s: "Small",
+						m: "Medium (default)",
+						l: "Large",
+						xl: "Extra-large",
+					}[size],
+				],
+				customClasses: ["chromatic-ignore"],
+			})}
+			${Template({
+				...args,
+				size,
+				label: "Slider Label",
+				min: 10,
+				max: 20,
+				values: [14],
+				step: 2,
+				id: "spectrum-Slider",
+			}, context)}
+		</div>`;
+	})}`;
