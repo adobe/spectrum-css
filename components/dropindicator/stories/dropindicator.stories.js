@@ -1,7 +1,10 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
 import { version } from "../package.json";
-import { Template } from "./template";
+import {
+	DropIndicatorGroup,
+	DocsDropIndicatorGroup,
+} from "./template";
 
 /**
  * The drop indicator component is used to show the insertion position into a list or table.
@@ -46,11 +49,20 @@ export default {
 	],
 };
 
-export const Default = Template.bind({});
+export const Default = DropIndicatorGroup.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
+
+// ********* DOCS ONLY ********* //
+export const DefaultGroup = DocsDropIndicatorGroup.bind({});
+DefaultGroup.storyName = "Default";
+DefaultGroup.tags = ["!dev"];
+DefaultGroup.parameters = { 
+	chromatic: { disableSnapshot: true }
+};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = DropIndicatorGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

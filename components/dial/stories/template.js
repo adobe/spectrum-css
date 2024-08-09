@@ -1,9 +1,8 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { Variants } from "@spectrum-css/preview/decorators";
 
 import "../index.css";
 
@@ -11,7 +10,7 @@ export const Template = ({
 	rootClass = "spectrum-Dial",
 	size = "m",
 	label,
-	isFocused = false,
+	isFocusVisible = false,
 	isDragged = false,
 	isDisabled = false,
 	min = 0,
@@ -70,7 +69,7 @@ export const Template = ({
 			</div>`
 		)}
 		<div class="${rootClass}-controls">
-			<div class="${rootClass}-handle ${isDragged ? "is-dragged": ""} ${isFocused ? "is-focused": ""}" tabindex="0">
+			<div class="${rootClass}-handle ${isDragged ? "is-dragged": ""} ${isFocusVisible ? "is-focus-visible": ""}" tabindex="0">
 				<input
 					type="range"
 					class="${rootClass}-input"
@@ -88,157 +87,30 @@ export const Template = ({
 	</div>
 `;
 
-const Sizes = (args, context) => ["s", "m", "l", "xl"].map((size) => html`
-	<div>
-		${Typography({
-			semantics: "heading",
-              size: "m",
-              weight: "light",
-			content: [
-				{
-					s: "Small",
-					m: "Medium",
-					l: "Large",
-					xl: "Extra-large",
-				}[size]
-			],
-			customClasses: ["chromatic-ignore"],
-		}, context)}
-		<div>
-			${Template({...args, size}, context)}
-		</div>
-	</div>
-`);
-
-const States = (args, context) => html`
-  <div
-    style=${styleMap({
-      display: "flex",
-      "flex-direction": "row",
-      "flex-wrap": "wrap",
-      gap: "32px",
-    })}
-  >
-    ${[
-      {},
-      {
-        heading: "Disabled",
-        isDisabled: true,
-      },
-      {
-        heading: "Focused",
-        isFocused: true,
-      },
-      {
-        heading: "Dragged",
-        isDragged: true,
-      },
-    ].map(
-      ({ heading, ...item }) => html`
-        <div>
-          ${Typography(
-            {
-              semantics: "heading",
-              size: "m",
-              weight: "light",
-              // this whitespace helps the boxes align better when there's not a headings
-              content: [heading ?? html`&nbsp;`],
-              customClasses: ["chromatic-ignore"],
-            },
-            context
-          )}
-          <div>
-            ${Template(
-              {
-                ...args,
-                ...item,
-              },
-              context
-            )}
-          </div>
-        </div>
-      `
-    )}
-  </div>
-`;
-
-export const DialGroup = (args, context) => html`
-  <div
-    style=${styleMap({
-      display: window.isChromatic() ? "none" : "contents",
-    })}
-  >
-    ${Template(args, context)}
-  </div>
-  <div
-    style=${styleMap({
-      display: window.isChromatic() ? "flex" : "none",
-      "flex-direction": "column",
-      "align-items": "flex-start",
-      gap: "32px",
-    })}
-  >
-    ${[
-      {
-        heading: "Default",
-      },
-      {
-        heading: "With label",
-		label: "Volume",
-		withStates: false,
-      },
-    ].map(
-      ({ heading, withStates = true, ...item }) => html`
-        <div class="spectrum-Typography">
-          ${when(heading, () =>
-            Typography(
-              {
-                semantics: "heading",
-                size: "l",
-                content: [heading],
-                customClasses: ["chromatic-ignore"],
-              },
-              context
-            )
-          )}
-          <div
-            style=${styleMap({
-              padding: "12px",
-              border: "1px solid var(--spectrum-gray-200)",
-              "border-radius": "4px",
-            })}
-          >
-            ${when(
-              withStates,
-              () => States({ ...args, ...item }, context),
-              () => Template({ ...args, ...item }, context)
-            )}
-          </div>
-        </div>
-      `
-    )}
-	<div class="spectrum-Typography">
-		${Typography(
-			{
-				semantics: "heading",
-				size: "l",
-				content: ["Sizing"],
-			},
-			context,
-		)}
-		<div
-			style=${styleMap({
-				"display": "flex",
-				"flex-direction": "row",
-				"align-items": "flex-start",
-				"gap": "32px",
-				padding: "12px",
-				border: "1px solid var(--spectrum-gray-200)",
-				"border-radius": "4px",
-			})}
-		>
-			${Sizes(args, context)}
-		</div>
-	</div>
-  </div>
-`;
+export const DialGroup = Variants({
+	Template,
+	testData: [
+		{
+			testHeading: "Default",
+		},
+		{
+			testHeading: "With label",
+			label: "Volume",
+			withStates: false,
+		},
+	],
+	stateData: [
+		{
+			heading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			heading: "Focused",
+			isFocused: true,
+		},
+		{
+			heading: "Dragged",
+			isDragged: true,
+		},
+	],
+});
