@@ -1,9 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template, TreeViewGroup } from "./template";
+import { SizingGroup, Template, TreeViewGroup } from "./template";
 
 /**
- * The typical usage of a treeview involves nesting a .spectrum-Treeview element within the .spectrum-TreeView-item parent element.
+ * The typical usage of a treeview involves nesting a `.spectrum-Treeview element` within the `.spectrum-TreeView-item` parent element.
+ *
+ * The visibility of child treeviews is controlled by adding `.is-open` to the `.spectrum-TreeView-item` of the parent element.
  */
 export default {
 	title: "Tree view",
@@ -44,6 +46,9 @@ export default {
 	},
 };
 
+/**
+ * By default, treeviews span the entire width of their parent container and are used within panels.
+ */
 export const Default = TreeViewGroup.bind({});
 Default.args = {
 	items: [
@@ -51,7 +56,6 @@ Default.args = {
 			id: "label1",
 			label: "Label 1",
 			link: "#",
-			isSelected: true,
 		},
 		{
 			id: "group1",
@@ -63,7 +67,6 @@ Default.args = {
 					id: "label2",
 					label: "Label 2",
 					link: "#",
-					isDisabled: true,
 				},
 				{
 					id: "label3",
@@ -106,8 +109,234 @@ Default.args = {
 };
 
 // ********* DOCS ONLY ********* //
+export const Sizing = SizingGroup.bind({});
+Sizing.args = Default.args;
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+
+/**
+ * A tree view with a selected item.
+ */
+export const Selected = Default.bind({});
+Selected.tags = ["!dev"];
+Selected.args = {
+	items: [
+		{
+			id: "layer1",
+			label: "Layer 1",
+			link: "#",
+		},
+		{
+			id: "layer2",
+			label: "Layer 2",
+			link: "#",
+			isSelected: true,
+		},
+	]
+};
+Selected.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A tree view with quiet selection.
+ */
+export const Quiet = Default.bind({});
+Quiet.storyName = "Selected (Quiet)";
+Quiet.tags = ["!dev"];
+Quiet.args = {
+	...Selected.args,
+	isQuiet: true,
+};
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Detached tree views are meant to be used outside of a panel. Items in detached tree views have rounded corners.
+ */
+export const Detached = Default.bind({});
+Detached.tags = ["!dev"];
+Detached.args = {
+	...Selected.args,
+	variant: "detached",
+};
+Detached.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A detached, quiet tree view.
+ */
+export const DetachedQuiet = Default.bind({});
+DetachedQuiet.storyName = "Detached (Quiet)";
+DetachedQuiet.tags = ["!dev"];
+DetachedQuiet.args = {
+	...Selected.args,
+	variant: "detached",
+	isQuiet: true,
+};
+DetachedQuiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * In this example, the Label 2 and Group 2 are disabled.
+ */
+export const Disabled = Template.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	items: [
+		{
+			id: "label1",
+			label: "Label 1",
+			link: "#",
+			isSelected: true,
+		},
+		{
+			id: "group1",
+			label: "Group 1",
+			link: "#",
+			isOpen: true,
+			items: [
+				{
+					id: "label2",
+					label: "Label 2",
+					link: "#",
+					isDisabled: true,
+				},
+				{
+					id: "label3",
+					label: "Label 3",
+					link: "#",
+				},
+			],
+		},
+		{
+			id: "group2",
+			label: "Group 2",
+			isDisabled: true,
+			link: "#",
+			items: [
+				{
+					id: "label3",
+					label: "Label 3",
+					link: "#",
+				},
+				{
+					id: "group3",
+					label: "Group 3",
+					link: "#",
+					items: [
+						{
+							id: "label4",
+							label: "Label 4",
+							link: "#",
+						},
+						{
+							id: "group4",
+							label: "Group 4 (Empty)",
+							link: "#",
+							items: [],
+						},
+					],
+				},
+			],
+		},
+	],
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A tree view drawn without nesting, suitable for infinite scrolling. With this version of the treeview, you must manage the visibility of "child items" manually based on the open state of the "parent item." The level of visual indentation is handled by a numbered `indent` variant class.
+ *
+ * This example sets a maximum width of 500px (`max-inline-size`) in order to demonstrate how longer text truncates.
+ */
+export const Flat = Template.bind({});
+Flat.storyName = "Flat Markup";
+Flat.args = {
+	customStyles: {
+		"max-inline-size": "500px",
+	},
+	items: [
+		{
+			id: "label1",
+			label: "Label 1. This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
+			link: "#",
+		},
+		{
+			id: "group1",
+			label: "Group 1",
+			link: "#",
+			isOpen: true,
+			items: [],
+		},
+		{
+			id: "label2",
+			label: "Label 2",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "label3",
+			label: "Label 3",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "label4",
+			label: "Label 4",
+			link: "#",
+		},
+		{
+			id: "group2",
+			label: "Group 2",
+			link: "#",
+			isOpen: true,
+			items: [],
+		},
+		{
+			id: "label5",
+			label: "Label 5",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "group3",
+			label: "Group 3",
+			link: "#",
+			isOpen: true,
+			items: [],
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "label6",
+			label: "Label 6",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent2"],
+		},
+	],
+};
+Flat.tags = ["!dev"];
+Flat.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Icons can be used to add clarification about tree view items. These help to signify content types, which creates easier reference and context within the hierarchy.
+ *
+ * In this example, a nested tree view with folder and file icons is shown. This example also sets a maximum width of 500px (`max-inline-size`) in order to demonstrate how longer text truncates.
+ */
 export const FoldersAndFiles = Template.bind({});
 FoldersAndFiles.args = {
+	customStyles: {
+		"max-inline-size": "500px",
+	},
 	items: [
 		{
 			id: "label1",
@@ -120,7 +349,6 @@ FoldersAndFiles.args = {
 			label: "Group 1",
 			link: "#",
 			isOpen: true,
-			isSelected: true,
 			icon: "Folder",
 			items: [
 				{
@@ -175,9 +403,13 @@ FoldersAndFiles.args = {
 };
 FoldersAndFiles.tags = ["!dev"];
 FoldersAndFiles.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
+
+/**
+ * Use thumbnails when a user needs to have a preview of the content contained in a tree view item. For its primary use within layer panels, the first example uses the layer variant of thumbnail. The second example uses the default thumbnail.
+ */
 export const Thumbnails = Template.bind({});
 Thumbnails.args = {
 	variant: "thumbnail",
@@ -217,11 +449,25 @@ Thumbnails.args = {
 };
 Thumbnails.tags = ["!dev"];
 Thumbnails.parameters = {
-	chromatic: { disableAllSnapshots: true },
+	chromatic: { disableSnapshot: true },
 };
 
-export const WithSections = Template.bind({});
-WithSections.args = {
+/**
+ * A quiet tree view with thumbnails using the layer variant. When using the quiet variant, less visual emphasis is given to the selected tree view item.
+ */
+export const ThumbnailsQuiet = Template.bind({});
+ThumbnailsQuiet.storyName = "Thumbnails (Quiet)";
+ThumbnailsQuiet.tags = ["!dev"];
+ThumbnailsQuiet.args = {
+	...Thumbnails.args,
+	isQuiet: true,
+};
+ThumbnailsQuiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Sections = Template.bind({});
+Sections.args = {
 	items: [
 		{
 			type: "heading",
@@ -260,13 +506,17 @@ WithSections.args = {
 		},
 	],
 };
-WithSections.tags = ["!dev"];
-WithSections.parameters = {
-	chromatic: { disableAllSnapshots: true },
+Sections.tags = ["!dev"];
+Sections.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
-export const WithDropTarget = Template.bind({});
-WithDropTarget.args = {
+
+/**
+ * A tree view with an item consisting of a drop target. The `.is-drop-target` class is added to the drop target item.
+ */
+export const DropTarget = Template.bind({});
+DropTarget.args = {
 	items: [
 		{
 			id: "label2",
@@ -281,78 +531,9 @@ WithDropTarget.args = {
 		},
 	],
 };
-WithDropTarget.tags = ["!dev"];
-WithDropTarget.parameters = {
-	chromatic: { disableAllSnapshots: true },
-};
-
-export const Flat = Template.bind({});
-Flat.storyName = "Flat Markup";
-Flat.args = {
-	items: [
-		{
-			id: "label1",
-			label: "Label 1. This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
-			link: "#",
-			isSelected: true,
-		},
-		{
-			id: "group1",
-			label: "Group 1",
-			link: "#",
-			isOpen: true,
-			items: [],
-		},
-		{
-			id: "label2",
-			label: "Label 2",
-			link: "#",
-			isDisabled: true,
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "label3",
-			label: "Label 3",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "label4",
-			label: "Label 4",
-			link: "#",
-		},
-		{
-			id: "group2",
-			label: "Group 2",
-			link: "#",
-			isOpen: true,
-			items: [],
-		},
-		{
-			id: "label5",
-			label: "Label 5",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "group3",
-			label: "Group 3",
-			link: "#",
-			isOpen: true,
-			items: [],
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "label6",
-			label: "Label 6",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent2"],
-		},
-	],
-};
-Flat.tags = ["!dev"];
-Flat.parameters = {
-	chromatic: { disableAllSnapshots: true },
+DropTarget.tags = ["!dev"];
+DropTarget.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

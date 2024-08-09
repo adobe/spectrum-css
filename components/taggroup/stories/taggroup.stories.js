@@ -6,7 +6,9 @@ import { TagGroups, Template } from "./template";
 const ignoreProps = ["rootClass", "hasClearButton", "label"];
 
 /**
- * A group of tags.
+ * A group of [tags](?path=/docs/components-tag--docs). Tags allow users to categorize content. They can represent keywords or people, and are grouped to describe an item or a search request.
+ *
+ * When horizontal space is limited in a tag group, the individual tags wrap to form another line.
  */
 export default {
 	title: "Tag group",
@@ -25,7 +27,6 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Content",
-				disable: true,
 			},
 			control: { type: "text" },
 		},
@@ -74,16 +75,16 @@ Default.args = {
 
 // ********* DOCS ONLY ********* //
 /**
- * When horizontal space is limited in a tag group, the individual tags wrap to form another line.
+ * A tag group can contain removable tags when the context is for editing or non-removable tags when tags are read-only. Removable and non-removable tags cannot be combined within the tag group.
  */
-export const OverflowItems = Template.bind({});
-OverflowItems.tags = ["!dev"];
-OverflowItems.parameters = {
+export const Removable = Template.bind({});
+Removable.tags = ["!dev"];
+Removable.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
 };
-OverflowItems.args = {
+Removable.args = {
 	isRemovable: true,
 	isEmphasized: false,
 	customStyles: {"max-width": "300px"},
@@ -99,6 +100,7 @@ OverflowItems.args = {
 		},
 		{
 			label: "Tag 4",
+			avatarUrl: "example-ava.png",
 		},
 		{
 			label: "Tag 5",
