@@ -1,7 +1,7 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isSelected } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import { name, version } from "../package.json";
 import { ActionButtonGroup, ActionButtons } from "./template";
 
 /**
@@ -116,6 +116,8 @@ export default {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
 		},
 		componentVersion: version,
+		componentPkgName: name,
+		componentGuidelinesName: "action-button",
 	},
 };
 

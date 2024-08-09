@@ -111,6 +111,8 @@ export const parameters = {
 		},
 	},
 	componentVersion: undefined,
+	componentPkgName: undefined,
+	componentGuidelinesName: undefined,
 };
 
 export const decorators = [

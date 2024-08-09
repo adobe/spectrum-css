@@ -1,5 +1,5 @@
-import React from "react";
 import { useOf } from '@storybook/blocks';
+import React from "react";
 import "./component-details.css";
 
 /**
@@ -15,11 +15,44 @@ import "./component-details.css";
 const ComponentDetails = () => {
 	const storyMeta = useOf('meta');
 	const versionNumber = storyMeta?.csfFile?.meta?.parameters?.componentVersion ?? "Unavailable";
+  
+  const packageName = storyMeta?.csfFile?.meta?.parameters?.componentPkgName ?? undefined;
+  const packageLink = (packageName && typeof packageName !== "undefined") ? `https://npmjs.com/${packageName}` : false;
+  
+  const packageGitHubName = packageLink ? packageName.split('/').pop() : undefined;
+  const packageGitHubLink = (packageGitHubName && typeof packageGitHubName !== "undefined") ? `https://github.com/adobe/spectrum-css/tree/main/components/${packageGitHubName}` : false;
+
+  const componentGuidelinesName = storyMeta?.csfFile?.meta?.parameters?.componentGuidelinesName ?? undefined;
+  const componentGuidelinesLink = (componentGuidelinesName && typeof componentGuidelinesName !== "undefined") ? `https://spectrum.adobe.com/page/${componentGuidelinesName}` : false;
 
 	return (
 		<dl className="spectrum-storybook-component-details">
 			<dt>Current version:</dt>
 			<dd>{versionNumber}</dd>
+
+      {
+        packageLink && 
+        <>
+          <dt>npm link:</dt>
+          <dd><a href={packageLink} rel="noopener">{packageLink}</a></dd>
+        </>
+      }
+
+      {
+        packageGitHubLink && 
+        <>
+          <dt>view repository:</dt>
+          <dd><a href={packageGitHubLink} rel="noopener">{packageGitHubLink}</a></dd>
+        </>
+      }
+
+      {
+        componentGuidelinesLink && 
+        <>
+          <dt>view guidelines:</dt>
+          <dd><a href={componentGuidelinesLink} rel="noopener">{componentGuidelinesLink}</a></dd>
+        </>
+      }
 
 			{ storyMeta?.csfFile?.meta?.parameters?.status?.type == "deprecated" 
 				?	<>
