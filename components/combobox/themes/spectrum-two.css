@@ -181,5 +181,7 @@
 		/* Settings for nested Picker Button component. */
 		--mod-picker-button-background-color-quiet: transparent;
 		--mod-picker-button-border-color-quiet: transparent;
+
+		--mod-picker-button-border-color: var(--mod-picker-button-border-color-quiet);
 	}
 }
