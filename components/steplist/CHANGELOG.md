@@ -1,5 +1,12 @@
 # Change Log
 
+## 6.0.0-next.0
+
+### Patch Changes
+
+- Updated dependencies [[`5a0ce6e`](https://github.com/adobe/spectrum-css/commit/5a0ce6e5c1908679bd87a63969b99a105faea265)]:
+  - @spectrum-css/tooltip@7.0.0-next.0
+
 ## 5.1.0
 
 ### Minor Changes
