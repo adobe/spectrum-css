@@ -2,7 +2,6 @@ import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import isChromatic from "chromatic/isChromatic";
 import { version } from "../package.json";
 import { ModalGroup } from "./modal.test.js";
 
@@ -27,25 +26,26 @@ export default {
 				type: "select",
 			},
 		},
-		content: {
-			table: { disable: true },
-		},
+		content: { table: { disable: true } },
 	},
 	args: {
-		isOpen: true,
 		rootClass: "spectrum-Modal",
+		isOpen: true,
+		variant: "responsive",
+		customStyles: {
+			// Without this, the content sits right up against the edge of the modal
+			padding: "20px",
+		}
 	},
 	parameters: {
 		layout: "fullscreen",
 		docs: {
 			story: {
-				height: "800px",
+				height: "400px",
 				width: "800px"
 			},
 		},
 		componentVersion: version,
-		// Force the underlay off for Chromatic snapshots only
-		withUnderlayWrapper: isChromatic() ? false : true,
 	},
 	decorators: [
 		withUnderlayWrapper,
@@ -60,23 +60,29 @@ Default.args = {
 			customClasses: ["chromatic-ignore"],
 			size: "m",
 			content: [
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-			],
-			...passthroughs,
-		}, context),
-		(passthroughs, context) => Typography({
-			semantics: "body",
-			customClasses: ["chromatic-ignore"],
-			size: "m",
-			content: [
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis."
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+				{
+					semantics: "body",
+					content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis."
+				}
 			],
 			...passthroughs,
 		}, context),
 	],
 };
-Default.parameters = {
-	chromatic: { disableSnapshot: true },
+
+export const Fullscreen = ModalGroup.bind({});
+// Fullscreen.tags = ["!dev"];
+Fullscreen.args = {
+	...Default.args,
+	variant: "fullscreen",
+};
+
+export const FullscreenTakeover = ModalGroup.bind({});
+// FullscreenTakeover.tags = ["!dev"];
+FullscreenTakeover.args = {
+	...Default.args,
+	variant: "fullscreenTakeover",
 };
 
 // ********* VRT ONLY ********* //

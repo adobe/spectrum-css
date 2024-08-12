@@ -123,10 +123,7 @@ export default {
 
 // @todo combine variants into one snapshot
 export const Default = ThumbnailGroup.bind({});
-Default.args = {
-	imageURL: "example-ava.png",
-	altText: "Shantanu",
-};
+Default.args = {};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ThumbnailGroup.bind({});

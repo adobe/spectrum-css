@@ -8,7 +8,8 @@ export const AlertDialogGroup = Variants({
 	wrapperStyles: {
 		"z-index": "1",
 		"inline-size": "fit-content",
-		"background-color": "var(--spectrum-gray-50, white)"
+		"background-color": "var(--spectrum-gray-50, white)",
+		"min-block-size": "auto",
 	},
 	testData: [{}, {
 		variant: "warning",

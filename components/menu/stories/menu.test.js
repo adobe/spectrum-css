@@ -7,6 +7,9 @@ export const MenuWithVariants = Variants({
 	Template,
 	// This is validated at the Menu Item level
 	withSizes: false,
+	wrapperStyles: {
+		"min-block-size": "auto",
+	},
 	testData: [
 		{
 			testHeading: "No selection",
@@ -113,6 +116,9 @@ export const MenuItemGroup = Variants({
 			)}
 		</ul>
 	`,
+	wrapperStyles: {
+		"min-block-size": "auto",
+	},
 	testData: [
 		{
 			testHeading: "No selection",
@@ -216,6 +222,9 @@ export const MenuItemGroup = Variants({
 
 export const MenuTraySubmenu = Variants({
 	Template,
+	wrapperStyles: {
+		"min-block-size": "auto",
+	},
 	withSizes: false,
 	testData: [{}],
 });

@@ -1,4 +1,4 @@
-import { renderContent } from "@spectrum-css/preview/decorators/utilities.js";
+import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
@@ -12,6 +12,7 @@ export const Template = ({
 	customStyles = {},
 	content,
 	isOpen = true,
+	id = getRandomId("underlay"),
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
@@ -22,7 +23,7 @@ export const Template = ({
         "is-open": isOpen,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id="spectrum-underlay"
+      id=${id}
       style=${styleMap(customStyles)}
       @click=${function() {
         updateArgs({ isOpen: !isOpen });

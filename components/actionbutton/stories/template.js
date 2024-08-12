@@ -4,7 +4,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-import { capitalize, lowerCase } from "lodash-es";
+import { capitalize } from "lodash-es";
 
 import "../index.css";
 
@@ -79,7 +79,7 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--emphasized`]: isEmphasized,
-				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+				[`${rootClass}--static${capitalize(staticColor)}`]:
 					typeof staticColor !== "undefined",
 				["is-disabled"]: isDisabled,
 				["is-selected"]: isSelected,

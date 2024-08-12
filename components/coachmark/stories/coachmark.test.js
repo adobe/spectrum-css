@@ -22,6 +22,7 @@ export const CoachMarkGroup = Variants({
 	skipBorders: false,
 	wrapperStyles: {
 		"z-index": "1",
+		"min-block-size": "auto",
 	},
 	testData: [
 		{
@@ -30,7 +31,7 @@ export const CoachMarkGroup = Variants({
 			hasPagination: false,
 			hasImage: false,
 			wrapperStyles: {
-				"background-color": "var(--spectrum-gray-50, white)"
+				"background-color": "var(--spectrum-gray-50, white)",
 			},
 		},
 		{

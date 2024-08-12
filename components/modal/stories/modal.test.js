@@ -5,6 +5,9 @@ export const ModalGroup = Variants({
 	Template,
 	skipBorders: true,
 	testData: [
-		{},
+		{
+			testHeading: "Standard",
+			skipWrapper: false,
+		},
 	]
 });

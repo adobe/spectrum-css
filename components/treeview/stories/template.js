@@ -1,7 +1,6 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -159,38 +158,3 @@ export const Template = ({
 		)}
 	</ul>
 `;
-
-
-export const SizingGroup = (args, context) => {
-	const sizeOptions = context?.argTypes?.size?.options ?? [];
-	if (!sizeOptions.length) {
-		return html`<div>No size options</div>`;
-	}
-	return html`
-		<div
-			style=${styleMap({
-				"display": "flex",
-				"gap": "32px",
-			})}
-		>
-			${sizeOptions.map((size) => (html`
-				<div
-					style=${styleMap({
-						"display": "flex",
-						"gap": "16px",
-						"flex-direction": "column",
-						"align-items": "center",
-					})}
-				>
-				${Typography({
-					semantics: "heading",
-					size: "xs",
-					content: [size],
-					customClasses: ["chromatic-ignore"],
-				})}
-				${Template({...args, size})}
-				</div>
-			`))}
-		</div>
-	`;
-};

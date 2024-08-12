@@ -122,7 +122,7 @@ export const Template = ({
 		${Popover({
 			isOpen: isOpen && !isDisabled,
 			withTip: false,
-			position: "bottom-end",
+			position: "bottom-start",
 			trigger: (passthroughs, context) => Picker({
 				...passthroughs,
 				rootClass,

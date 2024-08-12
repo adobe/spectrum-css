@@ -44,7 +44,7 @@ export const TextFieldGroup = Variants({
 		isInvalid: true,
 	}, {
 		testHeading: "Valid",
-		isInvalid: true,
+		isValid: true,
 	}, {
 		testHeading: "Focused",
 		isFocused: true,

@@ -111,16 +111,9 @@ Default.args = {
 	],
 };
 
-export const WithTip = Template.bind({});
-WithTip.tags = ["!dev"];
-WithTip.args = {
-	...Default.args,
-	withTip: true,
-};
-
 export const Nested = Template.bind({});
 Nested.args = {
-	position: "right-top",
+	position: "end-top",
 	isOpen: true,
 	trigger: (passthroughs, context) => ActionButton({
 		label: "Actions",
@@ -137,7 +130,7 @@ Nested.args = {
 			...passthroughs,
 		}, context),
 		(passthroughs, context) => Template({
-			position: "right-top",
+			position: "end-top",
 			isOpen: true,
 			trigger: (passthroughs, context) => ActionButton({
 				label: "More actions",
@@ -169,6 +162,19 @@ Nested.args = {
 			...passthroughs,
 		}, context),
 	],
+};
+
+// ********* DOCS ONLY ********* //
+export const WithTip = Template.bind({});
+WithTip.tags = ["!dev"];
+WithTip.args = {
+	...Default.args,
+	withTip: true,
+};
+WithTip.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
 };
 
 // ********* VRT ONLY ********* //

@@ -5,6 +5,7 @@ export const PickerGroup = Variants({
 	Template,
 	wrapperStyles: {
 		"align-items": "flex-start",
+		"min-block-size": "auto",
 	},
 	testData: [
 		{

@@ -58,6 +58,7 @@ Default.args = {
 			id: "label1",
 			label: "Label 1",
 			link: "#",
+			isSelected: true,
 		},
 		{
 			id: "group1",
@@ -69,6 +70,7 @@ Default.args = {
 					id: "label2",
 					label: "Label 2",
 					link: "#",
+					isDisabled: true,
 				},
 				{
 					id: "label3",

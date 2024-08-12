@@ -2,7 +2,7 @@ import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-import { capitalize } from "lodash";
+import { capitalize } from "lodash-es";
 
 /**
  * Renders a heading or code block that identifies the test case and is ignored by the snapshots.
@@ -29,12 +29,12 @@ const Heading = ({
 		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 	};
 	return html`
-    ${when(
-      type === "code",
-      () => html`<pre><code class=${classMap(derivedClasses)}>${content}</code></pre>`,
-      () => html`<h2 class=${classMap(derivedClasses)} style="color:var(--spectrum-gray-600)">${content}</h2>`,
-    )}
-  `;
+		${when(
+			type === "code",
+			() => html`<pre><code class=${classMap(derivedClasses)}>${content}</code></pre>`,
+			() => html`<h2 class=${classMap(derivedClasses)} style="color:var(--spectrum-gray-600)">${content}</h2>`,
+		)}
+	`;
 };
 
 /**
@@ -62,60 +62,62 @@ const Container = ({
 	let headingConfig = { size: "l" };
 	let gap = 40;
 
-  if (level > 1) {
+	if (level > 1) {
 		headingConfig = { size: "s", weight: "light" };
-  }
+	}
 
-  if (level === 2) {
-    gap = 160;
-  }
+	if (level === 2) {
+		gap = 160;
+	}
 
-  const borderStyles = {};
-  if (withBorder) {
-    borderStyles["padding-inline"] = "24px";
-    borderStyles["padding-block"] = "24px";
-    borderStyles["border"] = "1px solid var(--spectrum-gray-200)";
-    borderStyles["border-radius"] = "4px";
-    gap = 80;
-  }
+	const borderStyles = {};
+	if (withBorder) {
+		borderStyles["padding-inline"] = "24px";
+		borderStyles["padding-block"] = "24px";
+		borderStyles["border"] = "1px solid var(--spectrum-gray-200)";
+		borderStyles["border-radius"] = "4px";
+		gap = 80;
+	}
 
 	return html`
-    <div
-      data-outer-container
-      style=${styleMap({
-        "display": "flex",
-        "align-items": "flex-start",
-        "flex-direction": "column",
-        "flex-wrap": "nowrap",
-        "gap": heading && level > 1 ? `${parseInt(24 / level, 10)}px` : undefined,
-        ...containerStyles
-      })}
-    >
-      ${when(heading, () => Heading({
-        ...headingConfig,
-        type,
-        content: heading
-      }))}
-      <div
-        data-inner-container
-        style=${styleMap({
-          "flex-grow": "1",
-          "position": "relative",
-          "display": "flex",
-          "flex-direction": direction,
-          "flex-wrap": "wrap",
-          "column-gap": `${parseInt(gap / level, 10)}px`,
-          "row-gap": "24px",
-          "align-items": heading && level > 1 ? "flex-start" : undefined,
-          "justify-content": direction === "column" ? "center" : "flex-start",
-          ...borderStyles,
-          ...wrapperStyles,
-        })}
-      >
-        ${renderContent(content)}
-      </div>
-    </div>
-  `;
+		<div
+			data-outer-container
+			style=${styleMap({
+        "z-index": "1",
+        "position": "relative",
+				"display": "flex",
+				"flex-direction": "column",
+				"flex-wrap": "nowrap",
+				"align-items": "flex-start",
+				"gap": heading && level > 1 ? `${parseInt(24 / level, 10)}px` : undefined,
+				...containerStyles
+			})}
+		>
+			${when(heading, () => Heading({
+				...headingConfig,
+				type,
+				content: heading
+			}))}
+			<div
+				data-inner-container
+				style=${styleMap({
+					"flex-grow": "1",
+					"position": "relative",
+					"display": "flex",
+					"flex-direction": direction,
+					"flex-wrap": "wrap",
+					"column-gap": `${parseInt(gap / level, 10)}px`,
+					"row-gap": "24px",
+					"align-items": heading && level > 1 ? "flex-start" : undefined,
+					"justify-content": direction === "column" ? "center" : "flex-start",
+					...borderStyles,
+					...wrapperStyles,
+				})}
+			>
+				${renderContent(content)}
+			</div>
+		</div>
+	`;
 };
 
 /**
@@ -133,52 +135,52 @@ export const States = ({
 	Template,
 	direction = "row",
 	stateData = [],
-  containerStyles = {},
-  wrapperStyles = {},
+	containerStyles = {},
+	wrapperStyles = {},
 	...args
 } = {}, context = {}) => {
-  // If the state data is not an array, make it an array for easier processing
-  if (!Array.isArray(stateData)) {
-    stateData = [stateData];
-  }
+	// If the state data is not an array, make it an array for easier processing
+	if (!Array.isArray(stateData)) {
+		stateData = [stateData];
+	}
 
-  // Return the state data inside a container element
-  return Container({
-    level: 2,
-    direction,
-    withBorder: false,
-    heading: undefined,
-    containerStyles,
-    content: stateData.map(({
-      testHeading = "Default",
-      // Rename the input stateWrapperStyles to avoid confusion with the wrapperStyles prop
-      wrapperStyles: stateWrapperStyles = {},
-      ignore = [],
-      include = [],
-      ...item
-    }) => {
-      // If the test heading is not in the include list, skip rendering this state
-      if (include.length && !include.includes(testHeading)) {
-        return nothing;
-      }
+	// Return the state data inside a container element
+	return Container({
+		level: 2,
+		direction,
+		withBorder: false,
+		heading: undefined,
+		containerStyles,
+		content: stateData.map(({
+			testHeading = "Default",
+			// Rename the input stateWrapperStyles to avoid confusion with the wrapperStyles prop
+			wrapperStyles: stateWrapperStyles = {},
+			ignore = [],
+			include = [],
+			...item
+		}) => {
+			// If the test heading is not in the include list, skip rendering this state
+			if (include.length && !include.includes(testHeading)) {
+				return nothing;
+			}
 
-      // If the test heading is in the ignore list, skip rendering this state
-      if (ignore.length && ignore.includes(testHeading)) {
-        return nothing
-      }
+			// If the test heading is in the ignore list, skip rendering this state
+			if (ignore.length && ignore.includes(testHeading)) {
+				return nothing
+			}
 
-      return Container({
-        heading: stateData.some(({ testHeading }) => testHeading) ? testHeading : "",
-        level: 3,
-        withBorder: false,
-        wrapperStyles: {
-          ...wrapperStyles,
-          ...stateWrapperStyles,
-        },
-        content: Template({ ...args, ...item }, context),
-      });
-    })
-  });
+			return Container({
+				heading: stateData.some(({ testHeading }) => testHeading) ? testHeading : "",
+				level: 3,
+				withBorder: false,
+				wrapperStyles: {
+					...wrapperStyles,
+					...stateWrapperStyles,
+				},
+				content: Template({ ...args, ...item }, context),
+			});
+		})
+	});
 };
 
 /**
@@ -197,33 +199,33 @@ export const States = ({
  * @param {Object} context - The context to pass to the template.
  */
 export const ArgGrid = ({
-  Template,
-  wrapperStyles = {},
-  direction = "row",
-  heading,
-  argKey,
-  options,
-  labels = {},
-  level = 2,
-  withBorder = true,
-  ...args
+	Template,
+	wrapperStyles = {},
+	direction = "row",
+	heading,
+	argKey,
+	options,
+	labels = {},
+	level = 2,
+	withBorder = true,
+	...args
 } = {}, context = {}) => {
 	if (typeof options === "undefined" || !options.length) return nothing;
-  if (typeof argKey === "undefined") {
-    console.warn("ArgGrid: argKey is required to render the grid.");
-    return nothing;
-  }
+	if (typeof argKey === "undefined") {
+		console.warn("ArgGrid: argKey is required to render the grid.");
+		return nothing;
+	}
 
 	return Container({
 		heading,
 		direction,
 		content: options.map((opt) => Container({
-      heading: labels[opt] ?? capitalize(opt),
-      level,
-      withBorder,
-      wrapperStyles,
-      content: Template({ ...args, [argKey]: opt }, context)
-    })),
+			heading: labels[opt] ?? capitalize(opt),
+			level,
+			withBorder,
+			wrapperStyles,
+			content: Template({ ...args, [argKey]: opt }, context)
+		})),
 	});
 };
 
@@ -238,33 +240,28 @@ export const ArgGrid = ({
  * @param {Object} context - The context to pass to the template.
  */
 export const Sizes = ({
-  Template,
-  wrapperStyles = {},
-  direction = "row",
-  ...args
+	withHeading = true,
+  withBorder = false,
+	...args
 } = {}, context = {}) => {
-  return ArgGrid({
-    Template,
-    wrapperStyles,
-    direction,
-    heading: "Sizes",
-    argKey: "size",
-    options: context?.argTypes?.size?.options,
-    withBorder: false,
-    level: 3,
-    labels: {
-      xxs: "Extra-extra-small",
-      xs: "Extra-small",
-      s: "Small",
-      m: "Medium",
-      l: "Large",
-      xl: "Extra-large",
-      xxl: "Extra-extra-large",
-    },
-    ...args
-  });
+	return ArgGrid({
+    withBorder,
+		heading: withHeading ? "Sizing" : undefined,
+		argKey: "size",
+		options: context?.argTypes?.size?.options,
+		level: 3,
+		labels: {
+			xxs: "Extra-extra-small",
+			xs: "Extra-small",
+			s: "Small",
+			m: "Medium",
+			l: "Large",
+			xl: "Extra-large",
+			xxl: "Extra-extra-large",
+		},
+		...args
+	});
 };
-
 
 /**
  * The entry point for rendering a testing grid for a component with multiple states and sizes.
@@ -282,130 +279,133 @@ export const Sizes = ({
  */
 export const Variants = ({
 	Template,
-  TestTemplate,
+	TestTemplate,
 	// Test data defaults to an empty array so that we at least get the base component
 	testData = [{}],
 	stateData = [],
 	sizeDirection,
 	stateDirection,
-  skipBorders = false,
-  withSizes = true,
-  containerStyles = {},
-  wrapperStyles = {},
+	skipBorders = false,
+	withSizes = true,
+	containerStyles = {},
+	wrapperStyles = {},
 } = {}) => {
 	if (!Template) {
 		throw new Error("Template is required");
 	}
 
-  // If no separate test template is provided, use the default template
-  if (typeof TestTemplate === "undefined") {
-    TestTemplate = Template;
-  }
+	// If no separate test template is provided, use the default template
+	if (typeof TestTemplate === "undefined") {
+		TestTemplate = Template;
+	}
 
 	return (args, context) => {
+		const { parameters = {} } = context;
+		const storyHeight = parameters.docs?.story?.height;
+
 		return html`
-      <!-- Simple, clean template preview for non-testing grid views -->
-      <div
-        style=${styleMap({
-          "padding": "12px",
-          ...wrapperStyles,
-          "display": window.isChromatic() ? "none" : wrapperStyles.display,
-        })}
-        data-html-preview
-      >
-        ${Template(args, context)}
-      </div>
+			<!-- Simple, clean template preview for non-testing grid views -->
+			<div
+				style=${styleMap({
+					"padding": "12px",
+					...wrapperStyles,
+					"display": window.isChromatic() ? "none" : wrapperStyles.display,
+				})}
+				data-html-preview
+			>
+				${Template(args, context)}
+			</div>
 
-      <!-- Start testing grid markup -->
-      <div
-        style=${styleMap({
-          "padding": "24px",
-          "display": window.isChromatic() ? "flex" : "none",
-          "flex-direction": "column",
-          "flex-wrap": "wrap",
-          "align-items": "flex-start",
-          "gap": "24px",
-        })}
-        data-testing-grid
-      >
-        <!-- Test data can include: a custom template, descriptive heading, and container styles -->
-        <!-- Tests can also opt out of rendering the test in each available state -->
-        ${testData.map(
-          ({
-            Template: AltTemplate,
-            testHeading,
-            wrapperStyles: testWrapperStyles = {},
-            withStates,
-            // Capture any additional data to pass to the template
-            ...item
-          }) => {
-            if (typeof withStates === "undefined") {
-              withStates = stateData.length > 0;
-            }
+			<!-- Start testing grid markup -->
+			<div
+				style=${styleMap({
+					"padding": "24px",
+					"display": window.isChromatic() ? "flex" : "none",
+					"flex-direction": "column",
+					"flex-wrap": "wrap",
+					"align-items": "flex-start",
+					"gap": "24px",
+				})}
+			>
+				<!-- Test data can include: a custom template, descriptive heading, and container styles -->
+				<!-- Tests can also opt out of rendering the test in each available state -->
+				${testData.map(
+					({
+						Template: AltTemplate,
+						testHeading,
+						wrapperStyles: testWrapperStyles = {},
+						withStates,
+						// Capture any additional data to pass to the template
+						...item
+					}) => {
+						if (typeof withStates === "undefined") {
+							withStates = stateData.length > 0;
+						}
 
-            if (stateData[0] && Object.keys(stateData[0]).length !== 0) {
-              // Add a default value at the beginning of the array to represent the base state
-              stateData.unshift({});
-            }
+						if (stateData[0] && Object.keys(stateData[0]).length !== 0) {
+							// Add a default value at the beginning of the array to represent the base state
+							stateData.unshift({});
+						}
 
-            // If a custom template is provided, use it, otherwise use the default template
-            if (typeof AltTemplate === "undefined") AltTemplate = TestTemplate;
+						// If a custom template is provided, use it, otherwise use the default template
+						if (typeof AltTemplate === "undefined") AltTemplate = TestTemplate;
 
-            // Show the border if we are rendering the test in multiple states or if there are several
-            // tests in the grid, this helps distinguish between tests
-            const withBorder = !skipBorders && (withStates || testData.length > 1);
+						// Show the border if we are rendering the test in multiple states or if there are several
+						// tests in the grid, this helps distinguish between tests
+						const withBorder = !skipBorders && (withStates || testData.length > 1);
 
-            // Merge the test data with the args to pass to the template
-            const data = { ...args, ...item };
+						// Merge the test data with the args to pass to the template
+						const data = { ...args, ...item };
 
-            // If there are other test headings in the set, add "Default" to those missing a heading
-            if (testData.some(({ testHeading }) => testHeading) && !testHeading) {
-              testHeading = "Default";
-            }
+						// If there are other test headings in the set, add "Default" to those missing a heading
+						if (testData.some(({ testHeading }) => testHeading) && !testHeading) {
+							testHeading = "Default";
+						}
 
-            const combinedStyles = {
-              ...wrapperStyles,
-              ...testWrapperStyles,
-            };
+						const combinedStyles = {
+							"min-block-size": storyHeight,
+							...wrapperStyles,
+							...testWrapperStyles,
+						};
 
-            return Container({
-              heading: testHeading,
-              level: withStates ? 1 : 3,
-              withBorder,
-              containerStyles: {
-                // the z-index is necessary to ensure elements always appear above the overlay
-                "z-index": "1",
-                ...containerStyles,
-              },
-              // if the test has multiple states, pass the wrapper styles to that container, otherwise use it here
-              wrapperStyles: withStates ? {} : combinedStyles,
-              content: html`
-                ${when(withStates, () =>
-                  States({
-                      Template: AltTemplate,
-                      stateData,
-                      direction: stateDirection,
-                      wrapperStyles: combinedStyles,
-                      ...data
-                    }, context),
-                  () => AltTemplate(data, context)
-                )}
-              `,
-            });
-          }
-        )}
+						return Container({
+							heading: testHeading,
+							level: withStates ? 1 : 3,
+							withBorder,
+							containerStyles: {
+								// the z-index is necessary to ensure elements always appear above the overlay
+								"z-index": "1",
+								...containerStyles,
+							},
+							// if the test has multiple states, pass the wrapper styles to that container, otherwise use it here
+							wrapperStyles: withStates ? {} : combinedStyles,
+							content: html`
+								${when(withStates, () =>
+									States({
+											Template: AltTemplate,
+											stateData,
+											direction: stateDirection,
+											wrapperStyles: combinedStyles,
+											...data
+										}, context),
+									() => AltTemplate(data, context)
+								)}
+							`,
+						});
+					}
+				)}
 
-        <!-- If sizing exists for the component, it will render all sizes for testing -->
-        ${when(withSizes, () =>
-          Sizes({
-            Template: TestTemplate,
-            wrapperStyles,
-            direction: sizeDirection,
-            ...args
-          }, context)
-        )}
-      </div>
-    `;
+				<!-- If sizing exists for the component, it will render all sizes for testing -->
+				${when(withSizes, () =>
+					Sizes({
+						Template: TestTemplate,
+						wrapperStyles,
+						direction: sizeDirection,
+						...args
+					}, context)
+				)}
+			</div>
+		`;
 	};
 };
 
@@ -434,19 +434,19 @@ export const renderContent = (content = [], {
 	if (content.length === 0) return nothing;
 
 	return html`
-    ${content.map((c) => {
+		${content.map((c) => {
 			/* If the content is an object (but not a lit object), we need to merge the object with the template */
 			if (typeof c !== "string" && (typeof c === "object" && !c._$litType$)) {
 				return callback({ ...args, ...c }, context);
 			}
 
-      if (typeof c === "function") {
-        return c(args, context);
-      }
+			if (typeof c === "function") {
+				return c(args, context);
+			}
 
-      return c;
-    })}
-  `;
+			return c;
+		})}
+	`;
 };
 
 /**
@@ -455,5 +455,5 @@ export const renderContent = (content = [], {
  * @returns {string} The generated ID.
  */
 export const getRandomId = (prefix = "spectrum") => {
-  return `${prefix}-${Math.random().toString(36).substring(2, 7)}`;
+	return `${prefix}-${Math.random().toString(36).substring(2, 7)}`;
 };

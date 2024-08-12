@@ -11,19 +11,15 @@ export const ActionMenuGroup = Variants({
 	}, {
 		testHeading: "Closed menu",
 		isOpen: false,
-		items: [
-			{
-				label: "Edit",
-				iconName: "Edit",
-			},
-			{
-				label: "Delete",
-				iconName: "Delete",
-			},
-		],
+		wrapperStyles: {
+			"min-block-size": "50px",
+		},
 	}, {
 		testHeading: "Custom icon",
 		isOpen: false,
 		iconName: "Add",
+		wrapperStyles: {
+			"min-block-size": "50px",
+		},
 	}],
 });
