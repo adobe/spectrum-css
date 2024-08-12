@@ -3980,7 +3980,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/bundle@workspace:^, @spectrum-css/bundle@workspace:tools/bundle":
+"@spectrum-css/bundle@npm:1.0.0, @spectrum-css/bundle@workspace:tools/bundle":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/bundle@workspace:tools/bundle"
   dependencies:
@@ -4488,12 +4488,18 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.1"
     "@spectrum-css/underlay": "npm:6.1.0"
   peerDependencies:
+    "@spectrum-css/button": ">=14.0.0 <15.0.0"
+    "@spectrum-css/buttongroup": ">=9.0.0 <10.0.0"
     "@spectrum-css/closebutton": ">=6.0.0 <7.0.0"
     "@spectrum-css/divider": ">=5.0.0 <6.0.0"
     "@spectrum-css/modal": ">=7.0.0 <8.0.0"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
     "@spectrum-css/underlay": ">=6.0.0 <7.0.0"
   peerDependenciesMeta:
+    "@spectrum-css/button":
+      optional: true
+    "@spectrum-css/buttongroup":
+      optional: true
     "@spectrum-css/closebutton":
       optional: true
     "@spectrum-css/divider":
@@ -4910,10 +4916,10 @@ __metadata:
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
     "@spectrum-css/helptext": ">=7.0.0 <8.0.0"
-    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
     "@spectrum-css/menu": ">=9.0.0 <10.0.0"
-    "@spectrum-css/popover": ">=8"
-    "@spectrum-css/progresscircle": ">=5"
+    "@spectrum-css/popover": ">=8.0.0 <9.0.0"
+    "@spectrum-css/progresscircle": ">=5.0.0 <6.0.0"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
   peerDependenciesMeta:
     "@spectrum-css/helptext":
@@ -4994,8 +5000,8 @@ __metadata:
     "@babel/core": "npm:^7.26.0"
     "@chromatic-com/storybook": "npm:^3.2.3"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
-    "@spectrum-css/bundle": "workspace:^"
-    "@spectrum-css/tokens": "npm:14.0.0-next.2"
+    "@spectrum-css/bundle": "npm:1.0.0"
+    "@spectrum-css/tokens": "npm:16.0.1"
     "@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^15.2.0"
     "@spectrum-css/ui-icons": "npm:1.1.2"
     "@storybook/addon-a11y": "npm:^8.4.7"
@@ -5435,13 +5441,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@spectrum-css/tokens@npm:14.0.0-next.2":
-  version: 14.0.0-next.2
-  resolution: "@spectrum-css/tokens@npm:14.0.0-next.2"
-  checksum: 10c0/769faa9c1efca3f926a1b9f4d3c951005a3cdaceb752a4523cb9dd6b3241f4541130c79a0071cb0597ab9ce01bd9f943764b049bced387b34eda85432f9a80bb
-  languageName: node
-  linkType: hard
-
 "@spectrum-css/tokens@npm:16.0.1, @spectrum-css/tokens@workspace:^, @spectrum-css/tokens@workspace:tokens":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
@@ -5465,7 +5464,7 @@ __metadata:
     "@spectrum-css/icon": "npm:9.1.0"
     "@spectrum-css/tokens": "npm:16.0.1"
   peerDependencies:
-    "@spectrum-css/icon": ">=9"
+    "@spectrum-css/icon": ">=9.0.0 <10.0.0"
     "@spectrum-css/tokens": ">=16.0.0 <17.0.0"
   peerDependenciesMeta:
     "@spectrum-css/icon":
@@ -7983,10 +7982,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001629, caniuse-lite@npm:^1.0.30001640, caniuse-lite@npm:^1.0.30001646, caniuse-lite@npm:^1.0.30001669":
-  version: 1.0.30001692
-  resolution: "caniuse-lite@npm:1.0.30001692"
-  checksum: 10c0/fca5105561ea12f3de593f3b0f062af82f7d07519e8dbcb97f34e7fd23349bcef1b1622a9a6cd2164d98e3d2f20059ef7e271edae46567aef88caf4c16c7708a
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001640":
+  version: 1.0.30001643
+  resolution: "caniuse-lite@npm:1.0.30001643"
+  checksum: 10c0/7fcd0fd180bbe6764311ad57b0d39c23afdcc3bb1d8f804e7a76752c62a85b1bb7cf74b672d9da2f0afe7ad75336ff811a6fe279eb2a54bc04c272b6b62e57f1
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001629":
+  version: 1.0.30001636
+  resolution: "caniuse-lite@npm:1.0.30001636"
+  checksum: 10c0/e5f965b4da7bae1531fd9f93477d015729ff9e3fa12670ead39a9e6cdc4c43e62c272d47857c5cc332e7b02d697cb3f2f965a1030870ac7476da60c2fc81ee94
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001646":
+  version: 1.0.30001660
+  resolution: "caniuse-lite@npm:1.0.30001660"
+  checksum: 10c0/d28900b56c597176d515c3175ca75c454f2d30cb2c09a44d7bdb009bb0c4d8a2557905adb77642889bbe9feb85fbfe9d974c8b8e53521fb4b50ee16ab246104e
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001669":
+  version: 1.0.30001673
+  resolution: "caniuse-lite@npm:1.0.30001673"
+  checksum: 10c0/0e73a2b0f06973052e563dec9990a6fd440d510fa2ff54fa50310e736abb86e96c96b43c10e609fc22f2109f98fe76428b70441baf6b1a49f69ccf50c1879f6b
   languageName: node
   linkType: hard
 
