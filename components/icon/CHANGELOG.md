@@ -1,5 +1,12 @@
 # Change Log
 
+## 7.1.2
+
+### Patch Changes
+
+- [#2974](https://github.com/adobe/spectrum-css/pull/2974) [`fd00178`](https://github.com/adobe/spectrum-css/commit/fd00178a9196ac79ff30cae21310ff42e7fc5ba3) Thanks [@jawinn](https://github.com/jawinn)! - Removes legacy normalization CSS for Icon SVGs that changed the overflow property. This is to fix a reported issue with clipping in iOS mobile for Express and Safari for MacOS.
+  The original CSS declaration was for Internet Explorer 9/10/11 and could be removed because IE 11 is not supported.
+
 ## 7.1.1
 
 ### Patch Changes
