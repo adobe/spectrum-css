@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.2.4
+
+### Patch Changes
+
+- [#2979](https://github.com/adobe/spectrum-css/pull/2979) [`5954646`](https://github.com/adobe/spectrum-css/commit/5954646c450d5a43e31d77241e806358b3a8883d) Thanks [@lazd](https://github.com/lazd)! - Uses `z-index: 0` (instead of `z-index: 1`) for `spectrum-Slider` so that the slider no longer "floats" over other elements on the page.
+
 ## 5.2.3
 
 ### Patch Changes
