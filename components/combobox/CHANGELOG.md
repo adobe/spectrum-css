@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0-s2-foundations.13
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`a0d6de4`](https://github.com/adobe/spectrum-css/commit/a0d6de45845c9158ca30da1a34e30461a9d0af31) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-240] Quiet combobox picker button should have transparent borders
+
 ## 4.0.0-s2-foundations.12
 
 ### Minor Changes
