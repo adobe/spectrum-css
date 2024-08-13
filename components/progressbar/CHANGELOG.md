@@ -1,5 +1,12 @@
 # Change Log
 
+## 4.1.4
+
+### Patch Changes
+
+- [#2965](https://github.com/adobe/spectrum-css/pull/2965) [`469dfc2`](https://github.com/adobe/spectrum-css/commit/469dfc2b13248ed5fb067e05cc30049d3e43dc90) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - - Enforces the correct static white progress bar fill color when meter is using both the `spectrum-ProgressBar--staticWhite` class and one of the `is-positive`, `is-negative`, or `is-notice` classes.
+  - Adds a static white story to meter.
+
 ## 4.1.3
 
 ### Patch Changes
