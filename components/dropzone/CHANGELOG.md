@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-s2-foundations.13
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`877ca25`](https://github.com/adobe/spectrum-css/commit/877ca2516363e9483e7b3ecbfddc900b4e6a9a65) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-241] In order to show dropzone background color, --spectrum-drop-zone-background-color has been changed to --mod-drop-zone-background-color in &.is-dragged and &.is-filled
+
 ## 7.0.0-s2-foundations.12
 
 ### Minor Changes
