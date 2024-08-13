@@ -5,6 +5,7 @@
     ".spectrum-Swatch",
     ".spectrum-Swatch .spectrum-Swatch-disabledIcon",
     ".spectrum-Swatch .spectrum-Swatch-fill",
+    ".spectrum-Swatch--lightBorder .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--noBorder .spectrum-Swatch-fill:before",
     ".spectrum-Swatch--rectangle",
     ".spectrum-Swatch--roundingFull.is-selected:not(.spectrum-Swatch--rectangle) .spectrum-Swatch-fill",
@@ -52,6 +53,7 @@
   ],
   "component": [
     "--spectrum-swatch-border-color",
+    "--spectrum-swatch-border-color-light",
     "--spectrum-swatch-border-color-selected",
     "--spectrum-swatch-border-radius",
     "--spectrum-swatch-border-thickness",
@@ -81,6 +83,7 @@
   "modifiers": [
     "--mod-animation-duration-100",
     "--mod-swatch-border-color",
+    "--mod-swatch-border-color-light",
     "--mod-swatch-border-color-selected",
     "--mod-swatch-border-radius",
     "--mod-swatch-border-thickness",
@@ -131,6 +134,7 @@
   "high-contrast": [
     "--highcontrast-swatch-background-color-selected",
     "--highcontrast-swatch-border-color",
+    "--highcontrast-swatch-border-color-light",
     "--highcontrast-swatch-border-color-selected",
     "--highcontrast-swatch-disabled-icon-color",
     "--highcontrast-swatch-fill-foreground-color",
