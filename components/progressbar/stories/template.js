@@ -54,7 +54,7 @@ export const Template = ({
 			>
 				<div
 					class="${rootClass}-fill"
-					style="width: ${value}%"
+					style=${styleMap({ "inline-size": `${value}%` })}
 				></div>
 			</div>
 		</div>
