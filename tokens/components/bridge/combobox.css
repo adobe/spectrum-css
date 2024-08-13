@@ -141,6 +141,7 @@
 	--spectrum-combobox-button-inline-offset: var(--system-combobox-quiet-button-inline-offset);
 	--mod-picker-button-background-color-quiet: var(--system-combobox-quiet-picker-button-background-color-quiet);
 	--mod-picker-button-border-color-quiet: var(--system-combobox-quiet-picker-button-border-color-quiet);
+	--mod-picker-button-border-color: var(--system-combobox-quiet-picker-button-border-color);
 }
 
 .spectrum-Combobox--quiet.spectrum-Combobox--sizeS {
