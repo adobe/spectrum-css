@@ -13,6 +13,7 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-missing-var",
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
+		"@spectrum-tools/theme-alignment",
 		"stylelint-high-performance-animation",
 	],
 	rules: {
@@ -168,6 +169,13 @@ module.exports = {
 			rules: {
 				"custom-property-pattern": null,
 				"color-function-notation": null,
+			},
+		},
+		{
+			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
+			files: ["components/*/themes/{spectrum,express}.css"],
+			rules: {
+				"spectrum-tools/theme-alignment": true,
 			},
 		},
 	],
