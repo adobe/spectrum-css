@@ -119,16 +119,6 @@
 	--system-action-button-size-xl-edge-to-visual: calc(var(--spectrum-component-edge-to-visual-300) - var(--system-action-button-border-width));
 	--system-action-button-size-xl-edge-to-text: calc(var(--spectrum-component-edge-to-text-300) - var(--system-action-button-border-width));
 	--system-action-button-size-xl-edge-to-visual-only: calc(var(--spectrum-component-edge-to-visual-only-300) - var(--system-action-button-border-width));
-	--system-action-button-static-black-quiet-border-color-default: transparent;
-	--system-action-button-static-white-quiet-border-color-default: transparent;
-	--system-action-button-static-black-quiet-border-color-hover: transparent;
-	--system-action-button-static-white-quiet-border-color-hover: transparent;
-	--system-action-button-static-black-quiet-border-color-down: transparent;
-	--system-action-button-static-white-quiet-border-color-down: transparent;
-	--system-action-button-static-black-quiet-border-color-focus: transparent;
-	--system-action-button-static-white-quiet-border-color-focus: transparent;
-	--system-action-button-static-black-quiet-border-color-disabled: transparent;
-	--system-action-button-static-white-quiet-border-color-disabled: transparent;
 	--system-action-button-static-black-background-color-default: transparent;
 	--system-action-button-static-black-background-color-hover: var(--spectrum-transparent-black-300);
 	--system-action-button-static-black-background-color-down: var(--spectrum-transparent-black-400);
@@ -181,4 +171,14 @@
 	--system-action-button-static-white-selected-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
 	--system-action-button-static-white-selected-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
 	--system-action-button-static-white-selected-border-color-disabled: transparent;
+	--system-action-button-static-black-quiet-border-color-default: transparent;
+	--system-action-button-static-white-quiet-border-color-default: transparent;
+	--system-action-button-static-black-quiet-border-color-hover: transparent;
+	--system-action-button-static-white-quiet-border-color-hover: transparent;
+	--system-action-button-static-black-quiet-border-color-down: transparent;
+	--system-action-button-static-white-quiet-border-color-down: transparent;
+	--system-action-button-static-black-quiet-border-color-focus: transparent;
+	--system-action-button-static-white-quiet-border-color-focus: transparent;
+	--system-action-button-static-black-quiet-border-color-disabled: transparent;
+	--system-action-button-static-white-quiet-border-color-disabled: transparent;
 }

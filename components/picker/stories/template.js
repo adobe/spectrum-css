@@ -11,9 +11,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Picker = ({
 	rootClass = "spectrum-Picker",
@@ -30,6 +27,11 @@ export const Picker = ({
 	customStyles = {},
 	onclick,
 } = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
 	return html`
 		<button
 			class=${classMap({
@@ -95,7 +97,10 @@ export const Template = ({
 	content = [],
 	id = getRandomId("picker"),
 } = {}, context = {}) => {
-	const { updateArgs } = context;
+	const { globals = {}, updateArgs } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
 
 	let iconName = "ChevronDown200";
 	switch (size) {

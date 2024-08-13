@@ -7,9 +7,6 @@ import { repeat } from "lit/directives/repeat.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-SideNav",
@@ -18,61 +15,68 @@ export const Template = ({
 	hasIcon,
 	iconName,
 	items = [],
-} = {}, context = {}) => html`
-  <nav>
-    <ul class=${classMap({
-      [rootClass]: true,
-      [`${rootClass}--${variant}`]: typeof variant !== "undefined",
-      [`${rootClass}--hasIcon`]: hasIcon,
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}>
-      ${repeat(items, (item) => item.id, (item) => {
-        if (typeof item.levelTwoItems !== "undefined") {
-          return html`
-            <li class=${classMap({
-              [`${rootClass}-item`]: true,
-              "is-selected": item.isSelected,
-              "is-disabled": item.isDisabled,
-            })}>
-            ${item.heading ?
-              html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.heading}</h2>`
-              :
-              html`
-              <a class="${rootClass}-itemLink">
-                ${when(hasIcon, () => Icon({ iconName }, context))}
-                <span class="${rootClass}-link-text">${item.title}</span>
-              </a>
-              `
-            }
-            <ul class=${classMap({
-              [rootClass]: true,
-              [`${rootClass}--hasIcon`]: hasIcon,
-              ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-            })}
-            aria-labelledby=${ifDefined(item.heading) ? `${item.id}-heading` : ""}>
-                ${repeat(item.levelTwoItems, (item) => item.id, (item) => {
-                  return SideNavItem({
-                    variant,
-                    hasIcon,
-                    iconName,
-                    ...item
-                  }, context);
-                })}
-              </ul>
-            </li>
-          `;
-        }
-        else {
-          return SideNavItem({
-            hasIcon,
-            iconName,
-            ...item
-          }, context);
-        }
-      })}
-    </ul>
-  </nav>
-`;
+} = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
+	return html`
+    <nav>
+      <ul class=${classMap({
+        [rootClass]: true,
+        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
+        [`${rootClass}--hasIcon`]: hasIcon,
+        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+      })}>
+        ${repeat(items, (item) => item.id, (item) => {
+          if (typeof item.levelTwoItems !== "undefined") {
+            return html`
+              <li class=${classMap({
+                [`${rootClass}-item`]: true,
+                "is-selected": item.isSelected,
+                "is-disabled": item.isDisabled,
+              })}>
+              ${item.heading ?
+                html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.heading}</h2>`
+                :
+                html`
+                <a class="${rootClass}-itemLink">
+                  ${when(hasIcon, () => Icon({ iconName }, context))}
+                  <span class="${rootClass}-link-text">${item.title}</span>
+                </a>
+                `
+              }
+              <ul class=${classMap({
+                [rootClass]: true,
+                [`${rootClass}--hasIcon`]: hasIcon,
+                ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+              })}
+              aria-labelledby=${ifDefined(item.heading) ? `${item.id}-heading` : ""}>
+                  ${repeat(item.levelTwoItems, (item) => item.id, (item) => {
+                    return SideNavItem({
+                      variant,
+                      hasIcon,
+                      iconName,
+                      ...item
+                    }, context);
+                  })}
+                </ul>
+              </li>
+            `;
+          }
+          else {
+            return SideNavItem({
+              hasIcon,
+              iconName,
+              ...item
+            }, context);
+          }
+        })}
+      </ul>
+    </nav>
+  `;
+};
 
 export const SideNavItem = ({
 	rootClass = "spectrum-SideNav",
@@ -87,6 +91,11 @@ export const SideNavItem = ({
 	iconName,
 	customClasses = [],
 } = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
 	return html`
     <li
       id=${ifDefined(id)}

@@ -6,9 +6,6 @@ import { classMap } from "lit/directives/class-map.js";
 import { repeat } from "lit/directives/repeat.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Pagination",
@@ -17,6 +14,11 @@ export const Template = ({
 	variant,
 	items,
 } = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
 	if (variant === "explicit") {
 		return html`
 			<nav

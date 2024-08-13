@@ -3,9 +3,6 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorLoupe",
@@ -14,7 +11,13 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	selectedColor = "rgba(255, 0, 0, 0.5)",
-} = {}) => svg`
+} = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
+	return svg`
     <svg
       class=${classMap({
         [rootClass]: true,
@@ -52,4 +55,5 @@ export const Template = ({
         <use xlink:href="#loupe-path" mask="url(#loupe-mask)" class="spectrum-ColorLoupe-outer-border" />
       </g>
     </svg>
-`;
+  `;
+};

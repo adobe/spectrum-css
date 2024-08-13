@@ -5,9 +5,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorHandle",
@@ -18,6 +15,11 @@ export const Template = ({
 	selectedColor = "rgba(255, 0, 0, 50%)",
 	customStyles = {},
 } = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
 	return html`
 		<div style=${styleMap({
 			// Why 67px? That's the height of the color loupe element

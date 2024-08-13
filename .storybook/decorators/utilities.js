@@ -210,19 +210,27 @@ export const ArgGrid = ({
 	withBorder = true,
 	...args
 } = {}, context = {}) => {
-	if (typeof options === "undefined" || !options.length) return nothing;
 	if (typeof argKey === "undefined") {
 		console.warn("ArgGrid: argKey is required to render the grid.");
 		return nothing;
+	} else if (context?.argTypes?.[argKey] === undefined) {
+		// Check if the argKey exists in the argTypes
+		console.warn(`ArgGrid: ${argKey} is not a valid argType for this story.`);
+		return nothing;
+	}
+
+	if (typeof options === "undefined" || !options.length) {
+		options = context?.argTypes?.[argKey]?.options ?? [];
 	}
 
 	return Container({
 		heading,
 		direction,
+		withBorder,
 		content: options.map((opt) => Container({
 			heading: labels[opt] ?? capitalize(opt),
 			level,
-			withBorder,
+			withBorder: false,
 			wrapperStyles,
 			content: Template({ ...args, [argKey]: opt }, context)
 		})),

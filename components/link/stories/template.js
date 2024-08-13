@@ -5,9 +5,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Link",
@@ -22,23 +19,30 @@ export const Template = ({
 	isVisited = false,
 	id = getRandomId("link"),
 	customClasses = [],
-} = {}) => html`
-	<a
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--quiet`]: isQuiet,
-			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-			[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
-				typeof staticColor !== "undefined",
-			"is-hover": isHovered,
-			"is-active": isActive,
-			"is-focus-visible": isFocused,
-			"is-visited": isVisited,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-		href=${ifDefined(url)}
-	>
-		${text}
-	</a>
-`;
+} = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
+	return html`
+		<a
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--quiet`]: isQuiet,
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+					typeof staticColor !== "undefined",
+				"is-hover": isHovered,
+				"is-active": isActive,
+				"is-focus-visible": isFocused,
+				"is-visited": isVisited,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			href=${ifDefined(url)}
+		>
+			${text}
+		</a>
+	`;
+};

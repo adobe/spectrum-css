@@ -6,9 +6,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ClearButton",
@@ -18,27 +15,34 @@ export const Template = ({
 	id = getRandomId("clearbutton"),
 	customClasses = [],
 	customStyles = {},
-}, context) => html`
-	<button
-		type="reset"
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--size${size?.toUpperCase()}`]:
-				typeof size !== "undefined",
-			[`${rootClass}--overBackground`]: staticColor === "white",
-			"is-disabled": isDisabled,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		id=${ifDefined(id)}
-		style=${styleMap(customStyles)}
-		?disabled=${isDisabled}
-	>
-		<div class="${rootClass}-fill">
-			${Icon({
-				size,
-				iconName: "Cross",
-				customClasses: [`${rootClass}-icon`],
-			}, context)}
-		</div>
-	</button>
-`;
+} = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
+	return html`
+		<button
+			type="reset"
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--size${size?.toUpperCase()}`]:
+					typeof size !== "undefined",
+				[`${rootClass}--overBackground`]: staticColor === "white",
+				"is-disabled": isDisabled,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			id=${ifDefined(id)}
+			style=${styleMap(customStyles)}
+			?disabled=${isDisabled}
+		>
+			<div class="${rootClass}-fill">
+				${Icon({
+					size,
+					iconName: "Cross",
+					customClasses: [`${rootClass}-icon`],
+				}, context)}
+			</div>
+		</button>
+	`;
+};
