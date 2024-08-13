@@ -10,6 +10,7 @@ import { capitalize } from "lodash-es";
 
 import "../index.css";
 import "../themes/express.css";
+import "../themes/spectrum-two.css";
 import "../themes/spectrum.css";
 
 export const Template = ({

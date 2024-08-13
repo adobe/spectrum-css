@@ -5,6 +5,7 @@ import { styleMap } from "lit-html/directives/style-map.js";
 
 import "../index.css";
 import "../themes/express.css";
+import "../themes/spectrum-two.css";
 import "../themes/spectrum.css";
 
 export const Template = ({
