@@ -7,9 +7,6 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Template = (args = {}, context = {}) => {
 	let {
@@ -24,6 +21,11 @@ export const Template = (args = {}, context = {}) => {
 		customClasses = [],
 		customStyles = {},
 	} = args;
+
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
 
 	// If the content is not an array, make it an array for easier processing
 	if (!Array.isArray(content)) {

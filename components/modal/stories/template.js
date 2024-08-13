@@ -5,9 +5,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 /**
  * Just the modal markup.
@@ -20,6 +17,11 @@ const Modal = ({
 	variant,
 	content = [],
 } = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
 	return html`
 		<div
 			class=${classMap({
@@ -43,6 +45,11 @@ export const Template = ({
 	skipWrapper = false,
 	...args
 } = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
 	return html`
 		${when(skipWrapper,
 			() => Modal({ rootClass, ...args }, context),

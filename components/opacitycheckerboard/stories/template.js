@@ -5,9 +5,6 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-OpacityCheckerboard",
@@ -17,18 +14,26 @@ export const Template = ({
 	id = getRandomId("opacity-checkerboard"),
 	content = [],
 	role,
-}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${ifDefined(styleMap({
-			"--mod-opacity-checkerboard-position": backgroundPosition,
-			...customStyles,
-		}))}
-		role=${ifDefined(role)}
-		id=${ifDefined(id)}
-	>
-		${renderContent(content)}
-	</div>`;
+} = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${ifDefined(styleMap({
+				"--mod-opacity-checkerboard-position": backgroundPosition,
+				...customStyles,
+			}))}
+			role=${ifDefined(role)}
+			id=${ifDefined(id)}
+		>
+			${renderContent(content)}
+		</div>
+	`;
+};

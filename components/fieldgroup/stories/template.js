@@ -7,26 +7,25 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
-export const Template = (
-	{
-		rootClass = "spectrum-FieldGroup",
-		customClasses = [],
-		layout = "vertical",
-		inputType = "radio",
-		isReadOnly = false,
-		isRequired = false,
-		label,
-		labelPosition,
-		isInvalid,
-		helpText,
-		items = [],
-	} = {},
-	context = {},
-) => {
+export const Template = ({
+	rootClass = "spectrum-FieldGroup",
+	customClasses = [],
+	layout = "vertical",
+	inputType = "radio",
+	isReadOnly = false,
+	isRequired = false,
+	label,
+	labelPosition,
+	isInvalid,
+	helpText,
+	items = [],
+} = {}, context = {}) => {
+	const { globals = {} } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
 	return html`
 		<div
 			class=${classMap({

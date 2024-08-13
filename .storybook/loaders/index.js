@@ -13,4 +13,3 @@
 
 export { FontLoader } from "./font-loader.js";
 export { IconLoader } from "./icon-loader.js";
-export { TokenLoader } from "./token-loader.js";

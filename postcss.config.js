@@ -21,7 +21,7 @@ module.exports = ({
 	stripLocalSelectors = false,
 	resolveImports = true,
 	shouldCombine = false,
-	theme = "spectrum",
+	theme = "spectrum-two",
 	lint = true,
 	verbose = true,
 	minify = false,
@@ -50,13 +50,6 @@ module.exports = ({
 			after: [".spectrum.spectrum--legacy"],
 		};
 	}
-
-	// if (cwd && cwd.split(sep).pop() === ".storybook") {
-	// 	skipMapping = false;
-	// 	referencesOnly = false;
-	// 	preserveVariables = true;
-	// 	stripLocalSelectors = false;
-	// }
 
 	return {
 		...options,

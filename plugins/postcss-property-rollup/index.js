@@ -58,6 +58,7 @@ module.exports = ({
 			// If no new selector is provided, combine the declarations into the last rule
 			const lastIdx = rules.length - 1;
 			const lastRule = rules[lastIdx];
+
 			if (!lastRule) return;
 
 			rules.forEach((rule, index) => {

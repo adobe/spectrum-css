@@ -11,7 +11,7 @@
  */
 
 import fs from "node:fs";
-import { sep } from "node:path";
+import { relative, sep } from "node:path";
 
 import postcss from "postcss";
 import valuesParser from "postcss-values-parser";
@@ -26,11 +26,11 @@ import "colors";
 
 const ruleName = "spectrum-tools/theme-alignment";
 const messages = ruleMessages(ruleName, {
-	missing: (baseFile, sourceFile) => `A base file (${baseFile}) is required to validate ${sourceFile}.`,
+	missing: (baseFile, sourceFile, rootPath) => `A base file (${relative(rootPath, baseFile)}) is required to validate ${relative(rootPath, sourceFile)}.`,
 	// Report if a selector is in this file but not in the base file
-	expected: (selector, baseFile) => `Selector "${selector}" is not used or defined in the base file (${baseFile}).`,
+	expected: (selector, baseFile, rootPath) => `Selector "${selector}" is not used or defined in the base file (${relative(rootPath, baseFile)}).`,
 	// Report if a custom property is used in this file but not in the base file
-	referenced: (property, baseFile) => `Custom property "${property}" is not used or defined by the base file (${baseFile}).`,
+	referenced: (property, baseFile, rootPath) => `Custom property "${property}" is not used or defined by the base file (${relative(rootPath, baseFile)}).`,
 });
 
 /** @type {import('stylelint').Plugin} */
@@ -49,15 +49,20 @@ const ruleFunction = (enabled) => {
 
 		const sourceFile = root.source.input.file;
 		const parts = sourceFile ? sourceFile.split(sep) : [];
+		const isTheme = parts[parts.length - 2] === "themes";
+		const filename = parts[parts.length - 1];
+
+		if (!isTheme || filename === "spectrum-two.css") return;
 
 		// All the parts of the source file but replace the filename with spectrum-two.css
 		const baseFile = [...parts.slice(0, -1), "spectrum-two.css"].join(sep);
+		const rootPath = parts.slice(0, -2).join(sep);
 
 		// If the base file doesn't exist, throw an error
 		if (!fs.existsSync(baseFile)) {
 			report({
 				message: messages.missing,
-				messageArgs: [baseFile, sourceFile],
+				messageArgs: [baseFile, sourceFile, rootPath],
 				node: root,
 				result,
 				ruleName,
@@ -69,41 +74,40 @@ const ruleFunction = (enabled) => {
 		const baseContent = fs.readFileSync(baseFile, "utf8");
 		const baseRoot = postcss.parse(baseContent);
 
-		/* A map of all selectors in the base file and what properties they define */
-		const baseProperties = new Map();
+		/* A list of all selectors in the base file */
+		const baseSelectors = new Set();
+		/* A list of all properties in the base file */
+		const baseProperties = new Set();
 
 		/* Iterate over selectors in the base root */
 		baseRoot.walkRules((rule) => {
-			const properties = new Set();
+			// Add this selector to the selectors set
+			baseSelectors.add(rule.selector);
+
 			rule.walkDecls((decl) => {
 				// If this is a custom property, add it to the properties set
 				if (decl.prop.startsWith("--")) {
-					properties.add(decl.prop);
+					baseProperties.add(decl.prop);
 				}
 
 				// If the value of this declaration includes a custom property, add it to the properties set
 				const parsed = valuesParser.parse(decl.value);
 				parsed.walk((node) => {
 					if (node.type === "func" && node.value === "var") {
-						properties.add(node.nodes[0].value);
+						baseProperties.add(node.nodes[0].value);
 					}
 				});
 			});
-
-			// Add the properties set to the map
-			baseProperties.set(rule.selector, properties);
 		});
 
 		/* Iterate over selectors in the source root and validate that they align with the base */
 		root.walkRules((rule) => {
 			// Check if this selector exists in the base
-			const properties = baseProperties.get(rule.selector);
-
-			// Report any selectors that don't exist in the base
-			if (!properties) {
+			if (!baseSelectors.has(rule.selector)) {
+				// Report any selectors that don't exist in the base
 				report({
 					message: messages.expected,
-					messageArgs: [rule.selector, baseFile],
+					messageArgs: [rule.selector, baseFile, rootPath],
 					node: rule,
 					result,
 					ruleName,
@@ -119,10 +123,10 @@ const ruleFunction = (enabled) => {
 				}
 
 				// If this is a custom property, check if it's used in the base
-				if (!properties.has(decl.prop)) {
+				if (!baseProperties.has(decl.prop)) {
 					report({
 						message: messages.referenced,
-						messageArgs: [decl.prop, baseFile],
+						messageArgs: [decl.prop, baseFile, rootPath],
 						node: decl,
 						result,
 						ruleName,
