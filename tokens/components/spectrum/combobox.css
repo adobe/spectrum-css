@@ -126,6 +126,7 @@
 	--system-combobox-quiet-button-inline-offset: calc(var(--mod-combobox-block-size, var(--system-combobox-block-size)) / 2 - var(--mod-combobox-icon-size, var(--system-combobox-icon-size)) / 2);
 	--system-combobox-quiet-picker-button-background-color-quiet: transparent;
 	--system-combobox-quiet-picker-button-border-color-quiet: transparent;
+	--system-combobox-quiet-picker-button-border-color: var(--system-combobox-quiet-picker-button-border-color-quiet);
 	--system-combobox-quiet-size-s-spacing-label-to: var(--spectrum-field-label-to-component-quiet-small);
 	--system-combobox-quiet-size-m-spacing-label-to: var(--spectrum-field-label-to-component-quiet-medium);
 	--system-combobox-quiet-size-l-spacing-label-to: var(--spectrum-field-label-to-component-quiet-large);
