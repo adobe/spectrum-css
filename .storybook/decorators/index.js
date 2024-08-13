@@ -20,8 +20,8 @@ export { withTestingPreviewWrapper } from "./testing-preview.js";
 export { withTextDirectionWrapper } from "./text-direction.js";
 
 /* This is exported but must be opted-into on a component-by-component basis */
-export { withUnderlayWrapper } from "./overlay.js";
 export { withSizingWrapper } from "./sizing.js";
+export { withUnderlayWrapper } from "./underlay.js";
 
 /* External decorators exported for use in stories */
 export { withActions } from "@storybook/addon-actions/decorator";
