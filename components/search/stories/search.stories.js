@@ -51,7 +51,7 @@ export default {
 				"click .spectrum-Search-icon",
 			],
 		},
-		componentVersion: version,
+		componentVersion: version
 	},
 };
 

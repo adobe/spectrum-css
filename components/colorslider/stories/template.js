@@ -6,9 +6,6 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorSlider",
@@ -30,7 +27,11 @@ export const Template = ({
 	selectedColor = "rgba(255, 0, 0, 1)",
 	colorHandleStyle = {},
 } = {}, context = {}) => {
-	const { updateArgs } = context;
+	const { globals = {}, updateArgs } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
 	return html`
     <div
       class=${classMap({

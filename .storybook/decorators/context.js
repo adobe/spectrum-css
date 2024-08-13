@@ -1,7 +1,7 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
-import legacy from "@spectrum-css/tokens-legacy?inline";
+import legacyTokens from "@spectrum-css/tokens-legacy?inline";
 import tokens from "@spectrum-css/tokens?inline";
 
 /**
@@ -22,8 +22,8 @@ export const withContextWrapper = makeDecorator({
 				context = "spectrum",
 				scale = "medium",
 			} = {},
-			viewMode,
 			id,
+			viewMode,
 		} = data;
 
 		const staticColorSettings = {
@@ -51,7 +51,7 @@ export const withContextWrapper = makeDecorator({
 			for (const container of fetchContainers(id, viewMode === "docs")) {
 				// Start by attaching the appropriate tokens to the container
 				toggleStyles(container, "tokens", tokens, isModern && !isRaw);
-				toggleStyles(container, "tokens-legacy", legacy, !isModern && !isRaw);
+				toggleStyles(container, "tokens-legacy", legacyTokens, !isModern && !isRaw);
 
 				// Check if the container has a static color element
 				const hasStaticElement = container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack, .${rootClass}--overBackground)`);

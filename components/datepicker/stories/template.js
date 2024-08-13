@@ -9,9 +9,6 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import "../index.css";
-import "../themes/express.css";
-import "../themes/spectrum-two.css";
-import "../themes/spectrum.css";
 
 export const DatePicker = ({
 	rootClass = "spectrum-DatePicker",
@@ -30,6 +27,10 @@ export const DatePicker = ({
 	lastDay,
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
+
+	if (globals.context === "express") import("../themes/express.css");
+	else if (globals.context === "legacy") import("../themes/spectrum.css");
+
 	const lang = globals.lang ?? "en-US";
 
 	const triggerId = getRandomId("datepicker-trigger");

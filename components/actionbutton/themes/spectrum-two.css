@@ -164,18 +164,6 @@
 			--spectrum-actionbutton-edge-to-visual-only: calc(var(--spectrum-component-edge-to-visual-only-300) - var(--spectrum-actionbutton-border-width));
 		}
 
-		&.spectrum-ActionButton--staticBlack,
-		&.spectrum-ActionButton--staticWhite {
-			&.spectrum-ActionButton--quiet {
-				--spectrum-actionbutton-border-color-default: transparent;
-				--spectrum-actionbutton-border-color-hover: transparent;
-				--spectrum-actionbutton-border-color-down: transparent;
-				--spectrum-actionbutton-border-color-focus: transparent;
-
-				--spectrum-actionbutton-border-color-disabled: transparent;
-			}
-		}
-
 		&.spectrum-ActionButton--staticBlack {
 			--spectrum-actionbutton-background-color-default: transparent;
 			--spectrum-actionbutton-background-color-hover: var(--spectrum-transparent-black-300);
@@ -248,6 +236,18 @@
 				--spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-black));
 
 				--spectrum-actionbutton-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
+				--spectrum-actionbutton-border-color-disabled: transparent;
+			}
+		}
+
+		&.spectrum-ActionButton--staticBlack,
+		&.spectrum-ActionButton--staticWhite {
+			&.spectrum-ActionButton--quiet {
+				--spectrum-actionbutton-border-color-default: transparent;
+				--spectrum-actionbutton-border-color-hover: transparent;
+				--spectrum-actionbutton-border-color-down: transparent;
+				--spectrum-actionbutton-border-color-focus: transparent;
+
 				--spectrum-actionbutton-border-color-disabled: transparent;
 			}
 		}
