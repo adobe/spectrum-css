@@ -11,7 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-export * from "./ColorPalette.jsx";
-export * from "./ComponentDetails.jsx";
-export * from "./ThemeContainer.jsx";
-export * from "./Typography.jsx";
+export { default as ComponentDetails } from "./component-details.jsx";

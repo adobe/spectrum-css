@@ -1,19 +1,26 @@
-import "@spectrum-css/typography";
-
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
+/**
+ * Renders a heading or code block that identifies the test case and is ignored by the snapshots.
+ * @param {Object} props
+ * @param {string} props.type - The type of heading or code block to render.
+ * @param {string} props.content - The content to render in the heading or code block.
+ * @param {string} props.size - The size of the heading to render.
+ * @param {string} props.weight - The weight of the heading to render.
+ * @param {string[]} props.customClasses - Additional classes to apply to the heading or code block.
+ */
 const Heading = ({
 	type = "heading",
 	content,
 	size = "m",
 	weight,
 	customClasses = [],
-}) => {
-	const rootClass = type === "code" ? "spectrum-Code" : "spectrum-Heading";
+} = {}) => {
+	const rootClass = type === "code" ? "spectrum-Code" : "spectrum-Detail";
 	const derivedClasses = {
 		[rootClass]: true,
 		[`${rootClass}--size${size?.toUpperCase()}`]: true,
@@ -49,15 +56,9 @@ export const Container = ({
 	level = 1,
 	direction = "row",
 	withBorder = true,
-	containerStyles = {
-		"display": "flex",
-		"flex-direction": "column",
-		"gap": "6px",
-    "padding-inline": "12px",
-    "padding-block-end": "12px",
-	},
+	containerStyles = {},
 	wrapperStyles = {},
-}) => {
+} = {}) => {
 	let headingConfig = { size: "l" };
 	let gap = 40;
 
@@ -119,6 +120,17 @@ export const Container = ({
 	`;
 };
 
+/**
+ * Iterates over provided state data and renders the template for each state in a testing grid.
+ * @param {Object} props
+ * @param {Function} props.Template - The template to render for each state.
+ * @param {string} props.direction - The direction of the state content.
+ * @param {Object[]} props.stateData - The data for each state to render.
+ * @param {Object} props.containerStyles - Additional styles to apply to the container.
+ * @param {Object} props.wrapperStyles - Additional styles to apply to the content wrapper.
+ * @param {Object} props.args - The arguments to pass to the template.
+ * @param {Object} context - The context to pass to the template.
+ */
 export const States = ({
 	Template,
 	direction = "row",
@@ -203,14 +215,6 @@ export const ArgGrid = ({
 		console.warn("ArgGrid: argKey is required to render the grid.");
 		return nothing;
 	}
-
-	const content = sizes.map((size) => Container({
-		heading: `[size=${size}]`,
-		type: "code",
-		level: 3,
-		withBorder: false,
-		content: Template({ ...args, size }, context)
-	}));
 
 	return Container({
 		heading,
@@ -405,6 +409,15 @@ export const Variants = ({
 	};
 };
 
+/**
+ * Renders content provided in an array (or in various formats) with optional callback for processing.
+ * @param {Array|Object|Function|string} content - The content to render.
+ * @param {Object} props
+ * @param {Object} props.context - The context to pass to the callback.
+ * @param {Object} props.args - The arguments to pass to the callback.
+ * @param {Function} props.callback - The callback to process the content.
+ * @returns {TemplateResult} The rendered content.
+ */
 export const renderContent = (content = [], {
 	context = {},
 	args = {},
