@@ -25,6 +25,30 @@
 	min-inline-size: var(--mod-dial-min-height, var(--spectrum-dial-min-height));
 	block-size: auto;
 	min-block-size: var(--mod-dial-min-height, var(--spectrum-dial-min-height));
+
+	&.is-disabled {
+		.spectrum-Dial-labelContainer {
+			color: var(--highcontrast-dial-label-text-color-disabled, var(--mod-dial-label-text-color-disabled, var(--spectrum-dial-label-text-color-disabled)));
+		}
+
+		.spectrum-Dial-controls {
+			&::after,
+			&::before {
+				background-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
+			}
+		}
+
+		.spectrum-Dial-handle {
+			cursor: default;
+			background: var(--highcontrast-dial-background-color-default, var(--mod-dial-background-color-default, var(--spectrum-dial-background-color-default)));
+			border-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
+
+			&::after,
+			&::before {
+				background-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
+			}
+		}
+	}
 }
 
 .spectrum-Dial-label {
@@ -193,13 +217,10 @@
 	/*  Remove the margin for input in Firefox and Safari. */
 	margin: 0;
 	padding: 0;
-	position: absolute;
-	overflow: hidden;
-	/* @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
+
+	/* stylelint-disable-next-line number-max-precision -- @todo Replace with opacity 0. Workaround for a ChromeVox legacy bug (circa 2018). */
 	opacity: 0.000001;
-	cursor: default;
 	appearance: none;
-	opacity: 0.000001;
 	border: 0;
 
 	&:focus {
@@ -207,35 +228,8 @@
 	}
 }
 
-.spectrum-Dial {
-	&.is-disabled {
-		.spectrum-Dial-labelContainer {
-			color: var(--highcontrast-dial-label-text-color-disabled, var(--mod-dial-label-text-color-disabled, var(--spectrum-dial-label-text-color-disabled)));
-		}
-
-		.spectrum-Dial-controls {
-			&::after,
-			&::before {
-				background-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
-			}
-		}
-
-		.spectrum-Dial-handle {
-			cursor: default;
-			background: var(--highcontrast-dial-background-color-default, var(--mod-dial-background-color-default, var(--spectrum-dial-background-color-default)));
-			border-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
-
-			&::after,
-			&::before {
-				background-color: var(--highcontrast-dial-handle-border-color-disabled, var(--mod-dial-handle-border-color-disabled, var(--spectrum-dial-handle-border-color-disabled)));
-			}
-		}
-	}
-}
-
 .u-isGrabbing {
 	cursor: ns-resize;
-	cursor: -webkit-grabbing;
 	cursor: grabbing;
 
 	user-select: none;
