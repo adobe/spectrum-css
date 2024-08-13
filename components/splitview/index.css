@@ -143,6 +143,7 @@
 		outline: none;
 	}
 
+	&.is-focused,
 	&:focus-visible {
 		outline: none;
 		background-color: var(--highcontrast-splitview-handle-background-color-focus, var(--mod-splitview-handle-background-color-focus, var(--spectrum-splitview-handle-background-color-focus)));
