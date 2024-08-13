@@ -1,6 +1,9 @@
 import { version } from "../package.json";
-import { {{ pascalCase name }}Group } from "./template.js";
+import { Template } from "./template.js";
+import { isDisabled, isSelected, isHovered, isFocused } from "@spectrum-css/preview/types";
+import { {{ pascalCase name }}Group } from "./{{ pascalCase name }}.test.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import pkgJson from "../package.json";
 
 /**
   * {{ description }}
@@ -21,10 +24,15 @@ export default {
       options: ["s", "m", "l", "xl"],
       control: "select"
     },
+    isDisabled,
+    isSelected,
+    isHovered,
+    isFocused,
   },
   args: {
     rootClass: "spectrum-{{ pascalCase name }}",
     size: "m",
+    isDisabled: false
   },
   parameters: {
     actions: {
@@ -35,11 +43,22 @@ export default {
       type: "figma",
       url: "",
     },
+    componentVersion: pkgJson.version,
   }
 };
 
 export const Default = {{ pascalCase name }}Group.bind({});
 Default.args = {};
+
+// ********* DOCS ONLY ********* //
+export const Disabled = Template.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+  isDisabled: true
+};
+Disabled.parameters = {
+  chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = Default.bind({});

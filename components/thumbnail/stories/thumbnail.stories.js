@@ -1,7 +1,9 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { SizingGroup, Template } from "./template";
+import { Template } from "./template.js";
+import { ThumbnailGroup } from "./thumbnail.test.js";
 
 /**
  * A thumbnail is used to display a preview of an image, layer, or effect.
@@ -120,33 +122,11 @@ export default {
 };
 
 // @todo combine variants into one snapshot
-export const Default = Template.bind({});
-Default.args = {
-	imageURL: "example-ava.png",
-	altText: "Shantanu",
-};
-
-/**
- * The layer variant is used in layer management (such as the Compact or Detail Layers panels).
- */
-export const Layer = Template.bind({});
-Layer.args = {
-	isLayer: true,
-	isSelected: false,
-	imageURL: "flowers.png",
-	altText: "Flowers",
-};
-
-/**
- * Thumbnail supports transparent images with a background (color or image) behind them.
- */
-export const WithBackground = Template.bind({});
-WithBackground.args = {
-	backgroundColor: "orange",
-};
+export const Default = ThumbnailGroup.bind({});
+Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = ThumbnailGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
@@ -156,6 +136,33 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
+/**
+ * The layer variant is used in layer management (such as the Compact or Detail Layers panels).
+ */
+export const Layer = Template.bind({});
+Layer.tags = ["!dev"];
+Layer.args = {
+	isLayer: true,
+	isSelected: false,
+	imageURL: "flowers.png",
+	altText: "Flowers",
+};
+Layer.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Thumbnail supports transparent images with a background (color or image) behind them.
+ */
+export const WithBackground = Template.bind({});
+WithBackground.tags = ["!dev"];
+WithBackground.args = {
+	backgroundColor: "orange",
+};
+WithBackground.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 export const Focused = Template.bind({});
 Focused.tags = ["!dev"];
 Focused.args = {
@@ -188,7 +195,12 @@ Disabled.parameters = {
 /**
  * Thumbnail sizes scale exponentially, based on the Spectrum type scale, ranging from size-50 to size-1000.
  */
-export const Sizing = SizingGroup.bind({});
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args
+}, context);
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: {

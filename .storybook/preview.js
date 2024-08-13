@@ -1,24 +1,24 @@
 import { setConsoleOptions } from "@storybook/addon-console";
 import {
-  withActions,
-  withArgEvents,
-  withContextWrapper,
-  withIconSpriteSheet,
-  withLanguageWrapper,
-  withReducedMotionWrapper,
-  withTestingPreviewWrapper,
-  withTextDirectionWrapper,
+	withActions,
+	withArgEvents,
+	withContextWrapper,
+	withIconSpriteSheet,
+	withLanguageWrapper,
+	withReducedMotionWrapper,
+	withTestingPreviewWrapper,
+	withTextDirectionWrapper
 } from "./decorators";
 import {
-  FontLoader,
-  IconLoader,
-  TokenLoader
+	FontLoader,
+	IconLoader,
+	TokenLoader,
 } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
 import {
-  argTypes,
-  globalTypes
+	argTypes,
+	globalTypes
 } from "./types";
 
 import "./assets/base.css";
@@ -37,7 +37,7 @@ setConsoleOptions({
 });
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
-export const parameters = {
+const parameters = {
 	layout: "padded",
 	showNav: true,
 	showTabs: true,
@@ -73,7 +73,7 @@ export const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "[data-html-preview]",
+		root: "[data-html-preview]:first-of-type",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -87,10 +87,7 @@ export const parameters = {
 	},
 	docs: {
 		page: DocumentationTemplate,
-		story: {
-			inline: true,
-			height: "200px",
-		},
+		story: { inline: true },
 		source: {
 			type: "dynamic",
 			language: "html",
@@ -113,31 +110,29 @@ export const parameters = {
 	componentVersion: undefined,
 };
 
-export const decorators = [
-	withTextDirectionWrapper,
-	withLanguageWrapper,
-	withReducedMotionWrapper,
-	withContextWrapper,
-	withTestingPreviewWrapper,
-	withArgEvents,
-	withActions,
-	withIconSpriteSheet,
-];
-
 export default {
 	title: "Spectrum CSS",
-	globalTypes,
+	parameters,
 	argTypes,
+	globalTypes,
 	args: {
 		customClasses: [],
 		customStyles: {},
 	},
-	parameters,
-	decorators,
+	decorators: [
+		withLanguageWrapper,
+		withReducedMotionWrapper,
+		withTextDirectionWrapper,
+		withContextWrapper,
+		withTestingPreviewWrapper,
+		withArgEvents,
+		withActions,
+		withIconSpriteSheet,
+	],
 	loaders: [
 		FontLoader,
 		IconLoader,
 		TokenLoader,
 	],
-	tags: ["autodocs"],
+	tags: ["autodocs", "dev"],
 };

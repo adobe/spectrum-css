@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { Template } from "./template.js";
+import { ToastGroup } from "./toast.test.js";
 
 /**
  * Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken.
@@ -43,36 +44,48 @@ export default {
 	},
 };
 
-// @todo combine variants into one snapshot
-export const Default = Template.bind({});
+export const Default = ToastGroup.bind({});
 Default.args = {
 	message: "File has been archived",
 	inlineButtonLabel: "Undo",
 };
 
+// ********* DOCS ONLY ********* //
 export const Info = Template.bind({});
+Info.tags = ["!dev"];
 Info.args = {
 	variant: "info",
 	message: "A new version of Lightroom Classic is now available",
 	inlineButtonLabel: "Update",
 };
+Info.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Negative = Template.bind({});
+Negative.tags = ["!dev"];
 Negative.args = {
 	variant: "negative",
 	message: "Unable to delete file",
 	inlineButtonLabel: "Eject",
 };
+Negative.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const Positive = Template.bind({});
+Positive.tags = ["!dev"];
 Positive.args = {
 	variant: "positive",
 	message: "Copied to clipboard",
 	inlineButtonLabel: "Eject",
 };
+Positive.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = ToastGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

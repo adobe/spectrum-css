@@ -1,10 +1,10 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
-import { capitalize, lowerCase } from "lodash-es";
+import { capitalize } from "lodash-es";
 
 import "../index.css";
 
@@ -62,7 +62,7 @@ export const Template = ({
 	customStyles = {},
 	customIconClasses = [],
 	onclick,
-	id,
+	id = getRandomId("actionbutton"),
 	testId,
 	role = "button",
 } = {}, context = {}) => {
@@ -79,7 +79,7 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--emphasized`]: isEmphasized,
-				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+				[`${rootClass}--static${capitalize(staticColor)}`]:
 					typeof staticColor !== "undefined",
 				["is-disabled"]: isDisabled,
 				["is-selected"]: isSelected,
@@ -88,8 +88,8 @@ export const Template = ({
 				["is-active"]: isActive,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			id=${ifDefined(id)}
-			data-testid=${ifDefined(testId)}
+			id=${id}
+			data-testid=${testId ?? id}
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
@@ -101,11 +101,11 @@ export const Template = ({
 				updateArgs({ isFocused: false });
 			}}
 		>
-			${when(typeof hasPopup !== "undefined" && hasPopup !== "false", () =>
+			${when(hasPopup && hasPopup !== "false", () =>
 				Icon({
 					size,
 					iconName: "CornerTriangle",
-					setName: "workflow",
+					setName: "ui",
 					customClasses: [`${rootClass}-hold`],
 				}, context)
 			)}
@@ -124,80 +124,3 @@ export const Template = ({
 		</button>
 	`;
 };
-
-export const ActionButtons = (args, context) => {
-	return html`
-		${Template(args, context)}
-		${Template({
-			...args,
-			iconName: undefined,
-		}, context)}
-		${Template({
-			...args,
-			hideLabel: true,
-		}, context)}
-		${Template({
-			...args,
-			hasPopup: "menu",
-			label: "Has pop-up",
-			iconName: undefined,
-		}, context)}
-	`;
-};
-
-const Truncation = (args, context) => {
-	return html`
-		${Template(args, context)}
-		${Template({
-			...args,
-			iconName: undefined,
-		}, context)}
-	`;
-};
-
-export const ActionButtonGroup = Variants({
-	Template: ActionButtons,
-	stateDirection: "column",
-	testData: [
-		{
-			testHeading: "Standard"
-		},
-		{
-			testHeading: "Emphasized",
-			isEmphasized: true,
-		},
-		{
-			testHeading: "Quiet",
-			isQuiet: true,
-		},
-		{
-			Template: Truncation,
-			testHeading: "Truncation",
-			label: "Truncate this long content",
-			customStyles: {
-				maxInlineSize: "100px"
-			},
-			withStates: false,
-		},
-	],
-	stateData: [{
-		testHeading: "Disabled",
-		isDisabled: true,
-	}, {
-		testHeading: "Selected",
-		isSelected: true,
-	}, {
-		testHeading: "Focused",
-		isFocused: true,
-	}, {
-		testHeading: "Hovered",
-		isHovered: true,
-	}, {
-		testHeading: "Active",
-		isActive: true,
-	}, {
-		testHeading: "Disabled + selected",
-		isDisabled: true,
-		isSelected: true,
-	}],
-});

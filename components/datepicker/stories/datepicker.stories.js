@@ -1,9 +1,9 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isOpen, isValid } from "@spectrum-css/preview/types";
-import { html } from "lit";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { DatePickerGroup } from "./datepicker.test.js";
+import { Template } from "./template.js";
 
 /**
  * A date picker displays a text field input with a button next to it, and can display two text fields next to each other for choosing a date range.
@@ -100,43 +100,51 @@ export default {
 				...(CalendarStories.parameters.actions.handles ?? [])
 			],
 		},
+		componentVersion: version,
 		docs: {
 			story: {
-				height: "350px"
+				height: "50px"
 			}
 		},
-		componentVersion: version,
 	},
-	tags: ["!autodocs"],
-	decorators: [
-		// Add padding for VRT so drop shadows are not cut off.
-		(story) => window.isChromatic() ? html`<div style="padding: 32px; min-height: 450px;">${story()}</div>` : story(),
-	],
 };
 
-export const Default = Template.bind({});
+export const Default = DatePickerGroup.bind({});
 Default.args = {};
+Default.parameters = {
+	docs: {
+		story: {
+			height: "300px"
+		}
+	},
+};
 
+// ********* DOCS ONLY ********* //
 export const Quiet = Template.bind({});
+Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
 };
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "300px"
+		}
+	},
+};
 
 export const Range = Template.bind({});
+Range.tags = ["!dev"];
 Range.args = {
 	lastDay: 3,
 	isRange: true,
 	isOpen: false,
 };
 Range.parameters = {
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
+	chromatic: { disableSnapshot: true },
 };
 
-// ********* DOCS ONLY ********* //
 export const QuietRange = Template.bind({});
 QuietRange.tags = ["!dev"];
 QuietRange.args = {
@@ -147,11 +155,6 @@ QuietRange.args = {
 };
 QuietRange.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const Invalid = Template.bind({});
@@ -162,11 +165,6 @@ Invalid.args = {
 };
 Invalid.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
 
 export const QuietInvalid = Template.bind({});
@@ -178,13 +176,7 @@ QuietInvalid.args = {
 };
 QuietInvalid.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px"
-		}
-	},
 };
-
 
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];
@@ -193,11 +185,6 @@ ReadOnly.args = {
 };
 ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px",
-		}
-	}
 };
 
 export const Disabled = Template.bind({});
@@ -207,12 +194,8 @@ Disabled.args = {
 };
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px",
-		}
-	}
 };
+
 export const QuietDisabled = Template.bind({});
 QuietDisabled.tags = ["!dev"];
 QuietDisabled.args = {
@@ -221,15 +204,10 @@ QuietDisabled.args = {
 };
 QuietDisabled.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			height: "50px",
-		}
-	}
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = DatePickerGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

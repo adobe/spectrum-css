@@ -1,7 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { ColorSliderGroup, Template } from "./template";
+import { ColorSliderGroup } from "./colorslider.test.js";
+import { Template } from "./template.js";
 
 /**
  * The color slider component lets users visually change an individual channel of a color.
@@ -24,6 +25,13 @@ export default {
 			type: { name: "array" },
 			table: { disable: true },
 		},
+		selectedColor: {
+			name: "Selected color",
+			description: "The color of the handle.",
+			type: { name: "string" },
+			accept: "hex, rgb, rgba",
+			control: "color",
+		},
 		gradientType: {
 			name: "Gradient type",
 			description: "The gradient can be defined in the markup using CSS or with an image.",
@@ -38,6 +46,7 @@ export default {
 		isFocused: false,
 		gradientType: "gradient",
 		vertical: false,
+		selectedColor: "rgba(255, 0, 0, 1)",
 	},
 	parameters: {
 		componentVersion: version,
@@ -52,7 +61,7 @@ Default.args = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = ColorSliderGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
@@ -63,7 +72,7 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Vertical = Default.bind({});
+export const Vertical = Template.bind({});
 Vertical.args = {
 	vertical: true,
 };
@@ -75,20 +84,18 @@ Vertical.parameters = {
 export const Alpha = Template.bind({});
 Alpha.args = {
 	gradientStops: ["rgba(0, 0, 0, 1) 0%", "rgba(0, 0, 0, 0) 100%"],
-	colorHandleStyle: {
-		"--spectrum-picked-color": "rgba(0, 0, 0, 1)",
-	},
+	selectedColor: "rgba(0, 0, 0, 1)",
 };
 Alpha.tags = ["!dev"];
 Alpha.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const WithImage = Default.bind({});
+export const WithImage = Template.bind({});
 WithImage.args = {
 	gradientType: "image",
+	selectedColor: "#df6a7d",
 	colorHandleStyle: {
-		"--spectrum-picked-color": "#df6a7d",
 		"inset-inline-start": "50%",
 	},
 };
@@ -98,7 +105,7 @@ WithImage.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Disabled = Default.bind({});
+export const Disabled = Template.bind({});
 Disabled.args = {
 	isDisabled: true,
 };

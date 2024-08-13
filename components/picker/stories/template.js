@@ -2,6 +2,7 @@ import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/templat
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { html } from "lit";
@@ -24,6 +25,7 @@ export const Picker = ({
 	isDisabled = false,
 	customClasses = [],
 	customStyles = {},
+	onclick,
 } = {}, context = {}) => {
 	return html`
 		<button
@@ -43,9 +45,7 @@ export const Picker = ({
 			aria-haspopup="listbox"
 			style=${styleMap(customStyles)}
 			type="button"
-			@click=${(e) => {
-				e.target.classList.toggle("is-open", !isOpen);
-			}}
+			@click=${onclick}
 		>
 			<span class="${rootClass}-label is-placeholder">${placeholder}</span>
 			${when(isLoading, () =>
@@ -89,10 +89,11 @@ export const Template = ({
 	fieldLabelStyle = {},
 	customClasses = [],
 	customStyles = {},
-	customPopoverStyles = {},
 	content = [],
-	id,
+	id = getRandomId("picker"),
 } = {}, context = {}) => {
+	const { updateArgs } = context;
+
 	let iconName = "ChevronDown200";
 	switch (size) {
 		case "s":
@@ -118,30 +119,12 @@ export const Template = ({
 				alignment: labelPosition,
 			}, context)
 		)}
-		${labelPosition == "left" ?
-			html`<div style="display: inline-block">
-				${Picker({
-					rootClass,
-					size,
-					placeholder,
-					isQuiet,
-					isKeyboardFocused,
-					isOpen,
-					isInvalid,
-					isLoading,
-					isDisabled,
-					isReadOnly,
-					customClasses,
-					customStyles,
-					content,
-					iconName,
-					labelPosition,
-					id,
-				}, context)}
-			</div>
-			`
-		:
-			Picker({
+		${Popover({
+			isOpen: isOpen && !isDisabled,
+			withTip: false,
+			position: "bottom-start",
+			trigger: (passthroughs, context) => Picker({
+				...passthroughs,
 				rootClass,
 				size,
 				placeholder,
@@ -153,29 +136,26 @@ export const Template = ({
 				isDisabled,
 				isReadOnly,
 				customClasses,
-				customStyles,
+				customStyles: {
+					"display": labelPosition == "left" ? "inline-block" : undefined,
+					...customStyles,
+				},
 				content,
 				iconName,
 				labelPosition,
 				id,
-			}, context)
-		}
+				onclick: function() {
+					updateArgs({ isOpen: !isOpen });
+				},
+			}, context),
+			content,
+		}, context)}
 		${when(helpText, () =>
 			HelpText({
 				text: helpText,
 				variant: isInvalid ? "negative" : "neutral",
 				hideIcon: true,
 			}, context)
-		)}
-		${when(content.length !== 0, () =>
-				Popover({
-					isOpen: isOpen && !isDisabled,
-					withTip: false,
-					position: "bottom",
-					isQuiet,
-					customStyles: customPopoverStyles,
-					content,
-				}, context)
 		)}
 		${when(withSwitch, () => Switch({
 			size,

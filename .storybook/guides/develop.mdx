@@ -27,7 +27,47 @@ For more general information about how to contribute to the Spectrum CSS project
 - [Node.js](https://nodejs.org/en/) (v20 or later)
 - [Yarn](https://yarnpkg.com/getting-started/install)
 
-## Architecture
+## Component architecture
+
+Each component has the following files:
+
+- `index.css` - The source file for all styles related to the component. This contains all selectors and css properties for the component but specifically lacks any custom properties or variables. These values are sourced from the `themes` directory.
+- `themes/*.css` - The theme-specific, component-level custom properties used to style the component. These files are meant to be loaded with the source styles.
+- `stories/*.stories.js` - The storybook file that defines the component's stories and the available knobs for the component.
+- `stories/template.js` - The template function that generates the component's mark-up based on the provided settings.
+- `stories/*.test.js` - The testing grid for visual regression testing in Chromatic.
+- `stories/*.mdx` - This asset generates the component-specific documentation and is rendered in Storybook as the Docs page.
+
+Each component outputs the following assets to `dist`:
+
+- `index.css`: This asset includes the base CSS and the `themes/spectrum-two.css` definitions (without the system mapping layer). This asset is meant to be used in a environment where only the current Spectrum theme is supported.
+- `index-base.css`: This asset includes only the base CSS; that is, the CSS without any custom property definitions. This can be used in conjunction with `index-theme.css` and the desired `themes/*.css` file to render a themed component.
+- `index-theme.css`: This asset includes only the custom property definitions for the component as mapped to the system variables. This can be used in conjunction with `index-base.css` and the desired `themes/*.css` file to render a themed component.
+
+Each component outputs theme-specific assets to `dist/themes`. These assets include the system variables mapped to their global token counterparts. This file is meant to be loaded in conjunction with the `index-base.css` and `index-theme.css` files to render a themed component.
+
+- `themes/spectrum.css`: Represents the Spectrum theme.
+- `themes/express.css`: Represents the Express theme. **deprecated in Spectrum 2**
+
+## Adding a new component
+
+1. Generate a new component using the `yarn new component` command. The generator will prompt you to answer questions about your component.
+2. Edit the `dependencies` within the `package.json` file to use only the dependencies your component needs. All components rely on `@spectrum-css/tokens`, and most rely on `@spectrum-css/icon`.
+3. Once your folder has been generated, you can run `yarn start` in the root of the project to begin developing.
+4. The `index.css` file is where most of your styles will be added. Add any custom property mappings to the global token library in the `themes/spectrum-two.css` asset.
+5. Inside the `stories` directory you will find a `template.js`, `*.stories.js`, and `*.mdx` file.
+   - In the `*.stories.js` file, define the available knobs and properties for your component, as well as any standard variations you want to surface in [Storybook](https://storybook.js.org/docs/react/writing-stories/introduction).
+   - Update the `template.js` file with the markup, using [lit-html syntax](https://lit.dev/docs/templates/overview/) to adjust results based on the provided settings from the Storybook knobs.
+   - Update the `*.mdx` file with the documentation for your component.
+
+_Note_: Because we use scoped packages, before it can be published, you must manually publish the new component as public:
+
+```shell
+cd components/newcomponent
+npm publish --access=public
+```
+
+## Storybook architecture
 
 - `assets`: This folder contains static, unprocessed assets for inclusion in the stories.
 - `decorators`: These assets interpret the arguments provided and apply the necessary stylesheet or markup changes to reflect the desired update.
@@ -75,6 +115,8 @@ CSS assets will be run through their respective postcss configurations. This mea
 
 ```js
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 ```
 
 We are leaning on Storybook's `@storybook/web-components-vite` framework configuration as our stories rely on lit for dynamic attribute assignment.
@@ -276,11 +318,10 @@ Be sure to rename the import to something other than Template as the main export
 Every component will have access to a few empty, global inputs to provide consistency in naming for common requirements. You can find the full list in `.storybook/types/args.js`.
 
 - `rootClass`: this holds the top-level className of the component and should match the value set in the `args` of the stories.js file.
-- `id`: allows users to pass in a custom ID value and should be added to the top-level wrapper of the component.
-- `testId`: used to render a `data-test-id` value to be used by a testing suite to target specific elements.
+- `id`: allows users to pass in a custom ID value and should be added to the top-level wrapper of the component. By default, all components set the id using the `getRandomId` function from the `@spectrum-css/preview/decorators` package.
+- `testId`: used to render a `data-testid` value to be used by a testing suite to target specific elements. If not provided, this value defaults to the `id` value.
 - `customClasses` (array): allows passing in additional classes to be applied to the top-level component. This is necessary for nesting templates inside others while allowing the parent to assign context to the child.
 - `customStyles` (object): allows passing in a style map object to provide custom inline CSS at the top-level of a component.
-- `testId`: used to render a `data-test-id` value to be used by a testing suite to target specific elements.
 
 The rest of the variables provided in the Template function's input object will map to the argTypes you defined in your stories.js file.
 
@@ -290,7 +331,7 @@ To help in making a dynamic mark-up template, you can leverage any of the [direc
 
 All return values for Template functions should be outputting TemplateResults. Said another way, all mark-up needs to be wrapped in the html template literal.
 
-### Full example
+### Full template example
 
 ```js
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
@@ -303,6 +344,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = (
   {
@@ -346,7 +389,8 @@ export const Template = (
           },
           context,
         ),
-      )} ${when(iconName, () =>
+      )}
+      ${when(iconName, () =>
         Icon(
           {
             iconName,
@@ -385,51 +429,48 @@ export const Template = (
 
 Now that your stories are written, we need to add them to our visual regression suite. We are using [chromatic](https://www.chromatic.com), a tool that is designed to work with Storybook.
 
-To optimize snapshot usage, we organize our stories into groups when rendered inside the Chromatic environment. This is done by adding an `window.isChromatic()` check and creating groups of stories (note: do not import the `isChromatic` function directly, there is added functionality we've included when sourcing it from`window`). See example below:
+To optimize snapshot usage, we organize our stories into groups when rendered inside the Chromatic environment. This testing grid is created by passing settings to the `Variants` utility function from the `@spectrum-css/preview/decorators` package. These definitions should be sourced from a `*.test.js` file in the component's stories directory. See example below:
 
-In the `template.js` file:
+In the `*.test.js` file:
 
 ```js
-export const AccordionGroup = (
-  { customStyles = {}, ...args } = {},
-  context = {},
-) => {
-  return html`
-    ${Template(args, context)} ${Template(
-      {
-        ...args,
-        customStyles: {
-          ...customStyles,
-          "max-inline-size": "300px",
-          display: !window.isChromatic() ? "none" : customStyles.display,
-        },
-      },
-      context,
-    )} ${Template(
-      {
-        ...args,
-        disableAll: true,
-        customStyles: {
-          ...customStyles,
-          display: !window.isChromatic() ? "none" : customStyles.display,
-        },
-      },
-      context,
-    )}
-  `;
-};
+import { Variants } from "@spectrum-css/preview/decorators";
+import { Template } from "./template.js";
+
+export const AccordionGroup = Variants({
+  Template,
+  testData: [
+    {
+      testHeading: "Standard",
+    },
+    {
+      testHeading: "Compact",
+      density: "compact",
+      collapseAll: true,
+      withStates: false,
+    },
+  ],
+  stateData: [
+    {
+      testHeading: "Disabled",
+      disableAll: true,
+    },
+  ],
+});
 ```
 
 In the `*.stories.js` file:
 
 ```js
+import { AccordionGroup } from "./accordion.test.js";
+
 export const Default = AccordionGroup.bind({});
 Default.args = {};
 ```
 
-Ideally you should have a single story file for each component with multiple variations and states represented in the "Kitchen sink" grouping that only renders in Chromatic. To preview the groups locally, there is a global toolbar setting with a beaker icon called "Show testing preview" that will activate the Chromatic view.
+Ideally you should have a single story file for each component with multiple variations and states represented in the testing grid that only renders in Chromatic. To preview the groups locally, there is a global toolbar setting with a beaker icon called "Show testing preview" that will activate the Chromatic view.
 
-In the event that you don't want a story to be tested in Chromatic, you can use the `disabledSnapshot` paramter:
+In the event that you don't want a story to be tested in Chromatic, you can use the `disableSnapshot` paramter:
 
 ```js
 Default.parameters = {
@@ -440,6 +481,7 @@ Default.parameters = {
 #### Story tags
 
 A story's [tags](https://storybook.js.org/docs/writing-stories/tags#built-in-tags) can be configured for a few different purposes. Through this project's global configuration, all stories include the `autodocs` tag by default, which causes them to appear on the component's "Docs" page. The `dev` tag, which Storybook applies by default, denotes stories that should be included in the Storybook sidebar. The `!` symbol is used to negate the tag.
+
 - If a story should not be shown in the sidebar:
   ```js
   Default.tags = ["!dev"];

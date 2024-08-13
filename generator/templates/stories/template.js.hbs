@@ -1,3 +1,4 @@
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
@@ -10,37 +11,35 @@ import "../index.css";
 export const Template = ({
   rootClass = "spectrum-{{ pascalCase name }}",
   size = "m",
-  id,
+  id = getRandomId("{{ pascalCase name }}"),
+  isDisabled = false,
   testId,
   customClasses = [],
   customStyles = {},
+  onclick,
 }, context) => {
+	const { updateArgs } = context;
   return html`
     <div
       class=${classMap({
         [rootClass]: true,
-        [`${rootClass}--size${size.toUpperCase()}`]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: true,
+				["is-disabled"]: isDisabled,
+				["is-selected"]: isSelected,
+				["is-hover"]: isHovered,
+				["is-focus-visible"]: isFocused,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
-      id=${ifDefined(id)}
-      data-test-id=${ifDefined(testId)}
-      style=${ifDefined(styleMap(customStyles))}
+      id=${id}
+      data-testid=${testId ?? id}
+      style=${styleMap(customStyles)}
+      ?disabled=${isDisabled}
+			@click=${onclick ?? function() {
+        if (isDisabled) return;
+        updateArgs({ isSelected: !isSelected });
+      }}
     >
       <!-- Component mark-up goes here -->
     </div>
   `;
 };
-
-export const {{ pascalCase name }}Group = Variants({
-  Template,
-  testData: [
-    {
-      testHeading: "Default",
-    },
-    {
-      testHeading: "Variant1",
-      /* Add variant specific data here */
-    },
-  ],
-  stateData: [],
-});

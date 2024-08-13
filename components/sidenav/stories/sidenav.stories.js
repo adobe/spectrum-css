@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { SideNavGroup } from "./sidenav.test.js";
+import { Template } from "./template.js";
 
 /**
  * Side nav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.
@@ -61,11 +62,11 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = SideNavGroup.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = SideNavGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
@@ -74,7 +75,9 @@ WithForcedColors.parameters = {
 	},
 };
 
+// ********* DOCS ONLY ********* //
 export const Multilevel = Template.bind({});
+Multilevel.tags = ["!dev"];
 Multilevel.args = {
 	variant: "multiLevel",
 	items: [
@@ -125,8 +128,12 @@ Multilevel.args = {
 		},
 	]
 };
+Multilevel.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const WithHeading = Template.bind({});
+WithHeading.tags = ["!dev"];
 WithHeading.args = {
 	items: [
 		{
@@ -153,8 +160,12 @@ WithHeading.args = {
 		}
 	]
 };
+WithHeading.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const WithIcons = Template.bind({});
+WithIcons.tags = ["!dev"];
 WithIcons .args = {
 	variant: "multiLevel",
 	hasIcon: true,
@@ -194,4 +205,7 @@ WithIcons .args = {
 			link: "#",
 		},
 	]
+};
+WithIcons.parameters = {
+	chromatic: { disableSnapshot: true },
 };

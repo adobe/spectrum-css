@@ -1,5 +1,5 @@
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
-import { Variants } from "@spectrum-css/preview/decorators";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -22,7 +22,7 @@ export const Template = ({
 	isDropTarget = false,
 	customClasses = [],
 	customStyles = {},
-	id,
+	id = getRandomId("assetcard"),
 	testId,
 } = {}, context = {}) => {
 	const { updateArgs } = context;
@@ -46,7 +46,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
-			data-test-id=${ifDefined(testId)}
+			data-testid=${ifDefined(testId)}
 			style=${styleMap(customStyles)}
 			@click=${function() {
 				updateArgs({ isSelected: !isSelected });
@@ -101,52 +101,3 @@ export const Template = ({
 		</div>
 	`;
 };
-
-export const AssetCardGroup = Variants({
-	Template,
-	testData: [{
-		testHeading: "Portrait",
-		title: "Portrait asset",
-		content: ["Image"],
-	},
-	{
-		testHeading: "Landscape",
-		title: "Landscape asset",
-		exampleImage: "landscape",
-	},
-	{
-		testHeading: "Square asset",
-		title: "Square asset",
-		exampleImage: "square",
-	},
-	{
-		testHeading: "Video asset",
-		title: "MVI_0123.mp4",
-		headerContent: "39:02",
-		exampleImage: "square",
-	},
-	{
-		testHeading: "With ordinal",
-		title: "Ordered selection",
-		selection: "ordered",
-		exampleImage: "landscape",
-	},
-	{
-		testHeading: "Highlighted selection",
-		title: "Highlight selection",
-		selection: "highlight",
-	},
-	{
-		testHeading: "Drop target",
-		title: "Drop target",
-		selection: "highlight",
-		isDropTarget: true,
-	}],
-	stateData: [{
-		testHeading: "Selected",
-		isSelected: true,
-	}, {
-		testHeading: "Focused",
-		isFocused: true,
-	}]
-});

@@ -8,7 +8,7 @@ export const Template = ({
 	customClasses = [],
 	variant = "and",
 	isDisabled = false,
-}) => html`
+} = {}) => html`
 	<button
 		class=${classMap({
 			[rootClass]: true,

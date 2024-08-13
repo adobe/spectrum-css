@@ -1,4 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -14,7 +15,7 @@ export const Template = ({
 	hasIcon,
 	iconName,
 	items = [],
-}, context) => html`
+} = {}, context = {}) => html`
   <nav>
     <ul class=${classMap({
       [rootClass]: true,
@@ -76,10 +77,10 @@ export const SideNavItem = ({
 	levelThreeItems,
 	link,
 	title,
-	isSelected,
-	isDisabled,
-	id,
-	hasIcon,
+	isSelected = false,
+	isDisabled = false,
+	id = getRandomId("sidenav-item"),
+	hasIcon = false,
 	iconName,
 	customClasses = [],
 } = {}, context = {}) => {

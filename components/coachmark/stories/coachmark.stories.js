@@ -2,7 +2,8 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { CoachMarkGroup } from "./coachmark.test.js";
+import { Template } from "./template.js";
 
 /**
  * The coach mark component can be used to bring added attention to specific parts of a page. It is a separate component from the coach indicator.
@@ -52,27 +53,31 @@ export default {
 				...(Menu.parameters?.actions?.handles ?? []),
 			],
 		},
-		docs: {
-			story: {
-				height: "300px"
-			}
-		},
 		componentVersion: version,
 		chromatic: {
 			modes: mobile,
+		},
+		docs: {
+			story: {
+				height: "300px",
+			}
 		}
 	},
 	tags: ["!autodocs"],
 };
 
-export const Default = Template.bind({});
+export const Default = CoachMarkGroup.bind({});
 Default.args = {};
 
 export const WithMedia = Template.bind({});
+WithMedia.tags = ["!dev"];
 WithMedia.args = {
 	hasImage: true,
 };
 WithMedia.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
 	docs: {
 		story: {
 			inline: false,
@@ -82,7 +87,7 @@ WithMedia.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = CoachMarkGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

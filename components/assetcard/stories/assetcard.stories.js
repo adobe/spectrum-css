@@ -2,7 +2,8 @@ import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.sto
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isSelected } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { AssetCardGroup, Template } from "./template";
+import { AssetCardGroup } from "./assetcard.test.js";
+import { Template } from "./template.js";
 
 /**
  * The asset card component allows users to select and manage assets and their metadata in a grid.
@@ -189,7 +190,7 @@ DropTarget.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = AssetCardGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

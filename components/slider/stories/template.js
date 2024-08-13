@@ -1,4 +1,5 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -23,12 +24,11 @@ export const Template = ({
 	isFocused = false,
 	customClasses = [],
 	customStyles = {},
-	id,
+	id = getRandomId("slider"),
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
 
-	const textDirection = globals.textDirection ?? "ltr";
-	const rtl = !!(textDirection === "rtl");
+	const isRTL = globals.textDirection !== "rtl";
 	const rangeLength = max - min;
 	const centerPoint = rangeLength / 2 + min;
 	const isRamp = variant === "ramp";
@@ -50,7 +50,7 @@ export const Template = ({
 	};
 
 	function renderTrack({ position, width }) {
-		const direction = rtl ? "right" : "left";
+		const direction = isRTL ? "right" : "left";
 		return html`
 			<div
 				class="${rootClass}-track"
@@ -76,7 +76,7 @@ export const Template = ({
 	}
 
 	function renderHandle({ position, value, idx = 0 }) {
-		const direction = rtl ? "right" : "left";
+		const direction = isRTL ? "left" : "right";
 		return html`
 			<div
 				class=${classMap({
@@ -85,11 +85,9 @@ export const Template = ({
 					"is-dragged": false, // note: this only applies z-index; no other styles
 					"is-tophandle": false, // todo: when is this supposed to be used
 				})}
-				style=${ifDefined(
-					styleMap({
-						[direction]: position ? `${position}%` : undefined,
-					})
-				)}
+				style=${styleMap({
+					[direction]: position ? `${position}%` : undefined,
+				})}
 			>
 				<input
 					type="range"
@@ -123,7 +121,7 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			style=${styleMap({
-				"max-width": "240px",
+				"inline-size": "240px",
 				["--spectrum-slider-track-color"]: fillColor,
 				...customStyles,
 			})}
@@ -206,7 +204,7 @@ export const Template = ({
 									})}
 									style=${ifDefined(
 										styleMap({
-											[rtl ? "right" : "left"]: `${
+											[isRTL ? "right" : "left"]: `${
 												value > centerPoint
 													? getPosition(centerPoint)
 													: getPosition(value)

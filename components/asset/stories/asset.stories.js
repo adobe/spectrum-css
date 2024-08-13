@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { AssetGroup, Template } from "./template";
+import { AssetGroup } from "./asset.test.js";
+import { Template } from "./template.js";
 
 /**
  * Use an asset element to visually represent a file, folder or image. File and folder representations will center themselves horizontally and vertically in the space provided to the element. Images will be contained to the element, growing to the element's full height while centering itself within the width provided.
@@ -50,6 +51,9 @@ export const File = Template.bind({});
 File.tags = ["!dev"];
 File.args = {
 	preset: "file",
+	customStyles: {
+		"min-inline-size": "150px",
+	},
 };
 File.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -59,13 +63,16 @@ export const Folder = Template.bind({});
 Folder.tags = ["!dev"];
 Folder.args = {
 	preset: "folder",
+	customStyles: {
+		"min-inline-size": "150px",
+	},
 };
 Folder.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = AssetGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

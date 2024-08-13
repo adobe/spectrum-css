@@ -34,7 +34,7 @@ Before removing the component from the codebase, we need to flag the component a
 1. Create a new branch for the deprecation. i.e., `git checkout -b deprecate-quickaction`.
 2. Open up any `*.stories.js` files inside the component's folder:
    a. Edit the title of any exported stories to be prefixed with the `Deprecated` category, i.e., `title: "Quick actions"`.
-   b. Update any local references to point to the package name instead, i.e.,<br/>_Original_:<br/>`import { Template } from "./template";`<br/><br/>_Updated to_:<br/>`import { Template } from "@spectrum-css/quickaction/stories/template.js";`.
+   b. Update any local references to point to the package name instead, i.e.,<br/>_Original_:<br/>`import { Template } from "./template.js";`<br/><br/>_Updated to_:<br/>`import { Template } from "@spectrum-css/quickaction/stories/template.js";`.
    c. In the parameters section, there are 2 important updates to make: - Add `chromatic: { disableSnapshot: true },` to ensure it no longer runs regression tests. - Update the `status` type to `deprecated`:
    ```json
      parameters: {

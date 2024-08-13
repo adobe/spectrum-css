@@ -1,6 +1,8 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { AvatarGroup, AvatarSizes, Template } from "./template";
+import { AvatarGroup } from "./avatar.test.js";
+import { Template } from "./template.js";
 
 /**
  * An image representing a user. Note that a div wrapper is required for avatar:
@@ -67,6 +69,8 @@ export default {
 		size: "700",
 		isDisabled: false,
 		hasLink: true,
+		image: "example-ava@2x.png",
+		altText: "Shantanu",
 	},
 	parameters: {
 		componentVersion: version,
@@ -75,20 +79,19 @@ export default {
 };
 
 export const Default = AvatarGroup.bind({});
-Default.args = {
-	image: "example-ava@2x.png",
-	altText: "Avatar",
-};
+Default.args = {};
 
 // ********* DOCS ONLY ********* //
-export const SizeOptions = AvatarSizes.bind({});
+export const SizeOptions = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args
+}, context);
 SizeOptions.tags = ["!dev"];
+SizeOptions.args = Default.args;
 SizeOptions.parameters = {
 	chromatic: { disableSnapshot: true },
-};
-SizeOptions.args = {
-	image: "example-ava@2x.png",
-	altText: "Avatar",
 };
 
 export const NoLink = Template.bind({});
@@ -115,7 +118,7 @@ Disabled.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = AvatarGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

@@ -1,8 +1,9 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
-import modes, { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { AlertDialogGroup, Template } from "./template";
+import { AlertDialogGroup } from "./alertdialog.test.js";
+import { Template } from "./template.js";
 
 /**
  * Alert dialogs display important information that users need to acknowledge. They appear over the interface and block further interactions until an action is selected.
@@ -44,7 +45,7 @@ export default {
 		},
 		docs: {
 			story: {
-				height: "300px"
+				height: "300px",
 			}
 		},
 		componentVersion: version,
@@ -53,20 +54,6 @@ export default {
 		withUnderlayWrapper,
 	],
 };
-
-// the "TallerViewport" modes are accommodating the underlay, which is position: fixed,
-// and Chromatic's treatment of position:fixed elements. By increasing the viewport height,
-// it doesn't look like the background color just stops without wrapping the
-// entire container of templates.
-const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
-	acc[key] = { 
-		...modes[key],
-		viewport: {
-			height: "2000px",
-		}
-	};
-	return acc;
-}, {});
 
 export const Default = AlertDialogGroup.bind({});
 Default.args = {
@@ -83,14 +70,9 @@ Default.args = {
 	}],
 	content: "Smart filters are nondestructive and will preserve your original images.",
 };
-Default.parameters = {
-	chromatic: {
-		modes: defaultModesWithTallerViewport,
-	},
-};
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = AlertDialogGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

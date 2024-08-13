@@ -1,6 +1,8 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
-import { SizingGroup, Template, TreeViewGroup } from "./template";
+import { Template } from "./template.js";
+import { TreeViewGroup } from "./treeview.test.js";
 
 /**
  * The typical usage of a treeview involves nesting a `.spectrum-Treeview element` within the `.spectrum-TreeView-item` parent element.
@@ -56,6 +58,7 @@ Default.args = {
 			id: "label1",
 			label: "Label 1",
 			link: "#",
+			isSelected: true,
 		},
 		{
 			id: "group1",
@@ -67,6 +70,7 @@ Default.args = {
 					id: "label2",
 					label: "Label 2",
 					link: "#",
+					isDisabled: true,
 				},
 				{
 					id: "label3",
@@ -109,7 +113,12 @@ Default.args = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Sizing = SizingGroup.bind({});
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args
+}, context);
 Sizing.args = Default.args;
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
@@ -466,8 +475,8 @@ ThumbnailsQuiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Sections = Template.bind({});
-Sections.args = {
+export const WithSections = Template.bind({});
+WithSections.args = {
 	items: [
 		{
 			type: "heading",
@@ -506,8 +515,8 @@ Sections.args = {
 		},
 	],
 };
-Sections.tags = ["!dev"];
-Sections.parameters = {
+WithSections.tags = ["!dev"];
+WithSections.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
@@ -515,8 +524,8 @@ Sections.parameters = {
 /**
  * A tree view with an item consisting of a drop target. The `.is-drop-target` class is added to the drop target item.
  */
-export const DropTarget = Template.bind({});
-DropTarget.args = {
+export const WithDropTarget = Template.bind({});
+WithDropTarget.args = {
 	items: [
 		{
 			id: "label2",
@@ -531,13 +540,81 @@ DropTarget.args = {
 		},
 	],
 };
-DropTarget.tags = ["!dev"];
-DropTarget.parameters = {
+WithDropTarget.tags = ["!dev"];
+WithDropTarget.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const FlatMarkup = Template.bind({});
+FlatMarkup.args = {
+	items: [
+		{
+			id: "label1",
+			label: "Label 1. This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
+			link: "#",
+			isSelected: true,
+		},
+		{
+			id: "group1",
+			label: "Group 1",
+			link: "#",
+			isOpen: true,
+			items: [],
+		},
+		{
+			id: "label2",
+			label: "Label 2",
+			link: "#",
+			isDisabled: true,
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "label3",
+			label: "Label 3",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "label4",
+			label: "Label 4",
+			link: "#",
+		},
+		{
+			id: "group2",
+			label: "Group 2",
+			link: "#",
+			isOpen: true,
+			items: [],
+		},
+		{
+			id: "label5",
+			label: "Label 5",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "group3",
+			label: "Group 3",
+			link: "#",
+			isOpen: true,
+			items: [],
+			customClasses: ["spectrum-TreeView-item--indent1"],
+		},
+		{
+			id: "label6",
+			label: "Label 6",
+			link: "#",
+			customClasses: ["spectrum-TreeView-item--indent2"],
+		},
+	],
+};
+FlatMarkup.tags = ["!dev"];
+FlatMarkup.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = TreeViewGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {

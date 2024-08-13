@@ -1,10 +1,8 @@
 import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isOpen } from "@spectrum-css/preview/types";
-import { html } from "lit";
-import { styleMap } from "lit/directives/style-map.js";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { PickerGroup } from "./picker.test.js";
 
 /**
  * A picker outlines a set of options for a user.
@@ -114,133 +112,27 @@ export default {
 		isOpen: false,
 		withSwitch: false,
 		content: [
-			() => MenuStories(MenuStories.args)
+			(passthrough, context) => MenuStories({
+				...passthrough,
+				...MenuStories.args,
+			}, context)
 		],
 	},
 	parameters: {
+		componentVersion: version,
 		docs: {
 			story: {
-				height: "300px"
+				height: "400px"
 			}
 		},
-		componentVersion: version,
 	},
-	decorators: [
-		// Add padding for VRT so drop shadows are not cut off.
-		(story) => window.isChromatic() ? html`<div style="padding: 32px; min-height: 400px;">${story()}</div>` : story(),
-	],
 };
 
-const Variants = (args) => html`
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "grid" : "none",
-		"gap": "20px",
-	})}>
-		<div>
-			${Template({
-				labelPosition: "top",
-				...args,
-				isOpen: false,
-				placeholder: "Select your country of origin"
-			})}
-		</div>
-		<div>
-			${Template({
-				labelPosition: "top",
-				...args,
-				isOpen: false,
-				isQuiet: true,
-				placeholder: "Select your country of origin"
-			})}
-		</div>
-		<div>
-			${Template({
-				labelPosition: "top",
-				...args,
-				isOpen: false,
-				isLoading: true,
-				placeholder: "Select your country of origin"
-			})}
-		</div>
-		<div>
-			${Template({
-				labelPosition: "top",
-				...args,
-				isOpen: false,
-				isInvalid: true,
-				placeholder: "Select your country of origin"
-			})}
-		</div>
-		<div>
-			${Template({
-				labelPosition: "top",
-				...args,
-				isOpen: false,
-				isKeyboardFocused: true,
-				helpText: "Please select a country",
-				placeholder: "Select your country of origin"
-			})}
-		</div>
-		<div>
-			${Template({
-				labelPosition: "left",
-				...args,
-				isOpen: false,
-				withSwitch: true,
-				placeholder: "Select your country of origin"
-			})}
-		</div>
-		<div>
-			${Template({
-				labelPosition: "left",
-				...args,
-				isOpen: false,
-				withSwitch: true,
-				fieldLabelStyle: {"max-width": "90px"},
-				label: "Enter country, text should wrap",
-				placeholder: "Select your country of origin"
-			})}
-		</div>
-		<div>
-			${Template({
-					labelPosition: "left",
-					...args,
-					isOpen: false,
-					withSwitch: true,
-					placeholder: "Select your country of origin",
-					isQuiet: true,
-				})}
-		</div>
-		<div>
-			${Template({
-				labelPosition: "left",
-				...args,
-				isOpen: false,
-				withSwitch: true,
-				isQuiet: true,
-				fieldLabelStyle: {"max-width": "90px"},
-				label: "Enter country, text should wrap",
-				placeholder: "Select your country of origin"
-			})}
-		</div>
-	</div>
-	<div style=${styleMap({
-		"display": window.isChromatic() ? "none" : undefined,
-	})}>
-		${Template(args)}
-	</div>
-`;
-
-export const Default = Variants.bind({});
+export const Default = PickerGroup.bind({});
 Default.args = {};
 
-export const Open = Template.bind({});
-Open.args = {
-	isOpen: true,
-};
-
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Variants.bind({});
+export const WithForcedColors = PickerGroup.bind({});
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {

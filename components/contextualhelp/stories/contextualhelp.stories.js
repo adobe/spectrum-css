@@ -1,8 +1,8 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { html } from "lit";
 import { version } from "../package.json";
-import { Template } from "./template";
+import { ContextualHelpGroup } from "./contextualhelp.test.js";
+import { Template } from "./template.js";
 
 /**
  * Contextual help shows a user extra information in relation to another component or view.
@@ -82,6 +82,7 @@ export default {
 		popoverPlacement: "bottom-start",
 		title: "Permission required",
 		body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		customStyles: { "inline-size": "275px" },
 	},
 	parameters: {
 		actions: {
@@ -92,32 +93,39 @@ export default {
 		componentVersion: version,
 	},
 	tags: ["!autodocs"],
-	decorators: [
-		// Add padding for VRT so drop shadows are not cut off.
-		(story) => window.isChromatic() ? html`<div style="padding: 32px; min-height: 300px;">${story()}</div>` : story(),
-	],
 };
 
-export const Default = Template.bind({});
+export const Default = ContextualHelpGroup.bind({});
 Default.args = {};
 
+// ********* DOCS ONLY ********* //
 export const WithLink = Template.bind({});
+WithLink.tags = ["!dev"];
 WithLink.args = {
 	link: {
 		text: "Learn about permissions",
 		url: "#",
 	},
 };
+WithLink.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const TopPopover = Template.bind({});
+TopPopover.tags = ["!dev"];
 TopPopover.args = {
 	popoverPlacement: "top",
-	customStyles: { "max-inline-size": "275px" },
+	customStyles: {
+		"inline-size": "275px",
+		"margin-top": "170px",
+	},
 	title: "Top popover example of text wrapping in the title",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 };
+TopPopover.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
-// ********* DOCS ONLY ********* //
 export const HelpDefault = Template.bind({});
 HelpDefault.tags = ["!dev"];
 HelpDefault.args = {
@@ -144,7 +152,10 @@ export const HelpTopPopover = Template.bind({});
 HelpTopPopover.tags = ["!dev"];
 HelpTopPopover.args = {
 	popoverPlacement: "top",
-	customStyles: { "max-inline-size": "275px" },
+	customStyles: {
+		"inline-size": "275px",
+		"margin-top": "170px",
+	},
 	title: "Top popover example of text wrapping in the title",
 	body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 	iconName: "Help",
@@ -154,7 +165,7 @@ HelpTopPopover.parameters = {
 };
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Default.bind({});
+export const WithForcedColors = ContextualHelpGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
