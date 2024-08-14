@@ -57,10 +57,8 @@ export const MeterGroup = (args, context) => html`
 		},
 		{
 			heading: "Gradient support", 
-			customStyles: {
-				"--mod-progressbar-fill-color": "linear-gradient(to left, teal, purple)",
-				"--mod-progressbar-track-color": "linear-gradient(to right, hotpink, orange)",
-			}
+			trackFill: "linear-gradient(to right, hotpink, orange)",
+			progressBarFill: "linear-gradient(to left, teal, purple)",
 		}].map(({ heading, ...item }) => html`
 			<div>
 				${Typography({

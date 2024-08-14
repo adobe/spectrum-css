@@ -16,6 +16,8 @@ export const Template = ({
 	isIndeterminate = false,
 	label,
 	value,
+	trackFill,
+	progressBarFill,
 	customStyles = {},
 	size = "m",
 } = {}, context = {}) => html`
@@ -31,6 +33,8 @@ export const Template = ({
 			style=${styleMap({
 				"width": customWidth,
 				...customStyles,
+				"--mod-progressbar-track-color": trackFill !== undefined ? trackFill : undefined,
+				"--mod-progressbar-fill-color": progressBarFill !== undefined ? progressBarFill : undefined,
 			})}
 			value=${ifDefined(value ? `${value}%` : undefined)}
 			aria-valuenow=${ifDefined(value ? `${value}%` : undefined)}
@@ -49,9 +53,7 @@ export const Template = ({
 				customClasses: [`${rootClass}-percentage`],
 			}, context)}
 
-			<div
-				class="${rootClass}-track"
-			>
+			<div class="${rootClass}-track">
 				<div
 					class="${rootClass}-fill"
 					style=${styleMap({ "inline-size": `${value}%` })}
@@ -181,10 +183,8 @@ export const ProgressBarGroup = (args, context) => html`
 			})}>
 				${Template({
 					...args,
-					customStyles: {
-						"--mod-progressbar-fill-color": "linear-gradient(to left, teal, purple)",
-						"--mod-progressbar-track-color": "linear-gradient(to right, hotpink, orange)",
-					},
+					trackFill: "linear-gradient(to right, hotpink, orange)",
+					progressBarFill: "linear-gradient(to left, teal, purple)",
 				}, context)}
 			</div>
 		</div>
