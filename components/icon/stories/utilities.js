@@ -1,14 +1,27 @@
-// Imports an array of all icon names in the workflow set
+// Import arrays containing data with all icon names in both icon sets.
 import iconOpts from "@adobe/spectrum-css-workflow-icons/dist/manifest.json";
 import uiIconOpts from "@spectrum-css/ui-icons/dist/icons.json";
 
-export const workflowIcons = (iconOpts?.svg ?? []).map((icon) => path.basename(icon, ".svg")).sort(alphaNumericSort);
-
-export const cleanWorkflowIcon = (iconName) => iconName.replace(/^S2_Icon_/, "").replace(/_N$/, "").replace(/_20$/, "");
-
-export const uiIcons = (uiIconOpts || []).map((icon) =>
-	path.basename(icon, ".svg")
+// Array with all SVG workflow icon names, without the file extension.
+export const workflowIcons = (iconOpts?.svg ?? []).map((icon) =>
+	icon.replace(/\.svg$/, "")
 ).sort(alphaNumericSort);
+
+// Array with all UI icon names, without the file extension.
+export const uiIcons = (uiIconOpts || []).map((icon) =>
+	icon.replace(/\.svg$/, "")
+).sort(alphaNumericSort);
+
+/**
+ * Clean workflow icon name to strip out unnecessary prefix and postfix text.
+ * Example: "S2_Icon_AlertCircle_20_N" becomes "AlertCircle"
+ * 
+ * @param {string} iconName 
+ * @returns {string}
+ */
+export const cleanWorkflowIcon = (iconName) => (
+	iconName.replace(/^S2_Icon_/, "").replace(/_N$/, "").replace(/_20$/, "")
+);
 
 /**
  * @description A custom alpha-numeric sort
