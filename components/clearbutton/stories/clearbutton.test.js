@@ -9,6 +9,10 @@ export const ClearButtonGroup = Variants({
 		{
 			testHeading: "Default",
 		},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		},
 	],
 	stateData: [
 		{
