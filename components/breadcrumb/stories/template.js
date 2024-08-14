@@ -21,7 +21,7 @@ export const Template = (
 		<ul
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+				[`${rootClass}--${variant}`]: typeof variant !== "undefined" || variant !== "default",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 		>
