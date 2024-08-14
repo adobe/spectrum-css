@@ -11,7 +11,7 @@ export const TrayGroup = Variants({
 					...passthroughs,
 					heading: "You have new messages waiting in your inbox",
 					content: ["You have 5 new messages! This notification is extra long so it wraps to the next line"],
-					isDismissable: true,
+					isDismissible: true,
 				}, context)
 			],
 		},

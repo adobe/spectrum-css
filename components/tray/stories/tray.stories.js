@@ -56,7 +56,7 @@ Default.args = {
 			...passthroughs,
 			heading: "New messages",
 			content: ["You have 5 new messages!"],
-			isDismissable: false,
+			isDismissible: false,
 		}, context)
 	],
 };
