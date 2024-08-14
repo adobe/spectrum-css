@@ -15,7 +15,7 @@ export const Template = ({
 		class=${classMap({
 			[`${rootClass}`]: true,
 			[`${rootClass}--quiet`]: isQuiet,
-			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+			[`${rootClass}--${variant}`]: typeof variant !== "undefined" || variant !== "default",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		style=${styleMap(customStyles)}
@@ -23,5 +23,22 @@ export const Template = ({
 		${Array.from({ length: 3 }).map(() => html`
 			<div class=${classMap({ [`${rootClass}-ring`]: true })}></div>
 		`)}
+	</div>
+`;
+
+export const AllVariantsCoachIndicatorGroup = (args, context) => html`
+	<div style="display: flex; flex-direction: column; padding: 16px">
+		${Template({
+				...args,
+				variant: "default"
+			}, context)}
+		${Template({
+				...args,
+				variant: "dark"
+			}, context)}
+		${Template({
+				...args,
+				variant: "light"
+			}, context)}
 	</div>
 `;
