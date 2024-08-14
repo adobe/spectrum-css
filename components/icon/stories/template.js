@@ -1,9 +1,12 @@
 import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { styleMap } from "lit/directives/style-map.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
-import { cleanWorkflowIcon } from "./utilities.js";
+import { when } from "lit/directives/when.js";
+import { cleanWorkflowIcon, fetchIconDetails, uiIconsWithDirections, workflowIcons } from "./utilities.js";
 
 import "../index.css";
 
@@ -11,76 +14,6 @@ import "../index.css";
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
  * @typedef { IconArgs & { scale: string, setName: 'workflow' | 'ui' } } IconProps
  */
-
-const fetchIconDetails = ({
-	icons,
-	workflowIcons = [],
-	uiIcons = [],
-	uiIconSizes = {},
-}) => {
-	if (!icons || Object.keys(icons).length == 0) {
-		// Fetch loaded data if not provided
-		if (window.icons) icons = window.icons;
-		else {
-			return {
-				workflowIcons: [],
-				uiIcons: [],
-				uiIconSizes: {},
-				uiIconsWithDirections: [],
-			};
-		}
-	}
-
-	// clean up loaded icon data
-	icons = Object.entries(icons).reduce((acc, [setName, data]) => {
-		acc[setName] = Object.entries(data).reduce((acc, [size, data]) => {
-			acc[size] = Object.entries(data).reduce((acc, [iconName, svg]) => {
-				// simplify icon name
-				iconName = iconName.split("/").pop().replace(/\.svg$/, "");
-				acc[iconName] = svg;
-
-				// Add the icon name to the workflowIcons list if it's from the workflow set
-				if (setName === "workflow") {
-					workflowIcons.push(iconName);
-				}
-				else {
-					const iconNameRoot = iconName.replace(/\d{2,3}$/, "").replace(/(Right|Left|Down|Up)$/, "");
-					const iconNameSize = iconName.match(/\d{2,3}/g)?.[0];
-					uiIcons.push(iconNameRoot);
-					uiIconSizes[iconNameRoot] = [
-						...new Set([
-							...uiIconSizes[iconNameRoot] ?? [],
-							...(iconNameSize ? [iconNameSize] : []),
-						])
-					];
-				}
-				return acc;
-			}, {});
-			return acc;
-		}, {});
-		return acc;
-	}, {});
-
-	return {
-		icons,
-		workflowIcons: [...new Set(workflowIcons)],
-		uiIcons: [...new Set(uiIcons)],
-		uiIconSizes,
-		uiIconsWithDirections: [
-			...new Set([
-				...(uiIcons.filter((c) => !["Chevron", "Arrow"].includes(c)) ?? []),
-				"ArrowRight",
-				"ArrowLeft",
-				"ArrowUp",
-				"ArrowDown",
-				"ChevronRight",
-				"ChevronLeft",
-				"ChevronUp",
-				"ChevronDown",
-			])
-		],
-	};
-};
 
 /**
  * Template for rendering an icon
@@ -93,6 +26,7 @@ const fetchIconDetails = ({
  * @param {string} props.fill
  * @param {string} props.id
  * @param {string[]} props.customClasses
+ * @param {boolean} props.useRef [true] Whether to use an SVG with a reference to the icon within the sprite sheet. When false, returns the the individual SVG's entire markup.
  * @returns {import('lit').TemplateResult<1>}
  */
 export const Template = ({
@@ -104,14 +38,14 @@ export const Template = ({
 	id = getRandomId("icon"),
 	customClasses = [],
 	icons,
-	useRef = false,
+	useRef = true,
 	workflowIcons,
 	uiIcons,
 	uiIconSizes,
 } = {}, context = {}) => {
-	const { globals = {}, loaded = {} } = context;
-	const scale = globals.scale ?? "medium";
+	const { loaded = {} } = context;
 
+	// Fetch the list of all icons and icon sizes, if they are not already passed through as args.
 	if (!workflowIcons || !uiIcons || !uiIconSizes) {
 		const details = fetchIconDetails({
 			icons: loaded.icons,
@@ -120,7 +54,7 @@ export const Template = ({
 			uiIconSizes
 		});
 
-		if(details.icons) {
+		if (details.icons) {
 			icons = details.icons;
 		}
 
@@ -137,6 +71,13 @@ export const Template = ({
 		}
 	}
 
+	if (uiIcons.length === 0) {
+		console.error("The uiIcons array is empty.");
+	}
+	if (workflowIcons.length === 0) {
+		console.error("The workflowIcons array is empty.");
+	}
+
 	if (!iconName) {
 		console.warn(
 			"Icon: Could not render a result because no icon name was provided to the icon template."
@@ -144,6 +85,8 @@ export const Template = ({
 		return html``;
 	}
 
+	// Name of icon that corresponds with SVG file. This may differ from the icon name, such as with
+	// directional icons that use a single icon.
 	let idKey = iconName;
 
 	// If a descriptor like Right, Left, Down, or Up is present for the UI icons Chevron or
@@ -161,16 +104,16 @@ export const Template = ({
 	 * If the icon name includes its scale, we want to leave that scale. This is preferred,
 	 * as UI icons do not use workflow icon sizing.
 	 *
-	 * If the UI icon name does not include scale, reformat it to match the provided sizing.
-	 * E.g. with a size of "s", the icon name "ChevronRight" would become "ChevronRight75".
+	 * If the UI icon name does not include scale, or the scale does not exist in the current
+	 * list of UI icons, reformat it to approximate the provided sizing for the component.
 	 */
 	if (
 		setName === "ui" &&
 		(
 			// Does not already have size number at the end.
 			!idKey.match(/\d{2,3}$/) ||
-			// If the provided icon name includes the weight, make sure it's a supported weight;
-			// if not, strip it from the key
+			// If the provided icon name includes the sizing number, make sure it's a supported sizing number;
+			// if not, strip it from the key.
 			(
 				idKey.match(/\d{2,3}$/) &&
 				!uiIcons.includes(idKey)
@@ -199,33 +142,53 @@ export const Template = ({
 				}
 				break;
 			case "l":
-				sizeVal = "200";
+				if (["Arrow"].some(c => idKey.startsWith(c))) {
+					sizeVal = "400";
+				}
+				else {
+					sizeVal = "200";
+				}
 				break;
 			case "xl":
 			case "xxl":
-				sizeVal = "300";
+				if (["Arrow"].some(c => idKey.startsWith(c))) {
+					sizeVal = "400";
+				}
+				else {
+					sizeVal = "300";
+				}
 				break;
 			default:
 				sizeVal = "100";
 				break;
 		}
 
+		console.warn(`Using fallback UI Icon sizing number "${sizeVal}" for "${idKey}". UI icon size was not provided or does not exist in the list of available UI icons.`);
+
+		// Replace sizing number on idKey and iconName with new fallback size.
 		idKey = idKey.replace(/\d{2,3}$/, "");
 		idKey += sizeVal;
-		if (!iconName.match(/\d{2,3}$/)) iconName += sizeVal;
+		
+		iconName = iconName.replace(/\d{2,3}$/, "");
+		iconName += sizeVal;
+
+		if (!uiIcons.includes(idKey)) {
+			console.error(`The UI icon "${idKey}" does not exist in the list of available UI icons.`);
+		}
 	}
 
 	// If icon set was not provided, try to determine which icon set contains this icon.
 	// Note: icon sets can contain the same icon name, with different icons.
 	if (!["workflow","ui"].includes(setName)) {
-		if (workflowIcons.some(key => {
-			console.log(`compare ${cleanWorkflowIcon(key)} === ${idKey}`);
-			return cleanWorkflowIcon(key) === idKey;
-		})) {
+		if (workflowIcons.some(key => cleanWorkflowIcon(key) === idKey)) {
 			setName = "workflow";
 		}
 		else if (uiIcons.some(ui => ui.includes(idKey))) {
 			setName = "ui";
+		}
+
+		if (["workflow","ui"].includes(setName)) {
+			console.warn(`The icon set was not provided for "${iconName}". It is recommended to always set the icon set, as icons may reside in both sets. As a best guess based on the icon name, the set "${setName}" was selected.`);
 		}
 	}
 
@@ -236,13 +199,14 @@ export const Template = ({
 		return html``;
 	}
 
-	// Fetch SVG file markup, and set optional fill color.
+	// Set optional fill color.
 	let inlineStyle;
 	if (fill) inlineStyle = `color: ${fill}`;
 
+	// Fetch SVG file markup.
 	let svgString;
-	if (icons && icons[setName]?.[scale]?.[idKey]) {
-		svgString = icons[setName][scale][idKey];
+	if (icons && icons[setName]?.[idKey]) {
+		svgString = icons[setName][idKey];
 	}
 
 	/**
@@ -252,7 +216,6 @@ export const Template = ({
 	const classList = {
 		[rootClass]: true,
 		[`spectrum-UIIcon-${iconName}`]: !!(setName === "ui"),
-		[`${rootClass}--${scale}`]: !!(setName === "ui" && scale),
 		[`${rootClass}--size${size?.toUpperCase()}`]: !!(
 			(!setName || setName === "workflow") &&
 			size
@@ -265,20 +228,26 @@ export const Template = ({
 		return acc;
 	}, "");
 
+	// If not using the reference to the icon within the sprite sheet, return the individual SVG's entire markup.
 	if (!useRef && svgString) {
 		return html`${unsafeSVG(
 			svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
 		)}`;
 	}
 
-	// ui ID: #spectrum-css-icon-${idKey}
-	// workflow ID: #spectrum-icon-(18|24)-${idKey}
+	/**
+	 * ID of the icon within the sprite sheet, for the value of the hrefs within the SVG <use> element.
+	 * 
+	 * ui ID: #spectrum-css-icon-${idKey}
+	 * workflow ID: #icon-${idKey}
+	 */
 	const iconID =
 		setName !== "workflow"
 			? `spectrum-css-icon-${idKey}`
 			// replace two consecutive capital letters with a dash
 			: `icon-${cleanWorkflowIcon(idKey).replaceAll(/(\w)([A-Z])/g, "$1-$2").replaceAll(/(\w)([A-Z])/g, "$1-$2").replace("C-C-", "cc-").replace("_", "-").toLowerCase()}`;
 
+	// Return SVG markup with a reference to the icon ID within the sprite sheet.
 	return html`<svg
 		class=${classMap(classList)}
 		id=${ifDefined(id)}
@@ -292,3 +261,207 @@ export const Template = ({
 		<use xlink:href="#${iconID}" href="#${iconID}" />
 	</svg>`;
 };
+
+/**
+ * Display all icons in the icon set.
+ */
+export const PrintFullSet = (args) => {
+	return html`
+		${when(args.setName === "workflow", () => {
+			return workflowIcons.sort().map((iconName) => PrintIconSet({ ...args, iconName }));
+		}, () => {
+			return uiIconsWithDirections.sort().map((iconName) => PrintIconSet({ ...args, iconName }));
+		})}
+	`;
+};
+
+/**
+ * Display a single icon in the icon set. With or without a label showing the icon name.
+ */
+export const PrintIconSet = (args) => {
+	if (!args.showLabel && !window.isChromatic()) {
+		return Template({
+			iconName: args.iconName ?? args.uiIconName,
+			setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+			size: "xxl",
+			useRef: true,
+			...args,
+		});
+	}
+
+	return html`
+		<div
+			style=${styleMap({
+				"display": "flex",
+				"align-items": "center",
+				"justify-content": "space-between",
+				"gap": "12px",
+				"flex-flow": "column nowrap",
+			})}
+		>
+			${Template({
+				iconName: args.iconName ?? args.uiIconName,
+				setName: args.setName ?? (args.uiIconName ? "ui" : "workflow"),
+				size: "xxl",
+				useRef: true,
+				...args,
+			})}
+			${Typography({
+				semantics: "body",
+				size: "xxs",
+				content: [
+					args.iconName ? cleanWorkflowIcon(args.iconName) : args.uiIconName
+				],
+			})}
+		</div>
+	`;
+};
+
+/**
+ * Display icon sizes on docs.
+ * Note: XXL not shown as this is not part of the design spec and may be deprecated in the future.
+ * 
+ * @todo See if this can be replaced with Sizes() template.
+ */
+export const WorkflowSizingTemplate = (args) => html`
+	<div
+		style=${styleMap({
+			"display": "flex",
+			"gap": "24px",
+			"flexWrap": "wrap",
+		})}
+	>
+		${["xs","s","m","l","xl"].map(
+			(size) => html`
+				<div
+					style=${styleMap({
+						"display": "flex",
+						"gap": "16px",
+						"flexDirection": "column",
+						"alignItems": "center",
+						"flexBasis": "80px",
+					})}
+				>
+					${Typography({
+						semantics: "heading",
+						size: "xs",
+						content: [
+							{
+								xs: "Extra-small",
+								s: "Small",
+								m: "Medium",
+								l: "Large",
+								xl: "Extra-large",
+							}[size],
+						],
+						customStyles: {
+							"white-space": "nowrap",
+							"--mod-detail-font-color": "var(--spectrum-seafoam-900)",
+						}
+					})}
+					${Template({ ...args, size })}
+				</div>
+			`
+		)}
+	</div>
+`;
+
+/**
+ * Helper template function to display multiple icons using an array of icon names.
+ */
+export const IconListTemplate = (args, iconsList = []) => html`
+	<div
+		style=${styleMap({
+			"display": "flex",
+			"gap": "32px",
+			"flexWrap": "wrap",
+		})}
+	>
+		${iconsList.map(
+			(iconName) => Template({
+				...args,
+				iconName,
+			})
+		)}
+	</div>
+`;
+
+/**
+ * Display examples of multiple workflow icons.
+ */
+export const WorkflowDefaultTemplate = (args) => html`
+	${IconListTemplate(
+		{
+			...args,
+			setName: "workflow",
+			size: "xl",
+		},
+		[
+			"AlertCircle",
+			"Bell",
+			"Camera",
+			"Color",
+			"Copy",
+			"DeviceDesktop",
+			"Download",
+			"Draw",
+			"Files",
+			"Hand",
+			"Lightbulb",
+			"Paragraph",
+		]
+	)}
+`;
+
+/**
+ * Display examples of all directions of a single UI arrow.
+ */
+export const UIArrowsTemplate = (args) => html`
+	${IconListTemplate(
+		{
+			...args,
+			setName: "ui",
+		},
+		[
+			"ArrowRight100",
+			"ArrowLeft100",
+			"ArrowDown100",
+			"ArrowUp100",
+		]
+	)}
+`;
+
+/**
+ * Display examples of multiple UI icons.
+ */
+export const UIDefaultTemplate = (args) => html`
+	<div style="margin-bottom: 32px;">
+		${IconListTemplate(
+			{
+				...args,
+				setName: "ui",
+			},
+			[
+				"Asterisk100",
+				"Asterisk200",
+				"Asterisk300",
+			]
+		)}
+	</div>
+	<div>
+		${IconListTemplate(
+			{
+				...args,
+				setName: "ui",
+			},
+			[
+				"ChevronDown50",
+				"ChevronDown75",
+				"ChevronDown100",
+				"ChevronDown200",
+				"ChevronDown300",
+				"ChevronDown400",
+			]
+		)}
+	</div>
+`;

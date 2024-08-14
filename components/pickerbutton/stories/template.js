@@ -61,7 +61,6 @@ export const Template = ({
 					</span>
 				`)}
 				${Icon({
-					setName: iconType,
 					iconName: iconName ?? "ChevronDown",
 					setName: iconSet,
 					size,

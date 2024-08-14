@@ -14,7 +14,7 @@ export const withIconSpriteSheet = makeDecorator({
             loaded = {},
 		} = context;
 
-        // Load the icons into the window object
+        // Store the icons data from the IconLoader in the window object.
         if (loaded.icons) window.icons = loaded.icons;
 
 		useEffect(() => {
