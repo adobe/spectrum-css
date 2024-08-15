@@ -15,5 +15,6 @@
 	.spectrum-Well {
 		--spectrum-well-border-width: var(--spectrum-border-width-100);
 		--spectrum-well-content-color: var(--spectrum-body-color);
+		--spectrum-well-background-color: rgba(var(--spectrum-gray-800-rgb), .02);
 	}
 }
