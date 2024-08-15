@@ -20,7 +20,7 @@
 	padding: var(--mod-well-padding, var(--spectrum-well-padding));
 	color: var(--mod-well-content-color, var(--spectrum-well-content-color));
 	text-align: start;
-	background-color: var(--mod-well-background-color, rgba(var(--spectrum-gray-800-rgb), 0.02));
+	background-color: var(--mod-well-background-color, var(--spectrum-well-background-color));
 	border-color: var(--mod-well-border-color, var(--spectrum-well-border-color));
 	border-style: solid;
 	border-width: var(--mod-well-border-width, var(--spectrum-well-border-width));
