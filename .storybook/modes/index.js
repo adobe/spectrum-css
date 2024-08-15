@@ -52,3 +52,9 @@ export const mobile = {
         scale: "large",
     },
 };
+
+export const viewports = {
+    small: {
+        width: 480,
+    },
+};
