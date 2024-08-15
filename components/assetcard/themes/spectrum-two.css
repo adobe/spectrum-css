@@ -15,6 +15,9 @@
 	.spectrum-AssetCard {
 		--spectrum-assetcard-overlay-background-color: rgb(27 127 245 / 10%);
 
+		/* todo: is this supposed to point to --spectrum-transparent-black-300 of the same value? */
+		--spectrum-assetcard-selectionindicator-box-shadow-color: rgba(0, 0, 0 / 15%);
+
 		/* todo: this isn't quite the size from the XD file as 232px is not a size token, so we use 224px */
 		--spectrum-assetcard-asset-size: 224px;
 		--spectrum-assetcard-background-color: var(--spectrum-gray-100);
