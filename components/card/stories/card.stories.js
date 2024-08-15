@@ -42,10 +42,6 @@ export default {
 			},
 			control: "boolean",
 		},
-		hasQuickAction: {
-			name: "Quick action",
-			table: { disable: true },
-		},
 		showAsset: {
 			name: "Show asset",
 			type: { name: "string" },
@@ -90,7 +86,6 @@ export default {
 		isGallery: false,
 		isDropTarget: false,
 		hasActions: true,
-		hasQuickAction: true,
 	},
 	parameters: {
 		actions: {
@@ -183,7 +178,6 @@ Horizontal.args = {
 	isQuiet: false,
 	isHorizontal: true,
 	hasActions: false,
-	hasQuickAction: false,
 };
 
 export const NoImage = Template.bind({});
