@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-s2-foundations.15
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0e08995`](https://github.com/adobe/spectrum-css/commit/0e08995cfd43f7d4495df4e3403106ced7760381) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-248]: Selected, static black actionbutton content color should be white, not black
+
 ## 7.0.0-s2-foundations.14
 
 ### Minor Changes
