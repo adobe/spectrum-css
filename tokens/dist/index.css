@@ -441,6 +441,7 @@
 	--spectrum-swatch-border-color: rgba(255, 255, 255, 0.51);
 
 	--spectrum-blue-800-rgb: 84, 163, 246;
+	--spectrum-gray-800-rgb: 219, 219, 219;
 }
 .spectrum {
 	--spectrum-focus-indicator-color: var(--spectrum-blue-800);
@@ -2158,6 +2159,7 @@
 	--spectrum-swatch-border-color: rgba(0, 0, 0, 0.51);
 
 	--spectrum-blue-800-rgb: 20, 122, 243;
+	--spectrum-gray-800-rgb: 41, 41, 41;
 }
 .spectrum--medium {
 	--spectrum-workflow-icon-size-50: 14px;
