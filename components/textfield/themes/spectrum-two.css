@@ -47,6 +47,9 @@
 		--spectrum-textfield-font-family: var(--spectrum-sans-font-family-stack);
 		--spectrum-textfield-font-weight: var(--spectrum-regular-font-weight);
 
+		/* line height */
+		--spectrum-textfield-input-line-height: var(--spectrum-textfield-height);
+
 		/* character count */
 		--spectrum-textfield-character-count-font-family: var(--spectrum-sans-font-family-stack);
 		--spectrum-textfield-character-count-font-weight: var(--spectrum-regular-font-weight);
