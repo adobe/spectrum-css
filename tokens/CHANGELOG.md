@@ -1,5 +1,13 @@
 # Change Log
 
+## 15.0.0-s2-foundations.16
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`fa60db9`](https://github.com/adobe/spectrum-css/commit/fa60db9159edb6b111e4e6c30b05c828224b81e4) Thanks [@pfulton](https://github.com/pfulton)! - Adds `--spectrum-gray-800-rgb` custom token for use in well component. The custom token values reflect the stripped RGB values for light and dark modes of `--spectrum-gray-800` values for S2.
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`1d1cbfc`](https://github.com/adobe/spectrum-css/commit/1d1cbfcc80f8a78784edf9778c0f366be6b0efe6) Thanks [@pfulton](https://github.com/pfulton)! - Adds `--spectrum-blue-800-rgb` for light and `--spectrum-blue-900-rgb` for dark with s2 values to custom tokens to define stripped rgb token used in dropzone dragged background.
+
 ## 15.0.0-s2-foundations.15
 
 ### Minor Changes
