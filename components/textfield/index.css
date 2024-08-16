@@ -31,24 +31,8 @@
 	/* Firefox and Safari - Remove the margin for input. */
 	margin: 0;
 
-	/*** ↓ Browser Mitigations for Text Field ↓ ***/
-	/* Edge - Use padding instead of text-indent because text-indent does not left align the text  */
-	text-indent: 0;
-
 	/* All browsers - Change the input font styles */
 	text-overflow: ellipsis;
-
-	/* TODO: Determine if the vendor prefix toggling of appearance is still needed  */
-	/* Firefox -
-		Removes the native spin buttons in Firefox; -moz-appearance: none results in spinners.
-		This has to come after -webkit-appearance or it gets overridden (#214)
-		Details: http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
-
-		Sets the opacity to 1 as normalize.css sets an opacity to placeholders
-		Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
-	*/
-	/* stylelint-disable-next-line property-no-vendor-prefix -- removes the native spin buttons in Firefox */
-	-moz-appearance: textfield;
 }
 
 .spectrum-Textfield.spectrum-Textfield--quiet {
@@ -210,11 +194,9 @@
 
 	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
 	/* no line-height mod defined to allow for maximum compatibility */
-	line-height: calc(var(--spectrum-textfield-height) - (var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width))) * 2);
+	line-height: var(--spectrum-textfield-input-line-height);
 	color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
 
-	/* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
-	text-indent: 0;
 	text-overflow: ellipsis;
 	vertical-align: top; /* used to align them correctly in forms. */
 
@@ -228,16 +210,6 @@
 
 	/* stylelint-disable-next-line order/properties-order -- keep this in position to prevent issues with custom -moz- prefix */
 	appearance: none;
-
-	/*
-		This has to come after -webkit-appearance or it gets overridden (#214)
-		Details: http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29
-
-		Sets the opacity to 1 as normalize.css sets an opacity to placeholders
-		Details: https://github.com/csstools/normalize.css/blob/main/normalize.css#L297
-	*/
-	/* stylelint-disable-next-line property-no-vendor-prefix, order/properties-order -- removes the native spin buttons in Firefox; -moz-appearance: none results in spinners */
-	-moz-appearance: textfield;
 
 	transition: border-color var(--mod-texfield-animation-duration, var(--spectrum-texfield-animation-duration)) ease-in-out;
 
@@ -253,15 +225,6 @@
 		}
 	}
 
-	/* removes the native spin buttons */
-	/* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
-	&::-webkit-inner-spin-button,
-	&::-webkit-outer-spin-button {
-		margin: 0;
-		/* stylelint-disable-next-line value-no-vendor-prefix */
-		appearance: none;
-	}
-
 	/* removes the red border that appears in Firefox */
 	&:-moz-ui-invalid {
 		box-shadow: none;
@@ -273,6 +236,8 @@
 		font-size: var(--mod-textfield-placeholder-font-size, var(--spectrum-textfield-placeholder-font-size));
 		font-weight: var(--mod-textfield-font-weight, var(--spectrum-textfield-font-weight));
 		color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
+
+		/* normalize opacity between browsers */
 		opacity: 1;
 		transition: color var(--mod-texfield-animation-duration, var(--spectrum-texfield-animation-duration)) ease-in-out;
 	}
@@ -382,9 +347,6 @@
 		opacity: 1;
 		background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
 		border-color: transparent;
-
-		/* For safari mobile browser */
-		-webkit-text-fill-color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 
 		&::placeholder {
 			color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
