@@ -1,5 +1,23 @@
 # Change Log
 
+## 5.0.0-s2-foundations.13
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9df688a`](https://github.com/adobe/spectrum-css/commit/9df688a6a83be5f13bc4e0e732fed294af08bf3f) Thanks [@pfulton](https://github.com/pfulton)! - Replaces raw RGB value/direct token references with abstracted custom properties in theme/spectrum-two.css files
+
+  Asset card
+
+  - removes raw rgb value for box-shadow from `index.css`
+  - creates new `--spectrum-assetcard-selectionindicator-box-shadow-color`
+    in `themes/spectrum-two.css` with previous rgb value to use instead
+
+  Well
+
+  - removes `--spectrum-gray-800-rgb` for background-color from `index.css`
+  - creates new `--spectrum-well-background-color` in `themes/spectrum-two.css`
+    with previous `--spectrum-gray-800-rgb` property to use instead
+
 ## 5.0.0-s2-foundations.12
 
 ### Minor Changes
