@@ -1,5 +1,11 @@
 # Change Log
 
+## 8.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9294678`](https://github.com/adobe/spectrum-css/commit/929467879ebedb5601f54509d95f3dcd97681607) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-306]: Reintroduces previous changes in textfield that had been reverted, including adjusted line height, cleanup of legacy vendor prefixes and normalization (#2771), a fix for focus pseudo pointer events (#2761)
+
 ## 8.0.0-s2-foundations.12
 
 ### Minor Changes
