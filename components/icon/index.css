@@ -15,6 +15,9 @@
 
 .spectrum-Icon,
 .spectrum-UIIcon {
+	/* stylelint-disable-next-line custom-property-pattern -- variable name defined by A4U output */
+	--iconPrimary: var(--mod-icon-color, currentColor);
+
 	--spectrum-icon-inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size)));
 	--spectrum-icon-block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size)));
 
@@ -31,18 +34,13 @@
 	/* Use custom pass through or inherit the text color. */
 	color: var(--mod-icon-color, inherit);
 
-	/* Fill should match the current text color. */
-	fill: currentColor;
+	/* stylelint-disable-next-line custom-property-pattern -- map this to the same value as what's used by the icon's SVG code */
+	fill: var(--iconPrimary);
 
 	img,
 	svg {
 		inline-size: var(--spectrum-icon-inline-size);
 		block-size: var(--spectrum-icon-block-size);
-	}
-
-	/* Hide the SVG overflow in IE. */
-	&:not(:root) {
-		overflow: hidden;
 	}
 }
 
