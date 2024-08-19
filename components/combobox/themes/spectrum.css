@@ -11,12 +11,4 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: spectrum) {
-	.spectrum-Combobox {
-		--spectrum-combobox-border-color-default: var(--spectrum-gray-500);
-		--spectrum-combobox-border-color-hover: var(--spectrum-gray-600);
-		--spectrum-combobox-border-color-focus: var(--spectrum-gray-500);
-		--spectrum-combobox-border-color-focus-hover: var(--spectrum-gray-600);
-		--spectrum-combobox-border-color-key-focus: var(--spectrum-gray-600);
-	}
-}
+@import "./spectrum-two.css";

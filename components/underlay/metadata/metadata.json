@@ -1,0 +1,49 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum-Underlay",
+    ".spectrum-Underlay.is-open"
+  ],
+  "component": [
+    "--spectrum-underlay-background-color",
+    "--spectrum-underlay-background-entry-animation-delay",
+    "--spectrum-underlay-background-entry-animation-duration",
+    "--spectrum-underlay-background-entry-animation-ease",
+    "--spectrum-underlay-background-exit-animation-delay",
+    "--spectrum-underlay-background-exit-animation-duration",
+    "--spectrum-underlay-background-exit-animation-ease"
+  ],
+  "modifiers": [
+    "--mod-overlay-animation-duration",
+    "--mod-overlay-animation-duration-opened",
+    "--mod-underlay-background-color",
+    "--mod-underlay-background-entry-animation-delay",
+    "--mod-underlay-background-entry-animation-duration",
+    "--mod-underlay-background-entry-animation-ease",
+    "--mod-underlay-background-exit-animation-delay",
+    "--mod-underlay-background-exit-animation-duration",
+    "--mod-underlay-background-exit-animation-ease"
+  ],
+  "theming-layer": [
+    "--system-underlay-background-color",
+    "--system-underlay-background-entry-animation-delay",
+    "--system-underlay-background-entry-animation-duration",
+    "--system-underlay-background-entry-animation-ease",
+    "--system-underlay-background-exit-animation-delay",
+    "--system-underlay-background-exit-animation-duration",
+    "--system-underlay-background-exit-animation-ease"
+  ],
+  "high-contrast": [],
+  "global": [
+    "--spectrum-animation-duration-0",
+    "--spectrum-animation-duration-100",
+    "--spectrum-animation-duration-200",
+    "--spectrum-animation-duration-300",
+    "--spectrum-animation-duration-600",
+    "--spectrum-animation-ease-in",
+    "--spectrum-animation-ease-out",
+    "--spectrum-black-rgb",
+    "--spectrum-overlay-opacity"
+  ]
+}

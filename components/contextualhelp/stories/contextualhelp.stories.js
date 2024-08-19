@@ -39,6 +39,7 @@ export default {
 			options: ["Info", "Help"],
 			control: "select",
 		},
+		iconSet: { table: { disable: true } },
 		popoverPlacement: {
 			name: "Popover Placement",
 			type: { name: "string", required: true },
@@ -79,6 +80,7 @@ export default {
 	args: {
 		rootClass: "spectrum-ContextualHelp",
 		iconName: "Info",
+		iconSet: "workflow",
 		popoverPlacement: "bottom-start",
 		title: "Permission required",
 		body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

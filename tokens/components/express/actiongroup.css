@@ -11,8 +11,23 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express {
-	--system-spectrum-actiongroup-gap-size-compact: var(--spectrum-spacing-50);
-	--system-spectrum-actiongroup-horizontal-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
-	--system-spectrum-actiongroup-vertical-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
+.spectrum.spectrum--express {
+	--system-action-group-gap-size-compact: var(--spectrum-spacing-50);
+	--system-action-group-horizontal-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
+	--system-action-group-vertical-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
+	--system-action-group-button-spacing-reset: 0;
+	--system-action-group-border-radius-reset: 0;
+	--system-action-group-border-radius: var(--spectrum-corner-radius-100);
+	--system-action-group-size-xs-horizontal-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-s-horizontal-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-xs-vertical-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-size-s-vertical-spacing-regular: var(--spectrum-spacing-75);
+	--system-action-group-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-m-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-l-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-xl-horizontal-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-m-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-l-vertical-spacing-regular: var(--spectrum-spacing-100);
+	--system-action-group-size-xl-vertical-spacing-regular: var(--spectrum-spacing-100);
 }

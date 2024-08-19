@@ -11,6 +11,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 /**
  * Get the tray submenu back arrow name with scale number (defined in design spec).

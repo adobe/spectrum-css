@@ -1,0 +1,13 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "stylelint-theme-alignment",
+	"tags": ["tooling", "stylelint"],
+	"targets": {
+		"format": {
+			"defaultConfiguration": "plugins"
+		},
+		"lint": {
+			"defaultConfiguration": "plugins"
+		}
+	}
+}

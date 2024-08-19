@@ -9,6 +9,9 @@ import { when } from "lit/directives/when.js";
 import { html, literal } from "lit/static-html.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 export const TableRowItem = ({
 	rootClass = "spectrum-Table",
@@ -109,6 +112,7 @@ export const TableRowItem = ({
 								Button({
 									size,
 									iconName: "ChevronRight100",
+									iconSet: "ui",
 									hideLabel: true,
 									customClasses: [`${rootClass}-disclosureIcon`],
 									ariaExpanded: isExpanded,
@@ -223,11 +227,13 @@ export const Template = ({
 				>
 					${Icon({
 						iconName: "ArrowDown100",
+						setName: "ui",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
 					}, context)}<span class="${rootClass}-columnTitle">Column title</span>${
 					Icon({
 						iconName: "ChevronDown100",
+						setName: "ui",
 						size,
 						customClasses: [`${rootClass}-menuIcon`],
 					}, context)}
@@ -240,6 +246,7 @@ export const Template = ({
 				>
 					${Icon({
 						iconName: "ArrowDown100",
+						setName: "ui",
 						size,
 						customClasses: [`${rootClass}-sortedIcon`],
 					}, context)}<span class="${rootClass}-columnTitle">Column title</span>

@@ -8,11 +8,15 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ContextualHelp",
 	id = getRandomId("contextualhelp"),
 	iconName,
+	iconSet = "workflow",
 	title,
 	body,
 	link,
@@ -35,6 +39,7 @@ export const Template = ({
 					...passthrough,
 					size: "xs",
 					iconName,
+					iconSet,
 					customClasses: [`${rootClass}-button`],
 				}, context),
 				content: [

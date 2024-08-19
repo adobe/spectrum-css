@@ -8,6 +8,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Stepper",
@@ -75,6 +78,7 @@ export const Template = ({
 						size,
 						customClasses: [`${rootClass}-button`],
 						iconName: `ChevronUp${iconSize}`,
+						iconSet: "ui",
 						isDisabled,
 						isQuiet,
 						position: "top",
@@ -84,6 +88,7 @@ export const Template = ({
 						size,
 						customClasses: [`${rootClass}-button`],
 						iconName: `ChevronDown${iconSize}`,
+						iconSet: "ui",
 						isDisabled,
 						isQuiet,
 						position: "bottom",

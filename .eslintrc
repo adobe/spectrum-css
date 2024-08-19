@@ -48,6 +48,14 @@
 			}
 		},
 		{
+			"files": ["metadata.json"],
+			"parser": "jsonc-eslint-parser",
+			"extends": ["plugin:jsonc/recommended-with-jsonc"],
+			"rules": {
+				"jsonc/sort-keys": [0]
+			}
+		},
+		{
 			"files": ["project.json"],
 			"rules": {
 				"jsonc/sort-keys": [

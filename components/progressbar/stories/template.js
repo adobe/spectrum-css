@@ -6,6 +6,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { capitalize, lowerCase } from "lodash-es";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressBar",

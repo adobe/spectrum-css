@@ -1,0 +1,68 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum--legacy",
+    ".spectrum-Modal",
+    ".spectrum-Modal--fullscreen",
+    ".spectrum-Modal--fullscreenTakeover",
+    ".spectrum-Modal--fullscreenTakeover.is-open",
+    ".spectrum-Modal--responsive",
+    ".spectrum-Modal-wrapper",
+    ".spectrum-Modal-wrapper .spectrum-Modal--responsive",
+    ".spectrum-Modal-wrapper.is-open",
+    ".spectrum-Modal.is-open"
+  ],
+  "component": [
+    "--spectrum-modal-background-color",
+    "--spectrum-modal-confirm-border-radius",
+    "--spectrum-modal-confirm-entry-animation-delay",
+    "--spectrum-modal-confirm-entry-animation-distance",
+    "--spectrum-modal-confirm-entry-animation-duration",
+    "--spectrum-modal-confirm-exit-animation-delay",
+    "--spectrum-modal-confirm-exit-animation-duration",
+    "--spectrum-modal-fullscreen-margin",
+    "--spectrum-modal-max-height",
+    "--spectrum-modal-max-width",
+    "--spectrum-modal-transition-animation-duration"
+  ],
+  "modifiers": [
+    "--mod-modal-background-color",
+    "--mod-modal-confirm-border-radius",
+    "--mod-modal-confirm-entry-animation-delay",
+    "--mod-modal-confirm-entry-animation-distance",
+    "--mod-modal-confirm-entry-animation-duration",
+    "--mod-modal-confirm-exit-animation-delay",
+    "--mod-modal-confirm-exit-animation-duration",
+    "--mod-modal-fullscreen-margin",
+    "--mod-modal-max-height",
+    "--mod-modal-max-width",
+    "--mod-modal-transition-animation-duration",
+    "--mod-overlay-animation-duration",
+    "--mod-overlay-animation-duration-opened"
+  ],
+  "theming-layer": [
+    "--system-modal-background-color",
+    "--system-modal-confirm-border-radius",
+    "--system-modal-confirm-entry-animation-delay",
+    "--system-modal-confirm-entry-animation-duration",
+    "--system-modal-confirm-exit-animation-delay",
+    "--system-modal-confirm-exit-animation-duration",
+    "--system-modal-fullscreen-margin",
+    "--system-modal-max-height",
+    "--system-modal-max-width",
+    "--system-modal-transition-animation-duration"
+  ],
+  "high-contrast": [],
+  "global": [
+    "--spectrum-animation-duration-0",
+    "--spectrum-animation-duration-100",
+    "--spectrum-animation-duration-200",
+    "--spectrum-animation-duration-500",
+    "--spectrum-animation-ease-in",
+    "--spectrum-animation-ease-out",
+    "--spectrum-corner-radius-100",
+    "--spectrum-gray-100",
+    "--spectrum-gray-75"
+  ]
+}

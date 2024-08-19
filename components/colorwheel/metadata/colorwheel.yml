@@ -7,7 +7,7 @@ description: |
   - Add `.is-dragged` when the handle is being dragged
   - To display with ColorArea inside of ColorWheel, add ColorArea to `spectrum-ColorWheel-colorarea-container` with `style="--mod-colorarea-width: 70.1%; --mod-colorarea-height: 70.1%"`
   - `.spectrum-colorwheel-colorarea-container-size` is hard coded to position the ColorArea within the ColorWheel using `.spectrum-color-wheel-color-area-margin`. Using JS container size can be calcaulted with `Math.sqrt(2 * R * R)`, where R is the innerRadius as calcaulted for the clip paths
-  - `.spectrum-colorwheel-path`, `.spectrum-colorwheel-path-borders` and `.spectrum-colorwheel-colorarea-container` are hard coded in CSS and include token values in custom CSS variables so they can be accessed with JS to and used to calcualte these values, `const wheel = document.querySelector(".spectrum-ColorWheel-wheel") getComputedStyle(wheel).getPropertyValue('--track-width'))`
+  - `.spectrum-colorwheel-path`, `.spectrum-colorwheel-path-borders` and `.spectrum-colorwheel-colorarea-container` are hard coded in CSS and include token values in custom CSS variables so they can be accessed with JS to and used to calcualte these values, `const wheel = document.querySelector(".spectrum-ColorWheel-wheel") getComputedStyle(wheel).getPropertyValue('--_track-width'))`
 sections:
   - name: Custom Properties API
     description: |

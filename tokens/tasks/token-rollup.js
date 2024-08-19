@@ -17,7 +17,7 @@ const path = require("path");
 
 const fg = require("fast-glob");
 
-const { processCSS } = require("../../tasks/component-builder");
+const { processCSS } = require("../../tasks/component-builder.js");
 
 require("colors");
 
@@ -28,18 +28,16 @@ require("colors");
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function index({ cwd = process.cwd(), clean = false } = {}) {
+async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false } = {}) {
 	// Create an index.css asset for each component
-	return Promise.all(["bridge", "express", "spectrum"].map(async (dir) => {
-		const outputPath = path.join(cwd, "dist", "css", "components", dir, "index.css");
-		if (clean && fs.existsSync(outputPath)) {
-			await fsp.unlink(outputPath);
-		}
+	if (clean && fs.existsSync(outputPath)) {
+		await fsp.unlink(outputPath);
+	}
 
-		const inputs = await fg(["dist/css/components/" + dir + "/*.css"], { cwd });
-		const contents = inputs.map(input => `@import "./${path.basename(input)}";`).join("\n");
-		return processCSS(contents, inputs[0], outputPath, { cwd, clean, configPath: cwd, map: false });
-	}));
+	const inputs = await fg(inputGlob, { cwd });
+	const contents = inputs.map(input => `@import "${path.basename(input)}";`).join("\n");
+	if (!contents) return;
+	return processCSS(contents, inputs[0], outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true });
 }
 
 /**
@@ -51,7 +49,7 @@ async function index({ cwd = process.cwd(), clean = false } = {}) {
  * @returns Promise<void>
  */
 async function main({
-	cwd,
+	cwd = process.cwd(),
 	clean,
 } = {}) {
 	if (typeof clean === "undefined") {
@@ -61,8 +59,12 @@ async function main({
 	const key = `[build] ${"@spectrum-css/tokens".cyan} index`;
 	console.time(key);
 
+	const compiledOutputPath = path.join(cwd, "dist", "css");
+
 	return Promise.all([
-		index({ cwd, clean }),
+		...["spectrum", "legacy", "express"].map(theme => index([`dist/css/components/${theme}/*.css`], path.join(compiledOutputPath, "components", theme, "index.css"), { cwd, clean })),
+		index(["dist/css/components/bridge/*.css"], path.join(compiledOutputPath, "components", "bridge", "index.css"), { cwd, clean }),
+		index(["dist/css/*-vars.css"], path.join(compiledOutputPath, "index.css"), { cwd, clean }),
 	]).then((report) => {
 		const logs = report.flat(Infinity).filter(Boolean);
 
@@ -71,6 +73,7 @@ async function main({
 
 		if (logs && logs.length > 0) {
 			logs.sort((a,) => {
+				if (!a || typeof a !== "string") return 1;
 				if (a.includes("✓")) return -1;
 				if (a.includes("🔍")) return 0;
 				return 1;

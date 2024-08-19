@@ -1,0 +1,29 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum {
+	--system-color-handle-size: var(--spectrum-color-handle-size);
+	--system-color-handle-focused-size: var(--spectrum-color-handle-size-key-focus);
+	--system-color-handle-hitarea-size: var(--spectrum-color-control-track-width);
+	--system-color-handle-animation-duration: var(--spectrum-animation-duration-100);
+	--system-color-handle-animation-easing: ease-in-out;
+	--system-color-handle-outer-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-outer-border-opacity));
+	--system-color-handle-outer-border-width: var(--spectrum-color-handle-outer-border-width);
+	--system-color-handle-inner-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity));
+	--system-color-handle-inner-border-width: var(--spectrum-color-handle-inner-border-width);
+	--system-color-handle-border-width: var(--spectrum-color-handle-border-width);
+	--system-color-handle-border-color: var(--spectrum-white);
+	--system-color-handle-border-color-disabled: var(--spectrum-disabled-content-color);
+	--system-color-handle-fill-color-disabled: var(--spectrum-disabled-background-color);
+	--system-color-handle-opacity-checkerboard-position: 50%;
+}

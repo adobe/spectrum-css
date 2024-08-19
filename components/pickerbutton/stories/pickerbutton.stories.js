@@ -22,7 +22,7 @@ export default {
 			options: ["s", "m", "l", "xl"],
 			control: "select",
 		},
-		iconType: {
+		iconSet: {
 			name: "Icon",
 			type: { name: "string", required: false },
 			table: {
@@ -34,7 +34,7 @@ export default {
 		},
 		iconName: {
 			...Icon.argTypes.iconName,
-			if: { arg: "iconType", eq: "workflow" },
+			if: { arg: "iconSet", eq: "workflow" },
 		},
 		label: {
 			name: "Label",
@@ -101,7 +101,7 @@ export default {
 		isDisabled: false,
 		isFocused: false,
 		isKeyboardFocused: false,
-		iconType: "ui",
+		iconSet: "ui",
 		iconName: "ChevronDown",
 		position: "right"
 	},

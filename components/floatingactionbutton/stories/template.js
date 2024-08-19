@@ -6,12 +6,16 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-FloatingActionButton",
 	variant,
 	id = getRandomId("floating"),
 	iconName,
+	iconSet = "workflow",
 	isHovered = false,
 	isFocused = false,
 	isActive = false,
@@ -33,6 +37,7 @@ export const Template = ({
 		>
 			${Icon({
 				iconName,
+				setName: iconSet,
 				customClasses: [`${rootClass}-icon`],
 			}, context)}
 		</button>

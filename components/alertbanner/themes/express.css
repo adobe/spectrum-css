@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-AlertBanner {
 		--spectrum-alert-banner-netural-background: var(--spectrum-neutral-background-color-default);
 	}

@@ -8,12 +8,16 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Badge",
 	size = "m",
 	label,
 	iconName,
+	iconSet = "workflow",
 	variant = "neutral",
 	fixed,
 	customStyles = {},
@@ -34,6 +38,7 @@ export const Template = ({
     ${when(iconName, () =>
       Icon({
         iconName,
+		setName: iconSet,
         customClasses: [
           ...(typeof label === "undefined"
             ? [`${rootClass}-icon--no-label`]

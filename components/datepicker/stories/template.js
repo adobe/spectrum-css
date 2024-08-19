@@ -9,6 +9,9 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 export const DatePicker = ({
 	rootClass = "spectrum-DatePicker",
@@ -85,8 +88,8 @@ export const DatePicker = ({
 			${PickerButton({
 				customClasses: [`${rootClass}-button`],
 				size: "m",
-				iconType: "workflow",
 				iconName: "Calendar",
+				iconSet: "workflow",
 				isQuiet,
 				customStyles: readOnly ? { "display": "none" } : undefined,
 				// @todo this is not added to the button on the website; need to make sure it's not a bug

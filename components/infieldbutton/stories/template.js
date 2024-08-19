@@ -4,6 +4,9 @@ import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 export const Template = (
 	{
@@ -13,6 +16,7 @@ export const Template = (
 		position,
 		isQuiet,
 		iconName = "Add",
+		iconSet = "workflow",
 		isDisabled,
 		isInvalid,
 		isHovered,
@@ -49,6 +53,7 @@ export const Template = (
 							{
 								size,
 								iconName: "ChevronUp75",
+								setName: "ui",
 								customClasses: [`${rootClass}-icon`],
 							},
 							context,
@@ -79,6 +84,7 @@ export const Template = (
 							{
 								size,
 								iconName: "ChevronDown75",
+								setName: "ui",
 								customClasses: [`${rootClass}-icon`],
 							},
 							context,
@@ -111,6 +117,7 @@ export const Template = (
 								{
 									size,
 									iconName,
+									setName: iconSet,
 									customClasses: [`${rootClass}-icon`],
 								},
 								context,
