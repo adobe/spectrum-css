@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.1.4
+
+### Patch Changes
+
+- [#2982](https://github.com/adobe/spectrum-css/pull/2982) [`dffdefa`](https://github.com/adobe/spectrum-css/commit/dffdefaa1ffc39fbf7706e218d261da3a02695b5) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove internal-only --flow-direction variable
+
 ## 7.1.3
 
 ### Patch Changes
