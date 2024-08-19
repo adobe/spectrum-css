@@ -11,8 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: spectrum) {
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
 	.spectrum-Tabs {
-		--spectrum-tabs-font-weight: var(--spectrum-default-font-weight);
+		--spectrum-tabs-divider-background-color: var(--spectrum-gray-300);
 	}
 }

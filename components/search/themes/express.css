@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Search {
 		--spectrum-search-border-radius: calc(var(--spectrum-component-height-100) / 2);
 		--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
@@ -23,25 +23,26 @@
 		--spectrum-search-border-color-focus: var(--spectrum-gray-800);
 		--spectrum-search-border-color-focus-hover: var(--spectrum-gray-900);
 		--spectrum-search-border-color-key-focus: var(--spectrum-gray-900);
-	}
 
-	.spectrum-Search--sizeS {
-		--spectrum-search-border-radius: calc(var(--spectrum-component-height-75) / 2);
-		--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-75);
-	}
+		&.spectrum-Search--sizeS {
+			--spectrum-search-border-radius: calc(var(--spectrum-component-height-75) / 2);
+			--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-75);
+		}
 
-	.spectrum-Search--sizeM {
-		--spectrum-search-border-radius: calc(var(--spectrum-component-height-100) / 2);
-		--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
-	}
+		&,
+		&.spectrum-Search--sizeM {
+			--spectrum-search-border-radius: calc(var(--spectrum-component-height-100) / 2);
+			--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
+		}
 
-	.spectrum-Search--sizeL {
-		--spectrum-search-border-radius: calc(var(--spectrum-component-height-200) / 2);
-		--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-200);
-	}
+		&.spectrum-Search--sizeL {
+			--spectrum-search-border-radius: calc(var(--spectrum-component-height-200) / 2);
+			--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-200);
+		}
 
-	.spectrum-Search--sizeXL {
-		--spectrum-search-border-radius: calc(var(--spectrum-component-height-300) / 2);
-		--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-300);
+		&.spectrum-Search--sizeXL {
+			--spectrum-search-border-radius: calc(var(--spectrum-component-height-300) / 2);
+			--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-300);
+		}
 	}
 }

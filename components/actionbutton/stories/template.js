@@ -7,6 +7,9 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum-two.css";
+import "../themes/spectrum.css";
 
 /**
  * @todo load order should not influence the icon size but it is; fix this
@@ -67,6 +70,7 @@ export const Template = ({
 	role = "button",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
+
 	return html`
 		<button
 			aria-label=${ifDefined(label)}

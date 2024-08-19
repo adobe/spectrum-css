@@ -1,5 +1,193 @@
 # Change Log
 
+## 11.0.0-s2-foundations.5
+
+### Patch Changes
+
+- Updated dependencies [[`fa60db9`](https://github.com/adobe/spectrum-css/commit/fa60db9159edb6b111e4e6c30b05c828224b81e4), [`1d1cbfc`](https://github.com/adobe/spectrum-css/commit/1d1cbfcc80f8a78784edf9778c0f366be6b0efe6)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.16
+
+## 11.0.0-s2-foundations.4
+
+### Minor Changes
+
+- [#2982](https://github.com/adobe/spectrum-css/pull/2982) [`dffdefa`](https://github.com/adobe/spectrum-css/commit/dffdefaa1ffc39fbf7706e218d261da3a02695b5) Thanks [@castastrophe](https://github.com/castastrophe)! - ## New features for @spectrum-css Storybook
+
+  - Migrate test functionality out of stories/template.js to stories/\*.test.js files
+  - Expand test coverage for components lacking a testing grid VRT
+
+## 11.0.0-s2-foundations.3
+
+### Patch Changes
+
+- Updated dependencies [[`58a89ea`](https://github.com/adobe/spectrum-css/commit/58a89ea464c387111511271a5f5afce044f11042)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.15
+
+## 11.0.0-s2-foundations.2
+
+### Patch Changes
+
+- Updated dependencies [[`975b4fb`](https://github.com/adobe/spectrum-css/commit/975b4fb631d7203e772c2e879fbec610f933286f), [`975b4fb`](https://github.com/adobe/spectrum-css/commit/975b4fb631d7203e772c2e879fbec610f933286f)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.14
+
+## 11.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05) Thanks [@pfulton](https://github.com/pfulton)! - - Accordion: Flatten sizing variables in theme layer
+  - ActionButton: Fix typo in variable name "\*-defaul-selectedt"
+  - Move out rtl logical transform from theme to index.css for: calendar, pagination, treeview
+
+### Patch Changes
+
+- Updated dependencies [[`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.13
+  - @spectrum-css/ui-icons@2.0.0-s2-foundations.8
+  - @spectrum-css/tokens@15.0.0-s2-foundations.13
+
+## 11.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1) Thanks [@pfulton](https://github.com/pfulton)! - Updated build to set cssnano to discardUnused: false
+
+### Patch Changes
+
+- Updated dependencies [[`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.12
+  - @spectrum-css/ui-icons@2.0.0-s2-foundations.7
+  - @spectrum-css/tokens@15.0.0-s2-foundations.12
+
+## 11.0.0-s2-foundations.8
+
+### Patch Changes
+
+- Updated dependencies [[`4265d20`](https://github.com/adobe/spectrum-css/commit/4265d208b6eb2db923e558fca100b4532b964e45)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.11
+
+## 11.0.0-s2-foundations.7
+
+### Patch Changes
+
+- Updated dependencies [[`0844aad`](https://github.com/adobe/spectrum-css/commit/0844aadba2fefb844a66370ff6e9b4704f6c1543)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.11
+  - @spectrum-css/ui-icons@2.0.0-s2-foundations.6
+  - @spectrum-css/tokens@15.0.0-s2-foundations.10
+
+## 11.0.0-s2-foundations.6
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`70fed24`](https://github.com/adobe/spectrum-css/commit/70fed24e76fb6284b45288a4889bfcf18dfc7a9e) Thanks [@pfulton](https://github.com/pfulton)! - ## New features for @spectrum-css Storybook
+
+  - Additional UI styling for docs visibility/usability
+  - Font loading improvements to signal completion by Typekit
+  - Theme switching setup in preparation for the S2 theme being added
+  - Icon loading decorator to inject SVG spritesheets into all stories
+  - Remove unused sizing decorator
+  - Harden the testing grid utilities in the decorators
+  - Hardcode port of 8080 for more stable local development links
+  - Adds Arabic as a supported language
+
+## 11.0.0-s2-foundations.5
+
+### Patch Changes
+
+- Updated dependencies [[`494da11`](https://github.com/adobe/spectrum-css/commit/494da118554c2ecc425564e42d25424325efc331)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.10
+
+## 11.0.0-s2-foundations.4
+
+### Minor Changes
+
+- [#2867](https://github.com/adobe/spectrum-css/pull/2867) [`a0bd4eb`](https://github.com/adobe/spectrum-css/commit/a0bd4eb2ab43352c4bdedcb26f93138aacf99aee) Thanks [@castastrophe](https://github.com/castastrophe)! - New feature: Add a look-through to the Spectrum Web Components Storybook project to create an easier connection between components that exist in CSS and those in SWC.
+
+## 11.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0a0dace`](https://github.com/adobe/spectrum-css/commit/0a0dacec163234bc73961ef17826cdc33765d9df) Thanks [@pfulton](https://github.com/pfulton)! - Across the board version update to latest build system state
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`681ba47`](https://github.com/adobe/spectrum-css/commit/681ba478c1259d0bbb183670f3188538ec3bee1d) Thanks [@pfulton](https://github.com/pfulton)! - Doing a widespread release on all packages to ensure the latest compiled CSS is published.
+
+- Updated dependencies [[`681ba47`](https://github.com/adobe/spectrum-css/commit/681ba478c1259d0bbb183670f3188538ec3bee1d), [`84c8721`](https://github.com/adobe/spectrum-css/commit/84c87212ccb37c887225eaff28e84d9f8e608e09), [`0a0dace`](https://github.com/adobe/spectrum-css/commit/0a0dacec163234bc73961ef17826cdc33765d9df)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.9
+  - @spectrum-css/ui-icons@2.0.0-s2-foundations.5
+  - @spectrum-css/tokens@15.0.0-s2-foundations.9
+
+## 11.0.0-s2-foundations.2
+
+### Patch Changes
+
+- Updated dependencies [[`2633985`](https://github.com/adobe/spectrum-css/commit/2633985775ef5a8fad929e275e55e99b75b10959)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.8
+  - @spectrum-css/tokens@15.0.0-s2-foundations.8
+
+## 11.0.0-s2-foundations.1
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`24a51cc`](https://github.com/adobe/spectrum-css/commit/24a51cc3b682a06a5133c4f5bf72c11a2337ee22) Thanks [@pfulton](https://github.com/pfulton)! - Revert themes asset naming to simplify code review; bug fixes in custom property loading from theme assets
+
+### Patch Changes
+
+- Updated dependencies [[`24a51cc`](https://github.com/adobe/spectrum-css/commit/24a51cc3b682a06a5133c4f5bf72c11a2337ee22)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.7
+  - @spectrum-css/tokens@15.0.0-s2-foundations.7
+
+## 10.4.1-s2-foundations.0
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0) Thanks [@pfulton](https://github.com/pfulton)! - Inject missing tokens into theme files and adjust logic in the splitinator tool to replace nested variable references to the new system mappings
+
+- Updated dependencies [[`130e137`](https://github.com/adobe/spectrum-css/commit/130e1372b223641efe0a3a23c83ff1d01a70bf1d), [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.6
+  - @spectrum-css/typography@7.0.0-s2-foundations.6
+
+## 11.0.0-s2-foundations.5
+
+### Patch Changes
+
+- Updated dependencies [[`de1d39f`](https://github.com/adobe/spectrum-css/commit/de1d39fdedc297032735acf97d0f87b6f2e45f50)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.5
+
+## 11.0.0-s2-foundations.4
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`485128c`](https://github.com/adobe/spectrum-css/commit/485128ca7947acb064f31e4118044a3f7e3f88b5) Thanks [@pfulton](https://github.com/pfulton)! - Corrects a faulty regex that was negatively affecting compilation of custom properties
+
+- Updated dependencies [[`485128c`](https://github.com/adobe/spectrum-css/commit/485128ca7947acb064f31e4118044a3f7e3f88b5)]:
+  - @spectrum-css/ui-icons@2.0.0-s2-foundations.4
+  - @spectrum-css/tokens@15.0.0-s2-foundations.4
+
+## 11.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df) Thanks [@pfulton](https://github.com/pfulton)! - fixes a compilation issue in the tokens dist artifacts
+
+### Patch Changes
+
+- Updated dependencies [[`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df)]:
+  - @spectrum-css/ui-icons@2.0.0-s2-foundations.3
+  - @spectrum-css/tokens@15.0.0-s2-foundations.3
+
+## 11.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+### Patch Changes
+
+- Updated dependencies [[`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58)]:
+  - @spectrum-css/ui-icons@2.0.0-s2-foundations.2
+  - @spectrum-css/tokens@15.0.0-s2-foundations.2
+
 ## 10.8.0
 
 ### Minor Changes

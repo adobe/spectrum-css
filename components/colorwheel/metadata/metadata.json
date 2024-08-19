@@ -1,0 +1,71 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum-ColorWheel",
+    ".spectrum-ColorWheel-ColorArea-handle",
+    ".spectrum-ColorWheel-ColorArea-handle:dir(rtl)",
+    ".spectrum-ColorWheel-border",
+    ".spectrum-ColorWheel-border.is-disabled",
+    ".spectrum-ColorWheel-colorarea-container",
+    ".spectrum-ColorWheel-handle",
+    ".spectrum-ColorWheel-inner",
+    ".spectrum-ColorWheel-slider",
+    ".spectrum-ColorWheel-wheel",
+    ".spectrum-ColorWheel-wheel.is-disabled",
+    ".spectrum-ColorWheel.is-disabled",
+    ".spectrum-ColorWheel.is-dragged",
+    ".spectrum-ColorWheel.is-focused"
+  ],
+  "component": [
+    "--spectrum-color-wheel-color-area-margin",
+    "--spectrum-color-wheel-minimum-width",
+    "--spectrum-color-wheel-width",
+    "--spectrum-colorwheel-border-color",
+    "--spectrum-colorwheel-border-width",
+    "--spectrum-colorwheel-colorarea-container-size",
+    "--spectrum-colorwheel-colorarea-margin",
+    "--spectrum-colorwheel-colorhandle-position",
+    "--spectrum-colorwheel-fill-color-disabled",
+    "--spectrum-colorwheel-height",
+    "--spectrum-colorwheel-min-width",
+    "--spectrum-colorwheel-path",
+    "--spectrum-colorwheel-path-borders",
+    "--spectrum-colorwheel-track-width",
+    "--spectrum-colorwheel-width"
+  ],
+  "modifiers": [
+    "--mod-colorwheel-border-color",
+    "--mod-colorwheel-border-width",
+    "--mod-colorwheel-colorarea-container-size",
+    "--mod-colorwheel-colorarea-margin",
+    "--mod-colorwheel-fill-color-disabled",
+    "--mod-colorwheel-height",
+    "--mod-colorwheel-min-width",
+    "--mod-colorwheel-path",
+    "--mod-colorwheel-path-borders",
+    "--mod-colorwheel-track-width",
+    "--mod-colorwheel-width"
+  ],
+  "theming-layer": [
+    "--system-color-wheel-border-color",
+    "--system-color-wheel-border-width",
+    "--system-color-wheel-colorarea-margin",
+    "--system-color-wheel-colorhandle-position",
+    "--system-color-wheel-fill-color-disabled",
+    "--system-color-wheel-height",
+    "--system-color-wheel-min-width",
+    "--system-color-wheel-track-width",
+    "--system-color-wheel-width"
+  ],
+  "high-contrast": [
+    "--highcontrast-colorwheel-border-color-disabled",
+    "--highcontrast-colorwheel-fill-color-disabled"
+  ],
+  "global": [
+    "--spectrum-border-width-100",
+    "--spectrum-color-control-track-width",
+    "--spectrum-disabled-background-color",
+    "--spectrum-transparent-black-200"
+  ]
+}

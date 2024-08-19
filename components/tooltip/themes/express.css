@@ -13,7 +13,7 @@
 
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Tooltip {
 		--spectrum-tooltip-backgound-color-default-neutral: var(--spectrum-neutral-background-color-default);
 	}

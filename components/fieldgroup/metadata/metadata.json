@@ -1,0 +1,27 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum-FieldGroup",
+    ".spectrum-FieldGroup .spectrum-Checkbox.is-readOnly .spectrum-Checkbox-box",
+    ".spectrum-FieldGroup .spectrum-Checkbox.is-readOnly:not(:last-child) .spectrum-Checkbox-label:after",
+    ".spectrum-FieldGroup--horizontal .spectrum-FieldGroupInputLayout",
+    ".spectrum-FieldGroup--horizontal .spectrum-FieldGroupInputLayout .spectrum-FieldGroup-item:not(:last-child)",
+    ".spectrum-FieldGroup--horizontal .spectrum-FieldGroupInputLayout .spectrum-HelpText",
+    ".spectrum-FieldGroup--sidelabel",
+    ".spectrum-FieldGroup--toplabel",
+    ".spectrum-FieldGroup--vertical .spectrum-FieldGroupInputLayout",
+    ".spectrum-FieldGroupInputLayout"
+  ],
+  "component": [
+    "--spectrum-fieldgroup-margin",
+    "--spectrum-fieldgroup-readonly-delimiter"
+  ],
+  "modifiers": [],
+  "theming-layer": [
+    "--system-field-group-margin",
+    "--system-field-group-readonly-delimiter"
+  ],
+  "high-contrast": [],
+  "global": ["--spectrum-spacing-300"]
+}

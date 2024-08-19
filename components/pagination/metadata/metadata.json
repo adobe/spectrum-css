@@ -1,0 +1,49 @@
+{
+  "sourceFile": "dist/index-theme-switcher.css",
+  "selectors": [
+    ".spectrum",
+    ".spectrum-Pagination",
+    ".spectrum-Pagination--explicit",
+    ".spectrum-Pagination--listing",
+    ".spectrum-Pagination-counter",
+    ".spectrum-Pagination-nextButton",
+    ".spectrum-Pagination-nextButton .spectrum-Icon",
+    ".spectrum-Pagination-prevButton",
+    ".spectrum-Pagination-prevButton .spectrum-Icon",
+    ".spectrum-Pagination-textfield",
+    ".spectrum-Pagination:dir(rtl)"
+  ],
+  "component": [
+    "--spectrum-pagination-counter-color",
+    "--spectrum-pagination-counter-font-size",
+    "--spectrum-pagination-counter-line-height",
+    "--spectrum-pagination-counter-margin-inline-start",
+    "--spectrum-pagination-item-inline-spacing",
+    "--spectrum-pagination-page-button-inline-spacing",
+    "--spectrum-pagination-textfield-width"
+  ],
+  "modifiers": [
+    "--mod-pagination-counter-color",
+    "--mod-pagination-counter-font-size",
+    "--mod-pagination-counter-line-height",
+    "--mod-pagination-counter-margin-inline-start",
+    "--mod-pagination-page-button-inline-spacing",
+    "--mod-pagination-textfield-width",
+    "--mod-textfield-min-width",
+    "--mod-textfield-width"
+  ],
+  "theming-layer": [
+    "--system-pagination-counter-color",
+    "--system-pagination-counter-font-size",
+    "--system-pagination-counter-line-height",
+    "--system-pagination-counter-margin-inline-start",
+    "--system-pagination-page-button-inline-spacing"
+  ],
+  "high-contrast": [],
+  "global": [
+    "--spectrum-font-size-100",
+    "--spectrum-line-height-100",
+    "--spectrum-logical-rotation",
+    "--spectrum-neutral-subdued-content-color-default"
+  ]
+}
