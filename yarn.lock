@@ -12656,12 +12656,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^9.0.11":
-  version: 9.1.1
-  resolution: "husky@npm:9.1.1"
+"husky@npm:^9.1.4":
+  version: 9.1.4
+  resolution: "husky@npm:9.1.4"
   bin:
     husky: bin.js
-  checksum: 10c0/56394f5a08201badece23a8599bd76fe8c41e4510a956022fe54897645900c5c5a96a740ffb0604e99e808dffc3714bae982f1cbda4a069082cc713414f17ad3
+  checksum: 10c0/f5185003bef9ad9ec3f40e821963e4c12409b993fdcab89e3d660bed7d8c9d8bfd399f05222e27e0ead6589601fb1bb08d1a589c51751a4ab0547ead3429b8de
   languageName: node
   linkType: hard
 
@@ -18934,7 +18934,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.1.3"
     fast-glob: "npm:^3.3.2"
     gh-pages: "npm:^6.1.1"
-    husky: "npm:^9.0.11"
+    husky: "npm:^9.1.4"
     jsonc-eslint-parser: "npm:^2.4.0"
     lint-staged: "npm:^15.2.8"
     lodash: "npm:^4.17.21"
