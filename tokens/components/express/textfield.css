@@ -32,6 +32,7 @@
 	--system-textfield-icon-spacing-inline-end-quiet-valid: var(--spectrum-field-edge-to-validation-icon-quiet);
 	--system-textfield-font-family: var(--spectrum-sans-font-family-stack);
 	--system-textfield-font-weight: var(--spectrum-regular-font-weight);
+	--system-textfield-input-line-height: var(--system-textfield-height);
 	--system-textfield-character-count-font-family: var(--spectrum-sans-font-family-stack);
 	--system-textfield-character-count-font-weight: var(--spectrum-regular-font-weight);
 	--system-textfield-character-count-spacing-inline: var(--spectrum-spacing-200);

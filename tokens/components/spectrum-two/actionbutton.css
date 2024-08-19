@@ -149,7 +149,7 @@
 	--system-action-button-static-black-selected-background-color-hover: var(--spectrum-transparent-black-900);
 	--system-action-button-static-black-selected-background-color-down: var(--spectrum-transparent-black-900);
 	--system-action-button-static-black-selected-background-color-focus: var(--spectrum-transparent-black-900);
-	--system-action-button-static-black-selected-content-color-default-selected: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
+	--system-action-button-static-black-selected-content-color-default: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
 	--system-action-button-static-black-selected-content-color-hover: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
 	--system-action-button-static-black-selected-content-color-down: var(--mod-actionbutton-static-content-color, var(--spectrum-white));
 	--system-action-button-static-black-selected-content-color-focus: var(--mod-actionbutton-static-content-color, var(--spectrum-white));

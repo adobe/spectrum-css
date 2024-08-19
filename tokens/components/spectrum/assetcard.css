@@ -13,6 +13,7 @@
 
 .spectrum.spectrum--legacy {
 	--system-asset-card-overlay-background-color: rgba(27, 127, 245, 0.1);
+	--system-asset-card-selectionindicator-box-shadow-color: rgba(0, 0, 0 / 15%);
 	--system-asset-card-asset-size: 224px;
 	--system-asset-card-background-color: var(--spectrum-gray-100);
 	--system-asset-card-asset-animation-duration: var(--spectrum-animation-duration-100);

@@ -10,7 +10,6 @@
     ".spectrum-Icon--sizeXL",
     ".spectrum-Icon--sizeXS",
     ".spectrum-Icon--sizeXXS",
-    ".spectrum-Icon:not(:root)",
     ".spectrum-UIIcon",
     ".spectrum-UIIcon img",
     ".spectrum-UIIcon svg",
@@ -102,8 +101,7 @@
     ".spectrum-UIIcon-Dash50",
     ".spectrum-UIIcon-Dash500",
     ".spectrum-UIIcon-Dash600",
-    ".spectrum-UIIcon-Dash75",
-    ".spectrum-UIIcon:not(:root)"
+    ".spectrum-UIIcon-Dash75"
   ],
   "component": [
     "--spectrum-icon-block-size",
