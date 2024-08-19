@@ -1,5 +1,5 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./template.js";
+import { Template } from "./meter.template.js";
 
 export const MeterGroup = Variants({
 	Template,
