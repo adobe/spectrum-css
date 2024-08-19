@@ -227,7 +227,8 @@
 
 	background-size: cover;
 	background-position: center center;
-	background-color: var(--mod-card-background-color, var(--spectrum-card-background-color));
+
+	background-color: var(--mod-card-preview-background-color, var(--spectrum-card-preview-background-color));
 	border-block-end-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
 }
 
