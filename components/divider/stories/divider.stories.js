@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { DividerGroup } from "./divider.test.js";
+import { SizingGroup } from "./template.js";
 
 /**
  * Dividers bring clarity to a layout by grouping and dividing content that exists in close proximity. It can also be used to establish rhythm and hierarchy.
@@ -44,17 +45,61 @@ export default {
 		rootClass: "spectrum-Divider",
 		size: "m",
 		vertical: false,
-		customStyles: {
-			"min-inline-size": "200px",
-		},
 	},
 	parameters: {
 		componentVersion: version,
 	},
 };
 
+/**
+ * The default size for divider is medium.
+ */
 export const Default = DividerGroup.bind({});
 Default.args = {};
+
+// ********* DOCS ONLY ********* //
+export const Sizing = SizingGroup.bind({});
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * When a vertical divider is used inside of a flex container, use `align-self: stretch; block-size: auto;` on the divider.
+ */
+export const VerticalGroup = SizingGroup.bind({});
+VerticalGroup.storyName = "Vertical";
+VerticalGroup.tags = ["!dev"];
+VerticalGroup.args = {
+	vertical: true,
+};
+VerticalGroup.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticWhiteGroup = SizingGroup.bind({});
+StaticWhiteGroup.storyName = "Static white";
+StaticWhiteGroup.tags = ["!dev"];
+StaticWhiteGroup.args = {
+	staticColor: "white",
+};
+StaticWhiteGroup.parameters = {
+	chromatic: {
+		modes: disableDefaultModes,
+	},
+};
+
+export const StaticBlackGroup = SizingGroup.bind({});
+StaticBlackGroup.storyName = "Static black";
+StaticBlackGroup.tags = ["!dev"];
+StaticBlackGroup.args = {
+	staticColor: "black",
+};
+StaticBlackGroup.parameters = {
+	chromatic: {
+		modes: disableDefaultModes,
+	},
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = DividerGroup.bind({});
