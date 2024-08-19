@@ -1,7 +1,8 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
-import { SizingGroup, AllVariantsCheckboxGroup, } from "./template";
+import { DocsCheckboxGroup, AllVariantsCheckboxGroup, } from "./template";
 import { CheckboxGroup } from "./checkbox.test.js";
 
 /**
@@ -126,7 +127,12 @@ EmphasizedVariants.parameters = {
 };
 EmphasizedVariants.storyName = "Emphasized";
 
-export const Sizing = SizingGroup.bind({});
+export const Sizing = (args, context) => Sizes({
+	Template: DocsCheckboxGroup,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
 Sizing.args = {};
 Sizing.tags = ["!dev"];
 Sizing.parameters = {

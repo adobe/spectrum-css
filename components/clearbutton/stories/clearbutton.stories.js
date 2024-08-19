@@ -1,7 +1,8 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { ClearButtonGroup } from "./clearbutton.test.js";
-import { SizingGroup, Template } from "./template";
+import { Template } from "./template";
 
 /**
  * The clear button component is an in-field button used in search and tags.
@@ -120,7 +121,12 @@ Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Sizing = SizingGroup.bind({});
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args
+}, context);
 Sizing.args = {};
 Sizing.tags = ["!dev"];
 Sizing.parameters = {

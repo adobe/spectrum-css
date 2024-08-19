@@ -1,5 +1,4 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -94,7 +93,7 @@ export const Template = ({
 };
 
 /* Shows multiple checkboxes in various states of selected, unselected, indeterminate, etc. */
-const CheckboxGroup = (args, context) => html`
+export const DocsCheckboxGroup = (args, context) => html`
 	<div style="display: flex; flex-direction: column; padding: 16px">
 		${Template({
 			...args,
@@ -131,68 +130,31 @@ export const AllVariantsCheckboxGroup = (args, context) => {
 		<div style="display: flex;">
 			<div style="display: flex; flex-direction: column;">
 				<h4 style="margin: 0; padding-left: 16px;">Default</h4>
-				${CheckboxGroup({
+				${DocsCheckboxGroup({
 					...args,
 				}, context)}
 			</div>
 			<div style="display: flex; flex-direction: column;">
 				<h4 style="margin: 0; padding-left: 16px;">Invalid</h4>
-				${CheckboxGroup({
+				${DocsCheckboxGroup({
 					...args,
 					isInvalid: true,
 				}, context)}
 			</div>
 			<div style="display: flex; flex-direction: column;">
 				<h4 style="margin: 0; padding-left: 16px;">Disabled</h4>
-				${CheckboxGroup({
+				${DocsCheckboxGroup({
 					...args,
 					isDisabled: true,
 				}, context)}
 			</div>
 			<div style="display: flex; flex-direction: column;">
 				<h4 style="margin: 0; padding-left: 16px;">Read-Only</h4>
-				${CheckboxGroup({
+				${DocsCheckboxGroup({
 					...args,
 					isReadOnly: true,
 				}, context)}
 			</div>
 		</div>
-	`;
-};
-
-// TODO: refactor this SizingGroup to use the sizing decorator instead for standardized sizing story styles
-export const SizingGroup = (args, context) => {
-	// Color for heading that shows the name of the size.
-	let headingColor = "var(--spectrum-seafoam-900)";
-
-	return html`
-		${["s", "m", "l", "xl"].map((size) => html`
-			<div style=${styleMap({
-				display: "flex",
-				gap: "16px",
-				flexDirection: "column",
-				alignItems: "flex-start",
-				})}
-			>
-			${Typography({
-				semantics: "heading",
-				size: "xs",
-				content: [{
-					s: "Small",
-					m: "Medium (default)",
-					l: "Large",
-					xl: "Extra-large",
-				}[size]],
-				customClasses: ["chromatic-ignore"],
-				customStyles: {
-					"white-space": "nowrap",
-					"--mod-heading-font-color": headingColor,
-				},
-			})}
-			${CheckboxGroup({
-					...args,
-					size,
-			}, context)}
-		`)}
 	`;
 };
