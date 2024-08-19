@@ -12,6 +12,9 @@ export const DialogGroup = Variants({
 			Template({
 				...args,
 				showModal: false,
+
+				// TODO: remove this heading arg when the "Sizing" heading is no longer overwritten by it.
+				heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 				customStyles: {
 					"background-color": "var(--spectrum-gray-100)",
 				},

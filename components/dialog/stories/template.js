@@ -18,7 +18,7 @@ export const Template = ({
 	isOpen = true,
 	showModal = false,
 	hasFooter = false,
-	dialogHeading,
+	heading,
 	content = [],
 	footer = [],
 	customClasses = [],
@@ -57,8 +57,8 @@ export const Template = ({
 						</div>
 					`
 				)}
-				${when(dialogHeading, () => html`
-					<h1 class="${rootClass}-heading">${dialogHeading}</h1>
+				${when(heading, () => html`
+					<h1 class="${rootClass}-heading">${heading}</h1>
 				`)}
 				${when(hasDivider, () =>
 					Divider({

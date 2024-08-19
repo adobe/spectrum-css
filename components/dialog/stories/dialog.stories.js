@@ -16,7 +16,7 @@ export default {
 	title: "Dialog",
 	component: "Dialog",
 	argTypes: {
-		dialogHeading: {
+		heading: {
 			name: "Heading",
 			type: { name: "string" },
 			table: {
@@ -171,7 +171,7 @@ const ExampleContent = Typography({
  */
 export const Default = DialogGroup.bind({});
 Default.args = {
-	dialogHeading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	content: [
 		(passthroughs, context) => Typography({
 			semantics: "body",
