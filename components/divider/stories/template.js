@@ -28,7 +28,7 @@ export const Template = ({
 				"min-block-size": vertical == true ? "20px" : undefined,
 				"block-size": vertical ? "auto" : undefined,
 				"min-inline-size": !vertical ? "200px" : "var(--spectrum-divider-thickness)",
-				"inline-size": !vertical ? "100%" : undefined,
+				"inline-size": !vertical ? "auto" : undefined,
 				"align-self": vertical == true ? "stretch" : undefined,
 				...customStyles,
 			})}
@@ -49,7 +49,7 @@ export const Template = ({
 			"min-block-size": vertical == true ? "20px" : undefined,
 			"block-size": vertical == true ? "auto" : undefined,
 			"min-inline-size": !vertical ? "200px" : "var(--spectrum-divider-thickness)",
-			"inline-size": !vertical ? "100%" : undefined,
+			"inline-size": !vertical ? "auto" : undefined,
 			"align-self": vertical == true ? "stretch" : undefined,
 			...customStyles,
 		})}
