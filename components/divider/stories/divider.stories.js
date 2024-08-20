@@ -1,7 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { version } from "../package.json";
 import { DividerGroup } from "./divider.test.js";
-import { SizingGroup } from "./template.js";
+import { Template } from "./template.js";
 
 /**
  * Dividers bring clarity to a layout by grouping and dividing content that exists in close proximity. It can also be used to establish rhythm and hierarchy.
@@ -58,7 +59,12 @@ export const Default = DividerGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
-export const Sizing = SizingGroup.bind({});
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -67,7 +73,12 @@ Sizing.parameters = {
 /**
  * When a vertical divider is used inside of a flex container, use `align-self: stretch; block-size: auto;` on the divider.
  */
-export const VerticalGroup = SizingGroup.bind({});
+export const VerticalGroup = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
 VerticalGroup.storyName = "Vertical";
 VerticalGroup.tags = ["!dev"];
 VerticalGroup.args = {
@@ -77,7 +88,13 @@ VerticalGroup.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticWhiteGroup = SizingGroup.bind({});
+export const StaticWhiteGroup = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+
 StaticWhiteGroup.storyName = "Static white";
 StaticWhiteGroup.tags = ["!dev"];
 StaticWhiteGroup.args = {
@@ -89,7 +106,12 @@ StaticWhiteGroup.parameters = {
 	},
 };
 
-export const StaticBlackGroup = SizingGroup.bind({});
+export const StaticBlackGroup = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
 StaticBlackGroup.storyName = "Static black";
 StaticBlackGroup.tags = ["!dev"];
 StaticBlackGroup.args = {
