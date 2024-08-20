@@ -3,7 +3,6 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
-// import { DialogGroup } from "./dialog.test.js";
 import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
 import { Template } from "./template";
 
@@ -134,30 +133,6 @@ export default {
 	],
 };
 
-// the "TallerViewport" modes are accommodating the underlay, which is position: fixed,
-// and Chromatic's treatment of position:fixed elements. By increasing the viewport height,
-// it doesn't look like the background color just stops without wrapping the
-// entire container of templates.
-// const defaultModesWithTallerViewport = Object.keys(modes).reduce((acc, key) => {
-// 	acc[key] = { 
-// 		...modes[key],
-// 		viewport: {
-// 			height: "5300px",
-// 		}
-// 	};
-// 	return acc;
-// }, {});
-
-// const mobileModeWithTallerViewport = Object.keys(mobile).reduce((acc, key) => {
-// 	acc[key] = { 
-// 		...mobile[key],
-// 		viewport: {
-// 			height: "5600px",
-// 		}
-// 	};
-// 	return acc;
-// }, {});
-
 const ExampleContent = Typography({
 	semantics: "body",
 	size: "m",
@@ -181,13 +156,6 @@ Default.args = {
 		}, context),
 	],
 };
-// Default.parameters = {
-// 	chromatic: {
-// 		modes: {
-// 			...defaultModesWithTallerViewport,
-// 			...mobileModeWithTallerViewport }
-// 	},
-// };
 
 // ********* DOCS ONLY ********* //
 export const DefaultSmall = Template.bind({});
