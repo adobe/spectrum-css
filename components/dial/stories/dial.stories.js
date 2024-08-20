@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isFocused } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { DialGroup } from "./dial.test.js";
 import { Template } from "./template.js";
@@ -28,15 +29,7 @@ export default {
 			},
 			control: "text",
 		},
-		isFocusVisible: {
-			name: "Focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isFocusVisible: isFocused,
 		isDragged: {
 			name: "Dragged",
 			type: { name: "boolean" },
