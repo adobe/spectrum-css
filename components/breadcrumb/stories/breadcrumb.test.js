@@ -8,11 +8,49 @@ export const BreadcrumbGroup = Variants({
 			testHeading: "Default",
 		},
 		{
+			testHeading: "Default (nested)",
+			withStates: false,
+			items: [
+				{
+					iconName: "FolderOpen",
+				},
+				{
+					label: "Sub item",
+					isDragged: true,
+				},
+				{
+					label: "Trend",
+				},
+				{
+					label: "January 2019 Assets",
+				},
+			],
+		},
+		{
+			testHeading: "Default (nested, root visible)",
+			withStates: false,
+			items: [
+				{
+					label: "Nav root",
+				},
+				{
+					iconName: "FolderOpen",
+				},
+				{
+					label: "Sub item",
+				},
+				{
+					label: "January 2019 Assets",
+				},
+			],
+		},
+		{
 			testHeading: "Compact",
 			variant: "compact",
 		},
 		{
-			testHeading: "Compact, nested",
+			testHeading: "Compact (nested)",
+			withStates: false,
 			variant: "compact",
 			items: [
 				{
@@ -20,7 +58,48 @@ export const BreadcrumbGroup = Variants({
 				},
 				{
 					label: "Sub Item",
-					isDragged: true,
+				},
+				{
+					label: "Trend",
+				},
+				{
+					label: "January 2019 Assets",
+				},
+			],
+		},
+		{
+			testHeading: "Compact (nested, root visible)",
+			withStates: false,
+			variant: "compact",
+			items: [
+				{
+					label: "Nav root",
+				},
+				{
+					iconName: "FolderOpen",
+				},
+				{
+					label: "Sub item",
+				},
+				{
+					label: "January 2019 Assets",
+				},
+			],
+		},
+		{
+			testHeading: "Multiline",
+			variant: "multiline",
+		},
+		{
+			testHeading: "Multiline (nested)",
+			withStates: false,
+			variant: "multiline",
+			items: [
+				{
+					iconName: "FolderOpen",
+				},
+				{
+					label: "Sub Item",
 				},
 				{
 					label: "Trend",
@@ -32,6 +111,7 @@ export const BreadcrumbGroup = Variants({
 		},
 		{
 			testHeading: "Multiline (nested, root visible)",
+			withStates: false,
 			variant: "multiline",
 			items: [
 				{
@@ -41,26 +121,7 @@ export const BreadcrumbGroup = Variants({
 					iconName: "FolderOpen",
 				},
 				{
-					label: "Trend",
-					isDragged: true,
-				},
-				{
-					label: "January 2019 Assets",
-				},
-			],
-		},
-		{
-			testHeading: "Nested",
-			items: [
-				{
-					iconName: "FolderOpen",
-				},
-				{
-					label: "Sub Item",
-					isDragged: true,
-				},
-				{
-					label: "Trend",
+					label: "Sub item",
 				},
 				{
 					label: "January 2019 Assets",
@@ -70,21 +131,19 @@ export const BreadcrumbGroup = Variants({
 	],
 	stateData: [
 		{
-			testHeading: "Dragged",
+			testHeading: "Dragged, disabled",
 			isDragged: true,
-		},
-		{
-			testHeading: "Disabled",
+			isDisabled: true,
 			items: [
 				{
 					label: "Nav root",
 				},
 				{
-					iconName: "FolderOpen",
-					isDisabled: true,
+					label: "Dragged",
+					isDragged: true,
 				},
 				{
-					label: "Trend",
+					label: "Disabled",
 					isDisabled: true,
 				},
 				{
