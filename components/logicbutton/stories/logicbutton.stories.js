@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { LogicButtonGroup } from "./logicbutton.test.js";
-import { Template } from "./template.js";
+import { Template, VariantGroup } from "./template.js";
 
 /**
  * A logic button displays an operator within a boolean logic sequence.
@@ -36,10 +36,13 @@ export default {
 		isDisabled: false,
 	},
 	parameters: {
-		componentVersion: version,
+		componentVersion: version,	
 	},
 };
 
+/**
+ * The default logic button is the And variant.
+ */
 export const Default = LogicButtonGroup.bind({});
 Default.args = {};
 
@@ -47,16 +50,16 @@ Default.args = {};
 export const Or = Template.bind({});
 Or.tags = ["!dev"];
 Or.args = {
-	variant: "or"
+	variant: "or",
 };
 Or.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = VariantGroup.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
-	isDisabled: true
+	isDisabled: true,
 };
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true }
@@ -68,6 +71,6 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: disableDefaultModes,
 	},
 };
