@@ -30,6 +30,7 @@ export const DialogGroup = Variants({
 		{
 			testHeading: "Dismissible",
 			isDismissible: true,
+			hasFooter: false,
 			wrapperStyles: {
 				"background-color": "var(--spectrum-gray-50)"
 			},
@@ -42,9 +43,44 @@ export const DialogGroup = Variants({
 			},
 		},
 		{
-			testHeading: "No divider",
+			testHeading: "With hero/cover image, dismissible",
+			hasHeroImage: true,
 			isDismissible: true,
+			hasFooter: false,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50)"
+			},
+		},
+		{
+			testHeading: "No divider",
 			hasDivider: false,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50)"
+			},
+		},
+		{
+			testHeading: "No divider, dismissible",
+			hasDivider: false,
+			isDismissible: true,
+			hasFooter: false,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50)"
+			},
+		},
+		{
+			testHeading: "With hero/cover image, no divider",
+			hasDivider: false,
+			hasHeroImage: true,
+			wrapperStyles: {
+				"background-color": "var(--spectrum-gray-50)"
+			},
+		},
+		{
+			testHeading: "With hero/cover image, no divider, dismissible",
+			hasDivider: false,
+			isDismissible: true,
+			hasFooter: false,
+			hasHeroImage: true,
 			wrapperStyles: {
 				"background-color": "var(--spectrum-gray-50)"
 			},
