@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { getRandomId, Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -93,8 +93,10 @@ export const Template = ({
 };
 
 /* Shows multiple checkboxes in various states of selected, unselected, indeterminate, etc. */
-export const DocsCheckboxGroup = (args, context) => html`
-	<div style="display: flex; flex-direction: column; padding: 16px">
+export const DocsCheckboxGroup = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	content: html`
 		${Template({
 			...args,
 			context,
@@ -119,42 +121,57 @@ export const DocsCheckboxGroup = (args, context) => html`
 			...args,
 			context,
 			label: "Checkbox with a long label that should wrap.",
-      customStyles: { "max-inline-size": "200px" },
+			customStyles: { "max-inline-size": "200px" },
 		})}
-	</div>
-`;
+	`
+});
 
-/* This template group showcases mulitple CheckboxGroups in various states of disabled, read-only, invalid, etc. */
-export const AllVariantsCheckboxGroup = (args, context) => {
-	return html`
-		<div style="display: flex;">
-			<div style="display: flex; flex-direction: column;">
-				<h4 style="margin: 0; padding-left: 16px;">Default</h4>
+/* This template group showcases multiple CheckboxGroups in various states of disabled, read-only, invalid, etc. */
+export const AllVariantsCheckboxGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Default",
+			content: html`
 				${DocsCheckboxGroup({
 					...args,
 				}, context)}
-			</div>
-			<div style="display: flex; flex-direction: column;">
-				<h4 style="margin: 0; padding-left: 16px;">Invalid</h4>
+			`
+		})}
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Invalid",
+			content: html`
 				${DocsCheckboxGroup({
 					...args,
 					isInvalid: true,
 				}, context)}
-			</div>
-			<div style="display: flex; flex-direction: column;">
-				<h4 style="margin: 0; padding-left: 16px;">Disabled</h4>
+			`
+		})}
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Disabled",
+			content: html`
 				${DocsCheckboxGroup({
 					...args,
 					isDisabled: true,
 				}, context)}
-			</div>
-			<div style="display: flex; flex-direction: column;">
-				<h4 style="margin: 0; padding-left: 16px;">Read-Only</h4>
+			`
+		})}
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Read-only",
+			content: html`
 				${DocsCheckboxGroup({
 					...args,
 					isReadOnly: true,
 				}, context)}
-			</div>
-		</div>
-	`;
-};
+			`
+		})}
+	`
+});
