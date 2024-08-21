@@ -246,7 +246,6 @@ WithScroll.parameters = {
  * A fullscreen dialog will automatically fill almost all of the available screen space. A margin is included around the outside of the dialog.
  */
 export const Fullscreen = DialogFullscreen.bind({});
-// export const Fullscreen = Template.bind({});
 Fullscreen.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -259,7 +258,6 @@ Fullscreen.args = {
  * A fullscreen takeover dialog will fill all of the available screen space.
  */
 export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
-// export const FullscreenTakeover = Template.bind({});
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },
 };
