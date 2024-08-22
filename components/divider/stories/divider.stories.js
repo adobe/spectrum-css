@@ -73,18 +73,18 @@ Sizing.parameters = {
 /**
  * When a vertical divider is used inside of a flex container, use `align-self: stretch; block-size: auto;` on the divider.
  */
-export const VerticalGroup = (args, context) => Sizes({
+export const VerticalSizing = (args, context) => Sizes({
 	Template,
 	withHeading: false,
 	withBorder: false,
 	...args,
 }, context);
-VerticalGroup.storyName = "Vertical";
-VerticalGroup.tags = ["!dev"];
-VerticalGroup.args = {
+VerticalSizing.storyName = "Vertical";
+VerticalSizing.tags = ["!dev"];
+VerticalSizing.args = {
 	vertical: true,
 };
-VerticalGroup.parameters = {
+VerticalSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
