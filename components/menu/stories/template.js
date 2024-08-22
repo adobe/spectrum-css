@@ -11,6 +11,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 /**
  * Get the tray submenu back arrow name with scale number (defined in design spec).
@@ -55,11 +57,6 @@ export const MenuItem = ({
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	return html`
 		<li
 			class=${classMap({
@@ -232,11 +229,6 @@ export const MenuGroup = ({
 	size = "m",
 	customStyles = {},
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	return html`
 		<li id=${ifDefined(id)} role="presentation">
 			${when(
@@ -330,11 +322,6 @@ export const Template = ({
 	size = "m",
 	subrole = "menuitem",
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	const menuMarkup = html`
 		<ul
 			class=${classMap({

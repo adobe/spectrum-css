@@ -10,6 +10,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-AlertBanner",
@@ -22,11 +24,6 @@ export const Template = ({
 	customClasses = [],
 	customStyles = {},
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	return html`
 		<div
 			class=${classMap({

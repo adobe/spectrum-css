@@ -9,6 +9,8 @@ import { when } from "lit/directives/when.js";
 import { html, literal } from "lit/static-html.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const TableRowItem = ({
 	rootClass = "spectrum-Table",
@@ -30,11 +32,6 @@ export const TableRowItem = ({
 	customClasses = [],
 	size = "m",
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
 
 	// Use Table tags or Div tags.
@@ -168,11 +165,6 @@ export const Template = ({
 	customClasses = [],
 	id = getRandomId("table"),
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	if (!rowItems || !rowItems.length) return html``;
 
 	// Use Table tags or Div tags.

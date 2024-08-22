@@ -7,6 +7,8 @@ import { repeat } from "lit/directives/repeat.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-SideNav",
@@ -16,11 +18,6 @@ export const Template = ({
 	iconName,
 	items = [],
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	return html`
     <nav>
       <ul class=${classMap({
@@ -91,11 +88,6 @@ export const SideNavItem = ({
 	iconName,
 	customClasses = [],
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	return html`
     <li
       id=${ifDefined(id)}

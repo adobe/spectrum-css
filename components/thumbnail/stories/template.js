@@ -7,6 +7,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Thumbnail",
@@ -25,10 +27,7 @@ export const Template = ({
 	customStyles = {},
 	id = getRandomId("thumbnail"),
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
+	const { updateArgs } = context;
 
 	const image = imageURL ? html`<img class="${rootClass}-image" src=${imageURL} alt=${ifDefined(altText)} />` : svg ? html`${svg}` : "";
 

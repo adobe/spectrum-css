@@ -5,6 +5,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Dial",
@@ -17,12 +19,7 @@ export const Template = ({
 	max = 100,
 	customClasses = [],
 	id = getRandomId("dial"),
-} = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
+} = {}) => {
 	return html`
     <div
       class=${classMap({

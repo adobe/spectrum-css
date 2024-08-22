@@ -7,6 +7,8 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 /**
  * @todo load order should not influence the icon size but it is; fix this
@@ -66,10 +68,7 @@ export const Template = ({
 	testId,
 	role = "button",
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
+	const { updateArgs } = context;
 
 	return html`
 		<button

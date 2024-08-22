@@ -5,6 +5,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-InLineAlert",
@@ -15,11 +17,6 @@ export const Template = ({
 	variant = "neutral",
 	isClosable = false,
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	let iconName;
 	switch (variant) {
 		case "info":

@@ -6,6 +6,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Popover",
@@ -26,10 +28,7 @@ export const Template = ({
 	trigger,
 	content = [],
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
+	const { updateArgs } = context;
 
 	// We need to wait for the popover to render before we can get the actual height and width
 	// of the popover to set the custom properties. This is a temporary solution until we can

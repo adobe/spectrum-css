@@ -20,8 +20,6 @@ module.exports = ({
 	preserveVariables = true,
 	stripLocalSelectors = false,
 	resolveImports = true,
-	shouldCombine = false,
-	theme = "spectrum-two",
 	lint = true,
 	verbose = true,
 	minify = false,
@@ -33,14 +31,6 @@ module.exports = ({
 
 	if (typeof options?.map === "undefined") {
 		options.map = isProduction ? false : { inline: false };
-	}
-
-	let baseClass = ".spectrum";
-	if (theme === "spectrum") {
-		baseClass += ".spectrum--legacy";
-	}
-	else if (theme === "express") {
-		baseClass += ".spectrum--express";
 	}
 
 	// If this is the legacy tokens file, update the .spectrum class to .spectrum--legacy
@@ -78,9 +68,9 @@ module.exports = ({
 				stripLocalSelectors,
 				debug: verbose,
 			},
-			"@spectrum-tools/postcss-property-rollup": shouldCombine ? {
-				newSelector: baseClass,
-			} : false,
+			"@spectrum-tools/postcss-property-rollup": {
+				newSelector: ".spectrum",
+			},
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */

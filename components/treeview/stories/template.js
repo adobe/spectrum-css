@@ -9,6 +9,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const TreeViewItem = ({
 	rootClass = "spectrum-TreeView",
@@ -27,11 +29,6 @@ export const TreeViewItem = ({
 	items,
 	customClasses = [],
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	if (type === "heading") {
 		return html`
 			<li
