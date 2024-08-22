@@ -206,6 +206,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **slider:**focus state matches spec, supports forced-colors ([#2217](https://github.com/adobe/spectrum-css/issues/2217))([7b9c31b](https://github.com/adobe/spectrum-css/commit/7b9c31b))
 
+### Migration Guide
+
+#### Indicating focus
+
+Focus must be bubbled up to the parent so descendants siblings can be styled.
+
+Thus, implementations should add the following class to the `.spectrum-Slider` parent class in the following situations:
+
+- `.is-disabled` - when the slider is disabled
+
+Implementations should also bubble the following class to the `.spectrum-Slider-controls` parent class in the following situations:
+
+- `.is-focused` - when the handle input is focused with the mouse or keyboard
+
 <a name="4.1.14"></a>
 
 ## 4.1.14
@@ -519,6 +533,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 🗓 2023-05-18 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/slider@3.1.25...@spectrum-css/slider@4.0.0)
 
 - feat(slider, fieldlabel)!: tokens migration & min-height size adjustments (#1696) ([37724f1](https://github.com/adobe/spectrum-css/commit/37724f1)), closes [#1696](https://github.com/adobe/spectrum-css/issues/1696)
+
+### Migration Guide
+
+#### Three Handles is included in the `range` variant
+
+When using a slider with three handles, classify it as a `range` variant to apply correct styling
 
 ### 🛑 BREAKING CHANGES
 
@@ -970,6 +990,21 @@ Additionally, this adds some `min-height` custom properties and adjusts the `min
 
 - ramp slider ([#829](https://github.com/adobe/spectrum-css/issues/829)) ([#923](https://github.com/adobe/spectrum-css/issues/923)) ([c539411](https://github.com/adobe/spectrum-css/commit/c539411)), closes [#850](https://github.com/adobe/spectrum-css/issues/850)
 - wip fix more components ([b74dbb8](https://github.com/adobe/spectrum-css/commit/b74dbb8))
+
+### Migration Guide
+
+#### Dial is now a separate component
+
+Dial has been moved to the [Dial](dial.html) component.
+
+#### Color slider is now a separate component
+
+-Color slider has been moved to the [Color Slider](colorslider.html) component.
+-Replace class names starting with `.spectrum-Slider` with `.spectrum-ColorSlider`.
+
+#### Use class `is-dragged` instead of `u-isGrabbing`
+
+On `spectrum-Slider-handle` when dragging, use `is-dragged` instead of `u-isGrabbing`.
 
 ### 🛑 BREAKING CHANGES
 

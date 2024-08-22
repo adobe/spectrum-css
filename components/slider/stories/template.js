@@ -20,6 +20,7 @@ export const Template = ({
 	labelPosition,
 	fillColor = "rgb(213, 213, 213)",
 	showTicks = false,
+	showTickLabels = false,
 	isDisabled = false,
 	isFocused = false,
 	customClasses = [],
@@ -68,7 +69,9 @@ export const Template = ({
 		for (let i = from; i <= to; i += step) {
 			ticks.push(html`
 				<div class="${rootClass}-tick">
-					<div class="${rootClass}-tickLabel">${i}</div>
+					<div class="${rootClass}-tickLabel">
+						${when(showTickLabels, () => html`${i}`, undefined)}
+					</div>
 				</div>
 			`);
 		}
