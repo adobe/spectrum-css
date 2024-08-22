@@ -1,3 +1,4 @@
+import { Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { styleMap } from "lit-html/directives/style-map.js";
@@ -26,19 +27,43 @@ export const Template = ({
 	</div>
 `;
 
-export const AllVariantsCoachIndicatorGroup = (args, context) => html`
-	<div style="display: flex; flex-direction: column; padding: 16px">
-		${Template({
-				...args,
-				variant: "default"
-			}, context)}
-		${Template({
-				...args,
-				variant: "dark"
-			}, context)}
-		${Template({
-				...args,
-				variant: "light"
-			}, context)}
-	</div>
-`;
+/* This template group showcases multiple coach indicator variants at once. */
+export const AllVariantsCoachIndicatorGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			direction: "column",
+			withBorder: false,
+			heading: "Default",
+			content: html`
+				${Template({
+					...args,
+					variant: "default"
+				}, context)}
+			`
+		})}
+		${Container({
+			direction: "column",
+			withBorder: false,
+			heading: "Dark",
+			content: html`
+				${Template({
+					...args,
+					variant: "dark"
+				}, context)}
+			`
+		})}
+		${Container({
+			direction: "column",
+			withBorder: false,
+			heading: "Light",
+			content: html`
+				${Template({
+					...args,
+					variant: "light"
+				}, context)}
+			`
+		})}
+	`
+});
+
