@@ -99,6 +99,10 @@
     "--spectrum-button-min-width",
     "--spectrum-button-minimum-width-multiplier",
     "--spectrum-button-padding-label-to-icon",
+    "--spectrum-button-static-white-content-color-default",
+    "--spectrum-button-static-white-content-color-down",
+    "--spectrum-button-static-white-content-color-focus",
+    "--spectrum-button-static-white-content-color-hover",
     "--spectrum-button-top-to-icon",
     "--spectrum-button-top-to-text",
     "--spectrum-button-top-to-text-extra-large",
@@ -524,10 +528,10 @@
     "--system-button-static-white-selected-background-color-focus",
     "--system-button-static-white-selected-background-color-hover",
     "--system-button-static-white-selected-border-color-disabled",
-    "--system-button-static-white-selected-content-color-default",
-    "--system-button-static-white-selected-content-color-down",
-    "--system-button-static-white-selected-content-color-focus",
-    "--system-button-static-white-selected-content-color-hover"
+    "--system-button-static-white-selected-static-white-content-color-default",
+    "--system-button-static-white-selected-static-white-content-color-down",
+    "--system-button-static-white-selected-static-white-content-color-focus",
+    "--system-button-static-white-selected-static-white-content-color-hover"
   ],
   "high-contrast": [
     "--highcontrast-button-background-color-default",

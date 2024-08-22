@@ -2,6 +2,7 @@
   "sourceFile": "dist/index-theme-switcher.css",
   "selectors": [".spectrum", ".spectrum-Well"],
   "component": [
+    "--spectrum-well-background-color",
     "--spectrum-well-border-color",
     "--spectrum-well-border-radius",
     "--spectrum-well-border-width",
@@ -21,6 +22,7 @@
     "--mod-well-padding"
   ],
   "theming-layer": [
+    "--system-well-background-color",
     "--system-well-border-width",
     "--system-well-content-color"
   ],
