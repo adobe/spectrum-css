@@ -7,7 +7,7 @@ import { Template } from "./template";
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
  * 
  * ## Nesting
- * Breadcrumbs truncate when there is not enough room to display all levels of the breadcrumb list, or as a way of managing relevance of the visible breadcrumb items in a deeply nested hierarchy. The truncation of breadcrumb items begins when either there is not enough room to display all items, or if there are 5 or more breadcrumbs to display.
+ * Breadcrumbs truncate when there is not enough room to display all levels of the breadcrumb list, or as a way of managing relevance of the visible breadcrumb items in a deeply nested hierarchy. The truncation of breadcrumb items begins when either there is not enough room to display all items, or if there are 5 or more breadcrumbs to display. They are typically indicated by the truncated menu folder icon.
  * 
  * The nested variants below are non-functional. Implementations can add their own overflow menus to display all options within a breadcrumb.
  * 
@@ -57,64 +57,15 @@ Default.args = {
 	items: [
 		{
 			label: "Nav root",
-			isDragged: true,
-		},
-		{
-			label: "Trend",
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
-};
-
-export const MultilineNested = Template.bind({});
-MultilineNested.args = {
-	items: [
-		{
-			iconName: "FolderOpen",
-		},
-		{
-			label: "Sub Item",
 		},
 		{
 			label: "Trend",
 			isDragged: true,
 		},
 		{
-			label: "January 2019 Assets",
+			label: "January 2019 assets",
 		},
 	],
-	variant: "multiline",
-};
-MultilineNested.storyName = "Multiline, nested";
-MultilineNested.tags= ["!dev"];
-MultilineNested.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-/**
- * Breadcrumbs can have optional behavior to allow for drag and drop functionality.
- */
-export const Dragged = Template.bind({});
-Dragged.args = {
-	items: [
-		{
-			label: "Nav root",
-		},
-		{
-			label: "Trend",
-			isDragged: true,
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
-	isDragged: true,
-};
-Dragged.tags = ["!dev"];
-Dragged.parameters = {
-	chromatic: { disableSnapshot: true },
 };
 
 export const DefaultNested = Template.bind({});
@@ -124,13 +75,13 @@ DefaultNested.args = {
 			iconName: "FolderOpen",
 		},
 		{
-			label: "Sub Item",
+			label: "Sub item",
 		},
 		{
 			label: "Trend",
 		},
 		{
-			label: "January 2019 Assets",
+			label: "January 2019 assets",
 		},
 	],
 };
@@ -153,7 +104,7 @@ DefaultNestedRootVisible.args = {
 			label: "Trend",
 		},
 		{
-			label: "January 2019 Assets",
+			label: "January 2019 assets",
 		},
 	],
 };
@@ -168,17 +119,7 @@ DefaultNestedRootVisible.storyName = "Default, nested (root visible)";
  */
 export const Multiline = Template.bind({});
 Multiline.args = {
-	items: [
-		{
-			label: "Nav root",
-		},
-		{
-			label: "Trend",
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
+	...Default.args,
 	variant: "multiline",
 };
 Multiline.tags = ["!dev"];
@@ -186,22 +127,20 @@ Multiline.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+export const MultilineNested = Template.bind({});
+MultilineNested.args = {
+	...DefaultNested.args,
+	variant: "multiline",
+};
+MultilineNested.storyName = "Multiline, nested";
+MultilineNested.tags= ["!dev"];
+MultilineNested.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 export const MultilineNestedRootVisible = Template.bind({});
 MultilineNestedRootVisible.args = {
-	items: [
-		{
-			label: "Nav root",
-		},
-		{
-			iconName: "FolderOpen",
-		},
-		{
-			label: "Trendy",
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
+	...DefaultNestedRootVisible.args,
 	variant: "multiline",
 };
 MultilineNestedRootVisible.tags = ["!dev"];
@@ -215,17 +154,7 @@ MultilineNestedRootVisible.storyName = "Multiline, nested (root visible)";
  */
 export const Compact = Template.bind({});
 Compact.args = {
-	items: [
-		{
-			label: "Nav root",
-		},
-		{
-			label: "Trendy",
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
+	...Default.args,
 	variant: "compact",
 };
 Compact.tags = ["!dev"];
@@ -235,20 +164,7 @@ Compact.parameters = {
 
 export const CompactNested = Template.bind({});
 CompactNested.args = {
-	items: [
-		{
-			iconName: "FolderOpen",
-		},
-		{
-			label: "Sub Item",
-		},
-		{
-			label: "Trendy",
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
+	...DefaultNested.args,
 	variant: "compact",
 };
 CompactNested.tags = ["!dev"];
@@ -259,20 +175,7 @@ CompactNested.storyName = "Compact, nested";
 
 export const CompactNestedRootVisible = Template.bind({});
 CompactNestedRootVisible.args = {
-	items: [
-		{
-			label: "Nav root",
-		},
-		{
-			iconName: "FolderOpen",
-		},
-		{
-			label: "Trendy",
-		},
-		{
-			label: "January 2019 Assets",
-		},
-	],
+	...DefaultNestedRootVisible.args,
 	variant: "compact",
 };
 CompactNestedRootVisible.tags = ["!dev"];
@@ -280,6 +183,19 @@ CompactNestedRootVisible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 CompactNestedRootVisible.storyName = "Compact, nested (root visible)";
+
+/**
+ * Breadcrumbs can have optional behavior to allow for drag and drop functionality.
+ */
+export const Dragged = Template.bind({});
+Dragged.args = {
+	...Default.args,
+	isDragged: true,
+};
+Dragged.tags = ["!dev"];
+Dragged.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * The example below has two disabled breadcrumb items. When disabling the text link, the `is-disabled` class gets added to `.spectrum-Breadcrumbs-itemLink`. When disabling the Action button, the `[disabled]` attribute is applied.
@@ -299,7 +215,7 @@ Disabled.args = {
 			isDisabled: true,
 		},
 		{
-			label: "January 2019 Assets",
+			label: "January 2019 assets",
 		},
 	],
 };
