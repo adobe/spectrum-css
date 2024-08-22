@@ -3,17 +3,14 @@ import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-MillerColumns",
 	customClasses = [],
 	columns = [],
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	if (!columns || !columns.length) {
 		console.warn("MillerColumns: Column data is required for rendering.");
 	}

@@ -9,6 +9,8 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Button",
@@ -33,10 +35,7 @@ export const Template = ({
 	ariaExpanded,
 	ariaControls,
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
+	const { updateArgs } = context;
 
 	return html`
     <button

@@ -9,6 +9,8 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 /**
  * @typedef API
@@ -84,10 +86,7 @@ export const Template = ({
 	onclick,
 	customStyles = {},
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
+	const { updateArgs } = context;
 
 	// Override icon name and set if the field is invalid or valid
 	if (isInvalid) {

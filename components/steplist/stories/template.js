@@ -6,6 +6,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const SteplistItem = ({
 	rootClass = "spectrum-Steplist-item",
@@ -19,11 +21,6 @@ export const SteplistItem = ({
 	isSelected = false,
 	id = getRandomId("steplist-item"),
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	const labelMarkup =
 		!isSmall && !withTooltip && typeof label !== "undefined"
 			? html`<span class="spectrum-Steplist-label">${label}</span>`
@@ -86,11 +83,6 @@ export const Template = ({
 	id = getRandomId("steplist"),
 	customClasses = [],
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	if (!items || !items.length) return html``;
 
 	return html`
