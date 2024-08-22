@@ -48,9 +48,11 @@ export default {
 		layout: {
 			name: "Layout",
 			type: { name: "string" },
+			defaultValue: "Default",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
+				defaultValue: { summary: "Default" },
 			},
 			options: ["default", "fullscreen", "fullscreenTakeover"],
 			control: "select",
