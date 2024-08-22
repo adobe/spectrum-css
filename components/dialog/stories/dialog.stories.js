@@ -86,25 +86,16 @@ export default {
 			control: "boolean",
 		},
 		isOpen,
-		hasHeroImage: {
-			name: "Has hero image",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Content",
-			},
-			control: "boolean",
-			if: { arg: "layout", eq: "default" },
-		},
 		heroImageUrl: {
 			name: "Hero Image",
 			type: { name: "string" },
+			description: "Adds a cover image to the header of a dialog.",
 			table: {
 				type: { summary: "string" },
 				category: "Content",
 			},
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
-			if: { arg: "hasHeroImage", truthy: true },
+			if: { arg: "layout", eq: "default" },
 		},
 	},
 	args: {
@@ -115,7 +106,6 @@ export default {
 		isOpen: true,
 		showModal: true,
 		size: "medium",
-		hasHeroImage: false,
 		layout: "default",
 	},
 	parameters: {
