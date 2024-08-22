@@ -4,6 +4,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-ColorArea",
@@ -15,10 +17,7 @@ export const Template = ({
 	customHeight,
 	selectedColor = "rgba(255, 0, 0, 1)",
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
+	const { updateArgs } = context;
 
 	return html`
 		<div

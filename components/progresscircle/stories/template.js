@@ -5,6 +5,8 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	id = getRandomId("progress-circle"),
@@ -15,12 +17,7 @@ export const Template = ({
 	size = "m",
 	staticColor,
 	isIndeterminate = false,
-} = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
+} = {}) => {
 	let sizeClassName = "medium";
 	switch (size) {
 		case "s":

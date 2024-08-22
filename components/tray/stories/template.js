@@ -5,6 +5,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/express.css";
+import "../themes/spectrum.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tray",
@@ -14,11 +16,6 @@ export const Template = ({
 	customStyles = {},
 	id = getRandomId("tray"),
 } = {}, context = {}) => {
-	const { globals = {} } = context;
-
-	if (globals.context === "express") import("../themes/express.css");
-	else if (globals.context === "legacy") import("../themes/spectrum.css");
-
 	return html`
 		<div
 			class=${classMap({
