@@ -25,7 +25,6 @@ export const Template = ({
 	id = getRandomId("dialog"),
 	size = "medium",
 	layout,
-	hasHeroImage = false,
 	heroImageUrl,
 	customStyles = {},
 } = {}, context = {}) => {
@@ -36,8 +35,8 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--dismissable`]: isDismissible && (layout !== "fullscreen" || layout !== "fullscreenTakeover"),
-				[`${rootClass}--${layout}`]: typeof layout !== "undefined" && layout !== "default",
+				[`${rootClass}--dismissable`]: isDismissible && ["fullscreen", "fullscreenTakeover"].every(l => layout !== l),
+				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
 				[`${rootClass}--${size}`]: typeof size !== "undefined", 
 				[`${rootClass}--noDivider`]: !hasDivider,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -49,11 +48,11 @@ export const Template = ({
 			style=${ifDefined(styleMap(customStyles))}
 		>
 			<div class="${rootClass}-grid">
-				${when(hasHeroImage, () =>
+				${when(typeof heroImageUrl !== "undefined", () =>
 					html`
 						<div 
 							class="spectrum-Dialog-hero"
-							style="background-image:url(${heroImageUrl ?  heroImageUrl : "example-card-portrait.png"})">
+							style="background-image:url(${heroImageUrl})">
 						</div>
 					`
 				)}
