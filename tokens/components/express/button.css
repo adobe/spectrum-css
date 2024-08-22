@@ -230,10 +230,10 @@
 	--system-button-static-white-selected-background-color-hover: var(--spectrum-transparent-white-900);
 	--system-button-static-white-selected-background-color-down: var(--spectrum-transparent-white-900);
 	--system-button-static-white-selected-background-color-focus: var(--spectrum-transparent-white-900);
-	--system-button-static-white-selected-content-color-default: var(--mod-button-static-content-color, var(--spectrum-black));
-	--system-button-static-white-selected-content-color-hover: var(--mod-button-static-content-color, var(--spectrum-black));
-	--system-button-static-white-selected-content-color-down: var(--mod-button-static-content-color, var(--spectrum-black));
-	--system-button-static-white-selected-content-color-focus: var(--mod-button-static-content-color, var(--spectrum-black));
+	--system-button-static-white-selected-static-white-content-color-default: var(--spectrum-black);
+	--system-button-static-white-selected-static-white-content-color-hover: var(--spectrum-black);
+	--system-button-static-white-selected-static-white-content-color-down: var(--spectrum-black);
+	--system-button-static-white-selected-static-white-content-color-focus: var(--spectrum-black);
 	--system-button-static-white-selected-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
 	--system-button-static-white-selected-border-color-disabled: transparent;
 	--system-button-static-white-secondary-background-color-default: var(--spectrum-transparent-white-200);

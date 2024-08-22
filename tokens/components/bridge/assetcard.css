@@ -13,6 +13,7 @@
 
 .spectrum-AssetCard {
 	--spectrum-assetcard-overlay-background-color: var(--system-asset-card-overlay-background-color);
+	--spectrum-assetcard-selectionindicator-box-shadow-color: var(--system-asset-card-selectionindicator-box-shadow-color);
 	--spectrum-assetcard-asset-size: var(--system-asset-card-asset-size);
 	--spectrum-assetcard-background-color: var(--system-asset-card-background-color);
 	--spectrum-assetcard-asset-animation-duration: var(--system-asset-card-asset-animation-duration);

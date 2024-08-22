@@ -14,4 +14,5 @@
 .spectrum {
 	--system-well-border-width: var(--spectrum-border-width-100);
 	--system-well-content-color: var(--spectrum-body-color);
+	--system-well-background-color: rgba(var(--spectrum-gray-800-rgb), 0.02);
 }
