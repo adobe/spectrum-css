@@ -1,6 +1,6 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes, viewports } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isFocused, isHovered, isOpen, isSelected } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isFocused, isHovered, isOpen, isSelected, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { MenuItemGroup, MenuTraySubmenu, MenuWithVariants } from "./menu.test.js";
 import { Template } from "./template.js";
@@ -23,16 +23,7 @@ export default {
 			options: ["none", "single", "multiple"],
 			control: "select",
 		},
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		shouldTruncate: {
 			name: "Truncate menu item label",
 			type: { name: "boolean" },
@@ -312,7 +303,6 @@ Collapsible.argTypes = {
 	hasDividers: { table: { disable: true } },
 	isTraySubmenu: { table: { disable: true } },
 };
-
 Collapsible.parameters = {
 	chromatic: { disableSnapshot: true },
 };

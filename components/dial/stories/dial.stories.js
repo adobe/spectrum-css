@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused } from "@spectrum-css/preview/types";
+import { isDisabled, isDragged, isFocused, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { DialGroup } from "./dial.test.js";
 import { Template } from "./template.js";
@@ -11,16 +11,7 @@ export default {
 	title: "Dial",
 	component: "Dial",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m"],
-			control: "select",
-		},
+		size: size(["s", "m"]),
 		label: {
 			name: "Label",
 			table: {
@@ -30,24 +21,8 @@ export default {
 			control: "text",
 		},
 		isFocusVisible: isFocused,
-		isDragged: {
-			name: "Dragged",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDragged,
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-Dial",

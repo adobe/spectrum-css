@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isQuiet } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { CoachIndicatorGroup } from "./coachindicator.test.js";
 import { AllVariantsCoachIndicatorGroup } from "./template";
@@ -12,15 +13,7 @@ export default {
 	title: "Coach indicator",
 	component: "CoachIndicator",
 	argTypes: {
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isQuiet,
 		variant: {
 			name: "Variant",
 			type: { name: "string" },

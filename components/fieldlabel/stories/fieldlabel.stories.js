@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isRequired, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { FieldLabelGroup } from "./fieldlabel.test.js";
 
@@ -9,16 +10,7 @@ export default {
 	title: "Field label",
 	component: "FieldLabel",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -38,24 +30,8 @@ export default {
 			options: ["left", "right"],
 			control: "select",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isRequired: {
-			name: "Required",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isRequired,
 	},
 	args: {
 		rootClass: "spectrum-FieldLabel",

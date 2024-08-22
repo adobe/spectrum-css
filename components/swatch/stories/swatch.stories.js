@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isSelected } from "@spectrum-css/preview/types";
+import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
 
@@ -10,16 +10,7 @@ export default {
 	title: "Swatch",
 	component: "Swatch",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["xs", "s", "m", "l",],
-			control: "select",
-		},
+		size: size(["xs", "s", "m", "l"]),
 		swatchColor: {
 			name: "Color",
 			type: { name: "string", required: true },
@@ -39,15 +30,7 @@ export default {
 			options: ["none", "regular", "full"],
 			control: "select",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isSelected,
 	},
 	args: {
