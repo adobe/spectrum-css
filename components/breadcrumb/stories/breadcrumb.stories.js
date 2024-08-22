@@ -22,12 +22,14 @@ export default {
 		variant: {
 			name: "Variants",
 			type: { name: "string" },
+			defaultValue: "Default",
 			table: {
 				type: { summary: "string" },
 				category: "Component",
+				defaultValue: { summary: "Default" },
 			},
 			options: ["default", "compact", "multiline"],
-			control: "inline-radio",
+			control: "select",
 		},
 		isDragged: {
 			name: "Dragged",
