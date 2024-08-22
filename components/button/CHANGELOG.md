@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.0.0-s2-foundations.13
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0da23e5`](https://github.com/adobe/spectrum-css/commit/0da23e5aee4c2f6298e9690a8c8db9bbe11243f8) Thanks [@pfulton](https://github.com/pfulton)! - [SWC-315]: Static white button mods should be applied at component level
+
 ## 14.0.0-s2-foundations.12
 
 ### Minor Changes
