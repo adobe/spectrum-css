@@ -79,7 +79,6 @@
 }
 
 .spectrum-Search--quiet {
-	--spectrum-search-quiet-button-offset: var(--system-search-quiet-quiet-button-offset);
 	--spectrum-search-background-color: var(--system-search-quiet-background-color);
 	--spectrum-search-background-color-disabled: var(--system-search-quiet-background-color-disabled);
 	--spectrum-search-border-color-disabled: var(--system-search-quiet-border-color-disabled);
