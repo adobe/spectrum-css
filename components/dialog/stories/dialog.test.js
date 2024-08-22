@@ -8,18 +8,18 @@ export const DialogGroup = Variants({
 		 * color to the dialog grid container when isChromatic() is true.
 		 * This should ensure that the Sizes within the Variants() template to display correctly.
 		 */
-		window.isChromatic() ?
-			Template({
-				...args,
-				showModal: false,
 
-				// TODO: remove this heading arg when the "Sizing" heading is no longer overwritten by it.
-				heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-				customStyles: {
-					"background-color": "var(--spectrum-gray-100)",
-				},
-			}, context)
-			: Template(args, context)
+		Template({
+			...args,
+			showModal: window.isChromatic() ? false : args.showModal,
+			// TODO: The dialog's heading arg is getting passed as the "Sizing" heading arg (instead of the 
+			// TODO: word "Sizing"). We should be able to remove this arg once that no longers happens.
+			heading: window.isChromatic() ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit" : args.heading,
+			customStyles: {
+				...(args.customStyles ?? {}),
+				"background-color": window.isChromatic() ? "var(--spectrum-gray-100)" : undefined,
+			},
+		}, context)
 	),
 	testData: [
 		{
@@ -37,14 +37,14 @@ export const DialogGroup = Variants({
 		},
 		{
 			testHeading: "With hero/cover image",
-			hasHeroImage: true,
+			heroImageUrl: "example-card-portrait.png",
 			wrapperStyles: {
 				"background-color": "var(--spectrum-gray-50)"
 			},
 		},
 		{
 			testHeading: "With hero/cover image, dismissible",
-			hasHeroImage: true,
+			heroImageUrl: "example-card-portrait.png",
 			isDismissible: true,
 			hasFooter: false,
 			wrapperStyles: {
@@ -70,7 +70,7 @@ export const DialogGroup = Variants({
 		{
 			testHeading: "With hero/cover image, no divider",
 			hasDivider: false,
-			hasHeroImage: true,
+			heroImageUrl: "example-card-portrait.png",
 			wrapperStyles: {
 				"background-color": "var(--spectrum-gray-50)"
 			},
@@ -80,7 +80,7 @@ export const DialogGroup = Variants({
 			hasDivider: false,
 			isDismissible: true,
 			hasFooter: false,
-			hasHeroImage: true,
+			heroImageUrl: "example-card-portrait.png",
 			wrapperStyles: {
 				"background-color": "var(--spectrum-gray-50)"
 			},
