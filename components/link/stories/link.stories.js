@@ -31,12 +31,14 @@ export default {
 		},
 		variant: {
 			name: "Variant",
+			defaultValue: "Primary",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
+				defaultValue: { summary: "Primary" },
 			},
-			options: ["default/primary", "secondary"],
+			options: ["primary", "secondary"],
 			control: "select",
 		},
 		isHovered,
