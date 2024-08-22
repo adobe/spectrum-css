@@ -6,6 +6,9 @@ import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
+/**
+ * Just the modal markup.
+ */
 const Modal = ({
 	rootClass = "spectrum-Modal",
 	customClasses = [],
@@ -29,6 +32,9 @@ const Modal = ({
 	`;
 };
 
+/**
+ * The modal, optionally wrapped with .spectrum-Modal-wrapper.
+ */
 export const Template = ({
 	rootClass = "spectrum-Modal",
 	skipWrapper = false,
