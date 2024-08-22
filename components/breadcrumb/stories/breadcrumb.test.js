@@ -1,155 +1,107 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
+const DefaultItems = [
+	{
+		label: "Nav root",
+	},
+	{
+		label: "Dragged",
+		isDragged: true,
+	},
+	{
+		label: "Disabled sub item",
+		isDisabled: true,
+	},
+	{
+		label: "January 2019 assets",
+	},
+];
+
+const NestedItems = [
+	{
+		iconName: "FolderOpen",
+	},
+	{
+		label: "Dragged",
+		isDragged: true,
+	},
+	{
+		label: "Disabled",
+		isDisabled: true,
+	},
+	{
+		label: "January 2019 assets",
+	},
+];
+
+const NestedRootVisibleItems = [
+	{
+		label: "Nav root",
+	},
+	{
+		iconName: "FolderOpen",
+		isDisabled: true,
+	},
+	{
+		label: "Dragged sub item",
+		isDragged: true,
+	},
+	{
+		label: "January 2019 assets",
+	},
+];
+
 export const BreadcrumbGroup = Variants({
 	Template,
 	testData: [
 		{
 			testHeading: "Default",
+			items: DefaultItems,
 		},
 		{
 			testHeading: "Default (nested)",
-			withStates: false,
-			items: [
-				{
-					iconName: "FolderOpen",
-				},
-				{
-					label: "Sub item",
-					isDragged: true,
-				},
-				{
-					label: "Trend",
-				},
-				{
-					label: "January 2019 Assets",
-				},
-			],
+			items: NestedItems,
 		},
 		{
 			testHeading: "Default (nested, root visible)",
-			withStates: false,
-			items: [
-				{
-					label: "Nav root",
-				},
-				{
-					iconName: "FolderOpen",
-				},
-				{
-					label: "Sub item",
-				},
-				{
-					label: "January 2019 Assets",
-				},
-			],
+			items: NestedRootVisibleItems,
 		},
 		{
 			testHeading: "Compact",
 			variant: "compact",
+			items: DefaultItems,
 		},
 		{
 			testHeading: "Compact (nested)",
-			withStates: false,
 			variant: "compact",
-			items: [
-				{
-					iconName: "FolderOpen",
-				},
-				{
-					label: "Sub Item",
-				},
-				{
-					label: "Trend",
-				},
-				{
-					label: "January 2019 Assets",
-				},
-			],
+			items: NestedItems,
 		},
 		{
 			testHeading: "Compact (nested, root visible)",
-			withStates: false,
 			variant: "compact",
-			items: [
-				{
-					label: "Nav root",
-				},
-				{
-					iconName: "FolderOpen",
-				},
-				{
-					label: "Sub item",
-				},
-				{
-					label: "January 2019 Assets",
-				},
-			],
+			items: NestedRootVisibleItems,
 		},
 		{
 			testHeading: "Multiline",
 			variant: "multiline",
+			items: DefaultItems,
 		},
 		{
 			testHeading: "Multiline (nested)",
-			withStates: false,
 			variant: "multiline",
-			items: [
-				{
-					iconName: "FolderOpen",
-				},
-				{
-					label: "Sub Item",
-				},
-				{
-					label: "Trend",
-				},
-				{
-					label: "January 2019 Assets",
-				},
-			],
+			items: NestedItems,
 		},
 		{
 			testHeading: "Multiline (nested, root visible)",
-			withStates: false,
 			variant: "multiline",
-			items: [
-				{
-					label: "Nav root",
-				},
-				{
-					iconName: "FolderOpen",
-				},
-				{
-					label: "Sub item",
-				},
-				{
-					label: "January 2019 Assets",
-				},
-			],
+			items: NestedRootVisibleItems,
 		},
 	],
 	stateData: [
 		{
 			testHeading: "Dragged, disabled",
 			isDragged: true,
-			isDisabled: true,
-			items: [
-				{
-					label: "Nav root",
-				},
-				{
-					label: "Dragged",
-					isDragged: true,
-				},
-				{
-					label: "Disabled",
-					isDisabled: true,
-				},
-				{
-					label: "January 2019 Assets",
-				},
-			],
 		}
 	]
 });
