@@ -12,7 +12,6 @@ import {
 import {
 	FontLoader,
 	IconLoader,
-	TokenLoader,
 } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
@@ -132,7 +131,6 @@ export default {
 	loaders: [
 		FontLoader,
 		IconLoader,
-		TokenLoader,
 	],
 	tags: ["autodocs", "dev"],
 };
