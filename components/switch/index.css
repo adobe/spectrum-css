@@ -14,6 +14,8 @@
 @import "themes/spectrum-two.css";
 
 .spectrum-Switch {
+	--spectrum-switch-focus-indicator-thickness: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
+
 	position: relative;
 	display: inline-flex;
 	align-items: flex-start;
