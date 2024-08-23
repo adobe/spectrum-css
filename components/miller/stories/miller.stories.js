@@ -90,7 +90,6 @@ BranchesSelectable.args = {};
  * Miller columns that only allow files to be selected.
  */
 export const FilesSelectable = Template.bind({});
-FilesSelectable.tags = ["!dev"];
 FilesSelectable.args = {
 	columns: [
 		{
