@@ -248,6 +248,7 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				skipMapping: false,
 				stripLocalSelectors: false,
 				referencesOnly: true,
+				shouldCombine: false,
 				map: false,
 			},
 		),

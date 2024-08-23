@@ -20,6 +20,7 @@ module.exports = ({
 	preserveVariables = true,
 	stripLocalSelectors = false,
 	resolveImports = true,
+	shouldCombine = true,
 	lint = true,
 	verbose = true,
 	minify = false,
@@ -68,9 +69,9 @@ module.exports = ({
 				stripLocalSelectors,
 				debug: verbose,
 			},
-			"@spectrum-tools/postcss-property-rollup": {
+			"@spectrum-tools/postcss-property-rollup": shouldCombine ? {
 				newSelector: ".spectrum",
-			},
+			} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */

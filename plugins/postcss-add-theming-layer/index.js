@@ -46,6 +46,12 @@ module.exports = ({
 			processIdentifier = (identifierValue) => selectorPrefix && selectorPrefix !== identifierValue ? `.${selectorPrefix}--${identifierValue}` : `.${identifierValue}`;
 		}
 
+		// index-theme.css settings:
+		// skipMapping: false,
+		// preserveVariables: true
+		// stripLocalSelectors: false,
+		// referencesOnly: true,
+
 		// This object will store the mappings for each selector
 		const systemMap = new Map();
 		const conversionMap = new Map();
@@ -172,9 +178,6 @@ module.exports = ({
 
 			container.remove();
 		});
-
-		// has keyframes
-		// if (debug) console.log("2", root);
 
 		// Our job here is done
 		if (skipMapping || stripLocalSelectors) return;
