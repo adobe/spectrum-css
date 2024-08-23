@@ -3,6 +3,7 @@ import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { when } from "lit/directives/when.js";
 
 import "../index.css";
 
@@ -62,7 +63,9 @@ export const Template = ({
 
 		>
 			<div class="${rootClass}-header">
-				${variant.charAt(0).toUpperCase() + variant.slice(1)} ${headerText}
+				${when(headerText, () => 
+					headerText.charAt(0).toUpperCase() + headerText.slice(1)
+				)}
 				${iconMarkup}
 			</div>
 			<div class="${rootClass}-content">${text}</div>

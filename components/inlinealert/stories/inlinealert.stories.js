@@ -77,7 +77,7 @@ Default.args = {};
 export const Informative = Template.bind({});
 Informative.args = {
 	variant: "info",
-	headerText: "in-line alert header",
+	headerText: "Info in-line alert header",
 };
 Informative.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -92,7 +92,7 @@ Informative.tags = ["!dev"];
 export const Negative = Template.bind({});
 Negative.args = {
 	variant: "negative",
-	headerText: "in-line alert header",
+	headerText: "Negative in-line alert header",
 };
 Negative.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -107,7 +107,7 @@ Negative.tags = ["!dev"];
 export const Positive = Template.bind({});
 Positive.args = {
 	variant: "positive",
-	headerText: "in-line alert header",
+	headerText: "Positive in-line alert header",
 };
 Positive.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -122,7 +122,7 @@ Positive.tags = ["!dev"];
 export const Notice = Template.bind({});
 Notice.args = {
 	variant: "notice",
-	headerText: "in-line alert header",
+	headerText: "Notice in-line alert header",
 };
 Notice.parameters = {
 	chromatic: { disableSnapshot: true },
