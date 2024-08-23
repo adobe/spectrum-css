@@ -1,5 +1,16 @@
 # Change Log
 
+## 7.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#3017](https://github.com/adobe/spectrum-css/pull/3017) [`2715979`](https://github.com/adobe/spectrum-css/commit/2715979ffef5eda39cf2701d0cccd18efd94136c) Thanks [@cdransf](https://github.com/cdransf)! - Move the color slider passthrough modifiers out of the theme to the base index.css.
+
+### Patch Changes
+
+- Updated dependencies [[`9dd8558`](https://github.com/adobe/spectrum-css/commit/9dd85581dff69b051a16a3b71054fa65334d106b)]:
+  - @spectrum-css/colorhandle@9.0.0-s2-foundations.13
+
 ## 7.0.0-s2-foundations.12
 
 ### Minor Changes

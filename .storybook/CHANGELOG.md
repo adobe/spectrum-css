@@ -1,5 +1,11 @@
 # Change Log
 
+## 11.0.0-s2-foundations.7
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`f15243a`](https://github.com/adobe/spectrum-css/commit/f15243adaa633531e82edbb61b2e4444517af64e) Thanks [@pfulton](https://github.com/pfulton)! - fix(storybook): update font loader to fix chromatic bug
+
 ## 11.0.0-s2-foundations.6
 
 ### Patch Changes
