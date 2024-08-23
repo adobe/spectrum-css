@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum.spectrum--express {
+.spectrum.spectrum--legacy {
 	--system-action-group-gap-size-compact: var(--spectrum-spacing-50);
 	--system-action-group-horizontal-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
 	--system-action-group-vertical-spacing-compact: calc(-1px * var(--spectrum-spacing-50));

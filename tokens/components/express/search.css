@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum.spectrum--express {
+.spectrum.spectrum--legacy {
 	--system-search-border-radius: calc(var(--spectrum-component-height-100) / 2);
 	--system-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
 	--system-search-border-color-default: var(--spectrum-gray-400);

@@ -13,7 +13,6 @@
 
 .spectrum {
 	--system-search-border-radius: var(--spectrum-corner-radius-100);
-	--system-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 	--system-search-border-color-default: var(--spectrum-gray-500);
 	--system-search-border-color-hover: var(--spectrum-gray-600);
 	--system-search-border-color-focus: var(--spectrum-gray-800);
@@ -45,6 +44,7 @@
 	--system-search-size-s-block-size: var(--spectrum-component-height-75);
 	--system-search-size-s-icon-size: var(--spectrum-workflow-icon-size-75);
 	--system-search-size-s-text-to-icon: var(--spectrum-text-to-visual-75);
+	--system-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 	--system-search-size-m-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
 	--system-search-block-size: var(--spectrum-component-height-100);
 	--system-search-size-m-block-size: var(--spectrum-component-height-100);

@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum.spectrum--express {
+.spectrum.spectrum--legacy {
 	--system-color-slider-handle-margin-block: var(--spectrum-component-top-to-text-75);
 	--system-color-slider-border-color-rgba: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-color-slider-border-opacity));
 	--system-color-slider-checkerboard-size: var(--spectrum-opacity-checkerboard-square-size);

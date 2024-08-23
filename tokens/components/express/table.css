@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum.spectrum--express {
+.spectrum.spectrum--legacy {
 	--system-table-header-top-to-text: var(--spectrum-table-column-header-row-top-to-text-medium);
 	--system-table-header-bottom-to-text: var(--spectrum-table-column-header-row-bottom-to-text-medium);
 	--system-table-min-header-height: var(--spectrum-component-height-100);
