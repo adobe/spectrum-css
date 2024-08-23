@@ -62,7 +62,7 @@ export const Template = ({
 
 		>
 			<div class="${rootClass}-header">
-				${variant.charAt(0).toUpperCase() + variant.slice(1)} ${headerText}
+				${headerText}
 				${iconMarkup}
 			</div>
 			<div class="${rootClass}-content">${text}</div>

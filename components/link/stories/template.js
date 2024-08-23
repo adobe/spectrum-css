@@ -39,3 +39,11 @@ export const Template = ({
 		${text}
 	</a>
 `;
+
+export const TemplateWithFillerText = (args, context) => html`
+	<div>
+		Hello, this is a
+		${Template({...args, context})}
+		. This is just filler text, but if you keep reading maybe something good will happen.
+	</div>
+`;

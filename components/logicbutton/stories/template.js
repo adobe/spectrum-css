@@ -24,3 +24,11 @@ export const Template = ({
 			: undefined}
 	</button>
 `;
+
+export const VariantGroup = (args, context) => html`
+	${Template({...args}, context)}
+	${Template({
+		...args,
+		variant: "or",
+	}, context)}
+`;
