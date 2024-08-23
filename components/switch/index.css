@@ -242,7 +242,8 @@
 	.spectrum-Switch-input:focus-visible {
 		& + .spectrum-Switch-switch {
 			&::after {
-				box-shadow: 0 0 0 var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness)) var(--highcontrast-switch-focus-indicator-color, var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color)));
+				/* @deprecated --mod-focus-indicator-thickness -- migrate modifiers to use --mod-switch-focus-indicator-thickness instead */
+				box-shadow: 0 0 0 var(--mod-switch-focus-indicator-thickness, var(--mod-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness))) var(--highcontrast-switch-focus-indicator-color, var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color)));
 			}
 
 			&::before {
