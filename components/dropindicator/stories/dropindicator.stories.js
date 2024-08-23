@@ -20,7 +20,7 @@ export default {
 			options: ["horizontal", "vertical"],
 			control: "select",
 		},
-		size: {
+		length: {
 			name: "Size",
 			description:
 				"Size of the drop indicator, requires a unit be provided; i.e., 200px or 100%.",
@@ -35,7 +35,7 @@ export default {
 	args: {
 		rootClass: "spectrum-DropIndicator",
 		direction: "vertical",
-		size: "300px",
+		length: "300px",
 	},
 	parameters: {
 		packageJson: pkgJson,
@@ -50,7 +50,7 @@ Default.tags = ["!autodocs"];
 export const DefaultGroup = DocsDropIndicatorGroup.bind({});
 DefaultGroup.storyName = "Default";
 DefaultGroup.tags = ["!dev"];
-DefaultGroup.parameters = { 
+DefaultGroup.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
