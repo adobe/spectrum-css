@@ -7,11 +7,12 @@ import {
 	withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
-	withTextDirectionWrapper,
+	withTextDirectionWrapper
 } from "./decorators";
 import {
 	FontLoader,
 	IconLoader,
+	TokenLoader,
 } from "./loaders";
 import modes from "./modes";
 import DocumentationTemplate from "./templates/DocumentationTemplate.mdx";
@@ -72,7 +73,7 @@ const parameters = {
 		sort: "requiredFirst",
 	},
 	html: {
-		root: "[data-html-preview]",
+		root: "[data-html-preview]:first-of-type",
 		removeComments: true,
 		prettier: {
 			tabWidth: 4,
@@ -109,21 +110,11 @@ const parameters = {
 	componentVersion: undefined,
 };
 
-export const decorators = [
-	withTextDirectionWrapper,
-	withLanguageWrapper,
-	withReducedMotionWrapper,
-	withContextWrapper,
-	withTestingPreviewWrapper,
-	withArgEvents,
-	withActions,
-	withIconSpriteSheet,
-];
-
 export default {
 	title: "Spectrum CSS",
-	globalTypes,
+	parameters,
 	argTypes,
+	globalTypes,
 	args: {
 		customClasses: [],
 		customStyles: {},
@@ -141,6 +132,7 @@ export default {
 	loaders: [
 		FontLoader,
 		IconLoader,
+		TokenLoader,
 	],
 	tags: ["autodocs", "dev"],
 };
