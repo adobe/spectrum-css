@@ -8,23 +8,18 @@ export const DividerGroup = Variants({
 		{
 			testHeading: "Default",
 			vertical: false,
-			customStyles: {
-				"min-inline-size": "200px",
-			},
+			minDimensionValues: true,
 		},
 		{
 			testHeading: "Non-HR",
 			tag: "div",
-			customStyles: {
-				"min-inline-size": "200px",
-			},
+			vertical: false,
+			minDimensionValues: true,
 		},
 		{
 			testHeading: "Vertical",
 			vertical: true,
-			customStyles: {
-				"min-block-size": "100px",
-			},
+			minDimensionValues: true,
 		}
 	],
 });
