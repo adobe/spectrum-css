@@ -9,15 +9,15 @@ export const SteplistGroup = Variants({
 		},
 		{
 			testHeading: "Small",
-			isSmall: false,
+			isSmall: true,
 		},
 		{
 			testHeading: "Interactive",
-			isInteractive: false,
+			isInteractive: true,
 		},
 		{
 			testHeading: "With tooltip",
-			withTooltip: false,
+			withTooltip: true,
 		},
 	],
 });

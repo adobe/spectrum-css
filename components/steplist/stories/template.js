@@ -1,4 +1,4 @@
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { getRandomId, Container } from "@spectrum-css/preview/decorators";
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -108,3 +108,21 @@ export const Template = ({
 		</div>
 	`;
 };
+
+/* Shows both the static and interactive variants in one grouping. */
+export const DocsSteplistGroup = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Static",
+			content: Template(args, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Interactive",
+			content: Template({...args, isInteractive: true} ,context),
+		})}
+	`
+});

@@ -1,5 +1,5 @@
 import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { getRandomId, Container } from "@spectrum-css/preview/decorators";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -94,3 +94,81 @@ export const Template = ({
 		</div>
 	`;
 };
+
+/* Shows all of the stepper states in one grouping. */
+export const AllDefaultVariantsGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template(args, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid",
+			content: Template({...args, isInvalid: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Focused",
+			content: Template({...args, isFocused: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid, focused",
+			content: Template({...args, isInvalid: true, isFocused: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Keyboard focused",
+			content: Template({...args, isKeyboardFocused: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid, keyboard focused",
+			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
+		})}
+	`
+});
+
+/* Shows the disabled variants of the default and quiet stories one grouping. */
+export const DisabledVariantsGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template(args, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Quiet",
+			content: Template({...args, isQuiet: true}, context)
+		})}
+	`
+});
