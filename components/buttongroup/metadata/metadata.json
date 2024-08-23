@@ -1,0 +1,25 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-ButtonGroup",
+    ".spectrum-ButtonGroup .spectrum-ButtonGroup-item",
+    ".spectrum-ButtonGroup--sizeL",
+    ".spectrum-ButtonGroup--sizeM",
+    ".spectrum-ButtonGroup--sizeS",
+    ".spectrum-ButtonGroup--sizeXL",
+    ".spectrum-ButtonGroup--vertical"
+  ],
+  "modifiers": [
+    "--mod-buttongroup-justify-content",
+    "--mod-buttongroup-spacing-horizontal",
+    "--mod-buttongroup-spacing-vertical"
+  ],
+  "component": [
+    "--spectrum-buttongroup-spacing-horizontal",
+    "--spectrum-buttongroup-spacing-vertical"
+  ],
+  "global": ["--spectrum-spacing-200", "--spectrum-spacing-300"],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": []
+}

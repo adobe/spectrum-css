@@ -1,0 +1,42 @@
+{
+  "sourceFile": "index.css",
+  "selectors": [
+    ".spectrum-Tray",
+    ".spectrum-Tray .spectrum-Dialog",
+    ".spectrum-Tray-wrapper",
+    ".spectrum-Tray.is-open"
+  ],
+  "modifiers": [
+    "--mod-tray-background-color",
+    "--mod-tray-bottom-to-content-area",
+    "--mod-tray-corner-radius",
+    "--mod-tray-corner-radius-portrait",
+    "--mod-tray-entry-animation-delay",
+    "--mod-tray-entry-animation-duration",
+    "--mod-tray-exit-animation-delay",
+    "--mod-tray-exit-animation-duration",
+    "--mod-tray-max-inline-size",
+    "--mod-tray-spacing-edge-to-tray-safe-zone",
+    "--mod-tray-top-to-content-area"
+  ],
+  "component": [
+    "--spectrum-tray-background-color",
+    "--spectrum-tray-corner-radius",
+    "--spectrum-tray-entry-animation-delay",
+    "--spectrum-tray-entry-animation-duration",
+    "--spectrum-tray-exit-animation-delay",
+    "--spectrum-tray-exit-animation-duration",
+    "--spectrum-tray-max-inline-size",
+    "--spectrum-tray-spacing-edge-to-tray-safe-zone",
+    "--spectrum-tray-top-to-content-area"
+  ],
+  "global": [
+    "--spectrum-animation-duration-100",
+    "--spectrum-animation-duration-500",
+    "--spectrum-background-layer-2-color",
+    "--spectrum-corner-radius-100"
+  ],
+  "system-theme": [],
+  "passthroughs": ["--mod-modal-max-width"],
+  "high-contrast": ["--highcontrast-tray-background-color"]
+}

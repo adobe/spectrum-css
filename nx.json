@@ -46,7 +46,8 @@
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'"
+					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'",
+					"node --no-warnings -e 'require(\"./tasks/component-reporter.js\").default()'"
 				]
 			},
 			"outputs": [
