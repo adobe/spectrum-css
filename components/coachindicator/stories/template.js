@@ -30,3 +30,29 @@ export const Template = ({
 		</div>
 	`;
 };
+
+/* This template group showcases multiple coach indicator variants at once. */
+export const AllVariantsCoachIndicatorGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			direction: "column",
+			withBorder: false,
+			heading: "Default",
+			content: Template({ ...args, variant: "default" }, context)
+		})}
+		${Container({
+			direction: "column",
+			withBorder: false,
+			heading: "Dark",
+			content: Template({ ...args, variant: "dark" }, context)
+		})}
+		${Container({
+			direction: "column",
+			withBorder: false,
+			heading: "Light",
+			content: Template({ ...args, variant: "light" }, context)
+
+		})}
+	`
+});
