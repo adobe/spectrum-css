@@ -38,7 +38,7 @@
 		--spectrum-switch-background-color-selected-down: var(--spectrum-neutral-background-color-selected-down);
 		--spectrum-switch-background-color-selected-focus: var(--spectrum-neutral-background-color-selected-key-focus);
 
-		--spectrum-switch-focus-indicator-thickness: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
+		--spectrum-switch-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 		--spectrum-switch-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
 		--spectrum-switch-handle-background-color: var(--spectrum-gray-50);
