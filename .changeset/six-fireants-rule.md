@@ -2,4 +2,4 @@
 "@spectrum-css/colorslider": minor
 ---
 
-chore(colorslider): migrate mods
+Move the color slider passthrough modifiers out of the theme to the base index.css.
