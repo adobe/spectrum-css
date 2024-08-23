@@ -33,8 +33,8 @@ export const Template = ({
 			style=${styleMap({
 				"width": customWidth,
 				...customStyles,
-				"--mod-progressbar-track-color": trackFill ? trackFill : undefined,
-				"--mod-progressbar-fill-color": progressBarFill ? progressBarFill : undefined,
+				"--mod-progressbar-track-color": trackFill,
+				"--mod-progressbar-fill-color": progressBarFill,
 			})}
 			value=${ifDefined(value ? `${value}%` : undefined)}
 			aria-valuenow=${ifDefined(value ? `${value}%` : undefined)}
