@@ -1,5 +1,16 @@
 # Change Log
 
+## 8.0.0-s2-foundations.14
+
+### Minor Changes
+
+- [#3015](https://github.com/adobe/spectrum-css/pull/3015) [`db6f93d`](https://github.com/adobe/spectrum-css/commit/db6f93d6cb4b745a53a03a363284ac9e4f9cd46a) Thanks [@cdransf](https://github.com/cdransf)! - Move the coachmark modifiers out of the theme to the base index.css.
+
+### Patch Changes
+
+- Updated dependencies [[`f15243a`](https://github.com/adobe/spectrum-css/commit/f15243adaa633531e82edbb61b2e4444517af64e)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.16
+
 ## 8.0.0-s2-foundations.13
 
 ### Minor Changes
