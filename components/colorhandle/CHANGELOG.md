@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#3016](https://github.com/adobe/spectrum-css/pull/3016) [`9dd8558`](https://github.com/adobe/spectrum-css/commit/9dd85581dff69b051a16a3b71054fa65334d106b) Thanks [@cdransf](https://github.com/cdransf)! - Move the color handle passthrough modifiers out of the theme to the base index.css.
+
 ## 9.0.0-s2-foundations.12
 
 ### Minor Changes
