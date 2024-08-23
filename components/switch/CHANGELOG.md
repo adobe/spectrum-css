@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`a477157`](https://github.com/adobe/spectrum-css/commit/a477157a27c6fe5bba3f42397438d21c0cff4ddb) Thanks [@pfulton](https://github.com/pfulton)! - fix(switch): migrate mods
+
 ## 6.0.0-s2-foundations.12
 
 ### Minor Changes
