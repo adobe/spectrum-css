@@ -2,4 +2,4 @@
 "@spectrum-css/coachmark": minor
 ---
 
-chore(coachmark): migrate mods
+Move the coachmark modifiers out of the theme to the base index.css.
