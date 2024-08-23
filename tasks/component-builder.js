@@ -424,7 +424,6 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				preserveVariables: true,
 				// Only output the new selectors with the system mappings
 				stripLocalSelectors: true,
-				shouldCombine: true,
 				theme,
 				map: false,
 			},
@@ -470,6 +469,7 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				skipMapping: false,
 				stripLocalSelectors: false,
 				referencesOnly: true,
+				shouldCombine: false,
 				map: false,
 			},
 		).then(async (reports = []) => {
@@ -518,6 +518,7 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 					skipMapping: false,
 					preserveVariables: true,
 					stripLocalSelectors: false,
+					shouldCombine: false,
 					referencesOnly: false,
 				},
 			).then(async (reports = []) => {

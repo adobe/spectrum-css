@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum.spectrum--express {
+.spectrum.spectrum--legacy {
 	--system-underlay-background-entry-animation-delay: var(--spectrum-animation-duration-0);
 	--system-underlay-background-exit-animation-ease: var(--spectrum-animation-ease-in);
 	--system-underlay-background-entry-animation-ease: var(--spectrum-animation-ease-out);

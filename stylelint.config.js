@@ -28,7 +28,7 @@ module.exports = {
 		"at-rule-no-unknown": [
 			true,
 			{
-				ignoreAtRules: ["extend", "container", "each", "include", "mixin", "use"],
+				ignoreAtRules: ["extend", "container", "each", "include", "mixin"],
 			},
 		],
 		"rule-empty-line-before": [
