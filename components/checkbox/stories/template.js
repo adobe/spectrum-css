@@ -134,44 +134,26 @@ export const AllVariantsCheckboxGroup = (args, context) => Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Default",
-			content: html`
-				${DocsCheckboxGroup({
-					...args,
-				}, context)}
-			`
+			content: DocsCheckboxGroup(args, context)
 		})}
 		${Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Invalid",
-			content: html`
-				${DocsCheckboxGroup({
-					...args,
-					isInvalid: true,
-				}, context)}
-			`
+			content: DocsCheckboxGroup({...args, isInvalid: true }, context)
 		})}
 		${Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Disabled",
-			content: html`
-				${DocsCheckboxGroup({
-					...args,
-					isDisabled: true,
-				}, context)}
-			`
+			content: DocsCheckboxGroup({...args, isDisabled: true }, context)
 		})}
 		${Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Read-only",
-			content: html`
-				${DocsCheckboxGroup({
-					...args,
-					isReadOnly: true,
-				}, context)}
-			`
+			content: DocsCheckboxGroup({...args, isReadOnly: true }, context)
+
 		})}
 	`
 });
