@@ -35,34 +35,20 @@ export const AllVariantsCoachIndicatorGroup = (args, context) => Container({
 			direction: "column",
 			withBorder: false,
 			heading: "Default",
-			content: html`
-				${Template({
-					...args,
-					variant: "default"
-				}, context)}
-			`
+			content: Template({ ...args, variant: "default" }, context)
 		})}
 		${Container({
 			direction: "column",
 			withBorder: false,
 			heading: "Dark",
-			content: html`
-				${Template({
-					...args,
-					variant: "dark"
-				}, context)}
-			`
+			content: Template({ ...args, variant: "dark" }, context)
 		})}
 		${Container({
 			direction: "column",
 			withBorder: false,
 			heading: "Light",
-			content: html`
-				${Template({
-					...args,
-					variant: "light"
-				}, context)}
-			`
+			content: Template({ ...args, variant: "light" }, context)
+
 		})}
 	`
 });
