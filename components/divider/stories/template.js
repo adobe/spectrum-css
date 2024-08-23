@@ -11,6 +11,7 @@ export const Template = ({
 	tag = "hr",
 	staticColor,
 	vertical = false,
+	minDimensionValues,
 	customClasses = [],
 	customStyles = {},
 } = {}) => {
@@ -25,11 +26,8 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap({
-				"min-block-size": vertical == true ? "20px" : undefined,
-				"block-size": vertical ? "auto" : undefined,
-				"min-inline-size": !vertical ? "200px" : "var(--spectrum-divider-thickness)",
-				"inline-size": !vertical ? "auto" : undefined,
-				"align-self": vertical == true ? "stretch" : undefined,
+				"min-inline-size": minDimensionValues && !vertical ? "200px": undefined,
+				"min-block-size": minDimensionValues && vertical ? "20px": undefined,
 				...customStyles,
 			})}
 			role="separator"
@@ -46,11 +44,8 @@ export const Template = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		style=${styleMap({
-			"min-block-size": vertical == true ? "20px" : undefined,
-			"block-size": vertical == true ? "auto" : undefined,
-			"min-inline-size": !vertical ? "200px" : "var(--spectrum-divider-thickness)",
-			"inline-size": !vertical ? "auto" : undefined,
-			"align-self": vertical == true ? "stretch" : undefined,
+			"min-inline-size": minDimensionValues && !vertical ? "200px": undefined,
+			"min-block-size": minDimensionValues && vertical ? "20px": undefined,
 			...customStyles,
 		})}
 		role="separator"

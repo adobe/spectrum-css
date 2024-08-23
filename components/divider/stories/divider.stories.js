@@ -41,11 +41,13 @@ export default {
 			control: "boolean",
 		},
 		tag: { table: { disable: true } },
+		minDimensionValues: {table: { disable: true }},
 	},
 	args: {
 		rootClass: "spectrum-Divider",
-		size: "m",
+		size: "s",
 		vertical: false,
+		minDimensionValues: true,
 	},
 	parameters: {
 		componentVersion: version,
@@ -53,25 +55,35 @@ export default {
 };
 
 /**
- * The default size for divider is medium.
+ * By default, dividers are horizontal and should be used for separating content vertically. The small divider is the default size. 
  */
 export const Default = DividerGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
+/**
+ * To divide similar components such as table rows, action button groups, and components within a panel, use the default, small divider.
+ *
+ * The medium divider is used for dividing subsections on a page, or to separate different groupings of components such as panels, rails, etc.
+ *
+ * Only use the large divider for page titles or section titles.
+ */
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withHeading: false,
 	withBorder: false,
 	...args,
 }, context);
+Sizing.args = {
+	minDimensionValues: true,
+};
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
 /**
- * When a vertical divider is used inside of a flex container, use `align-self: stretch; block-size: auto;` on the divider.
+ * The vertical divider is used to separate content horizontally. When a vertical divider is used inside of a flex container, use `align-self: stretch; block-size: 100%;` on the divider.
  */
 export const VerticalSizing = (args, context) => Sizes({
 	Template,
@@ -83,18 +95,13 @@ VerticalSizing.storyName = "Vertical";
 VerticalSizing.tags = ["!dev"];
 VerticalSizing.args = {
 	vertical: true,
+	minDimensionValues: true,
 };
 VerticalSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticWhiteGroup = (args, context) => Sizes({
-	Template,
-	withHeading: false,
-	withBorder: false,
-	...args,
-}, context);
-
+export const StaticWhiteGroup = Default.bind({});
 StaticWhiteGroup.storyName = "Static white";
 StaticWhiteGroup.tags = ["!dev"];
 StaticWhiteGroup.args = {
@@ -106,12 +113,7 @@ StaticWhiteGroup.parameters = {
 	},
 };
 
-export const StaticBlackGroup = (args, context) => Sizes({
-	Template,
-	withHeading: false,
-	withBorder: false,
-	...args,
-}, context);
+export const StaticBlackGroup = Default.bind({});
 StaticBlackGroup.storyName = "Static black";
 StaticBlackGroup.tags = ["!dev"];
 StaticBlackGroup.args = {
