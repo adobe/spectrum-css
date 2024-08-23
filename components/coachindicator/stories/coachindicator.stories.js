@@ -35,6 +35,7 @@ export default {
 	args: {
 		rootClass: "spectrum-CoachIndicator",
 		isQuiet: false,
+		variant: "default",
 	},
 	parameters: {
 		componentVersion: version,

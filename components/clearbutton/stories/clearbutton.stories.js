@@ -62,7 +62,7 @@ export default {
 			control: "boolean",
 		},
 		isQuiet: {
-			name: "Quiet Styling",
+			name: "Quiet styling",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
