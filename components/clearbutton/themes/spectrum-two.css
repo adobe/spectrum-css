@@ -63,10 +63,10 @@
 
 		&:disabled,
 		&.is-disabled {
-			--spectrum-clear-button-icon-color: var(--mod-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color));
+			--spectrum-clear-button-icon-color: var(--spectrum-disabled-content-color);
 			--spectrum-clear-button-icon-color-hover: var(--spectrum-clear-button-icon-color-hover-disabled, var(--spectrum-disabled-content-color));
 			--spectrum-clear-button-icon-color-down: var(--spectrum-clear-button-icon-color-down-disabled, var(--spectrum-disabled-content-color));
-			--spectrum-clear-button-background-color: var(--mod-clear-button-background-color-disabled, transparent);
+			--spectrum-clear-button-background-color: transparent;
 		}
 	}
 }

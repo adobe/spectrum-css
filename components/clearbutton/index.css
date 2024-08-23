@@ -56,6 +56,12 @@
 			background-color: var(--mod-clear-button-background-color-key-focus, var(--spectrum-clear-button-background-color-key-focus));
 		}
 	}
+
+	&:disabled,
+	&.is-disabled {
+		--spectrum-clear-button-icon-color: var(--mod-clear-button-icon-color-disabled, var(--spectrum-disabled-content-color));
+		--spectrum-clear-button-background-color: var(--mod-clear-button-background-color-disabled, transparent);
+	}
 }
 
 .spectrum-ClearButton-fill {
