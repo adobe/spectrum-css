@@ -31,7 +31,7 @@ export default {
 		},
 		variant: {
 			name: "Variant",
-			defaultValue: "Primary",
+			defaultValue: "primary",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
