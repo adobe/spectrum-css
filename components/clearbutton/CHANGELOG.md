@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-s2-foundations.13
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`a66241b`](https://github.com/adobe/spectrum-css/commit/a66241bc5ec06ecb81b221187db1740caf1bd8f8) Thanks [@pfulton](https://github.com/pfulton)! - Migrating Clear Button disabled variants to index.css
+
 ## 7.0.0-s2-foundations.12
 
 ### Minor Changes
