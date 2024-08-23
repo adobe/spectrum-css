@@ -16,6 +16,8 @@ export const Template = ({
 	isIndeterminate = false,
 	label,
 	value,
+	trackFill,
+	progressBarFill,
 	customStyles = {},
 	size = "m",
 } = {}, context = {}) => html`
@@ -31,6 +33,8 @@ export const Template = ({
 			style=${styleMap({
 				"width": customWidth,
 				...customStyles,
+				"--mod-progressbar-track-color": trackFill,
+				"--mod-progressbar-fill-color": progressBarFill,
 			})}
 			value=${ifDefined(value ? `${value}%` : undefined)}
 			aria-valuenow=${ifDefined(value ? `${value}%` : undefined)}
@@ -48,8 +52,12 @@ export const Template = ({
 				label: isIndeterminate || typeof value === "undefined" ? "" : `${value}%`,
 				customClasses: [`${rootClass}-percentage`],
 			}, context)}
+
 			<div class="${rootClass}-track">
-				<div class="${rootClass}-fill" style="width: ${value}%;"></div>
+				<div
+					class="${rootClass}-fill"
+					style=${styleMap({ "inline-size": `${value}%` })}
+				></div>
 			</div>
 		</div>
 `;
