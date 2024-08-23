@@ -14,6 +14,9 @@
 @import "themes/spectrum-two.css";
 
 .spectrum-ColorHandle {
+	/* @passthrough -- opacity checkerboard customization */
+	--mod-opacity-checkerboard-position: 50%;
+
 	position: absolute;
 	z-index: 1; /* Be above */
 	display: block;
