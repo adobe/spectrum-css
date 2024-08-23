@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.0.0-s2-foundations.13
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9f8732d`](https://github.com/adobe/spectrum-css/commit/9f8732d05da8c2be2ce3d95baac4b1272a6c62bd) Thanks [@pfulton](https://github.com/pfulton)! - Migrating Card component quiet and gallery variant mods to index css file
+
 ## 9.0.0-s2-foundations.12
 
 ### Minor Changes
