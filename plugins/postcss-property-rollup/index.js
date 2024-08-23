@@ -34,6 +34,9 @@ module.exports = ({
 
 				// Remove the @combine from the string
 				const selectors = comment.text.replace("@combine", "").trim();
+
+				comment.remove();
+
 				if (!selectors) return;
 
 				// Prefer the selectors from the comment over one provided in the config
