@@ -52,7 +52,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-InLineAlert",
-		headerText: "in-line alert header",
+		headerText: "Neutral in-line alert header",
 		text: "This is an alert.",
 		variant: "neutral",
 		isClosable: false,

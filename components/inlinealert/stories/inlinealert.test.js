@@ -8,6 +8,7 @@ export const InlineAlertGroup = Variants({
 		...["neutral", "info", "positive", "notice", "negative"].map((variant) => ({
 			testHeading: capitalize(variant),
 			variant,
+			headerText: `${variant.charAt(0).toUpperCase() + variant.slice(1)} inline-alert header`
 		})),
 		{
 			testHeading: "Truncation",
