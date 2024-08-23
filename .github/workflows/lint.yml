@@ -82,7 +82,7 @@ jobs:
               with:
                   fail_on_error: true
                   level: error
-                  reporter: github-pr-check
+                  reporter: github-pr-review
                   filter_mode: diff_context
                 #   stylelint_input: "components/*/index.css components/*/themes/*.css"
                   stylelint_input: "${{ inputs.styles_added_files }} ${{ inputs.styles_modified_files }}"
@@ -94,7 +94,7 @@ jobs:
               with:
                   fail_on_error: true
                   level: error
-                  reporter: github-pr-check
+                  reporter: github-pr-review
                   filter_mode: diff_context
                 #   eslint_flags: "components/*/stories/*.js"
                   eslint_flags: "${{ inputs.eslint_added_files }} ${{ inputs.eslint_modified_files }}"
