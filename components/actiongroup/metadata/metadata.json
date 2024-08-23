@@ -3,6 +3,7 @@
   "selectors": [
     ".spectrum-ActionGroup",
     ".spectrum-ActionGroup .spectrum-ActionGroup-item",
+    ".spectrum-ActionGroup .spectrum-ActionGroup-item.is-focus-visible",
     ".spectrum-ActionGroup .spectrum-ActionGroup-item:focus-visible",
     ".spectrum-ActionGroup--compact",
     ".spectrum-ActionGroup--compact.spectrum-ActionGroup--vertical:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item",
@@ -13,6 +14,8 @@
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item + .spectrum-ActionGroup-item",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item .spectrum-ActionButton-label",
+    ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item.is-focus-visible",
+    ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item.is-hover",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item.is-selected",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:first-child",
     ".spectrum-ActionGroup--compact:not(.spectrum-ActionGroup--quiet) .spectrum-ActionGroup-item:focus-visible",

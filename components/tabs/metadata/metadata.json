@@ -2,6 +2,7 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Tabs",
+    ".spectrum-Tabs .is-selected.is-focus-visible",
     ".spectrum-Tabs .is-selected:before",
     ".spectrum-Tabs .is-selected:focus",
     ".spectrum-Tabs .is-selected:focus-visible",
@@ -33,6 +34,9 @@
     ".spectrum-Tabs-item .spectrum-Icon + .spectrum-Tabs-itemLabel",
     ".spectrum-Tabs-item.is-disabled",
     ".spectrum-Tabs-item.is-disabled .spectrum-Tabs-itemLabel",
+    ".spectrum-Tabs-item.is-focus-visible",
+    ".spectrum-Tabs-item.is-focus-visible:before",
+    ".spectrum-Tabs-item.is-hover",
     ".spectrum-Tabs-item.is-selected",
     ".spectrum-Tabs-item:before",
     ".spectrum-Tabs-item:focus-visible",
