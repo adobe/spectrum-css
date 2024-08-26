@@ -55,4 +55,3 @@
 | `--mod-textfield-text-color-focus-hover`      |
 | `--mod-textfield-text-color-hover`            |
 | `--mod-textfield-text-color-keyboard-focus`   |
-| `--mod-workflow-icon-size-100`                |
