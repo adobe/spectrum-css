@@ -7,13 +7,15 @@ import { styleMap } from "lit/directives/style-map.js";
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
+import { Template as Thumbnail } from "@spectrum-css/thumbnail/stories/template.js";
 
 import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Tag",
 	size = "m",
-	iconName,
+	visual,
+	iconName = "Info",
 	avatarUrl,
 	label,
 	isSelected = false,
@@ -47,20 +49,26 @@ export const Template = ({
 			tabindex=${isDisabled ? "-1" : "0"}
 			style=${ifDefined(styleMap(customStyles))}
 		>
-			${avatarUrl && !isInvalid
+			${visual == "Avatar" && !isInvalid
 				? Avatar({
-					...globals,
-					image: avatarUrl,
-					size: "50",
-				})
+						...globals,
+						image: avatarUrl,
+					})
 				: ""}
-			${iconName || isInvalid
+			${visual == "Icon" || isInvalid
 				? Icon({
-					...globals,
-					size,
-					iconName,
-					customClasses: [`${rootClass}-itemIcon`],
-				})
+						...globals,
+						size,
+						iconName,
+						customClasses: [`${rootClass}-itemIcon`],
+					})
+				: ""}
+			${visual == "Thumbnail" && !isInvalid
+				? Thumbnail({
+						...globals,
+						imageURL: "thumbnail.png",
+						altText: "Woman crouching",
+					})
 				: ""}
 			<span class="${rootClass}-itemLabel">${label}</span>
 			${hasClearButton
@@ -72,10 +80,10 @@ export const Template = ({
 						const el = evt.target;
 						if (!el) return;
 
-						const wrapper = el.closest(rootClass);
-						wrapper.parentNode.removeChild(wrapper);
-					},
-				})
+							const wrapper = el.closest(rootClass);
+							wrapper.parentNode.removeChild(wrapper);
+						},
+					})
 				: ""}
 		</div>
 	`;
