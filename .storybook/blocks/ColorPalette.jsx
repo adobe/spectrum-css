@@ -94,7 +94,7 @@ export const ColorItem = ({ title, color, values = [], ...props }) => {
 					{values.map((value) => {
 						const resolved = fetchToken(`${color}-${value}`, value ?? color);
 						return (
-							<SwatchSet className="swatch-set">
+							<SwatchSet className="swatch-set" key={`${color}-${value}`}>
 								<Body className="swatch-label" size="s">
 									{value}
 								</Body>
