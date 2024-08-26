@@ -107,10 +107,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-css-workflow-icons@npm:^1.5.4":
-  version: 1.5.4
-  resolution: "@adobe/spectrum-css-workflow-icons@npm:1.5.4"
-  checksum: 10c0/6c76ec7f9eb8d64c93603d72b243a46e766f6b961811a37a7cc3b874452e48bb9d0efd13762448ab1f09f327813ce448292b2e7a9801c83b7666f58a79e9e1af
+"@adobe/spectrum-css-workflow-icons@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@adobe/spectrum-css-workflow-icons@npm:3.0.0"
+  checksum: 10c0/78c0e8eeaf1f1fcae692a4c48315a1fcb3499f8d3d23cf511302ad1428088bd9659eeba99bfaaf7d3740871c5290ea0482c11447ae2c10e2a0b61f534ff15da2
   languageName: node
   linkType: hard
 
@@ -5220,7 +5220,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/preview@workspace:.storybook"
   dependencies:
-    "@adobe/spectrum-css-workflow-icons": "npm:^1.5.4"
+    "@adobe/spectrum-css-workflow-icons": "npm:^3.0.0"
     "@babel/core": "npm:^7.25.2"
     "@chromaui/addon-visual-tests": "npm:^1.0.0"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
@@ -5730,7 +5730,7 @@ __metadata:
   resolution: "@spectrum-tools/documentation@workspace:site"
   dependencies:
     "@adobe/focus-ring-polyfill": "npm:^0.1.5"
-    "@adobe/spectrum-css-workflow-icons": "npm:^1.5.4"
+    "@adobe/spectrum-css-workflow-icons": "npm:^3.0.0"
     "@spectrum-css/tokens": "workspace:^"
     "@spectrum-css/ui-icons": "workspace:^"
     browser-sync: "npm:^3.0.2"
