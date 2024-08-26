@@ -7,10 +7,13 @@ updates:
       labels:
           - "dependencies"
           - "skip_vrt"
+          - "ready-for-review"
       assignees:
           - "castastrophe"
       reviewers:
           - "castastrophe"
+          - "cdransf"
+          - "aramos-adobe"
       commit-message:
           prefix: "chore"
           include: "scope"
@@ -18,12 +21,12 @@ updates:
       rebase-strategy: "auto"
       versioning-strategy: "increase"
       ignore:
-          # Ignore prettier 3.x until we resolve the lerna publishing error
-          - dependency-name: "prettier"
-            versions: ["3.x"]
           # Ignore chalk >=5.x until this project uses TS or ESM
           - dependency-name: "chalk"
             versions: [">=5.x"]
+          # Ignore postcss-preset-env >=10.x until after S2 migration work [CSS-912]
+          - dependency-name: "postcss-preset-env"
+            versions: [">=10.x"]
       groups:
           # Specify a name for the group, which will be used in pull request titles
           # and branch names
@@ -42,11 +45,6 @@ updates:
               patterns:
                   - "@nx/*"
                   - "nx"
-          eleventy-ecosystem:
-              patterns:
-                  - "@11ty/*"
-                  - "eleventy"
-                  - "eleventy-plugin-*"
 
     - package-ecosystem: "github-actions"
       directory: "/"
