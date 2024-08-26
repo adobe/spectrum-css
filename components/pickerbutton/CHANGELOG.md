@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.0.0-s2-foundations.13
+
+### Patch Changes
+
+- [#3023](https://github.com/adobe/spectrum-css/pull/3023) [`213efa8`](https://github.com/adobe/spectrum-css/commit/213efa8618cdccf75a274ee9c2dd0404864c1779) Thanks [@jawinn](https://github.com/jawinn)! - Relocates --mod custom properties from the themes CSS to the index.css.
+
 ## 6.0.0-s2-foundations.12
 
 ### Minor Changes
