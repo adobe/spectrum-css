@@ -169,6 +169,15 @@
   - @spectrum-css/tokens@15.0.0-s2-foundations.0
   - @spectrum-css/fieldlabel@9.0.0-s2-foundations.0
 
+<<<<<<< HEAD
+=======
+## 4.1.5
+
+### Patch Changes
+
+- [#2929](https://github.com/adobe/spectrum-css/pull/2929) [`3c6addd`](https://github.com/adobe/spectrum-css/commit/3c6addd3133f9340bb6472c96fc5c436bb77cb5a) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Reverts the `background-color` property to `background` to support the use of CSS gradients. Gradient support stories were added to the meter and progress bar components within their Chromatic testing previews to ensure that we continue to support gradients by covering them in our visual regression tests.
+
+>>>>>>> b355c20c3bdcc0caeef3d55cd4c454d7a8f962c6
 ## 4.1.4
 
 ### Patch Changes

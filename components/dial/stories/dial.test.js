@@ -15,15 +15,15 @@ export const DialGroup = Variants({
 	],
 	stateData: [
 		{
-			heading: "Disabled",
+			testHeading: "Disabled",
 			isDisabled: true,
 		},
 		{
-			heading: "Focused",
-			isFocused: true,
+			testHeading: "Focused",
+			isFocusVisible: true,
 		},
 		{
-			heading: "Dragged",
+			testHeading: "Dragged",
 			isDragged: true,
 		},
 	],

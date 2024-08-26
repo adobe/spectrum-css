@@ -32,6 +32,21 @@
 		/* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
 		border-radius: calc(var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius)) + var(--mod-logic-button-focus-indicator-gap, var(--spectrum-logic-button-focus-indicator-gap)));
 	}
+
+	&:disabled,
+		&.is-disabled {
+			--spectrum-logic-button-and-background-color: var(--mod-logic-button-and-background-color-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-and-border-color: var(--mod-logic-button-and-border-color-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-and-text-color: var(--mod-logic-button-and-text-color-disabled, var(--spectrum-gray-500));
+			--spectrum-logic-button-and-background-color-hover: var(--mod-logic-button-and-background-color-hover-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-and-border-color-hover: var(--mod-logic-button-and-border-color-hover-disabled, var(--spectrum-gray-100));
+
+			--spectrum-logic-button-or-background-color: var(--mod-logic-button-or-background-color-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-or-border-color: var(--mod-logic-button-or-border-color-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-or-text-color: var(--mod-logic-button-or-text-color-disabled, var(--spectrum-gray-500));
+			--spectrum-logic-button-or-background-color-hover: var(--mod-logic-button-or-background-color-hover-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-or-border-color-hover: var(--mod-logic-button-or-border-color-hover-disabled, var(--spectrum-gray-100));
+		}
 }
 
 .spectrum-LogicButton {

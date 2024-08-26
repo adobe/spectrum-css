@@ -8,6 +8,10 @@ export const SliderGroup = Variants({
 			testHeading: "Default",
 		},
 		{
+			testHeading: "Without label",
+			label: undefined,
+		},
+		{
 			testHeading: "Filled",
 			variant: "filled",
 		},
@@ -26,8 +30,12 @@ export const SliderGroup = Variants({
 		},
 		{
 			testHeading: "Tick",
-			label: undefined,
 			showTicks: true,
+		},
+		{
+			testHeading: "Tick with labels",
+			showTicks: true,
+			showTickLabels: true,
 		},
 		{
 			testHeading: "Side label",

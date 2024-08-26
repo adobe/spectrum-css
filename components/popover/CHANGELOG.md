@@ -203,6 +203,15 @@
   - @spectrum-css/alertdialog@3.0.0-s2-foundations.0
   - @spectrum-css/dialog@11.0.0-s2-foundations.0
 
+<<<<<<< HEAD
+=======
+## 7.1.4
+
+### Patch Changes
+
+- [#2982](https://github.com/adobe/spectrum-css/pull/2982) [`dffdefa`](https://github.com/adobe/spectrum-css/commit/dffdefaa1ffc39fbf7706e218d261da3a02695b5) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove internal-only --flow-direction variable
+
+>>>>>>> b355c20c3bdcc0caeef3d55cd4c454d7a8f962c6
 ## 7.1.3
 
 ### Patch Changes

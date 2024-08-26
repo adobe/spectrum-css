@@ -1,12 +1,13 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { PickerGroup } from "./pickerbutton.test.js";
-import { Template } from "./template.js";
+import { CustomIconTemplate, Template } from "./template";
 
 /**
- * The picker button component is used as a dropdown trigger. See Combobox.
+ * The picker button component is used as a dropdown trigger within other components such as [combobox](?path=/docs/components-combobox--docs).
  */
 export default {
 	title: "Picker button",
@@ -51,6 +52,7 @@ export default {
 		},
 		isRounded: {
 			name: "Rounded",
+			description: "Increases the amount of rounding on the rounded corners.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -82,7 +84,9 @@ export default {
 		},
 		position: {
 			name: "Position",
-			type: { name: "string" },
+			description:
+				"Denotes which side of a form field the button is displayed; this influences which corners are rounded.",
+			type: { name: "string", required: true },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
@@ -100,10 +104,9 @@ export default {
 		isQuiet: false,
 		isDisabled: false,
 		isFocused: false,
-		isKeyboardFocused: false,
 		iconType: "ui",
 		iconName: "ChevronDown",
-		position: "right"
+		position: "right",
 	},
 	parameters: {
 		componentVersion: version,
@@ -139,6 +142,48 @@ Disabled.args = {
 	isDisabled: true
 };
 Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Sizing = (args, context) => Sizes({
+	Template,
+	withHeading: false,
+	withBorder: false,
+	...args
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Open = Template.bind({});
+Open.tags = ["!dev"];
+Open.args = {
+	isOpen: true,
+};
+Open.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * This example uses a custom icon instead of the chevron UI icon.
+ */
+export const CustomIcon = CustomIconTemplate.bind({});
+CustomIcon.storyName = "With custom icon";
+CustomIcon.tags = ["!dev"];
+CustomIcon.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The `spectrum-PickerButton--rounded` class increases the amount of rounding on the rounded corners.
+ */
+export const Rounded = Template.bind({});
+Rounded.tags = ["!dev"];
+Rounded.args = {
+	isRounded: true,
+};
+Rounded.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

@@ -1179,6 +1179,12 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - link component updates ([#650](https://github.com/adobe/spectrum-css/issues/650)) ([4ff38d3](https://github.com/adobe/spectrum-css/commit/4ff38d3)), closes [#703](https://github.com/adobe/spectrum-css/issues/703)
 
+### Migration Guide
+
+#### Subtle variant
+
+Subtle variant was removed. Please use Quiet.
+
 ### 🛑 BREAKING CHANGES
 
 - .is-disabled is no longer supported

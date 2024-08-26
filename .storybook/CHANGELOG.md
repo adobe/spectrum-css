@@ -201,6 +201,18 @@
   - @spectrum-css/ui-icons@2.0.0-s2-foundations.2
   - @spectrum-css/tokens@15.0.0-s2-foundations.2
 
+<<<<<<< HEAD
+=======
+## 10.9.0
+
+### Minor Changes
+
+- [#2982](https://github.com/adobe/spectrum-css/pull/2982) [`dffdefa`](https://github.com/adobe/spectrum-css/commit/dffdefaa1ffc39fbf7706e218d261da3a02695b5) Thanks [@castastrophe](https://github.com/castastrophe)! - ## New features for @spectrum-css Storybook
+
+  - Migrate test functionality out of stories/template.js to stories/\*.test.js files
+  - Expand test coverage for components lacking a testing grid VRT
+
+>>>>>>> b355c20c3bdcc0caeef3d55cd4c454d7a8f962c6
 ## 10.8.0
 
 ### Minor Changes

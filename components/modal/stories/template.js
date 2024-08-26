@@ -8,6 +8,9 @@ import "../index.css";
 import "../themes/express.css";
 import "../themes/spectrum.css";
 
+/**
+ * Just the modal markup.
+ */
 const Modal = ({
 	rootClass = "spectrum-Modal",
 	customClasses = [],
@@ -31,6 +34,9 @@ const Modal = ({
 	`;
 };
 
+/**
+ * The modal, optionally wrapped with .spectrum-Modal-wrapper.
+ */
 export const Template = ({
 	rootClass = "spectrum-Modal",
 	skipWrapper = false,

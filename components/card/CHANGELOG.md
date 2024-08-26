@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.0.0-s2-foundations.13
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9f8732d`](https://github.com/adobe/spectrum-css/commit/9f8732d05da8c2be2ce3d95baac4b1272a6c62bd) Thanks [@pfulton](https://github.com/pfulton)! - Migrating Card component quiet and gallery variant mods to index css file
+
 ## 9.0.0-s2-foundations.12
 
 ### Minor Changes
@@ -210,6 +216,17 @@
   - @spectrum-css/icon@8.0.0-s2-foundations.0
   - @spectrum-css/typography@7.0.0-s2-foundations.0
 
+<<<<<<< HEAD
+=======
+## 9.0.0
+
+### Major Changes
+
+- [#2955](https://github.com/adobe/spectrum-css/pull/2955) [`096d949`](https://github.com/adobe/spectrum-css/commit/096d9496a17376552cbee2cb78d0dc809a612e83) Thanks [@jawinn](https://github.com/jawinn)! - BREAKING CHANGE: The card component's default variant now uses the same grey background color behind the cover photo that is used behind the image for the quiet variant. This background was only visible when the image did not take up the entire space. The intended background color of `--spectrum-background-base-color` for non-quiet variants was confirmed by the design team.
+
+  This also provides the existing mod custom property `--mod-card-preview-background-color` for customizing this area behind the image for the default variant.
+
+>>>>>>> b355c20c3bdcc0caeef3d55cd4c454d7a8f962c6
 ## 8.1.1
 
 ### Patch Changes

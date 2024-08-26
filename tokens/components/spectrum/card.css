@@ -58,8 +58,8 @@
 	--system-card-light-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
 	--system-card-lightest-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
 	--system-card-dark-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
-	--system-card-quiet-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
-	--system-card-gallery-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
-	--system-card-quiet-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
-	--system-card-gallery-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
+	--system-card-quiet-content-margin-top: var(--spectrum-spacing-100);
+	--system-card-gallery-content-margin-top: var(--spectrum-spacing-100);
+	--system-card-quiet-minimum-width: var(--spectrum-card-minimum-width);
+	--system-card-gallery-minimum-width: var(--spectrum-card-minimum-width);
 }

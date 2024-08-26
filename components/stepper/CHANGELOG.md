@@ -391,11 +391,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 \*feat(stepper)!: stepper migrate tokens (#1960)([3a4c217](https://github.com/adobe/spectrum-css/commit/3a4c217)), closes[#1960](https://github.com/adobe/spectrum-css/issues/1960)
 
-    	###
-    	🛑 BREAKING CHANGES
+### Migration Guide
 
-    		*
-    		migrates Stepper to use `@adobe/spectrum-tokens`
+#### Use InFieldButton instead of FieldButton
+
+Stepper now uses InFieldButtons instead of FieldButtons for the up/down buttons.
+
+### 🛑 BREAKING CHANGES
+
+- migrates Stepper to use `@adobe/spectrum-tokens`
 
 Additionally:
 
@@ -1506,6 +1510,20 @@ ellipsis at medium size, instead of 3. Was a matter of 1 or 2 pixels.
 ### ✨ Features
 
 - make Stepper use new Textfield markup ([724d09a](https://github.com/adobe/spectrum-css/commit/724d09a))
+
+### Migration Guide
+
+#### Indicating validity, focus, and disable
+
+Validity and focus must be bubbled up to the parent so descendants siblings can be styled.
+
+Thus, implementations must add the following classes in the following situations:
+
+- .spectrum-Stepper.is-focused - when the input or button is focused with the mouse
+- .spectrum-Stepper.is-keyboardFocused - when the input or button is focused with the keyboard
+- .spectrum-Stepper.is-valid - when the input has an explicit valid state
+- .spectrum-Stepper.is-invalid - when the input has an explicit invalid state
+- .spectrum-Stepper.is-disabled - when the component is disabled. Note that the Textfield must have .is-disabled, and the <input> and <buttons> must have the [disabled] property.
 
 ### 🛑 BREAKING CHANGES
 

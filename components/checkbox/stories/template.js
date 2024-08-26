@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { getRandomId, Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -93,3 +93,69 @@ export const Template = ({
 		</label>
 	`;
 };
+
+/* Shows multiple checkboxes in various states of selected, unselected, indeterminate, etc. */
+export const DocsCheckboxGroup = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	content: html`
+		${Template({
+			...args,
+			context,
+			iconName: undefined,
+		})}
+		${Template({
+			...args,
+			context,
+			isChecked: true,
+		})}
+		${Template({
+			...args,
+			context,
+			isIndeterminate: true,
+		})}
+		${Template({
+			...args,
+			context,
+			isDisabled: true,
+		})}
+		${Template({
+			...args,
+			context,
+			label: "Checkbox with a long label that should wrap.",
+			customStyles: { "max-inline-size": "200px" },
+		})}
+	`
+});
+
+/* This template group showcases multiple CheckboxGroups in various states of disabled, read-only, invalid, etc. */
+export const AllVariantsCheckboxGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Default",
+			content: DocsCheckboxGroup(args, context)
+		})}
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Invalid",
+			content: DocsCheckboxGroup({...args, isInvalid: true }, context)
+		})}
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Disabled",
+			content: DocsCheckboxGroup({...args, isDisabled: true }, context)
+		})}
+		${Container({
+			withBorder: false,
+			direction: "column",
+			heading: "Read-only",
+			content: DocsCheckboxGroup({...args, isReadOnly: true }, context)
+
+		})}
+	`
+});

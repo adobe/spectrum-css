@@ -148,16 +148,17 @@
 	justify-content: center;
 	box-sizing: border-box;
 	block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
-	background-color: var(--mod-card-background-color, var(--spectrum-card-background-color));
-	background-position: center center;
-
-	background-size: cover;
-	border-block-end-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
 
 	border-start-start-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 	border-start-end-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 	border-end-start-radius: 0;
 	border-end-end-radius: 0;
+
+	background-size: cover;
+	background-position: center center;
+
+	background-color: var(--mod-card-preview-background-color, var(--spectrum-card-preview-background-color));
+	border-block-end-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
 }
 
 .spectrum-Card .spectrum-Divider {

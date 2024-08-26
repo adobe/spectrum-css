@@ -2,9 +2,10 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { version } from "../package.json";
 import { PaginationGroup } from "./pagination.test.js";
+import { Template } from "./template";
 
 /**
- * The pagination component displays numbered buttons or an input field to allow for navigation.
+ * The pagination component displays numbered buttons or an input field to allow for navigation. 
  */
 export default {
 	title: "Pagination",
@@ -21,7 +22,27 @@ export default {
 			control: "select",
 		},
 		variant: {
-			table: { disable: true },
+			name: "Variant",
+			type: { name: "string" },
+			table: {
+				category: "Component",
+				defaultValue: {
+					summary: "listing",
+				},
+			},
+			options: [
+				"listing",
+				"explicit",
+			],
+			control: "select",
+		},
+		items: {
+			name: "Items",
+			description: "In the \"listing\" variant, each item represents a page button and its label.",
+			table: {
+				category: "Content",
+			},
+			control: "object",
 		},
 	},
 	args: {
@@ -58,7 +79,11 @@ export default {
 	},
 };
 
+/**
+ * The default listing/page variant uses buttons for each page number. 
+ */
 export const Default = PaginationGroup.bind({});
+Default.storyName = "Default (listing)";
 Default.args = {};
 
 // ********* VRT ONLY ********* //
@@ -69,4 +94,19 @@ WithForcedColors.parameters = {
 		forcedColors: "active",
 		modes: disableDefaultModes
 	},
+};
+
+// ********* DOCS ONLY ********* //
+/**
+ * Pagination's explicit variant uses the text field component to represent the current page number,
+ * and action buttons for the previous and next navigation. It also displays text with the total
+ * number of pages.
+ */
+export const Explicit = Template.bind({});
+Explicit.tags = ["!dev"];
+Explicit.args = {
+	variant: "explicit",
+};
+Explicit.parameters = {
+	chromatic: { disableSnapshot: true },
 };

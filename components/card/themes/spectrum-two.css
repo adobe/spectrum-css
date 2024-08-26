@@ -88,7 +88,7 @@
 	/* Quiet/Gallery */
 	.spectrum-Card--quiet,
 	.spectrum-Card--gallery {
-		--spectrum-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
-		--spectrum-card-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
+		--spectrum-card-content-margin-top: var(--spectrum-spacing-100);
+		--spectrum-card-minimum-width: var(--spectrum-card-minimum-width);
 	}
 }

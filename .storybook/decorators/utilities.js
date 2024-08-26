@@ -49,7 +49,7 @@ const Heading = ({
  * @param {Object} props.containerStyles - Additional styles to apply to the container.
  * @param {Object} props.wrapperStyles - Additional styles to apply to the content wrapper.
  */
-const Container = ({
+export const Container = ({
 	heading,
 	content,
 	type = "heading",

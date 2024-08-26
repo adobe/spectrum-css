@@ -13,6 +13,7 @@ export const Template = ({
 	rootClass = "spectrum-ClearButton",
 	isDisabled = false,
 	size = "m",
+	isQuiet = false,
 	staticColor,
 	id = getRandomId("clearbutton"),
 	customClasses = [],

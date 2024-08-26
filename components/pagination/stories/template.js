@@ -14,41 +14,51 @@ export const Template = ({
 	size = "m",
 	customClasses = [],
 	variant,
-	items,
+	items
 } = {}, context = {}) => {
-	if (variant === "explicit") {
-		return html`
-			<nav
-				class=${classMap({
-					[rootClass]: true,
-					[`${rootClass}--explicit`]: true,
-					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-				})}
-			>
-				${ActionButton({
-					size,
-					isQuiet: true,
-					iconSet: "ui",
-					iconName: "ChevronLeft",
-					customClasses: [`${rootClass}-prevButton`],
-				}, context)}
-				${Textfield({
-					size,
-					value: "1",
-					customClasses: [`${rootClass}-textfield`],
-				}, context)}
-				<span class="${rootClass}-counter">of 89 pages</span>
-				${ActionButton({
-					size,
-					isQuiet: true,
-					iconSet: "ui",
-					iconName: "ChevronRight",
-					customClasses: [`${rootClass}-nextButton`],
-				}, context)}
-			</nav>
-		`;
-	}
-	return html`
+	const explicitVariant = html`
+		<nav
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--explicit`]: true,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+		>
+			${ActionButton({
+				size,
+				isQuiet: true,
+				iconSet: "ui",
+				iconName: "ChevronLeft",
+				customClasses: [`${rootClass}-prevButton`],
+			}, context)}
+			${Textfield({
+				size,
+				value: "1",
+				customClasses: [`${rootClass}-textfield`],
+			}, context)}
+			<span class="${rootClass}-counter">of 89 pages</span>
+			${ActionButton({
+				size,
+				isQuiet: true,
+				iconSet: "ui",
+				iconName: "ChevronRight",
+				customClasses: [`${rootClass}-nextButton`],
+			}, context)}
+		</nav>
+	`;
+
+	// @todo This variant should be deprecated, as it uses the deprecated SplitButton component. 
+	const buttonVariant = SplitButton({
+		position: "left",
+		variant: "accent",
+		label: "Next",
+		iconName: "ChevronLeft100",
+		labelIconName: "ChevronRight100",
+		customFirstButtonClasses: ["spectrum-Pagination-prevButton"],
+		customLastButtonClasses: ["spectrum-Pagination-nextButton"]
+	}, context);
+
+	const listingVariant = html`
 		<nav
 			class=${classMap({
 				[rootClass]: true,
@@ -88,4 +98,12 @@ export const Template = ({
 			}, context)}
 		</nav>
 	`;
+
+	if (variant === "explicit") {
+		return explicitVariant;
+	}
+	else if (variant == "button") {
+		return buttonVariant;
+	}
+	return listingVariant;
 };

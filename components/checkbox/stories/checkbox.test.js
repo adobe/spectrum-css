@@ -16,8 +16,10 @@ export const CheckboxGroup = Variants({
 		{
 			testHeading: "Truncation",
 			withStates: false,
-			label: "Checkbox with wrapping label text",
-			customStyles: { "max-inline-size": "100px" },
+			label: "Checkbox with an extraordinarily long label. Please don't do this but if you did, it should wrap text when it gets longer than the container that houses the checkbox with the unacceptably long label",
+			customStyles: {
+				"max-width": "200px",
+			}
 		}
 	],
 	stateData: [
@@ -30,16 +32,31 @@ export const CheckboxGroup = Variants({
 			isInvalid: true,
 		},
 		{
+			testHeading: "Invalid, checked",
+			isInvalid: true,
+			isChecked: true,
+		},
+		{
 			testHeading: "Disabled",
 			isDisabled: true,
+		},
+		{
+			testHeading: "Disabled, checked",
+			isDisabled: true,
+			isChecked: true,
 		},
 		{
 			testHeading: "Indeterminate",
 			isIndeterminate: true,
 		},
 		{
-			testHeading: "Read only",
+			testHeading: "Read-only",
 			isReadOnly: true,
+		},
+		{
+			testHeading: "Read-only, checked",
+			isReadOnly: true,
+			isChecked: true,
 		},
 	]
 });
