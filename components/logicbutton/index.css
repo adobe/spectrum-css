@@ -42,6 +42,21 @@
 			box-shadow: 0 0 0 var(--mod-logic-button-focus-indicator-width, var(--spectrum-logic-button-focus-indicator-width)) var(--highcontrast-logic-button-focus-indicator-color, var(--mod-logic-button-focus-indicator-color, var(--spectrum-logic-button-focus-indicator-color)));
 		}
 	}
+
+	&:disabled,
+		&.is-disabled {
+			--spectrum-logic-button-and-background-color: var(--mod-logic-button-and-background-color-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-and-border-color: var(--mod-logic-button-and-border-color-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-and-text-color: var(--mod-logic-button-and-text-color-disabled, var(--spectrum-gray-500));
+			--spectrum-logic-button-and-background-color-hover: var(--mod-logic-button-and-background-color-hover-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-and-border-color-hover: var(--mod-logic-button-and-border-color-hover-disabled, var(--spectrum-gray-100));
+
+			--spectrum-logic-button-or-background-color: var(--mod-logic-button-or-background-color-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-or-border-color: var(--mod-logic-button-or-border-color-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-or-text-color: var(--mod-logic-button-or-text-color-disabled, var(--spectrum-gray-500));
+			--spectrum-logic-button-or-background-color-hover: var(--mod-logic-button-or-background-color-hover-disabled, var(--spectrum-gray-100));
+			--spectrum-logic-button-or-border-color-hover: var(--mod-logic-button-or-border-color-hover-disabled, var(--spectrum-gray-100));
+		}
 }
 
 .spectrum-LogicButton--and {
