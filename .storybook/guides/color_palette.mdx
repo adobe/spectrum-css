@@ -1,0 +1,136 @@
+import { Meta, Title } from "@storybook/blocks";
+import { ColorPalette, ColorItem, ThemeContainer, Heading } from "../blocks";
+
+<Meta title="Design tokens" />
+<Title>Design tokens</Title>
+
+## Color palette
+
+The Spectrum CSS color palette is a collection of named colors that are used throughout the design system. These colors are defined in the `@spectrum-css/tokens` package and are available as CSS custom properties. To preview the resolved colors in different color contexts, use the global color switcher in the toolbar above.
+
+<ThemeContainer>
+  <ColorPalette>
+    <ColorItem
+      color="gray"
+      values={[50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900]}
+    />
+    <ColorItem
+      color="red"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="orange"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="yellow"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="chartreuse"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="celery"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="green"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="seafoam"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="cyan"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="blue"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="indigo"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="purple"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="fuchsia"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+    <ColorItem
+      color="magenta"
+      values={[
+        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
+        1400,
+      ]}
+    />
+  </ColorPalette>
+</ThemeContainer>
+
+<br />
+<br />
+
+### Transparent colors
+
+<ThemeContainer>
+  <ColorPalette>
+    <ColorItem
+      title="Transparent black"
+      color="transparent-black"
+      values={[100, 200, 300, 400, 500, 600, 700, 800, 900]}
+    />
+  </ColorPalette>
+</ThemeContainer>
+
+<br />
+
+<ThemeContainer>
+  <ColorPalette>
+    <ColorItem
+      title="Transparent white"
+      color="transparent-white"
+      values={[100, 200, 300, 400, 500, 600, 700, 800, 900]}
+    />
+  </ColorPalette>
+</ThemeContainer>
