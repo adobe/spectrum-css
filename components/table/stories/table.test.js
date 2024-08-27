@@ -1,6 +1,115 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
+const ExampleSummarySelectedContent = [
+	{
+		cellContent: "Table Row Alpha",
+	},
+	{
+		cellContent: "Table Row Bravo",
+	},
+	{
+		cellContent: "Table Row Charlie",
+		isSelected: true,
+	},
+	{
+		cellContent: "Table Row Delta",
+	},
+	{
+		cellContent: "Table Row Echo",
+	},
+	{
+		cellContent: "Table Row Foxtrot",
+	},
+	{
+		cellContent: "Summary Row",
+		isSummaryRow: true,
+	},
+];
+
+const ExampleMultiSelectContent = [
+	{
+		cellContent: ["Table Row Alpha", "Alpha", "Table Row Alpha"],
+		showCheckbox: true,
+	},
+	{
+		cellContent: [
+			"Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"Bravo",
+			"Table Row Bravo. Lorem ipsum dolor sit amet.",
+		],
+		showCheckbox: true,
+		isSelected: true,
+	},
+	{
+		cellContent: "Table Row Charlie",
+		showCheckbox: true,
+		isSelected: true,
+	},
+	{
+		cellContent: "Table Row Delta",
+		showCheckbox: true,
+	},
+	{
+		cellContent: "Echo",
+		showCheckbox: true,
+	},
+	{
+		cellContent: "Foxtrot",
+		showCheckbox: true,
+	},
+];
+
+const ExampleRowDropTargetContent = [
+	{
+		cellContent: "Table Row Alpha",
+		isDropTarget: true,
+	},
+	{
+		cellContent: "Table Row Bravo",
+	},
+	{
+		cellContent: "Table Row Charlie",
+		isDropTarget: true,
+	},
+	{
+		cellContent: "Table Row Delta",
+	},
+	{
+		cellContent: "Table Row Echo",
+	},
+	{
+		cellContent: "Table Row Foxtrot",
+		isDropTarget: true,
+	},
+];
+
+const ExampleSectionHeadersContent =[
+	{
+		cellContent: "Section Header",
+		isSectionHeader: true,
+	},
+	{
+		cellContent: "Table Row Alpha",
+	},
+	{
+		cellContent: "Table Row Bravo",
+	},
+	{
+		cellContent: "Table Row Charlie",
+	},
+	{
+		cellContent: "Another Section Header",
+		isSectionHeader: true,
+	},
+	{
+		cellContent: "Table Row Delta",
+	},
+	{
+		cellContent: "Table Row Echo",
+	},
+];
+
 export const TableGroup = Variants({
 	Template,
 	testData: [
@@ -8,155 +117,58 @@ export const TableGroup = Variants({
 			testHeading: "Default",
 		},
 		{
-			testHeading: "Summary: Selected",
-			rowItems: [
-				{
-					cellContent: "Table Row Alpha",
-				},
-				{
-					cellContent: "Table Row Bravo",
-				},
-				{
-					cellContent: "Table Row Charlie",
-					isSelected: true,
-				},
-				{
-					cellContent: "Table Row Delta",
-				},
-				{
-					cellContent: "Summary Row",
-					isSummaryRow: true,
-				},
-			],
+			testHeading: "Compact",
+			density: "compact",
 		},
 		{
-			testHeading: "Multi-select",
-			rowItems: [
-				{
-					cellContent: ["Table Row Alpha", "Alpha", "Table Row Alpha"],
-					showCheckbox: true,
-				},
-				{
-					cellContent: [
-						"Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-						"Bravo",
-						"Table Row Bravo. Lorem ipsum dolor sit amet.",
-					],
-					showCheckbox: true,
-					isSelected: true,
-				},
-				{
-					cellContent: "Table Row Charlie",
-					showCheckbox: true,
-					isSelected: true,
-				},
-				{
-					cellContent: "Table Row Delta",
-					showCheckbox: true,
-				},
-				{
-					cellContent: "Echo",
-					showCheckbox: true,
-				},
-				{
-					cellContent: "Foxtrot",
-					showCheckbox: true,
-				},
-			],
+			testHeading: "Spacious",
+			density: "spacious",
+		},
+		{
+			testHeading: "Quiet",
+			isQuiet: true,
+		},
+		{
+			testHeading: "Column dividers",
+			hasColumnDividers: true,
+		},
+		{
+			testHeading: "Summary: selected",
+			rowItems: ExampleSummarySelectedContent,
+		},
+		{
+			testHeading: "Multi-select: emphasized",
+			rowItems: ExampleMultiSelectContent,
+		},
+		{
+			testHeading: "Multi-select: non-emphasized",
+			isEmphasized: false,
+			rowItems: ExampleMultiSelectContent,
+		},
+		{
+			testHeading: "Quiet multi-select: emphasized",
+			isQuiet: true,
+			rowItems: ExampleMultiSelectContent,
 		},
 		{
 			testHeading: "Scrollable",
 			useScroller: true,
-			rowItems: [
-				{
-					cellContent: "Table Row Alpha",
-				},
-				{
-					cellContent: "Table Row Bravo",
-				},
-				{
-					cellContent: "Table Row Charlie",
-					isSelected: true,
-				},
-				{
-					cellContent: "Table Row Delta",
-				},
-				{
-					cellContent: "Table Row Echo",
-				},
-				{
-					cellContent: "Table Row Foxtrot",
-				},
-				{
-					cellContent: "Summary Row",
-					isSummaryRow: true,
-				},
-			],
+			rowItems: ExampleSummarySelectedContent,
 		},
 		{
 			testHeading: "Scrollable: with divs",
 			useDivs: true,
 			useScroller: true,
-			rowItems: [
-				{
-					cellContent: ["Table Row Alpha", "Alpha", "Table Row Alpha"],
-					showCheckbox: true,
-				},
-				{
-					cellContent: [
-						"Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-						"Bravo",
-						"Table Row Bravo. Lorem ipsum dolor sit amet.",
-					],
-					showCheckbox: true,
-					isSelected: true,
-				},
-				{
-					cellContent: "Table Row Charlie",
-					showCheckbox: true,
-					isSelected: true,
-				},
-				{
-					cellContent: "Table Row Delta",
-					showCheckbox: true,
-				},
-				{
-					cellContent: "Echo",
-					showCheckbox: true,
-				},
-				{
-					cellContent: "Foxtrot",
-					showCheckbox: true,
-				},
-			],
+			rowItems: ExampleMultiSelectContent,
 		},
 		{
 			testHeading: "Section headers",
-			rowItems: [
-				{
-					cellContent: "Section Header",
-					isSectionHeader: true,
-				},
-				{
-					cellContent: "Table Row Alpha",
-				},
-				{
-					cellContent: "Table Row Bravo",
-				},
-				{
-					cellContent: "Table Row Charlie",
-				},
-				{
-					cellContent: "Another Section Header",
-					isSectionHeader: true,
-				},
-				{
-					cellContent: "Table Row Delta",
-				},
-				{
-					cellContent: "Table Row Echo",
-				},
-			],
+			rowItems: ExampleSectionHeadersContent,
+		},
+		{
+			testHeading: "Quiet section headers",
+			rowItems: ExampleSectionHeadersContent,
+			isQuiet: true,
 		},
 		{
 			testHeading: "Collapsible",
@@ -347,29 +359,16 @@ export const TableGroup = Variants({
 		},
 		{
 			testHeading: "Row drop target",
-			rowItems: [
-				{
-					cellContent: "Table Row Alpha",
-					isDropTarget: true,
-				},
-				{
-					cellContent: "Table Row Bravo",
-				},
-				{
-					cellContent: "Table Row Charlie",
-					isDropTarget: true,
-				},
-				{
-					cellContent: "Table Row Delta",
-				},
-				{
-					cellContent: "Table Row Echo",
-				},
-				{
-					cellContent: "Table Row Foxtrot",
-					isDropTarget: true,
-				},
-			],
-		}
+			rowItems: ExampleRowDropTargetContent,
+		},
+		{
+			testHeading: "Quiet row drop target",
+			isQuiet: true,
+			rowItems: ExampleRowDropTargetContent,
+		},
+		{
+			testHeading: "Body drop target",
+			isDropTarget: true,
+		},
 	],
 });
