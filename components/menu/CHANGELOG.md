@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.1.5
+
+### Patch Changes
+
+- [#2980](https://github.com/adobe/spectrum-css/pull/2980) [`4b8e97e`](https://github.com/adobe/spectrum-css/commit/4b8e97e26fe3fc62f0c6686ef313b346c0b7f22f) Thanks [@jawinn](https://github.com/jawinn)! - Increases the specificity for some icon related selectors, so the inclusion order of the icon component dependency does not affect the styles. Fixes a bug with how the picker displayed on the docs site UI for some components.
+
 ## 7.1.4
 
 ### Patch Changes
