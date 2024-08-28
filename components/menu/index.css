@@ -291,46 +291,58 @@
 	}
 }
 
-.spectrum-Menu-itemIcon.spectrum-Icon {
-	fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
-	color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
-}
+/* Icons */
+.spectrum-Menu {
+	.spectrum-Menu-itemIcon {
+		fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
+		color: var(--highcontrast-menu-item-color-default, var(--mod-menu-item-label-icon-color-default, var(--spectrum-menu-item-label-icon-color-default)));
 
-.spectrum-Menu-checkmark.spectrum-Icon {
-	display: var(--mod-menu-checkmark-display, var(--spectrum-menu-checkmark-display));
-	block-size: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
-	inline-size: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
+		grid-area: iconArea;
+		align-self: start;
+	}
 
-	fill: var(--highcontrast-menu-checkmark-icon-color-default, var(--mod-menu-checkmark-icon-color-default, var(--spectrum-menu-checkmark-icon-color-default)));
-	color: var(--highcontrast-menu-checkmark-icon-color-default, var(--mod-menu-checkmark-icon-color-default, var(--spectrum-menu-checkmark-icon-color-default)));
-	opacity: 1;
+	.spectrum-Menu-checkmark {
+		display: var(--mod-menu-checkmark-display, var(--spectrum-menu-checkmark-display));
+		block-size: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
+		inline-size: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
 
-	margin-block-start: calc(var(--mod-menu-item-top-to-checkmark, var(--spectrum-menu-item-top-to-checkmark)) - var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
+		fill: var(--highcontrast-menu-checkmark-icon-color-default, var(--mod-menu-checkmark-icon-color-default, var(--spectrum-menu-checkmark-icon-color-default)));
+		color: var(--highcontrast-menu-checkmark-icon-color-default, var(--mod-menu-checkmark-icon-color-default, var(--spectrum-menu-checkmark-icon-color-default)));
+		opacity: 1;
 
-	/* Checkmarks have text or an icon directly next to them. */
-	margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
-}
+		margin-block-start: calc(var(--mod-menu-item-top-to-checkmark, var(--spectrum-menu-item-top-to-checkmark)) - var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text)));
 
-.spectrum-Menu-chevron.spectrum-Icon {
-	block-size: var(--spectrum-menu-item-checkmark-height);
-	inline-size: var(--spectrum-menu-item-checkmark-width);
+		/* Checkmarks have text or an icon directly next to them. */
+		margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
 
-	/* Chevrons (aka collapsibles) have text or an icon directly next to them. */
-	margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+		grid-area: checkmarkArea;
+		align-self: start;
+	}
+
+	.spectrum-Menu-chevron {
+		block-size: var(--spectrum-menu-item-checkmark-height);
+		inline-size: var(--spectrum-menu-item-checkmark-width);
+
+		/* Chevrons (aka collapsibles) have text or an icon directly next to them. */
+		margin-inline-end: var(--mod-menu-item-text-to-control, var(--spectrum-menu-item-text-to-control));
+
+		grid-area: chevronArea;
+		align-self: center;
+	}
+
+	.spectrum-Menu-itemIcon--workflowIcon {
+		/* Always provide space at the end of a workflow icon. */
+		margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
+	}
+
+	.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
+		block-size: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
+		inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
+	}
 }
 
 .spectrum-Menu-chevron:dir(rtl) {
 	transform: rotate(-180deg);
-}
-
-.spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark) {
-	block-size: var(--mod-menu-item-icon-height, var(--spectrum-menu-item-icon-height));
-	inline-size: var(--mod-menu-item-icon-width, var(--spectrum-menu-item-icon-width));
-}
-
-.spectrum-Menu-itemIcon--workflowIcon {
-	/* Always provide space at the end of a workflow icon. */
-	margin-inline-end: var(--mod-menu-item-label-text-to-visual, var(--spectrum-menu-item-label-text-to-visual));
 }
 
 /* Presentational list items for sections and dividers. */
@@ -529,11 +541,6 @@
 	}
 }
 
-.spectrum-Menu-itemIcon {
-	grid-area: iconArea;
-	align-self: start;
-}
-
 .spectrum-Menu-item--collapsible .spectrum-Menu-itemIcon {
 	grid-area: headingIconArea;
 }
@@ -544,11 +551,6 @@
 
 .is-selectableMultiple .spectrum-Menu-itemCheckbox {
 	grid-area: checkmarkArea;
-}
-
-.spectrum-Menu-checkmark {
-	grid-area: checkmarkArea;
-	align-self: start;
 }
 
 .spectrum-Menu-itemSelection {
@@ -569,11 +571,6 @@
 	grid-area: actionsArea;
 	align-self: start;
 	margin-inline-start: var(--mod-menu-item-label-to-value-area-min-spacing, var(--spectrum-menu-item-label-to-value-area-min-spacing));
-}
-
-.spectrum-Menu-chevron {
-	grid-area: chevronArea;
-	align-self: center;
 }
 
 .spectrum-Menu-item--collapsible .spectrum-Menu-chevron {
@@ -826,7 +823,7 @@
 	line-height: var(--mod-menu-section-header-line-height, var(--spectrum-menu-section-header-line-height));
 }
 
-.spectrum-Menu-backIcon.spectrum-Icon {
+.spectrum-Menu .spectrum-Menu-backIcon {
 	margin-block: var(--mod-menu-back-icon-margin-block, var(--spectrum-menu-back-icon-margin));
 	margin-inline: var(--mod-menu-back-icon-margin-inline, var(--spectrum-menu-back-icon-margin));
 	fill: var(--highcontrast-menu-item-color-default, var(--mod-menu-back-icon-color-default));
