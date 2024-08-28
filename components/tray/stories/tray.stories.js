@@ -1,7 +1,7 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { disableDefaultModes, viewports } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { TrayGroup } from "./tray.test.js";
 
 /**
@@ -41,7 +41,7 @@ export default {
 				},
 			},
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

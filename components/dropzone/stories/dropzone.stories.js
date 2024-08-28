@@ -4,7 +4,7 @@ import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDragged } from "@spectrum-css/preview/types";
 import { html } from "lit";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { DropzoneGroup } from "./dropzone.test.js";
 
 /**
@@ -34,7 +34,7 @@ export default {
 		isFilled: false,
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

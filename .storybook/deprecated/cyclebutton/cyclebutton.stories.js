@@ -1,5 +1,6 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
+import pkgJson from "@spectrum-css/cyclebutton/package.json";
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { html } from "lit";
 
@@ -44,7 +45,7 @@ export default {
 		status: {
 			type: "deprecated"
 		},
-		componentVersion: "3.1.3",
+		packageJson: pkgJson,
 	},
 };
 

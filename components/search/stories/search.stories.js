@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isQuiet, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { SearchGroup } from "./search.test.js";
 
 /**
@@ -27,7 +27,7 @@ export default {
 				"click .spectrum-Search-icon",
 			],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

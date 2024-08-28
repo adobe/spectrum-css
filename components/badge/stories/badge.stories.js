@@ -1,7 +1,7 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { BadgeGroup } from "./badge.test.js";
 import { PreviewSets } from "./template.js";
 
@@ -61,7 +61,7 @@ export default {
 		fixed: "none"
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 	tags: ["!autodocs"],
 };

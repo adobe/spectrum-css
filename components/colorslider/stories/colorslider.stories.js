@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { ColorSliderGroup } from "./colorslider.test.js";
 import { Template } from "./template.js";
 
@@ -49,7 +49,7 @@ export default {
 		selectedColor: "rgba(255, 0, 0, 1)",
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 	tags: ["!autodocs"],
 };

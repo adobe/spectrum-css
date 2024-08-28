@@ -1,10 +1,13 @@
 import { Canvas, ArgTypes, Meta, Description, Title } from "@storybook/blocks";
+import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
 
 import * as IconStories from "./icon.stories";
 
 <Meta of={IconStories} title="Docs" />
 
 <Title of={IconStories} />
+<ComponentDetails />
+
 <Description of={IconStories} />
 
 ## Icon sets
@@ -66,4 +69,10 @@ The workflow icon SVGs are within a separate respository, which is also publishe
 
 ## Properties
 
+The component accepts the following inputs (properties):
+
 <ArgTypes />
+
+## Tagged releases
+
+<TaggedReleases />

@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { SwatchGroup } from "./swatchgroup.test.js";
 
 /**
@@ -64,7 +64,7 @@ export default {
 				...(Swatch.parameters?.actions?.handles ?? []),
 			],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

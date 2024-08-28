@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { Template } from "./template.js";
 import { TreeViewGroup } from "./treeview.test.js";
 
@@ -28,7 +28,7 @@ export default {
 		actions: {
 			handles: ["click .spectrum-TreeView-itemLink"],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 
