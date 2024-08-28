@@ -102,55 +102,11 @@
 		}
 
 		&.spectrum-Tabs--emphasized {
-			--spectrum-tabs-color-selected: var(--mod-tabs-color-selected-emphasized, var(--spectrum-accent-content-color-default));
-			--spectrum-tabs-color-hover: var(--mod-tabs-color-hover-emphasized, var(--spectrum-accent-content-color-hover));
-			--spectrum-tabs-color-key-focus: var(--mod-tabs-color-key-focus-emphasized, var(--spectrum-accent-content-color-key-focus));
+			--spectrum-tabs-color-selected: var(--spectrum-accent-content-color-default);
+			--spectrum-tabs-color-hover: var(--spectrum-accent-content-color-hover);
+			--spectrum-tabs-color-key-focus: var(--spectrum-accent-content-color-key-focus);
 
-			--spectrum-tabs-selection-indicator-color: var(--mod-tabs-selection-indicator-color-emphasized, var(--spectrum-accent-content-color-default));
-		}
-	}
-
-	.spectrum-Tabs--vertical {
-		--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
-	}
-
-	.spectrum-Tabs--vertical-right {
-		--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical-right, left);
-	}
-
-	.spectrum-Tabs--vertical:dir(rtl) {
-		--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, left);
-	}
-
-	.spectrum-Tabs--vertical-right:dir(rtl) {
-		--spectrum-tabs-list-background-direction: var(--mod-tabs-list-background-direction-vertical, right);
-	}
-
-	.spectrum-Tabs.spectrum-Tabs--compact {
-		--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-medium));
-		--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
-		--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-medium));
-		--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-medium));
-
-		&.spectrum-Tabs--sizeS {
-			--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-small));
-			--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-small));
-			--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-small));
-			--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-small));
-		}
-
-		&.spectrum-Tabs--sizeL {
-			--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-large));
-			--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-large));
-			--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-large));
-			--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-large));
-		}
-
-		&.spectrum-Tabs--sizeXL {
-			--spectrum-tabs-item-height: var(--mod-tabs-item-height-compact, var(--spectrum-tab-item-compact-height-extra-large));
-			--spectrum-tabs-top-to-text: var(--mod-tabs-top-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-extra-large));
-			--spectrum-tabs-bottom-to-text: var(--mod-tabs-bottom-to-text-compact, var(--spectrum-tab-item-top-to-text-compact-extra-large));
-			--spectrum-tabs-top-to-icon: var(--mod-tabs-top-to-icon-compact, var(--spectrum-tab-item-top-to-workflow-icon-compact-extra-large));
+			--spectrum-tabs-selection-indicator-color: var(--spectrum-accent-content-color-default);
 		}
 	}
 }
