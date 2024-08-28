@@ -21,11 +21,11 @@ export const SwatchgroupGroup = Variants({
 		},
 		{
 			testHeading: "Regular rounding",
-			rounding: "default",
+			rounding: "regular",
 		},
 		{
 			testHeading: "With light borders",
-			withBorder: "lightBorder",
+			borderStyle: "lightBorder",
 		},
 	],
 });

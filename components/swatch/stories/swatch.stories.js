@@ -3,7 +3,7 @@ import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import pkgJson from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
-import { Template, DisabledGroup, NothingGroup, RoundingGroup, BorderGroup } from "./template"; //SwatchGroup,
+import { Template, DisabledGroup, NothingGroup, RoundingGroup, BorderGroup } from "./template";
 
 /**
  * A swatch shows a small sample of a fill--such as a color, gradient, texture, or material--that is intended to be applied to an object.
@@ -28,18 +28,20 @@ export default {
 		},
 		rounding: {
 			name: "Rounding",
+			defaultValue: "regular",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string", required: true },
 				category: "Component",
+				defaultValue: { summary: "Regular", },
 			},
-			options: ["none", "default", "full"],
+			options: ["none", "regular", "full"],
 			control: "select",
 		},
 		isDisabled,
 		isSelected,
-		withBorder: {
-			name: "Border",
+		borderStyle: {
+			name: "Border style",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string", required: true },
@@ -93,7 +95,7 @@ export default {
 		isDisabled: false,
 		rounding: "regular",
 		swatchColor: "rgb(174, 216, 230)",
-		withBorder: "default",
+		borderStyle: "default",
 		isRectangle: false,
 		isMixedValue: false,
 	},
@@ -110,12 +112,11 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 /**
- * Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
+ * The medium size is the default. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
  */
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withHeading: false,
-	withBorder: false,
 	...args,
 }, context);
 Sizing.tags = ["!dev"];
@@ -128,7 +129,6 @@ Sizing.parameters = {
  */
 export const Disabled = (args, context) => Sizes({
 	Template: DisabledGroup,
-	withBorder: false,
 	withHeading: false,
 	...args,
 }, context);
@@ -186,7 +186,6 @@ Rectangle.parameters = {
 
 export const Nothing = (args, context) => Sizes({
 	Template: NothingGroup,
-	withBorder: false,
 	withHeading: false,
 	...args,
 }, context);

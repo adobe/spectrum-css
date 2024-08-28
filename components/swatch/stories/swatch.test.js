@@ -21,11 +21,11 @@ export const SwatchGroup = Variants({
 		},
 		{
 			testHeading: "Light border",
-			withBorder: "lightBorder",
+			borderStyle: "lightBorder",
 		},
 		{
 			testHeading: "No border",
-			withBorder: "noBorder",
+			borderStyle: "noBorder",
 			rounding: "none",
 		},
 		{
@@ -46,7 +46,6 @@ export const SwatchGroup = Variants({
 		{
 			testHeading: "Mixed value",
 			isMixedValue: true,
-			swatchColor: "var(--spectrum-gray-50)",
 		},
 	],
 	stateData: [

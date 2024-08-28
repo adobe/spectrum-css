@@ -54,16 +54,26 @@ export default {
 			name: "Container width",
 			table: { disable: true },
 		},
-		withBorder: {
-			name: "Border",
-			description: "Applies the `spectrum-Swatch--lightBorder` class to a swatch in the swatch group when it has a color contrast ratio of less than 3:1.",
-			type: { name: "string" },
+		rounding: {
+			...Swatch.argTypes.rounding,
+			description: "Only use rounded swatches if there is a single row.",
+			defaultValue: "none",
 			table: {
 				type: { summary: "string", required: true },
 				category: "Component",
+				defaultValue: { summary: "None", },
+			},
+		},
+		borderStyle: {
+			...Swatch.argTypes.borderStyle,
+			defaultValue: "noBorder",
+			description: "Apply the `spectrum-Swatch--lightBorder` class to a swatch in the swatch group when it has a color contrast ratio of less than 3:1.",
+			table: {
+				type: { summary: "string", required: true },
+				category: "Component",
+				defaultValue: { summary: "No Border" },
 			},
 			options: ["noBorder", "lightBorder"],
-			control: "select",
 		},
 	},
 	args: {
@@ -120,6 +130,7 @@ Compact.tags = ["!dev"];
 Compact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Compact.storyName = "Density - Compact";
 
 export const Spacious = Template.bind({});
 Spacious.args = {
@@ -129,6 +140,7 @@ Spacious.tags = ["!dev"];
 Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Spacious.storyName = "Density - Spacious";
 
 /**
  * Only use rounded swatches if there is a single row.
@@ -163,19 +175,19 @@ WithLightBorder.args = {
 	items: [
 		{swatchColor: "rgb(22, 135, 140)",},
 		{swatchColor: "rgb(33, 132, 113)",},
-		{swatchColor: "rgb(254, 132, 152)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(255, 127, 96)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(255, 209, 24)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(254, 132, 152)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(255, 127, 96)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(255, 209, 24)", borderStyle: "lightBorder",},
 		{swatchColor: "rgb(120, 91, 199)",},
-		{swatchColor: "rgb(225, 234, 119)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(0, 225, 171)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(248, 239, 187)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(254, 205, 215)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(212, 182, 237)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(153, 219, 244)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(171, 238, 221)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(187, 182, 175)", withBorder: "lightBorder",},
-		{swatchColor: "rgb(238, 211, 190)", withBorder: "lightBorder",},
+		{swatchColor: "rgb(225, 234, 119)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(0, 225, 171)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(248, 239, 187)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(254, 205, 215)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(212, 182, 237)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(153, 219, 244)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(171, 238, 221)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(187, 182, 175)", borderStyle: "lightBorder",},
+		{swatchColor: "rgb(238, 211, 190)", borderStyle: "lightBorder",},
 		{swatchColor: "rgb(0, 143, 242)",},
 		{swatchColor: "rgb(60, 49, 199)",},
 		{swatchColor: "rgb(254, 71, 144)",},

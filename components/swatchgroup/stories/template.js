@@ -13,8 +13,8 @@ export const Template = ({
 	size = "m",
 	density = "regular",
 	rounding = "regular",
-	withBorder = "noBorder",
-	containerWidth = "200px",
+	borderStyle = "noBorder",
+	containerWidth,
 	items = [],
 	customStyles = {},
 	isDisabled =false, 
@@ -29,7 +29,7 @@ export const Template = ({
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 		style=${styleMap({
-			"max-inline-size": containerWidth,
+			"max-inline-size": ifDefined(containerWidth),
 			...customStyles,
 			size: `calc(${items.length} / 10 * 32px)`,
 		})}
@@ -40,7 +40,7 @@ export const Template = ({
 			rounding,
 			isDisabled: isDisabled,
 			isSelected: isSelected,
-			withBorder,
+			borderStyle,
 			...swatch,
 		}, context))}
 	</div>
@@ -54,9 +54,7 @@ export const RoundingTemplate = (args, context) => Container({
 		${Container({
 			withBorder: false,
 			heading: "Full",
-			containerStyles: {
-				"gap": "8px",
-			},
+			containerStyles: {"gap": "8px",},
 			content: Template({
 				...args,
 				rounding: "full",
@@ -71,9 +69,7 @@ export const RoundingTemplate = (args, context) => Container({
 		${Container({
 			withBorder: false,
 			heading: "Regular",
-			containerStyles: {
-				"gap": "8px",
-			},
+			containerStyles: {"gap": "8px",},
 			content: Template({
 				...args,
 				rounding: "regular",

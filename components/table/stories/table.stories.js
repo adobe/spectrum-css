@@ -57,7 +57,7 @@ export default {
 			},
 			control: "boolean",
 		},
-		withColumnDividers: {
+		hasColumnDividers: {
 			name: "Show dividers between columns",
 			description:
 				"Sets dividers between table columns",
@@ -69,7 +69,7 @@ export default {
 			control: "boolean",
 		},
 		isDropTarget: {
-			name: "Dropzone (Drop target)",
+			name: "Dropzone (drop target)",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -149,7 +149,7 @@ const ExampleRowItems = [
 ];
 
 /**
- * The medium size is the default and recommended option.
+ * The medium size is the default and recommended option. The default table also uses the regular density.
  */
 export const Default = TableGroup.bind({});
 Default.args = {};
@@ -182,6 +182,7 @@ Compact.tags = ["!dev"];
 Compact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Compact.storyName = "Density - Compact";
 
 /**
  * The spacious variant increases the spacing used within the table.
@@ -195,6 +196,7 @@ Spacious.tags = ["!dev"];
 Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Spacious.storyName = "Density - Spacious";
 
 /**
  * The standard multi-select table includes a column of checkboxes used for selecting rows.

@@ -13,7 +13,7 @@ import "../index.css";
 export const Template = ({
 	rootClass = "spectrum-Swatch",
 	size = "m",
-	withBorder = "default",
+	borderStyle = "default",
 	isRectangle = false,
 	imageUrl,
 	gradient,
@@ -37,7 +37,7 @@ export const Template = ({
 				[`${rootClass}--rounding${capitalize(
 							lowerCase(rounding)
 						)}`]: typeof rounding !== "undefined" && rounding !== "regular",
-				[`${rootClass}--${withBorder}`]: typeof withBorder !== "undefined" && withBorder !== "default",
+				[`${rootClass}--${borderStyle}`]: typeof borderStyle !== "undefined" && borderStyle !== "default",
 				"is-selected": !isDisabled && isSelected,
 				"is-disabled": isDisabled,
 				"is-image": (["undefined", "transparent"].every(g => typeof gradient !== g)) || isMixedValue || typeof imageUrl !== "undefined",
@@ -49,7 +49,7 @@ export const Template = ({
 			?disabled=${isDisabled}
 			id=${ifDefined(id)}
 			style=${ifDefined(styleMap({
-				"--spectrum-picked-color": isMixedValue ? "var(--spectrum-gray-50" : swatchColor,
+				"--spectrum-picked-color": isMixedValue ? "var(--spectrum-gray-50)" : swatchColor,
 				...customStyles,
 			}))}
 			tabindex="0"
@@ -106,42 +106,21 @@ export const RoundingGroup = (args, context) => Container({
 	content: html`
 		${Container({
 			withBorder: false,
-			heading: "Default",
-			containerStyles: {
-				"gap": "8px",
-			},
-			content: html`
-				${Template({
-					...args,
-					rounding: "default",
-				}, context)}
-			`
+			heading: "Regular",
+			containerStyles: { "gap": "8px" },
+			content: Template(args, context),
 		})}
 		${Container({
 			withBorder: false,
 			heading: "Full",
-			containerStyles: {
-				"gap": "8px",
-			},
-			content: html`
-				${Template({
-					...args,
-					rounding: "full",
-				}, context)}
-			`
+			containerStyles: { "gap": "8px" },
+			content: Template({...args, rounding: "full", }, context),
 		})}
 		${Container({
 			withBorder: false,
 			heading: "None",
-			containerStyles: {
-				"gap": "8px",
-			},
-			content: html`
-				${Template({
-					...args,
-					rounding: "none",
-				}, context)}
-			`
+			containerStyles: { "gap": "8px" },
+			content: Template({...args, rounding: "none", }, context),
 		})}
 	`
 });
@@ -153,40 +132,20 @@ export const BorderGroup = (args, context) => Container({
 		${Container({
 			withBorder: false,
 			heading: "Default",
-			containerStyles: {
-				"gap": "8px",
-			},
-			content: html`
-				${Template({
-					...args,
-				}, context)}
-			`
+			containerStyles: { "gap": "8px" },
+			content: Template(args, context),
 		})}
 		${Container({
 			withBorder: false,
 			heading: "No border",
-			containerStyles: {
-				"gap": "8px",
-			},
-			content: html`
-				${Template({
-					...args,
-					withBorder: "noBorder",
-				}, context)}
-			`
+			containerStyles: { "gap": "8px" },
+			content: Template({...args, borderStyle: "noBorder"}, context),
 		})}
 		${Container({
 			withBorder: false,
 			heading: "Light Border",
-			containerStyles: {
-				"gap": "8px",
-			},
-			content: html`
-				${Template({
-					...args,
-					withBorder: "lightBorder",
-				}, context)}
-			`
+			containerStyles: { "gap": "8px" },
+			content: Template({...args, borderStyle: "lightBorder"}, context),
 		})}
 	`
 });
@@ -197,38 +156,18 @@ export const NothingGroup = (args, context) => Container({
 	content: html`
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			content: html`
-				${Template({
-				...args,
-				}, context)}
-			`
+			containerStyles: { "gap": "8px" },
+			content: Template(args, context),
 		})}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			content: html`
-				${Template({
-				...args,
-				rounding: "full",
-				}, context)}
-			`
+			containerStyles: { "gap": "8px" },
+			content: Template({...args, rounding: "full", }, context),
 		})}
 		${Container({
 			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			content: html`
-				${Template({
-				...args,
-				isRectangle: true,
-				}, context)}
-			`
+			containerStyles: { "gap": "8px" },
+			content: Template({...args, isRectangle: true, }, context),
 		})}
 	`
 });
@@ -240,15 +179,12 @@ export const DisabledGroup = (args, context) => Container({
 		${Container({
 			withBorder: false,
 			withHeading: false,
-			content: html`
-				${Template({
-					...args,
-				}, context)}
-				${Template({
-					...args,
-				rounding: "full",
-				}, context)}
-			`
+			content: Template(args, context),
+		})}
+		${Container({
+			withBorder: false,
+			withHeading: false,
+			content: Template({...args, rounding: "full", }, context),
 		})}
 	`
 });
