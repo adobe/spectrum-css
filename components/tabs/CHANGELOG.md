@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#3036](https://github.com/adobe/spectrum-css/pull/3036) [`96686a5`](https://github.com/adobe/spectrum-css/commit/96686a56e2532bc747985b40686783ddd9b98221) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - [CSS-890]: adjusts --mods to be applied inside of index.css
+
+### Patch Changes
+
+- Updated dependencies [[`96686a5`](https://github.com/adobe/spectrum-css/commit/96686a56e2532bc747985b40686783ddd9b98221)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.18
+
 ## 6.0.0-s2-foundations.12
 
 ### Minor Changes
