@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isQuiet, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { SearchGroup } from "./search.test.js";
 
@@ -9,34 +10,9 @@ export default {
 	title: "Search",
 	component: "Search",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		size: size(["s", "m", "l", "xl"]),
+		isQuiet,
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-Search",

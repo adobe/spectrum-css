@@ -1,5 +1,6 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
 import { AccordionGroup } from "./accordion.test.js";
@@ -13,16 +14,7 @@ export default {
 	component: "Accordion",
 	argTypes: {
 		items: { table: { disable: true } },
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		disableAll: {
 			name: "Disable all items",
 			type: { name: "boolean" },

@@ -1,6 +1,5 @@
 | Modifiable custom properties                                     |
 | ---------------------------------------------------------------- |
-| `--mod-checkbox-spacing`                                         |
 | `--mod-table-border-color`                                       |
 | `--mod-table-border-radius`                                      |
 | `--mod-table-border-radius--quiet`                               |
@@ -96,4 +95,3 @@
 | `--mod-table-thumbnail-size-spacious`                            |
 | `--mod-table-thumbnail-to-text`                                  |
 | `--mod-table-transition-duration`                                |
-| `--mod-thumbnail-size`                                           |

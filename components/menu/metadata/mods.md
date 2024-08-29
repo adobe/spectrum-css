@@ -1,7 +1,5 @@
 | Modifiable custom properties                                       |
 | ------------------------------------------------------------------ |
-| `--mod-checkbox-text-to-control`                                   |
-| `--mod-checkbox-top-to-text`                                       |
 | `--mod-menu-back-heading-color`                                    |
 | `--mod-menu-back-icon-color-default`                               |
 | `--mod-menu-back-icon-margin-block`                                |

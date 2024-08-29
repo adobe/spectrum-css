@@ -96,7 +96,11 @@ export const Template = ({
 			role=${ifDefined(role)}
 			style=${styleMap(customStyles)}
 			?disabled=${isDisabled}
-			@click=${onclick}
+			@click=${onclick ?? function() {
+				updateArgs({
+					isSelected: !isSelected
+				});
+			}}
 			@focusin=${function() {
 				updateArgs({ isFocused: true });
 			}}

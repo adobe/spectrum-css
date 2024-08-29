@@ -24,7 +24,7 @@ export const DatePicker = ({
 	isDateTimeRange = false,
 	isDisabled = false,
 	isRequired = false,
-	readOnly = false,
+	isReadOnly = false,
 	selectedDay,
 	lastDay,
 } = {}, context = {}) => {
@@ -50,7 +50,7 @@ export const DatePicker = ({
 			id=${ifDefined(id)}
 			aria-disabled=${isDisabled ? "true" : "false"}
 			aria-invalid=${ifDefined(isInvalid && !isDisabled ? "false" : undefined)}
-			aria-readonly=${ifDefined(readOnly ? "true" : "false")}
+			aria-readonly=${ifDefined(isReadOnly ? "true" : "false")}
 			aria-required=${ifDefined(isRequired ? "true" : "false")}
 			aria-haspopup="dialog"
 		>
@@ -58,7 +58,7 @@ export const DatePicker = ({
 				size: "m",
 				isQuiet,
 				isDisabled,
-				isReadOnly: readOnly,
+				isReadOnly,
 				isInvalid: !isRange ? isInvalid : undefined,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: isRange ? [`${rootClass}-input`, `${rootClass}-startField`] : [`${rootClass}-input`],
@@ -76,7 +76,7 @@ export const DatePicker = ({
 				isQuiet,
 				isDisabled,
 				isInvalid,
-				isReadOnly: readOnly,
+				isReadOnly,
 				customClasses: [`${rootClass}-textfield`],
 				customInputClasses: [`${rootClass}-input`, `${rootClass}-endField`],
 				placeholder: "Choose a date",
@@ -91,7 +91,7 @@ export const DatePicker = ({
 				iconType: "workflow",
 				iconName: "Calendar",
 				isQuiet,
-				customStyles: readOnly ? { "display": "none" } : undefined,
+				customStyles: isReadOnly ? { "display": "none" } : undefined,
 				// @todo this is not added to the button on the website; need to make sure it's not a bug
 				// isOpen,
 				isInvalid,
@@ -109,12 +109,12 @@ export const Template = ({
 	isOpen = true,
 	isQuiet = false,
 	isDisabled = false,
-	readOnly = false,
+	isReadOnly = false,
 	...args
 } = {}, context = {}) => {
 	return html`
 		${Popover({
-			isOpen: isOpen && !isDisabled && !readOnly,
+			isOpen: isOpen && !isDisabled && !isReadOnly,
 			withTip: false,
 			position: "bottom-start",
 			isQuiet,
@@ -123,7 +123,7 @@ export const Template = ({
 				isOpen,
 				isQuiet,
 				isDisabled,
-				readOnly,
+				isReadOnly,
 				...args,
 			}, context),
 			content: [

@@ -85,9 +85,14 @@ function getAllComponentNames() {
 	// Get a list of all the component names in the components directory that have a package.json file
 	// and a list of all the deprecated components in the storybook directory
 	// then combine and deduplicate the lists to get a full list of all components
+	let deprecated = [];
+	if (fs.existsSync(path.join(dirs.storybook, "deprecated"))) {
+		deprecated = fs.readdirSync(path.join(dirs.storybook, "deprecated"));
+	}
+
 	return [...new Set([
 		...fs.readdirSync(dirs.components).filter((file) => fs.existsSync(path.join(dirs.components, file, "package.json"))),
-		...(fs.readdirSync(path.join(dirs.storybook, "deprecated")) ?? []),
+		...deprecated,
 	])];
 }
 
@@ -179,7 +184,6 @@ async function cleanFolder({ cwd = process.cwd() } = {}) {
  * @param {object} options
  * @param {string} [options.cwd=]
  * @param {string} [options.shouldCombine=false] If true, combine the assets read in into one string
- * @param {string} [options.notice] If shouldCombine is true, this optional notice will be added to the top of the combined content
  * @param {import('fast-glob').Options} [options.fastGlobOptions={}] Additional options for fast-glob
  * @returns {Promise<{ content: string, input: string }[]>}
  */
@@ -188,7 +192,6 @@ async function fetchContent(
 	{
 		cwd,
 		shouldCombine = false,
-		notice,
 		...fastGlobOptions
 	} = {},
 ) {

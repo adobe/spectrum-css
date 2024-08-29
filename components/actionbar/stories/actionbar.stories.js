@@ -2,7 +2,7 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as CloseButton } from "@spectrum-css/closebutton/stories/closebutton.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isOpen } from "@spectrum-css/preview/types";
+import { isEmphasized, isOpen } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { ActionBarGroup } from "./actionbar.test.js";
 import { Template } from "./template.js";
@@ -15,15 +15,7 @@ export default {
 	component: "ActionBar",
 	argTypes: {
 		isOpen,
-		isEmphasized: {
-			name: "Emphasized styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isEmphasized,
 		isSticky: {
 			name: "Sticky",
 			type: { name: "boolean" },

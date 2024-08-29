@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { LogicButtonGroup } from "./logicbutton.test.js";
 import { Template, VariantGroup } from "./template.js";
@@ -20,15 +21,7 @@ export default {
 			options: ["and", "or"],
 			control: "inline-radio",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-LogicButton",

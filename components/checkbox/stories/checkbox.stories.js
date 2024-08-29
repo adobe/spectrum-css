@@ -1,6 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isInvalid } from "@spectrum-css/preview/types";
+import { isChecked, isDisabled, isEmphasized, isIndeterminate, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { DocsCheckboxGroup, AllVariantsCheckboxGroup, } from "./template";
 import { CheckboxGroup } from "./checkbox.test.js";
@@ -18,16 +18,7 @@ export default {
 	title: "Checkbox",
 	component: "Checkbox",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -37,52 +28,12 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		isEmphasized: {
-			name: "Emphasized styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: { type: "boolean" },
-		},
+		isEmphasized,
 		isInvalid,
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isChecked: {
-			name: "Checked",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: { type: "boolean" },
-		},
-		isIndeterminate: {
-			name: "Checkbox indeterminate",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isReadOnly: {
-			name: "Read only",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isChecked,
+		isIndeterminate,
+		isReadOnly,
 	},
 	args: {
 		rootClass: "spectrum-Checkbox",

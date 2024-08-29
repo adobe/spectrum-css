@@ -2,7 +2,7 @@ import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
-import { capitalize, lowerCase } from "lodash-es";
+import { capitalize } from "lodash-es";
 
 import "../index.css";
 import "../themes/express.css";
@@ -28,7 +28,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
-				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+				[`${rootClass}--static${capitalize(staticColor)}`]:
 					typeof staticColor !== "undefined",
 				"is-hover": isHovered,
 				"is-active": isActive,

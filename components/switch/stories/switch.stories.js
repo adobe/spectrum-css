@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isChecked, isDisabled, isEmphasized, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { SwitchGroup } from "./switch.test.js";
 import { Template } from "./template.js";
@@ -10,43 +11,10 @@ export default {
 	title: "Switch",
 	component: "Switch",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		isEmphasized: {
-			name: "Emphasized",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isChecked: {
-			name: "Checked",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		size: size(["s", "m", "l", "xl"]),
+		isEmphasized,
+		isDisabled,
+		isChecked,
 		label: {
 			name: "Label",
 			type: { name: "string" },

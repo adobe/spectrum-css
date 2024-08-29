@@ -1,6 +1,6 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isActive, isDisabled, isFocused, isHovered } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isFocused, isHovered, isQuiet, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { InfieldButtonGroup } from "./infieldbutton.test.js";
 import { Template } from "./template.js";
@@ -12,25 +12,8 @@ export default {
 	title: "In-field button",
 	component: "InFieldButton",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select"
-		},
-		isQuiet: {
-			name: "Quiet",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean"
-		},
+		size: size(["s", "m", "l", "xl"]),
+		isQuiet,
 		position: {
 			name: "Position",
 			type: { name: "string", required: true },

@@ -1,6 +1,5 @@
 | Modifiable custom properties                |
 | ------------------------------------------- |
-| `--mod-modal-max-width`                     |
 | `--mod-tray-background-color`               |
 | `--mod-tray-bottom-to-content-area`         |
 | `--mod-tray-corner-radius`                  |

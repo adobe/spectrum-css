@@ -13,7 +13,7 @@ import "../themes/spectrum.css";
 export const Template = (args = {}, context = {}) => {
 	let {
 		rootClass = "spectrum-Typography",
-		semantics = "body",
+		semantics,
 		size = "m",
 		variant,
 		weight,
