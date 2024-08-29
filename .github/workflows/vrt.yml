@@ -59,7 +59,7 @@ jobs:
 
             - name: Publish to Chromatic
               id: chromatic
-              uses: chromaui/action@v11
+              uses: chromaui/action@latest
               with:
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
                   buildScriptName: ci:storybook
@@ -70,5 +70,6 @@ jobs:
                   traceChanged: true
                   untraced: ".github/actions/*/package.json site/package.json generator/package.json"
                   diagnostics: true
+                  autoAcceptChanges: "main"
                   # Lets VRT pass without running so as not to waste snapshots
                   skip: ${{ inputs.skip }}
