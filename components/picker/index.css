@@ -502,6 +502,6 @@
 /* Full viewport height menu */
 .spectrum-Picker--menu-height-full {
 	& + .spectrum-Popover.is-open {
-		height: var(--mod-picker-menu-height-full, calc(100vh - 120px));
+		block-size: var(--mod-picker-menu-height-full, calc(100vh - 120px));
 	}
 }
