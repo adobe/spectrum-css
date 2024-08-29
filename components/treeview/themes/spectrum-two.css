@@ -106,16 +106,7 @@
 		--spectrum-treeview-item-min-block-size-thumbnail-offset: 0px;
 	}
 
-	.spectrum-TreeView--quiet {
-		--spectrum-treeview-item-background-color-selected: var(--highcontrast-treeview-item-background-color-selected, var(--mod-treeview-item-background-color-quiet-selected, var(--spectrum-treeview-item-background-color-quiet-selected)));
-		--spectrum-treeview-item-border-color-selected: var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected-quiet, transparent));
-	}
-
-	.spectrum-TreeView--thumbnail {
-		--spectrum-treeview-item-min-block-size: var(--mod-treeview-item-min-block-size-thumbnail, calc(var(--spectrum-treeview-item-min-block-size) + var(--spectrum-treeview-item-min-block-size-thumbnail-offset)));
-	}
-
 	.spectrum-TreeView--detached {
-		--spectrum-treeview-item-border-radius: var(--mod-treeview-item-border-radius-detached, var(--spectrum-corner-radius-100));
+		--spectrum-treeview-item-border-radius: var(--spectrum-corner-radius-100);
 	}
 }

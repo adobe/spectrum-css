@@ -52,47 +52,6 @@
 		--spectrum-combobox-border-color-invalid-focus: var(--spectrum-negative-border-color-focus);
 		--spectrum-combobox-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-focus-hover);
 		--spectrum-combobox-border-color-invalid-key-focus: var(--spectrum-negative-border-color-key-focus);
-
-		/* Settings for nested Textfield component. */
-		--mod-textfield-focus-indicator-gap: var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap));
-		--mod-textfield-focus-indicator-width: var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness));
-		--mod-textfield-focus-indicator-color: var(--mod-combobox-focus-indicator-color, var(--spectrum-combobox-focus-indicator-color));
-
-		--mod-textfield-background-color: var(--mod-combobox-background-color-default);
-		--mod-textfield-background-color-disabled: var(--mod-combobox-background-color-disabled);
-
-		--mod-textfield-font-family: var(--mod-combobox-font-family);
-		--mod-textfield-font-weight: var(--mod-combobox-font-weight);
-
-		--mod-textfield-text-color-default: var(--mod-combobox-font-color-default);
-		--mod-textfield-text-color-hover: var(--mod-combobox-font-color-hover);
-		--mod-textfield-text-color-focus: var(--mod-combobox-font-color-focus);
-		--mod-textfield-text-color-focus-hover: var(--mod-combobox-font-color-focus-hover);
-		--mod-textfield-text-color-keyboard-focus: var(--mod-combobox-font-color-key-focus);
-		--mod-textfield-text-color-disabled: var(--mod-combobox-font-color-disabled);
-
-		--mod-textfield-border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
-		--mod-textfield-border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
-		--mod-textfield-border-color-disabled: var(--mod-combobox-border-color-disabled);
-		--mod-textfield-border-color-focus: var(--mod-combobox-border-color-focus, var(--spectrum-combobox-border-color-focus));
-		--mod-textfield-border-color-focus-hover: var(--mod-combobox-border-color-focus-hover, var(--spectrum-combobox-border-color-focus-hover));
-		--mod-textfield-border-color-hover: var(--mod-combobox-border-color-hover, var(--spectrum-combobox-border-color-hover));
-		--mod-textfield-border-color-keyboard-focus: var(--mod-combobox-border-color-key-focus, var(--spectrum-combobox-border-color-key-focus));
-
-		--mod-textfield-border-color-invalid-default: var(--mod-combobox-border-color-invalid-default, var(--spectrum-combobox-border-color-invalid-default));
-		--mod-textfield-border-color-invalid-hover: var(--mod-combobox-border-color-invalid-hover, var(--spectrum-combobox-border-color-invalid-hover));
-		--mod-textfield-border-color-invalid-focus: var(--mod-combobox-border-color-invalid-focus, var(--spectrum-combobox-border-color-invalid-focus));
-		--mod-textfield-border-color-invalid-focus-hover: var(--mod-combobox-border-color-invalid-focus-hover, var(--spectrum-combobox-border-color-invalid-focus-hover));
-		--mod-textfield-border-color-invalid-keyboard-focus: var(--mod-combobox-border-color-invalid-key-focus, var(--spectrum-combobox-border-color-invalid-key-focus));
-
-		--mod-textfield-icon-color-invalid: var(--mod-combobox-alert-icon-color);
-
-		/* Settings for nested Picker Button component. */
-		--mod-picker-button-border-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
-		--mod-picker-button-border-color: var(--mod-combobox-border-color-default, var(--spectrum-combobox-border-color-default));
-		--mod-picker-button-background-color: var(--mod-combobox-background-color-default);
-		--mod-picker-button-background-color-disabled: var(--mod-combobox-background-color-disabled);
-		--mod-picker-button-font-color-disabled: var(--mod-combobox-font-color-disabled);
 	}
 
 	.spectrum-Combobox--sizeS {
@@ -160,7 +119,6 @@
 		--spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-quiet);
 		--spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-field-edge-to-text-quiet);
 		--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-medium);
-		--spectrum-combobox-button-inline-offset: calc((var(--mod-combobox-block-size, var(--spectrum-combobox-block-size)) / 2) - (var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size)) / 2));
 
 		&.spectrum-Combobox--sizeS {
 			--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-small);
@@ -177,11 +135,5 @@
 		&.spectrum-Combobox--sizeXL {
 			--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-extra-large);
 		}
-
-		/* Settings for nested Picker Button component. */
-		--mod-picker-button-background-color-quiet: transparent;
-		--mod-picker-button-border-color-quiet: transparent;
-
-		--mod-picker-button-border-color: var(--mod-picker-button-border-color-quiet);
 	}
 }
