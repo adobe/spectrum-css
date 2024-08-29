@@ -73,6 +73,8 @@
 	background-color: var(--mod-popover-background-color, var(--spectrum-popover-background-color));
 	filter: var(--mod-popover-filter, var(--spectrum-popover-filter));
 
+	max-block-size: var(--mod-popover-max-block-size);
+
 	/* has tip triangle */
 	&.spectrum-Popover--withTip {
 		.spectrum-Popover-tip {
