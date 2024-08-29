@@ -133,11 +133,6 @@ module.exports = ({
 				reportNeedlessDisables: lint,
 				reportInvalidScopeDisables: lint,
 			},
-			"postcss-licensing": {
-				filename: "./COPYRIGHT",
-				cwd: __dirname,
-				skipIfEmpty: true,
-			},
 			"postcss-reporter": verbose
 				? {
 					clearAllMessages: true,

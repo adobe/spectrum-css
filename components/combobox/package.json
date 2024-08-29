@@ -13,14 +13,24 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
-	"main": "dist/index.css",
+	"exports": {
+		".": "./dist/index.css",
+		"./CHANGELOG.md": "./CHANGELOG.md",
+		"./index-*.css": "./dist/index-*.css",
+		"./index.css": "./dist/index.css",
+		"./metadata.json": "./metadata/metadata.json",
+		"./metadata/*": "./metadata/*",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
+	},
 	"files": [
 		"dist/*",
 		"CHANGELOG.md",
 		"package.json",
-		"stories/template.js",
-		"metadata/mods.md"
+		"stories/*",
+		"metadata/*"
 	],
+	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/menu": ">=7",
 		"@spectrum-css/pickerbutton": ">=5",
