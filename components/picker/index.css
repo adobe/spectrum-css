@@ -491,3 +491,15 @@
 		color: var(--highcontrast-picker-content-color-disabled, var(--mod-picker-font-color-disabled, var(--spectrum-picker-font-color-disabled)));
 	}
 }
+
+.spectrum-Picker--menu-height-fixed {
+	& + .spectrum-Popover.is-open {
+		max-block-size: var(--mod-picker-menu-height-fixed, 200px);
+	}
+}
+
+.spectrum-Picker--menu-height-full {
+	& + .spectrum-Popover.is-open {
+		height: var(--mod-picker-menu-height-full, calc(100vh - 120px));
+	}
+}

@@ -88,7 +88,6 @@ export const Template = ({
 	withSwitch = false,
 	fieldLabelStyle = {},
 	customClasses = [],
-	customStyles = {},
 	content = [],
 	id = getRandomId("picker"),
 } = {}, context = {}) => {
@@ -136,10 +135,6 @@ export const Template = ({
 				isDisabled,
 				isReadOnly,
 				customClasses,
-				customStyles: {
-					"display": labelPosition == "left" ? "inline-block" : undefined,
-					...customStyles,
-				},
 				content,
 				iconName,
 				labelPosition,
