@@ -96,6 +96,15 @@ export default {
 			},
 			control: "boolean",
 		},
+		menuHeight: {
+			name: "Menu Height",
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["fixed", "full"],
+			control: "select",
+		},
 		isInvalid,
 		content: { table: { disable: true } },
 	},

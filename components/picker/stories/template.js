@@ -26,6 +26,7 @@ export const Picker = ({
 	customClasses = [],
 	customStyles = {},
 	onclick,
+	menuHeight = "fixed",
 } = {}, context = {}) => {
 	return html`
 		<button
@@ -39,6 +40,7 @@ export const Picker = ({
 				["is-open"]: isOpen,
 				["is-loading"]: isLoading,
 				["is-keyboardFocused"]: isKeyboardFocused,
+				[`${rootClass}--menu-height-${menuHeight}`]: typeof menuHeight !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			?disabled=${isDisabled}
@@ -89,6 +91,7 @@ export const Template = ({
 	fieldLabelStyle = {},
 	customClasses = [],
 	content = [],
+	menuHeight = "fixed",
 	id = getRandomId("picker"),
 } = {}, context = {}) => {
 	const { updateArgs } = context;
@@ -138,6 +141,7 @@ export const Template = ({
 				content,
 				iconName,
 				labelPosition,
+				menuHeight,
 				id,
 				onclick: function() {
 					updateArgs({ isOpen: !isOpen });
