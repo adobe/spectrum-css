@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-s2-foundations.13
+
+### Minor Changes
+
+- [#3041](https://github.com/adobe/spectrum-css/pull/3041) [`7be40c3`](https://github.com/adobe/spectrum-css/commit/7be40c334748f3e1064c614af793117f06146475) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - --mod properties were moved out of `stepper/themes/spectrum-two.css` into `stepper/index.css` so --mods can be applied at the component level.
+
 ## 7.0.0-s2-foundations.12
 
 ### Minor Changes
