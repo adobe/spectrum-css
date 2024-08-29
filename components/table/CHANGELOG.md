@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-s2-foundations.14
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`1037169`](https://github.com/adobe/spectrum-css/commit/103716919fa4e0d43c68e67e1fd3355651c02016) Thanks [@pfulton](https://github.com/pfulton)! - Move --highcontrast references out of themes; remove remaining --mods from the themes
+
 ## 7.0.0-s2-foundations.13
 
 ### Major Changes
