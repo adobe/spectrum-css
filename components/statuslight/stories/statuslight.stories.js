@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { StatusLightGroup } from "./statuslight.test.js";
 
@@ -6,16 +7,7 @@ export default {
 	title: "Status light",
 	component: "Statuslight",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
 			type: { name: "string" },

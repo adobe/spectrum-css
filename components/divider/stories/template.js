@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
-import { capitalize, lowerCase, upperCase } from "lodash-es";
+import { capitalize, upperCase } from "lodash-es";
 
 import "../index.css";
 
@@ -21,7 +21,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${upperCase(size)}`]: typeof size !== "undefined",
 				[`${rootClass}--vertical`]: vertical === true,
-				[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+				[`${rootClass}--static${capitalize(staticColor)}`]:
 					typeof staticColor !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -39,7 +39,7 @@ export const Template = ({
 			[rootClass]: true,
 			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 			[`${rootClass}--vertical`]: vertical === true,
-			[`${rootClass}--static${capitalize(lowerCase(staticColor))}`]:
+			[`${rootClass}--static${capitalize(staticColor)}`]:
 				typeof staticColor !== "undefined",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}

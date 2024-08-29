@@ -15,7 +15,6 @@ const { join, sep, basename } = require("path");
 
 module.exports = ({
 	file,
-	cwd,
 	to,
 	splitinatorOptions = {
 		noSelectors: false,
@@ -24,58 +23,39 @@ module.exports = ({
 		// NOT --system- definitions, only references
 		referencesOnly: false,
 	},
-	combine = false,
+	resolveImports = true,
+	shouldCombine = false,
 	lint = true,
 	verbose = true,
 	additionalPlugins = {},
 	env = process.env.NODE_ENV ?? "development",
 	...options
 } = {}) => {
+	const isProduction = env.toLowerCase() === "production";
+
+	if (typeof options?.map === "undefined") {
+		options.map = isProduction ? false : { inline: false };
+	}
+
 	const rootPath = __dirname;
 	const outputFilepath = to ?? file;
 	const relativePath = outputFilepath?.replace(rootPath, "");
+
 	const outputFilename = outputFilepath ? basename(outputFilepath, ".css") : undefined;
 	const pathParts = relativePath?.split(sep) ?? [];
 
-	const isBridge = pathParts.includes("bridge");
-	const isTheme = ["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename === "index-theme";
-	const isExpress = outputFilename === "express" || pathParts.includes("express");
-
-	if (env === "development" && !options.map) {
-		options.map = { inline: false };
-	}
-	else options.map = false;
-
-	if (isTheme) {
+	if (["themes", "spectrum", "express"].some(foldername => pathParts.includes(foldername)) || outputFilename === "index-theme") {
 		splitinatorOptions.noSelectors = true;
 	}
 
-	if (isExpress) {
-		combine = true;
-	}
+	if (outputFilename === "express" || pathParts.includes("express")) shouldCombine = true;
 
 	if (outputFilename === "index-base") {
 		splitinatorOptions.noFlatVariables = true;
 	}
 
-	if (isBridge) {
+	if (pathParts.includes("bridge")) {
 		splitinatorOptions.referencesOnly = true;
-	}
-
-	/*
-		This deconstruction has to do with how options are passed
-		to the postcss config via storybook
-	*/
-	if (cwd && cwd.endsWith(".storybook")) {
-		additionalPlugins = {
-			...additionalPlugins,
-			"postcss-pseudo-classes": {
-				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
-				allCombinations: true,
-				preserveBeforeAfter: false,
-				prefix: "is-"
-			},
-		};
 	}
 
 	return {
@@ -84,11 +64,17 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- IMPORTS ---------------- */
 			/** @link https://github.com/postcss/postcss-import#postcss-import */
-			"postcss-import": {},
+			"postcss-import": resolveImports ? {} : false,
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
 			"postcss-hover-media-feature": {},
+			"postcss-pseudo-classes": !isProduction ? {
+				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
+				allCombinations: true,
+				preserveBeforeAfter: false,
+				prefix: "is-"
+			} : false,
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
 			"postcss-splitinator": {
@@ -96,7 +82,9 @@ module.exports = ({
 					identifier === "express" ? "spectrum--express" : identifier,
 				...splitinatorOptions,
 			},
-			"postcss-combininator": combine ? {} : false,
+			"postcss-combininator": shouldCombine ? {
+				newSelector: ".spectrum",
+			} : false,
 			...additionalPlugins,
 			/* --------------------------------------------------- */
 			/* ------------------- POLYFILLS --------------------- */
@@ -113,12 +101,12 @@ module.exports = ({
 				stage: 2,
 				env,
 				features: {
+					"custom-properties": true,
 					"logical-properties-and-values": false,
 					clamp: true,
 					"color-functional-notation": true,
 					"dir-pseudo-class": { preserve: true },
 					"nesting-rules": { noIsPseudoSelector: true },
-					// "focus-visible-pseudo-class": true,
 					// https://github.com/jsxtools/focus-within
 					"focus-within-pseudo-class": true,
 					"font-format-keywords": true,
@@ -136,27 +124,33 @@ module.exports = ({
 					{
 						colormin: false,
 						reduceIdents: false,
-						discardComments: { removeAll: true },
+						discardUnused: false,
+						discardComments: {
+							removeAll: true
+						},
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
+						normalizeWhitespace: isProduction,
 					},
 				],
-			},
-			"postcss-licensing": {
-				filename: "COPYRIGHT",
 			},
 			/* --------------------------------------------------- */
 			/* ------------------- REPORTING --------------------- */
 			stylelint: {
 				cache: true,
-				fix: true,
 				// Passing the config path saves a little time b/c it doesn't have to find it
 				configFile: join(__dirname, "stylelint.config.js"),
-				quiet: !verbose || lint,
+				quiet: !lint,
+				fix: true,
 				allowEmptyInput: true,
 				ignorePath: join(__dirname, ".stylelintignore"),
 				reportNeedlessDisables: lint,
 				reportInvalidScopeDisables: lint,
+			},
+			"postcss-licensing": {
+				filename: "COPYRIGHT",
+				cwd: __dirname,
+				skipIfEmpty: true,
 			},
 			"postcss-reporter": verbose
 				? {

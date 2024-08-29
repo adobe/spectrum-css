@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused, isInvalid } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isQuiet, size } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { version } from "../package.json";
 import { StepperGroup } from "./stepper.test.js";
@@ -12,25 +12,8 @@ export default {
 	title: "Stepper",
 	component: "Stepper",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select"
-		},
-		isQuiet: {
-			name: "Quiet",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		size: size(["s", "m", "l", "xl"]),
+		isQuiet,
 		hideStepper: {
 			name: "Hide stepper",
 			type: { name: "boolean" },
@@ -40,26 +23,10 @@ export default {
 			},
 			control: "boolean",
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isInvalid,
 		isFocused,
-		isKeyboardFocused: {
-			name: "Keyboard focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isKeyboardFocused,
 	},
 	args: {
 		rootClass: "spectrum-Stepper",

@@ -1,5 +1,6 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { AvatarGroup } from "./avatar.test.js";
 import { Template } from "./template.js";
@@ -16,16 +17,7 @@ export default {
 	title: "Avatar",
 	component: "Avatar",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["50", "75", "100", "200", "300", "400", "500", "600", "700"],
-			control: "select",
-		},
+		size: size([50, 75, 100, 200, 300, 400, 500, 600, 700], false),
 		image: {
 			name: "Image",
 			type: { name: "string" },
@@ -54,15 +46,7 @@ export default {
 			control: "boolean",
 			if: { arg: "isDisabled", truthy: false },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-Avatar",

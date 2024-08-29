@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isInvalid } from "@spectrum-css/preview/types";
+import { isInvalid, isReadOnly, isRequired } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { version } from "../package.json";
@@ -54,8 +54,8 @@ export default {
 		items: { table: { disable: true } },
 		fieldLabel: { table: { disable: true } },
 		helpText: { table: { disable: true } },
-		isRequired: { table: { disable: true } },
-		isReadOnly: { table: { disable: true } },
+		isRequired,
+		isReadOnly,
 	},
 	args: {
 		rootClass: "spectrum-FieldGroup",
@@ -64,6 +64,7 @@ export default {
 		layout: "vertical",
 		isInvalid: false,
 		isRequired: false,
+		isReadOnly: false,
 	},
 	parameters: {
 		actions: {

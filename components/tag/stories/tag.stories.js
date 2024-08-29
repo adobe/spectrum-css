@@ -1,6 +1,6 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isInvalid, isSelected } from "@spectrum-css/preview/types";
+import { isDisabled, isEmphasized, isInvalid, isSelected, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { TagGroups } from "./tag.test.js";
 import { Template } from "./template.js";
@@ -12,15 +12,7 @@ export default {
 	title: "Tag",
 	component: "Tag",
 	argTypes: {
-		size: {
-			name: "Size",
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l"],
-			control: "select",
-		},
+		size: size(["s", "m", "l"]),
 		hasIcon: {
 			name: "Has icon",
 			type: { name: "boolean" },
@@ -65,25 +57,11 @@ export default {
 			control: { type: "text" },
 		},
 		isEmphasized: {
-			name: "Emphasized styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
+			...isEmphasized,
 			if: { arg: "isInvalid", truthy: false },
 		},
 		isInvalid,
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isSelected,
 		hasClearButton: {
 			name: "Clear button",

@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { size } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
 import { Template } from "./template.js";
@@ -22,16 +23,7 @@ export default {
 			options: ["heading", "body", "detail", "code"],
 			control: "inline-radio",
 		},
-		size: {
-			name: "Size",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"],
-			control: "select",
-		},
+		size: size(["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"]),
 		weight: {
 			name: "Weight",
 			type: { name: "string" },
@@ -136,11 +128,7 @@ Heading.parameters = {
 export const Body = Template.bind({});
 Body.tags = ["!dev"];
 Body.argTypes = {
-	size: {
-		name: "Size",
-		options: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
-		table: { disable: true },
-	},
+	size: size(["xs", "s", "m", "l", "xl", "xxl", "xxxl"]),
 };
 Body.args = {
 	semantics: "body",
@@ -154,11 +142,7 @@ Body.parameters = {
 
 export const Detail = Template.bind({});
 Detail.argTypes = {
-	size: {
-		name: "Size",
-		options: ["s", "m", "l", "xl"],
-		table: { disable: true },
-	},
+	size: size(["s", "m", "l", "xl"]),
 	weight: {
 		options: ["light"],
 		if: { arg: "semantics", eq: "detail"},
@@ -176,11 +160,7 @@ Detail.parameters = {
 export const Code = Template.bind({});
 Code.tags = ["!dev"];
 Code.argTypes = {
-	size: {
-		name: "Size",
-		options: ["xs", "s", "m", "l", "xl"],
-		table: { disable: true },
-	},
+	size: size(["xs", "s", "m", "l", "xl"]),
 };
 Code.args = {
 	semantics: "code",
