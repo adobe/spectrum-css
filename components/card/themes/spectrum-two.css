@@ -74,6 +74,10 @@
 		--spectrum-card-horizontal-body-padding: var(--spectrum-spacing-300);
 		--spectrum-card-horizontal-preview-padding: var(--spectrum-spacing-200);
 
+		/* Quiet/Gallery */
+		--spectrum-card-content-margin-top-quiet: var(--spectrum-spacing-100);
+		--spectrum-card-minimum-width-quiet: var(--spectrum-card-minimum-width);
+
 		/* TODO: These are placeholder until recursive RGB is available */
 		.spectrum--light &,
 		.spectrum--lightest & {
@@ -83,12 +87,5 @@
 		.spectrum--dark & {
 			--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
 		}
-	}
-
-	/* Quiet/Gallery */
-	.spectrum-Card--quiet,
-	.spectrum-Card--gallery {
-		--spectrum-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-spacing-100));
-		--spectrum-card-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width));
 	}
 }

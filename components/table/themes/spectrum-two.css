@@ -106,9 +106,9 @@
 
 		/* Local custom properties used to assign row color to child cells, to help get around Firefox bug 921341
          and for modifying emphasized/non-emphasized background colors from the root element. */
-		--spectrum-table-cell-background-color: var(--highcontrast-table-row-background-color, var(--spectrum-table-row-background-color));
-		--spectrum-table-selected-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color-non-emphasized));
-		--spectrum-table-selected-cell-background-color-focus: var(--highcontrast-table-selected-row-background-color-focus, var(--spectrum-table-selected-row-background-color-non-emphasized-focus));
+		--spectrum-table-cell-background-color: var(--spectrum-table-row-background-color);
+		--spectrum-table-selected-cell-background-color: var(--spectrum-table-selected-row-background-color-non-emphasized);
+		--spectrum-table-selected-cell-background-color-focus: var(--spectrum-table-selected-row-background-color-non-emphasized-focus);
 	}
 
 	/********* T-SHIRT SIZES (Regular Density) *********/
@@ -322,8 +322,8 @@
 	}
 
 	.spectrum-Table--emphasized {
-		--spectrum-table-selected-cell-background-color: var(--highcontrast-table-selected-row-background-color, var(--spectrum-table-selected-row-background-color));
-		--spectrum-table-selected-cell-background-color-focus: var(--highcontrast-table-selected-row-background-color-focus, var(--spectrum-table-selected-row-background-color-focus));
+		--spectrum-table-selected-cell-background-color: var(--spectrum-table-selected-row-background-color);
+		--spectrum-table-selected-cell-background-color-focus: var(--spectrum-table-selected-row-background-color-focus);
 	}
 
 	.spectrum-Table--quiet {
