@@ -1,8 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
-    ".spectrum--legacy",
     ".spectrum-Divider",
     ".spectrum-Divider--sizeL",
     ".spectrum-Divider--sizeM",
@@ -17,6 +15,19 @@
     ".spectrum-Divider.spectrum-Divider--sizeL",
     ".spectrum-Divider.spectrum-Divider--sizeM",
     ".spectrum-Divider.spectrum-Divider--sizeS"
+  ],
+  "modifiers": [
+    "--mod-divider-background-color",
+    "--mod-divider-background-color-large-static-black",
+    "--mod-divider-background-color-large-static-white",
+    "--mod-divider-background-color-medium-static-black",
+    "--mod-divider-background-color-medium-static-white",
+    "--mod-divider-background-color-small-static-black",
+    "--mod-divider-background-color-small-static-white",
+    "--mod-divider-thickness",
+    "--mod-divider-vertical-align",
+    "--mod-divider-vertical-height",
+    "--mod-divider-vertical-margin"
   ],
   "component": [
     "--spectrum-divider-background-color",
@@ -34,42 +45,15 @@
     "--spectrum-divider-thickness-medium",
     "--spectrum-divider-thickness-small"
   ],
-  "modifiers": [
-    "--mod-divider-background-color",
-    "--mod-divider-background-color-large-static-black",
-    "--mod-divider-background-color-large-static-white",
-    "--mod-divider-background-color-medium-static-black",
-    "--mod-divider-background-color-medium-static-white",
-    "--mod-divider-background-color-small-static-black",
-    "--mod-divider-background-color-small-static-white",
-    "--mod-divider-thickness",
-    "--mod-divider-vertical-align",
-    "--mod-divider-vertical-height",
-    "--mod-divider-vertical-margin"
-  ],
-  "theming-layer": [
-    "--system-divider-background-color-large",
-    "--system-divider-background-color-large-static-black",
-    "--system-divider-background-color-large-static-white",
-    "--system-divider-background-color-medium",
-    "--system-divider-background-color-medium-static-black",
-    "--system-divider-background-color-medium-static-white",
-    "--system-divider-background-color-small",
-    "--system-divider-background-color-small-static-black",
-    "--system-divider-background-color-small-static-white",
-    "--system-divider-size-l-thickness",
-    "--system-divider-size-m-thickness",
-    "--system-divider-size-s-thickness",
-    "--system-divider-thickness"
-  ],
-  "high-contrast": [],
   "global": [
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
     "--spectrum-gray-800",
     "--spectrum-transparent-black-300",
     "--spectrum-transparent-black-800",
     "--spectrum-transparent-white-300",
     "--spectrum-transparent-white-800"
-  ]
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": []
 }

@@ -1,7 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-ColorHandle",
     ".spectrum-ColorHandle-inner",
     ".spectrum-ColorHandle.is-disabled",
@@ -9,6 +8,22 @@
     ".spectrum-ColorHandle.is-focused",
     ".spectrum-ColorHandle:after",
     ".spectrum-ColorHandle:focus-visible"
+  ],
+  "modifiers": [
+    "--mod-colorhandle-animation-duration",
+    "--mod-colorhandle-animation-easing",
+    "--mod-colorhandle-border-color",
+    "--mod-colorhandle-border-color-disabled",
+    "--mod-colorhandle-border-width",
+    "--mod-colorhandle-fill-color-disabled",
+    "--mod-colorhandle-focused-size",
+    "--mod-colorhandle-hitarea-border-radius",
+    "--mod-colorhandle-hitarea-size",
+    "--mod-colorhandle-inner-border-color",
+    "--mod-colorhandle-inner-border-width",
+    "--mod-colorhandle-outer-border-color",
+    "--mod-colorhandle-outer-border-width",
+    "--mod-colorhandle-size"
   ],
   "component": [
     "--spectrum-color-handle-border-width",
@@ -32,43 +47,6 @@
     "--spectrum-colorhandle-outer-border-width",
     "--spectrum-colorhandle-size"
   ],
-  "modifiers": [
-    "--mod-colorhandle-animation-duration",
-    "--mod-colorhandle-animation-easing",
-    "--mod-colorhandle-border-color",
-    "--mod-colorhandle-border-color-disabled",
-    "--mod-colorhandle-border-width",
-    "--mod-colorhandle-fill-color-disabled",
-    "--mod-colorhandle-focused-size",
-    "--mod-colorhandle-hitarea-border-radius",
-    "--mod-colorhandle-hitarea-size",
-    "--mod-colorhandle-inner-border-color",
-    "--mod-colorhandle-inner-border-width",
-    "--mod-colorhandle-outer-border-color",
-    "--mod-colorhandle-outer-border-width",
-    "--mod-colorhandle-size",
-    "--mod-opacity-checkerboard-position"
-  ],
-  "theming-layer": [
-    "--system-color-handle-animation-duration",
-    "--system-color-handle-animation-easing",
-    "--system-color-handle-border-color",
-    "--system-color-handle-border-color-disabled",
-    "--system-color-handle-border-width",
-    "--system-color-handle-fill-color-disabled",
-    "--system-color-handle-focused-size",
-    "--system-color-handle-hitarea-size",
-    "--system-color-handle-inner-border-color",
-    "--system-color-handle-inner-border-width",
-    "--system-color-handle-outer-border-color",
-    "--system-color-handle-outer-border-width",
-    "--system-color-handle-size"
-  ],
-  "high-contrast": [
-    "--highcontrast-colorhandle-border-color",
-    "--highcontrast-colorhandle-border-color-disabled",
-    "--highcontrast-colorhandle-fill-color-disabled"
-  ],
   "global": [
     "--spectrum-animation-duration-100",
     "--spectrum-black-rgb",
@@ -77,5 +55,12 @@
     "--spectrum-disabled-content-color",
     "--spectrum-picked-color",
     "--spectrum-white"
+  ],
+  "system-theme": [],
+  "passthroughs": ["--mod-opacity-checkerboard-position"],
+  "high-contrast": [
+    "--highcontrast-colorhandle-border-color",
+    "--highcontrast-colorhandle-border-color-disabled",
+    "--highcontrast-colorhandle-fill-color-disabled"
   ]
 }

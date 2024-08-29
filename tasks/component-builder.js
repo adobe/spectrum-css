@@ -17,7 +17,6 @@ const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
-const fg = require("fast-glob");
 const postcss = require("postcss");
 const postcssrc = require("postcss-load-config");
 const prettier = require("prettier");
@@ -29,119 +28,10 @@ const {
 	relativePrint,
 	bytesToSize,
 	getPackageFromPath,
-	extractProperties,
 	cleanFolder,
+	validateComponentName,
+	fetchContent,
 } = require("./utilities.js");
-
-/**
- * Extract custom property modifers to report
- * @param {string} filepath
- * @param {object} [options={}]
- * @returns Promise<string|string[]|void>
- */
-async function extractModifiers(filepath, { cwd } = {}) {
-	if (!fs.existsSync(filepath)) return Promise.resolve();
-
-	const componentName = cwd.split(path.sep).pop();
-	const content = await fsp.readFile(filepath, { encoding: "utf-8" });
-
-	/* Remove duplicates using a Set and sort the results (default is alphabetical) */
-	const meta = extractProperties(content, {
-		modifiers: ["mod"],
-		spectrum: ["spectrum"],
-		"theming-layer": ["system"],
-		"high-contrast": ["highcontrast"],
-	});
-
-	const baseSelectors = [".spectrum", ".spectrum--express", ".spectrum--legacy"];
-	const selectors = new Set();
-	const root = postcss.parse(content);
-	root.walkRules((rule) => {
-		if (rule.selectors) {
-			rule.selectors.forEach((selector) => {
-				// If the selector is not a base selector, add it to the set
-				if (baseSelectors.some((base) => selector !== base)) {
-					selectors.add(selector);
-				}
-			});
-		}
-	});
-
-	if (!fs.existsSync(path.join(cwd, "dist"))) {
-		fs.mkdirSync(path.join(cwd, "dist"));
-	}
-
-	// Iterate over the spectrum values and see if the 2nd part of the variable
-	// name matches the component name
-	const spectrum = meta.spectrum ?? [];
-	const componentLevel = new Set(spectrum.map((value) => {
-		const parts = value.slice(2).split("-");
-		if (parts.length > 1 && parts[1] === componentName) return value;
-		if (parts[1] + parts[2] === componentName) return value;
-		return;
-	}).filter(Boolean));
-
-	// Filter out the component level values from the global spectrum values
-	meta.global = spectrum.filter((value) => !componentLevel.has(value));
-
-	// Remove the spectrum values from the meta object
-	delete meta.spectrum;
-
-	return Promise.all([
-		fsp.writeFile(
-			path.join(cwd, "metadata/mods.md"),
-			await prettier.format(
-				`${[
-					"| Modifiable custom properties |",
-					"| --- |",
-					...(meta?.modifiers ?? []).map((mod) => `| \`${mod}\` |`),
-				].join("\n")}`,
-				{ parser: "markdown" },
-			),
-			{ encoding: "utf-8" },
-		)
-			.then(() => {
-				const stats = fs.statSync(path.join(cwd, "metadata/mods.md"));
-				return [
-					`${"✓".green}  ${"metadata/mods.md".padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
-				];
-			})
-			.catch((err) => {
-				if (!err) return;
-				console.log(`${"✗".red}  ${"metadata/mods.md".yellow} not written`);
-				return Promise.reject(err);
-			}),
-		fsp
-			.writeFile(
-				path.join(cwd, "metadata/metadata.json"),
-				await prettier.format(
-					JSON.stringify(
-						{
-							sourceFile: path.relative(cwd, filepath),
-							selectors: [...selectors].sort(),
-							component: [...componentLevel].sort(),
-							...meta,
-						},
-						null,
-						2,
-					),
-					{ parser: "json" },
-				),
-				{ encoding: "utf-8" },
-			)
-			.then(() => {
-				const stats = fs.statSync(path.join(cwd, "metadata/metadata.json"));
-				return [
-					`${"✓".green}  ${"metadata/metadata.json".padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
-				];
-			})
-			.catch((err) => {
-				if (!err) return;
-				console.log(`${"✗".red}  ${"metadata/metadata.json".yellow} not written`);
-				return Promise.reject(err);
-			}),
-	]);
-}
 
 /**
  * Process the provided CSS input and write out to a file
@@ -195,6 +85,17 @@ async function processCSS(
 
 	if (!result.css) return Promise.resolve();
 
+	const formatted = await prettier.format(result.css, {
+		parser: "css",
+		filepath: input,
+		printWidth: 500,
+		tabWidth: 2,
+		useTabs: true,
+	});
+
+	// If no output is provided, return the formatted content
+	if (!output) return Promise.resolve(formatted);
+
 	if (!fs.existsSync(path.dirname(output))) {
 		await fsp.mkdir(path.dirname(output), { recursive: true }).catch((err) => {
 			if (!err) return;
@@ -205,17 +106,7 @@ async function processCSS(
 		});
 	}
 
-	const promises = [];
-
-	const formatted = await prettier.format(result.css, {
-		parser: "css",
-		filepath: input,
-		printWidth: 500,
-		tabWidth: 2,
-		useTabs: true,
-	});
-
-	promises.push(
+	const promises = [
 		fsp
 			.writeFile(output, formatted)
 			.then(() => {
@@ -229,7 +120,7 @@ async function processCSS(
 				);
 				return Promise.reject(err);
 			}),
-	);
+	];
 
 	if (result.map) {
 		promises.push(
@@ -253,116 +144,33 @@ async function processCSS(
 }
 
 /**
- * Fetch content from glob input and optionally combine results
- * @param {(string|RegExp)[]} globs
- * @param {object} options
- * @param {string} [options.cwd=]
- * @param {string} [options.shouldCombine=false] If true, combine the assets read in into one string
- * @param {import('fast-glob').Options} [options.fastGlobOptions={}] Additional options for fast-glob
- * @returns {Promise<{ content: string, input: string }[]>}
- */
-async function fetchContent(
-	globs = [],
-	{ cwd, shouldCombine = false, ...fastGlobOptions } = {},
-) {
-	const files = await fg(globs, {
-		onlyFiles: true,
-		...fastGlobOptions,
-		cwd,
-	});
-
-	if (!files.length) return Promise.resolve([]);
-
-	const fileData = await Promise.all(
-		files.map(async (file) => ({
-			input: path.join(cwd, file),
-			content: await fsp.readFile(path.join(cwd, file), "utf8"),
-		})),
-	);
-
-	// Combine the content into 1 file; @todo do this in future using CSS imports
-	if (shouldCombine) {
-		let content = "";
-		fileData.forEach((dataset) => {
-			if (dataset.content) content += "\n\n" + dataset.content;
-		});
-
-		return Promise.resolve([
-			{
-				content,
-				input: fileData[0].input,
-			},
-		]);
-	}
-
-	return Promise.all(
-		files.map(async (file) => ({
-			content: await fsp.readFile(path.join(cwd, file), "utf8"),
-			input: file,
-		})),
-	);
-}
-
-/**
- * A utility to copy a file from one local to another
- * @param {string} from
- * @param {string} to
- * @param {object} [config={}]
- * @param {string} [config.cwd=] - Current working directory for the component being built
- * @returns Promise<string|void>
- */
-async function copy(from, to, { cwd, isDeprecated = true } = {}) {
-	if (!fs.existsSync(from)) return;
-
-	if (!fs.existsSync(path.dirname(to))) {
-		await fsp.mkdir(path.dirname(to), { recursive: true }).catch((err) => {
-			if (!err) return;
-			console.log(
-				`${"✗".red}  problem making the ${relativePrint(path.dirname(to), { cwd }).yellow} directory`,
-			);
-			return Promise.reject(err);
-		});
-	}
-
-	const content = await fsp.readFile(from, { encoding: "utf-8" });
-	if (!content) return;
-	/** @todo add support for injecting a deprecation notice as a comment after the copyright */
-	return fsp
-		.writeFile(to, content, { encoding: "utf-8" })
-		.then(
-			() =>
-				`${"✓".green}  ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${isDeprecated ? "-- deprecated --".gray : ""}`,
-		)
-		.catch((err) => {
-			if (!err) return;
-			console.log(
-				`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`,
-			);
-			return Promise.reject(err);
-		});
-}
-
-/**
  * The builder for the main entry point
  * @param {object} config
  * @param {string} config.cwd - Current working directory for the component being built
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function build({ cwd = process.cwd(), clean = false } = {}) {
+async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
 	const indexSourceCSS = path.join(cwd, "index.css");
+
 	// Nothing to do if there's no input file
 	if (!fs.existsSync(indexSourceCSS)) return;
 
 	const content = await fsp.readFile(indexSourceCSS, "utf8");
+
+	if (!componentName || validateComponentName(componentName) !== true) {
+		componentName = getPackageFromPath(cwd);
+	}
 
 	// Create the dist directory if it doesn't exist
 	if (!fs.existsSync(path.join(cwd, "dist"))) {
 		fs.mkdirSync(path.join(cwd, "dist"));
 	}
 
+	const indexOutputPath = path.join(cwd, "dist", "index.css");
+
 	return Promise.all([
-		processCSS(content, indexSourceCSS, path.join(cwd, "dist", "index.css"), {
+		processCSS(content, indexSourceCSS, indexOutputPath, {
 			cwd,
 			clean,
 			skipMapping: true,
@@ -396,7 +204,6 @@ async function build({ cwd = process.cwd(), clean = false } = {}) {
 async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	// This fetches the content of the files and returns an array of objects with the content and input paths
 	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
-	const componentName = cwd?.split(path.sep)?.pop();
 
 	// Nothing to do if there's no content
 	if (!contentData || contentData.length === 0) return;
@@ -425,36 +232,8 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				// Only output the new selectors with the system mappings
 				stripLocalSelectors: true,
 				theme,
-				map: false,
 			},
-		).then(async (reports = []) => {
-			// Copy the build express & spectrum component tokens to the tokens package folder in src and dist output
-			// (dist included b/c tokens are typically built before components in the build order)
-			return Promise.all([
-				copy(
-					path.join(cwd, "dist", input),
-					path.join(
-						dirs.tokens,
-						"components",
-						path.basename(input, ".css"),
-						`${componentName}.css`,
-					),
-					{ cwd, isDeprecated: false },
-				),
-				copy(
-					path.join(cwd, "dist", input),
-					path.join(
-						dirs.tokens,
-						"dist",
-						"css",
-						"components",
-						path.basename(input, ".css"),
-						`${componentName}.css`,
-					),
-					{ cwd, isDeprecated: false },
-				),
-			]).then((r) => [...reports, r]);
-		});
+		);
 	});
 
 	promises.push(
@@ -472,61 +251,6 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				shouldCombine: false,
 				map: false,
 			},
-		).then(async (reports = []) => {
-			return Promise.all([
-				copy(
-					path.join(cwd, "dist", "index-theme.css"),
-					path.join(
-						dirs.tokens,
-						"components",
-						"bridge",
-						`${componentName}.css`,
-					),
-					{ cwd, isDeprecated: false },
-				),
-				copy(
-					path.join(
-						dirs.tokens,
-						"components",
-						"bridge",
-						`${componentName}.css`,
-					),
-					path.join(
-						dirs.tokens,
-						"dist",
-						"css",
-						"components",
-						"bridge",
-						`${componentName}.css`,
-					),
-					{ cwd, isDeprecated: false },
-				),
-			]).then((r) => [...reports, r]);
-		}),
-	);
-
-	// Fetch the output of index-theme.css and the index-base.css into a new file: index-theme-switcher.css
-	promises.push(
-		fsp.readFile(path.join(cwd, "index.css"), "utf8").then((sourceContent) =>
-			processCSS(
-				importMap + "\n" + sourceContent,
-				path.join(cwd, "index.css"),
-				path.join(cwd, "dist", "index-theme-switcher.css"),
-				{
-					cwd,
-					clean,
-					skipMapping: false,
-					preserveVariables: true,
-					stripLocalSelectors: false,
-					shouldCombine: false,
-					referencesOnly: false,
-				},
-			).then(async (reports = []) => {
-				return Promise.all([
-					// After building, extract the available modifiers
-					extractModifiers(path.join(cwd, "dist/index-theme-switcher.css"), { cwd }),
-				]).then((r) => [...reports, r]);
-			}),
 		),
 	);
 
@@ -582,7 +306,8 @@ async function main({
 						return 1;
 					})
 					.forEach((log) => console.log(log));
-			} else console.log("No assets created.".gray);
+			}
+			else console.log("No assets created.".gray);
 
 			console.log(`${"".padStart(30, "-")}`);
 			console.timeEnd(key);

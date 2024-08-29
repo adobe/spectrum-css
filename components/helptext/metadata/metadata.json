@@ -1,7 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-HelpText",
     ".spectrum-HelpText .spectrum-HelpText-text",
     ".spectrum-HelpText .spectrum-HelpText-validationIcon",
@@ -25,6 +24,20 @@
     ".spectrum-HelpText:lang(zh)",
     ".spectrum-HelpText:lang(zh) .spectrum-HelpText-text"
   ],
+  "modifiers": [
+    "--mod-helptext-bottom-to-text",
+    "--mod-helptext-bottom-to-workflow-icon",
+    "--mod-helptext-content-color-default",
+    "--mod-helptext-font-size",
+    "--mod-helptext-icon-color-default",
+    "--mod-helptext-icon-size",
+    "--mod-helptext-line-height",
+    "--mod-helptext-line-height-cjk",
+    "--mod-helptext-min-height",
+    "--mod-helptext-text-to-visual",
+    "--mod-helptext-top-to-text",
+    "--mod-helptext-top-to-workflow-icon"
+  ],
   "component": [
     "--spectrum-help-text-top-to-workflow-icon-extra-large",
     "--spectrum-help-text-top-to-workflow-icon-large",
@@ -43,71 +56,6 @@
     "--spectrum-helptext-text-to-visual",
     "--spectrum-helptext-top-to-text",
     "--spectrum-helptext-top-to-workflow-icon"
-  ],
-  "modifiers": [
-    "--mod-helptext-bottom-to-text",
-    "--mod-helptext-bottom-to-workflow-icon",
-    "--mod-helptext-content-color-default",
-    "--mod-helptext-font-size",
-    "--mod-helptext-icon-color-default",
-    "--mod-helptext-icon-size",
-    "--mod-helptext-line-height",
-    "--mod-helptext-line-height-cjk",
-    "--mod-helptext-min-height",
-    "--mod-helptext-text-to-visual",
-    "--mod-helptext-top-to-text",
-    "--mod-helptext-top-to-workflow-icon"
-  ],
-  "theming-layer": [
-    "--system-help-text-content-color-default",
-    "--system-help-text-disabled-content-color",
-    "--system-help-text-disabled-content-color-default",
-    "--system-help-text-disabled-icon-color-default",
-    "--system-help-text-icon-color-default",
-    "--system-help-text-lang-ja-line-height-cjk",
-    "--system-help-text-lang-ko-line-height-cjk",
-    "--system-help-text-lang-zh-line-height-cjk",
-    "--system-help-text-line-height",
-    "--system-help-text-negative-content-color-default",
-    "--system-help-text-negative-icon-color-default",
-    "--system-help-text-neutral-content-color-default",
-    "--system-help-text-neutral-icon-color-default",
-    "--system-help-text-size-l-bottom-to-text",
-    "--system-help-text-size-l-bottom-to-workflow-icon",
-    "--system-help-text-size-l-font-size",
-    "--system-help-text-size-l-icon-size",
-    "--system-help-text-size-l-min-height",
-    "--system-help-text-size-l-text-to-visual",
-    "--system-help-text-size-l-top-to-text",
-    "--system-help-text-size-l-top-to-workflow-icon",
-    "--system-help-text-size-m-bottom-to-text",
-    "--system-help-text-size-m-bottom-to-workflow-icon",
-    "--system-help-text-size-m-font-size",
-    "--system-help-text-size-m-icon-size",
-    "--system-help-text-size-m-min-height",
-    "--system-help-text-size-m-text-to-visual",
-    "--system-help-text-size-m-top-to-text",
-    "--system-help-text-size-m-top-to-workflow-icon",
-    "--system-help-text-size-s-bottom-to-text",
-    "--system-help-text-size-s-bottom-to-workflow-icon",
-    "--system-help-text-size-s-font-size",
-    "--system-help-text-size-s-icon-size",
-    "--system-help-text-size-s-min-height",
-    "--system-help-text-size-s-text-to-visual",
-    "--system-help-text-size-s-top-to-text",
-    "--system-help-text-size-s-top-to-workflow-icon",
-    "--system-help-text-size-xl-bottom-to-text",
-    "--system-help-text-size-xl-bottom-to-workflow-icon",
-    "--system-help-text-size-xl-font-size",
-    "--system-help-text-size-xl-icon-size",
-    "--system-help-text-size-xl-min-height",
-    "--system-help-text-size-xl-text-to-visual",
-    "--system-help-text-size-xl-top-to-text",
-    "--system-help-text-size-xl-top-to-workflow-icon"
-  ],
-  "high-contrast": [
-    "--highcontrast-helptext-content-color-default",
-    "--highcontrast-helptext-icon-color-default"
   ],
   "global": [
     "--spectrum-cjk-line-height-100",
@@ -134,5 +82,11 @@
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": [
+    "--highcontrast-helptext-content-color-default",
+    "--highcontrast-helptext-icon-color-default"
   ]
 }

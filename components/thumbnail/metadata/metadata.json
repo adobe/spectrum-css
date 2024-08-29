@@ -1,7 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-Thumbnail",
     ".spectrum-Thumbnail--cover .spectrum-Thumbnail-image",
     ".spectrum-Thumbnail--size100",
@@ -28,6 +27,22 @@
     ".spectrum-Thumbnail.is-focused .spectrum-Thumbnail-image-wrapper",
     ".spectrum-Thumbnail.is-focused:after",
     ".spectrum-Thumbnail:before"
+  ],
+  "modifiers": [
+    "--mod-thumbnail-border-color",
+    "--mod-thumbnail-border-color-selected",
+    "--mod-thumbnail-border-radius",
+    "--mod-thumbnail-border-width",
+    "--mod-thumbnail-border-width-selected",
+    "--mod-thumbnail-color-opacity-disabled",
+    "--mod-thumbnail-focus-indicator-color",
+    "--mod-thumbnail-focus-indicator-gap",
+    "--mod-thumbnail-focus-indicator-thickness",
+    "--mod-thumbnail-layer-border-color-inner",
+    "--mod-thumbnail-layer-border-color-outer",
+    "--mod-thumbnail-layer-border-width-inner",
+    "--mod-thumbnail-layer-border-width-outer",
+    "--mod-thumbnail-size"
   ],
   "component": [
     "--spectrum-thumbnail-border-color-opacity",
@@ -59,57 +74,6 @@
     "--spectrum-thumbnail-size-800",
     "--spectrum-thumbnail-size-900"
   ],
-  "modifiers": [
-    "--mod-thumbnail-border-color",
-    "--mod-thumbnail-border-color-selected",
-    "--mod-thumbnail-border-radius",
-    "--mod-thumbnail-border-width",
-    "--mod-thumbnail-border-width-selected",
-    "--mod-thumbnail-color-opacity-disabled",
-    "--mod-thumbnail-focus-indicator-color",
-    "--mod-thumbnail-focus-indicator-gap",
-    "--mod-thumbnail-focus-indicator-thickness",
-    "--mod-thumbnail-layer-border-color-inner",
-    "--mod-thumbnail-layer-border-color-outer",
-    "--mod-thumbnail-layer-border-width-inner",
-    "--mod-thumbnail-layer-border-width-outer",
-    "--mod-thumbnail-size"
-  ],
-  "theming-layer": [
-    "--system-thumbnail-border-color-rgba",
-    "--system-thumbnail-border-color-selected",
-    "--system-thumbnail-border-radius",
-    "--system-thumbnail-border-width",
-    "--system-thumbnail-border-width-selected",
-    "--system-thumbnail-color-opacity-disabled",
-    "--system-thumbnail-focus-indicator-color",
-    "--system-thumbnail-focus-indicator-gap",
-    "--system-thumbnail-focus-indicator-thickness",
-    "--system-thumbnail-layer-border-color-inner",
-    "--system-thumbnail-layer-border-color-outer",
-    "--system-thumbnail-layer-border-width-inner",
-    "--system-thumbnail-layer-border-width-outer",
-    "--system-thumbnail-size",
-    "--system-thumbnail-size-100-size",
-    "--system-thumbnail-size-1000-size",
-    "--system-thumbnail-size-200-size",
-    "--system-thumbnail-size-300-size",
-    "--system-thumbnail-size-400-size",
-    "--system-thumbnail-size-50-size",
-    "--system-thumbnail-size-500-size",
-    "--system-thumbnail-size-600-size",
-    "--system-thumbnail-size-700-size",
-    "--system-thumbnail-size-75-size",
-    "--system-thumbnail-size-800-size",
-    "--system-thumbnail-size-900-size"
-  ],
-  "high-contrast": [
-    "--highcontrast-thumbnail-border-color",
-    "--highcontrast-thumbnail-border-color-selected",
-    "--highcontrast-thumbnail-focus-indicator-color",
-    "--highcontrast-thumbnail-layer-border-color-inner",
-    "--highcontrast-thumbnail-layer-border-color-outer"
-  ],
   "global": [
     "--spectrum-accent-color-800",
     "--spectrum-border-width-100",
@@ -122,5 +86,14 @@
     "--spectrum-gray-500",
     "--spectrum-gray-800-rgb",
     "--spectrum-white"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": [
+    "--highcontrast-thumbnail-border-color",
+    "--highcontrast-thumbnail-border-color-selected",
+    "--highcontrast-thumbnail-focus-indicator-color",
+    "--highcontrast-thumbnail-layer-border-color-inner",
+    "--highcontrast-thumbnail-layer-border-color-outer"
   ]
 }

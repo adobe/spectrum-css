@@ -11,8 +11,14 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
-	--system-well-border-width: var(--spectrum-border-width-100);
-	--system-well-content-color: var(--spectrum-body-color);
-	--system-well-background-color: rgba(var(--spectrum-gray-800-rgb), 0.02);
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-Accordion {
+		/* Divider */
+		--spectrum-accordion-divider-color: var(--spectrum-gray-200);
+	}
 }

@@ -1,12 +1,10 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
     ".js-focus-within .spectrum-AssetList-item.is-focused[focus-within]",
     ".js-focus-within .spectrum-AssetList-item.is-focused[focus-within]:before",
     ".js-focus-within .spectrum-AssetList-item[focus-within]:focus-visible",
     ".js-focus-within .spectrum-AssetList-item[focus-within]:focus-visible:before",
-    ".spectrum",
-    ".spectrum--legacy",
     ".spectrum-AssetList",
     ".spectrum-AssetList-item",
     ".spectrum-AssetList-item .spectrum-AssetList-itemThumbnail",
@@ -36,28 +34,6 @@
     ".spectrum-AssetList-item[focus-within]:focus-visible.js-focus-within:before",
     ".spectrum-AssetList:dir(rtl)"
   ],
-  "component": [
-    "--spectrum-assetlist-border-color-key-focus",
-    "--spectrum-assetlist-child-indicator-animation",
-    "--spectrum-assetlist-item-animation",
-    "--spectrum-assetlist-item-background-color-down",
-    "--spectrum-assetlist-item-background-color-hover",
-    "--spectrum-assetlist-item-background-color-selected",
-    "--spectrum-assetlist-item-background-color-selected-hover",
-    "--spectrum-assetlist-item-border-radius",
-    "--spectrum-assetlist-item-font-size",
-    "--spectrum-assetlist-item-font-weight",
-    "--spectrum-assetlist-item-height",
-    "--spectrum-assetlist-item-label-padding-inline-start",
-    "--spectrum-assetlist-item-margin-block-end",
-    "--spectrum-assetlist-item-padding-inline-end",
-    "--spectrum-assetlist-item-padding-inline-start",
-    "--spectrum-assetlist-label-color",
-    "--spectrum-assetlist-thumbnail-height",
-    "--spectrum-assetlist-thumbnail-margin-inline-start",
-    "--spectrum-assetlist-thumbnail-width",
-    "--spectrum-assetlist-width"
-  ],
   "modifiers": [
     "--mod-assetlist-border-color-key-focus",
     "--mod-assetlist-child-indicator-animation",
@@ -80,38 +56,33 @@
     "--mod-assetlist-thumnail-height",
     "--mod-assetlist-width"
   ],
-  "theming-layer": [
-    "--system-asset-list-child-indicator-animation",
-    "--system-asset-list-item-animation",
-    "--system-asset-list-item-background-color-down",
-    "--system-asset-list-item-background-color-hover",
-    "--system-asset-list-item-border-radius",
-    "--system-asset-list-item-font-size",
-    "--system-asset-list-item-font-weight",
-    "--system-asset-list-item-height",
-    "--system-asset-list-item-label-padding-inline-start",
-    "--system-asset-list-item-margin-block-end",
-    "--system-asset-list-item-padding-inline-end",
-    "--system-asset-list-item-padding-inline-start",
-    "--system-asset-list-label-color",
-    "--system-asset-list-thumbnail-height",
-    "--system-asset-list-thumbnail-margin-inline-start",
-    "--system-asset-list-thumbnail-width",
-    "--system-asset-list-width"
-  ],
-  "high-contrast": [
-    "--highcontrast-assetlist-border-color-key-focus",
-    "--highcontrast-assetlist-item-background-color-hover",
-    "--highcontrast-assetlist-item-background-color-selected",
-    "--highcontrast-assetlist-item-background-color-selected-hover",
-    "--highcontrast-assetlist-label-color"
+  "component": [
+    "--spectrum-assetlist-border-color-key-focus",
+    "--spectrum-assetlist-child-indicator-animation",
+    "--spectrum-assetlist-item-animation",
+    "--spectrum-assetlist-item-background-color-down",
+    "--spectrum-assetlist-item-background-color-hover",
+    "--spectrum-assetlist-item-background-color-selected",
+    "--spectrum-assetlist-item-background-color-selected-hover",
+    "--spectrum-assetlist-item-border-radius",
+    "--spectrum-assetlist-item-font-size",
+    "--spectrum-assetlist-item-font-weight",
+    "--spectrum-assetlist-item-height",
+    "--spectrum-assetlist-item-label-padding-inline-start",
+    "--spectrum-assetlist-item-margin-block-end",
+    "--spectrum-assetlist-item-padding-inline-end",
+    "--spectrum-assetlist-item-padding-inline-start",
+    "--spectrum-assetlist-label-color",
+    "--spectrum-assetlist-thumbnail-height",
+    "--spectrum-assetlist-thumbnail-margin-inline-start",
+    "--spectrum-assetlist-thumbnail-width",
+    "--spectrum-assetlist-width"
   ],
   "global": [
     "--spectrum-animation-duration-100",
     "--spectrum-font-size-100",
     "--spectrum-gray-100",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
     "--spectrum-logical-rotation",
     "--spectrum-neutral-content-color-default",
     "--spectrum-regular-font-weight",
@@ -120,5 +91,14 @@
     "--spectrum-spacing-400",
     "--spectrum-spacing-600",
     "--spectrum-spacing-75"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": [
+    "--highcontrast-assetlist-border-color-key-focus",
+    "--highcontrast-assetlist-item-background-color-hover",
+    "--highcontrast-assetlist-item-background-color-selected",
+    "--highcontrast-assetlist-item-background-color-selected-hover",
+    "--highcontrast-assetlist-label-color"
   ]
 }

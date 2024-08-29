@@ -1,7 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-ColorArea",
     ".spectrum-ColorArea-gradient",
     ".spectrum-ColorArea-handle",
@@ -11,6 +10,16 @@
     ".spectrum-ColorArea.is-disabled .spectrum-ColorArea-gradient",
     ".spectrum-ColorArea.is-focused",
     ".spectrum-ColorHandle-color"
+  ],
+  "modifiers": [
+    "--mod-colorarea-border-color",
+    "--mod-colorarea-border-radius",
+    "--mod-colorarea-border-width",
+    "--mod-colorarea-disabled-background-color",
+    "--mod-colorarea-height",
+    "--mod-colorarea-min-height",
+    "--mod-colorarea-min-width",
+    "--mod-colorarea-width"
   ],
   "component": [
     "--spectrum-color-area-border-rounding",
@@ -28,30 +37,12 @@
     "--spectrum-colorarea-min-width",
     "--spectrum-colorarea-width"
   ],
-  "modifiers": [
-    "--mod-colorarea-border-color",
-    "--mod-colorarea-border-radius",
-    "--mod-colorarea-border-width",
-    "--mod-colorarea-disabled-background-color",
-    "--mod-colorarea-height",
-    "--mod-colorarea-min-height",
-    "--mod-colorarea-min-width",
-    "--mod-colorarea-width"
-  ],
-  "theming-layer": [
-    "--system-color-area-border-color",
-    "--system-color-area-border-radius",
-    "--system-color-area-border-width",
-    "--system-color-area-disabled-background-color",
-    "--system-color-area-height",
-    "--system-color-area-min-height",
-    "--system-color-area-min-width",
-    "--system-color-area-width"
-  ],
+  "global": ["--spectrum-disabled-background-color"],
+  "system-theme": [],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-colorarea-border-color",
     "--highcontrast-colorarea-border-color-disabled",
     "--highcontrast-colorarea-fill-color-disabled"
-  ],
-  "global": ["--spectrum-disabled-background-color"]
+  ]
 }

@@ -1,7 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-ProgressCircle",
     ".spectrum-ProgressCircle--indeterminate .spectrum-ProgressCircle-fillSubMask1",
     ".spectrum-ProgressCircle--indeterminate .spectrum-ProgressCircle-fillSubMask2",
@@ -80,6 +79,16 @@
     "98.31%",
     "to"
   ],
+  "modifiers": [
+    "--mod-progress-circle-fill-border-color",
+    "--mod-progress-circle-fill-border-color-over-background",
+    "--mod-progress-circle-position",
+    "--mod-progress-circle-size",
+    "--mod-progress-circle-thickness",
+    "--mod-progress-circle-track-border-color",
+    "--mod-progress-circle-track-border-color-over-background",
+    "--mod-progress-circle-track-border-style"
+  ],
   "component": [
     "--spectrum-progress-circle-fill-border-color",
     "--spectrum-progress-circle-fill-border-color-over-background",
@@ -95,40 +104,17 @@
     "--spectrum-progress-circle-track-border-color-over-background",
     "--spectrum-progress-circle-track-border-style"
   ],
-  "modifiers": [
-    "--mod-progress-circle-fill-border-color",
-    "--mod-progress-circle-fill-border-color-over-background",
-    "--mod-progress-circle-position",
-    "--mod-progress-circle-size",
-    "--mod-progress-circle-thickness",
-    "--mod-progress-circle-track-border-color",
-    "--mod-progress-circle-track-border-color-over-background",
-    "--mod-progress-circle-track-border-style"
-  ],
-  "theming-layer": [
-    "--system-progress-circle-fill-border-color",
-    "--system-progress-circle-fill-border-color-over-background",
-    "--system-progress-circle-large-size",
-    "--system-progress-circle-large-thickness",
-    "--system-progress-circle-medium-size",
-    "--system-progress-circle-medium-thickness",
-    "--system-progress-circle-size",
-    "--system-progress-circle-small-size",
-    "--system-progress-circle-small-thickness",
-    "--system-progress-circle-thickness",
-    "--system-progress-circle-track-border-color",
-    "--system-progress-circle-track-border-color-over-background",
-    "--system-progress-circle-track-border-style"
-  ],
-  "high-contrast": [
-    "--highcontrast-progress-circle-fill-border-color",
-    "--highcontrast-progress-circle-fill-border-color-over-background",
-    "--highcontrast-progress-circle-track-border-style"
-  ],
   "global": [
     "--spectrum-accent-content-color-default",
     "--spectrum-gray-200",
     "--spectrum-transparent-white-300",
     "--spectrum-transparent-white-900"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": [
+    "--highcontrast-progress-circle-fill-border-color",
+    "--highcontrast-progress-circle-fill-border-color-over-background",
+    "--highcontrast-progress-circle-track-border-style"
   ]
 }
