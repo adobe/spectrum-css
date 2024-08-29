@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-s2-foundations.13
+
+### Major Changes
+
+- [#3040](https://github.com/adobe/spectrum-css/pull/3040) [`cf2e737`](https://github.com/adobe/spectrum-css/commit/cf2e73743b2c3d43d4c51fceeabfb99fda1ac4b5) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - Migrating --mod to index.css from infield button, logic button and table components
+
 ## 7.0.0-s2-foundations.12
 
 ### Minor Changes
