@@ -12,7 +12,7 @@ export const Template = ({
 	altText,
 	isDisabled = false,
 	isFocused = false,
-	size = "700",
+	size = 700,
 	hasLink,
 	id = getRandomId("avatar"),
 	customClasses = [],

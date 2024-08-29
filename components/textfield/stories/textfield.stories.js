@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused, isInvalid, isValid } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { Template } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
@@ -50,34 +50,9 @@ export default {
 			if: { arg: "isValid", truthy: false },
 		},
 		isFocused,
-		isKeyboardFocused: {
-			name: "Keyboard focused",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isKeyboardFocused,
+		size: size(["s", "m", "l", "xl"]),
+		isQuiet,
 		multiline: {
 			name: "Multiline",
 			type: { name: "boolean" },
@@ -100,43 +75,10 @@ export default {
 		iconName: {
 			table: { disable: true },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isRequired: {
-			name: "Required",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isReadOnly: {
-			name: "Read only",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isLoading: {
-			name: "Loading",
-			type: { name: "boolean" },
-			table: {
-				disable: true,
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isRequired,
+		isReadOnly,
+		isLoading,
 		pattern: {
 			name: "Pattern",
 			type: { name: "string" },
@@ -146,9 +88,7 @@ export default {
 			},
 			control: "text",
 		},
-		value: {
-			table: { disable: true },
-		},
+		value: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Textfield",

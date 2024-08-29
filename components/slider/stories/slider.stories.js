@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Sizes } from "@spectrum-css/preview/decorators";
-import { isFocused } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { SliderGroup } from "./slider.test.js";
 import { Template } from "./template.js";
@@ -23,16 +23,7 @@ export default {
 	title: "Slider",
 	component: "Slider",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -120,15 +111,7 @@ export default {
 			control: "boolean",
 			if: { arg: "showTicks", truthy: true },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
 		isFocused: {
 			...isFocused,
 			if: { arg: "isDisabled", truthy: false },

@@ -10,7 +10,7 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Thumbnail",
-	size = "500",
+	size = 500,
 	imageURL,
 	svg,
 	altText,

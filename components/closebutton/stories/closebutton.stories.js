@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, size, staticColor } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { CloseButtonGroup } from "./closebutton.test.js";
 
@@ -9,35 +10,9 @@ export default {
 	title: "Close button",
 	component: "CloseButton",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		staticColor: {
-			name: "Static color",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Advanced",
-			},
-			options: ["white", "black"],
-			control: "select",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		size: size(["s", "m", "l", "xl"]),
+		staticColor,
+		isDisabled,
 	},
 	args: {
 		rootClass: "spectrum-CloseButton",

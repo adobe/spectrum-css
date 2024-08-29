@@ -15,7 +15,7 @@ export const Template = ({
 	selectedDay,
 	lastDay,
 	year,
-	padded,
+	isPadded,
 	isDisabled = false,
 	isFocused = false,
 	useDOWAbbrev = false,
@@ -256,7 +256,7 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--padded`]: padded,
+				[`${rootClass}--padded`]: isPadded,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap({

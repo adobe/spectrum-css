@@ -1,5 +1,6 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { ButtonGroup } from "./buttongroup.test.js";
 
@@ -10,16 +11,7 @@ export default {
 	title: "Button group",
 	component: "ButtonGroup",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		vertical: {
 			name: "Vertical layout",
 			type: { name: "boolean" },

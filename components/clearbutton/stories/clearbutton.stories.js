@@ -1,12 +1,13 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isQuiet, size, staticColor } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { ClearButtonGroup } from "./clearbutton.test.js";
 import { Template } from "./template";
 
 /**
  * The clear button component is an in-field button used in search and tags.
- * 
+ *
  * ## Usage Notes
 
 	Use the correct cross icon size that corresponds to the t-shirt size you require for the clear button.
@@ -42,44 +43,12 @@ export default {
 	title: "Clear button",
 	component: "ClearButton",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		size: size(["s", "m", "l", "xl"]),
+		isDisabled,
+		isQuiet,
 		staticColor: {
-			name: "Static color",
-			type: { name: "string" },
-			table: {
-				disable: true,
-				type: { summary: "string" },
-				category: "Advanced",
-			},
+			...staticColor,
 			options: ["white"],
-			control: "select",
 		},
 	},
 	args: {

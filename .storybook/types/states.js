@@ -89,6 +89,16 @@ export const isLoading = {
 	control: "boolean",
 };
 
+export const isIndeterminate = {
+	name: "Indeterminate",
+	type: { name: "boolean" },
+	table: {
+		type: { summary: "boolean" },
+		category: "State",
+	},
+	control: "boolean",
+};
+
 export const isDisabled = {
 	name: "Disabled",
 	type: { name: "boolean" },
@@ -124,7 +134,7 @@ export const isReadOnly = {
 	type: { name: "boolean" },
 	table: {
 		type: { summary: "boolean" },
-		category: "Advanced",
+		category: "State",
 	},
 	control: "boolean",
 };
@@ -137,4 +147,14 @@ export const isChecked = {
 		category: "State",
 	},
 	control: { type: "boolean" },
+};
+
+export const isPending = {
+	name: "Pending",
+	type: { name: "boolean" },
+	table: {
+		type: { summary: "boolean" },
+		category: "State",
+	},
+	control: "boolean",
 };

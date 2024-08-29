@@ -1,6 +1,6 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isHovered, isSelected } from "@spectrum-css/preview/types";
+import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { ActionButtonGroup, ActionButtons } from "./actionbutton.test.js";
 
@@ -11,16 +11,7 @@ export default {
 	title: "Action button",
 	component: "ActionButton",
 	argTypes: {
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["xs", "s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["xs", "s", "m", "l", "xl"]),
 		iconName: {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
@@ -34,38 +25,13 @@ export default {
 			},
 			control: { type: "text" },
 		},
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
-		isEmphasized: {
-			name: "Emphasized styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-			if: { arg: "isSelected", truthy: true }
-		},
+		isQuiet,
+		isEmphasized,
 		isDisabled,
 		isSelected,
 		isHovered,
 		isFocused,
-		isActive: {
-			name: "Active",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isActive,
 		hideLabel: {
 			name: "Hide label",
 			type: { name: "boolean" },
@@ -86,16 +52,7 @@ export default {
 			control: "select",
 			options: ["true", "menu", "listbox", "tree", "grid", "dialog", "false"],
 		},
-		staticColor: {
-			name: "Static color",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Advanced",
-			},
-			options: ["white", "black"],
-			control: "select",
-		},
+		staticColor,
 	},
 	args: {
 		rootClass: "spectrum-ActionButton",
@@ -116,6 +73,11 @@ export default {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
 		},
 		componentVersion: version,
+		docs: {
+			story: {
+				height: "auto",
+			},
+		}
 	},
 };
 

@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isFocused } from "@spectrum-css/preview/types";
+import { isDisabled, isEmphasized, isFocused, isReadOnly } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { RatingGroup } from "./rating.test.js";
 import { Template } from "./template.js";
@@ -11,34 +11,10 @@ export default {
 	title: "Rating",
 	component: "Rating",
 	argTypes: {
-		isEmphasized: {
-			name: "Emphasized styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isEmphasized,
 		isFocused,
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isReadOnly: {
-			name: "Read only",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isReadOnly,
 		max: {
 			name: "Maximum value",
 			type: { name: "number" },

@@ -1,6 +1,6 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isInvalid, isOpen, isValid } from "@spectrum-css/preview/types";
+import { isDisabled, isInvalid, isOpen, isQuiet, isReadOnly, isRequired, isValid } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { DatePickerGroup } from "./datepicker.test.js";
 import { Template } from "./template.js";
@@ -21,15 +21,7 @@ export default {
 			return { ...acc, [key]: { table: { disable: true } } };
 		}, {}),
 		isOpen,
-		isQuiet: {
-			name: "Quiet styling",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		isQuiet,
 		isValid: {
 			...isValid,
 			if: { arg: "isInvalid", truthy: false },
@@ -48,33 +40,9 @@ export default {
 			...isInvalid,
 			if: { arg: "isValid", truthy: false },
 		},
-		isDisabled: {
-			name: "Disabled",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isRequired: {
-			name: "Required",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		readOnly: {
-			name: "Read only",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDisabled,
+		isRequired,
+		isReadOnly,
 		content: { table: { disable: true } },
 		isRange: { table: {disable: true} },
 	},
@@ -88,7 +56,7 @@ export default {
 		isValid: false,
 		isDisabled: false,
 		isRequired: false,
-		readOnly: false,
+		isReadOnly: false,
 		month: "March",
 		selectedDay: 1,
 		year: 2023,
@@ -181,7 +149,7 @@ QuietInvalid.parameters = {
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];
 ReadOnly.args = {
-	readOnly: true,
+	isReadOnly: true,
 };
 ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },

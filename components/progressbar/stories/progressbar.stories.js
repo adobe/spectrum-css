@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
 import { ProgressBarGroup } from "./progressbar.test.js";
 
 /**
@@ -9,25 +10,8 @@ export default {
 	component: "ProgressBar",
 	argTypes: {
 		customWidth: { table: { disable: true } },
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
-		isIndeterminate: {
-			name: "Indeterminate state",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		size: size(["s", "m", "l", "xl"]),
+		isIndeterminate,
 		labelPosition: {
 			name: "Label position",
 			type: { name: "string" },
@@ -60,14 +44,8 @@ export default {
 		trackFill: { table: { disable: true }},
 		progressBarFill: { table: { disable: true }},
 		staticColor: {
-			name: "Static color",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Advanced",
-			},
+			...staticColor,
 			options: ["white"],
-			control: "select",
 		},
 	},
 	args: {

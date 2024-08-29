@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isEmphasized, isQuiet, size } from "@spectrum-css/preview/types";
 import { version } from "../package.json";
 import { TabsGroups } from "./tabs.test.js";
 import { Template } from "./template.js";
@@ -11,16 +12,7 @@ export default {
 	component: "Tabs",
 	argTypes: {
 		content: { table: { disable: true } },
-		size: {
-			name: "Size",
-			type: { name: "string", required: true },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			options: ["s", "m", "l", "xl"],
-			control: "select",
-		},
+		size: size(["s", "m", "l", "xl"]),
 		orientation: {
 			name: "Orientation",
 			type: { name: "string", required: true },
@@ -33,24 +25,8 @@ export default {
 			control: "select",
 			default: "horizontal",
 		},
-		isQuiet: {
-			name: "Quiet",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
-		isEmphasized: {
-			name: "Emphasized",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isQuiet,
+		isEmphasized,
 		isCompact: {
 			name: "Compact",
 			type: { name: "boolean" },

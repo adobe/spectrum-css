@@ -2,6 +2,7 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as IllustratedMessage } from "@spectrum-css/illustratedmessage/stories/illustratedmessage.stories.js";
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDragged } from "@spectrum-css/preview/types";
 import { html } from "lit";
 import { version } from "../package.json";
 import { DropzoneGroup } from "./dropzone.test.js";
@@ -13,15 +14,7 @@ export default {
 	title: "Drop zone",
 	component: "DropZone",
 	argTypes: {
-		isDragged: {
-			name: "Dragged",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "State",
-			},
-			control: "boolean",
-		},
+		isDragged,
 		isFilled: {
 			name: "Filled",
 			type: { name: "boolean" },
