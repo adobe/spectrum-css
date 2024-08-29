@@ -34,7 +34,8 @@
 			"cache": true,
 			"dependsOn": [
 				"^build",
-				"clean"
+				"clean",
+				{ "projects": "tokens", "target": "build" }
 			],
 			"executor": "nx:run-commands",
 			"inputs": [

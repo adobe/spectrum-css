@@ -1,0 +1,103 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--legacy {
+	--system-asset-card-overlay-background-color: rgba(27, 127, 245, 0.1);
+	--system-asset-card-selectionindicator-box-shadow-color: rgba(0, 0, 0 / 15%);
+	--system-asset-card-asset-size: 224px;
+	--system-asset-card-background-color: var(--spectrum-gray-100);
+	--system-asset-card-asset-animation-duration: var(--spectrum-animation-duration-100);
+	--system-asset-card-asset-container-border-size: 1px;
+	--system-asset-card-header-margin-block-start: var(--spectrum-spacing-300);
+	--system-asset-card-border-radius: var(--spectrum-corner-radius-100);
+	--system-asset-card-border-color: transparent;
+	--system-asset-card-border-color-hover: var(--spectrum-gray-500);
+	--system-asset-card-border-color-down: var(--spectrum-gray-600);
+	--system-asset-card-focus-ring-gap: 5px;
+	--system-asset-card-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-asset-card-selectionindicator-background-color-default: rgba(var(--spectrum-gray-100-rgb), 0.9);
+	--system-asset-card-selectionindicator-size: var(--spectrum-card-selection-background-size);
+	--system-asset-card-selectionindicator-border-radius: var(--spectrum-corner-radius-100);
+	--system-asset-card-selectionindicator-offset-y: 4px;
+	--system-asset-card-selectionindicator-blur: 6px;
+	--system-asset-card-selectionindicator-color: var(--spectrum-white);
+	--system-asset-card-selectionindicator-font-weight: var(--spectrum-bold-font-weight);
+	--system-asset-card-selectionindicator-font-size: var(--spectrum-font-size-400);
+	--system-asset-card-title-text-color: var(--spectrum-gray-900);
+	--system-asset-card-title-font-family: var(--spectrum-sans-font-family-stack);
+	--system-asset-card-title-font-weight: var(--spectrum-heading-sans-serif-font-weight);
+	--system-asset-card-title-font-style: var(--spectrum-default-font-style);
+	--system-asset-card-title-line-height: var(--spectrum-line-height-100);
+	--system-asset-card-title-letter-spacing: 0;
+	--system-asset-card-header-content-text-color: var(--spectrum-gray-900);
+	--system-asset-card-header-content-font-family: var(--spectrum-sans-font-family-stack);
+	--system-asset-card-header-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--system-asset-card-header-content-font-style: var(--spectrum-default-font-style);
+	--system-asset-card-header-content-line-height: var(--spectrum-line-height-200);
+	--system-asset-card-header-content-letter-spacing: 0;
+	--system-asset-card-content-text-color: var(--spectrum-gray-700);
+	--system-asset-card-content-font-family: var(--spectrum-sans-font-family-stack);
+	--system-asset-card-content-font-weight: var(--spectrum-body-sans-serif-font-weight);
+	--system-asset-card-content-font-style: var(--spectrum-default-font-style);
+	--system-asset-card-content-line-height: var(--spectrum-line-height-200);
+	--system-asset-card-content-letter-spacing: 0;
+	--system-asset-card-content-margin-block-start: var(--spectrum-spacing-75);
+	--system-asset-card-lang-zh-title-font-family: var(--spectrum-cjk-font-family-stack);
+	--system-asset-card-lang-ja-title-font-family: var(--spectrum-cjk-font-family-stack);
+	--system-asset-card-lang-ko-title-font-family: var(--spectrum-cjk-font-family-stack);
+	--system-asset-card-lang-zh-title-font-style: var(--spectrum-heading-cjk-font-style);
+	--system-asset-card-lang-ja-title-font-style: var(--spectrum-heading-cjk-font-style);
+	--system-asset-card-lang-ko-title-font-style: var(--spectrum-heading-cjk-font-style);
+	--system-asset-card-lang-zh-title-font-weight: var(--spectrum-heading-cjk-font-weight);
+	--system-asset-card-lang-ja-title-font-weight: var(--spectrum-heading-cjk-font-weight);
+	--system-asset-card-lang-ko-title-font-weight: var(--spectrum-heading-cjk-font-weight);
+	--system-asset-card-lang-zh-title-font-size: var(--spectrum-heading-cjk-size-xs);
+	--system-asset-card-lang-ja-title-font-size: var(--spectrum-heading-cjk-size-xs);
+	--system-asset-card-lang-ko-title-font-size: var(--spectrum-heading-cjk-size-xs);
+	--system-asset-card-lang-zh-title-line-height: var(--spectrum-heading-cjk-line-height);
+	--system-asset-card-lang-ja-title-line-height: var(--spectrum-heading-cjk-line-height);
+	--system-asset-card-lang-ko-title-line-height: var(--spectrum-heading-cjk-line-height);
+	--system-asset-card-lang-zh-title-letter-spacing: var(--spectrum-cjk-letter-spacing);
+	--system-asset-card-lang-ja-title-letter-spacing: var(--spectrum-cjk-letter-spacing);
+	--system-asset-card-lang-ko-title-letter-spacing: var(--spectrum-cjk-letter-spacing);
+	--system-asset-card-lang-zh-header-content-font-family: var(--spectrum-cjk-font-family-stack);
+	--system-asset-card-lang-ja-header-content-font-family: var(--spectrum-cjk-font-family-stack);
+	--system-asset-card-lang-ko-header-content-font-family: var(--spectrum-cjk-font-family-stack);
+	--system-asset-card-lang-zh-header-content-font-weight: var(--spectrum-body-cjk-font-weight);
+	--system-asset-card-lang-ja-header-content-font-weight: var(--spectrum-body-cjk-font-weight);
+	--system-asset-card-lang-ko-header-content-font-weight: var(--spectrum-body-cjk-font-weight);
+	--system-asset-card-lang-zh-header-content-line-height: var(--spectrum-body-cjk-line-height);
+	--system-asset-card-lang-ja-header-content-line-height: var(--spectrum-body-cjk-line-height);
+	--system-asset-card-lang-ko-header-content-line-height: var(--spectrum-body-cjk-line-height);
+	--system-asset-card-lang-zh-header-content-font-style: var(--spectrum-body-cjk-font-style);
+	--system-asset-card-lang-ja-header-content-font-style: var(--spectrum-body-cjk-font-style);
+	--system-asset-card-lang-ko-header-content-font-style: var(--spectrum-body-cjk-font-style);
+	--system-asset-card-lang-zh-header-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
+	--system-asset-card-lang-ja-header-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
+	--system-asset-card-lang-ko-header-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
+	--system-asset-card-lang-zh-content-font-family: var(--spectrum-cjk-font-family-stack);
+	--system-asset-card-lang-ja-content-font-family: var(--spectrum-cjk-font-family-stack);
+	--system-asset-card-lang-ko-content-font-family: var(--spectrum-cjk-font-family-stack);
+	--system-asset-card-lang-zh-content-font-weight: var(--spectrum-body-cjk-font-weight);
+	--system-asset-card-lang-ja-content-font-weight: var(--spectrum-body-cjk-font-weight);
+	--system-asset-card-lang-ko-content-font-weight: var(--spectrum-body-cjk-font-weight);
+	--system-asset-card-lang-zh-content-line-height: var(--spectrum-body-cjk-line-height);
+	--system-asset-card-lang-ja-content-line-height: var(--spectrum-body-cjk-line-height);
+	--system-asset-card-lang-ko-content-line-height: var(--spectrum-body-cjk-line-height);
+	--system-asset-card-lang-zh-content-font-style: var(--spectrum-body-cjk-font-style);
+	--system-asset-card-lang-ja-content-font-style: var(--spectrum-body-cjk-font-style);
+	--system-asset-card-lang-ko-content-font-style: var(--spectrum-body-cjk-font-style);
+	--system-asset-card-lang-zh-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
+	--system-asset-card-lang-ja-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
+	--system-asset-card-lang-ko-content-letter-spacing: var(--spectrum-cjk-letter-spacing);
+}

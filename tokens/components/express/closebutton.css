@@ -1,0 +1,66 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--legacy {
+	--system-close-button-background-color-default: transparent;
+	--system-close-button-background-color-hover: var(--spectrum-gray-300);
+	--system-close-button-background-color-down: var(--spectrum-gray-400);
+	--system-close-button-background-color-focus: var(--spectrum-gray-300);
+	--system-close-button-size-300: 24px;
+	--system-close-button-size-400: 32px;
+	--system-close-button-size-500: 40px;
+	--system-close-button-size-600: 48px;
+	--system-close-button-icon-color-default: var(--spectrum-neutral-content-color-default);
+	--system-close-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+	--system-close-button-icon-color-down: var(--spectrum-neutral-content-color-down);
+	--system-close-button-icon-color-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-close-button-icon-color-disabled: var(--spectrum-disabled-content-color);
+	--system-close-button-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-close-button-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-close-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-close-button-height: var(--spectrum-component-height-100);
+	--system-close-button-width: var(--spectrum-closebutton-height);
+	--system-close-button-size: var(--system-close-button-size-400);
+	--system-close-button-border-radius: var(--system-close-button-size-400);
+	--system-close-button-animation-duration: var(--spectrum-animation-duration-100);
+	--system-closebutton-size-s-height: var(--spectrum-component-height-75);
+	--system-closebutton-size-s-width: var(--spectrum-closebutton-height);
+	--system-closebutton-size-s-size: var(--system-close-button-size-300);
+	--system-closebutton-size-s-border-radius: var(--system-close-button-size-300);
+	--system-closebutton-size-m-height: var(--spectrum-component-height-100);
+	--system-closebutton-size-m-width: var(--spectrum-closebutton-height);
+	--system-closebutton-size-m-size: var(--system-close-button-size-400);
+	--system-closebutton-size-m-border-radius: var(--system-close-button-size-400);
+	--system-closebutton-size-l-height: var(--spectrum-component-height-200);
+	--system-closebutton-size-l-width: var(--spectrum-closebutton-height);
+	--system-closebutton-size-l-size: var(--system-close-button-size-500);
+	--system-closebutton-size-l-border-radius: var(--system-close-button-size-500);
+	--system-closebutton-size-xl-height: var(--spectrum-component-height-300);
+	--system-closebutton-size-xl-width: var(--spectrum-closebutton-height);
+	--system-closebutton-size-xl-size: var(--system-close-button-size-600);
+	--system-closebutton-size-xl-border-radius: var(--system-close-button-size-600);
+	--system-close-button-static-white-static-background-color-default: transparent;
+	--system-close-button-static-white-static-background-color-hover: var(--spectrum-transparent-white-300);
+	--system-close-button-static-white-static-background-color-down: var(--spectrum-transparent-white-400);
+	--system-close-button-static-white-static-background-color-focus: var(--spectrum-transparent-white-300);
+	--system-close-button-static-white-icon-color-default: var(--spectrum-white);
+	--system-close-button-static-white-icon-color-disabled: var(--spectrum-disabled-static-white-content-color);
+	--system-close-button-static-white-focus-indicator-color: var(--spectrum-static-white-focus-indicator-color);
+	--system-close-button-static-black-static-background-color-default: transparent;
+	--system-close-button-static-black-static-background-color-hover: var(--spectrum-transparent-black-300);
+	--system-close-button-static-black-static-background-color-down: var(--spectrum-transparent-black-400);
+	--system-close-button-static-black-static-background-color-focus: var(--spectrum-transparent-black-300);
+	--system-close-button-static-black-icon-color-default: var(--spectrum-black);
+	--system-close-button-static-black-icon-color-disabled: var(--spectrum-disabled-static-black-content-color);
+	--system-close-button-static-black-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
+}

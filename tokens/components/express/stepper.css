@@ -1,0 +1,74 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--legacy {
+	--system-stepper-border-width: var(--spectrum-border-width-200);
+	--system-stepper-buttons-border-style: solid;
+	--system-stepper-buttons-border-width: var(--spectrum-border-width-200);
+	--system-stepper-buttons-border-color: transparent;
+	--system-stepper-buttons-background-color: var(--spectrum-gray-50);
+	--system-stepper-buttons-border-color-hover: transparent;
+	--system-stepper-buttons-border-color-focus: transparent;
+	--system-stepper-buttons-border-color-keyboard-focus: transparent;
+	--system-stepper-button-border-radius-reset: var(--spectrum-in-field-button-fill-stacked-inner-border-rounding);
+	--system-stepper-button-border-width: 0;
+	--system-stepper-border-color: var(--spectrum-gray-400);
+	--system-stepper-border-color-hover: var(--spectrum-gray-500);
+	--system-stepper-border-color-focus: var(--spectrum-gray-800);
+	--system-stepper-border-color-focus-hover: var(--spectrum-gray-900);
+	--system-stepper-border-color-keyboard-focus: var(--spectrum-gray-900);
+	--system-stepper-border-color-invalid: transparent;
+	--system-stepper-border-color-focus-invalid: transparent;
+	--system-stepper-border-color-focus-hover-invalid: transparent;
+	--system-stepper-border-color-keyboard-focus-invalid: transparent;
+	--system-stepper-button-background-color-focus: var(--spectrum-gray-400);
+	--system-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-300);
+	--system-stepper-height: var(--spectrum-component-height-100);
+	--system-stepper-border-radius: var(--spectrum-corner-radius-100);
+	--system-stepper-button-width: var(--spectrum-in-field-button-width-stacked-medium);
+	--system-stepper-button-padding: var(--spectrum-in-field-button-edge-to-fill);
+	--system-stepper-width: calc(var(--mod-stepper-height, var(--system-stepper-height)) * var(--mod-stepper-min-width-multiplier, var(--spectrum-text-field-minimum-width-multiplier)) + var(--mod-stepper-button-width, var(--system-stepper-button-width)) + var(--mod-stepper-border-width, var(--system-stepper-border-width)) * 2);
+	--system-stepper-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
+	--system-stepper-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-stepper-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-stepper-button-offset: calc(var(--system-stepper-button-width) / 2);
+	--system-stepper-animation-duration: var(--spectrum-animation-duration-100);
+	--system-stepper-infield-button-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-buttons-border-color, var(--system-stepper-buttons-border-color)));
+	--system-stepper-infield-button-border-width: var(--mod-stepper-button-border-width, var(--system-stepper-button-border-width));
+	--system-stepper-textfield-border-width: var(--mod-stepper-border-width, var(--system-stepper-border-width));
+	--system-stepper-size-s-button-width: var(--spectrum-in-field-button-width-stacked-small);
+	--system-stepper-size-s-height: var(--spectrum-component-height-75);
+	--system-stepper-size-l-button-width: var(--spectrum-in-field-button-width-stacked-large);
+	--system-stepper-size-l-height: var(--spectrum-component-height-200);
+	--system-stepper-size-xl-button-width: var(--spectrum-in-field-button-width-stacked-extra-large);
+	--system-stepper-size-xl-height: var(--spectrum-component-height-300);
+	--system-stepper-quiet-infield-button-width-stacked: var(--mod-stepper-button-width-quiet, var(--system-stepper-button-width));
+	--system-stepper-quiet-textfield-focus-indicator-color: transparent;
+	--system-stepper-disabled-infield-button-border-color-quiet-disabled: var(--spectrum-disabled-border-color);
+	--system-stepper-invalid-border-color: var(--mod-stepper-border-color-invalid, var(--spectrum-negative-border-color-default));
+	--system-stepper-invalid-border-color-hover: var(--mod-stepper-border-color-hover-invalid, var(--spectrum-negative-border-color-hover));
+	--system-stepper-invalid-border-color-focus: var(--mod-stepper-border-color-focus-invalid, var(--spectrum-negative-border-color-focus));
+	--system-stepper-invalid-border-color-focus-hover: var(--mod-stepper-border-color-focus-hover-invalid, var(--spectrum-negative-border-color-focus-hover));
+	--system-stepper-invalid-border-color-keyboard-focus: var(--mod-stepper-border-color-keyboard-focus-invalid, var(--spectrum-negative-border-color-key-focus));
+	--system-stepper-invalid-infield-button-border-color: var(--mod-stepper-border-color-invalid, var(--system-stepper-border-color-invalid));
+	--system-stepper-invalid-textfield-icon-spacing-inline-start-invalid: 0;
+	--system-stepper-invalid-focused-infield-button-border-color: var(--mod-stepper-border-color-focus-invalid, var(--system-stepper-border-color-focus-invalid));
+	--system-stepper-invalid-focus-infield-button-border-color: var(--mod-stepper-border-color-focus-invalid, var(--system-stepper-border-color-focus-invalid));
+	--system-stepper-invalid-hover-infield-button-border-color: var(--mod-stepper-border-color-hover-invalid, var(--spectrum-negative-border-color-hover));
+	--system-stepper-invalid-focused-hover-infield-button-border-color: var(--mod-stepper-border-color-focus-hover-invalid, var(--system-stepper-border-color-focus-hover-invalid));
+	--system-stepper-invalid-focus-hover-infield-button-border-color: var(--mod-stepper-border-color-focus-hover-invalid, var(--system-stepper-border-color-focus-hover-invalid));
+	--system-stepper-invalid-keyboard-focused-infield-button-border-color: var(--mod-stepper-border-color-keyboard-focus-invalid, var(--system-stepper-border-color-keyboard-focus-invalid));
+	--system-stepper-invalid-focus-visible-infield-button-border-color: var(--mod-stepper-border-color-keyboard-focus-invalid, var(--system-stepper-border-color-keyboard-focus-invalid));
+	--system-stepper-disabled-buttons-background-color: var(--spectrum-disabled-background-color);
+	--system-stepper-disabled-buttons-border-width: 0;
+}

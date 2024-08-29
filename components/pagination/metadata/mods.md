@@ -6,3 +6,5 @@
 | `--mod-pagination-counter-margin-inline-start` |
 | `--mod-pagination-page-button-inline-spacing`  |
 | `--mod-pagination-textfield-width`             |
+| `--mod-textfield-min-width`                    |
+| `--mod-textfield-width`                        |
