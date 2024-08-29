@@ -20,7 +20,7 @@
 	--mod-textfield-border-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
 	--mod-textfield-border-color: var(--highcontrast-stepper-border-color, var(--mod-stepper-border-color, var(--spectrum-stepper-border-color)));
 
-	--spectrum-stepper-width: calc(var(--mod-stepper-height, var(--spectrum-stepper-height)) * var(--mod-stepper-min-width-multiplier, var(--spectrum-text-field-minimum-width-multiplier)) + var(--mod-stepper-button-width, var(--spectrum-stepper-button-width)) + (var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)) * 2));
+	--spectrum-stepper-width: calc(var(--mod-stepper-height, var(--spectrum-stepper-height)) * var(--mod-stepper-min-width-multiplier, var(--spectrum-stepper-min-width-multiplier)) + var(--mod-stepper-button-width, var(--spectrum-stepper-button-width)) + (var(--mod-stepper-border-width, var(--spectrum-stepper-border-width)) * 2));
 
 	position: relative;
 	display: inline-flex;
@@ -73,7 +73,7 @@
 
 	/*** Disabled ***/
 	&.is-disabled {
-		--mod-infield-button-border-color-quiet-disabled: var(--spectrum-disabled-border-color);
+		--mod-infield-button-border-color-quiet-disabled: var(--spectrum-stepper-buttons-border-color-quiet-disabled);
 	}
 
 	/*** Invalid ***/

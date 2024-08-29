@@ -22,6 +22,7 @@
 		--spectrum-stepper-buttons-border-color-hover: var(--spectrum-gray-600);
 		--spectrum-stepper-buttons-border-color-focus: var(--spectrum-gray-800);
 		--spectrum-stepper-buttons-border-color-keyboard-focus: var(--spectrum-gray-900);
+		--spectrum-stepper-buttons-border-color-quiet-disabled: var(--spectrum-disabled-border-color);
 
 		--spectrum-stepper-button-border-radius-reset: 0px;
 		--spectrum-stepper-button-border-width: var(--spectrum-border-width-100);
@@ -36,6 +37,8 @@
 		--spectrum-stepper-border-color-focus-invalid: var(--spectrum-negative-border-color-focus);
 		--spectrum-stepper-border-color-focus-hover-invalid: var(--spectrum-negative-border-color-focus-hover);
 		--spectrum-stepper-border-color-keyboard-focus-invalid: var(--spectrum-negative-border-color-key-focus);
+
+		--spectrum-stepper-min-width-multiplier: var(--spectrum-text-field-minimum-width-multiplier);
 
 		--spectrum-stepper-button-background-color-focus: var(--spectrum-gray-200);
 		--spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-100);

@@ -41,6 +41,7 @@
 		--spectrum-coach-indicator-animation-keyframe-100-opacity: 0;
 		--spectrum-coach-indicator-quiet-animation-keyframe-0-scale: 0.8;
 		&.spectrum-CoachIndicator--quiet {
+			--spectrum-coach-indicator-quiet-ring-diameter-size: var(--spectrum-coach-indicator-quiet-ring-diameter);
 			--spectrum-coach-indicator-animation-name: pulse-quiet;
 		}
 	}
