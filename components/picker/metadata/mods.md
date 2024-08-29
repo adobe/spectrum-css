@@ -48,7 +48,6 @@
 | `--mod-picker-inline-size`                             |
 | `--mod-picker-line-height`                             |
 | `--mod-picker-menu-height-fixed`                       |
-| `--mod-picker-menu-height-full`                        |
 | `--mod-picker-placeholder-font-style`                  |
 | `--mod-picker-placeholder-font-weight`                 |
 | `--mod-picker-spacing-bottom-to-text`                  |
