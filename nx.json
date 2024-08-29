@@ -42,27 +42,18 @@
 				"core",
 				"tools",
 				"!{projectRoot}/stories/*.js",
+				"{workspaceRoot}/tasks/component-builder.js",
 				{ "externalDependencies": ["postcss"] },
 				{ "env": "NODE_ENV" }
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'"
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-builder.js\").default()'"
 				]
 			},
 			"outputs": [
-				"{projectRoot}/dist/*.{css,json}",
-				"{projectRoot}/dist/*.map"
-			]
-		},
-		"clean": {
-			"cache": true,
-			"executor": "nx:run-commands",
-			"inputs": [
-				"{projectRoot}/dist/*.{css,json}",
-				"{projectRoot}/dist/**/*.{css,json}",
-				"{projectRoot}/dist/*.map",
-				"{projectRoot}/dist/themes/*.css.map",
+				"{projectRoot}/dist/*.css",
+				"{projectRoot}/dist/themes/*.css"
 			]
 		},
 		"clean": {
@@ -151,6 +142,24 @@
 				]
 			}
 		},
+		"report": {
+			"executor": "nx:run-commands",
+			"inputs": [
+				"core",
+				"tools",
+				"!{projectRoot}/stories/*.js",
+				"{workspaceRoot}/tasks/component-report.js",
+				{ "env": "NODE_ENV" }
+			],
+			"options": {
+				"commands": [
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
+				]
+			},
+			"outputs": [
+				"{projectRoot}/metadata/metadata.json"
+			]
+		},
 		"test": {
 			"cache": true,
 			"configurations": {
@@ -183,12 +192,15 @@
 			"executor": "nx:run-commands",
 			"inputs": [
 				"{workspaceRoot}/schemas/documentation.schema.json",
-				"docs",
+				"{workspaceRoot}/schemas/metadata.schema.json",
+				"{projectRoot}/metadata/*.yml",
+				"{projectRoot}/metadata/metadata.json",
 				{ "externalDependencies": ["pajv"] }
 			],
 			"options": {
 				"commands": [
-					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/documentation.schema.json -d \"{projectRoot}/metadata/*.yml\" || exit 0"
+					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/documentation.schema.json -d \"{projectRoot}/metadata/*.yml\" || exit 0",
+					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/metadata.schema.json -d \"{projectRoot}/metadata/metadata.json\" || exit 0"
 				]
 			}
 		}

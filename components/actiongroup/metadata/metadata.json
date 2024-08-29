@@ -1,8 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
-    ".spectrum--express",
     ".spectrum-ActionGroup",
     ".spectrum-ActionGroup .spectrum-ActionGroup-item",
     ".spectrum-ActionGroup .spectrum-ActionGroup-item:focus-visible",
@@ -30,18 +28,7 @@
     ".spectrum-ActionGroup.spectrum-ActionGroup--sizeXS",
     ".spectrum-ActionGroup.spectrum-ActionGroup:not(.spectrum-ActionGroup--vertical):not(.spectrum-ActionGroup--compact) .spectrum-ActionGroup-item"
   ],
-  "component": [
-    "--spectrum-actiongroup-border-radius",
-    "--spectrum-actiongroup-border-radius-reset",
-    "--spectrum-actiongroup-button-spacing-reset",
-    "--spectrum-actiongroup-gap-size-compact",
-    "--spectrum-actiongroup-horizontal-spacing-compact",
-    "--spectrum-actiongroup-horizontal-spacing-regular",
-    "--spectrum-actiongroup-vertical-spacing-compact",
-    "--spectrum-actiongroup-vertical-spacing-regular"
-  ],
   "modifiers": [
-    "--mod-actionbutton-focus-indicator-border-radius",
     "--mod-actiongroup-border-radius",
     "--mod-actiongroup-border-radius-reset",
     "--mod-actiongroup-button-spacing-reset",
@@ -57,31 +44,22 @@
     "--mod-actiongroup-vertical-spacing-compact",
     "--mod-actiongroup-vertical-spacing-regular"
   ],
-  "theming-layer": [
-    "--system-action-group-border-radius",
-    "--system-action-group-border-radius-reset",
-    "--system-action-group-button-spacing-reset",
-    "--system-action-group-gap-size-compact",
-    "--system-action-group-horizontal-spacing-compact",
-    "--system-action-group-horizontal-spacing-regular",
-    "--system-action-group-size-l-horizontal-spacing-regular",
-    "--system-action-group-size-l-vertical-spacing-regular",
-    "--system-action-group-size-m-horizontal-spacing-regular",
-    "--system-action-group-size-m-vertical-spacing-regular",
-    "--system-action-group-size-s-horizontal-spacing-regular",
-    "--system-action-group-size-s-vertical-spacing-regular",
-    "--system-action-group-size-xl-horizontal-spacing-regular",
-    "--system-action-group-size-xl-vertical-spacing-regular",
-    "--system-action-group-size-xs-horizontal-spacing-regular",
-    "--system-action-group-size-xs-vertical-spacing-regular",
-    "--system-action-group-vertical-spacing-compact",
-    "--system-action-group-vertical-spacing-regular"
+  "component": [
+    "--spectrum-actiongroup-border-radius",
+    "--spectrum-actiongroup-border-radius-reset",
+    "--spectrum-actiongroup-button-spacing-reset",
+    "--spectrum-actiongroup-gap-size-compact",
+    "--spectrum-actiongroup-horizontal-spacing-compact",
+    "--spectrum-actiongroup-horizontal-spacing-regular",
+    "--spectrum-actiongroup-vertical-spacing-compact",
+    "--spectrum-actiongroup-vertical-spacing-regular"
   ],
-  "high-contrast": [],
   "global": [
     "--spectrum-corner-radius-100",
     "--spectrum-spacing-100",
-    "--spectrum-spacing-50",
     "--spectrum-spacing-75"
-  ]
+  ],
+  "system-theme": [],
+  "passthroughs": ["--mod-actionbutton-focus-indicator-border-radius"],
+  "high-contrast": []
 }

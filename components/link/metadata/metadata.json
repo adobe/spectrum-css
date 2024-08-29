@@ -1,7 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-Link",
     ".spectrum-Link--quiet",
     ".spectrum-Link--quiet:hover",
@@ -21,19 +20,6 @@
     ".spectrum-Link:focus-visible",
     ".spectrum-Link:hover"
   ],
-  "component": [
-    "--spectrum-link-animation-duration",
-    "--spectrum-link-text-color-black",
-    "--spectrum-link-text-color-primary-active",
-    "--spectrum-link-text-color-primary-default",
-    "--spectrum-link-text-color-primary-focus",
-    "--spectrum-link-text-color-primary-hover",
-    "--spectrum-link-text-color-secondary-active",
-    "--spectrum-link-text-color-secondary-default",
-    "--spectrum-link-text-color-secondary-focus",
-    "--spectrum-link-text-color-secondary-hover",
-    "--spectrum-link-text-color-white"
-  ],
   "modifiers": [
     "--mod-link-animation-duration",
     "--mod-link-text-color-black",
@@ -47,31 +33,18 @@
     "--mod-link-text-color-secondary-hover",
     "--mod-link-text-color-white"
   ],
-  "theming-layer": [
-    "--system-link-animation-duration",
-    "--system-link-text-color-black",
-    "--system-link-text-color-primary-active",
-    "--system-link-text-color-primary-default",
-    "--system-link-text-color-primary-focus",
-    "--system-link-text-color-primary-hover",
-    "--system-link-text-color-secondary-active",
-    "--system-link-text-color-secondary-default",
-    "--system-link-text-color-secondary-focus",
-    "--system-link-text-color-secondary-hover",
-    "--system-link-text-color-white"
-  ],
-  "high-contrast": [
-    "--highcontrast-link-focus-color",
-    "--highcontrast-link-text-color-black",
-    "--highcontrast-link-text-color-primary-active",
-    "--highcontrast-link-text-color-primary-default",
-    "--highcontrast-link-text-color-primary-focus",
-    "--highcontrast-link-text-color-primary-hover",
-    "--highcontrast-link-text-color-secondary-active",
-    "--highcontrast-link-text-color-secondary-default",
-    "--highcontrast-link-text-color-secondary-focus",
-    "--highcontrast-link-text-color-secondary-hover",
-    "--highcontrast-link-text-color-white"
+  "component": [
+    "--spectrum-link-animation-duration",
+    "--spectrum-link-text-color-black",
+    "--spectrum-link-text-color-primary-active",
+    "--spectrum-link-text-color-primary-default",
+    "--spectrum-link-text-color-primary-focus",
+    "--spectrum-link-text-color-primary-hover",
+    "--spectrum-link-text-color-secondary-active",
+    "--spectrum-link-text-color-secondary-default",
+    "--spectrum-link-text-color-secondary-focus",
+    "--spectrum-link-text-color-secondary-hover",
+    "--spectrum-link-text-color-white"
   ],
   "global": [
     "--spectrum-accent-content-color-default",
@@ -85,5 +58,20 @@
     "--spectrum-neutral-content-color-hover",
     "--spectrum-neutral-content-color-key-focus",
     "--spectrum-white"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": [
+    "--highcontrast-link-focus-color",
+    "--highcontrast-link-text-color-black",
+    "--highcontrast-link-text-color-primary-active",
+    "--highcontrast-link-text-color-primary-default",
+    "--highcontrast-link-text-color-primary-focus",
+    "--highcontrast-link-text-color-primary-hover",
+    "--highcontrast-link-text-color-secondary-active",
+    "--highcontrast-link-text-color-secondary-default",
+    "--highcontrast-link-text-color-secondary-focus",
+    "--highcontrast-link-text-color-secondary-hover",
+    "--highcontrast-link-text-color-white"
   ]
 }

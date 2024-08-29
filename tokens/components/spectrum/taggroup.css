@@ -11,7 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum.spectrum--legacy {
-	--system-tag-group-item-margin-block: var(--spectrum-spacing-75);
-	--system-tag-group-item-margin-inline: var(--spectrum-spacing-75);
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-ProgressBar {
+		--spectrum-progressbar-track-color: var(--spectrum-gray-300);
+	}
 }

@@ -1,7 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-ColorLoupe",
     ".spectrum-ColorLoupe-checkerboard-background",
     ".spectrum-ColorLoupe-checkerboard-fill",
@@ -10,6 +9,18 @@
     ".spectrum-ColorLoupe-outer-border",
     ".spectrum-ColorLoupe.is-open",
     ".spectrum-ColorLoupe:dir(rtl)"
+  ],
+  "modifiers": [
+    "--mod-colorloupe-animation-distance",
+    "--mod-colorloupe-drop-shadow-blur",
+    "--mod-colorloupe-drop-shadow-color",
+    "--mod-colorloupe-drop-shadow-x",
+    "--mod-colorloupe-drop-shadow-y",
+    "--mod-colorloupe-inner-border-color",
+    "--mod-colorloupe-inner-border-width",
+    "--mod-colorloupe-offset",
+    "--mod-colorloupe-outer-border-color",
+    "--mod-colorloupe-outer-border-width"
   ],
   "component": [
     "--spectrum-color-loupe-bottom-to-color-handle",
@@ -38,35 +49,6 @@
     "--spectrum-colorloupe-outer-border-width",
     "--spectrum-colorloupe-width"
   ],
-  "modifiers": [
-    "--mod-colorloupe-animation-distance",
-    "--mod-colorloupe-drop-shadow-blur",
-    "--mod-colorloupe-drop-shadow-color",
-    "--mod-colorloupe-drop-shadow-x",
-    "--mod-colorloupe-drop-shadow-y",
-    "--mod-colorloupe-inner-border-color",
-    "--mod-colorloupe-inner-border-width",
-    "--mod-colorloupe-offset",
-    "--mod-colorloupe-outer-border-color",
-    "--mod-colorloupe-outer-border-width"
-  ],
-  "theming-layer": [
-    "--system-color-loupe-animation-distance",
-    "--system-color-loupe-checkerboard-dark-color",
-    "--system-color-loupe-checkerboard-light-color",
-    "--system-color-loupe-drop-shadow-blur",
-    "--system-color-loupe-drop-shadow-color",
-    "--system-color-loupe-drop-shadow-x",
-    "--system-color-loupe-drop-shadow-y",
-    "--system-color-loupe-height",
-    "--system-color-loupe-inner-border-color",
-    "--system-color-loupe-inner-border-width",
-    "--system-color-loupe-offset",
-    "--system-color-loupe-outer-border-color",
-    "--system-color-loupe-outer-border-width",
-    "--system-color-loupe-width"
-  ],
-  "high-contrast": ["--highcontrast-colorloupe-outer-border-color"],
   "global": [
     "--spectrum-color-handle-outer-border-width",
     "--spectrum-color-handle-size",
@@ -74,5 +56,8 @@
     "--spectrum-opacity-checkerboard-square-dark",
     "--spectrum-opacity-checkerboard-square-light",
     "--spectrum-picked-color"
-  ]
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": ["--highcontrast-colorloupe-outer-border-color"]
 }

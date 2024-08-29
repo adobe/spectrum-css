@@ -1,7 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-Avatar",
     ".spectrum-Avatar--size100",
     ".spectrum-Avatar--size200",
@@ -17,6 +16,16 @@
     ".spectrum-Avatar.is-disabled",
     ".spectrum-Avatar.is-focused:not(.is-disabled):after",
     ".spectrum-Avatar:not(.is-disabled) .spectrum-Avatar-link:focus-visible:after"
+  ],
+  "modifiers": [
+    "--mod-avatar-block-size",
+    "--mod-avatar-border-radius",
+    "--mod-avatar-color-opacity",
+    "--mod-avatar-color-opacity-disabled",
+    "--mod-avatar-focus-indicator-color",
+    "--mod-avatar-focus-indicator-gap",
+    "--mod-avatar-focus-indicator-thickness",
+    "--mod-avatar-inline-size"
   ],
   "component": [
     "--spectrum-avatar-block-size",
@@ -38,51 +47,15 @@
     "--spectrum-avatar-size-700",
     "--spectrum-avatar-size-75"
   ],
-  "modifiers": [
-    "--mod-avatar-block-size",
-    "--mod-avatar-border-radius",
-    "--mod-avatar-color-opacity",
-    "--mod-avatar-color-opacity-disabled",
-    "--mod-avatar-focus-indicator-color",
-    "--mod-avatar-focus-indicator-gap",
-    "--mod-avatar-focus-indicator-thickness",
-    "--mod-avatar-inline-size"
-  ],
-  "theming-layer": [
-    "--system-avatar-block-size",
-    "--system-avatar-border-radius",
-    "--system-avatar-color-opacity",
-    "--system-avatar-color-opacity-disabled",
-    "--system-avatar-focus-indicator-color",
-    "--system-avatar-focus-indicator-gap",
-    "--system-avatar-focus-indicator-thickness",
-    "--system-avatar-inline-size",
-    "--system-avatar-size-100-block-size",
-    "--system-avatar-size-100-inline-size",
-    "--system-avatar-size-200-block-size",
-    "--system-avatar-size-200-inline-size",
-    "--system-avatar-size-300-block-size",
-    "--system-avatar-size-300-inline-size",
-    "--system-avatar-size-400-block-size",
-    "--system-avatar-size-400-inline-size",
-    "--system-avatar-size-50-block-size",
-    "--system-avatar-size-50-inline-size",
-    "--system-avatar-size-500-block-size",
-    "--system-avatar-size-500-inline-size",
-    "--system-avatar-size-600-block-size",
-    "--system-avatar-size-600-inline-size",
-    "--system-avatar-size-700-block-size",
-    "--system-avatar-size-700-inline-size",
-    "--system-avatar-size-75-block-size",
-    "--system-avatar-size-75-inline-size"
-  ],
-  "high-contrast": [
-    "--highcontrast-avatar-color-opacity-disabled",
-    "--highcontrast-avatar-focus-indicator-color"
-  ],
   "global": [
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
     "--spectrum-focus-indicator-thickness"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": [
+    "--highcontrast-avatar-color-opacity-disabled",
+    "--highcontrast-avatar-focus-indicator-color"
   ]
 }

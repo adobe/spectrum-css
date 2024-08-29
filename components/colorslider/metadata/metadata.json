@@ -1,7 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-ColorSlider",
     ".spectrum-ColorSlider--vertical",
     ".spectrum-ColorSlider--vertical .spectrum-ColorSlider-handle",
@@ -16,19 +15,6 @@
     ".spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-gradient",
     ".spectrum-ColorSlider.is-focused"
   ],
-  "component": [
-    "--spectrum-color-slider-border-color-local",
-    "--spectrum-color-slider-border-color-rgba",
-    "--spectrum-color-slider-border-opacity",
-    "--spectrum-color-slider-border-rounding",
-    "--spectrum-color-slider-border-width",
-    "--spectrum-color-slider-checkerboard-dark-color",
-    "--spectrum-color-slider-checkerboard-light-color",
-    "--spectrum-color-slider-checkerboard-size",
-    "--spectrum-color-slider-handle-margin-block",
-    "--spectrum-color-slider-length",
-    "--spectrum-color-slider-minimum-length"
-  ],
   "modifiers": [
     "--mod-color-slider-background-color-disabled",
     "--mod-color-slider-border-color",
@@ -42,20 +28,20 @@
     "--mod-color-slider-minimum-length",
     "--mod-color-slider-vertical-control-track-width",
     "--mod-color-slider-vertical-height",
-    "--mod-color-slider-vertical-minimum-height",
-    "--mod-colorhandle-hitarea-border-radius"
+    "--mod-color-slider-vertical-minimum-height"
   ],
-  "theming-layer": [
-    "--system-color-slider-border-color-rgba",
-    "--system-color-slider-checkerboard-dark-color",
-    "--system-color-slider-checkerboard-light-color",
-    "--system-color-slider-checkerboard-size",
-    "--system-color-slider-handle-margin-block"
-  ],
-  "high-contrast": [
-    "--highcontrast-color-slider-background-color-disabled",
-    "--highcontrast-color-slider-border-color",
-    "--highcontrast-color-slider-border-color-disabled"
+  "component": [
+    "--spectrum-color-slider-border-color-local",
+    "--spectrum-color-slider-border-color-rgba",
+    "--spectrum-color-slider-border-opacity",
+    "--spectrum-color-slider-border-rounding",
+    "--spectrum-color-slider-border-width",
+    "--spectrum-color-slider-checkerboard-dark-color",
+    "--spectrum-color-slider-checkerboard-light-color",
+    "--spectrum-color-slider-checkerboard-size",
+    "--spectrum-color-slider-handle-margin-block",
+    "--spectrum-color-slider-length",
+    "--spectrum-color-slider-minimum-length"
   ],
   "global": [
     "--spectrum-color-control-track-width",
@@ -65,5 +51,12 @@
     "--spectrum-opacity-checkerboard-square-dark",
     "--spectrum-opacity-checkerboard-square-light",
     "--spectrum-opacity-checkerboard-square-size"
+  ],
+  "system-theme": [],
+  "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
+  "high-contrast": [
+    "--highcontrast-color-slider-background-color-disabled",
+    "--highcontrast-color-slider-border-color",
+    "--highcontrast-color-slider-border-color-disabled"
   ]
 }

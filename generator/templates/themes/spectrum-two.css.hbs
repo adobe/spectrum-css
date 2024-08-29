@@ -11,7 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-@container style(--system: spectrum) {
-  /* Variables defined here */
-  /* --spectrum-{{ folderName }}-... */
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-DropZone {
+		--spectrum-drop-zone-border-color: var(--spectrum-gray-300);
+	}
 }

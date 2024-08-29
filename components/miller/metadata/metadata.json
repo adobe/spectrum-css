@@ -1,30 +1,24 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
     ".spectrum-MillerColumns",
     ".spectrum-MillerColumns-item",
     ".spectrum-MillerColumns-item:first-child"
   ],
-  "component": [],
   "modifiers": [
     "--mod-millercolumns-inline-size",
     "--mod-millercolumns-margin-inline-end",
     "--mod-millercolumns-margin-inline-start",
     "--mod-millercolumns-padding"
   ],
-  "theming-layer": [
-    "--system-miller-columns-inline-size",
-    "--system-miller-columns-margin-inline-end",
-    "--system-miller-columns-margin-inline-start",
-    "--system-miller-columns-padding"
-  ],
-  "high-contrast": [],
-  "global": [
+  "component": [
     "--spectrum-millercolumns-inline-size",
     "--spectrum-millercolumns-margin-inline-end",
     "--spectrum-millercolumns-margin-inline-start",
-    "--spectrum-millercolumns-padding",
-    "--spectrum-spacing-100"
-  ]
+    "--spectrum-millercolumns-padding"
+  ],
+  "global": ["--spectrum-spacing-100"],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": []
 }

@@ -11,10 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
+/* eslint-disable no-console */
+
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
 
+const fg = require("fast-glob");
 const postcss = require("postcss");
 const valuesParser = require("postcss-values-parser");
 
@@ -72,6 +75,37 @@ function getPackageFromPath(filePath = process.cwd()) {
 	// Split the path from root dir and capture the first folder as the package name
 	const guessParts = path.relative(dirs.root, filePath).split(path.sep);
 	return guessParts[0];
+}
+
+/**
+ * Returns a list of all component names in the repository
+ * @returns string[]
+ */
+function getAllComponentNames() {
+	// Get a list of all the component names in the components directory that have a package.json file
+	// and a list of all the deprecated components in the storybook directory
+	// then combine and deduplicate the lists to get a full list of all components
+	return [...new Set([
+		...fs.readdirSync(dirs.components).filter((file) => fs.existsSync(path.join(dirs.components, file, "package.json"))),
+		...(fs.readdirSync(path.join(dirs.storybook, "deprecated")) ?? []),
+	])];
+}
+
+/**
+ *
+ * @param {string} componentName
+ * @returns {true|Error}
+ */
+function validateComponentName(componentName) {
+	// Get a list of all the component names
+	const components = getAllComponentNames();
+
+	// Check if the component name exists in that list
+	if (!components.includes(componentName)) {
+		return new Error(`Component name "${componentName}" does not exist in the components directory.`);
+	}
+
+	return true;
 }
 
 
@@ -139,12 +173,168 @@ async function cleanFolder({ cwd = process.cwd() } = {}) {
 	return fsp.rm(path.join(cwd, "dist"), { recursive: true, force: true }).then(() => fsp.mkdir(path.join(cwd, "dist")));
 }
 
+/**
+ * Fetch content from glob input and optionally combine results
+ * @param {(string|RegExp)[]} globs
+ * @param {object} options
+ * @param {string} [options.cwd=]
+ * @param {string} [options.shouldCombine=false] If true, combine the assets read in into one string
+ * @param {string} [options.notice] If shouldCombine is true, this optional notice will be added to the top of the combined content
+ * @param {import('fast-glob').Options} [options.fastGlobOptions={}] Additional options for fast-glob
+ * @returns {Promise<{ content: string, input: string }[]>}
+ */
+async function fetchContent(
+	globs = [],
+	{
+		cwd,
+		shouldCombine = false,
+		notice,
+		...fastGlobOptions
+	} = {},
+) {
+	const files = await fg(globs, {
+		onlyFiles: true,
+		...fastGlobOptions,
+		cwd,
+	});
+
+	if (!files.length) return Promise.resolve([]);
+
+	const fileData = await Promise.all(
+		files.map(async (file) => ({
+			input: path.join(cwd, file),
+			content: await fsp.readFile(path.join(cwd, file), "utf8"),
+		})),
+	);
+
+	// Combine the content into 1 file; @todo do this in future using CSS imports
+	if (shouldCombine) {
+		let content = "";
+		fileData.forEach((dataset, idx) => {
+			if (dataset.content) {
+				if (idx > 0) content += "\n\n";
+				content += `/* Sourced from ${relativePrint(dataset.input, { cwd })} */\n`;
+				content += dataset.content;
+			}
+		});
+
+		return Promise.resolve([
+			{
+				content,
+				input: fileData[0].input,
+			},
+		]);
+	}
+
+	return Promise.all(
+		files.map(async (file) => ({
+			content: await fsp.readFile(path.join(cwd, file), "utf8"),
+			input: file,
+		})),
+	);
+}
+
+/**
+ * A utility to copy a file from one local to another
+ * @param {string} from
+ * @param {string} to
+ * @param {object} [config={}]
+ * @param {string} [config.cwd=] - Current working directory for the component being built
+ * @returns Promise<string|void>
+ */
+async function copy(from, to, { cwd, isDeprecated = true } = {}) {
+	if (!fs.existsSync(from)) return;
+
+	if (!fs.existsSync(path.dirname(to))) {
+		await fsp.mkdir(path.dirname(to), { recursive: true }).catch((err) => {
+			if (!err) return;
+			console.log(
+				`${"✗".red}  problem making the ${relativePrint(path.dirname(to), { cwd }).yellow} directory`,
+			);
+			return Promise.reject(err);
+		});
+	}
+
+	// Check if the input is a file or a directory
+	const stats = fs.statSync(from);
+	if (stats.isDirectory()) {
+		console.log(`Copying directory ${from} to ${to}`);
+		return fsp
+			.cp(from, to, { recursive: true, force: true })
+			.then(async () => {
+				// Determine the number of files and the size of the copied files
+				const stats = await fg(path.join(cwd, "components") + "/**/*", { onlyFiles: true, stats: true });
+				return `${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow} ${`copied ${stats.length >= 0 ? stats.length : "0"} files (${bytesToSize(stats.reduce((acc, details) => acc + details.stats.size, 0))})`.gray}`;
+			})
+			.catch((err) => {
+				if (!err) return;
+				console.log(
+					`${"✗".red}  ${relativePrint(from, { cwd }).yellow} could not be copied to ${relativePrint(to, { cwd }).yellow}`,
+				);
+				return Promise.reject(err);
+			});
+	}
+
+	const content = await fsp.readFile(from, { encoding: "utf-8" });
+	if (!content) return;
+
+	/** @todo add support for injecting a deprecation notice as a comment after the copyright */
+	return fsp
+		.writeFile(to, content, { encoding: "utf-8" })
+		.then(
+			() =>
+				`${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${(isDeprecated ? "-- deprecated --" : `copied ${stats.size ? `(${bytesToSize(stats.size)})` : ""}`).gray}`,
+		)
+		.catch((err) => {
+			if (!err) return;
+			console.log(
+				`${"✗".red}  ${relativePrint(from, { cwd }).gray} could not be copied to ${relativePrint(to, { cwd }).yellow}`,
+			);
+			return Promise.reject(err);
+		});
+}
+
+/**
+ *
+ * @param {string} content - The content to write to the output file
+ * @param {import("fs").PathLike} output - The path to the output file
+ * @param {object} [config={}]
+ * @param {string} [config.cwd=] - Current working directory for the component being built
+ * @returns Promise<string|void>
+ */
+async function writeAndReport(content, output, { cwd = process.cwd() } = {}) {
+	return fsp
+		.writeFile(
+			output,
+			content,
+			{ encoding: "utf-8" },
+		)
+		.then(() => {
+			const stats = fs.statSync(output);
+			const relativePath = path.relative(cwd, output);
+			return [
+				`${"✓".green}  ${relativePath.padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`,
+			];
+		})
+		.catch((err) => {
+			if (!err) return;
+			const relativePath = path.relative(cwd, output);
+			console.log(`${"✗".red}  ${relativePath.yellow} not written`);
+			return Promise.reject(err);
+		});
+}
+
 module.exports = {
-	dirs,
-	timeInMs,
-	relativePrint,
 	bytesToSize,
-	getPackageFromPath,
-	extractProperties,
 	cleanFolder,
+	copy,
+	dirs,
+	extractProperties,
+	fetchContent,
+	getAllComponentNames,
+	getPackageFromPath,
+	relativePrint,
+	timeInMs,
+	validateComponentName,
+	writeAndReport,
 };

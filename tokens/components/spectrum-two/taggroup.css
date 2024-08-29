@@ -11,7 +11,15 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
-	--system-tag-group-item-margin-block: var(--spectrum-spacing-75);
-	--system-tag-group-item-margin-inline: var(--spectrum-spacing-75);
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-Asset {
+		--spectrum-asset-folder-background-color: var(--spectrum-gray-300);
+		--spectrum-asset-file-background-color: var(--spectrum-gray-50);
+		--spectrum-asset-icon-outline-color: var(--spectrum-gray-500);
+	}
 }

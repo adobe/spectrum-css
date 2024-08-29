@@ -1,8 +1,6 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
+  "sourceFile": "index.css",
   "selectors": [
-    ".spectrum",
-    ".spectrum--express",
     ".spectrum-Popover",
     ".spectrum-Popover *",
     ".spectrum-Popover--bottom-end.is-open",
@@ -87,6 +85,24 @@
     ".spectrum-Popover.is-open",
     ".spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle"
   ],
+  "modifiers": [
+    "--mod-overlay-animation-duration",
+    "--mod-overlay-animation-duration-opened",
+    "--mod-popover-animation-distance",
+    "--mod-popover-background-color",
+    "--mod-popover-border-color",
+    "--mod-popover-border-width",
+    "--mod-popover-content-area-spacing-vertical",
+    "--mod-popover-corner-radius",
+    "--mod-popover-filter",
+    "--mod-popover-pointer-edge-spacing",
+    "--mod-popover-pointer-height",
+    "--mod-popover-pointer-width",
+    "--mod-popover-shadow-blur",
+    "--mod-popover-shadow-color",
+    "--mod-popover-shadow-horizontal",
+    "--mod-popover-shadow-vertical"
+  ],
   "component": [
     "--spectrum-popover-animation-distance",
     "--spectrum-popover-background-color",
@@ -107,44 +123,6 @@
     "--spectrum-popover-tip-width",
     "--spectrum-popover-top-to-content-area"
   ],
-  "modifiers": [
-    "--mod-overlay-animation-duration",
-    "--mod-overlay-animation-duration-opened",
-    "--mod-popover-animation-distance",
-    "--mod-popover-background-color",
-    "--mod-popover-border-color",
-    "--mod-popover-border-width",
-    "--mod-popover-content-area-spacing-vertical",
-    "--mod-popover-corner-radius",
-    "--mod-popover-filter",
-    "--mod-popover-pointer-edge-spacing",
-    "--mod-popover-pointer-height",
-    "--mod-popover-pointer-width",
-    "--mod-popover-shadow-blur",
-    "--mod-popover-shadow-color",
-    "--mod-popover-shadow-horizontal",
-    "--mod-popover-shadow-vertical"
-  ],
-  "theming-layer": [
-    "--system-popover-animation-distance",
-    "--system-popover-background-color",
-    "--system-popover-border-color",
-    "--system-popover-border-width",
-    "--system-popover-content-area-spacing-vertical",
-    "--system-popover-corner-radius",
-    "--system-popover-pointer-edge-offset",
-    "--system-popover-pointer-edge-spacing",
-    "--system-popover-pointer-height",
-    "--system-popover-pointer-width",
-    "--system-popover-shadow-blur",
-    "--system-popover-shadow-color",
-    "--system-popover-shadow-horizontal",
-    "--system-popover-shadow-vertical"
-  ],
-  "high-contrast": [
-    "--highcontrast-popover-background-color",
-    "--highcontrast-popover-border-color"
-  ],
   "global": [
     "--spectrum-animation-duration-0",
     "--spectrum-animation-duration-100",
@@ -157,5 +135,11 @@
     "--spectrum-drop-shadow-y",
     "--spectrum-gray-400",
     "--spectrum-spacing-100"
+  ],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": [
+    "--highcontrast-popover-background-color",
+    "--highcontrast-popover-border-color"
   ]
 }

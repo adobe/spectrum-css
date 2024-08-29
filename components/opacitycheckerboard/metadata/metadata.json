@@ -1,6 +1,12 @@
 {
-  "sourceFile": "dist/index-theme-switcher.css",
-  "selectors": [".spectrum", ".spectrum-OpacityCheckerboard"],
+  "sourceFile": "index.css",
+  "selectors": [".spectrum-OpacityCheckerboard"],
+  "modifiers": [
+    "--mod-opacity-checkerboard-dark",
+    "--mod-opacity-checkerboard-light",
+    "--mod-opacity-checkerboard-position",
+    "--mod-opacity-checkerboard-size"
+  ],
   "component": [
     "--spectrum-opacity-checkerboard-dark",
     "--spectrum-opacity-checkerboard-light",
@@ -10,18 +16,8 @@
     "--spectrum-opacity-checkerboard-square-light",
     "--spectrum-opacity-checkerboard-square-size"
   ],
-  "modifiers": [
-    "--mod-opacity-checkerboard-dark",
-    "--mod-opacity-checkerboard-light",
-    "--mod-opacity-checkerboard-position",
-    "--mod-opacity-checkerboard-size"
-  ],
-  "theming-layer": [
-    "--system-opacity-checkerboard-dark",
-    "--system-opacity-checkerboard-light",
-    "--system-opacity-checkerboard-position",
-    "--system-opacity-checkerboard-size"
-  ],
-  "high-contrast": [],
-  "global": []
+  "global": [],
+  "system-theme": [],
+  "passthroughs": [],
+  "high-contrast": []
 }

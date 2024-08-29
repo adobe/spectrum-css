@@ -50,8 +50,5 @@
 | `--mod-actionbutton-static-content-color`                         |
 | `--mod-actionbutton-text-to-visual`                               |
 | `--mod-animation-duration-100`                                    |
-| `--mod-button-animation-duration`                                 |
-| `--mod-button-font-family`                                        |
-| `--mod-button-line-height`                                        |
 | `--mod-line-height-100`                                           |
 | `--mod-sans-font-family-stack`                                    |
