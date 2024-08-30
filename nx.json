@@ -41,14 +41,14 @@
 			"inputs": [
 				"core",
 				"tools",
+				"{workspaceRoot}/tasks/component-builder.js",
 				"!{projectRoot}/stories/*.js",
 				{ "externalDependencies": ["postcss"] },
 				{ "env": "NODE_ENV" }
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'",
-					"node --no-warnings -e 'require(\"./tasks/component-reporter.js\").default()'"
+					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'"
 				]
 			},
 			"outputs": [
@@ -144,6 +144,24 @@
 					"eslint --cache --no-error-on-unmatched-pattern --report-unused-disable-directives {projectRoot}/*.{js,json} {projectRoot}/**/*.{js,json} --ignore-pattern {projectRoot}/dist || exit 0"
 				]
 			}
+		},
+		"report": {
+			"executor": "nx:run-commands",
+			"inputs": [
+				"core",
+				"tools",
+				"!{projectRoot}/stories/*.js",
+				"{workspaceRoot}/tasks/component-report.js",
+				{ "env": "NODE_ENV" }
+			],
+			"options": {
+				"commands": [
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
+				]
+			},
+			"outputs": [
+				"{projectRoot}/metadata/metadata.json"
+			]
 		},
 		"test": {
 			"cache": true,

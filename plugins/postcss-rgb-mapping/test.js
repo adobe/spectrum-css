@@ -36,3 +36,7 @@ function readFile(filename) {
 test("create basic output", (t) => {
 	return compare(t, "basic.css", "basic.css");
 });
+
+test("use modern rgba format", (t) => {
+	return compare(t, "basic.css", "modern.css", { colorFunctionalNotation: true });
+});
