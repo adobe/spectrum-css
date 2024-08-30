@@ -173,9 +173,13 @@ Default.args = {
 	],
 };
 
+/* TODO: For all dialog stories: the "is-hidden-story" tags replicates "!dev" in older versions
+of Storybook, to remove the stories from the side navigation, reflecting the intended behavior.
+Remove "is-hidden-story" in favor of only "!dev" tags when possible.
+*/
 // ********* DOCS ONLY ********* //
 export const DefaultSmall = Template.bind({});
-DefaultSmall.tags = ["!dev"];
+DefaultSmall.tags = ["is-hidden-story", "!dev"];
 DefaultSmall.storyName = "Dialog - small",
 DefaultSmall.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -186,7 +190,7 @@ DefaultSmall.args = {
 };
 
 export const DefaultLarge = Template.bind({});
-DefaultLarge.tags = ["!dev"];
+DefaultLarge.tags = ["is-hidden-story", "!dev"];
 DefaultLarge.storyName = "Dialog - large",
 DefaultLarge.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -200,7 +204,7 @@ DefaultLarge.args = {
  * A dialog that can be dismissed without taking an action.
  */
 export const Dismissible = Template.bind({});
-Dismissible.tags = ["!dev"];
+Dismissible.tags = ["is-hidden-story", "!dev"];
 Dismissible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -213,7 +217,7 @@ Dismissible.args = {
  * Dialogs can have a hero or cover image header.
  */
 export const WithHero = Template.bind({});
-WithHero.tags = ["!dev"];
+WithHero.tags = ["is-hidden-story", "!dev"];
 WithHero.parameters = {
 	docs: {
 		story: {
@@ -239,7 +243,7 @@ WithScroll.args = {
 		"max-block-size": "400px",
 	}
 };
-WithScroll.tags = ["!dev"];
+WithScroll.tags = ["is-hidden-story", "!dev"];
 WithScroll.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -255,7 +259,7 @@ Fullscreen.args = {
 Fullscreen.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-/* TODO: remove this tag once guidance for S2 fullscreen dialogs has been determined. */
+/* TODO: Remove "is-hidden-story" tag once guidance for S2 fullscreen dialogs has been determined. */
 Fullscreen.tags = ["is-hidden-story"];
 
 /**
@@ -270,7 +274,7 @@ FullscreenTakeover.args = {
 	layout: "fullscreenTakeover",
 	content: [ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent],
 };
-/* TODO: remove this tag once guidance for S2 fullscreen dialogs has been determined. */
+/* TODO: Remove "is-hidden-story" tag once guidance for S2 fullscreen dialogs has been determined. */
 FullscreenTakeover.tags = ["is-hidden-story"];
 
 // ********* VRT ONLY ********* //
