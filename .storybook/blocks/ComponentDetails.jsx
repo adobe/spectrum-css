@@ -51,7 +51,7 @@ export const ComponentDetails = () => {
 	const versionNumber = storyMeta?.csfFile?.meta?.parameters?.componentVersion ?? "Unavailable";
 
 	return (
-		<DList>
+		<DList className="sb-unstyled">
 			<DTerm>Current version:</DTerm>
 			<DDefinition>{versionNumber}</DDefinition>
 
