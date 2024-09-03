@@ -46,7 +46,7 @@ export const FieldGroupSet = Variants({
 			helpText: "Select an option to continue.",
 		},
 		{
-			testHeading: "Read only",
+			testHeading: "Read-only",
 			isReadOnly: true,
 		},
 	]

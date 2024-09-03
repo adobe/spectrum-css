@@ -130,7 +130,7 @@ export const isRequired = {
 };
 
 export const isReadOnly = {
-	name: "Read only",
+	name: "Read-only",
 	type: { name: "boolean" },
 	table: {
 		type: { summary: "boolean" },

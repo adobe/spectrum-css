@@ -40,7 +40,7 @@ export const DatePickerGroup = Variants({
 			isRequired: true,
 		},
 		{
-			testHeading: "Read only",
+			testHeading: "Read-only",
 			readOnly: true,
 			wrapperStyles: {
 				"min-block-size": "30px",

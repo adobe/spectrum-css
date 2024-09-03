@@ -31,7 +31,7 @@ export const RadioGroup = Variants({
 			isDisabled: true,
 		},
 		{
-			testHeading: "Read Only",
+			testHeading: "Read-only",
 			isReadOnly: true,
 		},
 	]
