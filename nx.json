@@ -11,6 +11,7 @@
 		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
 		"docs": ["{projectRoot}/metadata/*.yml"],
 		"eslint": ["{workspaceRoot}/.eslintrc"],
+		"metadata": ["{projectRoot}/metadata/*.json"],
 		"prettier": ["{workspaceRoot}/.prettierrc"],
 		"scripts": ["{projectRoot}/stories/*.js"],
 		"stylelint": [
@@ -193,8 +194,8 @@
 			"inputs": [
 				"{workspaceRoot}/schemas/documentation.schema.json",
 				"{workspaceRoot}/schemas/metadata.schema.json",
-				"{projectRoot}/metadata/*.yml",
-				"{projectRoot}/metadata/metadata.json",
+				"docs",
+				"metadata",
 				{ "externalDependencies": ["pajv"] }
 			],
 			"options": {

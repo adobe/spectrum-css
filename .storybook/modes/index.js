@@ -34,7 +34,7 @@ const modes = {
         scale: "medium",
         color: "dark",
         textDirection: "rtl",
-        context: "spectrum",
+        context: "legacy",
     },
 };
 

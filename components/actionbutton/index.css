@@ -177,15 +177,11 @@
 		margin-inline-end: calc(var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only)) - var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)));
 
 		color: inherit;
-
-		/* Augment the margin correction for the icon only scenario */
-		&:only-child {
-			margin-inline-start: calc(var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only)) - var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)));
-		}
 	}
 
 	/* Augment the margin correction for the icon only scenario */
-	.spectrum-ActionButton-hold + .spectrum-ActionButton-icon {
+	.spectrum-ActionButton-hold + .spectrum-ActionButton-icon,
+	.spectrum-ActionButton-icon:only-child {
 		margin-inline-start: calc(var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only)) - var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text)));
 	}
 
@@ -220,15 +216,17 @@
 	}
 
 	&.spectrum-ActionButton--emphasized {
-		--spectrum-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected-emphasized, var(--spectrum-actionbutton-background-color-default-selected-emphasized));
-		--spectrum-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected-emphasized, var(--spectrum-actionbutton-background-color-hover-selected-emphasized));
-		--spectrum-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected-emphasized, var(--spectrum-actionbutton-background-color-down-selected-emphasized));
-		--spectrum-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected-emphasized, var(--spectrum-actionbutton-background-color-focus-selected-emphasized));
+		&.is-selected {
+			--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected-emphasized, var(--spectrum-actionbutton-background-color-default-selected-emphasized));
+			--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected-emphasized, var(--spectrum-actionbutton-background-color-hover-selected-emphasized));
+			--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected-emphasized, var(--spectrum-actionbutton-background-color-down-selected-emphasized));
+			--mod-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected-emphasized, var(--spectrum-actionbutton-background-color-focus-selected-emphasized));
 
-		--spectrum-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected-emphasized, var(--spectrum-actionbutton-content-color-default-selected-emphasized));
-		--spectrum-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected-emphasized, var(--spectrum-actionbutton-content-color-hover-selected-emphasized));
-		--spectrum-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected-emphasized, var(--spectrum-actionbutton-content-color-down-selected-emphasized));
-		--spectrum-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected-emphasized, var(--spectrum-actionbutton-content-color-focus-selected-emphasized));
+			--mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected-emphasized, var(--spectrum-actionbutton-content-color-default-selected-emphasized));
+			--mod-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected-emphasized, var(--spectrum-actionbutton-content-color-hover-selected-emphasized));
+			--mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected-emphasized, var(--spectrum-actionbutton-content-color-down-selected-emphasized));
+			--mod-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected-emphasized, var(--spectrum-actionbutton-content-color-focus-selected-emphasized));
+		}
 	}
 
 	&.spectrum-ActionButton--staticBlack {
