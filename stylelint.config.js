@@ -1,21 +1,33 @@
-const { join } = require("path");
-
 module.exports = {
 	allowEmptyInput: true,
 	cache: true,
 	defaultSeverity: "warning",
-	extends: ["stylelint-config-standard", "stylelint-config-clean-order"],
+	extends: ["stylelint-config-standard"],
 	plugins: [
 		"stylelint-header",
 		"stylelint-selector-bem-pattern",
+		"stylelint-order",
 		"stylelint-use-logical",
 		"@spectrum-tools/stylelint-no-missing-var",
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
-		"@spectrum-tools/theme-alignment",
 		"stylelint-high-performance-animation",
 	],
 	rules: {
+		/** --------------------------------------------------------------
+		 * Disabled rules
+		 * -------------------------------------------------------------- */
+		"custom-property-empty-line-before": null,
+		"declaration-block-no-redundant-longhand-properties": null,
+		"declaration-empty-line-before": null,
+		"import-notation": null,
+		"no-descending-specificity": null,
+
+		/** --------------------------------------------------------------
+		 * Customized rule settings
+		 * -------------------------------------------------------------- */
+		/** @note use floats for opacity because it minifies better than percent */
+		"alpha-value-notation": ["percentage", { exceptProperties: ["opacity"] }],
 		"at-rule-empty-line-before": [
 			"always",
 			{
@@ -30,21 +42,10 @@ module.exports = {
 				ignoreAtRules: ["extend", "container", "each", "include", "mixin"],
 			},
 		],
-		"rule-empty-line-before": [
-			"always",
-			{
-				except: ["first-nested"],
-				ignore: ["after-comment"],
-			},
-		],
-		"selector-attribute-quotes": null,
-		"block-no-empty": null,
-		/* Could probably dig into this further, might be useful */
-		"no-descending-specificity": null,
-		/* Not useful at the moment */
-		"no-duplicate-selectors": null,
-		"selector-class-pattern": null,
-		"declaration-empty-line-before": null,
+		"block-no-empty": [true, {
+			ignore: ["comments"],
+		}],
+		"color-function-notation": ["modern", { ignore: ["with-var-inside"] }],
 		"comment-empty-line-before": [
 			"always",
 			{
@@ -54,8 +55,47 @@ module.exports = {
 				ignoreComments: [/^@?passthroughs?/],
 			},
 		],
-		"declaration-block-no-redundant-longhand-properties": null,
-		"custom-property-empty-line-before": null,
+		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system|_)/, {}],
+		"declaration-block-no-duplicate-custom-properties": true,
+		"declaration-property-value-no-unknown": [
+			true,
+			{
+				ignoreProperties: {
+					color: ["CanvasText"],
+				},
+			},
+		],
+		"declaration-block-no-shorthand-property-overrides": true,
+		"function-no-unknown": [
+			true,
+			{
+				severity: "warning",
+			},
+		],
+		"max-nesting-depth": [3, { severity: "warning" }],
+		"property-no-unknown": [
+			true,
+			{
+				checkPrefixed: true,
+			},
+		],
+		"rule-empty-line-before": [
+			"always",
+			{
+				except: ["first-nested"],
+				ignore: ["after-comment"],
+			},
+		],
+		"selector-attribute-quotes": "always",
+		"selector-class-pattern": ["^(spectrum-|is-)[A-Za-z0-9-]+", { resolveNestedSelectors: true }],
+		"selector-not-notation": "complex",
+		"value-keyword-case": [
+			"lower",
+			{
+				camelCaseSvgKeywords: true,
+				ignoreKeywords: ["Transparent", "Text"],
+			},
+		],
 		"value-no-vendor-prefix": [
 			true,
 			{
@@ -63,43 +103,13 @@ module.exports = {
 				severity: "warning",
 			},
 		],
-		"max-nesting-depth": [3, { severity: "warning" }],
-		"custom-property-pattern": [/^(spectrum|mod|highcontrast|system)/, {}],
-		/** @note use floats for opacity because it minifies better than percent */
-		"alpha-value-notation": ["percentage", { exceptProperties: ["opacity"] }],
-		"function-no-unknown": [
-			true,
-			{
-				severity: "warning",
-			},
-		],
-		/** @todo: would like to use "modern" eventually */
-		"color-function-notation": null,
-		"import-notation": null,
-		"property-no-unknown": [
-			true,
-			{
-				checkPrefixed: true,
-			},
-		],
-		"declaration-block-no-duplicate-custom-properties": true,
-		"declaration-property-value-no-unknown": [true, {
-			ignoreProperties: {
-				"color": ["CanvasText"]
-			},
-		}],
-		"value-keyword-case": [
-			"lower",
-			{
-				camelCaseSvgKeywords: true,
-				ignoreKeywords: ["Transparent", "Text"]
-			},
-		],
-		"selector-not-notation": "complex",
-		"order/order": null,
-		"order/properties-order": null,
+
+		/** --------------------------------------------------------------
+		 * Plugins
+		 * -------------------------------------------------------------- */
+		"csstools/use-logical": true,
 		"header/header": [
-			join(__dirname, "COPYRIGHT"),
+			"./COPYRIGHT",
 			{
 				nonMatchingTolerance: 0.8,
 			},
@@ -107,9 +117,7 @@ module.exports = {
 				fix: true,
 			},
 		],
-		"csstools/use-logical": true,
-		/** Performance */
-		// "plugin/no-low-performance-animation-properties": [true, { severity: "warning" }],
+		"order/order": ["custom-properties", "declarations"],
 		"plugin/selector-bem-pattern": [
 			{
 				preset: "suit",
@@ -121,19 +129,16 @@ module.exports = {
 				severity: "warning",
 			},
 		],
-		/** Local/custom plugins */
-		"spectrum-tools/no-missing-var": true,
-		/** Only used for legacy themes */
-		"spectrum-tools/theme-alignment": null,
-		/** @note this enables reporting of unused variables in a file */
-		"spectrum-tools/no-unused-custom-properties": [
+		/** Performance */
+		"plugin/no-low-performance-animation-properties": [
 			true,
-			{
-				ignoreList: [/^--mod-/, /^--highcontrast-/, /^--system-/],
-				disableFix: true,
-				severity: "warning",
-			},
+			{ severity: "warning" },
 		],
+
+		/** --------------------------------------------------------------
+		 * Local/custom plugins
+		 * -------------------------------------------------------------- */
+		"spectrum-tools/no-missing-var": true,
 		"spectrum-tools/no-unknown-custom-properties": [
 			true,
 			{
@@ -150,10 +155,22 @@ module.exports = {
 				severity: "warning",
 			},
 		],
+		/** @note this enables reporting of unused variables in a file */
+		"spectrum-tools/no-unused-custom-properties": [
+			true,
+			{
+				ignoreList: [/^--mod-/, /^--highcontrast-/, /^--system-/],
+				disableFix: true,
+				severity: "warning",
+			},
+		],
 	},
+	/** --------------------------------------------------------------
+	 * Overrides
+	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["components/*/themes/*.css", "tokens/**/*.css"],
+			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "tokens/**/*.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
@@ -163,16 +180,9 @@ module.exports = {
 			files: ["site/**/*.css", ".storybook/assets/*.css"],
 			rules: {
 				"custom-property-pattern": null,
+				"color-function-notation": null,
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
-				"color-function-notation": null,
-			},
-		},
-		{
-			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "!components/*/themes/spectrum-two.css"],
-			rules: {
-				"spectrum-tools/theme-alignment": true,
 			},
 		},
 	],
