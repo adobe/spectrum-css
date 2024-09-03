@@ -26,6 +26,7 @@ export const Template = ({
 				[rootClass]: true,
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
+				"is-focused": isFocused,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -40,7 +41,6 @@ export const Template = ({
 			<input
 				class=${classMap({
 					[`${rootClass}-input`]: true,
-					["is-Focus"]: isFocused,
 				})}
 				type="range"
 				min="0"
