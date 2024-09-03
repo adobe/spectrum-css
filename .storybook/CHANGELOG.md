@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.10.0
+
+### Minor Changes
+
+- [#3067](https://github.com/adobe/spectrum-css/pull/3067) [`e1a7866`](https://github.com/adobe/spectrum-css/commit/e1a78669920f816966cc0249a7beed032e681b17) Thanks [@cdransf](https://github.com/cdransf)! - Applies the sb-unstyled className to fix the version number alignment on Storybook docs pages.
+
 ## 10.9.1
 
 ### Patch Changes
