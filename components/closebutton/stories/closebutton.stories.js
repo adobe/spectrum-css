@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, size, staticColor } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { CloseButtonGroup } from "./closebutton.test.js";
 
 /**
@@ -23,7 +23,7 @@ export default {
 		actions: {
 			handles: ["click .spectrum-CloseButton"],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

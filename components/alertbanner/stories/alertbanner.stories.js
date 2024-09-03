@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { AlertBannerGroup } from "./alertbanner.test.js";
 
 /**
@@ -50,7 +50,7 @@ export default {
 		actions: {
 			handles: ["click .spectrum-AlertBanner button"],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

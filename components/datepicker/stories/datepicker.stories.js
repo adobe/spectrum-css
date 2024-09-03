@@ -1,7 +1,7 @@
 import { default as CalendarStories } from "@spectrum-css/calendar/stories/calendar.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isInvalid, isOpen, isQuiet, isReadOnly, isRequired, isValid } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { DatePickerGroup } from "./datepicker.test.js";
 import { Template } from "./template.js";
 
@@ -68,12 +68,12 @@ export default {
 				...(CalendarStories.parameters.actions.handles ?? [])
 			],
 		},
-		componentVersion: version,
 		docs: {
 			story: {
 				height: "50px"
 			}
 		},
+		packageJson: pkgJson,
 	},
 };
 

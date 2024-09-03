@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { isDisabled, isFocused, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { SliderGroup } from "./slider.test.js";
 import { Template } from "./template.js";
 
@@ -139,7 +139,7 @@ export default {
 				"change .spectrum-Slider-input",
 			],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { SplitViewGroup } from "./splitview.test.js";
 import { Template } from "./template.js";
 
@@ -78,7 +78,7 @@ export default {
 		panelStyles: ["width: 304px;", "flex: 1;"],
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 
