@@ -47,17 +47,6 @@ export const Template = ({
 		</nav>
 	`;
 
-	// @todo This variant should be deprecated, as it uses the deprecated SplitButton component. 
-	const buttonVariant = SplitButton({
-		position: "left",
-		variant: "accent",
-		label: "Next",
-		iconName: "ChevronLeft100",
-		labelIconName: "ChevronRight100",
-		customFirstButtonClasses: ["spectrum-Pagination-prevButton"],
-		customLastButtonClasses: ["spectrum-Pagination-nextButton"]
-	}, context);
-
 	const listingVariant = html`
 		<nav
 			class=${classMap({
@@ -102,8 +91,6 @@ export const Template = ({
 	if (variant === "explicit") {
 		return explicitVariant;
 	}
-	else if (variant == "button") {
-		return buttonVariant;
-	}
+
 	return listingVariant;
 };

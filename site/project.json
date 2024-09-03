@@ -49,13 +49,13 @@
 		"start": {
 			"cache": false,
 			"dependsOn": ["build"],
-			"inputs": ["core", "tools"],
-			"outputs": ["{workspaceRoot}/dist"],
 			"executor": "nx:run-commands",
+			"inputs": ["core", "tools"],
 			"options": {
-				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node -e \"require('./tasks').server()\""],
+				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node -e \"require('./tasks/index.js').server()\""],
 				"cwd": "{projectRoot}"
-			}
+			},
+			"outputs": ["{workspaceRoot}/dist"]
 		}
 	}
 }

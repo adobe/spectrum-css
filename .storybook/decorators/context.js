@@ -50,8 +50,7 @@ export const withContextWrapper = makeDecorator({
 
 			for (const container of fetchContainers(id, viewMode === "docs")) {
 				// Start by attaching the appropriate tokens to the container
-				toggleStyles(container, "tokens", tokens, isModern && !isRaw);
-				toggleStyles(container, "tokens-legacy", legacyTokens, !isModern && !isRaw);
+				toggleStyles(container, "tokens", isModern ? tokens : legacyTokens, !isRaw);
 
 				// Check if the container has a static color element
 				const hasStaticElement = container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack, .${rootClass}--overBackground)`);
@@ -64,31 +63,35 @@ export const withContextWrapper = makeDecorator({
 				}
 
 				// Every container gets the spectrum class
-				container.classList.toggle("spectrum", !isRaw);
+				container.classList.toggle("spectrum", true);
 
 				// S1 and S1 Express get the legacy class
-				container.classList.toggle("spectrum--legacy", !isRaw && !isModern);
+				container.classList.toggle("spectrum--legacy", !isModern);
+
 				// Express only gets the express class
-				container.classList.toggle("spectrum--express", !isRaw && isExpress);
+				container.classList.toggle("spectrum--express", isExpress);
 
 				// Darkest is deprecated in Spectrum 2
-				if (isModern && color === "darkest") color = "dark";
+				if (isModern && color === "darkest") {
+					/* eslint-disable no-console -- notify that darkest was deprecated in S2 */
+					console.warn("The 'darkest' color is deprecated in Spectrum 2. Please use 'dark' instead.");
+					color = "dark";
+				}
 
 				for (let c of ["light", "dark", "darkest"]) {
 					// Force light or dark mode if the static color is set
-                    const isColor = c === staticColorSettings[staticKey]?.color || !staticKey && c === color;
-
+					const isColor = staticKey && c === staticColorSettings[staticKey]?.color || c === color;
 					container.classList.toggle(`spectrum--${c}`, isColor && !isRaw);
 				}
 
 				for (const s of ["medium", "large"]) {
-                    const isScale = s === scale;
+					const isScale = s === scale;
 					container.classList.toggle(`spectrum--${s}`, isScale && !isRaw);
 				}
 
 				// Start by removing the background color from the container and then add it back if needed
 				container.style.removeProperty("background");
-				if (hasStaticElement && staticKey && staticColorSettings[staticKey]) {
+				if (staticKey && staticColorSettings[staticKey]) {
 					container.style.background = staticColorSettings[staticKey].background;
 				}
 			}
