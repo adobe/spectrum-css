@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
 
 /**
@@ -42,7 +42,7 @@ export default {
 		swatchColor: "rgb(174, 216, 230)"
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

@@ -1,7 +1,7 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isPending, size, staticColor } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { ButtonGroups } from "./button.test.js";
 
 /**
@@ -73,7 +73,7 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Button"],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

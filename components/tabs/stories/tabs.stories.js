@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isEmphasized, isQuiet, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { TabsGroups } from "./tabs.test.js";
 import { Template } from "./template.js";
 
@@ -77,7 +77,7 @@ export default {
 		actions: {
 			handles: [".spectrum-Tabs-item"],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

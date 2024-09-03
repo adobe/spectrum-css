@@ -1,7 +1,7 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes, viewports } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isOpen, isSelected, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { MenuItemGroup, MenuTraySubmenu, MenuWithVariants } from "./menu.test.js";
 import { Template } from "./template.js";
 
@@ -180,12 +180,12 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Menu-item"],
 		},
-		componentVersion: version,
 		docs: {
 			story: {
 				height: "300px"
 			}
 		},
+		packageJson: pkgJson,
 	},
 };
 

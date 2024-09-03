@@ -1,3 +1,4 @@
+import pkgJson from "@spectrum-css/splitbutton/package.json";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
@@ -63,7 +64,7 @@ export default {
 		status: {
 			type: "deprecated"
 		},
-		componentVersion: "8.1.2",
+		packageJson: pkgJson,
 	},
 };
 

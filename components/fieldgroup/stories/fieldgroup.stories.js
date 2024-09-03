@@ -2,7 +2,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isReadOnly, isRequired } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { FieldGroupSet } from "./fieldgroup.test.js";
 import { Template } from "./template.js";
 
@@ -72,7 +72,7 @@ export default {
 				...(RadioSettings.parameters?.actions?.handles ?? [])
 			],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 	tags: ["!autodocs"],
 };

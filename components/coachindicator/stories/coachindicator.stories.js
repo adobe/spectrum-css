@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { CoachIndicatorGroup } from "./coachindicator.test.js";
 import { AllVariantsCoachIndicatorGroup } from "./template";
 
@@ -31,7 +31,7 @@ export default {
 		variant: "default",
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

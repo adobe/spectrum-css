@@ -2,7 +2,7 @@ import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/tem
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { PopoverGroup } from "./popover.test.js";
 import { Template } from "./template.js";
 
@@ -75,7 +75,7 @@ export default {
 	},
 	parameters: {
 		layout: "centered",
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

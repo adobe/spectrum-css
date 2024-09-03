@@ -55,10 +55,10 @@ export function fetchToken(key, fallback = undefined, { color, scale } = {}) {
 	const theme = useTheme() ?? {};
 
     // If the color or scale is not provided, use the theme values or a fallback
-    if (!color && theme.color) color = theme.color;
+    if (typeof color !== "string" && typeof theme.color == "string") color = theme.color;
     else if (!color) color = "light";
 
-    if (!scale && theme.scale) scale = theme.scale;
+    if (typeof scale !== "string" && typeof theme.scale == "string") scale = theme.scale;
     else if (!scale) scale = "medium";
 
     // Create a platform context based on the scale (platform used in the token data)

@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isRequired, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { FieldLabelGroup } from "./fieldlabel.test.js";
 
 /**
@@ -41,7 +41,7 @@ export default {
 		isRequired: false,
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

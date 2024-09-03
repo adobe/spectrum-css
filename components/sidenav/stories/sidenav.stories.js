@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { SideNavGroup } from "./sidenav.test.js";
 import { Template } from "./template.js";
 
@@ -58,7 +58,7 @@ export default {
 		],
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 
