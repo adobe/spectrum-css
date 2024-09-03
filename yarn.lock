@@ -5245,7 +5245,7 @@ __metadata:
     "@storybook/web-components-vite": "npm:^8.2.9"
     "@whitespace/storybook-addon-html": "npm:^6.1.1"
     chromatic: "npm:^11.4.1"
-    lit: "npm:^3.1.3"
+    lit: "npm:^3.2.0"
     lodash-es: "npm:^4.17.21"
     postcss: "npm:^8.4.41"
     prettier: "npm:^3.2.5"
@@ -13971,14 +13971,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit-element@npm:^4.0.4":
-  version: 4.0.6
-  resolution: "lit-element@npm:4.0.6"
+"lit-element@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "lit-element@npm:4.1.0"
   dependencies:
     "@lit-labs/ssr-dom-shim": "npm:^1.2.0"
     "@lit/reactive-element": "npm:^2.0.4"
-    lit-html: "npm:^3.1.2"
-  checksum: 10c0/f96c0ac66eeb06d15b734f6eaf5ea2ff51356f88bde4d7058c29b1f60f542b092e579240082a3363c41e25b7a296d7d5f2a64165672b2adef5a413f49710b1f9
+    lit-html: "npm:^3.2.0"
+  checksum: 10c0/0394b1fda00495754d505fc63993221bd65195dab8fb2888ce3e088ad97b5ba457a0993b871a92bfafe17c0d8cfb7c190bce22ea191e1d0b47b6ee9991cc617d
   languageName: node
   linkType: hard
 
@@ -13991,12 +13991,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit-html@npm:^3.1.2":
-  version: 3.1.4
-  resolution: "lit-html@npm:3.1.4"
+"lit-html@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "lit-html@npm:3.2.0"
   dependencies:
     "@types/trusted-types": "npm:^2.0.2"
-  checksum: 10c0/538c084ab1d39b59c5c094f7ad7a8bc5c41a17b46f375bb841b304263c1f2546065eeace6e330c20f1f15f2c285b66b46d140e2be618de2e65610c58b53a5af3
+  checksum: 10c0/cc0d58fc581d0d838361b3e46a34113ec458822c6600e6eb8dac9a671e4d983c0d34af07a1b3b60cc257e91b7e87760044779328f14d46742915d2c46fe68688
   languageName: node
   linkType: hard
 
@@ -14011,14 +14011,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit@npm:^3.1.3":
-  version: 3.1.4
-  resolution: "lit@npm:3.1.4"
+"lit@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "lit@npm:3.2.0"
   dependencies:
     "@lit/reactive-element": "npm:^2.0.4"
-    lit-element: "npm:^4.0.4"
-    lit-html: "npm:^3.1.2"
-  checksum: 10c0/afa4954638e80f627c60bcbd2d800af710b9b3394a36cee9865b5ea5de95b4ec6d33de43ac0bf256b5b7c981d45c7c8ac0c7ddba6fcbd0c67d65986b0279b960
+    lit-element: "npm:^4.1.0"
+    lit-html: "npm:^3.2.0"
+  checksum: 10c0/ed2251eba7b13e71a54b7f53bdd899778c54f29d531d5d3b97d55fa1f4298e7ff4992cca414998501ff462d4976594148513cf6fe113c22de930c2898971ecd8
   languageName: node
   linkType: hard
 
