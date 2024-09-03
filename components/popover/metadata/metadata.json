@@ -83,7 +83,19 @@
     ".spectrum-Popover--withTip.spectrum-Popover--top-right .spectrum-Popover-tip",
     ".spectrum-Popover--withTip.spectrum-Popover--top-start .spectrum-Popover-tip",
     ".spectrum-Popover.is-open",
-    ".spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle"
+    ".spectrum-Popover.spectrum-Popover--withTip .spectrum-Popover-tip .spectrum-Popover-tip-triangle",
+    "[dir=\"rtl\"] .spectrum-Popover--end-bottom.is-open",
+    "[dir=\"rtl\"] .spectrum-Popover--end-top.is-open",
+    "[dir=\"rtl\"] .spectrum-Popover--end.is-open",
+    "[dir=\"rtl\"] .spectrum-Popover--start-bottom.is-open",
+    "[dir=\"rtl\"] .spectrum-Popover--start-top.is-open",
+    "[dir=\"rtl\"] .spectrum-Popover--start.is-open",
+    "[dir=\"rtl\"] .spectrum-Popover--withTip.spectrum-Popover--end .spectrum-Popover-tip",
+    "[dir=\"rtl\"] .spectrum-Popover--withTip.spectrum-Popover--end-bottom .spectrum-Popover-tip",
+    "[dir=\"rtl\"] .spectrum-Popover--withTip.spectrum-Popover--end-top .spectrum-Popover-tip",
+    "[dir=\"rtl\"] .spectrum-Popover--withTip.spectrum-Popover--start .spectrum-Popover-tip",
+    "[dir=\"rtl\"] .spectrum-Popover--withTip.spectrum-Popover--start-bottom .spectrum-Popover-tip",
+    "[dir=\"rtl\"] .spectrum-Popover--withTip.spectrum-Popover--start-top .spectrum-Popover-tip"
   ],
   "modifiers": [
     "--mod-overlay-animation-duration",

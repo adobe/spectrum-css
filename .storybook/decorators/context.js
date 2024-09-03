@@ -63,13 +63,13 @@ export const withContextWrapper = makeDecorator({
 				}
 
 				// Every container gets the spectrum class
-				container.classList.toggle("spectrum", true);
+				container.classList.toggle("spectrum", !isRaw);
 
 				// S1 and S1 Express get the legacy class
-				container.classList.toggle("spectrum--legacy", !isModern);
+				container.classList.toggle("spectrum--legacy", !isModern && !isRaw);
 
 				// Express only gets the express class
-				container.classList.toggle("spectrum--express", isExpress);
+				container.classList.toggle("spectrum--express", isExpress && !isRaw);
 
 				// Darkest is deprecated in Spectrum 2
 				if (isModern && color === "darkest") {
@@ -95,7 +95,7 @@ export const withContextWrapper = makeDecorator({
 					container.style.background = staticColorSettings[staticKey].background;
 				}
 			}
-		}, [color, context, staticColor, scale, viewMode, rootClass, staticColorSettings]);
+		}, [color, context, staticColor, scale, viewMode, rootClass, tokens, legacyTokens, staticColorSettings]);
 
 		return StoryFn(data);
 	},

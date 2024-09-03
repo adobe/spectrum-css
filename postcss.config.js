@@ -92,6 +92,7 @@ module.exports = ({
 					"logical-properties-and-values": false,
 					clamp: true,
 					"color-functional-notation": true,
+					"dir-pseudo-class": { preserve: true },
 					"nesting-rules": { noIsPseudoSelector: true },
 					// https://github.com/jsxtools/focus-within
 					"focus-within-pseudo-class": true,
@@ -111,9 +112,7 @@ module.exports = ({
 						colormin: false,
 						reduceIdents: false,
 						discardUnused: false,
-						discardComments: {
-							removeAll: true,
-						},
+						discardComments: { removeAll: true },
 						// @todo yarn add -DW css-declaration-sorter
 						cssDeclarationSorter: false, // @todo { order: "smacss" }
 						normalizeWhitespace: minify
@@ -132,6 +131,11 @@ module.exports = ({
 				ignorePath: join(__dirname, ".stylelintignore"),
 				reportNeedlessDisables: lint,
 				reportInvalidScopeDisables: lint,
+			},
+			"postcss-licensing": {
+				filename: "COPYRIGHT",
+				cwd: __dirname,
+				skipIfEmpty: true,
 			},
 			"postcss-reporter": verbose
 				? {

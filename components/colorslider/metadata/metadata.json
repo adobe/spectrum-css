@@ -13,7 +13,8 @@
     ".spectrum-ColorSlider.is-disabled",
     ".spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-checkerboard",
     ".spectrum-ColorSlider.is-disabled .spectrum-ColorSlider-gradient",
-    ".spectrum-ColorSlider.is-focused"
+    ".spectrum-ColorSlider.is-focused",
+    "[dir=\"rtl\"] .spectrum-ColorSlider-gradient"
   ],
   "modifiers": [
     "--mod-color-slider-background-color-disabled",

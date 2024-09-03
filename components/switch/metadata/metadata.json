@@ -72,7 +72,8 @@
     ".spectrum-Switch:hover .spectrum-Switch-input[disabled] ~ .spectrum-Switch-label",
     ".spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch",
     ".spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked + .spectrum-Switch-switch:before",
-    ".spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked ~ .spectrum-Switch-label"
+    ".spectrum-Switch:hover .spectrum-Switch-input[disabled]:checked ~ .spectrum-Switch-label",
+    "[dir=\"rtl\"] .spectrum-Switch-input:checked + .spectrum-Switch-switch:before"
   ],
   "modifiers": [
     "--mod-animation-duration-100",

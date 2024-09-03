@@ -34,7 +34,8 @@
     ".spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:focus-visible",
     ".spectrum-Breadcrumbs-itemLink[tabindex=\"0\"]:hover",
     ".spectrum-Breadcrumbs-itemSeparator",
-    ".spectrum-Breadcrumbs-itemSeparator:dir(rtl)"
+    ".spectrum-Breadcrumbs-itemSeparator:dir(rtl)",
+    "[dir=\"rtl\"] .spectrum-Breadcrumbs-itemSeparator"
   ],
   "modifiers": [
     "--mod-breadcrumbs-action-button-color",

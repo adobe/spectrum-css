@@ -136,7 +136,9 @@
     ".spectrum-Menu.js-focus-within .spectrum-Menu-item--collapsible.is-open[focus-within]",
     ".spectrum-Menu:lang(ja)",
     ".spectrum-Menu:lang(ko)",
-    ".spectrum-Menu:lang(zh)"
+    ".spectrum-Menu:lang(zh)",
+    "[dir=\"rtl\"] .spectrum-Menu-chevron",
+    "[dir=\"rtl\"] .spectrum-Menu-item"
   ],
   "modifiers": [
     "--mod-menu-back-heading-color",

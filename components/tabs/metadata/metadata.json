@@ -50,7 +50,9 @@
     ".spectrum-Tabs.spectrum-Tabs--sizeL",
     ".spectrum-Tabs.spectrum-Tabs--sizeS",
     ".spectrum-Tabs.spectrum-Tabs--sizeXL",
-    ".spectrum-Tabs.spectrum-Tabs--vertical.spectrum-Tabs--compact .spectrum-Tabs-item:before"
+    ".spectrum-Tabs.spectrum-Tabs--vertical.spectrum-Tabs--compact .spectrum-Tabs-item:before",
+    "[dir=\"rtl\"] .spectrum-Tabs--vertical",
+    "[dir=\"rtl\"] .spectrum-Tabs--vertical-right"
   ],
   "modifiers": [
     "--mod-tabs-animation-duration",

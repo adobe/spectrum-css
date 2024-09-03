@@ -45,7 +45,8 @@
     ".spectrum-Radio:hover .spectrum-Radio-label",
     ".spectrum-Radio:lang(ja)",
     ".spectrum-Radio:lang(ko)",
-    ".spectrum-Radio:lang(zh)"
+    ".spectrum-Radio:lang(zh)",
+    "[dir=\"rtl\"] .spectrum-Radio .spectrum-Radio-button:after"
   ],
   "modifiers": [
     "--mod-radio-animation-duration",

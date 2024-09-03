@@ -18,7 +18,8 @@
     ".spectrum-Toast-content:lang(ja)",
     ".spectrum-Toast-content:lang(ko)",
     ".spectrum-Toast-content:lang(zh)",
-    ".spectrum-Toast-typeIcon"
+    ".spectrum-Toast-typeIcon",
+    "[dir=\"rtl\"] .spectrum-Toast-body .spectrum-Button"
   ],
   "modifiers": [
     "--mod-toast-background-color-default",
