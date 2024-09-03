@@ -48,7 +48,7 @@
 			}
 		},
 		{
-			"files": ["metadata.json"],
+			"files": ["metadata.json", "schemas/*.json"],
 			"parser": "jsonc-eslint-parser",
 			"extends": ["plugin:jsonc/recommended-with-jsonc"],
 			"rules": {
