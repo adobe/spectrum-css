@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.2.2
+
+### Patch Changes
+
+- [#3012](https://github.com/adobe/spectrum-css/pull/3012) [`78c98bf`](https://github.com/adobe/spectrum-css/commit/78c98bf15bfc82656acd14a4a22fc537f722b60d) Thanks [@cdransf](https://github.com/cdransf)! - Modify the stepper and textfield css to allow the .is-disabled state and class to properly disable the border behavior that would occur when a disabled stepper was hovered. It also leverages the outline state for focused components to align with the state currently used by button components.
+
 ## 7.2.1
 
 ### Patch Changes
