@@ -497,8 +497,8 @@
 	}
 
 	/* Invalid hover */
-	.is-invalid:hover &,
-	.is-invalid &:hover {
+	.is-invalid:hover:not(.is-disabled) &,
+	.is-invalid &:hover:not(.is-disabled) {
 		border-color: var(--highcontrast-textfield-border-color-invalid-hover, var(--mod-textfield-border-color-invalid-hover, var(--spectrum-textfield-border-color-invalid-hover)));
 	}
 

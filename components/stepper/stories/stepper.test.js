@@ -41,7 +41,19 @@ export const StepperGroup = Variants({
 		{
 			testHeading: "Invalid + keyboard-focused",
 			isInvalid: true,
+			isKeyboardFocused: true,
+		},
+		{
+			testHeading: "Invalid + disabled + focused",
+			isInvalid: true,
+			isDisabled: true,
 			isFocused: true,
+		},
+		{
+			testHeading: "Invalid + disabled + keyboard-focused",
+			isInvalid: true,
+			isDisabled: true,
+			isKeyboardFocused: true,
 		},
 	]
 });
