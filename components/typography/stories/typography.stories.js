@@ -1,11 +1,24 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
-import { Template } from "./template.js";
+import {
+	DocsBodyVariants,
+	DocsCodeVariants,
+	DocsDetailVariants,
+	DocsHeadingBodyPairing,
+	DocsHeadingVariants,
+	DocsInternationalizedBodyVariants,
+	DocsInternationalizedCodeVariants,
+	DocsInternationalizedDetailVariants,
+	DocsInternationalizedHeadingBodyPairing,
+	DocsInternationalizedHeadingVariants,
+	Template
+} from "./template.js";
 import { TypographyGroup } from "./typography.test.js";
 
 /**
- * Spectrum typography is broken out into several separate components.
+ * Spectrum typography is broken out into several separate components: heading, body, detail, and code. Internationalized typography examples are also shown.
  */
 export default {
 	title: "Typography",
@@ -68,6 +81,9 @@ export default {
 	},
 };
 
+/**
+ * By default, Typography components do not include outer margins. If you would like to add margins, simply add the `.spectrum-Typography` class to your container, and every typography component inside of your container will have the correct margins.
+ */
 export const Default = TypographyGroup.bind({});
 Default.args = {
 	content: [
@@ -114,57 +130,187 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Heading = Template.bind({});
-Heading.tags = ["!dev"];
-Heading.args = {
+
+// ====== Docs: Sizing ====== //
+export const HeadingSizes = (args, context) => Sizes({
+	Template,
+	direction: "column",
+	...args,
+}, context);
+HeadingSizes.tags = ["!dev"];
+HeadingSizes.args = {
 	semantics: "heading",
 	content: ["Aliquet mauris eu"],
 };
-Heading.parameters = {
+HeadingSizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Body = Template.bind({});
-Body.tags = ["!dev"];
-Body.argTypes = {
+/**
+ * Body is primarily used for Spectrum components and for blocks of text.
+ */
+export const BodySizes = (args, context) => Sizes({
+	Template,
+	direction: "column",
+	...args,
+}, context);
+BodySizes.argTypes = {
 	size: size(["xs", "s", "m", "l", "xl", "xxl", "xxxl"]),
 };
-Body.args = {
+BodySizes.tags = ["!dev"];
+BodySizes.args = {
 	semantics: "body",
 	content: [
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.",
 	],
 };
-Body.parameters = {
+BodySizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Detail = Template.bind({});
-Detail.argTypes = {
+/**
+ * When typography elements are paired, such as with heading and body below, clear content hierarchies are shown.
+ * 
+ * Note that the body component is not available in XXS, but the XXS heading can be paired with the XS body as seen here.
+ */
+export const HeadingBodyHierarchy = (args, context) => Sizes({
+	Template: DocsHeadingBodyPairing,
+	direction: "column",
+	withBorder: false,
+	...args,
+}, context);
+HeadingBodyHierarchy.argTypes = {
+	size: size(["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"]),
+};
+HeadingBodyHierarchy.tags = ["!dev"];
+HeadingBodyHierarchy.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const DetailSizes = (args, context) => Sizes({
+	Template,
+	direction: "column",
+	...args,
+}, context);
+DetailSizes.argTypes = {
 	size: size(["s", "m", "l", "xl"]),
 	weight: {
 		options: ["light"],
 		if: { arg: "semantics", eq: "detail"},
 	},
 };
-Detail.args = {
+DetailSizes.args = {
 	semantics: "detail",
 	content: ["Aliquet Mauris Eu"],
 };
-Detail.tags = ["!dev"];
-Detail.parameters = {
+DetailSizes.tags = ["!dev"];
+DetailSizes.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Code = Template.bind({});
-Code.tags = ["!dev"];
-Code.argTypes = {
+export const CodeSizes = (args, context) => Sizes({
+	Template,
+	direction: "column",
+	...args,
+}, context);
+CodeSizes.tags = ["!dev"];
+CodeSizes.argTypes = {
 	size: size(["xs", "s", "m", "l", "xl"]),
 };
-Code.args = {
+CodeSizes.args = {
 	semantics: "code",
 	content: ["console.log('Hello World!');"],
 };
-Code.parameters = {
+CodeSizes.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// ====== Docs: Glyphs and Variants ====== //
+/**
+ * Heading is a typography component used to create various levels of hierarchies between text.
+ */
+export const HeadingVariants = DocsHeadingVariants.bind({});
+HeadingVariants.tags = ["!dev"];
+HeadingVariants.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Body is a typography component primarily used within Spectrum components and for blocks of text.
+ */
+export const BodyVariants = DocsBodyVariants.bind({});
+BodyVariants.tags = ["!dev"];
+BodyVariants.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ *  Detail is used for disclosing extra information or smaller items in hierarchical relationships of text.
+ */
+export const DetailVariants = DocsDetailVariants.bind({});
+DetailVariants.tags = ["!dev"];
+DetailVariants.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Code is used for text that represents code.
+ * 
+ * Multi-line blocks of code may be wrapped with `<pre>` tags to allow block formatting.
+ */
+export const CodeVariants = DocsCodeVariants.bind({});
+CodeVariants.tags = ["!dev"];
+CodeVariants.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+// ====== Docs: Internationalization ====== //
+/**
+ * We should note that Hebrew and Arabic are rtl languages somewhere over here.
+ */
+export const InternationalizedHeading = DocsInternationalizedHeadingVariants.bind({});
+InternationalizedHeading.storyName = "Internationalized Heading";
+InternationalizedHeading.tags = ["!dev"];
+InternationalizedHeading.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const InternationalizedBody = DocsInternationalizedBodyVariants.bind({});
+InternationalizedBody.storyName = "Internationalized Body";
+InternationalizedBody.tags = ["!dev"];
+InternationalizedBody.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * Typographic pairings of heading and body using the Adobe Clean Han font.
+ *
+ * Note that the body component is not available in XXS, but the XXS heading can be paired with the XS body as seen here.
+ */
+export const InternationalizedHeadingBodyHierarchy = (args, context) => Sizes({
+	Template: DocsInternationalizedHeadingBodyPairing,
+	direction: "column",
+	withBorder: false,
+	...args,
+}, context);
+InternationalizedHeadingBodyHierarchy.argTypes = {
+	size: size(["xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"]),
+};
+InternationalizedHeadingBodyHierarchy.tags = ["!dev"];
+InternationalizedHeadingBodyHierarchy.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const InternationalizedDetail = DocsInternationalizedDetailVariants.bind({});
+InternationalizedDetail.storyName = "Internationalized Detail";
+InternationalizedDetail.tags = ["!dev"];
+InternationalizedDetail.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const InternationalizedCode = DocsInternationalizedCodeVariants.bind({});
+InternationalizedCode.storyName = "Internationalized Code";
+InternationalizedCode.tags = ["!dev"];
+InternationalizedCode.parameters = {
 	chromatic: { disableSnapshot: true },
 };
