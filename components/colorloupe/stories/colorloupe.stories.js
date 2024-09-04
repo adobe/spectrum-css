@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isOpen } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { ColorLoupeGroup } from "./colorloupe.test.js";
 
 /**
@@ -31,12 +31,12 @@ export default {
 		}
 	},
 	parameters: {
-		componentVersion: version,
 		docs: {
 			story: {
 				height: "100px"
 			}
 		},
+		packageJson: pkgJson,
 	},
 };
 

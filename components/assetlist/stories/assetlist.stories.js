@@ -1,6 +1,6 @@
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { AssetListGroup } from "./assetlist.test.js";
 
 /**
@@ -19,7 +19,7 @@ export default {
 		actions: {
 			handles: [...(Checkbox.parameters?.actions?.handles ?? [])],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

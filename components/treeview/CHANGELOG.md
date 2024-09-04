@@ -1,5 +1,15 @@
 # Change Log
 
+## 10.2.2
+
+### Patch Changes
+
+- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)! - Improve changeset suggestions by using exports instead of files in component packages
+
+- Updated dependencies [[`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277)]:
+  - @spectrum-css/thumbnail@6.1.3
+  - @spectrum-css/icon@7.1.3
+
 ## 10.2.1
 
 ### Patch Changes

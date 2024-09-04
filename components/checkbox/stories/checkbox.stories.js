@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isChecked, isDisabled, isEmphasized, isIndeterminate, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { DocsCheckboxGroup, AllVariantsCheckboxGroup, } from "./template";
 import { CheckboxGroup } from "./checkbox.test.js";
 
@@ -50,7 +50,7 @@ export default {
 		actions: {
 			handles: ["click input[type=\"checkbox\"]"],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

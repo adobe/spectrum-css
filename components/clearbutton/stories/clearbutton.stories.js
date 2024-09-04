@@ -1,7 +1,7 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isQuiet, size, staticColor } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { ClearButtonGroup } from "./clearbutton.test.js";
 import { Template } from "./template";
 
@@ -58,7 +58,7 @@ export default {
 		isQuiet: false,
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

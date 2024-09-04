@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isChecked, isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
 
 /**
@@ -48,7 +48,7 @@ export default {
 			handles: ["click input[type=\"radio\"]"],
 
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

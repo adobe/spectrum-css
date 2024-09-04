@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { SteplistGroup } from "./steplist.test.js";
 import { DocsSteplistGroup } from "./template";
 
@@ -73,7 +73,7 @@ export default {
 		],
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

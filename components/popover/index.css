@@ -42,6 +42,11 @@
 
 	/* pointer tip - spacing to edge will center pointer to source - apply in markup by setting '--spectrum-popover-pointer-edge-offset' value == half of source */
 	--spectrum-popover-pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - (var(--spectrum-popover-tip-width) / 2));
+
+	/* Max menu block size */
+	--spectrum-popover-max-block-size: 300px;
+	
+	max-block-size: var(--spectrum-popover-max-block-size);
 }
 
 /* windows high contrast mode */

@@ -1,7 +1,7 @@
 import ActionButtonStories from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { CalendarGroup } from "./calendar.test.js";
 import { Template } from "./template.js";
 
@@ -95,7 +95,7 @@ export default {
 				...(ActionButtonStories.parameters.actions.handles ?? [])
 			],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 	tags: ["!autodocs"],
 };

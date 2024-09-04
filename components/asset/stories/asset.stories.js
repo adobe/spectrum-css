@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { AssetGroup } from "./asset.test.js";
 import { Template } from "./template.js";
 
@@ -35,7 +35,7 @@ export default {
 		rootClass: "spectrum-Asset",
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 	tags: ["!autodocs"],
 };

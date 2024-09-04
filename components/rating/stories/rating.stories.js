@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isEmphasized, isFocused, isReadOnly } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { RatingGroup } from "./rating.test.js";
 import { Template } from "./template.js";
 
@@ -42,7 +42,7 @@ export default {
 		value: 3,
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

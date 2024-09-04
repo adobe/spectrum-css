@@ -1,7 +1,7 @@
 import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { ButtonGroup } from "./buttongroup.test.js";
 
 /**
@@ -38,7 +38,7 @@ export default {
 		vertical: false,
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 
