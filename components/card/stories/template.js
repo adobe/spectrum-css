@@ -96,6 +96,7 @@ export const Template = ({
               class=${classMap({ [`${rootClass}-coverPhoto`]: true })}
               style=${styleMap({ "background-image": `url(${image})` })}
             ></div>
+            <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Card-divider">
           `
         )
       )}
