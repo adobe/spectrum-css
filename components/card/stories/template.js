@@ -180,7 +180,7 @@ export const Template = ({
           </div>`
       )}
       ${when(
-        footer,
+        footer && !isQuiet,
         () => html`
           <div
             class=${classMap({
