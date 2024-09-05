@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.0-snap-test-20240905205945
+
+### Patch Changes
+
+- [#3076](https://github.com/adobe/spectrum-css/pull/3076) [`c354ca8`](https://github.com/adobe/spectrum-css/commit/c354ca8427a92c15e8c52cd71c561a34a4cf0634) Thanks [@pfulton](https://github.com/pfulton)! - Temporary change for testing the snapshot workflow
+
 ## 8.1.2
 
 ### Patch Changes
