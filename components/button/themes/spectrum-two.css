@@ -138,10 +138,10 @@
 			--spectrum-button-border-color-down: transparent;
 			--spectrum-button-border-color-focus: transparent;
 
-			--spectrum-button-content-color-default: var(--spectrum-button-content-color-primary-default);
-			--spectrum-button-content-color-hover: var(--spectrum-button-content-color-primary-default);
-			--spectrum-button-content-color-down: var(--spectrum-button-content-color-primary-default);
-			--spectrum-button-content-color-focus: var(--spectrum-button-content-color-primary-default);
+			--spectrum-button-content-color-default: var(--spectrum-gray-25);
+			--spectrum-button-content-color-hover: var(--spectrum-gray-25);
+			--spectrum-button-content-color-down: var(--spectrum-gray-25);
+			--spectrum-button-content-color-focus: var(--spectrum-gray-25);
 
 			--spectrum-button-background-color-disabled: var(--spectrum-disabled-background-color);
 			--spectrum-button-border-color-disabled: transparent;
