@@ -1,4 +1,6 @@
+import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { Variants } from "@spectrum-css/preview/decorators";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { Template } from "./template.js";
 
 export const PopoverGroup = Variants({
@@ -33,6 +35,8 @@ export const PopoverGroup = Variants({
 
 			let wrapperStyles = {
 				"justify-content": "center",
+				// Makes sure that padding does not add to the min-block-size set through the use of the story's parameters.docs.story.height setting.
+				"box-sizing": "border-box",
 			};
 			switch (position) {
 				case "top":
@@ -116,11 +120,38 @@ export const PopoverGroup = Variants({
 				testHeading: `Position: ${position}`,
 				wrapperStyles,
 				position,
-				withTestContainer: true,
 				popoverHeight,
 				popoverWidth,
 			};
 		}),
+		{
+			testHeading: "Dialog style content",
+			position: "bottom-start",
+			wrapperStyles: {
+				"min-inline-size": "500px",
+				"align-items": "start",
+			},
+			content: [
+				(passthroughs, context) => Dialog({
+					showModal: false,
+					size: ["small"],
+					isDismissable: false,
+					heading: "Example heading",
+					hasFooter: false,
+					footer: [""],
+					content: [
+						() => Typography({
+							semantics: "body",
+							size: "m",
+							content: [
+								"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+							]
+						}),
+					],
+					...passthroughs,
+				}, context),
+			],
+		},
 	],
 	stateData: [
 		{
