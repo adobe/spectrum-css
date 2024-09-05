@@ -125,7 +125,6 @@
     "--mod-picker-icon-color-key-focus",
     "--mod-picker-inline-size",
     "--mod-picker-line-height",
-    "--mod-picker-menu-height-fixed",
     "--mod-picker-placeholder-font-style",
     "--mod-picker-placeholder-font-weight",
     "--mod-picker-spacing-bottom-to-text",
@@ -322,7 +321,8 @@
   "passthroughs": [
     "--mod-button-animation-duration",
     "--mod-button-font-family",
-    "--mod-button-line-height"
+    "--mod-button-line-height",
+    "--mod-popover-max-block-size"
   ],
   "high-contrast": [
     "--highcontrast-picker-background-color",

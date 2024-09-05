@@ -13,7 +13,6 @@
 
 @import "./themes/express.css";
 @import "@spectrum-css/commons/basebutton.css";
-@import "../components/popover/index.css";
 
 .spectrum-Picker {
 	/* font */
@@ -496,6 +495,6 @@
 /* Fixed menu height */
 .spectrum-Picker--menu-height-fixed {
 	& + .spectrum-Popover.is-open {
-		--spectrum-popover-max-block-size: var(--mod-picker-popover-max-block-size, 200px);
+		--mod-popover-max-block-size: 200px;
 	}
 }

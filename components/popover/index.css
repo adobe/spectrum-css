@@ -46,7 +46,7 @@
 	/* Max menu block size */
 	--spectrum-popover-max-block-size: 300px;
 	
-	max-block-size: var(--spectrum-popover-max-block-size);
+	max-block-size: var(--mod-popover-max-block-size, --spectrum-popover-max-block-size);
 }
 
 /* windows high contrast mode */
