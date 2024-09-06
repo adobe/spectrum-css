@@ -335,5 +335,9 @@ a.spectrum-Button {
 				forced-color-adjust: none;
 			}
 		}
+
+		&.spectrum-Button--negative .spectrum-Button-label {
+			forced-color-adjust: none;
+		}
 	}
 }
