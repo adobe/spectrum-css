@@ -29,6 +29,12 @@
 		--spectrum-button-border-color-focus: var(--spectrum-gray-500);
 
 		&.spectrum-Button--primary {
+
+			--spectrum-button-content-color-default: var(--spectrum-white);
+			--spectrum-button-content-color-hover: var(--spectrum-white);
+			--spectrum-button-content-color-down: var(--spectrum-white);
+			--spectrum-button-content-color-focus: var(--spectrum-white);
+
 			&.spectrum-Button--outline {
 				--spectrum-button-background-color-hover: var(--spectrum-gray-300);
 				--spectrum-button-background-color-down: var(--spectrum-gray-400);
