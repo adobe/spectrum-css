@@ -32,7 +32,8 @@
     ".spectrum-AssetList-itemSelector",
     ".spectrum-AssetList-item[focus-within]:focus-visible.js-focus-within",
     ".spectrum-AssetList-item[focus-within]:focus-visible.js-focus-within:before",
-    ".spectrum-AssetList:dir(rtl)"
+    ".spectrum-AssetList:dir(rtl)",
+    "[dir=\"rtl\"] .spectrum-AssetList"
   ],
   "modifiers": [
     "--mod-assetlist-border-color-key-focus",

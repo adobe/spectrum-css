@@ -1,7 +1,7 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { ActionGroups } from "./actiongroup.test.js";
 
 /**
@@ -60,7 +60,7 @@ export default {
 				...(ActionButton?.parameters?.actions?.handles ?? []),
 			],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

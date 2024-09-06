@@ -203,6 +203,18 @@
   - @spectrum-css/alertdialog@3.0.0-s2-foundations.0
   - @spectrum-css/dialog@11.0.0-s2-foundations.0
 
+## 7.1.5
+
+### Patch Changes
+
+- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)! - Improve changeset suggestions by using exports instead of files in component packages
+
+- Updated dependencies [[`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277)]:
+  - @spectrum-css/alertdialog@2.1.2
+  - @spectrum-css/divider@3.1.2
+  - @spectrum-css/dialog@10.1.3
+  - @spectrum-css/menu@7.1.6
+
 ## 7.1.4
 
 ### Patch Changes

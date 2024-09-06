@@ -43,3 +43,22 @@ export const Body = styled.div(({
         ...props
     };
 });
+
+export const Code = styled.div(({
+    theme,
+    size = "m",
+    scale = "desktop",
+    ...props
+}) => {
+    return {
+        fontFamily: theme.typography.fonts.mono,
+        fontStyle: fetchToken("code-font-style", "normal"),
+        fontWeight: fetchToken("code-font-weight", "400"),
+        color: fetchToken("code-color", "inherit"),
+        fontSize: fetchToken(`code-size-${size}`, 22),
+        backgroundColor: fetchToken("gray-200"),
+        padding: "0.125em 0.25em",
+        borderRadius: "0.125em",
+        ...props
+    };
+});

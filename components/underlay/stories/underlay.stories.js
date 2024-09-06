@@ -1,7 +1,7 @@
 import { Default as DialogStory } from "@spectrum-css/dialog/stories/dialog.stories.js";
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { isOpen } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { Template } from "./template.js";
 
 /**
@@ -28,7 +28,7 @@ export default {
 			},
 		},
 		chromatic: { disableSnapshot: true },
-		componentVersion: version,
+		packageJson: pkgJson,
 	}
 };
 

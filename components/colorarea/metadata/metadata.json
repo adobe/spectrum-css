@@ -9,7 +9,8 @@
     ".spectrum-ColorArea.is-disabled",
     ".spectrum-ColorArea.is-disabled .spectrum-ColorArea-gradient",
     ".spectrum-ColorArea.is-focused",
-    ".spectrum-ColorHandle-color"
+    ".spectrum-ColorHandle-color",
+    "[dir=\"rtl\"] .spectrum-ColorArea-handle"
   ],
   "modifiers": [
     "--mod-colorarea-border-color",

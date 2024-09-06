@@ -208,6 +208,19 @@
   - @spectrum-css/ui-icons@2.0.0-s2-foundations.2
   - @spectrum-css/tokens@15.0.0-s2-foundations.2
 
+## 10.10.0
+
+### Minor Changes
+
+- [#3067](https://github.com/adobe/spectrum-css/pull/3067) [`e1a7866`](https://github.com/adobe/spectrum-css/commit/e1a78669920f816966cc0249a7beed032e681b17) Thanks [@cdransf](https://github.com/cdransf)! - Applies the sb-unstyled className to fix the version number alignment on Storybook docs pages.
+
+## 10.9.1
+
+### Patch Changes
+
+- Updated dependencies [[`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277)]:
+  - @spectrum-css/typography@6.1.2
+
 ## 10.9.0
 
 ### Minor Changes

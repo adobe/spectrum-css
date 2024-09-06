@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isChecked, isDisabled, isEmphasized, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { SwitchGroup } from "./switch.test.js";
 import { Template } from "./template.js";
 
@@ -33,7 +33,7 @@ export default {
 		label: "Switch label",
 		size: "m",
 	},
-	componentVersion: version,
+	packageJson: pkgJson,
 };
 
 export const Default = SwitchGroup.bind({});

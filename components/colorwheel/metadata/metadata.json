@@ -14,7 +14,8 @@
     ".spectrum-ColorWheel-wheel.is-disabled",
     ".spectrum-ColorWheel.is-disabled",
     ".spectrum-ColorWheel.is-dragged",
-    ".spectrum-ColorWheel.is-focused"
+    ".spectrum-ColorWheel.is-focused",
+    "[dir=\"rtl\"] .spectrum-ColorWheel-ColorArea-handle"
   ],
   "modifiers": [
     "--mod-colorwheel-border-color",

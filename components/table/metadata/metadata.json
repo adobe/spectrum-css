@@ -121,7 +121,8 @@
     ".spectrum-Table-thumbnailInner .spectrum-Table-thumbnailContent",
     ".spectrum-Table-thumbnailInner .spectrum-Thumbnail",
     ".spectrum-Table:dir(rtl)",
-    ".spectrum-Table:not(.spectrum-Table-scroller)"
+    ".spectrum-Table:not(.spectrum-Table-scroller)",
+    "[dir=\"rtl\"] .spectrum-Table"
   ],
   "modifiers": [
     "--mod-table-border-color",

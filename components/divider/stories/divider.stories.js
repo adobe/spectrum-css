@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size, staticColor } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { DividerGroup } from "./divider.test.js";
 import { Template } from "./template.js";
 
@@ -33,7 +33,7 @@ export default {
 		minDimensionValues: true,
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

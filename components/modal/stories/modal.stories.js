@@ -2,7 +2,7 @@ import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { ModalGroup } from "./modal.test.js";
 
 /**
@@ -48,7 +48,7 @@ export default {
 				width: "800px"
 			},
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 	decorators: [
 		withUnderlayWrapper,

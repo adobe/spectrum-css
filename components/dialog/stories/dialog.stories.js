@@ -2,7 +2,7 @@ import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
 import { Template } from "./template";
 
@@ -118,7 +118,7 @@ export default {
 				height: "500px",
 			},
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 	decorators: [
 		withUnderlayWrapper,

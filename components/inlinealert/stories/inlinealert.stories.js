@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { InlineAlertGroup } from "./inlinealert.test.js";
 import { Template } from "./template";
 
@@ -58,7 +58,7 @@ export default {
 		isClosable: false,
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 
