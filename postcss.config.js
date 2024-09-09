@@ -59,6 +59,7 @@ module.exports = ({
 				preserveBeforeAfter: false,
 				prefix: "is-"
 			} : false,
+			"@spectrum-tools/postcss-rgb-mapping": {},
 			/* --------------------------------------------------- */
 			/* ------------------- VARIABLE PARSING -------------- */
 			"@spectrum-tools/postcss-add-theming-layer": {

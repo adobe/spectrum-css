@@ -34,8 +34,9 @@ function rgbMappingFunction () {
 
 			/* Parse the value for it's parts */
 			const parsedValue = valuesParser.parse(value) || [];
+
 			/* Determine if the value has an rgb or rgba value */
-			const hasRGBValue = parsedValue.nodes.length ? parsedValue.nodes.some((node) => node.type === "function" && (["rgb", "rgba"].some(func => node.value === func))) : false;
+			const hasRGBValue = parsedValue.nodes.length ? parsedValue.nodes.some((node) => node.type === "func" && (["rgb", "rgba"].some(func => node.name === func))) : false;
 
 			/*
             * If the property is not a custom prop, or
@@ -46,10 +47,10 @@ function rgbMappingFunction () {
             */
 			if (!isCustomProp || isProcessed || !hasRGBValue || parsedValue.nodes.length === 0) return;
 
-			const rgba = parsedValue.nodes.find((node) => node.type === "function" && (["rgb", "rgba"].some(func => node.value === func)));
+			const rgba = parsedValue.nodes.find((node) => node.type === "func" && (["rgb", "rgba"].some(func => node.name === func)));
 
 			const [r,g,b,a] = rgba.nodes.reduce((acc, node) => {
-				if (node.type === "word" && node.value) acc.push(node.value);
+				if (node.type === "numeric" && node.value) acc.push(node.value);
 				return acc;
 			}, []);
 

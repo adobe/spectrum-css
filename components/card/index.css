@@ -18,48 +18,49 @@
 	display: inline-flex;
 	flex-direction: column;
 	box-sizing: border-box;
+	text-decoration: none;
 
 	min-inline-size: var(--mod-card-minimum-width, var(--spectrum-card-minimum-width));
-	text-decoration: none;
+
+
+	border: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
+	border-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+	border-color: var(--highcontrast-card-border-color, var(--mod-card-border-color, var(--spectrum-card-border-color)));
 
 	background-color: var(--highcontrast-card-background-color, var(--mod-card-background-color, var(--spectrum-card-background-color)));
 
-	border: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
-	border-color: var(--highcontrast-card-border-color, var(--mod-card-border-color, var(--spectrum-card-border-color)));
-	border-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
-
 	&::before {
 		content: "";
-		position: absolute;
-		inset-block-start: 0;
-		inset-inline-start: 0;
-		inline-size: 100%;
 		block-size: 100%;
+		inline-size: 100%;
+		position: absolute;
+		inset-inline-start: 0;
+		inset-block-start: 0;
 	}
 
 	/* Focus indicator - use after so change in border-width does not affect card width */
 	&::after {
 		content: "";
+		block-size: 100%;
+		inline-size: 100%;
 		position: absolute;
-		inset-block-start: 0;
 		inset-inline-start: 0;
 		inset-inline-end: 0;
-		inline-size: 100%;
-		block-size: 100%;
-		margin-block-start: calc(-1 * var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
-		margin-inline-start: calc(-1 * var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
-		border-color: transparent;
+		inset-block-start: 0;
 		border-style: solid;
+		border-color: transparent;
 		border-width: 0;
 		border-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+		margin-block-start: calc(-1 * var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
+		margin-inline-start: calc(-1 * var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
 	}
 
 	&:focus-visible {
 		outline: none;
 
 		&::after {
-			border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
 			border-width: var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width));
+			border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
 		}
 
 		.spectrum-Card-coverPhoto {
@@ -86,11 +87,11 @@
 	}
 
 	&.is-drop-target {
-		--spectrum-card-background-color: var(--spectrum-card-background-color-quiet, var(--spectrum-background-base-color));
-		background-color: var(--mod-card-background-color, var(--spectrum-card-background-color));
+		--mod-card-background-color: var(--spectrum-card-background-color-quiet, var(--spectrum-background-base-color));
 
 		border-color: var(--highcontrast-card-border-color-selected, var(--mod-card-border-color-selected, var(--spectrum-card-border-color-selected)));
 		box-shadow: 0 0 0 1px var(--highcontrast-card-border-color-selected, var(--mod-card-border-color-selected, var(--spectrum-card-border-color-selected)));
+		background-color: var(--mod-card-background-color, var(--spectrum-card-background-color));
 	}
 
 	&.is-focused,
@@ -99,34 +100,31 @@
 	&:hover {
 		.spectrum-Card-quickActions,
 		.spectrum-Card-actions {
-			pointer-events: all;
-
-			/* Ideally, this would simply apply is-open to the QuickActions component */
 			visibility: visible;
 			opacity: 1;
+			pointer-events: all;
 		}
 	}
 }
 
 .spectrum-Card-quickActions {
-	pointer-events: auto;
-
 	position: absolute;
-	inset-block-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
-	inset-inline-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
+	visibility: hidden;
+	box-shadow: var(--mod-card-actions-drop-shadow-x, var(--spectrum-card-actions-drop-shadow-x)) var(--mod-card-actions-drop-shadow-y, var(--spectrum-card-actions-drop-shadow-y)) var(--mod-card-actions-drop-shadow-blur, var(--spectrum-card-actions-drop-shadow-blur)) var(--mod-card-actions-drop-shadow-color, var(--spectrum-card-actions-drop-shadow-color));
 
+	inline-size: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
+	block-size: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
+	border-radius: var(--mod-card-actions-border-radius, var(--spectrum-card-actions-border-radius));
+	background-color: rgba(var(--mod-card-actions-background-color-rgb, var(--spectrum-card-actions-background-color-rgb)), var(--mod-card-actions-background-color-opacity, var(--spectrum-card-actions-background-color-opacity)));
+
+	inset-inline-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
+	inset-block-start: calc(var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
+
+	pointer-events: auto;
 	display:inline-flex;
 	align-items:center;
 	justify-content:center;
 	box-sizing:border-box;
-
-	inline-size: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
-	block-size: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
-	visibility: hidden;
-
-	background-color: rgba(var(--mod-card-actions-background-color-rgb, var(--spectrum-card-actions-background-color-rgb)), var(--mod-card-actions-background-color-opacity, var(--spectrum-card-actions-background-color-opacity)));
-	border-radius: var(--mod-card-actions-border-radius, var(--spectrum-card-actions-border-radius));
-	box-shadow: var(--mod-card-actions-drop-shadow-x, var(--spectrum-card-actions-drop-shadow-x)) var(--mod-card-actions-drop-shadow-y, var(--spectrum-card-actions-drop-shadow-y)) var(--mod-card-actions-drop-shadow-blur, var(--spectrum-card-actions-drop-shadow-blur)) var(--mod-card-actions-drop-shadow-color, var(--spectrum-card-actions-drop-shadow-color));
 
 	transition:
 		transform var(--mod-overlay-animation-duration, var(--spectrum-animation-duration-100, 130ms)) ease-in-out,
@@ -141,18 +139,18 @@
 
 .spectrum-Card-coverPhoto {
 	position: relative;
+	block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
+	box-sizing: border-box;
 	overflow: hidden;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-sizing: border-box;
-	block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
 
 	border-start-start-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 	border-start-end-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
-	border-end-start-radius: 0;
 	border-end-end-radius: 0;
+	border-end-start-radius: 0;
 
 	background-size: cover;
 	background-position: center center;
@@ -175,20 +173,20 @@
 	/* @deprecation --mod-card-title-padding-top has been renamed to --mod-card-body-padding-block-start
 	   and will be removed in a future version. */
 	padding-block-start: var(--mod-card-body-padding-block-start, var(--mod-card-title-padding-top, var(--spectrum-card-title-padding-top)));
-	padding-block-end: var(--mod-card-body-padding-block-end, calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width))));
-	padding-inline-start: var(--mod-card-body-padding-inline-start, calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width))));
 	padding-inline-end: var(--mod-card-body-padding-inline-end, calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width))));
+	padding-inline-start: var(--mod-card-body-padding-inline-start, calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width))));
+	padding-block-end: var(--mod-card-body-padding-block-end, calc(var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) - var(--mod-card-border-width, var(--spectrum-card-border-width))));
 }
 
 .spectrum-Card-preview {
 	overflow: hidden;
+	border-start-start-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+	border-start-end-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+	border-end-end-radius: 0;
+	border-end-start-radius: 0;
 	display: flex;
 	align-items: center;
 	color: var(--highcontrast-card-body-font-color, var(--mod-card-body-font-color, var(--spectrum-card-body-font-color)));
-	border-start-start-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
-	border-start-end-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
-	border-end-start-radius: 0;
-	border-end-end-radius: 0;
 }
 
 .spectrum-Card-title {
@@ -243,11 +241,11 @@
 }
 
 .spectrum-Card-actionButton {
-	z-index: 1;
-	display: flex;
 	flex: 1;
 	align-self: center;
+	display: flex;
 	justify-content: flex-end;
+	z-index: 1;
 }
 
 .spectrum-Card--quiet {
@@ -282,57 +280,58 @@
 	--spectrum-card-content-margin-top: var(--mod-card-content-margin-top-quiet, var(--spectrum-card-content-margin-top-quiet));
 	--spectrum-card-minimum-width: var(--mod-card-minimum-width-quiet, var(--spectrum-card-minimum-width-quiet));
 
-	overflow: visible;
 	block-size: 100%;
-	background-color: transparent;
-	border-color: transparent;
+	min-inline-size: var(--mod-card-minimum-width, var(--spectrum-card-minimum-width));
 	border-width: 0;
 	border-radius: 0;
+	overflow: visible;
+	border-color: transparent;
+	background-color: transparent;
 
 	&::before {
 		display: none;
 	}
 
 	.spectrum-Card-preview {
-		position: relative;
-		overflow: visible;
-		flex: 1;
-		box-sizing: border-box;
-		inline-size: 100%;
-		min-block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
-		margin: 0 auto;
-		background-color: var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-card-preview-background-color)));
 		border-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+		background-color: var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-card-preview-background-color)));
+		min-block-size: var(--mod-card-preview-minimum-height, var(--spectrum-card-preview-minimum-height));
+		inline-size: 100%;
+		flex: 1;
+		margin: 0 auto;
+		box-sizing: border-box;
+		position: relative;
 
 		/* @deprecation --mod-animation-duration-100 has been renamed and will be removed in a future version. */
 		transition: background-color var(--mod-card-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)));
+		overflow: visible;
 
 		/* Use ::before to show the selected overlay */
 		&::before {
 			content: "";
-			position: absolute;
-			inset-block-start: 0;
-			inset-inline-start: 0;
-			inline-size: 100%;
 			block-size: 100%;
+			inline-size: 100%;
+			position: absolute;
+			inset-inline-start: 0;
+			inset-block-start: 0;
 		}
 
 		/* Use ::after to show the selection outline so that the border doesn't
 		   affect the layout of the content within the preview. */
 		&::after {
 			content: "";
+			block-size: 100%;
+			inline-size: 100%;
 			position: absolute;
-			inset-block-start: 0;
 			inset-inline-start: 0;
 			inset-inline-end: 0;
-			inline-size: 100%;
-			block-size: 100%;
-			margin-block-start: calc(-1 * var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
-			margin-inline-start: calc(-1 * var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
-			border-color: transparent;
+			inset-block-start: 0;
 			border-style: solid;
+			border-color: transparent;
 			border-width: 0;
 			border-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
+			margin-block-start: calc(-1 * var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
+			margin-inline-start: calc(-1 * var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)));
 		}
 	}
 
@@ -345,13 +344,13 @@
 	}
 
 	&.is-drop-target {
-		background-color: transparent;
 		border-color: transparent;
+		background-color: transparent;
 		box-shadow: none;
 
 		.spectrum-Card-preview {
-			background-color: var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-card-preview-background-color)));
 			transition: none;
+			background-color: var(--mod-card-preview-background-color, var(--mod-card-background-color, var(--spectrum-card-preview-background-color)));
 		}
 
 		.spectrum-Card-preview::before {
@@ -372,8 +371,8 @@
 	}
 
 	.spectrum-Card-footer {
-		margin-inline-start: 0;
 		margin-inline-end: 0;
+		margin-inline-start: 0;
 	}
 }
 
@@ -387,26 +386,27 @@
 	}
 
 	.spectrum-Card-preview {
-		display: flex;
 		flex-shrink: 0;
+		min-block-size: 0;
+		display: flex;
 		align-items: center;
 		justify-content: center;
-		min-block-size: 0;
-
-		padding: var(--mod-card-horizontal-preview-padding, var(--spectrum-card-horizontal-preview-padding));
-		background-color: var(--mod-card-preview-background-color, var(--spectrum-card-preview-background-color));
-		border-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
 
 		border-start-start-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 		border-start-end-radius: 0;
 		border-end-start-radius: calc(var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) - var(--mod-card-border-width, var(--spectrum-card-border-width)));
 		border-end-end-radius: 0;
+
+		padding: var(--mod-card-horizontal-preview-padding, var(--spectrum-card-horizontal-preview-padding));
+		background-color: var(--mod-card-preview-background-color, var(--spectrum-card-preview-background-color));
+		border-color: var(--mod-card-border-color, var(--spectrum-card-border-color));
+
 	}
 
 	.spectrum-Card-header,
 	.spectrum-Card-content {
-		block-size: auto;
 		margin-block-start: 0;
+		block-size: auto;
 	}
 
 	.spectrum-Card-content {
@@ -418,10 +418,10 @@
 	}
 
 	.spectrum-Card-body {
-		display: flex;
-		flex-direction: column;
 		flex-shrink: 0;
+		display: flex;
 		justify-content: center;
+		flex-direction: column;
 		padding-block: 0;
 		padding-inline: var(--mod-card-horizontal-body-padding, var(--spectrum-card-horizontal-body-padding));
 	}

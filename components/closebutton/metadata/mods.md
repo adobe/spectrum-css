@@ -1,5 +1,6 @@
 | Modifiable custom properties                        |
 | --------------------------------------------------- |
+| `--mod-animation-duration-100`                      |
 | `--mod-closebutton-align-self`                      |
 | `--mod-closebutton-animation-duraction`             |
 | `--mod-closebutton-animation-duration`              |
@@ -31,3 +32,5 @@
 | `--mod-closebutton-static-background-color-focus`   |
 | `--mod-closebutton-static-background-color-hover`   |
 | `--mod-closebutton-width`                           |
+| `--mod-line-height-100`                             |
+| `--mod-sans-font-family-stack`                      |

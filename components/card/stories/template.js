@@ -1,5 +1,6 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
@@ -189,6 +190,25 @@ export const Template = ({
             ${footer}
           </div>
         `
+      )}
+      ${when(hasActions && !isHorizontal, () =>
+        html`
+          <div
+            class=${classMap({
+              [`${rootClass}-quickActions`]: true,
+            })}
+            @click=${function() {
+              updateArgs({ isSelected: !isSelected });
+            }}
+          >
+            ${Checkbox(
+              {
+                isChecked: isSelected,
+                title: "Select",
+              },
+              context
+            )}
+          </div>`
       )}
     </div>
   `;

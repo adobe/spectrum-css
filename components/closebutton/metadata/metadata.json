@@ -2,6 +2,10 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-CloseButton",
+    ".spectrum-CloseButton--sizeL",
+    ".spectrum-CloseButton--sizeM",
+    ".spectrum-CloseButton--sizeS",
+    ".spectrum-CloseButton--sizeXL",
     ".spectrum-CloseButton--staticBlack",
     ".spectrum-CloseButton--staticBlack.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton--staticBlack.is-keyboardFocused:not(:disabled)",
@@ -31,12 +35,15 @@
     ".spectrum-CloseButton--staticWhite:not(:disabled):hover",
     ".spectrum-CloseButton--staticWhite:not(:disabled):hover .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton-UIIcon",
+    ".spectrum-CloseButton.is-disabled",
     ".spectrum-CloseButton.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton.is-keyboardFocused:not(:disabled)",
     ".spectrum-CloseButton.is-keyboardFocused:not(:disabled) .spectrum-CloseButton-UIIcon",
+    ".spectrum-CloseButton::-moz-focus-inner",
     ".spectrum-CloseButton:after",
     ".spectrum-CloseButton:disabled",
     ".spectrum-CloseButton:disabled .spectrum-CloseButton-UIIcon",
+    ".spectrum-CloseButton:focus",
     ".spectrum-CloseButton:focus-visible",
     ".spectrum-CloseButton:focus-visible:after",
     ".spectrum-CloseButton:not(:disabled)",
@@ -48,12 +55,11 @@
     ".spectrum-CloseButton:not(:disabled):focus-visible .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton:not(:disabled):hover",
     ".spectrum-CloseButton:not(:disabled):hover .spectrum-CloseButton-UIIcon",
-    ".spectrum-Closebutton--sizeL",
-    ".spectrum-Closebutton--sizeM",
-    ".spectrum-Closebutton--sizeS",
-    ".spectrum-Closebutton--sizeXL"
+    ":scope",
+    "a.spectrum-CloseButton"
   ],
   "modifiers": [
+    "--mod-animation-duration-100",
     "--mod-closebutton-align-self",
     "--mod-closebutton-animation-duraction",
     "--mod-closebutton-animation-duration",
@@ -84,7 +90,9 @@
     "--mod-closebutton-static-background-color-down",
     "--mod-closebutton-static-background-color-focus",
     "--mod-closebutton-static-background-color-hover",
-    "--mod-closebutton-width"
+    "--mod-closebutton-width",
+    "--mod-line-height-100",
+    "--mod-sans-font-family-stack"
   ],
   "component": [
     "--spectrum-closebutton-animation-duration",
@@ -128,10 +136,12 @@
     "--spectrum-focus-indicator-thickness",
     "--spectrum-gray-100",
     "--spectrum-gray-200",
+    "--spectrum-line-height-100",
     "--spectrum-neutral-content-color-default",
     "--spectrum-neutral-content-color-down",
     "--spectrum-neutral-content-color-hover",
     "--spectrum-neutral-content-color-key-focus",
+    "--spectrum-sans-font-family-stack",
     "--spectrum-static-black-focus-indicator-color",
     "--spectrum-static-white-focus-indicator-color",
     "--spectrum-transparent-black-300",
@@ -141,7 +151,11 @@
     "--spectrum-white"
   ],
   "system-theme": [],
-  "passthroughs": [],
+  "passthroughs": [
+    "--mod-button-animation-duration",
+    "--mod-button-font-family",
+    "--mod-button-line-height"
+  ],
   "high-contrast": [
     "--highcontrast-closebutton-background-color-default",
     "--highcontrast-closebutton-focus-indicator-color",

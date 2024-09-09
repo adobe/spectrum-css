@@ -20,7 +20,6 @@ module.exports = ({
 	env: "production",
 	map: false,
 	additionalPlugins: {
-		"@spectrum-tools/postcss-rgb-mapping": {},
 		"postcss-sorting": {
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",
