@@ -2,4 +2,4 @@
 "@spectrum-css/card": major
 ---
 
-updated baskground color of card quiet variant in spectrum-two
+Updated the background color of the card component's preview area in spectrum-two.
