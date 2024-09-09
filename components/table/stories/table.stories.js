@@ -25,7 +25,7 @@ export default {
 		isQuiet,
 		isEmphasized,
 		useDivs: {
-			name: "Use Divs for Markup",
+			name: "Use divs for markup",
 			description:
 				"Use 'div' elements for all of the table markup instead of the 'table' element.",
 			type: { name: "boolean" },
@@ -36,7 +36,7 @@ export default {
 			control: "boolean",
 		},
 		useScroller: {
-			name: "Scrollable Body and Fixed Column Headers",
+			name: "Scrollable body and fixed column headers",
 			description:
 				"Uses a wrapper element that can have a fixed height and allows scrolling, along with column headers that are fixed to the top on scroll.",
 			type: { name: "boolean" },
@@ -47,9 +47,9 @@ export default {
 			control: "boolean",
 		},
 		showThumbnails: {
-			name: "Show Thumbnails in Content",
+			name: "Show thumbnails in content",
 			description:
-				"Uses the Thumbnail component at the start of the first column's cells.",
+				"Uses the thumbnail component at the start of the first column's cells.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -59,8 +59,7 @@ export default {
 		},
 		hasColumnDividers: {
 			name: "Show dividers between columns",
-			description:
-				"Sets dividers between table columns",
+			description: "Sets dividers between table columns.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -206,7 +205,6 @@ MultiSelect.storyName = "Multi-select";
 MultiSelect.args = {
 	rowItems: ExampleRowItems,
 };
-MultiSelect.tags = ["!dev"];
 MultiSelect.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -238,6 +236,9 @@ Quiet.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * A quiet multi-select table has emphasized styling by default, but excluding the `.spectrum-Table--emphasized` class will change the style of selected rows.
+ */
 export const QuietMultiSelect = Template.bind({});
 QuietMultiSelect.args = {
 	...MultiSelect.args,
@@ -288,7 +289,6 @@ SummaryAndSelected.args = {
 		},
 	],
 };
-SummaryAndSelected.tags = ["!dev"];
 SummaryAndSelected.storyName = "Summary and selected";
 SummaryAndSelected.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -325,7 +325,6 @@ SectionHeader.args = {
 		},
 	],
 };
-SectionHeader.tags = ["!dev"];
 SectionHeader.storyName = "Section header";
 SectionHeader.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -336,7 +335,6 @@ SectionHeaderQuiet.args = {
 	...SectionHeader.args,
 	isQuiet: true,
 };
-SectionHeaderQuiet.tags = ["!dev"];
 SectionHeaderQuiet.storyName = "Section header: quiet";
 SectionHeaderQuiet.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -463,7 +461,6 @@ Collapsible.args = {
 		},
 	],
 };
-Collapsible.tags = ["!dev"];
 Collapsible.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -535,7 +532,6 @@ CollapsibleMultiSelect.args = {
 		},
 	],
 };
-CollapsibleMultiSelect.tags = ["!dev"];
 CollapsibleMultiSelect.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -613,7 +609,6 @@ ThumbnailsCollapsible.args = {
 		},
 	],
 };
-ThumbnailsCollapsible.tags = ["!dev"];
 ThumbnailsCollapsible.storyName = "Thumbnails: collapsible";
 ThumbnailsCollapsible.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -661,7 +656,6 @@ RowDropZone.args = {
 		},
 	],
 };
-RowDropZone.tags = ["!dev"];
 RowDropZone.storyName = "Dropzone: row";
 RowDropZone.parameters = {
 	chromatic: { disableSnapshot: true },
