@@ -23,14 +23,14 @@
 	min-inline-size: var(--mod-alert-dialog-min-width, var(--spectrum-alert-dialog-min-width));
 	max-inline-size: var(--mod-alert-dialog-max-width, var(--spectrum-alert-dialog-max-width));
 	max-block-size: inherit;
-	padding: var(--mod-alert-dialog-padding, var(--spectrum-alert-dialog-padding));
 	outline: none;
+	padding: var(--mod-alert-dialog-padding, var(--spectrum-alert-dialog-padding));
 
 	.spectrum-Icon {
-		flex-shrink: 0;
 		inline-size: var(--mod-alert-dialog-icon-size, var(--spectrum-alert-dialog-icon-size));
 		block-size: var(--mod-alert-dialog-icon-size, var(--spectrum-alert-dialog-icon-size));
 		margin-inline-start: var(--mod-alert-dialog-title-to-icon, var(--spectrum-alert-dialog-title-to-icon));
+		flex-shrink: 0;
 	}
 }
 
@@ -50,32 +50,33 @@
 
 .spectrum-AlertDialog-header {
 	display: flex;
-	align-items: baseline;
 	justify-content: space-between;
+	align-items: baseline;
 }
 
 .spectrum-AlertDialog-heading {
-	margin: 0;
-	margin-block-end: var(--mod-alert-dialog-title-to-divider, var(--spectrum-alert-dialog-title-to-divider));
 	font-family: var(--mod-alert-dialog-title-font-family, var(--spectrum-alert-dialog-title-font-family));
-	font-size: var(--mod-alert-dialog-title-font-size, var(--spectrum-alert-dialog-title-font-size));
 	font-weight: var(--mod-alert-dialog-title-font-weight, var(--spectrum-alert-dialog-title-font-weight));
 	font-style: var(--mod-alert-dialog-title-font-style, var(--spectrum-alert-dialog-title-font-style));
+	font-size: var(--mod-alert-dialog-title-font-size, var(--spectrum-alert-dialog-title-font-size));
 	line-height: var(--mod-alert-dialog-title-line-height, var(--spectrum-alert-dialog-title-line-height));
 	color: var(--mod-alert-dialog-title-color, var(--spectrum-alert-dialog-title-color));
+	margin: 0;
+	margin-block-end: var(--mod-alert-dialog-title-to-divider, var(--spectrum-alert-dialog-title-to-divider));
 }
 
 .spectrum-AlertDialog-content {
-	overflow-y: auto;
+	font-family: var(--mod-alert-dialog-body-font-family, var(--spectrum-alert-dialog-body-font-family));
+	font-weight: var(--mod-alert-dialog-body-font-weight, var(--spectrum-alert-dialog-body-font-weight));
+	font-style: var(--mod-alert-dialog-body-font-style, var(--spectrum-alert-dialog-body-font-style));
+	font-size: var(--mod-alert-dialog-body-font-size, var(--spectrum-alert-dialog-body-font-size));
+	line-height: var(--mod-alert-dialog-body-line-height, var(--spectrum-alert-dialog-body-line-height));
+	color: var(--mod-alert-dialog-body-color, var(--spectrum-alert-dialog-body-color));
 	margin: 0;
 	margin-block-start: var(--mod-alert-dialog-divider-to-description, var(--spectrum-alert-dialog-divider-to-description));
 	margin-block-end: var(--mod-alert-dialog-description-to-buttons, var(--spectrum-alert-dialog-description-to-buttons));
-	font-family: var(--mod-alert-dialog-body-font-family, var(--spectrum-alert-dialog-body-font-family));
-	font-size: var(--mod-alert-dialog-body-font-size, var(--spectrum-alert-dialog-body-font-size));
-	font-weight: var(--mod-alert-dialog-body-font-weight, var(--spectrum-alert-dialog-body-font-weight));
-	font-style: var(--mod-alert-dialog-body-font-style, var(--spectrum-alert-dialog-body-font-style));
-	line-height: var(--mod-alert-dialog-body-line-height, var(--spectrum-alert-dialog-body-line-height));
-	color: var(--mod-alert-dialog-body-color, var(--spectrum-alert-dialog-body-color));
+
+	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
 

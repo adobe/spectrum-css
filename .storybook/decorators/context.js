@@ -78,15 +78,17 @@ export const withContextWrapper = makeDecorator({
 					color = "dark";
 				}
 
+				// Let the static color override the color if it's set
+				if (staticKey && staticColorSettings[staticKey]?.color) {
+					color = staticColorSettings[staticKey].color;
+				}
+
 				for (let c of ["light", "dark", "darkest"]) {
-					// Force light or dark mode if the static color is set
-					const isColor = staticKey && c === staticColorSettings[staticKey]?.color || c === color;
-					container.classList.toggle(`spectrum--${c}`, isColor && !isRaw);
+					container.classList.toggle(`spectrum--${c}`, c === color && !isRaw);
 				}
 
 				for (const s of ["medium", "large"]) {
-					const isScale = s === scale;
-					container.classList.toggle(`spectrum--${s}`, isScale && !isRaw);
+					container.classList.toggle(`spectrum--${s}`, s === scale && !isRaw);
 				}
 
 				// Start by removing the background color from the container and then add it back if needed
