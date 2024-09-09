@@ -14,7 +14,7 @@ export const Template = ({
 	rootClass = "spectrum-Swatch",
 	size = "m",
 	borderStyle = "default",
-	isRectangle = false,
+	shape = "square",
 	imageUrl,
 	gradient,
 	isMixedValue = false,
@@ -42,7 +42,7 @@ export const Template = ({
 				"is-disabled": isDisabled,
 				"is-image": (["undefined", "transparent"].every(g => typeof gradient !== g)) || isMixedValue || typeof imageUrl !== "undefined",
 				"is-mixedValue": !isDisabled && isMixedValue,
-				[`${rootClass}--rectangle`]: typeof isRectangle !== "undefined" && isRectangle !== false,
+				[`${rootClass}--rectangle`]: typeof shape !== "undefined" && shape !== "square",
 				"is-nothing": !isDisabled && (typeof swatchColor === "undefined" || swatchColor === "transparent"),
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -167,7 +167,7 @@ export const NothingGroup = (args, context) => Container({
 		${Container({
 			withBorder: false,
 			containerStyles: { "gap": "8px" },
-			content: Template({...args, isRectangle: true, }, context),
+			content: Template({...args, shape: "rectangle", }, context),
 		})}
 	`
 });
@@ -185,6 +185,22 @@ export const DisabledGroup = (args, context) => Container({
 			withBorder: false,
 			withHeading: false,
 			content: Template({...args, rounding: "full", }, context),
+		})}
+	`
+});
+
+export const SizingGroup = (args, context) =>Container({
+	withBorder: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			withHeading: false,
+			content: Template(args, context),
+		})}
+		${Container({
+			withBorder: false,
+			withHeading: false,
+			content: Template({...args, swatchColor: "rgba(174, 216, 230, 0.25)"}, context),
 		})}
 	`
 });

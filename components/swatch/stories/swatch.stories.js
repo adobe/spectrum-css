@@ -3,7 +3,7 @@ import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import pkgJson from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
-import { Template, DisabledGroup, NothingGroup, RoundingGroup, BorderGroup } from "./template";
+import { Template, DisabledGroup, NothingGroup, RoundingGroup, BorderGroup, SizingGroup } from "./template";
 
 /**
  * A swatch shows a small sample of a fill--such as a color, gradient, texture, or material--that is intended to be applied to an object.
@@ -28,6 +28,7 @@ export default {
 		},
 		rounding: {
 			name: "Rounding",
+			description: "The amount of corner rounding for a swatch.",
 			defaultValue: "regular",
 			type: { name: "string" },
 			table: {
@@ -50,17 +51,20 @@ export default {
 			options: ["default", "noBorder", "lightBorder"],
 			control: "select",
 		},
-		isRectangle: {
-			name: "Rectangle",
-			type: { name: "boolean" },
+		shape: {
+			name: "Swatch shape",
+			description: "Swatches can have a square or rectangle shape.",
+			type: { name: "string" },
 			table: {
-				type: { summary: "boolean" },
+				type: { summary: "string" },
 				category: "Component",
 			},
-			control: "boolean",
+			options: ["square", "rectangle"],
+			control: "inline-radio",
 		},
 		imageUrl: {
 			name: "Image url",
+			description: "The image preview within the swatch.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -69,17 +73,18 @@ export default {
 			control: { type: "file", accept: ".svg,.png,.jpg,.jpeg,.webc" },
 		},
 		gradient: {
-			name: "Gradient values",
-			description: "Input an example gradient.",
+			name: "Gradient",
+			description: "The gradient preview within the swatch. Input a gradient example, such as <code>linear-gradient(red, blue)</code>.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			control: "color",
+			control: "text",
 		},
 		isMixedValue: {
 			name: "Mixed value",
+			description: "A swatch that represents multiple values that are not identical.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -96,7 +101,7 @@ export default {
 		rounding: "regular",
 		swatchColor: "rgb(174, 216, 230)",
 		borderStyle: "default",
-		isRectangle: false,
+		shape: "square",
 		isMixedValue: false,
 	},
 	parameters: {
@@ -115,7 +120,7 @@ Default.args = {};
  * The medium size is the default. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
  */
 export const Sizing = (args, context) => Sizes({
-	Template,
+	Template: SizingGroup,
 	withHeading: false,
 	...args,
 }, context);
@@ -145,6 +150,9 @@ Disabled.parameters = {
  */
 export const Rounding = RoundingGroup.bind({});
 Rounding.tags = ["!dev"];
+Rounding.args = {
+	swatchColor: "rgba(174, 216, 230, 0.25)",
+};
 Rounding.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -177,13 +185,17 @@ Border.parameters = {
  */
 export const Rectangle = Template.bind({});
 Rectangle.args = {
-	isRectangle: true,
+	shape: "rectangle",
+	swatchColor: "rgba(174, 216, 230, 0.25)",
 };
 Rectangle.tags = ["!dev"];
 Rectangle.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * A swatch will appear "empty" when its color, image, or gradient are undefined. 
+ */
 export const Nothing = (args, context) => Sizes({
 	Template: NothingGroup,
 	withHeading: false,
@@ -211,7 +223,7 @@ MixedValue.parameters = {
 
 export const Gradient = Template.bind({});
 Gradient.args = {
-	gradient: "linear-gradient(to right, rgba(0, 0, 0, 88%), rgb(174, 216, 230))",
+	gradient: "linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)",
 };
 Gradient.tags = ["!dev"];
 Gradient.parameters = {

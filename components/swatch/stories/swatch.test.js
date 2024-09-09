@@ -29,8 +29,8 @@ export const SwatchGroup = Variants({
 			rounding: "none",
 		},
 		{
-			testHeading: "Rectangle",
-			isRectangle: true,
+			testHeading: "Shape: rectangle",
+			shape: "rectangle",
 		},
 		{
 			testHeading: "Gradient",
