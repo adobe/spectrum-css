@@ -32,6 +32,7 @@ export const Template = ({
 	isPending = false,
 	ariaExpanded,
 	ariaControls,
+	isLabelWrapped = false,
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
@@ -51,6 +52,7 @@ export const Template = ({
         ["is-hover"]: isHovered,
         ["is-focus-visible"]: isFocused,
         ["is-active"]: isActive,
+        [`${rootClass}--wrap`]: isLabelWrapped,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
@@ -158,6 +160,7 @@ export const TextOverflowTemplate = (args) => Container({
       customStyles: {
         "max-inline-size": "480px",
       },
+      isLabelWrapped: true,
       label: "An example of text overflow behavior when there is no icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
     })}
     ${Template({
@@ -165,6 +168,7 @@ export const TextOverflowTemplate = (args) => Container({
       customStyles: {
         "max-inline-size": "480px",
       },
+      isLabelWrapped: true,
       iconName: "Edit",
       label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
     })}

@@ -58,6 +58,13 @@ export default {
 		isActive,
 		isPending,
 		staticColor,
+		isLabelWrapped: {
+			name: "Wrap Label Text?",
+			type: { name: "boolean" },
+			table: {
+				category: "Content",
+			},
+		},
 	},
 	args: {
 		rootClass: "spectrum-Button",
@@ -70,6 +77,7 @@ export default {
 		isActive: false,
 		isFocused: false,
 		isHovered: false,
+		isLabelWrapped: false,
 	},
 	parameters: {
 		actions: {
