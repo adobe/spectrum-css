@@ -11,6 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
+/* stylelint-disable selector-class-pattern */
 body {
 	--spectrum-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-font-style: var(--spectrum-default-font-style);
@@ -72,3 +73,4 @@ svg:has(symbol):not(:has(use)) {
 	story view), due to Storybook's inline style that sets overflow: auto */
 	overflow: visible !important;
 }
+/* stylelint-enable selector-class-pattern */

@@ -1,8 +1,9 @@
 dist
 dist-site
-
-## Keep the tokens rollup file as a sanity check for PRs
 !tokens/dist/index.css
+!tokens/dist/css/*.css
+!tokens/dist/css/express/*.css
+!tokens/dist/css/spectrum/*.css
 
 # Not committing the map assets, these are dev-only
 *.map

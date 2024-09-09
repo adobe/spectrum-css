@@ -11,6 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
+/* stylelint-disable selector-class-pattern */
 body {
 	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
 	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
@@ -117,3 +118,4 @@ select:focus,
 	border-color: rgb(2, 101, 220) !important;
 	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
 }
+/* stylelint-enable selector-class-pattern */
