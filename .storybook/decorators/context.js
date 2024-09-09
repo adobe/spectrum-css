@@ -1,8 +1,8 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
-import legacyTokens from "@spectrum-css/tokens-legacy?inline";
-import tokens from "@spectrum-css/tokens?inline";
+import legacyTokens from "@spectrum-css/tokens-legacy/dist/index.css?inline";
+import tokens from "@spectrum-css/tokens/dist/index.css?inline";
 
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
