@@ -1,5 +1,16 @@
 # Change Log
 
+## 10.0.0-s2-foundations.14
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`f38c66a`](https://github.com/adobe/spectrum-css/commit/f38c66a314c94058d7f8f084faa4967c89b20e7b) Thanks [@pfulton](https://github.com/pfulton)! - Fix icon sizing and checkbox border colors
+
+### Patch Changes
+
+- Updated dependencies [[`f38c66a`](https://github.com/adobe/spectrum-css/commit/f38c66a314c94058d7f8f084faa4967c89b20e7b)]:
+  - @spectrum-css/icon@8.0.0-s2-foundations.14
+
 ## 10.0.0-s2-foundations.13
 
 ### Minor Changes
