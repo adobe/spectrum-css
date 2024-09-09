@@ -81,5 +81,20 @@ export const RoundingTemplate = (args, context) => Container({
 				],
 			}, context)
 		})}
+		${Container({
+			withBorder: false,
+			heading: "None",
+			containerStyles: {"gap": "8px",},
+			content: Template({
+				...args,
+				rounding: "none",
+				items: [
+					{swatchColor: "rgb(22, 135, 140)",},
+					{swatchColor: "rgb(93, 137, 255)",},
+					{swatchColor: "rgb(33, 132, 113)",},
+					{swatchColor: "rgb(254, 71, 32)",},
+				],
+			}, context)
+		})}
 	`
 });

@@ -32,7 +32,7 @@ export default {
 	argTypes: {
 		...Swatch.argTypes,
 		swatchColor: { table: { disable: true } },
-		isRectangle: { table: { disable: true } },
+		shape: { table: { disable: true } },
 		imageUrl: { table: { disable: true } },
 		isMixedValue: { table: { disable: true } },
 		gradient: { table: { disable: true } },
