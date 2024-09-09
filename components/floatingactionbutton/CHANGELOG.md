@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.0.0-s2-foundations.12
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`43c7d40`](https://github.com/adobe/spectrum-css/commit/43c7d40cd97d75162fa954a9bd35cfcdbc37ccd1) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to static white background color and selected states
+
+### Patch Changes
+
+- Updated dependencies [[`6582314`](https://github.com/adobe/spectrum-css/commit/65823145e139caa56f5e73e8a36e73aff37672de)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.19
+
 ## 3.0.0-s2-foundations.11
 
 ### Minor Changes
