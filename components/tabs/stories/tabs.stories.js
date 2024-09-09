@@ -13,7 +13,7 @@ import { Template, QuietGroup, OverflowGroup, VerticalGroup, CompactGroup } from
  * Icons are optional, but don’t mix the use of icons in tabs if they are utilized. Navigation controls require a clear spacial relationship to one another, and mixing the use of icons can dramatically impact the visual balance and presence for each tab item.
  * 
  * ## Selected item
- * Only one tab item can be selected at any given time. This property changes an individual tab item’s selected state. This is shown with a selection indicator (a gray-900 line) under or next to the selected tab item.
+ * Only one tab item can be selected at any given time. This property changes an individual tab item’s selected state. This is shown with a selection indicator (a `gray-900` line) under or next to the selected tab item.
  * 
  * ## Orientation
  * Tabs can be either horizontal or vertical. By default, tabs are horizontal and should be used when horizontal space is limited.
@@ -158,7 +158,7 @@ VerticalRight.parameters = {
 /**
  * When there are too many tabs to fit horizontally across the viewport, the tabs component can be displayed as a [quiet picker](/docs/components-picker--docs). The example below is non-functional.
  * 
- * When appropriate, you can use alternative methods of overflowing tabs such as horizontal scrolling.
+ * When appropriate, alternative methods of overflowing tabs such as horizontal scrolling can be used.
  */
 export const Overflow = OverflowGroup.bind({});
 Overflow.args = {
