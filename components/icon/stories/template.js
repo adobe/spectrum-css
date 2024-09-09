@@ -5,8 +5,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
 import "../index.css";
-import "../themes/express.css";
 import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs

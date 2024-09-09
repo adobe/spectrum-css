@@ -36,7 +36,7 @@
 	min-block-size: var(--mod-alert-banner-min-height, var(--spectrum-alert-banner-min-height));
 	font-size: var(--mod-alert-banner-font-size, var(--spectrum-alert-banner-font-size));
 	color: var(--mod-alert-banner-font-color, var(--spectrum-alert-banner-font-color));
-	background-color: var(--mod-alert-banner-netural-background, var(--spectrum-alert-banner-netural-background));
+	background-color: var(--mod-alert-banner-neutral-background, var(--spectrum-alert-banner-neutral-background));
 	border: var(--highcontrast-alert-banner-border-width, 0) solid var(--highcontrast-alert-banner-border-color, transparent);
 
 	&.is-open {

@@ -29,7 +29,7 @@ const npmFetch = require("npm-registry-fetch");
 
 // Import the component-builder-simple to process the site styles
 const { processCSS } = require("../../tasks/component-builder.js");
-const { dirs, timeInMs, relativePrint } = require("../../tasks/utilities");
+const { dirs, timeInMs, relativePrint } = require("../../tasks/utilities.js");
 
 require("colors");
 

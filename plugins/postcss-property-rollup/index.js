@@ -26,6 +26,7 @@ module.exports = ({
 		postcssPlugin: "postcss-property-rollup",
 		OnceExit(root, { Rule }) {
 			let shouldCombine = false;
+			let localSelector;
 			// Check the file for a comment with @combine and fetch the preceeding selector(s)
 			root.walkComments((comment) => {
 				if (!comment.text.includes("@combine")) return;
@@ -40,10 +41,12 @@ module.exports = ({
 				if (!selectors) return;
 
 				// Prefer the selectors from the comment over one provided in the config
-				newSelector = selectors;
+				if (!localSelector) localSelector = selectors;
 			});
 
 			if (!shouldCombine) return;
+
+			if (localSelector) newSelector = localSelector;
 
 			const rules = [];
 			const declarations = {};

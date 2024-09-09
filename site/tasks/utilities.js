@@ -17,7 +17,7 @@ const path = require("path");
 
 const depSolver = require("dependency-solver");
 
-const { dirs, relativePrint } = require("../../tasks/utilities");
+const { dirs, relativePrint } = require("../../tasks/utilities.js");
 
 require("colors");
 

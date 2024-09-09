@@ -1,4 +1,4 @@
-import { getRandomId, Container } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -6,8 +6,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 
 import "../index.css";
-import "../themes/express.css";
 import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const SteplistItem = ({
 	rootClass = "spectrum-Steplist-item",

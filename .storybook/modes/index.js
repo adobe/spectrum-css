@@ -50,6 +50,9 @@ export const disableDefaultModes = {
 export const mobile = {
     "Mobile": {
         scale: "large",
+        color: "light",
+        textDirection: "ltr",
+        context: "legacy",
     },
 };
 

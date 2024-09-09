@@ -29,7 +29,7 @@
 			],
 			"inputs": ["core", "tools"],
 			"options": {
-				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node -e \"require('./tasks').builder()\""],
+				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node -e \"require('./tasks/index.js').builder()\""],
 				"cwd": "{projectRoot}"
 			},
 			"outputs": ["{workspaceRoot}/dist"]

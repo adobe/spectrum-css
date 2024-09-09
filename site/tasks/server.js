@@ -21,8 +21,8 @@ require("colors");
 
 const uiIcons = require.resolve("@spectrum-css/ui-icons");
 
-const { getPackageFromPath } = require("./utilities");
-const { dirs } = require("../../tasks/utilities");
+const { getPackageFromPath } = require("./utilities.js");
+const { dirs } = require("../../tasks/utilities.js");
 
 const {
 	fetchData_forGlobal,

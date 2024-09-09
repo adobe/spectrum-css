@@ -18,6 +18,6 @@
 
 @container style(--system: express) {
 	.spectrum-AlertBanner {
-		--spectrum-alert-banner-netural-background: var(--spectrum-neutral-background-color-default);
+		--spectrum-alert-banner-neutral-background: var(--spectrum-gray-800);
 	}
 }

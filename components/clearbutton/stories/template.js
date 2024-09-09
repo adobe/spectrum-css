@@ -6,8 +6,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
-import "../themes/express.css";
 import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ClearButton",
@@ -24,8 +25,8 @@ export const Template = ({
 			type="reset"
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--size${size?.toUpperCase()}`]:
-					typeof size !== "undefined",
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+				[`${rootClass}--quiet`]: isQuiet,
 				[`${rootClass}--overBackground`]: staticColor === "white",
 				"is-disabled": isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),

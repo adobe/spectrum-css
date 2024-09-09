@@ -1,8 +1,9 @@
 import { Template as ProgressBar } from "./template.js";
 
 import "../index.css";
-import "../themes/express.css";
 import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	customClasses = [],

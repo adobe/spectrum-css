@@ -1,4 +1,4 @@
-import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
+import { disableDefaultModes, mobile, modes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
@@ -90,7 +90,10 @@ export default {
 	parameters: {
 		packageJson: pkgJson,
 		chromatic: {
-			modes: mobile,
+			modes: [
+				...modes,
+				mobile
+			],
 		},
 	},
 	tags: ["!autodocs"],

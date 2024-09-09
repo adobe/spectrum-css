@@ -13,7 +13,7 @@
 
 @container style(--system: spectrum) {
 	.spectrum-AlertBanner {
-		--spectrum-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default);
+		--spectrum-alert-banner-neutral-background: var(--spectrum-neutral-subdued-background-color-default);
 
 		--spectrum-alert-banner-min-height: var(--spectrum-alert-banner-minimum-height);
 		--spectrum-alert-banner-max-inline-size: var(--spectrum-alert-banner-width);
