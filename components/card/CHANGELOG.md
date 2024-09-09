@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.0.0-s2-foundations.15
+
+### Major Changes
+
+- [#3057](https://github.com/adobe/spectrum-css/pull/3057) [`dfce26a`](https://github.com/adobe/spectrum-css/commit/dfce26aa2425f704b15d5a773e5985e510fe274f) Thanks [@Rajdeepc](https://github.com/Rajdeepc)! - Updated the background color of the card component's preview area in spectrum-two.
+
 ## 9.0.0-s2-foundations.14
 
 ### Minor Changes
