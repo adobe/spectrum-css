@@ -14,7 +14,6 @@
 /* This file contains overrides and additions to core tokens */
 
 .spectrum--dark {
-	--spectrum-modal-background-color-quiet: var(--spectrum-gray-200);
 	--spectrum-menu-item-background-color-default: rgba(255, 255, 255, 0); /* --spectrum-gray-900 */
 	--spectrum-menu-item-background-color-hover: var(--spectrum-transparent-white-200);
 	--spectrum-menu-item-background-color-down: var(--spectrum-transparent-white-200);
