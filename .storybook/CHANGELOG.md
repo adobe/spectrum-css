@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.11.0
+
+### Minor Changes
+
+- [#3085](https://github.com/adobe/spectrum-css/pull/3085) [`11b2fc1`](https://github.com/adobe/spectrum-css/commit/11b2fc145283236a8a99c8387e805982a69813d6) Thanks [@castastrophe](https://github.com/castastrophe)! - Adjust the way token and typography are loaded in preparation for S2.
+
 ## 10.10.0
 
 ### Minor Changes
