@@ -28,6 +28,7 @@ export const Template = ({
 	isCardAssetOverride = false,
 	isGrid = false,
 	hasActions = false,
+	hasQuickAction = false,
 	showAsset,
 	customStyles = {},
 	customClasses = [],
@@ -191,7 +192,7 @@ export const Template = ({
           </div>
         `
       )}
-      ${when(hasActions && !isHorizontal, () =>
+      ${when(hasQuickAction && !isHorizontal, () =>
         html`
           <div
             class=${classMap({

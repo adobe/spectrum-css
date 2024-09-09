@@ -68,6 +68,7 @@ export default {
 		isGrid: { table: { disable: true } },
 		isHorizontal: { table: { disable: true } },
 		isDropTarget: { table: { disable: true } },
+		hasQuickAction: { table: { disable: true } },
 	},
 	args: {
 		rootClass: "spectrum-Card",
@@ -78,6 +79,7 @@ export default {
 		isGallery: false,
 		isDropTarget: false,
 		hasActions: true,
+		hasQuickAction: true,
 	},
 	parameters: {
 		actions: {

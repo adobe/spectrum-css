@@ -15,3 +15,9 @@
 /* @combine .spectrum.spectrum--legacy */
 
 @import "./spectrum-two.css";
+
+@container style(--system: spectrum) {
+	.spectrum-Checkbox {
+		--spectrum-checkbox-checkmark-color: var(--spectrum-gray-75);
+	}
+}
