@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.0-s2-foundations.13
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9956547`](https://github.com/adobe/spectrum-css/commit/9956547660d88ddfe77f9fc641b2036ab5b33efc) Thanks [@pfulton](https://github.com/pfulton)! - Express color updated for alert banner component
+
 ## 3.0.0-s2-foundations.12
 
 ### Minor Changes
