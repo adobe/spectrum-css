@@ -1,6 +1,8 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
+import tokens from "@spectrum-css/tokens/dist/index.css?inline";
+
 /**
  * @type import('@storybook/csf').DecoratorFunction<import('@storybook/web-components').WebComponentsFramework>
  * @description Global properties added to each component; determines what stylesheets are loaded
@@ -19,11 +21,8 @@ export const withContextWrapper = makeDecorator({
 				context = "legacy",
 				scale = "medium",
 			} = {},
-			viewMode,
 			id,
-			loaded: {
-				tokens = {},
-			} = {}
+			viewMode,
 		} = data;
 
 		const staticColorSettings = {
@@ -49,6 +48,9 @@ export const withContextWrapper = makeDecorator({
 			}
 
 			for (const container of fetchContainers(id, viewMode === "docs")) {
+				// Start by attaching the appropriate tokens to the container
+				toggleStyles(container, "tokens", tokens, !isRaw);
+
 				// Check if the container has a static color element
 				const hasStaticElement = container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack, .${rootClass}--overBackground)`);
 				let staticKey = staticColor;
@@ -63,42 +65,27 @@ export const withContextWrapper = makeDecorator({
 				container.classList.toggle("spectrum", !isRaw);
 
 				// S1 and S1 Express get the legacy class
-				container.classList.toggle("spectrum--legacy", !isModern);
+				container.classList.toggle("spectrum--legacy", !isModern && !isRaw);
 				// Express only gets the express class
-				container.classList.toggle("spectrum--express", isExpress);
-
-				// Add/remove the base styles for the global, spectrum, and express contexts
-				toggleStyles(container, "vars-global", tokens?.global?.base, true);
-
-				// Note: Express requires loading both spectrum + express tokens
-				toggleStyles(container, "vars-shared-legacy", tokens?.spectrum?.base, !isModern);
-				toggleStyles(container, "vars-shared-express", tokens?.express?.base, isExpress);
+				container.classList.toggle("spectrum--express", isExpress && !isRaw);
 
 				// Darkest is deprecated in Spectrum 2
-				if (isModern && color === "darkest") color = "dark";
+				if (isModern && color === "darkest") {
+					/* eslint-disable no-console -- notify that darkest was deprecated in S2 */
+					console.warn("The 'darkest' color is deprecated in Spectrum 2. Please use 'dark' instead.");
+					color = "dark";
+				}
 
 				for (let c of ["light", "dark", "darkest"]) {
 					// Force light or dark mode if the static color is set
-                    const isColor = c === staticColorSettings[staticKey]?.color || !staticKey && c === color;
+					const isColor = staticKey && c === staticColorSettings[staticKey]?.color || !staticKey && c === color;
 
 					container.classList.toggle(`spectrum--${c}`, isColor && !isRaw);
-
-					toggleStyles(container, `vars-global-${c}`, tokens?.global?.[c], isColor);
-
-					// Note: Express requires loading both spectrum + express tokens
-					toggleStyles(container, `vars-${c}-legacy`, tokens?.spectrum?.[c], isColor && !isModern);
-					toggleStyles(container, `vars-${c}-express`, tokens?.express?.[c], isColor && isExpress);
 				}
 
 				for (const s of ["medium", "large"]) {
-                    const isScale = s === scale;
+					const isScale = s === scale;
 					container.classList.toggle(`spectrum--${s}`, isScale && !isRaw);
-
-					toggleStyles(container, `vars-global-${s}`, tokens?.global?.[s], isScale);
-
-					// Note: Express requires loading both spectrum + express tokens
-					toggleStyles(container, `vars-${s}-legacy`, tokens?.spectrum?.[s], isScale && !isModern);
-					toggleStyles(container, `vars-${s}-express`, tokens?.express?.[s], isScale && isExpress);
 				}
 
 				// Start by removing the background color from the container and then add it back if needed
