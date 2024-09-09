@@ -146,8 +146,8 @@ async function run() {
 				const md = ["", `#### ${name}`, ""];
 				md.push(
 					...[
-						["Filename", "Head", "Minified", "Gzipped", ...(hasBase ? ["Compared to base"] : [])],
-						[" - ", " - ", "-", "-", ...(hasBase ? [" - "] : [])],
+						["Filename", "Head", ...(hasBase ? ["Compared to base"] : [])],
+						[" - ", " - ", ...(hasBase ? [" - "] : [])],
 					].map((row) => `| ${row.join(" | ")} |`),
 
 					...[...fileMap.entries()]
@@ -160,19 +160,11 @@ async function run() {
 								if (readableFilename.endsWith(".map")) return table;
 
 								const removedOnBranch = isRemoved(headByteSize, baseByteSize);
+
 								// @todo should there be any normalization before comparing the file names?
 								const isMainFile = readableFilename === mainFile;
 
-								// If the file is a minified file, don't include it separately in the table
-								if (/\.min\.css/.test(readableFilename)) return table;
-
-								const gzipName = readableFilename.replace(/\.([a-z]+)$/, ".min.$1.gz");
-								const minName = readableFilename.replace(/\.([a-z]+)$/, ".min.$1");
-
 								const size = removedOnBranch ? " - " : bytesToSize(headByteSize);
-								const gzipSize = removedOnBranch ? " - " : gzipName ? bytesToSize(fileMap.get(gzipName)?.headByteSize ?? 0) : "-";
-								const minSize = removedOnBranch ? " - " : minName ? bytesToSize(fileMap.get(minName)?.headByteSize ?? 0) : "-";
-
 								const delta = removedOnBranch ? "🚨 deleted, moved, or renamed" : isNew(headByteSize, baseByteSize) ? "🎉 **new**" : `${printChange(headByteSize, baseByteSize)}${difference(baseByteSize, headByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`;
 
 								// @todo readable filename can be linked to html diff of the file?
@@ -184,8 +176,6 @@ async function run() {
 										isMainFile ? `**${readableFilename}**` : readableFilename,
 										// If the file was removed, note it's absense with a dash; otherwise, note it's size
 										size,
-										minSize,
-										gzipSize,
 										...(hasBase ? [delta] : []),
 									]
 								];
