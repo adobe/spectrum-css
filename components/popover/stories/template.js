@@ -1,4 +1,6 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -210,3 +212,85 @@ export const Template = ({
 		</div>
 	`;
 };
+
+/**
+ * Template that displays a Popover with every value of the "position" option.
+ */
+export const TipPlacementVariants = (args, context) => {
+	const placementOptions = context?.argTypes?.position?.options ?? [];
+	return html`
+		<div
+			style=${styleMap({
+				"display": "grid",
+				"gap": "16px",
+				"row-gap": "32px",
+				"grid-template-columns": "repeat(auto-fit, minmax(232px, 1fr))",
+				"max-width": "1000px",
+			})}
+		>
+			${placementOptions.map(option => {
+				let optionDescription;
+				if (option.startsWith("start") || option.startsWith("end"))
+					optionDescription = "Changes side with text direction (like a logical property)";
+				if (option.startsWith("left") || option.startsWith("right"))
+					optionDescription = "Text direction does not affect the position";
+
+				return html`
+					<div>
+						${Typography({
+							semantics: "detail",
+							size: "l",
+							content: [option],
+							customClasses: ["chromatic-ignore"],
+						}, context)}
+						<div style=${styleMap({
+							"padding": "16px",
+							"block-size": "100px",
+							"inline-size": "200px",
+							"border": "1px solid var(--spectrum-gray-200)",
+							"border-radius": "4px",
+						})}>
+							<div style="position: relative">
+								${Template({
+									...args,
+									position: option,
+									isOpen: true,
+									trigger: () => null,
+								}, context)}
+							</div>
+						</div>
+						${when(optionDescription, () => html`
+							${Typography({
+								semantics: "body",
+								size: "s",
+								content: [html`<sup>*</sup> ${optionDescription}`],
+								customClasses: ["chromatic-ignore"],
+							}, context)}
+						`)}
+					</div>
+				`;
+			})}
+		</div>
+	`;
+};
+
+/**
+ * Contains a source button with a fixed width, and an always open Popover.
+ */
+export const FixedWidthSourceTemplate = (args) => html`
+	<div style="min-width: 300px;">
+		${ActionButton({
+			label: "Source",
+			customStyles: {
+				width: "100px",
+				display: "block",
+			},
+		})}
+		${Template({
+			...args,
+			position: "bottom-start",
+			isOpen: true,
+			trigger: () => null,
+		})}
+	</div>
+`;

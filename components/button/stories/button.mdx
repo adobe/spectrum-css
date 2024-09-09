@@ -1,0 +1,108 @@
+import {
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  ArgTypes,
+  Canvas,
+} from "@storybook/blocks";
+import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+
+import * as ButtonStories from "./button.stories";
+
+<Meta of={ButtonStories} title="Docs" />
+
+<Title of={ButtonStories} />
+<Subtitle of={ButtonStories} />
+<ComponentDetails of={ButtonStories} />
+
+<Description of={ButtonStories} />
+
+## Variants
+
+There are four available variants that are used for different levels of emphasis and different
+types of actions. By default, a button uses the fill style with a solid background. The primary
+and secondary variants also have an outline option.
+
+### Accent
+
+<Description of={ButtonStories.Accent} />
+<Canvas of={ButtonStories.Accent} />
+
+### Primary
+
+<Description of={ButtonStories.Primary} />
+<Canvas of={ButtonStories.Primary} />
+
+### Secondary
+
+<Description of={ButtonStories.Secondary} />
+<Canvas of={ButtonStories.Secondary} />
+
+### Negative
+
+<Description of={ButtonStories.Negative} />
+<Canvas of={ButtonStories.Negative} />
+
+## Static color
+
+When a button needs to be placed on top of a color background or a visual, use the static color
+option. Static color buttons do not change shades or values depending upon the color theme.
+
+### Static white - primary
+
+<Canvas
+  of={ButtonStories.StaticWhitePrimary}
+  className="spectrum-examples-static-white"
+/>
+
+### Static white - secondary
+
+<Canvas
+  of={ButtonStories.StaticWhiteSecondary}
+  className="spectrum-examples-static-white"
+/>
+
+### Static black - primary
+
+<Canvas
+  of={ButtonStories.StaticBlackPrimary}
+  className="spectrum-examples-static-black"
+/>
+
+### Static black - secondary
+
+<Canvas
+  of={ButtonStories.StaticBlackSecondary}
+  className="spectrum-examples-static-black"
+/>
+
+## Sizing
+
+<Description of={ButtonStories.Sizing} />
+<Canvas of={ButtonStories.Sizing} />
+
+## Pending state
+
+<Description of={ButtonStories.Pending} />
+<Canvas of={ButtonStories.Pending} />
+
+## Disabled state
+
+<Description of={ButtonStories.Disabled} />
+<Canvas of={ButtonStories.Disabled} />
+
+## Text overflow behavior
+
+<Description of={ButtonStories.WithWrapping} />
+<Canvas of={ButtonStories.WithWrapping} />
+
+## Properties
+
+The component accepts the following inputs (properties):
+
+<ArgTypes of={ButtonStories} />
+
+## Tagged releases
+
+<TaggedReleases of={ButtonStories} />

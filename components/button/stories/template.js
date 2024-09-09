@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -102,3 +102,73 @@ export const Template = ({
     </button>
   `;
 };
+
+/**
+ * Displays multiple buttons with text label, icon + text label, and icon only.
+ * Used in the display of some docs-only stories.
+ */
+export const ButtonsWithIconOptions = ({
+	iconName,
+	...args
+}) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+    ${Template({
+      ...args,
+      iconName: undefined,
+    })}
+    ${Template({
+      ...args,
+      iconName: iconName ?? "Edit",
+    })}
+    ${Template({
+      ...args,
+      hideLabel: true,
+      iconName: iconName ?? "Edit",
+    })}
+  `,
+});
+
+/**
+ * Display the buttons with icon options for each treatment option.
+ */
+export const TreatmentTemplate = (args) => Container({
+	withBorder: false,
+	direction: "column",
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`${["fill", "outline"].map((treatment) => ButtonsWithIconOptions({ ...args, treatment }))}`,
+});
+
+/**
+ * Display the text overflow behavior of buttons.
+ */
+export const TextOverflowTemplate = (args) => Container({
+	withBorder: false,
+	direction: "column",
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`
+    ${Template({
+      ...args,
+      customStyles: {
+        "max-inline-size": "480px",
+      },
+      label: "An example of text overflow behavior when there is no icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
+    })}
+    ${Template({
+      ...args,
+      customStyles: {
+        "max-inline-size": "480px",
+      },
+      iconName: "Edit",
+      label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
+    })}
+  `,
+});

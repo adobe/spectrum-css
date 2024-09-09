@@ -32,9 +32,9 @@ export const Template = ({
 				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
+			role=${inputType == "radio" ? "radiogroup" : "group"}
 			aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
-			type=${ifDefined(inputType)}
-			aria-readonly=${ifDefined(isReadOnly ? "true" : undefined)}
+			aria-readonly=${ifDefined(isReadOnly && inputType == "radio" ? "true" : undefined)}
 			aria-required=${ifDefined(isRequired ? "true" : undefined)}
 		>
 			${when(label, () =>

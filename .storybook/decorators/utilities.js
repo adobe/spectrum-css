@@ -227,12 +227,21 @@ export const ArgGrid = ({
 		heading,
 		direction,
 		withBorder: true,
-		content: options.map((opt) => Container({
+		content: options.map((opt, index) => Container({
 			heading: labels[opt] ?? capitalize(opt),
 			level,
 			withBorder,
 			wrapperStyles,
-			content: Template({ ...args, [argKey]: opt }, context)
+			content: Template({
+				...args,
+				[argKey]: opt,
+				/**
+				 * Make sure stories in the testing grid maintain a unique "name" and "id", by appending an additional string.
+				 * Important for labels associated with a control by ID, and for groups of radios to maintain the same name.
+				 */
+				...(typeof args?.name !== "undefined" ? {name: `${args.name}-${argKey}-${index}`} : {}),
+				...(typeof args?.id !== "undefined" ? {id: `${args.id}-${argKey}-${index}`} : {}),
+			}, context)
 		})),
 	});
 };

@@ -38,8 +38,8 @@ export const Template = ({
                 html`<h2 class="${rootClass}-heading" id="${item.id}-heading">${item.heading}</h2>`
                 :
                 html`
-                <a class="${rootClass}-itemLink">
-                  ${when(hasIcon, () => Icon({ iconName }, context))}
+                <a class="${rootClass}-itemLink" aria-current=${ifDefined(item.isSelected ? "page" : undefined)}>
+                  ${when(hasIcon && iconName, () => Icon({ iconName }, context))}
                   <span class="${rootClass}-link-text">${item.title}</span>
                 </a>
                 `
@@ -52,6 +52,7 @@ export const Template = ({
               aria-labelledby=${ifDefined(item.heading) ? `${item.id}-heading` : ""}>
                   ${repeat(item.levelTwoItems, (item) => item.id, (item) => {
                     return SideNavItem({
+                      currentTier: 2,
                       variant,
                       hasIcon,
                       iconName,
@@ -63,7 +64,9 @@ export const Template = ({
             `;
           }
           else {
+            // First level nav item only
             return SideNavItem({
+              currentTier: 1,
               hasIcon,
               iconName,
               ...item
@@ -75,9 +78,12 @@ export const Template = ({
   `;
 };
 
+/**
+ * Renders a single navigation item, and an optional third tier of items.
+ */
 export const SideNavItem = ({
 	rootClass = "spectrum-SideNav",
-	variant,
+	currentTier = 1,
 	levelThreeItems,
 	link,
 	title,
@@ -104,7 +110,7 @@ export const SideNavItem = ({
           [`${rootClass}-itemLink`]: true,
         })}
       >
-        ${when(!hasIcon & variant !== "multiLevel", () => Icon({ iconName }, context))}
+        ${when(hasIcon && iconName && currentTier == 1, () => Icon({ iconName }, context))}
         <span class=${classMap({
           [`${rootClass}-link-text`]: true,
         })}>
@@ -115,7 +121,9 @@ export const SideNavItem = ({
         <ul class=${classMap({
           [rootClass]: true,
         })}>
-          ${repeat(levelThreeItems, (item) => item.id, (item) => SideNavItem(item, context))}
+			${repeat(levelThreeItems, (item) => item.id, (item) => SideNavItem({
+				...item
+			}, context))}
         </ul>`
       )}
     </li>
