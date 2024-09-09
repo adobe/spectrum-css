@@ -10,7 +10,7 @@ import "../index.css";
 
 export const Template = (args = {}, context = {}) => {
 	let {
-		rootClass = "spectrum-Typography",
+		rootClass,
 		semantics,
 		size = "m",
 		variant,
@@ -20,6 +20,7 @@ export const Template = (args = {}, context = {}) => {
 		content = [],
 		customClasses = [],
 		customStyles = {},
+		skipLineBreak = false,
 	} = args;
 
 	// If the content is not an array, make it an array for easier processing
@@ -51,14 +52,9 @@ export const Template = (args = {}, context = {}) => {
 
 		const classes = {
 			[rootClass]: true,
-			[`${rootClass}--${glyph}`]:
-				typeof semantics !== "undefined" &&
-				typeof glyph !== "undefined" &&
-				glyph !== "sans-serif",
-			[`${rootClass}--size${size?.toUpperCase()}`]:
-				typeof semantics !== "undefined" && typeof size !== "undefined",
-			[`${rootClass}--${weight}`]:
-				typeof semantics !== "undefined" && typeof weight !== "undefined",
+			[`${rootClass}--${glyph}`]: typeof glyph !== "undefined" && glyph !== "sans-serif",
+			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+			[`${rootClass}--${weight}`]: typeof weight !== "undefined",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		};
 
@@ -99,11 +95,11 @@ export const Template = (args = {}, context = {}) => {
 
 		if (semantics === "code")
 			return html`
-				<code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</code><br/>
+				<code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</code>${when(!skipLineBreak, () => html`<br/>`)}
 			`;
 
 		return html`
-			<span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</span><br/>
+			<span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</span>${when(!skipLineBreak, () => html`<br/>`)}
 		`;
 	});
 

@@ -11,10 +11,17 @@
  * governing permissions and limitations under the License.
  */
 
-@import "@spectrum-css/typography";
-
+/* stylelint-disable selector-class-pattern */
 body {
+	--spectrum-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-font-style: var(--spectrum-default-font-style);
+	--spectrum-font-size: var(--spectrum-font-size-100);
+
 	margin: 0;
+
+	font-family: var(--spectrum-font-family);
+	font-size: var(--spectrum-font-size);
+	font-style: var(--spectrum-font-style);
 
 	color: var(--spectrum-neutral-content-color-default);
 	background-color: var(--spectrum-background-layer-2-color);
@@ -66,3 +73,4 @@ svg:has(symbol):not(:has(use)) {
 	story view), due to Storybook's inline style that sets overflow: auto */
 	overflow: visible !important;
 }
+/* stylelint-enable selector-class-pattern */
