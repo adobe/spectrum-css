@@ -1,5 +1,11 @@
 # Change Log
 
+## 11.0.0-s2-foundations.10
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9f14f95`](https://github.com/adobe/spectrum-css/commit/9f14f9591c5b7f499348dd25cba92c1a96684c44) Thanks [@pfulton](https://github.com/pfulton)! - Adjust the way token and typography are loaded in preparation for S2.
+
 ## 11.0.0-s2-foundations.9
 
 ### Patch Changes
