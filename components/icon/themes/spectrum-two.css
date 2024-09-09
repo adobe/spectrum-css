@@ -13,28 +13,13 @@
 
 @container style(--system: spectrum) {
 	.spectrum-Icon {
-		--spectrum-icon-size: var(--spectrum-workflow-icon-size-100);
-	}
-
-	/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
-	.spectrum-Icon--sizeXXS {
-		--spectrum-icon-size: var(--spectrum-workflow-icon-size-xxs);
-	}
-
-	.spectrum-Icon--sizeXS {
-		--spectrum-icon-size: var(--spectrum-workflow-icon-size-50);
-	}
-
-	.spectrum-Icon--sizeS {
-		--spectrum-icon-size: var(--spectrum-workflow-icon-size-75);
-	}
-
-	.spectrum-Icon--sizeL {
-		--spectrum-icon-size: var(--spectrum-workflow-icon-size-200);
-	}
-
-	.spectrum-Icon--sizeXL {
-		--spectrum-icon-size: var(--spectrum-workflow-icon-size-300);
+		--spectrum-icon-size-xxs: var(--spectrum-workflow-icon-size-xxs);
+		--spectrum-icon-size-xs: var(--spectrum-workflow-icon-size-50);
+		--spectrum-icon-size-s: var(--spectrum-workflow-icon-size-75);
+		--spectrum-icon-size-m: var(--spectrum-workflow-icon-size-100);
+		--spectrum-icon-size-l: var(--spectrum-workflow-icon-size-200);
+		--spectrum-icon-size-xl: var(--spectrum-workflow-icon-size-300);
+		--spectrum-icon-size-xxl: var(--spectrum-workflow-icon-size-xxl);
 	}
 
 	/* Chevron */
