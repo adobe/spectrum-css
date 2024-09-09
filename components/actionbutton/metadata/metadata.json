@@ -14,7 +14,7 @@
     ".spectrum-ActionButton.is-selected:not(:disabled) .spectrum-ActionButton-hold",
     ".spectrum-ActionButton.is-selected:not(:disabled) .spectrum-ActionButton-icon",
     ".spectrum-ActionButton.is-selected:not(:disabled) .spectrum-ActionButton-label",
-    ".spectrum-ActionButton.spectrum-ActionButton--emphasized",
+    ".spectrum-ActionButton.spectrum-ActionButton--emphasized.is-selected",
     ".spectrum-ActionButton.spectrum-ActionButton--quiet",
     ".spectrum-ActionButton.spectrum-ActionButton--sizeL",
     ".spectrum-ActionButton.spectrum-ActionButton--sizeM",
@@ -36,6 +36,7 @@
     ".spectrum-ActionButton:focus-visible",
     ".spectrum-ActionButton:focus-visible:after",
     ".spectrum-ActionButton:hover",
+    "[dir=\"rtl\"] .spectrum-ActionButton",
     "a.spectrum-ActionButton"
   ],
   "modifiers": [

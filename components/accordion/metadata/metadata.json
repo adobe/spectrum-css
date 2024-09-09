@@ -12,8 +12,7 @@
     ".spectrum-Accordion-item.is-open > .spectrum-Accordion-itemContent",
     ".spectrum-Accordion-item.is-open > .spectrum-Accordion-itemHeading > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator",
     ".spectrum-Accordion-item.is-open > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator",
-    ".spectrum-Accordion-item:first-of-type",
-    ".spectrum-Accordion-item:not(:first-of-type)",
+    ".spectrum-Accordion-item:first-child",
     ".spectrum-Accordion-itemContent",
     ".spectrum-Accordion-itemHeader",
     ".spectrum-Accordion-itemHeader:active",
@@ -34,7 +33,9 @@
     ".spectrum-Accordion:dir(rtl)",
     ".spectrum-Accordion:lang(ja)",
     ".spectrum-Accordion:lang(ko)",
-    ".spectrum-Accordion:lang(zh)"
+    ".spectrum-Accordion:lang(zh)",
+    "[dir=\"rtl\"] .spectrum-Accordion",
+    "[dir=\"rtl\"] .spectrum-Accordion-itemIconContainer"
   ],
   "modifiers": [
     "--mod-accordion-background-color-default",
@@ -158,6 +159,7 @@
     "--spectrum-accordion-item-height-size-s",
     "--spectrum-accordion-item-height-size-xl",
     "--spectrum-accordion-item-width",
+    "--spectrum-accordion-min-block-size",
     "--spectrum-accordion-minimum-width",
     "--spectrum-accordion-small-top-to-text-spacious",
     "--spectrum-accordion-top-to-text-compact-extra-large",

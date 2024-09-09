@@ -1,6 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { PlacementVariants } from "./tooltip.test.js";
 
 /**
@@ -88,7 +88,7 @@ export default {
 		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

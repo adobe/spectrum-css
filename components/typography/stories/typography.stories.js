@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import { html } from "lit";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { Template } from "./template.js";
 import { TypographyGroup } from "./typography.test.js";
 
@@ -65,7 +65,7 @@ export default {
 		semantics: "body",
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

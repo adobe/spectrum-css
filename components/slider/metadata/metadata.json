@@ -87,7 +87,9 @@
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:active",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover",
-    ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range).js-focus-within .spectrum-Slider-controls[focus-within]"
+    ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range).js-focus-within .spectrum-Slider-controls[focus-within]",
+    "[dir=\"rtl\"] .spectrum-Slider",
+    "[dir=\"rtl\"] .spectrum-Slider .spectrum-Slider-handle:before"
   ],
   "modifiers": [
     "--mod-animation-duration-100",

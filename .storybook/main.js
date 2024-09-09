@@ -63,9 +63,6 @@ export default {
 			},
 			css: {
 				devSourcemap: configType === "DEVELOPMENT",
-				preprocessorOptions: {
-					css: { codeSplit: true }
-				}
 			},
 		});
 	},

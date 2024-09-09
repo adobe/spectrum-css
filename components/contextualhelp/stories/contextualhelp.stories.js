@@ -1,6 +1,6 @@
 import { default as ActionButtonStories } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { ContextualHelpGroup } from "./contextualhelp.test.js";
 import { Template } from "./template.js";
 
@@ -90,7 +90,7 @@ export default {
 				...(ActionButtonStories?.parameters?.actions?.handles ?? [])
 			],
 		},
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 	tags: ["!autodocs"],
 };

@@ -69,7 +69,8 @@
     ".spectrum-Combobox:hover:has(:focus) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Textfield.is-disabled .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-loading .spectrum-Textfield-validationIcon",
-    ".spectrum-Textfield.is-readOnly .spectrum-Textfield-validationIcon"
+    ".spectrum-Textfield.is-readOnly .spectrum-Textfield-validationIcon",
+    "[dir=\"rtl\"] .spectrum-Combobox-progress-circle"
   ],
   "modifiers": [
     "--mod-combobox-alert-icon-color",

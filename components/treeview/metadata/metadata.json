@@ -48,7 +48,8 @@
     ".spectrum-TreeView-itemLink:hover:before",
     ".spectrum-TreeView-section > .spectrum-TreeView",
     ".spectrum-TreeView-section:not(:first-child)",
-    ".spectrum-TreeView:dir(rtl)"
+    ".spectrum-TreeView:dir(rtl)",
+    "[dir=\"rtl\"] .spectrum-TreeView"
   ],
   "modifiers": [
     "--mod-treeview-font-size",

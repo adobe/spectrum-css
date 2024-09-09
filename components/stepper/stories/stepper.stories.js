@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isQuiet, size } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { StepperGroup } from "./stepper.test.js";
 import { Template, DisabledVariantsGroup, AllDefaultVariantsGroup } from "./template";
 
@@ -39,7 +39,7 @@ export default {
 		hideStepper: false
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 

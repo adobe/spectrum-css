@@ -184,6 +184,17 @@
   - @spectrum-css/avatar@8.0.0-s2-foundations.0
   - @spectrum-css/icon@8.0.0-s2-foundations.0
 
+## 9.1.2
+
+### Patch Changes
+
+- [#3045](https://github.com/adobe/spectrum-css/pull/3045) [`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277) Thanks [@castastrophe](https://github.com/castastrophe)! - Improve changeset suggestions by using exports instead of files in component packages
+
+- Updated dependencies [[`5d6e03f`](https://github.com/adobe/spectrum-css/commit/5d6e03f30891f9171f1a600b06d534ee85719277)]:
+  - @spectrum-css/clearbutton@6.1.2
+  - @spectrum-css/avatar@7.1.2
+  - @spectrum-css/icon@7.1.3
+
 ## 9.1.1
 
 ### Patch Changes

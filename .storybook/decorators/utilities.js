@@ -226,11 +226,11 @@ export const ArgGrid = ({
 	return Container({
 		heading,
 		direction,
-		withBorder,
+		withBorder: true,
 		content: options.map((opt) => Container({
 			heading: labels[opt] ?? capitalize(opt),
 			level,
-			withBorder: false,
+			withBorder,
 			wrapperStyles,
 			content: Template({ ...args, [argKey]: opt }, context)
 		})),
@@ -249,11 +249,11 @@ export const ArgGrid = ({
  */
 export const Sizes = ({
 	withHeading = true,
-  withBorder = false,
+	withBorder = false,
 	...args
 } = {}, context = {}) => {
 	return ArgGrid({
-    withBorder,
+		withBorder,
 		heading: withHeading ? "Sizing" : undefined,
 		argKey: "size",
 		options: context?.argTypes?.size?.options,
@@ -268,7 +268,7 @@ export const Sizes = ({
 			xxl: "Extra-extra-large",
 		},
 		...args
-	});
+	}, context);
 };
 
 /**

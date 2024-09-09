@@ -1,7 +1,7 @@
 import { WithDividers as MenuStories } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { PickerGroup } from "./picker.test.js";
 
 /**
@@ -78,12 +78,12 @@ export default {
 		],
 	},
 	parameters: {
-		componentVersion: version,
 		docs: {
 			story: {
 				height: "400px"
 			}
 		},
+		packageJson: pkgJson,
 	},
 };
 

@@ -1,7 +1,7 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
-import { version } from "../package.json";
+import pkgJson from "../package.json";
 import { IllustratedMessageGroup } from "./illustratedmessage.test.js";
 import { Template } from "./template.js";
 
@@ -43,7 +43,7 @@ export default {
 		useAccentColor: false,
 	},
 	parameters: {
-		componentVersion: version,
+		packageJson: pkgJson,
 	},
 };
 
