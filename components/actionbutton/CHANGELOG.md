@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-s2-foundations.17
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`1252094`](https://github.com/adobe/spectrum-css/commit/1252094e476eb60b51d33c3ec574b843b005ef82) Thanks [@pfulton](https://github.com/pfulton)! - Right-side padding fix
+
 ## 7.0.0-s2-foundations.16
 
 ### Minor Changes

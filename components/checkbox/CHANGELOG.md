@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.0.0-s2-foundations.15
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`be5d85f`](https://github.com/adobe/spectrum-css/commit/be5d85f36aa6f81485b02fe943c5de22922fe0ff) Thanks [@pfulton](https://github.com/pfulton)! - Fix S1 checkbox color
+
 ## 10.0.0-s2-foundations.14
 
 ### Minor Changes
