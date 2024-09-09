@@ -37,12 +37,5 @@
 			--spectrum-button-background-color-down: var(--spectrum-neutral-background-color-down);
 			--spectrum-button-background-color-focus: var(--spectrum-neutral-background-color-key-focus);
 		}
-
-		&.spectrum-Button--primary {
-			--spectrum-button-content-color-default: var(--spectrum-white);
-			--spectrum-button-content-color-hover: var(--spectrum-white);
-			--spectrum-button-content-color-down: var(--spectrum-white);
-			--spectrum-button-content-color-focus: var(--spectrum-white);
-		}
 	}
 }
