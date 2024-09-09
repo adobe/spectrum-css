@@ -1,4 +1,4 @@
-import { disableDefaultModes, mobile, modes } from "@spectrum-css/preview/modes";
+import modes, { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
