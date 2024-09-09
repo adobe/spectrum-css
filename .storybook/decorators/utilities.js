@@ -1,5 +1,5 @@
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html, nothing } from "lit";
-import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
@@ -20,21 +20,17 @@ const Heading = ({
 	weight,
 	customClasses = [],
 } = {}) => {
-	const rootClass = type === "code" ? "spectrum-Code" : "spectrum-Detail";
-	const derivedClasses = {
-		[rootClass]: true,
-		[`${rootClass}--size${size?.toUpperCase()}`]: true,
-		[`${rootClass}--${weight}`]: type !== "code" && typeof weight !== "undefined",
-		["chromatic-ignore"]: true,
-		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-	};
-	return html`
-		${when(
-			type === "code",
-			() => html`<pre><code class=${classMap(derivedClasses)}>${content}</code></pre>`,
-			() => html`<h2 class=${classMap(derivedClasses)} style="color:var(--spectrum-gray-600)">${content}</h2>`,
-		)}
-	`;
+	return Typography({
+		semantics: type === "code" ? "code" : "detail",
+		size,
+		weight,
+		content,
+		skipLineBreak: true,
+		customClasses: ["chromatic-ignore", ...customClasses],
+		customStyles: {
+			"color": type !== "code" ? "var(--spectrum-gray-600)" : undefined,
+		}
+	});
 };
 
 /**
@@ -201,6 +197,7 @@ export const States = ({
 export const ArgGrid = ({
 	Template,
 	wrapperStyles = {},
+	containerStyles = {},
 	direction = "row",
 	heading,
 	argKey,
@@ -208,25 +205,35 @@ export const ArgGrid = ({
 	labels = {},
 	level = 2,
 	withBorder = true,
+	withWrapperBorder = true,
 	...args
 } = {}, context = {}) => {
 	if (typeof argKey === "undefined") {
 		console.warn("ArgGrid: argKey is required to render the grid.");
 		return nothing;
-	} else if (context?.argTypes?.[argKey] === undefined) {
+	}
+
+	const argType = context?.argTypes?.[argKey];
+	if (typeof argType === "undefined") {
 		// Check if the argKey exists in the argTypes
 		console.warn(`ArgGrid: ${argKey} is not a valid argType for this story.`);
 		return nothing;
 	}
 
 	if (typeof options === "undefined" || !options.length) {
-		options = context?.argTypes?.[argKey]?.options ?? [];
+		options = argType.options ?? [];
+	}
+
+	if (typeof options === "undefined" || !options.length) {
+		console.warn(`ArgGrid: No options found for ${argKey}.`);
+		return nothing;
 	}
 
 	return Container({
 		heading,
 		direction,
-		withBorder: true,
+		withBorder: withWrapperBorder,
+		wrapperStyles: containerStyles,
 		content: options.map((opt, index) => Container({
 			heading: labels[opt] ?? capitalize(opt),
 			level,
@@ -265,7 +272,6 @@ export const Sizes = ({
 		withBorder,
 		heading: withHeading ? "Sizing" : undefined,
 		argKey: "size",
-		options: context?.argTypes?.size?.options,
 		level: 3,
 		labels: {
 			xxs: "Extra-extra-small",
