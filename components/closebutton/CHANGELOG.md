@@ -1,5 +1,14 @@
 # Change Log
 
+## 6.0.0-s2-foundations.13
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5d50b15`](https://github.com/adobe/spectrum-css/commit/5d50b1557e0d4f8236be43728cde66c9d41b16e7) Thanks [@pfulton](https://github.com/pfulton)! - Typo in CloseButton classes for sizing
+
+- Updated dependencies [[`6582314`](https://github.com/adobe/spectrum-css/commit/65823145e139caa56f5e73e8a36e73aff37672de)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.19
+
 ## 6.0.0-s2-foundations.12
 
 ### Minor Changes

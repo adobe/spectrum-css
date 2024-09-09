@@ -1,5 +1,16 @@
 # Change Log
 
+## 9.0.0-s2-foundations.15
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6582314`](https://github.com/adobe/spectrum-css/commit/65823145e139caa56f5e73e8a36e73aff37672de) Thanks [@pfulton](https://github.com/pfulton)! - Updates to custom property inheritance and properties order
+
+### Patch Changes
+
+- Updated dependencies [[`6582314`](https://github.com/adobe/spectrum-css/commit/65823145e139caa56f5e73e8a36e73aff37672de)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.19
+
 ## 9.0.0-s2-foundations.14
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # Change Log
 
+## 15.0.0-s2-foundations.19
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6582314`](https://github.com/adobe/spectrum-css/commit/65823145e139caa56f5e73e8a36e73aff37672de) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to the rgb mapping plugin brought back rgb alias's to tokens output
+
 ## 15.0.0-s2-foundations.18
 
 ### Patch Changes
