@@ -60,7 +60,7 @@
 	--spectrum-actionbutton-focus-indicator-border-radius: calc(var(--spectrum-actionbutton-border-radius) + var(--spectrum-actionbutton-focus-indicator-gap));
 
 	--spectrum-actionbutton-edge-to-visual: calc(var(--spectrum-actionbutton-edge-to-visual-size) - var(--spectrum-actionbutton-border-width));
-	--spectrum-actionbutton-edge-to-text: calc(var(--spectrum-actionbutton-edge-to-visual-size) - var(--spectrum-actionbutton-border-width));
+	--spectrum-actionbutton-edge-to-text: calc(var(--spectrum-actionbutton-edge-to-text-size) - var(--spectrum-actionbutton-border-width));
 	--spectrum-actionbutton-edge-to-visual-only: calc(var(--spectrum-actionbutton-edge-to-visual-size) - var(--spectrum-actionbutton-border-width));
 
 	position: relative;

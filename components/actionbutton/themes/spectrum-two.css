@@ -103,6 +103,7 @@
 			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-extra-small);
 
 			--spectrum-actionbutton-edge-to-visual-size: var(--spectrum-component-edge-to-visual-50);
+			--spectrum-actionbutton-edge-to-text-size: var(--spectrum-component-edge-to-text-50);
 		}
 
 		&.spectrum-ActionButton--sizeS {
@@ -115,6 +116,7 @@
 			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-small);
 
 			--spectrum-actionbutton-edge-to-visual-size: var(--spectrum-component-edge-to-visual-75);
+			--spectrum-actionbutton-edge-to-text-size: var(--spectrum-component-edge-to-text-75);
 		}
 
 		&,
@@ -128,6 +130,7 @@
 			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-medium);
 
 			--spectrum-actionbutton-edge-to-visual-size: var(--spectrum-component-edge-to-visual-100);
+			--spectrum-actionbutton-edge-to-text-size: var(--spectrum-component-edge-to-text-100);
 		}
 
 		&.spectrum-ActionButton--sizeL {
@@ -140,6 +143,7 @@
 			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-large);
 
 			--spectrum-actionbutton-edge-to-visual-size: var(--spectrum-component-edge-to-visual-200);
+			--spectrum-actionbutton-edge-to-text-size: var(--spectrum-component-edge-to-text-200);
 		}
 
 		&.spectrum-ActionButton--sizeXL {
@@ -152,6 +156,7 @@
 			--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-extra-large);
 
 			--spectrum-actionbutton-edge-to-visual-size: var(--spectrum-component-edge-to-visual-300);
+			--spectrum-actionbutton-edge-to-text-size: var(--spectrum-component-edge-to-text-300);
 		}
 
 		&.spectrum-ActionButton--staticBlack {
