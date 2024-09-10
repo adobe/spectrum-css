@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.2.0
+
+### Minor Changes
+
+- [#3073](https://github.com/adobe/spectrum-css/pull/3073) [`57c8702`](https://github.com/adobe/spectrum-css/commit/57c8702eb32a367aa4b191d9d82f3a628b3d2da5) Thanks [@Rajdeepc](https://github.com/Rajdeepc)! - added overflow in the toast body to wrap long words
+
 ## 10.1.2
 
 ### Patch Changes
