@@ -58,12 +58,6 @@ export const RoundingTemplate = (args, context) => Container({
 			content: Template({
 				...args,
 				rounding: "full",
-				items: [
-					{swatchColor: "rgb(238, 211, 190)",},
-					{swatchColor: "rgb(0, 143, 242)",},
-					{swatchColor: "rgb(60, 49, 199)",},
-					{swatchColor: "rgb(254, 71, 144)",},
-				],
 			}, context)
 		})}
 		${Container({
@@ -73,12 +67,6 @@ export const RoundingTemplate = (args, context) => Container({
 			content: Template({
 				...args,
 				rounding: "regular",
-				items: [
-					{swatchColor: "rgb(212, 182, 237)",},
-					{swatchColor: "rgb(153, 219, 244)",},
-					{swatchColor: "rgb(171, 238, 221)",},
-					{swatchColor: "rgb(187, 182, 175)",},
-				],
 			}, context)
 		})}
 		${Container({
@@ -88,12 +76,6 @@ export const RoundingTemplate = (args, context) => Container({
 			content: Template({
 				...args,
 				rounding: "none",
-				items: [
-					{swatchColor: "rgb(22, 135, 140)",},
-					{swatchColor: "rgb(93, 137, 255)",},
-					{swatchColor: "rgb(33, 132, 113)",},
-					{swatchColor: "rgb(254, 71, 32)",},
-				],
 			}, context)
 		})}
 	`

@@ -16,11 +16,11 @@ import { Template, RoundingTemplate } from "./template";
  * 
  * The only exception is when a swatch group only takes up a single row. In that case, use any of the rounding options.
  * 
- * ### Border only for low-contrast swatches
+ * ### Apply border to low-contrast swatches only
  * 
- * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), they have a less prominent border compared to the swatch component when used by itself, and should have the `.spectrum-Swatch--lightBorder` class. Low contrast color swatches have a border of `gray-900` at 20% opacity. This reduces the likelihood of the UI interfering with color perception and comparisons.
+ * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), they have a less prominent border compared to a single swatch component used by itself, and should have the `.spectrum-Swatch--lightBorder` class. This reduces the likelihood of the UI interfering with color perception and comparisons. Otherwise, swatches within a swatch group that meet contrast should have the `.spectrum-Swatch--noBorder` class.
  * 
- * Otherwise, swatches within a swatch group should have the `.spectrum-Swatch--noBorder` class. 
+ * Implementations should apply the `.spectrum-Swatch--lightBorder` to the individual swatches of a swatch group that do not meet 3:1 contrast.
  * 
  * ### Density
  * 
@@ -85,24 +85,23 @@ export default {
 		isDisabled: false,
 		isSelected: false,
 		items: [
-			{swatchColor: "rgb(22, 135, 140)",},
-			{swatchColor: "rgb(33, 132, 113)",},
-			{swatchColor: "rgb(254, 132, 152)",},
-			{swatchColor: "rgb(255, 127, 96)",},
-			{swatchColor: "rgb(255, 209, 24)",},
-			{swatchColor: "rgb(120, 91, 199)",},
-			{swatchColor: "rgb(225, 234, 119)",},
-			{swatchColor: "rgb(0, 225, 171)",},
-			{swatchColor: "rgb(248, 239, 187)",},
-			{swatchColor: "rgb(254, 205, 215)",},
-			{swatchColor: "rgb(212, 182, 237)",},
-			{swatchColor: "rgb(153, 219, 244)",},
-			{swatchColor: "rgb(171, 238, 221)",},
-			{swatchColor: "rgb(187, 182, 175)",},
-			{swatchColor: "rgb(238, 211, 190)",},
-			{swatchColor: "rgb(0, 143, 242)",},
-			{swatchColor: "rgb(60, 49, 199)",},
-			{swatchColor: "rgb(254, 71, 144)",},
+			{swatchColor: "rgb(184, 109, 70)",},
+			{swatchColor: "rgb(240, 56, 35)",},
+			{swatchColor: "rgb(212, 91, 0)",},
+			{swatchColor: "rgb(175, 116, 0)",},
+			{swatchColor: "rgb(154, 123, 77)",},
+			{swatchColor: "rgb(114, 137, 0)"},
+			{swatchColor: "rgb(72, 144, 20)"},
+			{swatchColor: "rgb(7, 147, 85)"},
+			{swatchColor: "rgb(9, 144, 120)"},
+			{swatchColor: "rgb(10, 141, 153)"},
+			{swatchColor: "rgb(18, 134, 205)"},
+			{swatchColor: "rgb(75, 117, 255)"},
+			{swatchColor: "rgb(122, 106, 253)"},
+			{swatchColor: "rgb(166, 92, 231)"},
+			{swatchColor: "rgb(200, 68, 220)"},
+			{swatchColor: "rgb(228, 52, 163)"},
+			{swatchColor: "rgb(240, 45, 110)"},
 		],
 	},
 	parameters: {
@@ -146,7 +145,14 @@ Spacious.storyName = "Density - Spacious";
  * Only use rounded swatches if there is a single row.
  */
 export const Rounding = RoundingTemplate.bind({});
-Rounding.args = {};
+Rounding.args = {
+	items: [
+		{swatchColor: "rgb(9, 144, 120)"},
+		{swatchColor: "rgb(10, 141, 153)"},
+		{swatchColor: "rgb(228, 52, 163)"},
+		{swatchColor: "rgb(240, 45, 110)"},
+	]
+};
 Rounding.tags = ["!dev"];
 Rounding.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -168,29 +174,31 @@ Sizing.parameters = {
 };
 
 /**
- * In this example, the lower contrast swatches utilize the `.spectrum-Swatch--lightBorder` class.
+ * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), the `.spectrum-Swatch--lightBorder` class should be applied to those swatches only.
+ * 
+ * The swatch group example below contains all swatches with low contrast in light mode, therefore each has the `.spectrum-Swatch--lightBorder` class applied.
  */
 export const WithLightBorder = Template.bind({});
 WithLightBorder.args = {
+	borderStyle: "lightBorder",
 	items: [
-		{swatchColor: "rgb(22, 135, 140)",},
-		{swatchColor: "rgb(33, 132, 113)",},
-		{swatchColor: "rgb(254, 132, 152)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(255, 127, 96)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(255, 209, 24)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(120, 91, 199)",},
-		{swatchColor: "rgb(225, 234, 119)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(0, 225, 171)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(248, 239, 187)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(254, 205, 215)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(212, 182, 237)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(153, 219, 244)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(171, 238, 221)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(187, 182, 175)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(238, 211, 190)", borderStyle: "lightBorder",},
-		{swatchColor: "rgb(0, 143, 242)",},
-		{swatchColor: "rgb(60, 49, 199)",},
-		{swatchColor: "rgb(254, 71, 144)",},
+		{swatchColor: "rgb(237, 196, 172)"},
+		{swatchColor: "rgb(255, 188, 180)"},
+		{swatchColor: "rgb(255, 193, 94)"},
+		{swatchColor: "rgb(245, 199, 0)"},
+		{swatchColor: "rgb(229, 200, 157)"},
+		{swatchColor: "rgb(182, 219, 0)"},
+		{swatchColor: "rgb(129, 228, 58)"},
+		{swatchColor: "rgb(107, 227, 162)"},
+		{swatchColor: "rgb(92, 225, 194)"},
+		{swatchColor: "rgb(111, 221, 228)"},
+		{swatchColor: "rgb(138, 213, 255)"},
+		{swatchColor: "rgb(172, 207, 253)"},
+		{swatchColor: "rgb(192, 201, 255)"},
+		{swatchColor: "rgb(221, 193, 246)"},
+		{swatchColor: "rgb(247, 181, 255)"},
+		{swatchColor: "rgb(255, 181, 230)"},
+		{swatchColor: "rgb(255, 185, 208)"},
 	],
 };
 WithLightBorder.tags = ["!dev"];
