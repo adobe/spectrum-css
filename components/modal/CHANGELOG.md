@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.0.0-s2-foundations.13
+
+### Major Changes
+
+- [#3056](https://github.com/adobe/spectrum-css/pull/3056) [`5bbbc78`](https://github.com/adobe/spectrum-css/commit/5bbbc78a6ef9442dc51c5fcc14a82fbe9bc277bf) Thanks [@Rajdeepc](https://github.com/Rajdeepc)! - Updates the spectrum-modal-background-color in dark and light in spectrum-two theme
+
+### Patch Changes
+
+- Updated dependencies [[`db528ce`](https://github.com/adobe/spectrum-css/commit/db528ce0a6f7d817e6124604014faf9f4accfc1e)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.20
+
 ## 6.0.0-s2-foundations.12
 
 ### Minor Changes

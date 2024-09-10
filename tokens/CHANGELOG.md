@@ -1,5 +1,11 @@
 # Change Log
 
+## 15.0.0-s2-foundations.20
+
+### Patch Changes
+
+- [#3049](https://github.com/adobe/spectrum-css/pull/3049) [`db528ce`](https://github.com/adobe/spectrum-css/commit/db528ce0a6f7d817e6124604014faf9f4accfc1e) Thanks [@TarunAdobe](https://github.com/TarunAdobe)! - updated content color for button primary variant and fixes swc-342
+
 ## 15.0.0-s2-foundations.19
 
 ### Major Changes
