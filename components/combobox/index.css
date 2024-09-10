@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 @media (forced-colors: active) {
 	.spectrum-Combobox {
@@ -251,7 +251,7 @@
 	/* Settings for nested Picker Button component. */
 	--mod-picker-button-background-color-quiet: transparent;
 	--mod-picker-button-border-color-quiet: transparent;
-	
+
 	--mod-picker-button-border-color: var(--mod-picker-button-border-color-quiet);
 
 	border-radius: 0;

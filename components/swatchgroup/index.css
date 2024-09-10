@@ -11,16 +11,16 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-SwatchGroup {
 	display: inline-flex;
 	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
 
 	/* Regular (Default) */
 	gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing-regular));
-	align-items: flex-start;
-	justify-content: flex-start;
 }
 
 /* Compact */

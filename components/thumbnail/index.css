@@ -11,28 +11,28 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Thumbnail {
 	position: relative;
-	z-index: 0;
-	overflow: hidden;
+	margin: 0;
+	padding: 0;
 	display: block;
 
 	inline-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
 	block-size: var(--mod-thumbnail-size, var(--spectrum-thumbnail-size));
-	margin: 0;
-	padding: 0;
-
-	/* Friends should align to the top of the tabs */
-	vertical-align: top;
 
 	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 
+	/* Friends should align to the top of the tabs */
+	vertical-align: top;
+	overflow: hidden;
+	z-index: 0;
+
 	&::before {
 		content: "";
-		position: absolute;
 		z-index: 2;
+		position: absolute;
 		inline-size: 100%;
 		block-size: 100%;
 		border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
@@ -48,15 +48,15 @@
 
 		&::after {
 			content: "";
-			position: absolute;
-			inset-block-start: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-			inset-block-end: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-			inset-inline-start: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-			inset-inline-end: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
-			border-color: var(--highcontrast-thumbnail-focus-indicator-color, var(--mod-thumbnail-focus-indicator-color, var(--spectrum-thumbnail-focus-indicator-color)));
 			border-style: solid;
 			border-width: var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness));
+			border-color: var(--highcontrast-thumbnail-focus-indicator-color, var(--mod-thumbnail-focus-indicator-color, var(--spectrum-thumbnail-focus-indicator-color)));
 			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
+			position: absolute;
+			inset-inline-start: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
+			inset-inline-end: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
+			inset-block-end: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
+			inset-block-start: calc((var(--mod-thumbnail-focus-indicator-gap, var(--spectrum-thumbnail-focus-indicator-gap)) + var(--mod-thumbnail-focus-indicator-thickness, var(--spectrum-thumbnail-focus-indicator-thickness))) * -1);
 		}
 
 		.spectrum-Thumbnail-image-wrapper {
@@ -67,21 +67,22 @@
 }
 
 .spectrum-Thumbnail-layer {
+	border-style: solid;
+	border-width: var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer));
+	border-color: var(--highcontrast-thumbnail-layer-border-color-outer, var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-thumbnail-layer-border-color-outer)));
+	box-sizing: border-box;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-sizing: border-box;
-	border-color: var(--highcontrast-thumbnail-layer-border-color-outer, var(--mod-thumbnail-layer-border-color-outer, var(--spectrum-thumbnail-layer-border-color-outer)));
-	border-style: solid;
-	border-width: var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer));
 
 	&::before {
 		content: none;
 	}
 
 	&.is-selected {
-		outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
 		outline-style: solid;
+		outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
 		outline-width: var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected));
 		outline-offset: calc(var(--mod-thumbnail-border-width-selected, var(--spectrum-thumbnail-border-width-selected)) - var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)));
 	}
@@ -94,8 +95,8 @@
 
 	inline-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
 	block-size: calc(var(--spectrum-thumbnail-size) - ((var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)))) * 2);
-	outline-color: var(--highcontrast-thumbnail-layer-border-color-inner, var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner)));
 	outline-style: solid;
+	outline-color: var(--highcontrast-thumbnail-layer-border-color-inner, var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner)));
 	outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
 }
 
@@ -109,15 +110,15 @@
 
 .spectrum-Thumbnail-image {
 	position: relative;
-	z-index: 1;
 	max-inline-size: 100%;
 	max-block-size: 100%;
+	z-index: 1;
 }
 
 .spectrum-Thumbnail--cover {
 	.spectrum-Thumbnail-image {
-		inline-size: 100%;
 		block-size: 100%;
+		inline-size: 100%;
 		object-fit: cover;
 		object-position: center;
 	}
@@ -126,14 +127,14 @@
 .spectrum-Thumbnail-background {
 	position: absolute;
 	z-index: 0;
-	inset-block-start: 0;
-	inset-block-end: 0;
 	inset-inline-start: 0;
+	inset-block-start: 0;
 	inset-inline-end: 0;
-	inline-size: 100%;
+	inset-block-end: 0;
 	block-size: 100%;
-	background-position: center center;
+	inline-size: 100%;
 	background-size: cover;
+	background-position: center center;
 	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 }
 

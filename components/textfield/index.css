@@ -11,34 +11,33 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 /********* TEXT FIELD and TEXT AREA Outer Wrapper *********/
 .spectrum-Textfield {
 	position: relative;
+	text-overflow: ellipsis;
 
-	/* Edge - Show the overflow for input. */
-	overflow: visible;
+	/* Prevent input from expanding to width of Help text */
+	inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
 
 	/* Grid layout for child components */
 	display: inline-grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto auto;
 
-	/* prevent input from expanding to width of helptext */
-	inline-size: var(--mod-textfield-width, var(--spectrum-textfield-width));
+	/*** ↓ Browser Mitigations for Text Field ↓ ***/
+	/* Edge - Show the overflow for input. */
+	overflow: visible;
 
 	/* Firefox and Safari - Remove the margin for input. */
 	margin: 0;
-
-	/* All browsers - Change the input font styles */
-	text-overflow: ellipsis;
 }
 
 .spectrum-Textfield.spectrum-Textfield--quiet {
 	&::after {
-		pointer-events: none;
 		content: "";
+		pointer-events: none;
 		position: absolute;
 		inset-block-end: calc(-1 * (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width))));
 		inset-inline-start: 0;
@@ -72,17 +71,17 @@
 	/* specify validation class or web components will apply this to all icons */
 	.spectrum-Textfield.is-valid &,
 	.spectrum-Textfield.is-invalid & {
-		pointer-events: all;
 		position: absolute;
+		pointer-events: all;
 		inset-block-start: 0;
-		grid-column: 2;
-		grid-row: 2;
 		margin-inline-start: auto;
+		grid-row: 2;
+		grid-column: 2;
 	}
 
 	.spectrum-Textfield.spectrum-Textfield--sideLabel & {
-		grid-column: 2 / span 1;
 		grid-row: 1 / span 1;
+		grid-column: 2 / span 1;
 	}
 
 	/****** Validation Icon - Valid ✅ ******/
@@ -95,11 +94,11 @@
 
 	/****** Validation Icon - Invalid ⚠️ ******/
 	.spectrum-Textfield.is-invalid & {
+		block-size: var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid));
+		inline-size: var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid));
 		inset-block-start: var(--mod-textfield-icon-spacing-block-invalid, var(--spectrum-textfield-icon-spacing-block-invalid));
 		inset-block-end: var(--mod-textfield-icon-spacing-block-invalid, var(--spectrum-textfield-icon-spacing-block-invalid));
 		inset-inline-end: var(--mod-textfield-icon-spacing-inline-end-invalid, var(--spectrum-textfield-icon-spacing-inline-end-invalid));
-		inline-size: var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid));
-		block-size: var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid));
 		color: var(--highcontrast-textfield-icon-color-invalid, var(--mod-textfield-icon-color-invalid, var(--spectrum-textfield-icon-color-invalid)));
 	}
 
@@ -125,9 +124,9 @@
 /********* Child Component - Label *********/
 .spectrum-FieldLabel {
 	.spectrum-Textfield & {
-		grid-column: 1 / span 1;
-		grid-row: 1;
 		margin-block-end: var(--mod-textfield-label-spacing-block, var(--spectrum-textfield-label-spacing-block));
+		grid-row: 1;
+		grid-column: 1 / span 1;
 	}
 
 	.spectrum-Textfield--quiet & {
@@ -142,27 +141,27 @@
 /********* Child Component - Help Text *********/
 .spectrum-HelpText {
 	.spectrum-Textfield & {
-		grid-column: 1 / span 2;
-		grid-row: 3;
 		margin-block-start: var(--mod-textfield-helptext-spacing-block, var(--spectrum-textfield-helptext-spacing-block));
+		grid-row: 3;
+		grid-column: 1 / span 2;
 	}
 }
 
 /********* Child Element - Character Count *********/
 .spectrum-Textfield-characterCount {
 	display: inline-flex;
-	grid-column: 2 / span 1;
-	grid-row: 1;
 	align-items: flex-end;
 	justify-content: flex-end;
 	inline-size: auto;
 	margin-block-end: var(--mod-textfield-character-count-spacing-block, var(--spectrum-textfield-character-count-spacing-block));
 	margin-inline-start: var(--mod-textfield-character-count-spacing-inline, var(--spectrum-textfield-character-count-spacing-inline));
 	margin-inline-end: 0;
-	padding-inline-end: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
-	font-family: var(--mod-textfield-character-count-font-family, var(--spectrum-textfield-character-count-font-family));
 	font-size: var(--mod-textfield-character-count-font-size, var(--spectrum-textfield-character-count-font-size));
+	font-family: var(--mod-textfield-character-count-font-family, var(--spectrum-textfield-character-count-font-family));
 	font-weight: var(--mod-textfield-character-count-font-weight, var(--spectrum-textfield-character-count-font-weight));
+	grid-column: 2 / span 1;
+	grid-row: 1;
+	padding-inline-end: calc(var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius)) / 2);
 
 	.spectrum-Textfield--quiet & {
 		margin-block-end: var(--mod-textfield-character-count-spacing-block-quiet, var(--spectrum-textfield-character-count-spacing-block-quiet));
@@ -171,47 +170,46 @@
 
 /********* Child Element - Input *********/
 .spectrum-Textfield-input {
-	/* place in same cell: input, focus indicator, and grows sizer */
-	grid-column: 1 / span 2;
-	grid-row: 2;
+	/* no mod defined to allow for maximum compatibility */
+	line-height: var(--spectrum-textfield-input-line-height);
+
 
 	box-sizing: border-box;
 	inline-size: 100%;
 	min-inline-size: var(--mod-textfield-min-width, var(--spectrum-textfield-min-width));
 	block-size: var(--mod-textfield-height, var(--spectrum-textfield-height));
 
-	/* Remove the margin for input in Firefox and Safari. */
-	margin: 0;
-
 	padding-block-start: calc(var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
 	padding-block-end: calc(var(--mod-textfield-spacing-block-end, var(--spectrum-textfield-spacing-block-end)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
 
 	padding-inline: calc(var(--mod-textfield-spacing-inline, var(--spectrum-textfield-spacing-inline)) - var(--mod-textfield-border-width, var(--spectrum-textfield-border-width)));
 
-	font-family: var(--mod-textfield-font-family, var(--spectrum-textfield-font-family));
-	font-size: var(--mod-textfield-placeholder-font-size, var(--spectrum-textfield-placeholder-font-size));
-	font-weight: var(--mod-textfield-font-weight, var(--spectrum-textfield-font-weight));
-
-	/* set input line-height to the height of the textfield - prevents the cutting off of diacritics in some languages */
-	/* no line-height mod defined to allow for maximum compatibility */
-	line-height: var(--spectrum-textfield-input-line-height);
-	color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
-
-	text-overflow: ellipsis;
 	vertical-align: top; /* used to align them correctly in forms. */
-
+	outline: none;
 	background-color: var(--mod-textfield-background-color, var(--spectrum-textfield-background-color));
 	border-color: var(--highcontrast-textfield-border-color, var(--mod-textfield-border-color, var(--spectrum-textfield-border-color)));
 	border-style: solid;
 	border-width: var(--mod-textfield-border-width, var(--spectrum-textfield-border-width));
 	border-radius: var(--mod-textfield-corner-radius, var(--spectrum-textfield-corner-radius));
+	transition: border-color var(--mod-texfield-animation-duration, var(--spectrum-texfield-animation-duration)) ease-in-out;
 
-	outline: none;
+	font-size: var(--mod-textfield-placeholder-font-size, var(--spectrum-textfield-placeholder-font-size));
+	font-family: var(--mod-textfield-font-family, var(--spectrum-textfield-font-family));
+	font-weight: var(--mod-textfield-font-weight, var(--spectrum-textfield-font-weight));
+	color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
+	text-overflow: ellipsis;
+
+	/* place in same cell: input, focus indicator, and grows sizer */
+	grid-row: 2;
+	grid-column: 1 / span 2;
+
+	/*** ↓ Browser Mitigations for Input ↓ ***/
+	/* Firefox and Safari - Remove the margin for input. */
+	margin: 0;
 
 	/* stylelint-disable-next-line order/properties-order -- keep this in position to prevent issues with custom -moz- prefix */
 	appearance: none;
 
-	transition: border-color var(--mod-texfield-animation-duration, var(--spectrum-texfield-animation-duration)) ease-in-out;
 
 	&[type="number"] {
 		/* stylelint-disable-next-line property-no-vendor-prefix -- Removes the native spin buttons in Firefox. */
@@ -225,20 +223,19 @@
 		}
 	}
 
-	/* removes the red border that appears in Firefox */
+	/* Removes the red border that appears in Firefox (normalize). */
 	&:-moz-ui-invalid {
 		box-shadow: none;
 	}
 
 	/*** Input Placeholder Text ***/
 	&::placeholder {
-		font-family: var(--mod-textfield-font-family, var(--spectrum-textfield-font-family));
+		/* Normalize opacity between browsers. */
+		opacity: 1;
 		font-size: var(--mod-textfield-placeholder-font-size, var(--spectrum-textfield-placeholder-font-size));
+		font-family: var(--mod-textfield-font-family, var(--spectrum-textfield-font-family));
 		font-weight: var(--mod-textfield-font-weight, var(--spectrum-textfield-font-weight));
 		color: var(--highcontrast-textfield-text-color-default, var(--mod-textfield-text-color-default, var(--spectrum-textfield-text-color-default)));
-
-		/* normalize opacity between browsers */
-		opacity: 1;
 		transition: color var(--mod-texfield-animation-duration, var(--spectrum-texfield-animation-duration)) ease-in-out;
 	}
 
@@ -254,8 +251,8 @@
 	/* hover */
 	.spectrum-Textfield:hover &,
 	&:hover {
-		color: var(--highcontrast-textfield-text-color-hover, var(--mod-textfield-text-color-hover, var(--spectrum-textfield-text-color-hover)));
 		border-color: var(--highcontrast-textfield-border-color-hover, var(--mod-textfield-border-color-hover, var(--spectrum-textfield-border-color-hover)));
+		color: var(--highcontrast-textfield-text-color-hover, var(--mod-textfield-text-color-hover, var(--spectrum-textfield-text-color-hover)));
 
 		&::placeholder {
 			color: var(--highcontrast-textfield-text-color-hover, var(--mod-textfield-text-color-hover, var(--spectrum-textfield-text-color-hover)));
@@ -265,8 +262,8 @@
 	/* mouse focus */
 	.is-focused &,
 	&:focus {
-		color: var(--highcontrast-textfield-text-color-focus, var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus)));
 		border-color: var(--highcontrast-textfield-border-color-focus, var(--mod-textfield-border-color-focus, var(--spectrum-textfield-border-color-focus)));
+		color: var(--highcontrast-textfield-text-color-focus, var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus)));
 
 		&::placeholder {
 			color: var(--highcontrast-textfield-text-color-focus, var(--mod-textfield-text-color-focus, var(--spectrum-textfield-text-color-focus)));
@@ -274,8 +271,8 @@
 
 		/* focus hover */
 		&:hover {
-			color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
 			border-color: var(--highcontrast-textfield-border-color-focus-hover, var(--mod-textfield-border-color-focus-hover, var(--spectrum-textfield-border-color-focus-hover)));
+			color: var(--highcontrast-textfield-text-color-focus-hover, var(--mod-textfield-text-color-focus-hover, var(--spectrum-textfield-text-color-focus-hover)));
 		}
 
 		&:hover::placeholder {
@@ -285,8 +282,8 @@
 
 	/* keyboard focus */
 	.is-keyboardFocused & {
-		color: var(--highcontrast-textfield-text-color-keyboard-focus, var(--mod-textfield-text-color-keyboard-focus, var(--spectrum-textfield-text-color-keyboard-focus)));
 		border-color: var(--highcontrast-textfield-border-color-keyboard-focus, var(--mod-textfield-border-color-keyboard-focus, var(--spectrum-textfield-border-color-keyboard-focus)));
+		color: var(--highcontrast-textfield-text-color-keyboard-focus, var(--mod-textfield-text-color-keyboard-focus, var(--spectrum-textfield-text-color-keyboard-focus)));
 
 		/* focus indicator is focused state */
 		outline: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) solid;
@@ -339,14 +336,15 @@
 	.spectrum-Textfield.is-disabled &,
 	.spectrum-Textfield.is-disabled:hover &,
 	&:disabled {
+		background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
+		border-color: transparent;
+		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
+
 		/* Disable the resize functionality when disabled */
 		resize: none;
-		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 
 		/* The opacity must be set to 1 */
 		opacity: 1;
-		background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
-		border-color: transparent;
 
 		&::placeholder {
 			color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
@@ -355,27 +353,28 @@
 
 	/****** Input - Quiet 🤫 ******/
 	.spectrum-Textfield--quiet & {
-		/* Treat all quiet inputs and text areas the same */
-		resize: none;
-		overflow-y: hidden;
+		outline: none;
+		border-block-start-width: 0;
+		border-inline-width: 0;
 
 		margin-block-end: var(--mod-textfield-spacing-block-quiet, var(--spectrum-textfield-spacing-block-quiet));
 		padding-block-start: var(--mod-textfield-spacing-block-start, var(--spectrum-textfield-spacing-block-start));
 		padding-inline: var(--mod-textfield-spacing-inline-quiet, var(--spectrum-textfield-spacing-inline-quiet));
 		background-color: transparent;
-		border-block-start-width: 0;
-		border-inline-width: 0;
 		border-radius: 0;
-		outline: none;
+
+		/* Treat all quiet inputs and text areas the same */
+		resize: none;
+		overflow-y: hidden;
 	}
 
 	/****** Input - Quiet 🤫 + Disabled 🚫 ******/
 	.spectrum-Textfield--quiet.is-disabled &,
 	.spectrum-Textfield--quiet.is-disabled:hover &,
 	&:disabled {
-		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 		background-color: transparent;
 		border-color: var(--mod-textfield-border-color-disabled, var(--spectrum-textfield-border-color-disabled));
+		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
 
 		&::placeholder {
 			color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
@@ -386,9 +385,9 @@
 	.spectrum-Textfield.is-readOnly &,
 	.spectrum-Textfield.is-readOnly:hover &,
 	&:read-only {
-		color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
 		background-color: transparent;
 		border-color: transparent;
+		color: var(--highcontrast-textfield-text-color-readonly, var(--mod-textfield-text-color-readonly, var(--spectrum-textfield-text-color-readonly)));
 		outline: none;
 
 		&::placeholder {
@@ -405,37 +404,37 @@
 
 	/*** Focus Indicator ***/
 	&::after {
-		grid-column: 2 / span 1;
 		grid-row: 1 / span 1;
+		grid-column: 2 / span 1;
 	}
 
 	.spectrum-FieldLabel {
-		grid-column: 1 / span 1;
-		grid-row: 1 / span 2;
 		margin-inline-end: var(--mod-textfield-label-spacing-inline-side-label, var(--spectrum-textfield-label-spacing-inline-side-label));
+		grid-row: 1 / span 2;
+		grid-column: 1 / span 1;
 	}
 
 	.spectrum-Textfield-characterCount {
-		grid-column: 3 / span 1;
-		grid-row: 1;
 		align-items: flex-start;
 		margin-block-start: var(--mod-textfield-character-count-spacing-block-side, var(--spectrum-textfield-character-count-spacing-block-side));
 		margin-inline-start: var(--mod-textfield-character-count-spacing-inline-side, var(--spectrum-textfield-character-count-spacing-inline-side));
+		grid-row: 1;
+		grid-column: 3 / span 1;
 	}
 
 	.spectrum-HelpText {
-		grid-column: 2 / span 1;
 		grid-row: 2;
+		grid-column: 2 / span 1;
 	}
 
 	.spectrum-Textfield-validationIcon {
-		grid-column: 2 / span 1;
 		grid-row: 1 / span 1;
+		grid-column: 2 / span 1;
 	}
 
 	.spectrum-Textfield-input {
-		grid-column: 2 / span 1;
 		grid-row: 1 / span 1;
+		grid-column: 2 / span 1;
 	}
 }
 
@@ -444,9 +443,9 @@
 	--spectrum-textfield-input-line-height: normal;
 
 	.spectrum-Textfield-input {
-		resize: inherit;
 		min-inline-size: var(--mod-text-area-min-inline-size, var(--spectrum-text-area-min-inline-size));
 		min-block-size: var(--mod-text-area-min-block-size, var(--spectrum-text-area-min-block-size));
+		resize: inherit;
 	}
 
 	&.spectrum-Textfield--grows {
@@ -461,10 +460,11 @@
 
 	&.spectrum-Textfield--quiet {
 		.spectrum-Textfield-input {
+			min-block-size: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
+
 			/* Treat all quiet inputs and text areas the same */
 			resize: none;
 			overflow-y: hidden;
-			min-block-size: var(--mod-text-area-min-block-size-quiet, var(--spectrum-text-area-min-block-size-quiet));
 		}
 	}
 }

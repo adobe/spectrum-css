@@ -11,19 +11,19 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-StatusLight {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	box-sizing: border-box;
 
 	min-block-size: var(--mod-statuslight-height, var(--spectrum-statuslight-height));
 
 	padding-block-start: var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label));
 	padding-block-end: var(--mod-statuslight-spacing-bottom-to-label, var(--spectrum-statuslight-spacing-bottom-to-label));
 	padding-inline: 0;
+	box-sizing: border-box;
 
 	font-size: var(--mod-statuslight-font-size, var(--spectrum-statuslight-font-size));
 	font-weight: var(--mod-statuslight-font-weight, var(--spectrum-statuslight-font-weight));
@@ -41,19 +41,17 @@
 	/* Dot */
 	&::before {
 		--spectrum-statuslight-spacing-computed-top-to-dot: calc(var(--mod-statuslight-spacing-top-to-dot, var(--spectrum-statuslight-spacing-top-to-dot)) - var(--mod-statuslight-spacing-top-to-label, var(--spectrum-statuslight-spacing-top-to-label)));
+
 		content: "";
-		display: inline-block;
 		flex-grow: 0;
 		flex-shrink: 0;
+		display: inline-block;
 		inline-size: var(--mod-statuslight-dot-size, var(--spectrum-statuslight-dot-size));
 		block-size: var(--mod-statuslight-dot-size, var(--spectrum-statuslight-dot-size));
-		margin-block-start: var(--spectrum-statuslight-spacing-computed-top-to-dot);
-		margin-inline-end: var(--mod-statuslight-spacing-dot-to-label, var(--spectrum-statuslight-spacing-dot-to-label));
-		forced-color-adjust: none;
 		border-radius: var(--mod-statuslight-corner-radius, var(--spectrum-statuslight-corner-radius));
 
-		/* support high contrast/forced-color-adjust mode for dot */
-		-ms-high-contrast-adjust: none;
+		margin-block-start: var(--spectrum-statuslight-spacing-computed-top-to-dot);
+		margin-inline-end: var(--mod-statuslight-spacing-dot-to-label, var(--spectrum-statuslight-spacing-dot-to-label));
 	}
 }
 
@@ -147,4 +145,19 @@
 
 .spectrum-StatusLight--magenta::before {
 	background-color: var(--mod-statuslight-nonsemantic-magenta-color, var(--spectrum-statuslight-nonsemantic-magenta-color));
+}
+
+@media (forced-colors: active) {
+	.spectrum-StatusLight {
+		--highcontrast-statuslight-content-color-default: CanvasText;
+		--highcontrast-statuslight-subdued-content-color-default: CanvasText;
+
+		forced-color-adjust: none;
+
+		/* Dot */
+		&::before {
+			forced-color-adjust: none;
+			border: var(--mod-statuslight-border-width, var(--spectrum-statuslight-border-width)) solid ButtonText;
+		}
+	}
 }

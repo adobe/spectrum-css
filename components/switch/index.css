@@ -11,38 +11,38 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Switch {
 	--spectrum-switch-focus-indicator-thickness: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 
-	position: relative;
 	display: inline-flex;
 	align-items: flex-start;
-	max-inline-size: 100%;
+	position: relative;
 	min-block-size: var(--mod-switch-height, var(--spectrum-switch-min-height));
+	max-inline-size: 100%;
 	vertical-align: top;
 }
 
 .spectrum-Switch-input {
-	cursor: pointer;
-
-	position: absolute;
-	z-index: 1;
-	inset-block-start: 0;
-	inset-inline-start: 0;
-
-	/* Add the correct box sizing for [type="checkbox"] in IE 10-. */
-	box-sizing: border-box;
-	inline-size: 100%;
-	block-size: 100%;
-
 	/* Remove the margin for input in Firefox and Safari. */
 	margin: 0;
 
+	/* Add the correct box sizing for [type="checkbox"] in IE 10-. */
+	box-sizing: border-box;
+
 	/* Remove the padding for [type="checkbox"] in IE 10-. */
 	padding: 0;
+
+	position: absolute;
+	inline-size: 100%;
+	block-size: 100%;
+	inset-block-start: 0;
+	inset-inline-start: 0;
 	opacity: 0;
+	z-index: 1;
+
+	cursor: pointer;
 
 	&:checked + .spectrum-Switch-switch {
 		&::before {
@@ -67,66 +67,69 @@
 }
 
 .spectrum-Switch-label {
+	color: var(--highcontrast-switch-label-color-default, var(--mod-switch-label-color-default, var(--spectrum-switch-label-color-default)));
+	margin-inline: var(--mod-switch-control-label-spacing, var(--spectrum-switch-control-label-spacing));
 	margin-block-start: var(--mod-switch-spacing-top-to-label, var(--spectrum-switch-spacing-top-to-label));
 	margin-block-end: 0;
-	margin-inline: var(--mod-switch-control-label-spacing, var(--spectrum-switch-control-label-spacing));
 	font-size: var(--mod-switch-font-size, var(--spectrum-switch-font-size));
 	line-height: var(--mod-line-height-100, var(--spectrum-line-height-100));
-	color: var(--highcontrast-switch-label-color-default, var(--mod-switch-label-color-default, var(--spectrum-switch-label-color-default)));
 	transition: color var(--mod-animation-duration-200, var(--spectrum-animation-duration-200)) ease-in-out;
 }
 
 .spectrum-Switch-switch {
+	display: inline-block;
+	box-sizing: border-box;
+
 	/* positions the pseudo elements relative to this one */
 	position: relative;
 
-	inset-inline-start: 0;
-	inset-inline-end: 0;
-	display: inline-block;
-
-	flex-grow: 0;
-	flex-shrink: 0;
-	box-sizing: border-box;
-
 	inline-size: var(--mod-switch-control-width, var(--spectrum-switch-control-width));
-
-	block-size: var(--mod-switch-control-height, var(--spectrum-switch-control-height));
 
 	/* Fix vertical alignment when not wrapping since we're flex-start */
 	margin-block: calc(var(--mod-switch-height, var(--spectrum-switch-min-height)) - var(--mod-switch-control-height, var(--spectrum-switch-control-height)) - var(--mod-switch-spacing-top-to-control, var(--spectrum-switch-spacing-top-to-control)));
 	margin-inline: 0;
 
-	vertical-align: middle;
+	flex-grow: 0;
+	flex-shrink: 0;
 
-	border-radius: calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height)) / 2);
+	vertical-align: middle;
 
 	transition:
 		background var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
 		border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
 
+	block-size: var(--mod-switch-control-height, var(--spectrum-switch-control-height));
+
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+
+	border-radius: calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height)) / 2);
+
+
 	&::before {
-		content: "";
-		position: absolute;
 		display: block;
+		position: absolute;
+		content: "";
 		box-sizing: border-box;
 	}
 
 	/* :before is used for the handle of the switch */
 	&::before {
-		inset-block-start: 0;
-		inset-inline-start: 0;
-
-		inline-size: var(--mod-switch-control-height, var(--spectrum-switch-control-height));
-		block-size: var(--mod-switch-control-height, var(--spectrum-switch-control-height));
-		border-style: solid;
-
-		border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
-		border-radius: calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height)) / 2);
 		transition:
 			background var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
 			border var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
 			transform var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out,
 			box-shadow var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)) ease-in-out;
+
+		inline-size: var(--mod-switch-control-height, var(--spectrum-switch-control-height));
+		block-size: var(--mod-switch-control-height, var(--spectrum-switch-control-height));
+
+		inset-block-start: 0;
+		inset-inline-start: 0;
+
+		border-width: var(--mod-border-width-200, var(--spectrum-border-width-200));
+		border-radius: calc(var(--mod-switch-control-height, var(--spectrum-switch-control-height)) / 2);
+		border-style: solid;
 	}
 
 	/* :after is used for the focus halo */

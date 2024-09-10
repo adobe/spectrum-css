@@ -11,27 +11,26 @@
  * governing permissions and limitations under the License.
  */
 
-@import "themes/spectrum-two.css";
+@import "./themes/spectrum-two.css";
 
 .spectrum-Steplist {
-	position: relative;
-
 	/* Contain child elements with positive z-index */
 	z-index: 0;
+	position: relative;
 
 	display: block;
+	/* @todo: ignored because the display mode is set to block */
+	vertical-align: top;
 	margin: 0;
 	padding-block-start: var(--mod-steplist-topPadding, var(--spectrum-steplist-topPadding));
 	padding-inline-start: var(--mod-steplist-sidePadding, var(--spectrum-steplist-sidePadding));
 	padding-inline-end: var(--mod-steplist-sidePadding, var(--spectrum-steplist-sidePadding));
-	font-size: 0; /* To remove html whitespace between inline elements */
-	line-height: 16px; /* in case the container changes it */
 
 	text-align: center;
 	white-space: nowrap;
+	font-size: 0; /* To remove html whitespace between inline elements */
+	line-height: 16px; /* in case the container changes it */
 
-	/* @todo: ignored because the display mode is set to block */
-	vertical-align: top;
 }
 
 .spectrum-Steplist--interactive {
@@ -59,9 +58,9 @@
 	padding-inline: 0;
 
 	.spectrum-Steplist-item {
-		inline-size: 80px;
 		padding-block: 0;
 		padding-inline: 0 40px;
+		inline-size: 80px;
 
 		/* Disable Label */
 		.spectrum-Steplist-label {
@@ -89,18 +88,18 @@
 }
 
 .spectrum-Steplist-item {
+	outline: none;
 	position: relative;
 	display: inline-block;
-
-	box-sizing: content-box;
-	inline-size: var(--mod-steplist-step-width, var(--spectrum-steplist-step-width));
 	margin: 0;
-	padding-block: 0;
-	padding-inline: 0 calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2);
 
 	/* Don't let tooltips mess up alignment */
 	vertical-align: bottom;
-	outline: none;
+
+	box-sizing: content-box;
+	inline-size: var(--mod-steplist-step-width, var(--spectrum-steplist-step-width));
+	padding-block: 0;
+	padding-inline: 0 calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) / 2);
 
 	/* Completed State */
 	&.is-complete {
@@ -115,8 +114,8 @@
 
 		/* The next step's line should be solid */
 		& + .spectrum-Steplist-item .spectrum-Steplist-segment {
-			border-block-end-style: solid;
 			border-block-end-width: var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height));
+			border-block-end-style: solid;
 		}
 	}
 
@@ -133,8 +132,8 @@
 		}
 
 		.spectrum-Steplist-marker {
-			background-color: var(--highcontrast-steplist-current-marker-color, var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color)));
 			border: none;
+			background-color: var(--highcontrast-steplist-current-marker-color, var(--mod-steplist-current-marker-color, var(--spectrum-steplist-current-marker-color)));
 		}
 	}
 
@@ -148,18 +147,19 @@
 
 .spectrum-Steplist-label {
 	position: absolute;
-	inset-block-end: var(--mod-steplist-label-labelOffset, var(--spectrum-steplist-label-labelOffset));
 	inset-inline-start: 50%;
+	inset-block-end: var(--mod-steplist-label-labelOffset, var(--spectrum-steplist-label-labelOffset));
 
-	transform: translateX(-50%);
 
 	display: block;
 	inline-size: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5);
 
 	font-size: var(--mod-steplist-label-text-size, var(--spectrum-steplist-label-text-size));
+	white-space: normal;
+
+	transform: translateX(-50%);
 
 	color: var(--mod-steplist-incomplete-label-color, var(--spectrum-steplist-incomplete-label-color));
-	white-space: normal;
 
 	&:dir(rtl) {
 		transform: translateX(50%);
@@ -167,12 +167,12 @@
 }
 
 .spectrum-Steplist-markerContainer {
-	position: absolute;
+	display: block;
 
 	z-index: 2;
+	position: absolute;
 	inset-block-end: -10px;
 	inset-inline-start: 50%;
-	display: block;
 
 	inline-size: var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea));
 	block-size: var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea));
@@ -182,40 +182,41 @@
 
 /* Circle step marker */
 .spectrum-Steplist-marker {
+	box-sizing: border-box; /* So we can stroke nicely */
+	display: block;
+
 	position: absolute;
 	inset-block-start: 50%;
 	inset-inline-start: 50%;
-	display: block;
-	box-sizing: border-box; /* So we can stroke nicely */
+	margin-block-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
+	margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
 
 	inline-size: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
 	block-size: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
-	margin-block-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
-	margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) / 2));
-	background: transparent;
+
+	border-radius: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
 
 	border: 2px solid;
 	border-color: var(--mod-steplist-incomplete-marker-border-color, var(--spectrum-steplist-incomplete-marker-border-color));
-
-	border-radius: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
+	background: transparent;
 }
 
 /* Step line */
 .spectrum-Steplist-segment {
-	position: absolute;
-	z-index: 1;
-	inset-block-end: calc(-1 * calc(var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height)) / 2));
-	inset-inline-end: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 1.5));
 	display: block;
+	z-index: 1;
+	position: absolute;
+	inset-inline-end: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 1.5));
 
 	box-sizing: content-box;
 	inline-size: calc(calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5) - calc(var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter)) * 2));
-
-	border-block-end-color: var(--mod-steplist-incomplete-segment-border-block-end-color, var(--spectrum-steplist-incomplete-segment-border-block-end-color));
-	border-block-end-style: dashed;
+	inset-block-end: calc(-1 * calc(var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height)) / 2));
 
 	/* Default is dashed */
 	border-block-end-width: var(--mod-steplist-segment-height, var(--spectrum-steplist-segment-height));
+	border-block-end-style: dashed;
+
+	border-block-end-color: var(--mod-steplist-incomplete-segment-border-block-end-color, var(--spectrum-steplist-incomplete-segment-border-block-end-color));
 }
 
 /* First step overrides */
@@ -256,8 +257,8 @@
 	}
 
 	.spectrum-Steplist-segment {
-		inset-inline-start: auto;
 		inset-inline-end: var(--mod-steplist-marker-diameter, var(--spectrum-steplist-marker-diameter));
+		inset-inline-start: auto;
 	}
 }
 
@@ -283,10 +284,10 @@
 	.spectrum-Steplist-markerContainer {
 		/* Be centered */
 		inset-inline-start: 50%;
-		margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
 
 		/* Override last-child bits */
 		margin-inline-end: 0;
+		margin-inline-start: calc(-1 * calc(var(--mod-steplist-marker-hitArea, var(--spectrum-steplist-marker-hitArea)) / 2));
 	}
 }
 
