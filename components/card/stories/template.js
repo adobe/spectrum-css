@@ -1,6 +1,7 @@
 import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Asset } from "@spectrum-css/asset/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as QuickAction } from "@spectrum-css/quickaction/stories/template.js";
@@ -96,7 +97,10 @@ export const Template = ({
               class=${classMap({ [`${rootClass}-coverPhoto`]: true })}
               style=${styleMap({ "background-image": `url(${image})` })}
             ></div>
-            <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Card-divider">
+            ${Divider({
+              size: "s",
+              customClasses: [`${rootClass}-divider`],
+            }, context)}
           `
         )
       )}
