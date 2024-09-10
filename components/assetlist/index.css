@@ -183,7 +183,7 @@
 		&:hover,
 		&.is-selected,
 		&.is-navigated {
-			--highcontrast-assetlist-label-color: SelectedItemText;
+			--highcontrast-assetlist-label-color: HighlightText;
 		}
 	}
 }
