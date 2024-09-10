@@ -233,6 +233,12 @@
   - @spectrum-css/icon@8.0.0-s2-foundations.0
   - @spectrum-css/typography@7.0.0-s2-foundations.0
 
+## 9.1.0
+
+### Minor Changes
+
+- [#3072](https://github.com/adobe/spectrum-css/pull/3072) [`492edbd`](https://github.com/adobe/spectrum-css/commit/492edbd18c469e1694603bb7346fb04577e8bf24) Thanks [@cdransf](https://github.com/cdransf)! - Corrects the issue with the action button in the card by removing the flex property and definition that caused the action button to fill the available space; additionally, justify-content has been set to space-between on the card header to properly horizontally align the action button relative to the card title (at either edge).
+
 ## 9.0.1
 
 ### Patch Changes
