@@ -1,4 +1,4 @@
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -128,3 +128,41 @@ export const Template = ({
 		</button>
 	`;
 };
+
+export const ActionButtonsWithIconOptions = ({
+	iconName,
+	...args
+}) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+    ${Template({
+      ...args,
+      iconName: undefined,
+    })}
+    ${Template({
+      ...args,
+      iconName: iconName ?? "Edit",
+    })}
+    ${Template({
+      ...args,
+      hideLabel: true,
+      iconName: iconName ?? "Edit",
+    })}
+  `,
+});
+
+export const TreatmentTemplate = (args) => Container({
+	withBorder: false,
+	direction: "column",
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`${[true, false].map((treatment) => ActionButtonsWithIconOptions({ 
+		...args, 
+		treatment,
+		isSelected: treatment }))}`,
+});

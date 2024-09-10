@@ -1,8 +1,10 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { ActionButtonGroup, ActionButtons } from "./actionbutton.test.js";
+import { ActionButtonsWithIconOptions, TreatmentTemplate } from "./template.js";
 
 /**
  * The action button component represents an action a user can take.
@@ -83,16 +85,45 @@ export default {
 
 export const Default = ActionButtonGroup.bind({});
 Default.args = {
-	label: "More",
+	label: "Edit",
+	iconName: "Edit",
 };
 
 export const Emphasized = ActionButtons.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
-	label: "More",
+	label: "Edit",
+	iconName: "Edit",
 	isEmphasized: true,
+	isSelected: true
 };
 Emphasized.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+
+export const Disabled = TreatmentTemplate.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	label: "Edit",
+	iconName: "Edit",
+	isDisabled: true,
+};
+
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+}
+
+export const Selected = ActionButtons.bind({});
+Selected.tags = ["!dev"];
+Selected.args = {
+	label: "Edit",
+	iconName: "Edit",
+	isEmphasized: false,
+	isSelected: true
+};
+Selected.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
@@ -101,13 +132,53 @@ Emphasized.parameters = {
 export const Quiet = ActionButtons.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
-	label: "More",
+	label: "Edit",
+	iconName: "Edit",
 	isQuiet: true,
 };
 Quiet.parameters = {
 	chromatic: {
 		disableSnapshot: true,
 	},
+};
+
+export const StaticWhiteDefault = TreatmentTemplate.bind({});
+StaticWhiteDefault.tags = ["!dev"];
+StaticWhiteDefault.args = {
+	label: "Edit",
+	iconName: "Edit",
+	staticColor: "white",
+};
+
+StaticWhiteDefault.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const StaticBlackDefault = TreatmentTemplate.bind({});
+StaticBlackDefault.tags = ["!dev"];
+StaticBlackDefault.args = {
+	label: "Edit",
+	iconName: "Edit",
+	staticColor: "black",
+};
+
+StaticBlackDefault.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Sizing = (args, context) => Sizes({
+	Template: ActionButtonsWithIconOptions,
+	withHeading: false,
+	withBorder: false,
+	...args,	
+}, context);
+Sizing.args = {
+	label: "Edit",
+	iconName: "Edit",
+};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot:  true },
 };
 
 // ********* VRT ONLY ********* //
