@@ -113,7 +113,7 @@ Disabled.args = {
 
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
-}
+};
 
 export const Selected = ActionButtons.bind({});
 Selected.tags = ["!dev"];
