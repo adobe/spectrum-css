@@ -151,7 +151,7 @@ export const BorderGroup = (args, context) => Container({
 });
 
 /* Shows a single group of swatches that are empty/nothing in various shapes and rounding. */
-export const NothingGroup = (args, context) => Container({
+export const EmptyGroup = (args, context) => Container({
 	withBorder: false,
 	content: html`
 		${Container({

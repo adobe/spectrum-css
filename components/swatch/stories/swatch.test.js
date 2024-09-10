@@ -34,13 +34,11 @@ export const SwatchGroup = Variants({
 		},
 		{
 			testHeading: "Gradient",
-			isGradient: true,
 			gradient: "linear-gradient(to right, rgba(0, 0, 0, 88%), rgb(174, 216, 230))",
 			swatchColor: "rgba(174, 216, 230, 0.3)",
 		},
 		{
 			testHeading: "Image",
-			isImage: true,
 			imageUrl: "example-ava@2x.png",
 		},
 		{
@@ -54,11 +52,12 @@ export const SwatchGroup = Variants({
 			isDisabled: true,
 		},
 		{
-			testHeading: "No color",
+			testHeading: "No color/empty",
 			swatchColor: undefined,
 			imageUrl: "",
 			gradient: "",
 			isMixedValue: false,
+			borderStyle: "default",
 		},
 		{
 			testHeading: "Selected",

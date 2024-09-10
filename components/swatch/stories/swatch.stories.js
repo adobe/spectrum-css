@@ -3,7 +3,7 @@ import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import pkgJson from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
-import { Template, DisabledGroup, NothingGroup, RoundingGroup, BorderGroup, SizingGroup } from "./template";
+import { Template, DisabledGroup, EmptyGroup, RoundingGroup, BorderGroup, SizingGroup } from "./template";
 
 /**
  * A swatch shows a small sample of a fill--such as a color, gradient, texture, or material--that is intended to be applied to an object.
@@ -183,29 +183,30 @@ Border.parameters = {
 /** 
  * Swatches can also have a rectangle shape with an aspect ratio of 2:1. The square shape is the default and is used in swatch groups (e.g., a palette of colors).
  */
-export const Rectangle = Template.bind({});
-Rectangle.args = {
+export const Shape = Template.bind({});
+Shape.args = {
 	shape: "rectangle",
 	swatchColor: "rgba(174, 216, 230, 0.25)",
 };
-Rectangle.tags = ["!dev"];
-Rectangle.parameters = {
+Shape.tags = ["!dev"];
+Shape.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+Shape.storyName = "Shape - rectangle";
 
 /**
- * A swatch will appear "empty" when its color, image, or gradient are undefined. 
+ * A swatch will appear "empty" when its preview is undefined, for instance when the image or gradient is undefined, or when a swatch color is transparent. The `.is-nothing` class is applied to the swatch in these cases. Implementations should ensure that the default border style is applied when a swatch is empty.
  */
-export const Nothing = (args, context) => Sizes({
-	Template: NothingGroup,
+export const Empty = (args, context) => Sizes({
+	Template: EmptyGroup,
 	withHeading: false,
 	...args,
 }, context);
-Nothing.args = {
+Empty.args = {
 	swatchColor: "transparent",
 };
-Nothing.tags = ["!dev"];
-Nothing.parameters = {
+Empty.tags = ["!dev"];
+Empty.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
