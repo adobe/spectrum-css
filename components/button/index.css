@@ -178,7 +178,6 @@ a.spectrum-Button {
 	line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
 	align-self: start;
 	text-align: var(--mod-button-text-align, center);
-	white-space: nowrap;
 }
 
 .spectrum-Button .spectrum-Icon + .spectrum-Button-label {
@@ -295,10 +294,10 @@ a.spectrum-Button {
 	}
 }
 
-/* Button label wrap  */
-.spectrum-Button--wrap {
+/* Disable button label wrap  */
+.spectrum-Button--noWrap {
 	.spectrum-Button-label {
-		white-space: normal;
+		white-space: nowrap;
 	}
 }
 

@@ -32,7 +32,7 @@ export const Template = ({
 	isPending = false,
 	ariaExpanded,
 	ariaControls,
-	isLabelWrapped = false,
+	noWrap = false,
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
@@ -52,7 +52,7 @@ export const Template = ({
         ["is-hover"]: isHovered,
         ["is-focus-visible"]: isFocused,
         ["is-active"]: isActive,
-        [`${rootClass}--wrap`]: isLabelWrapped,
+        [`${rootClass}--noWrap`]: noWrap,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}

@@ -58,8 +58,8 @@ export default {
 		isActive,
 		isPending,
 		staticColor,
-		isLabelWrapped: {
-			name: "Wrap Label Text?",
+		noWrap: {
+			name: "Disable Label Wrap",
 			type: { name: "boolean" },
 			table: {
 				category: "Content",
@@ -77,7 +77,7 @@ export default {
 		isActive: false,
 		isFocused: false,
 		isHovered: false,
-		isLabelWrapped: false,
+		noWrap: false,
 	},
 	parameters: {
 		actions: {
