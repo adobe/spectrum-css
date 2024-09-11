@@ -88,6 +88,7 @@
 
 	background-color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
 	color: var(--highcontrast-toast-background-color-default, var(--mod-toast-background-color-default, var(--spectrum-toast-background-color-default)));
+	overflow-wrap: anywhere;
 }
 
 .spectrum-Toast--negative {

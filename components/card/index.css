@@ -311,10 +311,10 @@
 .spectrum-Card-header {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .spectrum-Card-actionButton {
-	flex: 1;
 	align-self: center;
 	display: flex;
 	justify-content: flex-end;
