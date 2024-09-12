@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.0-s2-foundations.6
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`11a0032`](https://github.com/adobe/spectrum-css/commit/11a00323addbf28b9430d27d9cbc5f30bc851b65) Thanks [@pfulton](https://github.com/pfulton)! - Bug fixes to S1 & Express theming across all components
+
 ## 5.0.0-s2-foundations.5
 
 ### Minor Changes

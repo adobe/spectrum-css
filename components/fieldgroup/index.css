@@ -41,9 +41,6 @@
 	display: flex;
 	flex-flow: column wrap;
 
-	/* space between fields */
-	gap: var(--spectrum-fieldgroup-margin);
-
 	/* input fields stacked vertically */
 	.spectrum-FieldGroup--vertical & {
 		flex-direction: column;
@@ -53,7 +50,10 @@
 	.spectrum-FieldGroup--horizontal & {
 		flex-direction: row;
 
-		row-gap: 0;
+		/* space between horizontal fields */
+		.spectrum-FieldGroup-item:not(:last-child) {
+			margin-inline-end: var(--spectrum-fieldgroup-margin);
+		}
 
 		/* move help text down to new row */
 		.spectrum-HelpText {

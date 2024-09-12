@@ -32,6 +32,9 @@
 }
 
 .spectrum-Combobox {
+	--spectrum-combobox-min-inline-size: calc(var(--spectrum-combobox-minimum-width-multiplier) * var(--spectrum-combobox-block-size));
+	--spectrum-combobox-button-width: var(--spectrum-combobox-block-size);
+
 	/* @passthroughs start -- settings for nested Textfield component */
 	--mod-textfield-focus-indicator-gap: var(--mod-combobox-focus-indicator-gap, var(--spectrum-combobox-focus-indicator-gap));
 	--mod-textfield-focus-indicator-width: var(--mod-combobox-focus-indicator-thickness, var(--spectrum-combobox-focus-indicator-thickness));

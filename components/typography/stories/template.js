@@ -51,6 +51,11 @@ export const Template = (args = {}, context = {}) => {
 				>${c}</div>`;
 		}
 
+		// body doesn't come in xxs, but if paired with an xxs heading, use xs (the closest size to xxs)
+		if (semantics === "body" && size === "xxs") {
+			size = "xs";
+		}
+
 		rootClass = `spectrum-${capitalize(semantics)}`;
 
 		const classes = {

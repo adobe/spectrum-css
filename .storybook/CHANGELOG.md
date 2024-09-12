@@ -1,5 +1,18 @@
 # Change Log
 
+## 11.0.0-s2-foundations.11
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`11a0032`](https://github.com/adobe/spectrum-css/commit/11a00323addbf28b9430d27d9cbc5f30bc851b65) Thanks [@pfulton](https://github.com/pfulton)! - Bug fixes to S1 & Express theming across all components
+
+### Patch Changes
+
+- Updated dependencies [[`11a0032`](https://github.com/adobe/spectrum-css/commit/11a00323addbf28b9430d27d9cbc5f30bc851b65)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.14
+  - @spectrum-css/ui-icons@2.0.0-s2-foundations.9
+  - @spectrum-css/tokens@15.0.0-s2-foundations.21
+
 ## 11.0.0-s2-foundations.10
 
 ### Patch Changes

@@ -79,8 +79,8 @@ export const Container = ({
 		<div
 			data-outer-container
 			style=${styleMap({
-        "z-index": "1",
-        "position": "relative",
+				"z-index": "1",
+				"position": "relative",
 				"display": "flex",
 				"flex-direction": "column",
 				"flex-wrap": "nowrap",
@@ -282,6 +282,7 @@ export const Sizes = ({
 			l: "Large",
 			xl: "Extra-large",
 			xxl: "Extra-extra-large",
+			xxxl: "Extra-extra-extra-large",
 		},
 		...args
 	}, context);
