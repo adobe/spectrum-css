@@ -103,6 +103,7 @@ export const TreeViewItem = ({
 							: "300",
 						isLayer: true,
 						isSelected,
+						isDisabled,
 						customClasses: [`${rootClass}-itemThumbnail`],
 					}, context)
 				)}
