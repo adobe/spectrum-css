@@ -303,11 +303,6 @@
 		--highcontrast-stepper-button-background-color-keyboard-focus: Canvas;
 		--highcontrast-stepper-focus-indicator-color: Highlight;
 
-		&.is-disabled {
-			--highcontrast-stepper-border-color: GrayText;
-			--highcontrast-stepper-buttons-border-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
-		}
-
 		&.is-invalid {
 			--highcontrast-stepper-border-color: Highlight;
 			--highcontrast-stepper-border-color-hover: Highlight;
@@ -315,6 +310,12 @@
 			--highcontrast-stepper-border-color-focus-hover: Highlight;
 			--highcontrast-stepper-border-color-keyboard-focus: Highlight;
 			--highcontrast-infield-button-border-color: Highlight;
+		}
+
+		&.is-disabled {
+			--highcontrast-stepper-border-color: GrayText;
+			--highcontrast-infield-button-border-color: GrayText;
+			--highcontrast-stepper-buttons-border-width: var(--mod-stepper-border-width, var(--spectrum-stepper-border-width));
 		}
 	}
 }
