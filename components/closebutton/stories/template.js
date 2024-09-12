@@ -6,6 +6,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { capitalize, upperCase } from "lodash-es";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-CloseButton",
@@ -13,6 +16,8 @@ export const Template = ({
 	label = "Close",
 	staticColor,
 	isDisabled = false,
+	isHovered = false,
+	isFocused = false,
 	customClasses = [],
 	id = getRandomId("closebutton"),
 	onclick,
@@ -22,8 +27,10 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${upperCase(size)}`]: typeof size !== "undefined",
-				[`${rootClass}--static${capitalize(staticColor)}`]:
-					typeof staticColor !== "undefined",
+				[`${rootClass}--static${capitalize(staticColor)}`]: typeof staticColor !== "undefined",
+				["is-hover"]: isHovered,
+				["is-focus-visible"]: isFocused,
+				["is-disabled"]: isDisabled,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			aria-label="close"

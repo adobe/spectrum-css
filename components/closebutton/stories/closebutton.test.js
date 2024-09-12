@@ -3,8 +3,6 @@ import { Template } from "./template.js";
 
 export const CloseButtonGroup = Variants({
 	Template,
-	stateDirection: "row",
-	sizeDirection: "row",
 	testData: [
 		{
 			testHeading: "Default",
@@ -12,8 +10,21 @@ export const CloseButtonGroup = Variants({
 	],
 	stateData: [
 		{
+			testHeading: "Hovered",
+			isHovered: true,
+		},
+		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+		{
 			testHeading: "Disabled",
 			isDisabled: true,
+		},
+		{
+			testHeading: "Disabled + hovered",
+			isDisabled: true,
+			isHovered: true,
 		},
 	]
 });

@@ -96,22 +96,13 @@
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
     "--spectrum-focus-indicator-thickness",
-    "--spectrum-neutral-content-color-default",
-    "--spectrum-neutral-content-color-down",
-    "--spectrum-neutral-content-color-hover",
-    "--spectrum-neutral-content-color-key-focus",
     "--spectrum-neutral-subdued-content-color-default",
     "--spectrum-neutral-subdued-content-color-down",
     "--spectrum-neutral-subdued-content-color-hover",
     "--spectrum-neutral-subdued-content-color-key-focus",
     "--spectrum-workflow-icon-size-100"
   ],
-  "system-theme": [
-    "--system-spectrum-rating-icon-color-default",
-    "--system-spectrum-rating-icon-color-down",
-    "--system-spectrum-rating-icon-color-hover",
-    "--system-spectrum-rating-icon-color-key-focus"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-rating-emphasized-icon-color-default",

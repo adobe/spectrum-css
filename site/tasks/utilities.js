@@ -17,26 +17,9 @@ const path = require("path");
 
 const depSolver = require("dependency-solver");
 
+const { dirs, relativePrint } = require("../../tasks/utilities.js");
+
 require("colors");
-
-/**
- * A source of truth for commonly used directories
- * @type {object} dirs
- * @property {string} dirs.root
- * @property {string} dirs.components
- * @property {string} dirs.site
- * @property {string} dirs.publish
- */
-const dirs = {
-	root: path.join(__dirname, "../.."),
-	components: path.join(__dirname, "../../components"),
-	site: path.join(__dirname, "../../site"),
-	publish: path.join(__dirname, "../../dist"),
-	storybook: path.join(__dirname, "../../.storybook"),
-};
-
-/** @type {(string) => string} */
-const relativePrint = (filename, { cwd = dirs.root } = {}) => path.relative(cwd, filename);
 
 /**
  * Given a list of package paths, solve the dependency order
@@ -124,9 +107,8 @@ function getPackageFromPath(filePath = process.cwd()) {
 }
 
 module.exports = {
-    dirs,
-    relativePrint,
-    solveDependencies,
-    getFolderDependencyOrder,
+	relativePrint,
+	solveDependencies,
+	getFolderDependencyOrder,
 	getPackageFromPath,
 };

@@ -11,14 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: spectrum) {
-	.spectrum-Textfield {
-		--spectrum-textfield-border-color: var(--spectrum-gray-500);
-		--spectrum-textfield-border-color-hover: var(--spectrum-gray-600);
-		--spectrum-textfield-border-color-focus: var(--spectrum-gray-800);
-		--spectrum-textfield-border-color-focus-hover: var(--spectrum-gray-900);
-		--spectrum-textfield-border-color-keyboard-focus: var(--spectrum-gray-900);
 
-		--spectrum-textfield-border-width: var(--spectrum-border-width-100);
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-Textfield {
+		--spectrum-textfield-background-color: var(--spectrum-gray-50);
 	}
 }

@@ -12,6 +12,12 @@
  */
 
 const modes = {
+    // "Context: Spectrum 2": {
+    //     scale: "medium",
+    //     color: "light",
+    //     textDirection: "ltr",
+    //     context: "spectrum",
+    // },
     "Context: Spectrum 1": {
         scale: "medium",
         color: "light",
@@ -28,6 +34,7 @@ const modes = {
         scale: "medium",
         color: "dark",
         textDirection: "rtl",
+        context: "legacy",
     },
 };
 
@@ -43,11 +50,9 @@ export const disableDefaultModes = {
 export const mobile = {
     "Mobile": {
         scale: "large",
-    },
-};
-
-export const viewports = {
-    small: {
-        width: 480,
+        color: "light",
+        textDirection: "ltr",
+        context: "legacy",
+        viewport: "small",
     },
 };

@@ -73,22 +73,22 @@ const List = styled.div`
  * A single color row your styleguide showing title, subtitle and one or more colors, used
  * as a child of `ColorPalette`.
  */
-export const ColorItem = ({ title, color, values = [], ...props }) => {
+export const ColorItem = ({ title, color, size = 38, values = [], ...props }) => {
 	if (!color) return;
 	if (!values.length) return (
 		<>
-			<SwatchGroupLabel className="swatch-group-label">
+			{title && <SwatchGroupLabel className="swatch-group-label">
 				<Heading size="s">{title ?? capitalize(color)}</Heading>
-			</SwatchGroupLabel>
+			</SwatchGroupLabel>}
 			<Body>No values provided for color {color}</Body>
 		</>
 	);
 
 	return (
 		<>
-			<SwatchGroupLabel className="swatch-group-label">
+			{title && <SwatchGroupLabel className="swatch-group-label">
 				<Heading size="s">{title ?? capitalize(color)}</Heading>
-			</SwatchGroupLabel>
+			</SwatchGroupLabel>}
 			<SwatchGroup className="swatch-group" {...props}>
 				<SwatchColors className="swatch-colors" size={60}>
 					{values.map((value) => {
@@ -102,7 +102,7 @@ export const ColorItem = ({ title, color, values = [], ...props }) => {
 									className="swatch"
 									title={`--spectrum-${color}-${value} / ${resolved}`}
 									background={resolved}
-									size={60}
+									size={size}
 									onClick={() => navigator.clipboard.writeText(`--spectrum-${color}-${value}`)}
 								/>
 							</SwatchSet>

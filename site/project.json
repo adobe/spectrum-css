@@ -21,11 +21,15 @@
 					"projects": "tag:component",
 					"target": "build"
 				},
+				{
+					"projects": "ui-icons",
+					"target": "build"
+				},
 				"clean"
 			],
 			"inputs": ["core", "tools"],
 			"options": {
-				"commands": ["node --no-warnings -e \"require('./tasks').builder()\""],
+				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/index.js\").builder()'"],
 				"cwd": "{projectRoot}"
 			},
 			"outputs": ["{workspaceRoot}/dist"]
@@ -48,7 +52,7 @@
 			"executor": "nx:run-commands",
 			"inputs": ["core", "tools"],
 			"options": {
-				"commands": ["node --no-warnings -e \"require('./tasks').server()\""],
+				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node -e \"require('./tasks/index.js').server()\""],
 				"cwd": "{projectRoot}"
 			},
 			"outputs": ["{workspaceRoot}/dist"]
