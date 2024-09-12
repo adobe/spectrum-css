@@ -86,9 +86,6 @@ governing permissions and limitations under the License.
 
 	block-size: var(--mod-standard-dialog-hero-block-size, var(--spectrum-standard-dialog-hero-block-size));
 
-	/* border-start-start-radius: var(--mod-standard-dialog-border-radius, var(--spectrum-standard-dialog-border-radius));
-	border-start-end-radius: var(--mod-standard-dialog-border-radius, var(--spectrum-standard-dialog-border-radius)); */
-
 	background-size: cover;
 	background-position: center center;
 }
