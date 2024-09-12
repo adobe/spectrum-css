@@ -59,10 +59,10 @@ export default {
 		isPending,
 		staticColor,
 		noWrap: {
-			name: "Disable Label Wrap",
+			name: "Disable label wrap",
 			type: { name: "boolean" },
 			table: {
-				category: "Content",
+				category: "Advanced",
 			},
 		},
 	},
