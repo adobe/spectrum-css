@@ -11,9 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
+
+/* @combine .spectrum.spectrum--express */
+
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-ActionGroup {
 		--spectrum-actiongroup-gap-size-compact: var(--spectrum-spacing-50);
 

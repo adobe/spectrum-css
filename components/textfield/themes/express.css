@@ -11,9 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
+
+/* @combine .spectrum.spectrum--express */
+
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Textfield {
 		--spectrum-textfield-border-color: var(--spectrum-gray-400);
 		--spectrum-textfield-border-color-hover: var(--spectrum-gray-500);

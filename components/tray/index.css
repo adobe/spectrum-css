@@ -11,23 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-Tray {
-	/* Placeholder tokens */
-	--spectrum-tray-exit-animation-delay: 0ms;
-	--spectrum-tray-entry-animation-delay: 160ms;
-
-	/* Maximum width for landscape */
-	--spectrum-tray-max-inline-size: 375px;
-
-	/* https://spectrum.adobe.com/page/tray/#Maximum-height */
-	--spectrum-tray-spacing-edge-to-tray-safe-zone: 64px;
-
-	--spectrum-tray-entry-animation-duration: var(--spectrum-animation-duration-500);
-	--spectrum-tray-exit-animation-duration: var(--spectrum-animation-duration-100);
-
-	--spectrum-tray-corner-radius: var(--spectrum-corner-radius-100);
-	--spectrum-tray-background-color: var(--spectrum-background-layer-2-color);
-}
+@import "./themes/spectrum-two.css";
 
 .spectrum-Tray-wrapper {
 	inset-inline-start: 0;
@@ -41,9 +25,10 @@
 }
 
 .spectrum-Tray {
+	--mod-modal-max-width: 100%;
+
 	/* Default to full width when the viewport is in portrait orientation */
 	inline-size: 100%;
-	--mod-modal-max-width: 100%;
 	max-inline-size: 100%;
 
 	max-block-size: calc(100vh - var(--mod-tray-spacing-edge-to-tray-safe-zone, var(--spectrum-tray-spacing-edge-to-tray-safe-zone)));
@@ -59,18 +44,13 @@
 	transform: translateY(100%);
 
 	/* Exit animations */
-	transition:
-		opacity var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration)) cubic-bezier(0.5, 0, 1, 1) var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)),
-		visibility var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration)) linear calc(var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)) + var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))),
-		transform var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration)) cubic-bezier(0.5, 0, 1, 1) var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay));
+	transition: opacity var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration)) cubic-bezier(0.5, 0, 1, 1) var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)), visibility var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration)) linear calc(var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay)) + var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration))), transform var(--mod-tray-exit-animation-duration, var(--spectrum-tray-exit-animation-duration)) cubic-bezier(0.5, 0, 1, 1) var(--mod-tray-exit-animation-delay, var(--spectrum-tray-exit-animation-delay));
 
 	background-color: var(--highcontrast-tray-background-color, var(--mod-tray-background-color, var(--spectrum-tray-background-color)));
 
 	&.is-open {
 		/* Entry animations */
-		transition:
-			transform var(--mod-tray-entry-animation-duration, var(--spectrum-tray-entry-animation-duration)) cubic-bezier(0, 0, 0.4, 1) var(--mod-tray-entry-animation-delay, var(--spectrum-tray-entry-animation-delay)),
-			opacity var(--spectrum-tray-entry-animation-duration, var(--mod-tray-entry-animation-duration)) cubic-bezier(0, 0, 0.4, 1) var(--mod-tray-entry-animation-delay, var(--spectrum-tray-entry-animation-delay));
+		transition: transform var(--mod-tray-entry-animation-duration, var(--spectrum-tray-entry-animation-duration)) cubic-bezier(0, 0, 0.4, 1) var(--mod-tray-entry-animation-delay, var(--spectrum-tray-entry-animation-delay)), opacity var(--spectrum-tray-entry-animation-duration, var(--mod-tray-entry-animation-duration)) cubic-bezier(0, 0, 0.4, 1) var(--mod-tray-entry-animation-delay, var(--spectrum-tray-entry-animation-delay));
 		transform: translateY(0);
 	}
 }

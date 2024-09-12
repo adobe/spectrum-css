@@ -268,20 +268,6 @@ window.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	[...document.querySelectorAll(".spectrum-CycleButton")].forEach((cycleButton) => {
-		cycleButton.addEventListener("click", () => {
-			const icons = [...cycleButton.querySelectorAll(".spectrum-Icon")];
-			const currentIcon = cycleButton.querySelector(".spectrum-Icon.is-selected");
-			const currentIconIndex = icons.indexOf(currentIcon);
-
-			if (!currentIcon) return;
-			currentIcon.classList.remove("is-selected");
-
-			const newIndex = currentIconIndex + 1 < icons.length ? currentIconIndex + 1 : 0;
-			icons[newIndex].classList.add("is-selected");
-		});
-	});
-
 	[...document.querySelectorAll(".spectrum-TreeView")].forEach((treeview) => {
 		[...treeview.querySelectorAll(".spectrum-TreeView-item")].forEach(treeviewItem => {
 			treeviewItem.addEventListener("click", (event) => {

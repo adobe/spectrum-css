@@ -47,10 +47,6 @@
     ".spectrum-Textfield--sideLabel .spectrum-Textfield-input",
     ".spectrum-Textfield--sideLabel .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield--sideLabel:after",
-    ".spectrum-Textfield--sizeL",
-    ".spectrum-Textfield--sizeM",
-    ".spectrum-Textfield--sizeS",
-    ".spectrum-Textfield--sizeXL",
     ".spectrum-Textfield-characterCount",
     ".spectrum-Textfield-input",
     ".spectrum-Textfield-input:-moz-ui-invalid",
@@ -88,6 +84,10 @@
     ".spectrum-Textfield.spectrum-Textfield--quiet.is-valid .spectrum-Textfield-input",
     ".spectrum-Textfield.spectrum-Textfield--quiet:after",
     ".spectrum-Textfield.spectrum-Textfield--sideLabel .spectrum-Textfield-validationIcon",
+    ".spectrum-Textfield.spectrum-Textfield--sizeL",
+    ".spectrum-Textfield.spectrum-Textfield--sizeM",
+    ".spectrum-Textfield.spectrum-Textfield--sizeS",
+    ".spectrum-Textfield.spectrum-Textfield--sizeXL",
     ".spectrum-Textfield:hover .spectrum-Textfield-input",
     ".spectrum-Textfield:hover .spectrum-Textfield-input::placeholder"
   ],
@@ -228,7 +228,6 @@
   "global": [
     "--spectrum-animation-duration-100",
     "--spectrum-border-width-100",
-    "--spectrum-border-width-200",
     "--spectrum-character-count-to-field-quiet-extra-large",
     "--spectrum-character-count-to-field-quiet-large",
     "--spectrum-character-count-to-field-quiet-medium",
@@ -292,8 +291,7 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-400",
-    "--spectrum-gray-50",
+    "--spectrum-gray-25",
     "--spectrum-gray-500",
     "--spectrum-gray-600",
     "--spectrum-gray-800",
@@ -331,14 +329,7 @@
     "--spectrum-workflow-icon-size-300",
     "--spectrum-workflow-icon-size-75"
   ],
-  "system-theme": [
-    "--system-spectrum-textfield-border-color",
-    "--system-spectrum-textfield-border-color-focus",
-    "--system-spectrum-textfield-border-color-focus-hover",
-    "--system-spectrum-textfield-border-color-hover",
-    "--system-spectrum-textfield-border-color-keyboard-focus",
-    "--system-spectrum-textfield-border-width"
-  ],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-textfield-border-color",
