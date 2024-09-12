@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, size, staticColor } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isHovered, size, staticColor } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { CloseButtonGroup } from "./closebutton.test.js";
 
@@ -13,11 +13,15 @@ export default {
 		size: size(["s", "m", "l", "xl"]),
 		staticColor,
 		isDisabled,
+		isHovered,
+		isFocused,
 	},
 	args: {
 		rootClass: "spectrum-CloseButton",
 		size: "m",
 		isDisabled: false,
+		isHovered: false,
+		isFocused: false,
 	},
 	parameters: {
 		actions: {

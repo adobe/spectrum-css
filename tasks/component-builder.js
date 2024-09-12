@@ -31,7 +31,6 @@ const {
 	cleanFolder,
 	validateComponentName,
 	fetchContent,
-	copy,
 } = require("./utilities.js");
 
 /**
@@ -163,8 +162,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 		componentName = getPackageFromPath(cwd);
 	}
 
-	const hasTheme = fs.existsSync(path.join(cwd, "themes"));
-
 	// Create the dist directory if it doesn't exist
 	if (!fs.existsSync(path.join(cwd, "dist"))) {
 		fs.mkdirSync(path.join(cwd, "dist"));
@@ -180,10 +177,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 			referencesOnly: false,
 			preserveVariables: true,
 			stripLocalSelectors: false,
-		}).then(async (reports) => {
-			// Copy index.css to index-vars.css for backwards compat, log as deprecated
-			return copy(indexOutputPath, path.join(cwd, "dist/index-vars.css"), { cwd })
-				.then(r => [r, ...reports]);
 		}),
 		processCSS(
 			content,
@@ -192,50 +185,12 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 			{
 				cwd,
 				clean,
-				splitinatorOptions: {
-					noFlatVariables: true,
-				},
+				skipMapping: true,
+				referencesOnly: false,
+				preserveVariables: false,
+				stripLocalSelectors: false,
 			},
 		),
-		hasTheme ? processCSS(
-			content,
-			indexSourceCSS,
-			path.join(
-				dirs.tokens,
-				"components",
-				"bridge",
-				`${componentName}.css`,
-			),
-			{
-				cwd,
-				clean,
-				splitinatorOptions: {
-					noFlatVariables: true,
-				},
-				map: false,
-				env: "production",
-			},
-		).then(async (reports = []) => {
-			return Promise.all([
-				copy(
-					path.join(
-						dirs.tokens,
-						"components",
-						"bridge",
-						`${componentName}.css`,
-					),
-					path.join(
-						dirs.tokens,
-						"dist",
-						"css",
-						"components",
-						"bridge",
-						`${componentName}.css`,
-					),
-					{ cwd, isDeprecated: false },
-				),
-			]).then((r) => [...reports, r]);
-		}) : Promise.resolve(),
 	]);
 }
 
@@ -249,7 +204,6 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	// This fetches the content of the files and returns an array of objects with the content and input paths
 	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
-	const componentName = cwd?.split(path.sep)?.pop();
 
 	// Nothing to do if there's no content
 	if (!contentData || contentData.length === 0) return;
@@ -278,37 +232,8 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 				// Only output the new selectors with the system mappings
 				stripLocalSelectors: true,
 				theme,
-				map: false,
-				env: "production",
 			},
-		).then(async (reports = []) => {
-			// Copy the build express & spectrum component tokens to the tokens package folder in src and dist output
-			// (dist included b/c tokens are typically built before components in the build order)
-			return Promise.all([
-				copy(
-					path.join(cwd, "dist", input),
-					path.join(
-						dirs.tokens,
-						"components",
-						path.basename(input, ".css"),
-						`${componentName}.css`,
-					),
-					{ cwd, isDeprecated: false },
-				),
-				copy(
-					path.join(cwd, "dist", input),
-					path.join(
-						dirs.tokens,
-						"dist",
-						"css",
-						"components",
-						path.basename(input, ".css"),
-						`${componentName}.css`,
-					),
-					{ cwd, isDeprecated: false },
-				),
-			]).then((r) => [...reports, r]);
-		});
+		);
 	});
 
 	promises.push(
@@ -320,9 +245,10 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 			{
 				cwd,
 				clean,
-				splitinatorOptions: {
-					noSelectors: true,
-				},
+				skipMapping: false,
+				stripLocalSelectors: false,
+				referencesOnly: true,
+				shouldCombine: false,
 				map: false,
 			},
 		),

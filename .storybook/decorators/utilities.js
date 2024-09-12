@@ -28,7 +28,7 @@ const Heading = ({
 		skipLineBreak: true,
 		customClasses: ["chromatic-ignore", ...customClasses],
 		customStyles: {
-			"color": type !== "code" ? "var(--spectrum-gray-600)" : undefined,
+			"color": type !== "code" ? "var(--spectrum-gray-800)" : undefined,
 		}
 	});
 };
@@ -70,7 +70,7 @@ export const Container = ({
 	if (withBorder) {
 		borderStyles["padding-inline"] = "24px";
 		borderStyles["padding-block"] = "24px";
-		borderStyles["border"] = "1px solid var(--spectrum-gray-200)";
+		borderStyles["border"] = "1px solid var(--spectrum-gray-700)";
 		borderStyles["border-radius"] = "4px";
 		gap = 80;
 	}

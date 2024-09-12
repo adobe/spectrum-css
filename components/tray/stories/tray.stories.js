@@ -1,5 +1,5 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
-import { disableDefaultModes, viewports } from "@spectrum-css/preview/modes";
+import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { TrayGroup } from "./tray.test.js";
@@ -37,7 +37,7 @@ export default {
 		chromatic: {
 			modes: {
 				"Viewport | small": {
-					viewport: viewports.small,
+					...mobile,
 				},
 			},
 		},

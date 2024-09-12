@@ -6,6 +6,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-SwatchGroup",
@@ -16,24 +19,26 @@ export const Template = ({
 	items = [],
 	customStyles = {},
 	id = getRandomId("swatchgroup"),
-} = {}, context = {}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			[`${rootClass}--${density}`]:
-				typeof density !== "undefined" && density !== "regular",
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${styleMap({
-			...customStyles,
-			size: `calc(${items.length} / 10 * 32px)`,
-		})}
-		id=${ifDefined(id)}
-	>
-		${items.map((swatch) => Swatch({
-			size,
-			rounding,
-			...swatch,
-		}, context))}
-	</div>
-`;
+} = {}, context = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				[`${rootClass}--${density}`]:
+					typeof density !== "undefined" && density !== "regular",
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap({
+				...customStyles,
+				size: `calc(${items.length} / 10 * 32px)`,
+			})}
+			id=${ifDefined(id)}
+		>
+			${items.map((swatch) => Swatch({
+				size,
+				rounding,
+				...swatch,
+			}, context))}
+		</div>
+	`;
+};

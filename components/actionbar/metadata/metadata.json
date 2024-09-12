@@ -14,10 +14,7 @@
     ".spectrum-ActionBar--fixed",
     ".spectrum-ActionBar--flexible .spectrum-ActionBar-popover",
     ".spectrum-ActionBar--sticky",
-    ".spectrum-ActionBar.is-open",
-    ".spectrum-ActionBar:lang(ja)",
-    ".spectrum-ActionBar:lang(ko)",
-    ".spectrum-ActionBar:lang(zh)"
+    ".spectrum-ActionBar.is-open"
   ],
   "modifiers": [
     "--mod-actionbar-corner-radius",
@@ -77,8 +74,8 @@
     "--spectrum-drop-shadow-x",
     "--spectrum-drop-shadow-y",
     "--spectrum-font-size-100",
+    "--spectrum-gray-25",
     "--spectrum-gray-400",
-    "--spectrum-gray-50",
     "--spectrum-informative-background-color-default",
     "--spectrum-line-height-100",
     "--spectrum-neutral-content-color-default",

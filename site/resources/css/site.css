@@ -11,6 +11,11 @@
  * governing permissions and limitations under the License.
  */
 
+:root {
+	background-color: var(--spectrum-gray-100);
+	-webkit-tap-highlight-color: var(--spectrum-transparent-black-100);
+}
+
 body,
 html {
 	block-size: 100%;
@@ -25,68 +30,620 @@ body {
 	display: none !important;
 }
 
-/* Supports the 4 deprecated components without loading all of the vars packages */
-.spectrum {
-	--spectrum-global-dimension-size-25: 2px;
-	--spectrum-global-dimension-size-40: 3px;
-	--spectrum-global-dimension-size-50: 4px;
-	--spectrum-global-dimension-size-75: 6px;
-	--spectrum-global-dimension-size-85: 7px;
-	--spectrum-global-dimension-size-100: 8px;
-	--spectrum-global-dimension-size-125: 10px;
-	--spectrum-global-dimension-size-150: 12px;
-	--spectrum-global-dimension-size-175: 14px;
-	--spectrum-global-dimension-size-200: 16px;
-	--spectrum-global-dimension-size-500: 40px;
-
-	--spectrum-alias-border-radius-regular: var(--spectrum-global-dimension-size-50);
+.spectrum-Site {
+	display: flex;
+	flex-direction: column;
+	block-size: 100%;
+	color: var(--spectrum-body-color);
+	background-color: var(--spectrum-gray-50);
 }
 
-.spectrum.spectrum--large {
-	--spectrum-global-dimension-size-40: 4px;
-	--spectrum-global-dimension-size-50: 5px;
-	--spectrum-global-dimension-size-75: 8px;
-	--spectrum-global-dimension-size-85: 9px;
-	--spectrum-global-dimension-size-100: 10px;
-	--spectrum-global-dimension-size-125: 13px;
-	--spectrum-global-dimension-size-150: 15px;
-	--spectrum-global-dimension-size-175: 18px;
-	--spectrum-global-dimension-size-200: 20px;
-	--spectrum-global-dimension-size-500: 50px;
+.spectrum-Site-content {
+	display: flex;
+	flex-direction: row;
+	inline-size: 100vw;
+	block-size: 100vh;
 }
 
-.spectrum.spectrum--express {
-	--spectrum-alias-border-radius-regular: var(--spectrum-global-dimension-size-75);
+.spectrum-Site-header {
+	display: none;
+	box-sizing: border-box;
+	block-size: var(--spectrum-component-height-300);
+	padding: var(--spectrum-component-to-menu-extra-large);
+	border-block-end-color: var(--spectrum-gray-300);
+	border-block-end-style: solid;
+	border-block-end-width: var(--spectrum-divider-thickness-small);
 }
 
-.spectrum .spectrum-QuickActions {
-	--spectrum-alias-background-color-quickactions-overlay: rgba(0, 0, 0, 20%);
-	--spectrum-alias-background-color-quickactions: rgba(248, 248, 248, 90%);
+.spectrum-Site-header .spectrum-Site-sideBarHeader {
+	padding-block: 0;
 }
 
-.spectrum.spectrum--dark .spectrum-QuickActions {
-	--spectrum-alias-background-color-quickactions: rgba(50, 50, 50, 90%);
+.spectrum-Site-header,
+.spectrum-Site-mainContent,
+.spectrum-Site-sideBar {
+	color: var(--spectrum-body-color);
+	background-color: var(--spectrum-gray-75);
 }
 
-.spectrum.spectrum--darkest .spectrum-QuickActions {
-	--spectrum-alias-background-color-quickactions: rgba(29, 29, 29, 90%);
+.spectrum-Site-sideBar {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	max-inline-size: 100%;
+	transition: none;
 }
 
-.spectrum .spectrum-SearchWithin {
-	--spectrum-alias-input-border-size: var(--spectrum-global-dimension-static-size-10, 1px);
+.spectrum-Site-sideBarHeader {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 0;
+	flex-shrink: 0;
+	align-items: center;
+	padding: var(--spectrum-spacing-400);
+	-webkit-text-decoration: none;
+	text-decoration: none;
 }
 
-.spectrum.spectrum--express .spectrum-SearchWithin {
-	--spectrum-alias-input-border-size: var(--spectrum-global-dimension-static-size-25, 2px);
+.spectrum-Site-sideBarHeader:focus {
+	outline: none;
 }
 
-.spectrum .spectrum-SplitButton {
-	--spectrum-button-m-primary-outline-texticon-padding-left: var(--spectrum-button-m-primary-outline-texticon-padding-right);
-	--spectrum-alias-border-radius-small: var(--spectrum-global-dimension-size-25);
-	--spectrum-alias-border-size-thick: var(--spectrum-global-dimension-static-size-25, 2px);
+.spectrum-Site-sideBarHeader:focus h2 {
+	-webkit-text-decoration: underline;
+	text-decoration: underline;
 }
 
-.spectrum.spectrum--express .spectrum-SplitButton {
-	--spectrum-button-m-primary-outline-texticon-padding-left: var(--spectrum-global-dimension-size-175);
-	--spectrum-alias-border-radius-small: var(--spectrum-global-dimension-size-40);
+.spectrum-Site-search {
+	padding: var(--spectrum-spacing-300);
+	padding-block-start: 0;
+}
+
+.spectrum-Site-searchResults {
+	position: absolute;
+	z-index: 4;
+	inset-block-start: -100%;
+	inset-inline-start: -100%;
+	overflow-y: auto;
+	max-block-size: calc(90vh - 120px);
+}
+
+.spectrum-Site-noSearchResults {
+	padding: var(--spectrum-spacing-400);
+}
+
+.spectrum-Site-logo {
+	--spectrum-icon-size: 32px;
+	--mod-icon-color: #fa0f00;
+	margin-inline-end: var(--spectrum-spacing-200);
+}
+
+.spectrum--large .spectrum-Site-logo {
+	--spectrum-icon-size: 40px;
+}
+
+.spectrum-Site-nav {
+	flex-grow: 1;
+	padding: 0 var(--spectrum-spacing-400) var(--spectrum-spacing-600);
+}
+
+.spectrum-Site-bottomNav {
+	margin-block-start: var(--spectrum-spacing-900);
+}
+
+.spectrum-Site-page {
+	box-sizing: border-box;
+	padding: var(--spectrum-spacing-600) 52px var(--spectrum-spacing-400);
+}
+
+.spectrum-Site-hero,
+.spectrum-Site-page {
+	inline-size: min(1080px, 100%);
+	margin: auto;
+}
+
+.spectrum-Site-heroHeading {
+	margin-block-end: var(--spectrum-spacing-300);
+}
+
+.spectrum-Site-heroHeading .spectrum-Heading {
+	margin-block-start: 0 !important;
+}
+
+.spectrum-Site-heroImage {
+	display: block;
+	max-inline-size: 100%;
+	margin-block-start: var(--spectrum-spacing-700);
+	margin-block-end: var(--spectrum-spacing-700);
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	border-radius: 4px;
+}
+
+.spectrum-Site-mainContent {
+	overflow-y: auto;
+	flex-grow: 1;
+	border-block: none;
+}
+
+.spectrum-Site-footerContainer {
+	inline-size: min(1080px, 100%);
+	margin: var(--spectrum-spacing-400) auto;
+	padding: 0 var(--spectrum-spacing-600);
+}
+
+.spectrum-Site-overlay {
+	pointer-events: none;
+	position: fixed;
+	z-index: 2;
+	inset-block-start: 0;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	overflow: hidden;
+	display: none;
+	opacity: 0;
+	background-color: var(--spectrum-transparent-black-300);
+}
+
+.spectrum-HomeCards {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+	margin: var(--spectrum-spacing-700) 0;
+}
+
+.spectrum-HomeCard {
+	display: flex;
+	align-items: flex-start;
+	margin-block-end: var(--spectrum-spacing-300);
+	padding: 0 var(--spectrum-spacing-200);
+}
+
+.spectrum-HomeCard-image {
+	flex: 0 0 auto;
+	inline-size: var(--spectrum-spacing-1000);
+	margin-inline-end: 20px;
+}
+
+.spectrum-HomeCard-image .spectrum-Icon {
+	--spectrum-icon-size: 200px;
+}
+
+.spectrum-HomeCard-content {
+	flex: 1 1 auto;
+}
+
+.spectrum-CSSComponent {
+	box-sizing: border-box;
+	inline-size: min(1080px, 100%);
+	margin: var(--spectrum-spacing-600) auto;
+	padding: 0 56px;
+}
+
+.spectrum-CSSComponent-heading {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-block-end: var(--spectrum-spacing-600);
+}
+
+.spectrum-CSSComponent-link {
+	display: flex;
+	align-items: center;
+	color: inherit;
+	-webkit-text-decoration: none;
+	text-decoration: none;
+	outline: none;
+}
+
+.spectrum-CSSComponent-link:focus-visible {
+	-webkit-text-decoration: underline;
+	text-decoration: underline;
+}
+
+.spectrum-CSSComponent-statusContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	flex-grow: 1;
+	gap: 80px;
+	align-self: center;
+}
+
+.spectrum-CSSComponent-statusContainer > * {
+	flex-basis: min(370px, 50%);
+}
+
+.spectrum-CSSComponent-detailsTable {
+	--mod-table-cursor-row-default: default;
+	--mod-table-row-background-color-hover: transparent;
+	--mod-table-divider-color: transparent;
+	--mod-table-border-color: transparent;
+	--mod-table-row-line-height: 1.6;
+	border-spacing: 0;
+	margin-block-start: var(--spectrum-spacing-600);
+	margin-block-end: 36px;
+}
+
+.spectrum-CSSComponent-detailsTable th {
+	block-size: var(--spectrum-spacing-300);
+	padding-inline-end: var(--spectrum-spacing-400);
+	font-weight: var(--spectrum-regular-font-weight);
+	text-align: start;
+}
+
+.spectrum-CSSComponent-sectionHeading {
+	margin-block-start: var(--spectrum-spacing-700);
+	margin-block-end: var(--spectrum-spacing-500);
+}
+
+.spectrum-CSSComponent-status,
+.spectrum-CSSExample-status {
+	min-block-size: 0 !important;
+	padding: 0 !important;
+}
+
+.spectrum-CSSComponent-status:before {
+	margin-inline-start: 0 !important;
+}
+
+.spectrum-CSSExample-status {
+	margin-inline-start: var(--spectrum-spacing-200);
+}
+
+.spectrum-CSSComponent-version {
+	flex-grow: 1;
+	text-align: end;
+}
+
+.spectrum-CSSComponent-description {
+	margin-block-start: var(--spectrum-spacing-400);
+	margin-block-end: var(--spectrum-spacing-700);
+}
+
+.spectrum-CSSComponent-resources {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-block-end: var(--spectrum-spacing-500);
+}
+
+.spectrum-CSSComponent-resources .spectrum-Card {
+	margin-block-end: var(--spectrum-spacing-300);
+	margin-inline-end: var(--spectrum-spacing-300);
+}
+
+.spectrum-CSSComponent-resource--adobe,
+.spectrum-CSSComponent-resources a[href*="spectrum.adobe.com"] .spectrum-Card-preview {
+	color: rgb(250, 15, 0);
+	background-color: var(--spectrum-gray-100);
+}
+
+.spectrum-CSSComponent-resource--github,
+.spectrum-CSSComponent-resources a[href*="github.com"] .spectrum-Card-preview {
+	color: var(--spectrum-black);
+	background-color: var(--spectrum-transparent-black-200);
+}
+
+.spectrum-CSSComponent-resource--npm,
+.spectrum-CSSComponent-resources a[href*="npmjs.com"] .spectrum-Card-preview {
+	background-color: rgba(203, 56, 55, 0.1);
+}
+
+.spectrum-CSSComponent-cardImage {
+	-webkit-text-decoration: none;
+	text-decoration: none;
+}
+
+.spectrum-CSSComponent-switcher {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var(--spectrum-spacing-500);
+	justify-content: flex-end;
+}
+
+.spectrum-CSS-switcherContainer {
+	margin-inline-start: var(--spectrum-spacing-300);
+	white-space: nowrap;
+}
+
+.spectrum-CSSExample {
+	margin-block-end: 64px;
+}
+
+.spectrum-CSSExample-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--spectrum-corner-radius-100);
+}
+
+.spectrum-CSSExample-heading {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-block-end: var(--spectrum-spacing-100) !important;
+}
+
+.spectrum-CSSExample-example,
+.spectrum-CSSExample-markup {
+	box-sizing: border-box;
+}
+:root {
+	--spectrum-docs-static-white-background-color: var(--spectrum-seafoam-900);
+	--spectrum-docs-static-black-background-color: var(--spectrum-seafoam-100);
+}
+
+.spectrum-CSSExample-example {
+	flex: 1 0 auto;
+	min-block-size: 0;
+	padding: var(--spectrum-spacing-500) var(--spectrum-spacing-600);
+	border-radius: var(--spectrum-corner-radius-100) var(--spectrum-corner-radius-100) 0 0;
+}
+
+.spectrum-CSSExample-example:has(> .spectrum-CSSExample-example-staticWhite) {
+	background-color: var(--spectrum-docs-static-white-background-color);
+	border-color: var(--spectrum-docs-static-white-background-color);
+}
+
+.spectrum-CSSExample-example:has(> .spectrum-CSSExample-example-staticBlack) {
+	background-color: var(--spectrum-docs-static-black-background-color);
+	border-color: var(--spectrum-docs-static-black-background-color);
+}
+
+.spectrum-CSSExample-markup {
+	position: relative;
+	overflow: hidden;
+	max-inline-size: 100%;
+	max-block-size: 192px;
+	padding: 10px 18px;
+	border-radius: 0 0 var(--spectrum-corner-radius-100) var(--spectrum-corner-radius-100);
+}
+
+.spectrum-CSSExample-markup.is-open {
+	max-block-size: 100%;
+	padding-block-end: var(--spectrum-spacing-700);
+}
+
+.spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle:before {
+	display: none;
+}
+
+.spectrum-CSSExample-markupToggle + pre {
+	padding-block-end: var(--spectrum-spacing-100);
+}
+
+.spectrum-CSSExample-example--spacious {
+	position: relative;
+	block-size: 150px;
+}
+
+.spectrum-CSSExample-example--overlay {
+	position: relative;
+	min-block-size: var(--spectrum-spacing-800);
+}
+
+.spectrum-CSSExample-dialog {
+	position: relative !important;
+	z-index: 1 !important;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	transform: none !important;
+	inline-size: auto !important;
+	block-size: auto !important;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	transition: none;
+}
+
+.spectrum-Examples,
+.spectrum-Examples-itemGroup {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var(--spectrum-spacing-100);
+	justify-content: space-between;
+}
+
+.spectrum-Examples--vertical {
+	flex-direction: column;
+}
+
+.spectrum-Examples-item .spectrum-Examples-itemHeading {
+	margin-block-end: var(--spectrum-spacing-100);
+}
+
+.spectrum-Button.spectrum-CSSExample-overlayShowButton {
+	position: absolute;
+	inset-block-start: 50%;
+	inset-inline-start: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.spectrum-CSSExample-markup pre code {
+	white-space: pre-wrap;
+}
+
+.spectrum-CSSExample-markupToggle {
+	position: absolute;
+	z-index: 0;
+	inset-block-end: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	box-sizing: border-box;
+	padding: var(--spectrum-spacing-400);
+	font-size: var(--spectrum-font-size-50);
+	text-align: start;
+}
+
+.spectrum-CenteredImage {
+	display: block;
+	inline-size: max(720px, 100%);
+	margin: auto;
+}
+
+.spectrum-CodeBlock {
+	margin: var(--spectrum-spacing-200) 0;
+	padding: var(--spectrum-spacing-100) var(--spectrum-spacing-200);
+	border-style: solid;
+	border-width: var(--spectrum-border-width-100);
+	border-radius: var(--spectrum-spacing-50);
+}
+
+.spectrum-CSSExample-example {
+	background-color: var(--spectrum-background-layer-1-color, var(--spectrum-gray-100));
+}
+
+.spectrum-CSSExample-markup {
+	background-color: var(--spectrum-gray-75);
+	border-block-start: 1px solid var(--spectrum-gray-100);
+}
+
+.spectrum-CSSExample-markupToggle {
+	z-index: 1;
+	background-color: var(--spectrum-gray-75);
+}
+
+.spectrum-CSSExample-markup.is-open .spectrum-CSSExample-markupToggle {
+	background-color: initial;
+}
+
+.spectrum-CSSExample-example--overlay {
+	color: var(--spectrum-transparent-black-400);
+	background-color: var(--spectrum-transparent-black-400);
+}
+
+.spectrum-CSSExample-oldAPI {
+	color: var(--spectrum-negative-color-800);
+}
+
+.spectrum-CodeBlock {
+	background-color: var(--spectrum-gray-75);
+	border-color: var(--spectrum-gray-400);
+}
+
+@media screen and (width <= 960px) {
+	.spectrum-Site-content {
+		max-block-size: calc(100% - var(--spectrum-spacing-700));
+	}
+
+	.spectrum-Site-overlay {
+		opacity: 0;
+		transition: opacity var(--spectrum-animation-duration-200) ease-out 0ms;
+	}
+
+	.spectrum-Site-overlay.is-open {
+		pointer-events: auto;
+		display: block;
+		opacity: 1;
+		transition: opacity var(--spectrum-animation-duration-200) ease-in 0ms;
+	}
+
+	.spectrum-Site-sideBar {
+		position: fixed;
+		z-index: 3;
+		inset-block-start: 0;
+		inset-block-end: 0;
+		inset-inline-end: 100%;
+		transform: translateX(0);
+		block-size: 100vh;
+		transition: transform var(--spectrum-animation-duration-200) ease-in-out;
+	}
+
+	.spectrum-Site-sideBar.is-open {
+		transform: translateX(100%);
+	}
+
+	.spectrum-Site-header {
+		display: block;
+	}
+
+	.spectrum-Site-page {
+		padding-inline-start: var(--spectrum-spacing-300);
+		padding-inline-end: var(--spectrum-spacing-300);
+	}
+
+	.spectrum-Site-hero {
+		max-inline-size: 100%;
+	}
+
+	.spectrum-Site-heroHeading h1.spectrum-Heading1--display {
+		font-size: var(--spectrum-font-size-800);
+	}
+
+	.spectrum-Site-mainContainer {
+		padding-inline: var(--spectrum-spacing-400);
+	}
+
+	.spectrum-CSSComponent {
+		margin-block: var(--spectrum-spacing-100);
+		margin-inline: auto;
+		padding-inline: 0 var(--spectrum-spacing-600);
+	}
+
+	.spectrum-CSSComponent-description,
+	.spectrum-CSSExample {
+		margin-block-end: var(--spectrum-spacing-200);
+	}
+
+	.spectrum-CSSExample-example {
+		padding: var(--spectrum-spacing-200);
+	}
+
+	.spectrum-CSSComponent-header {
+		margin-block-end: var(--spectrum-spacing-200);
+	}
+
+	.spectrum-CSSComponent-statusContainer,
+	.spectrum-CSSComponent-version {
+		display: none;
+	}
+
+	.spectrum-CSSComponent-title {
+		font-size: var(--spectrum-font-size-500);
+	}
+}
+
+.is-scrollable,
+.u-scrollable {
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.is-scrollable::-webkit-scrollbar,
+.u-scrollable::-webkit-scrollbar {
+	inline-size: 10px;
+	block-size: 10px;
+}
+
+.is-scrollable::-webkit-scrollbar-thumb,
+.u-scrollable::-webkit-scrollbar-thumb {
+	inline-size: 8px;
+	block-size: 8px;
+	background-color: var(--spectrum-gray-75);
+	background-clip: padding-box;
+	border-block: 2px solid rgba(0, 0, 0, 0);
+	border-radius: 8px;
+}
+
+.is-scrollable::-webkit-scrollbar-track,
+.is-scrollable::-webkit-scrollbar-track-piece,
+.u-scrollable::-webkit-scrollbar-track,
+.u-scrollable::-webkit-scrollbar-track-piece {
+	background-color: var(--spectrum-gray-75);
+}
+
+@media (hover: hover) {
+	.spectrum-CSSComponent-link:hover {
+		-webkit-text-decoration: underline;
+		text-decoration: underline;
+	}
+
+	.is-scrollable:hover::-webkit-scrollbar-thumb,
+	.u-scrollable:hover::-webkit-scrollbar-thumb {
+		background-color: var(--spectrum-gray-400);
+	}
 }

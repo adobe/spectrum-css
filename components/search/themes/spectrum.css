@@ -11,35 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: spectrum) {
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
+@container style(--system: legacy) {
 	.spectrum-Search {
-		--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
-		--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
-
-		--spectrum-search-border-color-default: var(--spectrum-gray-500);
-		--spectrum-search-border-color-hover: var(--spectrum-gray-600);
-		--spectrum-search-border-color-focus: var(--spectrum-gray-800);
-		--spectrum-search-border-color-focus-hover: var(--spectrum-gray-900);
-		--spectrum-search-border-color-key-focus: var(--spectrum-gray-900);
-	}
-
-	.spectrum-Search--sizeS {
-		--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
-		--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-75);
-	}
-
-	.spectrum-Search--sizeM {
-		--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
-		--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-100);
-	}
-
-	.spectrum-Search--sizeL {
-		--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
-		--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-200);
-	}
-
-	.spectrum-Search--sizeXL {
-		--spectrum-search-border-radius: var(--spectrum-corner-radius-100);
-		--spectrum-search-edge-to-visual: var(--spectrum-component-edge-to-visual-300);
+		--spectrum-search-background-color: var(--spectrum-gray-50);
 	}
 }

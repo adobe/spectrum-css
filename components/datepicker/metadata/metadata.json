@@ -133,7 +133,6 @@
     "--spectrum-border-width-100",
     "--spectrum-component-edge-to-text-100",
     "--spectrum-component-height-100",
-    "--spectrum-component-height-75",
     "--spectrum-corner-radius-100",
     "--spectrum-disabled-border-color",
     "--spectrum-disabled-content-color",
@@ -150,7 +149,7 @@
     "--spectrum-text-to-visual-100",
     "--spectrum-workflow-icon-size-100"
   ],
-  "system-theme": ["--system-spectrum-datepicker-initial-height"],
+  "system-theme": [],
   "passthroughs": [
     "--mod-picker-button-border-color",
     "--mod-textfield-icon-spacing-inline-end-invalid",
