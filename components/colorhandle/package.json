@@ -15,7 +15,8 @@
 	},
 	"exports": {
 		".": "./dist/index.css",
-		"./CHANGELOG.md": "./CHANGELOG.md",
+		"./*.md": "./*.md",
+		"./dist/*": "./dist/*",
 		"./index-*.css": "./dist/index-*.css",
 		"./index.css": "./dist/index.css",
 		"./metadata.json": "./metadata/metadata.json",
@@ -23,14 +24,14 @@
 		"./package.json": "./package.json",
 		"./stories/*": "./stories/*"
 	},
+	"main": "dist/index.css",
 	"files": [
 		"dist/*",
-		"CHANGELOG.md",
+		"*.md",
 		"package.json",
 		"stories/*",
 		"metadata/*"
 	],
-	"main": "dist/index.css",
 	"peerDependencies": {
 		"@spectrum-css/colorloupe": ">=5",
 		"@spectrum-css/opacitycheckerboard": ">=2",
