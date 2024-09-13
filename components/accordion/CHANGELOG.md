@@ -1,5 +1,16 @@
 # Change Log
 
+## 5.2.2
+
+### Patch Changes
+
+- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+
+  Sort keys in the package.json assets.
+
+- Updated dependencies [[`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2)]:
+  - @spectrum-css/icon@7.1.4
+
 ## 5.2.1
 
 ### Patch Changes
