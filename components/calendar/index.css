@@ -416,9 +416,6 @@
 	}
 
 	.spectrum-Calendar-date {
-		color: CanvasText;
-		forced-color-adjust: none;
-
 		--highcontrast-calendar-day-background-color-cap-selected: Highlight;
 		--highcontrast-calendar-day-background-color-down: ButtonFace;
 		--highcontrast-calendar-day-background-color-hover: Transparent;
@@ -438,6 +435,8 @@
 		--highcontrast-calendar-day-today-border-color: ButtonText;
 		--highcontrast-calendar-day-today-text-color-disabled: GrayText;
 		--highcontrast-calendar-day-today-text-color: ButtonText;
+
+		forced-color-adjust: none;
 
 		&.is-range-selection {
 			&.is-today {
