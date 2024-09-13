@@ -1,4 +1,4 @@
-import { Container } from "@spectrum-css/preview/decorators";
+import { getRandomId, Container } from "@spectrum-css/preview/decorators";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
@@ -23,6 +23,7 @@ export const Template = ({
 	iconOnly = false,
 	hasRightAlignedTabs = false,
 	useAnchors = false,
+	id = getRandomId("tabs"),
 	customStyles = {},
 	content = [],
 } = {}, context = {}) => {
@@ -71,6 +72,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
+			id=${ifDefined(id)}
 		>
 			${when(!isOverflow, () => repeat(
 				content,
@@ -85,6 +87,7 @@ export const Template = ({
 									"is-disabled": item?.isDisabled ?? false,
 								})}
 								tabindex="0"
+								id=${getRandomId("tab-item")}
 							>
 								${when(item.icon, () =>
 									Icon({

@@ -93,18 +93,15 @@ export default {
 		useAnchors: false,
 		content: [
 			{
-				id: "tab-1",
 				label: "Tab 1",
 				icon: "Folder",
 				isSelected: true,
 			},
 			{
-				id: "tab-2",
 				label: "Tab 2",
 				icon: "Image",
 			},
 			{
-				id: "tab-3",
 				label: "Tab 3",
 				icon: "Document",
 				isDisabled: true,
@@ -215,19 +212,16 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	content: [
 		{
-			id: "tab-1",
 			label: "Selected tab",
 			icon: "Folder",
 			isSelected: true,
 		},
 		{
-			id: "tab-2",
 			label: "Disabled tab",
 			icon: "Image",
 			isDisabled: true,
 		},
 		{
-			id: "tab-3",
 			label: "Tab 3",
 			icon: "Document",
 		},

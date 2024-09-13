@@ -3,17 +3,14 @@ import { Template } from "./template.js";
 
 const ExampleLabelOnlyTabContent = [
 	{
-		id: "tab-1",
 		label: "Selected",
 		isSelected: true,
 	},
 	{
-		id: "tab-2",
 		label: "Disabled",
 		isDisabled: true,
 	},
 	{
-		id: "tab-3",
 		label: "Tab 3",
 	},
 ];
