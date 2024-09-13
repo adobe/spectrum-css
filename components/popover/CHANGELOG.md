@@ -1,5 +1,19 @@
 # Change Log
 
+## 7.1.6
+
+### Patch Changes
+
+- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+
+  Sort keys in the package.json assets.
+
+- Updated dependencies [[`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2)]:
+  - @spectrum-css/alertdialog@2.1.3
+  - @spectrum-css/divider@3.1.3
+  - @spectrum-css/dialog@10.1.4
+  - @spectrum-css/menu@7.1.7
+
 ## 7.1.5
 
 ### Patch Changes

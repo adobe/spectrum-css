@@ -15,6 +15,19 @@ export const ThumbnailGroup = Variants({
 		{
 			testHeading: "With background",
 			backgroundColor: "orange",
+		},
+		{
+			testHeading: "Image fit - cover",
+			imageURL: "example-card-landscape.png",
+			isCover: true,
+		},
+		{
+			testHeading: "Image fit - landscape",
+			imageURL: "example-card-landscape.png",
+		},
+		{
+			testHeading: "Image fit - portrait",
+			imageURL: "example-card-portrait.png",
 		}
 	],
 	stateData: [
@@ -23,7 +36,18 @@ export const ThumbnailGroup = Variants({
 			isDisabled: true,
 		},
 		{
+			testHeading: "Focused",
+			isFocused: true,
+		},
+		{
 			testHeading: "Selected",
+			isSelected: true,
+			// Use the test heading as the key for which stories to apply this state to
+			include: ["Layer"],
+		},
+		{
+			testHeading: "Focused and selected",
+			isFocused: true,
 			isSelected: true,
 			// Use the test heading as the key for which stories to apply this state to
 			include: ["Layer"],

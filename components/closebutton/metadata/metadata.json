@@ -2,6 +2,10 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-CloseButton",
+    ".spectrum-CloseButton--sizeL",
+    ".spectrum-CloseButton--sizeM",
+    ".spectrum-CloseButton--sizeS",
+    ".spectrum-CloseButton--sizeXL",
     ".spectrum-CloseButton--staticBlack",
     ".spectrum-CloseButton--staticBlack.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton--staticBlack.is-keyboardFocused:not(:disabled)",

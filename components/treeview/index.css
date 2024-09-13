@@ -289,6 +289,7 @@
 		border-style: solid;
 		border-color: transparent;
 		border-width: var(--mod-treeview-item-border-size, var(--spectrum-treeview-item-border-size)) 0;
+		border-radius: var(--mod-treeview-item-border-radius, var(--spectrum-treeview-item-border-radius));
 		background-color: transparent;
 		color: transparent;
 	}

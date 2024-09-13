@@ -77,6 +77,37 @@ export const TreeViewGroup = Variants({
 						},
 					],
 				},
+				{
+					id: "group3",
+					label: "Group 3 (Disabled items)",
+					link: "#",
+					icon: "Folder",
+					isDisabled: true,
+					isOpen: true,
+					items: [
+						{
+							id: "label5",
+							label: "Label 5",
+							link: "#",
+							icon: "Folder",
+							isDisabled: true,
+							items: [{
+								id: "label7",
+								label: "Label 7",
+								isDisabled: true,
+								link: "#",
+								icon: "Document",
+							}],
+						},
+						{
+							id: "label6",
+							label: "Label 6",
+							isDisabled: true,
+							link: "#",
+							icon: "Document",
+						}
+					],
+				},
 			],
 		},
 		{
@@ -106,6 +137,16 @@ export const TreeViewGroup = Variants({
 						{
 							id: "label3",
 							label: "Label 3",
+							link: "#",
+							thumbnail: {
+								imageURL: "flowers.png",
+								altText: "Flowers",
+							},
+						},
+						{
+							id: "label4",
+							label: "Label 4 (Disabled item)",
+							isDisabled: true,
 							link: "#",
 							thumbnail: {
 								imageURL: "flowers.png",
@@ -230,6 +271,39 @@ export const TreeViewGroup = Variants({
 					label: "Label 6",
 					link: "#",
 					customClasses: ["spectrum-TreeView-item--indent2"],
+				},
+			],
+		}, {
+			testHeading: "Detached",
+			variant: "detached",
+			items: [
+				{
+					id: "layer1",
+					label: "Layer 1",
+					link: "#",
+				},
+				{
+					id: "layer2",
+					label: "Layer 2",
+					link: "#",
+					isSelected: true,
+				},
+			]
+		}, {
+			testHeading: "Detached Quiet",
+			variant: "detached",
+			isQuiet: true,
+			items: [
+				{
+					id: "layer1",
+					label: "Layer 1",
+					link: "#",
+				},
+				{
+					id: "layer2",
+					label: "Layer 2",
+					link: "#",
+					isSelected: true,
 				},
 			],
 		}, {

@@ -133,6 +133,7 @@ export const States = ({
 	stateData = [],
 	containerStyles = {},
 	wrapperStyles = {},
+	containerHeading = "",
 	...args
 } = {}, context = {}) => {
 	// If the state data is not an array, make it an array for easier processing
@@ -155,13 +156,13 @@ export const States = ({
 			include = [],
 			...item
 		}) => {
-			// If the test heading is not in the include list, skip rendering this state
-			if (include.length && !include.includes(testHeading)) {
+			// If the container test heading is not in the include list, skip rendering this state
+			if (include.length && !include.includes(containerHeading)) {
 				return nothing;
 			}
 
-			// If the test heading is in the ignore list, skip rendering this state
-			if (ignore.length && ignore.includes(testHeading)) {
+			// If the container test heading is in the ignore list, skip rendering this state
+			if (ignore.length && ignore.includes(containerHeading)) {
 				return nothing
 			}
 
@@ -409,6 +410,7 @@ export const Variants = ({
 											stateData,
 											direction: stateDirection,
 											wrapperStyles: combinedStyles,
+											containerHeading: testHeading,
 											...data
 										}, context),
 									() => AltTemplate(data, context)

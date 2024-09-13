@@ -15,7 +15,14 @@ export default {
 	component: "TreeView",
 	argTypes: {
 		items: { table: { disable: true } },
-		variant: { table: { disable: true } },
+		variant: {
+			name: "Variant",
+			type: { name: "string" },
+			category: "Component",
+			defaultValue: { summary: "default" },
+			options: ["default", "detached", "thumbnail"],
+			control: "select",
+		},
 		size: size(["s", "m", "l", "xl"]),
 		isQuiet,
 	},
@@ -23,6 +30,7 @@ export default {
 		rootClass: "spectrum-TreeView",
 		size: "m",
 		isQuiet: false,
+		variant: "default",
 	},
 	parameters: {
 		actions: {
@@ -526,74 +534,6 @@ WithDropTarget.args = {
 };
 WithDropTarget.tags = ["!dev"];
 WithDropTarget.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const FlatMarkup = Template.bind({});
-FlatMarkup.args = {
-	items: [
-		{
-			id: "label1",
-			label: "Label 1. This example has longer text. Per the guidelines, long text will truncate with an ellipsis, and the full text should be available in a tooltip.",
-			link: "#",
-			isSelected: true,
-		},
-		{
-			id: "group1",
-			label: "Group 1",
-			link: "#",
-			isOpen: true,
-			items: [],
-		},
-		{
-			id: "label2",
-			label: "Label 2",
-			link: "#",
-			isDisabled: true,
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "label3",
-			label: "Label 3",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "label4",
-			label: "Label 4",
-			link: "#",
-		},
-		{
-			id: "group2",
-			label: "Group 2",
-			link: "#",
-			isOpen: true,
-			items: [],
-		},
-		{
-			id: "label5",
-			label: "Label 5",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "group3",
-			label: "Group 3",
-			link: "#",
-			isOpen: true,
-			items: [],
-			customClasses: ["spectrum-TreeView-item--indent1"],
-		},
-		{
-			id: "label6",
-			label: "Label 6",
-			link: "#",
-			customClasses: ["spectrum-TreeView-item--indent2"],
-		},
-	],
-};
-FlatMarkup.tags = ["!dev"];
-FlatMarkup.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

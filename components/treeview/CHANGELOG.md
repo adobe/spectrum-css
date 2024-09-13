@@ -1,5 +1,23 @@
 # Change Log
 
+## 10.3.0
+
+### Minor Changes
+
+- [#3089](https://github.com/adobe/spectrum-css/pull/3089) [`0e9c3b2`](https://github.com/adobe/spectrum-css/commit/0e9c3b2147ae4d455010ab031cff9c3af991226f) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - [CSS-871]: Bring back corner rounding on treeview detached variant
+
+## 10.2.3
+
+### Patch Changes
+
+- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+
+  Sort keys in the package.json assets.
+
+- Updated dependencies [[`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2)]:
+  - @spectrum-css/thumbnail@6.1.4
+  - @spectrum-css/icon@7.1.4
+
 ## 10.2.2
 
 ### Patch Changes
