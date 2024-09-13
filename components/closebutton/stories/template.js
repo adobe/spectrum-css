@@ -13,6 +13,9 @@ export const Template = ({
 	label = "Close",
 	staticColor,
 	isDisabled = false,
+	isHovered = false,
+	isFocused = false,
+	isKeyboardFocused = false,
 	customClasses = [],
 	id = getRandomId("closebutton"),
 	onclick,
@@ -22,8 +25,11 @@ export const Template = ({
 			class=${classMap({
 				[rootClass]: true,
 				[`${rootClass}--size${upperCase(size)}`]: typeof size !== "undefined",
-				[`${rootClass}--static${capitalize(staticColor)}`]:
-					typeof staticColor !== "undefined",
+				[`${rootClass}--static${capitalize(staticColor)}`]: typeof staticColor !== "undefined",
+				"is-disabled": isDisabled,
+				"is-hover": isHovered,
+				"is-focus-visible": isFocused,
+				"is-keyboardFocused": isKeyboardFocused,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			aria-label="close"
