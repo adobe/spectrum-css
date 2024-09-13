@@ -34,7 +34,7 @@ export default {
 			table: {
 				type: { summary: "string", required: true },
 				category: "Component",
-				defaultValue: { summary: "Regular", },
+				defaultValue: { summary: "regular", },
 			},
 			options: ["none", "regular", "full"],
 			control: "select",
@@ -48,16 +48,18 @@ export default {
 				type: { summary: "string", required: true },
 				category: "Component",
 			},
-			options: ["default", "noBorder", "lightBorder"],
+			options: ["default", "none", "light"],
 			control: "select",
 		},
 		shape: {
 			name: "Swatch shape",
 			description: "Swatches can have a square or rectangle shape.",
+			defaultValue: "square",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
 				category: "Component",
+				defaultValue: { summary: "square", },
 			},
 			options: ["square", "rectangle"],
 			control: "inline-radio",

@@ -38,8 +38,8 @@ export const Template = ({
 		${items.map((swatch) => Swatch({
 			size,
 			rounding,
-			isDisabled: isDisabled,
-			isSelected: isSelected,
+			isDisabled,
+			isSelected,
 			borderStyle,
 			...swatch,
 		}, context))}

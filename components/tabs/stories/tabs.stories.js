@@ -177,7 +177,7 @@ export const Sizing = (args, context) => Sizes({
 	withBorder: false,
 	...args,
 }, context);
-Sizing.args = {...Default.args};
+Sizing.args = Default.args;
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot: true },

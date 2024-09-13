@@ -28,6 +28,15 @@ export const Template = ({
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
+	switch (borderStyle) {
+		case "none":
+			borderStyle = "noBorder";
+			break;
+		case "light":
+			borderStyle = "lightBorder";
+			break;
+	}
+
 	return html`
 		<div
 			class=${classMap({

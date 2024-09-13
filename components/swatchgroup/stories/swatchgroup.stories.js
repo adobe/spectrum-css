@@ -61,7 +61,7 @@ export default {
 			table: {
 				type: { summary: "string", required: true },
 				category: "Component",
-				defaultValue: { summary: "None", },
+				defaultValue: { summary: "none", },
 			},
 		},
 		borderStyle: {
@@ -71,7 +71,7 @@ export default {
 			table: {
 				type: { summary: "string", required: true },
 				category: "Component",
-				defaultValue: { summary: "No Border" },
+				defaultValue: { summary: "noBorder" },
 			},
 			options: ["noBorder", "lightBorder"],
 		},
@@ -81,6 +81,7 @@ export default {
 		size: "m",
 		density: "regular",
 		rounding: "none",
+		borderStyle: "noBorder",
 		containerWidth: "200px",
 		isDisabled: false,
 		isSelected: false,
