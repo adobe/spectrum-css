@@ -1,5 +1,23 @@
 # Change Log
 
+## 6.2.0
+
+### Minor Changes
+
+- [#3103](https://github.com/adobe/spectrum-css/pull/3103) [`cf61a13`](https://github.com/adobe/spectrum-css/commit/cf61a130162d181f82163ecbba3f9cc197f27773) Thanks [@cdransf](https://github.com/cdransf)! - This corrects the border color for the stepper component infield buttons by setting the border color property to Highlight when the parent stepper component is invalid.
+
+### Patch Changes
+
+- [#3107](https://github.com/adobe/spectrum-css/pull/3107) [`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2) Thanks [@castastrophe](https://github.com/castastrophe)! - Incorporate glob export for the dist directory in all component packages as well as glob markdown exports (to include both CHANGELOG and READMEs).
+
+  Sort keys in the package.json assets.
+
+- Updated dependencies [[`83d5a17`](https://github.com/adobe/spectrum-css/commit/83d5a171bd850df693707611203ecce21f22e7d2)]:
+  - @spectrum-css/infieldbutton@5.1.3
+  - @spectrum-css/actionbutton@6.1.3
+  - @spectrum-css/textfield@7.2.3
+  - @spectrum-css/icon@7.1.4
+
 ## 6.1.4
 
 ### Patch Changes
