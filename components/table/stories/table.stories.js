@@ -93,19 +93,19 @@ export default {
 		hasColumnDividers: false,
 		rowItems: [
 			{
-				cellContent: "Row Item Alpha",
+				cellContent: "Row item alpha",
 			},
 			{
-				cellContent: "Row Item Bravo",
+				cellContent: "Row item bravo",
 			},
 			{
-				cellContent: "Row Item Charlie",
+				cellContent: "Row item charlie",
 			},
 			{
-				cellContent: "Row Item Delta",
+				cellContent: "Row item delta",
 			},
 			{
-				cellContent: "Row Item Echo",
+				cellContent: "Row item echo",
 			},
 		],
 	},
@@ -116,25 +116,25 @@ export default {
 
 const ExampleRowItems = [
 	{
-		cellContent: ["Table Row Alpha", "Alpha", "Table Row Alpha"],
+		cellContent: ["Table row alpha", "Alpha", "Table row alpha"],
 		showCheckbox: true,
 	},
 	{
 		cellContent: [
-			"Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"Table row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			"Bravo",
-			"Table Row Bravo. Lorem ipsum dolor sit amet.",
+			"Table row bravo. Lorem ipsum dolor sit amet.",
 		],
 		showCheckbox: true,
 		isSelected: true,
 	},
 	{
-		cellContent: "Table Row Charlie",
+		cellContent: "Table row charlie",
 		showCheckbox: true,
 		isSelected: true,
 	},
 	{
-		cellContent: "Table Row Delta",
+		cellContent: "Table row delta",
 		showCheckbox: true,
 	},
 	{
@@ -181,7 +181,7 @@ Compact.tags = ["!dev"];
 Compact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Compact.storyName = "Density - Compact";
+Compact.storyName = "Density - compact";
 
 /**
  * The spacious variant increases the spacing used within the table.
@@ -195,7 +195,7 @@ Spacious.tags = ["!dev"];
 Spacious.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-Spacious.storyName = "Density - Spacious";
+Spacious.storyName = "Density - spacious";
 
 /**
  * The standard multi-select table includes a column of checkboxes used for selecting rows.
@@ -271,20 +271,20 @@ export const SummaryAndSelected = Template.bind({});
 SummaryAndSelected.args = {
 	rowItems: [
 		{
-			cellContent: "Table Row Alpha",
+			cellContent: "Table row alpha",
 		},
 		{
-			cellContent: "Table Row Bravo",
+			cellContent: "Table row bravo",
 		},
 		{
-			cellContent: "Table Row Charlie",
+			cellContent: "Table row charlie",
 			isSelected: true,
 		},
 		{
-			cellContent: "Table Row Delta",
+			cellContent: "Table row delta",
 		},
 		{
-			cellContent: "Summary Row",
+			cellContent: "Summary row",
 			isSummaryRow: true,
 		},
 	],
@@ -301,27 +301,27 @@ export const SectionHeader = Template.bind({});
 SectionHeader.args = {
 	rowItems: [
 		{
-			cellContent: "Section Header",
+			cellContent: "Section header",
 			isSectionHeader: true,
 		},
 		{
-			cellContent: "Table Row Alpha",
+			cellContent: "Table row alpha",
 		},
 		{
-			cellContent: "Table Row Bravo",
+			cellContent: "Table row bravo",
 		},
 		{
-			cellContent: "Table Row Charlie",
+			cellContent: "Table row charlie",
 		},
 		{
-			cellContent: "Another Section Header",
+			cellContent: "Another section header",
 			isSectionHeader: true,
 		},
 		{
-			cellContent: "Table Row Delta",
+			cellContent: "Table row delta",
 		},
 		{
-			cellContent: "Table Row Echo",
+			cellContent: "Table row echo",
 		},
 	],
 };
@@ -355,26 +355,26 @@ Scrollable.args = {
 	useScroller: true,
 	rowItems: [
 		{
-			cellContent: "Table Row Alpha",
+			cellContent: "Table row alpha",
 		},
 		{
-			cellContent: "Table Row Bravo",
+			cellContent: "Table row bravo",
 		},
 		{
-			cellContent: "Table Row Charlie",
+			cellContent: "Table row charlie",
 			isSelected: true,
 		},
 		{
-			cellContent: "Table Row Delta",
+			cellContent: "Table row delta",
 		},
 		{
-			cellContent: "Table Row Echo",
+			cellContent: "Table row echo",
 		},
 		{
-			cellContent: "Table Row Foxtrot",
+			cellContent: "Table row foxtrot",
 		},
 		{
-			cellContent: "Summary Row",
+			cellContent: "Summary row",
 			isSummaryRow: true,
 		},
 	],
@@ -406,7 +406,7 @@ export const Collapsible = Template.bind({});
 Collapsible.args = {
 	rowItems: [
 		{
-			cellContent: "Table Row Alpha",
+			cellContent: "Table row alpha",
 			isCollapsible: true,
 			isExpanded: true,
 			tier: 0,
@@ -415,7 +415,7 @@ Collapsible.args = {
 		},
 		{
 			cellContent:
-				"Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"Table row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
 			isCollapsible: true,
 			tier: 1,
 			ariaControls: "table-cr-charlie",
@@ -423,9 +423,9 @@ Collapsible.args = {
 		},
 		{
 			cellContent: [
-				"Table Row Charlie",
-				"Default Not Visible",
-				"Default Not Visible",
+				"Table row charlie",
+				"Default not visible",
+				"Default not visible",
 			],
 			isCollapsible: true,
 			isHidden: true,
@@ -433,7 +433,7 @@ Collapsible.args = {
 			id: "table-cr-charlie",
 		},
 		{
-			cellContent: "Table Row Delta",
+			cellContent: "Table row delta",
 			isSelected: true,
 			isCollapsible: true,
 			isExpanded: true,
@@ -442,21 +442,21 @@ Collapsible.args = {
 			id: "table-cr-delta",
 		},
 		{
-			cellContent: "Table Row Echo",
+			cellContent: "Table row echo",
 			tier: 2,
 			isLastTier: true,
 			isCollapsible: true,
 			id: "table-cr-echo",
 		},
 		{
-			cellContent: "Table Row Foxtrot",
+			cellContent: "Table row foxtrot",
 			tier: 2,
 			isLastTier: true,
 			isCollapsible: true,
 			id: "table-cr-foxtrot",
 		},
 		{
-			cellContent: "Summary Row",
+			cellContent: "Summary row",
 			isSummaryRow: true,
 		},
 	],
@@ -471,7 +471,7 @@ CollapsibleMultiSelect.args = {
 	rowItems: [
 		{
 			showCheckbox: true,
-			cellContent: "Table Row Alpha",
+			cellContent: "Table row alpha",
 			isCollapsible: true,
 			isExpanded: true,
 			tier: 0,
@@ -481,7 +481,7 @@ CollapsibleMultiSelect.args = {
 		{
 			showCheckbox: true,
 			cellContent:
-				"Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"Table row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
 			isCollapsible: true,
 			tier: 1,
 			ariaControls: "table-cr-charlie",
@@ -490,9 +490,9 @@ CollapsibleMultiSelect.args = {
 		{
 			showCheckbox: true,
 			cellContent: [
-				"Table Row Charlie",
-				"Default Not Visible",
-				"Default Not Visible",
+				"Table row charlie",
+				"Default not visible",
+				"Default not visible",
 			],
 			isCollapsible: true,
 			isHidden: true,
@@ -501,7 +501,7 @@ CollapsibleMultiSelect.args = {
 		},
 		{
 			showCheckbox: true,
-			cellContent: "Table Row Delta",
+			cellContent: "Table row delta",
 			isSelected: true,
 			isCollapsible: true,
 			isExpanded: true,
@@ -511,7 +511,7 @@ CollapsibleMultiSelect.args = {
 		},
 		{
 			showCheckbox: true,
-			cellContent: "Table Row Echo",
+			cellContent: "Table row echo",
 			tier: 2,
 			isLastTier: true,
 			isCollapsible: true,
@@ -519,7 +519,7 @@ CollapsibleMultiSelect.args = {
 		},
 		{
 			showCheckbox: true,
-			cellContent: "Table Row Foxtrot",
+			cellContent: "Table row foxtrot",
 			tier: 2,
 			isLastTier: true,
 			isCollapsible: true,
@@ -527,7 +527,7 @@ CollapsibleMultiSelect.args = {
 		},
 		{
 			showCheckbox: true,
-			cellContent: "Summary Row",
+			cellContent: "Summary row",
 			isSummaryRow: true,
 		},
 	],
@@ -544,20 +544,20 @@ Thumbnails.args = {
 	showThumbnails: true,
 	rowItems: [
 		{
-			cellContent: ["Table Row Alpha", "Test", "2"],
+			cellContent: ["Table row alpha", "Test", "2"],
 		},
 		{
-			cellContent: ["Table Row Bravo", "Test", "28"],
+			cellContent: ["Table row bravo", "Test", "28"],
 		},
 		{
 			cellContent: [
-				"Table Row Charlie. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"Table row charlie. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
 				"Test",
 				"23",
 			],
 		},
 		{
-			cellContent: ["Table Row Delta", "Test", "7"],
+			cellContent: ["Table row delta", "Test", "7"],
 		},
 	],
 };
@@ -574,7 +574,7 @@ ThumbnailsCollapsible.args = {
 	showThumbnails: true,
 	rowItems: [
 		{
-			cellContent: "Table Row Alpha",
+			cellContent: "Table row alpha",
 			isCollapsible: true,
 			isExpanded: true,
 			tier: 0,
@@ -583,28 +583,28 @@ ThumbnailsCollapsible.args = {
 		},
 		{
 			cellContent:
-				"Table Row Bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+				"Table row bravo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
 			isCollapsible: true,
 			tier: 1,
 			ariaControls: "table-cr-charlie",
 			id: "table-cr-bravo",
 		},
 		{
-			cellContent: "Table Row Charlie",
+			cellContent: "Table row charlie",
 			tier: 2,
 			isLastTier: true,
 			isCollapsible: true,
 			id: "table-cr-charlie",
 		},
 		{
-			cellContent: "Table Row Delta",
+			cellContent: "Table row delta",
 			tier: 2,
 			isLastTier: true,
 			isCollapsible: true,
 			id: "table-cr-delta",
 		},
 		{
-			cellContent: "Summary Row",
+			cellContent: "Summary row",
 			isSummaryRow: true,
 		},
 	],
@@ -634,24 +634,24 @@ export const RowDropZone = Template.bind({});
 RowDropZone.args = {
 	rowItems: [
 		{
-			cellContent: "Table Row Alpha",
+			cellContent: "Table row alpha",
 			isDropTarget: true,
 		},
 		{
-			cellContent: "Table Row Bravo",
+			cellContent: "Table row bravo",
 		},
 		{
-			cellContent: "Table Row Charlie",
+			cellContent: "Table row charlie",
 			isDropTarget: true,
 		},
 		{
-			cellContent: "Table Row Delta",
+			cellContent: "Table row delta",
 		},
 		{
-			cellContent: "Table Row Echo",
+			cellContent: "Table row echo",
 		},
 		{
-			cellContent: "Table Row Foxtrot",
+			cellContent: "Table row foxtrot",
 			isDropTarget: true,
 		},
 	],
