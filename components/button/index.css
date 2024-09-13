@@ -310,11 +310,20 @@ a.spectrum-Button {
 		--highcontrast-button-content-color-hover: ButtonText;
 		--highcontrast-button-content-color-focus: ButtonText;
 		--highcontrast-button-content-color-down: ButtonText;
+		--highcontrast-button-background-color-default: ButtonFace;
+		--highcontrast-button-background-color-hover: ButtonFace;
+		--highcontrast-button-background-color-down: ButtonFace;
+		--highcontrast-button-background-color-focus: ButtonFace;
+		--highcontrast-button-background-color-disabled: ButtonFace;
 		--highcontrast-button-content-color-disabled: GrayText;
 		--highcontrast-button-border-color-disabled: GrayText;
 		--mod-progress-circle-track-border-color: ButtonText;
 		--mod-progress-circle-track-border-color-over-background: ButtonText;
 		--mod-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+
+		.spectrum-Button-label {
+			forced-color-adjust: none;
+		}
 
 		&:focus-visible {
 			&::after {
@@ -331,17 +340,9 @@ a.spectrum-Button {
 			--highcontrast-button-background-color-hover: Highlight;
 			--highcontrast-button-background-color-down: Highlight;
 			--highcontrast-button-background-color-focus: Highlight;
-			--highcontrast-button-content-color-hover: ButtonFace;
-			--highcontrast-button-content-color-down: ButtonFace;
-			--highcontrast-button-content-color-focus: ButtonFace;
-
-			.spectrum-Button-label {
-				forced-color-adjust: none;
-			}
-		}
-
-		&.spectrum-Button--negative .spectrum-Button-label {
-			forced-color-adjust: none;
+			--highcontrast-button-content-color-hover: HighlightText;
+      --highcontrast-button-content-color-down: HighlightText;
+      --highcontrast-button-content-color-focus: HighlightText;
 		}
 	}
 }
