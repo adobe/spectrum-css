@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.3.0
+
+### Minor Changes
+
+- [#3089](https://github.com/adobe/spectrum-css/pull/3089) [`0e9c3b2`](https://github.com/adobe/spectrum-css/commit/0e9c3b2147ae4d455010ab031cff9c3af991226f) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - [CSS-871]: Bring back corner rounding on treeview detached variant
+
 ## 10.2.3
 
 ### Patch Changes
