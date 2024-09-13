@@ -306,6 +306,10 @@ a.spectrum-Button {
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
 	.spectrum-Button {
+		--highcontrast-button-content-color-default: ButtonText;
+		--highcontrast-button-content-color-hover: ButtonText;
+		--highcontrast-button-content-color-focus: ButtonText;
+		--highcontrast-button-content-color-down: ButtonText;
 		--highcontrast-button-content-color-disabled: GrayText;
 		--highcontrast-button-border-color-disabled: GrayText;
 		--mod-progress-circle-track-border-color: ButtonText;
