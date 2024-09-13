@@ -110,7 +110,8 @@
 			"inputs": [
 				"tools",
 				{ "externalDependencies": ["chromatic", "storybook"] },
-				{ "env": "CHROMATIC_PROJECT_TOKEN" }
+				{ "env": "CHROMATIC_PROJECT_TOKEN" },
+				{ "env": "NODE_ENV" }
 			],
 			"options": {
 				"commands": [
