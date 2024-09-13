@@ -68,14 +68,21 @@ export const ButtonGroups = Variants({
 		},
 		{
 			testHeading: "Disable label wrapping",
-			label: "",
+			customStyles: {
+				"max-inline-size": "120px",
+			},
+			label: "Be a premium member",
 			noWrap: true,
 			withStates: false,
 			Template,
 		},
 		{
-			testHeading: "Disable label wrapping with UI icon",
-			label: "",
+			testHeading: "Disable label wrapping with workflow icon",
+			customStyles: {
+				"max-inline-size": "120px",
+			},
+			iconName: "Star",
+			label: "Be a premium member",
 			withStates: false,
 			noWrap: true,
 			Template,
