@@ -25,6 +25,7 @@ export const TreeViewItem = ({
 	iconSet,
 	thumbnail,
 	items,
+	variant,
 	customClasses = [],
 } = {}, context = {}) => {
 	if (type === "heading") {
@@ -93,14 +94,16 @@ export const TreeViewItem = ({
 						customClasses: [`${rootClass}-itemIcon`],
 					}, context)
 				)}
-				${when(thumbnail, () =>
+				${when(variant === "thumbnail", () =>
 					Thumbnail({
+						imageURL: "example-card-landscape.png",
 						...thumbnail,
 						size: size == "s"  ? "200"
 							: size == "m"  ? "200"
 							: size == "l"  ? "400"
 							: size == "xl" ? "600"
 							: "300",
+						
 						isLayer: true,
 						isSelected,
 						isDisabled,
@@ -117,6 +120,7 @@ export const TreeViewItem = ({
 				Template({
 					items: items,
 					size,
+					variant,
 					rootClass: "spectrum-TreeView",
 					customClasses: ["is-opened"],
 				}, context)
@@ -141,7 +145,7 @@ export const Template = ({
 			[rootClass]: true,
 			[`${rootClass}--size${size?.toUpperCase()}`]:
 				typeof size !== "undefined",
-			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+			[`${rootClass}--${variant}`]: typeof variant !== "undefined" && variant !== "default",
 			[`${rootClass}--quiet`]: isQuiet,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
@@ -155,6 +159,7 @@ export const Template = ({
 			(item) => TreeViewItem({
 				...item,
 				size,
+				variant,
 			}, context),
 		)}
 	</ul>

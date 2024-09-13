@@ -15,7 +15,14 @@ export default {
 	component: "TreeView",
 	argTypes: {
 		items: { table: { disable: true } },
-		variant: { table: { disable: true } },
+		variant: {
+			name: "Variant",
+			type: { name: "string" },
+			category: "Component",
+			defaultValue: { summary: "default" },
+			options: ["default", "detached", "thumbnail"],
+			control: "select",
+		},
 		size: size(["s", "m", "l", "xl"]),
 		isQuiet,
 	},
@@ -23,6 +30,7 @@ export default {
 		rootClass: "spectrum-TreeView",
 		size: "m",
 		isQuiet: false,
+		variant: "default",
 	},
 	parameters: {
 		actions: {

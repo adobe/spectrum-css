@@ -274,6 +274,39 @@ export const TreeViewGroup = Variants({
 				},
 			],
 		}, {
+			testHeading: "Detached",
+			variant: "detached",
+			items: [
+				{
+					id: "layer1",
+					label: "Layer 1",
+					link: "#",
+				},
+				{
+					id: "layer2",
+					label: "Layer 2",
+					link: "#",
+					isSelected: true,
+				},
+			]
+		}, {
+			testHeading: "Detached Quiet",
+			variant: "detached",
+			isQuiet: true,
+			items: [
+				{
+					id: "layer1",
+					label: "Layer 1",
+					link: "#",
+				},
+				{
+					id: "layer2",
+					label: "Layer 2",
+					link: "#",
+					isSelected: true,
+				},
+			],
+		}, {
 			testHeading: "Overflow behavior",
 			items: [
 				{
