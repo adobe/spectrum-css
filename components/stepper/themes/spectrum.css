@@ -15,12 +15,3 @@
 /* @combine .spectrum.spectrum--legacy */
 
 @import "./spectrum-two.css";
-
-@container style(--system: legacy) {
-	.spectrum-Stepper {
-		--spectrum-stepper-buttons-background-color: var(--spectrum-gray-50);
-		--spectrum-stepper-buttons-background-color-disabled: var(--spectrum-gray-200);
-		--spectrum-stepper-button-background-color-focus: var(--spectrum-gray-300);
-		--spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-200);
-	}
-}

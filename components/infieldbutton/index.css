@@ -156,8 +156,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: var(--mod-infield-button-fill-justify-content, var(--spectrum-infield-button-fill-justify-content));
-
-	transition: border-color var(--spectrum-global-animation-duration-100) ease-in-out;
 }
 
 /* Stacked in-field buttons */

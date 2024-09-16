@@ -34,12 +34,9 @@ export default {
 				height: "300px",
 			},
 		},
+		viewport: { defaultViewport: "mobile" },
 		chromatic: {
-			modes: {
-				"Viewport | small": {
-					...mobile,
-				},
-			},
+			modes: mobile,
 		},
 		packageJson: pkgJson,
 	},

@@ -13,21 +13,11 @@
 
 @container style(--system: spectrum) {
 	.spectrum-Stepper {
+		/** Border styles **/
 		--spectrum-stepper-border-width: var(--spectrum-border-width-100);
+		--spectrum-stepper-border-width-disabled: 0;
 
-		--spectrum-stepper-buttons-background-color: var(--spectrum-gray-25);
-		--spectrum-stepper-buttons-background-color-disabled: var(--spectrum-disabled-background-color);
-		--spectrum-stepper-buttons-border-style: none;
-		--spectrum-stepper-buttons-border-width: 0;
-		--spectrum-stepper-buttons-border-color: var(--spectrum-gray-500);
-		--spectrum-stepper-buttons-border-color-hover: var(--spectrum-gray-600);
-		--spectrum-stepper-buttons-border-color-focus: var(--spectrum-gray-800);
-		--spectrum-stepper-buttons-border-color-keyboard-focus: var(--spectrum-gray-900);
-		--spectrum-stepper-buttons-border-color-quiet-disabled: var(--spectrum-disabled-border-color);
-
-		--spectrum-stepper-button-border-radius-reset: 0px;
-		--spectrum-stepper-button-border-width: var(--spectrum-border-width-100);
-
+		--spectrum-stepper-border-radius: var(--spectrum-corner-radius-100);
 		--spectrum-stepper-border-color: var(--spectrum-gray-500);
 		--spectrum-stepper-border-color-hover: var(--spectrum-gray-600);
 		--spectrum-stepper-border-color-focus: var(--spectrum-gray-800);
@@ -39,33 +29,30 @@
 		--spectrum-stepper-border-color-focus-invalid: var(--spectrum-negative-border-color-focus);
 		--spectrum-stepper-border-color-focus-hover-invalid: var(--spectrum-negative-border-color-focus-hover);
 		--spectrum-stepper-border-color-keyboard-focus-invalid: var(--spectrum-negative-border-color-key-focus);
-		--spectrum-stepper-border-color-quiet: transparent;
 
 		--spectrum-stepper-min-width-multiplier: var(--spectrum-text-field-minimum-width-multiplier);
 
-		--spectrum-stepper-button-background-color-focus: var(--spectrum-gray-200);
-		--spectrum-stepper-button-background-color-keyboard-focus: var(--spectrum-gray-100);
-
-		/* Set defaults to medium size */
-		--spectrum-stepper-height: var(--spectrum-component-height-100);
-		--spectrum-stepper-border-radius: var(--spectrum-corner-radius-100);
-
-		--spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-medium);
-		--spectrum-stepper-button-padding: var(--spectrum-in-field-button-edge-to-fill);
-
-		/*** Focus Indicator ***/
+		/** Focus indicator **/
 		--spectrum-stepper-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
 		--spectrum-stepper-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 		--spectrum-stepper-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
-		/*** :AFTER - this is for the :after element labeled below as hit area, but used as focus indicator in ActionButton ***/
-		--spectrum-stepper-button-offset: calc(var(--spectrum-stepper-button-width) / 2);
-
 		--spectrum-stepper-animation-duration: var(--spectrum-animation-duration-100);
+
+		/** Quiet variant **/
+		--spectrum-stepper-border-radius-quiet: 0;
+		--spectrum-stepper-background-color-quiet: transparent;
+		--spectrum-stepper-border-color-quiet-disabled: var(--spectrum-disabled-border-color);
 
 		&.spectrum-Stepper--sizeS {
 			--spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-small);
 			--spectrum-stepper-height: var(--spectrum-component-height-75);
+		}
+
+		&,
+		&.spectrum-Stepper--sizeM {
+			--spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-medium);
+			--spectrum-stepper-height: var(--spectrum-component-height-100);
 		}
 
 		&.spectrum-Stepper--sizeL {

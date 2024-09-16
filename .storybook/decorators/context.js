@@ -17,14 +17,16 @@ export const withContextWrapper = makeDecorator({
 				rootClass,
 				staticColor,
 			} = {},
-			globals: {
-				color = "light",
-				context = "spectrum",
-				scale = "medium",
-			} = {},
+			globals = {},
 			id,
 			viewMode,
 		} = data;
+
+		let {
+			color = "light",
+			context = "spectrum",
+			scale = "medium",
+		} = globals;
 
 		const staticColorSettings = {
 			"black": {
@@ -36,6 +38,31 @@ export const withContextWrapper = makeDecorator({
 				color: "dark"
 			},
 		};
+
+		const updateScale = (scale) => {
+			const isRaw = Boolean(context === "raw");
+
+			for (const container of fetchContainers(id, viewMode === "docs")) {
+				container.classList.toggle("spectrum--medium", scale === "medium" && !isRaw);
+				container.classList.toggle("spectrum--large", scale === "large" && !isRaw);
+			}
+		};
+
+		const resizeObserver = new ResizeObserver((entries) => {
+			for (const entry of entries) {
+				const { contentRect } = entry;
+				const { width } = contentRect;
+
+				if (width >= 480 && scale !== "medium") {
+					scale = "medium";
+					updateScale("medium");
+				}
+				else if (width < 480 && scale !== "large") {
+					scale = "large";
+					updateScale("large");
+				}
+			}
+		});
 
 		useEffect(() => {
 			const isRaw = Boolean(context === "raw");
@@ -97,7 +124,12 @@ export const withContextWrapper = makeDecorator({
 					container.style.background = staticColorSettings[staticKey].background;
 				}
 			}
+
 		}, [color, context, staticColor, scale, viewMode, rootClass, tokens, legacyTokens, staticColorSettings]);
+
+
+		// We only need to observe the body element for a viewport change
+		resizeObserver.observe(document.body);
 
 		return StoryFn(data);
 	},

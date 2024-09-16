@@ -60,11 +60,10 @@ const parameters = {
 			includeNames: true,
 		},
 	},
-    viewport: {
-      viewports: {
-        small: { name: "Mobile", styles: { width: "480px" } },
-        large: { name: "Desktop", styles: { width: "1200px" } },
-      },
+	viewport: {
+		viewports: {
+			mobile: { name: "Mobile (large scale)", styles: { width: "480px", height: "896px" } },
+		},
 	},
 	chromatic: {
 		forcedColors: "none",
