@@ -32,6 +32,7 @@
 }
 
 .spectrum-Combobox {
+	--spectrum-combobox-button-inline-offset: 0px;
 	--spectrum-combobox-min-inline-size: calc(var(--spectrum-combobox-minimum-width-multiplier) * var(--spectrum-combobox-block-size));
 	--spectrum-combobox-button-width: var(--spectrum-combobox-block-size);
 
@@ -110,7 +111,7 @@
 /* PICKER BUTTON */
 .spectrum-Combobox-button {
 	position: absolute;
-	inset-inline-end: calc(-1 * var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset, 0px)));
+	inset-inline-end: calc(-1 * var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset)));
 
 	/* Default */
 	&:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet) {
@@ -224,7 +225,7 @@
 	.spectrum-Combobox-textfield.is-invalid &,
 	.spectrum-Combobox-textfield.is-loading & {
 		padding-inline-end: calc(
-			var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button)) + var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size)) + var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) - var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset, 0px)) -
+			var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button)) + var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size)) + var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) - var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset)) -
 				(var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)) * 2)
 		);
 	}
@@ -249,20 +250,19 @@
 }
 
 /* QUIET VARIATION (no visible background) */
-.spectrum-Combobox--quiet {
+.spectrum-Combobox.spectrum-Combobox--quiet {
+	--spectrum-combobox-min-inline-size: calc(var(--spectrum-combobox-minimum-width-multiplier) * var(--mod-combobox-block-size, var(--spectrum-combobox-block-size)));
 	--spectrum-combobox-button-inline-offset: calc((var(--mod-combobox-block-size, var(--spectrum-combobox-block-size)) / 2) - (var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size)) / 2));
+	--spectrum-combobox-border-radius: 0;
 
 	/* Settings for nested Picker Button component. */
 	--mod-picker-button-background-color-quiet: transparent;
 	--mod-picker-button-border-color-quiet: transparent;
 	--mod-picker-button-border-color: var(--mod-picker-button-border-color-quiet);
 
-	border-radius: 0;
 
-	.spectrum-Combobox-textfield {
-		&.is-invalid .spectrum-Textfield-validationIcon {
-			inset-inline-end: var(--mod-combobox-button-width, var(--spectrum-combobox-button-width));
-		}
+	.spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon {
+		inset-inline-end: var(--mod-combobox-button-width, var(--spectrum-combobox-button-width));
 	}
 
 	.spectrum-Combobox-input {
@@ -272,11 +272,11 @@
 		padding-block-end: calc(var(--mod-combobox-spacing-block-end-edge-to-text, var(--spectrum-combobox-spacing-block-end-edge-to-text)) - var(--mod-combobox-border-width, var(--spectrum-combobox-border-width)));
 
 		padding-inline-start: var(--mod-combobox-spacing-inline-start-edge-to-text, var(--spectrum-combobox-spacing-inline-start-edge-to-text));
-		padding-inline-end: calc(var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) - var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset, 0px)));
+		padding-inline-end: calc(var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) - var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset)));
 	}
 
 	.spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input,
 	.spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input {
-		padding-inline-end: calc(var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button)) + var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size)) + var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) - var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset, 0px)));
+		padding-inline-end: calc(var(--mod-combobox-button-width, var(--spectrum-combobox-button-width)) + var(--mod-combobox-spacing-inline-icon-to-button, var(--spectrum-combobox-spacing-inline-icon-to-button)) + var(--mod-combobox-icon-size, var(--spectrum-combobox-icon-size)) + var(--mod-combobox-spacing-inline-end-edge-to-text, var(--spectrum-combobox-spacing-inline-end-edge-to-text)) - var(--mod-combobox-button-inline-offset, var(--spectrum-combobox-button-inline-offset)));
 	}
 }

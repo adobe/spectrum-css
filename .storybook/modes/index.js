@@ -53,6 +53,6 @@ export const mobile = {
         color: "light",
         textDirection: "ltr",
         context: "legacy",
-        viewport: "small",
+        viewport: { width: 480 },
     },
 };

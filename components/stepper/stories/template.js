@@ -16,7 +16,7 @@ export const Template = ({
 	rootClass = "spectrum-Stepper",
 	size = "m",
 	isQuiet = false,
-	isFocused = false,
+	isHovered = false,
 	isKeyboardFocused = false,
 	isInvalid = false,
 	isDisabled = false,
@@ -46,11 +46,11 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
-				"is-focused": isFocused,
+				"is-hover": isHovered,
 				"is-keyboardFocused": isKeyboardFocused,
 				"is-invalid": isInvalid,
 				"is-disabled": isDisabled,
-				"hide-stepper": hideStepper,
+				[`${rootClass}--noButtons`]: hideStepper,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}

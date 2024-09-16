@@ -100,28 +100,28 @@
 			--spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-300);
 			--spectrum-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-300);
 		}
-	}
 
-	.spectrum-Combobox--quiet {
-		--spectrum-combobox-min-inline-size: calc(var(--spectrum-combo-box-quiet-minimum-width-multiplier) * var(--spectrum-combobox-block-size));
-		--spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-quiet);
-		--spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-field-edge-to-text-quiet);
+		&.spectrum-Combobox--quiet {
+			--spectrum-combobox-minimum-width-multiplier: var(--spectrum-combo-box-quiet-minimum-width-multiplier);
+			--spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-quiet);
+			--spectrum-combobox-spacing-inline-start-edge-to-text: var(--spectrum-field-edge-to-text-quiet);
 
-		&.spectrum-Combobox--sizeS {
-			--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-small);
-		}
+			&.spectrum-Combobox--sizeS {
+				--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-small);
+			}
 
-		&,
-		&.spectrum-Combobox--sizeM {
-			--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-medium);
-		}
+			&,
+			&.spectrum-Combobox--sizeM {
+				--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-medium);
+			}
 
-		&.spectrum-Combobox--sizeL {
-			--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-large);
-		}
+			&.spectrum-Combobox--sizeL {
+				--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-large);
+			}
 
-		&.spectrum-Combobox--sizeXL {
-			--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-extra-large);
+			&.spectrum-Combobox--sizeXL {
+				--spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component-quiet-extra-large);
+			}
 		}
 	}
 }
