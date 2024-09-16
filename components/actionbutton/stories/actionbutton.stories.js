@@ -67,8 +67,9 @@ export default {
 		isHovered: false,
 		isSelected: false,
 		isDisabled: false,
-		iconName: "More",
-		label: "",
+		iconName: "Edit",
+		label: "Edit",
+		hideLabel: false,
 	},
 	parameters: {
 		actions: {
@@ -84,16 +85,11 @@ export default {
 };
 
 export const Default = ActionButtonGroup.bind({});
-Default.args = {
-	label: "Edit",
-	iconName: "Edit",
-};
+Default.args = {};
 
 export const Emphasized = ActionButtons.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
-	label: "Edit",
-	iconName: "Edit",
 	isEmphasized: true,
 	isSelected: true
 };
@@ -106,8 +102,6 @@ Emphasized.parameters = {
 export const Disabled = TreatmentTemplate.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
-	label: "Edit",
-	iconName: "Edit",
 	isDisabled: true,
 };
 
@@ -118,8 +112,6 @@ Disabled.parameters = {
 export const Selected = ActionButtons.bind({});
 Selected.tags = ["!dev"];
 Selected.args = {
-	label: "Edit",
-	iconName: "Edit",
 	isEmphasized: false,
 	isSelected: true
 };
@@ -132,8 +124,6 @@ Selected.parameters = {
 export const Quiet = ActionButtons.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
-	label: "Edit",
-	iconName: "Edit",
 	isQuiet: true,
 };
 Quiet.parameters = {
@@ -142,27 +132,26 @@ Quiet.parameters = {
 	},
 };
 
-export const StaticWhiteDefault = TreatmentTemplate.bind({});
-StaticWhiteDefault.tags = ["!dev"];
-StaticWhiteDefault.args = {
-	label: "Edit",
-	iconName: "Edit",
+export const StaticWhiteDocs = TreatmentTemplate.bind({});
+StaticWhiteDocs.tags = ["!dev"];
+StaticWhiteDocs.args = {
 	staticColor: "white",
 };
 
-StaticWhiteDefault.parameters = {
+StaticWhiteDocs.storyName = "Static white";
+
+StaticWhiteDocs.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const StaticBlackDefault = TreatmentTemplate.bind({});
-StaticBlackDefault.tags = ["!dev"];
-StaticBlackDefault.args = {
-	label: "Edit",
-	iconName: "Edit",
+export const StaticBlackDocs = TreatmentTemplate.bind({});
+StaticBlackDocs.tags = ["!dev"];
+StaticBlackDocs.args = {
 	staticColor: "black",
 };
+StaticBlackDocs.storyName = "Static black";
 
-StaticBlackDefault.parameters = {
+StaticBlackDocs.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
@@ -172,14 +161,12 @@ export const Sizing = (args, context) => Sizes({
 	withBorder: false,
 	...args,	
 }, context);
-Sizing.args = {
-	label: "Edit",
-	iconName: "Edit",
-};
+Sizing.args = {};
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
 	chromatic: { disableSnapshot:  true },
 };
+
 
 // ********* VRT ONLY ********* //
 export const StaticBlack = ActionButtonGroup.bind({});

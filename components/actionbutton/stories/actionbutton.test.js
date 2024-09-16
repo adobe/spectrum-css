@@ -7,7 +7,6 @@ export const ActionButtons = (args, context) => {
 		${Template(args, context)}
 		${Template({
 			...args,
-			iconName: undefined,
 		}, context)}
 		${Template({
 			...args,
@@ -15,9 +14,8 @@ export const ActionButtons = (args, context) => {
 		}, context)}
 		${Template({
 			...args,
-			hasPopup: "menu",
-			label: "Has pop-up",
-			iconName: undefined,
+			hasPopup: "true",
+			hideLabel: true,
 		}, context)}
 	`;
 };

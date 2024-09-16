@@ -130,9 +130,8 @@ export const Template = ({
 };
 
 export const ActionButtonsWithIconOptions = ({
-	iconName,
 	...args
-}) => Container({
+}, context ) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
@@ -141,28 +140,34 @@ export const ActionButtonsWithIconOptions = ({
 	content: html`
     ${Template({
       ...args,
-      iconName: undefined,
-    })}
+    }, context )}
     ${Template({
       ...args,
-      iconName: iconName ?? "Edit",
-    })}
+    }, context )}
     ${Template({
       ...args,
       hideLabel: true,
-      iconName: iconName ?? "Edit",
-    })}
+    }, context )}
+	${Template({
+      ...args,
+      hideLabel: true,
+      hasPopup: "true",
+    }, context )}
   `,
-});
+}, context );
 
-export const TreatmentTemplate = (args) => Container({
+export const TreatmentTemplate = (args, context) => Container({
 	withBorder: false,
 	direction: "column",
 	wrapperStyles: {
 		rowGap: "12px",
 	},
-	content: html`${[true, false].map((treatment) => ActionButtonsWithIconOptions({ 
-		...args, 
-		treatment,
-		isSelected: treatment }))}`,
+	content: html`${[true, false].map((treatment) => Container({ 
+		withBorder: false,
+		heading: treatment ? "Selected" : "Not selected",
+		content: ActionButtonsWithIconOptions({
+			...args,
+			isSelected: treatment
+		})
+	}, context ))}`,
 });
