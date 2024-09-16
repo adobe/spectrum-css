@@ -156,18 +156,47 @@ export const ActionButtonsWithIconOptions = ({
   `,
 }, context );
 
+export const IconOnlyOption = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+	${Template({
+      ...args,
+      hideLabel: true,
+      hasPopup: "true",
+    }, context )}
+	${Template({
+      ...args,
+      hideLabel: true,
+			isQuiet: true,
+      hasPopup: "true",
+    }, context )}
+	`
+});
+
 export const TreatmentTemplate = (args, context) => Container({
 	withBorder: false,
-	direction: "column",
+	direction: "row",
 	wrapperStyles: {
 		rowGap: "12px",
 	},
-	content: html`${[true, false].map((treatment) => Container({ 
+	content: html`${[
+		{ isSelected: false, isDisabled: false, heading: "Default"}, 
+		{ isSelected: true, isDisabled: false, heading: "Selected" },
+		{ isSelected: false, isDisabled: true, heading: "Disabled" },
+		{ isSelected: true, isDisabled: true, heading: "Selected + disabled" }
+	].map(({isSelected, isDisabled, heading }) => Container({ 
 		withBorder: false,
-		heading: treatment ? "Selected" : "Not selected",
+		heading: heading,
 		content: ActionButtonsWithIconOptions({
 			...args,
-			isSelected: treatment
+			isSelected,
+			isDisabled,
 		})
 	}, context ))}`,
 });

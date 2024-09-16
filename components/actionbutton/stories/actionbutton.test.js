@@ -74,5 +74,9 @@ export const ActionButtonGroup = Variants({
 		testHeading: "Disabled + selected",
 		isDisabled: true,
 		isSelected: true,
+	}, {
+		testHeading: "Quiet + emphasized",
+		isEmphasized: true,
+		isQuiet: true,
 	}],
 });
