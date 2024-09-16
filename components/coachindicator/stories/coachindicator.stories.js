@@ -41,6 +41,12 @@ Default.parameters = {
 	chromatic: {
 		prefersReducedMotion: "reduce",
 		pauseAnimationAtEnd: true,
+		modes: {
+			// Skips the dark mode/RTL b/c no changes are made to the component
+			"Dark | RTL": {
+				disable: true,
+			},
+		},
 	},
 };
 Default.tags = ["!autodocs"];

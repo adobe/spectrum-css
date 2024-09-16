@@ -43,7 +43,6 @@ export const disableDefaultModes = {
 
 export const mobile = {
     "Mobile": {
-        scale: "large",
-        context: "legacy",
+        viewport: "mobile",
     },
 };

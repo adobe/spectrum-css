@@ -60,11 +60,6 @@ const parameters = {
 			includeNames: true,
 		},
 	},
-	viewport: {
-		viewports: {
-			mobile: { name: "Mobile (large scale)", styles: { width: "480px", height: "896px" } },
-		},
-	},
 	chromatic: {
 		forcedColors: "none",
 		prefersReducedMotion: "no-preference",
@@ -125,6 +120,17 @@ export default {
 	args: {
 		customClasses: [],
 		customStyles: {},
+	},
+	viewport: {
+		viewports: {
+			mobile: {
+				name: "Mobile (large scale)",
+				styles: {
+					width: "480px",
+					height: "896px",
+				},
+			},
+		},
 	},
 	decorators: [
 		withLanguageWrapper,
