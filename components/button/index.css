@@ -311,9 +311,9 @@ a.spectrum-Button {
 		--highcontrast-button-content-color-focus: ButtonText;
 		--highcontrast-button-content-color-down: ButtonText;
 		--highcontrast-button-border-color-default: ButtonBorder;
-    --highcontrast-button-border-color-hover: ButtonBorder;
-    --highcontrast-button-border-color-focus: ButtonBorder;
-    --highcontrast-button-border-color-down: ButtonBorder;
+		--highcontrast-button-border-color-hover: ButtonBorder;
+		--highcontrast-button-border-color-focus: ButtonBorder;
+		--highcontrast-button-border-color-down: ButtonBorder;
 		--highcontrast-button-background-color-default: ButtonFace;
 		--highcontrast-button-background-color-hover: ButtonFace;
 		--highcontrast-button-background-color-down: ButtonFace;
@@ -341,8 +341,10 @@ a.spectrum-Button {
 		&.spectrum-Button--accent.spectrum-Button--fill {
 			--highcontrast-button-background-color-default: ButtonText;
 			--highcontrast-button-content-color-default: ButtonFace;
+			--highcontrast-button-content-color-hover: HighlightText;
+      --highcontrast-button-content-color-down: HighlightText;
+      --highcontrast-button-content-color-focus: HighlightText;
 			--highcontrast-button-background-color-disabled: ButtonFace;
-
 			--highcontrast-button-background-color-hover: Highlight;
 			--highcontrast-button-background-color-down: Highlight;
 			--highcontrast-button-background-color-focus: Highlight;
