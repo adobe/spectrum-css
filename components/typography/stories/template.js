@@ -82,25 +82,29 @@ export const Template = (args = {}, context = {}) => {
 				>`;
 			}
 		}
-
-		if (semantics === "heading")
-			return html`
-				<h2 class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</h2>
-			`;
-
-		if (semantics === "body")
-			return html`
-				<p class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</p>
-			`;
-
-		if (semantics === "code")
-			return html`
-				<code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</code>${when(!skipLineBreak, () => html`<br/>`)}
-			`;
-
-		return html`
-			<span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</span>${when(!skipLineBreak, () => html`<br/>`)}
-		`;
+    
+		switch(semantics) {
+			case "heading":
+				return html`
+          <h2 class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</h2>
+        `;
+			case "body":
+				return html`
+          <p class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</p>
+        `;
+			case "code":
+				return html`
+          <code class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</code>${when(!skipLineBreak, () => html`<br/>`)}
+        `;
+			case "detail":
+				return html`
+          <span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}><br />${c}</span>${when(!skipLineBreak, () => html`<br/>`)}
+        `;
+			default:
+				return html`
+          <span class=${classMap(classes)} style=${styleMap(customStyles)} id=${ifDefined(id)}>${c}</span>${when(!skipLineBreak, () => html`<br/>`)}
+        `;
+		}
 	});
 
 	/** Wrap items with the spectrum-Typography wrapper if there are more than 1 items (this ensures correct margins) */
