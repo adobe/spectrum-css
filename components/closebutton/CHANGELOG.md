@@ -1,5 +1,13 @@
 # Change Log
 
+## 5.2.0
+
+### Minor Changes
+
+- [#3108](https://github.com/adobe/spectrum-css/pull/3108) [`7fedb1f`](https://github.com/adobe/spectrum-css/commit/7fedb1f23bcce5ff1a089b8cfc2649eb273c6d80) Thanks [@castastrophe](https://github.com/castastrophe)! - Currently the t-shirt sizing for Close button is using "spectrum-Closebutton" as a prefix which does not align with the use of "spectrum-CloseButton" (capital B) for the root class. This PR adds sizing classes that use the capital B and labels the lowercase B class as deprecated.
+
+  Expands Close button test coverage to include the hover and focus states.
+
 ## 5.1.3
 
 ### Patch Changes
