@@ -92,7 +92,7 @@ Default.args = {
 		},
 		{
 			semantics: "detail",
-			content: [" ", "Aliquet mauris eu"],
+			content: ["", "Aliquet mauris eu"],
 		},
 		{
 			content: [
