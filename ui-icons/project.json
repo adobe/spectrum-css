@@ -18,7 +18,7 @@
 				}
 			],
 			"options": {
-				"commands": ["node --no-warnings ./index.js"],
+				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node ./index.js"],
 				"cwd": "{projectRoot}"
 			},
 			"outputs": [
