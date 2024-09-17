@@ -19,7 +19,7 @@ export default {
 		},
 	],
 	rootDir: "../",
-	staticDirs: ["../assets"],
+	staticDirs: ["./assets/images"],
 	addons: [
 		{
 			name: "@storybook/addon-essentials",
@@ -67,7 +67,7 @@ export default {
 		const { mergeConfig } = await import("vite");
 
 		return mergeConfig(config, {
-			publicDir: "../assets",
+			publicDir: "./assets/images",
 			build: {
 				sourcemap: configType === "DEVELOPMENT",
 				manifest: true,
