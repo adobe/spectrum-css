@@ -12,10 +12,6 @@ on:
             alias:
                 required: false
                 type: string
-            storybook-url:
-                required: false
-                type: string
-                default: ''
     workflow_call:
         inputs:
             deploy-message:
@@ -24,10 +20,6 @@ on:
             alias:
                 required: false
                 type: string
-            storybook-url:
-                required: false
-                type: string
-                default: ''
 
 permissions:
     contents: read
@@ -75,9 +67,9 @@ jobs:
               run: yarn install --immutable
 
             ## --- BUILD --- ##
-            - name: Build site
+            - name: Build storybook
               shell: bash
-              run: yarn build:site
+              run: yarn build:docs
 
             ## --- DEPLOY WEBSITE TO NETLIFY --- ##
             - name: Deploy
