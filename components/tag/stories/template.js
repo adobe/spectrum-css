@@ -1,7 +1,7 @@
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -74,3 +74,111 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const TagsDefaultOptions = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+		${Template({
+      ...args,
+    }, context )}
+    ${!args.isInvalid ? 
+			Template({
+				...args,
+				hasIcon: true,
+				iconName: "CheckmarkCircle"
+			}, context )
+			: ""}
+    ${Template({
+      ...args,
+			hasClearButton: true
+    }, context )}
+		${!args.isInvalid ?
+			Template({
+      ...args,
+				hasAvatar: true,
+				avatarUrl: "example-ava.png",
+				hasClearButton: true
+			}, context )
+			: ""}
+	`,
+});
+
+export const StandardTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`${[
+		{ isSelected: false, isDisabled: false, heading: "Default" },
+		{ isSelected: true, isDisabled: false, heading: "Selected" },
+		{ isSelected: false, isDisabled: false, isInvalid: true, heading: "Invalid" },
+		{ isSelected: false, isDisabled: true, heading: "Disabled" },
+		{ isSelected: true, isDisabled: false, isInvalid: true, heading: "Selected + Invalid" },
+		{ isSelected: false, isDisabled: false, isEmphasized: true, heading: "Emphasized" }
+	].map(({isSelected, isDisabled, heading, isEmphasized, isInvalid}) => Container({
+		withBorder: false,
+		heading: heading,
+		content: TagsDefaultOptions({
+			...args,
+			isSelected,
+			isDisabled,
+			isEmphasized,
+			isInvalid
+		})
+	}, context ))}`
+});
+
+export const RemovableTagsOptions = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+    ${!args.isInvalid ? 
+			Template({
+				...args,
+				hasClearButton: true
+			}, context )
+			: ""}
+		${Template({
+      ...args,
+				hasIcon: true,
+				iconName: "CheckmarkCircle",
+				hasClearButton: true
+			}, context )}
+	`,
+});
+
+export const RemovableTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`${[
+		{ isSelected: false, isDisabled: false, heading: "Default" },
+		{ isSelected: true, isDisabled: false, heading: "Selected" },
+		{ isSelected: false, isDisabled: false, isInvalid: true, heading: "Invalid" },
+		{ isSelected: false, isDisabled: true, heading: "Disabled" },
+		{ isSelected: true, isDisabled: false, isInvalid: true, heading: "Selected + Invalid" },
+	].map(({isSelected, isDisabled, heading, isInvalid}) => Container({
+		withBorder: false,
+		heading: heading,
+		content: RemovableTagsOptions({
+			...args,
+			isSelected,
+			isDisabled,
+			isInvalid
+		})
+	}, context ))}`
+});

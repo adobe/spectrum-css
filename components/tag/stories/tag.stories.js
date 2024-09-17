@@ -1,9 +1,10 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isEmphasized, isInvalid, isSelected, size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { TagGroups } from "./tag.test.js";
-import { Template } from "./template.js";
+import { RemovableTemplate, StandardTemplate, TagsDefaultOptions } from "./template.js";
 
 /**
  * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.
@@ -98,6 +99,18 @@ export default {
 
 export const Default = TagGroups.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
+
+
+export const Standard = StandardTemplate.bind({});
+Standard.args = Default.args;
+Standard.tags = ["!dev"];
+Standard.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+Standard.storyName = "Default";
+
 
 // ********* VRT ONLY ********* //
 // @todo combine variants into one snapshot
@@ -111,33 +124,23 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Icon = Template.bind({});
-Icon.tags = ["!dev"];
-Icon.args = {
-	hasIcon: true,
-	iconName: "Info",
-	label: "Tag label that truncates when it gets too long",
-	customStyles: {"max-inline-size": "200px"}
-};
-Icon.parameters = {
-	chromatic: { disableSnapshot: true },
-};
 
-export const Avatar = Template.bind({});
-Avatar.tags = ["!dev"];
-Avatar.args = {
-	hasAvatar: true,
-	avatarUrl: "example-ava.png"
-};
-Avatar.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const Removable = Template.bind({});
+export const Removable = RemovableTemplate.bind({});
 Removable.tags = ["!dev"];
 Removable.args = {
 	hasClearButton: true,
 };
 Removable.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Sizing = (args, context) => Sizes({
+	Template: TagsDefaultOptions,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
