@@ -16,7 +16,7 @@
 - 🧪 **Rigorously tested**: These individually-versioned components have been vetted to be accessible and inclusive of global audiences.
 - 📱 **Multi-platform support**: We support [evergreen browsers](https://github.com/adobe/spectrum-css?tab=readme-ov-file#browser-support) for scalability and flexibility.
 
-&nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://img.shields.io/badge/Get%20started-F0F0F0?style=for-the-badge&logo=adobe&logoColor=%23FF0000"/>](https://opensource.adobe.com/spectrum-css/get-started.html) &nbsp; [<img src="https://img.shields.io/badge/Storybook-F0F0F0?style=for-the-badge&logo=storybook&logoColor=%23FF4785"/>](https://opensource.adobe.com/spectrum-css/preview/)
+&nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://img.shields.io/badge/Get%20started-F0F0F0?style=for-the-badge&logo=adobe&logoColor=%23FF0000"/>](https://opensource.adobe.com/spectrum-css/get-started.html) &nbsp; [<img src="https://img.shields.io/badge/Storybook-F0F0F0?style=for-the-badge&logo=storybook&logoColor=%23FF4785"/>](https://opensource.adobe.com/spectrum-css/)
 
 ## Using Spectrum CSS
 
@@ -26,7 +26,7 @@ Want to get a component up and running as soon as possible? Check out the [quick
 
 ### Functionality
 
-Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. We do include some lightweight JS-based interaction for demonstration purposes only in our [Storybook](https://opensource.adobe.com/spectrum-css/preview/). Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, text fields, etc.
+Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. We do include some lightweight JS-based interaction for demonstration purposes only in our [Storybook](https://opensource.adobe.com/spectrum-css/). Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, text fields, etc.
 
 Adobe maintains separate libraries written with [web components](https://opensource.adobe.com/spectrum-web-components/) and [React](https://react-spectrum.adobe.com/react-spectrum/index.html) that work in partnership with Spectrum CSS to create fully interactive Spectrum components.
 

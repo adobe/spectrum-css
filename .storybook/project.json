@@ -71,7 +71,7 @@
 				"commands": [
 					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/assets/*.css && stylelint --fix --cache --allow-empty-input {projectRoot}/assets/*.css",
 					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.{js,json} {projectRoot}/**/*.js --ignore-pattern \"!.storybook/\"",
-					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{yml,mdx}"
+					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{md,mdx}"
 				]
 			}
 		},
