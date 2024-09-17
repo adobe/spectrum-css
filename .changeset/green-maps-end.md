@@ -2,4 +2,4 @@
 "@spectrum-css/button": minor
 ---
 
-Adding the ability to disable label wrap in button component
+Adds the ability to disable text wrapping within the button component's label by applying the class `.spectrum-Button--noWrap` to `.spectrum-Button`.
