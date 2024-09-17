@@ -138,13 +138,9 @@ async function run() {
 					 *
 					 * Else: report that there is no change
 					 */
-					if (
-						(existsSync(join(basePath, filePath, name)) && !existsSync(join(headPath, filePath, name)))
-					) {
+					if (isRemoved(headMainSize, baseMainSize)) {
 						data.push("🚨 deleted, moved, or renamed");
-					} else if (
-						(existsSync(join(headPath, filePath, name)) && !existsSync(join(basePath, filePath, name)))
-					) {
+					} else if (isNew(headByteSize, baseByteSize)) {
 						data.push("🎉 new");
 					} else if (
 						((Math.abs(difference(headMainSize, baseMainSize))) / 1000) >= 0.001

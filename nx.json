@@ -9,7 +9,6 @@
 	},
 	"namedInputs": {
 		"core": ["{projectRoot}/*.css", "{projectRoot}/themes/*.css"],
-		"docs": ["{projectRoot}/metadata/*.yml"],
 		"eslint": ["{workspaceRoot}/.eslintrc"],
 		"metadata": ["{projectRoot}/metadata/*.json"],
 		"prettier": ["{workspaceRoot}/.prettierrc"],
@@ -122,7 +121,7 @@
 				"commands": [
 					"stylelint --fix --cache --allow-empty-input {projectRoot}/*.css {projectRoot}/**/*.css",
 					"eslint --fix --cache --no-error-on-unmatched-pattern {projectRoot}/*.json {projectRoot}/stories/*.js",
-					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{yml,md,mdx} {projectRoot}/**/*.{yml,md,mdx}"
+					"prettier --write --cache --log-level error --ignore-unknown --no-error-on-unmatched-pattern {projectRoot}/*.{md,mdx} {projectRoot}/**/*.{md,mdx}"
 				]
 			}
 		},
@@ -193,15 +192,12 @@
 		"validate": {
 			"executor": "nx:run-commands",
 			"inputs": [
-				"{workspaceRoot}/schemas/documentation.schema.json",
 				"{workspaceRoot}/schemas/metadata.schema.json",
-				"docs",
 				"metadata",
 				{ "externalDependencies": ["pajv"] }
 			],
 			"options": {
 				"commands": [
-					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/documentation.schema.json -d \"{projectRoot}/metadata/*.yml\" || exit 0",
 					"test -e {projectRoot}/metadata && pajv validate -s ./schemas/metadata.schema.json -d \"{projectRoot}/metadata/metadata.json\" || exit 0"
 				]
 			}
