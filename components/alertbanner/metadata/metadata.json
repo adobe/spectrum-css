@@ -2,14 +2,14 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-AlertBanner",
-    ".spectrum-AlertBanner--info",
-    ".spectrum-AlertBanner--negative",
     ".spectrum-AlertBanner-body",
     ".spectrum-AlertBanner-content",
     ".spectrum-AlertBanner-end",
     ".spectrum-AlertBanner-icon",
     ".spectrum-AlertBanner-text",
-    ".spectrum-AlertBanner.is-open"
+    ".spectrum-AlertBanner.is-open",
+    ".spectrum-AlertBanner.spectrum-AlertBanner--info",
+    ".spectrum-AlertBanner.spectrum-AlertBanner--negative"
   ],
   "modifiers": [
     "--mod-alert-banner-bottom-text",
@@ -24,7 +24,7 @@
     "--mod-alert-banner-max-inline-size",
     "--mod-alert-banner-min-height",
     "--mod-alert-banner-negative-background",
-    "--mod-alert-banner-netural-background",
+    "--mod-alert-banner-neutral-background",
     "--mod-alert-banner-size",
     "--mod-alert-banner-start-edge",
     "--mod-alert-banner-text-to-button-horizontal",
@@ -48,7 +48,7 @@
     "--spectrum-alert-banner-min-height",
     "--spectrum-alert-banner-minimum-height",
     "--spectrum-alert-banner-negative-background",
-    "--spectrum-alert-banner-netural-background",
+    "--spectrum-alert-banner-neutral-background",
     "--spectrum-alert-banner-size",
     "--spectrum-alert-banner-start-edge",
     "--spectrum-alert-banner-text-to-button-horizontal",
@@ -65,16 +65,13 @@
     "--spectrum-font-size-100",
     "--spectrum-informative-background-color-default",
     "--spectrum-negative-background-color-default",
-    "--spectrum-neutral-background-color-default",
     "--spectrum-neutral-subdued-background-color-default",
     "--spectrum-spacing-300",
     "--spectrum-text-to-visual-300",
     "--spectrum-white",
     "--spectrum-workflow-icon-size-100"
   ],
-  "system-theme": [
-    "--system-spectrum-alertbanner-spectrum-alert-banner-netural-background"
-  ],
+  "system-theme": [],
   "passthroughs": [
     "--mod-button-margin-block",
     "--mod-button-margin-left",

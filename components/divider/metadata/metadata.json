@@ -2,16 +2,16 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Divider",
-    ".spectrum-Divider--sizeL",
-    ".spectrum-Divider--sizeM",
-    ".spectrum-Divider--sizeS",
     ".spectrum-Divider--staticBlack.spectrum-Divider--sizeL",
     ".spectrum-Divider--staticBlack.spectrum-Divider--sizeM",
     ".spectrum-Divider--staticBlack.spectrum-Divider--sizeS",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeL",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeM",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeS",
-    ".spectrum-Divider--vertical"
+    ".spectrum-Divider--vertical",
+    ".spectrum-Divider.spectrum-Divider--sizeL",
+    ".spectrum-Divider.spectrum-Divider--sizeM",
+    ".spectrum-Divider.spectrum-Divider--sizeS"
   ],
   "modifiers": [
     "--mod-divider-background-color",
@@ -43,12 +43,12 @@
     "--spectrum-divider-thickness-small"
   ],
   "global": [
-    "--spectrum-gray-300",
+    "--spectrum-gray-200",
     "--spectrum-gray-800",
-    "--spectrum-transparent-black-300",
-    "--spectrum-transparent-black-800",
-    "--spectrum-transparent-white-300",
-    "--spectrum-transparent-white-800"
+    "--spectrum-transparent-black-400",
+    "--spectrum-transparent-black-900",
+    "--spectrum-transparent-white-400",
+    "--spectrum-transparent-white-900"
   ],
   "system-theme": [],
   "passthroughs": [],

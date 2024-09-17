@@ -11,11 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@container (--system: spectrum) {
-	.spectrum-Rating {
-		--spectrum-rating-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
-		--spectrum-rating-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-		--spectrum-rating-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-		--spectrum-rating-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-	}
-}
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";

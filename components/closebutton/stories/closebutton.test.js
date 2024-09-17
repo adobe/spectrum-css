@@ -3,8 +3,6 @@ import { Template } from "./template.js";
 
 export const CloseButtonGroup = Variants({
 	Template,
-	stateDirection: "row",
-	sizeDirection: "row",
 	testData: [
 		{
 			testHeading: "Default",
