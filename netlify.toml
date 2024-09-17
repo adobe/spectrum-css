@@ -1,6 +1,6 @@
 [build]
   publish = "dist/"
-  command = "yarn build:site"
+  command = "yarn build:docs"
 
 # If skip_processing = true, all other settings are ignored
 [build.processing]

@@ -175,7 +175,7 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["site/**/*.css", ".storybook/assets/*.css"],
+			files: [".storybook/assets/*.css"],
 			rules: {
 				"custom-property-pattern": null,
 				"color-function-notation": null,
