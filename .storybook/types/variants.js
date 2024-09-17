@@ -1,6 +1,6 @@
 /**
  *
- * @param {("xxs"|"xs"|"s"|"m"|"l"|"xl"|"xxl"|number)[]} options
+ * @param {("xxs"|"xs"|"s"|"m"|"l"|"xl"|"xxl"|"xxxl"|number)[]} options
  * @returns
  */
 export const size = (

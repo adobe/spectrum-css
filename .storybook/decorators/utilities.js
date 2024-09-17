@@ -282,6 +282,7 @@ export const Sizes = ({
 			l: "Large",
 			xl: "Extra-large",
 			xxl: "Extra-extra-large",
+			xxxl: "Extra-extra-extra-large",
 		},
 		...args
 	}, context);
