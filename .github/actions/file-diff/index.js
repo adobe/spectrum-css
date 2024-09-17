@@ -140,7 +140,7 @@ async function run() {
 					 */
 					if (isRemoved(headMainSize, baseMainSize)) {
 						data.push("🚨 deleted, moved, or renamed");
-					} else if (isNew(headByteSize, baseByteSize)) {
+					} else if (isNew(headMainSize, baseMainSize)) {
 						data.push("🎉 new");
 					} else if (
 						((Math.abs(difference(headMainSize, baseMainSize))) / 1000) >= 0.001
