@@ -6,8 +6,12 @@ import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
+import { capitalize } from "lodash-es";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Popover",
@@ -186,8 +190,7 @@ export const Template = ({
 				class=${classMap({
 					[rootClass]: true,
 					"is-open": isOpen,
-					[`${rootClass}--size${size?.toUpperCase()}`]:
-						typeof size !== "undefined",
+					[`${rootClass}--size${capitalize(size)}`]: typeof size !== "undefined",
 					[`${rootClass}--withTip`]: withTip,
 					[`${rootClass}--${position}`]: typeof position !== "undefined",
 					...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -275,7 +278,7 @@ export const TipPlacementVariants = (args, context) => {
 /**
  * Contains a source button with a fixed width, and an always open Popover.
  */
-export const FixedWidthSourceTemplate = (args) => html`
+export const FixedWidthSourceTemplate = (args, context) => html`
 	<div style="min-width: 300px;">
 		${ActionButton({
 			label: "Source",
@@ -283,12 +286,12 @@ export const FixedWidthSourceTemplate = (args) => html`
 				width: "100px",
 				display: "block",
 			},
-		})}
+		}, context)}
 		${Template({
 			...args,
 			position: "bottom-start",
 			isOpen: true,
 			trigger: () => null,
-		})}
+		}, context)}
 	</div>
 `;

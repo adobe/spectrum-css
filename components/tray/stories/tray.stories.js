@@ -1,5 +1,5 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
-import { disableDefaultModes, viewports } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { TrayGroup } from "./tray.test.js";
@@ -34,12 +34,8 @@ export default {
 				height: "300px",
 			},
 		},
-		chromatic: {
-			modes: {
-				"Viewport | small": {
-					viewport: viewports.small,
-				},
-			},
+		viewport: {
+			defaultViewport: "mobile2"
 		},
 		packageJson: pkgJson,
 	},
@@ -69,5 +65,6 @@ WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
 		modes: disableDefaultModes,
+		viewport: "mobile2",
 	},
 };

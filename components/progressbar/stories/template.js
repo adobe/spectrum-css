@@ -6,6 +6,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-ProgressBar",
@@ -20,7 +23,8 @@ export const Template = ({
 	progressBarFill,
 	customStyles = {},
 	size = "m",
-} = {}, context = {}) => html`
+} = {}, context = {}) => {
+	return html`
 		<div
 			class=${classMap({
 				[rootClass]: true,
@@ -60,4 +64,5 @@ export const Template = ({
 				></div>
 			</div>
 		</div>
-`;
+	`;
+};

@@ -11,31 +11,15 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
-.spectrum-ActionGroup {
-	--spectrum-actiongroup-button-spacing-reset: 0;
-	--spectrum-actiongroup-border-radius-reset: 0;
-	--spectrum-actiongroup-border-radius: var(--spectrum-corner-radius-100);
-}
-
-.spectrum-ActionGroup--sizeXS,
-.spectrum-ActionGroup--sizeS {
-	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-75);
-	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-75);
-}
-
-.spectrum-ActionGroup--sizeM,
-.spectrum-ActionGroup--sizeL,
-.spectrum-ActionGroup--sizeXL {
-	--spectrum-actiongroup-horizontal-spacing-regular: var(--spectrum-spacing-100);
-	--spectrum-actiongroup-vertical-spacing-regular: var(--spectrum-spacing-100);
-}
+@import "./themes/spectrum-two.css";
 
 .spectrum-ActionGroup {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--mod-actiongroup-horizontal-spacing-regular, var(--spectrum-actiongroup-horizontal-spacing-regular));
+
+	margin-block: var(--mod-actiongroup-margin-block, var(--mod-actiongroup-margin-block-start, 0) var(--mod-actiongroup-margin-block-end, 0));
+	margin-inline: var(--mod-actiongroup-margin-inline, var(--mod-actiongroup-margin-inline-start, 0) var(--mod-actiongroup-margin-inline-end, 0));
 
 	.spectrum-ActionGroup-item {
 		flex-shrink: 0;
@@ -54,9 +38,9 @@
 }
 
 .spectrum-ActionGroup--vertical {
-	gap: var(--mod-actiongroup-vertical-spacing-regular, var(--spectrum-actiongroup-vertical-spacing-regular));
 	display: inline-flex;
 	flex-direction: column;
+	gap: var(--mod-actiongroup-vertical-spacing-regular, var(--spectrum-actiongroup-vertical-spacing-regular));
 }
 
 .spectrum-ActionGroup--compact {
@@ -68,8 +52,8 @@
 
 	.spectrum-ActionGroup-item {
 		position: relative;
-		border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 		z-index: 0;
+		border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
 
 		&:first-child {
 			/* Action button passthrough styling */

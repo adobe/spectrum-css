@@ -11,6 +11,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 const Combobox = ({
 	rootClass = "spectrum-Combobox",
@@ -29,6 +32,7 @@ const Combobox = ({
 	selectedDay,
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
+
 	const lang = globals.lang ?? "en-US";
 
 	// If selectedDay is a string, convert it to a Date object

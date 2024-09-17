@@ -12,7 +12,7 @@
 | `--mod-alert-banner-max-inline-size`           |
 | `--mod-alert-banner-min-height`                |
 | `--mod-alert-banner-negative-background`       |
-| `--mod-alert-banner-netural-background`        |
+| `--mod-alert-banner-neutral-background`        |
 | `--mod-alert-banner-size`                      |
 | `--mod-alert-banner-start-edge`                |
 | `--mod-alert-banner-text-to-button-horizontal` |

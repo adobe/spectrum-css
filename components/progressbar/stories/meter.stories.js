@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { MeterGroup } from "./meter.test.js";
 import { default as ProgressBar } from "./progressbar.stories";
@@ -11,6 +12,7 @@ export default {
 	component: "ProgressBar",
 	argTypes: {
 		...ProgressBar.argTypes,
+		size: size(["s", "l"]),
 		fill: {
 			name: "Fill color",
 			type: { name: "string" },
@@ -22,7 +24,10 @@ export default {
 			control: "select",
 		},
 	},
-	args: ProgressBar.args,
+	args: {
+		...ProgressBar.args,
+		size: "s",
+	},
 	parameters: {
 		packageJson: pkgJson,
 	},
