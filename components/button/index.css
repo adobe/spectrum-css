@@ -296,12 +296,8 @@ a.spectrum-Button {
 
 /* Disable button label wrap  */
 .spectrum-Button--noWrap {
-	justify-content: flex-start;
-	
 	.spectrum-Button-label {
 		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
 	}
 }
 

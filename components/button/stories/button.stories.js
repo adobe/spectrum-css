@@ -60,6 +60,7 @@ export default {
 		staticColor,
 		noWrap: {
 			name: "Disable label wrap",
+			description: "Used only to keep the button label text in one line. It is intended to have the label wrap as it is part of design specifications.",
 			type: { name: "boolean" },
 			table: {
 				category: "Advanced",
