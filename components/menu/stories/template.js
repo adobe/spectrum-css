@@ -1,7 +1,9 @@
+import { Template as ActionButton } from "@spectrum-css/actionbutton/stories/template.js";
 import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as Divider } from "@spectrum-css/divider/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Switch } from "@spectrum-css/switch/stories/template.js";
 import { Template as Tray } from "@spectrum-css/tray/stories/template.js";
 import { html } from "lit";
@@ -217,6 +219,7 @@ export const MenuItem = (
 
 export const MenuGroup = (
 	{
+		hasActions = false,
 		heading,
 		id = getRandomId("menugroup"),
 		idx = 0,
@@ -227,6 +230,7 @@ export const MenuGroup = (
 		shouldTruncate = false,
 		subrole = "menuitem",
 		size = "m",
+		selectionMode = "none",
 		customStyles = {},
 	} = {},
 	context = {},
@@ -292,9 +296,11 @@ export const MenuGroup = (
 				role: "group",
 				subrole,
 				labelledby: id,
+				hasActions,
 				items,
 				isDisabled,
 				isSelectable,
+				selectionMode,
 				shouldTruncate: true,
 				size,
 			},
@@ -392,3 +398,379 @@ export const Template = (
 
 	return menuMarkup;
 };
+
+export const DisabledItemGroup = (args, context) => {
+	const groupData = [
+		{
+			heading: "Menu with icons",
+			items: [
+				{
+					label: "Cut",
+					iconName: "Cut",
+				},
+				{
+					label: "Copy",
+					iconName: "Copy",
+				},
+				{
+					label: "Paste",
+					iconName: "Paste",
+					isDisabled: true,
+				}
+			],
+		},
+		{
+			heading: "Menu with descriptions",
+			items: [
+				{
+					label: "Quick export",
+					description: "Share a snapshot",
+				},
+				{
+					label: "Open a copy",
+					description: "Illustrator for iPad",
+				},
+				{
+					label: "Share link",
+					description: "Enable comments and download",
+					isDisabled: true,
+				}
+			]
+		},
+		{
+			heading: "Menu with icons & descriptions",
+			items: [
+				{
+					label: "Quick export",
+					description: "Share a snapshot",
+					iconName: "Export",
+				},
+				{
+					label: "Open a copy",
+					description: "Illustrator for iPad",
+					iconName: "FolderOpen",
+				},
+				{
+					label: "Share link",
+					description: "Enable comments and download",
+					iconName: "Share",
+					isDisabled: true,
+				}
+			]
+		}
+	];
+	
+	return Container({
+		withBorder: false,
+		content: groupData.map((group) => html`
+			${Container({
+				heading: group.heading,
+				content: html`
+					${Template({
+						...args,
+						context,
+						shouldTruncate: group.shouldTruncate || false,
+						items: group.items,
+					})}
+				`
+			})}	
+		`)
+	});
+};
+
+export const OverflowGroup = (args, context) => {
+	const groupData = [
+		{
+			heading: "Text overflow without descriptions",
+			items: [
+				{ label: "Small (works best for mobile phones)" },
+				{ label: "Medium (all purpose)" },
+				{ label: "Large (works best for printing)" }
+			],
+		},
+		{
+			heading: "Text overflow with descriptions",
+			items: [
+				{
+					label: "Small (works best for mobile phones)",
+					description: "A small description about small is here",
+				},
+				{
+					label: "Medium (all purpose)",
+					description: "A medium description about medium is here",
+				},
+				{
+					label: "Large (works best for printing)",
+					description: "A large description about large is here",
+				}
+			],
+		},
+		{
+			heading: "Text truncation with descriptions",
+			shouldTruncate: true,
+			items: [
+				{
+					label: "Small (works best for mobile phones)",
+					description: "A small description about small is here",
+				},
+				{
+					label: "Medium (all purpose)",
+					description: "A medium description about medium is here",
+				},
+				{
+					label: "Large (works best for printing)",
+					description: "A large description about large is here",
+				}
+			],
+		},
+		{
+			heading: "Text truncation for section headings",
+			shouldTruncate: true,
+			items: [
+				{
+					idx: 1,
+					heading: "Section heading with longer text that truncates",
+					id: "menu-heading",
+					items: [
+						{
+							label: "Small (works best for mobile phones)",
+						},
+						{
+							label: "Medium (all purpose)",
+						},
+						{
+							label: "Large (works best for printing)",
+						}
+					]
+				}
+			]
+		},
+		{
+			heading: "Text truncation with drill-ins and values",
+			shouldTruncate:true,
+			items: [
+				{
+					label: "Quick export truncated text",
+					iconName: "Export",
+					description: "Share a low-res snapshot",
+				},
+				{
+					label: "Open a copy truncated text",
+					iconName: "Copy",
+					description: "Illustrator for iPad or desktop",
+					isDrillIn: true,
+				},
+				{
+					label: "Preview timelapse truncated text",
+					iconName: "Pending",
+					value: "Value",
+				}
+			]
+		}
+	];
+
+	return Container({
+		withBorder: false,
+		content: groupData.map((group) => html`
+			${Container({
+				heading: group.heading,
+				content: html`
+					${Template({
+						...args,
+						context,
+						shouldTruncate: group.shouldTruncate || false,
+						items: group.items,
+					})}
+				`
+			})}	
+		`)
+	});
+};
+
+export const SelectionGroup = (args, context) => {
+	const groupData = [
+		{
+			heading: "No selection",
+			items: [
+				{ label: "Cut" },
+				{ label: "Copy" },
+				{ label: "Paste" },
+			],
+		},
+		{
+			heading: "Single selection",
+			selectionMode: "single",
+			items: [
+				{
+					label: "Marquee",
+					isSelected: true,
+				},
+				{
+					label: "Add",
+				},
+				{
+					label: "Subtract",
+				}
+			],
+		},
+		{
+			heading: "Multiple selection with checkboxes",
+			selectionMode: "multiple",
+			items: [
+				{
+					label: "Marquee",
+					isSelected: true,
+				},
+				{
+					label: "Add",
+				},
+				{
+					label: "Subtract",
+				}
+			],
+		},
+		{
+			heading: "Multiple selection with checkboxes and icons",
+			selectionMode: "multiple",
+			items: [
+				{
+					label: "Marquee",
+					iconName: "Selection",
+					isSelected: true,
+				},
+				{
+					label: "Add",
+					iconName: "SelectAdd",
+				},
+				{
+					label: "Subtract",
+					iconName: "SelectSubtract",
+				}
+			],
+		},
+		{
+			heading: "Multiple selection with switches",
+			selectionMode: "multiple",
+			hasActions: true,
+			items: [
+				{
+					label: "Guides",
+					isSelected: true,
+				},
+				{
+					label: "Grid",
+				},
+				{
+					label: "Rulers",
+					isSelected: true,
+				}
+			],
+		},
+		{
+			heading: "Multiple selection with switches and icons",
+			selectionMode: "multiple",
+			hasActions: true,
+			items: [
+				{
+					label: "Marquee",
+					iconName: "Selection",
+					isSelected: true,
+				},
+				{
+					label: "Add",
+					iconName: "SelectAdd",
+				},
+				{
+					label: "Subtract",
+					iconName: "SelectSubtract",
+				}
+			],
+		},
+	];
+
+	return Container({
+		withBorder: false,
+		content: groupData.map((group) => html`${Container({
+			heading: group.heading,
+			content: html`
+			${Template({
+				...args,
+				context,
+				selectionMode: group.selectionMode || "none",
+				hasActions: group.hasActions || false,
+				items: group.items,
+			})}
+			`
+		})}`)
+	});
+};
+
+export const SubmenuInPopover = (context) => html`${Popover({
+		isOpen: true,
+		position: "end-top",
+		customStyles: {
+			"inline-size": "200px",
+		},
+		trigger: (args, context) => ActionButton({
+			label: "Settings",
+			iconName: "Settings",
+			...args,
+		}, context),
+		content: [
+			(args, context) => Template({
+				items: [
+					{
+						label: "Language",
+						value: "English (US)",
+						isDrillIn: true,
+						isHovered: true,
+					},
+					{
+						label: "Notifications",
+					},
+					{
+						label: "Show grid",
+					}
+				],
+				...args
+			}, context),
+			(args, context) => Popover({
+				isOpen: true,
+				position: "end-top",
+				customStyles: {
+					"--mod-popover-animation-distance": "-4px",
+					top: "-105px",
+					"inline-size": "120px",
+				},
+				content: [
+					(args, context) => Template({
+						selectionMode: "single",
+						items: [
+							{
+								label: "Deutsch",
+							},
+							{
+								label: "English (US)",
+								isSelected: true,
+							},
+							{
+								label: "Español",
+							},
+							{
+								label: "Français",
+							},
+							{
+								label: "Italiano",
+							},
+							{
+								label: "日本語",
+							}
+						],
+						...args,
+					}, context)
+				],
+				...args,
+			}, context)
+		],
+	}, context)
+	}`;
