@@ -175,6 +175,8 @@ module.exports = {
 			rules: {
 				"custom-property-pattern": null,
 				"color-function-notation": null,
+				"spectrum-tools/no-unused-custom-properties": null,
+				"spectrum-tools/no-unknown-custom-properties": null,
 			},
 		},
 		{
