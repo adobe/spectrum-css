@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.2.0
+
+### Minor Changes
+
+- [#3105](https://github.com/adobe/spectrum-css/pull/3105) [`00747d0`](https://github.com/adobe/spectrum-css/commit/00747d02a0b3d7e567566492656db65efb3c51fc) Thanks [@cdransf](https://github.com/cdransf)! - Updates the avatar link styles to reduce redundancy and properly remove the border that was displayed in high contrast mode.
+
 ## 7.1.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.2.0
+
+### Minor Changes
+
+- [#3099](https://github.com/adobe/spectrum-css/pull/3099) [`2a5f3d9`](https://github.com/adobe/spectrum-css/commit/2a5f3d9e5df20e0d43ebbc48596129b612185ec1) Thanks [@cdransf](https://github.com/cdransf)! - This fixes the issue where asset list and miller columns display white text on a light gray background by setting the value to HighlightText rather than SelectedItemText.
+
 ## 6.1.3
 
 ### Patch Changes

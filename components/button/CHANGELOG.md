@@ -1,5 +1,11 @@
 # Change Log
 
+## 13.2.0
+
+### Minor Changes
+
+- [#3078](https://github.com/adobe/spectrum-css/pull/3078) [`06491f3`](https://github.com/adobe/spectrum-css/commit/06491f3a7983bdf0fe0acf350623eed7297ad935) Thanks [@cdransf](https://github.com/cdransf)! - Includes fixes and updates to the colors used in forced-colors / high contrast mode. In Windows high contrast, a different background was showing behind the label text, as a result of extra text readability backplates being rendered. `forced-color-adjust: none` is now applied to the child label element to fix this. The appropriate `ButtonFace`/`ButtonText` system colors are also now defined instead of relying on the default. The existing use of `Highlight` is now paired with `HighlightText` to ensure contrast by using a matching foreground/background pair.
+
 ## 13.1.3
 
 ### Patch Changes
