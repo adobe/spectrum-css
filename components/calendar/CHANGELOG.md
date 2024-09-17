@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.2.0
+
+### Minor Changes
+
+- [#3079](https://github.com/adobe/spectrum-css/pull/3079) [`bde7701`](https://github.com/adobe/spectrum-css/commit/bde77016db7c176a9601c115c6429c4ceca7aede) Thanks [@cdransf](https://github.com/cdransf)! - Makes text in the calendar in high contrast mode that is not in a selected cell visible again by removing redundant color property and allowing it to be set by the adjusted variable values (--highcontrast-calendar-day-today-text-\*).
+
 ## 5.1.4
 
 ### Patch Changes
