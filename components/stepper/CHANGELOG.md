@@ -1,5 +1,17 @@
 # Change Log
 
+## 7.0.0-s2-foundations.16
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5f693f2`](https://github.com/adobe/spectrum-css/commit/5f693f2b000ffe77f1293980bc6006fbc5fa76c0) Thanks [@pfulton](https://github.com/pfulton)! - Stepper bug fixes for S1 and Express variants.
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5f693f2`](https://github.com/adobe/spectrum-css/commit/5f693f2b000ffe77f1293980bc6006fbc5fa76c0) Thanks [@pfulton](https://github.com/pfulton)! - Realign structure with original style format
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5f693f2`](https://github.com/adobe/spectrum-css/commit/5f693f2b000ffe77f1293980bc6006fbc5fa76c0) Thanks [@pfulton](https://github.com/pfulton)! - Add separate variable for stepper button border width
+
 ## 7.0.0-s2-foundations.15
 
 ### Patch Changes
