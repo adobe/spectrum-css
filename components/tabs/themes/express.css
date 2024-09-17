@@ -11,9 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
+
+/* @combine .spectrum.spectrum--express */
+
 @import "./spectrum.css";
 
-@container (--system: express) {
+@container style(--system: express) {
 	.spectrum-Tabs {
 		--spectrum-tabs-font-weight: var(--spectrum-bold-font-weight);
 	}

@@ -1,9 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".spectrum--dark .spectrum-Swatch",
-    ".spectrum--darkest .spectrum-Swatch",
-    ".spectrum--light .spectrum-Swatch",
     ".spectrum-Swatch",
     ".spectrum-Swatch .spectrum-Swatch-disabledIcon",
     ".spectrum-Swatch .spectrum-Swatch-fill",
@@ -75,7 +72,9 @@
   ],
   "component": [
     "--spectrum-swatch-border-color",
+    "--spectrum-swatch-border-color-default",
     "--spectrum-swatch-border-color-light",
+    "--spectrum-swatch-border-color-light-default",
     "--spectrum-swatch-border-color-selected",
     "--spectrum-swatch-border-radius",
     "--spectrum-swatch-border-thickness",
@@ -110,7 +109,7 @@
     "--spectrum-focus-indicator-color",
     "--spectrum-focus-indicator-gap",
     "--spectrum-focus-indicator-thickness",
-    "--spectrum-gray-50",
+    "--spectrum-gray-25",
     "--spectrum-gray-800",
     "--spectrum-gray-900",
     "--spectrum-picked-color",

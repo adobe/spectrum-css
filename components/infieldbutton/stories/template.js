@@ -4,25 +4,25 @@ import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
-export const Template = (
-	{
-		rootClass = "spectrum-InfieldButton",
-		customClasses = [],
-		size = "m",
-		position,
-		isQuiet,
-		iconName = "Add",
-		isDisabled,
-		isInvalid,
-		isHovered,
-		isActive,
-		isFocused,
-		isStacked,
-		tabIndex = 0,
-	} = {},
-	context = {},
-) => {
+export const Template = ({
+	rootClass = "spectrum-InfieldButton",
+	customClasses = [],
+	size = "m",
+	position,
+	isQuiet,
+	iconName = "Add",
+	isDisabled,
+	isInvalid,
+	isHovered,
+	isActive,
+	isFocused,
+	isStacked,
+	tabIndex = 0,
+} = {}, context = {}) => {
 	return isStacked
 		? html`
 				<button
