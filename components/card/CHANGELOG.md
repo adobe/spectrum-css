@@ -1,5 +1,15 @@
 # Change Log
 
+## 10.0.0-s2-foundations.17
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`d8394c7`](https://github.com/adobe/spectrum-css/commit/d8394c7cd6e49e65928972eedaae0dbf013ea8f9) Thanks [@pfulton](https://github.com/pfulton)! - S2 preview background color mapping update
+
+- Updated dependencies [[`9ae725f`](https://github.com/adobe/spectrum-css/commit/9ae725f10ebbb78b62070c4c477cb41cfc1b1ed6), [`4e80ae6`](https://github.com/adobe/spectrum-css/commit/4e80ae67ddda329a5ed556b57426623c6f0f13f0)]:
+  - @spectrum-css/typography@7.0.0-s2-foundations.15
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.19
+
 ## 10.0.0-s2-foundations.16
 
 ### Major Changes

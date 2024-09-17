@@ -1,5 +1,33 @@
 # Change Log
 
+## 4.0.0-s2-foundations.16
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4e80ae6`](https://github.com/adobe/spectrum-css/commit/4e80ae67ddda329a5ed556b57426623c6f0f13f0) Thanks [@pfulton](https://github.com/pfulton)! - ActionButton:
+
+  - Correct --spectrum-actionbutton-background-color-selected-disabled to be --spectrum-actionbutton-(background|border)-color-disabled-selected
+
+  Combobox:
+
+  - Move --spectrum-combobox-min-inline-size and --spectrum-combobox-button-width to the index.css
+
+  FieldGroup:
+
+  - Swap gap back to margin-inline-end on FieldGroup
+
+  Typography:
+
+  - Remap body size to xs if xxs provided
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9ae725f`](https://github.com/adobe/spectrum-css/commit/9ae725f10ebbb78b62070c4c477cb41cfc1b1ed6) Thanks [@pfulton](https://github.com/pfulton)! - Combobox moved the quiet min-inline-size property to index.css from theme to pick up the t-shirt sizing for the calc.
+
+  Typography increases specificity for the t-shirt sizing.
+
+  Stepper fixes for the disabled + hovered states as well as regressions fixed for the quiet variant.
+
 ## 4.0.0-s2-foundations.15
 
 ### Major Changes

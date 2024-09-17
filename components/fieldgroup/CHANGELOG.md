@@ -1,5 +1,25 @@
 # Change Log
 
+## 6.0.0-s2-foundations.14
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4e80ae6`](https://github.com/adobe/spectrum-css/commit/4e80ae67ddda329a5ed556b57426623c6f0f13f0) Thanks [@pfulton](https://github.com/pfulton)! - ActionButton:
+
+  - Correct --spectrum-actionbutton-background-color-selected-disabled to be --spectrum-actionbutton-(background|border)-color-disabled-selected
+
+  Combobox:
+
+  - Move --spectrum-combobox-min-inline-size and --spectrum-combobox-button-width to the index.css
+
+  FieldGroup:
+
+  - Swap gap back to margin-inline-end on FieldGroup
+
+  Typography:
+
+  - Remap body size to xs if xxs provided
+
 ## 6.0.0-s2-foundations.13
 
 ### Major Changes
