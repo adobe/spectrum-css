@@ -5,6 +5,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
 import "../index.css";
+import styles from "../index.css?inline";
 
 /**
  * @typedef { keyof import("./icon.stories.js").default.args } IconArgs
@@ -243,9 +244,12 @@ export const Template = ({
 	}, "");
 
 	if (!useRef && svgString) {
-		return html`${unsafeSVG(
-			svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
-		)}`;
+		return html`
+			<style>${styles}</style>
+			${unsafeSVG(
+				svgString.replace(/<svg/, `<svg class="${classesAsString}" focusable="false" aria-hidden="true" role="img"`)
+			)}
+		`;
 	}
 
 	// ui ID: #spectrum-css-icon-${idKey}
@@ -255,16 +259,19 @@ export const Template = ({
 			? `spectrum-css-icon-${idKey}`
 			: `spectrum-icon-${scale !== "medium" ? "24" : "18"}-${idKey}`;
 
-	return html`<svg
-		class=${classMap(classList)}
-		id=${ifDefined(id)}
-		style=${ifDefined(inlineStyle)}
-		focusable="false"
-		aria-hidden="true"
-		aria-labelledby=${idKey}
-		role="img"
-	>
-		<title id=${idKey}>${idKey.replace(/([A-Z])/g, " $1").trim()}</title>
-		<use xlink:href="#${iconID}" href="#${iconID}" />
-	</svg>`;
+	return html`
+		<style>${styles}</style>
+		<svg
+			class=${classMap(classList)}
+			id=${ifDefined(id)}
+			style=${ifDefined(inlineStyle)}
+			focusable="false"
+			aria-hidden="true"
+			aria-labelledby=${idKey}
+			role="img"
+		>
+			<title id=${idKey}>${idKey.replace(/([A-Z])/g, " $1").trim()}</title>
+			<use xlink:href="#${iconID}" href="#${iconID}" />
+		</svg>
+	`;
 };

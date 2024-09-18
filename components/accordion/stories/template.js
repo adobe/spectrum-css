@@ -6,9 +6,7 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
 import { styleMap } from "lit/directives/style-map.js";
 
-import "../index.css";
-
-export const AccordionItem = ({
+export const ItemTemplate = ({
 	heading,
 	content,
 	rootClass = "spectrum-Accordion-item",
@@ -20,7 +18,12 @@ export const AccordionItem = ({
 	customStyles = {},
 	customClasses = [],
 	onclick,
+	disableAll = false,
+	collapseAll = false,
 } = {}, context = {}) => {
+	if (disableAll) isDisabled = true;
+	if (collapseAll) isOpen = false;
+
 	return html`
 		<div
 			class=${classMap({
@@ -75,13 +78,9 @@ export const Template = ({
 	density = "regular",
 	items = [],
 	id = getRandomId("accordion"),
-	disableAll = false,
-	collapseAll = false,
 	customClasses = [],
 	customStyles = {},
-} = {}, context = {}) => {
-	const { updateArgs } = context;
-
+} = {}) => {
 	return html`
 		<div
 			class="${classMap({
@@ -96,29 +95,12 @@ export const Template = ({
 			role="region"
 			style=${styleMap(customStyles)}
 		>
-			${repeat(Array.from(items.keys()), (heading, idx) => {
-				const item = items.get(heading);
-				return AccordionItem({
-					...item,
-					rootClass: `${rootClass}-item`,
-					heading,
-					idx,
-					iconSize: `${size}`,
-					isDisabled: item.isDisabled || disableAll,
-					isOpen: collapseAll === true ? false : item.isOpen,
-					onclick: function() {
-						if (item.isDisabled) return;
-
-						// Update the args
-						const newItems = new Map(items);
-						newItems.set(heading, {
-							...item,
-							isOpen: !item.isOpen,
-						});
-						updateArgs({ items: newItems });
-					},
-				}, context);
-			})}
+			${repeat(items,
+				(_, idx) => idx,
+				(item) => html`
+					<spectrum-accordion-item .args=${item}></spectrum-accordion-item>
+				`
+			)}
 		</div>
 	`;
 };
