@@ -297,9 +297,18 @@ a.spectrum-Button {
 /* Disable button label wrap  */
 .spectrum-Button--noWrap {
 	.spectrum-Button-label {
+		overflow: hidden;
+		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
+
+	&.spectrum-Tooltip--hide {
+		.spectrum-Tooltip {
+			display: none;
+		}
+	}
 }
+
 
 /* Static color variants */
 .spectrum-Button--staticWhite {

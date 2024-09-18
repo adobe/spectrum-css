@@ -79,8 +79,11 @@ export const ButtonGroups = Variants({
 		{
 			testHeading: "Disable label wrapping with workflow icon",
 			customStyles: {
-				"max-inline-size": "120px",
+				"max-inline-size": "300px",
 			},
+			
+			//If label text is no longer truncated hide the tooltip
+			customClasses: ["spectrum-Tooltip--hide"],
 			iconName: "Star",
 			label: "Be a premium member",
 			withStates: false,
