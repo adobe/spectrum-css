@@ -21,6 +21,7 @@ export const TableRowItem = ({
 	isCollapsible = false,
 	isExpanded = false,
 	isHidden = false,
+	hasColumnDividers = false,
 	tier,
 	isLastTier = false,
 	useDivs = false,
@@ -31,6 +32,7 @@ export const TableRowItem = ({
 	size = "m",
 } = {}, context = {}) => {
 	const useThumbnail = showThumbnails && !isSummaryRow && !isSectionHeader;
+	const useColumnDividers = hasColumnDividers && !isSummaryRow && !isSectionHeader;
 
 	// Use Table tags or Div tags.
 	// Note: Lit must use the 'literal' function for dynamic tags to work.
@@ -67,6 +69,7 @@ export const TableRowItem = ({
 			[`${rootClass}-row--sectionHeader`]: isSectionHeader,
 			[`${rootClass}-row--collapsible`]: isCollapsible,
 			[`${rootClass}-row--thumbnail`]: useThumbnail,
+			[`${rootClass}-cell--divider`]: useColumnDividers,
 			["is-selected"]: isSelected,
 			["is-expanded"]: isExpanded,
 			["is-last-tier"]: isLastTier,
@@ -81,7 +84,10 @@ export const TableRowItem = ({
 		${when(showCheckbox && !isSectionHeader, () => html`
 			<${cellTag}
 				role="gridcell"
-				class="spectrum-Table-cell spectrum-Table-checkboxCell"
+				class=${classMap({
+					[`${rootClass}-cell`]: true,
+					[`${rootClass}-checkboxCell`]: true,
+				})}
 			>
 				${when(!isSummaryRow, () =>
 					Checkbox({
@@ -102,6 +108,7 @@ export const TableRowItem = ({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--collapsible`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
+							[`${rootClass}-cell--divider`]: useColumnDividers,
 						})}
 					>
 						<div class="${rootClass}-collapseInner">
@@ -124,6 +131,7 @@ export const TableRowItem = ({
 						class=${classMap({
 							[`${rootClass}-cell`]: true,
 							[`${rootClass}-cell--thumbnail`]: useThumbnail,
+							[`${rootClass}-cell--divider`]: useColumnDividers,
 						})}
 						colspan=${ifDefined(isSectionHeader && showCheckbox ? "4" : isSectionHeader ? "3" : undefined)}
 					>${getCellContent(0)}</${cellTag}>`
@@ -135,6 +143,7 @@ export const TableRowItem = ({
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
 					[`${rootClass}-cell--thumbnail`]: useThumbnail,
+					[`${rootClass}-cell--divider`]: useColumnDividers,
 				})}
 			>${getCellContent(1)}</${cellTag}>
 
@@ -142,6 +151,7 @@ export const TableRowItem = ({
 				role=${ifDefined(showCheckbox ? "gridcell" : useDivs ? "cell" : undefined)}
 				class=${classMap({
 					[`${rootClass}-cell`]: true,
+					[`${rootClass}-cell--divider`]: useColumnDividers,
 				})}
 			>${getCellContent(2)}</${cellTag}>`
 		)}
@@ -159,6 +169,7 @@ export const Template = ({
 	useScroller = false,
 	showThumbnails = false,
 	isDropTarget = false,
+	hasColumnDividers = false,
 	rowItems = [],
 	customClasses = [],
 	id = getRandomId("table"),
@@ -263,6 +274,7 @@ export const Template = ({
 					size,
 					useDivs,
 					showThumbnails,
+					hasColumnDividers,
 					tableIsEmphasized: isEmphasized,
 					...item,
 				}, context)

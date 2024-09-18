@@ -262,11 +262,19 @@ _deprecate logical transform plugin ([#2437](https://github.com/adobe/spectrum-c
 
 \*feat(table)!: migrate to spectrum-tokens, add section header (#1842)([74cd1b4](https://github.com/adobe/spectrum-css/commit/74cd1b4)), closes[#1842](https://github.com/adobe/spectrum-css/issues/1842)
 
-    	###
-    	🛑 BREAKING CHANGES
+### Migration Guide
 
-    		*
-    		migrates Table to use `@adobe/spectrum-tokens`
+#### Sorted icon moved to left side of text
+
+The sorted icon was previously on the right side of the text, but has been moved to the left in the markup. If used on the right side of the text, the spacing between icon and text will be incorrect.
+
+#### Remove whitespace between column title text and sort icon(s)
+
+In the column header, when the sort icon or header menu icon is displayed, remove any white space in the HTML markup between the icon and the column title. This ensures that no extra space is created. Also, the column title text is now wrapped in a `<span class="spectrum-Table-columnTitle">` element when the column is sortable.
+
+### 🛑 BREAKING CHANGES
+
+- migrates Table to use `@adobe/spectrum-tokens`
 
 Additionally:
 
