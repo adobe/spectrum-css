@@ -97,6 +97,44 @@ export const StatusLight = styled.span(({ variant = "positive", ...props }) => `
 	margin-block-end: 1px;
 `);
 
+export const ResourceSection = styled.section`
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+`;
+	
+export const ResourceLink = styled.a`
+	position: relative;
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	margin-block-end: 16px;
+	margin-inline-end: 16px;
+	box-sizing: border-box;
+	text-decoration: none;
+	min-inline-size: 100px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	border-color: rgb(230, 230, 230);
+	overflow: hidden;
+
+	&:hover {
+		border-color: rgb(213, 213, 213);
+	}
+`;
+
+export const ResourceIconWrapper = styled.div`
+	background-color: ${props => props.backgroundColor ?? "rgba(248, 248, 248)"};
+	padding: 12px;
+	display: flex;
+	inline-size: 40px;
+	block-size: 40px;
+`;
+
+export const ResourceTextWrapper = styled.div`
+	margin-inline: 16px;
+`;
+
 const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false, skipLink = false }) => {
 	let statusType = "notice";
 	let statusMessage = "Not yet available on the npm registry.";
@@ -126,6 +164,175 @@ const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false
 			{!skipDate && data.date ? ` ${data.date}` : ""}
 		</>
 	);
+};
+
+// link icons/svgs for ResourceLinkContent
+const npmSvg = () => {
+	return (
+		<ResourceIconWrapper backgroundColor="rgba(203, 56, 55, 0.1)">
+			<svg viewBox="0 0 18 7" focusable="false" aria-hidden="true" aria-label="npm">
+				<path fill="#CB3837" d="M0,0h18v6H9v1H5V6H0V0z M1,5h2V2h1v3h1V1H1V5z M6,1v5h2V5h2V1H6z M8,2h1v2H8V2z M11,1v4h2V2h1v3h1V2h1v3h1V1H11z"></path>
+				<polygon fill="#FFFFFF" points="1,5 3,5 3,2 4,2 4,5 5,5 5,1 1,1 "></polygon>
+				<path fill="#FFFFFF" d="M6,1v5h2V5h2V1H6z M9,4H8V2h1V4z"></path>
+				<polygon fill="#FFFFFF" points="11,1 11,5 13,5 13,2 14,2 14,5 15,5 15,2 16,2 16,5 17,5 17,1 "></polygon>
+			</svg>
+		</ResourceIconWrapper>
+	)
+};
+
+const githubSvg = () => {
+	return (
+		<ResourceIconWrapper backgroundColor="rgba(0, 0, 0, 0.1)">
+			<svg focusable="false" aria-hidden="true" aria-label="GitHub" viewBox="0 0 36 36">
+				<path fill="rgb(0, 0, 0)" d="M17.988 2a16.291 16.291 0 0 0-5.147 31.747c.814.149 1.111-.354 1.111-.786 0-.386-.014-1.411-.022-2.77-4.531.984-5.487-2.184-5.487-2.184a4.32 4.32 0 0 0-1.809-2.383c-1.479-1.01.112-.99.112-.99a3.42 3.42 0 0 1 2.495 1.679 3.468 3.468 0 0 0 4.741 1.353 3.482 3.482 0 0 1 1.034-2.177C11.4 25.078 7.6 23.68 7.6 17.438a6.3 6.3 0 0 1 1.677-4.371 5.863 5.863 0 0 1 .16-4.311s1.368-.438 4.479 1.67a15.451 15.451 0 0 1 8.157 0c3.109-2.108 4.475-1.67 4.475-1.67a5.857 5.857 0 0 1 .162 4.311 6.286 6.286 0 0 1 1.674 4.371c0 6.258-3.808 7.635-7.437 8.038a3.888 3.888 0 0 1 1.106 3.017c0 2.177-.02 3.934-.02 4.468 0 .436.293.943 1.12.784A16.292 16.292 0 0 0 17.988 2z"></path>
+			</svg>
+		</ResourceIconWrapper>
+	)
+};
+
+const adobeSvg = () => {
+	return (
+		<ResourceIconWrapper>
+			<svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" aria-label="AdobeLogo">
+				<path fill="rgb(250, 15, 0)" d="M22.175 4H34v28L22.175 4zm-8.336 0H2v28L13.839 4zm4.165 10.317l7.538 17.682h-4.939l-2.258-5.632h-5.517l5.176-12.05z"></path>
+			</svg>
+		</ResourceIconWrapper>
+	)
+};
+
+/**
+ * Determines which SVG to use based on the resource link
+ */
+const iconSvgs = (linkType) => {
+	let svgAsset;
+
+	switch(linkType) {
+		case "package": 
+			svgAsset = npmSvg()
+			break;
+		case "repository": 
+			svgAsset = githubSvg()
+			break;
+		case "guidelines": 
+			svgAsset = adobeSvg()
+			break;
+		default: 
+			break;
+	}
+
+	return svgAsset;
+};
+
+/**
+ * Converts the linkType to the subtitle text
+ */
+const convertLinkTypeText = (linkType) => {
+	switch(linkType) {
+		case "package": 
+			linkType = "npm"
+			break;
+		case "repository": 
+			linkType = "GitHub"
+			break;
+		case "guidelines": 
+			linkType = "Spectrum website"
+			break;
+		default: 
+			break;
+	}
+	return linkType;
+};
+
+export const ResourceLinkContent = ({data, linkType=["package", "repository", "guidelines"]}) => {
+	const packageJson = data;
+
+	// componentGuidelinesName
+	let packageName = "";
+	let packageLink = "";
+
+	// componentBetaName: for components with guidelines that are still on spectrum-contributions/beta site
+	let packageAltName = "";
+	let packageAltLink = "";
+	
+	if(linkType === "package") {
+		// NPM package name and link 
+		packageName = packageJson?.name ?? undefined;
+		packageLink = (packageName && typeof packageName !== "undefined") ? `https://npmjs.com/${packageName}` : false;
+	}
+	
+	else if (linkType === "repository") {
+		// repo name and link 
+		packageName = packageJson?.name ? packageJson?.name.split('/').pop() : undefined;
+		packageLink = (packageName && typeof packageName !== "undefined") ? `https://github.com/adobe/spectrum-css/tree/main/components/${packageName}` : false;
+	}
+
+	else if (linkType === "guidelines") {
+		// guidelines site name and link 
+		packageName = packageJson?.componentGuidelinesName ?? undefined;
+		packageLink = (packageName && typeof packageName !== "undefined") ? `https://spectrum.adobe.com/page/${packageName}` : false;
+
+		// internal contributions/beta guidelines name and link
+		packageAltName = (packageName) ? undefined : packageJson?.componentBetaName;
+
+		if (!packageLink) {
+			packageAltLink = (packageAltName && typeof packageAltName !== "undefined") ? `https://spectrum-contributions.corp.adobe.com/page/${packageAltName}` : false;
+			packageLink = packageAltLink;
+		}
+	}
+
+	else {
+		throw new Error(`Are you sure you mean "${linkType}"? Please use a valid link type instead: "package", "repository", "guidelines"`);
+	}
+
+	return (
+		<>
+			{packageLink ? <>
+				<ResourceLink href={packageLink} rel="noopener" className="sb-unstyled">
+					{iconSvgs(linkType)}
+					<ResourceTextWrapper>
+						<div className="spectrum-Heading spectrum-Heading--sizeXS">View {linkType}</div>
+						<div className="spectrum-Body spectrum-Body--sizeS">{convertLinkTypeText(linkType)}</div>
+					</ResourceTextWrapper>
+				</ResourceLink>
+				</>
+				: ""
+			}
+		</>
+	)
+};
+
+/**
+ * Displays the list of relevant component links (to NPM, repo, guidelines, etc). 
+ * 
+ * Usage of this doc block within MDX template(s):
+ *  <ResourceListDetails />
+ */
+export const ResourceListDetails = () => {
+	const storyMeta = useOf('meta');
+
+	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
+
+	if (!packageJson?.name) return;
+
+	const [isLoading, setIsLoading] = useState(true);
+	const [npmData, setnpmData] = useState({});
+
+	fetchNpmData(packageJson.name, setnpmData, setIsLoading);
+
+	return (
+		<ResetWrapper>
+			{ !isLoading
+				? <>
+						<ResourceSection skipBorder={true} className="sb-unstyled">
+							<ResourceLinkContent className="doc-block-links" linkType="guidelines" data={packageJson}/>
+							<ResourceLinkContent className="doc-block-links" linkType="repository" data={packageJson}/>
+							<ResourceLinkContent className="doc-block-links" linkType="package" data={packageJson}/>
+						</ResourceSection>
+					</>
+				: ""
+			}
+		</ResetWrapper>
+	)
 };
 
 /**
