@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.3.0
+
+### Minor Changes
+
+- [#3119](https://github.com/adobe/spectrum-css/pull/3119) [`df8eee0`](https://github.com/adobe/spectrum-css/commit/df8eee0aa7d69e6bad556ad77d972089e74d9173) Thanks [@cdransf](https://github.com/cdransf)! - Corrects side label positioning by adding margin-inline-end to provide space between the label and the slider component.
+
 ## 5.2.6
 
 ### Patch Changes
