@@ -1,5 +1,10 @@
 name: Alert banner
 description: Alert banners show pressing and high-signal messages, such as system alerts. They're meant to be noticed and prompt users to take action.
+SpectrumSiteSlug: https://spectrum.adobe.com/page/alert-banner/
+sections:
+  - name: Custom Properties API
+    description: |
+      This component can be modified via its `--mod-*` prefixed custom properties. A list of those prefixed custom properties can be found <a class="spectrum-Link" href="https://github.com/adobe/spectrum-css/tree/main/components/alertbanner/metadata/mods.md">here</a>.
 examples:
   - id: alertbanner
     name: Neutral
