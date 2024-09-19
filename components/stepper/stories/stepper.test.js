@@ -12,14 +12,27 @@ export const StepperGroup = Variants({
 			isQuiet: true,
 		},
 		{
-			testHeading: "Hide stepper",
-			hideStepper: true,
+			testHeading: "Invalid",
+			isInvalid: true,
+		},
+		{
+			testHeading: "Quiet + invalid",
+			isQuiet: true,
+			isInvalid: true,
 		},
 	],
 	stateData: [
 		{
+			testHeading: "Hide stepper",
+			hideStepper: true,
+		},
+		{
 			testHeading: "Disabled",
 			isDisabled: true,
+		},
+		{
+			testHeading: "Hovered",
+			isHovered: true,
 		},
 		{
 			testHeading: "Focused",
@@ -30,28 +43,17 @@ export const StepperGroup = Variants({
 			isKeyboardFocused: true,
 		},
 		{
-			testHeading: "Invalid",
-			isInvalid: true,
+			testHeading: "Disabled + hovered",
+			isDisabled: true,
+			isHovered: true,
 		},
 		{
-			testHeading: "Invalid + focused",
-			isInvalid: true,
-			isFocused: true,
-		},
-		{
-			testHeading: "Invalid + keyboard-focused",
-			isInvalid: true,
-			isKeyboardFocused: true,
-		},
-		{
-			testHeading: "Invalid + disabled + focused",
-			isInvalid: true,
+			testHeading: "Disabled + focused",
 			isDisabled: true,
 			isFocused: true,
 		},
 		{
-			testHeading: "Invalid + disabled + keyboard-focused",
-			isInvalid: true,
+			testHeading: "Disabled + keyboard-focused",
 			isDisabled: true,
 			isKeyboardFocused: true,
 		},

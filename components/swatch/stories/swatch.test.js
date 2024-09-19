@@ -19,11 +19,45 @@ export const SwatchGroup = Variants({
 			testHeading: "Full rounding",
 			rounding: "full"
 		},
+		{
+			testHeading: "Light border",
+			borderStyle: "lightBorder",
+		},
+		{
+			testHeading: "No border",
+			borderStyle: "noBorder",
+			rounding: "none",
+		},
+		{
+			testHeading: "Shape: rectangle",
+			shape: "rectangle",
+		},
+		{
+			testHeading: "Gradient",
+			gradient: "linear-gradient(to right, rgba(0, 0, 0, 88%), rgb(174, 216, 230))",
+			swatchColor: "rgba(174, 216, 230, 0.3)",
+		},
+		{
+			testHeading: "Image",
+			imageUrl: "example-ava@2x.png",
+		},
+		{
+			testHeading: "Mixed value",
+			isMixedValue: true,
+		},
 	],
 	stateData: [
 		{
-			testHeading: "No color",
-			swatchColor: undefined
+			testHeading: "Disabled",
+			isDisabled: true,
+		},
+		{
+			testHeading: "No color/empty",
+			swatchColor: undefined,
+			imageUrl: "",
+			gradient: "",
+			isMixedValue: false,
+			borderStyle: "default",
 		},
 		{
 			testHeading: "Selected",

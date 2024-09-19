@@ -124,6 +124,10 @@
 
 	.spectrum-Slider-labelContainer {
 		margin-block-start: 0;
+
+		.spectrum-Slider-label { 
+			margin-inline-end: var(--mod-slider-value-side-padding-inline, var(--spectrum-slider-value-side-padding-inline));
+		}
 	}
 
 	.spectrum-Slider-labelContainer + .spectrum-Slider-controls {

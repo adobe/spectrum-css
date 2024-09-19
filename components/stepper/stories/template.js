@@ -1,5 +1,5 @@
 import { Template as InfieldButton } from "@spectrum-css/infieldbutton/stories/template.js";
-import { getRandomId, Container } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Textfield } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -14,6 +14,7 @@ export const Template = ({
 	size = "m",
 	isQuiet = false,
 	isFocused = false,
+	isHovered = false,
 	isKeyboardFocused = false,
 	isInvalid = false,
 	isDisabled = false,
@@ -44,6 +45,7 @@ export const Template = ({
 				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 				[`${rootClass}--quiet`]: isQuiet,
 				"is-focused": isFocused,
+				"is-hover": isHovered,
 				"is-keyboardFocused": isKeyboardFocused,
 				"is-invalid": isInvalid,
 				"is-disabled": isDisabled,
@@ -120,6 +122,14 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
+			heading: "Hovered",
+			content: Template({...args, isHovered: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
 			heading: "Focused",
 			content: Template({...args, isFocused: true}, context)
 		})}
@@ -136,7 +146,7 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Keyboard focused",
+			heading: "Keyboard-focused",
 			content: Template({...args, isKeyboardFocused: true}, context)
 		})}
 		${Container({
@@ -144,7 +154,7 @@ export const AllDefaultVariantsGroup = (args, context) => Container({
 			containerStyles: {
 				"gap": "8px",
 			},
-			heading: "Invalid, keyboard focused",
+			heading: "Invalid, keyboard-focused",
 			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
 		})}
 	`

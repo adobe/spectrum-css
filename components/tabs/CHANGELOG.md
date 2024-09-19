@@ -387,11 +387,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 \*feat(tabs)!: migrate tokens (#1902)([6d07436](https://github.com/adobe/spectrum-css/commit/6d07436)), closes[#1902](https://github.com/adobe/spectrum-css/issues/1902)
 
-    	###
-    	🛑 BREAKING CHANGES
+### Migration Guide
 
-    		*
-    		Migrates the Tabs component to use `@adobe/spectrum-tokens`.
+#### Compact Tabs
+
+Compact tabs should not be used without `.spectrum-Tabs--quiet`.
+
+#### 🛑 BREAKING CHANGES
+
+- Migrates the Tabs component to use `@adobe/spectrum-tokens`.
 
 <a name="3.2.64"></a>
 
@@ -1045,6 +1049,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨ Features
 
+#### T-shirt sizing
+
+Tabs now support t-shirt sizing and require that you specify the size by adding a `.spectrum-Tabs--size*` class.
+
 - **tabs:** add t-shirt size classes and styles ([4b818f2](https://github.com/adobe/spectrum-css/commit/4b818f2))
 
 ### 🐛 Bug fixes
@@ -1163,6 +1171,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 3.0.0-beta.3
 
 🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tabs@3.0.0-beta.2...@spectrum-css/tabs@3.0.0-beta.3)
+
+### Migration Guide
+
+#### Change workflow icon size to medium
+
+If you use a workflow icon with tab items, please replace `.spectrum-Icon--sizeS` with `.spectrum-Icon--sizeM`.
 
 **Note:** Version bump only for package @spectrum-css/tabs
 

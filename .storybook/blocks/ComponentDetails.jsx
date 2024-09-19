@@ -2,7 +2,7 @@ import { useOf } from '@storybook/blocks';
 import { ResetWrapper } from "@storybook/components";
 import { styled } from "@storybook/theming";
 import React, { useEffect, useState } from "react";
-import { Code } from "./Typography";
+import { Code } from "./Typography.jsx";
 import { fetchToken } from "./utilities.js";
 
 export const DList = styled.dl`
@@ -75,6 +75,15 @@ export const DDefinition = styled.dd`
 	font-size: ${props => props.theme.typography.size.s};
 `;
 
+export const DSet = ({ term, children }) => {
+	return (
+		<>
+			<DTerm><Code style={{ display: "inline-block" }}>{term}</Code></DTerm>
+			<DDefinition>{children}</DDefinition>
+		</>
+	)
+};
+
 export const StatusLight = styled.span(({ variant = "positive", ...props }) => `
 	border-radius: 50%;
 	vertical-align: middle;
@@ -126,7 +135,6 @@ const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false
  * @returns
  */
 function processReleaseData(storyMeta, npmData) {
-	console.log("Processing release data", npmData);
 	const previewURL = "https://www.npmjs.org/package/";
 
 	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
@@ -218,7 +226,9 @@ function initCache(key) {
 	const [cache, setCache] = useState(JSON.parse(localStorage.getItem(key)) ?? {});
 
 	useEffect(() => {
-		localStorage.setItem(key, JSON.stringify(cache));
+		try {
+			localStorage.setItem(key, JSON.stringify(cache));
+		} catch (error) {/* empty */}
 	}, [key, cache]);
 
 	return [cache, setCache];
@@ -230,29 +240,29 @@ function fetchNpmData(packageName, setnpmData, setIsLoading) {
 	// Capture the npm data for the component from the registry
 	useEffect(() => {
 		if (typeof cache === "object" && Object.keys(cache).length > 0) {
-			console.log(`Use cached npm data for ${packageName}`);
 			setnpmData(cache);
 			setIsLoading(false);
 			return;
 		}
 
-		console.log(`Fetching npm data for ${packageName}`);
 		fetch("https://registry.npmjs.org/" + packageName).then(async (response) => {
 			if (!response.ok) {
-				throw new Error(`Failed to fetch npm data for ${packageName}`);
+				console.warn(`Failed to fetch npm data for ${packageName}`);
+				return;
 			}
 
 			const json = await response.json();
 
 			if (!json) {
-				throw new Error(`Failed to fetch npm data for ${packageName}`);
+				console.warn(`Failed to fetch npm data for ${packageName}`);
+				return;
 			}
 
 			setnpmData(json);
 			setCache(json);
 			setIsLoading(false);
 		}).catch((error) => {
-			console.error(error?.message ?? error);
+			console.warn(error?.message ?? error);
 		});
 	}, [cache, setCache, packageName, setnpmData, setIsLoading]);
 }
@@ -288,19 +298,19 @@ export const ComponentDetails = () => {
 				<DList className="docblock-metadata sb-unstyled">
 					{ isDeprecated
 						?	<>
-								<DTermDTerm key={'status'}>Status:</DTermDTerm>
+								<DTerm key={'status'}>Status:</DTerm>
 								<DDefinition key={'status-data'}>Deprecated</DDefinition>
 							</>
 						: ""
 					}
 					{ showLocalVersion
 						?	<>
-								<DTerm>Local version:</DTerm>
-								<DDefinition><VersionDetails tag={"local"} data={allVersions && allVersions.find(([tag]) => tag === "local")?.[1]} isDeprecated={isDeprecated} /></DDefinition>
+								<DTerm key={'version-label'}>Local version:</DTerm>
+								<DDefinition key={'version'}><VersionDetails tag={"local"} data={allVersions && allVersions.find(([tag]) => tag === "local")?.[1]} isDeprecated={isDeprecated} /></DDefinition>
 							</>
 						: <>
-							<DTerm>Latest version:</DTerm>
-							<DDefinition><VersionDetails tag={"latest"} data={allVersions && allVersions.find(([tag]) => tag === "latest")?.[1]} isDeprecated={isDeprecated} skipLink={true} /></DDefinition>
+							<DTerm key={'version-label'}>Latest version:</DTerm>
+							<DDefinition key={'version'}><VersionDetails tag={"latest"} data={allVersions && allVersions.find(([tag]) => tag === "latest")?.[1]} isDeprecated={isDeprecated} skipLink={true} /></DDefinition>
 						</>
 					}
 				</DList>
@@ -333,14 +343,9 @@ export const TaggedReleases = () => {
 			{ !isLoading ?
 				<DList skipBorder={true} className="docblock-releases sb-unstyled">
 					{ allVersions.filter(([tag]) => tag !== "local").map(([tag, data], idx) => (
-						<>
-							<DTerm>
-								<Code style={{ display: "inline-block" }}>{tag}</Code>
-							</DTerm>
-							<DDefinition>
-								<VersionDetails tag={tag} data={data} isDeprecated={isDeprecated} />
-							</DDefinition>
-						</>
+						<DSet key={`${tag}-${idx}`} term={tag}>
+							<VersionDetails tag={tag} data={data} isDeprecated={isDeprecated} skipDate={true} />
+						</DSet>
 					))}
 				</DList>
 				: ""

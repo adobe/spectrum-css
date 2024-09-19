@@ -39,9 +39,11 @@ export const ButtonGroups = Variants({
 			testHeading: capitalize(variant),
 			variant,
 		})),
-		...["fill", "outline"].map((treatment) => ({
-			testHeading: capitalize(treatment),
-			treatment,
+		// Note: In Spectrum 2, outline buttons are no longer available in accent and negative options.
+		...["accent", "negative", "primary", "secondary"].map((variant) => ({
+			testHeading: capitalize(variant) + " - outline",
+			variant,
+			treatment: "outline",
 		})),
 		{
 			testHeading: "Text wrapping with workflow icon",
@@ -49,8 +51,7 @@ export const ButtonGroups = Variants({
 				"max-inline-size": "480px",
 			},
 			iconName: "Edit",
-			label:
-        "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
 			Template,
 		},
@@ -61,8 +62,7 @@ export const ButtonGroups = Variants({
 			},
 			// Uses a UI icon that is smaller than workflow sizing, to test alignment:
 			iconName: "Cross100",
-			label:
-        "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
 			Template,
 		},
@@ -94,8 +94,7 @@ export const ButtonGroups = Variants({
 			},
 			// UI icon that is larger than workflow sizing:
 			iconName: "ArrowDown600",
-			label:
-        "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
 			Template,
 		},
