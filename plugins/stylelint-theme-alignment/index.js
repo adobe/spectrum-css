@@ -52,10 +52,10 @@ const ruleFunction = (enabled) => {
 		const isTheme = parts[parts.length - 2] === "themes";
 		const filename = parts[parts.length - 1];
 
-		if (!isTheme || filename === "spectrum-two.css") return;
+		if (!isTheme || filename === "spectrum.css") return;
 
 		// All the parts of the source file but replace the filename with spectrum-two.css
-		const baseFile = [...parts.slice(0, -1), "spectrum-two.css"].join(sep);
+		const baseFile = [...parts.slice(0, -1), "spectrum.css"].join(sep);
 		const rootPath = parts.slice(0, -2).join(sep);
 
 		// If the base file doesn't exist, throw an error
