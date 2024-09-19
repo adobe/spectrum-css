@@ -11,6 +11,7 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-missing-var",
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
+		"@spectrum-tools/theme-alignment",
 		"stylelint-high-performance-animation",
 	],
 	rules: {
@@ -170,19 +171,25 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
+			files: ["site/**/*.css", ".storybook/assets/*.css"],
+			rules: {
+				"custom-property-pattern": null,
+				"color-function-notation": null,
+			},
+		},
+		{
+			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
 			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "tokens/**/*.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
-			},
+			}
 		},
 		{
-			files: [".storybook/assets/*.css"],
+			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
+			files: ["components/*/themes/express.css", "!components/*/themes/spectrum.css"],
 			rules: {
-				"custom-property-pattern": null,
-				"color-function-notation": null,
-				"spectrum-tools/no-unused-custom-properties": null,
-				"spectrum-tools/no-unknown-custom-properties": null,
+				"spectrum-tools/theme-alignment": true,
 			},
 		},
 	],
