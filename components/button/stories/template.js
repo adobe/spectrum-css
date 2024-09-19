@@ -174,16 +174,16 @@ export const TextOverflowTemplate = (args) => Container({
 });
 
 export const TextWrapTemplate = (args) => Container({
-	withBorder: false,
 	direction: "column",
 	wrapperStyles: {
 		rowGap: "12px",
+		maxInlineSize: "120px",
 	},
 	content: html`
     ${Template({
       ...args,
       customStyles: {
-        "max-inline-size": "160px",
+        
       },
       label: "Be a premium member",
 			noWrap: true,
@@ -191,7 +191,15 @@ export const TextWrapTemplate = (args) => Container({
     ${Template({
       ...args,
       customStyles: {
-        "max-inline-size": "160px",
+        "max-inline-size": "100%",
+      },
+      label: "Be a premium member",
+			noWrap: true,
+    })}
+    ${Template({
+      ...args,
+      customStyles: {
+        "max-inline-size": "100%",
       },
       iconName: "Star",
 			label: "Be a premium member",

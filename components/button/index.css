@@ -112,6 +112,7 @@
 	font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
 	font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
 	gap: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
+	max-inline-size: var(--mod-button-max-inline-size, none);
 	min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
 	min-block-size: var(--mod-button-height, var(--spectrum-button-height));
 

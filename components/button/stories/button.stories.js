@@ -60,7 +60,7 @@ export default {
 		staticColor,
 		noWrap: {
 			name: "Disable label wrap",
-			description: "Used only to keep the button label text in one line. It is intended to have the label wrap as it is part of design specifications.",
+			description: "Used to keep the button label text on one line. Note that this option is not a part of the design specifications which intend for the label to wrap. Use with care and consideration of this option's overflow behavior and the readability of the button's content.",
 			type: { name: "boolean" },
 			table: {
 				category: "Advanced",
@@ -297,7 +297,9 @@ WithWrapping.parameters = {
 };
 
 /**
- * The normal behavior for lengthy text in the given horizontal space available is that it will wrap to form another line. By using the `noWrap` option, the lengthy button text will horizontally expand the entirety of the container. Be sure to define the width of the button container using this option. Please note: this can cause undesired overflow experiences and to help prevent this, the overflowing text will attempt to hide by showing an ellipsis (...). 
+ * The normal behavior for lengthy text in the given horizontal space available is that it will wrap to form another line. By using the `.spectrum-Button--noWrap` class, the lengthy button text will not cause a line break and the width of the button will expand until it reaches its maximum width.
+ * Please note: this can cause undesired overflow experiences and to help prevent this, the overflowing text will attempt to hide by showing an ellipsis (...). This is demonstrated in the last two examples below, by constraining the maximum width of the button.
+ * This option is not part of the design spec, so please use carefully, with consideration of the overflow behavior and the readability of the button's content.
  * */
 
 export const DisableWrapping = TextWrapTemplate.bind({});
