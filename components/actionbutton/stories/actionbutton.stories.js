@@ -145,7 +145,7 @@ Quiet.parameters = {
  */
 
 export const HoldIcon = IconOnlyOption.bind({});
-HoldIcon.args = ["!dev"];
+HoldIcon.tags = ["!dev"];
 HoldIcon.parameters = {
 	chromatic: {disableSnapshot: true},
 };
@@ -169,7 +169,7 @@ StaticWhiteQuiet.args = {
 	isQuiet: true,
 };
 
-StaticWhiteDocs.storyName = "Static white (quiet)";
+StaticWhiteQuiet.storyName = "Static white (quiet)";
 
 StaticWhiteQuiet.parameters = {
 	chromatic: { disableSnapshot: true }
@@ -193,7 +193,7 @@ StaticBlackQuiet.args = {
 	isQuiet: true,
 };
 
-StaticWhiteDocs.storyName = "Static black (quiet)";
+StaticBlackQuiet.storyName = "Static black (quiet)";
 
 StaticBlackQuiet.parameters = {
 	chromatic: { disableSnapshot: true }

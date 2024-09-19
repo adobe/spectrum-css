@@ -140,6 +140,7 @@ export const ActionButtonsWithIconOptions = ({
 	content: html`
     ${Template({
       ...args,
+			iconName: undefined,
     }, context )}
     ${Template({
       ...args,
@@ -151,6 +152,11 @@ export const ActionButtonsWithIconOptions = ({
 	${Template({
       ...args,
       hideLabel: true,
+      hasPopup: "true",
+    }, context )}
+	${Template({
+      ...args,
+			iconName: undefined,
       hasPopup: "true",
     }, context )}
   `,
@@ -175,8 +181,7 @@ export const IconOnlyOption = ({
       hideLabel: true,
 			isQuiet: true,
       hasPopup: "true",
-    }, context )}
-	`
+    }, context )}`
 });
 
 export const TreatmentTemplate = (args, context) => Container({
