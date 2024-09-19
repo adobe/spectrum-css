@@ -7,7 +7,7 @@ import { TagGroups } from "./tag.test.js";
 import { RemovableTemplate, StandardTemplate, TagsDefaultOptions } from "./template.js";
 
 /**
- * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.
+ * A tag categorizes content. It can represent keywords or people, and are [grouped](?path=/docs/components-tag-group--docs) to describe an item or a search request.
  */
 export default {
 	title: "Tag",
@@ -101,17 +101,6 @@ export const Default = TagGroups.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
 
-
-export const Standard = StandardTemplate.bind({});
-Standard.args = Default.args;
-Standard.tags = ["!dev"];
-Standard.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-Standard.storyName = "Default";
-
-
 // ********* VRT ONLY ********* //
 // @todo combine variants into one snapshot
 export const WithForcedColors = TagGroups.bind({});
@@ -124,6 +113,15 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
+
+export const Standard = StandardTemplate.bind({});
+Standard.args = Default.args;
+Standard.tags = ["!dev"];
+Standard.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+Standard.storyName = "Default";
 
 export const Removable = RemovableTemplate.bind({});
 Removable.tags = ["!dev"];
@@ -142,5 +140,23 @@ export const Sizing = (args, context) => Sizes({
 }, context);
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+
+/**
+ * When the tag text is too long for the available horizontal space, it truncates. The full text should be revealed with a tooltip on hover.
+ * */
+
+export const TextOverflow = TagGroups.bind({});
+TextOverflow.tags = ["!dev"];
+TextOverflow.args = {
+	hasIcon: true,
+	iconName: "CheckmarkCircle",
+	label: "An example of text overflow behavior. When the button text is too long for the horizontal space available, it will truncate and stay on one line.",
+	customStyles: { "max-inline-size": "200px" }
+};
+
+TextOverflow.parameters = {
 	chromatic: { disableSnapshot: true },
 };
