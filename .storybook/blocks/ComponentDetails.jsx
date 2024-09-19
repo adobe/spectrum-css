@@ -253,6 +253,9 @@ export const ResourceLinkContent = ({data, linkType=["package", "repository", "g
 	// componentBetaName: for components with guidelines that are still on spectrum-contributions/beta site
 	let packageAltName = "";
 	let packageAltLink = "";
+
+	// For form and meter, both are nested within other component package.json files
+  let nestedComponent = packageJson?.nestedComponentName ?? undefined;
 	
 	if(linkType === "package") {
 		// NPM package name and link 
@@ -269,6 +272,16 @@ export const ResourceLinkContent = ({data, linkType=["package", "repository", "g
 	else if (linkType === "guidelines") {
 		// guidelines site name and link 
 		packageName = packageJson?.componentGuidelinesName ?? undefined;
+
+		 // TODO: This may not be a sustainable approach to targeting specific nested components. For example, text area is sort of nested under text field, but we don't surface text area as a separate component, like meter or form. We should probably refactor this to either support nested components more dynamically or potentially un-nest components.
+		if (nestedComponent === "form") {
+			packageName = undefined;
+		}
+
+		if (nestedComponent === "meter") {
+			packageName = nestedComponent;
+		}
+
 		packageLink = (packageName && typeof packageName !== "undefined") ? `https://spectrum.adobe.com/page/${packageName}` : false;
 
 		// internal contributions/beta guidelines name and link
