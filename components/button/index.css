@@ -301,12 +301,6 @@ a.spectrum-Button {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-
-	&.spectrum-Tooltip--hide {
-		.spectrum-Tooltip {
-			display: none;
-		}
-	}
 }
 
 

@@ -4,7 +4,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isPending, size, staticColor } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { ButtonGroups } from "./button.test.js";
-import { ButtonsWithIconOptions, TextOverflowTemplate, TreatmentTemplate } from "./template.js";
+import { ButtonsWithIconOptions, TextOverflowTemplate, TextWrapTemplate, TreatmentTemplate } from "./template.js";
 
 /**
  * Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
@@ -293,5 +293,20 @@ WithWrapping.args = {
 	variant: "primary",
 };
 WithWrapping.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The normal behavior for lengthy text in the given horizontal space available is that it will wrap to form another line. By using the `noWrap` option, the lengthy button text will horizontally expand the entirety of the container. Be sure to define the width of the button container using this option. Please note: this can cause undesired overflow experiences and to help prevent this, the overflowing text will attempt to hide by showing an ellipsis (...). 
+ * */
+
+export const DisableWrapping = TextWrapTemplate.bind({});
+DisableWrapping.tags = ["!dev"];
+DisableWrapping.storyName = "Disable label wrap";
+DisableWrapping.args = {
+	variant: "primary",
+};
+
+DisableWrapping.parameters = {
 	chromatic: { disableSnapshot: true },
 };
