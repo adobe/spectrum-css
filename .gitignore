@@ -1,6 +1,9 @@
 dist
+
 !tokens/dist/index.css
 !tokens/dist/css/*.css
+
+!ui-icons/dist
 
 # Not committing the map assets, these are dev-only
 *.map
