@@ -91,7 +91,8 @@ const fetchIconDetails = ({
  * @param {string} props.rootClass
  * @param {"xs"|"s"|"m"|"l"|"xl"|"xxl"} props.size
  * @param {"ui"|"workflow"} props.setName
- * @param {string} props.iconName - Icon name with or without the icon scale number appended. Names with the scale (e.g. 75, 100) will replace it based upon the value of 'size'.
+ * @param {string} props.iconName Icon name; could be from either icon set.
+ * @param {string} props.uiIconName Icon name selected from the UI icon set. When defined, takes precedence over iconName when setName == "ui".
  * @param {string} props.fill
  * @param {string} props.id
  * @param {string[]} props.customClasses
@@ -102,6 +103,7 @@ export const Template = ({
 	size = "m",
 	setName,
 	iconName,
+	uiIconName,
 	fill,
 	id = getRandomId("icon"),
 	customClasses = [],
@@ -138,6 +140,11 @@ export const Template = ({
 		if (!uiIconSizes && details.uiIconSizes) {
 			uiIconSizes = details.uiIconSizes;
 		}
+	}
+
+	// UI icons are selected from a different control.
+	if (setName === "ui" && uiIconName) {
+		iconName = uiIconName;
 	}
 
 	if (!iconName) {
