@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.1
+
+### Patch Changes
+
+- [#3026](https://github.com/adobe/spectrum-css/pull/3026) [`544a803`](https://github.com/adobe/spectrum-css/commit/544a8039e84423a4db3137a0688f27b7812e291f) Thanks [@castastrophe](https://github.com/castastrophe)! - Dependency updates to align with versions used in the parent repository.
+
 ## 2.0.0
 
 ### Major Changes
