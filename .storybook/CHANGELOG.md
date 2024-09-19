@@ -242,6 +242,13 @@
   - @spectrum-css/ui-icons@2.0.0-s2-foundations.2
   - @spectrum-css/tokens@15.0.0-s2-foundations.2
 
+## 10.11.2
+
+### Patch Changes
+
+- Updated dependencies [[`b16a159`](https://github.com/adobe/spectrum-css/commit/b16a159bd8b1456b384f13f51ab0cdb318a692e8)]:
+  - @spectrum-css/tokens@14.3.2
+
 ## 10.11.1
 
 ### Patch Changes
