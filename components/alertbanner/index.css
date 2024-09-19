@@ -42,14 +42,14 @@
 	&.is-open {
 		display: flex;
 	}
+}
 
-	&.spectrum-AlertBanner--info {
-		background-color: var(--mod-alert-banner-informative-background, var(--spectrum-alert-banner-informative-background));
-	}
+.spectrum-AlertBanner--info {
+	background-color: var(--mod-alert-banner-informative-background, var(--spectrum-alert-banner-informative-background));
+}
 
-	&.spectrum-AlertBanner--negative {
-		background-color: var(--mod-alert-banner-negative-background, var(--spectrum-alert-banner-negative-background));
-	}
+.spectrum-AlertBanner--negative {
+	background-color: var(--mod-alert-banner-negative-background, var(--spectrum-alert-banner-negative-background));
 }
 
 .spectrum-AlertBanner-body {

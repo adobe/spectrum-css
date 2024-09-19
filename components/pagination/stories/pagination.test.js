@@ -12,5 +12,9 @@ export const PaginationGroup = Variants({
 			testHeading: "Explicit",
 			variant: "explicit",
 		},
+		{
+			testHeading: "Button",
+			variant: "button",
+		},
 	]
 });

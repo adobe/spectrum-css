@@ -18,9 +18,6 @@
 	flex-wrap: wrap;
 	gap: var(--mod-actiongroup-horizontal-spacing-regular, var(--spectrum-actiongroup-horizontal-spacing-regular));
 
-	margin-block: var(--mod-actiongroup-margin-block, var(--mod-actiongroup-margin-block-start, 0) var(--mod-actiongroup-margin-block-end, 0));
-	margin-inline: var(--mod-actiongroup-margin-inline, var(--mod-actiongroup-margin-inline-start, 0) var(--mod-actiongroup-margin-inline-end, 0));
-
 	.spectrum-ActionGroup-item {
 		flex-shrink: 0;
 
@@ -38,9 +35,9 @@
 }
 
 .spectrum-ActionGroup--vertical {
+	gap: var(--mod-actiongroup-vertical-spacing-regular, var(--spectrum-actiongroup-vertical-spacing-regular));
 	display: inline-flex;
 	flex-direction: column;
-	gap: var(--mod-actiongroup-vertical-spacing-regular, var(--spectrum-actiongroup-vertical-spacing-regular));
 }
 
 .spectrum-ActionGroup--compact {
@@ -52,8 +49,8 @@
 
 	.spectrum-ActionGroup-item {
 		position: relative;
-		z-index: 0;
 		border-radius: var(--mod-actiongroup-border-radius-reset, var(--spectrum-actiongroup-border-radius-reset));
+		z-index: 0;
 
 		&:first-child {
 			/* Action button passthrough styling */

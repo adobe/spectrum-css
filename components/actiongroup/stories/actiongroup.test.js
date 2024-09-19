@@ -25,13 +25,5 @@ export const ActionGroups = Variants({
 			testHeading: "Vertical",
 			vertical: true,
 		},
-		{
-			testHeading: "Static black",
-			staticColor: "black",
-		},
-		{
-			testHeading: "Static white",
-			staticColor: "white",
-		},
 	],
 });

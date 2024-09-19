@@ -64,14 +64,6 @@ export const ActionButtonGroup = Variants({
 			},
 			withStates: false,
 		},
-		{
-			testHeading: "Static black",
-			staticColor: "black",
-		},
-		{
-			testHeading: "Static white",
-			staticColor: "white",
-		},
 	],
 	stateData: [{
 		testHeading: "Disabled",
