@@ -1,10 +1,21 @@
-import { Canvas, ArgTypes, Meta, Description, Title } from "@storybook/blocks";
+import {
+  Canvas,
+  ArgTypes,
+  Meta,
+  Description,
+  Title,
+  Subtitle,
+} from "@storybook/blocks";
+import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
 
 import * as ContextualHelpStories from "./contextualhelp.stories";
 
 <Meta of={ContextualHelpStories} title="Docs" />
 
 <Title of={ContextualHelpStories} />
+<Subtitle of={ContextualHelpStories} />
+<ComponentDetails />
+
 <Description of={ContextualHelpStories} />
 
 ## Info icon variants

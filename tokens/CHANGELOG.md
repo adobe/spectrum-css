@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.3.2
+
+### Patch Changes
+
+- [#3137](https://github.com/adobe/spectrum-css/pull/3137) [`b16a159`](https://github.com/adobe/spectrum-css/commit/b16a159bd8b1456b384f13f51ab0cdb318a692e8) Thanks [@castastrophe](https://github.com/castastrophe)! - `--spectrum-well-border-color` was mapped to the `-rgb` postfixed value which resolves to a raw rgb number but not a valid color.
+
 ## 14.3.1
 
 ### Patch Changes
