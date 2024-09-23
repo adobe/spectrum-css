@@ -14,6 +14,7 @@ export const Template = ({
 	size = "m",
 	label,
 	iconName,
+	iconSet = "workflow",
 	variant = "neutral",
 	fixed,
 	customStyles = {},
@@ -34,6 +35,7 @@ export const Template = ({
     ${when(iconName, () =>
       Icon({
         iconName,
+		setName: iconSet,
         customClasses: [
           ...(typeof label === "undefined"
             ? [`${rootClass}-icon--no-label`]

@@ -36,6 +36,7 @@ export const Template = ({
 			${when(variant, () =>
 				Icon({
 					iconName,
+					setName: "workflow",
 					size: "m",
 					customClasses: [`${rootClass}-typeIcon`],
 				}, context)
