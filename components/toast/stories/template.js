@@ -1,7 +1,7 @@
 import { Template as Button } from "@spectrum-css/button/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -63,3 +63,20 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const ToastWrapOptions = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12",
+	},
+	content: html`
+		${Template({
+			...args,
+			message: "A new version of Lightroom Classic is now available",
+			variant: "info"
+		}, context )}
+	`
+});
