@@ -24,6 +24,18 @@ export const ToastGroup = Variants({
 			variant: "positive",
 			message: "Copied to clipboard",
 			inlineButtonLabel: "Eject",
-		}
+		},
+		{
+			testHeading: "Wrapping with button",
+			variant: "info",
+			message: "A new version of Lightroom Classic is now available. Use the Update button below to start using the new version.",
+			inlineButtonLabel: "Update"
+		},
+		{
+			testHeading: "Wrapping without button",
+			variant: "info",
+			message: "A new version of Lightroom Classic is now available. Use the Update button below to start using the new version.",
+			inlineButtonLabel: ""
+		}	
 	]
 });
