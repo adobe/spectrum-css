@@ -32,6 +32,7 @@ export const Template = ({
 	isPending = false,
 	ariaExpanded,
 	ariaControls,
+	noWrap = false,
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 
@@ -51,6 +52,7 @@ export const Template = ({
         ["is-hover"]: isHovered,
         ["is-focus-visible"]: isFocused,
         ["is-active"]: isActive,
+        [`${rootClass}--noWrap`]: noWrap,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
       id=${ifDefined(id)}
@@ -167,6 +169,41 @@ export const TextOverflowTemplate = (args) => Container({
       },
       iconName: "Edit",
       label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
+    })}
+  `,
+});
+
+export const TextWrapTemplate = (args) => Container({
+	direction: "column",
+	wrapperStyles: {
+		rowGap: "12px",
+		maxInlineSize: "120px",
+	},
+	content: html`
+    ${Template({
+      ...args,
+      customStyles: {
+        
+      },
+      label: "Be a premium member",
+			noWrap: true,
+    })}
+    ${Template({
+      ...args,
+      customStyles: {
+        "max-inline-size": "100%",
+      },
+      label: "Be a premium member",
+			noWrap: true,
+    })}
+    ${Template({
+      ...args,
+      customStyles: {
+        "max-inline-size": "100%",
+      },
+      iconName: "Star",
+			label: "Be a premium member",
+      noWrap: true,
     })}
   `,
 });

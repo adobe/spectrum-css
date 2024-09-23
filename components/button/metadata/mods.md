@@ -37,6 +37,7 @@
 | `--mod-button-margin-block`                |
 | `--mod-button-margin-left`                 |
 | `--mod-button-margin-right`                |
+| `--mod-button-max-inline-size`             |
 | `--mod-button-min-width`                   |
 | `--mod-button-padding-label-to-icon`       |
 | `--mod-button-static-content-color`        |
