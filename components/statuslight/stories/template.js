@@ -10,6 +10,7 @@ export const Template = ({
 	size = "m",
 	variant = "info",
 	label,
+	isDisabled,
 	customStyles = {},
 } = {}) => html`
 	<div
@@ -18,6 +19,7 @@ export const Template = ({
 			[`${rootClass}--size${size?.toUpperCase()}`]:
 				typeof size !== "undefined",
 			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+			"is-disabled": isDisabled,
 		})}
 		style=${styleMap(customStyles)}
 	>

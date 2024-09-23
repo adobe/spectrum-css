@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { size } from "@spectrum-css/preview/types";
+import { isDisabled, size } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import pkgJson from "../package.json";
 import { StatusLightGroup } from "./statuslight.test.js";
@@ -22,6 +22,7 @@ export default {
 			},
 			control: { type: "text" },
 		},
+		isDisabled,
 		variant: {
 			name: "Variant",
 			description: "Changes the color of the status dot. The variant list includes both semantic and non-semantic options.",
@@ -60,6 +61,7 @@ export default {
 		size: "m",
 		label: "Status",
 		variant: "info",
+		isDisabled: false,
 	},
 	parameters: {
 		packageJson: pkgJson,
@@ -114,6 +116,15 @@ NonSemanticColors.parameters = {
 	chromatic: { disabledSnapshot: true },
 };
 NonSemanticColors.storyName = "Non-semantic colors";
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	isDisabled: true,
+};
+Disabled.tags = ["!dev"];
+Disabled.parameters = {
+	chromatic: { disabledSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = StatusLightGroup.bind({});

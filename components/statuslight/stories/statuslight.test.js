@@ -16,7 +16,13 @@ export const StatusLightGroup = Variants({
 		{
 			testHeading: "Truncation",
 			label: "Status light label that is long and wraps to the next line",
-			customStyles: {"max-width": "150px"}
+			customStyles: {"max-width": "150px"},
 		}
 	],
+	stateData: [
+		{
+			testHeading: "Disabled",
+			isDisabled: true,
+		}
+	]
 });
