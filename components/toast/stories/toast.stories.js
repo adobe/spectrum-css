@@ -5,6 +5,8 @@ import { ToastGroup } from "./toast.test.js";
 
 /**
  * Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken.
+ * 
+ * They must include text to communicate a message. Write the text as concisely as possible while still being clear about what has happened or is happening. View the toast [content standards](https://spectrum.adobe.com/page/toast/#Content-standards) for writing guidelines.
  */
 export default {
 	title: "Toast",
