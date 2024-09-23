@@ -22,6 +22,7 @@ export const Template = ({
 	let iconName = "Info";
 	if (variant === "negative") iconName = "Alert";
 	if (variant === "positive") iconName = "CheckmarkCircle";
+	if (variant === "neutral") iconName = undefined;
 
 	return html`
 		<div
@@ -68,7 +69,7 @@ export const ToastWrapOptions = ({
 	...args
 }, context ) => Container({
 	withBorder: false,
-	direction: "row",
+	direction: "column",
 	wrapperStyles: {
 		columnGap: "12",
 	},
@@ -76,7 +77,61 @@ export const ToastWrapOptions = ({
 		${Template({
 			...args,
 			message: "A new version of Lightroom Classic is now available",
-			variant: "info"
+			variant: "info",
+			inlineButtonLabel: "Update"
 		}, context )}
-	`
+		${Template({
+			...args,
+			message: "A new version of Lightroom Classic is now available. Use the Update button below to start using the new version.",
+			variant: "info",
+			inlineButtonLabel: "Update"
+		}, context )}
+		${Template({
+			...args,
+			message: "A new version of Lightroom Classic is now available",
+			variant: "info",
+		}, context )}
+		${Template({
+			...args,
+			message: "An update is available",
+			variant: "info",
+			customStyles: {
+				"max-inline-size": "240px"
+			},
+		}, context )}`
+});
+
+export const ActionTemplate = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "column",
+	wrapperStyles: {
+		columnGap: "12",
+	},
+	content: html`
+		${Template({
+			...args,
+			message: "All files archived",
+			variant: "neutral",
+			inlineButtonLabel: "Undo"
+		}, context )}
+		${Template({
+			...args,
+			message: "Analysis complete",
+			variant: "positive",
+			inlineButtonLabel: "View"
+		}, context )}
+		${Template({
+			...args,
+			message: "An update is available",
+			variant: "info",
+			inlineButtonLabel: "Update"
+		}, context )}
+		${Template({
+			...args,
+			message: "2 assets missing",
+			variant: "negative",
+			inlineButtonLabel: "Show"
+		}, context )}`
 });
