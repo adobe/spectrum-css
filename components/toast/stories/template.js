@@ -65,7 +65,7 @@ export const Template = ({
 	`;
 };
 
-export const ToastWrapOptions = (args, context ) => Container({
+export const ToastWrapOptions = (args, context) => Container({
 	withBorder: false,
 	direction: "column",
 	wrapperStyles: {
@@ -77,18 +77,18 @@ export const ToastWrapOptions = (args, context ) => Container({
 			message: "A new version of Lightroom Classic is now available",
 			variant: "info",
 			inlineButtonLabel: "Update"
-		}, context )}
+		}, context)}
 		${Template({
 			...args,
 			message: "A new version of Lightroom Classic is now available. Use the Update button below to start using the new version.",
 			variant: "info",
 			inlineButtonLabel: "Update"
-		}, context )}
+		}, context)}
 		${Template({
 			...args,
 			message: "A new version of Lightroom Classic is now available",
 			variant: "info",
-		}, context )}
+		}, context)}
 		${Template({
 			...args,
 			message: "An update is available",
@@ -96,14 +96,14 @@ export const ToastWrapOptions = (args, context ) => Container({
 			customStyles: {
 				"max-inline-size": "240px"
 			},
-		}, context )}`
+		}, context)}`
 });
 
-export const ActionTemplate = (args, context ) => Container({
+export const ActionTemplate = (args, context) => Container({
 	withBorder: false,
 	direction: "column",
 	wrapperStyles: {
-		columnGap: "12",
+		columnGap: "12px",
 	},
 	content: html`
 		${Template({
@@ -111,23 +111,23 @@ export const ActionTemplate = (args, context ) => Container({
 			message: "All files archived",
 			variant: "neutral",
 			inlineButtonLabel: "Undo"
-		}, context )}
+		}, context)}
 		${Template({
 			...args,
 			message: "Analysis complete",
 			variant: "positive",
 			inlineButtonLabel: "View"
-		}, context )}
+		}, context)}
 		${Template({
 			...args,
 			message: "An update is available",
 			variant: "info",
 			inlineButtonLabel: "Update"
-		}, context )}
+		}, context)}
 		${Template({
 			...args,
 			message: "2 assets missing",
 			variant: "negative",
 			inlineButtonLabel: "Show"
-		}, context )}`
+		}, context)}`
 });
