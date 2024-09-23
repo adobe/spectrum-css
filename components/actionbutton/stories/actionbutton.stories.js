@@ -8,6 +8,14 @@ import { ActionButtonsWithIconOptions, IconOnlyOption, TreatmentTemplate } from 
 
 /**
  * The action button component represents an action a user can take.
+ * 
+ * ## Usage notes  
+ * 
+ * For Action Buttons that only contain an icon with no label, do not include the element with the `.spectrum-ActionButton-label` class in the markup. If an icon and a label are both used, ensure that the element with the `.spectrum-ActionButton-label` class comes after the `.spectrum-Icon` element.
+ * 
+ * If the hold icon is used, ensure that the element with the `.spectrum-ActionButton-hold` class comes before the `.spectrum-Icon` element.
+ * 
+ * When using `.spectrum-ActionButton--staticWhite` or `.spectrum-ActionButton--staticblack`, use the `--mod-actionbutton-content-color-default` custom property to set the text color when selected.  
  */
 export default {
 	title: "Action button",
@@ -84,11 +92,11 @@ export default {
 	},
 };
 
-// ********* DOCS ONLY ********* //
-
 export const Default = ActionButtonGroup.bind({});
 Default.args = {};
 Default.tags = ["!autodocs"];
+
+// ********* DOCS ONLY ********* //
 
 /**
  * Action buttons should always have a label, unless they are only using an icon that is universally understood and accessible. They can have an optional icon, but it should not be used for decoration. Use an icon only when necessary and when it has a strong association with the label text.
@@ -106,8 +114,6 @@ Standard.parameters = {
 Standard.storyName = "Default";
 
 /**
- * By default, action buttons are not emphasized. This is optimal for when an action button is not the core part of an interface, such as in application panels, where all the visual components are monochrome in order to direct focus to the content.
- *
  * The emphasized action button has a blue background for its selected state in order to provide a visual prominence. This is optimal for when the selection should call attention, such as within a tool bar.
  */
 
@@ -115,7 +121,6 @@ export const Emphasized = TreatmentTemplate.bind({});
 Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	isEmphasized: true,
-	isSelected: true
 };
 Emphasized.parameters = {
 	chromatic: {
@@ -124,9 +129,24 @@ Emphasized.parameters = {
 };
 
 /**
- * By default, action buttons have a visible background. This style works best in a dense array of controls where the background helps to separate action buttons from the surrounding container, or to give visibility to isolated buttons.
+ * When there are too many quiet action buttons in a small space bringing emphasis to them will be effective.
+ */
 
- * Alternatively, quiet action buttons can have no visible background until they’re interacted with. This style works best when a clear layout (vertical stack, table, grid) makes it easy to parse the buttons. Too many quiet components in a small space can be hard to read.
+export const EmphasizedQuiet = TreatmentTemplate.bind({});
+EmphasizedQuiet.tags = ["!dev"];
+EmphasizedQuiet.args = {
+	isEmphasized: true,
+	isQuiet: true
+};
+EmphasizedQuiet.parameters = {
+	chromatic: {
+		disableSnapshot: true,
+	},
+};
+EmphasizedQuiet.storyName = "Emphasized (quiet)";
+
+/**
+ * Quiet action buttons have no visible background until they’re interacted with. This style works best when a clear layout (vertical stack, table, grid) makes it easy to parse the buttons. Too many quiet components in a small space can be hard to read.
  */
 
 export const Quiet = TreatmentTemplate.bind({});

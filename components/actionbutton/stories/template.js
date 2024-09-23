@@ -158,9 +158,8 @@ export const ActionButtonsWithIconOptions = ({
       ...args,
 			iconName: undefined,
       hasPopup: "true",
-    }, context )}
-  `,
-}, context );
+    }, context )}`
+});
 
 export const IconOnlyOption = ({
 	...args
@@ -191,11 +190,11 @@ export const TreatmentTemplate = (args, context) => Container({
 		rowGap: "12px",
 	},
 	content: html`${[
-		{ isSelected: false, isDisabled: false, heading: "Default"}, 
+		{ isSelected: false, isDisabled: false, heading: "Default" }, 
 		{ isSelected: true, isDisabled: false, heading: "Selected" },
 		{ isSelected: false, isDisabled: true, heading: "Disabled" },
 		{ isSelected: true, isDisabled: true, heading: "Selected + disabled" }
-	].map(({isSelected, isDisabled, heading }) => Container({ 
+	].map(({ isSelected, isDisabled, heading }) => Container({ 
 		withBorder: false,
 		heading: heading,
 		content: ActionButtonsWithIconOptions({
