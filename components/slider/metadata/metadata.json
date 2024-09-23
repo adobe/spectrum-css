@@ -27,6 +27,7 @@
     ".spectrum-Slider--tick .spectrum-Slider-handle",
     ".spectrum-Slider--tick .spectrum-Slider-tickLabel",
     ".spectrum-Slider-controls",
+    ".spectrum-Slider-controls:not(:has(.spectrum-Slider-ticks))",
     ".spectrum-Slider-fill",
     ".spectrum-Slider-fill--right",
     ".spectrum-Slider-fill:before",

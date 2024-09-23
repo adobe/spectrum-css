@@ -152,6 +152,11 @@
 	position: relative;
 	z-index: auto;
 
+	&:not(:has(.spectrum-Slider-ticks)) {
+		display: flex;
+		align-items: center;
+	}
+
 	/* These calculations prevent the track from spilling outside of the control */
 	inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
 	margin-inline-start: var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin));
