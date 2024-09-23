@@ -13,6 +13,11 @@
 
 .spectrum.spectrum--express {
 	--system-well-border-width: var(--spectrum-border-width-100);
+	--system-well-border-color: rgba(var(--spectrum-gray-900-rgb), 0.05);
+	--system-well-border-radius: var(--spectrum-spacing-75);
 	--system-well-content-color: var(--spectrum-body-color);
 	--system-well-background-color: rgba(var(--spectrum-gray-800-rgb), 0.02);
+	--system-well-padding: var(--spectrum-spacing-300);
+	--system-well-margin-top: var(--spectrum-spacing-75);
+	--system-well-minimum-width: var(--spectrum-well-min-width);
 }

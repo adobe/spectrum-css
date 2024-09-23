@@ -21,6 +21,9 @@
 		--spectrum-coach-indicator-ring-inline-size: var(--spectrum-coach-indicator-ring-diameter);
 		--spectrum-coach-indicator-ring-block-size: var(--spectrum-coach-indicator-ring-diameter);
 
+		--spectrum-coach-indicator-ring-dark-color: var(--spectrum-gray-900);
+		--spectrum-coach-indicator-ring-light-color: var(--spectrum-gray-25);
+
 		--spectrum-coach-indicator-top: calc((var(--spectrum-coach-indicator-block-size) / 3) - var(--spectrum-coach-indicator-ring-border-size));
 		--spectrum-coach-indicator-left: calc((var(--spectrum-coach-indicator-inline-size) / 3) - var(--spectrum-coach-indicator-ring-border-size));
 
@@ -40,6 +43,7 @@
 		--spectrum-coach-indicator-animation-keyframe-100-scale: 2;
 		--spectrum-coach-indicator-animation-keyframe-100-opacity: 0;
 		--spectrum-coach-indicator-quiet-animation-keyframe-0-scale: 0.8;
+
 		&.spectrum-CoachIndicator--quiet {
 			--spectrum-coach-indicator-quiet-ring-diameter-size: var(--spectrum-coach-indicator-quiet-ring-diameter);
 			--spectrum-coach-indicator-animation-name: pulse-quiet;

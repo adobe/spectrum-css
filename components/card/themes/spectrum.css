@@ -23,5 +23,14 @@
 		--spectrum-card-divider-color: var(--spectrum-gray-300);
 		--spectrum-card-preview-background-color: var(--spectrum-background-base-color);
 		--spectrum-card-preview-background-color-hover: var(--spectrum-gray-300);
+		--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
+
+		.spectrum--dark & {
+			--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
+		}
+
+		.spectrum--darkest & {
+			--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-600-rgb);
+		}
 	}
 }

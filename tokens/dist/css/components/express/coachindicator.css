@@ -19,6 +19,8 @@
 	--system-coach-indicator-block-size: var(--system-coach-indicator-min-block-size);
 	--system-coach-indicator-ring-inline-size: var(--spectrum-coach-indicator-ring-diameter);
 	--system-coach-indicator-ring-block-size: var(--spectrum-coach-indicator-ring-diameter);
+	--system-coach-indicator-ring-dark-color: var(--spectrum-gray-900);
+	--system-coach-indicator-ring-light-color: var(--spectrum-gray-50);
 	--system-coach-indicator-top: calc(var(--system-coach-indicator-block-size) / 3 - var(--system-coach-indicator-ring-border-size));
 	--system-coach-indicator-left: calc(var(--system-coach-indicator-inline-size) / 3 - var(--system-coach-indicator-ring-border-size));
 	--system-coach-indicator-coach-animation-indicator-ring-duration: var(--spectrum-animation-duration-6000);

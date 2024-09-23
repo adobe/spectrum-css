@@ -1,9 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".spectrum--dark .spectrum-Card",
-    ".spectrum--light .spectrum-Card",
-    ".spectrum--lightest .spectrum-Card",
     ".spectrum-Card",
     ".spectrum-Card .spectrum-Divider",
     ".spectrum-Card--gallery",
@@ -197,9 +194,7 @@
     "--spectrum-animation-duration-100",
     "--spectrum-background-base-color",
     "--spectrum-background-layer-2-color",
-    "--spectrum-blue-500-rgb",
     "--spectrum-blue-700",
-    "--spectrum-blue-900-rgb",
     "--spectrum-body-color",
     "--spectrum-body-line-height",
     "--spectrum-body-sans-serif-font-style",

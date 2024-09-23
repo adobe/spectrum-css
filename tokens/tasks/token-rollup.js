@@ -36,9 +36,9 @@ async function index(inputGlob, outputPath, { cwd = process.cwd(), clean = false
 	}
 
 	const inputs = await fg(inputGlob, { cwd });
-	const contents = inputs.map(input => `@import "${path.basename(input)}";`).join("\n");
+	const contents = inputs.map(input => `@import "${input}";`).join("\n");
 	if (!contents) return;
-	return processCSS(contents, inputs[0], outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true });
+	return processCSS(contents, undefined, outputPath, { cwd, clean, configPath: cwd, map: false, resolveImports: true });
 }
 
 /**
@@ -125,7 +125,7 @@ async function appendCustomOverrides({ cwd = process.cwd() } = {}) {
 		], { cwd, shouldCombine: true });
 
 		promises.push(
-			combinedContent[0].content ? fsp.writeFile(path.join(cwd, "dist", "css", file), combinedContent[0].content) : Promise.resolve()
+			combinedContent[0].content ? writeAndReport(combinedContent[0].content, path.join(cwd, "dist", "css", file)) : Promise.resolve()
 		);
 	}
 
@@ -151,7 +151,7 @@ async function main({
 	const key = `[build] ${"@spectrum-css/tokens".cyan} index`;
 	console.time(key);
 
-	const compiledOutputPath = path.join(cwd, "dist", "css");
+	const compiledOutputPath = path.join(cwd, "dist");
 
 	return Promise.all([
 		componentTheming(),
@@ -159,25 +159,25 @@ async function main({
 		appendCustomOverrides({ cwd }),
 	]).then(async (r) => {
 		return Promise.all([
+			index(
+				["dist/css/components/bridge/*.css"],
+				path.join(compiledOutputPath, "css", "components", "bridge", "index.css"),
+				{ cwd, clean }
+			),
 			...["spectrum", "legacy", "express"].map(theme => index(
 				[`dist/css/components/${theme}/*.css`],
-				path.join(compiledOutputPath, "components", theme, "index.css"),
+				path.join(compiledOutputPath, "css", "components", theme, "index.css"),
 				{ cwd, clean }
 			)),
 			index(
-				["dist/css/components/bridge/*.css"],
-				path.join(compiledOutputPath, "components", "bridge", "index.css"),
-				{ cwd, clean }
-			),
-			index(
 				["dist/css/*-vars.css"],
-				path.join(compiledOutputPath, "index.css"),
+				path.join(compiledOutputPath, "css", "index.css"),
 				{ cwd, clean }
 			).then((reports) =>
-				copy(path.join(compiledOutputPath, "index.css"), path.join(cwd, "dist", "index.css"), { cwd, isDeprecated: false })
+				copy(path.join(compiledOutputPath, "css", "index.css"), path.join(cwd, "dist", "index.css"), { cwd, isDeprecated: false })
 					.then((reps) => [reports, reps]))
 		]).then((reports) => {
-			return [r, reports];
+			return [reports, r];
 		});
 	}).then((report) => {
 		const logs = report.flat(Infinity).filter(Boolean);

@@ -19,12 +19,16 @@
     "--spectrum-well-content-color",
     "--spectrum-well-margin-top",
     "--spectrum-well-min-width",
+    "--spectrum-well-minimum-width",
     "--spectrum-well-padding"
   ],
   "global": [
     "--spectrum-body-color",
     "--spectrum-border-width-100",
-    "--spectrum-gray-800-rgb"
+    "--spectrum-gray-1000",
+    "--spectrum-gray-800-rgb",
+    "--spectrum-spacing-300",
+    "--spectrum-spacing-75"
   ],
   "system-theme": [],
   "passthroughs": [],

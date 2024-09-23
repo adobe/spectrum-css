@@ -15,3 +15,12 @@
 /* @combine .spectrum.spectrum--legacy */
 
 @import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-Menu {
+		--spectrum-menu-item-background-color-default: var(--spectrum-gray-900);
+		--spectrum-menu-item-background-color-hover: rgba(var(--spectrum-gray-900), var(--spectrum-transparent-black-200-opacity));
+		--spectrum-menu-item-background-color-down: rgba(var(--spectrum-gray-900), var(--spectrum-transparent-black-200-opacity));
+		--spectrum-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-900), var(--spectrum-transparent-black-200-opacity));
+    }
+}

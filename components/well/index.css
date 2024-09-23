@@ -16,7 +16,7 @@
 .spectrum-Well {
 	text-align: start;
 	display: block;
-	min-inline-size: var(--mod-well-min-width, var(--spectrum-well-min-width));
+	min-inline-size: var(--mod-well-min-width, var(--spectrum-well-minimum-width));
 	padding: var(--mod-well-padding, var(--spectrum-well-padding));
 	margin-block-start: var(--mod-well-margin-top, var(--spectrum-well-margin-top));
 	border-width: var(--mod-well-border-width, var(--spectrum-well-border-width));

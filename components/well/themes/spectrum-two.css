@@ -14,7 +14,14 @@
 @container style(--system: spectrum) {
 	.spectrum-Well {
 		--spectrum-well-border-width: var(--spectrum-border-width-100);
+		--spectrum-well-border-color: rgba(var(--spectrum-gray-1000), .05);
+		--spectrum-well-border-radius: var(--spectrum-spacing-75);
+
 		--spectrum-well-content-color: var(--spectrum-body-color);
 		--spectrum-well-background-color: rgba(var(--spectrum-gray-800-rgb), .02);
+
+		--spectrum-well-padding: var(--spectrum-spacing-300);
+		--spectrum-well-margin-top: var(--spectrum-spacing-75);
+		--spectrum-well-minimum-width: var(--spectrum-well-min-width);
 	}
 }

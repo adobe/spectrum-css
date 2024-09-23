@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.0-s2-foundations.7
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`a4e0278`](https://github.com/adobe/spectrum-css/commit/a4e0278af07d97b668a73fabcbb18b37411ecb86) Thanks [@pfulton](https://github.com/pfulton)! - Update mdx template to include TaggedReleases and ComponentDetails
+
 ## 5.0.0-s2-foundations.6
 
 ### Major Changes

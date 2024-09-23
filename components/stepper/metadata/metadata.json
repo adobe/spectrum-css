@@ -55,9 +55,7 @@
     ".spectrum-Stepper:focus:hover .spectrum-Stepper-input",
     ".spectrum-Stepper:focus:not(.is-disabled) .spectrum-Stepper-buttons",
     ".spectrum-Stepper:focus:not(.is-disabled) .spectrum-Stepper-input",
-    ".spectrum-Stepper:hover:not(.is-disabled) .spectrum-Stepper-buttons",
-    ".spectrum-Stepper:hover:not(.is-disabled) .spectrum-Stepper-input",
-    ".spectrum-Stepper:hover:not(.is-invalid, .is-disabled)"
+    ".spectrum-Stepper:hover:not(.is-disabled)"
   ],
   "modifiers": [
     "--mod-stepper-animation-duration",

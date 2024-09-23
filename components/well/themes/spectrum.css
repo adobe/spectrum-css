@@ -15,3 +15,9 @@
 /* @combine .spectrum.spectrum--legacy */
 
 @import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-Well {
+		--spectrum-well-border-color: rgba(var(--spectrum-gray-900-rgb), .05);
+    }
+}

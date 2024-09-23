@@ -57,7 +57,7 @@
 	--system-card-horizontal-preview-padding: var(--spectrum-spacing-200);
 	--system-card-content-margin-top-quiet: var(--spectrum-spacing-100);
 	--system-card-minimum-width-quiet: var(--spectrum-card-minimum-width);
-	--system-card-light-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
-	--system-card-lightest-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
+	--system-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
 	--system-card-dark-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
+	--system-card-darkest-selected-background-color-rgb: var(--spectrum-blue-600-rgb);
 }

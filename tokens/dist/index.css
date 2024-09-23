@@ -694,12 +694,6 @@
 	--spectrum-icon-color-green-primary-default: var(--spectrum-green-800);
 	--spectrum-icon-color-red-primary-default: var(--spectrum-red-700);
 	--spectrum-icon-color-yellow-primary-default: var(--spectrum-yellow-1000);
-	--spectrum-menu-item-background-color-default-rgb: 255, 255, 255;
-	--spectrum-menu-item-background-color-default-opacity: 0;
-	--spectrum-menu-item-background-color-default: rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity));
-	--spectrum-menu-item-background-color-hover: var(--spectrum-transparent-white-200);
-	--spectrum-menu-item-background-color-down: var(--spectrum-transparent-white-200);
-	--spectrum-menu-item-background-color-key-focus: var(--spectrum-transparent-white-200);
 	--spectrum-drop-zone-background-color-rgb: var(--spectrum-blue-900-rgb);
 	--spectrum-dropindicator-color: var(--spectrum-blue-700);
 
@@ -715,10 +709,6 @@
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-black);
 
 	--spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-700);
-	--spectrum-coach-indicator-ring-dark-color: var(--spectrum-gray-900);
-	--spectrum-coach-indicator-ring-light-color: var(--spectrum-gray-25);
-
-	--spectrum-well-border-color: rgba(var(--spectrum-white-rgb), 0.05);
 
 	--spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-700);
 
@@ -745,14 +735,7 @@
 	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
 	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
 
-	--spectrum-swatch-border-color-rgb: 255, 255, 255;
-
-	--spectrum-swatch-border-color-opacity: 0.51;
-
-	--spectrum-swatch-border-color: rgba(var(--spectrum-swatch-border-color-rgb), var(--spectrum-swatch-border-color-opacity));
-	--spectrum-swatch-border-color-light-rgb: 255, 255, 255;
-	--spectrum-swatch-border-color-light-opacity: 0.2;
-	--spectrum-swatch-border-color-light: rgba(var(--spectrum-swatch-border-color-light-rgb), var(--spectrum-swatch-border-color-light-opacity));
+	--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
 }
 .spectrum {
 	--spectrum-focus-indicator-color: var(--spectrum-blue-800);
@@ -1175,9 +1158,9 @@
 	--spectrum-negative-subdued-background-color-down: var(--spectrum-negative-color-300);
 	--spectrum-negative-subdued-background-color-key-focus: var(--spectrum-negative-color-300);
 	--spectrum-default-font-family: var(--spectrum-sans-serif-font-family);
-	--spectrum-sans-serif-font-family: Adobe Clean;
-	--spectrum-serif-font-family: Adobe Clean Serif;
-	--spectrum-cjk-font-family: Adobe Clean Han;
+	--spectrum-sans-serif-font-family: adobe clean;
+	--spectrum-serif-font-family: adobe clean serif;
+	--spectrum-cjk-font-family: adobe clean han;
 	--spectrum-light-font-weight: 300;
 	--spectrum-regular-font-weight: 400;
 	--spectrum-medium-font-weight: 500;
@@ -1388,7 +1371,7 @@
 	--spectrum-detail-sans-serif-text-transform: uppercase;
 	--spectrum-detail-serif-text-transform: uppercase;
 	--spectrum-detail-color: var(--spectrum-gray-900);
-	--spectrum-code-font-family: Source Code Pro;
+	--spectrum-code-font-family: source code pro;
 	--spectrum-code-cjk-font-family: var(--spectrum-code-font-family);
 	--spectrum-code-font-weight: var(--spectrum-regular-font-weight);
 	--spectrum-code-font-style: var(--spectrum-default-font-style);
@@ -1436,13 +1419,13 @@
 	--spectrum-animation-ease-out: cubic-bezier(0, 0, 0.4, 1);
 	--spectrum-animation-ease-linear: cubic-bezier(0, 0, 1, 1);
 
-	--spectrum-sans-font-family-stack: adobe-clean, var(--spectrum-sans-serif-font-family), "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+	--spectrum-sans-font-family-stack: adobe-clean, var(--spectrum-sans-serif-font-family), "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
 	--spectrum-sans-serif-font: var(--spectrum-sans-font-family-stack);
 
-	--spectrum-serif-font-family-stack: adobe-clean-serif, var(--spectrum-serif-font-family), "Source Serif Pro", Georgia, serif;
+	--spectrum-serif-font-family-stack: adobe-clean-serif, var(--spectrum-serif-font-family), "Source Serif Pro", georgia, serif;
 	--spectrum-serif-font: var(--spectrum-serif-font-family-stack);
 
-	--spectrum-code-font-family-stack: "Source Code Pro", Monaco, monospace;
+	--spectrum-code-font-family-stack: "Source Code Pro", monaco, monospace;
 
 	--spectrum-cjk-font-family-stack: adobe-clean-han-japanese, var(--spectrum-cjk-font-family), sans-serif;
 	--spectrum-cjk-font: var(--spectrum-code-font-family-stack);
@@ -2040,11 +2023,6 @@
 	--spectrum-coachmark-buttongroup-mobile-display: flex;
 	--spectrum-coachmark-menu-display: none;
 	--spectrum-coachmark-menu-mobile-display: inline-flex;
-
-	--spectrum-well-padding: 20px;
-	--spectrum-well-margin-top: 5px;
-	--spectrum-well-min-width: 300px;
-	--spectrum-well-border-radius: 5px;
 	--spectrum-workflow-icon-size-xxl: 40px;
 	--spectrum-workflow-icon-size-xxs: 15px;
 
@@ -2093,6 +2071,8 @@
 
 	--spectrum-ui-icon-medium-display: none;
 	--spectrum-ui-icon-large-display: block;
+
+	--spectrum-contextual-help-content-spacing: var(--spectrum-spacing-200);
 }
 .spectrum--light {
 	--spectrum-overlay-opacity: 0.4;
@@ -2777,12 +2757,6 @@
 	--spectrum-icon-color-green-primary-default: var(--spectrum-green-900);
 	--spectrum-icon-color-red-primary-default: var(--spectrum-red-900);
 	--spectrum-icon-color-yellow-primary-default: var(--spectrum-yellow-400);
-	--spectrum-menu-item-background-color-default-rgb: 0, 0, 0;
-	--spectrum-menu-item-background-color-default-opacity: 0;
-	--spectrum-menu-item-background-color-default: rgba(var(--spectrum-menu-item-background-color-default-rgb), var(--spectrum-menu-item-background-color-default-opacity));
-	--spectrum-menu-item-background-color-hover: var(--spectrum-transparent-black-200);
-	--spectrum-menu-item-background-color-down: var(--spectrum-transparent-black-200);
-	--spectrum-menu-item-background-color-key-focus: var(--spectrum-transparent-black-200);
 	--spectrum-drop-zone-background-color-rgb: var(--spectrum-blue-800-rgb);
 	--spectrum-dropindicator-color: var(--spectrum-blue-800);
 
@@ -2798,10 +2772,6 @@
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-white);
 
 	--spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-800);
-	--spectrum-coach-indicator-ring-dark-color: var(--spectrum-gray-900);
-	--spectrum-coach-indicator-ring-light-color: var(--spectrum-gray-25);
-
-	--spectrum-well-border-color: var(--spectrum-black-rgb);
 
 	--spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-800);
 
@@ -2828,14 +2798,7 @@
 	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
 	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-800);
 
-	--spectrum-swatch-border-color-rgb: 0, 0, 0;
-
-	--spectrum-swatch-border-color-opacity: 0.51;
-
-	--spectrum-swatch-border-color: rgba(var(--spectrum-swatch-border-color-rgb), var(--spectrum-swatch-border-color-opacity));
-	--spectrum-swatch-border-color-light-rgb: 0, 0, 0;
-	--spectrum-swatch-border-color-light-opacity: 0.2;
-	--spectrum-swatch-border-color-light: rgba(var(--spectrum-swatch-border-color-light-rgb), var(--spectrum-swatch-border-color-light-opacity));
+	--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
 }
 .spectrum--medium {
 	--spectrum-workflow-icon-size-50: 14px;
@@ -3426,10 +3389,6 @@
 	--spectrum-coachmark-buttongroup-mobile-display: none;
 	--spectrum-coachmark-menu-display: inline-flex;
 	--spectrum-coachmark-menu-mobile-display: none;
-	--spectrum-well-padding: var(--spectrum-spacing-300);
-	--spectrum-well-margin-top: var(--spectrum-spacing-75);
-	--spectrum-well-min-width: 240px;
-	--spectrum-well-border-radius: var(--spectrum-spacing-75);
 	--spectrum-workflow-icon-size-xxl: 32px;
 	--spectrum-workflow-icon-size-xxs: 12px;
 
@@ -3478,4 +3437,6 @@
 
 	--spectrum-ui-icon-medium-display: block;
 	--spectrum-ui-icon-large-display: none;
+
+	--spectrum-contextual-help-content-spacing: var(--spectrum-spacing-100);
 }

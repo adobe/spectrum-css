@@ -17,16 +17,14 @@ export const withContextWrapper = makeDecorator({
 				rootClass,
 				staticColor,
 			} = {},
-			globals = {},
+			globals: {
+				color = "light",
+				context = "spectrum",
+				scale = "medium",
+			},
 			id,
 			viewMode,
 		} = data;
-
-		let {
-			color = "light",
-			context = "spectrum",
-			scale = "medium",
-		} = globals;
 
 		const staticColorSettings = {
 			"black": {

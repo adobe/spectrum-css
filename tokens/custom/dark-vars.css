@@ -14,11 +14,6 @@
 /* This file contains overrides and additions to core tokens */
 
 .spectrum--dark {
-	--spectrum-menu-item-background-color-default: rgba(255, 255, 255, 0); /* --spectrum-gray-900 */
-	--spectrum-menu-item-background-color-hover: var(--spectrum-transparent-white-200);
-	--spectrum-menu-item-background-color-down: var(--spectrum-transparent-white-200);
-	--spectrum-menu-item-background-color-key-focus: var(--spectrum-transparent-white-200);
-
 	/* Drop Zone background color rgb */
 	--spectrum-drop-zone-background-color-rgb: var(--spectrum-blue-900-rgb); /* var(--spectrum-accent-color-900);*/
 
@@ -37,10 +32,6 @@
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-black);
 
 	--spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-700);
-	--spectrum-coach-indicator-ring-dark-color: var(--spectrum-gray-900);
-	--spectrum-coach-indicator-ring-light-color: var(--spectrum-gray-25);
-
-	--spectrum-well-border-color: rgba(var(--spectrum-white-rgb), 0.05);
 
 	--spectrum-steplist-current-marker-color-key-focus: var(--spectrum-blue-700);
 
@@ -67,6 +58,5 @@
 	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
 	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
 
-	--spectrum-swatch-border-color: rgba(255, 255, 255, 51%);
-	--spectrum-swatch-border-color-light: rgba(255, 255, 255, 20%);
+	--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
 }

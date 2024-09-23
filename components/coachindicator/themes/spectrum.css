@@ -15,3 +15,9 @@
 /* @combine .spectrum.spectrum--legacy */
 
 @import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-CoachIndicator {
+        --spectrum-coach-indicator-ring-light-color: var(--spectrum-gray-50);
+    }
+}

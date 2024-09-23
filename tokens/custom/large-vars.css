@@ -66,11 +66,6 @@
 	--spectrum-coachmark-menu-display: none;
 	--spectrum-coachmark-menu-mobile-display: inline-flex;
 
-	--spectrum-well-padding: 20px;
-	--spectrum-well-margin-top: 5px;
-	--spectrum-well-min-width: 300px;
-	--spectrum-well-border-radius: 5px;
-
 	/* XXL and XXS icon sizes are not within the design spec and are planned to be deprecated in Spectrum 2. */
 	--spectrum-workflow-icon-size-xxl: 40px;
 	--spectrum-workflow-icon-size-xxs: 15px;
@@ -120,4 +115,6 @@
 
 	--spectrum-ui-icon-medium-display: none;
 	--spectrum-ui-icon-large-display: block;
+
+	--spectrum-contextual-help-content-spacing: var(--spectrum-spacing-200);
 }

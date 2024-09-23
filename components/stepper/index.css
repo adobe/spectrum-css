@@ -45,20 +45,15 @@
 	}
 
 	/*** Hover ***/
-	&:hover:not(.is-invalid,.is-disabled) {
-		--mod-infield-button-border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-buttons-border-color-hover, var(--spectrum-stepper-buttons-border-color-hover)));
-	}
-
 	&:hover:not(.is-disabled) {
-		.spectrum-Stepper-input,
-		.spectrum-Stepper-buttons {
-			border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover)));
-		}
+		--mod-stepper-border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-border-color-hover, var(--spectrum-stepper-border-color-hover)));
+		--mod-infield-button-border-color: var(--highcontrast-stepper-border-color-hover, var(--mod-stepper-buttons-border-color-hover, var(--spectrum-stepper-buttons-border-color-hover)));
 	}
 
 	/*** Focused ***/
 	&.is-focused,
 	&:focus {
+		--mod-stepper-border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-border-color-focus, var(--spectrum-stepper-border-color-focus)));
 		--mod-infield-button-border-color: var(--highcontrast-stepper-border-color-focus, var(--mod-stepper-buttons-border-color-focus, var(--spectrum-stepper-buttons-border-color-focus)));
 
 		&:not(.is-disabled) {
@@ -73,7 +68,7 @@
 		}
 
 		&:hover {
-			/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties */
+			--mod-stepper-border-color: var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-buttons-border-color-focus-hover, var(--spectrum-stepper-buttons-border-color-focus-hover)));
 			--mod-infield-button-border-color: var(--highcontrast-stepper-border-color-focus-hover, var(--mod-stepper-buttons-border-color-focus-hover, var(--spectrum-stepper-buttons-border-color-focus-hover)));
 
 			.spectrum-Stepper-input,
@@ -86,6 +81,7 @@
 	/*** Keyboard Focused ***/
 	&.is-keyboardFocused,
 	&:focus-visible {
+		--mod-stepper-border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-buttons-border-color-keyboard-focus, var(--spectrum-stepper-buttons-border-color-keyboard-focus)));
 		--mod-infield-button-border-color: var(--highcontrast-stepper-border-color-keyboard-focus, var(--mod-stepper-buttons-border-color-keyboard-focus, var(--spectrum-stepper-buttons-border-color-keyboard-focus)));
 
 		&:not(.is-disabled) {
@@ -197,6 +193,7 @@
 			--mod-textfield-focus-indicator-color: transparent;
 		}
 
+		/* stylelint-disable-next-line selector-class-pattern -- @todo fix this in a future release */
 		&.hide-stepper .spectrum-Stepper-input {
 			border-inline-end-width: 0;
 			border-end-end-radius: 0;

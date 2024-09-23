@@ -97,7 +97,7 @@
 
 	&.is-mixedValue {
 		.spectrum-Swatch-fill {
-			/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
+			/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background: var(--spectrum-picked-color, transparent);
 		}
 
@@ -110,7 +110,7 @@
 	/* Swatch fill: Not fill with Slash */
 	&.is-nothing {
 		.spectrum-Swatch-fill {
-			/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
+			/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background-color: var(--spectrum-picked-color, transparent);
 			background-image: none;
 
@@ -124,12 +124,8 @@
 			}
 		}
 
-		&.spectrum-Swatch--rectangle {
-			.spectrum-Swatch-fill {
-				&::after {
-					transform: rotate(-25deg);
-				}
-			}
+		&.spectrum-Swatch--rectangle .spectrum-Swatch-fill::after {
+			transform: rotate(-25deg);
 		}
 	}
 
@@ -200,11 +196,11 @@
 		inset: 0;
 		z-index: 0;
 
-		/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
+		/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 		background-color: var(--spectrum-picked-color, transparent);
 
 		/* Swatch border */
-		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color-default)));
+		box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)));
 		border-radius: var(--mod-swatch-border-radius, var(--spectrum-swatch-border-radius));
 	}
 }
@@ -215,7 +211,7 @@
 		&::before {
 			box-shadow: none;
 
-			/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
+			/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background-color: var(--spectrum-picked-color, transparent);
 		}
 	}
@@ -224,7 +220,7 @@
 .spectrum-Swatch--lightBorder {
 	.spectrum-Swatch-fill {
 		&::before {
-			box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color-light, var(--mod-swatch-border-color-light, var(--spectrum-swatch-border-color-light-default)));
+			box-shadow: inset 0 0 0 var(--mod-swatch-border-thickness, var(--spectrum-swatch-border-thickness)) var(--highcontrast-swatch-border-color-light, var(--mod-swatch-border-color-light, var(--spectrum-swatch-border-color-light)));
 		}
 	}
 }
@@ -233,7 +229,7 @@
 	display: none;
 	pointer-events: none;
 
-	/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
+	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 	color: var(--spectrum-picked-color, transparent);
 }
 
