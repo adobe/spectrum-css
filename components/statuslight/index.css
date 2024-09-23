@@ -34,6 +34,7 @@
 	/* Color */
 	--spectrum-statuslight-content-color-default: var(--spectrum-neutral-content-color-default);
 	--spectrum-statuslight-subdued-content-color-default: var(--spectrum-neutral-subdued-content-color-default);
+	--spectrum-statuslight-content-color-disabled: var(--spectrum-disabled-content-color);
 	--spectrum-statuslight-semantic-neutral-color: var(--spectrum-neutral-visual-color);
 	--spectrum-statuslight-semantic-accent-color: var(--spectrum-accent-visual-color);
 	--spectrum-statuslight-semantic-negative-color: var(--spectrum-negative-visual-color);
@@ -143,6 +144,15 @@
 		margin-block-start: var(--spectrum-statuslight-spacing-computed-top-to-dot);
 		margin-inline-end: var(--mod-statuslight-spacing-dot-to-label, var(--spectrum-statuslight-spacing-dot-to-label));
 	}
+
+	&[disabled],
+  &.is-disabled {
+    color: var(--mod-statuslight-content-color-default, var(--spectrum-statuslight-content-color-disabled));
+
+    &::before {
+      background-color: var(--mod-statuslight-content-color-default, var(--spectrum-statuslight-content-color-disabled));
+    }
+  }
 }
 
 .spectrum-StatusLight--neutral {
