@@ -110,7 +110,7 @@ export const Template = ({
 export const ButtonsWithIconOptions = ({
 	iconName,
 	...args
-}) => Container({
+}, context = {}) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
@@ -120,35 +120,35 @@ export const ButtonsWithIconOptions = ({
     ${Template({
       ...args,
       iconName: undefined,
-    })}
+    }, context)}
     ${Template({
       ...args,
       iconName: iconName ?? "Edit",
-    })}
+    }, context)}
     ${Template({
       ...args,
       hideLabel: true,
       iconName: iconName ?? "Edit",
-    })}
+    }, context)}
   `,
 });
 
 /**
  * Display the buttons with icon options for each treatment option.
  */
-export const TreatmentTemplate = (args) => Container({
+export const TreatmentTemplate = (args, context = {}) => Container({
 	withBorder: false,
 	direction: "column",
 	wrapperStyles: {
 		rowGap: "12px",
 	},
-	content: html`${["fill", "outline"].map((treatment) => ButtonsWithIconOptions({ ...args, treatment }))}`,
-});
+	content: html`${["fill", "outline"].map((treatment) => ButtonsWithIconOptions({ ...args, treatment }, context))}`,
+}, context);
 
 /**
  * Display the text overflow behavior of buttons.
  */
-export const TextOverflowTemplate = (args) => Container({
+export const TextOverflowTemplate = (args, context = {}) => Container({
 	withBorder: false,
 	direction: "column",
 	wrapperStyles: {
@@ -161,7 +161,7 @@ export const TextOverflowTemplate = (args) => Container({
         "max-inline-size": "480px",
       },
       label: "An example of text overflow behavior when there is no icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-    })}
+    }, context)}
     ${Template({
       ...args,
       customStyles: {
@@ -169,11 +169,11 @@ export const TextOverflowTemplate = (args) => Container({
       },
       iconName: "Edit",
       label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-    })}
+    }, context)}
   `,
-});
+}, context);
 
-export const TextWrapTemplate = (args) => Container({
+export const TextWrapTemplate = (args, context = {}) => Container({
 	direction: "column",
 	wrapperStyles: {
 		rowGap: "12px",
@@ -182,12 +182,10 @@ export const TextWrapTemplate = (args) => Container({
 	content: html`
     ${Template({
       ...args,
-      customStyles: {
-        
-      },
+      customStyles: {},
       label: "Be a premium member",
 			noWrap: true,
-    })}
+    }, context)}
     ${Template({
       ...args,
       customStyles: {
@@ -195,7 +193,7 @@ export const TextWrapTemplate = (args) => Container({
       },
       label: "Be a premium member",
 			noWrap: true,
-    })}
+    }, context)}
     ${Template({
       ...args,
       customStyles: {
@@ -204,6 +202,6 @@ export const TextWrapTemplate = (args) => Container({
       iconName: "Star",
 			label: "Be a premium member",
       noWrap: true,
-    })}
+    }, context)}
   `,
-});
+}, context);
