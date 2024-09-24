@@ -147,9 +147,6 @@ function processReleaseData(storyMeta, npmData) {
 		...Object.keys(npmData?.["dist-tags"] ?? {})
 	].filter(tag => !ignoredTags.includes(tag));
 
-	// Create a robust fallback stack to capture the version number
-	const fallbackVersion = packageJson?.version ?? storyMeta?.csfFile?.meta?.parameters?.componentVersion;
-
 	const mapVersions = new Map();
 	for (const tag of tags) {
 		let version = npmData?.versions?.[npmData?.["dist-tags"]?.[tag]]?.version;
@@ -162,7 +159,7 @@ function processReleaseData(storyMeta, npmData) {
 
 		// Prefer the version from the package.json file if this is the "local" tag
 		if (tag === "local") {
-			version = fallbackVersion;
+			version = packageJson?.version;
 			date = "unpublished";
 		}
 
