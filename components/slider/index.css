@@ -289,7 +289,6 @@
 }
 
 .spectrum-Slider-ramp {
-	margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
 	block-size: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
 
 	position: absolute;
