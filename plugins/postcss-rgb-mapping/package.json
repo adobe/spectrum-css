@@ -16,11 +16,11 @@
     "prepublishOnly": "yarn test",
     "test": "ava"
   },
-  "peerDependencies": {
-    "postcss": ">=8.0.0"
-  },
   "dependencies": {
     "postcss-value-parser": "^4.2.0"
+  },
+  "peerDependencies": {
+    "postcss": ">=8"
   },
   "devDependencies": {
     "ava": "^6.1.3",

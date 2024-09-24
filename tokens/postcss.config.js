@@ -13,7 +13,10 @@
 
 module.exports = () => ({
 	plugins: {
-		"postcss-rgb-mapping": {},
+		"postcss-import": {},
+		"postcss-rgb-mapping": {
+			colorFunctionalNotation: false,
+		},
 		"postcss-sorting": {
 			order: ["custom-properties", "declarations", "at-rules", "rules"],
 			"properties-order": "alphabetical",
