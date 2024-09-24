@@ -11,5 +11,22 @@ export const ButtonGroup = Variants({
 			testHeading: "Vertical",
 			vertical: true,
 		},
+		{
+			testHeading: "Disabled",
+			items: [
+				{
+					variant: "secondary",
+					treatment: "outline",
+					label: "Cancel",
+					isDisabled: true,
+				},
+				{
+					variant: "primary",
+					treatment: "fill",
+					label: "Enable",
+					isDisabled: true,
+				},
+			]
+		}
 	],
 });
