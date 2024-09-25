@@ -4,7 +4,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isEmphasized, isInvalid, isSelected, size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { TagGroups } from "./tag.test.js";
-import { RemovableTemplate, StandardTemplate, TagsDefaultOptions } from "./template.js";
+import { SelectedTemplate, TagsDefaultOptions } from "./template.js";
 
 /**
  * A tag categorizes content. It can represent keywords or people, and are [grouped](?path=/docs/components-tag-group--docs) to describe an item or a search request.
@@ -98,8 +98,8 @@ export default {
 };
 
 export const Default = TagGroups.bind({});
-Default.args = {};
 Default.tags = ["!autodocs"];
+Default.args = {};
 
 // ********* VRT ONLY ********* //
 // @todo combine variants into one snapshot
@@ -114,7 +114,7 @@ WithForcedColors.parameters = {
 
 // ********* DOCS ONLY ********* //
 
-export const Standard = StandardTemplate.bind({});
+export const Standard = TagsDefaultOptions.bind({});
 Standard.args = Default.args;
 Standard.tags = ["!dev"];
 Standard.parameters = {
@@ -123,11 +123,52 @@ Standard.parameters = {
 
 Standard.storyName = "Default";
 
-export const Removable = RemovableTemplate.bind({});
+export const Selected = SelectedTemplate.bind({});
+Selected.tags = ["!dev"];
+Selected.args = {
+	isSelected: true
+};
+
+Selected.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Disabled = TagsDefaultOptions.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	isDisabled: true,
+};
+
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Emphasized = TagsDefaultOptions.bind({});
+Emphasized.tags = ["!dev"];
+Emphasized.args = {
+	isEmphasized: true
+};
+
+Emphasized.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Invalid = TagGroups.bind({});
+Invalid.tags = ["!dev"];
+Invalid.args = {
+	isInvalid: true
+};
+
+Invalid.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Removable = TagsDefaultOptions.bind({});
 Removable.tags = ["!dev"];
 Removable.args = {
 	hasClearButton: true,
 };
+
 Removable.parameters = {
 	chromatic: { disableSnapshot: true },
 };
