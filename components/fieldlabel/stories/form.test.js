@@ -4,10 +4,17 @@ import { Template } from "./form.template";
 export const FormGroup = Variants({
 	Template,
 	testData: [
-		{},
 		{
-			testHeading: "Labels above",
-			labelsAbove: true,
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Side labels with left-aligned text",
+			labelPosition: "side",
+		},
+		{
+			testHeading: "Side labels with right-aligned text",
+			labelPosition: "side",
+			fieldLabelAlignment: "right",
 		}
 	],
 });

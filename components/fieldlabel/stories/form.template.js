@@ -11,7 +11,8 @@ import "../index.css";
 
 export const Template = ({
 	rootClass = "spectrum-Form",
-	labelsAbove = false,
+	labelPosition = "top",
+	fieldLabelAlignment = "left",
 	customClasses = [],
 	customStyles = {},
 	id = getRandomId("form"),
@@ -20,7 +21,7 @@ export const Template = ({
     <form
         class=${classMap({
             [rootClass]: true,
-            [`${rootClass}--labelsAbove`]: labelsAbove,
+            [`${rootClass}--labelsAbove`]: labelPosition === "top",
             ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
         })}
         id=${ifDefined(id)}
@@ -36,7 +37,7 @@ export const Template = ({
                     ${when(label, () => FieldLabel({
                         label,
                         forInput: item.id,
-                        alignment: labelsAbove ? undefined : "left",
+                        alignment: labelPosition === "side" ? fieldLabelAlignment : undefined,
                     }, context))}
                     <div class=${classMap({
                         [`${rootClass}-itemField`]: true,
