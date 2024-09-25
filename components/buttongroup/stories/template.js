@@ -10,7 +10,8 @@ export const Template = ({
 	size = "m",
 	items = [],
 	vertical = false,
-}) => html`
+}, context = {}) => {
+	return html`
 	<div
 		class=${classMap({
 			[rootClass]: true,
@@ -25,7 +26,8 @@ export const Template = ({
 				...item,
 				size,
 				customClasses: [`${rootClass}-item`],
-			})
+			}, context)
 		)}
 	</div>
 `;
+};

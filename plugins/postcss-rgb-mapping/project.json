@@ -1,7 +1,7 @@
 {
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
-	"name": "stylelint-no-missing-var",
-	"tags": ["tooling", "stylelint", "plugin"],
+	"name": "postcss-rgb-mapping",
+	"tags": ["tooling", "postcss", "plugin"],
 	"targets": {
 		"format": {
 			"defaultConfiguration": "plugins"

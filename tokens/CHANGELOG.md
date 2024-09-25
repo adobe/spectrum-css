@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.4.0
+
+### Minor Changes
+
+- [#3060](https://github.com/adobe/spectrum-css/pull/3060) [`7d41874`](https://github.com/adobe/spectrum-css/commit/7d418746362e7fe35f47e67e30682d7bf87ecfc7) Thanks [@castastrophe](https://github.com/castastrophe)! - Update build steps for the token rollup to generate the component theming assets instead of relying on component build steps to produce them.
+
 ## 14.3.2
 
 ### Patch Changes
