@@ -86,12 +86,30 @@
     "--spectrum-steplist-topPadding"
   ],
   "global": [
-    "--spectrum-gray-300",
+    "--spectrum-gray-200",
     "--spectrum-gray-600",
     "--spectrum-gray-700",
     "--spectrum-gray-800"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-steplist-complete-label-text-color",
+    "--system-steplist-complete-marker-background-color",
+    "--system-steplist-complete-segment-border-block-end-color",
+    "--system-steplist-current-label-text-color",
+    "--system-steplist-current-marker-color",
+    "--system-steplist-incomplete-label-color",
+    "--system-steplist-incomplete-marker-border-color",
+    "--system-steplist-incomplete-segment-border-block-end-color",
+    "--system-steplist-label-label-offset",
+    "--system-steplist-label-text-size",
+    "--system-steplist-marker-diameter",
+    "--system-steplist-marker-hit-area",
+    "--system-steplist-segment-height",
+    "--system-steplist-side-padding",
+    "--system-steplist-small-top-padding",
+    "--system-steplist-step-width",
+    "--system-steplist-top-padding"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-steplist-complete-marker-background-color",

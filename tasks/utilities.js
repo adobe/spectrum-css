@@ -85,9 +85,14 @@ function getAllComponentNames() {
 	// Get a list of all the component names in the components directory that have a package.json file
 	// and a list of all the deprecated components in the storybook directory
 	// then combine and deduplicate the lists to get a full list of all components
+	let deprecated = [];
+	if (fs.existsSync(path.join(dirs.storybook, "deprecated"))) {
+		deprecated = fs.readdirSync(path.join(dirs.storybook, "deprecated"));
+	}
+
 	return [...new Set([
 		...fs.readdirSync(dirs.components).filter((file) => fs.existsSync(path.join(dirs.components, file, "package.json"))),
-		...fs.readdirSync(path.join(dirs.storybook, "deprecated")),
+		...deprecated,
 	])];
 }
 
@@ -184,7 +189,11 @@ async function cleanFolder({ cwd = process.cwd() } = {}) {
  */
 async function fetchContent(
 	globs = [],
-	{ cwd, shouldCombine = false, ...fastGlobOptions } = {},
+	{
+		cwd,
+		shouldCombine = false,
+		...fastGlobOptions
+	} = {},
 ) {
 	const files = await fg(globs, {
 		onlyFiles: true,
@@ -204,8 +213,12 @@ async function fetchContent(
 	// Combine the content into 1 file; @todo do this in future using CSS imports
 	if (shouldCombine) {
 		let content = "";
-		fileData.forEach((dataset) => {
-			if (dataset.content) content += "\n\n" + dataset.content;
+		fileData.forEach((dataset, idx) => {
+			if (dataset.content) {
+				if (idx > 0) content += "\n\n";
+				content += `/* Sourced from ${relativePrint(dataset.input, { cwd })} */\n`;
+				content += dataset.content;
+			}
 		});
 
 		return Promise.resolve([
@@ -245,14 +258,35 @@ async function copy(from, to, { cwd, isDeprecated = true } = {}) {
 		});
 	}
 
+	// Check if the input is a file or a directory
+	const stats = fs.statSync(from);
+	if (stats.isDirectory()) {
+		console.log(`Copying directory ${from} to ${to}`);
+		return fsp
+			.cp(from, to, { recursive: true, force: true })
+			.then(async () => {
+				// Determine the number of files and the size of the copied files
+				const stats = await fg(path.join(cwd, "components") + "/**/*", { onlyFiles: true, stats: true });
+				return `${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow} ${`copied ${stats.length >= 0 ? stats.length : "0"} files (${bytesToSize(stats.reduce((acc, details) => acc + details.stats.size, 0))})`.gray}`;
+			})
+			.catch((err) => {
+				if (!err) return;
+				console.log(
+					`${"✗".red}  ${relativePrint(from, { cwd }).yellow} could not be copied to ${relativePrint(to, { cwd }).yellow}`,
+				);
+				return Promise.reject(err);
+			});
+	}
+
 	const content = await fsp.readFile(from, { encoding: "utf-8" });
 	if (!content) return;
+
 	/** @todo add support for injecting a deprecation notice as a comment after the copyright */
 	return fsp
 		.writeFile(to, content, { encoding: "utf-8" })
 		.then(
 			() =>
-				`${"✓".green}  ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${isDeprecated ? "-- deprecated --".gray : ""}`,
+				`${"✓".green}  ${relativePrint(from, { cwd }).yellow} -> ${relativePrint(to, { cwd }).padEnd(20, " ").yellow}  ${(isDeprecated ? "-- deprecated --" : `copied ${stats.size ? `(${bytesToSize(stats.size)})` : ""}`).gray}`,
 		)
 		.catch((err) => {
 			if (!err) return;
