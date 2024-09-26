@@ -44,6 +44,16 @@ export default {
     },
     packageJson,
     metadata,
+		cssprops: {
+			...metadata.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					control: key.includes("color") ? "color" : "text",
+					category: "Modifiers",
+				};
+				return collection;
+			}, {})
+		},
   }
 };
 
