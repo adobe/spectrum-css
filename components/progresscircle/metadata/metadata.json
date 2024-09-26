@@ -106,11 +106,25 @@
   ],
   "global": [
     "--spectrum-accent-content-color-default",
-    "--spectrum-gray-300",
-    "--spectrum-transparent-white-300",
-    "--spectrum-transparent-white-900"
+    "--spectrum-gray-200",
+    "--spectrum-transparent-white-1000",
+    "--spectrum-transparent-white-400"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-progress-circle-fill-border-color",
+    "--system-progress-circle-fill-border-color-over-background",
+    "--system-progress-circle-large-size",
+    "--system-progress-circle-large-thickness",
+    "--system-progress-circle-medium-size",
+    "--system-progress-circle-medium-thickness",
+    "--system-progress-circle-size",
+    "--system-progress-circle-small-size",
+    "--system-progress-circle-small-thickness",
+    "--system-progress-circle-thickness",
+    "--system-progress-circle-track-border-color",
+    "--system-progress-circle-track-border-color-over-background",
+    "--system-progress-circle-track-border-style"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-progress-circle-fill-border-color",
