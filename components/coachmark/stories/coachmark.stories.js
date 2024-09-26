@@ -1,6 +1,6 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
-import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import pkgJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
 import { Template } from "./template.js";
@@ -47,6 +47,7 @@ export default {
 		hasImage: false,
 	},
 	parameters: {
+		layout: "padded",
 		actions: {
 			handles: [
 				...(ActionButton.parameters?.actions?.handles ?? []),
@@ -54,9 +55,6 @@ export default {
 			],
 		},
 		packageJson: pkgJson,
-		chromatic: {
-			modes: mobile,
-		},
 		docs: {
 			story: {
 				height: "300px",
@@ -80,8 +78,7 @@ WithMedia.parameters = {
 	},
 	docs: {
 		story: {
-			inline: false,
-			height: "475px",
+			height: "500px",
 		},
 	},
 };

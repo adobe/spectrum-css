@@ -1,5 +1,5 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
-import { disableDefaultModes, viewports } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isOpen, isSelected, size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { MenuItemGroup, MenuTraySubmenu, MenuWithVariants } from "./menu.test.js";
@@ -228,11 +228,6 @@ TraySubmenu.parameters = {
 			inline: false,
 			height: "400px"
 		}
-	},
-	chromatic: {
-		"Viewport | small": {
-			viewport: viewports.small,
-		},
 	},
 };
 

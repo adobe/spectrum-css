@@ -87,7 +87,7 @@ export default {
 		layout: "centered",
 		docs: {
 			story: {
-				height: "240px",
+				height: "200px",
 			}
 		},
 		packageJson: pkgJson,
