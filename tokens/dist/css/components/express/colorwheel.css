@@ -1,0 +1,24 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--express {
+	--system-color-wheel-width: var(--spectrum-color-wheel-width);
+	--system-color-wheel-min-width: var(--spectrum-color-wheel-minimum-width);
+	--system-color-wheel-height: var(--spectrum-color-wheel-width);
+	--system-color-wheel-border-color: var(--spectrum-transparent-black-200);
+	--system-color-wheel-border-width: var(--spectrum-border-width-100);
+	--system-color-wheel-fill-color-disabled: var(--spectrum-disabled-background-color);
+	--system-color-wheel-track-width: var(--spectrum-color-control-track-width);
+	--system-color-wheel-colorarea-margin: var(--spectrum-color-wheel-color-area-margin);
+	--system-color-wheel-colorhandle-position: calc(var(--system-color-wheel-width) / 2 - var(--system-color-wheel-track-width) / 2);
+}
