@@ -2,14 +2,14 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-AlertBanner",
-    ".spectrum-AlertBanner--info",
-    ".spectrum-AlertBanner--negative",
     ".spectrum-AlertBanner-body",
     ".spectrum-AlertBanner-content",
     ".spectrum-AlertBanner-end",
     ".spectrum-AlertBanner-icon",
     ".spectrum-AlertBanner-text",
-    ".spectrum-AlertBanner.is-open"
+    ".spectrum-AlertBanner.is-open",
+    ".spectrum-AlertBanner.spectrum-AlertBanner--info",
+    ".spectrum-AlertBanner.spectrum-AlertBanner--negative"
   ],
   "modifiers": [
     "--mod-alert-banner-bottom-text",

@@ -7,6 +7,10 @@ export const ProgressCircleGroup = Variants({
 		{
 			testHeading: "Default",
 		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
 	],
 	stateData: [
 		{

@@ -48,6 +48,14 @@ export const ButtonGroups = Variants({
 			treatment: "outline",
 		})),
 		{
+			testHeading: "Static black",
+			staticColor: "black",
+		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
+		{
 			testHeading: "Text wrapping with workflow icon",
 			customStyles: {
 				"max-inline-size": "480px",

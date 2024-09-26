@@ -14,7 +14,6 @@ export const ColorAreaGroup = Variants({
 		},
 	],
 	stateData: [
-
 		{
 			testHeading: "Disabled",
 			isDisabled: true,

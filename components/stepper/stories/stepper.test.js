@@ -50,7 +50,7 @@ export const StepperGroup = Variants({
 		{
 			testHeading: "Disabled + focused",
 			isDisabled: true,
-			isFocused: true,
+			isHovered: true,
 		},
 		{
 			testHeading: "Disabled + keyboard-focused",
