@@ -129,7 +129,7 @@ Emphasized.parameters = {
 };
 
 /**
- * When there are too many quiet action buttons in a small space bringing emphasis to them will be effective.
+ * Adding the `.spectrum-ActionButton--emphasized` class to a quiet action button can be effective in calling attention.
  */
 
 export const EmphasizedQuiet = TreatmentTemplate.bind({});
@@ -161,7 +161,7 @@ Quiet.parameters = {
 };
 
 /**
- * An action button can have a hold icon (a small corner triangle). This icon indicates that holding down the action button for a short amount of time can reveal a popover menu, which can be used, for example, to switch between related actions.
+ * An action button can have a hold icon (a small corner triangle). This icon indicates that holding down the action button for a short amount of time can reveal a popover menu, which can be used, for example, to switch between related actions. Because of the way padding is calculated, the hold icon must be placed before the workflow icon in the markup.
  */
 
 export const HoldIcon = IconOnlyOption.bind({});

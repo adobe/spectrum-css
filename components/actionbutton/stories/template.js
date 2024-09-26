@@ -138,27 +138,27 @@ export const ActionButtonsWithIconOptions = ({
 		columnGap: "12px",
 	},
 	content: html`
-    ${Template({
-      ...args,
+		${Template({
+			...args,
 			iconName: undefined,
-    }, context )}
-    ${Template({
-      ...args,
-    }, context )}
-    ${Template({
-      ...args,
-      hideLabel: true,
-    }, context )}
+		}, context )}
+		${Template({
+			...args,
+		}, context )}
+		${Template({
+			...args,
+			hideLabel: true,
+		}, context )}
 	${Template({
-      ...args,
-      hideLabel: true,
-      hasPopup: "true",
-    }, context )}
+			...args,
+			hideLabel: true,
+			hasPopup: "true",
+		}, context )}
 	${Template({
-      ...args,
+			...args,
 			iconName: undefined,
-      hasPopup: "true",
-    }, context )}`
+			hasPopup: "true",
+		}, context )}`
 });
 
 export const IconOnlyOption = ({
@@ -171,16 +171,16 @@ export const IconOnlyOption = ({
 	},
 	content: html`
 	${Template({
-      ...args,
-      hideLabel: true,
-      hasPopup: "true",
-    }, context )}
+			...args,
+			hideLabel: true,
+			hasPopup: "true",
+		}, context )}
 	${Template({
-      ...args,
-      hideLabel: true,
+			...args,
+			hideLabel: true,
 			isQuiet: true,
-      hasPopup: "true",
-    }, context )}`
+			hasPopup: "true",
+		}, context )}`
 });
 
 export const TreatmentTemplate = (args, context) => Container({

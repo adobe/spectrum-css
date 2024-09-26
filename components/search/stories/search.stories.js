@@ -4,7 +4,10 @@ import pkgJson from "../package.json";
 import { SearchGroup } from "./search.test.js";
 
 /**
- * This component contains a single input field with both a magnifying glass icon and a "reset" button displayed within it.
+ * A search field is used for searching and filtering items.
+ * 
+ * ## Usage Notes
+ * This component contains a single input field with both a magnifying glass icon and a clear (“reset”) button displayed within it. When making use of this component, the clear button should only be displayed when the input has a value.
  */
 export default {
 	title: "Search",
@@ -16,6 +19,7 @@ export default {
 	},
 	args: {
 		rootClass: "spectrum-Search",
+		size: "m",
 		isQuiet: false,
 		isDisabled: false,
 	},

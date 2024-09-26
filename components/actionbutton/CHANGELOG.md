@@ -316,6 +316,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 🗓
 2023-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/actionbutton@4.0.13...@spectrum-css/actionbutton@5.0.0)
 
+#### Remove focus-ring class
+
+We’ve migrated away from the focus-ring class in favor of the native :focus-visible pseudo-class due to changes in browser support.
+
 \*refactor(actionbutton)!: replace focus-ring with focus-visible([995a0dd](https://github.com/adobe/spectrum-css/commit/995a0dd))
 
     	###
@@ -983,6 +987,8 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### 🛑 BREAKING CHANGES
 
+#### Action Button now requires a class on its icon
+
 - .spectrum-ActionButton-icon is now required on icons
 - .spectrum--express must be added to support Express ActionButton
 - .spectrum-ActionButton-icon is now required on icons
@@ -1254,9 +1260,21 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 
 ### ♻️ Code refactoring
 
+#### Change workflow icon size
+
+Previously, all Action Buttons used `.spectrum-Icon--sizeS. `
+
+#### Change hold icon classnames
+
+Hold icon classnames must be set
+
 - fix padding ([89a6506](https://github.com/adobe/spectrum-css/commit/89a6506))
 
 ### ✨ Features
+
+#### T-shirt sizing
+
+Action Button now supports t-shirt sizing and requires that you specify the size by adding a .spectrum-ActionButton--size\* class.
 
 - fixup padding ([612dd0c](https://github.com/adobe/spectrum-css/commit/612dd0c))
 - implement t-shirt sizing for Action Button, closes [#936](https://github.com/adobe/spectrum-css/issues/936) ([1a9ecf6](https://github.com/adobe/spectrum-css/commit/1a9ecf6))
@@ -1272,6 +1290,10 @@ Also updates IllustratedMessage and ActionButton to share `--mod-` properties.
 - try to fix padding (still wrong for icon + label) ([8a2696e](https://github.com/adobe/spectrum-css/commit/8a2696e))
 
 ### 🛑 BREAKING CHANGES
+
+#### Action Button is now a separate component
+
+Action Button has been moved to the [Action Button](https://opensource.adobe.com/spectrum-css/actionbutton.html) component.
 
 - require hold icon to come before workflow icon
 - .spectrum-ActionButton is no longer part of the button component, use the actionbutton component
