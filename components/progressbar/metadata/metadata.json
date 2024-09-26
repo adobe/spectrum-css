@@ -2,8 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Meter",
-    ".spectrum-Meter--sizeL",
-    ".spectrum-Meter--sizeS",
     ".spectrum-Meter.is-negative .spectrum-ProgressBar-fill",
     ".spectrum-Meter.is-notice .spectrum-ProgressBar-fill",
     ".spectrum-Meter.is-positive .spectrum-ProgressBar-fill",
@@ -136,10 +134,13 @@
     "--system-meter-inline-size",
     "--system-meter-max-width",
     "--system-meter-min-width",
+<<<<<<< HEAD
     "--system-meter-progressbar-font-size",
     "--system-meter-progressbar-size-default",
     "--system-meter-progressbar-spacing-top-to-text",
     "--system-meter-progressbar-thickness",
+=======
+>>>>>>> 3f93ab351 (feat!: spectrum 2 initial release)
     "--system-meter-size-l-progressbar-font-size",
     "--system-meter-size-l-progressbar-size-default",
     "--system-meter-size-l-progressbar-spacing-top-to-text",

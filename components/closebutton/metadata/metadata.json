@@ -2,10 +2,6 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-CloseButton",
-    ".spectrum-CloseButton--sizeL",
-    ".spectrum-CloseButton--sizeM",
-    ".spectrum-CloseButton--sizeS",
-    ".spectrum-CloseButton--sizeXL",
     ".spectrum-CloseButton--staticBlack",
     ".spectrum-CloseButton--staticBlack.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton--staticBlack.is-keyboardFocused:not(:disabled)",
@@ -39,6 +35,13 @@
     ".spectrum-CloseButton.is-focused:not(:disabled) .spectrum-CloseButton-UIIcon",
     ".spectrum-CloseButton.is-keyboardFocused:not(:disabled)",
     ".spectrum-CloseButton.is-keyboardFocused:not(:disabled) .spectrum-CloseButton-UIIcon",
+<<<<<<< HEAD
+=======
+    ".spectrum-CloseButton.spectrum-CloseButton--sizeL",
+    ".spectrum-CloseButton.spectrum-CloseButton--sizeM",
+    ".spectrum-CloseButton.spectrum-CloseButton--sizeS",
+    ".spectrum-CloseButton.spectrum-CloseButton--sizeXL",
+>>>>>>> 3f93ab351 (feat!: spectrum 2 initial release)
     ".spectrum-CloseButton.spectrum-CloseButton--staticBlack",
     ".spectrum-CloseButton.spectrum-CloseButton--staticWhite",
     ".spectrum-CloseButton::-moz-focus-inner",

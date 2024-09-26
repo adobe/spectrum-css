@@ -30,12 +30,6 @@ body {
 nav.sidebar-container,
 div.sb-bar {
 	color: var(--spectrum-neutral-content-color-default);
-	background-color: var(--spectrum-background-base-color);
-}
-
-nav.sidebar-container,
-div.sb-bar {
-	color: var(--spectrum-neutral-content-color-default);
 	background-color: var(--spectrum-background-layer-2-color);
 }
 

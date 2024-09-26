@@ -25,10 +25,13 @@
     ".spectrum-Menu .spectrum-Menu-itemIcon--workflowIcon",
     ".spectrum-Menu .spectrum-Menu-itemIcon:not(.spectrum-Menu-chevron, .spectrum-Menu-checkmark)",
     ".spectrum-Menu li:not(.spectrum-Menu-item, .spectrum-Menu-divider)",
+<<<<<<< HEAD
     ".spectrum-Menu--sizeL",
     ".spectrum-Menu--sizeM",
     ".spectrum-Menu--sizeS",
     ".spectrum-Menu--sizeXL",
+=======
+>>>>>>> 3f93ab351 (feat!: spectrum 2 initial release)
     ".spectrum-Menu-back",
     ".spectrum-Menu-back .spectrum-Menu-sectionHeading",
     ".spectrum-Menu-back:focus-visible",
@@ -135,6 +138,10 @@
     ".spectrum-Menu.is-selectable .spectrum-Menu-item",
     ".spectrum-Menu.is-selectable .spectrum-Menu-item.is-selected",
     ".spectrum-Menu.js-focus-within .spectrum-Menu-item--collapsible.is-open[focus-within]",
+    ".spectrum-Menu.spectrum-Menu--sizeL",
+    ".spectrum-Menu.spectrum-Menu--sizeM",
+    ".spectrum-Menu.spectrum-Menu--sizeS",
+    ".spectrum-Menu.spectrum-Menu--sizeXL",
     ".spectrum-Menu:lang(ja)",
     ".spectrum-Menu:lang(ko)",
     ".spectrum-Menu:lang(zh)",
