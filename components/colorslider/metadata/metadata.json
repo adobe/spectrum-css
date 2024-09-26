@@ -53,7 +53,13 @@
     "--spectrum-opacity-checkerboard-square-light",
     "--spectrum-opacity-checkerboard-square-size"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-color-slider-border-color-rgba",
+    "--system-color-slider-checkerboard-dark-color",
+    "--system-color-slider-checkerboard-light-color",
+    "--system-color-slider-checkerboard-size",
+    "--system-color-slider-handle-margin-block"
+  ],
   "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
   "high-contrast": [
     "--highcontrast-color-slider-background-color-disabled",

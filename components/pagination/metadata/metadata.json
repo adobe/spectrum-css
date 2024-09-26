@@ -36,7 +36,13 @@
     "--spectrum-logical-rotation",
     "--spectrum-neutral-subdued-content-color-default"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-pagination-counter-color",
+    "--system-pagination-counter-font-size",
+    "--system-pagination-counter-line-height",
+    "--system-pagination-counter-margin-inline-start",
+    "--system-pagination-page-button-inline-spacing"
+  ],
   "passthroughs": ["--mod-textfield-min-width", "--mod-textfield-width"],
   "high-contrast": []
 }
