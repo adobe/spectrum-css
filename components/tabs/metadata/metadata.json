@@ -136,7 +136,6 @@
     "--spectrum-accent-content-color-key-focus",
     "--spectrum-animation-duration-100",
     "--spectrum-animation-ease-in-out",
-    "--spectrum-bold-font-weight",
     "--spectrum-border-width-200",
     "--spectrum-corner-radius-100",
     "--spectrum-default-font-style",
@@ -147,7 +146,7 @@
     "--spectrum-font-size-200",
     "--spectrum-font-size-300",
     "--spectrum-font-size-75",
-    "--spectrum-gray-300",
+    "--spectrum-gray-200",
     "--spectrum-gray-500",
     "--spectrum-line-height-100",
     "--spectrum-neutral-subdued-content-color-default",
@@ -208,7 +207,7 @@
     "--spectrum-workflow-icon-size-50",
     "--spectrum-workflow-icon-size-75"
   ],
-  "system-theme": ["--system-spectrum-tabs-font-weight"],
+  "system-theme": [],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-tabs-color",

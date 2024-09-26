@@ -11,8 +11,13 @@
  * governing permissions and limitations under the License.
  */
 
+
+/* @combine .spectrum.spectrum--legacy */
+
+@import "./spectrum-two.css";
+
 @container (--system: spectrum) {
 	.spectrum-AlertBanner {
-		--spectrum-alert-banner-netural-background: var(--spectrum-neutral-subdued-background-color-default);
+		--spectrum-alert-banner-neutral-background: var(--spectrum-neutral-subdued-background-color-default);
 	}
 }

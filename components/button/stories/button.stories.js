@@ -93,28 +93,6 @@ export const Default = ButtonGroups.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const StaticWhite = ButtonGroups.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
-StaticWhite.args = {
-	staticColor: "white",
-};
-StaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
-};
-
-export const StaticBlack = ButtonGroups.bind({});
-StaticBlack.tags = ["!autodocs", "!dev"];
-StaticBlack.args = {
-	staticColor: "black",
-};
-StaticBlack.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
-};
-
 export const WithForcedColors = ButtonGroups.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
@@ -266,7 +244,7 @@ Pending.parameters = {
 };
 
 /**
- * A button in a disabled state shows that an action exists, but is not available in that circumstance. 
+ * A button in a disabled state shows that an action exists, but is not available in that circumstance.
  * This state can be used to maintain layout continuity and to communicate that an action may become
  * available later.
  */
@@ -281,7 +259,7 @@ Disabled.parameters = {
 };
 
 /**
- * When the button text is too long for the horizontal space available, it wraps to form another line. 
+ * When the button text is too long for the horizontal space available, it wraps to form another line.
  * When there is no icon present, the text is aligned center. When there is an icon present, the text is
  * aligned `start` (left with a writing direction of left-to-right) and the icon remains vertically aligned
  * at the top.

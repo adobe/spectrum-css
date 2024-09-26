@@ -1,4 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { MeterGroup } from "./meter.test.js";
 import { default as ProgressBar } from "./progressbar.stories";
@@ -11,6 +12,7 @@ export default {
 	component: "ProgressBar",
 	argTypes: {
 		...ProgressBar.argTypes,
+		size: size(["s", "l"]),
 		fill: {
 			name: "Fill color",
 			type: { name: "string" },
@@ -22,7 +24,10 @@ export default {
 			control: "select",
 		},
 	},
-	args: ProgressBar.args,
+	args: {
+		...ProgressBar.args,
+		size: "s",
+	},
 	parameters: {
 		packageJson: pkgJson,
 	},
@@ -41,19 +46,6 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
-	},
-};
-
-export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
-StaticWhite.args = {
-	staticColor: "white",
-	label: "Loading your fonts, images, and icons",
-	value: 50,
-};
-StaticWhite.parameters = {
-	chromatic: {
 		modes: disableDefaultModes
 	},
 };

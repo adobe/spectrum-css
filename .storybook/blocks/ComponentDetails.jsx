@@ -148,7 +148,7 @@ function processReleaseData(storyMeta, npmData) {
 	].filter(tag => !ignoredTags.includes(tag));
 
 	// Create a robust fallback stack to capture the version number
-	const fallbackVersion = packageJson?.version ?? storyMeta?.csfFile?.meta?.parameters?.componentVersion;
+	const fallbackVersion = packageJson?.version;
 
 	const mapVersions = new Map();
 	for (const tag of tags) {

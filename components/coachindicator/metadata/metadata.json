@@ -4,11 +4,11 @@
     ".spectrum-CoachIndicator",
     ".spectrum-CoachIndicator--dark .spectrum-CoachIndicator-ring",
     ".spectrum-CoachIndicator--light .spectrum-CoachIndicator-ring",
-    ".spectrum-CoachIndicator--quiet",
     ".spectrum-CoachIndicator-ring",
     ".spectrum-CoachIndicator-ring:first-child",
     ".spectrum-CoachIndicator-ring:nth-child(2)",
     ".spectrum-CoachIndicator-ring:nth-child(3)",
+    ".spectrum-CoachIndicator.spectrum-CoachIndicator--quiet",
     "0%",
     "50%",
     "to"
@@ -53,6 +53,7 @@
     "--spectrum-coach-indicator-quiet-animation-keyframe-0-scale",
     "--spectrum-coach-indicator-quiet-animation-ring-inner-delay-multiple",
     "--spectrum-coach-indicator-quiet-ring-diameter",
+    "--spectrum-coach-indicator-quiet-ring-diameter-size",
     "--spectrum-coach-indicator-ring-block-size",
     "--spectrum-coach-indicator-ring-border-size",
     "--spectrum-coach-indicator-ring-dark-color",
@@ -68,7 +69,9 @@
     "--spectrum-coach-animation-indicator-ring-center-delay-multiple",
     "--spectrum-coach-animation-indicator-ring-duration",
     "--spectrum-coach-animation-indicator-ring-inner-delay-multiple",
-    "--spectrum-coach-animation-indicator-ring-outer-delay-multiple"
+    "--spectrum-coach-animation-indicator-ring-outer-delay-multiple",
+    "--spectrum-gray-25",
+    "--spectrum-gray-900"
   ],
   "system-theme": [],
   "passthroughs": [],
