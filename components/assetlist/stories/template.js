@@ -7,6 +7,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const AssetListItem = ({
 	rootClass = "spectrum-AssetList-item",

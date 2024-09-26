@@ -18,7 +18,12 @@
     "--spectrum-millercolumns-padding"
   ],
   "global": ["--spectrum-spacing-100"],
-  "system-theme": [],
+  "system-theme": [
+    "--system-miller-columns-inline-size",
+    "--system-miller-columns-margin-inline-end",
+    "--system-miller-columns-margin-inline-start",
+    "--system-miller-columns-padding"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }

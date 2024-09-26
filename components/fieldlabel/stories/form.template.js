@@ -8,6 +8,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Form",
@@ -40,12 +43,21 @@ export const Template = ({
                         alignment: labelPosition === "side" ? fieldLabelAlignment : undefined,
                     }, context))}
                     <div class=${classMap({
-                        [`${rootClass}-itemField`]: true,
+                        [`${rootClass}-item`]: true,
                     })}>
-                        ${renderContent(content, { context })}
+                        ${when(label, () => FieldLabel({
+                            label,
+                            forInput: item.id,
+                            alignment: labelsAbove ? undefined : "left",
+                        }, context))}
+                        <div class=${classMap({
+                            [`${rootClass}-itemField`]: true,
+                        })}>
+                            ${renderContent(content, { context })}
+                        </div>
                     </div>
-                </div>
-            `;
-        })}
-    </form>
-`;
+                `;
+            })}
+        </form>
+    `;
+};
