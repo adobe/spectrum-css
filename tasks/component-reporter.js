@@ -172,7 +172,7 @@ async function main({
 	const content = await fsp.readFile(sourceCSS, "utf-8");
 	const processed = await processCSS(content, sourceCSS, undefined, {
 		cwd,
-		skipMapping: true,
+		skipMapping: false,
 		referencesOnly: false,
 		preserveVariables: true,
 		stripLocalSelectors: false,

@@ -11,6 +11,7 @@
 | `--mod-stepper-border-color-invalid`                |
 | `--mod-stepper-border-color-keyboard-focus`         |
 | `--mod-stepper-border-color-keyboard-focus-invalid` |
+| `--mod-stepper-border-color-quiet`                  |
 | `--mod-stepper-border-radius`                       |
 | `--mod-stepper-border-width`                        |
 | `--mod-stepper-button-border-width`                 |

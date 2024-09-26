@@ -11,37 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
-
-.spectrum-Rating {
-	/* Icon */
-	--spectrum-rating-icon-height: var(--spectrum-workflow-icon-size-100);
-	--spectrum-rating-icon-width: var(--spectrum-workflow-icon-size-100);
-
-	/* Focus ring */
-	--spectrum-rating-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-rating-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--spectrum-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
-	--spectrum-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-
-	/* Spacing (top/bottom edge to icon) */
-	--spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-	--spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
-
-	/* Indicator height */
-	--spectrum-rating-indicator-height: var(--spectrum-border-width-200);
-
-	/* Colors */
-	/* selected + emphasized */
-	--spectrum-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
-	--spectrum-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);
-	--spectrum-rating-emphasized-icon-color-down: var(--spectrum-accent-content-color-down);
-	--spectrum-rating-emphasized-icon-color-key-focus: var(--spectrum-accent-content-color-key-focus);
-
-	/* Disabled */
-	--spectrum-rating-icon-color-disabled: var(--spectrum-disabled-content-color);
-	--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
-}
+@import "./themes/spectrum-two.css";
 
 .spectrum-Rating {
 	&.is-focused {
@@ -183,8 +153,8 @@
 	}
 
 	&:hover {
-		/* All stars following the hovered star */
 		& ~ .spectrum-Rating-icon {
+			/* All stars following the hovered star */
 			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
 		}
 	}

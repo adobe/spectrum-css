@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.2-s2-foundations.0
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`683871c`](https://github.com/adobe/spectrum-css/commit/683871c8cec3de3585c3d29fc63bd8bbf71e245a) Thanks [@pfulton](https://github.com/pfulton)! - Dependency updates to align with versions used in the parent repository.
+
 ## 2.0.1
 
 ### Patch Changes

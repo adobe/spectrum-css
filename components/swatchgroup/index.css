@@ -11,21 +11,15 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-SwatchGroup {
-	--spectrum-swatchgroup-spacing-compact: var(--spectrum-spacing-50);
-	--spectrum-swatchgroup-spacing-regular: var(--spectrum-spacing-75);
-	--spectrum-swatchgroup-spacing-spacious: var(--spectrum-spacing-100);
-}
+@import "./themes/spectrum-two.css";
 
 .spectrum-SwatchGroup {
 	display: inline-flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
 	justify-content: flex-start;
-}
 
-/* Regular (Default) */
-.spectrum-SwatchGroup {
+	/* Regular (Default) */
 	gap: var(--mod-swatchgroup-spacing-regular, var(--spectrum-swatchgroup-spacing-regular));
 }
 
