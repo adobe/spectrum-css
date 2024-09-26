@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/preview",
-	"version": "10.11.5",
+	"version": "11.0.0-s2-foundations.12",
 	"description": "A Spectrum CSS preview",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -29,8 +29,10 @@
 	},
 	"dependencies": {
 		"@adobe/spectrum-css-workflow-icons": "^1.5.4",
+		"@adobe/spectrum-tokens": "0.0.0-s2-foundations-colors-20240503210338",
 		"@spectrum-css/table": "workspace:^",
 		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-css/tokens-legacy": "npm:@spectrum-css/tokens@^14.3.1",
 		"@spectrum-css/typography": "workspace:^",
 		"@spectrum-css/ui-icons": "workspace:^"
 	},
@@ -64,6 +66,7 @@
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-syntax-highlighter": "^15.6.1",
+		"remark-gfm": "^4.0.0",
 		"rollup-plugin-postcss-lit": "^2.1.0",
 		"storybook": "^8.3.6",
 		"vite": "^5.4.9"
