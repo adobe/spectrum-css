@@ -7,6 +7,9 @@ import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = (args = {}, context = {}) => {
 	let {
@@ -38,9 +41,21 @@ export const Template = (args = {}, context = {}) => {
 			return Template({ ...args, ...c }, context);
 		}
 
-		// body doesn't come in xxs, but if paired with an xxs heading, use xs (the closest size to xxs)
-		if (semantics === "body" && size === "xxs") {
+		// Neither code nor body support xxs, but if paired with an xxs heading, use xs (the closest size to xxs)
+		if (["body", "code"].includes(semantics) && size === "xxs") {
 			size = "xs";
+		}
+
+		if (["detail"].includes(semantics) && size === "xs") {
+			size = "s";
+		}
+
+		if (["detail", "code"].includes(semantics) && size === "xxl") {
+			size = "xl";
+		}
+
+		if (["detail", "code"].includes(semantics) && size === "xxxl") {
+			size = "xl";
 		}
 
 		if (typeof semantics === "undefined") {
@@ -52,6 +67,11 @@ export const Template = (args = {}, context = {}) => {
 					})}
 					id=${ifDefined(id)}
 				>${c}</div>`;
+		}
+
+		// body doesn't come in xxs, but if paired with an xxs heading, use xs (the closest size to xxs)
+		if (semantics === "body" && size === "xxs") {
+			size = "xs";
 		}
 
 		rootClass = `spectrum-${capitalize(semantics)}`;
