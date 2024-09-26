@@ -59,7 +59,19 @@
     "--spectrum-neutral-content-color-key-focus",
     "--spectrum-white"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-link-animation-duration",
+    "--system-link-text-color-black",
+    "--system-link-text-color-primary-active",
+    "--system-link-text-color-primary-default",
+    "--system-link-text-color-primary-focus",
+    "--system-link-text-color-primary-hover",
+    "--system-link-text-color-secondary-active",
+    "--system-link-text-color-secondary-default",
+    "--system-link-text-color-secondary-focus",
+    "--system-link-text-color-secondary-hover",
+    "--system-link-text-color-white"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-link-focus-color",

@@ -81,7 +81,7 @@ To kick-off the project's storybook locally, run:
 yarn start
 ```
 
-This is our development environment, where you can see all the components in action, and develop new components. All components must have a storybook entry. Edits to any of the `*.css`, `*.stories.js`, or `template.js` files in `components/*` will live reload in your browser. For more details about how to work within our Storybook setup, take a look at our [getting started Storybook guide](https://opensource.adobe.com/spectrum-css/preview/?path=/docs/guides-contributing--docs).
+This is our development environment, where you can see all the components in action, and develop new components. All components must have a storybook entry. Edits to any of the `*.css`, `*.stories.js`, or `template.js` files in `components/*` will live reload in your browser. For more details about how to work within our Storybook setup, take a look at our [getting started Storybook guide](https://opensource.adobe.com/spectrum-css/?path=/docs/guides-contributing--docs).
 
 This project is leveraging caching from [Nx](https://nx.dev/) to speed up the build process. If you are seeing unexpected results, you can clear the cache by running `yarn nx reset`.
 

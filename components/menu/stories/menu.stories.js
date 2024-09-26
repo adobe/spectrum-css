@@ -247,6 +247,9 @@ TraySubmenu.parameters = {
 			height: "400px"
 		}
 	},
+	viewport: {
+		defaultViewport: "mobile2"
+	},
 };
 
 export const MenuItem = MenuItemGroup.bind({});

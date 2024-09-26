@@ -54,6 +54,18 @@ export default {
 export const Default = CloseButtonGroup.bind({});
 Default.args = {};
 
+// ********* VRT ONLY ********* //
+export const WithForcedColors = CloseButtonGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
+
 /**
  * Close button provides a "large" icon size option, for displaying a larger cross icon for each component size.
  * When using this option, the following UI icons should be used:
@@ -76,18 +88,9 @@ SizingLargeIcons.args = {
 	iconSize: "large",
 };
 SizingLargeIcons.tags = ["!dev"];
-
-// ********* VRT ONLY ********* //
-export const WithForcedColors = CloseButtonGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
-WithForcedColors.parameters = {
-	chromatic: {
-		forcedColors: "active",
-		modes: disableDefaultModes
-	},
+SizingLargeIcons.parameters = {
+	chromatic: { disableSnapshot: true },
 };
-
-// ********* DOCS ONLY ********* //
 
 /**
 * Close buttons come in four different sizes: small, medium, large, and extra-large. By default ("regular" icon size), the cross icon
