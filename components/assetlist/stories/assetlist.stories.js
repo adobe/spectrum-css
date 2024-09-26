@@ -35,6 +35,7 @@ Default.args = {
 		},
 		{
 			iconName: "Document",
+			iconSet: "workflow",
 			label: "Resource allocation documentation should truncate",
 			isSelectable: true,
 			ariaLabelledby: "assetitemlabel-2",
@@ -42,6 +43,7 @@ Default.args = {
 		},
 		{
 			iconName: "Folder",
+			iconSet: "workflow",
 			label: "Front-end Projects",
 			isSelectable: true,
 			isBranch: true,
@@ -51,6 +53,7 @@ Default.args = {
 		},
 		{
 			iconName: "Folder",
+			iconSet: "workflow",
 			label: "Downloads",
 			isSelectable: true,
 			isBranch: true,

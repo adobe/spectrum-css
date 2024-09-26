@@ -12,6 +12,7 @@ export const AssetListItem = ({
 	rootClass = "spectrum-AssetList-item",
 	image,
 	iconName,
+	iconSet = "workflow",
 	label,
 	checkboxId,
 	ariaLabelledby,
@@ -33,19 +34,24 @@ export const AssetListItem = ({
 		tabindex="0"
 	>
 		${when(isSelectable, () =>
-		Checkbox({
-			size: "m",
-			isChecked: isSelected,
-			ariaLabelledby,
-			id: checkboxId,
-			customClasses: [`${rootClass}Selector`],
-		}))}
-		${when(
-			image,
-			() =>
-				html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
+			Checkbox({
+				size: "m",
+				isChecked: isSelected,
+				ariaLabelledby,
+				id: checkboxId,
+				customClasses: [`${rootClass}Selector`],
+			})
 		)}
-		${when(iconName, () => Icon({ iconName, customClasses: [`${rootClass}Thumbnail`] }))}
+		${when(image, () => 
+			html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
+		)}
+		${when(iconName, () => 
+			Icon({
+				iconName,
+				setName: iconSet,
+				customClasses: [`${rootClass}Thumbnail`],
+			})
+		)}
 		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
 		${when(!isSelectable && !isBranch, () =>
 			Checkbox({
