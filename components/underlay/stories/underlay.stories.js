@@ -1,7 +1,9 @@
 import { Default as DialogStory } from "@spectrum-css/dialog/stories/dialog.stories.js";
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { isOpen } from "@spectrum-css/preview/types";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { Template } from "./template.js";
 
 /**
@@ -29,6 +31,17 @@ export default {
 		},
 		chromatic: { disableSnapshot: true },
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	}
 };
 

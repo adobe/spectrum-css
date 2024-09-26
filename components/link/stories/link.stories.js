@@ -1,6 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isFocused, isHovered, isQuiet, staticColor } from "@spectrum-css/preview/types";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { LinkGroup } from "./link.test.js";
 import { TemplateWithFillerText } from "./template";
 
@@ -70,6 +72,17 @@ export default {
 			handles: ["click .spectrum-Link"],
 		},
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 

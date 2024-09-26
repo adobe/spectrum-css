@@ -1,7 +1,9 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isKeyboardFocused, size, staticColor } from "@spectrum-css/preview/types";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { CloseButtonGroup } from "./closebutton.test.js";
 import { CloseButtonExample, Template } from "./template.js";
 
@@ -46,6 +48,17 @@ export default {
 			handles: ["click .spectrum-CloseButton"],
 		},
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 
@@ -55,7 +68,7 @@ Default.args = {};
 /**
  * Close button provides a "large" icon size option, for displaying a larger cross icon for each component size.
  * When using this option, the following UI icons should be used:
- * 
+ *
  * | Close button class name         | UI icon class name          |
  * | ------------------------------- | --------------------------- |
  * | `.spectrum-CloseButton--sizeS`  | `.spectrum-UIIcon-Cross200` |
@@ -90,7 +103,7 @@ WithForcedColors.parameters = {
 /**
 * Close buttons come in four different sizes: small, medium, large, and extra-large. By default ("regular" icon size), the cross icon
 * within the close button should use the following UI icons for each component size:
-* 
+*
 * | Close button class name         | UI icon class name          |
 * | ------------------------------- | --------------------------- |
 * | `.spectrum-CloseButton--sizeS`  | `.spectrum-UIIcon-Cross75`  |
@@ -136,4 +149,3 @@ StaticBlack.tags = ["!dev"];
 StaticBlack.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-

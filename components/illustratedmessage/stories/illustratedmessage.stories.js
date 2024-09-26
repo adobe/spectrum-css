@@ -1,7 +1,9 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { IllustratedMessageGroup } from "./illustratedmessage.test.js";
 import { Template } from "./template.js";
 
@@ -44,6 +46,17 @@ export default {
 	},
 	parameters: {
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 

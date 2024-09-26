@@ -2,7 +2,9 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isReadOnly, isRequired } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { FieldGroupSet } from "./fieldgroup.test.js";
 import { Template } from "./template.js";
 
@@ -73,6 +75,17 @@ export default {
 			],
 		},
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 	tags: ["!autodocs"],
 };

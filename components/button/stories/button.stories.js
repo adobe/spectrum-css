@@ -2,7 +2,9 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isPending, size, staticColor } from "@spectrum-css/preview/types";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { ButtonGroups } from "./button.test.js";
 import { ButtonsWithIconOptions, TextOverflowTemplate, TextWrapTemplate, TreatmentTemplate } from "./template.js";
 
@@ -85,6 +87,17 @@ export default {
 			handles: ["click .spectrum-Button"],
 		},
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 	tags: ["!autodocs"],
 };
@@ -266,7 +279,7 @@ Pending.parameters = {
 };
 
 /**
- * A button in a disabled state shows that an action exists, but is not available in that circumstance. 
+ * A button in a disabled state shows that an action exists, but is not available in that circumstance.
  * This state can be used to maintain layout continuity and to communicate that an action may become
  * available later.
  */
@@ -281,7 +294,7 @@ Disabled.parameters = {
 };
 
 /**
- * When the button text is too long for the horizontal space available, it wraps to form another line. 
+ * When the button text is too long for the horizontal space available, it wraps to form another line.
  * When there is no icon present, the text is aligned center. When there is an icon present, the text is
  * aligned `start` (left with a writing direction of left-to-right) and the icon remains vertically aligned
  * at the top.

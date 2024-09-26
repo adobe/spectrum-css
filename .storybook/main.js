@@ -45,6 +45,8 @@ export default {
 		"@chromaui/addon-visual-tests",
 		// https://storybook.js.org/addons/@storybook/addon-designs/
 		"@storybook/addon-designs",
+		// https://github.com/ljcl/storybook-addon-cssprops
+		"@ljcl/storybook-addon-cssprops",
 	],
 	core: {
 		disableTelemetry: true,

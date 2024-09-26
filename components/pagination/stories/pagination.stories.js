@@ -1,12 +1,14 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { PaginationGroup } from "./pagination.test.js";
 import { Template } from "./template";
 
 /**
- * The pagination component displays numbered buttons or an input field to allow for navigation. 
+ * The pagination component displays numbered buttons or an input field to allow for navigation.
  */
 export default {
 	title: "Pagination",
@@ -68,11 +70,22 @@ export default {
 			],
 		},
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 
 /**
- * The default listing/page variant uses buttons for each page number. 
+ * The default listing/page variant uses buttons for each page number.
  */
 export const Default = PaginationGroup.bind({});
 Default.storyName = "Default (listing)";

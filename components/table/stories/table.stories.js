@@ -1,7 +1,9 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isEmphasized, isQuiet, size } from "@spectrum-css/preview/types";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { TableGroup } from "./table.test.js";
 import { Template } from "./template.js";
 
@@ -111,6 +113,17 @@ export default {
 	},
 	parameters: {
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 
@@ -341,7 +354,7 @@ SectionHeaderQuiet.parameters = {
 };
 
 /**
- * 
+ *
  * A table can be wrapped in a fixed height `div` with the `.spectrum-Table-scroller` class. This allows scrolling of the table body and makes the column headers sticky (i.e. fixed to the top on scroll).
  *
  * When using the scrollable wrapper, the column headers must have a solid background color set. This can be customized to match the parent background with the custom property `--mod-table-header-background-color-scrollable`.

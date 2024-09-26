@@ -1,5 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { MeterGroup } from "./meter.test.js";
 import { default as ProgressBar } from "./progressbar.stories";
 
@@ -25,6 +27,17 @@ export default {
 	args: ProgressBar.args,
 	parameters: {
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 
