@@ -1,4 +1,4 @@
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -50,3 +50,28 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const DocsSwitchGroup = (args, context) => Container({
+	withBorder: false,
+	content: html`
+	${Container({
+		heading: "Not selected",
+		content: html`
+			${Template({
+				...args,
+				context,
+				isChecked: false,
+			})}
+		`
+	})}
+	${Container({
+		heading: "Selected",
+		content: html`
+			${Template({
+				...args,
+				context,
+				isChecked: true,
+			})}
+		`
+	})}`
+});
