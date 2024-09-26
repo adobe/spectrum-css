@@ -1,5 +1,191 @@
 # Change Log
 
+## 10.0.0-s2-foundations.13
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`11a0032`](https://github.com/adobe/spectrum-css/commit/11a00323addbf28b9430d27d9cbc5f30bc851b65) Thanks [@pfulton](https://github.com/pfulton)! - Bug fixes to S1 & Express theming across all components
+
+### Patch Changes
+
+- Updated dependencies [[`11a0032`](https://github.com/adobe/spectrum-css/commit/11a00323addbf28b9430d27d9cbc5f30bc851b65)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.18
+  - @spectrum-css/icon@8.0.0-s2-foundations.15
+  - @spectrum-css/tokens@15.0.0-s2-foundations.21
+
+## 10.0.0-s2-foundations.12
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05) Thanks [@pfulton](https://github.com/pfulton)! - - Accordion: Flatten sizing variables in theme layer
+  - ActionButton: Fix typo in variable name "\*-defaul-selectedt"
+  - Move out rtl logical transform from theme to index.css for: calendar, pagination, treeview
+
+### Patch Changes
+
+- Updated dependencies [[`5546ec6`](https://github.com/adobe/spectrum-css/commit/5546ec6a508eb249ede78031db22ddf5972e5c05)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.13
+  - @spectrum-css/icon@8.0.0-s2-foundations.13
+  - @spectrum-css/tokens@15.0.0-s2-foundations.13
+
+## 10.0.0-s2-foundations.11
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1) Thanks [@pfulton](https://github.com/pfulton)! - Updated build to set cssnano to discardUnused: false
+
+### Patch Changes
+
+- Updated dependencies [[`b0862e1`](https://github.com/adobe/spectrum-css/commit/b0862e1a5b95c19443fd919c6baf4b4ea9ba79c1)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.12
+  - @spectrum-css/icon@8.0.0-s2-foundations.12
+  - @spectrum-css/tokens@15.0.0-s2-foundations.12
+
+## 10.0.0-s2-foundations.10
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0844aad`](https://github.com/adobe/spectrum-css/commit/0844aadba2fefb844a66370ff6e9b4704f6c1543) Thanks [@pfulton](https://github.com/pfulton)! - Fixes to index.css imports to ensure appropriate system mappings get loaded
+
+### Patch Changes
+
+- Updated dependencies [[`0844aad`](https://github.com/adobe/spectrum-css/commit/0844aadba2fefb844a66370ff6e9b4704f6c1543)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.10
+  - @spectrum-css/icon@8.0.0-s2-foundations.11
+  - @spectrum-css/tokens@15.0.0-s2-foundations.10
+
+## 10.0.0-s2-foundations.9
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`84c8721`](https://github.com/adobe/spectrum-css/commit/84c87212ccb37c887225eaff28e84d9f8e608e09) Thanks [@pfulton](https://github.com/pfulton)! - Push out the latest release to the components
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`0a0dace`](https://github.com/adobe/spectrum-css/commit/0a0dacec163234bc73961ef17826cdc33765d9df) Thanks [@pfulton](https://github.com/pfulton)! - Across the board version update to latest build system state
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`681ba47`](https://github.com/adobe/spectrum-css/commit/681ba478c1259d0bbb183670f3188538ec3bee1d) Thanks [@pfulton](https://github.com/pfulton)! - Doing a widespread release on all packages to ensure the latest compiled CSS is published.
+
+- Updated dependencies [[`681ba47`](https://github.com/adobe/spectrum-css/commit/681ba478c1259d0bbb183670f3188538ec3bee1d), [`84c8721`](https://github.com/adobe/spectrum-css/commit/84c87212ccb37c887225eaff28e84d9f8e608e09), [`0a0dace`](https://github.com/adobe/spectrum-css/commit/0a0dacec163234bc73961ef17826cdc33765d9df)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.9
+  - @spectrum-css/icon@8.0.0-s2-foundations.9
+  - @spectrum-css/tokens@15.0.0-s2-foundations.9
+
+## 10.0.0-s2-foundations.8
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`2633985`](https://github.com/adobe/spectrum-css/commit/2633985775ef5a8fad929e275e55e99b75b10959) Thanks [@pfulton](https://github.com/pfulton)! - Update system property tooling (splitinator) to leverage the selector parser
+
+### Patch Changes
+
+- Updated dependencies [[`2633985`](https://github.com/adobe/spectrum-css/commit/2633985775ef5a8fad929e275e55e99b75b10959)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.8
+  - @spectrum-css/icon@8.0.0-s2-foundations.8
+  - @spectrum-css/tokens@15.0.0-s2-foundations.8
+
+## 10.0.0-s2-foundations.7
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`24a51cc`](https://github.com/adobe/spectrum-css/commit/24a51cc3b682a06a5133c4f5bf72c11a2337ee22) Thanks [@pfulton](https://github.com/pfulton)! - Revert themes asset naming to simplify code review; bug fixes in custom property loading from theme assets
+
+### Patch Changes
+
+- Updated dependencies [[`24a51cc`](https://github.com/adobe/spectrum-css/commit/24a51cc3b682a06a5133c4f5bf72c11a2337ee22)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.7
+  - @spectrum-css/icon@8.0.0-s2-foundations.7
+  - @spectrum-css/tokens@15.0.0-s2-foundations.7
+
+## 10.0.0-s2-foundations.6
+
+### Patch Changes
+
+- [#2886](https://github.com/adobe/spectrum-css/pull/2886) [`a01ac07`](https://github.com/adobe/spectrum-css/commit/a01ac075ae227574628f72b4c0fe61f1f53792c5) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Ensures disabled breadrumb items behave as expected. They are conditionally left out of tab order depending on their `isDisabled` value. Uses [aria-disabled="true"] and applies `is-disabled` class to `.spectrum-Breadcrumb-itemLink`.
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0) Thanks [@pfulton](https://github.com/pfulton)! - Inject missing tokens into theme files and adjust logic in the splitinator tool to replace nested variable references to the new system mappings
+
+- Updated dependencies [[`130e137`](https://github.com/adobe/spectrum-css/commit/130e1372b223641efe0a3a23c83ff1d01a70bf1d), [`4d88749`](https://github.com/adobe/spectrum-css/commit/4d887492f98f1f505535680bfb0baa06d24460a0)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.6
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.6
+  - @spectrum-css/icon@8.0.0-s2-foundations.6
+
+## 10.0.0-s2-foundations.5
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`de1d39f`](https://github.com/adobe/spectrum-css/commit/de1d39fdedc297032735acf97d0f87b6f2e45f50) Thanks [@pfulton](https://github.com/pfulton)! - Fix to how the system mapped custom property names are generated; adding support for pseudo functions, combinators, and complex selectors
+
+- Updated dependencies [[`de1d39f`](https://github.com/adobe/spectrum-css/commit/de1d39fdedc297032735acf97d0f87b6f2e45f50)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.5
+  - @spectrum-css/icon@8.0.0-s2-foundations.5
+  - @spectrum-css/tokens@15.0.0-s2-foundations.5
+
+## 10.0.0-s2-foundations.4
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`485128c`](https://github.com/adobe/spectrum-css/commit/485128ca7947acb064f31e4118044a3f7e3f88b5) Thanks [@pfulton](https://github.com/pfulton)! - Corrects a faulty regex that was negatively affecting compilation of custom properties
+
+- Updated dependencies [[`485128c`](https://github.com/adobe/spectrum-css/commit/485128ca7947acb064f31e4118044a3f7e3f88b5)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.4
+  - @spectrum-css/icon@8.0.0-s2-foundations.4
+  - @spectrum-css/tokens@15.0.0-s2-foundations.4
+
+## 10.0.0-s2-foundations.3
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df) Thanks [@pfulton](https://github.com/pfulton)! - fixes a compilation issue in the tokens dist artifacts
+
+### Patch Changes
+
+- Updated dependencies [[`6b12d37`](https://github.com/adobe/spectrum-css/commit/6b12d375c12b36f387b331fff42b24bc7c3845df)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.3
+  - @spectrum-css/icon@8.0.0-s2-foundations.3
+  - @spectrum-css/tokens@15.0.0-s2-foundations.3
+
+## 10.0.0-s2-foundations.2
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58) Thanks [@pfulton](https://github.com/pfulton)! - Preserves `themes` folder in `dist` artifacts for easier downstream consumption
+
+### Patch Changes
+
+- Updated dependencies [[`b00388b`](https://github.com/adobe/spectrum-css/commit/b00388b3ab026989f261f7bcdd77699521f45d58)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.2
+  - @spectrum-css/icon@8.0.0-s2-foundations.2
+  - @spectrum-css/tokens@15.0.0-s2-foundations.2
+
+## 10.0.0-s2-foundations.1
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e) Thanks [@pfulton](https://github.com/pfulton)! - Fixes an issue where vars.css was not being populated with the correct values
+
+### Patch Changes
+
+- Updated dependencies [[`39bbd6c`](https://github.com/adobe/spectrum-css/commit/39bbd6cbb7eac7c71515ef2417554cb115eba00e)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.1
+  - @spectrum-css/icon@8.0.0-s2-foundations.1
+  - @spectrum-css/tokens@15.0.0-s2-foundations.1
+
+## 10.0.0-s2-foundations.0
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce) Thanks [@pfulton](https://github.com/pfulton)! - S2 colors + grays foundation
+
+### Patch Changes
+
+- Updated dependencies [[`5e9953d`](https://github.com/adobe/spectrum-css/commit/5e9953d96806a5d1e769a343cd538e4af81916ce)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.0
+  - @spectrum-css/tokens@15.0.0-s2-foundations.0
+  - @spectrum-css/icon@8.0.0-s2-foundations.0
+
 ## 9.1.5
 
 ### Patch Changes

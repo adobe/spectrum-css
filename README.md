@@ -11,12 +11,12 @@
 
 ## Features
 
-* 📖 **Robust documentation**: Spectrum CSS is designed to be used in partnership with [Spectrum's detailed usage guidelines](https://spectrum.adobe.com/).
-* 🎨 **Flexible**: Our CSS is customizable, powerful, and designed to work with any JavaScript framework.
-* 🧪 **Rigorously tested**: These individually-versioned components have been vetted to be accessible and inclusive of global audiences.
-* 📱 **Multi-platform support**: We support [evergreen browsers](https://github.com/adobe/spectrum-css?tab=readme-ov-file#browser-support) for scalability and flexibility.
+- 📖 **Robust documentation**: Spectrum CSS is designed to be used in partnership with [Spectrum's detailed usage guidelines](https://spectrum.adobe.com/).
+- 🎨 **Flexible**: Our CSS is customizable, powerful, and designed to work with any JavaScript framework.
+- 🧪 **Rigorously tested**: These individually-versioned components have been vetted to be accessible and inclusive of global audiences.
+- 📱 **Multi-platform support**: We support [evergreen browsers](https://github.com/adobe/spectrum-css?tab=readme-ov-file#browser-support) for scalability and flexibility.
 
-&nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://img.shields.io/badge/Get%20started-F0F0F0?style=for-the-badge&logo=adobe&logoColor=%23FF0000"/>](https://opensource.adobe.com/spectrum-css/get-started.html) &nbsp; [<img src="https://img.shields.io/badge/Storybook-F0F0F0?style=for-the-badge&logo=storybook&logoColor=%23FF4785"/>](https://opensource.adobe.com/spectrum-css/preview/)
+&nbsp;&nbsp;&nbsp;&nbsp; [<img src="https://img.shields.io/badge/Get%20started-F0F0F0?style=for-the-badge&logo=adobe&logoColor=%23FF0000"/>](https://opensource.adobe.com/spectrum-css/get-started.html) &nbsp; [<img src="https://img.shields.io/badge/Storybook-F0F0F0?style=for-the-badge&logo=storybook&logoColor=%23FF4785"/>](https://opensource.adobe.com/spectrum-css/)
 
 ## Using Spectrum CSS
 
@@ -26,11 +26,11 @@ Want to get a component up and running as soon as possible? Check out the [quick
 
 ### Functionality
 
-Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. We do include some lightweight JS-based interaction for demonstration purposes only in our [Storybook](https://opensource.adobe.com/spectrum-css/preview/). Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, text fields, etc.
+Spectrum CSS is CSS-only, implementing only the interactivity that can be done with pure CSS. We do include some lightweight JS-based interaction for demonstration purposes only in our [Storybook](https://opensource.adobe.com/spectrum-css/). Spectrum CSS should only be used by implementations of Spectrum, or very simple applications that only need things like typography, checkboxes, text fields, etc.
 
 Adobe maintains separate libraries written with [web components](https://opensource.adobe.com/spectrum-web-components/) and [React](https://react-spectrum.adobe.com/react-spectrum/index.html) that work in partnership with Spectrum CSS to create fully interactive Spectrum components.
 
-The [Spectrum Web Components](<https://opensource.adobe.com/spectrum-web-components/>) library directly imports Spectrum CSS and optimizes it for use with web components.
+The [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/) library directly imports Spectrum CSS and optimizes it for use with web components.
 
 ### Installing components
 
@@ -50,17 +50,19 @@ All components in this library have a peer dependency on [`@spectrum-css/tokens`
 
 Spectrum CSS components have build output that is designed to be used in a variety of ways:
 
-* `index.css` - _Preferred and most commonly used to incorporate Spectrum CSS into a project_. This file includes the component's styles and variable definitions. In this version, token-driven CSS properties<sup>[1](#token-footnote)</sup> are mapped to empty `--mod` prefixed variables (for customization) with a fallback to variables prefixed with `--spectrum` (sourced from the design tokens).
-  * This file loads both the `.spectrum` and `.spectrum--express` contexts which are used to toggle components between two different [visual styles](https://github.com/adobe/spectrum-css?tab=readme-ov-file#visual-language). The `.spectrum` context is the default.
+- `index.css` - _Preferred and most commonly used to incorporate Spectrum CSS into a project_. This file includes the component's styles and variable definitions. In this version, token-driven CSS properties<sup>[1](#token-footnote)</sup> are mapped to empty `--mod` prefixed variables (for customization) with a fallback to variables prefixed with `--spectrum` (sourced from the design tokens).
 
-* `index-vars.css` - _Deprecated_. This file is identical to `index.css`. It is provided as a fallback for older implementations that may have been using it and will be removed. It is recommended to use `index.css` instead.
+  - This file loads both the `.spectrum` and `.spectrum--express` contexts which are used to toggle components between two different [visual styles](https://github.com/adobe/spectrum-css?tab=readme-ov-file#visual-language). The `.spectrum` context is the default.
 
-* `index-base.css`: This file mimics the `index.css` output, but does not include the `.spectrum` or `.spectrum--express` contexts.
-  * If your product only requires the `.spectrum` context, you can use `index-base.css` plus `themes/spectrum.css` from the `themes` directory to render the default Spectrum visual language.
-    * The `.spectrum--express` context, on the other hand, is dependent on/expands on the default `.spectrum` context. This means if you only want to use the Express context, you still need to include `themes/spectrum.css`. In this case, we recommend using `index.css` instead since it includes both contexts by default.
-  * This approach can also be used when you have defined and written your own visual language and only need the base component styles from Spectrum CSS. To wire up your own visual language, you would need to define your own custom properties that match those defined in the `themes/*.css` assets.
+- `index-vars.css` - _Deprecated_. This file is identical to `index.css`. It is provided as a fallback for older implementations that may have been using it and will be removed. It is recommended to use `index.css` instead.
 
-* `index-theme.css`: This file provides only the visual language for a component. It is used in conjunction with `index-base.css` and when loaded together, provides the same result as using `index.css` by itself.
+- `index-base.css`: This file mimics the `index.css` output, but does not include the `.spectrum` or `.spectrum--express` contexts.
+
+  - If your product only requires the `.spectrum` context, you can use `index-base.css` plus `themes/spectrum-two.css` from the `themes` directory to render the default Spectrum visual language.
+    - The `.spectrum--express` context, on the other hand, is dependent on/expands on the default `.spectrum` context. This means if you only want to use the Express context, you still need to include `themes/spectrum-two.css`. In this case, we recommend using `index.css` instead since it includes both contexts by default.
+  - This approach can also be used when you have defined and written your own visual language and only need the base component styles from Spectrum CSS. To wire up your own visual language, you would need to define your own custom properties that match those defined in the `themes/*.css` assets.
+
+- `index-theme.css`: This file provides only the visual language for a component. It is used in conjunction with `index-base.css` and when loaded together, provides the same result as using `index.css` by itself.
 
 <sup><a name="token-footnote">1</a></sup>: Token-driven CSS properties are properties whose values are mapped to a value in the `@spectrum-css/tokens` package. These values represent design-language and are meant to be used across platforms. In contrast, properties specific to web-based implementations will not have a token value assigned, so not all CSS properties will use custom properties.
 
@@ -94,7 +96,7 @@ Start by including the base set of variables:
   index-base.css and the spectrum theme from the themes directory.
 */
 @import "node_modules/@spectrum-css/button/dist/index-base.css";
-@import "node_modules/@spectrum-css/button/dist/themes/spectrum.css";
+@import "node_modules/@spectrum-css/button/dist/themes/spectrum-two.css";
 ```
 
 Tokens values are mapped to context-specific classes which can be applied to the `<html>` element or any place in your DOM where you wish to encapsulate or alter the visual language of your Spectrum components.
@@ -102,24 +104,25 @@ Tokens values are mapped to context-specific classes which can be applied to the
 All contexts you want to use must be defined in order to load all the appropriate custom properties for the components you are using.
 
 #### Global variables
+
 ##### Visual language
 
-* `.spectrum` - The default visual language for Spectrum CSS
-* `.spectrum--express` - A variant of the standard visual language. _This visual language will be deprecated in Spectrum 2_.
+- `.spectrum` - The default visual language for Spectrum CSS
+- `.spectrum--express` - A variant of the standard visual language. _This visual language will be deprecated in Spectrum 2_.
 
 ##### Scales
 
 Scales represent the browsing context of the user. They are used to adjust the size of components to improve readability and usability on different devices.
 
-* `.spectrum--medium` - The default scale for Spectrum CSS, used for desktop and tablet devices
-* `.spectrum--large` - A larger scale for Spectrum CSS, used for mobile devices and other small screens to create a more touch-friendly experience
+- `.spectrum--medium` - The default scale for Spectrum CSS, used for desktop and tablet devices
+- `.spectrum--large` - A larger scale for Spectrum CSS, used for mobile devices and other small screens to create a more touch-friendly experience
 
 ##### Themes (colorstops)
 
 Themes represent the color scheme of the user's browsing context. They are used to adjust the color of components to improve readability and usability in different environments.
 
-* `.spectrum--light` - The default theme for Spectrum CSS, used for light mode
-* `.spectrum--dark` - A darker theme for Spectrum CSS, used for dark mode
+- `.spectrum--light` - The default theme for Spectrum CSS, used for light mode
+- `.spectrum--dark` - A darker theme for Spectrum CSS, used for dark mode
 
 Other themes are available but are in the process of being deprecated and should not be used in new projects.
 
@@ -134,7 +137,9 @@ Put together, we would define the context for our application in the following w
 To switch to Express, **add** the `.spectrum--express` class to the `<html>` element:
 
 ```html
-<html class="spectrum spectrum--medium spectrum--light spectrum--express"></html>
+<html
+  class="spectrum spectrum--medium spectrum--light spectrum--express"
+></html>
 ```
 
 Note the `spectrum--express` class is added to the existing classes; `spectrum` should always be present to ensure the correct visual language is loaded.
@@ -151,11 +156,11 @@ Some components require certain "UI icons" to render. These icons are released w
 
 Based on [which scales](https://github.com/adobe/spectrum-css?tab=readme-ov-file#scales) you'll be using, you can choose to load different files:
 
-* `spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
+- `spectrum-css-icons.svg` - Both medium and large icons for responsive UIs that support both `.spectrum--medium` and `.spectrum--large`
 
-* `spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
+- `spectrum-css-icons-medium.svg` - Medium icons only, supports `.spectrum--medium` only
 
-* `spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
+- `spectrum-css-icons-large.svg` - Large icons only, supports `.spectrum--large` only
 
 **Note:** If you're using `spectrum-css-icons.svg`, be sure to add `.spectrum--medium` or `.spectrum--large` to the `<html>` element, or you'll see both medium and large icons at once.
 
@@ -187,11 +192,11 @@ For Arabic, a right-to-left language:
 
 We maintain a modern codebase that supports the latest two versions of evergreen web browsers. The current list of browsers officially supported by Spectrum CSS can be found in the browserslist section of the project's [package.json file](https://github.com/adobe/spectrum-css/blob/main/package.json). This setting is used by the build tools when the source files are built. If you require additional browser support for your project, the CSS can be processed further with your chosen tools.
 
-* latest 2 Edge versions
-* latest 2 Chrome versions
-* latest 2 Firefox versions
-* latest 2 Safari versions
-* latest 2 iOS versions
+- latest 2 Edge versions
+- latest 2 Chrome versions
+- latest 2 Firefox versions
+- latest 2 Safari versions
+- latest 2 iOS versions
 
 ### Optimizing Spectrum CSS
 
@@ -199,7 +204,7 @@ Spectrum CSS is designed to be as modern and flexible as possible, and as such, 
 
 ## Contributing
 
-A very special thank you to all of our [contributors](<https://github.com/adobe/spectrum-css/graphs/contributors>) without whom this project would not be possible.
+A very special thank you to all of our [contributors](https://github.com/adobe/spectrum-css/graphs/contributors) without whom this project would not be possible.
 
 Want to join the team? Check out the [contributing guidelines](.github/CONTRIBUTING.md) to get started.
 
@@ -207,16 +212,16 @@ Want to join the team? Check out the [contributing guidelines](.github/CONTRIBUT
 
 The following tasks are available:
 
-| Command | Description | Examples |
-| --- | --- | --- |
-| `clean` | Cleans all output files for the project and all components | `yarn clean` |
-| `build` | Performs a build of all components | `yarn build` |
-| `build:all` | Performs a build of all components, documentation site, and storybook | `yarn build:all` |
-| `dev` | Performs a component build and serves the documentation on the default port (3000) | `yarn dev` |
-| `compare` | This compares the current version of components with the previous versions published to NPM and output a list of all the changes that have been made. This is useful for reviewing changes before a release. The information is provided in the command-line output as well as in a simple web page that is opened in your default browser upon completion. The web page includes links to the visual diffs for each component when the file sizes have changed. <ul><li>Components with no changes are not included in the output.</li><li>To run comparisons on one or multiple components, `compare` accepts a list of components as arguments. For example, `yarn compare button` will compare the current version of the button component with the previous version published to NPM. `yarn compare button checkbox` will compare the current version of the button and checkbox components with the previous versions published to NPM.</li><li>Named components should be space-separated.</li><li>Running `compare` with no inputs will automatically run against all packages.</li></ul> | `yarn compare`<br/>`yarn compare accordion`<br/>`yarn compare accordion actionbutton` |
-| `lint` | Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment. Use `format` to automatically fix any issues that are found. To run on a single component, use `yarn linter accordion` (where `accordion` is the name of the component or components you want to lint). | `yarn lint`<br/>`yarn linter accordion`<br/>`yarn linter accordion actionbutton` |
-| `format` | Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment. To run on a single component, use `yarn formatter accordion` (where `accordion` is the name of the component or components you want to lint). | `yarn format`<br/>`yarn formatter accordion`<br/>`yarn formatter accordion actionbutton` |
-| `refresh:env` | This copies values for the project's `.env` file (an asset never committed to the repo as it contains login secrets) by using the `.env.example` file as a template. This script is useful when you need to update the `.env` file with new values from the `.env.example` file or when you checkout or clean the repo and need to restore the `.env` file. | `yarn refresh:env` |
+| Command       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Examples                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `clean`       | Cleans all output files for the project and all components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | `yarn clean`                                                                             |
+| `build`       | Performs a build of all components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | `yarn build`                                                                             |
+| `build:all`   | Performs a build of all components, documentation site, and storybook                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `yarn build:all`                                                                         |
+| `dev`         | Performs a component build and serves the documentation on the default port (3000)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | `yarn dev`                                                                               |
+| `compare`     | This compares the current version of components with the previous versions published to NPM and output a list of all the changes that have been made. This is useful for reviewing changes before a release. The information is provided in the command-line output as well as in a simple web page that is opened in your default browser upon completion. The web page includes links to the visual diffs for each component when the file sizes have changed. <ul><li>Components with no changes are not included in the output.</li><li>To run comparisons on one or multiple components, `compare` accepts a list of components as arguments. For example, `yarn compare button` will compare the current version of the button component with the previous version published to NPM. `yarn compare button checkbox` will compare the current version of the button and checkbox components with the previous versions published to NPM.</li><li>Named components should be space-separated.</li><li>Running `compare` with no inputs will automatically run against all packages.</li></ul> | `yarn compare`<br/>`yarn compare accordion`<br/>`yarn compare accordion actionbutton`    |
+| `lint`        | Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment. Use `format` to automatically fix any issues that are found. To run on a single component, use `yarn linter accordion` (where `accordion` is the name of the component or components you want to lint).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `yarn lint`<br/>`yarn linter accordion`<br/>`yarn linter accordion actionbutton`         |
+| `format`      | Provides helpful updates and warnings for a component's package.json file. This helps keep all components in alignment. To run on a single component, use `yarn formatter accordion` (where `accordion` is the name of the component or components you want to lint).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `yarn format`<br/>`yarn formatter accordion`<br/>`yarn formatter accordion actionbutton` |
+| `refresh:env` | This copies values for the project's `.env` file (an asset never committed to the repo as it contains login secrets) by using the `.env.example` file as a template. This script is useful when you need to update the `.env` file with new values from the `.env.example` file or when you checkout or clean the repo and need to restore the `.env` file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | `yarn refresh:env`                                                                       |
 
 ## Troubleshooting
 

@@ -2,7 +2,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { CoachIndicatorGroup } from "./coachindicator.test.js";
-import { AllVariantsCoachIndicatorGroup } from "./template";
+import { AllVariantsCoachIndicatorGroup } from "./template.js";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.

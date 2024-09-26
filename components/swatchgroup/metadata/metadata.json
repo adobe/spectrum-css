@@ -20,7 +20,11 @@
     "--spectrum-spacing-50",
     "--spectrum-spacing-75"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-swatch-group-spacing-compact",
+    "--system-swatch-group-spacing-regular",
+    "--system-swatch-group-spacing-spacious"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }

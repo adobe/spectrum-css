@@ -78,7 +78,28 @@
     "--spectrum-spacing-300",
     "--spectrum-workflow-icon-size-100"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-alert-dialog-body-color",
+    "--system-alert-dialog-body-font-family",
+    "--system-alert-dialog-body-font-size",
+    "--system-alert-dialog-body-font-style",
+    "--system-alert-dialog-body-font-weight",
+    "--system-alert-dialog-body-line-height",
+    "--system-alert-dialog-divider-to-description",
+    "--system-alert-dialog-error-icon-color",
+    "--system-alert-dialog-icon-size",
+    "--system-alert-dialog-max-width",
+    "--system-alert-dialog-min-width",
+    "--system-alert-dialog-title-color",
+    "--system-alert-dialog-title-font-family",
+    "--system-alert-dialog-title-font-size",
+    "--system-alert-dialog-title-font-style",
+    "--system-alert-dialog-title-font-weight",
+    "--system-alert-dialog-title-line-height",
+    "--system-alert-dialog-title-to-divider",
+    "--system-alert-dialog-title-to-icon",
+    "--system-alert-dialog-warning-icon-color"
+  ],
   "passthroughs": ["--mod-buttongroup-justify-content", "--mod-icon-color"],
   "high-contrast": []
 }

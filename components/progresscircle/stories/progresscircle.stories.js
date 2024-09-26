@@ -44,18 +44,6 @@ WithForcedColors.parameters = {
 	},
 };
 
-export const StaticWhite = ProgressCircleGroup.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
-StaticWhite.storyName = "Static white";
-StaticWhite.args = {
-	staticColor: "white",
-};
-StaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
-};
-
 // ********* DOCS ONLY ********* //
 
 export const Sizing = (args, context) => Sizes({

@@ -98,16 +98,3 @@ WithForcedColors.parameters = {
 		modes: disableDefaultModes
 	},
 };
-
-export const StaticWhite = Default.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
-StaticWhite.args = {
-	staticColor: "white",
-	label: "Loading your fonts, images, and icons",
-	value: 50,
-};
-StaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
-};

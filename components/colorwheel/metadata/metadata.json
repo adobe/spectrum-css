@@ -53,7 +53,17 @@
     "--spectrum-disabled-background-color",
     "--spectrum-transparent-black-200"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-color-wheel-border-color",
+    "--system-color-wheel-border-width",
+    "--system-color-wheel-colorarea-margin",
+    "--system-color-wheel-colorhandle-position",
+    "--system-color-wheel-fill-color-disabled",
+    "--system-color-wheel-height",
+    "--system-color-wheel-min-width",
+    "--system-color-wheel-track-width",
+    "--system-color-wheel-width"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-colorwheel-border-color-disabled",

@@ -65,5 +65,6 @@ WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
 		modes: disableDefaultModes,
+		viewport: "mobile2",
 	},
 };
