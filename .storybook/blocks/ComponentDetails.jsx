@@ -117,6 +117,7 @@ export const ResourceLink = styled.a`
 	border-radius: 5px;
 	border-color: rgb(230, 230, 230);
 	overflow: hidden;
+	color: rgb(0, 0, 0);
 
 	&:hover {
 		border-color: rgb(213, 213, 213);
@@ -133,6 +134,18 @@ export const ResourceIconWrapper = styled.div`
 
 export const ResourceTextWrapper = styled.div`
 	margin-inline: 16px;
+
+	& > .spectrum-Heading {
+		font-weight: 700;
+		line-height: 1.3;
+	 	font-family: adobe-clean, "adobe-clean", "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+	}
+
+	& > .spectrum-Body {
+		font-size: 14px;
+		line-height: 1.5;
+		font-family: adobe-clean, "adobe-clean", "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+	}
 `;
 
 const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false, skipLink = false }) => {
@@ -257,7 +270,7 @@ export const ResourceLinkContent = ({data, linkType=["package", "repository", "g
 	// For form and meter, both are nested within other component package.json files
   let nestedComponent = packageJson?.nestedComponentName ?? undefined;
 	
-	if(linkType === "package") {
+	if (linkType === "package") {
 		// NPM package name and link 
 		packageName = packageJson?.name ?? undefined;
 		packageLink = (packageName && typeof packageName !== "undefined") ? `https://npmjs.com/${packageName}` : false;
@@ -294,7 +307,7 @@ export const ResourceLinkContent = ({data, linkType=["package", "repository", "g
 	}
 
 	else {
-		throw new Error(`Are you sure you mean "${linkType}"? Please use a valid link type instead: "package", "repository", "guidelines"`);
+		console.warn(`Are you sure you mean "${linkType}"? Please use a valid link type instead: "package", "repository", "guidelines"`);
 	}
 
 	return (
@@ -327,24 +340,12 @@ export const ResourceListDetails = () => {
 
 	if (!packageJson?.name) return;
 
-	const [isLoading, setIsLoading] = useState(true);
-	const [npmData, setnpmData] = useState({});
-
-	fetchNpmData(packageJson.name, setnpmData, setIsLoading);
-
 	return (
-		<ResetWrapper>
-			{ !isLoading
-				? <>
 						<ResourceSection skipBorder={true} className="sb-unstyled">
 							<ResourceLinkContent className="doc-block-links" linkType="guidelines" data={packageJson}/>
 							<ResourceLinkContent className="doc-block-links" linkType="repository" data={packageJson}/>
 							<ResourceLinkContent className="doc-block-links" linkType="package" data={packageJson}/>
 						</ResourceSection>
-					</>
-				: ""
-			}
-		</ResetWrapper>
 	)
 };
 
@@ -488,8 +489,10 @@ function fetchNpmData(packageName, setnpmData, setIsLoading) {
  * Displays the current version number of the component. The version is read from
  * the component's parameters, where it was sourced from the package.json file.
  *
- * Also displays a component status of "deprecated" if it is set in the story's
+ * Displays a component status of "deprecated" if it is set in the story's
  * parameters.
+ * 
+ *  Displays the list of relevant component links (to NPM, repo, guidelines, etc). 
  *
  * Usage of this doc block within MDX template(s):
  *  <ComponentDetails />
@@ -511,26 +514,28 @@ export const ComponentDetails = () => {
 
 	return (
 		<ResetWrapper>
-			{ !isLoading ?
-				<DList className="docblock-metadata sb-unstyled">
-					{ isDeprecated
-						?	<>
-								<DTerm key={'status'}>Status:</DTerm>
-								<DDefinition key={'status-data'}>Deprecated</DDefinition>
+			{ !isLoading ? <>
+					<DList className="docblock-metadata sb-unstyled">
+						{ isDeprecated
+							?	<>
+									<DTerm key={'status'}>Status:</DTerm>
+									<DDefinition key={'status-data'}>Deprecated</DDefinition>
+								</>
+							: ""
+						}
+						{ showLocalVersion
+							?	<>
+									<DTerm key={'version-label'}>Local version:</DTerm>
+									<DDefinition key={'version'}><VersionDetails tag={"local"} data={allVersions && allVersions.find(([tag]) => tag === "local")?.[1]} isDeprecated={isDeprecated} /></DDefinition>
+								</>
+							: <>
+								<DTerm key={'version-label'}>Latest version:</DTerm>
+								<DDefinition key={'version'}><VersionDetails tag={"latest"} data={allVersions && allVersions.find(([tag]) => tag === "latest")?.[1]} isDeprecated={isDeprecated} skipLink={true} /></DDefinition>
 							</>
-						: ""
-					}
-					{ showLocalVersion
-						?	<>
-								<DTerm key={'version-label'}>Local version:</DTerm>
-								<DDefinition key={'version'}><VersionDetails tag={"local"} data={allVersions && allVersions.find(([tag]) => tag === "local")?.[1]} isDeprecated={isDeprecated} /></DDefinition>
-							</>
-						: <>
-							<DTerm key={'version-label'}>Latest version:</DTerm>
-							<DDefinition key={'version'}><VersionDetails tag={"latest"} data={allVersions && allVersions.find(([tag]) => tag === "latest")?.[1]} isDeprecated={isDeprecated} skipLink={true} /></DDefinition>
-						</>
-					}
-				</DList>
+						}
+					</DList>
+					<ResourceListDetails />
+				</>
 			: ""}
 		</ResetWrapper>
 	);
