@@ -10,7 +10,10 @@
     "--spectrum-tag-group-item-margin-inline"
   ],
   "global": ["--spectrum-spacing-75"],
-  "system-theme": [],
+  "system-theme": [
+    "--system-tag-group-item-margin-block",
+    "--system-tag-group-item-margin-inline"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }

@@ -11,93 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
 @import "@spectrum-css/commons/basebutton.css";
-
-.spectrum-CloseButton {
-	/* Hardcoded tokens */
-	--spectrum-closebutton-size-300: 24px;
-	--spectrum-closebutton-size-400: 32px;
-	--spectrum-closebutton-size-500: 40px;
-	--spectrum-closebutton-size-600: 48px;
-
-	/* Cross icon */
-	--spectrum-closebutton-icon-color-default: var(--spectrum-neutral-content-color-default);
-	--spectrum-closebutton-icon-color-hover: var(--spectrum-neutral-content-color-hover);
-	--spectrum-closebutton-icon-color-down: var(--spectrum-neutral-content-color-down);
-	--spectrum-closebutton-icon-color-focus: var(--spectrum-neutral-content-color-key-focus);
-	--spectrum-closebutton-icon-color-disabled: var(--spectrum-disabled-content-color);
-
-	/* Focus ring */
-	--spectrum-closebutton-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--spectrum-closebutton-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-	--spectrum-closebutton-focus-indicator-color: var(--spectrum-focus-indicator-color);
-
-	/* Size */
-	--spectrum-closebutton-height: var(--spectrum-component-height-100);
-	--spectrum-closebutton-width: var(--spectrum-closebutton-height);
-	--spectrum-closebutton-size: var(--spectrum-closebutton-size-400);
-	--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-400);
-
-	--spectrum-closebutton-animation-duration: var(--spectrum-animation-duration-100);
-}
-
-/* @deprecated .spectrum-Closebutton--sizeS */
-.spectrum-CloseButton--sizeS,
-.spectrum-Closebutton--sizeS {
-	--spectrum-closebutton-height: var(--spectrum-component-height-75);
-	--spectrum-closebutton-width: var(--spectrum-closebutton-height);
-	--spectrum-closebutton-size: var(--spectrum-closebutton-size-300);
-	--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-300);
-}
-
-/* @deprecated .spectrum-Closebutton--sizeM */
-.spectrum-CloseButton,
-.spectrum-CloseButton--sizeM,
-.spectrum-Closebutton--sizeM {
-	--spectrum-closebutton-height: var(--spectrum-component-height-100);
-	--spectrum-closebutton-width: var(--spectrum-closebutton-height);
-	--spectrum-closebutton-size: var(--spectrum-closebutton-size-400);
-	--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-400);
-}
-
-/* @deprecated .spectrum-Closebutton--sizeL */
-.spectrum-CloseButton--sizeL,
-.spectrum-Closebutton--sizeL {
-	--spectrum-closebutton-height: var(--spectrum-component-height-200);
-	--spectrum-closebutton-width: var(--spectrum-closebutton-height);
-	--spectrum-closebutton-size: var(--spectrum-closebutton-size-500);
-	--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-500);
-}
-
-/* @deprecated .spectrum-Closebutton--sizeXL */
-.spectrum-CloseButton--sizeXL,
-.spectrum-Closebutton--sizeXL {
-	--spectrum-closebutton-height: var(--spectrum-component-height-300);
-	--spectrum-closebutton-width: var(--spectrum-closebutton-height);
-	--spectrum-closebutton-size: var(--spectrum-closebutton-size-600);
-	--spectrum-closebutton-border-radius: var(--spectrum-closebutton-size-600);
-}
-
-.spectrum-CloseButton--staticWhite {
-	--spectrum-closebutton-static-background-color-default: transparent;
-	--spectrum-closebutton-static-background-color-hover: var(--spectrum-transparent-white-300);
-	--spectrum-closebutton-static-background-color-down: var(--spectrum-transparent-white-400);
-	--spectrum-closebutton-static-background-color-focus: var(--spectrum-transparent-white-300);
-	--spectrum-closebutton-icon-color-default: var(--spectrum-white);
-	--spectrum-closebutton-icon-color-disabled: var(--spectrum-disabled-static-white-content-color);
-	--spectrum-closebutton-focus-indicator-color: var(--spectrum-static-white-focus-indicator-color);
-}
-
-.spectrum-CloseButton--staticBlack {
-	--spectrum-closebutton-static-background-color-default: transparent;
-	--spectrum-closebutton-static-background-color-hover: var(--spectrum-transparent-black-300);
-	--spectrum-closebutton-static-background-color-down: var(--spectrum-transparent-black-400);
-	--spectrum-closebutton-static-background-color-focus: var(--spectrum-transparent-black-300);
-	--spectrum-closebutton-icon-color-default: var(--spectrum-black);
-	--spectrum-closebutton-icon-color-disabled: var(--spectrum-disabled-static-black-content-color);
-	--spectrum-closebutton-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
-}
+@import "./themes/spectrum-two.css";
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {
@@ -140,15 +55,15 @@ a.spectrum-CloseButton {
 .spectrum-CloseButton {
 	@extend %spectrum-BaseButton;
 
-	block-size: var(--mod-closebutton-height, var(--spectrum-closebutton-height));
-	inline-size: var(--mod-closebutton-width, var(--spectrum-closebutton-width));
+	block-size: var(--mod-closebutton-height, var(--spectrum-closebutton-size));
+	inline-size: var(--mod-closebutton-width, var(--spectrum-closebutton-size));
 
 	position: relative;
 
 	color: inherit;
 
 	border-color: transparent;
-	border-radius: var(--mod-closebutton-border-radius, var(--spectrum-closebutton-border-radius));
+	border-radius: var(--mod-closebutton-border-radius, var(--spectrum-closebutton-size));
 	border-width: 0;
 
 	justify-content: center;
