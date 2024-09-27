@@ -101,9 +101,6 @@
 	--system-spectrum-actionbutton-staticwhite-selected-mod-actionbutton-content-color-focus: var(--spectrum-black);
 	--system-spectrum-actionbutton-staticwhite-selected-mod-actionbutton-background-color-disabled: var(--spectrum-disabled-static-white-background-color);
 	--system-spectrum-actionbutton-staticwhite-selected-mod-actionbutton-border-color-disabled: transparent;
-	--system-spectrum-actiongroup-gap-size-compact: var(--spectrum-spacing-50);
-	--system-spectrum-actiongroup-horizontal-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
-	--system-spectrum-actiongroup-vertical-spacing-compact: calc(-1px * var(--spectrum-spacing-50));
 	--system-spectrum-alertbanner-spectrum-alert-banner-netural-background: var(--spectrum-neutral-background-color-default);
 	--system-spectrum-assetcard-overlay-background-color-rgb: 109, 115, 246;
 	--system-spectrum-assetcard-overlay-background-color-opacity: 0.2;

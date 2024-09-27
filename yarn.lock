@@ -2982,7 +2982,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/actionbar@workspace:components/actionbar"
   dependencies:
-    "@spectrum-css/actiongroup": "workspace:^"
     "@spectrum-css/closebutton": "workspace:^"
     "@spectrum-css/fieldlabel": "workspace:^"
     "@spectrum-css/popover": "workspace:^"
@@ -3008,18 +3007,6 @@ __metadata:
     "@spectrum-css/tokens": ">=14"
   peerDependenciesMeta:
     "@spectrum-css/icon":
-      optional: true
-  languageName: unknown
-  linkType: soft
-
-"@spectrum-css/actiongroup@workspace:^, @spectrum-css/actiongroup@workspace:components/actiongroup":
-  version: 0.0.0-use.local
-  resolution: "@spectrum-css/actiongroup@workspace:components/actiongroup"
-  peerDependencies:
-    "@spectrum-css/actionbutton": ">=6"
-    "@spectrum-css/tokens": ">=14"
-  peerDependenciesMeta:
-    "@spectrum-css/actionbutton":
       optional: true
   languageName: unknown
   linkType: soft
