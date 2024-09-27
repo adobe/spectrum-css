@@ -78,6 +78,7 @@ export const CoachContainer = ({
 									treatment: "outline",
 									hideLabel: true,
 									iconName: "ChevronLeft75",
+									iconSet: "ui",
 								},
 								{
 									variant: "primary",

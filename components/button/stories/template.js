@@ -20,6 +20,7 @@ export const Template = ({
 	label,
 	hideLabel = false,
 	iconName,
+	iconSet = "workflow",
 	iconAfterLabel = false,
 	variant,
 	staticColor,
@@ -37,70 +38,69 @@ export const Template = ({
 	const { updateArgs } = context;
 
 	return html`
-    <button
-      class=${classMap({
-        [rootClass]: true,
-        [`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
-        [`${rootClass}--${variant}`]: typeof variant !== "undefined",
-        [`${rootClass}--size${size?.toUpperCase()}`]:
-          typeof size !== "undefined",
-        [`${rootClass}--static${capitalize(staticColor)}`]:
-          typeof staticColor !== "undefined",
-        [`${rootClass}--iconOnly`]: hideLabel,
-        ["is-pending"]: isPending,
-        ["is-disabled"]: isDisabled,
-        ["is-hover"]: isHovered,
-        ["is-focus-visible"]: isFocused,
-        ["is-active"]: isActive,
-        [`${rootClass}--noWrap`]: noWrap,
-        ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-      })}
-      id=${ifDefined(id)}
-      style=${styleMap(customStyles)}
-      ?disabled=${isDisabled}
-      @click=${onclick ??
-      function () {
-        // Toggle the is-pending state on-click
-        updateArgs({ isPending: true });
+	<button
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--${treatment}`]: typeof treatment !== "undefined",
+			[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+			[`${rootClass}--size${size?.toUpperCase()}`]:
+				typeof size !== "undefined",
+			[`${rootClass}--static${capitalize(staticColor)}`]:
+				typeof staticColor !== "undefined",
+			[`${rootClass}--iconOnly`]: hideLabel,
+			["is-pending"]: isPending,
+			["is-disabled"]: isDisabled,
+			["is-hover"]: isHovered,
+			["is-focus-visible"]: isFocused,
+			["is-active"]: isActive,
+			[`${rootClass}--noWrap`]: noWrap,
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+		id=${ifDefined(id)}
+		style=${styleMap(customStyles)}
+		?disabled=${isDisabled}
+		@click=${onclick ??
+		function () {
+			// Toggle the is-pending state on-click
+			updateArgs({ isPending: true });
 
-        setTimeout(() => {
-          updateArgs({ isPending: false });
-        }, 3000);
-      }}
-      @focusin=${function() {
-        updateArgs({ isFocused: true });
-      }}
-      @focusout=${function() {
-        updateArgs({ isFocused: false });
-      }}
-      aria-label=${ifDefined(hideLabel ? iconName : undefined)}
-      aria-expanded=${ifDefined(ariaExpanded?.toString())}
-      aria-controls=${ifDefined(ariaControls)}
-      data-testid=${ifDefined(testId)}
-    >
-      ${when(iconName && !iconAfterLabel, () =>
-        Icon({ iconName, size }, context)
-      )}
-      ${when(
-        label && !hideLabel,
-        () => html`<span class=${`${rootClass}-label`}>${label}</span>`
-      )}
-      ${when(iconName && iconAfterLabel, () =>
-        Icon({ iconName, size }, context)
-      )}
-      ${when(isPending, () =>
-        ProgressCircle(
-          {
-            size: "s",
-            testId: "progress-circle",
-            staticColor,
-            isIndeterminate: true,
-          },
-          context
-        )
-      )}
-    </button>
-  `;
+			setTimeout(() => {
+				updateArgs({ isPending: false });
+			}, 3000);
+		}}
+		@focusin=${function() {
+			updateArgs({ isFocused: true });
+		}}
+		@focusout=${function() {
+			updateArgs({ isFocused: false });
+		}}
+		aria-label=${ifDefined(hideLabel ? iconName : undefined)}
+		aria-expanded=${ifDefined(ariaExpanded?.toString())}
+		aria-controls=${ifDefined(ariaControls)}
+		data-testid=${ifDefined(testId)}
+	>
+		${when(iconName && !iconAfterLabel, () =>
+			Icon({ iconName, setName: iconSet, size }, context)
+		)}
+		${when(label && !hideLabel, () => 
+			html`<span class=${`${rootClass}-label`}>${label}</span>`
+		)}
+		${when(iconName && iconAfterLabel, () =>
+			Icon({ iconName, setName: iconSet, size }, context)
+		)}
+		${when(isPending, () =>
+			ProgressCircle(
+				{
+					size: "s",
+					testId: "progress-circle",
+					staticColor,
+					isIndeterminate: true,
+				},
+				context
+			)
+		)}
+	</button>
+	`;
 };
 
 /**
@@ -117,20 +117,20 @@ export const ButtonsWithIconOptions = ({
 		columnGap: "12px",
 	},
 	content: html`
-    ${Template({
-      ...args,
-      iconName: undefined,
-    }, context)}
-    ${Template({
-      ...args,
-      iconName: iconName ?? "Edit",
-    }, context)}
-    ${Template({
-      ...args,
-      hideLabel: true,
-      iconName: iconName ?? "Edit",
-    }, context)}
-  `,
+		${Template({
+			...args,
+			iconName: undefined,
+		}, context)}
+		${Template({
+			...args,
+			iconName: iconName ?? "Edit",
+		}, context)}
+		${Template({
+			...args,
+			hideLabel: true,
+			iconName: iconName ?? "Edit",
+		}, context)}
+	`,
 });
 
 /**
@@ -155,21 +155,22 @@ export const TextOverflowTemplate = (args, context = {}) => Container({
 		rowGap: "12px",
 	},
 	content: html`
-    ${Template({
-      ...args,
-      customStyles: {
-        "max-inline-size": "480px",
-      },
-      label: "An example of text overflow behavior when there is no icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-    }, context)}
-    ${Template({
-      ...args,
-      customStyles: {
-        "max-inline-size": "480px",
-      },
-      iconName: "Edit",
-      label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
-    }, context)}
+	${Template({
+		...args,
+		customStyles: {
+			"max-inline-size": "480px",
+		},
+		label: "An example of text overflow behavior when there is no icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
+	}, context)}
+	${Template({
+		...args,
+		customStyles: {
+			"max-inline-size": "480px",
+		},
+		iconName: "Edit",
+		iconSet: "workflow",
+		label: "An example of text overflow behavior when the button has an icon. When the button text is too long for the horizontal space available, it wraps to form another line.",
+	}, context)}
   `,
 }, context);
 
@@ -180,28 +181,29 @@ export const TextWrapTemplate = (args, context = {}) => Container({
 		maxInlineSize: "120px",
 	},
 	content: html`
-    ${Template({
-      ...args,
-      customStyles: {},
-      label: "Be a premium member",
-			noWrap: true,
-    }, context)}
-    ${Template({
-      ...args,
-      customStyles: {
-        "max-inline-size": "100%",
-      },
-      label: "Be a premium member",
-			noWrap: true,
-    }, context)}
-    ${Template({
-      ...args,
-      customStyles: {
-        "max-inline-size": "100%",
-      },
-      iconName: "Star",
+		${Template({
+			...args,
+			customStyles: {},
 			label: "Be a premium member",
-      noWrap: true,
-    }, context)}
-  `,
+			noWrap: true,
+		}, context)}
+		${Template({
+			...args,
+			customStyles: {
+				"max-inline-size": "100%",
+			},
+			label: "Be a premium member",
+			noWrap: true,
+		}, context)}
+		${Template({
+			...args,
+			customStyles: {
+				"max-inline-size": "100%",
+			},
+			iconName: "Star",
+			iconSet: "workflow",
+			label: "Be a premium member",
+			noWrap: true,
+		}, context)}
+	`,
 }, context);

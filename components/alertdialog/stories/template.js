@@ -42,6 +42,7 @@ export const Dialog = ({
 					${when(icon, () => Icon({
 						size: "m",
 						iconName: "Alert",
+						setName: "workflow",
 						customClasses: [`${rootClass}-icon`],
 					}, context))}
 				</div>

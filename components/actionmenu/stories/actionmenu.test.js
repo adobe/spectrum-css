@@ -18,6 +18,7 @@ export const ActionMenuGroup = Variants({
 		testHeading: "Custom icon",
 		isOpen: false,
 		iconName: "Add",
+		iconSet: "workflow",
 		wrapperStyles: {
 			"min-block-size": "50px",
 		},

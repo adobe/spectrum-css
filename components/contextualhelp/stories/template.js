@@ -13,6 +13,7 @@ export const Template = ({
 	rootClass = "spectrum-ContextualHelp",
 	id = getRandomId("contextualhelp"),
 	iconName,
+	iconSet = "workflow",
 	title,
 	body,
 	link,
@@ -35,6 +36,7 @@ export const Template = ({
 					...passthrough,
 					size: "xs",
 					iconName,
+					iconSet,
 					customClasses: [`${rootClass}-button`],
 				}, context),
 				content: [
