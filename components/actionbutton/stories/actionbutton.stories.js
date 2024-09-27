@@ -11,11 +11,11 @@ import { ActionButtonsWithIconOptions, IconOnlyOption, TreatmentTemplate } from 
  * 
  * ## Usage notes  
  * 
- * For Action Buttons that only contain an icon with no label, do not include the element with the `.spectrum-ActionButton-label` class in the markup. If an icon and a label are both used, ensure that the element with the `.spectrum-ActionButton-label` class comes after the `.spectrum-Icon` element.
+ * For action buttons that only contain an icon with no label, do not include the element with the `.spectrum-ActionButton-label` class in the markup. If an icon and a label are both used, ensure that the element with the `.spectrum-ActionButton-label` class comes after the `.spectrum-Icon` element.
  * 
  * If the hold icon is used, ensure that the element with the `.spectrum-ActionButton-hold` class comes before the `.spectrum-Icon` element.
  * 
- * When using `.spectrum-ActionButton--staticWhite` or `.spectrum-ActionButton--staticblack`, use the `--mod-actionbutton-content-color-default` custom property to set the text color when selected.  
+ * When using `.spectrum-ActionButton--staticWhite` or `.spectrum-ActionButton--staticBlack`, use the `--mod-actionbutton-content-color-default` custom property to set the text color when selected.  
  */
 export default {
 	title: "Action button",
