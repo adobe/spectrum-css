@@ -3,6 +3,7 @@
 | `--mod-body-cjk-emphasized-font-style`                         |
 | `--mod-body-cjk-emphasized-font-weight`                        |
 | `--mod-body-cjk-font-family`                                   |
+| `--mod-body-cjk-font-size`                                     |
 | `--mod-body-cjk-font-style`                                    |
 | `--mod-body-cjk-font-weight`                                   |
 | `--mod-body-cjk-letter-spacing`                                |
@@ -59,6 +60,7 @@
 | `--mod-detail-cjk-emphasized-font-style`                       |
 | `--mod-detail-cjk-emphasized-font-weight`                      |
 | `--mod-detail-cjk-font-family`                                 |
+| `--mod-detail-cjk-font-size`                                   |
 | `--mod-detail-cjk-font-style`                                  |
 | `--mod-detail-cjk-font-weight`                                 |
 | `--mod-detail-cjk-light-emphasized-font-style`                 |
