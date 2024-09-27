@@ -1,6 +1,9 @@
 import { Meta, Title } from "@storybook/blocks";
 import { ColorPalette, ColorItem, ThemeContainer, Heading } from "../blocks";
 
+import GradientLight from "../assets/images/gradient-background-light.png";
+import GradientDark from "../assets/images/gradient-background-dark.png";
+
 <Meta title="Design tokens" />
 <Title>Design tokens</Title>
 
@@ -8,129 +11,138 @@ import { ColorPalette, ColorItem, ThemeContainer, Heading } from "../blocks";
 
 The Spectrum CSS color palette is a collection of named colors that are used throughout the design system. These colors are defined in the `@spectrum-css/tokens` package and are available as CSS custom properties. To preview the resolved colors in different color contexts, use the global color switcher in the toolbar above.
 
-<ThemeContainer>
-  <ColorPalette>
-    <ColorItem
-      color="gray"
-      values={[50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900]}
-    />
-    <ColorItem
-      color="red"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="orange"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="yellow"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="chartreuse"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="celery"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="green"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="seafoam"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="cyan"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="blue"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="indigo"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="purple"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="fuchsia"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-    <ColorItem
-      color="magenta"
-      values={[
-        100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300,
-        1400,
-      ]}
-    />
-  </ColorPalette>
-</ThemeContainer>
+<ColorPalette>
+  <ColorItem
+    color="gray"
+    title="Gray"
+    values={[50, 75, 100, 200, 300, 400, 500, 600, 700, 800, 900]}
+  />
+  <ColorItem
+    color="red"
+    title="Red"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="orange"
+    title="Orange"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="yellow"
+    title="Yellow"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="chartreuse"
+    title="Chartreuse"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="celery"
+    title="Celery"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="green"
+    title="Green"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="seafoam"
+    title="Seafoam"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="cyan"
+    title="Cyan"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="blue"
+    title="Blue"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="indigo"
+    title="Indigo"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="purple"
+    title="Purple"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="fuchsia"
+    title="Fuchsia"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+  <ColorItem
+    color="magenta"
+    title="Magenta"
+    values={[
+      100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    ]}
+  />
+</ColorPalette>
 
 <br />
 <br />
 
 ### Transparent colors
 
-<ThemeContainer>
-  <ColorPalette>
-    <ColorItem
-      title="Transparent black"
-      color="transparent-black"
-      values={[100, 200, 300, 400, 500, 600, 700, 800, 900]}
-    />
-  </ColorPalette>
-</ThemeContainer>
+#### Transparent black
+
+<ColorPalette
+  color="light"
+  style={{
+    background: `url(${GradientLight}) no-repeat center center`,
+    backgroundSize: "cover",
+  }}
+>
+  <ColorItem
+    color="transparent-black"
+    values={[100, 200, 300, 400, 500, 600, 700, 800, 900]}
+  />
+</ColorPalette>
 
 <br />
 
-<ThemeContainer>
-  <ColorPalette>
-    <ColorItem
-      title="Transparent white"
-      color="transparent-white"
-      values={[100, 200, 300, 400, 500, 600, 700, 800, 900]}
-    />
-  </ColorPalette>
-</ThemeContainer>
+#### Transparent white
+
+<ColorPalette
+  color="dark"
+  style={{
+    background: `url(${GradientDark}) no-repeat center center`,
+    backgroundSize: "cover",
+  }}
+>
+  <ColorItem
+    color="transparent-white"
+    values={[100, 200, 300, 400, 500, 600, 700, 800, 900]}
+  />
+</ColorPalette>
