@@ -1,0 +1,36 @@
+{
+  "name": "@spectrum-css/carousel",
+  "version": "0.0.0",
+  "description": "The Spectrum CSS carousel component",
+  "license": "Apache-2.0",
+  "author": "Adobe",
+  "homepage": "https://opensource.adobe.com/spectrum-css/carousel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/carousel"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "main": "dist/index.css",
+  "files": [
+    "dist/*",
+    "CHANGELOG.md",
+    "package.json",
+    "stories/template.js",
+    "metadata/mods.md"
+  ],
+  "keywords": [
+    "spectrum",
+    "css",
+    "design system",
+    "adobe"
+  ],
+  "peerDependencies": {
+    "@spectrum-css/tokens": ">=14"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

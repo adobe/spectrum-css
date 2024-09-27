@@ -3255,6 +3255,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/carousel@workspace:components/carousel":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/carousel@workspace:components/carousel"
+  peerDependencies:
+    "@spectrum-css/tokens": ">=14"
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/checkbox@workspace:^, @spectrum-css/checkbox@workspace:components/checkbox":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/checkbox@workspace:components/checkbox"

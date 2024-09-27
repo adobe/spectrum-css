@@ -1,0 +1,31 @@
+import {
+  ArgTypes,
+  Canvas,
+  Meta,
+  Description,
+  Title,
+  Subtitle,
+} from "@storybook/blocks";
+import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+
+import * as CarouselStories from './carousel.stories';
+
+<Meta of={ CarouselStories } title="Docs" />
+
+<Title of={ CarouselStories } />
+<Subtitle of={ CarouselStories } />
+<ComponentDetails />
+
+<Description of={ CarouselStories } />
+
+<Stories of={ CarouselStories } />
+
+## Properties
+
+The component accepts the following inputs (properties):
+
+<ArgTypes />
+
+## Tagged releases
+
+<TaggedReleases />
