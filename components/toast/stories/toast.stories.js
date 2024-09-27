@@ -5,8 +5,6 @@ import { ToastGroup } from "./toast.test.js";
 
 /**
  * Toasts display brief, temporary notifications. They are noticeable but do not disrupt the user experience and do not require an action to be taken.
- * 
- * They must include text to communicate a message. Write the text as concisely as possible while still being clear about what has happened or is happening. View the toast [content standards](https://spectrum.adobe.com/page/toast/#Content-standards) for writing guidelines.
  */
 export default {
 	title: "Toast",
@@ -112,6 +110,19 @@ Positive.parameters = {
 };
 
 /**
+ * They must include text to communicate a message. Write the text as concisely as possible while still being clear about what has happened or is happening.
+ * 
+ * Writing for toasts depends on the nature of the message, whether it’s communicating confirmation, information, or an error. For all kinds of toasts, keep the text to fewer than 2 lines in English, since it will become longer when localized. View the [toast content standards](https://spectrum.adobe.com/page/toast/#Content-standards) for writing guidelines.
+*/
+
+export const Text = Template.bind({});
+Text.tags = ["!dev"];
+Text.args = {
+	message: "All files archived",
+	inlineButtonLabel: ""
+};
+
+/**
  * When the message text is too long for the horizontal space available, it wraps to form another line. 
 */
 
@@ -122,7 +133,7 @@ Wrapping.parameters = {
 };
 
 /**
- * A toast can have up to one action: [a static white, secondary, outline button.](https://spectrum.adobe.com/page/button#Static-color) This label should be kept concise, and it should only be used when there’s a direct action available that is related to the toast text.
+ * A toast can have up to one action: [a static white, secondary, outline button.](?path=/docs/components-button--docs#static-white---secondary) This label should be kept concise, and it should only be used when there’s a direct action available that is related to the toast text.
 */
 
 export const Action = ActionTemplate.bind({});

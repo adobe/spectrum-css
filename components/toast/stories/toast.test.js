@@ -36,6 +36,12 @@ export const ToastGroup = Variants({
 			variant: "info",
 			message: "A new version of Lightroom Classic is now available. Use the Update button below to start using the new version.",
 			inlineButtonLabel: ""
-		}	
+		},
+		{
+			testHeading: "Short message, no required action",
+			variant: "info",
+			message: "The toast is done.",
+			inlineButtonLabel: ""
+		},
 	]
 });
