@@ -14,7 +14,9 @@
 		},
 		"format": {},
 		"lint": {},
-		"report": {},
+		"report": {
+			"executor": "nx:noop"
+		},
 		"test": {
 			"executor": "nx:noop"
 		},
