@@ -8,30 +8,23 @@ import { Template } from "./template.js";
  * Used as the base template for the stories.
  */
 const CustomButton = ({ iconName, iconSet, ...args }, context) => html`
-  ${Template(
-	{
-		...args,
-		iconName: undefined,
-	},
-	context
-  )}
-  ${Template(
-	{
-		...args,
-		iconName: iconName ?? "Edit",
-		iconSet: iconSet ?? "workflow",
-	},
-	context
-  )}
-  ${Template(
-	{
-		...args,
-		hideLabel: true,
-		iconName: iconName ?? "Edit",
-		iconSet: iconSet ?? "workflow",
-	},
-	context
-  )}
+	<div style="display: flex; column-gap: 13px; row-gap: 24px;">
+		${Template({
+			...args,
+			iconName: undefined,
+		}, context)}
+		${Template({
+			...args,
+			iconName: iconName ?? "Edit",
+			iconSet: iconSet ?? "workflow",
+		}, context)}
+		${Template({
+			...args,
+			hideLabel: true,
+			iconName: iconName ?? "Edit",
+			iconSet: iconSet ?? "workflow",
+		}, context)}
+	</div>
 `;
 
 export const ButtonGroups = Variants({
@@ -47,6 +40,14 @@ export const ButtonGroups = Variants({
 			variant,
 			treatment: "outline",
 		})),
+		{
+			testHeading: "Static black",
+			staticColor: "black",
+		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
 		{
 			testHeading: "Text wrapping with workflow icon",
 			customStyles: {
@@ -125,6 +126,7 @@ export const ButtonGroups = Variants({
 		{
 			testHeading: "Pending",
 			isPending: true,
+			ignore: ["Static black"],
 		},
 	],
 	sizeDirection: "row",
