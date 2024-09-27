@@ -1,12 +1,14 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isEmphasized, isFocused, isReadOnly } from "@spectrum-css/preview/types";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { RatingGroup } from "./rating.test.js";
 import { Template } from "./template.js";
 
 /**
  * The rating component is used to display or collect a user's rating of an item as represented by a number of stars.
- * 
+ *
  * ### Usage notes
  * - All active stars have the class `is-selected` applied.
  * - The current value (the last active star) has the class `is-currentValue` applied.
@@ -53,6 +55,17 @@ export default {
 	},
 	parameters: {
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 

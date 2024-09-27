@@ -2197,6 +2197,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ljcl/storybook-addon-cssprops@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@ljcl/storybook-addon-cssprops@npm:4.0.0"
+  checksum: 10c0/8b04b83da0d0ac955c66184c1f5a91eaff54cf21cf190537fd21f8402575ae87e68f6ff0928a8e34777ef9fd023c27fd7582af0ecd3e8717512a58650c51be29
+  languageName: node
+  linkType: hard
+
 "@ljharb/through@npm:^2.3.13":
   version: 2.3.13
   resolution: "@ljharb/through@npm:2.3.13"
@@ -3872,6 +3879,7 @@ __metadata:
     "@babel/core": "npm:^7.25.2"
     "@chromaui/addon-visual-tests": "npm:^1.0.0"
     "@etchteam/storybook-addon-status": "npm:^5.0.0"
+    "@ljcl/storybook-addon-cssprops": "npm:^4.0.0"
     "@spectrum-css/tokens": "workspace:^"
     "@spectrum-css/typography": "workspace:^"
     "@spectrum-css/ui-icons": "workspace:^"

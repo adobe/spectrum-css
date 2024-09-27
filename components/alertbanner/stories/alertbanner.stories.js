@@ -1,6 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { AlertBannerGroup } from "./alertbanner.test.js";
 import { ActionableOptionsTemplate, Template, TextOverflowTemplate } from "./template.js";
 
@@ -69,6 +71,17 @@ export default {
 			handles: ["click .spectrum-AlertBanner button"],
 		},
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 

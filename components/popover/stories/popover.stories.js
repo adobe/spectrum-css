@@ -5,17 +5,19 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { PopoverGroup } from "./popover.test.js";
 import { FixedWidthSourceTemplate, Template, TipPlacementVariants } from "./template";
 
 /**
  * A popover is used to display transient content (menus, options, additional actions, etc.) and appears when clicking/tapping on a source (tools, buttons, etc.).
  * It stands out via its visual style (stroke and drop shadow) and floats on top of the rest of the interface.
- * 
+ *
  * - Popover's position and distance to its source should be handled by the implementation. Positioning in Storybook is only for demonstration purposes.
  * - When the `.is-open` class is present, popover is offset from the source by the spacing value defined in `--spectrum-popover-animation-distance`. This
- * offset is done with a CSS transform and animates with a CSS transition. 
+ * offset is done with a CSS transform and animates with a CSS transition.
  */
 export default {
 	title: "Popover",
@@ -91,13 +93,24 @@ export default {
 			}
 		},
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 
 /**
  * By default, popovers do not have a tip. Popovers without a tip should be used when the source has a
  * visually distinct down state, in order to show the connection between the popover and its source.
- * 
+ *
  * This example uses the [menu](?path=/docs/components-menu--docs) component within the popover, and a button as the source.
  */
 export const Default = PopoverGroup.bind({});
@@ -269,7 +282,7 @@ DialogStyle.parameters = {
  * the following naming convention: the first term is the popover's position and the second term is its
  * source's position. For example, for the `spectrum-Popover--top-left` class, the popover is positioned at the top and the
  * source is to the left.
- * 
+ *
  * #### Tip SVG
  * Depending on its position, the tip uses one of two different SVGs.
  * - Top and bottom popover positions use the same SVG. The CSS handles flipping the SVG vertically.

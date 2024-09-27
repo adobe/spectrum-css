@@ -5,6 +5,7 @@ import { default as Popover } from "@spectrum-css/popover/stories/popover.storie
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
+
 import { ActionMenuGroup } from "./actionmenu.test.js";
 
 /**
@@ -49,6 +50,11 @@ export default {
 			],
 		},
 		packageJson: pkgJson,
+		cssprops: {
+			...(Popover?.parameters?.cssprops ?? {}),
+			...(ActionButton?.parameters?.cssprops ?? {}),
+			...(Menu.parameters?.cssprops ?? {}),
+		},
 		docs: {
 			story: {
 				height: "200px",

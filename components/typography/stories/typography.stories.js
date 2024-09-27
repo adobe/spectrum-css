@@ -1,7 +1,9 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import {
 	DocsBodyVariants,
 	DocsCodeVariants,
@@ -78,6 +80,17 @@ export default {
 	},
 	parameters: {
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 
@@ -170,7 +183,7 @@ BodySizes.parameters = {
 
 /**
  * When typography elements are paired, such as with heading and body below, clear content hierarchies are shown.
- * 
+ *
  * Note that the body component is not available in XXS, but the XXS heading can be paired with the XS body as seen here.
  */
 export const HeadingBodyHierarchy = (args, context) => Sizes({
@@ -255,7 +268,7 @@ DetailVariants.parameters = {
 
 /**
  * Code is used for text that represents code.
- * 
+ *
  * Multi-line blocks of code may be wrapped with `<pre>` tags to allow block formatting.
  */
 export const CodeVariants = DocsCodeVariants.bind({});

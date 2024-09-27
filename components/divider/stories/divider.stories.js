@@ -1,7 +1,9 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size, staticColor } from "@spectrum-css/preview/types";
-import { Sizes } from "@spectrum-css/preview/decorators";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { DividerGroup } from "./divider.test.js";
 import { Template } from "./template.js";
 
@@ -34,11 +36,22 @@ export default {
 	},
 	parameters: {
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 
 /**
- * By default, dividers are horizontal and should be used for separating content vertically. The small divider is the default size. 
+ * By default, dividers are horizontal and should be used for separating content vertically. The small divider is the default size.
  */
 export const Default = DividerGroup.bind({});
 Default.args = {};

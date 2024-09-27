@@ -1,6 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isQuiet } from "@spectrum-css/preview/types";
+import data from "../metadata/metadata.json";
 import pkgJson from "../package.json";
+
 import { CoachIndicatorGroup } from "./coachindicator.test.js";
 import { AllVariantsCoachIndicatorGroup } from "./template";
 
@@ -32,6 +34,17 @@ export default {
 	},
 	parameters: {
 		packageJson: pkgJson,
+		cssprops: {
+			...data.modifiers.reduce((collection, item) => {
+				const key = item.replace(/^--/, "");
+				collection[key] = {
+					category: "Modifiers",
+					control: key.includes("color") ? "color" : "text",
+					value: key.includes("color") ? undefined : " ",
+				};
+				return collection;
+			}, {})
+		},
 	},
 };
 
