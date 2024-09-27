@@ -13,6 +13,7 @@ export const Template = ({
 	isOpen = false,
 	label,
 	iconName = "More",
+	iconSet = "workflow",
 	size = "m",
 	...popoverArgs
 } = {}, context = {}) => {
@@ -30,6 +31,7 @@ export const Template = ({
 				label,
 				hasPopup: "menu",
 				iconName,
+                iconSet,
 				id: triggerId,
 				customClasses,
 			}, context),

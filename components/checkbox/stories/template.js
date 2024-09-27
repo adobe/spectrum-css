@@ -76,11 +76,13 @@ export const Template = ({
 				${Icon({
 					size,
 					iconName: `Checkmark${iconSize}`,
+					setName: "ui",
 					customClasses: [`${rootClass}-checkmark`],
 				}, context)}
 				${Icon({
 					size,
 					iconName: `Dash${iconSize}`,
+					setName: "ui",
 					customClasses: [`${rootClass}-partialCheckmark`],
 				}, context)}
 			</span>

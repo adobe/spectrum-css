@@ -36,6 +36,7 @@ export const Template = ({
 			${Icon({
 				size,
 				iconName: "Cross",
+				setName: "ui",
 				customClasses: [`${rootClass}-icon`],
 			}, context)}
 		</div>

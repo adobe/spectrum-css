@@ -42,6 +42,7 @@ export const Template = ({
 			${Icon({
 				size,
 				iconName: getCloseButtonIconName(size, iconSize),
+                setName: "ui",
 				customClasses: [`${rootClass}-UIIcon`],
 			}, context)}
 		</button>

@@ -13,6 +13,9 @@
 
 .spectrum-Icon,
 .spectrum-UIIcon {
+	/* stylelint-disable-next-line custom-property-pattern -- variable name defined by A4U output */
+	--iconPrimary: var(--mod-icon-color, currentColor);
+
 	--spectrum-icon-inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size)));
 	--spectrum-icon-block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size)));
 
@@ -24,7 +27,8 @@
 	color: var(--mod-icon-color, inherit);
 
 	/* Fill should match the current text color. */
-	fill: currentColor;
+	/* stylelint-disable-next-line custom-property-pattern -- map this to the same value as what's used by the icon's SVG code */
+	fill: var(--iconPrimary);
 
 	/* Don't catch clicks or hover, otherwise they may not escape the SVG. */
 	pointer-events: none;
