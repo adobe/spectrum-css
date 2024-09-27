@@ -20,6 +20,14 @@ export const DividerGroup = Variants({
 			testHeading: "Vertical",
 			vertical: true,
 			minDimensionValues: true,
-		}
+		},
+		{
+			testHeading: "Static black",
+			staticColor: "black",
+		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
 	],
 });
