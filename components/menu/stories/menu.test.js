@@ -9,10 +9,11 @@ export const MenuWithVariants = Variants({
 	withSizes: false,
 	wrapperStyles: {
 		"min-block-size": "auto",
+		"max-inline-size": "300px",
 	},
 	testData: [
 		{
-			testHeading: "No selection",
+			testHeading: "Default",
 			selectionMode: "none",
 		},
 		{
@@ -87,7 +88,7 @@ export const MenuWithVariants = Variants({
 					items: [{ label: "Defaults to not visible within closed item" }],
 				},
 				{
-					label: "Watches",
+					label: "Watches and longer truncated label that is really really much longer",
 					iconName: "Watch",
 					iconSet: "workflow",
 					isCollapsible: true,
@@ -127,10 +128,9 @@ export const MenuItemGroup = Variants({
 		{
 			testHeading: "No selection",
 			description: undefined,
-			value: undefined,
 		},
 		{
-			testHeading: "With description",
+			testHeading: "No selection, with description",
 		},
 		{
 			testHeading: "Single selection: selected",
@@ -163,11 +163,19 @@ export const MenuItemGroup = Variants({
 			iconSet: "workflow",
 		},
 		{
-			testHeading: "Multi-selection: switches",
+			testHeading: "Multi-selection: unselected switches",
 			selectionMode: "multiple",
 			hasActions: true,
 			value: undefined,
 			description: undefined,
+		},
+		{
+			testHeading: "Multi-selection: selected switches",
+			selectionMode: "multiple",
+			hasActions: true,
+			value: undefined,
+			description: undefined,
+			isSelected: true,
 		},
 		{
 			testHeading: "Multi-selection: switches + labels",
@@ -176,14 +184,28 @@ export const MenuItemGroup = Variants({
 			label: "Menu item",
 		},
 		{
+			testHeading: "Drill-in",
+			isDrillIn: true,
+		},
+		{
 			testHeading: "Truncation",
-			description: "A longer description that will truncate",
+			description: "Description will wrap",
+			label: "Longer label will truncate",
 			shouldTruncate: true,
 			value: undefined,
 			customStyles: {
 				"inline-size": "150px",
 			},
 		},
+		{
+			testHeading: "Text wrapping",
+			description: "Description will wrap",
+			label: "Longer label will always wrap",
+			value: undefined,
+			customStyles: {
+				"inline-size": "150px",
+			},
+		}
 	],
 	stateData: [
 		{
@@ -202,23 +224,44 @@ export const MenuItemGroup = Variants({
 			testHeading: "Disabled",
 			isDisabled: true,
 		},
-		// {
-		// 	testHeading: "Selected",
-		// 	isSelected: true,
-		// },
-		// {
-		// 	testHeading: "Selected and disabled",
-		// 	isSelected: true,
-		// 	isDisabled: true,
-		// },
-		// {
-		// 	testHeading: "Collapsible",
-		// 	isCollapsible: true,
-		// },
-		// {
-		// 	testHeading: "Drill-in",
-		// 	isDrillIn: true,
-		// },
+		{
+			testHeading: "Without icon",
+			iconName: undefined,
+		},
+		{
+			testHeading: "Without value",
+			value: undefined,
+			include: ["No selection", "No selection, with description", "Multi-selection: unselected", "Multi-selection: switches + labels", "Drill-in"],
+		},
+		{
+			testHeading: "Without value or icon",
+			iconName: undefined,
+			value: undefined,
+			include: ["No selection", "No selection, with description", "Multi-selection: unselected", "Multi-selection: switches + labels", "Drill-in"],
+		},
+		{
+			testHeading: "With value",
+			value: "⌘ N",
+			include: ["Truncation", "Text wrapping"],
+		},
+		{
+			testHeading: "With multi-select switch",
+			selectionMode: "multiple",
+			hasActions: true,
+			include: ["Truncation", "Text wrapping"],
+		},
+		{
+			testHeading: "With value and multi-select switch",
+			selectionMode: "multiple",
+			hasActions: true,
+			value: "⌘ N",
+			include: ["Truncation", "Text wrapping"],
+		},
+		{
+			testHeading: "Without description",
+			description: undefined,
+			include: ["Drill-in", "Truncation", "Text wrapping"],
+		},
 		// {
 		// 	testHeading: "Highlighted",
 		// 	isHighlighted: true,
