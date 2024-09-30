@@ -116,6 +116,10 @@
 	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
 
 	user-select: none;
+
+	&:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp) {
+		margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
+	}
 }
 
 .spectrum-Slider--sideLabel {
@@ -416,6 +420,7 @@
 	&:lang(ko) {
 		line-height: var(--mod-slider-cjk-line-height, var(--spectrum-slider-cjk-line-height));
 	}
+
 }
 
 .spectrum-Slider-label {
