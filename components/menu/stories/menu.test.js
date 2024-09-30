@@ -36,6 +36,7 @@ export const MenuWithVariants = Variants({
 				{
 					label: "Web Design",
 					iconName: "DesktopAndMobile",
+					iconSet: "workflow",
 					isCollapsible: true,
 					isOpen: true,
 					items: [
@@ -75,18 +76,21 @@ export const MenuWithVariants = Variants({
 				{
 					label: "Tablet",
 					iconName: "DeviceTablet",
+					iconSet: "workflow",
 					isCollapsible: true,
 					items: [{ label: "Defaults to not visible within closed item" }],
 				},
 				{
 					label: "Social Media",
 					iconName: "ShareAndroid",
+					iconSet: "workflow",
 					isCollapsible: true,
 					items: [{ label: "Defaults to not visible within closed item" }],
 				},
 				{
 					label: "Watches and longer truncated label that is really really much longer",
 					iconName: "Watch",
+					iconSet: "workflow",
 					isCollapsible: true,
 					items: [{ label: "Defaults to not visible within closed item" }],
 				},
@@ -142,6 +146,7 @@ export const MenuItemGroup = Variants({
 			selectionMode: "single",
 			label: "Share",
 			iconName: "Share",
+			iconSet: "workflow",
 		},
 		{
 			testHeading: "Multi-selection: selected",
@@ -155,6 +160,7 @@ export const MenuItemGroup = Variants({
 			selectionMode: "multiple",
 			label: "Share",
 			iconName: "Share",
+			iconSet: "workflow",
 		},
 		{
 			testHeading: "Multi-selection: unselected switches",

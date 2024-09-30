@@ -126,6 +126,7 @@ WithForcedColors.parameters = {
 };
 WithForcedColors.args = {
 	iconName: "Actions",
+	iconSet: "workflow",
 };
 
 // ********* DOCS ONLY ********* //

@@ -7,28 +7,30 @@ import { Template } from "./template.js";
  * Multiple button variations displayed in one story template.
  * Used as the base template for the stories.
  */
-const CustomButton = ({ iconName, ...args }, context) => html`
+const CustomButton = ({ iconName, iconSet, ...args }, context) => html`
   ${Template(
-    {
-      ...args,
-      iconName: undefined,
-    },
-    context
+	{
+		...args,
+		iconName: undefined,
+	},
+	context
   )}
   ${Template(
-    {
-      ...args,
-      iconName: iconName ?? "Edit",
-    },
-    context
+	{
+		...args,
+		iconName: iconName ?? "Edit",
+		iconSet: iconSet ?? "workflow",
+	},
+	context
   )}
   ${Template(
-    {
-      ...args,
-      hideLabel: true,
-      iconName: iconName ?? "Edit",
-    },
-    context
+	{
+		...args,
+		hideLabel: true,
+		iconName: iconName ?? "Edit",
+		iconSet: iconSet ?? "workflow",
+	},
+	context
   )}
 `;
 
@@ -51,6 +53,7 @@ export const ButtonGroups = Variants({
 				"max-inline-size": "480px",
 			},
 			iconName: "Edit",
+			iconSet: "workflow",
 			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
 			Template,
@@ -62,6 +65,7 @@ export const ButtonGroups = Variants({
 			},
 			// Uses a UI icon that is smaller than workflow sizing, to test alignment:
 			iconName: "Cross100",
+			iconSet: "ui",
 			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
 			Template,
@@ -82,6 +86,7 @@ export const ButtonGroups = Variants({
 				"max-inline-size": "120px",
 			},
 			iconName: "Star",
+			iconSet: "workflow",
 			label: "Be a premium member",
 			withStates: false,
 			noWrap: true,
@@ -94,6 +99,7 @@ export const ButtonGroups = Variants({
 			},
 			// UI icon that is larger than workflow sizing:
 			iconName: "ArrowDown600",
+			iconSet: "ui",
 			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
 			Template,

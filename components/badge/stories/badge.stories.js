@@ -33,6 +33,7 @@ export default {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
 		},
+		iconSet: { table: { disable: true } },
 		variant: {
 			name: "Background color variants",
 			type: { name: "string" },
@@ -58,6 +59,7 @@ export default {
 		rootClass: "spectrum-Badge",
 		size: "m",
 		variant: "neutral",
+		iconSet: "workflow",
 		fixed: "none"
 	},
 	parameters: {

@@ -45,7 +45,7 @@ export const Template = ({
 	rootClass = "spectrum-ActionButton",
 	size = "m",
 	iconName,
-	iconSet,
+	iconSet = "workflow",
 	label,
 	isQuiet = false,
 	isSelected = false,

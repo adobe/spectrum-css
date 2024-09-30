@@ -14,6 +14,7 @@ export const Template = ({
 	size = "m",
 	label,
 	iconName,
+	iconSet = "workflow",
 	variant = "neutral",
 	fixed,
 	customStyles = {},
@@ -21,28 +22,29 @@ export const Template = ({
 	id = getRandomId("badge"),
 }) => html`
   <div
-    class=${classMap({
-      [rootClass]: true,
-      [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
-      [`${rootClass}--${variant}`]: typeof variant !== "undefined",
-      [`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
-      ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-    })}
-    id=${ifDefined(id)}
-    style=${styleMap(customStyles)}
+	class=${classMap({
+		[rootClass]: true,
+		[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+		[`${rootClass}--${variant}`]: typeof variant !== "undefined",
+		[`${rootClass}--${fixed}`]: typeof fixed !== "undefined",
+		...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	})}
+	id=${ifDefined(id)}
+	style=${styleMap(customStyles)}
   >
-    ${when(iconName, () =>
-      Icon({
-        iconName,
-        customClasses: [
-          ...(typeof label === "undefined"
-            ? [`${rootClass}-icon--no-label`]
-            : []),
-          `${rootClass}-icon`,
-        ],
-      })
-    )}
-    ${when(label, () => html`<div class="${rootClass}-label">${label}</div>`)}
+	${when(iconName, () =>
+		Icon({
+			iconName,
+			setName: iconSet,
+			customClasses: [
+				...(typeof label === "undefined"
+				? [`${rootClass}-icon--no-label`]
+				: []),
+				`${rootClass}-icon`,
+			],
+		})
+	)}
+	${when(label, () => html`<div class="${rootClass}-label">${label}</div>`)}
   </div>
 `;
 
