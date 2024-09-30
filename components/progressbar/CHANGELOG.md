@@ -292,6 +292,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **meter:**update layout tokens ([#2080](https://github.com/adobe/spectrum-css/issues/2080))([da88b3c](https://github.com/adobe/spectrum-css/commit/da88b3c))
 
+### spectrum-Meter class
+
+Meter now uses the class `spectrum-Meter` on the parent `div`
+
 ### 🔙 Reverts
 
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
