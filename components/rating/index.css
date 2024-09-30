@@ -98,17 +98,6 @@
 		cursor: default;
 		pointer-events: none;
 	}
-
-	/* When the entire component is hovered, show all solid icons */
-	&:hover {
-		.spectrum-Rating-starActive {
-			display: block;
-		}
-
-		.spectrum-Rating-starInactive {
-			display: none;
-		}
-	}
 }
 
 .spectrum-Rating-input {
@@ -167,6 +156,26 @@
 		.spectrum-Rating-starInactive {
 			display: block;
 		}
+	}
+
+	&:hover {
+		.spectrum-Rating-starActive {
+			display: block;
+		}
+
+		.spectrum-Rating-starInactive {
+			display: none;
+		}
+	}
+}
+
+.spectrum-Rating-icon:has(+ .spectrum-Rating-icon:hover) {
+	.spectrum-Rating-starActive {
+		display: block;
+	}
+
+	.spectrum-Rating-starInactive {
+		display: none;
 	}
 }
 
