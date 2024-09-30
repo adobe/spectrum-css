@@ -183,149 +183,6 @@ const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false
 };
 
 /**
- * Determines which logo SVG to use based on the resource link
- */
-const iconSvgs = (linkType) => {
-	let svgAsset;
-	let resourceWrapperProps;
-
-	switch(linkType) {
-		case "package": 
-			svgAsset = <NpmSVG />
-			resourceWrapperProps = "rgba(203, 56, 55, 0.1)";
-			break;
-			case "repository": 
-			svgAsset = <GitHubSVG />
-			resourceWrapperProps = "rgba(0, 0, 0, 0.1)"
-			break;
-		case "guidelines": 
-			svgAsset = <AdobeSVG />
-			break;
-		default: 
-			break;
-	}
-
-	return (
-		<ResourceIconWrapper backgroundColor={resourceWrapperProps}>
-			{ svgAsset }
-		</ResourceIconWrapper>
-	)
-};
-
-/**
- * Converts the linkType to the subtitle text
- */
-const convertLinkTypeText = (linkType) => {
-	switch(linkType) {
-		case "package": 
-			linkType = "npm"
-			break;
-		case "repository": 
-			linkType = "GitHub"
-			break;
-		case "guidelines": 
-			linkType = "Spectrum website"
-			break;
-		default: 
-			break;
-	}
-	return linkType;
-};
-
-export const ResourceLinkContent = ({data, linkType=["package", "repository", "guidelines"]}) => {
-	const packageJson = data;
-
-	// componentGuidelinesName
-	let packageName = "";
-	let packageLink = "";
-
-	// componentBetaName: for components with guidelines that are still on spectrum-contributions/beta site
-	let packageAltName = "";
-	let packageAltLink = "";
-
-	// For form and meter, both are nested within other component package.json files
-  let nestedComponent = packageJson?.nestedComponentName ?? undefined;
-	
-	if (linkType === "package") {
-		// NPM package name and link 
-		packageName = packageJson?.name ?? undefined;
-		packageLink = (packageName && typeof packageName !== "undefined") ? `https://npmjs.com/${packageName}` : false;
-	}
-	
-	else if (linkType === "repository") {
-		// repo name and link 
-		packageName = packageJson?.name ? packageJson?.name.split('/').pop() : undefined;
-		packageLink = (packageName && typeof packageName !== "undefined") ? `https://github.com/adobe/spectrum-css/tree/main/components/${packageName}` : false;
-	}
-
-	else if (linkType === "guidelines") {
-		// guidelines site name and link 
-		packageName = packageJson?.componentGuidelinesName ?? undefined;
-
-		 // TODO: This may not be a sustainable approach to targeting specific nested components. For example, text area is sort of nested under text field, but we don't surface text area as a separate component, like meter or form. We should probably refactor this to either support nested components more dynamically or potentially un-nest components.
-		if (nestedComponent === "form") {
-			packageName = undefined;
-		}
-
-		if (nestedComponent === "meter") {
-			packageName = nestedComponent;
-		}
-
-		packageLink = (packageName && typeof packageName !== "undefined") ? `https://spectrum.adobe.com/page/${packageName}` : false;
-
-		// internal contributions/beta guidelines name and link
-		packageAltName = (packageName) ? undefined : packageJson?.componentBetaName;
-
-		if (!packageLink) {
-			packageAltLink = (packageAltName && typeof packageAltName !== "undefined") ? `https://spectrum-contributions.corp.adobe.com/page/${packageAltName}` : false;
-			packageLink = packageAltLink;
-		}
-	}
-
-	else {
-		console.warn(`Are you sure you mean "${linkType}"? Please use a valid link type instead: "package", "repository", "guidelines"`);
-	}
-
-	return (
-		<>
-			{packageLink ? <>
-				<ResourceLink href={packageLink} rel="noopener" className="sb-unstyled">
-					{iconSvgs(linkType)}
-					<ResourceTextWrapper>
-						<div className="spectrum-Heading spectrum-Heading--sizeXS">View {linkType}</div>
-						<div className="spectrum-Body spectrum-Body--sizeS">{convertLinkTypeText(linkType)}</div>
-					</ResourceTextWrapper>
-				</ResourceLink>
-				</>
-				: ""
-			}
-		</>
-	)
-};
-
-/**
- * Displays the list of relevant component links (to NPM, repo, guidelines, etc). 
- * 
- * Usage of this doc block within MDX template(s):
- *  <ResourceListDetails />
- */
-export const ResourceListDetails = () => {
-	const storyMeta = useOf('meta');
-
-	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
-
-	if (!packageJson?.name) return;
-
-	return (
-						<ResourceSection skipBorder={true} className="sb-unstyled">
-							<ResourceLinkContent className="doc-block-links" linkType="guidelines" data={packageJson}/>
-							<ResourceLinkContent className="doc-block-links" linkType="repository" data={packageJson}/>
-							<ResourceLinkContent className="doc-block-links" linkType="package" data={packageJson}/>
-						</ResourceSection>
-	)
-};
-
-/**
  * Process the npm data to determine the versions to display.
  * @param {object>} storyMeta
  * @param {object} npmData
@@ -462,13 +319,130 @@ function fetchNpmData(packageName, setnpmData, setIsLoading) {
 }
 
 /**
+ * Determines which logo SVG to use based on the resource link
+ */
+const iconSvgs = (linkType) => {
+	let svgAsset;
+	let resourceWrapperProps;
+
+	switch(linkType) {
+		case "package": 
+			svgAsset = <NpmSVG />
+			resourceWrapperProps = "rgba(203, 56, 55, 0.1)";
+			break;
+			case "repository": 
+			svgAsset = <GitHubSVG />
+			resourceWrapperProps = "rgba(0, 0, 0, 0.1)"
+			break;
+		case "guidelines": 
+			svgAsset = <AdobeSVG />
+			break;
+		default: 
+			break;
+	}
+
+	return (
+		<ResourceIconWrapper backgroundColor={resourceWrapperProps}>
+			{ svgAsset }
+		</ResourceIconWrapper>
+	)
+};
+
+/**
+ * Converts the linkType to the subtitle text
+ */
+const convertLinkTypeText = (linkType) => {
+	switch(linkType) {
+		case "package": 
+			linkType = "npm"
+			break;
+		case "repository": 
+			linkType = "GitHub"
+			break;
+		case "guidelines": 
+			linkType = "Spectrum website"
+			break;
+		default: 
+			break;
+	}
+	return linkType;
+};
+
+export const ResourceLinkContent = ({data, linkType=["package", "repository", "guidelines"]}) => {
+	const packageJson = data;
+
+	// componentGuidelinesName
+	let packageName = "";
+	let packageLink = "";
+	
+	if (linkType === "package") {
+		// NPM package name and link 
+		packageName = packageJson?.name ?? undefined;
+		packageLink = (packageName && typeof packageName !== "undefined") ? `https://npmjs.com/${packageName}` : false;
+	}
+	
+	else if (linkType === "repository") {
+		// repo name and link 
+		packageName = packageJson?.name ? packageJson?.name.split('/').pop() : undefined;
+		packageLink = (packageName && typeof packageName !== "undefined") ? `https://github.com/adobe/spectrum-css/tree/main/components/${packageName}` : false;
+	}
+
+	else if (linkType === "guidelines") {
+		// checks if the any nested component name is included in the page URL
+		for(let i = 0; i < packageJson?.spectrum?.length; i++) {
+			if (window.location.href.includes(packageJson?.spectrum[i]?.componentName)) {
+
+				// guidelines site name and link
+				packageName = packageJson?.spectrum[i]?.componentName ?? undefined;
+				packageLink = (packageName && typeof packageName !== "undefined") ? packageJson?.spectrum[i]?.guidelinesLink : false;
+				break;
+			} 
+			packageName = packageJson?.spectrum[i]?.componentName ?? undefined;
+			packageLink = (packageName && typeof packageName !== "undefined") ? packageJson?.spectrum[i]?.guidelinesLink : false;
+		}
+	}
+
+	else {
+		console.warn(`Are you sure you mean "${linkType}"? Please use a valid link type instead: "package", "repository", "guidelines"`);
+	}
+
+	return (
+		<>
+			{packageLink ? <>
+					<ResourceLink href={packageLink} rel="noopener" className="sb-unstyled">
+						{iconSvgs(linkType)}
+						<ResourceTextWrapper>
+							<div className="spectrum-Heading spectrum-Heading--sizeXS">View {linkType}</div>
+							<div className="spectrum-Body spectrum-Body--sizeS">{convertLinkTypeText(linkType)}</div>
+						</ResourceTextWrapper>
+					</ResourceLink>
+				</>
+				: ""
+			}
+		</>
+	)
+};
+
+export const ResourceListDetails = ({data}) => {
+	const packageJson = data;
+
+	return (
+		<ResourceSection skipBorder={true} className="sb-unstyled">
+			<ResourceLinkContent className="doc-block-links" linkType="guidelines" data={packageJson}/>
+			<ResourceLinkContent className="doc-block-links" linkType="repository" data={packageJson}/>
+			<ResourceLinkContent className="doc-block-links" linkType="package" data={packageJson}/>
+		</ResourceSection>
+	)
+};
+
+/**
  * Displays the current version number of the component. The version is read from
  * the component's parameters, where it was sourced from the package.json file.
  *
  * Displays a component status of "deprecated" if it is set in the story's
  * parameters.
  * 
- *  Displays the list of relevant component links (to NPM, repo, guidelines, etc). 
+ * Displays the list of relevant component links (to NPM, repo, guidelines, etc). 
  *
  * Usage of this doc block within MDX template(s):
  *  <ComponentDetails />
@@ -510,7 +484,7 @@ export const ComponentDetails = () => {
 							</>
 						}
 					</DList>
-					<ResourceListDetails />
+					<ResourceListDetails data={packageJson} />
 				</>
 			: ""}
 		</ResetWrapper>
