@@ -4,7 +4,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { ActionGroups } from "./actiongroup.test.js";
-import { TreatmentTemplate } from "./template.js";
+import { OverflowOption, TreatmentTemplate } from "./template.js";
 
 /**
  * An action group is a grouping of [action buttons](?path=/docs/components-action-button--docs&globals=testingPreview:!true) that are related to each other.
@@ -57,16 +57,19 @@ export default {
 		justified: false,
 		content: [
 			{
+				iconName: "Edit",
+				iconSet: "workflow",
 				label: "Edit",
-				iconName: "Edit"
 			},
 			{
+				iconName: "Copy",
+				iconSet: "workflow",
 				label: "Copy",
-				iconName: "Copy"
 			},
 			{
-				label: "Delete",
 				iconName: "Delete",
+				iconSet: "workflow",
+				label: "Delete",
 				isSelected: true,
 			},
 		],
@@ -91,11 +94,18 @@ export const Horizontal = TreatmentTemplate.bind({});
 Horizontal.tags = ["!dev"];
 Horizontal.args = {};
 
+/**
+ * The compact density retains the same font and icon sizes, but has tighter spacing. The action buttons also become connected for non-quiet action groups.
+*/
 export const HorizontalCompact = TreatmentTemplate.bind({});
 HorizontalCompact.tags = ["!dev"];
 HorizontalCompact.args = {
 	compact: true
 };
+
+/**
+ * The vertical option should be reserved for when horizontal space is limited.
+*/
 
 export const Vertical = TreatmentTemplate.bind({});
 Vertical.tags = ["!dev"];
@@ -136,6 +146,9 @@ VerticalSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/**
+ * When an action group is justified, it takes up the entire available container width, divided equally for each action button that is inside the group.
+*/
 
 export const Justified = ActionGroups.bind({});
 Justified.tags = ["!dev"];
@@ -200,6 +213,14 @@ JustifiedIconOnlyCompact.args = {
 };
 
 JustifiedIconOnlyCompact.storyName = "Justified (compact, icon-only)";
+
+
+/**
+ * When space is limited in an action group, there are 2 options for the group's overflow behavior: wrap or collapse. By default, an action group is set to wrap, meaning that the action buttons inside the group wrap to form another line. Alternatively, an action group can be set to collapse inside a More (...) action button.
+*/
+export const Overflow = OverflowOption.bind({});
+Overflow.tags = ["!dev"];
+
 
 
 

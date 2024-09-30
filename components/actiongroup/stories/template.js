@@ -51,6 +51,78 @@ export const Template = ({
 	`;
 };
 
+export const OverflowOption = (context) => Container({
+	withBorder: false,
+	direction: "column",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+		${Container({
+				heading: "Wrap",
+				content: Template({
+					customStyles: { "max-inline-size": "288px" },
+					content: [
+						{
+							iconName: "Edit",
+							iconSet: "workflow",
+							label: "Edit",
+						},
+						{
+							iconName: "Copy",
+							iconSet: "workflow",
+							label: "Copy",
+						},
+						{
+							iconName: "Delete",
+							iconSet: "workflow",
+							label: "Delete",
+						},
+						{
+							iconName: "Cut",
+							iconSet: "workflow",
+							label: "Cut",
+						},
+						{
+							iconName: "Move",
+							iconSet: "workflow",
+							label: "Move",
+						},
+					]
+				})
+			}
+		)}
+		${Container({
+				heading: "Collapse",
+				content: Template({
+					content: [
+						{
+							iconName: "Edit",
+							iconSet: "workflow",
+							label: "Edit",
+						},
+						{
+							iconName: "Copy",
+							iconSet: "workflow",
+							label: "Copy",
+						},
+						{
+							iconName: "Delete",
+							iconSet: "workflow",
+							label: "Delete",
+						},
+						{
+							iconName: "More",
+							iconSet: "workflow",
+							hideLabel: true,
+						},
+					]
+				})
+			}
+		)}
+	`
+}, context );
+
 export const ActionButtonOptions = ({
 	...args
 }, context ) => Container({
@@ -108,3 +180,4 @@ export const TreatmentTemplate = (args, context) => Container({
 		})
 	}, context ))}`,
 });
+

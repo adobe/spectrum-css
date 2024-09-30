@@ -13,6 +13,7 @@ export const Template = (
 		position,
 		isQuiet,
 		iconName = "Add",
+		iconSet = "workflow",
 		isDisabled,
 		isInvalid,
 		isHovered,
@@ -49,6 +50,7 @@ export const Template = (
 							{
 								size,
 								iconName: "ChevronUp75",
+								setName: "ui",
 								customClasses: [`${rootClass}-icon`],
 							},
 							context,
@@ -79,6 +81,7 @@ export const Template = (
 							{
 								size,
 								iconName: "ChevronDown75",
+								setName: "ui",
 								customClasses: [`${rootClass}-icon`],
 							},
 							context,
@@ -111,6 +114,7 @@ export const Template = (
 								{
 									size,
 									iconName,
+									setName: iconSet,
 									customClasses: [`${rootClass}-icon`],
 								},
 								context,

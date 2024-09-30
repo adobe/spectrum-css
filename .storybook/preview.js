@@ -36,8 +36,8 @@ setConsoleOptions({
 });
 
 /** @type import('@storybook/types').StorybookParameters & import('@storybook/types').API_Layout */
-const parameters = {
-	layout: "padded",
+export const parameters = {
+	layout: "centered",
 	showNav: true,
 	showTabs: true,
 	showPanel: true,

@@ -78,6 +78,7 @@ export const CoachContainer = ({
 									treatment: "outline",
 									hideLabel: true,
 									iconName: "ChevronLeft75",
+									iconSet: "ui",
 								},
 								{
 									variant: "primary",
@@ -118,9 +119,7 @@ export const Template = (args, context) => {
 				customClasses: [`${args.rootClass}-popover`],
 				isOpen: true,
 				position: "right-top",
-				trigger: (passthrough) => CoachIndicator({
-					...passthrough,
-				}, context),
+				trigger: (passthrough) => CoachIndicator(passthrough, context),
 				content: [
 					CoachContainer(args, context)
 				],

@@ -31,7 +31,10 @@ export const Template = ({
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap(customStyles)}
+			style=${styleMap({
+				"min-inline-size": "500px",
+				...customStyles,
+			})}
 			id=${id}
 			data-testid=${ifDefined(testId)}
 		>
@@ -45,6 +48,7 @@ export const Template = ({
 						["negative", "info"].some(type => variant === type),
 						() => Icon({
 							iconName: variant === "negative" ? "Alert" : "Info",
+							setName: "workflow",
 							customClasses: [`${rootClass}-icon`],
 						}, context)
 					)}

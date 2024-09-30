@@ -101,6 +101,7 @@ export const SideNavGroup = Variants({
 			testHeading: "With icon",
 			variant: "multiLevel",
 			iconName: "Folder",
+			iconSet: "workflow",
 			hasIcon: true,
 			items: [
 				{

@@ -1,0 +1,16 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"name": "postcss-combininator",
+	"tags": ["tooling", "postcss", "plugin"],
+	"targets": {
+		"format": {
+			"defaultConfiguration": "plugins"
+		},
+		"lint": {
+			"defaultConfiguration": "plugins"
+		},
+		"test": {
+			"defaultConfiguration": "plugins"
+		}
+	}
+}

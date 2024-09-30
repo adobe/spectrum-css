@@ -35,6 +35,7 @@ export const Template = ({
 			Icon(
 				{
 				iconName: "Alert",
+				setName: "workflow",
 				size,
 				customClasses: [`${rootClass}-validationIcon`],
 				},

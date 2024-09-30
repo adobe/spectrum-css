@@ -1,10 +1,11 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
+import { SemanticVariantGroup, TooltipPlacementGroup, TooltipShowOnHover } from "./template.js";
 import { PlacementVariants } from "./tooltip.test.js";
 
 /**
- * Tooltips show contextual help or information about specific components when a user hovers or focuses on them.
+ * A tooltip shows contextual help or information about specific components when a user hovers or focuses on it.
  */
 export default {
 	title: "Tooltip",
@@ -31,7 +32,7 @@ export default {
 		},
 		placement: {
 			name: "Placement",
-			description: "The placement of the tooltip relative to the source. Note that placements that start with Left/Right do not change with text direction, but Start/End placements do.",
+			description: "The placement of the tooltip relative to the source. Note that placements that start with left/right do not change with text direction, but start/end placements do.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -94,6 +95,52 @@ export default {
 
 export const Default = PlacementVariants.bind({});
 Default.args = {};
+
+// ********* DOCS ONLY ********* //
+/**
+ * A tooltip is positioned in relation to its target. There are 22 available positions. Ten of those positions use
+ * logical properties, containing the words "start" or "end", and will change side if text direction is changed.
+ *
+ * Position classes use the following naming convention: the first term is the tooltip's position and the second term
+ * is its source's position. For example, for the position and modifier class `--top-left`, the tooltip is positioned
+ * at the top and the source is to the left. The default placement value if none is specified is at the top.
+ */
+export const Placement = TooltipPlacementGroup.bind({});
+Placement.tags = ["!dev"];
+Placement.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A tooltip that shows on hover using CSS only. Note that this approach does not support text wrapping. Also, note
+ * that these tooltips will likely not work on touch-enabled devices without additional client-side scripting.
+ */
+export const ShowOnHover = TooltipShowOnHover.bind({});
+ShowOnHover.tags = ["!dev"];
+ShowOnHover.args = {
+	label: "Tooltip",
+	isOpen: false,
+};
+ShowOnHover.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * By default, tooltips are the neutral variant. This is the most common variant because most tooltips are used to only
+ * disclose additional information, without conveying a semantic meaning. The neutral variant never includes an icon.
+ * 
+ * Tooltips also come in other semantic variants: informative (blue), positive (green), and negative (red). These use
+ * [semantic colors](https://spectrum.adobe.com/page/color-system/#Color-semantics) to communicate the meaning.
+ * 
+ * These semantic variants include an icon to supplement the messaging. These icons are predefined and can not be
+ * customized. Unless it's being used to provide context about the exact same icon, a semantic tooltip should always
+ * show an icon. Doing this is essential for helping users with color vision deficiency to discern the message tone.
+ */
+export const SemanticVariants = SemanticVariantGroup.bind({});
+SemanticVariants.tags = ["!dev"];
+SemanticVariants.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = PlacementVariants.bind({});

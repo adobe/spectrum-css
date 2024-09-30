@@ -14,6 +14,7 @@ export const Template = ({
 	variant,
 	hasIcon,
 	iconName,
+	iconSet = "workflow",
 	items = [],
 } = {}, context = {}) => html`
   <nav>
@@ -39,7 +40,7 @@ export const Template = ({
                 class="${rootClass}-itemLink"
                 aria-current=${ifDefined(item.isSelected ? "page" : undefined)}
               >
-                ${when(hasIcon && iconName, () => Icon({ iconName }, context))}
+                ${when(hasIcon && iconName, () => Icon({ iconName, setName: iconSet }, context))}
                 <span class="${rootClass}-link-text">${item.title}</span>
               </a>
               `
@@ -53,9 +54,10 @@ export const Template = ({
                 ${repeat(item.levelTwoItems, (item) => item.id, (item) => {
                   // Display nav items in second tier, and possibly a third tier.
                   return SideNavItem({
-					currentTier: 2,
+                    currentTier: 2,
                     hasIcon,
                     iconName,
+                    iconSet,
                     ...item
                   }, context);
                 })}
@@ -66,9 +68,10 @@ export const Template = ({
         else {
           // First level nav item only.
           return SideNavItem({
-			currentTier: 1,
+            currentTier: 1,
             hasIcon,
             iconName,
+            iconSet,
             ...item
           }, context);
         }
@@ -91,6 +94,7 @@ export const SideNavItem = ({
 	id = getRandomId("sidenav-item"),
 	hasIcon = false,
 	iconName,
+	iconSet = "workflow",
 	customClasses = [],
 } = {}, context = {}) => {
 	return html`
@@ -109,7 +113,7 @@ export const SideNavItem = ({
           [`${rootClass}-itemLink`]: true,
         })}
       >
-        ${when(hasIcon && iconName && currentTier == 1, () => Icon({ iconName }, context))}
+        ${when(hasIcon && iconName && currentTier == 1, () => Icon({ iconName, setName: iconSet }, context))}
         <span class=${classMap({
           [`${rootClass}-link-text`]: true,
         })}>

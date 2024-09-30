@@ -39,15 +39,3 @@ export const disableDefaultModes = {
         return acc;
     }, {}),
 };
-
-export const mobile = {
-    "Mobile": {
-        scale: "large",
-    },
-};
-
-export const viewports = {
-    small: {
-        width: 480,
-    },
-};

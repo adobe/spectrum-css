@@ -1,5 +1,12 @@
 # Change Log
 
+## 10.11.3
+
+### Patch Changes
+
+- Updated dependencies [[`7d41874`](https://github.com/adobe/spectrum-css/commit/7d418746362e7fe35f47e67e30682d7bf87ecfc7)]:
+  - @spectrum-css/tokens@14.4.0
+
 ## 10.11.2
 
 ### Patch Changes

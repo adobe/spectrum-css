@@ -14,7 +14,7 @@ export default {
 	component: "PickerButton",
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
-		iconType: {
+		iconSet: {
 			name: "Icon",
 			type: { name: "string", required: false },
 			table: {
@@ -26,7 +26,7 @@ export default {
 		},
 		iconName: {
 			...Icon.argTypes.iconName,
-			if: { arg: "iconType", eq: "workflow" },
+			if: { arg: "iconSet", eq: "workflow" },
 		},
 		label: {
 			name: "Label",
@@ -79,7 +79,7 @@ export default {
 		isQuiet: false,
 		isDisabled: false,
 		isFocused: false,
-		iconType: "ui",
+		iconSet: "ui",
 		iconName: "ChevronDown",
 		position: "right",
 	},

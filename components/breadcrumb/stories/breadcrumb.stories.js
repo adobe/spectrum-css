@@ -68,6 +68,7 @@ DefaultNested.args = {
 	items: [
 		{
 			iconName: "FolderOpen",
+			iconSet: "workflow",
 		},
 		{
 			label: "Sub item",
@@ -94,6 +95,7 @@ DefaultNestedRootVisible.args = {
 		},
 		{
 			iconName: "FolderOpen",
+			iconSet: "workflow",
 		},
 		{
 			label: "Trend",
@@ -203,6 +205,7 @@ Disabled.args = {
 		},
 		{
 			iconName: "FolderOpen",
+			iconSet: "workflow",
 			isDisabled: true,
 		},
 		{

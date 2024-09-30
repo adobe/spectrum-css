@@ -25,5 +25,36 @@ export const ActionGroups = Variants({
 			testHeading: "Vertical",
 			vertical: true,
 		},
+		{
+			testHeading: "Overflow",
+			customStyles: { "max-inline-size": "288px" },
+			content: [
+				{
+					iconName: "Edit",
+					iconSet: "workflow",
+					label: "Edit",
+				},
+				{
+					iconName: "Copy",
+					iconSet: "workflow",
+					label: "Copy",
+				},
+				{
+					iconName: "Delete",
+					iconSet: "workflow",
+					label: "Delete",
+				},
+				{
+					iconName: "Cut",
+					iconSet: "workflow",
+					label: "Cut",
+				},
+				{
+					iconName: "Move",
+					iconSet: "workflow",
+					label: "Move",
+				},
+			]
+		}
 	],
 });

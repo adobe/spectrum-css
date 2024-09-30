@@ -84,7 +84,7 @@ const Combobox = ({
 					... isInvalid ? ["is-invalid"] : [],
 				],
 				size,
-				iconType: "ui",
+				iconSet: "ui",
 				iconName: "ChevronDown",
 				isQuiet,
 				id: getRandomId("picker"),

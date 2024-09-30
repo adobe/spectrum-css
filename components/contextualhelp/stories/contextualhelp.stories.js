@@ -39,6 +39,7 @@ export default {
 			options: ["Info", "Help"],
 			control: "select",
 		},
+		iconSet: { table: { disable: true } },
 		popoverPlacement: {
 			name: "Popover Placement",
 			type: { name: "string", required: true },
@@ -79,6 +80,7 @@ export default {
 	args: {
 		rootClass: "spectrum-ContextualHelp",
 		iconName: "Info",
+		iconSet: "workflow",
 		popoverPlacement: "bottom-start",
 		title: "Permission required",
 		body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -91,8 +93,12 @@ export default {
 			],
 		},
 		packageJson: pkgJson,
+		docs: {
+			story: {
+				height: "200px",
+			},
+		},
 	},
-	tags: ["!autodocs"],
 };
 
 export const Default = ContextualHelpGroup.bind({});
@@ -124,6 +130,11 @@ TopPopover.args = {
 };
 TopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "auto",
+		},
+	},
 };
 
 export const HelpDefault = Template.bind({});
@@ -162,6 +173,11 @@ HelpTopPopover.args = {
 };
 HelpTopPopover.parameters = {
 	chromatic: { disableSnapshot: true },
+	docs: {
+		story: {
+			height: "auto",
+		},
+	},
 };
 
 // ********* VRT ONLY ********* //

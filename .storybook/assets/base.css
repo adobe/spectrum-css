@@ -23,8 +23,8 @@ body {
 	font-size: var(--spectrum-font-size);
 	font-style: var(--spectrum-font-style);
 
-	color: var(--spectrum-neutral-content-color-default);
-	background-color: var(--spectrum-background-layer-2-color);
+	color: var(--spectrum-neutral-content-color-default, rgb(34, 34, 34));
+	background-color: var(--spectrum-background-base-color, rgb(230, 230, 230));
 }
 
 .spectrum {
@@ -39,8 +39,9 @@ svg:has(symbol):not(:has(use)) {
 }
 
 /* --- DOCS STYLES --- */
-.innerZoomElementWrapper .sb-story {
-	padding: 10px !important;
+.docs-story > *:first-child {
+	background-color: var(--spectrum-background-layer-1-color);
+	overflow: hidden;
 }
 
 /* Make sure heading provided by <Stories/> doc block uses styles consistent with the default H2. */

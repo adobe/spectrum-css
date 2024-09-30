@@ -3,7 +3,6 @@ import { Template } from "./template.js";
 
 export const ColorAreaGroup = Variants({
 	Template,
-	skipBorders: true,
 	testData: [
 		{
 			testHeading: "Default",
@@ -19,11 +18,9 @@ export const ColorAreaGroup = Variants({
 		{
 			testHeading: "Disabled",
 			isDisabled: true,
-			isFocused: false,
 		},
 		{
 			testHeading: "Focused",
-			isDisabled: false,
 			isFocused: true,
 		},
 	],

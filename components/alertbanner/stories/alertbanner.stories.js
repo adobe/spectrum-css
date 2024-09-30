@@ -64,6 +64,7 @@ export default {
 		showCloseButton: true,
 	},
 	parameters: {
+		layout: "padded",
 		actions: {
 			handles: ["click .spectrum-AlertBanner button"],
 		},
@@ -133,7 +134,7 @@ Negative.parameters = {
  * The alert banner component can contain both an icon-only close button and a button with a contextual action to
  * take. Whenever possible, include the in-line action button if there's a way for a user to quickly address the issue
  * associated with an alert. There should never be more than one button with a contextual action in an alert banner.
- * 
+ *
  * The close button is optional, depending on context. Consider adding one to let a user easily dismiss the alert.
  */
 export const ActionableOptions = ActionableOptionsTemplate.bind({});

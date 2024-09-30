@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.4
+
+### Patch Changes
+
+- [#3131](https://github.com/adobe/spectrum-css/pull/3131) [`719775e`](https://github.com/adobe/spectrum-css/commit/719775e4cdc9556558ab6deef3002d8ea7e2cd6d) Thanks [@castastrophe](https://github.com/castastrophe)! - The `-moz-available` prefix as an alias for the block-size: stretch property is not behaving as intended. This removes that prefix and forces FF to fallback to the 100vh property which is aligning as intended.
+
 ## 5.1.3
 
 ### Patch Changes

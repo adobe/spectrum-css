@@ -87,7 +87,7 @@ export default {
 		layout: "centered",
 		docs: {
 			story: {
-				height: "240px",
+				height: "200px",
 			}
 		},
 		packageJson: pkgJson,
@@ -281,7 +281,7 @@ Positioning.args = {
 	withTip: true,
 	isOpen: true,
 	trigger: () => null,
-	content: [html`<span style="padding: 0 7px">Basic text content, with some added padding.</span>`],
+	content: [() => html`<span style="padding: 0 7px">Basic text content, with some added padding.</span>`],
 	skipAlignment: true,
 	popoverWrapperStyles: {
 		"display": "block",
@@ -300,12 +300,12 @@ Positioning.parameters = {
  * #### Default tip positioning
  * - The tip position is centered on the edge for top, bottom, left, right, start, and end positions.
  * - The tip position distance from edge is equal to the popover corner radius for all other positions.
- * 
+ *
  * #### Centering the tip with the source
  * In implementations, the tip position can be overridden to center it with the source by setting the
  * custom property `--spectrum-popover-pointer-edge-offset` equal to half the width of the source for
- * top and bottom popovers, or half the height of the source for side popovers. The following 
- * example sets this custom property to `50px` for a source button that is `100px` wide. 
+ * top and bottom popovers, or half the height of the source for side popovers. The following
+ * example sets this custom property to `50px` for a source button that is `100px` wide.
  */
 export const TipOffset = FixedWidthSourceTemplate.bind({});
 TipOffset.storyName = "Tip positioning and inline offset";

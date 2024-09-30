@@ -28,7 +28,7 @@ export const Template = ({
 				size,
 				isQuiet: true,
 				iconSet: "ui",
-				iconName: "ChevronLeft",
+				iconName: "ChevronLeft100",
 				customClasses: [`${rootClass}-prevButton`],
 			}, context)}
 			${Textfield({
@@ -41,7 +41,7 @@ export const Template = ({
 				size,
 				isQuiet: true,
 				iconSet: "ui",
-				iconName: "ChevronRight",
+				iconName: "ChevronRight100",
 				customClasses: [`${rootClass}-nextButton`],
 			}, context)}
 		</nav>
@@ -54,6 +54,7 @@ export const Template = ({
 		label: "Next",
 		iconName: "ChevronLeft100",
 		labelIconName: "ChevronRight100",
+		iconSet: "ui",
 		customFirstButtonClasses: ["spectrum-Pagination-prevButton"],
 		customLastButtonClasses: ["spectrum-Pagination-nextButton"]
 	}, context);

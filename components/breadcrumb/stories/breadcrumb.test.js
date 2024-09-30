@@ -21,6 +21,7 @@ const DefaultItems = [
 const NestedItems = [
 	{
 		iconName: "FolderOpen",
+		iconSet: "workflow",
 	},
 	{
 		label: "Dragged",
@@ -41,6 +42,7 @@ const NestedRootVisibleItems = [
 	},
 	{
 		iconName: "FolderOpen",
+		iconSet: "workflow",
 		isDisabled: true,
 	},
 	{
