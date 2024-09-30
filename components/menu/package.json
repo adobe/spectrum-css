@@ -71,5 +71,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "menu"
+	"spectrum": [{
+		"componentName": "menu",
+		"guidelinesLink": "https://spectrum.adobe.com/page/menu",
+		"rootClass": "spectrum-Menu"
+	}]
 }

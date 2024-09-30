@@ -59,5 +59,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "breadcrumbs"
+	"spectrum": [{
+		"componentName": "breadcrumbs",
+		"guidelinesLink": "https://spectrum.adobe.com/page/breadcrumbs",
+		"rootClass": "spectrum-Breadcrumbs"
+	}]
 }

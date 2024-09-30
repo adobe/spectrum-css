@@ -66,5 +66,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "table"
+	"spectrum": [{
+		"componentName": "table",
+		"guidelinesLink": "https://spectrum.adobe.com/page/table",
+		"rootClass": "spectrum-Table"
+	}]
 }

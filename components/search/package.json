@@ -53,5 +53,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "search-field"
+	"spectrum": [{
+		"componentName": "search-field",
+		"guidelinesLink": "https://spectrum.adobe.com/page/search-field",
+		"rootClass": "spectrum-Search"
+	}]
 }

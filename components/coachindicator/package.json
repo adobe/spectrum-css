@@ -47,5 +47,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "coach-indicator-beta"
+	"spectrum": [{
+		"componentName": "coach-indicator-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/coach-indicator-beta",
+		"rootClass": "spectrum-CoachIndicator"
+	}]
 }

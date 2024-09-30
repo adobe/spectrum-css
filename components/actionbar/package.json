@@ -55,5 +55,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "action-bar"
+	"spectrum": [{
+		"componentName": "action-bar",
+		"guidelinesLink": "https://spectrum.adobe.com/page/action-bar",
+		"rootClass": "spectrum-ActionBar"
+	}]
 }

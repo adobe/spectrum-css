@@ -50,5 +50,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "close-button"
+	"spectrum": [{
+		"componentName": "close-button",
+		"guidelinesLink": "https://spectrum.adobe.com/page/close-button",
+		"rootClass": "spectrum-CloseButton"
+	}]
 }

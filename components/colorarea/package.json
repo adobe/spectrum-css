@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "color-area"
+	"spectrum": [{
+		"componentName": "color-area",
+		"guidelinesLink": "https://spectrum.adobe.com/page/color-area",
+		"rootClass": "spectrum-ColorArea"
+	}]
 }

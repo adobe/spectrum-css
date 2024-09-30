@@ -50,5 +50,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "tooltip"
+	"spectrum": [{
+		"componentName": "tooltip",
+		"guidelinesLink": "https://spectrum.adobe.com/page/tooltip",
+		"rootClass": "spectrum-Tooltip"
+	}]
 }

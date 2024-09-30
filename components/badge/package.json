@@ -54,5 +54,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "badge"
+	"spectrum": [{
+		"componentName": "badge",
+		"guidelinesLink": "https://spectrum.adobe.com/page/badge",
+		"rootClass": "spectrum-Badge"
+	}]
 }

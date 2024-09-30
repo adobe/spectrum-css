@@ -47,5 +47,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "avatar"
+	"spectrum": [{
+		"componentName": "avatar",
+		"guidelinesLink": "https://spectrum.adobe.com/page/avatar", 
+		"rootClass": "spectrum-Avatar"
+	}]
 }

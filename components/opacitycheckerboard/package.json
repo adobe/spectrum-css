@@ -47,5 +47,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "opacity-checkerboard-beta"
+	"spectrum": [{
+		"componentName": "opacity-checkerboard-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/opacity-checkerboard-beta",
+		"rootClass": "spectrum-OpacityCheckerboard"
+	}]
 }

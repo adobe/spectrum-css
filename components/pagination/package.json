@@ -57,5 +57,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "pagination-list-beta"
+	"spectrum": [{
+		"componentName": "pagination-list-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/pagination-list-beta",
+		"rootClass": "spectrum-Pagination"
+	}]
 }

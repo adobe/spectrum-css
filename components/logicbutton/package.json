@@ -47,5 +47,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "logic-button-beta"
+	"spectrum": [{
+		"componentName": "logic-button-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/logic-button-beta",
+		"rootClass": "spectrum-LogicButton"
+	}]
 }

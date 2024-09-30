@@ -47,5 +47,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "progress-circle"
+	"spectrum": [{
+		"componentName": "progress-circle",
+		"guidelinesLink": "https://spectrum.adobe.com/page/progress-circle",
+		"rootClass": "spectrum-ProgressCircle"
+	}]
 }

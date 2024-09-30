@@ -56,5 +56,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "in-line-alert"
+	"spectrum": [{
+		"componentName": "in-line-alert",
+		"guidelinesLink": "https://spectrum.adobe.com/page/in-line-alert",
+		"rootClass": "spectrum-InLineAlert"
+	}]
 }

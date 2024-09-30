@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "rating"
+	"spectrum": [{
+		"componentName": "rating",
+		"guidelinesLink": "https://spectrum.adobe.com/page/rating",
+		"rootClass": "spectrum-Rating"
+	}]
 }

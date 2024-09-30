@@ -64,5 +64,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "coach-mark"
+	"spectrum": [{
+		"componentName": "coach-mark",
+		"guidelinesLink": "https://spectrum.adobe.com/page/coach-mark",
+		"rootClass": "spectrum-CoachMark"
+	}]
 }

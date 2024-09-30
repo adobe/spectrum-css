@@ -50,5 +50,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "action-group"
+	"spectrum": [{
+		"componentName": "action-group",
+		"guidelinesLink": "https://spectrum.adobe.com/page/action-group",
+		"rootClass": "spectrum-ActionGroup"
+	}]
 }

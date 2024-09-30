@@ -47,5 +47,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "status-light"
+	"spectrum": [{
+		"componentName": "status-light",
+		"guidelinesLink": "https://spectrum.adobe.com/page/status-light",
+		"rootClass": "spectrum-StatusLight"
+	}]
 }
