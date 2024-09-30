@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "thumbnail-beta"
+	"spectrum": [{
+		"componentName": "thumbnail-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/thumbnail-beta",
+		"rootClass": "spectrum-Thumbnail"
+	}]
 }

@@ -54,5 +54,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "asset-card-beta"
+	"spectrum": [{
+		"componentName": "asset-card-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/asset-card-beta",
+		"rootClass": "spectrum-AssetCard"
+	}]
 }

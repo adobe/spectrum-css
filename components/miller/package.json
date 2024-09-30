@@ -53,5 +53,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "miller-columns-beta"
+	"spectrum": [{
+		"componentName": "miller-columns-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/miller-columns-beta",
+		"rootClass": "spectrum-MillerColumns"
+	}]
 }

@@ -51,5 +51,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "color-slider"
+	"spectrum": [{
+		"componentName": "color-slider",
+		"guidelinesLink": "https://spectrum.adobe.com/page/color-slider",
+		"rootClass": "spectrum-ColorSlider"
+	}]
 }

@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "help-text"
+	"spectrum": [{
+		"componentName": "help-text",
+		"guidelinesLink": "https://spectrum.adobe.com/page/help-text",
+		"rootClass": "spectrum-HelpText"
+	}]
 }

@@ -65,5 +65,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "alert-dialog"
+	"spectrum": [{
+		"componentName": "alert-dialog",
+		"guidelinesLink": "https://spectrum.adobe.com/page/alert-dialog",
+		"rootClass": "spectrum-AlertDialog"
+	}]
 }

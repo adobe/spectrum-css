@@ -56,5 +56,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "steplist-beta"
+	"spectrum": [{
+		"componentName": "steplist-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/steplist-beta",
+		"rootClass": "spectrum-Steplist"
+	}]
 }

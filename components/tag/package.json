@@ -61,5 +61,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "tag"
+	"spectrum": [{
+		"componentName": "tag",
+		"guidelinesLink": "https://spectrum.adobe.com/page/tag",
+		"rootClass": "spectrum-Tag"
+	}]
 }

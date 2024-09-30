@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "swatch"
+	"spectrum": [{
+		"componentName": "swatch",
+		"guidelinesLink": "https://spectrum.adobe.com/page/swatch",
+		"rootClass": "spectrum-Swatch"
+	}]
 }

@@ -54,6 +54,13 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "progress-bar",
-	"nestedComponentName": "meter"
+	"spectrum": [{
+		"componentName": "progress-bar",
+		"guidelinesLink": "https://spectrum.adobe.com/page/progress-bar",
+		"rootClass": "spectrum-ProgressBar"
+	},{
+		"componentName": "meter",
+		"guidelinesLink": "https://spectrum.adobe.com/page/meter",
+		"rootClass": "spectrum-Meter"
+	}]
 }

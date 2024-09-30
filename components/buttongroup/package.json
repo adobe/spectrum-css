@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "button-group"
+	"spectrum": [{
+		"componentName": "button-group",
+		"guidelinesLink": "https://spectrum.adobe.com/page/button-group",
+		"rootClass": "spectrum-ButtonGroup"
+	}]
 }

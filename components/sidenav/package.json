@@ -54,5 +54,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "side-navigation"
+	"spectrum": [{
+		"componentName": "side-navigation",
+		"guidelinesLink": "https://spectrum.adobe.com/page/side-navigation",
+		"rootClass": "spectrum-SideNav"
+	}]
 }

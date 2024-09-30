@@ -62,5 +62,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "combo-box"
+	"spectrum": [{
+		"componentName": "combo-box",
+		"guidelinesLink": "https://spectrum.adobe.com/page/combo-box",
+		"rootClass": "spectrum-Combobox"
+	}]
 }

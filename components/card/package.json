@@ -79,5 +79,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "cards"
+	"spectrum": [{
+		"componentName": "cards",
+		"guidelinesLink": "https://spectrum.adobe.com/page/cards",
+		"rootClass": "spectrum-Card"
+	}]
 }

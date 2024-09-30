@@ -60,5 +60,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "number-field-beta"
+	"spectrum": [{
+		"componentName": "number-field-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/number-field-beta",
+		"rootClass": "spectrum-Stepper"
+	}]
 }

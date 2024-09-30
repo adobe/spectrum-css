@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "slider"
+	"spectrum": [{
+		"componentName": "slider",
+		"guidelinesLink": "https://spectrum.adobe.com/page/slider",
+		"rootClass": "spectrum-Slider"
+	}]
 }

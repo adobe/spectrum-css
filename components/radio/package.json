@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "radio-group"
+	"spectrum": [{
+		"componentName": "radio-group",
+		"guidelinesLink": "https://spectrum.adobe.com/page/radio-group",
+		"rootClass": "spectrum-Radio"
+	}]
 }

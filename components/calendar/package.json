@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "calendar-beta"
+	"spectrum": [{
+		"componentName": "calendar-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/calendar-beta",
+		"rootClass": "spectrum-Calendar"
+	}]
 }

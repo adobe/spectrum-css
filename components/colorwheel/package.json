@@ -61,5 +61,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "color-wheel"
+	"spectrum": [{
+		"componentName": "color-wheel",
+		"guidelinesLink": "https://spectrum.adobe.com/page/color-wheel",
+		"rootClass": "spectrum-ColorWheel"
+	}]
 }

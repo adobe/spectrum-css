@@ -49,5 +49,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentBetaName": "illustrated-message-beta"
+	"spectrum": [{
+		"componentName": "illustrated-message-beta",
+		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/illustrated-message-beta",
+		"rootClass": "spectrum-IllustratedMessage"
+	}]
 }

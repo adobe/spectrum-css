@@ -47,5 +47,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"componentGuidelinesName": "iconography"
+	"spectrum": [{
+		"componentName": "iconography",
+		"guidelinesLink": "https://spectrum.adobe.com/page/iconography",
+		"rootClass": "spectrum-Icon"
+	}]
 }
