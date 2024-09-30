@@ -110,7 +110,7 @@ Positive.parameters = {
 };
 
 /**
- * They must include text to communicate a message. Write the text as concisely as possible while still being clear about what has happened or is happening.
+ * Toasts must include text to communicate a message. Write the text as concisely as possible while still being clear about what has happened or is happening.
  * 
  * Writing for toasts depends on the nature of the message, whether it’s communicating confirmation, information, or an error. For all kinds of toasts, keep the text to fewer than 2 lines in English, since it will become longer when localized. View the [toast content standards](https://spectrum.adobe.com/page/toast/#Content-standards) for writing guidelines.
 */
