@@ -98,17 +98,6 @@
 		cursor: default;
 		pointer-events: none;
 	}
-
-	/* When the entire component is hovered, show all solid icons */
-	&:hover {
-		.spectrum-Rating-starActive {
-			display: block;
-		}
-
-		.spectrum-Rating-starInactive {
-			display: none;
-		}
-	}
 }
 
 .spectrum-Rating-input {
@@ -166,6 +155,16 @@
 
 		.spectrum-Rating-starInactive {
 			display: block;
+		}
+	}
+
+	&.is-hovered {
+		.spectrum-Rating-starActive {
+			display: block;
+		}
+
+		.spectrum-Rating-starInactive {
+			display: none;
 		}
 	}
 }
