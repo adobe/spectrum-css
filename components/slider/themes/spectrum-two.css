@@ -73,7 +73,7 @@
 			--spectrum-slider-font-size: var(--spectrum-font-size-75);
 			--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-small);
 			--spectrum-slider-control-height: var(--spectrum-component-height-75);
-			--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
+			--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
 			--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-small);
 			--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 			--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-small);
@@ -85,7 +85,7 @@
 			--spectrum-slider-font-size: var(--spectrum-font-size-75);
 			--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-medium);
 			--spectrum-slider-control-height: var(--spectrum-component-height-100);
-			--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
+			--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-500);
 			--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-medium);
 			--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-75);
 			--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-medium);
@@ -96,7 +96,7 @@
 			--spectrum-slider-font-size: var(--spectrum-font-size-100);
 			--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-large);
 			--spectrum-slider-control-height: var(--spectrum-component-height-200);
-			--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
+			--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
 			--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-large);
 			--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-100);
 			--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-large);
@@ -110,7 +110,7 @@
 			--spectrum-slider-font-size: var(--spectrum-font-size-200);
 			--spectrum-slider-handle-size: var(--spectrum-slider-handle-size-extra-large);
 			--spectrum-slider-control-height: var(--spectrum-component-height-300);
-			--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
+			--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-500) * 4);
 			--spectrum-slider-handle-border-width-down: var(--spectrum-slider-handle-border-width-down-extra-large);
 			--spectrum-slider-label-top-to-text: var(--spectrum-component-top-to-text-200);
 			--spectrum-slider-control-to-field-label: var(--spectrum-slider-control-to-field-label-extra-large);

@@ -1,0 +1,52 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--express {
+	--spectrum-button-animation-duration: var(--system-button-animation-duration);
+	--spectrum-button-border-radius: var(--system-button-size-xl-border-radius);
+	--spectrum-button-border-width: var(--system-button-border-width);
+	--spectrum-button-line-height: var(--system-button-line-height);
+	--spectrum-button-focus-ring-gap: var(--system-button-focus-ring-gap);
+	--spectrum-button-focus-ring-thickness: var(--system-button-focus-ring-thickness);
+	--spectrum-button-focus-indicator-color: var(--system-button-static-black-secondary-outline-focus-indicator-color);
+	--spectrum-button-intended-icon-size: var(--system-button-size-xl-intended-icon-size);
+	--spectrum-button-background-color-default: var(--system-button-static-black-secondary-outline-background-color-default);
+	--spectrum-button-background-color-hover: var(--system-button-static-black-secondary-outline-background-color-hover);
+	--spectrum-button-background-color-down: var(--system-button-static-black-secondary-outline-background-color-down);
+	--spectrum-button-background-color-focus: var(--system-button-static-black-secondary-outline-background-color-focus);
+	--spectrum-button-border-color-default: var(--system-button-static-black-secondary-outline-border-color-default);
+	--spectrum-button-border-color-hover: var(--system-button-static-black-secondary-outline-border-color-hover);
+	--spectrum-button-border-color-down: var(--system-button-static-black-secondary-outline-border-color-down);
+	--spectrum-button-border-color-focus: var(--system-button-static-black-secondary-outline-border-color-focus);
+	--spectrum-button-content-color-default: var(--system-button-static-black-secondary-outline-content-color-default);
+	--spectrum-button-content-color-hover: var(--system-button-static-black-secondary-outline-content-color-hover);
+	--spectrum-button-content-color-down: var(--system-button-static-black-secondary-outline-content-color-down);
+	--spectrum-button-content-color-focus: var(--system-button-static-black-secondary-outline-content-color-focus);
+	--spectrum-button-background-color-disabled: var(--system-button-static-black-secondary-outline-background-color-disabled);
+	--spectrum-button-border-color-disabled: var(--system-button-static-black-secondary-outline-border-color-disabled);
+	--spectrum-button-content-color-disabled: var(--system-button-static-black-secondary-outline-content-color-disabled);
+	--spectrum-button-static-white-content-color-default: var(--system-button-static-white-selected-static-white-content-color-default);
+	--spectrum-button-static-white-content-color-hover: var(--system-button-static-white-selected-static-white-content-color-hover);
+	--spectrum-button-static-white-content-color-down: var(--system-button-static-white-selected-static-white-content-color-down);
+	--spectrum-button-static-white-content-color-focus: var(--system-button-static-white-selected-static-white-content-color-focus);
+	--spectrum-button-min-width: var(--system-button-size-xl-min-width);
+	--spectrum-button-height: var(--system-button-size-xl-height);
+	--spectrum-button-font-size: var(--system-button-size-xl-font-size);
+	--spectrum-button-edge-to-visual: var(--system-button-size-xl-edge-to-visual);
+	--spectrum-button-edge-to-visual-only: var(--system-button-size-xl-edge-to-visual-only);
+	--spectrum-button-edge-to-text: var(--system-button-size-xl-edge-to-text);
+	--spectrum-button-padding-label-to-icon: var(--system-button-size-xl-padding-label-to-icon);
+	--spectrum-button-top-to-text: var(--system-button-size-xl-top-to-text);
+	--spectrum-button-bottom-to-text: var(--system-button-size-xl-bottom-to-text);
+	--spectrum-button-top-to-icon: var(--system-button-size-xl-top-to-icon);
+}
