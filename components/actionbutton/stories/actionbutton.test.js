@@ -7,7 +7,6 @@ export const ActionButtons = (args, context) => {
 		${Template(args, context)}
 		${Template({
 			...args,
-			iconName: undefined,
 		}, context)}
 		${Template({
 			...args,
@@ -15,9 +14,13 @@ export const ActionButtons = (args, context) => {
 		}, context)}
 		${Template({
 			...args,
-			hasPopup: "menu",
-			label: "Has pop-up",
+			hasPopup: "true",
+			hideLabel: true,
+		}, context)}
+		${Template({
+			...args,
 			iconName: undefined,
+			hasPopup: "true",
 		}, context)}
 	`;
 };
@@ -45,6 +48,11 @@ export const ActionButtonGroup = Variants({
 		},
 		{
 			testHeading: "Quiet",
+			isQuiet: true,
+		},
+		{
+			testHeading: "Quiet + emphasized",
+			isEmphasized: true,
 			isQuiet: true,
 		},
 		{

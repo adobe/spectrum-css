@@ -1,4 +1,4 @@
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -128,3 +128,79 @@ export const Template = ({
 		</button>
 	`;
 };
+
+export const ActionButtonsWithIconOptions = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+		${Template({
+			...args,
+			iconName: undefined,
+		}, context )}
+		${Template({
+			...args,
+		}, context )}
+		${Template({
+			...args,
+			hideLabel: true,
+		}, context )}
+	${Template({
+			...args,
+			hideLabel: true,
+			hasPopup: "true",
+		}, context )}
+	${Template({
+			...args,
+			iconName: undefined,
+			hasPopup: "true",
+		}, context )}`
+});
+
+export const IconOnlyOption = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+	${Template({
+			...args,
+			hideLabel: true,
+			hasPopup: "true",
+		}, context )}
+	${Template({
+			...args,
+			hideLabel: true,
+			isQuiet: true,
+			hasPopup: "true",
+		}, context )}`
+});
+
+export const TreatmentTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`${[
+		{ isSelected: false, isDisabled: false, heading: "Default" }, 
+		{ isSelected: true, isDisabled: false, heading: "Selected" },
+		{ isSelected: false, isDisabled: true, heading: "Disabled" },
+		{ isSelected: true, isDisabled: true, heading: "Selected + disabled" }
+	].map(({ isSelected, isDisabled, heading }) => Container({ 
+		withBorder: false,
+		heading: heading,
+		content: ActionButtonsWithIconOptions({
+			...args,
+			isSelected,
+			isDisabled,
+		})
+	}, context ))}`,
+});
