@@ -1,5 +1,21 @@
 # Change Log
 
+## 3.0.0-s2-foundations.14
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`57709c0`](https://github.com/adobe/spectrum-css/commit/57709c09f7cfddb67125fa96691ae869ff8840ca) Thanks [@pfulton](https://github.com/pfulton)! - Pull in the corner radii updates for S2
+
+### Patch Changes
+
+- Updated dependencies [[`57709c0`](https://github.com/adobe/spectrum-css/commit/57709c09f7cfddb67125fa96691ae869ff8840ca)]:
+  - @spectrum-css/buttongroup@8.0.0-s2-foundations.14
+  - @spectrum-css/underlay@5.0.0-s2-foundations.14
+  - @spectrum-css/divider@4.0.0-s2-foundations.14
+  - @spectrum-css/modal@6.0.0-s2-foundations.15
+  - @spectrum-css/icon@8.0.0-s2-foundations.16
+  - @spectrum-css/tokens@15.0.0-s2-foundations.22
+
 ## 3.0.0-s2-foundations.13
 
 ### Major Changes
