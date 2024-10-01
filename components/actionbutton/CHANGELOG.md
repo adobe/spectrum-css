@@ -1,5 +1,17 @@
 # Change Log
 
+## 7.0.0-s2-foundations.20
+
+### Major Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`57709c0`](https://github.com/adobe/spectrum-css/commit/57709c09f7cfddb67125fa96691ae869ff8840ca) Thanks [@pfulton](https://github.com/pfulton)! - Pull in the corner radii updates for S2
+
+### Patch Changes
+
+- Updated dependencies [[`57709c0`](https://github.com/adobe/spectrum-css/commit/57709c09f7cfddb67125fa96691ae869ff8840ca)]:
+  - @spectrum-css/icon@8.0.0-s2-foundations.16
+  - @spectrum-css/tokens@15.0.0-s2-foundations.22
+
 ## 7.0.0-s2-foundations.19
 
 ### Major Changes
