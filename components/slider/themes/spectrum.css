@@ -23,5 +23,22 @@
 		--spectrum-slider-ticks-handle-background-color: var(--spectrum-gray-100);
 		--spectrum-slider-handle-disabled-background-color: var(--spectrum-gray-100);
 		--spectrum-slider-tick-mark-color: var(--spectrum-gray-300);
+
+		&.spectrum-Slider--sizeS {
+			--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
+		}
+
+		&,
+		&.spectrum-Slider--sizeM {
+			--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
+		}
+
+		&.spectrum-Slider--sizeL {
+			--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
+		}
+
+		&.spectrum-Slider--sizeXL {
+			--spectrum-slider-handle-border-radius: calc(var(--spectrum-corner-radius-200) * 4);
+		}
 	}
 }
