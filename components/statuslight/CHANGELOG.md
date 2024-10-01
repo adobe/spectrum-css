@@ -1030,6 +1030,12 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 
 - implement t-shirt sizing for Status Light, closes [#686](https://github.com/adobe/spectrum-css/issues/686) ([0a20b52](https://github.com/adobe/spectrum-css/commit/0a20b52))
 
+### Migration Guide
+
+#### T-shirt sizing
+
+Status Light now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-StatusLight--size*` class.
+
 <a name="3.0.0-beta.4"></a>
 
 ## 3.0.0-beta.4
