@@ -82,7 +82,6 @@
 "@spectrum-css/typography": major
 "@spectrum-css/underlay": major
 "@spectrum-css/well": major
-"@spectrum-css/ui-icons": major
 ---
 
 S2 colors and grays foundation mapping

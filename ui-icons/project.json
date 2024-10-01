@@ -22,7 +22,7 @@
 				}
 			],
 			"options": {
-				"commands": ["cross-env NODE_OPTIONS=\"--no-warnings\" node ./index.js"],
+				"commands": ["node --no-warnings ./index.js"],
 				"cwd": "{projectRoot}"
 			},
 			"outputs": [

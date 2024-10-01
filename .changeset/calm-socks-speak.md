@@ -79,7 +79,6 @@
 "@spectrum-css/tray": minor
 "@spectrum-css/well": minor
 "@spectrum-css/tag": minor
-"@spectrum-css/ui-icons": minor
 "@spectrum-css/tokens": minor
 ---
 
