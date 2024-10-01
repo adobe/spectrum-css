@@ -80,7 +80,6 @@
 "@spectrum-css/tray": major
 "@spectrum-css/well": major
 "@spectrum-css/tag": major
-"@spectrum-css/ui-icons": major
 "@spectrum-css/tokens": major
 ---
 
