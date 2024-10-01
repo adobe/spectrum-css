@@ -49,9 +49,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "checkbox",
-		"guidelinesLink": "https://spectrum.adobe.com/page/checkbox",
-		"rootClass": "spectrum-Checkbox"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/checkbox",
+			"rootClass": "spectrum-Checkbox"
+		}
+	]
 }

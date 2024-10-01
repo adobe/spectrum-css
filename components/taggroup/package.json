@@ -49,9 +49,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "tag-group-beta",
-		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/tag-group-beta",
-		"rootClass": "spectrum-TagGroup"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/tag-group-beta",
+			"rootClass": "spectrum-TagGroup"
+		}
+	]
 }

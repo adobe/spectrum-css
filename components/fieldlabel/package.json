@@ -49,13 +49,13 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "field-label",
-		"guidelinesLink": "https://spectrum.adobe.com/page/field-label",
-		"rootClass": "spectrum-FieldLabel"
-	},{
-		"componentName": "",
-		"guidelinesLink": "",
-		"rootClass": "spectrum-Form"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/field-label",
+			"rootClass": "spectrum-FieldLabel"
+		},
+		{
+			"rootClass": "spectrum-Form"
+		}
+	]
 }

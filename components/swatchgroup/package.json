@@ -49,9 +49,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "swatch-group",
-		"guidelinesLink": "https://spectrum.adobe.com/page/swatch-group",
-		"rootClass": "spectrum-SwatchGroup"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/swatch-group",
+			"rootClass": "spectrum-SwatchGroup"
+		}
+	]
 }

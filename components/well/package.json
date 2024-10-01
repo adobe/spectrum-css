@@ -47,9 +47,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "wells-beta",
-		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/wells-beta",
-		"rootClass": "spectrum-Well"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/wells-beta",
+			"rootClass": "spectrum-Well"
+		}
+	]
 }

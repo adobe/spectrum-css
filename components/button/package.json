@@ -60,9 +60,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "button",
-		"guidelinesLink": "https://spectrum.adobe.com/page/button",
-		"rootClass": "spectrum-Button"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/button",
+			"rootClass": "spectrum-Button"
+		}
+	]
 }

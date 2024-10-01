@@ -49,9 +49,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "accordion-beta",
-		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/accordion-beta",
-		"rootClass": "spectrum-Accordion"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/accordion-beta",
+			"rootClass": "spectrum-Accordion"
+		}
+	]
 }

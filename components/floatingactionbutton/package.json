@@ -48,9 +48,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "floating-action-button-beta",
-		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/floating-action-button-beta",
-		"rootClass": "spectrum-FloatingActionButton"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/floating-action-button-beta",
+			"rootClass": "spectrum-FloatingActionButton"
+		}
+	]
 }

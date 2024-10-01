@@ -47,9 +47,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "switch",
-		"guidelinesLink": "https://spectrum.adobe.com/page/switch",
-		"rootClass": "spectrum-Switch"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/switch",
+			"rootClass": "spectrum-Switch"
+		}
+	]
 }

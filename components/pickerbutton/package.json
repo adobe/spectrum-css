@@ -53,9 +53,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "",
-		"guidelinesLink": "",
-		"rootClass": "spectrum-PickerButton"
-	}]
+	"spectrum": [
+		{
+			"rootClass": "spectrum-PickerButton"
+		}
+	]
 }

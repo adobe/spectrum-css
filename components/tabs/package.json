@@ -58,9 +58,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "tabs",
-		"guidelinesLink": "https://spectrum.adobe.com/page/tabs",
-		"rootClass": "spectrum-Tabs"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/tabs",
+			"rootClass": "spectrum-Tabs"
+		}
+	]
 }

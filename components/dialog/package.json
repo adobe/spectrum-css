@@ -67,9 +67,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "standard-dialog-beta",
-		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/standard-dialog-beta",
-		"rootClass": "spectrum-Dialog"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/standard-dialog-beta",
+			"rootClass": "spectrum-Dialog"
+		}
+	]
 }

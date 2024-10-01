@@ -60,9 +60,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "alert-banner",
-		"guidelinesLink": "https://spectrum.adobe.com/page/alert-banner",
-		"rootClass": "spectrum-AlertBanner"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/alert-banner",
+			"rootClass": "spectrum-AlertBanner"
+		}
+	]
 }

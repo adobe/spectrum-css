@@ -47,9 +47,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "typography",
-		"guidelinesLink": "https://spectrum.adobe.com/page/typography",
-		"rootClass": "spectrum-Typography"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/typography",
+			"rootClass": "spectrum-Typography"
+		}
+	]
 }
