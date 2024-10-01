@@ -87,7 +87,7 @@ export const Sizing = (args, context) => Sizes({
 }, context);
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
-	chromatic: { disabledSnapshot: true },
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -103,7 +103,7 @@ Sizing.parameters = {
 export const SemanticColors = SemanticGroup.bind({});
 SemanticColors.tags = ["!dev"];
 SemanticColors.parameters = {
-	chromatic: { disabledSnapshot: true },
+	chromatic: { disableSnapshot: true },
 };
 SemanticColors.storyName = "Semantic colors";
 
@@ -113,7 +113,7 @@ SemanticColors.storyName = "Semantic colors";
 export const NonSemanticColors = NonsemanticGroup.bind({});
 NonSemanticColors.tags = ["!dev"];
 NonSemanticColors.parameters = {
-	chromatic: { disabledSnapshot: true },
+	chromatic: { disableSnapshot: true },
 };
 NonSemanticColors.storyName = "Non-semantic colors";
 
@@ -123,7 +123,7 @@ Disabled.args = {
 };
 Disabled.tags = ["!dev"];
 Disabled.parameters = {
-	chromatic: { disabledSnapshot: true },
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
