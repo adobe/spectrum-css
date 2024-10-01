@@ -81,7 +81,6 @@
 "@spectrum-css/well": patch
 "@spectrum-css/tag": patch
 "@spectrum-css/preview": patch
-"@spectrum-css/ui-icons": patch
 "@spectrum-css/tokens": patch
 ---
 
