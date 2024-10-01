@@ -1,0 +1,26 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--express {
+	--spectrum-clear-button-background-color: var(--system-clear-button-disabled-background-color);
+	--spectrum-clear-button-background-color-hover: var(--system-clear-button-over-background-background-color-hover);
+	--spectrum-clear-button-background-color-down: var(--system-clear-button-over-background-background-color-down);
+	--spectrum-clear-button-background-color-key-focus: var(--system-clear-button-over-background-background-color-key-focus);
+	--spectrum-clear-button-height: var(--system-clear-button-size-xl-height);
+	--spectrum-clear-button-width: var(--system-clear-button-size-xl-width);
+	--spectrum-clear-button-padding: var(--system-clear-button-padding);
+	--spectrum-clear-button-icon-color: var(--system-clear-button-disabled-icon-color);
+	--spectrum-clear-button-icon-color-hover: var(--system-clear-button-disabled-icon-color-hover);
+	--spectrum-clear-button-icon-color-down: var(--system-clear-button-disabled-icon-color-down);
+	--spectrum-clear-button-icon-color-key-focus: var(--system-clear-button-over-background-icon-color-key-focus);
+}

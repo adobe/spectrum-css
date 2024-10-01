@@ -22,7 +22,7 @@ export const Template = ({
 	customStyles = {},
 	customClasses = [],
 	id = getRandomId("badge"),
-} = {}) => {
+} = {}, context = {}) => {
 	return html`
 		<div
 			class=${classMap({
@@ -46,7 +46,7 @@ export const Template = ({
 							: []),
 						`${rootClass}-icon`,
 					],
-				}),
+				}, context),
 			)}
 			${when(label, () => html`<div class="${rootClass}-label">${label}</div>`)}
 		</div>
