@@ -81,7 +81,6 @@
 "@spectrum-css/tag": major
 "@spectrum-css/preview": major
 "@spectrum-css/generator": major
-"@spectrum-css/ui-icons": major
 "@spectrum-css/tokens": major
 ---
 

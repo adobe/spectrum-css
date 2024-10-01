@@ -81,7 +81,6 @@
 "@spectrum-css/well": minor
 "@spectrum-css/tag": minor
 "@spectrum-css/preview": minor
-"@spectrum-css/ui-icons": minor
 "@spectrum-css/tokens": minor
 ---
 
