@@ -71,7 +71,7 @@ Sizing.parameters = {
 };
 
 /**
- * Meter variants can be used to represent semantic values by switching variants as the value changes, from positive, to notice, and then to negative. This kind of variant switching should be handled appropriately within the context of your product so that you’re setting accurate expectations for your users about the semantic meaning.
+ * Meter variants can be used to represent semantic values by switching variants as the value changes, from positive, to notice, and then to negative. This kind of variant switching should be handled appropriately within the context of your product so that accurate expectations are set for users about the semantic meaning.
  * 
  * By default, the meter has a informative, blue fill to show the value. This can be used to represent a neutral or non-semantic value. The positive variant has a green fill, representing a positive semantic value. The notice variant has an orange fill, and can be used to warn users about a situation that may need to be addressed soon. The negative variant has a red fill, and can be used to warn users about a critical situation that needs their urgent attention.
 */

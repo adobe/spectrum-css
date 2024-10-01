@@ -86,6 +86,7 @@ export default {
 		label: "Loading",
 		labelPosition: "top",
 		value: 0,
+		customWidth: 192,
 		isIndeterminate: false,
 		showValueLabel: true,
 	},
@@ -143,7 +144,7 @@ CustomWidth.parameters = {
 };
 
 /**
- * The example below shows a progress bar without its label. Progress bars typically have a label, but in rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined.
+ * The example below shows a progress bar without its label.
  */
 export const WithoutLabel = Template.bind({});
 WithoutLabel.storyName = "Without label";
@@ -158,7 +159,7 @@ WithoutLabel.parameters = {
 };
 
 /**
- * The example below shows a progress bar without its value label. This value label works in conjunction with the label, and should not be displayed if the label itself is not displayed.
+ * The example below shows a progress bar without its value label.
  */
 export const WithoutValue = Template.bind({});
 WithoutValue.storyName = "Without value";
@@ -168,20 +169,18 @@ WithoutValue.args = {
 };
 WithoutValue.tags = ["!dev"];
 WithoutValue.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
+	chromatic: { disableSnapshot: true },
 };
 
-export const StaticWhiteDocs = Template.bind({});
-StaticWhiteDocs.storyName = "Static white";
-StaticWhiteDocs.args = {
+export const StaticWhite = ProgressBarGroup.bind({});
+StaticWhite.storyName = "Static white";
+StaticWhite.tags = ["!dev"];
+StaticWhite.args = {
 	staticColor: "white",
 	label: "Loading your fonts, images, and icons",
 	value: 50,
 };
-StaticWhiteDocs.tags = ["!dev"];
-StaticWhiteDocs.parameters = {
+StaticWhite.parameters = {
 	chromatic: {
 		modes: disableDefaultModes
 	},
@@ -194,19 +193,6 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
-	},
-};
-
-export const StaticWhite = ProgressBarGroup.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
-StaticWhite.args = {
-	staticColor: "white",
-	label: "Loading your fonts, images, and icons",
-	value: 50,
-};
-StaticWhite.parameters = {
-	chromatic: {
 		modes: disableDefaultModes
 	},
 };

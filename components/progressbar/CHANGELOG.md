@@ -294,7 +294,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### spectrum-Meter class
 
-Meter now uses the class `spectrum-Meter` on the parent `div`
+Meter now uses the class `spectrum-Meter` on the parent `div`.
 
 ### 🔙 Reverts
 
