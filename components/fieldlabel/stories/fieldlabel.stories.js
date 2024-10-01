@@ -94,6 +94,8 @@ RightAligned.storyName = "Right-aligned";
 
 /**
  * Field labels for required inputs can be marked with an asterisk at the end of the label. Optional inputs would then be understood to not have the asterisk. If using the asterisk icon, do not leave any space between the label text and the start of the `<svg>` element in the markup. Extra space should not be added in addition to the inline margin.
+ * 
+ * The field label for a required field can display either the text “(required)”, or an asterisk.
  */
 export const Required = Template.bind({});
 Required.args = {

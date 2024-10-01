@@ -15,7 +15,6 @@ export const FieldLabelGroup = Variants({
 		},
 		{
 			testHeading: "Wrapped",
-			withStates: false,
 			label: "Label example with longer text that will wrap to the next line. Sometimes there is an asterisk that marks it as required.",
 			customStyles: { width: "200px" },
 		},
@@ -23,6 +22,7 @@ export const FieldLabelGroup = Variants({
 	stateData: [
 		{
 			testHeading: "Disabled",
+			ignore: ["Wrapped"],
 			isDisabled: true,
 			customStyles: { width: "200px" },
 		},

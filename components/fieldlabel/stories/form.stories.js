@@ -42,6 +42,66 @@ export default {
 	args: {
 		rootClass: "spectrum-Form",
 		labelPosition: "top",
+		items: [
+			{
+				label: "Company title",
+				id: "form-example-company",
+				content: [
+					(passthroughs, context) => TextField({
+						...passthroughs,
+						multiline: true,
+						name: "field",
+					}, context),
+				],
+			}, {
+				label: "Email address",
+				id: "form-example-email",
+				content: [
+					(passthroughs, context) => TextField({
+						...passthroughs,
+						type: "email",
+						name: "email",
+					}, context),
+				],
+			}, {
+				label: "Country",
+				id: "form-example-country",
+				content: [
+					(passthroughs, context) => Picker({
+						...passthroughs,
+						placeholder: "Select a country",
+						name: "country",
+					}, context),
+				],
+			}, {
+				label: "Interest",
+				id: "form-example-interests",
+				content: [
+					(passthroughs, context) => Fieldgroup({
+						layout: "horizontal",
+						items: [
+							Checkbox({
+								...passthroughs,
+								label: "Kittens",
+								customClasses: ["spectrum-FieldGroup-item"],
+							}, context),
+							Checkbox({
+								...passthroughs,
+								label: "Puppies",
+								customClasses: ["spectrum-FieldGroup-item"],
+							}, context),]
+					}),
+				],
+			},{
+				label: "Age",
+				id: "form-example-amount",
+				content: [
+					(passthroughs, context) => Stepper({
+						...passthroughs,
+					}, context),
+				]
+			}
+		],
 	},
 	parameters: {
 		packageJson: pkgJson,
@@ -52,68 +112,7 @@ export default {
  * A stacked layout with the labels above the form fields. The class `.spectrum-Form--labelPosition` is applied to the form itself. You do not need to apply a specific class to the field label because `.spectrum-FieldLabel--left` is applied to each to each [field label](/docs/components-field-label--docs) by default.
  */
 export const Default = FormGroup.bind({});
-Default.args = {
-	items: [
-		{
-			label: "Company title",
-			id: "form-example-company",
-			content: [
-				(passthroughs, context) => TextField({
-					...passthroughs,
-					multiline: true,
-					name: "field",
-				}, context),
-			],
-		}, {
-			label: "Email address",
-			id: "form-example-email",
-			content: [
-				(passthroughs, context) => TextField({
-					...passthroughs,
-					type: "email",
-					name: "email",
-				}, context),
-			],
-		}, {
-			label: "Country",
-			id: "form-example-country",
-			content: [
-				(passthroughs, context) => Picker({
-					...passthroughs,
-					placeholder: "Select a country",
-					name: "country",
-				}, context),
-			],
-		}, {
-			label: "Interest",
-			id: "form-example-interests",
-			content: [
-				(passthroughs, context) => Fieldgroup({
-					layout: "horizontal",
-					items: [
-						Checkbox({
-							...passthroughs,
-							label: "Kittens",
-							customClasses: ["spectrum-FieldGroup-item"],
-						}, context),
-						Checkbox({
-							...passthroughs,
-							label: "Puppies",
-							customClasses: ["spectrum-FieldGroup-item"],
-						}, context),]
-				}),
-			],
-		},{
-			label: "Age",
-			id: "form-example-amount",
-			content: [
-				(passthroughs, context) => Stepper({
-					...passthroughs,
-				}, context),
-			]
-		}
-	],
-};
+Default.args = {};
 
 /**
  *  A two column layout with left-aligned label text.
