@@ -61,9 +61,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "drop-zone-beta",
-		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/drop-zone-beta",
-		"rootClass": "spectrum-DropZone"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/drop-zone-beta",
+			"rootClass": "spectrum-DropZone"
+		}
+	]
 }

@@ -2,11 +2,11 @@ import { useOf } from '@storybook/blocks';
 import { ResetWrapper } from "@storybook/components";
 import { styled } from "@storybook/theming";
 import React, { useEffect, useState } from "react";
-import { Code } from "./Typography.jsx";
+import AdobeSVG from "../assets/images/adobe_logo.svg?raw";
+import GitHubSVG from "../assets/images/github_logo.svg?raw";
+import NpmSVG from "../assets/images/npm_logo.svg?raw";
+import { Body, Code, Heading } from "./Typography.jsx";
 import { fetchToken } from "./utilities.js";
-import { AdobeSVG } from "../assets/AdobeSVG.jsx";
-import { GitHubSVG } from "../assets/GitHubSVG.jsx";
-import { NpmSVG } from "../assets/NpmSVG.jsx";
 
 export const DList = styled.dl`
 	display: grid;
@@ -105,7 +105,7 @@ export const ResourceSection = styled.section`
 	flex-flow: row wrap;
 	align-items: center;
 `;
-	
+
 export const ResourceLink = styled.a`
 	position: relative;
 	display: inline-flex;
@@ -128,7 +128,7 @@ export const ResourceLink = styled.a`
 `;
 
 export const ResourceIconWrapper = styled.div`
-	background-color: ${props => props.backgroundColor ?? "rgba(248, 248, 248)"};
+	background-color: rgba(248, 248, 248);
 	padding: 12px;
 	display: flex;
 	inline-size: 40px;
@@ -137,18 +137,6 @@ export const ResourceIconWrapper = styled.div`
 
 export const ResourceTextWrapper = styled.div`
 	margin-inline: 16px;
-
-	& > .spectrum-Heading {
-		font-weight: 700;
-		line-height: 1.3;
-	 	font-family: adobe-clean, "adobe-clean", "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
-	}
-
-	& > .spectrum-Body {
-		font-size: 14px;
-		line-height: 1.5;
-		font-family: adobe-clean, "adobe-clean", "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
-	}
 `;
 
 const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false, skipLink = false }) => {
@@ -318,119 +306,55 @@ function fetchNpmData(packageName, setnpmData, setIsLoading) {
 	}, [cache, setCache, packageName, setnpmData, setIsLoading]);
 }
 
-/**
- * Determines which logo SVG to use based on the resource link
- */
-const iconSvgs = (linkType) => {
-	let svgAsset;
-	let resourceWrapperProps;
-
-	switch(linkType) {
-		case "package": 
-			svgAsset = <NpmSVG />
-			resourceWrapperProps = "rgba(203, 56, 55, 0.1)";
-			break;
-			case "repository": 
-			svgAsset = <GitHubSVG />
-			resourceWrapperProps = "rgba(0, 0, 0, 0.1)"
-			break;
-		case "guidelines": 
-			svgAsset = <AdobeSVG />
-			break;
-		default: 
-			break;
+const fetchLogo = (brand) => {
+	switch(brand) {
+		case "npm":
+			return NpmSVG;
+		case "GitHub":
+			return GitHubSVG;
+		case "Adobe":
+			return AdobeSVG;
 	}
+
+	return;
+}
+
+export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
+	if (!href) return;
 
 	return (
-		<ResourceIconWrapper backgroundColor={resourceWrapperProps}>
-			{ svgAsset }
-		</ResourceIconWrapper>
-	)
+		<ResourceLink href={href} className="sb-unstyled" title={alt}>
+			<ResourceIconWrapper dangerouslySetInnerHTML={{ __html: fetchLogo(logo) }} />
+			<ResourceTextWrapper>
+				{heading ? <Heading size="xs">{heading}</Heading> : ""}
+				{alt ? <Body size="s">{alt}</Body> : ""}
+			</ResourceTextWrapper>
+		</ResourceLink>
+	);
 };
 
-/**
- * Converts the linkType to the subtitle text
- */
-const convertLinkTypeText = (linkType) => {
-	switch(linkType) {
-		case "package": 
-			linkType = "npm"
-			break;
-		case "repository": 
-			linkType = "GitHub"
-			break;
-		case "guidelines": 
-			linkType = "Spectrum website"
-			break;
-		default: 
-			break;
-	}
-	return linkType;
-};
+export const ResourceListDetails = ({ packageName, spectrumData = [] }) => {
+	if (!packageName) return;
 
-export const ResourceLinkContent = ({data, linkType=["package", "repository", "guidelines"]}) => {
-	const packageJson = data;
-
-	// componentGuidelinesName
-	let packageName = "";
-	let packageLink = "";
-	
-	if (linkType === "package") {
-		// NPM package name and link 
-		packageName = packageJson?.name ?? undefined;
-		packageLink = (packageName && typeof packageName !== "undefined") ? `https://npmjs.com/${packageName}` : false;
-	}
-	
-	else if (linkType === "repository") {
-		// repo name and link 
-		packageName = packageJson?.name ? packageJson?.name.split('/').pop() : undefined;
-		packageLink = (packageName && typeof packageName !== "undefined") ? `https://github.com/adobe/spectrum-css/tree/main/components/${packageName}` : false;
-	}
-
-	else if (linkType === "guidelines") {
-		// checks if the any nested component name is included in the page URL
-		for(let i = 0; i < packageJson?.spectrum?.length; i++) {
-			if (window.location.href.includes(packageJson?.spectrum[i]?.componentName)) {
-
-				// guidelines site name and link
-				packageName = packageJson?.spectrum[i]?.componentName ?? undefined;
-				packageLink = (packageName && typeof packageName !== "undefined") ? packageJson?.spectrum[i]?.guidelinesLink : false;
-				break;
-			} 
-			packageName = packageJson?.spectrum[i]?.componentName ?? undefined;
-			packageLink = (packageName && typeof packageName !== "undefined") ? packageJson?.spectrum[i]?.guidelinesLink : false;
+	let href;
+	// checks if the any nested component name is included in the page URL
+	for(let i = 0; i < spectrumData?.length; i++) {
+		if (
+			spectrumData[i]?.guidelines &&
+			(
+				window.location.href.includes(spectrumData[i]?.componentName) ||
+				window.location.href.includes(spectrumData[i]?.componentName.replace("-", ""))
+			)
+		) {
+			href = spectrumData[i]?.guidelines;
 		}
 	}
 
-	else {
-		console.warn(`Are you sure you mean "${linkType}"? Please use a valid link type instead: "package", "repository", "guidelines"`);
-	}
-
-	return (
-		<>
-			{packageLink ? <>
-					<ResourceLink href={packageLink} rel="noopener" className="sb-unstyled">
-						{iconSvgs(linkType)}
-						<ResourceTextWrapper>
-							<div className="spectrum-Heading spectrum-Heading--sizeXS">View {linkType}</div>
-							<div className="spectrum-Body spectrum-Body--sizeS">{convertLinkTypeText(linkType)}</div>
-						</ResourceTextWrapper>
-					</ResourceLink>
-				</>
-				: ""
-			}
-		</>
-	)
-};
-
-export const ResourceListDetails = ({data}) => {
-	const packageJson = data;
-
 	return (
 		<ResourceSection skipBorder={true} className="sb-unstyled">
-			<ResourceLinkContent className="doc-block-links" linkType="guidelines" data={packageJson}/>
-			<ResourceLinkContent className="doc-block-links" linkType="repository" data={packageJson}/>
-			<ResourceLinkContent className="doc-block-links" linkType="package" data={packageJson}/>
+			{href ? <ResourceLinkContent className="doc-block-resource-cards" heading="View guidelines" alt="Spectrum website" logo="Adobe" href={href}/> : ""}
+			<ResourceLinkContent className="doc-block-resource-cards" heading="View package" alt="npm" logo="npm" href={`https://npmjs.com/${packageName}`}/>
+			<ResourceLinkContent className="doc-block-resource-cards" heading="View repository" alt="GitHub" logo="GitHub" href={`https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split('/').pop()}`}/>
 		</ResourceSection>
 	)
 };
@@ -441,8 +365,8 @@ export const ResourceListDetails = ({data}) => {
  *
  * Displays a component status of "deprecated" if it is set in the story's
  * parameters.
- * 
- * Displays the list of relevant component links (to NPM, repo, guidelines, etc). 
+ *
+ * Displays the list of relevant component links (to NPM, repo, guidelines, etc).
  *
  * Usage of this doc block within MDX template(s):
  *  <ComponentDetails />
@@ -453,7 +377,14 @@ export const ComponentDetails = () => {
 	const isDeprecated = storyMeta?.csfFile?.meta?.parameters?.status?.type == "deprecated";
 	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
 
-	if (!packageJson?.name) return;
+	const packageName = packageJson?.name;
+
+	if (!packageName) return;
+
+	let spectrumData = packageJson?.spectrum;
+	if (typeof spectrumData === "string") {
+		spectrumData = [spectrumData];
+	}
 
 	const [isLoading, setIsLoading] = useState(true);
 	const [npmData, setnpmData] = useState({});
@@ -484,7 +415,7 @@ export const ComponentDetails = () => {
 							</>
 						}
 					</DList>
-					<ResourceListDetails data={packageJson} />
+					<ResourceListDetails packageName={packageName} spectrumData={spectrumData}/>
 				</>
 			: ""}
 		</ResetWrapper>

@@ -55,9 +55,10 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"spectrum": [{
-		"componentName": "date-picker-beta",
-		"guidelinesLink": "https://spectrum-contributions.corp.adobe.com/page/date-picker-beta",
-		"rootClass": "spectrum-DatePicker"
-	}]
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/date-picker-beta",
+			"rootClass": "spectrum-DatePicker"
+		}
+	]
 }
