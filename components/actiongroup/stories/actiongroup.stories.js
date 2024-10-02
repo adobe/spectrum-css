@@ -90,6 +90,15 @@ Default.args = {};
 
 // ********* DOCS ONLY ********* //
 
+/**
+ * The emphasized action group has a blue background for its selected state in order to provide a visual prominence that meets the accessible color contrast ratio. This is optimal for when the selection should call attention, such as within a tool bar.
+*/
+export const Emphasized = ActionGroups.bind({});
+Emphasized.tags = ["!dev"];
+Emphasized.args = {
+	areEmphasized: true
+};
+
 export const Horizontal = TreatmentTemplate.bind({});
 Horizontal.tags = ["!dev"];
 Horizontal.args = {};
