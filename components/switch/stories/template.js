@@ -56,6 +56,7 @@ export const DocsSwitchGroup = (args, context) => Container({
 	content: html`
 	${Container({
 		heading: "Not selected",
+		withBorder: false,
 		content: html`
 			${Template({
 				...args,
@@ -66,6 +67,7 @@ export const DocsSwitchGroup = (args, context) => Container({
 	})}
 	${Container({
 		heading: "Selected",
+		withBorder: false,
 		content: html`
 			${Template({
 				...args,

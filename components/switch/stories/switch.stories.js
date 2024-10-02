@@ -15,7 +15,10 @@ export default {
 		size: size(["s", "m", "l", "xl"]),
 		isEmphasized,
 		isDisabled,
-		isChecked,
+		isChecked: {
+			...isChecked,
+			name: "Selected",
+		},
 		label: {
 			name: "Label",
 			type: { name: "string" },
@@ -107,6 +110,7 @@ WithLongerLabel.parameters = {
 
 export const Sizing = (args, context) => Sizes({
 	Template,
+	withHeading: false,
 	...args,
 }, context);
 Sizing.tags = ["!dev"];
@@ -115,9 +119,10 @@ Sizing.parameters = {
 };
 
 /**
- * Standalone switches should be used in situations where the context is clear without an associated text label. For
- * example, a switch located at the top of a panel next to the panel's title makes it clear that the switch will
- * enable/disable the panel options.
+ * Switches should always have labels. When the label is not defined, a switch becomes standalone. Standalone switches
+ * should be used in situations where the context is clear without an associated text label. For example, a switch
+ * located at the top of a panel next to the panel's title makes it clear that the switch will enable/disable the panel
+ * options.
  */
 export const Standalone = DocsSwitchGroup.bind({});
 Standalone.tags = ["!dev"];
