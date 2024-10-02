@@ -2507,6 +2507,7 @@
 	--system-slider-handle-border-color-key-focus: var(--spectrum-gray-800);
 	--system-slider-handle-focus-ring-color-key-focus: var(--spectrum-focus-indicator-color);
 	--system-slider-value-inline-size: 18px;
+	--system-slider-ramp-track-block-size: var(--spectrum-slider-ramp-track-height);
 	--system-slider-cjk-line-height: var(--spectrum-cjk-line-height-100);
 	--system-slider-min-size: var(--spectrum-spacing-900);
 	--system-slider-track-corner-radius: var(--spectrum-corner-radius-75);
@@ -3478,11 +3479,6 @@
 	--system-tree-view-size-xl-indicator-padding: var(--spectrum-disclosure-indicator-top-to-disclosure-icon-extra-large);
 	--system-tree-view-size-xl-item-min-block-size-thumbnail-offset: 0px;
 	--system-tree-view-detached-item-border-radius: var(--spectrum-corner-radius-100);
-	--system-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
-	--system-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
-	--system-font-family: var(--spectrum-sans-font-family-stack);
-	--system-font-style: var(--spectrum-default-font-style);
-	--system-font-size: var(--spectrum-font-size-100);
 	--system-heading-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
 	--system-heading-serif-font-family: var(--spectrum-serif-font-family-stack);
 	--system-heading-cjk-font-family: var(--spectrum-cjk-font-family-stack);
