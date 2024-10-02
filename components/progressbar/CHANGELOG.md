@@ -292,6 +292,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **meter:**update layout tokens ([#2080](https://github.com/adobe/spectrum-css/issues/2080))([da88b3c](https://github.com/adobe/spectrum-css/commit/da88b3c))
 
+### spectrum-Meter class
+
+Meter now uses the class `spectrum-Meter` on the parent `div`.
+
 ### 🔙 Reverts
 
 \*gulp and build updates ([#2121](https://github.com/adobe/spectrum-css/issues/2121))([03a37f5](https://github.com/adobe/spectrum-css/commit/03a37f5)), closes[#2099](https://github.com/adobe/spectrum-css/issues/2099)
@@ -1320,9 +1324,17 @@ Co-authored-by: Bernhard Schmidt <52184321+bernhard-adobe@users.noreply.github.c
 
 - use Field label instead of custom classes ([dd9d369](https://github.com/adobe/spectrum-css/commit/dd9d369))
 
+### Label and percentage now use Field Label
+
+Progress bar now uses Field label for its label and percentage. Add the appropriately sized Field label to match the t-shirt size of the Progress bar.
+
 ### ✨ Features
 
 - t-shirt sizing for ProgressBar, update notice classes, closes [#955](https://github.com/adobe/spectrum-css/issues/955) ([440ce85](https://github.com/adobe/spectrum-css/commit/440ce85))
+
+#### T-shirt sizing
+
+Progress bar now supports t-shirt sizing and requires that you specify the size of button by adding a `.spectrum-ProgressBar--size*` class.
 
 ### 🐛 Bug fixes
 
@@ -1335,8 +1347,17 @@ Co-authored-by: Bernhard Schmidt <52184321+bernhard-adobe@users.noreply.github.c
 ### 🛑 BREAKING CHANGES
 
 - Progress bar now uses Field label
-- .spectrum-ProgressBar--large renamed to .spectrum-ProgressBar--sizeM, .spectrum-ProgressBar--large renamed to .spectrum-ProgressBar--sizeS is required for previous
+- .spectrum-ProgressBar--large renamed to .spectrum-ProgressBar--sizeM, .spectrum-ProgressBar--small renamed to .spectrum-ProgressBar--sizeS is required for previous
 - ProgressBar .is-warning renamed to .is-notice, .is-critical renamed to .is-negative
+
+#### Size classnames changed
+
+Previous size classnames map as follows:
+
+| Previous size classname        | New size classname             |
+| ------------------------------ | ------------------------------ |
+| `.spectrum-ProgressBar--small` | `.spectrum-ProgressBar--sizeS` |
+| `.spectrum-ProgressBar--large` | `.spectrum-ProgressBar--sizeM` |
 
 <a name="1.0.0-beta.2"></a>
 
@@ -1355,6 +1376,12 @@ Co-authored-by: Bernhard Schmidt <52184321+bernhard-adobe@users.noreply.github.c
 ### 🐛 Bug fixes
 
 - removed more deprecations ([70dd116](https://github.com/adobe/spectrum-css/commit/70dd116))
+
+### 🛑 BREAKING CHANGES
+
+#### Component renamed
+
+Bar loader is now known as Progress bar. Replace all .spectrum-BarLoader* classnames with .spectrum-ProgressBar*.
 
 <a name="3.0.0-beta.2"></a>
 

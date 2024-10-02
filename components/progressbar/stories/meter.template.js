@@ -1,4 +1,6 @@
+import { Container } from "@spectrum-css/preview/decorators";
 import { Template as ProgressBar } from "./template.js";
+import { html } from "lit";
 
 import "../index.css";
 
@@ -17,3 +19,16 @@ export const Template = ({
 	size,
 	...item,
 }, context);
+
+/* FillGroup showcases all semantic variants in a single story. */
+export const FillGroup = (args, context) => Container({
+	withBorder: false,
+	withHeading: false,
+	content: html`${["info", "positive", "negative", "notice"].map((variant) => 
+		Container({
+			withBorder: false,
+			heading: variant,
+			content: Template({...args, fill: variant}, context),
+		})	
+	)}`
+});
