@@ -2,7 +2,8 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isEmphasized, isInvalid, isSelected, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { TagGroups } from "./tag.test.js";
 import { SelectedTemplate, TagsDefaultOptions } from "./template.js";
 
@@ -93,7 +94,8 @@ export default {
 		actions: {
 			handles: [],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

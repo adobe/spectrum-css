@@ -1,21 +1,22 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isEmphasized, isQuiet, size } from "@spectrum-css/preview/types";
-import { Sizes } from "@spectrum-css/preview/decorators";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { TabsGroups } from "./tabs.test.js";
-import { Template, QuietGroup, OverflowGroup, VerticalGroup, CompactGroup } from "./template.js";
+import { CompactGroup, OverflowGroup, QuietGroup, Template, VerticalGroup } from "./template.js";
 
 /**
  * Tabs organize content into multiple sections and allow users to navigate between them. The content under the set of tabs should be related and form a coherent unit. Tabs can be either horizontal or vertical.
- * 
+ *
  * ## Usage notes
- * 
+ *
  * ### Use icons consistently
  * Icons are optional, but don’t mix the use of icons in tabs if they are utilized. Navigation controls require a clear spacial relationship to one another, and mixing the use of icons can dramatically impact the visual balance and presence for each tab item.
- * 
+ *
  * ### Setting the selected tab item
  * Only one tab item can be selected at any given time. The selected tab item is designated by the `is-selected` class. A selection indicator line is shown under or next to the selected tab item.
- * 
+ *
  */
 
 export default {
@@ -112,24 +113,25 @@ export default {
 		actions: {
 			handles: [".spectrum-Tabs-item"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
 /**
  * Basic, default tab items should have a label for accessibility. If a label isn’t present, it must include an icon and becomes an icon-only tab item.
- * 
+ *
  * By default, tabs have a divider that spans across all tab items. This style works as a way to anchor them to the page. These types of tabs are best used at the top of a page, as a top-level navigation.
- * 
+ *
  * Tabs are horizontal by default and should be used when horizontal space is limited.
- * 
+ *
  */
 export const Default = TabsGroups.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
 /**
- * Vertical tabs should be used when horizontal space is more generous and when the list of sections is greater than can be presented to the user in a horizontal format. 
+ * Vertical tabs should be used when horizontal space is more generous and when the list of sections is greater than can be presented to the user in a horizontal format.
  */
 export const Vertical = VerticalGroup.bind({});
 Vertical.args = {
@@ -142,7 +144,7 @@ Vertical.parameters = {
 
 export const VerticalRight = Template.bind({});
 VerticalRight.args = {
-	...Vertical.args, 
+	...Vertical.args,
 	hasRightAlignedTabs: true,
 };
 VerticalRight.storyName = "Vertical right";
@@ -153,7 +155,7 @@ VerticalRight.parameters = {
 
 /**
  * When there are too many tabs to fit horizontally across the viewport, the tabs component can be displayed as a [quiet picker](/docs/components-picker--docs). The example below is non-functional.
- * 
+ *
  * When appropriate, alternative methods of overflowing tabs such as horizontal scrolling can be used.
  */
 export const Overflow = OverflowGroup.bind({});

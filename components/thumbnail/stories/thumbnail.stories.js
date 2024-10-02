@@ -1,7 +1,8 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isSelected, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { Template } from "./template.js";
 import { ThumbnailGroup } from "./thumbnail.test.js";
 
@@ -87,7 +88,8 @@ export default {
 		actions: {
 			handles: [],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

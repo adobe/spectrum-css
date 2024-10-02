@@ -1,11 +1,12 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { SteplistGroup } from "./steplist.test.js";
-import { DocsSteplistGroup } from "./template";
+import { DocsSteplistGroup } from "./template.js";
 
 /**
  * A steplist can communicate the progress of a task or workflow. It can help users understand where they are in a process and what they need to do next.
- * 
+ *
  * All variants of steplist can be static or interactive.
  */
 export default {
@@ -73,7 +74,8 @@ export default {
 		],
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

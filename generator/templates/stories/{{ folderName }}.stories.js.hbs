@@ -1,9 +1,9 @@
-import { version } from "../package.json";
 import { Template } from "./template.js";
 import { isDisabled, isSelected, isHovered, isFocused } from "@spectrum-css/preview/types";
 import { {{ pascalCase name }}Group } from "./{{ pascalCase name }}.test.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 
 /**
   * {{ description }}
@@ -38,12 +38,12 @@ export default {
     actions: {
       handles: ["click .spectrum-{{ pascalCase name }}"],
     },
-    componentVersion: version,
     design: {
       type: "figma",
       url: "",
     },
-    componentVersion: pkgJson.version,
+    packageJson,
+    metadata,
   }
 };
 

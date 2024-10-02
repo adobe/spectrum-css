@@ -6,7 +6,11 @@ import {
   ArgTypes,
   Canvas,
 } from "@storybook/blocks";
-import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+import {
+  ComponentDetails,
+  TaggedReleases,
+  PropertiesTable,
+} from "@spectrum-css/preview/blocks";
 
 import * as ButtonStories from "./button.stories";
 
@@ -107,6 +111,8 @@ option. Static color buttons do not change shades or values depending upon the c
 The component accepts the following inputs (properties):
 
 <ArgTypes of={ButtonStories} />
+
+<PropertiesTable />
 
 ## Tagged releases
 

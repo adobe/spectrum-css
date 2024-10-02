@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { AlertBannerGroup } from "./alertbanner.test.js";
 import { ActionableOptionsTemplate, Template, TextOverflowTemplate } from "./template.js";
 
@@ -68,7 +69,8 @@ export default {
 		actions: {
 			handles: ["click .spectrum-AlertBanner button"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

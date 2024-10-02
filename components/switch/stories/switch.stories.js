@@ -1,7 +1,8 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isChecked, isDisabled, isEmphasized, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { SwitchGroup } from "./switch.test.js";
 import { DocsSwitchGroup, Template } from "./template.js";
 
@@ -37,7 +38,10 @@ export default {
 		label: "Switch label",
 		size: "m",
 	},
-	packageJson: pkgJson,
+	parameters: {
+		packageJson,
+		metadata,
+	},
 };
 
 export const Default = SwitchGroup.bind({});

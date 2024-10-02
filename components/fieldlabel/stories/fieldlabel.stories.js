@@ -1,7 +1,8 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isRequired, size } from "@spectrum-css/preview/types";
-import { Sizes } from "@spectrum-css/preview/decorators";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { FieldLabelGroup } from "./fieldlabel.test.js";
 import { Template } from "./template.js";
 
@@ -44,23 +45,24 @@ export default {
 		label: "Label",
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
 /**
  * By default, a field label has left-aligned text, and is a medium size. For field label text, use a short, catch-all description (1-3 words) of the information that a user needs to provide.
- * 
+ *
  * The default position of a field label is above an input, but it can alternatively be positioned to the side. Visit the [form component](/docs/components-form--docs) to see examples of the field label with an input.
- 
+
  */
 export const Default = FieldLabelGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
 /**
- * Field labels come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most frequently used option with medium-sized inputs. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page. 
- * 
+ * Field labels come in four different sizes: small, medium, large, and extra-large. The medium size is the default and most frequently used option with medium-sized inputs. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.
+ *
  * Both small and medium field labels have the same font size, but different paddings when used as side labels.
  */
 export const Sizing = (args, context) => Sizes({
@@ -76,7 +78,7 @@ Sizing.parameters = {
 
 /**
  * To render right-aligned field label text, apply the `.spectrum-FieldLabel--right` class to the field label.
- * 
+ *
  */
 export const RightAligned = Template.bind({});
 RightAligned.args = {
@@ -94,7 +96,7 @@ RightAligned.storyName = "Right-aligned";
 
 /**
  * Field labels for required inputs can be marked with an asterisk at the end of the label. Optional inputs would then be understood to not have the asterisk. If using the asterisk icon, do not leave any space between the label text and the start of the `<svg>` element in the markup. Extra space should not be added in addition to the inline margin.
- * 
+ *
  * The field label for a required field can display either the text “(required)”, or an asterisk.
  */
 export const Required = Template.bind({});
