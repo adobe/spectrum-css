@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isOpen } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ColorLoupeGroup } from "./colorloupe.test.js";
 
 /**
@@ -36,7 +37,8 @@ export default {
 				height: "100px"
 			}
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

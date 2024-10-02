@@ -2,7 +2,8 @@ import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { AccordionGroup } from "./accordion.test.js";
 import { Template } from "./template.js";
 
@@ -56,7 +57,8 @@ export default {
 			handles: ["click .spectrum-Accordion-item"],
 		},
 		chromatic: { disableSnapshot: true },
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	tags: ["!autodocs"],
 };

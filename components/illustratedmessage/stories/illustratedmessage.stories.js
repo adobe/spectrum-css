@@ -1,7 +1,8 @@
 import { Template as Link } from "@spectrum-css/link/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { html } from "lit";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { IllustratedMessageGroup } from "./illustratedmessage.test.js";
 import { Template } from "./template.js";
 
@@ -43,7 +44,8 @@ export default {
 		useAccentColor: false,
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

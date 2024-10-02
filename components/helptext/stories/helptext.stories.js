@@ -1,7 +1,8 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { HelpTextGroup } from "./helptext.test.js";
 import { NegativeTemplate, Template, VariantsTemplate } from "./template.js";
 
@@ -56,7 +57,8 @@ export default {
 		size: "m",
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -113,10 +115,10 @@ Disabled.parameters = {
 
 /**
  * The negative variant is used to convey error messages and can have an optional icon.
- * 
- * In most cases, help text is used with a component that already displays an icon communicating an error (e.g., 
+ *
+ * In most cases, help text is used with a component that already displays an icon communicating an error (e.g.,
  * [text field](?path=/docs/components-text-field--docs),
- * [picker](?path=/docs/components-picker--docs), 
+ * [picker](?path=/docs/components-picker--docs),
  * [combo box](?path=/docs/components-combobox--docs#standard---invalid)),
  * so it’s not necessary to include another icon. In other cases, help text that is used with a component that does not display an icon
  * communicating an error (e.g., [field group](?path=/docs/components-field-group--docs#invalid)) needs to display an icon.

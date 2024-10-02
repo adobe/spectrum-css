@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { DropIndicatorGroup } from "./dropindicator.test.js";
 import { DocsDropIndicatorGroup } from "./template";
 
@@ -38,7 +39,8 @@ export default {
 		length: "300px",
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

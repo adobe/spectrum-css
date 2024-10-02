@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { OpacityCheckboardGroup } from "./opacitycheckerboard.test.js";
 import { Template } from "./template.js";
 
@@ -29,7 +30,8 @@ export default {
 		}
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
