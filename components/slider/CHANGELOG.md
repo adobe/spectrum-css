@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.0.0-s2-foundations.15
+
+### Minor Changes
+
+- [#3154](https://github.com/adobe/spectrum-css/pull/3154) [`7735155`](https://github.com/adobe/spectrum-css/commit/77351552eac8a28cab316d984fee88dca61dc786) Thanks [@cdransf](https://github.com/cdransf)! - This applies a flex layout to the spectrum slider controls to consistently align the enclosed handle and ramp, while also removing the margins that might otherwise interfere with alignment. This aims to resolve the issues with the calc-based approach that exhibited variations in vertical alignment.
+
 ## 6.0.0-s2-foundations.14
 
 ### Major Changes
