@@ -65,13 +65,11 @@ export const Template = ({
 	`;
 };
 
-export const ToastWrapOptions = ({
-	...args
-}, context ) => Container({
+export const ToastWrapOptions = (args, context ) => Container({
 	withBorder: false,
 	direction: "column",
 	wrapperStyles: {
-		columnGap: "12",
+		columnGap: "12px",
 	},
 	content: html`
 		${Template({
@@ -101,9 +99,7 @@ export const ToastWrapOptions = ({
 		}, context )}`
 });
 
-export const ActionTemplate = ({
-	...args
-}, context ) => Container({
+export const ActionTemplate = (args, context ) => Container({
 	withBorder: false,
 	direction: "column",
 	wrapperStyles: {
