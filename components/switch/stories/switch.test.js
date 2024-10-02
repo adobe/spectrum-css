@@ -22,9 +22,15 @@ export const SwitchGroup = Variants({
 			isChecked: true,
 		},
 		{
-			testHeading: "Checked and Disabled",
+			testHeading: "Checked and disabled",
 			isChecked: true,
 			isDisabled: true,
 		},
+		{
+			testHeading: "With longer label",
+			label: "A longer switch label that will wrap if there is not enough space",
+			customStyles: {"max-width": "200px"},
+			include: ["Default"],
+		}
 	]
 });
