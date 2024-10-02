@@ -12,11 +12,6 @@
  */
 
 .spectrum.spectrum--legacy {
-	--system-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
-	--system-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
-	--system-font-family: var(--spectrum-sans-font-family-stack);
-	--system-font-style: var(--spectrum-default-font-style);
-	--system-font-size: var(--spectrum-font-size-100);
 	--system-heading-sans-serif-font-family: var(--spectrum-sans-font-family-stack);
 	--system-heading-serif-font-family: var(--spectrum-serif-font-family-stack);
 	--system-heading-cjk-font-family: var(--spectrum-cjk-font-family-stack);
