@@ -5,11 +5,7 @@ export const FieldLabelGroup = Variants({
 	Template,
 	testData: [
 		{
-			testHeading: "Default"
-		},
-		{
-			testHeading: "Right alignment",
-			alignment: "right",
+			testHeading: "Default",
 			customStyles: { width: "200px" },
 		},
 		{
@@ -19,14 +15,14 @@ export const FieldLabelGroup = Variants({
 		},
 		{
 			testHeading: "Wrapped",
-			withStates: false,
-			label: "Label example with longer text that will wrap to the next line. And with an asterisk that marks it as required.",
+			label: "Label example with longer text that will wrap to the next line. Sometimes there is an asterisk that marks it as required.",
 			customStyles: { width: "200px" },
 		},
 	],
 	stateData: [
 		{
 			testHeading: "Disabled",
+			ignore: ["Wrapped"],
 			isDisabled: true,
 			customStyles: { width: "200px" },
 		},
