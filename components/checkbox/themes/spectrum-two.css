@@ -58,38 +58,38 @@
 		--spectrum-checkbox-border-width: var(--spectrum-border-width-200);
 
 		--spectrum-checkbox-animation-duration: var(--spectrum-animation-duration-100);
+	}
 
-		&.spectrum-Checkbox--sizeS {
-			--spectrum-checkbox-font-size: var(--spectrum-font-size-75);
-			--spectrum-checkbox-height: var(--spectrum-component-height-75);
-			--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
-			--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-75);
-			--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-75);
-		}
+	.spectrum-Checkbox--sizeS {
+		--spectrum-checkbox-font-size: var(--spectrum-font-size-75);
+		--spectrum-checkbox-height: var(--spectrum-component-height-75);
+		--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
+		--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-75);
+		--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-75);
+	}
 
-		&,
-		&.spectrum-Checkbox--sizeM {
-			--spectrum-checkbox-font-size: var(--spectrum-font-size-100);
-			--spectrum-checkbox-height: var(--spectrum-component-height-100);
-			--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
-			--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
-			--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
-		}
+	.spectrum-Checkbox,
+	.spectrum-Checkbox--sizeM {
+		--spectrum-checkbox-font-size: var(--spectrum-font-size-100);
+		--spectrum-checkbox-height: var(--spectrum-component-height-100);
+		--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
+		--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
+		--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
+	}
 
-		&.spectrum-Checkbox--sizeL {
-			--spectrum-checkbox-font-size: var(--spectrum-font-size-200);
-			--spectrum-checkbox-height: var(--spectrum-component-height-200);
-			--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-large);
-			--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-200);
-			--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-200);
-		}
+	.spectrum-Checkbox--sizeL {
+		--spectrum-checkbox-font-size: var(--spectrum-font-size-200);
+		--spectrum-checkbox-height: var(--spectrum-component-height-200);
+		--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-large);
+		--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-200);
+		--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-200);
+	}
 
-		&.spectrum-Checkbox--sizeXL {
-			--spectrum-checkbox-font-size: var(--spectrum-font-size-300);
-			--spectrum-checkbox-height: var(--spectrum-component-height-300);
-			--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-extra-large);
-			--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-300);
-			--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
-		}
+	.spectrum-Checkbox--sizeXL {
+		--spectrum-checkbox-font-size: var(--spectrum-font-size-300);
+		--spectrum-checkbox-height: var(--spectrum-component-height-300);
+		--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-extra-large);
+		--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-300);
+		--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
 	}
 }

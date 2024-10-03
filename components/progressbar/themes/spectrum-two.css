@@ -93,25 +93,25 @@
 	}
 
 	.spectrum-Meter {
-		/* Meter */
 		--spectrum-meter-min-width: var(--spectrum-meter-minimum-width);
 		--spectrum-meter-max-width: var(--spectrum-meter-maximum-width);
 		--spectrum-meter-inline-size: var(--spectrum-meter-width);
 		--spectrum-meter-top-to-text: var(--spectrum-component-top-to-text);
+	}
 
-		/* Meter only supports size S and L */
-		&.spectrum-Meter--sizeS {
-			--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-small);
-			--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
-			--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
-			--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-		}
+	/* Meter only supports size S and L (default) */
+	.spectrum-Meter--sizeS {
+		--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-small);
+		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
+		--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
+		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+	}
 
-		&.spectrum-Meter--sizeL {
-			--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-large);
-			--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2500);
-			--spectrum-progressbar-font-size: var(--spectrum-font-size-100);
-			--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
-		}
+	.spectrum-Meter,
+	.spectrum-Meter--sizeL {
+		--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-large);
+		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2500);
+		--spectrum-progressbar-font-size: var(--spectrum-font-size-100);
+		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
 	}
 }

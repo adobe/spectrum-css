@@ -70,38 +70,40 @@
  /*
   * Icon root class styles
   */
+
+/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
+.spectrum-Icon--sizeXXS {
+	--spectrum-icon-size: var(--spectrum-icon-size-xxs);
+}
+
+.spectrum-Icon--sizeXS {
+	--spectrum-icon-size: var(--spectrum-icon-size-xs);
+}
+
+.spectrum-Icon--sizeS {
+	--spectrum-icon-size: var(--spectrum-icon-size-s);
+}
+
+.spectrum-Icon,
+.spectrum-UIIcon,
+.spectrum-Icon--sizeM {
+	--spectrum-icon-size: var(--spectrum-icon-size-m);
+}
+
+.spectrum-Icon--sizeL {
+	--spectrum-icon-size: var(--spectrum-icon-size-l);
+}
+
+.spectrum-Icon--sizeXL {
+	--spectrum-icon-size: var(--spectrum-icon-size-xl);
+}
+
+.spectrum-Icon--sizeXXL {
+	--spectrum-icon-size: var(--spectrum-icon-size-xxl);
+}
+
 .spectrum-Icon,
 .spectrum-UIIcon {
-	/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
-	&.spectrum-Icon--sizeXXS {
-		--spectrum-icon-size: var(--spectrum-icon-size-xxs);
-	}
-
-	&.spectrum-Icon--sizeXS {
-		--spectrum-icon-size: var(--spectrum-icon-size-xs);
-	}
-
-	&.spectrum-Icon--sizeS {
-		--spectrum-icon-size: var(--spectrum-icon-size-s);
-	}
-
-	&,
-	&.spectrum-Icon--sizeM {
-		--spectrum-icon-size: var(--spectrum-icon-size-m);
-	}
-
-	&.spectrum-Icon--sizeL {
-		--spectrum-icon-size: var(--spectrum-icon-size-l);
-	}
-
-	&.spectrum-Icon--sizeXL {
-		--spectrum-icon-size: var(--spectrum-icon-size-xl);
-	}
-
-	&.spectrum-Icon--sizeXXL {
-		--spectrum-icon-size: var(--spectrum-icon-size-xxl);
-	}
-
 	/* Don't catch clicks or hover, otherwise they may not escape the SVG. */
 	pointer-events: none;
 
@@ -117,16 +119,13 @@
 
 	/* Fill should match the current text color. */
 	fill: currentColor;
+}
 
+.spectrum-Icon {
 	img,
 	svg {
 		inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size)));
 		block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size)));
-	}
-
-	/* Hide the SVG overflow in IE. */
-	&:not(:root) {
-		overflow: hidden;
 	}
 }
 

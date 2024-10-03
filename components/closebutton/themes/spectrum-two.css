@@ -32,23 +32,6 @@
 
 		--spectrum-closebutton-animation-duration: var(--spectrum-animation-duration-100);
 
-		&.spectrum-CloseButton--sizeS {
-			--spectrum-closebutton-size: var(--spectrum-component-height-75);
-		}
-
-		&,
-		&.spectrum-CloseButton--sizeM {
-			--spectrum-closebutton-size: var(--spectrum-component-height-100);
-		}
-
-		&.spectrum-CloseButton--sizeL {
-			--spectrum-closebutton-size: var(--spectrum-component-height-200);
-		}
-
-		&.spectrum-CloseButton--sizeXL {
-			--spectrum-closebutton-size: var(--spectrum-component-height-300);
-		}
-
 		&.spectrum-CloseButton--staticWhite {
 			--spectrum-closebutton-static-background-color-default: transparent;
 			--spectrum-closebutton-static-background-color-hover: var(--spectrum-transparent-white-400);
@@ -68,5 +51,22 @@
 			--spectrum-closebutton-icon-color-disabled: var(--spectrum-disabled-static-black-content-color);
 			--spectrum-closebutton-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
 		}
+	}
+
+	.spectrum-CloseButton--sizeS {
+		--spectrum-closebutton-size: var(--spectrum-component-height-75);
+	}
+
+	.spectrum-CloseButton,
+	.spectrum-CloseButton--sizeM {
+		--spectrum-closebutton-size: var(--spectrum-component-height-100);
+	}
+
+	.spectrum-CloseButton--sizeL {
+		--spectrum-closebutton-size: var(--spectrum-component-height-200);
+	}
+
+	.spectrum-CloseButton--sizeXL {
+		--spectrum-closebutton-size: var(--spectrum-component-height-300);
 	}
 }

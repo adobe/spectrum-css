@@ -35,30 +35,30 @@
 		--spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
 		--spectrum-swatch-slash-icon-color: var(--spectrum-red-900);
 		--spectrum-swatch-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	}
 
-		&.spectrum-Swatch--sizeXS {
-			--spectrum-swatch-size: var(--spectrum-swatch-size-extra-small);
-			--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-50);
-			--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-extra-small);
-		}
+	.spectrum-Swatch--sizeXS {
+		--spectrum-swatch-size: var(--spectrum-swatch-size-extra-small);
+		--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-50);
+		--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-extra-small);
+	}
 
-		&.spectrum-Swatch--sizeS {
-			--spectrum-swatch-size: var(--spectrum-swatch-size-small);
-			--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
-			--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
-		}
+	.spectrum-Swatch--sizeS {
+		--spectrum-swatch-size: var(--spectrum-swatch-size-small);
+		--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
+		--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
+	}
 
-		&,
-		&.spectrum-Swatch--sizeM {
-			--spectrum-swatch-size: var(--spectrum-swatch-size-medium);
-			--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
-			--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-medium);
-		}
+	.spectrum-Swatch,
+	.spectrum-Swatch--sizeM {
+		--spectrum-swatch-size: var(--spectrum-swatch-size-medium);
+		--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
+		--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-medium);
+	}
 
-		&.spectrum-Swatch--sizeL {
-			--spectrum-swatch-size: var(--spectrum-swatch-size-large);
-			--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-200);
-			--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-large);
-		}
+	.spectrum-Swatch--sizeL {
+		--spectrum-swatch-size: var(--spectrum-swatch-size-large);
+		--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-200);
+		--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-large);
 	}
 }

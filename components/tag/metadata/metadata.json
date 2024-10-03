@@ -37,8 +37,7 @@
     ".spectrum-Tag:active",
     ".spectrum-Tag:focus-visible",
     ".spectrum-Tag:focus-visible:after",
-    ".spectrum-Tag:hover",
-    ":scope"
+    ".spectrum-Tag:hover"
   ],
   "modifiers": [
     "--mod-tag-animation-duration",
@@ -282,22 +281,6 @@
     "--spectrum-workflow-icon-size-75"
   ],
   "system-theme": [
-    "--system-scope-tag-avatar-spacing-block-end",
-    "--system-scope-tag-avatar-spacing-block-start",
-    "--system-scope-tag-avatar-spacing-inline-end",
-    "--system-scope-tag-clear-button-spacing-block",
-    "--system-scope-tag-clear-button-spacing-inline-end",
-    "--system-scope-tag-clear-button-spacing-inline-start",
-    "--system-scope-tag-corner-radius",
-    "--system-scope-tag-font-size",
-    "--system-scope-tag-height",
-    "--system-scope-tag-icon-size",
-    "--system-scope-tag-icon-spacing-block-end",
-    "--system-scope-tag-icon-spacing-block-start",
-    "--system-scope-tag-icon-spacing-inline-end",
-    "--system-scope-tag-label-spacing-block",
-    "--system-scope-tag-label-spacing-inline-end",
-    "--system-scope-tag-spacing-inline-start",
     "--system-tag-animation-duration",
     "--system-tag-avatar-opacity-disabled",
     "--system-tag-avatar-spacing-block-end",
@@ -343,6 +326,7 @@
     "--system-tag-border-color-selected-hover",
     "--system-tag-border-width",
     "--system-tag-clear-button-spacing-block",
+    "--system-tag-clear-button-spacing-inline-end",
     "--system-tag-clear-button-spacing-inline-start",
     "--system-tag-content-color",
     "--system-tag-content-color-active",
@@ -356,6 +340,7 @@
     "--system-tag-content-color-invalid-hover",
     "--system-tag-content-color-invalid-selected",
     "--system-tag-content-color-selected",
+    "--system-tag-corner-radius",
     "--system-tag-focus-ring-color",
     "--system-tag-focus-ring-gap",
     "--system-tag-focus-ring-thickness",
@@ -368,6 +353,7 @@
     "--system-tag-label-font-weight",
     "--system-tag-label-line-height",
     "--system-tag-label-spacing-block",
+    "--system-tag-label-spacing-inline-end",
     "--system-tag-size-l-avatar-spacing-block-end",
     "--system-tag-size-l-avatar-spacing-block-start",
     "--system-tag-size-l-avatar-spacing-inline-end",
@@ -427,7 +413,8 @@
     "--system-tag-size-small-clear-button-spacing-inline-end",
     "--system-tag-size-small-corner-radius",
     "--system-tag-size-small-label-spacing-inline-end",
-    "--system-tag-size-small-spacing-inline-start"
+    "--system-tag-size-small-spacing-inline-start",
+    "--system-tag-spacing-inline-start"
   ],
   "passthroughs": [
     "--mod-avatar-opacity-disabled",
