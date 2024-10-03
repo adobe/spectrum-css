@@ -174,7 +174,7 @@
 		--spectrum-tag-clear-button-spacing-inline-end: var(--spectrum-tag-size-small-clear-button-spacing-inline-end);
 	}
 
-	&,
+	.spectrum-Tag,
 	.spectrum-Tag--sizeM {
 		--spectrum-tag-height: var(--spectrum-component-height-100);
 		--spectrum-tag-font-size: var(--spectrum-font-size-100);
