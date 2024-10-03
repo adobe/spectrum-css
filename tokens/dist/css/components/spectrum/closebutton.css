@@ -25,11 +25,6 @@
 	--system-close-button-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--system-close-button-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	--system-close-button-animation-duration: var(--spectrum-animation-duration-100);
-	--system-close-button-size-s-size: var(--spectrum-component-height-75);
-	--system-close-button-size: var(--spectrum-component-height-100);
-	--system-close-button-size-m-size: var(--spectrum-component-height-100);
-	--system-close-button-size-l-size: var(--spectrum-component-height-200);
-	--system-close-button-size-xl-size: var(--spectrum-component-height-300);
 	--system-close-button-static-white-static-background-color-default: transparent;
 	--system-close-button-static-white-static-background-color-hover: var(--spectrum-transparent-white-300);
 	--system-close-button-static-white-static-background-color-down: var(--spectrum-transparent-white-400);
@@ -44,4 +39,9 @@
 	--system-close-button-static-black-icon-color-default: var(--spectrum-black);
 	--system-close-button-static-black-icon-color-disabled: var(--spectrum-disabled-static-black-content-color);
 	--system-close-button-static-black-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
+	--system-close-button-size-s-size: var(--spectrum-component-height-75);
+	--system-close-button-size: var(--spectrum-component-height-100);
+	--system-close-button-size-m-size: var(--spectrum-component-height-100);
+	--system-close-button-size-l-size: var(--spectrum-component-height-200);
+	--system-close-button-size-xl-size: var(--spectrum-component-height-300);
 }
