@@ -61,6 +61,10 @@ export default {
 		fixed: "none"
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=36806-7201&node-type=frame&t=Kcz7zeePp3PeRusJ-11",
+		},
 		packageJson: pkgJson,
 	},
 	tags: ["!autodocs"],

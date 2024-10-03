@@ -44,6 +44,10 @@ export default {
 		actions: {
 			handles: ["click .spectrum-AlertDialog button"],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=21919-953&node-type=frame&t=Kcz7zeePp3PeRusJ-11",
+		},
 		docs: {
 			story: {
 				height: "300px",
