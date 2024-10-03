@@ -56,10 +56,12 @@
 	},
 	"spectrum": [
 		{
+			"componentName": "progress-bar",
 			"guidelines": "https://spectrum.adobe.com/page/progress-bar",
 			"rootClass": "spectrum-ProgressBar"
 		},
 		{
+			"componentName": "meter",
 			"guidelines": "https://spectrum.adobe.com/page/meter",
 			"rootClass": "spectrum-Meter"
 		}

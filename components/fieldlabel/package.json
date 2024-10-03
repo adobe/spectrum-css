@@ -51,10 +51,12 @@
 	},
 	"spectrum": [
 		{
+			"componentName": "field-label",
 			"guidelines": "https://spectrum.adobe.com/page/field-label",
 			"rootClass": "spectrum-FieldLabel"
 		},
 		{
+			"componentName": "form",
 			"rootClass": "spectrum-Form"
 		}
 	]
