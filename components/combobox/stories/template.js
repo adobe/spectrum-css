@@ -69,7 +69,6 @@ const Combobox = ({
 				customInputClasses: [`${rootClass}-input`],
 				isLoading,
 				customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
-				placeholder: "Type here this text should truncate",
 				name: "field",
 				value: selectedDay
 					? new Date(selectedDay).toLocaleDateString(lang)
