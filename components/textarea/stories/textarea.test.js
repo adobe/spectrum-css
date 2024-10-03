@@ -1,27 +1,27 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./template.js";
+import { Template } from "../../textfield/stories/template.js";
 
 export const TextFieldGroup = Variants({
 	Template,
 	testData: [{
 	},
 	{
-		testHeading: "With field label",
-		displayLabel: true,
-		labelText: "Username",
+		testHeading: "Text area",
+		multiline: true,
 	},
 	{
-		testHeading: "With side label",
+		testHeading: "Text area with label",
 		displayLabel: true,
 		labelText: "Username",
-		labelPosition: "side",
+		multiline: true,
 	},
 	{
-		testHeading: "With value",
+		testHeading: "Text area with value",
 		displayLabel: true,
 		labelText: "Username",
-		value: "UsernameWiderThanInput@ReallyLongEmail.com"
-	},],
+		multiline: true,
+		value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+	}],
 	stateData: [{
 		testHeading: "Invalid",
 		isInvalid: true,
