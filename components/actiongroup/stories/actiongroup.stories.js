@@ -7,7 +7,7 @@ import { ActionGroups } from "./actiongroup.test.js";
 import { OverflowOption, TreatmentTemplate } from "./template.js";
 
 /**
- * An action group is a grouping of [action buttons](?path=/docs/components-action-button--docs&globals=testingPreview:!true) that are related to each other.
+ * An action group is a grouping of [action buttons](/docs/components-action-button--docs&globals=testingPreview:!true) that are related to each other.
  */
 export default {
 	title: "Action group",
@@ -16,6 +16,7 @@ export default {
 		areQuiet: ActionButton.argTypes.isQuiet,
 		areEmphasized: ActionButton.argTypes.isEmphasized,
 		staticColor: ActionButton.argTypes.staticColor,
+		areDisabled: ActionButton.argTypes.isDisabled,
 		content: { table: { disable: true } },
 		size: size(["xs", "s", "m", "l", "xl"]),
 		vertical: {
@@ -45,16 +46,27 @@ export default {
 			},
 			control: "boolean",
 		},
+		iconOnly: {
+			name: "Icon Only",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Advanced",
+			},
+			control: "boolean",
+		},
 	},
 	args: {
 		rootClass: "spectrum-ActionGroup",
 		size: "m",
 		areQuiet: ActionButton.args.isQuiet,
 		areEmphasized: ActionButton.args.isEmphasized,
+		areDisabled: ActionButton.args.isDisabled,
 		staticColor: ActionButton.args.staticColor,
 		vertical: false,
 		compact: false,
 		justified: false,
+		iconOnly: false,
 		content: [
 			{
 				iconName: "Edit",
@@ -91,6 +103,20 @@ Default.args = {};
 // ********* DOCS ONLY ********* //
 
 /**
+ * An action group in a disabled state shows that the action buttons within the group exist, but are not available in that circumstance. This state can be used to maintain layout continuity and to communicate that an action group may become available later.
+*/
+
+export const Disabled = ActionGroups.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	areDisabled: true
+};
+
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
  * The emphasized action group has a blue background for its selected state in order to provide a visual prominence that meets the accessible color contrast ratio. This is optimal for when the selection should call attention, such as within a tool bar.
 */
 export const Emphasized = ActionGroups.bind({});
@@ -99,9 +125,17 @@ Emphasized.args = {
 	areEmphasized: true
 };
 
+Emphasized.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 export const Horizontal = TreatmentTemplate.bind({});
 Horizontal.tags = ["!dev"];
 Horizontal.args = {};
+
+Horizontal.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * The compact density retains the same font and icon sizes, but has tighter spacing. The action buttons also become connected for non-quiet action groups.
@@ -122,12 +156,14 @@ Vertical.args = {
 	vertical: true
 };
 
+
 export const VerticalCompact = TreatmentTemplate.bind({});
 VerticalCompact.tags = ["!dev"];
 VerticalCompact.args = {
 	compact: true,
 	vertical: true
 };
+
 
 export const HorizontalSizing = (args, context) => Sizes({
 	Template: ActionGroups,
@@ -137,6 +173,10 @@ export const HorizontalSizing = (args, context) => Sizes({
 }, context);
 HorizontalSizing.args = {};
 HorizontalSizing.tags = ["!dev"];
+HorizontalSizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 HorizontalSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -151,6 +191,10 @@ VerticalSizing.args = {
 	vertical: true
 };
 VerticalSizing.tags = ["!dev"];
+VerticalSizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 VerticalSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -176,6 +220,10 @@ Justified.args = {
 	]
 };
 
+Justified.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 export const JustifiedIconOnly = ActionGroups.bind({});
 JustifiedIconOnly.tags = ["!dev"];
 JustifiedIconOnly.args = {
@@ -198,6 +246,10 @@ JustifiedIconOnly.args = {
 };
 
 JustifiedIconOnly.storyName = "Justified (icon-only)";
+
+JustifiedIconOnly.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 export const JustifiedIconOnlyCompact = ActionGroups.bind({});
 JustifiedIconOnlyCompact.tags = ["!dev"];
@@ -223,14 +275,20 @@ JustifiedIconOnlyCompact.args = {
 
 JustifiedIconOnlyCompact.storyName = "Justified (compact, icon-only)";
 
+JustifiedIconOnlyCompact.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 
 /**
- * When space is limited in an action group, there are 2 options for the group's overflow behavior: wrap or collapse. By default, an action group is set to wrap, meaning that the action buttons inside the group wrap to form another line. Alternatively, an action group can be set to collapse inside a More (...) action button.
+ * When space is limited in an action group, there are 2 options for the group's overflow behavior: wrap or collapse. By default, an action group is set to wrap, meaning that the action buttons inside the group wrap to form another line. Alternatively, an action group can be set to collapse inside a **More (...)** action button.
 */
 export const Overflow = OverflowOption.bind({});
 Overflow.tags = ["!dev"];
 
-
+Overflow.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 
 // ********* VRT ONLY ********* //

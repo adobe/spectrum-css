@@ -12,13 +12,16 @@ export const Template = ({
 	size = "m",
 	areQuiet = false,
 	areEmphasized = false,
+	areDisabled = false,
 	vertical = false,
 	compact = false,
 	justified = false,
+	iconOnly = false,
 	staticColor,
 	content = [],
 	customClasses = [],
 	customStyles = {},
+	iconName,
 } = {}, context = {}) => {
 	return html`
 		<div
@@ -42,8 +45,11 @@ export const Template = ({
 					staticColor,
 					isQuiet: areQuiet,
 					isEmphasized: areEmphasized,
+					isDisabled: areDisabled,
 					customClasses: [`${rootClass}-item`],
-					size: size
+					hideLabel: iconOnly,
+					size: size,
+					iconName: iconName || undefined,
 				},
 				context
 			})}
@@ -123,9 +129,7 @@ export const OverflowOption = (context) => Container({
 	`
 }, context );
 
-export const ActionButtonOptions = ({
-	...args
-}, context ) => Container({
+export const ActionButtonOptions = (args, context ) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
