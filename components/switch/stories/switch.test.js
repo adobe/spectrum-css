@@ -11,6 +11,12 @@ export const SwitchGroup = Variants({
 			testHeading: "Emphasized",
 			isEmphasized: true,
 		},
+		{
+			testHeading: "Wrapped",
+			label: "A longer switch label that will wrap if there is not enough space",
+			customStyles: {"max-width": "200px"},
+			withStates: false,
+		},
 	],
 	stateData: [
 		{
@@ -26,11 +32,5 @@ export const SwitchGroup = Variants({
 			isChecked: true,
 			isDisabled: true,
 		},
-		{
-			testHeading: "With longer label",
-			label: "A longer switch label that will wrap if there is not enough space",
-			customStyles: {"max-width": "200px"},
-			include: ["Default"],
-		}
 	]
 });
