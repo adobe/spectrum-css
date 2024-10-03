@@ -61,8 +61,12 @@
 	--system-meter-size-s-progressbar-size-default: var(--system-progress-bar-size-2400);
 	--system-meter-size-s-progressbar-font-size: var(--spectrum-font-size-75);
 	--system-meter-size-s-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+	--system-meter-progressbar-thickness: var(--spectrum-meter-thickness-large);
 	--system-meter-size-l-progressbar-thickness: var(--spectrum-meter-thickness-large);
+	--system-meter-progressbar-size-default: var(--system-progress-bar-size-2500);
 	--system-meter-size-l-progressbar-size-default: var(--system-progress-bar-size-2500);
+	--system-meter-progressbar-font-size: var(--spectrum-font-size-100);
 	--system-meter-size-l-progressbar-font-size: var(--spectrum-font-size-100);
+	--system-meter-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
 	--system-meter-size-l-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
 }

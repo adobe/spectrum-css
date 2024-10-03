@@ -2,16 +2,16 @@
   "sourceFile": "index.css",
   "selectors": [
     ".spectrum-Divider",
+    ".spectrum-Divider--sizeL",
+    ".spectrum-Divider--sizeM",
+    ".spectrum-Divider--sizeS",
     ".spectrum-Divider--staticBlack.spectrum-Divider--sizeL",
     ".spectrum-Divider--staticBlack.spectrum-Divider--sizeM",
     ".spectrum-Divider--staticBlack.spectrum-Divider--sizeS",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeL",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeM",
     ".spectrum-Divider--staticWhite.spectrum-Divider--sizeS",
-    ".spectrum-Divider--vertical",
-    ".spectrum-Divider.spectrum-Divider--sizeL",
-    ".spectrum-Divider.spectrum-Divider--sizeM",
-    ".spectrum-Divider.spectrum-Divider--sizeS"
+    ".spectrum-Divider--vertical"
   ],
   "modifiers": [
     "--mod-divider-background-color",
