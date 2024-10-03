@@ -100,6 +100,7 @@
 	--spectrum-textfield-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-focus-hover);
 	--spectrum-textfield-border-color-invalid-keyboard-focus: var(--spectrum-negative-border-color-key-focus);
 	--spectrum-textfield-icon-color-invalid: var(--spectrum-negative-visual-color);
+	--spectrum-textfield-help-text-color-invalid: var(--spectrum-negative-content-color-default);
 
 	--spectrum-textfield-text-color-invalid: var(--spectrum-neutral-content-color-default);
 
@@ -340,6 +341,10 @@
 		margin-block-start: var(--mod-textfield-helptext-spacing-block, var(--spectrum-textfield-helptext-spacing-block));
 		grid-row: 3;
 		grid-column: 1 / span 2;
+	}
+
+	.spectrum-Textfield.is-invalid & {
+		color: var(--spectrum-textfield-help-text-color-invalid);
 	}
 }
 
