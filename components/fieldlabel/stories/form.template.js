@@ -43,21 +43,11 @@ export const Template = ({
                         alignment: labelPosition === "side" ? fieldLabelAlignment : undefined,
                     }, context))}
                     <div class=${classMap({
-                        [`${rootClass}-item`]: true,
+                        [`${rootClass}-itemField`]: true,
                     })}>
-                        ${when(label, () => FieldLabel({
-                            label,
-                            forInput: item.id,
-                            alignment: labelsAbove ? undefined : "left",
-                        }, context))}
-                        <div class=${classMap({
-                            [`${rootClass}-itemField`]: true,
-                        })}>
-                            ${renderContent(content, { context })}
-                        </div>
+                        ${renderContent(content, { context })}
                     </div>
                 `;
             })}
         </form>
     `;
-};
