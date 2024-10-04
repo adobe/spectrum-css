@@ -178,7 +178,7 @@
 				},
 				"scope": {
 					"commands": [
-						"chromatic --build-script-name build --junit-report --only-story-names"
+						"chromatic --build-script-name build --junit-report --only-story-names --skip '@(changeset-release/**|dependabot/**)'"
 					]
 				}
 			},
