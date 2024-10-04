@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isEmphasized, isFocused, isReadOnly } from "@spectrum-css/preview/types";
+import { isDisabled, isEmphasized, isKeyboardFocused, isReadOnly } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { RatingGroup } from "./rating.test.js";
 import { Template } from "./template.js";
@@ -10,14 +10,14 @@ import { Template } from "./template.js";
  * ### Usage notes
  * - All active stars have the class `is-selected` applied.
  * - The current value (the last active star) has the class `is-currentValue` applied.
- * - When the rating receives focus, the class `is-focused` should be added to the component's root element (`.spectrum-Rating`).
+ * - When the rating receives keyboard focus, the class `is-keyboardFocused` should be added to the component's root element (`.spectrum-Rating`).
  */
 export default {
 	title: "Rating",
 	component: "Rating",
 	argTypes: {
 		isEmphasized,
-		isFocused,
+		isKeyboardFocused,
 		isDisabled,
 		isReadOnly,
 		max: {
@@ -48,6 +48,7 @@ export default {
 		isDisabled: false,
 		isEmphasized: false,
 		isReadOnly: false,
+		isKeyboardFocused: false,
 		max: 5,
 		value: 3,
 	},
@@ -57,7 +58,7 @@ export default {
 };
 
 /**
- * A initial value of three is used for the following examples, to demonstrate both active and inactive stars.
+ * An initial value of three is used for the following examples, to demonstrate both active and inactive stars.
  * When hovering over a rating component that has a previously entered value, an underline appears under the
  * current selection to provide context.
  */
