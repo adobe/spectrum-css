@@ -48,6 +48,10 @@ export default {
 				...(Menu.parameters?.actions?.handles ?? []),
 			],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/eoZHKJH9a3LJkHYCGt60Vb/S2-token-specs?node-id=20959-21513&node-type=frame&t=jbePQKK1yLdrHG2M-11",
+		},
 		packageJson,
 		docs: {
 			story: {
