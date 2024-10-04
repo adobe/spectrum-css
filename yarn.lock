@@ -4216,6 +4216,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/textarea@workspace:components/textarea":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/textarea@workspace:components/textarea"
+  dependencies:
+    "@spectrum-css/textfield": "workspace:^"
+    "@spectrum-css/tokens": "workspace:^"
+  peerDependencies:
+    "@spectrum-css/textfield": ">=5"
+    "@spectrum-css/tokens": ">=14"
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/textfield@workspace:^, @spectrum-css/textfield@workspace:components/textfield":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/textfield@workspace:components/textfield"
