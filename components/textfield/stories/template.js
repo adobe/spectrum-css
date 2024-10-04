@@ -218,3 +218,17 @@ export const HelpTextOptions = (args, context) => Container({
 		})}
 	`
 });
+
+export const Overflow = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	withHeading: false,
+	content: html`
+		${Template({
+			...args,
+			customStyles: {
+				"max-block-size": "480px",
+			},
+		}, context)}
+	`
+});

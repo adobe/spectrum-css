@@ -75,15 +75,7 @@ export default {
 		isRequired,
 		isReadOnly,
 		isLoading,
-		pattern: {
-			name: "Pattern",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			control: "text",
-		},
+		pattern: { table: { disable: true } },
 		value: { table: { disable: true } },
 		hasDescription: {
 			name: "Help Text",

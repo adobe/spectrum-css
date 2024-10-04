@@ -1,8 +1,7 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
+import { TextFieldGroup } from "@spectrum-css/textfield/stories/textfield.test.js";
 import { HelpTextOptions, Template } from "../../textfield/stories/template";
-import { TextFieldGroup } from "../../textfield/stories/textfield.test";
 
 /**
  * A text area lets a user input a longer amount of text than a standard text field. It can include all of the standard validation options supported by the text field component.
@@ -75,15 +74,7 @@ export default {
 		isRequired,
 		isReadOnly,
 		isLoading,
-		pattern: {
-			name: "Pattern",
-			type: { name: "string" },
-			table: {
-				type: { summary: "string" },
-				category: "Component",
-			},
-			control: "text",
-		},
+		pattern: { table: { disable: true } },
 		value: { table: { disable: true } },
 		hasDescription: {
 			name: "Help Text",
@@ -123,7 +114,7 @@ export default {
 			},
 			control: { type: "number" },
 			if: { arg: "displayCounter", eq: true },
-		}
+		},
 	},
 	args: {
 		rootClass: "spectrum-Textfield",
@@ -145,6 +136,8 @@ export default {
 		isQuiet: false,
 		value: "Value",
 		labelText: "Label",
+		hasDescription: false,
+		description: "Example help text. Lorem ipsum dolor sit amet."
 	},
 };
 
@@ -231,21 +224,6 @@ SideLabel.args = {
 	hasDescription: true
 };
 SideLabel.parameters = {
-	chromatic: { disableSnapshot: true }
-};
-
-export const Sizing = (args, context) => Sizes({
-	Template: TextFieldGroup,
-	withHeading: false,
-	withBorder: false,
-	...args,
-}, context);
-
-Sizing.args = {
-	hasDescription: true
-};
-Sizing.tags = ["!dev"];
-Sizing.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
