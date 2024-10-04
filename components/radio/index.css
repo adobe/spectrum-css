@@ -253,10 +253,10 @@
 		}
 
 		.spectrum-Radio-label,
-    /* ensure disabled readonly has normal text color */
-    & .spectrum-Radio-input:disabled ~ .spectrum-Radio-label,
-    & .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label {
-			margin-inline-start: auto;
+		/* ensure disabled readonly has normal text color */
+		& .spectrum-Radio-input:disabled ~ .spectrum-Radio-label,
+		& .spectrum-Radio-input:checked:disabled ~ .spectrum-Radio-label {
+			margin-inline-start: 0;
 			color: var(--highcontrast-radio-neutral-content-color, var(--mod-radio-neutral-content-color, var(--spectrum-radio-neutral-content-color)));
 		}
 	}
