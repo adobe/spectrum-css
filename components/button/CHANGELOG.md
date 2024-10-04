@@ -1,5 +1,11 @@
 # Change Log
 
+## 14.0.0-s2-foundations.18
+
+### Minor Changes
+
+- [#3197](https://github.com/adobe/spectrum-css/pull/3197) [`1eac198`](https://github.com/adobe/spectrum-css/commit/1eac198754ca1e60f96a64c7cf5e7c7a4758b1f3) Thanks [@cdransf](https://github.com/cdransf)! - Replaces all of occurrences of --spectrum-component-pill-edge-to-text-_ (intended to be used as padding) in the button component with the appropriate corner-radius-_ tokens.
+
 ## 14.0.0-s2-foundations.17
 
 ### Minor Changes
