@@ -105,6 +105,8 @@ export default {
 		],
 	},
 	parameters: {
+		// docsPage: false here signifies that no Spectrum guidelines page exists for form, and we don't want to render a guidelines resource card.
+		docsPage: false,
 		packageJson,
 		metadata,
 	},

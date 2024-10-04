@@ -333,28 +333,38 @@ export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
 	);
 };
 
-export const ResourceListDetails = ({ packageName, spectrumData = [] }) => {
+export const ResourceListDetails = ({ packageName, spectrumData = [], hasDocsPage }) => {
 	if (!packageName) return;
 
 	let href;
-	// checks if the any nested component name is included in the page URL
+	// if nested components don't have a docs page, don't render a guidelines link
 	for(let i = 0; i < spectrumData?.length; i++) {
-		if (
-			spectrumData[i]?.guidelines &&
-			(
-				window.location.href.includes(spectrumData[i]?.componentName) ||
-				window.location.href.includes(spectrumData[i]?.componentName.replace("-", ""))
-			)
-		) {
+		if (spectrumData[i]?.guidelines && hasDocsPage === undefined) {
 			href = spectrumData[i]?.guidelines;
 		}
 	}
 
 	return (
 		<ResourceSection skipBorder={true} className="sb-unstyled">
-			{href ? <ResourceLinkContent className="doc-block-resource-cards" heading="View guidelines" alt="Spectrum website" logo="Adobe" href={href}/> : ""}
-			<ResourceLinkContent className="doc-block-resource-cards" heading="View package" alt="npm" logo="npm" href={`https://npmjs.com/${packageName}`}/>
-			<ResourceLinkContent className="doc-block-resource-cards" heading="View repository" alt="GitHub" logo="GitHub" href={`https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split('/').pop()}`}/>
+			{href ? 
+				<ResourceLinkContent
+					className="doc-block-resource-cards"
+					heading="View guidelines"
+					alt="Spectrum website"
+					logo="Adobe"
+					href={href}/> : ""}
+				<ResourceLinkContent
+					className="doc-block-resource-cards"
+					heading="View package"
+					alt="npm"
+					logo="npm"
+					href={`https://npmjs.com/${packageName}`}/>
+			<ResourceLinkContent
+				className="doc-block-resource-cards"
+				heading="View repository"
+				alt="GitHub"
+				logo="GitHub"
+				href={`https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split('/').pop()}`}/>
 		</ResourceSection>
 	)
 };
@@ -376,6 +386,7 @@ export const ComponentDetails = () => {
 
 	const isDeprecated = storyMeta?.csfFile?.meta?.parameters?.status?.type == "deprecated";
 	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
+	const hasDocsPage = storyMeta?.csfFile.meta?.parameters?.docsPage ?? undefined;
 
 	const packageName = packageJson?.name;
 
@@ -415,7 +426,7 @@ export const ComponentDetails = () => {
 							</>
 						}
 					</DList>
-					<ResourceListDetails packageName={packageName} spectrumData={spectrumData}/>
+					<ResourceListDetails packageName={packageName} spectrumData={spectrumData} hasDocsPage={hasDocsPage}/>
 				</>
 			: ""}
 		</ResetWrapper>
