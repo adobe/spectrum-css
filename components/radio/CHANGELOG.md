@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.3.0
+
+### Minor Changes
+
+- [#3164](https://github.com/adobe/spectrum-css/pull/3164) [`f8dead7`](https://github.com/adobe/spectrum-css/commit/f8dead7a680e88678bf830fccee32ecc661677bc) Thanks [@jawinn](https://github.com/jawinn)! - Fixes an issue with the alignment of a read-only radio's label element within field group and flex layouts.
+
 ## 9.2.4
 
 ### Patch Changes
