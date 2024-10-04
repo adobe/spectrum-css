@@ -5,6 +5,9 @@ export const ActionGroups = Variants({
 	Template,
 	testData: [
 		{
+			testHeading: "Default"
+		},
+		{
 			testHeading: "Compact",
 			compact: true,
 		},

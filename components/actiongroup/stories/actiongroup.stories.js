@@ -51,7 +51,7 @@ export default {
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Advanced",
+				category: "Component",
 			},
 			control: "boolean",
 		},
@@ -137,6 +137,8 @@ Horizontal.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+Horizontal.storyName = "Default";
+
 /**
  * The compact density retains the same font and icon sizes, but has tighter spacing. The action buttons also become connected for non-quiet action groups.
 */
@@ -199,10 +201,6 @@ VerticalSizing.args = {
 	vertical: true
 };
 VerticalSizing.tags = ["!dev"];
-VerticalSizing.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
 VerticalSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
