@@ -90,6 +90,10 @@ export default {
 				height: "200px",
 			}
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=42086-5684",
+		},
 		packageJson: pkgJson,
 	},
 };
