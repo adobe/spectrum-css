@@ -4,8 +4,8 @@ on:
     push:
       branches:
         - main
-        - !changeset-release/**
-        - !dependabot/**
+        - "!changeset-release/**"
+        - "!dependabot/**"
 
     workflow_dispatch:
     workflow_call:
