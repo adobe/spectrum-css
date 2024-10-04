@@ -37,7 +37,7 @@
 		"refresh:config": "bash ./tasks/chromatic-config-creation.sh || exit 0",
 		"refresh:env": "bash ./tasks/copy-env-from-root.sh || exit 0",
 		"release": "yarn ci && changeset publish",
-		"release:site": "cross-env NODE_ENV=production yarn build:site --skip-nx-cache && gh-pages -d dist/ -f -e . --nojekyll",
+		"release:site": "cross-env NODE_ENV=production yarn build:site --docs --skip-nx-cache && gh-pages -d dist/ -f -e . --nojekyll",
 		"report": "yarn reporter tag:component",
 		"reporter": "nx run-many --target report --projects",
 		"start": "cross-env NODE_ENV=development nx start storybook",
