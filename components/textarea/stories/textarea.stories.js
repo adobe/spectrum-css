@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import { TextFieldGroup } from "@spectrum-css/textfield/stories/textfield.test.js";
-import { HelpTextOptions, Template } from "../../textfield/stories/template";
+import { HelpTextOptions } from "../../textfield/stories/template";
 
 /**
  * A text area lets a user input a longer amount of text than a standard text field. It can include all of the standard validation options supported by the text field component.
@@ -141,7 +141,7 @@ export default {
 	},
 };
 
-export const Default = Template.bind({});
+export const Default = TextFieldGroup.bind({});
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
