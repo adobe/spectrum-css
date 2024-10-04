@@ -1,9 +1,6 @@
 | Modifiable custom properties                            |
 | ------------------------------------------------------- |
 | `--mod-texfield-animation-duration`                     |
-| `--mod-text-area-min-block-size`                        |
-| `--mod-text-area-min-block-size-quiet`                  |
-| `--mod-text-area-min-inline-size`                       |
 | `--mod-textfield-background-color`                      |
 | `--mod-textfield-background-color-disabled`             |
 | `--mod-textfield-border-color`                          |

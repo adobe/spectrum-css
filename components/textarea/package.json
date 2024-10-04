@@ -12,10 +12,21 @@
 	"bugs": {
 		"url": "https://github.com/adobe/spectrum-css/issues"
 	},
+  "peerDependencies": {
+		"@spectrum-css/textfield": ">=5",
+		"@spectrum-css/tokens": ">=14"
+	},
+	"devDependencies": {
+		"@spectrum-css/textfield": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^"
+	},
   "keywords": [
 		"spectrum",
 		"css",
 		"design system",
 		"adobe"
-	]
+	],
+  "publishConfig": {
+		"access": "public"
+	}
 }

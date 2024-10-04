@@ -94,9 +94,6 @@
   ],
   "modifiers": [
     "--mod-texfield-animation-duration",
-    "--mod-text-area-min-block-size",
-    "--mod-text-area-min-block-size-quiet",
-    "--mod-text-area-min-inline-size",
     "--mod-textfield-background-color",
     "--mod-textfield-background-color-disabled",
     "--mod-textfield-border-color",
@@ -342,7 +339,11 @@
     "--system-spectrum-textfield-border-color-keyboard-focus",
     "--system-spectrum-textfield-border-width"
   ],
-  "passthroughs": [],
+  "passthroughs": [
+    "--mod-text-area-min-block-size",
+    "--mod-text-area-min-block-size-quiet",
+    "--mod-text-area-min-inline-size"
+  ],
   "high-contrast": [
     "--highcontrast-textfield-border-color",
     "--highcontrast-textfield-border-color-focus",
