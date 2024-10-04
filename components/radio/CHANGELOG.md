@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.0.0-s2-foundations.16
+
+### Minor Changes
+
+- [#3164](https://github.com/adobe/spectrum-css/pull/3164) [`f8dead7`](https://github.com/adobe/spectrum-css/commit/f8dead7a680e88678bf830fccee32ecc661677bc) Thanks [@jawinn](https://github.com/jawinn)! - Fixes an issue with the alignment of a read-only radio's label element within field group and flex layouts.
+
 ## 10.0.0-s2-foundations.15
 
 ### Minor Changes
