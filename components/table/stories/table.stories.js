@@ -110,6 +110,10 @@ export default {
 		],
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=54024-574",
+		},
 		packageJson: pkgJson,
 	},
 };
