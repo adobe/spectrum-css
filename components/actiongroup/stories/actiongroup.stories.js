@@ -7,7 +7,7 @@ import { ActionGroups } from "./actiongroup.test.js";
 import { OverflowOption, TreatmentTemplate } from "./template.js";
 
 /**
- * An action group is a grouping of [action buttons](/docs/components-action-button--docs&globals=testingPreview:!true) that are related to each other.
+ * An action group is a grouping of [action buttons](/docs/components-action-button--docs) that are related to each other.
  */
 export default {
 	title: "Action group",
@@ -146,6 +146,10 @@ HorizontalCompact.args = {
 	compact: true
 };
 
+HorizontalCompact.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 /**
  * The vertical option should be reserved for when horizontal space is limited.
 */
@@ -156,12 +160,20 @@ Vertical.args = {
 	vertical: true
 };
 
+Vertical.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
 
 export const VerticalCompact = TreatmentTemplate.bind({});
 VerticalCompact.tags = ["!dev"];
 VerticalCompact.args = {
 	compact: true,
 	vertical: true
+};
+
+VerticalCompact.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 
@@ -173,10 +185,6 @@ export const HorizontalSizing = (args, context) => Sizes({
 }, context);
 HorizontalSizing.args = {};
 HorizontalSizing.tags = ["!dev"];
-HorizontalSizing.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
 HorizontalSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
