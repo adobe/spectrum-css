@@ -4,6 +4,9 @@ on:
     push:
       branches:
         - main
+        - "!changeset-release/**"
+        - "!dependabot/**"
+
     workflow_dispatch:
     workflow_call:
         inputs:
@@ -23,12 +26,12 @@ permissions:
 
 jobs:
     vrt:
+        if: ${{ !contains(github.event.push.ref, 'changeset-release') &&  !contains(github.event.push.ref, 'dependabot') }}
         name: Chromatic
         runs-on: ubuntu-latest
         timeout-minutes: 20
         outputs:
-            storybook-url: ${{ steps.chromatic.outputs.storybookUrl != 'undefined' && steps.chromatic.outputs.storybookUrl || '' }}
-
+          storybook-url: ${{ steps.chromatic.outputs.storybookUrl != 'undefined' && steps.chromatic.outputs.storybookUrl || '' }}
         steps:
             - name: Check out code
               uses: actions/checkout@v4
