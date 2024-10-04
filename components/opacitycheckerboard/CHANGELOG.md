@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.0-s2-foundations.15
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`a434c9a`](https://github.com/adobe/spectrum-css/commit/a434c9aa96509427e0faaa0eef4ffc2a21fa9908) Thanks [@pfulton](https://github.com/pfulton)! - Align selectors with the specificity that exists in S1 today
+
 ## 3.0.0-s2-foundations.14
 
 ### Major Changes
