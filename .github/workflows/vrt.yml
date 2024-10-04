@@ -26,7 +26,7 @@ permissions:
 
 jobs:
     vrt:
-        if: ${{ github.event.push.ref != 'refs/heads/changeset-release' ||  github.event.push.ref != 'refs/heads/dependabot'}}
+        if: ${{ !contains(github.event.push.ref, 'changeset-release') &&  !contains(github.event.push.ref, 'dependabot') }}
         name: Chromatic
         runs-on: ubuntu-latest
         timeout-minutes: 20
