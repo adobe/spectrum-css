@@ -85,7 +85,7 @@ export default {
 		},
 		design: {
 			type: "figma",
-			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=702-2904&node-type=frame&t=Kcz7zeePp3PeRusJ-11",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=702-2877",
 		},
 		packageJson: pkgJson,
 		docs: {

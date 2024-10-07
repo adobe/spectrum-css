@@ -64,7 +64,7 @@ export default {
 		// Getting the Figma link: https://help.figma.com/hc/en-us/articles/360045003494-Storybook-and-Figma
 		design: {
 			type: "figma",
-			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=28379-3165&node-type=frame&t=Kcz7zeePp3PeRusJ-11",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=28379-300",
 		},
 		packageJson: pkgJson,
 	},

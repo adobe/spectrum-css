@@ -58,7 +58,7 @@ export default {
 	parameters: {
 		design: {
 			type: "figma",
-			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13663-7132&node-type=frame&t=Kcz7zeePp3PeRusJ-11",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13663-6530",
 		},
 		packageJson: pkgJson,
 	},

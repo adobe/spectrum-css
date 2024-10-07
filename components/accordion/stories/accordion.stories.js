@@ -58,7 +58,7 @@ export default {
 		chromatic: { disableSnapshot: true },
 		design: {
 			type: "figma",
-			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=39469-6827&t=HYBJ4Hj6Rc5c83Rp-4",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=39469-5419",
 		},
 		packageJson: pkgJson,
 	},

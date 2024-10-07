@@ -42,7 +42,7 @@ export default {
 	parameters: {
 		design: {
 			type: "figma",
-			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=29434-7665&node-type=frame&t=Kcz7zeePp3PeRusJ-11",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=29434-6624",
 		},
 		packageJson: pkgJson,
 	},
