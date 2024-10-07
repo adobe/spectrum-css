@@ -41,6 +41,10 @@ export default {
 		selectedColor: "rgba(255, 0, 0, 50%)",
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=20606-73",
+		},
 		packageJson: pkgJson,
 	},
 	tags: ["!autodocs"],
