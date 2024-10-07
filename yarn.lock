@@ -4411,7 +4411,7 @@ __metadata:
     "@actions/core": "npm:^1.10.1"
     "@actions/github": "npm:^6.0.0"
     "@actions/glob": "npm:^0.5.0"
-    diff: "npm:^5.2.0"
+    diff: "npm:^7.0.0"
     diff2html: "npm:^3.4.48"
   languageName: unknown
   linkType: soft
@@ -8576,10 +8576,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff@npm:^5.2.0":
-  version: 5.2.0
-  resolution: "diff@npm:5.2.0"
-  checksum: 10c0/aed0941f206fe261ecb258dc8d0ceea8abbde3ace5827518ff8d302f0fc9cc81ce116c4d8f379151171336caf0516b79e01abdc1ed1201b6440d895a66689eb4
+"diff@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "diff@npm:7.0.0"
+  checksum: 10c0/251fd15f85ffdf814cfc35a728d526b8d2ad3de338dcbd011ac6e57c461417090766b28995f8ff733135b5fbc3699c392db1d5e27711ac4e00244768cd1d577b
   languageName: node
   linkType: hard
 
@@ -17119,7 +17119,7 @@ __metadata:
     cross-env: "npm:^7.0.3"
     cssnano: "npm:^7.0.3"
     cssnano-preset-advanced: "npm:^7.0.6"
-    diff: "npm:^5.2.0"
+    diff: "npm:^7.0.0"
     diff2html: "npm:^3.4.48"
     eslint: "npm:^8.57.0"
     eslint-plugin-jsonc: "npm:^2.16.0"
