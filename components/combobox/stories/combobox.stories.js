@@ -101,6 +101,7 @@ Default.tags = ["!autodocs"];
 Default.args = {
 	isOpen: true,
 	fieldLabelText: "Select location",
+	value: "Ballard",
 	content: [
 		(passthroughs, context) => Menu({
 			role: "listbox",

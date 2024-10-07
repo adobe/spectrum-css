@@ -25,15 +25,9 @@ const Combobox = ({
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
-	selectedDay,
+	value,
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-	const lang = globals.lang ?? "en-US";
-
-	// If selectedDay is a string, convert it to a Date object
-	if (typeof selectedDay === "string" && selectedDay.length > 0) {
-		selectedDay = new Date(selectedDay).toLocaleDateString({ language: lang });
-	}
+	const { updateArgs } = context;
 
 	return html`
 		<div
@@ -69,9 +63,7 @@ const Combobox = ({
 				isLoading,
 				customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 				name: "field",
-				value: selectedDay
-					? new Date(selectedDay).toLocaleDateString(lang)
-					: undefined,
+				value,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
@@ -108,6 +100,7 @@ export const Template = ({
 	fieldLabelText = "Select location",
 	fieldLabelPosition = "top",
 	content = [],
+	value = "",
 	...args
 } = {}, context = {}) => {
 	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
@@ -136,6 +129,7 @@ export const Template = ({
 						isOpen,
 						isQuiet,
 						isDisabled,
+						value,
 						...args,
 						...passthrough,
 					}, context),
