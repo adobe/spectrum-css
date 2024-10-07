@@ -1,0 +1,74 @@
+{
+	"name": "@spectrum-css/menu",
+	"version": "7.1.7",
+	"description": "The Spectrum CSS menu component",
+	"license": "Apache-2.0",
+	"author": "Adobe",
+	"homepage": "https://opensource.adobe.com/spectrum-css/menu",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adobe/spectrum-css.git",
+		"directory": "components/menu"
+	},
+	"bugs": {
+		"url": "https://github.com/adobe/spectrum-css/issues"
+	},
+	"exports": {
+		".": "./dist/index.css",
+		"./*.md": "./*.md",
+		"./dist/*": "./dist/*",
+		"./index-*.css": "./dist/index-*.css",
+		"./index.css": "./dist/index.css",
+		"./metadata.json": "./metadata/metadata.json",
+		"./metadata/*": "./metadata/*",
+		"./package.json": "./package.json",
+		"./stories/*": "./stories/*"
+	},
+	"main": "dist/index.css",
+	"files": [
+		"dist/*",
+		"*.md",
+		"package.json",
+		"stories/*",
+		"metadata/*"
+	],
+	"peerDependencies": {
+		"@spectrum-css/checkbox": ">=9",
+		"@spectrum-css/divider": ">=3",
+		"@spectrum-css/icon": ">=7",
+		"@spectrum-css/switch": ">=5",
+		"@spectrum-css/tokens": ">=14",
+		"@spectrum-css/tray": ">=3"
+	},
+	"peerDependenciesMeta": {
+		"@spectrum-css/checkbox": {
+			"optional": true
+		},
+		"@spectrum-css/divider": {
+			"optional": true
+		},
+		"@spectrum-css/switch": {
+			"optional": true
+		},
+		"@spectrum-css/tray": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@spectrum-css/checkbox": "workspace:^",
+		"@spectrum-css/divider": "workspace:^",
+		"@spectrum-css/icon": "workspace:^",
+		"@spectrum-css/switch": "workspace:^",
+		"@spectrum-css/tokens": "workspace:^",
+		"@spectrum-css/tray": "workspace:^"
+	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
+	"publishConfig": {
+		"access": "public"
+	}
+}
