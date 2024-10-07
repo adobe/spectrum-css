@@ -1,5 +1,4 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
 import { getRandomId } from "@spectrum-css/preview/decorators";
@@ -108,6 +107,7 @@ export const Template = ({
 	showFieldLabel = false,
 	fieldLabelText = "Select location",
 	fieldLabelPosition = "top",
+	content = [],
 	...args
 } = {}, context = {}) => {
 	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
@@ -139,26 +139,7 @@ export const Template = ({
 						...args,
 						...passthrough,
 					}, context),
-					content: [
-						Menu({
-							size,
-							items: [
-								{
-									label: "Ballard",
-								},
-								{
-									label: "Fremont",
-								},
-								{
-									label: "Greenwood",
-								},
-								{
-									label: "United States of America",
-									isDisabled: true,
-								},
-							],
-						}, context),
-					],
+					content,
 					popoverWidth: size === "s" ? 140 : size === "l" ? 191 : size === "xl" ? 192 : 166, // default value is "m"
 					popoverHeight,
 				}, context),

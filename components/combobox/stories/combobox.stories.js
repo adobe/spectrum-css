@@ -102,10 +102,11 @@ Default.args = {
 	isOpen: true,
 	fieldLabelText: "Select location",
 	content: [
-		Menu({
+		(passthroughs, context) => Menu({
 			role: "listbox",
 			subrole: "option",
-			isSelectable: true,
+			selectionMode: "single",
+			hasDividers: true,
 			items: [
 				{
 					label: "Ballard",
@@ -126,7 +127,8 @@ Default.args = {
 					isDisabled: true,
 				},
 			],
-		}),
+			...passthroughs,
+		}, context),
 	],
 };
 
