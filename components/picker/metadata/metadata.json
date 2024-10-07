@@ -6,6 +6,7 @@
     ".spectrum-Picker .spectrum-Picker-icon",
     ".spectrum-Picker .spectrum-Picker-label",
     ".spectrum-Picker .spectrum-ProgressCircle",
+    ".spectrum-Picker--menu-height-fixed + .spectrum-Popover.is-open",
     ".spectrum-Picker--quiet",
     ".spectrum-Picker--quiet .spectrum-Picker-menuIcon",
     ".spectrum-Picker--quiet.is-keyboardFocused",
@@ -320,7 +321,8 @@
   "passthroughs": [
     "--mod-button-animation-duration",
     "--mod-button-font-family",
-    "--mod-button-line-height"
+    "--mod-button-line-height",
+    "--mod-popover-max-block-size"
   ],
   "high-contrast": [
     "--highcontrast-picker-background-color",

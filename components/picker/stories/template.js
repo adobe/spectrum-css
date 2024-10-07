@@ -26,6 +26,7 @@ export const Picker = ({
 	customClasses = [],
 	customStyles = {},
 	onclick,
+	menuHeight = false,
 } = {}, context = {}) => {
 	return html`
 		<button
@@ -39,6 +40,7 @@ export const Picker = ({
 				["is-open"]: isOpen,
 				["is-loading"]: isLoading,
 				["is-keyboardFocused"]: isKeyboardFocused,
+				[`${rootClass}--menu-height-fixed`]: menuHeight,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			?disabled=${isDisabled}
@@ -89,8 +91,8 @@ export const Template = ({
 	withSwitch = false,
 	fieldLabelStyle = {},
 	customClasses = [],
-	customStyles = {},
 	content = [],
+	menuHeight = false,
 	id = getRandomId("picker"),
 } = {}, context = {}) => {
 	const { updateArgs } = context;
@@ -137,13 +139,10 @@ export const Template = ({
 				isDisabled,
 				isReadOnly,
 				customClasses,
-				customStyles: {
-					"display": labelPosition == "left" ? "inline-block" : undefined,
-					...customStyles,
-				},
 				content,
 				iconName,
 				labelPosition,
+				menuHeight,
 				id,
 				onclick: function() {
 					updateArgs({ isOpen: !isOpen });

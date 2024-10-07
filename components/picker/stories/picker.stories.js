@@ -52,6 +52,16 @@ export default {
 		},
 		isQuiet,
 		isOpen,
+		menuHeight: {
+			name: "Max menu block size",
+			type: {name: "boolean"},
+			table: {
+				type: { name: "boolean" },
+				category: "State",
+			},
+			if: { arg: "isOpen", eq: true },
+			control: "boolean",
+		},
 		isKeyboardFocused,
 		isDisabled,
 		isLoading,
