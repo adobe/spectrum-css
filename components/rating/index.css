@@ -149,18 +149,8 @@
 		position: absolute;
 	}
 
-	/* All stars following the hovered star */
-	&:hover ~ .spectrum-Rating-icon {
-		.spectrum-Rating-starActive {
-			display: none;
-		}
-
-		.spectrum-Rating-starInactive {
-			display: block;
-		}
-	}
-
-	&.is-hovered {
+	&:hover,
+	&.is-hoverSelection {
 		.spectrum-Rating-starActive {
 			display: block;
 		}

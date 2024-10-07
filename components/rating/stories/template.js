@@ -49,7 +49,11 @@ export const Template = ({
 		};
 
 		rating.addEventListener("mouseleave", function() {
-			icons.forEach(icon => icon.classList.remove("is-hoverSelection"));
+			icons.forEach(icon => {
+				icon.classList.remove("is-hoverSelection");
+				icon.querySelector(".spectrum-Rating-starActive").style.display = "";
+				icon.querySelector(".spectrum-Rating-starInactive").style.display = "";
+			});
 		});
 
 		icons.forEach((icon, index) => {

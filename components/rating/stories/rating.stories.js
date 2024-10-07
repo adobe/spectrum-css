@@ -12,6 +12,7 @@ import { Template } from "./template.js";
  * - All active stars have the class `is-selected` applied.
  * - The current value (the last active star) has the class `is-currentValue` applied.
  * - When the rating receives keyboard focus, the class `is-keyboardFocused` should be added to the component's root element (`.spectrum-Rating`).
+ * - When the rating is hovered, the class `is-hoverSelection` should be added to the `spectrum-Rating-icon` being hovered over.
  */
 export default {
 	title: "Rating",
