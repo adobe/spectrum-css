@@ -6,7 +6,7 @@ import { Template } from "./template.js";
 
 /**
  * The rating component is used to display or collect a user's rating of an item as represented by a number of stars.
- * 
+ *
  * ### Usage notes
  * - All active stars have the class `is-selected` applied.
  * - The current value (the last active star) has the class `is-currentValue` applied.
@@ -55,6 +55,11 @@ export default {
 	},
 	parameters: {
 		packageJson: pkgJson,
+		docs: {
+			story: {
+				inline: false,
+			},
+		},
 	},
 };
 

@@ -21,6 +21,7 @@ export const Template = ({
 	const { updateArgs } = context;
 	document.addEventListener("DOMContentLoaded", function() {
 		const rating = document.getElementById(id);
+		if (!rating) return;
 		if (rating.classList.contains("is-disabled") || rating.classList.contains("is-readOnly")) return;
 		const icons = Array.from(rating.getElementsByClassName("spectrum-Rating-icon"));
 		let hoverIndex = -1;
@@ -31,12 +32,10 @@ export const Template = ({
 				const activeStar = icon.querySelector(".spectrum-Rating-starActive");
 				const inactiveStar = icon.querySelector(".spectrum-Rating-starInactive");
 
-				if (index <= hoverIndex) {
+				if (index <= hoverIndex ||
+					(index <= selectedIndex && hoverIndex === -1)
+				) {
 					icon.classList.add("is-hoverSelection");
-					activeStar.style.display = "block";
-					inactiveStar.style.display = "none";
-				}
-				else if (index <= selectedIndex && hoverIndex === -1) {
 					activeStar.style.display = "block";
 					inactiveStar.style.display = "none";
 				}
