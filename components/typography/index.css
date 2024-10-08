@@ -309,7 +309,7 @@
 	font-weight: var(--mod-body-sans-serif-font-weight, var(--spectrum-body-sans-serif-font-weight));
 	font-size: var(--mod-body-font-size, var(--spectrum-body-font-size));
 	color: var(--highcontrast-body-font-color, var(--mod-body-font-color, var(--spectrum-body-font-color)));
-	margin-block-start: var(--mod-body-margin-start, var(--mod-body-margin, var(--spectrum-body-margin-start, 0)));
+	margin-block-start: var(--mod-body-margin-start, var(--mod-body-margin, 0));
 	margin-block-end: var(--mod-body-margin-end, var(--mod-body-margin, var(--spectrum-body-margin-end, 0)));
 
 	line-height: var(--mod-body-line-height, var(--spectrum-body-line-height));
@@ -561,8 +561,8 @@
 	font-style: var(--mod-code-font-style, var(--spectrum-code-font-style));
 	font-weight: var(--mod-code-font-weight, var(--spectrum-code-font-weight));
 	font-size: var(--mod-code-font-size, var(--spectrum-code-font-size));
-	margin-block-start: var(--mod-code-margin-start, var(--spectrum-code-margin-end, 0));
-	margin-block-end: var(--mod-code-margin-end, var(--spectrum-code-margin-end, 0));
+	margin-block-start: var(--mod-code-margin-start, 0);
+	margin-block-end: var(--mod-code-margin-end, 0);
 
 	line-height: var(--mod-code-line-height, var(--spectrum-code-line-height));
 
