@@ -3,7 +3,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
-import { Template } from "./template.js";
+import { VariantGroup } from "./template.js";
 
 /**
  * Comboboxes combine a text entry with a picker menu, allowing users to filter longer lists to only the selections matching a query.
@@ -134,130 +134,22 @@ Default.args = {
 };
 
 // ********* DOCS ONLY ********* //
-export const DefaultOpen = Template.bind({});
-DefaultOpen.storyName = "Default - open";
-DefaultOpen.args = Default.args;
-DefaultOpen.tags = ["!dev"];
-DefaultOpen.parameters = {
+export const DefaultGroup = VariantGroup.bind({});
+DefaultGroup.storyName = "Default";
+DefaultGroup.args = Default.args;
+DefaultGroup.tags = ["!dev"];
+DefaultGroup.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const WithLabel = Template.bind({});
-WithLabel.storyName = "Default - open with label";
-WithLabel.tags = ["!dev"];
-WithLabel.args = {
+export const QuietGroup = VariantGroup.bind({});
+QuietGroup.storyName = "Quiet";
+QuietGroup.args = {
 	...Default.args,
-	showFieldLabel: true,
-	fieldLabelText: "Country",
-};
-WithLabel.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const Closed = Template.bind({});
-Closed.storyName = "Default - closed";
-Closed.tags = ["!dev"];
-Closed.args = {
-	isOpen: false,
-};
-Closed.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const Invalid = Template.bind({});
-Invalid.storyName = "Default - invalid";
-Invalid.tags = ["!dev"];
-Invalid.args = {
-	isInvalid: true,
-};
-Invalid.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const Loading = Template.bind({});
-Loading.storyName = "Default - loading";
-Loading.tags = ["!dev"];
-Loading.args = {
-	isLoading: true,
-};
-Loading.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const Disabled = Template.bind({});
-Disabled.storyName = "Default - disabled";
-Disabled.tags = ["!dev"];
-Disabled.args = {
-	isDisabled: true,
-};
-Disabled.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-// Quiet
-export const Quiet = Template.bind({});
-Quiet.storyName = "Quiet - open";
-Quiet.tags = ["!dev"];
-Quiet.args = {
 	isQuiet: true,
 };
-Quiet.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const QuietWithLabel = Template.bind({});
-QuietWithLabel.storyName = "Quiet - with label";
-QuietWithLabel.tags = ["!dev"];
-QuietWithLabel.args = {
-	showFieldLabel: true,
-	fieldLabelText: "Country",
-	isQuiet: true,
-};
-QuietWithLabel.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const QuietClosed = Template.bind({});
-QuietClosed.storyName = "Quiet - closed";
-QuietClosed.tags = ["!dev"];
-QuietClosed.args = {
-	isQuiet: true,
-	isOpen: false,
-};
-QuietClosed.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const QuietInvalid = Template.bind({});
-QuietInvalid.storyName = "Quiet - invalid";
-QuietInvalid.tags = ["!dev"];
-QuietInvalid.args = {
-	isQuiet: true,
-	isInvalid: true,
-};
-QuietInvalid.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const QuietLoading = Template.bind({});
-QuietLoading.storyName = "Quiet - loading";
-QuietLoading.tags = ["!dev"];
-QuietLoading.args = {
-	isQuiet: true,
-	isLoading: true,
-};
-QuietLoading.parameters = {
-	chromatic: { disableSnapshot: true },
-};
-
-export const QuietDisabled = Template.bind({});
-QuietDisabled.storyName = "Quiet - disabled";
-QuietDisabled.tags = ["!dev"];
-QuietDisabled.args = {
-	isQuiet: true,
-	isDisabled: true,
-};
-QuietDisabled.parameters = {
+QuietGroup.tags = ["!dev"];
+QuietGroup.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 

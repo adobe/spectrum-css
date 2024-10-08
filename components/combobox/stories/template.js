@@ -1,7 +1,7 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -140,4 +140,47 @@ export const Template = ({
 			]}
 		</div>
 	`;
+};
+
+export const VariantGroup = (args, context) => {
+	const variants = [
+		{
+			heading: "Closed",
+			args: {...args, isOpen: false},
+		},
+		{
+			heading: "Closed invalid",
+			args: {...args, isOpen: false, isInvalid: true},
+		},
+		{
+			heading: "Closed loading",
+			args: {...args, isOpen: false, isLoading: true},
+		},
+		{
+			heading: "Closed disabled",
+			args: {...args, isOpen: false, isDisabled: true},
+		},
+		{
+			heading: "Open",
+			args: {...args},
+		},
+		{
+			heading: "Open with label",
+			args: {...args, showFieldLabel: true, fieldLabelText: "Country"},
+		},
+	];
+	
+	return Container({
+		direction: "row",
+		withHeading: false,
+		withBorder: false,
+		content: html`${
+			variants.map(variant => Container({
+				withBorder: false,
+				heading: variant.heading,
+				containerStyles: {"gap": "8px"},
+				content: Template(variant.args, context),
+			}))
+		}`
+	});
 };
