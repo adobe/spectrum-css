@@ -90,6 +90,35 @@ export default {
 		isDisabled: false,
 		showFieldLabel: false,
 		testId: "combobox",
+		content: [
+			(passthroughs, context) => Menu({
+				role: "listbox",
+				subrole: "option",
+				selectionMode: "single",
+				hasDividers: true,
+				items: [
+					{
+						label: "Ballard",
+						isSelected: true,
+						isChecked: true,
+					},
+					{
+						label: "Fremont",
+					},
+					{
+						label: "Greenwood",
+					},
+					{
+						type: "divider",
+					},
+					{
+						label: "United States of America",
+						isDisabled: true,
+					},
+				],
+				...passthroughs,
+			}, context),
+		],
 	},
 	parameters: {
 		packageJson: pkgJson,
@@ -102,35 +131,6 @@ Default.args = {
 	isOpen: true,
 	fieldLabelText: "Select location",
 	value: "Ballard",
-	content: [
-		(passthroughs, context) => Menu({
-			role: "listbox",
-			subrole: "option",
-			selectionMode: "single",
-			hasDividers: true,
-			items: [
-				{
-					label: "Ballard",
-					isSelected: true,
-					isChecked: true,
-				},
-				{
-					label: "Fremont",
-				},
-				{
-					label: "Greenwood",
-				},
-				{
-					type: "divider",
-				},
-				{
-					label: "United States of America",
-					isDisabled: true,
-				},
-			],
-			...passthroughs,
-		}, context),
-	],
 };
 
 // ********* DOCS ONLY ********* //
@@ -146,9 +146,9 @@ export const WithLabel = Template.bind({});
 WithLabel.storyName = "Default - open with label";
 WithLabel.tags = ["!dev"];
 WithLabel.args = {
+	...Default.args,
 	showFieldLabel: true,
 	fieldLabelText: "Country",
-	isOpen: true,
 };
 WithLabel.parameters = {
 	chromatic: { disableSnapshot: true },
