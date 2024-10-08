@@ -82,6 +82,10 @@ export default {
 				height: "300px"
 			}
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=37252-553",
+		},
 		packageJson,
 		metadata,
 	},
@@ -319,6 +323,12 @@ MenuItem.args = {
 	isHovered: false,
 	isSelected: false,
 	hasActions: false,
+};
+MenuItem.parameters = {
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=37252-2242&node-type=frame&t=Kcz7zeePp3PeRusJ-11",
+	},
 };
 
 /**
