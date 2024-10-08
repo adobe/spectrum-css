@@ -133,7 +133,7 @@ Wrapping.parameters = {
 };
 
 /**
- * A toast can have up to one action: [a static white, secondary, outline button.](?path=/docs/components-button--docs#static-white---secondary). This label should be kept concise, and it should only be used when there’s a direct action available that is related to the toast text.
+ * A toast can have up to one action: [a static white, secondary, outline button](?path=/docs/components-button--docs#static-white---secondary). This label should be kept concise, and it should only be used when there’s a direct action available that is related to the toast text.
 */
 
 export const Action = ActionTemplate.bind({});
