@@ -119,6 +119,10 @@ export default {
 				height: "500px",
 			},
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=839-1128",
+		},
 		packageJson: pkgJson,
 	},
 	decorators: [
@@ -235,6 +239,10 @@ WithScroll.parameters = {
 export const Fullscreen = DialogFullscreen.bind({});
 Fullscreen.parameters = {
 	chromatic: { disableSnapshot: true },
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=61935-5399",
+	},
 };
 Fullscreen.args = {
 	...Default.args,
@@ -247,6 +255,10 @@ Fullscreen.args = {
 export const FullscreenTakeover = DialogFullscreenTakeover.bind({});
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=61935-5399",
+	},
 };
 FullscreenTakeover.args = {
 	...Default.args,
