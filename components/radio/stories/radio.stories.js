@@ -53,6 +53,10 @@ export default {
 		actions: {
 			handles: ["click input[type=\"radio\"]"],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=164-16723",
+		},
 		packageJson: pkgJson,
 	},
 };

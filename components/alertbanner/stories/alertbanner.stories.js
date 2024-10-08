@@ -68,6 +68,10 @@ export default {
 		actions: {
 			handles: ["click .spectrum-AlertBanner button"],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=15963-287",
+		},
 		packageJson: pkgJson,
 	},
 };

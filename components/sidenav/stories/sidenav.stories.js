@@ -62,6 +62,10 @@ export default {
 		],
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=21993-665",
+		},
 		packageJson: pkgJson,
 	},
 };
@@ -140,6 +144,10 @@ Multilevel.args = {
 	]
 };
 Multilevel.parameters = {
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=21993-941&node-type=frame&t=YT3sYHqnhqpnjdv9-11",
+	},
 	chromatic: { disableSnapshot: true },
 };
 
@@ -187,6 +195,10 @@ WithHeading.args = {
 	]
 };
 WithHeading.parameters = {
+	design: {
+		type: "figma",
+		url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=21993-941&node-type=frame&t=YT3sYHqnhqpnjdv9-11",
+	},
 	chromatic: { disableSnapshot: true },
 };
 

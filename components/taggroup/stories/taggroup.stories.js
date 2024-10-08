@@ -54,6 +54,10 @@ export default {
 				...(TagStories.parameters.actions.handles ?? [])
 			],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=45924-645",
+		},
 		packageJson: pkgJson,
 	},
 };

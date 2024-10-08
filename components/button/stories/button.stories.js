@@ -84,6 +84,10 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Button"],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=707-2774",
+		},
 		packageJson: pkgJson,
 	},
 	tags: ["!autodocs"],
