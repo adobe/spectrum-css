@@ -1,5 +1,6 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template.js";
 
 export const ActionButtons = (args, context) => {
