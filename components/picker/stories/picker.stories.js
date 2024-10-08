@@ -131,6 +131,15 @@ export default {
 		},
 	},
 	parameters: {
+		docs: {
+			story: {
+				height: "400px"
+			}
+		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=739-1453",
+		},
 		packageJson: pkgJson,
 	},
 };

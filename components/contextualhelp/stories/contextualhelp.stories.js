@@ -92,6 +92,10 @@ export default {
 				...(ActionButtonStories?.parameters?.actions?.handles ?? [])
 			],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=49480-1934",
+		},
 		packageJson: pkgJson,
 		docs: {
 			story: {
