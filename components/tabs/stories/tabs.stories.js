@@ -112,6 +112,10 @@ export default {
 		actions: {
 			handles: [".spectrum-Tabs-item"],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=48979-4695",
+		},
 		packageJson: pkgJson,
 	},
 };
