@@ -52,8 +52,7 @@
 		--spectrum-table-row-background-color: var(--spectrum-gray-25);
 		--spectrum-table-row-text-color: var(--spectrum-neutral-content-color-default);
 
-		/* ----- *
-      @todo Refactor or remove these properties once the RGB stripped value is available. */
+		/* @todo Refactor or remove these properties once the RGB stripped value is available. */
 		--spectrum-table-selected-row-background-color: rgba(var(--spectrum-blue-900-rgb), var(--spectrum-table-selected-row-background-opacity));
 		--spectrum-table-selected-row-background-color-non-emphasized: rgba(var(--spectrum-gray-700-rgb), var(--spectrum-table-selected-row-background-opacity-non-emphasized));
 		--spectrum-table-row-background-color-hover: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-hover-opacity));
@@ -61,8 +60,6 @@
 		--spectrum-table-row-active-color: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-table-row-down-opacity));
 		--spectrum-table-selected-row-background-color-focus: rgba(var(--spectrum-blue-900-rgb), var(--spectrum-table-selected-row-background-opacity-hover));
 		--spectrum-table-selected-row-background-color-non-emphasized-focus: rgba(var(--spectrum-gray-700-rgb), var(--spectrum-table-selected-row-background-opacity-non-emphasized-hover));
-
-		/* ----- */
 
 		--spectrum-table-icon-color-default: var(--spectrum-neutral-subdued-content-color-default);
 		--spectrum-table-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
