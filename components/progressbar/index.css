@@ -97,6 +97,14 @@
 	position: relative;
 	animation-timing-function: var(--mod-progressbar-animation-ease-in-out-indeterminate, var(--spectrum-progressbar-animation-ease-in-out-indeterminate));
 	will-change: transform;
+
+	animation-name: indeterminate-loop-ltr;
+	animation-duration: var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate));
+	animation-iteration-count: infinite;
+}
+
+.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill:dir(rtl) {
+	animation-name: indeterminate-loop-rtl;
 }
 
 /* Variants  */
@@ -139,15 +147,6 @@
 	.spectrum-ProgressBar-track {
 		background: var(--spectrum-progressbar-track-color-white);
 	}
-}
-
-/* Animations  */
-.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill {
-	animation: indeterminate-loop-ltr var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
-}
-
-.spectrum-ProgressBar--indeterminate .spectrum-ProgressBar-fill:dir(rtl) {
-	animation: indeterminate-loop-rtl var(--mod-progressbar-animation-duration-indeterminate, var(--spectrum-progressbar-animation-duration-indeterminate)) infinite;
 }
 
 @keyframes indeterminate-loop-ltr {

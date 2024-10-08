@@ -35,6 +35,7 @@
 }
 
 .spectrum-CoachMark-buttongroup--mobile {
+	/* @passthrough ButtonGroup */
 	--mod-buttongroup-spacing-horizontal: var(--spectrum-coachmark-buttongroup-spacing-horizontal);
 
 	display: var(--spectrum-coachmark-buttongroup-mobile-display);
@@ -123,9 +124,10 @@
 	justify-self: start;
 	color: var(--mod-coachmark-step-color, var(--spectrum-coachmark-step-color));
 	font-size: var(--mod-coachmark-step-font-size, var(--spectrum-coachmark-step-font-size));
-	font-weight: var(--mod-coachmark-step-text-font-weight, var(--spectrum-coachmark-step-text-font-weight));
+	font-weight: var(--mod-coachmark-step-text-font-weight, var(--spectrum-coachmark-step-font-weight));
+	font-family: var(--spectrum-coachmark-step-font-family);
 	font-style: var(--mod-coachmark-step-font-style, var(--spectrum-coachmark-step-font-style));
-	line-height: var(--mod-coachmark-step-text-line-height, var(--spectrum-coachmark-step-text-line-height));
+	line-height: var(--mod-coachmark-step-text-line-height, var(--spectrum-coachmark-step-line-height));
 	white-space: nowrap;
 	margin-block-end: calc(var(--mod-coachmark-step-to-bottom, var(--spectrum-coachmark-step-to-bottom)) - var(--mod-coachmark-padding, var(--spectrum-coachmark-padding)));
 }

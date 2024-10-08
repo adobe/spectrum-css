@@ -77,5 +77,6 @@
 		/* Quiet/Gallery */
 		--spectrum-card-content-margin-top-quiet: var(--spectrum-spacing-100);
 		--spectrum-card-minimum-width-quiet: var(--spectrum-card-minimum-width);
+		--spectrum-card-background-color-quiet: var(--spectrum-background-base-color);
 	}
 }

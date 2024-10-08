@@ -108,6 +108,38 @@
 		border-color: var(--highcontrast-actionbutton-border-color-disabled, var(--mod-actionbutton-border-color-disabled, var(--spectrum-actionbutton-border-color-disabled)));
 		color: var(--highcontrast-actionbutton-content-color-disabled, var(--mod-actionbutton-content-color-disabled, var(--spectrum-actionbutton-content-color-disabled)));
 	}
+
+	&.is-selected {
+		--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected);
+		--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected);
+		--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected);
+		--mod-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected);
+
+		--mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected);
+		--mod-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected);
+		--mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected);
+		--mod-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected);
+
+		&.spectrum-ActionButton--emphasized {
+			--mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-default-selected-emphasized);
+			--mod-actionbutton-background-color-hover: var(--mod-actionbutton-background-color-hover-selected-emphasized);
+			--mod-actionbutton-background-color-down: var(--mod-actionbutton-background-color-down-selected-emphasized);
+			--mod-actionbutton-background-color-focus: var(--mod-actionbutton-background-color-focus-selected-emphasized);
+
+			--mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-default-selected-emphasized);
+			--mod-actionbutton-content-color-hover: var(--mod-actionbutton-content-color-hover-selected-emphasized);
+			--mod-actionbutton-content-color-down: var(--mod-actionbutton-content-color-down-selected-emphasized);
+			--mod-actionbutton-content-color-focus: var(--mod-actionbutton-content-color-focus-selected-emphasized);
+		}
+
+		&.spectrum-ActionButton--staticWhite,
+		&.spectrum-ActionButton--staticBlack {
+			--mod-actionbutton-content-color-default: var(--mod-actionbutton-static-content-color);
+			--mod-actionbutton-content-color-hover: var(--mod-actionbutton-static-content-color);
+			--mod-actionbutton-content-color-down: var(--mod-actionbutton-static-content-color);
+			--mod-actionbutton-content-color-focus: var(--mod-actionbutton-static-content-color);
+		}
+	}
 }
 
 a.spectrum-ActionButton {

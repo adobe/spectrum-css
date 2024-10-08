@@ -14,6 +14,19 @@
 @import "./themes/spectrum-two.css";
 
 .spectrum-Rating {
+	position: relative;
+	display: inline-flex;
+	flex: 0 0 auto;
+
+	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
+
+	inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
+	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
+
+	padding-inline: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) - 1.5px);
+
+	cursor: pointer;
+
 	&.is-focused {
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
 
@@ -46,31 +59,8 @@
 			/* Match the color of the star */
 			background: currentColor;
 		}
-	}
-}
 
-.spectrum-Rating {
-	position: relative;
-	display: inline-flex;
-	flex: 0 0 auto;
-
-	gap: var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing));
-
-	inline-size: calc((var(--mod-rating-icon-width, var(--spectrum-rating-icon-width)) + var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing))) * var(--mod-rating-icon-count, var(--spectrum-rating-icon-count)));
-	border-radius: var(--mod-rating-border-radius, var(--spectrum-rating-border-radius));
-
-	padding-inline: calc((var(--mod-rating-icon-spacing, var(--spectrum-rating-icon-spacing)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap))) - 1.5px);
-
-	cursor: pointer;
-
-	&.is-disabled,
-	&.is-readOnly {
-		cursor: default;
-		pointer-events: none;
-	}
-
-	/* When the entire component is hovered, show all solid icons */
-	&:hover {
+		/* When the entire component is hovered, show all solid icons */
 		.spectrum-Rating-starActive {
 			display: block;
 		}
@@ -78,6 +68,12 @@
 		.spectrum-Rating-starInactive {
 			display: none;
 		}
+	}
+
+	&.is-disabled,
+	&.is-readOnly {
+		cursor: default;
+		pointer-events: none;
 	}
 }
 
@@ -99,6 +95,8 @@
 	block-size: var(--mod-rating-icon-height, var(--spectrum-rating-icon-height));
 	padding-block: calc(var(--mod-rating-icon-spacing-vertical-top, var(--spectrum-rating-icon-spacing-vertical-top)) + var(--mod-rating-focus-indicator-gap, var(--spectrum-rating-focus-indicator-gap)));
 
+	color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+
 	.spectrum-Rating-starActive {
 		display: none;
 	}
@@ -108,6 +106,8 @@
 	}
 
 	&.is-selected {
+		color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+
 		.spectrum-Rating-starActive {
 			display: block;
 		}
@@ -130,6 +130,9 @@
 
 	/* All stars following the hovered star */
 	&:hover ~ .spectrum-Rating-icon {
+		/* All stars following the hovered star */
+		color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
+
 		.spectrum-Rating-starActive {
 			display: none;
 		}
@@ -143,21 +146,6 @@
 .spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
 	margin: 0 auto;
-}
-
-.spectrum-Rating-icon {
-	color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-
-	&.is-selected {
-		color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-	}
-
-	&:hover {
-		& ~ .spectrum-Rating-icon {
-			/* All stars following the hovered star */
-			color: var(--highcontrast-rating-icon-color-default, var(--mod-rating-icon-color-default, var(--spectrum-rating-icon-color-default)));
-		}
-	}
 }
 
 .spectrum-Rating--emphasized {
