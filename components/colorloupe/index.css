@@ -40,7 +40,7 @@
 }
 
 .spectrum-ColorLoupe-inner-border {
-	/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
+	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 	fill: var(--spectrum-picked-color);
 	stroke: var(--mod-colorloupe-inner-border-color, var(--spectrum-colorloupe-inner-border-color));
 	stroke-width: var(--mod-colorloupe-inner-border-width, var(--spectrum-colorloupe-inner-border-width));
