@@ -1,7 +1,7 @@
 import { Template as Avatar } from "@spectrum-css/avatar/stories/template.js";
 import { Template as ClearButton } from "@spectrum-css/clearbutton/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -74,3 +74,49 @@ export const Template = ({
 		</div>
 	`;
 };
+
+export const TagsDefaultOptions = ({
+	...args
+}, context ) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		columnGap: "12px",
+	},
+	content: html`
+		${Template({
+			...args,
+		}, context )}
+		${!args.isInvalid ? 
+			Template({
+				...args,
+				hasIcon: true,
+				iconName: "CheckmarkCircle"
+			}, context ): "" }
+		${!args.isInvalid ? 
+			Template({
+			...args,
+				hasAvatar: true,
+				avatarUrl: "example-ava.png",
+			}, context ): "" }`,
+});
+
+export const SelectedTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "row",
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`${[
+		{ isSelected: true, isDisabled: false, heading: "Selected" },
+		{ isSelected: true, isDisabled: false, isInvalid: true, heading: "Selected + Invalid" },
+	].map(({isSelected, heading, isInvalid}) => Container({
+		withBorder: false,
+		heading: heading,
+		content: TagsDefaultOptions({
+			...args,
+			isSelected,
+			isInvalid
+		})
+	}, context ))}`
+});

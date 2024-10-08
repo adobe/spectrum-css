@@ -17,7 +17,7 @@
 /* default for all buttons */
 .spectrum-Button {
 	--spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
-	--spectrum-button-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-button-border-radius: calc(var(--spectrum-button-height) / 2);
 	--spectrum-button-border-width: var(--spectrum-border-width-200);
 	--spectrum-button-line-height: 1.2; /* Hack to keep buttons at 32px */
 
@@ -33,7 +33,6 @@
 .spectrum-Button--sizeS {
 	--spectrum-button-min-width: calc(var(--spectrum-component-height-75) * var(--spectrum-button-minimum-width-multiplier));
 
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-75);
 	--spectrum-button-height: var(--spectrum-component-height-75);
 
 	--spectrum-button-font-size: var(--spectrum-font-size-75);
@@ -51,7 +50,6 @@
 .spectrum-Button--sizeM {
 	--spectrum-button-min-width: calc(var(--spectrum-component-height-100) * var(--spectrum-button-minimum-width-multiplier));
 
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-100);
 	--spectrum-button-height: var(--spectrum-component-height-100);
 
 	--spectrum-button-font-size: var(--spectrum-font-size-100);
@@ -69,7 +67,6 @@
 .spectrum-Button--sizeL {
 	--spectrum-button-min-width: calc(var(--spectrum-component-height-200) * var(--spectrum-button-minimum-width-multiplier));
 
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-200);
 	--spectrum-button-height: var(--spectrum-component-height-200);
 
 	--spectrum-button-font-size: var(--spectrum-font-size-200);
@@ -87,7 +84,6 @@
 .spectrum-Button--sizeXL {
 	--spectrum-button-min-width: calc(var(--spectrum-component-height-300) * var(--spectrum-button-minimum-width-multiplier));
 
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-300);
 	--spectrum-button-height: var(--spectrum-component-height-300);
 
 	--spectrum-button-font-size: var(--spectrum-font-size-300);

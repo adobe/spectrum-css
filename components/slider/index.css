@@ -116,6 +116,10 @@
 	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
 
 	user-select: none;
+
+	&:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp) {
+		margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
+	}
 }
 
 .spectrum-Slider--sideLabel {
@@ -151,6 +155,11 @@
 	cursor: pointer;
 	position: relative;
 	z-index: auto;
+
+	&:not(:has(.spectrum-Slider-ticks)) {
+		display: flex;
+		align-items: center;
+	}
 
 	/* These calculations prevent the track from spilling outside of the control */
 	inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
@@ -284,7 +293,6 @@
 }
 
 .spectrum-Slider-ramp {
-	margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
 	block-size: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
 
 	position: absolute;
@@ -412,6 +420,7 @@
 	&:lang(ko) {
 		line-height: var(--mod-slider-cjk-line-height, var(--spectrum-slider-cjk-line-height));
 	}
+
 }
 
 .spectrum-Slider-label {
