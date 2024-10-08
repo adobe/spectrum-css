@@ -32,9 +32,7 @@
 		/* Override border-radius set in %spectrum-ButtonWithFocusRing since this is not a pill button */
 		border-radius: calc(var(--mod-logic-button-border-radius, var(--spectrum-logic-button-border-radius)) + var(--mod-logic-button-focus-indicator-gap, var(--spectrum-logic-button-focus-indicator-gap)));
 	}
-}
 
-.spectrum-LogicButton {
 	&:focus-visible {
 		outline: none;
 

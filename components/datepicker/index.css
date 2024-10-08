@@ -47,8 +47,24 @@
 .spectrum-DatePicker-input {
 	padding-inline-end: var(--mod-datepicker-padding-inline, var(--spectrum-datepicker-padding-inline-end));
 
+	/* fill space */
+	flex: 1;
+	inline-size: 100%;
+
+	&.spectrum-DatePicker-startField {
+		border-inline-end: 0;
+		border-start-end-radius: 0;
+		border-end-end-radius: 0;
+		padding-inline-end: var(--mod-datepicker-generic-padding, var(--spectrum-datepicker-generic-padding));
+	}
+
 	&.spectrum-DatePicker-endField {
 		padding-inline-end: var(--mod-datepicker-padding-inline, var(--spectrum-datepicker-padding-inline-end));
+
+		border-inline-start: 0;
+		border-start-start-radius: 0;
+		border-end-start-radius: 0;
+		padding-inline-start: var(--mod-datepicker-generic-padding, var(--spectrum-datepicker-generic-padding));
 	}
 }
 
@@ -57,33 +73,29 @@
 	padding-inline-end: var(--mod-datepicker-padding-inline-end-invalid, var(--spectrum-datepicker-padding-inline-end-invalid));
 }
 
-/* quiet */
-.spectrum-DatePicker--quiet {
-	.spectrum-DatePicker-input {
-		padding-inline-end: var(--mod-datepicker-padding-inline-end-quiet, var(--spectrum-datepicker-padding-inline-end-quiet));
-	}
-
-	/* quiet invalid and quiet range invalid */
-	.is-invalid .spectrum-DatePicker-input:not(.spectrum-DatePicker-startField) {
-		padding-inline-end: var(--mod-datepicker-padding-inline-end-invalid-quiet, var(--spectrum-datepicker-padding-inline-end-invalid-quiet));
-	}
-}
-
-/* quiet range */
-.spectrum-DatePicker--quiet .spectrum-DatePicker-input {
-	&.spectrum-DatePicker-endField {
-		padding-inline-end: var(--mod-datepicker-padding-inline-end-quiet, var(--spectrum-datepicker-padding-inline-end-quiet));
-	}
-}
-
 .spectrum-DatePicker-button {
 	/* Be above textfield so box shadow shines through */
 	position: absolute;
 	inset-inline-end: 0;
 }
 
+/* quiet */
 .spectrum-DatePicker--quiet {
 	border-radius: var(--mod-datepicker-border-radius-quiet, var(--spectrum-datepicker-border-radius-quiet));
+
+	.spectrum-DatePicker-input {
+		padding-inline-end: var(--mod-datepicker-padding-inline-end-quiet, var(--spectrum-datepicker-padding-inline-end-quiet));
+
+		/* quiet range */
+		&.spectrum-DatePicker-endField {
+			padding-inline-end: var(--mod-datepicker-padding-inline-end-quiet, var(--spectrum-datepicker-padding-inline-end-quiet));
+		}
+	}
+
+	/* quiet invalid and quiet range invalid */
+	.is-invalid .spectrum-DatePicker-input:not(.spectrum-DatePicker-startField) {
+		padding-inline-end: var(--mod-datepicker-padding-inline-end-invalid-quiet, var(--spectrum-datepicker-padding-inline-end-invalid-quiet));
+	}
 
 	.spectrum-DatePicker-button {
 		inline-size: auto;
@@ -207,26 +219,6 @@
 		&:first-of-type {
 			inline-size: var(--mod-datepicker-range-input-width-first, var(--spectrum-datepicker-range-input-width-first));
 		}
-	}
-}
-
-.spectrum-DatePicker-input {
-	/* fill space */
-	flex: 1;
-	inline-size: 100%;
-
-	&.spectrum-DatePicker-startField {
-		border-inline-end: 0;
-		border-start-end-radius: 0;
-		border-end-end-radius: 0;
-		padding-inline-end: var(--mod-datepicker-generic-padding, var(--spectrum-datepicker-generic-padding));
-	}
-
-	&.spectrum-DatePicker-endField {
-		border-inline-start: 0;
-		border-start-start-radius: 0;
-		border-end-start-radius: 0;
-		padding-inline-start: var(--mod-datepicker-generic-padding, var(--spectrum-datepicker-generic-padding));
 	}
 }
 
