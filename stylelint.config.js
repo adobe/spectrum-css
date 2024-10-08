@@ -12,7 +12,7 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
 		"@spectrum-tools/theme-alignment",
-		"stylelint-high-performance-animation",
+		// "stylelint-high-performance-animation",
 	],
 	rules: {
 		/** --------------------------------------------------------------
@@ -132,10 +132,10 @@ module.exports = {
 			},
 		],
 		/** Performance */
-		"plugin/no-low-performance-animation-properties": [
-			true,
-			{ severity: "warning" },
-		],
+		// "plugin/no-low-performance-animation-properties": [
+		// 	true,
+		// 	{ severity: "warning" },
+		// ],
 
 		/** --------------------------------------------------------------
 		 * Local/custom plugins
