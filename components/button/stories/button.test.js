@@ -1,5 +1,6 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { capitalize } from "lodash-es";
 import { Template } from "./template.js";
 
@@ -8,30 +9,23 @@ import { Template } from "./template.js";
  * Used as the base template for the stories.
  */
 const CustomButton = ({ iconName, iconSet, ...args }, context) => html`
-  ${Template(
-	{
-		...args,
-		iconName: undefined,
-	},
-	context
-  )}
-  ${Template(
-	{
-		...args,
-		iconName: iconName ?? "Edit",
-		iconSet: iconSet ?? "workflow",
-	},
-	context
-  )}
-  ${Template(
-	{
-		...args,
-		hideLabel: true,
-		iconName: iconName ?? "Edit",
-		iconSet: iconSet ?? "workflow",
-	},
-	context
-  )}
+	<div style=${styleMap({ display: "flex", "gap": "12px" })}>
+		${Template({
+			...args,
+			iconName: undefined,
+		}, context)}
+		${Template({
+			...args,
+			iconName: iconName ?? "Edit",
+			iconSet: iconSet ?? "workflow",
+		}, context)}
+		${Template({
+			...args,
+			hideLabel: true,
+			iconName: iconName ?? "Edit",
+			iconSet: iconSet ?? "workflow",
+		}, context)}
+	</div>
 `;
 
 export const ButtonGroups = Variants({

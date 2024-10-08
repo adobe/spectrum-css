@@ -37,30 +37,53 @@
 	padding-inline: var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text));
 	position: relative;
 
-	/* let staticColor variants inherit their color */
-	color: inherit;
-
 	/* Remove button the margin in Firefox and Safari. */
 	margin-block: var(--mod-button-margin-block, 0);
 	margin-inline-end: var(--mod-button-margin-right, 0);
 	margin-inline-start: var(--mod-button-margin-left, 0);
+
+	background-color: var(--highcontrast-button-background-color-default, var(--mod-button-background-color-default, var(--spectrum-button-background-color-default)));
+	border-color: var(--highcontrast-button-border-color-default, var(--mod-button-border-color-default, var(--spectrum-button-border-color-default)));
+	color: var(--highcontrast-button-content-color-default, var(--mod-button-content-color-default, var(--spectrum-button-content-color-default)));
+
+	transition:
+		border var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
+		border-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out,
+		color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
+		background-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear;
 
 	&:hover,
 	&:active {
 		box-shadow: none;
 	}
 
+	&:hover {
+		background-color: var(--highcontrast-button-background-color-hover, var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover)));
+		border-color: var(--highcontrast-button-border-color-hover, var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover)));
+		color: var(--highcontrast-button-content-color-hover, var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover)));
+	}
+
+	&:active {
+		background-color: var(--highcontrast-button-background-color-down, var(--mod-button-background-color-down, var(--spectrum-button-background-color-down)));
+		border-color: var(--highcontrast-button-border-color-down, var(--mod-button-border-color-down, var(--spectrum-button-border-color-down)));
+		color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
+	}
+
 	.spectrum-Icon {
 		/* 	Any block-size difference between the intended workflow icon size and actual icon used.
 			Helps support any existing use of smaller UI icons instead of intended Workflow icons. */
-		--_icon-size-difference: max(0px, var(--spectrum-button-intended-icon-size) - var(--spectrum-icon-size, var(--spectrum-button-intended-icon-size)));
+		--spectrum-button-icon-size-difference: max(0px, var(--spectrum-button-intended-icon-size) - var(--spectrum-icon-size, var(--spectrum-button-intended-icon-size)));
 
-		margin-block-start: var(--mod-button-icon-margin-block-start, max(0px, var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) - var(--mod-button-border-width, var(--spectrum-button-border-width)) + (var(--_icon-size-difference, 0px) / 2)));
+		margin-block-start: var(--mod-button-icon-margin-block-start, max(0px, var(--mod-button-top-to-icon, var(--spectrum-button-top-to-icon)) - var(--mod-button-border-width, var(--spectrum-button-border-width)) + (var(--spectrum-button-icon-size-difference, 0px) / 2)));
 
 		margin-inline-start: calc(var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) - var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text)));
 		color: inherit;
 		flex-shrink: 0;
 		align-self: flex-start;
+	}
+
+	.spectrum-Icon + .spectrum-Button-label {
+		text-align: var(--mod-button-text-align-with-icon, start);
 	}
 
 	&.spectrum-Button--iconOnly {
@@ -78,38 +101,21 @@
 			border-radius: 50%;
 		}
 	}
-}
 
-a.spectrum-Button {
-	@extend %spectrum-AnchorButton;
-}
-
-.spectrum-Button-label {
-	@extend %spectrum-ButtonLabel;
-
-	padding-block-start: calc(var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
-	padding-block-end: calc(var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
-	line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
-	align-self: start;
-	text-align: var(--mod-button-text-align, center);
-}
-
-.spectrum-Button .spectrum-Icon + .spectrum-Button-label {
-	text-align: var(--mod-button-text-align-with-icon, start);
-}
-
-.spectrum-Button {
 	&:focus-visible,
 	&.is-focused {
+		/* Remove the default focus outline */
+		box-shadow: none;
+		outline: none;
+
+		background-color: var(--highcontrast-button-background-color-focus, var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus)));
+		border-color: var(--highcontrast-button-border-color-focus, var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus)));
+		color: var(--highcontrast-button-content-color-focus, var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus)));
+
 		&::after {
-			box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color));
+			box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--highcontrast-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color))));
 		}
 	}
-}
-
-/* Special cases for focus indicator */
-.spectrum-Button {
-	transition: border-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
 
 	&::after {
 		position: absolute;
@@ -119,48 +125,6 @@ a.spectrum-Button {
 		transition: box-shadow var(--mod-button-animation-duration, var(--spectrum-button-animation-duration)) ease-in-out;
 		pointer-events: none;
 		content: "";
-	}
-
-	&:focus-visible {
-		/* Remove the default focus outline */
-		box-shadow: none;
-		outline: none;
-
-		&::after {
-			box-shadow: 0 0 0 var(--mod-button-focus-ring-thickness, var(--spectrum-button-focus-ring-thickness)) var(--highcontrast-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--mod-button-focus-ring-color, var(--spectrum-button-focus-indicator-color))));
-		}
-	}
-}
-
-/* Core Token Theming */
-/* former skin.css, applied / copied from actionbutton/index.css  */
-.spectrum-Button {
-	@extend %spectrum-BaseButton;
-
-	background-color: var(--highcontrast-button-background-color-default, var(--mod-button-background-color-default, var(--spectrum-button-background-color-default)));
-	border-color: var(--highcontrast-button-border-color-default, var(--mod-button-border-color-default, var(--spectrum-button-border-color-default)));
-	color: var(--highcontrast-button-content-color-default, var(--mod-button-content-color-default, var(--spectrum-button-content-color-default)));
-	transition:
-		border var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
-		color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear,
-		background-color var(--mod-button-animation-duration, var(--spectrum-button-animation-duration, 130ms)) linear;
-
-	&:hover {
-		background-color: var(--highcontrast-button-background-color-hover, var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover)));
-		border-color: var(--highcontrast-button-border-color-hover, var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover)));
-		color: var(--highcontrast-button-content-color-hover, var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover)));
-	}
-
-	&:focus-visible {
-		background-color: var(--highcontrast-button-background-color-focus, var(--mod-button-background-color-focus, var(--spectrum-button-background-color-focus)));
-		border-color: var(--highcontrast-button-border-color-focus, var(--mod-button-border-color-focus, var(--spectrum-button-border-color-focus)));
-		color: var(--highcontrast-button-content-color-focus, var(--mod-button-content-color-focus, var(--spectrum-button-content-color-focus)));
-	}
-
-	&:active {
-		background-color: var(--highcontrast-button-background-color-down, var(--mod-button-background-color-down, var(--spectrum-button-background-color-down)));
-		border-color: var(--highcontrast-button-border-color-down, var(--mod-button-border-color-down, var(--spectrum-button-border-color-down)));
-		color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
 	}
 
 	&:disabled,
@@ -208,6 +172,20 @@ a.spectrum-Button {
 	}
 }
 
+a.spectrum-Button {
+	@extend %spectrum-AnchorButton;
+}
+
+.spectrum-Button-label {
+	@extend %spectrum-ButtonLabel;
+
+	padding-block-start: calc(var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+	padding-block-end: calc(var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) - var(--mod-button-border-width, var(--spectrum-button-border-width)));
+	line-height: var(--mod-button-line-height, var(--spectrum-button-line-height));
+	align-self: start;
+	text-align: var(--mod-button-text-align, center);
+}
+
 /* Disable button label wrap  */
 .spectrum-Button--noWrap {
 	.spectrum-Button-label {
@@ -216,7 +194,6 @@ a.spectrum-Button {
 		white-space: nowrap;
 	}
 }
-
 
 /* Static color variants */
 .spectrum-Button.spectrum-Button--staticWhite {
