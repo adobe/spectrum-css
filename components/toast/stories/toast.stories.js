@@ -1,5 +1,5 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import packageJson from "../package.json";
 import { ActionTemplate, Template, ToastWrapOptions } from "./template.js";
 import { ToastGroup } from "./toast.test.js";
 
@@ -47,7 +47,7 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Toast button"],
 		},
-		packageJson: pkgJson,
+		packageJson,
 	},
 };
 
@@ -79,7 +79,7 @@ Info.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/** 
+/**
  * The negative toast uses the negative semantic color (red) and has an alert icon to help those with color vision deficiency to discern the message tone. This is used to show an error or failure.
 */
 
@@ -95,7 +95,7 @@ Negative.parameters = {
 };
 
 /**
- * The positive toast uses the positive semantic color (green) and has a checkmark icon to help those with color vision deficiency discern the message tone. This is used to inform about a successful action or completion of a task. 
+ * The positive toast uses the positive semantic color (green) and has a checkmark icon to help those with color vision deficiency discern the message tone. This is used to inform about a successful action or completion of a task.
  */
 
 export const Positive = Template.bind({});
@@ -111,7 +111,7 @@ Positive.parameters = {
 
 /**
  * Toasts must include text to communicate a message. Write the text as concisely as possible while still being clear about what has happened or is happening.
- * 
+ *
  * Writing for toasts depends on the nature of the message, whether it’s communicating confirmation, information, or an error. For all kinds of toasts, keep the text to fewer than 2 lines in English, since it will become longer when localized. View the [toast content standards](https://spectrum.adobe.com/page/toast/#Content-standards) for writing guidelines.
 */
 
@@ -119,11 +119,14 @@ export const Text = Template.bind({});
 Text.tags = ["!dev"];
 Text.args = {
 	message: "All files archived",
-	inlineButtonLabel: ""
+	inlineButtonLabel: undefined,
+};
+Text.parameters = {
+	chromatic: { disableSnapshot: true },
 };
 
 /**
- * When the message text is too long for the horizontal space available, it wraps to form another line. 
+ * When the message text is too long for the horizontal space available, it wraps to form another line.
 */
 
 export const Wrapping = ToastWrapOptions.bind({});
