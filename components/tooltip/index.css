@@ -401,6 +401,7 @@
 }
 
 /*** CSS Hover Animation ***/
+/* stylelint-disable selector-class-pattern -- supported legacy state system */
 .u-tooltip-showOnHover {
 	display: inline-block;
 	position: relative;
@@ -483,16 +484,6 @@
 		right: 100%;
 	}
 
-	/* RTL */
-	&:dir(rtl) {
-		.spectrum-Tooltip--start,
-		.spectrum-Tooltip--start-top,
-		.spectrum-Tooltip--start-bottom {
-			left: 100%;
-			right: auto;
-		}
-	}
-
 	.spectrum-Tooltip--right,
 	.spectrum-Tooltip--right-top,
 	.spectrum-Tooltip--right-bottom,
@@ -501,16 +492,6 @@
 	.spectrum-Tooltip--end-bottom {
 		/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 		left: 100%;
-	}
-
-	/* RTL */
-	&:dir(rtl) {
-		.spectrum-Tooltip--end,
-		.spectrum-Tooltip--end-top,
-		.spectrum-Tooltip--end-bottom {
-			left: auto;
-			right: 100%;
-		}
 	}
 
 	&:hover,
@@ -524,12 +505,7 @@
 		.spectrum-Tooltip--top-end {
 			transform: translate(-50%, calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1));
 		}
-	}
 
-	&:hover,
-	&:focus,
-	&.is-focused,
-	*:focus {
 		.spectrum-Tooltip--bottom,
 		.spectrum-Tooltip--bottom-left,
 		.spectrum-Tooltip--bottom-right,
@@ -537,12 +513,7 @@
 		.spectrum-Tooltip--bottom-end {
 			transform: translate(-50%, var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)));
 		}
-	}
 
-	&:hover,
-	&:focus,
-	&.is-focused,
-	*:focus {
 		.spectrum-Tooltip--left,
 		.spectrum-Tooltip--left-bottom,
 		.spectrum-Tooltip--left-top,
@@ -551,26 +522,7 @@
 		.spectrum-Tooltip--start-bottom {
 			transform: translate(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1), -50%);
 		}
-	}
 
-	/* RTL */
-	&:dir(rtl) {
-		&:hover,
-		&:focus,
-		&.is-focused,
-		*:focus {
-			.spectrum-Tooltip--start,
-			.spectrum-Tooltip--start-top,
-			.spectrum-Tooltip--start-bottom {
-				transform: translate(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)), -50%);
-			}
-		}
-	}
-
-	&:hover,
-	&:focus,
-	&.is-focused,
-	*:focus {
 		.spectrum-Tooltip--right,
 		.spectrum-Tooltip--right-top,
 		.spectrum-Tooltip--right-bottom,
@@ -583,10 +535,30 @@
 
 	/* RTL */
 	&:dir(rtl) {
+		.spectrum-Tooltip--start,
+		.spectrum-Tooltip--start-top,
+		.spectrum-Tooltip--start-bottom {
+			left: 100%;
+			right: auto;
+		}
+
+		.spectrum-Tooltip--end,
+		.spectrum-Tooltip--end-top,
+		.spectrum-Tooltip--end-bottom {
+			left: auto;
+			right: 100%;
+		}
+
 		&:hover,
 		&:focus,
 		&.is-focused,
 		*:focus {
+			.spectrum-Tooltip--start,
+			.spectrum-Tooltip--start-top,
+			.spectrum-Tooltip--start-bottom {
+				transform: translate(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)), -50%);
+			}
+
 			.spectrum-Tooltip--end,
 			.spectrum-Tooltip--end-top,
 			.spectrum-Tooltip--end-bottom {
@@ -595,3 +567,4 @@
 		}
 	}
 }
+/* stylelint-enable selector-class-pattern */

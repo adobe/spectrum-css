@@ -1,27 +1,30 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { Template } from "./template.js";
 
 export const ActionButtons = (args, context) => {
 	return html`
-		${Template(args, context)}
-		${Template({
-			...args,
-		}, context)}
-		${Template({
-			...args,
-			hideLabel: true,
-		}, context)}
-		${Template({
-			...args,
-			hasPopup: "true",
-			hideLabel: true,
-		}, context)}
-		${Template({
-			...args,
-			iconName: undefined,
-			hasPopup: "true",
-		}, context)}
+		<div style=${styleMap({ display: "flex", "gap": "13px" })}>
+			${Template(args, context)}
+			${Template({
+				...args,
+			}, context)}
+			${Template({
+				...args,
+				hideLabel: true,
+			}, context)}
+			${Template({
+				...args,
+				hasPopup: "true",
+				hideLabel: true,
+			}, context)}
+			${Template({
+				...args,
+				iconName: undefined,
+				hasPopup: "true",
+			}, context)}
+		</div>
 	`;
 };
 

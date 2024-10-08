@@ -24,6 +24,18 @@
 .spectrum-FieldGroup {
 	display: flex;
 	flex-flow: column wrap;
+
+	/* read-only checkbox group */
+	.spectrum-Checkbox.is-readOnly {
+		.spectrum-Checkbox-box {
+			display: none;
+		}
+
+		/* read-only checkbox fields delimited by commas */
+		&:not(:last-child) .spectrum-Checkbox-label::after {
+			content: var(--spectrum-fieldgroup-readonly-delimiter);
+		}
+	}
 }
 
 /* field group label top aligned */
@@ -58,20 +70,6 @@
 		/* move help text down to new row */
 		.spectrum-HelpText {
 			flex-basis: 100%;
-		}
-	}
-}
-
-/* read-only checkbox group */
-.spectrum-FieldGroup {
-	.spectrum-Checkbox.is-readOnly {
-		.spectrum-Checkbox-box {
-			display: none;
-		}
-
-		/* read-only checkbox fields delimited by commas */
-		&:not(:last-child) .spectrum-Checkbox-label::after {
-			content: var(--spectrum-fieldgroup-readonly-delimiter);
 		}
 	}
 }

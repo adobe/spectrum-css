@@ -1,13 +1,16 @@
 import { Variants } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 import { capitalize } from "lodash-es";
 import { Template } from "./template.js";
 
 const Badges = (args, context) => {
 	return html`
-		${Template(args, context)}
-		${Template({ ...args, iconName: undefined }, context)}
-		${Template({ ...args, label: undefined }, context)}
+		<div style=${styleMap({ display: "flex", "gap": "13px" })}>
+			${Template(args, context)}
+			${Template({ ...args, iconName: undefined }, context)}
+			${Template({ ...args, label: undefined }, context)}
+		</div>
 	`;
 };
 

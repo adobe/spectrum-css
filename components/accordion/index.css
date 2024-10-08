@@ -55,6 +55,42 @@
 	border-block-end: 1px solid transparent;
 	border-color: var(--mod-accordion-divider-color, var(--spectrum-accordion-divider-color));
 	border-width: var(--mod-accordion-divider-thickness, var(--spectrum-divider-thickness-small));
+
+	&.is-open {
+		.spectrum-Accordion-itemHeader:hover {
+			background-color: var(--mod-accordion-background-color-hover, var(--spectrum-accordion-background-color-hover));
+		}
+
+		> .spectrum-Accordion-itemHeading > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator,
+		> .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator {
+			transform: var(--spectrum-logical-rotation,) rotate(90deg);
+		}
+
+		> .spectrum-Accordion-itemContent {
+			display: block;
+		}
+	}
+
+	&.is-disabled {
+		.spectrum-Accordion-itemHeader {
+			cursor: default;
+
+			&,
+			&:hover,
+			&:focus-visible {
+				color: var(--mod-accordion-item-header-disabled-color, var(--spectrum-accordion-item-header-disabled-color));
+				background-color: transparent;
+			}
+
+			+ .spectrum-Accordion-itemIconContainer {
+				color: var(--mod-accordion-item-header-disabled-color, var(--spectrum-accordion-item-header-disabled-color));
+			}
+		}
+
+		.spectrum-Accordion-itemContent {
+			color: var(--mod-accordion-item-content-disabled-color, var(--spectrum-accordion-item-content-disabled-color));
+		}
+	}
 }
 
 .spectrum-Accordion-itemHeading {
@@ -153,53 +189,6 @@
 	&:active {
 		background-color: var(--mod-accordion-background-color-down, var(--spectrum-accordion-background-color-down));
 		color: var(--mod-accordion-item-header-color-down, var(--spectrum-accordion-item-header-color-down));
-	}
-}
-
-
-.spectrum-Accordion-item {
-	&.is-open {
-		.spectrum-Accordion-itemHeader:hover {
-			background-color: var(--mod-accordion-background-color-hover, var(--spectrum-accordion-background-color-hover));
-		}
-	}
-}
-
-.spectrum-Accordion-item.is-disabled {
-	.spectrum-Accordion-itemHeader {
-		&,
-		&:hover,
-		&:focus-visible {
-			color: var(--mod-accordion-item-header-disabled-color, var(--spectrum-accordion-item-header-disabled-color));
-			background-color: transparent;
-		}
-
-		+ .spectrum-Accordion-itemIconContainer {
-			color: var(--mod-accordion-item-header-disabled-color, var(--spectrum-accordion-item-header-disabled-color));
-		}
-	}
-
-	.spectrum-Accordion-itemContent {
-		color: var(--mod-accordion-item-content-disabled-color, var(--spectrum-accordion-item-content-disabled-color));
-	}
-}
-
-.spectrum-Accordion-item {
-	&.is-open {
-		> .spectrum-Accordion-itemHeading > .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator,
-		> .spectrum-Accordion-itemIconContainer > .spectrum-Accordion-itemIndicator {
-			transform: var(--spectrum-logical-rotation,) rotate(90deg);
-		}
-
-		> .spectrum-Accordion-itemContent {
-			display: block;
-		}
-	}
-
-	&.is-disabled {
-		.spectrum-Accordion-itemHeader {
-			cursor: default;
-		}
 	}
 }
 

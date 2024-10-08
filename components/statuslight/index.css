@@ -55,13 +55,11 @@
 	}
 }
 
-.spectrum-StatusLight--neutral {
-	font-style: italic;
-}
-
 /* Semantic Colors */
 
 .spectrum-StatusLight--neutral {
+	font-style: italic;
+
 	color: var(--highcontrast-statuslight-subdued-content-color-default, var(--mod-statuslight-subdued-content-color-default, var(--spectrum-statuslight-subdued-content-color-default)));
 
 	&::before {

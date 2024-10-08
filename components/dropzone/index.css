@@ -47,7 +47,7 @@
 	border-color: var(--mod-drop-zone-border-color, var(--spectrum-drop-zone-border-color));
 	border-width: var(--mod-drop-zone-border-width, var(--spectrum-drop-zone-border-width));
 	border-radius: var(--mod-drop-zone-corner-radius, var(--spectrum-drop-zone-corner-radius));
-	border-style: var(--mod-drop-zone-border-style, var(--spectrum-drop-zone-border-style, dashed));
+	border-style: var(--mod-drop-zone-border-style, dashed);
 	background-color: var(--mod-drop-zone-background-color, var(--spectrum-drop-zone-background-color));
 	background-size: cover;
 
@@ -86,7 +86,7 @@
 }
 
 .spectrum-DropZone-content {
-	display: var(--mod-drop-zone-content-display, var(--spectrum-drop-zone-content-display, none));
+	display: var(--mod-drop-zone-content-display, none);
 	block-size: 100%;
 	align-items: center;
 	justify-content: center;

@@ -108,6 +108,15 @@
 		&:last-of-type {
 			block-size: auto;
 			inline-size: 100%;
+
+			font-family: var(--mod-breadcrumbs-font-family-multiline-current, var(--spectrum-breadcrumbs-font-family-multiline-current));
+			font-size: var(--mod-breadcrumbs-font-size-multiline-current, var(--spectrum-breadcrumbs-font-size-multiline-current));
+			font-weight: var(--mod-breadcrumbs-font-weight-multiline-current, var(--spectrum-breadcrumbs-font-weight-multiline-current));
+
+			.spectrum-Breadcrumbs-itemLink {
+				margin-block-start: 0;
+				margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-multiline, var(--spectrum-breadcrumbs-text-spacing-block-end-multiline));
+			}
 		}
 
 		> .spectrum-ActionButton {
@@ -130,17 +139,6 @@
 		font-family: var(--mod-breadcrumbs-font-family-compact-current, var(--spectrum-breadcrumbs-font-family-compact-current));
 		font-size: var(--mod-breadcrumbs-font-size-compact-current, var(--spectrum-breadcrumbs-font-size-compact-current));
 		font-weight: var(--mod-breadcrumbs-font-weight-compact-current, var(--spectrum-breadcrumbs-font-weight-compact-current));
-	}
-
-	.spectrum-Breadcrumbs--multiline &:last-of-type {
-		font-family: var(--mod-breadcrumbs-font-family-multiline-current, var(--spectrum-breadcrumbs-font-family-multiline-current));
-		font-size: var(--mod-breadcrumbs-font-size-multiline-current, var(--spectrum-breadcrumbs-font-size-multiline-current));
-		font-weight: var(--mod-breadcrumbs-font-weight-multiline-current, var(--spectrum-breadcrumbs-font-weight-multiline-current));
-
-		.spectrum-Breadcrumbs-itemLink {
-			margin-block-start: 0;
-			margin-block-end: var(--mod-breadcrumbs-text-spacing-block-end-multiline, var(--spectrum-breadcrumbs-text-spacing-block-end-multiline));
-		}
 	}
 
 	> .spectrum-ActionButton {

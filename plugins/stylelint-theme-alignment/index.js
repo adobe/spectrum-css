@@ -81,8 +81,10 @@ const ruleFunction = (enabled) => {
 
 		/* Iterate over selectors in the base root */
 		baseRoot.walkRules((rule) => {
-			// Add this selector to the selectors set
-			baseSelectors.add(rule.selector);
+			rule.selectors.forEach((selector) => {
+				// Add this selector to the selectors set
+				baseSelectors.add(selector);
+			});
 
 			rule.walkDecls((decl) => {
 				// If this is a custom property, add it to the properties set
@@ -102,18 +104,20 @@ const ruleFunction = (enabled) => {
 
 		/* Iterate over selectors in the source root and validate that they align with the base */
 		root.walkRules((rule) => {
-			// Check if this selector exists in the base
-			if (!baseSelectors.has(rule.selector)) {
-				// Report any selectors that don't exist in the base
-				report({
-					message: messages.expected,
-					messageArgs: [rule.selector, baseFile, rootPath],
-					node: rule,
-					result,
-					ruleName,
-				});
-				return;
-			}
+			rule.selectors.forEach((selector) => {
+				// Check if this selector exists in the base
+				if (!baseSelectors.has(selector)) {
+					// Report any selectors that don't exist in the base
+					report({
+						message: messages.expected,
+						messageArgs: [selector, baseFile, rootPath],
+						node: rule,
+						result,
+						ruleName,
+					});
+					return;
+				}
+			});
 
 			rule.walkDecls((decl) => {
 				const isProperty = decl.prop.startsWith("--");
