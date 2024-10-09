@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.2.0
+
+### Minor Changes
+
+- [#3222](https://github.com/adobe/spectrum-css/pull/3222) [`0acd811`](https://github.com/adobe/spectrum-css/commit/0acd811f6173ca2a24ba5e62af2fdc776dd41048) Thanks [@cdransf](https://github.com/cdransf)! - Addresses issue where a portion of search clear button sat outside of its parent by moving the transform applied to the button to the child icon.
+
 ## 7.1.4
 
 ### Patch Changes
