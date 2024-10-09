@@ -1,19 +1,18 @@
-import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
-import { HelpTextOptions } from "./template.js";
-import { TextFieldGroup } from "./textfield.test.js";
+import { HelpTextOptionsTextArea } from "./template.js";
+import { TextFieldGroup } from "./textarea.test.js";
 
 /**
- * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
+ * A text area lets a user input a longer amount of text than a standard text field. It can include all of the standard validation options supported by the text field component.
  * 
- * ## Usage Notes
- * A single-line text field using the `<input>` element.
- */
+ * ## Usage notes
+ * A multi-line text field using the `<textarea>` element.
+*/
+
 export default {
-	title: "Text field",
-	component: "TextField",
+	title: "Text area",
+	component: "TextArea",
 	argTypes: {
 		isValid: {
 			...isValid,
@@ -104,7 +103,7 @@ export default {
 			},
 			control: { type: "number" },
 			if: { arg: "displayCounter", eq: true },
-		}
+		},
 	},
 	args: {
 		rootClass: "spectrum-Textfield",
@@ -120,47 +119,28 @@ export default {
 		displayCounter: false,
 		characterCount: 50,
 		labelPosition: "top",
-		labelText: "Username",
 		size: "m",
+		multiline: true,
 		grows: false,
 		isQuiet: false,
 		value: "",
+		labelText: "Comments",
 		helpText: ""
 	},
-	parameters: {
-		actions: {
-			handles: [
-				"click .spectrum-Textfield",
-				"focusin .spectrum-Textfield",
-				"focusout .spectrum-Textfield"
-			],
-		},
-		packageJson: pkgJson,
-	},
 };
-
-/**
- * Text fields should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These text fields without a visible label should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
-*/
 
 export const Default = TextFieldGroup.bind({});
-Default.args = {
-	labelText: "Username",
-};
+Default.args = {};
 
 // ********* DOCS ONLY ********* //
 
-
-/**
- * Text fields can display a character count indicator when the length of the text entry needs to be kept under a predefined value. Character count indicators can be used in conjunction with other indicators (validation icon, “optional” or “required” indicators) when necessary.
-*/
 export const CharacterCount = TextFieldGroup.bind({});
 CharacterCount.tags = ["!dev"];
 CharacterCount.args = {
-	labelText: "Username",
+	labelText: "Comments",
 	displayCounter: true,
-	characterCount: 24,
-	value: "lisawilson23"
+	characterCount: 50,
+	value: "Duis mollit ut laboris est labore sunt ipsum. Proident nostrud in ea reprehenderit proident nostrud. Anim ut est anim ex amet."
 };
 
 CharacterCount.parameters = {
@@ -168,7 +148,7 @@ CharacterCount.parameters = {
 };
 
 /**
- * A text field in a disabled state shows that an input field exists, but is not available in that circumstance. This can be used to maintain layout continuity and communicate that a field may become available later.
+ * A text area in a disabled state shows that an input field exists, but is not available in that circumstance. This can be used to maintain layout continuity and communicate that a field may become available later.
 */
 export const Disabled = TextFieldGroup.bind({});
 Disabled.tags = ["!dev"];
@@ -180,9 +160,8 @@ Disabled.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-
 /**
- * A text field can be marked as having an error to show that a value needs to be entered in order to move forward or that a value that was entered is invalid. If an error exists, the error icon always overrides the validation icon.
+ * A text area can be marked as having an error to show that a value needs to be entered in order to move forward or that a value that was entered is invalid. If an error exists, the error icon always overrides the validation icon.
 */
 export const Error = TextFieldGroup.bind({});
 Error.tags = ["!dev"];
@@ -191,19 +170,17 @@ Error.args = {
 };
 
 /**
- * A text field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
+ * A text area can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
  * 
  * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible.
 */
-export const HelpText = HelpTextOptions.bind({});
+export const HelpText = HelpTextOptionsTextArea.bind({});
 HelpText.tags = ["!dev"];
-
 
 export const Quiet = TextFieldGroup.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
-	value: ""
 };
 
 Quiet.parameters = {
@@ -211,13 +188,13 @@ Quiet.parameters = {
 };
 
 /**
- * Text fields have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed.
+ * Text area has a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed.
 */
 export const Readonly = TextFieldGroup.bind({});
 Readonly.tags = ["!dev"];
 Readonly.args = {
 	isReadOnly: true,
-	value: "lisawilson24"
+	value: "Adipisicing dolor quis ad non ad ipsum irure ullamco."
 };
 Readonly.parameters = {
 	chromatic: { disableSnapshot: true }
@@ -231,7 +208,8 @@ export const SideLabel = TextFieldGroup.bind({});
 SideLabel.tags = ["!dev"];
 SideLabel.args = {
 	labelPosition: "side",
-	labelText: "Username",
+	labelText: "Comments",
+	value: "Qui nulla cupidatat do ex laborum ipsum et culpa reprehenderit dolore.",
 	displayCounter: true,
 	characterCount: 50,
 	helpText: "Example help text. Lorem ipsum dolor sit amet."
@@ -240,35 +218,19 @@ SideLabel.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-export const Sizing = (args, context) => Sizes({
-	Template: TextFieldGroup,
-	withHeading: false,
-	withBorder: false,
-	...args,
-}, context);
-
-Sizing.args = {
-	helpText: "Example help text. Lorem ipsum dolor sit amet."
-};
-Sizing.tags = ["!dev"];
-Sizing.parameters = {
-	chromatic: { disableSnapshot: true }
-};
-
 
 /**
- * Text fields can display a validation icon when the text entry is expected to conform to a specific format (e.g., email address, credit card number, password creation requirements, etc.). The icon appears as soon as a user types a valid entry in the field.
+ * Text area can display a validation icon when the text entry is expected to conform to a specific format (e.g., email address, credit card number, password creation requirements, etc.). The icon appears as soon as a user types a valid entry in the field.
 */
 export const Validation = TextFieldGroup.bind({});
 Validation.tags = ["!dev"];
 Validation.args = {
-	isValid: true,
+	isValid: true
 };
 Validation.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 Validation.storyName = "Validation icon";
-
 
 // ********* VRT ONLY ********* //
 // @todo should this show text field and text area in the same snapshot?

@@ -1,6 +1,7 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as ProgressCircle } from "@spectrum-css/progresscircle/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -70,13 +71,16 @@ export const Template = ({
 	isKeyboardFocused = false,
 	isLoading = false,
 	displayLabel = false,
+	displayCounter = false,
 	labelPosition = "top",
 	labelText,
+	characterCount,
 	iconName,
 	iconSet,
 	pattern,
 	placeholder,
 	name,
+	helpText = "",
 	id = getRandomId("textfield"),
 	value = "",
 	type = "text",
@@ -134,6 +138,9 @@ export const Template = ({
 			size,
 			label: labelText,
 		}, context))}
+		${when(displayCounter, 
+			() => html`<span 
+				class="${rootClass}-characterCount">${characterCount}</span>`)}
 		${when(iconName, () => Icon({
 			size,
 			iconName,
@@ -183,6 +190,51 @@ export const Template = ({
 			size: "s",
 			customClasses: customProgressCircleClasses,
 		}, context))}
+		${when(helpText, () => 
+				HelpText({
+					text: helpText,
+					variant: isInvalid ? "negative" : "neutral",
+					size,
+					hideIcon: true,
+					isDisabled
+				}, context ))}
 	</div>
 	`;
 };
+
+export const HelpTextOptions = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	withHeading: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Description",
+			content: Template({...args, isRequired: true, labelText: "Username", value: "lisawilson24", helpText: "Password must be at least 8 characters."}, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Error message",
+			content: Template({...args, isRequired: true, labelText: "Email address", value: "abc@adobe.com", helpText: "Enter your email address", isInvalid: true }, context),
+		})}
+	`
+});
+
+export const HelpTextOptionsTextArea = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	withHeading: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Description",
+			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Error message",
+			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Enter at least one interest.", isInvalid: true }, context),
+		})}
+	`
+});
+
