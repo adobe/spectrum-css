@@ -55,11 +55,6 @@ export default {
 	},
 	parameters: {
 		packageJson: pkgJson,
-		docs: {
-			story: {
-				inline: false,
-			},
-		},
 	},
 };
 
