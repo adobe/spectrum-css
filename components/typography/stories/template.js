@@ -38,9 +38,28 @@ export const Template = (args = {}, context = {}) => {
 			return Template({ ...args, ...c }, context);
 		}
 
-		// body doesn't come in xxs, but if paired with an xxs heading, use xs (the closest size to xxs)
-		if (semantics === "body" && size === "xxs") {
-			size = "xs";
+		switch(size) {
+			case "xxs":
+				// Neither code nor body support xxs, but if paired with an xxs heading, use xs (the closest size to xxs)
+				if (["body", "code"].includes(semantics)) {
+					size = "xs";
+				}
+				break;
+			case "xs":
+				if (["detail"].includes(semantics)) {
+					size = "s";
+				}
+				break;
+			case "xxl":
+				if (["detail", "code"].includes(semantics)) {
+					size = "xl";
+				}
+				break;
+			case "xxxl":
+				if (["detail", "code"].includes(semantics)) {
+					size = "xl";
+				}
+				break;
 		}
 
 		if (typeof semantics === "undefined") {

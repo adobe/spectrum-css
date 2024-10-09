@@ -124,7 +124,7 @@ export const Template = ({
 					customPopoverStyles: {
 						insetBlockStart: "24px",
 					},
-					content: [
+					popoverContent: [
 						() => Menu({
 							selectionMode: "none",
 							size,
