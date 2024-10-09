@@ -7,6 +7,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const AssetListItem = ({
 	rootClass = "spectrum-AssetList-item",
@@ -21,7 +24,7 @@ export const AssetListItem = ({
 	isSelected = false,
 	isBranch = false,
 	onclick = () => {},
-}) => html`
+} = {}, context = {}) => html`
 	<li
 		class=${classMap({
 			[rootClass]: true,
@@ -40,7 +43,7 @@ export const AssetListItem = ({
 				ariaLabelledby,
 				id: checkboxId,
 				customClasses: [`${rootClass}Selector`],
-			})
+			}, context)
 		)}
 		${when(image, () => 
 			html`<img src=${image} class="${rootClass}Thumbnail" alt="asset image thumbnail" />`
@@ -50,7 +53,7 @@ export const AssetListItem = ({
 				iconName,
 				setName: iconSet,
 				customClasses: [`${rootClass}Thumbnail`],
-			})
+			}, context)
 		)}
 		${when(label, () => html`<span class="${rootClass}Label">${label}</span>`)}
 		${when(!isSelectable && !isBranch, () =>
@@ -60,13 +63,13 @@ export const AssetListItem = ({
 				ariaLabelledby,
 				id: checkboxId,
 				customClasses: [`${rootClass}Selector`],
-			}))}
+			}, context))}
 		${when(isBranch, () =>
 			Icon({
 				iconName: "ChevronRight100",
 				setName: "ui",
 				customClasses: [`${rootClass}ChildIndicator`],
-			})
+			}, context)
 		)}
 	</li>
 `;

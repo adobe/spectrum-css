@@ -46,10 +46,21 @@
     "--spectrum-animation-duration-500",
     "--spectrum-animation-ease-in",
     "--spectrum-animation-ease-out",
-    "--spectrum-corner-radius-100",
-    "--spectrum-gray-100"
+    "--spectrum-background-layer-2-color",
+    "--spectrum-corner-radius-100"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-modal-background-color",
+    "--system-modal-confirm-border-radius",
+    "--system-modal-confirm-entry-animation-delay",
+    "--system-modal-confirm-entry-animation-duration",
+    "--system-modal-confirm-exit-animation-delay",
+    "--system-modal-confirm-exit-animation-duration",
+    "--system-modal-fullscreen-margin",
+    "--system-modal-max-height",
+    "--system-modal-max-width",
+    "--system-modal-transition-animation-duration"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }

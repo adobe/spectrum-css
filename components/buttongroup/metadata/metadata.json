@@ -19,7 +19,18 @@
     "--spectrum-buttongroup-spacing-vertical"
   ],
   "global": ["--spectrum-spacing-200", "--spectrum-spacing-300"],
-  "system-theme": [],
+  "system-theme": [
+    "--system-button-group-size-l-spacing-horizontal",
+    "--system-button-group-size-l-spacing-vertical",
+    "--system-button-group-size-m-spacing-horizontal",
+    "--system-button-group-size-m-spacing-vertical",
+    "--system-button-group-size-s-spacing-horizontal",
+    "--system-button-group-size-s-spacing-vertical",
+    "--system-button-group-size-xl-spacing-horizontal",
+    "--system-button-group-size-xl-spacing-vertical",
+    "--system-button-group-spacing-horizontal",
+    "--system-button-group-spacing-vertical"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }

@@ -1,0 +1,41 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--express {
+	--spectrum-inlinealert-heading-font-family: var(--system-in-line-alert-heading-font-family);
+	--spectrum-inlinealert-heading-font-weight: var(--system-in-line-alert-heading-font-weight);
+	--spectrum-inlinealert-heading-font-style: var(--system-in-line-alert-heading-font-style);
+	--spectrum-inlinealert-heading-font-size: var(--system-in-line-alert-heading-font-size);
+	--spectrum-inlinealert-heading-line-height: var(--system-in-line-alert-heading-line-height);
+	--spectrum-inlinealert-content-font-family: var(--system-in-line-alert-content-font-family);
+	--spectrum-inlinealert-content-font-weight: var(--system-in-line-alert-content-font-weight);
+	--spectrum-inlinealert-content-font-style: var(--system-in-line-alert-content-font-style);
+	--spectrum-inlinealert-content-font-size: var(--system-in-line-alert-content-font-size);
+	--spectrum-inlinealert-content-line-height: var(--system-in-line-alert-content-line-height);
+	--spectrum-inlinealert-border-width: var(--system-in-line-alert-border-width);
+	--spectrum-inlinealert-border-radius: var(--system-in-line-alert-border-radius);
+	--spectrum-inlinealert-icon-size: var(--system-in-line-alert-icon-size);
+	--spectrum-inlinealert-min-inline-size: var(--system-in-line-alert-min-inline-size);
+	--spectrum-inlinealert-header-min-block-size: var(--system-in-line-alert-header-min-block-size);
+	--spectrum-inlinealert-spacing-edge-to-text: var(--system-in-line-alert-spacing-edge-to-text);
+	--spectrum-inlinealert-spacing-header-to-icon: var(--system-in-line-alert-spacing-header-to-icon);
+	--spectrum-inlinealert-spacing-header-content-button: var(--system-in-line-alert-spacing-header-content-button);
+	--spectrum-inlinealert-background-color: var(--system-in-line-alert-background-color);
+	--spectrum-inlinealert-border-and-icon-color: var(--system-in-line-alert-border-and-icon-color);
+	--spectrum-inlinealert-header-color: var(--system-in-line-alert-header-color);
+	--spectrum-inlinealert-content-color: var(--system-in-line-alert-content-color);
+	--spectrum-inlinealert-border-and-icon-color-info: var(--system-in-line-alert-border-and-icon-color-info);
+	--spectrum-inlinealert-border-and-icon-color-positive: var(--system-in-line-alert-border-and-icon-color-positive);
+	--spectrum-inlinealert-border-and-icon-color-notice: var(--system-in-line-alert-border-and-icon-color-notice);
+	--spectrum-inlinealert-border-and-icon-color-negative: var(--system-in-line-alert-border-and-icon-color-negative);
+}

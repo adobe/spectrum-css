@@ -1,0 +1,23 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--express {
+	--spectrum-well-border-width: var(--system-well-border-width);
+	--spectrum-well-border-color: var(--system-well-border-color);
+	--spectrum-well-border-radius: var(--system-well-border-radius);
+	--spectrum-well-content-color: var(--system-well-content-color);
+	--spectrum-well-background-color: var(--system-well-background-color);
+	--spectrum-well-padding: var(--system-well-padding);
+	--spectrum-well-margin-top: var(--system-well-margin-top);
+	--spectrum-well-minimum-width: var(--system-well-minimum-width);
+}

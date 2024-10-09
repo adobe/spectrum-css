@@ -11,17 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum-two.css";
+
 @media (forced-colors: active) {
 	.spectrum-DropIndicator {
 		--highcontrast-dropindicator-color: Highlight;
 	}
-}
-
-.spectrum-DropIndicator {
-	--spectrum-dropindicator-border-color: var(--spectrum-dropindicator-color);
-	--spectrum-dropindicator-circle-color: var(--spectrum-dropindicator-color);
-	--spectrum-dropindicator-border-size: var(--spectrum-border-width-200);
-	--spectrum-dropindicator-circle-size: 12px;
 }
 
 .spectrum-DropIndicator {

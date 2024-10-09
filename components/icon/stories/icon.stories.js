@@ -102,7 +102,10 @@ WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
 	chromatic: {
 		forcedColors: "active",
-		modes: disableDefaultModes
+		modes: {
+			...disableDefaultModes,
+			"Mobile": { disable: true },
+		},
 	},
 };
 

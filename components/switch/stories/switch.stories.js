@@ -37,7 +37,13 @@ export default {
 		label: "Switch label",
 		size: "m",
 	},
-	packageJson: pkgJson,
+	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=164-16761",
+		},
+		packageJson: pkgJson,
+	}
 };
 
 export const Default = SwitchGroup.bind({});

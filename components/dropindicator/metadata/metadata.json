@@ -25,7 +25,12 @@
     "--spectrum-dropindicator-color"
   ],
   "global": ["--spectrum-border-width-200"],
-  "system-theme": [],
+  "system-theme": [
+    "--system-drop-indicator-border-color",
+    "--system-drop-indicator-border-size",
+    "--system-drop-indicator-circle-color",
+    "--system-drop-indicator-circle-size"
+  ],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-dropindicator-color"]
 }

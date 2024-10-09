@@ -32,7 +32,15 @@
     "--spectrum-black-rgb",
     "--spectrum-overlay-opacity"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-underlay-background-color",
+    "--system-underlay-background-entry-animation-delay",
+    "--system-underlay-background-entry-animation-duration",
+    "--system-underlay-background-entry-animation-ease",
+    "--system-underlay-background-exit-animation-delay",
+    "--system-underlay-background-exit-animation-duration",
+    "--system-underlay-background-exit-animation-ease"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }

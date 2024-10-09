@@ -58,7 +58,22 @@
     "--spectrum-opacity-checkerboard-square-light",
     "--spectrum-picked-color"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-color-loupe-animation-distance",
+    "--system-color-loupe-checkerboard-dark-color",
+    "--system-color-loupe-checkerboard-light-color",
+    "--system-color-loupe-drop-shadow-blur",
+    "--system-color-loupe-drop-shadow-color",
+    "--system-color-loupe-drop-shadow-x",
+    "--system-color-loupe-drop-shadow-y",
+    "--system-color-loupe-height",
+    "--system-color-loupe-inner-border-color",
+    "--system-color-loupe-inner-border-width",
+    "--system-color-loupe-offset",
+    "--system-color-loupe-outer-border-color",
+    "--system-color-loupe-outer-border-width",
+    "--system-color-loupe-width"
+  ],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-colorloupe-outer-border-color"]
 }

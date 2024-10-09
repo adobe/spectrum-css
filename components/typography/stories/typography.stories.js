@@ -77,6 +77,10 @@ export default {
 		semantics: "body",
 	},
 	parameters: {
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=1-3",
+		},
 		packageJson: pkgJson,
 	},
 };

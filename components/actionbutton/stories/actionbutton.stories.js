@@ -83,6 +83,10 @@ export default {
 		actions: {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=702-2877",
+		},
 		packageJson: pkgJson,
 		docs: {
 			story: {
@@ -237,30 +241,6 @@ Sizing.parameters = {
 
 
 // ********* VRT ONLY ********* //
-export const StaticBlack = ActionButtonGroup.bind({});
-StaticBlack.tags = ["!autodocs", "!dev"];
-StaticBlack.args = {
-	...Default.args,
-	staticColor: "black",
-};
-StaticBlack.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
-};
-
-export const StaticWhite = ActionButtonGroup.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
-StaticWhite.args = {
-	...Default.args,
-	staticColor: "white",
-};
-StaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
-};
-
 export const WithForcedColors = ActionButtonGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];

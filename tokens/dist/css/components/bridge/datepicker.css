@@ -11,6 +11,45 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-DatePicker {
-	--spectrum-datepicker-initial-height: var(--system-spectrum-datepicker-initial-height);
+.spectrum.spectrum--express {
+	--spectrum-datepicker-initial-height: var(--system-date-picker-initial-height);
+	--spectrum-datepicker-border-radius: var(--system-date-picker-border-radius);
+	--spectrum-datepicker-border-radius-quiet: var(--system-date-picker-border-radius-quiet);
+	--spectrum-datepicker-border-width: var(--system-date-picker-border-width);
+	--spectrum-datepicker-min-width: var(--system-date-picker-min-width);
+	--spectrum-datepicker-icon-size: var(--system-date-picker-icon-size);
+	--spectrum-datepicker-pickerbutton-border-color: var(--system-date-picker-pickerbutton-border-color);
+	--spectrum-datepicker-pickerbutton-border-color-invalid: var(--system-date-picker-pickerbutton-border-color-invalid);
+	--spectrum-datepicker-pickerbutton-width: var(--system-date-picker-pickerbutton-width);
+	--spectrum-datepicker-pickerbutton-width-quiet: var(--system-date-picker-pickerbutton-width-quiet);
+	--spectrum-datepicker-quiet-button-offset: var(--system-date-picker-quiet-button-offset);
+	--spectrum-datepicker-icon-to-button: var(--system-date-picker-icon-to-button);
+	--spectrum-datepicker-icon-to-text: var(--system-date-picker-icon-to-text);
+	--spectrum-datepicker-focus-ring-gap: var(--system-date-picker-focus-ring-gap);
+	--spectrum-datepicker-focus-thickness: var(--system-date-picker-focus-thickness);
+	--spectrum-datepicker-focus-animation: var(--system-date-picker-focus-animation);
+	--spectrum-datepicker-focus-ring-width: var(--system-date-picker-focus-ring-width);
+	--spectrum-datepicker-focus-ring-color: var(--system-date-picker-focus-ring-color);
+	--spectrum-datepicker-focus-line-gap: var(--system-date-picker-focus-line-gap);
+	--spectrum-datepicker-invalid-quiet-color: var(--system-date-picker-invalid-quiet-color);
+	--spectrum-datepicker-quiet-border-color-hover: var(--system-date-picker-quiet-border-color-hover);
+	--spectrum-datepicker-border-color-disabled: var(--system-date-picker-border-color-disabled);
+	--spectrum-datepicker-dash-font-size: var(--system-date-picker-dash-font-size);
+	--spectrum-datepicker-dash-color: var(--system-date-picker-dash-color);
+	--spectrum-datepicker-dash-color-disabled: var(--system-date-picker-dash-color-disabled);
+	--spectrum-datepicker-range-dash-marin-inline-start: var(--system-date-picker-range-dash-marin-inline-start);
+	--spectrum-datepicker-range-dash-padding-top: var(--system-date-picker-range-dash-padding-top);
+	--spectrum-datepicker-input-width-base: var(--system-date-picker-input-width-base);
+	--spectrum-datepicker-input-width: var(--system-date-picker-input-width);
+	--spectrum-datepicker-input-width-quiet: var(--system-date-picker-input-width-quiet);
+	--spectrum-datepicker-range-input-width-first: var(--system-date-picker-range-input-width-first);
+	--spectrum-datepicker-range-input-width-quiet-first: var(--system-date-picker-range-input-width-quiet-first);
+	--spectrum-datepicker-datetime-input-width-first: var(--system-date-picker-datetime-input-width-first);
+	--spectrum-datepicker-datetime-input-width: var(--system-date-picker-datetime-input-width);
+	--spectrum-datepicker-datetime-quiet-input-width-first: var(--system-date-picker-datetime-quiet-input-width-first);
+	--spectrum-datepicker-datetime-quiet-input-width: var(--system-date-picker-datetime-quiet-input-width);
+	--spectrum-datepicker-padding-inline-end: var(--system-date-picker-padding-inline-end);
+	--spectrum-datepicker-padding-inline-end-quiet: var(--system-date-picker-padding-inline-end-quiet);
+	--spectrum-datepicker-padding-inline-end-invalid: var(--system-date-picker-padding-inline-end-invalid);
+	--spectrum-datepicker-padding-inline-end-invalid-quiet: var(--system-date-picker-padding-inline-end-invalid-quiet);
 }
