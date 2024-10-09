@@ -37,7 +37,9 @@ export default {
 		label: "Switch label",
 		size: "m",
 	},
-	packageJson: pkgJson,
+	parameters: {
+		packageJson: pkgJson
+	}
 };
 
 export const Default = SwitchGroup.bind({});

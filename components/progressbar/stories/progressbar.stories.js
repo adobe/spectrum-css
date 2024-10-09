@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
+import pkgJson from "../package.json";
 import { ProgressBarGroup } from "./progressbar.test.js";
 import { IndeterminateGroup, Template } from "./template.js";
 
@@ -90,6 +91,9 @@ export default {
 		isIndeterminate: false,
 		showValueLabel: true,
 	},
+	parameters: {
+		packageJson: pkgJson,
+	}
 };
 
 /**

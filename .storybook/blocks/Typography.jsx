@@ -5,7 +5,7 @@ export const Heading = styled.div(({
     theme,
     size = "m",
 }) => {
-    const fontSize = size === "s" ? 300 : size === "l" ? 700 : size === "xl" ? 900 : 500;
+    const fontSize = size === "xs" ? 200 : size === "s" ? 300 : size === "l" ? 700 : size === "xl" ? 900 : 500;
     return {
         fontFamily: theme.typography.fontFamily,
         fontWeight: theme.typography.weight.bold,
