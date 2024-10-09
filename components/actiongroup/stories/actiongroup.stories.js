@@ -266,14 +266,17 @@ JustifiedIconOnlyCompact.args = {
 	content: [
 		{
 			iconName: "AlignTop",
+			iconSet: "workflow",
 			label: "",
 		},
 		{
 			iconName: "AlignBottom",
+			iconSet: "workflow",
 			label: "",
 		},
 		{
 			iconName: "AlignMiddle",
+			iconSet: "workflow",
 			label: "",
 		},
 	]
