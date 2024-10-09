@@ -237,30 +237,6 @@ Sizing.parameters = {
 
 
 // ********* VRT ONLY ********* //
-export const StaticBlack = ActionButtonGroup.bind({});
-StaticBlack.tags = ["!autodocs", "!dev"];
-StaticBlack.args = {
-	...Default.args,
-	staticColor: "black",
-};
-StaticBlack.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
-};
-
-export const StaticWhite = ActionButtonGroup.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
-StaticWhite.args = {
-	...Default.args,
-	staticColor: "white",
-};
-StaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
-};
-
 export const WithForcedColors = ActionButtonGroup.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];

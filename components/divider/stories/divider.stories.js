@@ -1,6 +1,6 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size, staticColor } from "@spectrum-css/preview/types";
-import { Sizes } from "@spectrum-css/preview/decorators";
 import pkgJson from "../package.json";
 import { DividerGroup } from "./divider.test.js";
 import { Template } from "./template.js";
@@ -38,7 +38,7 @@ export default {
 };
 
 /**
- * By default, dividers are horizontal and should be used for separating content vertically. The small divider is the default size. 
+ * By default, dividers are horizontal and should be used for separating content vertically. The small divider is the default size.
  */
 export const Default = DividerGroup.bind({});
 Default.args = {};
@@ -91,9 +91,7 @@ StaticWhiteGroup.args = {
 	staticColor: "white",
 };
 StaticWhiteGroup.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 export const StaticBlackGroup = Default.bind({});
@@ -103,9 +101,7 @@ StaticBlackGroup.args = {
 	staticColor: "black",
 };
 StaticBlackGroup.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

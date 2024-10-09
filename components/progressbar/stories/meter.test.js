@@ -3,7 +3,6 @@ import { Template } from "./meter.template.js";
 
 export const MeterGroup = Variants({
 	Template,
-	skipBorders: true,
 	testData: [
 		{
 			testHeading: "Default",
@@ -33,9 +32,13 @@ export const MeterGroup = Variants({
 		linear-gradient for any --mod-*-{fill} properties, set those custom properties in CSS.
 		*/
 		{
-			testHeading: "Gradient support", 
+			testHeading: "Gradient support",
 			trackFill: "linear-gradient(to right, hotpink, orange)",
 			progressBarFill: "linear-gradient(to left, teal, purple)",
-		}
+		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
 	],
 });

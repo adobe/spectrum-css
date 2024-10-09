@@ -50,22 +50,28 @@ export function fetchStyleContainer(id, container) {
  * @type (id: string, isDocs: boolean = false) => HTMLElement[]
  * @description Fetches the style container for the given ID or creates a new one
  **/
-export function fetchContainers(id, isDocs = false) {
-    if (!id) return [];
-    const { document } = global;
+export function fetchContainers(id, isDocs = false, isTesting = false) {
+	if (!id) return [];
+	const { document } = global;
 
-    let containers = [document.body];
+	let containers = [];
 
-    // Storybook IDs used to target the container element for the docs pages
-    const roots = [
-        ...document.querySelectorAll(`#story--${id}`),
-        ...document.querySelectorAll(`#story--${id}--primary`)
-    ];
+	// Storybook IDs used to target the container element for the docs pages
+	const roots = [
+		...document.querySelectorAll(`#story--${id}`),
+		...document.querySelectorAll(`#story--${id}--primary`)
+	];
 
-    // viewMode is either "docs" or "story"
-    if (isDocs && roots.length > 0) {
-        containers = roots.map(root => root.closest(".docs-story") ?? root);
-    }
+	// viewMode is either "docs" or "story"
+	if (isDocs && roots.length > 0) {
+		containers = roots.map(root => root.closest(".docs-story") ?? root);
+	}
+	else if (isTesting) {
+		// Only capture the top-level container for testing previews
+		containers.push(...document.querySelectorAll("[data-inner-container]"));
+	}
 
-    return containers;
+	if (containers.length === 0) containers = [document.body];
+
+	return containers;
 }
