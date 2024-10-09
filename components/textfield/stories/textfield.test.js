@@ -8,18 +8,17 @@ export const TextFieldGroup = Variants({
 	{
 		testHeading: "With field label",
 		displayLabel: true,
-		labelText: "Username",
+		value: "UsernameWiderThanInput@ReallyLongEmail.com"
 	},
 	{
 		testHeading: "With side label",
 		displayLabel: true,
-		labelText: "Username",
 		labelPosition: "side",
+		value: "UsernameWiderThanInput@ReallyLongEmail.com"
 	},
 	{
 		testHeading: "With value",
 		displayLabel: true,
-		labelText: "Username",
 		value: "UsernameWiderThanInput@ReallyLongEmail.com"
 	},],
 	stateData: [{

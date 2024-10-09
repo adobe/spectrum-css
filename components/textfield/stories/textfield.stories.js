@@ -77,25 +77,14 @@ export default {
 		isLoading,
 		pattern: { table: { disable: true } },
 		value: { table: { disable: true } },
-		hasDescription: {
-			name: "Help Text",
-			description: "A text field can have help text below the field to give extra context or instruction about what a user should input. The description communicates a hint or helpful information.",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Advanced",
-			},
-			control: "boolean",
-		},
-		description: {
+		helpText: {
 			name: "Help text (description)",
 			type: { name: "string" },
 			control: { type: "text" },
 			table: {
 				type: { summary: "string" },
-				category: "Advanced",
+				category: "Content",
 			},
-			if: { arg: "hasDescription", eq: true },
 		},
 		displayCounter: {
 			name: "Show counter",
@@ -131,13 +120,12 @@ export default {
 		displayCounter: false,
 		characterCount: 50,
 		labelPosition: "top",
-		labelText: "Label",
+		labelText: "Username",
 		size: "m",
 		grows: false,
 		isQuiet: false,
-		value: "Value",
-		hasDescription: false,
-		description: "Example help text. Lorem ipsum dolor sit amet."
+		value: "",
+		helpText: ""
 	},
 	parameters: {
 		actions: {
@@ -157,7 +145,7 @@ export default {
 
 export const Default = TextFieldGroup.bind({});
 Default.args = {
-	labelText: "Label",
+	labelText: "Username",
 };
 
 // ********* DOCS ONLY ********* //
@@ -204,6 +192,8 @@ Error.args = {
 
 /**
  * A text field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
+ * 
+ * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible.
 */
 export const HelpText = HelpTextOptions.bind({});
 HelpText.tags = ["!dev"];
@@ -213,7 +203,7 @@ export const Quiet = TextFieldGroup.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
-	labelText: "Label"
+	value: ""
 };
 
 Quiet.parameters = {
@@ -226,7 +216,8 @@ Quiet.parameters = {
 export const Readonly = TextFieldGroup.bind({});
 Readonly.tags = ["!dev"];
 Readonly.args = {
-	isReadOnly: true
+	isReadOnly: true,
+	value: "lisawilson24"
 };
 Readonly.parameters = {
 	chromatic: { disableSnapshot: true }
@@ -240,10 +231,10 @@ export const SideLabel = TextFieldGroup.bind({});
 SideLabel.tags = ["!dev"];
 SideLabel.args = {
 	labelPosition: "side",
-	labelText: "Password",
+	labelText: "Username",
 	displayCounter: true,
 	characterCount: 50,
-	hasDescription: true
+	helpText: "Example help text. Lorem ipsum dolor sit amet."
 };
 SideLabel.parameters = {
 	chromatic: { disableSnapshot: true }
@@ -257,7 +248,7 @@ export const Sizing = (args, context) => Sizes({
 }, context);
 
 Sizing.args = {
-	hasDescription: true
+	helpText: "Example help text. Lorem ipsum dolor sit amet."
 };
 Sizing.tags = ["!dev"];
 Sizing.parameters = {
@@ -271,7 +262,7 @@ Sizing.parameters = {
 export const Validation = TextFieldGroup.bind({});
 Validation.tags = ["!dev"];
 Validation.args = {
-	isValid: true
+	isValid: true,
 };
 Validation.parameters = {
 	chromatic: { disableSnapshot: true }

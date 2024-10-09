@@ -1,7 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
-import { TextFieldGroup } from "@spectrum-css/textfield/stories/textfield.test.js";
-import { HelpTextOptions } from "../../textfield/stories/template";
+import { HelpTextOptionsTextArea } from "./template.js";
+import { TextFieldGroup } from "./textarea.test.js";
 
 /**
  * A text area lets a user input a longer amount of text than a standard text field. It can include all of the standard validation options supported by the text field component.
@@ -76,25 +76,14 @@ export default {
 		isLoading,
 		pattern: { table: { disable: true } },
 		value: { table: { disable: true } },
-		hasDescription: {
-			name: "Help Text",
-			description: "A text area can have help text below the field to give extra context or instruction about what a user should input. The description communicates a hint or helpful information.",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Advanced",
-			},
-			control: "boolean",
-		},
-		description: {
+		helpText: {
 			name: "Help text (description)",
 			type: { name: "string" },
 			control: { type: "text" },
 			table: {
 				type: { summary: "string" },
-				category: "Advanced",
+				category: "Content",
 			},
-			if: { arg: "hasDescription", eq: true },
 		},
 		displayCounter: {
 			name: "Show counter",
@@ -134,10 +123,9 @@ export default {
 		multiline: true,
 		grows: false,
 		isQuiet: false,
-		value: "Value",
-		labelText: "Label",
-		hasDescription: false,
-		description: "Example help text. Lorem ipsum dolor sit amet."
+		value: "",
+		labelText: "Comments",
+		helpText: ""
 	},
 };
 
@@ -183,15 +171,16 @@ Error.args = {
 
 /**
  * A text area can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
+ * 
+ * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible.
 */
-export const HelpText = HelpTextOptions.bind({});
+export const HelpText = HelpTextOptionsTextArea.bind({});
 HelpText.tags = ["!dev"];
 
 export const Quiet = TextFieldGroup.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
-	labelText: "Label"
 };
 
 Quiet.parameters = {
@@ -204,7 +193,8 @@ Quiet.parameters = {
 export const Readonly = TextFieldGroup.bind({});
 Readonly.tags = ["!dev"];
 Readonly.args = {
-	isReadOnly: true
+	isReadOnly: true,
+	value: "Adipisicing dolor quis ad non ad ipsum irure ullamco."
 };
 Readonly.parameters = {
 	chromatic: { disableSnapshot: true }
@@ -218,10 +208,11 @@ export const SideLabel = TextFieldGroup.bind({});
 SideLabel.tags = ["!dev"];
 SideLabel.args = {
 	labelPosition: "side",
-	labelText: "Password",
+	labelText: "Comments",
+	value: "Qui nulla cupidatat do ex laborum ipsum et culpa reprehenderit dolore.",
 	displayCounter: true,
 	characterCount: 50,
-	hasDescription: true
+	helpText: "Example help text. Lorem ipsum dolor sit amet."
 };
 SideLabel.parameters = {
 	chromatic: { disableSnapshot: true }

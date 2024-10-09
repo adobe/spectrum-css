@@ -76,7 +76,6 @@
     ".spectrum-Textfield.is-disabled .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input",
     ".spectrum-Textfield.is-disabled:hover .spectrum-Textfield-input::placeholder",
-    ".spectrum-Textfield.is-invalid .spectrum-HelpText",
     ".spectrum-Textfield.is-invalid .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-readOnly .spectrum-Textfield-input",
     ".spectrum-Textfield.is-readOnly .spectrum-Textfield-input::placeholder",
@@ -94,6 +93,9 @@
   ],
   "modifiers": [
     "--mod-texfield-animation-duration",
+    "--mod-text-area-min-block-size",
+    "--mod-text-area-min-block-size-quiet",
+    "--mod-text-area-min-inline-size",
     "--mod-textfield-background-color",
     "--mod-textfield-background-color-disabled",
     "--mod-textfield-border-color",
@@ -339,11 +341,7 @@
     "--system-spectrum-textfield-border-color-keyboard-focus",
     "--system-spectrum-textfield-border-width"
   ],
-  "passthroughs": [
-    "--mod-text-area-min-block-size",
-    "--mod-text-area-min-block-size-quiet",
-    "--mod-text-area-min-inline-size"
-  ],
+  "passthroughs": [],
   "high-contrast": [
     "--highcontrast-textfield-border-color",
     "--highcontrast-textfield-border-color-focus",

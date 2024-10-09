@@ -80,8 +80,7 @@ export const Template = ({
 	pattern,
 	placeholder,
 	name,
-	hasDescription = false,
-	description,
+	helpText = "",
 	id = getRandomId("textfield"),
 	value = "",
 	type = "text",
@@ -191,10 +190,12 @@ export const Template = ({
 			size: "s",
 			customClasses: customProgressCircleClasses,
 		}, context))}
-		${when(hasDescription, () => 
+		${when(helpText, () => 
 				HelpText({
-					text: description,
+					text: helpText,
+					variant: isInvalid ? "negative" : "neutral",
 					size,
+					hideIcon: true,
 					isDisabled
 				}, context ))}
 	</div>
@@ -209,12 +210,31 @@ export const HelpTextOptions = (args, context) => Container({
 		${Container({
 			withBorder: false,
 			heading: "Description",
-			content: Template({...args, isRequired: true, labelText: "Password", value: "Enter password", hasDescription: true, description: "Password must be at least 8 characters."}, context),
+			content: Template({...args, isRequired: true, labelText: "Username", value: "lisawilson24", helpText: "Password must be at least 8 characters."}, context),
 		})}
 		${Container({
 			withBorder: false,
 			heading: "Error message",
-			content: Template({...args, isRequired: true, labelText: "Email address", value: "abc@adobe.com", hasDescription: true, description: "Enter your email address", isInvalid: true }, context),
+			content: Template({...args, isRequired: true, labelText: "Email address", value: "abc@adobe.com", helpText: "Enter your email address", isInvalid: true }, context),
 		})}
 	`
 });
+
+export const HelpTextOptionsTextArea = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	withHeading: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Description",
+			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Error message",
+			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Enter at least one interest.", isInvalid: true }, context),
+		})}
+	`
+});
+

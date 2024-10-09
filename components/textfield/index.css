@@ -342,10 +342,6 @@
 		grid-row: 3;
 		grid-column: 1 / span 2;
 	}
-
-	.spectrum-Textfield.is-invalid & {
-		color: var(--spectrum-textfield-help-text-color-invalid);
-	}
 }
 
 /********* Child Element - Character Count *********/
