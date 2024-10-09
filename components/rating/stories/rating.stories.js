@@ -8,7 +8,7 @@ import { Template } from "./template.js";
 /**
  * The rating component is used to display or collect a user's rating of an item as represented by a number of stars.
  *
- * ### Usage notes
+ * ## Usage notes
  * - All active stars have the class `is-selected` applied.
  * - The current value (the last active star) has the class `is-currentValue` applied.
 * - When the rating receives keyboard focus, the class `.is-keyboardFocused` should be added to the component's root element (`.spectrum-Rating`).
