@@ -1,7 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { InlineAlertGroup } from "./inlinealert.test.js";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 /**
  * In-line alerts display a non-modal message associated with objects in a view. These are often used in form validation, providing a place to aggregate feedback related to multiple fields.
@@ -58,7 +59,8 @@ export default {
 		isClosable: false,
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -71,7 +73,7 @@ Default.args = {};
 // ********* DOCS ONLY ********* //
 /**
  * The informative variant uses the informative semantic color (blue) and has an "information" icon to help those with color vision deficiency discern the message tone. This should be used when the message needs to call extra attention, as compared to the neutral variant.
- * 
+ *
  * _Spectrum for Adobe Express uses a different icon. Use the SX_Info_18_S.svg icon in the Express workflow icon set._
  */
 export const Informative = Template.bind({});
@@ -86,7 +88,7 @@ Informative.tags = ["!dev"];
 
 /**
  * A negative variant uses the negative semantic color (red) and has an "alert" icon to help those with color vision deficiency to discern the message tone. Negative variants are used to show an error or failure, or to convey something that needs to be immediately acknowledged or addressed.
- * 
+ *
  * _Spectrum for Adobe Express uses a different icon. Use the SX_Alert_18_S.svg icon in the Express workflow icon set._
  */
 export const Negative = Template.bind({});
@@ -101,7 +103,7 @@ Negative.tags = ["!dev"];
 
 /**
  * The positive variant uses the positive semantic color (green) and has a "checkmark" icon to help those with color vision deficiency discern the message tone. This variant should be used to inform someone of a successful function or result of an action they took.
- * 
+ *
  * _Spectrum for Adobe Express uses a different icon. Use the SX_CheckmarkCircle_18_S.svg icon in the Express workflow icon set._
  */
 export const Positive = Template.bind({});
@@ -116,7 +118,7 @@ Positive.tags = ["!dev"];
 
 /**
  * To warn about a situation that may need to be addressed soon, use the notice variant. It utilizes the notice semantic color (orange) and has an "alert" icon to help those with color vision deficiency to discern the message tone.
- * 
+ *
  * _Spectrum for Adobe Express uses a different icon. Use the SX_Alert_18_S.svg icon in the Express workflow icon set._
  */
 export const Notice = Template.bind({});
@@ -131,7 +133,7 @@ Notice.tags = ["!dev"];
 
 /**
  * An in-line alert with a close button in the footer. Combine this strategy with any variant.
- * 
+ *
  * _Spectrum for Adobe Express uses a different icon. Use the SX_Alert_18_S.svg icon in the Express workflow icon set._
  */
 export const Closable = Template.bind({});

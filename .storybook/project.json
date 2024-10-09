@@ -27,7 +27,7 @@
 					"outputs": ["{workspaceRoot}/dist/preview"]
 				}
 			},
-			"dependsOn": ["clean", "^build"],
+			"dependsOn": ["clean", "^build", { "target": "report", "tag": "component" }],
 			"executor": "nx:run-commands",
 			"inputs": ["tools", { "externalDependencies": ["storybook"] }],
 			"options": {
@@ -85,7 +85,7 @@
 		},
 		"start": {
 			"cache": true,
-			"dependsOn": ["^build"],
+			"dependsOn": [{ "target": "report", "projects": "tag:component" }, "^build"],
 			"executor": "nx:run-commands",
 			"inputs": [
 				"tools",

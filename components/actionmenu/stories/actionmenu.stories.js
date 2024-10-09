@@ -4,7 +4,7 @@ import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import packageJson from "../package.json";
 import { ActionMenuGroup } from "./actionmenu.test.js";
 
 /**
@@ -48,7 +48,7 @@ export default {
 				...(Menu.parameters?.actions?.handles ?? []),
 			],
 		},
-		packageJson: pkgJson,
+		packageJson,
 		docs: {
 			story: {
 				height: "200px",

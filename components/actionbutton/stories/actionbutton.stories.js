@@ -2,20 +2,21 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isEmphasized, isFocused, isHovered, isQuiet, isSelected, size, staticColor } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ActionButtonGroup } from "./actionbutton.test.js";
 import { ActionButtonsWithIconOptions, IconOnlyOption, TreatmentTemplate } from "./template.js";
 
 /**
  * The action button component represents an action a user can take.
- * 
- * ## Usage notes  
- * 
+ *
+ * ## Usage notes
+ *
  * For action buttons that only contain an icon with no label, do not include the element with the `.spectrum-ActionButton-label` class in the markup. If an icon and a label are both used, ensure that the element with the `.spectrum-ActionButton-label` class comes after the `.spectrum-Icon` element.
- * 
+ *
  * If the hold icon is used, ensure that the element with the `.spectrum-ActionButton-hold` class comes before the `.spectrum-Icon` element.
- * 
- * When using `.spectrum-ActionButton--staticWhite` or `.spectrum-ActionButton--staticBlack`, use the `--mod-actionbutton-content-color-default` custom property to set the text color when selected.  
+ *
+ * When using `.spectrum-ActionButton--staticWhite` or `.spectrum-ActionButton--staticBlack`, use the `--mod-actionbutton-content-color-default` custom property to set the text color when selected.
  */
 export default {
 	title: "Action button",
@@ -83,7 +84,8 @@ export default {
 		actions: {
 			handles: ["click .spectrum-ActionButton:not([disabled])"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 		docs: {
 			story: {
 				height: "auto",
@@ -227,7 +229,7 @@ export const Sizing = (args, context) => Sizes({
 	Template: ActionButtonsWithIconOptions,
 	withHeading: false,
 	withBorder: false,
-	...args,	
+	...args,
 }, context);
 Sizing.args = {};
 Sizing.tags = ["!dev"];

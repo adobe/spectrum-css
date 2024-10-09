@@ -1,7 +1,8 @@
 import { Template as Dialog } from "@spectrum-css/dialog/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { TrayGroup } from "./tray.test.js";
 
 /**
@@ -37,7 +38,8 @@ export default {
 		viewport: {
 			defaultViewport: "mobile2"
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
