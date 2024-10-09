@@ -43,8 +43,10 @@
 	--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .spectrum-Rating {
-	&.is-focused {
+	&:has(:focus-visible),
+	&.is-keyboardFocused {
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
 
 		.spectrum-Rating-icon {
@@ -98,17 +100,6 @@
 		cursor: default;
 		pointer-events: none;
 	}
-
-	/* When the entire component is hovered, show all solid icons */
-	&:hover {
-		.spectrum-Rating-starActive {
-			display: block;
-		}
-
-		.spectrum-Rating-starInactive {
-			display: none;
-		}
-	}
 }
 
 .spectrum-Rating-input {
@@ -158,14 +149,14 @@
 		position: absolute;
 	}
 
-	/* All stars following the hovered star */
-	&:hover ~ .spectrum-Rating-icon {
+	&:hover,
+	&.is-hoverSelection {
 		.spectrum-Rating-starActive {
-			display: none;
+			display: block;
 		}
 
 		.spectrum-Rating-starInactive {
-			display: block;
+			display: none;
 		}
 	}
 }
