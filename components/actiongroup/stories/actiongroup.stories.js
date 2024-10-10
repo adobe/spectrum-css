@@ -47,7 +47,7 @@ export default {
 			control: "boolean",
 		},
 		iconOnly: {
-			name: "Icon Only",
+			name: "Icon-only",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
@@ -101,17 +101,14 @@ Default.tags = ["!autodocs"];
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
-
 /**
  * An action group in a disabled state shows that the action buttons within the group exist, but are not available in that circumstance. This state can be used to maintain layout continuity and to communicate that an action group may become available later.
 */
-
 export const Disabled = ActionGroups.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
 	areDisabled: true
 };
-
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -124,7 +121,6 @@ Emphasized.tags = ["!dev"];
 Emphasized.args = {
 	areEmphasized: true
 };
-
 Emphasized.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -132,11 +128,9 @@ Emphasized.parameters = {
 export const Horizontal = TreatmentTemplate.bind({});
 Horizontal.tags = ["!dev"];
 Horizontal.args = {};
-
 Horizontal.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
 Horizontal.storyName = "Default";
 
 /**
@@ -147,25 +141,22 @@ HorizontalCompact.tags = ["!dev"];
 HorizontalCompact.args = {
 	compact: true
 };
-
 HorizontalCompact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+HorizontalCompact.storyName = "Horizontal compact";
 
 /**
  * The vertical option should be reserved for when horizontal space is limited.
 */
-
 export const Vertical = TreatmentTemplate.bind({});
 Vertical.tags = ["!dev"];
 Vertical.args = {
 	vertical: true
 };
-
 Vertical.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
 
 export const VerticalCompact = TreatmentTemplate.bind({});
 VerticalCompact.tags = ["!dev"];
@@ -173,11 +164,10 @@ VerticalCompact.args = {
 	compact: true,
 	vertical: true
 };
-
 VerticalCompact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
+VerticalCompact.storyName = "Vertical compact";
 
 export const HorizontalSizing = (args, context) => Sizes({
 	Template: ActionGroups,
@@ -190,6 +180,7 @@ HorizontalSizing.tags = ["!dev"];
 HorizontalSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+HorizontalSizing.storyName = "Horizontal sizing";
 
 export const VerticalSizing = (args, context) => Sizes({
 	Template: ActionGroups,
@@ -204,11 +195,11 @@ VerticalSizing.tags = ["!dev"];
 VerticalSizing.parameters = {
 	chromatic: { disableSnapshot: true },
 };
+VerticalSizing.storyName = "Vertical sizing";
 
 /**
  * When an action group is justified, it takes up the entire available container width, divided equally for each action button that is inside the group.
 */
-
 export const Justified = ActionGroups.bind({});
 Justified.tags = ["!dev"];
 Justified.args = {
@@ -217,15 +208,14 @@ Justified.args = {
 	content: [
 		{
 			iconName: "AlignTop",
-			label: "Align Top",
+			label: "Align top",
 		},
 		{
 			iconName: "AlignBottom",
-			label: "Align Bottom",
+			label: "Align bottom",
 		},
 	]
 };
-
 Justified.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -235,24 +225,23 @@ JustifiedIconOnly.tags = ["!dev"];
 JustifiedIconOnly.args = {
 	customStyles: {"width": "300px"},
 	justified: true,
+	iconOnly: true,
 	content: [
 		{
 			iconName: "AlignTop",
-			label: "",
+			label: "Align top",
 		},
 		{
 			iconName: "AlignBottom",
-			label: "",
+			label: "Align bottom",
 		},
 		{
 			iconName: "AlignMiddle",
-			label: "",
+			label: "Align middle",
 		},
 	]
 };
-
 JustifiedIconOnly.storyName = "Justified (icon-only)";
-
 JustifiedIconOnly.parameters = {
 	chromatic: { disableSnapshot: true },
 };
@@ -263,39 +252,35 @@ JustifiedIconOnlyCompact.args = {
 	customStyles: {"width": "300px"},
 	justified: true,
 	compact: true,
+	iconOnly: true,
 	content: [
 		{
 			iconName: "AlignTop",
-			label: "",
+			label: "Align top",
 		},
 		{
 			iconName: "AlignBottom",
-			label: "",
+			label: "Align bottom",
 		},
 		{
 			iconName: "AlignMiddle",
-			label: "",
+			label: "Align middle",
 		},
 	]
 };
-
 JustifiedIconOnlyCompact.storyName = "Justified (compact, icon-only)";
-
 JustifiedIconOnlyCompact.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
 
 /**
  * When space is limited in an action group, there are 2 options for the group's overflow behavior: wrap or collapse. By default, an action group is set to wrap, meaning that the action buttons inside the group wrap to form another line. Alternatively, an action group can be set to collapse inside a **More (...)** action button.
 */
 export const Overflow = OverflowOption.bind({});
 Overflow.tags = ["!dev"];
-
 Overflow.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ActionGroups.bind({});

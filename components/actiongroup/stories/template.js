@@ -119,6 +119,7 @@ export const OverflowOption = (context) => Container({
 						},
 						{
 							iconName: "More",
+							label: "More options",
 							iconSet: "workflow",
 							hideLabel: true,
 						},
@@ -129,40 +130,6 @@ export const OverflowOption = (context) => Container({
 	`
 }, context );
 
-export const ActionButtonOptions = (args, context ) => Container({
-	withBorder: false,
-	direction: "row",
-	wrapperStyles: {
-		columnGap: "12px",
-	},
-	content: html`
-		${Template({
-			size: args.size || "m",
-			areQuiet: args.areQuiet || false,
-			areEmphasized: args.areEmphasized || false,
-			vertical: args.vertical || false,
-			compact: args.compact || false,
-			content: [
-				{
-					iconName: args.iconName !== undefined ? "Edit" : undefined,
-					label: args.hideLabel !== true ? "Edit" : "",
-					isQuiet: args.isQuiet
-				},
-				{
-					iconName: args.iconName !== undefined ? "Copy" : undefined,
-					label: args.hideLabel !== true ? "Copy" : "",
-					isQuiet: args.isQuiet
-				},
-				{
-					iconName: args.iconName !== undefined ? "Delete" : undefined,
-					label: args.hideLabel !== true ? "Delete" : "",
-					isSelected: true,
-					isQuiet: args.isQuiet
-				}
-			],
-		}, context )}`
-});
-
 export const TreatmentTemplate = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
@@ -170,18 +137,17 @@ export const TreatmentTemplate = (args, context) => Container({
 		rowGap: "12px",
 	},
 	content: html`${[
-		{ iconName: undefined, hideLabel: false, heading: "Default" }, 
-		{ iconName: "", hideLabel: true, heading: "Icon only" },
-		{ iconName: "", hideLabel: true, isQuiet: true, heading: "Quiet, Icon only" },
-	].map(({ iconName, isQuiet, hideLabel, heading }) => Container({ 
-		withBorder: false,
-		heading: heading,
-		content: ActionButtonOptions({
-			...args,
-			hideLabel,
-			iconName,
-			isQuiet
-		})
-	}, context ))}`,
+		{ heading: "Default", },
+		{ iconOnly: true, heading: "Icon-only", },
+		{ iconOnly: true, areQuiet: true, heading: "Quiet, icon-only", },
+		].map(({ heading, areQuiet, iconOnly }) => Container({
+			withBorder: false,
+			heading: heading,
+			content: Template({
+				...args,
+				areQuiet, 
+				iconOnly,
+			}, context)}
+		))}`
 });
 
