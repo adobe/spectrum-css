@@ -1957,7 +1957,7 @@
 	--system-menu-checkmark-display: var(--system-menu-checkmark-display-shown);
 	--system-menu-item-collapsible-has-icon-sub-item-padding-x-start: calc(var(--system-menu-item-label-inline-edge-to-content) + var(--system-menu-item-checkmark-width) + var(--system-menu-item-text-to-control) + var(--system-menu-item-icon-width) + var(--system-menu-item-label-text-to-visual) + var(--system-menu-item-focus-indicator-width));
 	--system-menu-item-collapsible-no-icon-sub-item-padding-x-start: calc(var(--system-menu-item-label-inline-edge-to-content) + var(--system-menu-item-checkmark-width) + var(--system-menu-item-label-text-to-visual) + var(--system-menu-item-focus-indicator-width));
-	--system-menu-item-background-color-default: var(--spectrum-gray-50);
+	--system-menu-item-background-color-default: var(--spectrum-transparent-black-100);
 	--system-menu-item-background-color-hover: rgba(var(--spectrum-gray-900), var(--spectrum-transparent-black-200-opacity));
 	--system-menu-item-background-color-down: rgba(var(--spectrum-gray-900), var(--spectrum-transparent-black-200-opacity));
 	--system-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-900), var(--spectrum-transparent-black-200-opacity));
