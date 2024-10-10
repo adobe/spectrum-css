@@ -25,7 +25,7 @@ const Combobox = ({
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
-	value,
+	value = "",
 } = {}, context = {}) => {
 	const { updateArgs } = context;
 

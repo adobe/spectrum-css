@@ -76,6 +76,16 @@ export default {
 			control: "select",
 			if: { arg: "showFieldLabel", truthy: true },
 		},
+		value: {
+			name: "Value",
+			description: "The value shows the option that a user has selected.",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Content",
+			},
+			control: { type: "text" },
+		},
 		content: { table: { disable: true } },
 	},
 	args: {
