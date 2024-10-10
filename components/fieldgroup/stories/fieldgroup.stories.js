@@ -1,3 +1,4 @@
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isReadOnly, isRequired } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
@@ -5,6 +6,48 @@ import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import pkgJson from "../package.json";
 import { FieldGroupSet } from "./fieldgroup.test.js";
 import { Template } from "./template.js";
+
+const inputType = (type) => type === "radio" ? [
+	(passthroughs, context) => Radio({
+		...passthroughs,
+		id: "apple",
+		label: "Apples are best",
+		customClasses: ["spectrum-FieldGroup-item"],
+		isChecked: true,
+	}, context),
+	(passthroughs, context) => Radio({
+		...passthroughs,
+		id: "banana",
+		label: "Bananas forever",
+		customClasses: ["spectrum-FieldGroup-item"],
+	}, context),
+	(passthroughs, context) => Radio({
+		...passthroughs,
+		id: "pear",
+		label: "Pears or bust",
+		customClasses: ["spectrum-FieldGroup-item"],
+	}, context),
+] : [
+	(passthroughs, context) => Checkbox({
+		...passthroughs,
+		id: "apple",
+		label: "Apples are best",
+		customClasses: ["spectrum-FieldGroup-item"],
+		isChecked: true,
+	}, context),
+	(passthroughs, context) => Checkbox({
+		...passthroughs,
+		id: "banana",
+		label: "Bananas forever",
+		customClasses: ["spectrum-FieldGroup-item"],
+	}, context),
+	(passthroughs, context) => Checkbox({
+		...passthroughs,
+		id: "pear",
+		label: "Pears or bust",
+		customClasses: ["spectrum-FieldGroup-item"],
+	}, context),
+];
 
 /**
  * A field group is a group of fields, usually radios (also known as a radio group) or checkboxes
@@ -62,30 +105,12 @@ export default {
 		inputType: "radio",
 		labelPosition: "top",
 		layout: "vertical",
-		label: "Select one of the following options:",
-		items: [
-			(passthroughs, context) => Radio({
-				...passthroughs,
-				id: "apple",
-				label: "Apples are best",
-				customClasses: ["spectrum-FieldGroup-item"],
-			}, context),
-			(passthroughs, context) => Radio({
-				...passthroughs,
-				id: "banana",
-				label: "Bananas forever",
-				customClasses: ["spectrum-FieldGroup-item"],
-			}, context),
-			(passthroughs, context) => Radio({
-				...passthroughs,
-				id: "pear",
-				label: "Pears or bust",
-				customClasses: ["spectrum-FieldGroup-item"],
-			}, context),
-		],
+		label: "Field Group Label",
+		helpText: "Select an option.",
 		isInvalid: false,
 		isRequired: false,
 		isReadOnly: false,
+		items: inputType("radio"),
 	},
 	parameters: {
 		actions: {
@@ -129,6 +154,7 @@ VerticalCheckbox.tags = ["!dev"];
 VerticalCheckbox.args = {
 	layout: "vertical",
 	inputType: "checkbox",
+	items: inputType("checkbox"),
 };
 VerticalCheckbox.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -149,6 +175,7 @@ HorizontalCheckbox.tags = ["!dev"];
 HorizontalCheckbox.args = {
 	layout: "horizontal",
 	inputType: "checkbox",
+	items: inputType("checkbox"),
 };
 HorizontalCheckbox.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -171,6 +198,7 @@ InvalidCheckbox.args = {
 	layout: "horizontal",
 	inputType: "checkbox",
 	isInvalid: true,
+	items: inputType("checkbox"),
 };
 InvalidCheckbox.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -184,6 +212,7 @@ InvalidCheckbox.parameters = {
 export const Required = Template.bind({});
 Required.tags = ["!dev"];
 Required.args = {
+	label: "Radio group label (required)",
 	inputType: "radio",
 	fieldLabel: "Radio group label (required)"
 };
@@ -194,9 +223,10 @@ Required.parameters = {
 export const RequiredAsterisk = Template.bind({});
 RequiredAsterisk.tags = ["!dev"];
 RequiredAsterisk.args = {
-	fieldLabel: "Checkbox group label",
+	label: "Checkbox group label*",
 	inputType: "checkbox",
 	isRequired: true,
+	items: inputType("checkbox"),
 };
 RequiredAsterisk.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -208,9 +238,10 @@ RequiredAsterisk.parameters = {
 export const Optional = Template.bind({});
 Optional.tags = ["!dev"];
 Optional.args = {
-	fieldLabel: "Checkbox group label (optional)",
+	label: "Checkbox group label (optional)",
 	helpText: "",
 	inputType: "checkbox",
+	items: inputType("checkbox"),
 };
 Optional.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -247,6 +278,7 @@ VerticalSideLabelCheckbox.args = {
 	labelPosition: "side",
 	inputType: "checkbox",
 	layout: "vertical",
+	items: inputType("checkbox"),
 };
 VerticalSideLabelCheckbox.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -258,6 +290,7 @@ HorizontalSideLabelCheckbox.args = {
 	labelPosition: "side",
 	inputType: "checkbox",
 	layout: "horizontal",
+	items: inputType("checkbox"),
 };
 HorizontalSideLabelCheckbox.parameters = {
 	chromatic: { disableSnapshot: true },
