@@ -1956,10 +1956,10 @@
 	--system-menu-checkmark-display-shown: block;
 	--system-menu-checkmark-display: var(--system-menu-checkmark-display-shown);
 	--system-menu-item-collapsible-no-icon-sub-item-padding-x-start: calc(var(--system-menu-item-label-inline-edge-to-content) + var(--system-menu-item-checkmark-width) + var(--system-menu-item-label-text-to-visual) + var(--system-menu-item-focus-indicator-width));
-	--system-menu-item-background-color-default: transparent;
-	--system-menu-item-background-color-hover: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-transparent-black-200-opacity));
-	--system-menu-item-background-color-down: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-transparent-black-200-opacity));
-	--system-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-900-rgb), var(--spectrum-transparent-black-200-opacity));
+	--system-menu-item-background-color-default: var(--spectrum-transparent-black-100);
+	--system-menu-item-background-color-hover: rgba(var(--spectrum-gray-900), var(--spectrum-transparent-black-200-opacity));
+	--system-menu-item-background-color-down: rgba(var(--spectrum-gray-900), var(--spectrum-transparent-black-200-opacity));
+	--system-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-900), var(--spectrum-transparent-black-200-opacity));
 	--system-menu-item-min-height: var(--spectrum-component-height-100);
 	--system-menu-size-m-item-min-height: var(--spectrum-component-height-100);
 	--system-menu-item-icon-height: var(--spectrum-workflow-icon-size-100);
