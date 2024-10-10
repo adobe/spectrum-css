@@ -1,6 +1,6 @@
 import { Container } from "@spectrum-css/preview/decorators";
-import { Template as ProgressBar } from "./template.js";
 import { html } from "lit";
+import { Template as ProgressBar } from "./template.js";
 
 import "../index.css";
 
@@ -8,12 +8,13 @@ export const Template = ({
 	customClasses = [],
 	fill,
 	size = "s",
+	rootClass = "spectrum-Meter",
 	...item
 } = {}, context = {}) => ProgressBar({
 	customClasses: [
+		rootClass,
 		...customClasses,
-		"spectrum-Meter",
-		typeof size !== "undefined" ? `spectrum-Meter--size${size.toUpperCase()}` : null,
+		typeof size !== "undefined" ? `${rootClass}--size${size.toUpperCase()}` : null,
 		typeof fill !== "undefined" ? `is-${fill}` : null,
 	].filter(Boolean),
 	size,

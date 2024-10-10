@@ -1,10 +1,10 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Sizes } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
+import { FillGroup, Template } from "./meter.template.js";
 import { MeterGroup } from "./meter.test.js";
 import { default as ProgressBar } from "./progressbar.stories";
-import { FillGroup, Template } from "./meter.template.js";
 
 /**
  * The meter component is a visual representations of a quantity or an achievement. The progress is determined by user actions, rather than system actions.
@@ -35,6 +35,7 @@ export default {
 	},
 	args: {
 		...ProgressBar.args,
+		rootClass: "spectrum-Meter",
 		size: "l",
 		label: "Storage space",
 	},
