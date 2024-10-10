@@ -69,7 +69,7 @@ export const Template = ({
 	const { updateArgs } = context;
 	return html`
 		<button
-			aria-label=${ifDefined(label)}
+			aria-label=${ifDefined(hideLabel ? label : undefined)}
 			aria-haspopup=${ifDefined(hasPopup && hasPopup !== "false" ? hasPopup : undefined)}
 			aria-controls=${hasPopup && hasPopup !== "false" ? popupId : undefined}
 			aria-pressed=${isSelected ? "true" : "false"}
