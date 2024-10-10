@@ -51,13 +51,15 @@ export const withContextWrapper = makeDecorator({
 				// Start by attaching the appropriate tokens to the container
 				toggleStyles(container, "tokens", tokens, !isRaw);
 
-				// Check if the container has a static color element
-				const hasStaticElement = container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack, .${rootClass}--overBackground)`);
+				// Check if the container has a static color element.
+				// Uses the wildcard class attribute selector in order to also match components like Meter, where the static classes are not tied to the root class. 
+				const hasStaticElement = container.matches(`:has(.${rootClass}[class*="--staticWhite"], .${rootClass}[class*="--staticBlack"], .${rootClass}[class*="--overBackground"])`);
+				console.warn("has static element", hasStaticElement);
 				let staticKey = staticColor;
 				if (!staticKey && hasStaticElement) {
 					staticKey = (
-						container.querySelector(`.${rootClass}--staticWhite`) && "white" ||
-						container.querySelector(`.${rootClass}--staticBlack, .${rootClass}--overBackground`) && "black"
+						container.querySelector(`.${rootClass}[class*="--staticWhite"]`) && "white" ||
+						container.querySelector(`.${rootClass}[class*="--staticBlack"], .${rootClass}[class*="--overBackground"]`) && "black"
 					);
 				}
 
