@@ -1,6 +1,6 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
 import pkgJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
 import { Template } from "./template.js";
@@ -13,13 +13,18 @@ export default {
 	component: "Combobox",
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
-		isOpen,
+		isOpen: {
+			name: "Open",
+			table: { category: "State" },
+			if: { arg: "isReadOnly", truthy: false },
+		},
 		isQuiet,
 		isInvalid,
 		isFocused,
 		isKeyboardFocused,
 		isLoading,
 		isDisabled,
+		isReadOnly,
 		showFieldLabel: {
 			name: "Show field label",
 			type: { name: "boolean" },
@@ -62,6 +67,7 @@ export default {
 		isKeyboardFocused: false,
 		isLoading: false,
 		isDisabled: false,
+		isReadOnly: false,
 		showFieldLabel: false,
 		testId: "combobox",
 	},
@@ -210,6 +216,12 @@ QuietDisabled.args = {
 };
 QuietDisabled.parameters = {
 	chromatic: { disableSnapshot: true },
+};
+
+export const ReadOnly = Template.bind({});
+ReadOnly.tags = ["!dev"];
+ReadOnly.args = {
+	isReadOnly: true,
 };
 
 // ********* VRT ONLY ********* //

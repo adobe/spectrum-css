@@ -26,6 +26,7 @@ const Combobox = ({
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
+	isReadOnly = false,
 	selectedDay,
 } = {}, context = {}) => {
 	const { globals = {}, updateArgs } = context;
@@ -49,6 +50,7 @@ const Combobox = ({
 				"is-keyboardFocused": !isDisabled && isKeyboardFocused,
 				"is-loading": isLoading,
 				"is-disabled": isDisabled,
+				"is-readOnly": isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -94,7 +96,7 @@ const Combobox = ({
 				isDisabled,
 				position: "right",
 				onclick: function () {
-					updateArgs({ isOpen: !isOpen });
+					if (!isReadOnly) updateArgs({ isOpen: !isOpen });
 				},
 			}, context)}
 		</div>
@@ -107,6 +109,7 @@ export const Template = ({
 	isQuiet = false,
 	isDisabled = false,
 	showFieldLabel = false,
+	isReadOnly = false,
 	fieldLabelText = "Select location",
 	fieldLabelPosition = "top",
 	...args
@@ -116,7 +119,7 @@ export const Template = ({
 		<div style=${styleMap({
 			// This accounts for the height of the popover when it is open to prevent testing issues
 			// and allow docs containers to be the right height
-			["margin-block-end"]: isOpen && !isDisabled ? `${popoverHeight}px` : undefined,
+			["margin-block-end"]: !isReadOnly && isOpen && !isDisabled ? `${popoverHeight}px` : undefined,
 		})}>
 			${when(showFieldLabel, () =>
 				FieldLabel({
@@ -128,7 +131,7 @@ export const Template = ({
 			)}
 			${[
 				Popover({
-					isOpen: isOpen && !isDisabled,
+					isOpen: isOpen && !isDisabled && !isReadOnly,
 					withTip: false,
 					position: "bottom-start",
 					isQuiet,
@@ -137,11 +140,12 @@ export const Template = ({
 						isOpen,
 						isQuiet,
 						isDisabled,
+						isReadOnly,
 						...args,
 						...passthrough,
 					}, context),
 					content: [
-						Menu({
+						!isReadOnly && Menu({
 							size,
 							items: [
 								{

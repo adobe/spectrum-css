@@ -90,6 +90,10 @@
 	--mod-picker-button-background-color-disabled: var(--mod-combobox-background-color-disabled);
 	--mod-picker-button-font-color-disabled: var(--mod-combobox-font-color-disabled);
 	/* @passthroughs end -- settings for nested Picker Button component */
+
+	&.is-readOnly {
+		pointer-events: none;
+	}
 }
 
 .spectrum-Combobox--sizeS {
@@ -317,6 +321,8 @@
 	&::placeholder {
 		--mod-textfield-text-color-default: var(--mod-combobox-font-color-placeholder);
 	}
+
+	
 
 	/* Hover */
 	.spectrum-Combobox-textfield:hover &,
