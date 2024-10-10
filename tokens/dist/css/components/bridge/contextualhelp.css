@@ -13,6 +13,7 @@
 
 .spectrum.spectrum--express {
 	--spectrum-contextual-help-padding: var(--system-contextual-help-padding);
+	--spectrum-contextual-help-content-spacing: var(--system-contextual-help-content-spacing);
 	--spectrum-contextual-help-link-spacing: var(--system-contextual-help-link-spacing);
 	--spectrum-contextual-help-heading-size: var(--system-contextual-help-heading-size);
 	--spectrum-contextual-help-heading-color: var(--system-contextual-help-heading-color);
