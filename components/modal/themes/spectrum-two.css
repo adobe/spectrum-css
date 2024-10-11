@@ -15,6 +15,7 @@
 	.spectrum-Modal {
 		/* Bug: this must be 0ms, not 0 */
 		--spectrum-modal-confirm-exit-animation-delay: var(--spectrum-animation-duration-0);
+		--spectrum-modal-confirm-entry-animation-distance: var(--spectrum-dialog-confirm-entry-animation-distance);
 
 		/* Distance between top and bottom of modal and edge of window for fullscreen modal */
 		--spectrum-modal-fullscreen-margin: 32px;

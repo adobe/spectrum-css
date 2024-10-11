@@ -210,6 +210,9 @@
     "--system-switch-background-color-selected-down",
     "--system-switch-background-color-selected-focus",
     "--system-switch-background-color-selected-hover",
+    "--system-switch-control-height",
+    "--system-switch-control-label-spacing",
+    "--system-switch-control-width",
     "--system-switch-disabled-label-color-default",
     "--system-switch-emphasized-background-color-selected-default",
     "--system-switch-emphasized-background-color-selected-down",
@@ -221,6 +224,7 @@
     "--system-switch-emphasized-handle-border-color-selected-hover",
     "--system-switch-focus-indicator-color",
     "--system-switch-focus-indicator-thickness",
+    "--system-switch-font-size",
     "--system-switch-handle-background-color",
     "--system-switch-handle-border-color-default",
     "--system-switch-handle-border-color-disabled",
@@ -236,6 +240,7 @@
     "--system-switch-label-color-down",
     "--system-switch-label-color-focus",
     "--system-switch-label-color-hover",
+    "--system-switch-min-height",
     "--system-switch-size-l-control-height",
     "--system-switch-size-l-control-label-spacing",
     "--system-switch-size-l-control-width",
@@ -263,7 +268,9 @@
     "--system-switch-size-xl-font-size",
     "--system-switch-size-xl-min-height",
     "--system-switch-size-xl-spacing-top-to-control",
-    "--system-switch-size-xl-spacing-top-to-label"
+    "--system-switch-size-xl-spacing-top-to-label",
+    "--system-switch-spacing-top-to-control",
+    "--system-switch-spacing-top-to-label"
   ],
   "passthroughs": [],
   "high-contrast": [

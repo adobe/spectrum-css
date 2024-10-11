@@ -194,6 +194,21 @@
 		}
 	}
 
+	.spectrum-ActionButton,
+	.spectrum-ActionButton--sizeM {
+		--spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-100) * 2) + var(--spectrum-workflow-icon-size-100));
+		--spectrum-actionbutton-height: var(--spectrum-component-height-100);
+
+		--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-100);
+		--spectrum-actionbutton-font-size: var(--spectrum-font-size-100);
+		--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-100);
+		--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-medium);
+
+		--spectrum-actionbutton-edge-to-visual-size: var(--spectrum-component-edge-to-visual-100);
+		--spectrum-actionbutton-edge-to-visual-only-size: var(--spectrum-component-edge-to-visual-only-100);
+		--spectrum-actionbutton-edge-to-text-size: var(--spectrum-component-edge-to-text-100);
+	}
+
 	.spectrum-ActionButton--sizeXS {
 		--spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-50) * 2) + var(--spectrum-workflow-icon-size-50));
 		--spectrum-actionbutton-height: var(--spectrum-component-height-50);
@@ -220,21 +235,6 @@
 		--spectrum-actionbutton-edge-to-visual-size: var(--spectrum-component-edge-to-visual-75);
 		--spectrum-actionbutton-edge-to-visual-only-size: var(--spectrum-component-edge-to-visual-only-75);
 		--spectrum-actionbutton-edge-to-text-size: var(--spectrum-component-edge-to-text-75);
-	}
-
-	.spectrum-ActionButton,
-	.spectrum-ActionButton--sizeM {
-		--spectrum-actionbutton-min-width: calc((var(--spectrum-component-edge-to-visual-only-100) * 2) + var(--spectrum-workflow-icon-size-100));
-		--spectrum-actionbutton-height: var(--spectrum-component-height-100);
-
-		--spectrum-actionbutton-icon-size: var(--spectrum-workflow-icon-size-100);
-		--spectrum-actionbutton-font-size: var(--spectrum-font-size-100);
-		--spectrum-actionbutton-text-to-visual: var(--spectrum-text-to-visual-100);
-		--spectrum-actionbutton-edge-to-hold-icon: var(--spectrum-action-button-edge-to-hold-icon-medium);
-
-		--spectrum-actionbutton-edge-to-visual-size: var(--spectrum-component-edge-to-visual-100);
-		--spectrum-actionbutton-edge-to-visual-only-size: var(--spectrum-component-edge-to-visual-only-100);
-		--spectrum-actionbutton-edge-to-text-size: var(--spectrum-component-edge-to-text-100);
 	}
 
 	.spectrum-ActionButton--sizeL {

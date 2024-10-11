@@ -30,18 +30,15 @@
 		--spectrum-progressbar-size-2800: 224px;
 
 		/* Size */
-		--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
 		--spectrum-progressbar-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
 		--spectrum-progressbar-min-size: var(--spectrum-progress-bar-minimum-width);
 		--spectrum-progressbar-max-size: var(--spectrum-progress-bar-maximum-width);
 
-		--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-medium);
 		--spectrum-progressbar-line-height: var(--spectrum-line-height-100);
 
 		/* Spacing */
 		--spectrum-progressbar-spacing-label-to-progressbar: var(--spectrum-spacing-75);
-		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-100);
 		--spectrum-progressbar-spacing-label-to-text: var(--spectrum-spacing-200);
 
 		/* Color */
@@ -56,20 +53,21 @@
 		--spectrum-progressbar-fill-color-white: var(--spectrum-white);
 	}
 
-	.spectrum-ProgressBar--sizeS {
-		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
-
-		--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
-		--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-small);
-
-		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-	}
-
+	.spectrum-ProgressBar,
 	.spectrum-ProgressBar--sizeM {
 		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
 
 		--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
 		--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-large);
+
+		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
+	}
+
+	.spectrum-ProgressBar--sizeS {
+		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
+
+		--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
+		--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-small);
 
 		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
 	}
@@ -90,28 +88,5 @@
 		--spectrum-progressbar-thickness: var(--spectrum-progress-bar-thickness-extra-large);
 
 		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-300);
-	}
-
-	.spectrum-Meter {
-		--spectrum-meter-min-width: var(--spectrum-meter-minimum-width);
-		--spectrum-meter-max-width: var(--spectrum-meter-maximum-width);
-		--spectrum-meter-inline-size: var(--spectrum-meter-width);
-		--spectrum-meter-top-to-text: var(--spectrum-component-top-to-text);
-	}
-
-	/* Meter only supports size S and L (default) */
-	.spectrum-Meter--sizeS {
-		--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-small);
-		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2400);
-		--spectrum-progressbar-font-size: var(--spectrum-font-size-75);
-		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-75);
-	}
-
-	.spectrum-Meter,
-	.spectrum-Meter--sizeL {
-		--spectrum-progressbar-thickness: var(--spectrum-meter-thickness-large);
-		--spectrum-progressbar-size-default: var(--spectrum-progressbar-size-2500);
-		--spectrum-progressbar-font-size: var(--spectrum-font-size-100);
-		--spectrum-progressbar-spacing-top-to-text: var(--spectrum-component-top-to-text-200);
 	}
 }

@@ -15,7 +15,7 @@
 	--system-thumbnail-size: var(--spectrum-thumbnail-size-500);
 	--system-thumbnail-border-radius: var(--spectrum-corner-radius-75);
 	--system-thumbnail-border-width: var(--spectrum-border-width-100);
-	--system-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
+	--system-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity));
 	--system-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
 	--system-thumbnail-layer-border-color-inner: var(--spectrum-white);
 	--system-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);

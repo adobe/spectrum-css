@@ -17,6 +17,7 @@
 
 @container style(--system: legacy) {
 	.spectrum-Tabs {
+		--spectrum-tabs-font-weight: var(--spectrum-default-font-weight);
 		--spectrum-tabs-divider-background-color: var(--spectrum-gray-300);
 	}
 }

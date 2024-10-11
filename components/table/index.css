@@ -460,7 +460,6 @@
 	scroll-padding-top: var(--mod-table-current-header-height, calc((var(--mod-table-header-line-height, var(--spectrum-table-row-line-height)) * var(--mod-table-header-font-size, var(--spectrum-table-row-font-size))) + var(--mod-table-header-top-to-text, var(--spectrum-table-header-top-to-text)) + var(--mod-table-header-bottom-to-text, var(--spectrum-table-header-bottom-to-text)) + var(--mod-table-border-width, var(--spectrum-table-border-width))));
 
 	&.spectrum-Table--quiet {
-		--spectrum-table-header-background-color--quiet: var(--mod-table-header-background-color-scrollable, var(--spectrum-background-layer-1-color, var(--spectrum-gray-75)));
 		border-block-start: none;
 	}
 
