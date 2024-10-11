@@ -1,8 +1,9 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isFocused, isHovered, isQuiet, staticColor } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { LinkGroup } from "./link.test.js";
-import { TemplateWithFillerText } from "./template";
+import { TemplateWithFillerText } from "./template.js";
 
 /**
  * A link allows users to navigate to a different location. They can be presented in-line inside a paragraph or as standalone text.
@@ -69,7 +70,8 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Link"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

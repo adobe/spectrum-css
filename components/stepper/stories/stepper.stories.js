@@ -1,9 +1,10 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isQuiet, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { StepperGroup } from "./stepper.test.js";
-import { AllDefaultVariantsGroup, DisabledVariantsGroup, Template } from "./template";
+import { AllDefaultVariantsGroup, DisabledVariantsGroup, Template } from "./template.js";
 
 /**
  * A stepper can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value.
@@ -41,7 +42,8 @@ export default {
 		hideStepper: false
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

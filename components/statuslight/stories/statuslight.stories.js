@@ -1,9 +1,10 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, size } from "@spectrum-css/preview/types";
-import { Sizes } from "@spectrum-css/preview/decorators";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { StatusLightGroup } from "./statuslight.test.js";
-import { Template, SemanticGroup, NonsemanticGroup } from "./template.js";
+import { NonsemanticGroup, SemanticGroup, Template } from "./template.js";
 
 /**
  * Status lights describe the condition of an entity. They can be used to convey semantic meaning, such as statuses and categories.
@@ -64,13 +65,14 @@ export default {
 		isDisabled: false,
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
 /**
  * Status lights should always include a label with text that clearly communicates the kind of status being shown. Color alone is not enough to communicate the status. Do not change the text color to match the dot.
- * 
+ *
  * When the text is too long for the horizontal space available, it wraps to form another line.
  */
 export const Default = StatusLightGroup.bind({});
@@ -97,7 +99,7 @@ Sizing.parameters = {
  * - Positive (approved, complete, success, new, purchased, licensed)
  * - Notice (needs approval, pending, scheduled, syncing, indexing, processing)
  * - Negative (error, alert, rejected, failed)
- * 
+ *
  * Semantic status lights should never be used for color coding categories or labels, and vice versa.
  */
 export const SemanticColors = SemanticGroup.bind({});

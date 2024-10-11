@@ -1,7 +1,8 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
 import { VariantGroup } from "./template.js";
 
@@ -131,7 +132,8 @@ export default {
 		],
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

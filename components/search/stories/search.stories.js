@@ -1,13 +1,14 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isQuiet, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { SearchGroup } from "./search.test.js";
 import { SearchOptions, Template } from "./template.js";
 
 /**
  * A search field is used for searching and filtering items.
- * 
+ *
  * ## Usage Notes
  * This component contains a single input field with both a magnifying glass icon and a clear (“reset”) button displayed within it. When making use of this component, the clear button should only be displayed when the input has a value.
  */
@@ -55,7 +56,8 @@ export default {
 				"click .spectrum-Search-icon",
 			],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -73,7 +75,7 @@ Disabled.tags = ["!dev"];
 
 /**
  * A search field can have [help text](?path=/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input. The description communicates a hint or helpful information, such as a search’s scope.
- * 
+ *
  * When the help text is too long for the available horizontal space, it wraps to form another line.
 */
 export const HelpText = SearchGroup.bind({});
