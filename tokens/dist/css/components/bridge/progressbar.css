@@ -19,14 +19,11 @@
 	--spectrum-progressbar-size-2400: var(--system-progress-bar-size-2400);
 	--spectrum-progressbar-size-2500: var(--system-progress-bar-size-2500);
 	--spectrum-progressbar-size-2800: var(--system-progress-bar-size-2800);
-	--spectrum-progressbar-font-size: var(--system-meter-size-l-progressbar-font-size);
 	--spectrum-progressbar-line-height-cjk: var(--system-progress-bar-line-height-cjk);
 	--spectrum-progressbar-min-size: var(--system-progress-bar-min-size);
 	--spectrum-progressbar-max-size: var(--system-progress-bar-max-size);
-	--spectrum-progressbar-thickness: var(--system-meter-size-l-progressbar-thickness);
 	--spectrum-progressbar-line-height: var(--system-progress-bar-line-height);
 	--spectrum-progressbar-spacing-label-to-progressbar: var(--system-progress-bar-spacing-label-to);
-	--spectrum-progressbar-spacing-top-to-text: var(--system-meter-size-l-progressbar-spacing-top-to-text);
 	--spectrum-progressbar-spacing-label-to-text: var(--system-progress-bar-spacing-label-to-text);
 	--spectrum-progressbar-text-color: var(--system-progress-bar-text-color);
 	--spectrum-progressbar-track-color: var(--system-progress-bar-track-color);
@@ -37,9 +34,8 @@
 	--spectrum-progressbar-label-and-value-white: var(--system-progress-bar-label-and-value-white);
 	--spectrum-progressbar-track-color-white: var(--system-progress-bar-track-color-white);
 	--spectrum-progressbar-fill-color-white: var(--system-progress-bar-fill-color-white);
-	--spectrum-progressbar-size-default: var(--system-meter-size-l-progressbar-size-default);
-	--spectrum-meter-min-width: var(--system-meter-min-width);
-	--spectrum-meter-max-width: var(--system-meter-max-width);
-	--spectrum-meter-inline-size: var(--system-meter-inline-size);
-	--spectrum-meter-top-to-text: var(--system-meter-top-to-text);
+	--spectrum-progressbar-size-default: var(--system-progress-bar-size-xl-size-default);
+	--spectrum-progressbar-font-size: var(--system-progress-bar-size-xl-font-size);
+	--spectrum-progressbar-thickness: var(--system-progress-bar-size-xl-thickness);
+	--spectrum-progressbar-spacing-top-to-text: var(--system-progress-bar-size-xl-spacing-top-to-text);
 }

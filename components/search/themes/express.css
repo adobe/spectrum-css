@@ -23,15 +23,15 @@
 		--spectrum-search-border-color-focus-hover: var(--spectrum-gray-900);
 		--spectrum-search-border-color-key-focus: var(--spectrum-gray-900);
 
-		&.spectrum-Search--sizeS {
-			--spectrum-search-border-radius: calc(var(--spectrum-component-height-75) / 2);
-			--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-75);
-		}
-
 		&,
 		&.spectrum-Search--sizeM {
 			--spectrum-search-border-radius: calc(var(--spectrum-component-height-100) / 2);
 			--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
+		}
+
+		&.spectrum-Search--sizeS {
+			--spectrum-search-border-radius: calc(var(--spectrum-component-height-75) / 2);
+			--spectrum-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-75);
 		}
 
 		&.spectrum-Search--sizeL {

@@ -1,5 +1,5 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./form.template.js";
+import { Template } from "./template.js";
 
 export const FormGroup = Variants({
 	Template,

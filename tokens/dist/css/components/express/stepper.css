@@ -45,12 +45,12 @@
 	--system-stepper-button-border-color-disabled: var(--spectrum-gray-200);
 	--system-stepper-button-border-width-disabled: 0;
 	--system-stepper-buttons-background-color-disabled: var(--spectrum-disabled-background-color);
-	--system-stepper-size-s-button-width: var(--spectrum-in-field-button-width-stacked-small);
-	--system-stepper-size-s-height: var(--spectrum-component-height-75);
 	--system-stepper-button-width: var(--spectrum-in-field-button-width-stacked-medium);
 	--system-stepper-size-m-button-width: var(--spectrum-in-field-button-width-stacked-medium);
 	--system-stepper-height: var(--spectrum-component-height-100);
 	--system-stepper-size-m-height: var(--spectrum-component-height-100);
+	--system-stepper-size-s-button-width: var(--spectrum-in-field-button-width-stacked-small);
+	--system-stepper-size-s-height: var(--spectrum-component-height-75);
 	--system-stepper-size-l-button-width: var(--spectrum-in-field-button-width-stacked-large);
 	--system-stepper-size-l-height: var(--spectrum-component-height-200);
 	--system-stepper-size-xl-button-width: var(--spectrum-in-field-button-width-stacked-extra-large);

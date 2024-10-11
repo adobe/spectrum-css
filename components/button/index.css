@@ -19,7 +19,7 @@
 	@extend %spectrum-BaseButton;
 	@extend %spectrum-ButtonWithFocusRing;
 
-	/** @passthrough ProgressCircle */
+	/* @passthrough -- ProgressCircle */
 	--mod-progress-circle-position: absolute;
 
 	border-radius: var(--mod-button-border-radius, var(--spectrum-button-border-radius));
@@ -230,9 +230,12 @@ a.spectrum-Button {
 		--highcontrast-button-content-color-disabled: GrayText;
 		--highcontrast-button-border-color-disabled: GrayText;
 
+		/* @passthrough start */
 		--mod-progress-circle-track-border-color: ButtonText;
 		--mod-progress-circle-track-border-color-over-background: ButtonText;
 		--mod-progress-circle-thickness: var(--spectrum-progress-circle-thickness-medium);
+		/* @passthrough end */
+
 		--mod-button-animation-duration: 0s;
 
 		.spectrum-Button-label {
