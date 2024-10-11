@@ -1,5 +1,11 @@
 # Change Log
 
+## 8.2.0
+
+### Minor Changes
+
+- [#3220](https://github.com/adobe/spectrum-css/pull/3220) [`b28e1d4`](https://github.com/adobe/spectrum-css/commit/b28e1d4bae705c014134fd66310ada32ef17cf65) Thanks [@cdransf](https://github.com/cdransf)! - Applies flex-shrink to validation icons to prevent icon from resizing when label is long enough to be truncated.
+
 ## 8.1.6
 
 ### Patch Changes
