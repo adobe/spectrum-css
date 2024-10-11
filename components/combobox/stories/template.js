@@ -1,8 +1,7 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
-import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as PickerButton } from "@spectrum-css/pickerbutton/stories/template.js";
 import { Template as Popover } from "@spectrum-css/popover/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -26,15 +25,9 @@ const Combobox = ({
 	isFocused = false,
 	isKeyboardFocused = false,
 	isLoading = false,
-	selectedDay,
+	value = "",
 } = {}, context = {}) => {
-	const { globals = {}, updateArgs } = context;
-	const lang = globals.lang ?? "en-US";
-
-	// If selectedDay is a string, convert it to a Date object
-	if (typeof selectedDay === "string" && selectedDay.length > 0) {
-		selectedDay = new Date(selectedDay).toLocaleDateString({ language: lang });
-	}
+	const { updateArgs } = context;
 
 	return html`
 		<div
@@ -69,11 +62,8 @@ const Combobox = ({
 				customInputClasses: [`${rootClass}-input`],
 				isLoading,
 				customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
-				placeholder: "Type here this text should truncate",
 				name: "field",
-				value: selectedDay
-					? new Date(selectedDay).toLocaleDateString(lang)
-					: undefined,
+				value,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
 				},
@@ -109,6 +99,8 @@ export const Template = ({
 	showFieldLabel = false,
 	fieldLabelText = "Select location",
 	fieldLabelPosition = "top",
+	content = [],
+	value = "",
 	...args
 } = {}, context = {}) => {
 	const popoverHeight = size === "s" ? 106 : size === "l" ? 170 : size === "xl" ? 229 : 142; // default value is "m"
@@ -137,33 +129,58 @@ export const Template = ({
 						isOpen,
 						isQuiet,
 						isDisabled,
+						value,
 						...args,
 						...passthrough,
 					}, context),
-					content: [
-						Menu({
-							size,
-							items: [
-								{
-									label: "Ballard",
-								},
-								{
-									label: "Fremont",
-								},
-								{
-									label: "Greenwood",
-								},
-								{
-									label: "United States of America",
-									isDisabled: true,
-								},
-							],
-						}, context),
-					],
+					content,
 					popoverWidth: size === "s" ? 140 : size === "l" ? 191 : size === "xl" ? 192 : 166, // default value is "m"
 					popoverHeight,
 				}, context),
 			]}
 		</div>
 	`;
+};
+
+export const VariantGroup = (args, context) => {
+	const variants = [
+		{
+			heading: "Closed",
+			args: {...args, isOpen: false},
+		},
+		{
+			heading: "Closed invalid",
+			args: {...args, isOpen: false, isInvalid: true},
+		},
+		{
+			heading: "Closed loading",
+			args: {...args, isOpen: false, isLoading: true},
+		},
+		{
+			heading: "Closed disabled",
+			args: {...args, isOpen: false, isDisabled: true},
+		},
+		{
+			heading: "Open",
+			args: {...args},
+		},
+		{
+			heading: "Open with label",
+			args: {...args, showFieldLabel: true, fieldLabelText: "Country"},
+		},
+	];
+	
+	return Container({
+		direction: "row",
+		withHeading: false,
+		withBorder: false,
+		content: html`${
+			variants.map(variant => Container({
+				withBorder: false,
+				heading: variant.heading,
+				containerStyles: {"gap": "8px"},
+				content: Template(variant.args, context),
+			}))
+		}`
+	});
 };
