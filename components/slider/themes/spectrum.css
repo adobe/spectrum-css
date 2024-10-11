@@ -25,12 +25,12 @@
 		--spectrum-slider-tick-mark-color: var(--spectrum-gray-300);
 	}
 
-	.spectrum-Slider--sizeS {
+	.spectrum-Slider,
+	.spectrum-Slider--sizeM {
 		--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
 	}
 
-	.spectrum-Slider,
-	.spectrum-Slider--sizeM {
+	.spectrum-Slider--sizeS {
 		--spectrum-slider-handle-border-radius: var(--spectrum-corner-radius-200);
 	}
 

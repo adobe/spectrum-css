@@ -22,6 +22,12 @@
 		--spectrum-heading-font-color: var(--spectrum-heading-color);
 	}
 
+	.spectrum-Heading,
+	.spectrum-Heading--sizeM {
+		--spectrum-heading-font-size: var(--spectrum-heading-size-m);
+		--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-m);
+	}
+
 	.spectrum-Heading--sizeXXS {
 		--spectrum-heading-font-size: var(--spectrum-heading-size-xxs);
 		--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-xxs);
@@ -35,12 +41,6 @@
 	.spectrum-Heading--sizeS {
 		--spectrum-heading-font-size: var(--spectrum-heading-size-s);
 		--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-s);
-	}
-
-	.spectrum-Heading,
-	.spectrum-Heading--sizeM {
-		--spectrum-heading-font-size: var(--spectrum-heading-size-m);
-		--spectrum-heading-cjk-font-size: var(--spectrum-heading-cjk-size-m);
 	}
 
 	.spectrum-Heading--sizeL {
@@ -73,17 +73,17 @@
 		--spectrum-body-font-color: var(--spectrum-body-color);
 	}
 
+	.spectrum-Body,
+	.spectrum-Body--sizeM {
+		--spectrum-body-font-size: var(--spectrum-body-size-m);
+	}
+
 	.spectrum-Body--sizeXS {
 		--spectrum-body-font-size: var(--spectrum-body-size-xs);
 	}
 
 	.spectrum-Body--sizeS {
 		--spectrum-body-font-size: var(--spectrum-body-size-s);
-	}
-
-	.spectrum-Body,
-	.spectrum-Body--sizeM {
-		--spectrum-body-font-size: var(--spectrum-body-size-m);
 	}
 
 	.spectrum-Body--sizeL {
@@ -110,13 +110,13 @@
 		--spectrum-detail-font-color: var(--spectrum-detail-color);
 	}
 
-	.spectrum-Detail--sizeS {
-		--spectrum-detail-font-size: var(--spectrum-detail-size-s);
-	}
-
 	.spectrum-Detail,
 	.spectrum-Detail--sizeM {
 		--spectrum-detail-font-size: var(--spectrum-detail-size-m);
+	}
+
+	.spectrum-Detail--sizeS {
+		--spectrum-detail-font-size: var(--spectrum-detail-size-s);
 	}
 
 	.spectrum-Detail--sizeL {
@@ -133,17 +133,17 @@
 		--spectrum-code-font-color: var(--spectrum-code-color);
 	}
 
+	.spectrum-Code,
+	.spectrum-Code--sizeM {
+		--spectrum-code-font-size: var(--spectrum-code-size-m);
+	}
+
 	.spectrum-Code--sizeXS {
 		--spectrum-code-font-size: var(--spectrum-code-size-xs);
 	}
 
 	.spectrum-Code--sizeS {
 		--spectrum-code-font-size: var(--spectrum-code-size-s);
-	}
-
-	.spectrum-Code,
-	.spectrum-Code--sizeM {
-		--spectrum-code-font-size: var(--spectrum-code-size-m);
 	}
 
 	.spectrum-Code--sizeL {
