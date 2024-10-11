@@ -319,6 +319,15 @@ const fetchLogo = (brand) => {
 	return;
 }
 
+/**
+ * Displays a resource card containing text and an image that links to a particular resource.
+ * 
+ * @param {string} heading - heading of the resource card
+ * @param {string} alt - additional description of the resource card
+ * @param {string} image - the SVG image
+ * @param {string} href - optional link to the resource, found in packageJson?.spectrum?.guidelines
+ * @returns {string}
+ */
 export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
 	if (!href) return;
 
@@ -333,40 +342,28 @@ export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
 	);
 };
 
-export const ResourceListDetails = ({ packageName, spectrumData = [], hasDocsPage, title }) => {
+/**
+ * Displays the list of relevant component links (to NPM, repo, guidelines, etc).
+ * 
+ * The rootClassName is read from the story's default args, found in the story's metadata.
+ * 
+ * The for loop is particularly helpful to match guidelines links for any nested components
+ * (i.e. meter, form). We need to check that the rootClassName matches the rootClass found
+ * in the packageJson.spectrum, to link to the correct guidelines page.
+ * 
+ * @param {string} packageName - packageName sourced from packageJson?.name
+ * @param {string[]} spectrumData - an array of objects sourced from packageJson?.spectrum
+ * @param {string} rootClassName - a component's default rootClass arg 
+ * @returns {string}
+ */
+export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassName }) => {
 	if (!packageName) return;
 
-	// reformat the component's title so split off "Components/", split off any spaces between words, and capitalize each word. It should resemble the formatting of a rootClass.
-	const reformatTitle = (component) => {
-		let reformattedComponentName = "";
-
-		const tempName = component.split("Components/").pop().split("-").pop();
-
-		// The rootClass of text field is the only component that doesn't seem to follow the convention of capitalizing the subsequent words.
-		if (tempName === "Text field") {
-			return reformattedComponentName = tempName.replace(" ", "");
-		}
-		
-		const wordsArray = tempName.split(" ").map((word) => word.charAt(0).toUpperCase() + word.slice(1));
-
-		for(let i = 0; i < wordsArray.length; i++) {
-			reformattedComponentName = reformattedComponentName + wordsArray[i]
-		}
-
-		return reformattedComponentName;
-	}
-
 	let href;
-	// This for loop is particularly helpful for nested components (i.e. meter, form). 
-	// hasDocsPage corresponds to the docsPage boolean parameter passed into the component's default parameters. Most components do not have a docsPage parameter defined.
-	// After reformatting the component's title, check that the rootClass includes that string.
+
 	for(let i = 0; i < spectrumData?.length; i++) {
-		if (spectrumData[i]?.guidelines
-			&& hasDocsPage === undefined 
-			&& spectrumData[i]?.rootClass.includes(reformatTitle(title)) 
-		) {
+		if (spectrumData[i]?.guidelines && spectrumData[i]?.rootClass === rootClassName) {
 			href = spectrumData[i]?.guidelines;
-			break;
 		}
 	}
 
@@ -412,8 +409,7 @@ export const ComponentDetails = () => {
 
 	const isDeprecated = storyMeta?.csfFile?.meta?.parameters?.status?.type == "deprecated";
 	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
-	const hasDocsPage = storyMeta?.csfFile.meta?.parameters?.docsPage ?? undefined;
-	const componentTitle = storyMeta?.csfFile?.meta?.title ?? "";
+	const rootClassName = storyMeta?.csfFile?.meta?.args?.rootClass ?? "";
 
 	const packageName = packageJson?.name;
 
@@ -453,7 +449,7 @@ export const ComponentDetails = () => {
 							</>
 						}
 					</DList>
-					<ResourceListDetails packageName={packageName} spectrumData={spectrumData} hasDocsPage={hasDocsPage} title={componentTitle}/>
+					<ResourceListDetails packageName={packageName} spectrumData={spectrumData} rootClassName={rootClassName}/>
 				</>
 			: ""}
 		</ResetWrapper>
