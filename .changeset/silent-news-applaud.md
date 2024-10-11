@@ -3,4 +3,4 @@
 "@spectrum-css/tokens": minor
 ---
 
-added help-content-spacing definition
+added contextual-help-content-spacing custom property definition
