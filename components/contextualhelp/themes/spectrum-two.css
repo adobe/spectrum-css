@@ -15,6 +15,7 @@
 	.spectrum-ContextualHelp {
 		/* Layout Variables */
 		--spectrum-contextual-help-padding: var(--spectrum-spacing-400);
+		--spectrum-contextual-help-content-spacing: var(--spectrum-spacing-100);
 		--spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
 
 		/* Typography Variables */

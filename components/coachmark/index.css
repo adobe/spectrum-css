@@ -14,12 +14,13 @@
 @import "./themes/spectrum-two.css";
 
 .spectrum-CoachMark {
-	/** @passthroughs */
+	/* @passthrough start */
 	--mod-buttongroup-justify-content: flex-end;
 	--mod-popover-border-width: var(--spectrum-coachmark-popover-border-width);
 	--mod-popover-corner-radius: var(--spectrum-coachmark-popover-corner-radius);
 	--mod-popover-content-area-spacing-vertical: 0;
 	--mod-button-edge-to-visual-only: 9px;
+	/* @passthrough end */
 
 	--spectrum-coachmark-border-size: var(--mod-popover-border-width);
 	--spectrum-coachmark-border-radius: var(--mod-popover-corner-radius);
@@ -35,7 +36,7 @@
 }
 
 .spectrum-CoachMark-buttongroup--mobile {
-	/* @passthrough ButtonGroup */
+	/* @passthrough -- ButtonGroup */
 	--mod-buttongroup-spacing-horizontal: var(--spectrum-coachmark-buttongroup-spacing-horizontal);
 
 	display: var(--spectrum-coachmark-buttongroup-mobile-display);

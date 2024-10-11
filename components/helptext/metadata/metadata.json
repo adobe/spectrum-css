@@ -84,15 +84,19 @@
     "--spectrum-workflow-icon-size-75"
   ],
   "system-theme": [
+    "--system-help-text-bottom-to-text",
     "--system-help-text-content-color-default",
     "--system-help-text-disabled-content-color",
     "--system-help-text-disabled-content-color-default",
     "--system-help-text-disabled-icon-color-default",
+    "--system-help-text-font-size",
     "--system-help-text-icon-color-default",
+    "--system-help-text-icon-size",
     "--system-help-text-lang-ja-line-height-cjk",
     "--system-help-text-lang-ko-line-height-cjk",
     "--system-help-text-lang-zh-line-height-cjk",
     "--system-help-text-line-height",
+    "--system-help-text-min-height",
     "--system-help-text-negative-content-color-default",
     "--system-help-text-negative-icon-color-default",
     "--system-help-text-neutral-content-color-default",
@@ -124,7 +128,10 @@
     "--system-help-text-size-xl-min-height",
     "--system-help-text-size-xl-text-to-visual",
     "--system-help-text-size-xl-top-to-text",
-    "--system-help-text-size-xl-top-to-workflow-icon"
+    "--system-help-text-size-xl-top-to-workflow-icon",
+    "--system-help-text-text-to-visual",
+    "--system-help-text-top-to-text",
+    "--system-help-text-top-to-workflow-icon"
   ],
   "passthroughs": [],
   "high-contrast": [

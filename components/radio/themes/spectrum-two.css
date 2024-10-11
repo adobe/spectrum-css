@@ -50,13 +50,7 @@
 		--spectrum-radio-button-checked-border-color-down: var(--spectrum-neutral-background-color-selected-down);
 		--spectrum-radio-button-checked-border-color-focus: var(--spectrum-neutral-background-color-selected-focus);
 
-		/* spacing all themes */
-		--spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
-		--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
-		--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
-
 		/* text styles all themes */
-		--spectrum-radio-font-size: var(--spectrum-font-size-100);
 		--spectrum-radio-line-height: var(--spectrum-line-height-100);
 
 		/* animation all themes */
@@ -68,13 +62,19 @@
 		&:lang(ko) {
 			--spectrum-radio-line-height-cjk: var(--spectrum-cjk-line-height-100);
 		}
+	}
 
-		/* default radio size for no t-shirt size */
+	.spectrum-Radio,
+	.spectrum-Radio--sizeM {
 		--spectrum-radio-height: var(--spectrum-component-height-100);
 		--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
 
-		/* default radio spacing for no t-shirt size */
+		--spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
+		--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
+		--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
 		--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-medium);
+
+		--spectrum-radio-font-size: var(--spectrum-font-size-100);
 	}
 
 	.spectrum-Radio--sizeS {
@@ -87,18 +87,6 @@
 		--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-small);
 
 		--spectrum-radio-font-size: var(--spectrum-font-size-75);
-	}
-
-	.spectrum-Radio--sizeM {
-		--spectrum-radio-height: var(--spectrum-component-height-100);
-		--spectrum-radio-button-control-size: var(--spectrum-radio-button-control-size-medium);
-
-		--spectrum-radio-text-to-control: var(--spectrum-text-to-control-100);
-		--spectrum-radio-label-top-to-text: var(--spectrum-component-top-to-text-100);
-		--spectrum-radio-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
-		--spectrum-radio-button-top-to-control: var(--spectrum-radio-button-top-to-control-medium);
-
-		--spectrum-radio-font-size: var(--spectrum-font-size-100);
 	}
 
 	.spectrum-Radio--sizeL {

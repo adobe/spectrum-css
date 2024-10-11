@@ -19,7 +19,7 @@
 		--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
 
 		/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
-		--spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-color-opacity));
+		--spectrum-thumbnail-border-color-rgba: rgba(var(--spectrum-gray-800-rgb), var(--spectrum-thumbnail-border-opacity));
 		--spectrum-thumbnail-layer-border-width-inner: var(--spectrum-border-width-400);
 		--spectrum-thumbnail-layer-border-color-inner: var(--spectrum-white);
 		--spectrum-thumbnail-layer-border-width-outer: var(--spectrum-border-width-100);

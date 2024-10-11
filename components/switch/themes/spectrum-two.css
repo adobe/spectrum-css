@@ -67,17 +67,7 @@
 		--spectrum-switch-handle-border-color-selected-focus: var(--spectrum-accent-color-1000);
 	}
 
-	.spectrum-Switch--sizeS {
-		--spectrum-switch-min-height: var(--spectrum-component-height-75);
-		--spectrum-switch-control-width: var(--spectrum-switch-control-width-small);
-		--spectrum-switch-control-height: var(--spectrum-switch-control-height-small);
-		--spectrum-switch-control-label-spacing: var(--spectrum-text-to-control-75);
-		--spectrum-switch-spacing-top-to-control: var(--spectrum-switch-top-to-control-small);
-		--spectrum-switch-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
-
-		--spectrum-switch-font-size: var(--spectrum-font-size-75);
-	}
-
+	.spectrum-Switch,
 	.spectrum-Switch--sizeM {
 		--spectrum-switch-min-height: var(--spectrum-component-height-100);
 		--spectrum-switch-control-width: var(--spectrum-switch-control-width-medium);
@@ -87,6 +77,17 @@
 		--spectrum-switch-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
 
 		--spectrum-switch-font-size: var(--spectrum-font-size-100);
+	}
+
+	.spectrum-Switch--sizeS {
+		--spectrum-switch-min-height: var(--spectrum-component-height-75);
+		--spectrum-switch-control-width: var(--spectrum-switch-control-width-small);
+		--spectrum-switch-control-height: var(--spectrum-switch-control-height-small);
+		--spectrum-switch-control-label-spacing: var(--spectrum-text-to-control-75);
+		--spectrum-switch-spacing-top-to-control: var(--spectrum-switch-top-to-control-small);
+		--spectrum-switch-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
+
+		--spectrum-switch-font-size: var(--spectrum-font-size-75);
 	}
 
 	.spectrum-Switch--sizeL {
