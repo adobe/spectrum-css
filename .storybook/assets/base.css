@@ -55,12 +55,6 @@ svg:has(symbol):not(:has(use)) {
 	border-block-end: 1px solid hsla(203deg, 50%, 30%, 15%);
 }
 
-/* This is the container Chromatic uses to determine the height and width of the story */
-#storybook-root {
-	inline-size: max-content;
-	max-inline-size: 100%;
-}
-
 /* Force the modal wrapper to be contained by the frame not the viewport */
 #root-inner {
 	.spectrum-Modal-wrapper {
