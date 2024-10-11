@@ -108,9 +108,7 @@ OverBackground.args = {
 	staticColor: "white",
 };
 OverBackground.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

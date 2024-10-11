@@ -9,6 +9,14 @@ export const CloseButtonGroup = Variants({
 		{
 			testHeading: "Default",
 		},
+		{
+			testHeading: "Static black",
+			staticColor: "black",
+		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
 	],
 	stateData: [
 		{

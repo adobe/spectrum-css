@@ -209,6 +209,8 @@ export const ArgGrid = ({
 	withWrapperBorder = true,
 	...args
 } = {}, context = {}) => {
+	const isDocs = context.viewMode === "docs";
+
 	if (typeof argKey === "undefined") {
 		console.warn("ArgGrid: argKey is required to render the grid.");
 		return nothing;
@@ -228,6 +230,11 @@ export const ArgGrid = ({
 	if (typeof options === "undefined" || !options.length) {
 		console.warn(`ArgGrid: No options found for ${argKey}.`);
 		return nothing;
+	}
+
+	// If no heading and this is a docs view, skip the border
+	if (!heading && isDocs) {
+		withWrapperBorder = false;
 	}
 
 	return Container({
@@ -323,17 +330,26 @@ export const Variants = ({
 		TestTemplate = Template;
 	}
 
+	const staticColor = {
+		black: "var(--spectrum-docs-static-black-background-color)",
+		white: "var(--spectrum-docs-static-white-background-color)",
+	};
+
 	return (args, context) => {
 		// Fetch any docs configurations from the context to use for VRT
-		const { parameters = {} } = context;
+		const { argTypes = {}, parameters = {} } = context;
 
 		const height = parameters?.docs?.story?.height;
 		const width = parameters?.docs?.story?.width;
+
+		// Check if the staticColor property exists in this story
+		const hasStaticColor = Object.keys(argTypes).includes("staticColor");
 
 		return html`
 			<!-- Simple, clean template preview for non-testing grid views -->
 			<div
 				style=${styleMap({
+					backgroundColor: hasStaticColor && staticColor[args.staticColor],
 					"padding": "12px",
 					"min-block-size": typeof height === "number" ? `${height}px` : height,
 					"min-inline-size": typeof width === "number" ? `${width}px` : width,
@@ -347,6 +363,7 @@ export const Variants = ({
 
 			<!-- Start testing grid markup -->
 			<div
+				data-testing-preview
 				style=${styleMap({
 					"padding": "24px",
 					"display": window.isChromatic() ? "flex" : "none",
@@ -391,7 +408,14 @@ export const Variants = ({
 							testHeading = "Default";
 						}
 
+						// Check if the staticColor property is being used in this story
+						let backgroundColor;
+						if (hasStaticColor && data.staticColor) {
+							backgroundColor = staticColor[data.staticColor];
+						}
+
 						const combinedStyles = {
+							backgroundColor,
 							...wrapperStyles,
 							...testWrapperStyles,
 						};
@@ -405,7 +429,7 @@ export const Variants = ({
 								...containerStyles,
 							},
 							// if the test has multiple states, pass the wrapper styles to that container, otherwise use it here
-							wrapperStyles: withStates ? {} : combinedStyles,
+							wrapperStyles: withStates ? { backgroundColor } : combinedStyles,
 							content: html`
 								${when(withStates, () =>
 									States({
