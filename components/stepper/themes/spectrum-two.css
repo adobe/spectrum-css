@@ -57,15 +57,15 @@
 		--spectrum-stepper-button-border-width-disabled: var(--spectrum-border-width-100);
 		--spectrum-stepper-buttons-background-color-disabled: var(--spectrum-gray-50);
 
-		&.spectrum-Stepper--sizeS {
-			--spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-small);
-			--spectrum-stepper-height: var(--spectrum-component-height-75);
-		}
-
 		&,
 		&.spectrum-Stepper--sizeM {
 			--spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-medium);
 			--spectrum-stepper-height: var(--spectrum-component-height-100);
+		}
+
+		&.spectrum-Stepper--sizeS {
+			--spectrum-stepper-button-width: var(--spectrum-in-field-button-width-stacked-small);
+			--spectrum-stepper-height: var(--spectrum-component-height-75);
 		}
 
 		&.spectrum-Stepper--sizeL {

@@ -6,8 +6,8 @@ import { Template as Stepper } from "@spectrum-css/stepper/stories/template.js";
 import { Template as TextField } from "@spectrum-css/textfield/stories/template.js";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
-import { Template } from "./form.template.js";
 import { FormGroup } from "./form.test.js";
+import { Template } from "./template.js";
 
 /**
  * The form component is used for aligning multiple inputs and field groups within a form. It provides structure and spacing for your form fields.

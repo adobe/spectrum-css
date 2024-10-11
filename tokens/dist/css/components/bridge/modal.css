@@ -13,6 +13,7 @@
 
 .spectrum.spectrum--express {
 	--spectrum-modal-confirm-exit-animation-delay: var(--system-modal-confirm-exit-animation-delay);
+	--spectrum-modal-confirm-entry-animation-distance: var(--system-modal-confirm-entry-animation-distance);
 	--spectrum-modal-fullscreen-margin: var(--system-modal-fullscreen-margin);
 	--spectrum-modal-max-height: var(--system-modal-max-height);
 	--spectrum-modal-max-width: var(--system-modal-max-width);

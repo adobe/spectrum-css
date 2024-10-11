@@ -14,6 +14,15 @@
  @import "./themes/spectrum-two.css";
 
 .spectrum-Slider {
+	--spectrum-slider-handle-margin-left: calc(var(--spectrum-slider-handle-size) / -2);
+	--spectrum-slider-input-left: calc(var(--spectrum-slider-handle-margin-left) / 4);
+
+	--spectrum-slider-controls-margin: calc(var(--spectrum-slider-handle-size) / 2);
+	--spectrum-slider-track-margin-offset: calc(var(--spectrum-slider-controls-margin) * -1);
+
+	--spectrum-slider-track-middle-handleoffset: calc(var(--spectrum-slider-track-handleoffset) + calc(var(--spectrum-slider-handle-size) / 2));
+	--spectrum-slider-input-top-size: calc(var(--spectrum-slider-handle-size) / -2 / 4);
+
 	position: relative;
 
 	/* Don't let z-index'd child elements float above other things on the page */

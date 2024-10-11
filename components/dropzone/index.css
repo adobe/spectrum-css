@@ -14,7 +14,7 @@
 @import "./themes/spectrum-two.css";
 
 .spectrum-DropZone {
-	/* @passthrough IllustratedMessage -- settings for a nested illustrated message */
+	/* @passthrough start -- IllustratedMessage -- settings for a nested illustrated message */
 	--mod-illustrated-message-content-maximum-width: var(--mod-drop-zone-content-maximum-width, var(--spectrum-drop-zone-content-maximum-width));
 	--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color, var(--spectrum-drop-zone-illustration-color));
 	--mod-illustrated-message-title-to-heading: var(--mod-drop-zone-illustration-to-heading, var(--spectrum-drop-zone-illustration-to-heading));
@@ -34,11 +34,13 @@
 	--mod-illustrated-message-description-font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-font-size));
 	--mod-illustrated-message-description-line-height: var(--mod-drop-zone-body-line-height, var(--spectrum-drop-zone-body-line-height));
 	--mod-illustrated-message-description-color: var(--mod-drop-zone-body-color, var(--spectrum-drop-zone-body-color));
+	/* @passthrough end */
 
-	/** @passthrough ActionButton -- settings for a nested actionbutton */
+	/* @passthrough start -- ActionButton settings for a nested actionbutton */
 	--mod-actionbutton-font-size: var(--mod-drop-zone-content-font-size, var(--spectrum-drop-zone-content-font-size));
 	--mod-actionbutton-label-color: var(--mod-drop-zone-content-color, var(--spectrum-drop-zone-content-color));
 	--mod-actionbutton-edge-to-text: var(--mod-drop-zone-content-edge-to-text, var(--spectrum-drop-zone-content-edge-to-text));
+	/* @passthrough end */
 
 	box-sizing: border-box;
 	inline-size: var(--mod-drop-zone-width, var(--spectrum-drop-zone-width));
@@ -62,7 +64,7 @@
 		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity, var(--spectrum-drop-zone-background-color-opacity)));
 		--spectrum-drop-zone-border-color: var(--highcontrast-drop-zone-border-color-hover, var(--mod-drop-zone-border-color-hover, var(--spectrum-drop-zone-border-color-hover)));
 
-		/* Updated values for a nested illustrated message when state changes */
+		/* @passthrough -- Updated values for a nested illustrated message when state changes */
 		--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color-hover, var(--spectrum-drop-zone-illustration-color-hover));
 	}
 
@@ -70,7 +72,7 @@
 		/* note: the below applies to .is-filled.is-dragged but works here b/c dragged is the only state applying background color */
 		--mod-drop-zone-background-color: rgba(var(--spectrum-drop-zone-background-color), var(--mod-drop-zone-background-color-opacity-filled, var(--spectrum-drop-zone-background-color-opacity-filled)));
 
-		/* Updated values for a nested illustrated message when state changes */
+		/* @passthrough -- Updated values for a nested illustrated message when state changes */
 		--mod-illustrated-message-display: none;
 	}
 

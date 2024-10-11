@@ -37,6 +37,13 @@
 		--spectrum-swatch-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	}
 
+	.spectrum-Swatch,
+	.spectrum-Swatch--sizeM {
+		--spectrum-swatch-size: var(--spectrum-swatch-size-medium);
+		--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
+		--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-medium);
+	}
+
 	.spectrum-Swatch--sizeXS {
 		--spectrum-swatch-size: var(--spectrum-swatch-size-extra-small);
 		--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-50);
@@ -47,13 +54,6 @@
 		--spectrum-swatch-size: var(--spectrum-swatch-size-small);
 		--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
 		--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
-	}
-
-	.spectrum-Swatch,
-	.spectrum-Swatch--sizeM {
-		--spectrum-swatch-size: var(--spectrum-swatch-size-medium);
-		--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
-		--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-medium);
 	}
 
 	.spectrum-Swatch--sizeL {
