@@ -182,7 +182,7 @@
 }
 
 .spectrum-Rating--emphasized {
-	&.is-focused {
+	&.is-keyboardFocused {
 		.spectrum-Rating-icon.is-selected {
 			color: var(--highcontrast-rating-emphasized-icon-color-key-focus, var(--mod-rating-emphasized-icon-color-key-focus, var(--spectrum-rating-emphasized-icon-color-key-focus)));
 		}
@@ -239,7 +239,7 @@
 		--highcontrast-rating-emphasized-icon-color-hover: Highlight;
 		--highcontrast-rating-emphasized-icon-color-down: Highlight;
 
-		&.is-focused {
+		&.is-keyboardFocused {
 			outline: 1px solid CanvasText; /* stylelint-disable-line declaration-property-value-no-unknown */
 		}
 

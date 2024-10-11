@@ -91,10 +91,10 @@ export const Template = ({
 			})}
 			id=${ifDefined(id)}
 			@focusin=${function() {
-				updateArgs({ isFocused: true });
+				updateArgs({ isKeyboardFocused: true });
 			}}
 			@focusout=${function() {
-				updateArgs({ isFocused: false });
+				updateArgs({ isKeyboardFocused: false });
 			}}
 		>
 			<input
@@ -128,7 +128,7 @@ export const Template = ({
 							"is-currentValue": idx === value - 1,
 						})}
 						@click=${function() {
-							updateArgs({ value: idx + 1, isFocused: true });
+							updateArgs({ value: idx + 1, isKeyboardFocused: true });
 						}}
 					>
 						${Icon({
