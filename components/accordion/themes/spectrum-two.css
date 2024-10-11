@@ -63,16 +63,6 @@
 		--spectrum-accordion-item-content-line-height-cjk: var(--spectrum-cjk-line-height-100);
 	}
 
-	.spectrum-Accordion--sizeS {
-		--spectrum-accordion-item-height: var(--spectrum-component-height-100);
-		--spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-75);
-		--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-50);
-		--spectrum-accordion-item-header-font-size: var(--spectrum-font-size-200);
-		--spectrum-accordion-item-content-font-size: var(--spectrum-body-size-xs);
-		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-small);
-		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-small);
-	}
-
 	.spectrum-Accordion,
 	.spectrum-Accordion--sizeM {
 		--spectrum-accordion-item-height: var(--spectrum-component-height-200);
@@ -82,6 +72,16 @@
 		--spectrum-accordion-item-content-font-size: var(--spectrum-body-size-s);
 		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-medium);
 		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-medium);
+	}
+
+	.spectrum-Accordion--sizeS {
+		--spectrum-accordion-item-height: var(--spectrum-component-height-100);
+		--spectrum-accordion-disclosure-indicator-height: var(--spectrum-component-height-75);
+		--spectrum-accordion-component-edge-to-text: var(--spectrum-component-edge-to-text-50);
+		--spectrum-accordion-item-header-font-size: var(--spectrum-font-size-200);
+		--spectrum-accordion-item-content-font-size: var(--spectrum-body-size-xs);
+		--spectrum-accordion-item-header-top-to-text-space: var(--spectrum-accordion-top-to-text-regular-small);
+		--spectrum-accordion-item-header-bottom-to-text-space: var(--spectrum-accordion-bottom-to-text-regular-small);
 	}
 
 	.spectrum-Accordion--sizeL {

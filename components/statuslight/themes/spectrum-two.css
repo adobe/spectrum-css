@@ -19,18 +19,8 @@
 		--spectrum-statuslight-border-width: var(--spectrum-border-width-100);
 
 		/* Size */
-		--spectrum-statuslight-height: var(--spectrum-component-height-100);
-		--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-medium);
 		--spectrum-statuslight-line-height: var(--spectrum-line-height-100);
 		--spectrum-statuslight-line-height-cjk: var(--spectrum-cjk-line-height-100);
-
-		--spectrum-statuslight-font-size: var(--spectrum-font-size-100);
-
-		/* Space */
-		--spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-100);
-		--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-medium);
-		--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
-		--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100);
 
 		/* Color */
 		--spectrum-statuslight-content-color-default: var(--spectrum-neutral-content-color-default);
@@ -57,18 +47,7 @@
 		--spectrum-statuslight-nonsemantic-magenta-color: var(--spectrum-magenta-visual-color);
 	}
 
-	.spectrum-StatusLight--sizeS {
-		--spectrum-statuslight-height: var(--spectrum-component-height-75);
-		--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-small);
-
-		--spectrum-statuslight-font-size: var(--spectrum-font-size-75);
-
-		--spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-75);
-		--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-small);
-		--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
-		--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-75);
-	}
-
+	.spectrum-StatusLight,
 	.spectrum-StatusLight--sizeM {
 		--spectrum-statuslight-height: var(--spectrum-component-height-100);
 		--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-medium);
@@ -79,6 +58,18 @@
 		--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-medium);
 		--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-100);
 		--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-100);
+	}
+
+	.spectrum-StatusLight--sizeS {
+		--spectrum-statuslight-height: var(--spectrum-component-height-75);
+		--spectrum-statuslight-dot-size: var(--spectrum-status-light-dot-size-small);
+
+		--spectrum-statuslight-font-size: var(--spectrum-font-size-75);
+
+		--spectrum-statuslight-spacing-dot-to-label: var(--spectrum-text-to-visual-75);
+		--spectrum-statuslight-spacing-top-to-dot: var(--spectrum-status-light-top-to-dot-small);
+		--spectrum-statuslight-spacing-top-to-label: var(--spectrum-component-top-to-text-75);
+		--spectrum-statuslight-spacing-bottom-to-label: var(--spectrum-component-bottom-to-text-75);
 	}
 
 	.spectrum-StatusLight--sizeL {

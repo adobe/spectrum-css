@@ -60,14 +60,6 @@
 		--spectrum-checkbox-animation-duration: var(--spectrum-animation-duration-100);
 	}
 
-	.spectrum-Checkbox--sizeS {
-		--spectrum-checkbox-font-size: var(--spectrum-font-size-75);
-		--spectrum-checkbox-height: var(--spectrum-component-height-75);
-		--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
-		--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-75);
-		--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-75);
-	}
-
 	.spectrum-Checkbox,
 	.spectrum-Checkbox--sizeM {
 		--spectrum-checkbox-font-size: var(--spectrum-font-size-100);
@@ -75,6 +67,14 @@
 		--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-medium);
 		--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-100);
 		--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-100);
+	}
+
+	.spectrum-Checkbox--sizeS {
+		--spectrum-checkbox-font-size: var(--spectrum-font-size-75);
+		--spectrum-checkbox-height: var(--spectrum-component-height-75);
+		--spectrum-checkbox-control-size: var(--spectrum-checkbox-control-size-small);
+		--spectrum-checkbox-top-to-text: var(--spectrum-component-top-to-text-75);
+		--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-75);
 	}
 
 	.spectrum-Checkbox--sizeL {

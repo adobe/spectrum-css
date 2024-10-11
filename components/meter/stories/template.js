@@ -9,6 +9,7 @@ import "../themes/spectrum.css";
 import "../themes/express.css";
 
 export const Template = ({
+	rootClass = "spectrum-Meter",
 	customClasses = [],
 	fill,
 	size = "s",
@@ -39,11 +40,11 @@ export const Template = ({
 export const FillGroup = (args, context) => Container({
 	withBorder: false,
 	withHeading: false,
-	content: html`${["info", "positive", "negative", "notice"].map((variant) => 
+	content: html`${["info", "positive", "negative", "notice"].map((variant) =>
 		Container({
 			withBorder: false,
 			heading: variant,
 			content: Template({...args, fill: variant}, context),
-		})	
+		})
 	)}`
 });

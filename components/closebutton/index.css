@@ -55,8 +55,8 @@ a.spectrum-CloseButton {
 .spectrum-CloseButton {
 	@extend %spectrum-BaseButton;
 
-	block-size: var(--mod-closebutton-height, var(--spectrum-closebutton-size));
-	inline-size: var(--mod-closebutton-width, var(--spectrum-closebutton-size));
+	block-size: var(--mod-closebutton-height, var(--mod-closebutton-size, var(--spectrum-closebutton-size)));
+	inline-size: var(--mod-closebutton-width, var(--mod-closebutton-size, var(--spectrum-closebutton-size)));
 
 	position: relative;
 

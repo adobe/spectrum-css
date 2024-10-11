@@ -91,13 +91,11 @@
 
 		display: block;
 
-		/* @deprecation --mod-focus-indicator-gap has been renamed and will be removed in a future version. */
-		margin: calc(-1 * var(--mod-button-focus-indicator-gap, var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap))));
+		margin: calc(-1 * var(--mod-button-focus-indicator-gap, var(--spectrum-focus-indicator-gap)));
 
-		/* @deprecation --mod-animation-duration-100 has been renamed and will be removed in a future version. */
 		transition:
-			opacity var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)))) ease-out,
-			margin var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--mod-animation-duration-100, var(--spectrum-animation-duration-100)))) ease-out;
+			opacity var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--spectrum-animation-duration-100))) ease-out,
+			margin var(--mod-button-animation-duration, var(--mod-button-animation-duration, var(--spectrum-animation-duration-100))) ease-out;
 	}
 
 	&:focus-visible::after {

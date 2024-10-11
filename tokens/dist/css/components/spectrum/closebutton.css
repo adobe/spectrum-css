@@ -39,9 +39,9 @@
 	--system-close-button-static-black-icon-color-default: var(--spectrum-black);
 	--system-close-button-static-black-icon-color-disabled: var(--spectrum-disabled-static-black-content-color);
 	--system-close-button-static-black-focus-indicator-color: var(--spectrum-static-black-focus-indicator-color);
-	--system-close-button-size-s-size: var(--spectrum-component-height-75);
 	--system-close-button-size: var(--spectrum-component-height-100);
 	--system-close-button-size-m-size: var(--spectrum-component-height-100);
+	--system-close-button-size-s-size: var(--spectrum-component-height-75);
 	--system-close-button-size-l-size: var(--spectrum-component-height-200);
 	--system-close-button-size-xl-size: var(--spectrum-component-height-300);
 }
