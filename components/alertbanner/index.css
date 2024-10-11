@@ -14,20 +14,23 @@
 @import "./themes/spectrum-two.css";
 
 .spectrum-AlertBanner {
-	/* settings for nested Divider */
+	/* @passthrough start -- settings for nested Divider */
 	--mod-divider-vertical-margin: var(--mod-alert-banner-edge-to-divider, var(--spectrum-alert-banner-edge-to-divider));
 	--mod-divider-vertical-height: auto;
 	--mod-divider-vertical-align: stretch;
+	/* @passthrough end */
 
-	/* settings for nested Button */
+	/* @passthrough start -- settings for nested Button */
 	--mod-button-margin-block: var(--mod-alert-banner-edge-to-button, var(--spectrum-alert-banner-edge-to-button));
 	--mod-button-margin-right: var(--mod-alert-banner-text-to-divider, var(--spectrum-alert-banner-text-to-divider));
 	--mod-button-margin-left: auto;
+	/* @passthrough end */
 
-	/* settings for nested CloseButton */
+	/* @passthrough start -- settings for nested CloseButton */
 	--mod-closebutton-margin-inline: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
 	--mod-closebutton-margin-top: var(--mod-alert-banner-close-button-spacing, var(--spectrum-alert-banner-close-button-spacing));
 	--mod-closebutton-align-self: flex-start;
+	/* @passthrough end */
 
 	display: none;
 	justify-content: space-between;

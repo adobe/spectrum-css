@@ -53,13 +53,13 @@
 		}
 	}
 
-	.spectrum-CloseButton--sizeS {
-		--spectrum-closebutton-size: var(--spectrum-component-height-75);
-	}
-
 	.spectrum-CloseButton,
 	.spectrum-CloseButton--sizeM {
 		--spectrum-closebutton-size: var(--spectrum-component-height-100);
+	}
+
+	.spectrum-CloseButton--sizeS {
+		--spectrum-closebutton-size: var(--spectrum-component-height-75);
 	}
 
 	.spectrum-CloseButton--sizeL {

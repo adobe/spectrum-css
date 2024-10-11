@@ -39,11 +39,6 @@
 	--system-search-color-disabled: var(--spectrum-disabled-content-color);
 	--system-search-background-color-disabled: var(--spectrum-disabled-background-color);
 	--system-search-border-color-disabled: var(--spectrum-disabled-background-color);
-	--system-search-size-s-border-radius: calc(var(--spectrum-component-height-75) / 2);
-	--system-search-size-s-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-75);
-	--system-search-size-s-block-size: var(--spectrum-component-height-75);
-	--system-search-size-s-icon-size: var(--spectrum-workflow-icon-size-75);
-	--system-search-size-s-text-to-icon: var(--spectrum-text-to-visual-75);
 	--system-search-border-radius: calc(var(--spectrum-component-height-100) / 2);
 	--system-search-size-m-border-radius: calc(var(--spectrum-component-height-100) / 2);
 	--system-search-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-100);
@@ -54,6 +49,11 @@
 	--system-search-size-m-icon-size: var(--spectrum-workflow-icon-size-100);
 	--system-search-text-to-icon: var(--spectrum-text-to-visual-100);
 	--system-search-size-m-text-to-icon: var(--spectrum-text-to-visual-100);
+	--system-search-size-s-border-radius: calc(var(--spectrum-component-height-75) / 2);
+	--system-search-size-s-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-75);
+	--system-search-size-s-block-size: var(--spectrum-component-height-75);
+	--system-search-size-s-icon-size: var(--spectrum-workflow-icon-size-75);
+	--system-search-size-s-text-to-icon: var(--spectrum-text-to-visual-75);
 	--system-search-size-l-border-radius: calc(var(--spectrum-component-height-200) / 2);
 	--system-search-size-l-edge-to-visual: var(--spectrum-component-pill-edge-to-visual-200);
 	--system-search-size-l-block-size: var(--spectrum-component-height-200);

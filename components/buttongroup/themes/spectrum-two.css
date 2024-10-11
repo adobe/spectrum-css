@@ -12,7 +12,8 @@
  */
 
 @container style(--system: spectrum) {
-	.spectrum-ButtonGroup {
+	.spectrum-ButtonGroup,
+	.spectrum-ButtonGroup--sizeM {
 		--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
 		--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
 	}
@@ -20,11 +21,6 @@
 	.spectrum-ButtonGroup--sizeS {
 		--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-200);
 		--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-200);
-	}
-
-	.spectrum-ButtonGroup--sizeM {
-		--spectrum-buttongroup-spacing-horizontal: var(--spectrum-spacing-300);
-		--spectrum-buttongroup-spacing-vertical: var(--spectrum-spacing-300);
 	}
 
 	.spectrum-ButtonGroup--sizeL {

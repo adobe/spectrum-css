@@ -3606,6 +3606,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@spectrum-css/form@workspace:components/form":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/form@workspace:components/form"
+  dependencies:
+    "@spectrum-css/tokens": "workspace:^"
+  peerDependencies:
+    "@spectrum-css/tokens": ">=14"
+  languageName: unknown
+  linkType: soft
+
 "@spectrum-css/generator@workspace:generator":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/generator@workspace:generator"
@@ -3729,6 +3739,18 @@ __metadata:
       optional: true
     "@spectrum-css/tray":
       optional: true
+  languageName: unknown
+  linkType: soft
+
+"@spectrum-css/meter@workspace:components/meter":
+  version: 0.0.0-use.local
+  resolution: "@spectrum-css/meter@workspace:components/meter"
+  dependencies:
+    "@spectrum-css/progressbar": "workspace:^"
+    "@spectrum-css/tokens": "workspace:^"
+  peerDependencies:
+    "@spectrum-css/progressbar": ">=4"
+    "@spectrum-css/tokens": ">=14"
   languageName: unknown
   linkType: soft
 
@@ -3900,7 +3922,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@spectrum-css/progressbar@workspace:components/progressbar":
+"@spectrum-css/progressbar@workspace:^, @spectrum-css/progressbar@workspace:components/progressbar":
   version: 0.0.0-use.local
   resolution: "@spectrum-css/progressbar@workspace:components/progressbar"
   dependencies:
