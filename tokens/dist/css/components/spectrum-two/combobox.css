@@ -32,17 +32,6 @@
 	--system-combobox-border-color-invalid-focus: var(--spectrum-negative-border-color-focus);
 	--system-combobox-border-color-invalid-focus-hover: var(--spectrum-negative-border-color-focus-hover);
 	--system-combobox-border-color-invalid-key-focus: var(--spectrum-negative-border-color-key-focus);
-	--system-combobox-size-s-block-size: var(--spectrum-component-height-75);
-	--system-combobox-size-s-icon-size: var(--spectrum-workflow-icon-size-75);
-	--system-combobox-size-s-font-size: var(--spectrum-font-size-75);
-	--system-combobox-size-s-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-small);
-	--system-combobox-size-s-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
-	--system-combobox-size-s-block-spacing-edge-to-alert: var(--spectrum-field-top-to-alert-icon-small);
-	--system-combobox-size-s-spacing-edge-to-menu: var(--spectrum-component-to-menu-small);
-	--system-combobox-size-s-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-75);
-	--system-combobox-size-s-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-75);
-	--system-combobox-size-s-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-75);
-	--system-combobox-size-s-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-75);
 	--system-combobox-block-size: var(--spectrum-component-height-100);
 	--system-combobox-size-m-block-size: var(--spectrum-component-height-100);
 	--system-combobox-icon-size: var(--spectrum-workflow-icon-size-100);
@@ -65,6 +54,17 @@
 	--system-combobox-size-m-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-100);
 	--system-combobox-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-100);
 	--system-combobox-size-m-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-100);
+	--system-combobox-size-s-block-size: var(--spectrum-component-height-75);
+	--system-combobox-size-s-icon-size: var(--spectrum-workflow-icon-size-75);
+	--system-combobox-size-s-font-size: var(--spectrum-font-size-75);
+	--system-combobox-size-s-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-small);
+	--system-combobox-size-s-block-spacing-edge-to-progress-circle: var(--spectrum-field-top-to-progress-circle-small);
+	--system-combobox-size-s-block-spacing-edge-to-alert: var(--spectrum-field-top-to-alert-icon-small);
+	--system-combobox-size-s-spacing-edge-to-menu: var(--spectrum-component-to-menu-small);
+	--system-combobox-size-s-spacing-block-start-edge-to-text: var(--spectrum-component-top-to-text-75);
+	--system-combobox-size-s-spacing-block-end-edge-to-text: var(--spectrum-component-bottom-to-text-75);
+	--system-combobox-size-s-spacing-inline-start-edge-to-text: var(--spectrum-component-edge-to-text-75);
+	--system-combobox-size-s-spacing-inline-end-edge-to-text: var(--spectrum-component-edge-to-text-75);
 	--system-combobox-size-l-block-size: var(--spectrum-component-height-200);
 	--system-combobox-size-l-icon-size: var(--spectrum-workflow-icon-size-200);
 	--system-combobox-size-l-font-size: var(--spectrum-font-size-200);
@@ -90,9 +90,9 @@
 	--system-combobox-quiet-minimum-width-multiplier: var(--spectrum-combo-box-quiet-minimum-width-multiplier);
 	--system-combobox-quiet-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-quiet);
 	--system-combobox-quiet-spacing-inline-start-edge-to-text: var(--spectrum-field-edge-to-text-quiet);
-	--system-combobox-quiet-size-s-spacing-label-to: var(--spectrum-field-label-to-component-quiet-small);
 	--system-combobox-quiet-spacing-label-to: var(--spectrum-field-label-to-component-quiet-medium);
 	--system-combobox-quiet-size-m-spacing-label-to: var(--spectrum-field-label-to-component-quiet-medium);
+	--system-combobox-quiet-size-s-spacing-label-to: var(--spectrum-field-label-to-component-quiet-small);
 	--system-combobox-quiet-size-l-spacing-label-to: var(--spectrum-field-label-to-component-quiet-large);
 	--system-combobox-quiet-size-xl-spacing-label-to: var(--spectrum-field-label-to-component-quiet-extra-large);
 }

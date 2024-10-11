@@ -12,15 +12,16 @@
  */
 
 .spectrum.spectrum--express {
-	--spectrum-fieldlabel-min-height: var(--system-field-label-size-xl-min-height);
-	--spectrum-fieldlabel-color: var(--system-field-label-color);
+	--spectrum-field-label-color: var(--system-field-label-color);
+	--spectrum-field-label-font-weight: var(--system-field-label-font-weight);
+	--spectrum-field-label-line-height: var(--system-field-label-line-height);
+	--spectrum-field-label-line-height-cjk: var(--system-field-label-line-height-cjk);
+	--spectrum-field-label-disabled-content-color: var(--system-field-label-disabled-content-color);
+	--spectrum-field-label-min-height: var(--system-field-label-size-xl-min-height);
+	--spectrum-field-label-top-to-text: var(--system-field-label-size-xl-top-to-text);
+	--spectrum-field-label-bottom-to-text: var(--system-field-label-size-xl-bottom-to-text);
+	--spectrum-field-label-font-size: var(--system-field-label-size-xl-font-size);
+	--spectrum-field-label-side-margin-block-start: var(--system-field-label-size-xl-side-margin-block-start);
+	--spectrum-field-label-side-padding-right: var(--system-field-label-size-xl-side-padding-right);
 	--spectrum-field-label-text-to-asterisk: var(--system-field-label-size-xl-text-to-asterisk);
-	--spectrum-fieldlabel-font-weight: var(--system-field-label-font-weight);
-	--spectrum-fieldlabel-line-height: var(--system-field-label-line-height);
-	--spectrum-fieldlabel-line-height-cjk: var(--system-field-label-line-height-cjk);
-	--spectrum-fieldlabel-top-to-text: var(--system-field-label-size-xl-top-to-text);
-	--spectrum-fieldlabel-bottom-to-text: var(--system-field-label-size-xl-bottom-to-text);
-	--spectrum-fieldlabel-font-size: var(--system-field-label-size-xl-font-size);
-	--spectrum-fieldlabel-side-margin-block-start: var(--system-field-label-size-xl-side-margin-block-start);
-	--spectrum-fieldlabel-side-padding-right: var(--system-field-label-size-xl-side-padding-right);
 }

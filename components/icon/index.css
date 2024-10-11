@@ -71,6 +71,12 @@
   * Icon root class styles
   */
 
+.spectrum-Icon,
+.spectrum-UIIcon,
+.spectrum-Icon--sizeM {
+	--spectrum-icon-size: var(--spectrum-icon-size-m);
+}
+
 /* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
 .spectrum-Icon--sizeXXS {
 	--spectrum-icon-size: var(--spectrum-icon-size-xxs);
@@ -82,12 +88,6 @@
 
 .spectrum-Icon--sizeS {
 	--spectrum-icon-size: var(--spectrum-icon-size-s);
-}
-
-.spectrum-Icon,
-.spectrum-UIIcon,
-.spectrum-Icon--sizeM {
-	--spectrum-icon-size: var(--spectrum-icon-size-m);
 }
 
 .spectrum-Icon--sizeL {

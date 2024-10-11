@@ -40,22 +40,23 @@
 		}
 	}
 
-	.spectrum-HelpText--sizeS {
-		--spectrum-helptext-min-height: var(--spectrum-component-height-75);
-		--spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-75);
-		--spectrum-helptext-font-size: var(--spectrum-font-size-75);
-		--spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75);
-		--spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-small);
-		--spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75);
-		--spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
-	}
-
+	.spectrum-HelpText,
 	.spectrum-HelpText--sizeM {
 		--spectrum-helptext-min-height: var(--spectrum-component-height-75);
 		--spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-100);
 		--spectrum-helptext-font-size: var(--spectrum-font-size-75);
 		--spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75);
 		--spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-medium);
+		--spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75);
+		--spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+	}
+
+	.spectrum-HelpText--sizeS {
+		--spectrum-helptext-min-height: var(--spectrum-component-height-75);
+		--spectrum-helptext-icon-size: var(--spectrum-workflow-icon-size-75);
+		--spectrum-helptext-font-size: var(--spectrum-font-size-75);
+		--spectrum-helptext-text-to-visual: var(--spectrum-text-to-visual-75);
+		--spectrum-helptext-top-to-workflow-icon: var(--spectrum-help-text-top-to-workflow-icon-small);
 		--spectrum-helptext-top-to-text: var(--spectrum-component-top-to-text-75);
 		--spectrum-helptext-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
 	}
