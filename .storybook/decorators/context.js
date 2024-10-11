@@ -20,6 +20,7 @@ export const withContextWrapper = makeDecorator({
 				color = "light",
 				context = "legacy",
 				scale = "medium",
+				testingPreview = false,
 			} = {},
 			id,
 			viewMode,
@@ -36,36 +37,53 @@ export const withContextWrapper = makeDecorator({
 			},
 		};
 
+		const original = {
+			color,
+			context,
+			scale,
+		};
+
 		useEffect(() => {
+			const isDocs = viewMode === "docs";
+			const isTesting = testingPreview;
 			const isRaw = Boolean(context === "raw");
 			const isModern = Boolean(context === "spectrum");
 			const isExpress = Boolean(context === "express");
 
-			// viewMode is either "docs" or "story"
-			if (viewMode === "docs" && !isRaw) {
+			// Start by attaching the appropriate tokens to the container
+			toggleStyles(document.body, "tokens", tokens, !isRaw);
+
+			if (!isRaw) {
 				// add the default classes to the body to ensure labels, headings, and borders are styled correctly
 				document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 			}
 
-			for (const container of fetchContainers(id, viewMode === "docs")) {
-				// Start by attaching the appropriate tokens to the container
-				toggleStyles(container, "tokens", tokens, !isRaw);
+			for (const container of fetchContainers(id, isDocs, isTesting)) {
+				// Reset the context to the original values
+				color = original.color;
+				context = original.context;
+				scale = original.scale;
 
 				// Check if the container has a static color element
-				const hasStaticElement = container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack, .${rootClass}--overBackground)`);
+				let hasStaticElement = container.matches(`:has([data-html-preview])`) ? container.matches(`:has([data-html-preview] .${rootClass}--staticWhite, [data-html-preview] .${rootClass}--staticBlack)`) : container.matches(`:has(.${rootClass}--staticWhite, .${rootClass}--staticBlack)`);
+
 				let staticKey = staticColor;
 				if (!staticKey && hasStaticElement) {
 					staticKey = (
 						container.querySelector(`.${rootClass}--staticWhite`) && "white" ||
-						container.querySelector(`.${rootClass}--staticBlack, .${rootClass}--overBackground`) && "black"
+						container.querySelector(`.${rootClass}--staticBlack`) && "black"
 					);
 				}
+
+				// If we can't determine the static key, we can't use the static color
+				if (!staticKey) hasStaticElement = false;
 
 				// Every container gets the spectrum class
 				container.classList.toggle("spectrum", !isRaw);
 
 				// S1 and S1 Express get the legacy class
 				container.classList.toggle("spectrum--legacy", !isModern && !isRaw);
+
 				// Express only gets the express class
 				container.classList.toggle("spectrum--express", isExpress && !isRaw);
 
@@ -76,16 +94,23 @@ export const withContextWrapper = makeDecorator({
 					color = "dark";
 				}
 
-				for (let c of ["light", "dark", "darkest"]) {
-					// Force light or dark mode if the static color is set
-					const isColor = staticKey && c === staticColorSettings[staticKey]?.color || !staticKey && c === color;
+				// Let the static color override the color if it's set
+				if (hasStaticElement && staticColorSettings[staticKey]?.color) {
+					color = staticColorSettings[staticKey].color;
+				}
 
-					container.classList.toggle(`spectrum--${c}`, isColor && !isRaw);
+				// Force a light theme for the body wrapper in testing preview mode
+				// because the individual containers will bring in the correct theme
+				if (isTesting && container.matches("body:has([data-testing-preview]")) {
+					color = "light";
+				}
+
+				for (let c of ["light", "dark", "darkest"]) {
+					container.classList.toggle(`spectrum--${c}`, c === color && !isRaw);
 				}
 
 				for (const s of ["medium", "large"]) {
-					const isScale = s === scale;
-					container.classList.toggle(`spectrum--${s}`, isScale && !isRaw);
+					container.classList.toggle(`spectrum--${s}`, s === scale && !isRaw);
 				}
 
 				// Start by removing the background color from the container and then add it back if needed
@@ -94,7 +119,8 @@ export const withContextWrapper = makeDecorator({
 					container.style.background = staticColorSettings[staticKey].background;
 				}
 			}
-		}, [color, context, staticColor, scale, viewMode, rootClass, tokens, staticColorSettings]);
+
+		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, testingPreview]);
 
 		return StoryFn(data);
 	},

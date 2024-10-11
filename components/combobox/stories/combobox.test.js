@@ -38,6 +38,17 @@ export const ComboBoxGroup = Variants({
 			isOpen: false,
 			fieldLabelPosition: "left",
 		},
+		{
+			testHeading: "Truncation",
+			isOpen: false,
+			value: "United States of America and to the republic",
+		},
+		{
+			testHeading: "Quiet + truncation",
+			isOpen: false,
+			isQuiet: true,
+			value: "United States of America and to the republic",
+		}
 	],
 	stateData: [
 		{

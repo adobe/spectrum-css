@@ -32,6 +32,10 @@ export const ProgressBarGroup = Variants({
 			trackFill: "linear-gradient(to right, hotpink, orange)",
 			progressBarFill: "linear-gradient(to left, teal, purple)",
 		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
 	],
 	stateData: [
 		{

@@ -122,6 +122,14 @@ export const ActionGroups = Variants({
 				},
 			]
 		},
+		{
+			testHeading: "Static black",
+			staticColor: "black",
+		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
 	],
 	stateData: [
 		{

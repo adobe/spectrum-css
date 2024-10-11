@@ -1,15 +1,15 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Sizes } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
 import { ProgressBarGroup } from "./progressbar.test.js";
 import { IndeterminateGroup, Template } from "./template.js";
 
 /**
  * The progress bar component shows the progression of a system operation such as downloading, uploading, processing, etc. in a visual way.
- * 
+ *
  * ## Values
  * The value is the progress of a system operation (e.g., downloading, uploading, processing) within the progress bar’s range, from the min value to max value. By default, the min value starts at 0 and the max value is set to 100. These values are not applicable when a progress bar is indeterminate.
- * 
+ *
  * Progress bars can have a value label at the end of the track that gives detailed information about the progress (e.g. "60%" or "2 of 8"). This value label works alongside the label and should not be displayed if the label itself is not displayed. It should also not be displayed if the progress is indeterminate. Similar to the label, the value label is always placed above the track.
  */
 export default {
@@ -94,7 +94,7 @@ export default {
 
 /**
  * By default, progress bars are determinate and have a blue fill that shows the progress. This component should have a label at the start of the track that gives context about the operation being performed. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These progress bars should still include an “aria-label” or “aria-labelledby” in HTML, depending on the context. The label is always placed above the track.
- * 
+ *
  * When the label is too long for the available horizontal space, it wraps to form another line. The value is always shown in full and never wraps or truncates.
  */
 export const Default = ProgressBarGroup.bind({});
@@ -109,7 +109,7 @@ export const Sizing = (args, context) => Sizes({
 	Template,
 	withBorder: false,
 	withHeading: false,
-	...args, 
+	...args,
 }, context);
 Sizing.args = Default.args;
 Sizing.tags = ["!dev"];
@@ -181,9 +181,7 @@ StaticWhite.args = {
 	value: 50,
 };
 StaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //
