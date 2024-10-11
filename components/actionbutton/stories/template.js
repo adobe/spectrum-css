@@ -129,9 +129,7 @@ export const Template = ({
 	`;
 };
 
-export const ActionButtonsWithIconOptions = ({
-	...args
-}, context ) => Container({
+export const ActionButtonsWithIconOptions = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
@@ -141,46 +139,46 @@ export const ActionButtonsWithIconOptions = ({
 		${Template({
 			...args,
 			iconName: undefined,
-		}, context )}
+		}, context)}
 		${Template({
 			...args,
-		}, context )}
+		}, context)}
 		${Template({
 			...args,
 			hideLabel: true,
-		}, context )}
-	${Template({
+		}, context)}
+		${Template({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
-		}, context )}
-	${Template({
+		}, context)}
+		${Template({
 			...args,
 			iconName: undefined,
 			hasPopup: "true",
-		}, context )}`
+		}, context)}
+	`
 });
 
-export const IconOnlyOption = ({
-	...args
-}, context ) => Container({
+export const IconOnlyOption = (args, context) => Container({
 	withBorder: false,
 	direction: "row",
 	wrapperStyles: {
 		columnGap: "12px",
 	},
 	content: html`
-	${Template({
+		${Template({
 			...args,
 			hideLabel: true,
 			hasPopup: "true",
-		}, context )}
-	${Template({
+		}, context)}
+		${Template({
 			...args,
 			hideLabel: true,
 			isQuiet: true,
 			hasPopup: "true",
-		}, context )}`
+		}, context)}
+	`
 });
 
 export const TreatmentTemplate = (args, context) => Container({
@@ -190,11 +188,11 @@ export const TreatmentTemplate = (args, context) => Container({
 		rowGap: "12px",
 	},
 	content: html`${[
-		{ isSelected: false, isDisabled: false, heading: "Default" }, 
+		{ isSelected: false, isDisabled: false, heading: "Default" },
 		{ isSelected: true, isDisabled: false, heading: "Selected" },
 		{ isSelected: false, isDisabled: true, heading: "Disabled" },
 		{ isSelected: true, isDisabled: true, heading: "Selected + disabled" }
-	].map(({ isSelected, isDisabled, heading }) => Container({ 
+	].map(({ isSelected, isDisabled, heading }) => Container({
 		withBorder: false,
 		heading: heading,
 		content: ActionButtonsWithIconOptions({

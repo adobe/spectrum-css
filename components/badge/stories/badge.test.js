@@ -5,9 +5,11 @@ import { Template } from "./template.js";
 
 const Badges = (args, context) => {
 	return html`
-		${Template(args, context)}
-		${Template({ ...args, iconName: undefined }, context)}
-		${Template({ ...args, label: undefined }, context)}
+		<div style="display: flex; column-gap: 13px; row-gap: 24px;">
+			${Template(args, context)}
+			${Template({ ...args, iconName: undefined }, context)}
+			${Template({ ...args, label: undefined }, context)}
+		</div>
 	`;
 };
 

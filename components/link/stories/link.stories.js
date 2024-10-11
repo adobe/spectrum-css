@@ -144,9 +144,7 @@ StaticWhite.args = {
 };
 StaticWhite.tags = ["!dev"];
 StaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -160,9 +158,7 @@ StaticBlack.args = {
 };
 StaticBlack.tags = ["!dev"];
 StaticBlack.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 export const QuietStaticWhite = Default.bind({});
@@ -174,9 +170,7 @@ QuietStaticWhite.args = {
 };
 QuietStaticWhite.tags = ["!dev"];
 QuietStaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 export const QuietStaticBlack = Default.bind({});
@@ -188,9 +182,7 @@ QuietStaticBlack.args = {
 };
 QuietStaticBlack.tags = ["!dev"];
 QuietStaticBlack.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

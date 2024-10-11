@@ -21,10 +21,14 @@ export const Template = ({
 		type="reset"
 		class=${classMap({
 			[rootClass]: true,
-			[`${rootClass}--size${size?.toUpperCase()}`]:
-				typeof size !== "undefined",
+			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
 			[`${rootClass}--quiet`]: isQuiet,
 			[`${rootClass}--overBackground`]: staticColor === "white",
+			/**
+			 * There aren't styles for `--staticWhite` in clear button (yet)
+			 * but this makes it easier to support in the testing grid
+			 */
+			[`${rootClass}--staticWhite`]: staticColor === "white",
 			"is-disabled": isDisabled,
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}

@@ -40,7 +40,6 @@ svg:has(symbol):not(:has(use)) {
 
 /* --- DOCS STYLES --- */
 .docs-story > *:first-child {
-	background-color: var(--spectrum-background-layer-1-color);
 	overflow: hidden;
 }
 
