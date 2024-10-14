@@ -70,16 +70,13 @@
 		--spectrum-menu-checkmark-display-shown: block;
 		--spectrum-menu-checkmark-display: var(--spectrum-menu-checkmark-display-shown);
 
-		/* "one" icon: chevron + additional icon (we don't count the chevron as an icon because it HAS to be there for a collapsible) */
-		--spectrum-menu-item-collapsible-has-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width)));
-
 		/* "no" icon: just the chevron (we're not counting it because it HAS to be there for a collapsible) */
 		--spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width)));
 
-		--spectrum-menu-item-background-color-default: var(--spectrum-gray-25);
-		--spectrum-menu-item-background-color-hover: rgba(var(--spectrum-gray-1000), var(--spectrum-transparent-black-200-opacity));
-		--spectrum-menu-item-background-color-down: rgba(var(--spectrum-gray-1000), var(--spectrum-transparent-black-200-opacity));
-		--spectrum-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-1000), var(--spectrum-transparent-black-200-opacity));
+		--spectrum-menu-item-background-color-default: transparent;
+		--spectrum-menu-item-background-color-hover: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+		--spectrum-menu-item-background-color-down: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
+		--spectrum-menu-item-background-color-key-focus: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-transparent-black-200-opacity));
 	}
 
 	.spectrum-Menu,
