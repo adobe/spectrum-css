@@ -140,6 +140,7 @@ module.exports = {
 		 * Local/custom plugins
 		 * -------------------------------------------------------------- */
 		"spectrum-tools/no-missing-var": true,
+		"spectrum-tools/theme-alignment": null,
 		"spectrum-tools/no-unknown-custom-properties": [
 			true,
 			{
@@ -171,7 +172,7 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["site/**/*.css", ".storybook/assets/*.css"],
+			files: [".storybook/assets/*.css"],
 			rules: {
 				"custom-property-pattern": null,
 				"color-function-notation": null,
@@ -180,7 +181,7 @@ module.exports = {
 			},
 		},
 		{
-			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "tokens/**/*.css"],
+			files: ["components/*/themes/*.css", "tokens/**/*.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
@@ -188,7 +189,7 @@ module.exports = {
 		},
 		{
 			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/*.css", "!components/*/themes/spectrum-two.css"],
+			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "!components/*/themes/spectrum-two.css"],
 			rules: {
 				"spectrum-tools/theme-alignment": true,
 			},
