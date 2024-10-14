@@ -736,4 +736,8 @@
 	--spectrum-assetlist-border-color-key-focus:var(--spectrum-blue-800);
 
 	--spectrum-card-selected-background-color-rgb:var(--spectrum-blue-900-rgb);
+
+	--spectrum-swatch-border-color:rgba(var(--spectrum-black-rgb), 0.51);
+	--spectrum-swatch-icon-border-color:rgba(var(--spectrum-black-rgb), 0.2);
+	--spectrum-swatch-border-color-light:rgba(var(--spectrum-black-rgb), 0.2);
 }
