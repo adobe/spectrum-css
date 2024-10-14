@@ -1441,8 +1441,6 @@
 	--spectrum-stepper-button-padding: var(--system-stepper-button-padding);
 	--spectrum-stepper-button-border-radius-reset: var(--system-stepper-button-border-radius-reset);
 	--spectrum-stepper-button-border-width: var(--system-stepper-button-border-width);
-	--spectrum-stepper-button-background-color-focus: var(--system-stepper-button-background-color-focus);
-	--spectrum-stepper-button-background-color-keyboard-focus: var(--system-stepper-button-background-color-keyboard-focus);
 	--spectrum-stepper-border-color-invalid: var(--system-stepper-border-color-invalid);
 	--spectrum-stepper-border-color-hover-invalid: var(--system-stepper-border-color-hover-invalid);
 	--spectrum-stepper-border-color-focus-invalid: var(--system-stepper-border-color-focus-invalid);
@@ -1451,12 +1449,13 @@
 	--spectrum-stepper-focus-indicator-width: var(--system-stepper-focus-indicator-width);
 	--spectrum-stepper-focus-indicator-gap: var(--system-stepper-focus-indicator-gap);
 	--spectrum-stepper-focus-indicator-color: var(--system-stepper-focus-indicator-color);
-	--spectrum-stepper-button-border-color-quiet: var(--system-stepper-button-border-color-quiet);
 	--spectrum-stepper-button-border-color-disabled: var(--system-stepper-button-border-color-disabled);
 	--spectrum-stepper-button-border-width-disabled: var(--system-stepper-button-border-width-disabled);
 	--spectrum-stepper-buttons-background-color-disabled: var(--system-stepper-buttons-background-color-disabled);
 	--spectrum-stepper-button-width: var(--system-stepper-size-xl-button-width);
 	--spectrum-stepper-height: var(--system-stepper-size-xl-height);
+	--spectrum-stepper-button-background-color-keyboard-focus: var(--system-stepper-button-background-color-keyboard-focus);
+	--spectrum-stepper-button-background-color-focus: var(--system-stepper-button-background-color-focus);
 	--spectrum-swatch-border-radius: var(--system-swatch-border-radius);
 	--spectrum-swatch-focus-indicator-border-radius: var(--system-swatch-focus-indicator-border-radius);
 	--spectrum-swatch-border-thickness: var(--system-swatch-border-thickness);

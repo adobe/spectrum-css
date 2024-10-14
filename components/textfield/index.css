@@ -35,36 +35,36 @@
 
 	/* Firefox and Safari - Remove the margin for input. */
 	margin: 0;
-}
 
-.spectrum-Textfield.spectrum-Textfield--quiet {
-	&::after {
-		content: "";
-		pointer-events: none;
-		position: absolute;
-		inset-block-end: calc(-1 * (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width))));
-		inset-inline-start: 0;
-		inline-size: 100%;
-		block-size: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
-	}
-
-	&.is-keyboardFocused {
+	&.spectrum-Textfield--quiet {
 		&::after {
-			background-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
+			content: "";
+			pointer-events: none;
+			position: absolute;
+			inset-block-end: calc(-1 * (var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap)) + var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width))));
+			inset-inline-start: 0;
+			inline-size: 100%;
+			block-size: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
 		}
-	}
 
-	/*** Quiet Input Invalid ⚠️ ***/
-	&.is-invalid {
-		.spectrum-Textfield-input {
-			padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid)) + var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid)));
+		&.is-keyboardFocused {
+			&::after {
+				background-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
+			}
 		}
-	}
 
-	/*** Quiet Input Valid ✅ ***/
-	&.is-valid {
-		.spectrum-Textfield-input {
-			padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid)) + var(--mod-textfield-icon-size-valid, var(--spectrum-textfield-icon-size-valid)));
+		/*** Quiet Input Invalid ⚠️ ***/
+		&.is-invalid {
+			.spectrum-Textfield-input {
+				padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-invalid, var(--spectrum-textfield-icon-spacing-inline-start-invalid)) + var(--mod-textfield-icon-size-invalid, var(--spectrum-textfield-icon-size-invalid)));
+			}
+		}
+
+		/*** Quiet Input Valid ✅ ***/
+		&.is-valid {
+			.spectrum-Textfield-input {
+				padding-inline-end: calc(var(--mod-textfield-icon-spacing-inline-start-valid, var(--spectrum-textfield-icon-spacing-inline-start-valid)) + var(--mod-textfield-icon-size-valid, var(--spectrum-textfield-icon-size-valid)));
+			}
 		}
 	}
 }
@@ -208,10 +208,7 @@
 	/*** ↓ Browser Mitigations for Input ↓ ***/
 	/* Firefox and Safari - Remove the margin for input. */
 	margin: 0;
-
-	/* stylelint-disable-next-line order/properties-order -- keep this in position to prevent issues with custom -moz- prefix */
 	appearance: none;
-
 
 	&[type="number"] {
 		/* stylelint-disable-next-line property-no-vendor-prefix -- Removes the native spin buttons in Firefox. */
@@ -288,7 +285,8 @@
 		color: var(--highcontrast-textfield-text-color-keyboard-focus, var(--mod-textfield-text-color-keyboard-focus, var(--spectrum-textfield-text-color-keyboard-focus)));
 
 		/* focus indicator is focused state */
-		outline: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width)) solid;
+		outline-width: var(--mod-textfield-focus-indicator-width, var(--spectrum-textfield-focus-indicator-width));
+		outline-style: solid;
 		outline-color: var(--highcontrast-textfield-focus-indicator-color, var(--mod-textfield-focus-indicator-color, var(--spectrum-textfield-focus-indicator-color)));
 		outline-offset: var(--mod-textfield-focus-indicator-gap, var(--spectrum-textfield-focus-indicator-gap));
 
