@@ -1,5 +1,11 @@
 # Change Log
 
+## 15.0.0-s2-foundations.23
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`1da2494`](https://github.com/adobe/spectrum-css/commit/1da249479a0014287a6124dc0f900ee99ab6b946) Thanks [@pfulton](https://github.com/pfulton)! - added contextual-help-content-spacing custom property definition
+
 ## 15.0.0-s2-foundations.22
 
 ### Major Changes
