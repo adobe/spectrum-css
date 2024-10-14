@@ -210,7 +210,7 @@ export const HelpTextOptions = (args, context) => Container({
 		${Container({
 			withBorder: false,
 			heading: "Description",
-			content: Template({...args, isRequired: true, labelText: "Username", value: "lisawilson24", helpText: "Password must be at least 8 characters."}, context),
+			content: Template({...args, isRequired: true, labelText: "Username", value: "lisawilson24", helpText: "Username must be at least 8 characters."}, context),
 		})}
 		${Container({
 			withBorder: false,

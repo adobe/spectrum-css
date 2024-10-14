@@ -43,7 +43,7 @@ export default {
 			type: { name: "text" },
 			table: {
 				type: { summary: "text" },
-				category: "Component",
+				category: "Content",
 			},
 			control: "text",
 			if: { arg: "displayLabel", truthy: true },

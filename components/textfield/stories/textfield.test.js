@@ -20,7 +20,21 @@ export const TextFieldGroup = Variants({
 		testHeading: "With value",
 		displayLabel: true,
 		value: "UsernameWiderThanInput@ReallyLongEmail.com"
-	},],
+	},{
+		testHeading: "With help text",
+		displayLabel: true,
+		value: "UsernameWiderThanInput@ReallyLongEmail.com",
+		helpText: "Example help text. Ullamco laborum."
+	},{
+		testHeading: "Quiet",
+		value: "UsernameWiderThanInput@ReallyLongEmail.com",
+		isQuiet: true
+	},{
+		testHeading: "Quiet, with side label",
+		value: "UsernameWiderThanInput@ReallyLongEmail.com",
+		labelPosition: "side",
+		isQuiet: true
+	}],
 	stateData: [{
 		testHeading: "Invalid",
 		isInvalid: true,
