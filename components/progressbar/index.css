@@ -70,7 +70,7 @@
 		border: none;
 		block-size: var(--mod-progressbar-thickness, var(--spectrum-progressbar-thickness));
 		transition: width 1s;
-		background-color: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
+		background: var(--highcontrast-progressbar-fill-color, var(--mod-progressbar-fill-color, var(--spectrum-progressbar-fill-color)));
 	}
 }
 
