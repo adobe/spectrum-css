@@ -1,7 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isInvalid, isReadOnly, isRequired } from "@spectrum-css/preview/types";
 import { default as RadioSettings } from "@spectrum-css/radio/stories/radio.stories.js";
-import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { FieldGroupSet } from "./fieldgroup.test.js";
@@ -65,24 +64,21 @@ export default {
 		layout: "vertical",
 		label: "Select one of the following options:",
 		items: [
-			(passthroughs, context) => Radio({
-				...passthroughs,
+			{
 				id: "apple",
 				label: "Apples are best",
 				customClasses: ["spectrum-FieldGroup-item"],
-			}, context),
-			(passthroughs, context) => Radio({
-				...passthroughs,
+			},
+			{
 				id: "banana",
 				label: "Bananas forever",
 				customClasses: ["spectrum-FieldGroup-item"],
-			}, context),
-			(passthroughs, context) => Radio({
-				...passthroughs,
+			},
+			{
 				id: "pear",
 				label: "Pears or bust",
 				customClasses: ["spectrum-FieldGroup-item"],
-			}, context),
+			}
 		],
 		isInvalid: false,
 		isRequired: false,
