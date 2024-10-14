@@ -1,22 +1,14 @@
 /*!
- * Copyright 2024 Adobe. All rights reserved.
- *
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
- */
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-@media (forced-colors: active) {
-	.spectrum-IllustratedMessage {
-		--highcontrast-illustrated-message-illustration-color: CanvasText;
-		--highcontrast-illustrated-message-illustration-accent-color: Highlight;
-	}
-}
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
 .spectrum-IllustratedMessage {
 	/* Size & Spacing */
@@ -24,6 +16,8 @@
 	--spectrum-illustrated-message-heading-max-inline-size: var(--spectrum-illustrated-message-maximum-width);
 	--spectrum-illustrated-message-title-to-heading: var(--spectrum-spacing-400);
 	--spectrum-illustrated-message-heading-to-description: var(--spectrum-spacing-75);
+	--spectrum-illustrated-message-vertical-maximum-width: 380px;
+	--spectrum-illustrated-message-horizontal-maximum-width: 535px;
 
 	/* Illustration */
 	--spectrum-illustrated-message-illustration-color: var(--spectrum-neutral-visual-color);
@@ -36,6 +30,9 @@
 	--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-title-size);
 	--spectrum-illustrated-message-title-line-height: var(--spectrum-heading-line-height);
 	--spectrum-illustrated-message-title-color: var(--spectrum-heading-color);
+	--spectrum-illustrated-message-small-title-font-size: var(--spectrum-title-size-m);
+	--spectrum-illustrated-message-medium-title-font-size: var(--spectrum-title-size-xl);
+	--spectrum-illustrated-message-large-title-font-size: var(--spectrum-title-size-xxl);
 
 	/* Description */
 	--spectrum-illustrated-message-description-font-family: var(--spectrum-sans-font-family-stack);
@@ -45,6 +42,29 @@
 	--spectrum-illustrated-message-description-line-height: var(--spectrum-body-line-height);
 	--spectrum-illustrated-message-description-color: var(--spectrum-body-color);
 
+	--spectrum-illustrated-message-small-body-font-size: var(--spectrum-body-size-xs);
+	--spectrum-illustrated-message-medium-body-font-size: var(--spectrum-body-size-s);
+	--spectrum-illustrated-message-large-body-font-size: var(--spectrum-body-size-s);
+
+	/* CJK (Chinese, Japanese, and Korean) language support */
+	&:lang(ja),
+	&:lang(zh),
+	&:lang(ko) {
+		--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-cjk-title-size);
+		--spectrum-illustrated-message-small-cjk-title-font-size: var(--spectrum-title-cjk-size-m);
+		--spectrum-illustrated-message-medium-cjk-title-font-size: var(--spectrum-title-size-xl);
+		--spectrum-illustrated-message-large-cjk-title-font-size: var(--spectrum-title-cjk-size-xxl);
+	}
+}
+
+@media (forced-colors: active) {
+	.spectrum-IllustratedMessage {
+		--highcontrast-illustrated-message-illustration-color: CanvasText;
+		--highcontrast-illustrated-message-illustration-accent-color: Highlight;
+	}
+}
+
+.spectrum-IllustratedMessage {
 	block-size: 100%;
 
 	display: var(--mod-illustrated-message-display, flex);
@@ -55,13 +75,6 @@
 	text-align: center;
 	pointer-events: var(--mod-illustrated-message-pointer-events, auto);
 	max-inline-size: var(--mod-illustrated-message-content-maximum-width);
-
-	/* CJK (Chinese, Japanese, and Korean) language support */
-	&:lang(ja),
-	&:lang(zh),
-	&:lang(ko) {
-		--spectrum-illustrated-message-title-font-size: var(--spectrum-illustrated-message-cjk-title-size);
-	}
 }
 
 .spectrum-IllustratedMessage-illustration {
