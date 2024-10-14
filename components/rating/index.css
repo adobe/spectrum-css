@@ -43,8 +43,10 @@
 	--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .spectrum-Rating {
-	&.is-focused {
+	&:has(:focus-visible),
+	&.is-keyboardFocused {
 		box-shadow: 0 0 0 var(--mod-rating-focus-indicator-thickness, var(--spectrum-rating-focus-indicator-thickness)) var(--highcontrast-rating-focus-indicator-color, var(--mod-rating-focus-indicator-color, var(--spectrum-rating-focus-indicator-color)));
 
 		.spectrum-Rating-icon {

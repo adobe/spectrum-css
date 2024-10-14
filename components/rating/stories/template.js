@@ -12,7 +12,7 @@ export const Template = ({
 	max = 5,
 	value = 0,
 	isReadOnly = false,
-	isFocused = false,
+	isKeyboardFocused = false,
 	isDisabled = true,
 	isEmphasized = false,
 	customClasses = [],
@@ -32,7 +32,7 @@ export const Template = ({
 				const inactiveStar = icon.querySelector(".spectrum-Rating-starInactive");
 
 				if (index <= hoverIndex) {
-					icon.classList.add("is-hovered");
+					icon.classList.add("is-hoverSelection");
 					activeStar.style.display = "block";
 					inactiveStar.style.display = "none";
 				}
@@ -41,12 +41,16 @@ export const Template = ({
 					inactiveStar.style.display = "none";
 				}
 				else {
-					icon.classList.remove("is-hovered");
+					icon.classList.remove("is-hoverSelection");
 					activeStar.style.display = "none";
 					inactiveStar.style.display = "block";
 				}
 			});
 		};
+
+		rating.addEventListener("mouseleave", function() {
+			icons.forEach(icon => icon.classList.remove("is-hoverSelection"));
+		});
 
 		icons.forEach((icon, index) => {
 			if (icon.classList.contains("is-selected")) selectedIndex = index;
@@ -78,7 +82,7 @@ export const Template = ({
 				[rootClass]: true,
 				"is-disabled": isDisabled,
 				"is-readOnly": isReadOnly,
-				"is-focused": isFocused,
+				"is-keyboardFocused": isKeyboardFocused,
 				[`${rootClass}--emphasized`]: isEmphasized,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
