@@ -24,8 +24,6 @@
 
 	border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 
-	/* Friends should align to the top of the tabs */
-	vertical-align: top;
 	overflow: hidden;
 	z-index: 0;
 
