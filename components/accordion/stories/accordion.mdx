@@ -6,7 +6,11 @@ import {
   Title,
   Subtitle,
 } from "@storybook/blocks";
-import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+import {
+  ComponentDetails,
+  TaggedReleases,
+  PropertiesTable,
+} from "@spectrum-css/preview/blocks";
 import * as AccordionStories from "./accordion.stories";
 
 <Meta of={AccordionStories} title="Docs" />
@@ -38,6 +42,8 @@ Accordion has three density options and requires that you specify one of the den
 The component accepts the following inputs (properties):
 
 <ArgTypes />
+
+<PropertiesTable />
 
 ## Tagged releases
 

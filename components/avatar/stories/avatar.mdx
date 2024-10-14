@@ -6,7 +6,11 @@ import {
   Title,
   Subtitle,
 } from "@storybook/blocks";
-import { ComponentDetails, TaggedReleases } from "@spectrum-css/preview/blocks";
+import {
+  ComponentDetails,
+  TaggedReleases,
+  PropertiesTable,
+} from "@spectrum-css/preview/blocks";
 import * as AvatarStories from "./avatar.stories";
 
 <Meta of={AvatarStories} title="Docs" />
@@ -52,6 +56,8 @@ When disabled, the avatar should only be used without a link.
 The component accepts the following inputs (properties):
 
 <ArgTypes />
+
+<PropertiesTable />
 
 ## Tagged releases
 

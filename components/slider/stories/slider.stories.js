@@ -1,20 +1,21 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Sizes } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { SliderGroup } from "./slider.test.js";
 import { Template } from "./template.js";
 
 /**
  * A slider allows users to quickly select a value within a range. They should be used when the upper and lower bounds to the range are invariable.
- * 
+ *
  * ## Indicating focus
  * Focus must be bubbled up to the parent so its descendants can be styled.
  *
  * Thus, implementations should add the following class to the `.spectrum-Slider` parent class in the following situations:
  *
  * - `.is-disabled`: when the slider is disabled
- * 
+ *
  * Implementations should also bubble the following class to the `.spectrum-Slider-controls` parent class in the following situations:
 
  * - `.is-focused`: when the handle input is focused with the mouse or keyboard
@@ -139,7 +140,8 @@ export default {
 				"change .spectrum-Slider-input",
 			],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -154,7 +156,7 @@ Default.args = {};
  * If a slider's label is undefined, it should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
  */
 export const WithoutLabel = Template.bind({});
-WithoutLabel.args = { 
+WithoutLabel.args = {
 	label: "",
 };
 WithoutLabel.tags = ["!dev"];

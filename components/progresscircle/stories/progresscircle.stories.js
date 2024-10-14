@@ -1,9 +1,10 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ProgressCircleGroup } from "./progresscircle.test.js";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 /**
  * Progress circles show the progression of a system operation such as downloading, uploading, processing, etc. in a visual way. They can represent determinate or indeterminate progress.
@@ -26,7 +27,8 @@ export default {
 		staticColor: undefined,
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

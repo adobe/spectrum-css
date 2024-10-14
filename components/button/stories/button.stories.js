@@ -2,7 +2,8 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isPending, size, staticColor } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ButtonGroups } from "./button.test.js";
 import { ButtonsWithIconOptions, TextOverflowTemplate, TextWrapTemplate, TreatmentTemplate } from "./template.js";
 
@@ -84,7 +85,8 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Button"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	tags: ["!autodocs"],
 };

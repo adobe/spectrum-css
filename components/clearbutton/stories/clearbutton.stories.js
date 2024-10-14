@@ -1,9 +1,10 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isQuiet, size, staticColor } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ClearButtonGroup } from "./clearbutton.test.js";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 /**
  * The clear button component is an in-field button used in search and tags.
@@ -58,7 +59,8 @@ export default {
 		isQuiet: false,
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

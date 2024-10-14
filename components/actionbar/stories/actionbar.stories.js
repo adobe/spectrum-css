@@ -3,7 +3,8 @@ import { default as CloseButton } from "@spectrum-css/closebutton/stories/closeb
 import { default as Popover } from "@spectrum-css/popover/stories/popover.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isEmphasized, isOpen } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ActionBarGroup } from "./actionbar.test.js";
 import { Template } from "./template.js";
 
@@ -66,7 +67,8 @@ export default {
 			type: "figma",
 			url: "https://www.figma.com/file/MPtRIVRzPp2VHiEplwXL2X/S-%2F-Manual?node-id=465%3A3127&t=xbooxCWItOFgG2xM-1",
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	tags: ["!autodocs"],
 };

@@ -1,7 +1,8 @@
 import { default as ActionButton } from "@spectrum-css/actionbutton/stories/actionbutton.stories.js";
 import { default as Menu } from "@spectrum-css/menu/stories/menu.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { CoachMarkGroup } from "./coachmark.test.js";
 import { Template } from "./template.js";
 
@@ -54,7 +55,8 @@ export default {
 				...(Menu.parameters?.actions?.handles ?? []),
 			],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 		docs: {
 			story: {
 				height: "300px",
