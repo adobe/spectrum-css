@@ -128,7 +128,7 @@ export const Template = ({
 							"is-currentValue": idx === value - 1,
 						})}
 						@click=${function() {
-							updateArgs({ value: idx + 1, isKeyboardFocused: true });
+							updateArgs({ value: idx + 1 });
 						}}
 					>
 						${Icon({
