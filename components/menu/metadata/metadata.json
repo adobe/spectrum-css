@@ -8,6 +8,7 @@
     ".spectrum-Menu .spectrum-Menu-backIcon",
     ".spectrum-Menu .spectrum-Menu-checkmark",
     ".spectrum-Menu .spectrum-Menu-chevron",
+    ".spectrum-Menu .spectrum-Menu-chevron:dir(rtl)",
     ".spectrum-Menu .spectrum-Menu-divider",
     ".spectrum-Menu .spectrum-Menu-divider.spectrum-Divider--sizeS",
     ".spectrum-Menu .spectrum-Menu-item",
@@ -35,7 +36,6 @@
     ".spectrum-Menu-backButton",
     ".spectrum-Menu-backButton:focus-visible",
     ".spectrum-Menu-backHeading",
-    ".spectrum-Menu-chevron:dir(rtl)",
     ".spectrum-Menu-item",
     ".spectrum-Menu-item .spectrum-Menu",
     ".spectrum-Menu-item .spectrum-Menu-item",
@@ -138,7 +138,7 @@
     ".spectrum-Menu:lang(ja)",
     ".spectrum-Menu:lang(ko)",
     ".spectrum-Menu:lang(zh)",
-    "[dir=\"rtl\"] .spectrum-Menu-chevron",
+    "[dir=\"rtl\"] .spectrum-Menu .spectrum-Menu-chevron",
     "[dir=\"rtl\"] .spectrum-Menu-item"
   ],
   "modifiers": [
@@ -343,8 +343,7 @@
     "--spectrum-font-size-300",
     "--spectrum-font-size-50",
     "--spectrum-font-size-75",
-    "--spectrum-gray-1000",
-    "--spectrum-gray-25",
+    "--spectrum-gray-1000-rgb",
     "--spectrum-gray-900",
     "--spectrum-line-height-100",
     "--spectrum-navigational-indicator-top-to-back-icon-extra-large",
@@ -361,8 +360,6 @@
     "--spectrum-neutral-subdued-content-color-key-focus",
     "--spectrum-spacing-100",
     "--spectrum-spacing-50",
-    "--spectrum-switch-control-label-spacing",
-    "--spectrum-switch-spacing-top-to-label",
     "--spectrum-text-to-control-100",
     "--spectrum-text-to-control-200",
     "--spectrum-text-to-control-300",
@@ -398,7 +395,6 @@
     "--system-menu-item-bottom-edge-to-text",
     "--system-menu-item-checkmark-height",
     "--system-menu-item-checkmark-width",
-    "--system-menu-item-collapsible-has-icon-sub-item-padding-x-start",
     "--system-menu-item-collapsible-no-icon-sub-item-padding-x-start",
     "--system-menu-item-description-color-default",
     "--system-menu-item-description-color-disabled",
@@ -517,7 +513,9 @@
   ],
   "passthroughs": [
     "--mod-checkbox-text-to-control",
-    "--mod-checkbox-top-to-text"
+    "--mod-checkbox-top-to-text",
+    "--mod-switch-control-label-spacing",
+    "--mod-switch-spacing-top-to-label"
   ],
   "high-contrast": [
     "--highcontrast-checkbox-highlight-color-default",
