@@ -1,5 +1,17 @@
 # Change Log
 
+## 5.0.0-s2-foundations.19
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`f14c3be`](https://github.com/adobe/spectrum-css/commit/f14c3bee4ea3b3ad259ce2fa9c3f58fa49febf9d) Thanks [@pfulton](https://github.com/pfulton)! - ProgressBar/Meter
+
+  - Fix bug by reverting "background-color" for track fill back to "background".
+
+  Thumbnail
+
+  - Remove unused "vertical align" property.
+
 ## 5.0.0-s2-foundations.18
 
 ### Major Changes
