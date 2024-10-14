@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { LogicButtonGroup } from "./logicbutton.test.js";
 import { Template, VariantGroup } from "./template.js";
 
@@ -29,7 +30,8 @@ export default {
 		isDisabled: false,
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

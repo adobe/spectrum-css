@@ -1,15 +1,16 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isSelected, size } from "@spectrum-css/preview/types";
-import { Sizes } from "@spectrum-css/preview/decorators";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { SwatchGroup } from "./swatch.test.js";
-import { Template, DisabledGroup, EmptyGroup, RoundingGroup, BorderGroup, SizingGroup } from "./template";
+import { BorderGroup, DisabledGroup, EmptyGroup, RoundingGroup, SizingGroup, Template } from "./template.js";
 
 /**
  * A swatch shows a small sample of a fill--such as a color, gradient, texture, or material--that is intended to be applied to an object.
- * 
+ *
  * ## Usage notes
- * 
+ *
  * Set `--spectrum-picked-color` to customize the swatch fill background color.
  */
 export default {
@@ -107,7 +108,8 @@ export default {
 		isMixedValue: false,
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -172,7 +174,7 @@ Selected.parameters = {
 };
 
 /**
- * By default, swatches have a border. However, when swatches are used within a swatch group, there are additional border considerations. 
+ * By default, swatches have a border. However, when swatches are used within a swatch group, there are additional border considerations.
  * - When color swatches are used in a [swatch group](?path=/docs/components-swatch-group--docs), they typically have the `.spectrum-Swatch--noBorder` class.
  * - When and only when color swatches used in a swatch group have low contrast (below 3:1 contrast with the background), those swatches will have a less prominent border compared to the swatch component when used by itself. They individually use the `.spectrum-Swatch--lightBorder` class.
  */
@@ -182,7 +184,7 @@ Border.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-/** 
+/**
  * Swatches can also have a rectangle shape with an aspect ratio of 2:1. The square shape is the default and is used in swatch groups (e.g., a palette of colors).
  */
 export const Shape = Template.bind({});

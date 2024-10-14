@@ -2,9 +2,10 @@ import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { PickerGroup } from "./pickerbutton.test.js";
-import { CustomIconTemplate, Template } from "./template";
+import { CustomIconTemplate, Template } from "./template.js";
 
 /**
  * The picker button component is used as a dropdown trigger within other components such as [combobox](?path=/docs/components-combobox--docs).
@@ -84,7 +85,8 @@ export default {
 		position: "right",
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

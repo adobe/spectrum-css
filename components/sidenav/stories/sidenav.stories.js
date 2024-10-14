@@ -1,11 +1,12 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { SideNavGroup } from "./sidenav.test.js";
 import { Template } from "./template.js";
 
 /**
  * Side nav lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation.
- * 
+ *
  * - A navigation item can be styled as disabled with the `is-disabled` class.
  * - A navigation item can be styled as the current or selected page with the `is-selected` class. This is accompanied by the use of the `aria-current` attribute on the anchor link.
  */
@@ -62,7 +63,8 @@ export default {
 		],
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

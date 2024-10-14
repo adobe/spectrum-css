@@ -1,13 +1,14 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isChecked, isDisabled, isEmphasized, isReadOnly, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { RadioGroup } from "./radio.test.js";
-import { BasicGroupTemplate } from "./template";
+import { BasicGroupTemplate } from "./template.js";
 
 /**
  * Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare.
- * 
+ *
  * Radio buttons should not be used on their own, they should always be used within a [field group](?path=/docs/components-field-group--docs). Invalid radio buttons are signified by including
  * [help text](?path=/docs/components-help-text--docs) in a field group. Sample usage for an [invalid radio state](?path=/docs/components-field-group--docs#invalid) is included in the field group documentation.
  */
@@ -53,7 +54,8 @@ export default {
 		actions: {
 			handles: ["click input[type=\"radio\"]"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -103,7 +105,7 @@ Sizing.parameters = {
 };
 
 /**
- * The emphasized option provides a visual prominence for the selected radio button. 
+ * The emphasized option provides a visual prominence for the selected radio button.
  * It is best for forms, settings, lists or grids of assets, and other situations where a
  * radio button needs to be noticed.
  */
@@ -130,7 +132,7 @@ Disabled.parameters = {
 /**
  * A radio group has a read-only option for when it's in the disabled state but still needs to be shown.
  * This allows for content to be copied, but not interacted with or changed.
- * 
+ *
  * - Read-only radio buttons are disabled, but not all disabled radio buttons are read-only.
  * - Read-only radio buttons do not have a focus ring, but the button should be focusable.
  */

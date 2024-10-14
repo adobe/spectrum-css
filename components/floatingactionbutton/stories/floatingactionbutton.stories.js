@@ -1,7 +1,8 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isFocused, isHovered } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { FloatingActionButtonGroup } from "./floatingactionbutton.test.js";
 import { Template } from "./template.js";
 
@@ -46,7 +47,8 @@ export default {
 		isActive: false,
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

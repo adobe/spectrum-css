@@ -146,11 +146,11 @@
 			}
 		},
 		"report": {
+			"cache": true,
 			"executor": "nx:run-commands",
 			"inputs": [
 				"core",
 				"tools",
-				"!{projectRoot}/stories/*.js",
 				"{workspaceRoot}/tasks/component-report.js",
 				{ "env": "NODE_ENV" }
 			],

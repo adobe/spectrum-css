@@ -1,5 +1,6 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { MillerGroup } from "./miller.test.js";
 import { Template } from "./template.js";
 
@@ -76,7 +77,8 @@ export default {
 		],
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

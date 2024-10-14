@@ -1,17 +1,18 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDragged } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { BreadcrumbGroup } from "./breadcrumb.test.js";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 /**
  * Breadcrumbs show hierarchy and navigational context for a user's location within an app.
- * 
+ *
  * ## Nesting
  * Breadcrumbs truncate when there is not enough room to display all levels of the breadcrumb list, or as a way of managing relevance of the visible breadcrumb items in a deeply nested hierarchy. The truncation of breadcrumb items begins when either there is not enough room to display all items, or if there are 5 or more breadcrumbs to display. They are typically indicated by the truncated menu folder icon.
- * 
+ *
  * The nested variants below are non-functional. Implementations can add their own overflow menus to display all options within a breadcrumb.
- * 
+ *
  * ## Root Context
  * Some applications find that displaying the root directory is useful for user orientation. This variation keeps the root visible when other folders are truncated into a menu. For example, when users can navigate file directories on their device as well as in the cloud, exposing a root directory called “On this device” is very helpful.
  */
@@ -40,7 +41,8 @@ export default {
 		variant: "default",
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

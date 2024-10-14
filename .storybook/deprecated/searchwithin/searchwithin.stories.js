@@ -1,4 +1,4 @@
-import pkgJson from "@spectrum-css/searchwithin/package.json";
+import packageJson from "@spectrum-css/searchwithin/package.json";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -143,7 +143,7 @@ export default {
 		status: {
 			type: "deprecated"
 		},
-		packageJson: pkgJson,
+		packageJson,
 	},
 };
 

@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isOpen } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { SemanticVariantGroup, TooltipPlacementGroup, TooltipShowOnHover } from "./template.js";
 import { PlacementVariants } from "./tooltip.test.js";
 
@@ -89,7 +90,8 @@ export default {
 		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -128,10 +130,10 @@ ShowOnHover.parameters = {
 /**
  * By default, tooltips are the neutral variant. This is the most common variant because most tooltips are used to only
  * disclose additional information, without conveying a semantic meaning. The neutral variant never includes an icon.
- * 
+ *
  * Tooltips also come in other semantic variants: informative (blue), positive (green), and negative (red). These use
  * [semantic colors](https://spectrum.adobe.com/page/color-system/#Color-semantics) to communicate the meaning.
- * 
+ *
  * These semantic variants include an icon to supplement the messaging. These icons are predefined and can not be
  * customized. Unless it's being used to provide context about the exact same icon, a semantic tooltip should always
  * show an icon. Doing this is essential for helping users with color vision deficiency to discern the message tone.

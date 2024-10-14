@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as TagStories } from "@spectrum-css/tag/stories/tag.stories.js";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { TagGroups } from "./taggroup.test.js";
 import { Template } from "./template.js";
 
@@ -54,7 +55,8 @@ export default {
 				...(TagStories.parameters.actions.handles ?? [])
 			],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

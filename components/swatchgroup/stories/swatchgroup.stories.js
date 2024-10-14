@@ -1,29 +1,30 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { Sizes } from "@spectrum-css/preview/decorators";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { default as Swatch } from "@spectrum-css/swatch/stories/swatch.stories.js";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { SwatchgroupGroup } from "./swatchgroup.test.js";
-import { Template, RoundingTemplate } from "./template";
+import { RoundingTemplate, Template } from "./template.js";
 
 /**
  * The swatch group component is a collection of [swatches](?path=/docs/components-swatch--docs).
- * 
+ *
  * ## Usage notes
- * 
+ *
  * ### Corner rounding in swatch groups
- * 
+ *
  * A corner rounding of “none” (`.spectrum-Swatch--roundingNone` class) should be used in a swatch group in order to help minimize the Hermann grid illusion that happens at the intersections of the white space within the group.
- * 
+ *
  * The only exception is when a swatch group only takes up a single row. In that case, use any of the rounding options.
- * 
+ *
  * ### Apply border to low-contrast swatches only
- * 
+ *
  * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), they have a less prominent border compared to a single swatch component used by itself, and should have the `.spectrum-Swatch--lightBorder` class. This reduces the likelihood of the UI interfering with color perception and comparisons. Otherwise, swatches within a swatch group that meet contrast should have the `.spectrum-Swatch--noBorder` class.
- * 
+ *
  * Implementations should apply the `.spectrum-Swatch--lightBorder` to the individual swatches of a swatch group that do not meet 3:1 contrast.
- * 
+ *
  * ### Density
- * 
+ *
  * Swatch groups come in 3 densities: regular (default), compact, and spacious. Compact and spacious densities retain the same swatch size as regular density, but have less or more padding between each swatch, respectively.
  */
 export default {
@@ -111,7 +112,8 @@ export default {
 				...(Swatch.parameters?.actions?.handles ?? []),
 			],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -165,7 +167,7 @@ Rounding.parameters = {
 export const Sizing = (args, context) => Sizes({
 	Template,
 	withBorder: false,
-	withHeading: false, 
+	withHeading: false,
 	...args,
 }, context);
 Sizing.args = Default.args;
@@ -176,7 +178,7 @@ Sizing.parameters = {
 
 /**
  * When swatches within a swatch group have low contrast (below 3:1 contrast with the background), the `.spectrum-Swatch--lightBorder` class should be applied to those swatches only.
- * 
+ *
  * The swatch group example below contains all swatches with low contrast in light mode, therefore each has the `.spectrum-Swatch--lightBorder` class applied.
  */
 export const WithLightBorder = Template.bind({});

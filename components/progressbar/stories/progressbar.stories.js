@@ -1,6 +1,8 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isIndeterminate, size, staticColor } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ProgressBarGroup } from "./progressbar.test.js";
 import { IndeterminateGroup, Template } from "./template.js";
 
@@ -36,7 +38,6 @@ export default {
 			table: {
 				type: { summary: "string" },
 				category: "Component",
-
 				// todo: side labels are not supported according to S1 documentation, but will be in S2. Remove the disable: true once S2 is released
 				disable: true,
 			},
@@ -89,6 +90,10 @@ export default {
 		customWidth: 192,
 		isIndeterminate: false,
 		showValueLabel: true,
+	},
+	parameters: {
+		packageJson,
+		metadata,
 	},
 };
 

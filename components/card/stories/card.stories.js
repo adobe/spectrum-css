@@ -2,7 +2,8 @@ import { default as ActionButton } from "@spectrum-css/actionbutton/stories/acti
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isFocused, isQuiet, isSelected } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { CardGroup } from "./card.test.js";
 import { Template } from "./template.js";
 
@@ -91,7 +92,8 @@ export default {
 				...(Checkbox.parameters?.actions?.handles ?? []),
 			],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	tags: ["!autodocs"],
 };

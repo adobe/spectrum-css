@@ -397,6 +397,7 @@
 }
 
 .spectrum-Picker-validationIcon {
+	flex-shrink: 0;
 	margin-block-start: calc(var(--mod-picker-spacing-top-to-alert-icon, var(--spectrum-picker-spacing-top-to-alert-icon)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
 	margin-block-end: calc(var(--mod-picker-spacing-top-to-alert-icon, var(--spectrum-picker-spacing-top-to-alert-icon)) - var(--mod-picker-border-width, var(--spectrum-picker-border-width)));
 }

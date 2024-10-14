@@ -1,18 +1,19 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isChecked, isDisabled, isEmphasized, isIndeterminate, isInvalid, isReadOnly, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
-import { DocsCheckboxGroup, AllVariantsCheckboxGroup, } from "./template";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { CheckboxGroup } from "./checkbox.test.js";
+import { AllVariantsCheckboxGroup, DocsCheckboxGroup, } from "./template.js";
 
 /**
  * Checkboxes allow users to select multiple items from a list of individual items, or mark one individual item as selected.
- * 
- * ## Usage notes  
- * 
- * Checkboxes should not be used on their own. They should always be used within a [field group](/docs/components-field-group--docs). Invalid checkboxes are indicated with an alert [help text](/docs/components-help-text--docs) when included in a Field group.  
- * 
- * When the label is too long for the horizontal space available, it wraps to form another line.  
+ *
+ * ## Usage notes
+ *
+ * Checkboxes should not be used on their own. They should always be used within a [field group](/docs/components-field-group--docs). Invalid checkboxes are indicated with an alert [help text](/docs/components-help-text--docs) when included in a Field group.
+ *
+ * When the label is too long for the horizontal space available, it wraps to form another line.
  */
 export default {
 	title: "Checkbox",
@@ -50,7 +51,8 @@ export default {
 		actions: {
 			handles: ["click input[type=\"checkbox\"]"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
