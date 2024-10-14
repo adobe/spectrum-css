@@ -51,7 +51,6 @@
 		--spectrum-card-actions-size: var(--spectrum-card-selection-background-size);
 		--spectrum-card-actions-border-radius: var(--spectrum-corner-radius-100);
 
-		/* TODO update to --spectrum-card-selection-background-color token once an RGB stripped value is available */
 		--spectrum-card-actions-background-color-rgb: var(--spectrum-gray-100-rgb);
 		--spectrum-card-actions-background-color-opacity: var(--spectrum-card-selection-background-color-opacity);
 		--spectrum-card-actions-drop-shadow-color: var(--spectrum-drop-shadow-color);
