@@ -67,7 +67,7 @@ export default {
 		inputType: "radio",
 		labelPosition: "top",
 		layout: "vertical",
-		label: "Field Group Label",
+		label: "Field group label",
 		helpText: "Select an option.",
 		items: [
 			{
