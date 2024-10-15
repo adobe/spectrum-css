@@ -20,6 +20,10 @@ export default {
 	title: "Field group",
 	component: "FieldGroup",
 	argTypes: {
+		label: {
+			name: "Label",
+			type: { name: "string" },
+		},
 		inputType: {
 			name: "Input type",
 			type: { name: "string" },
@@ -62,7 +66,8 @@ export default {
 		inputType: "radio",
 		labelPosition: "top",
 		layout: "vertical",
-		label: "Select one of the following options:",
+		label: "Field Group Label",
+		helpText: "Select an option.",
 		items: [
 			{
 				id: "apple",

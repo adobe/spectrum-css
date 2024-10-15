@@ -44,6 +44,7 @@ export const Template = (
 					{
 						size: "m",
 						label,
+						isRequired,
 						alignment: labelPosition === "side" ? "right" : "top",
 					},
 					context,
@@ -59,6 +60,7 @@ export const Template = (
 					Radio({
 					...item,
 					isReadOnly,
+					isRequired,
 					name: "field-group-example",
 					customClasses: [`${rootClass}-item`],
 					}, context))
@@ -66,6 +68,7 @@ export const Template = (
 					CheckBox({
 					...item,
 					isReadOnly,
+					isRequired,
 					customClasses: [`${rootClass}-item`],
 				}, context))}
 				${when(helpText, () =>
