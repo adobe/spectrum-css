@@ -1,5 +1,11 @@
 # Change Log
 
+## 15.0.0-s2-foundations.24
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`70b8890`](https://github.com/adobe/spectrum-css/commit/70b889026174fa552cb8f2e7f205b923bf0b6e55) Thanks [@pfulton](https://github.com/pfulton)! - Updated tokens build with latest from recent bug fixes to components
+
 ## 15.0.0-s2-foundations.23
 
 ### Minor Changes
