@@ -22,6 +22,7 @@ export default {
 	argTypes: {
 		label: {
 			name: "Label",
+			description: "The label for the field group component.",
 			type: { name: "string" },
 		},
 		inputType: {

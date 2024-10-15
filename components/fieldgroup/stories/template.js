@@ -57,20 +57,21 @@ export const Template = (
 			>
 				${inputType === "radio" ?
 					items.map((item) =>
-					Radio({
-					...item,
-					isReadOnly,
-					isRequired,
-					name: "field-group-example",
-					customClasses: [`${rootClass}-item`],
-					}, context))
-					: items.map((item) =>
-					CheckBox({
-					...item,
-					isReadOnly,
-					isRequired,
-					customClasses: [`${rootClass}-item`],
-				}, context))}
+						Radio({
+							...item,
+							isReadOnly,
+							isRequired,
+							name: "field-group-example",
+							customClasses: [`${rootClass}-item`],
+						}, context))
+						: items.map((item) =>
+						CheckBox({
+							...item,
+							isReadOnly,
+							isRequired,
+							customClasses: [`${rootClass}-item`],
+						}, context)
+				)}
 				${when(helpText, () =>
 					HelpText(
 						{
