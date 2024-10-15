@@ -1,6 +1,7 @@
+import { Template as CheckBox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
-import { renderContent } from "@spectrum-css/preview/decorators";
+import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -43,6 +44,7 @@ export const Template = (
 					{
 						size: "m",
 						label,
+						isRequired,
 						alignment: labelPosition === "side" ? "right" : "top",
 					},
 					context,
@@ -53,7 +55,23 @@ export const Template = (
 					[`${rootClass}InputLayout`]: true,
 				})}
 			>
-				${renderContent(items, { args: { isReadOnly, isRequired }, context })}
+				${inputType === "radio" ?
+					items.map((item) =>
+						Radio({
+							...item,
+							isReadOnly,
+							isRequired,
+							name: "field-group-example",
+							customClasses: [`${rootClass}-item`],
+						}, context))
+						: items.map((item) =>
+						CheckBox({
+							...item,
+							isReadOnly,
+							isRequired,
+							customClasses: [`${rootClass}-item`],
+						}, context)
+				)}
 				${when(helpText, () =>
 					HelpText(
 						{
