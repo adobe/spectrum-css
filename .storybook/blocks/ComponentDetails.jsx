@@ -351,6 +351,8 @@ export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
  * (i.e. meter, form). We need to check that the rootClassName matches the rootClass found
  * in the packageJson.spectrum, to link to the correct guidelines page.
  *
+ * Deprecated components should not show a GitHub resource card.
+ *
  * @param {string} packageName - packageName sourced from packageJson?.name
  * @param {string[]} spectrumData - an array of objects sourced from packageJson?.spectrum
  * @param {string} rootClassName - a component's default rootClass arg
@@ -382,14 +384,13 @@ export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassN
 					alt="npm"
 					logo="npm"
 					href={`https://npmjs.com/${packageName}`}/>
-			<ResourceLinkContent
-				className="doc-block-resource-cards"
-				heading="View repository"
-				alt="GitHub"
-				logo="GitHub"
-				href={isDeprecated ?
-					`https://github.com/adobe/spectrum-css/tree/main/.storybook/deprecated/${packageName.split('/').pop()}`
-					: `https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split('/').pop()}`}/>
+			{!isDeprecated ?
+				<ResourceLinkContent
+					className="doc-block-resource-cards"
+					heading="View repository"
+					alt="GitHub"
+					logo="GitHub"
+					href={`https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split('/').pop()}`}/> : ""}
 		</ResourceSection>
 	)
 };
