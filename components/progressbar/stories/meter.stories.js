@@ -36,6 +36,7 @@ export default {
 	},
 	args: {
 		...ProgressBar.args,
+		rootClass: "spectrum-Meter",
 		size: "l",
 		label: "Storage space",
 	},
