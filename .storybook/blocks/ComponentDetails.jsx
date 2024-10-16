@@ -321,7 +321,7 @@ const fetchLogo = (brand) => {
 
 /**
  * Displays a resource card containing text and an image that links to a particular resource.
- * 
+ *
  * @param {string} heading - heading of the resource card
  * @param {string} alt - additional description of the resource card
  * @param {string} image - the SVG image
@@ -344,16 +344,16 @@ export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
 
 /**
  * Displays the list of relevant component links (to NPM, repo, guidelines, etc).
- * 
+ *
  * The rootClassName is read from the story's default args, found in the story's metadata.
- * 
+ *
  * The for loop is particularly helpful to match guidelines links for any nested components
  * (i.e. meter, form). We need to check that the rootClassName matches the rootClass found
  * in the packageJson.spectrum, to link to the correct guidelines page.
- * 
+ *
  * @param {string} packageName - packageName sourced from packageJson?.name
  * @param {string[]} spectrumData - an array of objects sourced from packageJson?.spectrum
- * @param {string} rootClassName - a component's default rootClass arg 
+ * @param {string} rootClassName - a component's default rootClass arg
  * @returns {string}
  */
 export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassName }) => {
@@ -369,7 +369,7 @@ export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassN
 
 	return (
 		<ResourceSection skipBorder={true} className="sb-unstyled">
-			{href ? 
+			{href ?
 				<ResourceLinkContent
 					className="doc-block-resource-cards"
 					heading="View guidelines"
