@@ -1,5 +1,5 @@
 ---
-"@spectrum-css/combobox": major
+"@spectrum-css/combobox": minor
 ---
 
 Adding read only state to combobox

@@ -43,7 +43,6 @@ const Combobox = ({
 				"is-keyboardFocused": !isDisabled && isKeyboardFocused,
 				"is-loading": isLoading,
 				"is-disabled": isDisabled,
-				"is-readOnly": isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -65,6 +64,7 @@ const Combobox = ({
 				isLoading,
 				customProgressCircleClasses: ["spectrum-Combobox-progress-circle"],
 				name: "field",
+				isReadOnly,
 				value,
 				onclick: function () {
 					if (!isOpen) updateArgs({ isOpen: true });
@@ -86,7 +86,7 @@ const Combobox = ({
 				isDisabled,
 				position: "right",
 				onclick: function () {
-					if (!isReadOnly) updateArgs({ isOpen: !isOpen });
+					updateArgs({ isOpen: !isOpen });
 				},
 			}, context)}
 		</div>

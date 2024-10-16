@@ -1,6 +1,6 @@
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
+import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isOpen, isQuiet, isReadOnly, size } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { ComboBoxGroup } from "./combobox.test.js";
@@ -41,8 +41,7 @@ export default {
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
 		isOpen: {
-			name: "Open",
-			table: { category: "State" },
+			...isOpen,
 			if: { arg: "isReadOnly", truthy: false },
 		},
 		isQuiet,
@@ -172,9 +171,8 @@ QuietGroup.parameters = {
 };
 
 /**
- * Combo boxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combo box does not have a read-only option if no selection has been made.
+ * Comboboxes have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed. A combobox does not have a read-only option if no selection has been made.
 */
-
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];
 ReadOnly.args = {
@@ -184,6 +182,8 @@ ReadOnly.args = {
 ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true }
 };
+
+ReadOnly.storyName = "Read-only";
 
 // ********* VRT ONLY ********* //
 export const WithForcedColors = ComboBoxGroup.bind({});

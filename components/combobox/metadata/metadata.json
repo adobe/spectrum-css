@@ -59,7 +59,6 @@
     ".spectrum-Combobox.is-focused:hover .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox.is-keyboardFocused .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox.is-keyboardFocused .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
-    ".spectrum-Combobox.is-readOnly",
     ".spectrum-Combobox:has(:active) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox:has(:active) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox:has(:focus) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
@@ -71,6 +70,12 @@
     ".spectrum-Textfield.is-disabled .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-loading .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-readOnly .spectrum-Textfield-validationIcon",
+    ".spectrum-Textfield.is-readOnly input:read-only",
+    ".spectrum-Textfield.is-readOnly input:read-only:hover",
+    ".spectrum-Textfield.is-readOnly.is-disabled input:read-only",
+    ".spectrum-Textfield.is-readOnly.is-invalid input:read-only",
+    ".spectrum-Textfield.is-readOnly.spectrum-Textfield--quiet input:read-only",
+    ".spectrum-Textfield.is-readOnly.spectrum-Textfield--quiet.is-invalid input:read-only",
     "[dir=\"rtl\"] .spectrum-Combobox-progress-circle"
   ],
   "modifiers": [
@@ -224,6 +229,11 @@
     "--spectrum-negative-border-color-focus-hover",
     "--spectrum-negative-border-color-hover",
     "--spectrum-negative-border-color-key-focus",
+    "--spectrum-textfield-background-color",
+    "--spectrum-textfield-background-color-disabled",
+    "--spectrum-textfield-border-color",
+    "--spectrum-textfield-border-color-invalid-default",
+    "--spectrum-textfield-text-color-disabled",
     "--spectrum-workflow-icon-size-100",
     "--spectrum-workflow-icon-size-200",
     "--spectrum-workflow-icon-size-300",
@@ -273,6 +283,8 @@
   ],
   "high-contrast": [
     "--highcontrast-combobox-border-color-highlight",
-    "--highcontrast-combobox-border-color-invalid"
+    "--highcontrast-combobox-border-color-invalid",
+    "--highcontrast-textfield-border-color-invalid-default",
+    "--highcontrast-textfield-text-color-disabled"
   ]
 }
