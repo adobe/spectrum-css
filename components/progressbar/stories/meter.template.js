@@ -1,6 +1,7 @@
 import { Container } from "@spectrum-css/preview/decorators";
-import { Template as ProgressBar } from "./template.js";
 import { html } from "lit";
+import { capitalize } from "lodash-es";
+import { Template as ProgressBar } from "./template.js";
 
 import "../index.css";
 
@@ -8,15 +9,24 @@ export const Template = ({
 	customClasses = [],
 	fill,
 	size = "s",
+	rootClass = "spectrum-Meter",
+	staticColor,
 	...item
 } = {}, context = {}) => ProgressBar({
 	customClasses: [
-		...customClasses,
-		"spectrum-Meter",
-		typeof size !== "undefined" ? `spectrum-Meter--size${size.toUpperCase()}` : null,
+		rootClass,
+		typeof size !== "undefined" ? `${rootClass}--size${size.toUpperCase()}` : null,
 		typeof fill !== "undefined" ? `is-${fill}` : null,
+		/*
+		 * The `spectrum-Meter--staticWhite` class is not present in the Meter CSS, as it makes use of
+		 * `spectrum-ProgressBar--staticWhite`, but having this allows for simpler detection of static
+		 * colors when looking at the element using its `rootClass` in our decorators.
+		 */
+		typeof staticColor !== "undefined" ? `${rootClass}--static${capitalize(staticColor)}` : null,
+		...customClasses,
 	].filter(Boolean),
 	size,
+	staticColor,
 	...item,
 }, context);
 
