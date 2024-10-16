@@ -72,7 +72,15 @@ export default {
 		status: {
 			type: "deprecated"
 		},
-		packageJson,
+		packageJson: {
+			...packageJson,
+			"spectrum": [
+				{
+					"guidelines": "https://spectrum.adobe.com/page/quick-actions/",
+					"rootClass": "spectrum-QuickActions",
+				}
+			]
+		}
 	},
 };
 
