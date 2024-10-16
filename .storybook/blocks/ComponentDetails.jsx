@@ -356,7 +356,7 @@ export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
  * @param {string} rootClassName - a component's default rootClass arg
  * @returns {string}
  */
-export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassName }) => {
+export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassName, status }) => {
 	if (!packageName) return;
 
 	let href;
@@ -387,7 +387,9 @@ export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassN
 				heading="View repository"
 				alt="GitHub"
 				logo="GitHub"
-				href={`https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split('/').pop()}`}/>
+				href={status ?
+					`https://github.com/adobe/spectrum-css/tree/main/.storybook/deprecated/${packageName.split('/').pop()}`
+					: `https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split('/').pop()}`}/>
 		</ResourceSection>
 	)
 };
@@ -449,7 +451,7 @@ export const ComponentDetails = () => {
 							</>
 						}
 					</DList>
-					<ResourceListDetails packageName={packageName} spectrumData={spectrumData} rootClassName={rootClassName}/>
+					<ResourceListDetails packageName={packageName} spectrumData={spectrumData} rootClassName={rootClassName} status={isDeprecated}/>
 				</>
 			: ""}
 		</ResetWrapper>
