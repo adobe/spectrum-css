@@ -6,18 +6,14 @@ export const FieldGroupSet = Variants({
 	testData: [
 		{
 			testHeading: "Default",
-			inputType: "radio",
 		},
 		{
 			testHeading: "Vertical checkboxes",
-			layout: "vertical",
 			inputType: "checkbox",
-			helpText: "Make a selection.",
 		},
 		{
 			testHeading: "Horizontal radios",
 			layout: "horizontal",
-			inputType: "radio",
 		},
 		{
 			testHeading: "Horizontal checkboxes",
@@ -29,14 +25,25 @@ export const FieldGroupSet = Variants({
 			testHeading: "Radios label position: side",
 			label: "Pick one:",
 			labelPosition: "side",
-			inputType: "radio",
 		},
 		{
 			testHeading: "Checkboxes label position: side",
-			label: "Choose:",
 			labelPosition: "side",
 			inputType: "checkbox",
-			helpText: "Make a selection.",
+		},
+		{
+			testHeading: "Horizontal radios label position: side",
+			label: "Pick one:",
+			labelPosition: "side",
+			layout: "horizontal",
+			inputType: "radio",
+		},
+		{
+			testHeading: "Horizontal checkboxes label position: side",
+			label: "Pick one:",
+			labelPosition: "side",
+			layout: "horizontal",
+			inputType: "checkbox",
 		},
 	],
 	stateData: [
@@ -49,8 +56,12 @@ export const FieldGroupSet = Variants({
 			isReadOnly: true,
 		},
 		{
-			testHeading: "Required",
+			testHeading: "Required: asterisk",
 			isRequired: true,
+		},
+		{
+			testHeading: "Optional",
+			helpText: "",
 		},
 	]
 });
