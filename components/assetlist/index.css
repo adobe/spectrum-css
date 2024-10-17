@@ -173,12 +173,13 @@
 
 @media (forced-colors: active) {
 	.spectrum-AssetList-item {
-		forced-color-adjust: none;
 		--highcontrast-assetlist-border-color-key-focus: Highlight;
 		--highcontrast-assetlist-item-background-color-hover: Highlight;
 		--highcontrast-assetlist-item-background-color-selected-hover: Highlight;
 		--highcontrast-assetlist-label-color: ButtonText;
 		--highcontrast-assetlist-item-background-color-selected: SelectedItem;
+
+		forced-color-adjust: none;
 
 		&:hover,
 		&.is-selected,
