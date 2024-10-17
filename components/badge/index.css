@@ -68,6 +68,8 @@
 	--spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
 	--spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
 	--spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-100);
+
+	--highcontrast-spectrum-badge-border-color: CanvasText;
 }
 
 /* text and icon color is black for these background colors */
@@ -146,7 +148,7 @@
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-Badge {
-		border-color: CanvasText; /* stylelint-disable-line declaration-property-value-no-unknown */
+		border-color:  var(--highcontrast-spectrum-badge-border-color);
 	}
 }
 
