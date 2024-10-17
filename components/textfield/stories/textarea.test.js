@@ -1,7 +1,7 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "@spectrum-css/textfield/stories/template.js";
+import { Template } from "./textarea.template";
 
-export const TextFieldGroup = Variants({
+export const TextAreaGroup = Variants({
 	Template,
 	testData: [{
 	},

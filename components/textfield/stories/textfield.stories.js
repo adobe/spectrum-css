@@ -3,12 +3,12 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptions } from "./template.js";
+import { HelpTextOptions, QuietGroup, Template } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
- * 
+ *
  * ## Usage Notes
  * A single-line text field using the `<input>` element.
  */
@@ -87,12 +87,12 @@ export default {
 				category: "Content",
 			},
 		},
-		displayCounter: {
-			name: "Show counter",
+		hasCharacterCount: {
+			name: "Has character count",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
-				category: "Advanced",
+				category: "Component",
 			},
 			control: "boolean",
 		},
@@ -100,11 +100,11 @@ export default {
 			name: "Character counter",
 			type: { name: "number" },
 			table: {
-				type: { summary: "boolean" },
-				category: "Advanced",
+				type: { summary: "number" },
+				category: "Component",
 			},
 			control: { type: "number" },
-			if: { arg: "displayCounter", eq: true },
+			if: { arg: "hasCharacterCount", eq: true },
 		}
 	},
 	args: {
@@ -118,7 +118,7 @@ export default {
 		isKeyboardFocused: false,
 		isLoading: false,
 		displayLabel: true,
-		displayCounter: false,
+		hasCharacterCount: false,
 		characterCount: 50,
 		labelPosition: "top",
 		labelText: "Username",
@@ -146,25 +146,20 @@ export default {
 */
 
 export const Default = TextFieldGroup.bind({});
-Default.args = {
-	labelText: "Username",
-};
+Default.args = {};
 
 // ********* DOCS ONLY ********* //
-
 
 /**
  * Text fields can display a character count indicator when the length of the text entry needs to be kept under a predefined value. Character count indicators can be used in conjunction with other indicators (validation icon, “optional” or “required” indicators) when necessary.
 */
-export const CharacterCount = TextFieldGroup.bind({});
+export const CharacterCount = Template.bind({});
 CharacterCount.tags = ["!dev"];
 CharacterCount.args = {
-	labelText: "Username",
-	displayCounter: true,
+	hasCharacterCount: true,
 	characterCount: 24,
 	value: "lisawilson23"
 };
-
 CharacterCount.parameters = {
 	chromatic: { disableSnapshot: true }
 };
@@ -172,12 +167,11 @@ CharacterCount.parameters = {
 /**
  * A text field in a disabled state shows that an input field exists, but is not available in that circumstance. This can be used to maintain layout continuity and communicate that a field may become available later.
 */
-export const Disabled = TextFieldGroup.bind({});
+export const Disabled = Template.bind({});
 Disabled.tags = ["!dev"];
 Disabled.args = {
 	isDisabled: true
 };
-
 Disabled.parameters = {
 	chromatic: { disableSnapshot: true }
 };
@@ -186,28 +180,33 @@ Disabled.parameters = {
 /**
  * A text field can be marked as having an error to show that a value needs to be entered in order to move forward or that a value that was entered is invalid. If an error exists, the error icon always overrides the validation icon.
 */
-export const Error = TextFieldGroup.bind({});
-Error.tags = ["!dev"];
-Error.args = {
+export const Invalid = Template.bind({});
+Invalid.tags = ["!dev"];
+Invalid.args = {
 	isInvalid: true
+};
+Invalid.parameters = {
+	chromatic: { disableSnapshot: true }
 };
 
 /**
  * A text field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
- * 
+ *
  * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible.
 */
 export const HelpText = HelpTextOptions.bind({});
 HelpText.tags = ["!dev"];
+HelpText.parameters = {
+	chromatic: { disableSnapshot: true }
+};
 
 
-export const Quiet = TextFieldGroup.bind({});
+export const Quiet = QuietGroup.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
 	value: ""
 };
-
 Quiet.parameters = {
 	chromatic: { disableSnapshot: true }
 };
@@ -215,7 +214,7 @@ Quiet.parameters = {
 /**
  * Text fields have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed.
 */
-export const Readonly = TextFieldGroup.bind({});
+export const Readonly = Template.bind({});
 Readonly.tags = ["!dev"];
 Readonly.args = {
 	isReadOnly: true,
@@ -229,12 +228,11 @@ Readonly.storyName = "Read-only";
 /**
  * Side labels are most useful when vertical space is limited.
 */
-export const SideLabel = TextFieldGroup.bind({});
+export const SideLabel = Template.bind({});
 SideLabel.tags = ["!dev"];
 SideLabel.args = {
 	labelPosition: "side",
-	labelText: "Username",
-	displayCounter: true,
+	hasCharacterCount: true,
 	characterCount: 50,
 	helpText: "Example help text. Lorem ipsum dolor sit amet."
 };
@@ -243,12 +241,11 @@ SideLabel.parameters = {
 };
 
 export const Sizing = (args, context) => Sizes({
-	Template: TextFieldGroup,
+	Template: Template,
 	withHeading: false,
 	withBorder: false,
 	...args,
 }, context);
-
 Sizing.args = {
 	helpText: "Example help text. Lorem ipsum dolor sit amet."
 };
@@ -257,11 +254,10 @@ Sizing.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-
 /**
  * Text fields can display a validation icon when the text entry is expected to conform to a specific format (e.g., email address, credit card number, password creation requirements, etc.). The icon appears as soon as a user types a valid entry in the field.
 */
-export const Validation = TextFieldGroup.bind({});
+export const Validation = Template.bind({});
 Validation.tags = ["!dev"];
 Validation.args = {
 	isValid: true,

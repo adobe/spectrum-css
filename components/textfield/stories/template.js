@@ -71,7 +71,6 @@ export const Template = ({
 	isKeyboardFocused = false,
 	isLoading = false,
 	displayLabel = false,
-	displayCounter = false,
 	labelPosition = "top",
 	labelText,
 	characterCount,
@@ -138,9 +137,8 @@ export const Template = ({
 			size,
 			label: labelText,
 		}, context))}
-		${when(displayCounter, 
-			() => html`<span 
-				class="${rootClass}-characterCount">${characterCount}</span>`)}
+		${when(typeof characterCount !== "undefined", () => html`
+			<span class="${rootClass}-characterCount">${characterCount}</span>`)}
 		${when(iconName, () => Icon({
 			size,
 			iconName,
@@ -190,7 +188,7 @@ export const Template = ({
 			size: "s",
 			customClasses: customProgressCircleClasses,
 		}, context))}
-		${when(helpText, () => 
+		${when(helpText, () =>
 				HelpText({
 					text: helpText,
 					variant: isInvalid ? "negative" : "neutral",
@@ -220,21 +218,68 @@ export const HelpTextOptions = (args, context) => Container({
 	`
 });
 
-export const HelpTextOptionsTextArea = (args, context) => Container({
-	direction: "column",
+export const QuietGroup = (args, context) => Container({
+	direction: "row",
 	withBorder: false,
-	withHeading: false,
+	wrapperStyles: {
+		rowGap: "12px",
+	},
 	content: html`
 		${Container({
 			withBorder: false,
-			heading: "Description",
-			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Describe the interests you'd like to explore through our tutorials."}, context),
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template({args, context, isQuiet: true})
 		})}
 		${Container({
 			withBorder: false,
-			heading: "Error message",
-			content: Template({...args, isRequired: true, labelText: "Interests", value: "", helpText: "Enter at least one interest.", isInvalid: true }, context),
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid",
+			content: Template({...args, isInvalid: true, isQuiet: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Hovered",
+			content: Template({...args, isHovered: true, isQuiet: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Focused",
+			content: Template({...args, isFocused: true, isQuiet: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid, focused",
+			content: Template({...args, isInvalid: true, isFocused: true, isQuiet: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Keyboard-focused",
+			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid, keyboard-focused",
+			content: Template({...args, isInvalid: true, isKeyboardFocused: true, isQuiet: true}, context)
 		})}
 	`
 });
-
