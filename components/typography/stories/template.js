@@ -44,6 +44,10 @@ export const Template = (args = {}, context = {}) => {
 				if (["body", "code"].includes(semantics)) {
 					size = "xs";
 				}
+				// Detail doesn't support xxs, use s instead
+				else if (["detail"].includes(semantics)) {
+					size = "s";
+				}
 				break;
 			case "xs":
 				if (["detail"].includes(semantics)) {
