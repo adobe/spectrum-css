@@ -1,7 +1,6 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".spectrum--large .spectrum-ContextualHelp",
     ".spectrum-ContextualHelp",
     ".spectrum-ContextualHelp-button",
     ".spectrum-ContextualHelp-link",
@@ -33,8 +32,6 @@
   "global": [
     "--spectrum-body-color",
     "--spectrum-heading-color",
-    "--spectrum-spacing-100",
-    "--spectrum-spacing-200",
     "--spectrum-spacing-300",
     "--spectrum-spacing-400"
   ],
