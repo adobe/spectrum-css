@@ -53,5 +53,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/text-field",
+			"rootClass": "spectrum-Textfield"
+		}
+	]
 }

@@ -65,5 +65,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/picker",
+			"rootClass": "spectrum-Picker"
+		}
+	]
 }
