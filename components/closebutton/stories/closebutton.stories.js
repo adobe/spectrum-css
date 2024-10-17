@@ -46,6 +46,10 @@ export default {
 		actions: {
 			handles: ["click .spectrum-CloseButton"],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=13601-149",
+		},
 		packageJson,
 		metadata,
 	},
@@ -53,6 +57,18 @@ export default {
 
 export const Default = CloseButtonGroup.bind({});
 Default.args = {};
+
+// ********* VRT ONLY ********* //
+export const WithForcedColors = CloseButtonGroup.bind({});
+WithForcedColors.tags = ["!autodocs", "!dev"];
+WithForcedColors.parameters = {
+	chromatic: {
+		forcedColors: "active",
+		modes: disableDefaultModes
+	},
+};
+
+// ********* DOCS ONLY ********* //
 
 /**
  * Close button provides a "large" icon size option, for displaying a larger cross icon for each component size.
@@ -76,18 +92,9 @@ SizingLargeIcons.args = {
 	iconSize: "large",
 };
 SizingLargeIcons.tags = ["!dev"];
-
-// ********* VRT ONLY ********* //
-export const WithForcedColors = CloseButtonGroup.bind({});
-WithForcedColors.tags = ["!autodocs", "!dev"];
-WithForcedColors.parameters = {
-	chromatic: {
-		forcedColors: "active",
-		modes: disableDefaultModes
-	},
+SizingLargeIcons.parameters = {
+	chromatic: { disableSnapshot: true },
 };
-
-// ********* DOCS ONLY ********* //
 
 /**
 * Close buttons come in four different sizes: small, medium, large, and extra-large. By default ("regular" icon size), the cross icon

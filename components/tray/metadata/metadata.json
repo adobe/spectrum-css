@@ -36,7 +36,16 @@
     "--spectrum-background-layer-2-color",
     "--spectrum-corner-radius-100"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-tray-background-color",
+    "--system-tray-corner-radius",
+    "--system-tray-entry-animation-delay",
+    "--system-tray-entry-animation-duration",
+    "--system-tray-exit-animation-delay",
+    "--system-tray-exit-animation-duration",
+    "--system-tray-max-inline-size",
+    "--system-tray-spacing-edge-to-safe-zone"
+  ],
   "passthroughs": ["--mod-modal-max-width"],
   "high-contrast": ["--highcontrast-tray-background-color"]
 }

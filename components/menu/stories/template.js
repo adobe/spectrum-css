@@ -13,6 +13,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 /**
  * Get the tray submenu back arrow name with scale number (defined in design spec).
@@ -30,307 +33,298 @@ const iconWithScale = (size = "m", iconName = "ArrowLeft") => {
 	}
 };
 
-export const MenuItem = (
-	{
-		rootClass = "spectrum-Menu-item",
-		label,
-		description,
-		iconName,
-		iconSet = "workflow",
-		hasActions = false,
-		id = getRandomId("menuitem"),
-		idx = 0,
-		isActive = false,
-		isCollapsible = false,
-		isDisabled = false,
-		isDrillIn = false,
-		isFocused = false,
-		isHighlighted = false,
-		isHovered = false,
-		isOpen = false,
-		isSelected = false,
-		items = [],
-		role = "menuitem",
-		shouldTruncate = false,
-		size = "m",
-		selectionMode = "none",
-		value,
-		customClasses = [],
-		customStyles = {},
-	} = {},
-	context = {},
-) => html`
-	<li
-		class=${classMap({
-			[rootClass]: true,
-			"is-highlighted": isHighlighted,
-			"is-active": isActive,
-			"is-focus-visible": isFocused,
-			"is-selected": isSelected,
-			"is-disabled": isDisabled,
-			"is-hover": isHovered,
-			[`${rootClass}--drillIn`]: isDrillIn,
-			[`${rootClass}--collapsible`]: isCollapsible,
-			"is-open": isOpen,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${styleMap(customStyles)}
-		id=${ifDefined(id)}
-		role=${ifDefined(role)}
-		aria-selected=${isSelected ? "true" : "false"}
-		aria-disabled=${isDisabled ? "true" : "false"}
-		tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
-	>
-		${when(isCollapsible || (selectionMode == "single" && isSelected), () =>
-			Icon(
-				{
-					iconName: iconWithScale(
-						size,
-						isCollapsible ? "ChevronRight" : "Checkmark",
-					),
-					setName: "ui",
-					size,
-					customClasses: [
-						`${rootClass}Icon`,
-						isCollapsible ? "spectrum-Menu-chevron" : "spectrum-Menu-checkmark",
-					],
-				},
-				context,
-			),
-		)}
-		${when(selectionMode === "multiple" && !hasActions, () =>
-			Checkbox(
-				{
-					size,
-					isEmphasized: true,
-					isChecked: isSelected,
-					isDisabled,
-					id: `menu-checkbox-${idx}`,
-					customClasses: [`${rootClass}Checkbox`],
-				},
-				context,
-			),
-		)}
-		${when(iconName, () =>
-			Icon(
-				{
-					iconName,
-					setName: iconSet,
-					size,
-					customClasses: [`${rootClass}Icon`, `${rootClass}Icon--workflowIcon`],
-				},
-				context,
-			),
-		)}
-		${when(
-			isCollapsible,
-			() => html`
-				<span
-					class=${classMap({
-						["spectrum-Menu-sectionHeading"]: true,
-						[`${rootClass}Label--truncate`]: shouldTruncate,
-					})}
-				>
-					${label}
-				</span>
-			`,
-			() => html`
-				<span
-					class=${classMap({
-						[`${rootClass}Label`]: true,
-						["spectrum-Switch-label"]: hasActions,
-						[`${rootClass}Label--truncate`]: shouldTruncate,
-					})}
-				>
-					${label}
-				</span>
-			`,
-		)}
-		${when(
-			description,
-			() => html`
-				<span
-					class=${classMap({
-						[`${rootClass}Description`]: true,
-					})}
-				>
-					${description}
-				</span>
-			`,
-		)}
-		${when(
-			value,
-			() => html`
-				<span
-					class=${classMap({
-						[`${rootClass}Value`]: true,
-					})}
-				>
-					${value}
-				</span>
-			`,
-		)}
-		${when(
-			hasActions && selectionMode == "multiple",
-			() => html`
-				<div
-					class=${classMap({
-						[`${rootClass}Actions`]: true,
-					})}
-				>
-					${Switch(
-						{
+export const MenuItem = ({
+	rootClass = "spectrum-Menu-item",
+	label,
+	description,
+	iconName,
+	iconSet = "workflow",
+	hasActions = false,
+	id = getRandomId("menuitem"),
+	idx = 0,
+	isActive = false,
+	isCollapsible = false,
+	isDisabled = false,
+	isDrillIn = false,
+	isFocused = false,
+	isHighlighted = false,
+	isHovered = false,
+	isOpen = false,
+	isSelected = false,
+	items = [],
+	role = "menuitem",
+	shouldTruncate = false,
+	size = "m",
+	selectionMode = "none",
+	value,
+	customClasses = [],
+	customStyles = {},
+} = {}, context = {}) => {
+	return html`
+		<li
+			class=${classMap({
+				[rootClass]: true,
+				"is-highlighted": isHighlighted,
+				"is-active": isActive,
+				"is-focus-visible": isFocused,
+				"is-selected": isSelected,
+				"is-disabled": isDisabled,
+				"is-hover": isHovered,
+				[`${rootClass}--drillIn`]: isDrillIn,
+				[`${rootClass}--collapsible`]: isCollapsible,
+				"is-open": isOpen,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap(customStyles)}
+			id=${ifDefined(id)}
+			role=${ifDefined(role)}
+			aria-selected=${isSelected ? "true" : "false"}
+			aria-disabled=${isDisabled ? "true" : "false"}
+			tabindex=${ifDefined(!isDisabled ? "0" : undefined)}
+		>
+			${when(isCollapsible || (selectionMode == "single" && isSelected), () =>
+				Icon(
+					{
+						iconName: iconWithScale(
 							size,
-							isChecked: isSelected,
-							isDisabled,
-							label: null,
-							id: `menu-switch-${idx}`,
-							customClasses: [`${rootClass}Switch`],
-						},
-						context,
-					)}
-				</div>
-			`,
-		)}
-		${when(isDrillIn, () =>
-			Icon(
-				{
-					iconName: iconWithScale(size, "ChevronRight"),
-					setName: "ui",
-					size,
-					customClasses: [`${rootClass}Icon`, "spectrum-Menu-chevron"],
-				},
-				context,
-			),
-		)}
-		${when(isCollapsible && items.length > 0, () =>
-			Template(
-				{
-					items,
-					isOpen,
-					size,
-					shouldTruncate,
-				},
-				context,
-			),
-		)}
-	</li>
-`;
-
-export const MenuGroup = (
-	{
-		hasActions = false,
-		heading,
-		id = getRandomId("menugroup"),
-		idx = 0,
-		items = [],
-		isDisabled = false,
-		isSelectable = false,
-		isTraySubmenu = false,
-		shouldTruncate = false,
-		subrole = "menuitem",
-		size = "m",
-		selectionMode = "none",
-		customStyles = {},
-	} = {},
-	context = {},
-) => html`
-	<li id=${ifDefined(id)} role="presentation">
-		${when(
-			!isTraySubmenu,
-			() => html`
-				<span
-					class=${classMap({
-						["spectrum-Menu-sectionHeading"]: true,
-						["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
-					})}
-					id=${ifDefined(id ?? `menu-heading-category-${idx}`)}
-					aria-hidden="true"
-				>
-					${heading}
-				</span>
-			`,
-			() => html`
-				<div
-					class=${classMap({
-						["spectrum-Menu-back"]: true,
-					})}
-				>
-					<button
-						aria-label="Back to previous menu"
-						class="spectrum-Menu-backButton"
-						type="button"
-						role="menuitem"
+							isCollapsible ? "ChevronRight" : "Checkmark",
+						),
+						setName: "ui",
+						size,
+						customClasses: [
+							`${rootClass}Icon`,
+							isCollapsible ? "spectrum-Menu-chevron" : "spectrum-Menu-checkmark",
+						],
+					},
+					context,
+				),
+			)}
+			${when(selectionMode === "multiple" && !hasActions, () =>
+				Checkbox(
+					{
+						size,
+						isEmphasized: true,
+						isChecked: isSelected,
+						isDisabled,
+						id: `menu-checkbox-${idx}`,
+						customClasses: [`${rootClass}Checkbox`],
+					},
+					context,
+				),
+			)}
+			${when(iconName, () =>
+				Icon(
+					{
+						iconName,
+						setName: iconSet,
+						size,
+						customClasses: [`${rootClass}Icon`, `${rootClass}Icon--workflowIcon`],
+					},
+					context,
+				),
+			)}
+			${when(
+				isCollapsible,
+				() => html`
+					<span
+						class=${classMap({
+							["spectrum-Menu-sectionHeading"]: true,
+							[`${rootClass}Label--truncate`]: shouldTruncate,
+						})}
 					>
-						${Icon(
+						${label}
+					</span>
+				`,
+				() => html`
+					<span
+						class=${classMap({
+							[`${rootClass}Label`]: true,
+							["spectrum-Switch-label"]: hasActions,
+							[`${rootClass}Label--truncate`]: shouldTruncate,
+						})}
+					>
+						${label}
+					</span>
+				`,
+			)}
+			${when(
+				description,
+				() => html`
+					<span
+						class=${classMap({
+							[`${rootClass}Description`]: true,
+						})}
+					>
+						${description}
+					</span>
+				`,
+			)}
+			${when(
+				value,
+				() => html`
+					<span
+						class=${classMap({
+							[`${rootClass}Value`]: true,
+						})}
+					>
+						${value}
+					</span>
+				`,
+			)}
+			${when(
+				hasActions && selectionMode == "multiple",
+				() => html`
+					<div
+						class=${classMap({
+							[`${rootClass}Actions`]: true,
+						})}
+					>
+						${Switch(
 							{
-								iconName: iconWithScale(size),
-								setName: "ui",
 								size,
-								customClasses: ["spectrum-Menu-backIcon"],
+								isChecked: isSelected,
+								isDisabled,
+								label: null,
+								id: `menu-switch-${idx}`,
+								customClasses: [`${rootClass}Switch`],
 							},
 							context,
 						)}
-					</button>
-					${when(
-						heading,
-						() => html`
-							<span
-								class=${classMap({
-									["spectrum-Menu-sectionHeading"]: true,
-									["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
-								})}
-								style=${styleMap(customStyles)}
-								id=${id}
-								aria-hidden="true"
-							>
-								${heading}
-							</span>
-						`,
-					)}
-				</div>
-			`,
-		)}
-		${Template(
-			{
-				role: "group",
-				subrole,
-				labelledby: id,
-				hasActions,
-				items,
-				isDisabled,
-				isSelectable,
-				selectionMode,
-				shouldTruncate: true,
-				size,
-			},
-			context,
-		)}
-	</li>
-`;
+					</div>
+				`,
+			)}
+			${when(isDrillIn, () =>
+				Icon(
+					{
+						iconName: iconWithScale(size, "ChevronRight"),
+						setName: "ui",
+						size,
+						customClasses: [`${rootClass}Icon`, "spectrum-Menu-chevron"],
+					},
+					context,
+				),
+			)}
+			${when(isCollapsible && items.length > 0, () =>
+				Template(
+					{
+						items,
+						isOpen,
+						size,
+						shouldTruncate,
+					},
+					context,
+				),
+			)}
+		</li>
+	`;
+};
 
-export const Template = (
-	{
-		rootClass = "spectrum-Menu",
-		customClasses = [],
-		customStyles = {},
-		id = getRandomId("menu"),
-		hasActions = false,
-		hasDividers = false,
-		isDisabled = false,
-		isOpen = false,
-		isTraySubmenu = false,
-		items = [],
-		labelledby = getRandomId("menu-label"),
-		role = "menu",
-		selectionMode = "none",
-		singleItemValue,
-		shouldTruncate,
-		size = "m",
-		subrole = "menuitem",
-	} = {},
-	context = {},
-) => {
+export const MenuGroup = ({
+	heading,
+	id = getRandomId("menugroup"),
+	idx = 0,
+	items = [],
+	isDisabled = false,
+	isSelectable = false,
+	isTraySubmenu = false,
+	shouldTruncate = false,
+	subrole = "menuitem",
+	size = "m",
+	customStyles = {},
+} = {}, context = {}) => {
+	return html`
+		<li id=${ifDefined(id)} role="presentation">
+			${when(
+				!isTraySubmenu,
+				() => html`
+					<span
+						class=${classMap({
+							["spectrum-Menu-sectionHeading"]: true,
+							["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+						})}
+						id=${ifDefined(id ?? `menu-heading-category-${idx}`)}
+						aria-hidden="true"
+					>
+						${heading}
+					</span>
+				`,
+				() => html`
+					<div
+						class=${classMap({
+							["spectrum-Menu-back"]: true,
+						})}
+					>
+						<button
+							aria-label="Back to previous menu"
+							class="spectrum-Menu-backButton"
+							type="button"
+							role="menuitem"
+						>
+							${Icon(
+								{
+									iconName: iconWithScale(size),
+									setName: "ui",
+									size,
+									customClasses: ["spectrum-Menu-backIcon"],
+								},
+								context,
+							)}
+						</button>
+						${when(
+							heading,
+							() => html`
+								<span
+									class=${classMap({
+										["spectrum-Menu-sectionHeading"]: true,
+										["spectrum-Menu-itemLabel--truncate"]: shouldTruncate,
+									})}
+									style=${styleMap(customStyles)}
+									id=${id}
+									aria-hidden="true"
+								>
+									${heading}
+								</span>
+							`,
+						)}
+					</div>
+				`,
+			)}
+			${Template(
+				{
+					role: "group",
+					subrole,
+					labelledby: id,
+					items,
+					isDisabled,
+					isSelectable,
+					shouldTruncate: true,
+					size,
+				},
+				context,
+			)}
+		</li>
+	`;
+};
+
+export const Template = ({
+	rootClass = "spectrum-Menu",
+	customClasses = [],
+	customStyles = {},
+	id = getRandomId("menu"),
+	hasActions = false,
+	hasDividers = false,
+	isDisabled = false,
+	isOpen = false,
+	isTraySubmenu = false,
+	items = [],
+	labelledby = getRandomId("menu-label"),
+	role = "menu",
+	selectionMode = "none",
+	singleItemValue,
+	shouldTruncate,
+	size = "m",
+	subrole = "menuitem",
+} = {}, context = {}) => {
 	const menuMarkup = html`
 		<ul
 			class=${classMap({

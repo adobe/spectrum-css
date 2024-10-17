@@ -1,0 +1,55 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum {
+	--system-date-picker-initial-height: var(--spectrum-component-height-100);
+	--system-date-picker-border-radius: var(--spectrum-corner-radius-100);
+	--system-date-picker-border-radius-quiet: 0;
+	--system-date-picker-border-width: var(--spectrum-border-width-100);
+	--system-date-picker-min-width: var(--spectrum-field-width);
+	--system-date-picker-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-date-picker-pickerbutton-border-color: var(--spectrum-gray-500);
+	--system-date-picker-pickerbutton-border-color-invalid: var(--spectrum-negative-border-color-default);
+	--system-date-picker-pickerbutton-width: calc(var(--spectrum-field-edge-to-disclosure-icon-100) * 2 + var(--spectrum-workflow-icon-size-100));
+	--system-date-picker-pickerbutton-width-quiet: calc(var(--system-date-picker-pickerbutton-width) - var(--system-date-picker-quiet-button-offset));
+	--system-date-picker-quiet-button-offset: var(--spectrum-text-to-visual-100);
+	--system-date-picker-icon-to-button: var(--spectrum-text-to-visual-100);
+	--system-date-picker-icon-to-text: var(--spectrum-component-edge-to-text-100);
+	--system-date-picker-focus-ring-gap: var(--spectrum-focus-indicator-gap);
+	--system-date-picker-focus-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-date-picker-focus-animation: var(--spectrum-animation-duration-100);
+	--system-date-picker-focus-ring-width: var(--spectrum-border-width-100);
+	--system-date-picker-focus-ring-color: var(--spectrum-focus-indicator-color);
+	--system-date-picker-focus-line-gap: var(--spectrum-spacing-75);
+	--system-date-picker-invalid-quiet-color: var(--spectrum-negative-border-color-default);
+	--system-date-picker-quiet-border-color-hover: var(--spectrum-gray-500);
+	--system-date-picker-border-color-disabled: var(--spectrum-disabled-border-color);
+	--system-date-picker-dash-font-size: var(--spectrum-font-size-100);
+	--system-date-picker-dash-color: var(--spectrum-neutral-content-color-default);
+	--system-date-picker-dash-color-disabled: var(--spectrum-disabled-content-color);
+	--system-date-picker-range-dash-marin-inline-start: calc(var(--system-date-picker-dash-font-size) * -0.5);
+	--system-date-picker-range-dash-padding-top: 0;
+	--system-date-picker-input-width-base: calc(var(--system-date-picker-range-input-width-first) + var(--system-date-picker-icon-size));
+	--system-date-picker-input-width: calc(var(--system-date-picker-input-width-base) + var(--system-date-picker-initial-height));
+	--system-date-picker-input-width-quiet: calc(var(--system-date-picker-range-input-width-quiet-first) + var(--system-date-picker-icon-size) + var(--system-date-picker-initial-height));
+	--system-date-picker-range-input-width-first: calc(var(--spectrum-datepicker-initial-width) - var(--spectrum-datepicker-generic-padding) * 2);
+	--system-date-picker-range-input-width-quiet-first: calc(var(--spectrum-datepicker-width-quiet-first) + var(--spectrum-datepicker-width-quiet-second));
+	--system-date-picker-datetime-input-width-first: calc(var(--system-date-picker-input-width-base) + var(--spectrum-datepicker-datetime-width-first));
+	--system-date-picker-datetime-input-width: calc(var(--system-date-picker-datetime-input-width-first) + var(--system-date-picker-icon-size) + var(--system-date-picker-initial-height));
+	--system-date-picker-datetime-quiet-input-width-first: calc(var(--system-date-picker-input-width-base) + var(--spectrum-datepicker-input-datetime-width));
+	--system-date-picker-datetime-quiet-input-width: calc(var(--system-date-picker-datetime-quiet-input-width-first) + var(--system-date-picker-icon-size) + var(--system-date-picker-initial-height));
+	--system-date-picker-padding-inline-end: calc(var(--system-date-picker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) - var(--system-date-picker-border-width) * 2);
+	--system-date-picker-padding-inline-end-quiet: calc(var(--system-date-picker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) - var(--system-date-picker-quiet-button-offset));
+	--system-date-picker-padding-inline-end-invalid: calc(var(--system-date-picker-pickerbutton-width) + var(--spectrum-component-edge-to-text-100) + var(--system-date-picker-icon-to-button) + var(--system-date-picker-icon-size) - var(--system-date-picker-border-width) * 2);
+	--system-date-picker-padding-inline-end-invalid-quiet: calc(var(--system-date-picker-pickerbutton-width-quiet) + var(--system-date-picker-icon-size) + var(--system-date-picker-icon-to-text));
+}

@@ -1,6 +1,7 @@
 import { makeDecorator, useEffect } from "@storybook/preview-api";
 import { fetchContainers, toggleStyles } from "./helpers.js";
 
+import legacyTokens from "@spectrum-css/tokens-legacy/dist/index.css?inline";
 import tokens from "@spectrum-css/tokens/dist/index.css?inline";
 
 /**
@@ -18,7 +19,7 @@ export const withContextWrapper = makeDecorator({
 			} = {},
 			globals: {
 				color = "light",
-				context = "legacy",
+				context = "spectrum",
 				scale = "medium",
 				testingPreview = false,
 			} = {},
@@ -58,7 +59,10 @@ export const withContextWrapper = makeDecorator({
 				document.body.classList.add("spectrum", "spectrum--light", "spectrum--medium");
 			}
 
-			for (const container of fetchContainers(id, isDocs, isTesting)) {
+			// Start by attaching the appropriate tokens to the container
+			toggleStyles(document.body, "tokens", isModern ? tokens : legacyTokens, !isRaw);
+
+			for (const container of fetchContainers(id, viewMode === "docs", testingPreview)) {
 				// Reset the context to the original values
 				color = original.color;
 				context = original.context;
@@ -120,7 +124,7 @@ export const withContextWrapper = makeDecorator({
 				}
 			}
 
-		}, [context, viewMode, original, staticColor, color, scale, rootClass, tokens, staticColorSettings, testingPreview]);
+		}, [color, context, staticColor, scale, viewMode, original, rootClass, tokens, legacyTokens, staticColorSettings, testingPreview]);
 
 		return StoryFn(data);
 	},

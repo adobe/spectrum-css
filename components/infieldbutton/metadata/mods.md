@@ -1,6 +1,5 @@
 | Modifiable custom properties                                  |
 | ------------------------------------------------------------- |
-| `--mod-infield-border-color`                                  |
 | `--mod-infield-border-color-quiet`                            |
 | `--mod-infield-button-background-color`                       |
 | `--mod-infield-button-background-color-disabled`              |

@@ -11,38 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
 @import "@spectrum-css/commons/overlay.css";
-
-.spectrum-Popover {
-	/* animation distance is equal to and responsible for popover offset */
-	--spectrum-popover-animation-distance: var(--spectrum-spacing-100);
-
-	--spectrum-popover-background-color: var(--spectrum-background-layer-2-color);
-	--spectrum-popover-border-color: var(--spectrum-gray-400);
-
-	/* popover inner padding */
-	--spectrum-popover-content-area-spacing-vertical: var(--spectrum-popover-top-to-content-area);
-
-	/* popover drop shadow */
-	--spectrum-popover-shadow-horizontal: var(--spectrum-drop-shadow-x);
-	--spectrum-popover-shadow-vertical: var(--spectrum-drop-shadow-y);
-	--spectrum-popover-shadow-blur: var(--spectrum-drop-shadow-blur);
-	--spectrum-popover-shadow-color: var(--spectrum-drop-shadow-color);
-
-	/* popover corner radius */
-	--spectrum-popover-corner-radius: var(--spectrum-corner-radius-100);
-
-	/* pointer tip dimensions */
-	--spectrum-popover-pointer-width: var(--spectrum-popover-tip-width);
-	--spectrum-popover-pointer-height: var(--spectrum-popover-tip-height);
-
-	/* pointer tip - default spacing to edge - corner radius plus half of tip width to neutralize override */
-	--spectrum-popover-pointer-edge-offset: calc(var(--spectrum-corner-radius-100) + (var(--spectrum-popover-tip-width) / 2));
-
-	/* pointer tip - spacing to edge will center pointer to source - apply in markup by setting '--spectrum-popover-pointer-edge-offset' value == half of source */
-	--spectrum-popover-pointer-edge-spacing: calc(var(--spectrum-popover-pointer-edge-offset) - (var(--spectrum-popover-tip-width) / 2));
-}
+@import "./themes/spectrum-two.css";
 
 /* windows high contrast mode */
 @media (forced-colors: active) {
@@ -52,8 +22,9 @@
 }
 
 .spectrum-Popover {
-	--spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
 	@extend %spectrum-overlay;
+
+	--spectrum-popover-filter: drop-shadow(var(--mod-popover-shadow-horizontal, var(--spectrum-popover-shadow-horizontal)) var(--mod-popover-shadow-vertical, var(--spectrum-popover-shadow-vertical)) var(--mod-popover-shadow-blur, var(--spectrum-popover-shadow-blur)) var(--mod-popover-shadow-color, var(--spectrum-popover-shadow-color)));
 
 	box-sizing: border-box;
 	position: absolute;

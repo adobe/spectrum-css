@@ -56,7 +56,21 @@
     "--spectrum-picked-color",
     "--spectrum-white"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-color-handle-animation-duration",
+    "--system-color-handle-animation-easing",
+    "--system-color-handle-border-color",
+    "--system-color-handle-border-color-disabled",
+    "--system-color-handle-border-width",
+    "--system-color-handle-fill-color-disabled",
+    "--system-color-handle-focused-size",
+    "--system-color-handle-hitarea-size",
+    "--system-color-handle-inner-border-color",
+    "--system-color-handle-inner-border-width",
+    "--system-color-handle-outer-border-color",
+    "--system-color-handle-outer-border-width",
+    "--system-color-handle-size"
+  ],
   "passthroughs": ["--mod-opacity-checkerboard-position"],
   "high-contrast": [
     "--highcontrast-colorhandle-border-color",

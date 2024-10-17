@@ -11,7 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-module.exports = function ({ setName, subSystemName } = {}) {
+module.exports = function ({ setName } = {}) {
+	let selector = ".spectrum";
+
 	const baseConfig = {
 		format: "css/sets",
 		options: {
@@ -20,29 +22,19 @@ module.exports = function ({ setName, subSystemName } = {}) {
 		},
 	};
 
-	const sets = [setName, subSystemName].filter(Boolean);
-	if (!sets.length) {
+	if (!setName) {
 		return {
 			...baseConfig,
 			destination: "global-vars.css",
 			filter: (token) => !token.path.includes("sets"),
 			options: {
 				...baseConfig.options,
-				selector: ".spectrum",
+				selector,
 			},
 		};
 	}
 
 	const isGlobal = !setName;
-	const isSpectrum = subSystemName && subSystemName === "spectrum";
-
-	let selector = "";
-	if (isGlobal || (subSystemName && !isSpectrum)) {
-		// postfix the selector with the subsystem name
-		selector = `.spectrum${
-			subSystemName && !isSpectrum ? `--${subSystemName}` : ""
-		}`;
-	}
 
 	let scope =
 		{
@@ -51,16 +43,7 @@ module.exports = function ({ setName, subSystemName } = {}) {
 		}[setName] ?? setName;
 
 	if (isGlobal) scope = "global";
-	else if (setName && scope) {
-		selector += `.spectrum--${scope}`;
-	}
-
-	const selectors = [
-		selector ?? null,
-		// Apply all light colors as lightest for backwards compat
-		// @todo does this need a deprecation notice?
-		setName === "light" ? selector.replace("light", "lightest") : null,
-	].filter(Boolean);
+	selector = isGlobal ? ".spectrum" : `.spectrum--${scope}`;
 
 	const getSets = (token) =>
 		token.path.filter((_, idx, array) => array[idx - 1] == "sets");
@@ -72,29 +55,13 @@ module.exports = function ({ setName, subSystemName } = {}) {
 		if (tokenSets.includes("wireframe")) return false;
 
 		if (!setName) {
-			if (!subSystemName && tokenSets.length === 0) {
-				return true;
-			}
-
-			if (
-				subSystemName &&
-				tokenSets.length === 1 &&
-				tokenSets.includes(subSystemName)
-			) {
+			if (tokenSets.length === 0) {
 				return true;
 			}
 		} else {
 			if (!tokenSets.includes(setName)) return false;
 
-			if (!subSystemName && tokenSets.length === 1) {
-				return true;
-			}
-
-			if (
-				subSystemName &&
-				tokenSets.length === 2 &&
-				tokenSets.includes(subSystemName)
-			) {
+			if (tokenSets.length === 1) {
 				return true;
 			}
 		}
@@ -104,12 +71,12 @@ module.exports = function ({ setName, subSystemName } = {}) {
 
 	return {
 		...baseConfig,
-		destination: `${subSystemName ? `${subSystemName}/` : ""}${scope}-vars.css`,
+		destination: `${scope}-vars.css`,
 		filter,
 		options: {
 			...baseConfig.options,
-			selector: selectors.join(", "),
-			sets,
+			selector,
+			sets: setName ? [setName] : [],
 		},
 	};
 };

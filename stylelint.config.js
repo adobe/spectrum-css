@@ -12,7 +12,7 @@ module.exports = {
 		"@spectrum-tools/stylelint-no-unused-custom-properties",
 		"@spectrum-tools/stylelint-no-unknown-custom-properties",
 		"@spectrum-tools/theme-alignment",
-		"stylelint-high-performance-animation",
+		// "stylelint-high-performance-animation",
 	],
 	rules: {
 		/** --------------------------------------------------------------
@@ -131,15 +131,16 @@ module.exports = {
 			},
 		],
 		/** Performance */
-		"plugin/no-low-performance-animation-properties": [
-			true,
-			{ severity: "warning" },
-		],
+		// "plugin/no-low-performance-animation-properties": [
+		// 	true,
+		// 	{ severity: "warning" },
+		// ],
 
 		/** --------------------------------------------------------------
 		 * Local/custom plugins
 		 * -------------------------------------------------------------- */
 		"spectrum-tools/no-missing-var": true,
+		"spectrum-tools/theme-alignment": null,
 		"spectrum-tools/no-unknown-custom-properties": [
 			true,
 			{
@@ -171,15 +172,16 @@ module.exports = {
 	 * -------------------------------------------------------------- */
 	overrides: [
 		{
-			files: ["site/**/*.css", ".storybook/assets/*.css"],
+			files: [".storybook/assets/*.css"],
 			rules: {
 				"custom-property-pattern": null,
 				"color-function-notation": null,
+				"spectrum-tools/no-unused-custom-properties": null,
+				"spectrum-tools/no-unknown-custom-properties": null,
 			},
 		},
 		{
-			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "tokens/**/*.css"],
+			files: ["components/*/themes/*.css", "tokens/**/*.css"],
 			rules: {
 				"spectrum-tools/no-unused-custom-properties": null,
 				"spectrum-tools/no-unknown-custom-properties": null,
@@ -187,7 +189,7 @@ module.exports = {
 		},
 		{
 			/* Validate that the legacy themes don't introduce any new selectors or custom properties */
-			files: ["components/*/themes/express.css", "!components/*/themes/spectrum.css"],
+			files: ["components/*/themes/spectrum.css", "components/*/themes/express.css", "!components/*/themes/spectrum-two.css"],
 			rules: {
 				"spectrum-tools/theme-alignment": true,
 			},

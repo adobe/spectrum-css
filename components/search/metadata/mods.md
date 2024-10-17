@@ -34,4 +34,3 @@
 | `--mod-search-text-to-icon`              |
 | `--mod-search-to-help-text`              |
 | `--mod-search-top-to-text`               |
-| `--mod-workflow-icon-size-100`           |

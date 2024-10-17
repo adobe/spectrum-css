@@ -37,6 +37,10 @@ export default {
 		actions: {
 			handles: ["click .spectrum-TreeView-itemLink"],
 		},
+		design: {
+			type: "figma",
+			url: "https://www.figma.com/design/Mngz9H7WZLbrCvGQf3GnsY/S2-%2F-Desktop?node-id=64762-1960",
+		},
 		packageJson,
 		metadata,
 	},

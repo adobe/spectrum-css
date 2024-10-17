@@ -1,0 +1,47 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum {
+	--system-swatch-border-radius: var(--spectrum-corner-radius-100);
+	--system-swatch-focus-indicator-border-radius: var(--spectrum-corner-radius-200);
+	--system-swatch-border-thickness: var(--spectrum-border-width-100);
+	--system-swatch-border-thickness-selected: var(--spectrum-border-width-200);
+	--system-swatch-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+	--system-swatch-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+	--system-swatch-border-color-opacity: 0.51;
+	--system-swatch-border-color-light-opacity: 0.2;
+	--system-swatch-border-color: rgba(var(--spectrum-black-rgb), var(--system-swatch-border-color-opacity));
+	--system-swatch-icon-border-color: rgba(var(--spectrum-black-rgb), var(--system-swatch-border-color-opacity));
+	--system-swatch-border-color-light: rgba(var(--spectrum-black-rgb), var(--system-swatch-border-color-light-opacity));
+	--system-swatch-border-color-selected: var(--spectrum-gray-900);
+	--system-swatch-inner-border-color-selected: var(--spectrum-gray-25);
+	--system-swatch-disabled-icon-color: var(--spectrum-gray-25);
+	--system-swatch-dash-icon-color: var(--spectrum-gray-800);
+	--system-swatch-slash-icon-color: var(--spectrum-red-900);
+	--system-swatch-focus-indicator-color: var(--spectrum-focus-indicator-color);
+	--system-swatch-size: var(--spectrum-swatch-size-medium);
+	--system-swatch-size-m-size: var(--spectrum-swatch-size-medium);
+	--system-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-swatch-size-m-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
+	--system-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-medium);
+	--system-swatch-size-m-slash-thickness: var(--spectrum-swatch-slash-thickness-medium);
+	--system-swatch-size-xs-size: var(--spectrum-swatch-size-extra-small);
+	--system-swatch-size-xs-disabled-icon-size: var(--spectrum-workflow-icon-size-50);
+	--system-swatch-size-xs-slash-thickness: var(--spectrum-swatch-slash-thickness-extra-small);
+	--system-swatch-size-s-size: var(--spectrum-swatch-size-small);
+	--system-swatch-size-s-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
+	--system-swatch-size-s-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
+	--system-swatch-size-l-size: var(--spectrum-swatch-size-large);
+	--system-swatch-size-l-disabled-icon-size: var(--spectrum-workflow-icon-size-200);
+	--system-swatch-size-l-slash-thickness: var(--spectrum-swatch-slash-thickness-large);
+}
