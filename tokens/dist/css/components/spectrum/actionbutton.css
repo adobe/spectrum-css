@@ -104,6 +104,9 @@
 	--system-action-button-static-black-selected-background-color-disabled: var(--spectrum-transparent-black-200);
 	--system-action-button-static-black-selected-border-color-disabled: transparent;
 	--system-action-button-static-black-selected-content-color-default: var(--spectrum-white);
+	--system-action-button-static-black-selected-content-color-hover: var(--spectrum-white);
+	--system-action-button-static-black-selected-content-color-down: var(--spectrum-white);
+	--system-action-button-static-black-selected-content-color-focus: var(--spectrum-white);
 	--system-action-button-static-black-selected-emphasized-background-color-default: var(--spectrum-transparent-black-900);
 	--system-action-button-static-black-selected-emphasized-background-color-hover: var(--spectrum-transparent-black-1000);
 	--system-action-button-static-black-selected-emphasized-background-color-down: var(--spectrum-transparent-black-1000);
@@ -135,6 +138,9 @@
 	--system-action-button-static-white-selected-background-color-disabled: var(--spectrum-transparent-white-200);
 	--system-action-button-static-white-selected-border-color-disabled: transparent;
 	--system-action-button-static-white-selected-content-color-default: var(--spectrum-black);
+	--system-action-button-static-white-selected-content-color-hover: var(--spectrum-black);
+	--system-action-button-static-white-selected-content-color-down: var(--spectrum-black);
+	--system-action-button-static-white-selected-content-color-focus: var(--spectrum-black);
 	--system-action-button-static-white-selected-emphasized-background-color-default: var(--spectrum-transparent-white-900);
 	--system-action-button-static-white-selected-emphasized-background-color-hover: var(--spectrum-transparent-white-1000);
 	--system-action-button-static-white-selected-emphasized-background-color-down: var(--spectrum-transparent-white-1000);
