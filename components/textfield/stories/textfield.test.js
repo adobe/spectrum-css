@@ -34,6 +34,11 @@ export const TextFieldGroup = Variants({
 		value: "UsernameWiderThanInput@ReallyLongEmail.com",
 		labelPosition: "side",
 		isQuiet: true
+	},{
+		testHeading: "Character count",
+		value: "UsernameWiderThanInput@ReallyLongEmail.com",
+		hasCharacterCount: true,
+		characterCount: 50
 	}],
 	stateData: [{
 		testHeading: "Invalid",

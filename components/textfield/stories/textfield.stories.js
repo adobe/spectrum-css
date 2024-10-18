@@ -3,7 +3,7 @@ import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptions, QuietGroup, Template } from "./template.js";
+import { HelpTextOptions, Template, TextFieldOptions } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
 
 /**
@@ -146,9 +146,17 @@ export default {
 */
 
 export const Default = TextFieldGroup.bind({});
+Default.tags = ["!autodocs"];
 Default.args = {};
 
 // ********* DOCS ONLY ********* //
+
+export const Standard = TextFieldOptions.bind({});
+Standard.tags = ["!dev"];
+Standard.storyName = "Default";
+Standard.parameters = {
+	chromatic: { disableSnapshot: true }
+};
 
 /**
  * Text fields can display a character count indicator when the length of the text entry needs to be kept under a predefined value. Character count indicators can be used in conjunction with other indicators (validation icon, “optional” or “required” indicators) when necessary.
@@ -176,19 +184,6 @@ Disabled.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-
-/**
- * A text field can be marked as having an error to show that a value needs to be entered in order to move forward or that a value that was entered is invalid. If an error exists, the error icon always overrides the validation icon.
-*/
-export const Invalid = Template.bind({});
-Invalid.tags = ["!dev"];
-Invalid.args = {
-	isInvalid: true
-};
-Invalid.parameters = {
-	chromatic: { disableSnapshot: true }
-};
-
 /**
  * A text field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
  *
@@ -200,8 +195,10 @@ HelpText.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-
-export const Quiet = QuietGroup.bind({});
+/**
+ * Quiet text fields can have no visible background. This style works best when a clear layout (vertical stack, table, grid) makes it easy to parse. Too many quiet components in a small space can be hard to read.
+*/
+export const Quiet = TextFieldOptions.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
@@ -247,7 +244,8 @@ export const Sizing = (args, context) => Sizes({
 	...args,
 }, context);
 Sizing.args = {
-	helpText: "Example help text. Lorem ipsum dolor sit amet."
+	helpText: "Example help text. Lorem ipsum dolor sit amet.",
+	hasCharacterCount: true
 };
 Sizing.tags = ["!dev"];
 Sizing.parameters = {

@@ -218,7 +218,7 @@ export const HelpTextOptions = (args, context) => Container({
 	`
 });
 
-export const QuietGroup = (args, context) => Container({
+export const TextFieldOptions = (args, context) => Container({
 	direction: "row",
 	withBorder: false,
 	wrapperStyles: {
@@ -231,7 +231,7 @@ export const QuietGroup = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Default",
-			content: Template({args, context, isQuiet: true})
+			content: Template({...args, context})
 		})}
 		${Container({
 			withBorder: false,
@@ -239,15 +239,7 @@ export const QuietGroup = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Invalid",
-			content: Template({...args, isInvalid: true, isQuiet: true}, context)
-		})}
-		${Container({
-			withBorder: false,
-			containerStyles: {
-				"gap": "8px",
-			},
-			heading: "Hovered",
-			content: Template({...args, isHovered: true, isQuiet: true}, context)
+			content: Template({...args, isInvalid: true}, context)
 		})}
 		${Container({
 			withBorder: false,
@@ -255,7 +247,7 @@ export const QuietGroup = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Focused",
-			content: Template({...args, isFocused: true, isQuiet: true}, context)
+			content: Template({...args, isFocused: true}, context)
 		})}
 		${Container({
 			withBorder: false,
@@ -263,7 +255,7 @@ export const QuietGroup = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Invalid, focused",
-			content: Template({...args, isInvalid: true, isFocused: true, isQuiet: true}, context)
+			content: Template({...args, isInvalid: true, isFocused: true}, context)
 		})}
 		${Container({
 			withBorder: false,
@@ -271,7 +263,7 @@ export const QuietGroup = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Keyboard-focused",
-			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+			content: Template({...args, isKeyboardFocused: true}, context)
 		})}
 		${Container({
 			withBorder: false,
@@ -279,7 +271,7 @@ export const QuietGroup = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Invalid, keyboard-focused",
-			content: Template({...args, isInvalid: true, isKeyboardFocused: true, isQuiet: true}, context)
+			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
 		})}
 	`
 });

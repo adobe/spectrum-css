@@ -1,7 +1,8 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
-import { HelpTextOptionsTextArea, Template } from "./textarea.template.js";
+import { HelpTextOptionsTextArea, Template, TextAreaOptions } from "./textarea.template.js";
 import { TextAreaGroup } from "./textarea.test.js";
 import { default as Textfield } from "./textfield.stories.js";
 
@@ -27,14 +28,22 @@ export default {
 
 export const Default = TextAreaGroup.bind({});
 Default.args = {};
+Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //
+
+export const Standard = TextAreaOptions.bind({});
+Standard.tags = ["!dev"];
+Standard.storyName = "Default";
+Standard.parameters = {
+	chromatic: { disableSnapshot: true }
+};
 
 export const CharacterCount = Template.bind({});
 CharacterCount.tags = ["!dev"];
 CharacterCount.args = {
 	labelText: "Comments",
-	displayCounter: true,
+	hasCharacterCount: true,
 	characterCount: 50,
 	value: "Duis mollit ut laboris est labore sunt ipsum. Proident nostrud in ea reprehenderit proident nostrud. Anim ut est anim ex amet."
 };
@@ -55,18 +64,6 @@ Disabled.parameters = {
 };
 
 /**
- * A text area can be marked as having an error to show that a value needs to be entered in order to move forward or that a value that was entered is invalid. If an error exists, the error icon always overrides the validation icon.
-*/
-export const Invalid = Template.bind({});
-Invalid.tags = ["!dev"];
-Invalid.args = {
-	isInvalid: true
-};
-Invalid.parameters = {
-	chromatic: { disableSnapshot: true }
-};
-
-/**
  * A text area can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
  *
  * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible.
@@ -77,7 +74,7 @@ HelpText.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 
-export const Quiet = Template.bind({});
+export const Quiet = TextAreaOptions.bind({});
 Quiet.tags = ["!dev"];
 Quiet.args = {
 	isQuiet: true,
@@ -130,6 +127,22 @@ Validation.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 Validation.storyName = "Validation icon";
+
+
+export const Sizing = (args, context) => Sizes({
+	Template: Template,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Sizing.args = {
+	helpText: "Example help text. Lorem ipsum dolor sit amet.",
+	hasCharacterCount: true
+};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true }
+};
 
 // ********* VRT ONLY ********* //
 // @todo should this show text field and text area in the same snapshot?

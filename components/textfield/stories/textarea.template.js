@@ -36,3 +36,61 @@ export const HelpTextOptionsTextArea = (args, context) => Container({
 		})}
 	`
 });
+
+export const TextAreaOptions = (args, context) => Container({
+	direction: "row",
+	withBorder: false,
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template({...args, context})
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid",
+			content: Template({...args, isInvalid: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Focused",
+			content: Template({...args, isFocused: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid, focused",
+			content: Template({...args, isInvalid: true, isFocused: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Keyboard-focused",
+			content: Template({...args, isKeyboardFocused: true}, context)
+		})}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Invalid, keyboard-focused",
+			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
+		})}
+	`
+});
