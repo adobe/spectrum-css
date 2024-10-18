@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-s2-foundations.22
+
+### Minor Changes
+
+- [#3268](https://github.com/adobe/spectrum-css/pull/3268) [`4f881f0`](https://github.com/adobe/spectrum-css/commit/4f881f07b52c3761f5b77d03cb563f6a11807ec4) Thanks [@rise-erpelding](https://github.com/rise-erpelding)! - Sets --spectrum-actionbutton-content-color-hover, --spectrum-actionbutton-content-color-down, --spectrum-actionbutton-content-color-focus for selected static action button
+
 ## 7.0.0-s2-foundations.21
 
 ### Minor Changes
