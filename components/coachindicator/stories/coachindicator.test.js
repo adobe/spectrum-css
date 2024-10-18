@@ -7,6 +7,7 @@ export const CoachIndicatorGroup = Variants({
 	testData: [
 		{
 			testHeading: "Default",
+			variant: "default",
 		},
 		{
 			testHeading: "Dark",
@@ -23,6 +24,10 @@ export const CoachIndicatorGroup = Variants({
 				"background-color": "rgba(0 0 0 / 80%)",
 				"border-radius": "4px",
 			},
+		},
+		{
+			testHeading: "Static White",
+			variant: "staticWhite"
 		},
 	],
 	stateData: [
