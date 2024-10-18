@@ -42,7 +42,6 @@ Standard.parameters = {
 export const CharacterCount = Template.bind({});
 CharacterCount.tags = ["!dev"];
 CharacterCount.args = {
-	labelText: "Comments",
 	hasCharacterCount: true,
 	characterCount: 50,
 	value: "Duis mollit ut laboris est labore sunt ipsum. Proident nostrud in ea reprehenderit proident nostrud. Anim ut est anim ex amet."
@@ -104,7 +103,6 @@ export const SideLabel = Template.bind({});
 SideLabel.tags = ["!dev"];
 SideLabel.args = {
 	labelPosition: "side",
-	labelText: "Comments",
 	value: "Qui nulla cupidatat do ex laborum ipsum et culpa reprehenderit dolore.",
 	displayCounter: true,
 	characterCount: 50,
