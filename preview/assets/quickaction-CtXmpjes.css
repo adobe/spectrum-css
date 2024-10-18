@@ -1,0 +1,23 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */.spectrum-QuickActions{pointer-events:none;visibility:hidden;opacity:0;transition:transform .13s ease-in-out,opacity .13s ease-in-out,visibility 0s linear .13s;transition:transform var(--mod-overlay-animation-duration,var(--spectrum-animation-duration-100,.13s)) ease-in-out,opacity var(--mod-overlay-animation-duration,var(--spectrum-animation-duration-100,.13s)) ease-in-out,visibility 0s linear var(--mod-overlay-animation-duration,var(--spectrum-animation-duration-100,.13s))}.spectrum-QuickActions.is-open{pointer-events:auto;visibility:visible;opacity:1;transition-delay:0s;transition-delay:var(--mod-overlay-animation-duration-opened,var(--spectrum-animation-duration-0,0s))}.spectrum-QuickActions--left.is-open{transform:translate(6px);transform:translate(var(--mod-overlay-animation-distance,var(--spectrum-overlay-animation-distance,6px)))}.spectrum-QuickActions--right.is-open{transform:translate(-6px);transform:translate(calc(var(--mod-overlay-animation-distance, var(--spectrum-overlay-animation-distance, 6px))*-1))}.spectrum-QuickActions{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;padding-block:var(--spectrum-quickactions-padding-y,var(--spectrum-global-dimension-size-50));padding-inline:var(--spectrum-quickactions-padding-x,var(--spectrum-global-dimension-size-50));block-size:var(--spectrum-quickactions-height,var(--spectrum-global-dimension-size-500));border-radius:var(--spectrum-quickactions-border-radius,var(--spectrum-alias-border-radius-regular));background-color:var(--spectrum-quickactions-background-color,var(--spectrum-alias-background-color-quickactions))}.spectrum-QuickActions .spectrum-ActionButton+.spectrum-ActionButton{margin-inline-start:var(--spectrum-quickactions-button-gap-x,var(--spectrum-global-dimension-size-100))}.spectrum-QuickActions-overlay{background-color:var(--spectrum-quickactions-overlay-color,var(--spectrum-alias-background-color-quickactions-overlay))}.spectrum-QuickActions--textOnly .spectrum-ActionButton+.spectrum-ActionButton{margin-inline-start:var(--spectrum-quickactions-text-button-gap-x,var(--spectrum-global-dimension-size-50))}/*!
+* Copyright 2024 Adobe. All rights reserved.
+*
+* This file is licensed to you under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License. You may obtain a copy
+* of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+*
+* Unless required by applicable law or agreed to in writing, software distributed under
+* the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+* OF ANY KIND, either express or implied. See the License for the specific language
+* governing permissions and limitations under the License.
+*/.spectrum-QuickActions{--mod-overlay-animation-duration:undefined;--mod-overlay-animation-duration-opened:undefined;--mod-overlay-animation-distance:undefined;--spectrum-quickactions-padding-y:var(--spectrum-global-dimension-size-50);--spectrum-quickactions-padding-x:var(--spectrum-global-dimension-size-50);--spectrum-quickactions-height:var(--spectrum-global-dimension-size-500);--spectrum-quickactions-border-radius:var(--spectrum-alias-border-radius-regular);--spectrum-quickactions-background-color:var(--spectrum-alias-background-color-quickactions);--spectrum-quickactions-button-gap-x:var(--spectrum-global-dimension-size-100);--spectrum-quickactions-overlay-color:var(--spectrum-alias-background-color-quickactions-overlay);--spectrum-quickactions-text-button-gap-x:var(--spectrum-global-dimension-size-50)}
