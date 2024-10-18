@@ -75,22 +75,14 @@ jobs:
               run: yarn install --immutable
 
             ## --- BUILD --- ##
-            - name: Build docs site
+            - name: Build site
               shell: bash
               run: yarn build:site
-              env:
-                CHROMATIC_URL: ${{ inputs.storybook-url }}
-
-            - name: Build storybook site
-              if: ${{ ! inputs.storybook-url }}
-              shell: bash
-              run: yarn nx run storybook:build:docs
 
             ## --- DEPLOY WEBSITE TO NETLIFY --- ##
             - name: Deploy
               uses: nwtgck/actions-netlify@v3
               with:
-                #   publish-dir: site/dist
                   publish-dir: dist
                   production-branch: main
                   production-deploy: false
