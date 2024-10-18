@@ -1,5 +1,15 @@
 # Change Log
 
+## 14.5.0
+
+### Minor Changes
+
+- [#3253](https://github.com/adobe/spectrum-css/pull/3253) [`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86) Thanks [@castastrophe](https://github.com/castastrophe)! - Add component-level token overrides from card, contextualhelp, swatch, and typography to ensure valid theme toggling.
+
+  Light/dark/darkest custom overrides added: `--spectrum-card-selected-background-color-rgb`, `--spectrum-swatch-border-color`, `--spectrum-swatch-border-color-light`
+  Medium/large custom overrides added: `--spectrum-contextual-help-content-spacing`
+  Global custom overrides added: `--spectrum-font-family-ar`, `--spectrum-font-family-he`, `--spectrum-font-family`, `--spectrum-font-style`, `--spectrum-font-size`
+
 ## 14.4.0
 
 ### Minor Changes
