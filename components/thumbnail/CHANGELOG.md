@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.2.0
+
+### Minor Changes
+
+- [#3248](https://github.com/adobe/spectrum-css/pull/3248) [`678a445`](https://github.com/adobe/spectrum-css/commit/678a4452e08d9a5123dd222b2a9d26c188062f9a) Thanks [@castastrophe](https://github.com/castastrophe)! - Typo in the "--spectrum-thumbnail-border-color-opacity", should have been "--spectrum-thumbnail-border-opacity". Thumbnail border was rendering as 0% opacity but should have been 10%.
+
 ## 6.1.4
 
 ### Patch Changes

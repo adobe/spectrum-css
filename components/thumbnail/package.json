@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/thumbnail",
-	"version": "6.1.4",
+	"version": "6.2.0",
 	"description": "The Spectrum CSS thumbnail component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -48,5 +48,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/thumbnail-beta",
+			"rootClass": "spectrum-Thumbnail"
+		}
+	]
 }

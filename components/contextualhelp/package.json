@@ -57,5 +57,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/contextual-help",
+			"rootClass": "spectrum-ContextualHelp"
+		}
+	]
 }

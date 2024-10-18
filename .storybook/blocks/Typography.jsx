@@ -5,8 +5,9 @@ export const Heading = styled.h3`
     font-family: ${({ theme }) => theme.typography.fontFamily};
     font-weight: ${({ theme }) => theme.typography.weight.bold};
     color: inherit;
-    font-size: ${({ size }) => fetchToken(`font-size-${size === "s" ? 300 : size === "l" ? 700 : size === "xl" ? 900 : 500}`, 22)};
+    font-size: ${({ size }) => fetchToken(`font-size-${size === "xs" ? 200 : size === "s" ? 300 : size === "l" ? 700 : size === "xl" ? 900 : 500}`, 22)};
     -webkit-font-smoothing: antialiased;
+    margin: 0;
 
     > strong {
         font-weight: 900;

@@ -59,5 +59,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/button",
+			"rootClass": "spectrum-Button"
+		}
+	]
 }

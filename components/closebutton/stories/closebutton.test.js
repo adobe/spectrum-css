@@ -1,8 +1,20 @@
-import { Variants } from "@spectrum-css/preview/decorators";
+import { ArgGrid, Variants } from "@spectrum-css/preview/decorators";
 import { Template } from "./template.js";
 
-export const CloseButtonGroup = Variants({
+const CloseButtons = (args, context) => ArgGrid({
 	Template,
+	argKey: "iconSize",
+	withBorder: false,
+	level: 4,
+	labels: {
+		"regular": "Default icon",
+		"large": "Large icon",
+	},
+	...args,
+}, context);
+
+export const CloseButtonGroup = Variants({
+	Template: CloseButtons,
 	stateDirection: "row",
 	sizeDirection: "row",
 	testData: [

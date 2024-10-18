@@ -17,7 +17,7 @@ export default {
 		},
 	],
 	rootDir: "../",
-	staticDirs: ["../assets"],
+	staticDirs: ["../assets", "./assets/images"],
 	addons: [
 		{
 			name: "@storybook/addon-essentials",
