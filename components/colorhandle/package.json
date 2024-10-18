@@ -55,5 +55,10 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"rootClass": "spectrum-ColorHandle"
+		}
+	]
 }
