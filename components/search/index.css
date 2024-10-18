@@ -224,7 +224,6 @@
 }
 
 /* Quiet Variant */
-/* stylelint-disable-next-line no-duplicate-selectors */
 .spectrum-Search--quiet {
 	.spectrum-Search-clearButton .spectrum-ClearButton-icon {
 		transform: translateX(var(--mod-search-quiet-button-offset, var(--spectrum-search-quiet-button-offset)));
