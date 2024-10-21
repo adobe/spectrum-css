@@ -55,16 +55,3 @@ export const AllVariantsCoachIndicatorGroup = (args, context) => Container({
 		})}
 	`
 });
-
-
-/* This template shows only the static white variant. */
-export const StaticWhiteCoachIndicator = (args, context) => Container({
-	withBorder: false,
-	content: html`
-		${Container({
-			direction: "column",
-			withBorder: false,
-			content: Template({ ...args, variant: "staticWhite" }, context)
-		})}
-	`
-});
