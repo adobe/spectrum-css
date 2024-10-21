@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.4
+
+### Patch Changes
+
+- [#3272](https://github.com/adobe/spectrum-css/pull/3272) [`a354b16`](https://github.com/adobe/spectrum-css/commit/a354b166727fb34b17300bcd3a6118a00034e344) Thanks [@cdransf](https://github.com/cdransf)! - Disables lint violation and moves comment to stylelint-disable description.
+
 ## 5.1.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.4
+
+### Patch Changes
+
+- [#3286](https://github.com/adobe/spectrum-css/pull/3286) [`3d5c39a`](https://github.com/adobe/spectrum-css/commit/3d5c39ab4b79316563f9659eb4b19afe81f9debf) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violations for dial by removing unused properties and moving todo comment into stylelint-disable description.
+
 ## 3.1.3
 
 ### Patch Changes

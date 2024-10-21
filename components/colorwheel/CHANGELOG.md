@@ -1,5 +1,15 @@
 # Change Log
 
+## 4.1.4
+
+### Patch Changes
+
+- [#3273](https://github.com/adobe/spectrum-css/pull/3273) [`c6205bb`](https://github.com/adobe/spectrum-css/commit/c6205bb247c9c56bb3d7cf8bd52c032fe3b9486f) Thanks [@cdransf](https://github.com/cdransf)! - Moves custom properties to resolve declaration order lint violation. Disable unused property violation and add comment as disable statement description.
+
+- Updated dependencies [[`055906c`](https://github.com/adobe/spectrum-css/commit/055906cddb04bdf34ac64125d95a63697b922760), [`a354b16`](https://github.com/adobe/spectrum-css/commit/a354b166727fb34b17300bcd3a6118a00034e344)]:
+  - @spectrum-css/colorhandle@8.1.4
+  - @spectrum-css/colorloupe@5.1.4
+
 ## 4.1.3
 
 ### Patch Changes
