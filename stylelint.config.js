@@ -63,7 +63,7 @@ module.exports = {
 			true,
 			{
 				ignoreProperties: {
-					color: ["CanvasText"],
+					"/.+/": ["CanvasText"],
 				},
 			},
 		],

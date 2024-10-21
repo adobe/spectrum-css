@@ -1,9 +1,9 @@
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
+import { default as ProgressBar } from "@spectrum-css/progressbar/stories/progressbar.stories.js";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
-import { default as ProgressBar } from "@spectrum-css/progressbar/stories/progressbar.stories.js";
 import { MeterGroup } from "./meter.test.js";
 import { FillGroup, Template } from "./template.js";
 
@@ -82,14 +82,9 @@ Sizing.parameters = {
  *
  * By default, the meter has a informative, blue fill to show the value. This can be used to represent a neutral or non-semantic value. The positive variant has a green fill, representing a positive semantic value. The notice variant has an orange fill, and can be used to warn users about a situation that may need to be addressed soon. The negative variant has a red fill, and can be used to warn users about a critical situation that needs their urgent attention.
 */
-export const FillColors = (args, context) => FillGroup({
-	variants: ["info", "positive", "negative", "notice"],
-	...args,
-}, context);
+export const FillColors = FillGroup.bind({});
 FillColors.storyName = "Fill colors";
-FillColors.args = {
-	value: 50,
-};
+FillColors.args = Default.args;
 FillColors.tags = ["!dev"];
 FillColors.parameters = {
 	chromatic: { disableSnapshot: true },

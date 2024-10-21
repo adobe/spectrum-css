@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern -- custom storybook styles */
 /*!
  * Copyright 2024 Adobe. All rights reserved.
  *
@@ -11,7 +12,6 @@
  * governing permissions and limitations under the License.
  */
 
-/* stylelint-disable selector-class-pattern */
 body {
 	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
 	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;

@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.0.0-s2-foundations.17
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`9c6561b`](https://github.com/adobe/spectrum-css/commit/9c6561b38624307da9bca7499452c3cb8ea2095e) Thanks [@pfulton](https://github.com/pfulton)! - Bring in the latest S2 foundations release including updated corner rounding approach, colors, and icon spacing. Remapped corner rounding values for the -75 token to a static 2px value for spectrum themes.
+
+### Patch Changes
+
+- Updated dependencies [[`9c6561b`](https://github.com/adobe/spectrum-css/commit/9c6561b38624307da9bca7499452c3cb8ea2095e)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.25
+
 ## 6.0.0-s2-foundations.16
 
 ### Minor Changes
