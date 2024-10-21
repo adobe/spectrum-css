@@ -1,9 +1,9 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isQuiet } from "@spectrum-css/preview/types";
+import { isQuiet, staticColor } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
 import { CoachIndicatorGroup } from "./coachindicator.test.js";
-import { AllVariantsCoachIndicatorGroup, StaticWhiteCoachIndicator } from "./template.js";
+import { AllVariantsCoachIndicatorGroup, Template } from "./template.js";
 
 /**
  * The coach indicator component can be used to bring added attention to specific parts of a page.
@@ -24,8 +24,12 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["default", "dark", "light", "staticWhite"],
+			options: ["default", "dark", "light"],
 			control: "select"
+		},
+		staticColor: {
+			...staticColor,
+			options: ["white"],
 		},
 	},
 	args: {
@@ -75,7 +79,10 @@ QuietVariants.parameters = {
 /**
  * When an indicator needs to be placed on top of a visual, use the static white option. Static white does not change values depending upon the color theme.
 */
-export const StaticWhite = StaticWhiteCoachIndicator.bind({});
+export const StaticWhite = Template.bind({});
+StaticWhite.args = {
+	staticColor: "white"
+};
 StaticWhite.tags = ["!dev"];
 StaticWhite.storyName = "Static White";
 StaticWhite.parameters = {
