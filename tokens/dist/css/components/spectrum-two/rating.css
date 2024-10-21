@@ -23,7 +23,7 @@
 	--system-rating-focus-indicator-color: var(--spectrum-focus-indicator-color);
 	--system-rating-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--system-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-	--system-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
+	--system-rating-indicator-border-radius: 2px;
 	--system-rating-indicator-height: var(--spectrum-border-width-200);
 	--system-rating-emphasized-icon-color-default: var(--spectrum-accent-content-color-default);
 	--system-rating-emphasized-icon-color-hover: var(--spectrum-accent-content-color-hover);

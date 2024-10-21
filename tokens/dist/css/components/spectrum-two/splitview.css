@@ -23,7 +23,7 @@
 	--system-split-view-handle-background-color-down: var(--spectrum-gray-800);
 	--system-split-view-handle-background-color-focus: var(--spectrum-focus-indicator-color);
 	--system-split-view-handle-width: var(--spectrum-border-width-200);
-	--system-split-view-gripper-border-radius: var(--spectrum-corner-radius-75);
+	--system-split-view-gripper-border-radius: 2px;
 	--system-split-view-gripper-width: var(--spectrum-border-width-400);
 	--system-split-view-gripper-height: 16px;
 	--system-split-view-gripper-border-width-horizontal: 3px;
