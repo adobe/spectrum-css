@@ -73,8 +73,6 @@
   "component": [
     "--spectrum-swatch-border-color",
     "--spectrum-swatch-border-color-light",
-    "--spectrum-swatch-border-color-light-opacity",
-    "--spectrum-swatch-border-color-opacity",
     "--spectrum-swatch-border-color-selected",
     "--spectrum-swatch-border-radius",
     "--spectrum-swatch-border-thickness",
@@ -102,7 +100,6 @@
   ],
   "global": [
     "--spectrum-animation-duration-100",
-    "--spectrum-black-rgb",
     "--spectrum-border-width-100",
     "--spectrum-border-width-200",
     "--spectrum-corner-radius-100",
@@ -121,10 +118,6 @@
     "--spectrum-workflow-icon-size-75"
   ],
   "system-theme": [
-    "--system-swatch-border-color",
-    "--system-swatch-border-color-light",
-    "--system-swatch-border-color-light-opacity",
-    "--system-swatch-border-color-opacity",
     "--system-swatch-border-color-selected",
     "--system-swatch-border-radius",
     "--system-swatch-border-thickness",
@@ -136,7 +129,6 @@
     "--system-swatch-focus-indicator-color",
     "--system-swatch-focus-indicator-gap",
     "--system-swatch-focus-indicator-thickness",
-    "--system-swatch-icon-border-color",
     "--system-swatch-inner-border-color-selected",
     "--system-swatch-size",
     "--system-swatch-size-l-disabled-icon-size",
