@@ -1,5 +1,14 @@
 # Change Log
 
+## 10.0.0-s2-foundations.17
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`57e187f`](https://github.com/adobe/spectrum-css/commit/57e187f5a52e9782e8573defc825cef0399b99e4) Thanks [@pfulton](https://github.com/pfulton)! - Minor bug fixes for datepicker and radio; tokens released for alignment
+
+- Updated dependencies [[`57e187f`](https://github.com/adobe/spectrum-css/commit/57e187f5a52e9782e8573defc825cef0399b99e4)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.26
+
 ## 10.0.0-s2-foundations.16
 
 ### Minor Changes
