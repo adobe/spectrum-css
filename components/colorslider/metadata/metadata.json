@@ -37,21 +37,13 @@
     "--spectrum-color-slider-border-opacity",
     "--spectrum-color-slider-border-rounding",
     "--spectrum-color-slider-border-width",
-    "--spectrum-color-slider-checkerboard-dark-color",
-    "--spectrum-color-slider-checkerboard-light-color",
-    "--spectrum-color-slider-checkerboard-size",
-    "--spectrum-color-slider-handle-margin-block",
     "--spectrum-color-slider-length",
     "--spectrum-color-slider-minimum-length"
   ],
   "global": [
     "--spectrum-color-control-track-width",
-    "--spectrum-component-top-to-text-75",
     "--spectrum-disabled-background-color",
-    "--spectrum-gray-900-rgb",
-    "--spectrum-opacity-checkerboard-square-dark",
-    "--spectrum-opacity-checkerboard-square-light",
-    "--spectrum-opacity-checkerboard-square-size"
+    "--spectrum-gray-900-rgb"
   ],
   "system-theme": [],
   "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
