@@ -9,7 +9,8 @@ module.exports = ({
     indent: 2,
     pretty: true,
   },
-  plugins: [
+  // changes Open source contribution
+  plugins: [  
     {
       name: 'preset-default',
       params: {
