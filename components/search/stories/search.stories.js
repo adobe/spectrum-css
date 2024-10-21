@@ -74,8 +74,10 @@ export const Disabled = SearchOptions.bind({});
 Disabled.args = {
 	isDisabled: true,
 };
-
 Disabled.tags = ["!dev"];
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * A search field can have [help text](?path=/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input. The description communicates a hint or helpful information, such as a search’s scope.
@@ -87,6 +89,9 @@ HelpText.args = {
 	hasDescription: true,
 };
 HelpText.tags = ["!dev"];
+HelpText.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 /**
  * A quiet search field can be used when searching isn’t a high priority action on the page. These search fields have no visible background, and this style works best when a clear layout makes the field easy to recognize. Too many quiet components in a small space can be hard to read.
@@ -96,6 +101,9 @@ Quiet.args = {
 	isQuiet: true,
 };
 Quiet.tags = ["!dev"];
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true },
+};
 
 
 /**
