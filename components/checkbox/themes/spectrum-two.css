@@ -50,7 +50,7 @@
 		--spectrum-checkbox-line-height-cjk: var(--spectrum-cjk-line-height-100);
 
 		/* Size */
-		--spectrum-checkbox-control-corner-radius: var(--spectrum-corner-radius-75);
+		--spectrum-checkbox-control-corner-radius: 2px;
 
 		--spectrum-checkbox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 		--spectrum-checkbox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);

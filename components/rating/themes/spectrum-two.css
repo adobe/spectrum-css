@@ -30,7 +30,7 @@
 
 		/* Spacing (top/bottom edge to icon) */
 		--spectrum-rating-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
-		--spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
+		--spectrum-rating-indicator-border-radius: 2px;
 
 		/* Indicator height */
 		--spectrum-rating-indicator-height: var(--spectrum-border-width-200);
