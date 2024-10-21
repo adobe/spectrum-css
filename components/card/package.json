@@ -78,5 +78,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/cards",
+			"rootClass": "spectrum-Card"
+		}
+	]
 }

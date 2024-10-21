@@ -64,5 +64,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/tray",
+			"rootClass": "spectrum-Tray"
+		}
+	]
 }
