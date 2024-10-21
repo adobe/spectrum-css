@@ -11,13 +11,15 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum--express.spectrum--large{
-  --spectrum-colorwheel-path:"M 118 118 m -118 0 a 118 118 0 1 0 236 0 a 118 118 0 1 0 -236 0.2 M 118 118 m -92 0 a 92 92 0 1 0 184 0 a 92 92 0 1 0 -184 0";
-  --spectrum-colorwheel-path-borders:"M 120 120 m -120 0 a 120 120 0 1 0 240 0 a 120 120 0 1 0 -240 0.2 M 120 120 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0";
+/* This file contains overrides and additions to core tokens */
 
-  --spectrum-dialog-confirm-border-radius:8px;
+.spectrum--express.spectrum--large {
+  --spectrum-colorwheel-path: "M 118 118 m -118 0 a 118 118 0 1 0 236 0 a 118 118 0 1 0 -236 0.2 M 118 118 m -92 0 a 92 92 0 1 0 184 0 a 92 92 0 1 0 -184 0";
+  --spectrum-colorwheel-path-borders: "M 120 120 m -120 0 a 120 120 0 1 0 240 0 a 120 120 0 1 0 -240 0.2 M 120 120 m -90 0 a 90 90 0 1 0 180 0 a 90 90 0 1 0 -180 0";
 
-  --spectrum-dial-border-radius:15px;
+  --spectrum-dialog-confirm-border-radius: 8px;
 
-  --spectrum-assetcard-focus-ring-border-radius:12px;
+  --spectrum-dial-border-radius: 15px;
+
+  --spectrum-assetcard-focus-ring-border-radius: 12px;
 }

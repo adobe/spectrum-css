@@ -23,6 +23,7 @@ module.exports = {
 		"declaration-empty-line-before": null,
 		"import-notation": null,
 		"no-descending-specificity": null,
+		"no-duplicate-selectors": null,
 
 		/** --------------------------------------------------------------
 		 * Customized rule settings

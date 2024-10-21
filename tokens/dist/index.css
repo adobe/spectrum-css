@@ -2963,6 +2963,8 @@
 	--spectrum-calendar-day-background-color-key-focus: rgba(var(--spectrum-white-rgb), 0.07);
 	--spectrum-calendar-day-border-color-key-focus: var(--spectrum-blue-700);
 
+	--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-500-rgb);
+
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-black);
 
 	--spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-700);
@@ -2995,6 +2997,15 @@
 	--spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.25);
 	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.15);
 	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
+
+	--spectrum-swatch-border-color-rgb: 255, 255, 255;
+
+	--spectrum-swatch-border-color-opacity: 0.51;
+
+	--spectrum-swatch-border-color: rgba(var(--spectrum-swatch-border-color-rgb), var(--spectrum-swatch-border-color-opacity));
+	--spectrum-swatch-border-color-light-rgb: 255, 255, 255;
+	--spectrum-swatch-border-color-light-opacity: 0.2;
+	--spectrum-swatch-border-color-light: rgba(var(--spectrum-swatch-border-color-light-rgb), var(--spectrum-swatch-border-color-light-opacity));
 }
 .spectrum--darkest {
 	--spectrum-menu-item-background-color-default-rgb: 255, 255, 255;
@@ -3014,6 +3025,8 @@
 	--spectrum-calendar-day-background-color-cap-selected: rgba(var(--spectrum-blue-800-rgb), 0.3);
 	--spectrum-calendar-day-background-color-key-focus: rgba(var(--spectrum-white-rgb), 0.08);
 	--spectrum-calendar-day-border-color-key-focus: var(--spectrum-blue-700);
+
+	--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-600-rgb);
 
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-black);
 
@@ -3047,6 +3060,15 @@
 	--spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-800-rgb), 0.3);
 	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-800-rgb), 0.2);
 	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-700);
+
+	--spectrum-swatch-border-color-rgb: 255, 255, 255;
+
+	--spectrum-swatch-border-color-opacity: 0.51;
+
+	--spectrum-swatch-border-color: rgba(var(--spectrum-swatch-border-color-rgb), var(--spectrum-swatch-border-color-opacity));
+	--spectrum-swatch-border-color-light-rgb: 255, 255, 255;
+	--spectrum-swatch-border-color-light-opacity: 0.2;
+	--spectrum-swatch-border-color-light: rgba(var(--spectrum-swatch-border-color-light-rgb), var(--spectrum-swatch-border-color-light-opacity));
 }
 .spectrum {
 	--spectrum-neutral-background-color-selected-default: var(--spectrum-gray-700);
@@ -3117,6 +3139,13 @@
 
 	--spectrum-code-font-family-stack: "Source Code Pro", Monaco, monospace;
 
+	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
+
+	--spectrum-font-family: var(--spectrum-sans-font-family-stack);
+	--spectrum-font-style: var(--spectrum-default-font-style);
+	--spectrum-font-size: var(--spectrum-font-size-100);
+
 	--spectrum-cjk-font-family-stack: adobe-clean-han-japanese, var(--spectrum-cjk-font-family), sans-serif;
 	--spectrum-cjk-font: var(--spectrum-code-font-family-stack);
 	--spectrum-docs-static-white-background-color-rgb: 15, 121, 125;
@@ -3183,6 +3212,8 @@
 	--spectrum-colorwheel-colorarea-container-size: 182px;
 
 	--spectrum-colorloupe-checkerboard-fill: url(#checkerboard-secondary);
+
+	--spectrum-contextual-help-content-spacing: var(--spectrum-spacing-200);
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected-small: 34px;
 	--spectrum-menu-item-selectable-edge-to-text-not-selected-medium: 42px;
@@ -3300,6 +3331,8 @@
 	--spectrum-calendar-day-background-color-key-focus: rgba(var(--spectrum-black-rgb), 0.06);
 	--spectrum-calendar-day-border-color-key-focus: var(--spectrum-blue-800);
 
+	--spectrum-card-selected-background-color-rgb: var(--spectrum-blue-900-rgb);
+
 	--spectrum-badge-label-icon-color-primary: var(--spectrum-white);
 
 	--spectrum-coach-indicator-ring-default-color: var(--spectrum-blue-800);
@@ -3332,6 +3365,15 @@
 	--spectrum-assetlist-item-background-color-selected-hover: rgba(var(--spectrum-blue-900-rgb), 0.2);
 	--spectrum-assetlist-item-background-color-selected: rgba(var(--spectrum-blue-900-rgb), 0.1);
 	--spectrum-assetlist-border-color-key-focus: var(--spectrum-blue-800);
+
+	--spectrum-swatch-border-color-rgb: 0, 0, 0;
+
+	--spectrum-swatch-border-color-opacity: 0.51;
+
+	--spectrum-swatch-border-color: rgba(var(--spectrum-swatch-border-color-rgb), var(--spectrum-swatch-border-color-opacity));
+	--spectrum-swatch-border-color-light-rgb: 0, 0, 0;
+	--spectrum-swatch-border-color-light-opacity: 0.2;
+	--spectrum-swatch-border-color-light: rgba(var(--spectrum-swatch-border-color-light-rgb), var(--spectrum-swatch-border-color-light-opacity));
 }
 .spectrum--medium {
 	--spectrum-checkbox-control-size-small: 12px;
@@ -3390,6 +3432,8 @@
 	--spectrum-colorwheel-colorarea-container-size: 144px;
 
 	--spectrum-colorloupe-checkerboard-fill: url(#checkerboard-primary);
+
+	--spectrum-contextual-help-content-spacing: var(--spectrum-spacing-100);
 
 	--spectrum-menu-item-selectable-edge-to-text-not-selected-small: 28px;
 	--spectrum-menu-item-selectable-edge-to-text-not-selected-medium: 32px;
