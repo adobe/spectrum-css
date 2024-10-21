@@ -15,7 +15,7 @@
 	.spectrum-Thumbnail {
 		--spectrum-thumbnail-size: var(--spectrum-thumbnail-size-500);
 
-		--spectrum-thumbnail-border-radius: var(--spectrum-corner-radius-75);
+		--spectrum-thumbnail-border-radius: 2px;
 		--spectrum-thumbnail-border-width: var(--spectrum-border-width-100);
 
 		/* @todo Refactor with --spectrum-thumbnail-border-color once gray rgb token is no longer necessary to workaround nested rgb color token value using rgba(). */
