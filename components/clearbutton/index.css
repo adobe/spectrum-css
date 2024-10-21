@@ -65,13 +65,25 @@
 		--mod-clear-button-icon-color-down: var(--spectrum-disabled-content-color);
 		--mod-clear-button-background-color: var(--mod-clear-button-background-color-disabled, transparent);
 	}
+
+	&.spectrum-ClearButton--staticWhite {
+		--spectrum-clear-button-icon-color-disabled: var(--spectrum-disabled-static-white-content-color);
+	}
+
+	&.spectrum-ClearButton--staticBlack {
+		--spectrum-clear-button-icon-color-disabled: var(--spectrum-disabled-static-black-content-color);
+	}
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .spectrum-ClearButton {
 	block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
 	inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
 	border-radius: 100%;
-	cursor: pointer;
+
+	&:not(:disabled) {
+		cursor: pointer;
+	}
 
 	background-color: var(--mod-clear-button-background-color, transparent);
 	margin: 0;
@@ -86,7 +98,7 @@
 		margin-inline: auto;
 	}
 
-	&:hover {
+	&:not(:disabled):hover {
 		color: var(--highcontrast-clear-button-icon-color-hover, var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover)));
 
 		.spectrum-ClearButton-fill {
@@ -94,7 +106,7 @@
 		}
 	}
 
-	&:active {
+	&:not(:disabled):active {
 		color: var(--mod-clear-button-icon-color-down, var(--spectrum-clear-button-icon-color-down));
 
 		.spectrum-ClearButton-fill {
@@ -102,13 +114,19 @@
 		}
 	}
 
-	&:focus-visible,
-	&:focus-within {
+	&:not(:disabled):focus-visible,
+	&:not(:disabled):focus-within {
 		color: var(--mod-clear-button-icon-color-key-focus, var(--spectrum-clear-button-icon-color-key-focus));
 
 		.spectrum-ClearButton-fill {
 			background-color: var(--mod-clear-button-background-color-key-focus, var(--spectrum-clear-button-background-color-key-focus));
 		}
+	}
+}
+
+.spectrum-ClearButton:disabled {
+  .spectrum-ClearButton-icon {
+		color: var( --highcontrast-clear-button-icon-color-disabled, var(--mod-clear-button-icon-color-disabled, var(--spectrum-clear-button-icon-color-disabled)));
 	}
 }
 

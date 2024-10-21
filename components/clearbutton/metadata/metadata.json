@@ -1,8 +1,8 @@
 {
   "sourceFile": "index.css",
   "selectors": [
-    ".js-focus-within .spectrum-ClearButton[focus-within]",
-    ".js-focus-within .spectrum-ClearButton[focus-within] .spectrum-ClearButton-fill",
+    ".js-focus-within .spectrum-ClearButton:not(:disabled)[focus-within]",
+    ".js-focus-within .spectrum-ClearButton:not(:disabled)[focus-within] .spectrum-ClearButton-fill",
     ".spectrum-ClearButton",
     ".spectrum-ClearButton > .spectrum-Icon",
     ".spectrum-ClearButton--overBackground:focus-visible",
@@ -13,18 +13,21 @@
     ".spectrum-ClearButton.spectrum-ClearButton--sizeL",
     ".spectrum-ClearButton.spectrum-ClearButton--sizeS",
     ".spectrum-ClearButton.spectrum-ClearButton--sizeXL",
-    ".spectrum-ClearButton:active",
-    ".spectrum-ClearButton:active .spectrum-ClearButton-fill",
+    ".spectrum-ClearButton.spectrum-ClearButton--staticBlack",
+    ".spectrum-ClearButton.spectrum-ClearButton--staticWhite",
     ".spectrum-ClearButton:disabled",
-    ".spectrum-ClearButton:focus-visible",
-    ".spectrum-ClearButton:focus-visible .spectrum-ClearButton-fill",
-    ".spectrum-ClearButton:focus-within",
-    ".spectrum-ClearButton:focus-within .spectrum-ClearButton-fill",
-    ".spectrum-ClearButton:hover",
-    ".spectrum-ClearButton:hover .spectrum-ClearButton-fill",
+    ".spectrum-ClearButton:disabled .spectrum-ClearButton-icon",
     ".spectrum-ClearButton:not(:disabled)",
-    ".spectrum-ClearButton[focus-within].js-focus-within",
-    ".spectrum-ClearButton[focus-within].js-focus-within .spectrum-ClearButton-fill"
+    ".spectrum-ClearButton:not(:disabled):active",
+    ".spectrum-ClearButton:not(:disabled):active .spectrum-ClearButton-fill",
+    ".spectrum-ClearButton:not(:disabled):focus-visible",
+    ".spectrum-ClearButton:not(:disabled):focus-visible .spectrum-ClearButton-fill",
+    ".spectrum-ClearButton:not(:disabled):focus-within",
+    ".spectrum-ClearButton:not(:disabled):focus-within .spectrum-ClearButton-fill",
+    ".spectrum-ClearButton:not(:disabled):hover",
+    ".spectrum-ClearButton:not(:disabled):hover .spectrum-ClearButton-fill",
+    ".spectrum-ClearButton:not(:disabled)[focus-within].js-focus-within",
+    ".spectrum-ClearButton:not(:disabled)[focus-within].js-focus-within .spectrum-ClearButton-fill"
   ],
   "modifiers": [
     "--mod-clear-button-background-color",
@@ -48,6 +51,7 @@
     "--spectrum-clear-button-background-color-key-focus",
     "--spectrum-clear-button-height",
     "--spectrum-clear-button-icon-color",
+    "--spectrum-clear-button-icon-color-disabled",
     "--spectrum-clear-button-icon-color-down",
     "--spectrum-clear-button-icon-color-hover",
     "--spectrum-clear-button-icon-color-key-focus",
@@ -60,6 +64,8 @@
     "--spectrum-component-height-300",
     "--spectrum-component-height-75",
     "--spectrum-disabled-content-color",
+    "--spectrum-disabled-static-black-content-color",
+    "--spectrum-disabled-static-white-content-color",
     "--spectrum-gray-200",
     "--spectrum-gray-300",
     "--spectrum-gray-400",
@@ -79,5 +85,8 @@
     "--system-spectrum-clearbutton-spectrum-clear-button-background-color-key-focus"
   ],
   "passthroughs": [],
-  "high-contrast": ["--highcontrast-clear-button-icon-color-hover"]
+  "high-contrast": [
+    "--highcontrast-clear-button-icon-color-disabled",
+    "--highcontrast-clear-button-icon-color-hover"
+  ]
 }
