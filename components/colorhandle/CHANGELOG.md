@@ -1,5 +1,14 @@
 # Change Log
 
+## 8.1.4
+
+### Patch Changes
+
+- [#3271](https://github.com/adobe/spectrum-css/pull/3271) [`055906c`](https://github.com/adobe/spectrum-css/commit/055906cddb04bdf34ac64125d95a63697b922760) Thanks [@cdransf](https://github.com/cdransf)! - Disables lint violation and moves comment to stylelint-disable description.
+
+- Updated dependencies [[`a354b16`](https://github.com/adobe/spectrum-css/commit/a354b166727fb34b17300bcd3a6118a00034e344)]:
+  - @spectrum-css/colorloupe@5.1.4
+
 ## 8.1.3
 
 ### Patch Changes
