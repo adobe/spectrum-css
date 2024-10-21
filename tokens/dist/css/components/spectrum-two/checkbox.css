@@ -38,7 +38,7 @@
 	--system-checkbox-control-selected-color-focus: var(--spectrum-neutral-background-color-selected-key-focus);
 	--system-checkbox-line-height: var(--spectrum-line-height-100);
 	--system-checkbox-line-height-cjk: var(--spectrum-cjk-line-height-100);
-	--system-checkbox-control-corner-radius: var(--spectrum-corner-radius-75);
+	--system-checkbox-control-corner-radius: 2px;
 	--system-checkbox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--system-checkbox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--system-checkbox-border-width: var(--spectrum-border-width-200);

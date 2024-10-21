@@ -14,3 +14,9 @@
 /* @combine .spectrum.spectrum--legacy */
 
 @import "./spectrum-two.css";
+
+@container style(--system: legacy) {
+	.spectrum-Rating {
+        --spectrum-rating-indicator-border-radius: var(--spectrum-corner-radius-75);
+    }
+}

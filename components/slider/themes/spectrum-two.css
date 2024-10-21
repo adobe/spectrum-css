@@ -34,7 +34,7 @@
 		--spectrum-slider-ramp-track-block-size: var(--spectrum-slider-ramp-track-height);
 		--spectrum-slider-cjk-line-height: var(--spectrum-cjk-line-height-100);
 		--spectrum-slider-min-size: var(--spectrum-spacing-900);
-		--spectrum-slider-track-corner-radius: var(--spectrum-corner-radius-75);
+		--spectrum-slider-track-corner-radius: 2px;
 		--spectrum-slider-label-margin-start: var(--spectrum-spacing-300);
 		--spectrum-slider-handle-border-width: var(--spectrum-border-width-200);
 		--spectrum-slider-track-fill-thickness: var(--spectrum-slider-track-thickness);
