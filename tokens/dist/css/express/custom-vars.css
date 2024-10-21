@@ -11,8 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-/* This file contains overrides and additions to core tokens */
-
-.spectrum--express {
-  --system: express;
+.spectrum--express{
+  --system:express;
 }
