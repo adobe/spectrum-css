@@ -72,10 +72,6 @@
 }
 
 /* standard and range invalid */
-.is-invalid .spectrum-DatePicker-input {
-	padding-inline-end: var(--mod-datepicker-padding-inline-end-invalid, var(--spectrum-datepicker-padding-inline-end-invalid));
-}
-
 .spectrum-DatePicker-button {
 	/* Be above textfield so box shadow shines through */
 	position: absolute;
