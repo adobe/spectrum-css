@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern -- custom storybook styles */
 /*!
  * Copyright 2024 Adobe. All rights reserved.
  *
@@ -11,7 +12,6 @@
  * governing permissions and limitations under the License.
  */
 
-/* stylelint-disable selector-class-pattern */
 body {
 	--spectrum-font-family: var(--spectrum-sans-font-family-stack);
 	--spectrum-font-style: var(--spectrum-default-font-style);
