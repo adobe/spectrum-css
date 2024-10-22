@@ -16,13 +16,15 @@
 	--system-clear-button-background-color-hover: var(--spectrum-gray-300);
 	--system-clear-button-background-color-down: var(--spectrum-gray-400);
 	--system-clear-button-background-color-key-focus: var(--spectrum-gray-300);
-	--system-clear-button-height: var(--spectrum-component-height-100);
-	--system-clear-button-width: var(--spectrum-component-height-100);
 	--system-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);
 	--system-clear-button-icon-color: var(--spectrum-neutral-content-color-default);
 	--system-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
 	--system-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
 	--system-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-clear-button-height: var(--spectrum-component-height-100);
+	--system-clear-button-size-m-height: var(--spectrum-component-height-100);
+	--system-clear-button-width: var(--spectrum-component-height-100);
+	--system-clear-button-size-m-width: var(--spectrum-component-height-100);
 	--system-clear-button-size-s-height: var(--spectrum-component-height-75);
 	--system-clear-button-size-s-width: var(--spectrum-component-height-75);
 	--system-clear-button-size-l-height: var(--spectrum-component-height-200);

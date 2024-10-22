@@ -12,6 +12,14 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-floating-action-button-background-color: var(--system-floating-action-button-background-color);
+	--spectrum-floating-action-button-background-color-hover: var(--system-floating-action-button-background-color-hover);
+	--spectrum-floating-action-button-background-color-down: var(--system-floating-action-button-background-color-down);
+	--spectrum-floating-action-button-background-color-key-focus: var(--system-floating-action-button-background-color-key-focus);
+	--spectrum-floating-action-button-icon-color: var(--system-floating-action-button-icon-color);
+	--spectrum-floating-action-button-icon-color-hover: var(--system-floating-action-button-icon-color-hover);
+	--spectrum-floating-action-button-icon-color-down: var(--system-floating-action-button-icon-color-down);
+	--spectrum-floating-action-button-icon-color-key-focus: var(--system-floating-action-button-icon-color-key-focus);
 	--spectrum-floating-action-button-size: var(--system-floating-action-button-size);
 	--spectrum-floating-action-button-icon-size: var(--system-floating-action-button-icon-size);
 	--spectrum-floating-action-button-padding: var(--system-floating-action-button-padding);
@@ -20,12 +28,4 @@
 	--spectrum-floating-action-button-focus-ring-width: var(--system-floating-action-button-focus-ring-width);
 	--spectrum-floating-action-button-focus-ring-gap: var(--system-floating-action-button-focus-ring-gap);
 	--spectrum-floating-action-button-focus-ring-color: var(--system-floating-action-button-focus-ring-color);
-	--spectrum-floating-action-button-background-color: var(--system-floating-action-button-secondary-background-color);
-	--spectrum-floating-action-button-background-color-hover: var(--system-floating-action-button-secondary-background-color-hover);
-	--spectrum-floating-action-button-background-color-down: var(--system-floating-action-button-secondary-background-color-down);
-	--spectrum-floating-action-button-background-color-key-focus: var(--system-floating-action-button-secondary-background-color-key-focus);
-	--spectrum-floating-action-button-icon-color: var(--system-floating-action-button-secondary-icon-color);
-	--spectrum-floating-action-button-icon-color-hover: var(--system-floating-action-button-secondary-icon-color-hover);
-	--spectrum-floating-action-button-icon-color-down: var(--system-floating-action-button-secondary-icon-color-down);
-	--spectrum-floating-action-button-icon-color-key-focus: var(--system-floating-action-button-secondary-icon-color-key-focus);
 }

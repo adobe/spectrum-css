@@ -12,6 +12,9 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-sidenav-text-line-height: var(--system-side-nav-text-line-height);
+	--spectrum-sidenav-top-level-line-height: var(--system-side-nav-top-level-line-height);
+	--spectrum-sidenav-header-line-height: var(--system-side-nav-header-line-height);
 	--spectrum-sidenav-focus-ring-size: var(--system-side-nav-focus-ring-size);
 	--spectrum-sidenav-focus-ring-gap: var(--system-side-nav-focus-ring-gap);
 	--spectrum-sidenav-focus-ring-color: var(--system-side-nav-focus-ring-color);
@@ -56,15 +59,12 @@
 	--spectrum-sidenav-text-font-weight: var(--system-side-nav-text-font-weight);
 	--spectrum-sidenav-text-font-style: var(--system-side-nav-text-font-style);
 	--spectrum-sidenav-text-font-size: var(--system-side-nav-text-font-size);
-	--spectrum-sidenav-text-line-height: var(--system-side-nav-lang-ko-text-line-height);
 	--spectrum-sidenav-top-level-font-family: var(--system-side-nav-top-level-font-family);
 	--spectrum-sidenav-top-level-font-weight: var(--system-side-nav-top-level-font-weight);
 	--spectrum-sidenav-top-level-font-style: var(--system-side-nav-top-level-font-style);
 	--spectrum-sidenav-top-level-font-size: var(--system-side-nav-top-level-font-size);
-	--spectrum-sidenav-top-level-line-height: var(--system-side-nav-lang-ko-top-level-line-height);
 	--spectrum-sidenav-header-font-family: var(--system-side-nav-header-font-family);
 	--spectrum-sidenav-header-font-weight: var(--system-side-nav-header-font-weight);
 	--spectrum-sidenav-header-font-style: var(--system-side-nav-header-font-style);
 	--spectrum-sidenav-header-font-size: var(--system-side-nav-header-font-size);
-	--spectrum-sidenav-header-line-height: var(--system-side-nav-lang-ko-header-line-height);
 }

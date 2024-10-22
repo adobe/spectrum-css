@@ -46,12 +46,6 @@ module.exports = ({
 			processIdentifier = (identifierValue) => selectorPrefix && selectorPrefix !== identifierValue ? `.${selectorPrefix}--${identifierValue}` : `.${identifierValue}`;
 		}
 
-		// index-theme.css settings:
-		// skipMapping: false,
-		// preserveVariables: true
-		// stripLocalSelectors: false,
-		// referencesOnly: true,
-
 		// This object will store the mappings for each selector
 		const systemMap = new Map();
 		const conversionMap = new Map();
@@ -64,7 +58,7 @@ module.exports = ({
 				if (preserveVariables) {
 					// Iterate over each rule in the container and append them to the root
 					container.walkRules((rule) => {
-						root.append(rule);
+						root.insertAfter(root.first, rule);
 					});
 				}
 
@@ -194,7 +188,7 @@ module.exports = ({
 					rule.append(decl);
 				}
 
-				root.append(rule);
+				root.insertAfter(root.first, rule);
 			}
 		}
 	},

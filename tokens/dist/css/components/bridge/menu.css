@@ -12,6 +12,23 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-menu-item-min-height: var(--system-menu-item-min-height);
+	--spectrum-menu-item-icon-height: var(--system-menu-item-icon-height);
+	--spectrum-menu-item-icon-width: var(--system-menu-item-icon-width);
+	--spectrum-menu-item-label-font-size: var(--system-menu-item-label-font-size);
+	--spectrum-menu-item-label-text-to-visual: var(--system-menu-item-label-text-to-visual);
+	--spectrum-menu-item-label-inline-edge-to-content: var(--system-menu-item-label-inline-edge-to-content);
+	--spectrum-menu-item-top-edge-to-text: var(--system-menu-item-top-edge-to-text);
+	--spectrum-menu-item-bottom-edge-to-text: var(--system-menu-item-bottom-edge-to-text);
+	--spectrum-menu-item-text-to-control: var(--system-menu-item-text-to-control);
+	--spectrum-menu-item-description-font-size: var(--system-menu-item-description-font-size);
+	--spectrum-menu-section-header-font-size: var(--system-menu-section-header-font-size);
+	--spectrum-menu-section-header-min-width: var(--system-menu-section-header-min-width);
+	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--system-menu-item-selectable-edge-to-text-not-selected);
+	--spectrum-menu-item-checkmark-height: var(--system-menu-item-checkmark-height);
+	--spectrum-menu-item-checkmark-width: var(--system-menu-item-checkmark-width);
+	--spectrum-menu-item-top-to-checkmark: var(--system-menu-item-top-to-checkmark);
+	--spectrum-menu-back-icon-margin: var(--system-menu-back-icon-margin);
 	--spectrum-menu-item-top-to-action: var(--system-menu-item-top-to-action);
 	--spectrum-menu-item-top-to-checkbox: var(--system-menu-item-top-to-checkbox);
 	--spectrum-menu-item-label-line-height: var(--system-menu-item-label-line-height);
@@ -62,21 +79,4 @@
 	--spectrum-menu-item-background-color-hover: var(--system-menu-item-background-color-hover);
 	--spectrum-menu-item-background-color-down: var(--system-menu-item-background-color-down);
 	--spectrum-menu-item-background-color-key-focus: var(--system-menu-item-background-color-key-focus);
-	--spectrum-menu-item-min-height: var(--system-menu-size-xl-item-min-height);
-	--spectrum-menu-item-icon-height: var(--system-menu-size-xl-item-icon-height);
-	--spectrum-menu-item-icon-width: var(--system-menu-size-xl-item-icon-width);
-	--spectrum-menu-item-label-font-size: var(--system-menu-size-xl-item-label-font-size);
-	--spectrum-menu-item-label-text-to-visual: var(--system-menu-size-xl-item-label-text-to-visual);
-	--spectrum-menu-item-label-inline-edge-to-content: var(--system-menu-size-xl-item-label-inline-edge-to-content);
-	--spectrum-menu-item-top-edge-to-text: var(--system-menu-size-xl-item-top-edge-to-text);
-	--spectrum-menu-item-bottom-edge-to-text: var(--system-menu-size-xl-item-bottom-edge-to-text);
-	--spectrum-menu-item-text-to-control: var(--system-menu-size-xl-item-text-to-control);
-	--spectrum-menu-item-description-font-size: var(--system-menu-size-xl-item-description-font-size);
-	--spectrum-menu-section-header-font-size: var(--system-menu-size-xl-section-header-font-size);
-	--spectrum-menu-section-header-min-width: var(--system-menu-size-xl-section-header-min-width);
-	--spectrum-menu-item-selectable-edge-to-text-not-selected: var(--system-menu-size-xl-item-selectable-edge-to-text-not-selected);
-	--spectrum-menu-item-checkmark-height: var(--system-menu-size-xl-item-checkmark-height);
-	--spectrum-menu-item-checkmark-width: var(--system-menu-size-xl-item-checkmark-width);
-	--spectrum-menu-item-top-to-checkmark: var(--system-menu-size-xl-item-top-to-checkmark);
-	--spectrum-menu-back-icon-margin: var(--system-menu-size-xl-back-icon-margin);
 }

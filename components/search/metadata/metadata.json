@@ -6,9 +6,8 @@
     ".spectrum-Search .spectrum-Search-clearButton .spectrum-ClearButton-fill",
     ".spectrum-Search .spectrum-Search-textfield",
     ".spectrum-Search .spectrum-Search-textfield .spectrum-Search-input",
-    ".spectrum-Search--quiet",
     ".spectrum-Search--quiet .spectrum-Search-clearButton .spectrum-ClearButton-icon",
-    ".spectrum-Search--quiet.spectrum-Search .spectrum-Search-input",
+    ".spectrum-Search--quiet .spectrum-Search-input",
     ".spectrum-Search-clearButton",
     ".spectrum-Search-clearButton .spectrum-ClearButton-fill",
     ".spectrum-Search-icon",
@@ -27,6 +26,7 @@
     ".spectrum-Search.spectrum-Search--sizeM",
     ".spectrum-Search.spectrum-Search--sizeS",
     ".spectrum-Search.spectrum-Search--sizeXL",
+    ".spectrum-Search.spectrum-Search.spectrum-Search--quiet",
     ".spectrum-Search:not(.spectrum-Search--quiet) .spectrum-Search-icon",
     ".spectrum-Search:not(.spectrum-Search--quiet) .spectrum-Search-input"
   ],
@@ -100,13 +100,13 @@
     "--spectrum-search-line-height",
     "--spectrum-search-min-inline-multiplier",
     "--spectrum-search-min-inline-size",
-    "--spectrum-search-quiet-button-offset",
     "--spectrum-search-text-to-icon",
     "--spectrum-search-to-help-text",
     "--spectrum-search-top-to-text"
   ],
   "global": [
     "--spectrum-border-width-100",
+    "--spectrum-clear-button-width",
     "--spectrum-component-bottom-to-text-100",
     "--spectrum-component-edge-to-visual-100",
     "--spectrum-component-edge-to-visual-200",

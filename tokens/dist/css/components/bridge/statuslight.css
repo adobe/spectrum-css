@@ -12,6 +12,13 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-statuslight-height: var(--system-status-light-height);
+	--spectrum-statuslight-dot-size: var(--system-status-light-dot-size);
+	--spectrum-statuslight-font-size: var(--system-status-light-font-size);
+	--spectrum-statuslight-spacing-dot-to-label: var(--system-status-light-spacing-dot-to-label);
+	--spectrum-statuslight-spacing-top-to-dot: var(--system-status-light-spacing-top-to-dot);
+	--spectrum-statuslight-spacing-top-to-label: var(--system-status-light-spacing-top-to-label);
+	--spectrum-statuslight-spacing-bottom-to-label: var(--system-status-light-spacing-bottom-to-label);
 	--spectrum-statuslight-corner-radius: var(--system-status-light-corner-radius);
 	--spectrum-statuslight-font-weight: var(--system-status-light-font-weight);
 	--spectrum-statuslight-border-width: var(--system-status-light-border-width);
@@ -39,11 +46,4 @@
 	--spectrum-statuslight-nonsemantic-purple-color: var(--system-status-light-nonsemantic-purple-color);
 	--spectrum-statuslight-nonsemantic-fuchsia-color: var(--system-status-light-nonsemantic-fuchsia-color);
 	--spectrum-statuslight-nonsemantic-magenta-color: var(--system-status-light-nonsemantic-magenta-color);
-	--spectrum-statuslight-height: var(--system-status-light-size-xl-height);
-	--spectrum-statuslight-dot-size: var(--system-status-light-size-xl-dot-size);
-	--spectrum-statuslight-font-size: var(--system-status-light-size-xl-font-size);
-	--spectrum-statuslight-spacing-dot-to-label: var(--system-status-light-size-xl-spacing-dot-to-label);
-	--spectrum-statuslight-spacing-top-to-dot: var(--system-status-light-size-xl-spacing-top-to-dot);
-	--spectrum-statuslight-spacing-top-to-label: var(--system-status-light-size-xl-spacing-top-to-label);
-	--spectrum-statuslight-spacing-bottom-to-label: var(--system-status-light-size-xl-spacing-bottom-to-label);
 }

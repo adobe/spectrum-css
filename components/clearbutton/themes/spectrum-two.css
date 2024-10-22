@@ -18,14 +18,18 @@
 		--spectrum-clear-button-background-color-down: transparent;
 		--spectrum-clear-button-background-color-key-focus: transparent;
 
-		--spectrum-clear-button-height: var(--spectrum-component-height-100);
-		--spectrum-clear-button-width: var(--spectrum-component-height-100);
 		--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);
 
 		--spectrum-clear-button-icon-color: var(--spectrum-neutral-content-color-default);
 		--spectrum-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
 		--spectrum-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
 		--spectrum-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+
+		&,
+		&.spectrum-ClearButton--sizeM {
+			--spectrum-clear-button-height: var(--spectrum-component-height-100);
+			--spectrum-clear-button-width: var(--spectrum-component-height-100);
+		}
 
 		&.spectrum-ClearButton--sizeS {
 			--spectrum-clear-button-height: var(--spectrum-component-height-75);

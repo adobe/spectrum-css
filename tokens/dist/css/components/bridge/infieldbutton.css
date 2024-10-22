@@ -12,29 +12,29 @@
  */
 
 .spectrum.spectrum--express {
-	--spectrum-infield-button-border-width: var(--system-infield-button-quiet-border-width);
-	--spectrum-infield-button-border-color: var(--system-infield-button-quiet-disabled-border-color);
+	--spectrum-infield-button-background-color: var(--system-infield-button-background-color);
+	--spectrum-infield-button-border-color: var(--system-infield-button-border-color);
+	--spectrum-infield-button-background-color-hover: var(--system-infield-button-background-color-hover);
+	--spectrum-infield-button-background-color-down: var(--system-infield-button-background-color-down);
+	--spectrum-infield-button-background-color-key-focus: var(--system-infield-button-background-color-key-focus);
+	--spectrum-infield-border-color: var(--system-infield-button-quiet-infield-border-color);
+	--spectrum-infield-button-border-width: var(--system-infield-button-border-width);
+	--spectrum-infield-button-width: var(--system-infield-button-width);
+	--spectrum-infield-button-height: var(--system-infield-button-height);
+	--spectrum-infield-button-stacked-fill-padding-inline: var(--system-infield-button-stacked-fill-padding-inline);
+	--spectrum-infield-button-stacked-fill-padding-outer: var(--system-infield-button-stacked-fill-padding-outer);
+	--spectrum-infield-button-stacked-fill-padding-inner: var(--system-infield-button-stacked-fill-padding-inner);
+	--spectrum-infield-button-icon-color: var(--system-infield-button-icon-color);
+	--spectrum-infield-button-icon-color-hover: var(--system-infield-button-icon-color-hover);
+	--spectrum-infield-button-icon-color-down: var(--system-infield-button-icon-color-down);
+	--spectrum-infield-button-icon-color-key-focus: var(--system-infield-button-icon-color-key-focus);
 	--spectrum-infield-button-border-radius: var(--system-infield-button-border-radius);
 	--spectrum-infield-button-border-radius-reset: var(--system-infield-button-border-radius-reset);
 	--spectrum-infield-button-stacked-top-border-radius-start-start: var(--system-infield-button-stacked-top-border-radius-start-start);
 	--spectrum-infield-button-stacked-bottom-border-radius-end-start: var(--system-infield-button-stacked-bottom-border-radius-end-start);
-	--spectrum-infield-button-background-color: var(--system-infield-button-quiet-disabled-background-color);
-	--spectrum-infield-button-background-color-hover: var(--system-infield-button-quiet-background-color-hover);
-	--spectrum-infield-button-background-color-down: var(--system-infield-button-quiet-background-color-down);
-	--spectrum-infield-button-background-color-key-focus: var(--system-infield-button-quiet-background-color-key-focus);
-	--spectrum-infield-button-height: var(--system-infield-button-size-xl-height);
-	--spectrum-infield-button-width: var(--system-infield-button-bottom-size-xl-width);
 	--spectrum-infield-button-stacked-border-radius-reset: var(--system-infield-button-stacked-border-radius-reset);
 	--spectrum-infield-button-edge-to-fill: var(--system-infield-button-edge-to-fill);
 	--spectrum-infield-button-inner-edge-to-fill: var(--system-infield-button-inner-edge-to-fill);
 	--spectrum-infield-button-fill-padding: var(--system-infield-button-fill-padding);
-	--spectrum-infield-button-stacked-fill-padding-inline: var(--system-infield-button-size-xl-stacked-fill-padding-inline);
-	--spectrum-infield-button-stacked-fill-padding-outer: var(--system-infield-button-size-xl-stacked-fill-padding-outer);
-	--spectrum-infield-button-stacked-fill-padding-inner: var(--system-infield-button-size-xl-stacked-fill-padding-inner);
-	--spectrum-infield-button-icon-color: var(--system-infield-button-disabled-icon-color);
-	--spectrum-infield-button-icon-color-hover: var(--system-infield-button-disabled-icon-color-hover);
-	--spectrum-infield-button-icon-color-down: var(--system-infield-button-disabled-icon-color-down);
-	--spectrum-infield-button-icon-color-key-focus: var(--system-infield-button-disabled-icon-color-key-focus);
 	--spectrum-infield-button-fill-justify-content: var(--system-infield-button-fill-justify-content);
-	--spectrum-infield-border-color: var(--system-infield-button-quiet-infield-border-color);
 }

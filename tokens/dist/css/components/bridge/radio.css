@@ -12,6 +12,18 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-radio-button-checked-border-color-default: var(--system-radio-button-checked-border-color-default);
+	--spectrum-radio-button-checked-border-color-hover: var(--system-radio-button-checked-border-color-hover);
+	--spectrum-radio-button-checked-border-color-down: var(--system-radio-button-checked-border-color-down);
+	--spectrum-radio-button-checked-border-color-focus: var(--system-radio-button-checked-border-color-focus);
+	--spectrum-radio-height: var(--system-radio-height);
+	--spectrum-radio-button-control-size: var(--system-radio-button-control-size);
+	--spectrum-radio-text-to-control: var(--system-radio-text-to-control);
+	--spectrum-radio-label-top-to-text: var(--system-radio-label-top-to-text);
+	--spectrum-radio-label-bottom-to-text: var(--system-radio-label-bottom-to-text);
+	--spectrum-radio-button-top-to-control: var(--system-radio-button-top-to-control);
+	--spectrum-radio-font-size: var(--system-radio-font-size);
+	--spectrum-radio-line-height-cjk: var(--system-radio-lang-ja-line-height-cjk);
 	--spectrum-radio-button-border-color-default: var(--system-radio-button-border-color-default);
 	--spectrum-radio-button-border-color-hover: var(--system-radio-button-border-color-hover);
 	--spectrum-radio-button-border-color-down: var(--system-radio-button-border-color-down);
@@ -31,18 +43,6 @@
 	--spectrum-radio-emphasized-accent-color-focus: var(--system-radio-emphasized-accent-color-focus);
 	--spectrum-radio-border-width: var(--system-radio-border-width);
 	--spectrum-radio-button-background-color: var(--system-radio-button-background-color);
-	--spectrum-radio-button-checked-border-color-default: var(--system-radio-emphasized-button-checked-border-color-default);
-	--spectrum-radio-button-checked-border-color-hover: var(--system-radio-emphasized-button-checked-border-color-hover);
-	--spectrum-radio-button-checked-border-color-down: var(--system-radio-emphasized-button-checked-border-color-down);
-	--spectrum-radio-button-checked-border-color-focus: var(--system-radio-emphasized-button-checked-border-color-focus);
 	--spectrum-radio-line-height: var(--system-radio-line-height);
 	--spectrum-radio-animation-duration: var(--system-radio-animation-duration);
-	--spectrum-radio-height: var(--system-radio-size-xl-height);
-	--spectrum-radio-button-control-size: var(--system-radio-size-xl-button-control-size);
-	--spectrum-radio-text-to-control: var(--system-radio-size-xl-text-to-control);
-	--spectrum-radio-label-top-to-text: var(--system-radio-size-xl-label-top-to-text);
-	--spectrum-radio-label-bottom-to-text: var(--system-radio-size-xl-label-bottom-to-text);
-	--spectrum-radio-button-top-to-control: var(--system-radio-size-xl-button-top-to-control);
-	--spectrum-radio-font-size: var(--system-radio-size-xl-font-size);
-	--spectrum-radio-line-height-cjk: var(--system-radio-lang-ko-line-height-cjk);
 }

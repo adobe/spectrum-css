@@ -14,12 +14,13 @@
 @import "./themes/spectrum-two.css";
 
 .spectrum-ProgressBar {
+	--mod-fieldlabel-font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
+
 	position: relative;
 	display: inline-flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
-	font-size: var(--mod-progressbar-font-size, var(--spectrum-progressbar-font-size));
 	vertical-align: top;
 
 	inline-size: var(--mod-progressbar-size-default, var(--spectrum-progressbar-size-default));

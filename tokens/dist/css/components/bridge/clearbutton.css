@@ -12,15 +12,15 @@
  */
 
 .spectrum.spectrum--express {
-	--spectrum-clear-button-background-color: var(--system-clear-button-disabled-background-color);
-	--spectrum-clear-button-background-color-hover: var(--system-clear-button-over-background-background-color-hover);
-	--spectrum-clear-button-background-color-down: var(--system-clear-button-over-background-background-color-down);
-	--spectrum-clear-button-background-color-key-focus: var(--system-clear-button-over-background-background-color-key-focus);
-	--spectrum-clear-button-height: var(--system-clear-button-size-xl-height);
-	--spectrum-clear-button-width: var(--system-clear-button-size-xl-width);
+	--spectrum-clear-button-icon-color: var(--system-clear-button-icon-color);
+	--spectrum-clear-button-icon-color-hover: var(--system-clear-button-icon-color-hover);
+	--spectrum-clear-button-icon-color-down: var(--system-clear-button-icon-color-down);
+	--spectrum-clear-button-background-color: var(--system-clear-button-background-color);
+	--spectrum-clear-button-icon-color-key-focus: var(--system-clear-button-icon-color-key-focus);
+	--spectrum-clear-button-background-color-hover: var(--system-clear-button-background-color-hover);
+	--spectrum-clear-button-background-color-down: var(--system-clear-button-background-color-down);
+	--spectrum-clear-button-background-color-key-focus: var(--system-clear-button-background-color-key-focus);
+	--spectrum-clear-button-height: var(--system-clear-button-height);
+	--spectrum-clear-button-width: var(--system-clear-button-width);
 	--spectrum-clear-button-padding: var(--system-clear-button-padding);
-	--spectrum-clear-button-icon-color: var(--system-clear-button-disabled-icon-color);
-	--spectrum-clear-button-icon-color-hover: var(--system-clear-button-disabled-icon-color-hover);
-	--spectrum-clear-button-icon-color-down: var(--system-clear-button-disabled-icon-color-down);
-	--spectrum-clear-button-icon-color-key-focus: var(--system-clear-button-over-background-icon-color-key-focus);
 }

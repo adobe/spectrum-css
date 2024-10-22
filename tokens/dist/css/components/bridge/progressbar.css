@@ -12,6 +12,10 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-progressbar-size-default: var(--system-progress-bar-size-default);
+	--spectrum-progressbar-font-size: var(--system-progress-bar-font-size);
+	--spectrum-progressbar-thickness: var(--system-progress-bar-thickness);
+	--spectrum-progressbar-spacing-top-to-text: var(--system-progress-bar-spacing-top-to-text);
 	--spectrum-progressbar-animation-ease-in-out-indeterminate: var(--system-progress-bar-animation-ease-in-out-indeterminate);
 	--spectrum-progressbar-animation-duration-indeterminate: var(--system-progress-bar-animation-duration-indeterminate);
 	--spectrum-progressbar-corner-radius: var(--system-progress-bar-corner-radius);
@@ -31,8 +35,4 @@
 	--spectrum-progressbar-label-and-value-white: var(--system-progress-bar-label-and-value-white);
 	--spectrum-progressbar-track-color-white: var(--system-progress-bar-track-color-white);
 	--spectrum-progressbar-fill-color-white: var(--system-progress-bar-fill-color-white);
-	--spectrum-progressbar-size-default: var(--system-progress-bar-size-xl-size-default);
-	--spectrum-progressbar-font-size: var(--system-progress-bar-size-xl-font-size);
-	--spectrum-progressbar-thickness: var(--system-progress-bar-size-xl-thickness);
-	--spectrum-progressbar-spacing-top-to-text: var(--system-progress-bar-size-xl-spacing-top-to-text);
 }

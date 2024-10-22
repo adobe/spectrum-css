@@ -12,16 +12,16 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-helptext-min-height: var(--system-help-text-min-height);
+	--spectrum-helptext-icon-size: var(--system-help-text-icon-size);
+	--spectrum-helptext-font-size: var(--system-help-text-font-size);
+	--spectrum-helptext-text-to-visual: var(--system-help-text-text-to-visual);
+	--spectrum-helptext-top-to-workflow-icon: var(--system-help-text-top-to-workflow-icon);
+	--spectrum-helptext-top-to-text: var(--system-help-text-top-to-text);
+	--spectrum-helptext-bottom-to-text: var(--system-help-text-bottom-to-text);
+	--spectrum-helptext-line-height-cjk: var(--system-help-text-lang-ja-line-height-cjk);
+	--spectrum-helptext-content-color-default: var(--system-help-text-content-color-default);
+	--spectrum-helptext-icon-color-default: var(--system-help-text-icon-color-default);
 	--spectrum-helptext-line-height: var(--system-help-text-line-height);
-	--spectrum-helptext-content-color-default: var(--system-help-text-disabled-content-color-default);
-	--spectrum-helptext-icon-color-default: var(--system-help-text-disabled-icon-color-default);
 	--spectrum-helptext-disabled-content-color: var(--system-help-text-disabled-content-color);
-	--spectrum-helptext-min-height: var(--system-help-text-size-xl-min-height);
-	--spectrum-helptext-icon-size: var(--system-help-text-size-xl-icon-size);
-	--spectrum-helptext-font-size: var(--system-help-text-size-xl-font-size);
-	--spectrum-helptext-text-to-visual: var(--system-help-text-size-xl-text-to-visual);
-	--spectrum-helptext-top-to-workflow-icon: var(--system-help-text-size-xl-top-to-workflow-icon);
-	--spectrum-helptext-top-to-text: var(--system-help-text-size-xl-top-to-text);
-	--spectrum-helptext-bottom-to-text: var(--system-help-text-size-xl-bottom-to-text);
-	--spectrum-helptext-line-height-cjk: var(--system-help-text-lang-ko-line-height-cjk);
 }

@@ -12,6 +12,22 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-assetcard-title-font-family: var(--system-asset-card-title-font-family);
+	--spectrum-assetcard-title-font-style: var(--system-asset-card-title-font-style);
+	--spectrum-assetcard-title-font-weight: var(--system-asset-card-title-font-weight);
+	--spectrum-assetcard-title-font-size: var(--system-asset-card-lang-zh-title-font-size);
+	--spectrum-assetcard-title-line-height: var(--system-asset-card-title-line-height);
+	--spectrum-assetcard-title-letter-spacing: var(--system-asset-card-title-letter-spacing);
+	--spectrum-assetcard-header-content-font-family: var(--system-asset-card-header-content-font-family);
+	--spectrum-assetcard-header-content-font-weight: var(--system-asset-card-header-content-font-weight);
+	--spectrum-assetcard-header-content-line-height: var(--system-asset-card-header-content-line-height);
+	--spectrum-assetcard-header-content-font-style: var(--system-asset-card-header-content-font-style);
+	--spectrum-assetcard-header-content-letter-spacing: var(--system-asset-card-header-content-letter-spacing);
+	--spectrum-assetcard-content-font-family: var(--system-asset-card-content-font-family);
+	--spectrum-assetcard-content-font-weight: var(--system-asset-card-content-font-weight);
+	--spectrum-assetcard-content-line-height: var(--system-asset-card-content-line-height);
+	--spectrum-assetcard-content-font-style: var(--system-asset-card-content-font-style);
+	--spectrum-assetcard-content-letter-spacing: var(--system-asset-card-content-letter-spacing);
 	--spectrum-assetcard-overlay-background-color-rgb: var(--system-asset-card-overlay-background-color-rgb);
 	--spectrum-assetcard-overlay-background-color-opacity: var(--system-asset-card-overlay-background-color-opacity);
 	--spectrum-assetcard-overlay-background-color: var(--system-asset-card-overlay-background-color);
@@ -36,23 +52,7 @@
 	--spectrum-assetcard-selectionindicator-font-weight: var(--system-asset-card-selectionindicator-font-weight);
 	--spectrum-assetcard-selectionindicator-font-size: var(--system-asset-card-selectionindicator-font-size);
 	--spectrum-assetcard-title-text-color: var(--system-asset-card-title-text-color);
-	--spectrum-assetcard-title-font-family: var(--system-asset-card-lang-ko-title-font-family);
-	--spectrum-assetcard-title-font-weight: var(--system-asset-card-lang-ko-title-font-weight);
-	--spectrum-assetcard-title-font-style: var(--system-asset-card-lang-ko-title-font-style);
-	--spectrum-assetcard-title-line-height: var(--system-asset-card-lang-ko-title-line-height);
-	--spectrum-assetcard-title-letter-spacing: var(--system-asset-card-lang-ko-title-letter-spacing);
 	--spectrum-assetcard-header-content-text-color: var(--system-asset-card-header-content-text-color);
-	--spectrum-assetcard-header-content-font-family: var(--system-asset-card-lang-ko-header-content-font-family);
-	--spectrum-assetcard-header-content-font-weight: var(--system-asset-card-lang-ko-header-content-font-weight);
-	--spectrum-assetcard-header-content-font-style: var(--system-asset-card-lang-ko-header-content-font-style);
-	--spectrum-assetcard-header-content-line-height: var(--system-asset-card-lang-ko-header-content-line-height);
-	--spectrum-assetcard-header-content-letter-spacing: var(--system-asset-card-lang-ko-header-content-letter-spacing);
 	--spectrum-assetcard-content-text-color: var(--system-asset-card-content-text-color);
-	--spectrum-assetcard-content-font-family: var(--system-asset-card-lang-ko-content-font-family);
-	--spectrum-assetcard-content-font-weight: var(--system-asset-card-lang-ko-content-font-weight);
-	--spectrum-assetcard-content-font-style: var(--system-asset-card-lang-ko-content-font-style);
-	--spectrum-assetcard-content-line-height: var(--system-asset-card-lang-ko-content-line-height);
-	--spectrum-assetcard-content-letter-spacing: var(--system-asset-card-lang-ko-content-letter-spacing);
 	--spectrum-assetcard-content-margin-block-start: var(--system-asset-card-content-margin-block-start);
-	--spectrum-assetcard-title-font-size: var(--system-asset-card-lang-ko-title-font-size);
 }

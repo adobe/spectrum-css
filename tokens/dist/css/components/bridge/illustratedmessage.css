@@ -12,6 +12,7 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-illustrated-message-title-font-size: var(--system-illustrated-message-title-font-size);
 	--spectrum-illustrated-message-description-max-inline-size: var(--system-illustrated-message-description-max-inline-size);
 	--spectrum-illustrated-message-heading-max-inline-size: var(--system-illustrated-message-heading-max-inline-size);
 	--spectrum-illustrated-message-title-to-heading: var(--system-illustrated-message-title-to-heading);
@@ -21,7 +22,6 @@
 	--spectrum-illustrated-message-title-font-family: var(--system-illustrated-message-title-font-family);
 	--spectrum-illustrated-message-title-font-weight: var(--system-illustrated-message-title-font-weight);
 	--spectrum-illustrated-message-title-font-style: var(--system-illustrated-message-title-font-style);
-	--spectrum-illustrated-message-title-font-size: var(--system-illustrated-message-lang-ko-title-font-size);
 	--spectrum-illustrated-message-title-line-height: var(--system-illustrated-message-title-line-height);
 	--spectrum-illustrated-message-title-color: var(--system-illustrated-message-title-color);
 	--spectrum-illustrated-message-description-font-family: var(--system-illustrated-message-description-font-family);

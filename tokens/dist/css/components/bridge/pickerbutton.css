@@ -12,6 +12,11 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-picker-button-height: var(--system-picker-button-height);
+	--spectrum-picker-button-width: var(--system-picker-button-width);
+	--spectrum-picker-button-label-padding: var(--system-picker-button-label-padding);
+	--spectrum-picker-button-font-size: var(--system-picker-button-font-size);
+	--spectrum-picker-button-fill-padding: var(--system-picker-button-fill-padding);
 	--spectrum-picker-button-background-color: var(--system-picker-button-background-color);
 	--spectrum-picker-button-background-color-hover: var(--system-picker-button-background-color-hover);
 	--spectrum-picker-button-background-color-down: var(--system-picker-button-background-color-down);
@@ -21,12 +26,8 @@
 	--spectrum-picker-button-border-radius-rounded-sided: var(--system-picker-button-border-radius-rounded-sided);
 	--spectrum-picker-button-border-radius-sided: var(--system-picker-button-border-radius-sided);
 	--spectrum-picker-button-border-width: var(--system-picker-button-border-width);
-	--spectrum-picker-button-height: var(--system-picker-button-size-xl-height);
-	--spectrum-picker-button-width: var(--system-picker-button-size-xl-width);
 	--spectrum-picker-button-gap: var(--system-picker-button-gap);
 	--spectrum-picker-button-padding: var(--system-picker-button-padding);
-	--spectrum-picker-button-label-padding: var(--system-picker-button-size-xl-label-padding);
-	--spectrum-picker-button-fill-padding: var(--system-picker-button-size-xl-fill-padding);
 	--spectrum-picker-button-border-radius-rounded: var(--system-picker-button-border-radius-rounded);
 	--spectrum-picker-button-icon-color: var(--system-picker-button-icon-color);
 	--spectrum-picker-button-icon-color-hover: var(--system-picker-button-icon-color-hover);
@@ -39,7 +40,6 @@
 	--spectrum-picker-button-font-family: var(--system-picker-button-font-family);
 	--spectrum-picker-button-font-style: var(--system-picker-button-font-style);
 	--spectrum-picker-button-font-weight: var(--system-picker-button-font-weight);
-	--spectrum-picker-button-font-size: var(--system-picker-button-size-xl-font-size);
 	--spectrum-picker-button-background-animation-duration: var(--system-picker-button-background-animation-duration);
 	--spectrum-picker-button-background-color-disabled: var(--system-picker-button-background-color-disabled);
 	--spectrum-picker-button-background-color-hover-disabled: var(--system-picker-button-background-color-hover-disabled);

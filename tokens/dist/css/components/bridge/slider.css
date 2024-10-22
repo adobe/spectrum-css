@@ -12,6 +12,15 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-slider-font-size: var(--system-slider-font-size);
+	--spectrum-slider-handle-size: var(--system-slider-handle-size);
+	--spectrum-slider-control-height: var(--system-slider-control-height);
+	--spectrum-slider-handle-border-radius: var(--system-slider-handle-border-radius);
+	--spectrum-slider-handle-border-width-down: var(--system-slider-handle-border-width-down);
+	--spectrum-slider-label-top-to-text: var(--system-slider-label-top-to-text);
+	--spectrum-slider-control-to-field-label: var(--system-slider-control-to-field-label);
+	--spectrum-slider-value-side-padding-inline: var(--system-slider-value-side-padding-inline);
+	--spectrum-slider-value-inline-size: var(--system-slider-value-inline-size);
 	--spectrum-slider-track-color: var(--system-slider-track-color);
 	--spectrum-slider-track-fill-color: var(--system-slider-track-fill-color);
 	--spectrum-slider-ramp-track-color: var(--system-slider-ramp-track-color);
@@ -27,7 +36,6 @@
 	--spectrum-slider-handle-border-color-down: var(--system-slider-handle-border-color-down);
 	--spectrum-slider-handle-border-color-key-focus: var(--system-slider-handle-border-color-key-focus);
 	--spectrum-slider-handle-focus-ring-color-key-focus: var(--system-slider-handle-focus-ring-color-key-focus);
-	--spectrum-slider-value-inline-size: var(--system-slider-size-xl-value-inline-size);
 	--spectrum-slider-ramp-track-block-size: var(--system-slider-ramp-track-block-size);
 	--spectrum-slider-cjk-line-height: var(--system-slider-cjk-line-height);
 	--spectrum-slider-min-size: var(--system-slider-min-size);
@@ -48,12 +56,4 @@
 	--spectrum-slider-ramp-handle-border-color-active: var(--system-slider-ramp-handle-border-color-active);
 	--spectrum-slider-track-handleoffset: var(--system-slider-track-handleoffset);
 	--spectrum-slider-range-track-reset: var(--system-slider-range-track-reset);
-	--spectrum-slider-font-size: var(--system-slider-size-xl-font-size);
-	--spectrum-slider-handle-size: var(--system-slider-size-xl-handle-size);
-	--spectrum-slider-control-height: var(--system-slider-size-xl-control-height);
-	--spectrum-slider-handle-border-radius: var(--system-slider-size-xl-handle-border-radius);
-	--spectrum-slider-handle-border-width-down: var(--system-slider-size-xl-handle-border-width-down);
-	--spectrum-slider-label-top-to-text: var(--system-slider-size-xl-label-top-to-text);
-	--spectrum-slider-control-to-field-label: var(--system-slider-size-xl-control-to-field-label);
-	--spectrum-slider-value-side-padding-inline: var(--system-slider-size-xl-value-side-padding-inline);
 }

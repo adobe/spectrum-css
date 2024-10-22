@@ -12,6 +12,9 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-swatch-size: var(--system-swatch-size);
+	--spectrum-swatch-disabled-icon-size: var(--system-swatch-disabled-icon-size);
+	--spectrum-swatch-slash-thickness: var(--system-swatch-slash-thickness);
 	--spectrum-swatch-border-radius: var(--system-swatch-border-radius);
 	--spectrum-swatch-focus-indicator-border-radius: var(--system-swatch-focus-indicator-border-radius);
 	--spectrum-swatch-border-thickness: var(--system-swatch-border-thickness);
@@ -29,7 +32,4 @@
 	--spectrum-swatch-dash-icon-color: var(--system-swatch-dash-icon-color);
 	--spectrum-swatch-slash-icon-color: var(--system-swatch-slash-icon-color);
 	--spectrum-swatch-focus-indicator-color: var(--system-swatch-focus-indicator-color);
-	--spectrum-swatch-size: var(--system-swatch-size-l-size);
-	--spectrum-swatch-disabled-icon-size: var(--system-swatch-size-l-disabled-icon-size);
-	--spectrum-swatch-slash-thickness: var(--system-swatch-size-l-slash-thickness);
 }

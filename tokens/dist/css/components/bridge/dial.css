@@ -12,6 +12,8 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-dial-width: var(--system-dial-width);
+	--spectrum-dial-height: var(--system-dial-height);
 	--spectrum-dial-background-color-default: var(--system-dial-background-color-default);
 	--spectrum-dial-handle-marker-color-disabled: var(--system-dial-handle-marker-color-disabled);
 	--spectrum-dial-border-color-disabled: var(--system-dial-border-color-disabled);
@@ -37,8 +39,6 @@
 	--spectrum-dial-min-height: var(--system-dial-min-height);
 	--spectrum-dial-controls-min-height: var(--system-dial-controls-min-height);
 	--spectrum-dial-min-max-tick-angles: var(--system-dial-min-max-tick-angles);
-	--spectrum-dial-width: var(--system-dial-small-width);
-	--spectrum-dial-height: var(--system-dial-small-height);
 	--spectrum-dial-handle-border-size: var(--system-dial-handle-border-size);
 	--spectrum-dial-label-text-size: var(--system-dial-label-text-size);
 	--spectrum-dial-label-line-height: var(--system-dial-label-line-height);

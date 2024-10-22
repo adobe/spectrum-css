@@ -12,6 +12,6 @@
  */
 
 .spectrum.spectrum--express {
-	--spectrum-buttongroup-spacing-horizontal: var(--system-button-group-size-xl-spacing-horizontal);
-	--spectrum-buttongroup-spacing-vertical: var(--system-button-group-size-xl-spacing-vertical);
+	--spectrum-buttongroup-spacing-horizontal: var(--system-button-group-spacing-horizontal);
+	--spectrum-buttongroup-spacing-vertical: var(--system-button-group-spacing-vertical);
 }

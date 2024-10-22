@@ -12,6 +12,8 @@
  */
 
 .spectrum.spectrum--express {
+	--spectrum-stepper-button-width: var(--system-stepper-button-width);
+	--spectrum-stepper-height: var(--system-stepper-height);
 	--spectrum-stepper-border-width: var(--system-stepper-border-width);
 	--spectrum-stepper-border-color: var(--system-stepper-border-color);
 	--spectrum-stepper-border-color-hover: var(--system-stepper-border-color-hover);
@@ -42,8 +44,6 @@
 	--spectrum-stepper-button-border-color-disabled: var(--system-stepper-button-border-color-disabled);
 	--spectrum-stepper-button-border-width-disabled: var(--system-stepper-button-border-width-disabled);
 	--spectrum-stepper-buttons-background-color-disabled: var(--system-stepper-buttons-background-color-disabled);
-	--spectrum-stepper-button-width: var(--system-stepper-size-xl-button-width);
-	--spectrum-stepper-height: var(--system-stepper-size-xl-height);
 	--spectrum-stepper-button-background-color-keyboard-focus: var(--system-stepper-button-background-color-keyboard-focus);
 	--spectrum-stepper-button-background-color-focus: var(--system-stepper-button-background-color-focus);
 }

@@ -15,8 +15,6 @@
 	.spectrum-Meter {
 		--spectrum-meter-min-width: var(--spectrum-meter-minimum-width);
 		--spectrum-meter-max-width: var(--spectrum-meter-maximum-width);
-		--spectrum-meter-inline-size: var(--spectrum-meter-width);
-		--spectrum-meter-top-to-text: var(--spectrum-component-top-to-text);
 
 		--spectrum-meter-fill-color-positive: var(--spectrum-positive-visual-color);
 		--spectrum-meter-fill-color-notice: var(--spectrum-notice-visual-color);
@@ -24,18 +22,18 @@
 	}
 
 	/* Meter only supports size S and L (default) */
-	.spectrum-Meter--sizeS {
-		--spectrum-meter-thickness: var(--spectrum-meter-thickness-small);
-		--spectrum-meter-inline-size: var(--spectrum-progressbar-size-2400);
-		--spectrum-meter-font-size: var(--spectrum-font-size-75);
-		--spectrum-meter-top-to-text: var(--spectrum-component-top-to-text-75);
-	}
-
 	.spectrum-Meter,
 	.spectrum-Meter--sizeL {
 		--spectrum-meter-thickness: var(--spectrum-meter-thickness-large);
 		--spectrum-meter-inline-size: var(--spectrum-progressbar-size-2500);
 		--spectrum-meter-font-size: var(--spectrum-font-size-100);
 		--spectrum-meter-top-to-text: var(--spectrum-component-top-to-text-200);
+	}
+
+	.spectrum-Meter--sizeS {
+		--spectrum-meter-thickness: var(--spectrum-meter-thickness-small);
+		--spectrum-meter-inline-size: var(--spectrum-progressbar-size-2400);
+		--spectrum-meter-font-size: var(--spectrum-font-size-75);
+		--spectrum-meter-top-to-text: var(--spectrum-component-top-to-text-75);
 	}
 }

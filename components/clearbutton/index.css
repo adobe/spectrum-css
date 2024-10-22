@@ -77,10 +77,8 @@
 	justify-content: center;
 }
 
-.spectrum-ClearButton--overBackground {
-	&:focus-visible {
-		outline: none;
-	}
+.spectrum-ClearButton--overBackground:focus-visible {
+	outline: none;
 }
 
 @media (forced-colors: active) {
