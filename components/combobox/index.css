@@ -90,6 +90,13 @@
 	--mod-picker-button-background-color-disabled: var(--mod-combobox-background-color-disabled);
 	--mod-picker-button-font-color-disabled: var(--mod-combobox-font-color-disabled);
 	/* @passthroughs end -- settings for nested Picker Button component */
+
+	/*** Read-only Colors ***/
+	--spectrum-combobox-readonly-input-background-color: var(--spectrum-gray-50);
+	--spectrum-combobox-readonly-input-border-color: var(--system-spectrum-textfield-border-color);
+	--spectrum-combobox-readonly-border-color-invalid-default: var(--spectrum-negative-border-color-default);
+	--spectrum-combobox-readonly-background-color-disabled: var(--spectrum-disabled-background-color);
+	--spectrum-combobox-readonly-text-color-disabled: var(--spectrum-disabled-content-color);
 }
 
 .spectrum-Combobox--sizeS {
@@ -301,12 +308,6 @@
 /* TEXTFIELD (wrapper) */
 .spectrum-Combobox-textfield {
 	inline-size: 100%;
-
-	/* &.spectrum-Textfield--quiet {
-		input:read-only {
-			background-color: transparent;
-		}
-	} */
 }
 
 /* TEXT INPUT */
@@ -380,8 +381,8 @@
 /* Combobox Read-only */
 .spectrum-Textfield.is-readOnly {
 	input:read-only {
-		background-color: var(--spectrum-textfield-background-color);
-		border-color: var(--spectrum-textfield-border-color);
+		background-color: var(--spectrum-combobox-readonly-input-background-color);
+		border-color: var(--spectrum-combobox-readonly-input-border-color);
 
 		&:hover {
 			background-color: revert;
@@ -390,13 +391,13 @@
 	}
 
 	&.is-invalid input:read-only {
-		border-color: var(--highcontrast-textfield-border-color-invalid-default, var(--mod-textfield-border-color-invalid-default, var(--spectrum-textfield-border-color-invalid-default)));
+		border-color: var(--highcontrast-textfield-border-color-invalid-default, var(--mod-textfield-border-color-invalid-default, var(--spectrum-combobox-readonly-border-color-invalid-default)));
 	}
 
 	&.is-disabled input:read-only {
-		background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-textfield-background-color-disabled));
+		background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-combobox-readonly-background-color-disabled));
 		border-color: transparent;
-		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-textfield-text-color-disabled)));
+		color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-combobox-readonly-text-color-disabled)));
 	}
 
 	&.spectrum-Textfield--quiet {
@@ -406,12 +407,13 @@
 		}
 
 		&.is-invalid input:read-only {
-			border-color: var(--highcontrast-textfield-border-color-invalid-default, var(--mod-textfield-border-color-invalid-default, var(--spectrum-textfield-border-color-invalid-default)));
+			border-color: var(--highcontrast-textfield-border-color-invalid-default, var(--mod-textfield-border-color-invalid-default, var(--spectrum-combobox-readonly-border-color-invalid-default)));
 		}
 	}
 }
 
 /* QUIET VARIATION (no visible background) */
+/* stylelint-disable-next-line no-duplicate-selectors -- Combobox quiet variation and mods */
 .spectrum-Combobox--quiet {
 	border-radius: 0;
 
