@@ -4,23 +4,24 @@
 "@spectrum-css/underlay": patch
 ---
 
-Spectrum 2 Standard Dialog Migration
+Spectrum 2 Dialog Migrations
+(standard and takeover)
 
-To separate itself from another component named "alert dialog," dialog was renamed to "standard dialog." The Divider component is no longer supported in S2 standard dialogs. Checkbox and text-only options are available in the footer content area. In addition, some new and updated tokens are in place to update the standard dialog corner rounding, font treatments, spacing/padding, and maximum/minimum widths. There were several missing elements of the standard dialog implemented, including optional header and footer content, hero/cover images, and supporting fullscreen layouts.
+This is the migration for both standard dialog and takeover dialog. The Divider component is no longer supported in S2 dialogs. In addition, some new and updated tokens are in place to update dialog corner rounding, font treatments, spacing/padding, and maximum/minimum widths. There were several new elements implemented as well, including optional header and footer content, hero/cover images, checkbox and text-only options in the footer content area.
 
-Mod properties are either "new," have been renamed to reflect the "standard dialog" language, or were removed:
+The `.spectrum-Dialog--small`, `.spectrum-Dialog--medium`, and `.spectrum-Dialog--large` sizing classes were deprecated and removed from the CSS in favor of the t-shirt sizes. Additionally, the spelling of the `.spectrum-Dialog--dismissable` class was corrected to `.spectrum-Dialog--dismissible`.
+
+Mod properties are either "new," have been renamed to reflect the respective dialog language, or were removed:
 
 _New Mods_
-`--mod-standard-dialog-heading-font-size`
-`--mod-standard-dialog-max-width`
-`--mod-standard-dialog-max-width-large`
-`--mod-standard-dialog-max-width-small`
-`--mod-standard-dialog-spacing-description-to-footer`
-`--mod-standard-dialog-spacing-edge-to-close-button`
 `--mod-standard-dialog-spacing-title-to-header-content`
-`--mod-standard-dialog-spacing-footer-to-button-group`
+`--mod-takeover-dialog-spacing-grid-padding`
+`--mod-takeover-dialog-spacing-header-gap`
 
 _Renamed Mods_
+`--mod-dialog-confirm-small-width` > `--mod-standard-dialog-max-width-small`
+`--mod-dialog-confirm-medium-width` > `--mod-standard-dialog-max-width`
+`--mod-dialog-confirm-large-width` > `--mod-standard-dialog-max-width-large`
 `--mod-dialog-confirm-border-radius` > `--mod-standard-dialog-border-radius`
 `--mod-dialog-confirm-description-text-size` > `--mod-standard-dialog-description-font-size`
 `--mod-dialog-confirm-description-text-line-height` > `--mod-standard-dialog-description-line-height`
@@ -29,27 +30,25 @@ _Renamed Mods_
 `--mod-dialog-heading-font-weight` > `--mod-standard-dialog-heading-font-weight`
 `--mod-dialog-confirm-title-text-line-height` > `--mod-standard-dialog-heading-line-height`
 `--mod-dialog-confirm-title-text-color` > `--mod-standard-dialog-heading-text-color`
-`--mod-dialog-confirm-hero-height` > `--mod-standard-dialog-min-hero-block-size`
+`--mod-dialog-confirm-title-text-size` > `--mod-standard-dialog-heading-font-size`
+`--mod-dialog-confirm-hero-height` > `--mod-standard-dialog-hero-block-size`
 `--mod-dialog-min-inline-size` > `--mod-standard-dialog-min-inline-size`
 `--mod-dialog-confirm-padding-grid` > `--mod-standard-dialog-spacing-grid-padding`
+`--mod-dialog-confirm-footer-padding-top` > `--mod-standard-dialog-spacing-description-to-footer`
+`--mod-dialog-confirm-close-button-padding` > `--mod-standard-dialog-spacing-edge-to-close-button`
+`--mod-dialog-confirm-gap-size` > `--mod-standard-dialog-spacing-footer-to-button-group`
+`--mod-dialog-fullscreen-header-text-size` >`--mod-takeover-dialog-title-font-size`
 
 _Removed Mods_
 `--mod-dialog-confirm-buttongroup-padding-top`
-`--mod-dialog-confirm-close-button-padding`
 `--mod-dialog-confirm-close-button-size`
 `--mod-dialog-confirm-description-margin`
 `--mod-dialog-confirm-description-padding`
 `--mod-dialog-confirm-divider-block-spacing-end`
 `--mod-dialog-confirm-divider-block-spacing-start`
 `--mod-dialog-confirm-divider-height`
-`--mod-dialog-confirm-footer-padding-top`
-`--mod-dialog-confirm-gap-size`
-`--mod-dialog-confirm-large-width`
-`--mod-dialog-confirm-medium-width`
-`--mod-dialog-confirm-small-width`
-`--mod-dialog-confirm-title-text-size`
-`--mod-dialog-fullscreen-header-text-size`
 
 Modal and underlay updates
 
-The Modal component now uses the updated corner rounding found in the standard dialog design specs. Underlay has an updated comment that addresses the overlay-color/overlay-opacity tokens.
+- Modal component now uses the updated corner rounding and updated margin (window-to-edge) found in the takeover dialog design specs.
+- Underlay has an updated comment that addresses the overlay-color/overlay-opacity tokens.
