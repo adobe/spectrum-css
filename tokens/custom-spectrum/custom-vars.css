@@ -55,4 +55,6 @@
   /* static white / black background color for docs containers */
   --spectrum-docs-static-white-background-color: rgb(15, 121, 125);
   --spectrum-docs-static-black-background-color: rgb(181, 209, 211);
+
+  --spectrum-coach-indicator-ring-static-white-color: var(--spectrum-white);
 }
