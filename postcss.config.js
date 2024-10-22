@@ -52,13 +52,13 @@ module.exports = ({
 			/* --------------------------------------------------- */
 			/* ------------------- SASS-LIKE UTILITIES ----------- */
 			"postcss-extend": {},
-			"postcss-hover-media-feature": {},
 			"postcss-pseudo-classes": !isProduction ? {
 				restrictTo: ["focus-visible", "focus-within", "hover", "active", "disabled"],
 				allCombinations: true,
 				preserveBeforeAfter: false,
 				prefix: "is-"
 			} : false,
+			"postcss-hover-media-feature": {},
 			"@spectrum-tools/postcss-rgb-mapping": {
 				colorFunctionalNotation: false,
 			},
