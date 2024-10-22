@@ -247,10 +247,10 @@
 		&.spectrum-DatePicker--quiet {
 			.spectrum-DatePicker-textfield {
 				inline-size: var(--mod-datepicker-datetime-quiet-input-width, var(--spectrum-datepicker-datetime-quiet-input-width));
+			}
 
-				&:first-of-type {
-					inline-size: var(--mod-datepicker-datetime-quiet-input-width-first, var(--spectrum-datepicker-datetime-quiet-input-width-first));
-				}
+			.spectrum-DatePicker-textfield:first-of-type {
+				inline-size: var(--mod-datepicker-datetime-quiet-input-width-first, var(--spectrum-datepicker-datetime-quiet-input-width-first));
 			}
 		}
 	}
