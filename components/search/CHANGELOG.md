@@ -1,5 +1,11 @@
 # Change Log
 
+## 8.0.0-s2-foundations.18
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`22fbd89`](https://github.com/adobe/spectrum-css/commit/22fbd895f90470d6a0211c50360d774c6a54ff57) Thanks [@pfulton](https://github.com/pfulton)! - Update offset mod placement for quiet button offsets
+
 ## 8.0.0-s2-foundations.17
 
 ### Minor Changes
