@@ -78,6 +78,10 @@ export const Default = AlertBannerGroup.bind({});
 Default.tags = ["!autodocs"];
 Default.args = {
 	isOpen: true,
+	customStyles: {
+		// So it takes up the whole width in the chromatic Variants template, where it is a flex item.
+		"flex-grow": "1",
+	},
 };
 
 // ********* VRT ONLY ********* //
