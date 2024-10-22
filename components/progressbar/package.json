@@ -53,5 +53,15 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/progress-bar",
+			"rootClass": "spectrum-ProgressBar"
+		},
+		{
+			"guidelines": "https://spectrum.adobe.com/page/meter",
+			"rootClass": "spectrum-Meter"
+		}
+	]
 }

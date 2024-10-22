@@ -55,5 +55,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/tree-view",
+			"rootClass": "spectrum-TreeView"
+		}
+	]
 }

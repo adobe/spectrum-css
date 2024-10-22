@@ -7,28 +7,28 @@ import { capitalize } from "lodash-es";
 /**
  * Renders a heading or code block that identifies the test case and is ignored by the snapshots.
  * @param {Object} props
- * @param {string} props.type - The type of heading or code block to render.
+ * @param {string} props.semantics - The type of heading or code block to render.
  * @param {string} props.content - The content to render in the heading or code block.
  * @param {string} props.size - The size of the heading to render.
  * @param {string} props.weight - The weight of the heading to render.
  * @param {string[]} props.customClasses - Additional classes to apply to the heading or code block.
  */
 const Heading = ({
-	type = "heading",
+	semantics = "heading",
 	content,
 	size = "l",
 	weight,
 	customClasses = [],
 } = {}) => {
 	return Typography({
-		semantics: type === "code" ? "code" : "detail",
+		semantics,
 		size,
 		weight,
 		content,
 		skipLineBreak: true,
 		customClasses: ["chromatic-ignore", ...customClasses],
 		customStyles: {
-			"color": type !== "code" ? "var(--spectrum-heading-color)" : undefined,
+			"color": semantics === "detail" ? "var(--spectrum-heading-color)" : undefined,
 		}
 	});
 };
@@ -48,18 +48,26 @@ const Heading = ({
 export const Container = ({
 	heading,
 	content,
-	type = "heading",
+	type = "detail",
 	level = 1,
 	direction = "row",
 	withBorder = true,
 	containerStyles = {},
 	wrapperStyles = {},
 } = {}) => {
-	let headingConfig = { size: "l" };
+	const headingConfig = { size: "l", semantics: type };
 	let gap = 40;
 
 	if (level > 1) {
-		headingConfig = { size: "s", weight: "light" };
+		headingConfig.size = "s";
+		headingConfig.weight = "light";
+	}
+
+	if (level > 3) {
+		headingConfig.size = "xxs";
+		headingConfig.semantics = "heading";
+		containerStyles["padding-block-start"] = "8px";
+		wrapperStyles["padding-block-start"] = "12px";
 	}
 
 	if (level === 2) {
@@ -91,7 +99,6 @@ export const Container = ({
 		>
 			${when(heading, () => Heading({
 				...headingConfig,
-				type,
 				content: heading
 			}))}
 			<div

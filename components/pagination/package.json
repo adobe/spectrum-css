@@ -56,5 +56,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/pagination-list-beta",
+			"rootClass": "spectrum-Pagination"
+		}
+	]
 }

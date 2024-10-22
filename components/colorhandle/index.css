@@ -96,7 +96,7 @@
 	block-size: 100%;
 	box-shadow: inset 0 0 0 var(--mod-colorhandle-inner-border-width, var(--spectrum-colorhandle-inner-border-width)) var(--mod-colorhandle-inner-border-color, var(--spectrum-colorhandle-inner-border-color));
 
-	/* Undefined variable allows custom stylesheet or JS to pass the value to this element */
+	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 	background-color: var(--spectrum-picked-color);
 }
 

@@ -35,6 +35,10 @@
 }
 
 .spectrum-ColorWheel {
+	/* stylelint-disable spectrum-tools/no-unused-custom-properties, custom-property-pattern -- --track-width and --border-width to be used with JS in calculating the clip-path paths and colorarea-container-size */
+	--track-width: var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width));
+	--border-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
+
 	position: relative;
 	display: block;
 	min-inline-size: var(--mod-colorwheel-min-width, var(--spectrum-colorwheel-min-width));
@@ -46,10 +50,6 @@
 	&.is-focused {
 		z-index: 2;
 	}
-
-	/* --track-width and --border-width to be used with JS in calculating the clip-path paths and colorarea-container-size */
-	--track-width: var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width));
-	--border-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
 
 	&.is-disabled {
 		pointer-events: none;

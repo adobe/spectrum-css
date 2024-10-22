@@ -1,5 +1,16 @@
 # Change Log
 
+## 4.2.0
+
+### Minor Changes
+
+- [#3265](https://github.com/adobe/spectrum-css/pull/3265) [`31fdc3b`](https://github.com/adobe/spectrum-css/commit/31fdc3b7f9d0a09baf03f8675bbf4b418744db47) Thanks [@cdransf](https://github.com/cdransf)! - Assigns CanvasText to custom property to satisfy linting requirements.
+
+### Patch Changes
+
+- Updated dependencies [[`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86)]:
+  - @spectrum-css/tokens@14.5.0
+
 ## 4.1.3
 
 ### Patch Changes

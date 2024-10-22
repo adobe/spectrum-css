@@ -1,5 +1,19 @@
 # Change Log
 
+## 5.2.2
+
+### Patch Changes
+
+- [#3270](https://github.com/adobe/spectrum-css/pull/3270) [`008bb34`](https://github.com/adobe/spectrum-css/commit/008bb34a0bbefd1abeb0d37bcdb179811dd9df3c) Thanks [@cdransf](https://github.com/cdransf)! - Removes unnecessary stylelint-disable comments now that rule is disabled in config.
+
+## 5.2.1
+
+### Patch Changes
+
+- [#3250](https://github.com/adobe/spectrum-css/pull/3250) [`2b45928`](https://github.com/adobe/spectrum-css/commit/2b45928b503c9ded173a56da65a32764f2255918) Thanks [@castastrophe](https://github.com/castastrophe)! - CloseButton
+
+  - Remove hardcoded tokens for sizing in favor of component sizing. Remove mapping to height & width separately in favor of using the existing "--spectrum-closebutton-size" property.
+
 ## 5.2.0
 
 ### Minor Changes
