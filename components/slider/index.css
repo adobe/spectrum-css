@@ -129,7 +129,7 @@
 	.spectrum-Slider-labelContainer {
 		margin-block-start: 0;
 
-		.spectrum-Slider-label { 
+		.spectrum-Slider-label {
 			margin-inline-end: var(--mod-slider-value-side-padding-inline, var(--spectrum-slider-value-side-padding-inline));
 		}
 	}
@@ -391,8 +391,8 @@
 	inset-block-start: var(--mod-slider-input-top-size, var(--spectrum-slider-input-top-size));
 	inset-inline-start: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
 	overflow: hidden;
-	/* @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
-	opacity: 0.000001; /* stylelint-disable-line number-max-precision */
+	/* stylelint-disable-next-line number-max-precision -- @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
+	opacity: 0.000001;
 	cursor: default;
 	appearance: none;
 	border: 0;
