@@ -247,9 +247,10 @@
 		--highcontrast-rating-emphasized-icon-color-default: Highlight;
 		--highcontrast-rating-emphasized-icon-color-hover: Highlight;
 		--highcontrast-rating-emphasized-icon-color-down: Highlight;
+		--highcontrast-rating-focus-color-outline: CanvasText;
 
 		&.is-focused {
-			outline: 1px solid CanvasText; /* stylelint-disable-line declaration-property-value-no-unknown */
+			outline: 1px solid var(--highcontrast-rating-focus-color-outline);
 		}
 
 		&:hover .spectrum-Rating-icon.is-currentValue::after {
