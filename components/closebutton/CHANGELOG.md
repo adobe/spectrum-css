@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.2.2
+
+### Patch Changes
+
+- [#3270](https://github.com/adobe/spectrum-css/pull/3270) [`008bb34`](https://github.com/adobe/spectrum-css/commit/008bb34a0bbefd1abeb0d37bcdb179811dd9df3c) Thanks [@cdransf](https://github.com/cdransf)! - Removes unnecessary stylelint-disable comments now that rule is disabled in config.
+
 ## 5.2.1
 
 ### Patch Changes

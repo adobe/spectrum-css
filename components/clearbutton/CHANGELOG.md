@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.2.0
+
+### Minor Changes
+
+- [#3263](https://github.com/adobe/spectrum-css/pull/3263) [`904d5b0`](https://github.com/adobe/spectrum-css/commit/904d5b0eae5cd62dd1346a2443192aec886e613b) Thanks [@cdransf](https://github.com/cdransf)! - Removes undefined leading tokens in mods assignments for clearbutton.
+
+### Patch Changes
+
+- Updated dependencies [[`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86)]:
+  - @spectrum-css/tokens@14.5.0
+
 ## 6.1.3
 
 ### Patch Changes

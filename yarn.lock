@@ -3257,7 +3257,7 @@ __metadata:
     "@spectrum-css/checkbox": ">=9"
     "@spectrum-css/icon": ">=7"
     "@spectrum-css/quickaction": ">=3"
-    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/tokens": ">=14.5.0"
     "@spectrum-css/typography": ">=6"
   peerDependenciesMeta:
     "@spectrum-css/actionbutton":
@@ -3466,7 +3466,7 @@ __metadata:
     "@spectrum-css/actionbutton": ">=6"
     "@spectrum-css/link": ">=5"
     "@spectrum-css/popover": ">=7"
-    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/tokens": ">=14.5.0"
   peerDependenciesMeta:
     "@spectrum-css/link":
       optional: true
@@ -3921,7 +3921,7 @@ __metadata:
     prettier: "npm:^3.2.5"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
-    react-syntax-highlighter: "npm:^15.5.0"
+    react-syntax-highlighter: "npm:^15.6.1"
     rollup-plugin-postcss-lit: "npm:^2.1.0"
     storybook: "npm:^8.3.6"
     vite: "npm:^5.4.9"
@@ -4134,7 +4134,7 @@ __metadata:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
     "@spectrum-css/opacitycheckerboard": ">=2"
-    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/tokens": ">=14.5.0"
   languageName: unknown
   linkType: soft
 
@@ -4361,7 +4361,7 @@ __metadata:
   dependencies:
     "@spectrum-css/tokens": "workspace:^"
   peerDependencies:
-    "@spectrum-css/tokens": ">=14"
+    "@spectrum-css/tokens": ">=14.5.0"
   languageName: unknown
   linkType: soft
 
@@ -10886,6 +10886,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highlightjs-vue@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "highlightjs-vue@npm:1.0.0"
+  checksum: 10c0/9be378c70b864ca5eee87b07859222e31c946a8ad176227e54f7006a498223974ebe19fcce6e38ad5eb3c1ed0e16a580c4edefdf2cb882b6dfab1c3866cc047a
+  languageName: node
+  linkType: hard
+
 "hjson@npm:^2.4.1":
   version: 2.4.3
   resolution: "hjson@npm:2.4.3"
@@ -16107,18 +16114,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-syntax-highlighter@npm:^15.5.0":
-  version: 15.5.0
-  resolution: "react-syntax-highlighter@npm:15.5.0"
+"react-syntax-highlighter@npm:^15.6.1":
+  version: 15.6.1
+  resolution: "react-syntax-highlighter@npm:15.6.1"
   dependencies:
     "@babel/runtime": "npm:^7.3.1"
     highlight.js: "npm:^10.4.1"
+    highlightjs-vue: "npm:^1.0.0"
     lowlight: "npm:^1.17.0"
     prismjs: "npm:^1.27.0"
     refractor: "npm:^3.6.0"
   peerDependencies:
     react: ">= 0.14.0"
-  checksum: 10c0/2bf57a1ea151f688efc7eba355677577c9bb55f05f9df7ef86627aae42f63f505486cddf3f4a628aecc51ec75e89beb9533201570d03201c4bf7d69d61d2545d
+  checksum: 10c0/4a4cf4695c45d7a6b25078970fb79ae5a85edeba5be0a2508766ee18e8aee1c0c4cdd97bf54f5055e4af671fe7e5e71348e81cafe09a0eb07a763ae876b7f073
   languageName: node
   linkType: hard
 
