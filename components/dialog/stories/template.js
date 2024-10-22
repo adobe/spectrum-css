@@ -1,9 +1,9 @@
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
+import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as CloseButton } from "@spectrum-css/closebutton/stories/template.js";
 import { Template as Modal } from "@spectrum-css/modal/stories/template.js";
-import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import { Template as Checkbox } from "@spectrum-css/checkbox/stories/template.js";
+import { Template as Underlay } from "@spectrum-css/underlay/stories/template.js";
 // import { getRandomId, renderContent } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -26,7 +26,7 @@ export const Template = ({
 	content = [],
 	customClasses = [],
 	id,
-	size = "medium",
+	size = "m",
 	layout,
 	heroImageUrl,
 	customStyles = {},
@@ -38,9 +38,9 @@ export const Template = ({
 		<div
 			class=${classMap({
 				[rootClass]: true,
-				[`${rootClass}--dismissable`]: isDismissible && ["fullscreen", "fullscreenTakeover"].every(l => layout !== l),
+				[`${rootClass}--dismissible`]: isDismissible && ["fullscreen", "fullscreenTakeover"].every(l => layout !== l),
 				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
-				[`${rootClass}--${size}`]: typeof size !== "undefined", 
+				[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined", 
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -63,20 +63,28 @@ export const Template = ({
 						<h1 class="${rootClass}-heading">${heading}</h1>
 					`)}
 					${when(header, () => html`
-						${Typography({
-							semantics: "body",
-							size: "m",
-							content: header
-						})}
-					`)}
+						<span class="${rootClass}-header-content">
+							${Typography({
+								semantics: "body",
+								size: "m",
+								// @todo: takeover dialogs can accept other components in their headers. could the renderContent function work here?
+								content: [ header ]
+							})}
+						</span>
+					`,
+					() => html`
+						<span class="${rootClass}-heading--noHeader"></span>
+					`
+				)}
 				</div>
+				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
 				${when(isDismissible, () =>
 					CloseButton({
-            customClasses: [`${rootClass}-closeButton`],
-            onclick: () => {
-              updateArgs(toggleOpen);
-            },
-          }, context) 
+						customClasses: [`${rootClass}-closeButton`],
+						onclick: () => {
+							updateArgs(toggleOpen);
+						},
+					}, context)
 				)}
 				${when(layout === "fullscreen" || layout === "fullscreenTakeover", () => html`
 					<div class="${rootClass}-buttonGroup">
@@ -99,67 +107,71 @@ export const Template = ({
 						}, context)}
 					</div>
 				`)}
-				<section class="${rootClass}-content">${content.map((c) => (typeof c === "function" ? c({}) : c))}</section>
-				<!--start of footer when block -->
 				${when(hasFooter, () => html`
 					<footer class="${rootClass}-footer">
 						${when(typeof footer !== "undefined", () => html`
-							${when(hasCheckbox, () => html`
-						 		${Checkbox({
-									label: footer,
-								})}
-								<div class="${rootClass}-buttonGroup">
-									${ButtonGroup({
-										items: [
-											{
-												label: "Cancel",
-												treatment: "outline",
-												variant: "secondary",
-											},
-											{
-												label: "Save",
-												treatment: "fill",
-												variant: "accent"
-											},
-										],
-										onclick: () => {
-											updateArgs(toggleOpen);
+							<div class="${rootClass}-footer-content">
+								${when(hasCheckbox, () => html`
+						 			${Checkbox({
+										label: footer,
+									})}
+								`,
+									() => 
+										Typography({
+											semantics: "body",
+											size: "m",
+											content: [ footer ]
+										})
+								)}
+							</div>
+							<div class="${rootClass}-buttonGroup">
+								${ButtonGroup({
+									items: [
+										{
+											label: "Cancel",
+											treatment: "outline",
+											variant: "secondary",
 										},
-									}, context)}
-								</div>
-							`,
-							() => html`
-							 	${footer}
-								<div class="${rootClass}-buttonGroup">
-									${ButtonGroup({
-										items: [
-											{
-												label: "Cancel",
-												treatment: "outline",
-												variant: "secondary",
-											},
-											{
-												label: "Save",
-												treatment: "fill",
-												variant: "accent"
-											},
-										],
-										onclick: () => {
-											updateArgs(toggleOpen);
+										{
+											label: "Save",
+											treatment: "fill",
+											variant: "accent"
 										},
-									}, context)}
-								</div>
-							 `
-							)}
-						<!-- end when checkbox -->
-						`)}
-						<!-- end when footer isn't undefined -->
+									],
+									onclick: () => {
+										updateArgs(toggleOpen);
+									},
+								}, context)}
+							</div>
+						`, 
+						() => html`
+						 	<div class="${rootClass}-noFooter"></div>
+							<div class="${rootClass}-buttonGroup">
+								${ButtonGroup({
+									items: [
+										{
+											label: "Cancel",
+											treatment: "outline",
+											variant: "secondary",
+										},
+										{
+											label: "Save",
+											treatment: "fill",
+											variant: "accent"
+										},
+									],
+									onclick: () => {
+										updateArgs(toggleOpen);
+									},
+								}, context)}
+							</div>
+						 `
+						)}
 					</footer>
 					`,
 					() => html`
 						<div class="${rootClass}-noFooter"></div>
 				`)}
-				<!--end of footer when block -->
 			</div>
 		</div>
 	`;

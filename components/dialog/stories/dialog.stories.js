@@ -1,11 +1,12 @@
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { version } from "../package.json";
-import { Template } from "./template";
+// import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
+import { Template } from "./template.js";
 
 /**
- * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.
+ * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions. Standard dialogs are the most frequent type of dialogs. They appear in the center of the screen over the interface and should be used for moderately complex tasks. Takeover dialogs are large types of dialogs. They use the totality of the screen and should be used for modal experiences with complex workflows.
  * 
- * The alert variants that were previously a part of Dialog were moved to their own component, [Alert Dialog](/docs/components-alert-dialog--docs).
+ * The alert variants that were previously a part of Dialog were moved to their own component, [alert dialog](/docs/components-alert-dialog--docs).
  */
 export default {
 	title: "Components/Dialog",
@@ -13,6 +14,7 @@ export default {
 	argTypes: {
 		heading: {
 			name: "Heading",
+			description: "Title for the dialog.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -22,7 +24,7 @@ export default {
 		},
 		header: { 
 			name: "Additional header content",
-			description: "Controls header content",
+			description: "Controls header content.",
 			type: { name: "string" },
 			table: {
 				type: { summary: "string" },
@@ -33,23 +35,13 @@ export default {
 		content: { table: { disable: true } },
 		hasFooter: {
 			name: "Has footer",
-			description: "Adds a footer to the dialog for additional context",
+			description: "Adds a footer to the dialog for additional context.",
 			type: { name: "boolean" },
 			table: {
 				type: { summary: "boolean" },
 				category: "Content",
 			},
 			control: "boolean",
-		},
-		hasCheckbox: {
-			name: "Has checkbox",
-			description: "Adds a checkbox to the footer content.",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Content",
-			},
-			control: { type: "boolean" },
 			if: { arg: "layout", eq: "default" },
 		},
 		footer: {
@@ -61,7 +53,18 @@ export default {
 				category: "Content",
 			},
 			control: { type: "text" },
-			if: { arg: "layout", eq: "default" },
+			if: { arg: "hasFooter", truthy: true },
+		},
+		hasCheckbox: {
+			name: "Has checkbox",
+			description: "Adds a checkbox to the footer content.",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
+				category: "Content",
+			},
+			control: { type: "boolean" },
+			if: { arg: "hasFooter", truthy: true },
 		},
 		size: {
 			name: "Size",
@@ -70,7 +73,7 @@ export default {
 				type: { summary: "string" },
 				category: "Component",
 			},
-			options: ["small", "medium", "large"],
+			options: ["s", "m", "l"],
 			control: "select",
 		},
 		layout: {
@@ -82,8 +85,7 @@ export default {
 				category: "Component",
 				defaultValue: { summary: "Default" },
 			},
-			// TODO: add the fullscreen and fullscreenTakeover layouts back to options[] once guidance on fullscreen dialogs is determined
-			options: ["default"],
+			options: ["default", "fullscreen", "fullscreenTakeover"],
 			control: "select",
 		},
 		isDismissible: {
@@ -133,7 +135,7 @@ export default {
 		isDismissible: false,
 		isOpen: true,
 		showModal: false,
-		size: "medium",
+		size: "m",
 		layout: "default",
 		hasCheckbox: true,
 	},
@@ -143,7 +145,7 @@ export default {
 		},
 		docs: {
 			story: {
-				inline: false,
+				// inline: false,
 				height: "500px",
 			},
 		},
@@ -157,25 +159,26 @@ export default {
 const ExampleContent = "Standard dialog description. This should briefly communicate any additional information or context about the standard dialog title, to help users make one of the decisions offered by the buttons. Make it no more than a few short sentences.";
 
 /**
- * The default size for dialog is medium.
+ * The default size for dialog is medium. The default dialog also has a checkbox in the footer.
  */
 export const Default = Template.bind({});
 Default.args = {
 	heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-	header: "*Required",
+	header: "* Required",
 	showModal: true,
 	content: [
-		() => Typography({
+		(passthroughs, context) =>  Typography({
 			semantics: "body",
 			size: "m",
-			content: ExampleContent,
-		}),
+			content: [ ExampleContent ],
+			...passthroughs,
+		}, context),
 	],
 };
 
-/* TODO: For all dialog stories: the "is-hidden-story" tags replicates "!dev" in older versions
-of Storybook, to remove the stories from the side navigation, reflecting the intended behavior.
-Remove "is-hidden-story" in favor of only "!dev" tags when possible.
+/* TODO: For all dialog stories: the "is-hidden-story" tags in older versions of Storybook. In newer versions,
+use "!dev" to remove the stories from the side navigation, reflecting the intended behavior.
+Remove "is-hidden-story" in favor of "!dev" tags when possible.
 */
 // ********* DOCS ONLY ********* //
 export const DefaultSmall = Template.bind({});
@@ -218,6 +221,7 @@ Dismissible.args = {
  */
 export const WithHero = Template.bind({});
 WithHero.tags = ["is-hidden-story", "!dev"];
+WithHero.storyName = "With hero image";
 WithHero.parameters = {
 	docs: {
 		story: {
@@ -238,20 +242,28 @@ WithHero.args = {
 export const WithScroll = Template.bind({});
 WithScroll.args = {
 	...Default.args,
-	content: [ExampleContent, ExampleContent, ExampleContent, ExampleContent],
+	content: [ ExampleContent, ExampleContent, ExampleContent, ExampleContent ],
 	customStyles: {
 		"max-block-size": "400px",
 	}
 };
+WithScroll.storyName = "Scrollable";
 WithScroll.tags = ["is-hidden-story", "!dev"];
 WithScroll.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
+/* TODO: once this gets rebased with `main`, make sure to use the fullscreen and fullscreenTakeover test templates
+that are imported above, but commented out.
+ */
 /**
- * A fullscreen dialog will automatically fill almost all of the available screen space. A margin is included around the outside of the dialog.
+ * The full screen variant shows a large dialog background, only revealing a small portion of the page around the outside of the dialog, behind an overlay. The size of the dialog varies with the size of the screen, in both width and height.
  */
 export const Fullscreen = Template.bind({});
+Fullscreen.argTypes = {
+	hasCheckbox: { table: { disable: true } },
+	footer:  { table: { disable: true } },
+};
 Fullscreen.args = {
 	...Default.args,
 	layout: "fullscreen",
@@ -259,26 +271,27 @@ Fullscreen.args = {
 Fullscreen.parameters = {
 	chromatic: { disableSnapshot: true },
 };
-/* TODO: Remove "is-hidden-story" tag once guidance for S2 fullscreen dialogs has been determined. */
-Fullscreen.tags = ["is-hidden-story"];
 
 /**
- * A fullscreen takeover dialog will fill all of the available screen space.
+ * The full screen takeover variant is similar to the full screen variant except that the background covers the entire screen. The page behind the dialog is not visible. This variant should be reserved for workflows where displaying a second dialog on top of the first one is to be expected.
  */
 export const FullscreenTakeover = Template.bind({});
+FullscreenTakeover.storyName = "Fullscreen takeover";
+FullscreenTakeover.argTypes = {
+	hasCheckbox: { table: { disable: true } },
+	footer:  { table: { disable: true } },
+};
 FullscreenTakeover.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 FullscreenTakeover.args = {
 	...Default.args,
 	layout: "fullscreenTakeover",
-	content: [ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent],
+	content: [ ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent, ExampleContent ],
 };
-/* TODO: Remove "is-hidden-story" tag once guidance for S2 fullscreen dialogs has been determined. */
-FullscreenTakeover.tags = ["is-hidden-story"];
 
 // ********* VRT ONLY ********* //
-export const WithForcedColors = Template.bind({});
+export const WithForcedColors = Default.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
 WithForcedColors.parameters = {
