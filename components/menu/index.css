@@ -94,9 +94,6 @@
 
 	--spectrum-menu-back-icon-margin: var(--spectrum-navigational-indicator-top-to-back-icon-medium);
 
-	/* "one" icon: chevron + additional icon (we don't count the chevron as an icon because it HAS to be there for a collapsible) */
-	--spectrum-menu-item-collapsible-has-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-text-to-control) + var(--spectrum-menu-item-icon-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width)));
-
 	/* "no" icon: just the chevron (we're not counting it because it HAS to be there for a collapsible) */
 	--spectrum-menu-item-collapsible-no-icon-submenu-item-padding-x-start: calc((var(--spectrum-menu-item-label-inline-edge-to-content) + var(--spectrum-menu-item-checkmark-width) + var(--spectrum-menu-item-label-text-to-visual) + var(--spectrum-menu-item-focus-indicator-width)));
 }
