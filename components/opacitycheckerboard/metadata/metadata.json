@@ -17,7 +17,12 @@
     "--spectrum-opacity-checkerboard-square-size"
   ],
   "global": [],
-  "system-theme": [],
+  "system-theme": [
+    "--system-opacity-checkerboard-dark",
+    "--system-opacity-checkerboard-light",
+    "--system-opacity-checkerboard-position",
+    "--system-opacity-checkerboard-size"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }
