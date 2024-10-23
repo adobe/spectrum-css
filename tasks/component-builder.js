@@ -16,12 +16,16 @@
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
+const { deflate } = require("zlib");
+const { promisify } = require("util");
 
 const postcss = require("postcss");
 const postcssrc = require("postcss-load-config");
 const prettier = require("prettier");
 
 require("colors");
+
+const gzip = promisify(deflate);
 
 const {
 	dirs,
@@ -60,13 +64,16 @@ async function processCSS(
 			new Error("This function requires content be provided"),
 		);
 
+	const minify = output ? path.basename(output, ".css").endsWith(".min") : false;
+
 	const ctx = {
 		cwd,
 		env: process.env.NODE_ENV ?? "development",
-		file: output,
+		file: output ?? input,
 		from: input,
-		to: output,
+		to: output ?? input,
 		verbose: false,
+		shouldMinify: minify,
 		...postCSSOptions,
 	};
 
@@ -77,7 +84,7 @@ async function processCSS(
 
 	const result = await postcss(plugins).process(content, {
 		from: input,
-		to: output,
+		to: output ?? input,
 		...options
 	});
 
@@ -85,13 +92,13 @@ async function processCSS(
 
 	if (!result.css) return Promise.resolve();
 
-	const formatted = await prettier.format(result.css, {
+	const formatted = !minify ? await prettier.format(result.css, {
 		parser: "css",
 		filepath: input,
 		printWidth: 500,
 		tabWidth: 2,
 		useTabs: true,
-	});
+	}) : result.css;
 
 	// If no output is provided, return the formatted content
 	if (!output) return Promise.resolve(formatted);
@@ -122,6 +129,23 @@ async function processCSS(
 			}),
 	];
 
+	if (minify) {
+		promises.push(
+			gzip(formatted)
+				.then(zipped => fsp.writeFile(`${output}.gz`, zipped)
+					.then(() => {
+						const stats = fs.statSync(`${output}.gz`);
+						return `${"✓".green}  ${relativePrint(`${output}.gz`, { cwd }).padEnd(20, " ").yellow}  ${bytesToSize(stats.size).gray}`;
+					}).catch((err) => {
+						if (!err) return;
+						console.log(`${"✗".red}  ${relativePrint(`${output}.gz`, { cwd }).yellow} not written`);
+						return Promise.reject(err);
+					})
+				)
+				.catch((err) => Promise.resolve(err))
+		);
+	}
+
 	if (result.map) {
 		promises.push(
 			fsp
@@ -150,7 +174,7 @@ async function processCSS(
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function build({ cwd = process.cwd(), clean = false, componentName } = {}) {
+async function build({ cwd = process.cwd(), clean = false, minify = false, componentName } = {}) {
 	const indexSourceCSS = path.join(cwd, "index.css");
 
 	// Nothing to do if there's no input file
@@ -169,31 +193,43 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
 
 	const indexOutputPath = path.join(cwd, "dist", "index.css");
 
+	/**
+	 * Abstraction to run the build twice, once vanilla and once minified
+	 * @param {string} fileRoot - The root name of the file to be built (e.g. index, index-base), not including the extension
+	 * @param {object} postCSSOptions - The options to be passed to the postcss processor
+	 */
+	const buildAndMinify = (fileRoot, postCSSOptions) => {
+		return Promise.all([
+			processCSS(content, indexSourceCSS, path.join(cwd, "dist", `${fileRoot}.css`), {
+				cwd,
+				clean,
+				...postCSSOptions,
+			}),
+			minify ? processCSS(content, indexSourceCSS, path.join(cwd, "dist", `${fileRoot}.min.css`), {
+				cwd,
+				clean,
+				...postCSSOptions,
+			}) : Promise.resolve(),
+		]);
+	};
+
 	return Promise.all([
-		processCSS(content, indexSourceCSS, indexOutputPath, {
-			cwd,
-			clean,
+		buildAndMinify("index", {
 			skipMapping: true,
 			referencesOnly: false,
 			preserveVariables: true,
-			stripLocalSelectors: false,
+			stripLocalSelectors: false
 		}).then(async (reports) => {
 			// Copy index.css to index-vars.css for backwards compat, log as deprecated
 			return copy(indexOutputPath, path.join(cwd, "dist/index-vars.css"), { cwd })
 				.then(r => [r, ...reports]);
 		}),
-		processCSS(
-			content,
-			indexSourceCSS,
-			path.join(cwd, "dist", "index-base.css"),
-			{
-				cwd,
-				clean,
-				splitinatorOptions: {
-					noFlatVariables: true,
-				},
+		buildAndMinify("index-base", {
+			minify: false,
+			splitinatorOptions: {
+				noFlatVariables: true,
 			},
-		),
+		}),
 	]);
 }
 
@@ -204,7 +240,7 @@ async function build({ cwd = process.cwd(), clean = false, componentName } = {})
  * @param {boolean} config.clean - Should the built assets be cleaned before running the build
  * @returns Promise<void>
  */
-async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
+async function buildThemes({ cwd = process.cwd(), minify = false, clean = false } = {}) {
 	// This fetches the content of the files and returns an array of objects with the content and input paths
 	const contentData = await fetchContent(["themes/*.css"], { cwd, clean });
 
@@ -214,6 +250,28 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 	const imports = contentData.map(({ input }) => input);
 	const importMap = imports.map((i) => `@import "${i}";`).join("\n");
 
+
+	/**
+	 * Abstraction to run the build twice, once vanilla and once minified
+	 * @param {string} content - The content of the file to be built
+	 * @param {string} fileRoot - The root name of the file to be built (e.g. index, index-base), not including the extension
+	 * @param {object} postCSSOptions - The options to be passed to the postcss processor
+	 */
+	const buildAndMinify = (content, fileRoot, postCSSOptions) => {
+		return Promise.all([
+			processCSS(content, path.join(cwd, fileRoot !== "index-theme" ? fileRoot : "index" + ".css"), path.join(cwd, "dist", `${fileRoot}.css`), {
+				cwd,
+				clean,
+				...postCSSOptions,
+			}),
+			minify ? processCSS(content, path.join(cwd, fileRoot !== "index-theme" ? fileRoot : "index" + ".css"), path.join(cwd, "dist", `${fileRoot}.min.css`), {
+				cwd,
+				clean,
+				...postCSSOptions,
+			}) : Promise.resolve(),
+		]);
+	};
+
 	const promises = contentData.map(async ({ content, input }) => {
 		if (!content)
 			return Promise.reject(
@@ -221,13 +279,11 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 			);
 
 		const theme = path.basename(input, ".css");
-		return processCSS(
+
+		return buildAndMinify(
 			content,
-			path.join(cwd, input),
-			path.join(cwd, "dist", input),
+			input.replace(/\.css$/, ""),
 			{
-				cwd,
-				clean,
 				lint: false,
 				skipMapping: false,
 				referencesOnly: false,
@@ -243,13 +299,10 @@ async function buildThemes({ cwd = process.cwd(), clean = false } = {}) {
 
 	promises.push(
 		// Expect this file to have component-specific selectors mapping to the system tokens but not the system tokens themselves
-		processCSS(
+		buildAndMinify(
 			importMap,
-			path.join(cwd, "index.css"),
-			path.join(cwd, "dist", "index-theme.css"),
+			"index-theme",
 			{
-				cwd,
-				clean,
 				splitinatorOptions: {
 					noSelectors: true,
 				},
@@ -273,6 +326,7 @@ async function main({
 	componentName = process.env.NX_TASK_TARGET_PROJECT,
 	cwd,
 	clean,
+	minify = false,
 } = {}) {
 	if (!cwd && componentName) {
 		cwd = path.join(dirs.components, componentName);
@@ -288,13 +342,17 @@ async function main({
 		clean = process.env.NODE_ENV === "production";
 	}
 
+	if (process.env.NODE_ENV === "production") {
+		minify = true;
+	}
+
 	const key = `[build] ${`@spectrum-css/${componentName}`.cyan}`;
 	console.time(key);
 
 	return Promise.all([
 		...(clean ? [cleanFolder({ cwd })] : []),
-		build({ cwd, clean }),
-		buildThemes({ cwd, clean }),
+		build({ cwd, clean, minify }),
+		buildThemes({ cwd, clean, minify }),
 	])
 		.then((report) => {
 			const logs = report.flat(Infinity).filter(Boolean);
