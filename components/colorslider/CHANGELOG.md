@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.5
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove duplicate references
+
 ## 6.1.4
 
 ### Patch Changes
