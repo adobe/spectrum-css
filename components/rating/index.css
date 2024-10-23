@@ -43,7 +43,6 @@
 	--spectrum-rating-icon-count: var(--spectrum-rating-icon-count);
 }
 
-/* stylelint-disable-next-line no-duplicate-selectors */
 .spectrum-Rating {
 	&:has(:focus-visible),
 	&.is-keyboardFocused {
