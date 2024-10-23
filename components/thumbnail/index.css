@@ -106,7 +106,7 @@
 	&.is-disabled {
 		opacity: var(--mod-thumbnail-color-opacity-disabled, var(--spectrum-thumbnail-color-opacity-disabled));
 	}
-	/* stylelint-disable selector-pseudo-class-no-unknown */
+
 	&.is-focused {
 		overflow: visible;
 
@@ -128,10 +128,7 @@
 			border-radius: var(--mod-thumbnail-border-radius, var(--spectrum-thumbnail-border-radius));
 		}
 	}
-	/* stylelint-enable selector-pseudo-class-no-unknown */
 
-	/* Friends should align to the top of the tabs */
-	vertical-align: top;
 	overflow: hidden;
 	z-index: 0;
 }
@@ -150,7 +147,6 @@
 		content: none;
 	}
 
-	/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 	&.is-selected {
 		outline-style: solid;
 		outline-color: var(--highcontrast-thumbnail-border-color-selected, var(--mod-thumbnail-border-color-selected, var(--spectrum-thumbnail-border-color-selected)));
@@ -170,7 +166,6 @@
 	outline-color: var(--highcontrast-thumbnail-layer-border-color-inner, var(--mod-thumbnail-layer-border-color-inner, var(--spectrum-thumbnail-layer-border-color-inner)));
 	outline-width: calc(var(--mod-thumbnail-layer-border-width-inner, var(--spectrum-thumbnail-layer-border-width-inner)) - var(--mod-thumbnail-layer-border-width-outer, var(--spectrum-thumbnail-layer-border-width-outer)));
 }
-/* stylelint-enable declaration-block-no-redundant-longhand-properties */
 
 .spectrum-Thumbnail-image-wrapper {
 	display: flex;
