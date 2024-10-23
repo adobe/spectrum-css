@@ -1,5 +1,14 @@
 # Change Log
 
+## 6.2.1
+
+### Patch Changes
+
+- [#3303](https://github.com/adobe/spectrum-css/pull/3303) [`5fa753b`](https://github.com/adobe/spectrum-css/commit/5fa753b34944584576c8d91b8d51460ff0a2e4be) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violations by removing unused properties and adding comment description.
+
+- Updated dependencies [[`d05f25f`](https://github.com/adobe/spectrum-css/commit/d05f25f971f2e0123ad0747c53ad0250c7cee707)]:
+  - @spectrum-css/infieldbutton@5.1.4
+
 ## 6.2.0
 
 ### Minor Changes

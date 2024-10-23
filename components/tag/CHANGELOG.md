@@ -1,5 +1,11 @@
 # Change Log
 
+## 9.1.4
+
+### Patch Changes
+
+- [#3307](https://github.com/adobe/spectrum-css/pull/3307) [`25ddd5e`](https://github.com/adobe/spectrum-css/commit/25ddd5e62a19a8040f6c08549e447e19c0788af3) Thanks [@cdransf](https://github.com/cdransf)! - Reorder rules and custom properties to resolve lint violations.
+
 ## 9.1.3
 
 ### Patch Changes

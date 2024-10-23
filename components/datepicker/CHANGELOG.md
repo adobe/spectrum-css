@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.2.4
+
+### Patch Changes
+
+- [#3285](https://github.com/adobe/spectrum-css/pull/3285) [`727ccd0`](https://github.com/adobe/spectrum-css/commit/727ccd0eda8ef6f975cda52c7ef4e3516818e383) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violation in datepicker by adjusting nesting depth.
+
 ## 3.2.3
 
 ### Patch Changes
