@@ -69,13 +69,8 @@
 	&.spectrum-ClearButton--staticWhite {
 		--spectrum-clear-button-icon-color-disabled: var(--spectrum-disabled-static-white-content-color);
 	}
-
-	&.spectrum-ClearButton--staticBlack {
-		--spectrum-clear-button-icon-color-disabled: var(--spectrum-disabled-static-black-content-color);
-	}
 }
 
-/* stylelint-disable-next-line no-duplicate-selectors */
 .spectrum-ClearButton {
 	block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
 	inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
