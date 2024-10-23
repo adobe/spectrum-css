@@ -5,6 +5,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-TagGroup",
@@ -15,22 +18,24 @@ export const Template = ({
 	customStyles = {},
 	size = "m",
 	...args
-} = {}, context = {}) => html`
-	<div
-		class=${classMap({
-			[rootClass]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${styleMap(customStyles)}
-		role="list"
-		aria-label=${ifDefined(ariaLabel)}
-	>
-		${items.map((i) => Tag({
-			...i,
-			...args,
-			size,
-			hasClearButton: isRemovable,
-			customClasses: [`${rootClass}-item`],
-		}, context))}
-	</div>
-`;
+} = {}, context = {}) => {
+	return html`
+		<div
+			class=${classMap({
+				[rootClass]: true,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap(customStyles)}
+			role="list"
+			aria-label=${ifDefined(ariaLabel)}
+		>
+			${items.map((i) => Tag({
+				...i,
+				...args,
+				size,
+				hasClearButton: isRemovable,
+				customClasses: [`${rootClass}-item`],
+			}, context))}
+		</div>
+	`;
+};

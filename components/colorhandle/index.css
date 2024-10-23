@@ -10,32 +10,13 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+
+@import "./themes/spectrum-two.css";
+
 .spectrum-ColorHandle {
-	--spectrum-colorhandle-size: var(--spectrum-color-handle-size);
-	--spectrum-colorhandle-focused-size: var(--spectrum-color-handle-size-key-focus);
-	--spectrum-colorhandle-hitarea-size: var(--spectrum-color-control-track-width);
-
-	--spectrum-colorhandle-animation-duration: var(--spectrum-animation-duration-100);
-	--spectrum-colorhandle-animation-easing: ease-in-out;
-
-	/* outer border as box shadow on the colorhandle */
-	--spectrum-colorhandle-outer-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-outer-border-opacity)); /* TODO replace --spectrum-black-rgb with color-handle-outer-border-color when supported by RGBA */
-	--spectrum-colorhandle-outer-border-width: var(--spectrum-color-handle-outer-border-width);
-
-	/* inner border as inset boxshadow on the colorhandle-inner */
-	--spectrum-colorhandle-inner-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-color-handle-inner-border-opacity)); /* TODO replace --spectrum-black-rgb with color-handle-inner-border-color when supported by RGBA */
-	--spectrum-colorhandle-inner-border-width: var(--spectrum-color-handle-inner-border-width);
-
-	/* primary border on color handle */
-	--spectrum-colorhandle-border-width: var(--spectrum-color-handle-border-width);
-	--spectrum-colorhandle-border-color: var(--spectrum-white);
-
-	--spectrum-colorhandle-border-color-disabled: var(--spectrum-disabled-content-color);
-	--spectrum-colorhandle-fill-color-disabled: var(--spectrum-disabled-background-color);
+	/* @passthrough -- opacity checkerboard customization */
 	--mod-opacity-checkerboard-position: 50%;
-}
 
-.spectrum-ColorHandle {
 	display: block;
 	position: absolute;
 	z-index: 1; /* Be above */
@@ -54,6 +35,8 @@
 
 	border-radius: 100%;
 
+	transition: all var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration)) var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing));
+
 	&::after {
 		content: "";
 		inset-inline: calc(50% - calc(var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size)) / 2));
@@ -64,8 +47,6 @@
 		block-size: var(--mod-colorhandle-hitarea-size, var(--spectrum-colorhandle-hitarea-size));
 		border-radius: var(--mod-colorhandle-hitarea-border-radius, 100%);
 	}
-
-	transition: all var(--mod-colorhandle-animation-duration, var(--spectrum-colorhandle-animation-duration)) var(--mod-colorhandle-animation-easing, var(--spectrum-colorhandle-animation-easing));
 
 	&.is-focused,
 	&:focus-visible {

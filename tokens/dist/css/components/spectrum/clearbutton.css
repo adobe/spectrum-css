@@ -11,9 +11,41 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum {
-	--system-spectrum-clearbutton-spectrum-clear-button-background-color: transparent;
-	--system-spectrum-clearbutton-spectrum-clear-button-background-color-hover: transparent;
-	--system-spectrum-clearbutton-spectrum-clear-button-background-color-down: transparent;
-	--system-spectrum-clearbutton-spectrum-clear-button-background-color-key-focus: transparent;
+.spectrum.spectrum--legacy {
+	--system-clear-button-background-color: transparent;
+	--system-clear-button-background-color-hover: transparent;
+	--system-clear-button-background-color-down: transparent;
+	--system-clear-button-background-color-key-focus: transparent;
+	--system-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);
+	--system-clear-button-icon-color: var(--spectrum-neutral-content-color-default);
+	--system-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+	--system-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
+	--system-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+	--system-clear-button-height: var(--spectrum-component-height-100);
+	--system-clear-button-size-m-height: var(--spectrum-component-height-100);
+	--system-clear-button-width: var(--spectrum-component-height-100);
+	--system-clear-button-size-m-width: var(--spectrum-component-height-100);
+	--system-clear-button-size-s-height: var(--spectrum-component-height-75);
+	--system-clear-button-size-s-width: var(--spectrum-component-height-75);
+	--system-clear-button-size-l-height: var(--spectrum-component-height-200);
+	--system-clear-button-size-l-width: var(--spectrum-component-height-200);
+	--system-clear-button-size-xl-height: var(--spectrum-component-height-300);
+	--system-clear-button-size-xl-width: var(--spectrum-component-height-300);
+	--system-clear-button-quiet-background-color: transparent;
+	--system-clear-button-quiet-background-color-hover: transparent;
+	--system-clear-button-quiet-background-color-down: transparent;
+	--system-clear-button-quiet-background-color-key-focus: transparent;
+	--system-clear-button-static-white-icon-color: var(--spectrum-white);
+	--system-clear-button-static-white-icon-color-hover: var(--spectrum-white);
+	--system-clear-button-static-white-icon-color-down: var(--spectrum-white);
+	--system-clear-button-static-white-icon-color-key-focus: var(--spectrum-white);
+	--system-clear-button-static-white-background-color: transparent;
+	--system-clear-button-static-white-background-color-hover: var(--spectrum-transparent-white-300);
+	--system-clear-button-static-white-background-color-down: var(--spectrum-transparent-white-400);
+	--system-clear-button-static-white-background-color-key-focus: var(--spectrum-transparent-white-300);
+	--system-clear-button-static-white-disabled-icon-color: var(--spectrum-disabled-static-white-content-color);
+	--system-clear-button-disabled-icon-color: var(--spectrum-disabled-content-color);
+	--system-clear-button-disabled-icon-color-hover: var(--spectrum-disabled-content-color);
+	--system-clear-button-disabled-icon-color-down: var(--spectrum-disabled-content-color);
+	--system-clear-button-disabled-background-color: transparent;
 }

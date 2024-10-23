@@ -32,10 +32,18 @@
   "global": [
     "--spectrum-body-color",
     "--spectrum-heading-color",
+    "--spectrum-spacing-100",
     "--spectrum-spacing-300",
     "--spectrum-spacing-400"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-contextual-help-body-color",
+    "--system-contextual-help-content-spacing",
+    "--system-contextual-help-heading-color",
+    "--system-contextual-help-heading-size",
+    "--system-contextual-help-link-spacing",
+    "--system-contextual-help-padding"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-contextual-help-body-color",

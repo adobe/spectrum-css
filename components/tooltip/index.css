@@ -11,65 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
-@import "./themes/express.css";
 @import "@spectrum-css/commons/overlay.css";
-
-.spectrum-Tooltip {
-	--spectrum-tooltip-animation-duration: var(--spectrum-animation-duration-100);
-
-	/* override if additional spacing to source is required */
-	--spectrum-tooltip-margin: 0px;
-
-	--spectrum-tooltip-height: var(--spectrum-component-height-75);
-	--spectrum-tooltip-max-inline-size: var(--spectrum-tooltip-maximum-width);
-	--spectrum-tooltip-border-radius: var(--spectrum-corner-radius-100);
-
-	--spectrum-tooltip-icon-width: var(--spectrum-workflow-icon-size-50);
-	--spectrum-tooltip-icon-height: var(--spectrum-workflow-icon-size-50);
-
-	--spectrum-tooltip-font-size: var(--spectrum-font-size-75);
-	--spectrum-tooltip-line-height: var(--spectrum-line-height-100);
-	--spectrum-tooltip-cjk-line-height: var(--spectrum-cjk-line-height-100);
-	--spectrum-tooltip-font-weight: var(--spectrum-regular-font-weight);
-
-	/* horizontal spacing */
-	--spectrum-tooltip-spacing-inline: var(--spectrum-component-edge-to-text-75);
-
-	/* vertical spacing */
-	--spectrum-tooltip-spacing-block-start: var(--spectrum-component-top-to-text-75);
-	--spectrum-tooltip-spacing-block-end: var(--spectrum-component-bottom-to-text-75);
-
-	/* icon spacing */
-	--spectrum-tooltip-icon-spacing-inline-start: var(--spectrum-text-to-visual-75);
-	--spectrum-tooltip-icon-spacing-inline-end: var(--spectrum-text-to-visual-75);
-	--spectrum-tooltip-icon-spacing-block-start: var(--spectrum-component-top-to-workflow-icon-75);
-
-	/* colors */
-	--spectrum-tooltip-background-color-informative: var(--spectrum-informative-background-color-default);
-	--spectrum-tooltip-background-color-positive: var(--spectrum-positive-background-color-default);
-	--spectrum-tooltip-background-color-negative: var(--spectrum-negative-background-color-default);
-
-	--spectrum-tooltip-content-color: var(--spectrum-white);
-
-	/* tip */
-	--spectrum-tooltip-tip-inline-size: var(--spectrum-tooltip-tip-width);
-	--spectrum-tooltip-tip-block-size: var(--spectrum-tooltip-tip-height);
-
-	/* Width and height of square element used to render the tip triangle. */
-	--spectrum-tooltip-tip-square-size: var(--spectrum-tooltip-tip-inline-size);
-
-	/* Percentage value of height divided by width, for calculating clip-path within a square tip. */
-	--spectrum-tooltip-tip-height-percentage: 50%;
-
-	/* Tip inset from container edges for clip-paths calculation, to fix hairline gap in Chrome cause by antialiasing. */
-	--spectrum-tooltip-tip-antialiasing-inset: 0.5px;
-
-	/* pointer tip - default spacing to edge - corner radius plus half of tip width to neutralize override */
-	--spectrum-tooltip-pointer-corner-spacing: var(--spectrum-corner-radius-100);
-
-	/* neutral background changes per theme */
-	--spectrum-tooltip-background-color-default: var(--spectrum-tooltip-backgound-color-default-neutral);
-}
+@import "./themes/spectrum-two.css";
 
 @media (forced-colors: active) {
 	.spectrum-Tooltip {
@@ -77,11 +20,12 @@
 	}
 
 	.spectrum-Tooltip-tip {
-		forced-color-adjust: none;
 		--highcontrast-tooltip-background-color-default: CanvasText;
 		--highcontrast-tooltip-background-color-informative: CanvasText;
 		--highcontrast-tooltip-background-color-positive: CanvasText;
 		--highcontrast-tooltip-background-color-negative: CanvasText;
+
+		forced-color-adjust: none;
 	}
 }
 
@@ -157,6 +101,7 @@
 	inset-block-start: 100%;
 	/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 	left: 50%;
+
 	transform: translateX(-50%);
 
 	background-color: var(--highcontrast-tooltip-background-color-default, var(--mod-tooltip-background-color-default, var(--spectrum-tooltip-background-color-default)));
@@ -349,6 +294,7 @@
 	block-size: var(--mod-tooltip-icon-height, var(--spectrum-tooltip-icon-height));
 	align-self: flex-start;
 	flex-shrink: 0;
+
 }
 
 /****** Label ******/
@@ -357,6 +303,7 @@
 	line-height: var(--mod-tooltip-line-height, var(--spectrum-tooltip-line-height));
 	margin-block-start: var(--mod-tooltip-spacing-block-start, var(--spectrum-tooltip-spacing-block-start));
 	margin-block-end: var(--mod-tooltip-spacing-block-end, var(--spectrum-tooltip-spacing-block-end));
+
 }
 
 /****** Tooltip Placement and Animation Direction ******/
@@ -454,6 +401,7 @@
 }
 
 /*** CSS Hover Animation ***/
+/* stylelint-disable selector-class-pattern -- supported legacy state system */
 .u-tooltip-showOnHover {
 	display: inline-block;
 	position: relative;
@@ -536,16 +484,6 @@
 		right: 100%;
 	}
 
-	/* RTL */
-	&:dir(rtl) {
-		.spectrum-Tooltip--start,
-		.spectrum-Tooltip--start-top,
-		.spectrum-Tooltip--start-bottom {
-			left: 100%;
-			right: auto;
-		}
-	}
-
 	.spectrum-Tooltip--right,
 	.spectrum-Tooltip--right-top,
 	.spectrum-Tooltip--right-bottom,
@@ -554,16 +492,6 @@
 	.spectrum-Tooltip--end-bottom {
 		/* stylelint-disable-next-line csstools/use-logical -- intentional use of non-logical property */
 		left: 100%;
-	}
-
-	/* RTL */
-	&:dir(rtl) {
-		.spectrum-Tooltip--end,
-		.spectrum-Tooltip--end-top,
-		.spectrum-Tooltip--end-bottom {
-			left: auto;
-			right: 100%;
-		}
 	}
 
 	&:hover,
@@ -577,12 +505,7 @@
 		.spectrum-Tooltip--top-end {
 			transform: translate(-50%, calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1));
 		}
-	}
 
-	&:hover,
-	&:focus,
-	&.is-focused,
-	*:focus {
 		.spectrum-Tooltip--bottom,
 		.spectrum-Tooltip--bottom-left,
 		.spectrum-Tooltip--bottom-right,
@@ -590,12 +513,7 @@
 		.spectrum-Tooltip--bottom-end {
 			transform: translate(-50%, var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)));
 		}
-	}
 
-	&:hover,
-	&:focus,
-	&.is-focused,
-	*:focus {
 		.spectrum-Tooltip--left,
 		.spectrum-Tooltip--left-bottom,
 		.spectrum-Tooltip--left-top,
@@ -604,26 +522,7 @@
 		.spectrum-Tooltip--start-bottom {
 			transform: translate(calc(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)) * -1), -50%);
 		}
-	}
 
-	/* RTL */
-	&:dir(rtl) {
-		&:hover,
-		&:focus,
-		&.is-focused,
-		*:focus {
-			.spectrum-Tooltip--start,
-			.spectrum-Tooltip--start-top,
-			.spectrum-Tooltip--start-bottom {
-				transform: translate(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)), -50%);
-			}
-		}
-	}
-
-	&:hover,
-	&:focus,
-	&.is-focused,
-	*:focus {
 		.spectrum-Tooltip--right,
 		.spectrum-Tooltip--right-top,
 		.spectrum-Tooltip--right-bottom,
@@ -636,10 +535,30 @@
 
 	/* RTL */
 	&:dir(rtl) {
+		.spectrum-Tooltip--start,
+		.spectrum-Tooltip--start-top,
+		.spectrum-Tooltip--start-bottom {
+			left: 100%;
+			right: auto;
+		}
+
+		.spectrum-Tooltip--end,
+		.spectrum-Tooltip--end-top,
+		.spectrum-Tooltip--end-bottom {
+			left: auto;
+			right: 100%;
+		}
+
 		&:hover,
 		&:focus,
 		&.is-focused,
 		*:focus {
+			.spectrum-Tooltip--start,
+			.spectrum-Tooltip--start-top,
+			.spectrum-Tooltip--start-bottom {
+				transform: translate(var(--mod-tooltip-animation-distance, var(--spectrum-tooltip-animation-distance)), -50%);
+			}
+
 			.spectrum-Tooltip--end,
 			.spectrum-Tooltip--end-top,
 			.spectrum-Tooltip--end-bottom {
@@ -648,3 +567,4 @@
 		}
 	}
 }
+/* stylelint-enable selector-class-pattern */
