@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.4
+
+### Patch Changes
+
+- [#3284](https://github.com/adobe/spectrum-css/pull/3284) [`cc9afaa`](https://github.com/adobe/spectrum-css/commit/cc9afaaf4ac1aa9311028307c0a18c25d12c0193) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violations by removing unused custom properties.
+
 ## 6.1.3
 
 ### Patch Changes
