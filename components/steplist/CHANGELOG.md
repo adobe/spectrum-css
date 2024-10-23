@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.4
+
+### Patch Changes
+
+- [#3302](https://github.com/adobe/spectrum-css/pull/3302) [`4988da3`](https://github.com/adobe/spectrum-css/commit/4988da329bc4d562dd068776d7b7f84393086274) Thanks [@cdransf](https://github.com/cdransf)! - Resolves stylelint violation by removing vertical-align declaration that is ignored due to preceding display: block declaration.
+
 ## 5.1.3
 
 ### Patch Changes
