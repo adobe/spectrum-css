@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.4
+
+### Patch Changes
+
+- [#3256](https://github.com/adobe/spectrum-css/pull/3256) [`b84b93e`](https://github.com/adobe/spectrum-css/commit/b84b93e64157c7a8288a3ed19f1a637ee609251c) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Adds line-height on `.spectrum-ActionButton-label` in order to accommodate text with diacritics that may be cut off vertically.
+
 ## 6.1.3
 
 ### Patch Changes
