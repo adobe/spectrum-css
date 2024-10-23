@@ -50,7 +50,7 @@ export const Template = ({
 					typeof size !== "undefined",
 				[`${rootClass}--emphasized`]: isEmphasized,
 				["is-indeterminate"]: isIndeterminate,
-				["is-disabled"]: isDisabled|| isReadOnly,
+				["is-disabled"]: isDisabled,
 				["is-invalid"]: isInvalid,
 				["is-readOnly"]: isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
@@ -62,13 +62,19 @@ export const Template = ({
 				type="checkbox"
 				class="${rootClass}-input"
 				aria-labelledby=${ifDefined(ariaLabelledby)}
+				aria-disabled=${ifDefined(isReadOnly ? "true" : undefined)}
 				?checked=${isChecked}
-				?disabled=${isDisabled || isReadOnly}
+				?disabled=${isDisabled}
 				title=${ifDefined(title)}
 				value=${ifDefined(value)}
-				@change=${function() {
-					if (isDisabled) return;
-					updateArgs({ isChecked: !isChecked });
+				@change=${(e) => {
+					if (isReadOnly) {
+						// Make checked value immutable for read-only.
+						e.preventDefault();
+						e.target.checked = !e.target.checked;
+					}
+					if (isDisabled || isReadOnly) return;
+					updateArgs?.({ isChecked: e.target.checked });
 				}}
 				id=${ifDefined(id ? `${id}-input` : undefined)}
 			/>
@@ -103,21 +109,19 @@ export const DocsCheckboxGroup = (args, context) => Container({
 			...args,
 			context,
 			iconName: undefined,
+			label: "Unchecked",
 		})}
 		${Template({
 			...args,
 			context,
 			isChecked: true,
+			label: "Checked",
 		})}
 		${Template({
 			...args,
 			context,
 			isIndeterminate: true,
-		})}
-		${Template({
-			...args,
-			context,
-			isDisabled: true,
+			label: "Indeterminate",
 		})}
 		${Template({
 			...args,
