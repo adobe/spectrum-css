@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.4
+
+### Patch Changes
+
+- [#3296](https://github.com/adobe/spectrum-css/pull/3296) [`83d2df9`](https://github.com/adobe/spectrum-css/commit/83d2df9cba137ba60dac6e80eefccdfff7d18850) Thanks [@cdransf](https://github.com/cdransf)! - Resolve stylelint violations in sidenav component by adhering to declaration order rules, adding comment as stylelint disable description and applying previously unused token to appropriate class.
+
 ## 5.1.3
 
 ### Patch Changes
