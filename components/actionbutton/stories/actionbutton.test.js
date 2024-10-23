@@ -75,6 +75,10 @@ export const ActionButtonGroup = Variants({
 			testHeading: "Static white",
 			staticColor: "white",
 		},
+		{
+			testHeading: "Internationalization (Thai)",
+			label: "ล้างทั้งหมด",
+		},
 	],
 	stateData: [{
 		testHeading: "Disabled",
