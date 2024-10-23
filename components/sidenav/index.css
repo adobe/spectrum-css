@@ -221,6 +221,7 @@
 	margin-block-end: var(--mod-sidenav-heading-bottom-margin, var(--spectrum-sidenav-heading-bottom-margin));
 	padding-inline: var(--mod-sidenav-inline-padding, var(--spectrum-sidenav-inline-padding));
 	color: var(--mod-sidenav-header-color, var(--spectrum-sidenav-header-color));
+	font-family: var(--spectrum-sidenav-header-font-family);
 	font-size: var(--mod-sidenav-header-font-size, var(--spectrum-sidenav-header-font-size));
 	font-weight: var(--mod-sidenav-header-font-weight, var(--spectrum-sidenav-header-font-weight));
 	font-style: var(--mod-sidenav-header-font-style, var(--spectrum-sidenav-header-font-style));
@@ -229,6 +230,7 @@
 
 .spectrum-SideNav--multiLevel {
 	.spectrum-SideNav-itemLink {
+		color: var(--highcontrast-sidenav-top-level-font-color);
 		font-family: var(--mod-sidenav-top-level-font-family, var(--spectrum-sidenav-top-level-font-family));
 		font-weight: var(--mod-sidenav-top-level-font-weight, var(--spectrum-sidenav-top-level-font-weight));
 		font-style: var(--mod-sidenav-top-level-font-style, var(--spectrum-sidenav-top-level-font-style));
@@ -261,15 +263,14 @@
 }
 
 @media (forced-colors: active) {
-	/* forced-color-adjust: preserve-parent-color addresses svg bug on icon hover */
 	.spectrum-SideNav {
 		.spectrum-Icon {
-			forced-color-adjust: preserve-parent-color; /* stylelint-disable-line declaration-property-value-no-unknown */
+			/* stylelint-disable-next-line declaration-property-value-no-unknown -- forced-color-adjust: preserve-parent-color addresses svg bug on icon hover */
+			forced-color-adjust: preserve-parent-color;
 		}
 	}
 
 	.spectrum-SideNav-item {
-		forced-color-adjust: none;
 		--highcontrast-sidenav-content-disabled-color: GrayText;
 
 		--highcontrast-sidenav-focus-ring-color: Highlight;
@@ -289,5 +290,7 @@
 		--highcontrast-sidenav-top-level-font-color: ButtonText;
 		--highcontrast-sidenav-content-color-default: ButtonText;
 		--highcontrast-sidenav-content-color-down: HighlightText;
+
+		forced-color-adjust: none;
 	}
 }
