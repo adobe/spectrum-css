@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+/* eslint-disable no-console */
+
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
