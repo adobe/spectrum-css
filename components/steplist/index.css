@@ -11,48 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-Steplist {
-	/* The width of a step */
-	--spectrum-steplist-step-width: 80px;
-
-	/* The diameter of the marker */
-	--spectrum-steplist-marker-diameter: 8px;
-
-	/* The width of the hit area */
-	--spectrum-steplist-marker-hitArea: 20px;
-
-	/* The height of the line */
-	--spectrum-steplist-segment-height: 2px;
-
-	/* This gives enough space for one line of text */
-	--spectrum-steplist-topPadding: 22px;
-	--spectrum-steplist-small-topPadding: 11px;
-
-	/* This gives enough space for the longest possible label */
-	--spectrum-steplist-sidePadding: 60px;
-
-	/* Offset from the BOTTOM of the steplist */
-	--spectrum-steplist-label-labelOffset: 10px;
-
-	/* Font size of the label */
-	--spectrum-steplist-label-text-size: 12px;
-
-	--spectrum-steplist-current-label-text-color: var(--spectrum-gray-800);
-
-	--spectrum-steplist-current-marker-color: var(--spectrum-gray-800);
-
-	--spectrum-steplist-complete-label-text-color: var(--spectrum-gray-700);
-
-	--spectrum-steplist-incomplete-label-color: var(--spectrum-gray-600);
-
-	--spectrum-steplist-complete-marker-background-color: var(--spectrum-gray-600);
-
-	--spectrum-steplist-incomplete-marker-border-color: var(--spectrum-gray-300);
-
-	--spectrum-steplist-incomplete-segment-border-block-end-color: var(--spectrum-gray-300);
-
-	--spectrum-steplist-complete-segment-border-block-end-color: var(--spectrum-gray-600);
-}
+@import "./themes/spectrum-two.css";
 
 .spectrum-Steplist {
 	/* Contain child elements with positive z-index */
@@ -69,6 +28,7 @@
 	white-space: nowrap;
 	font-size: 0; /* To remove html whitespace between inline elements */
 	line-height: 16px; /* in case the container changes it */
+
 }
 
 .spectrum-Steplist--interactive {
@@ -187,6 +147,7 @@
 	position: absolute;
 	inset-inline-start: 50%;
 	inset-block-end: var(--mod-steplist-label-labelOffset, var(--spectrum-steplist-label-labelOffset));
+
 
 	display: block;
 	inline-size: calc(var(--mod-steplist-step-width, var(--spectrum-steplist-step-width)) * 1.5);
