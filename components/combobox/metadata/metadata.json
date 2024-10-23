@@ -70,12 +70,6 @@
     ".spectrum-Textfield.is-disabled .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-loading .spectrum-Textfield-validationIcon",
     ".spectrum-Textfield.is-readOnly .spectrum-Textfield-validationIcon",
-    ".spectrum-Textfield.is-readOnly input:read-only",
-    ".spectrum-Textfield.is-readOnly input:read-only:hover",
-    ".spectrum-Textfield.is-readOnly.is-disabled input:read-only",
-    ".spectrum-Textfield.is-readOnly.is-invalid input:read-only",
-    ".spectrum-Textfield.is-readOnly.spectrum-Textfield--quiet input:read-only",
-    ".spectrum-Textfield.is-readOnly.spectrum-Textfield--quiet.is-invalid input:read-only",
     "[dir=\"rtl\"] .spectrum-Combobox-progress-circle"
   ],
   "modifiers": [
@@ -287,8 +281,6 @@
   ],
   "high-contrast": [
     "--highcontrast-combobox-border-color-highlight",
-    "--highcontrast-combobox-border-color-invalid",
-    "--highcontrast-textfield-border-color-invalid-default",
-    "--highcontrast-textfield-text-color-disabled"
+    "--highcontrast-combobox-border-color-invalid"
   ]
 }

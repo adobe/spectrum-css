@@ -43,6 +43,7 @@ const Combobox = ({
 				"is-keyboardFocused": !isDisabled && isKeyboardFocused,
 				"is-loading": isLoading,
 				"is-disabled": isDisabled,
+				"is-readOnly": isReadOnly,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			id=${ifDefined(id)}
@@ -173,7 +174,7 @@ export const VariantGroup = (args, context) => {
 			args: {...args, showFieldLabel: true, fieldLabelText: "Country"},
 		},
 	];
-	
+
 	return Container({
 		direction: "row",
 		withHeading: false,
