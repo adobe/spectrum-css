@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.0.0-s2-foundations.16
+
+### Patch Changes
+
+- [#3307](https://github.com/adobe/spectrum-css/pull/3307) [`25ddd5e`](https://github.com/adobe/spectrum-css/commit/25ddd5e62a19a8040f6c08549e447e19c0788af3) Thanks [@cdransf](https://github.com/cdransf)! - Reorder rules and custom properties to resolve lint violations.
+
 ## 10.0.0-s2-foundations.15
 
 ### Minor Changes

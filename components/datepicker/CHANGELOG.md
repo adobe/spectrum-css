@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0-s2-foundations.17
+
+### Patch Changes
+
+- [#3285](https://github.com/adobe/spectrum-css/pull/3285) [`727ccd0`](https://github.com/adobe/spectrum-css/commit/727ccd0eda8ef6f975cda52c7ef4e3516818e383) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violation in datepicker by adjusting nesting depth.
+
 ## 4.0.0-s2-foundations.16
 
 ### Patch Changes

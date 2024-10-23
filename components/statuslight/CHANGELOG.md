@@ -1,5 +1,11 @@
 # Change Log
 
+## 8.0.0-s2-foundations.16
+
+### Patch Changes
+
+- [#3299](https://github.com/adobe/spectrum-css/pull/3299) [`d1a8522`](https://github.com/adobe/spectrum-css/commit/d1a8522b8bd0ba8f1ecf30bd8ed00af679e7e532) Thanks [@cdransf](https://github.com/cdransf)! - Adjust custom property ordering to resolve lint violations.
+
 ## 8.0.0-s2-foundations.15
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.0.0-s2-foundations.17
+
+### Patch Changes
+
+- [#3294](https://github.com/adobe/spectrum-css/pull/3294) [`d66cc60`](https://github.com/adobe/spectrum-css/commit/d66cc6019124f25582716d57b2cf499cdbacad48) Thanks [@cdransf](https://github.com/cdransf)! - Assigns CanvasText to custom property to satisfy linting requirements.
+
 ## 6.0.0-s2-foundations.16
 
 ### Minor Changes

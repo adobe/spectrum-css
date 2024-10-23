@@ -1,5 +1,12 @@
 # Change Log
 
+## 11.0.0-s2-foundations.19
+
+### Patch Changes
+
+- Updated dependencies [[`092aac5`](https://github.com/adobe/spectrum-css/commit/092aac56953f4c02cd5227e3f61c6cb0b2b4e46a)]:
+  - @spectrum-css/table@7.0.0-s2-foundations.18
+
 ## 11.0.0-s2-foundations.18
 
 ### Patch Changes

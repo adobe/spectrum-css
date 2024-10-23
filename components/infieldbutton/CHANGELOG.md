@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.0.0-s2-foundations.17
+
+### Patch Changes
+
+- [#3289](https://github.com/adobe/spectrum-css/pull/3289) [`d05f25f`](https://github.com/adobe/spectrum-css/commit/d05f25f971f2e0123ad0747c53ad0250c7cee707) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violation by removing unused custom property.
+
 ## 6.0.0-s2-foundations.16
 
 ### Minor Changes
