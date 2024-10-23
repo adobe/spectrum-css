@@ -14,10 +14,7 @@
     ".spectrum-ActionBar--fixed",
     ".spectrum-ActionBar--flexible .spectrum-ActionBar-popover",
     ".spectrum-ActionBar--sticky",
-    ".spectrum-ActionBar.is-open",
-    ".spectrum-ActionBar:lang(ja)",
-    ".spectrum-ActionBar:lang(ko)",
-    ".spectrum-ActionBar:lang(zh)"
+    ".spectrum-ActionBar.is-open"
   ],
   "modifiers": [
     "--mod-actionbar-corner-radius",
@@ -77,8 +74,8 @@
     "--spectrum-drop-shadow-x",
     "--spectrum-drop-shadow-y",
     "--spectrum-font-size-100",
+    "--spectrum-gray-25",
     "--spectrum-gray-400",
-    "--spectrum-gray-50",
     "--spectrum-informative-background-color-default",
     "--spectrum-line-height-100",
     "--spectrum-neutral-content-color-default",
@@ -88,7 +85,30 @@
     "--spectrum-spacing-75",
     "--spectrum-white"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-action-bar-corner-radius",
+    "--system-action-bar-emphasized-background-color",
+    "--system-action-bar-emphasized-item-counter-color",
+    "--system-action-bar-height",
+    "--system-action-bar-item-counter-color",
+    "--system-action-bar-item-counter-font-size",
+    "--system-action-bar-item-counter-line-height",
+    "--system-action-bar-item-counter-line-height-cjk",
+    "--system-action-bar-popover-background-color",
+    "--system-action-bar-popover-border-color",
+    "--system-action-bar-shadow-blur",
+    "--system-action-bar-shadow-color",
+    "--system-action-bar-shadow-horizontal",
+    "--system-action-bar-shadow-vertical",
+    "--system-action-bar-spacing-action-group-end",
+    "--system-action-bar-spacing-action-group-top",
+    "--system-action-bar-spacing-close-button-end",
+    "--system-action-bar-spacing-close-button-start",
+    "--system-action-bar-spacing-close-button-top",
+    "--system-action-bar-spacing-item-counter-end",
+    "--system-action-bar-spacing-item-counter-top",
+    "--system-action-bar-spacing-outer-edge"
+  ],
   "passthroughs": [],
   "high-contrast": ["--highcontrast-actionbar-popover-border-color"]
 }
