@@ -31,10 +31,7 @@ export const Template = ({
 				[`${rootClass}--${variant}`]: typeof variant !== "undefined",
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
-			style=${styleMap({
-				"min-inline-size": "500px",
-				...customStyles,
-			})}
+			style=${styleMap(customStyles)}
 			id=${id}
 			data-testid=${ifDefined(testId)}
 		>
