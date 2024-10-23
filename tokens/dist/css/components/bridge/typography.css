@@ -1,0 +1,37 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--express {
+	--spectrum-code-font-size: var(--system-code-font-size);
+	--spectrum-code-font-family: var(--system-code-font-family);
+	--spectrum-code-cjk-letter-spacing: var(--system-code-cjk-letter-spacing);
+	--spectrum-code-font-color: var(--system-code-font-color);
+	--spectrum-detail-font-size: var(--system-detail-font-size);
+	--spectrum-detail-sans-serif-font-family: var(--system-detail-sans-serif-font-family);
+	--spectrum-detail-serif-font-family: var(--system-detail-serif-font-family);
+	--spectrum-detail-cjk-font-family: var(--system-detail-cjk-font-family);
+	--spectrum-detail-font-color: var(--system-detail-font-color);
+	--spectrum-body-font-size: var(--system-body-font-size);
+	--spectrum-body-sans-serif-font-family: var(--system-body-sans-serif-font-family);
+	--spectrum-body-serif-font-family: var(--system-body-serif-font-family);
+	--spectrum-body-cjk-font-family: var(--system-body-cjk-font-family);
+	--spectrum-body-cjk-letter-spacing: var(--system-body-cjk-letter-spacing);
+	--spectrum-body-font-color: var(--system-body-font-color);
+	--spectrum-heading-font-size: var(--system-heading-font-size);
+	--spectrum-heading-cjk-font-size: var(--system-heading-cjk-font-size);
+	--spectrum-heading-sans-serif-font-family: var(--system-heading-sans-serif-font-family);
+	--spectrum-heading-serif-font-family: var(--system-heading-serif-font-family);
+	--spectrum-heading-cjk-font-family: var(--system-heading-cjk-font-family);
+	--spectrum-heading-cjk-letter-spacing: var(--system-heading-cjk-letter-spacing);
+	--spectrum-heading-font-color: var(--system-heading-font-color);
+}

@@ -1,0 +1,72 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+@container style(--system: spectrum) {
+	.spectrum-FieldLabel {
+		--spectrum-field-label-color: var(--spectrum-neutral-subdued-content-color-default);
+
+		--spectrum-field-label-font-weight: var(--spectrum-regular-font-weight);
+		--spectrum-field-label-line-height: var(--spectrum-line-height-100);
+		--spectrum-field-label-line-height-cjk: var(--spectrum-cjk-line-height-100);
+		--spectrum-field-label-disabled-content-color: var(--spectrum-disabled-content-color);
+	}
+
+	.spectrum-FieldLabel,
+	.spectrum-FieldLabel--sizeM {
+		--spectrum-field-label-min-height: var(--spectrum-component-height-75);
+		--spectrum-field-label-top-to-text: var(--spectrum-component-top-to-text-75);
+		--spectrum-field-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+		--spectrum-field-label-font-size: var(--spectrum-font-size-75);
+
+		--spectrum-field-label-side-margin-block-start: var(--spectrum-field-label-top-margin-medium);
+		--spectrum-field-label-side-padding-right: var(--spectrum-spacing-200);
+
+		--spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-medium);
+	}
+
+	.spectrum-FieldLabel--sizeS {
+		--spectrum-field-label-min-height: var(--spectrum-component-height-75);
+		--spectrum-field-label-top-to-text: var(--spectrum-component-top-to-text-75);
+		--spectrum-field-label-bottom-to-text: var(--spectrum-component-bottom-to-text-75);
+		--spectrum-field-label-font-size: var(--spectrum-font-size-75);
+
+		--spectrum-field-label-side-margin-block-start: var(--spectrum-field-label-top-margin-small);
+		--spectrum-field-label-side-padding-right: var(--spectrum-spacing-100);
+
+		--spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-small);
+	}
+
+	.spectrum-FieldLabel--sizeL {
+		--spectrum-field-label-min-height: var(--spectrum-component-height-100);
+		--spectrum-field-label-top-to-text: var(--spectrum-component-top-to-text-100);
+		--spectrum-field-label-bottom-to-text: var(--spectrum-component-bottom-to-text-100);
+		--spectrum-field-label-font-size: var(--spectrum-font-size-100);
+
+		--spectrum-field-label-side-margin-block-start: var(--spectrum-field-label-top-margin-large);
+		--spectrum-field-label-side-padding-right: var(--spectrum-spacing-200);
+
+		--spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-large);
+	}
+
+	.spectrum-FieldLabel--sizeXL {
+		--spectrum-field-label-min-height: var(--spectrum-component-height-200);
+		--spectrum-field-label-top-to-text: var(--spectrum-component-top-to-text-200);
+		--spectrum-field-label-bottom-to-text: var(--spectrum-component-bottom-to-text-200);
+		--spectrum-field-label-font-size: var(--spectrum-font-size-200);
+
+		--spectrum-field-label-side-margin-block-start: var(--spectrum-field-label-top-margin-extra-large);
+		--spectrum-field-label-side-padding-right: var(--spectrum-spacing-200);
+
+		--spectrum-field-label-text-to-asterisk: var(--spectrum-field-label-text-to-asterisk-extra-large);
+	}
+}

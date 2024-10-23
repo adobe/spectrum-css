@@ -37,15 +37,29 @@
     "--spectrum-color-slider-border-opacity",
     "--spectrum-color-slider-border-rounding",
     "--spectrum-color-slider-border-width",
+    "--spectrum-color-slider-checkerboard-dark-color",
+    "--spectrum-color-slider-checkerboard-light-color",
+    "--spectrum-color-slider-checkerboard-size",
+    "--spectrum-color-slider-handle-margin-block",
     "--spectrum-color-slider-length",
     "--spectrum-color-slider-minimum-length"
   ],
   "global": [
     "--spectrum-color-control-track-width",
+    "--spectrum-component-top-to-text-75",
     "--spectrum-disabled-background-color",
-    "--spectrum-gray-900-rgb"
+    "--spectrum-gray-900-rgb",
+    "--spectrum-opacity-checkerboard-square-dark",
+    "--spectrum-opacity-checkerboard-square-light",
+    "--spectrum-opacity-checkerboard-square-size"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-color-slider-border-color-rgba",
+    "--system-color-slider-checkerboard-dark-color",
+    "--system-color-slider-checkerboard-light-color",
+    "--system-color-slider-checkerboard-size",
+    "--system-color-slider-handle-margin-block"
+  ],
   "passthroughs": ["--mod-colorhandle-hitarea-border-radius"],
   "high-contrast": [
     "--highcontrast-color-slider-background-color-disabled",

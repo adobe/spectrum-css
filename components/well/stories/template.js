@@ -5,6 +5,9 @@ import { ifDefined } from "lit/directives/if-defined.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Well",
@@ -13,16 +16,18 @@ export const Template = ({
 	id = getRandomId("well"),
 	testId,
 	content = [],
-}, context) => html`
-	<span
-		class=${classMap({
-			[rootClass]: true,
-			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
-		})}
-		style=${styleMap(customStyles)}
-		id=${ifDefined(id)}
-		data-testid=${ifDefined(testId)}
-	>
-		${renderContent(content, { context })}
-	</span>
-`;
+} = {}, context = {}) => {
+	return html`
+		<span
+			class=${classMap({
+				[rootClass]: true,
+				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+			})}
+			style=${styleMap(customStyles)}
+			id=${ifDefined(id)}
+			data-testid=${ifDefined(testId)}
+		>
+			${renderContent(content, { context })}
+		</span>
+	`;
+};

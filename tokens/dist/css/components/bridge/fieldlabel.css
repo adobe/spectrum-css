@@ -1,0 +1,27 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--express {
+	--spectrum-field-label-min-height: var(--system-field-label-min-height);
+	--spectrum-field-label-top-to-text: var(--system-field-label-top-to-text);
+	--spectrum-field-label-bottom-to-text: var(--system-field-label-bottom-to-text);
+	--spectrum-field-label-font-size: var(--system-field-label-font-size);
+	--spectrum-field-label-side-margin-block-start: var(--system-field-label-side-margin-block-start);
+	--spectrum-field-label-side-padding-right: var(--system-field-label-side-padding-right);
+	--spectrum-field-label-text-to-asterisk: var(--system-field-label-text-to-asterisk);
+	--spectrum-field-label-color: var(--system-field-label-color);
+	--spectrum-field-label-font-weight: var(--system-field-label-font-weight);
+	--spectrum-field-label-line-height: var(--system-field-label-line-height);
+	--spectrum-field-label-line-height-cjk: var(--system-field-label-line-height-cjk);
+	--spectrum-field-label-disabled-content-color: var(--system-field-label-disabled-content-color);
+}
