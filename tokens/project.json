@@ -45,6 +45,8 @@
 			},
 			"outputs": []
 		},
+		"format": {},
+		"lint": {},
 		"style-dictionary": {
 			"dependsOn": ["clean"],
 			"executor": "@nxkit/style-dictionary:build",
