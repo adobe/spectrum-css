@@ -52,7 +52,7 @@
 	--spectrum-search-background-color-disabled: var(--spectrum-disabled-background-color);
 	--spectrum-search-border-color-disabled: var(--spectrum-disabled-background-color);
 
-	/* Settings for nested Textfield component. */
+	/* @passthrough start -- settings for nested Textfield component */
 	--mod-textfield-font-family: var(--mod-search-font-family, var(--spectrum-search-font-family));
 	--mod-textfield-font-weight: var(--mod-search-font-weight, var(--spectrum-search-font-weight));
 
@@ -79,6 +79,7 @@
 
 	--mod-textfield-background-color: var(--mod-search-background-color, var(--spectrum-search-background-color));
 	--mod-textfield-background-color-disabled: var(--mod-search-background-color-disabled, var(--spectrum-search-background-color-disabled));
+	/* @passthrough end */
 }
 
 .spectrum-Search--sizeS {
