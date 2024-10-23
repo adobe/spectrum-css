@@ -41,9 +41,10 @@
 }
 
 .spectrum-Tray {
+	--mod-modal-max-width: 100%;
+
 	/* Default to full width when the viewport is in portrait orientation */
 	inline-size: 100%;
-	--mod-modal-max-width: 100%;
 	max-inline-size: 100%;
 
 	max-block-size: calc(100vh - var(--mod-tray-spacing-edge-to-tray-safe-zone, var(--spectrum-tray-spacing-edge-to-tray-safe-zone)));
