@@ -10,6 +10,9 @@
     ".spectrum-Combobox--quiet .spectrum-Combobox-textfield.is-invalid .spectrum-Combobox-input",
     ".spectrum-Combobox--quiet .spectrum-Combobox-textfield.is-invalid .spectrum-Textfield-validationIcon",
     ".spectrum-Combobox--quiet .spectrum-Combobox-textfield.is-loading .spectrum-Combobox-input",
+    ".spectrum-Combobox--quiet .spectrum-Combobox-textfield.spectrum-Textfield--quiet input:read-only",
+    ".spectrum-Combobox--quiet .spectrum-Combobox-textfield.spectrum-Textfield--quiet input:read-only:hover",
+    ".spectrum-Combobox--quiet .spectrum-Combobox-textfield.spectrum-Textfield--quiet.is-invalid input:read-only",
     ".spectrum-Combobox--quiet.spectrum-Combobox--sizeL",
     ".spectrum-Combobox--quiet.spectrum-Combobox--sizeM",
     ".spectrum-Combobox--quiet.spectrum-Combobox--sizeS",
@@ -59,6 +62,10 @@
     ".spectrum-Combobox.is-focused:hover .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox.is-keyboardFocused .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox.is-keyboardFocused .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
+    ".spectrum-Combobox.is-readOnly .spectrum-Combobox-textfield input:read-only",
+    ".spectrum-Combobox.is-readOnly .spectrum-Combobox-textfield input:read-only:hover",
+    ".spectrum-Combobox.is-readOnly .spectrum-Combobox-textfield.is-disabled input:read-only",
+    ".spectrum-Combobox.is-readOnly .spectrum-Combobox-textfield.is-invalid input:read-only",
     ".spectrum-Combobox:has(:active) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox:has(:active) .spectrum-Combobox-button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet)",
     ".spectrum-Combobox:has(:focus) .spectrum-Combobox-button.is-invalid:not(:disabled, .spectrum-PickerButton--quiet)",
@@ -281,6 +288,8 @@
   ],
   "high-contrast": [
     "--highcontrast-combobox-border-color-highlight",
-    "--highcontrast-combobox-border-color-invalid"
+    "--highcontrast-combobox-border-color-invalid",
+    "--highcontrast-textfield-border-color-invalid-default",
+    "--highcontrast-textfield-text-color-disabled"
   ]
 }
