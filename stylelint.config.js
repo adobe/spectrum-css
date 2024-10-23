@@ -90,7 +90,7 @@ module.exports = {
 		],
 		"selector-attribute-quotes": "always",
 		"selector-class-pattern": [
-			"^(spectrum-|is-|u-)[A-Za-z0-9-]+", {
+			"^(?:spectrum|is|u)(?:-[A-Za-z0-9-]+)?$", {
 				resolveNestedSelectors: true
 			}
 		],
