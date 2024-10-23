@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.0.0-s2-foundations.23
+
+### Patch Changes
+
+- [#3256](https://github.com/adobe/spectrum-css/pull/3256) [`b84b93e`](https://github.com/adobe/spectrum-css/commit/b84b93e64157c7a8288a3ed19f1a637ee609251c) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Adds line-height on `.spectrum-ActionButton-label` in order to accommodate text with diacritics that may be cut off vertically.
+
 ## 7.0.0-s2-foundations.22
 
 ### Minor Changes
