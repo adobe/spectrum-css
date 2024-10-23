@@ -1,5 +1,16 @@
 # Change Log
 
+## 6.0.0-s2-foundations.16
+
+### Patch Changes
+
+- [#3256](https://github.com/adobe/spectrum-css/pull/3256) [`b84b93e`](https://github.com/adobe/spectrum-css/commit/b84b93e64157c7a8288a3ed19f1a637ee609251c) Thanks [@marissahuysentruyt](https://github.com/marissahuysentruyt)! - Action group
+
+  `flex: 1` has now changed to `flex-grow: 1` in the `.spectrum-ActionGroup--justified .spectrum-ActionGroup-item` selector to specify the desired behavior of justified action groups.
+
+- Updated dependencies [[`b84b93e`](https://github.com/adobe/spectrum-css/commit/b84b93e64157c7a8288a3ed19f1a637ee609251c)]:
+  - @spectrum-css/actionbutton@7.0.0-s2-foundations.23
+
 ## 6.0.0-s2-foundations.15
 
 ### Minor Changes
