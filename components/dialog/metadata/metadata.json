@@ -107,7 +107,28 @@
     "--spectrum-spacing-50",
     "--spectrum-spacing-600"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-dialog-confirm-buttongroup-padding-top",
+    "--system-dialog-confirm-close-button-padding",
+    "--system-dialog-confirm-close-button-size",
+    "--system-dialog-confirm-description-margin",
+    "--system-dialog-confirm-description-padding",
+    "--system-dialog-confirm-description-text-color",
+    "--system-dialog-confirm-description-text-line-height",
+    "--system-dialog-confirm-divider-block-spacing-end",
+    "--system-dialog-confirm-divider-block-spacing-start",
+    "--system-dialog-confirm-divider-height",
+    "--system-dialog-confirm-footer-padding-top",
+    "--system-dialog-confirm-gap-size",
+    "--system-dialog-confirm-large-width",
+    "--system-dialog-confirm-medium-width",
+    "--system-dialog-confirm-small-width",
+    "--system-dialog-confirm-title-text-color",
+    "--system-dialog-confirm-title-text-line-height",
+    "--system-dialog-fullscreen-header-text-size",
+    "--system-dialog-heading-font-weight",
+    "--system-dialog-min-inline-size"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }

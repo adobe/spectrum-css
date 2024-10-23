@@ -18,7 +18,10 @@
     "--spectrum-fieldgroup-readonly-delimiter"
   ],
   "global": ["--spectrum-spacing-300"],
-  "system-theme": [],
+  "system-theme": [
+    "--system-field-group-margin",
+    "--system-field-group-readonly-delimiter"
+  ],
   "passthroughs": [],
   "high-contrast": []
 }
