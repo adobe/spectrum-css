@@ -83,7 +83,8 @@ module.exports = function ({ setName, subSystemName } = {}) {
 			) {
 				return true;
 			}
-		} else {
+		}
+		else {
 			if (!tokenSets.includes(setName)) return false;
 
 			if (!subSystemName && tokenSets.length === 1) {
