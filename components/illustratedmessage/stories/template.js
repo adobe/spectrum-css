@@ -1,4 +1,4 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
+import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
@@ -11,36 +11,56 @@ export const Template = ({
 	description,
 	customClasses = [],
 	useAccentColor = false,
-} = {}, context = {}) => {
-	return html`
-		<div
-			class=${classMap({
-				[rootClass]: true,
-				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+	orientation,
+	size = "m",
+}) => html`
+	<div
+		class=${classMap({
+			[rootClass]: true,
+			[`${rootClass}--${orientation}`]: typeof orientation !== "undefined",
+			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
+		})}
+	>
+		${illustrationSvgMarkup(useAccentColor)}
+		<div class="${rootClass}--content">
+			${when(
+				heading,
+				() =>
+					html`<h2
+						class="spectrum-Heading spectrum-Heading--regular ${rootClass}-heading"
+					>
+						${heading}
+					</h2>`
+			)}
+			${when(
+				description,
+				() =>
+					html`<p
+						class="spectrum-Body ${rootClass}-description"
+					>
+						${description.map((c) => (typeof c === "function" ? c({}) : c))}
+					</p>`
+			)}
+			${ButtonGroup({
+				size,
+				items: [
+					{
+						variant: "secondary",
+						treatment: "outline",
+						label: "Remind me later",
+
+					},
+					{
+						variant: "primary",
+						treatment: "fill",
+						label: "Rate now",
+					},
+				]
 			})}
-		>
-			${illustrationSvgMarkup(useAccentColor)}
-			${when(heading, () =>
-				Typography({
-					semantics: "heading",
-					"size": "m",
-					customClasses: [`${rootClass}-heading`],
-					content: [heading],
-				}, context)
-			)}
-			${when(description, () =>
-				Typography({
-					semantics: "body",
-					"size": "s",
-					customClasses: [`${rootClass}-description`],
-					content: [
-						...description.map((c) => (typeof c === "function" ? c({}) : c))
-					],
-				}, context)
-			)}
 		</div>
-	`;
-};
+	</div>
+`;
 
 const illustrationSvgMarkup = (withAccentColorClass = false) => html`
 	<svg
