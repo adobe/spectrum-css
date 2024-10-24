@@ -82,8 +82,8 @@
   "global": [
     "--spectrum-animation-duration-100",
     "--spectrum-font-size-100",
+    "--spectrum-gray-100",
     "--spectrum-gray-200",
-    "--spectrum-gray-300",
     "--spectrum-logical-rotation",
     "--spectrum-neutral-content-color-default",
     "--spectrum-regular-font-weight",
@@ -93,7 +93,25 @@
     "--spectrum-spacing-600",
     "--spectrum-spacing-75"
   ],
-  "system-theme": [],
+  "system-theme": [
+    "--system-asset-list-child-indicator-animation",
+    "--system-asset-list-item-animation",
+    "--system-asset-list-item-background-color-down",
+    "--system-asset-list-item-background-color-hover",
+    "--system-asset-list-item-border-radius",
+    "--system-asset-list-item-font-size",
+    "--system-asset-list-item-font-weight",
+    "--system-asset-list-item-height",
+    "--system-asset-list-item-label-padding-inline-start",
+    "--system-asset-list-item-margin-block-end",
+    "--system-asset-list-item-padding-inline-end",
+    "--system-asset-list-item-padding-inline-start",
+    "--system-asset-list-label-color",
+    "--system-asset-list-thumbnail-height",
+    "--system-asset-list-thumbnail-margin-inline-start",
+    "--system-asset-list-thumbnail-width",
+    "--system-asset-list-width"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-assetlist-border-color-key-focus",

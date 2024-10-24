@@ -1,0 +1,378 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+@container style(--system: spectrum) {
+	.spectrum-Icon {
+		--spectrum-icon-size-xxs: var(--spectrum-workflow-icon-size-xxs);
+		--spectrum-icon-size-xs: var(--spectrum-workflow-icon-size-50);
+		--spectrum-icon-size-s: var(--spectrum-workflow-icon-size-75);
+		--spectrum-icon-size-m: var(--spectrum-workflow-icon-size-100);
+		--spectrum-icon-size-l: var(--spectrum-workflow-icon-size-200);
+		--spectrum-icon-size-xl: var(--spectrum-workflow-icon-size-300);
+		--spectrum-icon-size-xxl: var(--spectrum-workflow-icon-size-xxl);
+	}
+
+	/* Chevron */
+	.spectrum-UIIcon-ChevronRight50,
+	.spectrum-UIIcon-ChevronDown50 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-50);
+	}
+
+	.spectrum-UIIcon-ChevronRight75,
+	.spectrum-UIIcon-ChevronDown75 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-75);
+	}
+
+	.spectrum-UIIcon-ChevronRight100,
+	.spectrum-UIIcon-ChevronDown100 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-100);
+	}
+
+	.spectrum-UIIcon-ChevronRight200,
+	.spectrum-UIIcon-ChevronDown200 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-200);
+	}
+
+	.spectrum-UIIcon-ChevronRight300,
+	.spectrum-UIIcon-ChevronDown300 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-300);
+	}
+
+	.spectrum-UIIcon-ChevronRight400,
+	.spectrum-UIIcon-ChevronDown400 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-400);
+	}
+
+	.spectrum-UIIcon-ChevronRight500,
+	.spectrum-UIIcon-ChevronDown500 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-500);
+	}
+
+	.spectrum-UIIcon-ChevronDown100 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-100);
+	}
+
+	.spectrum-UIIcon-ChevronDown200 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-200);
+	}
+
+	.spectrum-UIIcon-ChevronDown300 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-300);
+	}
+
+	.spectrum-UIIcon-ChevronDown400 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-400);
+	}
+
+	.spectrum-UIIcon-ChevronDown500 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-500);
+	}
+
+	.spectrum-UIIcon-ChevronLeft50 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-50);
+	}
+
+	.spectrum-UIIcon-ChevronLeft75 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-75);
+	}
+
+	.spectrum-UIIcon-ChevronLeft100 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-100);
+	}
+
+	.spectrum-UIIcon-ChevronLeft200 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-200);
+	}
+
+	.spectrum-UIIcon-ChevronLeft300 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-300);
+	}
+
+	.spectrum-UIIcon-ChevronLeft400 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-400);
+	}
+
+	.spectrum-UIIcon-ChevronLeft500 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-500);
+	}
+
+	.spectrum-UIIcon-ChevronUp50 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-50);
+	}
+
+	.spectrum-UIIcon-ChevronUp75 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-75);
+	}
+
+	.spectrum-UIIcon-ChevronUp100 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-100);
+	}
+
+	.spectrum-UIIcon-ChevronUp200 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-200);
+	}
+
+	.spectrum-UIIcon-ChevronUp300 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-300);
+	}
+
+	.spectrum-UIIcon-ChevronUp400 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-400);
+	}
+
+	.spectrum-UIIcon-ChevronUp500 {
+		--mod-icon-size: var(--spectrum-chevron-icon-size-500);
+	}
+
+	/* Arrow */
+	.spectrum-UIIcon-ArrowRight75 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-75);
+	}
+
+	.spectrum-UIIcon-ArrowRight100 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-100);
+	}
+
+	.spectrum-UIIcon-ArrowRight200 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-200);
+	}
+
+	.spectrum-UIIcon-ArrowRight300 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-300);
+	}
+
+	.spectrum-UIIcon-ArrowRight400 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-400);
+	}
+
+	.spectrum-UIIcon-ArrowRight500 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-500);
+	}
+
+	.spectrum-UIIcon-ArrowRight600 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-600);
+	}
+
+	.spectrum-UIIcon-ArrowDown75 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-75);
+	}
+
+	.spectrum-UIIcon-ArrowDown100 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-100);
+	}
+
+	.spectrum-UIIcon-ArrowDown200 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-200);
+	}
+
+	.spectrum-UIIcon-ArrowDown300 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-300);
+	}
+
+	.spectrum-UIIcon-ArrowDown400 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-400);
+	}
+
+	.spectrum-UIIcon-ArrowDown500 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-500);
+	}
+
+	.spectrum-UIIcon-ArrowDown600 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-600);
+	}
+
+	.spectrum-UIIcon-ArrowLeft75 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-75);
+	}
+
+	.spectrum-UIIcon-ArrowLeft100 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-100);
+	}
+
+	.spectrum-UIIcon-ArrowLeft200 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-200);
+	}
+
+	.spectrum-UIIcon-ArrowLeft300 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-300);
+	}
+
+	.spectrum-UIIcon-ArrowLeft400 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-400);
+	}
+
+	.spectrum-UIIcon-ArrowLeft500 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-500);
+	}
+
+	.spectrum-UIIcon-ArrowLeft600 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-600);
+	}
+
+	.spectrum-UIIcon-ArrowUp75 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-75);
+	}
+
+	.spectrum-UIIcon-ArrowUp100 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-100);
+	}
+
+	.spectrum-UIIcon-ArrowUp200 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-200);
+	}
+
+	.spectrum-UIIcon-ArrowUp300 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-300);
+	}
+
+	.spectrum-UIIcon-ArrowUp400 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-400);
+	}
+
+	.spectrum-UIIcon-ArrowUp500 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-500);
+	}
+
+	.spectrum-UIIcon-ArrowUp600 {
+		--mod-icon-size: var(--spectrum-arrow-icon-size-600);
+	}
+
+	/* Checkmark */
+	.spectrum-UIIcon-Checkmark50 {
+		--mod-icon-size: var(--spectrum-checkmark-icon-size-50);
+	}
+
+	.spectrum-UIIcon-Checkmark75 {
+		--mod-icon-size: var(--spectrum-checkmark-icon-size-75);
+	}
+
+	.spectrum-UIIcon-Checkmark100 {
+		--mod-icon-size: var(--spectrum-checkmark-icon-size-100);
+	}
+
+	.spectrum-UIIcon-Checkmark200 {
+		--mod-icon-size: var(--spectrum-checkmark-icon-size-200);
+	}
+
+	.spectrum-UIIcon-Checkmark300 {
+		--mod-icon-size: var(--spectrum-checkmark-icon-size-300);
+	}
+
+	.spectrum-UIIcon-Checkmark400 {
+		--mod-icon-size: var(--spectrum-checkmark-icon-size-400);
+	}
+
+	.spectrum-UIIcon-Checkmark500 {
+		--mod-icon-size: var(--spectrum-checkmark-icon-size-500);
+	}
+
+	.spectrum-UIIcon-Checkmark600 {
+		--mod-icon-size: var(--spectrum-checkmark-icon-size-600);
+	}
+
+	/* Dash */
+	.spectrum-UIIcon-Dash50 {
+		--mod-icon-size: var(--spectrum-dash-icon-size-50);
+	}
+
+	.spectrum-UIIcon-Dash75 {
+		--mod-icon-size: var(--spectrum-dash-icon-size-75);
+	}
+
+	.spectrum-UIIcon-Dash100 {
+		--mod-icon-size: var(--spectrum-dash-icon-size-100);
+	}
+
+	.spectrum-UIIcon-Dash200 {
+		--mod-icon-size: var(--spectrum-dash-icon-size-200);
+	}
+
+	.spectrum-UIIcon-Dash300 {
+		--mod-icon-size: var(--spectrum-dash-icon-size-300);
+	}
+
+	.spectrum-UIIcon-Dash400 {
+		--mod-icon-size: var(--spectrum-dash-icon-size-400);
+	}
+
+	.spectrum-UIIcon-Dash500 {
+		--mod-icon-size: var(--spectrum-dash-icon-size-500);
+	}
+
+	.spectrum-UIIcon-Dash600 {
+		--mod-icon-size: var(--spectrum-dash-icon-size-600);
+	}
+
+	/* Cross */
+	.spectrum-UIIcon-Cross75 {
+		--mod-icon-size: var(--spectrum-cross-icon-size-75);
+	}
+
+	.spectrum-UIIcon-Cross100 {
+		--mod-icon-size: var(--spectrum-cross-icon-size-100);
+	}
+
+	.spectrum-UIIcon-Cross200 {
+		--mod-icon-size: var(--spectrum-cross-icon-size-200);
+	}
+
+	.spectrum-UIIcon-Cross300 {
+		--mod-icon-size: var(--spectrum-cross-icon-size-300);
+	}
+
+	.spectrum-UIIcon-Cross400 {
+		--mod-icon-size: var(--spectrum-cross-icon-size-400);
+	}
+
+	.spectrum-UIIcon-Cross500 {
+		--mod-icon-size: var(--spectrum-cross-icon-size-500);
+	}
+
+	.spectrum-UIIcon-Cross600 {
+		--mod-icon-size: var(--spectrum-cross-icon-size-600);
+	}
+
+	/* Corner Triangle */
+	.spectrum-UIIcon-CornerTriangle75 {
+		--mod-icon-size: var(--spectrum-corner-triangle-icon-size-75);
+	}
+
+	.spectrum-UIIcon-CornerTriangle100 {
+		--mod-icon-size: var(--spectrum-corner-triangle-icon-size-100);
+	}
+
+	.spectrum-UIIcon-CornerTriangle200 {
+		--mod-icon-size: var(--spectrum-corner-triangle-icon-size-200);
+	}
+
+	.spectrum-UIIcon-CornerTriangle300 {
+		--mod-icon-size: var(--spectrum-corner-triangle-icon-size-300);
+	}
+
+	/* Asterisk */
+	.spectrum-UIIcon-Asterisk75 {
+		--mod-icon-size: var(--spectrum-asterisk-icon-size-75);
+	}
+
+	.spectrum-UIIcon-Asterisk100 {
+		--mod-icon-size: var(--spectrum-asterisk-icon-size-100);
+	}
+
+	.spectrum-UIIcon-Asterisk200 {
+		--mod-icon-size: var(--spectrum-asterisk-icon-size-200);
+	}
+
+	.spectrum-UIIcon-Asterisk300 {
+		--mod-icon-size: var(--spectrum-asterisk-icon-size-300);
+	}
+}

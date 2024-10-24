@@ -10,34 +10,24 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-.spectrum-ColorWheel {
-	--spectrum-colorwheel-width: var(--spectrum-color-wheel-width);
-	--spectrum-colorwheel-min-width: var(--spectrum-color-wheel-minimum-width);
-	--spectrum-colorwheel-height: var(--spectrum-color-wheel-width);
-	--spectrum-colorwheel-border-color: var(--spectrum-transparent-black-200);
-	--spectrum-colorwheel-border-width: var(--spectrum-border-width-100);
-	--spectrum-colorwheel-fill-color-disabled: var(--spectrum-disabled-background-color);
-	--spectrum-colorwheel-track-width: var(--spectrum-color-control-track-width);
-	--spectrum-colorwheel-colorarea-margin: var(--spectrum-color-wheel-color-area-margin);
-	--spectrum-colorwheel-colorhandle-position: calc((var(--spectrum-colorwheel-width) / 2) - (var(--spectrum-colorwheel-track-width) / 2));
-}
+
+@import "./themes/spectrum-two.css";
 
 /* Windows High Contrast Mode */
 @media (forced-colors: active) {
 	.spectrum-ColorWheel {
 		--highcontrast-colorwheel-border-color-disabled: GrayText;
 		--highcontrast-colorwheel-fill-color-disabled: Canvas;
-	}
 
-	.spectrum-ColorWheel {
 		forced-color-adjust: none;
 	}
 }
 
 .spectrum-ColorWheel {
-	/* stylelint-disable spectrum-tools/no-unused-custom-properties, custom-property-pattern -- --track-width and --border-width to be used with JS in calculating the clip-path paths and colorarea-container-size */
-	--track-width: var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width));
-	--border-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used with JS in calculating the clip-path paths and colorarea-container-size */
+	--_track-width: var(--mod-colorwheel-track-width, var(--spectrum-colorwheel-track-width));
+	/* stylelint-disable-next-line spectrum-tools/no-unused-custom-properties -- used with JS in calculating the clip-path paths and colorarea-container-size */
+	--_border-width: var(--mod-colorwheel-border-width, var(--spectrum-colorwheel-border-width));
 
 	position: relative;
 	display: block;
@@ -124,7 +114,7 @@
 
 .spectrum-ColorWheel-wheel {
 	position: absolute;
-	background: conic-gradient(from 90deg, red, rgb(255, 128, 0), rgb(255, 255, 0), rgb(128, 255, 0), rgb(0, 255, 0), rgb(0, 255, 128), rgb(0, 255, 255), rgb(0, 128, 255), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 255), rgb(255, 0, 128), red);
+	background: conic-gradient(from 90deg, red, rgb(255 128 0), rgb(255 255 0), rgb(128 255 0), rgb(0 255 0), rgb(0 255 128), rgb(0 255 255), rgb(0 128 255), rgb(0 0 255), rgb(128 0 255), rgb(255 0 255), rgb(255 0 128), red);
 	inset-block: var(--spectrum-colorwheel-border-width);
 	inset-inline: var(--spectrum-colorwheel-border-width);
 	clip-path: path(evenodd, var(--mod-colorwheel-path, var(--spectrum-colorwheel-path)));

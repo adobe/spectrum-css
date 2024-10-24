@@ -148,7 +148,22 @@
     "--spectrum-gray-400",
     "--spectrum-spacing-100"
   ],
-  "system-theme": ["--system-spectrum-popover-border-width"],
+  "system-theme": [
+    "--system-popover-animation-distance",
+    "--system-popover-background-color",
+    "--system-popover-border-color",
+    "--system-popover-border-width",
+    "--system-popover-content-area-spacing-vertical",
+    "--system-popover-corner-radius",
+    "--system-popover-pointer-edge-offset",
+    "--system-popover-pointer-edge-spacing",
+    "--system-popover-pointer-height",
+    "--system-popover-pointer-width",
+    "--system-popover-shadow-blur",
+    "--system-popover-shadow-color",
+    "--system-popover-shadow-horizontal",
+    "--system-popover-shadow-vertical"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-popover-background-color",

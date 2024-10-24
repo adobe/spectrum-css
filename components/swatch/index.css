@@ -11,55 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-/* Swatch tokens */
-.spectrum-Swatch {
-	/* Placeholder tokens */
-	--spectrum-swatch-focus-indicator-border-radius: 8px;
-	--spectrum-swatch-icon-border-color: rgb(0 0 0 / 51%);
-
-	/* Size */
-	--spectrum-swatch-size: var(--spectrum-swatch-size-small);
-	--spectrum-swatch-border-radius: var(--spectrum-corner-radius-100);
-	--spectrum-swatch-border-thickness: var(--spectrum-border-width-100);
-	--spectrum-swatch-border-thickness-selected: var(--spectrum-border-width-200);
-	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
-	--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
-	--spectrum-swatch-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-	--spectrum-swatch-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-
-	/* Color */
-	--spectrum-swatch-border-color-selected: var(--spectrum-gray-900);
-	--spectrum-swatch-inner-border-color-selected: var(--spectrum-gray-50);
-	--spectrum-swatch-disabled-icon-border-color: var(--spectrum-swatch-disabled-icon-border-color);
-	--spectrum-swatch-disabled-icon-color: var(--spectrum-white);
-	--spectrum-swatch-dash-icon-color: var(--spectrum-gray-800);
-	--spectrum-swatch-slash-icon-color: var(--spectrum-red-900);
-	--spectrum-swatch-focus-indicator-color: var(--spectrum-focus-indicator-color);
-}
-
-.spectrum-Swatch--sizeXS {
-	--spectrum-swatch-size: var(--spectrum-swatch-size-extra-small);
-	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-50);
-	--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-extra-small);
-}
-
-.spectrum-Swatch--sizeS {
-	--spectrum-swatch-size: var(--spectrum-swatch-size-small);
-	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-75);
-	--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-small);
-}
-
-.spectrum-Swatch--sizeM {
-	--spectrum-swatch-size: var(--spectrum-swatch-size-medium);
-	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-100);
-	--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-medium);
-}
-
-.spectrum-Swatch--sizeL {
-	--spectrum-swatch-size: var(--spectrum-swatch-size-large);
-	--spectrum-swatch-disabled-icon-size: var(--spectrum-workflow-icon-size-200);
-	--spectrum-swatch-slash-thickness: var(--spectrum-swatch-slash-thickness-large);
-}
+@import "./themes/spectrum-two.css";
 
 /* Windows high contrast mode */
 @media (forced-colors: active) {
@@ -145,7 +97,7 @@
 
 	&.is-mixedValue {
 		.spectrum-Swatch-fill {
-			/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
+			/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background: var(--spectrum-picked-color, transparent);
 		}
 
@@ -158,7 +110,7 @@
 	/* Swatch fill: Not fill with Slash */
 	&.is-nothing {
 		.spectrum-Swatch-fill {
-			/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
+			/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background-color: var(--spectrum-picked-color, transparent);
 			background-image: none;
 
@@ -172,12 +124,8 @@
 			}
 		}
 
-		&.spectrum-Swatch--rectangle {
-			.spectrum-Swatch-fill {
-				&::after {
-					transform: rotate(-25deg);
-				}
-			}
+		&.spectrum-Swatch--rectangle .spectrum-Swatch-fill::after {
+			transform: rotate(-25deg);
 		}
 	}
 
@@ -248,7 +196,7 @@
 		inset: 0;
 		z-index: 0;
 
-		/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
+		/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 		background-color: var(--spectrum-picked-color, transparent);
 
 		/* Swatch border */
@@ -263,7 +211,7 @@
 		&::before {
 			box-shadow: none;
 
-			/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
+			/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 			background-color: var(--spectrum-picked-color, transparent);
 		}
 	}
@@ -281,7 +229,7 @@
 	display: none;
 	pointer-events: none;
 
-	/* stylelint-disable-next-line -- Undefined variable allows custom stylesheet or JS to pass the value to this element */
+	/* stylelint-disable-next-line spectrum-tools/no-unknown-custom-properties -- undefined variable allows custom stylesheet or JS to pass the value to this element */
 	color: var(--spectrum-picked-color, transparent);
 }
 

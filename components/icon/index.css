@@ -11,6 +11,144 @@
  * governing permissions and limitations under the License.
  */
 
-@import "icons.css";
-@import "workflow-icons.css";
-@import "ui-icons.css";
+ @import "./themes/spectrum-two.css";
+
+ /*
+  * Component-specific icon transforms
+  */
+ .spectrum-UIIcon-ChevronDown50,
+ .spectrum-UIIcon-ChevronDown75,
+ .spectrum-UIIcon-ChevronDown100,
+ .spectrum-UIIcon-ChevronDown200,
+ .spectrum-UIIcon-ChevronDown300,
+ .spectrum-UIIcon-ChevronDown400,
+ .spectrum-UIIcon-ChevronDown500,
+ .spectrum-UIIcon-ArrowDown75,
+ .spectrum-UIIcon-ArrowDown100,
+ .spectrum-UIIcon-ArrowDown200,
+ .spectrum-UIIcon-ArrowDown300,
+ .spectrum-UIIcon-ArrowDown400,
+ .spectrum-UIIcon-ArrowDown500,
+ .spectrum-UIIcon-ArrowDown600 {
+	 --spectrum-icon-transform: rotate(90deg);
+ }
+
+ .spectrum-UIIcon-ChevronLeft50,
+ .spectrum-UIIcon-ChevronLeft75,
+ .spectrum-UIIcon-ChevronLeft100,
+ .spectrum-UIIcon-ChevronLeft200,
+ .spectrum-UIIcon-ChevronLeft300,
+ .spectrum-UIIcon-ChevronLeft400,
+ .spectrum-UIIcon-ChevronLeft500,
+ .spectrum-UIIcon-ArrowLeft75,
+ .spectrum-UIIcon-ArrowLeft100,
+ .spectrum-UIIcon-ArrowLeft200,
+ .spectrum-UIIcon-ArrowLeft300,
+ .spectrum-UIIcon-ArrowLeft400,
+ .spectrum-UIIcon-ArrowLeft500,
+ .spectrum-UIIcon-ArrowLeft600 {
+	 --spectrum-icon-transform: rotate(180deg);
+ }
+
+ .spectrum-UIIcon-ChevronUp50,
+ .spectrum-UIIcon-ChevronUp75,
+ .spectrum-UIIcon-ChevronUp100,
+ .spectrum-UIIcon-ChevronUp200,
+ .spectrum-UIIcon-ChevronUp300,
+ .spectrum-UIIcon-ChevronUp400,
+ .spectrum-UIIcon-ChevronUp500,
+ .spectrum-UIIcon-ArrowUp75,
+ .spectrum-UIIcon-ArrowUp100,
+ .spectrum-UIIcon-ArrowUp200,
+ .spectrum-UIIcon-ArrowUp300,
+ .spectrum-UIIcon-ArrowUp400,
+ .spectrum-UIIcon-ArrowUp500,
+ .spectrum-UIIcon-ArrowUp600 {
+	 --spectrum-icon-transform: rotate(270deg);
+ }
+
+ /*
+  * Icon root class styles
+  */
+
+.spectrum-Icon,
+.spectrum-UIIcon,
+.spectrum-Icon--sizeM {
+	--spectrum-icon-size: var(--spectrum-icon-size-m);
+}
+
+/* XXS icon size is not within the design spec and is planned to be deprecated in Spectrum 2. */
+.spectrum-Icon--sizeXXS {
+	--spectrum-icon-size: var(--spectrum-icon-size-xxs);
+}
+
+.spectrum-Icon--sizeXS {
+	--spectrum-icon-size: var(--spectrum-icon-size-xs);
+}
+
+.spectrum-Icon--sizeS {
+	--spectrum-icon-size: var(--spectrum-icon-size-s);
+}
+
+.spectrum-Icon--sizeL {
+	--spectrum-icon-size: var(--spectrum-icon-size-l);
+}
+
+.spectrum-Icon--sizeXL {
+	--spectrum-icon-size: var(--spectrum-icon-size-xl);
+}
+
+.spectrum-Icon--sizeXXL {
+	--spectrum-icon-size: var(--spectrum-icon-size-xxl);
+}
+
+.spectrum-Icon,
+.spectrum-UIIcon {
+	/* Don't catch clicks or hover, otherwise they may not escape the SVG. */
+	pointer-events: none;
+
+	/* Only some icons have a transform applied to them */
+	transform: var(--spectrum-icon-transform, none);
+
+	display: inline-block;
+	inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size)));
+	block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size)));
+
+	/* Use custom pass through or inherit the text color. */
+	color: var(--mod-icon-color, inherit);
+
+	/* Fill should match the current text color. */
+	fill: currentColor;
+}
+
+.spectrum-Icon {
+	img,
+	svg {
+		inline-size: var(--mod-icon-inline-size, var(--mod-icon-size, var(--spectrum-icon-size)));
+		block-size: var(--mod-icon-block-size, var(--mod-icon-size, var(--spectrum-icon-size)));
+	}
+}
+
+/*
+ * Medium/large scale
+ * ------------------
+ * In the "combined" versiom of the UI Icon SVGs, the medium and the large icons are
+ * contained within the same SVG. The two separate elements are shown or hidden based
+ * on the current platform scale.
+ */
+
+.spectrum-UIIcon--medium {
+	display: var(--mod-ui-icon-medium-display, var(--spectrum-ui-icon-medium-display, block));
+}
+
+.spectrum-UIIcon--large {
+	display: var(--mod-ui-icon-large-display, var(--spectrum-ui-icon-large-display, none));
+}
+
+@media (forced-colors: active) {
+	.spectrum-Icon,
+	.spectrum-UIIcon {
+		/* Automatically adjust the SVG to pick up the text color for High Contrast mode */
+		forced-color-adjust: auto;
+	}
+}

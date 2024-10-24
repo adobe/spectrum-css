@@ -30,6 +30,8 @@
     "--spectrum-color-area-minimum-width",
     "--spectrum-color-area-width",
     "--spectrum-colorarea-border-color",
+    "--spectrum-colorarea-border-color-opacity",
+    "--spectrum-colorarea-border-color-rgb",
     "--spectrum-colorarea-border-radius",
     "--spectrum-colorarea-border-width",
     "--spectrum-colorarea-disabled-background-color",
@@ -39,7 +41,18 @@
     "--spectrum-colorarea-width"
   ],
   "global": ["--spectrum-disabled-background-color"],
-  "system-theme": [],
+  "system-theme": [
+    "--system-color-area-border-color",
+    "--system-color-area-border-color-opacity",
+    "--system-color-area-border-color-rgb",
+    "--system-color-area-border-radius",
+    "--system-color-area-border-width",
+    "--system-color-area-disabled-background-color",
+    "--system-color-area-height",
+    "--system-color-area-min-height",
+    "--system-color-area-min-width",
+    "--system-color-area-width"
+  ],
   "passthroughs": [],
   "high-contrast": [
     "--highcontrast-colorarea-border-color",

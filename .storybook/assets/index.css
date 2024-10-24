@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern -- custom storybook styles */
 /*!
  * Copyright 2024 Adobe. All rights reserved.
  *
@@ -11,7 +12,6 @@
  * governing permissions and limitations under the License.
  */
 
-/* stylelint-disable selector-class-pattern */
 body {
 	--spectrum-font-family-ar: myriad-arabic, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
 	--spectrum-font-family-he: myriad-hebrew, adobe-clean, "Source Sans Pro", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif;
@@ -27,7 +27,7 @@ body {
 	font-style: var(--spectrum-font-style);
 
 	color: var(--spectrum-neutral-content-color-default);
-	background-color: var(--spectrum-background-layer-2-color);
+	background-color: var(--spectrum-background-base-color);
 }
 
 body:lang(ar) {
@@ -117,5 +117,11 @@ select:focus,
 #storybook-explorer-searchfield:focus {
 	border-color: rgb(2, 101, 220) !important;
 	box-shadow: rgb(2, 101, 220) 0 0 0 1px inset !important;
+}
+
+nav.sidebar-container,
+div.sb-bar {
+	color: var(--spectrum-neutral-content-color-default) !important;
+	background-color: var(--spectrum-background-layer-2-color) !important;
 }
 /* stylelint-enable selector-class-pattern */

@@ -10,6 +10,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 export const Template = ({
 	rootClass = "spectrum-Dialog",
@@ -29,7 +32,10 @@ export const Template = ({
 	customStyles = {},
 } = {}, context = {}) => {
 	const { updateArgs } = context;
-	const toggleOpen = () => updateArgs({ isOpen: !isOpen });
+
+	const toggleOpen = function () {
+		updateArgs({ isOpen: !isOpen });
+	};
 
 	const Dialog = html`
 		<div
@@ -37,7 +43,7 @@ export const Template = ({
 				[rootClass]: true,
 				[`${rootClass}--dismissable`]: isDismissible && ["fullscreen", "fullscreenTakeover"].every(l => layout !== l),
 				[`${rootClass}--${layout}`]: typeof layout !== "undefined",
-				[`${rootClass}--${size}`]: typeof size !== "undefined", 
+				[`${rootClass}--${size}`]: typeof size !== "undefined",
 				[`${rootClass}--noDivider`]: !hasDivider,
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
@@ -50,7 +56,7 @@ export const Template = ({
 			<div class="${rootClass}-grid">
 				${when(typeof heroImageUrl !== "undefined", () =>
 					html`
-						<div 
+						<div
 							class="spectrum-Dialog-hero"
 							style="background-image:url(${heroImageUrl})">
 						</div>
@@ -119,4 +125,3 @@ export const Template = ({
 		return Dialog;
 	}
 };
-

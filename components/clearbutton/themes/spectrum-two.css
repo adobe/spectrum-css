@@ -1,0 +1,76 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+@container style(--system: spectrum) {
+	.spectrum-ClearButton {
+		--spectrum-clear-button-background-color: transparent;
+		--spectrum-clear-button-background-color-hover: transparent;
+		--spectrum-clear-button-background-color-down: transparent;
+		--spectrum-clear-button-background-color-key-focus: transparent;
+
+		--spectrum-clear-button-padding: var(--spectrum-in-field-button-edge-to-fill);
+
+		--spectrum-clear-button-icon-color: var(--spectrum-neutral-content-color-default);
+		--spectrum-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
+		--spectrum-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
+		--spectrum-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+
+		&,
+		&.spectrum-ClearButton--sizeM {
+			--spectrum-clear-button-height: var(--spectrum-component-height-100);
+			--spectrum-clear-button-width: var(--spectrum-component-height-100);
+		}
+
+		&.spectrum-ClearButton--sizeS {
+			--spectrum-clear-button-height: var(--spectrum-component-height-75);
+			--spectrum-clear-button-width: var(--spectrum-component-height-75);
+		}
+
+		&.spectrum-ClearButton--sizeL {
+			--spectrum-clear-button-height: var(--spectrum-component-height-200);
+			--spectrum-clear-button-width: var(--spectrum-component-height-200);
+		}
+
+		&.spectrum-ClearButton--sizeXL {
+			--spectrum-clear-button-height: var(--spectrum-component-height-300);
+			--spectrum-clear-button-width: var(--spectrum-component-height-300);
+		}
+
+		&.spectrum-ClearButton--quiet {
+			--spectrum-clear-button-background-color: transparent;
+			--spectrum-clear-button-background-color-hover: transparent;
+			--spectrum-clear-button-background-color-down: transparent;
+			--spectrum-clear-button-background-color-key-focus: transparent;
+		}
+
+		&.spectrum-ClearButton--overBackground {
+			--spectrum-clear-button-icon-color: var(--spectrum-white);
+			--spectrum-clear-button-icon-color-hover: var(--spectrum-white);
+			--spectrum-clear-button-icon-color-down: var(--spectrum-white);
+			--spectrum-clear-button-icon-color-key-focus: var(--spectrum-white);
+
+			--spectrum-clear-button-background-color: transparent;
+			--spectrum-clear-button-background-color-hover: var(--spectrum-transparent-white-400);
+			--spectrum-clear-button-background-color-down: var(--spectrum-transparent-white-500);
+			--spectrum-clear-button-background-color-key-focus: var(--spectrum-transparent-white-400);
+		}
+
+		&:disabled,
+		&.is-disabled {
+			--spectrum-clear-button-icon-color: var(--spectrum-disabled-content-color);
+			--spectrum-clear-button-icon-color-hover: var(--spectrum-disabled-content-color);
+			--spectrum-clear-button-icon-color-down: var(--spectrum-disabled-content-color);
+			--spectrum-clear-button-background-color: transparent;
+		}
+	}
+}

@@ -11,45 +11,10 @@
  * governing permissions and limitations under the License.
  */
 
-.spectrum-FloatingActionButton {
-	--spectrum-floating-action-button-size: var(--spectrum-component-height-200);
-	--spectrum-floating-action-button-icon-size: var(--spectrum-workflow-icon-size-200);
-	--spectrum-floating-action-button-padding: var(--spectrum-component-pill-edge-to-visual-only-200);
-	--spectrum-floating-action-button-margin: var(--spectrum-spacing-200);
-	--spectrum-floating-action-button-drop-shadow-x: var(--spectrum-drop-shadow-x);
-
-	--spectrum-floating-action-button-focus-ring-width: var(--spectrum-focus-indicator-thickness);
-	--spectrum-floating-action-button-focus-ring-gap: var(--spectrum-focus-indicator-gap);
-	--spectrum-floating-action-button-focus-ring-color: var(--spectrum-focus-indicator-color);
-
-	--spectrum-floating-action-button-background-color: var(--spectrum-accent-background-color-default);
-	--spectrum-floating-action-button-background-color-hover: var(--spectrum-accent-background-color-hover);
-	--spectrum-floating-action-button-background-color-down: var(--spectrum-accent-background-color-down);
-	--spectrum-floating-action-button-background-color-key-focus: var(--spectrum-accent-background-color-key-focus);
-	--spectrum-floating-action-button-icon-color: var(--spectrum-white);
-	--spectrum-floating-action-button-icon-color-hover: var(--spectrum-white);
-	--spectrum-floating-action-button-icon-color-down: var(--spectrum-white);
-	--spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-white);
-}
-
-.spectrum-FloatingActionButton--secondary {
-	--spectrum-floating-action-button-background-color: var(--spectrum-background-layer-2-color);
-	--spectrum-floating-action-button-background-color-hover: var(--spectrum-background-layer-2-color);
-	--spectrum-floating-action-button-background-color-down: var(--spectrum-background-layer-2-color);
-	--spectrum-floating-action-button-background-color-key-focus: var(--spectrum-background-layer-2-color);
-	--spectrum-floating-action-button-icon-color: var(--spectrum-neutral-subdued-content-color-default);
-	--spectrum-floating-action-button-icon-color-hover: var(--spectrum-neutral-subdued-content-color-hover);
-	--spectrum-floating-action-button-icon-color-down: var(--spectrum-neutral-subdued-content-color-down);
-	--spectrum-floating-action-button-icon-color-key-focus: var(--spectrum-neutral-subdued-content-color-key-focus);
-}
+@import "./themes/spectrum-two.css";
 
 @media (forced-colors: active) {
 	.spectrum-FloatingActionButton {
-		&::after {
-			/* make sure focus-ring renders */
-			forced-color-adjust: none;
-		}
-
 		--highcontrast-floating-action-button-background-color: ButtonText;
 		--highcontrast-floating-action-button-background-color-hover: Highlight;
 		--highcontrast-floating-action-button-background-color-down: Highlight;
@@ -59,6 +24,11 @@
 		--highcontrast-floating-action-button-icon-color-hover: ButtonFace;
 		--highcontrast-floating-action-button-icon-color-down: ButtonFace;
 		--highcontrast-floating-action-button-icon-color-key-focus: ButtonFace;
+
+		&::after {
+			/* make sure focus-ring renders */
+			forced-color-adjust: none;
+		}
 	}
 }
 

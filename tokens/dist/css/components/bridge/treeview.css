@@ -1,0 +1,49 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum.spectrum--express {
+	--spectrum-treeview-item-border-radius: var(--system-tree-view-item-border-radius);
+	--spectrum-treeview-font-size: var(--system-tree-view-font-size);
+	--spectrum-treeview-item-indentation: var(--system-tree-view-item-indentation);
+	--spectrum-treeview-item-min-block-size: var(--system-tree-view-item-min-block-size);
+	--spectrum-treeview-heading-bottom-to-text: var(--system-tree-view-heading-bottom-to-text);
+	--spectrum-treeview-item-padding-inline-start: var(--system-tree-view-item-padding-inline-start);
+	--spectrum-treeview-indicator-margin-inline-start: var(--system-tree-view-indicator-margin-inline-start);
+	--spectrum-treeview-item-padding-inline-end: var(--system-tree-view-item-padding-inline-end);
+	--spectrum-treeview-indicator-padding: var(--system-tree-view-indicator-padding);
+	--spectrum-treeview-item-min-block-size-thumbnail-offset: var(--system-tree-view-item-min-block-size-thumbnail-offset);
+	--spectrum-treeview-line-height: var(--system-tree-view-line-height);
+	--spectrum-treeview-margin-block: var(--system-tree-view-margin-block);
+	--spectrum-treeview-section-spacing: var(--system-tree-view-section-spacing);
+	--spectrum-treeview-heading-font-weight: var(--system-tree-view-heading-font-weight);
+	--spectrum-treeview-heading-color: var(--system-tree-view-heading-color);
+	--spectrum-treeview-item-border-size: var(--system-tree-view-item-border-size);
+	--spectrum-treeview-item-border-size-selected: var(--system-tree-view-item-border-size-selected);
+	--spectrum-treeview-item-border-color-selected: var(--system-tree-view-item-border-color-selected);
+	--spectrum-treeview-item-border-color-focus: var(--system-tree-view-item-border-color-focus);
+	--spectrum-treeview-item-background-color-hover: var(--system-tree-view-item-background-color-hover);
+	--spectrum-treeview-item-background-color-focus: var(--system-tree-view-item-background-color-focus);
+	--spectrum-treeview-item-border-color-quiet-selected: var(--system-tree-view-item-border-color-quiet-selected);
+	--spectrum-treeview-item-icon-gap: var(--system-tree-view-item-icon-gap);
+	--spectrum-treeview-item-icon-color: var(--system-tree-view-item-icon-color);
+	--spectrum-treeview-item-icon-color-hover: var(--system-tree-view-item-icon-color-hover);
+	--spectrum-treeview-item-icon-color-focus: var(--system-tree-view-item-icon-color-focus);
+	--spectrum-treeview-item-icon-color-selected: var(--system-tree-view-item-icon-color-selected);
+	--spectrum-treeview-item-icon-color-disabled: var(--system-tree-view-item-icon-color-disabled);
+	--spectrum-treeview-item-text-color: var(--system-tree-view-item-text-color);
+	--spectrum-treeview-item-text-color-selected: var(--system-tree-view-item-text-color-selected);
+	--spectrum-treeview-item-text-color-disabled: var(--system-tree-view-item-text-color-disabled);
+	--spectrum-treeview-item-text-color-focus: var(--system-tree-view-item-text-color-focus);
+	--spectrum-treeview-item-text-color-hover: var(--system-tree-view-item-text-color-hover);
+	--spectrum-treeview-indicator-animation-duration: var(--system-tree-view-indicator-animation-duration);
+}

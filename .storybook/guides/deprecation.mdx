@@ -42,12 +42,7 @@ Before removing the component from the codebase, we need to flag the component a
          status: { type: "deprecated" }
      },
    ```
-3. Update the status of the component to `Deprecated` in the `*.yml` file. Add any additional migration notes to the `deprecationNotice` keyword. i.e.,
-   ```yaml
-   name: Quick actions
-   status: Deprecated
-   deprecationNotice: Use an [action bar](actionbar.html) to allow users to perform actions on either a single or multiple items at the same time, instead.
-   ```
+3. Update the status of the component to `Deprecated` in the `stories/*.mdx` file. Add any additional migration notes from design to the story description.
 4. Commit these changes and open a pull request to the main branch. i.e., `git commit -m "chore(quickaction): prepare for deprecation"`.
 5. Once the pull request is approved, merge the changes into the main branch and publish the update to the package registry.
 
@@ -58,7 +53,7 @@ At this point you can choose to either immediate move on to the next steps or gi
 Once the deprecation notice has been communicated and the above steps completed, we can remove the component from the codebase safely without breaking local references.
 
 1. Create a new folder with the component name in `.storybook/deprecated`, i.e., `.storybook/deprecated/quickaction`.
-2. Copy `*.stories.js` and `metadata/*.yml` into the new folder (directly, not nested inside subfolders).
+2. Copy `*.stories.js` and `stories/*.mdx` into the new folder (directly, not nested inside subfolders).
 3. Delete the package from the `components` directory.
 4. Add the deprecated component's package and last version to the monorepo's root package.json. i.e., `"@spectrum-css/quickaction": "^3.1.1",`.
 5. Reach out to one of the package maintainers to officially deprecate the package in the package registry with the provided deprecation notice from design. Do not try to run the deprecation command unless you know that you have publishing permissions on npm. i.e., `npm deprecate @spectrum-css/quickaction@3.1.1 "This package has been deprecated. Use an action bar to allow users to perform actions on either a single or multiple items at the same time, instead."`.

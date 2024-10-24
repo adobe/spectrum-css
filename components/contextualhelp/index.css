@@ -11,16 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
+@import "./themes/spectrum-two.css";
+
 .spectrum-ContextualHelp {
-	/* Layout Variables */
-	--spectrum-contextual-help-padding: var(--spectrum-spacing-400);
-	--spectrum-contextual-help-link-spacing: var(--spectrum-spacing-300);
-
-	/* Typography Variables */
-	--spectrum-contextual-help-heading-size: var(--spectrum-contextual-help-title-size);
-	--spectrum-contextual-help-heading-color: var(--spectrum-heading-color);
-	--spectrum-contextual-help-body-color: var(--spectrum-body-color);
-
 	position: relative;
 	min-inline-size: var(--mod-spectrum-contextual-help-minimum-width, var(--spectrum-contextual-help-minimum-width));
 }

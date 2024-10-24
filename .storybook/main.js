@@ -1,3 +1,5 @@
+import remarkGfm from 'remark-gfm';
+
 export default {
 	stories: [
 		{
@@ -17,20 +19,30 @@ export default {
 		},
 	],
 	rootDir: "../",
-	staticDirs: ["../assets", "./assets/images"],
+	staticDirs: ["./assets/images"],
 	addons: [
 		{
 			name: "@storybook/addon-essentials",
 			// Supported booleans: actions, controls, docs, toolbars, measure, outline.
 			options: {
-				// Don't need viewports b/c the medium/large contexts are used to support scaling.
-				viewport: false,
 				// Don't need backgrounds b/c this is handled by the color contexts.
 				backgrounds: false,
+				// Configure separately
+				docs: false,
+			},
+		},
+		{
+			name: "@storybook/addon-docs",
+			options: {
 				// Enables JSX support in MDX for projects that aren't configured to handle the format.
 				configureJSX: true,
-				// Support markdown in MDX files.
+				// Support markdown in MDX files
 				transcludeMarkdown: true,
+				mdxPluginOptions: {
+					mdxCompileOptions: {
+						remarkPlugins: [remarkGfm],
+					},
+				},
 			},
 		},
 		// https://github.com/storybookjs/storybook/tree/next/code/addons/a11y
@@ -55,7 +67,7 @@ export default {
 		const { mergeConfig } = await import("vite");
 
 		return mergeConfig(config, {
-			publicDir: "../assets",
+			publicDir: "./assets/images",
 			build: {
 				sourcemap: configType === "DEVELOPMENT",
 				manifest: true,

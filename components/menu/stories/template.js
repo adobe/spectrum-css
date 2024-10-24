@@ -13,6 +13,9 @@ import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 
 import "../index.css";
+import "../themes/spectrum.css";
+/* Must be imported last */
+import "../themes/express.css";
 
 /**
  * Get the tray submenu back arrow name with scale number (defined in design spec).
@@ -459,7 +462,7 @@ export const DisabledItemGroup = (args, context) => {
 			]
 		}
 	];
-	
+
 	return Container({
 		withBorder: false,
 		content: groupData.map((group) => html`
@@ -473,7 +476,7 @@ export const DisabledItemGroup = (args, context) => {
 						items: group.items,
 					})}
 				`
-			})}	
+			})}
 		`)
 	});
 };
@@ -582,7 +585,7 @@ export const OverflowGroup = (args, context) => {
 						items: group.items,
 					})}
 				`
-			})}	
+			})}
 		`)
 	});
 };

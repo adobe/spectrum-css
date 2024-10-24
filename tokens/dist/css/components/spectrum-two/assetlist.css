@@ -1,0 +1,32 @@
+/*!
+ * Copyright 2024 Adobe. All rights reserved.
+ *
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at <http://www.apache.org/licenses/LICENSE-2.0>
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+
+.spectrum {
+	--system-asset-list-width: 272px;
+	--system-asset-list-child-indicator-animation: var(--spectrum-animation-duration-100);
+	--system-asset-list-item-height: var(--spectrum-spacing-600);
+	--system-asset-list-item-padding-inline-start: var(--spectrum-spacing-300);
+	--system-asset-list-item-padding-inline-end: var(--spectrum-spacing-300);
+	--system-asset-list-item-margin-block-end: var(--spectrum-spacing-75);
+	--system-asset-list-item-border-radius: var(--spectrum-spacing-75);
+	--system-asset-list-item-animation: var(--spectrum-animation-duration-100);
+	--system-asset-list-item-font-size: var(--spectrum-font-size-100);
+	--system-asset-list-item-font-weight: var(--spectrum-regular-font-weight);
+	--system-asset-list-item-background-color-down: var(--spectrum-gray-200);
+	--system-asset-list-item-background-color-hover: var(--spectrum-gray-100);
+	--system-asset-list-thumbnail-width: var(--spectrum-spacing-400);
+	--system-asset-list-thumbnail-height: var(--spectrum-spacing-400);
+	--system-asset-list-thumbnail-margin-inline-start: var(--spectrum-spacing-100);
+	--system-asset-list-item-label-padding-inline-start: var(--spectrum-spacing-100);
+	--system-asset-list-label-color: var(--spectrum-neutral-content-color-default);
+}
