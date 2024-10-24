@@ -1,5 +1,11 @@
 # Change Log
 
+## 15.0.0-s2-foundations.28
+
+### Minor Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`794904f`](https://github.com/adobe/spectrum-css/commit/794904fbbd8d9b817cf5917c457c5290a217ea91) Thanks [@pfulton](https://github.com/pfulton)! - Add a stylelint ignore for typography case
+
 ## 15.0.0-s2-foundations.27
 
 ### Patch Changes
