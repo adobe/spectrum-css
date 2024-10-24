@@ -59,6 +59,16 @@ export default {
 			},
 			control: "boolean",
 		},
+		orientation: {
+			name: "Orientation",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["vertical", "horizontal"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-IllustratedMessage",
