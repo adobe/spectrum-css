@@ -312,7 +312,7 @@
 	border-color: transparent;
 
 	.spectrum-Tabs-selectionIndicator {
-		padding-inline-start: var(--mod-tabs-start-to-item-quiet, var(--spectrum-tabs-start-to-item-quiet));
+		padding-inline-start: var(--mod-tabs-start-to-item-quiet);
 	}
 }
 
