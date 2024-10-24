@@ -111,7 +111,7 @@
 
 .spectrum-TreeView--quiet {
 	--mod-treeview-item-background-color-selected: var(--highcontrast-treeview-item-background-color-selected, var(--mod-treeview-item-background-color-quiet-selected, var(--spectrum-treeview-item-background-color-quiet-selected)));
-	--mod-treeview-item-border-color-selected: var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected-quiet, transparent));
+	--mod-treeview-item-border-color-selected: var(--highcontrast-treeview-item-border-color-selected, var(--mod-treeview-item-border-color-selected-quiet, var(--spectrum-treeview-item-border-color-quiet-selected)));
 }
 
 .spectrum-TreeView--thumbnail {
