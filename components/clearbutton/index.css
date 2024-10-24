@@ -46,6 +46,7 @@
 		--mod-clear-button-background-color-key-focus: transparent;
 	}
 
+	&.spectrum-ClearButton--staticWhite,
 	&.spectrum-ClearButton--overBackground {
 		--mod-clear-button-icon-color: var(--spectrum-white);
 		--mod-clear-button-icon-color-hover: var(--spectrum-white);
@@ -138,6 +139,7 @@
 	justify-content: center;
 }
 
+.spectrum-ClearButton--staticWhite,
 .spectrum-ClearButton--overBackground {
 	&:focus-visible {
 		outline: none;
