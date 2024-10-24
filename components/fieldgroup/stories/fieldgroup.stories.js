@@ -271,13 +271,16 @@ HorizontalSideLabelCheckbox.parameters = {
 };
 
 /**
- * A group of read-only checkboxes that have been checked. In U.S. English, use commas to delineate items within read-only checkbox groups. In other languages, use the locale-specific formatting.
+ * Implementations should include the following behavior for read-only checkboxes:
+ * - Read-only checkboxes are immutable, i.e. their checked state cannot be changed.
+ * - Unlike disabled checkbox groups, the normally focusable elements of a checkbox group should remain focusable.
  */
 export const ReadOnly = Template.bind({});
 ReadOnly.tags = ["!dev"];
 ReadOnly.args = {
 	isReadOnly: true,
 	inputType: "checkbox",
+	helpText: undefined,
 };
 ReadOnly.parameters = {
 	chromatic: { disableSnapshot: true },

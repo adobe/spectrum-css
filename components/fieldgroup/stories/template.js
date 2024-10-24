@@ -1,6 +1,7 @@
 import { Template as CheckBox } from "@spectrum-css/checkbox/stories/template.js";
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
 import { Template as HelpText } from "@spectrum-css/helptext/stories/template.js";
+import { getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Radio } from "@spectrum-css/radio/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -25,6 +26,8 @@ export const Template = (
 	} = {},
 	context = {},
 ) => {
+	const groupLabelId = getRandomId("group-label");
+
 	return html`
 		<div
 			class=${classMap({
@@ -38,6 +41,7 @@ export const Template = (
 			aria-invalid=${ifDefined(isInvalid ? "true" : undefined)}
 			aria-readonly=${ifDefined(isReadOnly && inputType == "radio" ? "true" : undefined)}
 			aria-required=${ifDefined(isRequired ? "true" : undefined)}
+			aria-labelledby=${ifDefined(label ? groupLabelId : undefined)}
 		>
 			${when(label, () =>
 				FieldLabel(
@@ -46,6 +50,7 @@ export const Template = (
 						label,
 						isRequired,
 						alignment: labelPosition === "side" ? "right" : "top",
+						id: groupLabelId,
 					},
 					context,
 				),
