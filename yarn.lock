@@ -121,10 +121,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/spectrum-tokens@npm:13.0.0-beta.35":
-  version: 13.0.0-beta.35
-  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.35"
-  checksum: 10c0/015488b53897ebbe9f63bfae7d926b37858d5826bc8865c172d19cde01f2efeef57f925acf28b5c86959718887a8836f302dc5c0ee052469ed21da27358ad68b
+"@adobe/spectrum-tokens@npm:13.0.0-beta.51":
+  version: 13.0.0-beta.51
+  resolution: "@adobe/spectrum-tokens@npm:13.0.0-beta.51"
+  checksum: 10c0/3e8097db0a6c9f0ae88b57271a886a53d69c0d6f3ddfbd185b1c9552b481afa9c81979bbbea7d154bd5e7b6d8d0a3fc820bcde9353669fa6d88357f4560ed25e
   languageName: node
   linkType: hard
 
@@ -4951,15 +4951,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/dialog@workspace:components/dialog"
   peerDependencies:
+    "@spectrum-css/checkbox": ">=9"
     "@spectrum-css/closebutton": ">=5"
-    "@spectrum-css/divider": ">=3"
     "@spectrum-css/modal": ">=5"
     "@spectrum-css/tokens": ">=14.0.0-next.3"
+    "@spectrum-css/typography": ">=6"
     "@spectrum-css/underlay": ">=3"
   peerDependenciesMeta:
-    "@spectrum-css/divider":
+    "@spectrum-css/checkbox":
+      optional: true
+    "@spectrum-css/closebutton":
       optional: true
     "@spectrum-css/modal":
+      optional: true
+    "@spectrum-css/typography":
       optional: true
     "@spectrum-css/underlay":
       optional: true
@@ -5568,7 +5573,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@spectrum-css/tokens@workspace:tokens"
   dependencies:
-    "@adobe/spectrum-tokens": "npm:13.0.0-beta.35"
+    "@adobe/spectrum-tokens": "npm:13.0.0-beta.51"
     "@nxkit/style-dictionary": "npm:^5.0.0"
     postcss: "npm:^8.4.38"
     postcss-cli: "npm:^11.0.0"
