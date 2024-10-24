@@ -125,6 +125,7 @@ export default {
 export const Default = TextFieldGroup.bind({});
 Default.args = {
 	labelText: "Username",
+	value: "Single line text"
 };
 
 // ********* DOCS ONLY ********* //

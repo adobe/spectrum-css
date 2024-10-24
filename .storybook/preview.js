@@ -4,13 +4,13 @@ import {
 	withArgEvents,
 	withContextWrapper,
 	withIconSpriteSheet,
-	withLanguageWrapper,
+	// withLanguageWrapper,
 	withReducedMotionWrapper,
 	withTestingPreviewWrapper,
 	withTextDirectionWrapper
 } from "./decorators";
 import {
-	FontLoader,
+	// FontLoader,
 	IconLoader,
 } from "./loaders";
 import modes from "./modes";
@@ -122,7 +122,7 @@ export default {
 		customStyles: {},
 	},
 	decorators: [
-		withLanguageWrapper,
+		// withLanguageWrapper,
 		withReducedMotionWrapper,
 		withTextDirectionWrapper,
 		withContextWrapper,
@@ -132,7 +132,7 @@ export default {
 		withIconSpriteSheet,
 	],
 	loaders: [
-		FontLoader,
+		// FontLoader,
 		IconLoader,
 	],
 	tags: ["autodocs", "dev"],
