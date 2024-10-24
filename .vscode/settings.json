@@ -119,7 +119,6 @@
 		"postcss": "css"
 	},
 	"eslint.format.enable": true,
-	"eslint.packageManager": "yarn",
 	"eslint.useESLintClass": true,
 	"files.associations": {
 		"*.css": "postcss"
@@ -167,6 +166,7 @@
 		}
 	],
 	"js/ts.implicitProjectConfig.experimentalDecorators": true,
+	"postcss.validate": false,
 	"prettier.configPath": ".prettierrc",
 	"prettier.ignorePath": ".prettierignore",
 	"prettier.prettierPath": "node_modules/prettier",
