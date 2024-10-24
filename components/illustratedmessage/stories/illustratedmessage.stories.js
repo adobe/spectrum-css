@@ -36,9 +36,31 @@ export default {
 				disable: true,
 			},
 		},
+		orientation: {
+			name: "Orientation",
+			type: { name: "string" },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["vertical", "horizontal"],
+			control: "select",
+		},
+		size: {
+			name: "Size",
+			type: { name: "string", required: true },
+			table: {
+				type: { summary: "string" },
+				category: "Component",
+			},
+			options: ["s", "m", "l"],
+			control: "select",
+		},
 	},
 	args: {
 		rootClass: "spectrum-IllustratedMessage",
+		orientation: "vertical",
+		size: "m"
 	},
 	parameters: {
 		actions: {
