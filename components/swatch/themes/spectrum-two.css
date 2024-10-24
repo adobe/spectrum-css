@@ -26,7 +26,7 @@
 		--spectrum-swatch-border-color-light-opacity: 0.2;
 
 		/* Color */
-		--spectrum-swatch-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-swatch-border-color-opacity));
+		--spectrum-swatch-border-color: rgba(var(--spectrum-gray-1000-rgb), var(--spectrum-swatch-border-color-opacity));
 		--spectrum-swatch-icon-border-color: rgba(var(--spectrum-black-rgb), var(--spectrum-swatch-border-color-opacity));
 		--spectrum-swatch-border-color-light: rgba(var(--spectrum-black-rgb), var(--spectrum-swatch-border-color-light-opacity));
 		--spectrum-swatch-border-color-selected: var(--spectrum-gray-900);
