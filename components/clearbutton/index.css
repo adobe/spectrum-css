@@ -119,7 +119,8 @@
 	}
 }
 
-.spectrum-ClearButton:disabled {
+.spectrum-ClearButton:disabled,
+.spectrum-ClearButton.is-disabled {
   .spectrum-ClearButton-icon {
 		color: var( --highcontrast-clear-button-icon-color-disabled, var(--mod-clear-button-icon-color-disabled, var(--spectrum-clear-button-icon-color-disabled)));
 	}
