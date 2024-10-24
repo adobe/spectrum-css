@@ -20,7 +20,7 @@
 	--system-swatch-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
 	--system-swatch-border-color-opacity: 0.51;
 	--system-swatch-border-color-light-opacity: 0.2;
-	--system-swatch-border-color: rgba(var(--spectrum-black-rgb), var(--system-swatch-border-color-opacity));
+	--system-swatch-border-color: rgba(var(--spectrum-gray-1000-rgb), var(--system-swatch-border-color-opacity));
 	--system-swatch-icon-border-color: rgba(var(--spectrum-black-rgb), var(--system-swatch-border-color-opacity));
 	--system-swatch-border-color-light: rgba(var(--spectrum-black-rgb), var(--system-swatch-border-color-light-opacity));
 	--system-swatch-border-color-selected: var(--spectrum-gray-900);
