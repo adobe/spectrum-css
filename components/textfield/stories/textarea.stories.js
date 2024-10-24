@@ -27,7 +27,9 @@ export default {
 };
 
 export const Default = TextAreaGroup.bind({});
-Default.args = {};
+Default.args = {
+	value: "Duis mollit ut laboris est labore sunt ipsum. Proident nostrud in ea reprehenderit proident nostrud. Anim ut est anim ex amet."
+};
 Default.tags = ["!autodocs"];
 
 // ********* DOCS ONLY ********* //

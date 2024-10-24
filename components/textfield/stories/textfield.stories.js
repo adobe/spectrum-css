@@ -147,7 +147,9 @@ export default {
 
 export const Default = TextFieldGroup.bind({});
 Default.tags = ["!autodocs"];
-Default.args = {};
+Default.args = {
+	value: "Single line textfield"
+};
 
 // ********* DOCS ONLY ********* //
 
