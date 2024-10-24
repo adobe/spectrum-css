@@ -90,6 +90,13 @@
 	--mod-picker-button-background-color-disabled: var(--mod-combobox-background-color-disabled);
 	--mod-picker-button-font-color-disabled: var(--mod-combobox-font-color-disabled);
 	/* @passthroughs end -- settings for nested Picker Button component */
+
+	/*** Read-only Colors ***/
+	--spectrum-combobox-readonly-input-background-color: var(--spectrum-gray-50);
+	--spectrum-combobox-readonly-input-border-color: var(--system-spectrum-textfield-border-color);
+	--spectrum-combobox-readonly-border-color-invalid-default: var(--spectrum-negative-border-color-default);
+	--spectrum-combobox-readonly-background-color-disabled: var(--spectrum-disabled-background-color);
+	--spectrum-combobox-readonly-text-color-disabled: var(--spectrum-disabled-content-color);
 }
 
 .spectrum-Combobox--sizeS {
@@ -212,6 +219,27 @@
 
 	.spectrum-Popover.is-open {
 		transform: translateY(var(--mod-combobox-spacing-edge-to-menu, var(--spectrum-combobox-spacing-edge-to-menu)));
+	}
+
+	&.is-readOnly .spectrum-Combobox-textfield {
+		input:read-only {
+			background-color: var(--spectrum-combobox-readonly-input-background-color);
+			border-color: var(--spectrum-combobox-readonly-input-border-color);
+
+			&:hover {
+				background-color: revert;
+			}
+		}
+
+		&.is-invalid input:read-only {
+			border-color: var(--highcontrast-textfield-border-color-invalid-default, var(--mod-textfield-border-color-invalid-default, var(--spectrum-combobox-readonly-border-color-invalid-default)));
+		}
+
+		&.is-disabled input:read-only {
+			background-color: var(--mod-textfield-background-color-disabled, var(--spectrum-combobox-readonly-background-color-disabled));
+			border-color: transparent;
+			color: var(--highcontrast-textfield-text-color-disabled, var(--mod-textfield-text-color-disabled, var(--spectrum-combobox-readonly-text-color-disabled)));
+		}
 	}
 }
 
@@ -376,6 +404,22 @@
 	.spectrum-Combobox-textfield {
 		&.is-invalid .spectrum-Textfield-validationIcon {
 			inset-inline-end: var(--mod-combobox-button-width, var(--spectrum-combobox-button-width));
+		}
+
+		&.spectrum-Textfield--quiet {
+			input:read-only {
+				background-color: unset;
+				border-color: unset;
+			}
+
+			input:read-only:hover {
+				background-color: unset;
+				border-color: unset;
+			}
+
+			&.is-invalid input:read-only {
+				border-color: var(--highcontrast-textfield-border-color-invalid-default, var(--mod-textfield-border-color-invalid-default, var(--spectrum-combobox-readonly-border-color-invalid-default)));
+			}
 		}
 	}
 
