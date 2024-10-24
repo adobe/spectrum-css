@@ -1,5 +1,14 @@
 # Change Log
 
+## 7.0.0-s2-foundations.17
+
+### Patch Changes
+
+- [#2786](https://github.com/adobe/spectrum-css/pull/2786) [`aedc167`](https://github.com/adobe/spectrum-css/commit/aedc167f86d810f54dea1b2aacb191e718ac9598) Thanks [@pfulton](https://github.com/pfulton)! - Border color for Swatch on light/dark mode switched to use gray instead of black so it responds to theme.
+
+- Updated dependencies [[`aedc167`](https://github.com/adobe/spectrum-css/commit/aedc167f86d810f54dea1b2aacb191e718ac9598)]:
+  - @spectrum-css/tokens@15.0.0-s2-foundations.27
+
 ## 7.0.0-s2-foundations.16
 
 ### Minor Changes
