@@ -26,14 +26,13 @@ const valuesParser = require("postcss-values-parser");
  * @type {object} dirs
  * @property {string} dirs.root
  * @property {string} dirs.components
- * @property {string} dirs.site
  * @property {string} dirs.publish
+ * @property {string} dirs.storybook
  */
 const dirs = {
 	root: path.join(__dirname, ".."),
 	components: path.join(__dirname, "../components"),
 	tokens: path.join(__dirname, "../tokens"),
-	site: path.join(__dirname, "../site"),
 	publish: path.join(__dirname, "../dist"),
 	storybook: path.join(__dirname, "../.storybook"),
 };

@@ -65,9 +65,9 @@ _to-do_: This needs to diff the actual content of the files as well. Right now w
 
 Runs stylelint or eslint if any relevant assets have been updated in this PR.
 
-##### 📝 Publish site
+##### 📝 Publish documentation site
 
-After the build and visual regression tests have passed, this will build the docs site and publish it to Netlify.
+After the build and visual regression tests have passed, this will build the documentation site and publish it to Netlify.
 
 ##### 📸 Visual regression testing
 
@@ -93,7 +93,7 @@ Builds the `main` branch and outputs the compiled assets as artifacts.
 
 ##### 📝 2. Publish site
 
-Publish the docs site to Netlify.
+Publish the documentation site to Netlify.
 
 ##### 📸 3. Visual regression testing
 

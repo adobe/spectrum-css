@@ -6,28 +6,30 @@ name: Publish documentation
 on:
     workflow_dispatch:
         inputs:
+            docs-only:
+                description: 'Only publish the documentation'
+                required: true
+                default: false
+                type: boolean
             deploy-message:
                 required: false
                 type: string
             alias:
                 required: false
                 type: string
-            storybook-url:
-                required: false
-                type: string
-                default: ''
     workflow_call:
         inputs:
+            docs-only:
+                description: 'Only publish the documentation'
+                required: true
+                default: false
+                type: boolean
             deploy-message:
                 required: false
                 type: string
             alias:
                 required: false
                 type: string
-            storybook-url:
-                required: false
-                type: string
-                default: ''
 
 permissions:
     contents: read
@@ -40,6 +42,7 @@ jobs:
     publish_site:
         name: Publish
         runs-on: ubuntu-latest
+        environment: ${{ inputs.docs-only && 'production' || 'development' }}
         timeout-minutes: 10
         steps:
             ## --- SETUP --- ##
@@ -75,22 +78,20 @@ jobs:
               run: yarn install --immutable
 
             ## --- BUILD --- ##
-            - name: Build docs site
+            - name: Build docs-only storybook
+              if: ${{ inputs.docs-only }}
               shell: bash
-              run: yarn build:site
-              env:
-                CHROMATIC_URL: ${{ inputs.storybook-url }}
+              run: yarn build:docs:prod
 
-            - name: Build storybook site
-              if: ${{ ! inputs.storybook-url }}
+            - name: Build development storybook
+              if: ${{ !inputs.docs-only }}
               shell: bash
-              run: yarn nx run storybook:build:docs
+              run: yarn build:docs
 
             ## --- DEPLOY WEBSITE TO NETLIFY --- ##
             - name: Deploy
               uses: nwtgck/actions-netlify@v3
               with:
-                #   publish-dir: site/dist
                   publish-dir: dist
                   production-branch: main
                   production-deploy: false
