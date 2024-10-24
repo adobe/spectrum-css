@@ -55,7 +55,7 @@
 	--spectrum-drop-zone-content-background-color: var(--spectrum-accent-visual-color);
 	--spectrum-drop-zone-content-color: var(--spectrum-white);
 
-	/* Settings for a nested illustrated message */
+	/* @passthrough start -- settings for a nested illustrated message */
 	--mod-illustrated-message-content-maximum-width: var(--mod-drop-zone-content-maximum-width, var(--spectrum-drop-zone-content-maximum-width));
 	--mod-illustrated-message-illustration-color: var(--mod-drop-zone-illustration-color, var(--spectrum-drop-zone-illustration-color));
 	--mod-illustrated-message-title-to-heading: var(--mod-drop-zone-illustration-to-heading, var(--spectrum-drop-zone-illustration-to-heading));
@@ -75,11 +75,13 @@
 	--mod-illustrated-message-description-font-size: var(--mod-drop-zone-body-font-size, var(--spectrum-drop-zone-body-font-size));
 	--mod-illustrated-message-description-line-height: var(--mod-drop-zone-body-line-height, var(--spectrum-drop-zone-body-line-height));
 	--mod-illustrated-message-description-color: var(--mod-drop-zone-body-color, var(--spectrum-drop-zone-body-color));
+	/* @passthrough end */
 
-	/* Settings for a nested actionbutton */
+	/* @passthrough start -- settings for a nested actionbutton */
 	--mod-actionbutton-font-size: var(--mod-drop-zone-content-font-size, var(--spectrum-drop-zone-content-font-size));
 	--mod-actionbutton-label-color: var(--mod-drop-zone-content-color, var(--spectrum-drop-zone-content-color));
 	--mod-actionbutton-edge-to-text: var(--mod-drop-zone-content-edge-to-text, var(--spectrum-drop-zone-content-edge-to-text));
+	/* @passthrough end */
 
 	/* cjk language support */
 	&:lang(ja),
@@ -166,7 +168,7 @@
 
 		--highcontrast-drop-zone-border-color-hover: Highlight;
 
-		/* Updated values for a nested illustrated message when in a high contrast state */
+		/* @passthrough -- updated values for a nested illustrated message when in a high contrast state */
 		--highcontrast-illustrated-message-illustration-color: var(--highcontrast-drop-zone-illustration-color);
 	}
 }

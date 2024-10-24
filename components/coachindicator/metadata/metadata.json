@@ -5,6 +5,7 @@
     ".spectrum-CoachIndicator--dark .spectrum-CoachIndicator-ring",
     ".spectrum-CoachIndicator--light .spectrum-CoachIndicator-ring",
     ".spectrum-CoachIndicator--quiet",
+    ".spectrum-CoachIndicator--staticWhite .spectrum-CoachIndicator-ring",
     ".spectrum-CoachIndicator-ring",
     ".spectrum-CoachIndicator-ring:first-child",
     ".spectrum-CoachIndicator-ring:nth-child(2)",
@@ -60,6 +61,7 @@
     "--spectrum-coach-indicator-ring-diameter",
     "--spectrum-coach-indicator-ring-inline-size",
     "--spectrum-coach-indicator-ring-light-color",
+    "--spectrum-coach-indicator-ring-static-white-color",
     "--spectrum-coach-indicator-top"
   ],
   "global": [

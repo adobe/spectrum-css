@@ -1,5 +1,17 @@
 # Change Log
 
+## 7.2.3
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Add passthrough markers to prevent unnecessary warnings about unused custom properties
+
+## 7.2.2
+
+### Patch Changes
+
+- [#3295](https://github.com/adobe/spectrum-css/pull/3295) [`62e2b76`](https://github.com/adobe/spectrum-css/commit/62e2b76f1fed5c0fb60049826b05eaa9162f21e2) Thanks [@cdransf](https://github.com/cdransf)! - Resolves lint violation in search by moving spectrum-search-color custom property above style declarations.
+
 ## 7.2.1
 
 ### Patch Changes

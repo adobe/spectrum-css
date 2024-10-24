@@ -224,6 +224,8 @@
 	--spectrum-docs-static-white-background-color:rgba(var(--spectrum-docs-static-white-background-color-rgb));
 	--spectrum-docs-static-black-background-color-rgb:181, 209, 211;
 	--spectrum-docs-static-black-background-color:rgba(var(--spectrum-docs-static-black-background-color-rgb));
+
+	--spectrum-coach-indicator-ring-static-white-color:var(--spectrum-white);
 	--spectrum-sans-serif-font-family:"Adobe Clean VF";
 
 	--spectrum-line-height-75:125%;
@@ -238,7 +240,6 @@
 	--spectrum-line-height-component-desktop-medium:var(--spectrum-line-height-100);
 	--spectrum-line-height-component-desktop-large:var(--spectrum-line-height-75);
 	--spectrum-line-height-component-desktop-extra-large:var(--spectrum-line-height-150);
-
 	@supports (line-height:round(1%,1px)){
 		--spectrum-line-height-75:round(125%, 1px);
 		--spectrum-line-height-100:round(130%, 1px);

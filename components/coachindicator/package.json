@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/coachindicator",
-	"version": "2.1.4",
+	"version": "2.1.5",
 	"description": "The Spectrum CSS Coach Indicator component ",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -33,7 +33,7 @@
 		"metadata/*"
 	],
 	"peerDependencies": {
-		"@spectrum-css/tokens": ">=14"
+		"@spectrum-css/tokens": ">=14.6.0"
 	},
 	"devDependencies": {
 		"@spectrum-css/tokens": "workspace:^"

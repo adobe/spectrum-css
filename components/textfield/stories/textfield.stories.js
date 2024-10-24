@@ -1,12 +1,16 @@
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isLoading, isQuiet, isReadOnly, isRequired, isValid, size } from "@spectrum-css/preview/types";
 import metadata from "../metadata/metadata.json";
 import packageJson from "../package.json";
-import { Template } from "./template.js";
+import { HelpTextOptions, Template, TextFieldOptions } from "./template.js";
 import { TextFieldGroup } from "./textfield.test.js";
 
 /**
  * Text fields are text boxes that allow users to input custom text entries with a keyboard. Various decorations can be displayed around the field to communicate the entry requirements.
+ *
+ * ## Usage Notes
+ * A single-line text field using the `<input>` element.
  */
 export default {
 	title: "Text field",
@@ -41,7 +45,7 @@ export default {
 			type: { name: "text" },
 			table: {
 				type: { summary: "text" },
-				category: "Component",
+				category: "Content",
 			},
 			control: "text",
 			if: { arg: "displayLabel", truthy: true },
@@ -54,15 +58,7 @@ export default {
 		isKeyboardFocused,
 		size: size(["s", "m", "l", "xl"]),
 		isQuiet,
-		multiline: {
-			name: "Multiline",
-			type: { name: "boolean" },
-			table: {
-				type: { summary: "boolean" },
-				category: "Component",
-			},
-			control: "boolean",
-		},
+		multiline: { table: { disable: true } },
 		grows: {
 			name: "Grows",
 			type: { name: "boolean" },
@@ -80,16 +76,36 @@ export default {
 		isRequired,
 		isReadOnly,
 		isLoading,
-		pattern: {
-			name: "Pattern",
+		pattern: { table: { disable: true } },
+		value: { table: { disable: true } },
+		helpText: {
+			name: "Help text (description)",
 			type: { name: "string" },
+			control: { type: "text" },
 			table: {
 				type: { summary: "string" },
+				category: "Content",
+			},
+		},
+		hasCharacterCount: {
+			name: "Has character count",
+			type: { name: "boolean" },
+			table: {
+				type: { summary: "boolean" },
 				category: "Component",
 			},
-			control: "text",
+			control: "boolean",
 		},
-		value: { table: { disable: true } },
+		characterCount: {
+			name: "Character counter",
+			type: { name: "number" },
+			table: {
+				type: { summary: "number" },
+				category: "Component",
+			},
+			control: { type: "number" },
+			if: { arg: "hasCharacterCount", eq: true },
+		}
 	},
 	args: {
 		rootClass: "spectrum-Textfield",
@@ -101,13 +117,16 @@ export default {
 		isFocused: false,
 		isKeyboardFocused: false,
 		isLoading: false,
-		displayLabel: false,
+		displayLabel: true,
+		hasCharacterCount: false,
+		characterCount: 50,
 		labelPosition: "top",
+		labelText: "Username",
 		size: "m",
-		multiline: false,
 		grows: false,
 		isQuiet: false,
 		value: "",
+		helpText: ""
 	},
 	parameters: {
 		actions: {
@@ -122,24 +141,132 @@ export default {
 	},
 };
 
+/**
+ * Text fields should always have a label. In rare cases where context is sufficient and an accessibility expert has reviewed the design, the label could be undefined. These text fields without a visible label should still include an aria-label in HTML (depending on the context, “aria-label” or “aria-labelledby”).
+*/
+
 export const Default = TextFieldGroup.bind({});
+Default.tags = ["!autodocs"];
 Default.args = {
-	labelText: "Username",
-	value: "Single line text"
+	value: "Single line textfield"
 };
 
 // ********* DOCS ONLY ********* //
-export const TextArea = Template.bind({});
-TextArea.tags = ["!dev"];
-TextArea.args = {
-	labelText: "Username",
-	multiline: true,
-	grows: true,
-	value: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+
+export const Standard = TextFieldOptions.bind({});
+Standard.tags = ["!dev"];
+Standard.storyName = "Default";
+Standard.parameters = {
+	chromatic: { disableSnapshot: true }
 };
-TextArea.parameters = {
-	chromatic: { disableSnapshot: true },
+
+/**
+ * Text fields can display a character count indicator when the length of the text entry needs to be kept under a predefined value. Character count indicators can be used in conjunction with other indicators (validation icon, “optional” or “required” indicators) when necessary.
+*/
+export const CharacterCount = Template.bind({});
+CharacterCount.tags = ["!dev"];
+CharacterCount.args = {
+	hasCharacterCount: true,
+	characterCount: 24,
+	value: "lisawilson23"
 };
+CharacterCount.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * A text field in a disabled state shows that an input field exists, but is not available in that circumstance. This can be used to maintain layout continuity and communicate that a field may become available later.
+*/
+export const Disabled = Template.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	isDisabled: true
+};
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * A text field can have [help text](/docs/components-help-text--docs) below the field to give extra context or instruction about what a user should input in the field. The help text area has two options: a description and an error message. The description communicates a hint or helpful information, such as specific requirements for correctly filling out the field. The error message communicates an error for when the field requirements aren’t met, prompting a user to adjust what they had originally input.
+ *
+ * Instead of placeholder text, use the help text description to convey requirements or to show any formatting examples that would help user comprehension. Putting instructions for how to complete an input, requirements, or any other essential information into placeholder text is not accessible.
+*/
+export const HelpText = HelpTextOptions.bind({});
+HelpText.tags = ["!dev"];
+HelpText.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * Quiet text fields can have no visible background. This style works best when a clear layout (vertical stack, table, grid) makes it easy to parse. Too many quiet components in a small space can be hard to read.
+*/
+export const Quiet = TextFieldOptions.bind({});
+Quiet.tags = ["!dev"];
+Quiet.args = {
+	isQuiet: true,
+	value: ""
+};
+Quiet.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * Text fields have a read-only option for when content in the disabled state still needs to be shown. This allows for content to be copied, but not interacted with or changed.
+*/
+export const Readonly = Template.bind({});
+Readonly.tags = ["!dev"];
+Readonly.args = {
+	isReadOnly: true,
+	value: "lisawilson24"
+};
+Readonly.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+Readonly.storyName = "Read-only";
+
+/**
+ * Side labels are most useful when vertical space is limited.
+*/
+export const SideLabel = Template.bind({});
+SideLabel.tags = ["!dev"];
+SideLabel.args = {
+	labelPosition: "side",
+	hasCharacterCount: true,
+	characterCount: 50,
+	helpText: "Example help text. Lorem ipsum dolor sit amet."
+};
+SideLabel.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+export const Sizing = (args, context) => Sizes({
+	Template: Template,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Sizing.args = {
+	helpText: "Example help text. Lorem ipsum dolor sit amet.",
+	hasCharacterCount: true
+};
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+
+/**
+ * Text fields can display a validation icon when the text entry is expected to conform to a specific format (e.g., email address, credit card number, password creation requirements, etc.). The icon appears as soon as a user types a valid entry in the field.
+*/
+export const Validation = Template.bind({});
+Validation.tags = ["!dev"];
+Validation.args = {
+	isValid: true,
+};
+Validation.parameters = {
+	chromatic: { disableSnapshot: true }
+};
+Validation.storyName = "Validation icon";
+
 
 // ********* VRT ONLY ********* //
 // @todo should this show text field and text area in the same snapshot?
