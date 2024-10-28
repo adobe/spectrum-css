@@ -46,7 +46,7 @@ export const Template = ({
 					size,
 					customClasses: [`${rootClass}-clearButton`],
 				}, context)}
-			${when(hasDescription, () => 
+			${when(hasDescription, () =>
 				HelpText({
 					text: description,
 					size,
@@ -71,5 +71,6 @@ export const SearchOptions = ({
 		${Template({
 			...args,
 			isQuiet: true
-		}, context)}`
-});
+		}, context)}
+	`
+}, context);

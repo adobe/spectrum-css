@@ -97,7 +97,7 @@ export const ToastWrapOptions = (args, context) => Container({
 				"max-inline-size": "240px"
 			},
 		}, context)}`
-});
+}, context);
 
 export const ActionTemplate = (args, context) => Container({
 	withBorder: false,
@@ -130,4 +130,4 @@ export const ActionTemplate = (args, context) => Container({
 			variant: "negative",
 			inlineButtonLabel: "Show"
 		}, context)}`
-});
+}, context);

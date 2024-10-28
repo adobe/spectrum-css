@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId, Container } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -126,7 +126,7 @@ export const DocsCheckboxGroup = (args, context) => Container({
 			customStyles: { "max-inline-size": "200px" },
 		})}
 	`
-});
+}, context);
 
 /* This template group showcases multiple CheckboxGroups in various states of disabled, read-only, invalid, etc. */
 export const AllVariantsCheckboxGroup = (args, context) => Container({
@@ -137,25 +137,24 @@ export const AllVariantsCheckboxGroup = (args, context) => Container({
 			direction: "column",
 			heading: "Default",
 			content: DocsCheckboxGroup(args, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Invalid",
 			content: DocsCheckboxGroup({...args, isInvalid: true }, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Disabled",
 			content: DocsCheckboxGroup({...args, isDisabled: true }, context)
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			direction: "column",
 			heading: "Read-only",
 			content: DocsCheckboxGroup({...args, isReadOnly: true }, context)
-
-		})}
+		}, context)}
 	`
-});
+}, context);

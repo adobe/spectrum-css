@@ -53,7 +53,7 @@ export const Template = ({
 export const VariantsTemplate = (args, context) => Container({
 	withBorder: false,
 	direction: "column",
-	content: html`${["neutral", "negative"].map((variant) => 
+	content: html`${["neutral", "negative"].map((variant) =>
 		Container({
 			withBorder: false,
 			direction: "column",
@@ -65,9 +65,9 @@ export const VariantsTemplate = (args, context) => Container({
 				...args,
 				variant
 			}, context),
-		})
+		}, context)
 	)}`,
-});
+}, context);
 
 /**
  * Displays options for the negative variant; with and without an icon.
@@ -75,7 +75,7 @@ export const VariantsTemplate = (args, context) => Container({
 export const NegativeTemplate = (args, context) => Container({
 	withBorder: false,
 	direction: "column",
-	content: html`${[true, false].map((hideIcon) => 
+	content: html`${[true, false].map((hideIcon) =>
 		Container({
 			withBorder: false,
 			direction: "column",
@@ -87,6 +87,6 @@ export const NegativeTemplate = (args, context) => Container({
 				...args,
 				hideIcon
 			}, context),
-		})
+		}, context)
 	)}`,
-});
+}, context);

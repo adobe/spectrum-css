@@ -1,4 +1,4 @@
-import { getRandomId, Container } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { Template as Tooltip } from "@spectrum-css/tooltip/stories/template.js";
 import { html, nothing } from "lit";
 import { classMap } from "lit/directives/class-map.js";
@@ -118,11 +118,11 @@ export const DocsSteplistGroup = (args, context) => Container({
 			withBorder: false,
 			heading: "Static",
 			content: Template(args, context),
-		})}
+		}, context)}
 		${Container({
 			withBorder: false,
 			heading: "Interactive",
 			content: Template({...args, isInteractive: true} ,context),
-		})}
+		}, context)}
 	`
-});
+}, context);

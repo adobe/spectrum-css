@@ -88,4 +88,4 @@ export const BasicGroupTemplate = (args, context) => Container({
 			name: "radio-example-" + (args?.name ?? "default"),
 		}, context)}
 	`,
-});
+}, context);

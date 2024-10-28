@@ -169,7 +169,7 @@ export const VariantGroup = (args, context) => {
 			args: {...args, showFieldLabel: true, fieldLabelText: "Country"},
 		},
 	];
-	
+
 	return Container({
 		direction: "row",
 		withHeading: false,
@@ -180,7 +180,7 @@ export const VariantGroup = (args, context) => {
 				heading: variant.heading,
 				containerStyles: {"gap": "8px"},
 				content: Template(variant.args, context),
-			}))
+			}, context))
 		}`
-	});
+	}, context);
 };
