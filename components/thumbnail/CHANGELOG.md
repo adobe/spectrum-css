@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.2.1
+
+### Patch Changes
+
+- [#3314](https://github.com/adobe/spectrum-css/pull/3314) [`63f1587`](https://github.com/adobe/spectrum-css/commit/63f15872cb12327a3e9e2b34fb71ea4e7ebe1d83) Thanks [@cdransf](https://github.com/cdransf)! - Remove ignored vertical-align declaration and remove unnecessary stylelint ignore comments.
+
 ## 6.2.0
 
 ### Minor Changes
