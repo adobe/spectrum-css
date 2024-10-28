@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.4
+
+### Patch Changes
+
+- [#3315](https://github.com/adobe/spectrum-css/pull/3315) [`df7c4b1`](https://github.com/adobe/spectrum-css/commit/df7c4b123021c266b1b28d13784ee5e1c74713e3) Thanks [@cdransf](https://github.com/cdransf)! - Resolves stylelint violation by removing undefined and unused token
+
 ## 5.1.3
 
 ### Patch Changes
