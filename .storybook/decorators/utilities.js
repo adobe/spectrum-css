@@ -1,4 +1,3 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html, nothing } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
@@ -11,26 +10,45 @@ import { capitalize } from "lodash-es";
  * @param {string} props.content - The content to render in the heading or code block.
  * @param {string} props.size - The size of the heading to render.
  * @param {string} props.weight - The weight of the heading to render.
- * @param {string[]} props.customClasses - Additional classes to apply to the heading or code block.
  */
 const Heading = ({
 	semantics = "heading",
 	content,
 	size = "l",
 	weight,
-	customClasses = [],
 } = {}) => {
-	return Typography({
-		semantics,
-		size,
-		weight,
-		content,
-		skipLineBreak: true,
-		customClasses: ["chromatic-ignore", ...customClasses],
-		customStyles: {
-			"color": semantics === "detail" ? "var(--spectrum-heading-color)" : undefined,
-		}
-	});
+	if (!content) return nothing;
+
+	const headingStyles = {
+		"display": "block",
+		"color": "black",
+		"font-family": 'adobe-clean, "adobe clean", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif',
+		"font-size": "12px",
+		"line-height": "1.3",
+		"letter-spacing": ".06em",
+		"font-weight": "700",
+	};
+
+	if (size === "l") {
+		headingStyles["font-size"] = "14px";
+	}
+
+	if (semantics === "detail") {
+		headingStyles["text-transform"] = "uppercase";
+	}
+
+	if (weight === "light") {
+		headingStyles["font-weight"] = "400";
+	}
+
+	return html`
+		<span
+			class="chromatic-ignore"
+			style=${styleMap(headingStyles)}
+		>
+			${content}
+		</span>
+	`;
 };
 
 /**
