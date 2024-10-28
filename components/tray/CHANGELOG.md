@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0-s2-foundations.16
+
+### Patch Changes
+
+- [#3317](https://github.com/adobe/spectrum-css/pull/3317) [`d00030f`](https://github.com/adobe/spectrum-css/commit/d00030f31fa6905e66cc02840747c3f80752f768) Thanks [@cdransf](https://github.com/cdransf)! - Resolves stylelint violation by adjusting declaration order
+
 ## 4.0.0-s2-foundations.15
 
 ### Minor Changes
