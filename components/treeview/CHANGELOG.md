@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.3.1
+
+### Patch Changes
+
+- [#3318](https://github.com/adobe/spectrum-css/pull/3318) [`d8d0450`](https://github.com/adobe/spectrum-css/commit/d8d0450a1c4bc54808f8c423a435f3a882b13c57) Thanks [@cdransf](https://github.com/cdransf)! - Use the already defined custom property `--spectrum-treeview-item-border-color-quiet-selected` in place of the direct value. The border color value remains the same.
+
 ## 10.3.0
 
 ### Minor Changes
