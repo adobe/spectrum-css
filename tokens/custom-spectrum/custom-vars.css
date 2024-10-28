@@ -76,12 +76,13 @@
     --spectrum-line-height-200: round(150%, 1px);
   }
 
-  /* Based on "medium" size - TBD from design */
-  --spectrum-body-line-height: var(--spectrum-line-height-75);
-  --spectrum-detail-line-height: var(--spectrum-line-height-150);
-  --spectrum-code-line-height: var(--spectrum-line-height-75);
+  --spectrum-heading-line-height: var(--spectrum-line-height-100);
+  --spectrum-body-line-height: var(--spectrum-line-height-200);
+  --spectrum-detail-line-height: var(--spectrum-line-height-100);
+  --spectrum-code-line-height: var(--spectrum-line-height-200);
 
   /* Design provided line-height adjusted properties */
+  /* Likely drop "desktop" and output into medium/large accordingly */
   --spectrum-line-height-component-desktop-extra-small: var(--spectrum-line-height-100);
   --spectrum-line-height-component-desktop-small: var(--spectrum-line-height-150);
   --spectrum-line-height-component-desktop-medium: var(--spectrum-line-height-100);
