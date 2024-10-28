@@ -188,15 +188,15 @@ export const Template = ({
 			size: "s",
 			customClasses: customProgressCircleClasses,
 		}, context))}
-		${when(helpText, () =>
-				HelpText({
-					text: helpText,
-					variant: isInvalid ? "negative" : "neutral",
-					size,
-					hideIcon: true,
-					isDisabled
-				}, context ))}
 	</div>
+	${when(helpText, () =>
+		HelpText({
+			text: helpText,
+			variant: isInvalid ? "negative" : "neutral",
+			size,
+			hideIcon: true,
+			isDisabled
+		}, context ))}
 	`;
 };
 
