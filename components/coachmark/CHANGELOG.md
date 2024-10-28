@@ -1,5 +1,11 @@
 # Change Log
 
+## 8.0.0-s2-foundations.18
+
+### Minor Changes
+
+- [#3292](https://github.com/adobe/spectrum-css/pull/3292) [`f35a58e`](https://github.com/adobe/spectrum-css/commit/f35a58e9bdf5599f7971e88831df44460657b860) Thanks [@castastrophe](https://github.com/castastrophe)! - Update coach mark pagination to add `font-family`, using the existing custom property. Update the `font-weight` and `line-height` to reference the correct tokens.
+
 ## 8.0.0-s2-foundations.17
 
 ### Minor Changes
