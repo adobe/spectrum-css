@@ -58,7 +58,8 @@ module.exports = function ({ setName } = {}) {
 			if (tokenSets.length === 0) {
 				return true;
 			}
-		} else {
+		}
+		else {
 			if (!tokenSets.includes(setName)) return false;
 
 			if (tokenSets.length === 1) {
