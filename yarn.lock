@@ -3852,7 +3852,7 @@ __metadata:
     chromatic: "npm:^11.12.5"
     lit: "npm:^3.2.1"
     lodash-es: "npm:^4.17.21"
-    npm-registry-fetch: "npm:^18.0.1"
+    npm-registry-fetch: "npm:^18.0.2"
     postcss: "npm:^8.4.47"
     prettier: "npm:^3.2.5"
     react: "npm:^18.3.1"
@@ -4352,7 +4352,7 @@ __metadata:
     markdown-it-anchor: "npm:^8.6.7"
     markdown-it-attrs: "npm:^4.1.6"
     markdown-it-prism: "npm:^2.3.0"
-    npm-registry-fetch: "npm:^18.0.1"
+    npm-registry-fetch: "npm:^18.0.2"
     prismjs: "npm:^1.29.0"
     pug: "npm:^3.0.2"
     rimraf: "npm:^6.0.1"
@@ -13457,9 +13457,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-registry-fetch@npm:^18.0.1":
-  version: 18.0.1
-  resolution: "npm-registry-fetch@npm:18.0.1"
+"npm-registry-fetch@npm:^18.0.2":
+  version: 18.0.2
+  resolution: "npm-registry-fetch@npm:18.0.2"
   dependencies:
     "@npmcli/redact": "npm:^3.0.0"
     jsonparse: "npm:^1.3.1"
@@ -13469,7 +13469,7 @@ __metadata:
     minizlib: "npm:^3.0.1"
     npm-package-arg: "npm:^12.0.0"
     proc-log: "npm:^5.0.0"
-  checksum: 10c0/a65081d1d9edaa7f173fc2227f1f39b2b0d2059ccc68b89b7c1c99cfcc6c06f15453b13308bf42521d81574ddb3519e67326a7e05a891f6265a9f00df9ae2a21
+  checksum: 10c0/43e02befb393f67d5014d690a96d55f0b5f837a3eb9a79b17738ff0e3a1f081968480f2f280d1ad77a088ebd88c196793d929b0e4d24a8389a324dfd4006bc39
   languageName: node
   linkType: hard
 
@@ -17129,7 +17129,7 @@ __metadata:
     lint-staged: "npm:^15.2.10"
     lodash: "npm:^4.17.21"
     node-gyp: "npm:^10.1.0"
-    npm-registry-fetch: "npm:^18.0.1"
+    npm-registry-fetch: "npm:^18.0.2"
     nunjucks: "npm:^3.2.4"
     nx: "npm:^19.8.2"
     open: "npm:^10.1.0"
