@@ -1,5 +1,5 @@
-import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html, nothing } from "lit";
+import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { when } from "lit/directives/when.js";
 import { capitalize } from "lodash-es";
@@ -20,17 +20,31 @@ const Heading = ({
 	weight,
 	customClasses = [],
 } = {}) => {
-	return Typography({
-		semantics,
-		size,
-		weight,
-		content,
-		skipLineBreak: true,
-		customClasses: ["chromatic-ignore", ...customClasses],
-		customStyles: {
-			"color": semantics === "detail" ? "var(--spectrum-heading-color)" : undefined,
-		}
-	});
+	if (!content) return nothing;
+
+	const headingStyles = {
+		color: "black",
+		"font-family": 'adobe-clean, "adobe clean", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Trebuchet MS", "Lucida Grande", sans-serif',
+		"font-size": "12px",
+		"font-weight": weight ?? "bold",
+	};
+
+	if (size === "l") {
+		headingStyles["font-size"] = "14px";
+	}
+
+	if (semantics === "detail") {
+		headingStyles["text-transform"] = "uppercase";
+	}
+
+	return html`
+		<span
+			class=${classMap({ "chromatic-ignore": true, ...customClasses.map((c) => ({ [c]: true })) })}
+			style=${styleMap(headingStyles)}
+		>
+			${content}
+		</span>
+	`;
 };
 
 /**
