@@ -20,7 +20,9 @@ const valueParser = require("postcss-value-parser");
  * @param {Options} options
  * @returns {import('postcss').Plugin}
  */
-function rgbMappingFunction () {
+function rgbMappingFunction ({
+	colorFunctionalNotation = false,
+}) {
 	return {
 		postcssPlugin: "postcss-rgb-mapping",
 		/** @type {import('postcss').DeclarationProcessor} */
@@ -61,18 +63,48 @@ function rgbMappingFunction () {
 			/* Create a new declaration with the rgb values separated out */
 			decl.cloneBefore({
 				prop: `${prop}-rgb`,
-				value: `${r}, ${g}, ${b}`,
+				value: colorFunctionalNotation ? `${r} ${g} ${b}` : `${r}, ${g}, ${b}`,
 			});
 
 			/* Update the original declaration value to point to the new variable */
 			if (a) {
-				decl.cloneBefore({
-					prop: `${prop}-opacity`,
-					value: a,
-				});
+				if (colorFunctionalNotation) {
+					if (typeof a === "string" && a.endsWith("%")) {
+						decl.cloneBefore({
+							prop: `${prop}-opacity`,
+							value: a,
+						});
+					}
+					else if (typeof a === "string" && a.startsWith("0.")) {
+						decl.cloneBefore({
+							prop: `${prop}-opacity`,
+							value: `${parseFloat(a) * 100}%`,
+						});
+					}
+					else {
+						decl.cloneBefore({
+							prop: `${prop}-opacity`,
+							value: `${parseFloat(a) * 100}%`,
+						});
+					}
+				}
+				else {
+					if (typeof a === "string" && a.endsWith("%")) {
+						decl.cloneBefore({
+							prop: `${prop}-opacity`,
+							value: `${parseFloat(a) / 100}`,
+						});
+					}
+					else {
+						decl.cloneBefore({
+							prop: `${prop}-opacity`,
+							value: a,
+						});
+					}
+				}
 			}
 			decl.assign({
-				value: `rgba(var(${prop}-rgb)${a ? `, var(${prop}-opacity)` : ""})`,
+				value: `rgba(var(${prop}-rgb)${a ? `${colorFunctionalNotation ? " /" : ","} var(${prop}-opacity)` : ""})`,
 			});
 
 			return;

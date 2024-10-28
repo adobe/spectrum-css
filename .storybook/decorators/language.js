@@ -43,8 +43,17 @@ export const withLanguageWrapper = makeDecorator({
 				},
 			}
 
-			if (window.Typekit) window.Typekit.load(config);
-			else window.Typekit = Typekit.load(config);
+			if (typeof window.Typekit !== "undefined") {
+				// If the kitId is the same as the one already loaded, do nothing
+				if (window.Typekit.config?.kitId !== kitId) {
+					window.Typekit.load(config);
+				}
+			}
+			else {
+				try {
+					window.Typekit = Typekit.load(config);
+				} catch (e) {/* empty */}
+			}
 
 			for (const container of fetchContainers(id, viewMode === "docs")) {
 				container.lang = lang;

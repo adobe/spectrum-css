@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.4
+
+### Patch Changes
+
+- [#3305](https://github.com/adobe/spectrum-css/pull/3305) [`092aac5`](https://github.com/adobe/spectrum-css/commit/092aac56953f4c02cd5227e3f61c6cb0b2b4e46a) Thanks [@cdransf](https://github.com/cdransf)! - Move mod declaration to satisfy lint rules. Rename table custom properties to align with lint rules.
+
 ## 6.1.3
 
 ### Patch Changes

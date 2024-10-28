@@ -1,13 +1,20 @@
 import { Variants } from "@spectrum-css/preview/decorators";
-import { Template } from "./form.template";
+import { Template } from "./form.template.js";
 
 export const FormGroup = Variants({
 	Template,
 	testData: [
-		{},
 		{
-			testHeading: "Labels above",
-			labelsAbove: true,
+			testHeading: "Default",
+		},
+		{
+			testHeading: "Side labels with left-aligned text",
+			labelPosition: "side",
+		},
+		{
+			testHeading: "Side labels with right-aligned text",
+			labelPosition: "side",
+			fieldLabelAlignment: "right",
 		}
 	],
 });

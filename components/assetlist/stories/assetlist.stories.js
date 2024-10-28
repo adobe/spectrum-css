@@ -1,6 +1,7 @@
 import { default as Checkbox } from "@spectrum-css/checkbox/stories/checkbox.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { AssetListGroup } from "./assetlist.test.js";
 
 /**
@@ -19,7 +20,8 @@ export default {
 		actions: {
 			handles: [...(Checkbox.parameters?.actions?.handles ?? [])],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -35,6 +37,7 @@ Default.args = {
 		},
 		{
 			iconName: "Document",
+			iconSet: "workflow",
 			label: "Resource allocation documentation should truncate",
 			isSelectable: true,
 			ariaLabelledby: "assetitemlabel-2",
@@ -42,6 +45,7 @@ Default.args = {
 		},
 		{
 			iconName: "Folder",
+			iconSet: "workflow",
 			label: "Front-end Projects",
 			isSelectable: true,
 			isBranch: true,
@@ -51,6 +55,7 @@ Default.args = {
 		},
 		{
 			iconName: "Folder",
+			iconSet: "workflow",
 			label: "Downloads",
 			isSelectable: true,
 			isBranch: true,

@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.2.3
+
+### Patch Changes
+
+- [#3299](https://github.com/adobe/spectrum-css/pull/3299) [`d1a8522`](https://github.com/adobe/spectrum-css/commit/d1a8522b8bd0ba8f1ecf30bd8ed00af679e7e532) Thanks [@cdransf](https://github.com/cdransf)! - Adjust custom property ordering to resolve lint violations.
+
 ## 7.2.2
 
 ### Patch Changes
@@ -1029,6 +1035,12 @@ Co-authored-by: Patrick Fulton <pfulton@adobe.com>
 ### ✨ Features
 
 - implement t-shirt sizing for Status Light, closes [#686](https://github.com/adobe/spectrum-css/issues/686) ([0a20b52](https://github.com/adobe/spectrum-css/commit/0a20b52))
+
+### Migration Guide
+
+#### T-shirt sizing
+
+Status Light now supports t-shirt sizing and requires that you specify the size by adding a `.spectrum-StatusLight--size*` class.
 
 <a name="3.0.0-beta.4"></a>
 

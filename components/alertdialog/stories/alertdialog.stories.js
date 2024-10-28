@@ -1,7 +1,8 @@
 import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { AlertDialogGroup } from "./alertdialog.test.js";
 import { Template } from "./template.js";
 
@@ -40,6 +41,7 @@ export default {
 		variant: "confirmation",
 	},
 	parameters: {
+		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-AlertDialog button"],
 		},
@@ -48,7 +50,8 @@ export default {
 				height: "300px",
 			}
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	decorators: [
 		withUnderlayWrapper,

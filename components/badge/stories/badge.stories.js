@@ -1,7 +1,8 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { BadgeGroup } from "./badge.test.js";
 import { PreviewSets } from "./template.js";
 
@@ -33,6 +34,7 @@ export default {
 			...(IconStories?.argTypes?.iconName ?? {}),
 			if: false,
 		},
+		iconSet: { table: { disable: true } },
 		variant: {
 			name: "Background color variants",
 			type: { name: "string" },
@@ -58,10 +60,12 @@ export default {
 		rootClass: "spectrum-Badge",
 		size: "m",
 		variant: "neutral",
+		iconSet: "workflow",
 		fixed: "none"
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	tags: ["!autodocs"],
 };

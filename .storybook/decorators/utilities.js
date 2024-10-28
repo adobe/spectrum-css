@@ -7,28 +7,28 @@ import { capitalize } from "lodash-es";
 /**
  * Renders a heading or code block that identifies the test case and is ignored by the snapshots.
  * @param {Object} props
- * @param {string} props.type - The type of heading or code block to render.
+ * @param {string} props.semantics - The type of heading or code block to render.
  * @param {string} props.content - The content to render in the heading or code block.
  * @param {string} props.size - The size of the heading to render.
  * @param {string} props.weight - The weight of the heading to render.
  * @param {string[]} props.customClasses - Additional classes to apply to the heading or code block.
  */
 const Heading = ({
-	type = "heading",
+	semantics = "heading",
 	content,
-	size = "m",
+	size = "l",
 	weight,
 	customClasses = [],
 } = {}) => {
 	return Typography({
-		semantics: type === "code" ? "code" : "detail",
+		semantics,
 		size,
 		weight,
 		content,
 		skipLineBreak: true,
 		customClasses: ["chromatic-ignore", ...customClasses],
 		customStyles: {
-			"color": type !== "code" ? "var(--spectrum-gray-600)" : undefined,
+			"color": semantics === "detail" ? "var(--spectrum-heading-color)" : undefined,
 		}
 	});
 };
@@ -48,18 +48,26 @@ const Heading = ({
 export const Container = ({
 	heading,
 	content,
-	type = "heading",
+	type = "detail",
 	level = 1,
 	direction = "row",
 	withBorder = true,
 	containerStyles = {},
 	wrapperStyles = {},
 } = {}) => {
-	let headingConfig = { size: "l" };
+	const headingConfig = { size: "l", semantics: type };
 	let gap = 40;
 
 	if (level > 1) {
-		headingConfig = { size: "s", weight: "light" };
+		headingConfig.size = "s";
+		headingConfig.weight = "light";
+	}
+
+	if (level > 3) {
+		headingConfig.size = "xxs";
+		headingConfig.semantics = "heading";
+		containerStyles["padding-block-start"] = "8px";
+		wrapperStyles["padding-block-start"] = "12px";
 	}
 
 	if (level === 2) {
@@ -79,8 +87,8 @@ export const Container = ({
 		<div
 			data-outer-container
 			style=${styleMap({
-        "z-index": "1",
-        "position": "relative",
+				"z-index": "1",
+				"position": "relative",
 				"display": "flex",
 				"flex-direction": "column",
 				"flex-wrap": "nowrap",
@@ -91,7 +99,6 @@ export const Container = ({
 		>
 			${when(heading, () => Heading({
 				...headingConfig,
-				type,
 				content: heading
 			}))}
 			<div
@@ -209,6 +216,8 @@ export const ArgGrid = ({
 	withWrapperBorder = true,
 	...args
 } = {}, context = {}) => {
+	const isDocs = context.viewMode === "docs";
+
 	if (typeof argKey === "undefined") {
 		console.warn("ArgGrid: argKey is required to render the grid.");
 		return nothing;
@@ -228,6 +237,11 @@ export const ArgGrid = ({
 	if (typeof options === "undefined" || !options.length) {
 		console.warn(`ArgGrid: No options found for ${argKey}.`);
 		return nothing;
+	}
+
+	// If no heading and this is a docs view, skip the border
+	if (!heading && isDocs) {
+		withWrapperBorder = false;
 	}
 
 	return Container({
@@ -273,7 +287,6 @@ export const Sizes = ({
 		withBorder,
 		heading: withHeading ? "Sizing" : undefined,
 		argKey: "size",
-		level: 3,
 		labels: {
 			xxs: "Extra-extra-small",
 			xs: "Extra-small",
@@ -324,15 +337,29 @@ export const Variants = ({
 		TestTemplate = Template;
 	}
 
+	const staticColor = {
+		black: "var(--spectrum-docs-static-black-background-color)",
+		white: "var(--spectrum-docs-static-white-background-color)",
+	};
+
 	return (args, context) => {
-		const { parameters = {} } = context;
-		const storyHeight = parameters.docs?.story?.height;
+		// Fetch any docs configurations from the context to use for VRT
+		const { argTypes = {}, parameters = {} } = context;
+
+		const height = parameters?.docs?.story?.height;
+		const width = parameters?.docs?.story?.width;
+
+		// Check if the staticColor property exists in this story
+		const hasStaticColor = Object.keys(argTypes).includes("staticColor");
 
 		return html`
 			<!-- Simple, clean template preview for non-testing grid views -->
 			<div
 				style=${styleMap({
+					backgroundColor: hasStaticColor && staticColor[args.staticColor],
 					"padding": "12px",
+					"min-block-size": typeof height === "number" ? `${height}px` : height,
+					"min-inline-size": typeof width === "number" ? `${width}px` : width,
 					...wrapperStyles,
 					"display": window.isChromatic() ? "none" : wrapperStyles.display,
 				})}
@@ -343,6 +370,7 @@ export const Variants = ({
 
 			<!-- Start testing grid markup -->
 			<div
+				data-testing-preview
 				style=${styleMap({
 					"padding": "24px",
 					"display": window.isChromatic() ? "flex" : "none",
@@ -387,15 +415,20 @@ export const Variants = ({
 							testHeading = "Default";
 						}
 
+						// Check if the staticColor property is being used in this story
+						let backgroundColor;
+						if (hasStaticColor && data.staticColor) {
+							backgroundColor = staticColor[data.staticColor];
+						}
+
 						const combinedStyles = {
-							"min-block-size": storyHeight,
+							backgroundColor,
 							...wrapperStyles,
 							...testWrapperStyles,
 						};
 
 						return Container({
 							heading: testHeading,
-							level: withStates ? 1 : 3,
 							withBorder,
 							containerStyles: {
 								// the z-index is necessary to ensure elements always appear above the overlay
@@ -403,7 +436,7 @@ export const Variants = ({
 								...containerStyles,
 							},
 							// if the test has multiple states, pass the wrapper styles to that container, otherwise use it here
-							wrapperStyles: withStates ? {} : combinedStyles,
+							wrapperStyles: withStates ? { backgroundColor } : combinedStyles,
 							content: html`
 								${when(withStates, () =>
 									States({

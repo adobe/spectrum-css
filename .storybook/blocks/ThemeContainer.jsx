@@ -1,11 +1,12 @@
 import { DocsContext } from "@storybook/blocks";
 import { styled, ThemeProvider } from "@storybook/theming";
 import React, { useContext } from "react";
-import { fetchToken } from "./utilities.js";
+
+import "@spectrum-css/tokens/dist/index.css";
 
 const Container = styled.section`
-    color: ${props => fetchToken("neutral-content-color-default", props)};
-    background-color: ${props => fetchToken("background-layer-1-color", props)};
+    color: var(--spectrum-neutral-content-color-default);
+    background-color: var(--spectrum-background-layer-1-color);
     display: flex;
     padding-inline: 48px 24px;
     padding-block: 60px;
@@ -23,19 +24,18 @@ const Container = styled.section`
  */
 export const ThemeContainer = ({ color, scale, children, ...props }) => {
     const context = DocsContext && useContext(DocsContext);
+    const globals = context?.store?.userGlobals?.globals ?? {};
+
     // Fetch the current global color theme from the context store
-    const activeContext = context?.store?.globals?.globals ?? {
-        color: "light",
-        scale: "medium",
+    const theme = {
+        ...globals,
+        color: color ?? globals.color ?? "light",
+        scale: scale ?? globals.scale ?? "medium",
     };
 
-    // Allow the user to override the global contexts with the props
-    if (color) activeContext.color = color;
-    if (scale) activeContext.scale = scale;
-
     return (
-        <ThemeProvider theme={activeContext}>
-            <Container {...props}>
+        <ThemeProvider theme={theme}>
+            <Container {...props} className={`spectrum spectrum--${theme.color} spectrum--${theme.scale}`}>
                 {children}
             </Container>
         </ThemeProvider>

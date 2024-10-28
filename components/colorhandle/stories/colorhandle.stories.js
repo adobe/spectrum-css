@@ -1,6 +1,7 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ColorHandleGroup } from "./colorhandle.test.js";
 import { Template } from "./template.js";
 
@@ -45,7 +46,8 @@ export default {
 		}
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	tags: ["!autodocs"],
 };
@@ -70,12 +72,6 @@ WithColorLoupe.args = {
 WithColorLoupe.tags = ["!dev"];
 WithColorLoupe.parameters = {
 	chromatic: { disableSnapshot: true },
-	docs: {
-		story: {
-			inline: false,
-			height: "150px",
-		},
-	},
 };
 
 // ********* VRT ONLY ********* //

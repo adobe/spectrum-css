@@ -1,9 +1,10 @@
-import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import { isDisabled, isFocused, isInvalid, isKeyboardFocused, isQuiet, size } from "@spectrum-css/preview/types";
 import { Sizes } from "@spectrum-css/preview/decorators";
-import pkgJson from "../package.json";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
+import { isDisabled, isFocused, isHovered, isInvalid, isKeyboardFocused, isQuiet, size } from "@spectrum-css/preview/types";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { StepperGroup } from "./stepper.test.js";
-import { Template, DisabledVariantsGroup, AllDefaultVariantsGroup } from "./template";
+import { AllDefaultVariantsGroup, DisabledVariantsGroup, Template } from "./template.js";
 
 /**
  * A stepper can be used to increment or decrement a value by a specified amount via an up/down button. An input field displays the current value.
@@ -26,6 +27,7 @@ export default {
 		isDisabled,
 		isInvalid,
 		isFocused,
+		isHovered,
 		isKeyboardFocused,
 	},
 	args: {
@@ -33,13 +35,15 @@ export default {
 		size: "m",
 		isQuiet: false,
 		isFocused: false,
+		isHovered: false,
 		isKeyboardFocused: false,
 		isInvalid: false,
 		isDisabled: false,
 		hideStepper: false
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

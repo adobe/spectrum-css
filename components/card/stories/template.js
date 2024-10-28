@@ -86,6 +86,7 @@ export const Template = ({
                     {
                       size: "xxl",
                       iconName: showAsset === "folder" ? "File" : "Document",
+                      setName: "workflow",
                     },
                     context
                   )
@@ -136,6 +137,7 @@ export const Template = ({
                     ActionButton(
                       {
                         iconName: "More",
+                        iconSet: "workflow",
                         size: "m",
                         isQuiet: true,
                         customClasses: [`${rootClass}-actionButton`],

@@ -14,22 +14,15 @@
 .spectrum-Dial {
 	--spectrum-dial-background-color-default: var(--spectrum-gray-100);
 
-	--spectrum-dial-handle-marker-color-disabled: var(--spectrum-gray-300);
-	--spectrum-dial-border-color-disabled: var(--spectrum-gray-300);
-
 	--spectrum-dial-handle-marker-color: var(--spectrum-gray-700);
 	--spectrum-dial-border-color: var(--spectrum-gray-700);
 
-	--spectrum-dial-handle-marker-color-down: var(--spectrum-gray-800);
-	--spectrum-dial-border-color-down: var(--spectrum-gray-800);
 	--spectrum-dial-handle-marker-color-hover: var(--spectrum-gray-800);
 	--spectrum-dial-border-color-hover: var(--spectrum-gray-800);
 
 	--spectrum-dial-handle-marker-color-key-focus: var(--spectrum-gray-50);
-	--spectrum-dial-border-color-key-focus: var(--spectrum-gray-50);
 
 	--spectrum-dial-handle-marker-color-mouse-focus: var(--spectrum-gray-700);
-	--spectrum-dial-border-color-mouse-focus: var(--spectrum-gray-700);
 
 	--spectrum-dial-min-max-tick-color: var(--spectrum-gray-600);
 
@@ -237,7 +230,7 @@
 	padding: 0;
 	position: absolute;
 	overflow: hidden;
-	/* @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
+	/* stylelint-disable-next-line number-max-precision -- @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
 	opacity: 0.000001;
 	cursor: default;
 	appearance: none;

@@ -49,10 +49,9 @@
 	 * We use the stretch value to counteract this where supported.
 	 */
 	block-size: 100vh;
-	/* stylelint-disable-next-line value-no-vendor-prefix */
-	block-size: -moz-available;
-	/* stylelint-disable-next-line value-no-vendor-prefix */
 	block-size: -webkit-fill-available;
+
+	/* autoprefixer: ignore next -- -moz-available providing inconsistent results; want to fall FF back to 100vh */
 	block-size: stretch;
 
 	visibility: hidden;

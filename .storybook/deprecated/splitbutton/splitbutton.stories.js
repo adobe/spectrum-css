@@ -1,4 +1,4 @@
-import pkgJson from "@spectrum-css/splitbutton/package.json";
+import packageJson from "@spectrum-css/splitbutton/package.json";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 
@@ -64,7 +64,7 @@ export default {
 		status: {
 			type: "deprecated"
 		},
-		packageJson: pkgJson,
+		packageJson,
 	},
 };
 
@@ -76,6 +76,7 @@ const Template = ({
 	size = "m",
 	variant = "cta",
 	iconName = "ChevronDown100",
+	iconSet = "ui",
 	labelIconName = undefined,
 	position = "right",
 	label = "Split button",
@@ -121,6 +122,7 @@ const Template = ({
 			${Button({
 				variant,
 				size,
+				iconSet,
 				iconName: position === "right"
 					? typeof labelIconName != "undefined" ? labelIconName : undefined
 					: iconName,
@@ -136,6 +138,7 @@ const Template = ({
 			${Button({
 				variant,
 				size,
+				iconSet,
 				iconName: position === "right"
 					? iconName
 					: typeof labelIconName != "undefined" ? labelIconName : undefined,

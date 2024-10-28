@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/dropzone",
-	"version": "6.1.3",
+	"version": "6.1.4",
 	"description": "The Spectrum CSS dropzone component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -60,5 +60,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum-contributions.corp.adobe.com/page/drop-zone-beta",
+			"rootClass": "spectrum-DropZone"
+		}
+	]
 }

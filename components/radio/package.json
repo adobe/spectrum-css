@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/radio",
-	"version": "9.2.4",
+	"version": "9.3.0",
 	"description": "The Spectrum CSS radio component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -48,5 +48,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/radio-group",
+			"rootClass": "spectrum-Radio"
+		}
+	]
 }

@@ -1,7 +1,8 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { DropIndicatorGroup } from "./dropindicator.test.js";
-import { DocsDropIndicatorGroup } from "./template";
+import { DocsDropIndicatorGroup } from "./template.js";
 
 /**
  * The drop indicator component is used to show the insertion position into a list or table.
@@ -20,7 +21,7 @@ export default {
 			options: ["horizontal", "vertical"],
 			control: "select",
 		},
-		size: {
+		length: {
 			name: "Size",
 			description:
 				"Size of the drop indicator, requires a unit be provided; i.e., 200px or 100%.",
@@ -35,10 +36,11 @@ export default {
 	args: {
 		rootClass: "spectrum-DropIndicator",
 		direction: "vertical",
-		size: "300px",
+		length: "300px",
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -50,7 +52,7 @@ Default.tags = ["!autodocs"];
 export const DefaultGroup = DocsDropIndicatorGroup.bind({});
 DefaultGroup.storyName = "Default";
 DefaultGroup.tags = ["!dev"];
-DefaultGroup.parameters = { 
+DefaultGroup.parameters = {
 	chromatic: { disableSnapshot: true }
 };
 

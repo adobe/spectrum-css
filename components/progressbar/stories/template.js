@@ -1,4 +1,5 @@
 import { Template as FieldLabel } from "@spectrum-css/fieldlabel/stories/template.js";
+import { Container } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -16,6 +17,7 @@ export const Template = ({
 	isIndeterminate = false,
 	label,
 	value,
+	showValueLabel = true,
 	trackFill,
 	progressBarFill,
 	customStyles = {},
@@ -31,7 +33,7 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap({
-				"width": customWidth,
+				"width": `${customWidth}px`,
 				...customStyles,
 				"--mod-progressbar-track-color": trackFill,
 				"--mod-progressbar-fill-color": progressBarFill,
@@ -49,7 +51,7 @@ export const Template = ({
 			}, context)}
 			${FieldLabel({
 				size,
-				label: isIndeterminate || typeof value === "undefined" ? "" : `${value}%`,
+				label: isIndeterminate || typeof value === "undefined" || !showValueLabel ? "" : `${value}%`,
 				customClasses: [`${rootClass}-percentage`],
 			}, context)}
 
@@ -61,3 +63,22 @@ export const Template = ({
 			</div>
 		</div>
 `;
+
+/* This template shows determinate and indeterminate progress bars  */
+export const IndeterminateGroup = (args, context) => Container({
+	Template,
+	withBorder: false,
+	withHeading: false,
+	content: html`
+		${Container({
+			withBorder: false,
+			heading: "Determinate",
+			content: Template(args, context)
+		})}
+		${Container({
+			withBorder: false,
+			heading: "Indeterminate",
+			content: Template({ ...args, isIndeterminate: true }, context)
+		})}
+	`
+});

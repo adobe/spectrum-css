@@ -1,5 +1,32 @@
 # Change Log
 
+## 5.4.2
+
+### Patch Changes
+
+- [#3300](https://github.com/adobe/spectrum-css/pull/3300) [`89797d0`](https://github.com/adobe/spectrum-css/commit/89797d0324bcbf2195a28840ce87ed6959da24a5) Thanks [@castastrophe](https://github.com/castastrophe)! - Remove duplicate references
+
+## 5.4.1
+
+### Patch Changes
+
+- [#3298](https://github.com/adobe/spectrum-css/pull/3298) [`07cc324`](https://github.com/adobe/spectrum-css/commit/07cc324af3b1a6240033b6c2f91342373c7234c2) Thanks [@cdransf](https://github.com/cdransf)! - Resolves violation error by moving todo comment into stylelint disable comment as a description
+
+- Updated dependencies [[`5fa753b`](https://github.com/adobe/spectrum-css/commit/5fa753b34944584576c8d91b8d51460ff0a2e4be)]:
+  - @spectrum-css/stepper@6.2.1
+
+## 5.4.0
+
+### Minor Changes
+
+- [#3154](https://github.com/adobe/spectrum-css/pull/3154) [`7735155`](https://github.com/adobe/spectrum-css/commit/77351552eac8a28cab316d984fee88dca61dc786) Thanks [@cdransf](https://github.com/cdransf)! - This applies a flex layout to the spectrum slider controls to consistently align the enclosed handle and ramp, while also removing the margins that might otherwise interfere with alignment. This aims to resolve the issues with the calc-based approach that exhibited variations in vertical alignment.
+
+## 5.3.0
+
+### Minor Changes
+
+- [#3119](https://github.com/adobe/spectrum-css/pull/3119) [`df8eee0`](https://github.com/adobe/spectrum-css/commit/df8eee0aa7d69e6bad556ad77d972089e74d9173) Thanks [@cdransf](https://github.com/cdransf)! - Corrects side label positioning by adding margin-inline-end to provide space between the label and the slider component.
+
 ## 5.2.6
 
 ### Patch Changes

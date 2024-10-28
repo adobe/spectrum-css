@@ -1,5 +1,40 @@
 # Change Log
 
+## 10.11.6
+
+### Patch Changes
+
+- Updated dependencies [[`092aac5`](https://github.com/adobe/spectrum-css/commit/092aac56953f4c02cd5227e3f61c6cb0b2b4e46a)]:
+  - @spectrum-css/table@6.1.4
+
+## 10.11.5
+
+### Patch Changes
+
+- Updated dependencies [[`4b818e1`](https://github.com/adobe/spectrum-css/commit/4b818e1062202e404de1350938ce2a19146aa0b0)]:
+  - @spectrum-css/tokens@14.6.0
+
+## 10.11.4
+
+### Patch Changes
+
+- Updated dependencies [[`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86)]:
+  - @spectrum-css/tokens@14.5.0
+
+## 10.11.3
+
+### Patch Changes
+
+- Updated dependencies [[`7d41874`](https://github.com/adobe/spectrum-css/commit/7d418746362e7fe35f47e67e30682d7bf87ecfc7)]:
+  - @spectrum-css/tokens@14.4.0
+
+## 10.11.2
+
+### Patch Changes
+
+- Updated dependencies [[`b16a159`](https://github.com/adobe/spectrum-css/commit/b16a159bd8b1456b384f13f51ab0cdb318a692e8)]:
+  - @spectrum-css/tokens@14.3.2
+
 ## 10.11.1
 
 ### Patch Changes

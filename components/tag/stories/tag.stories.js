@@ -1,12 +1,14 @@
 import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.js";
+import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isEmphasized, isInvalid, isSelected, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { TagGroups } from "./tag.test.js";
-import { Template } from "./template.js";
+import { SelectedTemplate, TagsDefaultOptions } from "./template.js";
 
 /**
- * A tag categorizes content. They can represent keywords or people, and are grouped to describe an item or a search request.
+ * A tag categorizes content. It can represent keywords or people, and are [grouped](?path=/docs/components-tag-group--docs) to describe an item or a search request.
  */
 export default {
 	title: "Tag",
@@ -92,11 +94,13 @@ export default {
 		actions: {
 			handles: [],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
 export const Default = TagGroups.bind({});
+Default.tags = ["!autodocs"];
 Default.args = {};
 
 // ********* VRT ONLY ********* //
@@ -111,33 +115,91 @@ WithForcedColors.parameters = {
 };
 
 // ********* DOCS ONLY ********* //
-export const Icon = Template.bind({});
-Icon.tags = ["!dev"];
-Icon.args = {
-	hasIcon: true,
-	iconName: "Info",
-	label: "Tag label that truncates when it gets too long",
-	customStyles: {"max-inline-size": "200px"}
-};
-Icon.parameters = {
+
+export const Standard = TagsDefaultOptions.bind({});
+Standard.args = Default.args;
+Standard.tags = ["!dev"];
+Standard.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Avatar = Template.bind({});
-Avatar.tags = ["!dev"];
-Avatar.args = {
-	hasAvatar: true,
-	avatarUrl: "example-ava.png"
+Standard.storyName = "Default";
+
+export const Selected = SelectedTemplate.bind({});
+Selected.tags = ["!dev"];
+Selected.args = {
+	isSelected: true
 };
-Avatar.parameters = {
+
+Selected.parameters = {
 	chromatic: { disableSnapshot: true },
 };
 
-export const Removable = Template.bind({});
+export const Disabled = TagsDefaultOptions.bind({});
+Disabled.tags = ["!dev"];
+Disabled.args = {
+	isDisabled: true,
+};
+
+Disabled.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Emphasized = TagsDefaultOptions.bind({});
+Emphasized.tags = ["!dev"];
+Emphasized.args = {
+	isEmphasized: true
+};
+
+Emphasized.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Invalid = TagGroups.bind({});
+Invalid.tags = ["!dev"];
+Invalid.args = {
+	isInvalid: true
+};
+
+Invalid.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Removable = TagsDefaultOptions.bind({});
 Removable.tags = ["!dev"];
 Removable.args = {
 	hasClearButton: true,
 };
+
 Removable.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+export const Sizing = (args, context) => Sizes({
+	Template: TagsDefaultOptions,
+	withHeading: false,
+	withBorder: false,
+	...args,
+}, context);
+Sizing.tags = ["!dev"];
+Sizing.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+
+/**
+ * When the tag text is too long for the available horizontal space, it truncates. The full text should be revealed with a tooltip on hover.
+ * */
+
+export const TextOverflow = TagGroups.bind({});
+TextOverflow.tags = ["!dev"];
+TextOverflow.args = {
+	hasIcon: true,
+	iconName: "CheckmarkCircle",
+	label: "An example of text overflow behavior. When the button text is too long for the horizontal space available, it will truncate and stay on one line.",
+	customStyles: { "max-inline-size": "200px" }
+};
+
+TextOverflow.parameters = {
 	chromatic: { disableSnapshot: true },
 };

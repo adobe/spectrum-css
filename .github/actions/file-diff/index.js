@@ -117,52 +117,48 @@ async function run() {
 				""
 			);
 
-			sections.map(({ name, filePath, headMainSize, baseMainSize, hasChange, mainFile, fileMap }) => {
+			sections.map(({ name, headMainSize, baseMainSize, hasChange, mainFile, fileMap }) => {
 				if (!hasChange) return;
-
-				const data = [];
 
 				/** We only evaluate changes if there is a diff branch being used and this is the main file for the package */
 				if (hasBase) {
 					/**
 					 * If: the component folder exists in the original branch but not the PR
 					 * Or: the pull request file size is 0 or empty but the original branch has a size
-					 * Then: report that it was removed, moved, or renamed
+					 * Then: report that it was removed or moved / renamed
 					 *
-					 * Else if: the component folder exists in the PR but not the original branch
+					 * Else: report the change
+					 */
+					let currentSize;
+					if (isRemoved(headMainSize, baseMainSize)) {
+						currentSize = "🚨 deleted/moved";
+					} else {
+						currentSize = bytesToSize(headMainSize);
+					}
+
+					/**
+					 * If: the component folder exists in the PR but not the original branch
 					 * Or: the pull request file has size but the original branch does not
 					 * Then: report that it's new
 					 *
-					 * Else if: the difference between the two sizes is not 0 (i.e. there is a change)
-					 * Then: report the change
-					 *
-					 * Else: report that there is no change
+					 * Else: report the change
 					 */
-					if (
-						(existsSync(join(basePath, filePath, name)) && !existsSync(join(headPath, filePath, name)))
-					) {
-						data.push("🚨 deleted, moved, or renamed");
-					} else if (
-						(existsSync(join(headPath, filePath, name)) && !existsSync(join(basePath, filePath, name)))
-					) {
-						data.push("🎉 new");
-					} else if (
-						((Math.abs(difference(headMainSize, baseMainSize))) / 1000) >= 0.001
-					) {
-						data.push(printChange(headMainSize, baseMainSize));
+					let comparison;
+					if (isNew(headMainSize, baseMainSize)) {
+						comparison = "🎉 new";
+					} else {
+						comparison = printChange(headMainSize, baseMainSize);
 					}
 
-					if (data.length > 0) {
-						summaryTable.push([name, bytesToSize(headMainSize), data]);
-					}
+					summaryTable.push([name, currentSize, comparison]);
 				}
 
 
 				const md = ["", `#### ${name}`, ""];
 				md.push(
 					...[
-						["File", "Head", ...(hasBase ? ["Base", "Δ"] : [])],
-						[" - ", " - ", ...(hasBase ? [" - ", " - "] : [])],
+						["Filename", "Head", ...(hasBase ? ["Compared to base"] : [])],
+						[" - ", " - ", ...(hasBase ? [" - "] : [])],
 					].map((row) => `| ${row.join(" | ")} |`),
 					...[...fileMap.entries()]
 						.reduce(
@@ -172,16 +168,24 @@ async function run() {
 							) => {
 								// @todo readable filename can be linked to html diff of the file?
 								// https://github.com/adobe/spectrum-css/pull/2093/files#diff-6badd53e481452b5af234953767029ef2e364427dd84cdeed25f5778b6fca2e6
+
+								// table is an array containing the printable data for the markdown table
+								if (readableFilename.endsWith(".map")) return table;
+
+								const removedOnBranch = isRemoved(headByteSize, baseByteSize);
+								// @todo should there be any normalization before comparing the file names?
+								const isMainFile = readableFilename === mainFile;
+								const size = removedOnBranch ? " - " : bytesToSize(headByteSize);
+								const delta = `${printChange(headByteSize, baseByteSize)}${difference(baseByteSize, headByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`;
+
 								return [
 									...table,
 									[
-										readableFilename === mainFile ? `**${readableFilename}**` : readableFilename,
+										// Bold the main file to help it stand out
+										isMainFile ? `**${readableFilename}**` : readableFilename,
 										// If the file was removed, note it's absense with a dash; otherwise, note it's size
-										isRemoved(headByteSize, baseByteSize) ? " - " : bytesToSize(headByteSize),
-										...(hasBase ? [
-											bytesToSize(baseByteSize),
-											isRemoved(headByteSize, baseByteSize) ? "🚨 deleted, moved, or renamed" : isNew(headByteSize, baseByteSize) ? "🎉 **new**" : `${printChange(headByteSize, baseByteSize)}${difference(headByteSize, baseByteSize) !== 0 ? ` (${printPercentChange(headByteSize , baseByteSize)})` : ""}`,
-										] : []),
+										size,
+										...(hasBase ? [delta] : []),
 									]
 								];
 							},
@@ -282,7 +286,7 @@ const printChange = function (v1, v0) {
 	const d = difference(v1, v0);
 	return d === 0
 		? `-`
-		: `${d > 0 ? "⬆" : "⬇"} ${bytesToSize(Math.abs(d))}`;
+		: `${d > 0 ? "🔴 ⬆" : "🟢 ⬇"} ${bytesToSize(Math.abs(d))}`;
 };
 
 /**

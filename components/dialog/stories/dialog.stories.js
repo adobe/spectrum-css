@@ -2,13 +2,14 @@ import { withUnderlayWrapper } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isOpen } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { DialogFullscreen, DialogFullscreenTakeover, DialogGroup } from "./dialog.test.js";
-import { Template } from "./template";
+import { Template } from "./template.js";
 
 /**
  * A dialog displays important information that users need to acknowledge. They appear over the interface and block further interactions.
- * 
+ *
  * The alert variants that were previously a part of Dialog were moved to their own component, [Alert Dialog](/docs/components-alert-dialog--docs).
  */
 export default {
@@ -109,29 +110,25 @@ export default {
 		layout: "default",
 	},
 	parameters: {
+		layout: "fullscreen",
 		actions: {
 			handles: ["click .spectrum-Dialog button"],
 		},
 		docs: {
 			story: {
-				inline: false,
+				// TODO: restore `inline: false,`
 				height: "500px",
 			},
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	decorators: [
 		withUnderlayWrapper,
 	],
 };
 
-const ExampleContent = Typography({
-	semantics: "body",
-	size: "m",
-	content: [
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis."
-	]
-});
+const ExampleContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor augue mauris augue neque gravida. Libero volutpat sed ornare arcu. Quisque egestas diam in arcu cursus euismod quis viverra. Posuere ac ut consequat semper viverra nam libero justo laoreet. Enim ut tellus elementum sagittis vitae et leo duis ut. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Diam volutpat commodo sed egestas egestas. Dolor magna eget est lorem ipsum dolor. Vitae suscipit tellus mauris a diam maecenas sed. Turpis in eu mi bibendum neque egestas congue. Rhoncus est pellentesque elit ullamcorper dignissim cras lobortis.";
 
 /**
  * The default size for dialog is medium.
@@ -143,7 +140,7 @@ Default.args = {
 		(passthroughs, context) => Typography({
 			semantics: "body",
 			size: "m",
-			content: ExampleContent,
+			content: [ ExampleContent ],
 			...passthroughs,
 		}, context),
 	],
@@ -256,7 +253,11 @@ FullscreenTakeover.parameters = {
 FullscreenTakeover.args = {
 	...Default.args,
 	layout: "fullscreenTakeover",
-	content: [ExampleContent, ExampleContent, ExampleContent, ExampleContent],
+	content: [ () => Typography({
+		semantics: "body",
+		size: "m",
+		content: [ ExampleContent, ExampleContent, ExampleContent, ExampleContent ],
+	})],
 };
 
 // ********* VRT ONLY ********* //

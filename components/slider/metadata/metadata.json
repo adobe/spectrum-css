@@ -17,6 +17,7 @@
     ".spectrum-Slider--sideLabel .spectrum-Slider-controls",
     ".spectrum-Slider--sideLabel .spectrum-Slider-labelContainer",
     ".spectrum-Slider--sideLabel .spectrum-Slider-labelContainer + .spectrum-Slider-controls",
+    ".spectrum-Slider--sideLabel .spectrum-Slider-labelContainer .spectrum-Slider-label",
     ".spectrum-Slider--sideLabel .spectrum-Slider-value",
     ".spectrum-Slider--sizeL",
     ".spectrum-Slider--sizeS",
@@ -26,6 +27,7 @@
     ".spectrum-Slider--tick .spectrum-Slider-handle",
     ".spectrum-Slider--tick .spectrum-Slider-tickLabel",
     ".spectrum-Slider-controls",
+    ".spectrum-Slider-controls:not(:has(.spectrum-Slider-ticks))",
     ".spectrum-Slider-fill",
     ".spectrum-Slider-fill--right",
     ".spectrum-Slider-fill:before",
@@ -88,6 +90,7 @@
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:focus-within",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range) .spectrum-Slider-controls:hover",
     ".spectrum-Slider:not(.is-disabled, .spectrum-Slider--filled, .spectrum-Slider--range).js-focus-within .spectrum-Slider-controls[focus-within]",
+    ".spectrum-Slider:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp)",
     "[dir=\"rtl\"] .spectrum-Slider",
     "[dir=\"rtl\"] .spectrum-Slider .spectrum-Slider-handle:before"
   ],

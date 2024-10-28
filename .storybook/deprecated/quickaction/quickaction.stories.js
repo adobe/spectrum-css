@@ -1,4 +1,4 @@
-import pkgJson from "@spectrum-css/quickaction/package.json";
+import packageJson from "@spectrum-css/quickaction/package.json";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -52,14 +52,17 @@ export default {
 		content: [
 			{
 				iconName: "Edit",
+				iconSet: "workflow",
 				label: "Edit",
 			},
 			{
 				iconName: "Copy",
+				iconSet: "workflow",
 				label: "Copy",
 			},
 			{
 				iconName: "Delete",
+				iconSet: "workflow",
 				label: "Delete",
 			},
 		],
@@ -69,7 +72,15 @@ export default {
 		status: {
 			type: "deprecated"
 		},
-		packageJson: pkgJson,
+		packageJson: {
+			...packageJson,
+			"spectrum": [
+				{
+					"guidelines": "https://spectrum.adobe.com/page/quick-actions/",
+					"rootClass": "spectrum-QuickActions",
+				}
+			]
+		}
 	},
 };
 

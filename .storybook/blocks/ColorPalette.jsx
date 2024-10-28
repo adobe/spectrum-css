@@ -2,6 +2,7 @@ import { ResetWrapper } from "@storybook/components";
 import { styled } from "@storybook/theming";
 import { capitalize } from "lodash-es";
 import React from "react";
+import { ThemeContainer } from "./ThemeContainer";
 import { Body, Heading } from "./Typography";
 import { fetchToken } from "./utilities.js";
 
@@ -14,7 +15,7 @@ export const SwatchGroupLabel = styled.div`
 	text-wrap: nowrap;
 	inline-size: max-content;
 	block-size: ${props => props.size ?? 32}px;
-	color: ${props => fetchToken("neutral-subdued-content-color-default", props.theme.defaultText, props)};
+	color: ${props => `var(--spectrum-neutral-subdued-content-color-default, ${props.theme.defaultText})`};
 `;
 
 export const SwatchSet = styled.div`
@@ -22,25 +23,33 @@ export const SwatchSet = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 2px;
-	color: ${props => fetchToken("neutral-subdued-content-color-default", props.theme.defaultText, props)};
+	color: ${props => `var(--spectrum-neutral-subdued-content-color-default, ${props.theme.defaultText})`};
 `;
 
 export const Swatch = styled.div`
 	position: relative;
-	inline-size: ${props => props.size ?? 32}px;
-	block-size: ${props => props.size ?? 32}px;
+	inline-size: var(--swatch-size, ${props => props.size ?? 32}px);
+	block-size: var(--swatch-size, ${props => props.size ?? 32}px);
 	outline: none;
+	user-select: none;
 
 	&::before {
 		position: absolute;
-		top: 0;
-		left: 0;
+		inset: 0;
 		inline-size: 100%;
 		block-size: 100%;
 		content: "";
 		opacity: 1;
-		border-radius: ${props => props.theme.appBorderRadius ?? fetchToken("corner-radius-100", 4, props)}px;
+
+		border: 1px solid rgba(0, 0, 0, 51%);
+
+		border-radius: ${props => `${props.theme.appBorderRadius}px` ?? `var(--spectrum-corner-radius-100, 4px)`};
 		${props => props.background && `background: ${props.background};`}
+	}
+
+	.spectrum--dark &::before,
+	.spectrum--darkest &::before {
+		border-color: rgba(255, 255, 255, 51%);
 	}
 `;
 
@@ -73,22 +82,22 @@ const List = styled.div`
  * A single color row your styleguide showing title, subtitle and one or more colors, used
  * as a child of `ColorPalette`.
  */
-export const ColorItem = ({ title, color, values = [], ...props }) => {
+export const ColorItem = ({ title, color, size = 60, values = [], ...props }) => {
 	if (!color) return;
 	if (!values.length) return (
 		<>
-			<SwatchGroupLabel className="swatch-group-label">
+			{title && <SwatchGroupLabel className="swatch-group-label">
 				<Heading size="s">{title ?? capitalize(color)}</Heading>
-			</SwatchGroupLabel>
+			</SwatchGroupLabel>}
 			<Body>No values provided for color {color}</Body>
 		</>
 	);
 
 	return (
 		<>
-			<SwatchGroupLabel className="swatch-group-label">
+			{title && <SwatchGroupLabel className="swatch-group-label">
 				<Heading size="s">{title ?? capitalize(color)}</Heading>
-			</SwatchGroupLabel>
+			</SwatchGroupLabel>}
 			<SwatchGroup className="swatch-group" {...props}>
 				<SwatchColors className="swatch-colors" size={60}>
 					{values.map((value) => {
@@ -102,7 +111,7 @@ export const ColorItem = ({ title, color, values = [], ...props }) => {
 									className="swatch"
 									title={`--spectrum-${color}-${value} / ${resolved}`}
 									background={resolved}
-									size={60}
+									size={size}
 									onClick={() => navigator.clipboard.writeText(`--spectrum-${color}-${value}`)}
 								/>
 							</SwatchSet>
@@ -118,12 +127,14 @@ export const ColorItem = ({ title, color, values = [], ...props }) => {
  * Styleguide documentation for colors, including names, captions, and color swatches,
  * all specified as `ColorItem` children of this wrapper component.
  */
-export const ColorPalette = ({ children, ...props }) => {
+export const ColorPalette = ({ color, children, ...props }) => {
 	return (
 		<ResetWrapper>
-			<List {...props} className="docblock-colorpalette sb-unstyled">
-				{children}
-			</List>
+			<ThemeContainer color={color} {...props}>
+				<List className="docblock-colorpalette sb-unstyled">
+					{children}
+				</List>
+			</ThemeContainer>
 		</ResetWrapper>
 	);
 };

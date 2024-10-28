@@ -17,7 +17,7 @@
 /* default for all buttons */
 .spectrum-Button {
 	--spectrum-button-animation-duration: var(--spectrum-animation-duration-100);
-	--spectrum-button-border-radius: var(--spectrum-corner-radius-100);
+	--spectrum-button-border-radius: calc(var(--spectrum-button-height) / 2);
 	--spectrum-button-border-width: var(--spectrum-border-width-200);
 	--spectrum-button-line-height: 1.2; /* Hack to keep buttons at 32px */
 
@@ -33,7 +33,6 @@
 .spectrum-Button--sizeS {
 	--spectrum-button-min-width: calc(var(--spectrum-component-height-75) * var(--spectrum-button-minimum-width-multiplier));
 
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-75);
 	--spectrum-button-height: var(--spectrum-component-height-75);
 
 	--spectrum-button-font-size: var(--spectrum-font-size-75);
@@ -51,7 +50,6 @@
 .spectrum-Button--sizeM {
 	--spectrum-button-min-width: calc(var(--spectrum-component-height-100) * var(--spectrum-button-minimum-width-multiplier));
 
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-100);
 	--spectrum-button-height: var(--spectrum-component-height-100);
 
 	--spectrum-button-font-size: var(--spectrum-font-size-100);
@@ -69,7 +67,6 @@
 .spectrum-Button--sizeL {
 	--spectrum-button-min-width: calc(var(--spectrum-component-height-200) * var(--spectrum-button-minimum-width-multiplier));
 
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-200);
 	--spectrum-button-height: var(--spectrum-component-height-200);
 
 	--spectrum-button-font-size: var(--spectrum-font-size-200);
@@ -87,7 +84,6 @@
 .spectrum-Button--sizeXL {
 	--spectrum-button-min-width: calc(var(--spectrum-component-height-300) * var(--spectrum-button-minimum-width-multiplier));
 
-	--spectrum-button-border-radius: var(--spectrum-component-pill-edge-to-text-300);
 	--spectrum-button-height: var(--spectrum-component-height-300);
 
 	--spectrum-button-font-size: var(--spectrum-font-size-300);
@@ -112,6 +108,7 @@
 	font-size: var(--mod-button-font-size, var(--spectrum-button-font-size));
 	font-weight: var(--mod-bold-font-weight, var(--spectrum-bold-font-weight));
 	gap: var(--mod-button-padding-label-to-icon, var(--spectrum-button-padding-label-to-icon));
+	max-inline-size: var(--mod-button-max-inline-size, none);
 	min-inline-size: var(--mod-button-min-width, var(--spectrum-button-min-width));
 	min-block-size: var(--mod-button-height, var(--spectrum-button-height));
 
@@ -293,6 +290,16 @@ a.spectrum-Button {
 		}
 	}
 }
+
+/* Disable button label wrap  */
+.spectrum-Button--noWrap {
+	.spectrum-Button-label {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
 
 /* Static color variants */
 .spectrum-Button--staticWhite {

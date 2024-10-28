@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/picker",
-	"version": "8.1.6",
+	"version": "8.2.0",
 	"description": "The Spectrum CSS picker component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -65,5 +65,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/picker",
+			"rootClass": "spectrum-Picker"
+		}
+	]
 }

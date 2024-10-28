@@ -1,8 +1,9 @@
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isFocused, isHovered, isQuiet, staticColor } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { LinkGroup } from "./link.test.js";
-import { TemplateWithFillerText } from "./template";
+import { TemplateWithFillerText } from "./template.js";
 
 /**
  * A link allows users to navigate to a different location. They can be presented in-line inside a paragraph or as standalone text.
@@ -69,7 +70,8 @@ export default {
 		actions: {
 			handles: ["click .spectrum-Link"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 
@@ -144,9 +146,7 @@ StaticWhite.args = {
 };
 StaticWhite.tags = ["!dev"];
 StaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 /**
@@ -160,9 +160,7 @@ StaticBlack.args = {
 };
 StaticBlack.tags = ["!dev"];
 StaticBlack.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 export const QuietStaticWhite = Default.bind({});
@@ -174,9 +172,7 @@ QuietStaticWhite.args = {
 };
 QuietStaticWhite.tags = ["!dev"];
 QuietStaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 export const QuietStaticBlack = Default.bind({});
@@ -188,9 +184,7 @@ QuietStaticBlack.args = {
 };
 QuietStaticBlack.tags = ["!dev"];
 QuietStaticBlack.parameters = {
-	chromatic: {
-		modes: disableDefaultModes,
-	},
+	chromatic: { disableSnapshot: true },
 };
 
 // ********* VRT ONLY ********* //

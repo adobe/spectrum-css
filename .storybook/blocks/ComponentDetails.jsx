@@ -2,7 +2,10 @@ import { useOf } from '@storybook/blocks';
 import { ResetWrapper } from "@storybook/components";
 import { styled } from "@storybook/theming";
 import React, { useEffect, useState } from "react";
-import { Code } from "./Typography";
+import AdobeSVG from "../assets/images/adobe_logo.svg?raw";
+import GitHubSVG from "../assets/images/github_logo.svg?raw";
+import NpmSVG from "../assets/images/npm_logo.svg?raw";
+import { Body, Code, Heading } from "./Typography.jsx";
 import { fetchToken } from "./utilities.js";
 
 export const DList = styled.dl`
@@ -75,6 +78,15 @@ export const DDefinition = styled.dd`
 	font-size: ${props => props.theme.typography.size.s};
 `;
 
+export const DSet = ({ term, children }) => {
+	return (
+		<>
+			<DTerm><Code style={{ display: "inline-block" }}>{term}</Code></DTerm>
+			<DDefinition>{children}</DDefinition>
+		</>
+	)
+};
+
 export const StatusLight = styled.span(({ variant = "positive", ...props }) => `
 	border-radius: 50%;
 	vertical-align: middle;
@@ -87,6 +99,45 @@ export const StatusLight = styled.span(({ variant = "positive", ...props }) => `
 	margin-inline-end: ${["l", "xl"].includes(props.size) ? 10 : 8}px;
 	margin-block-end: 1px;
 `);
+
+export const ResourceSection = styled.section`
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+`;
+
+export const ResourceLink = styled.a`
+	position: relative;
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	margin-block-end: 16px;
+	margin-inline-end: 16px;
+	box-sizing: border-box;
+	text-decoration: none;
+	min-inline-size: 100px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	border-color: rgb(230, 230, 230);
+	overflow: hidden;
+	color: rgb(0, 0, 0);
+
+	&:hover {
+		border-color: rgb(213, 213, 213);
+	}
+`;
+
+export const ResourceIconWrapper = styled.div`
+	background-color: rgba(248, 248, 248);
+	padding: 12px;
+	display: flex;
+	inline-size: 40px;
+	block-size: 40px;
+`;
+
+export const ResourceTextWrapper = styled.div`
+	margin-inline: 16px;
+`;
 
 const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false, skipLink = false }) => {
 	let statusType = "notice";
@@ -126,7 +177,6 @@ const VersionDetails = ({ tag, data = {}, isDeprecated = false, skipDate = false
  * @returns
  */
 function processReleaseData(storyMeta, npmData) {
-	console.log("Processing release data", npmData);
 	const previewURL = "https://www.npmjs.org/package/";
 
 	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
@@ -138,9 +188,6 @@ function processReleaseData(storyMeta, npmData) {
 		"local",
 		...Object.keys(npmData?.["dist-tags"] ?? {})
 	].filter(tag => !ignoredTags.includes(tag));
-
-	// Create a robust fallback stack to capture the version number
-	const fallbackVersion = packageJson?.version ?? storyMeta?.csfFile?.meta?.parameters?.componentVersion;
 
 	const mapVersions = new Map();
 	for (const tag of tags) {
@@ -154,7 +201,7 @@ function processReleaseData(storyMeta, npmData) {
 
 		// Prefer the version from the package.json file if this is the "local" tag
 		if (tag === "local") {
-			version = fallbackVersion;
+			version = packageJson?.version;
 			date = "unpublished";
 		}
 
@@ -218,7 +265,9 @@ function initCache(key) {
 	const [cache, setCache] = useState(JSON.parse(localStorage.getItem(key)) ?? {});
 
 	useEffect(() => {
-		localStorage.setItem(key, JSON.stringify(cache));
+		try {
+			localStorage.setItem(key, JSON.stringify(cache));
+		} catch (error) {/* empty */}
 	}, [key, cache]);
 
 	return [cache, setCache];
@@ -230,39 +279,130 @@ function fetchNpmData(packageName, setnpmData, setIsLoading) {
 	// Capture the npm data for the component from the registry
 	useEffect(() => {
 		if (typeof cache === "object" && Object.keys(cache).length > 0) {
-			console.log(`Use cached npm data for ${packageName}`);
 			setnpmData(cache);
 			setIsLoading(false);
 			return;
 		}
 
-		console.log(`Fetching npm data for ${packageName}`);
 		fetch("https://registry.npmjs.org/" + packageName).then(async (response) => {
 			if (!response.ok) {
-				throw new Error(`Failed to fetch npm data for ${packageName}`);
+				console.warn(`Failed to fetch npm data for ${packageName}`);
+				return;
 			}
 
 			const json = await response.json();
 
 			if (!json) {
-				throw new Error(`Failed to fetch npm data for ${packageName}`);
+				console.warn(`Failed to fetch npm data for ${packageName}`);
+				return;
 			}
 
 			setnpmData(json);
 			setCache(json);
 			setIsLoading(false);
 		}).catch((error) => {
-			console.error(error?.message ?? error);
+			console.warn(error?.message ?? error);
 		});
 	}, [cache, setCache, packageName, setnpmData, setIsLoading]);
 }
+
+const fetchLogo = (brand) => {
+	switch(brand) {
+		case "npm":
+			return NpmSVG;
+		case "GitHub":
+			return GitHubSVG;
+		case "Adobe":
+			return AdobeSVG;
+	}
+
+	return;
+}
+
+/**
+ * Displays a resource card containing text and an image that links to a particular resource.
+ *
+ * @param {string} heading - heading of the resource card
+ * @param {string} alt - additional description of the resource card
+ * @param {string} image - the SVG image
+ * @param {string} href - optional link to the resource, found in packageJson?.spectrum?.guidelines
+ * @returns {string}
+ */
+export const ResourceLinkContent = ({ heading, alt, logo, href }) => {
+	if (!href) return;
+
+	return (
+		<ResourceLink href={href} className="sb-unstyled" title={alt}>
+			<ResourceIconWrapper dangerouslySetInnerHTML={{ __html: fetchLogo(logo) }} />
+			<ResourceTextWrapper>
+				{heading ? <Heading size="xs">{heading}</Heading> : ""}
+				{alt ? <Body size="s">{alt}</Body> : ""}
+			</ResourceTextWrapper>
+		</ResourceLink>
+	);
+};
+
+/**
+ * Displays the list of relevant component links (to NPM, repo, guidelines, etc).
+ *
+ * The rootClassName is read from the story's default args, found in the story's metadata.
+ *
+ * The for loop is particularly helpful to match guidelines links for any nested components
+ * (i.e. meter, form). We need to check that the rootClassName matches the rootClass found
+ * in the packageJson.spectrum, to link to the correct guidelines page.
+ *
+ * Deprecated components should not show a GitHub resource card.
+ *
+ * @param {string} packageName - packageName sourced from packageJson?.name
+ * @param {string[]} spectrumData - an array of objects sourced from packageJson?.spectrum
+ * @param {string} rootClassName - a component's default rootClass arg
+ * @returns {string}
+ */
+export const ResourceListDetails = ({ packageName, spectrumData = [], rootClassName, isDeprecated }) => {
+	if (!packageName) return;
+
+	let href;
+
+	for(let i = 0; i < spectrumData?.length; i++) {
+		if (spectrumData[i]?.guidelines && spectrumData[i]?.rootClass === rootClassName) {
+			href = spectrumData[i]?.guidelines;
+		}
+	}
+
+	return (
+		<ResourceSection className="sb-unstyled">
+			{href ?
+				<ResourceLinkContent
+					className="doc-block-resource-cards"
+					heading="View guidelines"
+					alt="Spectrum website"
+					logo="Adobe"
+					href={href}/> : ""}
+				<ResourceLinkContent
+					className="doc-block-resource-cards"
+					heading="View package"
+					alt="npm"
+					logo="npm"
+					href={`https://npmjs.com/${packageName}`}/>
+			{!isDeprecated ?
+				<ResourceLinkContent
+					className="doc-block-resource-cards"
+					heading="View repository"
+					alt="GitHub"
+					logo="GitHub"
+					href={`https://github.com/adobe/spectrum-css/tree/main/components/${packageName.split('/').pop()}`}/> : ""}
+		</ResourceSection>
+	)
+};
 
 /**
  * Displays the current version number of the component. The version is read from
  * the component's parameters, where it was sourced from the package.json file.
  *
- * Also displays a component status of "deprecated" if it is set in the story's
+ * Displays a component status of "deprecated" if it is set in the story's
  * parameters.
+ *
+ * Displays the list of relevant component links (to NPM, repo, guidelines, etc).
  *
  * Usage of this doc block within MDX template(s):
  *  <ComponentDetails />
@@ -272,8 +412,16 @@ export const ComponentDetails = () => {
 
 	const isDeprecated = storyMeta?.csfFile?.meta?.parameters?.status?.type == "deprecated";
 	const packageJson = storyMeta?.csfFile?.meta?.parameters?.packageJson ?? {};
+	const rootClassName = storyMeta?.csfFile?.meta?.args?.rootClass ?? "";
 
-	if (!packageJson?.name) return;
+	const packageName = packageJson?.name;
+
+	if (!packageName) return;
+
+	let spectrumData = packageJson?.spectrum;
+	if (typeof spectrumData === "string") {
+		spectrumData = [spectrumData];
+	}
 
 	const [isLoading, setIsLoading] = useState(true);
 	const [npmData, setnpmData] = useState({});
@@ -284,26 +432,28 @@ export const ComponentDetails = () => {
 
 	return (
 		<ResetWrapper>
-			{ !isLoading ?
-				<DList className="docblock-metadata sb-unstyled">
-					{ isDeprecated
-						?	<>
-								<DTermDTerm key={'status'}>Status:</DTermDTerm>
-								<DDefinition key={'status-data'}>Deprecated</DDefinition>
+			{ !isLoading ? <>
+					<DList className="docblock-metadata sb-unstyled">
+						{ isDeprecated
+							?	<>
+									<DTerm key={'status'}>Status:</DTerm>
+									<DDefinition key={'status-data'}>Deprecated</DDefinition>
+								</>
+							: ""
+						}
+						{ showLocalVersion
+							?	<>
+									<DTerm key={'version-label'}>Local version:</DTerm>
+									<DDefinition key={'version'}><VersionDetails tag={"local"} data={allVersions && allVersions.find(([tag]) => tag === "local")?.[1]} isDeprecated={isDeprecated} /></DDefinition>
+								</>
+							: <>
+								<DTerm key={'version-label'}>Latest version:</DTerm>
+								<DDefinition key={'version'}><VersionDetails tag={"latest"} data={allVersions && allVersions.find(([tag]) => tag === "latest")?.[1]} isDeprecated={isDeprecated} skipLink={true} /></DDefinition>
 							</>
-						: ""
-					}
-					{ showLocalVersion
-						?	<>
-								<DTerm>Local version:</DTerm>
-								<DDefinition><VersionDetails tag={"local"} data={allVersions && allVersions.find(([tag]) => tag === "local")?.[1]} isDeprecated={isDeprecated} /></DDefinition>
-							</>
-						: <>
-							<DTerm>Latest version:</DTerm>
-							<DDefinition><VersionDetails tag={"latest"} data={allVersions && allVersions.find(([tag]) => tag === "latest")?.[1]} isDeprecated={isDeprecated} skipLink={true} /></DDefinition>
-						</>
-					}
-				</DList>
+						}
+					</DList>
+					<ResourceListDetails packageName={packageName} spectrumData={spectrumData} rootClassName={rootClassName} isDeprecated={isDeprecated}/>
+				</>
 			: ""}
 		</ResetWrapper>
 	);
@@ -333,14 +483,9 @@ export const TaggedReleases = () => {
 			{ !isLoading ?
 				<DList skipBorder={true} className="docblock-releases sb-unstyled">
 					{ allVersions.filter(([tag]) => tag !== "local").map(([tag, data], idx) => (
-						<>
-							<DTerm>
-								<Code style={{ display: "inline-block" }}>{tag}</Code>
-							</DTerm>
-							<DDefinition>
-								<VersionDetails tag={tag} data={data} isDeprecated={isDeprecated} />
-							</DDefinition>
-						</>
+						<DSet key={`${tag}-${idx}`} term={tag}>
+							<VersionDetails tag={tag} data={data} isDeprecated={isDeprecated} skipDate={true} />
+						</DSet>
 					))}
 				</DList>
 				: ""

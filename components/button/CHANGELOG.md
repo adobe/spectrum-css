@@ -1,5 +1,17 @@
 # Change Log
 
+## 13.4.0
+
+### Minor Changes
+
+- [#3197](https://github.com/adobe/spectrum-css/pull/3197) [`1eac198`](https://github.com/adobe/spectrum-css/commit/1eac198754ca1e60f96a64c7cf5e7c7a4758b1f3) Thanks [@cdransf](https://github.com/cdransf)! - Replaces all of occurrences of --spectrum-component-pill-edge-to-text-_ (intended to be used as padding) in the button component with the appropriate corner-radius-_ tokens.
+
+## 13.3.0
+
+### Minor Changes
+
+- [#3086](https://github.com/adobe/spectrum-css/pull/3086) [`d49ea11`](https://github.com/adobe/spectrum-css/commit/d49ea118abbeb0c2195630dcccf64ac64bbcacbc) Thanks [@aramos-adobe](https://github.com/aramos-adobe)! - Adds the ability to disable text wrapping within the button component's label by applying the class `.spectrum-Button--noWrap` to `.spectrum-Button`. If the text overflows the maximum allowed width of the button, an ellipsis `...` indicator will show. Please note that this option is not a part of the design specification and should be used carefully, with consideration of this overflow behavior and the readability of the button's content.
+
 ## 13.2.0
 
 ### Minor Changes

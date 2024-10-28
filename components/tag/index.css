@@ -216,6 +216,7 @@
 		margin-block-start: calc(var(--mod-tag-icon-spacing-block-start, var(--spectrum-tag-icon-spacing-block-start)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		margin-block-end: calc(var(--mod-tag-icon-spacing-block-end, var(--spectrum-tag-icon-spacing-block-end)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
 		margin-inline-end: var(--mod-tag-icon-spacing-inline-end, var(--spectrum-tag-icon-spacing-inline-end));
+		flex-shrink: 0;
 	}
 
 	.spectrum-Avatar {
@@ -226,6 +227,11 @@
 
 	/* clear button */
 	.spectrum-Tag-clearButton {
+		/* width of fill neutralized to ensure correct inline spacing within tag */
+		--mod-clear-button-width: fit-content;
+		--spectrum-clearbutton-fill-size: fit-content;
+		--spectrum-clearbutton-fill-background-color: transparent;
+
 		box-sizing: border-box;
 
 		padding-block-start: calc(var(--mod-tag-clear-button-spacing-block, var(--spectrum-tag-clear-button-spacing-block)) - var(--mod-tag-border-width, var(--spectrum-tag-border-width)));
@@ -239,11 +245,6 @@
 
 		/* ensure clear button is correct color */
 		color: currentColor;
-
-		/* width of fill neutralized to ensure correct inline spacing within tag */
-		--mod-clear-button-width: fit-content;
-		--spectrum-clearbutton-fill-size: fit-content;
-		--spectrum-clearbutton-fill-background-color: transparent;
 
 		.spectrum-ClearButton-fill {
 			background-color: var(--mod-clearbutton-fill-background-color, var(--spectrum-clearbutton-fill-background-color));
@@ -415,8 +416,6 @@
 /* windows high contrast mode */
 @media (forced-colors: active) {
 	.spectrum-Tag {
-		forced-color-adjust: none;
-
 		--highcontrast-tag-border-color: ButtonText;
 		--highcontrast-tag-border-color-hover: ButtonText;
 		--highcontrast-tag-border-color-active: ButtonText;
@@ -433,6 +432,8 @@
 		--highcontrast-tag-content-color-focus: ButtonText;
 
 		--highcontrast-tag-focus-ring-color: Highlight;
+
+		forced-color-adjust: none;
 
 		&.is-selected {
 			--highcontrast-tag-border-color-selected: Highlight;

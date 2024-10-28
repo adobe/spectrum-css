@@ -1,5 +1,33 @@
 # Change Log
 
+## 14.6.0
+
+### Minor Changes
+
+- [#3266](https://github.com/adobe/spectrum-css/pull/3266) [`4b818e1`](https://github.com/adobe/spectrum-css/commit/4b818e1062202e404de1350938ce2a19146aa0b0) Thanks [@5t3ph](https://github.com/5t3ph)! - For Coach indicator, marks "light" and "dark" variants for deprecation going into S2, and adds "static white" per direction from design.
+
+## 14.5.0
+
+### Minor Changes
+
+- [#3253](https://github.com/adobe/spectrum-css/pull/3253) [`47f23a7`](https://github.com/adobe/spectrum-css/commit/47f23a762a5c84ffe3c82e7e1b0c4c9d5dc60f86) Thanks [@castastrophe](https://github.com/castastrophe)! - Add component-level token overrides from card, contextualhelp, swatch, and typography to ensure valid theme toggling.
+
+  Light/dark/darkest custom overrides added: `--spectrum-card-selected-background-color-rgb`, `--spectrum-swatch-border-color`, `--spectrum-swatch-border-color-light`
+  Medium/large custom overrides added: `--spectrum-contextual-help-content-spacing`
+  Global custom overrides added: `--spectrum-font-family-ar`, `--spectrum-font-family-he`, `--spectrum-font-family`, `--spectrum-font-style`, `--spectrum-font-size`
+
+## 14.4.0
+
+### Minor Changes
+
+- [#3060](https://github.com/adobe/spectrum-css/pull/3060) [`7d41874`](https://github.com/adobe/spectrum-css/commit/7d418746362e7fe35f47e67e30682d7bf87ecfc7) Thanks [@castastrophe](https://github.com/castastrophe)! - Update build steps for the token rollup to generate the component theming assets instead of relying on component build steps to produce them.
+
+## 14.3.2
+
+### Patch Changes
+
+- [#3137](https://github.com/adobe/spectrum-css/pull/3137) [`b16a159`](https://github.com/adobe/spectrum-css/commit/b16a159bd8b1456b384f13f51ab0cdb318a692e8) Thanks [@castastrophe](https://github.com/castastrophe)! - `--spectrum-well-border-color` was mapped to the `-rgb` postfixed value which resolves to a raw rgb number but not a valid color.
+
 ## 14.3.1
 
 ### Patch Changes

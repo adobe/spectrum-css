@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/progressbar",
-	"version": "4.1.7",
+	"version": "4.1.8",
 	"description": "The Spectrum CSS progress bar component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -53,5 +53,15 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/progress-bar",
+			"rootClass": "spectrum-ProgressBar"
+		},
+		{
+			"guidelines": "https://spectrum.adobe.com/page/meter",
+			"rootClass": "spectrum-Meter"
+		}
+	]
 }

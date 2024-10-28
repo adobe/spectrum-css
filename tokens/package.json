@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/tokens",
-	"version": "14.3.1",
+	"version": "14.6.0",
 	"description": "The Spectrum CSS tokens package",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -20,12 +20,6 @@
 		"README.md",
 		"package.json"
 	],
-	"keywords": [
-		"spectrum",
-		"css",
-		"design system",
-		"adobe"
-	],
 	"devDependencies": {
 		"@adobe/spectrum-tokens": "12.25.0",
 		"@nxkit/style-dictionary": "^5.0.0",
@@ -33,6 +27,7 @@
 		"cssnano-preset-advanced": "^7.0.6",
 		"postcss": "^8.4.45",
 		"postcss-cli": "^11.0.0",
+		"postcss-import": "^16.1.0",
 		"postcss-licensing": "^2.0.0",
 		"postcss-rgb-mapping": "workspace:^",
 		"postcss-sorting": "^8.0.2",
@@ -40,6 +35,12 @@
 		"style-dictionary": "^3.9.2",
 		"style-dictionary-sets": "^2.3.0"
 	},
+	"keywords": [
+		"spectrum",
+		"css",
+		"design system",
+		"adobe"
+	],
 	"publishConfig": {
 		"access": "public"
 	}

@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/slider",
-	"version": "5.2.6",
+	"version": "5.4.2",
 	"description": "The Spectrum CSS slider component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -48,5 +48,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/slider",
+			"rootClass": "spectrum-Slider"
+		}
+	]
 }

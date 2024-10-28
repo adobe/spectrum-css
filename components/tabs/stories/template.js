@@ -1,7 +1,7 @@
-import { getRandomId, Container } from "@spectrum-css/preview/decorators";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 import { Template as Menu } from "@spectrum-css/menu/stories/template.js";
 import { Template as Picker } from "@spectrum-css/picker/stories/template.js";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 import { repeat } from "lit/directives/repeat.js";
@@ -92,7 +92,8 @@ export const Template = ({
 								${when(item.icon, () =>
 									Icon({
 										iconName: item.icon,
-										size
+										setName: "workflow",
+										size,
 									}, context)
 								)}
 								${when(item.label && !iconOnly, () => html`
@@ -113,13 +114,17 @@ export const Template = ({
 					isQuiet: true,
 					size,
 					isOpen,
-					placeholder: !iconOnly ? content?.[0].label : Icon({ iconName: content?.[0].icon, size }, context),
+					placeholder: !iconOnly ? content?.[0].label : Icon({
+						iconName: content?.[0].icon,
+						setName: "workflow",
+						size,
+					}, context),
 					name: content?.[0].label,
 					id: "tab-selector",
 					customPopoverStyles: {
 						insetBlockStart: "24px",
 					},
-					content: [
+					popoverContent: [
 						() => Menu({
 							selectionMode: "none",
 							size,
@@ -130,6 +135,7 @@ export const Template = ({
 								return {
 									...item,
 									iconName: item.icon,
+									iconSet: "workflow",
 									label: !iconOnly ? item.label : undefined,
 								};
 							}),

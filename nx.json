@@ -41,14 +41,14 @@
 			"inputs": [
 				"core",
 				"tools",
+				"{workspaceRoot}/tasks/component-builder.js",
 				"!{projectRoot}/stories/*.js",
 				{ "externalDependencies": ["postcss"] },
 				{ "env": "NODE_ENV" }
 			],
 			"options": {
 				"commands": [
-					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'",
-					"node --no-warnings -e 'require(\"./tasks/component-reporter.js\").default()'"
+					"node --no-warnings -e 'require(\"./tasks/component-builder.js\").default()'"
 				]
 			},
 			"outputs": [
@@ -145,6 +145,24 @@
 				]
 			}
 		},
+		"report": {
+			"cache": true,
+			"executor": "nx:run-commands",
+			"inputs": [
+				"core",
+				"tools",
+				"{workspaceRoot}/tasks/component-report.js",
+				{ "env": "NODE_ENV" }
+			],
+			"options": {
+				"commands": [
+					"cross-env NODE_OPTIONS=\"--no-warnings\" node -e 'require(\"./tasks/component-reporter.js\").default()'"
+				]
+			},
+			"outputs": [
+				"{projectRoot}/metadata/metadata.json"
+			]
+		},
 		"test": {
 			"cache": true,
 			"configurations": {
@@ -160,7 +178,7 @@
 				},
 				"scope": {
 					"commands": [
-						"chromatic --build-script-name build --junit-report --only-story-names"
+						"chromatic --build-script-name build --junit-report --only-story-names --skip '@(changeset-release/**|dependabot/**)'"
 					]
 				}
 			},

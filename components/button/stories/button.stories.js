@@ -2,9 +2,10 @@ import { default as IconStories } from "@spectrum-css/icon/stories/icon.stories.
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isActive, isDisabled, isFocused, isHovered, isPending, size, staticColor } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { ButtonGroups } from "./button.test.js";
-import { ButtonsWithIconOptions, TextOverflowTemplate, TreatmentTemplate } from "./template.js";
+import { ButtonsWithIconOptions, TextOverflowTemplate, TextWrapTemplate, TreatmentTemplate } from "./template.js";
 
 /**
  * Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.
@@ -58,6 +59,14 @@ export default {
 		isActive,
 		isPending,
 		staticColor,
+		noWrap: {
+			name: "Disable label wrap",
+			description: "Used to keep the button label text on one line. Note that this option is not a part of the design specifications which intend for the label to wrap. Use with care and consideration of this option's overflow behavior and the readability of the button's content.",
+			type: { name: "boolean" },
+			table: {
+				category: "Advanced",
+			},
+		},
 	},
 	args: {
 		rootClass: "spectrum-Button",
@@ -70,12 +79,14 @@ export default {
 		isActive: false,
 		isFocused: false,
 		isHovered: false,
+		noWrap: false,
 	},
 	parameters: {
 		actions: {
 			handles: ["click .spectrum-Button"],
 		},
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 	tags: ["!autodocs"],
 };
@@ -84,28 +95,6 @@ export const Default = ButtonGroups.bind({});
 Default.args = {};
 
 // ********* VRT ONLY ********* //
-export const StaticWhite = ButtonGroups.bind({});
-StaticWhite.tags = ["!autodocs", "!dev"];
-StaticWhite.args = {
-	staticColor: "white",
-};
-StaticWhite.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
-};
-
-export const StaticBlack = ButtonGroups.bind({});
-StaticBlack.tags = ["!autodocs", "!dev"];
-StaticBlack.args = {
-	staticColor: "black",
-};
-StaticBlack.parameters = {
-	chromatic: {
-		modes: disableDefaultModes
-	},
-};
-
 export const WithForcedColors = ButtonGroups.bind({});
 WithForcedColors.args = Default.args;
 WithForcedColors.tags = ["!autodocs", "!dev"];
@@ -117,6 +106,7 @@ WithForcedColors.parameters = {
 };
 WithForcedColors.args = {
 	iconName: "Actions",
+	iconSet: "workflow",
 };
 
 // ********* DOCS ONLY ********* //
@@ -257,7 +247,7 @@ Pending.parameters = {
 };
 
 /**
- * A button in a disabled state shows that an action exists, but is not available in that circumstance. 
+ * A button in a disabled state shows that an action exists, but is not available in that circumstance.
  * This state can be used to maintain layout continuity and to communicate that an action may become
  * available later.
  */
@@ -272,7 +262,7 @@ Disabled.parameters = {
 };
 
 /**
- * When the button text is too long for the horizontal space available, it wraps to form another line. 
+ * When the button text is too long for the horizontal space available, it wraps to form another line.
  * When there is no icon present, the text is aligned center. When there is an icon present, the text is
  * aligned `start` (left with a writing direction of left-to-right) and the icon remains vertically aligned
  * at the top.
@@ -284,5 +274,22 @@ WithWrapping.args = {
 	variant: "primary",
 };
 WithWrapping.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * The normal behavior for lengthy text in the given horizontal space available is that it will wrap to form another line. By using the `.spectrum-Button--noWrap` class, the lengthy button text will not cause a line break and the width of the button will expand until it reaches its maximum width.
+ * Please note: this can cause undesired overflow experiences and to help prevent this, the overflowing text will attempt to hide by showing an ellipsis (...). This is demonstrated in the last two examples below, by constraining the maximum width of the button.
+ * This option is not part of the design spec, so please use carefully, with consideration of the overflow behavior and the readability of the button's content.
+ * */
+
+export const DisableWrapping = TextWrapTemplate.bind({});
+DisableWrapping.tags = ["!dev"];
+DisableWrapping.storyName = "Disable label wrap";
+DisableWrapping.args = {
+	variant: "primary",
+};
+
+DisableWrapping.parameters = {
 	chromatic: { disableSnapshot: true },
 };

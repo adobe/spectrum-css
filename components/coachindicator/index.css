@@ -88,10 +88,16 @@
 		animation-delay: calc(var(--mod-coach-animation-indicator-ring-duration, var(--spectrum-coach-animation-indicator-ring-duration)) * var(--mod-coach-animation-indicator-ring-outer-delay-multiple, var(--spectrum-coach-animation-indicator-ring-outer-delay-multiple)));
 	}
 
+	/* @deprecated .spectrum-CoachIndicator--light */
 	.spectrum-CoachIndicator--light & {
 		border-color: var(--mod-coach-indicator-ring-light-color, var(--spectrum-coach-indicator-ring-light-color));
 	}
 
+	.spectrum-CoachIndicator--staticWhite & {
+		border-color: var(--spectrum-coach-indicator-ring-static-white-color);
+	}
+
+	/* @deprecated .spectrum-CoachIndicator--dark */
 	.spectrum-CoachIndicator--dark & {
 		border-color: var(--mod-coach-indicator-ring-dark-color, var(--spectrum-coach-indicator-ring-dark-color));
 	}

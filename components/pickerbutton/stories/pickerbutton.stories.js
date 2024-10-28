@@ -2,9 +2,10 @@ import { default as Icon } from "@spectrum-css/icon/stories/icon.stories.js";
 import { Sizes } from "@spectrum-css/preview/decorators";
 import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { isDisabled, isFocused, isOpen, isQuiet, size } from "@spectrum-css/preview/types";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { PickerGroup } from "./pickerbutton.test.js";
-import { CustomIconTemplate, Template } from "./template";
+import { CustomIconTemplate, Template } from "./template.js";
 
 /**
  * The picker button component is used as a dropdown trigger within other components such as [combobox](?path=/docs/components-combobox--docs).
@@ -14,7 +15,7 @@ export default {
 	component: "PickerButton",
 	argTypes: {
 		size: size(["s", "m", "l", "xl"]),
-		iconType: {
+		iconSet: {
 			name: "Icon",
 			type: { name: "string", required: false },
 			table: {
@@ -26,7 +27,7 @@ export default {
 		},
 		iconName: {
 			...Icon.argTypes.iconName,
-			if: { arg: "iconType", eq: "workflow" },
+			if: { arg: "iconSet", eq: "workflow" },
 		},
 		label: {
 			name: "Label",
@@ -79,12 +80,13 @@ export default {
 		isQuiet: false,
 		isDisabled: false,
 		isFocused: false,
-		iconType: "ui",
+		iconSet: "ui",
 		iconName: "ChevronDown",
 		position: "right",
 	},
 	parameters: {
-		packageJson: pkgJson,
+		packageJson,
+		metadata,
 	},
 };
 

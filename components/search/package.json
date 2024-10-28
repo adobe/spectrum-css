@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/search",
-	"version": "7.1.4",
+	"version": "7.2.3",
 	"description": "The Spectrum CSS search component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -52,5 +52,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/search-field",
+			"rootClass": "spectrum-Search"
+		}
+	]
 }

@@ -1,5 +1,5 @@
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
-import { getRandomId } from "@spectrum-css/preview/decorators";
+import { Container, getRandomId } from "@spectrum-css/preview/decorators";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
@@ -35,6 +35,7 @@ export const Template = ({
 			Icon(
 				{
 				iconName: "Alert",
+				setName: "workflow",
 				size,
 				customClasses: [`${rootClass}-validationIcon`],
 				},
@@ -45,3 +46,47 @@ export const Template = ({
 		</div>
 	`;
 };
+
+/**
+ * Displays both variants.
+ */
+export const VariantsTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "column",
+	content: html`${["neutral", "negative"].map((variant) => 
+		Container({
+			withBorder: false,
+			direction: "column",
+			heading: `Variant: ${variant}`,
+			containerStyles: {
+				rowGap: "8px",
+			},
+			content: Template({
+				...args,
+				variant
+			}, context),
+		})
+	)}`,
+});
+
+/**
+ * Displays options for the negative variant; with and without an icon.
+ */
+export const NegativeTemplate = (args, context) => Container({
+	withBorder: false,
+	direction: "column",
+	content: html`${[true, false].map((hideIcon) => 
+		Container({
+			withBorder: false,
+			direction: "column",
+			heading: hideIcon ? "Without icon" : "With icon",
+			containerStyles: {
+				rowGap: "8px",
+			},
+			content: Template({
+				...args,
+				hideIcon
+			}, context),
+		})
+	)}`,
+});

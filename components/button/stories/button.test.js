@@ -7,29 +7,24 @@ import { Template } from "./template.js";
  * Multiple button variations displayed in one story template.
  * Used as the base template for the stories.
  */
-const CustomButton = ({ iconName, ...args }, context) => html`
-  ${Template(
-    {
-      ...args,
-      iconName: undefined,
-    },
-    context
-  )}
-  ${Template(
-    {
-      ...args,
-      iconName: iconName ?? "Edit",
-    },
-    context
-  )}
-  ${Template(
-    {
-      ...args,
-      hideLabel: true,
-      iconName: iconName ?? "Edit",
-    },
-    context
-  )}
+const CustomButton = ({ iconName, iconSet, ...args }, context) => html`
+	<div style="display: flex; column-gap: 13px; row-gap: 24px;">
+		${Template({
+			...args,
+			iconName: undefined,
+		}, context)}
+		${Template({
+			...args,
+			iconName: iconName ?? "Edit",
+			iconSet: iconSet ?? "workflow",
+		}, context)}
+		${Template({
+			...args,
+			hideLabel: true,
+			iconName: iconName ?? "Edit",
+			iconSet: iconSet ?? "workflow",
+		}, context)}
+	</div>
 `;
 
 export const ButtonGroups = Variants({
@@ -39,18 +34,28 @@ export const ButtonGroups = Variants({
 			testHeading: capitalize(variant),
 			variant,
 		})),
-		...["fill", "outline"].map((treatment) => ({
-			testHeading: capitalize(treatment),
-			treatment,
+		// Note: In Spectrum 2, outline buttons are no longer available in accent and negative options.
+		...["accent", "negative", "primary", "secondary"].map((variant) => ({
+			testHeading: capitalize(variant) + " - outline",
+			variant,
+			treatment: "outline",
 		})),
+		{
+			testHeading: "Static black",
+			staticColor: "black",
+		},
+		{
+			testHeading: "Static white",
+			staticColor: "white",
+		},
 		{
 			testHeading: "Text wrapping with workflow icon",
 			customStyles: {
 				"max-inline-size": "480px",
 			},
 			iconName: "Edit",
-			label:
-        "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+			iconSet: "workflow",
+			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
 			Template,
 		},
@@ -61,9 +66,31 @@ export const ButtonGroups = Variants({
 			},
 			// Uses a UI icon that is smaller than workflow sizing, to test alignment:
 			iconName: "Cross100",
-			label:
-        "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+			iconSet: "ui",
+			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
+			Template,
+		},
+		{
+			testHeading: "Disable label wrapping",
+			customStyles: {
+				"max-inline-size": "120px",
+			},
+			label: "Be a premium member",
+			noWrap: true,
+			withStates: false,
+			Template,
+		},
+		{
+			testHeading: "Disable label wrapping with workflow icon",
+			customStyles: {
+				"max-inline-size": "120px",
+			},
+			iconName: "Star",
+			iconSet: "workflow",
+			label: "Be a premium member",
+			withStates: false,
+			noWrap: true,
 			Template,
 		},
 		{
@@ -73,8 +100,8 @@ export const ButtonGroups = Variants({
 			},
 			// UI icon that is larger than workflow sizing:
 			iconName: "ArrowDown600",
-			label:
-        "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
+			iconSet: "ui",
+			label: "An example of text overflow behavior within the button component. When the button text is too long for the horizontal space available, it wraps to form another line.",
 			withStates: false,
 			Template,
 		},
@@ -99,6 +126,7 @@ export const ButtonGroups = Variants({
 		{
 			testHeading: "Pending",
 			isPending: true,
+			ignore: ["Static black"],
 		},
 	],
 	sizeDirection: "row",

@@ -105,9 +105,7 @@
 	--spectrum-slider-track-handleoffset: var(--spectrum-slider-handle-gap);
 
 	--spectrum-slider-range-track-reset: 0;
-}
 
-.spectrum-Slider {
 	position: relative;
 
 	/* Don't let z-index'd child elements float above other things on the page */
@@ -116,6 +114,10 @@
 	min-inline-size: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
 
 	user-select: none;
+
+	&:not(.spectrum-Slider--sideLabel) .spectrum-Slider-labelContainer + .spectrum-Slider-controls:has(.spectrum-Slider-ramp) {
+		margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
+	}
 }
 
 .spectrum-Slider--sideLabel {
@@ -124,6 +126,10 @@
 
 	.spectrum-Slider-labelContainer {
 		margin-block-start: 0;
+
+		.spectrum-Slider-label {
+			margin-inline-end: var(--mod-slider-value-side-padding-inline, var(--spectrum-slider-value-side-padding-inline));
+		}
 	}
 
 	.spectrum-Slider-labelContainer + .spectrum-Slider-controls {
@@ -147,6 +153,11 @@
 	cursor: pointer;
 	position: relative;
 	z-index: auto;
+
+	&:not(:has(.spectrum-Slider-ticks)) {
+		display: flex;
+		align-items: center;
+	}
 
 	/* These calculations prevent the track from spilling outside of the control */
 	inline-size: calc(100% - calc(var(--mod-slider-controls-margin, var(--spectrum-slider-controls-margin))) * 2);
@@ -280,7 +291,6 @@
 }
 
 .spectrum-Slider-ramp {
-	margin-block-start: calc(var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height)) / 2);
 	block-size: var(--mod-slider-ramp-track-height, var(--spectrum-slider-ramp-track-height));
 
 	position: absolute;
@@ -379,8 +389,9 @@
 	inset-block-start: var(--mod-slider-input-top-size, var(--spectrum-slider-input-top-size));
 	inset-inline-start: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
 	overflow: hidden;
-	/* @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
-	opacity: 0.000001; /* stylelint-disable-line number-max-precision */
+
+	/* stylelint-disable-next-line number-max-precision -- @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
+	opacity: 0.000001;
 	cursor: default;
 	appearance: none;
 	border: 0;
@@ -408,6 +419,7 @@
 	&:lang(ko) {
 		line-height: var(--mod-slider-cjk-line-height, var(--spectrum-slider-cjk-line-height));
 	}
+
 }
 
 .spectrum-Slider-label {

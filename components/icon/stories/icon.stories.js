@@ -1,9 +1,10 @@
-import { disableDefaultModes, mobile } from "@spectrum-css/preview/modes";
+import { disableDefaultModes } from "@spectrum-css/preview/modes";
 import { size } from "@spectrum-css/preview/types";
 import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { styleMap } from "lit/directives/style-map.js";
-import pkgJson from "../package.json";
+import metadata from "../metadata/metadata.json";
+import packageJson from "../package.json";
 import { IconGroup } from "./icon.test.js";
 import { Template } from "./template.js";
 import { uiIconSizes, uiIconsWithDirections, workflowIcons } from "./utilities.js";
@@ -88,10 +89,8 @@ export default {
 		useRef: true,
 	},
 	parameters: {
-		packageJson: pkgJson,
-		chromatic: {
-			modes: mobile,
-		},
+		packageJson,
+		metadata,
 	},
 	tags: ["!autodocs"],
 };

@@ -91,10 +91,11 @@
 }
 
 .spectrum-DatePicker:not(.spectrum-DatePicker--quiet, .is-disabled) {
-	/* ensures picker button border color matches the textfield border color */
+	/* @passthrough -- ensures picker button border color matches the textfield border color */
 	--mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color, var(--spectrum-datepicker-pickerbutton-border-color)));
 
 	&.is-invalid {
+		/* @passthrough */
 		--mod-picker-button-border-color: var(--highcontrast-datepicker-pickerbutton-border-color, var(--mod-datepicker-pickerbutton-border-color-invalid, var(--spectrum-datepicker-pickerbutton-border-color-invalid)));
 	}
 }
@@ -247,10 +248,10 @@
 		&.spectrum-DatePicker--quiet {
 			.spectrum-DatePicker-textfield {
 				inline-size: var(--mod-datepicker-datetime-quiet-input-width, var(--spectrum-datepicker-datetime-quiet-input-width));
+			}
 
-				&:first-of-type {
-					inline-size: var(--mod-datepicker-datetime-quiet-input-width-first, var(--spectrum-datepicker-datetime-quiet-input-width-first));
-				}
+			.spectrum-DatePicker-textfield:first-of-type {
+				inline-size: var(--mod-datepicker-datetime-quiet-input-width-first, var(--spectrum-datepicker-datetime-quiet-input-width-first));
 			}
 		}
 	}

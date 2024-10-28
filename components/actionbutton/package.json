@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/actionbutton",
-	"version": "6.1.3",
+	"version": "6.1.4",
 	"description": "The Spectrum CSS action button component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -54,5 +54,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/action-button",
+			"rootClass": "spectrum-ActionButton"
+		}
+	]
 }

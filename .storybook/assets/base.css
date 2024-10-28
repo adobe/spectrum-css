@@ -23,8 +23,8 @@ body {
 	font-size: var(--spectrum-font-size);
 	font-style: var(--spectrum-font-style);
 
-	color: var(--spectrum-neutral-content-color-default);
-	background-color: var(--spectrum-background-layer-2-color);
+	color: var(--spectrum-neutral-content-color-default, rgb(34, 34, 34));
+	background-color: var(--spectrum-background-base-color, rgb(230, 230, 230));
 }
 
 .spectrum {
@@ -39,8 +39,8 @@ svg:has(symbol):not(:has(use)) {
 }
 
 /* --- DOCS STYLES --- */
-.innerZoomElementWrapper .sb-story {
-	padding: 10px !important;
+.docs-story > *:first-child {
+	overflow: hidden;
 }
 
 /* Make sure heading provided by <Stories/> doc block uses styles consistent with the default H2. */
@@ -53,12 +53,6 @@ svg:has(symbol):not(:has(use)) {
 	letter-spacing: normal;
 	text-transform: none;
 	border-block-end: 1px solid hsla(203deg, 50%, 30%, 15%);
-}
-
-/* This is the container Chromatic uses to determine the height and width of the story */
-#storybook-root {
-	inline-size: max-content;
-	max-inline-size: 100%;
 }
 
 /* Force the modal wrapper to be contained by the frame not the viewport */

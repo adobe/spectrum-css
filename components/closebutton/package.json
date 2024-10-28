@@ -1,6 +1,6 @@
 {
 	"name": "@spectrum-css/closebutton",
-	"version": "5.2.0",
+	"version": "5.2.2",
 	"description": "The Spectrum CSS close button component",
 	"license": "Apache-2.0",
 	"author": "Adobe",
@@ -49,5 +49,11 @@
 	],
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"spectrum": [
+		{
+			"guidelines": "https://spectrum.adobe.com/page/close-button",
+			"rootClass": "spectrum-CloseButton"
+		}
+	]
 }
