@@ -99,5 +99,17 @@ export const ActionButtonGroup = Variants({
 		testHeading: "Disabled + selected",
 		isDisabled: true,
 		isSelected: true,
-	}],
+	}, {
+		testHeading: "Hovered + selected",
+		isHovered: true,
+		isSelected: true,
+	}, {
+		testHeading: "Focused + selected",
+		isFocused: true,
+		isSelected: true,
+	}, {
+		testHeading: "Active + selected",
+		isActive: true,
+		isSelected: true,
+	}]
 });
