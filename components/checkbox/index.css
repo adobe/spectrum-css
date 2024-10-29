@@ -110,7 +110,6 @@
 	--spectrum-checkbox-text-to-control: var(--spectrum-text-to-control-300);
 }
 
-/* stylelint-disable max-nesting-depth */
 /* Default Unchecked */
 .spectrum-Checkbox {
 	color: var(--highcontrast-checkbox-content-color-default, var(--mod-checkbox-content-color-default, var(--spectrum-checkbox-content-color-default)));
@@ -577,7 +576,6 @@
 			outline-color: var(--highcontrast-checkbox-focus-indicator-color, var(--mod-checkbox-focus-indicator-color, var(--spectrum-checkbox-focus-indicator-color)));
 			outline-style: auto;
 			outline-offset: var(--highcontrast-checkbox-focus-indicator-gap, var(--mod-checkbox-focus-indicator-gap, var(--spectrum-checkbox-focus-indicator-gap)));
-			/* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
 			outline-width: var(--mod-focus-indicator-thickness, var(--spectrum-focus-indicator-thickness));
 
 			&::after {
