@@ -106,7 +106,6 @@ module.exports = ({
 					clamp: true,
 					"color-functional-notation": true,
 					"dir-pseudo-class": { preserve: true },
-					"nesting-rules": { noIsPseudoSelector: true },
 					// https://github.com/jsxtools/focus-within
 					"focus-within-pseudo-class": true,
 					"font-format-keywords": true,
