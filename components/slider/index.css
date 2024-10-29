@@ -390,8 +390,7 @@
 	inset-inline-start: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
 	overflow: hidden;
 
-	/* stylelint-disable-next-line number-max-precision -- @todo Look into replacing with opacity 0. The tiny opacity value appears to be a workaround for a ChromeVox legacy bug (circa 2018). */
-	opacity: 0.000001;
+	opacity: 0;
 	cursor: default;
 	appearance: none;
 	border: 0;
