@@ -38,7 +38,6 @@ export const Template = ({
 				...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 			})}
 			style=${styleMap(customStyles)}
-			id=${ifDefined(id)}
 		>
 			<input
 				type="radio"
@@ -47,9 +46,16 @@ export const Template = ({
 				id=${inputId}
 				?checked=${isChecked}
 				?disabled=${isDisabled}
-				@change=${function() {
-					if (isDisabled) return;
-					updateArgs({ isChecked: !isChecked });
+				aria-disabled=${ifDefined(isReadOnly ? "true" : undefined)}
+				@change=${(e) => {
+					if (isDisabled || isReadOnly) return;
+					updateArgs?.({ isChecked: e.target.checked });
+				}}
+				@click=${(e) => {
+					if (!isReadOnly) return;
+
+					// Make checked value immutable for read-only.
+					e.preventDefault();
 				}}
 			/>
 			<span class="${rootClass}-button ${rootClass}-button--sizeS"></span>
@@ -74,7 +80,6 @@ export const BasicGroupTemplate = (args, context) => Container({
 		${Template({
 			...args,
 			label: "Example label",
-			id: "radio-1-" + (args?.id ?? "default"),
 			name: "radio-example-" + (args?.name ?? "default"),
 		}, context)}
 		${Template({
@@ -84,7 +89,6 @@ export const BasicGroupTemplate = (args, context) => Container({
 			customStyles: {
 				"max-width": "220px",
 			},
-			id: "radio-2-" + (args?.id ?? "default"),
 			name: "radio-example-" + (args?.name ?? "default"),
 		}, context)}
 	`,

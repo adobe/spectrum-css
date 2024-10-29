@@ -130,11 +130,15 @@ Disabled.parameters = {
 };
 
 /**
- * A radio group has a read-only option for when it's in the disabled state but still needs to be shown.
- * This allows for content to be copied, but not interacted with or changed.
+ * A radio group has a read-only option for when it's functionally disabled but still needs to be shown.
+ * This allows for label content to be copied, but prevents the input from being interacted with or changed.
  *
- * - Read-only radio buttons are disabled, but not all disabled radio buttons are read-only.
- * - Read-only radio buttons do not have a focus ring, but the button should be focusable.
+ * Read-only radio buttons:
+ * - prevent interaction like disabled, but not all disabled radio buttons are read-only
+ * - are immutable, i.e. their checked state cannot be changed
+ * - are keyboard focusable and communicate state to assistive technology
+ * - use `aria-disabled` since the `readonly` attribute [is not valid](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly#overview)
+ * - use `preventDefault()` on click to prevent changing the selection via pointer or keyboard interaction
  */
 export const ReadOnly = BasicGroupTemplate.bind({});
 ReadOnly.storyName = "Read-only";

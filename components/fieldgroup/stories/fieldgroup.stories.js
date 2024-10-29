@@ -71,17 +71,17 @@ export default {
 		helpText: "Select an option.",
 		items: [
 			{
-				id: "apple",
+				// id: getRandomId("apple"),
 				label: "Apples are best",
 				customClasses: ["spectrum-FieldGroup-item"],
 			},
 			{
-				id: "banana",
+				// id: getRandomId("banana"),
 				label: "Bananas forever",
 				customClasses: ["spectrum-FieldGroup-item"],
 			},
 			{
-				id: "pear",
+				// id: getRandomId("pear"),
 				label: "Pears or bust",
 				customClasses: ["spectrum-FieldGroup-item"],
 			}
@@ -123,6 +123,7 @@ VerticalRadio.tags = ["!dev"];
 VerticalRadio.args = {
 	layout: "vertical",
 	inputType: "radio",
+	name: "vertical"
 };
 VerticalRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -143,6 +144,7 @@ HorizontalRadio.tags = ["!dev"];
 HorizontalRadio.args = {
 	layout: "horizontal",
 	inputType: "radio",
+	name: "horizontal"
 };
 HorizontalRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -164,6 +166,7 @@ InvalidRadio.args = {
 	layout: "horizontal",
 	inputType: "radio",
 	isInvalid: true,
+	name: "invalid"
 };
 InvalidRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -189,7 +192,8 @@ export const Required = Template.bind({});
 Required.tags = ["!dev"];
 Required.args = {
 	inputType: "radio",
-	fieldLabel: "Radio group label (required)"
+	fieldLabel: "Radio group label (required)",
+	name: "required"
 };
 Required.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -229,6 +233,7 @@ VerticalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
 	layout: "vertical",
+	name: "vertical-side-label"
 };
 VerticalSideLabelRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -240,6 +245,7 @@ HorizontalSideLabelRadio.args = {
 	labelPosition: "side",
 	inputType: "radio",
 	layout: "horizontal",
+	name: "horizontal-side-label"
 };
 HorizontalSideLabelRadio.parameters = {
 	chromatic: { disableSnapshot: true },
@@ -270,12 +276,28 @@ HorizontalSideLabelCheckbox.parameters = {
 /**
  * A group of read-only checkboxes that have been checked. In U.S. English, use commas to delineate items within read-only checkbox groups. In other languages, use the locale-specific formatting.
  */
-export const ReadOnly = Template.bind({});
-ReadOnly.tags = ["!dev"];
-ReadOnly.args = {
+export const ReadOnlyCheckbox = Template.bind({});
+ReadOnlyCheckbox.tags = ["!dev"];
+ReadOnlyCheckbox.args = {
 	isReadOnly: true,
 	inputType: "checkbox",
 };
-ReadOnly.parameters = {
+ReadOnlyCheckbox.parameters = {
+	chromatic: { disableSnapshot: true },
+};
+
+/**
+ * A group of read-only radio buttons.
+ *
+ * Review the individual story for more features of [read-only radio buttons](?path=/docs/components-radio--docs#read-only).
+ */
+export const ReadOnlyRadio = Template.bind({});
+ReadOnlyRadio.tags = ["!dev"];
+ReadOnlyRadio.args = {
+	isReadOnly: true,
+	inputType: "radio",
+	name: "read-only"
+};
+ReadOnlyRadio.parameters = {
 	chromatic: { disableSnapshot: true },
 };
