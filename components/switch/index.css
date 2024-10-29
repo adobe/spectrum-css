@@ -273,10 +273,10 @@
 		&[disabled] {
 			& + .spectrum-Switch-switch {
 				background-color: var(--highcontrast-switch-background-color-disabled, var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled)));
+			}
 
-				&::before {
-					border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
-				}
+			& + .spectrum-Switch-switch::before {
+				border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
 			}
 
 			& ~ .spectrum-Switch-label {
@@ -284,18 +284,16 @@
 			}
 
 			/* disabled + selected, not emphasized */
-			&:checked {
-				& + .spectrum-Switch-switch {
-					background-color: var(--highcontrast-switch-background-color-selected-disabled, var(--mod-switch-background-color-selected-disabled, var(--spectrum-switch-background-color-selected-disabled)));
+			&:checked + .spectrum-Switch-switch {
+				background-color: var(--highcontrast-switch-background-color-selected-disabled, var(--mod-switch-background-color-selected-disabled, var(--spectrum-switch-background-color-selected-disabled)));
+			}
 
-					&::before {
-						border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
-					}
-				}
+			&:checked + .spectrum-Switch-switch::before {
+				border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
+			}
 
-				& ~ .spectrum-Switch-label {
-					color: var(--highcontrast-switch-label-color-disabled, var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled)));
-				}
+			&:checked ~ .spectrum-Switch-label {
+				color: var(--highcontrast-switch-label-color-disabled, var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled)));
 			}
 		}
 	}
@@ -475,7 +473,7 @@
 					background-color: GrayText;
 				}
 
-				&:checked + .spectrum-Switch-switch	::before {
+                                &:checked + .spectrum-Switch-switch::before {
 					border-color: GrayText;
 					background-color: ButtonFace;
 				}

@@ -170,12 +170,8 @@
 			}
 		}
 
-		&.spectrum-Swatch--rectangle {
-			.spectrum-Swatch-fill {
-				&::after {
-					transform: rotate(-25deg);
-				}
-			}
+		&.spectrum-Swatch--rectangle .spectrum-Swatch-fill::after {
+			transform: rotate(-25deg);
 		}
 	}
 

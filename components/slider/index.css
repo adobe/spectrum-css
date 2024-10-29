@@ -703,7 +703,6 @@
 		--highcontrast-slider-track-color: ButtonText;
 		--highcontrast-slider-track-color-disabled: GrayText;
 		--highcontrast-slider-track-color-static: ButtonText;
-		--highcontrast-slider-track-fill-color: ButtonText;
 		--highcontrast-slider-track-fill-color-disabled: GrayText;
 		--highcontrast-slider-filled-track-fill-color: Highlight;
 
@@ -744,7 +743,6 @@
 			.spectrum-Slider-controls:active,
 			.spectrum-Slider-controls:focus-within,
 			.spectrum-Slider-controls.is-focused {
-				--highcontrast-slider-track-fill-color: Highlight;
 				--highcontrast-slider-track-color: Highlight;
 				--highcontrast-slider-handle-border-color: Highlight;
 				--highcontrast-slider-ramp-track-color: Highlight;

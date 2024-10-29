@@ -273,6 +273,7 @@
 
 .u-isGrabbing {
 	cursor: ns-resize;
+	/* stylelint-disable-next-line -- required for webkit cursor grab/grabbing support */
 	cursor: -webkit-grabbing;
 	cursor: grabbing;
 
