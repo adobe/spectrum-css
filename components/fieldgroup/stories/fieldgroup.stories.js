@@ -71,17 +71,14 @@ export default {
 		helpText: "Select an option.",
 		items: [
 			{
-				// id: getRandomId("apple"),
 				label: "Apples are best",
 				customClasses: ["spectrum-FieldGroup-item"],
 			},
 			{
-				// id: getRandomId("banana"),
 				label: "Bananas forever",
 				customClasses: ["spectrum-FieldGroup-item"],
 			},
 			{
-				// id: getRandomId("pear"),
 				label: "Pears or bust",
 				customClasses: ["spectrum-FieldGroup-item"],
 			}
