@@ -64,6 +64,7 @@ module.exports = {
 			{
 				ignoreProperties: {
 					color: ["CanvasText"],
+					"forced-color-adjust": ["preserve-parent-color"],
 				},
 			},
 		],

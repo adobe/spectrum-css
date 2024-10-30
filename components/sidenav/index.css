@@ -265,7 +265,6 @@
 @media (forced-colors: active) {
 	.spectrum-SideNav {
 		.spectrum-Icon {
-			/* stylelint-disable-next-line declaration-property-value-no-unknown -- forced-color-adjust: preserve-parent-color addresses svg bug on icon hover */
 			forced-color-adjust: preserve-parent-color;
 		}
 	}
