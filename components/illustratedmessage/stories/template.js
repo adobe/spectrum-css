@@ -1,4 +1,5 @@
 import { Template as ButtonGroup } from "@spectrum-css/buttongroup/stories/template.js";
+import { Template as Typography } from "@spectrum-css/typography/stories/template.js";
 import { html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
 import { when } from "lit/directives/when.js";
