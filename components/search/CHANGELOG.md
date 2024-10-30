@@ -1,5 +1,11 @@
 # Change Log
 
+## 7.2.4
+
+### Patch Changes
+
+- [#3297](https://github.com/adobe/spectrum-css/pull/3297) [`60685ce`](https://github.com/adobe/spectrum-css/commit/60685ce14d1117584ca46d034ecaa2617a016345) Thanks [@castastrophe](https://github.com/castastrophe)! - Deprecated `--mod-workflow-icon-size-100` from the `.spectrum-Search--quiet` calculation of the `--spectrum-search-quiet-button-offset`. Use `--mod-search-icon-size` instead. Deprecated property will be removed in the next breaking change release.
+
 ## 7.2.3
 
 ### Patch Changes
