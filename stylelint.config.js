@@ -41,7 +41,7 @@ module.exports = {
 		"at-rule-no-unknown": [
 			true,
 			{
-				ignoreAtRules: ["extend", "container", "each", "include", "mixin"],
+				ignoreAtRules: ["extend", "each", "include", "mixin"],
 			},
 		],
 		"block-no-empty": [true, {
