@@ -23,6 +23,17 @@
 	--spectrum-clear-button-icon-color-hover: var(--spectrum-neutral-content-color-hover);
 	--spectrum-clear-button-icon-color-down: var(--spectrum-neutral-content-color-down);
 	--spectrum-clear-button-icon-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+    
+	block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
+	inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
+	border-radius: 100%;
+
+	background-color: var(--mod-clear-button-background-color, transparent);
+	margin: 0;
+	padding: var(--mod-clear-button-padding, var(--spectrum-clear-button-padding));
+
+	border: none;
+	color: var(--mod-clear-button-icon-color, var(--spectrum-clear-button-icon-color));
 
 	&.spectrum-ClearButton--sizeS {
 		--spectrum-clear-button-height: var(--spectrum-component-height-75);
@@ -71,23 +82,10 @@
 	&.spectrum-ClearButton--staticWhite {
 		--spectrum-clear-button-icon-color-disabled: var(--spectrum-disabled-static-white-content-color);
 	}
-}
-
-.spectrum-ClearButton {
-	block-size: var(--mod-clear-button-height, var(--spectrum-clear-button-height));
-	inline-size: var(--mod-clear-button-width, var(--spectrum-clear-button-width));
-	border-radius: 100%;
 
 	&:not(:disabled) {
 		cursor: pointer;
 	}
-
-	background-color: var(--mod-clear-button-background-color, transparent);
-	margin: 0;
-	padding: var(--mod-clear-button-padding, var(--spectrum-clear-button-padding));
-
-	border: none;
-	color: var(--mod-clear-button-icon-color, var(--spectrum-clear-button-icon-color));
 
 	> .spectrum-Icon {
 		/* @safari10 Workaround for https://bugs.webkit.org/show_bug.cgi?id=169700 */
