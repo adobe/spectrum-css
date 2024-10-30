@@ -11,6 +11,7 @@ export const Template = ({
 	description,
 	customClasses = [],
 	useAccentColor = false,
+	hasButtons = false,
 	orientation,
 	size = "m",
 }) => html`
@@ -18,7 +19,7 @@ export const Template = ({
 		class=${classMap({
 			[rootClass]: true,
 			[`${rootClass}--${orientation}`]: typeof orientation !== "undefined",
-			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+			[`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined" && size !== "m",
 			...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
 		})}
 	>
@@ -42,22 +43,24 @@ export const Template = ({
 						${description.map((c) => (typeof c === "function" ? c({}) : c))}
 					</p>`
 			)}
-			${ButtonGroup({
-				size,
-				items: [
-					{
-						variant: "secondary",
-						treatment: "outline",
-						label: "Remind me later",
+			${when(hasButtons, () => 
+				ButtonGroup({
+					size,
+					items: [
+						{
+							variant: "secondary",
+							treatment: "outline",
+							label: "Remind me later",
 
-					},
-					{
-						variant: "primary",
-						treatment: "fill",
-						label: "Rate now",
-					},
-				]
-			})}
+						},
+						{
+							variant: "accent",
+							treatment: "fill",
+							label: "Rate now",
+						},
+					]
+				})
+			)}
 		</div>
 	</div>
 `;
