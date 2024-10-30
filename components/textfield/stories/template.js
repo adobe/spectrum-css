@@ -120,15 +120,13 @@ export const Template = ({
 			style=${styleMap(customStyles)}
 			@click=${onclick}
 			@focusin=${function() {
-				updateArgs({
+				updateArgs?.({
 					isFocused: true,
-					isKeyboardFocused: true
 				});
 			}}
 			@focusout=${function() {
-				updateArgs({
+				updateArgs?.({
 					isFocused: false,
-					isKeyboardFocused: false
 				});
 			}}
 			id=${ifDefined(id)}
@@ -231,7 +229,7 @@ export const TextFieldOptions = (args, context) => Container({
 				"gap": "8px",
 			},
 			heading: "Default",
-			content: Template({...args, context})
+			content: Template(args, context)
 		}, context)}
 		${Container({
 			withBorder: false,
@@ -273,5 +271,31 @@ export const TextFieldOptions = (args, context) => Container({
 			heading: "Invalid, keyboard-focused",
 			content: Template({...args, isInvalid: true, isKeyboardFocused: true}, context)
 		}, context)}
+	`
+}, context);
+
+export const KeyboardFocusTemplate = (args, context) => Container({
+	direction: "column",
+	withBorder: false,
+	wrapperStyles: {
+		rowGap: "12px",
+	},
+	content: html`
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Default",
+			content: Template({...args, isKeyboardFocused: true}, context)
+		}), context}
+		${Container({
+			withBorder: false,
+			containerStyles: {
+				"gap": "8px",
+			},
+			heading: "Quiet",
+			content: Template({...args, isKeyboardFocused: true, isQuiet: true}, context)
+		}), context}
 	`
 }, context);
