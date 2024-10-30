@@ -17,8 +17,8 @@ governing permissions and limitations under the License.
 	--spectrum-avatar-block-size: var(--spectrum-avatar-size-100);
 
 	--spectrum-avatar-border-radius: var(--spectrum-avatar-block-size);
-	--spectrum-avatar-border-thickness: var(--spectrum-avatar-border-thickness);
-	--spectrum-avatar-border-color: var(--spectrum-avatar-border-color);
+	--spectrum-avatar-border-thickness: var(--spectrum-avatar-border-width);
+	--spectrum-avatar-border-color-default: var(--spectrum-avatar-border-color);
 
 	--spectrum-avatar-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
 	--spectrum-avatar-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
@@ -127,7 +127,7 @@ governing permissions and limitations under the License.
 	border-style: solid;
 	border-radius: var(--mod-avatar-border-radius, var(--spectrum-avatar-border-radius));
 	border-width: var(--spectrum-avatar-border-thickness);
-	border-color: var(--spectrum-avatar-border-color);
+	border-color: var(--spectrum-avatar-border-color-default);
 
 	outline: none;
 
